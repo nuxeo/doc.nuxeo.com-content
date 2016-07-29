@@ -1,0 +1,48 @@
+{
+  "name": "Nuxeo-documentation-platform-spaces",
+  "description": "doc.nuxeo.com Platform Spaces",
+  "license": "UNLICENSED",
+  "private": true,
+  "version": "0.0.1",
+  "author": {
+    "name": "Andrew Goodricke",
+    "email": "github@andrewgoodricke.com",
+    "url": "http://andrewgoodricke.com"
+  },
+  "dependencies": {
+    "node-yaml-config": "0.0.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.8",
+    "faucet": "0.0.1",
+    "nodemon": "^1.9.2",
+    "tape": "^4.5.1"
+  },
+  "main": "build.js",
+  "config": {
+    "browser": "chromium-browser"
+  },
+  "scripts": {
+    "pretest": "npm run yaml_lint config.yml",
+    "verify": "node verify | faucet",
+    "start": "npm run metalsmith",
+    "xpoststart": "npm run copy_assets && npm run verify",
+    "dev": "npm run browser_sync & NODE_ENV=development nodemon --exec 'npm start && browser-sync reload'",
+    "content": "npm run browser_sync & NODE_ENV=development nodemon --exec 'npm run build_content && browser-sync reload'",
+    "build_content": "npm run metalsmith && npm run link_assets",
+    "copy_assets": "cp -r ../node_modules/nuxeo-docs/lib/assets ./site",
+    "copy_assetss": "ln -s `pwd`/assets ./site/assets",
+    "link_assets": "ln -s `pwd`/../node_modules/nuxeo-docs/lib/assets ./site/assets",
+    "metalsmith": "node .",
+    "browser_sync": "browser-sync start --server site --browser=$npm_package_config_browser",
+    "yaml_lint": "js-yaml -t > /dev/null"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nuxeo/doc.nuxeo.com-platform-spaces.git"
+  },
+  "bugs": {
+    "url": "git@github.com:nuxeo/doc.nuxeo.com-platform-spaces.git/issues"
+  },
+  "homepage": "http://doc.nuxeo.com"
+}
