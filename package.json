@@ -10,7 +10,8 @@
     "url": "http://andrewgoodricke.com"
   },
   "dependencies": {
-    "node-yaml-config": "0.0.4"
+    "node-yaml-config": "0.0.4",
+    "nuxeo-docs-builder": "github:nuxeo/doc.nuxeo.com-static-spaces"
   },
   "devDependencies": {
     "browser-sync": "^2.12.8",
