@@ -1,0 +1,19 @@
+default:
+    site:
+        spaces:
+            -
+                space_path: nxdoc
+                space_name: Developer Documentation Center
+                versions:
+                    -
+                        label: FT
+                        is_current: true
+                    -
+                        label: LTS 2015
+                        url_path: '710'
+                    -
+                        label: '6.0'
+                        url_path: '60'
+
+development:
+    isDev: true
