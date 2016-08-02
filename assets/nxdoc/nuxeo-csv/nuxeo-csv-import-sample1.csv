@@ -1,0 +1,6 @@
+"name","type","dc:title","dc:description","dc:format","dc:source","dc:language","dc:nature","dc:subjects"
+"my-first-doc","Note","My first document","This a note, imported with Nuxeo CSV, and with some metadata filled in.","HTML","Nuxeo CSV import","English","article","technology/it"
+"my-file","File","My file","This is the description of my file","no format","Nuxeo CSV import",,"internshipReport","art/danse|art/show"
+"my-folder","Folder","My folder","This is the description of a folder that will hold some documents",,"Nuxeo CSV import",,,
+"my-folder/first-doc-in-folder","File","First document in folder","Description of a file created in a folder",,"Nuxeo CSV Import","English","letter","daily life/gastronomy|society/company"
+"my-folder/my-second-doc","Note","Second document in folder","The description of a note created in a folder using Nuxeo CSV","HTML","Nuxeo CSV import","English","memo","technology/it"
