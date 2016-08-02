@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "node-yaml-config": "0.0.4",
-    "nuxeo-docs-builder": "github:nuxeo/doc.nuxeo.com-static-spaces"
+    "nuxeo-docs-builder": "github:nuxeo/doc.nuxeo.com"
   },
   "devDependencies": {
     "browser-sync": "^2.12.8",
@@ -27,13 +27,10 @@
     "pretest": "npm run yaml_lint config.yml",
     "verify": "node verify | faucet",
     "start": "npm run metalsmith",
-    "xpoststart": "npm run copy_assets && npm run verify",
-    "dev": "npm run browser_sync & NODE_ENV=development nodemon --exec 'npm start && browser-sync reload'",
-    "content": "npm run browser_sync & NODE_ENV=development nodemon --exec 'npm run build_content && browser-sync reload'",
-    "build_content": "npm run metalsmith && npm run link_assets",
-    "copy_assets": "cp -r ../node_modules/nuxeo-docs/lib/assets ./site",
-    "copy_assetss": "ln -s `pwd`/assets ./site/assets",
-    "link_assets": "ln -s `pwd`/../node_modules/nuxeo-docs/lib/assets ./site/assets",
+    "poststart": "npm run copy_assets && npm run verify",
+    "dev": "npm run browser_sync & NODE_ENV=development nodemon --exec 'npm start && npm run copy_module_assets && browser-sync reload'",
+    "copy_assets": "cp -r ./assets ./site",
+    "copy_module_assets": "cp -r ./node_modules/nuxeo-docs-builder/assets/* ./site/assets",
     "metalsmith": "node .",
     "browser_sync": "browser-sync start --server site --browser=$npm_package_config_browser",
     "yaml_lint": "js-yaml -t > /dev/null"
