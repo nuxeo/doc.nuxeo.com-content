@@ -4,7 +4,6 @@ labels:
     - workmanager
     - cluster
     - node
-    - content-review-lts2015
     - work-manager-component
 toc: true
 confluence:

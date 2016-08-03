@@ -4,7 +4,6 @@ labels:
     - theme
     - link-update
     - themes-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

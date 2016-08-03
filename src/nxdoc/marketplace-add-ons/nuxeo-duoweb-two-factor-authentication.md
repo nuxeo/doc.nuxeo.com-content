@@ -1,7 +1,6 @@
 ---
 title: Nuxeo DuoWeb Two-Factor Authentication
 labels:
-    - content-review-lts2015
     - duo-web-authentication-addon
 confluence:
     ajs-parent-page-id: '16089349'

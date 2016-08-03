@@ -6,7 +6,6 @@ labels:
     - active-directory
     - link-update
     - directory-component
-    - lts2015-not-ok
     - migration-sample
 toc: true
 confluence:

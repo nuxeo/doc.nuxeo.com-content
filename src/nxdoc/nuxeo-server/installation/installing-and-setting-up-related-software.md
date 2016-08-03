@@ -5,7 +5,6 @@ labels:
     - requirements
     - third-party-software
     - last-review-20141126
-    - lts2015-ok
     - multiexcerpt-include
     - multiexcerpt
 toc: true

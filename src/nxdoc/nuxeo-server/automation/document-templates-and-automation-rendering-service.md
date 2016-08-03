@@ -7,7 +7,6 @@ labels:
     - operation
     - automation
     - automation-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '18451738'

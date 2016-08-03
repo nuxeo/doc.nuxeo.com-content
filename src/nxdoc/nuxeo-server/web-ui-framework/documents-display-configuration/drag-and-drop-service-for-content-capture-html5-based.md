@@ -5,7 +5,6 @@ labels:
     - import
     - automation
     - file-upload-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '6029663'

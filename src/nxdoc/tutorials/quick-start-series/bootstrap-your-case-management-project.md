@@ -2,7 +2,6 @@
 title: Bootstrap Your Case Management Project
 labels:
     - bootstrap
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

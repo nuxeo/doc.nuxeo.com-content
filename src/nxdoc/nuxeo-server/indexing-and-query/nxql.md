@@ -3,7 +3,6 @@ title: NXQL
 labels:
     - nxql
     - query
-    - content-review-lts2015
     - query-pageprovider-component
 toc: true
 confluence:

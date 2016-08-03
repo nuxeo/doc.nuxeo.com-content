@@ -15,7 +15,6 @@ labels:
     - howto
     - query
     - query-pageprovider-component
-    - lts2015-ok
     - university
     - excerpt
 confluence:

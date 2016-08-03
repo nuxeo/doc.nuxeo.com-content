@@ -13,7 +13,6 @@ labels:
     - action
     - filter
     - actions-filters-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

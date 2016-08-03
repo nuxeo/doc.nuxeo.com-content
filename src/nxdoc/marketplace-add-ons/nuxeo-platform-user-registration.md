@@ -2,7 +2,6 @@
 title: Nuxeo Platform User Registration
 labels:
     - user-registration
-    - content-review-lts2015
     - user-registration-component
 toc: true
 confluence:
@@ -135,7 +134,7 @@ You also have a new **User Registration** tab in the **Admin** tab.
 
 ### Setting Up Email Sending
 
-The Nuxeo Platform User Registration add-on sends email to the invited user with his credentials. So your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='set-up-best-practices'}}).
+The Nuxeo Platform User Registration add-on sends email to the invited user with his credentials. So your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='setup-best-practices'}}).
 
 ### Global Configuration
 

@@ -3,7 +3,6 @@ title: Create a button that triggers the task assignment
 labels:
     - tuto-automation
     - tuto-user-action
-    - content-review-lts2015
 confluence:
     ajs-parent-page-id: '3345551'
     ajs-parent-page-title: One step validation flow based on lifecycle only

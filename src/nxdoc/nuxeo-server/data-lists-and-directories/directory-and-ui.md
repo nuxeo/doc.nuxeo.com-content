@@ -4,7 +4,6 @@ labels:
     - vocabulary
     - directory
     - directory-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4688939'

@@ -12,7 +12,6 @@ labels:
     - create-task-operation
     - workflow
     - studio
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235619'

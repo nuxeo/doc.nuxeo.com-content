@@ -4,7 +4,6 @@ labels:
     - task
     - workflow
     - workflow-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '12913723'

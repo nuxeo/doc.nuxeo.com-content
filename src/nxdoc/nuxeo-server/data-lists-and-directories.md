@@ -5,7 +5,6 @@ labels:
     - sql
     - directory
     - vocabulary
-    - content-review-lts2015
     - multiexcerpt-include
 toc: true
 confluence:

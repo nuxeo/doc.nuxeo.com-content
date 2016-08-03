@@ -4,7 +4,6 @@ labels:
     - blob-storage
     - binary-manager
     - blob-manager-component
-    - lts2015-ok
     - multiexcerpt
     - multiexcerpt-include
 toc: true

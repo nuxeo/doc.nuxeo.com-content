@@ -3,7 +3,6 @@ title: SOAP Bridge
 labels:
     - soap
     - soap-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '13664833'

@@ -1,7 +1,5 @@
 ---
 title: Nuxeo Platform Feature Table
-labels:
-    - content-review-lts2015
 confluence:
     ajs-parent-page-id: '19235677'
     ajs-parent-page-title: Quick Start Series

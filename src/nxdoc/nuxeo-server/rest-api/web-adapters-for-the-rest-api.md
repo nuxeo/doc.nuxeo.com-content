@@ -5,7 +5,6 @@ labels:
     - rest-api
     - webengine
     - rest-api-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'
@@ -19,6 +18,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/5AUuAQ'
     source_link: /display/NXDOC/Web+Adapters+for+the+REST+API
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-07-29 16:15'
+        message: dd missing excerpts for page Leaning the REST AP
+        version: '18'
     - 
         author: Damien Metzler
         date: '2016-02-24 08:40'
@@ -240,9 +244,13 @@ Several default adapters are provided by default.
 
 ### Getting the Children of a Given Document - @children
 
+{{! multiexcerpt name='restapi-adapters-children'}}
+
 ```
 GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@children?currentPageIndex=0&pagesize=20&maxResults=100
 ```
+
+{{! /multiexcerpt}}
 
 ```
 {
@@ -475,7 +483,7 @@ PUT /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
 
 ### Creating a Business Object
 
-And then t<span>o create a business object, you have to issue a&nbsp;</span><span class="s1">POST</span><span>&nbsp;on the object resource plus the name of the newly created document, like this:</span>
+And then t<span>o create a business object, you have to issue a&nbsp;</span> <span class="s1">POST</span> <span>&nbsp;on the object resource plus the name of the newly created document, like this:</span>
 
 ```
 POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter/{newName}
@@ -492,6 +500,8 @@ POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter/{newName}
 
 ## Bridging Operations and Automation Chains
 
+{{! multiexcerpt name='restapi-adapters-op'}}
+
 The `@op` adapter can be used to pipe the identified Document as input of an operation.
 
 ```
@@ -506,6 +516,8 @@ POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/{myOperation}
   }
 }
 ```
+
+{{! /multiexcerpt}}
 
 The response will depend on the result of the automation chain.
 
@@ -524,6 +536,8 @@ POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
 }
 ```
 
+{{! multiexcerpt name='restapi-adapters-piping'}}
+
 ```
 POST /nuxeo/site/api/v1/path/{pathOfTheFolder}/@children/@op/Chain.myChain
 {
@@ -534,6 +548,8 @@ POST /nuxeo/site/api/v1/path/{pathOfTheFolder}/@children/@op/Chain.myChain
 ```
 
 Pay attention to the fact that document list adapters are paged. That means that the chain will run on all document of the current page.
+
+{{! /multiexcerpt}}
 
 ## Piping
 

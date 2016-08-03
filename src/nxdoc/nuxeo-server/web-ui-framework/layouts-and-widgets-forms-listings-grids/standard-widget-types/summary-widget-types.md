@@ -4,7 +4,6 @@ labels:
     - widget-types
     - summary
     - layout-widgets-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

@@ -12,7 +12,6 @@ labels:
     - howto
     - access-right
     - studio
-    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '19235681'
@@ -31,7 +30,7 @@ history:
     - 
         author: Solen Guitter
         date: '2016-04-14 14:39'
-        message: ix title capitalization and typ
+        message: ''
         version: '21'
     - 
         author: Manon Lumeau
@@ -147,7 +146,7 @@ Computed groups let you define a list of groups to which users will be affected 
 
 Development environment requirements:
 
-*   a [Nuxeo Studio]({{page space='studio' page='nuxeo-studio-documentation-center'}}) project (for the Workspace modification and User action definition),
+*   a [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) project (for the Workspace modification and User action definition),
 *   a [Nuxeo SDK]({{page space='idedoc' page='setting-up-a-nuxeo-sdk'}}) instance ready for test,
 *   [Nuxeo IDE]({{page space='idedoc' page='documentation-center-for-nuxeo-platform-ides'}}) (for bundle creation&nbsp;and computed group definition).
 

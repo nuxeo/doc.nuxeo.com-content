@@ -6,7 +6,6 @@ labels:
     - link-update
     - anonymous
     - cas-authentication-component
-    - lts2015-not-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089115'

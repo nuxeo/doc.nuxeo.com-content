@@ -2,7 +2,6 @@
 title: Nuxeo Multi-Tenant
 labels:
     - multi-tenant
-    - content-review-lts2015
     - excerpt-include
 confluence:
     ajs-parent-page-id: '16089349'

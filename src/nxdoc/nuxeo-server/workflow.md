@@ -3,7 +3,6 @@ title: Workflow
 labels:
     - workflow
     - workflow-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31033314'

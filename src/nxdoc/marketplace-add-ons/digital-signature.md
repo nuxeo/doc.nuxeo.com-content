@@ -3,7 +3,6 @@ title: Digital Signature
 labels:
     - digital-signature
     - digital-signature-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

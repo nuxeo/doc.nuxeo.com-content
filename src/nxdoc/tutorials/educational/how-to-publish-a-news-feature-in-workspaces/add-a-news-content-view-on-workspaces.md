@@ -5,7 +5,6 @@ labels:
     - tuto-document-type
     - workspace
     - tuto-content-view
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4689520'

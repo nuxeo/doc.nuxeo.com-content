@@ -1,7 +1,6 @@
 ---
 title: File Download Security Policies
 labels:
-    - content-review-lts2015
     - security-policy
     - blob-manager-component
     - security-component

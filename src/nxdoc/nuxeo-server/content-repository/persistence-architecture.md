@@ -1,7 +1,5 @@
 ---
 title: Persistence Architecture
-labels:
-    - content-review-lts2015
 confluence:
     ajs-parent-page-id: '950287'
     ajs-parent-page-title: Content Repository

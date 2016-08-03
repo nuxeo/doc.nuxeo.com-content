@@ -2,7 +2,6 @@
 title: Nuxeo Media Publishing
 labels:
     - media-publishing-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

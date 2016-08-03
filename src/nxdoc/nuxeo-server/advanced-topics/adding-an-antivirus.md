@@ -3,7 +3,6 @@ title: Adding an Antivirus
 labels:
     - antivirus
     - architecture
-    - lts2015-notok
     - nxdoc-744
     - excerpt
 toc: true

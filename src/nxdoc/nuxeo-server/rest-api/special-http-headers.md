@@ -4,7 +4,6 @@ labels:
     - http
     - rest-api
     - rest-api-component
-    - lts2015-ok
     - nxdoc-730
 toc: true
 confluence:

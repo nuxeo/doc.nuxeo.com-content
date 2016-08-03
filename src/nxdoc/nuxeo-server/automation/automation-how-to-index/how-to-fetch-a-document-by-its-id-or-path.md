@@ -13,7 +13,6 @@ labels:
     - automation
     - studio
     - automation-component
-    - lts2015-ok
     - excerpt
     - multiexcerpt-include
 confluence:

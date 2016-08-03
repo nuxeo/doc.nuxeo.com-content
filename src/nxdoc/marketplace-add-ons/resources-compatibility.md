@@ -2,7 +2,6 @@
 title: Resources Compatibility
 labels:
     - resources-compatibility
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Marketplace Add-Ons

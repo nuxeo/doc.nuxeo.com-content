@@ -3,7 +3,6 @@ title: Shell Features
 labels:
     - shell
     - shell-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

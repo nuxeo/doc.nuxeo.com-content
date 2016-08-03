@@ -3,7 +3,6 @@ title: Automation REST Response
 labels:
     - automation
     - automation-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

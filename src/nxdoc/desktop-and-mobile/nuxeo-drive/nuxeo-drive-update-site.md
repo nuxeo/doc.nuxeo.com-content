@@ -3,7 +3,6 @@ title: Nuxeo Drive Update Site
 labels:
     - nuxeo-drive
     - last-review-20150609
-    - content-review-lts2015
     - nuxeo-drive-component
     - multiexcerpt
 toc: true

@@ -5,7 +5,6 @@ labels:
     - rest-api
     - last-review-20150422
     - rest-api-component
-    - lts2015-ok
     - university
     - excerpt
     - multi-excerpt

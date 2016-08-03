@@ -2,7 +2,6 @@
 title: Android Connector additional Services
 labels:
     - android-connector-component
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '8684332'
     ajs-parent-page-title: Nuxeo Android Connector

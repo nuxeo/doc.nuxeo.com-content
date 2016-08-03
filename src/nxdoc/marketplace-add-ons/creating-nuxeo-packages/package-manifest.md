@@ -1,7 +1,6 @@
 ---
 title: Package Manifest
 labels:
-    - content-review-lts2015
     - packaging-component
     - todo
 confluence:

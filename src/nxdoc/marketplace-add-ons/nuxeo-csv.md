@@ -6,7 +6,6 @@ labels:
     - marketplace-package
     - nuxeo-csv
     - csv-importer-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -20,6 +19,16 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/O4TZ'
     source_link: /display/NXDOC/Nuxeo+CSV
 history:
+    - 
+        author: Frantz Fischer
+        date: '2016-07-29 10:32'
+        message: ''
+        version: '33'
+    - 
+        author: Frantz Fischer
+        date: '2016-07-29 10:23'
+        message: ''
+        version: '32'
     - 
         author: Solen Guitter
         date: '2016-06-23 08:34'
@@ -233,7 +242,7 @@ lines"
 
 {{#> callout type='note' }}
 
-Nuxeo CSV doesn't support complex properties, such as blob definition.
+Nuxeo CSV does support complex properties but not blob definition.
 
 {{/callout}}
 
@@ -287,6 +296,15 @@ On your CSV file, use the&nbsp;`file:content` property in the first line and the
 "my-file","File","My file with uploaded attachment","This is a file with its attachment, created using Nuxeo CSV","my-file.doc"</pre>
 
 You can use the attached zip sample []({{file name='Nuxeo-CSV-sample.zip'}}) to test the import of files.
+
+Complex properties (mono and multi-valued) need to be JSON formatted like (see the example below):
+
+<pre>"name","type","dc:description","dc:title","dc:contributors","dc:issued","note:note","complexTest:complexItem","complexTest:listItem"
+"myfile","File","a simple file","My File","contributor1|contributor2|contributor3","10/01/2010","","",""
+"mynote","Note","a simple note","My Note","bender|leela|fry","12/12/2012","note content","",""
+"mycomplexfile","ComplexFile","a complex file","My Complex File","joe","12/21/2013","","{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\    "}","[{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\"},{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString2\"}]"</pre>
+
+You can use the attached file&nbsp;[]({{file name='docs_ok.csv'}})&nbsp;to better understand the syntax.
 
 ### Setting Life Cycle State When Creating Documents
 

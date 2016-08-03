@@ -2,7 +2,6 @@
 title: Bootstrap Your Document Management Project
 labels:
     - bootstrap
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235677'
@@ -17,6 +16,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/O4vZ'
     source_link: /display/NXDOC/Bootstrap+Your+Document+Management+Project
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-07-19 12:19'
+        message: ix title
+        version: '28'
     - 
         author: Manon Lumeau
         date: '2016-06-09 13:23'
@@ -166,7 +170,7 @@ You can [download the Nuxeo Platform](http://www.nuxeo.com/downloads/) and [inst
 
 {{#> callout type='info' heading="Related Documentation"}}
 
-*   [nuxeo.io]({{page space='connect' page='nuxeoio'}})
+*   [nuxeo.io]({{page space='studio' page='nuxeoio'}})
 *   [Installation]({{page page='installation'}})
 
 {{/callout}}
@@ -177,7 +181,6 @@ Once you have your Nuxeo Platform instance running, spend one hour customizing t
 
 {{#> callout type='info' heading="Related Documentation"}}
 
-*   [How to Brand Your Application]({{page page='how-to-brand-your-application'}})
 *   [Branding]({{page space='studio' page='branding'}})
 *   [Online UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)
 
@@ -203,7 +206,7 @@ The Nuxeo Platform can be plugged to a wide range of directories and authenticat
 
 {{#> callout type='info' heading="Related Documentation"}}
 
-*   [Authentication, users and groups]({{page page='authentication-and-user-management'}})
+*   [Authentication and User Management]({{page page='authentication-and-user-management'}})
 *   [How to Add Custom LDAP Fields to the UI]({{page page='how-to-add-custom-ldap-fields-to-the-ui'}})
 
 {{/callout}}

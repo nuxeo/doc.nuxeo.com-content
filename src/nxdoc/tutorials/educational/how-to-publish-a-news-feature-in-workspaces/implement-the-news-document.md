@@ -3,7 +3,6 @@ title: Implement the News Document
 labels:
     - tuto-document-type
     - tuto-user-action
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4689520'

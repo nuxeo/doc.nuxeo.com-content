@@ -3,7 +3,6 @@ title: Default Widget Types Known Limitations
 labels:
     - widget
     - layout-widgets-component
-    - lts2015-ok
     - limitations
     - excerpt
 confluence:

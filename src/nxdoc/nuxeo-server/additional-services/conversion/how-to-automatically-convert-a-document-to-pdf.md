@@ -11,7 +11,6 @@ details:
 labels:
     - howto
     - conversion
-    - lts2015-ok
     - excerpt
     - multiexcerpt-include
 confluence:

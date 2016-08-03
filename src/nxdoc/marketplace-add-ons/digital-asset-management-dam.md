@@ -7,8 +7,6 @@ labels:
     - audio
     - annotation
     - dam-component
-    - lts2015-update-screenshots
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

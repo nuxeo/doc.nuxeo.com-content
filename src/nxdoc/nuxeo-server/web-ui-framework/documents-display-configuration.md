@@ -4,7 +4,6 @@ labels:
     - layout
     - content-view
     - web-ui-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

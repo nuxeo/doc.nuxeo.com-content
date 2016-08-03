@@ -3,7 +3,6 @@ title: Deploying Nuxeo on CloudFoundry
 labels:
     - cloudfoundry
     - cloud-deployment
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'

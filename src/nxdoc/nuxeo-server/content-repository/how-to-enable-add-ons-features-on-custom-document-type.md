@@ -11,7 +11,6 @@ details:
 labels:
     - howto
     - document-type
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '950287'

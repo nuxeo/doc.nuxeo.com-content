@@ -5,7 +5,6 @@ labels:
     - mvel
     - freemarker
     - scripting
-    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '19235679'

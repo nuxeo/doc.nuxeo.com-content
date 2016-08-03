@@ -2,7 +2,6 @@
 title: Kerberos Authentication
 labels:
     - kerberos-authentication-component
-    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

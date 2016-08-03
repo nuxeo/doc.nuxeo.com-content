@@ -3,7 +3,6 @@ title: Field Constraints and Validation
 labels:
     - link-update
     - schema-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950287'

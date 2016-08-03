@@ -2,7 +2,6 @@
 title: Implementing Documentation Items
 labels:
     - howto
-    - lts2015-ok
     - multiexcerpt
 toc: true
 confluence:

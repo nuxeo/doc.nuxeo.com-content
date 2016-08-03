@@ -1,7 +1,5 @@
 ---
 title: Is source code needed?
-labels:
-    - content-review-lts2015
 confluence:
     ajs-parent-page-id: '4687444'
     ajs-parent-page-title: Contributing to Nuxeo

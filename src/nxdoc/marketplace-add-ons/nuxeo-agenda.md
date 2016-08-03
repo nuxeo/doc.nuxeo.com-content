@@ -2,7 +2,6 @@
 title: Nuxeo Agenda
 labels:
     - nuxeo-agenda
-    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

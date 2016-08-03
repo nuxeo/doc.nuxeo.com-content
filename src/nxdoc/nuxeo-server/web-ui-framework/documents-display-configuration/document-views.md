@@ -4,7 +4,6 @@ labels:
     - view_action_list
     - document-tab
     - web-ui-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '6029663'

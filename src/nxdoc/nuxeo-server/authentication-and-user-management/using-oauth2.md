@@ -3,7 +3,6 @@ title: Using OAuth2
 labels:
     - oauth
     - oauth-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089115'

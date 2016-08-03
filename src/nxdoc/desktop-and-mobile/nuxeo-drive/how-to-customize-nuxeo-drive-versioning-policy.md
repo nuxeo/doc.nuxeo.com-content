@@ -12,7 +12,6 @@ labels:
     - link-update
     - howto
     - nuxeo-drive
-    - content-review-lts2015
     - nuxeo-drive-component
     - multiexcerpt-include
     - multiexcerpt

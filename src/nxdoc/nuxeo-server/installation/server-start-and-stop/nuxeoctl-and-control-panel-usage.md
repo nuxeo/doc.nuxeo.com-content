@@ -5,7 +5,6 @@ labels:
     - launcher
     - nuxeolauncher
     - bootstrap-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '6030087'
@@ -19,6 +18,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/FwNc'
     source_link: /display/NXDOC/nuxeoctl+and+Control+Panel+Usage
 history:
+    - 
+        author: Arnaud Kervern
+        date: '2016-07-11 08:59'
+        message: ''
+        version: '47'
     - 
         author: Julien Carsique
         date: '2016-03-04 15:02'
@@ -274,7 +278,7 @@ Issue `nuxeoctl help` to print this information.
 
 {{#> callout type='tip' }}
 
-See [the Environment variables page]({{page page='set-up-best-practices'}}) for setting Nuxeo Home and Configuration paths.
+See [the Environment variables page]({{page page='setup-best-practices'}}) for setting Nuxeo Home and Configuration paths.
 
 {{/callout}}
 
@@ -282,11 +286,11 @@ See [the Environment variables page]({{page page='set-up-best-practices'}}) for 
 
 ```
 nuxeoctl encrypt [--encrypt ] [..] [-d []|-q]
-    Output encrypted value for .
-    If  is not provided, it is read from stdin.
+        Output encrypted value for .
+        If  is not provided, it is read from stdin.
 
 nuxeoctl decrypt ''.. [-d []|-q]
-    Output decrypted value for . The secret key is read from stdin.
+        Output decrypted value for . The secret key is read from stdin.
 
 nuxeoctl config [ ]..  [] [--encrypt []] [--set [
 ```
@@ -539,6 +543,22 @@ Build a static archive.
 </td><td colspan="1">
 
 Display the&nbsp;server configuration.
+
+</td></tr><tr><td colspan="1">
+
+`register`
+
+</td><td colspan="1">
+
+Register the server with an existing Nuxeo Online Service account.
+
+</td></tr><tr><td colspan="1">
+
+`register-trial`
+
+</td><td colspan="1">
+
+Create an Nuxeo Online Service trial account and register the server.
 
 </td></tr><tr><td colspan="1">
 

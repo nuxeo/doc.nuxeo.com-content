@@ -1,7 +1,6 @@
 ---
 title: Choosing How to Customize the UI
 labels:
-    - content-review-lts2015
     - excerpt
 toc: true
 confluence:
@@ -175,7 +174,7 @@ The Nuxeo Platform's JSF interface is fully modular and very easy to customize:
 *   Business application,
 *   Document management back office.
 
-More information on the&nbsp;[Studio]({{page space='studio' page='nuxeo-studio-documentation-center'}})&nbsp;space and on the "[Web UI Framework]({{page page='web-ui-framework'}})" section.
+More information on the&nbsp;[Studio]({{page space='studio' page='nuxeo-online-services'}})&nbsp;space and on the "[Web UI Framework]({{page page='web-ui-framework'}})" section.
 
 ## Front Apps
 

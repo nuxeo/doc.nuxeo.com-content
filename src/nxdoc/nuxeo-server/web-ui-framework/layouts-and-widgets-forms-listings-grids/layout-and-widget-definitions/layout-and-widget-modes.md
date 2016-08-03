@@ -4,7 +4,6 @@ labels:
     - layout
     - widget
     - layout-widgets-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '3868333'

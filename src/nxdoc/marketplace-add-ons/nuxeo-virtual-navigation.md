@@ -3,7 +3,6 @@ title: Nuxeo Virtual Navigation
 labels:
     - virtual-navigation
     - virtual-navigation-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

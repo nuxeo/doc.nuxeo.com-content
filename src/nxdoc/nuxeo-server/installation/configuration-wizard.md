@@ -82,7 +82,7 @@ By default users and groups are stored in the embedded database. You can however
 
 ### Mail Settings
 
-Nuxeo applications include email alert features. By default, no SMTP configuration is enabled and therefore no email alerts will be sent to users. You can refer to the [email alerts section]({{page page='set-up-best-practices'}}) for more information about the SMTP configuration.
+Nuxeo applications include email alert features. By default, no SMTP configuration is enabled and therefore no email alerts will be sent to users. You can refer to the [email alerts section]({{page page='setup-best-practices'}}) for more information about the SMTP configuration.
 
 ![]({{file name='Wizard_smtp_settings.png'}} ?w=550,border=true)
 

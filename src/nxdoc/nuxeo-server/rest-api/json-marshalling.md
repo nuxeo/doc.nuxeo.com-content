@@ -5,7 +5,6 @@ labels:
     - json
     - link-update
     - rest-api-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'

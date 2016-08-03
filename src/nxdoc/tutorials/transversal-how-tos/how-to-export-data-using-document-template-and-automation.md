@@ -15,7 +15,6 @@ labels:
     - howto
     - automation
     - studio
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

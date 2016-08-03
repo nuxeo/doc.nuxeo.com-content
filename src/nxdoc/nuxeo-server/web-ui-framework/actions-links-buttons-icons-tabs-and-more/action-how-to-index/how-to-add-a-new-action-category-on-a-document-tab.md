@@ -13,7 +13,6 @@ labels:
     - layout
     - action
     - studio
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '19235610'
     ajs-parent-page-title: Action How-To Index

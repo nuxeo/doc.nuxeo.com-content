@@ -3,7 +3,6 @@ title: DBS - MongoDB
 labels:
     - mongodb
     - mongodb-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
