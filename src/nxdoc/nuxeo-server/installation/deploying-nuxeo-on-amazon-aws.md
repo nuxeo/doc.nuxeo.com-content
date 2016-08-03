@@ -4,7 +4,6 @@ labels:
     - amazon-aws
     - cloud-deployment
     - mg
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'

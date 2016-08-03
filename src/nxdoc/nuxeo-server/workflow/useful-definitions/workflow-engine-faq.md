@@ -4,7 +4,6 @@ labels:
     - faq
     - workflow
     - workflow-component
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '12912668'
     ajs-parent-page-title: Useful Definitions

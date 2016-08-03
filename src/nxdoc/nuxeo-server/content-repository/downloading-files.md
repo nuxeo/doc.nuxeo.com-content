@@ -2,7 +2,6 @@
 title: Downloading Files
 labels:
     - url
-    - content-review-lts2015
     - blob-storage
     - blob-manager-component
     - excerpt

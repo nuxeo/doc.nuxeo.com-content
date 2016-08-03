@@ -7,7 +7,6 @@ labels:
     - howto
     - document-type
     - file-upload-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235627'

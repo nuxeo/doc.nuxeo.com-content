@@ -6,7 +6,6 @@ labels:
     - proxies
     - community-links
     - publishing-component
-    - lts2015-ok
     - multiexcerpt-include
     - excerpt
 toc: true

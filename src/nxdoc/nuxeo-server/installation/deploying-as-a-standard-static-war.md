@@ -18,7 +18,6 @@ labels:
     - static-war
     - howto
     - last-review-20141128
-    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'

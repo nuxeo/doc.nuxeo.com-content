@@ -11,7 +11,6 @@ details:
 labels:
     - howto
     - directory-component
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '4688939'
     ajs-parent-page-title: Data Lists and Directories

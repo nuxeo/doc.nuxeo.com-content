@@ -14,7 +14,6 @@ labels:
     - user-action
     - event-handler
     - studio
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235642'
@@ -28,6 +27,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/pIAV'
     source_link: /display/NXDOC/How+to+Create+an+Automation+Chain
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-07-21 09:31'
+        message: ''
+        version: '36'
     - 
         author: Manon Lumeau
         date: '2016-06-09 15:46'
@@ -287,7 +291,6 @@ Binding the automation chain to a button, an action or an event handler is done 
 
 <div class="column medium-6">{{! multiexcerpt name='popular-how-tos'}}{{#> panel heading="Popular How-Tos"}}
 
-*   [undefined]({{page}})
 *   [How to Export Data Using Document Template and Automation]({{page page='how-to-export-data-using-document-template-and-automation'}})
 *   [How to Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
 *   [How-To Index]({{page page='how-to-index'}})

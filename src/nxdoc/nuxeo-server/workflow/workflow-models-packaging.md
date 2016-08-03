@@ -3,7 +3,6 @@ title: Workflow Models Packaging
 labels:
     - workflow
     - workflow-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '12913723'

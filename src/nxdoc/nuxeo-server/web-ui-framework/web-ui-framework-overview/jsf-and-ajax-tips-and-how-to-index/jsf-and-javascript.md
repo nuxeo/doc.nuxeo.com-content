@@ -12,7 +12,6 @@ labels:
     - howto
     - todo
     - seam-jsf-component
-    - lts2015-not-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '9830458'

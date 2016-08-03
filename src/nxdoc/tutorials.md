@@ -1,7 +1,6 @@
 ---
 title: Tutorials
 labels:
-    - content-review-lts2015
     - home
 confluence:
     ajs-parent-page-id: '950332'

@@ -2,7 +2,6 @@
 title: Licenses
 labels:
     - license
-    - content-review-lts2015
     - excerpt
 confluence:
     ajs-parent-page-id: '950332'

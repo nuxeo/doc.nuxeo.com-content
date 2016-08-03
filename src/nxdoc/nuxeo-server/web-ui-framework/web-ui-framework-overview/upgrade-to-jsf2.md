@@ -2,7 +2,6 @@
 title: Upgrade to JSF2
 labels:
     - seam-jsf-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

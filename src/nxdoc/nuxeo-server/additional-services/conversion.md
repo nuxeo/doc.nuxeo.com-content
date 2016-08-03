@@ -3,7 +3,6 @@ title: Conversion
 labels:
     - conversion
     - convert-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'

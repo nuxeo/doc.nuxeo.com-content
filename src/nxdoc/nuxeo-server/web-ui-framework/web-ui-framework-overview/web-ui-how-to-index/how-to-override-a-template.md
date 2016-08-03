@@ -10,7 +10,6 @@ labels:
     - howto
     - template
     - seam-jsf-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'

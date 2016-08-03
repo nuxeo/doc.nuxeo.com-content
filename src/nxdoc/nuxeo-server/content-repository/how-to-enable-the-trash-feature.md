@@ -13,7 +13,6 @@ labels:
     - delete
     - life-cycle
     - howto
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '950287'

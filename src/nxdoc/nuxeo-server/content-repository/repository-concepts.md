@@ -2,7 +2,6 @@
 title: Repository Concepts
 labels:
     - concepts
-    - content-review-lts2015
     - excerpt
 toc: true
 confluence:
@@ -17,237 +16,237 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/HoAO'
     source_link: /display/NXDOC/Repository+Concepts
 history:
-    -
+    - 
         author: Alain Escaffre
         date: '2014-09-19 16:23'
         message: ''
         version: '47'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-09-19 14:47'
         message: ''
         version: '46'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-09-19 14:26'
         message: ''
         version: '45'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-09-19 14:24'
         message: ''
         version: '44'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-09-19 12:11'
         message: ''
         version: '43'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-09-19 11:50'
         message: ''
         version: '42'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-19 11:18'
         message: ''
         version: '41'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-30 12:23'
         message: Added children pages
         version: '40'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2013-11-26 18:51'
         message: ''
         version: '39'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-25 16:09'
         message: ''
         version: '38'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-19 12:09'
         message: 'Fixed typos, removed Jackrabbit from persistence back ends'
         version: '37'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-18 18:01'
         message: Fixed some typos
         version: '36'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 13:56'
         message: ''
         version: '35'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 13:56'
         message: ''
         version: '34'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 13:18'
         message: ''
         version: '33'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 12:07'
         message: ''
         version: '32'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 12:06'
         message: Formatting
         version: '31'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-09-13 23:15'
         message: Migrated to Confluence 4.0
         version: '30'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-09-13 23:15'
         message: document repository -> content repository
         version: '29'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-02-10 17:46'
         message: Jackrabbit backend is obsolete
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-06 18:01'
         message: ''
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-04 17:53'
         message: formatting and typos
         version: '26'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-10-15 17:18'
         message: ''
         version: '25'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-10-15 17:15'
         message: ''
         version: '24'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-10-15 17:14'
         message: ''
         version: '23'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-10-15 17:13'
         message: ''
         version: '22'
-    -
+    - 
         author: Jane Zupan
         date: '2010-09-30 23:15'
         message: ''
         version: '21'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-06-28 08:13'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2010-05-20 17:31'
         message: formatting and typos
         version: '19'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-19 11:37'
         message: ''
         version: '18'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-19 10:58'
         message: ''
         version: '17'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-19 03:17'
         message: ''
         version: '16'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-19 02:47'
         message: ''
         version: '15'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-19 01:55'
         message: ''
         version: '14'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-19 01:53'
         message: ''
         version: '13'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-19 01:51'
         message: ''
         version: '12'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-19 01:50'
         message: ''
         version: '11'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-19 01:49'
         message: ''
         version: '10'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-19 01:43'
         message: ''
         version: '9'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-19 01:37'
         message: ''
         version: '8'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-19 01:33'
         message: ''
         version: '7'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-19 01:32'
         message: ''
         version: '6'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-19 01:29'
         message: ''
         version: '5'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-12 11:20'
         message: ''
         version: '4'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-12 11:09'
         message: ''
         version: '3'
-    -
+    - 
         author: Admin name placeholder
         date: '2010-03-01 00:38'
         message: ''
         version: '2'
-    -
+    - 
         author: Admin name placeholder
         date: '2010-03-01 00:37'
         message: ''
@@ -276,7 +275,7 @@ Fields can be of several types:
 *   Simple lists (multi-valued simple field),
 *   Complex types.
 
-![]({{file name='Sélection_004.png'}} ?w=650,border=true)
+![]({{file name='S&eacute;lection_004.png'}} ?w=650,border=true)
 
 A file is a special case of a complex field that contains:
 
@@ -303,37 +302,10 @@ Each document type can use one or several schemas.
 Here is a simple example of a XSD schema used in Nuxeo Core (a subset of Dublin Core):
 
 ```
-<?xml version="1.0"?>
-<xs:schema
-        targetNamespace="http://www.nuxeo.org/ecm/schemas/dublincore/"
-        xmlns:xs="http://www.w3.org/2001/XMLSchema"
-        xmlns:nxs="http://www.nuxeo.org/ecm/schemas/dublincore/">
 
-    <xs:simpleType name="subjectList">
-        <xs:list itemType="xs:string"/>
-    </xs:simpleType>
-    <xs:simpleType name="contributorList">
-        <xs:list itemType="xs:string"/>
-    </xs:simpleType>
-    <xs:element name="title" type="xs:string"/>
-    <xs:element name="description" type="xs:string"/>
-    <xs:element name="subjects" type="nxs:subjectList"/>
-    <xs:element name="rights" type="xs:string"/>
-    <xs:element name="source" type="xs:string"/>
-    <xs:element name="coverage" type="xs:string"/>
-    <xs:element name="created" type="xs:date"/>
-    <xs:element name="modified" type="xs:date"/>
-    <xs:element name="issued" type="xs:date"/>
-    <xs:element name="valid" type="xs:date"/>
-    <xs:element name="expired" type="xs:date"/>
-    <xs:element name="format" type="xs:string"/>
-    <xs:element name="language" type="xs:string"/>
-    <xs:element name="creator" type="xs:string"/>
-    <xs:element name="contributors" type="nxs:contributorList"/>
-</xs:schema>
 ```
 
-A schema file has to be referenced by Nuxeo configuration to be found and used. The schema must be referenced in the&nbsp;**schema**&nbsp;extension point of the&nbsp;[`org.nuxeo.ecm.core.schema.TypeService`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.core.schema.TypeService)&nbsp;component. A reference to a schema defines:
+A schema file has to be referenced by Nuxeo configuration to be found and used. The schema must be referenced in the&nbsp;**schema**&nbsp;extension point of the&nbsp;`[org.nuxeo.ecm.core.schema.TypeService](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.core.schema.TypeService)&nbsp;`&nbsp;component. A reference to a schema defines:
 
 *   the schema name,
 *   the schema location (file),
@@ -461,12 +433,12 @@ Each document type can be bound to a life cycle. The life cycle is responsible f
 *   The possible states of the document (ex: draft, validated, obsolete, ...),
 *   The possible transitions between states (ex : validate, make obsolete, ...).
 
-![]({{file name='Sélection_005.png'}} ?w=650,border=true)
+![]({{file name='S&eacute;lection_005.png'}} ?w=650,border=true)
 
 Life cycle is not workflow, but:
 
 *   Workflows usually use the life cycle of the document as one of the state variable of the process,
-*   You can simulate simple review process using life cycle and listeners (very easy to do using [Nuxeo Studio]({{page space='studio' page='nuxeo-studio-documentation-center'}}) and Content Automation).
+*   You can simulate simple review process using life cycle and listeners (very easy to do using [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) and Content Automation).
 
 ### Proxies
 
@@ -484,7 +456,7 @@ Proxies are used to be able to see the same document from several places without
 The initial use case for proxies in the Nuxeo Platform is local publishing:&nbsp;when you are happy with a document (and possibly successfully completed a review workflow), you want to create a version for this document. This version will be the one validated and the live document stays in the workspace where you created it. Then you may want to give access to this valid document to several people.&nbsp;For that, you can publish the document into one or several sections: this means creating proxies pointing to the validated version.
 Depending on their rights, people that cannot read the document from the workspace (because they can not access it) may be able to see it from one or several sections (that may even be public).
 
-![]({{file name='Sélection_006.png'}} ?w=650,border=true)
+![]({{file name='S&eacute;lection_006.png'}} ?w=650,border=true)
 
 The second use cases for proxies is multi-filling.
 

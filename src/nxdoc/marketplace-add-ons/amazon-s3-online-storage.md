@@ -3,7 +3,6 @@ title: Amazon S3 Online Storage
 labels:
     - amazon-s3
     - binary-manager
-    - content-review-lts2015
     - multiexcerpt-include
 toc: true
 confluence:
@@ -19,9 +18,14 @@ confluence:
     source_link: /display/NXDOC/Amazon+S3+Online+Storage
 history:
     - 
+        author: Alain Escaffre
+        date: '2016-08-02 12:07'
+        message: ''
+        version: '17'
+    - 
         author: Solen Guitter
         date: '2016-06-01 14:30'
-        message: se generic installation excerpt
+        message: 'Use generic installation excerpt '
         version: '16'
     - 
         author: Solen Guitter
@@ -112,7 +116,7 @@ You should be familiar with Amazon S3 and be in possession of your credentials.
 
 ## Configuration
 
-In order to configure the package, you will need to change a few Nuxeo templates, and provide values for the configuration variables that define your S3 credentials, bucket and encryption choices
+In order to configure the package, you will need to provide values for the configuration parameters that define your S3 credentials, bucket and encryption choices.
 
 ### Specifying Your Amazon S3 Parameters
 

@@ -9,7 +9,6 @@ details:
 labels:
     - howto
     - alerts
-    - content-review-lts2015
 confluence:
     ajs-parent-page-id: '19235681'
     ajs-parent-page-title: Transversal How-Tos

@@ -3,7 +3,6 @@ title: Available Variables in Email Templates
 labels:
     - variable
     - email
-    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '14254895'

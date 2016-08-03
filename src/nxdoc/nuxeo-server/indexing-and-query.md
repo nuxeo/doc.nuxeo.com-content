@@ -1,7 +1,6 @@
 ---
 title: Indexing and Query
 labels:
-    - content-review-lts2015
     - query-pageprovider-component
 toc: true
 confluence:

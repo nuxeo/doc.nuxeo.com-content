@@ -6,7 +6,6 @@ labels:
     - community-links
     - url-codec-component
     - seam-jsf-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

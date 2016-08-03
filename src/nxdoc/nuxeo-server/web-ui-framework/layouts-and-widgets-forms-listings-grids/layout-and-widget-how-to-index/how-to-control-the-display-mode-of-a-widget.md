@@ -17,7 +17,6 @@ labels:
     - layout
     - studio
     - layout-widgets-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235623'

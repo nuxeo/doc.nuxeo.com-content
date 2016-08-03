@@ -2,7 +2,6 @@
 title: Quick Start Series
 labels:
     - last-review-20150128
-    - content-review-lts2015
     - home
 confluence:
     ajs-parent-page-id: '7209076'

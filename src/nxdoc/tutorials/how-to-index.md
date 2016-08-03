@@ -1,7 +1,6 @@
 ---
 title: How-To Index
 labels:
-    - content-review-lts2015
     - migration-sample
 confluence:
     ajs-parent-page-id: '7209076'

@@ -5,7 +5,6 @@ labels:
     - todo
     - link-update
     - rest-api-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

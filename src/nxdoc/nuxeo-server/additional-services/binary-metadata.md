@@ -4,7 +4,6 @@ labels:
     - link-update
     - binary-metadata
     - binary-metadata-component
-    - lts2015-ok
     - multiexcerpt-include
 toc: true
 confluence:

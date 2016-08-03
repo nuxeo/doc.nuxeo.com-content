@@ -1,7 +1,6 @@
 ---
 title: Content Repository
 labels:
-    - content-review-lts2015
     - home
 confluence:
     ajs-parent-page-id: '31033314'
@@ -15,6 +14,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/D4AO'
     source_link: /display/NXDOC/Content+Repository
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-07-20 13:29'
+        message: emove children display macr
+        version: '44'
     - 
         author: Solen Guitter
         date: '2014-09-19 15:19'
@@ -234,6 +238,23 @@ history:
         version: '1'
 
 ---
+*   [Repository Concepts](https://doc.nuxeo.com/display/NXDOC/Repository+Concepts)&nbsp;&mdash;&nbsp;<span class="smalltext">This page summarizes all the main concepts about documents, access to documents and document storage.</span>
+*   [Persistence Architecture](https://doc.nuxeo.com/display/NXDOC/Persistence+Architecture)
+*   [Field Constraints and Validation](https://doc.nuxeo.com/display/NXDOC/Field+Constraints+and+Validation)
+*   [Versioning](https://doc.nuxeo.com/display/NXDOC/Versioning)
+*   [Available Facets](https://doc.nuxeo.com/display/NXDOC/Available+Facets)
+*   [Downloading Files](https://doc.nuxeo.com/display/NXDOC/Downloading+Files)&nbsp;&mdash;&nbsp;<span class="smalltext">This page describes the logic for building the correct URL to download a file stored on a Nuxeo Document.</span>
+*   [Deleting Documents](https://doc.nuxeo.com/display/NXDOC/Deleting+Documents)&nbsp;&mdash;&nbsp;<span class="smalltext">Deleting a document involves several steps before the full document is actually deleted from the database and disk. These steps are described below.</span>
+*   [CMIS](https://doc.nuxeo.com/display/NXDOC/CMIS)
+*   [WebDAV](https://doc.nuxeo.com/display/NXDOC/WebDAV)
+*   [How to Define a Document Type](https://doc.nuxeo.com/display/NXDOC/How+to+Define+a+Document+Type)&nbsp;&mdash;&nbsp;<span class="smalltext">You can create as many document types as you want with Nuxeo Studio. This how-to explains the different steps to do so.</span>
+*   [How to Override Existing Document Types](https://doc.nuxeo.com/display/NXDOC/How+to+Override+Existing+Document+Types)&nbsp;&mdash;&nbsp;<span class="smalltext">Any built-in document type can be overridden: you just have to use the good ID, inherit the good type and add some necessary schemas and facets. We provide a table that should give you all necessary information.</span>
+*   [How to Add Complex Fields on Your Document Type](https://doc.nuxeo.com/display/NXDOC/How+to+Add+Complex+Fields+on+Your+Document+Type)&nbsp;&mdash;&nbsp;<span class="smalltext">Nuxeo Studio enables you to create your own document types, with their associated metadata. Metadata can be simple text fields, dates, text areas, etc. They can also be more complex with several related informations. A typical example would be a "Sender" metadata, that would be composed of four pieces of information: The sender's last name, his/her first name, the company and the company's logo.</span>
+*   [How to Enable the Trash Feature](https://doc.nuxeo.com/display/NXDOC/How+to+Enable+the+Trash+Feature)&nbsp;&mdash;&nbsp;<span class="smalltext">To enable the trash on your document type, you need either to assign him the default life cycle (which is the case if you don't configure it) or, if you created a custom life cycle, to provide delete transitions to the deleted state, from each other state. Moreover, in order to be able to restore documents, you must provide a undelete transition from the deleted state to another state in the lifecycle.</span>
+*   [How to Enable Add-Ons Features on Custom Document Type](https://doc.nuxeo.com/display/NXDOC/How+to+Enable+Add-Ons+Features+on+Custom+Document+Type)&nbsp;&mdash;&nbsp;<span class="smalltext">To know how to apply features provided by the Nuxeo Marketplace add-ons on your document types and features defined in Studio, see the documentation of the add-ons.</span>
+*   [How to Customize Document Validation](https://doc.nuxeo.com/display/NXDOC/How+to+Customize+Document+Validation)
+*   [Document Type How-To Index](https://doc.nuxeo.com/display/NXDOC/Document+Type+How-To+Index)
+
 <div class="row" data-equalizer="" data-equalize-on="medium">
 
 <div class="column medium-6">{{#> panel heading="Related topics in this documentation"}}

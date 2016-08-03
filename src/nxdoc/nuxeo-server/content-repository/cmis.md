@@ -5,7 +5,6 @@ labels:
     - soap
     - blogs
     - cmis-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950287'
@@ -20,9 +19,14 @@ confluence:
     source_link: /display/NXDOC/CMIS
 history:
     - 
+        author: Manon Lumeau
+        date: '2016-08-02 15:18'
+        message: ''
+        version: '77'
+    - 
         author: Florent Guillaume
         date: '2016-03-29 15:56'
-        message: roxies visible in CMI
+        message: proxies visible in CMIS
         version: '76'
     - 
         author: Florent Guillaume
@@ -414,13 +418,13 @@ Nuxeo supports CMIS through the following modules:
 
 You can start a [Nuxeo Platform online trial](https://connect.nuxeo.com/register/#/) to test the CMIS integration. From your trial instance you can access the different services from the following URLs:
 
-*   Browser Binding root URL:&nbsp; `<span class="nolink">http://your-instance-url/nuxeo/json/cmis</span>`
-*   AtomPub service document: `<span class="nolink">http://your-instance-url/nuxeo/atom/cmis</span>`
-*   SOAP WSDL for the repository service: `<span class="nolink">http://your-instance-url/nuxeo/webservices/cmis/RepositoryService?wsdl</span>`
+*   Browser Binding root URL:&nbsp;`http://your-instance-url/nuxeo/json/cmis`
+*   AtomPub service document: `http://your-instance-url/nuxeo/atom/cmis`
+*   SOAP WSDL for the repository service: `http://your-instance-url/nuxeo/webservices/cmis/RepositoryService?wsdl`
 
 ## Usage
 
-The following documentation uses `<span class="nolink">http://localhost:8080/nuxeo</span>` as the URL of the Nuxeo server but you can replace it with `<span class="nolink">http://your-instance-url/nuxeo</span>` if you have another instance available.
+The following documentation uses `http://localhost:8080/nuxeo` as the URL of the Nuxeo server but you can replace it with `http://your-instance-url/nuxeo` if you have another instance available.
 
 ### JSON
 
@@ -430,7 +434,7 @@ The Browser Binding (JSON) endpoint is recommended, as it is faster and has more
 
 {{/callout}}
 
-You can use a CMIS 1.1 Browser Binding (JSON) client and point it at&nbsp; <span class="nolink">`http://localhost:8080/nuxeo/json/cmis`.</span>
+You can use a CMIS 1.1 Browser Binding (JSON) client and point it at `http://localhost:8080/nuxeo/json/cmis`.
 
 If you want to check the JSON returned using the command line, this can be done using&nbsp;`curl`&nbsp;or&nbsp;`wget`:
 
@@ -531,9 +535,9 @@ Which returns:
 
 ### AtomPub
 
-You can use a CMIS 1.1 AtomPub client and point it at `<span class="nolink">http://localhost:8080/nuxeo/atom/cmis</span>` .
+You can use a CMIS 1.1 AtomPub client and point it at `http://localhost:8080/nuxeo/atom/cmis`.
 
-(Since Nuxeo 7.10, a legacy CMIS 1.0 AtomPub endpoint is also available at `<span class="nolink">http://localhost:8080/nuxeo/atom/cmis10</span>`. This is provided for old clients that cannot be upgraded.)
+(Since Nuxeo 7.10, a legacy CMIS 1.0 AtomPub endpoint is also available at `http://localhost:8080/nuxeo/atom/cmis10` . This is provided for old clients that cannot be upgraded.)
 
 If you want to check the AtomPub XML returned using the command line, this can be done using `curl` or `wget`:
 
@@ -569,15 +573,15 @@ You should probably pipe this through `tidy` if you want a readable output:
 
 The following SOAP endpoints are available:
 
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/RepositoryService?wsdl</span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/DiscoveryService<span>?wsdl</span></span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/ObjectService<span>?wsdl</span></span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/NavigationService<span>?wsdl</span></span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/VersioningService<span>?wsdl</span></span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/RelationshipService<span>?wsdl</span></span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/MultiFilingService<span>?wsdl</span></span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/ACLService<span>?wsdl</span></span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/PolicyService<span>?wsdl</span></span>`
+*   `http://localhost:8080/nuxeo/webservices/cmis/RepositoryService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/DiscoveryService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/ObjectService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/NavigationService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/VersioningService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/RelationshipService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/MultiFilingService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/ACLService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/PolicyService?wsdl`
 
 Authentication is done using Web Services Security (WSS) UsernameToken.
 

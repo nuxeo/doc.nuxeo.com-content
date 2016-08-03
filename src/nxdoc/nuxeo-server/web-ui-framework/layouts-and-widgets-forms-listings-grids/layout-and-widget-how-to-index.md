@@ -2,7 +2,6 @@
 title: Layout & Widget How-To Index
 labels:
     - layout
-    - lts2015-ok
     - index
 confluence:
     ajs-parent-page-id: '950330'

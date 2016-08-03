@@ -4,7 +4,6 @@ labels:
     - import
     - export
     - core-io-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

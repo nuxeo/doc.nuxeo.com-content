@@ -4,7 +4,6 @@ labels:
     - deployment
     - clustering
     - architecture
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'

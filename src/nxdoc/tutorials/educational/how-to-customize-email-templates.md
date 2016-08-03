@@ -15,7 +15,6 @@ labels:
     - alert
     - notification
     - studio
-    - content-review-lts2015
     - excerpt
 toc: true
 confluence:

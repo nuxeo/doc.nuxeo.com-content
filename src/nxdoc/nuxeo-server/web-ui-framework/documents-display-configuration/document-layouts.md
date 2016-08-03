@@ -3,7 +3,6 @@ title: Document Layouts
 labels:
     - layout
     - web-ui-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '6029663'

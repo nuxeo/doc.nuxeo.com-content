@@ -3,7 +3,6 @@ title: JSF Page Layout System Overview
 labels:
     - jsf
     - seam-jsf-component
-    - lts2015-not-ok
     - nxdoc-741
 toc: true
 confluence:

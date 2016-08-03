@@ -16,7 +16,6 @@ labels:
     - howto
     - layout
     - layout-widgets-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235623'

@@ -2,7 +2,6 @@
 title: Security
 labels:
     - security-component
-    - lts2015-ok
     - multiexcerpt-include
 toc: true
 confluence:

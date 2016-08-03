@@ -15,7 +15,6 @@ labels:
     - howto
     - jsf
     - seam-jsf-component
-    - lts2015-not-ok
     - excerpt
 toc: true
 confluence:

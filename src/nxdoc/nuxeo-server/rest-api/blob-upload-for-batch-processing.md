@@ -6,7 +6,6 @@ labels:
     - upload
     - todo
     - file-upload-component
-    - lts2015-ok
     - university
     - excerpt
 toc: true

@@ -3,7 +3,6 @@ title: Trust Store and Key Store Configuration
 labels:
     - todo
     - certificate
-    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '950296'

@@ -2,7 +2,6 @@
 title: Alternative Command Parameters for ProRes Codec Users
 labels:
     - convert-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '3866704'

@@ -12,7 +12,6 @@ labels:
     - howto
     - nuxeo-drive
     - layout
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '14257229'
     ajs-parent-page-title: Nuxeo Drive

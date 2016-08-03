@@ -9,7 +9,6 @@ details:
 labels:
     - vocabulary
     - howto
-    - content-review-lts2015
     - excerpt
 confluence:
     ajs-parent-page-id: '4688939'

@@ -11,7 +11,6 @@ labels:
     - howto
     - i18n
     - translations-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235763'

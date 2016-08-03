@@ -3,7 +3,6 @@ title: ACLs
 labels:
     - acl
     - security-component
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '20515363'
     ajs-parent-page-title: Security

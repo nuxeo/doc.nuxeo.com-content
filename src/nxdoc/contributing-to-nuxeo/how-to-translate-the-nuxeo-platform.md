@@ -11,7 +11,6 @@ labels:
     - internationalization
     - translation
     - howto
-    - content-review-lts2015
     - multiexcerpt-include
 toc: true
 confluence:

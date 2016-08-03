@@ -12,7 +12,6 @@ labels:
     - content-view
     - howto
     - studio
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '19235663'
     ajs-parent-page-title: Content View How-To Index

@@ -1,7 +1,5 @@
 ---
 title: Automation How-To Index
-labels:
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '18451738'
     ajs-parent-page-title: Automation

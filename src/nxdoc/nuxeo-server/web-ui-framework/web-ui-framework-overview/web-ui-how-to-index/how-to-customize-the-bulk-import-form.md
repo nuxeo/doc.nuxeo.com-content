@@ -8,7 +8,6 @@ details:
         topics: 'Bulk import, Web UI'
 labels:
     - howto
-    - content-review-lts2015
     - layout
 toc: true
 confluence:

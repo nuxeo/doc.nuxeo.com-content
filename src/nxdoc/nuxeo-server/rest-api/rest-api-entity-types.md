@@ -5,7 +5,6 @@ labels:
     - blogs
     - endpoint
     - rest-api-component
-    - lts2015-ok
     - multiexcerpt
 toc: true
 confluence:

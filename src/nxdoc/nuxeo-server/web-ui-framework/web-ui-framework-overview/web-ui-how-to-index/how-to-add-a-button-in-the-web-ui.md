@@ -19,7 +19,6 @@ labels:
     - action
     - studio
     - actions-filters-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

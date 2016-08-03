@@ -3,7 +3,6 @@ title: Content Views Display
 labels:
     - content-view
     - content-views-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

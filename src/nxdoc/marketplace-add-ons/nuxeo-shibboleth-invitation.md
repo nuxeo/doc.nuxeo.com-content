@@ -1,7 +1,6 @@
 ---
 title: Nuxeo Shibboleth Invitation
 labels:
-    - lts2015-ok
     - shibboleth-component
     - github-readme
 toc: true

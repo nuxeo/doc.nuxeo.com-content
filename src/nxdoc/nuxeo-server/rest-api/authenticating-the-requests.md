@@ -1,7 +1,5 @@
 ---
 title: Authenticating the Requests
-labels:
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API

@@ -19,7 +19,6 @@ labels:
     - studio
     - howto
     - nuxeo-ide
-    - content-review-lts2015
     - runtimecomponent
 toc: true
 confluence:

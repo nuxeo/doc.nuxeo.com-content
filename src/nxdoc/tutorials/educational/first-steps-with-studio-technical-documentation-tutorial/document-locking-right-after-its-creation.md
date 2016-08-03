@@ -2,7 +2,6 @@
 title: Document Locking Right after Its Creation
 labels:
     - lock
-    - lts2015-ok
     - multiexcerpt
 toc: true
 confluence:

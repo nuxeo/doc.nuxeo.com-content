@@ -3,7 +3,6 @@ title: Audit
 labels:
     - audit
     - audit-component
-    - lts2015-not-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31033314'

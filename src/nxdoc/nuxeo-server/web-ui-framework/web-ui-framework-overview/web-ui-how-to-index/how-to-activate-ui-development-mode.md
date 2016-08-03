@@ -11,7 +11,6 @@ details:
 labels:
     - howto
     - seam-jsf-component
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '20517820'
     ajs-parent-page-title: Web UI How-To Index

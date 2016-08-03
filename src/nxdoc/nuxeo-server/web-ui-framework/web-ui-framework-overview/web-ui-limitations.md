@@ -5,7 +5,6 @@ labels:
     - jsf
     - seam
     - home
-    - lts2015-ok
     - excerpt
     - excerpt-include
 confluence:

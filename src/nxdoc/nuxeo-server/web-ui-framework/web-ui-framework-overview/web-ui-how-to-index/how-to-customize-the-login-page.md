@@ -11,7 +11,6 @@ labels:
     - howto
     - theme
     - login-page-component
-    - lts2015-not-ok
 confluence:
     ajs-parent-page-id: '20517820'
     ajs-parent-page-title: Web UI How-To Index

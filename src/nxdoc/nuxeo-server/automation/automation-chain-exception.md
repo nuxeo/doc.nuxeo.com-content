@@ -7,7 +7,6 @@ labels:
     - trace
     - mvel
     - automation-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '18451738'

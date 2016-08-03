@@ -10,7 +10,6 @@ labels:
     - howto
     - seam-jsf-component
     - jsf
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

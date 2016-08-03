@@ -3,7 +3,6 @@ title: WebDAV
 labels:
     - webdav
     - webdav-component
-    - lts2015-ok
     - multiexcerpt-include
 toc: true
 confluence:
