@@ -1,6 +1,7 @@
 ---
 title: GWT Integration
 labels:
+    - content-review-lts2015
     - gwt-component
     - excerpt
 toc: true

@@ -14,6 +14,7 @@ labels:
     - project-structure
     - pom_xml
     - howto
+    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '19235681'

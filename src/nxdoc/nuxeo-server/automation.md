@@ -3,6 +3,7 @@ title: Automation
 labels:
     - automation
     - automation-component
+    - lts2015-ok
     - excerpt
     - multiexcerpt-include
 confluence:

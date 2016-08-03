@@ -3,6 +3,7 @@ title: Calling Automation from Java
 labels:
     - automation
     - automation-component
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:

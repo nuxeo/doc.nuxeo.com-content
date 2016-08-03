@@ -3,6 +3,7 @@ title: Supported File Formats
 labels:
     - dam-component
     - dam
+    - lts2015-not-ok
 confluence:
     ajs-parent-page-id: '3866704'
     ajs-parent-page-title: Digital Asset Management (DAM)

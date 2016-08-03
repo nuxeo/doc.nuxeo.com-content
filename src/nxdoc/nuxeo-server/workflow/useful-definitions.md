@@ -4,6 +4,7 @@ labels:
     - workflow
     - concept
     - workflow-component
+    - lts2015-ok
     - excerpt
     - multiexcerpt-include
 toc: true

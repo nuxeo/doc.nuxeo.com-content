@@ -2,6 +2,7 @@
 title: Nuxeo Jenkins Report
 labels:
     - nuxeo-jenkins-report
+    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -54,6 +55,6 @@ After you installed the package, a new document type is available for creation i
 
 ## Configuration
 
-Since this addon enables users to send the report from the Nuxeo Platform, your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='setup-best-practices'}}).
+Since this addon enables users to send the report from the Nuxeo Platform, your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='set-up-best-practices'}}).
 
 &nbsp;

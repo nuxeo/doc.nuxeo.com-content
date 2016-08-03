@@ -5,6 +5,7 @@ labels:
     - client
     - mobile
     - ios-client-component
+    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16091040'

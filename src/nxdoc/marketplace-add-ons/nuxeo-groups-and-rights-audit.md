@@ -3,6 +3,7 @@ title: Nuxeo Groups and Rights Audit
 labels:
     - nuxeo-groups-rights-audit
     - last-review-20150226
+    - content-review-lts2015
     - excerpt-include
 toc: true
 confluence:
@@ -58,7 +59,7 @@ After it has been installed, administrators have a new export option available, 
 
 ### Setting Up e-Mail Sending
 
-The Nuxeo Groups and Rights Audit addon sends email to the administrator who requested the audit. So your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='setup-best-practices'}}).
+The Nuxeo Groups and Rights Audit addon sends email to the administrator who requested the audit. So your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='set-up-best-practices'}}).
 
 ### Setting Up a Higher Timeout
 

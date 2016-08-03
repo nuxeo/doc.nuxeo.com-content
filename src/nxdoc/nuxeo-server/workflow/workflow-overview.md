@@ -3,6 +3,7 @@ title: Workflow Overview
 labels:
     - workflow
     - workflow-component
+    - lts2015-ok
     - excerpt
     - multiexcerpt
 confluence:

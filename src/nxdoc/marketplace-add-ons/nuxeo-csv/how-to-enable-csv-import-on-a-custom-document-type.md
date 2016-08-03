@@ -13,6 +13,7 @@ labels:
     - nuxeo-csv
     - howto
     - csv-importer-component
+    - lts2015-ok
 confluence:
     ajs-parent-page-id: '14255163'
     ajs-parent-page-title: Nuxeo CSV

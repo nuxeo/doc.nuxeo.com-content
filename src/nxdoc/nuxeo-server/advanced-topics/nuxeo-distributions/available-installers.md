@@ -2,6 +2,7 @@
 title: Available installers
 labels:
     - distributions-component
+    - lts2015-ok
 confluence:
     ajs-parent-page-id: '950286'
     ajs-parent-page-title: Nuxeo Distributions

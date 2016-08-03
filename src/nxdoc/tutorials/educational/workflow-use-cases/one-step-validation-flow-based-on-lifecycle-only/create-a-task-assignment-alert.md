@@ -4,6 +4,7 @@ labels:
     - studio-20
     - tuto-automation
     - tuto-template
+    - content-review-lts2015
 confluence:
     ajs-parent-page-id: '3345551'
     ajs-parent-page-title: One step validation flow based on lifecycle only

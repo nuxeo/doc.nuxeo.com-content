@@ -9,6 +9,7 @@ details:
 labels:
     - anonymous
     - howto
+    - content-review-lts2015
     - excerpt
 toc: true
 confluence:

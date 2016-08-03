@@ -1,5 +1,7 @@
 ---
 title: JSF and Ajax Tips and How-To Index
+labels:
+    - content-review-lts2015
 confluence:
     ajs-parent-page-id: '950313'
     ajs-parent-page-title: Web UI Framework Overview

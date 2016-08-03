@@ -3,6 +3,7 @@ title: How to Publish a News Feature in Workspaces
 labels:
     - tutorial
     - studio
+    - content-review-lts2015
     - excerpt
 toc: true
 confluence:

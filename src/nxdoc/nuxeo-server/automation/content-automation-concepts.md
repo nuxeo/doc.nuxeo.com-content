@@ -4,6 +4,7 @@ labels:
     - link-update
     - automation
     - todo
+    - content-review-lts2015
     - automation-component
     - multiexcerpt
     - excerpt
@@ -20,432 +21,432 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/mQAz'
     source_link: /display/NXDOC/Content+Automation+Concepts
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 15:48'
         message: ''
         version: '86'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 10:19'
         message: ''
         version: '85'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-14 13:01'
         message: ''
         version: '84'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 19:21'
         message: Fix links to point to latest version
         version: '83'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-09 14:39'
         message: Formatting
         version: '82'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-02 02:55'
         message: ''
         version: '81'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-01 17:06'
         message: ''
         version: '80'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:45'
         message: ''
         version: '79'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:36'
         message: ''
         version: '78'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:32'
         message: ''
         version: '77'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:17'
         message: ''
         version: '76'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:14'
         message: ''
         version: '75'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:12'
         message: ''
         version: '74'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:08'
         message: ''
         version: '73'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:08'
         message: ''
         version: '72'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:05'
         message: ''
         version: '71'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 20:44'
         message: ''
         version: '70'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 20:06'
         message: ''
         version: '69'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-31 18:16'
         message: ''
         version: '68'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 14:05'
         message: ''
         version: '67'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 13:51'
         message: ''
         version: '66'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 12:37'
         message: ''
         version: '65'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 11:26'
         message: ''
         version: '64'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 09:32'
         message: ''
         version: '63'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 01:51'
         message: ''
         version: '62'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 01:49'
         message: Reworking the automation doc
         version: '61'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-27 14:37'
         message: ''
         version: '60'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 15:05'
         message: ''
         version: '59'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 20:40'
         message: ''
         version: '58'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-20 10:04'
         message: ''
         version: '57'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-19 16:33'
         message: ''
         version: '56'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-19 16:05'
         message: ''
         version: '55'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-17 01:10'
         message: ''
         version: '54'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-17 01:04'
         message: ''
         version: '53'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-30 12:01'
         message: ''
         version: '52'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-31 16:17'
         message: Formatting
         version: '51'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-23 11:33'
         message: ''
         version: '50'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-23 11:30'
         message: ''
         version: '49'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-23 11:22'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 15:54'
         message: Added related topics
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 15:47'
         message: 'terminology '
         version: '46'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 12:03'
         message: ''
         version: '45'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-16 16:31'
         message: ''
         version: '44'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-01 13:49'
         message: ''
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-14 10:54'
         message: Migrated to Confluence 4.0
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-14 10:54'
         message: ''
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-21 11:49'
         message: Updated 5.4 mercurial link to 5.6 snapshot github URL
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 18:24'
         message: corrected links
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2011-08-30 09:37'
         message: fixed broken link
         version: '38'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-04-08 11:32'
         message: ''
         version: '37'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-04-06 18:25'
         message: ''
         version: '36'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-04-06 18:24'
         message: ''
         version: '35'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-04-06 18:23'
         message: ''
         version: '34'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-04-06 18:13'
         message: ''
         version: '33'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-04-06 18:12'
         message: ''
         version: '32'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-04-06 18:10'
         message: ''
         version: '31'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-04-06 17:42'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 10:12'
         message: ''
         version: '29'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-08-12 09:12'
         message: ''
         version: '28'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-08-03 14:18'
         message: ''
         version: '27'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 22:53'
         message: ''
         version: '26'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 22:51'
         message: ''
         version: '25'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:42'
         message: ''
         version: '24'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:36'
         message: ''
         version: '23'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-19 17:18'
         message: ''
         version: '22'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-19 17:07'
         message: ''
         version: '21'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-06-28 08:40'
         message: ''
         version: '20'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-06-28 08:26'
         message: ''
         version: '19'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 17:15'
         message: ''
         version: '18'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 01:47'
         message: ''
         version: '17'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 01:46'
         message: ''
         version: '16'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 01:41'
         message: ''
         version: '15'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 01:37'
         message: ''
         version: '14'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 01:35'
         message: ''
         version: '13'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 01:32'
         message: ''
         version: '12'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 01:31'
         message: ''
         version: '11'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 01:29'
         message: ''
         version: '10'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 01:27'
         message: ''
         version: '9'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 01:25'
         message: ''
         version: '8'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 00:57'
         message: ''
         version: '7'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 00:45'
         message: ''
         version: '6'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 00:29'
         message: ''
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-24 23:56'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-22 12:52'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-22 12:51'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-22 12:11'
         message: ''
@@ -470,7 +471,8 @@ If you need to dynamically define the values of the operation parameters you can
 
 ![]({{file name='AutomationChainEdition.png' space='studio' page='automation-chains'}} ?w=600,border=true)
 
-{{! excerpt}}{{#> callout type='info' }} The main goal of Content Automation is to enable users to rapidly build complex business logic without writing any Java code. First, they assemble the built-in set of atomic operations into complex chains. Then they can plug these chains inside the Nuxeo Platform as UI actions, event handlers, REST bindings and workflow logic. {{/callout}}{{! /excerpt}}{{! /multiexcerpt}}
+{{#> callout type='info' }} The main goal of Content Automation is to enable users to rapidly build complex business logic without writing any Java code. First, they assemble the built-in set of atomic operations into complex chains. Then they can plug these chains inside the Nuxeo Platform as UI actions, event handlers, REST bindings and workflow logic. {{/callout}}
+{{! /multiexcerpt}}
 
 ## Operation
 
@@ -607,7 +609,7 @@ An example of a situation where you would need to use the context is when you wa
 - Execution Context > Set Context Variable from Input {"name": "docToBeUpdated"}  // we store the document for which we need to update the dc:source property
 - Document > Get Parent {"type":"workspace"}  // This operation will return the first parent document of type "Workspace"
 - Execution Context > Set Context Variable {"name":"workspaceSourceValue","value":"@{Document['dc:source']}"} // We store in the context the dc:source property value of the parent Workspace
-- Execution Context > Restore Document From Input {"name": "docToBeUpdated"} // We restore the document for which we need to update the dc:source property in the next input 
+- Execution Context > Restore Document From Input {"name": "docToBeUpdated"} // We restore the document for which we need to update the dc:source property in the next input
 - Document > Update Property {"xpath":"dc:source", "value":"@{Context['workspaceSourceValue']"} // We update the property dc:source
 ```
 
@@ -659,7 +661,7 @@ Then, the following chains all have the same result and are equivalent:
 The same "Run Chain" operation can be used for implementing a conditional flow, by using a scripted ternary expression as the value of the "id" parameter. The following chain will run **chain1** if the type of the document is File. Otherwise it will run **chain2**.
 
 ```
-- Fetch > Context Document(s) 
+- Fetch > Context Document(s)
 - Execution Flow > Run Chain {"id":"@{Document.type=="File"?:"chain1":"chain2"}"}
 ```
 
@@ -690,7 +692,7 @@ An algorithm equivalent to the chain above would be something like :
 DocumentList list = Nuxeo.query("SELECT * FROM File");
 For (DocumentModel doc:list){
 doc.updatePropertyValue("dc:description","Showing native looping");
-} 
+}
 For (DocumentModel doc:list){
 doc.lock("Administrator")
 }
@@ -727,7 +729,7 @@ For (DocumentModel doc:list){
 sourceValue= doc.getPropertyValue("dc:source");
 doc.updatePropertyValue("dc:description",sourceValue);
 doc.lock;
-} 
+}
 // We see that there is only one loop, compared to native looping.
 ```
 

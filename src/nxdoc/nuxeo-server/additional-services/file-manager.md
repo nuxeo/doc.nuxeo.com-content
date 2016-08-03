@@ -3,6 +3,7 @@ title: File Manager
 labels:
     - file-manager
     - file-upload-component
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:

@@ -1,6 +1,7 @@
 ---
 title: Document Type How-To Index
 labels:
+    - lts2015-ok
     - index
 confluence:
     ajs-parent-page-id: '950287'

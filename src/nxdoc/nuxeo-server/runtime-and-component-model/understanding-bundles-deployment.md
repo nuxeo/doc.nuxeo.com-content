@@ -3,6 +3,7 @@ title: Understanding Bundles Deployment
 labels:
     - deployment
     - nuxeoctl
+    - content-review-lts2015
     - runtimecomponent
 toc: true
 confluence:

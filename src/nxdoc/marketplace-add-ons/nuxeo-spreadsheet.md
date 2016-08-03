@@ -3,6 +3,7 @@ title: Nuxeo Spreadsheet
 labels:
     - nuxeo-spreadsheet
     - spreadsheet-component
+    - lts2015-not-ok
     - excerpt
 toc: true
 confluence:

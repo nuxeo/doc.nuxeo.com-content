@@ -4,6 +4,7 @@ labels:
     - workflow
     - subworkflow
     - sub-workflow
+    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '14257562'

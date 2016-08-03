@@ -2,6 +2,7 @@
 title: Filtering Exposed Operations
 labels:
     - operation
+    - content-review-lts2015
     - rest-api
     - automation-component
     - excerpt

@@ -2,6 +2,7 @@
 title: Generic Multi-Excerpts
 labels:
     - multiexcerpt
+hidden: true
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
@@ -14,52 +15,42 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/_hw5AQ'
     source_link: /display/NXDOC/Generic+Multi-Excerpts
 history:
-    - 
-        author: Alain Escaffre
-        date: '2016-08-02 12:11'
-        message: ''
-        version: '10'
-    - 
-        author: Alain Escaffre
-        date: '2016-08-02 12:10'
-        message: ''
-        version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-16 14:43'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-27 15:56'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-20 15:21'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-13 07:54'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-08 10:02'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-08 09:25'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-11 10:44'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 14:32'
         message: ''
@@ -72,7 +63,7 @@ This addon is deprecated since Nuxeo Platform 7.4.
 
 {{/callout}}{{! /multiexcerpt}}{{! multiexcerpt name='MP-installation-easy'}}
 
-This addon requires no specific installation steps. It can be installed like any other package with [nuxeoctl command line]({{page page='installing-a-new-package-on-your-instance'}}), [from the Marketplace or using the Update Center]({{page page='installing-a-new-package-on-your-instance'}}).
+This addon requires no specific installation steps. It can be installed like any other package [from the Marketplace, the Admin tab or the nuxeoctl script]({{page page='installing-a-new-package-on-your-instance'}}).
 
 {{! /multiexcerpt}}
 

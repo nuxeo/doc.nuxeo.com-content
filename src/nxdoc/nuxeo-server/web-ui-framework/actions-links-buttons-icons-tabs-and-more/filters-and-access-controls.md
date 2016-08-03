@@ -4,6 +4,7 @@ labels:
     - filter
     - el
     - actions-filters-component
+    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950289'

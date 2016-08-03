@@ -3,6 +3,7 @@ title: Shell Documentation
 labels:
     - shell
     - shell-component
+    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '4687725'

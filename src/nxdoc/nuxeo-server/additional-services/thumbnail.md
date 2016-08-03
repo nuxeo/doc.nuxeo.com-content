@@ -5,6 +5,7 @@ labels:
     - thumbnail
     - community-links
     - thumbnail-service-component
+    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -18,11 +19,6 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/sIPZ'
     source_link: /display/NXDOC/Thumbnail
 history:
-    - 
-        author: Manon Lumeau
-        date: '2016-08-02 15:51'
-        message: ''
-        version: '35'
     - 
         author: Manon Lumeau
         date: '2016-06-09 14:29'
@@ -209,13 +205,14 @@ Here are the different components of the thumbnail feature:
 
 *   **Thumbnail service**
     The service that handles thumbnail factories contributions.
-    *   Interface: `[ThumbnailService](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/core/api/thumbnail/ThumbnailService.html)
-        `
-    *   Implementation: `[ThumbnailServiceImpl](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/core/api/thumbnail/ThumbnailServiceImpl.html)
-        `
-    *   Component: [`org.nuxeo.ecm.core.api.thumbnail.ThumbnailService`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.core.api.thumbnail.ThumbnailService)
-    *   Extension point: `[thumbnailFactory](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.api.thumbnail.ThumbnailService--thumbnailFactory)
-        `
+*   Interface: `[ThumbnailService](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/core/api/thumbnail/ThumbnailService.html)
+    `
+*   Implementation: `[ThumbnailServiceImpl](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/core/api/thumbnail/ThumbnailServiceImpl.html)
+    `
+*   <span class="componentTitle">Component:</span> `[<span class="componentTitle">org.nuxeo.ecm.core.api.thumbnail.ThumbnailService</span>](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.core.api.thumbnail.ThumbnailService)
+    `
+*   Extension point: `[thumbnailFactory](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.api.thumbnail.ThumbnailService--thumbnailFactory)
+    `
 
 *   **Default Thumbnail factories**
 
@@ -235,8 +232,10 @@ Here are the different components of the thumbnail feature:
 <span style="color: rgb(0,0,0);">Here are Nuxeo thumbnail factory implementations on GitHub:
 </span>
 
-*   [`ThumbnailDocumentFactory`](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-thumbnail/src/main/java/org/nuxeo/ecm/platform/thumbnail/factories/ThumbnailDocumentFactory.java)
-*   [`ThumbnailVideoFactory`](https://github.com/nuxeo/nuxeo-platform-video/blob/master/nuxeo-platform-video-core/src/main/java/org/nuxeo/ecm/platform/video/adapter/ThumbnailVideoFactory.java)
+*   `[ThumbnailDocumentFactory](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-thumbnail/src/main/java/org/nuxeo/ecm/platform/thumbnail/factories/ThumbnailDocumentFactory.java)
+    `
+*   `[ThumbnailVideoFactory](https://github.com/nuxeo/nuxeo-platform-video/blob/master/nuxeo-platform-video-core/src/main/java/org/nuxeo/ecm/platform/video/adapter/ThumbnailVideoFactory.java)
+    `
 *   `[ThumbnailAudioFactory](https://github.com/nuxeo/nuxeo-platform-audio/blob/master/nuxeo-platform-audio-core/src/main/java/org/nuxeo/ecm/platform/audio/extension/ThumbnailAudioFactory.java)
     `
 *   `[ThumbnailPictureFactory](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-platform-imaging/nuxeo-platform-imaging-core/src/main/java/org/nuxeo/ecm/platform/picture/thumbnail/ThumbnailPictureFactory.java)

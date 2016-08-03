@@ -4,6 +4,7 @@ labels:
     - preview
     - link-update
     - preview-component
+    - lts2015-ok
     - multiexcerpt
 tabbed_page: true
 confluence:

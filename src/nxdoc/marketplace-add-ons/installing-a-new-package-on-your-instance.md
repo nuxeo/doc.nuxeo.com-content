@@ -3,6 +3,7 @@ title: Installing a New Package on Your Instance
 labels:
     - admin-center
     - update-center
+    - lts2015-ok
     - admin-center-component
     - multiexcerpt-include
     - multiexcerpt

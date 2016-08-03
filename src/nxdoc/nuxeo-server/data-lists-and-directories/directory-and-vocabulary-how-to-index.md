@@ -1,5 +1,7 @@
 ---
 title: Directory & Vocabulary How-To Index
+labels:
+    - content-review-lts2015
 confluence:
     ajs-parent-page-id: '4688939'
     ajs-parent-page-title: Data Lists and Directories

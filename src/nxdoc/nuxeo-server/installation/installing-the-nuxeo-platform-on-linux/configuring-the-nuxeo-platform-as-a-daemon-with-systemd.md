@@ -2,6 +2,7 @@
 title: Configuring the Nuxeo Platform as a Daemon with Systemd
 labels:
     - install-linux
+    - lts2015-ok
 confluence:
     ajs-parent-page-id: '9274334'
     ajs-parent-page-title: Installing the Nuxeo Platform on Linux

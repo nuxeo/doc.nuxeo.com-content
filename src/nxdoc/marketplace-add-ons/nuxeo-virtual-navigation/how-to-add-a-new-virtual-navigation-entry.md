@@ -12,6 +12,7 @@ labels:
     - content-view
     - studio
     - virtual-navigation-component
+    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '20517205'

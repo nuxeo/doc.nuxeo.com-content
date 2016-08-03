@@ -2,6 +2,7 @@
 title: Managing Performance
 labels:
     - performance
+    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '19235677'

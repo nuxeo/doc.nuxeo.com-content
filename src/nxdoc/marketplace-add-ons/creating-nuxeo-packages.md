@@ -3,6 +3,7 @@ title: Creating Nuxeo Packages
 labels:
     - marketplace
     - packaging-component
+    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

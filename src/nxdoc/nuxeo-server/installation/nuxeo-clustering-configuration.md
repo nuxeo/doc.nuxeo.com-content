@@ -6,6 +6,7 @@ labels:
     - load-balancer
     - vcs
     - configuration
+    - lts2015-not-ok
     - nxdoc-752
 toc: true
 confluence:

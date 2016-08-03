@@ -13,6 +13,7 @@ labels:
     - automation
     - conversion
     - automation-component
+    - lts2015-ok
     - excerpt
     - multiexcerpt-include
 confluence:

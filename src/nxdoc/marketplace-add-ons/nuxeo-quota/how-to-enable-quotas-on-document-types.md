@@ -12,6 +12,7 @@ labels:
     - quota
     - howto
     - quotas-component
+    - lts2015-not-ok
 confluence:
     ajs-parent-page-id: '11534351'
     ajs-parent-page-title: Nuxeo Quota

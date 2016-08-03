@@ -1,6 +1,7 @@
 ---
 title: Essential Nuxeo Platform Terminology
 labels:
+    - content-review-lts2015
     - bootstrap
     - excerpt
     - multiexcerpt-include

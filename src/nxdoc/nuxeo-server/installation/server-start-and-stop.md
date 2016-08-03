@@ -1,6 +1,7 @@
 ---
 title: Server Start and Stop
 labels:
+    - lts2015-ok
     - multiexcerpt
 toc: true
 confluence:

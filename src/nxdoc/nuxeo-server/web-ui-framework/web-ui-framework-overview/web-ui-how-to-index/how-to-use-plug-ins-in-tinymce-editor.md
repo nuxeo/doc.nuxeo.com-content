@@ -17,6 +17,7 @@ labels:
     - howto
     - tinymce
     - tinymce-component
+    - lts2015-not-ok
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'

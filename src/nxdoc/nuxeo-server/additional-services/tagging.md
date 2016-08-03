@@ -2,6 +2,7 @@
 title: Tagging
 labels:
     - tags
+    - content-review-lts2015
     - tagging-component
 toc: true
 confluence:

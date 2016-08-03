@@ -6,6 +6,7 @@ labels:
     - link-update
     - scripting
     - automation-component
+    - lts2015-ok
     - university
 toc: true
 confluence:

@@ -1,5 +1,7 @@
 ---
 title: Advanced topics
+labels:
+    - content-review-lts2015
 confluence:
     ajs-parent-page-id: '31033314'
     ajs-parent-page-title: Nuxeo Server
@@ -12,11 +14,6 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/PYAO'
     source_link: /display/NXDOC/Advanced+topics
 history:
-    - 
-        author: Manon Lumeau
-        date: '2016-07-20 12:30'
-        message: emove children display macr
-        version: '8'
     - 
         author: Alain Escaffre
         date: '2013-09-04 11:18'
@@ -55,8 +52,3 @@ history:
 
 ---
 Table of Contents:
-
-*   [Integrating with JPA](https://doc.nuxeo.com/display/NXDOC/Integrating+with+JPA)
-*   [Adding an Antivirus](https://doc.nuxeo.com/display/NXDOC/Adding+an+Antivirus)
-*   [Nuxeo Distributions](https://doc.nuxeo.com/display/NXDOC/Nuxeo+Distributions)
-    *   [Available installers](https://doc.nuxeo.com/display/NXDOC/Available+installers)

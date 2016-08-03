@@ -4,6 +4,7 @@ labels:
     - el
     - scripting
     - todo
+    - content-review-lts2015
     - packaging-component
 toc: true
 confluence:

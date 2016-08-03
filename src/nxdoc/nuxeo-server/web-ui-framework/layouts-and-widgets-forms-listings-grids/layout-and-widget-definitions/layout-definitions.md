@@ -3,6 +3,7 @@ title: Layout Definitions
 labels:
     - layout
     - layout-widgets-component
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:

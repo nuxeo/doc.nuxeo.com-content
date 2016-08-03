@@ -10,6 +10,7 @@ labels:
     - howto
     - jsf
     - seam-jsf-component
+    - lts2015-not-ok
 confluence:
     ajs-parent-page-id: '9830458'
     ajs-parent-page-title: JSF and Ajax Tips and How-To Index

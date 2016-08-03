@@ -10,6 +10,7 @@ labels:
     - vocabulary
     - howto
     - studio
+    - lts2015-ok
     - excerpt
     - multiexcerpt
 confluence:

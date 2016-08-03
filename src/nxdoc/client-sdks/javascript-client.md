@@ -6,6 +6,7 @@ labels:
     - sdk
     - nuxeo-js
     - javascript-client-component
+    - lts2015-ok
     - link-update
 toc: true
 confluence:

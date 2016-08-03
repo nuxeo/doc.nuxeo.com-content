@@ -1,6 +1,7 @@
 ---
 title: Microsoft Azure Online Storage
 labels:
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:

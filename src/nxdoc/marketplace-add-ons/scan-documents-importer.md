@@ -3,6 +3,7 @@ title: Scan Documents Importer
 labels:
     - scan-documents-importer
     - update-needed
+    - content-review-lts2015
     - multiexcerpt-include
 toc: true
 confluence:

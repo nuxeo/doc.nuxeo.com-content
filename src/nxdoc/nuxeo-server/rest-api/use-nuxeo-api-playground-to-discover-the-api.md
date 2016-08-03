@@ -12,6 +12,7 @@ labels:
     - nuxeo-playground
     - cors
     - playground-component
+    - lts2015-ok
     - excerpt
     - multiexcerpt
     - multiexcerpt-include

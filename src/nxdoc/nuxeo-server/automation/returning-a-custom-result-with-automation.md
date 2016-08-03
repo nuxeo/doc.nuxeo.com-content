@@ -3,6 +3,8 @@ title: Returning a Custom Result with Automation
 labels:
     - automation
     - automation-component
+    - nxdoc-728
+    - lts2015-not-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '18451738'

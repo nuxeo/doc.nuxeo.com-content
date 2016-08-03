@@ -10,6 +10,7 @@ labels:
     - howto
     - document-type
     - studio
+    - lts2015-ok
 confluence:
     ajs-parent-page-id: '950287'
     ajs-parent-page-title: Content Repository

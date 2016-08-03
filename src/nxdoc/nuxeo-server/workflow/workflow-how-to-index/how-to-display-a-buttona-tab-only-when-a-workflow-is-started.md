@@ -12,6 +12,7 @@ labels:
     - scripting
     - howto
     - studio
+    - content-review-lts2015
     - excerpt
 confluence:
     ajs-parent-page-id: '19235619'

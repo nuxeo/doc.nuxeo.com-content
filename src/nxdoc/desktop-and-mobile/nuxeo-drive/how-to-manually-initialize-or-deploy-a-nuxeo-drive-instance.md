@@ -3,6 +3,7 @@ title: How to Manually Initialize or Deploy a Nuxeo Drive Instance
 labels:
     - nuxeo-drive
     - nuxeo-drive-component
+    - lts2015-ok
     - multiexcerpt
 toc: true
 confluence:

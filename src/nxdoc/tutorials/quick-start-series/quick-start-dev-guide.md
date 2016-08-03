@@ -2,6 +2,7 @@
 title: Quick Start Dev Guide
 labels:
     - home
+    - lts2015-ok
 confluence:
     ajs-parent-page-id: '19235677'
     ajs-parent-page-title: Quick Start Series

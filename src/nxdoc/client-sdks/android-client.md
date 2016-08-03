@@ -4,6 +4,7 @@ labels:
     - mobile
     - android
     - client
+    - content-review-lts2015
 confluence:
     ajs-parent-page-id: '16091040'
     ajs-parent-page-title: Client SDKs

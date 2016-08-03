@@ -4,6 +4,7 @@ labels:
     - simple-search
     - query
     - search-tab-component
+    - lts2015-not-ok
     - nxdoc-450
     - link-update
 confluence:

@@ -3,6 +3,7 @@ title: Command Endpoint
 labels:
     - rest-api
     - todo
+    - content-review-lts2015
     - automation
     - endpoint
     - automation-component

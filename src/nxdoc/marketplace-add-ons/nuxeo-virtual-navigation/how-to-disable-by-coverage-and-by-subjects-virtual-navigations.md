@@ -16,6 +16,7 @@ labels:
     - vocabulary
     - studio
     - virtual-navigation-component
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:

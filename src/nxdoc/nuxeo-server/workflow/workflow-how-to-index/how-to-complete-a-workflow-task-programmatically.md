@@ -12,6 +12,7 @@ labels:
     - howto
     - community-links
     - workflow-component
+    - lts2015-ok
 confluence:
     ajs-parent-page-id: '19235619'
     ajs-parent-page-title: Workflow How-To Index

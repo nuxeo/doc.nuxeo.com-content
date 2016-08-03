@@ -2,6 +2,7 @@
 title: Common Events
 labels:
     - event
+    - content-review-lts2015
     - core-component
     - excerpt
 toc: true

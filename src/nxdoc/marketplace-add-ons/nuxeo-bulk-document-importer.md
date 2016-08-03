@@ -4,6 +4,7 @@ labels:
     - bulk-document-importer
     - import
     - platform-importer-addon-component
+    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

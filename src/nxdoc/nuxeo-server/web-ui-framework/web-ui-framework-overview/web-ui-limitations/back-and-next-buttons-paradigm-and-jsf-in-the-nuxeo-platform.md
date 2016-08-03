@@ -3,6 +3,7 @@ title: Back and Next Buttons Paradigm and JSF in the Nuxeo Platform
 labels:
     - jsf
     - seam-jsf-component
+    - lts2015-ok
     - limitations
     - excerpt
 confluence:

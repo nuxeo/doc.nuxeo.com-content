@@ -3,6 +3,7 @@ title: Events and Listeners
 labels:
     - event
     - listener
+    - content-review-lts2015
     - core-component
     - excerpt
 toc: true

@@ -4,6 +4,7 @@ labels:
     - workflow
     - subworkflow
     - sub-workflow
+    - content-review-lts2015
     - excerpt
 confluence:
     ajs-parent-page-id: '19235786'

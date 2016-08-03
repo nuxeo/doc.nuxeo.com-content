@@ -1,5 +1,7 @@
 ---
 title: Indexing and Querying How-To Index
+labels:
+    - lts2015-ok
 confluence:
     ajs-parent-page-id: '4687860'
     ajs-parent-page-title: Indexing and Query

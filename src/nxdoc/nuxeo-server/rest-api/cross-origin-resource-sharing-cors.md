@@ -4,6 +4,7 @@ labels:
     - cors
     - rest-api
     - rest-api-component
+    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'
@@ -18,14 +19,9 @@ confluence:
     source_link: /pages/viewpage.action?pageId=14257084
 history:
     - 
-        author: Michaël Vachette
-        date: '2016-07-15 15:31'
-        message: ''
-        version: '24'
-    - 
         author: Bertrand Chauvin
         date: '2016-04-22 13:32'
-        message: Define excerpt for future REST API Training
+        message: efine excerpt for future REST API Trainin
         version: '23'
     - 
         author: Solen Guitter
@@ -149,7 +145,7 @@ If you do cross-domain requests from any JavaScript client to access WebEngine r
 
 ```
 
-      /nuxeo/.*
+      /nuxeo/site/foobar/.*
 
 ```
 

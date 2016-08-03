@@ -4,6 +4,7 @@ labels:
     - howto
     - webengine
     - webengine-component
+    - lts2015-ok
 confluence:
     ajs-parent-page-id: '3343141'
     ajs-parent-page-title: WebEngine Tutorials

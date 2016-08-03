@@ -3,6 +3,7 @@ title: Contributing an Operation
 labels:
     - operation
     - automation-component
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -439,7 +440,7 @@ Let's look again at the operation class defined above. You can see that operatio
 
 This annotation has several attributes like a parameter name, a required flag, a default value if any, a widget type to be used by UI operation chain builders like [Nuxeo Studio]({{page space='studio' page='automation'}}) etc.
 
-The parameter name is important since it is the key you use when defining an operation chain to refer to a specific operation parameter. If the parameter is required then its value must be specified in the operation chain definition otherwise an exception is thrown at runtime. The other parameters are useful only for UI tools that introspect the operations. For example when building an operation chain in [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) you need to render each operation parameter using a widget. The default is to use a TextBox if the parameter is a String, a CheckBox if the parameter is a boolean, a ListBox for lists etc. But in some situations you may want to override this default mapping &mdash; for example you may want to use a TextArea instead of a TextBox for a string parameter: in that case you can use the `widget` attribute to specify your desired widget.
+The parameter name is important since it is the key you use when defining an operation chain to refer to a specific operation parameter. If the parameter is required then its value must be specified in the operation chain definition otherwise an exception is thrown at runtime. The other parameters are useful only for UI tools that introspect the operations. For example when building an operation chain in [Nuxeo Studio]({{page space='studio' page='nuxeo-studio-documentation-center'}}) you need to render each operation parameter using a widget. The default is to use a TextBox if the parameter is a String, a CheckBox if the parameter is a boolean, a ListBox for lists etc. But in some situations you may want to override this default mapping &mdash; for example you may want to use a TextArea instead of a TextBox for a string parameter: in that case you can use the `widget` attribute to specify your desired widget.
 
 ## Parameter Injection
 

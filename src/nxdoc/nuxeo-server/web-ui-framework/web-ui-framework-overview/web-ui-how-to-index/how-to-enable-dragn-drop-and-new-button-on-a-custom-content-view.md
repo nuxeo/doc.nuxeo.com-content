@@ -9,6 +9,7 @@ details:
 labels:
     - howto
     - content-view
+    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'

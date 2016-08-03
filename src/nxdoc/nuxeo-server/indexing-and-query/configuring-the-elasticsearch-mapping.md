@@ -4,6 +4,7 @@ labels:
     - elasticsearch
     - full-text
     - elasticsearch-component
+    - lts2015-ok
     - university
     - excerpt
     - multiexcerpt
@@ -21,16 +22,6 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/WxI5AQ'
     source_link: /display/NXDOC/Configuring+the+Elasticsearch+Mapping
 history:
-    - 
-        author: Manon Lumeau
-        date: '2016-07-19 09:13'
-        message: ''
-        version: '31'
-    - 
-        author: Benoit Delbosc
-        date: '2016-07-18 12:37'
-        message: Add a note about ngram search
-        version: '30'
     - 
         author: Solen Guitter
         date: '2015-12-22 14:26'
@@ -297,73 +288,6 @@ Suppose you want to exclude&nbsp;`my:secret`&nbsp;field from the&nbsp;`ecm:fullt
     "type" : "string", 
     "include_in_all" : false
  }
-```
-
-## Use a NGram Index for Efficient Left Truncature Search
-
-When you need to search with left truncature (or left and right truncatures) the NXQL syntax to use is&nbsp;`LIKE '%foo%'`. This kind of query use an Elasticsearch wildcard search but the cost of the left truncature is high because the term index can not be used efficiently. Using an [NGram index](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-ngram-tokenizer.html) is a good alternative for such a case.
-
-First you need to define an `nGram` analyzer in your settings:
-
-```
-   "analysis" : {
-...
-      "tokenizer" : {
-...
-         "ngram_tokenizer": {
-           "type": "nGram",
-           "min_gram": 3,
-           "max_gram": 12
-          },
-...
-      "analyzer" : {
-...
-        "ngram_analyzer": {
-          "type": "custom",
-          "filter": [
-            "lowercase"
-          ],
-          "tokenizer": "ngram_tokenizer"
-        },
-...
-
-```
-
-Then use it in the mapping:
-
-```
-   "properties" : {
-...
-      "dc:title" : {
-         "type" : "multi_field",
-         "fields" : {
-           "dc:title" : {
-             "index" : "not_analyzed",
-             "type" : "string"
-           },
-           "fulltext" : {
-             "boost": 2,
-             "type": "string",
-             "analyzer" : "fulltext"
-           },
-           "ngram": {
-             "type": "string",
-             "analyzer": "ngram_analyzer"
-           }
-         }
-      },
-```
-
-Now you can do an efficient version of:
-
-```
-SELECT * FROM Document WHERE dc:title ILIKE '%Foo%'
-```
-
-Using:
-
-```
-SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.ngram) ANALYZER(lowercase_analyzer) OPERATOR(match) */ dc:title = 'Foo'"));
 ```
 
 ## Index the Main Attachment Content for Use with the Common Operator

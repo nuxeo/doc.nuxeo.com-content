@@ -3,6 +3,7 @@ title: Use of MVEL in Automation Chains
 labels:
     - mvel
     - scripting
+    - content-review-lts2015
     - automation
     - automation-component
     - excerpt
@@ -20,14 +21,9 @@ confluence:
     source_link: /display/NXDOC/Use+of+MVEL+in+Automation+Chains
 history:
     - 
-        author: Manon Lumeau
-        date: '2016-08-02 16:38'
-        message: ''
-        version: '89'
-    - 
         author: Julien Carsique
         date: '2016-02-29 10:02'
-        message: MVEL_Language_Guide URL update
+        message: VEL_Language_Guide URL updat
         version: '88'
     - 
         author: Florent Guillaume
@@ -509,14 +505,18 @@ When the script is evaluated, you can use both contextual objects and embedded f
 *   **CurrentDate**: you can use the `CurrentDate` object, that will provide various utility methods to get the current date value, see below.
 
 *   **Context.principal.model.getPropertyValue("schema:field")**: gets the current user property. By default users implements user.xsd schema. So if you want for instance the company name, `Context.principal.model.getPropertyValue("user:company")`. But if your users implements other schemas, you choose your "schema prefix (or name if don't set) : field name"
-*   **CurrentUser.actingUser**: in a workflow context, all the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). This variable allows you to fetch the current user. This can also be useful when the operation "Users and groups > Login as" has been used in order to retrieve the current username.
+*   <span>**CurrentUser.actingUser**: in a workflow context, all the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). This variable allows you to fetch the current user. This can also be useful when the operation "Users and groups > Login as" has been used in order to retrieve the current username.</span>
 
     {{#> callout type='info' }}
 
     Note that `currentUser` is an alias for `CurrentUser`.
 
     {{/callout}}
-*   **Event:** in an event handler context, the Event object can be used to access some of the event's properties. For instance **`@{Event.getName()}`** will return the event name.
+
+    <span>&nbsp;</span>
+
+*   <span>**Event:** in an event handler context, the Event object can be used to access some of the event's properties. For instance **`@{Event.getName()}`** will return the event name.
+    </span>
 
 ## Document Wrapper
 
@@ -1081,7 +1081,7 @@ from context
 
 </td><td colspan="1">
 
-`@{Context["documentStored"].name}`
+`@{Context[<span class="confluence-link">"documentStored"</span>].name}`
 
 </td><td colspan="1">
 

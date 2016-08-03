@@ -2,6 +2,7 @@
 title: Nuxeo Datadog Reporter
 labels:
     - last-review-20150708
+    - content-review-lts2015
     - excerpt
     - multiexcerpt-include
 confluence:

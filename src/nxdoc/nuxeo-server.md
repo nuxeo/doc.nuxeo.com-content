@@ -44,7 +44,7 @@ history:
 
 <div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
-### [Administration]({{page page='administration'}})
+### [Advanced Administration]({{page page='advanced-administration'}})
 
 {{/panel}}</div>
 

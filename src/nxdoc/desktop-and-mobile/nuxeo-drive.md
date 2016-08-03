@@ -4,6 +4,7 @@ labels:
     - link-update
     - nuxeo-drive
     - last-review-20150901
+    - content-review-lts2015
     - nuxeo-drive-component
 toc: true
 confluence:

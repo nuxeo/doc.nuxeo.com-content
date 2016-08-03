@@ -8,6 +8,7 @@ labels:
     - nuxeo-distribution-tools
     - ant-assembly-maven-plugin
     - distributions-component
+    - lts2015-ok
     - nxr
     - cap
     - nuxeo-distribution

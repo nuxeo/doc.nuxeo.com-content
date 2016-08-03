@@ -12,6 +12,7 @@ labels:
     - translation
     - howto
     - studio
+    - content-review-lts2015
 confluence:
     ajs-parent-page-id: '19235763'
     ajs-parent-page-title: Labels and Translations Management

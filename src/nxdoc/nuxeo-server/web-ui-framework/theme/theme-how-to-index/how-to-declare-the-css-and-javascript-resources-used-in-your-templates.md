@@ -17,6 +17,7 @@ labels:
     - link-update
     - last-review-20150805
     - themes-component
+    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235625'

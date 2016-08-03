@@ -3,6 +3,7 @@ title: 'Actions (Links, Buttons, Icons, Tabs and More)'
 labels:
     - user-action
     - action-category
+    - content-review-lts2015
     - home
     - excerpt
 confluence:
@@ -17,11 +18,6 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/EYAO'
     source_link: /pages/viewpage.action?pageId=950289
 history:
-    - 
-        author: Manon Lumeau
-        date: '2016-07-20 13:28'
-        message: emove children display macr
-        version: '36'
     - 
         author: Solen Guitter
         date: '2014-07-21 16:50'
@@ -208,14 +204,6 @@ Actions usually stand for commands that can be triggered via user interface inte
 This chapter explains how to define actions and display them in pages.
 
 {{! /excerpt}}
-
-*   [Actions Overview](https://doc.nuxeo.com/display/NXDOC/Actions+Overview)&nbsp;&mdash;&nbsp;<span class="smalltext">In this chapter, an action will stand for any kind of command that can be triggered via user interface interaction. In other words, it will describe a link and other information that may be used to manage its display (the link label, an icon, security information for instance).</span>
-*   [Standard Action Types](https://doc.nuxeo.com/display/NXDOC/Standard+Action+Types)&nbsp;&mdash;&nbsp;<span class="smalltext">A series of action types is available for the most basic uses cases.</span>
-*   [Custom Action Types](https://doc.nuxeo.com/display/NXDOC/Custom+Action+Types)&nbsp;&mdash;&nbsp;<span class="smalltext">Since 5.8, it is easy to add your own action type to handle its configuration and display, rather than defining an action of type "template" and specifying the template each time it needs to be used.</span>
-*   [Filters and Access Controls](https://doc.nuxeo.com/display/NXDOC/Filters+and+Access+Controls)&nbsp;&mdash;&nbsp;<span class="smalltext">Filters configuration allows to control activation of an action, to control its visibility depending on the user rights, for instance, or selected documents, etc.</span>
-*   [Actions Display](https://doc.nuxeo.com/display/NXDOC/Actions+Display)&nbsp;&mdash;&nbsp;<span class="smalltext">Actions are grouped in categories to be able to display them in the same area of a page. Widgets can be used to handle rendering of these actions.</span>
-*   [Incremental Layouts and Actions](https://doc.nuxeo.com/display/NXDOC/Incremental+Layouts+and+Actions)&nbsp;&mdash;&nbsp;<span class="smalltext">Actions are leveraged by the layout framework to include widgets inside layouts dynamically, benefiting from sorting and filtering features of actions within layouts.</span>
-*   [Action How-To Index](https://doc.nuxeo.com/display/NXDOC/Action+How-To+Index)
 
 &nbsp;
 

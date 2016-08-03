@@ -14,6 +14,7 @@ labels:
     - ldap
     - howto
     - directory-component
+    - lts2015-ok
     - migration-sample
     - excerpt
 confluence:

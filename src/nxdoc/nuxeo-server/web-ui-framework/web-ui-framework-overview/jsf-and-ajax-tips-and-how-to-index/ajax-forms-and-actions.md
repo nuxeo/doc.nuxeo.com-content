@@ -13,6 +13,7 @@ labels:
     - howto
     - jsf
     - seam-jsf-component
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:

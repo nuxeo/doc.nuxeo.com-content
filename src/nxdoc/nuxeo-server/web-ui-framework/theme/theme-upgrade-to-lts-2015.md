@@ -1,6 +1,7 @@
 ---
 title: Theme Upgrade to LTS 2015
 labels:
+    - lts2015-ok
     - theme
     - themes-component
     - migration

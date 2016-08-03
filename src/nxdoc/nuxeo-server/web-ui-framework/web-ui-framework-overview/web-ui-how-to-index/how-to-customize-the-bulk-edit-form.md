@@ -8,6 +8,7 @@ details:
         topics: 'Bulk edit, Web UI'
 labels:
     - howto
+    - content-review-lts2015
     - layout
 toc: true
 confluence:

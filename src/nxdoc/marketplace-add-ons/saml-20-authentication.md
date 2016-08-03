@@ -2,6 +2,7 @@
 title: SAML 2.0 Authentication
 labels:
     - saml-component
+    - lts2015-ok
     - migration-sample
 toc: true
 confluence:

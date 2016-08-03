@@ -4,6 +4,7 @@ labels:
     - collection
     - nuxeo-drive
     - collection-component
+    - lts2015-ok
     - multiexcerpt-include
 tabbed_page: true
 confluence:

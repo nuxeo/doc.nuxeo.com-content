@@ -2,6 +2,7 @@
 title: Packaging examples
 labels:
     - packaging-component
+    - lts2015-ok
     - marketplace
     - package
     - sample

@@ -1,6 +1,7 @@
 ---
 title: Nuxeo for Salesforce
 labels:
+    - lts2015-ok
     - salesforce-component
     - link-update
     - excerpt
@@ -18,16 +19,6 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/zI_RAQ'
     source_link: /display/NXDOC/Nuxeo+for+Salesforce
 history:
-    - 
-        author: Solen Guitter
-        date: '2016-07-11 15:26'
-        message: ix format and lin
-        version: '40'
-    - 
-        author: Anne Jubert
-        date: '2016-07-11 15:21'
-        message: ''
-        version: '39'
     - 
         author: Anne Jubert
         date: '2016-06-29 09:41'
@@ -248,7 +239,7 @@ See [GitHub Readme](https://github.com/nuxeo/nuxeo-salesforce) for the Dev proje
 
 In your Salesforce account, you can setup the Nuxeo for Salesforce plugin through the Salesforce Marketplace (In progress).
 
-You can also set it up directly from your Salesforce dashboard.&nbsp;<span style="line-height: 21.58px;">Note that these instructions assume you are using "Salesforce Classic",&nbsp;</span>not <span style="line-height: 21.58px;">the "Lightning Experience". You can adapt them for the Lightning Experience, or disable it via &nbsp;</span> **Setup Home** >&nbsp;**Lightning Experience**. Scroll to the bottom to disable it
+You can also set it up directly from your Salesforce dashboard.&nbsp;<span style="line-height: 21.58px;">Note that these instructions assume you are using "Salesforce Classic",&nbsp;</span>not <span style="line-height: 21.58px;">the "Lightning Experience". You can adapt them for the Lightning Experience, or disable it via &nbsp;</span>**Setup Home** <span style="line-height: 21.58px;">>&nbsp;</span>**Lightning Experience**<span style="line-height: 21.58px;">. Scroll to the bottom to disable it.</span>
 
 1.  Go in your Salesforce dashboard.
 2.  Go on&nbsp;**Setup**&nbsp;(top right).
@@ -270,16 +261,8 @@ You can also set it up directly from your Salesforce dashboard.&nbsp;<span style
 
 ### Nuxeo Platform Configuration
 
-1.  Authorize the framing of your Nuxeo server inside Salesforce.
-    Since Nuxeo 8.3, for clickjacking protection the framing is restricted. To unrestrict it, [create a new XML extension]({{page page='how-to-contribute-to-an-extension'}}) containing:
-
-    ```
-    org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService.defaultContrib
-
-    ```
-
-2.  Set up the HTTPS configuration.
-    Salesforce requires the Nuxeo server to be accessed through HTTPS. Follow this&nbsp;[documentation]({{page page='http-and-https-reverse-proxy-configuration'}})&nbsp;to configure your reverse proxy for production purpose. For a dev or test environment, you can configure your Nuxeo server in HTTPS directly with the following configuration parameters example:
+1.  Set up the HTTPS configuration.
+    Salesforce is requiring Nuxeo server to be accessed through HTTPS. Follow this&nbsp;[documentation]({{page page='http-and-https-reverse-proxy-configuration'}})&nbsp;to configure your reverse proxy for production purpose. For a dev or test environment, you can configure your Nuxeo server in HTTPS directly with the following configuration parameters example:
 
     ```
     nuxeo.server.https.port=8443
@@ -289,7 +272,7 @@ You can also set it up directly from your Salesforce dashboard.&nbsp;<span style
 
     You can setup the keystore by following the&nbsp;[Oracle documentation](https://docs.oracle.com/cd/E19509-01/820-3503/ggfen/index.html).
 
-3.  Add the following configuration parameter (in&nbsp;**Admin**&nbsp;>&nbsp;**Cloud Services&nbsp;**>**&nbsp;Service Providers&nbsp;**>&nbsp;**OAuth2 Service Providers**&nbsp;>&nbsp;**Add**):
+2.  Add the following configuration parameter (in&nbsp;**Admin**&nbsp;>&nbsp;**Cloud Services&nbsp;**>**&nbsp;Service Providers&nbsp;**>&nbsp;**OAuth2 Service Providers**&nbsp;>&nbsp;**Add**):
 
     ```
     Service Name=salesforce
@@ -297,10 +280,10 @@ You can also set it up directly from your Salesforce dashboard.&nbsp;<span style
     User Authorization URL=https://NUXEO_URL/nuxeo/picker/callback/callback.html
     ```
 
-4.  Set up your browser to access Nuxeo for Salesforce from within Salesforce.
+3.  Set up your browser to access Nuxeo for Salesforce from within Salesforce.
     If you're using&nbsp;Firefox&nbsp;browser, you don't need to configure it. However with Chrome, here are the guidelines to allow the access:
     1.  Authorize&nbsp;`Popups`&nbsp;from Salesforce (to allow OAuth execution).
-    2.  Go to&nbsp; `[https://NUXEO_URL/nuxeo](https://nuxeo_url:8443/nuxeo)&nbsp;`&nbsp;and allow Chrome&nbsp;to access in HTTPS your Nuxeo server.
+    2.  Go to&nbsp;`[https://NUXEO_URL/nuxeo](https://nuxeo_url:8443/nuxeo)&nbsp;`&nbsp;and allow Chrome&nbsp;to access in HTTPS your Nuxeo server.
 
 ## Synchronization - Salesforce vs Nuxeo
 

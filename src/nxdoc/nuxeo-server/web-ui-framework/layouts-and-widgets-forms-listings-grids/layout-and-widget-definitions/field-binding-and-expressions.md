@@ -7,6 +7,7 @@ labels:
     - scripting
     - layout-widgets-component
     - nxdoc-158
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:

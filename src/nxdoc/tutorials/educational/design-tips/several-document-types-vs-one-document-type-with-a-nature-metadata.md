@@ -1,6 +1,7 @@
 ---
 title: Several Document Types vs One Document Type with a Nature Metadata
 labels:
+    - content-review-lts2015
     - excerpt
 toc: true
 confluence:

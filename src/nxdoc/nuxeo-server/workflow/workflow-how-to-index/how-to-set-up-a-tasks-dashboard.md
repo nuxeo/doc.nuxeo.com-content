@@ -12,6 +12,7 @@ labels:
     - workflow
     - howto
     - workflow-component
+    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235619'

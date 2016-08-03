@@ -1,6 +1,7 @@
 ---
 title: Validation Workflow Choosing the Assignee Based on a Metadata
 labels:
+    - lts2015-ok
     - multiexcerpt
 toc: true
 confluence:

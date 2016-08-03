@@ -1,6 +1,7 @@
 ---
 title: Writing a Bundle Manifest
 labels:
+    - content-review-lts2015
     - runtimecomponent
     - excerpt
 confluence:

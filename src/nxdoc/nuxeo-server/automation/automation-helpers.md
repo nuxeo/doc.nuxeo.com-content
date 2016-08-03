@@ -3,6 +3,7 @@ title: Automation Helpers
 labels:
     - automation
     - automation-component
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:

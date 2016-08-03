@@ -5,6 +5,7 @@ labels:
     - rest-api
     - enricher
     - rest-api-component
+    - lts2015-ok
     - university
 toc: true
 confluence:
@@ -21,13 +22,8 @@ confluence:
 history:
     - 
         author: Solen Guitter
-        date: '2016-07-29 16:18'
-        message: dd missing excerpts for page Leaning the REST AP
-        version: '52'
-    - 
-        author: Solen Guitter
         date: '2016-07-04 08:30'
-        message: Add since 8.3 mention on Tags
+        message: dd since 8.3 mention on Tag
         version: '51'
     - 
         author: Guillaume Renard
@@ -1060,8 +1056,6 @@ Adding a content enricher is done by providing a Java class and a XML contributi
 
 Here is a sample to get you started, that provides a document's parent id, title and description.
 
-{{! multiexcerpt name='enricher-contrib'}}{{! /multiexcerpt}}{{! multiexcerpt name='enricher-class'}}
-
 ```
 package org.nuxeo.sample.enrichers;
 
@@ -1115,8 +1109,6 @@ public class ParentDocEnricher extends AbstractJsonEnricher { // You could also 
     }
 }
 ```
-
-{{! /multiexcerpt}}
 
 ### Specific Object Content Enricher
 

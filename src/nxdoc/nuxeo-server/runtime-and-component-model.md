@@ -12,6 +12,7 @@ labels:
     - extension-point
     - link-update
     - bundle
+    - content-review-lts2015
     - runtime
     - runtimecomponent
     - excerpt
@@ -338,7 +339,7 @@ For that, Nuxeo Platform provides the following patterns:
 
 *   [Bundle]({{page}}): A bundle is a "plug-in". It is most of the time a ".jar" file with a specific structure that aims at deploying a new set of features on the Nuxeo server. Thanks to this "bundle" notion, developers can deliver their new features in a standalone JAR that the platform will know how to start. As a result, your customization is also delivered as a plug-in, like the 10s of plug-ins that are part of the Nuxeo ecosystem, and that you can find on [GitHub](https://github.com/nuxeo) or the [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/product/all).
 *   [Components and services]({{page}}): A component is a software object declared via XML (and that may reference a Java class) that is used to expose some services in the framework. Thanks to this architecture, it is possible to expose a new service anywhere in the Java code executed in the platform. Services are auto-documented: you can see the list on [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listServices).
-*   [Extensions]({{page}}): An extension is a mechanism leveraged by the services to let platform users inject customization in the core of the implementation. It is a pattern used frequently on products such as Mozilla, Chrome, or Eclipse. Thanks to this architecture, it is possible to go very deep in product customization only with XML or using our [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) visual environment, without any coding. You can see the list of all extension points in [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listExtensionPoints). Contributions to extensions are delivered in a custom bundle.
+*   [Extensions]({{page}}): An extension is a mechanism leveraged by the services to let platform users inject customization in the core of the implementation. It is a pattern used frequently on products such as Mozilla, Chrome, or Eclipse. Thanks to this architecture, it is possible to go very deep in product customization only with XML or using our [Nuxeo Studio]({{page space='studio' page='nuxeo-studio-documentation-center'}}) visual environment, without any coding. You can see the list of all extension points in [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listExtensionPoints). Contributions to extensions are delivered in a custom bundle.
 
 Implementing your own _bundle_, your will be able to contribute to existing _extensions_ so as to customize things. For instance, you can:
 

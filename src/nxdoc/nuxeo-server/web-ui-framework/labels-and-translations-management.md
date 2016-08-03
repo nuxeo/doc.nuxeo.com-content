@@ -3,6 +3,7 @@ title: Labels and Translations Management
 labels:
     - todo
     - translations-component
+    - lts2015-not-ok
     - nxdoc-697
     - excerpt
 confluence:

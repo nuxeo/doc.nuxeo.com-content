@@ -3,6 +3,7 @@ title: Installing the Nuxeo Platform on Windows
 labels:
     - install-windows
     - last-review-20141126
+    - content-review-lts2015
     - multiexcerpt
 toc: true
 confluence:
@@ -18,11 +19,6 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/2YON'
     source_link: /display/NXDOC/Installing+the+Nuxeo+Platform+on+Windows
 history:
-    - 
-        author: Manon Lumeau
-        date: '2016-07-22 15:52'
-        message: ''
-        version: '38'
     - 
         author: Alain Escaffre
         date: '2016-03-23 13:41'
@@ -236,7 +232,7 @@ To install the application using the Windows installer (.exe), double-click on t
 
 **Installation path**
 
-On Windows in general, and especially on Windows 7, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,... An installation in another folder could provoke restart issues at end of the [startup wizard steps]({{page page='configuration-wizard'}}).
+On Windows in general, and especially on Windows 7, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,... An installation in another folder could provoke restart issues at end of the [startup wizard steps]({{page page='setup'}}).
 
 ![]({{file name='DM-Windows_installer.png'}} ?w=300)
 
@@ -250,7 +246,7 @@ On Windows in general, and especially on Windows 7, it is highly recommended to 
 
 <span>**What's next?**
 You want to evaluate the application? You can now [start the server]({{page page='server-start-and-stop'}}).
-You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='setup-best-practices'}}).</span>
+You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='set-up-best-practices'}}).</span>
 
 ## <span>Installing the Nuxeo Platform from the ZIP Archive</span>
 
@@ -273,7 +269,7 @@ On Windows in general, and especially on Windows 7, it is highly recommended to 
 
 **What's next?**
 You want to evaluate the application? You can now [start the server]({{page page='server-start-and-stop'}}).
-You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='setup-best-practices'}}).
+You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='set-up-best-practices'}}).
 
 ## Installing a Nuxeo Virtual Machine Image
 
@@ -329,7 +325,7 @@ The Nuxeo Platform is available as ready-to-use 64b virtual machine images from 
 
 <div class="column medium-6">{{#> panel heading="Next Steps"}}
 
-*   [Setup Best Practices]({{page page='setup-best-practices'}})
+*   [Set Up Best Practices]({{page page='set-up-best-practices'}})
 *   [Server Start and Stop]({{page page='server-start-and-stop'}})
 
 {{/panel}}</div>

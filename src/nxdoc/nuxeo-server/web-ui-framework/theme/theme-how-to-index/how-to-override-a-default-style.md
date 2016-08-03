@@ -13,6 +13,7 @@ labels:
     - style
     - howto
     - style-css-component
+    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235625'

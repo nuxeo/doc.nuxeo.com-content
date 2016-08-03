@@ -3,6 +3,7 @@ title: Registering your Nuxeo Instance
 labels:
     - admin-center
     - update-center
+    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'

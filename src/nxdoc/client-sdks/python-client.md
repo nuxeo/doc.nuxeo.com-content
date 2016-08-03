@@ -3,6 +3,7 @@ title: Python Client
 labels:
     - python-client
     - client
+    - content-review-lts2015
     - python-client-component
 toc: true
 confluence:

@@ -4,6 +4,7 @@ labels:
     - jsf
     - todo
     - seam-jsf-component
+    - lts2015-ok
     - multiexcerpt-include
     - excerpt
 tabbed_page: true
@@ -19,11 +20,6 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/KYAO'
     source_link: /display/NXDOC/Web+UI+Framework+Overview
 history:
-    - 
-        author: Manon Lumeau
-        date: '2016-07-20 13:42'
-        message: emove children display macr
-        version: '23'
     - 
         author: Solen Guitter
         date: '2015-12-14 15:03'
@@ -208,11 +204,5 @@ We also choose to make the UI very pluggable, because each project needs to have
 All this means that you can start from a standard Nuxeo Platform, and with simple configuration have a custom UI.
 
 ## Pages Index
-
-*   [JSF Page Layout System Overview](https://doc.nuxeo.com/display/NXDOC/JSF+Page+Layout+System+Overview)
-*   [Web UI Limitations](https://doc.nuxeo.com/display/NXDOC/Web+UI+Limitations)&nbsp;&mdash;&nbsp;<span class="smalltext">This chapter presents the limitations to the Seam/JSF web application.</span>
-*   [Web UI How-To Index](https://doc.nuxeo.com/display/NXDOC/Web+UI+How-To+Index)
-*   [Upgrade to JSF2](https://doc.nuxeo.com/display/NXDOC/Upgrade+to+JSF2)&nbsp;&mdash;&nbsp;<span class="smalltext">The Nuxeo Platform has been upgraded to JSF 2 for the 6.0 version. This page provides tools and notes to help you migrate your custom Nuxeo projects to this version.</span>
-*   [JSF and Ajax Tips and How-To Index](https://doc.nuxeo.com/display/NXDOC/JSF+and+Ajax+Tips+and+How-To+Index)
 
 {{! end_of_tabs }}

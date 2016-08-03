@@ -1,6 +1,7 @@
 ---
 title: One step validation flow based on lifecycle only
 labels:
+    - content-review-lts2015
     - excerpt
 confluence:
     ajs-parent-page-id: '19235786'
@@ -15,16 +16,6 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/jwwz'
     source_link: /display/NXDOC/One+step+validation+flow+based+on+lifecycle+only
 history:
-    - 
-        author: Manon Lumeau
-        date: '2016-07-20 13:27'
-        message: emove children display macr
-        version: '19'
-    - 
-        author: Manon Lumeau
-        date: '2016-07-20 13:27'
-        message: remove
-        version: '18'
     - 
         author: Solen Guitter
         date: '2013-09-02 17:11'
@@ -135,8 +126,3 @@ Technically, in this tutorial, you will learn how to:
 *   Define what happens in case the document is rejected.
 
 Start the tutorial:
-
-*   [Functional tour](https://doc.nuxeo.com/display/NXDOC/Functional+tour)
-*   [Implement the validation logic](https://doc.nuxeo.com/display/NXDOC/Implement+the+validation+logic)
-*   [Create a task assignment alert](https://doc.nuxeo.com/display/NXDOC/Create+a+task+assignment+alert)
-*   [Create a button that triggers the task assignment](https://doc.nuxeo.com/display/NXDOC/Create+a+button+that+triggers+the+task+assignment)

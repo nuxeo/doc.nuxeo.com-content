@@ -3,6 +3,7 @@ title: Building a SOAP-Based WebService Client in Nuxeo
 labels:
     - soap
     - soap-component
+    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950296'

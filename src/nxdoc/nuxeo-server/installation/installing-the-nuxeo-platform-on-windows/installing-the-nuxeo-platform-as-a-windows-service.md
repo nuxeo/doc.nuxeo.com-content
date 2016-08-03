@@ -4,6 +4,7 @@ labels:
     - install-windows
     - windows-service
     - install-service
+    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '9274329'
@@ -548,7 +549,7 @@ You may want to have a look at [http://msdn2.microsoft.com/en-US/library/system.
 
 <div class="column medium-6">{{#> panel heading="Next Steps"}}
 
-*   [Setup Best Practices]({{page page='setup-best-practices'}})
+*   [Set Up Best Practices]({{page page='set-up-best-practices'}})
 *   [Server Start and Stop]({{page page='server-start-and-stop'}})
 
 {{/panel}}</div>

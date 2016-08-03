@@ -3,6 +3,7 @@ title: Shell Commands
 labels:
     - shell
     - shell-component
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -20,7 +21,7 @@ history:
     - 
         author: Solen Guitter
         date: '2015-08-31 14:34'
-        message: ''
+        message: pdate table of contents loo
         version: '19'
     - 
         author: Solen Guitter
@@ -366,7 +367,7 @@ public class Lst implements Runnable {
 
 As we've seen, remote commands are using the automation client API to talk with the server. This means our remote commands are in fact wrappers around a core automation object: an automation operation. A remote command is in fact translating the user input in a server side operation and is using the automation client API to invoke that operation. All these things are hidden in Nuxeo Shell but you can always use the automation client API and directly invoke operations if you want.
 
-This is a nice feature since automation is used also on the server side to design high level actions on the Nuxeo platform. So we reuse the code existing in Nuxeo without having to deal with Nuxeo low level API. You can, this way, even assemble administration commands using [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) and invoke them from the shell.
+This is a nice feature since automation is used also on the server side to design high level actions on the Nuxeo platform. So we reuse the code existing in Nuxeo without having to deal with Nuxeo low level API. You can, this way, even assemble administration commands using [Nuxeo Studio]({{page space='studio' page='nuxeo-studio-documentation-center'}}) and invoke them from the shell.
 
 But, the problem is that using operations means to have this operation defined on server side. It may happens that Nuxeo is not always providing an operation dedicated for your needs. In this case an approach is to implement a operation (server side), deploy it on the server and then create a shell command to invoke the operation. But you cannot do this anytime you need a new command in the shell and your target server is a production server. Also there are use cases not covered by operations like listing the existing ALCs on a document (in fact all listings that doesn't involves returning from the server documents or blobs).
 

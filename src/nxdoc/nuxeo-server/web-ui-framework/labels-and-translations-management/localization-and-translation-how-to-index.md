@@ -3,6 +3,7 @@ title: Localization and Translation How-To Index
 labels:
     - localization
     - translation
+    - lts2015-ok
     - index
     - excerpt
 confluence:

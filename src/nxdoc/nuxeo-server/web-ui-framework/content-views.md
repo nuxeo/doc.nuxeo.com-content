@@ -5,6 +5,7 @@ labels:
     - content-view
     - document-content-view
     - content-views-component
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -19,410 +20,398 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/FQ4z'
     source_link: /display/NXDOC/Content+Views
 history:
-    - 
-        author: Solen Guitter
-        date: '2016-07-07 15:09'
-        message: pdate link to use version independent URL
-        version: '80'
-    - 
-        author: Solen Guitter
-        date: '2016-07-07 13:56'
-        message: >-
-            NXDOC-830: update how to configure maxPageSize and
-            DEFAULT_NAVIGATION_RESULTS
-        version: '79'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 15:51'
         message: ''
         version: '78'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-10-13 15:09'
         message: ''
         version: '77'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-10-13 15:00'
         message: ''
         version: '76'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-10-13 14:39'
         message: fix bad replacement of searchDocumentType sample usage
         version: '75'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-08 15:29'
         message: Remove mentions of 5.9.2
         version: '74'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-17 08:15'
         message: Code format
         version: '73'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-09-16 15:30'
         message: 'NXP-17224: document new elements to wait for execution'
         version: '72'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-13 08:27'
         message: ''
         version: '71'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-13 08:27'
         message: ''
         version: '70'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-07-10 12:36'
         message: Add a note about predicate hints
         version: '69'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-03-19 17:05'
         message: wording
         version: '68'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-03-19 17:04'
         message: cosmit
         version: '67'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-03-19 17:03'
         message: 'NXP-16770: mention the new pageSizeOptions element'
         version: '66'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-17 17:22'
         message: add sample for named parameters
         version: '65'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-17 13:58'
         message: add page-provider label to related content
         version: '64'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-17 13:51'
         message: remove bad copy/paste
         version: '63'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-17 13:50'
         message: add doc about searchDocumentType and resultLayout elements
         version: '62'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-05 18:37'
         message: >-
             NXDOC-222: rename cv actions to cv selection actions to avoid
             confusion
         version: '61'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 18:58'
         message: 'NXDOC-222: remove rendering section, moved to subpage'
         version: '60'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 18:49'
         message: add link to document list management documentatiobn
         version: '59'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-15 16:27'
         message: ''
         version: '58'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-15 16:22'
         message: ''
         version: '57'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-15 14:56'
         message: ''
         version: '56'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-25 11:59'
         message: Add doc about listing layouts ending with "2_columns"
         version: '55'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 14:04'
         message: Removed 5.5 reference
         version: '54'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 18:38'
         message: ''
         version: '53'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-02-06 20:06'
         message: NXP-13718 add doc about fixed part configuration
         version: '52'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 16:49'
         message: 'Removed 5.4.2 mentions, formatting, added Studio related topics'
         version: '51'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-01-10 17:30'
         message: add link to Studio doc
         version: '50'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-12 18:48'
         message: Fix related topics box (by label)
         version: '49'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-12 18:45'
         message: better related labels
         version: '48'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-12 18:44'
         message: ''
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 14:16'
         message: Updated links
         version: '46'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 16:27'
         message: ''
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 11:25'
         message: ''
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-24 16:41'
         message: Added titles and formatting
         version: '43'
-    - 
+    -
         author: Thierry Martins
         date: '2013-06-24 11:11'
         message: add an alternative to configure.defaultNavigationResults
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-18 14:25'
         message: Changed since 5.7 for 5.7.1
         version: '41'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-04-17 15:43'
         message: wording on maxResults conf
         version: '40'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-09-28 16:56'
         message: Migrated to Confluence 4.0
         version: '39'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-09-28 16:56'
         message: add ad for hotfixes
         version: '38'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-09-28 15:49'
         message: cosmit
         version: '37'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-09-28 15:47'
         message: 'NXP-10155: content view caching improvements '
         version: '36'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-09-20 16:22'
         message: moved misplaced sentence
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-11 21:37'
         message: Updated link to 5.7 SNAPSHOT version
         version: '34'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-08-17 09:56'
         message: ''
         version: '33'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-08-17 09:56'
         message: ''
         version: '32'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-07-04 14:18'
         message: ''
         version: '31'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-07-04 14:15'
         message: ''
         version: '30'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-06-22 17:45'
         message: ''
         version: '29'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-06-22 17:37'
         message: Adding maxResults NXP-9494 doc
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-21 11:20'
         message: Updated 5.4 mercurial link to 5.6 snapshot github URL
         version: '27'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-20 16:59'
         message: >-
             adding more examples about search document and result columsn
             configuration
         version: '26'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-12-02 12:52'
         message: ''
         version: '25'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-07-04 18:39'
         message: ''
         version: '24'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-05-13 12:06'
         message: ''
         version: '23'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-05-06 14:44'
         message: ''
         version: '22'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-04-26 17:52'
         message: ''
         version: '21'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-04-26 17:31'
         message: ''
         version: '20'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-04-18 18:57'
         message: ''
         version: '19'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-15 16:27'
         message: ''
         version: '18'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-14 18:14'
         message: >-
             adding new elements information (max page size, show page size
             selector, show refresh page)
         version: '17'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-01 15:38'
         message: ''
         version: '16'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-02-15 14:36'
         message: ''
         version: '15'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-02-14 18:20'
         message: ''
         version: '14'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-02-01 15:08'
         message: ''
         version: '13'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-02-01 14:56'
         message: ''
         version: '12'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2010-11-04 18:11'
         message: ''
         version: '11'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2010-10-13 15:42'
         message: ''
         version: '10'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2010-10-13 15:36'
         message: ''
         version: '9'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2010-07-30 12:33'
         message: ''
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2010-07-30 12:31'
         message: ''
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2010-07-30 12:25'
         message: ''
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2010-07-30 12:04'
         message: ''
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2010-07-30 11:33'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2010-07-30 11:16'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2010-07-30 11:16'
         message: ''
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2010-07-28 17:54'
         message: ''
@@ -486,7 +475,7 @@ The `coreQueryPageProvider` element makes it possible to define what query will 
 
 The `coreQueryPageProvider`&nbsp;element accepts any number of property elements, defining needed context variables for the page provider to perform its work. The&nbsp;`coreSession` property is mandatory for a core query to be processed and is bound to the core session proxy named&nbsp;`documentManager` available in a default Nuxeo application.
 
-It also accepts any number of `parameter` elements, where order of definition matters: this EL expression will be resolved when performing the query, replacing the `?` characters it holds.
+It also accepts any number of `parameter` elements, where order of definition matters: this EL expression will be resolved when performing the query, replacing the '?' characters it holds.
 
 The main difference between `properties` and `parameters` is that properties will not be recomputed when refreshing the provider, whereas parameters will be. Properties will only be recomputed when resetting the provider.
 
@@ -498,7 +487,7 @@ The&nbsp;`sort` element defines the default sort, that can be changed later thro
 
 The&nbsp;`pageSize` element defines the default page size, it can also be changed later. The `pageSizeBinding` element can also be defined: it can resolve an EL expression in case the page size is held by a third party instance (document, Seam component...), and will be used instead of the default page size if not null.
 
-The optional `maxPageSize` element can be placed at the same level than `pageSize`. It makes it possible to define the maximum page size so that the content view does not overload the server when retrieving a large number of items. When not set, the default value "1000" will be used: even when asking for all the results with a page size with value "0" (when exporting the content view in CSV format for instance), only 1000 items will be returned. This is configurable by [contributing the property&nbsp;`nuxeo.pageprovider.default-max-page-size`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.core.query.properties--configuration) to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
+The optional `maxPageSize` element can be placed at the same level than `pageSize`. It makes it possible to define the maximum page size so that the content view does not overload the server when retrieving a large number of items. When not set, since 5.9.6, the default value "1000" will be used: even when asking for all the results with a page size with value "0" (when exporting the content view in CSV format for instance), only 1000 items will be returned. Since 5.6 (and some previous hotfixed versions, see [NXP-9052](https://jira.nuxeo.com/browse/NXP-9052)) this is configurable globally using the runtime property `nuxeo.pageprovider.default-max-page-size`.
 
 ###### maxResults elements
 
@@ -506,7 +495,19 @@ The optional `maxPageSize` element can be placed at the same level than `pageSiz
 
 To set this limit you need to add a `maxResults` parameter to `coreQueryPageProvider`, either using an integer value or one of the following keywords:
 
-*   `DEFAULT_NAVIGATION_RESULTS`: Used by most of the navigation page provider. The default is 200 and it can be overridden by [contributing the property `org.nuxeo.ecm.platform.query.nxql.defaultNavigationResults`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.query.api.PageProviderService--configuration) to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
+*   `DEFAULT_NAVIGATION_RESULTS`: Used by most of the navigation page provider, the default is 200 and it can be overridden using Java options:
+
+    ```
+      JAVA_OPTS=$JAVA_OPTS -Dorg.nuxeo.ecm.platform.query.nxql.defaultNavigationResults=1000
+
+    ```
+
+    or you can directly add this line in [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}):
+
+    ```
+     org.nuxeo.ecm.platform.query.nxql.defaultNavigationResults=1000
+
+    ```
 
 *   `PAGE_SIZE`: this is useful when you are interested in a single page or if you don't need a total count.
 
@@ -736,7 +737,7 @@ The `refresh` and `reset` elements configurations make it possible to refresh/re
 
 Refresh will keep current settings, and will force the query to be done again. Reset will delete content views completely from the cache, and force complete re-generation of the content view, its provider, and the search document model if set.
 
-{{#> callout type='note' heading="cache size "0" behaviour"}}
+{{#> callout type='note' heading='cache size "0" behaviour'}}
 
 When using value "0", the content view is cached anyhow, but its page provider is refreshed every time it is rendered.
 

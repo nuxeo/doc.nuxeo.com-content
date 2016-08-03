@@ -10,6 +10,7 @@ labels:
     - token-based-authentication-component
     - kerberos-authentication-component
     - authentication-component
+    - lts2015-ok
     - migration-sample
 tabbed_page: true
 confluence:

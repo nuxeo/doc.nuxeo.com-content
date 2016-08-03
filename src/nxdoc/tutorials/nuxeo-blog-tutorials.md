@@ -1,5 +1,7 @@
 ---
 title: Nuxeo Blog Tutorials
+labels:
+    - content-review-lts2015
 confluence:
     ajs-parent-page-id: '7209076'
     ajs-parent-page-title: Tutorials

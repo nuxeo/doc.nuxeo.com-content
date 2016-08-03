@@ -1,7 +1,7 @@
 ---
 title: How to Customize the Versioning and Comment Widget on Document Edit Form
 details:
-    howto-info:
+    howto:
         excerpt: >-
             Learn how to customize the versioning and comment widget using XML
             extensions. These examples can be contributed in Nuxeo Studio
@@ -16,6 +16,7 @@ labels:
     - howto
     - howto-info
     - layout-widgets-component
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:

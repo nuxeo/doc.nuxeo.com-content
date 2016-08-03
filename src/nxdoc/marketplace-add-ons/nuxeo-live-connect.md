@@ -2,6 +2,7 @@
 title: Nuxeo Live Connect
 labels:
     - live-connect-component
+    - lts2015-ok
     - university
 toc: true
 confluence:

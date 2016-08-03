@@ -10,6 +10,7 @@ labels:
     - seam
     - howto
     - seam-jsf-component
+    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235681'

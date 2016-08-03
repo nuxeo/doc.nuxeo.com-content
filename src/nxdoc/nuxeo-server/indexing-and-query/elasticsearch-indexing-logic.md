@@ -3,6 +3,7 @@ title: Elasticsearch Indexing Logic
 labels:
     - elasticsearch
     - elasticsearch-component
+    - lts2015-ok
     - university
 toc: true
 confluence:

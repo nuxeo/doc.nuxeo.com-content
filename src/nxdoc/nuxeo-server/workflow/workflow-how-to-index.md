@@ -3,6 +3,7 @@ title: Workflow How-To Index
 labels:
     - workflow
     - index
+    - lts2015-ok
 confluence:
     ajs-parent-page-id: '12913723'
     ajs-parent-page-title: Workflow

@@ -5,6 +5,7 @@ labels:
     - aggregate
     - page-provider
     - query-pageprovider-component
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:

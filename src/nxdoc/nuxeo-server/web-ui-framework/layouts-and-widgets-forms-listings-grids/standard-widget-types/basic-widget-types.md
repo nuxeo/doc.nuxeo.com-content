@@ -3,6 +3,7 @@ title: Basic Widget Types
 labels:
     - widget-types
     - layout-widgets-component
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:

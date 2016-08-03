@@ -4,6 +4,7 @@ labels:
     - link-update
     - renditions-component
     - rendition
+    - lts2015-ok
     - excerpt
     - multiexcerpt-include
 toc: true

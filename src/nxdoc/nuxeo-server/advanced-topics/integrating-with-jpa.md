@@ -1,5 +1,7 @@
 ---
 title: Integrating with JPA
+labels:
+    - content-review-lts2015
 confluence:
     ajs-parent-page-id: '950333'
     ajs-parent-page-title: Advanced topics

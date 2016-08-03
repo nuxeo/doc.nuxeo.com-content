@@ -1,5 +1,7 @@
 ---
 title: Nuxeo Diff Pictures
+labels:
+    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

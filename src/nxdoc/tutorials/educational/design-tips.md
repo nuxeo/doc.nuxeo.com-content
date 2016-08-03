@@ -1,6 +1,7 @@
 ---
 title: Design Tips
 labels:
+    - content-review-lts2015
     - excerpt
 confluence:
     ajs-parent-page-id: '19235679'
@@ -14,11 +15,6 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/Eg7F'
     source_link: /display/NXDOC/Design+Tips
 history:
-    - 
-        author: Manon Lumeau
-        date: '2016-07-20 13:20'
-        message: emove children display macr
-        version: '5'
     - 
         author: Solen Guitter
         date: '2014-09-02 11:21'
@@ -48,6 +44,3 @@ Nuxeo Studio is a very powerful tool. The direct consequence is that there are v
 {{! /excerpt}}
 
 &nbsp;
-
-*   [Locking vs Permission to Restrict Edit Access to a Document](https://doc.nuxeo.com/display/NXDOC/Locking+vs+Permission+to+Restrict+Edit+Access+to+a+Document)&nbsp;&mdash;&nbsp;<span class="smalltext">During the life of a document, on state changes, or during a workflow for instance, it is sometimes required that a document has restricted modification permissions. There are at least two ways of doing this in Nuxeo:</span>
-*   [Several Document Types vs One Document Type with a Nature Metadata](https://doc.nuxeo.com/display/NXDOC/Several+Document+Types+vs+One+Document+Type+with+a+Nature+Metadata)&nbsp;&mdash;&nbsp;<span class="smalltext">In some cases, there is a need to manage different documents (procedure, instruction, notice, invoices...) but with very similar properties and life cycles.</span>

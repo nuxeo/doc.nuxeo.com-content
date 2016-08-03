@@ -1,6 +1,7 @@
 ---
 title: Marketplace Add-Ons
 labels:
+    - lts2015-ok
     - excerpt
     - multiexcerpt-include
 confluence:
@@ -15,16 +16,6 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/BYH1'
     source_link: /display/NXDOC/Marketplace+Add-Ons
 history:
-    - 
-        author: Julien Carsique
-        date: '2016-07-27 09:51'
-        message: PI Playground 1.1.1 (Nx 8.3
-        version: '8'
-    - 
-        author: Manon Lumeau
-        date: '2016-07-25 13:55'
-        message: ''
-        version: '7'
     - 
         author: Solen Guitter
         date: '2015-09-21 20:24'
@@ -59,14 +50,8 @@ history:
 ---
 {{! excerpt}}
 
-This chapter presents <span>list of Nuxeo Packages available on the Nuxeo Marketplace for the latest version of the Nuxeo Platform.</span>
+This chapter presents how to apprehend and customize the additional packages available on the Nuxeo Platform, typically from the Nuxeo Marketplace.
 
-{{! /excerpt}}{{! multiexcerpt name='MP-packages-list'}}
+{{! /excerpt}}
 
-_Use the field below to search for a specific add-on._
-
-{{! table-filter removed }}
-
-Use: "In progress for x.y.z (JC)", "Ready for x.y.z" or "Released for x.y.z" or any other relevant comment.
-
-{{! /multiexcerpt}}
+{{{multiexcerpt 'MP-packages-list' page='USERDOC:Adding Features'}}}

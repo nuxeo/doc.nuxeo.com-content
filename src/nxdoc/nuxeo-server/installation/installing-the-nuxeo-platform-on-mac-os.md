@@ -2,6 +2,7 @@
 title: Installing the Nuxeo Platform on Mac OS
 labels:
     - installation
+    - lts2015-ok
     - multiexcerpt-include
 toc: true
 confluence:
@@ -179,7 +180,7 @@ Unzip the .zip archive using your favorite tool.
 
 **What's next?**
 You want to evaluate the application? You can now [start the server]({{page page='server-start-and-stop'}}).
-You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='setup-best-practices'}}).
+You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='set-up-best-practices'}}).
 
 ## Installing the Nuxeo Platform Using Homebrew
 
@@ -209,7 +210,7 @@ brew install nuxeo
 
 <div class="column medium-6">{{#> panel heading="Next Steps"}}
 
-*   [Setup Best Practices]({{page page='setup-best-practices'}})
+*   [Set Up Best Practices]({{page page='set-up-best-practices'}})
 *   [Server Start and Stop]({{page page='server-start-and-stop'}})
 
 {{/panel}}</div>

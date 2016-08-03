@@ -4,6 +4,7 @@ labels:
     - funkload
     - link-update
     - performance
+    - content-review-lts2015
     - excerpt
 toc: true
 confluence:

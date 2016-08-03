@@ -4,6 +4,7 @@ labels:
     - video
     - architecture
     - overview
+    - lts2015-not-ok
 toc: true
 confluence:
     ajs-parent-page-id: '7209076'

@@ -11,6 +11,7 @@ labels:
     - theme
     - howto
     - seam-jsf-component
+    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '20517820'

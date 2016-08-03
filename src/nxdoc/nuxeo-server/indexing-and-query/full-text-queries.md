@@ -3,6 +3,7 @@ title: Full-Text Queries
 labels:
     - nxql
     - full-text
+    - content-review-lts2015
     - query
     - query-pageprovider-component
 toc: true

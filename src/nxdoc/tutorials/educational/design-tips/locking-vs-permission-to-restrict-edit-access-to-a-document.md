@@ -2,6 +2,7 @@
 title: Locking vs Permission to Restrict Edit Access to a Document
 labels:
     - lock
+    - content-review-lts2015
     - excerpt
 toc: true
 confluence:

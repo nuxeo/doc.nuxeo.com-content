@@ -3,6 +3,7 @@ title: Shell Namespaces
 labels:
     - shell
     - shell-component
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:

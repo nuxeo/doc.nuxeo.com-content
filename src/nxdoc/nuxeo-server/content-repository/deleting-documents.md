@@ -3,6 +3,7 @@ title: Deleting Documents
 labels:
     - delete
     - life-cycle
+    - content-review-lts2015
     - core-component
     - excerpt
     - multiexcerpt-include

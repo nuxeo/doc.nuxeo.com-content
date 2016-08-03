@@ -1,6 +1,7 @@
 ---
 title: Using the Java API Server-Side
 labels:
+    - content-review-lts2015
     - runtimecomponent
 toc: true
 confluence:

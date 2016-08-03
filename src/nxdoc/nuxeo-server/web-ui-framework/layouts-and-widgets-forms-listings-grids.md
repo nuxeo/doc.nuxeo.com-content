@@ -4,6 +4,7 @@ labels:
     - layouts
     - widgets
     - layout-widgets-component
+    - lts2015-ok
     - excerpt
     - multiexcerpt
 confluence:
@@ -19,14 +20,9 @@ confluence:
     source_link: /pages/viewpage.action?pageId=950330
 history:
     - 
-        author: Manon Lumeau
-        date: '2016-07-20 13:38'
-        message: emove children display macr
-        version: '60'
-    - 
         author: Solen Guitter
         date: '2015-10-12 13:09'
-        message: Fix formatting issues
+        message: ix formatting issue
         version: '59'
     - 
         author: Solen Guitter
@@ -368,14 +364,7 @@ A widget definition includes the mention of its type. Widget types make the asso
 
 The following pages explain how to work with layouts and widgets.
 
-*   [Layout and Widget Definitions](https://doc.nuxeo.com/display/NXDOC/Layout+and+Widget+Definitions)&nbsp;&mdash;&nbsp;<span class="smalltext">Custom layouts and widgets can be contributed to the web layout service, using its extension points.</span>
-*   [Standard Layout Types](https://doc.nuxeo.com/display/NXDOC/Standard+Layout+Types)&nbsp;&mdash;&nbsp;<span class="smalltext">Some layout types have been extracted to ease up defining layouts.</span>
-*   [Standard Widget Types](https://doc.nuxeo.com/display/NXDOC/Standard+Widget+Types)&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types has been defined for the most generic uses cases.</span>
-*   [Custom Layout and Widget Templates](https://doc.nuxeo.com/display/NXDOC/Custom+Layout+and+Widget+Templates)&nbsp;&mdash;&nbsp;<span class="smalltext">Some templating features have been made available to make it easier to control the layouts and widgets rendering.</span>
-*   [Custom Widget Types](https://doc.nuxeo.com/display/NXDOC/Custom+Widget+Types)&nbsp;&mdash;&nbsp;<span class="smalltext">Custom widget types can be added to the standard list thanks to another extension point on the web layout service.</span>
-*   [Layout and Widget Display](https://doc.nuxeo.com/display/NXDOC/Layout+and+Widget+Display)&nbsp;&mdash;&nbsp;<span class="smalltext">Layouts can be displayed thanks to a series a JSF tags that will query the web layout service to get the layout definition and build it for a given mode.</span>
-*   [Generic Layout Usage](https://doc.nuxeo.com/display/NXDOC/Generic+Layout+Usage)&nbsp;&mdash;&nbsp;<span class="smalltext">Layouts can be used with other kind of objects than documents.</span>
-*   [Layout & Widget How-To Index](https://doc.nuxeo.com/pages/viewpage.action?pageId=19235623)
+&nbsp;
 
 {{/panel}}</div>
 

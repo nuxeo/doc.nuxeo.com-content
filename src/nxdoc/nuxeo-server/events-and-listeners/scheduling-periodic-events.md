@@ -4,6 +4,7 @@ labels:
     - cron
     - event
     - scheduler
+    - content-review-lts2015
     - core-component
     - excerpt
 toc: true

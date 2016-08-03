@@ -4,6 +4,7 @@ labels:
     - link-update
     - smart-search
     - smart-search-component
+    - lts2015-ok
     - multiexcerpt
 toc: true
 confluence:

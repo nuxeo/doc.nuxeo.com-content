@@ -15,6 +15,7 @@ labels:
     - howto
     - community-links
     - workflow-component
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:

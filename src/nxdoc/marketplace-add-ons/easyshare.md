@@ -2,6 +2,7 @@
 title: EasyShare
 labels:
     - easyshare
+    - content-review-lts2015
     - excerpt-include
 confluence:
     ajs-parent-page-id: '16089349'

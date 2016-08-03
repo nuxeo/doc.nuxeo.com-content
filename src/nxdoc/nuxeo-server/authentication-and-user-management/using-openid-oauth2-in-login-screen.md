@@ -4,6 +4,7 @@ labels:
     - openid
     - oauth
     - openid-component
+    - lts2015-ok
     - excerpt
 toc: true
 confluence:

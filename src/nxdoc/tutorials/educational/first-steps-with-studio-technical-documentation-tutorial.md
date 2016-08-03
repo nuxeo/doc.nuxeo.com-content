@@ -2,6 +2,7 @@
 title: 'First Steps With Studio: Technical Documentation Tutorial'
 labels:
     - tutorial
+    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235679'
@@ -17,11 +18,6 @@ confluence:
     source_link: >-
         /display/NXDOC/First+Steps+With+Studio%3A+Technical+Documentation+Tutorial
 history:
-    - 
-        author: Manon Lumeau
-        date: '2016-07-20 12:32'
-        message: emove children display macr
-        version: '10'
     - 
         author: Solen Guitter
         date: '2015-10-29 13:21'
@@ -89,8 +85,3 @@ Here are a few rules we want to follow:
 *   Publishing should automatic at the end of the validation workflow.
 
 This how-to is divided in the following main steps:
-
-*   [Implementing Documentation Items](https://doc.nuxeo.com/display/NXDOC/Implementing+Documentation+Items)
-*   [Custom Content View for Documentation Items](https://doc.nuxeo.com/display/NXDOC/Custom+Content+View+for+Documentation+Items)
-*   [Document Locking Right after Its Creation](https://doc.nuxeo.com/display/NXDOC/Document+Locking+Right+after+Its+Creation)
-*   [Validation Workflow Choosing the Assignee Based on a Metadata](https://doc.nuxeo.com/display/NXDOC/Validation+Workflow+Choosing+the+Assignee+Based+on+a+Metadata)
