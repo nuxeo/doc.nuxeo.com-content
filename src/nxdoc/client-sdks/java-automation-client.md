@@ -727,74 +727,61 @@ The example will create a new File document into the root _"/"_ document and the
     // create a file document
     session.newRequest("Document.Create").setInput(root).set("type", "File").set("name", "myfile").set("properties", "dc:title=My File").execute();
     ```
-
-    {{#> callout type='info' }}
-
-    Note the usage of `setInput()` method. This is to specify that the create operation must be executed in the context of the root document - so the new document will be created under the root document. Also you can notice that the input object is a Document instance.
-
-    {{/callout}}
+    {{#> callout type='info' }}Note the usage of `setInput()` method. This is to specify that the create operation must be executed in the context of the root document - so the new document will be created under the root document. Also you can notice that the input object is a Document instance.{{/callout}}
 2.  Now get the file to upload and put it into the newly created document.
 
     ```
-            File file = getTheFileToUpload();
-            FileBlob fb = new FileBlob(file);
-            fb.setMimeType("text/xml");
-            // uploading a file will return null since we used HEADER_NX_VOIDOP
-            session.newRequest("Blob.Attach").setHeader(
-                    Constants.HEADER_NX_VOIDOP, "true").setInput(fb)
-                    .set("document", "/myfile").execute();
-
+    File file = getTheFileToUpload();
+    FileBlob fb = new FileBlob(file);
+    fb.setMimeType("text/xml");
+    // uploading a file will return null since we used HEADER_NX_VOIDOP
+    session.newRequest("Blob.Attach").setHeader(
+            Constants.HEADER_NX_VOIDOP, "true").setInput(fb)
+            .set("document", "/myfile").execute();
     ```
-
     The last `execute` call will return `null` since the `HEADER_NX_VOIDOP` header was used. This is to avoid receiving back from the server the blob we just uploaded.
-
     {{#> callout type='info' }}
-
     Note that to upload a file we need to use a `Blob` object that wrap the file to upload.
-
     {{/callout}}
 3.  Now get the the file document where the blob was uploaded.
+
 4.  Then retrieve the blob remote URL from the document metadata. We can use this URL to download the blob.
 
     ```
-            import org.nuxeo.ecm.automation.client.model.Document;
-            import org.nuxeo.ecm.automation.client.Session;
-            import org.nuxeo.ecm.automation.client.Constants;
+    import org.nuxeo.ecm.automation.client.model.Document;
+    import org.nuxeo.ecm.automation.client.Session;
+    import org.nuxeo.ecm.automation.client.Constants;
 
-            // get the file document where blob was attached
-            Document doc = (Document) session.newRequest(
-                    "Document.Fetch").setHeader(
-                    Constants.HEADER_NX_SCHEMAS, "*").set("value", "/myfile").execute();
-            // get the file content property
-            PropertyMap map = doc.getProperties().getMap("file:content");
-            // get the data URL
-            String path = map.getString("data");
-
+    // get the file document where blob was attached
+    Document doc = (Document) session.newRequest(
+            "Document.Fetch").setHeader(
+            Constants.HEADER_NX_SCHEMAS, "*").set("value", "/myfile").execute();
+    // get the file content property
+    PropertyMap map = doc.getProperties().getMap("file:content");
+    // get the data URL
+    String path = map.getString("data");
     ```
-
     You can see we used the special `HEADER_NX_SCHEMAS` header to specify we want all properties of the document to be included in the response.
-
+    
 5.  Now download the file located on the server under the `path` we retrieved from the document properties:
 
     ```
-            // download the file from its remote location
-            blob = (FileBlob) session.getFile(path);
-            // ... do something with the file
-            // at the end delete the temporary file
-            blob.getFile().delete();
-
+    // download the file from its remote location
+    blob = (FileBlob) session.getFile(path);
+    // ... do something with the file
+    // at the end delete the temporary file
+    blob.getFile().delete();
     ```
 
     We can do the same by invoking the `Blob.Get` operation.
 
     ```
-            // now test the GetBlob operation on the same blob
-            blob = (FileBlob) session.newRequest("Blob.Get").setInput(doc).set(
-                    "xpath", "file:content").execute();
-            // ... do something with the file
-            // at the end delete the temporary file
-            blob.getFile().delete();
-
+    // now test the GetBlob operation on the same blob
+    blob = (FileBlob) session.newRequest("Blob.Get").setInput(doc).set(
+            "xpath", "file:content").execute();
+    // ... do something with the file
+    // at the end delete the temporary file
+    blob.getFile().delete();
     ```
 
 ## Managing Complex Properties
@@ -803,7 +790,7 @@ Complex properties can have different levels complexity. This part of the docume
 
 Let's see a complex property schema example:
 
-```xml
+```
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:mc="http://nuxeo.org/schemas/dataset/"
