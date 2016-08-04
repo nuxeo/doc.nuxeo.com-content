@@ -299,7 +299,7 @@ When using this solution it is important that Nuxeo installation path contains n
 
     The configuration is written in the file `%YAJSW_HOME%\conf\wrapper.conf`.
 
-    {{#> callout type='note' heading="Wrapper Static Configuration Vs nuxeo.conf"}}
+    {{#> callout type='note' heading='Wrapper Static Configuration Vs nuxeo.conf'}}
 
     Once the wrapper configuration is generated, it is static. It means any further start of the Nuxeo service won't read [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) to apply configuration changes.
 
@@ -544,21 +544,15 @@ You may want to have a look at [http://msdn2.microsoft.com/en-US/library/system.
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Next Steps"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Next Steps'}}
 
 *   [Setup Best Practices]({{page page='setup-best-practices'}})
 *   [Server Start and Stop]({{page page='server-start-and-stop'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Getting Familiar with the Nuxeo Platform"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
 
 *   [From the Web UI to Nuxeo Studio]({{page page='from-the-web-ui-to-nuxeo-studio'}})
 *   [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
 *   [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

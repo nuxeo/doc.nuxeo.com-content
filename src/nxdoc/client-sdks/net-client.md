@@ -441,7 +441,7 @@ The Nuxeo .NET Client is already being used by a sample application named [Nuxeo
 
 * * *
 
-{{#> panel heading="Related Topics"}}
+{{#> panel heading='Related Topics'}}
 
 *   [Client SDKs]({{page page='client-sdks'}})
 

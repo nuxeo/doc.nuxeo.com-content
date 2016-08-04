@@ -190,7 +190,7 @@ history:
 ---
 {{#> callout type='info' }}
 
-<span>Nuxeo Platform provides many possibilities for configuring User & Groups provisioning and authentication. Please refer to the&nbsp;</span>[Authentication and User Management page.]({{page page='authentication-and-user-management'}})
+Nuxeo Platform provides many possibilities for configuring User & Groups provisioning and authentication. Please refer to the&nbsp;[Authentication and User Management page.]({{page page='authentication-and-user-management'}})
 
 {{/callout}}
 

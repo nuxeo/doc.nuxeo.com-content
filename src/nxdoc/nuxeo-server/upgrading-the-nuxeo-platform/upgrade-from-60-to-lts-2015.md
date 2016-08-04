@@ -383,7 +383,7 @@ Quartz library has been upgraded from 1.8.6 to 2.2.2\. Therefore the table struc
 Run the script to [upgrade Quartz tables from 1.8.6 to 2.2.2](https://raw.githubusercontent.com/nuxeo/nuxeo/7.10/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/bin/upgrade-6.0-7.10/7.3-quartz-1.8.6-2.2.2.sql) (also available in your Nuxeo distribution):
 
 ```
-$ psql -U   -f $NUXEO_HOME/bin/upgrade-6.0-7.10/7.3-quartz-1.8.6-2.2.2.sql   
+$ psql -U <nuxeo_user> <nuxeo_db> -f $NUXEO_HOME/bin/upgrade-6.0-7.10/7.3-quartz-1.8.6-2.2.2.sql   
 ```
 
 #### Node ID
@@ -413,7 +413,7 @@ Run the script file to [migrate notification subscriptions](https://raw.githubus
 ###### Postgresql
 
 ```
-$ psql -U   -f $NUXEO_HOME/bin/upgrade-6.0-7.10/notification-subscriptions-migration.psql.sql   
+$ psql -U <nuxeo_user> <nuxeo_db> -f $NUXEO_HOME/bin/upgrade-6.0-7.10/notification-subscriptions-migration.psql.sql   
 ```
 
 See: [NXP-16704](https://jira.nuxeo.com/browse/NXP-16704).
@@ -421,7 +421,7 @@ See: [NXP-16704](https://jira.nuxeo.com/browse/NXP-16704).
 ###### Oracle
 
 ```
-$ sqlplus / @$NUXEO_HOME/bin/upgrade-6.0-7.10/notification-subscriptions-migration.oracle.sql
+$ sqlplus <nuxeo_user>/<nuxeo_password> @$NUXEO_HOME/bin/upgrade-6.0-7.10/notification-subscriptions-migration.oracle.sql
 ```
 
 ### Blob Management
@@ -431,13 +431,19 @@ $ sqlplus / @$NUXEO_HOME/bin/upgrade-6.0-7.10/notification-subscriptions-migrati
 Repository config must define a default blob provider. If you define your own **default-repository-config**, you must align it on [default-repository-config.xml.nxftl](https://github.com/nuxeo/nuxeo/blob/7.10/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/nxserver/config/default-repository-config.xml.nxftl)
 
 ```
+  <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
 
-      ${nuxeo.core.binarymanager}
+    <blobprovider name="default">
 
-      ${repository.binary.store}
+      <class>${nuxeo.core.binarymanager}</class>
 
-      ${nuxeo.core.binarymanager_key}
+      <property name="path">${repository.binary.store}</property>
 
+      <property name="key">${nuxeo.core.binarymanager_key}</property>
+
+    </blobprovider>
+
+  </extension>
 ```
 
 ### New Configuration Parameters
@@ -480,11 +486,14 @@ To fix this error:
 2.  Add an XML contribution to `org.nuxeo.runtime.ConfigurationService#configuration`.
 
     ```
-
-      org.nuxeo.ecm.platform.ui.web.configuration.default
-
-        true
-
+    <?xml version="1.0"?>
+    <component name="org.nuxeo.ecm.platform.ajaxified.tabs.config">
+      <!-- require the original component declaring the property -->
+      <require>org.nuxeo.ecm.platform.ui.web.configuration.default</require>
+      <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+        <property name="nuxeo.jsf.useAjaxTabs">true</property>
+      </extension>
+    </component>
     ```
 
 Example of properties which have been migrated to ConfigurationService:

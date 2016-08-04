@@ -249,7 +249,7 @@ Before starting this how-to you will need to create the following elements in St
 
     {{#> callout type='info' }}
 
-    For more details on vocabularies, see the&nbsp;[Directory and Vocabulary How-Tos]({{page page='directory-and-vocabulary-how-to-index'}}).
+    For more details on vocabularies, see the&nbsp;[Directory and Vocabulary How-tos]({{page page='directory-and-vocabulary-how-to-index'}}).
 
     {{/callout}}
 

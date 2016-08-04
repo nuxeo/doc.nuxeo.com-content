@@ -288,10 +288,9 @@ history:
 
 This page gives all the information necessary for implementing an operation and is a must read for getting a good comprehension of the framework. You should also have a look at [some of our tutorials]({{page page='getting-started-with-nuxeo-ide'}}) that show how to use [Nuxeo IDE]({{page space='idedoc' page='documentation-center-for-nuxeo-platform-ides'}}) <span style="line-height: 21.58px;">to create new operations easily and quickly, using the provided wizard.</span>
 
-<span>You can also use the Codenvy factory that we have setup and that offers you [a ready-to-build sample operation](https://codenvy.com/f?id=0djlg2kc332ipv5u), with its unitary test. Just click on **Project** > **Build & Publish** so as to get a JAR of your operation. You can deploy your first operation "SampleOperation" into Nuxeo server in Codenvy by clicking on the green arrow on panel left top.
-</span>
+You can also use the Codenvy factory that we have setup and that offers you [a ready-to-build sample operation](https://codenvy.com/f?id=0djlg2kc332ipv5u), with its unitary test. Just click on **Project** > **Build & Publish** so as to get a JAR of your operation. You can deploy your first operation "SampleOperation" into Nuxeo server in Codenvy by clicking on the green arrow on panel left top.
 
-{{/callout}}
+{{/callout}} <div style="float:right"><script type="text/javascript" style="Advanced" src="https://codenvy.com/f?id=0djlg2kc332ipv5u"></script></div>
 
 ## Implementing an Operation
 
@@ -316,6 +315,11 @@ When registering an automation chain, the chain will be checked to find a path f
 To register your operation you should create a Nuxeo XML extension to the [`operations` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--operations). Example:
 
 ```
+<extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
+    point="operations">
+    <operation
+      class="org.nuxeo.example.TestOperation" />
+  </extension>
 
 ```
 

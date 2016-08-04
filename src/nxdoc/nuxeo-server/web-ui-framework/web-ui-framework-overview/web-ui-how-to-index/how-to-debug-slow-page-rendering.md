@@ -55,7 +55,9 @@ This listener is not thread-safe: timing will be meaningful only in a controlled
 To activate it, add the following configuration to the `$SERVER/lib/log4j.xml` configuration:
 
 ```
-
+<category name="org.nuxeo.ecm.platform.ui.web.rest.JSFDebugPhaseListener">
+  <priority value="DEBUG" />
+</category>
 ```
 
 Sample output:
@@ -78,17 +80,25 @@ Tags are included inside each other: a given tag timing will show this tag proce
 To activate it, add the following configuration to the `$SERVER/lib/log4j.xml` configuration:
 
 ```
-
+<category name="org.nuxeo.ecm.platform.ui.web.util.FaceletDebugTracer">
+  <priority value="DEBUG" />
+</category>
 ```
 
 Also, you have to specify some minimal threshold for this timer to show a log on the server, so that it is easier to show debug logs for the slowest rendering. The following contribution, named `enable-debug-jsf-tags-config.xml`, can be placed inside the `$SERVER/nxserver/config` directory:
 
 ```
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.platform.enable.jsf.debug.tags.config">
 
-  org.nuxeo.ecm.platform.ui.web.configuration.default
+  <require>org.nuxeo.ecm.platform.ui.web.configuration.default</require>
 
-    20
+  <extension target="org.nuxeo.runtime.ConfigurationService"
+    point="configuration">
+    <property name="nuxeo.jsf.debug.log_min_duration_ms">20</property>
+  </extension>
 
+</component>
 ```
 
 This will log only rendering that take more than 20 milliseconds.
@@ -96,11 +106,11 @@ This will log only rendering that take more than 20 milliseconds.
 Sample output:
 
 ```
-8:16:23,490 DEBUG [FaceletDebugTracer] 'alias' at '/incl/action/generic_mode_action_template.xhtml @58,31 ' took: 53 ms.
-18:16:23,490 DEBUG [FaceletDebugTracer] 'defActionWidgetName' at '/incl/action/generic_mode_action_template.xhtml @22,116 ' took: 54 ms.
-18:16:23,492 DEBUG [FaceletDebugTracer] 'nxuRepeat_items' at '/widgets/actions/actions_widget_template.xhtml @150,66 ' took: 152 ms.
-18:16:23,492 DEBUG [FaceletDebugTracer] 'clickedActionId' at '/widgets/actions/actions_widget_template.xhtml @26,27 ' took: 170 ms.
-18:16:23,492 DEBUG [FaceletDebugTracer] 'actionStyleClass' at '/widgets/actions/actions_widget_template.xhtml @14,16 ' took: 170 ms.
+8:16:23,490 DEBUG [FaceletDebugTracer] 'alias' at '/incl/action/generic_mode_action_template.xhtml @58,31 <nxl:widgetType>' took: 53 ms.
+18:16:23,490 DEBUG [FaceletDebugTracer] 'defActionWidgetName' at '/incl/action/generic_mode_action_template.xhtml @22,116 <nxu:set>' took: 54 ms.
+18:16:23,492 DEBUG [FaceletDebugTracer] 'nxuRepeat_items' at '/widgets/actions/actions_widget_template.xhtml @150,66 <nxu:repeat>' took: 152 ms.
+18:16:23,492 DEBUG [FaceletDebugTracer] 'clickedActionId' at '/widgets/actions/actions_widget_template.xhtml @26,27 <nxu:valueHolder>' took: 170 ms.
+18:16:23,492 DEBUG [FaceletDebugTracer] 'actionStyleClass' at '/widgets/actions/actions_widget_template.xhtml @14,16 <nxu:set>' took: 170 ms.
 18:16:23,492 DEBUG [FaceletDebugTracer] 'actionContextDocument' at '/widgets/actions/document_actions_with_forms_widget_template.xhtml @11,16
 ```
 
@@ -113,17 +123,25 @@ Slow page rendering can be linked to heavy filtering processing on actions and/o
 To activate it, add the following configuration to the `$SERVER/lib/log4j.xml` configuration:
 
 ```
-
+<category name="org.nuxeo.ecm.platform.actions.ActionService">
+  <priority value="DEBUG" />
+</category>
 ```
 
 Also, you have to specify some minimal threshold for this timer to show a log on the server, so that it is easier to show debug logs for the slowest rendering. The following contribution, named `enable-debug-jsf-actions-config.xml`, can be placed inside the `$SERVER/nxserver/config` directory:
 
 ```
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.platform.enable.jsf.debug.actions.config">
 
-  org.nuxeo.ecm.platform.actions.ActionService.properties
+  <require>org.nuxeo.ecm.platform.actions.ActionService.properties</require>
 
-    5
+  <extension target="org.nuxeo.runtime.ConfigurationService"
+    point="configuration">
+    <property name="nuxeo.actions.debug.log_min_duration_ms">5</property>
+  </extension>
 
+</component>
 ```
 
 This will log only rendering that take more than 5 milliseconds.
@@ -132,7 +150,7 @@ Sample output:
 
 ```
 8:16:23,159 DEBUG [ActionService] Resolving actions for category 'LIVEEDIT_CREATE_ACTIONS' took: 6.30 ms
-18:16:23,222 DEBUG [FaceletDebugTracer] '[document_header]' at '/view_documents.xhtml @25,36 ' took: 26 ms.
+18:16:23,222 DEBUG [FaceletDebugTracer] '[document_header]' at '/view_documents.xhtml @25,36 <nxl:documentLayout>' took: 26 ms.
 18:16:23,243 DEBUG [ActionService] Resolving filters [canRemoveFromFavorites] took: 10.55 ms
 18:16:23,258 DEBUG [ActionService] Resolving filters [mutable_document, can_lock] took: 15.02 ms
 18:16:23,267 DEBUG [ActionService] Resolving filters [hasNoSubscriptions, canSubscribe, isNotVersion] took: 7.80 ms

@@ -306,14 +306,18 @@ Though it could work for small-scale deployments, this approach is not recommend
 1.  Create a `***-config.xml` (e.g.`rootcert-digitalsignature-config.xml`) file with the content below:
 
     ```
-
-      org.nuxeo.signature.config.default
-
-          test-config/keystore.jks
-          abc
-          pdfcacert
-          pdfcakey
-          abc
+    <component name="my.signature.rootservice.config">
+      <require>org.nuxeo.signature.config.default</require>
+      <extension target="org.nuxeo.ecm.platform.signature.api.pki.RootService" point="rootconfig">
+        <configuration>
+          <rootKeystoreFilePath>test-config/keystore.jks</rootKeystoreFilePath>
+          <rootKeystorePassword>abc</rootKeystorePassword>
+          <rootCertificateAlias>pdfcacert</rootCertificateAlias>
+          <rootKeyAlias>pdfcakey</rootKeyAlias>
+          <rootKeyPassword>abc</rootKeyPassword>
+        </configuration>
+      </extension>
+    </component>
 
     ```
 
@@ -330,12 +334,17 @@ Another extension provides general company information used in all certificates,
 1.  Create another XML file called `***-config.xml` (e.g.`companyinfo-digitalsignature-config.xml`) with the content below:
 
     ```
-
-      org.nuxeo.signature.config.default
-
-          MX
-          Sigma Alimentos
-          Marketing
+    <?xml version="1.0"?>
+    <component name="my.signature.userservice.config">
+      <require>org.nuxeo.signature.config.default</require>
+      <extension target="org.nuxeo.ecm.platform.signature.api.user.CUserService" point="cuserdescriptor">
+        <userDescriptor>
+          <countryCode>MX</countryCode>
+          <organization>Sigma Alimentos</organization>
+          <organizationalUnit>Marketing</organizationalUnit>
+        </userDescriptor>
+      </extension>
+    </component>
 
     ```
 
@@ -440,9 +449,15 @@ The layout is defined by:
 By default the configuration sets lines number to 5, columns number to 3, starting cell to 1 and text size to 10px.
 
 ```
-
-      This document signed as an example.
-
+<extension
+          target="org.nuxeo.ecm.platform.signature.api.sign.SignatureService"
+          point="signature">
+    <configuration>
+      <reason>This document signed as an example.
+      </reason>
+      <layout id="defaultConfig" lines="5" columns="3" startLine="1" startColumn="1" textSize="10"/>
+    </configuration>
+  </extension>
 ```
 
 It means signatures display begins in the first cell, at the top left of the PDF document and so on, on 5 lines and 3 columns maximum.
@@ -450,10 +465,16 @@ It means signatures display begins in the first cell, at the top left of the PDF
 Here is an example of how to override this default configuration:
 
 ```
-org.nuxeo.signature.config.default
-
-      This document signed as an example.
-
+<require>org.nuxeo.signature.config.default</require>
+<extension
+          target="org.nuxeo.ecm.platform.signature.api.sign.SignatureService"
+          point="signature">
+    <configuration>
+      <reason>This document signed as an example.
+      </reason>
+      <layout id="customConfig" lines="5" columns="3" startLine="3" startColumn="3" textSize="10"/>
+    </configuration>
+  </extension>
 ```
 
 Signatures display will begin in the third cell (top right) and so on, on 5 lines and 3 columns maximum.

@@ -262,7 +262,7 @@ The `nuxeoctl` script is located in the `bin` folder of your Nuxeo installation.
 Here is the Shell/Batch script usage:
 
 ```
-nuxeoctl  [options] [--] [command parameters]
+nuxeoctl <command> [options] [--] [command parameters]
 
 ```
 
@@ -285,14 +285,46 @@ See [the Environment variables page]({{page page='setup-best-practices'}}) for s
 ### Per-command Usage
 
 ```
-nuxeoctl encrypt [--encrypt ] [..] [-d []|-q]
-        Output encrypted value for .
-        If  is not provided, it is read from stdin.
+nuxeoctl encrypt [--encrypt <algorithm>] [<clearValue>..] [-d [<categories>]|-q]
+        Output encrypted value for <clearValue>.
+        If <clearValue> is not provided, it is read from stdin.
 
-nuxeoctl decrypt ''.. [-d []|-q]
-        Output decrypted value for . The secret key is read from stdin.
+nuxeoctl decrypt '<cryptedValue>'.. [-d [<categories>]|-q]
+        Output decrypted value for <cryptedValue>. The secret key is read from stdin.
 
-nuxeoctl config [ ]..  [] [--encrypt []] [--set [
+nuxeoctl config [<key> <value>].. <key> [<value>] [--encrypt [<algorithm>]] [--set [<template>]] [-d [<categories>]|-q]
+        Set template or global parameters.
+        If <value> is not provided and the --set 'option' is used, then the value is read from stdin.
+
+nuxeoctl config [--get] <key>.. [-d [<categories>]|-q]
+        Get value for the given key(s).
+
+nuxeoctl config [--get-regexp] <regexp>.. [-d [<categories>]|-q]
+        Get value for the keys matching the given regular expression(s).
+
+nuxeoctl help|status|showconf [-d [<categories>]|-q]
+
+nuxeoctl configure [-d [<categories>]|-q|-hdw]
+
+nuxeoctl wizard [-d [<categories>]|-q|--clid <arg>|--gui <true|false|yes|no>]
+
+nuxeoctl stop [-d [<categories>]|-q|--gui <true|false|yes|no>]
+
+nuxeoctl start|restart|console|startbg|restartbg [-d [<categories>]|-q|--clid <arg>|--gui <true|false|yes|no>|--strict|-hdw]
+
+nuxeoctl mp-show [command parameters] [-d [<categories>]|-q|--clid <arg>|--xml|--json]
+
+nuxeoctl mp-list|mp-listall|mp-init|mp-update [command parameters] [-d [<categories>]|-q|--clid <arg>|--xml|--json]
+
+nuxeoctl mp-reset|mp-purge|mp-hotfix|mp-upgrade [command parameters] [-d [<categories>]|-q|--clid <arg>|--xml|--json|--accept <true|false|yes|no|ask>]
+
+nuxeoctl mp-add|mp-install|mp-uninstall|mp-remove|mp-set|mp-request [command parameters] [-d [<categories>]|-q|--clid <arg>|--xml|--json|--nodeps|--relax <true|false|yes|no|ask>|--accept <true|false|yes|no|ask>|-s|-im]
+
+nuxeoctl register [<username> [<project> [<type> <description>] [<pwd>]]]
+
+nuxeoctl register-trial [<email> <company> <project> <description> [<pwd>]]
+
+nuxeoctl pack <target> [-d [<categories>]|-q]
 ```
 
 ### Options
@@ -743,7 +775,7 @@ Here is the Java usage:
 ```
 java [-Dlauncher.java.opts="JVM options"] [-Dnuxeo.home="/path/to/nuxeo"] [-Dnuxeo.conf="/path/to/nuxeo.conf"] \
      [-Djvmcheck=nofail] -jar "path/to/nuxeo-launcher.jar" \
-     [options]  [command parameters]
+     [options] <command> [command parameters]
 
 ```
 

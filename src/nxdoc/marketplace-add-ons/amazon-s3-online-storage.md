@@ -190,7 +190,7 @@ The S3 Binary Manager can use a keystore containing a keypair, but there are a f
 *   Don't forget to specify the key algorithm if you create your keypair with the `keytool` command, as this won't work with the default (DSA). The S3 Binary Manager has been tested with a keystore generated with this command:
 
     ```
-    keytool -genkeypair -keystore  -alias  -storepass  -keypass  -dname  -keyalg RSA
+    keytool -genkeypair -keystore </path/to/keystore/file> -alias <key alias> -storepass <keystore password> -keypass <key password> -dname <key distinguished name> -keyalg RSA
     ```
 
     If you get&nbsp;`keytool error: java.io.IOException: Incorrect AVA format`, then ensure that the distinguished name parameter has a form such as:&nbsp;`-dname "CN=AWS S3 Key, O=example, DC=com".`

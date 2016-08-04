@@ -177,7 +177,7 @@ If you're using Nuxeo Cloud, your Nuxeo Platform instance is already registered.
 
 {{/callout}}
 
-Registration can be done during the installation steps using the <span class="confluence-link">configuration wizard</span> or at anytime later, through the **Admin** tab or using the&nbsp;[`nuxeoctl` script]({{page page='nuxeoctl-and-control-panel-usage'}}).
+Registration can be done during the installation steps using the configuration wizard or at anytime later, through the **Admin** tab or using the&nbsp;[`nuxeoctl` script]({{page page='nuxeoctl-and-control-panel-usage'}}).
 
 Registration does not require an Internet access. If your server cannot connect to the Internet, follow the [offline registration steps]({{page}}). Otherwise, follow the [online registration steps]({{page}}).
 

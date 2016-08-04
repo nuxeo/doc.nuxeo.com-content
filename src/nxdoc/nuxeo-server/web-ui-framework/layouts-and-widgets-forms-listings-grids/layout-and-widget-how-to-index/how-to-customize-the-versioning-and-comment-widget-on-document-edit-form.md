@@ -158,100 +158,168 @@ This layout holds [three widgets](http://explorer.nuxeo.org/nuxeo/site/distribut
 Here is the original definition of this layout:
 
 ```
-
-        document_edit_comment
-
-        document_edit_current_version
-
-        document_edit_versioning_options
-
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+  point="layouts">
+  <layout name="document_edit_form_options">
+    <templates>
+      <template mode="any">/layouts/layout_default_template.xhtml
+      </template>
+    </templates>
+    <rows>
+      <row>
+        <widget>document_edit_comment</widget>
+      </row>
+      <row>
+        <widget>document_edit_current_version</widget>
+      </row>
+      <row>
+        <widget>document_edit_versioning_options</widget>
+      </row>
+    </rows>
+  </layout>
+</extension>
 ```
 
 ## Emptying This Layout for All Documents
 
 ```
-org.nuxeo.ecm.platform.forms.layouts.webapp.base
+<require>org.nuxeo.ecm.platform.forms.layouts.webapp.base</require>
 
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+  point="layouts">
+  <layout name="document_edit_form_options">
+    <templates>
+      <template mode="any">/layouts/layout_default_template.xhtml</template>
+    </templates>
+    <rows />
+  </layout>
+</extension>
 ```
 
 ## Removing the Comment but Keeping Versioning Options
 
 ```
-org.nuxeo.ecm.platform.forms.layouts.webapp.base
+<require>org.nuxeo.ecm.platform.forms.layouts.webapp.base</require>
 
-        document_edit_current_version
-
-        document_edit_versioning_options
-
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+  point="layouts">
+  <layout name="document_edit_form_options">
+    <templates>
+      <template mode="any">/layouts/layout_default_template.xhtml</template>
+    </templates>
+    <rows>
+      <row>
+        <widget>document_edit_current_version</widget>
+      </row>
+      <row>
+        <widget>document_edit_versioning_options</widget>
+      </row>
+    </rows>
+  </layout>
+</extension>
 ```
 
 Or you can play with the&nbsp;`hidden` widget mode:
 
 ```
-org.nuxeo.ecm.platform.forms.layouts.webapp.base
+<require>org.nuxeo.ecm.platform.forms.layouts.webapp.base</require>
 
-      hidden
-
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+  point="widgets">
+  <widget name="document_edit_comment" type="textarea">
+    <widgetModes>
+      <mode value="any">hidden</mode>
+    </widgetModes>
+  </widget>
+</extension>
 ```
 
 ## Hiding the Comment Only on Some Document Types
 
 ```
-org.nuxeo.ecm.platform.forms.layouts.webapp.base
+<require>org.nuxeo.ecm.platform.forms.layouts.webapp.base</require>
 
-      label.editComment
-
-      label.editComment.tooltip
-
-    true
-
-      contextData['request/comment']
-
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+  point="widgets">
+  <widget name="document_edit_comment" type="textarea">
+    <labels>
+      <label mode="any">label.editComment</label>
+    </labels>
+    <helpLabels>
+      <label mode="any">label.editComment.tooltip</label>
+    </helpLabels>
+    <translated>true</translated>
+    <fields>
+      <field>contextData['request/comment']</field>
+    </fields>
+    <widgetModes>
+      <mode value="any">
         #{layoutMode == 'create' or layoutValue.type == 'myType'?'hidden':'edit'}
-
+      </mode>
+    </widgetModes>
+  </widget>
+</extension>
 ```
 
 ## Making the Comment Mandatory
 
 ```
-org.nuxeo.ecm.platform.forms.layouts.webapp.base
+<require>org.nuxeo.ecm.platform.forms.layouts.webapp.base</require>
 
-      label.editComment
-
-      label.editComment.tooltip
-
-    true
-
-      contextData['request/comment']
-
-      hidden
-
-      true
-
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+  point="widgets">
+  <widget name="document_edit_comment" type="textarea">
+    <labels>
+      <label mode="any">label.editComment</label>
+    </labels>
+    <helpLabels>
+      <label mode="any">label.editComment.tooltip</label>
+    </helpLabels>
+    <translated>true</translated>
+    <fields>
+      <field>contextData['request/comment']</field>
+    </fields>
+    <widgetModes>
+      <mode value="create">hidden</mode>
+    </widgetModes>
+    <properties widgetMode="edit">
+      <property name="required">true</property>
+    </properties>
+  </widget>
+</extension>
 ```
 
 ## Making the Comment Mandatory on a given Document Type
 
 ```
-org.nuxeo.ecm.platform.forms.layouts.webapp.base
+<require>org.nuxeo.ecm.platform.forms.layouts.webapp.base</require>
 
-      label.editComment
-
-      label.editComment.tooltip
-
-    true
-
-      contextData['request/comment']
-
-      hidden
-
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+  point="widgets">
+  <widget name="document_edit_comment" type="textarea">
+    <labels>
+      <label mode="any">label.editComment</label>
+    </labels>
+    <helpLabels>
+      <label mode="any">label.editComment.tooltip</label>
+    </helpLabels>
+    <translated>true</translated>
+    <fields>
+      <field>contextData['request/comment']</field>
+    </fields>
+    <widgetModes>
+      <mode value="create">hidden</mode>
+    </widgetModes>
+    <properties widgetMode="edit">
+      <property name="required">
         #{layoutValue.type == 'myType'?true:false}
-
+      </property>
+    </properties>
+  </widget>
+</extension>
 ```
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Add a New Widget to the Default Summary Layout]({{page page='how-to-add-a-new-widget-to-the-default-summary-layout'}})
 *   [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
@@ -259,9 +327,7 @@ org.nuxeo.ecm.platform.forms.layouts.webapp.base
 *   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
@@ -269,6 +335,4 @@ org.nuxeo.ecm.platform.forms.layouts.webapp.base
 *   [Web UI Limitations]({{page page='web-ui-limitations'}})
 *   [Widget Definitions]({{page page='widget-definitions'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

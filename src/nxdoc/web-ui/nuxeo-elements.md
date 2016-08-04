@@ -31,7 +31,7 @@ The Nuxeo Web UI Framework allows users to build&nbsp;business applications whil
 
 ## Technology
 
-As a platform provider, we strive to build&nbsp;<span>isolated and</span>&nbsp;reusable components&nbsp;that are&nbsp;simple to use and can serve as building blocks for custom business application. Thankfully we are not alone and this need has driven the W3C Web Applications Working Group to work on a specification for a component model for the Web: **Web Components**.
+As a platform provider, we strive to build&nbsp;isolated and&nbsp;reusable components&nbsp;that are&nbsp;simple to use and can serve as building blocks for custom business application. Thankfully we are not alone and this need has driven the W3C Web Applications Working Group to work on a specification for a component model for the Web: **Web Components**.
 
 ### Web Components
 
@@ -77,6 +77,10 @@ Our set of Nuxeo elements was built with this same philosophy in mind and promot
 
 In order to connect these elements to data in a Nuxeo instance we need to setup a connection, which, like everything else in Polymer, is an element called **nuxeo-connection**. Usage is as simple as:
 
+```
+<nuxeo-connection url=”http://demo.nuxeo.com/nuxeo” username=”Administrator” password=”Administrator”>
+```
+
 This elements uses a &ldquo;conceptual singleton&rdquo; (MonoState Pattern) so&nbsp;once it's configured on our application with the proper attributes all the other elements just need to use `<nuxeo-connection/>` to retrieve this "shared" instance. Since this is a singleton we ensure there&rsquo;s only one Nuxeo client shared by all the instances of our element.
 
 As mentioned before, in Polymer, non visual elements are the standard way to expose remote services. So we built a set of custom Nuxeo data elements to interact with Nuxeo&rsquo;s APIs:
@@ -89,25 +93,51 @@ nuxeo-connection
 
 Allows configuring the connection to a Nuxeo server.
 
-</td><td colspan="1"></td></tr><tr><td colspan="1">
+</td><td colspan="1">
 
-<span>nuxeo</span>-resource
+```
+<nuxeo-connection
+  url=”http://demo.nuxeo.com/nuxeo”
+  username=”Administrator”
+  password=”Administrator”>
+</nuxeo-connection>
+```
+
+</td></tr><tr><td colspan="1">
+
+nuxeo-resource
 
 </td><td colspan="1">
 
 Exposes methods (get, post, put, delete) of a Nuxeo REST API resource at a given path.
 
-</td><td colspan="1"></td></tr><tr><td colspan="1">
+</td><td colspan="1">
 
-<span>nuxeo</span>-document
+```
+<nuxeo-resource
+  path=”/path/default-domain”>
+</nuxeo-resource>
+```
+
+</td></tr><tr><td colspan="1">
+
+nuxeo-document
 
 </td><td colspan="1">
 
 Extends `nuxeo-resource` to target Document resources by path or by uid.
 
-</td><td colspan="1"></td></tr><tr><td colspan="1">
+</td><td colspan="1">
 
-<span>nuxeo</span>-operation
+```
+<nuxeo-document
+  doc-path="/default-domain">
+</nuxeo-document>
+```
+
+</td></tr><tr><td colspan="1">
+
+nuxeo-operation
 
 </td><td colspan="1">
 
@@ -116,12 +146,15 @@ Allows calling an operation on a Nuxeo server.
 </td><td colspan="1">
 
 ```
-
+<nuxeo-operation
+  op="Document.Query"
+  params="{'query': 'select from Document'}">
+</nuxeo-operation>
 ```
 
 </td></tr><tr><td colspan="1">
 
-<span>nuxeo</span>-page-provider
+nuxeo-page-provider
 
 </td><td colspan="1">
 
@@ -130,7 +163,11 @@ Wraps a `Repository.PageProvider` operation to provide paginated results for a g
 </td><td colspan="1">
 
 ```
-
+<nuxeo-page-provider
+  query="select from Document" 
+  page-size="5"
+  sort="dc:modified">
+</nuxeo-page-provider>
 ```
 
 </td></tr></tbody></table>

@@ -192,7 +192,7 @@ Note that since Nuxeo 7.3, the audit is stored by default as an Elasticsearch in
 
 {{/callout}}
 
-## <span>The Travel Expenses Example</span>
+## The Travel Expenses Example
 
 Let's consider the [travel expenses addon's workflow](https://github.com/nuxeo/marketplace-travel-expenses) which allows a user to submit a travel expense to be validated by a manager or a supervisor.
 
@@ -206,7 +206,7 @@ In order to have an overview of what is logged in the audit, we can use the [Ela
 curl -XGET -u jdoe:jdoe  'http://localhost:8080/nuxeo/site/es/audit_wf/_search' -d '{ "query": { "match_all":{}}}'
 ```
 
-will return all Routing audit entries associated to the workflow models on which the current user has the Data Visualization permission. This Data Visualization <span>permission can be added from the **Admin** > **Workflow** menu.</span>
+will return all Routing audit entries associated to the workflow models on which the current user has the Data Visualization permission. This Data Visualization permission can be added from the **Admin** > **Workflow** menu.
 
 Let's have a look to returned entries. First the workflow is started by a user, there are two new entries in the audit:
 

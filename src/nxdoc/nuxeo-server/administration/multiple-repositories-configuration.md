@@ -99,17 +99,23 @@ In addition, when more than one repository is configured, certain optimizations 
 3.  For each additional repository, add a new file, either through custom templates, or directly in `$NUXEO/nxserver/config`, that defines your new datasource, like the example below.
 
     ```
-
-            localhost
-            5432
-            secondrepo
-            nuxeo
-            password
-
+    <?xml version="1.0"?>
+    <component name="datasources-secondrepo-config">
+      <extension target="org.nuxeo.runtime.datasource" point="datasources">
+        <datasource name="jdbc/repository_secondrepo" xaDataSource="org.postgresql.xa.PGXADataSource"
+          maxPoolSize="100" minPoolSize="5" blockTimeoutMillis="10000">
+            <property name="ServerName">localhost</property>
+            <property name="PortNumber">5432</property>
+            <property name="DatabaseName">secondrepo</property>
+            <property name="User">nuxeo</property>
+            <property name="Password">password</property>
+        </datasource>
+      </extension>
+    </component>
     ```
 
     *   The name&nbsp;`jdbc/repository_secondrepo` is important, as this name is actually &nbsp;`jdbc/repository_` followed by the name of the repository (`secondrepo`) that we will define below.
-    *   Of course the `xaDataSource`&nbsp;and the various `property` values should be filled in according to your database parameters.{{#> callout type='note' heading="JAR Dependencies"}}
+    *   Of course the `xaDataSource`&nbsp;and the various `property` values should be filled in according to your database parameters.{{#> callout type='note' heading='JAR Dependencies'}}
 
     If you want to connect to a database that's not already in a template configured in `nuxeo.conf`, don't forget to put the necessary JDBC JARs in the `lib/` directory of Nuxeo.
 
@@ -118,7 +124,7 @@ In addition, when more than one repository is configured, certain optimizations 
 ## <span style="color: rgb(0,0,0);">Repository Configuration
 </span>
 
-<span style="color: rgb(0,0,0);">&nbsp;</span>The standard repository definition in Nuxeo Platform is done through a template in `$NUXEO/templates/common-base/nxserver/config/default-repository-config.xml.nxftl`&nbsp;which generates `$NUXEO/nxserver/config/default-repository-config.xml`.
+The standard repository definition in Nuxeo Platform is done through a template in `$NUXEO/templates/common-base/nxserver/config/default-repository-config.xml.nxftl`&nbsp;which generates `$NUXEO/nxserver/config/default-repository-config.xml`.
 
 Add a new file, either through custom templates, or directly in `$NUXEO/nxserver/config`, that defines your new repository.
 
@@ -131,10 +137,25 @@ It's probably easier to do this by copying an existing working version of a&nbsp
 For instance you will get something like:
 
 ```
+<?xml version="1.0"?>
+<component name="repository-secondrepo-config">
+  <extension target="org.nuxeo.ecm.core.storage.sql.RepositoryService" point="repository">
+    <repository name="secondrepo" label="My Second Repository"
+      factory="org.nuxeo.ecm.core.storage.sql.ra.PoolingRepositoryFactory">
+      <pool minPoolSize="0" maxPoolSize="20" blockingTimeoutMillis="100" idleTimeoutMinutes="10" />
+      <clustering enabled="false" delay="1000" />
+      <!-- ... other options for your repository ... -->
+    </repository>
+  </extension>
 
-        org.nuxeo.ecm.core.blob.binary.DefaultBinaryManager
-        binaries2
+  <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
+      <blobprovider name="secondrepo">
+        <class>org.nuxeo.ecm.core.blob.binary.DefaultBinaryManager</class>
+        <property name="path">binaries2</property>
+      </blobprovider>
+  </extension>
 
+ </component>
 ```
 
 The part about&nbsp;`<repository name="secondrepo"`&nbsp;is important as it's where you define the name of your repository, which needs to be in sync with what you defined for the datasource.&nbsp;
@@ -143,7 +164,7 @@ The part about&nbsp;`<repository name="secondrepo"`&nbsp;is important as it's wh
 
 Each repository must have its own different binary store path.
 
-{{#> callout type='warning' heading="Separating Binaries"}}
+{{#> callout type='warning' heading='Separating Binaries'}}
 
 It is CRITICAL to keep the binaries separated between each repository if you want to properly delete orphaned binaries from the Admin tab. If you don't do this, things will seem to work correctly but you will lose data the next time you delete orphaned binaries.
 

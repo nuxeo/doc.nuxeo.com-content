@@ -104,6 +104,20 @@ The service handling document views allows registration of codecs. Codecs manage
 
 Examples of a document view codecs registration:
 
+```
+<extension
+  target="org.nuxeo.ecm.platform.url.service.DocumentViewCodecService"
+  point="codecs">
+
+  <documentViewCodec name="docid" enabled="true" default="true" prefix="nxdoc"
+    class="org.nuxeo.ecm.platform.url.codec.DocumentIdCodec" />
+  <documentViewCodec name="docpath" enabled="true" default="false" prefix="nxpath"
+    class="org.nuxeo.ecm.platform.url.codec.DocumentPathCodec" />
+
+</extension>
+
+```
+
 In this example, the `docid` codec uses the document uid to resolve the context. URLs are of the form `<span class="nolink">http://site/nuxeo/nxdoc/demo/docuid/view</span>` . The `docpath` codec uses the document path to resolve the context. URLs are of the form `<span class="nolink">http://site/nuxeo/nxpath/demo/path/to/my/doc@view</span>` .
 
 Additional parameters are coded/decoded as usual request parameters.
@@ -117,18 +131,25 @@ The service handling URLs allows registration of patterns. These patterns help s
 Example of a URL pattern registration:
 
 ```
+<extension target="org.nuxeo.ecm.platform.ui.web.rest.URLService"
+  point="urlpatterns">
 
-    true
-    true
-    true
-    true
-    docid
-    #{restHelper.initContextFromRestRequest}
-    #{restHelper.documentView}
-    #{restHelper.newDocumentView}
+  <urlPattern name="default" enabled="true">
+    <defaultURLPolicy>true</defaultURLPolicy>
+    <needBaseURL>true</needBaseURL>
+    <needRedirectFilter>true</needRedirectFilter>
+    <needFilterPreprocessing>true</needFilterPreprocessing>
+    <codecName>docid</codecName>
+    <actionBinding>#{restHelper.initContextFromRestRequest}</actionBinding>
+    <documentViewBinding>#{restHelper.documentView}</documentViewBinding>
+    <newDocumentViewBinding>#{restHelper.newDocumentView}</newDocumentViewBinding>
+    <bindings>
+      <binding name="tabId">#{webActions.currentTabId}</binding>
+      <binding name="subTabId">#{webActions.currentSubTabId}</binding>
+    </bindings>
+  </urlPattern>
 
-      #{webActions.currentTabId}
-      #{webActions.currentSubTabId}
+</extension>
 
 ```
 
@@ -149,8 +170,17 @@ The URL patterns need to be registered on the authentication service so that the
 Example of a start URL pattern registration:
 
 ```
+<extension
+  target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
+  point="startURL">
 
-      nxdoc/
+  <startURLPattern>
+    <patterns>
+      <pattern>nxdoc/</pattern>
+    </patterns>
+  </startURLPattern>
+
+</extension>
 
 ```
 
@@ -161,11 +191,14 @@ The URL patterns used also need to be handled by the default Nuxeo authenticatio
 Example authentication filter configuration:
 
 ```
-
-    NuxeoAuthenticationFilter
-    /nxdoc/*
-    REQUEST
-    FORWARD
+<extension target="web#STD-AUTH-FILTER">
+  <filter-mapping>
+    <filter-name>NuxeoAuthenticationFilter</filter-name>
+    <url-pattern>/nxdoc/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+  </filter-mapping>
+</extension>
 
 ```
 
@@ -178,6 +211,9 @@ There are some JSF tags and functions helping you to define what kind of GET URL
 Example of `nxd:restDocumentLink` use:
 
 ```
+<nxd:restDocumentLink document="#{doc}">
+  <nxh:outputText value="#{nxd:titleOrId(doc)}" />
+</nxd:restDocumentLink>
 
 ```
 
@@ -190,6 +226,11 @@ Note that you can also use JSF functions to build the GET URL. This is what's do
 Example of a JSF function use:
 
 ```
+<nxh:outputLink rendered="#{doc.hasSchema('file') and !empty doc.file.content}"
+  value="#{nxd:fileUrl('downloadFile', doc, 'file:content', doc.file.filename)}">
+  <nxh:graphicImage value="/icons/download.png" style="vertical-align:middle"
+    title="#{doc.file.filename}" />
+</nxh:outputLink>
 
 ```
 
@@ -200,7 +241,7 @@ public static String fileUrl(String patternName, DocumentModel doc,
         String blobPropertyName, String filename) {
     try {
         DocumentLocation docLoc = new DocumentLocationImpl(doc);
-        Map params = new HashMap();
+        Map<String, String> params = new HashMap<String, String>();
         params.put(DocumentFileCodec.FILE_PROPERTY_PATH_KEY,
                 blobPropertyName);
         params.put(DocumentFileCodec.FILENAME_KEY, filename);

@@ -263,7 +263,7 @@ To import documents using Nuxeo CSV:
     The import starts. You can either:
 
     *   wait for the import to be completed.
-        <span>When it is completed, <span>a report of the import is displayed</span></span> ;
+        When it is completed, a report of the import is displayed ;
         ![]({{file name='CSV Importer Imported.png'}} ?w=550,border=true)
     *   start a new import;
     *   browse the application.If you checked the box **<span style="color: rgb(68,68,68);">Send me the import report by email</span>** , you receive an email once the import is completed.
@@ -319,21 +319,15 @@ Note that the event raised by this CSV import is a **creation event**, not an im
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Other Import Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Import Documentation'}}
 
 *   [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
 *   [Nuxeo Bulk Document Importer]({{page page='nuxeo-bulk-document-importer'}})
 *   [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
 *   [How to Upload a File in Nuxeo Platform Using REST API Batch Processing Endpoint]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

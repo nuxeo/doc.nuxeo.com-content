@@ -86,18 +86,18 @@ Target: `org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry`
 Extension Point:&nbsp;`providers`
 
 ```
-
-        GoogleOpenIDConnect
-        Google
-        Login using your Google account
-        https://accounts.google.com/o/oauth2/auth
-        https://accounts.google.com/o/oauth2/token
-        https://www.googleapis.com/oauth2/v1/userinfo
-        org.nuxeo.ecm.platform.oauth2.openid.auth.google.GoogleUserInfo
-        org.nuxeo.ecm.platform.oauth2.openid.auth.EmailBasedUserResolver
-        https://www.googleapis.com/auth/userinfo.email
-        /icons/google.png
-
+      <provider>
+        <name>GoogleOpenIDConnect</name>
+        <label>Google</label>
+        <description>Login using your Google account</description>
+        <authorizationServerURL>https://accounts.google.com/o/oauth2/auth</authorizationServerURL>
+        <tokenServerURL>https://accounts.google.com/o/oauth2/token</tokenServerURL>
+        <userInfoURL>https://www.googleapis.com/oauth2/v1/userinfo</userInfoURL>
+        <userInfoClass>org.nuxeo.ecm.platform.oauth2.openid.auth.google.GoogleUserInfo</userInfoClass>
+        <userResolverClass>org.nuxeo.ecm.platform.oauth2.openid.auth.EmailBasedUserResolver</userResolverClass>
+        <scope>https://www.googleapis.com/auth/userinfo.email</scope>
+        <icon>/icons/google.png</icon>
+      </provider>
 ```
 
 This first contribution only defines the provider, but not the _client name_&nbsp;or _client secret_&nbsp;to prevent them to be in the base contribution file.
@@ -119,9 +119,11 @@ Target: `org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry`
 Extension Point:&nbsp;`providers`
 
 ```
-
-        GoogleOpenIDConnect
-
+      <provider>
+        <name>GoogleOpenIDConnect</name>
+        <clientId><!--enter your clientId here --></clientId>
+        <clientSecret><!--enter your clientSecret key here --></clientSecret>
+      </provider>
 ```
 
 #### Using the Admin Tab

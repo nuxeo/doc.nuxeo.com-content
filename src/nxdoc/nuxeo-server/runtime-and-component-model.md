@@ -452,7 +452,7 @@ Framework.getService(ServiceInterface.class)
 
 ```
 
-{{#> callout type='info' heading="List of services"}}
+{{#> callout type='info' heading='List of services'}}
 
 The list of existing services can be found on the [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listServices).
 

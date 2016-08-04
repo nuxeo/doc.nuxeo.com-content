@@ -136,6 +136,13 @@ If you have a customized file comming from an earlier version of Nuxeo, the firs
 
 So you will need to add the repository declaration : either in a separated file or directly inside the `default-repository-config.xml`
 
+```
+<extension target="org.nuxeo.ecm.core.api.repository.RepositoryManager" point="repositories">
+  <repository name="default" label="Default Repository" />
+</extension>
+
+```
+
 NB : If this contribution is missing, the Repository initialization will fail with
 
 ```
@@ -149,14 +156,18 @@ Caused by: org.nuxeo.ecm.core.api.ClientException: Cannot get repository: defaul
 
 ### Scheduler service
 
-The name of the Scheduler service component has changed <span>from</span> `org.nuxeo.ecm.platform.scheduler.core.service.SchedulerRegistryService` <span>to</span> `org.nuxeo.ecm.core.scheduler.SchedulerService.`
+The name of the Scheduler service component has changed from `org.nuxeo.ecm.platform.scheduler.core.service.SchedulerRegistryService` to `org.nuxeo.ecm.core.scheduler.SchedulerService.`
 
 The descriptor format has not changed so migrating should be as easy as changing extension point usages :
 
 ```
-
+<?xml version="1.0"?>
+<component name="com.example.nuxeo.schedule.monthly_stuff">
+  <extension target="org.nuxeo.ecm.core.scheduler.SchedulerService"
+      point="schedule">
     ...
-
+  </extension>
+</component>
 ```
 
 {{! /multiexcerpt}}

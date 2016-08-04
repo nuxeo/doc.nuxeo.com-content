@@ -174,18 +174,24 @@ The following are used only if the directory is used for authentication:
     Example:
 
     ```
+    <?xml version="1.0"?>
+    <component name="com.example.project.directories.sql">
+      <extension target="org.nuxeo.ecm.directory.sql.SQLDirectoryFactory"
+          point="directories">
+        <directory name="continent">
+          <schema>vocabulary</schema>
+          <dataSource>java:/nxsqldirectory</dataSource>
+          <cacheTimeout>3600</cacheTimeout>
+          <cacheMaxSize>1000</cacheMaxSize>
 
-          vocabulary
-          java:/nxsqldirectory
-          3600
-          1000
-
-    continent
-          id
-          false
-          directories/continent.csv
-          on_missing_columns
-
+    <table>continent</table>
+          <idField>id</idField>
+          <autoincrementIdField>false</autoincrementIdField>
+          <dataFile>directories/continent.csv</dataFile>
+          <createTablePolicy>on_missing_columns</createTablePolicy>
+        </directory>
+      </extension>
+    </component>
     ```
 
 ## LDAP Directories
@@ -208,10 +214,17 @@ Optional parameters are:
     Example:
 
     ```
-
-          ldap://localhost:389
-          cn=nuxeo,ou=applications,dc=example,dc=com
-          secret
+    <?xml version="1.0"?>
+    <component name="com.example.project.directories.ldap.srv">
+      <extension target="org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory"
+          point="servers">
+        <server name="default">
+          <ldapUrl>ldap://localhost:389</ldapUrl>
+          <bindDn>cn=nuxeo,ou=applications,dc=example,dc=com</bindDn>
+          <bindPassword>secret</bindPassword>
+        </server>
+      </extension>
+    </component>
 
     ```
 
@@ -235,28 +248,35 @@ Once you have declared the server, you can define new LDAP **directories**. The 
     Example:
 
     ```
+    <?xml version="1.0"?>
+    <component name="com.example.project.directories.ldap.dir">
+      <extension target="org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory"
+          point="directories">
+        <directory name="userDirectory">
+          <server>default</server>
+          <schema>user</schema>
+          <idField>username</idField>
+          <passwordField>password</passwordField>
 
-          default
-          user
-          username
-          password
+          <searchBaseDn>ou=people,dc=example,dc=com</searchBaseDn>
+          <searchClass>person</searchClass>
+          <searchFilter>(&amp;(sn=foo*)(myCustomAttribute=somevalue))</searchFilter>
+          <searchScope>onelevel</searchScope>
+          <substringMatchType>subany</substringMatchType>
 
-          ou=people,dc=example,dc=com
-          person
-          (&(sn=foo*)(myCustomAttribute=somevalue))
-          onelevel
-          subany
+          <readOnly>false</readOnly>
 
-          false
+          <cacheTimeout>3600</cacheTimeout>
+          <cacheMaxSize>1000</cacheMaxSize>
 
-          3600
-          1000
-
-          ou=people,dc=example,dc=com
-          top
-          person
-          organizationalPerson
-          inetOrgPerson
+          <creationBaseDn>ou=people,dc=example,dc=com</creationBaseDn>
+          <creationClass>top</creationClass>
+          <creationClass>person</creationClass>
+          <creationClass>organizationalPerson</creationClass>
+          <creationClass>inetOrgPerson</creationClass>
+        </directory>
+      </extension>
+    </component>
 
     ```
 
@@ -286,17 +306,29 @@ For the creation of new entries, only the sources marked for _creation_ are cons
 Example:
 
 ```
-
-      someschema
-      uid
-      password
-
-          foo
-
-          id
-          bar
-
+<?xml version="1.0"?>
+<component name="com.example.project.directories.multi">
+  <extension target="org.nuxeo.ecm.directory.multi.MultiDirectoryFactory"
+      point="directories">
+    <directory name="mymulti">
+      <schema>someschema</schema>
+      <idField>uid</idField>
+      <passwordField>password</passwordField>
+      <source name="sourceA" creation="true">
+        <subDirectory name="dir1">
+          <field for="thefoo">foo</field>
+        </subDirectory>
+        <subDirectory name="dir2">
+          <field for="uid">id</field>
+          <field for="thebar">bar</field>
+        </subDirectory>
+      </source>
+      <source name="sourceB">
         ...
+      </source>
+    </directory>
+  </extension>
+</component>
 
 ```
 
@@ -319,6 +351,8 @@ Directory references leverage two common ways of string relationship in LDAP dir
 The static reference strategy is to apply when a multi-valued attribute stores the exhaustive list of distinguished names of reference entries, for example the uniqueMember of the `groupOfUniqueNames` object.
 
 ```
+<ldapReference field="members" directory="userDirectory"
+  staticAttributeId="uniqueMember" />
 
 ```
 
@@ -329,6 +363,9 @@ The `staticAttributeId` attribute contains directly the value which can be read 
 The dynamic attribute strategy is used when a potentially multi-value attribute stores a LDAP URL intensively, for example the `memberURL`'s attribute of the `groupOfURL` object class.
 
 ```
+<ldapReference field="members" directory="userDirectory"
+  forceDnConsistencyCheck="false"
+  dynamicAttributeId="memberURL" />
 
 ```
 
@@ -339,6 +376,8 @@ The value contained in `dynamicAttributeId` looks like `ldap:///ou=groups,dc=exa
 The LDAP tree reference can be used to resolve children in the LDAP tree hierarchy.
 
 ```
+<ldapTreeReference field="children" directory="groupDirectory"
+  scope="subtree" />
 
 ```
 
@@ -353,5 +392,13 @@ Edit is NOT IMPLEMENTED: modifications to this field will be ignored when saving
 ### Defining Inverse References
 
 Inverse references are defined with the following declarations:
+
+```
+<references>
+  <inverseReference field="groups" directory="groupDirectory"
+    dualReferenceField="members" />
+</references>
+
+```
 
 This syntax should be understood as "the member groups value is an inverse reference on `groupDirectory` directory using members reference". It is the group directory that stores all members for a given group. So the groups of a member are retrieved by querying in which groups a member belongs to.

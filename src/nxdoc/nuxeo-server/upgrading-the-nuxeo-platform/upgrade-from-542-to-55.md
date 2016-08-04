@@ -91,6 +91,11 @@ Regarding to custom distributions and related to the new 5.5 packaging (DM, CMF,
 Deploy the Nuxeo CAP distribution (only nuxeo-cap classifier still exists):
 
 ```
+<!-- Deploy CAP distribution -->
+    <unzip dest="${stagedir}">
+      <artifact:resolveFile key="org.nuxeo.ecm.distribution:nuxeo-distribution-tomcat:${nuxeo.version}:zip"
+                            classifier="nuxeo-cap" />
+    </unzip>
 
 ${stagedir}: distribution parent folder
 
@@ -99,6 +104,10 @@ ${stagedir}: distribution parent folder
 Define type distribution:
 
 ```
+<!-- Set the addon deploying in distribution -->
+    <copy file="${app.path}/nxserver/data/installAfterRestart-?.log"
+      tofile="${app.path}/nxserver/data/installAfterRestart.log"
+      overwrite="true" />
 
 ${app.path}: define your distribution path (ie ./stage/nuxeo-custom-server)
 ?: DM,DAM,CMF,SC
@@ -108,6 +117,9 @@ ${app.path}: define your distribution path (ie ./stage/nuxeo-custom-server)
 Optional: choose the wizard distribution type by setting wizard addon preset ([NXP-8031](https://jira.nuxeo.com/browse/NXP-8031)):
 
 ```
+<!-- Set the wizard.preset by default -->
+	<echo file="${app.path}/setupWizardDownloads/packages-default-selection.properties"
+          message="preset=nuxeo-?" />
 
 ${app.path}: define your distribution path (ie ./stage/nuxeo-custom-tomcat)
 ?: dm,cmf,dam
@@ -129,14 +141,26 @@ Only fews column additions were done between 5.4.2 and 5.5 (no alter). So you ca
 
 For relations, these attributes are added to the "relation" schema ([NXP-7962](http://jira.nuxeo.com/browse/NXP-7962)):
 
+```
+<xs:element name="predicate" type="xs:string" />
+<xs:element name="sourceUri" type="xs:string" />
+<xs:element name="targetUri" type="xs:string" />
+<xs:element name="targetString" type="xs:string" />
+
+```
+
 A new metadata has been added to follow the legacy definition of `dublincore` schema ([NXP-7884](http://jira.nuxeo.com/browse/NXP-7884)) :
+
+```
+<xs:element name="publisher" type="xs:string"/>
+```
 
 A new schema has been added: `task.xsd` (related to the nuxeo-platform-task feature - [NXP-7852](http://jira.nuxeo.com/browse/NXP-7852)):
 
 ```
- (Task actors list)
- (tasks vars list)
- (Task comments list)
+<xs:element name="actors" type="nxt:stringList" /> (Task actors list)
+<xs:element name="task_variables" type="nxt:task_variables" /> (tasks vars list)
+<xs:element name="taskComments" type="nxt:taskComments" /> (Task comments list)
 
 ```
 

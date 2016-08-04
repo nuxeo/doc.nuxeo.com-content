@@ -207,11 +207,26 @@ This part assumes you have [IDEDOC]({{page space='idedoc'}}) configured with the
 2.  Add the following component:
 
     ```
-
-    			org.nuxeo.project.computed.group.ValidatorsGroupComputer
-
-    				ValidatorsGroupComputer
-
+    <?xml version="1.0"?>
+    <component
+    	name="org.nuxeo.mail.management.security.computer.group.contribution"
+    	version="1.0">
+    	<extension point="computer"
+    		target="org.nuxeo.ecm.platform.computedgroups.ComputedGroupsServiceImpl">
+    		<groupComputer name="ValidatorsGroupComputer">
+    			<computer>org.nuxeo.project.computed.group.ValidatorsGroupComputer
+    			</computer>
+    		</groupComputer>
+    	</extension>
+    	<extension point="computerChain"
+    		target="org.nuxeo.ecm.platform.computedgroups.ComputedGroupsServiceImpl">
+    		<groupComputerChain append="true">
+    			<computers>
+    				<computer>ValidatorsGroupComputer</computer>
+    			</computers>
+    		</groupComputerChain>
+    	</extension>
+    </component>
     ```
 
     &nbsp;
@@ -270,29 +285,29 @@ In the previous section we asked Nuxeo Runtime to register our new computer grou
      */
     public class ValidatorsGroupComputer extends AbstractGroupComputer {
         @Override
-        public List getGroupsForUser(NuxeoPrincipalImpl nuxeoPrincipal)
+        public List<String> getGroupsForUser(NuxeoPrincipalImpl nuxeoPrincipal)
                 throws Exception {
-            List result = new ArrayList();
+            List<String> result = new ArrayList<String>();
             result.add("myTestGroup");
             return result;
         }
         @Override
-        public List getAllGroupIds() throws Exception {
+        public List<String> getAllGroupIds() throws Exception {
             // TODO Auto-generated method stub
             return null;
         }
         @Override
-        public List getGroupMembers(String groupName) throws Exception {
+        public List<String> getGroupMembers(String groupName) throws Exception {
             // TODO Auto-generated method stub
             return null;
         }
         @Override
-        public List getParentsGroupNames(String groupName) throws Exception {
+        public List<String> getParentsGroupNames(String groupName) throws Exception {
             // TODO Auto-generated method stub
             return null;
         }
         @Override
-        public List getSubGroupsNames(String groupName) throws Exception {
+        public List<String> getSubGroupsNames(String groupName) throws Exception {
             // TODO Auto-generated method stub
             return null;
         }
@@ -305,9 +320,9 @@ In the previous section we asked Nuxeo Runtime to register our new computer grou
 
 <div>
 
-1.  <span class="confluence-link">Start your SDK instance</span> from the Nuxeo IDE interface.
+1.  Start your SDK instance from the Nuxeo IDE interface.
     See the page [Getting Started with Nuxeo IDE]({{page page='getting-started-with-nuxeo-ide'}}) for details.
-2.  <span class="confluence-link">Add your project</span> into the deployment configuration.
+2.  Add your project into the deployment configuration.
 3.  Refresh the deployment server.
 4.  Connect as Administrator into your Nuxeo instance.
 5.  Go to **Home** > **Profile**.
@@ -402,14 +417,14 @@ import org.nuxeo.runtime.api.Framework;
 public class ValidatorsGroupComputer extends AbstractGroupComputer {
     private static final Log log = LogFactory.getLog(ValidatorsGroupComputer.class);
     @Override
-    public List getGroupsForUser(NuxeoPrincipalImpl nuxeoPrincipal)
+    public List<String> getGroupsForUser(NuxeoPrincipalImpl nuxeoPrincipal)
             throws Exception {
         String username = nuxeoPrincipal.getName();
         GetWorkspaceIds runner = new GetWorkspaceIds(getRepository(), username);
         runner.runUnrestricted();
-        List groupIds = new ArrayList();
+        List<String> groupIds = new ArrayList<String>();
         String groupId = null;
-        for (Map id : runner.ids) {
+        for (Map<String, Serializable> id : runner.ids) {
             groupId = ((String) id.get("ecm:uuid")) + "_validator";
             log.debug("Virtual Group Id found: " + groupId);
             groupIds.add(groupId);
@@ -417,22 +432,22 @@ public class ValidatorsGroupComputer extends AbstractGroupComputer {
         return groupIds;
     }
     @Override
-    public List getAllGroupIds() throws Exception {
+    public List<String> getAllGroupIds() throws Exception {
         // TODO Auto-generated method stub
         return null;
     }
     @Override
-    public List getGroupMembers(String groupName) throws Exception {
+    public List<String> getGroupMembers(String groupName) throws Exception {
         // TODO Auto-generated method stub
         return null;
     }
     @Override
-    public List getParentsGroupNames(String groupName) throws Exception {
+    public List<String> getParentsGroupNames(String groupName) throws Exception {
         // TODO Auto-generated method stub
         return null;
     }
     @Override
-    public List getSubGroupsNames(String groupName) throws Exception {
+    public List<String> getSubGroupsNames(String groupName) throws Exception {
         // TODO Auto-generated method stub
         return null;
     }
@@ -550,21 +565,15 @@ Next steps could be:
 
 </div>
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [undefined]({{page}})
 *   [undefined]({{page}})
 *   [How-to index ]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Managing Permissions]({{page space='userdoc' page='managing-permissions'}})
 *   [Nuxeo Platform User Registration]({{page page='nuxeo-platform-user-registration'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

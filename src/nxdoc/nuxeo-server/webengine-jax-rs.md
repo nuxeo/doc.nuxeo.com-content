@@ -352,8 +352,8 @@ Let's define a JAX-RS application as follows:
 ```
 public class MyWebApp extends Application {
     @Override
-    public Set> getClasses() {
-        HashSet> result = new HashSet>();
+    public Set<Class<?>> getClasses() {
+        HashSet<Class<?>> result = new HashSet<Class<?>>();
         result.add(MyWebAppRoot.class);
         return result;
     }
@@ -447,16 +447,22 @@ Nuxeo-WebModule: org.nuxeo.ecm.webengine.app.WebEngineModule;host=MyHost
 and bind the servlet to this host in the deployment-fragment.xml file:
 
 ```
-
-    My Application Servlet
-
+<extension target="web#SERVLET">
+  <servlet>
+    <servlet-name>My Application Servlet</servlet-name>
+    <servlet-class>
       org.nuxeo.ecm.webengine.app.jersey.WebEngineServlet
-
-      application.name
-      MyHost
-
-    My Application Servlet
-    /site/myapp/*
+    </servlet-class>
+    <init-param>
+      <param-name>application.name</param-name>
+      <param-value>MyHost</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>My Application Servlet</servlet-name>
+    <url-pattern>/site/myapp/*</url-pattern>
+  </servlet-mapping>
+</extension>
 
 ```
 
@@ -471,8 +477,8 @@ To define a WebEngine Application you should override the `org.nuxeo.ecm.webengi
 public class AdminApp extends WebEngineModule {
 
     @Override
-    public Class[] getWebTypes() {
-        return new Class[] { Main.class, User.class, Group.class,
+    public Class<?>[] getWebTypes() {
+        return new Class<?>[] { Main.class, User.class, Group.class,
                 UserService.class, EngineService.class, Shell.class };
     }
 
@@ -497,10 +503,17 @@ You can see there are some additional attributes in the manifets header: 'name' 
 If you want to customize how your module is listed in that module index you can define 'shortcuts' in the module.xml file. Like this:
 
 ```
-
-      Administration
-
-      Shell
+<?xml version="1.0"?>
+<module>
+  <shortcuts>
+    <shortcut href="/admin">
+      <title>Administration</title>
+    </shortcut>
+    <shortcut href="/shell">
+      <title>Shell</title>
+    </shortcut>
+  </shortcuts>
+</module>
 
 ```
 
@@ -632,6 +645,11 @@ A module is a bundle (i.e. JAR file) that contains JAX-RS resources and web reso
 *   a module entry point - a JAX-RS resource class that will be served when the module path matches a client request. The module entry point is used to directly send responses or to dispatch the request to other JAX-RS resources.
 
 To define a module you need to create a `module.xml` file and put it in the root of your JAR. Here is the minimal content of a `module.xml` file:
+
+```
+<module name="Admin" root-type="Admin" path="/admin" />
+
+```
 
 This module file is declaring a module named `Admin` with path `/admin`. The module path is relative to the WebEngine servlet so the full URL of this module will be [http://localhost:8080/nuxeo/site/admin](http://localhost:8080/nuxeo/site/admin).
 
@@ -888,6 +906,11 @@ When extending an object you inherit all object views.
 
 When defining a new module you can extend existing modules by using the `extends` attribute in your module.xml file:
 
+```
+<module name="Admin" root-type="Admin" path="/admin" extends="base" />
+
+```
+
 The `extends` attribute is pointing to another module name that will become the base of the new module.
 
 All WebObjects from a base module are visible in the derived modules (you can instantiate them using `newObject("object_type") method)`.
@@ -929,6 +952,7 @@ public class Main extends ModuleRoot {
 Suppose the object is bound to the `nuxeo/site/admin` path, and the `index.ftl` view is referencing an image located in the module directory in `skin/resources/images/myimage.jpg`. Then the image should be referenced using the following path:
 
 ```
+<img src="skin/images/myimage.jpg" />
 
 ```
 
@@ -939,3 +963,8 @@ So all static resources in a Web module are accessible under the `/module_path/s
 ### Headless Modules
 
 By default WebEngine modules are listed in the WebEngine home page (i.e. `/nuxeo/site`). If you don't want to include your module in that list you can use the `headless` attribute in your `module.xml` file:
+
+```
+<module name="my_module" root-type="TheRoot" path="/my_module" extends="base" headless="true" />
+
+```

@@ -99,7 +99,7 @@ Before you install and configure Kerberos on your Nuxeo Platform, you need to se
     add_principal HTTP/servername (type in a password)
     ```
 
-    {{#> callout type='note' heading="Principal format"}}
+    {{#> callout type='note' heading='Principal format'}}
 
     The service principal MUST be formed as followed: uppercase HTTP slash the canonical (DNS-wise) name of the server. Any other names will not work (especially, aliases).
 
@@ -116,21 +116,21 @@ Before you install and configure Kerberos on your Nuxeo Platform, you need to se
 1.  In Microsoft Active Directory, create a user. Option "password does not expire" must be checked and "user must change password" unchecked.
 2.  In a command-line window, register the service principal name(s) you want this user to respond to (generally the server name in its short and fully qualified forms and it corresponds to the Nuxeo Platform server name).
 
-    {{#> callout type='note' heading="Service principal name format"}}
+    {{#> callout type='note' heading='Service principal name format'}}
 
     The service principal _has_&nbsp;to correspond to the server's canonical name in DNS.
 
     {{/callout}}
 
     ```
-    setspn -a HTTP/servername@REALM 
-    setspn -a HTTP/fully.qualified.servername@REALM 
+    setspn -a HTTP/servername@REALM <username>
+    setspn -a HTTP/fully.qualified.servername@REALM <username>
     ```
 
 3.  Check the SPNs with the command:
 
     ```
-    setspn -l 
+    setspn -l <username>
     ```
 
 4.  Export the keytab.
@@ -159,8 +159,8 @@ Before you install and configure Kerberos on your Nuxeo Platform, you need to se
             default_realm = REALM
          [realms]
               REALM = {
-                   kdc = 
-                   admin_server = 
+                   kdc = <kdc>
+                   admin_server = <admin_server>
               }
          [domain_realm]
               domain = REALM
@@ -241,7 +241,7 @@ Open the `java.login.config` file you've setup and add the following configurati
 
 ```
 
-{{#> callout type='note' heading="Login configuration name"}}
+{{#> callout type='note' heading='Login configuration name'}}
 
 The login configuration MUST be called Nuxeo with an uppercase N.
 
@@ -254,18 +254,27 @@ The login configuration MUST be called Nuxeo with an uppercase N.
 2.  Create a `$NUXEO_HOME/nxserver/config/kerberos-config.xml` with the following content:
 
     ```
-
-      org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig
-      org.nuxeo.ecm.platform.ui.web.auth.defaultConfig
-      org.nuxeo.ecm.platform.login.Kerberos
-       This Authentication Plugin uses Kerberos to assert user identity. 
-
-        Trusting_LM
-
-         BASIC_AUTH
-         KRB5_AUTH
-         FORM_AUTH
-
+    <?xml version="1.0"?>
+     <component name="Kerberos-config">
+      <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
+      <require>org.nuxeo.ecm.platform.ui.web.auth.defaultConfig</require>
+      <require>org.nuxeo.ecm.platform.login.Kerberos</require>
+      <documentation> This Authentication Plugin uses Kerberos to assert user identity. </documentation>
+      <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="authenticators">
+       <authenticationPlugin name="KRB5_AUTH" enabled="true" class="org.nuxeo.ecm.platform.ui.web.auth.krb5.Krb5Authenticator">
+        <loginModulePlugin>Trusting_LM</loginModulePlugin>
+       </authenticationPlugin>
+      </extension>
+      <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="chain">
+       <authenticationChain>
+        <plugins>
+         <plugin>BASIC_AUTH</plugin>
+         <plugin>KRB5_AUTH</plugin>
+         <plugin>FORM_AUTH</plugin>
+        </plugins>
+       </authenticationChain>
+      </extension>
+      </component> 
     ```
 
     For now we assume all configuration - realm, kdc, server principal, etc. &minus; lives in the server's standard configuration, i.e. either `java.login.config` or `krb5.conf`. An interesting update would be to make these configurable in Nuxeo.
@@ -288,7 +297,7 @@ On Linux, if the client is Firefox:
 
 In the browser, type [http://nuxeo_server:8080/nuxeo](http://nuxeo_server:8080/nuxeo) and&hellip; you should be authenticated!
 
-{{#> callout type='note' heading="URL"}}
+{{#> callout type='note' heading='URL'}}
 
 Do not use localhost in the URL but the server's canonical name, that you mapped to the SPN.
 
@@ -347,24 +356,18 @@ If you use the Admin Center, you will have to restart the server **twice**&nbsp;
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{! Please update the label in the Content by Label macro below. }}
 
-{{#> panel heading="Related Documentation"}}
+{{#> panel heading='Related Documentation'}}
 
 *   [Authentication, users and groups]({{page page='authentication-and-user-management'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">
+{{/panel}}</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
 &nbsp;
 
-</div>
-
-</div>
+</div></div>

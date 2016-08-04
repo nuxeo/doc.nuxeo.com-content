@@ -24,18 +24,12 @@ history:
         version: '1'
 
 ---
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### [Nuxeo Drive]({{page page='nuxeo-drive'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### [Nuxeo Mobile]({{page page='nuxeo-mobile'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

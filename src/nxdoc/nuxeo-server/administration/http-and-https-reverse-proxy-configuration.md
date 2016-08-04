@@ -289,10 +289,11 @@ When it is not possible to add this header at the reverse-proxy level, you can u
 And if you have a "client denied by server configuration" error, you must check the access control directives of `mod_proxy`:
 
 ```
-
+<Proxy *>
   Order Deny,Allow
   Deny from all
   Allow from 192.168
+</Proxy>
 
 ```
 
@@ -381,12 +382,13 @@ This will require you to load and activate the `mod_header` module.
 The only need to secure headers (like the SESSIONID) in this type of configuration is to add to the Tomcat web.xml of Nuxeo the following lines:
 
 ```
-
-        30
-
-          true
-          true
-
+<session-config>
+        <session-timeout>30</session-timeout>
+        <cookie-config>
+          <http-only>true</http-only>
+          <secure>true</secure>
+        </cookie-config>
+    </session-config>
 ```
 
 &nbsp;
@@ -415,8 +417,14 @@ The Simple cache filter is deprecated, we recommend using the [`filterConfig` ex
 This extension point lets you contribute customized filter for a given pattern URL.
 
 ```
+ <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService"
+  point="filterConfig">
 
-   /nuxeo/urlPattern/.*
+   <filterConfig name="filterName" transactional="true" synchonize="true"
+     cached="true" private="true" cachetime="3600">
+   <pattern>/nuxeo/urlPattern/.*</pattern>
+   </filterConfig>
+ </extension>
 
 ```
 
@@ -439,9 +447,12 @@ The Nuxeo webapp includes a servlet filter that will automatically add header ca
 By using the `deployment-fragment.xml` you can also put some specific resources behind this filter:
 
 ```
-
-    simpleCacheFilter
-    /MyURLsToCache/*
+<extension target="web#FILTER">
+  <filter-mapping>
+    <filter-name>simpleCacheFilter</filter-name>
+    <url-pattern>/MyURLsToCache/*</url-pattern>
+  </filter-mapping>
+</extension>
 
 ```
 
@@ -467,7 +478,7 @@ nuxeo.server.https.keystoreFile=/path/to/keystore
 nuxeo.server.https.keystorePass=password
 ```
 
-{{#> callout type='info' heading="To create your keystore using Java"}}
+{{#> callout type='info' heading='To create your keystore using Java'}}
 
 keytool -genkey -alias tomcat -keyalg RSA
 

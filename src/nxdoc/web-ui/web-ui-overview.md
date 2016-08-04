@@ -139,12 +139,11 @@ Three important parts are visible on every single pages:
 
 ### Side Menu
 
-The menu displays different tabs. Clicking on one of them will open a side panel with the content of the tab selected: b<span>rowsing options are on the first left column, content to browse on the second and content to view on the main area. We will see the description of the main area on the last part of this documentation.</span>
+The menu displays different tabs. Clicking on one of them will open a side panel with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area. We will see the description of the main area on the last part of this documentation.
 
-<span>![]({{file name='web_ui_with_side_panel.png'}} ?w=650,border=true)
-</span>
+![]({{file name='web_ui_with_side_panel.png'}} ?w=650,border=true)
 
-<span><span>This new pattern allows to&nbsp;</span>start browsing without changing the context of work.</span>
+This new pattern allows to&nbsp;start browsing without changing the context of work.
 
 <table><tbody><tr><td colspan="1">![]({{file name='dashboard_home.png'}} ?w=48,thumbnail=true)</td><td colspan="1">
 
@@ -164,7 +163,7 @@ The menu displays different tabs. Clicking on one of them will open a side panel
 
 </td></tr><tr><td colspan="1">![]({{file name='assets.png'}})</td><td colspan="1">
 
-**Assets Search:** Search for multimedia documents using <span>full text and metadata</span>
+**Assets Search:** Search for multimedia documents using full text and metadata
 
 </td></tr><tr><td colspan="1">![]({{file name='tasks.png'}})</td><td colspan="1">
 
@@ -200,11 +199,11 @@ A create button ![]({{file name='create_button.png'}} ?w=25,thumbnail=true)&nbsp
 
 ## Technical Overview
 
-<span>Nuxeo Web UI has been built with simplicity and composability in mind. Nuxeo is a content application platform and our goal is to provide tools and components for you to build your own application hence the shift from a highly configurable and pluggable UI to a more modular and composable one.</span>
+Nuxeo Web UI has been built with simplicity and composability in mind. Nuxeo is a content application platform and our goal is to provide tools and components for you to build your own application hence the shift from a highly configurable and pluggable UI to a more modular and composable one.
 
-<span>With the introduction of Web Components browsers now offer a well defined component model that is performant, provided out of the box and has a familiar API. By leveraging DOM as the framework and extending HTML with our own custom tags we can empower web developers to use the tools and frameworks they are already familiar with to build rich web applications. This led to the creation of&nbsp;[Nuxeo Elements]({{page page='nuxeo-elements'}}), a set of custom elements provided by us that not only allowed us to build our UI but are also made available to developers so they too can build their own custom UIs.&nbsp;</span>
+With the introduction of Web Components browsers now offer a well defined component model that is performant, provided out of the box and has a familiar API. By leveraging DOM as the framework and extending HTML with our own custom tags we can empower web developers to use the tools and frameworks they are already familiar with to build rich web applications. This led to the creation of&nbsp;[Nuxeo Elements]({{page page='nuxeo-elements'}}), a set of custom elements provided by us that not only allowed us to build our UI but are also made available to developers so they too can build their own custom UIs.&nbsp;
 
-Nuxeo Elements are built with Polymer which is a library for creating custom elements. Although it wasn't initially envisioned as an application framework its simplicity and familiarity resulted in developers adopting it to build full applications. These applications are modular by nature since everything is an element and these elements themselves are reusable and interoperable since they rely on the native&nbsp;<span>component model. Concepts and features provided by other application frameworks are generally provided by the DOM and Polymer adds some "sugar" where things are lacking.</span>
+Nuxeo Elements are built with Polymer which is a library for creating custom elements. Although it wasn't initially envisioned as an application framework its simplicity and familiarity resulted in developers adopting it to build full applications. These applications are modular by nature since everything is an element and these elements themselves are reusable and interoperable since they rely on the native&nbsp;component model. Concepts and features provided by other application frameworks are generally provided by the DOM and Polymer adds some "sugar" where things are lacking.
 
 Our Web UI is built itself with Polymer too. Goals were to not only ensure the simplicity and composability we aimed for but also to be as framework independent as possible so developers can use our elements to build their own UIs with whatever framework they see fit.
 

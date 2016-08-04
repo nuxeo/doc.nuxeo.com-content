@@ -174,7 +174,7 @@ The Quota package allows to define a maximum size on spaces and to display the n
 
 Administrators are responsible for managing quotas on a global scale. Non-administrator users can manage the size limits of domains and workspaces on which they have Manage everything permission. All users are displayed the size of the document they are on (workspaces, folder, file, note, etc...) and the&nbsp;maximum size allowed (quota)&nbsp; if one has been defined. On a folderish document, such as a workspace, the used space includes the size of all the documents displayed in the Content tab and their versions and the size of the deleted documents (i.e. in the Trash tab of the workspace). On a document of type File for example, the used space is the sum of the size of the current document version (possibly a modified version) and the size of the archived versions of the document.
 
-{{#> callout type='tip' heading="Used space when the document has only one version"}}
+{{#> callout type='tip' heading='Used space when the document has only one version'}}
 
 When you edit a document and save it as a new version (i.e. increment the document's version), the newly archived version is displayed until the document is modified. When the document is modified, you are displayed an unarchived modified version of the document, whose version number is based on the last archived version suffixed with a + sign. As a consequence, when the document only has one archived version, typically when its first version is created, the used space is the size of the newly archived version. As soon as the document is modified, the used space of the document is the sum of the archived version and the modified unarchived version.
 
@@ -303,7 +303,7 @@ Only users with Manage everything permission can define the maximum size of a sp
     *   the smallest possible maximum size is 99.61&nbsp;KByte by default, on all spaces.
 4.  Click on the **Save** button.
 
-    {{#> callout type='info' heading="You are displayed a message indicating that you need to set a smaller size?"}}
+    {{#> callout type='info' heading='You are displayed a message indicating that you need to set a smaller size?'}}
 
     This means other children of the parent imposing the maximum size to be set&nbsp; already have taken some of the available max size on their quotas. You need to choose a smaller value.
 

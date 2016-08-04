@@ -151,7 +151,7 @@ java -cp nuxeo-shell.jar org.nuxeo.shell.Main -e "connect -u Administrator -p Ad
 
 Note that commands are separated using a semicolon character.
 
-{{#> callout type='note' heading="Limitations"}}
+{{#> callout type='note' heading='Limitations'}}
 
 You cannot run that way commands that contains illegal characters and needs to be escaped.
 

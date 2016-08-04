@@ -214,13 +214,13 @@ Nuxeo supports the following MongoDB versions:
 
 ## Installation
 
-When using MongoDB 3.0 we recommend that you configure the <span>[WiredTiger storage engine](https://docs.mongodb.org/v3.0/core/wiredtiger/)</span> <span>for better performance of write operations</span>. Please follow [this documentation](https://docs.mongodb.org/manual/tutorial/change-standalone-wiredtiger/) to activate this storage engine.
+When using MongoDB 3.0 we recommend that you configure the [WiredTiger storage engine](https://docs.mongodb.org/v3.0/core/wiredtiger/) for better performance of write operations. Please follow [this documentation](https://docs.mongodb.org/manual/tutorial/change-standalone-wiredtiger/) to activate this storage engine.
 
 Nuxeo stores its information in a MongoDB database, under the&nbsp;`default`&nbsp;collection. The name of the collection is the Nuxeo repository name.
 
 By default MongoDB doesn't require authentication, you can [enable the client access control](https://docs.mongodb.org/manual/tutorial/enable-authentication/) and create a user with the `dbAdmin` role.&nbsp;
 
-{{#> callout type='warning' heading="User Creation with Nuxeo 8.1 and MongoDB 3.0.x"}}
+{{#> callout type='warning' heading='User Creation with Nuxeo 8.1 and MongoDB 3.0.x'}}
 
 If you are using a version 3.0 of MongoDB on a Nuxeo Platform 8.1, you have to change the authentication schema before creating the users in the database. In those versions, the default authentication mechanism is SCRAM-SHA-1 which is not supported by Nuxeo Platform 8.1 where the MongoDB driver only supports MONGO-CR.
 

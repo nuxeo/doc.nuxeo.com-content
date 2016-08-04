@@ -147,10 +147,9 @@ Picture document type was previously coming with the Document Management module,
 
 {{! /multiexcerpt}}
 
-### <span>Picture Book - Deprecated
-</span>
+### Picture Book - Deprecated
 
-<span>The picture book document type used to be part of the Document Management module. It has been deprecated in Nuxeo Platform 6.0\. Here is the behavior of the picture book document type for Nuxeo Platform 6.0:</span>
+The picture book document type used to be part of the Document Management module. It has been deprecated in Nuxeo Platform 6.0\. Here is the behavior of the picture book document type for Nuxeo Platform 6.0:
 
 *   It is not possible to create new pictures books in Nuxeo Platform 6.0.
 *   Existing picture books are still available and are showed as regular folders: they do not have the Slideshow and View tabs anymore. It is still possible to create pictures in migrated picture books.
@@ -158,9 +157,9 @@ Picture document type was previously coming with the Document Management module,
 
 ### Text Annotations - Deprecated
 
-In Nuxeo Platform 6.0, text annotations are not supported anymore. They can be reactivated by installing the addon Digital Asset Management and setting the parameter `<span>nuxeo.text.annotations</span>` to true in nuxeo.conf.
+In Nuxeo Platform 6.0, text annotations are not supported anymore. They can be reactivated by installing the addon Digital Asset Management and setting the parameter `nuxeo.text.annotations` to true in nuxeo.conf.
 
-### <span>Virtual Navigation</span>
+### Virtual Navigation
 
 {{! multiexcerpt name='virtual-navigation-packaging-changes-text'}}
 
@@ -168,7 +167,7 @@ Virtual navigation used to come with the DM package. It is now an [independent a
 
 {{! /multiexcerpt}}
 
-## <span>Nuxeo DAM</span>
+## Nuxeo DAM
 
 {{! multiexcerpt name='nuxeo-dam-deprecation-text'}}
 
@@ -192,8 +191,7 @@ A SQL script is available to migrate your Social Collaboration data to non-depre
 
 ## Exports
 
-<span>The RSS and Atom exports and the PDF export of content views are not available any more. They can be re-enabled by configuration with Nuxeo Studio.
-</span>
+The RSS and Atom exports and the PDF export of content views are not available any more. They can be re-enabled by configuration with Nuxeo Studio.
 
 ## Live Edit and WSS - Deprecated
 
@@ -205,27 +203,21 @@ Live Edit and the WSS integration are deprecated in Nuxeo Platform 6.0\. Nuxeo D
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{! Please update the label in the Content by Label macro below. }}
 
-{{#> panel heading="Related Documentation"}}
+{{#> panel heading='Related Documentation'}}
 
 *   [Upgrade from 5.8 to 6.0]({{page space='admindoc' page='upgrade-from-58-to-60'}})
 *   [Upgrade to JSF2]({{page space='admindoc' page='upgrade-to-jsf2'}})
 *   [Studio Specific Upgrade Instructions]({{page space='studio' page='specific-upgrade-instructions'}})
 *   [Nuxeo Platform Feature Table]({{page space='admindoc' page='nuxeo-platform-feature-table'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">
+{{/panel}}</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
 &nbsp;
 
-</div>
-
-</div>
+</div></div>

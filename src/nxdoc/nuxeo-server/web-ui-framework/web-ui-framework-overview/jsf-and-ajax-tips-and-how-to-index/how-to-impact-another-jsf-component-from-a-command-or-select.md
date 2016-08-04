@@ -123,13 +123,49 @@ The Seam Component [selectionActions](http://explorer.nuxeo.org/nuxeo/site/distr
 #### Sample Template Excerpt
 
 ```
+<ui:fragment
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:c="http://java.sun.com/jstl/core"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:a4j="http://richfaces.org/a4j"
+  xmlns:nxu="http://nuxeo.org/nxweb/util">
+
+<h:form>
 
   [...]
 
+ <a4j:outputPanel id="showContentHolderPanel">
+    <nxu:valueHolder id="showContentHolder"
+      defaultValue="false"
+      var="showContent">
+
+      <h:commandButton rendered="#{not showContent}" value="Show">
+        <f:attribute name="selectedValue" value="true" />
+        <f:attribute name="targetComponentId" value="showContentHolder" />
+        <nxu:actionListenerMethod value="#{selectionActions.setStaticValue}"/>
+        <f:ajax execute="@this" render="showContentHolderPanel" />
+      </h:commandButton>
+      <h:commandButton rendered="#{showContent}" value="Hide">
+        <f:attribute name="selectedValue" value="false" />
+        <f:attribute name="targetComponentId" value="showContentHolder" />
+        <nxu:actionListenerMethod value="#{selectionActions.setStaticValue}"/>
+        <f:ajax execute="@this" render="showContentHolderPanel" />
+      </h:commandButton>
+
+      <c:if test="#{showContent}">
         My content
+      </c:if>
+
+    </nxu:valueHolder>
+  </a4j:outputPanel>
 
   [...]
 
+</h:form>
+
+</ui:fragment>
 ```
 
 ## Impacting with a Value Taken on Another Component
@@ -147,9 +183,51 @@ The Seam Component [selectionActions](http://explorer.nuxeo.org/nuxeo/site/distr
 This is an excerpt of the [widget template displaying additional information about a selected flavor](https://github.com/nuxeo/nuxeo-features/blob/master/localconf/nuxeo-localconf-web/src/main/resources/web/nuxeo.war/widgets/select_flavor_widget_template.xhtml) in local configuration:
 
 ```
+<h:panelGroup>
+  <nxu:set var="flavors"
+    value="#{themeConfigurationActions.getAvailableFlavors(themeActions.defaultTheme)}"
+    cache="true">
+    <h:selectOneListbox id="#{widget.id}" value="#{field}">
+      <nxu:selectItems
+        var="flavor" value="#{flavors}"
+        itemValue="#{flavor.name}" itemLabel="#{messages[flavor.label]}" />
+      <f:attribute name="sourceComponentId" value="#{widget.id}" />
+      <f:attribute name="targetComponentId" value="#{widget.id}_valueHolder" />
+      <f:ajax execute="@this" render="#{widget.id}_preview"
+        listener="#{selectionActions.setValueFromComponent}"
+        id="#{widget.id}_ajax_select" />
+    </h:selectOneListbox>
+  </nxu:set>
+  <h:message for="#{widget.id}" id="#{widget.id}_message"
+    styleClass="errorMessage" />
+</h:panelGroup>
 
+<nxu:valueHolder id="#{widget.id}_valueHolder"
+  var="selectedFlavorName"
+  defaultValue="#{origSelectedFlavorName}"
+  submitValue="false">
+  <a4j:outputPanel id="#{widget.id}_preview" layout="block">
+    <nxu:set var="selectedFlavor"
+      value="#{themeActions.getFlavor(selectedFlavorName)}"
+      cache="true">
+      <c:choose>
+        <c:when test="#{! empty selectedFlavor.logo.previewPath}">
+          <h:graphicImage value="#{selectedFlavor.logo.previewPath}" class="palettePreviewLogo" />
+        </c:when>
+        <c:otherwise>
+          <c:choose>
+            <c:when test="#{! empty selectedFlavor.logo.path}">
+              <h:graphicImage value="#{selectedFlavor.logo.path}" class="palettePreviewLogo" />
+            </c:when>
+            <c:otherwise>
               #{messages['label.local.configuration.theme.flavorSelection.noPreviewAvailable']}
-
+            </c:otherwise>
+          </c:choose>
+        </c:otherwise>
+      </c:choose>
+    </nxu:set>
+  </a4j:outputPanel>
+</nxu:valueHolder>
 ```
 
 &nbsp;
@@ -167,7 +245,34 @@ Also, additional input fields to show are declared as standard sub-widgets to a 
 #### Sample Widget Template
 
 ```
+<ui:fragment
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:a4j="http://richfaces.org/a4j"
+  xmlns:nxu="http://nuxeo.org/nxweb/util"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:nxl="http://nuxeo.org/nxforms/layout">
 
+  <h:selectBooleanCheckbox id="#{widget.id}" value="#{field_1}">
+    <f:attribute name="sourceComponentId" value="#{widget.id}" />
+    <f:attribute name="targetComponentId" value="#{widget.id}_valueholder"/>
+    <f:ajax execute="@this" render="#{widget.id}_panel"
+      listener="#{selectionActions.setValueFromComponent}" />
+  </h:selectBooleanCheckbox>
+
+  <a4j:outputPanel id="#{widget.id}_panel" layout="block">
+    <nxu:valueHolder id="#{widget.id}_valueholder"
+      var="show"
+      defaultValue="#{field_1}">
+      <ui:fragment rendered="#{show}">
+        <nxl:subWidget>
+          <nxl:widget widget="#{widget}" value="#{value}" />
+        </nxl:subWidget>
+      </ui:fragment>
+     </nxu:valueHolder>
+  </a4j:outputPanel>
+
+</ui:fragment>
 ```
 
 To use this template:
@@ -178,21 +283,78 @@ To use this template:
 Here is a sample contribution:
 
 ```
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+  point="widgets">
 
-      My widget
-
-      myschema:mybooleancheck
-
+  <widget name="checkboxReRender" type="template">
+    <labels>
+      <label mode="any">My widget</label>
+    </labels>
+    <fields>
+      <field></field>
+      <field>myschema:mybooleancheck</field>
+    </fields>
+    <properties mode="any">
+      <property name="template">
         /widgets/checkbox_re_render.xhtml
+      </property>
+    </properties>
+    <subWidgets>
+      <widget name="sub" type="text">
+        <fields>
+          <field>myschema:mytext</field>
+        </fields>
+      </widget>
+    </subWidgets>
+  </widget>
 
-          myschema:mytext
-
+</extension>
 ```
 
 Refined version of this template when using it inside the bulk edit form (to make sure sub widget value is handled by the bulk edit too):
 
 ```
+<ui:fragment
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:a4j="http://richfaces.org/a4j"
+  xmlns:nxu="http://nuxeo.org/nxweb/util"
+  xmlns:c="http://java.sun.com/jstl/core"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:nxl="http://nuxeo.org/nxforms/layout">
 
+  <h:selectBooleanCheckbox id="#{widget.id}" value="#{field_1}"
+    onclick="#{widgetProperty_onclick}">
+    <f:attribute name="sourceComponentId" value="#{widget.id}" />
+    <f:attribute name="targetComponentId" value="#{widget.id}_valueholder"/>
+    <f:ajax execute="@this" render="#{widget.id}_panel"
+      listener="#{selectionActions.setValueFromComponent}" />
+  </h:selectBooleanCheckbox>
+
+  <a4j:outputPanel id="#{widget.id}_panel" layout="block">
+    <nxu:valueHolder id="#{widget.id}_valueholder"
+      var="show"
+      defaultValue="#{field_1}">
+      <ui:fragment rendered="#{show}">
+        <nxl:subWidget>
+
+          <c:set var="contextDataKey"
+            value="bulkEdit/#{nxl:fieldDefinitionsAsString(widget.fieldDefinitions)}" />
+          <h:inputHidden
+            id="#{widget.id}_bulk_key"
+            value="#{value.contextData[contextDataKey]}">
+            <f:attribute name="value" value="true" />
+            <f:converter converterId="javax.faces.Boolean" />
+          </h:inputHidden>
+
+          <nxl:widget widget="#{widget}" value="#{value}" />
+
+        </nxl:subWidget>
+      </ui:fragment>
+     </nxu:valueHolder>
+  </a4j:outputPanel>
+
+</ui:fragment>
 ```
 
 &nbsp;

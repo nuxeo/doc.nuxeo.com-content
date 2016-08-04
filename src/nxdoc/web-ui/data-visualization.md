@@ -131,7 +131,7 @@ Extract from the course [What's New in Nuxeo Platform 2015](https://university.n
 
 Data&nbsp;Visualization&nbsp;support in Nuxeo leverages Web Components and the Polymer framework in order to allow users to easily build their own custom dashboards, thus helping them understand how data is distributed in the repository as well as monitoring workflow activity.
 
-A set of custom elements are available for bootstrapping custom graphical dashboards.&nbsp;These elements are built using our <span class="confluence-link">Nuxeo Elements</span>, in particular they rely on `nuxeo-connection` to configure the Nuxeo instance to use.
+A set of custom elements are available for bootstrapping custom graphical dashboards.&nbsp;These elements are built using our Nuxeo Elements, in particular they rely on `nuxeo-connection` to configure the Nuxeo instance to use.
 
 ## Technical Overview
 
@@ -184,7 +184,16 @@ Under the hood each query is built as a nested aggregation with a fixed number o
 For example, by using our `nuxeo-workflow-data` element with the following attributes:
 
 ```
-
+<nuxeo-workflow-data workflow="worflowModelName"
+                     grouped-by="action"
+                     with-ranges='{
+                      "duration":[
+                         {"key":"quick", "to":"1500"},
+                         {"key":"slow", "from":"1500"}
+                       ]}'
+                     metrics="sum(amount)"
+                     data="\{{data}}">
+</nuxeo-workflow-data>
 ```
 
 Our element would produce a request like this:
@@ -252,7 +261,25 @@ The quickest way to start building a dashboard is to use the Yeoman generator to
 3.  Yeoman scaffolded a sample custom element so you now need to replace this sample content with your own. In this example build a simple chart with the total number of Serial Review workflows started by each user:
 
     ```
+    <dom-module id="nuxeo-dataviz-sample">
+      <template>
 
+        <!-- Retrieve our data and store it in 'initiators' -->
+        <nuxeo-workflow-data workflow="SerialDocumentReview"
+                            event="afterWorkflowStarted"
+                            grouped-by="workflowInitiator"
+                            start-date="[[startDate]]" end-date="[[endDate]]"
+                            data="\{{initiators}}">
+       </nuxeo-workflow-data>
+
+       <!-- Display a Pie Chart with out data -->
+       <google-chart type="pie"
+                     cols='[{"label": "User", "type": "string"},{"label": "Value", "type": "number"}]'
+                     rows="[[_rows(initiators)]]">
+       </google-chart>
+      </template>
+    </dom-module>
+    <script>
       Polymer({
         is: 'nuxeo-dataviz-sample',
 
@@ -267,15 +294,25 @@ The quickest way to start building a dashboard is to use the Yeoman generator to
           return data.map(function(e) { return [e.key, e.value]; });
         }
       });
-
+    </script>
     ```
 
     Each Polymer element usually includes a usage demo which you can edit to see and showcase your custom element in action:
 
     ```
-
+    <html>
+      <head>
         ...
-
+        <link rel="import" href="../../nuxeo-elements/nuxeo-connection.html">
+        <link rel="import" href="../nuxeo-dataviz-sample.html">
+      </head>
+      <body unresolved>
+        <!-- Define a connection to our Nuxeo server -->
+        <nuxeo-connection url="http://localhost:8080/nuxeo" username="Administrator" password="Administrator"></nuxeo-connection>
+        <!-- Include our element and specify a start and end date -->
+        <nuxeo-dataviz-sample start-date="2015-09-01" end-date="2015-10-30"></nuxeo-dataviz-sample>
+      </body>
+    </html>
     ```
 
 4.  To checkout your element we recommend using [Polyserve](https://github.com/PolymerLabs/polyserve), a&nbsp;simple web server for using bower components locally, which you can install with:

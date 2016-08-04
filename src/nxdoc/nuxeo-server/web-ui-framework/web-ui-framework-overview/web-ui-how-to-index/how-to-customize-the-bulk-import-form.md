@@ -259,12 +259,19 @@ The action label is used in the "Import Options" select.&nbsp;
 The contribution of the default bulk import is:
 
 ```
+<extension target="org.nuxeo.ecm.platform.actions.ActionService"
+  point="actions">
 
-    IMPORT_DOCUMENTS
-
-      FileManager.ImportWithMetaDataInSeam
-      bulkImport@create
-
+  <action id="dndBulkImportDocuments" link=""
+    order="10" label="label.smart.import"
+    help="desc.smart.import.file">
+    <category>IMPORT_DOCUMENTS</category>
+    <properties>
+      <property name="chainId">FileManager.ImportWithMetaDataInSeam</property>
+      <property name="layout">bulkImport@create</property>
+    </properties>
+  </action> 
+</extension>
 ```
 
 The layout displayed will be&nbsp;`bulkImport@create`&nbsp;and documents will be imported through the&nbsp;`FileManager.ImportWithMetaDataInSeam`&nbsp;chain.&nbsp;
@@ -289,12 +296,18 @@ In this example we create an import option that puts the status of your document
 2.  You can now create an xml extension to add an import option that call our chain,
 
     ```
+    <extension target="org.nuxeo.ecm.platform.actions.ActionService"
+      point="actions">
 
-        IMPORT_DOCUMENTS
-
-          ImportChain
-          ImportLayout@create
-
+      <action id="customBulkImportDocuments"
+        order="20" label="My Custom Import">
+        <category>IMPORT_DOCUMENTS</category>
+        <properties>
+          <property name="chainId">ImportChain</property>
+          <property name="layout">ImportLayout@create</property>
+        </properties>
+      </action>
+    </extension>
     ```
 
 3.  Click on&nbsp;**Save**.
@@ -307,7 +320,11 @@ In this example we create an import option that puts the status of your document
 If you want to disable the default import option (after having contributed a new one for instance), you can do it with the following contribution:
 
 ```
+<extension target="org.nuxeo.ecm.platform.actions.ActionService"
+  point="actions">
 
+  <action id="dndBulkImportDocuments" enabled="false" />
+</extension>
 ```
 
 ![]({{file name='custom_import.png'}} ?w=450,h=303,border=true)

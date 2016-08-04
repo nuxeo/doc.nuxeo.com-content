@@ -477,12 +477,14 @@ Here are different use cases when defining page providers and making it possible
 #### Page Provider without Parameters
 
 ```
-
+<coreQueryPageProvider name="latest_docs">
+  <pattern>
     SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation'
     AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted'
-
-  50
-
+  </pattern>
+  <sort column="dc:modified" ascending="false" />
+  <pageSize>50</pageSize>
+</coreQueryPageProvider>
 ```
 
 ```
@@ -493,13 +495,15 @@ http://localhost:8080/nuxeo/site/api/v1/query/latest_docs
 #### Page Provider with Parameters Referenced with the '?' Character
 
 ```
-
+<coreQueryPageProvider name="tree_children">
+  <pattern>
     SELECT * FROM Document WHERE ecm:parentId = ? AND ecm:isProxy = 0
     AND ecm:mixinType = 'Folderish' AND ecm:mixinType != 'HiddenInNavigation'
     AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted'
-
-  50
-
+  </pattern>
+  <sort column="dc:title" ascending="true" />
+  <pageSize>50</pageSize>
+</coreQueryPageProvider>
 ```
 
 ```
@@ -510,11 +514,13 @@ http://localhost:8080/nuxeo/site/api/v1/query/tree_children?queryParams=47dd6d8d
 #### Page Provider with Named Parameter in the Pattern
 
 ```
-
+<coreQueryPageProvider name="docs_by_title_and_desc">
+  <pattern>
     SELECT * FROM Document WHERE dc:title = :title AND dc:description LIKE :desc
-
-  50
-
+  </pattern>
+  <sort column="dc:title" ascending="true" />
+  <pageSize>50</pageSize>
+</coreQueryPageProvider>
 ```
 
 ```
@@ -525,9 +531,15 @@ http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_and_desc?title=mytit
 #### Page Provider with Named Parameter in WHERE Clause
 
 ```
-
-  50
-
+<coreQueryPageProvider name="docs_by_title_if_any">
+  <whereClause>
+    <predicate parameter="dc:title" operator="=">
+      <field name="title" />
+    </predicate>
+  </whereClause>
+  <sort column="dc:title" ascending="true" />
+  <pageSize>50</pageSize>
+</coreQueryPageProvider>
 ```
 
 ```
@@ -544,11 +556,19 @@ Named parameters will be, by default, treated as String values. If you need furt
 Assuming a document type NamedParamDoc, with associated schema with prefix `np`, has been defined, the following query can be performed:
 
 ```
-
-  NamedParamDoc
-
-  50
-
+<coreQueryPageProvider name="docs_by_title_complex">
+  <searchDocumentType>NamedParamDoc</searchDocumentType>
+  <whereClause>
+    <predicate parameter="dc:title" operator="=">
+      <field name="np:title" />
+    </predicate>
+    <predicate parameter="ecm:isCheckedInVersion" operator="=">
+      <field xpath="np:isCheckedIn" />
+    </predicate>
+  </whereClause>
+  <sort column="dc:title" ascending="true" />
+  <pageSize>50</pageSize>
+</coreQueryPageProvider>
 ```
 
 ```
@@ -602,17 +622,33 @@ http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_complex?np%3Atitle=m
 ### Page Provider - Elasticsearch
 
 ```
-
-  #{documentManager}
-  -1
-  20
-  SELECT * FROM Document
-
-        5
-
-        5
-
-        5
+<genericPageProvider name="aggregates_1"
+  class="org.nuxeo.elasticsearch.provider.ElasticSearchNxqlPageProvider">
+  <property name="coreSession">#{documentManager}</property>
+  <property name="maxResults">-1</property>
+  <pageSize>20</pageSize>
+  <fixedPart>SELECT * FROM Document</fixedPart>
+  <aggregates>
+    <aggregate id="source" type="terms" parameter="dc:source">
+      <field schema="advanced_search" name="source_agg" />
+      <properties>
+        <property name="size">5</property>
+      </properties>
+    </aggregate>
+    <aggregate id="coverage" type="terms" parameter="dc:coverage">
+      <field schema="advanced_search" name="coverage_agg" />
+      <properties>
+        <property name="size">5</property>
+      </properties>
+    </aggregate>
+    <aggregate id="nature" type="terms" parameter="dc:nature">
+      <field schema="advanced_search" name="nature_agg" />
+      <properties>
+        <property name="size">5</property>
+      </properties>
+    </aggregate>
+  </aggregates>
+</genericPageProvider>
 
 ```
 

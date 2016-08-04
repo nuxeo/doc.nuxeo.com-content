@@ -43,7 +43,7 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' heading="Namespace: *config*"}}
+{{#> callout type='info' heading='Namespace: *config*'}}
 
 Commands for configuring the shell.
 

@@ -94,7 +94,7 @@ This chapter presents how content views are displayed on a page.
 
 Here is a typical content view display:
 
-![Typical Content View Display]({{file name='cv_display.png'}} ?w=600,border=true "Typical Content View Display")
+![Typical Content View Display]({{file name='cv_display.png'}} ?w=600,border=true 'Typical Content View Display')
 
 ## Content View Widget Type Definition
 
@@ -127,7 +127,7 @@ If you'd like to disable or override these actions behaviour, please read [the c
 You should make sure to add the following requirement to your extension point contribution to ensure proper override:
 
 ```
-org.nuxeo.ecm.platform.contentview.jsf.actions 
+<require>org.nuxeo.ecm.platform.contentview.jsf.actions</require> 
 ```
 
 Most of the original contributions are declared in [https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-contentview-jsf/src/main/resources/OSGI-INF/actions-contrib.xml](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-contentview-jsf/src/main/resources/OSGI-INF/actions-contrib.xml).
@@ -158,6 +158,11 @@ To handle document content views categories, rendering is done using methods set
 A typical usage of content views, to render the results, would be:
 
 ```
+<nxu:set var="contentViewName" value="my_content_view_name">
+
+  <ui:decorate template="/incl/content_view.xhtml" />
+
+</nxu:set>
 
 ```
 
@@ -170,6 +175,14 @@ It is not recommended to override this template for better maintenance, but it m
 Here is the sample rendering of the search form defined on a content view named "document_content_filter":
 
 ```
+<nxu:set var="contentView"
+  value="#{contentViewActions.getContentViewWithProvider('document_content_filter')}"
+  cache="true">
+  <c:if test="#{contentView != null}">
+    <nxl:layout name="#{contentView.searchLayout.name}" mode="edit"
+      value="#{contentView.searchDocumentModel}" />
+  </c:if>
+</nxu:set>
 
 ```
 
@@ -177,35 +190,41 @@ Here is a typical way of refreshing or resetting a provider named "advanced_sear
 
 ```
 
+<div>
+  <h:commandButton value="#{messages['command.search']}"
+    action="search_results_advanced"
+    styleClass="button">
+    <nxu:actionListenerMethod value="#{contentViewActions.refresh('advanced_search')}" />
+  </h:commandButton>
+  <h:commandButton value="#{messages['command.clearSearch']}"
+    action="#{contentViewActions.reset('advanced_search')}"
+    immediate="true"
+    styleClass="button" />
+</div>
+
 ```
 
 &nbsp;
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{! Please update the label in the Content by Label macro below. }}
 
-{{#> panel heading="Related Documentation"}}
+{{#> panel heading='Related Documentation'}}
 
 *   [Content Views]({{page page='content-views'}})
 *   [Content View How-To Index]({{page page='content-view-how-to-index'}})
 *   [Custom Page Providers]({{page page='custom-page-providers'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">
+{{/panel}}</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
-{{#> panel heading="Other Related Documentation "}}
+{{#> panel heading='Other Related Documentation '}}
 
 *   [Content View]({{page space='studio' page='content-views'}}) (Studio)
 *   [Tabs]({{page space='studio' page='tabs'}}) (Studio)
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

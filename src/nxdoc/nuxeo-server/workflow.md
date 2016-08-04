@@ -258,22 +258,16 @@ To go further, read the page&nbsp;[Simple Workflow Example]({{page page='simple-
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Workflow How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Workflow How-Tos'}}
 
 *   [How to Query Workflow Objects]({{page page='how-to-query-workflow-objects'}})
 *   [How to Complete a Workflow Task Programmatically]({{page page='how-to-complete-a-workflow-task-programmatically'}})
 *   [How to Set Up a Tasks Dashboard]({{page page='how-to-set-up-a-tasks-dashboard'}})&nbsp;
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading=" Advanced Features and Understanding"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading=' Advanced Features and Understanding'}}
 
 *   [Escalation Service]({{page page='escalation-service'}})&nbsp;[](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/platform/routing/api/DocumentRoutingService.html)
 *   [Workflow Models Packaging]({{page page='workflow-models-packaging'}})
 *   [Runtime Instantiation & Execution Logic]({{page page='runtime-instantiation-and-execution-logic'}})[](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/platform/routing/api/DocumentRoutingService.html)
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

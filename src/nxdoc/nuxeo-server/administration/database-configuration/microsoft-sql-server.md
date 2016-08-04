@@ -473,4 +473,4 @@ Here are some limitations in the context of the Nuxeo Platform:
 
 * * *
 
-{{#> panel heading="Related pages"}} {{/panel}}
+{{#> panel heading='Related pages'}} {{/panel}}

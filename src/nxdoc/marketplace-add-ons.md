@@ -59,7 +59,7 @@ history:
 ---
 {{! excerpt}}
 
-This chapter presents <span>list of Nuxeo Packages available on the Nuxeo Marketplace for the latest version of the Nuxeo Platform.</span>
+This chapter presents list of Nuxeo Packages available on the Nuxeo Marketplace for the latest version of the Nuxeo Platform.
 
 {{! /excerpt}}{{! multiexcerpt name='MP-packages-list'}}
 

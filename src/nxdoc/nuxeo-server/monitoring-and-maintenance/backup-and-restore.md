@@ -152,7 +152,7 @@ elasticsearch.enabled=true
 audit.elasticsearch.enabled=true
 ```
 
-you need to backup / restore both the `${seqgen.elasticsearch.indexName}`<span>&nbsp;and</span>&nbsp;`${audit.elasticsearch.indexName}`&nbsp;Elasticsearch indexes [defined in nuxeo.conf]({{page page='elasticsearch-setup'}}), following the Elasticsearch&nbsp;[Snapshot And Restore](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-snapshots.html) documentation.
+you need to backup / restore both the `${seqgen.elasticsearch.indexName}`&nbsp;and&nbsp;`${audit.elasticsearch.indexName}`&nbsp;Elasticsearch indexes [defined in nuxeo.conf]({{page page='elasticsearch-setup'}}), following the Elasticsearch&nbsp;[Snapshot And Restore](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-snapshots.html) documentation.
 
 {{#> callout type='warning' }}
 

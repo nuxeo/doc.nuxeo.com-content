@@ -107,18 +107,8 @@ In order to translate a vocabulary, you must:
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Howtos'}}
 
-<div class="column medium-6">{{#> panel heading="Related Howtos"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Tutorials'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related Tutorials"}}
-
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

@@ -86,19 +86,16 @@ To set a content view with Drag&Drop and the **New** button:
     *   **Actions Display**: Buttons
     *   **Overall display**: Horizontal bloc
 10.  Click on **Save**.
-11.  In the second line, drop a **Content View** widget from&nbsp;<span>Featured widgets > Tab widgets.</span>
-12.  <span><span><span>In the Widget Layout Editor, set the properties as follow:</span></span></span>
+11.  In the second line, drop a **Content View** widget from&nbsp;Featured widgets > Tab widgets.
+12.  In the Widget Layout Editor, set the properties as follow:
 
-    *   <span><span><span>**Content View name**: Select the content view you want to display.
-        </span></span></span>
-13.  <span>Click on **Save**.
-    </span>
-14.  <span>Cick on **Go back to previous page** to go back on the tab definition screen.</span>
-15.  <span>Go to your tab's **Activation** tab and set the conditions (permissions, document types, etc) to make the new tab visible. Save.</span>
+    *   **Content View name**: Select the content view you want to display.
 
-<span>Now you just need to [hot-reload your Studio project]({{page space='studio' page='deploying-your-project-in-dev-mode'}}). And a new tab will be visible for the selected document types.</span>
+13.  Click on **Save**.
 
-<span>
-</span>
+14.  Cick on **Go back to previous page** to go back on the tab definition screen.
+15.  Go to your tab's **Activation** tab and set the conditions (permissions, document types, etc) to make the new tab visible. Save.
+
+Now you just need to [hot-reload your Studio project]({{page space='studio' page='deploying-your-project-in-dev-mode'}}). And a new tab will be visible for the selected document types.
 
 * * *

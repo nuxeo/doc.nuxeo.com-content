@@ -45,12 +45,16 @@ Let's see how we can contribute a new converter changing the format of an image 
 Add a new command line called&nbsp;`changeFormat` that changes the image format.
 
 ```
-
-    convert
-    #{sourceFilePath} #{targetFilePath}.#{format}
-
-    You need to install ImageMagick.
-
+<extension target="org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent"
+  point="command">
+  <command name="changeFormat">
+    <commandLine>convert</commandLine>
+    <parameterString>#{sourceFilePath} #{targetFilePath}.#{format}
+    </parameterString>
+    <installationDirective>You need to install ImageMagick.
+    </installationDirective>
+  </command>
+</extension>
 ```
 
 **<span style="color: rgb(0,0,0);">Notes on the parameters</span>**
@@ -64,9 +68,15 @@ Add a new command line called&nbsp;`changeFormat` that changes the image format.
 Add a new converter using the&nbsp;`CommandLineConverter` class to call the&nbsp;`changeFormat` command line.
 
 ```
-
-      changeFormat
-
+<extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"
+  point="converter">
+  <converter name="changeFormat"
+    class="org.nuxeo.ecm.platform.convert.plugins.CommandLineConverter">
+    <parameters>
+      <parameter name="CommandLineName">changeFormat</parameter>
+    </parameters>
+  </converter>
+</extension>
 ```
 
 ## Using the New Converter
@@ -86,7 +96,7 @@ Assuming you have a&nbsp;`BlobHolder` which is the input image and you want to c
 
 ```
 ConversionService cs = Framework.getService(ConversionService.class);
-Map parameters = new HashMap<>();
+Map<String, Serializable> parameters = new HashMap<>();
 parameters.put("targetFileName", "newImage");
 parameters.put("format", "png");
 BlobHolder result = cs.convert("changeFormat", parameters);
@@ -113,21 +123,15 @@ The output of this operation will be the converted image.
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Automatically Convert a Document to PDF]({{page page='how-to-automatically-convert-a-document-to-pdf'}})
 *   [How to Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Other Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
 *   [Conversion]({{page page='conversion'}})
 *   [Automation]({{page page='automation'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

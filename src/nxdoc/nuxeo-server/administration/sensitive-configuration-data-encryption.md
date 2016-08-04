@@ -133,7 +133,7 @@ When configuring a property with an encrypted value, the variables used in the c
 
 If you need an encrypted property to be replaced with its decrypted value (for instance for files directly read by the server), then you can use that pattern in the configuration templates:&nbsp;`${#some.encrypted.property}`.
 
-{{#> callout type='info' heading="Security recommendations"}}
+{{#> callout type='info' heading='Security recommendations'}}
 
 Absolute security does not exist. It is only a question of inventiveness, complexity and time for the attacker, against our ability to guess, prevent, detect, mitigate and respond to the threats and vulnerabilities.
 Open Source brings a better security provided that you **apply the security hotfixes** as soon as they are made available. See [Computer_security](https://en.wikipedia.org/wiki/Computer_security), [Open-source_software_security](https://en.wikipedia.org/wiki/Open-source_software_security).
@@ -181,7 +181,16 @@ $ grep ^some.sensitive.property bin/nuxeo.conf
 some.sensitive.property={$$t4Dgkiwa/LjK0Pd9cTlPkg==}
 
 # With a wrong key or without any key, the raw value is returned (ie: encrypted); here, the "--get" option is implicit
-$ bin/nuxeoctl config some.sensitive.property -q 
+$ bin/nuxeoctl config some.sensitive.property -q </dev/null
+{$$t4Dgkiwa/LjK0Pd9cTlPkg==}
+
+$ bin/nuxeoctl config some.sensitive.property -q
+Please enter the secret key:
+someValue
+
+$ bin/nuxeoctl decrypt '{$$CiuHEqqac75rGdPszYr6Pw==}' -q
+Please enter the secret key: 
+someValue
 ```
 
 &nbsp;

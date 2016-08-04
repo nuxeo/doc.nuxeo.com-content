@@ -192,7 +192,7 @@ return persistenceProvider;
 
 ...
 public DocumentRating saveRating(DocumentModel doc, String name, short rating) {
-persistenceProvider.run(true, new RunCallback() {
+persistenceProvider.run(true, new RunCallback<DocumentRating>() {
 public DocumentRating runWith(EntityManager em) {
          return this.saveRating(em, doc, name, rating);
       }
@@ -212,10 +212,16 @@ A minimal configuration should named the persistence unit and specify the data s
 ```
 
 ...
-
-            doc-rating
-
-               update
+  <extension target="org.nuxeo.ecm.core.persistence.PersistenceComponent"
+        point="hibernate">
+        <hibernateConfiguration name="doc-rating">
+            <datasource>doc-rating</datasource>
+            <properties>
+               <property name="hibernate.hbm2ddl.auto">update</property>
+            </properties>
+        </hibernateConfiguration>
+  </extension
+...
 
 ```
 
@@ -252,7 +258,20 @@ in the core module.
 
 ```
 
-		java:/doc-rating
-		...DocumentRating
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+
+	<persistence-unit name="doc-rating">
+		<jta-data-source>java:/doc-rating</jta-data-source>
+		<class>...DocumentRating</class>
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+		</properties>
+	</persistence-unit>
+</persistence>
 
 ```

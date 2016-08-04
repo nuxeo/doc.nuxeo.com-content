@@ -181,7 +181,7 @@ history:
 ---
 {{> wistia_video id='d9zcz20s7i'}}
 
-<span>Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.io/nuxeo/university/#%21/course/whats-new-in-nuxeo-platform-lts-2015) in [Nuxeo University](https://university.nuxeo.io)</span>
+Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.io/nuxeo/university/#%21/course/whats-new-in-nuxeo-platform-lts-2015) in [Nuxeo University](https://university.nuxeo.io)
 
 ## Indexing
 
@@ -219,28 +219,22 @@ Some operators need an explicit mapping to work properly. This is the case for F
 
 The security clause is automatically added to match the principal and its groups. Each document contains the list of the users or groups that have permission to browse the document.
 
-Only the simplified ACL is supported with Elasticsearch (this is the default security mode since 6.0).&nbsp;<span>Simplified ACL</span><span>&nbsp;means we only handle DENY on Everyone (block all rights) and not DENY on principals.</span>
+Only the simplified ACL is supported with Elasticsearch (this is the default security mode since 6.0).&nbsp;Simplified ACL&nbsp;means we only handle DENY on Everyone (block all rights) and not DENY on principals.
 
 &nbsp;
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Other Elasticsearch Documentation"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Elasticsearch Documentation'}}
 
 *   [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
 *   [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
 *   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Indexing related pages"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Indexing related pages'}}
 
 *   [Indexing and Query]({{page page='indexing-and-query'}})
 *   [Full-Text Queries]({{page page='full-text-queries'}})
 *   [Indexing and Querying How-To Index]({{page page='indexing-and-querying-how-to-index'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

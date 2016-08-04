@@ -83,7 +83,9 @@ This Automation trace mode can be enabled through the&nbsp;[nuxeo.conf file]({{p
 To display traces even for executions without errors, this appender is added by default in your `nuxeo-***-tomcat/lib/log4j` configuration file:
 
 ```
-
+<category name="org.nuxeo.ecm.automation.core">    
+  <priority value="INFO" />
+</category>
 ```
 
 {{/callout}}

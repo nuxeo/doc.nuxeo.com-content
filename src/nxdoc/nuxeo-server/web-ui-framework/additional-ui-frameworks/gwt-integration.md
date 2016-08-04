@@ -161,35 +161,42 @@ To achieve this you need to follow these steps:
 1\. Add the JARs of `nuxeo-webengine-gwt` and `nuxeo-distribution-tools` v. 1.1 classifier "all" to your project classpath. When using Maven, this can be done by the following POM fragment:
 
 ```
-
-  org.nuxeo.ecm.webengine
-  nuxeo-webengine-gwt
-
-  org.nuxeo.build
-  nuxeo-distribution-tools
-  all
-  1.1
-  test
+<dependency>
+  <groupId>org.nuxeo.ecm.webengine</groupId>
+  <artifactId>nuxeo-webengine-gwt</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.nuxeo.build</groupId>
+  <artifactId>nuxeo-distribution-tools</artifactId>
+  <classifier>all</classifier>
+  <version>1.1</version>
+  <scope>test</scope>
+</dependency>
 
 ```
 
 2\. Add to `war/WEB-INF/web.xml` a filter as following:
 
 ```
-
-  WebEngine Authentication Filter
-  NuxeoAuthenticationFilter
-
+<filter>
+  <display-name>WebEngine Authentication Filter</display-name>
+  <filter-name>NuxeoAuthenticationFilter</filter-name>
+  <filter-class>
   org.nuxeo.ecm.webengine.gwt.dev.NuxeoLauncher
-
-    byPassAuthenticationLog
-    true
-
-    securityDomain
-    nuxeo-webengine
-
-  NuxeoAuthenticationFilter
-  /*
+  </filter-class>
+  <init-param>
+    <param-name>byPassAuthenticationLog</param-name>
+    <param-value>true</param-value>
+  </init-param>
+  <init-param>
+    <param-name>securityDomain</param-name>
+    <param-value>nuxeo-webengine</param-value>
+  </init-param>
+</filter>
+<filter-mapping>
+  <filter-name>NuxeoAuthenticationFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+</filter-mapping>
 
 ```
 
@@ -357,12 +364,15 @@ To know if you are in development you can use `GWT.isScript()` on the client sid
 You can also configure the prefix used for redirection and enabling tracing of the redirected requests (that will be printed in the Eclipse console). This can be configured into `war/WEB-INF/web.xml` by adding some parameters to `NuxeoLauncher` filter:
 
 ```
-
-  redirectTraceContent
-  true
-
-  redirectPrefix
-  /foo/bar
+<!-- enable redirected request content tracing -->
+<init-param>
+  <param-name>redirectTraceContent</param-name>
+  <param-value>true</param-value>
+</init-param>
+<init-param>
+  <param-name>redirectPrefix</param-name>
+  <param-value>/foo/bar</param-value>
+</init-param>
 
 ```
 
@@ -371,73 +381,143 @@ If you want to trace only headers use "redirectTrace" instead of "redirectTraceC
 ## Example of a pom.xml
 
 ```
+  <properties>
+    <gwtVersion>2.0</gwtVersion>
+    <gwt.module>org.your_gwt_module</gwt.module>
+  </properties>
 
-    2.0
-    org.your_gwt_module
+  <dependencies>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>osgi-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.runtime</groupId>
+      <artifactId>nuxeo-runtime</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.common</groupId>
+      <artifactId>nuxeo-common</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.ecm.webengine</groupId>
+      <artifactId>nuxeo-webengine-gwt</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.build</groupId>
+      <artifactId>nuxeo-distribution-tools</artifactId>
+      <classifier>all</classifier>
+      <version>1.1</version>
+      <scope>test</scope>
+    </dependency>
 
-      org.osgi
-      osgi-core
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+    </dependency>
 
-      org.nuxeo.runtime
-      nuxeo-runtime
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-servlet</artifactId>
+      <version>${gwtVersion}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-user</artifactId>
+      <version>${gwtVersion}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-dev</artifactId>
+      <version>${gwtVersion}</version>
+      <scope>runtime</scope>
+    </dependency>
 
-      org.nuxeo.common
-      nuxeo-common
+   </dependencies>
 
-      org.nuxeo.ecm.webengine
-      nuxeo-webengine-gwt
+   <build>
+    <!-- gwt compiler needs the java sources to correctly work -->
+    <resources>
+      <resource>
+        <directory>src/main/java</directory>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
 
-      org.nuxeo.build
-      nuxeo-distribution-tools
-      all
-      1.1
-      test
-
-      javax.servlet
-      servlet-api
-
-      com.google.gwt
-      gwt-servlet
-      ${gwtVersion}
-      compile
-
-      com.google.gwt
-      gwt-user
-      ${gwtVersion}
-      provided
-
-      com.google.gwt
-      gwt-dev
-      ${gwtVersion}
-      runtime
-
-        src/main/java
-
-        src/main/resources
-
-        org.apache.maven.plugins
-        maven-eclipse-plugin
-
-          false
-
-            com.google.gwt.eclipse.core.gwtNature
-            com.google.gdt.eclipse.core.webAppNature
-
-              com.google.gwt.eclipse.core.gwtProjectValidator
-
-              com.google.gdt.eclipse.core.webAppProjectValidator
-
-            org.eclipse.jdt.launching.JRE_CONTAINER
-            com.google.gwt.eclipse.core.GWT_CONTAINER
-
-          war/WEB-INF/classes
-
-        org.apache.maven.plugins
-        maven-antrun-plugin
-
-            compile-js
-            process-classes
-
-              run
+    <plugins>
+      <!-- correctly generate eclipse files with GWT nature -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <configuration>
+          <downloadSources>false</downloadSources>
+          <additionalProjectnatures>
+            <projectnature>com.google.gwt.eclipse.core.gwtNature</projectnature>
+            <projectnature>com.google.gdt.eclipse.core.webAppNature</projectnature>
+          </additionalProjectnatures>
+          <additionalBuildcommands>
+            <buildCommand>
+              <name>com.google.gwt.eclipse.core.gwtProjectValidator</name>
+              <arguments>
+              </arguments>
+              <name>com.google.gdt.eclipse.core.webAppProjectValidator</name>
+              <arguments>
+              </arguments>
+            </buildCommand>
+          </additionalBuildcommands>
+          <classpathContainers>
+            <classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER</classpathContainer>
+            <classpathContainer>com.google.gwt.eclipse.core.GWT_CONTAINER</classpathContainer>
+          </classpathContainers>
+          <buildOutputDirectory>war/WEB-INF/classes</buildOutputDirectory>
+        </configuration>
+      </plugin>
+      <!--
+        After compiling java sources compile java to JS using GWT compiler. This
+        must be done process-classes after compile step finished to be sure we
+        have all the needed files in classes directory. I am using ant for this
+        since the maven exec plugin is not able to run correctly this
+      -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>compile-js</id>
+            <phase>process-classes</phase>
+            <configuration>
+              <tasks>
+                <property name="compile_classpath" refid="maven.compile.classpath" />
+                <property name="runtime_classpath" refid="maven.runtime.classpath"/>
+                <java failonerror="true" fork="true" classname="com.google.gwt.dev.Compiler">
+                  <classpath>
+                    <pathelement location="${project.build.outputDirectory}" />
+                    <pathelement path="${compile_classpath}" />
+                    <pathelement path="${runtime_classpath}" />
+                  </classpath>
+                  <jvmarg value="-Xmx256M" />
+                  <jvmarg value="${gwt.arg}" />
+                  <!--arg value="-style" />
+                  <arg value="DETAILED" /-->
+                  <!-- to speed up compiler
+                  <arg value="-draftCompile" /-->
+                  <arg value="-war" />
+                  <arg value="${project.build.outputDirectory}/gwt-war" />
+                  <arg value="${gwt.module}" />
+                </java>
+              </tasks>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
 ```

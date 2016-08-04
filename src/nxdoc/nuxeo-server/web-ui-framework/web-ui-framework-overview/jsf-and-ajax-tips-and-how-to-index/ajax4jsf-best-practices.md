@@ -112,7 +112,7 @@ TODO: add an example here
 
 Also see for reference:&nbsp;[http://www.jroller.com/a4j/entry/ajax_regions_and_output_panels](http://www.jroller.com/a4j/entry/ajax_regions_and_output_panels)
 
-## <span>Use Attribute layout="block" on [a4j:outputPanel](http://a4joutputPanel) Tag</span>
+## Use Attribute layout="block" on [a4j:outputPanel](http://a4joutputPanel) Tag
 
 If the&nbsp;[`a4j:outputPanel`](http://a4joutputPanel)&nbsp;tag will contain divs or tables, for instance, you should use attribute&nbsp;`layout="block"`&nbsp;so that it's displayed using a&nbsp;`div`&nbsp;instead of a&nbsp;`span`, as a span tag containing divs or tables will produce invalid HTML.
 
@@ -129,6 +129,19 @@ For instance the&nbsp;`SortActionsBean`&nbsp;has been improved to allow the call
 Hence the sort title controls can be ajaxified in the following way:
 
 ```
+<a4j:commandLink id="title" action="#{sortActions.repeatSearch}"
+              rendered="#{provider.sortable}" reRender="filterResultTable" >
+      <h:outputText value="#{messages['label.content.header.title']}" />
+      <f:param name="providerName" value="#{providerName}" />
+      <f:param name="sortColumn" value="dc:title" />
+      <f:param name="invalidateSeamVariables" value="filterSelectModel" />
+      <h:panelGroup rendered="#{provider.sortInfo.sortColumn == 'dc:title' }" 
+        <h:graphicImage value="/icons/arrow_down.gif"
+            rendered="#{provider.sortInfo.sortAscending}" />
+        <h:graphicImage value="/icons/arrow_up.gif"
+            rendered="#{!provider.sortInfo.sortAscending}" />
+      </h:panelGroup>
+</a4j:commandLink>
 
 ```
 
@@ -152,9 +165,7 @@ There seems to be bugs remaining with this method: it works most of the time but
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [JSF and Javascript ]({{page page='jsf-and-javascript'}})
 *   [undefined]({{page}})
@@ -162,15 +173,11 @@ There seems to be bugs remaining with this method: it works most of the time but
 *   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [JavaScript Client]({{page page='javascript-client'}})
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Web UI Framework Overview]({{page page='web-ui-framework-overview'}})
 *   [Web UI Limitations]({{page page='web-ui-limitations'}})&nbsp;
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

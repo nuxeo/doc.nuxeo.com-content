@@ -182,13 +182,13 @@ history:
         version: '1'
 
 ---
-For the general upgrade process, see the <span class="confluence-link">[How to Upgrade Nuxeo]({{page page='upgrading-the-nuxeo-platform'}})</span> page.
+For the general upgrade process, see the [How to Upgrade Nuxeo]({{page page='upgrading-the-nuxeo-platform'}}) page.
 
 {{! multiexcerpt name='from-5.8-to-6.0'}}
 
 You may also be interested in the&nbsp;[6.0 Release Notes](http://nuxeo.github.io/releasenotes/6.0/).
 
-This chapter highlights some major information about upgrade from Nuxeo Platform 5.8 LTS to Nuxeo Platform 6.0 LTS. We strongly encourage you to also have a quick read of the detailed list of<span>&nbsp;</span>[upgrade notes for 6.0](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%225.9.1%22%2C%20%225.9.2%22%2C%20%225.9.3%22%2C%20%225.9.4%22%2C%20%225.9.5%22%2C%20%226.0%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC).
+This chapter highlights some major information about upgrade from Nuxeo Platform 5.8 LTS to Nuxeo Platform 6.0 LTS. We strongly encourage you to also have a quick read of the detailed list of[upgrade notes for 6.0](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%225.9.1%22%2C%20%225.9.2%22%2C%20%225.9.3%22%2C%20%225.9.4%22%2C%20%225.9.5%22%2C%20%226.0%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC).
 
 ## 1.&nbsp;Updating Your Target Platform in Studio to Nuxeo Platform 6.0
 
@@ -255,14 +255,19 @@ Tooltip library has been changed from jQuery tooltip to tipsy, see [NXP-13842](h
 If you were using this library, you should remove calls similar too:
 
 ```
-
+<script>
   jQuery(document).ready(function() {
     jQuery(".widgetHelpLabel").tooltip({relative: true, position: 'bottom center'});
   });
-
+</script>
 ```
 
 To enable a tooltip on any HTML element, specify the tooltip content in the 'title' attribute and add 'tipsyShow' css style class, for example:
+
+```
+<h:outputText value="#{myLabel}"
+  styleClass="tipsyShow tipsyGravityNW" />
+```
 
 ### Migrating your Security Policy or Versioning Service
 

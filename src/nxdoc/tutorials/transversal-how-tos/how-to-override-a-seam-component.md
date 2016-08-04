@@ -115,19 +115,13 @@ In this example, we overrode the [startupHelper](https://github.com/nuxeo/nuxeo-
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Web UI Framework Overview]({{page page='web-ui-framework-overview'}})
 *   [Web UI Limitations]({{page page='web-ui-limitations'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

@@ -223,23 +223,17 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 ## Look (Logo, Colors, Fonts, Etc.)
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 ![]({{file name='logo.png'}} ?w=350,border=true)
 
 &nbsp;
 
-</div>
-
-<div class="column medium-6">
+</div><div class="column medium-6">
 
 ![]({{file name='logo_studio.png'}} ?w=450,border=true)
 
-</div>
-
-</div>
+</div></div>
 
 **Related How-Tos**
 
@@ -247,21 +241,15 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 ## Document Creation Screen
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 ![]({{file name='FileCreateScreen.png'}} ?w=400,border=true)
 
-</div>
-
-<div class="column medium-6">
+</div><div class="column medium-6">
 
 ![]({{file name='FileCreateScreen_studio.png'}} ?w=400,border=true)
 
-</div>
-
-</div>
+</div></div>
 
 **Related How-Tos**
 
@@ -269,21 +257,15 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 ## Metadata View of a Document on the Summary Screen
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 ![]({{file name='metadata_view.png'}} ?w=400,border=true)
 
-</div>
-
-<div class="column medium-6">
+</div><div class="column medium-6">
 
 ![]({{file name='metadata_view_studio.png'}} ?w=400,border=true)
 
-</div>
-
-</div>
+</div></div>
 
 **Related How-Tos**
 
@@ -291,21 +273,15 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 ## Document Edit Screen
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 ![]({{file name='metadata_edit.png'}} ?w=400,border=true)
 
-</div>
-
-<div class="column medium-6">
+</div><div class="column medium-6">
 
 ![]({{file name='metadata_edit_studio.png'}} ?w=400,border=true)
 
-</div>
-
-</div>
+</div></div>
 
 **Related How-Tos**
 
@@ -313,21 +289,15 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 ## Summary Tab
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 ![]({{file name='Summary_tab.png'}} ?w=400,border=true)
 
-</div>
-
-<div class="column medium-6">
+</div><div class="column medium-6">
 
 ![]({{file name='Summary_tab_studio.png'}} ?w=400,border=true)
 
-</div>
-
-</div>
+</div></div>
 
 **Related How-Tos**
 
@@ -337,21 +307,15 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 Choosing what tabs should be displayed or not is done on a per document type basis.
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 ![]({{file name='filtering_tabs.png'}} ?w=400,border=true)
 
-</div>
-
-<div class="column medium-6">
+</div><div class="column medium-6">
 
 ![]({{file name='FileCreateScreen_studio.png'}} ?w=400,border=true)
 
-</div>
-
-</div>
+</div></div>
 
 **Related How-Tos**
 
@@ -359,21 +323,15 @@ Choosing what tabs should be displayed or not is done on a per document type bas
 
 ## Search Tab
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 ![]({{file name='search_tab.png'}} ?w=400,border=true)
 
-</div>
-
-<div class="column medium-6">
+</div><div class="column medium-6">
 
 ![]({{file name='search_tab_studio.png'}} ?w=400,border=true)
 
-</div>
-
-</div>
+</div></div>
 
 **Related How-Tos**
 
@@ -381,23 +339,17 @@ Choosing what tabs should be displayed or not is done on a per document type bas
 
 ## Default Columns of a Folder, a Workspace or a Custom Container
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 ![]({{file name='containerContentview.png'}} ?w=400,border=true)
 
-</div>
-
-<div class="column medium-6">
+</div><div class="column medium-6">
 
 ![]({{file name='containerContentview_studio1.png'}} ?w=400,border=true)
 
 ![]({{file name='containerContentview_studio2.png'}} ?w=400,border=true)
 
-</div>
-
-</div>
+</div></div>
 
 **Related How-Tos**
 
@@ -405,23 +357,17 @@ Choosing what tabs should be displayed or not is done on a per document type bas
 
 ## Drop-down Lists, like Coverage or Subjects
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 ![]({{file name='Vocabulary.png'}} ?w=300,border=true,thumbnail=true)
 
-</div>
-
-<div class="column medium-6">
+</div><div class="column medium-6">
 
 ![]({{file name='Vocabulary_studio.png'}} ?w=400,border=true)
 
 ![]({{file name='Vocabulary_studio2.png'}} ?w=400,border=true)
 
-</div>
-
-</div>
+</div></div>
 
 **Related How-Tos**
 
@@ -429,21 +375,15 @@ Choosing what tabs should be displayed or not is done on a per document type bas
 
 ## Workflows
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 ![]({{file name='workflow.png'}} ?w=400,h=259,border=true)
 
-</div>
-
-<div class="column medium-6">
+</div><div class="column medium-6">
 
 ![]({{file name='workflow_studio.png'}} ?w=400,border=true)
 
-</div>
-
-</div>
+</div></div>
 
 **Related How-Tos**
 

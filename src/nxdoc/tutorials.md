@@ -105,11 +105,7 @@ history:
 
 [New to Nuxeo? Start Learning Nuxeo Platform with Nuxeo University Program!](https://university.nuxeo.io/)
 
-{{/panel}}
-
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+{{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Quick Start Series
 
@@ -117,9 +113,7 @@ history:
 *   [From the Web UI to Nuxeo Studio](http://doc.nuxeo.com/x/VANc)
 *   [Quick Overview]({{page page='quick-overview'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Educational
 
@@ -127,8 +121,6 @@ history:
 *   [Design Tips](http://doc.nuxeo.com/x/Eg7F)
 *   [Understand Expression and Scripting Languages Used in Nuxeo](http://doc.nuxeo.com/x/L4PZ)
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>
 
 &nbsp;

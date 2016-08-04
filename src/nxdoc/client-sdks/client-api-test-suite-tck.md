@@ -166,9 +166,6 @@ history:
         version: '1'
 
 ---
-**<span style="color: rgb(255,0,0);">
-</span>**<span style="color: rgb(255,0,0);">&nbsp;</span>
-
 {{#> callout type='note' }}
 
 This page is a work in progress.
@@ -204,8 +201,8 @@ Only the first part is strictly necessary.
 7.  Specify that `dublincore` schema should be fetched.
 8.  Verify that:
 
-    *   <span>the folder has two children,</span>
-    *   <span>the second child has the correct</span> `<span>[dc:description](http://dcdescription)</span>` <span>and</span> `<span>[dc:subjects](http://dcsubjects)</span>` <span>.</span>
+    *   the folder has two children,
+    *   the second child has the correct [`dc:description`](http://dcdescription) and [`dc:subjects`](http://dcsubjects) .
 
 ##### Java Implementation
 
@@ -569,25 +566,25 @@ Date: Thu, 25 Jul 2013 14:20:03 GMT
 ##### Scenario
 
 1.  Create a Folder on / (`Document.Create`).
-2.  <span>Create three Files children.</span>
-3.  <span>Call&nbsp;`Document.PageProvider`&nbsp;with "`select * from Document where&nbsp;`</span> `<span><span>ecm:parentId</span></span> `<span>`&nbsp;= ?`" with</span>
+2.  Create three Files children.
+3.  Call&nbsp;`Document.PageProvider`&nbsp;with "`select * from Document where&nbsp;` `ecm:parentId` `&nbsp;= ?`" with
 
-    *   <span>queryParams = Folder uuid&nbsp;</span>
-    *   <span>pageSize = 2</span>
-    *   <span>page = 1</span>
-4.  <span>Verify:</span>
+    *   queryParams = Folder uuid&nbsp;
+    *   pageSize = 2
+    *   page = 1
+4.  Verify:
 
-    *   <span>pageCount=2</span>
-    *   <span>the page contains two docs.</span>
+    *   pageCount=2
+    *   the page contains two docs.
 5.  Call&nbsp;`Document.PageProvider`&nbsp;with "`select * from Document where&nbsp;` `ecm:parentId` `&nbsp;= ?`" with
 
-    *   <span>queryParams = Folder uuid&nbsp;</span>
-    *   <span>pageSize = 2</span>
-    *   <span>page = 2</span>
-6.  <span>Verify:</span>
+    *   queryParams = Folder uuid&nbsp;
+    *   pageSize = 2
+    *   page = 2
+6.  Verify:
 
-    *   <span>pageCount=2</span>
-    *   <span>the page contains one document.</span>
+    *   pageCount=2
+    *   the page contains one document.
 
 ##### Java Implementation
 
@@ -685,11 +682,11 @@ Date: Thu, 25 Jul 2013 15:24:47 GMT
 ##### Scenario
 
 1.  Create a Folder on / (`Document.Create`).
-2.  <span>Call&nbsp;`FileManager.Import`&nbsp;passing a testText.txt file and setting context to Folder.</span>
-3.  <span>Call&nbsp;`FileManager.Import`&nbsp;passing a testBlob.bin binary file and setting context to Folder.</span>
-4.  <span>Verify that:</span>
+2.  Call&nbsp;`FileManager.Import`&nbsp;passing a testText.txt file and setting context to Folder.
+3.  Call&nbsp;`FileManager.Import`&nbsp;passing a testBlob.bin binary file and setting context to Folder.
+4.  Verify that:
 
-    1.  <span>two documents are created, of types File and Note.</span>
+    1.  two documents are created, of types File and Note.
 
 ##### Java Implementation
 
@@ -722,7 +719,7 @@ Content-Disposition: attachment;
     filename=automation-test-5983650304333926591.xml
 Content-ID: input
 Content-Length: 16
-mydoc
+<doc>mydoc</doc>
 ------=_Part_0_1227289322.1374766516160--
 
 HTTP/1.1 200 OK
@@ -849,14 +846,14 @@ Date: Thu, 25 Jul 2013 15:35:16 GMT
 
 1.  Upload two blobs via batch manager:
 
-    *   <span>testText.txt,</span>
-    *   <span>testBlob.bin.</span>
-2.  <span>Call&nbsp;`FileManager.Import`&nbsp;via batch API</span>:
+    *   testText.txt,
+    *   testBlob.bin.
+2.  Call&nbsp;`FileManager.Import`&nbsp;via batch API:
 
-    *   <span>set currentDocument to /</span>
-3.  <span>Verify that:</span>
+    *   set currentDocument to /
+3.  Verify that:
 
-    *   <span>two documents are created, of types File and Note.</span>
+    *   two documents are created, of types File and Note.
 
 ##### Java Implementation
 
@@ -871,21 +868,21 @@ XXX Commented HTTP capture
 ##### Scenario
 
 1.  Create a File on / (`Document.Create`).
-2.  <span>Upload one blob via batch manager</span>:
+2.  Upload one blob via batch manager:
 
-    1.  <span>testText.txt.</span>
-3.  <span>Call&nbsp;`Document.Update`&nbsp;with two properties</span>:
+    1.  testText.txt.
+3.  Call&nbsp;`Document.Update`&nbsp;with two properties:
 
-    *   `<span>dc:description</span>`
-    *   `<span>file:content</span>` <span>: reference Blob 1 from batch.</span>
-4.  <span>Fetch the Document</span>:
+    *   `dc:description`
+    *   `file:content` : reference Blob 1 from batch.
+4.  Fetch the Document:
 
-    *   <span>Specify to fetch the `dublincore` schema.</span>
-5.  <span>Download the blob.</span>
-6.  <span>Verify that:</span>
+    *   Specify to fetch the `dublincore` schema.
+5.  Download the blob.
+6.  Verify that:
 
-    *   <span>Description was updated.</span>
-    *   <span>Blob exists and contains the expected text.</span>
+    *   Description was updated.
+    *   Blob exists and contains the expected text.
 
 ##### Java Implementation
 
@@ -902,17 +899,17 @@ XXX Commented Http capture
 ##### Scenario
 
 1.  Create a File on / (`Document.Create`).
-2.  <span>Call&nbsp;`Document.Update`:</span>
+2.  Call&nbsp;`Document.Update`:
 
-    1.  `<span>dc:description</span>` <span>,</span> <span>&nbsp;</span>
-    2.  `<span>dc:subjects</span>` <span>,</span> <span>&nbsp;</span>
-    3.  <span>some complex property.</span>
-3.  <span>Fetch the Document</span>:
+    1.  `dc:description` ,
+    2.  `dc:subjects` ,
+    3.  some complex property.
+3.  Fetch the Document:
 
-    1.  <span>specify to fetch all schemas.</span>
-4.  <span>Verify that:</span>
+    1.  specify to fetch all schemas.
+4.  Verify that:
 
-    1.  <span>document content is ok (scalar, list and complex).</span>
+    1.  document content is ok (scalar, list and complex).
 
 ##### Java Implementation
 
@@ -1019,17 +1016,17 @@ Date: Thu, 25 Jul 2013 15:45:25 GMT
 ##### Scenario
 
 1.  Create a Folder on / (`Document.Create`).
-2.  <span>Create three Files children.</span>
-3.  <span>Call `Resultset.PageProvider` with "`select&nbsp;`</span> `<span>dc:title</span> <span>,&nbsp;</span> <span>dc:desciption</span> <span>,&nbsp;</span> <span>ecm:type</span> <span>&nbsp;from Document where&nbsp;</span> <span>ecm:parentId</span> `<span>`&nbsp;= ?`" with:</span>
+2.  Create three Files children.
+3.  Call `Resultset.PageProvider` with "`select&nbsp;` `dc:title ,&nbsp; dc:desciption ,&nbsp; ecm:type &nbsp;from Document where&nbsp; ecm:parentId` `&nbsp;= ?`" with:
 
-    1.  <span>`queryParams` = Folder uuid,</span>
-    2.  <span>`pageSize` = 2,</span>
-    3.  <span>`page` = 1.</span>
-4.  <span>Verify that:</span>
+    1.  `queryParams` = Folder uuid,
+    2.  `pageSize` = 2,
+    3.  `page` = 1.
+4.  Verify that:
 
-    1.  <span>`pageCount`=2</span>
-    2.  <span>the page contains two records,</span>
-    3.  <span>the content of returned recordset is correct.</span>
+    1.  `pageCount`=2
+    2.  the page contains two records,
+    3.  the content of returned recordset is correct.
 
 ##### Java Implementation
 
@@ -1044,19 +1041,19 @@ XXX Commented HTTP capture
 ##### Scenario
 
 1.  Create a client side 'Business' bean (simple POJO with getter/setter on properties).
-2.  <span>Register</span> the POJO in client Marshaling engine.
-3.  <span>Call `Business.BusinessCreateOperation` with:</span>
+2.  Register the POJO in client Marshaling engine.
+3.  Call `Business.BusinessCreateOperation` with:
 
     *   two properties:
 
-        *   `<span>name</span>` <span>,</span>
-        *   `<span>parentPath</span>` <span>: reference the parent of the document to create,</span>
+        *   `name` ,
+        *   `parentPath` : reference the parent of the document to create,
     *   one input:
 
         *   the POJO itself.
 4.  Get the returned POJO (with id set).
 5.  Update the POJO title.
-6.  Call <span>`Business.BusinessUpdateOperation`</span> with:
+6.  Call `Business.BusinessUpdateOperation` with:
 
     *   one property:
 
@@ -1169,7 +1166,7 @@ Date: Thu, 25 Jul 2013 15:45:45 GMT
 This compatibility matrix focus on two aspects :
 
 *   **protocol compliance**: capability to achieve simple usage scenario as defined inside the tests,
-*   <span>**convenience features**: additional conveniant features that may be provided on top of JSON-RPC library.</span>
+*   **convenience features**: additional conveniant features that may be provided on top of JSON-RPC library.
 
 #### Protocol Compliance
 
@@ -1178,8 +1175,8 @@ Automation being a simple JSON-RPC, you should be able to do everything from eve
 Hence for each test scenario, the target client library will be qualified with one of the three statuses:
 
 *   **Ok**: built-in feature,
-*   <span>**Easy**: test can be achieved with minor tweak (like format JSON partially by hand ...),</span>
-*   <span>**Fail**: feature is not possible or complex to use.</span>
+*   **Easy**: test can be achieved with minor tweak (like format JSON partially by hand ...),
+*   **Fail**: feature is not possible or complex to use.
 
 #### Convenience Features
 

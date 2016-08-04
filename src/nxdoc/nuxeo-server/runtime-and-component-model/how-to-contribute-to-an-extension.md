@@ -186,29 +186,29 @@ Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](htt
     Thus, you can have:
 
     ```
-     ...
+    <extension point ="" target =""> ...</extension>
     ```
 
     or
 
     ```
-     component name
-     ...
+    <require> component name</require>
+    <extension point ="" target =""> ...</extension>
     ```
 
     or
 
     ```
-     ...
-    ...
+    <extension point ="" target =""> ...</extension>
+    <extension  point ="..." target="...">...</extension>
     ```
 
     or
 
     ```
-     component name
-     component name bis
-    ...
+    <require> component name</require>
+    <require> component name bis</require>
+    <extension  point ="..." target="...">...</extension>
     ```
 
     etc.
@@ -217,7 +217,7 @@ Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](htt
 
 Contributing to an extension using Nuxeo requires more steps that using Nuxeo Studio.
 
-Here we assume that you have <span class="confluence-link">installed Nuxeo IDE</span> and follow the [Getting Started guide]({{page page='getting-started-with-nuxeo-ide'}}).
+Here we assume that you have installed Nuxeo IDE and follow the [Getting Started guide]({{page page='getting-started-with-nuxeo-ide'}}).
 
 ### Creating Your XML Extension in Nuxeo IDE
 
@@ -226,11 +226,31 @@ Once you have found the extension point you want to contribute to:
 1.  Create a file `myproject-servicewhereIcontribute-contribution.xml` into the directory `src/main/resources/OSGI-INF/` of your project.
 2.  Declare an empty component into this file, like that:
 
-    {{#> callout type='note' heading="Naming your component"}}
+    ```
+    <?xml version="1.0"?>
+    <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
+
+    </component>
+    ```
+
+    {{#> callout type='note' heading='Naming your component'}}
     *   In Nuxeo, we follow this naming way `org.mycompany.myproject.extension.point.where.we.contribute.contribution`.
         You can follow your way but be careful to avoid conflicts.
     *   You must give a **unique name** for your component. If the name of your package is not unique it will **not be deployed**.{{/callout}}
 3.  Add your contribution that express the configuration you want in the component XML fragment. You get something like:
+
+    ```
+    <?xml version="1.0"?>
+    <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
+
+           <!-- target and point value is given by the extension point definition -->
+            <extension target="name.of.the.component.where.the.service.isdeclared" point="pointNameIntoThisComponent">
+              <!-- here you put your configuration XML fragment
+              ...
+            </extension>
+    </component>
+
+    ```
 
 ### Declaring Your Contribution into Your Bundle
 
@@ -273,14 +293,22 @@ Components deployment is linear, so if you want to override an existing configur
 
 **Follow the steps for your preferred tool (see above) combined the specific steps below.**
 
-1.  Identify this component: using Nuxeo Explorer, go to the extension point definition (see <span class="confluence-link">[the first section]({{page}})</span> ).
+1.  Identify this component: using Nuxeo Explorer, go to the extension point definition (see [the first section]({{page}}) ).
 2.  Click on the contribution you want to override.
 3.  Copy the name of the component (value after **In component**).
 4.  Paste it in your component into a `<require>` item.
     You will have something like that:
 
     ```
+    <?xml version="1.0"?>
+    <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
+       <require>name.of.the.component.you.want.to.override</require>
 
-       name.of.the.component.you.want.to.override
+       <!-- target and point value is given by the extension point definition -->
+       <extension target="name.of.the.component.where.the.service.isdeclared" point="pointNameIntoThisComponent">
+         <!-- here you put your configuration XML fragment
+            ...
+       </extension>
+    </component>
 
     ```

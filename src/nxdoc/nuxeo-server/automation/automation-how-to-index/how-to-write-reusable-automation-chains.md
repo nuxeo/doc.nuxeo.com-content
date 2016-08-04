@@ -162,21 +162,15 @@ If you want to do it for each life cycle changes (making it obsolete, or draft, 
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{{multiexcerpt 'popular-how-tos' page='How to Create an Automation Chain'}}}
 
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
 *   [Content Automation Concepts]({{page page='content-automation-concepts'}})
 *   [Life cycle in Nuxeo Studio]({{page space='studio' page='life-cycle'}})
 *   [User Actions in Nuxeo Studio]({{page space='studio' page='user-actions'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

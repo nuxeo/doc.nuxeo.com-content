@@ -174,10 +174,22 @@ Additional datasources can be used, for instance when defining a Directory you h
 
 These datasources are all defined in Tomcat `nxserver/config/datasources-config.xml` (which is generated from `templates/common-base/nxserver/config/datasources-config.xml.nxftl`). The datasources are defined like this:
 
-So, by default they are actually linked to the common datasource `${nuxeo.db.commonds}`:
+```
+<ResourceLink name="jdbc/NuxeoDS" global="jdbc/nuxeo" type="javax.sql.DataSource" />
+<ResourceLink name="jdbc/nxsqldirectory" global="jdbc/nuxeo" type="javax.sql.DataSource" />
 
 ```
 
+So, by default they are actually linked to the common datasource `${nuxeo.db.commonds}`:
+
+```
+<datasource name="${nuxeo.db.commonds}" driverClassName="${nuxeo.db.driver}"
+ maxPoolSize="${nuxeo.db["max-pool-size"]}" minPoolSize="${nuxeo.db["min-pool-size"]}"
+ blockingTimeoutMillis="${nuxeo.db["blocking-timeout-millis"]}"
+ url="${nuxeo.db.jdbc.url}" validationQuery="${nuxeo.db.validationQuery}"
+ username="${nuxeo.db.user}" password="${nuxeo.db.password}"
+ accessToUnderlyingConnectionAllowed="true" >
+ </datasource>
 ```
 
 The properties used in this file come from the ones defined in `bin/nuxeo.conf` and the template chosen for your database.
@@ -191,6 +203,9 @@ You may need to access to multiple databases and then require to run the connect
 When you're deploying Nuxeo as a static WAR, you may want to share the database connections with other applications. You should then configure the datasource server side such as a global resource in Tomcat and instruct Nuxeo to acquire a connection from that pool instead of opening a new JDBC connection.
 
 ```
+<datasource name="${nuxeo.db.commonds}" datasource="jdbc/your-global-datasource"
+ maxPoolSize="${nuxeo.db["max-pool-size"]}" minPoolSize="${nuxeo.db["min-pool-size"]}"
+ blockingTimeoutMillis="${nuxeo.db["blocking-timeout-millis"]}"/>
 
 ```
 
@@ -201,7 +216,7 @@ By default the idle connections are indefinitely maintained in the pool, which c
 Copy the template&nbsp;`templates/common-base/nxserver/config/datasources-config.xml.nxftl`&nbsp;to the&nbsp;`custom`&nbsp;template folder and change the datasource definition to add this line:
 
 ```
-
+<datasource ... idleTimeoutMinutes="30" ...>
 ```
 
 ## Recovering from Connection Errors
@@ -223,12 +238,14 @@ The parameter to manage the connection error is&nbsp; `sqlExceptionSorter`. Four
 By the default, the&nbsp;`DatasourceExceptionSorter` is configured. It enables you to contribute fatal SQL codes for&nbsp;a defined database. Each sorter contribution is identified uniquely by its&nbsp;`id`. You could override or extend a `sorter`&nbsp;configuration using the `override`&nbsp;attribute. Once a &nbsp;SQL exception is&nbsp;thrown, a `sorter`&nbsp;configuration is selected by comparing the exception stack trace packages with the&nbsp;`path`&nbsp;attribute.&nbsp;If a package in the stack trace is starting by the `path`&nbsp;value, this `sorter`&nbsp;configuration is selected. If no `sorter`&nbsp;configuration&nbsp;is matching the trace, the default `sorter`&nbsp;configuration identified by the empty string is selected.&nbsp;The contributed SQL codes could be a SQL&nbsp;class code or a complete SQL code. For easier configuration, you could use the enumeration labels&nbsp; for the standard [SQL class code](http://community.nuxeo.com/api/nuxeo/8.3/javadoc/org/nuxeo/runtime/datasource/DatasourceExceptionSorter.Classcode.html) .
 
 ```
-
-      ConnectionException
-      RemoteDatabaseAccess
-      SystemError
-      90001
-
+<extension target="org.nuxeo.runtime.datasource" point="sorter">
+    <sorter id="adb" path="org.adb" override="false">
+      <code>ConnectionException</code>
+      <code>RemoteDatabaseAccess</code>
+      <code>SystemError</code>
+      <code>90001</code>
+    </sorter>
+  </extension>
 ```
 
 &nbsp;
@@ -236,7 +253,7 @@ By the default, the&nbsp;`DatasourceExceptionSorter` is configured. It enables y
 You can also define your own exception sorter by implementing `[org.tranql.connector.ExceptionSorter](https://javadocs.com/docs/org.tranql/tranql-connector/1.6/org/tranql/connector/ExceptionSorter.java) `.&nbsp; Copy the template&nbsp;`templates/common-base/nxserver/config/datasources-config.xml.nxftl`&nbsp;to the&nbsp;`custom`&nbsp;template folder and change the datasource definition to add this line:
 
 ```
-
+<datasource ... sqlExceptionSorter="org.tranql.connector.jdbc.KnownSQLStateExceptionSorter" ...>
 ```
 
 * * *

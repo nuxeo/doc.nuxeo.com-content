@@ -345,7 +345,7 @@ history:
 
 The Nuxeo Automation Server module provides a REST API to execute operations on a Nuxeo server.
 
-{{! /excerpt}}{{#> callout type='info' heading="About Automation"}}
+{{! /excerpt}}{{#> callout type='info' heading='About Automation'}}
 
 To know more about Content Automation, you can read the [Automation documentation]({{page page='automation'}}) in other sections of this space. This section only deals with the REST exposition of operations and chains.
 
@@ -365,7 +365,7 @@ By default all the chains and operations that are not UI related are accessible 
 
 ### Example - Getting the Automation Service.
 
-Let say the service is bound to [http://localhost:8080/<span>nuxeo/site/</span>automation](http://localhost:8080/nuxeo/site/automation). Then to get the service description you should do:
+Let say the service is bound to [http://localhost:8080/nuxeo/site/automation](http://localhost:8080/nuxeo/site/automation). Then to get the service description you should do:
 
 ```
 GET http://localhost:8080/nuxeo/site/automation

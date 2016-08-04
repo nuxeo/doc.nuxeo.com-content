@@ -201,9 +201,17 @@ public class NuxeoSampleWSImpl implements NuxeoSampleWS {
 ## WebService End Point and URL Mapping
 
 Finally you have to define your WebService as an end point mapped to an URL of the Nuxeo server so it can be accessed in HTTP.
-This is done by adding a contribution to the `endpoint` extension point of the `<span>org.nuxeo.ecm.platform.ws.WSEndpointManager</span>`&nbsp;component in your Nuxeo project.
+This is done by adding a contribution to the `endpoint` extension point of the `org.nuxeo.ecm.platform.ws.WSEndpointManager`&nbsp;component in your Nuxeo project.
 
 **Tomcat and JBoss 4.x distributions**
+
+```
+<extension target="org.nuxeo.ecm.platform.ws.WSEndpointManager" point="endpoint">
+  <endpoint name="nuxeosample"
+    implementor="org.nuxeo.ecm.samples.ws.server.NuxeoSampleWSImpl"
+    address="/nuxeosample" />
+</extension>
+```
 
 Once your plugin is deployed in the Nuxeo server, the Nuxeo sample WebService WSDL should be available at [http://server:port/nuxeo/webservices/nuxeosample?wsdl](http://serverport).
 
@@ -213,9 +221,9 @@ Since we moved to [Apache CXF](http://cxf.apache.org/) as a WebService provider,
 
 Here are the steps to do that in a Nuxeo way:
 
-1.  Add the following dependencies <span>`spring-core`, `spring-beans`, `spring-context`, `spring-aop`, `spring-expression` and&nbsp; `spring-asm`. Ideally, using a [Nuxeo Package]({{page page='creating-nuxeo-packages'}}).</span>
-2.  <span>Deploy your `cxf.xml` file in <span>`nuxeo.war/WEB-INF/classes`, using the `deployment-fragment.xml`.</span></span>
-    <span><span>And the file will be taken into account.</span></span>
+1.  Add the following dependencies `spring-core`, `spring-beans`, `spring-context`, `spring-aop`, `spring-expression` and&nbsp; `spring-asm`. Ideally, using a [Nuxeo Package]({{page page='creating-nuxeo-packages'}}).
+2.  Deploy your `cxf.xml` file in `nuxeo.war/WEB-INF/classes`, using the `deployment-fragment.xml`.
+    And the file will be taken into account.
 
 ## About Code Factorization
 

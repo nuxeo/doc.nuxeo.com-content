@@ -155,14 +155,16 @@ For videos, the platform uses the images of the storyboard.
 The default behavior is defined in two automation chains which can be overridden with an XML contribution.
 
 1.  Once the addon is installed on your Nuxeo instance, import the `VisionOp` operation definition in your Studio project. See the instructions on the page [Referencing an Externally Defined Operation]({{page space='studio' page='referencing-an-externally-defined-operation'}}).
-2.  <span class="confluence-link">Create your automation chains</span> and use the operation inside them. You can use the [regular automation chains]({{page page='how-to-create-an-automation-chain'}}) or [Automation Scripting]({{page page='automation-scripting'}}).
+2.  Create your automation chains and use the operation inside them. You can use the [regular automation chains]({{page page='how-to-create-an-automation-chain'}}) or [Automation Scripting]({{page page='automation-scripting'}}).
 3.  [Create an XML extension]({{page page='how-to-contribute-to-an-extension'}}) that specifies that your automation chains should be used.
 
     ```
-
-    		MY_PICTURE_CHAIN
-    		MY_VIDEO_CHAIN
-
+    <extension target="org.nuxeo.vision.core.service" point="configuration">
+    	<configuration>
+    		<pictureMapperChainName>MY_PICTURE_CHAIN</pictureMapperChainName>
+    		<videoMapperChainName>MY_VIDEO_CHAIN</videoMapperChainName>
+    	</configuration>
+    </extension>
     ```
 
 4.  [Deploy]({{page space='studio' page='deploying-your-project-in-dev-mode'}}) your Studio customization.
@@ -170,6 +172,13 @@ The default behavior is defined in two automation chains which can be overridden
 ### Disabling the Default Behavior
 
 The default behavior can also be completely disabled with the following contribution:
+
+```
+<extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
+	<listener name="visionPictureConversionChangedListener" class="org.nuxeo.vision.core.listener.PictureConversionChangedListener" enabled="false></listener>
+	<listener name="visionVideoChangedListener" class="org.nuxeo.vision.core.listener.VideoStoryboardChangedListener" enabled="false"></listener>
+</extension>
+```
 
 ## Core Implementation
 

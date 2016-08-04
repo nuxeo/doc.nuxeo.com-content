@@ -165,7 +165,22 @@ null
 If you'd like to <span style="color: rgb(51,51,51);">implement a new collection (for instance to have new metadata)</span> you can simply add the `Collection` facet to your specific document type. You'll therefore be able to use it as a regular collection.
 
 ```
-  org.nuxeo.ecm.collections.schemas
+  <require>org.nuxeo.ecm.collections.schemas</require>
+
+  <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+    <schema name="yourSchema" src="schemas/xxx.xsd" prefix="xxx" />
+  </extension>
+  <extension target="org.nuxeo.ecm.core.schema.TypeService" point="doctype">
+    <facet name="YourFacet" >
+      <schema name="yourSchema" />
+    </facet>
+
+    <doctype name="YourDocumentType" extends="Document">
+      <facet name="YourFacet" />
+      <facet name="Collection" />
+    </doctype>
+
+  </extension>
 
 ```
 
@@ -198,17 +213,23 @@ The collection reference is available in the event context map. For example, wit
 
 ## Synchronizing a Collection with Nuxeo Drive
 
-To do so you need to add the following XML contribution <span>with</span>[<span>&nbsp;</span>either Nuxeo Studio or a custom bundle]({{page page='how-to-contribute-to-an-extension'}}):
+To do so you need to add the following XML contribution with[either Nuxeo Studio or a custom bundle]({{page page='how-to-contribute-to-an-extension'}}):
 
 ```
-
-	org.nuxeo.drive.actions
-
-        			Collection
-
+<component name="org.nuxeo.drive.actions.collections">
+	<require>org.nuxeo.drive.actions</require>
+		<extension target="org.nuxeo.ecm.platform.actions.ActionService"
+    point="filters">
+    		<filter id="can_sync_current_doc" append="true">
+      		<rule grant="true">
+        			<type>Collection</type>
+      		</rule>
+    		</filter>
+  		</extension>
+</component>
 ```
 
-{{#> callout type='warning' heading="Limitation"}}
+{{#> callout type='warning' heading='Limitation'}}
 
 With this configuration you won't be able to unsynchronize a collection as usual using the ![]({{file name='drive_synced.png' space='userdoc' page='nuxeo-drive'}}) icon as this icon will stay grey: ![]({{file name='drive_unsynced.png' space='userdoc' page='nuxeo-drive'}}).
 

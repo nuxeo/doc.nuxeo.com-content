@@ -80,7 +80,7 @@ I have to create an ExceptionTest extending the RestOperationException:
  * Lesser General Public License for more details.
  *
  * Contributors:
- *     vpasquier 
+ *     vpasquier <vpasquier@nuxeo.com>
  */
 package org.nuxeo.ecm.automation.test.helpers;
 
@@ -122,7 +122,7 @@ Given a custom operation HttpStatusOperationTest:
  * Lesser General Public License for more details.
  *
  * Contributors:
- *     vpasquier 
+ *     vpasquier <vpasquier@nuxeo.com>
  */
 package org.nuxeo.ecm.automation.test.helpers;
 
@@ -203,7 +203,7 @@ Given a custom operation HttpStatusOperationTest:
  * Lesser General Public License for more details.
  *
  * Contributors:
- *     vpasquier 
+ *     vpasquier <vpasquier@nuxeo.com>
  */
 package org.nuxeo.ecm.automation.test.helpers;
 
@@ -251,30 +251,20 @@ public class HttpStatusOperationTest {
 
 ```
 
-I can set into the context the appropriate http status code that will be attached to the rest call response. (here <span>&nbsp;</span>206)
+I can set into the context the appropriate http status code that will be attached to the rest call response. (here 206)
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{! Please update the label in the Content by Label macro below. }}
 
-{{#> panel heading="Related Documentation"}}
+{{#> panel heading='Related Documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">
+{{/panel}}</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
-{{#> panel heading="Other Related Documentation "}}
+{{#> panel heading='Other Related Documentation '}}
 
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

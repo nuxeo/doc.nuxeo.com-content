@@ -274,8 +274,11 @@ You can also set it up directly from your Salesforce dashboard.&nbsp;<span style
     Since Nuxeo 8.3, for clickjacking protection the framing is restricted. To unrestrict it, [create a new XML extension]({{page page='how-to-contribute-to-an-extension'}}) containing:
 
     ```
-    org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService.defaultContrib
-
+    <require>org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService.defaultContrib</require>
+      <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService"
+        point="responseHeaders">
+      <header name="X-Frame-Options" enabled="false"/>
+      </extension>
     ```
 
 2.  Set up the HTTPS configuration.
@@ -313,11 +316,11 @@ Each time a SF user is displaying a SF object in his SF console, Nuxeo is going 
 The Automation operation script `javascript.FetchSFObject` can be overriden in order to bind the current Salesforce object to a specific document in Nuxeo.&nbsp;
 
 ```
-
-  void
-  void
-  javascript
-
+<scriptedOperation id="javascript.FetchSFObject">
+  <inputType>void</inputType>
+  <outputType>void</outputType>
+  <category>javascript</category>
+  <script>
     function run(input, params) {
       var sfobject = {};
       sfobject.id = params.sfobjectId;
@@ -343,7 +346,8 @@ The Automation operation script `javascript.FetchSFObject` can be overriden in o
         });
         return newSFobject;
     }}]]>
-
+  </script>
+</scriptedOperation>
 ```
 
 In the operation, the parameter `param` of the function provides three attributes: `sfobjectid`, `sfobjectname` and `sfobjecttype`.
@@ -451,7 +455,7 @@ function getProperties(doc, sfobject){
 }
 ```
 
-{{#> callout type='warning' heading="Studio"}}
+{{#> callout type='warning' heading='Studio'}}
 
 Those two operations can be overriden inside a Nuxeo Studio project easily by creating two operations for instance: `SFGetChildren` and `FetchSFObject`.
 
@@ -464,15 +468,16 @@ Those two operations can be overriden inside a Nuxeo Studio project easily by cr
 The Automation operation script `javascript.SFGetChildren` provides a way for the developer to customize the listing of the document content bound to the Salesforce object.
 
 ```
-
-  document
-  documents
-  javascript
-
+<scriptedOperation id="javascript.SFGetChildren">
+  <inputType>document</inputType>
+  <outputType>documents</outputType>
+  <category>javascript</category>
+  <script>
     function run(input, params) {
         return Document.GetChildren(input, {});
     }}]]>
-
+  </script>
+</scriptedOperation>
 ```
 
 ### Override Example
@@ -488,7 +493,7 @@ function run(input, params) {
 }
 ```
 
-{{#> callout type='warning' heading="Studio"}}
+{{#> callout type='warning' heading='Studio'}}
 
 Those two operations can be overriden inside a Nuxeo Studio project easily by creating two operations for instance: `SFGetChildren` and `FetchSFObject`.
 

@@ -90,7 +90,7 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' heading="Namespace: *automation*"}}
+{{#> callout type='info' heading='Namespace: *automation*'}}
 
 Commands exposed by the Nuxeo Server through automation
 

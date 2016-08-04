@@ -1152,14 +1152,6 @@ new ArrayList(Arrays.asList(WorkflowVariables["contributors"])); x.add(Context["
  @{org.nuxeo.runtime.api.Framework.getService(org.nuxeo.business.days.management.service.BusinessDaysService).getLimitDate("myRule",CurrentDate.date)}
 ```
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-<div class="column medium-6">{{#> panel heading="Related pages in this documentation"}}
-
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related Studio documentation"}} {{/panel}}</div>
-
-</div>
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Studio documentation'}} {{/panel}}</div></div>

@@ -438,7 +438,7 @@ If for some reason you must use an unsupported character set that is not in the 
 1.  Download `orai18n.jar` at [http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/htdocs/jdbc_10201.html](http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/htdocs/jdbc_10201.html).
 2.  Add it in the class path for your Nuxeo server. For instance, in JBoss, you just put the jar in `$JBOSS/server/default/lib`. (The file `orai18n.jar` replaces the `nls_charset*.*` files in the Oracle 9i and older releases.) However this may or may not work depending on your Oracle version, installation specifics and other factors, and the only supported solution by the Nuxeo Platform is to use the&nbsp; `AL32UTF8` charset.
 
-{{#> callout type='info' heading="Technical explanation"}}
+{{#> callout type='info' heading='Technical explanation'}}
 
 Internally, for security checks, the Nuxeo Platform executes SQL statements that need to be passed ARRAY objects (for the list of principals and permissions), but if the correct character set is not installed then the Oracle JDBC driver behaves incorrectly and Oracle actually receives empty strings. This in turn results in empty results for the queries as none of the documents will match due to incorrect security checks. The orai18n.jar fixes this.
 

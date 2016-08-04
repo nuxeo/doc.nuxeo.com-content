@@ -161,9 +161,7 @@ As a reminder, the tag library documentation file, `mylibrary.tld`, is usually p
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [JSF and Javascript ]({{page page='jsf-and-javascript'}})
 *   [Ajax4jsf Best Practices]({{page page='ajax4jsf-best-practices'}})
@@ -171,15 +169,11 @@ As a reminder, the tag library documentation file, `mylibrary.tld`, is usually p
 *   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [JavaScript Client]({{page page='javascript-client'}})
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Web UI Framework Overview]({{page page='web-ui-framework-overview'}})
 *   [Web UI Limitations]({{page page='web-ui-limitations'}})&nbsp;
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

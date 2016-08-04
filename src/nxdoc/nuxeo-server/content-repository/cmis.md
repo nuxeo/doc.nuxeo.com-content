@@ -588,14 +588,24 @@ Authentication is done using Web Services Security (WSS) UsernameToken.
 Here is a working example of a SOAP message to the DiscoveryService:
 
 ```
-
-        Administrator
-        Administrator
-
-      default
-      SELECT cmis:objectid, dc:title FROM cmis:document WHERE dc:title = 'Workspaces'
-      20
-      0
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://docs.oasis-open.org/ns/cmis/messaging/200908/">
+  <soapenv:Header>
+    <Security xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <UsernameToken>
+        <Username>Administrator</Username>
+        <Password>Administrator</Password>
+      </UsernameToken>
+    </Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <ns:query>
+      <ns:repositoryId>default</ns:repositoryId>
+      <ns:statement>SELECT cmis:objectid, dc:title FROM cmis:document WHERE dc:title = 'Workspaces'</ns:statement>
+      <ns:maxItems>20</ns:maxItems>
+      <ns:skipCount>0</ns:skipCount>
+    </ns:query>
+  </soapenv:Body>
+</soapenv:Envelope>
 
 ```
 

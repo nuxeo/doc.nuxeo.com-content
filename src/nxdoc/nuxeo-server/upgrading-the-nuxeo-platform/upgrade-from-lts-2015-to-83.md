@@ -160,7 +160,7 @@ history:
         version: '1'
 
 ---
-For the general upgrade process, see the<span class="confluence-link">&nbsp;page [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}})</span>.
+For the general upgrade process, see the&nbsp;page [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}}).
 
 {{! excerpt}}
 

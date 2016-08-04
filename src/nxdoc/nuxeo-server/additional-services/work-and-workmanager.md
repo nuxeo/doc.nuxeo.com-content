@@ -82,13 +82,13 @@ The code to be executed asynchronously must be implemented in an&nbsp; [`Abstrac
 
 ### Work Construction
 
-Each Work instance must have a unique id describing the Work in its entirety. The id can either be random (just call the empty `AbstractWork()` constructor), or specified by the caller ( <span>`AbstractWork(id)`).</span>
+Each Work instance must have a unique id describing the Work in its entirety. The id can either be random (just call the empty `AbstractWork()` constructor), or specified by the caller ( `AbstractWork(id)`).
 
-<span>At construction time, the Work instance should also have its&nbsp;</span> `setDocument()` method called to set the repository name and document(s) id(s) that this Work instance is going to be dealing with, and a flag specifying whether the work is actually about a whole subtree under the given document. This is important for monitoring and locking purposes.
+At construction time, the Work instance should also have its&nbsp; `setDocument()` method called to set the repository name and document(s) id(s) that this Work instance is going to be dealing with, and a flag specifying whether the work is actually about a whole subtree under the given document. This is important for monitoring and locking purposes.
 
-### <span>Work Implementation</span>
+### Work Implementation
 
-<span>A Work instance must be `Serializable` in order for it to be persisted between server restarts. All fields that are used only during work execution but don't hold any configuration state must be marked `transient`.</span> Persistence is done through a Redis server, please check [Redis Configuration]({{page page='redis-configuration'}}) for more.
+A Work instance must be `Serializable` in order for it to be persisted between server restarts. All fields that are used only during work execution but don't hold any configuration state must be marked `transient`. Persistence is done through a Redis server, please check [Redis Configuration]({{page page='redis-configuration'}}) for more.
 
 A Work instance must implement the following methods:
 
@@ -102,7 +102,7 @@ A Work instance must implement the following methods:
 
 *   `cleanUp()` can be overridden if there is some cleanup to do when the work is done. Make sure you call `super`.
 
-*   `rollbackAndRetryTransaction()` can be overridden for a <span>retryable Work if there is some cleanup to do before a Work is retried. Make sure you call `super`.</span>
+*   `rollbackAndRetryTransaction()` can be overridden for a retryable Work if there is some cleanup to do before a Work is retried. Make sure you call `super`.
 
 The meat of the Work instance is the `work()` method (or `retryableWork()`, but we won't repeat this each time). The following is available during method execution:
 
@@ -123,19 +123,21 @@ workManager.schedule(work, true);
 
 The `schedule()` method takes a second parameter which is `afterCommit`, and should be `true` in most cases otherwise the Work may be scheduled immediately even before the current transaction has committed, which would prevent the Work from seeing the results of the current transaction.
 
-You should avoid using the `Scheduling` argument to the <span>`schedule()` method, as it may become deprecated in the near future.</span>
+You should avoid using the `Scheduling` argument to the `schedule()` method, as it may become deprecated in the near future.
 
 ## Work Queues
 
 Every Work instance is queued in a Work Queue. Each queue is associated with a thread pool of one or more threads, which will execute the Work instances whenever a thread becomes available.
 
 ```
-
-    My Queue
-    2
-    somecategory1
-    somecategory2
-
+<extension point="queues" target="org.nuxeo.ecm.core.work.service">
+  <queue id="myqueue">
+    <name>My Queue</name>
+    <maxThreads>2</maxThreads>
+    <category>somecategory1</category>
+    <category>somecategory2</category>
+  </queue>
+</extension>
 ```
 
 The details of the configuration can be seen in the [extension point documentation](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.work.service--queues). Here we'll concentrate on the important points:
@@ -152,7 +154,20 @@ When using persistent queues (using Redis, see [Redis Configuration]({{page page
 
 If you want a given Nuxeo instance to stop processing a given queue, you can specify in this instance's configuration to disable the queue:
 
+```
+<extension point="queues" target="org.nuxeo.ecm.core.work.service">
+  <queue id="myqueue" processing="false"/>
+</extension>
+```
+
 To disable all queues and just re-enable one you want to see active, you can use something like:
+
+```
+<extension point="queues" target="org.nuxeo.ecm.core.work.service">
+  <queue id="*" processing="false"/>
+  <queue id="myqueue" processing="true"/>
+</extension>
+```
 
 ## Dedicated Nodes
 
@@ -178,7 +193,7 @@ The idea is that all the Nuxeo nodes can remain exactly identical to each other,
 Dedicating nodes to a given task is handled by two aspects:
 
 *   The load balancer: typically interactive processing nodes are used by the load balancer to handle end users requests.
-*   The WorkManager queues : some queues will be assigned to some&nbsp;<span>background processing</span>&nbsp;nodes so that only these dedicated nodes will consume the jobs in these queues.
+*   The WorkManager queues : some queues will be assigned to some&nbsp;background processing&nbsp;nodes so that only these dedicated nodes will consume the jobs in these queues.
 
 In a cluster environment, the Workmanager queues are handled by Redis so that the queues can effectively be shared across the cluster. This way, an interactive node (i.e. feed by the load balancer) can schedule an asynchronous job like a video conversion. This job will be assigned to a queue, waiting for one of the Nuxeo nodes to execute it.
 
@@ -187,14 +202,28 @@ This is where the queue configuration comes into play.
 Let's say you define a queue for managing Video conversions:
 
 ```
-
-    HeavyProcessingQueue
-    2
-    VideoConversion
-    PictureConversions
-
+<extension point="queues" target="org.nuxeo.ecm.core.work.service">
+  <queue id="HeavyProcessing">
+    <name>HeavyProcessingQueue</name>
+    <maxThreads>2</maxThreads>
+    <category>VideoConversion</category>
+    <category>PictureConversions</category>
+  </queue>
+</extension>
 ```
 
 Typically, the "interactive nodes" are configured to not consume this type of queue.
 
+```
+<extension point="queues" target="org.nuxeo.ecm.core.work.service">
+  <queue id="HeavyProcessing" processing="false"/>
+</extension>
+```
+
 Then the "background processing nodes" are on the contrary, configured to consume these queues : so they will do the heavy processing that was scheduled by the interactive nodes.
+
+```
+<extension point="queues" target="org.nuxeo.ecm.core.work.service">
+  <queue id="HeavyProcessing" processing="true"/>
+</extension>
+```

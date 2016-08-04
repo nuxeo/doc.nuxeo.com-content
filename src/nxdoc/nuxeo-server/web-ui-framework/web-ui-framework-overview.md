@@ -188,7 +188,7 @@ The usage of Seam has several benefits:
 
 The Nuxeo JSF framework also comes with additional concepts and tools:
 
-*   [Action service]({{page page='actions-links-buttons-icons-tabs-and-more'}}) is used to <span class="confluence-link">make buttons, tabs and views configurable</span>.
+*   [Action service]({{page page='actions-links-buttons-icons-tabs-and-more'}}) is used to make buttons, tabs and views configurable.
 *   [Layout]({{page page='layouts-and-widgets-forms-listings-grids'}}) and [Content View]({{page page='content-views'}}) allow to define how you want to see documents and listings.
 *   [URL Service]({{page page='navigation-urls'}}): the Nuxeo Platform provides REST URLs for all pages so that you can bookmark pages or send via email a link to a specific view on a specific document.
 *   [Nuxeo Tag Libraries]({{page page='how-to-register-a-jsf-tag-library'}}): extend existing tags and provides new Document Oriented tags.

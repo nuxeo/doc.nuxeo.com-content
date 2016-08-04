@@ -78,7 +78,7 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' heading="Namespace: *local*"}}
+{{#> callout type='info' heading='Namespace: *local*'}}
 
 Commands available on the local file system
 
@@ -259,18 +259,12 @@ touch file
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related pages in administration documentation"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in administration documentation'}}
 
 &nbsp;
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related pages in developer documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in developer documentation'}}
 
 &nbsp;
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

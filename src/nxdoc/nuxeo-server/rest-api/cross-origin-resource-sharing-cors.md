@@ -139,18 +139,22 @@ history:
         version: '1'
 
 ---
-If you do cross-domain requests from any JavaScript client to access WebEngine resources or [Automation APIs]({{page page='content-automation-concepts'}}), there's a chance that your browser forbids it. Since version 5.7.2, <span>CORS allows you to communicate with Nuxeo <span>from&nbsp;another domain</span> using `XMLHttpRequests`.</span>
+If you do cross-domain requests from any JavaScript client to access WebEngine resources or [Automation APIs]({{page page='content-automation-concepts'}}), there's a chance that your browser forbids it. Since version 5.7.2, CORS allows you to communicate with Nuxeo from&nbsp;another domain using `XMLHttpRequests`.
 
-<span>Nuxeo uses a filter to handle those cases. It is based on&nbsp;[Vladimir Dzhuvinov's universal CORS filter](http://software.dzhuvinov.com/cors-filter.html), and allows you to configure on which URLs cross-origin&nbsp;headers are needed. You'll be able to configure each URL independently.</span>
+Nuxeo uses a filter to handle those cases. It is based on&nbsp;[Vladimir Dzhuvinov's universal CORS filter](http://software.dzhuvinov.com/cors-filter.html), and allows you to configure on which URLs cross-origin&nbsp;headers are needed. You'll be able to configure each URL independently.
 
 {{! multiexcerpt name='CORS-contrib'}}
 
-<span>Here is a the simplest contribution, to allow cross-domain request on the whole&nbsp;`foobar` site:</span>
+Here is a the simplest contribution, to allow cross-domain request on the whole&nbsp;`foobar` site:
 
 ```
-
-      /nuxeo/.*
-
+<component name="org.nuxeo.cors">
+<extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
+    <corsConfig name="foobar" supportedMethods ="GET,POST,HEAD,OPTIONS,DELETE,PUT">
+      <pattern>/nuxeo/.*</pattern>
+    </corsConfig>
+  </extension>
+</component>
 ```
 
 {{! /multiexcerpt}}
@@ -163,7 +167,7 @@ Here is the list of all contribution attributes. There are all optional.
 
 If false, only valid and accepted CORS requests that be allowed (strict CORS filtering).
 
-</td><td colspan="1">`true`</td><td colspan="1">`true` <span>|</span> `false` <span>&nbsp;</span></td></tr><tr><td colspan="1">`allowOrigin`</td><td colspan="1">
+</td><td colspan="1">`true`</td><td colspan="1">`true` | `false`</td></tr><tr><td colspan="1">`allowOrigin`</td><td colspan="1">
 
 The whitespace-separated list of origins that the CORS filter must allow.
 
@@ -175,7 +179,7 @@ The whitespace-separated list of origins that the CORS filter must allow.
 
 If true the CORS filter will allow requests from any origin which is a sub-domain origin of the allowed origins.
 
-</td><td colspan="1">`false`</td><td colspan="1">`true` <span>|</span> `false` <span>&nbsp;</span></td></tr><tr><td colspan="1">`supportedMethods`</td><td colspan="1">The list of the supported HTTP methods.</td><td colspan="1">`<span style="color: rgb(61,61,61);">GET, POST, HEAD, OPTIONS</span>`</td><td colspan="1">"," separates list of HTTP methods</td></tr><tr><td colspan="1">`supportedHeaders`</td><td colspan="1">The names of the supported author request headers.</td><td colspan="1">`*`</td><td colspan="1">*&nbsp;| "," separates list of headers</td></tr><tr><td colspan="1">`exposedHeaders`</td><td colspan="1">
+</td><td colspan="1">`false`</td><td colspan="1">`true` | `false`</td></tr><tr><td colspan="1">`supportedMethods`</td><td colspan="1">The list of the supported HTTP methods.</td><td colspan="1">`<span style="color: rgb(61,61,61);">GET, POST, HEAD, OPTIONS</span>`</td><td colspan="1">"," separates list of HTTP methods</td></tr><tr><td colspan="1">`supportedHeaders`</td><td colspan="1">The names of the supported author request headers.</td><td colspan="1">`*`</td><td colspan="1">*&nbsp;| "," separates list of headers</td></tr><tr><td colspan="1">`exposedHeaders`</td><td colspan="1">
 
 The list of the response headers other than simple response headers that the browser should expose to the author of the cross-domain request through the `XMLHttpRequest.getResponseHeader()` method.
 
@@ -192,9 +196,16 @@ Indicates how long the results of a preflight request can be cached by the web b
 For instance, a `fooly` complete contribution could looks like:
 
 ```
-
-          /fooly/site/.*
-
+      <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
+        <corsConfig name="fooly" allowGenericHttpRequests="true"
+          allowOrigin="http://example.com http://example.com:8080"
+          allowSubdomains="true" supportedMethods="GET"
+          supportedHeaders="Content-Type, X-Requested-With"
+          exposedHeaders="X-Custom-1, X-Custom-2"
+          supportsCredentials="false" maxAge="3600">
+          <pattern>/fooly/site/.*</pattern>
+        </corsConfig>
+      </extension>
 ```
 
 ## Making sure the contribution is taken into account

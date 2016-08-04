@@ -188,7 +188,7 @@ For custom codes, don't hesitate to use Nuxeo IDE.
     	@OperationMethod
     	public DocumentModel run(DocumentModel input) throws ClientException {
     		if (!input.getTitle().equals("title")) {
-    			String value = "- the document title is invalid - ";
+    			String value = "- the document title is invalid - <br/>";
     // Collecting different invalidation message in one context variable
     			ctx.put("messageError", value);
     		}
@@ -228,7 +228,7 @@ For custom codes, don't hesitate to use Nuxeo IDE.
     		Object message = ctx.get("messageError");
     		if (message != null) {
     			throw new CustomBubbleException("Process Invalidation",
-    					"Invalidations:" + message.toString(), null);
+    					"Invalidations:<br/>" + message.toString(), null);
     		}
     	}
     }

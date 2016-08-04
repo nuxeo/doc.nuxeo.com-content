@@ -89,21 +89,15 @@ You can customize the virtual navigation default behavior:
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Disable by Coverage and by Subjects Virtual Navigations]({{page page='how-to-disable-by-coverage-and-by-subjects-virtual-navigations'}})
 *   [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Virtual Navigations in Nuxeo Studio]({{page space='studio' page='virtual-navigations'}})
 *   [Content Views developer documentation]({{page page='content-views'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

@@ -524,7 +524,7 @@ Extract from the course "[Working with the REST API](https://university.nuxeo.io
 
 {{! excerpt}}
 
-Nuxeo REST API is available on Nuxeo Platform server an all endpoints follows the URL:&nbsp;`http://servername:8080/nuxeo/api/v1/*`. <span>We made available an</span> [API playground](http://nuxeo.github.io/api-playground/) <span>to help you understand the endpoints and have a try:</span>
+Nuxeo REST API is available on Nuxeo Platform server an all endpoints follows the URL:&nbsp;`http://servername:8080/nuxeo/api/v1/*`. We made available an [API playground](http://nuxeo.github.io/api-playground/) to help you understand the endpoints and have a try:
 
 ![]({{file name='Screen Shot 2014-07-03 at 01.22.40.png'}} ?w=500,h=257,border=true)
 
@@ -534,12 +534,12 @@ This page explains the high level organisation and scope of the existing endpoin
 
 ## Scope and Concepts
 
-Nuxeo provides a complete API accessible via HTTP/HTTPS. This API is&nbsp;the best way to integrate portals, workflow engines, ESBs, custom application written in JavaScript, Ruby, etc. <span>remotely with the Nuxeo Platform repository.</span> This API has the following endpoints.
+Nuxeo provides a complete API accessible via HTTP/HTTPS. This API is&nbsp;the best way to integrate portals, workflow engines, ESBs, custom application written in JavaScript, Ruby, etc. remotely with the Nuxeo Platform repository. This API has the following endpoints.
 
 ### **Resources Endpoints**
 
 For doing CRUD on resources in a 100% REST style.
-<span>Multiple resources are exposed:</span>
+Multiple resources are exposed:
 
 *   **Documents**: CRUD on documents (including paginated search).
     `/nuxeo/api/v1/id/{docId}` or `/nuxeo/api/v1/path/{path}`
@@ -577,8 +577,8 @@ The Nuxeo REST API offers several nice additional features compared to a standar
 *   You can start reading the [documentation page of the Nuxeo Platform API Playground]({{page page='use-nuxeo-api-playground-to-discover-the-api'}}) and use it.
 *   A cURL tutorial: [How to create a document in the repository and bind a binary to this document]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}})
 *   [Some consecutive cURL calls to get familiar with the resources/command variations of the API]({{page page='using-curl'}})
-*   A [blog post](http://blogs.nuxeo.com/development/2013/10/building-pluggable-rest-api/) <span>that presents the advanced concepts of the Nuxeo REST API with some nice examples.</span>
-*   <span><span>A client sample</span> [nuxeo-travel-expenses](https://github.com/nuxeo/nuxeo-travel-expenses) <span>(available on</span> [GitHub](https://github.com/nuxeo/nuxeo-travel-expenses) <span>) based on web components and</span> [polymer framework](https://www.polymer-project.org/) <span>demonstrates how to use the workflow REST API.</span></span>
+*   A [blog post](http://blogs.nuxeo.com/development/2013/10/building-pluggable-rest-api/) that presents the advanced concepts of the Nuxeo REST API with some nice examples.
+*   A client sample [nuxeo-travel-expenses](https://github.com/nuxeo/nuxeo-travel-expenses) (available on [GitHub](https://github.com/nuxeo/nuxeo-travel-expenses) ) based on web components and [polymer framework](https://www.polymer-project.org/) demonstrates how to use the workflow REST API.
 
 ## Available Client SDKs&nbsp;
 

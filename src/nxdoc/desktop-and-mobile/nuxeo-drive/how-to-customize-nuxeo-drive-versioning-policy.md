@@ -77,11 +77,19 @@ You can configure two parameters of Nuxeo Drive versioning policy thanks to the 
 For example, to create a major version if the document is modified 30 minutes after the last change, use this contribution:
 
 ```
-  org.nuxeo.drive.adapters
+  <require>org.nuxeo.drive.adapters</require>
 
-        1800
-        MAJOR
+  <extension target="org.nuxeo.drive.service.FileSystemItemAdapterService"
+    point="fileSystemItemFactory">
 
+    <fileSystemItemFactory class="org.nuxeo.drive.service.impl.DefaultFileSystemItemFactory" name="defaultFileSystemItemFactory" order="40">
+      <parameters>
+        <parameter name="versioningDelay">1800</parameter>
+        <parameter name="versioningOption">MAJOR</parameter>
+      </parameters>
+    </fileSystemItemFactory>
+
+  </extension>
 ```
 
 ## How to Change Nuxeo Drive Versioning Policy
@@ -92,7 +100,12 @@ If you need to make more changes on the versioning mechanism in Nuxeo Drive:
 2.  Contribute to the&nbsp;`fileSystemItemFactory`&nbsp;extension point to use your new class:
 
 ```
+  <extension target="org.nuxeo.drive.service.FileSystemItemAdapterService"
+    point="fileSystemItemFactory">
 
+    <fileSystemItemFactory class="com.sample.drive.CustomFileSystemItemFactory" name="customFileSystemItemFactory" order="20"/>
+
+  </extension>
 ```
 
 {{! /multiexcerpt}}

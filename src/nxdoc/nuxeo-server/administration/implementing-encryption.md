@@ -104,7 +104,7 @@ nuxeo.core.binarymanager_key=password=mypassword
 
 {{#> callout type='note' }}
 
-By default Java ships with a <span>Java Cryptographic Extension (JCE) module configured for 128-bit maximum key length, whereas the Nuxeo Platform needs at least 256-bit keys for adequate security of AES. <span>The Nuxeo code attempts to work around these restrictions automatically to force the JCE to allow unlimited key length.</span></span>
+By default Java ships with a Java Cryptographic Extension (JCE) module configured for 128-bit maximum key length, whereas the Nuxeo Platform needs at least 256-bit keys for adequate security of AES. The Nuxeo code attempts to work around these restrictions automatically to force the JCE to allow unlimited key length.
 
 If it cannot force it, you will get an exception `java.security.InvalidKeyException`: Illegal key size or default parameters when encrypting or decrypting a file. In that case, you must go to&nbsp;[Oracle Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)&nbsp;and download and install the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files for your JDK (see the README.txt file inside the downloaded ZIP for installation instructions).
 

@@ -75,9 +75,6 @@ You can download a precompile version of FakeSMTP here :&nbsp;[]({{file name='fa
 java -jar fakeSMTP.jar
 ```
 
-<span style="font-size: 10.0pt;line-height: 13.0pt;">
-</span>
-
 For Windows users, you can check this software that seems to do the same job :&nbsp;[http://smtp4dev.codeplex.com/](http://smtp4dev.codeplex.com/)
 
 &nbsp;

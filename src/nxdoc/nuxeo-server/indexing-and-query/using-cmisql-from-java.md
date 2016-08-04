@@ -232,7 +232,7 @@ Note that in Nuxeo CMISQL, JOINs are not enabled by default. They are only avail
 
 The following is a simple example of code making a query:
 
-{{#> callout type='note' heading="Constructing the CallContext"}}
+{{#> callout type='note' heading='Constructing the CallContext'}}
 
 When constructing the&nbsp;`CallContext`, you should pass the&nbsp;`ServletContext`,&nbsp;`HttpServletRequest`&nbsp;and&nbsp;`HttpServletResponse`&nbsp;if available from your context. These are important for rendition URLs for instance.
 
@@ -283,7 +283,7 @@ public class CMISQuery {
             boolean searchAllVersions = true;
             IterableQueryResult result = cmisService.queryAndFetch(query, searchAllVersions);
             try {
-                for (Map row : result) {
+                for (Map<String, Serializable> row : result) {
                     // do something with the result
                     System.out.println(row.get("dc:title"));
                 }

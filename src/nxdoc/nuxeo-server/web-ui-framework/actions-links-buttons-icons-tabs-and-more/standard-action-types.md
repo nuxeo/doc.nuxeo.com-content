@@ -85,10 +85,9 @@ The bulk edit action can be taken as an example, see the [action "CURRENT_SELECT
 
 View online reference: [http://showcase.nuxeo.com/nuxeo/layoutDemo/fancyboxAction](http://showcase.nuxeo.com/nuxeo/layoutDemo/fancyboxAction)
 
-## <span>rest_document_link</span>
+## rest_document_link
 
-<span>Rest document link actions display a link to a given document view. These actions are used to display document tabs, as they can reference a tab to be marked as currently selected.
-</span>
+Rest document link actions display a link to a given document view. These actions are used to display document tabs, as they can reference a tab to be marked as currently selected.
 
 View online reference: [http://showcase.nuxeo.com/nuxeo/layoutDemo/rest_document_linkAction](http://showcase.nuxeo.com/nuxeo/layoutDemo/rest_document_linkAction)
 
@@ -118,18 +117,8 @@ View online reference: [http://showcase.nuxeo.com/nuxeo/layoutDemo/templateActio
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-<div class="column medium-6">{{#> panel heading="Related pages in this documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in Studio documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related pages in Studio documentation"}}
-
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

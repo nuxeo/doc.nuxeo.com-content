@@ -82,9 +82,9 @@ For a more advanced rendition service, you may be interested in having a look at
 By using the FreeMarker templating engine, you also gain access to its whole functionalities. For example, using a document list could be done as following:
 
 ```
-<#list This="" as="" doc="">
+<#list This as doc>
   ${doc.title}
-
+</#list>
 ```
 
 Have a look at the [FreeMarker manual](http://freemarker.org/docs) for more information about it.

@@ -424,7 +424,7 @@ This page describes a general upgrade procedure. You will find below the list of
 *   To upgrade from one LTS version to another, from 5.8 to 7.10 for instance, follow 5.8 -> 6.0 -> 7.10.
 *   To upgrade from an LTS version to the latest Fast Track version, from 6.0 to 8.3 for instance, follow 6.0 -> 7.10 -> 8.1 -> 8.2, etc.
 
-{{#> callout type='note' heading="Upgrade Notes"}}
+{{#> callout type='note' heading='Upgrade Notes'}}
 
 Although major changes are explicitly documented, it is recommended to look at the upgrade notes before upgrading. Upgrade notes list changes that may affect existing configuration or features after upgrade (changes on parameters, API, default behavior, etc.).
 
@@ -459,7 +459,7 @@ You should have [configured Nuxeo with a specific configuration]({{page page='se
 
         {{#> callout type='warning' }}
 
-        Be very careful about the two properties allowing to configure the <span>backend for</span> audit logs, make sure you read the related documentation:
+        Be very careful about the two properties allowing to configure the backend for audit logs, make sure you read the related documentation:
 
         *   `audit.elasticsearch.enabled`: [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}})
         *   `audit.elasticsearch.migration`: [Triggering SQL to Elasticsearch Audit Logs Migration]({{page page='elasticsearch-setup'}}){{/callout}}
@@ -525,15 +525,13 @@ Release notes:
 *   [7.4 release notes](http://nuxeo.github.io/releasenotes/7.4/)
 *   [7.10 release notes](http://nuxeo.github.io/releasenotes/7.10/)
 
-<span><span>Upgrade notes:
-</span></span>
+Upgrade notes:
 
-*   <span><span>[Upgrade notes for 7.1](https://jira.nuxeo.com/browse/NXP-16113?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%227.1%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)</span></span>
-*   <span><span>[Upgrade notes for 7.2](https://jira.nuxeo.com/browse/NXP-16623?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%227.2%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)</span></span>
-*   <span><span>[Upgrade notes for 7.3](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%227.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)</span></span>
-*   <span><span>[Upgrade notes for 7.4](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%227.4%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)</span></span>
-*   [<span><span>Upgrade notes for 7.10</span></span>](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%227.10%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)<span><span>
-    </span></span>
+*   [Upgrade notes for 7.1](https://jira.nuxeo.com/browse/NXP-16113?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%227.1%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+*   [Upgrade notes for 7.2](https://jira.nuxeo.com/browse/NXP-16623?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%227.2%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+*   [Upgrade notes for 7.3](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%227.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+*   [Upgrade notes for 7.4](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%227.4%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+*   [Upgrade notes for 7.10](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%227.10%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 
 ### To 6.0 from 5.8 or 5.9.x
 

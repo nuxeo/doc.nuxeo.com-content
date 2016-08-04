@@ -323,7 +323,7 @@ As you play with the APIs, you will modify the content of the repository. The **
 The content is represented as a tree which allows you to navigate the repository. Unfold the tree and click on a document.
 Its content is retrieved through the REST API with the JSON response and headers displayed on the right panel.
 ![]({{file name='playground_repository_document.png'}} ?w=500,h=421,border=true)
-The left side panel allows you to explore the REST endpoints available for the selected document (see also the . The tabs allow you to switch between HTTP methods (GET, PUT, POST and DELETE) thus enabling you to read, <span>update,</span> create and delete documents.
+The left side panel allows you to explore the REST endpoints available for the selected document (see also the . The tabs allow you to switch between HTTP methods (GET, PUT, POST and DELETE) thus enabling you to read, update, create and delete documents.
 
 ![]({{file name='playground_repository_PUT_tab.png'}} ?w=300,h=294,border=true)
 
@@ -353,7 +353,7 @@ In this section you can perform calls to all the ["Resources" endpoints]({{page 
 
 ![]({{file name='playground_resources_endpoints_section.png'}} ?w=300,h=111,border=true)
 
-Depending on the endpoint, you can do GET, PUT, POST or DELETE calls to read, <span>update,</span> create and delete documents.
+Depending on the endpoint, you can do GET, PUT, POST or DELETE calls to read, update, create and delete documents.
 
 1.  Click on the resource endpoint you want to work on and then on the call you want to make.
 2.  Fill in the Parameters form.
@@ -391,11 +391,12 @@ The command endpoint section lists all the available [operations and chain of op
 
 ### Batch Upload
 
-<span><span>The Batch Upload endpoint provides a way to upload one or more files and then reference that set of files from the API (PUT and POST calls, operation parameters, etc.). This approach is favored over regular <span>HTTP MultiPart encoding u</span>pload in the following cases:</span></span>
+The Batch Upload endpoint provides a way to upload one or more files and then reference that set of files from the API (PUT and POST calls, operation parameters, etc.). This approach is favored over regular HTTP MultiPart encoding upload in the following cases:
 
-*   <span><span>When you <span>have several files to upload</span></span></span>
-*   <span><span><span>When your client does not natively support multipart encoding</span></span></span>
-*   <span><span><span>When you want t<span>o upload files as soon as possible and then run the operation when everything has been uploaded on the server</span></span></span></span>
+*   When you have several files to upload
+
+*   When your client does not natively support multipart encoding
+*   When you want to upload files as soon as possible and then run the operation when everything has been uploaded on the server
 
 ![]({{file name='playground_batch_upload.png'}} ?w=500,h=325,border=true)
 
@@ -405,10 +406,10 @@ Because the Nuxeo API Playground currently uses the old API, you need to some co
 
 #### Creating a Batch Upload
 
-1.  <span>Select one or more files to upload.</span>
-2.  <span>Click the **Upload** button.</span>
-    <span>Once your files are uploaded the batch will be displayed in the list of batches.</span>
-    <span>You can create any number of batches before referencing them in your requests.</span>
+1.  Select one or more files to upload.
+2.  Click the **Upload** button.
+    Once your files are uploaded the batch will be displayed in the list of batches.
+    You can create any number of batches before referencing them in your requests.
 
 ![]({{file name='playground_batch_upload_batch_uploaded.png'}} ?w=500,h=84,border=true)
 
@@ -439,9 +440,11 @@ Batch Upload on the API Playground currently uses the old API which is currently
 To enable Batch upload set the runtime configuration property `allowClientGeneratedBatchId` to "true", [using an XML extension]({{page page='how-to-contribute-to-an-extension'}}).
 
 ```
-
-    true
-
+<component name="org.nuxeo.ecm.automation.server.BatchManager.configuration.test">
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="allowClientGeneratedBatchId">true</property>
+  </extension>
+</component>
 ```
 
 ### Setting up a CORS Configuration

@@ -224,24 +224,18 @@ To complete this how-to, you need the elements below to be already configured in
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Popular How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
 *   [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
 *   [How to Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
 *   [How to Set a Default Value on a Date Field of a Task Form]({{page page='how-to-set-a-default-value-on-a-date-field-of-a-task-form'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Automation In Nuxeo Studio]({{page space='studio' page='automation'}})
 *   [Content Automation Concepts]({{page page='content-automation-concepts'}})
 *   [Events and Listeners in developer documentation]({{page page='events-and-listeners'}})
 *   [Event Handlers in Studio]({{page space='studio' page='event-handlers'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

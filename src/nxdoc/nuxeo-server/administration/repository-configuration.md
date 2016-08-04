@@ -305,26 +305,64 @@ In a standard Nuxeo this file is generated from a template, and many elements or
 This file is for illustration and contains many more options than are necessary by default.
 
 ```
-
-      varchar
-
-        note
-
-          File
-          Note
-
-            dc:title
-
-            dc:description
-            content/data
-
-      execute
-      false 
-      myconf.sql.txt
+<?xml version="1.0"?>
+<component name="default-repository-config">
+  <extension target="org.nuxeo.ecm.core.storage.sql.RepositoryService" point="repository">
+    <repository name="default"
+      factory="org.nuxeo.ecm.core.storage.sql.ra.PoolingRepositoryFactory">
+      <pool minPoolSize="0" maxPoolSize="20"
+        blockingTimeoutMillis="100" idleTimeoutMinutes="10" />
+      <clustering id="12345" delay="1000" enabled="true" />
+      <idType>varchar</idType>
+      <schema>
+        <field type="largetext">note</field>
+      </schema>
+      <indexing>
+        <includedTypes>
+          <type>File</type>
+          <type>Note</type>
+        </includedTypes>
+        <!-- sample for excluded types -->
+        <!--
+        <excludedTypes>
+          <type>Root</type>
+          <type>Workspace</type>
+        </excludedTypes>
+        -->
+        <fulltext analyzer="english"> <!-- PostgreSQL -->
+          <index name="default">
+            <!-- all props implied -->
+          </index>
+          <index name="title">
+            <field>dc:title</field>
+          </index>
+          <index name="description">
+            <field>dc:description</field>
+            <excludeField>content/data</excludeField>
+          </index>
+        </fulltext>
+        <queryMaker class="org.nuxeo.ecm.core.storage.sql.NXQLQueryMaker" />
+        <queryMaker class="org.nuxeo.ecm.core.chemistry.impl.CMISQLQueryMaker" />
+      </indexing>
+      <usersSeparator key="," />
+      <aclOptimizations enabled="true" readAclMaxSize="4096"/>
+      <pathOptimizations enabled="true"/>
+      <ddlMode>execute</ddlMode>
+      <noDDL>false</noDDL> <!-- deprecated -->
+      <sqlInitFile>myconf.sql.txt</sqlInitFile>
+    </repository>
+  </extension>
+</component>
 
 ```
 
 ## Pooling Options
+
+```
+<pool minPoolSize="0" maxPoolSize="20"
+  blockingTimeoutMillis="100" idleTimeoutMinutes="10" />
+
+```
 
 *   **minPoolSize**: the minimum pool size (default is **0**) (see `nuxeo.vcs.min-pool-size` in `nuxeo.conf`).
 *   **maxPoolSize**: the maximum pool size, above which connections will be refused (default is **20**) (see `nuxeo.vcs.max-pool-size` in `nuxeo.conf`).
@@ -332,6 +370,11 @@ This file is for illustration and contains many more options than are necessary 
 *   **idleTimeoutMinutes**: the time (in minutes) after which an unused pool connection will be destroyed.
 
 <span style="color: rgb(0,0,0);font-size: 20.0px;">Clustering Options</span>
+
+```
+<clustering id="12345" enabled="true" delay="1000" />
+
+```
 
 *   **id**: the cluster node id, which must be unique among all cluster nodes connected to the same database.
 *   **enabled**: use **true** to activate Nuxeo clustering (default is **false**, i.e., no clustering) (see `repository.clustering.enabled` in `nuxeo.conf`).
@@ -346,13 +389,25 @@ To specify length constraints on text fields, use restrictions in the XML Schema
 If you want the text field to a precise length limit:
 
 ```
+  <xs:simpleType name="longString">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="65536" />
+    </xs:restriction>
+  </xs:simpleType>
 
+  <xs:element name="text" type="mail:longString"/>
 ```
 
 If you want the text field to have no length limit:
 
 ```
+  <xs:simpleType name="clob">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="999999999" />
+    </xs:restriction>
+  </xs:simpleType>
 
+  <xs:element name="note" type="nxs:clob"/>
 ```
 
 This is important for your large text fields, especially for MySQL, Oracle and SQL Server which have very small defaults for standard text fields.
@@ -369,10 +424,11 @@ java.sql.SQLException: ORA-01461: can bind a LONG value only for insert into a L
 If you need to specify a length on a Nuxeo field and cannot change the XSD, you should use the following code in the repository configuration:
 
 ```
-
-  note
-  my:field
+<schema>
+  <field type="largetext">note</field>
+  <field type="largetext">my:field</field>
   ...
+</schema>
 
 ```
 
@@ -385,7 +441,7 @@ In standard Nuxeo the document id is a UUID stored as a string, for instance `9e
 Starting with Nuxeo 5.7.1, it's possible on select databases to use a more efficient id representation:
 
 ```
- varchar
+ <idType>varchar</idType>
 ```
 
 The following values for idType are possible:
@@ -405,18 +461,20 @@ Note that switching this option to a new value will require a full dump, manual 
 It is possible to configure the document types you want to index or you want to exclude from full-text indexing. This is possible using the tags `includedTypes` and `excludedTypes` inside the `indexing` tag:
 
 ```
-
-  File
-  Note
+<includedTypes>
+  <type>File</type>
+  <type>Note</type>
+</includedTypes>
 
 ```
 
 or
 
 ```
-
-  Root
-  Workspace
+<excludedTypes>
+  <type>Root</type>
+  <type>Workspace</type>
+</excludedTypes>
 
 ```
 
@@ -425,8 +483,9 @@ If you set both included and excluded types, only the included types configurati
 ### Full-Text
 
 ```
-
+<fulltext disabled="false" searchDisabled="true" analyzer="english" catalog="...">
   ...
+</fulltext>
 
 ```
 
@@ -447,14 +506,19 @@ Full-text indexes are queried in NXQL through the `ecm:fulltext` pseudo-field. A
 If no `<index>` elements are present, then a **default** index with all string and blob fields is used.
 
 ```
-
-    dc:title
-    dc:description
-
-    blob
-
-    string
-    dc:title
+<fulltext ...>
+  <index name="title" analyzer="..." catalog="...">
+    <field>dc:title</field>
+    <field>dc:description</field>
+  </index>
+  <index name="blobs">
+    <fieldType>blob</fieldType>
+  </index>
+  <index name="other">
+    <fieldType>string</fieldType>
+    <excludeField>dc:title</excludeField >
+  </index>
+</fulltext>
 
 ```
 
@@ -470,12 +534,14 @@ If no `<fieldType>`, `<field>` or `<excludeField>` is present, then all string a
 ## Optimizations
 
 ```
+<pathOptimizations enabled="false"/>
 
 ```
 
 *   **pathOptimizations** **enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), it is possible to disable the path-based optimizations by using **false** (the default is **true**, i.e., path optimizations enabled).
 
 ```
+<aclOptimizations enabled="false"/>
 
 ```
 
@@ -483,6 +549,7 @@ If no `<fieldType>`, `<field>` or `<excludeField>` is present, then all string a
 *   You can set the property readAclMaxSize to define the size of the larger ACL for a document: this may be useful if you have mainly affected permissions to a lot of users, instead of using groups (do not set this attribute if you disable ACL optimizations).
 
 ```
+<usersSeparator key="," />
 
 ```
 
@@ -494,7 +561,7 @@ If no `<fieldType>`, `<field>` or `<excludeField>` is present, then all string a
 
 ```
 
-execute
+<ddlMode>execute</ddlMode>
 
 ```
 
@@ -518,13 +585,13 @@ For Nuxeo 6.0-HF24+ and Nuxeo 7.10-HF01+ the default is **compat**. For Nuxeo 8.
 See [NXP-17396](https://jira.nuxeo.com/browse/NXP-17396)&nbsp;for details about `<ddlMode>` implementation.
 
 ```
-true 
+<noDDL>true</noDDL> <!-- deprecated -->
 ```
 
 For compatibility with previous Nuxeo versions, if no `<ddlMode>` element is specified, then `<noDDL>`&nbsp;is checked. The value **true** is mapped to a ddlMode of&nbsp;**ignore**, and the value **false** mapped to the default ddlMode.
 
 ```
-myconf.sql.txt
+<sqlInitFile>myconf.sql.txt</sqlInitFile>
 ```
 
 If you need to execute additional SQL when the database is initialized (at every Nuxeo startup), you can use this to specify an additional SQL file to read and execute (unless noDDL is true). The format of an SQL init file is described below. Examples can be found in the standard SQL init files used by Nuxeo, which are available at [https://github.com/nuxeo/nuxeo-core/tree/master/nuxeo-core-storage-sql/nuxeo-core-storage-sql/src/main/resources/nuxeovcs](https://github.com/nuxeo/nuxeo-core/tree/master/nuxeo-core-storage-sql/nuxeo-core-storage-sql/src/main/resources/nuxeovcs) (in the appropriate branch for your version).

@@ -121,6 +121,10 @@ The more common way to display a given layout for a document is to use the [`nxl
 
 ```
 
+<div xmlns:nxl="http://nuxeo.org/nxforms/layout">
+  <nxl:layout name="heading" mode="view" value="#{currentDocument}" />
+</div>
+
 ```
 
 Layouts that are referenced on a document type definition can use other helper tags, see the [corresponding documentation]({{page page='document-layouts'}}).
@@ -135,30 +139,36 @@ For instance, here is a sample display of a listing layout. The layout template 
 
 ```
 
+<table class="dataOutput">
+  <c:forEach var="row" items="#{documents.rows}" varStatus="layoutListingStatus">
+    <c:set var="showListingHeader" value="#{layoutListingStatus.index == 0}" />
+    <nxl:layout name="#{layoutName}" value="#{row}" mode="view"
+      selectedColumns="#{selectedResultLayoutColumns}" />
+  </c:forEach>
+</table>
+
 ```
 
 Some other advanced tags make it possible to display a global widget for instance, or even to create a widget from scratch by specifying its definition using the tag attributes.
 
 Here is a sample usage of the [`nxl:widget` tag](http://community.nuxeo.com/api/nuxeo/7.1/tlddoc/nxl/widget.html):
 
+```
+<nxl:widget name="widgetName" mode="#{myMode}" value="#{myObject}" required="true" />
+```
+
 Here is a sample usage of the [`nxl:widgetType` tag](http://community.nuxeo.com/api/nuxeo/7.1/tlddoc/nxl/widgetType.html) (creating a widget definition on the fly):
+
+```
+<nxl:widgetType name="text" mode="#{myMode}" value="#{myText}" required="true" />
+```
 
 Please refer to the tag library documentation available at [http://community.nuxeo.com/api/nuxeo/latest/tlddoc/nxl/tld-summary.html](http://community.nuxeo.com/api/nuxeo/latest/tlddoc/nxl/tld-summary.html).
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related sections in this documentation'}}
 
-<div class="column medium-6">{{#> panel heading="Related sections in this documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related section in Studio documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related section in Studio documentation"}}
-
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

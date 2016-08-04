@@ -222,7 +222,7 @@ Or `jstack`:
 2.  Then run
 
     ```
-    jstack  > /tmp/nuxeo.tdump
+    jstack <PID> > /tmp/nuxeo.tdump
     ```
 
 3.  If you have errors try again with the force option: `jstack -F <PID>`.
@@ -256,7 +256,7 @@ When the JVM is stuck, in addition to thread dump and before restarting, a core 
 If you have `gdb` installed, you can generate a core dump without killing the application:
 
 ```
-sudo gdb --pid= --batch -ex generate-core-file -ex detach
+sudo gdb --pid=<PID> --batch -ex generate-core-file -ex detach
 ```
 
 ## PostgreSQL
@@ -286,7 +286,7 @@ In addition If the problem is related to unexpected search results or errors, fo
 Measure the round trip between [Nuxeo and the database]({{page page='tracking-the-performance-of-the-nuxeo-platform'}}):
 
 ```
-ping -s 8192 
+ping -s 8192 <database IP>
 ```
 
 Use [mtr](http://www.bitwizard.nl/mtr/) to discover what is between the Nuxeo server and the database, report any firewall or known hardware.
@@ -335,26 +335,20 @@ If you think you've found a security issue, please report it privately to [secur
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{! Please update the label in the Content by Label macro below. }}
 
-{{#> panel heading="Related Documentation"}}
+{{#> panel heading='Related Documentation'}}
 
 *   [Monitoring and Maintenance]({{page page='monitoring-and-maintenance'}})
 *   [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
 *   [Transactions and Connections]({{page page='transactions-and-connections'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">
+{{/panel}}</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
 &nbsp;
 
-</div>
-
-</div>
+</div></div>

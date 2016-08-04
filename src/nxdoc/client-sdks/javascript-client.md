@@ -98,22 +98,16 @@ history:
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related pages in current documentation"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
 *   [JSF and JavaScript]({{page page='jsf-and-javascript'}})
 *   [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page page='how-to-declare-the-css-and-javascript-resources-used-in-your-templates'}})
 *   [Developing with AngularJS]({{page page='developing-with-angularjs'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Blog Posts"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Blog Posts'}}
 
 *   [A Content App in JavaScript Using Mustache, Bootstrap and nuxeo.js&nbsp;](http://www.nuxeo.com/blog/developping-content-application-mustachejs-bootstrap-nuxeojs/)
 *   [Import Documents in the Nuxeo Platform Using Node.js](http://www.nuxeo.com/blog/import-documents-nuxeo-platform-using-node-js/)
 *   [Using the node.js Nuxeo Client](http://www.nuxeo.com/blog/nodejs-nuxeo-client/)
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

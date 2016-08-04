@@ -213,9 +213,21 @@ The first step you need to take is to enable the anonymous user.
 1.  Anonymous user needs to be registered through a configuration files, that should look like this:
 
     ```
-
-              Guest
-              User
+    <?xml version="1.0"?>
+    <component name="org.nuxeo.ecm.platform.login.anonymous.config">
+      <!-- Add an Anonymous user -->
+      <extension target="org.nuxeo.ecm.platform.usermanager.UserService"
+        point="userManager">
+        <userManager>
+          <users>
+            <anonymousUser id="Guest">
+              <property name="firstName">Guest</property>
+              <property name="lastName">User</property>
+            </anonymousUser>
+          </users>
+        </userManager>
+      </extension>
+    </component>
 
     ```
 
@@ -246,21 +258,15 @@ If you give Write access to the repository to this user, you will let anyone hav
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Implement Local Groups or Roles Using Computed Groups]({{page page='how-to-implement-local-groups-or-roles-using-computed-groups'}})
 *   [undefined]({{page}})
 *   [How-to index ]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Managing Permissions]({{page space='userdoc' page='managing-permissions'}})
 *   [Nuxeo Platform User Registration]({{page page='nuxeo-platform-user-registration'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

@@ -99,10 +99,14 @@ history:
 *   If you don't want to match proxies in your query, add a `AND ecm:isProxy = 0` clause.
 *   If you don't use proxies at all, deactivate them at the repository level by adding inside the `<repository>` tag the following:
 
+    ```
+    <proxies enabled="false"/>
+    ```
+
 *   If you are doing NXQL query that involve custom schema you may need to add custom index to make the request efficient. You can trace the slow NXQL queries using [NXP-14845](https://jira.nuxeo.com/browse/NXP-14845).
 *   Use groups to manage ACL. Adding a user to a group is free, but adding a user in an ACL at the root level has a cost because optimized read ACLs need to be recomputed.
 *   When using Nuxeo in cluster mode, consider using [Redis VCS row cache invalidation](https://doc.nuxeo.com/display/NXDOC/Nuxeo+and+Redis#NuxeoandRedis-VCSRowCacheInvalidation).
-*   Consider disabling the OS swapping (`sudo swapoff -a`) or try to lower the swapiness (`<span class="pln">vm</span>`<span class="pln">&nbsp;</span><span class="pun">.</span><span class="pln">swappiness</span> <span class="pun">=</span><span class="pln">&nbsp;</span><span class="lit">1</span><span class="pln">)</span>
+*   Consider disabling the OS swapping (`sudo swapoff -a`) or try to lower the swapiness (`<span class="pln">vm</span>`<span class="pun">.</span><span class="pln">swappiness</span> <span class="pun">=</span><span class="lit">1</span><span class="pln">)</span>
 *   Check the network latency between the application and the database.
 *   [Configure ImageMagick]({{page page='installing-and-setting-up-related-software'}}) [to use a single thread.](http://doc.nuxeo.com/x/gBDF)
 *   [Monitor](http://doc.nuxeo.com/x/gBDF) everything, JVM, GC, VCS cache hit ratio, database, system.

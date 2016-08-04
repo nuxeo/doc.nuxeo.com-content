@@ -128,27 +128,17 @@ It is possible to override this behavior in the [widget definition]({{page page=
 It is also possible to use expressions to resolve this mode, for instance the following expression can be used to hide a widget displaying the `dublincore` field named `format` in `view` mode if this property is not filled on the document:
 
 ```
-
-  #{empty layoutValue.dc.format?'hidden':'view'}
-
+<widgetModes>
+  <mode value="view">#{empty layoutValue.dc.format?'hidden':'view'}</mode>
+</widgetModes>
 ```
 
 See [Field Binding and Expressions]({{page page='field-binding-and-expressions'}}) for more informations about available expression variables.
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
-<div class="column medium-6">{{#> panel heading="Related pages in current documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in Studio documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related pages in Studio documentation"}}
-
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

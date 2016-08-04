@@ -158,31 +158,62 @@ A document tree will be exported as directory tree. Here is an example of an exp
 Here is an XML that corresponds to a document containing a blob. The blob is exported as a separate file:
 
 ```
-
-    File
-    /default-domain/workspaces/ws/test
-    project
-    default
-
-    test
-    Fri Sep 21 20:49:26 CEST 2007
-    Administrator
-
-    test
-
-      Administrator
-
-    Fri Sep 21 20:48:53 CEST 2007
-
-      application/octet-stream
-      cd1f161f.blob
-
-    error.txt
-
-    0
-
-    1
-
+<document repository="default" id="633cf240-0c03-4326-8b3b-0960cf1a4d80">
+  <system>
+    <type>File</type>
+    <path>/default-domain/workspaces/ws/test</path>
+    <lifecycle-state>project</lifecycle-state>
+    <lifecycle-policy>default</lifecycle-policy>
+    <access-control>
+      <acl name="inherited">
+        <entry principal="administrators" permission="Everything" grant="true"/>
+        <entry principal="members" permission="Read" grant="true"/>
+        <entry principal="members" permission="Version" grant="true"/>
+        <entry principal="Administrator" permission="Everything" grant="true"/>
+      </acl>
+    </access-control>
+  </system>
+  <schema xmlns="http://www.nuxeo.org/ecm/schemas/files/" name="files">
+    <files/>
+  </schema>
+  <schema xmlns:dc="http://www.nuxeo.org/ecm/schemas/dublincore/" name="dublincore">
+    <dc:valid/>
+    <dc:issued/>
+    <dc:coverage></dc:coverage>
+    <dc:title>test</dc:title>
+    <dc:modified>Fri Sep 21 20:49:26 CEST 2007</dc:modified>
+    <dc:creator>Administrator</dc:creator>
+    <dc:subjects/>
+    <dc:expired/>
+    <dc:language></dc:language>
+    <dc:rights>test</dc:rights>
+    <dc:contributors>
+      <item>Administrator</item>
+    </dc:contributors>
+    <dc:created>Fri Sep 21 20:48:53 CEST 2007</dc:created>
+    <dc:source></dc:source>
+    <dc:description/>
+    <dc:format></dc:format>
+  </schema>
+  <schema xmlns="http://www.nuxeo.org/ecm/schemas/file/" name="file">
+    <content>
+      <encoding></encoding>
+      <mime-type>application/octet-stream</mime-type>
+      <data>cd1f161f.blob</data>
+    </content>
+    <filename>error.txt</filename>
+  </schema>
+  <schema xmlns="http://project.nuxeo.com/geide/schemas/uid/" name="uid">
+    <minor_version>0</minor_version>
+    <uid/>
+    <major_version>1</major_version>
+  </schema>
+  <schema xmlns="http://www.nuxeo.org/ecm/schemas/common/" name="common">
+    <icon-expanded/>
+    <icon/>
+    <size/>
+  </schema>
+</document> 
 ```
 
 You can see that the generated document is containing one <system> section and one or more <schema> sections.
@@ -192,15 +223,18 @@ For each schema defined by the document type, there is a schema entry which cont
 Here is how the same blob will be serialized when inlining blobs (an option of the repository reader):
 
 ```
-
-      application/octet-stream
-
+<schema xmlns="http://www.nuxeo.org/ecm/schemas/file/" name="file">
+    <content>
+      <encoding></encoding>
+      <mime-type>application/octet-stream</mime-type>
+      <data>
        b3JnLmpib3NzLnJlbW90aW5nLkNhbm5vdENvbm5lY3RFeGNlcHRpb246IENhbiBub3QgZ2V0IGNv
        bm5lY3Rpb24gdG8gc2VydmVyLiAgUHJvYmxlbSBlc3RhYmxpc2hpbmcgc29ja2V0IGNvbm5lY3Rp 
        [...]
-
-    error.txt
-
+       </data>
+    </content>
+    <filename>error.txt</filename>
+  </schema> 
 ```
 
 ### Inlining Blobs
@@ -282,7 +316,7 @@ The following `DocumentWriters` are provided by Nuxeo:
     *   `XMLDocumentTreeWriter` - writes a list of documents inside a unique XML file with inlined blobs. The document tags will be included in a `root` tag:
 
         ```
-         .. 
+        <documents> .. </documents>
         ```
 
     *   `XMLDirectoryWriter` - writes documents as a folder tree on the file system. To read back the exported tree you may use `XMLDirectoryReader`;

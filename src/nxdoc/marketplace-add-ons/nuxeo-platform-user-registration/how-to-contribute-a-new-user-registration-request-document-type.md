@@ -46,7 +46,7 @@ If you want to define other request metadata that should be filled in when invit
 
 You have already defined a new user registration document type as described in&nbsp;[How to Define a Document Type]({{page page='how-to-define-a-document-type'}})&nbsp;with the following items and values:
 
-*   A new schema <span>`custom-userinfo` that must have&nbsp;</span>at least the following attributes:
+*   A new schema `custom-userinfo` that must have&nbsp;at least the following attributes:
 
 <table><tbody><tr><th colspan="1">Attribute Name</th><th colspan="1">Type</th></tr><tr><td colspan="1">
 
@@ -114,7 +114,7 @@ You have already defined a new user registration document type as described in&n
     }
     ```
 
-    <span>The&nbsp;`registration` schema is required to add other fields used by the user registration feature.</span>
+    The&nbsp;`registration` schema is required to add other fields used by the user registration feature.
 
 *   A Document type name&nbsp;`MyCustomUserRegistration`, with both schemas&nbsp;`custom-userinfo` and&nbsp;`registration`.
 
@@ -123,7 +123,7 @@ You have already defined a new user registration document type as described in&n
 Nested the `component`&nbsp;tag of your XML contribution file, &nbsp;add first a&nbsp;`require` tag to reference your document type definition
 
 ```
- studio.extensions.my-studio-project
+ <require>studio.extensions.my-studio-project</require>
 ```
 
 ## Step 2: Contributing Your Document Type to the User Registration Configuration
@@ -131,17 +131,21 @@ Nested the `component`&nbsp;tag of your XML contribution file, &nbsp;add first a
 Use the extension point&nbsp;`configuration` to register your new document type, schema and fields in the user registration service.
 
 ```
-
-		MyCustomUserRegistration
-
-          custom-userinfo
-          custom-userinfo:login
-          custom-userinfo:email
-          custom-userinfo:firstName
-          custom-userinfo:lastName
-          custom-userinfo:groups
-          custom-userinfo:company
-
+<extension target="org.nuxeo.ecm.user.registration.UserRegistrationService"
+    point="configuration">
+	<configuration merge="true">
+		<requestDocType>MyCustomUserRegistration</requestDocType>
+		<userInfo>
+          <schemaName>custom-userinfo</schemaName>
+          <usernameField>custom-userinfo:login</usernameField>
+          <emailField>custom-userinfo:email</emailField>
+          <firstnameField>custom-userinfo:firstName</firstnameField>
+          <lastnameField>custom-userinfo:lastName</lastnameField>
+          <groupsField>custom-userinfo:groups</groupsField>
+          <companyField>custom-userinfo:company</companyField>
+        </userInfo>
+	</configuration>
+</extension>
 ```
 
 You're done. All default FreeMarker templates will use dynamically your fields, so you don't have to contribute new templates.
@@ -150,22 +154,16 @@ You're done. All default FreeMarker templates will use dynamically your fields, 
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
 *   [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Nuxeo Platform User Registration]({{page page='nuxeo-platform-user-registration'}})
 *   [Documents]({{page space='studio' page='documents'}}) (Nuxeo Studio)
 *   [Schemas]({{page space='studio' page='schemas'}}) (Nuxeo Studio)
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

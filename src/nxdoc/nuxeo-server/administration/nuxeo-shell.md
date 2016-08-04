@@ -225,7 +225,7 @@ This also means, most of the Shell commands are implemented as remote Automation
 
 &nbsp;
 
-{{#> callout type='info' heading="Downloads"}}
+{{#> callout type='info' heading='Downloads'}}
 
 The Nuxeo Shell is available at the Admin Center, in the "Monitoring" tab and also as a WebEngine site at [http://host:port/nuxeo/site/shell](http://hostport).
 
@@ -284,7 +284,7 @@ There are several type of objects that supports completion (like, file, document
 
 ### Scripting
 
-{{#> callout type='note' heading="Security Warning"}}
+{{#> callout type='note' heading='Security Warning'}}
 
 Because of potential security issues the scripting feature is available only when logged in as Administrator
 
@@ -313,7 +313,7 @@ The automation mode provides Shell commands for any operation available on the s
 
 This mode should be used only to debug operations or to execute some operations not exposed through specialized commands by the Shell.
 
-{{#> callout type='info' heading="Experimental"}}
+{{#> callout type='info' heading='Experimental'}}
 
 Because of the Shell environment not every automation operation command will correctly work. You should use regular operations instead.
 
@@ -445,7 +445,7 @@ To show the current namespace name type:
 use
 ```
 
-{{#> callout type='info' heading="Note"}}
+{{#> callout type='info' heading='Note'}}
 
 When doing file based auto-completion this will be relative to the current directory (that you can change using `cd`, `pushd`, `popd` when in local namespace). The same for document based auto-completion.
 

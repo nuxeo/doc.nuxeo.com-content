@@ -272,21 +272,15 @@ There are 3 types of vocabulary:
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related Howtos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Howtos'}}
 
 *   [Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
 *   [Translating a Vocabulary]({{page page='how-to-translate-a-vocabulary'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Tutorials"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Tutorials'}}
 
 *   [Data Lists and Directories]({{page page='data-lists-and-directories'}})
 *   [Declaring Vocabularies]({{page space='studio' page='declaring-vocabularies'}})
 *   [Managing Vocabularies]({{page space='userdoc' page='managing-vocabularies'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

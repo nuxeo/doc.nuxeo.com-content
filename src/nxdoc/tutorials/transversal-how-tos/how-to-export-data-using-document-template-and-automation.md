@@ -254,8 +254,9 @@ data_C2
 5.  The template will enable to handle a list of documents. For each of these documents, we will need to retrieve some of its metadata and display them.
 
     ```
-    <#list This="" as="" doc="">
+    <#list This as doc>
     "${doc["dc:title"]}","${doc["dc:description"]}","${doc["dc:creator"]}","${doc["dc:created"]}"
+    </#list>
 
     ```
 
@@ -263,9 +264,9 @@ data_C2
 
     ```
     Title, Description, Creator, Creation Date
-    <#list This="" as="" doc="">
+    <#list This as doc>
     "${doc["dc:title"]}","${doc["dc:description"]}","${doc["dc:creator"]}","${doc["dc:created"]}"
-
+    </#list>
     ```
 
 6.  Click on **Save** to save your template.
@@ -289,8 +290,9 @@ data_C2
 *   The element `dc:subjects`&nbsp;is a list, so it has to be listed as one using the script.
 
     ```
-    <#list doc["dc:subjects"]="" as="" subject="">
+    <#list doc["dc:subjects"] as subject>
     ${subject}
+    </#list>
 
     ```
 
@@ -332,24 +334,18 @@ The only step left is to [create a button]({{page page='how-to-create-an-automat
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Popular How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
 *   [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
 *   [How to Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
 *   [How to Quickly Generate a PDF Using Document Template]({{page page='how-to-quickly-generate-a-pdf-using-document-template'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
 *   [Document Templates and Automation Rendering Service]({{page page='document-templates-and-automation-rendering-service'}})
 *   [NXQL]({{page page='nxql'}})
 *   [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

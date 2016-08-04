@@ -87,11 +87,11 @@ Below is an example, based on the results returned by the method `QueryAndFetch`
         @OperationMethod
         public Blob run() throws Exception {
             IterableQueryResult result = session.queryAndFetch(query, lang);
-            Iterator> it = result.iterator();
+            Iterator<Map<String, Serializable>> it = result.iterator();
 
             JSONArray array = new JSONArray();
             while (it.hasNext()) {
-                Map item = it.next();
+                Map<String, Serializable> item = it.next();
                 JSONObject object = new JSONObject();
                 object.accumulateAll(item);
                 array.add(object);
@@ -108,6 +108,14 @@ Below is an example, based on the results returned by the method `QueryAndFetch`
 *   Registering this operation
 
     ```
+    <?xml version="1.0"?>
+    <component name="org.nuxeo.support.operations">
+
+      <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
+        point="operations">
+        <operation class="org.nuxeo.support.QueryAndFetch" />
+      </extension>
+    </component>
 
     ```
 

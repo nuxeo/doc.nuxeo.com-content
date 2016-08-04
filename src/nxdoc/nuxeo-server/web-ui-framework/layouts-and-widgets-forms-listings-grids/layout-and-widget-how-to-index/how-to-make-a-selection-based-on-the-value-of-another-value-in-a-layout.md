@@ -100,11 +100,15 @@ Add two Single Document Suggestion widgets to a layout. Configure the first one 
 For the second widget define a custom page provider (see code block) and set the **Document page provider name** parameter to the name of the page provider. In the **Custom Properties Configuration** enter a new parameter `operationId` with value `Repository.PageProvider`.
 
 ```
-
+<extension point="providers" target="org.nuxeo.ecm.platform.query.api.PageProviderService">
+  <coreQueryPageProvider name="myCustomDocs">
+  <pattern escapeParameters="true" quoteParameters="true">
     SELECT * FROM File WHERE dc:title ILIKE ? and ecm:parentId = ?
-
-  20
-
+  </pattern>
+  <sort column="dc:title" ascending="true" />
+  <pageSize>20</pageSize>
+  </coreQueryPageProvider>
+</extension>
 ```
 
 ## Passing Additional Operation Parameters to select2
@@ -124,8 +128,8 @@ function additionalParams(temp,params,query){
 
 Deploy the layout to a Nuxeo instance. Go to the layout and make a Folder selection. Inspect the source code of the widget and identify the input element by the selected value. Look at its id. Set the expression in the firstSelectionId variable of the additionalParams function to the last part of the id. See illustrations.
 
-![Making the first selection]({{file name='Screen Shot 2015-05-20 at 4.22.00 PM.png'}} ?w=835,h=519 "Making the first selection")
+![Making the first selection]({{file name='Screen Shot 2015-05-20 at 4.22.00 PM.png'}} ?w=835,h=519 'Making the first selection')
 
-![Identifying the element id]({{file name='Screen Shot 2015-05-20 at 4.22.34 PM.png'}} ?w=835,h=596 "Identifying the element id")
+![Identifying the element id]({{file name='Screen Shot 2015-05-20 at 4.22.34 PM.png'}} ?w=835,h=596 'Identifying the element id')
 
-![The finished product]({{file name='Screen Shot 2015-05-20 at 4.23.38 PM.png'}} ?w=835,h=519 "The finished product")
+![The finished product]({{file name='Screen Shot 2015-05-20 at 4.23.38 PM.png'}} ?w=835,h=519 'The finished product')

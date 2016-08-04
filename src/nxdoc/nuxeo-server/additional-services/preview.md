@@ -143,7 +143,7 @@ The&nbsp;[HtmlPreviewAdapter](https://fisheye.nuxeo.com/browse/nuxeo/nuxeo-featu
 ```
 ...
  preview = targetDocument.getAdapter(HtmlPreviewAdapter.class);
- List previewBlobs= preview.getFilePreviewBlobs();
+ List<Blob> previewBlobs= preview.getFilePreviewBlobs();
 
 ```
 

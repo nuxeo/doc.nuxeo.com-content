@@ -40,7 +40,7 @@ While Nuxeo EP 5.3.2 was based on the JBoss distribution, Nuxeo EP 5.4.0 is base
 
 ### JBoss 5
 
-If using the JBoss distribution, see <span class="confluence-link">[Upgrade to 5.4 and JBoss 5]({{page space='nxdoc54' page='upgrade-from-532-to-540-with-jboss-5'}}).</span>
+If using the JBoss distribution, see [Upgrade to 5.4 and JBoss 5]({{page space='nxdoc54' page='upgrade-from-532-to-540-with-jboss-5'}}).
 
 ## Data Migration
 

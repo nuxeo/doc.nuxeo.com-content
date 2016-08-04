@@ -230,7 +230,7 @@ You have to override this&nbsp;`nuxeo_error.jsp`&nbsp;page in a custom project.
 3.  The `deployment-fragment.xml` of your custom project should contain the following requirement to nicely deploy your customized version of the error pages.
 
     ```
-    org.nuxeo.ecm.webapp.ui
+    <require>org.nuxeo.ecm.webapp.ui</require>
 
     ```
 
@@ -238,9 +238,7 @@ You have to override this&nbsp;`nuxeo_error.jsp`&nbsp;page in a custom project.
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Override a Template]({{page page='how-to-override-a-template'}})
 *   [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page page='how-to-declare-the-css-and-javascript-resources-used-in-your-templates'}})
@@ -248,9 +246,7 @@ You have to override this&nbsp;`nuxeo_error.jsp`&nbsp;page in a custom project.
 *   [undefined]({{page}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Theme in Developer Documentation]({{page page='theme'}})
 *   [Branding in Studio Documentation]({{page space='studio' page='branding'}})
@@ -258,6 +254,4 @@ You have to override this&nbsp;`nuxeo_error.jsp`&nbsp;page in a custom project.
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Online UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

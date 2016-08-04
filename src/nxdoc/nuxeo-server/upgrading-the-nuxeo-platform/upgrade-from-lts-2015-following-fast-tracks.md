@@ -277,7 +277,7 @@ REST endpoint `/group/{groupname}` no longer marshall members (users and groups)
 
 {{! multiexcerpt name='upgrade-8.2-remove-annotations'}}
 
-<span>Annotations were removed from Nuxeo Platform 8.2\. A new integration of annotations will be implemented for the pdf.js previewer before Nuxeo Platform LTS 2016.</span>
+Annotations were removed from Nuxeo Platform 8.2\. A new integration of annotations will be implemented for the pdf.js previewer before Nuxeo Platform LTS 2016.
 
 {{! /multiexcerpt}}
 
@@ -343,6 +343,112 @@ Nuxeo is now sending the `X-FRAME-OPTIONS` header with `SAMEORIGIN` value. It re
 You can disable it using:
 
 ```
-org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService.defaultContrib
+<require>org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService.defaultContrib</require>
+
+<extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService"
+    point="responseHeaders">
+  <header name="X-Frame-Options" enabled="false"/>
+</extension>
+```
+
+This is required for the addon [Nuxeo for Salesforce](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce).
+
+See [NXP-19629](https://jira.nuxeo.com/browse/NXP-19629) for details.
+
+{{! /multiexcerpt}}
+
+### Deprecated APIs
+
+{{! multiexcerpt name='upgrade-8.3-api-coreSession_methods'}}
+
+The following methods are deprecated in order to introduce same methods with a `var args` argument `CopyOption`.
+
+*   `CoreSession#copy(DocumentRef, DocumentRef, String)`
+
+*   `CoreSession#copy(List<DocumentRef>, DocumentRef)`
+
+*   `CoreSession#copyProxyAsDocument(DocumentRef, DocumentRef, String)`
+
+*   `CoreSession#copyProxyAsDocument(List<DocumentRef>, DocumentRef)`
+
+See [NXP-19740](https://jira.nuxeo.com/browse/NXP-19740) for details.
+
+{{! /multiexcerpt}}
+
+### WorkManager
+
+{{! multiexcerpt name='upgrade-8.3-code-workManager'}}
+
+The `canceled` and `completed` states are removed from the work's API. So you can't get results from completed works anymore. Instead you should store results by means of the `transient store`.
+The previous way of querying for queue's counter has been deprecated by a the new API `org.nuxeo.ecm.core.work.api.WorkManager.getMetrics(String)` which provides you with the consistent set of counters.
+
+See [NXP-19160](https://jira.nuxeo.com/browse/NXP-19160) for details.
+
+{{! /multiexcerpt}}
+
+### REST Workflow
+
+{{! multiexcerpt name='upgrade-8.3-code-RESTWorkflow'}}
+
+The `url` property of a workflow blob has been moved to the `data` property. See [NXP-19640](https://jira.nuxeo.com/browse/NXP-19640) for details.
+
+The `url` property of a blob is now following the correct pattern. Previously `../[thumbnail:thumb:thumbnail/retrievedFile.png](http://thumbnailthumbthumbnail)` is now `../[thumb:thumbnail/retrievedFile.png](http://thumbthumbnail)`.See [NXP-18239](http://jira.nuxeo.com/browse/NXP-18239) for details.
+
+{{! /multiexcerpt}}
+
+&nbsp;
+
+## Optimizations
+
+<div>
+
+### Nuxeo Drive
+
+{{! multiexcerpt name='upgrade-8.3-optims-drive'}}
+
+The permission checks done when adapting a document to a `FileSystemItem` are optimized by default with the `org.nuxeo.drive.permissionCheckOptimized` property of the `ConfigurationService` set to `true`.
+
+The previous behavior can be re-activated using:
 
 ```
+<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration"> 
+  <property name="org.nuxeo.drive.permissionCheckOptimized">false</property> 
+</extension> 
+```
+
+See [NXP-19441](https://jira.nuxeo.com/browse/NXP-19441) for details.
+
+{{! /multiexcerpt}}
+
+## Nuxeo Packages
+
+### Deprecated Packages
+
+{{! multiexcerpt name='upgrade-8.3-NuxeoPackages-webMobile'}}
+
+`nuxeo-web-mobile` has been deprecated in order to let some place to the new standalone [Nuxeo Application](https://itunes.apple.com/en/app/nuxeo/id1103802613?ls=1&mt=8), available on iOS.
+
+{{! /multiexcerpt}}
+
+### New Packages
+
+{{! multiexcerpt name='upgrade-8.3-NuxeoPackages-jsfui'}}
+
+The&nbsp; [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui) package lets you install the old Nuxeo UI based on JSF technologies.
+
+{{! /multiexcerpt}}
+
+## <span style="color: rgb(0,0,0);">Complementary Information</span>
+
+*   [Upgrade notes for 8.3](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+*   [Release notes for 8.3](http://nuxeo.github.io/releasenotes/8.3/)
+
+</div>
+
+{{! end_of_tabs }}
+
+&nbsp;
+
+* * *
+
+&nbsp;

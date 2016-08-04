@@ -273,7 +273,7 @@ The Admin tab includes a section called **Update Center** from which you can eas
     ![]({{file name='package-installation-start-page.png'}} ?w=450,border=true)
 6.  Start the installation by clicking on the **Start** button.
 
-    {{#> callout type='note' heading="Packages with dependencies"}}
+    {{#> callout type='note' heading='Packages with dependencies'}}
 
     If the package has some missing dependencies, the **Start** button is not displayed. You are displayed a series of steps to install the required dependencies.
 
@@ -295,7 +295,7 @@ The Admin tab includes a section called **Update Center** from which you can eas
     You need to restart the application for the installation to be completed.
     ![]({{file name='package-restart-required.png'}} ?w=600,border=true)
 
-    {{#> callout type='tip' heading="Hot-reload"}}
+    {{#> callout type='tip' heading='Hot-reload'}}
 
     <div class="message-content">
 
@@ -461,7 +461,7 @@ Uninstalling a package can be done from the Admin tab or from a terminal using t
     ![]({{file name='AdminCenter-uninstall3.png'}} ?w=600,border=true)&nbsp;
     The list of packages is displayed. You need to restart the application for the uninstallation to be completed.
 
-    {{#> callout type='tip' heading="Hot-reload"}}
+    {{#> callout type='tip' heading='Hot-reload'}}
 
     Some packages don't required the server to be restarted to be fully uninstalled.
 

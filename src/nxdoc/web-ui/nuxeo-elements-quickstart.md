@@ -61,7 +61,7 @@ history:
     - 
         author: Solen Guitter
         date: '2015-10-16 15:53'
-        message: Make page available in How-Tos list
+        message: Make page available in how-to's list
         version: '7'
     - 
         author: Solen Guitter
@@ -162,7 +162,9 @@ Let's plug this application to the Nuxeo instance and change the hardcoded users
 2.  Once nuxeo-elements is downloaded import the elements the application will use:
 
     ```
-
+    <link rel="import" href="../bower_components/nuxeo-elements/nuxeo-connection.html">
+    <link rel="import" href="../bower_components/nuxeo-elements/nuxeo-resource.html">
+    <link rel="import" href="../bower_components/nuxeo-elements/nuxeo-page-provider.html">
     ```
 
     Elements used by the application are usually all imported in a single file to simplify the [vulcanization](https://github.com/polymer/vulcanize) process which basically&nbsp;reduces an HTML file and its dependent HTML Imports into a single file to reduce network roundtrips and simplify deployment.
@@ -174,7 +176,12 @@ With Nuxeo Elements imports in place you can now use your custom elements.
 Declare the connection to Nuxeo.&nbsp; This connection will be shared by all Nuxeo data driven elements so it should be one of the first elements you declare in your application, i.e. right at the start of the template:
 
 ```
-
+<body unresolved class="fullbleed layout vertical">
+  <template is="dom-bind" id="app">
+    <nuxeo-connection url="http://localhost:8080/nuxeo" username="Administrator" password="Administrator"></nuxeo-connection>
+    ...
+  </template>
+</body>
 ```
 
 There is now a connection to the Nuxeo instance. Note that you will need to define a [Cross-Origin Resource Sharing (CORS) configuration]({{page page='cross-origin-resource-sharing-cors'}}) before going further if you wish to test your code with gulp.
@@ -184,9 +191,22 @@ There is now a connection to the Nuxeo instance. Note that you will need to defi
 Replace the hard-coded user listing with actual data: use the **nuxeo-resource&nbsp;**element and Nuxeo's REST API, namely the `/api/v1/user/search` endpoint, and to retrieve a list of users.
 
 ```
+<section data-route="users">
+  <!-- GET /user/search and store the response in "users" -->
+  <nuxeo-resource auto path="/user/search" params='{"q": "*"}' response="\{{users}}"></nuxeo-resource>
+  <paper-material elevation="1">
 
-Users
+<h2 class="page-title">Users</h2>
 
+<ul>
+      <!-- loop over users.entries and print each user's id -->
+      <template is="dom-repeat" items="\{{users.entries}}" as="user">
+
+<li>[[user.id]]</li>
+      </template>
+    </ul>
+  </paper-material>
+</section>
 ```
 
 Thanks to our custom `nuxeo-resource` element and Polymer's data binding you can easily "plug" data to your UI in a purely declarative way without any line of code.
@@ -196,13 +216,15 @@ Thanks to our custom `nuxeo-resource` element and Polymer's data binding you can
 1.  Add a link in the application drawer:
 
     ```
-
+    <!-- Drawer Content -->
+    <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
       ...
-
-        Notes
-
+      <a data-route="notes" href="/notes" on-click="onDataRouteClick">
+        <iron-icon icon="description"></iron-icon>
+        <span>Notes</span>
+      </a>
       ...
-
+    </paper-menu>
     ```
 
 2.  Update the routing code to set the "route" to "notes" when the URL matches `/notes`:
@@ -217,7 +239,18 @@ Thanks to our custom `nuxeo-resource` element and Polymer's data binding you can
 3.  Add a new section to be displayed when current "route" is "notes".
 
     ```
+    <section data-route="notes">
+      <!-- perform a NXQL query and store the current page entries in "notes" -->
+      <nuxeo-page-provider auto pageSize="5" query="select * from Note where ecm:currentLifeCycleState != 'deleted'" current-page="\{{notes}}"></nuxeo-page-provider>
+      <!-- loop over the notes and print each notes's title and description -->
+      <template is="dom-repeat" items="\{{notes}}" as="note">
+        <paper-material elevation="1">
 
+    <h2>[[note.title]]</h2>
+          <span>[[note.properties.dc:description]]</span>
+        </paper-material>
+      </template>
+    </section>
     ```
 
     Here the `nuxeo-page-provider` element is used with a simple NXQL query to retrieve all the Notes that haven't been deleted and displays a simple card for each of these with the Note's title and description.

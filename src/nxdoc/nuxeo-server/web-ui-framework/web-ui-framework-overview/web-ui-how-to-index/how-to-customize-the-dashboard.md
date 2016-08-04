@@ -136,16 +136,25 @@ Create a new XML extension named `dashboardContracts`. It has to contribute to t
     *   order: order is used to set the order of the elements in the dashboard column.
 
 ```
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager" point="widgets">
+  <widget name="dashboard_contracts" type="contentViewWithForms">
+      <properties widgetMode="any">
+        <property name="contentViewName">list_contracts_updated</property>
+        <property name="foldable">true</property>
+        <property name="hideEmpty">false</property>
+        <property name="useAjaxPagination">true</property>
+      </properties>
+    </widget>
+</extension>
 
-        list_contracts_updated
-        true
-        false
-        true
-
-      DASHBOARD_LEFT
-
-        dashboard_contracts
-
+<extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
+  <action id="dashboard_contracts" type="widget" order="10">
+      <category>DASHBOARD_LEFT</category>
+      <properties>
+        <property name="widgetName">dashboard_contracts</property>
+      </properties>
+    </action>
+</extension>
 ```
 
 &nbsp;
@@ -165,11 +174,16 @@ In this how-to, let's go deeper in the customization of the dashboard: let's rep
 The extension defining the link **Dashboard** and the content of the tab is [<span class="componentTitle">org.nuxeo.ecm.user.center.dashboard.jsf.actions</span>](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.user.center.dashboard.jsf.actions--actions):
 
 ```
-
-      USER_CENTER
-
-      Dashboard_sub_tab
-
+  <extension target="org.nuxeo.ecm.platform.actions.ActionService"
+    point="actions">
+    <action id="Dashboard" link="/user_center_fragment.xhtml" label="user.center.dashboard" icon="/icons/dashboard.png" order="10">
+      <category>USER_CENTER</category>
+    </action>
+    <action id="DashboardMain" link="/incl/dashboard/user_jsf_dashboard.xhtml" label="" order="10"
+      type="admin_rest_document_link">
+      <category>Dashboard_sub_tab</category>
+    </action>
+  </extension>
 ```
 
 You need to override this contribution in order to define your custom dashboard instead.
@@ -188,9 +202,13 @@ For this example, create a tab displaying a content view listing the document of
 As viewed in the first step, the part you will need to override is:
 
 ```
-
-      Dashboard_sub_tab
-
+  <extension target="org.nuxeo.ecm.platform.actions.ActionService"
+    point="actions">
+    <action id="DashboardMain" link="/incl/dashboard/user_jsf_dashboard.xhtml" label="" order="10"
+      type="admin_rest_document_link">
+      <category>Dashboard_sub_tab</category>
+    </action>
+  </extension>
 ```
 
 1.  In Studio, create a new **XML Extensions**.
@@ -198,9 +216,12 @@ As viewed in the first step, the part you will need to override is:
     The name of the file will be `/studio_tabs/studio_tab_XXX.xhtml`, XXX is the name of the tab, so in our case`/studio_tabs/studio_tab_NewDashboard.xhtml`.
 
     ```
-
-          Dashboard_sub_tab
-
+    <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
+      <action id="DashboardMain" link="/studio_tabs/studio_tab_NewDashboard.xhtml" label="" order="10"
+          type="admin_rest_document_link">
+          <category>Dashboard_sub_tab</category>
+       </action>
+    </extension>
     ```
 
 ### Deploying the Project

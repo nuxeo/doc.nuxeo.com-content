@@ -816,18 +816,12 @@ Installing some modules from the [Nuxeo Marketplace](http://marketplace.nuxeo.co
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related topics in developer documentation"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in developer documentation'}}
 
 &nbsp;
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Automation in Nuxeo Studio documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Automation in Nuxeo Studio documentation'}}
 
 &nbsp;
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

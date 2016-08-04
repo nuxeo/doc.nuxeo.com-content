@@ -136,14 +136,17 @@ You may want to use [Nuxeo Platform Template Rendering add-on]({{page page='temp
     You can use the following sample for instance.
 
     ```
-    <#list This="" as="" doc="">
+    <#list This as doc>
 
-    ${doc.title}
+    <h1>${doc.title}</h1>
 
-    ${doc.dublincore.description}
+    <ul>
 
-    ${doc.dublincore.nature}
+    <li>${doc.dublincore.description}</li>
 
+    <li>${doc.dublincore.nature}</li>
+    </ul>
+    </#list>
     ```
 
 2.  Create a [user action]({{page space='studio' page='user-actions'}}) on the document (in the [category]({{page page='actions-display'}}) you want).
@@ -164,21 +167,15 @@ You may want to use [Nuxeo Platform Template Rendering add-on]({{page page='temp
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{{multiexcerpt 'popular-how-tos' page='How to Create an Automation Chain'}}}
 
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
 *   [Content Automation Concepts]({{page page='content-automation-concepts'}})
 *   [Document Templates and Automation Rendering Service]({{page page='document-templates-and-automation-rendering-service'}})
 *   [Template Rendering Addon]({{page page='template-rendering-addon'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

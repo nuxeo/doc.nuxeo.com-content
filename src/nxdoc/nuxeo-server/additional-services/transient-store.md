@@ -106,12 +106,15 @@ Serializable getParameter(String key, String parameter);
 You can configure several Transient Stores with the following extension point:
 
 ```
-
-    -1
-    -1
-    240
-    10
-
+<extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent"
+  point="store">
+  <store name="myTransientStore" class="my.transientstore.implementation">
+    <targetMaxSizeMB>-1</targetMaxSizeMB>
+    <absoluteMaxSizeMB>-1</absoluteMaxSizeMB>
+    <firstLevelTTL>240</firstLevelTTL>
+    <secondLevelTTL>10</secondLevelTTL>
+  </store>
+</extension>
 ```
 
 The `store` tag supports two attributes:
@@ -129,18 +132,24 @@ Nested configuration elements are:
 Have a look at the [default Transient Store configuration](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common/config/transient-store-config.xml.nxftl) defined in a template:
 
 ```
-
-  <#if "${nuxeo.redis.enabled}"="=" "true"="">
-    <#assign className="org.nuxeo.ecm.core.redis.contribs.RedisTransientStore"/>
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.core.transient.store.config">
+  <#if "${nuxeo.redis.enabled}" == "true">
+    <#assign className = "org.nuxeo.ecm.core.redis.contribs.RedisTransientStore" />
   <#else>
-    <#assign className="org.nuxeo.ecm.core.transientstore.SimpleTransientStore"/>
-
-      -1
-      -1
-      240
-      10
-      10
-
+    <#assign className = "org.nuxeo.ecm.core.transientstore.SimpleTransientStore" />
+  </#if>
+  <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent"
+    point="store">
+    <store name="default" class="${className}">
+      <targetMaxSizeMB>-1</targetMaxSizeMB>
+      <absoluteMaxSizeMB>-1</absoluteMaxSizeMB>
+      <firstLevelTTL>240</firstLevelTTL>
+      <secondLevelTTL>10</secondLevelTTL>
+      <minimalRetention>10</minimalRetention>
+    </store>
+  </extension>
+</component>
 ```
 
 The class is dynamically defined depending on if [Redis]({{page page='redis-configuration'}}) is enabled or not.
@@ -163,7 +172,7 @@ The caching directory used by any Transient Store is located in `$DATA_DIR/trans
 
 Typically for the default Transient Store on an instance with the Nuxeo data directory not externalized:&nbsp;`nxserver/data/transientstores/default`.
 
-{{#> callout type='warning' heading="Clustering Configuration"}}
+{{#> callout type='warning' heading='Clustering Configuration'}}
 
 In a cluster environment the caching directory must be shared by all the Nuxeo instances, see the [related documentation](https://doc.nuxeo.com/display/ADMINDOC/Nuxeo+Clustering+Configuration#NuxeoClusteringConfiguration-TransientStore).
 
@@ -179,7 +188,7 @@ The&nbsp;`RedisTransientStore` relies on [Redis]({{page page='nuxeo-and-redis'}}
 
 **It is distributed and persistent.**
 
-{{#> callout type='warning' heading="Clustering configuration"}}
+{{#> callout type='warning' heading='Clustering configuration'}}
 
 In a cluster environment Nuxeo must be configured to use a Redis server and any Transient Store accessed by multiple Nuxeo instances must use the `RedisTransientStore` implementation.
 

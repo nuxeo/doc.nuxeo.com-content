@@ -57,18 +57,25 @@ The lists of documents can be invalidated when Seam events are raised. This is u
 Documents lists can be defined like in the following example ( [`OSGI-INF/documentslists-contrib.xml`](https://github.com/nuxeo/nuxeo-dm/blob/master/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/documentslists-contrib.xml) ):
 
 ```
+<extension target="org.nuxeo.ecm.webapp.documentsLists.DocumentsListsService" point="list">
 
-    CLIPBOARD
-    /img/clipboard.gif
-    workingList.clipboard
-    false
-    false
+  <documentsList name="CLIPBOARD">
+    <category>CLIPBOARD</category>
+    <imageURL>/img/clipboard.gif</imageURL>
+    <title>workingList.clipboard</title>
+    <defaultInCategory>false</defaultInCategory>
+    <supportAppends>false</supportAppends>
+  </documentsList>
 
-      folderishDocumentSelectionChanged
-      searchPerformed
+  <documentsList name="CURRENT_SELECTION">
+    <events>
+      <event>folderishDocumentSelectionChanged</event>
+      <event>searchPerformed</event>
+    </events>
+    <isSession>false</isSession>
+  </documentsList>
 
-    false
-
+</extension>
 ```
 
 Here is a sample code to get the list of selected documents within a Seam Component:

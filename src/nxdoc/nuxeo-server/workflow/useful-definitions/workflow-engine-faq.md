@@ -179,10 +179,14 @@ history:
     It's very simple, just use the following contribution to override its availability filter:
 
     ```
-
-            File
-            Note
-
+    <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="filters">
+        <filter id="filter@SerialDocumentReview" append="true">
+          <rule grant="false">
+            <type>File</type>
+            <type>Note</type>
+          </rule>
+         </filter>
+     </extension>
     ```
 
 *   **How can I enable the default workflow SerialDocumentReview for new document types?**
@@ -190,9 +194,13 @@ history:
     Use the following contribution:
 
     ```
-
-            MyDocTYpe
-
+    <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="filters">
+        <filter id="filter@SerialDocumentReview" append="true">
+          <rule grant="true">
+            <type>MyDocTYpe</type>
+          </rule>
+         </filter>
+     </extension>
     ```
 
 *   **How can I have all the comments submitted by users when completing tasks logged in by the audit?**
@@ -201,12 +209,10 @@ history:
 &nbsp;
 
 *   **How can I get the current user name in an operation executed by the workflow?**
-    All the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). In order to fetch the current user, you have to use: <span>`CurrentUser.originatingUser==null?CurrentUser.name:CurrentUser.originatingUser`.</span>
-    <span>
-    </span>
+    All the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). In order to fetch the current user, you have to use: `CurrentUser.originatingUser==null?CurrentUser.name:CurrentUser.originatingUser`.
+
 *   **Is the availability filter configured on the workflow also evaluated when the workflow is started using the operation "StartWorkflow"?**
     No, this filter is actually an [Action Filter](http://doc.nuxeo.com/x/EYAO) used to control the visibility of workflow models in the list of workflows displayed by the widget type "Workflow Process".
 
 *   **Can I have a workflow variable and a node variable with the same name?**
-    No, the workflow engine doesn't handle this case. They could have the same name,&nbsp; but as long as they are not both used on the same node. But we recommend you to choose different names and to avoid this situation.<span>
-    </span>
+    No, the workflow engine doesn't handle this case. They could have the same name,&nbsp; but as long as they are not both used on the same node. But we recommend you to choose different names and to avoid this situation.

@@ -215,8 +215,6 @@ To accept an invitation:
         It will cancel the creation of the account if the user has not already enter his password.
     *   Click on Validate.
         It will finalize the invitation process.![]({{file name='accepted-user-registration.png'}} ?w=600,border=true)
-    <span style="color: rgb(0,0,0);">
-    </span>
 
 #### <span style="color: rgb(0,0,0);">Rejecting an Invitation</span>
 
@@ -244,34 +242,40 @@ The user registration contributes to the `nuxeo-invite` and `nuxeo-webengine-inv
 ### Default Configuration of the User Registration
 
 ```
-
-      UserRegistration
-
-        UserRegistrationContainer
-        /management/
-        registrationRequests
-        Registration Requests Container
-
-          userinfo
-          userinfo:login
-          userinfo:password
-          userinfo:email
-          userinfo:firstName
-          userinfo:lastName
-          userinfo:groups
-          userinfo:company
-
-        You are invited to access Nuxeo
-
-        You are invited to access Nuxeo
-
-      site/userRegistration/enterpassword/
-      site/userRegistration/validate
-      org.nuxeo.ecm.user.registration.DefaultRegistrationUserFactory
-
+<extension target="org.nuxeo.ecm.user.registration.UserRegistrationService"
+             point="configuration">
+    <configuration merge="true">
+      <requestDocType>UserRegistration</requestDocType>
+      <container>
+        <docType>UserRegistrationContainer</docType>
+        <parentPath>/management/</parentPath>
+        <name>registrationRequests</name>
+        <title>Registration Requests Container</title>
+      </container>
+		<userInfo>
+          <schemaName>userinfo</schemaName>
+          <usernameField>userinfo:login</usernameField>
+          <passwordField>userinfo:password</passwordField>
+          <emailField>userinfo:email</emailField>
+          <firstnameField>userinfo:firstName</firstnameField>
+          <lastnameField>userinfo:lastName</lastnameField>
+          <groupsField>userinfo:groups</groupsField>
+          <companyField>userinfo:company</companyField>
+        </userInfo>
+      <validationEmail>
+        <title>You are invited to access Nuxeo</title>
+        <template>skin/views/userRegistration/EmailInviteDocTemplate.ftl</template>
+      </validationEmail>
+      <reviveEmail>
+        <title>You are invited to access Nuxeo</title>
+        <template>skin/views/userRegistration/ReviveEmailInviteDocTemplate.ftl</template>
+      </reviveEmail>
+      <enterPasswordUrl>site/userRegistration/enterpassword/</enterPasswordUrl>
+      <validationRelUrl>site/userRegistration/validate</validationRelUrl>
+      <registrationUserFactory>org.nuxeo.ecm.user.registration.DefaultRegistrationUserFactory</registrationUserFactory>
+    </configuration>
+  </extension>
 ```
-
-<span style="line-height: 21.58px;">&nbsp;</span>
 
 You can contribute to the default user registration configuration or add your new configuration by adding a specific&nbsp;`name` attribute in the&nbsp;`configuration` tag.&nbsp;
 
@@ -283,7 +287,7 @@ The invitation UI action uses the `default_registration` name to get the configu
 
 <span style="line-height: 21.58px;">Each&nbsp;user invitation request is actually a document stored in a specific container. In the default configuration, requests are stored under</span> `/management` <span style="line-height: 21.58px;">.</span>
 
-*   The container type is&nbsp;`UserRegistrationContainer`. <span><span>The folder is created if it does not exist. It has the facet <span style="line-height: 21.58px;">`RegistrationConfiguration` to store&nbsp;</span></span> </span>the configuration name of the request object.
+*   The container type is&nbsp;`UserRegistrationContainer`. The folder is created if it does not exist. It has the facet <span style="line-height: 21.58px;">`RegistrationConfiguration` to store&nbsp;</span> the configuration name of the request object.
 *   The user registration request documents have the type&nbsp;`UserRegistration` that store all request metadata (username, email etc) thanks to the <span style="line-height: 21.58px;">`UserInvitation` facet.</span>
 
 ## How to Contribute a New "User Registration Request" Document Type

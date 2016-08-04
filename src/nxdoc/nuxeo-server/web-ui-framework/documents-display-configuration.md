@@ -90,14 +90,20 @@ After the structural document type, a UI registration for our document type must
 For example, in&nbsp;`OSGI-INF/ui-types-contrib.xml`&nbsp;we will define:
 
 ```
-
+<?xml version="1.0"?>
+<component name="org.nuxeo.project.sample.ecm.types">
+  <extension target="org.nuxeo.ecm.platform.types.TypeService" point="types">
+    <type id="Sample">
+      <label>...</label>
+      <icon>...</icon>
+      <bigIcon>...</bigIcon>
+      <description>...</description>
+      <category>...</category>
+      <layouts>...</layouts>
       ...
-      ...
-      ...
-      ...
-      ...
-      ...
-      ...
+    </type>
+  </extension>
+</component>
 
 ```
 
@@ -132,13 +138,14 @@ Other categories can freely be defined.
 Example:
 
 ```
-
-  Sample document
-  Sample document to do such and such
-  /icons/file.gif
-  /icons/file_100.png
-  SimpleDocument
+<type id="Sample">
+  <label>Sample document</label>
+  <description>Sample document to do such and such</description>
+  <icon>/icons/file.gif</icon>
+  <bigIcon>/icons/file_100.png</bigIcon>
+  <category>SimpleDocument</category>
   ...
+</type>
 
 ```
 
@@ -159,12 +166,13 @@ Proper defaults are used when these are not specified, so no need to add them to
 Example:
 
 ```
-
+<type id="Sample">
   ...
-  view_documents
-  create_document
-  edit_document
+  <default-view>view_documents</default-view>
+  <create-view>create_document</default-view>
+  <edit-view>edit_document</default-view>
   ...
+</type>
 
 ```
 
@@ -188,13 +196,14 @@ The&nbsp;**layout**&nbsp;names refer to layouts defined on another extension poi
 Example:
 
 ```
-
+<type id="Sample">
   ...
-
-    heading
-    note
-
+  <layouts mode="any">
+    <layout>heading</layout>
+    <layout>note</layout>
+  </layouts>
   ...
+</type>
 
 ```
 
@@ -210,10 +219,16 @@ This can also be defined for a pre-existing type, to add new allowed subtypes. P
 For example, we can specify that the Sample type can be created in a Folder and a Workspace. Note that we define two new&nbsp;`<type>`&nbsp;sections here, we don't add this information in the&nbsp;`<type id="Sample">`&nbsp;section.
 
 ```
-
-    Sample
-
-    Sample
+<type id="Folder">
+  <subtypes>
+    <type>Sample</type>
+  </subtypes>
+</type>
+<type id="Workspace">
+  <subtypes>
+    <type>Sample</type>
+  </subtypes>
+</type>
 
 ```
 
@@ -224,11 +239,14 @@ The hidden cases are stored in a list, so if a check is needed for a hidden case
 Example:
 
 ```
-
-    Workspace
-    Folder
-    File
-    Note
+<type id="Workspace">
+  <subtypes>
+    <type>Workspace</type>
+    <type hidden="create, paste">Folder</type>
+    <type>File</type>
+    <type>Note</type>
+  </subtypes>
+</type>
 
 ```
 
@@ -237,21 +255,40 @@ Example:
 The final&nbsp;`OSGI-INF/ui-types-contrib.xml`&nbsp;looks like:
 
 ```
+<?xml version="1.0"?>
+<component name="org.nuxeo.project.sample.ecm.types">
 
- org.nuxeo.ecm.platform.types
+ <!-- Add require to component declaring Workspace and Folder types -->
+ <require>org.nuxeo.ecm.platform.types</require>
 
-      Sample document
-      Sample document to do such and such
-      /icons/file.gif
-      /icons/file_100.png
-      SimpleDocument
-      view_documents
+  <extension target="org.nuxeo.ecm.platform.types.TypeService" point="types">
 
-        heading
-        note
+    <type id="Sample">
+      <label>Sample document</label>
+      <description>Sample document to do such and such</description>
+      <icon>/icons/file.gif</icon>
+      <bigIcon>/icons/file_100.png</bigIcon>
+      <category>SimpleDocument</category>
+      <default-view>view_documents</default-view>
+      <layouts mode="any">
+        <layout>heading</layout>
+        <layout>note</layout>
+      </layouts>
+    </type>
 
-        Sample
+ <!-- containment rules -->
+  <type id="Folder">
+      <subtypes>
+        <type>Sample</type>
+      </subtypes>
+    </type>
+    <type id="Workspace">
+      <subtypes>
+        <type>Sample</type>
+      </subtypes>
+    </type>
 
-        Sample
+ </extension>
+</component>
 
 ```

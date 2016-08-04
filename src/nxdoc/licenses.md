@@ -214,7 +214,7 @@ ant-launcher-1.7.0.jar
 
 </td><td colspan="1">
 
-[Apache Ant](http://ant.apache.org)<span>&nbsp;</span>
+[Apache Ant](http://ant.apache.org)
 
 </td><td colspan="1">
 
@@ -318,7 +318,7 @@ apacheds-btree-base-1.5.1.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -334,7 +334,7 @@ apacheds-constants-1.5.1.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -350,7 +350,7 @@ apacheds-core-1.5.1.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -366,7 +366,7 @@ apacheds-core-shared-1.5.1.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -382,7 +382,7 @@ apacheds-jdbm-store-1.5.1.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -398,7 +398,7 @@ apacheds-kerberos-shared-1.5.1.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -414,7 +414,7 @@ apacheds-protocol-shared-1.5.1.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -430,7 +430,7 @@ apacheds-schema-bootstrap-1.5.1.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -446,7 +446,7 @@ apacheds-schema-registries-1.5.1.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -558,7 +558,7 @@ batik-ext-1.7.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -574,7 +574,7 @@ batik-util-1.7.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -598,7 +598,7 @@ bcprov-jdk15-1.45.jar
 
 </td><td colspan="1">
 
-[Bouncy Castle](http://www.bouncycastle.org/java.html)<span>&nbsp;</span>
+[Bouncy Castle](http://www.bouncycastle.org/java.html)
 
 </td><td colspan="1">
 
@@ -662,7 +662,7 @@ chemistry-opencmis-client-bindings-0.7.0.jar
 
 </td><td colspan="1">
 
-[Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html)<span>&nbsp;</span>
+[Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html)
 
 </td><td colspan="1">
 
@@ -670,7 +670,7 @@ chemistry-opencmis-client-bindings-0.7.0.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -678,7 +678,7 @@ chemistry-opencmis-client-impl-0.7.0.jar
 
 </td><td colspan="1">
 
-[Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html)<span>&nbsp;</span>
+[Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html)
 
 </td><td colspan="1">
 
@@ -686,7 +686,7 @@ chemistry-opencmis-client-impl-0.7.0.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -694,7 +694,7 @@ chemistry-opencmis-commons-api-0.7.0.jar
 
 </td><td colspan="1">
 
-[Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html)<span>&nbsp;</span>
+[Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html)
 
 </td><td colspan="1">
 
@@ -702,7 +702,7 @@ chemistry-opencmis-commons-api-0.7.0.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -710,7 +710,7 @@ chemistry-opencmis-commons-impl-0.7.0.jar
 
 </td><td colspan="1">
 
-[Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html)<span>&nbsp;</span>
+[Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html)
 
 </td><td colspan="1">
 
@@ -718,7 +718,7 @@ chemistry-opencmis-commons-impl-0.7.0.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -726,7 +726,7 @@ chemistry-opencmis-server-bindings-0.7.0-classes.jar
 
 </td><td colspan="1">
 
-[Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html)<span>&nbsp;</span>
+[Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html)
 
 </td><td colspan="1">
 
@@ -734,7 +734,7 @@ chemistry-opencmis-server-bindings-0.7.0-classes.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -742,7 +742,7 @@ chemistry-opencmis-server-support-0.7.0.jar
 
 </td><td colspan="1">
 
-[Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html)<span>&nbsp;</span>
+[Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html)
 
 </td><td colspan="1">
 
@@ -750,7 +750,7 @@ chemistry-opencmis-server-support-0.7.0.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -782,7 +782,7 @@ com.noelios.restlet.ext.servlet-1.0.7.jar
 
 </td><td colspan="1">
 
-<span>CDDL 1.0</span>
+CDDL 1.0
 
 </td></tr><tr><td colspan="1">
 
@@ -830,7 +830,7 @@ commons-codec-1.4.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -846,7 +846,7 @@ commons-collections-3.2.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -862,7 +862,7 @@ commons-dbcp-1.3-RC1.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -878,7 +878,7 @@ commons-digester-1.8.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -894,7 +894,7 @@ commons-el-1.0.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -910,7 +910,7 @@ commons-fileupload-1.2.2.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -926,7 +926,7 @@ commons-httpclient-3.1.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -942,7 +942,7 @@ commons-io-1.4.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -958,7 +958,7 @@ commons-jexl-1.1.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -974,7 +974,7 @@ commons-pool-1.5.4.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -1118,7 +1118,7 @@ geronimo-connector-2.2.1-NX1.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -1134,7 +1134,7 @@ geronimo-transaction-2.2.1.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -1390,7 +1390,7 @@ hibernate-commons-annotations-3.1.0.GA.jar
 
 </td><td colspan="1">
 
-<span>LGPL 2.1</span>
+LGPL 2.1
 
 </td></tr><tr><td colspan="1">
 
@@ -1406,7 +1406,7 @@ hibernate-core-3.3.2.GA.jar
 
 </td><td colspan="1">
 
-<span>LGPL 2.1</span>
+LGPL 2.1
 
 </td></tr><tr><td colspan="1">
 
@@ -1422,7 +1422,7 @@ hibernate-entitymanager-3.4.0.GA.jar
 
 </td><td colspan="1">
 
-<span>LGPL 2.1</span>
+LGPL 2.1
 
 </td></tr><tr><td colspan="1">
 
@@ -1438,7 +1438,7 @@ hibernate-validator-3.1.0.GA.jar
 
 </td><td colspan="1">
 
-<span>LGPL 2.1</span>
+LGPL 2.1
 
 </td></tr><tr><td colspan="1">
 
@@ -1678,7 +1678,7 @@ javasimon-jdbc3-2.5.0.jar
 
 </td><td colspan="1">
 
-<span>LGPL 2.1</span>
+LGPL 2.1
 
 </td></tr><tr><td colspan="1">
 
@@ -1694,7 +1694,7 @@ javasimon-jmx-2.5.0.jar
 
 </td><td colspan="1">
 
-<span>LGPL 2.1</span>
+LGPL 2.1
 
 </td></tr><tr><td colspan="1">
 
@@ -1806,7 +1806,7 @@ jboss-seam-excel-2.1.0.SP1.jar
 
 </td><td colspan="1">
 
-<span>LGPL 2.1</span>
+LGPL 2.1
 
 </td></tr><tr><td colspan="1">
 
@@ -1822,7 +1822,7 @@ jboss-seam-jul-2.1.0.SP1.jar
 
 </td><td colspan="1">
 
-<span>LGPL 2.1</span>
+LGPL 2.1
 
 </td></tr><tr><td colspan="1">
 
@@ -1838,7 +1838,7 @@ jboss-seam-pdf-2.1.0.SP1.jar
 
 </td><td colspan="1">
 
-<span>LGPL 2.1</span>
+LGPL 2.1
 
 </td></tr><tr><td colspan="1">
 
@@ -1854,7 +1854,7 @@ jboss-seam-remoting-2.1.0.SP1.jar
 
 </td><td colspan="1">
 
-<span>LGPL 2.1</span>
+LGPL 2.1
 
 </td></tr><tr><td colspan="1">
 
@@ -1870,7 +1870,7 @@ jboss-seam-rss-2.1.0.SP1.jar
 
 </td><td colspan="1">
 
-<span>LGPL 2.1</span>
+LGPL 2.1
 
 </td></tr><tr><td colspan="1">
 
@@ -1886,7 +1886,7 @@ jboss-seam-ui-2.1.0.SP1.jar
 
 </td><td colspan="1">
 
-<span>LGPL 2.1</span>
+LGPL 2.1
 
 </td></tr><tr><td colspan="1">
 
@@ -2366,7 +2366,7 @@ juh-3.1.0.jar
 
 </td><td colspan="1">
 
-<span>LGPL 3</span>
+LGPL 3
 
 </td></tr><tr><td colspan="1">
 
@@ -2382,7 +2382,7 @@ jurt-3.1.0.jar
 
 </td><td colspan="1">
 
-<span>LGPL 3</span>
+LGPL 3
 
 </td></tr><tr><td colspan="1">
 
@@ -2574,7 +2574,7 @@ oauth-consumer-20090531.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -2590,7 +2590,7 @@ oauth-httpclient3-20090531.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -2606,7 +2606,7 @@ oauth-provider-20090531.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -2734,7 +2734,7 @@ org.restlet.ext.fileupload-1.0.7.jar
 
 </td><td colspan="1">
 
-<span>CDDL 1.0</span>
+CDDL 1.0
 
 </td></tr><tr><td colspan="1">
 
@@ -2782,7 +2782,7 @@ org.sat4j.pb-2.3.1.jar
 
 </td><td colspan="1">
 
-<span>LGPL 2.1</span>
+LGPL 2.1
 
 </td></tr><tr><td colspan="1">
 
@@ -2886,7 +2886,7 @@ poi-ooxml-3.5-beta6.jar
 
 </td><td colspan="1">
 
-[Apache POI](http://poi.apache.org)<span>&nbsp;</span>
+[Apache POI](http://poi.apache.org)
 
 </td><td colspan="1">
 
@@ -2894,7 +2894,7 @@ poi-ooxml-3.5-beta6.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -2902,7 +2902,7 @@ poi-scratchpad-3.5-beta6.jar
 
 </td><td colspan="1">
 
-[Apache POI](http://poi.apache.org)<span>&nbsp;</span>
+[Apache POI](http://poi.apache.org)
 
 </td><td colspan="1">
 
@@ -2910,7 +2910,7 @@ poi-scratchpad-3.5-beta6.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -2918,7 +2918,7 @@ policy-2.2.2.jar
 
 </td><td colspan="1">
 
-[Glassfish](http://glassfish.java.net)<span>&nbsp;</span>
+[Glassfish](http://glassfish.java.net)
 
 </td><td colspan="1">
 
@@ -3006,7 +3006,7 @@ richfaces-impl-3.3.1.GA-NX6.jar
 
 </td><td colspan="1">
 
-<span>LGPL 2.1</span>
+LGPL 2.1
 
 </td></tr><tr><td colspan="1">
 
@@ -3022,7 +3022,7 @@ richfaces-ui-3.3.1.GA-NX2.jar
 
 </td><td colspan="1">
 
-<span>LGPL 2.1</span>
+LGPL 2.1
 
 </td></tr><tr><td colspan="1">
 
@@ -3038,7 +3038,7 @@ ridl-3.1.0.jar
 
 </td><td colspan="1">
 
-<span>LGPL 3</span>
+LGPL 3
 
 </td></tr><tr><td colspan="1">
 
@@ -3086,7 +3086,7 @@ saaj-impl-1.3.10.jar
 
 </td><td colspan="1">
 
-<span>CDDL 1.0</span>
+CDDL 1.0
 
 </td></tr><tr><td colspan="1">
 
@@ -3150,7 +3150,7 @@ shared-ldap-0.9.7.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -3166,7 +3166,7 @@ shared-ldap-constants-0.9.7.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -3182,7 +3182,7 @@ shindig-common-1.1-BETA5-incubating.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -3190,7 +3190,7 @@ shindig-features-1.1-BETA5-incubating.jar
 
 </td><td colspan="1">
 
-[Apache Shindig](http://shindig.apache.org)<span>&nbsp;</span>
+[Apache Shindig](http://shindig.apache.org)
 
 </td><td colspan="1">
 
@@ -3198,7 +3198,7 @@ shindig-features-1.1-BETA5-incubating.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -3206,7 +3206,7 @@ shindig-gadgets-1.1-BETA5-incubating.jar
 
 </td><td colspan="1">
 
-[Apache Shindig](http://shindig.apache.org)<span>&nbsp;</span>
+[Apache Shindig](http://shindig.apache.org)
 
 </td><td colspan="1">
 
@@ -3214,7 +3214,7 @@ shindig-gadgets-1.1-BETA5-incubating.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -3222,7 +3222,7 @@ shindig-social-api-1.1-BETA5-incubating.jar
 
 </td><td colspan="1">
 
-[Apache Shindig](http://shindig.apache.org)<span>&nbsp;</span>
+[Apache Shindig](http://shindig.apache.org)
 
 </td><td colspan="1">
 
@@ -3230,7 +3230,7 @@ shindig-social-api-1.1-BETA5-incubating.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -3302,7 +3302,7 @@ stax-ex-1.6.jar
 
 </td><td colspan="1">
 
-[StAX](http://stax.codehaus.org)<span>&nbsp;</span>
+[StAX](http://stax.codehaus.org)
 
 </td><td colspan="1">
 
@@ -3310,7 +3310,7 @@ stax-ex-1.6.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 
@@ -3326,7 +3326,7 @@ stax2-api-3.1.1.jar
 
 </td><td colspan="1">
 
-<span>AL 2.0</span>
+AL 2.0
 
 </td></tr><tr><td colspan="1">
 

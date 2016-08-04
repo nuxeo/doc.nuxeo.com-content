@@ -636,11 +636,17 @@ The default mapping is located in the `${NUXEO_HOME}/templates/common-base/nxser
 2.  In this custom template create a `nxserver/config/elasticsearch-myapp-config.xml.nxftl` file and override the mapping contribution.
 
     ```
-
-      org.nuxeo.elasticsearch.defaultConfig
-
+    <component name="org.nuxeo.elasticsearch.myapp">
+      <require>org.nuxeo.elasticsearch.defaultConfig</require>
+      <extension target="org.nuxeo.elasticsearch.ElasticSearchComponent"
+        point="elasticSearchIndex">
+        <elasticSearchIndex name="nuxeo" type="doc" repository="default">
+         <mapping>
     ... Here copy and adapt the default mapping 
-
+         </mapping>
+        </elasticSearchIndex>
+      </extension>
+    </component>
     ```
 
 3.  Update the `nuxeo.conf` to use your custom template.
@@ -677,7 +683,7 @@ You need to define an index for each repository. This is done by adding an `elas
 2.  Add a second `elasticSearchIndex` contribution:
 
     ```
-     ....
+    <elasticSearchIndex name="nuxeo-repo2" type="doc" repository="repo2"> ....
     ```
 
     Where `name` is the Elasticsearch index name and `repository` the repository name.
@@ -691,7 +697,18 @@ To understand why a document is not present in search results or not indexed, yo
 Open at the `lib/log4j.xml` file and uncomment the ELASTIC section:
 
 ```
-
+      <appender name="ELASTIC" class="org.apache.log4j.FileAppender">        
+        <errorHandler class="org.apache.log4j.helpers.OnlyOnceErrorHandler" />
+        <param name="File" value="${nuxeo.log.dir}/elastic.log" />
+        <param name="Append" value="false" />
+        <layout class="org.apache.log4j.PatternLayout">
+          <param name="ConversionPattern" value="%d{ISO8601} %-5p [%t][%c] %m%X%n" />
+        </layout>
+      </appender>
+      <category name="org.nuxeo.elasticsearch" additivity="false">
+        <priority value="TRACE" />
+        <appender-ref ref="ELASTIC" />
+      </category> 
 ```
 
 &nbsp;The `elastic.log` file will contain all the requests done by the Nuxeo Platform to Elasticsearch including the `curl` command ready to be copy/past/debug in a term.
@@ -742,22 +759,16 @@ This tool is a read-only standalone tool, it requires both access to the databas
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Other Elasticsearch Documentation"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Elasticsearch Documentation'}}
 
 *   [Configuring the Elasticsearch Mapping](https://doc.nuxeo.com/display/NXDOC/Configuring+the+Elasticsearch+Mapping)
 *   [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
 *   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Other Related Documentation "}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation '}}
 
 *   [Full-Text Queries]({{page page='full-text-queries'}})
 *   [Indexing and Query]({{page page='indexing-and-query'}})
 *   [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

@@ -94,12 +94,37 @@ To add a custom LDAP fields to the User interface you have to:
 1.  Create a custom schema based on nuxeo's user.xsd schema with custom fields related to the fields in your LDAP system.
 
     ```
+     <?xml version="1.0"?>
+     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:nxs="http://www.nuxeo.org/ecm/schemas/myuser"
+        targetNamespace="http://www.nuxeo.org/ecm/schemas/myuser">
+
+      <xs:include schemaLocation="base.xsd" />
+
+      <xs:element name="username" type="xs:string" />
+      <xs:element name="password" type="xs:string" />
+      <xs:element name="email" type="xs:string" />
+      <xs:element name="firstName" type="xs:string" />
+      <xs:element name="lastName" type="xs:string" />
+      <xs:element name="company" type="xs:string" />
+      <!-- your custom telephone field -->
+      <xs:element name="telephone" type="xs:string" />
+
+      <xs:element name="groups" type="nxs:stringList" />
+
+     </xs:schema>
 
     ```
 
 2.  Add your schema via Nuxeo's extension system.
 
     ```
+     <?xml version="1.0"?>
+     <component name="com.example.myproject.myuser.schema">
+      <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+        <schema name="myuser" src="schemas/myuser.xsd" />
+      </extension>
+     </component>
 
     ```
 
@@ -107,23 +132,26 @@ To add a custom LDAP fields to the User interface you have to:
     1.  your custom schema,
 
         ```
+          <extension target="org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory"
+            point="directories">
 
-              default
-
-              myuser
+            <directory name="userDirectory">
+              <server>default</server>
+              <!-- association between your custom schema and the directory -->
+              <schema>myuser</schema>
 
         ```
 
     2.  mapping between your schema and your LDAP fields.
 
         ```
-              uid
-              userPassword
-              givenName
-              sn
-              o
-              mail
-              telephoneNumber
+              <fieldMapping name="username">uid</fieldMapping>
+              <fieldMapping name="password">userPassword</fieldMapping>
+              <fieldMapping name="firstName">givenName</fieldMapping>
+              <fieldMapping name="lastName">sn</fieldMapping>
+              <fieldMapping name="company">o</fieldMapping>
+              <fieldMapping name="email">mail</fieldMapping>
+              <fieldMapping name="telephone">telephoneNumber</fieldMapping>
 
         ```
 
@@ -131,27 +159,43 @@ To add a custom LDAP fields to the User interface you have to:
     1.  Add your custom widget to the layout.
 
         ```
+         <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+            point="layouts">
 
-                  username
-
-                  telephone
+            <layout name="user">
+              <templates>
+                <template mode="any">/layouts/layout_default_template.xhtml</template>
+              </templates>
+              <rows>
+                <row>
+                  <widget>username</widget>
+                </row>
+              <row>
+              <!-- your custom telephone widget-->
+                  <widget>telephone</widget>
+                </row>
 
         ```
 
     2.  Define a new widget for your custom field to be used in the layout above.
 
         ```
-
-         telephone
-
-         true
-
-         telephone
-
-         hidden
-
-         true
-         dataInputText
+         <widget name="telephone" type="text">
+         <labels>
+         <label mode="any">telephone</label>
+         </labels>
+         <translated>true</translated>
+         <fields>
+         <field schema="myuser">telephone</field>
+         </fields>
+         <widgetModes>
+         <mode value="editPassword">hidden</mode>
+         </widgetModes>
+         <properties widgetMode="edit">
+         <property name="required">true</property>
+         <property name="styleClass">dataInputText</property>
+         </properties>
+         </widget>
 
         ```
 

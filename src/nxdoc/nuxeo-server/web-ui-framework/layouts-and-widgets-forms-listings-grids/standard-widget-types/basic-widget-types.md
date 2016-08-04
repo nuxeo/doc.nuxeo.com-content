@@ -142,18 +142,8 @@ Information about how to write a template is given in the [custom widget templat
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in this documentation'}}
 
-<div class="column medium-6">{{#> panel heading="Related topics in this documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related topics in Studio documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related topics in Studio documentation"}}
-
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

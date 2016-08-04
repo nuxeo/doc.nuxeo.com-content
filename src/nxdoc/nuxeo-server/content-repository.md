@@ -255,9 +255,7 @@ history:
 *   [How to Customize Document Validation](https://doc.nuxeo.com/display/NXDOC/How+to+Customize+Document+Validation)
 *   [Document Type How-To Index](https://doc.nuxeo.com/display/NXDOC/Document+Type+How-To+Index)
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related topics in this documentation"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in this documentation'}}
 
 &nbsp;
 
@@ -267,9 +265,7 @@ history:
 
 &nbsp;
 
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related topics in Studio documentation"}}
+</div><div class="column medium-6">{{#> panel heading='Related topics in Studio documentation'}}
 
 &nbsp;
 
@@ -279,6 +275,4 @@ history:
 
 &nbsp;
 
-</div>
-
-</div>
+</div></div>

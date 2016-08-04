@@ -82,13 +82,35 @@ It is possible to easily pinpoint slow NXQL. If you want trace all the queries t
     *   For VCS:
 
         ```
-
+        <category name="org.nuxeo.ecm.core.storage.sql.SessionImpl" additivity="false">
+            <priority value="INFO" />
+            <appender-ref ref="SLOW" />
+        </category>
+        <appender name="SLOW" class="org.apache.log4j.FileAppender">
+            <errorHandler class="org.apache.log4j.helpers.OnlyOnceErrorHandler" />
+            <param name="File" value="${nuxeo.log.dir}/slow-query.log" />
+            <param name="Append" value="false" />
+            <layout class="org.apache.log4j.PatternLayout">
+              <param name="ConversionPattern" value="%d{ISO8601} %-5p [%t][%c] %m%X%n" />
+            </layout>
+        </appender>
         ```
 
     *   For DBS (since Nuxeo Platform 8.3):
 
         ```
-
+        <category name="org.nuxeo.ecm.core.storage.dbs.DBSSession" additivity="false">
+            <priority value="INFO" />
+            <appender-ref ref="SLOW" />
+        </category>
+        <appender name="SLOW" class="org.apache.log4j.FileAppender">
+            <errorHandler class="org.apache.log4j.helpers.OnlyOnceErrorHandler" />
+            <param name="File" value="${nuxeo.log.dir}/slow-query.log" />
+            <param name="Append" value="false" />
+            <layout class="org.apache.log4j.PatternLayout">
+              <param name="ConversionPattern" value="%d{ISO8601} %-5p [%t][%c] %m%X%n" />
+            </layout>
+        </appender>
         ```
 
 To get the slowest queries:

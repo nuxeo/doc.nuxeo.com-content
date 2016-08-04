@@ -131,6 +131,6 @@ history:
         version: '1'
 
 ---
-Click on the categories below to see the available How-Tos.
+Click on the categories below to see the available how-tos.
 
 {{! table-filter removed }}

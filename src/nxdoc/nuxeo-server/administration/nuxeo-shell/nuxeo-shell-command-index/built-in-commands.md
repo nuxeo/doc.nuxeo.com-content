@@ -103,7 +103,7 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' heading="Namespace: *global*"}}
+{{#> callout type='info' heading='Namespace: *global*'}}
 
 Basic commands provided by the shell
 

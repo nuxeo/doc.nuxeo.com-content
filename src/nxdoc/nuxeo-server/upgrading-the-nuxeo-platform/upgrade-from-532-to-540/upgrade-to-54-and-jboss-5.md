@@ -102,16 +102,22 @@ After (Jboss 5.1)
 </th></tr><tr><td colspan="1">
 
 ```
-
- nuxeo.war/**
+<install>
+ <unzip from="${bundle.fileName}" to="/" >
+ <include>nuxeo.war/**</include>
+ </unzip>
+ </install>
 
 ```
 
 </td><td colspan="1">
 
 ```
-
- web/nuxeo.war/**
+<install>
+ <unzip from="${bundle.fileName}" to="/" prefix="web">
+ <include>web/nuxeo.war/**</include>
+ </unzip>
+ </install>
 
 ```
 
@@ -132,8 +138,11 @@ From within the deployment fragment you can declare contributions to the applica
 Be sure that if you declare your module as a EJB module it does really contains EJB3.
 
 ```
-
- ${bundle.fileName}
+<extension target="application#MODULE">
+ <module>
+ <ejb>${bundle.fileName}</ejb>
+ </module>
+ </extension>
 
 ```
 
@@ -142,8 +151,11 @@ Otherwise, you should remove the contribution to `application.xml` (the Java dec
 Typical deprecated contribution:
 
 ```
-
- ${bundle.fileName}
+<extension target="application#MODULE">
+ <module>
+ <java>${bundle.fileName}</java>
+ </module>
+ </extension>
 
 ```
 
@@ -308,18 +320,20 @@ first check that you don't access the CoreSession from inside a Listener using t
 Hibernate dependencies in Nuxeo's root `pom.xml` has changed. The core artifact for Hibernate is named `hibernate-core` now instead of `hibernate`. If you were using this dependency, you need to change from:
 
 ```
-
-  org.hibernate
-  hibernate
+<dependency>
+  <groupId>org.hibernate</groupId>
+  <artifactId>hibernate</artifactId>
+</dependency>
 
 ```
 
 to:
 
 ```
-
-  org.hibernate
-  hibernate-core
+<dependency>
+  <groupId>org.hibernate</groupId>
+  <artifactId>hibernate-core</artifactId>
+</dependency>
 
 ```
 

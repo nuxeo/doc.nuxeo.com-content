@@ -97,7 +97,7 @@ Id: `action`
 
 This widget type displays an action, with possibility to surround it by a form or not (and additional rendering properties).
 
-The difference with the [Form Action]({{page page='tab-designer-widget-types'}}) or <span class="confluence-link">[Toolbar Action]({{page page='tab-designer-widget-types'}})</span> widget types is that it needs the action to be already resolved. This makes it possible to display actions that would have been retrieved using a custom filtering context.
+The difference with the [Form Action]({{page page='tab-designer-widget-types'}}) or [Toolbar Action]({{page page='tab-designer-widget-types'}}) widget types is that it needs the action to be already resolved. This makes it possible to display actions that would have been retrieved using a custom filtering context.
 
 ## Actions
 
@@ -105,7 +105,7 @@ Id: `actions`
 
 This widget type displays actions, with possibility to surround it by a form or not (and additional rendering properties).
 
-The difference with the <span class="confluence-link">[Form Actions]({{page page='tab-designer-widget-types'}})</span> or [<span class="confluence-link">Toolbar Actions</span>]({{page page='tab-designer-widget-types'}})<span class="confluence-link">&nbsp;</span> widget types is that it needs the action to be already resolved. This makes it possible to display actions that would have been retrieved using a custom filtering context.
+The difference with the [Form Actions]({{page page='tab-designer-widget-types'}}) or [Toolbar Actions]({{page page='tab-designer-widget-types'}}) widget types is that it needs the action to be already resolved. This makes it possible to display actions that would have been retrieved using a custom filtering context.
 
 ## Single Generic Suggestion
 

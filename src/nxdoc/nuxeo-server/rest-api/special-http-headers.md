@@ -151,11 +151,11 @@ This header can be used when you want to control the transaction duration. As an
 Nuxeo-Transaction-Timeout: 300
 ```
 
-## <span>X-NXproperties</span>
+## X-NXproperties
 
 {{#> callout type='info' }}
 
-<span>Available since 7.2 to replace `X-NXDocumentProperties`.</span>
+Available since 7.2 to replace `X-NXDocumentProperties`.
 
 {{/callout}}
 
@@ -173,35 +173,33 @@ or to have all the document content, you can use the&nbsp;`*` character as the f
 X-NXproperties: *
 ```
 
-## <span>X-NXRepository</span>
+## X-NXRepository
 
-<span>This header can be used when you need to access a specific repository. The default value is "default", as it's the default repository name in the Nuxeo Platform. This is handy if you have changed the default name or if you have multiple repositories.</span>
+This header can be used when you need to access a specific repository. The default value is "default", as it's the default repository name in the Nuxeo Platform. This is handy if you have changed the default name or if you have multiple repositories.
 
 ```
 X-NXRepository: myCustomRepositoryName
 ```
 
-## <span><span>X-NXenrichers.document</span></span>
+## X-NXenrichers.document
 
 {{#> callout type='info' }}
 
-<span><span>Available since 7.2 to replace&nbsp;</span></span>`X-NXContext-Category`.
+Available since 7.2 to replace&nbsp;`X-NXContext-Category`.
 
 {{/callout}}
 
-<span><span>&nbsp;</span>It is sometimes useful to optimize the number of requests you send to the server. For that reason we provide a mechanism for requesting more information on the answer, simply by specifying the context you want in the request header. For instance, <span>when specifying&nbsp;`<span><span>X-NXenrichers.document</span></span> = "thumbnail"`, the JSON payload of the document REST calls response contains the related attached file thumbnail of the document. You can add several content enrichers into the header separated by comma. [(Content Enrichers listing)]({{page page='content-enricher'}})</span>
-</span>
+It is sometimes useful to optimize the number of requests you send to the server. For that reason we provide a mechanism for requesting more information on the answer, simply by specifying the context you want in the request header. For instance, when specifying&nbsp;`X-NXenrichers.document = "thumbnail"`, the JSON payload of the document REST calls response contains the related attached file thumbnail of the document. You can add several content enrichers into the header separated by comma. [(Content Enrichers listing)]({{page page='content-enricher'}})
 
 ```
 X-NXenrichers.document: "thumbnail"
 ```
 
-## <span>X-<span>Versioning-Option</span></span>
+## X-Versioning-Option
 
-<span>This header can be used when you need to increment the minor or major version and return the versioned document. (<span>Since 5.9.5</span>) By default, no version checkin is done and 'live' (snapshot) document is returned. This is handy if you have to update the document while incrementing the version for instance.</span>
+This header can be used when you need to increment the minor or major version and return the versioned document. (Since 5.9.5) By default, no version checkin is done and 'live' (snapshot) document is returned. This is handy if you have to update the document while incrementing the version for instance.
 
-<span>Accepted values are <span>MAJOR, MINOR or NONE</span>.
-</span>
+Accepted values are MAJOR, MINOR or NONE.
 
 ```
 X-Versioning-Option: MAJOR
@@ -254,16 +252,12 @@ More details about the control of the depth here: [Aggregating Marshallers and A
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [JSON Marshalling]({{page page='json-marshalling'}})
 *   [Ngnix bug](https://doc.nuxeo.com/display/ADMINDOC/HTTP+and+HTTPS+Reverse-Proxy+Configuration#HTTPandHTTPSReverse-ProxyConfiguration-Ngnixissue)
 
-{{/panel}}</div>
-
-<div class="column medium-6">
+{{/panel}}</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
@@ -271,6 +265,4 @@ More details about the control of the depth here: [Aggregating Marshallers and A
 
 &nbsp;
 
-</div>
-
-</div>
+</div></div>

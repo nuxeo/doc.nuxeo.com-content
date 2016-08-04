@@ -80,9 +80,10 @@ The Document Management pages are using a Theme page layout defined&nbsp;[in the
 The slots themselves (called `view` in NXTheme) are defined in the&nbsp;[theme-contrib](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/theme-contrib.xml):
 
 ```
-
-  widget
-
+<view name="nuxeo5 tree explorer" template-engine="jsf-facelets">
+  <format-type>widget</format-type>
+  <template>incl/multi_tree_explorer.xhtml</template>
+</view>
 ```
 
 This extract shows you were to find the XHTML code corresponding to the tree explorer: The&nbsp;`view` `nuxeo5 tree explorer` is defined as&nbsp;`incl/multi_tree_explorer.xhtml`.
@@ -90,15 +91,16 @@ This extract shows you were to find the XHTML code corresponding to the tree exp
 This view is referenced in the document.xml theme file via:
 
 ```
-
-  nuxeo5 tree explorer
-
+<widget element="page[1]/section[2]/cell[1]/fragment[2]">
+  <view>nuxeo5 tree explorer</view>
+</widget>
 ```
 
 The XPath indicates what part of the page layout will be used to display the tree explorer.
 
 ```
-
+<!-- tree view --> 
+<fragment perspectives="default,multiple_domains" type="generic fragment"/>
 ```
 
 ### Digital Asset Management Pages
@@ -113,7 +115,20 @@ For Nuxeo DAM (and the current search view), the theme only defines the headers 
 The XHTML Facelet templates are rendered through the Theme Engine. The XHTML calls the theme engine via the NXTheme composition page:
 
 ```
+<nxthemes:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:nxthemes="http://nuxeo.org/nxthemes"
+    xmlns:nxl="http://nuxeo.org/nxforms/layout">
 
+  <ui:define name="page title">
+    <h:outputText value="#{nuxeoApplicationName} - #{messages['label.main.tab.dam']}" />
+  </ui:define>
+
+  <ui:define name="body">
+    <ui:include src="/incl/message_banner.xhtml"/>
+    <nxl:layout value="#{currentDocument}" name="gridDamSingleAssetLayout" mode="view" />
+  </ui:define>
+</nxthemes:composition>
 ```
 
 ### Document Management Example
@@ -123,10 +138,21 @@ See the [sample DM view_documents.xhtml](https://github.com/nuxeo/nuxeo/blob/mas
 The main content of the page is actually defined via facelet templating (i.e. using native facelet composition engine to include and templatize)
 
 ```
+<!--Document header -->  <h:form id="document_header_layout_form" class="titleBlock">
+    <nxl:documentLayout documentMode="header" mode="view"
+      value="#{currentDocument}" defaultLayout="document_header"
+      includeAnyMode="false" />
+  </h:form>
 
+  <!-- buttons displayed in the upper right corder -->
+  <ui:include src="/incl/document_actions_upperbuttons.xhtml"/>
+  <ui:include src="/incl/message_banner.xhtml"/>
+
+  <!-- widget to display the tabs-->
+  <nxl:widget name="documentTabs" mode="view" value="#{currentDocument}" />
 ```
 
-<div class="line"><span class="text plain">&nbsp;</span></div>
+<div class="line">
 
 ### Digital Asset Management Example
 
@@ -135,7 +161,7 @@ See the [sample DAM asset.xhtml](https://github.com/nuxeo/nuxeo-dam/blob/master/
 Content is defined by a `GridLayout`:
 
 ```
-
+<nxl:layout value="#{currentDocument}" name="gridDamSingleAssetLayout" mode="view" />
 ```
 
 ## Layout / Widgets / Actions
@@ -172,24 +198,26 @@ Using that principle, the&nbsp;`damSingleAssetPanelLeft`&nbsp;will display all w
 
 ```
 ...
+ <action id="damAssetViewTitle" type="widget" order="200">
+  <category>DAM_PANEL_RIGHT</category>
+  <category>DAM_SINGLE_ASSET_PANEL_LEFT</category>
+  <properties>
+    <property name="widgetName">damAssetViewTitle</property>
+  </properties>
+  <filter-id>hasAssetFacet</filter-id>
+</action>
 
-  DAM_PANEL_RIGHT
-  DAM_SINGLE_ASSET_PANEL_LEFT
-
-    damAssetViewTitle
-
-  hasAssetFacet
-
-  DAM_PANEL_RIGHT
-  DAM_SINGLE_ASSET_PANEL_LEFT
-
-    damAssetViewThumbnail
-
-  hasNotVideoFacet
-  hasNotPictureFacet
-  hasNotAudioFacet
-  hasAssetFacet
-
+<action id="damAssetViewThumbnail" type="widget" order="250">
+  <category>DAM_PANEL_RIGHT</category>
+  <category>DAM_SINGLE_ASSET_PANEL_LEFT</category>
+  <properties>
+    <property name="widgetName">damAssetViewThumbnail</property>
+  </properties>
+  <filter-id>hasNotVideoFacet</filter-id>
+  <filter-id>hasNotPictureFacet</filter-id>
+  <filter-id>hasNotAudioFacet</filter-id>
+  <filter-id>hasAssetFacet</filter-id>
+</action>
 ...
 ```
 
@@ -201,17 +229,25 @@ The&nbsp;`documentTabs`&nbsp;widget will display the tabs defined as&nbsp;[actio
 
 ```
 ...
+<action id="TAB_VIEW" link="/incl/tabs/document_view.xhtml" order="0"
+  label="action.view.summary" icon="/icons/file.gif" accessKey="v"
+  type="rest_document_link">
+  <category>VIEW_ACTION_LIST</category>
+  <filter-id>view</filter-id>
+  <properties>
+    <property name="ajaxSupport">true</property>
+  </properties>
+</action>
 
-  VIEW_ACTION_LIST
-  view
-
-    true
-
-  VIEW_ACTION_LIST
-  view_content
-
-    true
-
+<action id="TAB_CONTENT" link="/incl/tabs/document_content.xhtml"
+  order="10" label="action.view.content" icon="/icons/file.gif" accessKey="c"
+  type="rest_document_link">
+  <category>VIEW_ACTION_LIST</category>
+  <filter-id>view_content</filter-id>
+  <properties>
+    <property name="ajaxSupport">true</property>
+  </properties>
+</action>
 ...
 ```
 
@@ -238,13 +274,19 @@ Because of the way the screen are rendered inside the Nuxeo Platform, all Nuxeo 
 However, sometimes, there is an actual JSF level navigation that relies on standard JSF navigation case. For that, each Nuxeo Bundle can contribute navigation cases to the JSF config via a&nbsp;[deployment-fragment](https://github.com/nuxeo/nuxeo-dam/blob/master/nuxeo-dam-theme/src/main/resources/OSGI-INF/deployment-fragment.xml).
 
 ```
+<extension target="faces-config#NAVIGATION">
+ <navigation-case>
+  <from-outcome>assets</from-outcome>
+  <to-view-id>/dam/assets.xhtml</to-view-id>
+  <redirect />
+ </navigation-case>
 
-  assets
-  /dam/assets.xhtml
-
-  asset
-  /dam/asset.xhtml
-
+ <navigation-case>
+  <from-outcome>asset</from-outcome>
+  <to-view-id>/dam/asset.xhtml</to-view-id>
+  <redirect />
+ </navigation-case>
+</extension>
 ```
 
 In addition, the Nuxeo Platform provides a system to manage REST URL that combine JSF navigation and Actions: see the page [Navigation URLs]({{page page='navigation-urls'}})&nbsp;for more details.
@@ -292,3 +334,5 @@ However, if you think the custom UI is the way to go, we'll be happy to help you
 &nbsp;
 
 * * *
+
+</div>

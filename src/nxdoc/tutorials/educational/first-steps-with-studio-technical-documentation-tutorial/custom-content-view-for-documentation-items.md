@@ -277,7 +277,7 @@ The container should just have a title and a description.
 ### Restricting Where documentationItem Documents Can Be Created
 
 1.  Go to the `documentationItem`&nbsp;**Definition** tab.
-2.  &nbsp;In the **Container Types**, remove Folder and Workspaces and add <span>TechnicalDocumentationContainer</span>.
+2.  &nbsp;In the **Container Types**, remove Folder and Workspaces and add TechnicalDocumentationContainer.
 3.  Click on **Save**.
     Documentation items can now be created in documentation containers only.
 
@@ -342,7 +342,7 @@ We also want to be able to filter the documents inside our folder.
     *   **Built-in Widgets** > **Icon and document type**
     *   **Built-in Widgets** > **Title with link**
 
-        {{#> callout type='tip' heading="Title with link widget"}}
+        {{#> callout type='tip' heading='Title with link widget'}}
 
         You always need that widget if you want to be able to navigate to the documents displayed in the search results.
 
@@ -372,7 +372,7 @@ We also want to be able to filter the documents inside our folder.
 2.  &nbsp;Go on the documentation folder created sooner and enjoy the result: If you deploy the filter, you will see that you can filter documents by Nature.
     ![]({{file name='contentviewDeployed.png'}} ?w=600,border=true)
 
-{{#> callout type='tip' heading="Congratulations"}}
+{{#> callout type='tip' heading='Congratulations'}}
 
 You now have a place to create documentation items. This new container leverages the specific metadata of documentation items.
 
@@ -392,24 +392,16 @@ It is now time to add custom behaviors, such as the locking policy we decided in
 
 * * *
 
-<div class="row">
-
-<div class="column medium-4">
+<div class="row"><div class="column medium-4">
 
 [<< Documentation Item Implementation]({{page page='implementing-documentation-items'}})&nbsp;
 
-</div>
-
-<div class="column medium-4">
+</div><div class="column medium-4">
 
 **[undefined]({{page}})**
 
-</div>
-
-<div class="column medium-4">
+</div><div class="column medium-4">
 
 [Document Locking Right after Its Creation >>]({{page page='document-locking-right-after-its-creation'}})
 
-</div>
-
-</div>
+</div></div>

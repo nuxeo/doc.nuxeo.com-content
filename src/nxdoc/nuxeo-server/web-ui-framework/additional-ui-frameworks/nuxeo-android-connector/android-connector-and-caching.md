@@ -116,6 +116,6 @@ This caches keeps track of the Create/Update/Delete operations that are pending 
 Deferred Updates system is exposed via `DeferredUpdateManager` service interface.&nbsp;This service can be used to send an update request:
 
 ```
-String execDeferredUpdate(OperationRequest request, AsyncCallback cb, OperationType opType, boolean executeNow);
+String execDeferredUpdate(OperationRequest request, AsyncCallback<Object> cb, OperationType opType, boolean executeNow);
 
 ```

@@ -134,7 +134,7 @@ Set the following values:
 
 1.  **Title**: Validation request
 
-2.  **Workflow**: We will use an <span class="confluence-link">&nbsp;</span>[<span class="confluence-link">MVEL expression</span>]({{page page='use-of-mvel-in-automation-chains'}}) to determine which workflow should be run. Type the following expression in this field:
+2.  **Workflow**: We will use an [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}) to determine which workflow should be run. Type the following expression in this field:
     `@{Document["expense:amount"] < 100 && Document["expense:expensetype"] != 'Misc' ? 'subOneLevelValidation' : 'subTwoLevelsValidation'`}
     This implements our business logic rule, by checking the expense's amount and its type. If under $100 and not in the misc category, then we call a one level validation, otherwise a two-level validation.
     Result below (as seen in the expression editor because it is a rather large expression):

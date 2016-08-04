@@ -211,7 +211,7 @@ history:
 ---
 {{! excerpt}}
 
-<span>This how-to explains the different steps to create and configure an automation chain.</span>
+This how-to explains the different steps to create and configure an automation chain.
 
 {{! /excerpt}}
 
@@ -234,7 +234,7 @@ This is done in two steps:
     *   **Context document** will bring either the UI Current document, or the document attached to the event (depending on what you binded your operation chain, see later).
     *   **Fetch Query** will bring back the result of the query as a documents list.
     *   **Get Document** allows to fetch document by path.
-5.  Start to drag'n drop operations in the flow, respecting their <span class="confluence-link">input and output types</span>. Leverage context and scripting capabilities to capture and reuse information all along the flow.
+5.  Start to drag'n drop operations in the flow, respecting their input and output types. Leverage context and scripting capabilities to capture and reuse information all along the flow.
     ![]({{file name='NXS_automation_add_operation.png'}} ?w=600,border=true)
 
     {{#> callout type='tip' }}
@@ -287,23 +287,17 @@ Binding the automation chain to a button, an action or an event handler is done 
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{! multiexcerpt name='popular-how-tos'}}{{#> panel heading="Popular How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{! multiexcerpt name='popular-how-tos'}}{{#> panel heading='Popular How-Tos'}}
 
 *   [How to Export Data Using Document Template and Automation]({{page page='how-to-export-data-using-document-template-and-automation'}})
 *   [How to Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}{{! /multiexcerpt}}</div>
-
-<div class="column medium-6">{{! multiexcerpt name='related-documentation'}}{{#> panel heading="Related Documentation"}}
+{{/panel}}{{! /multiexcerpt}}</div><div class="column medium-6">{{! multiexcerpt name='related-documentation'}}{{#> panel heading='Related Documentation'}}
 
 *   [Automation screen in Nuxeo Studio]({{page space='studio' page='automation'}})
 *   [Content Automation Concepts]({{page page='content-automation-concepts'}})
 *   [Event Handlers screens in Nuxeo Studio]({{page space='studio' page='event-handlers'}})
 *   [User Actions screens in Nuxeo Studio]({{page space='studio' page='user-actions'}})
 
-{{/panel}}{{! /multiexcerpt}}</div>
-
-</div>
+{{/panel}}{{! /multiexcerpt}}</div></div>

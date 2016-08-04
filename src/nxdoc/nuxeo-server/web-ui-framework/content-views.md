@@ -19,410 +19,410 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/FQ4z'
     source_link: /display/NXDOC/Content+Views
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-07-07 15:09'
         message: pdate link to use version independent URL
         version: '80'
-    -
+    - 
         author: Solen Guitter
         date: '2016-07-07 13:56'
         message: >-
             NXDOC-830: update how to configure maxPageSize and
             DEFAULT_NAVIGATION_RESULTS
         version: '79'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-14 15:51'
         message: ''
         version: '78'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-10-13 15:09'
         message: ''
         version: '77'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-10-13 15:00'
         message: ''
         version: '76'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-10-13 14:39'
         message: fix bad replacement of searchDocumentType sample usage
         version: '75'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-08 15:29'
         message: Remove mentions of 5.9.2
         version: '74'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-17 08:15'
         message: Code format
         version: '73'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-09-16 15:30'
         message: 'NXP-17224: document new elements to wait for execution'
         version: '72'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-07-13 08:27'
         message: ''
         version: '71'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-07-13 08:27'
         message: ''
         version: '70'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-07-10 12:36'
         message: Add a note about predicate hints
         version: '69'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-03-19 17:05'
         message: wording
         version: '68'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-03-19 17:04'
         message: cosmit
         version: '67'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-03-19 17:03'
         message: 'NXP-16770: mention the new pageSizeOptions element'
         version: '66'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-17 17:22'
         message: add sample for named parameters
         version: '65'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-17 13:58'
         message: add page-provider label to related content
         version: '64'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-17 13:51'
         message: remove bad copy/paste
         version: '63'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-17 13:50'
         message: add doc about searchDocumentType and resultLayout elements
         version: '62'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-05 18:37'
         message: >-
             NXDOC-222: rename cv actions to cv selection actions to avoid
             confusion
         version: '61'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-01 18:58'
         message: 'NXDOC-222: remove rendering section, moved to subpage'
         version: '60'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-01 18:49'
         message: add link to document list management documentatiobn
         version: '59'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-15 16:27'
         message: ''
         version: '58'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-15 16:22'
         message: ''
         version: '57'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-15 14:56'
         message: ''
         version: '56'
-    -
+    - 
         author: Solen Guitter
         date: '2014-08-25 11:59'
         message: Add doc about listing layouts ending with "2_columns"
         version: '55'
-    -
+    - 
         author: Solen Guitter
         date: '2014-08-21 14:04'
         message: Removed 5.5 reference
         version: '54'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-10 18:38'
         message: ''
         version: '53'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-02-06 20:06'
         message: NXP-13718 add doc about fixed part configuration
         version: '52'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-13 16:49'
         message: 'Removed 5.4.2 mentions, formatting, added Studio related topics'
         version: '51'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-01-10 17:30'
         message: add link to Studio doc
         version: '50'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-12 18:48'
         message: Fix related topics box (by label)
         version: '49'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-12 18:45'
         message: better related labels
         version: '48'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-12 18:44'
         message: ''
         version: '47'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-13 14:16'
         message: Updated links
         version: '46'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 16:27'
         message: ''
         version: '45'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-06 11:25'
         message: ''
         version: '44'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-24 16:41'
         message: Added titles and formatting
         version: '43'
-    -
+    - 
         author: Thierry Martins
         date: '2013-06-24 11:11'
         message: add an alternative to configure.defaultNavigationResults
         version: '42'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-18 14:25'
         message: Changed since 5.7 for 5.7.1
         version: '41'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-04-17 15:43'
         message: wording on maxResults conf
         version: '40'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-09-28 16:56'
         message: Migrated to Confluence 4.0
         version: '39'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-09-28 16:56'
         message: add ad for hotfixes
         version: '38'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-09-28 15:49'
         message: cosmit
         version: '37'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-09-28 15:47'
         message: 'NXP-10155: content view caching improvements '
         version: '36'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-09-20 16:22'
         message: moved misplaced sentence
         version: '35'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-11 21:37'
         message: Updated link to 5.7 SNAPSHOT version
         version: '34'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-08-17 09:56'
         message: ''
         version: '33'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-08-17 09:56'
         message: ''
         version: '32'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-07-04 14:18'
         message: ''
         version: '31'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-07-04 14:15'
         message: ''
         version: '30'
-    -
+    - 
         author: Benoit Delbosc
         date: '2012-06-22 17:45'
         message: ''
         version: '29'
-    -
+    - 
         author: Benoit Delbosc
         date: '2012-06-22 17:37'
         message: Adding maxResults NXP-9494 doc
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-21 11:20'
         message: Updated 5.4 mercurial link to 5.6 snapshot github URL
         version: '27'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-01-20 16:59'
         message: >-
             adding more examples about search document and result columsn
             configuration
         version: '26'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-12-02 12:52'
         message: ''
         version: '25'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-07-04 18:39'
         message: ''
         version: '24'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-05-13 12:06'
         message: ''
         version: '23'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-05-06 14:44'
         message: ''
         version: '22'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-26 17:52'
         message: ''
         version: '21'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-26 17:31'
         message: ''
         version: '20'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-18 18:57'
         message: ''
         version: '19'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-03-15 16:27'
         message: ''
         version: '18'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-03-14 18:14'
         message: >-
             adding new elements information (max page size, show page size
             selector, show refresh page)
         version: '17'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-03-01 15:38'
         message: ''
         version: '16'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-02-15 14:36'
         message: ''
         version: '15'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-02-14 18:20'
         message: ''
         version: '14'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-02-01 15:08'
         message: ''
         version: '13'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-02-01 14:56'
         message: ''
         version: '12'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-11-04 18:11'
         message: ''
         version: '11'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 15:42'
         message: ''
         version: '10'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 15:36'
         message: ''
         version: '9'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-07-30 12:33'
         message: ''
         version: '8'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-07-30 12:31'
         message: ''
         version: '7'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-07-30 12:25'
         message: ''
         version: '6'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-07-30 12:04'
         message: ''
         version: '5'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-07-30 11:33'
         message: ''
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-07-30 11:16'
         message: ''
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-07-30 11:16'
         message: ''
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-07-28 17:54'
         message: ''
@@ -454,25 +454,51 @@ A content view is a notion to define all the elements needed to get a list of it
 The Nuxeo Content View framework makes it possible to define such an object, by registering content views to the service. Here is a sample contribution, that will display the children of the current document:
 
 ```
+<extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
+  point="contentViews">
 
-      #{documentManager}
+  <contentView name="document_content">
 
+    <coreQueryPageProvider>
+      <property name="coreSession">#{documentManager}</property>
+      <pattern>
         SELECT * FROM Document WHERE ecm:parentId = ?
         AND ecm:isCheckedInVersion = 0
         AND ecm:mixinType != 'HiddenInNavigation'
         AND ecm:currentLifeCycleState != 'deleted'
+      </pattern>
+      <parameter>#{currentDocument.id}</parameter>
+      <sort column="dc:title" ascending="true" />
+      <pageSize>20</pageSize>
+    </coreQueryPageProvider>
 
-      #{currentDocument.id}
+    <cacheKey>#{currentDocument.id}</cacheKey>
+    <cacheSize>10</cacheSize>
+    <refresh>
+      <event>documentChanged</event>
+      <event>documentChildrenChanged</event>
+    </refresh>
 
-      20
+    <resultLayouts>
+      <layout name="document_listing_ajax" title="document_listing"
+        translateTitle="true" iconPath="/icons/document_listing_icon.png"
+        showCSVExport="true" showPDFExport="true" showSyndicationLinks="true" />
+      <layout name="document_listing_ajax_compact_2_columns"
+        title="document_listing_compact_2_columns"
+        translateTitle="true"
+        iconPath="/icons/document_listing_compact_2_columns_icon.png" />
+      <layout name="document_listing_ajax_icon_2_columns"
+        title="document_listing_icon_2_columns"
+        translateTitle="true"
+        iconPath="/icons/document_listing_icon_2_columns_icon.png" />
+    </resultLayouts>
 
-    #{currentDocument.id}
-    10
+    <selectionList>CURRENT_SELECTION</selectionList>
+    <actions category="CURRENT_SELECTION_LIST" />
 
-      documentChanged
-      documentChildrenChanged
+  </contentView>
 
-    CURRENT_SELECTION
+</extension>
 
 ```
 
@@ -520,21 +546,56 @@ This kind of core query can also perform a more complex form of query, using a d
 Here is an example of such a registration:
 
 ```
+<extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
+  point="contentViews">
 
-      #{documentManager}
-      DEFAULT_NAVIGATION_RESULTS
+  <contentView name="document_content">
 
+    <coreQueryPageProvider>
+      <property name="coreSession">#{documentManager}</property>
+      <property name="maxResults">DEFAULT_NAVIGATION_RESULTS</property>
+      <whereClause docType="AdvancedSearch">
+
+        <predicate parameter="dc:title" operator="FULLTEXT">
+          <field schema="advanced_search" name="title" />
+        </predicate>
+
+        <predicate parameter="dc:created" operator="BETWEEN">
+          <field schema="advanced_search" name="created_min" />
+          <field schema="advanced_search" name="created_max" />
+        </predicate>
+
+        <predicate parameter="dc:modified" operator="BETWEEN">
+          <field schema="advanced_search" name="modified_min" />
+          <field schema="advanced_search" name="modified_max" />
+        </predicate>
+
+        <predicate parameter="dc:language" operator="LIKE">
+          <field schema="advanced_search" name="language" />
+        </predicate>
+
+        <predicate parameter="ecm:currentLifeCycleState" operator="IN">
+          <field schema="advanced_search" name="currentLifeCycleStates" />
+        </predicate>
+
+        <fixedPart>
           ecm:parentId = ? AND ecm:isCheckedInVersion = 0 AND ecm:mixinType !=
           'HiddenInNavigation' AND ecm:currentLifeCycleState != 'deleted'
+        </fixedPart>
 
-      #{currentDocument.id}
+      </whereClause>
+      <parameter>#{currentDocument.id}</parameter>
+      <sort column="dc:title" ascending="true" />
+      <pageSize>20</pageSize>
+    </coreQueryPageProvider>
 
-      20
-
-    true
+    <searchLayout name="document_content_search"
+      filterDisplayType="quick" />
+    <showFilterForm>true</showFilterForm>
 
     ...
 
+</extension>
 ```
 
 The above definition holds a `whereClause` element, stating the search document type and predicates explaining how the document model properties will be translated into a NXQL query. It can also state a `fixedPart` element that will added as to the query string. This fixed part can also take parameters using the '?' character and `parameter` elements. It can also accept "named parameters", e.g. parameters prefixed by a comma, that can also match the search document model properties (for instance: `SELECT * FROM Document WHERE [dc:title](http://dctitle) = :[searchdoc:title](http://searchdoctitle)` ).
@@ -550,7 +611,9 @@ The&nbsp;`fixedPart` element also accepts attributes to better control its behav
 Note that when using an Elasticsearch page provider you can use [NXQL hints](https://doc.nuxeo.com/display/NXDOC/NXQL#NXQL-ElasticsearchNXQLHints) inside predicates like this:
 
 ```
-
+<predicate hint="ES: INDEX(dc:title,dc:description)" parameter="dc:title" operator="FULLTEXT">
+  <field schema="advanced_search" name="fulltext_all"/>
+</predicate>
 ```
 
 {{/callout}}
@@ -567,10 +630,12 @@ The searchDocumentType element is an alternative way to define the search docume
 Sample usage:
 
 ```
-
-    #{documentManager}
-    AdvancedSearch
-
+<contentView name="myContentView">
+  <coreQueryPageProvider>
+    <property name="coreSession">#{documentManager}</property>
+    <searchDocumentType>AdvancedSearch</searchDocumentType>
+  </coreQueryPageProvider>
+</contentView>
 ```
 
 ###### searchLayout element
@@ -588,11 +653,12 @@ The `waitForExecutionSentence` element can also be used to customize the text pr
 Sample declaration:
 
 ```
-
-  true
-
+<contentView name="myContentView">
+  <waitForExecution>true</waitForExecution>
+  <waitForExecutionSentence>
     label.search.waitForExecution
-
+  </waitForExecutionSentence>
+</contentView>
 ```
 
 &nbsp;
@@ -628,15 +694,22 @@ The `searchDocument` variable can be used in EL expressions to bind the page siz
 Sample usage:
 
 ```
-
-    #{documentManager}
-
+<contentView name="myContentView">
+  <coreQueryPageProvider>
+    <property name="coreSession">#{documentManager}</property>
+    <whereClause docType="AdvancedSearch">
+      <fixedPart>
         ecm:currentLifeCycleState != 'deleted'
-
-      #{searchDocument.cvd.pageSize}
-      #{searchDocument.cvd.sortInfos}
-
+      </fixedPart>
+      <predicate parameter="dc:title" operator="FULLTEXT">
+        <field schema="dublincore" name="title" />
+      </predicate>
+      <pageSizeBinding>#{searchDocument.cvd.pageSize}</pageSizeBinding>
+      <sortInfosBinding>#{searchDocument.cvd.sortInfos}</sortInfosBinding>
+    </whereClause>
+  </coreQueryPageProvider>
   [...]
+</contentView>
 
 ```
 
@@ -645,12 +718,20 @@ The `searchDocument` element can be filled on a content view using an EL express
 Sample usage, showing how to add a clause to the search depending on title set on the current document (will display non deleted document with the same title):
 
 ```
-
-  #{currentDocument}
-
-    #{documentManager}
-
+<contentView name="sampleContentViewWithCustomSearchDocument">
+  <searchDocument>#{currentDocument}</searchDocument>
+  <coreQueryPageProvider>
+    <property name="coreSession">#{documentManager}</property>
+    <whereClause docType="AdvancedSearch">
+      <fixedPart>
         ecm:currentLifeCycleState != 'deleted'
+      </fixedPart>
+      <predicate parameter="dc:title" operator="FULLTEXT">
+        <field schema="dublincore" name="title" />
+      </predicate>
+    </whereClause>
+  </coreQueryPageProvider>
+</contentView>
 
 ```
 
@@ -661,10 +742,12 @@ The `resultColumns` element can be filled on a content view using an EL expressi
 Sample usage, showing how to reuse selected columns set on the search document model already defined for filtering:
 
 ```
-
+<contentView name="myContentView">
   [...]
-
+  <resultColumns>
     #{searchDocument.cvd.selectedLayoutColumns}
+  </resultColumns>
+</contentView>
 
 ```
 
@@ -675,11 +758,12 @@ The `resultLayout` element can be filled on a content view using an EL expressio
 Sample usage, showing how to reuse the selected result layout set on the search document model already defined for filtering:
 
 ```
-
+<contentView name="myContentView">
   [...]
-
+  <resultLayout>
     #{searchDocument.cvd.resultLayoutName}
-
+  </resultLayout>
+</contentView>
 ```
 
 ###### Additional rendering information
@@ -687,26 +771,28 @@ Sample usage, showing how to reuse the selected result layout set on the search 
 Additional rendering information can also be set, to be used by templates when rendering the content view:
 
 ```
-
-  label.current.document.children
-  true
-  /icons/document_listing_icon.png
-  label.content.empty.search
-  true
-  true
-  true
-  true
+<contentView name="CURRENT_DOCUMENT_CHILDREN">
+  <title>label.current.document.children</title>
+  <translateTitle>true</translateTitle>
+  <iconPath>/icons/document_listing_icon.png</iconPath>
+  <emptySentence>label.content.empty.search</emptySentence>
+  <translateEmptySentence>true</translateEmptySentence>
+  <translateEmptySentence>true</translateEmptySentence>
+  <showPageSizeSelector>true</showPageSizeSelector>
+  <showRefreshCommand>true</showRefreshCommand>
 ...
 
+    <coreQueryPageProvider>
 ...
-
-        10
-        15
-        20
-
+      <pageSizeOptions>
+        <option>10</option>
+        <option>15</option>
+        <option>20</option>
+      </pageSizeOptions>
 ...
-
+    </coreQueryPageProvider>
 ...
+</contentView>
 
 ```
 
@@ -751,13 +837,16 @@ It is possible to define content views on a document type. This makes it easier 
 Here is the default configuration of content views for Nuxeo folderish documents:
 
 ```
-
-  Folder
+<type id="Folder">
+  <label>Folder</label>
   ...
-
-    document_content
-
-    document_trash_content
+  <contentViews category="content">
+    <contentView>document_content</contentView>
+  </contentViews>
+  <contentViews category="trash_content">
+    <contentView showInExportView="false">document_trash_content</contentView>
+  </contentViews>
+</type>
 
 ```
 
@@ -773,24 +862,18 @@ If several content views are filled in the same category, both will be displayed
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
 *   [How to Configure a New Default Search Form in the Search Tab]({{page page='how-to-configure-a-new-default-search-form-in-the-search-tab'}})
 *   [How to Display Non-Folderish Documents (Files, Note, ...) in the Left Tree]({{page page='how-to-display-non-folderish-documents-files-note-in-the-left-tree'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Other Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
 *   [Document Content Views]({{page page='document-content-views'}})
 *   [Content Views Display]({{page page='content-views-display'}})
 *   [Page Providers]({{page page='page-providers'}})
 *   [Content Views in Nuxeo Studio]({{page space='studio' page='content-views'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

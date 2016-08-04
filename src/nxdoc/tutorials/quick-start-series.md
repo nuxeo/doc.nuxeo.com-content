@@ -42,9 +42,7 @@ history:
         version: '1'
 
 ---
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Getting Familiar with the Nuxeo Platform
 
@@ -62,9 +60,7 @@ Any project requires to choose between several possible implementations. Here ar
 *   [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
 *   [Choosing How to Customize the UI]({{page page='choosing-how-to-customize-the-ui'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Bootstrapping Your Project
 
@@ -83,6 +79,4 @@ Here are some resources to help you start your Nuxeo Platform application:
 *   [From the Web UI to Nuxeo Studio]({{page page='from-the-web-ui-to-nuxeo-studio'}})
 *   [First Steps With Studio: Technical Documentation Tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

@@ -89,7 +89,7 @@ history:
 ---
 {{! excerpt}}
 
-In this how-to, [importing a file]({{page space='userdoc' page='creating-content'}}) can correspond to using the <span class="confluence-link">Drag'n Drop</span>, using the Import button, or adding a file from [Nuxeo Drive]({{page space='userdoc' page='nuxeo-drive'}}) or a [WebDAV drive]({{page space='userdoc' page='working-with-webdav'}}).
+In this how-to, [importing a file]({{page space='userdoc' page='creating-content'}}) can correspond to using the Drag'n Drop, using the Import button, or adding a file from [Nuxeo Drive]({{page space='userdoc' page='nuxeo-drive'}}) or a [WebDAV drive]({{page space='userdoc' page='working-with-webdav'}}).
 
 {{! /excerpt}}
 
@@ -100,8 +100,11 @@ According to the mimetype of the file you try to import, a specific plugin will 
 So, to create a document of your own type that, you have to set the&nbsp;`docType` attribute when overwriting the default contribution:
 
 ```
-org.nuxeo.ecm.platform.filemanager.service.FileManagerService.Plugins
+<require>org.nuxeo.ecm.platform.filemanager.service.FileManagerService.Plugins</require>
 
+<extension target="org.nuxeo.ecm.platform.filemanager.service.FileManagerService" point="plugins">
+    <plugin name="DefaultFileImporter" merge="true" docType="MyCustomFileType" />
+</extension>
 ```
 
 You can consult these pages about the same topic:
@@ -113,18 +116,8 @@ You can consult these pages about the same topic:
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in developer documentation'}}
 
-<div class="column medium-6">{{#> panel heading="Related topics in developer documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related topics in other documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related topics in other documentation"}}
-
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

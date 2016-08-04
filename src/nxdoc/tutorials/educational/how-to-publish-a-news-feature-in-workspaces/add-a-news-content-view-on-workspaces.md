@@ -94,7 +94,7 @@ For this section, it is recommended to take a look at the how-tos for a step-by-
     ![]({{file name='contentview_NewsTab.png'}} ?w=600,border=true)
 3.  In the **Results** tab, configure a table with 1 column and 2 two rows. First row is for the title (`dc:title`, with a text widget), second row is for the content (`news:body`, with an HTML widget).
 
-    {{#> callout type='tip' heading="Style your widget"}}
+    {{#> callout type='tip' heading='Style your widget'}}
 
     Don't hesitate to give CSS attributes to the text widget to customize its look.
     Here is an example of values you can type in the **Style** text box: `color:#4e9ae1;text-decoration:underline;font-weight:bolder;font-size:large;margin:15px 15px 15px 15px`

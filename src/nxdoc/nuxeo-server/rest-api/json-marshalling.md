@@ -436,7 +436,7 @@ A Java-to-JSON marshaller must implement the&nbsp;`org.nuxeo.ecm.core.io.registr
 
 ```
  @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductJsonWriter extends AbstractJsonWriter {
+public class ProductJsonWriter extends AbstractJsonWriter<Product> {
     public void write(Product product, JsonGenerator jg) throws IOException {
         jg.writeObject(product);
     }
@@ -445,7 +445,7 @@ public class ProductJsonWriter extends AbstractJsonWriter {
 
 ```
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductJsonWriter extends AbstractJsonWriter {
+public class ProductJsonWriter extends AbstractJsonWriter<Product> {
     public void write(Product product, JsonGenerator jg) throws IOException {
         jg.writeStartObject();
         jg.writeNumberField("ref", product.getReference());
@@ -466,7 +466,7 @@ A JSON-to-Java marshaller must implement the&nbsp;`org.nuxeo.ecm.core.io.registr
 
 ```
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductJsonReader extends AbstractJsonReader {
+public class ProductJsonReader extends AbstractJsonReader<Product> {
     public Product read(JsonNode jn) throws IOException {
         return new ObjectMapper().readValue(jn, Product.class);
     }
@@ -475,7 +475,7 @@ public class ProductJsonReader extends AbstractJsonReader {
 
 ```
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductJsonReader extends AbstractJsonReader {
+public class ProductJsonReader extends AbstractJsonReader<Product> {
     public Product read(JsonNode jn) throws IOException {
         Product product = new Product();
         product.setReference(jn.get("reference").getIntValue());
@@ -500,7 +500,7 @@ The Nuxeo Platform provides built-in abstract classes to manage lists.
 
 ```
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductListJsonWriter extends DefaultListJsonWriter {
+public class ProductListJsonWriter extends DefaultListJsonWriter<Product> {
     public ProductListJsonWriter() {
         super("products", Product.class);
     }
@@ -509,7 +509,7 @@ public class ProductListJsonWriter extends DefaultListJsonWriter {
 
 ```
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductListJsonReader extends DefaultListJsonReader {
+public class ProductListJsonReader extends DefaultListJsonReader<Product> {
     public ProductListJsonReader() {
         super("products", Product.class);
     }
@@ -519,6 +519,18 @@ public class ProductListJsonReader extends DefaultListJsonReader {
 ### Registering Your Marshallers
 
 The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.MarshallerRegistry/marshallers`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.io.MarshallerRegistry--marshallers) . It allows to add new marshallers, override existing ones or unregister some.
+
+```
+<?xml version="1.0"?>
+<component name="org.nuxeo.example.marshallers" version="1.0.0">
+  <extension target="org.nuxeo.ecm.core.io.MarshallerRegistry" point="marshallers">
+    <register class="org.nuxeo.example.ProductJsonWriter" enable="true" />
+    <register class="org.nuxeo.example.ProductJsonReader" enable="true" />
+    <register class="org.nuxeo.example.ProductListJsonWriter" enable="true" />
+    <register class="org.nuxeo.example.ProductListJsonReader" enable="true" />
+  </extension>
+</component> 
+```
 
 ### Using Your Marshallers
 
@@ -532,7 +544,7 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
 
         ```
         public class ProductApplication extends WebEngineModule {
-            public Set getSingletons() {
+            public Set<Object> getSingletons() {
                 return Sets.newHashSet(new JsonCoreIODelegate());
             }
         }
@@ -575,7 +587,7 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
     MarshallerRegistry registry = Framework.getService(MarshallerRegistry.class);
 
     // get the most priorized JSON Writer for Product
-    Writer writer = registry.getWriter(CtxBuilder.get(), Product.class, MediaType.APPLICATION_JSON_TYPE);
+    Writer<Product> writer = registry.getWriter(CtxBuilder.get(), Product.class, MediaType.APPLICATION_JSON_TYPE);
     writer.write(object, Product.class, Product.class, APPLICATION_JSON_TYPE, target);
 
     // get a specific JSON Writer instance
@@ -584,7 +596,7 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
 
     // get the most priorized JSON Writer for Product
     // associated with the given context and available for use in multiple threads (usefull for use in listeners or schedulers)
-    Writer writer = registry.getUniqueWriter(CtxBuilder.get(), Product.class, Product.class, MediaType.APPLICATION_JSON_TYPE);
+    Writer<Product> writer = registry.getUniqueWriter(CtxBuilder.get(), Product.class, Product.class, MediaType.APPLICATION_JSON_TYPE);
     writer.write(object, Product.class, Product.class, APPLICATION_JSON_TYPE, target);
 
     // get a specific JSON Writer instance
@@ -593,10 +605,10 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
     writer.write(object, Product.class, Product.class, APPLICATION_JSON_TYPE, target);
 
     // advanced use for Java class based on generic type
-    List products = ...;
+    List<Product> products = ...;
     // use TypeUtils from commons-lang3 to get the generic type
     Type productListType = TypeUtils.parametrize(List.class, Product.class)
-    Writer> writer = registry.getWriter(CtxBuilder.get(), List.class, productListType, MediaType.APPLICATION_JSON_TYPE);
+    Writer<List<Product>> writer = registry.getWriter(CtxBuilder.get(), List.class, productListType, MediaType.APPLICATION_JSON_TYPE);
     writer.write(object, List.class, productListType, APPLICATION_JSON_TYPE, target);
     ```
 
@@ -604,7 +616,7 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
 
     ```
     @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-    public class AnObjectJsonWriter extends AbstractJsonWriter {
+    public class AnObjectJsonWriter extends AbstractJsonWriter<AnObject> {
         public void write(AnObject anObject, JsonGenerator jg) throws IOException {
             jg.writeStartObject();
             jg.writeStringField("someField", anObject.getSomeField());
@@ -644,7 +656,7 @@ If you add parametrized behaviors to your marshaller, it is then customizable by
 
 ```
 @Setup(mode = SINGLETON, priority = Priorities.REFERENCE)
-public class ProductJsonWriter extends AbstractJsonWriter {
+public class ProductJsonWriter extends AbstractJsonWriter<Product> {
     public void write(Product product, JsonGenerator jg) throws IOException {
         jg.writeStartObject();
         jg.writeNumberField("ref", product.getReference());
@@ -776,7 +788,7 @@ Object o = ctx.getParameter("paramName");
 ```
 
 ```
-List list = ctx.getParameters("paramName");
+List<Object> list = ctx.getParameters("paramName");
 ```
 
 ```
@@ -817,7 +829,7 @@ ctx.setParameterValues("properties", "dublincore", "file");
 </td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
 
 ```
-Set properties = ctx.getProperties();
+Set<String> properties = ctx.getProperties();
 ```
 
 </td></tr></tbody></table>
@@ -854,7 +866,7 @@ ctx.setParameterValues("fetch.objectType", "part1", "part2");
 </td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
 
 ```
-Set toLoad = ctx.getFetched("objectType");
+Set<String> toLoad = ctx.getFetched("objectType");
 ```
 
 </td></tr></tbody></table>
@@ -891,7 +903,7 @@ ctx.setParameterValues("enrichers.objectType", "children", "acl");
 </td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
 
 ```
-Set enricherToActivate = ctx.getEnrichers("objectType");
+Set<String> enricherToActivate = ctx.getEnrichers("objectType");
 ```
 
 </td></tr></tbody></table>
@@ -921,7 +933,7 @@ ctx.setParameterValues("translate.objectType", "elementToTranslate");
 </td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
 
 ```
-Set toTranslate = ctx.getTranslated("objectType");
+Set<String> toTranslate = ctx.getTranslated("objectType");
 ```
 
 </td></tr></tbody></table>
@@ -972,7 +984,7 @@ When loading a category, we'd like to be able to get the corresponding products.
 
 ```
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class CategoryJsonWriter extends AbstractJsonWriter {
+public class CategoryJsonWriter extends AbstractJsonWriter<Category> {
     public void write(Category category, JsonGenerator jg) throws IOException {
         jg.writeStartObject();
         jg.writeNumberField("ref", category.getReference());
@@ -998,7 +1010,7 @@ When loading a product, we'd like to be able to get the corresponding categories
 
 ```
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductJsonWriter extends AbstractJsonWriter {
+public class ProductJsonWriter extends AbstractJsonWriter<Product> {
     public void write(Product product, JsonGenerator jg) throws IOException {
         jg.writeStartObject();
         jg.writeNumberField("ref", product.getReference());
@@ -1038,7 +1050,7 @@ The Nuxeo Platform provides a specific object to wrap the depth control in each 
 
 ```
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class CategoryJsonWriter extends AbstractJsonWriter {
+public class CategoryJsonWriter extends AbstractJsonWriter<Category> {
     public void write(Category category, JsonGenerator jg) throws IOException {
         jg.writeStartObject();
         jg.writeNumberField("ref", category.getReference());
@@ -1110,14 +1122,31 @@ Let's take the `breadcrumb` enricher as an example. It contributes to the genera
 
 ```
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class BreadcrumbJsonEnricher extends AbstractJsonEnricher { // <= enrich="" DocumentModel="" Java="" type="" public="" BreadcrumbJsonEnricher()="" {="" super("breadcrumb");="" <="is" activated="" if="" "children"="" is="" in="" "enrichers.document"="" parameter's="" values="" }="" void="" write(JsonGenerator="" jg,="" document)="" throws="" IOException="" List parentDocuments = null;
+public class BreadcrumbJsonEnricher extends AbstractJsonEnricher<DocumentModel> { // <= enrich DocumentModel Java type
+    public BreadcrumbJsonEnricher() {
+        super("breadcrumb"); // <= is activated if "children" is in "enrichers.document" parameter's values
+    }
+    public void write(JsonGenerator jg, DocumentModel document) throws IOException {
+        List<DocumentModel> parentDocuments = null;
         try (SessionWrapper wrapper = ctx.getSession(document)) {
             parentDocuments = wrapper.getSession().getParentDocuments(document.getRef());
         }
-        jg.writeFieldName("breadcrumb"); // <= write="" "breadcrumb"="" as="" key="" writeEntity(documentList,="" jg);="" delegates="" the="" parent="" documents="" marshalling="" to="" Nuxeo="" }="" }<="" code=""/>
+        jg.writeFieldName("breadcrumb"); // <= write "breadcrumb" as key
+        writeEntity(documentList, jg); // delegates the parent documents marshalling to Nuxeo
+    }
+}
 ```
 
 Of course, like any JSON marshaller, you have to register it.
+
+```
+<?xml version="1.0"?>
+<component name="org.nuxeo.example.marshallers" version="1.0.0">
+  <extension target="org.nuxeo.ecm.core.io.MarshallerRegistry" point="marshallers">
+    <register class="org.nuxeo.example.BreadcrumbJsonEnricher" enable="true" />
+  </extension>
+</component> 
+```
 
 That's all, you can now use it!
 
@@ -1142,7 +1171,13 @@ That could be dangerous if you use some JSON attributes which name already exist
 Let's take an example with the DocumentModel. The current marshaller class for DocumentModel is `DocumentModelJsonWriter`.
 
 ```
-@Setup(mode = Instantiations.SINGLETON, priority = Priorities.OVERRIDE_REFERENCE) // <= an="" higher="" priority="" is="" used="" public="" class="" MyCustomDocumentModelJsonWriter="" extends="" DocumentModelJsonWriter="" {="" <="override" the="" protected="" void="" extend(DocumentModel="" document,="" JsonGenerator="" jg)="" throws="" IOException="" implement="" inherited="" extend="" method="" super.extend(document,="" jg);="" optionnal="" jg.writeStringField("additional",="" "information");="" feel="" free="" to="" write="" anything="" }="" }<="" code=""/>
+@Setup(mode = Instantiations.SINGLETON, priority = Priorities.OVERRIDE_REFERENCE) // <= an higher priority is used
+public class MyCustomDocumentModelJsonWriter extends DocumentModelJsonWriter { // <= override the class
+    protected void extend(DocumentModel document, JsonGenerator jg) throws IOException { // <= just implement the inherited extend method
+        super.extend(document, jg); // optionnal
+        jg.writeStringField("additional", "information"); // feel free to write anything
+    }
+}
 ```
 
 Don't forget to register the marshaller. The resulting object will contain the whole existing JSON with your additional data.
@@ -1160,7 +1195,8 @@ Be careful with this approach, the marshallers provided by Nuxeo are used in man
 {{/callout}}
 
 ```
-@Setup(mode = Instantiations.SINGLETON, priority = Priorities.OVERRIDE_REFERENCE) // <= an="" higher="" priority="" is="" used="" public="" class="" MyCustomDocumentModelJsonWriter="" extends="" AbstractJsonWriter {
+@Setup(mode = Instantiations.SINGLETON, priority = Priorities.OVERRIDE_REFERENCE) // <= an higher priority is used
+public class MyCustomDocumentModelJsonWriter extends AbstractJsonWriter<DocumentModel> {
     public void write(DocumentModel document, JsonGenerator jg) throws IOException {
         // generate what you want
     }
@@ -1330,7 +1366,7 @@ Enriches a document with free key/value pair. Only from the server side.
 
 ```
 String name = "contextualParameters"; 
-Map keyValues = ...; 
+Map<String, String> keyValues = ...; 
 ctx.enrich(name).param(name, keyValues).get();
 ```
 
@@ -2092,12 +2128,13 @@ If you want to be able to update a field using the JSON rather than the referenc
 The Nuxeo Platform offers a utility object to test JSON data: `org.nuxeo.ecm.core.io.marshallers.json.JsonAssert`. It is provided by nuxeo-core-io test-jar.
 
 ```
-
-  org.nuxeo.ecm.core
-  nuxeo-core-io
-  test-jar
-  test
-
+<!-- JSON marshallers tests -->
+<dependency>
+  <groupId>org.nuxeo.ecm.core</groupId>
+  <artifactId>nuxeo-core-io</artifactId>
+  <type>test-jar</type>
+  <scope>test</scope>
+</dependency>
 ```
 
 ### Testing a Simple Marshaller
@@ -2106,7 +2143,7 @@ Let's test the following marshaller:
 
 ```
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductJsonWriter extends AbstractJsonWriter {
+public class ProductJsonWriter extends AbstractJsonWriter<Product> {
     public void write(Product product, JsonGenerator jg) throws IOException {
         jg.writeStartObject();
         jg.writeNumberField("ref", product.getReference());
@@ -2119,7 +2156,7 @@ public class ProductJsonWriter extends AbstractJsonWriter {
 The test looks like:
 
 ```
-public class ProductJsonWriterTest extends AbstractJsonWriterTest.Local {
+public class ProductJsonWriterTest extends AbstractJsonWriterTest.Local<ProductJsonWriter, Product> {
 
     public ProductJsonWriterTest() {
         super(ProductJsonWriter.class, Product.class);
@@ -2146,7 +2183,7 @@ If your marshaller uses other marshallers, don't forget to load the correspondin
 If you wrote an enricher for DocumentModel, the tested object should be DocumentModel. In that case, don't forget to load the contribution which contains your enricher registering.
 
 ```
-public class SomeEnricherTest extends AbstractJsonWriterTest.Local {
+public class SomeEnricherTest extends AbstractJsonWriterTest.Local<DocumentModelJsonWriter, DocumentModel> {
 
     public ProductJsonWriterTest() {
         super(DocumentModelJsonWriter.class, DocumentModel.class);

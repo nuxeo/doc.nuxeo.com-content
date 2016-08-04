@@ -159,7 +159,7 @@ public class FileSystem implements ShellFeature {
 Let's look at the content of the install method.
 The first line is registering the feature instance as a context object of type FileSystem.class.
 
-{{#> callout type='info' heading="Context Objects"}}
+{{#> callout type='info' heading='Context Objects'}}
 
 are object instances that are available for injection into any command field using the @Context annotation.
 
@@ -167,7 +167,7 @@ are object instances that are available for injection into any command field usi
 
 The second line contribute a new Value Adapter to the shell.
 
-{{#> callout type='info' heading="Value Adapters"}}
+{{#> callout type='info' heading='Value Adapters'}}
 
 are objects used to adapt an input type to an output type. They are used to adapt string values specified on the command line to a value of the real type specified by the command field which was bound to a command line parameter.
 
@@ -175,7 +175,7 @@ are objects used to adapt an input type to an output type. They are used to adap
 
 The third line is registering a new namespace named **local** and which is implemented by FileSystemCommands class.
 
-{{#> callout type='info' heading="Command Registry"}}
+{{#> callout type='info' heading='Command Registry'}}
 
 A command registry object is the materialization of a namespace. It must extend the abstract class `org.nuxeo.shell.CommandRegistry`
 

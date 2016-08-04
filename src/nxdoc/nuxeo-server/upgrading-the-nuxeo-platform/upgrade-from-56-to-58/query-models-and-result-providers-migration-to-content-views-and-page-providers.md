@@ -53,21 +53,31 @@ Components `org.nuxeo.ecm.core.search.api.client.querymodel.QueryModelService` a
 The XML syntax is very close, here is a sample migration of a query model contribution without a whereClause element:
 
 ```
-
+<extension target="org.nuxeo.ecm.core.search.api.client.querymodel.QueryModelService"
+  point="model">
+  <queryModel name="MY_SEARCH">
+    <pattern>
       SELECT * FROM Document WHERE ecm:currentLifeCycleState != 'deleted' AND ecm:uuid != ?
-
-    20
-
+    </pattern>
+    <sortable value="true" defaultSortColumn="dc:title" defaultSortAscending="true" />
+    <max>20</max>
+  </queryModel>
+</extension>
 ```
 
 This can be translated into a page provider very easily (notice the pageSize and sort syntax changes):
 
 ```
-
+ <extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
+  point="contentViews">
+  <coreQueryPageProvider name="MY_SEARCH">
+    <pattern>
       SELECT * FROM Document WHERE ecm:currentLifeCycleState != 'deleted' AND ecm:uuid != ?
-
-    20
-
+    </pattern>
+    <sort column="dc:title" ascending="true" />
+    <pageSize>20</pageSize>
+  </coreQueryPageProvider>
+</extension>
 ```
 
 ### Code Migration
@@ -76,7 +86,7 @@ Classes `QueryModel`, `QueryModelService` and `ResultsProviderFarm` have been re
 
 The `QueryModel` class is basically replaced by [`PageProvider`](http://community.nuxeo.com/api/nuxeo/release-5.8/javadoc/org/nuxeo/ecm/platform/query/api/PageProvider.html) or [`PageProviderDefinition`](http://community.nuxeo.com/api/nuxeo/release-5.8/javadoc/org/nuxeo/ecm/platform/query/api/PageProviderDefinition.html) instances depending on the use case. Default page providers are available and perform queries on the Nuxeo repository, for instance [CoreQueryDocumentPageProvider](http://community.nuxeo.com/api/nuxeo/release-5.8/javadoc/org/nuxeo/ecm/platform/query/nxql/CoreQueryDocumentPageProvider.html).
 
-Reading the [Custom Page Providers]({{page page='custom-page-providers'}}) and [Page Providers]({{page page='page-providers'}}) <span class="confluence-link">&nbsp;</span> chapters is recommended to understand how to use the new API.
+Reading the [Custom Page Providers]({{page page='custom-page-providers'}}) and [Page Providers]({{page page='page-providers'}}) chapters is recommended to understand how to use the new API.
 
 ### Templates Migration
 
@@ -84,19 +94,49 @@ Old templates displaying paged lists of documents have been removed, the templat
 
 ```
 
+<div xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:nxu="http://nuxeo.org/nxweb/util">
+
+  <nxu:set var="documents"
+    value="#{documentActions.getChildrenSelectModel()}">
+    <ui:decorate template="/incl/forum_table.xhtml" />
+  </nxu:set>
+
+</div>
 ```
 
 ```
 
+<div xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:nxu="http://nuxeo.org/nxweb/util">
+
+  <nxu:set var="provider"
+    value="#{resultsProvidersCache.get('MY_SEARCH')}"
+    cache="true">
+    <ui:decorate template="/search/documents_table.xhtml">
+      <ui:param name="provider" value="#{provider}"/>
+      <ui:param name="providerName" value="#{provider.name}"/>
+    </ui:decorate>
+  </nxu:set>
+
+</div>
 ```
 
 ```
 
+<div xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:nxu="http://nuxeo.org/nxweb/util">
+
+  <nxu:set var="contentViewName" value="MY_SEARCH">
+    <ui:decorate template="/incl/content_view.xhtml" />
+  </nxu:set>
+
+</div>
 ```
 
 &nbsp;
 
-Also, the old templates displaying listings of documents were not relying on layouts, so migration may include defining <span class="confluence-link">&nbsp;</span> [ <span class="confluence-link"><span class="confluence-link">listing layouts</span></span> ]({{page page='layout-definitions'}}) <span class="confluence-link">&nbsp;</span> and widget templates when migrating to content views.
+Also, the old templates displaying listings of documents were not relying on layouts, so migration may include defining [ listing layouts ]({{page page='layout-definitions'}}) and widget templates when migrating to content views.
 
 ## Migration Use Cases
 
@@ -105,11 +145,16 @@ Also, the old templates displaying listings of documents were not relying on lay
 Let's take again the above example:
 
 ```
-
+<extension target="org.nuxeo.ecm.core.search.api.client.querymodel.QueryModelService"
+  point="model">
+  <queryModel name="MY_SEARCH">
+    <pattern>
       SELECT * FROM Document WHERE ecm:currentLifeCycleState != 'deleted' AND ecm:uuid != ?
-
-    20
-
+    </pattern>
+    <sortable value="true" defaultSortColumn="dc:title" defaultSortAscending="true" />
+    <max>20</max>
+  </queryModel>
+</extension>
 ```
 
 This query model is designed to perform a query on the Nuxeo Core Repository, using a parameter to fill the [ecm:uuid](http://ecmuuid) filtering criterion.
@@ -127,22 +172,27 @@ DocumentModelList list = qm.getDocuments(coreSession, params);
 Let's migrate the query model to a page provider:
 
 ```
-
+<extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
+  point="contentViews">
+  <coreQueryPageProvider name="MY_SEARCH">
+    <pattern>
       SELECT * FROM Document WHERE ecm:currentLifeCycleState != 'deleted' AND ecm:uuid != ?
-
-    20
-
+    </pattern>
+    <sort column="dc:title" ascending="true" />
+    <pageSize>20</pageSize>
+  </coreQueryPageProvider>
+</extension>
 ```
 
 Let's also migrate the corresponding JAVA code:
 
 ```
 PageProviderService ppService = Framework.getLocalService(PageProviderService.class);
-Map props = new HashMap();
+Map<String, Serializable> props = new HashMap<String, Serializable>();
 props.put(CoreQueryDocumentPageProvider.CORE_SESSION_PROPERTY,
         (Serializable) coreSession);
 Object[] params = {document.getId()};
-PageProvider pp = (PageProvider) ppService.getPageProvider(
+PageProvider<DocumentModel> pp = (PageProvider<DocumentModel>) ppService.getPageProvider(
         "MY_SEARCH", null, null, null, props, params);
 DocumentModelList list = pp.getCurrentPage();
 ```
@@ -152,21 +202,37 @@ DocumentModelList list = pp.getCurrentPage();
 Here is a more complex migration involving a whereClause (the search pattern is generated according to predicates definitions, retrieving values on the search document model):
 
 ```
-
-      ecm:currentLifeCycleState != 'deleted'
-
-    20
-
+<extension target="org.nuxeo.ecm.core.search.api.client.querymodel.QueryModelService"
+  point="model">
+  <queryModel name="MY_SEARCH" docType="AdvancedSearch">
+    <whereClause>
+      <predicate parameter="ecm:fulltext" operator="FULLTEXT ALL">
+        <field schema="advanced_search" name="fulltext_all"/>
+      </predicate>
+      <fixedPart>ecm:currentLifeCycleState != 'deleted'</fixedPart>
+    </whereClause>
+    <sortable value="true" defaultSortColumn="dc:title" defaultSortAscending="true" />
+    <max>20</max>
+  </queryModel>
+</extension>
 ```
 
 The `whereClause` element content is unchanged, but the associated `docType` element has moved from the `queryModel` element to the `whereClause` element:
 
 ```
-
-      ecm:currentLifeCycleState != 'deleted'
-
-    20
-
+<extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
+  point="contentViews">
+  <coreQueryPageProvider name="MY_SEARCH">
+    <whereClause docType="AdvancedSearch">
+      <predicate parameter="ecm:fulltext" operator="FULLTEXT ALL">
+        <field schema="advanced_search" name="fulltext_all"/>
+      </predicate>
+      <fixedPart>ecm:currentLifeCycleState != 'deleted'</fixedPart>
+    </whereClause>
+    <sort column="dc:title" ascending="true" />
+    <pageSize>20</pageSize>
+  </coreQueryPageProvider>
+</extension>
 ```
 
 ### Migrating a `QueryModel` to a `ContentView`
@@ -176,14 +242,20 @@ Sometimes it is useful to migrate the query model to a content view, where the p
 Here is a sample migration of the above example to a content view:
 
 ```
-
+<extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
+  point="contentViews">
+  <contentView name="MY_SEARCH">
+    <coreQueryPageProvider>
+      <pattern>
         SELECT * FROM Document WHERE ecm:currentLifeCycleState != 'deleted' AND ecm:uuid != ?
-
-      20
-      #{currentDocument.id}
-
+      </pattern>
+      <sort column="dc:title" ascending="true" />
+      <pageSize>20</pageSize>
+      <parameter>#{currentDocument.id}</parameter>
+    </coreQueryPageProvider>
     [...]
-
+  </contentView>
+</extension>
 ```
 
 Notice the parameter element, using an EL expression, that makes it possible to resolve Seam/JSF EL expresssions.
@@ -195,12 +267,16 @@ Result provider farms were useful to pass contextual parameters to the page prov
 For instance, if the result provider farm is a seam component named `mySeamComponent` and is using one of its custom contextual field `myField` as a parameter for the query model, the content view can simply state a parameter in the page provider definition as is (provided the Seam component holds public a getter method for this field):
 
 ```
-
+<extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
+  point="contentViews">
+  <contentView name="MY_SEARCH">
+    <coreQueryPageProvider>
       [...]
-      #{mySeamComponent.myField}
-
+      <parameter>#{mySeamComponent.myField}</parameter>
+    </coreQueryPageProvider>
     [...]
-
+  </contentView>
+</extension>
 ```
 
 ## More Migration Examples

@@ -239,31 +239,32 @@ This point allows you to configure the Login Screen : header, footer, styles, op
 Let's create the component `org.nuxeo.sample.loginPage`.
 
 ```
-
-      url("${org.nuxeo.ecm.contextPath}/img/newBackground.jpg") 0px 0px no-repeat #000
-      false
-
-      url("${org.nuxeo.ecm.contextPath}/img/newLoginBox.jpg") 0 0 no-repeat #ff0000
-      400px
-      ${org.nuxeo.ecm.contextPath}/img/newLogo.png
-      MyCompany
-      113
-      20
-
+<component name="org.nuxeo.sample.loginPage">
+  <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="loginScreen">
+    <loginScreenConfig>
+      <bodyBackgroundStyle>url("${org.nuxeo.ecm.contextPath}/img/newBackground.jpg") 0px 0px no-repeat #000</bodyBackgroundStyle>
+      <disableBackgroundSizeCover>false</disableBackgroundSizeCover>
+      <headerStyle></headerStyle>
+      <footerStyle></footerStyle>
+      <loginBoxBackgroundStyle>url("${org.nuxeo.ecm.contextPath}/img/newLoginBox.jpg") 0 0 no-repeat #ff0000</loginBoxBackgroundStyle>
+      <loginBoxWidth>400px</loginBoxWidth>
+      <logoUrl>${org.nuxeo.ecm.contextPath}/img/newLogo.png</logoUrl>
+      <logoAlt>MyCompany</logoAlt>
+      <logoWidth>113</logoWidth>
+      <logoHeight>20</logoHeight>
+    </loginScreenConfig>
+  </extension>
+</component>
 ```
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page page='how-to-declare-the-css-and-javascript-resources-used-in-your-templates'}})
 *   [undefined]({{page}})
 *   [undefined]({{page}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Theme in Developer Documentation]({{page page='theme'}})
 *   [Branding in Studio Documentation]({{page space='studio' page='branding'}})
@@ -271,6 +272,4 @@ Let's create the component `org.nuxeo.sample.loginPage`.
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Online UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

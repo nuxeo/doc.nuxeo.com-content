@@ -90,7 +90,7 @@ You probably have the same issue: the `JodConverter` component cannot communicat
     INFO: started process : pid = 7725
     Sep 29, 2015 11:05:48 AM org.artofsolving.jodconverter.office.OfficeConnection connect
     INFO: connected: 'socket,host=127.0.0.1,port=2003,tcpNoDelay=1'
-    11:05:52,573 INFO  [OSGiRuntimeService] Nuxeo Platform Started</init></init></pre>
+    11:05:52,573 INFO  [OSGiRuntimeService] Nuxeo Platform Started</pre>
 
     If something failed, these lines will tell you why and you'll be able to fix your configuration accordingly.
 

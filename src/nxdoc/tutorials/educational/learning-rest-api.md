@@ -212,7 +212,7 @@ _Extract from the course "[Working with the REST API](https://university.nuxeo.i
     3.  Using the Command endpoint, and the `Fetch > Document` operation.
 4.  Change the headers sent so that you only retrieve the `dublincore` and `bccontract` schemas.
 
-{{#> callout type='info' heading="What's the Best Way to Retrieve a Document?"}}
+{{#> callout type='info' heading='What\'s the Best Way to Retrieve a Document?'}}
 
 *   Using the `Resources` endpoint is preferable. The `Command` endpoint is better suited when you want to execute business logic.
 *   Using the `Id` endpoint is recommended over the `Path` endpoint when possible, as it brings a small performance improvement.
@@ -251,12 +251,18 @@ In Nuxeo Studio:
     *   Make sure the following methods will be supported: `GET, PUT, POST, DELETE, HEAD, OPTIONS`.
     *   Only allow requests on the following pattern: `/nuxeo/.*`.
 
-{{#> accordian heading="CORS Configuration - Solution" closed='true'}}
+{{#> accordian heading='CORS Configuration - Solution' closed='true'}}
 
 ```
-
-    /nuxeo/.*
-
+<extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
+  <corsConfig name="BigCorp" 
+    allowGenericHttpRequests="true" 
+    allowOrigin="https://jsfiddle.net https://jshell.net"
+    allowSubdomains="true" 
+    supportedMethods="GET, PUT, POST, DELETE, HEAD, OPTIONS">
+    <pattern>/nuxeo/.*</pattern>
+  </corsConfig>
+</extension>
 ```
 
 {{/accordian}}
@@ -465,7 +471,7 @@ In the JS client, you can set headers:
     nuxeo.class().method(..., callOptions)
     ```
 
-{{#> callout type='info' heading="What You Should Remember"}}
+{{#> callout type='info' heading='What You Should Remember'}}
 
 Headers can be used to fine tune your queries:
 
@@ -544,7 +550,7 @@ On top of the `depth` header, you can use:
     ![]({{file name='user-entity.png' space='nxdoc710' page='learning-rest-api'}} ?w=300,h=136,border=true)
 *   When calling a user, use the `user` entity in the `fetchProperty` method, no matter what kind of entity types further referenced objects may have.
 
-{{#> callout type='info' heading="What You Should Remember"}}
+{{#> callout type='info' heading='What You Should Remember'}}
 
 Using resolvers is a combination of:
 
@@ -604,7 +610,7 @@ nuxeo.someClass().enrichers( // TODO: you need to replace someClass by the appro
 )...
 ```
 
-{{#> callout type='info' heading="What You Should Remember"}}
+{{#> callout type='info' heading='What You Should Remember'}}
 
 *   Enrichers allow to retrieve anything on top of the response.
 *   Many enrichers are provided by default, and you can also contribute your own.
@@ -666,7 +672,7 @@ nuxeo.request('/path/default-domain/@acl')
 
 ```
 
-{{#> callout type='info' heading="What You Should Remember"}}
+{{#> callout type='info' heading='What You Should Remember'}}
 
 *   Adapters are the ancestors of enrichers; today using an enricher is preferable when possible.
 *   Adapters are called by adding a `/@adaptername` in the URL.
@@ -699,7 +705,7 @@ A [`Document`](http://nuxeo.github.io/nuxeo-js-client/1.0.0/Document.html) can't
 
 {{{multiexcerpt 'restapi-doc-entity-post' page='REST API Entity Types'}}}
 
-{{#> callout type='info' heading="What You Should Remember"}}
+{{#> callout type='info' heading='What You Should Remember'}}
 
 *   Creating a document is done using the JS client `nuxeo.repository().create("parentRef", document)...` method, where:
     *   `parentRef` is the document id or path under which the document should be created.
@@ -749,7 +755,7 @@ The `X-Versioning-Option` header can be used when you need to increment the mino
 
 Accepted values for the header are `MAJOR` (creates a version and increments the major version number), `MINOR` (creates a version and increments the minor version number) or `NONE` (no version is created, if another update is performed later you won't be able to revert the document to the specific state you left it in during the first update). There is no functional difference between a minor and major version.
 
-{{#> callout type='info' heading="What You Should Remember"}}
+{{#> callout type='info' heading='What You Should Remember'}}
 
 *   Updating a document is done using the JS client `nuxeo.repository().update(document)...` method, where `document` is the document object that will be used to create your actual document.
 *   Use the [REST API Entity Types]({{page space='nxdoc710' page='rest-api-entity-types'}}) documentation or the previous sample to see what a document object should look like.
@@ -805,7 +811,7 @@ batch.upload(nuxeoBlob) // Note that we could also upload several blobs in the s
   });
 ```
 
-{{#> callout type='info' heading="What You Should Remember"}}
+{{#> callout type='info' heading='What You Should Remember'}}
 
 *   Uploading files is done by creating `Nuxeo.Blob` objects, instantiating a batch, then uploading the files into the batch.
 *   Once the files are uploaded, you can attach them to your documents by creating new documents or updating existing documents.
@@ -839,7 +845,7 @@ Using the default document life cycle:
 
 Then it is up to you to make sure your queries will not retrieve documents in the `deleted` state!
 
-{{#> callout type='info' heading="What You Should Remember"}}
+{{#> callout type='info' heading='What You Should Remember'}}
 
 *   Deleting documents is done through `nuxeo.repository().delete(documentRef)...`, where `documentRef` is either a document id or a document path.
 *   If you want to handle a trash mechanism, you should change the document state instead and make sure to adapt your queries accordingly, using: `document.followTransition(transitionName)...` where `document` is a Document object and `transitionName` the name of the transition to follow.
@@ -900,7 +906,7 @@ In that case, you need to:
 nuxeo.Repository().query({ 'pageProvider': 'pageProviderId', queryParams['parameter1', 'parameter2'...] })...
 ```
 
-{{#> callout type='info' heading="What You Should Remember"}}
+{{#> callout type='info' heading='What You Should Remember'}}
 
 *   To query the database, you can use `nuxeo.Repository().query({ 'query': myQuery })...` where `myQuery` is a variable containing the query to launch.
 *   If you want to query on the Elasticsearch index instead, you can create a page provider by defining a content view in Studio (only the query part is required), then call it using the JS client:
@@ -989,7 +995,7 @@ nuxeo.operation('MyChainOrScriptId')
 
 Note that automation scripts are prefixed by `javascript.` So if your automation script is called `myScript` in Nuxeo Studio, you should call `javascript.myScript`.
 
-{{#> callout type='info' heading="What You Should Remember"}}
+{{#> callout type='info' heading='What You Should Remember'}}
 
 *   You can execute automation operations, automation chains and automation scripts using the REST API.
 *   Any custom operation, chain or script you created is immediately available on the server, there is nothing special to do.
@@ -1026,7 +1032,7 @@ Note that automation scripts are prefixed by `javascript.` So if your automation
 
 1.  In Nuxeo Studio, complete the `BCAddToCollection` automation script.
 
-    {{#> accordian heading="Solution" closed='true'}}
+    {{#> accordian heading='Solution' closed='true'}}
 
     ```
     /******
@@ -1117,7 +1123,7 @@ Sometimes you might need to create automation operations or chains, that should 
 
 In the **Customization** menu, choose **Advanced Settings** > **Web Services Filtering** and create a new filter. You can then choose to restrict or disable some business logic related operations and chains.
 
-{{#> callout type='info' heading="What You Should Remember"}}
+{{#> callout type='info' heading='What You Should Remember'}}
 
 In Nuxeo Studio, go into the **Customization** menu, choose **Advanced Settings** > **Web Services Filtering** and create a new filter to restrict or disable some business logic related operations and chains.
 
@@ -1174,7 +1180,7 @@ nuxeo.workflows().start('workflowId', workflowOptions)...
     *   The `action` variable defines the button id the user clicks on.
     *   The task options can be used to fill the task form if you didn't do it through the variable method.
 
-{{#> callout type='info' heading="What You Should Remember"}}
+{{#> callout type='info' heading='What You Should Remember'}}
 
 *   Workflows can be started with either no document attached, a single one or multiple documents.
 *   Use the workflow object to retrieve the tasks it contains.
@@ -1253,7 +1259,7 @@ import org.nuxeo.ecm.core.io.registry.reflect.Setup;
 
 @Setup(mode = SINGLETON, priority = REFERENCE)
 
-public class LastVersionEnricher extends AbstractJsonEnricher { 
+public class LastVersionEnricher extends AbstractJsonEnricher<DocumentModel> { 
     public static final String NAME = "lastVersion";
     public SampleEnricher() {
         super(NAME);
@@ -1273,7 +1279,7 @@ public class LastVersionEnricher extends AbstractJsonEnricher {
 }
 ```
 
-{{#> accordian heading="Solution" closed='true'}}
+{{#> accordian heading='Solution' closed='true'}}
 
 ```
 package org.nuxeo.sample;
@@ -1286,7 +1292,7 @@ import org.nuxeo.ecm.core.api.DocumentModel;
 import org.nuxeo.ecm.core.io.marshallers.json.enrichers.AbstractJsonEnricher;
 import org.nuxeo.ecm.core.io.registry.reflect.Setup;
 @Setup(mode = SINGLETON, priority = REFERENCE)
-public class LastVersionEnricher extends AbstractJsonEnricher { 
+public class LastVersionEnricher extends AbstractJsonEnricher<DocumentModel> { 
     public static final String NAME = "lastVersion";
     public SampleEnricher() {
         super(NAME);

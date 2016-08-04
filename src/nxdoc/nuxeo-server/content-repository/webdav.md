@@ -101,12 +101,25 @@ The plugin comes with a default configuration which supports only a few clients 
 Below is an example where BitKinex is added:
 
 ```
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.platform.wi.auth.config.custom">
 
-  org.nuxeo.ecm.platform.wi.auth.config
+  <require>org.nuxeo.ecm.platform.wi.auth.config</require>
 
-        (Microsoft-WebDAV-MiniRedir|DavClnt|litmus|gvfs|davfs|WebDAV|cadaver|BitKinex).*
+  <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="specificChains">
 
-        DIGEST_AUTH
-        WEBDAV_BASIC_AUTH
+    <specificAuthenticationChain name="WebDAV">
+      <headers>
+        <header name="User-Agent">(Microsoft-WebDAV-MiniRedir|DavClnt|litmus|gvfs|davfs|WebDAV|cadaver|BitKinex).*</header>
+      </headers>
+
+      <replacementChain>
+        <plugin>DIGEST_AUTH</plugin>
+        <plugin>WEBDAV_BASIC_AUTH</plugin>
+      </replacementChain>
+    </specificAuthenticationChain>
+  </extension>
+
+</component>
 
 ```

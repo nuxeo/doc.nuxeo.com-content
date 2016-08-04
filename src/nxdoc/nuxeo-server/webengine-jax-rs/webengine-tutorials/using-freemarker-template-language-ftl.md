@@ -75,40 +75,40 @@ import org.nuxeo.ecm.webengine.model.*;
  * But how can I modify response headers?
  * In that case you must return a javax.ws.rs.Response that may be used to customize your response headers.
  * 
-
+<p>
  * WebEngine is adding a new type of response objects: templates.
  * Templates are freemarker based templates that can be used to render your objects depending on the request context.
  * WebEngine is adding some cool extensions to freemarker templates that let you build your web site in a modular fashion.
  * These extensions are called blocks. Blocks are dynamic template parts that can be extended or replaced using derived blocks.
  * Using blocks, you can write a base template that may define the site layout (using blocks containing empty or generic content) and then
- * write final skins for your layout by extending the base template and redefining blocks you are interested in.
- * See the skin directory for template examples.
+ * write final <i>skins</i> for your layout by extending the base template and redefining blocks you are interested in.
+ * See the <i>skin</i> directory for template examples.
  * 
-
- * Templates are stored in files under the skin directory. Templates are always resolved relative to the skin directory,
+<p>
+ * Templates are stored in files under the <i>skin</i> directory. Templates are always resolved relative to the <i>skin</i> directory,
  * even if you are using absolute paths.
  * The following variables are accessible from a template when rendered at rendering time:
  * 
-
+<ul>
  * 
- Context  - the WebContext instance
+<li> <code>Context</code>  - the WebContext instance
  * 
- Engine   - the WebEngine instance
+<li> <code>Engine</code>   - the WebEngine instance
  * 
- This     - the target Web Object.
+<li> <code>This</code>     - the target Web Object.
  * 
- Root     - the root WebObject.
+<li> <code>Root</code>     - the root WebObject.
  * 
- Document - the target Document if any otherwise null.
+<li> <code>Document</code> - the target Document if any otherwise null.
  * 
- Session  - the Repository Session. (aka Core Session)
+<li> <code>Session</code>  - the Repository Session. (aka Core Session)
  * 
- basePath - the request base path (context path + servlet path)
- * 
+<li> <code>basePath</code> - the request base path (context path + servlet path)
+ * </ul>
  * To render a template as a response you need to instantiate it and then return it from the resource method.
  * The template will be processed by the corresponding MessageBodyWriter and rendered on the client stream.
  *
- * @author Bogdan Stefanescu
+ * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>
  */
 @WebObject(type="sample2")
 @Path("/sample2")
@@ -184,14 +184,32 @@ public class Sample2 extends ModuleRoot {
 ##### skin/base.ftl
 
 ```
+<!-- Base template that defines the site layout -->
+<html>
+  <head>
+    <title><@block name="title"/></title>
+  </head>
+  <body>
 
-    <@block name="title"/>
+<table width="100%" border="1">
 
-<@block name="header">Header
+<tr>
 
-<@block name="content">Content
+<td><@block name="header">Header</@block></td>
+      </tr>
 
-<@block name="footer">Footer
+<tr>
+
+<td><@block name="content">Content</@block></td>
+      </tr>
+
+<tr>
+
+<td><@block name="footer">Footer</@block></td>
+      </tr>
+    </table>
+  </body>
+</html>
 
 ```
 
@@ -199,18 +217,21 @@ public class Sample2 extends ModuleRoot {
 
 ```
 <@extends src="base.ftl">
-  <@block name="title">Index 2
+  <@block name="title">Index 2</@block>
   <@block name="header">
-    <#if name="">
+    <#if name>
     Hello ${name}!
     <#else>
     Hello World!
-
+    </#if>
+  </@block>
   <@block name="content">
-    This is the index1 skin.
-
+    This is the <i>index1</i> skin.
+  </@block>
   <@block name="footer">
     The footer here ...
+  </@block>
+</@extends>
 
 ```
 
@@ -218,8 +239,10 @@ public class Sample2 extends ModuleRoot {
 
 ```
 <@extends src="base.ftl">
-  <@block name="title">Index 2
+  <@block name="title">Index 2</@block>
   <@block name="content">
-    This is the index2 skin.
+    This is the <i>index2</i> skin.
+  </@block>
+</@extends>
 
 ```

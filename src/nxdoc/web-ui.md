@@ -89,24 +89,16 @@ history:
 ---
 <span class="s1">Nuxeo Web UI is a standard base application for Nuxeo Server that connects via HTTP and displays all the features of the platform to the users.</span> Customizable, scalable and built upon a framework of Web components, it allows the Nuxeo Platform developers to build their own front-application using these components.
 
-<div class="row">
-
-<div class="column medium-4">{{#> panel type='primary'}}
+<div class="row"><div class="column medium-4">{{#> panel type='primary'}}
 
 [Web UI Overview]({{page page='web-ui-overview'}})
 
-{{/panel}}</div>
-
-<div class="column medium-4">{{#> panel type='primary'}}
+{{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
 
 [ Nuxeo Elements]({{page page='nuxeo-elements'}})
 
-{{/panel}}</div>
-
-<div class="column medium-4">{{#> panel type='primary'}}
+{{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
 
 [Data Visualization]({{page page='data-visualization'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

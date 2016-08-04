@@ -246,7 +246,7 @@ public class Lst implements Runnable {
 
 Now in the **run** method we can use the **ctx** object to access to the server and to the remote context of the shell.
 
-{{#> callout type='tip' heading="Don't Like Injection?"}}
+{{#> callout type='tip' heading='Don\'t Like Injection?'}}
 
 If you don't like injection you can always lookup yourself the context objects through the shell instance.
 The `@Context protected RemoteContext ctx;` construct is eqiuivalent to
@@ -404,7 +404,7 @@ As a real example you can see the `Perms` command of the shell and the `printAcl
 
 Of course the output of the script (a string) may be a complex object - encoded as JSON or XML - in that case your command should be able to decode it and print a human readable response on the terminal.
 
-{{#> callout type='note' heading="Security Warning"}}
+{{#> callout type='note' heading='Security Warning'}}
 
 Because of potential security issues the scripting feature is available only when logged in as Administrator
 

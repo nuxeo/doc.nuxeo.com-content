@@ -132,7 +132,7 @@ The Nuxeo Platform supports the following Redis versions:
 
 The following Redis configuration points should be checked:
 
-*   The server memory should be enough to hold the Redis database (<span>the size depends on the usage: transient store, cache, the&nbsp;</span>backlog of asynchronous jobs).
+*   The server memory should be enough to hold the Redis database (the size depends on the usage: transient store, cache, the&nbsp;backlog of asynchronous jobs).
 *   [Redis persistence](http://redis.io/topics/persistence) should be configured appropriately for the level of service required. In particular the RDB files should be used as backups and periodically saved offsite.
 *   [Redis master-slave replication](http://redis.io/topics/replication)&nbsp;should be set up, for robustness (fast disaster recovery). Note that Nuxeo Platform 5.8 does not yet know how to use the slaves for read-only operation.
 

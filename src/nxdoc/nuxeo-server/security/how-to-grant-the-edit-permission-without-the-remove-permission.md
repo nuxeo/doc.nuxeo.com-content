@@ -87,9 +87,12 @@ As described on the page [Managing Permissions]({{page space='userdoc' page='man
 1.  [Add a new contribution]({{page page='how-to-contribute-to-an-extension'}}) to remove the `Remove` permission from `Write` permission.
 
     ```
-
-          Remove
-
+      <extension target="org.nuxeo.ecm.core.security.SecurityService"
+        point="permissions">
+        <permission name="Write">
+          <remove>Remove</remove>
+        </permission>
+     </extension>
     ```
 
     This change will make the permission `ReadWrite`, displayed under the permission label "Edit" in the UI, act as wanted: it no longer includes the right to remove content.
@@ -99,23 +102,28 @@ As described on the page [Managing Permissions]({{page space='userdoc' page='man
 2.  Define a new global permission to read, edit and remove content.
 
     ```
-
-            Read
-            Write
-            Remove
-
+      <extension target="org.nuxeo.ecm.core.security.SecurityService"
+        point="permissions"> 
+       <permission name="ReadWriteAndRemove">
+            <include>Read</include>
+            <include>Write</include>
+            <include>Remove</include>
+        </permission>
+      </extension>
     ```
 
 3.  Make the new `ReadWriteAndRemove` permission visible in the drop down list in the UI.
 
     ```
-
-          Read
-          ReadWrite
-          ReadWriteAndRemove
-          ReadRemove
-          Everything
-
+    <extension point="permissionsVisibility" target="org.nuxeo.ecm.core.security.SecurityService">
+        <visibility>
+          <item order="10" show="true">Read</item>
+          <item denyPermission="Write" order="50" show="true">ReadWrite</item>
+          <item denyPermission="Write" order="55" show="true">ReadWriteAndRemove</item>
+          <item denyPermission="Remove" order="60" show="true">ReadRemove</item>
+          <item order="100" show="true">Everything</item>
+        </visibility>
+      </extension>
     ```
 
     ![]({{file name='ReadWriteAndRemove_permission_UI.png'}} ?w=400,border=true)

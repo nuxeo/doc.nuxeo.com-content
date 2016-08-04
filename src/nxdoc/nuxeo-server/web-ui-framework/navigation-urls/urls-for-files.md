@@ -204,12 +204,30 @@ where, by default,&nbsp;`viewName`&nbsp;can be Original, OriginalJpeg, Medium, T
 For a single file, in schema "file", where blob field is named "file" and file name field is named "filename":
 
 ```
+<nxh:outputLink
+  value="#{nxd:fileUrl('downloadFile', currentDocument, field.fullName, currentDocument.file.filename)}">
+  <nxh:graphicImage
+    value="#{nxd:fileIconPath(currentDocument[field.schemaName][field.fieldName])}"
+    rendered="#{! empty nxd:fileIconPath(currentDocument[field.schemaName][field.fieldName])}" />
+  <nxh:outputText value="#{currentDocument.file.filename}" />
+</nxh:outputLink>
 
 ```
 
 For a list of files, in schema "files", where list name is "files" and in each item, blob field is named "file" and file name field is named "filename":
 
 ```
+<nxu:inputList value="#{currentDocument.files.files}" model="model"
+rendered="#{not empty currentDocument.files.files}">
+  <nxh:outputLink
+    value="#{nxd:complexFileUrl('downloadFile', currentDocument, 'files:files', model.rowIndex, 'file', currentDocument.files.files[model.rowIndex].filename)}">
+    <nxh:graphicImage
+      value="#{nxd:fileIconPath(currentDocument.files.files[model.rowIndex].file)}"
+      rendered="#{! empty nxd:fileIconPath(currentDocument.files.files[model.rowIndex].file)}" />
+    <nxh:outputText value="#{currentDocument.files.files[model.rowIndex].filename}" />
+  </nxh:outputLink>
+  <t:htmlTag value="br" />
+</nxu:inputList>
 
 ```
 

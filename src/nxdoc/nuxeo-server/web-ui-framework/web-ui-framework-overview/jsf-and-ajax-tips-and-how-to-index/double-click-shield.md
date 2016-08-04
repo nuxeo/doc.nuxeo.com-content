@@ -137,7 +137,7 @@ You can see the shield in action when a "Request in progress" message is display
 
 The shield will intercept the submit event of a form. There are cases where a form is submitted without firing the submit event and the shield will therefore not be active.
 
-{{#> callout type='tip' heading="h:commandLink vs. h:commandButton"}}
+{{#> callout type='tip' heading='h:commandLink vs. h:commandButton'}}
 
 *   `<span class="il" style="color: rgb(34,34,34);">h</span> <span style="color: rgb(34,34,34);">:</span> <span class="il" style="color: rgb(34,34,34);">commandLink</span>` <span style="color: rgb(34,34,34);">&nbsp;renders a classic HTML `a` link with some custom JSF JavaScript, bound to the click event, that obscurely submits the form in a uncommon way. Then submitting it does&nbsp;**not**&nbsp;fire the submit event.</span>
 *   <span style="color: rgb(34,34,34);">`h:commandButton`&nbsp;renders a HTML `input` tag with&nbsp;`type="submit"`&nbsp;which properly fires the submit event.</span>
@@ -151,7 +151,17 @@ The shield will intercept the submit event of a form. There are cases where a fo
 There are use cases where the shield might break the proper functioning of a form. For instance, if you have a component that needs to perform several Ajax submits. This is the case when using&nbsp;[`rich:fileupload`](http://richfileupload)&nbsp;which performs as many submits as there are files to upload. With the shield enabled, only the first file will be uploaded and the others will be ignored. To address these particular use cases, you can disable the shield on a particular form by adding the&nbsp;`disableDoubleClickShield="true"`&nbsp;attribute.
 
 ```
+<h:form enctype="multipart/form-data" id="document_files_edit" disableDoubleClickShield="true">
 
+	<rich:fileUpload uploadData="#{FileManageActions.uploadedFiles}"
+      listHeight="150" maxFilesQuantity="5"
+      id="upload"
+      locale="#{localeSelector.localeString}"
+      immediateUpload="true" >
+      <a4j:support  onsubmit="removeUploadedFile(event.memo.entry);" event="onclear"/>
+	</rich:fileUpload>
+
+</h:form>
 ```
 
 ## How to Globally Disable the Shield
@@ -159,11 +169,15 @@ There are use cases where the shield might break the proper functioning of a for
 You can disable the shield for the whole Nuxeo application by adding the following runtime contribution:
 
 ```
+<component name="org.nuxeo.disableDoubleClickShield">
 
-  org.nuxeo.ecm.platform.ui.web.configuration.default
+  <require>org.nuxeo.ecm.platform.ui.web.configuration.default</require>
+  <extension target="org.nuxeo.runtime.ConfigurationService"
+    point="configuration">
+      <property name="nuxeo.jsf.enableDoubleClickShield">false</property>
+  </extension>
 
-      false
-
+</component>
 ```
 
 &nbsp;
@@ -172,9 +186,7 @@ You can disable the shield for the whole Nuxeo application by adding the followi
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [JSF and Javascript ]({{page page='jsf-and-javascript'}})
 *   [Ajax4jsf Best Practices]({{page page='ajax4jsf-best-practices'}})
@@ -182,15 +194,11 @@ You can disable the shield for the whole Nuxeo application by adding the followi
 *   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [JavaScript Client]({{page page='javascript-client'}})
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Web UI Framework Overview]({{page page='web-ui-framework-overview'}})
 *   [Web UI Limitations]({{page page='web-ui-limitations'}})&nbsp;
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

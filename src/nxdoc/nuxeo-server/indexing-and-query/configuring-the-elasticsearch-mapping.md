@@ -370,10 +370,9 @@ SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.ngram) ANALYZER(lowercase_ana
 
 {{! multiexcerpt name='common-operator-main-attachment'}}{{> wistia_video id='nvdt4nzdq9'}}
 
-<span>Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.io/nuxeo/university/#!/course/whats-new-in-nuxeo-platform-lts-2015) in [Nuxeo University](https://university.nuxeo.io)
-</span>
+Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.io/nuxeo/university/#!/course/whats-new-in-nuxeo-platform-lts-2015) in [Nuxeo University](https://university.nuxeo.io)
 
-<span>Suppose you want to be able to search using the</span> [common operator](https://www.elastic.co/guide/en/elasticsearch/reference/1.5/query-dsl-common-terms-query.html) <span>on your documents' main attachment content. This Elasticsearch operator is interesting for two reasons:</span>
+Suppose you want to be able to search using the [common operator](https://www.elastic.co/guide/en/elasticsearch/reference/1.5/query-dsl-common-terms-query.html) on your documents' main attachment content. This Elasticsearch operator is interesting for two reasons:
 
 *   The common operator can be seen as an alternative to the full-text search.
     One notable difference is that it allows to search on terms that would have been removed by the full-text analyzer. If I absolutely want to search for the &ldquo;Not Beyond Space Travel Agencies&rdquo;, I&rsquo;d like to be able to search for the &ldquo;Not&rdquo; keyword.
@@ -426,30 +425,24 @@ You can now configure hints in Nuxeo Studio using the common operator when query
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{! Please update the label in the Content by Label macro below. }}
 
-{{#> panel heading="Other Elasticsearch Documentation"}}
+{{#> panel heading='Other Elasticsearch Documentation'}}
 
 *   [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
 *   [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
 *   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">
+{{/panel}}</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
-{{#> panel heading="Other Related Documentation "}}
+{{#> panel heading='Other Related Documentation '}}
 
 *   [Full-Text Queries]({{page page='full-text-queries'}})
 *   [Indexing and Query]({{page page='indexing-and-query'}})
 *   [Indexing and Querying How-To Index]({{page page='indexing-and-querying-how-to-index'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

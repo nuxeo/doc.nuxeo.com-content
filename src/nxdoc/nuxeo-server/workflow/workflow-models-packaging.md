@@ -87,7 +87,10 @@ This page deals with how a workflow model is created on a Nuxeo instance. Note t
 Nuxeo workflows are declared via the following contribution:
 
 ```
-
+<extension target="org.nuxeo.ecm.platform.routing.service" point="routeModelImporter">
+<template-resource id="TimeOffRequest" path="data/TimeOffRequest.zip"/>
+<template-resource id="TimeOffUpdateCancelRequest" path="data/TimeOffUpdateCancelRequest.zip"/>
+</extension>
 ```
 
 As you can see, the workflow definition is referenced in a zip "data/TimeOffRequest.zip" (that is in the JAR bundle). In this zip you find the serialization in [core-io format]({{page page='nuxeo-core-import-export-api'}}) of the workflow graph: the parent document corresponds to the workflow model, and you have as many children as there are nodes in your graph.

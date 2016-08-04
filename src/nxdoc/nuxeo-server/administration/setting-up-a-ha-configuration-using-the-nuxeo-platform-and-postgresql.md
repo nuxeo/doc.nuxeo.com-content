@@ -104,7 +104,7 @@ See the&nbsp;[Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-conf
 
 ## Setting up PosgreSQL Streaming Replication
 
-<span>Streaming replication allows a standby server to stay more up-to-date than is possible with file-based log shipping.</span>
+Streaming replication allows a standby server to stay more up-to-date than is possible with file-based log shipping.
 
 We provide&nbsp;[ansible scripts](https://github.com/nuxeo/nuxeo-tools-pgcluster)&nbsp;to deploy a cluster of two PostgreSQL servers as an example. Please refer to the PostgreSQL&nbsp;[streaming replication](http://www.postgresql.org/docs/current/static/warm-standby.html)&nbsp;page for more information.
 

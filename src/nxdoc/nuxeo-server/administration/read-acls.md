@@ -71,7 +71,7 @@ Two modes are available to configure the management of ACLs in the Nuxeo Platfor
 
 ReadACL ON is the default choice because in most cases people would prefer to promote better search performances rather that document update performances. Quick search results are usually considered as more critical.
 
-{{#> callout type='warning' heading="Rebuilding READ ACLs"}}
+{{#> callout type='warning' heading='Rebuilding READ ACLs'}}
 
 When disabling then re-enabling ReadACL the computed READ ACLs might be not up to date because the ACL changes done while the option was disabled are missing.
 You can re build the READ ACLs cache using a stored procedure when Nuxeo is down:

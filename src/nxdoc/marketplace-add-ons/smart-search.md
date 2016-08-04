@@ -351,18 +351,28 @@ As a simple example, let's have a look at the widget to add a condition on the t
 &nbsp;
 
 ```
-
-    title
-
-  true
-
-    dc:title
-
-      CONTAINS
-      LIKE
-      =
-
-        stringValue
+<widget name="nxql_smart_query_condition_title"
+  type="incremental_smart_query_condition">
+  <labels>
+    <label mode="any">title</label>
+  </labels>
+  <translated>true</translated>
+  <properties widgetMode="edit">
+    <property name="searchField">dc:title</property>
+    <propertyList name="availableOperators">
+      <value>CONTAINS</value>
+      <value>LIKE</value>
+      <value>=</value>
+    </propertyList>
+  </properties>
+  <subWidgets>
+    <widget name="title" type="text">
+      <fields>
+        <field>stringValue</field>
+      </fields>
+    </widget>
+  </subWidgets>
+</widget>
 
 ```
 
@@ -392,34 +402,56 @@ As a more complex example, let's have a look at the widget used to add a conditi
 &nbsp;
 
 ```
-
-    label.dublincore.modified
-
-  true
-
-    dc:modified
-
-      BETWEEN
-      NOT BETWEEN
-      <
-      >
-
-        dateValue
-        otherDateValue
-
-        true
-        #{nxu:basicDateFormatter()}
+<widget name="nxql_smart_query_condition_modified" type="incremental_smart_query_condition">
+  <labels>
+    <label mode="any">label.dublincore.modified</label>
+  </labels>
+  <translated>true</translated>
+  <properties widgetMode="edit">
+    <property name="searchField">dc:modified</property>
+    <propertyList name="availableOperators">
+      <value>BETWEEN</value>
+      <value>NOT BETWEEN</value>
+      <value>&lt;</value>
+      <value>&gt;</value>
+    </propertyList>
+  </properties>
+  <subWidgets>
+    <widget name="modified" type="datetimeRange">
+      <fields>
+        <field>dateValue</field>
+        <field>otherDateValue</field>
+      </fields>
+      <properties widgetMode="edit">
+        <property name="required">true</property>
+        <property name="format">#{nxu:basicDateFormatter()}</property>
+      </properties>
+      <widgetModes>
+        <mode value="any">
 
           #{(empty value.conditionalOperator or value.conditionalOperator=='BETWEEN' or value.conditionalOperator=='NOT BETWEEN')?'edit':'hidden'}
           ]]>
-
-        dateValue
-
-        true
-        #{nxu:basicDateFormatter()}
+        </mode>
+      </widgetModes>
+    </widget>
+    <widget name="modified_before" type="datetime">
+      <fields>
+        <field>dateValue</field>
+      </fields>
+      <properties widgetMode="edit">
+        <property name="required">true</property>
+        <property name="format">#{nxu:basicDateFormatter()}</property>
+      </properties>
+      <widgetModes>
+        <mode value="any">
 
           #{(empty value.conditionalOperator or value.conditionalOperator=='BETWEEN' or value.conditionalOperator=='NOT BETWEEN')?'hidden':'edit'}
           ]]>
+        </mode>
+      </widgetModes>
+    </widget>
+  </subWidgets>
+</widget>
 
 ```
 

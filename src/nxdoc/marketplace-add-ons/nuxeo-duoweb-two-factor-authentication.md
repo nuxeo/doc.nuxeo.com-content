@@ -58,7 +58,7 @@ The Nuxeo addon nuxeo-duoweb-authentication is an integration of [DuoWeb](http:/
 
 This plugin is available for Nuxeo Platform 5.8 and above.
 
-{{! /excerpt}}{{#> callout type='info' heading="Configuration"}}
+{{! /excerpt}}{{#> callout type='info' heading='Configuration'}}
 
 Please refer to this [README](https://github.com/nuxeo/nuxeo-duoweb-authentication/blob/master/README.md) to configure and activate the addon on your Nuxeo instance.
 

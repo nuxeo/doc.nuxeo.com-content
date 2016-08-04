@@ -124,7 +124,7 @@ import org.nuxeo.ecm.automation.AutomationService;
 import org.nuxeo.ecm.automation.OperationContext;
 import org.nuxeo.ecm.automation.OperationException;
 
-Map params = new HashMap<>();
+Map<String, Object> params = new HashMap<>();
 
 // Defining MVEL expression and store it in Operation Context under 'script' key parameter
 params.put("script","Context.result = HTTP.call(\"Administrator\",\"Administrator\",\"GET\", \"http://localhost:18090/api/v1/path/default-domain\");");
@@ -148,9 +148,9 @@ import org.nuxeo.ecm.automation.OperationException;
 // Defining the new document to create in JSON Format
 String data = "{\"entity-type\": \"document\",\"type\": \"Workspace\",\"name\":\"newName\",\"properties\": {\"dc:title\":\"My title\",\"dc:description\":\" \"}}";
 
-Map headers = new HashMap<>();
+Map<String, String> headers = new HashMap<>();
 headers.put("Content-type", "application/json+nxentity");
-Map params = new HashMap<>();
+Map<String, Object> params = new HashMap<>();
 OperationContext ctx = new OperationContext(session);
 
 // Store headers and JSON Format in Operation Context
@@ -172,12 +172,39 @@ String result = ((Blob) ctx.get("result")).getString();
 Automation Helpers can be contributed to the Nuxeo Platform easily through extension point:
 
 ```
+<extension-point name="contextHelpers">
+  <documentation>
+    <code>
+      <!-- 'id' is the prefix to use in MVEL or Javascript scripts to get access to all embedded functions -->
+      <contextHelper id="platformFunctions" class="org.nuxeo.ecm.automation.features.PlatformFunctions"/>
+    </code>
+  </documentation>
+  <object class="org.nuxeo.ecm.automation.context.ContextHelperDescriptor"/>
+</extension-point>
+```
 
-Default Contribution
+### Default Contribution
 
-Custom Contribution
+```
+<extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
+           point="contextHelpers">
+  <contextHelper id="Fn" class="org.nuxeo.ecm.automation.features.PlatformFunctions"/>
+  <contextHelper id="HTTP" class="org.nuxeo.ecm.automation.features.HTTPHelper"/>
+</extension>
+```
+
+### Custom Contribution
+
 In order to contribute custom Helpers contribution, you have to create your own POJO extending the interface 'org.nuxeo.ecm.automation.context.ContextHelper':
 
+```
+<extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
+           point="contextHelpers">
+  <contextHelper id="dummy" class="org.test.DummyHelper"/>
+</extension>
+```
+
+```
 package org.test;
 
 import org.nuxeo.ecm.automation.context.ContextHelper;

@@ -203,6 +203,9 @@ Before applying the command below, you have to check that your SQL configuration
 The attribute should look like:
 
 ```
+<tableReference field="subGroups" directory="groupDirectory"
+  table="group2group" sourceColumn="parentGroupId"
+  targetColumn="childGroupId" schema="group2group" />
 
 ```
 

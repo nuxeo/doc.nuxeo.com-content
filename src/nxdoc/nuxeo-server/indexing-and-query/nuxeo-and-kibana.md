@@ -245,7 +245,7 @@ We will allow the embedded Elasticsearch to answer any HTTP request on port 9200
         . . .
         ```
 
-        {{#> callout type='info' heading="Nuxeo FastTrack 7.4"}}
+        {{#> callout type='info' heading='Nuxeo FastTrack 7.4'}}
 
         Since Nuxeo FastTrack 7.4, this option is enabled by default, just check it is there
 

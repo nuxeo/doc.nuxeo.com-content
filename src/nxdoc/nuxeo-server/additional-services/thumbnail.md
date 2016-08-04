@@ -221,7 +221,7 @@ Here are the different components of the thumbnail feature:
 
     *   [`ThumbnailDocumentFactory`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/thumbnail/factories/ThumbnailDocumentFactory.html) : Default thumbnail factory for all non-folderish documents. Returns the main blob converted in thumbnail or get the document's big icon as a thumbnail.
     *   [`ThumbnailFolderishFactory`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/thumbnail/factories/ThumbnailFolderishFactory.html) : Default thumbnail factory for all folderish documents.
-    *   [`ThumbnailPictureFactory`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/picture/thumbnail/ThumbnailPictureFactory.html) : Picture thumbnail factory <span>from&nbsp;</span> [DAM]({{page page='digital-asset-management-dam'}}).
+    *   [`ThumbnailPictureFactory`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/picture/thumbnail/ThumbnailPictureFactory.html) : Picture thumbnail factory from&nbsp; [DAM]({{page page='digital-asset-management-dam'}}).
     *   [`ThumbnailVideoFactory`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/video/adapter/ThumbnailVideoFactory.html) : Video thumbnail factory from [DAM]({{page page='digital-asset-management-dam'}}).
     *   [`ThumbnailAudioFactory`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/audio/extension/ThumbnailAudioFactory.html) : Audio thumbnail factory from [DAM]({{page page='digital-asset-management-dam'}}).
 
@@ -230,7 +230,7 @@ Here are the different components of the thumbnail feature:
     *   [`UpdateThumbnailListener`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/UpdateThumbnailListener.html) : Thumbnail listener handling creation and update of document event to store document thumbnail preview (only for the File document type).
     *   [`CheckBlobUpdateListener`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/CheckBlobUpdateListener.html) : Thumbnail listener handling document blob update and checking changes. Fires a [`scheduleThumbnailUpdate`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/thumbnail/ThumbnailConstants.EventNames.html#scheduleThumbnailUpdate) event if it's the case that will trigger [`UpdateThumbnailListener`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/UpdateThumbnailListener.html) .
 
-{{#> callout type='info' heading="Thumbnail factory on GitHub"}}
+{{#> callout type='info' heading='Thumbnail factory on GitHub'}}
 
 <span style="color: rgb(0,0,0);">Here are Nuxeo thumbnail factory implementations on GitHub:
 </span>
@@ -249,6 +249,15 @@ Here are the different components of the thumbnail feature:
 A thumbnail factory can be registered using the following example extension:
 
 ```
+<extension target="org.nuxeo.ecm.core.api.thumbnail.ThumbnailService"
+  point="thumbnailFactory">
+
+  <thumbnailFactory name="thumbnailFolderishFactory" facet="Folderish"
+    factoryClass="org.nuxeo.ecm.platform.thumbnail.factories.ThumbnailFolderishFactory" />
+
+  <thumbnailFactory name="thumbnailAudioFactory" docType="Audio"
+    factoryClass="org.nuxeo.ecm.platform.audio.extension.ThumbnailAudioFactory" />
+</extension>
 
 ```
 
@@ -268,6 +277,14 @@ The listener [`UpdateThumbnailListener`](http://community.nuxeo.com/api/nuxeo/8.
 &nbsp;When computing your thumbnail, [`UpdateThumbnailListener`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/UpdateThumbnailListener.html) stores it into a specific metadata&nbsp; <span style="color: rgb(51,51,51);">`<span style="color: rgb(51,51,51);">thumb:thumbnail</span>` provided by the following schema:</span>
 
 ```
+<xs:schema xmlns:nxs="http://www.nuxeo.org/ecm/schemas/thumbnail"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nuxeo.org/ecm/schemas/thumbnail">
+
+  <xs:include schemaLocation="core-types.xsd" />
+
+  <xs:element name="thumbnail" type="nxs:content" />
+
+</xs:schema>
 
 ```
 

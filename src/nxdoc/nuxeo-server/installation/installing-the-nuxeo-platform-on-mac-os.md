@@ -197,7 +197,7 @@ brew install nuxeo
 
 </div>
 
-<div>The nuxeo.conf file will be in located in &nbsp;`/usr/local/etc/nuxeo.conf`. You can now start your server&nbsp;with&nbsp;[nuxeoctl]({{page page='nuxeoctl-and-control-panel-usage'}})&nbsp;as it is added in your PATH<span>.</span></div>
+<div>The nuxeo.conf file will be in located in &nbsp;`/usr/local/etc/nuxeo.conf`. You can now start your server&nbsp;with&nbsp;[nuxeoctl]({{page page='nuxeoctl-and-control-panel-usage'}})&nbsp;as it is added in your PATH.</div>
 
 ## Installing a Nuxeo Virtual Machine Image
 
@@ -205,21 +205,15 @@ brew install nuxeo
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Next Steps"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Next Steps'}}
 
 *   [Setup Best Practices]({{page page='setup-best-practices'}})
 *   [Server Start and Stop]({{page page='server-start-and-stop'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Getting Familiar with the Nuxeo Platform"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
 
 *   [From the Web UI to Nuxeo Studio]({{page page='from-the-web-ui-to-nuxeo-studio'}})
 *   [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
 *   [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

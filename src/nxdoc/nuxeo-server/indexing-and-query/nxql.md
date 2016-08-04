@@ -450,7 +450,7 @@ history:
 The general syntax of a NXQL expression is:
 
 ```
-SELECT (*|[DISTINCT] ) FROM  [WHERE ] [ ORDER BY  ]
+SELECT (*|[DISTINCT] <select-clause>) FROM <from-clause> [WHERE <where-clause>] [ ORDER BY <order-by-clause> ]
 ```
 
 The `<select-clause>` is a comma-separated list of `<property>`, or `<aggregate>` since Nuxeo 5.9.2.
@@ -518,7 +518,7 @@ An `<op>` can be:
 
 A `<literal>` can be:
 
-*   `<string>`: a string delimited by single quotes (`'`) or for Java compatibility double quotes (`"`). To use the string delimiter itself inside the string, it must be escaped by a backslash&nbsp;( `<span>\</span> <span>'</span>` or `\"`) (this is contrary to the standard SQL syntax which would double the delimiter). The backslash itself is also escaped by a backslash ( `<span>\</span> <span>\</span>` ). The special `\n`, `\r`&nbsp;and&nbsp;`\t` can also be used.
+*   `<string>`: a string delimited by single quotes (`'`) or for Java compatibility double quotes (`"`). To use the string delimiter itself inside the string, it must be escaped by a backslash&nbsp;( `\ '` or `\"`) (this is contrary to the standard SQL syntax which would double the delimiter). The backslash itself is also escaped by a backslash ( `\ \` ). The special `\n`, `\r`&nbsp;and&nbsp;`\t` can also be used.
 *   `<integer>`: an integer with optional minus sign.
 *   `<float>`: a float.
 *   `TIMESTAMP <timestamp>`: a timestamp in ISO format _yyyy_ `-` _MM_ `-` _dd_ _hh_ `:` _mm_ `:` _ss_[`.` _sss_] (the space separator can be replaced by a `T`).
@@ -720,7 +720,16 @@ SELECT * FROM Document WHERE dc:subjects STARTSWITH 'gee'
 SELECT * FROM Document WHERE dc:subjects STARTSWITH 'gee/moo'
 SELECT * FROM Document WHERE dc:created >= DATE '2007-01-01'
 SELECT * FROM Document WHERE dc:created >= TIMESTAMP '2007-03-15 00:00:00'
-SELECT * FROM Document WHERE dc:created >= DATE '2007-02-15' AND dc:created <= DATE="" '2007-03-15'="" SELECT="" *="" FROM="" Document="" WHERE="" my:boolean="1" ecm:isProxy="1" ecm:isCheckedInVersion="1" AND="" ecm:uuid="c5904f77-299a-411e-8477-81d3102a81f9" ecm:name="foo" ecm:parentId="5442fff5-06f1-47c9-ac59-1e10ef8e985b" ecm:primaryType="Folder" <=""> 'Folder'
+SELECT * FROM Document WHERE dc:created >= DATE '2007-02-15' AND dc:created <= DATE '2007-03-15'
+SELECT * FROM Document WHERE my:boolean = 1
+SELECT * FROM Document WHERE ecm:isProxy = 1
+SELECT * FROM Document WHERE ecm:isCheckedInVersion = 1
+SELECT * FROM Document WHERE ecm:isProxy = 0 AND ecm:isCheckedInVersion = 0
+SELECT * FROM Document WHERE ecm:uuid = 'c5904f77-299a-411e-8477-81d3102a81f9'
+SELECT * FROM Document WHERE ecm:name = 'foo'
+SELECT * FROM Document WHERE ecm:parentId = '5442fff5-06f1-47c9-ac59-1e10ef8e985b'
+SELECT * FROM Document WHERE ecm:primaryType = 'Folder'
+SELECT * FROM Document WHERE ecm:primaryType <> 'Folder'
 SELECT * FROM Document WHERE ecm:primaryType = 'Note'
 SELECT * FROM Document WHERE ecm:primaryType IN ('Folder', 'Note')
 SELECT * FROM Document WHERE ecm:primaryType NOT IN ('Folder', 'Note')
@@ -933,7 +942,7 @@ NXQL hints enable to use more Elasticsearch operators.
 The Elasticsearch hint syntax takes place just before an expression in the `where` clause:
 
 ```
-/*+ES: INDEX() ANALYZER() OPERATOR() */ 
+/*+ES: INDEX(<index-list>) ANALYZER(<analyzer>) OPERATOR(<operator>) */ <expression><op><expression>
 ```
 
 Where:

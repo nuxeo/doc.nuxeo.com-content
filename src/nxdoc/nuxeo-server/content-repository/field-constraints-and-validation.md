@@ -289,7 +289,7 @@ public interface Constraint extends Serializable {
     Description getDescription();
     class Description {
         public String getName() {...}
-        public Map getParameters() {...}
+        public Map<String, Serializable> getParameters() {...}
     }
 }
 ```
@@ -332,13 +332,25 @@ Examples:
 *   An email
 
     ```
-
+    <xs:element name="email">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?*" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
     ```
 
 *   US Zip Code + 4 digit extension Postal Code
 
     ```
+    <xs:simpleType name="zipcodetype">
+      <xs:restriction base="xs:integer">
+        <xs:pattern value="[0-9]{5}([- /]?[0-9]{4})?" />
+      </xs:restriction>
+    </xs:simpleType>
 
+    <xs:element name="zipcode" type="zipcodetype" />
     ```
 
 ### List of Values
@@ -356,7 +368,17 @@ Behavior: This constraint ensures that the value of a field belongs to a set of 
 Example: Preference for use of a hand
 
 ```
-
+<xs:element name="mainColor">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="red" />
+      <xs:enumeration value="green" />
+      <xs:enumeration value="blue" />
+      <xs:enumeration value="black" />
+      <xs:enumeration value="white" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
 ```
 
 ### Length of Text
@@ -383,13 +405,26 @@ Examples:
 *   A login with a minimal size of 4 characters
 
     ```
-
+    <xs:element name="login">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:minLength value="4" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
     ```
 
 *   A credit card code with exactly 15 characters
 
     ```
-
+    <xs:element name="code">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:minLength value="15" />
+          <xs:maxLength value="15" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
     ```
 
 ### Numeric Range
@@ -412,10 +447,27 @@ Examples:
 *   A month (Western calendar)
 
     ```
-
+    <xs:element name="month">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:minInclusive value="1" />
+          <xs:maxInclusive value="12" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
     ```
 
 *   The temperature in the universe (Fahrenheit degrees - above absolute zero)
+
+    ```
+    <xs:element name="temperature">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:minExclusive value="-459.67" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
+    ```
 
 ### Time Range
 
@@ -435,7 +487,14 @@ Behavior: This constraint ensures that a date is in a given time range. `null` v
 Example: Any date during 21 century
 
 ```
-
+<xs:element name="event21century">
+  <xs:simpleType>
+    <xs:restriction base="xs:date">
+      <xs:minInclusive value="2001-01-01" />
+      <xs:maxInclusive value="2100-12-31" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
 ```
 
 ### Mandatory Field
@@ -461,7 +520,14 @@ The non-standard `nillable` attribute must belong to a specific XML namespace: `
 Example: A mandatory description
 
 ```
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:nxsv="http://www.nuxeo.org/ecm/schemas/core/validation/"
+           xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
+           targetNamespace="http://www.nuxeo.org/ecm/schemas/example">
 
+  <xs:element name="description" type="xs:string" nillable="false" nxsv:nillable="false" />
+
+</xs:schema>
 ```
 
 ### Constraint Based on the Type
@@ -505,13 +571,31 @@ Examples:
 *   A reference to another document in a field named "favorite" (note the attribute `ref:store="id"`, the reference will follow the document moves)
 
     ```
-
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
+               xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
+               targetNamespace="http://www.nuxeo.org/ecm/schemas/example">
+      <xs:element name="favorite">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" ref:resolver="documentResolver" ref:store="id" />
+        </xs:simpleType>
+      </xs:element>
+    </xs:schema>
     ```
 
 *   A reference to another document in a field named "workspace" (note the attribute `ref:store="path"`, the reference will not follow the document moves)
 
     ```
-
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
+               xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
+               targetNamespace="http://www.nuxeo.org/ecm/schemas/example">
+      <xs:element name="workspace">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" ref:resolver="documentResolver" ref:store="path" />
+        </xs:simpleType>
+      </xs:element>
+    </xs:schema>
     ```
 
 ### Reference to a Nuxeo User or a Nuxeo Group
@@ -540,19 +624,52 @@ Examples:
 *   A reference to an author which must be a Nuxeo user (the `ref:type="user"` indicates the field must contain a user - not a group).
 
     ```
-
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
+               xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
+               targetNamespace="http://www.nuxeo.org/ecm/schemas/example">
+      <xs:element name="author">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" ref:resolver="userManagerResolver" ref:type="user" />
+        </xs:simpleType>
+      </xs:element>
+    </xs:schema>
     ```
 
 *   A reference to a Nuxeo group (the `ref:type="group"` indicates the field must contain a group - not a user).
 
     ```
-
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
+               xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
+               targetNamespace="http://www.nuxeo.org/ecm/schemas/example">
+      <xs:element name="group">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" ref:resolver="userManagerResolver" ref:type="group" />
+        </xs:simpleType>
+      </xs:element>
+    </xs:schema>
     ```
 
 *   A reference to a set of Nuxeo user or Nuxeo group (here, there is no `ref:type` attribute - the field accept user and group).
 
     ```
-
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
+               xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
+               targetNamespace="http://www.nuxeo.org/ecm/schemas/example">
+      <xs:element name="access">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="principal" minOccurs="0" maxOccurs="unbounded">
+              <xs:simpleType>
+                <xs:restriction base="xs:string" ref:resolver="userManagerResolver" />
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
     ```
 
 ### Reference to Nuxeo Directory/Vocabulary Entry
@@ -578,7 +695,16 @@ Please note that the namespace `http://www.nuxeo.org/ecm/schemas/core/external-r
 Example: A car brand (the `ref:directory="carBrands"` indicates the field must refer to an entry of the `carBrands` directory).
 
 ```
-
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
+           xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
+           targetNamespace="http://www.nuxeo.org/ecm/schemas/example">
+  <xs:element name="carBrand">
+    <xs:simpleType>
+      <xs:restriction base="xs:string" ref:resolver="directoryResolver" ref:directory="carBrands" />
+    </xs:simpleType>
+  </xs:element>
+</xs:schema>
 ```
 
 ## Document Validation APIs
@@ -645,7 +771,38 @@ This feature allows to validate a value according to the definition of a simple 
 Given this schema:
 
 ```
-
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:nxv="http://nuxeo.com/schemas/validationSample"
+           targetNamespace="http://nuxeo.com/schemas/validationSample"
+           xmlns:nxsv="http://www.nuxeo.org/ecm/schemas/core/validation/">
+  <xs:element name="users">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="user" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="firstname" nillable="false" nxsv:nillable="false">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value=".*\S.*" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="lastname" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:pattern value="[A-Z][a-z '-]+" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
 ```
 
 You can do:
@@ -660,7 +817,11 @@ DocumentValidationReport report = validator.validate("schemprefix:users:user:fir
 Validation can be enable/disable at different level by contributing to the validation service:
 
 ```
-
+<extension target="org.nuxeo.ecm.core.api.DocumentValidationService" point="activations">
+  <validation context="createDocument" activated="true" />
+  <validation context="saveDocument" activated="true" />
+  <validation context="importDocument" activated="true" />
+</extension>
 ```
 
 {{#> callout type='warning' }}
@@ -676,7 +837,7 @@ CoreSession.createDocument(DocumentModel);
 CoreSession.createDocument(DocumentModel[]);
 CoreSession.saveDocument(DocumentModel);
 CoreSession.saveDocuments(DocumentModel[]);
-CoreSession.importDocuments(List);
+CoreSession.importDocuments(List<DocumentModel>);
 ```
 
 ### Analysing Validation Reports
@@ -740,8 +901,8 @@ for (Schema schema : doc.getDocumentType().getSchemas()) {
     }
 }
 
-private void constraintIntrospection(Field field, List path) {
-    List newPath = new ArrayList(path);
+private void constraintIntrospection(Field field, List<String> path) {
+    List<String> newPath = new ArrayList<String>(path);
     newPath.add(field.getName().getLocalName());
     System.out.println(StringUtils.join(newPath, ':') + " has constraints: " + field.getConstraints());
     if (field.getType().isListType()) {
@@ -767,7 +928,16 @@ When a field is defined as a reference and is associated to a resolver, you can 
 Example, a reference to another document:
 
 ```
-
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
+           xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
+           targetNamespace="http://www.nuxeo.org/ecm/schemas/example">
+  <xs:element name="favorite">
+    <xs:simpleType>
+      <xs:restriction base="xs:string" ref:resolver="documentResolver" ref:store="id" />
+    </xs:simpleType>
+  </xs:element>
+</xs:schema>
 ```
 
 To know if a field is a reference:

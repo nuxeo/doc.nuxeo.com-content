@@ -218,11 +218,12 @@ If the ticket is valid, the CAS server invokes the `pgtUrl` callback with two pa
 In case of success, the server responds to the portal with the following content
 
 ```
-
-.
-..slacoin
-..PGTIOU-34-jJZH23r2wbKUqbc3dLFt-cas
-.
+<cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+.<cas:authenticationSuccess>
+..<cas:user>slacoin</cas:user>
+..<cas:proxyGrantingTicket>PGTIOU-34-jJZH23r2wbKUqbc3dLFt-cas</cas:proxyGrantingTicket>
+.</cas:authenticationSuccess>
+</cas:serviceResponse>
 
 ```
 
@@ -239,10 +240,11 @@ In the third phase, the portal asks the CAS server for a new service ticket that
 The CAS server generates a new ST and responds to the portal with the following content:
 
 ```
-
-.
-..ST-82-20eCHgCqvMCvnP6AmZmz-cas
-.
+<cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+.<cas:proxySuccess>
+..<cas:proxyTicket>ST-82-20eCHgCqvMCvnP6AmZmz-cas</cas:proxyTicket>
+.</cas:proxySuccess>
+</cas:serviceResponse>
 
 ```
 
@@ -261,22 +263,28 @@ The Nuxeo server validates the ticket by invoking the CAS server (c3).
 If the ticket is valid, the CAS server sends the following response:
 
 ```
-
-.
-..slacoin
-..PGTIOU-34-jJZH23r2wbKUqbc3dLFt-cas
-..
-...http://127.0.0.1:9090/ticket/accept
-..
-.
+<cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+.<cas:authenticationSuccess>
+..<cas:user>slacoin</cas>
+..<cas:proxyGrantingTicket>PGTIOU-34-jJZH23r2wbKUqbc3dLFt-cas</cas:proxyGrantingTicket>
+..<cas:proxies>
+...<cas:proxy>http://127.0.0.1:9090/ticket/accept</cas:proxy>
+..</cas:proxies>
+.</cas:authenticationSuccess>
+</cas>
 
 ```
 
 The Nuxeo server creates an HTTP session and sends the AtomPub response message.
 
 ```
-
-  ...
+<?xml version='1.0' encoding='UTF-8'?>
+<app:service xmlns:app="http://www.w3.org/2007/app" 
+             xmlns:atom="http://www.w3.org/2005/Atom" 
+             xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/" 
+             xmlns:cmisra="http://docs.oasis-open.org/ns/cmis/restatom/200908/">
+  <app:workspace>...</app:workspace>
+</app:service>
 
 ```
 
@@ -308,11 +316,14 @@ In most of the case, each type of user will have access via a separated virtual 
     *   You define specific chain for requests having the ``X-anonymous-access`.
 
 ```
-
-            on
-
-            ANONYMOUS_AUTH
-
+<specificAuthenticationChain name="anonymous-access">
+        <headers>
+            <header name="X-anonymous-access">on</header>
+        </headers>
+        <allowedPlugins>
+            <plugin>ANONYMOUS_AUTH</plugin>
+        </allowedPlugins>
+    </specificAuthenticationChain>
 ```
 
 You can see&nbsp;[specificChains](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--specificChains) extension point for more info.

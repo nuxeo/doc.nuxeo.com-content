@@ -119,22 +119,32 @@ Filters can be registered using their own [extension point](http://explorer.nuxe
 Example of a filter registration:
 
 ```
-
-    ReadChildren
-    Folderish
-
-    Root
+<filter id="view_content">
+  <rule grant="true">
+    <permission>ReadChildren</permission>
+    <facet>Folderish</facet>
+  </rule>
+  <rule grant="false">
+    <type>Root</type>
+  </rule>
+</filter>
 
 ```
 
 Example of a filter registration inside an action registration:
 
 ```
-
-  SUBVIEW_UPPER_LIST
-
-      AddChildren
-      SectionRoot
+<action id="newSection" link="#{documentActions.createDocument('Section')}"
+    enabled="true" label="command.create.section"
+    icon="/icons/action_add.gif">
+  <category>SUBVIEW_UPPER_LIST</category>
+  <filter id="newSection">
+    <rule grant="true">
+      <permission>AddChildren</permission>
+      <type>SectionRoot</type>
+    </rule>
+  </filter>
+</action>
 
 ```
 
@@ -171,10 +181,15 @@ Since 5.6, filters resolution can be done independently from actions. This makes
 For instance, `directoriesManagementAccess` makes it possible to control access to a given directory:
 
 ```
-
-      #{currentUser.administrator}
-      #{currentUser.isMemberOf('powerusers')}
-
+<extension target="org.nuxeo.ecm.platform.actions.ActionService"
+  point="filters">
+  <filter id="directoriesManagementAccess">
+    <rule grant="true">
+      <condition>#{currentUser.administrator}</condition>
+      <condition>#{currentUser.isMemberOf('powerusers')}</condition>
+    </rule>
+  </filter>
+</extension>
 ```
 
 This can be looked up in the code, by calling the action service, and evaluating the filter given an evaluation context:
@@ -187,9 +202,9 @@ return actionManager.checkFilter("directoriesManagementAccess", createActionCont
 This also can be looked up in XHTML templates, calling Seam component [webActions](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewSeamComponent/seam:webActions) and using its default evaluation context:
 
 ```
-
+<c:if test="#{webActions.checkFilter('directoriesManagementAccess')}">
   [...]
-
+</c:if>
 ```
 
 &nbsp;
@@ -199,27 +214,23 @@ This also can be looked up in XHTML templates, calling Seam component [webAction
 It can be useful to activate server logs to help debugging filters resolution. Logs are verbose, here is the configuration to setup to see these logs on the sever&nbsp;`lib/log4j.xml` configuration file:
 
 ```
-
+  <category name="org.nuxeo.ecm.platform.actions.ActionService">
+    <priority value="TRACE" />
+  </category>
 ```
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Actions and Filters Related Documentation"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Actions and Filters Related Documentation'}}
 
 *   [How to Implement an Action]({{page page='how-to-implement-an-action'}})
 *   [How to Hide a Tab, a Link or a Button for a Group or a User]({{page page='how-to-hide-a-tab-a-link-or-a-button-for-a-group-or-a-user'}})
 *   [How to Control the Display Mode of a Widget]({{page page='how-to-control-the-display-mode-of-a-widget'}})
 *   [Filtering Options Reference Page]({{page space='studio' page='filtering-options-reference-page'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="EL and Variables Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='EL and Variables Related Documentation'}}
 
 *   [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
 *   [Field Binding and Expressions]({{page page='field-binding-and-expressions'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

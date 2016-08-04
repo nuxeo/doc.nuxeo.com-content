@@ -248,11 +248,11 @@ On Windows in general, and especially on Windows 7, it is highly recommended to 
 
 {{/callout}}
 
-<span>**What's next?**
+**What's next?**
 You want to evaluate the application? You can now [start the server]({{page page='server-start-and-stop'}}).
-You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='setup-best-practices'}}).</span>
+You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='setup-best-practices'}}).
 
-## <span>Installing the Nuxeo Platform from the ZIP Archive</span>
+## Installing the Nuxeo Platform from the ZIP Archive
 
 Installing the Nuxeo Platform using the ZIP archive installs the Nuxeo Platform only. External dependencies must be installed separately.
 
@@ -306,7 +306,7 @@ The Nuxeo Platform is available as ready-to-use 64b virtual machine images from 
 3.  In your browser, type the indicated address.
     The [startup wizard]({{page page='configuration-wizard'}}) is displayed to help you configure your application.
 
-    {{#> callout type='info' heading="Shell root access"}}
+    {{#> callout type='info' heading='Shell root access'}}
 
     The password for the&nbsp;`root` and&nbsp;`nuxeo` users are generated the first time you start the virtual machine and are displayed on the console.&nbsp;
 
@@ -325,21 +325,15 @@ The Nuxeo Platform is available as ready-to-use 64b virtual machine images from 
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Next Steps"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Next Steps'}}
 
 *   [Setup Best Practices]({{page page='setup-best-practices'}})
 *   [Server Start and Stop]({{page page='server-start-and-stop'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Getting Familiar with the Nuxeo Platform"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
 
 *   [From the Web UI to Nuxeo Studio]({{page page='from-the-web-ui-to-nuxeo-studio'}})
 *   [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
 *   [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

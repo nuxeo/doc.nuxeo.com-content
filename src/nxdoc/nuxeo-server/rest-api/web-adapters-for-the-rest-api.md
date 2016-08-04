@@ -116,7 +116,7 @@ history:
 
 WebEngine, the JAX-RS Server used to serve the REST API, has the concept of [WebAdapter]({{page page='webengine-jax-rs'}})&nbsp;for DocumentModel. Logically the REST API leverages this concept to expose adapters on top of the Document REST end point.
 
-<span>An adapter is a URL segment that starts with&nbsp;`@` and that transforms the input resource so as to return another resource.</span> The idea is to have a URL pointing to a Document and use the adapter to convert the Document into something else before the result is returned. The general syntax is:
+An adapter is a URL segment that starts with&nbsp;`@` and that transforms the input resource so as to return another resource. The idea is to have a URL pointing to a Document and use the adapter to convert the Document into something else before the result is returned. The general syntax is:
 
 ```
 /nuxeo/api/v1/id/{docId}/@adapter/parameters
@@ -483,7 +483,7 @@ PUT /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
 
 ### Creating a Business Object
 
-And then t<span>o create a business object, you have to issue a&nbsp;</span> <span class="s1">POST</span> <span>&nbsp;on the object resource plus the name of the newly created document, like this:</span>
+And then to create a business object, you have to issue a&nbsp; <span class="s1">POST</span> &nbsp;on the object resource plus the name of the newly created document, like this:
 
 ```
 POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter/{newName}
@@ -521,7 +521,7 @@ POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/{myOperation}
 
 The response will depend on the result of the automation chain.
 
-<span>You can also use it to run a chain by prefixing the chain name by</span> `<span class="s1">Chain.</span>` <span>, for instance:</span>
+You can also use it to run a chain by prefixing the chain name by `<span class="s1">Chain.</span>` , for instance:
 
 ```
 /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}

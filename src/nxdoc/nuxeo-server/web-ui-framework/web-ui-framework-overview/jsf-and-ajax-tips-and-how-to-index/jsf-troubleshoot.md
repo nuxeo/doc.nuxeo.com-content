@@ -191,20 +191,27 @@ A lot of different causes could explain with a variable is not resolved properly
 When exposing a variable for EL resolution, note that there are some reserved keywords. For instance in tags like:
 
 ```
-
+<nxu:dataList var="action" value="#{actions}">
   ...
+</nxu:dataList>
 
 ```
 
 or
 
 ```
-
+<nxu:inputList model="model" value="#{myList}">
 ...
+</nxu:inputList>
 
 ```
 
 or even:
+
+```
+<c:set var="foo" value="bar" />
+
+```
 
 The reserved keywords are: "application", "applicationScope", "cookie", "facesContext", "header", "headerValues", "initParam", "param", "paramValues", "request", "requestScope", "session", "sessionScope", and "view".
 
@@ -245,7 +252,13 @@ Caused by: java.lang.ClassCastException: [Ljava.lang.String; cannot be cast to j
 add&nbsp;`collectionType="java.util.ArrayList"` to the jsf tag causing the error.
 
 ```
-
+	<h:selectManyCheckbox id="#{widget.id}_checkbox" value="#{field}"
+		layout="pageDirection" collectionType="java.util.ArrayList">
+		<nxu:selectItems
+			value="#{aBean.getValues()}"
+			var="item" itemValue="#{item.id}"
+			itemLabel="#{item.label}"/>
+	</h:selectManyCheckbox>
 ```
 
 &nbsp;
@@ -254,9 +267,7 @@ add&nbsp;`collectionType="java.util.ArrayList"` to the jsf tag causing the error
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [JSF and Javascript ]({{page page='jsf-and-javascript'}})
 *   [Ajax4jsf Best Practices]({{page page='ajax4jsf-best-practices'}})
@@ -264,15 +275,11 @@ add&nbsp;`collectionType="java.util.ArrayList"` to the jsf tag causing the error
 *   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [JavaScript Client]({{page page='javascript-client'}})
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Web UI Framework Overview]({{page page='web-ui-framework-overview'}})
 *   [Web UI Limitations]({{page page='web-ui-limitations'}})&nbsp;
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

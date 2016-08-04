@@ -280,7 +280,7 @@ By default, the "default" template is enabled on your Nuxeo server (see the [Dat
 
 1.  Open your `nuxeo.conf` file with a text editor.
 
-    {{#> callout type='warning' heading="For Windows users"}}
+    {{#> callout type='warning' heading='For Windows users'}}
 
     &nbsp;Do not use Office writers, nor Notepad.
 
@@ -297,7 +297,7 @@ By default, the "default" template is enabled on your Nuxeo server (see the [Dat
 4.  Save your modifications.
 5.  Restart the server.
 
-{{#> callout type='tip' heading="For production or load testing environments"}}
+{{#> callout type='tip' heading='For production or load testing environments'}}
 
 These are the minimum required parameters to enable the Nuxeo server to communicate with the database. For a production or load testing environment, you may need to provide the other commented parameters.
 

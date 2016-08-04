@@ -89,23 +89,23 @@ You'll find here what you need to know about tasks that are created via the work
 
 The user tasks dashboard on the Workflow tab in the Home menu is based on querying the tasks. It is possible to redefine the query and the complete content view (so as to choose the columns that are displayed for instance) by redefining the content view&nbsp;`user_open_tasks`.
 
-## <span>Resolution Screen</span>
+## Resolution Screen
 
-<span>The resolution screen is made as a "[Tab]({{page space='studio' page='tabs'}})", based on a grid layout. One of the pieces you may want to override on this screen is the list of metadata displayed for the bound documents. You can for this override the&nbsp;`task_target_documents` content view. More exactly merge a new listing layout in it.</span>
+The resolution screen is made as a "[Tab]({{page space='studio' page='tabs'}})", based on a grid layout. One of the pieces you may want to override on this screen is the list of metadata displayed for the bound documents. You can for this override the&nbsp;`task_target_documents` content view. More exactly merge a new listing layout in it.
 
-## <span>TasksInfo</span>
+## TasksInfo
 
-<span>When a task is closed, the workflow engine stores useful information <span>on the node</span> about the task: The name of the user who solved the task, his comment and the id of the button that was clicked. Information can be accessed in the automation context via the object "`NodeVariables["tasks"]`" that returns a [TasksInfoWrapper](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/platform/routing/core/api/TasksInfoWrapper.html) object that is a list of [TaskInfo](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/platform/routing/core/impl/GraphNode.TaskInfo.html). When a node creates multiple tasks, all the resolution information of each task can be found on the `NodeVariables["tasks"]` object.</span>
+When a task is closed, the workflow engine stores useful information on the node about the task: The name of the user who solved the task, his comment and the id of the button that was clicked. Information can be accessed in the automation context via the object "`NodeVariables["tasks"]`" that returns a [TasksInfoWrapper](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/platform/routing/core/api/TasksInfoWrapper.html) object that is a list of [TaskInfo](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/platform/routing/core/impl/GraphNode.TaskInfo.html). When a node creates multiple tasks, all the resolution information of each task can be found on the `NodeVariables["tasks"]` object.
 
-## <span><span><span>Delegation &nbsp;</span></span></span>
+## Delegation &nbsp;
 
-<span><span><span>The workflow module allows task delegation. Delegatees are stored on the task in a separate property than the assignees (`task:` <span style="color: rgb(34,34,34);">`delegatedActors`)</span>. That way it is possible to know when someone is assigned a task directly or by delegation. The workflow engine sets the the same ACL<span>&nbsp;</span>on the bound documents <span><span><span><span><span><span>for the delegatee</span></span> </span></span></span></span>as for the main assignee. When the task is closed, an audit entry is set on the document tracking that the user acted as a delegatee of the main assignee.</span></span></span>
+The workflow module allows task delegation. Delegatees are stored on the task in a separate property than the assignees (`task:` <span style="color: rgb(34,34,34);">`delegatedActors`)</span>. That way it is possible to know when someone is assigned a task directly or by delegation. The workflow engine sets the the same ACLon the bound documents for the delegatee as for the main assignee. When the task is closed, an audit entry is set on the document tracking that the user acted as a delegatee of the main assignee.
 
-<span><span><span>It is also possible to reassign a task. In that case the value in the "Actors" list is changed directly.</span></span></span>
+It is also possible to reassign a task. In that case the value in the "Actors" list is changed directly.
 
-## <span><span><span><span>Task Type Definition</span></span></span></span>
+## Task Type Definition
 
-<span><span><span><span>The default document type for tasks created by the workflow engine is `TaskDoc`. It is possible to use of any type of document as long as the document type has the facets `Task` and `RoutingTask`, and the `task` life cycle. You can specify on the node properties which type of task to create.</span></span></span></span>
+The default document type for tasks created by the workflow engine is `TaskDoc`. It is possible to use of any type of document as long as the document type has the facets `Task` and `RoutingTask`, and the `task` life cycle. You can specify on the node properties which type of task to create.
 
 &nbsp;
 

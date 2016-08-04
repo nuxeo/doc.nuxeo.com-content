@@ -107,26 +107,54 @@ Layouts can be used to display various kinds of information, in various renderin
 Layouts are registered using a regular [extension point]({{page page='runtime-and-component-model'}}) on the [Nuxeo ECM layout service](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.forms.layout.WebLayoutManager). Here is a sample contribution.
 
 ```
+<?xml version="1.0"?>
 
-        header
+<component name="org.nuxeo.ecm.platform.forms.layouts.webapp">
 
-          title
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="layouts">
 
-          description
+    <layout name="heading">
+      <aliases>
+        <alias>header</alias>
+      </aliases>
+     <templates>
+        <template mode="any">/layouts/layout_default_template.xhtml</template>
+      </templates>
+      <rows>
+        <row>
+          <widget>title</widget>
+        </row>
+        <row>
+          <widget>description</widget>
+        </row>
+      </rows>
+      <widget name="title" type="text">
+        <labels>
+          <label mode="any">label.dublincore.title</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>dc:title</field>
+        </fields>
+        <properties widgetMode="edit">
+          <property name="required">true</property>
+        </properties>
+      </widget>
+      <widget name="description" type="textarea">
+        <labels>
+          <label mode="any">label.dublincore.description</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>dc:description</field>
+        </fields>
+      </widget>
+    </layout>
 
-          label.dublincore.title
+  </extension>
 
-        true
-
-          dc:title
-
-          true
-
-          label.dublincore.description
-
-        true
-
-          dc:description
+</component>
 
 ```
 
@@ -151,64 +179,121 @@ A [layout type]({{page page='standard-layout-types'}}) has been extracted to mak
 For this usage, columns/column aliases have been defined because they are more intuitive when describing a row in the layout. The layout `layout_listing_template.xhtml` makes it possible to define new properties to take care of when rendering the table header or columns.
 
 ```
+<?xml version="1.0"?>
 
-        selected
-        data.ref
+<component name="org.nuxeo.ecm.platform.forms.layouts.webapp.listing">
 
-        data
-        data.ref
-        data.type
-        data.folder
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="widgets">
 
-        label.content.header.title
+    <widget name="listing_selection_box_with_current_document"
+      type="listing_selection_box_with_current_document">
+      <labels>
+        <label mode="any"></label>
+      </labels>
+      <fields>
+        <field>selected</field>
+        <field>data.ref</field>
+      </fields>
+    </widget>
 
-      true
+    <widget name="listing_icon_type" type="listing_icon_type">
+      <labels>
+        <label mode="any"></label>
+      </labels>
+      <fields>
+        <field>data</field>
+        <field>data.ref</field>
+        <field>data.type</field>
+        <field>data.folder</field>
+      </fields>
+    </widget>
 
-        data
-        data.ref
-        data.dc.description
-        data.file.content
-        data.file.filename
+    <widget name="listing_title_link" type="listing_title_link">
+      <labels>
+        <label mode="any">label.content.header.title</label>
+      </labels>
+      <translated>true</translated>
+      <fields>
+        <field>data</field>
+        <field>data.ref</field>
+        <field>data.dc.description</field>
+        <field>data.file.content</field>
+        <field>data.file.filename</field>
+      </fields>
+      <properties mode="any">
+        <property name="file_property_name">file:content</property>
+        <property name="file_schema">file</property>
+      </properties>
+    </widget>
 
-        file:content
-        file
+    <widget name="listing_modification_date" type="datetime">
+      <labels>
+        <label mode="any">label.content.header.modified</label>
+      </labels>
+      <translated>true</translated>
+      <fields>
+        <field>data.dc.modified</field>
+      </fields>
+      <properties widgetMode="any">
+        <property name="pattern">#{nxu:basicDateAndTimeFormater()}</property>
+      </properties>
+    </widget>
 
-        label.content.header.modified
+  </extension>
 
-      true
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="layouts">
 
-        data.dc.modified
-
-        #{nxu:basicDateAndTimeFormater()}
-
-        true
-        true
-
+    <layout name="document_listing_sample" type="listingTable">
+      <properties mode="any">
+        <property name="showListingHeader">true</property>
+        <property name="showRowEvenOddClass">true</property>
+      </properties>
+      <columns>
+        <column>
+          <properties mode="any">
+            <property name="isListingSelectionBoxWithCurrentDocument">
               true
+            </property>
+            <property name="useFirstWidgetLabelAsColumnHeader">false</property>
+            <property name="columnStyleClass">iconColumn</property>
+          </properties>
+          <properties mode="csv">
+            <property name="isHidden">true</property>
+          </properties>
+          <properties mode="pdf">
+            <property name="isHidden">true</property>
+          </properties>
+          <widget>listing_selection_box_with_current_document</widget>
+        </column>
+        <column>
+          <properties mode="any">
+            <property name="useFirstWidgetLabelAsColumnHeader">false</property>
+            <property name="columnStyleClass">iconColumn</property>
+          </properties>
+          <widget>listing_icon_type</widget>
+        </column>
+        <column>
+          <properties mode="any">
+            <property name="useFirstWidgetLabelAsColumnHeader">true</property>
+            <property name="sortPropertyName">dc:title</property>
+          </properties>
+          <widget>listing_title_link</widget>
+        </column>
+        <column>
+          <properties mode="any">
+            <property name="useFirstWidgetLabelAsColumnHeader">true</property>
+            <property name="sortPropertyName">dc:modified</property>
+          </properties>
+          <widget>listing_modification_date</widget>
+        </column>
+      </columns>
+    </layout>
 
-            false
-            iconColumn
+  </extension>
 
-            true
-
-            true
-
-          listing_selection_box_with_current_document
-
-            false
-            iconColumn
-
-          listing_icon_type
-
-            true
-            dc:title
-
-          listing_title_link
-
-            true
-            dc:modified
-
-          listing_modification_date
+</component>
 
 ```
 
@@ -225,21 +310,35 @@ Layouts can also be used to render grid layouts, visible on documents "Summary" 
 Here is a sample contribution showing how to define grid slots and corresponding size. The online [Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide) shows detailed information about [grids styling](http://showcase.nuxeo.com/nuxeo/styleGuide/Grid).
 
 ```
-
-        gridStyle12
-
-      summary_panel_top
-
-        gridStyle7
-        gridStyle5
-
-      summary_panel_left
-      summary_panel_right
-
-        gridStyle12
-
-      summary_panel_bottom
-
+<layout name="grid_summary_layout">
+  <templates>
+    <template mode="any">
+      /layouts/layout_grid_template.xhtml
+    </template>
+  </templates>
+  <rows>
+    <row>
+      <properties mode="any">
+        <property name="nxl_gridStyleClass_0">gridStyle12</property>
+      </properties>
+      <widget>summary_panel_top</widget>
+    </row>
+    <row>
+      <properties mode="any">
+        <property name="nxl_gridStyleClass_0">gridStyle7</property>
+        <property name="nxl_gridStyleClass_1">gridStyle5</property>
+      </properties>
+      <widget>summary_panel_left</widget>
+      <widget>summary_panel_right</widget>
+    </row>
+    <row>
+      <properties mode="any">
+        <property name="nxl_gridStyleClass_0">gridStyle12</property>
+      </properties>
+      <widget>summary_panel_bottom</widget>
+    </row>
+  </rows>
+</layout>
 ```
 
 ## Other Kinds of Layout Definitions
@@ -250,18 +349,8 @@ As an example, [Studio]({{page space='studio'}}) generates specific layout templ
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
-<div class="column medium-6">{{#> panel heading="Related pages in current documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in Studio documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related pages in Studio documentation"}}
-
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

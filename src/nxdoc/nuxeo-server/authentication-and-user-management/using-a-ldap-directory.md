@@ -244,63 +244,132 @@ The wizard enables you to easily setup your LDAP configuration.
 3.  Then copy this content (make sure it's valid XML, sometimes what you think is a space character is actually a non-breaking space (`U+00A0`) which is invalid in XML):
 
     ```
+    <?xml version="1.0"?>
+    <component name="org.nuxeo.ecm.directory.ldap.users">
 
-      org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory
+      <require>org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory</require>
 
-      org.nuxeo.ecm.directory.sql.storage
+      <!-- the groups SQL directories are required to make this bundle work -->
+      <require>org.nuxeo.ecm.directory.sql.storage</require>
 
-          ldap://localhost:389
+      <extension target="org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory"
+        point="servers">
 
-          cn=nuxeo5,ou=applications,dc=example,dc=com
-          changeme
+        <!-- Configuration of a server connection
+          A single server declaration can point to a cluster of replicated
+          servers (using OpenLDAP's slapd + sluprd for instance). To leverage
+          such a cluster and improve availability, please provide one
+          <ldapUrl/> tag for each replica of the cluster.
+        -->
+        <server name="default">
+          <ldapUrl>ldap://localhost:389</ldapUrl>
+          <!-- Optional servers from the same cluster for failover
+            and load balancing:
 
-          default
-          user
-          username
-          password
+            <ldapUrl>ldap://server2:389</ldapUrl>
+            <ldapUrl>ldaps://server3:389</ldapUrl>
 
-          ou=people,dc=example,dc=com
-          person
+            "ldaps" means TLS/SSL connection.
+          -->
 
-          onelevel
+          <!-- Credentials used by Nuxeo5 to browse the directory, create
+            and modify entries.
 
-          subany
+            Only the authentication of users (bind) use the credentials entered
+            through the login form if any.
+          -->
+          <bindDn>cn=nuxeo5,ou=applications,dc=example,dc=com</bindDn>
+          <bindPassword>changeme</bindPassword>
+        </server>
+      </extension>
 
-          false
+      <extension target="org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory"
+        point="directories">
+        <directory name="userDirectory">
+          <server>default</server>
+          <schema>user</schema>
+          <idField>username</idField>
+          <passwordField>password</passwordField>
 
-          ldap-user-entry-cache
-          ldap-user-entry-cache-without-references
+          <searchBaseDn>ou=people,dc=example,dc=com</searchBaseDn>
+          <searchClass>person</searchClass>
+          <!-- To additionally restricte entries you can add an
+            arbitrary search filter such as the following:
 
-          lower
+            <searchFilter>(&amp;(sn=toto*)(myCustomAttribute=somevalue))</searchFilter>
 
-          200
+            Beware that "&" writes "&amp;" in XML.
+          -->
 
-          0
+          <!-- use subtree if the people branch is nested -->
+          <searchScope>onelevel</searchScope>
 
-          ou=people,dc=example,dc=com
-          top
-          person
-          organizationalPerson
-          inetOrgPerson
+          <!-- using 'subany', search will match *toto*. use 'subfinal' to
+            match *toto and 'subinitial' to match toto*. subinitial is the
+            default  behaviour-->
+          <substringMatchType>subany</substringMatchType>
 
-          uid
-          uid
-          userPassword
-          givenName
-          sn
-          o
-          mail
+          <readOnly>false</readOnly>
 
-          1000
-          20
-          500
+          <!-- comment <cache* /> tags to disable the cache -->
+          <cacheEntryName>ldap-user-entry-cache</cacheEntryName>
+          <cacheEntryWithoutReferencesName>ldap-user-entry-cache-without-references</cacheEntryWithoutReferencesName>
+          <!--
+               If the id field is not returned by the search, we set it with the searched entry, probably the login.
+               Before setting it, you can change its case. Accepted values are 'lower' and 'upper',
+               anything else will not change the case.
+          -->
+          <missingIdFieldCase>lower</missingIdFieldCase>
 
-          1000
-          20
-          500
+          <!-- Maximum number of entries returned by the search -->
+          <querySizeLimit>200</querySizeLimit>
 
-          johndoe
-          members
+          <!-- Time to wait for a search to finish. 0 to wait indefinitely -->
+          <queryTimeLimit>0</queryTimeLimit>
+
+          <creationBaseDn>ou=people,dc=example,dc=com</creationBaseDn>
+          <creationClass>top</creationClass>
+          <creationClass>person</creationClass>
+          <creationClass>organizationalPerson</creationClass>
+          <creationClass>inetOrgPerson</creationClass>
+
+          <rdnAttribute>uid</rdnAttribute>
+          <fieldMapping name="username">uid</fieldMapping>
+          <fieldMapping name="password">userPassword</fieldMapping>
+          <fieldMapping name="firstName">givenName</fieldMapping>
+          <fieldMapping name="lastName">sn</fieldMapping>
+          <fieldMapping name="company">o</fieldMapping>
+          <fieldMapping name="email">mail</fieldMapping>
+
+          <references>
+            <inverseReference field="groups" directory="groupDirectory"
+              dualReferenceField="members" />
+          </references>
+        </directory>
+      </extension>
+
+      <extension target="org.nuxeo.ecm.core.cache.CacheService" point="caches">
+
+        <cache name="ldap-user-entry-cache" class="org.nuxeo.ecm.core.cache.InMemoryCacheImpl">
+          <option name="maxSize">1000</option>
+          <ttl>20</ttl><!-- minutes -->
+          <option name="concurrencyLevel">500</option>
+        </cache>
+        <cache name="ldap-user-entry-cache-without-references" class="org.nuxeo.ecm.core.cache.InMemoryCacheImpl">
+          <option name="maxSize">1000</option>
+          <ttl>20</ttl><!-- minutes -->
+          <option name="concurrencyLevel">500</option>
+        </cache>
+
+      </extension>
+
+      <extension target="org.nuxeo.ecm.platform.usermanager.UserService" point="userManager">
+        <userManager>
+          <defaultAdministratorId>johndoe</defaultAdministratorId>
+          <defaultGroup>members</defaultGroup>
+        </userManager>
+      </extension>
+    </component>
 
     ```
 
@@ -377,22 +446,36 @@ A cleaner way to proceed is to define directories whose name are different from 
 Therefore you should apply the changes described below to your existing LDAP contributions:
 
 ```
-
+<!-- directory for users -->
+<directory name="userLdapDirectory">
   (...)
+  <inverseReference field="groups" directory="groupLdapDirectory"
+          dualReferenceField="members" />
+</directory>
 
+<!-- directory for groups -->
+<directory name="groupLdapDirectory">
     (...)
+    <ldapReference field="members" directory="userLdapDirectory" forceDnConsistencyCheck="false" staticAttributeId="uniqueMember" dynamicAttributeId="memberURL"/>
 
+    <ldapReference field="subGroups" directory="groupLdapDirectory" forceDnConsistencyCheck="false" staticAttributeId="uniqueMember" dynamicAttributeId="memberURL"/>
     (...)
+</directory>
 
+<!-- definition in the user manager -->
+<extension target="org.nuxeo.ecm.platform.usermanager.UserService" point="userManager">
+  <userManager>
     (...)
-
-      userLdapDirectory
-
+    <users>
+      <directory>userLdapDirectory</directory>
+    </users>
     (...)
-
-      groupLdapDirectory
-
+    <groups>
+      <directory>groupLdapDirectory</directory>
+    </groups>
     (...)
+  </userManager>
+</extension>
 
 ```
 
@@ -411,6 +494,12 @@ If you encounter some difficulties configuring LDAP, the first step is to get mo
 In the [Log4J]({{page space='glos' page='log4j'}}) configuration, increase the log level for `org.nuxeo.ecm.directory` and `org.nuxeo.runtime.model.impl`:
 
 ```
+<category name="org.nuxeo.ecm.directory">
+  <priority value="DEBUG" />
+</category>
+<category name="org.nuxeo.runtime.model.impl">
+  <priority value="INFO" />
+</category>
 
 ```
 

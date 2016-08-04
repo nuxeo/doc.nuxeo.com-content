@@ -1042,11 +1042,11 @@ The Nuxeo Platform reads configuration properties that you can set either:
 
 ## nuxeo.conf File
 
-Nuxeo Platform reads configuration properties in nuxeo.conf file. <span>Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files.&nbsp;</span>By default, the&nbsp;`nuxeo.conf`&nbsp;file is located in&nbsp;`$NUXEO_HOME/bin`. If you installed your application using the Windows installer, the configuration is located in&nbsp;`%APPDATA%\Nuxeo\conf`&nbsp;(check the page&nbsp;[Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)&nbsp;for more information).
+Nuxeo Platform reads configuration properties in nuxeo.conf file. Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files.&nbsp;By default, the&nbsp;`nuxeo.conf`&nbsp;file is located in&nbsp;`$NUXEO_HOME/bin`. If you installed your application using the Windows installer, the configuration is located in&nbsp;`%APPDATA%\Nuxeo\conf`&nbsp;(check the page&nbsp;[Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)&nbsp;for more information).
 
 If you plan to use the application in production, you should&nbsp;[move the configuration file outside the Nuxeo home directory]({{page page='setup-best-practices'}}), to make upgrades easier and more secured: your data and configuration won't risk to be overridden or lost.
 
-{{! multiexcerpt name='nuxeo-conf-editor-warning'}}{{#> callout type='warning' heading="For Windows users"}}
+{{! multiexcerpt name='nuxeo-conf-editor-warning'}}{{#> callout type='warning' heading='For Windows users'}}
 
 &nbsp;Do not use Office writers, nor Notepad.
 
@@ -1056,7 +1056,7 @@ Wordpad is fine, Notepad+\+ and SciTE are good text editors, there are a lot of 
 
 Existing configuration parameters are listed in the index section below.
 
-## <span>Admin Center / Setup Tab</span>
+## Admin Center / Setup Tab
 
 Administrators can also change the nuxeo.conf configuration parameters from the Admin center.
 

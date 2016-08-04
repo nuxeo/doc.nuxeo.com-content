@@ -387,7 +387,7 @@ The console redirects you to a page where you can see the client id and secret i
 4.  Set the client id and client secret values with the one you got on the previous step.
 5.  Make sure the **Enabled** box is checked.
 6.  Save.
-7.  <span>Now go to the&nbsp;</span>**HOME**<span>&nbsp;tab and click&nbsp;</span>**Cloud Services**<span>&nbsp;tab and click the&nbsp;</span>**Connect to Google Drive**<span>&nbsp;button or just create a new Google Drive document</span>
+7.  Now go to the&nbsp;**HOME**&nbsp;tab and click&nbsp;**Cloud Services**&nbsp;tab and click the&nbsp;**Connect to Google Drive**&nbsp;button or just create a new Google Drive document
 
 You are ready to use it, just go in the workspace section and create a file object: you can use the Google Drive file picker
 
@@ -484,7 +484,7 @@ Box documents can be searched in the Nuxeo Platform like any other document: the
 2.  Click on&nbsp;**Create a Box Application**.
 3.  Enter the name of your application and select **Box Content**.
 4.  Click on **Configure your application**.
-5.  In **redirect_uri&nbsp;**set the following URL, adapting the hostname and port to your case: <span>[https://nuxeo-server:8080/nuxeo/site/oauth2/box/callback](https://nuxeo-server:8080/nuxeo/site/oauth2/box/callback)</span> .
+5.  In **redirect_uri&nbsp;**set the following URL, adapting the hostname and port to your case: [https://nuxeo-server:8080/nuxeo/site/oauth2/box/callback](https://nuxeo-server:8080/nuxeo/site/oauth2/box/callback) .
 
     {{#> callout type='info' }}
 
@@ -582,13 +582,18 @@ Since cloud files can be changed externally Nuxeo Live Connect relies on a sched
 To change this interval users can override the default contribution:
 
 ```
+<component name="org.nuxeo.ecm.liveconnect.scheduler.override">
+  <require>org.nuxeo.ecm.liveconnect.scheduler</require>
 
-  org.nuxeo.ecm.liveconnect.scheduler
-
-      blobProviderDocumentUpdateEvent
-
-      0/30 * * * * ?
-
+  <extension target="org.nuxeo.ecm.core.scheduler.SchedulerService" point="schedule">
+    <schedule id="blobProviderDocumentUpdate">
+      <event>blobProviderDocumentUpdateEvent</event>
+      <!-- default is 0 0/5 * * * ? (every 5 minutes)  -->
+	  <!-- change it to run every 30s -->
+      <cronExpression>0/30 * * * * ?</cronExpression>
+    </schedule>
+  </extension>
+</component>
 ```
 
 **Note:&nbsp;**Synchronization requires service calls that might be subject to quotas and/or limits. Please refer to each provider's documentation for further information. &nbsp;

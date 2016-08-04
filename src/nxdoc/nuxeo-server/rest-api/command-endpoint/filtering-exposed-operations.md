@@ -119,10 +119,14 @@ The REST operation filters provide an [extension point]({{page page='runtime-and
 Here is an example on how to write such an extension:
 
 ```
-
-    true
-    true
-    members
+<extension target="org.nuxeo.ecm.automation.server.AutomationServer" point="bindings">
+  <binding name="Document.Delete" disabled="true"/>
+  <binding name="audit" chain="true">
+    <administrator>true</administrator>
+    <secure>true</secure>
+    <groups>members</groups>
+  </binding>
+</extension>
 
 ```
 

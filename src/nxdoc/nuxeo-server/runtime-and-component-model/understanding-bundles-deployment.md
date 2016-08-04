@@ -115,9 +115,18 @@ The template system uses Freemarker so that template can contain simple conditio
 
 ```
 ...
-
-<#if "${nuxeo.core.binarymanager}"="" !="">
-
+<extension target="org.nuxeo.ecm.core.repository.RepositoryService"
+   point="repository">
+    <repository name="default"
+    factory="org.nuxeo.ecm.core.storage.sql.ra.PoolingRepositoryFactory">
+      <repository name="default">
+        <pool minPoolSize="${nuxeo.vcs["min-pool-size"]}" maxPoolSize="${nuxeo.vcs["max-pool-size"]}"
+          blockingTimeoutMillis="100" idleTimeoutMinutes="10" />
+<#if "${nuxeo.core.binarymanager}" != "" >
+        <binaryManager class="${nuxeo.core.binarymanager}" />
+</#if>
+        <clustering enabled="${repository.clustering.enabled}" delay="${repository.clustering.delay}" />
+        <binaryStore path="${repository.binary.store}" />
 ...
 ```
 
@@ -138,14 +147,28 @@ Because in JEE5 there is no standard way to do that, we use a pre-deployment pro
 The deployment fragment contains ANT like commands that will be executed in order to contribute bundle resources to the JEE WAR Archive.
 
 ```
+<extension target="pages#PAGES">
+    <!-- Bind url to start the download -->
+    <page view-id="/nxconnectDownload.xhtml"
+      action="#{externalLinkManager.startDownload()}" />
+  </extension>
 
-      view_admin
-      /view_admin.xhtml
+  <extension target="faces-config#NAVIGATION">
+    <navigation-case>
+      <from-outcome>view_admin</from-outcome>
+      <to-view-id>/view_admin.xhtml</to-view-id>
+      <redirect />
+    </navigation-case>
+  </extension>
 
-      NuxeoAuthenticationFilter
-      /nxadmin/*
-      REQUEST
-      FORWARD
+  <extension target="web#STD-AUTH-FILTER">
+    <filter-mapping>
+      <filter-name>NuxeoAuthenticationFilter</filter-name>
+      <url-pattern>/nxadmin/*</url-pattern>
+      <dispatcher>REQUEST</dispatcher>
+      <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+  </extension>
 
 ```
 

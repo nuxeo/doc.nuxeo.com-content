@@ -70,6 +70,6 @@ nuxeo.jsf.numberOfLogicalViews=25
 
 Related JIRA issues:
 
-*   <span title="NXP-9177: Reduce default number of view in JSF">[NXP-9177](https://jira.nuxeo.com/browse/NXP-9177)<span class="link-summary">: Reduce default number of view in JSF</span></span>
-*   <span title="NXP-11423: Allow configuring the number of JSF logical views">[NXP-11423](https://jira.nuxeo.com/browse/NXP-11423): <span class="link-summary">Allow configuring the number of JSF logical views</span></span>
-*   <span title="NXP-11677: Make JSF/Seam more resiliant to mulithreaded navigation">[NXP-11677](https://jira.nuxeo.com/browse/NXP-11677): <span class="link-summary">Make JSF/Seam more resiliant to mulithreaded navigation</span></span>
+*   [NXP-9177](https://jira.nuxeo.com/browse/NXP-9177)<span class="link-summary">: Reduce default number of view in JSF</span>
+*   [NXP-11423](https://jira.nuxeo.com/browse/NXP-11423): <span class="link-summary">Allow configuring the number of JSF logical views</span>
+*   [NXP-11677](https://jira.nuxeo.com/browse/NXP-11677): <span class="link-summary">Make JSF/Seam more resiliant to mulithreaded navigation</span>

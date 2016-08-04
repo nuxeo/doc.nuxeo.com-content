@@ -186,7 +186,7 @@ We now want to test what we did.
     It is locked and you see that it is locked by the creator of the document (Administrator is the example below).
     ![]({{file name='AutoLock.png'}} ?w=500,h=295,border=true)
 
-{{#> callout type='tip' heading="Congratulations"}}
+{{#> callout type='tip' heading='Congratulations'}}
 
 You now have documents that cannot be modified by someone else than the creator of the document. You have added you first business logic thanks to Studio.
 
@@ -202,24 +202,16 @@ To sum up what we saw:
 
 &nbsp;
 
-<div class="row">
-
-<div class="column medium-4">
+<div class="row"><div class="column medium-4">
 
 [<< Custom Content View for Documentation Items]({{page page='custom-content-view-for-documentation-items'}})
 
-</div>
-
-<div class="column medium-4">
+</div><div class="column medium-4">
 
 **[undefined]({{page}})**
 
-</div>
-
-<div class="column medium-4">
+</div><div class="column medium-4">
 
 [Validation Workflow Choosing the Assignee Based on a Metadata >>]({{page page='validation-workflow-choosing-the-assignee-based-on-a-metadata'}})
 
-</div>
-
-</div>
+</div></div>

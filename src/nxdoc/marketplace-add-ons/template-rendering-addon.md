@@ -183,9 +183,9 @@ This addon depends on Nuxeo Template Rendering. It includes:
 *   New document types:
 
     *   Business oriented document types used for the demo and configured using [Studio]({{page space='studio'}}):
-        *   <span title=""><span class="treeLink">nxtrPortfolio: a collection-based document type, used to reference</span></span> projects and generate case studies from the content it references.
-        *   <span title=""><span class="treeLink">nxtrProject: a file-based document type, used to generate financial reports about the project's health and case studies when referenced into a portfolio.</span></span>
-        *   <span title=""><span class="treeLink">nxtrSamplesContainer</span></span>: a workspace-based document type, that contains projects and portfolios.
+        *   <span class="treeLink">nxtrPortfolio: a collection-based document type, used to reference</span> projects and generate case studies from the content it references.
+        *   <span class="treeLink">nxtrProject: a file-based document type, used to generate financial reports about the project's health and case studies when referenced into a portfolio.</span>
+        *   <span class="treeLink">nxtrSamplesContainer</span>: a workspace-based document type, that contains projects and portfolios.
     *   Two file-based document types, provided as read only (you cannot create more using the Web UI by default) and used to demonstrate advanced raw examples:
         *   "Customer reference"
         *   "Statement reference"
@@ -227,7 +227,7 @@ Here are a few examples of the most common variables:
 *   `${doc.versionLabel`}: displays the version number
 *   `${auditEntries.eventId`}: displays the events listed in the document's history. `${auditEntries.eventDate`} displays the date at which the events took place, `${auditEntries.principalName`} the name of the user who did the action, `${auditEntries.comment`} the comment typed by the user.
 
-{{#> callout type='tip' heading="More resources to help users create the template file"}}
+{{#> callout type='tip' heading='More resources to help users create the template file'}}
 
 *   More information about the variables available (including functions) in the [Quick user guide](https://github.com/nuxeo/nuxeo-template-rendering/blob/master/QuickUserGuide.md) on the Nuxeo GitHub repository.
 *   XDocReport [overview](https://github.com/opensagres/xdocreport/wiki/Overview) and [docx format user guide](https://github.com/opensagres/xdocreport/wiki/DocxDesignReport) / [odt format user guide](https://github.com/opensagres/xdocreport/wiki/ODTDesignReport): XDocReport is a tool that enables to insert fields in MS Office and OpenOffice / LibreOffice text files.

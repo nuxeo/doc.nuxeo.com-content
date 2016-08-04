@@ -131,24 +131,51 @@ This page describes the different elements that can be used to define widgets.
 Here is a sample contribution of widget definitions inside a layout definition:
 
 ```
+<?xml version="1.0"?>
 
-          title
+<component name="org.nuxeo.ecm.platform.forms.layouts.webapp">
 
-          description
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="layouts">
 
-          label.dublincore.title
+    <layout name="heading">
+      <templates>
+        <template mode="any">/layouts/layout_default_template.xhtml</template>
+      </templates>
+      <rows>
+        <row>
+          <widget>title</widget>
+        </row>
+        <row>
+          <widget>description</widget>
+        </row>
+      </rows>
+      <widget name="title" type="text">
+        <labels>
+          <label mode="any">label.dublincore.title</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>dc:title</field>
+        </fields>
+        <properties widgetMode="edit">
+          <property name="required">true</property>
+        </properties>
+      </widget>
+      <widget name="description" type="textarea">
+        <labels>
+          <label mode="any">label.dublincore.description</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>dc:description</field>
+        </fields>
+      </widget>
+    </layout>
 
-        true
+  </extension>
 
-          dc:title
-
-          true
-
-          label.dublincore.description
-
-        true
-
-          dc:description
+</component>
 
 ```
 
@@ -183,33 +210,77 @@ Additional configuration can be set on a widget:
 Here is a more complex layout contribution that shows the syntax to use for these additional properties:
 
 ```
+<?xml version="1.0"?>
 
-        docdesc
-        docsubject
+<component name="org.nuxeo.ecm.platform.forms.layouts.webapp">
 
-        description
+  <!-- WARNING: this extension point is only available from versions 5.1.7 and 5.2.0 -->
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="widgets">
 
-      true
+    <!-- global definition of a widget so that it can be used
+      in several layouts -->
+    <widget name="description" type="textarea">
+      <aliases>
+        <alias>docdesc</alias>
+        <alias>docsubject</alias>
+      </aliases>
+      <labels>
+        <label mode="any">description</label>
+      </labels>
+      <translated>true</translated>
+      <fields>
+        <field>dc:description</field>
+      </fields>
+      <properties widgetMode="edit">
+        <property name="styleClass">dataInputText</property>
+      </properties>
+    </widget>
 
-        dc:description
+  </extension>
 
-        dataInputText
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="layouts">
 
-          identifier
+    <layout name="complex">
+      <templates>
+        <template mode="any">/layouts/layout_default_template.xhtml</template>
+      </templates>
+      <rows>
+        <row>
+          <widget>identifier</widget>
+        </row>
+        <row>
+          <!-- reference a global widget -->
+          <widget>description</widget>
+        </row>
+      </rows>
+      <widget name="identifier" type="text">
+        <labels>
+          <label mode="any">label.dublincore.title</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>uid:uid</field>
+        </fields>
+        <widgetModes>
+          <!-- not shown in create mode -->
+          <mode value="create">hidden</mode>
+        </widgetModes>
+        <properties widgetMode="edit">
+          <!-- required in widget mode edit -->
+          <property name="required">true</property>
+        </properties>
+        <properties mode="view">
+          <!-- property applying in view mode -->
+          <property name="styleClass">cssClass</property>
+        </properties>
+      </widget>
+    </layout>
 
-          description
+  </extension>
 
-          label.dublincore.title
-
-        true
-
-          uid:uid
-
-          hidden
-
-          true
-
-          cssClass
+</component>
 
 ```
 
@@ -218,37 +289,50 @@ Here is a more complex layout contribution that shows the syntax to use for thes
 Here is a sample contribution showing subwidgets configuration:
 
 ```
-
-  true
-
-    label.dam.search.textSearch
-
-  true
-
-    true
-
-      false
-
-        dams:ecm_fulltext
-
+<widget name="dam_text_search" type="container">
+  <handlingLabels>true</handlingLabels>
+  <labels>
+    <label mode="any">label.dam.search.textSearch</label>
+  </labels>
+  <translated>true</translated>
+  <properties widgetMode="any">
+    <property name="hideSubLabels">true</property>
+  </properties>
+  <subWidgets>
+    <widget name="ecm_fulltext" type="text">
+      <labels>
+        <label mode="any"></label>
+      </labels>
+      <translated>false</translated>
+      <fields>
+        <field>dams:ecm_fulltext</field>
+      </fields>
+      <properties widgetMode="edit">
+        <property name="placeholder">
           #{messages['label.dam.search.text.placeholder']}
-
+        </property>
+      </properties>
+    </widget>
+  </subWidgets>
+</widget>
 ```
 
 You can also reference global widgets for subwidgets. Here is a sample configuration:
 
 ```
-
-  true
-
-    label.dam.search.textSearch
-
-  true
-
-    true
-
-    globalSubWidgetName
-
+<widget name="dam_text_search" type="container">
+  <handlingLabels>true</handlingLabels>
+  <labels>
+    <label mode="any">label.dam.search.textSearch</label>
+  </labels>
+  <translated>true</translated>
+  <properties widgetMode="any">
+    <property name="hideSubLabels">true</property>
+  </properties>
+  <subWidgetRefs>
+    <widget>globalSubWidgetName</widget>
+  </subWidgetRefs>
+</widget>
 ```
 
 If you need a richer structure to handle subwidgets, you can also consider using a ["layout" widget type]({{page page='advanced-widget-types'}}) to render a layout via a widget.
@@ -269,29 +353,21 @@ Default layout templates and widget types accepting subwidgets handle the follow
 Here is a sample configuration:
 
 ```
-
-    true
-    true
-    true
-
+ <widget name="widgetWithControls" type="test">
+  <controls mode="any">
+    <control name="requireSurroundingForm">true</control>
+    <control name="useAjaxForm">true</control>
+    <control name="handlingLabels">true</control>
+  </controls>
+</widget>
 ```
 
 &nbsp;
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
-<div class="column medium-6">{{#> panel heading="Related pages in current documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in Studio documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related pages in Studio documentation"}}
-
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

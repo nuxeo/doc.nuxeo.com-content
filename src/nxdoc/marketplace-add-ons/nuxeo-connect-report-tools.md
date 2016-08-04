@@ -42,7 +42,7 @@ history:
 ---
 Nuxeo Connect Report Tools is a set of Nuxeo addons that enable you to gather information that can be useful to understand the environment in which a bug or a problem can be reproduced. Two Nuxeo Packages are available:
 
-*   [Nuxeo Connect Report Tools](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report), that provide a new <span class="confluence-link">[`nuxeoctl`]({{page page='nuxeoctl-and-control-panel-usage'}}) command</span>
+*   [Nuxeo Connect Report Tools](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report), that provide a new [`nuxeoctl`]({{page page='nuxeoctl-and-control-panel-usage'}}) command
 *   [Nuxeo Connect Report Tools Web](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report-web) that provides a graphical interface to use the `nuxeoctl` command
 
 ## Installation
@@ -73,4 +73,4 @@ The report JSON file is generated. The location of the report is indicated in th
 
 **Getting a Report Using the User Interface**
 
-As an administrator, go to&nbsp;`<span>http://NUXEO_SERVER/nuxeo/site/connect-tools/</span>` and follow the instructions displayed.
+As an administrator, go to&nbsp;`http://NUXEO_SERVER/nuxeo/site/connect-tools/` and follow the instructions displayed.

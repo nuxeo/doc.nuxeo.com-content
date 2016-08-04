@@ -50,7 +50,7 @@ Entries returned by a Directory are technically Documents: documents that have o
 This means that you can use Widgets and Layouts system to manage directories entries.
 
 ```
-
+<nxl:layout name="#{currentVoc.layout}" mode="edit" value="#{directoryUIActions.selectedDirectoryEntry}" />
 ```
 
 ## Directory Management UI

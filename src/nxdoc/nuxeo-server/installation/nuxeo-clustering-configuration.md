@@ -209,9 +209,12 @@ The caching directory used by any&nbsp;[Transient Store](https://doc.nuxeo.com/x
 By default there is only one&nbsp;Transient Store contribution named `default`:
 
 ```
-
+<extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent"
+  point="store">
+  <store name="default" class="...">
     ...
-
+  </store>
+</extension>
 ```
 
 Therefore you need to create in the `nxserver/data/transientstores` directory&nbsp;a symbolic link named `default` pointing to a shared directory, and do the same for any other `TransientStore` you might have contributed if it is intended to be shared by multiple instances of the cluster.
@@ -331,8 +334,10 @@ If you use a stateless load balancer such as Apache modules such as `mod_jk` and
 ```
 ProxyPass /nuxeo balancer://sticky-balancer stickysession=JSESSIONID|jsessionid  nofailover=On
 
+<Proxy balancer://sticky-balancer>
   BalancerMember http://192.168.2.101:8080/nuxeo route=nxworker1
   BalancerMember http://192.168.2.102:8080/nuxeo route=nxworker2
+</Proxy>
 
 ```
 
@@ -345,14 +350,14 @@ To test that the load balancer forwards the HTTP requests of a given session to 
     *   On the first node:
 
         ```
-        Node 1
+        <html><body>Node 1</body></html>
 
         ```
 
     *   and on the second node:
 
         ```
-        Node 2
+        <html><body>Node 2</body></html>
 
         ```
 

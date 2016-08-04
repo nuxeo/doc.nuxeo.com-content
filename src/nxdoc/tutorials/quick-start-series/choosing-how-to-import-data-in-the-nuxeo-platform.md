@@ -146,7 +146,7 @@ By default, the Nuxeo Platform allows users to import several documents at a tim
 
 The key point is that all these user import systems are designed to be easy to use, but are not designed for high performance and huge volume.
 
-{{#> panel heading="For more information"}}
+{{#> panel heading='For more information'}}
 
 *   [ Content Creation User Documentation ]({{page space='userdoc' page='creating-content'}})
 *   [WebDAV User Documentation]({{page space='userdoc' page='working-with-webdav'}})
@@ -176,7 +176,7 @@ Using the API allows you to easily define import custom logic on the client side
 
 The blob upload is part of the import process.
 
-</td></tr><tr><td colspan="1">Post import tasks</td><td colspan="1">None</td><td colspan="1">&nbsp;</td></tr></tbody></table>{{#> panel heading="For more information"}}
+</td></tr><tr><td colspan="1">Post import tasks</td><td colspan="1">None</td><td colspan="1">&nbsp;</td></tr></tbody></table>{{#> panel heading='For more information'}}
 
 *   [REST API]({{page page='rest-api'}})
 *   [Automation]({{page page='automation'}})
@@ -206,7 +206,7 @@ High speed import is likely to saturate the database: this will slow down all in
 Blobs are directly read on the server side FileSystem.
 
 </td></tr><tr><td colspan="1">Post import tasks</td><td colspan="1">May need to restart full text indexing.
-May need to restart process for listeners that were by-passed .</td><td colspan="1">In a lot of cases, the full text indexing is deactivated during processing, as well as other slow processes like video conversation, thumbnails generation, etc. After import, these processes need to be restarted.</td></tr></tbody></table>{{#> panel heading="For more information"}}
+May need to restart process for listeners that were by-passed .</td><td colspan="1">In a lot of cases, the full text indexing is deactivated during processing, as well as other slow processes like video conversation, thumbnails generation, etc. After import, these processes need to be restarted.</td></tr></tbody></table>{{#> panel heading='For more information'}}
 
 *   [Nuxeo Bulk Document Importer Developer Documentation]({{page page='nuxeo-bulk-document-importer'}})
 
@@ -231,7 +231,7 @@ May need to restart some triggers.</td><td colspan="1">
 *   Rebuild ancestors cache.
 *   Rebuild read-ACLs
 
-</td></tr></tbody></table>{{#> panel heading="For more information"}}
+</td></tr></tbody></table>{{#> panel heading='For more information'}}
 
 *   [VCS]({{page page='vcs'}})
 *   [Internal VCS Model](https://doc.nuxeo.com/display/NXDOC/Internal+VCS+Model)

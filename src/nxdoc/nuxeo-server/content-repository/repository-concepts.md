@@ -302,6 +302,34 @@ Each document type can use one or several schemas.
 Here is a simple example of a XSD schema used in Nuxeo Core (a subset of Dublin Core):
 
 ```
+<?xml version="1.0"?>
+<xs:schema
+        targetNamespace="http://www.nuxeo.org/ecm/schemas/dublincore/"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:nxs="http://www.nuxeo.org/ecm/schemas/dublincore/">
+
+    <xs:simpleType name="subjectList">
+        <xs:list itemType="xs:string"/>
+    </xs:simpleType>
+    <xs:simpleType name="contributorList">
+        <xs:list itemType="xs:string"/>
+    </xs:simpleType>
+    <xs:element name="title" type="xs:string"/>
+    <xs:element name="description" type="xs:string"/>
+    <xs:element name="subjects" type="nxs:subjectList"/>
+    <xs:element name="rights" type="xs:string"/>
+    <xs:element name="source" type="xs:string"/>
+    <xs:element name="coverage" type="xs:string"/>
+    <xs:element name="created" type="xs:date"/>
+    <xs:element name="modified" type="xs:date"/>
+    <xs:element name="issued" type="xs:date"/>
+    <xs:element name="valid" type="xs:date"/>
+    <xs:element name="expired" type="xs:date"/>
+    <xs:element name="format" type="xs:string"/>
+    <xs:element name="language" type="xs:string"/>
+    <xs:element name="creator" type="xs:string"/>
+    <xs:element name="contributors" type="nxs:contributorList"/>
+</xs:schema>
 
 ```
 
@@ -314,6 +342,12 @@ A schema file has to be referenced by Nuxeo configuration to be found and used. 
 For example, in the configuration file&nbsp;`OSGI-INF/types-contrib.xml`&nbsp;(the name is just a convention) you can define:
 
 ```
+<?xml version="1.0"?>
+<component name="org.nuxeo.project.sample.types">
+  <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+    <schema name="sample" src="schemas/sample.xsd" prefix="smp" />
+  </extension>
+</component>
 
 ```
 
@@ -335,6 +369,17 @@ You may need to override an existing schema defined by Nuxeo. As usual, this pos
 
 For instance, you can add your own parameters into the user.xsd schema to add the extra information stored into your ldap and fetch them and store them into the principal instance (that represents every user).
 The contribution will be something like:
+
+```
+<component name="fr.mycompanyname.myproject.schema.contribution">
+  <!-- to be sure to deployed after the Nuxeo default contributions>
+  <require>org.nuxeo.ecm.directory.types</require>
+  <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+    <schema name="group" src="directoryschema/group.xsd" override="true"/>
+  </extension>
+</component>
+
+```
 
 Focus your attention on the&nbsp;**override="true"**&nbsp;that is often missing
 
@@ -368,10 +413,29 @@ Default facets include:
 Here are some Document Types definition examples:
 
 ```
+<doctype name="File" extends="Document">
+    <schema name="common"/>
+    <schema name="file"/>
+    <schema name="dublincore"/>
+    <schema name="uid"/>
+    <schema name="files"/>
+    <facet name="Downloadable"/>
+    <facet name="Versionable"/>
+    <facet name="Publishable"/>
+    <facet name="Indexable"/>
+    <facet name="Commentable"/>
+</doctype>
 
-        Folder
-        File
-        Note
+<doctype name="Folder" extends="Document">
+    <schema name="common"/>
+    <schema name="dublincore"/>
+    <facet name="Folderish"/>
+    <subtypes>
+        <type>Folder</type>
+        <type>File</type>
+        <type>Note</type>
+    </subtypes>
+</doctype>
 
 ```
 
@@ -384,28 +448,32 @@ At UI level, Document Types defined in the repository are mapped to high level d
 *   ...
 
 ```
-
-    Folder
-    /icons/folder.gif
-    /icons/folder_100.png
-    /icons/folder_open.gif
-    Collaborative
-    Folder.description
-    view_documents
-
-        Folder
-        File
-        Note
-
-        heading
-
-        heading
-        dublincore
-
-        document_listing
-        document_listing_compact_2_columns
-        document_listing_icon_2_columns
-
+<type id="Folder">
+    <label>Folder</label>
+    <icon>/icons/folder.gif</icon>
+    <bigIcon>/icons/folder_100.png</bigIcon>
+    <icon-expanded>/icons/folder_open.gif</icon-expanded>
+    <category>Collaborative</category>
+    <description>Folder.description</description>
+    <default-view>view_documents</default-view>
+    <subtypes>
+        <type>Folder</type>
+        <type>File</type>
+        <type>Note</type>
+    </subtypes>
+    <layouts mode="any">
+        <layout>heading</layout>
+    </layouts>
+    <layouts mode="edit">
+        <layout>heading</layout>
+        <layout>dublincore</layout>
+    </layouts>
+    <layouts mode="listing">
+        <layout>document_listing</layout>
+        <layout>document_listing_compact_2_columns</layout>
+        <layout>document_listing_icon_2_columns</layout>
+    </layouts>
+</type>
 ```
 
 The&nbsp;**label**,&nbsp;**description**,&nbsp;**icon**,&nbsp;**bigIcon**&nbsp;and&nbsp;**category**&nbsp;are used by the user interface, for instance in the creation page when a list of possible types is displayed.

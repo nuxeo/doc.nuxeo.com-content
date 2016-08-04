@@ -62,26 +62,16 @@ See [Authentication and User Management]({{page page='authentication-and-user-ma
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{! Please update the label in the Content by Label macro below. }}
 
-{{#> panel heading="Related pages in current documentation"}}
+{{#> panel heading='Related pages in current documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">
+{{/panel}}</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
-{{#> panel heading="Related pages in other documentation"}}
+{{#> panel heading='Related pages in other documentation'}}
 
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

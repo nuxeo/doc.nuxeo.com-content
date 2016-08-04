@@ -156,8 +156,7 @@ Beside the `docId` and `repoId` parameters, the `id` endpoint accepts the defini
 
 ### Updating a Document
 
-<span>To update a document you have to</span> <span class="s1">PUT</span> <span>on the document resource, and pass a reduced version of the [entity type content]({{page page='rest-api-entity-types'}}) as the data. You can also pass the full set of data, but it is not mandatory.
-</span>
+To update a document you have to <span class="s1">PUT</span> on the document resource, and pass a reduced version of the [entity type content]({{page page='rest-api-entity-types'}}) as the data. You can also pass the full set of data, but it is not mandatory.
 
 ```
     PUT /nuxeo/site/api/v1/id/{idOfTheDoc}
@@ -195,7 +194,7 @@ POST /nuxeo/site/api/v1/id/{idOfParentDoc}
 }
 ```
 
-In this case, the id of the document is the parent document's id, and the `name` property in the entity stands for the name of the newly created document. <span>You don&rsquo;t have to specify a UID since the session will create one for you. It will be returned in the response.</span>
+In this case, the id of the document is the parent document's id, and the `name` property in the entity stands for the name of the newly created document. You don&rsquo;t have to specify a UID since the session will create one for you. It will be returned in the response.
 
 ### Deleting a Document
 

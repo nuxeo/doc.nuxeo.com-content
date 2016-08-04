@@ -126,7 +126,7 @@ LTS 2015</th><th colspan="1">Nuxeo Platform
 
 **Other Application Servers**
 
-The Nuxeo Platform can be delivered [via a standard <span class="confluence-link">static WAR</span> ]({{page page='deploying-as-a-standard-static-war'}}) (as opposed to the dynamic building of the WAR at startup that happens in the usual distribution). This implies some work to adapt and validate the deployment of the Nuxeo Platform on an additional application/web server. If you have such a requirement, you can ask your usual Nuxeo contact.
+The Nuxeo Platform can be delivered [via a standard static WAR ]({{page page='deploying-as-a-standard-static-war'}}) (as opposed to the dynamic building of the WAR at startup that happens in the usual distribution). This implies some work to adapt and validate the deployment of the Nuxeo Platform on an additional application/web server. If you have such a requirement, you can ask your usual Nuxeo contact.
 
 {{! /multiexcerpt}}
 

@@ -65,7 +65,7 @@ It allows to bind an Android `ListView` to a `LazyDocumentsList`.
 LazyDocumentsList documentsList = getDocumentList(data);
 
 // define the mapping between document attributes and widgets
-Map mapping = new HashMap();
+Map<Integer, String> mapping = new HashMap<Integer,String>();
 mapping.put(R.id.title_entry, "dc:title");
 mapping.put(R.id.status_entry, "status");
 mapping.put(R.id.iconView, "iconUri");

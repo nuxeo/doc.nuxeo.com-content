@@ -158,21 +158,25 @@ The final binding used by the JSF component is built by the layout system at run
 You can use this kind of `nxl:layout` tag in a XHTML template.
 
 ```
+<nxl:layout name="myLayoutName" mode="view" value="#{currentDocument}" />
 
 ```
 
 The layout contains a widget mapped to the `dc:title` field (see the [Widget Definitions]({{page page='widget-definitions'}}) page):
 
 ```
-
-   label.dublincore.title
-
- true
-
-   dc:title
-
-   true
-
+<widget name="title" type="text">
+ <labels>
+   <label mode="any">label.dublincore.title</label>
+ </labels>
+ <translated>true</translated>
+ <fields>
+   <field>dc:title</field>
+ </fields>
+ <properties widgetMode="edit">
+   <property name="required">true</property>
+ </properties>
+</widget> 
 ```
 
 When the layout service builds the corresponding JSF view (dynamically via facelets), it will build the value expression `#{currentDocument.dc.title}` (or a similar expression achieving this) and give it to the JSF component that would be usually used for a `h:outputText` JSF tag.
@@ -184,13 +188,15 @@ Using the `field` property means that you expect the layout system to perform th
 Depending on the value given to the `nxl:layout` tag, the field definition may change. For instance, in a listing, the layout is not usually rendered on the document, but on a [`PageSelection`](http://community.nuxeo.com/api/nuxeo/7.4/javadoc/org/nuxeo/ecm/platform/query/api/PageSelection.html) element, wrapping the&nbsp; [`DocumentModel`](http://community.nuxeo.com/api/nuxeo/7.4/javadoc/org/nuxeo/ecm/core/api/DocumentModel.html) to handle selection information. So a [ `text` widget]({{page page='basic-widget-types'}}) showing the widget `title` would have the field binding `data['dc']['title']` instead of `dc:title`.
 
 ```
-
-    Title
-
-  false
-
-    data['dc']['title']
-
+<widget name="title" type="text">
+  <labels>
+    <label mode="any">Title</label>
+  </labels>
+  <translated>false</translated>
+  <fields>
+    <field>data['dc']['title']</field>
+  </fields>
+</widget>
 ```
 
 Using the syntax `data.dc.title` is also an option as it will produce a valid EL expression. But the&nbsp;`data['dc']['title']` syntax makes it possible to correctly handle cases where the schema or field name contains a dash "-" character. The "data" binding is mentioned here because it will resolve the `PageSelection#getData` method, which resolves to the `DocumentModel`. Subsequent "dc" and "title" configurations make it resolve the document field named "title" in the "dublincore" schema (defined to use prefix "dc").

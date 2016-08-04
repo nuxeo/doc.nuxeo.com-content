@@ -137,15 +137,24 @@ Chain contribution is done via the [Nuxeo extension point mechanism]({{page page
 Here is an example of a chain extension:
 
 ```
-
-      chainParameterValue
-
-        aoname
-        @{Document["dc:title"]}
-
-        file:content
-
-        @{aoname}.zip
+  <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="chains">
+    <chain id="downloadAllChain">
+      <param type="string" name="chainParameterName">chainParameterValue</param>
+      <operation id="Context.FetchDocument"/>
+      <operation id="Context.SetVar">
+        <param type="string" name="name">aoname</param>
+        <param type="object" name="value">@{Document["dc:title"]}</param>
+      </operation>
+      <operation id="Document.GetChildren"/>
+      <operation id="Blob.Get">
+        <param type="string" name="xpath">file:content</param>
+      </operation>
+      <operation id="Blob.CreateZip">
+        <param type="string" name="filename">@{aoname}.zip</param>
+      </operation>
+      <operation id="WebUI.DownloadFile"/>
+    </chain>
+  </extension>
 
 ```
 
@@ -173,17 +182,30 @@ Since 5.7.2, it is possible to create "composite operations": Adding chains into
 Here is an example of how to contribute this kind of automation chain:
 
 ```
-
-        Hello 1!
-
-        Hello 2!
-
-        {ChainParameters['messageChain']}
-
-        Hello 1!
-
-        Hello 2!
-
+<extension point="chains"
+    target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
+    <chain id="contributedchain">
+      <operation id="contributedchainLeaf" />
+      <param type="string" name="messageChain" />
+      <operation id="operation1">
+        <param type="string" name="message">Hello 1!</param>
+      </operation>
+      <operation id="operation2">
+        <param type="string" name="message">Hello 2!</param>
+      </operation>
+      <operation id="operation3">
+        <param type="string" name="message">{ChainParameters['messageChain']}</param>
+      </operation>
+    </chain>
+    <chain id="contributedchainLeaf">
+      <operation id="operation1">
+        <param type="string" name="message">Hello 1!</param>
+      </operation>
+      <operation id="operation2">
+        <param type="string" name="message">Hello 2!</param>
+      </operation>
+    </chain>
+  </extension>
 ```
 
 The `contributedchainleaf` chain is contributed with its operations and is included as an operation into `contributedchain`. During the execution of this chain, a validation is running to check if all inputs/outputs of the different chains/operations in the stack are matching.
@@ -193,10 +215,16 @@ The `contributedchainleaf` chain is contributed with its operations and is inclu
 In Automation you can add aliases for each chain:
 
 ```
-
-        chainAlias1
-        chainAlias2
-
-        Hello Chain Alias!
+  <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="chains">
+    <chain id="doc_create_chain_alias">
+      <aliases>
+        <alias>chainAlias1</alias>
+        <alias>chainAlias2</alias>
+      </aliases>
+      <operation id="OperationWithParamNameAlias">
+        <param type="string" name="paramName">Hello Chain Alias!</param>
+      </operation>
+    </chain>
+  </extension>
 
 ```

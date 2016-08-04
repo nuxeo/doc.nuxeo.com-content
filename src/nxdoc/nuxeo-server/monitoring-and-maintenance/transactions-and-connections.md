@@ -124,13 +124,15 @@ Troubleshooting issues with&nbsp;connections with transactional resources (datab
 Configure log4j in `$NUXEO_HOME/lib/log4j.xml` by adding the following keywords to your appender conversion pattern `%t` for the thread name and `%X`&nbsp;for the logging context map:
 
 ```
-
+<param name="ConversionPattern" value="%d{ISO8601} %t %-5p [%c] %m %X%n" />
 ```
 
 You should also add a new category if you want the traces to be enabled:
 
 ```
-
+<category name="org.nuxeo.ecm.core.management.jtajca">
+  <priority value="TRACE" />
+</category>
 ```
 
 At this stage, once a transaction is started or a connection is opened, their identifiers are put in a context map for the logger. By adding the `%X`&nbsp;keyword, you've requested to print them each a message is logged. The transactions and connections will also be logged. You should add additional log statements at level `DEBUG` or `TRACE` around the code you want to monitor.

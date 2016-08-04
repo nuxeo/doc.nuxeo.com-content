@@ -61,11 +61,10 @@ Binary files are not immediately deleted when their containing document is delet
 
 The garbage collection is done by an explicit administration step:
 
-1.  Go to **Admin** > **System Information** > **Repository binaries**.<span style="color: rgb(68,68,68);">&nbsp;</span>
+1.  Go to **Admin** > **System Information** > **Repository binaries**.
 2.  Check the <span style="color: rgb(68,68,68);">**Delete orphaned binaries** check box. If you just want to gather statistics about what it going to be deleted, don't check this box and go next step.
     </span>
 3.  Click on **Mark orphaned binaries**.
-    <span style="color: rgb(68,68,68);">&nbsp;</span>
 
 ## Programmatically - Using the Nuxeo Shell or Java Code
 

@@ -94,7 +94,7 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' heading="Namespace: *remote*"}}
+{{#> callout type='info' heading='Namespace: *remote*'}}
 
 High level commands exposed by a remote Nuxeo Server
 

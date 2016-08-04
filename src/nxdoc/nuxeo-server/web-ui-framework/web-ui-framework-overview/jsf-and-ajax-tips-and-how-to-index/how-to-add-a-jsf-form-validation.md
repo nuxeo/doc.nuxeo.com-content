@@ -180,15 +180,23 @@ If you're using layouts, you can add it as a property to the widget in edit mode
 
 Without layout:
 
-Inside a layout:
+```
+<h:inputText type="text" id="userNo" value="#{NumberBean.guess}" validator="#{NumberBean.validate}"/>
 
 ```
 
-  true
+Inside a layout:
 
-    dc:title
-
-    #{myValidatorBean.validateTitle}
+```
+<widget name="title" type="text">
+  <translated>true</translated>
+  <fields>
+    <field>dc:title</field>
+  </fields>
+  <properties mode="edit">
+    <property name="validator">#{myValidatorBean.validateTitle}</property>
+  </properties>
+</widget>
 
 ```
 
@@ -200,9 +208,7 @@ If you need to cross validate fields of a document (i.e.: makes sure `dc:title` 
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [JSF and Javascript ]({{page page='jsf-and-javascript'}})
 *   [Ajax4jsf Best Practices]({{page page='ajax4jsf-best-practices'}})
@@ -210,15 +216,11 @@ If you need to cross validate fields of a document (i.e.: makes sure `dc:title` 
 *   [undefined]({{page}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [JavaScript Client]({{page page='javascript-client'}})
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Web UI Framework Overview]({{page page='web-ui-framework-overview'}})
 *   [Web UI Limitations]({{page page='web-ui-limitations'}})&nbsp;
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

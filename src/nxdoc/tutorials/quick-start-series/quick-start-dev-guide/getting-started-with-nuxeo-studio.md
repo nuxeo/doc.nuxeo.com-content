@@ -161,22 +161,22 @@ Nuxeo Studio is a Nuxeo tool provided as part of the Nuxeo Online Services subsc
     Your Online Trial account is created.
     You can now access Nuxeo Studio by clicking on the&nbsp;link&nbsp;provided in the last email received.
 
-## Step 2 - <span>Getting a Nuxeo Platform Instance</span>
+## Step 2 - Getting a Nuxeo Platform Instance
 
-<span>You automatically get a nuxeo.io instance created when you subscribe to the Nuxeo Platform Online Trial offer. Thus&nbsp;</span>you can now either use a nuxeo.io instance in the Cloud. &nbsp;Or you can run a Nuxeo Platform instance on your computer.&nbsp;
+You automatically get a nuxeo.io instance created when you subscribe to the Nuxeo Platform Online Trial offer. Thus&nbsp;you can now either use a nuxeo.io instance in the Cloud. &nbsp;Or you can run a Nuxeo Platform instance on your computer.&nbsp;
 
 ### Working in the Cloud...
 
-<span>When you register to</span> [Nuxeo Platform Online Trial](http://www.nuxeo.com/downloads/#online-trial)&nbsp;<span>a Nuxeo Platform environment is automatically created. This environment is bound to the first Nuxeo Studio project you have. All third-party software are installed and set up.</span>
+When you register to [Nuxeo Platform Online Trial](http://www.nuxeo.com/downloads/#online-trial)&nbsp;a Nuxeo Platform environment is automatically created. This environment is bound to the first Nuxeo Studio project you have. All third-party software are installed and set up.
 
-1.  <span>Go to [nuxeo.io](https://manager.nuxeo.io).</span>
-    <span>Your environment is stopped by default.</span>
-2.  <span>Click on the **Start** button.</span>
-3.  <span>Click on the instance URL to access your Nuxeo Platform environment.</span> <span>&nbsp;</span>
-    <span>Your Nuxeo Platform instance is ready to be customized.</span>
-    <span>Development mode is activated so you can enjoy hot reload of your Nuxeo Studio configuration.</span>
+1.  Go to [nuxeo.io](https://manager.nuxeo.io).
+    Your environment is stopped by default.
+2.  Click on the **Start** button.
+3.  Click on the instance URL to access your Nuxeo Platform environment.
+    Your Nuxeo Platform instance is ready to be customized.
+    Development mode is activated so you can enjoy hot reload of your Nuxeo Studio configuration.
 
-<span>![]({{file name='nuxeo_io.png'}} ?w=570,border=true)</span>
+![]({{file name='nuxeo_io.png'}} ?w=570,border=true)
 
 ### ...Or Working on Your Desktop
 
@@ -201,9 +201,6 @@ Installing the Nuxeo Platform using the&nbsp;[.zip package](http://www.nuxeo.com
 3.  Click on the&nbsp;**Enable**&nbsp;button to activate development mode.
 4.  Click on the&nbsp;**Restart Server**&nbsp;button displayed on top of the Admin Center.
     The Nuxeo Platform instance restarts. You can then enjoy your Nuxeo Studio configuration without restarting your server.
-
-<span>
-</span>
 
 Once your project registered on Online Services, you can start customizing your Nuxeo Application. The first&nbsp;customizations&nbsp;occur in Nuxeo Studio, where you can easily create new&nbsp;[document types]({{page space='studio' page='documents'}}),&nbsp;[content views]({{page space='studio' page='content-views'}})&nbsp;, etc. Here, we will change the logo and then create a document type "Contract".
 
@@ -234,7 +231,7 @@ Goal is to change the logo displayed in the banner of the Nuxeo Platform applica
 ### **Deploying Changes on Your Nuxeo Platform Instance
 **
 
-1.  Go to your Nuxeo Platform instance, typically available&nbsp;<span style="line-height: 21.58px;">at</span> <span class="s2" style="line-height: 21.58px;">[http://localhost:8080/nuxeo](http://localhost:8080/nuxeo). If you have decided to work in the Cloud, it will be available a<span>t&nbsp;</span>[https://manager.nuxeo.io](https://manager.nuxeo.io/).</span>
+1.  Go to your Nuxeo Platform instance, typically available&nbsp;<span style="line-height: 21.58px;">at</span> <span class="s2" style="line-height: 21.58px;">[http://localhost:8080/nuxeo](http://localhost:8080/nuxeo). If you have decided to work in the Cloud, it will be available at&nbsp;[https://manager.nuxeo.io](https://manager.nuxeo.io/).</span>
 2.  Connect as Administrator with Administrator password.
 3.  Click on&nbsp;**Admin Center**&nbsp;>&nbsp;**Update Center**&nbsp;>&nbsp;**Nuxeo Studio**.
 4.  Click on the&nbsp;**Update**&nbsp;button.
@@ -274,7 +271,7 @@ Here we want to create a document type "Contract" that will hold specific metada
 ### **Deploying Changes on Your Nuxeo Platform Instance
 **
 
-1.  Go to your Nuxeo Platform instance, typically available&nbsp;<span>at&nbsp;</span><span class="s2">[http://localhost:8080/nuxeo](http://localhost:8080/nuxeo). If you have decided to work in the Cloud, it will be available at&nbsp;[https://manager.nuxeo.io](https://manager.nuxeo.io/).</span>
+1.  Go to your Nuxeo Platform instance, typically available&nbsp;at&nbsp;<span class="s2">[http://localhost:8080/nuxeo](http://localhost:8080/nuxeo). If you have decided to work in the Cloud, it will be available at&nbsp;[https://manager.nuxeo.io](https://manager.nuxeo.io/).</span>
 2.  Connect as Administrator with Administrator password.
 3.  Click on&nbsp;**Admin Center**&nbsp;>&nbsp;**Update Center**&nbsp;>&nbsp;**Nuxeo Studio**.
 4.  Click on the&nbsp;**Update**&nbsp;button.
