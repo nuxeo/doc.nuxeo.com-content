@@ -1,7 +1,28 @@
 # doc.nuxeo.com
 
 # Development
-See [main project readme](https://github.com/nuxeo/doc.nuxeo.com/blob/master/README.md)
+See [main project readme](https://github.com/nuxeo/doc.nuxeo.com/blob/master/README.md) for requirements.
+
+## Installation
+Clone the repository to your local machine (and remember where it's saved :)), using your favorite git client or the command line:
+```bash
+git lfs clone https://github.com/nuxeo/doc.nuxeo.com-platform-spaces
+cd doc.nuxeo.com-platform-spaces
+git lfs install
+git reset --hard
+npm install
+```
+
+## Run Locally
+```bash
+npm run dev
+```
+
+### Change browser
+The broswer defaults to `chromium-browser` but can be changed with the following command and then locally as usual.
+```bash
+npm config set Nuxeo-website:browser firefox
+```
 
 ## Project Structure
 ### `assets`
