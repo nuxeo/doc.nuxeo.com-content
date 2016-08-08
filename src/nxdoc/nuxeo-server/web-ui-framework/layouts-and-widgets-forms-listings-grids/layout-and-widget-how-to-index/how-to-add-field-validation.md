@@ -14,7 +14,6 @@ labels:
     - howto
     - layout
     - seam-jsf-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -220,9 +219,7 @@ ComponentUtils.translate(context, "label.error.bad.phone.format")
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [undefined]({{page}})
 *   [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
@@ -230,9 +227,7 @@ ComponentUtils.translate(context, "label.error.bad.phone.format")
 *   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
@@ -240,6 +235,4 @@ ComponentUtils.translate(context, "label.error.bad.phone.format")
 *   [Web UI Limitations]({{page page='web-ui-limitations'}})
 *   [Widget Definitions]({{page page='widget-definitions'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

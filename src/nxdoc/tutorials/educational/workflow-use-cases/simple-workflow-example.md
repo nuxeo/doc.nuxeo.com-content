@@ -1,7 +1,6 @@
 ---
 title: Simple Workflow Example
 labels:
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

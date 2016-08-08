@@ -3,7 +3,6 @@ title: Scan Documents Importer
 labels:
     - scan-documents-importer
     - update-needed
-    - content-review-lts2015
     - multiexcerpt-include
 toc: true
 confluence:
@@ -125,58 +124,92 @@ These bundles provide you with a new service (`org.nuxeo.ecm.platform.importer.x
 A detailed documentation on the advanced XML parsing usage can be found on the [nuxeo-importer-xml-parser GitHub page](https://github.com/nuxeo/nuxeo-platform-importer/tree/master/nuxeo-importer-xml-parser). To get you started, below is a working example with the original XML file and the corresponding XML configuration that can be pasted into Nuxeo Studio.
 
 ```
-
-    373668
-    Pens
-    12.30
-    2005.04.17
-
-    737282
-    Poster
-    3.70
-    2005.04.17
-
-    029938
-    Glue sticks
-    7.75
-    2005.04.20
-
+<?xml version="1.0" encoding="UTF-8"?>
+<invoice>
+  <order_number value="Invoice NX38937987-421-690" />
+  <software_source value="My accounting software" />
+  <supplier value="Papeterie Stylo Dépôt" />
+  <order_date value="2005-03-12T11:00:00.000Z" />
+  <planned_delivery_date value="2005-04-17" />
+  <total_incl_taxes value="65.90" />
+  <file name="order made on march 12 2005.pdf" />
+  <item>
+    <ref>373668</ref>
+    <desc>Pens</desc>
+    <amount>12.30</amount>
+    <delivery_date>2005.04.17</delivery_date>
+  </item>
+  <item>
+    <ref>737282</ref>
+    <desc>Poster</desc>
+    <amount>3.70</amount>
+    <delivery_date>2005.04.17</delivery_date>
+  </item>
+  <item>
+    <ref>029938</ref>
+    <desc>Glue sticks</desc>
+    <amount>7.75</amount>
+    <delivery_date>2005.04.20</delivery_date>
+  </item>
+</invoice>
 ```
 
 ```
+<!-- Doctype to create depending on XML formatting
+     In this case, having an invoice tag means I should create an Invoice document in Nuxeo --> 
+<extension target="org.nuxeo.ecm.platform.importer.xml.parser.XMLImporterComponent" point="documentMapping"> 
+    <docConfig tagName="invoice"> 
+      <docType>Invoice</docType> 
+    </docConfig> 
+</extension> 
 
-      Invoice 
+<!-- XML to metadata mapping 
+     In this case, my invoice schema is as follows: 
+     	order_number 						string
+		software_source						string
+		supplier							string
+		total_inc_taxes						float
+		order_date							date
+		planned_delivery_date				date
+		items								complex, multivalued
+			ref								string
+			description						string
+			amount							float
+			deliverydate					date 
+--> 
+<extension target="org.nuxeo.ecm.platform.importer.xml.parser.XMLImporterComponent" point="attributeMapping"> 
+    <attributeConfig tagName="order_number" docProperty="dc:title" xmlPath="@value"/> 
+  <attributeConfig tagName="software_source" docProperty="dc:source" xmlPath="@value"/> 
+    <attributeConfig tagName="supplier" docProperty="invoice:supplier" xmlPath="@value"/> 
+  <attributeConfig tagName="total_incl_taxes" docProperty="invoice:amount" xmlPath="@value"/> 
+  <attributeConfig tagName="order_date" docProperty="invoice:orderdate" xmlPath="@value"/> 
+  <attributeConfig tagName="planned_delivery_date" docProperty="invoice:planneddeliverydate" xmlPath="@value"/> 
 
-        @name 
-        @name 
+  <attributeConfig tagName="file" docProperty="file:content"> 
+        <mapping documentProperty="filename">@name</mapping> 
+        <mapping documentProperty="content">@name</mapping> 
+    </attributeConfig> 
 
-       ref/text() 
-    desc/text() 
-    amount/text() 
-
+    <attributeConfig tagName="item" docProperty="invoice:items"> 
+       <mapping documentProperty="ref">ref/text()</mapping> 
+    <mapping documentProperty="description">desc/text()</mapping> 
+    <mapping documentProperty="amount">amount/text()</mapping> 
+    <mapping documentProperty="deliverydate"> 
              #{ 
                 String date = currentElement.selectNodes('delivery_date/text()')[0].getText().trim(); 
               return Fn.parseDate(date, 'yyyy.MM.dd') 
         }]]> 
-
+        </mapping> 
+  </attributeConfig> 
+</extension>
 ```
 
 &nbsp;
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
-<div class="column medium-6">{{#> panel heading="Related pages in current documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related pages in other documentation"}}
-
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

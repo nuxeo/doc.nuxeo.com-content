@@ -3,7 +3,6 @@ title: Actions Overview
 labels:
     - action
     - actions-filters-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -120,11 +119,21 @@ Custom actions can be contributed to the actions service, using its extension po
 An action can be registered using the following example extension:
 
 ```
+<extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
 
-    SUBVIEW_UPPER_LIST
+  <action id="newWorkspace" label="command.create.workspace" 
+	link="#{documentActions.createDocument('Workspace')}"
+    type="link" icon="/icons/action_add.gif">
+    <category>SUBVIEW_UPPER_LIST</category>
+    <filter id="newWorkspace">
+      <rule grant="true">
+        <permission>AddChildren</permission>
+        <type>WorkspaceRoot</type>
+      </rule>
+    </filter>
+  </action>
 
-        AddChildren
-        WorkspaceRoot
+</extension>
 
 ```
 
@@ -157,8 +166,15 @@ Do not forget to add the original component name requirement to ensure proper ov
 Here are some actions override examples:
 
 ```
-org.nuxeo.ecm.platform.actions
+<require>org.nuxeo.ecm.platform.actions</require>
 
+<extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
+
+  <action id="newWorkspace" enabled="false" />
+
+  <action id="newWorkspace" icon="/icons/my_icon.png" />
+
+</extension>
 ```
 
 ## Examples
@@ -170,13 +186,21 @@ Here are more examples showing how to use actions in the default application.
 Here is a small sample to add a custom confirmation message on an action:
 
 ```
+<extension point="actions" target="org.nuxeo.ecm.platform.actions.ActionService">
 
-    DOCUMENT_UPPER_ACTION
+  <action id="JenkinsReportSendMail" label="Send Mail" order="0" type="link"
+    icon="/img/jenkins_send_email.png"
+    link="#{operationActionBean.doOperation('JenkinsReportSendMail')}">
+    <category>DOCUMENT_UPPER_ACTION</category>
+    <properties>
+      <property name="confirmMessage">label.jenkins.sendMail.confirm</property>
+      <propertyList name="confirmMessageArgs">
+        <value>#{docSuggestionActions.getDocumentWithId(currentSuperSpace.id).getPropertyValue('jenkinsreports:report_email')}</value>
+      </propertyList>
+    </properties>
+  </action>
 
-      label.jenkins.sendMail.confirm
-
-        #{docSuggestionActions.getDocumentWithId(currentSuperSpace.id).getPropertyValue('jenkinsreports:report_email')}
-
+</extension>
 ```
 
 The confirmation label&nbsp;`label.jenkins.sendMail.confirm` is holding a variable parameter:
@@ -196,13 +220,20 @@ Tab items on document views, for instance, are using actions to benefit from sor
 So tab actions are using the type "[Rest document link](http://showcase.nuxeo.com/nuxeo/layoutDemo/rest_document_linkAction)" and state in the "link" property the template to include for the tab content:
 
 ```
+<extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
 
-    VIEW_ACTION_LIST
-    edit
-    mutable_document
+  <action id="TAB_EDIT" link="/incl/tabs/document_edit.xhtml" order="20"
+    label="action.view.modification" icon="/icons/file.gif" accessKey="e"
+    type="rest_document_link">
+    <category>VIEW_ACTION_LIST</category>
+    <filter-id>edit</filter-id>
+    <filter-id>mutable_document</filter-id>
+    <properties>
+      <property name="ajaxSupport">true</property>
+    </properties>
+  </action>
 
-      true
-
+</extension>
 ```
 
 This action is showing the "Edit" tab on documents. It displays the content of the "/incl/tabs/document_edit.xhtml" template, defines an access key, and specifies that it supports Ajax (in case action is displayed in an ajaxified context).
@@ -212,12 +243,18 @@ This action is showing the "Edit" tab on documents. It displays the content of t
 Here is another sample that displays the document permanent link inside a FancyBox:
 
 ```
+<extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
 
-    DOCUMENT_UPPER_ACTION
+  <action id="permalinkAction" order="20" label="label.permalink" type="fancybox"
+    icon="/icons/contextual_menu/share.png" accessKey="k">
+    <category>DOCUMENT_UPPER_ACTION</category>
+    <properties>
+      <property name="include">/incl/permalink_box.xhtml</property>
+      <property name="ajaxSupport">true</property>
+    </properties>
+  </action>  
 
-      /incl/permalink_box.xhtml
-      true
-
+</extension>
 ```
 
 The FancyBox content is defined by "/incl/permalink_box.xhtml". Note that if the fancybox content holds a form, you must make sure that the action is not itself already placed within a bigger form (as nested forms are not supported).
@@ -226,22 +263,16 @@ The FancyBox content is defined by "/incl/permalink_box.xhtml". Note that if the
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Add a Button in the Web UI]({{page page='how-to-add-a-button-in-the-web-ui'}})
 *   [How to Add a New Action Category on a Document Tab]({{page page='how-to-add-a-new-action-category-on-a-document-tab'}})
 *   [How to Make the New Button Appear on a Custom Folderish Document]({{page page='how-to-make-the-new-button-appear-on-a-custom-folderish-document'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Other Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
 *   [Actions Display]({{page page='actions-display'}})
 *   [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

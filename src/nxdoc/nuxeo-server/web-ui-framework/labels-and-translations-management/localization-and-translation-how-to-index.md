@@ -3,7 +3,6 @@ title: Localization and Translation How-To Index
 labels:
     - localization
     - translation
-    - lts2015-ok
     - index
     - excerpt
 confluence:
@@ -78,11 +77,11 @@ history:
 ---
 {{! excerpt}}
 
-This section provides How-Tos to customize the localization and translation behavior of the Nuxeo Platform.
+This section provides how-tos to customize the localization and translation behavior of the Nuxeo Platform.
 
 {{! /excerpt}}
 
-<span>For the different ways to contribute translations, see the page</span> [How to Translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxeo-platform'}})<span>.</span>&nbsp;
+For the different ways to contribute translations, see the page [How to Translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxeo-platform'}}).&nbsp;
 
 &nbsp;
 

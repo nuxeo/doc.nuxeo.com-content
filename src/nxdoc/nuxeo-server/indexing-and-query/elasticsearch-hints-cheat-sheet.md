@@ -3,7 +3,6 @@ title: Elasticsearch Hints Cheat Sheet
 labels:
     - elasticsearch
     - elasticsearch-component
-    - lts2015-ok
     - excerpt
     - multiexcerpt-include
 toc: true

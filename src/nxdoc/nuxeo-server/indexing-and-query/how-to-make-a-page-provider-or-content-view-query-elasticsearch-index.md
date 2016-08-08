@@ -15,7 +15,6 @@ labels:
     - howto
     - query
     - query-pageprovider-component
-    - lts2015-ok
     - university
     - excerpt
 confluence:
@@ -152,11 +151,11 @@ You can view the list of the Page Providers in the Admin Center/Elasticsearch/Pa
 
 ## Configuring a New Content View &nbsp;(and underlying Page Provider) With Nuxeo Studio
 
-1.  In Studio, on the content view, on the query & form tab, check "<span>Use Elasticsearch index"</span> and Save.<span>&nbsp;</span>
-    <span>![]({{file name='Studio-content-view-query-definition.png' space='studio' page='content-views'}} ?w=600,border=true)
-    </span>
+1.  In Studio, on the content view, on the query & form tab, check "Use Elasticsearch index" and Save.
+    ![]({{file name='Studio-content-view-query-definition.png' space='studio' page='content-views'}} ?w=600,border=true)
+
 2.  [Deploy your Nuxeo Studio project]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).
-    <span>You are done!</span>
+    You are done!
 
 {{#> callout type='note' }}
 
@@ -168,24 +167,18 @@ Extract from the course [What's New in Nuxeo Platform 2015](https://university.n
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Other pages about Elasticsearch"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other pages about Elasticsearch'}}
 
 *   [Moving Load from Database to Elasticsearch]({{page page='moving-load-from-database-to-elasticsearch'}})
 *   [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
 *   [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
 *   [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Indexing related pages"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Indexing related pages'}}
 
 *   [Full-Text Queries]({{page page='full-text-queries'}})
 *   [How to Configure a New Default Search Form in the Search Tab]({{page page='how-to-configure-a-new-default-search-form-in-the-search-tab'}})
 *   [Content Views]({{page page='content-views'}})
 *   [Page Providers]({{page page='page-providers'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

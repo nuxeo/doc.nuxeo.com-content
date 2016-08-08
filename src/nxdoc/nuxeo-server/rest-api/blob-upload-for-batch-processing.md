@@ -6,7 +6,6 @@ labels:
     - upload
     - todo
     - file-upload-component
-    - lts2015-ok
     - university
     - excerpt
 toc: true
@@ -195,12 +194,12 @@ This strategy can not fit when:
 
 {{! /excerpt}}
 
-*   Your client does not natively support multipart encoding;<span>&nbsp;</span>
-    <span>Ex: JavaScript (without using a Form), Android SDK 2.x.</span>
-*   <span>You have several files to send, but prefer to send them as separated chunks</span>;<span>&nbsp;</span>
-    <span>Ex: You have an HTTP proxy that will limit POST size.</span>
-*   <span>You want to upload files as soon as possible and then run the operation when everything has been uploaded on the server</span>;<span>&nbsp;</span>
-    <span>Ex: You upload pictures you select from a mobile device.</span>
+*   Your client does not natively support multipart encoding;
+    Ex: JavaScript (without using a Form), Android SDK 2.x.
+*   You have several files to send, but prefer to send them as separated chunks;
+    Ex: You have an HTTP proxy that will limit POST size.
+*   You want to upload files as soon as possible and then run the operation when everything has been uploaded on the server;
+    Ex: You upload pictures you select from a mobile device.
 
 ## Uploading Files
 
@@ -219,7 +218,7 @@ Before uploading any file you need to initialize a batch, even if there is only 
 POST /api/v1/upload/
 ```
 
-<span>This request returns a 201</span>&nbsp;_CREATED_<span>&nbsp;status code with the following JSON data:</span>
+This request returns a 201&nbsp;_CREATED_&nbsp;status code with the following JSON data:
 
 ```
 {"batchId": batchId}
@@ -231,7 +230,7 @@ The batch id can be seens as an upload session id, especially for a [resumable u
 
 ### Uploading a File
 
-<span>You can do a simple POST with the payload containing your file, yet <span>we also support multipart encoded upload</span>.</span>
+You can do a simple POST with the payload containing your file, yet we also support multipart encoded upload.
 
 ```
 POST /api/v1/upload/{batchId}/{fileIdx}
@@ -239,13 +238,13 @@ POST /api/v1/upload/{batchId}/{fileIdx}
 
 The&nbsp;`batchId` is the batch identifier,&nbsp;you need to use the one returned by the batch initialization request, otherwise you will get a 404 _Not Found_ status code.
 
-<span>The</span>&nbsp;`fileIdx` <span>&nbsp;is the index of the file inside the batch, it is here to later reference the file by its index and also to keep track of the client side ordering, because the order the server receives the files may not be the same.</span>
+The&nbsp;`fileIdx` &nbsp;is the index of the file inside the batch, it is here to later reference the file by its index and also to keep track of the client side ordering, because the order the server receives the files may not be the same.
 
-<span><span>The batch identifier should be common to all the files you want to upload and attach to the same batch.</span></span>
+The batch identifier should be common to all the files you want to upload and attach to the same batch.
 
 You also need to set some custom HTTP headers:
 
-<table><tbody><tr><th colspan="1">Header name</th><th colspan="1">Description</th></tr><tr><td colspan="1">`X-File-Name`</td><td colspan="1">Name of the file</td></tr><tr><td colspan="1">`X-File-Type`</td><td colspan="1">Mime type of the file</td></tr><tr><td colspan="1">`Content-Type`</td><td colspan="1">Should be set to `"application/octet-stream"`</td></tr><tr><td colspan="1">`Content-Length`<span>&nbsp;</span></td><td colspan="1">Size of the file in bytes, required if your HTTP client doesn't add this header, typically the Nuxeo [JavaScript Client]({{page page='javascript-client'}})</td></tr></tbody></table>
+<table><tbody><tr><th colspan="1">Header name</th><th colspan="1">Description</th></tr><tr><td colspan="1">`X-File-Name`</td><td colspan="1">Name of the file</td></tr><tr><td colspan="1">`X-File-Type`</td><td colspan="1">Mime type of the file</td></tr><tr><td colspan="1">`Content-Type`</td><td colspan="1">Should be set to `"application/octet-stream"`</td></tr><tr><td colspan="1">`Content-Length`</td><td colspan="1">Size of the file in bytes, required if your HTTP client doesn't add this header, typically the Nuxeo [JavaScript Client]({{page page='javascript-client'}})</td></tr></tbody></table>
 
 <span style="line-height: 21.58px;">Returns a 201</span>&nbsp;_CREATED_ <span style="line-height: 21.58px;">status code with the following JSON data:</span>
 
@@ -253,9 +252,9 @@ You also need to set some custom HTTP headers:
 {"batchId": batchId, "fileIdx": fileIdx, "uploadType": "normal", "uploadedSize": xxx}
 ```
 
-<span style="color: rgb(0,0,0);"><span>The value of the&nbsp;</span>`uploadType` <span>field is</span>&nbsp;`normal` <span>by default, it can be&nbsp;</span> `chunked` <span>if the file was [uploaded by chunks]({{page}}).</span>&nbsp;</span>
+<span style="color: rgb(0,0,0);">The value of the&nbsp;`uploadType` field is&nbsp;`normal` by default, it can be&nbsp; `chunked` if the file was [uploaded by chunks]({{page}}).&nbsp;</span>
 
-{{#> callout type='info' heading="About the file storage implementation"}}
+{{#> callout type='info' heading='About the file storage implementation'}}
 
 The files uploaded to the batch are stored on a temporary disk space&nbsp;until the batch is executed or dropped.
 
@@ -263,17 +262,14 @@ For this purpose the batch upload relies on the default [Transient Store](https:
 
 {{/callout}}
 
-<span style="color: rgb(0,0,0);">
-</span>
-
 <span style="color: rgb(0,0,0);font-size: 16.0px;line-height: 1.5625;">Getting Information about the Batch Files</span>
 
 ```
 GET /api/v1/upload/{batchId}
 ```
 
-<span>Returns a 200</span>&nbsp;_OK_ <span>status code if the batch contains at least one file and a 204&nbsp;</span> _No Content_ <span>&nbsp;status code if the batch doesn't contain any file.</span>
-<span>JSON response data:</span>
+Returns a 200&nbsp;_OK_ status code if the batch contains at least one file and a 204&nbsp; _No Content_ &nbsp;status code if the batch doesn't contain any file.
+JSON response data:
 
 ```
 [{"name": file1, "size": yyy, "uploadType": "normal"}, {"name": file2, "size": zzz, "uploadType": "normal"}]
@@ -285,7 +281,7 @@ GET /api/v1/upload/{batchId}
 GET /api/v1/upload/{batchId}/{fileIdx}
 ```
 
-Returns a 200&nbsp;_OK_&nbsp;status code if the batch contains a file with the given index and a <span>404</span>&nbsp;_Not Found_&nbsp;status code otherwise.
+Returns a 200&nbsp;_OK_&nbsp;status code if the batch contains a file with the given index and a 404&nbsp;_Not Found_&nbsp;status code otherwise.
 JSON response data:
 
 ```
@@ -298,7 +294,7 @@ JSON response data:
 DELETE /api/v1/upload/{batchId} 
 ```
 
-<span>Returns a 200</span>&nbsp;_OK_<span>&nbsp;status code with the following JSON data:</span>
+Returns a 200&nbsp;_OK_&nbsp;status code with the following JSON data:
 
 ```
 {"batchId": batchId, "dropped": "true"}
@@ -328,7 +324,7 @@ The&nbsp;`batchId`&nbsp;and&nbsp;`fileIdx` serve the same purpose as for uploadi
 
 You need to set the same HTTP headers as for a whole file, adding some extra ones:
 
-<table><tbody><tr><th colspan="1">Header name</th><th colspan="1">Description</th></tr><tr><td colspan="1">`X-Upload-Type`</td><td colspan="1">`"chunked"`</td></tr><tr><td colspan="1">`X-Upload-Chunk-Index`</td><td colspan="1">Index of the chunk</td></tr><tr><td colspan="1">`X-Upload-Chunk-Count`</td><td colspan="1">Total chunk count</td></tr><tr><td colspan="1">`X-File-Name`</td><td colspan="1">Name of the file</td></tr><tr><td colspan="1">`X-File-Size`</td><td colspan="1">Size of the file in bytes</td></tr><tr><td colspan="1">`X-File-Type`</td><td colspan="1">Mime type of the file</td></tr><tr><td colspan="1">`Content-Type`</td><td colspan="1">Should be set to `"application/octet-stream"`</td></tr><tr><td colspan="1">`Content-Length`</td><td colspan="1"><span>Size of the chunk in bytes, required if your HTTP client doesn't add this header, typically the Nuxeo</span> [JavaScript Client]({{page page='javascript-client'}})<span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></td></tr></tbody></table>
+<table><tbody><tr><th colspan="1">Header name</th><th colspan="1">Description</th></tr><tr><td colspan="1">`X-Upload-Type`</td><td colspan="1">`"chunked"`</td></tr><tr><td colspan="1">`X-Upload-Chunk-Index`</td><td colspan="1">Index of the chunk</td></tr><tr><td colspan="1">`X-Upload-Chunk-Count`</td><td colspan="1">Total chunk count</td></tr><tr><td colspan="1">`X-File-Name`</td><td colspan="1">Name of the file</td></tr><tr><td colspan="1">`X-File-Size`</td><td colspan="1">Size of the file in bytes</td></tr><tr><td colspan="1">`X-File-Type`</td><td colspan="1">Mime type of the file</td></tr><tr><td colspan="1">`Content-Type`</td><td colspan="1">Should be set to `"application/octet-stream"`</td></tr><tr><td colspan="1">`Content-Length`</td><td colspan="1">Size of the chunk in bytes, required if your HTTP client doesn't add this header, typically the Nuxeo [JavaScript Client]({{page page='javascript-client'}})</td></tr></tbody></table>
 
 `X-Upload-Chunk-Index` must be the number of the chunk in the ordered list of chunks, starting from 0.
 
@@ -350,7 +346,7 @@ JSON response data:
 {"batchId": batchId, "fileIdx": fileIdx, "uploadType": "chunked", "uploadedSize": xxx, "uploadedChunkIds": [0, 1, 2], "chunkCount": 5}
 ```
 
-### <span>Getting Information about a Chunked File</span>
+### Getting Information about a Chunked File
 
 ```
 GET /api/v1/upload/{batchId}/{fileIdx}

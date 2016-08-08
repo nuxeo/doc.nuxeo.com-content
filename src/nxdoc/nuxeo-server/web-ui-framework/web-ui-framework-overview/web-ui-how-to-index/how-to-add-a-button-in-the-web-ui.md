@@ -19,7 +19,6 @@ labels:
     - action
     - studio
     - actions-filters-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -271,7 +270,7 @@ Let's add a new button to approve a document. This button should be displayed wi
 
     {{#> callout type='tip' }}
 
-    If you are not already familiar with&nbsp;<span class="confluence-link">User Actions and Automation Chains</span>, you might want to take a look at the [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})&nbsp;how-to first.
+    If you are not already familiar with&nbsp;User Actions and Automation Chains, you might want to take a look at the [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})&nbsp;how-to first.
 
     {{/callout}}
 5.  Name the automation chain&nbsp;`custom_validation_chain`.
@@ -331,20 +330,26 @@ If you want to filter the button you are adding to the form only for a specific 
 You can [contribute an XML extension]({{page page='how-to-contribute-to-an-extension'}}) to remove the default button:
 
 ```
+<extension point="actions" target="org.nuxeo.ecm.platform.actions.ActionService">
+  <action id="CREATE_DOCUMENT">
+    <filter-id>is_not_creating_for_type_T</filter-id>
+  </action>
+</extension>
 
-    is_not_creating_for_type_T
-
-      #{navigationContext.getChangeableDocument().getType().equals("T")}
-
+<extension point="filters" target="org.nuxeo.ecm.platform.actions.ActionService">
+  <filter id="is_not_creating_for_type_T">
+    <rule grant="false">
+      <condition>#{navigationContext.getChangeableDocument().getType().equals("T")}</condition>
+    </rule>
+  </filter>
+</extension>
 ```
 
 &nbsp;
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Popular How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
 *   [How to Hide a Tab, a Link or a Button for a Group or a User]({{page page='how-to-hide-a-tab-a-link-or-a-button-for-a-group-or-a-user'}})
 *   [How to Make the New Button Appear on a Custom Folderish Document]({{page page='how-to-make-the-new-button-appear-on-a-custom-folderish-document'}})
@@ -357,15 +362,11 @@ You can [contribute an XML extension]({{page page='how-to-contribute-to-an-exten
 
 &nbsp;
 
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Standard Action Types]({{page page='standard-action-types'}})
 *   [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
 *   [User Actions in Nuxeo Studio]({{page space='studio' page='user-actions'}})
 *   [User actions categories]({{page space='studio' page='user-actions-categories'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

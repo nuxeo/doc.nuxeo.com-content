@@ -10,7 +10,6 @@ labels:
     - token-based-authentication-component
     - kerberos-authentication-component
     - authentication-component
-    - lts2015-ok
     - migration-sample
 tabbed_page: true
 confluence:
@@ -255,29 +254,30 @@ You can find a [full example of contribution to the userManager](http://explorer
 Users are defined on the `users` element:
 
 ```
-
-        somedirectory ...
+<userManager>
+    <users>
+        <directory>somedirectory</directory> ...
 ```
 
-The value `somedirectory` is the name of a contributed directory (see [LDAP]({{page page='data-lists-and-directories'}}) and <span class="confluence-link">[ SQL users]({{page page='data-lists-and-directories'}})</span> contributions, as well as [multidirectory]({{page page='data-lists-and-directories'}})).
+The value `somedirectory` is the name of a contributed directory (see [LDAP]({{page page='data-lists-and-directories'}}) and [ SQL users]({{page page='data-lists-and-directories'}}) contributions, as well as [multidirectory]({{page page='data-lists-and-directories'}})).
 
 Groups are defined on the `groups` element (also referencing already contributed directory).
 
 ```
-
-    somegroupdir
-    members
-    subgroups
-    parentgroup
-    search_only
-
+ <groups>
+    <directory>somegroupdir</directory>
+    <membersField>members</membersField>
+    <subGroupsField>subgroups</subGroupsField>
+    <parentGroupsField>parentgroup</parentGroupsField>
+    <listingMode>search_only</listingMode>
+</groups> 
 ```
 
 ## Default Users and Groups Configuration
 
 By default, the platform's administrator is the principal "Administrator". On the same [contribution to the UserManager extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.usermanager.UserService--userManager) you can define which principal from the remote identity provider will be the administrator of the application, instead of Administrator. That way you can assign a "real" user. This is done using the `defaultAdministratorId` element.
 
-<span style="color: rgb(51,51,51);">You can also choose a group from your company's directory instead of using the default "administrators" group, to determine the users who will benefit from all the rights in the platform. This is done using the</span> <span style="color: rgb(51,51,51);">&nbsp;</span> `administratorsGroup` <span style="color: rgb(51,51,51);">element.</span> <span style="color: rgb(51,51,51);">&nbsp;</span>
+<span style="color: rgb(51,51,51);">You can also choose a group from your company's directory instead of using the default "administrators" group, to determine the users who will benefit from all the rights in the platform. This is done using the</span> `administratorsGroup` <span style="color: rgb(51,51,51);">element.</span>
 
 ## Advanced Authentication Schemes
 
@@ -286,12 +286,20 @@ You may want to use other authentication protocols and / or identity providers. 
 **In any case**, you have to configure the "authentication chain" with the following extension file that you can deploy with Nuxeo Studio or by putting an XML file inside the folder `nxserver/config` (see [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})). You have to adapt the `authenticationChain` element content with the list of plugins you want to use (plugins are documented below on this page).
 
 ```
-
-   org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig
-
-        BASIC_AUTH
-        ANONYMOUS_AUTH
-        THE_PLUGIN_I_WANT_TO_USE
+<component name="org.nuxeo.ecm.anonymous.activation">
+   <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
+    <extension
+      target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
+      point="chain">
+    <authenticationChain>
+      <plugins>
+        <plugin>BASIC_AUTH</plugin>
+        <plugin>ANONYMOUS_AUTH</plugin>
+        <plugin>THE_PLUGIN_I_WANT_TO_USE</plugin>
+      </plugins>
+    </authenticationChain>
+  </extension>
+</component>
 
 ```
 
@@ -317,9 +325,22 @@ To activate anonymous authentication:
 2.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) called `anonymous-auth-config.xml` with the following content:
 
     ```
+    <?xml version="1.0"?>
+    <component name="org.nuxeo.ecm.platform.login.anonymous.config">
 
-              Guest
-              User
+      <!-- Add an Anonymous user -->
+      <extension target="org.nuxeo.ecm.platform.usermanager.UserService" point="userManager">
+        <userManager>
+          <users>
+            <anonymousUser id="Guest">
+              <property name="firstName">Guest</property>
+              <property name="lastName">User</property>
+            </anonymousUser>
+          </users>
+        </userManager>
+      </extension>
+
+    </component>
 
     ```
 
@@ -346,7 +367,7 @@ You can find more details on the implementation of the endpoints and expected pa
 
 ### OpenID / OAuth 2
 
-If you want to offer ability to get authenticated by a&nbsp;OpenID / OAuth 2 compatible third party provider&nbsp; (like "Login with Google", or "Login with Facebook"), <span class="confluence-link">follow instructions on the page [Using OpenID / OAuth2 in Login Screen]({{page page='using-openid-oauth2-in-login-screen'}})</span> .
+If you want to offer ability to get authenticated by a&nbsp;OpenID / OAuth 2 compatible third party provider&nbsp; (like "Login with Google", or "Login with Facebook"), follow instructions on the page [Using OpenID / OAuth2 in Login Screen]({{page page='using-openid-oauth2-in-login-screen'}}) .
 
 ### Generic SSO
 
@@ -360,16 +381,22 @@ To install and configure this plugin this plugin:
 4.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) with the following content:
 
     ```
+     <component name="org.nuxeo.ecm.platform.authenticator.mod.sso.config">
 
-      org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig
-      org.nuxeo.ecm.platform.login.Proxy
+      <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
+      <require>org.nuxeo.ecm.platform.login.Proxy</require>
 
-          Trusting_LM
-
-            <\!-\- configure="" here="" the="" name="" of="" http="" header="" that="" is="" used="" to="" retrieve="" user="" identity="" --="">
-            remote_user
-            false
-
+      <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="authenticators">
+        <authenticationPlugin name="PROXY_AUTH">
+          <loginModulePlugin>Trusting_LM</loginModulePlugin>
+          <parameters>
+            <\!-\- configure here the name of the http header that is used to retrieve user identity -->
+            <parameter name="ssoHeaderName">remote_user</parameter>
+            <parameter name="ssoNeverRedirect">false</parameter>
+          </parameters>
+        </authenticationPlugin>
+      </extension>
+    </component>
     ```
 
     **Notes:** Your XML extension's name must end with&nbsp;`-config.xml`.
@@ -394,18 +421,26 @@ To install the CAS2 authentication plugin:
 4.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) called `CAS2-config.xml` with the following content:
 
     ```
+    <component name="org.nuxeo.ecm.platform.authenticator.cas2.sso.config">
 
-      org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig
-      org.nuxeo.ecm.platform.login.Cas2SSO
+      <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
+      <require>org.nuxeo.ecm.platform.login.Cas2SSO</require>
 
-          Trusting_LM
-
-            ticket
-            http://127.0.0.1:8080/nuxeo/nxstartup.faces
-            http://127.0.0.1:8080/cas/login
-            http://127.0.0.1:8080/cas/serviceValidate
-            service
-            http://127.0.0.1:8080/cas/logout
+      <!-- Configure you CAS server parameters -->
+      <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="authenticators">
+        <authenticationPlugin name="CAS2_AUTH">
+          <loginModulePlugin>Trusting_LM</loginModulePlugin>
+          <parameters>
+            <parameter name="ticketKey">ticket</parameter>
+            <parameter name="appURL">http://127.0.0.1:8080/nuxeo/nxstartup.faces</parameter>
+            <parameter name="serviceLoginURL">http://127.0.0.1:8080/cas/login</parameter>
+            <parameter name="serviceValidateURL">http://127.0.0.1:8080/cas/serviceValidate</parameter>
+            <parameter name="serviceKey">service</parameter>
+            <parameter name="logoutURL">http://127.0.0.1:8080/cas/logout</parameter>
+          </parameters>
+        </authenticationPlugin>
+      </extension>
+    </component>
 
     ```
 
@@ -429,15 +464,22 @@ To install this authentication plugin:
 4.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) with the following content:
 
     ```
+    <component name="org.nuxeo.ecm.platform.authenticator.portal.sso.config">
 
-      org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig
-      org.nuxeo.ecm.platform.login.Portal
+      <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
+      <require>org.nuxeo.ecm.platform.login.Portal</require>
 
-          Trusting_LM
-
-            <\!-\- define="" here="" shared="" secret="" between="" the="" portal="" and="" Nuxeo="" server="" --="">
-            nuxeo5secretkey
-            3600
+      <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="authenticators">
+        <authenticationPlugin name="PORTAL_AUTH">
+          <loginModulePlugin>Trusting_LM</loginModulePlugin>
+          <parameters>
+            <\!-\- define here shared secret between the portal and Nuxeo server -->
+            <parameter name="secret">nuxeo5secretkey</parameter>
+            <parameter name="maxAge">3600</parameter>
+          </parameters>
+        </authenticationPlugin>
+      </extension>
+    </component>
 
     ```
 
@@ -466,14 +508,22 @@ To install this authentication plugin:
 4.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) called&nbsp;`ntlm-auth-config.xml` with the following content:
 
     ```
+    <component name="org.nuxeo.ecm.platform.authenticator.ntlm.config">
 
-      org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig
-      org.nuxeo.ecm.platform.login.NTLM
+      <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
+      <require>org.nuxeo.ecm.platform.login.NTLM</require>
 
-          Trusting_LM
-
-            <\!-\- Add="" here="" parameters="" for="" you="" domain,="" please="" ee="" [http:="" jcifs.samba.org="" src="" docs="" ntlmhttpauth.html ];="" MyControler
+      <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="authenticators">
+        <authenticationPlugin name="NTLM_AUTH">
+          <loginModulePlugin>Trusting_LM</loginModulePlugin>
+          <parameters>
+            <\!-\- Add here parameters for you domain, please ee [http://jcifs.samba.org/src/docs/ntlmhttpauth.html&nbsp];
+            <parameter name="jcifs.http.domainController">MyControler</parameter>
             \-->
+          </parameters>
+        </authenticationPlugin>
+      </extension>
+    </component>
 
     ```
 
@@ -490,14 +540,33 @@ To install this authentication plugin:
 
 ## Customizing the Login Page
 
-You can customize the login page using[ <span class="confluence-link">Nuxeo Studio</span> ]({{page space='studio' page='branding'}})(background picture, colors, logo).
+You can customize the login page using[ Nuxeo Studio ]({{page space='studio' page='branding'}})(background picture, colors, logo).
 
 ## Adding New Fields to The User Profile or Group Profile
 
 Users and groups profile are defined by schemas. The default user schema is:
 
 ```
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:nxs="http://www.nuxeo.org/ecm/schemas/user"
+    targetNamespace="http://www.nuxeo.org/ecm/schemas/user">
 
+  <xs:include schemaLocation="base.xsd" />
+
+  <xs:element name="username" type="xs:string" />
+  <xs:element name="password" type="xs:string" />
+  <xs:element name="email" type="xs:string" />
+  <xs:element name="firstName" type="xs:string" />
+  <xs:element name="lastName" type="xs:string" />
+  <xs:element name="company" type="xs:string" />
+
+  <xs:element name="petName" type="xs:string" />
+
+  <!-- inverse reference -->
+  <xs:element name="groups" type="nxs:stringList" />
+
+</xs:schema>
 ```
 
 &nbsp;
@@ -511,9 +580,10 @@ It is displayed in the Nuxeo Platform like this:
 If you want to add more fields than the default ones on the user profile, you can simply override the definition of the schema `user` (in a Studio project or in an XML component in `nxserver/config`).
 
 ```
-
-    < 
-
+<extension point="schema" target="org.nuxeo.ecm.core.schema.TypeService"> 
+    <<!-- override default user schema --> 
+    <schema name="user" override="true" src="schemas/my_custom_user_schema.xsd"/>
+</extension>
 ```
 
 Note that you can contribute a new [schema with Nuxeo Studio]({{page space='studio' page='schemas'}}). The default one is:
@@ -525,13 +595,35 @@ You then have to update the forms used for editing the user profile (to be docum
 It works the same for the `group` schema, and you have to make sure to have some mandatory fields available for references and inverse references for the group hierarchy. See default one:
 
 ```
+<?xml version="1.0"?>
+
+<xs:schema targetNamespace="http://www.nuxeo.org/ecm/schemas/group"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:nxs="http://www.nuxeo.org/ecm/schemas/group">
+
+  <xs:include schemaLocation="base.xsd" />
+
+  <xs:element name="groupname" type="xs:string" />
+  <xs:element name="grouplabel" type="xs:string" />
+  <xs:element name="description" type="xs:string" />
+
+  <!-- references -->
+  <xs:element name="members" type="nxs:stringList" />
+  <xs:element name="subGroups" type="nxs:stringList" />
+
+  <!-- inverse reference -->
+  <xs:element name="parentGroups" type="nxs:stringList" />
+
+</xs:schema>
 
 ```
 
 That can be contributed with the following extension:
 
 ```
-
+ <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+  <schema name="group" src="directoryschema/group.xsd"/>
+</extension>
 ```
 
 ## Integrating with a Webservice Based Identify Provider
@@ -629,12 +721,22 @@ Each plugin must:
 Here is a sample XML descriptor for registering an `AuthenticationPlugin`:
 
 ```
-
-      true
-
-        login.jsp
-        user_name
-        user_password
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.platform.ui.web.auth.defaultConfig">
+  <extension
+    target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
+    point="authenticators">
+    <authenticationPlugin name="FORM_AUTH" enabled="true"
+      class="org.nuxeo.ecm.platform.ui.web.auth.plugins.FormAuthenticator">
+      <needStartingURLSaving>true</needStartingURLSaving>
+      <parameters>
+        <parameter name="LoginPage">login.jsp</parameter>
+        <parameter name="UsernameKey">user_name</parameter>
+        <parameter name="PasswordKey">user_password</parameter>
+      </parameters>
+    </authenticationPlugin>
+   </extension>
+</component>
 
 ```
 
@@ -643,12 +745,20 @@ As you can see in the above example, the descriptor contains the parameters tag 
 `NuxeoAuthenticationFilter` supports several authentication system. For example, this is useful to have users using form-based authentication and having RSS clients using Basic Authentication. Because of that, `AuthenticationPlugin` must be ordered. For that purpose, `NuxeoAuthenticationFilter` uses a dedicated extension point that lets you define the `AuthenticationChain`.
 
 ```
-
-   org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig
-
-        BASIC_AUTH
-        ANONYMOUS_AUTH
-        FORM_AUTH
+<component name="org.nuxeo.ecm.anonymous.activation">
+   <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
+    <extension
+      target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
+      point="chain">
+    <authenticationChain>
+      <plugins>
+        <plugin>BASIC_AUTH</plugin>
+        <plugin>ANONYMOUS_AUTH</plugin>
+        <plugin>FORM_AUTH</plugin>
+      </plugins>
+    </authenticationChain>
+  </extension>
+</component>
 
 ```
 

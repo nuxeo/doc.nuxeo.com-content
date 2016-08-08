@@ -4,7 +4,6 @@ labels:
     - curl
     - client
     - rest-api-component
-    - lts2015-ok
     - excerpt
     - multiexcerpt
 confluence:

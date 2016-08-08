@@ -4,7 +4,6 @@ labels:
     - codec
     - marshalling
     - automation-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '18451738'
@@ -52,6 +51,13 @@ The logic you need to provide is as follow:
 Server and client do not share classes, so you need to provide two marshalling implementation classes.
 
 Server side, you should provide a&nbsp;[codec](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.automation.server.AutomationServer--codecs). The implementation class is to be contributed to the automation server component using the&nbsp;`codecs`&nbsp;extension point.
+
+```
+  <extension target="org.nuxeo.ecm.automation.server.AutomationServer"
+        point="codecs">
+        <codec class="org.nuxeo.ecm.automation.server.test.MyObjectCodec" />
+  </extension>
+```
 
 [`MyObjectCodec`](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/MyObjectCodec.java)&nbsp;class should extend&nbsp;[`org.nuxeo.ecm.automation.server.jaxrs.io.ObjectCodec`](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-io/src/main/java/org/nuxeo/ecm/automation/io/services/codec/ObjectCodec.java). The most common codecs provided by default into the Nuxeo server are implemented into [`org.nuxeo.ecm.automation.server.jaxrs.io.ObjectCodecService`](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-io/src/main/java/org/nuxeo/ecm/automation/io/services/codec/ObjectCodecService.java).
 

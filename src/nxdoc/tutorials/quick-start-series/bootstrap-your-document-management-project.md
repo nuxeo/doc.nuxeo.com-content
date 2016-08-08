@@ -2,7 +2,6 @@
 title: Bootstrap Your Document Management Project
 labels:
     - bootstrap
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235677'
@@ -17,6 +16,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/O4vZ'
     source_link: /display/NXDOC/Bootstrap+Your+Document+Management+Project
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-07-19 12:19'
+        message: ix title
+        version: '28'
     - 
         author: Manon Lumeau
         date: '2016-06-09 13:23'
@@ -164,9 +168,9 @@ Due to the business flavor of&nbsp; most of the projects made with Nuxeo Platfor
 
 You can [download the Nuxeo Platform](http://www.nuxeo.com/downloads/) and [install it]({{page page='installation'}}) on site. Or you can use a trial instance of Nuxeo Cloud, available in the [Nuxeo Online Services trial offer](https://connect.nuxeo.com/register/#/). In both cases, you can subscribe to the trial offer to get access to Nuxeo Studio and easily customize your Nuxeo Platform instance.
 
-{{#> callout type='info' heading="Related Documentation"}}
+{{#> callout type='info' heading='Related Documentation'}}
 
-*   [nuxeo.io]({{page space='connect' page='nuxeoio'}})
+*   [nuxeo.io]({{page space='studio' page='nuxeoio'}})
 *   [Installation]({{page page='installation'}})
 
 {{/callout}}
@@ -175,9 +179,8 @@ You can [download the Nuxeo Platform](http://www.nuxeo.com/downloads/) and [inst
 
 Once you have your Nuxeo Platform instance running, spend one hour customizing the look'n feel: change the logo, the colors, customize the login page to start making the Platform your own.
 
-{{#> callout type='info' heading="Related Documentation"}}
+{{#> callout type='info' heading='Related Documentation'}}
 
-*   [How to Brand Your Application]({{page page='how-to-brand-your-application'}})
 *   [Branding]({{page space='studio' page='branding'}})
 *   [Online UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)
 
@@ -189,7 +192,7 @@ Organize the hierarchy of the repository so that it seems like a good base for s
 
 You don't need to be extensive here, just the initial folders and how the hierarchy will be evolving in the normal use of the product.
 
-{{#> callout type='info' heading="Related Documentation"}}
+{{#> callout type='info' heading='Related Documentation'}}
 
 *   [Document Types]({{page space='userdoc' page='document-types'}})
 *   [Using Workspace Templates]({{page space='userdoc' page='using-workspace-templates'}})
@@ -201,9 +204,9 @@ You don't need to be extensive here, just the initial folders and how the hierar
 
 The Nuxeo Platform can be plugged to a wide range of directories and authentication systems natively (LDAP, AD, CAS) or through connectors (Shibboleth, Kerberos, etc.). You can then define what groups you'll be needing in your application and from which source.
 
-{{#> callout type='info' heading="Related Documentation"}}
+{{#> callout type='info' heading='Related Documentation'}}
 
-*   [Authentication, users and groups]({{page page='authentication-and-user-management'}})
+*   [Authentication and User Management]({{page page='authentication-and-user-management'}})
 *   [How to Add Custom LDAP Fields to the UI]({{page page='how-to-add-custom-ldap-fields-to-the-ui'}})
 
 {{/callout}}
@@ -212,7 +215,7 @@ The Nuxeo Platform can be plugged to a wide range of directories and authenticat
 
 Think of how you want to set up the security on your documents. The most standard way is to [base it on ACLs]({{page space='userdoc' page='managing-permissions'}}) (either on folders, or also on documents itself), but you can also go further using [Security policies]({{page page='security-policy-service'}}).
 
-{{#> callout type='info' heading="Related Documentation"}}
+{{#> callout type='info' heading='Related Documentation'}}
 
 *   [Nuxeo Security System]({{page page='nuxeo-security-system'}})
 *   [Managing Permissions]({{page space='userdoc' page='managing-permissions'}})
@@ -223,7 +226,7 @@ Think of how you want to set up the security on your documents. The most standar
 
 Standard ways are based on forms and drag'n drop, but you may also have some third-party feeding, for instance by a digitalization platform, or from an ERP. You need to clearly identify what will be the most frequent way for your use cases and pay specific attention to it. We provide tools like [watch folder importers]({{page page='nuxeo-bulk-document-importer'}}), [REST APIs]({{page page='rest-api'}}), standard APIs ([CMIS]({{page page='cmis'}})). If it comes from a third-party system, one of the questions will be "which metadata" are given right at the creation time.
 
-{{#> callout type='info' heading="Related Documentation"}}
+{{#> callout type='info' heading='Related Documentation'}}
 
 *   [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
 *   [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
@@ -247,7 +250,7 @@ For metadata, we can split them among the following categories:
 
 Note that it is possible to extract some of the metadata automatically from a file using the [binary-metadata]({{page page='binary-metadata'}}) module.
 
-{{#> callout type='info' heading="Related Documentation"}}
+{{#> callout type='info' heading='Related Documentation'}}
 
 *   [Repository Concepts]({{page page='repository-concepts'}})
 *   [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
@@ -264,7 +267,7 @@ You should definitely try to avoid letting the user have to configure himself th
 
 You can go even deeper in tuning the search requests behavior, using Elasticsearch [hints]({{page page='elasticsearch-hints-cheat-sheet'}}).
 
-{{#> callout type='info' heading="Related Documentation"}}
+{{#> callout type='info' heading='Related Documentation'}}
 
 *   [Indexing and Query]({{page page='indexing-and-query'}})
 *   [How to Configure a New Search Tab]({{page page='indexing-and-query'}})
@@ -276,7 +279,7 @@ You can go even deeper in tuning the search requests behavior, using Elasticsear
 
 You have now defined and chosen the document management mandatory elements. To make the application your own, you now need to implement your own business logic to take into account your processes by adding buttons, workflows, transitions in the documents life cycle, etc. [Automation]({{page page='automation'}}) enables you to create complex business rules and logic from small operations and have them triggered by events and [user actions]({{page space='studio' page='user-actions-categories'}}), and workflows are built using a [visual graph]({{page space='studio' page='graph-tab'}}).
 
-{{#> callout type='info' heading="Related Documentation"}}
+{{#> callout type='info' heading='Related Documentation'}}
 
 *   [Workflow]({{page page='workflow'}})
 *   [Automation]({{page page='automation'}})
@@ -288,7 +291,7 @@ You have now defined and chosen the document management mandatory elements. To m
 
 At some point in your project you need to decide about the architecture. Do you want to use a relational database (PostgreSQL, MySQL, etc.), a NoSQL dabase such as MongoDB, how are data persisted, do you need a cluster ?
 
-{{#> callout type='info' heading="Related Documentation"}}
+{{#> callout type='info' heading='Related Documentation'}}
 
 *   [Persistence Architecture]({{page page='persistence-architecture'}})
 *   [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})

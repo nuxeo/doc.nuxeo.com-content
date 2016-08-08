@@ -3,7 +3,6 @@ title: Document Content Views
 labels:
     - document-content-view
     - web-ui-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '6029663'
@@ -60,13 +59,17 @@ Some default document views present [content views]({{page page='content-views'}
 A `category` has been added to make the distinction between the different views, here is a sample configuration:
 
 ```
-
+<type id="Workspace">
   [...]
-
-    document_content
-
+  <contentViews category="content">
+    <contentView>document_content</contentView>
+  </contentViews>
+  <contentViews category="trash_content">
+    <contentView showInExportView="false">
       document_trash_content
-
+    </contentView>
+  </contentViews>
+</type>
 ```
 
 The category&nbsp;`content` is looked up by the default tab showing a folderish document content. The category `trash_content` is looked up by the default tab showing a folderish document trash content.

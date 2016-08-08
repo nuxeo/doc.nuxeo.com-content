@@ -6,7 +6,6 @@ labels:
     - client
     - community-links
     - java-client-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16091040'
@@ -445,19 +444,21 @@ To use the Java Automation client you need to put a dependency on the following 
 &nbsp;
 
 ```
-
-    org.nuxeo.ecm.automation
-    nuxeo-automation-client
-    ...
+<dependency>
+    <groupId>org.nuxeo.ecm.automation</groupId>
+    <artifactId>nuxeo-automation-client</artifactId>
+    <version>...</version>
+</dependency>
 
 ```
 
 ```
-
-    org.nuxeo.ecm.automation
-    nuxeo-automation-client
-    ...
-    jar-with-dependencies
+<dependency>
+    <groupId>org.nuxeo.ecm.automation</groupId>
+    <artifactId>nuxeo-automation-client</artifactId>
+    <version>...</version>
+    <classifier>jar-with-dependencies</classifier>
+ </dependency>
 
 ```
 
@@ -545,7 +546,7 @@ You can see the code above has three distinctive parts:
 
     Make sure to not open a session each time you call an operation, otherwise you will have performances issues.
 
-    We recommend to open the session&nbsp;once <span>before calling any operation,</span> like during application startup or when the user needs to authenticate. Then you may close it when the user logout or during application shutdown.
+    We recommend to open the session&nbsp;once before calling any operation, like during application startup or when the user needs to authenticate. Then you may close it when the user logout or during application shutdown.
 
     {{/callout}}
 
@@ -576,7 +577,7 @@ Using a session you can now invoke remote operations.
 
     ```
 
-    {{#> callout type='info' heading="The client API provides both synchronous and asynchronous execution"}}
+    {{#> callout type='info' heading='The client API provides both synchronous and asynchronous execution'}}
 
     For an asynchronous execution you can make a call to the `execute(AsyncCallback<Object> cb)` method.
 
@@ -584,7 +585,7 @@ Using a session you can now invoke remote operations.
 
     Default value is 2 seconds. If you don't use any asynchronous call you can set this timeout to 0 in order not to wait at client shutdown.
 
-    {{/callout}}{{#> callout type='info' heading="Setting the HTTP connection timeout"}}
+    {{/callout}}{{#> callout type='info' heading='Setting the HTTP connection timeout'}}
 
     You can set a timeout in milliseconds for the HTTP connection in order to avoid an infinite wait in case of a network cut or if the Nuxeo server is not responding.
 
@@ -726,74 +727,61 @@ The example will create a new File document into the root _"/"_ document and the
     // create a file document
     session.newRequest("Document.Create").setInput(root).set("type", "File").set("name", "myfile").set("properties", "dc:title=My File").execute();
     ```
-
-    {{#> callout type='info' }}
-
-    Note the usage of `setInput()` method. This is to specify that the create operation must be executed in the context of the root document - so the new document will be created under the root document. Also you can notice that the input object is a Document instance.
-
-    {{/callout}}
+    {{#> callout type='info' }}Note the usage of `setInput()` method. This is to specify that the create operation must be executed in the context of the root document - so the new document will be created under the root document. Also you can notice that the input object is a Document instance.{{/callout}}
 2.  Now get the file to upload and put it into the newly created document.
 
     ```
-            File file = getTheFileToUpload();
-            FileBlob fb = new FileBlob(file);
-            fb.setMimeType("text/xml");
-            // uploading a file will return null since we used HEADER_NX_VOIDOP
-            session.newRequest("Blob.Attach").setHeader(
-                    Constants.HEADER_NX_VOIDOP, "true").setInput(fb)
-                    .set("document", "/myfile").execute();
-
+    File file = getTheFileToUpload();
+    FileBlob fb = new FileBlob(file);
+    fb.setMimeType("text/xml");
+    // uploading a file will return null since we used HEADER_NX_VOIDOP
+    session.newRequest("Blob.Attach").setHeader(
+            Constants.HEADER_NX_VOIDOP, "true").setInput(fb)
+            .set("document", "/myfile").execute();
     ```
-
     The last `execute` call will return `null` since the `HEADER_NX_VOIDOP` header was used. This is to avoid receiving back from the server the blob we just uploaded.
-
     {{#> callout type='info' }}
-
     Note that to upload a file we need to use a `Blob` object that wrap the file to upload.
-
     {{/callout}}
 3.  Now get the the file document where the blob was uploaded.
+
 4.  Then retrieve the blob remote URL from the document metadata. We can use this URL to download the blob.
 
     ```
-            import org.nuxeo.ecm.automation.client.model.Document;
-            import org.nuxeo.ecm.automation.client.Session;
-            import org.nuxeo.ecm.automation.client.Constants;
+    import org.nuxeo.ecm.automation.client.model.Document;
+    import org.nuxeo.ecm.automation.client.Session;
+    import org.nuxeo.ecm.automation.client.Constants;
 
-            // get the file document where blob was attached
-            Document doc = (Document) session.newRequest(
-                    "Document.Fetch").setHeader(
-                    Constants.HEADER_NX_SCHEMAS, "*").set("value", "/myfile").execute();
-            // get the file content property
-            PropertyMap map = doc.getProperties().getMap("file:content");
-            // get the data URL
-            String path = map.getString("data");
-
+    // get the file document where blob was attached
+    Document doc = (Document) session.newRequest(
+            "Document.Fetch").setHeader(
+            Constants.HEADER_NX_SCHEMAS, "*").set("value", "/myfile").execute();
+    // get the file content property
+    PropertyMap map = doc.getProperties().getMap("file:content");
+    // get the data URL
+    String path = map.getString("data");
     ```
-
     You can see we used the special `HEADER_NX_SCHEMAS` header to specify we want all properties of the document to be included in the response.
-
+    
 5.  Now download the file located on the server under the `path` we retrieved from the document properties:
 
     ```
-            // download the file from its remote location
-            blob = (FileBlob) session.getFile(path);
-            // ... do something with the file
-            // at the end delete the temporary file
-            blob.getFile().delete();
-
+    // download the file from its remote location
+    blob = (FileBlob) session.getFile(path);
+    // ... do something with the file
+    // at the end delete the temporary file
+    blob.getFile().delete();
     ```
 
     We can do the same by invoking the `Blob.Get` operation.
 
     ```
-            // now test the GetBlob operation on the same blob
-            blob = (FileBlob) session.newRequest("Blob.Get").setInput(doc).set(
-                    "xpath", "file:content").execute();
-            // ... do something with the file
-            // at the end delete the temporary file
-            blob.getFile().delete();
-
+    // now test the GetBlob operation on the same blob
+    blob = (FileBlob) session.newRequest("Blob.Get").setInput(doc).set(
+            "xpath", "file:content").execute();
+    // ... do something with the file
+    // at the end delete the temporary file
+    blob.getFile().delete();
     ```
 
 ## Managing Complex Properties
@@ -803,11 +791,33 @@ Complex properties can have different levels complexity. This part of the docume
 Let's see a complex property schema example:
 
 ```
-
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:mc="http://nuxeo.org/schemas/dataset/"
+           elementFormDefault="qualified"
+           targetNamespace="http://nuxeo.org/schemas/dataset/">
 ...
+    <xs:complexType name="field">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="fieldType" type="mc:fieldType">
 
+            </xs:element>
+            <xs:element name="columnName" type="xs:string"/>
+            <xs:element name="sqlTypeHint" type="xs:string"/>
+
+            <xs:element name="roles">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="role" type="mc:roleType" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
 ...
-
+</xs:schema>
 ```
 
 Let's see a JSON example of these complex property values:
@@ -972,7 +982,6 @@ Let's see an example.
             }
         }
     }
-
     ```
 
 2.  Declare a POJO on client side as following:
@@ -1028,12 +1037,15 @@ Let's see an example.
     {{#> callout type='note' }}
     We assume that the POJO client side stub is similar to the document model adapter stub server side.
     {{/callout}}
+
     So now we have on client side a POJO `BusinessBean` and on server side a Document Model Adapter `BusinessBeanAdapter`.
+
     We are going to use&nbsp;two operations for creating/updating process:
 
     *   [`Business.BusinessCreateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Business.BusinessCreateOperation)
-    *   [`Business.BusinessUpdateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Business.BusinessUpdateOperation){{#> callout type='info' }}
-    Since 5.7.2, you can see [the Automation Client Service Adapter section]({{page}}) to know how Business operations are wrapped into `BusinessService` adapter and how to use it.
+    *   [`Business.BusinessUpdateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Business.BusinessUpdateOperation)
+
+    {{#> callout type='info' }}Since 5.7.2, you can see [the Automation Client Service Adapter section]({{page}}) to know how Business operations are wrapped into `BusinessService` adapter and how to use it.
     {{/callout}}
 
 3.  Let's see how to map them directly using these operations:
@@ -1120,7 +1132,7 @@ import org.nuxeo.ecm.automation.client.Session;
 BusinessBean file = new BusinessBean("File", "File description", "File");
 
 // Fetching the business service adapter
-BusinessService businessService = session.getAdapter(BusinessService.class);
+BusinessService<BusinessBean> businessService = session.getAdapter(BusinessService.class);
 
 // Create server side injecting the POJO to the service method create
 file = (BusinessBean) businessService.create(file, file.getTitle(), "/");

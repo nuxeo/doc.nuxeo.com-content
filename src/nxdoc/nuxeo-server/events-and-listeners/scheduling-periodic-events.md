@@ -4,7 +4,6 @@ labels:
     - cron
     - event
     - scheduler
-    - content-review-lts2015
     - core-component
     - excerpt
 toc: true
@@ -117,7 +116,7 @@ The [Scheduler Service](http://explorer.nuxeo.org/nuxeo/site/distribution/curren
 
 To schedule an event, you contribute a `<schedule>` to the `schedule` extension point of the&nbsp;`org.nuxeo.ecm.core.scheduler.SchedulerService` component.
 
-{{#> callout type='note' heading="Component name"}}
+{{#> callout type='note' heading='Component name'}}
 
 Before Nuxeo 5.6, the component name was `org.nuxeo.ecm.platform.scheduler.core.service.SchedulerRegistryService`.
 
@@ -144,12 +143,19 @@ The **cronExpression** is described in the following section.
 Here is an example contribution:
 
 ```
-
-      Administrator
-      doStuff
-      default
-
-      0 0 3 1 * ?
+<?xml version="1.0"?>
+<component name="com.example.nuxeo.schedule.monthly_stuff">
+  <extension target="org.nuxeo.ecm.core.scheduler.SchedulerService"
+      point="schedule">
+    <schedule id="monthly_stuff">
+      <username>Administrator</username>
+      <eventId>doStuff</eventId>
+      <eventCategory>default</eventCategory>
+      <!-- Every first of the month at 3am -->
+      <cronExpression>0 0 3 1 * ?</cronExpression>
+    </schedule>
+  </extension>
+</component>
 
 ```
 

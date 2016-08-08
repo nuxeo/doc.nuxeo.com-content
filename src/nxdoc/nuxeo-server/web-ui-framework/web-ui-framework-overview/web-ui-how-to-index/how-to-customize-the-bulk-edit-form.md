@@ -8,7 +8,6 @@ details:
         topics: 'Bulk edit, Web UI'
 labels:
     - howto
-    - content-review-lts2015
     - layout
 toc: true
 confluence:
@@ -275,7 +274,7 @@ history:
         version: '1'
 
 ---
-The bulk edit screen offers a form that allows to edit several documents at the same time.&nbsp;<span>This is implemented using the&nbsp;</span>[BulkEditService](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.webapp.bulkedit.BulkEditService)<span>&nbsp;component.&nbsp;</span>You can customize it with Studio by creating a form layout named&nbsp;`bulkEdit`. The "Edit" layout will be used on the bulk edit popup. The default bulk edit layout can be found on [GitHub](https://github.com/nuxeo/nuxeo/blob/release-6.0/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/layouts-contrib.xml) or in the [Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/6.0/viewContribution/org.nuxeo.ecm.platform.forms.layouts.webapp--layouts).&nbsp;
+The bulk edit screen offers a form that allows to edit several documents at the same time.&nbsp;This is implemented using the&nbsp;[BulkEditService](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.webapp.bulkedit.BulkEditService)&nbsp;component.&nbsp;You can customize it with Studio by creating a form layout named&nbsp;`bulkEdit`. The "Edit" layout will be used on the bulk edit popup. The default bulk edit layout can be found on [GitHub](https://github.com/nuxeo/nuxeo/blob/release-6.0/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/layouts-contrib.xml) or in the [Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/6.0/viewContribution/org.nuxeo.ecm.platform.forms.layouts.webapp--layouts).&nbsp;
 
 ![]({{file name='default_bulk_edit.png'}} ?w=350,border=true)
 
@@ -339,10 +338,10 @@ When configuring a widget to select collections, the field that needs to be refe
 
     <div class="gwt-HTML form-label" title="Editor for property 'pageProviderName'">Document page provider name</div>
 
-    </td><td colspan="1">`<span>default_document_suggestion</span>`</td></tr><tr><td colspan="1">Selection Formatter</td><td colspan="1">`<span>formatSelectedCollection</span>`</td></tr><tr><td colspan="1"><span style="color: rgb(67,67,67);">Suggestion Formatter</span></td><td colspan="1">`<span>formatSuggestedCollection</span>`</td></tr></tbody></table>
-4.  <span>In the Custom properties part fill in the following fields:</span>
+    </td><td colspan="1">`default_document_suggestion`</td></tr><tr><td colspan="1">Selection Formatter</td><td colspan="1">`formatSelectedCollection`</td></tr><tr><td colspan="1"><span style="color: rgb(67,67,67);">Suggestion Formatter</span></td><td colspan="1">`formatSuggestedCollection`</td></tr></tbody></table>
+4.  In the Custom properties part fill in the following fields:
 
-    <table><tbody><tr><td colspan="1">restoreSeamCtx</td><td colspan="1"><span>false</span></td></tr><tr><td colspan="1"><span>operationId</span></td><td colspan="1"><span>Collection.Suggestion</span></td></tr></tbody></table>
+    <table><tbody><tr><td colspan="1">restoreSeamCtx</td><td colspan="1">false</td></tr><tr><td colspan="1">operationId</td><td colspan="1">Collection.Suggestion</td></tr></tbody></table>
 5.  Click on&nbsp;**Save**&nbsp;and deploy your changes on your instance.
 
 You should end up with something like this:
@@ -356,7 +355,10 @@ When users edit several documents at the same time using the bulk edit form, a n
 This versioning policy can be configured through the&nbsp;[versioning](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.webapp.bulkedit.BulkEditService--versioning)&nbsp;extension point:
 
 ```
-
-    MINOR
-
+<extension target="org.nuxeo.ecm.webapp.bulkedit.BulkEditService"
+  point="versioning">
+  <versioning>
+    <defaultVersioningOption>MINOR</defaultVersioningOption>
+  </versioning>
+</extension>
 ```

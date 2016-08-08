@@ -11,7 +11,6 @@ labels:
     - content-view
     - query
     - search-tab-component
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '4687860'
     ajs-parent-page-title: Indexing and Query
@@ -82,32 +81,25 @@ Defining a new search form basically consists in defining a new content view tha
 
 To set a new search form that will replace the Default search form displayed when you click on the Search tab:
 
-1.  <span class="confluence-link">In Studio, click on the **Listings & Views** > [**Search** menu item]({{page space='studio' page='search-advanced-search'}}).</span>
-2.  <span class="confluence-link">Click on the **Create** button to create a new default search.</span>
-3.  <span class="confluence-link">Configure the base query, the form and the results table, like you would on any other content view (see [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})).</span>
-4.  <span class="confluence-link">Save and [deploy]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).
-    </span>
+1.  In Studio, click on the **Listings & Views** > [**Search** menu item]({{page space='studio' page='search-advanced-search'}}).
+2.  Click on the **Create** button to create a new default search.
+3.  Configure the base query, the form and the results table, like you would on any other content view (see [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})).
+4.  Save and [deploy]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).
 
 &nbsp;
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
 *   [How to Configure a Search Filter With Facets and Other Aggregates]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Search screen in Nuxeo Studio]({{page space='studio' page='search-advanced-search'}})
 *   &nbsp;[Content Views in Nuxeo Studio documentation]({{page space='studio' page='content-views'}})
 *   [Content Views in developer documentation]({{page page='content-views'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

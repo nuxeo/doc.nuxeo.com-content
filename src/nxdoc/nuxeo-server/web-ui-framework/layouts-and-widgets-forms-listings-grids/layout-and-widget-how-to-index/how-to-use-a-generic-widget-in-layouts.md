@@ -11,7 +11,6 @@ labels:
     - howto
     - layout
     - layout-widgets-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235623'
@@ -92,7 +91,7 @@ You should then fill the proper type attribute in widget configuration screen (a
 
 &nbsp;
 
-{{#> callout type='tip' heading="Binding Fields from the document to the widget"}}
+{{#> callout type='tip' heading='Binding Fields from the document to the widget'}}
 
 Let's say that the widget needs to be linked to the metadata description from the schema `dublincore` (prefix dc), you can click on **Add** next to "Fields" and enter the field but syntax will differ whether you are on a form layout or a table layout.
 
@@ -101,11 +100,7 @@ Let's say that the widget needs to be linked to the metadata description from th
 
 &nbsp;
 
-{{/callout}}
-
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+{{/callout}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [undefined]({{page}})
 *   [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
@@ -113,9 +108,7 @@ Let's say that the widget needs to be linked to the metadata description from th
 *   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
@@ -123,6 +116,4 @@ Let's say that the widget needs to be linked to the metadata description from th
 *   [Web UI Limitations]({{page page='web-ui-limitations'}})
 *   [Widget Definitions]({{page page='widget-definitions'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

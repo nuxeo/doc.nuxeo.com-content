@@ -4,7 +4,6 @@ labels:
     - funkload
     - link-update
     - performance
-    - content-review-lts2015
     - excerpt
 toc: true
 confluence:
@@ -590,7 +589,7 @@ The idea is to plug our monitor class as a proxy of the real Repository class. W
 1.  Modify the file `config/default-repository-config.xml`(be careful to modify the right file if you are using templates configuration system) and add this line:
 
     ```
-    org.nuxeo.ecm.core.storage.sql.management.MonitoredJDBCBackend
+    <backendClass>org.nuxeo.ecm.core.storage.sql.management.MonitoredJDBCBackend</backendClass>
 
     ```
 
@@ -649,7 +648,7 @@ This benchmark was initially run in 2010 against a Nuxeo 5.3.1.
 #### Steps
 
 1.  Tune the database following tips in the Nuxeo PostgreSQL&nbsp;[FAQ](http://www.nuxeo.org/xwiki/bin/view/FAQ/PostgreSQLSettings).
-2.  Tune Nuxeo: for mass import, we disable the full-text indexing (as described in the [<span class="confluence-link">"Mass import specific tuning" section of PostgreSQL configuration page</span>]({{page page='postgresql'}})<span class="confluence-link">&nbsp;</span>) and disable the ACL optimization ([NXP-4524](https://jira.nuxeo.org/browse/NXP-4524)).
+2.  Tune Nuxeo: for mass import, we disable the full-text indexing (as described in the ["Mass import specific tuning" section of PostgreSQL configuration page]({{page page='postgresql'}})) and disable the ACL optimization ([NXP-4524](https://jira.nuxeo.org/browse/NXP-4524)).
 3.  Import content: mass import is done using a multi-threaded importer to create File document with an attached text file randomly generated using a French dictionary. Only a percentage of the text file will be indexed for the full text, this ratio simulate the proportion of text in a binary format.
     [Sources of the nuxeo-platform-importer](https://github.com/nuxeo/nuxeo-platform-importer/blob/master/README.md)
 4.  Rebuild full text as described in the ["Mass import specific tuning" FAQ](http://www.nuxeo.org/xwiki/bin/view/FAQ/PostgreSQLSettings).

@@ -14,7 +14,6 @@ labels:
     - howto
     - studio
     - layout-widgets-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -204,7 +203,67 @@ To create and use a new widget:
 Sample example on 3 levels with widget property&nbsp;`directoryName` filled with the directory name (mono select):
 
 ```
+<f:subview
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:c="http://java.sun.com/jstl/core"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:a4j="http://richfaces.org/a4j"
+  xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+  xmlns:nxu="http://nuxeo.org/nxweb/util"
+  xmlns:nxdir="http://nuxeo.org/nxdirectory"
+  xmlns:nxl="http://nuxeo.org/nxforms/layout"
+  xmlns:nxp="http://nuxeo.org/nxweb/pdf"
+  id="#{widget.id}">
+<c:if test="#{nxl:isLikeViewMode(widget.mode)}">
 
+  <nxdir:chainSelect id="#{widget.id}_viewselect" size="3" value="#{field}"
+    displayValueOnly="true" defaultRootKey="">
+    <nxdir:chainSelectListbox index="0" size="0" directoryName="#{widget.properties['directoryName']}"
+      localize="true" id="#{widget.id}_parent" displayObsoleteEntries="true" />
+    <nxdir:chainSelectListbox index="1" size="0" directoryName="#{widget.properties['directoryName']}"
+      localize="true" id="#{widget.id}_parent2" displayObsoleteEntries="true" />
+    <nxdir:chainSelectListbox index="2" size="0" directoryName="#{widget.properties['directoryName']}"
+      localize="true" id="#{widget.id}_child" displayObsoleteEntries="true" />
+    <nxdir:chainSelectStatus display="value" id="#{widget.id}_status" />
+  </nxdir:chainSelect>
+
+</c:if>
+<c:if test="#{widget.mode == 'edit'}">
+
+  <nxdir:chainSelect size="3" value="#{field}"
+    id="#{widget.id}_editselect" multiSelect="false"
+    multiParentSelect="false"
+    allowBranchSelection="#{widgetProperty_allowBranchSelection}"
+    defaultRootKey="" required="#{widgetProperty_required}">
+    <a4j:region id="#{widget.id}_region">
+      <nxdir:chainSelectListbox index="0" size="1"
+        directoryName="#{widget.properties['directoryName']}"
+        localize="#{widget.properties['localize']}"
+        id="#{widget.id}_parent" ordering="label">
+        <f:ajax event="change"
+          render="#{widget.id}_parent2 #{widget.id}_child #{widget.id}_message"
+          execute="@this" />
+      </nxdir:chainSelectListbox>
+      <nxdir:chainSelectListbox index="1" size="1"
+        directoryName="#{widget.properties['directoryName']}"
+        localize="#{widget.properties['localize']}"
+        id="#{widget.id}_parent2" ordering="label">
+        <a4j:ajax event="change"
+          render="#{widget.id}_child #{widget.id}_message"
+          execute="@region" />
+      </nxdir:chainSelectListbox>
+    </a4j:region>
+    <nxdir:chainSelectListbox size="1" index="2"
+      directoryName="#{widget.properties['directoryName']}"
+      localize="#{widget.properties['localize']}"
+      id="#{widget.id}_child" ordering="label" />
+  </nxdir:chainSelect>
+  <h:message styleClass="errorMessage" for="#{widget.id}_editselect"
+    id="#{widget.id}_message" />
+
+</c:if>
+</f:subview>
 ```
 
 ### Multi-Select 3-Level Widget
@@ -212,6 +271,92 @@ Sample example on 3 levels with widget property&nbsp;`directoryName` filled with
 Sample example on 3 levels with widget property `directoryName` filled with the directory name (multi select):
 
 ```
+<f:subview
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:c="http://java.sun.com/jstl/core"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:a4j="http://richfaces.org/a4j"
+  xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+  xmlns:nxu="http://nuxeo.org/nxweb/util"
+  xmlns:nxdir="http://nuxeo.org/nxdirectory"
+  xmlns:nxl="http://nuxeo.org/nxforms/layout"
+  xmlns:nxp="http://nuxeo.org/nxweb/pdf"
+  id="#{widget.id}">
+<c:if test="#{nxl:isLikeViewMode(widget.mode)}">
+
+  <nxdir:chainSelect id="#{widget.id}_viewselect" size="3"
+    value="#{field}" displayValueOnly="true" multiSelect="true"
+    defaultRootKey="">
+    <nxdir:chainSelectListbox index="0" size="4"
+    directoryName="#{widget.properties['directoryName']}"
+    localize="#{widget.properties['localize']}"
+    id="#{widget.id}_parent" />
+    <nxdir:chainSelectListbox size="4"
+      directoryName="#{widget.properties['directoryName']}" index="1"
+      localize="#{widget.properties['localize']}"
+      id="#{widget.id}_parent2" />
+    <nxdir:chainSelectListbox size="4"
+      directoryName="#{widget.properties['directoryName']}" index="2"
+      localize="#{widget.properties['localize']}"
+      id="#{widget.id}_child" />
+    <nxdir:chainSelectStatus display="value" id="#{widget.id}_status" />
+  </nxdir:chainSelect>
+
+</c:if>
+<c:if test="#{widget.mode == 'edit'}">
+
+  <a4j:region id="#{widget.id}_region" renderRegionOnly="true">
+    <nxdir:chainSelect size="3" value="#{field}"
+      id="#{widget.id}_editselect" multiSelect="true"
+      multiParentSelect="true"
+      allowBranchSelection="#{widgetProperty_allowBranchSelection}"
+      defaultRootKey="" required="#{widgetProperty_required}">
+      <nxdir:chainSelectListbox index="0" size="4"
+        directoryName="#{widget.properties['directoryName']}"
+        localize="#{widget.properties['localize']}"
+        id="#{widget.id}_parent" ordering="label">
+        <a4j:ajax event="change"
+          render="#{widget.id}_parent2 #{widget.id}_child #{widget.id}_message"
+          execute="@this" />
+      </nxdir:chainSelectListbox>
+      <nxdir:chainSelectListbox index="1" size="4"
+        directoryName="#{widget.properties['directoryName']}"
+        localize="#{widget.properties['localize']}"
+        id="#{widget.id}_parent2" ordering="label">
+        <a4j:ajax event="change"
+          render="#{widget.id}_child #{widget.id}_message"
+          immediate="true" />
+      </nxdir:chainSelectListbox>
+      <nxdir:chainSelectListbox size="4" index="2"
+        directoryName="#{widget.properties['directoryName']}"
+        localize="#{widget.properties['localize']}"
+        id="#{widget.id}_child" ordering="label" />
+      <a4j:commandButton value="#{messages['command.add']}"
+        styleClass="button" immediate="true"
+        actionListener="#{chainSelectActions.add}"
+        render="#{widget.id}_status #{widget.id}_message"
+        id="#{widget.id}_add" />
+      <br />
+      <nxdir:chainSelectStatus display="value"
+        entryCssStyle="background-color: #DDEEFF"
+        label="#{messages['label.chainSelect.selection']}"
+        id="#{widget.id}_status">
+        <f:facet name="removeButton">
+          <a4j:commandButton
+            actionListener="#{chainSelectActions.delete}"
+            execute="@this" render="#{widget.id}_status"
+            image="/icons/toggle_minus.png"
+            id="#{widget.id}_delete" />
+        </f:facet>
+      </nxdir:chainSelectStatus>
+    </nxdir:chainSelect>
+  </a4j:region>
+  <h:message styleClass="errorMessage" for="#{widget.id}_editselect"
+    id="#{widget.id}_message" />
+
+</c:if>
+</f:subview>
 
 ```
 
@@ -220,22 +365,225 @@ Sample example on 3 levels with widget property `directoryName` filled with the 
 ### Mono-Select Widget
 
 ```
+<f:subview
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:c="http://java.sun.com/jstl/core"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:a4j="http://richfaces.org/a4j"
+  xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+  xmlns:nxu="http://nuxeo.org/nxweb/util"
+  xmlns:nxdir="http://nuxeo.org/nxdirectory"
+  xmlns:nxl="http://nuxeo.org/nxforms/layout"
+  xmlns:nxp="http://nuxeo.org/nxweb/pdf"
+  id="#{widget.id}">
+<c:if test="#{nxl:isLikePlainMode(widget.mode)}">
+<f:subview rendered="#{not empty field}"><nxdir:directoryEntryOutput
+  directoryName="#{widget.properties['directoryName']}"
+    value="#{fn:split(field, '/')[0]}"
+    localize="#{widget.properties['localize']}" />/<nxdir:directoryEntryOutput
+    directoryName="#{widget.properties['directoryName']}"
+    value="#{fn:split(field, '/')[1]}"
+    localize="#{widget.properties['localize']}" />/<nxdir:directoryEntryOutput
+    directoryName="#{widget.properties['directoryName']}"
+    value="#{field}"
+    localize="#{widget.properties['localize']}"
+    keySeparator="/" />
+</f:subview>
+</c:if>
+<c:if test="#{widget.mode == 'pdf'}">
+  <nxp:html>
+   <nxdir:chainSelect id="#{widget.id}_viewselect" size="3" value="#{field}"
+    displayValueOnly="true" defaultRootKey="">
+     <nxdir:chainSelectListbox index="0" size="0" directoryName="#{widget.properties['directoryName']}"
+       localize="true" id="#{widget.id}_parent" displayObsoleteEntries="true" />
+     <nxdir:chainSelectListbox index="1" size="0" directoryName="#{widget.properties['directoryName']}"
+       localize="true" id="#{widget.id}_parent2" displayObsoleteEntries="true" />
+     <nxdir:chainSelectListbox index="2" size="0" directoryName="#{widget.properties['directoryName']}"
+       localize="true" id="#{widget.id}_child" displayObsoleteEntries="true" />
+     <nxdir:chainSelectStatus display="value" id="#{widget.id}_status" />
+   </nxdir:chainSelect>
+  </nxp:html>
+</c:if>
+<c:if test="#{nxl:isLikeViewMode(widget.mode)}">
 
-//
+  <nxdir:chainSelect id="#{widget.id}_viewselect" size="3" value="#{field}"
+    displayValueOnly="true" defaultRootKey="">
+    <nxdir:chainSelectListbox index="0" size="0" directoryName="#{widget.properties['directoryName']}"
+      localize="true" id="#{widget.id}_parent" displayObsoleteEntries="true" />
+    <nxdir:chainSelectListbox index="1" size="0" directoryName="#{widget.properties['directoryName']}"
+      localize="true" id="#{widget.id}_parent2" displayObsoleteEntries="true" />
+    <nxdir:chainSelectListbox index="2" size="0" directoryName="#{widget.properties['directoryName']}"
+      localize="true" id="#{widget.id}_child" displayObsoleteEntries="true" />
+    <nxdir:chainSelectStatus display="value" id="#{widget.id}_status" />
+  </nxdir:chainSelect>
+
+</c:if>
+<c:if test="#{widget.mode == 'edit'}">
+
+  <nxdir:chainSelect size="3" value="#{field}"
+    id="#{widget.id}_editselect" multiSelect="false"
+    multiParentSelect="false"
+    allowBranchSelection="#{widgetProperty_allowBranchSelection}"
+    defaultRootKey="" required="#{widgetProperty_required}">
+    <a4j:region id="#{widget.id}_region">
+      <nxdir:chainSelectListbox index="0" size="1"
+        directoryName="#{widget.properties['directoryName']}"
+        localize="#{widget.properties['localize']}"
+        id="#{widget.id}_parent" ordering="label">
+        <f:ajax event="change"
+          render="#{widget.id}_parent2 #{widget.id}_child #{widget.id}_message"
+          execute="@this" />
+      </nxdir:chainSelectListbox>
+      <nxdir:chainSelectListbox index="1" size="1"
+        directoryName="#{widget.properties['directoryName']}"
+        localize="#{widget.properties['localize']}"
+        id="#{widget.id}_parent2" ordering="label">
+        <a4j:ajax event="change"
+          render="#{widget.id}_child #{widget.id}_message"
+          execute="@region" />
+      </nxdir:chainSelectListbox>
+    </a4j:region>
+    <nxdir:chainSelectListbox size="1" index="2"
+      directoryName="#{widget.properties['directoryName']}"
+      localize="#{widget.properties['localize']}"
+      id="#{widget.id}_child" ordering="label" />
+  </nxdir:chainSelect>
+  <h:message styleClass="errorMessage" for="#{widget.id}_editselect"
+    id="#{widget.id}_message" />
+
+</c:if>
+</f:subview>
 
 ```
 
 ### Multi-Select Widget
 
 ```
+<f:subview
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:c="http://java.sun.com/jstl/core"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:a4j="http://richfaces.org/a4j"
+  xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+  xmlns:nxu="http://nuxeo.org/nxweb/util"
+  xmlns:nxdir="http://nuxeo.org/nxdirectory"
+  xmlns:nxl="http://nuxeo.org/nxforms/layout"
+  xmlns:nxp="http://nuxeo.org/nxweb/pdf"
+  id="#{widget.id}">
+<c:if test="#{nxl:isLikePlainMode(widget.mode)}"><nxu:inputList
+  value="#{field}" model="chainModel"><nxdir:directoryEntryOutput
+  directoryName="#{widget.properties['directoryName']}"
+    value="#{fn:split(chainModel.rowData, '/')[0]}"
+    localize="#{widget.properties['localize']}" />/<nxdir:directoryEntryOutput
+    directoryName="#{widget.properties['directoryName']}"
+    value="#{fn:split(chainModel.rowData, '/')[1]}"
+    localize="#{widget.properties['localize']}" />/<nxdir:directoryEntryOutput
+    directoryName="#{widget.properties['directoryName']}"
+    value="#{chainModel.rowData}"
+    localize="#{widget.properties['localize']}"
+    keySeparator="/" /><h:outputText
+  rendered="#{chainModel.rowIndex != chainModel.rowCount -1}" value=", " /></nxu:inputList>
+</c:if>
+<c:if test="#{widget.mode == 'pdf'}">
+  <nxp:html>
+    <nxdir:chainSelect id="#{widget.id}_viewselect" size="3"
+      value="#{field}" displayValueOnly="true" multiSelect="true"
+      defaultRootKey="">
+      <nxdir:chainSelectListbox index="0" size="4"
+      directoryName="#{widget.properties['directoryName']}"
+      localize="#{widget.properties['localize']}"
+      id="#{widget.id}_parent" />
+      <nxdir:chainSelectListbox size="4"
+        directoryName="#{widget.properties['directoryName']}" index="1"
+        localize="#{widget.properties['localize']}"
+        id="#{widget.id}_parent2" />
+      <nxdir:chainSelectListbox size="4"
+        directoryName="#{widget.properties['directoryName']}" index="2"
+        localize="#{widget.properties['localize']}"
+        id="#{widget.id}_child" />
+      <nxdir:chainSelectStatus display="value" id="#{widget.id}_status" />
+    </nxdir:chainSelect>
+    </nxp:html>
+</c:if>
+<c:if test="#{nxl:isLikeViewMode(widget.mode)}">
 
-//
+  <nxdir:chainSelect id="#{widget.id}_viewselect" size="3"
+    value="#{field}" displayValueOnly="true" multiSelect="true"
+    defaultRootKey="">
+    <nxdir:chainSelectListbox index="0" size="4"
+    directoryName="#{widget.properties['directoryName']}"
+    localize="#{widget.properties['localize']}"
+    id="#{widget.id}_parent" />
+    <nxdir:chainSelectListbox size="4"
+      directoryName="#{widget.properties['directoryName']}" index="1"
+      localize="#{widget.properties['localize']}"
+      id="#{widget.id}_parent2" />
+    <nxdir:chainSelectListbox size="4"
+      directoryName="#{widget.properties['directoryName']}" index="2"
+      localize="#{widget.properties['localize']}"
+      id="#{widget.id}_child" />
+    <nxdir:chainSelectStatus display="value" id="#{widget.id}_status" />
+  </nxdir:chainSelect>
 
+</c:if>
+<c:if test="#{widget.mode == 'edit'}">
+
+  <a4j:region id="#{widget.id}_region" renderRegionOnly="true">
+    <nxdir:chainSelect size="3" value="#{field}"
+      id="#{widget.id}_editselect" multiSelect="true"
+      multiParentSelect="true"
+      allowBranchSelection="#{widgetProperty_allowBranchSelection}"
+      defaultRootKey="" required="#{widgetProperty_required}">
+      <nxdir:chainSelectListbox index="0" size="4"
+        directoryName="#{widget.properties['directoryName']}"
+        localize="#{widget.properties['localize']}"
+        id="#{widget.id}_parent" ordering="label">
+        <a4j:ajax event="change"
+          render="#{widget.id}_parent2 #{widget.id}_child #{widget.id}_message"
+          execute="@this" />
+      </nxdir:chainSelectListbox>
+      <nxdir:chainSelectListbox index="1" size="4"
+        directoryName="#{widget.properties['directoryName']}"
+        localize="#{widget.properties['localize']}"
+        id="#{widget.id}_parent2" ordering="label">
+        <a4j:ajax event="change"
+          render="#{widget.id}_child #{widget.id}_message"
+          immediate="true" />
+      </nxdir:chainSelectListbox>
+      <nxdir:chainSelectListbox size="4" index="2"
+        directoryName="#{widget.properties['directoryName']}"
+        localize="#{widget.properties['localize']}"
+        id="#{widget.id}_child" ordering="label" />
+      <a4j:commandButton value="#{messages['command.add']}"
+        styleClass="button" immediate="true"
+        actionListener="#{chainSelectActions.add}"
+        render="#{widget.id}_status #{widget.id}_message"
+        id="#{widget.id}_add" />
+      <br />
+      <nxdir:chainSelectStatus display="value"
+        entryCssStyle="background-color: #DDEEFF"
+        label="#{messages['label.chainSelect.selection']}"
+        id="#{widget.id}_status">
+        <f:facet name="removeButton">
+          <a4j:commandButton
+            actionListener="#{chainSelectActions.delete}"
+            execute="@this" render="#{widget.id}_status"
+            image="/icons/toggle_minus.png"
+            id="#{widget.id}_delete" />
+        </f:facet>
+      </nxdir:chainSelectStatus>
+    </nxdir:chainSelect>
+  </a4j:region>
+  <h:message styleClass="errorMessage" for="#{widget.id}_editselect"
+    id="#{widget.id}_message" />
+
+</c:if>
+</f:subview>
 ```
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [undefined]({{page}})
 *   [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
@@ -243,9 +591,7 @@ Sample example on 3 levels with widget property `directoryName` filled with the 
 *   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
@@ -253,6 +599,4 @@ Sample example on 3 levels with widget property `directoryName` filled with the 
 *   [Web UI Limitations]({{page page='web-ui-limitations'}})
 *   [Widget Definitions]({{page page='widget-definitions'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

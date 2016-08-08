@@ -9,7 +9,6 @@ details:
 labels:
     - howto
     - document-type
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '950287'
@@ -119,7 +118,7 @@ Any built-in document type can be overridden: you just have to use the good ID, 
 
 When inheriting from a document type, you inherit its schemas and facets. For instance, when inheriting from Document, you get the `dublincore` schema (that holds the title, description, modification date, ... metadata), as well as `common` (that holds the size of the doc) and "uid" (that holds version information and ID).
 
-{{#> callout type='note' heading="Deployment Mode"}}
+{{#> callout type='note' heading='Deployment Mode'}}
 
 Be careful to select the **Override** deployment mode from the **Advanced Configuration** section on the **Definition** tab of your document type. Should you leave **Merge**, you would get both your customizations and the default behavior of the document type instead of only your own customizations.
 
@@ -283,20 +282,14 @@ The SuperSpace facet is required for children documents to get default notificat
 
 You can also browse the [contributions to the Type extension](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype) for more document types or leave a comment on this page.
 
-{{/callout}}
-
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Popular How-Tos"}}
+{{/callout}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
 *   [undefined]({{page}})
 *   [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}}) &nbsp;
 *   [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Documents in Nuxeo Studio]({{page space='studio' page='documents'}})
 *   [Content Repository]({{page page='content-repository'}})
@@ -304,6 +297,4 @@ You can also browse the [contributions to the Type extension](http://explorer.nu
 *   [Life cycle]({{page space='studio' page='life-cycle'}})
 *   [Schemas]({{page space='studio' page='schemas'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

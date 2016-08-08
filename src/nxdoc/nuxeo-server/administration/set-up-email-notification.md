@@ -1,0 +1,192 @@
+---
+title: Set Up Email Notification
+confluence:
+    ajs-parent-page-id: '31032113'
+    ajs-parent-page-title: Administration
+    ajs-space-key: NXDOC
+    ajs-space-name: Nuxeo Platform Developer Documentation
+    canonical: Set+Up+Email+Notification
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Set+Up+Email+Notification'
+    page_id: '31687458'
+    shortlink: IoPjAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/IoPjAQ'
+    source_link: /display/NXDOC/Set+Up+Email+Notification
+history:
+    - 
+        author: Solen Guitter
+        date: '2016-07-25 07:55'
+        message: ''
+        version: '4'
+    - 
+        author: Alain Escaffre
+        date: '2016-07-22 13:33'
+        message: ''
+        version: '3'
+    - 
+        author: Alain Escaffre
+        date: '2016-07-22 13:31'
+        message: ''
+        version: '2'
+    - 
+        author: Alain Escaffre
+        date: '2016-07-22 13:28'
+        message: ''
+        version: '1'
+
+---
+{{! excerpt}}
+
+The default Nuxeo Platform email configuration is filled in with neutral values that you need to edit to make the platform&nbsp; work with your mail server. Unless you do that, alerts emails won't be sent to users.
+
+{{! /excerpt}}
+
+&nbsp;
+
+**To enable notifications:**
+
+1.  In the **Admin** tab, click on the **Setup** tab of System Information section.
+2.  Edit and fill in the values of the Email information section (see below for expected parameters).
+
+    {{#> callout type='tip' }}
+
+    To enable alerts, filling in the SMTP parameters should be sufficient for most mail server configurations.
+
+    {{/callout}}
+3.  Click the button **Save**.
+    As indicated on top of the page, you need to restart your server so the new configuration is taken into account.
+
+**Email information configuration**
+
+<table><tbody><tr><th colspan="1">
+
+Field / Property
+
+</th><th colspan="1">
+
+Description
+
+</th></tr><tr><td colspan="1">
+
+Email notifications subject prefix
+`nuxeo.notification.eMailSubjectPrefix`
+
+</td><td colspan="1">
+
+Text displayed in the "Object" before the object of the alerts email to help users identify that the emails are coming from the application.
+Default value is "[Nuxeo]". You can change is to whatever value you like.
+
+</td></tr><tr><td colspan="1">
+
+Mail store protocol
+`mail.store.protocol`
+
+</td><td colspan="1">
+
+Name of the protocol used to store emails on the server.
+Default value is "pop3". You may need to change it to "IMAP".
+
+</td></tr><tr><td colspan="1">
+
+Mail transport protocol
+`mail.transport.protocol`
+
+</td><td colspan="1">
+
+Name of the protocol used to send emails.
+Default value is "smtp". This should work in most cases.
+
+</td></tr><tr><td colspan="1">
+
+Host name for POP3
+`mail.pop3.host`
+
+</td><td colspan="1">
+
+Name of the mail server host used to receive and store emails.
+Default value is "pop3.nosuchhost.nosuchdomain.com". You need to change it.
+
+</td></tr><tr><td colspan="1">
+
+Debug mode
+`mail.debug`
+
+</td><td colspan="1">
+
+Default value is set to "false". Change it to "true" if you want to have the details of what the server is doing in the logs.
+
+</td></tr><tr><td colspan="1">
+
+Host name for SMTP
+`mail.smtp.host`
+
+</td><td colspan="1">
+
+Mail server host name for outgoing mails.
+Default value is "localhost". You need to change it so emails can be sent from the server.
+
+</td></tr><tr><td colspan="1">
+
+Port number for SMTP
+`mail.smtp.port`
+
+</td><td colspan="1">
+
+Mail server port for outgoing emails.
+Default value is 25.
+
+</td></tr><tr><td colspan="1">
+
+Use authentication for SMTP
+`mail.smtp.auth`
+
+</td><td colspan="1">
+
+Indicate if authentication is needed for the mail server to send emails.
+Default value is "true". You should change it to "false" if no authentication for sending email is required.
+
+</td></tr><tr><td colspan="1">
+
+Use STARTTLS for SMTP
+`mail.smtp.usetls`
+
+</td><td colspan="1">
+
+Indicate if STARTTLS is needed for the mail server.
+Default value is "false". You should change it to "true" if your SMTP requires STARTTLS
+
+</td></tr><tr><td colspan="1">
+
+SMTP username
+`mail.smtp.username`
+
+</td><td colspan="1">
+
+Type the username that will be used if you set the authentication for SMTP parameter to "true".
+
+</td></tr><tr><td colspan="1">
+
+SMTP password
+`mail.smtp.password`
+
+</td><td colspan="1">
+
+Type the password that will be used if you set the authentication for SMTP parameter to "true".
+
+</td></tr><tr><td colspan="1">
+
+Sender address mail
+`mail.from`
+
+</td><td colspan="1">
+
+Email address that will displayed as the sender's address.
+
+</td></tr></tbody></table>{{#> callout type='info' }}
+
+If you have complex mail server configurations, you may want to check the [Javamail API FAQ](http://www.oracle.com/technetwork/java/faq-135477.html) for more information.
+
+{{/callout}}
+
+{{! Don't put anything here. }}
+
+* * *

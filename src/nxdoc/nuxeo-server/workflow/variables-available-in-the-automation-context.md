@@ -6,7 +6,6 @@ labels:
     - variable
     - workflow
     - workflow-component
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '12913723'
     ajs-parent-page-title: Workflow

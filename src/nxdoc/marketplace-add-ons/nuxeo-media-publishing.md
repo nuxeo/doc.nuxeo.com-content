@@ -2,7 +2,6 @@
 title: Nuxeo Media Publishing
 labels:
     - media-publishing-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -224,6 +223,15 @@ This addon defines the `PublishableMedia`&nbsp;facet. This facet is added to the
 
 The `MediaPublishingService` exposes the `providers` extension point to contribute new publishing services.
 
+```
+<extension-point name="providers" target="org.nuxeo.ecm.media.publishing.MediaPublishingService">
+  <provider id="MyMediaPublishingProvider"
+      enabled="true"
+      service="org.nuxeo.ecm.media.publishing.MyMediaPublishingProviderService">
+  </provider>
+</extension-point>
+```
+
 ### How to Contribute New Providers
 
 If you want to define other media publishing providers, you need to contribute a new publishing service to the Nuxeo Media Publishing addon.
@@ -233,7 +241,19 @@ If you want to define other media publishing providers, you need to contribute a
 Nested in the component tag of your XML contribution file, set the implementation class and use the extension point&nbsp;`providers` to register your media publishing service.
 
 ```
+<component name="org.nuxeo.ecm.media.publishing.MyMediaPublishingProviderService">
+  <implementation class="org.nuxeo.ecm.media.publishing.MyMediaPublishingProviderService" />
 
+  <service>
+    <provide interface="org.nuxeo.ecm.media.publishing.MyMediaPublishingProviderService" />
+  </service>
+
+  <extension target="org.nuxeo.ecm.media.publishing.MediaPublishingService"point="providers">
+    <provider id="my-publishing-provider" 
+		enabled="true" 
+		service="org.nuxeo.ecm.media.publishing.MyMediaPublishingProviderService"/>
+  </extension>
+</component>
 ```
 
 Your service implementation must implement the&nbsp;`MediaPublishingProvider` interface or extend any other class that implements this interface.
@@ -244,13 +264,20 @@ Your service implementation must implement the&nbsp;`MediaPublishingProvider` in
 2.  Then, use the extension point&nbsp; [`providers`](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.oauth2.providers.OAuth2ServiceProviderRegistry--providers) &nbsp;of the `OAuth2ServiceProviderRegistry`&nbsp;service to register the OAuth provider.
 
     ```
+    <component name="org.nuxeo.ecm.media.publishing.MyOAuthServiceProvider">
+      <require>org.nuxeo.ecm.platform.oauth2.providers.OAuth2ServiceProviderRegistry</require>
 
-      org.nuxeo.ecm.platform.oauth2.providers.OAuth2ServiceProviderRegistry
-
-          my-publishing-provider
-          MyOAuthServiceProvider
-          org.nuxeo.ecm.media.publishing.MyOAuthServiceProvider
-
+      <extension target="org.nuxeo.ecm.platform.oauth2.providers.OAuth2ServiceProviderRegistry" point="providers">
+        <provider>
+          <name>my-publishing-provider</name>
+          <description>MyOAuthServiceProvider</description>
+          <class>org.nuxeo.ecm.media.publishing.MyOAuthServiceProvider</class>
+          <tokenServerURL></tokenServerURL>
+          <authorizationServerURL></authorizationServerURL>
+          <scope></scope>
+        </provider>
+      </extension>
+    </component>
     ```
 
     **Note:** The&nbsp;`name` field of your OAuth provider must match the&nbsp;`id` of your media publishing service defined in Step 1\. The `description`&nbsp;field is used as a label in the UI.
@@ -260,13 +287,19 @@ Your service implementation must implement the&nbsp;`MediaPublishingProvider` in
 By default, when publishing a video, the only required field to fill in is the publishing account. However, since different services allow different metadata (e.g. privacy status of a video, channels, projects, tags) it is possible to contribute more options widgets to the publishing panel in the UI.
 
 ```
-
-    MEDIA_PUBLISHING_OPTIONS_CATEGORY
-
-      myprovider_options_widget
-
-        #{provider == "my-publishing-provider"}
-
+<extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
+  <action id="myprovider_options" type="widget">
+    <category>MEDIA_PUBLISHING_OPTIONS_CATEGORY</category>
+    <properties>
+      <property name="widgetName">myprovider_options_widget</property>
+    </properties>
+    <filter id="isMyProvider">
+      <rule grant="true">
+        <condition>#{provider == "my-publishing-provider"}</condition>
+      </rule>
+    </filter>
+  </action>
+</extension>
 ```
 
 &nbsp;

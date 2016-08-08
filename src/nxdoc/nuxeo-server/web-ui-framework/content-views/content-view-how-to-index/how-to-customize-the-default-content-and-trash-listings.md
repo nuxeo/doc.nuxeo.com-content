@@ -12,7 +12,6 @@ labels:
     - content-view
     - howto
     - studio
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '19235663'
     ajs-parent-page-title: Content View How-To Index
@@ -70,7 +69,7 @@ history:
 ---
 {{! excerpt}}
 
-<span style="color: rgb(50,51,51);">The content displayed in the&nbsp;</span> **Content** <span style="color: rgb(50,51,51);">&nbsp;tab of a folder, for instance, is the result of a query that says that we want to display all the documents that:</span> <span style="color: rgb(50,51,51);">&nbsp;</span>
+<span style="color: rgb(50,51,51);">The content displayed in the&nbsp;</span> **Content** <span style="color: rgb(50,51,51);">&nbsp;tab of a folder, for instance, is the result of a query that says that we want to display all the documents that:</span>
 
 *   <span style="color: rgb(50,51,51);">are the direct children of the current folder;</span>
 *   <span style="color: rgb(50,51,51);">are not "deleted";</span>
@@ -82,7 +81,7 @@ history:
 
 <span style="color: rgb(50,51,51);">**To change the list of documents displayed in the Content and Trash tabs:**</span>
 
-1.  <span style="color: rgb(50,51,51);">Create a&nbsp;</span> <span style="color: rgb(0,99,198);">new Content View</span> <span><span style="color: rgb(50,51,51);">.</span></span>
+1.  <span style="color: rgb(50,51,51);">Create a&nbsp;</span> <span style="color: rgb(0,99,198);">new Content View</span> <span style="color: rgb(50,51,51);">.</span>
 2.  <span style="color: rgb(50,51,51);">On the document type definition, click on the&nbsp;</span> **Tabs** <span style="color: rgb(50,51,51);">&nbsp;tab.</span>
 3.  <span style="color: rgb(50,51,51);">Select the content view you want to use for:</span>
     *   <span style="color: rgb(50,51,51);">the "Main content", i.e. the&nbsp;</span> **Content** <span style="color: rgb(50,51,51);">&nbsp;tab of your document type.</span>

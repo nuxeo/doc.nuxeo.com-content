@@ -16,7 +16,6 @@ labels:
     - howto
     - layout
     - layout-widgets-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235623'
@@ -138,9 +137,7 @@ And that's it! Note that the previous parameter will set today's date, but you m
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [undefined]({{page}})
 *   [undefined]({{page}})
@@ -148,9 +145,7 @@ And that's it! Note that the previous parameter will set today's date, but you m
 *   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
@@ -158,6 +153,4 @@ And that's it! Note that the previous parameter will set today's date, but you m
 *   [Web UI Limitations]({{page page='web-ui-limitations'}})
 *   [Widget Definitions]({{page page='widget-definitions'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

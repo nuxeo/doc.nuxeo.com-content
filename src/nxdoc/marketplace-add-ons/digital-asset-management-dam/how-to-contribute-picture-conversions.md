@@ -11,7 +11,6 @@ labels:
     - conversion
     - picture
     - convert-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866704'
@@ -156,7 +155,7 @@ Picture conversions are working only on documents having the&nbsp;`Picture` face
 
 {{#> callout type='info' }}
 
-<span>Available since 7.1.</span>
+Available since 7.1.
 
 {{/callout}}
 
@@ -165,6 +164,16 @@ Picture conversions are working only on documents having the&nbsp;`Picture` face
 ### Resizing a Picture
 
 Let's add a new picture conversions called&nbsp;`Large` that will resize the picture to `800px`&nbsp;max.
+
+```
+ <extension target="org.nuxeo.ecm.platform.picture.ImagingComponent"
+  point="pictureConversions">
+
+  <pictureConversion id="Large" description="Large image" tag="large"
+    maxSize="800" order="0" default="false" chainId="Image.Blob.Resize" />
+
+</extension>
+```
 
 **Noteworthy Attributes**
 
@@ -189,20 +198,31 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
 1.  Contribute an XML extension to register a command line that will watermark the image:
 
     ```
-
-        convert
-        #{sourceFilePath}  -gravity #{gravity} -fill #{textColor} -stroke #{strokeColor} -strokewidth #{strokeWidth} -pointsize #{textSize} -annotate #{textRotation}x#{textRotation}+#{xOffset}+#{yOffset} #{textValue} #{targetFilePath}
-
-        You need to install ImageMagick.
-
+    <extension
+        target="org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent"
+        point="command">
+      <command name="watermarkWithText" enabled="true">
+        <commandLine>convert</commandLine>
+        <parameterString>#{sourceFilePath}  -gravity #{gravity} -fill #{textColor} -stroke #{strokeColor} -strokewidth #{strokeWidth} -pointsize #{textSize} -annotate #{textRotation}x#{textRotation}+#{xOffset}+#{yOffset} #{textValue} #{targetFilePath}
+        </parameterString>
+        <installationDirective>You need to install ImageMagick.
+        </installationDirective>
+      </command>
+    </extension>
     ```
 
 2.  Contribute an XML extension to register a converter that uses our new&nbsp;`watermarkWithText` command line:
 
     ```
-
-          watermarkWithText
-
+    <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"
+      point="converter">
+      <converter name="watermarkWithText"
+        class="org.nuxeo.ecm.platform.convert.plugins.CommandLineConverter">
+        <parameters>
+          <parameter name="CommandLineName">watermarkWithText</parameter>
+        </parameters>
+      </converter>
+    </extension>
     ```
 
 3.  <span style="line-height: 21.58px;">Create a chain that will be used for the picture conversion, getting the text from the&nbsp;</span> `pictureDocument` <span style="line-height: 21.58px;">&nbsp;and call the registered `watermarkWithText` converter to watermark the image. Here, for the example, we watermark the title of the document on the image:</span>
@@ -224,6 +244,16 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
     ```
 
 4.  Add a new picture conversion that will watermark the image:
+
+    ```
+    <extension target="org.nuxeo.ecm.platform.picture.ImagingComponent"
+      point="pictureConversions">
+
+      <pictureConversion id="Watermark" description="Watermarked image" tag="watermark"
+        order="0" chainId="WatermarkChain" />
+
+    </extension>
+    ```
 
     You should end up with something like this on your instance:
     ![]({{file name='conversion.png'}} ?w=450,border=true)
@@ -278,40 +308,50 @@ Let's say we want to execute the previous&nbsp;`Watermark` picture conversion on
 1.  First, contribute the filters:
 
     ```
-
-          #{currentDocument.dc.source == "MyCompany"}
-
-          #{currentDocument.dc.language == "english"}
-
+    <extension target="org.nuxeo.ecm.platform.actions.ActionService"
+      point="filters">
+      <filter id="grantMyCompany">
+        <rule grant="true">
+          <condition>#{currentDocument.dc.source == "MyCompany"}</condition>
+        </rule>
+      </filter>
+      <filter id="denyEnglish">
+        <rule grant="false">
+          <condition>#{currentDocument.dc.language == "english"}</condition>
+        </rule>
+      </filter>
+    </extension>
     ```
 
 2.  Then associate the filters to the picture conversion by&nbsp;updating the \{{Watermark}} picture conversion contribution:
 
     ```
+    <extension target="org.nuxeo.ecm.platform.picture.ImagingComponent"
+      point="pictureConversions">
 
-          grantMyCompany
-          denyEnglish
+      <pictureConversion id="Watermark" description="Watermarked image" tag="watermark"
+        order="0" chainId="WatermarkChain">
+        <filters>
+          <filter-id>grantMyCompany</filter-id>
+          <filter-id>denyEnglish</filter-id>
+        </filters>
+      </pictureConversion>
 
+    </extension>
     ```
 
 &nbsp;
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Other Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
 *   [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
 *   [Conversion]({{page page='conversion'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

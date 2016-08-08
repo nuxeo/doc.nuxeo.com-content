@@ -3,7 +3,6 @@ title: WebEngine Tutorials
 labels:
     - webengine
     - webengine-component
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '950281'
     ajs-parent-page-title: WebEngine (JAX-RS)

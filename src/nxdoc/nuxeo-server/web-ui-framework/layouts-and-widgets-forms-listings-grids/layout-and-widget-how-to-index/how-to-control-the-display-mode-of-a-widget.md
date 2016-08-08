@@ -17,7 +17,6 @@ labels:
     - layout
     - studio
     - layout-widgets-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235623'
@@ -190,20 +189,18 @@ For instance, when you are editing a document layout, whether it is the creation
     ![]({{file name='screenshot_2011-01-11_09.01.44.png'}} ?w=450,border=true)
 2.  Fill the text area with an expression that will control the display of your widget. Here are some samples:
 
-*   `#{layoutValue.currentLifeCycleState =='approved' && currentUser.model.user.company == 'Nuxeo'?'edit':'hidden'<span>}</span>`
+*   `#{layoutValue.currentLifeCycleState =='approved' && currentUser.model.user.company == 'Nuxeo'?'edit':'hidden'}`
     This expression says that the field will be invisible unless the document is in state "approved" and the company of the user is "Nuxeo". In that case it will be editable.
-*   `#{currentUser.isMemberOf('quality_managers') && (layoutValue.dc.nature=='procedure'||layoutValue.dc.nature=='decree')?'edit':'view'<span>}</span>`
+*   `#{currentUser.isMemberOf('quality_managers') && (layoutValue.dc.nature=='procedure'||layoutValue.dc.nature=='decree')?'edit':'view'}`
     This expression says that the field will be editable only for people from group quality_managers and only if the document is a decree or a procedure. Otherwise, value is just viewable.
-*   `#{nxd:hasPermission(layoutValue, 'Editorial')?'edit':'view'<span>}</span>`
+*   `#{nxd:hasPermission(layoutValue, 'Editorial')?'edit':'view'}`
     This expression says that the widget will be editable only for users having the Editorial permission.
 
 You can also see the [reference documentation on layouts]({{page page='layout-and-widget-definitions'}}), more specifically the [EL expressions in layouts and widgets]({{page page='layout-and-widget-definitions'}}) section.
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [undefined]({{page}})
 *   [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
@@ -211,9 +208,7 @@ You can also see the [reference documentation on layouts]({{page page='layout-an
 *   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
@@ -221,6 +216,4 @@ You can also see the [reference documentation on layouts]({{page page='layout-an
 *   [Web UI Limitations]({{page page='web-ui-limitations'}})
 *   [Widget Definitions]({{page page='widget-definitions'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

@@ -3,7 +3,6 @@ title: Platform as a Service
 labels:
     - deployment
     - architecture
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:

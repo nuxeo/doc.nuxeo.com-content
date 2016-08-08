@@ -13,7 +13,6 @@ labels:
     - nuxeo-csv
     - howto
     - csv-importer-component
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '14255163'
     ajs-parent-page-title: Nuxeo CSV
@@ -115,7 +114,7 @@ history:
 
 {{! excerpt}}
 
-If you installed the <span class="confluence-link">Nuxeo CSV add-on</span> from the Nuxeo Marketplace, you'll probably want to enable CSV import on the document types you defined, either in Studio or with some code. Here is how to do that.
+If you installed the Nuxeo CSV add-on from the Nuxeo Marketplace, you'll probably want to enable CSV import on the document types you defined, either in Studio or with some code. Here is how to do that.
 
 {{! /excerpt}}
 
@@ -131,11 +130,16 @@ If you installed the <span class="confluence-link">Nuxeo CSV add-on</span> from 
 4.  Paste the following content in the text area and fill in the&nbsp;`<type>` tag with the ID of the document type on which you want to enable CSV import.
 
     ```
-    org.nuxeo.ecm.platform.actions
-
-          AddChildren
-          YourCustomTypeID
-
+    <require>org.nuxeo.ecm.platform.actions</require>
+    <extension target="org.nuxeo.ecm.platform.actions.ActionService"
+      point="filters">
+      <filter id="importFile" append="true">
+        <rule grant="true">
+          <permission>AddChildren</permission>
+          <type>YourCustomTypeID</type>
+        </rule>
+      </filter>
+    </extension>
     ```
 
 5.  In the XML extension, put as many&nbsp;`<type>` tags as documents types on which CSV import should be enabled.

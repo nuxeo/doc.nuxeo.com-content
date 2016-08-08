@@ -12,7 +12,6 @@ labels:
     - howto
     - action
     - studio
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235610'
@@ -173,23 +172,17 @@ The steps below explain how to have the same **New** button as the one on the Co
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Popular How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
 *   [How to Add a New Action Category on a Document Tab]({{page page='how-to-add-a-new-action-category-on-a-document-tab'}})
 *   [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Actions Overview]({{page page='actions-overview'}})
 *   [Documents in Nuxeo Studio]({{page space='studio' page='documents'}})
 *   [Tabs in Nuxeo Studio]({{page space='studio' page='tabs'}})
 *   [User actions categories]({{page space='studio' page='user-actions-categories'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

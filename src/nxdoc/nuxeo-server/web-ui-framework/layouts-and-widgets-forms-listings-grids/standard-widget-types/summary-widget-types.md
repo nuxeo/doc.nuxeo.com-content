@@ -4,7 +4,6 @@ labels:
     - widget-types
     - summary
     - layout-widgets-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -112,7 +111,7 @@ Id: `summary_current_document_tagging`
 
 This widget type displays the current document tags, with the possibility to add new ones.
 
-{{#> callout type='info' heading="Requirements"}}
+{{#> callout type='info' heading='Requirements'}}
 
 This feature requires the Document Management module to be installed.
 
@@ -140,18 +139,8 @@ This widget type displays a selector with the list of available workflows that c
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in this documentation'}}
 
-<div class="column medium-6">{{#> panel heading="Related topics in this documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related topics in Studio documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related topics in Studio documentation"}}
-
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

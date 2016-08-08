@@ -3,7 +3,6 @@ title: Default WebEngine Applications
 labels:
     - url
     - webengine-component
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '950281'
     ajs-parent-page-title: WebEngine (JAX-RS)

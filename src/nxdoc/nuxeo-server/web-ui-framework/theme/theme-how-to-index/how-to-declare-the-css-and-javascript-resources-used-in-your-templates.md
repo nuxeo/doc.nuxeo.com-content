@@ -17,7 +17,6 @@ labels:
     - link-update
     - last-review-20150805
     - themes-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235625'
@@ -130,11 +129,14 @@ This page talks about using JavaScript inside the Nuxeo web application (the bac
 Let's define two types of resources to be included later on pages:
 
 ```
-
-    /css/myCss.css
-
-    scripts/myScript.js
-
+<extension target="org.nuxeo.ecm.platform.WebResources" point="resources">
+  <resource name="myCss.css">
+    <uri>/css/myCss.css</uri>
+  </resource>
+  <resource name="myScript.js">
+    <uri>scripts/myScript.js</uri>
+  </resource>
+</extension>
 ```
 
 Here the `uri` element is used, so resources will be looked up in the JAR holding the declaration. Please refer to the [`resources` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources) documentation for more details.
@@ -152,9 +154,17 @@ You can browse the [Nuxeo Resources JSF tag library documentation](http://commun
 Let's consider defining a new page template, using the main page template at [`/pages/basic_page.xhtml`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/basic_page.xhtml):
 
 ```
+<ui:composition template="basic_page.xhtml"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://java.sun.com/jsf/facelets">
+  <ui:param name="pageName" value="myPage" />
+  <ui:param name="pageFlavor" value="#{themeActions.currentFlavor}" />
 
+  <ui:define name="basic body">
     Main body content goes here
+  </ui:define>
 
+</ui:composition>
 ```
 
 This template uses a page named `myPage`.
@@ -162,43 +172,61 @@ This template uses a page named `myPage`.
 It can also reference the two resources defined above to include them too:
 
 ```
-
-      /icons/favicon.png
-      /icons/favicon.ico
-
-    default
-
-      default
-
-      nuxeo_includes
-      nuxeo_base
-      nuxeo_sassCss
-      nuxeo_dm
-      myCss.css
-      myScript.js
-
+<extension target="org.nuxeo.theme.styling.service" point="pages">
+  <page name="myPage" charset="utf-8">
+    <links>
+      <icon name="icon">/icons/favicon.png</icon>
+      <icon name="shortcut icon">/icons/favicon.ico</icon>
+    </links>
+    <defaultFlavor>default</defaultFlavor>
+    <flavors>
+      <flavor>default</flavor>
+    </flavors>
+    <resources>
+      <bundle>nuxeo_includes</bundle>
+      <bundle>nuxeo_base</bundle>
+      <bundle>nuxeo_sassCss</bundle>
+      <bundle>nuxeo_dm</bundle>
+      <resource>myCss.css</resource>
+      <resource>myScript.js</resource>
+    </resources>
+  </page>
+</extension>
 ```
 
 Alternatively, if the page already exists, resources can be appended to it:
 
 ```
-component.defining.the.myPage.page
-
-      myCss.css
-      myScript.js
-
+<require>component.defining.the.myPage.page<require>
+<extension target="org.nuxeo.theme.styling.service" point="pages">
+  <page name="myPage">
+    <resources append="true">
+      <resource>myCss.css</resource>
+      <resource>myScript.js</resource>
+    </resources>
+  </page>
+</extension>
 ```
 
 Alternatively, resources can be included to a new resource bundle:
 
 ```
-component.defining.the.myPage.page
-
-      myCss.css
-      myScript.js
-
-      myBundle
-
+<require>component.defining.the.myPage.page<require>
+<extension target="org.nuxeo.ecm.platform.WebResources" point="bundles">
+  <bundle name="myBundle">
+    <resources>
+      <resource>myCss.css</resource>
+      <resource>myScript.js</resource>
+    </resources>
+  </bundle>
+</extension>
+<extension target="org.nuxeo.theme.styling.service" point="pages">
+  <page name="myPage">
+    <resources append="true">
+      <bundle>myBundle</bundle>
+    </resources>
+  </page>
+</extension>
 ```
 
 ## Including Resources in Several Pages
@@ -206,10 +234,15 @@ component.defining.the.myPage.page
 The default bundle named `nuxeo_includes`, defined by component `org.nuxeo.theme.nuxeo.webapp`, handles the inclusion of most of the JavaScript files used in default pages. New resources can be added to it so that they're available in all default pages:
 
 ```
-org.nuxeo.theme.nuxeo.webapp
-
-      myCss.css
-      myScript.js
+<require>org.nuxeo.theme.nuxeo.webapp</require>
+<extension target="org.nuxeo.ecm.platform.WebResources" point="bundles">
+  <bundle name="nuxeo_includes">
+    <resources append="true">
+      <resource>myCss.css</resource>
+      <resource>myScript.js</resource>
+    </resources>
+  </bundle>
+</extension>
 
 ```
 
@@ -222,28 +255,39 @@ When designing a page, you may want to include specific resources. The main page
 It also inserts additional templating zones to include additional resources, here is a sample usage:
 
 ```
+<ui:composition template="basic_page.xhtml"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:ui="http://java.sun.com/jsf/facelets">
+  <ui:param name="pageName" value="#{themeActions.currentPage}" />
+  <ui:param name="pageFlavor" value="#{themeActions.currentFlavor}" />
 
+  <ui:define name="stylesheets">
+    <nxr:resource name="myCss.css" />
+  </ui:define>
+
+  <ui:define name="header_scripts">
+    <nxr:resource name="myScript.js" />
+  </ui:define>
+
+  <ui:define name="basic body">
     Main body content goes here
+  </ui:define>
 
+</ui:composition>
 ```
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [Theme Documentation]({{page page='theme'}})
 *   [How to Customize the Login Page]({{page page='how-to-customize-the-login-page'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Branding in Studio Documentation]({{page space='studio' page='branding'}})
 *   [Extension Points]({{page page='runtime-and-component-model'}})
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Online UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

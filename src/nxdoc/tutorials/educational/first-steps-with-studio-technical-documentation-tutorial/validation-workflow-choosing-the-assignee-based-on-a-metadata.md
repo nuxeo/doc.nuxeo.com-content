@@ -1,7 +1,6 @@
 ---
 title: Validation Workflow Choosing the Assignee Based on a Metadata
 labels:
-    - lts2015-ok
     - multiexcerpt
 toc: true
 confluence:
@@ -159,7 +158,7 @@ history:
 
 In this tutorial we will create a one step workflow that will be assigned to a user depending on the Nature metadata of the document. Basically there will be one responsible per possible nature of the document. This workflow will set the document to approve.
 
-{{#> callout type='info' heading="Workflow documentation"}}
+{{#> callout type='info' heading='Workflow documentation'}}
 
 All the concepts used in this tutorial will be explained. However, for more information about workflows in Studio, you can browse to the page [Workflow]({{page space='studio' page='workflow'}}).
 
@@ -168,7 +167,7 @@ All the concepts used in this tutorial will be explained. However, for more info
 ## <span style="color: rgb(0,0,0);">Creating the Workflow
 </span>
 
-<span style="color: rgb(0,0,0);">&nbsp;</span>To create a new workflow, simply go to the workflow section of Studio, click **New** and choose a name.
+To create a new workflow, simply go to the workflow section of Studio, click **New** and choose a name.
 
 ![]({{file name='Workflow_Definition_-_tuto_Technical_Documentation.png'}} ?w=650,h=343,border=true)
 
@@ -180,7 +179,7 @@ A workflow can be configured through four tabs:
 *   **Graph**: Where you define all the workflow steps and their transitions. This is the most important tab.
     After you create your workflow, it's normal you get validation error, pending the creation of the graph.
 
-{{#> callout type='info' heading="Workflow Screens"}}
+{{#> callout type='info' heading='Workflow Screens'}}
 
 You will find more information about Studio Workflow screens at the page [Workflow screens]({{page space='studio' page='workflow-screens'}}).
 
@@ -198,7 +197,7 @@ First let's define when the workflow should be available.
 
 The next step is to design the graph of the workflow. So you can go to the **Graph** tab.
 
-{{#> callout type='info' heading="Workflow logic"}}
+{{#> callout type='info' heading='Workflow logic'}}
 
 When a workflow is triggered, the Nuxeo Workflow Engine will look for the Start node. From here, it will check if any of the transitions going out of the node is true and follow it (them if several). By default a Start node has a one transition for which the condition is always true so it is an automatic transition. It will work the same way for the next node. Once in the node, the Workflow Engine will wait for a condition to be true to get out of the task and go to the next one. Most of the time the condition is that a button has been clicked on. Much more technical information is available at the page [Runtime Instantiation & Execution Logic]({{page page='runtime-instantiation-and-execution-logic'}}).
 
@@ -218,7 +217,7 @@ For a start, we decided that our workflow should be as simple as possible so wil
 *   **Transitions:&nbsp;**Define here all the possible ways to go out of the node and the conditions to follow one transition or another.
 *   **Escalation Rules:&nbsp;**Set up rules to be triggered if your task sleeps for too long for instance.
 
-{{#> callout type='info' heading="Node Screens"}}
+{{#> callout type='info' heading='Node Screens'}}
 
 You will find more information about Studio Node property screens at the page [Node popup]({{page space='studio' page='node-popup'}}).
 
@@ -259,7 +258,7 @@ We just want the user to approve the task for now so nothing is required in the 
 
     {{#> callout type='info' }}
 
-    <span>This is because when a user clicks on a button, it puts the name of the button in a node variable called&nbsp;</span>**Button**<span>, so by using its value, the workflow engine can know what button was clicked on and compute what transition to follow. You can set more complex condition based transitions on other workflow variables for instance.</span>
+    This is because when a user clicks on a button, it puts the name of the button in a node variable called&nbsp;**Button**, so by using its value, the workflow engine can know what button was clicked on and compute what transition to follow. You can set more complex condition based transitions on other workflow variables for instance.
 
     {{/callout}}
 2.  We do not want escalation rules for now, so you can leave the corresponding tab for now.
@@ -282,7 +281,7 @@ Of course, the responsible can change over time so you do not want to hardcode t
     You should get a vocabulary like this.
     ![]({{file name='natMappingTuto_-_Vocabulary_-_tuto_Technical_Documentation.png'}} ?w=600,h=169,border=true)
 
-    {{#> callout type='tip' heading="How to create a Vocabulary"}}
+    {{#> callout type='tip' heading='How to create a Vocabulary'}}
 
     We already created a Vocabulary in a previous tutorial of this series. If you do not remember or did not follow the tutorial, you will find the information at the end of the page [Implementing Documentation Items]({{page page='implementing-documentation-items'}}). For each key of the **natQual** vocabulary, you should have the same key in **natMapping** with the corresponding responsible user name as a label.
 
@@ -307,7 +306,7 @@ Of course, the responsible can change over time so you do not want to hardcode t
 
     Your final expression should be:&nbsp;`@{Fn.getVocabularyLabel("natMapping", Document["qa:nature"])}`.&nbsp;
 
-    {{#> callout type='tip' heading="xpath"}}
+    {{#> callout type='tip' heading='xpath'}}
 
     In many places in the Nuxeo Platform, you will be asked for a **XPath** which is a way to reference a metadata. A metadata in the Nuxeo Platform is always part of a schema, so to identify a metadata you only need the prefix of the schema (`dc` as dublincore for instance) and the name of the metadata, separated by a colon. Hence, the XPath for the nature of the document which is held by the schema Dublin Core is `qa:nature`.
 
@@ -348,7 +347,7 @@ So in the end, let's bind our validation logic to the **approve** transition.
 
 #### Setting the Life Cycle
 
-{{#> callout type='info' heading="Document Life Cycle"}}
+{{#> callout type='info' heading='Document Life Cycle'}}
 
 In the Nuxeo Platform, all document types have a life cycle that enables to describe the state of the document. This not linked directly to the workflow. You can have workflows that does not change the state of the document, or you can also change the state of a document outside of a workflow. You change the state of the document by using the Automation operation called **FollowLifeCycleTransition** in the **Document** category.
 
@@ -381,11 +380,11 @@ More information on life cycles in Studio at the page [Life cycle]({{page space=
     ![]({{file name='ValWf_ValidateDoc_tuto_-_Automation_Chain_-_tuto_Technical_Documentation.png'}} ?w=500,border=true)
 4.  Save the chain, deploy your project, create a new **DocumentationItem** with a nature metadata&nbsp;and enjoy your workflow.
 
-{{#> callout type='info' heading="unlock the document"}}
+{{#> callout type='info' heading='unlock the document'}}
 
 If you followed the previous tutorial ([Document Locking Right after Its Creation]({{page page='document-locking-right-after-its-creation'}})), your document is locked after is creation. The assigned user of the workflow can validate the document but cannot modify it. You should probably create an automation chain that uses the operation Document > Unlock and trigger it at the beginning of the worfklow, for instance as the input chain of the validation task.
 
-{{/callout}}{{#> callout type='tip' heading="Congratulations"}}
+{{/callout}}{{#> callout type='tip' heading='Congratulations'}}
 
 You now have documents that can be validated by different users depending on their nature.
 

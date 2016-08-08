@@ -2,7 +2,6 @@
 title: Quick Start Dev Guide
 labels:
     - home
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '19235677'
     ajs-parent-page-title: Quick Start Series
@@ -49,4 +48,4 @@ This guide aims at showing you how to start a Nuxeo project with a simple exampl
 *   Starting your project in Nuxeo Studio by changing the logo and creating a Contract document type on your brand new Nuxeo Platform instance
 *   Creating a new operation in Nuxeo IDE to calculate the contract renegociation date and leveraging it in Nuxeo Studio
 
-<span><span>The purpose of this guide is not to provide an overview of all the features of Nuxeo Studio or Nuxeo IDE but to show you how to use these two tools to make your own Nuxeo project so that you are quickly operational. However, you can take a look at the</span>&nbsp;[Studio documentation]({{page space='studio'}})<span>&nbsp;or</span>&nbsp;[IDE documentation]({{page space='idedoc'}}) <span>at anytime if you want more information about a feature of those environments.</span></span>
+The purpose of this guide is not to provide an overview of all the features of Nuxeo Studio or Nuxeo IDE but to show you how to use these two tools to make your own Nuxeo project so that you are quickly operational. However, you can take a look at the&nbsp;[Studio documentation]({{page space='studio'}})&nbsp;or&nbsp;[IDE documentation]({{page space='idedoc'}}) at anytime if you want more information about a feature of those environments.

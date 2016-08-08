@@ -13,7 +13,6 @@ labels:
     - delete
     - life-cycle
     - howto
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '950287'
@@ -168,18 +167,14 @@ See the sample below:
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Popular How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
 *   [undefined]({{page}})&nbsp;
 *   [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) &nbsp;
 *   [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Documents in Nuxeo Studio]({{page space='studio' page='documents'}})
 *   [Content Repository]({{page page='content-repository'}})
@@ -187,6 +182,4 @@ See the sample below:
 *   [Life cycle]({{page space='studio' page='life-cycle'}})
 *   [Schemas]({{page space='studio' page='schemas'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

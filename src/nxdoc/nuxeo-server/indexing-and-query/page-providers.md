@@ -3,7 +3,6 @@ title: Page Providers
 labels:
     - page-provider
     - query-pageprovider-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -186,13 +185,21 @@ Page providers defined inside content views are also registered on the `PageProv
 Here is a sample page provider definition:
 
 ```
+<extension target="org.nuxeo.ecm.platform.query.api.PageProviderService"
+  point="providers">
 
+  <coreQueryPageProvider name="TREE_CHILDREN_PP">
+    <pattern>
       SELECT * FROM Document WHERE ecm:parentId = ? AND ecm:isProxy = 0 AND
       ecm:mixinType = 'Folderish' AND ecm:mixinType != 'HiddenInNavigation'
       AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState !=
       'deleted'
+    </pattern>
+    <sort column="dc:title" ascending="true" />
+    <pageSize>50</pageSize>
+  </coreQueryPageProvider>
 
-    50
+</extension>
 
 ```
 
@@ -202,13 +209,13 @@ A typical usage of this page provider would be:
 
 ```
 PageProviderService ppService = Framework.getService(PageProviderService.class);
-Map props = new HashMap();
+Map<String, Serializable> props = new HashMap<String, Serializable>();
 props.put(CoreQueryDocumentPageProvider.CORE_SESSION_PROPERTY,
         (Serializable) coreSession);
-PageProvider pp = (PageProvider) ppService.getPageProvider(
+PageProvider<DocumentModel> pp = (PageProvider<DocumentModel>) ppService.getPageProvider(
         "TREE_CHILDREN_PP", null, null, null, props,
         new Object[] { myDoc.getId() });
-List documents = pp.getCurrentPage();
+List<DocumentModel> documents = pp.getCurrentPage();
 
 ```
 
@@ -217,12 +224,21 @@ Here you can see that the page provider properties (needed for the query to be e
 A typical usage of this page provider, referenced in a content view, would be:
 
 ```
+<extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
+  point="contentViews">
 
-    tree children
+  <contentView name="TREE_CHILDREN_CV">
+    <title>tree children</title>
 
-      #{documentManager}
-      true
-      #{currentDocument.id}
+    <pageProvider name="TREE_CHILDREN_PP">
+      <property name="coreSession">#{documentManager}</property>
+      <property name="checkQueryCache">true</property>
+      <parameter>#{currentDocument.id}</parameter>
+    </pageProvider>      
+
+  </contentView>
+
+</extension>
 
 ```
 
@@ -239,18 +255,27 @@ The `<coreQueryPageProvider>` element makes it possible to answer to most common
 Here is a sample example of a custom page provider configuration:
 
 ```
+<extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
+  point="contentViews">
 
-      #{documentManager}
-
+  <contentView name="CURRENT_DOCUMENT_CHILDREN_FETCH">
+    <genericPageProvider
+      class="org.nuxeo.ecm.platform.query.nxql.CoreQueryAndFetchPageProvider">
+      <property name="coreSession">#{documentManager}</property>
+      <pattern>
         SELECT dc:title FROM Document WHERE ecm:parentId = ? AND
         ecm:isCheckedInVersion = 0 AND ecm:mixinType != 'HiddenInNavigation'
         AND ecm:currentLifeCycleState != 'deleted'
-
-      #{currentDocument.id}
-
-      2
+      </pattern>
+      <parameter>#{currentDocument.id}</parameter>
+      <sort column="dc:title" ascending="true" />
+      <pageSize>2</pageSize>
+    </genericPageProvider>
 
     ...
+  </contentView>
+
+</extension>
 
 ```
 
@@ -279,16 +304,17 @@ list.add("\"Art/Architecture\", \"Art/Culture\"");
 And setting quoteParameters to false:
 
 ```
-
-  true
-
+<genericPageProvider class="org.nuxeo.ecm.platform.query.nxql.CoreQueryAndFetchPageProvider"
+                     name="searchWithInOperatorAndQueryParams">
+  <property name="searchAllRepositories">true</property>
+  <pattern quoteParameters="false">
     SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation'
     AND ecm:isCheckedInVersion = 0
     AND ecm:currentLifeCycleState != 'deleted'
     AND dc:subjects IN (?)
-
-  50
-
+  </pattern>
+  <pageSize>50</pageSize>
+</genericPageProvider>
 ```
 
 Result will be the following query:
@@ -304,24 +330,24 @@ SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation' AND ecm:isChe
 By setting quoteParameters to false:
 
 ```
-
-  true
-
-    SELECT * FROM Document WHERE dc:created > :mydate AND dc:title = "hello"
-
-  50
-
+<genericPageProvider class="org.nuxeo.ecm.platform.query.nxql.CoreQueryAndFetchPageProvider" name="testPP">
+  <property name="searchAllRepositories">true</property>
+  <pattern quoteParameters="false">
+    SELECT * FROM Document WHERE dc:created &gt; :mydate AND dc:title = "hello"
+  </pattern>
+  <pageSize>50</pageSize>
+</genericPageProvider>
 ```
 
 And defining a named parameter date:
 
 ```
-
-  NXQL
-  expr:mydate=@{CurrentDate}
-  testPP
-  ASC
-
+<operation id="Repository.PageProvider">
+  <param type="string" name="language">NXQL</param>
+  <param type="properties" name="namedParameters">expr:mydate=@{CurrentDate}</param>
+  <param type="string" name="providerName">testPP</param>
+  <param type="string" name="sortOrder">ASC</param>
+</operation>
 ```
 
 Result will be the following query:

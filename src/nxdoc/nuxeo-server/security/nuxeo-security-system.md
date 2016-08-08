@@ -139,7 +139,7 @@ Sometimes, you may need to do a check globally, without any underlying context. 
     You can contribute specific virtual groups using the [GroupComputer Service](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.computedgroups.ComputedGroupsServiceImpl--computer).
 
 *   Use the `Role` attribute of the Principal.
-    Via <span class="confluence-link">UserManager</span> you can contribute your own principal.
+    Via UserManager you can contribute your own principal.
 *   Use a normal permission check on a dedicated repository object:
 
     *   inside personal workspace,

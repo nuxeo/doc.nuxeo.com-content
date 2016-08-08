@@ -3,7 +3,6 @@ title: Installing the Nuxeo Platform on Windows
 labels:
     - install-windows
     - last-review-20141126
-    - content-review-lts2015
     - multiexcerpt
 toc: true
 confluence:
@@ -19,6 +18,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/2YON'
     source_link: /display/NXDOC/Installing+the+Nuxeo+Platform+on+Windows
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-07-22 15:52'
+        message: ''
+        version: '38'
     - 
         author: Alain Escaffre
         date: '2016-03-23 13:41'
@@ -232,7 +236,7 @@ To install the application using the Windows installer (.exe), double-click on t
 
 **Installation path**
 
-On Windows in general, and especially on Windows 7, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,... An installation in another folder could provoke restart issues at end of the [startup wizard steps]({{page page='setup'}}).
+On Windows in general, and especially on Windows 7, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,... An installation in another folder could provoke restart issues at end of the [startup wizard steps]({{page page='configuration-wizard'}}).
 
 ![]({{file name='DM-Windows_installer.png'}} ?w=300)
 
@@ -244,11 +248,11 @@ On Windows in general, and especially on Windows 7, it is highly recommended to 
 
 {{/callout}}
 
-<span>**What's next?**
+**What's next?**
 You want to evaluate the application? You can now [start the server]({{page page='server-start-and-stop'}}).
-You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='set-up-best-practices'}}).</span>
+You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='setup-best-practices'}}).
 
-## <span>Installing the Nuxeo Platform from the ZIP Archive</span>
+## Installing the Nuxeo Platform from the ZIP Archive
 
 Installing the Nuxeo Platform using the ZIP archive installs the Nuxeo Platform only. External dependencies must be installed separately.
 
@@ -269,7 +273,7 @@ On Windows in general, and especially on Windows 7, it is highly recommended to 
 
 **What's next?**
 You want to evaluate the application? You can now [start the server]({{page page='server-start-and-stop'}}).
-You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='set-up-best-practices'}}).
+You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='setup-best-practices'}}).
 
 ## Installing a Nuxeo Virtual Machine Image
 
@@ -302,7 +306,7 @@ The Nuxeo Platform is available as ready-to-use 64b virtual machine images from 
 3.  In your browser, type the indicated address.
     The [startup wizard]({{page page='configuration-wizard'}}) is displayed to help you configure your application.
 
-    {{#> callout type='info' heading="Shell root access"}}
+    {{#> callout type='info' heading='Shell root access'}}
 
     The password for the&nbsp;`root` and&nbsp;`nuxeo` users are generated the first time you start the virtual machine and are displayed on the console.&nbsp;
 
@@ -321,21 +325,15 @@ The Nuxeo Platform is available as ready-to-use 64b virtual machine images from 
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Next Steps'}}
 
-<div class="column medium-6">{{#> panel heading="Next Steps"}}
-
-*   [Set Up Best Practices]({{page page='set-up-best-practices'}})
+*   [Setup Best Practices]({{page page='setup-best-practices'}})
 *   [Server Start and Stop]({{page page='server-start-and-stop'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Getting Familiar with the Nuxeo Platform"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
 
 *   [From the Web UI to Nuxeo Studio]({{page page='from-the-web-ui-to-nuxeo-studio'}})
 *   [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
 *   [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

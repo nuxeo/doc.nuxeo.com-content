@@ -6,7 +6,6 @@ labels:
     - link-update
     - scripting
     - automation-component
-    - lts2015-ok
     - university
 toc: true
 confluence:
@@ -201,7 +200,7 @@ This enables you to benefit from:
 *   Conditions
 *   Smooth Automation implementation maintenance
 
-{{#> callout type='warning' heading="7.3 Changes"}}
+{{#> callout type='warning' heading='7.3 Changes'}}
 
 In 7.2, Context `ctx` was in run function signature:
 
@@ -450,13 +449,23 @@ runner.run(stream);
 Automation scripting operation is made through an XML contribution on the [`operation` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.automation.scripting.internals.AutomationScriptingComponent--operation):
 
 ```
+<extension target="org.nuxeo.automation.scripting.AutomationScriptingComponent" point="operation">
+  <scriptedOperation id="Scripting.TestBlob">
 
-    Blob
+    <!-- Define input type (input field in the run function) -->
+    <inputType>Blob</inputType>
 
-    Document
+    <!-- Define output type (the return object) -->
+    <outputType>Document</outputType>
 
-    javascript
+    <!-- Define operation category (by default 'javascript') -->
+    <category>javascript</category>
 
+    <!-- Define parameters to use through the params field of the run function -->
+    <param name="document" type="string"/>
+
+    <!-- Define the JavaScript code wrapped into run function surrounded by CDATA -->
+    <script>
       function run(input, params) {
           var root = Repository.GetDocument(null, {
               "value" : "/"
@@ -480,8 +489,9 @@ Automation scripting operation is made through an XML contribution on the [`oper
           print("title:"+blob.filename);
           return newDoc;
       }
-    ]]>
-
+    ]]></script>
+  </scriptedOperation>
+</extension>
 ```
 
 Automation scripting operations can be used as common Automation operations:
@@ -489,10 +499,11 @@ Automation scripting operations can be used as common Automation operations:
 *   Using it within chains, for instance:
 
     ```
-
-      string
-      string
-
+    <scriptedOperation id="javascript.HelloWorld">
+      <inputType>string</inputType>
+      <outputType>string</outputType>
+      <param name="lang" type="string"/>
+      <script>
         function run(input, params) {
           if (params.lang === "fr") {
             return "Bonjour " + input;
@@ -500,22 +511,28 @@ Automation scripting operations can be used as common Automation operations:
             return "Hello " + input;
           }
         }
-
+      </script>
+    </scriptedOperation>
     ```
 
     ```
-
-          fr
-
-          en
-
+    <extension point="chains" target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
+      <chain id="Scripting.ChainedHello">
+        <operation id="javascript.HelloWorld">
+          <param type="string" name="lang">fr</param>
+        </operation>
+        <operation id="javascript.HelloWorld">
+          <param type="string" name="lang">en</param>
+        </operation>
+      </chain>
+    </extension>
     ```
 
 *   Using it directly from the [Automation Service]({{page page='calling-automation-from-java'}}):
 
     ```
     OperationContext ctx = new OperationContext(session);
-    Map params = new HashMap<>();
+    Map<String, Object> params = new HashMap<>();
 
     params.put("lang", "en");
     ctx.setInput("John");

@@ -4,7 +4,6 @@ labels:
     - action-type
     - action
     - actions-filters-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '950289'
@@ -69,16 +68,30 @@ Since 5.8, it is easy to add your own action type to handle its configuration an
 You can take example on the "link" [action type registration](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-actions-jsf/src/main/resources/OSGI-INF/action-widgettypes-contrib.xml) for this. It is actually relying on widget types definition, here is a minimal definition for a custom action type:
 
 ```
+<extension target="org.nuxeo.ecm.platform.forms.layout.LayoutStore"
+  point="widgettypes">
 
-      jsfAction
-
-          false
-          #{canUseAjaxTabs}
-
+  <widgetType name="my_link">
+    <categories>
+      <category>jsfAction</category>
+    </categories>
+    <configuration>
+      <properties>
+        <defaultValues mode="any">
+          <property name="discardSurroundingForm">false</property>
+          <property name="supportAjax">#{canUseAjaxTabs}</property>
+        </defaultValues>
+      </properties>
+    </configuration>
+    <handler-class>
       org.nuxeo.ecm.platform.forms.layout.facelets.plugins.TemplateWidgetTypeHandler
-
+    </handler-class>
+    <property name="template">
       /incl/action/my_link_action_template.xhtml
+    </property>
+  </widgetType>
 
+</extension>
 ```
 
 The category `jsfAction` is used to filter this widget type from other widget types and make this one specific to actions display.
@@ -100,18 +113,8 @@ The action template at "/incl/action/my_link_action_template.xhtml" may need to 
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-<div class="column medium-6">{{#> panel heading="Related pages in this documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in Studio documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related pages in Studio documentation"}}
-
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

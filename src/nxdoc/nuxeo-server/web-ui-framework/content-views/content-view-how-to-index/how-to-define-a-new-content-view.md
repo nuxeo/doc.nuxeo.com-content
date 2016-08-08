@@ -10,7 +10,6 @@ labels:
     - content-view
     - howto
     - studio
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235663'
@@ -512,9 +511,7 @@ There are several ways of using the content view you configured in your Nuxeo Pl
 *   In the&nbsp;[search tab]({{page space='userdoc' page='searching-the-nuxeo-platform'}})&nbsp;feature, &nbsp;so as to add a new filter set. You just need to click on the **Search content view** checkbox, in the&nbsp;**Flag**&nbsp;section of the Query & form tab of your content view in Studio.
 *   In any&nbsp;[custom tab]({{page space='studio' page='tabs'}}), using the Content View widget.
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-tos'}}
 
 *   [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
 *   [Configure a Domain Specific Advanced Search]({{page space='nxdoc58' page='configure-a-domain-specific-advanced-search'}})
@@ -522,9 +519,7 @@ There are several ways of using the content view you configured in your Nuxeo Pl
 *   [How to Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Content Views ]({{page page='content-views'}})
 *   [Content Views in Studio Documentation]({{page space='studio' page='content-views'}})
@@ -532,6 +527,4 @@ There are several ways of using the content view you configured in your Nuxeo Pl
 *   [Documents Display Configuration]({{page page='documents-display-configuration'}})
 *   [Default Search]({{page space='userdoc' page='default-search'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

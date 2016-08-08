@@ -11,7 +11,6 @@ details:
 labels:
     - howto
     - schema-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950287'
@@ -84,7 +83,13 @@ Sometimes, the default localized messages are not satisfying. Especially when us
 1.  For example, if we get back to our previous email example:
 
     ```
-
+    <xs:element name="email">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[^@]+@[^\.]+\..+" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
     ```
 
     The default constraint violation message will look like:
@@ -115,7 +120,7 @@ Sometimes, the default localized messages are not satisfying. Especially when us
     label.schema.constraint.violation.PatternConstraint.schema.users.user.firstname=The firstname must contain several regular characters.
     ```
 
-    <span>Here, it's a custom message for the field&nbsp;`firstname` which is a sub-field of the&nbsp;`user` complex type - contained in the list&nbsp;`users` in the schema `schemaUser`.</span>
+    Here, it's a custom message for the field&nbsp;`firstname` which is a sub-field of the&nbsp;`user` complex type - contained in the list&nbsp;`users` in the schema `schemaUser`.
 
     Most of the time, the item has no explicit name (no named type used in the XSD declaration). In that case, use `item`.
 
@@ -135,11 +140,11 @@ Let's suppose you want to make reference to `Product` objects provided by a `Pro
 
     ```
     public class ProductResolver implements ObjectResolver {
-        public void configure(Map parameters) { /* no configuration needed */ }
+        public void configure(Map<String, String> parameters) { /* no configuration needed */ }
         public String getName() {
             return "productResolver";
         }
-        public Map getParameters() {
+        public Map<String, Serializable> getParameters() {
             return Collections.EMPTY_MAP;
         }
         public boolean validate(Object value) {
@@ -151,7 +156,7 @@ Let's suppose you want to make reference to `Product` objects provided by a `Pro
             }
             return null;
         }
-        public  T fetch(Class type, Object value) {
+        public <T> T fetch(Class<T> type, Object value) {
             Object product = fetch(value);
             if (product != null && type.isInstance(product)) {
                 return (T) product;
@@ -179,15 +184,30 @@ Let's suppose you want to make reference to `Product` objects provided by a `Pro
 3.  And register it in a Nuxeo contribution:
 
     ```
-
+    <?xml version="1.0"?>
+    <component name="org.nuxeo.ecm.core.DocumentModel.resolver">
+      <documentation>
         Resolver for document properties containing reference to Product.
-
+      </documentation>
+      <extension target="org.nuxeo.ecm.core.schema.ObjectResolverService" point="resolvers">
+        <resolver type="productResolver" class="com.mycompany.nuxeo.ProductResolver" />
+      </extension>
+    </component> 
     ```
 
 4.  You can now define your own custom fields:
 
     ```
-
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
+               xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
+               targetNamespace="http://www.nuxeo.org/ecm/schemas/example">
+      <xs:element name="productReference">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" ref:resolver="productResolver" />
+        </xs:simpleType>
+      </xs:element>
+    </xs:schema>
     ```
 
     Validation will be activated. It will check if referenced Product exists.
@@ -207,19 +227,13 @@ Let's suppose you want to make reference to `Product` objects provided by a `Pro
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Field Constraints and Validation]({{page page='field-constraints-and-validation'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

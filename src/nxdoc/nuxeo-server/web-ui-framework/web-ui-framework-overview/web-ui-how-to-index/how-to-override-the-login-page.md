@@ -11,7 +11,6 @@ labels:
     - login-page
     - theme
     - login-page-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'
@@ -85,8 +84,22 @@ An helper class will help you to access configuration for the login page, like t
 Here is an example getting few configuration data:
 
 ```
-<%@ page="" import="org.nuxeo.ecm.platform.ui.web.auth.LoginScreenHelper" %="">
-<% 0="" LoginScreenConfig="" screenConfig="LoginScreenHelper.getConfig();" fetch="" Login="" Screen="" config="" and="" manage="" default boolean="" showNews="screenConfig.getDisplayNews();" String="" iframeUrl="screenConfig.getNewsIframeUrl();" bodyBackgroundStyle="LoginScreenHelper.getValueWithDefault(screenConfig.getBodyBackgroundStyle()," "url('"="" +="" context="" "="" img="" login_bg.jpg')="" no-repeat="" center="" fixed="" #333");="" headerStyle="LoginScreenHelper.getValueWithDefault(screenConfig.getHeaderStyle()," "");="" loginBoxBackgroundStyle="LoginScreenHelper.getValueWithDefault(screenConfig.getLoginBoxBackgroundStyle()," "none="" repeat="" scroll="" #fff");="" footerStyle="LoginScreenHelper.getValueWithDefault(screenConfig.getFooterStyle()," disableBackgroundSizeCover="Boolean.TRUE.equals(screenConfig.getDisableBackgroundSizeCover());" logoWidth="LoginScreenHelper.getValueWithDefault(screenConfig.getLogoWidth()," "113");="" logoHeight="LoginScreenHelper.getValueWithDefault(screenConfig.getLogoHeight()," "20");="" logoAlt="LoginScreenHelper.getValueWithDefault(screenConfig.getLogoAlt()," "Nuxeo");="" logoUrl="LoginScreenHelper.getValueWithDefault(screenConfig.getLogoUrl()," nuxeo_logo.png");="" %=""> 
+<%@ page import="org.nuxeo.ecm.platform.ui.web.auth.LoginScreenHelper"%>
+<%
+LoginScreenConfig screenConfig = LoginScreenHelper.getConfig();
+// fetch Login Screen config and manage default
+boolean showNews = screenConfig.getDisplayNews();
+String iframeUrl = screenConfig.getNewsIframeUrl();
+String bodyBackgroundStyle = LoginScreenHelper.getValueWithDefault(screenConfig.getBodyBackgroundStyle(), "url('" + context + "/img/login_bg.jpg') no-repeat center center fixed #333");
+String headerStyle = LoginScreenHelper.getValueWithDefault(screenConfig.getHeaderStyle(), "");
+String loginBoxBackgroundStyle = LoginScreenHelper.getValueWithDefault(screenConfig.getLoginBoxBackgroundStyle(), "none repeat scroll 0 0 #fff");
+String footerStyle = LoginScreenHelper.getValueWithDefault(screenConfig.getFooterStyle(), "");
+boolean disableBackgroundSizeCover = Boolean.TRUE.equals(screenConfig.getDisableBackgroundSizeCover());
+String logoWidth = LoginScreenHelper.getValueWithDefault(screenConfig.getLogoWidth(), "113");
+String logoHeight = LoginScreenHelper.getValueWithDefault(screenConfig.getLogoHeight(), "20");
+String logoAlt = LoginScreenHelper.getValueWithDefault(screenConfig.getLogoAlt(), "Nuxeo");
+String logoUrl = LoginScreenHelper.getValueWithDefault(screenConfig.getLogoUrl(), context + "/img/nuxeo_logo.png");
+%> 
 ```
 
 # Deployment
@@ -96,7 +109,7 @@ In order to be sure that your JSP page will override the default one, a modifica
 We want our bundle to be loaded after this module because our custom login page will override the default login page. To achieve this, add the following requirement in the `deployment-fragment.xml`, at the top of the file, just after the `<fragment>` tag.
 
 ```
-org.nuxeo.ecm.webapp.ui
+<require>org.nuxeo.ecm.webapp.ui</require>
 
 ```
 
@@ -104,22 +117,16 @@ org.nuxeo.ecm.webapp.ui
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Brand Your Application]({{page page='how-to-brand-your-application'}})
 *   [How to Customize the Error Pages]({{page page='how-to-customize-the-error-pages'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [Theme in Developer Documentation]({{page page='theme'}})
 *   [Branding in Studio Documentation](http://doc.nuxeo.com/display/Studio/Branding)
 *   [Online UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

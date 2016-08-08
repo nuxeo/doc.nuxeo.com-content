@@ -18,7 +18,6 @@ labels:
     - static-war
     - howto
     - last-review-20141128
-    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
@@ -237,7 +236,7 @@ Creating a static WAR of Nuxeo allows you to deploy Nuxeo in an environment wher
 
 Those limitations implies that if you want to change the distribution (for instance install or upgrade some Nuxeo Packages, change the configuration...), you must replay the following procedure and deploy the WAR newly generated.
 
-{{#> callout type='tip' heading="How not to hardcode some properties"}}
+{{#> callout type='tip' heading='How not to hardcode some properties'}}
 
 It is possible to keep some "dynamic" aspect on some parameters by giving them a variable as value: for instance, `nuxeo.db.host=${custom.nuxeo.db.host}`
 Then, you can use the produced Nuxeo WAR in an environment where `custom.nuxeo.db.host` is defined from outside.

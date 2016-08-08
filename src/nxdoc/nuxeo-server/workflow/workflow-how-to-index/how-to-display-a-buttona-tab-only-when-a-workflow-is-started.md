@@ -12,7 +12,6 @@ labels:
     - scripting
     - howto
     - studio
-    - content-review-lts2015
     - excerpt
 confluence:
     ajs-parent-page-id: '19235619'
@@ -94,9 +93,7 @@ You can use the following custom condition on the user action or the tab filteri
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [undefined]({{page}})&nbsp;
 *   [How to Modify a Workflow Variable outside of Workflow Context]({{page page='how-to-modify-a-workflow-variable-outside-of-workflow-context'}})
@@ -104,9 +101,7 @@ You can use the following custom condition on the user action or the tab filteri
 *   [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})&nbsp;
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Workflow in Nuxeo Studio]({{page space='studio' page='workflow'}})
 *   [Full-Text Queries]({{page page='full-text-queries'}})
@@ -114,6 +109,4 @@ You can use the following custom condition on the user action or the tab filteri
 *   [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
 *   [Workflow]({{page page='workflow'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

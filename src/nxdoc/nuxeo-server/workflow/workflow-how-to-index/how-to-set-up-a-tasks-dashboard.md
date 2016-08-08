@@ -12,7 +12,6 @@ labels:
     - workflow
     - howto
     - workflow-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235619'
@@ -117,9 +116,13 @@ We provide some quick steps to follow using [Extension points]({{page page='how-
     Add the following extension:
 
     ```
-
-          MAIN_TABS
-
+    <extension target="org.nuxeo.ecm.platform.actions.ActionService"
+        point="actions">
+       <action id="workflow_dashboard" link="view_workflow" label="label.main.tab.workflow"
+          order="30" enabled="true">
+          <category>MAIN_TABS</category>
+       </action>
+    </extension>
     ```
 
 2.  **Choose the document type of the tasks that are created**
@@ -136,15 +139,18 @@ We provide some quick steps to follow using [Extension points]({{page page='how-
         *   or the dedicated&nbsp;**Workflow** > **Apply Mapping on Input Task** operation, with the name of the mapping.&nbsp;A mapping can be contributed in the **Advanced settings** > **XML Extensions** feature:
 
             ```
-
-             common-asset:_destination
-             common-asset:altTag
-             common-asset:approvedCountries
-             common-asset:dateTaken
-             common-asset:retouched
-             dc:title
-             dc:expired
-
+            <extension target="org.nuxeo.ecm.core.api.propertiesmapping.PropertiesMappingComponent"
+             point="mapping">
+            <mapping name="taskMapping">
+             <property path="common-asset:_destination">common-asset:_destination</property>
+             <property path="common-asset:altTag">common-asset:altTag</property>
+             <property path="common-asset:approvedCountries">common-asset:approvedCountries</property>
+             <property path="common-asset:dateTaken">common-asset:dateTaken</property>
+             <property path="common-asset:retouched">common-asset:retouched</property>
+             <property path="dc:title">dc:title</property>
+             <property path="dc:expired">dc:expired</property>
+             </mapping>
+            </extension>
             ```
 
 4.  **Create the content views for each specific tasks queues you want to see**
@@ -166,28 +172,53 @@ We provide some quick steps to follow using [Extension points]({{page page='how-
     Finally, you want to display tabs with the content views inside. There is a specific convention to follow that will automatically match the tab and the content view, based on the content view ID, see the exemple below, better than a long paragraph:
 
     ```
-
-        WORKFLOW_DASHBOARD
-
-        timeOff_request_sub_tab
-
+    <extension target="org.nuxeo.ecm.platform.actions.ActionService"
+      point="actions">
+      <!-- The action below is adding the "Time off workflow" sub tab of the Main "Workflow 
+        tab". -->
+      <action id="timeOff_request" link="/incl/tabs/workflow_dashboard_tab.xhtml"
+        label="tor.timeoffrequest" order="20">
+        <category>WORKFLOW_DASHBOARD</category>
+      </action>
+      <action id="tor_hr_manager_approval" link="/incl/tabs/workflow_dashboard_sub_tab.xhtml"
+        label="tor.hrmanagerapproval.label" order="50">
+        <category>timeOff_request_sub_tab</category>
+        <filter id="hr_manager">
+          <rule grant="true">
+            <group>
               hr_manager
-
-        timeOff_request_sub_tab
-
+            </group>
+          </rule>
+        </filter>
+      </action>
+      <!-- The action below is adding a tab that do contain a content view of tasks. 
+        The convention is : "id of action = id of content view" and category is: parent_tab_id_sub_tab" -->
+      <action id="tor_manager_approval" link="/incl/tabs/workflow_dashboard_sub_tab.xhtml"
+        label="tor.managerapproval.label" order="50">
+        <category>timeOff_request_sub_tab</category>
+        <filter id="hr_operational_managers">
+          <rule grant="false">
+            <condition>
+              <group>
                 hr_manager
-
+              </group>
+            </condition>
+          </rule>
+          <rule grant="true">
+            <group>
               hr_operational_managers
-
+            </group>
+          </rule>
+        </filter>
+      </action>
+    </extension>
     ```
 
     * * *
 
     &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [undefined]({{page}})&nbsp;
 *   [How to Modify a Workflow Variable outside of Workflow Context]({{page page='how-to-modify-a-workflow-variable-outside-of-workflow-context'}})
@@ -195,9 +226,7 @@ We provide some quick steps to follow using [Extension points]({{page page='how-
 *   [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})&nbsp;
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Workflow in Nuxeo Studio]({{page space='studio' page='workflow'}})
 *   [Full-Text Queries]({{page page='full-text-queries'}})
@@ -205,6 +234,4 @@ We provide some quick steps to follow using [Extension points]({{page page='how-
 *   [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
 *   [Workflow]({{page page='workflow'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

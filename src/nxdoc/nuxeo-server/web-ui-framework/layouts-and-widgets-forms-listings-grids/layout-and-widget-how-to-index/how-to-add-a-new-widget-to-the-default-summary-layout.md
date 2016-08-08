@@ -14,7 +14,6 @@ labels:
     - howto
     - layout
     - layout-widgets-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235623'
@@ -94,11 +93,21 @@ Since the default summary layout contains four widgets displaying actions, it is
 Here is the definition of the widget referencing actions for the `SUMMARY_TOP_LEFT` category:
 
 ```
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+  point="widgets">
 
-    true
+  <widget name="summary_panel_left" type="summary_current_document_custom_actions">
+    <handlingLabels>true</handlingLabels>
+    <labels>
+      <label mode="any"></label>
+    </labels>
+    <properties widgetMode="any">
+      <property name="category">SUMMARY_PANEL_LEFT</property>
+      <property name="subStyleClass">summaryActions</property>
+    </properties>
+  </widget>
 
-      SUMMARY_PANEL_LEFT
-      summaryActions
+</extension>
 
 ```
 
@@ -107,19 +116,36 @@ Default widgets (presenting the document relations, status, publications, etc...
 Here is a sample contribution to add a widget to the left widget panel:
 
 ```
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+  point="widgets">
 
-      note:note
-      note:mime_type
-
+  <widget name="summary_note_text" type="richtext_with_mimetype">
+    <fields>
+      <field>note:note</field>
+      <field>note:mime_type</field>
+    </fields>
+    <properties mode="view">
+      <property name="translatedHtml">
         #{noteActions.translateImageLinks(field_0)}
+      </property>
+      <property name="cssClass">note_content_block</property>
+    </properties>
+  </widget>
 
-      note_content_block
+</extension>
 
-    SUMMARY_PANEL_LEFT
+<extension target="org.nuxeo.ecm.platform.actions.ActionService"
+  point="actions">
 
-      summary_note_text
+  <action id="summary_note_text" type="widget" order="100">
+    <category>SUMMARY_PANEL_LEFT</category>
+    <properties>
+      <property name="widgetName">summary_note_text</property>
+    </properties>
+    <filter-id>hasNote</filter-id>
+  </action>
 
-    hasNote
+</extension>
 
 ```
 
@@ -130,9 +156,7 @@ The action order will make it possible to change the order of appearance of this
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Customize the Dashboard]({{page page='how-to-customize-the-dashboard'}})
 *   [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
@@ -140,9 +164,7 @@ The action order will make it possible to change the order of appearance of this
 *   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
@@ -150,6 +172,4 @@ The action order will make it possible to change the order of appearance of this
 *   [Web UI Limitations]({{page page='web-ui-limitations'}})
 *   [Widget Definitions]({{page page='widget-definitions'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

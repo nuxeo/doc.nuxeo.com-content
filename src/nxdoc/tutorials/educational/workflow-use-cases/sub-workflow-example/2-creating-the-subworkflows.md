@@ -4,7 +4,6 @@ labels:
     - workflow
     - subworkflow
     - sub-workflow
-    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '14257562'
@@ -184,7 +183,7 @@ Set the following values:
 
 1.  **Title**: First level validation
 2.  **Directive**: Please review this document.
-3.  **<span style="color: rgb(67,67,67);">Assignees expression</span>**: Replace the value with the following <span class="confluence-link">[MVEL expression]({{page page='use-of-mvel-in-automation-chains'}})</span>:&nbsp;
+3.  **<span style="color: rgb(67,67,67);">Assignees expression</span>**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):&nbsp;
     `@{WorkflowVariables["level1Assignees"]}`
     This calls the corresponding workflow variable that will be set in the parent workflow.
 4.  **Grant permission to task assignees:** Read (in our case we want to make sure the accountants will be able to view the document, not necessarily to modify it).
@@ -255,7 +254,7 @@ Set the following values:
 
 1.  **Title**: First level validation.
 2.  **Directive**: Please review this document.
-3.  **<span style="color: rgb(67,67,67);">Assignees expression</span>**: Replace the value with the following [<span class="confluence-link">MVEL expression</span>]({{page page='use-of-mvel-in-automation-chains'}})<span class="confluence-link">&nbsp;</span>:
+3.  **<span style="color: rgb(67,67,67);">Assignees expression</span>**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
     `@{WorkflowVariables["level1Assignees"]}`
     This calls the corresponding workflow variable that will be set in the parent workflow.
 4.  **Grant permission to task assignees:** Read (in our case we want to make sure the accountants will be able to view the document, not necessarily to modify it).
@@ -271,7 +270,7 @@ Set the following values:
 
 1.  **Title**: Second level validation
 2.  **Directive**: Please review this document.
-3.  **<span style="color: rgb(67,67,67);">Assignees expression</span>**: Replace the value with the following <span class="confluence-link">[MVEL expression]({{page page='use-of-mvel-in-automation-chains'}})</span>:
+3.  **<span style="color: rgb(67,67,67);">Assignees expression</span>**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
     `@{WorkflowVariables["level2Assignees"]}`
     This calls the corresponding workflow variable that will be set in the parent workflow.
 4.  **Grant permission to task assignees:** Read

@@ -7,8 +7,6 @@ labels:
     - audio
     - annotation
     - dam-component
-    - lts2015-update-screenshots
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -408,10 +406,23 @@ The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/vi
 
 *   [`videoConversions`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.9.5/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--videoConversions) : Extension point to contribute video conversions that will be available on the VideoService.
 
+    ```
+    <extension target="org.nuxeo.ecm.platform.video.service.VideoService"
+      point="videoConversions">
+      <videoConversion name="MP4 480p" converter="convertToMP4" height="480"/>
+      <videoConversion name="WebM 480p" converter="convertToWebM" height="480"/>
+      <videoConversion name="Ogg 480p" converter="convertToOgg" height="480"/>
+    </extension>
+    ```
+
 *   [`automaticVideoConversions`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.9.5/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--automaticVideoConversions) : Extension point to contribute which video conversion should be done automatically (through the `videoAutomaticConversions` listener).
 
     ```
-
+    <extension target="org.nuxeo.ecm.platform.video.service.VideoService"
+      point="automaticVideoConversions">
+      <automaticVideoConversion name="MP4 480p" order="0" />
+      <automaticVideoConversion name="WebM 480p" order="10" />
+    </extension> 
     ```
 
 ### Audio
@@ -444,21 +455,15 @@ See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribut
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Other DAM Documentation"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other DAM Documentation'}}
 
 *   [How to Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
 *   [Supported File Formats]({{page page='supported-file-formats'}})
 *   [How to Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}})
 *   [Events and Listeners]({{page page='events-and-listeners'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

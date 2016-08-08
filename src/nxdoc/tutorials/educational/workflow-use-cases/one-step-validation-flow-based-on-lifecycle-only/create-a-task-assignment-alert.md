@@ -4,7 +4,6 @@ labels:
     - studio-20
     - tuto-automation
     - tuto-template
-    - content-review-lts2015
 confluence:
     ajs-parent-page-id: '3345551'
     ajs-parent-page-title: One step validation flow based on lifecycle only
@@ -146,17 +145,17 @@ Content
 </td><td colspan="1">
 
 ```
-Hello, 
-
- The user ${Context['UserFirstName']} ${Context['UserLastName']} needs your approval for the following document : 
-
- Title : ${Document['dc:title']} 
-
- Description : ${Document['dc:description']} 
-
- Creation date : ${Document['dc:created']} 
-
- Link to the document : ${Document['dc:title']}\
+Hello,<br /> 
+ <br /> 
+ The user ${Context['UserFirstName']} ${Context['UserLastName']} needs your approval for the following document :<br /> 
+ <br /> 
+ Title : ${Document['dc:title']}<br /> 
+ <br /> 
+ Description : ${Document['dc:description']}<br /> 
+ <br /> 
+ Creation date : ${Document['dc:created']}<br /> 
+ <br /> 
+ Link to the document : <a href="${docUrl}">${Document['dc:title']}</a><br />\
 ```
 
 </td></tr></tbody></table>

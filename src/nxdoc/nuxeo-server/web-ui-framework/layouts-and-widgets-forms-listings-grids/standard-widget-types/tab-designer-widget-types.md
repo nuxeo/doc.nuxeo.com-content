@@ -4,7 +4,6 @@ labels:
     - widget-types
     - tab
     - layout-widgets-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -111,18 +110,8 @@ Form management performed by this widget type makes it possible to use FancyBox 
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in this documentation'}}
 
-<div class="column medium-6">{{#> panel heading="Related topics in this documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related topics in Studio documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related topics in Studio documentation"}}
-
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

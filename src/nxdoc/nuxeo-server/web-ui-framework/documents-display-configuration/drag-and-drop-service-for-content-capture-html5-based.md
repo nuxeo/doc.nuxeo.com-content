@@ -5,7 +5,6 @@ labels:
     - import
     - automation
     - file-upload-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '6029663'
@@ -234,7 +233,7 @@ You can very simply define a new DropZone in your pages; you simply need to add 
 
 ```
 
- ... 
+<div id="myDropZone" class="dropzone" context="myDropZone"> ... </div>
 
 ```
 
@@ -243,11 +242,15 @@ You can very simply define a new DropZone in your pages; you simply need to add 
 Each dropzone context is associated with a set of content automation operations or automation chains. This association is configured via the action service:
 
 ```
-
-  ContentView
-  create
-
-    FileManager.ImportInSeam
+<action id="Chain.FileManager.ImportInSeam"
+        link="" order="10" label="label.smart.import"
+        help="desc.smart.import.file">
+  <category>ContentView</category>
+  <filter-id>create</filter-id>
+  <properties>
+    <property name="chainId">FileManager.ImportInSeam</property>
+  </properties>
+</action>
 
 ```
 
@@ -284,14 +287,24 @@ At some point, inside your automation chain you may need to access Seam Context.
     For example, if you want to get available actions via the "Actions.GET" operation, but want to leverage Seam context for actions filters:
 
     ```
-
-        Actions.GET
+    <chain id="SeamActions.GET">
+      <operation id="Seam.RunOperation">
+        <param type="string" name="id">Actions.GET</param>
+      </operation>
+    </chain>
 
     ```
 
 *   [`Seam.InitContext`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/WebUI.InitSeamContext) / [`Seam.DestroyContext`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/WebUI.DestroySeamContext) : that can be used to initialize / destroy seam context:
 
     ```
+    <chain id="ImportClipboard">
+      <operation id="Seam.InitContext" />
+      <operation id="UserWorkspace.CreateDocumentFromBlob" />
+      <operation id="Document.Save"/>
+      <operation id="Seam.AddToClipboard"/>
+      <operation id="Seam.DestroyContext" />
+    </chain>
 
     ```
 
@@ -314,9 +327,7 @@ In the default JSF WebApp you can have a look at `DndFormActionBean` and `dndFor
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related Pages in This Documentation"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Pages in This Documentation'}}
 
 *   [How to Customize the HTML5 Drag and Drop Import with Metadata Form]({{page page='how-to-customize-the-html5-drag-and-drop-import-with-metadata-form'}})
 *   [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
@@ -324,14 +335,10 @@ In the default JSF WebApp you can have a look at `DndFormActionBean` and `dndFor
 *   [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
 *   [Nuxeo Bulk Document Importer]({{page page='nuxeo-bulk-document-importer'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="More about drag and drop in the user documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='More about drag and drop in the user documentation'}}
 
 *   [Creating Content]({{page space='userdoc' page='creating-content'}})
 *   [Publishing Content]({{page space='userdoc' page='publishing-content'}})
 *   [Editing Content]({{page space='userdoc' page='editing-content'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

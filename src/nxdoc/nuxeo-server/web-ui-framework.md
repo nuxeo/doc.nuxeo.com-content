@@ -2,7 +2,6 @@
 title: Web UI Framework
 labels:
     - last-review-20150128
-    - content-review-lts2015
     - home
     - excerpt
 confluence:
@@ -68,11 +67,7 @@ history:
 
 This chapter presents the different ways to customize what is displayed on the default application.
 
-{{! /excerpt}}
-
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+{{! /excerpt}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Main UI Elements
 
@@ -83,19 +78,15 @@ The UI of the Nuxeo platform is composed of different core elements that you can
 *   [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
 *   [Theme]({{page page='theme'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### How-Tos
 
-We provide you with thematic How-Tos to show you examples of customization and help you adapt the Nuxeo Platform to your needs.
+We provide you with thematic how-tos to show you examples of customization and help you adapt the Nuxeo Platform to your needs.
 
 *   [Web UI How-To Index]({{page page='web-ui-how-to-index'}})
 *   [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
 *   [Content View How-To Index]({{page page='content-view-how-to-index'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

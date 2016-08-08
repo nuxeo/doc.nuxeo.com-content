@@ -3,7 +3,6 @@ title: Events and Listeners
 labels:
     - event
     - listener
-    - content-review-lts2015
     - core-component
     - excerpt
 toc: true
@@ -162,7 +161,7 @@ When you need to integrate some features of an external application into the Nux
 
 {{! /excerpt}}
 
-The system allows to contribute event listeners (Java classes) or event handlers ([defined in <span class="confluence-link">Studio</span>](http://doc.nuxeo.com/display/Studio/Event+Handlers)) that subscribe to Platform events such as user login/logout, document creation, document update, document move,&nbsp; workflow started, etc. Those Java classes or automation chains are then executed either synchronously in the transaction, or synchronously out of the transaction, or asynchronously.
+The system allows to contribute event listeners (Java classes) or event handlers ([defined in Studio](http://doc.nuxeo.com/display/Studio/Event+Handlers)) that subscribe to Platform events such as user login/logout, document creation, document update, document move,&nbsp; workflow started, etc. Those Java classes or automation chains are then executed either synchronously in the transaction, or synchronously out of the transaction, or asynchronously.
 
 The event bus system is a nice way to implement some triggers in the document repository, and to let the repository notify other elements of your IT system of the changes that happen in the repository.
 
@@ -191,11 +190,28 @@ Several event listeners exist by default in the nuxeo platform, for instance:
 Event listeners can be registered using extension points. Here are example event listeners registrations from the Nuxeo Platform:
 
 ```
+<component name="DublinCoreStorageService">
+  <extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
+    <listener name="dclistener" async="false" postCommit="false" priority="120"
+      class="org.nuxeo.ecm.platform.dublincore.listener.DublinCoreListener">
+    </listener>
+  </extension>
+</component>
 
-      documentCreated
-      documentRemoved
-      versionRemoved
-      documentRestored
+```
+
+```
+<component name="org.nuxeo.ecm.platform.annotations.repository.listener">
+  <extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
+    <listener name="annotationsVersionEventListener" async="true" postCommit="true"
+        class="org.nuxeo.ecm.platform.annotations.repository.service.VersionEventListener">
+      <event>documentCreated</event>
+      <event>documentRemoved</event>
+      <event>versionRemoved</event>
+      <event>documentRestored</event>
+    </listener>
+  </extension>
+</component>
 
 ```
 
@@ -378,20 +394,14 @@ For diagnostic and testing purpose, you can use the [EventAdminService](http://e
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-tos'}}
 
 *   [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
 *   [Event and Listener How To Index]({{page page='event-and-listener-how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Other Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
 *   [Common Events]({{page page='common-events'}})
 *   [Scheduling Periodic Events]({{page page='scheduling-periodic-events'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

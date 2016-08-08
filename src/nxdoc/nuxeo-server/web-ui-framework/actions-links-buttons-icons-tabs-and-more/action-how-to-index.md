@@ -2,7 +2,6 @@
 title: Action How-To Index
 labels:
     - action
-    - lts2015-ok
     - index
 confluence:
     ajs-parent-page-id: '950289'

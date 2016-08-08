@@ -13,7 +13,6 @@ labels:
     - aggregate
     - query
     - aggregate-search-widget-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -250,7 +249,7 @@ Before starting this how-to you will need to create the following elements in St
 
     {{#> callout type='info' }}
 
-    For more details on vocabularies, see the&nbsp;[Directory and Vocabulary How-Tos]({{page page='directory-and-vocabulary-how-to-index'}}).
+    For more details on vocabularies, see the&nbsp;[Directory and Vocabulary How-tos]({{page page='directory-and-vocabulary-how-to-index'}}).
 
     {{/callout}}
 

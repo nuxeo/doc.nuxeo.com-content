@@ -5,7 +5,6 @@ labels:
     - mvel
     - freemarker
     - scripting
-    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '19235679'
@@ -413,7 +412,7 @@ ${**Document**.property}`
 Workflow email notification:`
 ${**workflowDocuments[0]**.property}`
 
-</td></tr></tbody></table>{{#> callout type='note' heading="Variable name and context"}}
+</td></tr></tbody></table>{{#> callout type='note' heading='Variable name and context'}}
 
 The same object may be given a different variable name depending on language or context, as shown in bold in the previous table.
 
@@ -465,7 +464,7 @@ If you kept Nuxeo's default logging configuration, you should mark this message 
 
 ### ![]({{file name='ELDependingOnComponent-1.png'}}) Workflow Automatic Transition
 
-<span class="confluence-link">Please have a look at this page:</span> [ <span class="confluence-link">Available variables in the automation context</span> ]({{page page='variables-available-in-the-automation-context'}})
+Please have a look at this page: [ Available variables in the automation context ]({{page page='variables-available-in-the-automation-context'}})
 
 ### ![]({{file name='ELDependingOnComponent-2.png'}}) Email Templates
 
@@ -495,7 +494,7 @@ Event handlers also give access to the `Event` object, which contains interestin
     *   `documentLifeCycle` - the document's current lifecycle state
     *   `parentPath` - The path of the parent (only for the `Empty Document Created` event)
     *   `destinationRef` - the path of the parent
-    *   `destinationName` - the name of the parent{{#> callout type='note' heading="Availability of These Properties"}}
+    *   `destinationName` - the name of the parent{{#> callout type='note' heading='Availability of These Properties'}}
 
     Some of these properties are available only for some events.
 
@@ -552,7 +551,7 @@ In widgets, layout, content views and in XHTML templates, you can use the EL exp
 *   You may need to use ".toString()" sometimes, depending on what object is returned.
     Ex: on the documentModel javadoc, you can see that "getPath()" method returns a Path object. So if you need the string of the path (for an NXQL query for instance) you need to use the _.toString() method._
 *   You also have access to some "functions" that were added by Nuxeo, you can see the list [on the Tag Library Documentation](http://community.nuxeo.com/api/nuxeo/5.7/tlddoc/nxd/tld-summary.html) .
-    ex: `#{[nxd:hasPermission](http://nxdhasPermission)(` <span>`currentDomain, 'Write')}` will return true only if the connected user has the edit permission on the current domain.</span>
+    ex: `#{[nxd:hasPermission](http://nxdhasPermission)(` `currentDomain, 'Write')}` will return true only if the connected user has the edit permission on the current domain.
 *   The JSTL functions are available, for string manipulation for instance, see the [doc](http://docs.oracle.com/javaee/5/jstl/1.1/docs/tlddocs/fn/tld-summary.html).
 
 *   Taken from the `ClipboardActionsBean`Seam component:

@@ -2,7 +2,6 @@
 title: Schema Fields
 labels:
     - schema-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -52,7 +51,7 @@ Since Nuxeo Platform 6.0 ([NXP-15103](https://jira.nuxeo.com/browse/NXP-15103)) 
 
 A `DeltaLong` is stored as a `Long`, but when used in the Java API to update a field (`DocumentModel.setPropertyValue()`) it specifies that the update should be done as an increment at the storage level rather than as a replacement of the old value. This allows for concurrent updates that don't lose value.
 
-<span>The standard usage to add a value "count" to a property "myprop" is:&nbsp;</span>
+The standard usage to add a value "count" to a property "myprop" is:&nbsp;
 
 ```
 long count = 123;
@@ -61,7 +60,7 @@ Number newValue = DeltaLong.deltaOrLong(oldValue, count);
 doc.setPropertyValue("myprop", newValue);
 ```
 
-<span>`DeltaLong.deltaOrLong(oldValue, count)`&nbsp;should be used in preference over `new DeltaLong(oldValue, count)` because it can deal with the case where the old value is `null` or already a `DeltaLong`&nbsp;(the latter can happen if you're re-updating a property which hasn't been saved yet).</span>
+`DeltaLong.deltaOrLong(oldValue, count)`&nbsp;should be used in preference over `new DeltaLong(oldValue, count)` because it can deal with the case where the old value is `null` or already a `DeltaLong`&nbsp;(the latter can happen if you're re-updating a property which hasn't been saved yet).
 
 When using a SQL backend, this will emit code like:
 
@@ -99,26 +98,20 @@ db.default.update(
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{! Please update the label in the Content by Label macro below. }}
 
-{{#> panel heading="Related Documentation"}}
+{{#> panel heading='Related Documentation'}}
 
 *   [Schemas in Nuxeo Studio]({{page space='studio' page='schemas'}})
 *   [Repository Concepts]({{page page='repository-concepts'}})
 *   [Document Type How-To Index]({{page page='document-type-how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">
+{{/panel}}</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
 &nbsp;
 
-</div>
-
-</div>
+</div></div>

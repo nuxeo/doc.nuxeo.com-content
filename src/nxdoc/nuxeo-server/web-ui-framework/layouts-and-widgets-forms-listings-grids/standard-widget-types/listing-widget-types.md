@@ -3,7 +3,6 @@ title: Listing Widget Types
 labels:
     - widget-types
     - layout-widgets-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -73,13 +72,15 @@ Basic widget types can also be used in listings, but this has an impact on field
 For instance, when displaying the document title in a listing layout, here is the corresponding configuration:
 
 ```
-
-    Title
-
-  false
-
-    data['dc']['title']
-
+<widget name="title" type="text">
+  <labels>
+    <label mode="any">Title</label>
+  </labels>
+  <translated>false</translated>
+  <fields>
+    <field>data['dc']['title']</field>
+  </fields>
+</widget>
 ```
 
 You can see that the "data" binding is mentioned. It will resolve `PageSelection#getData` method, which resolves to the `DocumentModel`. Subsequent "dc" and "title" configurations make it resolve the document field named "title" in the "dublincore" schema (defined to use prefix "dc").
@@ -90,7 +91,7 @@ Please refer to the section [Field Binding and Expressions]({{page page='field-b
 
 ## Title with Link
 
-Id: `<span>listing_title_link</span>`
+Id: `listing_title_link`
 
 This widget type displays the document title with a link to it. It can also display a download link provided the blob field path in its properties.
 
@@ -130,7 +131,7 @@ View online demo: [http://showcase.nuxeo.com/nuxeo/layoutDemo/listing_icon_typeW
 
 ## Version
 
-Id: `<span>listing_version</span>`
+Id: `listing_version`
 
 This widget type displays the document version.
 
@@ -148,18 +149,8 @@ View online demo: [http://showcase.nuxeo.com/nuxeo/layoutDemo/listing_lifecycleW
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in this section'}}
 
-<div class="column medium-6">{{#> panel heading="Related topics in this section"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related topics in Studio section'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related topics in Studio section"}}
-
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

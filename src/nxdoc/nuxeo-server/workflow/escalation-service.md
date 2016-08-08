@@ -3,7 +3,6 @@ title: Escalation Service
 labels:
     - workflow
     - workflow-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -186,9 +185,14 @@ The following functions are available in the Escalation Rules Expression Editor 
 Rules are evaluated by default every five minutes. You can override the related scheduler contribution if you want to change it. You may want to reduce the frequency while you are doing the configuration, but then don't forget to set it back to a reasonable value when in production!
 
 ```
-
- executeEscalationRules
- escalation
- 0/10 * * * * ?
-
+<extension
+ target="org.nuxeo.ecm.platform.scheduler.core.service.SchedulerRegistryService"
+ point="schedule">
+ <!-- every 10 seconds -->
+ <schedule id="escalationScheduler">
+ <eventId>executeEscalationRules</eventId>
+ <eventCategory>escalation</eventCategory>
+ <cronExpression>0/10 * * * * ?</cronExpression>
+ </schedule>
+</extension>
 ```

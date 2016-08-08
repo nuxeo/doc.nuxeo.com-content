@@ -4,7 +4,6 @@ labels:
     - elasticsearch
     - aggregate
     - aggregates-widgets-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -113,12 +112,12 @@ Here is a table sumarizing the different type of widget to display aggregate buc
 
 [Significant Term Aggregate]({{page page='page-provider-aggregates'}})
 
-</td></tr><tr><td colspan="1">**[Select](http://showcase.nuxeo.com/nuxeo/layoutDemo/selectManyListboxAggregateWidget)**</td><td colspan="1">`selectManyListboxAggregate`</td><td colspan="1">select2</td><td colspan="1"><span>6.0</span></td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**[Directory Checkbox](http://showcase.nuxeo.com/nuxeo/layoutDemo/selectManyCheckboxDirectoryAggregateWidget)**</td><td colspan="1">`selectManyCheckboxDirectoryAggregate`</td><td colspan="1"><span>checkbox</span></td><td colspan="1"><span><span>6.0</span></span></td><td colspan="1">[See section Directory Terms Aggregate Widget Types]({{page}})</td><td colspan="1"><span><span>[dc_coverage_agg](https://github.com/nuxeo/nuxeo-features/blob/release-6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L622)</span></span></td></tr><tr><td colspan="1">**[Directory Select](http://showcase.nuxeo.com/nuxeo/layoutDemo/selectManyListboxDirectoryAggregateWidget)**</td><td colspan="1">`selectManyListboxDirectoryAggregate`</td><td colspan="1"><span>select2</span></td><td colspan="1"><span><span>6.0</span></span></td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**Document Checkbox**</td><td colspan="1">`selectManyCheckboxDocumentAggregate`</td><td colspan="1"><span>checkbox</span></td><td colspan="1"><span><span>6.0</span></span></td><td colspan="1">[See section Document Terms Aggregate Widget Types]({{page}}) <span>&nbsp;</span></td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**Document Select**</td><td colspan="1">`selectManyListboxDocumentAggregate`</td><td colspan="1"><span>select2</span></td><td colspan="1"><span><span>6.0</span></span></td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**User Checkbox**</td><td colspan="1">`selectManyCheckboxUserAggregate`</td><td colspan="1"><span>checkbox</span></td><td colspan="1"><span><span>6.0</span></span></td><td colspan="1">[See section User Terms Aggregate Widget Types]({{page}})</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**User Select**</td><td colspan="1">`selectManyListboxUserAggregate`</td><td colspan="1"><span>select2</span></td><td colspan="1"><span><span>6.0</span></span></td><td colspan="1"><span><span>[dc_creator_agg](https://github.com/nuxeo/nuxeo-features/blob/release-6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L459)</span></span></td></tr><tr><td colspan="1">**Histogram Checkbox**</td><td colspan="1">`selectManyCheckboxHistogramAggregate`</td><td colspan="1"><span>checkbox</span></td><td colspan="1"><span>6.0</span></td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">[Histogram Aggregate]({{page page='page-provider-aggregates'}})</td></tr><tr><td colspan="1">**Histogram Select**</td><td colspan="1">`selectManyListboxHistogramAggregate`</td><td colspan="1"><span>select2</span></td><td colspan="1"><span><span>6.0</span></span></td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**Date Histogram Checkbox**</td><td colspan="1">`selectManyCheckboxDateHistogramAggregate`</td><td colspan="1"><span>checkbox</span></td><td colspan="1"><span>6.0</span></td><td colspan="1">&nbsp;</td><td colspan="1">[dc_created_agg](https://github.com/nuxeo/nuxeo-features/blob/release-6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L362)</td><td colspan="1">[Date Histogram Aggregate]({{page page='page-provider-aggregates'}})</td></tr><tr><td colspan="1">**Date Histogram Select**</td><td colspan="1">`selectManyListboxDateHistogramAggregate`</td><td colspan="1"><span>select2</span></td><td colspan="1"><span><span>6.0</span></span></td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**Range Checkbox**</td><td colspan="1">`<span>selectManyCheckboxRangeAggregate</span>`</td><td colspan="1"><span>checkbox</span></td><td colspan="1"><span>6.0</span></td><td colspan="1">[See section Range Aggregate Widget Types]({{page}})</td><td colspan="1">[common_size_agg](https://github.com/nuxeo/nuxeo-features/blob/release-6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L657)</td><td colspan="1">[Range Aggregate]({{page page='page-provider-aggregates'}})</td></tr><tr><td colspan="1">**Range Select**</td><td colspan="1">`<span>selectManyListboxRangeAggregate</span>`</td><td colspan="1"><span>select2</span></td><td colspan="1"><span><span>6.0</span></span></td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**Date Range Checkbox**</td><td colspan="1">`selectManyCheckboxDateRangeAggregate`</td><td colspan="1">checkbox</td><td colspan="1">6.0</td><td colspan="1">[dc_modified_agg](https://github.com/nuxeo/nuxeo-features/blob/release-6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L404) <span>&nbsp;</span></td><td colspan="1">[Date Range Aggregate]({{page page='page-provider-aggregates'}})</td></tr><tr><td colspan="1">**Date Range Select**</td><td colspan="1">`selectManyListboxDateRangeAggregate`</td><td colspan="1">select2</td><td colspan="1">6.0</td><td colspan="1">&nbsp;</td></tr></tbody></table>
+</td></tr><tr><td colspan="1">**[Select](http://showcase.nuxeo.com/nuxeo/layoutDemo/selectManyListboxAggregateWidget)**</td><td colspan="1">`selectManyListboxAggregate`</td><td colspan="1">select2</td><td colspan="1">6.0</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**[Directory Checkbox](http://showcase.nuxeo.com/nuxeo/layoutDemo/selectManyCheckboxDirectoryAggregateWidget)**</td><td colspan="1">`selectManyCheckboxDirectoryAggregate`</td><td colspan="1">checkbox</td><td colspan="1">6.0</td><td colspan="1">[See section Directory Terms Aggregate Widget Types]({{page}})</td><td colspan="1">[dc_coverage_agg](https://github.com/nuxeo/nuxeo-features/blob/release-6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L622)</td></tr><tr><td colspan="1">**[Directory Select](http://showcase.nuxeo.com/nuxeo/layoutDemo/selectManyListboxDirectoryAggregateWidget)**</td><td colspan="1">`selectManyListboxDirectoryAggregate`</td><td colspan="1">select2</td><td colspan="1">6.0</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**Document Checkbox**</td><td colspan="1">`selectManyCheckboxDocumentAggregate`</td><td colspan="1">checkbox</td><td colspan="1">6.0</td><td colspan="1">[See section Document Terms Aggregate Widget Types]({{page}})</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**Document Select**</td><td colspan="1">`selectManyListboxDocumentAggregate`</td><td colspan="1">select2</td><td colspan="1">6.0</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**User Checkbox**</td><td colspan="1">`selectManyCheckboxUserAggregate`</td><td colspan="1">checkbox</td><td colspan="1">6.0</td><td colspan="1">[See section User Terms Aggregate Widget Types]({{page}})</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**User Select**</td><td colspan="1">`selectManyListboxUserAggregate`</td><td colspan="1">select2</td><td colspan="1">6.0</td><td colspan="1">[dc_creator_agg](https://github.com/nuxeo/nuxeo-features/blob/release-6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L459)</td></tr><tr><td colspan="1">**Histogram Checkbox**</td><td colspan="1">`selectManyCheckboxHistogramAggregate`</td><td colspan="1">checkbox</td><td colspan="1">6.0</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">[Histogram Aggregate]({{page page='page-provider-aggregates'}})</td></tr><tr><td colspan="1">**Histogram Select**</td><td colspan="1">`selectManyListboxHistogramAggregate`</td><td colspan="1">select2</td><td colspan="1">6.0</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**Date Histogram Checkbox**</td><td colspan="1">`selectManyCheckboxDateHistogramAggregate`</td><td colspan="1">checkbox</td><td colspan="1">6.0</td><td colspan="1">&nbsp;</td><td colspan="1">[dc_created_agg](https://github.com/nuxeo/nuxeo-features/blob/release-6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L362)</td><td colspan="1">[Date Histogram Aggregate]({{page page='page-provider-aggregates'}})</td></tr><tr><td colspan="1">**Date Histogram Select**</td><td colspan="1">`selectManyListboxDateHistogramAggregate`</td><td colspan="1">select2</td><td colspan="1">6.0</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**Range Checkbox**</td><td colspan="1">`selectManyCheckboxRangeAggregate`</td><td colspan="1">checkbox</td><td colspan="1">6.0</td><td colspan="1">[See section Range Aggregate Widget Types]({{page}})</td><td colspan="1">[common_size_agg](https://github.com/nuxeo/nuxeo-features/blob/release-6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L657)</td><td colspan="1">[Range Aggregate]({{page page='page-provider-aggregates'}})</td></tr><tr><td colspan="1">**Range Select**</td><td colspan="1">`selectManyListboxRangeAggregate`</td><td colspan="1">select2</td><td colspan="1">6.0</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">**Date Range Checkbox**</td><td colspan="1">`selectManyCheckboxDateRangeAggregate`</td><td colspan="1">checkbox</td><td colspan="1">6.0</td><td colspan="1">[dc_modified_agg](https://github.com/nuxeo/nuxeo-features/blob/release-6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L404)</td><td colspan="1">[Date Range Aggregate]({{page page='page-provider-aggregates'}})</td></tr><tr><td colspan="1">**Date Range Select**</td><td colspan="1">`selectManyListboxDateRangeAggregate`</td><td colspan="1">select2</td><td colspan="1">6.0</td><td colspan="1">&nbsp;</td></tr></tbody></table>
 
 All these widget types have an important property in common,&nbsp;`selectOptions`, which needs to be set with the list of bucket returned by the associated aggregate. This will always be:
 
 ```
-#{contentView.pageProvider.aggregates['xxx'].extendedBuckets}
+<property name="selectOptions">#{contentView.pageProvider.aggregates['xxx'].extendedBuckets}</property>
 ```
 
 where&nbsp;`xxx`&nbsp;is the id of aggregate (see&nbsp;[the page Page Provider Aggregates]({{page page='page-provider-aggregates'}})).
@@ -158,15 +157,27 @@ Using one of these widget types will force to resolve the bucket key (i.e. the v
 Range aggregates define a set of ranges for which we can define the label to be displayed. This is possible with the use of&nbsp;`selectOptions`&nbsp;on the widget definition. Here is an example with the range aggregate on&nbsp;[`common:size`](http://commonsize):
 
 ```
-
-    defaults:common_size_agg
-
-    #{contentView.pageProvider.hasAggregateSupport() ?
-      'edit' : 'hidden'}
-
-    #{contentView.pageProvider.aggregates['common_size_agg'].extendedBuckets}
-    true
-
-    true
-
+<widget name="common_size_agg" type="selectManyCheckboxRangeAggregate">
+  <fields>
+    <field>defaults:common_size_agg</field>
+  </fields>
+  <widgetModes>
+    <mode value="edit">#{contentView.pageProvider.hasAggregateSupport() ?
+      'edit' : 'hidden'}</mode>
+  </widgetModes>
+  <properties widgetMode="any">
+    <property name="selectOptions">#{contentView.pageProvider.aggregates['common_size_agg'].extendedBuckets}</property>
+    <property name="localize">true</property>
+  </properties>
+  <selectOptions>
+    <option itemLabel="label.aggregate.size.tiny" itemValue="tiny" />
+    <option itemLabel="label.aggregate.size.small" itemValue="small" />
+    <option itemLabel="label.aggregate.size.medium" itemValue="medium" />
+    <option itemLabel="label.aggregate.size.big" itemValue="big" />
+    <option itemLabel="label.aggregate.size.huge" itemValue="huge" />
+  </selectOptions>
+  <controls mode="any">
+    <control name="supportInsideInputWidgetEffects">true</control>
+  </controls>
+</widget>
 ```

@@ -3,7 +3,6 @@ title: Audit
 labels:
     - audit
     - audit-component
-    - lts2015-not-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31033314'
@@ -99,8 +98,7 @@ history:
         version: '1'
 
 ---
-The Audit Service is used for logging and retrieving audit data into a datastore. The service can be accessed directly via Java API for reading or writing audit entries but the main source for Audit entries is the Nuxeo event bus : the Audit service listen to all events that may occur on the platform (document creation, user logging in, workflow started ...) and according to configuration an Audit record will be created.<span style="color: rgb(0,0,0);">
-</span>
+The Audit Service is used for logging and retrieving audit data into a datastore. The service can be accessed directly via Java API for reading or writing audit entries but the main source for Audit entries is the Nuxeo event bus : the Audit service listen to all events that may occur on the platform (document creation, user logging in, workflow started ...) and according to configuration an Audit record will be created.
 
 ## Architecture
 
@@ -143,7 +141,7 @@ A set of methods allows the user to do common queries quiet easily like getting 
 AuditReader reader = Framework.getService(AuditReader.class);
 
 // Getting of the logs for the document 'doc'
-List logEntries = reader.getLogEntriesFor(doc.getId());
+List<LogEntry> logEntries = reader.getLogEntriesFor(doc.getId());
 
 // Same method but with a filter
 FilterMapEntry filter = new FilterMapEntry();
@@ -151,9 +149,9 @@ filter.setColumnName("eventId");
 filter.setOperator("=");
 filter.setQueryParameterName("eventId");
 filter.setObject(DocumentEventTypes.DOCUMENT_CREATED);
-Map filterMap = new HashMap();
+Map<String, FilterMapEntry> filterMap = new HashMap<String, FilterMapEntry>();
 filterMap.put("eventId", filter);
-List logEntriesFiltered = reader.getLogEntriesFor(doc.getId(), filterMap, true);
+List<LogEntry> logEntriesFiltered = reader.getLogEntriesFor(doc.getId(), filterMap, true);
 ```
 
 There are two PageProviders that could be used for querying the Audit datastorage :
@@ -204,6 +202,29 @@ Those default auditable events match Nuxeo core base events :
 
 If you are sending new Nuxeo core events and want them audited, you have to extend the extension point **event**. Here is an example of a contribution to the extension point event :
 
+```
+<extension target="org.nuxeo.ecm.platform.audit.service.NXAuditEventsService" point="event">
+	<event name="documentCreated" />
+    <event name="documentCreatedByCopy" />
+    <event name="documentDuplicated" />
+    <event name="documentMoved" />
+    <event name="documentRemoved" />
+    <event name="documentModified" />
+    <event name="documentLocked" />
+    <event name="documentUnlocked" />
+    <event name="documentSecurityUpdated" />
+    <event name="lifecycle_transition_event" />
+    <event name="loginSuccess" />
+    <event name="loginFailed" />
+    <event name="logout" />
+    <event name="documentCheckedIn" />
+    <event name="versionRemoved" />
+    <event name="documentProxyPublished" />
+    <event name="sectionContentPublished" />
+    <event name="documentRestored" />
+</extension>
+```
+
 [More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--event)
 
 ### Extended Info
@@ -222,7 +243,29 @@ To do this, you have to define an EL expression and associate it with a key. You
 
 If you want to contribute to the extended info of the service, you have to use the extension point **extendedInfo**. Here is an example of a contribution to the extension point :
 
+```
+<extension point="extendedInfo" target="org.nuxeo.ecm.platform.audit.service.NXAuditEventsService">
+    <extendedInfo expression="${source.dublincore.title}" key="title" />
+    <extendedInfo expression="${message.cacheKey}" key="key" />
+    <extendedInfo expression="${principal.name}" key="user" />
+</extension>
+```
+
 Since 7.4, you can also extend the audit info per event name:
+
+```
+<extension target="org.nuxeo.ecm.platform.audit.service.NXAuditEventsService"
+    point="event">
+    <event name="afterWorkflowStarted">
+      <extendedInfos>
+        <extendedInfo expression="${message.properties.modelId}" key="modelId" />
+        <extendedInfo expression="${message.properties.modelName}" key="modelName" />
+        <extendedInfo expression="${message.properties.workflowInitiator}" key="workflowInitiator" />
+        <extendedInfo expression="${message.properties.workflowVariables}" key="workflowVariables" />
+      </extendedInfos>
+    </event>
+</extension>
+```
 
 For instance, the above contribution will add _modelId, modelName, worklowInitiator, workflowVarriables_&nbsp;to the&nbsp;**extendedInfo** only for the _afterWorkflowStarted_ event**.**
 
@@ -235,7 +278,9 @@ When the extension point is contributed, the data are stored into the tables NXP
 The contribution to the extension point **adapter** in component&nbsp;**org.nuxeo.ecm.platform.audit.service.NXAuditEventsService** allows to define the adapter that will be injected in EL context. Here is an example of a contribution to the extension point adapter.
 
 ```
-
+<extension target="org.nuxeo.ecm.platform.audit.service.NXAuditEventsService" point="adapter">
+    <adapter name="myadapter" class="org.nuxeo.ecm.core.api.facet.VersioningDocument"/>
+</extension>
 ```
 
 [More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--adapter)
@@ -244,6 +289,13 @@ The contribution to the extension point **adapter** in component&nbsp;**org.nuxe
 
 A PostCommit asynchronous listener is defined and pushed an Event Bundle, which is an ordered set of events raised during an user operation, into the Audit log. Here is an example of a contribution to the extension point **listener**.
 
+```
+<extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
+	<listener name="auditLoggerListener" async="true" postCommit="true"
+    	class="org.nuxeo.ecm.platform.audit.listener.AuditEventLogger" />
+</extension>
+```
+
 [More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--listener)
 
 ### Hibernate
@@ -251,11 +303,14 @@ A PostCommit asynchronous listener is defined and pushed an Event Bundle, which 
 Audit used Hibernate as a JPA provider, the configuration is done in the extension point **hibernate**&nbsp;for the target **org.nuxeo.ecm.core.persistence.PersistenceComponent**. This extension point lets you override the default hibernate configuration.
 
 ```
-
-    nxaudit-logs
-
-      update
-
+<extension target="org.nuxeo.ecm.core.persistence.PersistenceComponent" point="hibernate">
+  <hibernateConfiguration name="nxaudit-logs">
+    <datasource>nxaudit-logs</datasource>
+    <properties>
+      <property name="hibernate.hbm2ddl.auto">update</property>
+    </properties>
+  </hibernateConfiguration>
+</extension>
 ```
 
 [More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.persistence.PersistenceComponent--hibernate)
@@ -265,13 +320,15 @@ Audit used Hibernate as a JPA provider, the configuration is done in the extensi
 It is also possible to configure queues used by the Audit Service. Each queue is using a separate queue and a single thread for logging. The extension point used to define the queues' parameters is **queue** for the target&nbsp;**org.nuxeo.ecm.core.work.service**.
 
 ```
-
-    Audit queue
-    1
-    auditLoggerListener
-
-    300
-
+<extension target="org.nuxeo.ecm.core.work.service" point="queues">
+  <queue id="audit">
+    <name>Audit queue</name>
+    <maxThreads>1</maxThreads>
+    <category>auditLoggerListener</category>
+    <!-- clear completed work instances older than 5 min -->
+    <clearCompletedAfterSeconds>300</clearCompletedAfterSeconds>
+  </queue>
+</extension>
 ```
 
 [More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.work.service--queues)
@@ -280,28 +337,18 @@ It is also possible to configure queues used by the Audit Service. Each queue is
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{! Please update the label in the Content by Label macro below. }}
 
-{{#> panel heading="Related pages in current documentation"}}
+{{#> panel heading='Related pages in current documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">
+{{/panel}}</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
-{{#> panel heading="Related pages in other documentation"}}
+{{#> panel heading='Related pages in other documentation'}}
 
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>
 
 &nbsp;

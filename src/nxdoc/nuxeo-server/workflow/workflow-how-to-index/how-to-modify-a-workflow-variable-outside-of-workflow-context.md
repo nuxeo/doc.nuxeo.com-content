@@ -12,7 +12,6 @@ labels:
     - listener
     - howto
     - workflow-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235619'
@@ -124,8 +123,8 @@ If you want to modify these variables outside of the workflow context (from a li
 {{! /excerpt}}
 
 ```
-void setVariables(Map map);
-Map getVariables();
+void setVariables(Map<String, Serializable> map);
+Map<String, Serializable> getVariables();
 ```
 
 Eg.
@@ -139,7 +138,7 @@ You can either listen to events triggered on the document following the workflow
 In the first case, in the event handler you have the document following the workflow and you have to get the workflow instance document. Use the following method on the [DocumentRoutingService](http://community.nuxeo.com/api/nuxeo/5.6/javadoc/org/nuxeo/ecm/platform/routing/api/DocumentRoutingService.html) service:
 
 ```
-List getDocumentRoutesForAttachedDocument(CoreSession session, String attachedDocId)
+List<DocumentRoute> getDocumentRoutesForAttachedDocument(CoreSession session, String attachedDocId)
 ```
 
 For the second case, the `workflowTaskCompleted` event is triggered during a workflow every time a task is completed. On this event, the id of the workflow (route) instance documents is directly added into the map holding the properties of this event.
@@ -168,9 +167,7 @@ So if you want to set a workflow variable from a listener listening to&nbsp;`wor
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [undefined]({{page}})&nbsp;
 *   [undefined]({{page}})
@@ -178,9 +175,7 @@ So if you want to set a workflow variable from a listener listening to&nbsp;`wor
 *   [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})&nbsp;
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Workflow in Nuxeo Studio]({{page space='studio' page='workflow'}})
 *   [Full-Text Queries]({{page page='full-text-queries'}})
@@ -188,6 +183,4 @@ So if you want to set a workflow variable from a listener listening to&nbsp;`wor
 *   [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
 *   [Workflow]({{page page='workflow'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

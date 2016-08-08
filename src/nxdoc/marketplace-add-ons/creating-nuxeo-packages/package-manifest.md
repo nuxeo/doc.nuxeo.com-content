@@ -1,7 +1,6 @@
 ---
 title: Package Manifest
 labels:
-    - content-review-lts2015
     - packaging-component
     - todo
 confluence:
@@ -126,13 +125,15 @@ history:
 Let's look at a minimal example of package.xml file:
 
 ```
-
-  Nuxeo Automation
-  A service that enables building complex business logic on top of Nuxeo services
-    using scriptable operation chains
-
-    dm-5.3.2
-    dam-5.3.2
+<package type="addon" name="nuxeo-automation" version="5.3.2">
+  <title>Nuxeo Automation</title>
+  <description>A service that enables building complex business logic on top of Nuxeo services
+    using scriptable operation chains</description>
+  <platforms>
+    <platform>dm-5.3.2</platform>
+    <platform>dam-5.3.2</platform>
+  </platforms>
+</package>
 
 ```
 
@@ -156,34 +157,39 @@ Note that the package names used in these examples are fictional.
 Let's look at the full version of the same package manifest:
 
 ```
-
-  Nuxeo Automation
-  A service that enables building complex business logic on top of Nuxeo services
-    using scriptable operation chains
-  Open Source
-  http://some.host.com/mypage
-  Your Company
-
-    dm-5.3.2
-    dam-5.3.2
-
-    nuxeo-core:5.3.1:5.3.2
-    nuxeo-runtime:5.3.1
-
-  false
-  true
-  false
-  primary_validation
-  production_ready
-  LGPL
-  http://www.gnu.org/licenses/lgpl.html
-  PUBLIC
+<package type="addon" name="nuxeo-automation" version="5.3.2">
+  <title>Nuxeo Automation</title>
+  <description>A service that enables building complex business logic on top of Nuxeo services
+    using scriptable operation chains</description>
+  <classifier>Open Source</classifier>
+  <home-page>http://some.host.com/mypage</home-page>
+  <vendor>Your Company</vendor>
+  <installer class="org.nuxeo.connect.update.impl.task.InstallTask" restart="false"/>
+  <uninstaller class="org.nuxeo.connect.update.impl.task.UninstallTask" restart="false"/>
+  <validator class="org.nuxeo.MyValidator"/>
+  <platforms>
+    <platform>dm-5.3.2</platform>
+    <platform>dam-5.3.2</platform>
+  </platforms>
+  <dependencies>
+    <package>nuxeo-core:5.3.1:5.3.2</package>
+    <package>nuxeo-runtime:5.3.1</package>
+  </dependencies>
+  <supported>false</supported>
+  <hotreload-support>true</hotreload-support>
+  <require-terms-and-conditions-acceptance>false</require-terms-and-conditions-acceptance>
+  <nuxeo-validation>primary_validation</nuxeo-validation>
+  <production-state>production_ready</production-state>
+  <license>LGPL</license>
+  <license-url>http://www.gnu.org/licenses/lgpl.html</license-url>
+  <visibility>PUBLIC</visibility>
+</package>
 
 ```
 
 You can see the usage of `installer` and `uninstaller` elements. These are used to specify the task implementation to be used when installing and uninstalling.
 
-Here are the available fields (see the <span class="nolink">&nbsp;</span>[<span class="nolink">PackageDefinition</span> Javadoc](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/model/PackageDefinition.html) for a full description):
+Here are the available fields (see the [<span class="nolink">PackageDefinition</span> Javadoc](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/model/PackageDefinition.html) for a full description):
 
 *   `package type`:&nbsp; `studio`,&nbsp;`hotfix` or `addon`. The installation behavior may vary depending on the package type. For instance, the&nbsp;`mp-hotfix` command looks for&nbsp;`hotfix` packages and the&nbsp;`studio` packages have a special treatment in the Administration page and some specific packages dependency resolution rules.
     See [org.nuxeo.connect.update.PackageType](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/PackageType.html).

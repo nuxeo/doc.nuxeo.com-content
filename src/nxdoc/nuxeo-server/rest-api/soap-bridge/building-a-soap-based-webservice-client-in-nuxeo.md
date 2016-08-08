@@ -3,7 +3,6 @@ title: Building a SOAP-Based WebService Client in Nuxeo
 labels:
     - soap
     - soap-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950296'
@@ -123,14 +122,21 @@ Obviously it is better to point at a local (previously downloaded) WSDL file to 
 For instance, copy [http://www.restfulwebservices.net/wcf/WeatherForecastService.svc?wsdl](http://www.restfulwebservices.net/wcf/WeatherForecastService.svc?wsdl) to `src/main/resources/wsdls` in a Nuxeo project and use the following code in your `pom.xml`:
 
 ```
-
-  org.codehaus.mojo
-  jaxws-maven-plugin
-
-        wsimport
-
-        src/main/resources/wsdls
-        ${project.build.directory}/generated-sources/wsimport
+<plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>jaxws-maven-plugin</artifactId>
+  <executions>
+    <execution>
+      <goals>
+        <goal>wsimport</goal>
+      </goals>
+      <configuration>
+        <wsdlDirectory>src/main/resources/wsdls</wsdlDirectory>
+        <sourceDestDir>${project.build.directory}/generated-sources/wsimport</sourceDestDir>
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
 
 ```
 
@@ -138,7 +144,7 @@ When you'll build the project, all WSDL files in `src/main/resources/wsdls` will
 
 The `jaxws:wsimport` goal is automatically executed within the life cycle phase `generate-sources`, ie. before the `compile` phase. This way, running `mvn clean install` first generates the source files and then compiles them.
 
-{{#> callout type='note' heading="Be careful with XSD schema imports!"}}
+{{#> callout type='note' heading='Be careful with XSD schema imports!'}}
 
 Often a WSDL file needs to import one or more XSD schemas, using the `<xsd:import>` directive.
 
@@ -195,4 +201,4 @@ You can learn [here]({{page page='building-a-soap-based-webservice-in-the-nuxeo-
 
 ## Advanced Client Configuration Using a Configuration XML File
 
-If you are looking how to create some advanced client configuration, since Apache CXF, you'll need some dependencies. The configuration behavior is the same as the server part, and described in the <span class="confluence-link">&nbsp;</span>[<span class="confluence-link">advanced configuration</span> section]({{page page='building-a-soap-based-webservice-in-the-nuxeo-platform'}}) of the [Building a SOAP-Based WebService in the Nuxeo Platform]({{page page='building-a-soap-based-webservice-in-the-nuxeo-platform'}}).
+If you are looking how to create some advanced client configuration, since Apache CXF, you'll need some dependencies. The configuration behavior is the same as the server part, and described in the [advanced configuration section]({{page page='building-a-soap-based-webservice-in-the-nuxeo-platform'}}) of the [Building a SOAP-Based WebService in the Nuxeo Platform]({{page page='building-a-soap-based-webservice-in-the-nuxeo-platform'}}).

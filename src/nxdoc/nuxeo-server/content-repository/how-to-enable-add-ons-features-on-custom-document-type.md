@@ -11,7 +11,6 @@ details:
 labels:
     - howto
     - document-type
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '950287'
@@ -127,9 +126,7 @@ To know how to apply features provided by the Nuxeo Marketplace add-ons on your 
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Popular How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
 *   [undefined]({{page}})&nbsp;
 *   [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) &nbsp;
@@ -137,9 +134,7 @@ To know how to apply features provided by the Nuxeo Marketplace add-ons on your 
 *   [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Collections]({{page space='userdoc' page='collections'}})
 *   [Documents Type]({{page page='content-repository'}})
@@ -147,6 +142,4 @@ To know how to apply features provided by the Nuxeo Marketplace add-ons on your 
 *   [Nuxeo Marketplace](http://marketplace.nuxeo.com/)
 *   [Nuxeo Quota]({{page page='nuxeo-quota'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

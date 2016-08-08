@@ -3,7 +3,6 @@ title: Custom Widget Types
 labels:
     - widget
     - layout-widgets-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -158,9 +157,20 @@ Usually widget types are template widgets that are declared as widget types to m
 Here is a sample widget type registration, based on a widget template:
 
 ```
+<component name="org.nuxeo.ecm.platform.forms.layout.MyContribution">
 
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="widgettypes">
+
+    <widgetType name="my_widget_type">
+      <property name="template">
         /widgets/my_own_widget_template.xhtml
+      </property>
+    </widgetType>
 
+  </extension>
+
+</component>
 ```
 
 &nbsp;
@@ -168,26 +178,33 @@ Here is a sample widget type registration, based on a widget template:
 Before this contribution, the widgets needing this template were declaring (for instance):
 
 ```
-
-    My label
-
-  false
-
-    dc:description
-
-    /widgets/my_own_widget_template.xhtml
+<widget name="my_widget" type="template">
+  <labels>
+    <label mode="any">My label</label>
+  </labels>
+  <translated>false</translated>
+  <fields>
+    <field>dc:description</field>
+  </fields>
+  <properties widgetMode="any">
+    <property name="template">/widgets/my_own_widget_template.xhtml</property>
+  </properties>
+</widget>
 
 ```
 
 With this configuration, the following widget definition can now be used:
 
 ```
-
-    My label
-
-  false
-
-    dc:description
+<widget name="my_widget" type="my_widget_type">
+  <labels>
+    <label mode="any">My label</label>
+  </labels>
+  <translated>false</translated>
+  <fields>
+    <field>dc:description</field>
+  </fields>
+</widget>
 
 ```
 
@@ -198,10 +215,23 @@ With this configuration, the following widget definition can now be used:
 Here is a more complex sample widget type registration:
 
 ```
+<?xml version="1.0"?>
 
+<component name="org.nuxeo.ecm.platform.forms.layout.MyContribution">
+
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="widgettypes">
+
+    <widgetType name="customtype">
+      <handler-class>
         org.myproject.MyCustomWidgetTypeHandler
+      </handler-class>
+      <property name="foo">bar</property>
+    </widgetType>
 
-      bar
+  </extension>
+
+</component>
 
 ```
 
@@ -223,7 +253,7 @@ Some additional information can be put on a widget type for several purposes:
 *   documentation of available layouts and widget types on a given Nuxeo instance (see on your Nuxeo instance: [http://localhost:nuxeo/site/layout-manager/](http://localhostnuxeo)&nbsp;or on&nbsp;[https://nightly.nuxeo.com/nuxeo/site/layout-manager](https://nightly.nuxeo.com/nuxeo/site/layout-manager)&nbsp;with login and password `Administrator`)
     ![]({{file name='widget_type_export.png'}} ?w=650,border=true)
 
-*   Sample JSON export URLs (<span>with login and password&nbsp;</span>`Administrator`<span>)</span>:
+*   Sample JSON export URLs (with login and password&nbsp;`Administrator`):
 
     <table><tbody><tr><td colspan="1">[http://nightly.nuxeo.com/nuxeo/site/layout-manager/widget-types/widgetTypes/document](http://nightly.nuxeo.com/nuxeo/site/layout-manager/widget-types/widgetTypes/document)</td><td colspan="1">
 
@@ -244,74 +274,125 @@ Some additional information can be put on a widget type for several purposes:
 Here is a sample configuration extract:
 
 ```
+<widgetType name="text">
+  <configuration>
+    <title>Text</title>
+    <description>
 
-    Text
-
+<p>
         The text widget displays an input text in create or edit mode, with
         additional message tag for errors, and a regular text output in any
         other mode.
+      </p>
 
+<p>
         Widgets using this type can provide properties accepted on a
-        <h:inputText /> tag in create or edit mode, and properties
-        accepted on a <h:outputText /> tag in other modes.
-
-      edit
-      view
-
-      false
-      false
-
-        string
-        path
-
-        string
-
-      document
-
-              style
-
-              styleClass
-
+        &lt;h:inputText /&gt; tag in create or edit mode, and properties
+        accepted on a &lt;h:outputText /&gt; tag in other modes.
+      </p>
+    </description>
+    <demo id="textWidget" previewEnabled="true" />
+    <supportedModes>
+      <mode>edit</mode>
+      <mode>view</mode>
+    </supportedModes>
+    <fields>
+      <list>false</list>
+      <complex>false</complex>
+      <supportedTypes>
+        <type>string</type>
+        <type>path</type>
+      </supportedTypes>
+      <defaultTypes>
+        <type>string</type>
+      </defaultTypes>
+    </fields>
+    <categories>
+      <category>document</category>
+    </categories>
+    <properties>
+      <layouts mode="view">
+        <layout name="text_widget_type_properties_view">
+          <rows>
+            <row>
+              <widget>style</widget>
+            </row>
+            <row>
+              <widget>styleClass</widget>
+            </row>
             [...]
-
-              Style
-
-              style
-
-              Style class
-
-              styleClass
-
+          </rows>
+          <widget name="style" type="text">
+            <labels>
+              <label mode="any">Style</label>
+            </labels>
+            <fields>
+              <field>style</field>
+            </fields>
+          </widget>
+          <widget name="styleClass" type="text">
+            <labels>
+              <label mode="any">Style class</label>
+            </labels>
+            <fields>
+              <field>styleClass</field>
+            </fields>
+          </widget>
           [...]
-
-              required
-
-              maxlength
-
-              title
-
+        </layout>
+      </layouts>
+      <layouts mode="edit">
+        <layout name="text_widget_type_properties_edit">
+          <rows>
+            <row>
+              <widget>required</widget>
+            </row>
+            <row>
+              <widget>maxlength</widget>
+            </row>
+            <row>
+              <widget>title</widget>
+            </row>
             [...]
-
-              Max length
-
-              maxlength
-
-              Required
-
-              required
-
-              Title
-
-              title
-
-              hidden
-              view
-
+          </rows>
+          <widget name="maxlength" type="int">
+            <labels>
+              <label mode="any">Max length</label>
+            </labels>
+            <fields>
+              <field>maxlength</field>
+            </fields>
+          </widget>
+          <widget name="required" type="checkbox">
+            <labels>
+              <label mode="any">Required</label>
+            </labels>
+            <fields>
+              <field>required</field>
+            </fields>
+          </widget>
+          <widget name="title" type="text">
+            <labels>
+              <label mode="any">Title</label>
+            </labels>
+            <fields>
+              <field>title</field>
+            </fields>
+            <widgetModes>
+              <mode value="any">hidden</mode>
+              <mode value="view_reference">view</mode>
+            </widgetModes>
+          </widget>
           [...]
-
+        </layout>
+      </layouts>
+    </properties>
+  </configuration>
+  <handler-class>
     org.nuxeo.ecm.platform.forms.layout.facelets.plugins.TextWidgetTypeHandler
-
-  /path/to/my/dev/template.xhtml
+  </handler-class>
+  <property name="dev_template">/path/to/my/dev/template.xhtml</property>
+</widgetType>
 
 ```
 

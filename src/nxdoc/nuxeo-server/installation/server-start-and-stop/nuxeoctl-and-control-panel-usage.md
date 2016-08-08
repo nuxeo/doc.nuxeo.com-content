@@ -5,7 +5,6 @@ labels:
     - launcher
     - nuxeolauncher
     - bootstrap-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '6030087'
@@ -19,6 +18,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/FwNc'
     source_link: /display/NXDOC/nuxeoctl+and+Control+Panel+Usage
 history:
+    - 
+        author: Arnaud Kervern
+        date: '2016-07-11 08:59'
+        message: ''
+        version: '47'
     - 
         author: Julien Carsique
         date: '2016-03-04 15:02'
@@ -258,7 +262,7 @@ The `nuxeoctl` script is located in the `bin` folder of your Nuxeo installation.
 Here is the Shell/Batch script usage:
 
 ```
-nuxeoctl  [options] [--] [command parameters]
+nuxeoctl <command> [options] [--] [command parameters]
 
 ```
 
@@ -274,21 +278,53 @@ Issue `nuxeoctl help` to print this information.
 
 {{#> callout type='tip' }}
 
-See [the Environment variables page]({{page page='set-up-best-practices'}}) for setting Nuxeo Home and Configuration paths.
+See [the Environment variables page]({{page page='setup-best-practices'}}) for setting Nuxeo Home and Configuration paths.
 
 {{/callout}}
 
 ### Per-command Usage
 
 ```
-nuxeoctl encrypt [--encrypt ] [..] [-d []|-q]
-    Output encrypted value for .
-    If  is not provided, it is read from stdin.
+nuxeoctl encrypt [--encrypt <algorithm>] [<clearValue>..] [-d [<categories>]|-q]
+        Output encrypted value for <clearValue>.
+        If <clearValue> is not provided, it is read from stdin.
 
-nuxeoctl decrypt ''.. [-d []|-q]
-    Output decrypted value for . The secret key is read from stdin.
+nuxeoctl decrypt '<cryptedValue>'.. [-d [<categories>]|-q]
+        Output decrypted value for <cryptedValue>. The secret key is read from stdin.
 
-nuxeoctl config [ ]..  [] [--encrypt []] [--set [
+nuxeoctl config [<key> <value>].. <key> [<value>] [--encrypt [<algorithm>]] [--set [<template>]] [-d [<categories>]|-q]
+        Set template or global parameters.
+        If <value> is not provided and the --set 'option' is used, then the value is read from stdin.
+
+nuxeoctl config [--get] <key>.. [-d [<categories>]|-q]
+        Get value for the given key(s).
+
+nuxeoctl config [--get-regexp] <regexp>.. [-d [<categories>]|-q]
+        Get value for the keys matching the given regular expression(s).
+
+nuxeoctl help|status|showconf [-d [<categories>]|-q]
+
+nuxeoctl configure [-d [<categories>]|-q|-hdw]
+
+nuxeoctl wizard [-d [<categories>]|-q|--clid <arg>|--gui <true|false|yes|no>]
+
+nuxeoctl stop [-d [<categories>]|-q|--gui <true|false|yes|no>]
+
+nuxeoctl start|restart|console|startbg|restartbg [-d [<categories>]|-q|--clid <arg>|--gui <true|false|yes|no>|--strict|-hdw]
+
+nuxeoctl mp-show [command parameters] [-d [<categories>]|-q|--clid <arg>|--xml|--json]
+
+nuxeoctl mp-list|mp-listall|mp-init|mp-update [command parameters] [-d [<categories>]|-q|--clid <arg>|--xml|--json]
+
+nuxeoctl mp-reset|mp-purge|mp-hotfix|mp-upgrade [command parameters] [-d [<categories>]|-q|--clid <arg>|--xml|--json|--accept <true|false|yes|no|ask>]
+
+nuxeoctl mp-add|mp-install|mp-uninstall|mp-remove|mp-set|mp-request [command parameters] [-d [<categories>]|-q|--clid <arg>|--xml|--json|--nodeps|--relax <true|false|yes|no|ask>|--accept <true|false|yes|no|ask>|-s|-im]
+
+nuxeoctl register [<username> [<project> [<type> <description>] [<pwd>]]]
+
+nuxeoctl register-trial [<email> <company> <project> <description> [<pwd>]]
+
+nuxeoctl pack <target> [-d [<categories>]|-q]
 ```
 
 ### Options
@@ -542,6 +578,22 @@ Display the&nbsp;server configuration.
 
 </td></tr><tr><td colspan="1">
 
+`register`
+
+</td><td colspan="1">
+
+Register the server with an existing Nuxeo Online Service account.
+
+</td></tr><tr><td colspan="1">
+
+`register-trial`
+
+</td><td colspan="1">
+
+Create an Nuxeo Online Service trial account and register the server.
+
+</td></tr><tr><td colspan="1">
+
 `mp-list`
 
 </td><td colspan="1">
@@ -723,7 +775,7 @@ Here is the Java usage:
 ```
 java [-Dlauncher.java.opts="JVM options"] [-Dnuxeo.home="/path/to/nuxeo"] [-Dnuxeo.conf="/path/to/nuxeo.conf"] \
      [-Djvmcheck=nofail] -jar "path/to/nuxeo-launcher.jar" \
-     [options]  [command parameters]
+     [options] <command> [command parameters]
 
 ```
 

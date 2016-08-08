@@ -2,7 +2,6 @@
 title: Alternative Command Parameters for ProRes Codec Users
 labels:
     - convert-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '3866704'
@@ -50,14 +49,25 @@ The Nuxeo Platform automatically converts the new Video files ingested in the sy
 From our experience and our customers feedback, the mp4 conversion used by default does not suit all video format given as an input, in particular video encoded with ProRes codec. In this case, the playback is not displayed in the browser. Therefore you need to override the default `ffmpeg-tomp4` command with the following code:
 
 ```
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.platform.video.convert.commandline.override">
 
-  org.nuxeo.ecm.platform.video.convert.commandline
+  <require>org.nuxeo.ecm.platform.video.convert.commandline</require>
 
-      ffmpeg
-       -i #{inFilePath} -acodec libfaac -pix_fmt yuv420p -vcodec libx264 -r 29.97 -v 0 #{outFilePath}
-       -i #{inFilePath} -acodec libfaac -pix_fmt yuv420p -vcodec libx264 -r 29.97 -v 0 #{outFilePath}
-      You need to install ffmpeg from http://ffmpeg.org (apt-get install ffmpeg)
+  <extension target="org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent"
+    point="command">
 
+    <command enabled="true" name="ffmpeg-tomp4">
+      <commandLine>ffmpeg</commandLine>
+      <parameterString> -i #{inFilePath} -acodec libfaac -pix_fmt yuv420p -vcodec libx264 -r 29.97 -v 0 #{outFilePath}</parameterString>
+      <winParameterString> -i #{inFilePath} -acodec libfaac -pix_fmt yuv420p -vcodec libx264 -r 29.97 -v 0 #{outFilePath}</winParameterString>
+      <installationDirective>You need to install ffmpeg from http://ffmpeg.org (apt-get install ffmpeg)
+      </installationDirective>
+    </command>
+
+  </extension>
+
+</component>
 ```
 
 {{! Don't put anything here. }}

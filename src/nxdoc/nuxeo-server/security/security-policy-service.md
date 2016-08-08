@@ -105,7 +105,7 @@ A security policy can modify this behavior but only by adding new restrictions i
 
 The `getQueryTransformer(repositoryName)`&nbsp;method returns a `SQLQuery.Transformer` instance, which is a class with one `transform` method taking a NXQL query in the form of a `org.nuxeo.ecm.core.query.sql.model.SQLQuery` abstract syntax tree. It should transform this tree in order to add whatever restrictions are needed. Note that ACL checks will always be applied after this transformation.
 
-{{#> callout type='info' heading="Unrestricted sessions"}}
+{{#> callout type='info' heading='Unrestricted sessions'}}
 
 If the query has been called in the context of an unrestricted session, the principal will be `system`. It is a good practice to check for that username since if the query is run unrestrictedly, it functionally means that you should not restrict anything with the query transformer
 
@@ -113,13 +113,29 @@ If the query has been called in the context of an unrestricted session, the prin
 
 ### CMISQL Security Check
 
-Since Nuxeo 5.6.0-HF21 and Nuxeo 5.7.2, all CMISQL queries also require implementation of the relevant&nbsp; <span>`getQueryTransformer`&nbsp;API in order to secure CMIS-based searches.</span>
+Since Nuxeo 5.6.0-HF21 and Nuxeo 5.7.2, all CMISQL queries also require implementation of the relevant&nbsp; `getQueryTransformer`&nbsp;API in order to secure CMIS-based searches.
 
 The&nbsp;`getQueryTransformer(repositoryName, "CMISQL")`&nbsp;method returns a&nbsp;`SecurityPolicy.QueryTransformer`&nbsp;instance, which is a class with one&nbsp;`transform`&nbsp;method taking a query in the form of `String`. It should transform this query in order to add whatever restrictions are needed (this will require parsing the CMISQL and adding whatever clauses are needed). Note that ACL checks will always be applied after this transformation.
 
 ## Example Security Policy Contribution
 
 To register a security policy, you need to write a contribution specifying the class name of your implementation.
+
+```
+<?xml version="1.0"?>
+<component name="com.example.myproject.securitypolicy">
+
+  <extension target="org.nuxeo.ecm.core.security.SecurityService"
+    point="policies">
+
+    <policy name="myPolicy"
+      class="com.example.myproject.NoFileSecurityPolicy" order="0" />
+
+  </extension>
+
+</component>
+
+```
 
 Here is a sample contributed class:
 

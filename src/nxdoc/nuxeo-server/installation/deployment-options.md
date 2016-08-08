@@ -4,7 +4,6 @@ labels:
     - deployment
     - clustering
     - architecture
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
@@ -292,7 +291,7 @@ You can configure&nbsp;
 
 ### <span style="color: rgb(0,0,0);">Indexes</span>
 
-<span style="color: rgb(0,0,0);">&nbsp;</span>You can also select where you store the indexes (including the full-text)
+You can also select where you store the indexes (including the full-text)
 
 *   *   SQL Database
     *   Elasticsearch
@@ -305,7 +304,7 @@ Since 6.0, the default configuration uses Elasticsearch.
 
 In the same logic, you can choose:
 
-*   <span>Where you store the caches and the transient data</span>
+*   Where you store the caches and the transient data
 
     *   In Memory (per instance basis)
     *   Redis (shared memory)
@@ -364,8 +363,8 @@ For more information, please see the page [Setting up a HA Configuration Using t
 
 ### Scaling out Processing&nbsp;
 
-<table><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">![]({{file name='cluster.png'}} ?w=500)</td><td colspan="1"><span>Nuxeo Cluster system by itself allows to scale out processing:
-you can add new Nuxeo nodes as the number of requests increase.</span></td></tr></tbody></table>
+<table><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">![]({{file name='cluster.png'}} ?w=500)</td><td colspan="1">Nuxeo Cluster system by itself allows to scale out processing:
+you can add new Nuxeo nodes as the number of requests increase.</td></tr></tbody></table>
 
 ### Dedicated Processing Nodes
 
@@ -463,7 +462,7 @@ One the key advantages of NoSQL Storage like MongoDB is that they allow to scale
 
 ### Nuxeo & AWS
 
-<span>To be able to run efficiently on the Cloud, you need to be able to use as much as possible the infrastructure of the Cloud Provider: in the case of AWS, there are a lot of services that you want to be able to use.</span>
+To be able to run efficiently on the Cloud, you need to be able to use as much as possible the infrastructure of the Cloud Provider: in the case of AWS, there are a lot of services that you want to be able to use.
 
 Nuxeo Platform, makes it easy since:
 
@@ -492,8 +491,8 @@ We try to provide everything so that the deployment in the target IaaS is easy a
     *   CloudWatch can monitor Nuxeo
     *   We&nbsp;can&nbsp;use&nbsp;AutoScaling
 
-<div><span class="text plain"><span class="meta paragraph text"><span>![]({{file name='aws.png'}} ?w=500,h=320,border=true)
-</span></span></span></div>
+<div><span class="text plain"><span class="meta paragraph text">![]({{file name='aws.png'}} ?w=500,h=320,border=true)
+</span></span></div>
 
 ### Platform as a Service and nuxeo.io
 

@@ -5,7 +5,6 @@ labels:
     - authentication
     - link-update
     - shibboleth-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -149,14 +148,24 @@ After you installed the package, a new **Shib Goups** tab is available in the **
     *   `$NUXEO/server/default/deploy/nuxeo.ear/config` for a JBoss distribution
 
     ```
+    <?xml version="1.0"?>
+    <component name="org.nuxeo.ecm.platform.login.shibboleth.config">
+    <extension
+        target="org.nuxeo.ecm.platform.shibboleth.service.ShibbolethAuthenticationService"
+        point="config">
+        <config>
+          <uidHeaders>
+            <default>uid</default>
+          </uidHeaders>
 
-            uid
+          <loginURL>https://host/Shibboleth.sso/WAYF</loginURL>
+          <logoutURL>https://host/Shibboleth.sso/Logout</logoutURL>
 
-          https://host/Shibboleth.sso/WAYF
-          https://host/Shibboleth.sso/Logout
-
-          username
-          email
+          <fieldMapping header="uid">username</fieldMapping>
+          <fieldMapping header="mail">email</fieldMapping>
+        </config>
+      </extension>
+    </component>
 
     ```
 
@@ -169,15 +178,23 @@ To enable the Shibboleth authentication, you need to add the Shibboleth plug-in 
 To override the default authentication chain in the Nuxeo Platform, add a new file named `authentication-chain-config.xml` in the `config/` directory of your server.
 
 ```
-
-  org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig
-
-        BASIC_AUTH
-        SHIB_AUTH
-        FORM_AUTH
-        WEBENGINE_FORM_AUTH        
-        ANONYMOUS_AUTH
-        WEBSERVICES_AUTH
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.platform.your.authentication.chain.config">
+  <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
+  <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
+    point="chain">
+    <authenticationChain>
+      <plugins>
+        <plugin>BASIC_AUTH</plugin>
+        <plugin>SHIB_AUTH</plugin>
+        <plugin>FORM_AUTH</plugin>
+        <plugin>WEBENGINE_FORM_AUTH</plugin>        
+        <plugin>ANONYMOUS_AUTH</plugin>
+        <plugin>WEBSERVICES_AUTH</plugin>
+      </plugins>
+    </authenticationChain>
+  </extension>
+</component>
 
 ```
 
@@ -192,9 +209,20 @@ For that, the `org.nuxeo.ecm.platform.shibboleth.auth.exceptionhandling.Shibbole
 To activate it, add a new file named `login-anonymous-config.xml` in the `config/` directory of your server.
 
 ```
-
-          Guest
-          User
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.platform.your.anonymous.user.config">
+  <extension target="org.nuxeo.ecm.platform.usermanager.UserService"
+    point="userManager">
+    <userManager>
+      <users>
+        <anonymousUser id="Guest">
+          <property name="firstName">Guest</property>
+          <property name="lastName">User</property>
+        </anonymousUser>
+      </users>
+    </userManager>
+  </extension>
+</component>
 
 ```
 
@@ -203,24 +231,53 @@ To activate it, add a new file named `login-anonymous-config.xml` in the `config
 Here is a sample configuration file containing everything you need to set up the Shibboleth authentication module:
 
 ```
+<component name="sample.shibboleth.config">
 
-  org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig
-  org.nuxeo.ecm.platform.usermanager.UserManagerImpl
+  <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
+  <require>org.nuxeo.ecm.platform.usermanager.UserManagerImpl</require>
 
-        BASIC_AUTH
-        SHIB_AUTH
-        ANONYMOUS_AUTH
+  <extension
+      target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
+      point="chain">
+    <authenticationChain>
+      <plugins>
+        <plugin>BASIC_AUTH</plugin>
+        <plugin>SHIB_AUTH</plugin>
+        <plugin>ANONYMOUS_AUTH</plugin>
+      </plugins>
+    </authenticationChain>
+  </extension>
 
-        uid
+  <extension
+    target="org.nuxeo.ecm.platform.shibboleth.service.ShibbolethAuthenticationService"
+    point="config">
+    <config>
+      <uidHeaders>
+        <default>uid</default>
+      </uidHeaders>
 
-      https://host/Shibboleth.sso/WAYF
-      https://host/Shibboleth.sso/Logout
+      <loginURL>https://host/Shibboleth.sso/WAYF</loginURL>
+      <logoutURL>https://host/Shibboleth.sso/Logout</logoutURL>
 
-      username
-      email
+      <fieldMapping header="uid">username</fieldMapping>
+      <fieldMapping header="mail">email</fieldMapping>
+    </config>
+  </extension>
 
-          Guest
-          User
+  <!-- Add an Anonymous user -->
+  <extension target="org.nuxeo.ecm.platform.usermanager.UserService"
+    point="userManager">
+    <userManager>
+      <users>
+        <anonymousUser id="Guest">
+          <property name="firstName">Guest</property>
+          <property name="lastName">User</property>
+        </anonymousUser>
+      </users>
+    </userManager>
+  </extension>
+
+</component>
 
 ```
 

@@ -3,7 +3,6 @@ title: Conversion
 labels:
     - conversion
     - convert-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -338,15 +337,20 @@ Returns the result of the conversion, or HTTP code 404 if there is no conversion
 The Conversion Service supports a global configuration via XML file in order to configure caching.
 
 ```
-
-      /var/ConversionCache
-
-      10
-
-      1024
-
-      true
-
+<component name="org.nuxeo.ecm.core.convert.config">
+  <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl" point="configuration">
+    <configuration>
+      <!-- define directory location for caching : default to java default tmp dir (java.io.tmpdir) -->
+      <cachingDirectory>/var/ConversionCache</cachingDirectory>
+      <!-- GC interval in minutes (default = 10 minutes ) -->
+      <gcInterval>10</gcInterval>
+      <!-- maximum size for disk cache in KB (default to 10*1024) -->
+      <diskCacheSize>1024</diskCacheSize>
+      <!-- Enables or disables caching (default = true)-->
+      <enableCache>true</enableCache>
+    </configuration>
+  </extension>
+</component>
 ```
 
 ### Contributions
@@ -361,13 +365,16 @@ To contribute a new converter, you have to contribute a class that implement the
 *   Optional named parameters
 
 ```
-
-    text/html
-    text/xhtml
-    text/plain
-
-      myValue
-
+<extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl" point="converter">
+  <converter name="html2text" class="org.nuxeo.ecm.core.convert.plugins.text.extractors.Html2TextConverter">
+    <sourceMimeType>text/html</sourceMimeType>
+    <sourceMimeType>text/xhtml</sourceMimeType>
+    <destinationMimeType>text/plain</destinationMimeType>
+    <parameters>
+      <parameter name="myParam">myValue</parameter>
+    </parameters>
+  </converter>
+</extension>
 ```
 
 See list of [built-in contributions](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.convert.service.ConversionServiceImpl--converter).
@@ -377,18 +384,25 @@ See list of [built-in contributions](http://explorer.nuxeo.org/nuxeo/site/distri
 You can also contribute a converter that is a chain of existing converters. To to this, the contributed converter does not have to define an implementation class, just a chain of either converters or mime-types. If mime-types are used, the conversion service will automatically guess the converter chain from the mime-types steps.
 
 ```
-
-    some/mimetype
-    some/other-mimetype
-
-      converter1
-      converter2
-
-    foo/bar1
-    foo/bar3
-
-      foo/bar2
-
+<extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl" point="converter">
+  <!-- explicit chain of 2 converters : converter1 + converter2 -->
+  <converter name="chainedConverter" >
+    <sourceMimeType>some/mimetype</sourceMimeType>
+    <destinationMimeType>some/other-mimetype</destinationMimeType>
+    <conversionSteps>
+      <subconverter>converter1</subconverter>
+      <subconverter>converter2</subconverter>
+    </conversionSteps>
+  </converter>
+  <!-- define chain via mime types : foo/bar1 => foo/bar2 => foo/bar3 -->
+  <converter name="chainedMimeType" >
+    <sourceMimeType>foo/bar1</sourceMimeType>
+    <destinationMimeType>foo/bar3</destinationMimeType>
+    <conversionSteps>
+      <step>foo/bar2</step>
+    </conversionSteps>
+  </converter>
+</extension>
 ```
 
 When using chained converters, the additional optional parameters are passed to each underlying converter.
@@ -404,12 +418,16 @@ For that purpose, we provide a base class for converters that are based on a com
 The base class `org.nuxeo.ecm.platform.convert.plugins.CommandLineBasedConverter` handles all the dirty work, and you only have to override the methods to define the parameters of the command line and the parsing of the output.
 
 ```
-
-    application/pdf
-    text/html
-
-      pdftohtml
-
+<extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl" point="converter">
+  <!-- converter based on the pdftohml command line -->
+  <converter name="pdf2html" class="org.nuxeo.ecm.platform.convert.plugins.PDF2HtmlConverter">
+    <sourceMimeType>application/pdf</sourceMimeType>
+    <destinationMimeType>text/html</destinationMimeType>
+    <parameters>
+      <parameter name="CommandLineName">pdftohtml</parameter>
+    </parameters>
+  </converter>
+</extension>
 ```
 
 &nbsp;

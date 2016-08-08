@@ -3,7 +3,6 @@ title: Deleting Documents
 labels:
     - delete
     - life-cycle
-    - content-review-lts2015
     - core-component
     - excerpt
     - multiexcerpt-include
@@ -106,7 +105,7 @@ Besides the standard user interface, a document is put in the trash when using W
 
 ### Permanently Deleting the Document
 
-<span>A permanent delete is done by most Nuxeo APIs, typically [CoreSession.removeDocument](http://community.nuxeo.com/api/nuxeo/release-5.8/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#removeDocument%28org.nuxeo.ecm.core.api.DocumentRef%29)&nbsp;or the higher-level APIs that use it like the CMIS bindings or the Automation [Document.Delete](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Delete) operation.</span>
+A permanent delete is done by most Nuxeo APIs, typically [CoreSession.removeDocument](http://community.nuxeo.com/api/nuxeo/release-5.8/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#removeDocument%28org.nuxeo.ecm.core.api.DocumentRef%29)&nbsp;or the higher-level APIs that use it like the CMIS bindings or the Automation [Document.Delete](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Delete) operation.
 
 **Soft-Delete**
 
@@ -114,13 +113,13 @@ If soft-delete is enabled (this is not the case by default), then the document i
 
 A scheduled periodic process will then hard-delete the documents marked as deleted at a later time, for asynchronous cleanup in fixed-sized batches.
 
-{{#> callout type='info' heading="Using Soft-Delete"}}
+{{#> callout type='info' heading='Using Soft-Delete'}}
 
 Soft-delete can be enabled to relieve the database of expected heavy loads if many documents are deleted at the same time.
 
 When Nuxeo has to hard-delete lots of documents, many rows in many tables, themselves related by foreign key constraints, have to be removed. On some databases this can use many resources (like undo segments for Oracle) and take a lot of time, so soft-delete is designed to spread these costly operations over time.
 
-To activate soft-delete, you should change the repository configuration to add `<span><softDelete enabled="true" /></span>` . See [Configuration Templates]({{page page='configuration-templates'}}) for more about updating the `default-repository-config.xml.nxftl` file.
+To activate soft-delete, you should change the repository configuration to add `<softDelete enabled="true" />` . See [Configuration Templates]({{page page='configuration-templates'}}) for more about updating the `default-repository-config.xml.nxftl` file.
 
 Please consult [NXP-11335](https://jira.nuxeo.com/browse/NXP-11335) for more details about soft-delete and the configuration of the periodic cleanup.
 
@@ -134,20 +133,14 @@ If soft-delete is not enabled, or when the periodic cleanup process for soft-del
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-To"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-To'}}
 
 *   [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
 *   [Action How-To Index]({{page page='action-how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Other Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
 *   [Deleting Content]({{page space='userdoc' page='deleting-content'}}) (User documentation)
 *   [Garbage-Collecting Orphaned Binaries]({{page page='garbage-collecting-orphaned-binaries'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

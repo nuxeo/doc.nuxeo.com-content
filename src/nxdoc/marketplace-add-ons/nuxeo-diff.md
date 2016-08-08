@@ -4,7 +4,6 @@ labels:
     - nuxeo-diff
     - link-update
     - diff-component
-    - lts2015-not-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

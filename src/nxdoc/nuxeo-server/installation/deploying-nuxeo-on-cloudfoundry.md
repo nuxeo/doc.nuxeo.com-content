@@ -3,7 +3,6 @@ title: Deploying Nuxeo on CloudFoundry
 labels:
     - cloudfoundry
     - cloud-deployment
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
@@ -167,6 +166,18 @@ The resulting ZIP is all that's needed for the rest of the instructions.
 3.  Finally we must set up the Nuxeo datasources inside the WAR (instead of from the toplevel `server.xml` in a standard Nuxeo setup, which is more convenient when possible).
 
     Edit the file&nbsp;`webapps/nuxeo/META-INF/context.xml`. In this file the `<Resource>` elements that point to a global configuration in `server.xml` must be replaced by explicit resources:
+
+    ```
+      <Resource name="jdbc/NuxeoDS" accessToUnderlyingConnectionAllowed="true" auth="Container" driverClassName="org.h2.Driver" maxActive="100" maxIdle="30" maxWait="10000" password="" type="javax.sql.DataSource" url="jdbc:h2:nuxeo" username="sa" validationQuery=""/>
+      <Resource name="jdbc/nxsqldirectory" accessToUnderlyingConnectionAllowed="true" auth="Container" driverClassName="org.h2.Driver" maxActive="100" maxIdle="30" maxWait="10000" password="" type="javax.sql.DataSource" url="jdbc:h2:nuxeo" username="sa" validationQuery=""/>
+      <Resource name="jdbc/nxrelations-default-jena" accessToUnderlyingConnectionAllowed="true" auth="Container" driverClassName="org.h2.Driver" maxActive="100" maxIdle="30" maxWait="10000" password="" type="javax.sql.DataSource" url="jdbc:h2:nuxeo" username="sa" validationQuery=""/>
+      <Resource name="jdbc/comment-relations" accessToUnderlyingConnectionAllowed="true" auth="Container" driverClassName="org.h2.Driver" maxActive="100" maxIdle="30" maxWait="10000" password="" type="javax.sql.DataSource" url="jdbc:h2:nuxeo" username="sa" validationQuery=""/>
+      <Resource name="jdbc/nxaudit-logs" accessToUnderlyingConnectionAllowed="true" auth="Container" driverClassName="org.h2.Driver" maxActive="100" maxIdle="30" maxWait="10000" password="" type="javax.sql.DataSource" url="jdbc:h2:nuxeo" username="sa" validationQuery=""/>
+      <Resource name="jdbc/nxjbpm" accessToUnderlyingConnectionAllowed="true" auth="Container" driverClassName="org.h2.Driver" maxActive="100" maxIdle="30" maxWait="10000" password="" type="javax.sql.DataSource" url="jdbc:h2:nuxeo" username="sa" validationQuery=""/>
+      <Resource name="jdbc/placeful_service_ds" accessToUnderlyingConnectionAllowed="true" auth="Container" driverClassName="org.h2.Driver" maxActive="100" maxIdle="30" maxWait="10000" password="" type="javax.sql.DataSource" url="jdbc:h2:nuxeo" username="sa" validationQuery=""/>
+      <Resource name="jdbc/nxwebwidgets" accessToUnderlyingConnectionAllowed="true" auth="Container" driverClassName="org.h2.Driver" maxActive="100" maxIdle="30" maxWait="10000" password="" type="javax.sql.DataSource" url="jdbc:h2:nuxeo" username="sa" validationQuery=""/>
+      <Resource name="jdbc/nxuidsequencer" accessToUnderlyingConnectionAllowed="true" auth="Container" driverClassName="org.h2.Driver" maxActive="100" maxIdle="30" maxWait="10000" password="" type="javax.sql.DataSource" url="jdbc:h2:nuxeo" username="sa" validationQuery=""/>
+    ```
 
     In the above we use an embedded H2 database. Configuration for an external database server would need to use a different JDBC URL.
 

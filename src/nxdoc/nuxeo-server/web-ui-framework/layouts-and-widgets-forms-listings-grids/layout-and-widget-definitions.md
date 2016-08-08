@@ -2,7 +2,6 @@
 title: Layout and Widget Definitions
 labels:
     - link-update
-    - content-review-lts2015
     - home
     - excerpt
 confluence:
@@ -17,6 +16,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/rQY7'
     source_link: /display/NXDOC/Layout+and+Widget+Definitions
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-07-20 13:20'
+        message: emove children display macr
+        version: '28'
     - 
         author: Solen Guitter
         date: '2014-01-08 10:52'
@@ -163,3 +167,8 @@ Custom layouts and widgets can be contributed to the web layout service, using i
 These layout definitions are then available through the service to control how they will be displayed in a given mode.
 
 This chapter explains how to contribute new [layouts]({{page page='layout-definitions'}}) and [widgets]({{page page='widget-definitions'}}) and gives information about [modes]({{page page='layout-and-widget-modes'}}) management:
+
+*   [Layout Definitions](https://doc.nuxeo.com/display/NXDOC/Layout+Definitions)&nbsp;&mdash;&nbsp;<span class="smalltext">Layouts can be used to display various kinds of information, in various renderings.&nbsp;</span>
+*   [Widget Definitions](https://doc.nuxeo.com/display/NXDOC/Widget+Definitions)&nbsp;&mdash;&nbsp;<span class="smalltext">This page describes the different elements that can be used to define widgets.</span>
+*   [Layout and Widget Modes](https://doc.nuxeo.com/display/NXDOC/Layout+and+Widget+Modes)&nbsp;&mdash;&nbsp;<span class="smalltext">Both layouts and widgets have modes, that makes it possible to render the same layout in different use cases, even if some only support a simple "view" mode.</span>
+*   [Field Binding and Expressions](https://doc.nuxeo.com/display/NXDOC/Field+Binding+and+Expressions)&nbsp;&mdash;&nbsp;<span class="smalltext">This chapter explains how field bindings are resolved, what is their purpose, and what variables are available for expressions depending on the context.</span>

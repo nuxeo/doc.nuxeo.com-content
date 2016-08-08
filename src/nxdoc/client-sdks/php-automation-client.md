@@ -4,7 +4,6 @@ labels:
     - php
     - client
     - php-client-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -131,37 +130,38 @@ $answer = $session->newRequest("Document.Query")->set('params', 'query', "SELECT
 $documentsArray = $answer->getDocumentList();
 $value = sizeof($documentsArray);
 echo '
-';
+<table>';
 echo '
-';
+<tr>
+<TH>uid</TH>
+<TH>Path</TH>
+
+<TH>Type</TH>
+<TH>State</TH>
+<TH>Title</TH>
+<TH>Download as PDF</TH>';
 for ($test = 0; $test < $value; $test ++){
     echo '
-';
+<tr>';
     echo '
-';
+<td> ' . current($documentsArray)->getUid()  . '</td>';
     echo '
-';
+<td> ' . current($documentsArray)->getPath()  . '</td>';
     echo '
-';
+<td> ' . current($documentsArray)->getType()  . '</td>';
     echo '
-';
+<td> ' . current($documentsArray)->getState()  . '</td>';
     echo '
-';
+<td> ' . current($documentsArray)->getTitle()  . '</td>';
     echo '
-';
+<td><form id="test" action="../tests/B5bis.php" method="post" >';
+    echo '<input type="hidden" name="data" value="'.
+    current($documentsArray)->getPath(). '"/>';
+    echo '<input type="submit" value="download"/>';
+    echo '</form></td></tr>';
     next($documentsArray);
 }
-echo '
-uid
-Path
-
-Type
-State
-Title
-Download as PDF ' . current($documentsArray)->getUid()  . ' ' . current($documentsArray)->getPath()  . ' ' . current($documentsArray)->getType()  . ' ' . current($documentsArray)->getState()  . ' ' . current($documentsArray)->getTitle()  . '';
-    echo '';
-    echo '';
-    echo '';
+echo '</table>';
 
 ```
 

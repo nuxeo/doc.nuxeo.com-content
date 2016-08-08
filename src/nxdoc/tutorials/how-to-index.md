@@ -1,7 +1,6 @@
 ---
 title: How-To Index
 labels:
-    - content-review-lts2015
     - migration-sample
 confluence:
     ajs-parent-page-id: '7209076'
@@ -132,6 +131,6 @@ history:
         version: '1'
 
 ---
-Click on the categories below to see the available How-Tos.
+Click on the categories below to see the available how-tos.
 
 {{! table-filter removed }}

@@ -11,7 +11,6 @@ labels:
     - howto
     - i18n
     - translations-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235763'
@@ -164,12 +163,14 @@ You can force the locale by removing other locales support. This is done in the&
 {{! /excerpt}}
 
 ```
-org.nuxeo.ecm.platform.lang.ext
-
-    en_US
-    en_US
-
-  messages
+<require>org.nuxeo.ecm.platform.lang.ext</require>
+<extension target="faces-config#APPLICATION_LOCALE" mode="replace">
+  <locale-config>
+    <default-locale>en_US</default-locale>
+    <supported-locale>en_US</supported-locale>
+  </locale-config>
+  <message-bundle>messages</message-bundle>
+</extension>
 
 ```
 
@@ -186,5 +187,5 @@ This configuration applies on JSF pages and will not change the default locale o
 If you'd like to force locale on the login page, you should override the page at `/login.jsp` and force the locale there, by adding the following line at the beginning of the file, just after the `<html>` tag, for instance:
 
 ```
-
+<fmt:setLocale value="fr" />
 ```

@@ -16,7 +16,6 @@ labels:
     - howto
     - upload
     - file-upload-component
-    - lts2015-ok
     - university
     - excerpt
 toc: true
@@ -132,24 +131,23 @@ The Platform provides facilities for&nbsp;[uploading binaries under a given "bat
 There are two ways to upload a file:
 
 1.  [In one go]({{page}}): the full content of the file is transferred to the server as a binary stream in a single HTTP request. Such an upload is not resumable: in case of interruption you will need to start all over again.
-2.  [In chunks]({{page}}): the file content is transferred to the server as several binary streams in separate HTTP requests. Such an upload is resumable: in case of&nbsp;<span>interruption you will only need to upload the remaining chunks.</span>
+2.  [In chunks]({{page}}): the file content is transferred to the server as several binary streams in separate HTTP requests. Such an upload is resumable: in case of&nbsp;interruption you will only need to upload the remaining chunks.
 
-<span><span>Before uploading any file or chunk you need to [initialize an upload batch]({{page}})</span><span>.</span>
-</span>
+Before uploading any file or chunk you need to [initialize an upload batch]({{page}}).
 
-## <span>Batch Initialization</span>
+## Batch Initialization
 
 ```
 POST /api/v1/upload/
 ```
 
-<span><span><span><span>Or with curl:</span></span></span></span>
+Or with curl:
 
 ```
-curl -u Administrator:Administrator -X POST http://:/nuxeo/api/v1/upload
+curl -u Administrator:Administrator -X POST http://<host>:<port>/nuxeo/api/v1/upload
 ```
 
-<span><span><span><span><span>Response:</span></span></span></span></span>
+Response:
 
 ```
 201 Created
@@ -163,7 +161,7 @@ curl -u Administrator:Administrator -X POST http://:/nuxeo/api/v1/upload
 ### File upload
 
 ```
-POST /api/v1/upload//0
+POST /api/v1/upload/<myBatchId>/0
 X-File-Name: myFile.doc
 X-File-Type: application/msword
 -----------------------
@@ -174,7 +172,7 @@ The content of the file
 Or with curl:
 
 ```
-curl -u Administrator:Administrator -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -F file=@myFile.doc http://:/nuxeo/api/v1/upload//0
+curl -u Administrator:Administrator -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -F file=@myFile.doc http://<host>:<port>/nuxeo/api/v1/upload/<myBatchId>/0
 ```
 
 ### Batch File Verification
@@ -182,13 +180,13 @@ curl -u Administrator:Administrator -H "X-File-Name:myFile.doc" -H "X-File-Type:
 You can verify that the file has actually been uploaded.
 
 ```
-GET /api/v1/upload/
+GET /api/v1/upload/<myBatchId>
 ```
 
 Or with curl:
 
 ```
-curl -u Administrator:Administrator -G http://:/nuxeo/api/v1/upload/
+curl -u Administrator:Administrator -G http://<host>:<port>/nuxeo/api/v1/upload/<myBatchId>
 ```
 
 Response:
@@ -214,9 +212,9 @@ Here is an example of a resumable upload of a file cut up into 5 chunks.
 This step will be repeated 5 times, one for each chunk. Let's just start with <i> = 0.
 
 ```
-POST /api/v1/upload//0
+POST /api/v1/upload/<myBatchId>/0
 X-Upload-Type: chunked
-X-Upload-Chunk-Index: 
+X-Upload-Chunk-Index: <i>
 X-Upload-Chunk-Count: 5
 X-File-Name: myFile.doc
 X-File-Type: application/msword
@@ -229,7 +227,7 @@ The content of the chunk
 Or with curl:
 
 ```
-curl -u Administrator:Administrator -H "X-Upload-Type:chunked" -H "X-Upload-Chunk-Index:" -H "X-Upload-Chunk-Count:5" -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -H "X-File-Size:115090" -F file=@ http://:/nuxeo/api/v1/upload//0
+curl -u Administrator:Administrator -H "X-Upload-Type:chunked" -H "X-Upload-Chunk-Index:<i>" -H "X-Upload-Chunk-Count:5" -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -H "X-File-Size:115090" -F file=@<chunk_i> http://<host>:<port>/nuxeo/api/v1/upload/<myBatchId>/0
 ```
 
 Response:&nbsp;there are 3 cases here.
@@ -260,13 +258,13 @@ Response:&nbsp;there are 3 cases here.
 Note the importance here of having saved the batch id: it can be seen&nbsp;as a _resumable upload session id_.
 
 ```
-GET /api/upload//0
+GET /api/upload/<myBatchId>/0
 ```
 
 Or with curl:
 
 ```
-curl -u Administrator:Administrator -G http://:/nuxeo/api/v1/upload//0
+curl -u Administrator:Administrator -G http://<host>:<port>/nuxeo/api/v1/upload/<myBatchId>/0
 ```
 
 Response:&nbsp;again there are 3 cases here.
@@ -278,7 +276,7 @@ Response:&nbsp;again there are 3 cases here.
     {"name": myFile.doc, "size": 115090, "uploadType": "chunked", "uploadedChunkIds": [0, 1, 2], "chunkCount": 5}
     ```
 
-    <span>=> Repeat the step&nbsp;</span>[Uploading Chunk i out of 5]({{page}})<span>&nbsp;with&nbsp;</span>`X-Upload-Chunk-Index`<span>&nbsp;= index of the next chunk to upload, in this case 3.</span>
+    => Repeat the step&nbsp;[Uploading Chunk i out of 5]({{page}})&nbsp;with&nbsp;`X-Upload-Chunk-Index`&nbsp;= index of the next chunk to upload, in this case 3.
 
 2.  The file is now complete, meaning all chunks have been uploaded.
     This could happen if the connection broke after all bytes were uploaded but before the client received a response from the server.
@@ -290,11 +288,11 @@ Response:&nbsp;again there are 3 cases here.
 
     => **End of upload**.
 
-3.  The request is interrupted or you recieve HTTP 503 Service Unavailable or any other 5xx response from the server,&nbsp;<span>go to the&nbsp;</span>[Resume an Interrupted Upload]({{page}})<span>&nbsp;step.</span>
+3.  The request is interrupted or you recieve HTTP 503 Service Unavailable or any other 5xx response from the server,&nbsp;go to the&nbsp;[Resume an Interrupted Upload]({{page}})&nbsp;step.
 
-### <span>Best Practices</span>
+### Best Practices
 
-<span>You should follow the [Best Practices](https://developers.google.com/drive/web/manage-uploads#best-practices) advised in the Google Drive API documentation about File Upload, especially the [Exponential backoff](https://developers.google.com/drive/web/manage-uploads#exp-backoff) strategy.</span>
+You should follow the [Best Practices](https://developers.google.com/drive/web/manage-uploads#best-practices) advised in the Google Drive API documentation about File Upload, especially the [Exponential backoff](https://developers.google.com/drive/web/manage-uploads#exp-backoff) strategy.
 
 ## Creating a Document from an Uploaded File
 
@@ -311,7 +309,7 @@ POST /api/v1/path/default-domain/workspaces/myworkspace
   "properties" : { 
     "dc:title":"My new doc",
     "file:content": {
-      "upload-batch":"",
+      "upload-batch":"<myBatchId>",
       "upload-fileId":"0"
     }
   }
@@ -321,7 +319,7 @@ POST /api/v1/path/default-domain/workspaces/myworkspace
 Or with curl:
 
 ```
-curl -X POST -H 'Content-Type: application/json' -u Administrator:Administrator -d '{"entity-type": "document", "name": "myNewDoc", "type": "File", "properties": {"dc:title": "My new doc", "file:content": {"upload-batch": "", "upload-fileId": "0"}}}' http://:/nuxeo/api/v1/path/default-domain/workspaces/myworkspace
+curl -X POST -H 'Content-Type: application/json' -u Administrator:Administrator -d '{"entity-type": "document", "name": "myNewDoc", "type": "File", "properties": {"dc:title": "My new doc", "file:content": {"upload-batch": "<myBatchId>", "upload-fileId": "0"}}}' http://<host>:<port>/nuxeo/api/v1/path/default-domain/workspaces/myworkspace
 ```
 
 Finally you now can access the content of your file by pointing to the following resource:
@@ -330,18 +328,12 @@ Finally you now can access the content of your file by pointing to the following
 GET /api/v1/path/default-domain/workspaces/myworkspace/myNewDoc/@blob/file:content
 ```
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="REST API How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='REST API how-tos'}}
 
 &nbsp;
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Import How-Tos"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Import how-tos'}}
 
 &nbsp;
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

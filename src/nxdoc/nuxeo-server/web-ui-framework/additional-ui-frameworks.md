@@ -1,7 +1,6 @@
 ---
 title: Additional UI Frameworks
 labels:
-    - content-review-lts2015
     - home
     - excerpt
 confluence:
@@ -16,6 +15,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/PoAO'
     source_link: /display/NXDOC/Additional+UI+Frameworks
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-07-20 13:22'
+        message: emove children display macr
+        version: '11'
     - 
         author: Alain Escaffre
         date: '2014-09-19 11:13'
@@ -75,3 +79,7 @@ Nuxeo uses several UI frameworks beside the [default JSF technology]({{page page
 {{! /excerpt}}
 
 &nbsp;
+
+*   [GWT Integration](https://doc.nuxeo.com/display/NXDOC/GWT+Integration)&nbsp;&mdash;&nbsp;<span class="smalltext">GWT is a web toolkit to build rich clients in Java programming language. The Java code is transcoded in JavaScript at build time so the build process generates a fully HTML+JavaScript application ready to be deployed on an HTTP server.</span>
+*   [Extending The Shell](https://doc.nuxeo.com/display/NXDOC/Extending+The+Shell)&nbsp;&mdash;&nbsp;<span class="smalltext">This section is intended for developers who wants to provide new Shell commands, namespaces or Shell Features.</span>
+*   [Nuxeo Android Connector](https://doc.nuxeo.com/display/NXDOC/Nuxeo+Android+Connector)&nbsp;&mdash;&nbsp;<span class="smalltext">Nuxeo Android Connector is a SDK to build Android Applications that communicate with a Nuxeo Server.</span>

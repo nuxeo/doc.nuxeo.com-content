@@ -3,7 +3,6 @@ title: File Manager
 labels:
     - file-manager
     - file-upload-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -137,9 +136,13 @@ Let's take a simple example where the document type depends on the parent folder
 2.  Add a new contribution to the file manager service.
 
     ```
-
-                .*
-
+    <component name="org.nuxeo.sample.filemanager">
+        <extension target="org.nuxeo.ecm.platform.filemanager.service.FileManagerService" point="plugins">
+            <plugin name="SampleImporter" class="org.nuxeo.sample.SampleFilemanagerPlugin" order="0">
+                <filter>.*</filter>
+            </plugin>
+        </extension>
+    </component>
     ```
 
     That's it!
@@ -148,22 +151,16 @@ See also the tutorial on&nbsp;[how to change the default document type used when
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{! Please update the label in the Content by Label macro below. }}
 
 &nbsp;
 
-</div>
-
-<div class="column medium-6">
+</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
 &nbsp;
 
-</div>
-
-</div>
+</div></div>

@@ -4,7 +4,6 @@ labels:
     - automation
     - trace
     - automation-component
-    - lts2015-ok
     - excerpt
     - multiexcerpt-include
     - multiexcerpt
@@ -20,6 +19,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/4YMPAQ'
     source_link: /display/NXDOC/Automation+Tracing
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-07-25 15:59'
+        message: ix broken excerp
+        version: '9'
     - 
         author: Solen Guitter
         date: '2014-04-10 17:54'
@@ -70,16 +74,18 @@ history:
 
 This Automation trace mode can be enabled through the&nbsp;[nuxeo.conf file]({{page page='configuration-parameters-index-nuxeoconf'}})&nbsp;properties:
 
-<table><tbody><tr><th colspan="1">Property</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace' page='ADMINDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace-default' page='ADMINDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace-description' page='ADMINDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td></tr><tr><td colspan="1">
+<table><tbody><tr><th colspan="1">Property</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace-default' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace-description' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td></tr><tr><td colspan="1">
 
-{{{multiexcerpt 'org.nuxeo.automation.trace.printable' page='ADMINDOC:Configuration Parameters Index (nuxeo.conf)'}}}
+{{{multiexcerpt 'org.nuxeo.automation.trace.printable' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}
 
-</td><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace.printable-default' page='ADMINDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace.printable-description' page='ADMINDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td></tr></tbody></table>{{#> callout type='info' }}
+</td><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace.printable-default' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace.printable-description' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td></tr></tbody></table>{{#> callout type='info' }}
 
 To display traces even for executions without errors, this appender is added by default in your `nuxeo-***-tomcat/lib/log4j` configuration file:
 
 ```
-
+<category name="org.nuxeo.ecm.automation.core">    
+  <priority value="INFO" />
+</category>
 ```
 
 {{/callout}}

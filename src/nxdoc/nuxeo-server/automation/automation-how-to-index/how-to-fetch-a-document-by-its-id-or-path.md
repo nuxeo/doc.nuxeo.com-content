@@ -13,7 +13,6 @@ labels:
     - automation
     - studio
     - automation-component
-    - lts2015-ok
     - excerpt
     - multiexcerpt-include
 confluence:
@@ -123,20 +122,14 @@ Anyway, if you want to access a document by its path or its ID, just drop this `
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{{multiexcerpt 'popular-how-tos' page='How to Create an Automation Chain'}}}
 
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Automation screen in Nuxeo Studio]({{page space='studio' page='automation'}})
 *   [Content Automation Concepts]({{page page='content-automation-concepts'}})
 *   [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

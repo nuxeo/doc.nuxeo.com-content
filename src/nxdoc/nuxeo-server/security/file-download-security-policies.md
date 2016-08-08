@@ -1,7 +1,6 @@
 ---
 title: File Download Security Policies
 labels:
-    - content-review-lts2015
     - security-policy
     - blob-manager-component
     - security-component
@@ -124,14 +123,18 @@ Possible side-effects you may want to check include:
 To additionally restrict the download of a given blob inside a document, you can contribute to the following extension point:
 
 ```
-
+   <extension target="org.nuxeo.ecm.core.io.download.DownloadService" point="permissions">
+    <permission name="myperm">
+      <script language="JavaScript">
         function run() {
           if (CurrentUser.getName() != "bob") {
             return false;
           }
           return true;
         }
-
+      </script>
+    </permission>
+  </extension>
 ```
 
 The above is an example script that will prevent download if the user is not "bob".
@@ -174,7 +177,9 @@ If there are several permissions defined, a single one returning false is suffic
 Here is a more complex (if unrealistic) example that uses most of the available context variables:
 
 ```
-
+  <extension target="org.nuxeo.ecm.core.io.download.DownloadService" point="permissions">
+    <permission name="myperm">
+      <script>
         function run() {
           if (CurrentUser.getName() != "bob") {
             return false;
@@ -199,7 +204,9 @@ Here is a more complex (if unrealistic) example that uses most of the available 
           }
           return true;
         }
-
+      </script>
+    </permission>
+  </extension>
 ```
 
 ## Debugging
@@ -207,7 +214,9 @@ Here is a more complex (if unrealistic) example that uses most of the available 
 If you launched your Nuxeo instance in console mode (`./nuxeoctl console`), you can print output to the terminal for easier debugging. For instance, getting the available variables is done as following:
 
 ```
-
+<extension target="org.nuxeo.ecm.core.io.download.DownloadService" point="permissions">
+  <permission name="myperm">
+    <script language="JavaScript">
       function run() {
         print("doc " + (Document == null ? "null" : Document.getId()));
         print("filename " + (Blob == null ? "null" : Blob.getFilename()));
@@ -217,7 +226,9 @@ If you launched your Nuxeo instance in console mode (`./nuxeoctl console`), you 
         print("rendition " + Rendition);
         return true;
       }
-
+    </script>
+  </permission>
+</extension>
 ```
 
 {{! Don't put anything here. }}

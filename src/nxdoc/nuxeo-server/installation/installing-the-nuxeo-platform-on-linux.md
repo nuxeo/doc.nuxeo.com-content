@@ -3,7 +3,6 @@ title: Installing the Nuxeo Platform on Linux
 labels:
     - install-linux
     - mg
-    - lts2015-ok
     - multiexcerpt-include
     - multiexcerpt
 toc: true
@@ -313,7 +312,7 @@ Unzip the [.zip archive](http://www.nuxeo.com/downloads/) using your favorite to
 
 **What's next?**
 You want to evaluate the platform? You can now [start the server]({{page page='server-start-and-stop'}}).
-You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='set-up-best-practices'}}).
+You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='setup-best-practices'}}).
 
 ## Installing a Nuxeo Virtual Machine Image
 
@@ -338,7 +337,7 @@ You will need to know two things first:
 
 {{#> callout type='tip' }}
 
-For the examples below, let's say you are using Ubuntu 14.04 LTS ("trusty") and want to install the Nuxeo latest Fast Track release (<span>from the "<span>fasttracks</span>" APT repository; for&nbsp;LTS you would replace "<span>fasttracks</span>" with "releases"</span>).
+For the examples below, let's say you are using Ubuntu 14.04 LTS ("trusty") and want to install the Nuxeo latest Fast Track release (from the "fasttracks" APT repository; for&nbsp;LTS you would replace "fasttracks" with "releases").
 
 {{/callout}}
 
@@ -369,7 +368,7 @@ For the examples below, let's say you are using Ubuntu 14.04 LTS ("trusty") and 
 
     `sudo echo "deb [http://apt.nuxeo.org/](http://apt.nuxeo.org/)&nbsp;$(lsb_release -cs) releases" > /etc/apt/sources.list.d/nuxeo.list`
 
-    `<span>sudo echo "deb</span> [http://apt.nuxeo.org/](http://apt.nuxeo.org/) <span>&nbsp;$(lsb_release -cs) fasttracks" >> /etc/apt/sources.list.d/nuxeo.list</span>`
+    `sudo echo "deb [http://apt.nuxeo.org/](http://apt.nuxeo.org/) &nbsp;$(lsb_release -cs) fasttracks" >> /etc/apt/sources.list.d/nuxeo.list`
 
     {{/callout}}
 3.  Update your APT cache.
@@ -411,21 +410,15 @@ While setting `nuxeo.tmp.dir` property in nuxeo.conf, we recommend not to use th
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Next Steps'}}
 
-<div class="column medium-6">{{#> panel heading="Next Steps"}}
-
-*   [Set Up Best Practices]({{page page='set-up-best-practices'}})
+*   [Setup Best Practices]({{page page='setup-best-practices'}})
 *   [Server Start and Stop]({{page page='server-start-and-stop'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Getting Familiar with the Nuxeo Platform"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
 
 *   [From the Web UI to Nuxeo Studio]({{page page='from-the-web-ui-to-nuxeo-studio'}})
 *   [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
 *   [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

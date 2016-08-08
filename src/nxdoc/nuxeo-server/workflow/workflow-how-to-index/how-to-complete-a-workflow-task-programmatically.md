@@ -12,7 +12,6 @@ labels:
     - howto
     - community-links
     - workflow-component
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '19235619'
     ajs-parent-page-title: Workflow How-To Index
@@ -212,7 +211,7 @@ history:
 
 {{! excerpt}}
 
-<span>You might need this to implement some sort of automatic processing instead of having the user completing the task from the UI.</span>
+You might need this to implement some sort of automatic processing instead of having the user completing the task from the UI.
 
 {{! /excerpt}}
 
@@ -221,7 +220,7 @@ history:
 Basically, you have to call:
 
 ```
-    void endTask(CoreSession session, Task task, Map data,  String status) throws ClientException;
+    void endTask(CoreSession session, Task task, Map<String, Object> data,  String status) throws ClientException;
 ```
 
 on the&nbsp;[DocumentRoutingService](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/routing/api/DocumentRoutingService.html) <span class="componentTitle">, where:</span>
@@ -238,7 +237,7 @@ In your graph, you have nodes and transitions between these nodes. When the work
 To fetch all the open tasks assigned to a given user, on a document use:
 
 ```
-  List getTaskInstances(DocumentModel dm, NuxeoPrincipal user, CoreSession coreSssion) throws ClientException;
+  List<Task> getTaskInstances(DocumentModel dm, NuxeoPrincipal user, CoreSession coreSssion) throws ClientException;
 ```
 
 on the [TaskService](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/task/TaskService.html).
@@ -246,7 +245,7 @@ on the [TaskService](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/
 To fetch all the open tasks originating from the same node in the workflow use:
 
 ```
-List getAllTaskInstances(String processId, String nodeId, CoreSession session) throws ClientException;
+List<Task> getAllTaskInstances(String processId, String nodeId, CoreSession session) throws ClientException;
 ```
 
 where:
@@ -260,9 +259,7 @@ For some detailed examples on how to use this API, you can check the JUnit tests
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [undefined]({{page}})&nbsp;
 *   [How to Modify a Workflow Variable outside of Workflow Context]({{page page='how-to-modify-a-workflow-variable-outside-of-workflow-context'}})
@@ -270,9 +267,7 @@ For some detailed examples on how to use this API, you can check the JUnit tests
 *   [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})&nbsp;
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Workflow in Nuxeo Studio]({{page space='studio' page='workflow'}})
 *   [Full-Text Queries]({{page page='full-text-queries'}})
@@ -280,6 +275,4 @@ For some detailed examples on how to use this API, you can check the JUnit tests
 *   [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
 *   [Workflow]({{page page='workflow'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

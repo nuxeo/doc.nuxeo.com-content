@@ -13,7 +13,6 @@ labels:
     - howto
     - content-view
     - page-provider-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235663'
@@ -74,17 +73,23 @@ The left tree is built using a query that is ran recursively. One of the clauses
 {{! /excerpt}}
 
 ```
-org.nuxeo.ecm.webapp.pageproviders.contrib
+<require>org.nuxeo.ecm.webapp.pageproviders.contrib</require>
 
-      PAGE_SIZE
+  <extension target="org.nuxeo.ecm.platform.query.api.PageProviderService"
+    point="providers">
 
+    <coreQueryPageProvider name="tree_children">
+      <property name="maxResults">PAGE_SIZE</property>
+      <pattern>
         SELECT * FROM Document WHERE ecm:parentId = ? AND ecm:isProxy = 0 AND
         ecm:mixinType != 'HiddenInNavigation'
         AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState !=
         'deleted'
-
-      50
-
+      </pattern>
+      <sort column="dc:title" ascending="true" />
+      <pageSize>50</pageSize>
+    </coreQueryPageProvider>
+</extension>
 ```
 
 You can adapt this sample so as to filter anything you would like to see or not in the left tree.

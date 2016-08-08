@@ -6,7 +6,6 @@ labels:
     - proxies
     - community-links
     - publishing-component
-    - lts2015-ok
     - multiexcerpt-include
     - excerpt
 toc: true
@@ -130,11 +129,22 @@ Publishing in local sections was the only way to publish on versions < 5.3GA. Fr
 Here is the default contribution you can find in Nuxeo `publisher-jbpm-contrib.xml` in `nuxeo-platform-publisher-jbpm`. This contribution overrides the one in `publisher-contrib.xml` located in the `nuxeo-platform-publisher-core` project:
 
 ```
+<extension target="org.nuxeo.ecm.platform.publisher.impl.service.PublisherServiceImpl"
+  point="treeInstance">
 
-      /sections
-      true
-      /icons/folder_open.gif
-      /icons/folder.gif
+  <publicationTreeConfig name="DefaultSectionsTree" tree="RootSectionsCoreTree"
+    factory="CoreProxyWithWorkflow" localSectionTree="true"
+    title="label.publication.tree.local.sections">
+    <parameters>
+      <!-- <parameter name="RootPath">/default-domain/sections</parameter> -->
+      <parameter name="RelativeRootPath">/sections</parameter>
+      <parameter name="enableSnapshot">true</parameter>
+      <parameter name="iconExpanded">/icons/folder_open.gif</parameter>
+      <parameter name="iconCollapsed">/icons/folder.gif</parameter>
+    </parameters>
+  </publicationTreeConfig>
+
+</extension>
 
 ```
 
@@ -160,8 +170,21 @@ You should create a new configuration file, `publisher-server-config.xml` for in
 Here is a sample configuration:
 
 ```
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.platform.publisher.contrib.server">
 
-        /default-domain/sections
+  <extension target="org.nuxeo.ecm.platform.publisher.impl.service.PublisherServiceImpl"
+    point="treeInstance">
+
+    <publicationTreeConfig name="ServerRemoteTree" tree="CoreTreeWithExternalDocs" factory="RemoteDocModel" >
+      <parameters>
+        <parameter name="RootPath">/default-domain/sections</parameter>
+      </parameters>
+    </publicationTreeConfig>
+
+  </extension>
+
+</component>
 
 ```
 
@@ -178,21 +201,35 @@ The available parameters are:
 
 **Client Configuration**
 
-You should create a new configuration file, `publisher-client-config.xml` for instance, in the `nxserver/config` folder of your Nuxeo acting as a client (ie the Nuxeo application from which documents are published).&nbsp;<span>&nbsp;Best way is to create a custom template with your configurarion, see&nbsp;</span>[Configuration Templates]({{page page='configuration-templates'}}).
+You should create a new configuration file, `publisher-client-config.xml` for instance, in the `nxserver/config` folder of your Nuxeo acting as a client (ie the Nuxeo application from which documents are published).&nbsp;&nbsp;Best way is to create a custom template with your configurarion, see&nbsp;[Configuration Templates]({{page page='configuration-templates'}}).
 
 Here is a sample configuration:
 
 ```
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.platform.publisher.contrib.client">
 
-        label.publication.tree.remote.sections
-        Administrator
-        Administrator
+  <extension target="org.nuxeo.ecm.platform.publisher.impl.service.PublisherServiceImpl"
+    point="treeInstance">
 
+    <publicationTreeConfig name="ClientRemoteTree" tree="ClientForRemoteTree"
+      factory="ClientProxyFactory">
+      <parameters>
+        <parameter name="title">label.publication.tree.remote.sections</parameter>
+        <parameter name="userName">Administrator</parameter>
+        <parameter name="password">Administrator</parameter>
+        <parameter name="baseURL">
           http://myserver:8080/nuxeo/site/remotepublisher/
+        </parameter>
+        <parameter name="targetTree">ServerRemoteTree</parameter>
+        <parameter name="originalServer">localserver</parameter>
+        <parameter name="enableSnapshot">true</parameter>
+      </parameters>
+    </publicationTreeConfig>
 
-        ServerRemoteTree
-        localserver
-        true
+  </extension>
+
+</component>
 
 ```
 
@@ -210,11 +247,21 @@ To publish on the file system, you just need to define a new `TreeInstance` usin
 Here is a sample configuration:
 
 ```
+<extension  target="org.nuxeo.ecm.platform.publisher.impl.service.PublisherServiceImpl"
+  point="treeInstance">
 
-      /opt/publishing-folder
-      true
-      /icons/folder_open.gif
-      /icons/folder.gif
+  <publicationTreeConfig name="FSTree" tree="LocalFSTree"
+    factory="LocalFile" localSectionTree="false"
+    title="label.publication.tree.fileSystem">
+    <parameters>
+      <parameter name="RootPath">/opt/publishing-folder</parameter>
+      <parameter name="enableSnapshot">true</parameter>
+      <parameter name="iconExpanded">/icons/folder_open.gif</parameter>
+      <parameter name="iconCollapsed">/icons/folder.gif</parameter>
+    </parameters>
+  </publicationTreeConfig>
+
+</extension>
 
 ```
 
@@ -231,9 +278,14 @@ By default, the relations on the document in the workspace are not duplicated on
 To enable this duplication of relations, you need to add the following contribution to the Platform:
 
 ```
-
-    documentProxyPublished
-
+<extension target="org.nuxeo.ecm.core.event.EventServiceComponent"
+    point="listener">
+  <listener name="publishRelationsListener" async="false" postCommit="false"
+    class="org.nuxeo.ecm.platform.relations.core.listener.PublishRelationsListener"
+    priority="-50">
+    <event>documentProxyPublished</event>
+  </listener>
+</extension>
 ```
 
 See the [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}}) page to add the contribution in Nuxeo Studio.

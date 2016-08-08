@@ -3,7 +3,6 @@ title: Document Layouts
 labels:
     - layout
     - web-ui-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '6029663'
@@ -88,11 +87,13 @@ Layouts can be linked to a document type by specifying the layout names in its d
 Here is a sample configuration excerpt:
 
 ```
-
+<type id="Note">
   [...]
-
-    heading
-    note
+  <layouts mode="any">
+    <layout>heading</layout>
+    <layout>note</layout>
+  </layouts>
+</type>
 
 ```
 
@@ -101,8 +102,9 @@ Layouts are defined in a given mode; layouts in the "any" mode will be used as d
 It is possible to merge layouts when redefining the document type, adding a property `append="true"`:
 
 ```
-
-  newLayout
+<layouts mode="any" append="true">
+  <layout>newLayout</layout>
+</layouts>
 
 ```
 
@@ -114,16 +116,31 @@ The [documentLayout tag](http://community.nuxeo.com/api/nuxeo/5.8/tlddoc/nxl/doc
 
 ```
 
+<div xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:nxl="http://nuxeo.org/nxforms/layout">
+  <nxl:documentLayout mode="view" value="#{currentDocument}" />
+</div>
+
 ```
 
 It is possible to make a distinction between the layouts defined in a given mode on the document, and the mode used to render layouts, for instance:
 
 ```
+<nxl:documentLayout
+  documentMode="header"
+  mode="view"
+  value="#{currentDocument}"
+  defaultLayout="document_header"
+  includeAnyMode="false" />
 
 ```
 
 It is also possible to define a fallback mode on documents, for instance when retrieving layouts for document mode `driveEdit`, if no layout is resolved, it can fallback to layouts defined for document mode `edit`:
 
 ```
-
+<nxl:documentLayout
+  documentMode="edit"
+  documentModeFallback="driveEdit"
+  mode="view"
+  value="#{currentDocument}" />
 ```

@@ -4,7 +4,6 @@ labels:
     - summary-layout
     - incremental-layout
     - layout-widgets-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '950289'
@@ -66,21 +65,38 @@ Configuration is a bit overkill for now; this could be simplified in the future,
 Here is a complete example, taken from the default Nuxeo Summary layout, and showing how some widgets are shown conditionally on the page.
 
 ```
-
-          gridStyle12
-
-        summary_panel_top
-
-          gridStyle7
-          gridStyle5
-
-        summary_panel_left
-        summary_panel_right
-
-          gridStyle12
-
-        summary_panel_bottom
-
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+  point="layouts">
+  <layout name="grid_summary_layout">
+    <templates>
+      <template mode="any">
+        /layouts/layout_grid_template.xhtml
+      </template>
+    </templates>
+    <rows>
+      <row>
+        <properties mode="any">
+          <property name="nxl_gridStyleClass_0">gridStyle12</property>
+        </properties>
+        <widget>summary_panel_top</widget>
+      </row>
+      <row>
+        <properties mode="any">
+          <property name="nxl_gridStyleClass_0">gridStyle7</property>
+          <property name="nxl_gridStyleClass_1">gridStyle5</property>
+        </properties>
+        <widget>summary_panel_left</widget>
+        <widget>summary_panel_right</widget>
+      </row>
+      <row>
+        <properties mode="any">
+          <property name="nxl_gridStyleClass_0">gridStyle12</property>
+        </properties>
+        <widget>summary_panel_bottom</widget>
+      </row>
+    </rows>
+  </layout>
+</extension>
 ```
 
 This layout is using a [grid]({{page page='layout-definitions'}}), so that widgets are piled up within grid slots and stacked up correctly when some widgets are not displayed.
@@ -88,47 +104,70 @@ This layout is using a [grid]({{page page='layout-definitions'}}), so that widge
 Let's look at the `summary_panel_left` widget configuration:
 
 ```
-
-    true
-
-      SUMMARY_PANEL_LEFT
-      summaryActions
-
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+  point="widgets">
+  <widget name="summary_panel_left" type="documentActions">
+    <handlingLabels>true</handlingLabels>
+    <labels>
+      <label mode="any"></label>
+    </labels>
+    <properties widgetMode="any">
+      <property name="category">SUMMARY_PANEL_LEFT</property>
+      <property name="subStyleClass">summaryActions</property>
+    </properties>
+  </widget>
+</extension>
 ```
 
 Actions can be displayed by this widget when using the category&nbsp;`SUMMARY_PANEL_LEFT`. Here is a sample action configuration:
 
 ```
-
-    SUMMARY_PANEL_LEFT
-
-      summary_note_text
-
-    hasNote
-
+<extension target="org.nuxeo.ecm.platform.actions.ActionService"
+  point="actions">
+  <action id="summary_note_text" type="widget" order="100">
+    <category>SUMMARY_PANEL_LEFT</category>
+    <properties>
+      <property name="widgetName">summary_note_text</property>
+    </properties>
+    <filter-id>hasNote</filter-id>
+  </action>
+</extension>
 ```
 
 This action is using the type `widget`, referencing the widget named&nbsp;`summary_note_text`. Note that it's also using a filter that makes sure the widget will be shown only when the document has a schema named `note`:
 
 ```
-
-      note
-
+<extension target="org.nuxeo.ecm.platform.actions.ActionService"
+  point="filters">
+  <filter id="hasNote">
+    <rule grant="true">
+      <schema>note</schema>
+    </rule>
+  </filter>
+</extension>
 ```
 
 Finally, here is the widget configuration:
 
 ```
-
-      note:note
-      note:mime_type
-
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+  point="widgets">
+  <widget name="summary_note_text" type="richtext_with_mimetype">
+    <fields>
+      <field>note:note</field>
+      <field>note:mime_type</field>
+    </fields>
+    <properties mode="view">
+      <property name="translatedHtml">
         #{noteActions.translateImageLinks(field_0)}
-
-      note_content_block
-
-      true
-
+      </property>
+      <property name="cssClass">note_content_block</property>
+    </properties>
+    <controls mode="any">
+      <control name="requireSurroundingForm">true</control>
+    </controls>
+  </widget>
+</extension>
 ```
 
 Note that the widget holds a control to make sure a form is added around it: the summary layout is not surrounded by a form since version 5.8 to allow defining fine-grained forms inside it.
@@ -137,24 +176,14 @@ Note that the widget holds a control to make sure a form is added around it: the
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related pages in current documentation"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
 **About actions:**
 
 **About Summary layout:**
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related pages in Studio documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in Studio documentation'}}
 
 **About actions:**
 
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

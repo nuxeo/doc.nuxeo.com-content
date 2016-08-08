@@ -34,34 +34,20 @@ history:
         version: '1'
 
 ---
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### [Installation]({{page page='installation'}})
 
-{{/panel}}</div>
+{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
-<div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+### [Administration]({{page page='administration'}})
 
-### [Advanced Administration]({{page page='advanced-administration'}})
-
-{{/panel}}</div>
-
-</div>
-
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+{{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### [REST API]({{page page='rest-api'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### [Automation]({{page page='automation'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

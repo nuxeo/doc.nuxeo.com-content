@@ -12,7 +12,6 @@ labels:
     - quota
     - howto
     - quotas-component
-    - lts2015-not-ok
 confluence:
     ajs-parent-page-id: '11534351'
     ajs-parent-page-title: Nuxeo Quota
@@ -107,9 +106,14 @@ By default, [quotas]({{page page='nuxeo-quota'}}) are available on domains and w
 1.  [Create a new XML extension]({{page page='how-to-contribute-to-an-extension'}}) with the following content:
 
     ```
-
-            Folder
-
+    <extension target="org.nuxeo.ecm.platform.actions.ActionService"
+        point="filters">
+        <filter id="QUOTA_MANAGABLE_DOCTYPES" append="true">
+          <rule grant="true">
+            <type>Folder</type>
+          </rule>
+        </filter>
+    </extension>
     ```
 
     Replace Folder in the `<type>` tag by the document type(s) on which you want to enable quotas.

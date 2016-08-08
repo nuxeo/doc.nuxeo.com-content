@@ -10,7 +10,6 @@ labels:
     - howto
     - document-type
     - studio
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '950287'
     ajs-parent-page-title: Content Repository
@@ -326,7 +325,7 @@ Since content is at the center of customization, the definition of&nbsp; a new d
 
     {{#> callout type='info' }}
 
-    <span>Click on the question mark to have more information on each of the parameters.</span>
+    Click on the question mark to have more information on each of the parameters.
 
     {{/callout}}{{#> callout type='tip' }}
 
@@ -359,20 +358,15 @@ Since content is at the center of customization, the definition of&nbsp; a new d
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-<div class="column medium-6">{{#> panel heading="Popular How-Tos"}}
+*   [undefined]({{page}})
+*   [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}})
+*   [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}})
+*   [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
+*   [How-To Index]({{page page='how-to-index'}})
 
-*   [undefined]({{page}}) <span>&nbsp;</span>
-*   <span>[How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) <span>&nbsp;</span></span>
-*   <span><span>[How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}}) <span>&nbsp;</span></span></span>
-*   <span><span><span>[How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})</span></span></span>
-*   [How-To Index]({{page page='how-to-index'}})<span>
-    </span>
-
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Documents in Nuxeo Studio]({{page space='studio' page='documents'}})
 *   [Content Repository]({{page page='content-repository'}})
@@ -380,6 +374,4 @@ Since content is at the center of customization, the definition of&nbsp; a new d
 *   [Life cycle]({{page space='studio' page='life-cycle'}})
 *   [Schemas]({{page space='studio' page='schemas'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

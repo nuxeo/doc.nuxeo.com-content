@@ -14,7 +14,6 @@ labels:
     - ldap
     - howto
     - directory-component
-    - lts2015-ok
     - migration-sample
     - excerpt
 confluence:
@@ -117,116 +116,200 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
 5.  Stop the server and edit the XML file to change the parameters and the field mappings with your specific ones.
 
 ```
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.directory.multi.storage.users">
+  <implementation class="org.nuxeo.ecm.directory.ldap.LDAPDirectoryDescriptor" />
+  <implementation class="org.nuxeo.ecm.directory.ldap.LDAPServerDescriptor" />
+  <require>org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory</require>
+  <!-- the groups SQL directories are required to make this bundle work -->
+  <require>org.nuxeo.ecm.directory.sql.storage</require>
+  <require>org.nuxeo.ecm.platform.usermanager.UserManagerImpl</require>
 
-  org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory
+  <extension target="org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory"
+    point="servers">
+    <server name="default">
+      <ldapUrl>ldap://ldap.testathon.net:389/</ldapUrl>
+      <bindDn>CN=stuart,OU=users,DC=testathon,DC=net</bindDn>
+      <bindPassword>stuart</bindPassword>
+      <!-- Attempts to get a result when LDAP is temporary unavailable -->
+      <retries>5</retries>
+    </server>
+  </extension>
 
-  org.nuxeo.ecm.directory.sql.storage
-  org.nuxeo.ecm.platform.usermanager.UserManagerImpl
+  <extension target="org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory"
+    point="directories">
+    <directory name="ldapUserDirectory">
+      <server>default</server>
+      <schema>user</schema>
+      <idField>username</idField>
+      <passwordField>password</passwordField>
+      <searchBaseDn>DC=testathon,DC=net</searchBaseDn>
+      <searchClass>person</searchClass>
+      <!-- use subtree if the people branch is nested -->
+      <searchScope>subtree</searchScope>
+      <!-- using 'subany', search will match *toto*. use 'subfinal' to
+        match *toto and 'subinitial' to match toto*. subinitial is the
+        default  behaviour-->
+      <substringMatchType>subany</substringMatchType>
+      <readOnly>true</readOnly>
+      <!-- comment <cache* /> tags to disable the cache -->
+      <!-- cache timeout in seconds -->
+      <cacheTimeout>3600</cacheTimeout>
+      <!-- maximum number of cached entries before global invalidation -->
+      <cacheMaxSize>1000</cacheMaxSize>
+      <!--
+           If the id field is not returned by the search, we set it with the searched entry, probably the login.
+           Before setting it, you can change its case. Accepted values are 'lower' and 'upper',
+           anything else will not change the case.
+      -->
+      <missingIdFieldCase>lower</missingIdFieldCase>
+      <!-- Maximum number of entries returned by the search -->
+      <querySizeLimit>200</querySizeLimit>
+      <!-- Time to wait for a search to finish. 0 to wait indefinitely -->
+      <queryTimeLimit>0</queryTimeLimit>
 
-      ldap://ldap.testathon.net:389/
-      CN=stuart,OU=users,DC=testathon,DC=net
-      stuart
-
-      5
-
-      default
-      user
-      username
-      password
-      DC=testathon,DC=net
-      person
-
-      subtree
-
-      subany
-      true
-
-      3600
-
-      1000
-
-      lower
-
-      200
-
-      0
-
-      cn
-      cn
-      userPassword
-      givenName
-      sn
-      telephoneNumber
-      mail
-
-      default
-      group
-      groupname
-      OU=groups,DC=testathon,DC=net
-
+      <rdnAttribute>cn</rdnAttribute>
+      <fieldMapping name="username">cn</fieldMapping>
+      <fieldMapping name="password">userPassword</fieldMapping>
+      <fieldMapping name="firstName">givenName</fieldMapping>
+      <fieldMapping name="lastName">sn</fieldMapping>
+      <fieldMapping name="company">telephoneNumber</fieldMapping>
+      <fieldMapping name="email">mail</fieldMapping>
+      <references>
+        <inverseReference field="groups" directory="multiGroupDirectory"
+          dualReferenceField="members" />
+      </references>
+    </directory>
+    <directory name="ldapGroupDirectory">
+      <!-- Reuse the default server configuration defined for ldapUserDirectory -->
+      <server>default</server>
+      <schema>group</schema>
+      <idField>groupname</idField>
+      <searchBaseDn>OU=groups,DC=testathon,DC=net</searchBaseDn>
+      <searchFilter>
         (|(objectClass=groupOfNames)(objectClass=groupOfURLs))
+      </searchFilter>
+      <searchScope>subtree</searchScope>
+      <readOnly>true</readOnly>
+      <!-- comment <cache* /> tags to disable the cache -->
+      <!-- cache timeout in seconds -->
+      <cacheTimeout>3600</cacheTimeout>
+      <!-- maximum number of cached entries before global invalidation -->
+      <cacheMaxSize>1000</cacheMaxSize>
 
-      subtree
-      true
+      <!-- Maximum number of entries returned by the search -->
+      <querySizeLimit>200</querySizeLimit>
+      <!-- Time to wait for a search to finish. 0 to wait indefinitely -->
+      <queryTimeLimit>0</queryTimeLimit>
+      <rdnAttribute>cn</rdnAttribute>
+      <fieldMapping name="groupname">cn</fieldMapping>
+      <!-- Add another field to map reel group label -->
+      <fieldMapping name="grouplabel">description</fieldMapping>
+      <references>
+        <ldapReference field="members" directory="ldapUserDirectory"
+          forceDnConsistencyCheck="false" staticAttributeId="member"
+          dynamicAttributeId="memberURL" />
+        <ldapReference field="subGroups" directory="ldapGroupDirectory"
+          forceDnConsistencyCheck="false"  staticAttributeId="member"
+          dynamicAttributeId="memberURL" />
+        <inverseReference field="parentGroups" directory="multiGroupDirectory"
+          dualReferenceField="subGroups" />
+      </references>
+    </directory>
+  </extension>
 
-      3600
+  <implementation class="org.nuxeo.ecm.directory.sql.SQLDirectoryDescriptor" />
+  <require>org.nuxeo.ecm.directory.sql.SQLDirectoryFactory</require>
+  <extension target="org.nuxeo.ecm.directory.sql.SQLDirectoryFactory"
+    point="directories">
+    <directory name="sqlUserDirectory">
+      <schema>user</schema>
+      <dataSource>jdbc/nxsqldirectory</dataSource>
 
-      1000
+<table>users</table>
+      <idField>username</idField>
+      <passwordField>password</passwordField>
+      <passwordHashAlgorithm>SSHA</passwordHashAlgorithm>
+      <autoincrementIdField>false</autoincrementIdField>
+      <computeMultiTenantId>false</computeMultiTenantId>
+      <dataFile>users.csv</dataFile>
+      <createTablePolicy>on_missing_columns</createTablePolicy>
+      <querySizeLimit>50</querySizeLimit>
+      <references>
+        <inverseReference field="groups" directory="sqlGroupDirectory"
+          dualReferenceField="members" />
+      </references>
+    </directory>
+    <directory name="sqlGroupDirectory">
+      <schema>group</schema>
+      <dataSource>jdbc/nxsqldirectory</dataSource>
 
-      200
+<table>groups</table>
+      <idField>groupname</idField>
+      <dataFile>groups.csv</dataFile>
+      <createTablePolicy>on_missing_columns</createTablePolicy>
+      <autoincrementIdField>false</autoincrementIdField>
+      <!-- Add 10 min cache to avoid refetching the groups during login --> 
+      <cacheTimeout>360</cacheTimeout>
+      <cacheMaxSize>1000</cacheMaxSize>
+      <references>
+        <tableReference field="members" directory="multiUserDirectory"
+          table="user2group" sourceColumn="groupId" targetColumn="userId" schema="user2group" 
+          dataFile="user2group.csv" />
+        <tableReference field="subGroups" directory="sqlGroupDirectory"
+          table="group2group" sourceColumn="parentGroupId" 
+          targetColumn="childGroupId" schema="group2group" />
+        <inverseReference field="parentGroups" directory="sqlGroupDirectory"
+          dualReferenceField="subGroups" />
+      </references>
+    </directory>
+  </extension>
 
-      0
-      cn
-      cn
+  <extension
+    target="org.nuxeo.ecm.directory.multi.MultiDirectoryFactory"
+    point="directories">
+    <directory name="multiUserDirectory">
+      <schema>user</schema>
+      <idField>username</idField>
+      <passwordField>password</passwordField>
+      <source name="userSQLsource" creation="true">
+        <subDirectory name="sqlUserDirectory" />
+      </source>
+      <source name="userLDAPsource">
+        <subDirectory name="ldapUserDirectory" />
+      </source>
+    </directory>
+    <directory name="multiGroupDirectory">
+      <schema>group</schema>
+      <idField>groupname</idField>
+      <source name="groupSQLsource" creation="true">
+        <subDirectory name="sqlGroupDirectory" />
+      </source>
+      <source name="groupLDAPsource">
+        <subDirectory name="ldapGroupDirectory" />
+      </source>
+    </directory>
+  </extension>
 
-      description
-
-  org.nuxeo.ecm.directory.sql.SQLDirectoryFactory
-
-      user
-      jdbc/nxsqldirectory
-
-users
-      username
-      password
-      SSHA
-      false
-      false
-      users.csv
-      on_missing_columns
-      50
-
-      group
-      jdbc/nxsqldirectory
-
-groups
-      groupname
-      groups.csv
-      on_missing_columns
-      false
-
-      360
-      1000
-
-      user
-      username
-      password
-
-      group
-      groupname
-
-      stuart
-      members
-
-        multiUserDirectory
-
-          secret
-          Super
-          Admin
-          administrators
-
-        multiGroupDirectory
-
+  <extension target="org.nuxeo.ecm.platform.usermanager.UserService" point="userManager">
+    <userManager>
+      <defaultAdministratorId>stuart</defaultAdministratorId>
+      <defaultGroup>members</defaultGroup>
+      <users>
+        <directory>multiUserDirectory</directory>
+        <virtualUser id="MyAdministrator" searchable="false">
+          <password>secret</password>
+          <property name="firstName">Super</property>
+          <property name="lastName">Admin</property>
+          <group>administrators</group>
+        </virtualUser>
+      </users>
+      <groups>
+        <directory>multiGroupDirectory</directory>
+      </groups>
+    </userManager>
+  </extension>
+</component>
 ```
 
 &nbsp;

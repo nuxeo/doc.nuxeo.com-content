@@ -3,7 +3,6 @@ title: Versioning
 labels:
     - link-update
     - versioning
-    - content-review-lts2015
     - core-component
 toc: true
 confluence:

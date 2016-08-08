@@ -184,6 +184,17 @@ The following contribution has already been written:&nbsp;`CustomExporterPlugin`
 
 You can use it with using the following XML extension in Studio : &nbsp;
 
+```
+<extension
+target="org.nuxeo.io.fsexporter.FSExporter"
+point="exportLogic">
+
+		<exportLogic
+class="org.nuxeo.io.fsexporter.CustomExporterPlugin" />
+
+</extension>
+```
+
 {{! Don't put anything here. }}
 
 * * *

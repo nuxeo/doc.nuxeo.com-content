@@ -4,7 +4,6 @@ labels:
     - widget-types
     - select2
     - suggestion
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -249,7 +248,7 @@ A series of widget types for suggestions.
 
 Since 5.7.2, Nuxeo uses [select2](http://ivaynberg.github.io/select2/) for the suggestion widgets:
 
-*   the user suggestion and the document suggestion <span>widgets</span> were previously based on the RichFaces suggestion box, and they now use select2;
+*   the user suggestion and the document suggestion widgets were previously based on the RichFaces suggestion box, and they now use select2;
 *   a new directory suggestion widget is provided.
 
 Unlike the older JSF suggestion widgets, these select2-based widgets rely upon an [automation]({{page page='content-automation-concepts'}}) operation to retrieve suggestions according to the search term typed in the select2 box. The backing operation returns suggestions as an array of JSON objects that select2 is able to manipulate.
@@ -270,7 +269,7 @@ This widget type lets the user select an entry among a list of vocabulary entrie
 *   suggestOneDirectory
 *   suggestManyDirectory
 
-![l10ncoverage suggestion widget]({{file name='docdirectorySuggestion.png'}} ?w=400,border=true "l10ncoverage suggestion widget")
+![l10ncoverage suggestion widget]({{file name='docdirectorySuggestion.png'}} ?w=400,border=true 'l10ncoverage suggestion widget')
 
 _**Picture 1:** `suggestOneDirectory` presenting l10ncoverage vocabulary. Countries are grouped by continent._
 
@@ -288,7 +287,7 @@ By default, suggestion widgets assume the vocabulary labels are not localized. I
 </span>
 
 ```
-true
+<translated>true</translated>
 ```
 
 ###### Column-Based Translation
@@ -296,13 +295,13 @@ true
 The vocabulary handles as many label columns as supported locales. Again this is the case for&nbsp;ln10coverage and ln10subjects which have two columns for English and French translations. To support such vocabulary structure, the&nbsp;`dbl10n` widget property must be set to true:
 
 ```
-true
+<property name="dbl10n">true</property>
 ```
 
 By convention, the field name associated to these label columns must respect the pattern&nbsp;**label_xx** where xx is the locale code. However this can be changed with the&nbsp;`labelFieldName` widget parameter. For instance, the following configuration means that labels are translated using the columns `language_en`, `language_fr`, etc. of your vocabulary.
 
 ```
-language_{lang}
+<property name="labelFieldName">language_{lang}</property>
 ```
 
 {{#> callout type='tip' }}
@@ -342,7 +341,7 @@ Check out the layout showcase for more details on available widget properties:
 
 ### Document Suggestion Widget Type
 
-<span>This widget type lets the user select an entry among a list of existing documents of the repository that results from a search query based on the user input. Widget type names are:</span>
+This widget type lets the user select an entry among a list of existing documents of the repository that results from a search query based on the user input. Widget type names are:
 
 *   singleDocumentSuggestion
 *   multipleDocumentsSuggestion
@@ -358,9 +357,9 @@ Previously based on RichFaces suggestion box for Nuxeo Platform 5.6 and earlier 
 This operation uses the [`default_document_suggestion`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.webapp.pageproviders.contrib--providers) page provider. However, you can specify the NXQL query to be executed via the widget property named `query`.
 
 ```
-
+<property name="query">
   SELECT * FROM  Document WHERE dc:title LIKE ? AND ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted'
-
+</property>
 ```
 
 The specified query must have one parameter (the '?' character in the query above). This parameter will be be valued with the term entered in the select2\. Note that a '%' character will be automatically appended to the entered value.
@@ -372,7 +371,7 @@ Finally, it is also possible to tell these widgets to use another page provider 
 As explained above, the [DocumentPageProviderOperation](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/core/operations/services/DocumentPageProviderOperation.java)&nbsp;will return documents serialized as&nbsp;JSON objects. By default, the properties of the&nbsp;`dublincore` and&nbsp;`common` schemas are serialized. However, you can extend the list of schemas that must be returned in the document JSON serialization with the&nbsp;`documentSchemas` widget property:
 
 ```
-dublincore,common
+<property name="documentSchemas">dublincore,common</property>
 ```
 
 This is useful if you need to [customize the display of the suggested/selected entries]({{page}}) with specific document properties.
@@ -395,7 +394,7 @@ In case you'd like to build your own advanced suggestion widget, here are additi
 Specify the id of an automation operation that will be used to feed the widget with suggestion.
 
 ```
-your_operation_id
+<property name"operationId">your_operation_id</property>
 ```
 
 The term entered in select2 will be passed to the specified operation under the parameter&nbsp;`searchTerm`. Your operation must therefore at least have this parameter:
@@ -426,23 +425,26 @@ As explained above, each suggested entries are JSON objects returned by an autom
 ```
   function myDocFormatter(doc) {
     var markup = "
-";
+<table>
+<tbody>";
     markup += "
-
-";
+<tr>
+<td>";
     if (doc.properties && doc.properties['common:icon']) {
-      markup += ""
+      markup += "<img src='" + window.nxContextPath
+          + doc.properties['common:icon'] + "'/>"
     }
-    markup += "
-";
+    markup += "</td>
+<td>";
     markup += doc.title;
     if (doc.warn_message) {
-      markup += ""
+      markup += "<img src='" + window.nxContextPath
+          + "/icons/warning.gif' title='" + doc.warn_message + "'/>"
     }
     if (doc.path) {
-      markup += "" + doc.path + "";
+      markup += "<span class='displayB detail' style='word-break:break-all;'>" + doc.path + "</span>";
     }
-    markup += ""
+    markup += "</td></tr></tbody></table>"
     return markup;
   }
 ```
@@ -452,14 +454,15 @@ You can define the JS code of&nbsp;your custom formatters directly&nbsp;in the i
 Once you have defined a custom formatter, you can tell your widgets to use it:
 
 ```
-myformatter
-myformatter
+<property name="suggestionFormatter">myformatter</property>
+<property name="selectionFormatter">myformatter</property>
+<property name="inlinejs">
 
       function myformatter(doc) {
         return doc.title;
       }
    ]]>
-
+</property>
 ```
 
 {{#> callout type='info' }}
@@ -485,7 +488,7 @@ You can finally customize the CSS style of the select2-based widgets through the
 
 The container is the div handling the current selection and the dropdown is the popup box suggesting available entries.
 
-These properties are passed through to select2, that handles these properties as standard select2 p<span>arameters</span>. Please refer to the [select2 documentation](http://ivaynberg.github.io/select2/) for more details about these parameters.
+These properties are passed through to select2, that handles these properties as standard select2 parameters. Please refer to the [select2 documentation](http://ivaynberg.github.io/select2/) for more details about these parameters.
 
 Finally you can specify the `width` property, it accepts pixel as well as percentage (i.e. 300px and 100%).
 

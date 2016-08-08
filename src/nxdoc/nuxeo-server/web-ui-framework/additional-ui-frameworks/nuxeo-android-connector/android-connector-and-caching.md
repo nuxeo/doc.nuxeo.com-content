@@ -2,7 +2,6 @@
 title: Android Connector and Caching
 labels:
     - android-connector-component
-    - lts2015-ok
 confluence:
     ajs-parent-page-id: '8684332'
     ajs-parent-page-title: Nuxeo Android Connector
@@ -117,6 +116,6 @@ This caches keeps track of the Create/Update/Delete operations that are pending 
 Deferred Updates system is exposed via `DeferredUpdateManager` service interface.&nbsp;This service can be used to send an update request:
 
 ```
-String execDeferredUpdate(OperationRequest request, AsyncCallback cb, OperationType opType, boolean executeNow);
+String execDeferredUpdate(OperationRequest request, AsyncCallback<Object> cb, OperationType opType, boolean executeNow);
 
 ```

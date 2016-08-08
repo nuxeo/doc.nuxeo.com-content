@@ -11,7 +11,6 @@ details:
 labels:
     - howto
     - conversion
-    - lts2015-ok
     - excerpt
     - multiexcerpt-include
 confluence:
@@ -191,21 +190,15 @@ The automation chain to configure is finally:
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{{multiexcerpt 'popular-how-tos' page='How to Create an Automation Chain'}}}
 
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
 *   [Content Automation Concepts]({{page page='content-automation-concepts'}})
 *   [Document Templates and Automation Rendering Service]({{page page='document-templates-and-automation-rendering-service'}})
 *   [Template Rendering Add-on]({{page page='template-rendering-addon'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

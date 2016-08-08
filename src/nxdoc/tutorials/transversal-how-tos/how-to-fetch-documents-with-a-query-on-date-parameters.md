@@ -13,7 +13,6 @@ labels:
     - content-view
     - automation
     - studio
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -183,8 +182,7 @@ history:
 ---
 {{! excerpt}}
 
-<span>In this how-to we will see how to make it possible to process a list of document depending on a date parameter. An example would be how to <span>display or do an operation on all documents expiring in less than 3 months.</span>
-</span>
+In this how-to we will see how to make it possible to process a list of document depending on a date parameter. An example would be how to display or do an operation on all documents expiring in less than 3 months.
 
 {{! /excerpt}}{{#> callout type='info' }}
 
@@ -290,7 +288,8 @@ In content views the way to fetch all documents for which the "recall date" is o
 1.  On the [ **Query & form** tab of your content view]({{page page='how-to-define-a-new-content-view'}}), define your query filter.
 
     ```
-    ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND mydocumenttype:recall_expiring_date <= DATE="" ?="" <="" code=""/>
+    ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND mydocumenttype:recall_expiring_date <= DATE ?
+
     ```
 
 2.  Define the date query parameter:
@@ -326,31 +325,29 @@ The chain will look like that:
 
 ```
 - Document.Query:
-    query: "SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND mydocumenttype:recall_expiring_date<= DATE="" '@{CurrentDate.format(\"yyyy-MM-dd\")}'"="" language:="" NXQL="" -="" Document.SetLifeCycle:="" value:="" delete="" Seam.Refresh:="" {}<="" code=""/>
+    query: "SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND mydocumenttype:recall_expiring_date<= DATE '@{CurrentDate.format(\"yyyy-MM-dd\")}'"
+    language: NXQL
+- Document.SetLifeCycle:
+    value: delete
+- Seam.Refresh: {}
 ```
 
 &nbsp;
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Popular How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
 *   [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
 *   [Fetch a Document by Its ID or Path](http://doc.nuxeo.com/display/NXDOC/Fetch+a+Document+by+Its+ID+or+Path)
 *   [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Automation screen in Nuxeo Studio]({{page space='studio' page='automation'}})
 *   [Content Automation Concepts]({{page page='content-automation-concepts'}})
 *   [Content views in Nuxeo Studio]({{page space='studio' page='content-view-query-and-form-tab'}})
 *   [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

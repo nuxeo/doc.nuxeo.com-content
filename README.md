@@ -5,15 +5,16 @@ See [main project readme](https://github.com/nuxeo/doc.nuxeo.com/blob/master/REA
 
 ## Project Structure
 ### `assets`
-Any files in this directory will be copied to `site/assets` and can be referenced in html and templates. e.g. An image called `your_img.png` could be referenced by the following:
-```md
-Basic example:
-![Alt text - Required]({{file name='AdapterService.png'}})
+Any files in this directory will be copied to `site/assets` and can be referenced in html and templates.
 
+### `build.js`
+The main build script for generating the output for `site`.
 
-All options with file from another space and page:
-![Alt text - Required]({{file space='nxdoc' page='client-sdks' name='AdapterService.png'}} ?w=180,h=360,border=true,thumbnail=true,align=right "Title text - Optional")
-```
+### `config.yml`
+Site configurations, ability to have production or development specific values.
+
+### `site`
+Generated output of the site. This is what will be served in production.
 
 ### `src`
 Source Markdown and HTML files for content.
@@ -31,3 +32,75 @@ description: A description for search engines and social media to consume.
 
 Content of page goes here.
 ```
+
+#### Markdown and Handlebars
+##### Excerpts Definition
+Excerpts are to reuse content within the same page. In contrast Multi-excerpts can be reused in any page.
+
+```handlebars
+{{! excerpt name="foo"}}
+Reuse the text **foo** in this page only.
+{{! /excerpt}}
+```
+or
+``handlebars
+{{! multiexcerpt name="bar"}}
+Reuse the text **bar** in any page.
+{{! /multiexcerpt}}
+```
+
+##### Excerpts Use
+```handlebars
+{{excerpt 'foo'}}
+```
+or
+```handlebars
+{{multiexcerpt 'bar'}}
+```
+
+##### Images
+An image called `your_img.png` could be referenced by the following:
+```md
+Basic example:
+![Alt text - Required]({{file name='AdapterService.png'}})
+
+All options with file from another space and page:
+![Alt text - Required]({{file space='nxdoc' page='client-sdks' name='AdapterService.png'}} ?w=180,h=360,border=true,thumbnail=true,align=right "Title text - Optional")
+```
+
+#### Global optional frontmatter
+##### `style`
+Define a page specific style sheet. Defined in `doc.nuxeo.com/client/scss/`. e.g. To use `doc.nuxeo.com/client/scss/home.scss`, the front-matter would be:
+```md
+---
+...
+style: home
+...
+---
+Page content here.
+```
+##### `script`
+Define a page specific JavaScript. Defined in `doc.nuxeo.com/client/js/`. e.g. To use `doc.nuxeo.com/client/scss/home.js`, the front-matter would be:
+```md
+---
+...
+script: home
+...
+---
+Page content here.
+```
+
+For new JS, add an entry to `doc.nuxeo.com/webpack.config.js`. See `main.js` as an example.
+
+### `verify`
+Verification tests for post building.
+
+
+# Trouble shooting
+## Invalid front-matter
+Error: `Error: Invalid frontmatter in file: {filepath}`
+
+### Solution
+Run YAML linter to locate the issue with:
+
+`npm run yaml_lint {filepath}`

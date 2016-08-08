@@ -1,7 +1,5 @@
 ---
 title: How to Submit a Bug Report
-labels:
-    - content-review-lts2015
 confluence:
     ajs-parent-page-id: '4687444'
     ajs-parent-page-title: Contributing to Nuxeo
@@ -42,4 +40,4 @@ history:
 <span style="color: rgb(34,34,34);text-decoration: none;">Don't worry, you will still be able to send us your feedback and open tickets. To do that, you will just have to go to [answers.nuxeo.com](http://answers.nuxeo.com). Start by creating a question and you&rsquo;ll get an answer from Nuxeo. We'll help you qualify the bug. Once it's qualified, you will be able to click on the &ldquo;Report a bug&rdquo; button.</span>
 
 ![]({{file name='BugReport.png'}} ?w=500,h=192)
-<span style="color: rgb(34,34,34);text-decoration: none;">&nbsp;</span><span style="color: rgb(34,34,34);text-decoration: none;">We apologize for the inconvenience this may cause, but we hope this becomes an opportunity to regroup the community on [answers.nuxeo.com](http://answers.nuxeo.com).</span>
+<span style="color: rgb(34,34,34);text-decoration: none;">We apologize for the inconvenience this may cause, but we hope this becomes an opportunity to regroup the community on [answers.nuxeo.com](http://answers.nuxeo.com).</span>

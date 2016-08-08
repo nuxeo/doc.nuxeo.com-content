@@ -5,7 +5,6 @@ labels:
     - link-update
     - widget
     - community-links
-    - content-review-lts2015
     - home
     - excerpt
 confluence:
@@ -20,6 +19,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/uQY7'
     source_link: /display/NXDOC/Standard+Widget+Types
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-07-20 13:24'
+        message: emove children display macr
+        version: '22'
     - 
         author: Solen Guitter
         date: '2015-10-12 13:18'
@@ -140,6 +144,16 @@ You can also visit the [Layout Showcase](http://showcase.nuxeo.com/nuxeo/layoutD
 All widgets types available on your Nuxeo application are listed at [http://localhost:8080/nuxeo/site/layout-manager/widget-types](http://localhost:8080/nuxeo/site/layout-manager/widget-types).
 
 Here is some documentation about the most common widget types that are used in the application:
+
+*   [Default Widget Types Known Limitations](https://doc.nuxeo.com/display/NXDOC/Default+Widget+Types+Known+Limitations)&nbsp;&mdash;&nbsp;<span class="smalltext">Some widgets have limitations in some specific conditions of use. We maintain a list of known problems here.</span>
+*   [Basic Widget Types](https://doc.nuxeo.com/display/NXDOC/Basic+Widget+Types)&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types is available for the most basic uses cases.</span>
+*   [Listing Widget Types](https://doc.nuxeo.com/display/NXDOC/Listing+Widget+Types)&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types useful for listings.</span>
+*   [Summary Widget Types](https://doc.nuxeo.com/display/NXDOC/Summary+Widget+Types)&nbsp;&mdash;&nbsp;<span class="smalltext">A series of higher-level widget types useful to display information on a document Summary tab.</span>
+*   [Tab Designer Widget Types](https://doc.nuxeo.com/display/NXDOC/Tab+Designer+Widget+Types)&nbsp;&mdash;&nbsp;<span class="smalltext">Some higher level widget types are useful to design tab content, and come as an addition to Summary Widget Types.</span>
+*   [Decoration Widget Types](https://doc.nuxeo.com/display/NXDOC/Decoration+Widget+Types)&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types that are only useful to handle display of subwidgets, or just add tags surrounding other widgets.</span>
+*   [Suggestion Widget Types](https://doc.nuxeo.com/display/NXDOC/Suggestion+Widget+Types)&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types for suggestions.</span>
+*   [Aggregate Widget Types](https://doc.nuxeo.com/display/NXDOC/Aggregate+Widget+Types)&nbsp;&mdash;&nbsp;<span class="smalltext">This page presents widget types to be used to display aggregate buckets.</span>
+*   [Advanced Widget Types](https://doc.nuxeo.com/display/NXDOC/Advanced+Widget+Types)&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types for advanced usage.</span>
 
 * * *
 

@@ -14,7 +14,6 @@ labels:
     - project-structure
     - pom_xml
     - howto
-    - content-review-lts2015
 toc: true
 confluence:
     ajs-parent-page-id: '19235681'
@@ -415,7 +414,7 @@ To create your project structure, follow the steps below.
 
     If not, you may have the wrong version of Maven.
 
-    {{#> callout type='note' heading="Warning"}}
+    {{#> callout type='note' heading='Warning'}}
 
     As the number of archetype is based on archetype contributions, the reference is not automatically "104". But the default proposition should still be "org.apache.maven.archetypes:maven-archetype-quickstart" whatever the version is.
 
@@ -567,10 +566,11 @@ We need to customize the pom.xml file provided by the archetype at the root fold
 1.  Change the parent entry.
 
     ```
-
-    	org.nuxeo
-    	nuxeo-addons-parent
-    	6.0
+    <parent>
+    	<groupId>org.nuxeo</groupId>
+    	<artifactId>nuxeo-addons-parent</artifactId>
+    	<version>6.0</version>
+    </parent>
 
     ```
 
@@ -578,56 +578,84 @@ We need to customize the pom.xml file provided by the archetype at the root fold
 3.  Add repositories.
 
     ```
-
-    		public
-    		http://maven.nuxeo.org/public
-
-    			false
-
-    			true
-
-    		snapshots
-    		http://maven.nuxeo.org/public-snapshot
-
-    			true
-
-    			false
+    <repositories>
+    	<repository>
+    		<id>public</id>
+    		<url>http://maven.nuxeo.org/public</url>
+    		<snapshots>
+    			<enabled>false</enabled>
+    		</snapshots>
+    		<releases>
+    			<enabled>true</enabled>
+    		</releases>
+    	</repository>
+    	<repository>
+    		<id>snapshots</id>
+    		<url>http://maven.nuxeo.org/public-snapshot</url>
+    		<snapshots>
+    			<enabled>true</enabled>
+    		</snapshots>
+    		<releases>
+    			<enabled>false</enabled>
+    		</releases>
+    	</repository>
+    </repositories>
 
     ```
 
 Your "pom.xml" file should at the end to look like this:
 
 ```
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-	4.0.0
+	<groupId>org.nuxeo.cookbook</groupId>
+	<artifactId>bareproject</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-	org.nuxeo.cookbook
-	bareproject
-	1.0-SNAPSHOT
-	jar
+	<name>bareproject</name>
+	<url>http://maven.apache.org</url>
 
-	bareproject
-	http://maven.apache.org
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
-		UTF-8
+	<parent>
+		<groupId>org.nuxeo</groupId>
+		<artifactId>nuxeo-addons-parent</artifactId>
+		<version>6.0</version>
+	</parent>
 
-		org.nuxeo
-		nuxeo-addons-parent
-		6.0
+	<!-- nuxeo repos have copies of everything needed -->
+	<repositories>
+		<repository>
+			<id>public</id>
+			<url>http://maven.nuxeo.org/public</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>snapshots</id>
+			<url>http://maven.nuxeo.org/public-snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
 
-			public
-			http://maven.nuxeo.org/public
+	<dependencies>
 
-				false
-
-				true
-
-			snapshots
-			http://maven.nuxeo.org/public-snapshot
-
-				true
-
-				false
+	</dependencies>
+</project>
 
 ```
 
@@ -638,6 +666,13 @@ In order to deploy your Nuxeo add-on project in the Nuxeo server, you need to ad
 For now, the content of the file "deployment-fragment.xml" should be:
 
 ```
+<?xml version="1.0"?>
+<fragment version="1">
+<!-- will contains some stuff -->
+  <install>
+<!-- useful later -->
+  </install>
+</fragment>
 
 ```
 
@@ -798,15 +833,11 @@ As said in the beginning of this recipe, if you have unexpected errors or Nuxeo 
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How-To Index ]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Component Model ]({{page page='runtime-and-component-model'}})
 *   [Writing a Bundle Manifest ]({{page page='writing-a-bundle-manifest'}})
@@ -817,6 +848,4 @@ As said in the beginning of this recipe, if you have unexpected errors or Nuxeo 
 
 &nbsp;
 
-</div>
-
-</div>
+</div></div>

@@ -5,7 +5,6 @@ labels:
     - json
     - link-update
     - rest-api-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'
@@ -19,386 +18,386 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/RJBkAQ'
     source_link: /display/NXDOC/JSON+Marshalling
 history:
-    - 
+    -
         author: Guillaume Renard
         date: '2016-06-01 12:38'
         message: ''
         version: '76'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-04 15:35'
         message: ''
         version: '75'
-    - 
+    -
         author: Thomas Roger
         date: '2015-11-04 13:33'
         message: ''
         version: '74'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-15 09:31'
         message: Add anchor
         version: '73'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-15 09:29'
         message: ''
         version: '72'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-15 16:05'
         message: >-
             Split table in section JSON Marshallers Provided by the Nuxeo
             Platform
         version: '71'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-15 15:19'
         message: ''
         version: '70'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-15 14:46'
         message: 'Fix format page '
         version: '69'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-15 14:31'
         message: ''
         version: '68'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-20 11:56'
         message: Add links
         version: '67'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-20 09:43'
         message: fix typo
         version: '66'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-16 15:13'
         message: >-
             Add links to javadoc in table JSON Marshallers Provided by the Nuxeo
             Platform
         version: '65'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-16 11:59'
         message: split table in section RenderingContext API
         version: '64'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-16 11:47'
         message: fix typo
         version: '63'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-16 10:07'
         message: ''
         version: '62'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-16 09:55'
         message: Add link to marshalling service on explorer
         version: '61'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-15 15:17'
         message: Fix typos and add links
         version: '60'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-07 14:38'
         message: cleanup formatting
         version: '59'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-03-26 14:34'
         message: ''
         version: '58'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-03-26 14:33'
         message: ''
         version: '57'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-03-26 14:07'
         message: ''
         version: '56'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-03-26 13:54'
         message: ''
         version: '55'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-25 14:33'
         message: ''
         version: '54'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-25 07:52'
         message: ''
         version: '53'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-25 07:46'
         message: ''
         version: '52'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 16:46'
         message: ''
         version: '51'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 16:43'
         message: ''
         version: '50'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 16:36'
         message: ''
         version: '49'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 16:35'
         message: ''
         version: '48'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 16:32'
         message: ''
         version: '47'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 16:04'
         message: ''
         version: '46'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 16:02'
         message: ''
         version: '45'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 16:00'
         message: ''
         version: '44'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 15:58'
         message: ''
         version: '43'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 15:20'
         message: ''
         version: '42'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 15:17'
         message: ''
         version: '41'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 14:47'
         message: ''
         version: '40'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 14:45'
         message: ''
         version: '39'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 14:40'
         message: ''
         version: '38'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 14:24'
         message: ''
         version: '37'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 14:20'
         message: ''
         version: '36'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 14:05'
         message: ''
         version: '35'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 13:21'
         message: ''
         version: '34'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 12:46'
         message: ''
         version: '33'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 12:42'
         message: ''
         version: '32'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 12:37'
         message: ''
         version: '31'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 12:32'
         message: ''
         version: '30'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 12:26'
         message: ''
         version: '29'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 11:28'
         message: ''
         version: '28'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 11:13'
         message: ''
         version: '27'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 10:57'
         message: ''
         version: '26'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 10:28'
         message: ''
         version: '25'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 09:59'
         message: ''
         version: '24'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 09:58'
         message: ''
         version: '23'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 09:56'
         message: ''
         version: '22'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-24 09:45'
         message: ''
         version: '21'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 16:19'
         message: ''
         version: '20'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 16:17'
         message: ''
         version: '19'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 16:09'
         message: ''
         version: '18'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 15:25'
         message: ''
         version: '17'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 15:24'
         message: ''
         version: '16'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 15:16'
         message: ''
         version: '15'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 15:13'
         message: ''
         version: '14'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 15:09'
         message: ''
         version: '13'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 15:08'
         message: ''
         version: '12'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 14:39'
         message: ''
         version: '11'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 14:24'
         message: ''
         version: '10'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 12:36'
         message: ''
         version: '9'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 12:13'
         message: ''
         version: '8'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 12:10'
         message: ''
         version: '7'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 12:05'
         message: ''
         version: '6'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 11:57'
         message: ''
         version: '5'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 11:30'
         message: ''
         version: '4'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 11:29'
         message: ''
         version: '3'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 11:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-03-23 09:51'
         message: ''
@@ -417,7 +416,7 @@ The marshalling service allows you to create JSON-to-Java and Java-to-JSON marsh
 
 Let's suppose we'd like to create marshallers for the following Java object:
 
-```
+```java
  public class Product {
 
     private String reference;
@@ -428,25 +427,29 @@ Let's suppose we'd like to create marshallers for the following Java object:
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
 
-} 
+}
 ```
 
 ### Creating a Java-to-JSON Marshaller
 
 A Java-to-JSON marshaller must implement the&nbsp;`org.nuxeo.ecm.core.io.registry.Writer<EntityType>` class. It must have a&nbsp;`@Setup` annotation to register it as a marshaller and a `@Supports` annotation to specify the supported mimetype (JSON in our example).&nbsp;The `Product` class is a POJO, we can either use Jackson POJO marshalling capabilities or create a custom JSON marshalling.
 
-```
+{{#> panel type='code' heading='Jackson POJO'}}
+
+```java
  @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductJsonWriter extends AbstractJsonWriter {
+public class ProductJsonWriter extends AbstractJsonWriter<Product> {
     public void write(Product product, JsonGenerator jg) throws IOException {
         jg.writeObject(product);
     }
 }
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='Custom JSON'}}
+
+```java
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductJsonWriter extends AbstractJsonWriter {
+public class ProductJsonWriter extends AbstractJsonWriter<Product> {
     public void write(Product product, JsonGenerator jg) throws IOException {
         jg.writeStartObject();
         jg.writeNumberField("ref", product.getReference());
@@ -455,6 +458,8 @@ public class ProductJsonWriter extends AbstractJsonWriter {
     }
 }
 ```
+
+{{/panel}}
 
 *   The `@Setup` annotation is here to define our object as a marshaller.
 *   The `mode = Instanciations.SINGLETON`&nbsp;parameter defines that the marshaller must be instanciated once.
@@ -465,18 +470,22 @@ public class ProductJsonWriter extends AbstractJsonWriter {
 
 A JSON-to-Java marshaller must implement the&nbsp;`org.nuxeo.ecm.core.io.registry.Reader<EntityType>` class. It must have a&nbsp;`@Setup` annotation to register it as a marshaller and a `@Supports` annotation to specify the supported mimetype (JSON in our example).&nbsp;The Product class is a POJO, we can either use Jackson POJO marshalling capabilities or create a custom JSON marshalling.
 
-```
+{{#> panel type='code' heading='Jackson POJO'}}
+
+```java
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductJsonReader extends AbstractJsonReader {
+public class ProductJsonReader extends AbstractJsonReader<Product> {
     public Product read(JsonNode jn) throws IOException {
         return new ObjectMapper().readValue(jn, Product.class);
     }
 }
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='Custom JSON'}}
+
+```java
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductJsonReader extends AbstractJsonReader {
+public class ProductJsonReader extends AbstractJsonReader<Product> {
     public Product read(JsonNode jn) throws IOException {
         Product product = new Product();
         product.setReference(jn.get("reference").getIntValue());
@@ -485,6 +494,8 @@ public class ProductJsonReader extends AbstractJsonReader {
     }
 }
 ```
+
+{{/panel}}
 
 &nbsp;
 
@@ -499,27 +510,49 @@ Each marshaller supports injection of the `RenderingContext` or any Nuxeo servic
 
 The Nuxeo Platform provides built-in abstract classes to manage lists.
 
+{{#> panel type='code' heading='Java-to-JSON'}}
+
 ```
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductListJsonWriter extends DefaultListJsonWriter {
+public class ProductListJsonWriter extends DefaultListJsonWriter<Product> {
     public ProductListJsonWriter() {
         super("products", Product.class);
     }
 }
 ```
 
+{{/panel}}{{#> panel type='code' heading='JSON-to-Java'}}
+
 ```
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductListJsonReader extends DefaultListJsonReader {
+public class ProductListJsonReader extends DefaultListJsonReader<Product> {
     public ProductListJsonReader() {
         super("products", Product.class);
     }
 }
 ```
 
+{{/panel}}
+
 ### Registering Your Marshallers
 
 The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.MarshallerRegistry/marshallers`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.io.MarshallerRegistry--marshallers) . It allows to add new marshallers, override existing ones or unregister some.
+
+{{#> panel type='code' heading='marshallers-contrib.xml'}}
+
+```xml
+<?xml version="1.0"?>
+<component name="org.nuxeo.example.marshallers" version="1.0.0">
+  <extension target="org.nuxeo.ecm.core.io.MarshallerRegistry" point="marshallers">
+    <register class="org.nuxeo.example.ProductJsonWriter" enable="true" />
+    <register class="org.nuxeo.example.ProductJsonReader" enable="true" />
+    <register class="org.nuxeo.example.ProductListJsonWriter" enable="true" />
+    <register class="org.nuxeo.example.ProductListJsonReader" enable="true" />
+  </extension>
+</component>
+```
+
+{{/panel}}
 
 ### Using Your Marshallers
 
@@ -531,9 +564,9 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
 
         Otherwise, you have to register a single JAX-RS object in your application.
 
-        ```
+        ```java
         public class ProductApplication extends WebEngineModule {
-            public Set getSingletons() {
+            public Set<Object> getSingletons() {
                 return Sets.newHashSet(new JsonCoreIODelegate());
             }
         }
@@ -541,7 +574,9 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
 
     2.  From your REST endpoints, just consume or return Product as usual.
 
-        ```
+        {{#> panel type='code' heading='Using marshallers'}}
+
+        ```java
         @GET
         @Produces(MediaType.APPLICATION_JSON)
         public Product doGet() {
@@ -558,25 +593,32 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
         }
         ```
 
+        {{/panel}}
 *   Outside JAX-RS
 
     You can use the Nuxeo Platform marshalling service outside the web context. The simplest way is to use `org.nuxeo.ecm.core.io.registry.MarshallerHelper`.
 
-    ```
+    {{#> panel type='code' heading='MarshallingHelper - Java-to-JSON'}}
+
+    ```java
     Product product = ...;
     String json = MarshallingHelper.objectToJson(product, CtxBuilder.get());
     ```
 
+    {{/panel}}
+
     The `MarshallingHelper` class is a helper to use the `MarshallingRegistry` service. This service provides multiple ways to get marshallers depending on your needs.
 
-    ```
+    {{#> panel type='code' heading='MarshallingRegistry - Java-to-JSON'}}
+
+    ```java
     Product product = ...;
     OutputStream target = ...;
 
     MarshallerRegistry registry = Framework.getService(MarshallerRegistry.class);
 
     // get the most priorized JSON Writer for Product
-    Writer writer = registry.getWriter(CtxBuilder.get(), Product.class, MediaType.APPLICATION_JSON_TYPE);
+    Writer<Product> writer = registry.getWriter(CtxBuilder.get(), Product.class, MediaType.APPLICATION_JSON_TYPE);
     writer.write(object, Product.class, Product.class, APPLICATION_JSON_TYPE, target);
 
     // get a specific JSON Writer instance
@@ -585,7 +627,7 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
 
     // get the most priorized JSON Writer for Product
     // associated with the given context and available for use in multiple threads (usefull for use in listeners or schedulers)
-    Writer writer = registry.getUniqueWriter(CtxBuilder.get(), Product.class, Product.class, MediaType.APPLICATION_JSON_TYPE);
+    Writer<Product> writer = registry.getUniqueWriter(CtxBuilder.get(), Product.class, Product.class, MediaType.APPLICATION_JSON_TYPE);
     writer.write(object, Product.class, Product.class, APPLICATION_JSON_TYPE, target);
 
     // get a specific JSON Writer instance
@@ -594,18 +636,21 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
     writer.write(object, Product.class, Product.class, APPLICATION_JSON_TYPE, target);
 
     // advanced use for Java class based on generic type
-    List products = ...;
+    List<Product> products = ...;
     // use TypeUtils from commons-lang3 to get the generic type
     Type productListType = TypeUtils.parametrize(List.class, Product.class)
-    Writer> writer = registry.getWriter(CtxBuilder.get(), List.class, productListType, MediaType.APPLICATION_JSON_TYPE);
+    Writer<List<Product>> writer = registry.getWriter(CtxBuilder.get(), List.class, productListType, MediaType.APPLICATION_JSON_TYPE);
     writer.write(object, List.class, productListType, APPLICATION_JSON_TYPE, target);
     ```
 
+    {{/panel}}
 *   From another marshaller: The easiest way to do that is to extends `AbstractJsonWriter` or `AbstractJsonReader`.
 
-    ```
+    {{#> panel type='code' heading='Java-to-JSON Aggregation'}}
+
+    ```java
     @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-    public class AnObjectJsonWriter extends AbstractJsonWriter {
+    public class AnObjectJsonWriter extends AbstractJsonWriter<AnObject> {
         public void write(AnObject anObject, JsonGenerator jg) throws IOException {
             jg.writeStartObject();
             jg.writeStringField("someField", anObject.getSomeField());
@@ -625,6 +670,8 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
     }
     ```
 
+    {{/panel}}
+
 ## Parameterizing and Reusing Marshallers
 
 The Nuxeo Platform marshalling service provides a rendering context. This context allows you to parametrize your JSON marshallers. For example you can decide to add a parameter which tells your marshaller to fetch or not some parts of the rendered object.
@@ -643,9 +690,11 @@ When the marshalling service is used from JAX-RS, the context is filled with:
 
 If you add parametrized behaviors to your marshaller, it is then customizable by the end-user application using the corresponding parameter in headers or in GET parameters.
 
-```
+{{#> panel type='code' heading='Parametrize the description and add the product\'s URL'}}
+
+```java
 @Setup(mode = SINGLETON, priority = Priorities.REFERENCE)
-public class ProductJsonWriter extends AbstractJsonWriter {
+public class ProductJsonWriter extends AbstractJsonWriter<Product> {
     public void write(Product product, JsonGenerator jg) throws IOException {
         jg.writeStartObject();
         jg.writeNumberField("ref", product.getReference());
@@ -659,24 +708,36 @@ public class ProductJsonWriter extends AbstractJsonWriter {
 }
 ```
 
+{{/panel}}
+
 You can send the parameters using HTTP GET parameter or HTTP header (useful for POST/PUT/DELETE results).
 
-```
+{{#> panel type='code' heading='Curl calls'}}
+
+```bash
 $ curl -X GET 'http://localhost:8080/nuxeo/site/productApp/product/ref/10001?loadProductDescription=true'
-$ curl -X GET -H 'loadProductDescription:true' 'http://localhost:8080/nuxeo/site/productApp/product/ref/10001' 
+$ curl -X GET -H 'loadProductDescription:true' 'http://localhost:8080/nuxeo/site/productApp/product/ref/10001'
 ```
+
+{{/panel}}
 
 You can also use the rendering context from the server side using the `CtxBuilder`.
 
-```
+{{#> panel type='code' heading='MarshallingRegistry - Java-to-JSON'}}
+
+```java
 Product product = ...;
 RenderindContext ctx = CtxBuilder.param("loadProductDescription", Boolean.TRUE).get();
 String json = MarshallingHelper.objectToJson(product, ctx);
 ```
 
+{{/panel}}
+
 Finally, you can force the value of a parameter on the server side by overriding the rendering context used to produce the response.
 
-```
+{{#> panel type='code' heading='Use marshallers'}}
+
+```java
 @GET
 @Produces(MediaType.APPLICATION_JSON)
 public Product doGet(@Context HttpServletRequest request) {
@@ -688,6 +749,8 @@ public Product doGet(@Context HttpServletRequest request) {
 }
 private static final String CTX_KEY = "_STORED_GENERATED_RENDERING_CONTEXT";
 ```
+
+{{/panel}}
 
 ### RenderingContext API
 
@@ -777,7 +840,7 @@ Object o = ctx.getParameter("paramName");
 ```
 
 ```
-List list = ctx.getParameters("paramName");
+List<Object> list = ctx.getParameters("paramName");
 ```
 
 ```
@@ -818,7 +881,7 @@ ctx.setParameterValues("properties", "dublincore", "file");
 </td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
 
 ```
-Set properties = ctx.getProperties();
+Set<String> properties = ctx.getProperties();
 ```
 
 </td></tr></tbody></table>
@@ -838,11 +901,13 @@ HTTP Header:
 
 *   `X-NXfetch.objectType:part1,part2`
 
-</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
+</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">{{#> panel type='code' heading='Only for documents'}}
 
 ```
 ctx = CtxBuilder.fetchInDoc("part1", "part2").get();
 ```
+
+{{/panel}}
 
 ```
 ctx = CtxBuilder.fetch("objectType", "part1", "part2").get();
@@ -855,7 +920,7 @@ ctx.setParameterValues("fetch.objectType", "part1", "part2");
 </td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
 
 ```
-Set toLoad = ctx.getFetched("objectType");
+Set<String> toLoad = ctx.getFetched("objectType");
 ```
 
 </td></tr></tbody></table>
@@ -875,11 +940,13 @@ HTTP Header:
 
 *   `X-NXenrichers.objectType:children,acl`
 
-</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
+</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">{{#> panel type='code' heading='Only for documents'}}
 
 ```
-ctx = CtxBuilder.enrichDoc("children", "acl").get(); 
+ctx = CtxBuilder.enrichDoc("children", "acl").get();
 ```
+
+{{/panel}}
 
 ```
 ctx = CtxBuilder.enrich("objectType", "children", "acl").get();
@@ -892,7 +959,7 @@ ctx.setParameterValues("enrichers.objectType", "children", "acl");
 </td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
 
 ```
-Set enricherToActivate = ctx.getEnrichers("objectType");
+Set<String> enricherToActivate = ctx.getEnrichers("objectType");
 ```
 
 </td></tr></tbody></table>
@@ -922,7 +989,7 @@ ctx.setParameterValues("translate.objectType", "elementToTranslate");
 </td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
 
 ```
-Set toTranslate = ctx.getTranslated("objectType");
+Set<String> toTranslate = ctx.getTranslated("objectType");
 ```
 
 </td></tr></tbody></table>
@@ -971,9 +1038,11 @@ Let's take an example. We created two classes, `Product` and `Category`. And we'
 
 When loading a category, we'd like to be able to get the corresponding products.
 
-```
+{{#> panel type='code' heading='Custom JSON'}}
+
+```java
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class CategoryJsonWriter extends AbstractJsonWriter {
+public class CategoryJsonWriter extends AbstractJsonWriter<Category> {
     public void write(Category category, JsonGenerator jg) throws IOException {
         jg.writeStartObject();
         jg.writeNumberField("ref", category.getReference());
@@ -991,15 +1060,21 @@ public class CategoryJsonWriter extends AbstractJsonWriter {
 }
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='Curl calls'}}
+
+```bash
 $ curl -X GET 'http://localhost:8080/nuxeo/site/productApp/category/ref/12?fetch.category=products'
 ```
 
+{{/panel}}
+
 When loading a product, we'd like to be able to get the corresponding categories.
 
-```
+{{#> panel type='code' heading='Custom JSON'}}
+
+```java
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductJsonWriter extends AbstractJsonWriter {
+public class ProductJsonWriter extends AbstractJsonWriter<Product> {
     public void write(Product product, JsonGenerator jg) throws IOException {
         jg.writeStartObject();
         jg.writeNumberField("ref", product.getReference());
@@ -1017,15 +1092,23 @@ public class ProductJsonWriter extends AbstractJsonWriter {
 }
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='Curl calls'}}
+
+```bash
 $ curl -X GET 'http://localhost:8080/nuxeo/site/productApp/category/ref/12?fetch.product=categories'
 ```
 
+{{/panel}}
+
 This works fine. But if we want to get both product's categories and category's products, there's a real risk to get an infinite loop. Or at least to get a very huge amount of JSON (if the category-product graph has no cycle).
 
-```
+{{#> panel type='code' heading='Curl calls'}}
+
+```bash
 $ curl -X GET 'http://localhost:8080/nuxeo/site/productApp/category/ref/12?fetch.product=categories&fetch.category=products'
 ```
+
+{{/panel}}
 
 ![]({{file name='Marshalling example loops - New Page (1).png'}} ?w=500,h=412,border=true)
 
@@ -1037,9 +1120,11 @@ To manage this case, we could use a counter put in the context but this will not
 
 The Nuxeo Platform provides a specific object to wrap the depth control in each "crossing line". Each time you call another marshaller, you should use it.
 
-```
+{{#> panel type='code' heading='Custom JSON'}}
+
+```java
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class CategoryJsonWriter extends AbstractJsonWriter {
+public class CategoryJsonWriter extends AbstractJsonWriter<Category> {
     public void write(Category category, JsonGenerator jg) throws IOException {
         jg.writeStartObject();
         jg.writeNumberField("ref", category.getReference());
@@ -1061,6 +1146,8 @@ public class CategoryJsonWriter extends AbstractJsonWriter {
     }
 }
 ```
+
+{{/panel}}
 
 The max depth is controlled by the `depth` parameter in the rendering context. The default value for depth is `children`.
 
@@ -1095,7 +1182,9 @@ The enrichment mechanism is only enabled for the existing marshallers which exte
 
 An enrichable JSON object provides a `contextParameters` field which contains all contributions. An enricher is activated if its name is specified in the parameters (for example: `enrichers.document=breadcrumb,children`). The enricher must write 0, 1 or many key-value in the current JsonGenerator and must let the JsonGenerator in the same state it got it.
 
-```
+{{#> panel type='code' heading='Enrichment\'s destination'}}
+
+```js
 {
     ... // the existing generated object
     contextParameters: {  // only present if at least one enricher is activated
@@ -1104,27 +1193,58 @@ An enrichable JSON object provides a `contextParameters` field which contains al
         "theThirdEnricherKey-Entry1": { ... },
         "theThirdEnricherKey-Entry2": { ... }
     }
-} 
+}
 ```
+
+{{/panel}}
 
 Let's take the `breadcrumb` enricher as an example. It contributes to the generated JSON for a document and adds all of the parent documents.
 
-```
+{{#> panel type='code' heading='ChildrenJsonEnricher'}}
+
+```java
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class BreadcrumbJsonEnricher extends AbstractJsonEnricher { // <= enrich="" DocumentModel="" Java="" type="" public="" BreadcrumbJsonEnricher()="" {="" super("breadcrumb");="" <="is" activated="" if="" "children"="" is="" in="" "enrichers.document"="" parameter's="" values="" }="" void="" write(JsonGenerator="" jg,="" document)="" throws="" IOException="" List parentDocuments = null;
+public class BreadcrumbJsonEnricher extends AbstractJsonEnricher<DocumentModel> { // <= enrich DocumentModel Java type
+    public BreadcrumbJsonEnricher() {
+        super("breadcrumb"); // <= is activated if "children" is in "enrichers.document" parameter's values
+    }
+    public void write(JsonGenerator jg, DocumentModel document) throws IOException {
+        List<DocumentModel> parentDocuments = null;
         try (SessionWrapper wrapper = ctx.getSession(document)) {
             parentDocuments = wrapper.getSession().getParentDocuments(document.getRef());
         }
-        jg.writeFieldName("breadcrumb"); // <= write="" "breadcrumb"="" as="" key="" writeEntity(documentList,="" jg);="" delegates="" the="" parent="" documents="" marshalling="" to="" Nuxeo="" }="" }<="" code=""/>
+        jg.writeFieldName("breadcrumb"); // <= write "breadcrumb" as key
+        writeEntity(documentList, jg); // delegates the parent documents marshalling to Nuxeo
+    }
+}
 ```
+
+{{/panel}}
 
 Of course, like any JSON marshaller, you have to register it.
 
+{{#> panel type='code' heading='marshallers-contrib.xml'}}
+
+```xml
+<?xml version="1.0"?>
+<component name="org.nuxeo.example.marshallers" version="1.0.0">
+  <extension target="org.nuxeo.ecm.core.io.MarshallerRegistry" point="marshallers">
+    <register class="org.nuxeo.example.BreadcrumbJsonEnricher" enable="true" />
+  </extension>
+</component>
+```
+
+{{/panel}}
+
 That's all, you can now use it!
 
-```
+{{#> panel type='code' heading='Curl calls'}}
+
+```bash
 $ curl -X GET 'http://localhost:8080/nuxeo/site/api/v1/path/to/my/document?enrichers.document=breadcrumb'
 ```
+
+{{/panel}}
 
 All existing endpoints which return a DocumentModel will handle the registered enricher.
 
@@ -1142,9 +1262,19 @@ That could be dangerous if you use some JSON attributes which name already exist
 
 Let's take an example with the DocumentModel. The current marshaller class for DocumentModel is `DocumentModelJsonWriter`.
 
+{{#> panel type='code' heading='Extended marshaller'}}
+
+```java
+@Setup(mode = Instantiations.SINGLETON, priority = Priorities.OVERRIDE_REFERENCE) // <= an higher priority is used
+public class MyCustomDocumentModelJsonWriter extends DocumentModelJsonWriter { // <= override the class
+    protected void extend(DocumentModel document, JsonGenerator jg) throws IOException { // <= just implement the inherited extend method
+        super.extend(document, jg); // optionnal
+        jg.writeStringField("additional", "information"); // feel free to write anything
+    }
+}
 ```
-@Setup(mode = Instantiations.SINGLETON, priority = Priorities.OVERRIDE_REFERENCE) // <= an="" higher="" priority="" is="" used="" public="" class="" MyCustomDocumentModelJsonWriter="" extends="" DocumentModelJsonWriter="" {="" <="override" the="" protected="" void="" extend(DocumentModel="" document,="" JsonGenerator="" jg)="" throws="" IOException="" implement="" inherited="" extend="" method="" super.extend(document,="" jg);="" optionnal="" jg.writeStringField("additional",="" "information");="" feel="" free="" to="" write="" anything="" }="" }<="" code=""/>
-```
+
+{{/panel}}
 
 Don't forget to register the marshaller. The resulting object will contain the whole existing JSON with your additional data.
 
@@ -1158,15 +1288,18 @@ In this case, you want to completely rewrite an existing JSON.
 
 Be careful with this approach, the marshallers provided by Nuxeo are used in many provided tools and screens. If you change it, you may break some existing components.
 
-{{/callout}}
+{{/callout}}{{#> panel type='code' heading='Custom marshaller'}}
 
-```
-@Setup(mode = Instantiations.SINGLETON, priority = Priorities.OVERRIDE_REFERENCE) // <= an="" higher="" priority="" is="" used="" public="" class="" MyCustomDocumentModelJsonWriter="" extends="" AbstractJsonWriter {
+```java
+@Setup(mode = Instantiations.SINGLETON, priority = Priorities.OVERRIDE_REFERENCE) // <= an higher priority is used
+public class MyCustomDocumentModelJsonWriter extends AbstractJsonWriter<DocumentModel> {
     public void write(DocumentModel document, JsonGenerator jg) throws IOException {
         // generate what you want
     }
 }
 ```
+
+{{/panel}}
 
 ## JSON Marshallers Provided by the Nuxeo Platform
 
@@ -1330,8 +1463,8 @@ Java-to-JSON Enricher
 Enriches a document with free key/value pair. Only from the server side.
 
 ```
-String name = "contextualParameters"; 
-Map keyValues = ...; 
+String name = "contextualParameters";
+Map<String, String> keyValues = ...;
 ctx.enrich(name).param(name, keyValues).get();
 ```
 
@@ -2012,11 +2145,15 @@ The document marshalling provides a nice way to get the data referenced by one o
 
 For example, a call to get the JSON of a document which creator is the user "johnd" will return:
 
-```
+{{#> panel type='code' heading='Curl calls'}}
+
+```bash
 $ curl -X GET 'http://localhost:8080/nuxeo/site/api/v1/path/to/my/document?properties=dublincore'
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='Resulting JSON'}}
+
+```js
 {  
   "entity-type":"document",
   "properties":{  
@@ -2027,13 +2164,19 @@ $ curl -X GET 'http://localhost:8080/nuxeo/site/api/v1/path/to/my/document?prope
 }
 ```
 
+{{/panel}}
+
 If we tell the document marshaller to load the `dc:creator` referenced value, it will return the user's JSON in-place:
 
-```
+{{#> panel type='code' heading='Curl calls'}}
+
+```bash
 $ curl -X GET 'http://localhost:8080/nuxeo/site/api/v1/path/to/my/document?properties=dublincore&fetch.document=dc:creator'
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='Resulting JSON'}}
+
+```js
 {  
   "entity-type":"document",
   "properties":{  
@@ -2067,6 +2210,8 @@ $ curl -X GET 'http://localhost:8080/nuxeo/site/api/v1/path/to/my/document?prope
 }
 ```
 
+{{/panel}}
+
 To load every extended fields of a document, use `fetch.document=properties`.
 
 The Nuxeo Platform provides resolver for document, directory entry, user and group. It also provides Java-to-JSON marshaller for those objects. Therefore, you can fetch any property based on built-in resolvers.
@@ -2092,22 +2237,29 @@ If you want to be able to update a field using the JSON rather than the referenc
 
 The Nuxeo Platform offers a utility object to test JSON data: `org.nuxeo.ecm.core.io.marshallers.json.JsonAssert`. It is provided by nuxeo-core-io test-jar.
 
+{{#> panel type='code' heading='Maven dependency'}}
+
+```xml
+<!-- JSON marshallers tests -->
+<dependency>
+  <groupId>org.nuxeo.ecm.core</groupId>
+  <artifactId>nuxeo-core-io</artifactId>
+  <type>test-jar</type>
+  <scope>test</scope>
+</dependency>
 ```
 
-  org.nuxeo.ecm.core
-  nuxeo-core-io
-  test-jar
-  test
-
-```
+{{/panel}}
 
 ### Testing a Simple Marshaller
 
 Let's test the following marshaller:
 
-```
+{{#> panel type='code' heading='Product Java-to-JSON marshaller'}}
+
+```java
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
-public class ProductJsonWriter extends AbstractJsonWriter {
+public class ProductJsonWriter extends AbstractJsonWriter<Product> {
     public void write(Product product, JsonGenerator jg) throws IOException {
         jg.writeStartObject();
         jg.writeNumberField("ref", product.getReference());
@@ -2117,10 +2269,14 @@ public class ProductJsonWriter extends AbstractJsonWriter {
 }
 ```
 
+{{/panel}}
+
 The test looks like:
 
-```
-public class ProductJsonWriterTest extends AbstractJsonWriterTest.Local {
+{{#> panel type='code' heading='ProductJsonWriter test'}}
+
+```java
+public class ProductJsonWriterTest extends AbstractJsonWriterTest.Local<ProductJsonWriter, Product> {
 
     public ProductJsonWriterTest() {
         super(ProductJsonWriter.class, Product.class);
@@ -2138,6 +2294,8 @@ public class ProductJsonWriterTest extends AbstractJsonWriterTest.Local {
 }
 ```
 
+{{/panel}}
+
 Each line makes an assertion on the provided JSON. Each assertion returns either the current JsonAssert (`json.isObject().properties(2)`) or a new JsonAssert based on the referenced data (`json.**has("reference")**.isEquals(product.getReference())`).
 
 If your marshaller uses other marshallers, don't forget to load the corresponding contribution using `@Deploy` or `@LocalDeploy`.
@@ -2146,8 +2304,8 @@ If your marshaller uses other marshallers, don't forget to load the correspondin
 
 If you wrote an enricher for DocumentModel, the tested object should be DocumentModel. In that case, don't forget to load the contribution which contains your enricher registering.
 
-```
-public class SomeEnricherTest extends AbstractJsonWriterTest.Local {
+```java
+public class SomeEnricherTest extends AbstractJsonWriterTest.Local<DocumentModelJsonWriter, DocumentModel> {
 
     public ProductJsonWriterTest() {
         super(DocumentModelJsonWriter.class, DocumentModel.class);
@@ -2169,7 +2327,7 @@ public class SomeEnricherTest extends AbstractJsonWriterTest.Local {
 
 You can also use `JsonAssert` to test the result of your services.
 
-```
+```java
 public class SomeJsonTest {
 
     @Test
@@ -2188,14 +2346,18 @@ public class SomeJsonTest {
 
 `JsonAssert` provides the ability to get the json at any level.
 
-```
+{{#> panel type='code' heading='Json to test'}}
+
+```js
 {
   "field1": { "field2": "hi!" },
   "field3": "hello"
 }
 ```
 
-```
+{{/panel}}
+
+```java
 JsonAssert json = ...;
 System.out.println( json.toString() );
 // will print the whole JSON
@@ -2207,17 +2369,21 @@ System.out.println( json.has("field1.field2").toString() );
 
 `JsonAssert` provides the ability to use JSON path.
 
-```
+{{#> panel type='code' heading='Json to test'}}
+
+```js
 {
   "field1": {
     "field2": [ {
         "field3": "myDataShouldBeHere"
     } ]
   }
-} 
+}
 ```
 
-```
+{{/panel}}
+
+```java
 json.has("field1.field2[0].field3").isEquals("myDataShouldBeHere");
 ```
 
@@ -2225,13 +2391,17 @@ json.has("field1.field2[0].field3").isEquals("myDataShouldBeHere");
 
 `JsonAssert` provides the ability to test array values.
 
-```
+{{#> panel type='code' heading='Json to test'}}
+
+```js
 {
   "field1": [ "A should be here", "B should be here", "C should be here twice", "C should be here twice" ]
 }
 ```
 
-```
+{{/panel}}
+
+```java
 json.has("field1").contains("A should be here", "B should be here", "C should be here twice", "C should be here twice");
 ```
 
@@ -2239,7 +2409,9 @@ json.has("field1").contains("A should be here", "B should be here", "C should be
 
 `JsonAssert` provides the ability to test the value of a field for multiple object in an array.
 
-```
+{{#> panel type='code' heading='Json to test'}}
+
+```js
 {
   "field1": [
     { "field2": "A is here" },
@@ -2249,7 +2421,9 @@ json.has("field1").contains("A should be here", "B should be here", "C should be
 }
 ```
 
-```
+{{/panel}}
+
+```java
 json.childrenContains("field1.field2", "A is here", "B is here twice", "B is here twice");
 ```
 

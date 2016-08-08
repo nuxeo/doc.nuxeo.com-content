@@ -1,7 +1,6 @@
 ---
 title: Choosing How to Customize the UI
 labels:
-    - content-review-lts2015
     - excerpt
 toc: true
 confluence:
@@ -175,7 +174,7 @@ The Nuxeo Platform's JSF interface is fully modular and very easy to customize:
 *   Business application,
 *   Document management back office.
 
-More information on the&nbsp;[Studio]({{page space='studio' page='nuxeo-studio-documentation-center'}})&nbsp;space and on the "[Web UI Framework]({{page page='web-ui-framework'}})" section.
+More information on the&nbsp;[Studio]({{page space='studio' page='nuxeo-online-services'}})&nbsp;space and on the "[Web UI Framework]({{page page='web-ui-framework'}})" section.
 
 ## Front Apps
 
@@ -207,7 +206,7 @@ Nuxeo WebEngine enables web developers to easily create a customized web interfa
 **Typical use case:**
 Nuxeo WebEngine is designed to expose the Nuxeo Platform's managed content in a web experience. In many cases, the JSF interface is used for the back office management while Nuxeo WebEngine provides the front office interface. Furthermore, with the JAX-RS support, Nuxeo WebEngine allows rapid creation of REST applications on top of the Nuxeo Platform.&nbsp;
 
-{{#> callout type='info' heading="WebEngine is a light framework"}} Nuxeo WebEngine is a web-framework because it provides you with a way to structure how you implement the standard "MVC" pattern. But it is light because it doesn't provide any widgets library, any collection of ready to use templates, etc. Nuxeo aims at letting this framework as light as it is now and encourage users to leverage popular web framework when requiring many UI components. Actually, Nuxeo WebEngine is light enough to be easily used in parallel of those JavaScript framework. {{/callout}}
+{{#> callout type='info' heading='WebEngine is a light framework'}} Nuxeo WebEngine is a web-framework because it provides you with a way to structure how you implement the standard "MVC" pattern. But it is light because it doesn't provide any widgets library, any collection of ready to use templates, etc. Nuxeo aims at letting this framework as light as it is now and encourage users to leverage popular web framework when requiring many UI components. Actually, Nuxeo WebEngine is light enough to be easily used in parallel of those JavaScript framework. {{/callout}}
 
 &nbsp;
 

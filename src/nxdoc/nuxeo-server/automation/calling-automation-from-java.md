@@ -3,7 +3,6 @@ title: Calling Automation from Java
 labels:
     - automation
     - automation-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -87,11 +86,18 @@ The Automation service provides chain(s)/operation(s) parameters setting and [Op
 Chain Contribution:
 
 ```
-
-        Hello 1!
-
-        Hello 2!
-
+<extension point="chains"
+             target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
+<chain id="contributedchain">
+      <param type="string" name="paramChain" />
+      <operation id="o1">
+        <param type="string" name="param1">Hello 1!</param>
+      </operation>
+      <operation id="o2">
+        <param type="string" name="param2">Hello 2!</param>
+      </operation>
+</chain>
+</extension>
 ```
 
 Automation Service API - with chain parameter setting:
@@ -105,7 +111,7 @@ org.nuxeo.ecm.core.api.CoreSession session;
 org.nuxeo.ecm.automation.OperationContext ctx = new OperationContext(session);
 ctx.setInput(doc);
 // Setting parameters of the chain
-Map params = new HashMap();
+Map<String, Object> params = new HashMap<String, Object>();
 params.put("paramChain", "Hello i'm a parameter chain!");
 // Run Automation service
 service.run(ctx, "contributedchain", params);
@@ -129,7 +135,7 @@ chain.add("Document.Fetch");
 chain.add("o1").set("param1", "Hello 1!"); 
 chain.add("o2").set("param2", "Hello 2!"); 
 // Setting parameters of the chain 
-Map params = new HashMap(); 
+Map<String, Object> params = new HashMap<String, Object>(); 
 params.put("messageChain", "Hello i'm a chain!"); 
 chain.addChainParameters(params);
 // Run Automation service
@@ -141,7 +147,10 @@ service.run(ctx, chain);
 Operation Contribution:
 
 ```
-
+  <extension point="operations"
+             target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
+    <operation class="org.nuxeo.ecm.automation.core.test.Operation1" />
+  </extension>
 ```
 
 Java Class Operation:
@@ -172,7 +181,7 @@ org.nuxeo.ecm.core.api.CoreSession session;
 org.nuxeo.ecm.automation.OperationContext ctx = new OperationContext(session); 
 ctx.setInput(doc);
 // Operation1 parameter setting
-Map params = new HashMap(); 
+Map<String,Object> params = new HashMap<String,Object>(); 
 params.put("message","messageValue"); 
 service.run(ctx, "o1", params);
 ```

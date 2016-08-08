@@ -4,7 +4,6 @@ labels:
     - action-category
     - action
     - actions-filters-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -110,12 +109,17 @@ Technical name: `VIEW_ACTION_LIST`.
 This category is used for tabs displayed on every document.
 
 ```
+<action id="TAB_VIEW" link="/incl/tabs/document_view.xhtml" enabled="true"
+  order="0" label="action.view.summary" type="rest_document_link">
+  <category>VIEW_ACTION_LIST</category>
+  <filter-id>view</filter-id>
+</action>
 
-  VIEW_ACTION_LIST
-  view
-
-  VIEW_ACTION_LIST
-  view_content
+<action id="TAB_CONTENT" link="/incl/tabs/document_content.xhtml" order="10"
+  enabled="true" label="action.view.content" type="rest_document_link">
+  <category>VIEW_ACTION_LIST</category>
+  <filter-id>view_content</filter-id>
+</action>
 
 ```
 
@@ -140,21 +144,49 @@ Here are two ways of rendering actions.
 Here is a sample widget definition to render actions using category `MY_CATEGORY`:
 
 ```
-
-      MY_CATEGORY
-      links
-      horizontal_block
-      userActions
-
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+  point="widgets">
+  <widget name="userActions" type="documentActionsWithForms">
+    <properties mode="view">
+      <property name="category">MY_CATEGORY</property>
+      <property name="actionsDisplay">links</property>
+      <property name="overallDisplay">horizontal_block</property>
+      <property name="styleClass">userActions</property>
+    </properties>
+  </widget>
+</extension>
 ```
 
 This widget can be displayed on a page directly using the following sample code:
+
+```
+
+<div xmlns:nxl="http://nuxeo.org/nxforms/layout">
+  <nxl:widget name="userActions" mode="view" value="#{currentDocument}" />
+</div>
+```
 
 Of course this widget definition can also be included within a layout definition, as it's done for [Incremental Layouts]({{page page='incremental-layouts-and-actions'}}) configuration.
 
 ### Rendering Actions via Dynamically Computed Widget
 
 It can also be useful to generate the widget definition dynamically from the widget template, by passing the widget properties as tag attributes to the&nbsp;[`nxl:widgetType`](http://nxlwidgetType) tag:
+
+```
+
+<div xmlns:nxl="http://nuxeo.org/nxforms/layout">
+  <nxl:widgetType name="documentActionsWithForms"
+    widgetName="documentActionsUpperButtons"
+    mode="view"
+    label=""
+    actionStyleClass="button"
+    actionsDisplay="icons"
+    overallDisplay="horizontal_block"
+    widgetProperty_category="MY_CATEGORY"
+    maxActionsNumber="5"
+    value="#{currentDocument}" />
+</div>
+```
 
 Notice the tag attribute `widgetProperty_category` used to define the actions category: as widget types also have a notion of category, adding&nbsp;`widgetProperty_` prefix to the attribute makes it possible to explicitly state that this is a widget property.
 
@@ -164,18 +196,8 @@ See also chapter about [Layout and Widget Display]({{page page='layout-and-widge
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related sections in this documentation'}}
 
-<div class="column medium-6">{{#> panel heading="Related sections in this documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related sections in Studio documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">{{#> panel heading="Related sections in Studio documentation"}}
-
-{{/panel}}
-
-</div>
-
-</div>
+{{/panel}}</div></div>

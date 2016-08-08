@@ -10,7 +10,6 @@ labels:
     - howto
     - template
     - seam-jsf-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'
@@ -75,11 +74,19 @@ Once your file is created and modified to suit your needs, you have to deploy it
 In the Nuxeo Platform, the WAR file is generated each time you start the server by looking into each JAR in `nxserver/bundles` and `nxserver/plugins`. More precisely, this happens because you set an `install` XML tag in the `deployment-fragment.xml` file. Content syntax of the tag is simply Ant. Create a file&nbsp;`deployment-fragment.xml` under `resources/OSGI-INF` _._
 
 ```
+<?xml version="1.0"?>
+<fragment version="1">
 
-  org.nuxeo.ecm.webapp.ui
+  <require>org.nuxeo.ecm.webapp.ui</require>
 
-      web/nuxeo.war/**
+  <install>
+    <!–  unzip the content of the resources/web folder in nxserver –>
+    <unzip from="${bundle.fileName}" to="/" prefix="web">
+      <include>web/nuxeo.war/**</include>
+    </unzip>
+  </install>
 
+</fragment>
 ```
 
 &nbsp;
@@ -95,22 +102,16 @@ For more information about the bundle deployment, do not hesitate to read the pa
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [Getting Started with Nuxeo IDE]({{page page='getting-started-with-nuxeo-ide'}})
 *   [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [Runtime and Component Model]({{page page='runtime-and-component-model'}})
 *   [Understanding Bundles Deployment]({{page page='understanding-bundles-deployment'}})
 *   [Writing a Bundle Manifest]({{page page='writing-a-bundle-manifest'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

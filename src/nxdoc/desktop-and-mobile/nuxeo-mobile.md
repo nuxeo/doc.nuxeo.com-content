@@ -161,23 +161,34 @@ The personal workspace menu gives you a direct access to your collections and pe
 
 ### Nuxeo Platform LTS 2015 with Hotfix 12
 
-Yet there are two limitations when running against Nuxeo LTS 2015 with hotfix 12, aka. Nuxeo 7.10-HF12:<span>&nbsp;</span>
+Yet there are two limitations when running against Nuxeo LTS 2015 with hotfix 12, aka. Nuxeo 7.10-HF12:
 
-*   It is not possible to mark a document as Favorite from the mobile app <span>but you can have access to documents marked as favorites from the web UI</span>
-*   <span>Preview isn't available&nbsp;</span>for the Picture and Video document types nor for the File type with PDF content. A simple file icon is displayed instead.
+*   It is not possible to mark a document as Favorite from the mobile app but you can have access to documents marked as favorites from the web UI
+*   Preview isn't available&nbsp;for the Picture and Video document types nor for the File type with PDF content. A simple file icon is displayed instead.
     To allow previewing these types of documents you can add the following [XML contribution]({{page page='how-to-contribute-to-an-extension'}}) to your Nuxeo instance:
 
     ```
+    <?xml version="1.0"?>
+    <component name="com.my.company.authChainContrib">
 
-      org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig
+      <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
 
-            BASIC_AUTH
-            TOKEN_AUTH
-            FORM_AUTH
-            WEBENGINE_FORM_AUTH
-            ANONYMOUS_AUTH
-            WEBSERVICES_AUTH
+      <extension
+        target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
+        point="chain">
+        <authenticationChain>
+          <plugins>
+            <plugin>BASIC_AUTH</plugin>
+            <plugin>TOKEN_AUTH</plugin>
+            <plugin>FORM_AUTH</plugin>
+            <plugin>WEBENGINE_FORM_AUTH</plugin>
+            <plugin>ANONYMOUS_AUTH</plugin>
+            <plugin>WEBSERVICES_AUTH</plugin>
+          </plugins>
+        </authenticationChain>
+      </extension>
 
+    </component>
     ```
 
 ### Nuxeo Platform LTS 2015 until Hotfix 11 Included

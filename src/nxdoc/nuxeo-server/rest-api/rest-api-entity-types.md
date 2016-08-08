@@ -5,7 +5,6 @@ labels:
     - blogs
     - endpoint
     - rest-api-component
-    - lts2015-ok
     - multiexcerpt
 toc: true
 confluence:
@@ -434,7 +433,7 @@ The list of properties depends on the schema of the directory. See the [develope
 }
 ```
 
-*   **properties**: those are the properties defined for the user. [<span class="confluence-link">They can be customized</span>]({{page page='authentication-and-user-management'}})<span class="confluence-link">&nbsp;</span>.
+*   **properties**: those are the properties defined for the user. [They can be customized]({{page page='authentication-and-user-management'}}).
 
 *   **extendedGroups**: this section gathers the explicit groups and the computed groups (See an&nbsp;[exemple of using the computed groups]({{page page='how-to-implement-local-groups-or-roles-using-computed-groups'}})). This section is computed server-side and is not taken into account when posting a user object.&nbsp;
 

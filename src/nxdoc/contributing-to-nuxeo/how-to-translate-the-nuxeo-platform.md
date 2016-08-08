@@ -11,7 +11,6 @@ labels:
     - internationalization
     - translation
     - howto
-    - content-review-lts2015
     - multiexcerpt-include
 toc: true
 confluence:
@@ -359,7 +358,7 @@ To test a translation file provided by Crowdin against your Nuxeo server, you ca
 
     {{#> callout type='tip' }}
 
-    If you haven't changed the default language in your preferences, you can add `<span>?language=xx_XX</span>` at the end of the page URL to see the page in your target language. For instance [https://nightly.nuxeo.com/nuxeo/nxpath/default/default-domain@view_documents?language=pt_BR](https://nightly.nuxeo.com/nuxeo/nxpath/default/default-domain@view_documents?language=pt_BR).
+    If you haven't changed the default language in your preferences, you can add `?language=xx_XX` at the end of the page URL to see the page in your target language. For instance [https://nightly.nuxeo.com/nuxeo/nxpath/default/default-domain@view_documents?language=pt_BR](https://nightly.nuxeo.com/nuxeo/nxpath/default/default-domain@view_documents?language=pt_BR).
 
     {{/callout}}
 6.  If you downloaded translations from Crowdin, do not forget to upload back your changes!
@@ -389,7 +388,7 @@ If you want to translate or update a specific label you saw in the UI but you ca
 
     {{#> callout type='tip' }}
 
-    If you haven't changed the default language in your preferences, you can add `<span>?language=xx_XX</span>` at the end of the page URL to see the page in your target language. For instance [https://nightly.nuxeo.com/nuxeo/nxpath/default/default-domain@view_documents?language=pt_BR](https://nightly.nuxeo.com/nuxeo/nxpath/default/default-domain@view_documents?language=pt_BR).
+    If you haven't changed the default language in your preferences, you can add `?language=xx_XX` at the end of the page URL to see the page in your target language. For instance [https://nightly.nuxeo.com/nuxeo/nxpath/default/default-domain@view_documents?language=pt_BR](https://nightly.nuxeo.com/nuxeo/nxpath/default/default-domain@view_documents?language=pt_BR).
 
     {{/callout}}
 
@@ -411,9 +410,28 @@ In documentation below, the `xx_XX` notation will be used to reference the four 
 2.  Create of edit the file at `src/main/resources/OSGI-INF/deployment-fragment.xml` to contribute the translations to the main aggregated translation files used by the application:
 
     ```
+    <?xml version="1.0"?>
+    <fragment version="1">
 
-      org.nuxeo.ecm.platform.lang
-      org.nuxeo.ecm.platform.lang.ext
+      <require>org.nuxeo.ecm.platform.lang</require>
+      <require>org.nuxeo.ecm.platform.lang.ext</require>
+
+      <install>
+        <delete path="${bundle.fileName}.tmp" />
+        <mkdir path="${bundle.fileName}.tmp" />
+        <unzip from="${bundle.fileName}" to="${bundle.fileName}.tmp" />
+
+        <append from="${bundle.fileName}.tmp/OSGI-INF/l10n/messages_xx_XX.properties"
+          to="nuxeo.war/WEB-INF/classes/messages.properties" addNewLine="true" />
+        <append from="${bundle.fileName}.tmp/OSGI-INF/l10n/messages_xx_XX.properties"
+          to="nuxeo.war/WEB-INF/classes/messages_xx.properties" addNewLine="true" />
+        <append from="${bundle.fileName}.tmp/OSGI-INF/l10n/messages_en_US.properties"
+          to="nuxeo.war/WEB-INF/classes/messages_xx_XX.properties" addNewLine="true" />
+
+        <delete path="${bundle.fileName}.tmp" />
+      </install>
+
+    </fragment>
 
     ```
 
@@ -423,6 +441,11 @@ In documentation below, the `xx_XX` notation will be used to reference the four 
 
 The `require` tag ensures that you are contributing to existing files, already created thanks to the default `nuxeo-platform-lang` and `nuxeo-platform-lang-ext` modules. If you are not contributing to an existing file, you should create it:
 
+```
+<copy from="${bundle.fileName}.tmp/OSGI-INF/l10n/messages_xx_XX.properties"
+  to="nuxeo.war/WEB-INF/classes/messages_xx_XX.properties"/>
+```
+
 You can also use the require tag to control ordering of contributions to the final&nbsp;`nuxeo.war/WEB-INF/classes/messages_xx_XX.properties` file, so that you can override values for existing translations: if a duplicate key is present in the final file, the last value will be taken into account.
 
 ### Adding a New Language to a Nuxeo Application
@@ -430,8 +453,11 @@ You can also use the require tag to control ordering of contributions to the fin
 You can add your new properties file similarly, you just need to modify the `deployment-fragment.xml` file adding a new entry with your locale:
 
 ```
-
-    xx_XX
+<extension target="faces-config#APPLICATION_LOCALE">
+  <locale-config>
+    <supported-locale>xx_XX</supported-locale>
+  </locale-config>
+</extension>
 
 ```
 
@@ -466,11 +492,11 @@ public class TestMessages extends TranslationTestCase {
 The [`TranslationTestCase`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/nuxeo-platform-test/src/main/java/org/nuxeo/ecm/platform/test/TranslationTestCase.java) file is defined in the `nuxeo-platform-test` module, so you should add the following to your project `pom.xml` file:
 
 ```
-
-  org.nuxeo.ecm.platform
-  nuxeo-platform-test
-  test
-
+<dependency>
+  <groupId>org.nuxeo.ecm.platform</groupId>
+  <artifactId>nuxeo-platform-test</artifactId>
+  <scope>test</scope>
+</dependency>
 ```
 
 This test case will assume that the English translation file is at the "usual" location, you can override method `getEnTranslationsPath` if you placed your properties file elsewhere. It will check for simple things: syntax errors (errors in unicode characters can prevent the file from being loaded, for instance) and duplicate entries (that can happen easily when copy/pasting translations).

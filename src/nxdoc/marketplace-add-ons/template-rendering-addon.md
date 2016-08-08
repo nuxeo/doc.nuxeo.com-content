@@ -4,7 +4,6 @@ labels:
     - template-rendering
     - document-template
     - template-rendering-addon-component
-    - lts2015-ok
     - multiexcerpt-include
 toc: true
 confluence:
@@ -19,6 +18,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/9YSo'
     source_link: /display/NXDOC/Template+Rendering+Addon
 history:
+    - 
+        author: Vincent Dutat
+        date: '2016-07-26 17:31'
+        message: ''
+        version: '28'
     - 
         author: Karin Touchie
         date: '2016-05-27 09:51'
@@ -179,9 +183,9 @@ This addon depends on Nuxeo Template Rendering. It includes:
 *   New document types:
 
     *   Business oriented document types used for the demo and configured using [Studio]({{page space='studio'}}):
-        *   <span title=""><span class="treeLink">nxtrPortfolio: a collection-based document type, used to reference</span></span> projects and generate case studies from the content it references.
-        *   <span title=""><span class="treeLink">nxtrProject: a file-based document type, used to generate financial reports about the project's health and case studies when referenced into a portfolio.</span></span>
-        *   <span title=""><span class="treeLink">nxtrSamplesContainer</span></span>: a workspace-based document type, that contains projects and portfolios.
+        *   <span class="treeLink">nxtrPortfolio: a collection-based document type, used to reference</span> projects and generate case studies from the content it references.
+        *   <span class="treeLink">nxtrProject: a file-based document type, used to generate financial reports about the project's health and case studies when referenced into a portfolio.</span>
+        *   <span class="treeLink">nxtrSamplesContainer</span>: a workspace-based document type, that contains projects and portfolios.
     *   Two file-based document types, provided as read only (you cannot create more using the Web UI by default) and used to demonstrate advanced raw examples:
         *   "Customer reference"
         *   "Statement reference"
@@ -205,14 +209,14 @@ There are two types of Nuxeo templates: the "Template" will have an attached fil
 
 The template file is the file that will be used to generate the rendering of the Nuxeo document and will be completed automatically with the defined Nuxeo properties. This template file can be:
 
-*   an office document (.doc, .docx, .odt, .xls, .xlsx, .ods formats are supported for now),
+*   an office document (.docx, .odt, .xls, .xlsx, .ods formats are supported for now),
 *   an HTML file,
 *   a XML file.
 
 To create a template file:
 
 1.  Create a regular office, HTML or XML file with your favorite tool.
-2.  In the document, put variables in `Input Fields` where you want to use information from Nuxeo (see below). You may want to use [XDocReport](https://github.com/opensagres/xdocreport) for .doc / .docx or .odt formats, [JXLS](http://jxls.sourceforge.net/) for .xls / .xlsx and .ods formats (see links below).
+2.  In the document, put variables in `Input Fields` where you want to use information from Nuxeo (see below). You may want to use [XDocReport](https://github.com/opensagres/xdocreport) for .docx or .odt formats, [JXLS](http://jxls.sourceforge.net/) for .xls / .xlsx and .ods formats (see links below).
 3.  When the template is ready, [create the template document in Nuxeo]({{page}}) and attach the template to it.
 
 Here are a few examples of the most common variables:
@@ -223,7 +227,7 @@ Here are a few examples of the most common variables:
 *   `${doc.versionLabel`}: displays the version number
 *   `${auditEntries.eventId`}: displays the events listed in the document's history. `${auditEntries.eventDate`} displays the date at which the events took place, `${auditEntries.principalName`} the name of the user who did the action, `${auditEntries.comment`} the comment typed by the user.
 
-{{#> callout type='tip' heading="More resources to help users create the template file"}}
+{{#> callout type='tip' heading='More resources to help users create the template file'}}
 
 *   More information about the variables available (including functions) in the [Quick user guide](https://github.com/nuxeo/nuxeo-template-rendering/blob/master/QuickUserGuide.md) on the Nuxeo GitHub repository.
 *   XDocReport [overview](https://github.com/opensagres/xdocreport/wiki/Overview) and [docx format user guide](https://github.com/opensagres/xdocreport/wiki/DocxDesignReport) / [odt format user guide](https://github.com/opensagres/xdocreport/wiki/ODTDesignReport): XDocReport is a tool that enables to insert fields in MS Office and OpenOffice / LibreOffice text files.
@@ -279,7 +283,7 @@ Content
 
 </td><td colspan="1">
 
-*   For a Template : the attached template file (odt, doc, etc file).
+*   For a Template : the attached template file (odt, docx, etc file).
 *   For a web template: The Note that will hold the content of the template. Typically this would be HTML text.
 
 </td></tr><tr><th colspan="1">
@@ -341,7 +345,7 @@ Template processor
 </td><td colspan="1">
 
 Select how are the template file fields processed to use Nuxeo data. Automatic should work for most file formats.
-XDocReport is specifically targeted at doc, docx and odt formats.
+XDocReport is specifically targeted at docx and odt formats.
 JXLS is specifically targeted at spreadsheet file formats: xls, xlsx and ods.
 
 </td></tr><tr><td colspan="1">
@@ -453,7 +457,7 @@ The Templates are used to render the associated document. Depending on the Templ
 *   an HTML document
 *   an XML document
 *   an OpenOffice document
-*   an MS Office document
+*   an MS Office document (Office Open XML)
 
 Each template processor has his own logic for rendering a Document from a Template :
 

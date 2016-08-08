@@ -3,7 +3,6 @@ title: Shell Documentation
 labels:
     - shell
     - shell-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '4687725'
@@ -77,7 +76,7 @@ The generated documentation is available in both text format (for terminal) and 
 This is the minimal documentation provided by any command and it may be enough for simple commands. But for more complex commands you may want to give more in depth instructions or examples.
 To do this you can create a text file that hase the same name as the short name of the command class plus the **.help** extension. This file must reside in the JAR in the same package as the command class.
 
-{{#> callout type='info' heading="Technical Detail"}}
+{{#> callout type='info' heading='Technical Detail'}}
 
 The **help** file class is located at runtime using the command class getResource method and the naming pattern specified above.
 
@@ -132,7 +131,7 @@ In addition you can also use any numeric control code as the tag name. See JLine
 
 :warning: Anyway it is **recommended** to only use **header**, **bold** and other wiki tags like **code** since terminal tags are not translated in wiki tags.
 
-{{#> callout type='note' heading="Important"}}
+{{#> callout type='note' heading='Important'}}
 
 When contributing new commands in the Nuxeo Shell core library (or modifying old ones) please make sure you update the wiki at [Nuxeo Shell Command Index]({{page page='nuxeo-shell-command-index'}}).
 

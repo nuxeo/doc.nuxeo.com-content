@@ -2,7 +2,6 @@
 title: Bootstrap Your Case Management Project
 labels:
     - bootstrap
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -92,7 +91,7 @@ history:
 ---
 {{! excerpt}}
 
-<span>The Nuxeo Platform is a perfect choice for implementing a case management project. The platform provides all the necessary elements: strong information typing, rich form management, structure and document templating tools, event bus for plugging custom rules, powerful workflow engine, content lists and queues mechanisms. Nuxeo Studio allows semi-technical people to inject business requirements in the application while powerful API and great Java framework provide practically no limit in integrating with external applications or adding custom features.</span>
+The Nuxeo Platform is a perfect choice for implementing a case management project. The platform provides all the necessary elements: strong information typing, rich form management, structure and document templating tools, event bus for plugging custom rules, powerful workflow engine, content lists and queues mechanisms. Nuxeo Studio allows semi-technical people to inject business requirements in the application while powerful API and great Java framework provide practically no limit in integrating with external applications or adding custom features.
 
 {{! /excerpt}}
 

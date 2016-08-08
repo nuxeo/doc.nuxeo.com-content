@@ -3,7 +3,6 @@ title: DBS - MongoDB
 labels:
     - mongodb
     - mongodb-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -62,7 +61,7 @@ history:
 ---
 {{! excerpt}}
 
-<span>DBS (Document-Based Storage) allows storage of Nuxeo documents inside a document-oriented store, like MongoDB.</span>
+DBS (Document-Based Storage) allows storage of Nuxeo documents inside a document-oriented store, like MongoDB.
 
 {{! /excerpt}}
 
@@ -191,24 +190,18 @@ The following features are planned but are not yet implemented as of Nuxeo Platf
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{! Please update the label in the Content by Label macro below. }}
 
-{{#> panel heading="Related Documentation"}}
+{{#> panel heading='Related Documentation'}}
 
 *   [MongoDB]({{page page='mongodb'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">
+{{/panel}}</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
 &nbsp;
 
-</div>
-
-</div>
+</div></div>

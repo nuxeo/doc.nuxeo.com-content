@@ -1,7 +1,6 @@
 ---
 title: Indexing and Query
 labels:
-    - content-review-lts2015
     - query-pageprovider-component
 toc: true
 confluence:
@@ -385,7 +384,7 @@ The following table and schema gives an overview of the different ways of queryi
     **Example:**
 
     ```
-    ItemIterable results = 
+    ItemIterable<QueryResult> results = 
     session.query(
     "SELECT 
     * FROM 
@@ -393,7 +392,7 @@ The following table and schema gives an overview of the different ways of queryi
     , false);
     for
     (QueryResult hit: results) {
-    for(PropertyData property: hit.getProperties()) 
+    for(PropertyData<?> property: hit.getProperties()) 
     {  String queryName = property.getQueryName();
             Object value = property.getFirstValue();
     }
@@ -410,10 +409,10 @@ The following table and schema gives an overview of the different ways of queryi
     **Example**
 
     ```
-    PageProvider pp = (PageProvider) ppService.getPageProvider(
+    PageProvider<DocumentModel> pp = (PageProvider<DocumentModel>) ppService.getPageProvider(
             "TREE_CHILDREN_PP", null, null, null, props,
             new Object[] { myDoc.getId() });
-    List documents = pp.getCurrentPage();
+    List<DocumentModel> documents = pp.getCurrentPage();
     ```
 
     **Related topics:**
@@ -450,13 +449,13 @@ Aggregates are a way to compute additional information on a search result so as 
 
 See the&nbsp;[How-to about aggregates widgets]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}}).
 
-![Terms with Directory Widget]({{file name='Screen Shot 2014-11-02 at 19.13.27.png'}} ?w=100,h=54,border=true "Terms with Directory Widget")&nbsp; &nbsp; &nbsp;![Date Histograms and Date Ranges]({{file name='Screen Shot 2014-11-02 at 21.02.45.png'}} ?w=100,h=71,border=true "Date Histograms and Date Ranges")&nbsp; &nbsp;![]({{file name='Screen Shot 2014-11-02 at 21.02.54.png'}} ?w=100,border=true,thumbnail=true "Terms with User & Groups Widget")&nbsp; &nbsp;&nbsp;![Range]({{file name='Screen Shot 2014-11-02 at 21.03.01.png'}} ?w=100,h=41,border=true "Range")
+![Terms with Directory Widget]({{file name='Screen Shot 2014-11-02 at 19.13.27.png'}} ?w=100,h=54,border=true 'Terms with Directory Widget')&nbsp; &nbsp; &nbsp;![Date Histograms and Date Ranges]({{file name='Screen Shot 2014-11-02 at 21.02.45.png'}} ?w=100,h=71,border=true 'Date Histograms and Date Ranges')&nbsp; &nbsp;![]({{file name='Screen Shot 2014-11-02 at 21.02.54.png'}} ?w=100,border=true,thumbnail=true 'Terms with User & Groups Widget')&nbsp; &nbsp;&nbsp;![Range]({{file name='Screen Shot 2014-11-02 at 21.03.01.png'}} ?w=100,h=41,border=true 'Range')
 
 ## Configuring Search Interfaces in the Nuxeo Platform Back Office: Content Views
 
 Search UI has been conceptualized throughout the notion of &ldquo;content view&rdquo; in the Nuxeo Platform framework. The [Content View]({{page space='glos' page='content-view'}}) object holds all the necessary information for rendering a search filter, the associated page provider, a search result and all actions that can be made around that search result (sorting, exporting, slide showing, selection actions&hellip;). Content views are [fully configurable via Nuxeo Studio]({{page page='how-to-define-a-new-content-view'}}) which makes it a matter of a few minutes to configure new business specific search screens for your application users.
 
-![A Content View]({{file name='Screen Shot 2014-11-02 at 21.07.25.png'}} ?w=600,border=true "A Content View")
+![A Content View]({{file name='Screen Shot 2014-11-02 at 21.07.25.png'}} ?w=600,border=true 'A Content View')
 
 ## Indexing Logic
 

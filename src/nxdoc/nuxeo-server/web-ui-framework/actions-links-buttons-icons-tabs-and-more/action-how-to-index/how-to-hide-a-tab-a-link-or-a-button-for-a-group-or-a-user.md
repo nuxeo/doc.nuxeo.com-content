@@ -13,7 +13,6 @@ labels:
     - action
     - filter
     - actions-filters-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -133,17 +132,30 @@ In this example, you will define a filter for the action "`New`", which should b
     If you are not familiar with the contribution of an extension in Studio, please read this documentation: [How to Contribute to an Extension](http://doc.nuxeo.com/display/NXDOC/How+to+Contribute+to+an+Extension#HowtoContributetoanExtension-ContributingUsingNuxeoStudio).
 
     ```
+    <extension target="org.nuxeo.ecm.platform.actions.ActionService"
+      point="actions">
+      <action id="newDocument">
+        <filter-id>denyForGroup1</filter-id>
+      </action>
+    </extension>
 
-        denyForGroup1
-
-          Group1
-
+    <extension target="org.nuxeo.ecm.platform.actions.ActionService"
+      point="filters">
+      <filter id="denyForGroup1">
+        <rule grant="false">
+          <group>Group1</group>
+        </rule>
+      </filter>
+    </extension>
     ```
 
 3.  If you want to completely remove the action, the contribution is slightly different. You must add the parameter `enabled="false"` when defining the action.
 
     ```
-
+    <extension target="org.nuxeo.ecm.platform.actions.ActionService"
+      point="actions">
+      <action id="newDocument" enabled="false" />
+    </extension>
     ```
 
 In this example, the name of the group to be excluded was hardcoded. It is also possible to create a method which returns a list of group names to exclude.
@@ -166,24 +178,18 @@ This can be done on any document type, folderish or not.
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
 *   [How to Add a Button in the Web UI]({{page page='how-to-add-a-button-in-the-web-ui'}})
 *   [How to Make the New Button Appear on a Custom Folderish Document]({{page page='how-to-make-the-new-button-appear-on-a-custom-folderish-document'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Actions Overview]({{page page='actions-overview'}})
 *   [Filters and Access Controls]({{page page='filters-and-access-controls'}})
 *   [Standard Action Types]({{page page='standard-action-types'}})
 *   [User actions categories]({{page space='studio' page='user-actions-categories'}})
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

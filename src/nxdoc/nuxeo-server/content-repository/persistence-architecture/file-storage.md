@@ -4,7 +4,6 @@ labels:
     - blob-storage
     - binary-manager
     - blob-manager-component
-    - lts2015-ok
     - multiexcerpt
     - multiexcerpt-include
 toc: true
@@ -188,6 +187,10 @@ A file is what is commonly handled on user's desktop or other file system. It is
 
 At the Core level, blobs are bound to documents via a property of type `BlobProperty`. So a document can store multiple files that are standalone blob properties, or list of blob properties. When configuring this property, it has to be of type&nbsp;
 
+```
+<xs:element name="test" type="nxs:content"/>
+```
+
 Which corresponds in [Nuxeo Studio](http://www.nuxeo.com/products/studio/) to selecting "Blob" in the type.
 
 You can then use either the [`Document.SetBLob`](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.SetBlob) operation to set a blob on a given property or the `setPropertyValue(String xpath,`
@@ -303,10 +306,12 @@ Stores binaries as SQL BLOB objects in a SQL database.
 To register a new blobProvider, use the&nbsp; [`blobprovider`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.blob.BlobManager--configuration)&nbsp;extension point with the Java class for your blobProvider:
 
 ```
-
-    org.nuxeo.ecm.core.blob.binary.DefaultBinaryManager
-    binaries
-
+<extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
+  <blobprovider name="default">
+    <class>org.nuxeo.ecm.core.blob.binary.DefaultBinaryManager</class>
+    <property name="path">binaries</property>
+  </blobprovider>
+</extension>
 ```
 
 ## Additional BlobProviders
@@ -413,7 +418,7 @@ GoogleDriveBlobProvider
 
 </td><td colspan="1">
 
-<span>Reads content from Google Drive</span>
+Reads content from Google Drive
 
 </td><td colspan="1">
 
@@ -489,25 +494,30 @@ Advanced dispatching configuration are possible using properties. Each property 
 For example, all the videos could be stored somewhere, the documents from a secret source in an encrypted area, and the rest in a third location. To do this, you would need to specify the following:
 
 ```
-
-    org.nuxeo.ecm.core.blob.DefaultBlobDispatcher
-    videos
-    videos
-    encrypted
-    default
-
+<extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
+  <blobdispatcher>
+    <class>org.nuxeo.ecm.core.blob.DefaultBlobDispatcher</class>
+    <property name="dc:format=video">videos</property>
+    <property name="blob:mime-type=video/mp4">videos</property>
+    <property name="dc:source=secret">encrypted</property>
+    <property name="default">default</property>
+  </blobdispatcher>
+</extension>
 ```
 
 This assumes that you have three blob providers configured, the default one and two additional ones,&nbsp;`videos`&nbsp;and&nbsp;`encrypted`. For example you could have:
 
 ```
-
-    org.nuxeo.ecm.core.blob.binary.DefaultBinaryManager
-    binaries-videos
-
-    org.nuxeo.ecm.core.blob.binary.AESBinaryManager
-    password=secret
-
+<extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
+  <blobprovider name="videos">
+    <class>org.nuxeo.ecm.core.blob.binary.DefaultBinaryManager</class>
+    <property name="path">binaries-videos</property>
+  </blobprovider>
+  <blobprovider name="encrypted">
+    <class>org.nuxeo.ecm.core.blob.binary.AESBinaryManager</class>
+    <property name="key">password=secret</property>
+  </blobprovider>
+</extension>
 ```
 
 The default `DefaultBlobDispatcher` class can be replaced by your own implementation.
@@ -536,7 +546,7 @@ That can also be view as a sequence diagram to better understand each actor's ro
 
 ## Default Binary Manager
 
-<span>The default&nbsp;</span> `BinaryManager` <span>&nbsp;implementation is based on a simple filesystem: considering the storage principles, this is safe to use this implementation even on a NFS like filesystem (since there is no conflicts).</span>
+The default&nbsp; `BinaryManager` &nbsp;implementation is based on a simple filesystem: considering the storage principles, this is safe to use this implementation even on a NFS like filesystem (since there is no conflicts).
 
 ```
 Binary getBinary(InputStream in) throws IOException; Binary getBinary(String digest);
@@ -559,10 +569,13 @@ We provide a blob provider for being able to reference files that would be store
 The root path is a property of the contribution:
 
 ```
-
-      org.nuxeo.ecm.core.blob.FilesystemBlobProvider
-      /opt/nuxeo/nxsever/blobs
-      true
+  <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
+    <blobprovider name="fs">
+      <class>org.nuxeo.ecm.core.blob.FilesystemBlobProvider</class>
+      <property name="root">/opt/nuxeo/nxsever/blobs</property>
+      <property name="preventUserUpdate">true</property>
+ </blobprovider>
+  </extension>
 
 ```
 

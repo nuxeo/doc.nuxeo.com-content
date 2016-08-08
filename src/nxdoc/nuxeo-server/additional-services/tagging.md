@@ -2,7 +2,6 @@
 title: Tagging
 labels:
     - tags
-    - content-review-lts2015
     - tagging-component
 toc: true
 confluence:
@@ -158,8 +157,10 @@ The logic for the above is in the&nbsp; [`org.nuxeo.ecm.platform.tag.TaggedVersi
 To disable the duplication of tags on versions and proxies, the&nbsp; [`org.nuxeo.ecm.platform.tag.TaggedVersionListener`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/tag/TaggedVersionListener.html) &nbsp;listener may be disabled with the following contribution:
 
 ```
-org.nuxeo.ecm.platform.tag.service.listener
-
+<require>org.nuxeo.ecm.platform.tag.service.listener</require>
+<extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
+  <listener name="taggedVersionListener" enabled="false" />
+</extension>
 ```
 
 * * *

@@ -7,7 +7,6 @@ labels:
     - trace
     - mvel
     - automation-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '18451738'
@@ -136,7 +135,20 @@ Automation exception chain can be added to be executed when an error occurs duri
 After contributing your custom chains, you can declare your exception chains:
 
 ```
+<extension point="chainException"
+             target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
 
+    <catchChain id="catchChainA" onChainId="contributedchain">
+      <run chainId="chainExceptionA" priority="0" rollBack="true" filterId="filterA"/>
+      <run chainId="chainExceptionA" priority="0" rollBack="false" filterId="filterA"/>
+      <run chainId="chainExceptionB" priority="10" rollBack="true" filterId="filterB"/>
+    </catchChain>
+
+    <catchChain id="catchChainB" onChainId="anothercontributedchain">
+      <run chainId="chainExceptionA" rollBack="false"/>
+    </catchChain>
+
+</extension>
 ```
 
 *   This contribution declares a set of execution chains to be executed after '`contributedchain`' failure.
@@ -148,11 +160,14 @@ After contributing your custom chains, you can declare your exception chains:
 Here is the contribution to deploy filters that can be added to decide which chain is going to be executed:
 
 ```
+<extension point="automationFilter"
+             target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
 
-    expr:@{Document['dc:title']=='Source'}
+    <filter id="filterA">expr:@{Document['dc:title']=='Source'}</filter>
 
-    expr:@{Document['dc:title']=='Document'}
+    <filter id="filterB">expr:@{Document['dc:title']=='Document'}</filter>
 
+</extension>
 ```
 
 These filters are strictly written in MVEL template or expression starting by '`expr:`'.
@@ -160,9 +175,12 @@ These filters are strictly written in MVEL template or expression starting by '`
 Exception is cached into the operation context and can be used into filters:
 
 ```
+<extension point="automationFilter"
+             target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
 
-    expr:@{Context['Exception']=='NullPointerException'}
+    <filter id="filterA">expr:@{Context['Exception']=='NullPointerException'}</filter>
 
+</extension>
 ```
 
 {{#> callout type='warning' }}

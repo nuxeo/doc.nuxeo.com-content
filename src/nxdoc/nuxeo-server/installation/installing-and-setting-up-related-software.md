@@ -5,7 +5,6 @@ labels:
     - requirements
     - third-party-software
     - last-review-20141126
-    - lts2015-ok
     - multiexcerpt-include
     - multiexcerpt
 toc: true
@@ -531,7 +530,7 @@ On a naked default Nuxeo Platform, you need the following software:
     *   LibreOffice: converts office file into PDF
     *   pdftohtml: converts converted PDF into HTML preview
 *   For thumbnail generation: ImageMagick and Ghostscript for most file formats. UFRaw for RAW files.
-*   For metadata extraction: Exiftool<span style="color: rgb(0,130,0);">&nbsp;</span>
+*   For metadata extraction: Exiftool
 *   For picture preview and tilling: ImageMagick (already required for thumbnails)
 *   For video conversion and storyboarding: FFmpeg (Nuxeo DAM add-on)
 *   For processing WordPerfect documents: libwpd
@@ -542,7 +541,7 @@ Thumbnails and previews are created when documents are imported into Nuxeo, not 
 
 Under Debian or Ubuntu, all of this can be installed by the following command:
 
-[sudo apt-get install openjdk-8-jdk imagemagick ufraw poppler-utils libreoffice ffmpeg libwpd-tools ghostscript exiftool](apt://openjdk-8-jdk,imagemagick,ufraw,poppler-utils,libreoffice,ffmpeg,libwpd-tools,ghostscript,exiftool)
+<a href="apt://openjdk-8-jdk,imagemagick,ufraw,poppler-utils,libreoffice,ffmpeg,libwpd-tools,ghostscript,exiftool">sudo apt-get install openjdk-8-jdk imagemagick ufraw poppler-utils libreoffice ffmpeg libwpd-tools ghostscript exiftool</a>
 
 ### OpenOffice / LibreOffice Configuration
 

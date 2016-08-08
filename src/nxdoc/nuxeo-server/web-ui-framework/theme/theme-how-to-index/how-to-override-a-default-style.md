@@ -13,7 +13,6 @@ labels:
     - style
     - howto
     - style-css-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235625'
@@ -174,18 +173,35 @@ Here's another example, showing a style using Sass variables:
     Here's an example:
 
     ```
+    <?xml version="1.0"?>
 
-      org.nuxeo.theme.nuxeo.webapp
+    <component name="com.my.application.theme">
 
-          themes/sass/my-project.scss
+      <!-- require this contribution as it's the one declaring the original styles to override -->
+      <require>org.nuxeo.theme.nuxeo.webapp</require>
 
-            sassCss
+      <extension target="org.nuxeo.ecm.platform.WebResources" point="resources">
+        <resource name="my-project.scss" type="css">
+          <path>themes/sass/my-project.scss</path>
+          <processors>
+            <processor>sassCss</processor>
+          </processors>
+        </resource>
+      </extension>
 
-            my-project.scss
+      <extension target="org.nuxeo.ecm.platform.WebResources" point="bundles">
+        <bundle name="nuxeo_sassCss">
+          <resources append="true">
+            <resource>my-project.scss</resource>
+          </resources>
+        </bundle>
+      </extension>
+
+    </component>
 
     ```
 
-    {{#> panel heading="Theme pages"}}
+    {{#> panel heading='Theme pages'}}
 
     Here you can see that styling is added to the nuxeo_sassCss , which contains all the default styles of Nuxeo Platform.
 
@@ -196,14 +212,31 @@ Here's another example, showing a style using Sass variables:
     An alternative way to proceed, when adding a CSS file to all pages, is to contribute the CSS file to the `nuxeo_includes` default resource bundle, already gathering common CSS and JS resources for all Nuxeo pages (and referenced on all default pages):
 
     ```
+    <?xml version="1.0"?>
 
-      org.nuxeo.theme.nuxeo.webapp
+    <component name="com.my.application.theme">
 
-          themes/sass/my-project.scss
+      <!-- require this contribution as it's the one declaring the original styles to override -->
+      <require>org.nuxeo.theme.nuxeo.webapp</require>
 
-            sassCss
+      <extension target="org.nuxeo.ecm.platform.WebResources" point="resources">
+        <resource name="my-project.scss" type="css">
+          <path>themes/sass/my-project.scss</path>
+          <processors>
+            <processor>sassCss</processor>
+          </processors>
+        </resource>
+      </extension>
 
-            my-project.scss
+      <extension target="org.nuxeo.ecm.platform.WebResources" point="bundles">
+        <bundle name="nuxeo_includes">
+          <resources append="true">
+            <resource>my-project.scss</resource>
+          </resources>
+        </bundle>
+      </extension>
+
+    </component>
 
     ```
 
@@ -233,17 +266,13 @@ Here's another example, showing a style using Sass variables:
 
 &nbsp;
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related How-Tos"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page page='how-to-declare-the-css-and-javascript-resources-used-in-your-templates'}})
 *   [How to Customize the Login Page]({{page page='how-to-customize-the-login-page'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Related Documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Theme in Developer Documentation]({{page page='theme'}})
 *   [Branding in Studio Documentation]({{page space='studio' page='branding'}})
@@ -251,6 +280,4 @@ Here's another example, showing a style using Sass variables:
 *   [Web UI Framework]({{page page='web-ui-framework'}})
 *   [Online UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

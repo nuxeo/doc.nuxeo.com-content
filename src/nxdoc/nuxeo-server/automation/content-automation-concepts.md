@@ -4,7 +4,6 @@ labels:
     - link-update
     - automation
     - todo
-    - content-review-lts2015
     - automation-component
     - multiexcerpt
     - excerpt
@@ -471,8 +470,7 @@ If you need to dynamically define the values of the operation parameters you can
 
 ![]({{file name='AutomationChainEdition.png' space='studio' page='automation-chains'}} ?w=600,border=true)
 
-{{#> callout type='info' }} The main goal of Content Automation is to enable users to rapidly build complex business logic without writing any Java code. First, they assemble the built-in set of atomic operations into complex chains. Then they can plug these chains inside the Nuxeo Platform as UI actions, event handlers, REST bindings and workflow logic. {{/callout}}
-{{! /multiexcerpt}}
+{{! excerpt}}{{#> callout type='info' }} The main goal of Content Automation is to enable users to rapidly build complex business logic without writing any Java code. First, they assemble the built-in set of atomic operations into complex chains. Then they can plug these chains inside the Nuxeo Platform as UI actions, event handlers, REST bindings and workflow logic. {{/callout}}{{! /excerpt}}{{! /multiexcerpt}}
 
 ## Operation
 
@@ -818,18 +816,12 @@ Installing some modules from the [Nuxeo Marketplace](http://marketplace.nuxeo.co
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">{{#> panel heading="Related topics in developer documentation"}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in developer documentation'}}
 
 &nbsp;
 
-{{/panel}}</div>
-
-<div class="column medium-6">{{#> panel heading="Automation in Nuxeo Studio documentation"}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Automation in Nuxeo Studio documentation'}}
 
 &nbsp;
 
-{{/panel}}</div>
-
-</div>
+{{/panel}}</div></div>

@@ -5,7 +5,6 @@ labels:
     - aggregate
     - page-provider
     - query-pageprovider-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -148,7 +147,7 @@ As for now, the Nuxeo Platform focuses on bucket aggregation. In addition to acc
 
 Nuxeo Platform&nbsp;[default search](https://github.com/nuxeo/nuxeo-features/blob/6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L7) leverages Elasticsearch aggregates on some default document properties.
 
-![Nuxeo 6.0 default search]({{file name='aggregates.png'}} ?w=600 "Nuxeo 6.0 default search")
+![Nuxeo 6.0 default search]({{file name='aggregates.png'}} ?w=600 'Nuxeo 6.0 default search')
 
 The picture above shows the [default search](https://github.com/nuxeo/nuxeo-features/blob/6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L7) of Nuxeo Platform. On the left-hand side panel, you can see the search layout with search criteria for the current search (such as full text) and also some aggregates results (Creation date, Modification date, Author, Nature, Subjects, Coverage, Size). For example, according to the screen shot, for the current document result set, there are 58 documents whose the size is less than 100KB.
 
@@ -161,9 +160,12 @@ Note that aggregate results are either displayed with a checkbox-based widget or
 An aggregate is defined inside the page provider definition according to the following syntax:
 
 ```
-
+<aggregate id="aggregate_id" type="aggregate_type" parameter="aggregate_parameter">
+  <field schema="agg_field_schema" name="agg_field_name" />
+  <properties>
     ...
-
+  </properties>
+</aggregate>
 ```
 
 where:
@@ -182,15 +184,30 @@ Here are the type of aggregates currently supported by the Nuxeo Platform.
 In the search layout on the above picture, you can see Author, Nature, Subjects, Coverage aggregate results. These are Terms aggregates respectively on `dc:creator`, `dc:nature`, `dc:subjects`, `dc:coverage` document properties defined as follow:
 
 ```
-
-    10
-
-    10
-
-    10
-
-    10
-
+<aggregate id="dc_nature_agg" type="terms" parameter="dc:nature">
+  <field schema="default_search" name="dc_nature_agg" />
+  <properties>
+    <property name="size">10</property>
+  </properties>
+</aggregate>
+<aggregate id="dc_subjects_agg" type="terms" parameter="dc:subjects">
+  <field schema="default_search" name="dc_subjects_agg" />
+  <properties>
+    <property name="size">10</property>
+  </properties>
+</aggregate>
+<aggregate id="dc_coverage_agg" type="terms" parameter="dc:coverage">
+  <field schema="default_search" name="dc_coverage_agg" />
+  <properties>
+    <property name="size">10</property>
+  </properties>
+</aggregate>
+<aggregate id="dc_creator_agg" type="terms" parameter="dc:creator">
+  <field schema="default_search" name="dc_creator_agg" />
+  <properties>
+    <property name="size">10</property>
+  </properties>
+</aggregate>
 ```
 
 The type of such aggregate is `terms`. The parameter must be of type `string`.
@@ -220,7 +237,16 @@ The type of such aggregate is `significant_terms`. The parameter must be of type
 Here is an example of Range aggregate on the `common:size` document property.
 
 ```
-
+<aggregate id="common_size_agg" type="range" parameter="common:size">
+  <field schema="default_search" name="common_size_agg" />
+  <ranges>
+    <range key="tiny" to="102400"/>
+    <range key="small" from="102400" to="1048576"/>
+    <range key="medium" from="1048576" to="10485760"/>
+    <range key="big" from="10485760" to="104857600" />
+    <range key="huge" from="104857600" />
+  </ranges>
+</aggregate>
 ```
 
 The type of such aggregate is `range`. The parameter must be a numeric of type `integer`, `double` or `long`.
@@ -232,9 +258,19 @@ It has no specific properties but at least one `range` must be defined. A range 
 Here is an example of Date Range aggregate on the `dc:modified` document property.
 
 ```
-
-    "dd-MM-yyyy"
-
+<aggregate id="dc_modified_agg" type="date_range" parameter="dc:modified">
+  <field schema="default_search" name="dc_modified_agg" />
+  <properties>
+    <property name="format">"dd-MM-yyyy"</property>
+  </properties>
+  <dateRanges>
+    <dateRange key="last24h" fromDate="now-24H" toDate="now"/>
+    <dateRange key="lastWeek" fromDate="now-7d" toDate="now-24H"/>
+    <dateRange key="lastMonth" fromDate="now-1M" toDate="now-7d"/>
+    <dateRange key="lastYear" fromDate="now-1y" toDate="now-1M"/>
+    <dateRange key="priorToLastYear" toDate="now-1y"/>
+  </dateRanges>
+</aggregate>
 ```
 
 The type of such aggregate is `date_range`. The parameter must be a numeric of type `date`.
@@ -260,7 +296,7 @@ It has the following properties:
 
 {{#> callout type='warning' }}
 
-The use of <span>`extendedBoundsMin` and `<span>extendedBoundsMax</span>` <span>is strongly recommended. It prevents elasticsearch from scanning the range of all</span> <span>possible values which may affect performance.</span></span>
+The use of `extendedBoundsMin` and `extendedBoundsMax` is strongly recommended. It prevents elasticsearch from scanning the range of all possible values which may affect performance.
 
 {{/callout}}
 
@@ -270,11 +306,14 @@ Date Histogram Aggregate
 Here is an example of Date Range aggregate on the `dc:created` document property.
 
 ```
-
-    year
-    yyyy
-    key desc
-
+<aggregate id="dc_created_agg" type="date_histogram" parameter="dc:created">
+  <field schema="default_search" name="dc_created_agg" />
+  <properties>
+    <property name="interval">year</property>
+    <property name="format">yyyy</property>
+    <property name="order">key desc</property>
+  </properties>
+</aggregate>
 ```
 
 The type of such aggregate is `date_histogram`. The parameter must be of type `date`.
@@ -294,24 +333,16 @@ The use of `extendedBoundsMin` and `extendedBoundsMax` is strongly recommended. 
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{! Please update the label in the Content by Label macro below. }}
 
-{{#> panel heading="Related Documentation"}}
+{{#> panel heading='Related Documentation'}}
 
-{{/panel}}
-
-</div>
-
-<div class="column medium-6">
+{{/panel}}</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
 &nbsp;
 
-</div>
-
-</div>
+</div></div>

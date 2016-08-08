@@ -4,7 +4,6 @@ labels:
     - view_action_list
     - document-tab
     - web-ui-component
-    - lts2015-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '6029663'
@@ -90,12 +89,21 @@ A standard JSF navigation rule can be defined in the `OSGI-INF/deployment-fragme
 Example of a navigation rule case definition:
 
 ```
+<extension target="faces-config#NAVIGATION">
 
-      create_document
-      /create_document.xhtml
+    <navigation-case>
+      <from-outcome>create_document</from-outcome>
+      <to-view-id>/create_document.xhtml</to-view-id>
+      <redirect />
+    </navigation-case>
 
-      view_documents
-      /view_documents.xhtml
+    <navigation-case>
+      <from-outcome>view_documents</from-outcome>
+      <to-view-id>/view_documents.xhtml</to-view-id>
+      <redirect />
+    </navigation-case>
+
+</extension>
 
 ```
 
@@ -104,21 +112,28 @@ Example of a navigation rule case definition:
 A certain Nuxeo document type can have defined a default view (used to view/edit the document) and a create view (used to create the document). These views are specified in the `OSGI-INF/ecm-types-contrib.xml` file, as in the following example.
 
 ```
-
-      Workspace
-      /icons/workspace.gif
-      /icons/workspace_open.gif
-      view_documents
-      create_workspace
+<extension target="org.nuxeo.ecm.platform.types.TypeService" point="types">
+    <type id="Workspace">
+      <label>Workspace</label>
+      <icon>/icons/workspace.gif</icon>
+      <icon-expanded>/icons/workspace_open.gif</icon-expanded>
+      <default-view>view_documents</default-view>
+      <create-view>create_workspace</create-view>
+    </type>
+</extension>
 
 ```
 
 The default view of a document is rendered as a list of tabs. The document tabs are defined as actions in the `OSGI-INF/actions-contrib.xml` file, having as [category]({{page page='actions-display'}}) `VIEW_ACTION_LIST`. A tab can be added to a document default view as shown in the following example.
 
 ```
-
-      VIEW_ACTION_LIST
-      edit
-      mutable_document
+<extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
+    <action id="TAB_EDIT" link="/incl/tabs/document_edit.xhtml" enabled="true"
+      order="20" label="action.view.edit" icon="/icons/file.gif">
+      <category>VIEW_ACTION_LIST</category>
+      <filter-id>edit</filter-id>
+      <filter-id>mutable_document</filter-id>
+    </action>
+</extension>
 
 ```

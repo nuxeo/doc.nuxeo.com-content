@@ -2,7 +2,6 @@
 title: Implementing Documentation Items
 labels:
     - howto
-    - lts2015-ok
     - multiexcerpt
 toc: true
 confluence:
@@ -509,7 +508,7 @@ In the Nuxeo Platform lists of choices are called vocabularies. A [specific sect
 #### Creating the Nature List
 
 1.  In Studio, go in the **Vocabularies** section.
-2.  <span class="confluence-link">[Create a new vocabulary]({{page page='how-to-add-a-new-vocabulary'}})</span> : call it it `qualNat` and select **Simple Vocabulary**.
+2.  [Create a new vocabulary]({{page page='how-to-add-a-new-vocabulary'}}) : call it it `qualNat` and select **Simple Vocabulary**.
 3.  Add a few entries. Ids are for the system, labels will be displayed to the final user.
     In the end, you should have something like:
     ![]({{file name='vocabulary_definition_nature.png'}} ?w=600,border=true)
@@ -557,7 +556,7 @@ Now that you have the two vocabularies, you still have to bind them to the metad
 2.  Create a new Technical Documentation Item.
     ![]({{file name='creation_layout_result_2.png'}} ?w=450,border=true)
 
-{{#> callout type='tip' heading="Congratulation"}}
+{{#> callout type='tip' heading='Congratulation'}}
 
 You created a document type that will hold all the information you need to manage your technical documentation items.
 
@@ -574,24 +573,16 @@ The next step is to adapt where the documents are created and how they are displ
 
 * * *
 
-<div class="row">
-
-<div class="column medium-4">
+<div class="row"><div class="column medium-4">
 
 [<< Introduction]({{page page='first-steps-with-studio-technical-documentation-tutorial'}})
 
-</div>
-
-<div class="column medium-4">
+</div><div class="column medium-4">
 
 **[undefined]({{page}})**
 
-</div>
-
-<div class="column medium-4">
+</div><div class="column medium-4">
 
 [Custom Content View for Documentation Items >>]({{page page='custom-content-view-for-documentation-items'}})
 
-</div>
-
-</div>
+</div></div>

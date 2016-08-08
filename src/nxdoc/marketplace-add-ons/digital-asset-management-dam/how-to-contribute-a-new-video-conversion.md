@@ -14,7 +14,6 @@ labels:
     - conversion
     - video
     - convert-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -73,12 +72,18 @@ A video conversion depends of a `command`, a `converter`&nbsp;and a `videoConver
 ## Contributing the Command
 
 ```
+<extension target="org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent"
+  point="command">
 
-    ffmpeg
-     -i #{inFilePath} -s #{width}x#{height} -acodec libvorbis -v 0 #{outFilePath}
-
+  <command name="ffmpeg-towebm" enabled="true">
+    <commandLine>ffmpeg</commandLine>
+    <parameterString> -i #{inFilePath} -s #{width}x#{height} -acodec libvorbis -v 0 #{outFilePath}</parameterString>
+    <installationDirective>
       You need to install FFmpeg from http://ffmpeg.org (apt-get install ffmpeg)
+    </installationDirective>
+  </command>
 
+</extension>
 ```
 
 **Parameters**:
@@ -91,21 +96,27 @@ A video conversion depends of a `command`, a `converter`&nbsp;and a `videoConver
 The converter contribution depends of an already defined `command`.
 
 ```
+<extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"
+  point="converter">
 
-    video/mpeg
-    video/mp4
-    video/quicktime
-    video/ogg
-    video/x-ms-asf
-    video/x-msvideo
-    video/flv
-    video/webm
+  <converter name="convertToWebM" class="org.nuxeo.ecm.platform.video.convert.VideoConversionConverter">
+    <sourceMimeType>video/mpeg</sourceMimeType>
+    <sourceMimeType>video/mp4</sourceMimeType>
+    <sourceMimeType>video/quicktime</sourceMimeType>
+    <sourceMimeType>video/ogg</sourceMimeType>
+    <sourceMimeType>video/x-ms-asf</sourceMimeType>
+    <sourceMimeType>video/x-msvideo</sourceMimeType>
+    <sourceMimeType>video/flv</sourceMimeType>
+    <destinationMimeType>video/webm</destinationMimeType>
+    <parameters>
+      <parameter name="CommandLineName">ffmpeg-towebm</parameter>
+      <parameter name="videoMimeType">video/webm</parameter>
+      <parameter name="videoExtension">webm</parameter>
+      <parameter name="tmpDirectoryPrefix">convertToWebM</parameter>
+    </parameters>
+  </converter>
 
-      ffmpeg-towebm
-      video/webm
-      webm
-      convertToWebM
-
+</extension>
 ```
 
 Here we use the generic `VideoConversionConverter`&nbsp;converter, only the `sourceMimeType`s and `parameters` need to be filled.
@@ -120,26 +131,34 @@ Here we use the generic `VideoConversionConverter`&nbsp;converter, only the `sou
 For instance, the converter to convert to MP4 looks like:
 
 ```
-
-  video/mpeg
-  video/webm
-  video/quicktime
-  video/ogg
-  video/x-ms-asf
-  video/x-msvideo
-  video/flv
-  video/mp4
-
-    ffmpeg-tomp4
-    video/mp4
-    mp4
-    convertToMP4
-
+<converter name="convertToMP4" class="org.nuxeo.ecm.platform.video.convert.VideoConversionConverter">
+  <sourceMimeType>video/mpeg</sourceMimeType>
+  <sourceMimeType>video/webm</sourceMimeType>
+  <sourceMimeType>video/quicktime</sourceMimeType>
+  <sourceMimeType>video/ogg</sourceMimeType>
+  <sourceMimeType>video/x-ms-asf</sourceMimeType>
+  <sourceMimeType>video/x-msvideo</sourceMimeType>
+  <sourceMimeType>video/flv</sourceMimeType>
+  <destinationMimeType>video/mp4</destinationMimeType>
+  <parameters>
+    <parameter name="CommandLineName">ffmpeg-tomp4</parameter>
+    <parameter name="videoMimeType">video/mp4</parameter>
+    <parameter name="videoExtension">mp4</parameter>
+    <parameter name="tmpDirectoryPrefix">convertToMP4</parameter>
+  </parameters>
+</converter>
 ```
 
 ## Contributing the Video Conversion
 
 The video conversion contribution depends on an already defined converter. The same converter could be used for more than one video conversion if you wanted different sizes.
+
+```
+<extension target="org.nuxeo.ecm.platform.video.service.VideoService"
+  point="videoConversions">
+  <videoConversion name="WebM 480p" converter="convertToWebM" height="480"/>
+</extension>
+```
 
 **Parameters**:
 
@@ -163,25 +182,22 @@ When importing Video, you can configure which video conversions will be run (asy
 To run the "WebM 480p" video conversion automatically:
 
 ```
-
+<extension target="org.nuxeo.ecm.platform.video.service.VideoService"
+  point="automaticVideoConversions">
+  <automaticVideoConversion name="WebM 480p" order="10" />
+</extension>
 ```
 
 &nbsp;
 
 * * *
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{! Please update the label in the Content by Label macro below. }}
 
-</div>
-
-<div class="column medium-6">
+</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
-</div>
-
-</div>
+</div></div>

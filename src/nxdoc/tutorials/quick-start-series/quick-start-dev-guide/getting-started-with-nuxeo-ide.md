@@ -9,7 +9,6 @@ details:
 labels:
     - howto
     - ide
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '14256538'
@@ -23,6 +22,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/DhU5AQ'
     source_link: /display/NXDOC/Getting+Started+with+Nuxeo+IDE
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-07-21 08:52'
+        message: pdate link to SDK to use 8.
+        version: '76'
     - 
         author: Manon Lumeau
         date: '2016-04-25 14:04'
@@ -408,7 +412,7 @@ Here we want to add some server side Java logic that will update the contract's 
 *   [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars)
 *   The latest stable [NodeJS](https://nodejs.org) version should be installed on your machine
 *   Java 8 with JDK
-*   A Nuxeo SDK: [Nuxeo Platform 8.2 SDK](http://cdn.nuxeo.com/nuxeo-8.2/nuxeo-cap-8.2-tomcat-sdk.zip)
+*   A Nuxeo SDK: [Nuxeo Platform 8.3 SDK](http://cdn.nuxeo.com/nuxeo-8.3/nuxeo-cap-8.3-tomcat-sdk.zip)
 *   npm 2.12.0+
 
 ## Step 1 - Install Nuxeo IDE

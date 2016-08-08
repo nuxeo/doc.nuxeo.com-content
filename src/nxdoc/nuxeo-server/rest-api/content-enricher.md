@@ -5,7 +5,6 @@ labels:
     - rest-api
     - enricher
     - rest-api-component
-    - lts2015-ok
     - university
 toc: true
 confluence:
@@ -22,8 +21,13 @@ confluence:
 history:
     - 
         author: Solen Guitter
+        date: '2016-07-29 16:18'
+        message: dd missing excerpts for page Leaning the REST AP
+        version: '52'
+    - 
+        author: Solen Guitter
         date: '2016-07-04 08:30'
-        message: dd since 8.3 mention on Tag
+        message: Add since 8.3 mention on Tags
         version: '51'
     - 
         author: Guillaume Renard
@@ -293,25 +297,25 @@ For example, it is some times useful to get the children of a document while req
 
 ## How To Call a Content Enricher
 
-Content enrichers can be called by sending the proper header(s) in your request. The header you need to call depends on the entity-type being enriched by the enricher. Hence, enrichers enriching documents can be called using the header:<span>&nbsp;</span>
+Content enrichers can be called by sending the proper header(s) in your request. The header you need to call depends on the entity-type being enriched by the enricher. Hence, enrichers enriching documents can be called using the header:
 
 ```
 X-NXenrichers.document: enricherName
 ```
 
-<span>If you want to call an enricher enriching a user for instance, you would do it through a slightly different header:</span>
+If you want to call an enricher enriching a user for instance, you would do it through a slightly different header:
 
 ```
 X-NXenrichers.user: enricherName
 ```
 
-<span>Several enrichers can be called in a single request by specifying a comma separated list in the header, or by sending several headers:</span>
+Several enrichers can be called in a single request by specifying a comma separated list in the header, or by sending several headers:
 
 ```
 X-NXenrichers.document: enricher1,enricher2,enricher3
 ```
 
-<span><span>is equivalent to sending:</span></span>
+is equivalent to sending:
 
 ```
 X-NXenrichers.document: enricher1
@@ -319,26 +323,21 @@ X-NXenrichers.document: enricher2
 X-NXenrichers.document: enricher3
 ```
 
-<span><span><span><span><span>and combination would work.</span></span></span></span></span>
+and combination would work.
 
-<span><span><span><span><span>The enrichers can be called the same way by passing GET parameters.</span></span></span></span></span>
+The enrichers can be called the same way by passing GET parameters.
 
 ```
 http://localhost:8080/nuxeo/site/api/v1/path/default-domain/workspaces?enrichers.document=enricher1,enricher2
 http://localhost:8080/nuxeo/site/api/v1/path/default-domain/workspaces?enrichers.document=enricher1&enrichers.document=enricher2
 ```
 
-<span><span><span><span><span>
-</span></span></span></span></span>
+## Default Content Enrichers
 
-## <span>Default Content Enrichers
-</span>
+### Thumbnail
 
-### <span>Thumbnail</span> <span>&nbsp;</span>
-
-<span>When specifying&nbsp;`X-NXenrichers.document: thumbnail`, the JSON payload of the document REST calls response that contains the related attached file thumbnail of the document:</span>
-&nbsp; <span>&nbsp;</span><span>
-</span>
+When specifying&nbsp;`X-NXenrichers.document: thumbnail`, the JSON payload of the document REST calls response that contains the related attached file thumbnail of the document:
+&nbsp;
 
 ```
 Request URL:
@@ -388,12 +387,11 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 }
 ```
 
-<span>More details about the thumbnail enricher:&nbsp;[http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html)</span> <span>&nbsp;</span>
+More details about the thumbnail enricher:&nbsp;[http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html)
 
-### <span>ACLs</span> <span>&nbsp;</span> <span>&nbsp;</span>
+### ACLs
 
-<span>When specifying&nbsp;`X-NXenrichers.document: acls`, the JSON payload of the document REST calls response that contains all related ACLs of the document:</span><span>
-<span>&nbsp;</span></span>
+When specifying&nbsp;`X-NXenrichers.document: acls`, the JSON payload of the document REST calls response that contains all related ACLs of the document:
 
 ```
 Request URL:
@@ -474,14 +472,12 @@ dublincore
 }
 ```
 
-<span>More details about the acls enricher:</span> <span>[http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/permissions/ACLJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/permissions/ACLJsonEnricher.html)</span>
+More details about the acls enricher: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/permissions/ACLJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/permissions/ACLJsonEnricher.html)
 
-### <span>Preview</span><span>
-</span>
+### Preview
 
-<span>When specifying&nbsp;`X-NXenrichers.document: preview`, the JSON payload of the document REST calls response that contains the related attached file preview of the document:</span>
-&nbsp; <span>&nbsp;</span><span>
-</span>
+When specifying&nbsp;`X-NXenrichers.document: preview`, the JSON payload of the document REST calls response that contains the related attached file preview of the document:
+&nbsp;
 
 ```
 Request URL:
@@ -862,8 +858,8 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
                     "initiatorComment": null, 
                     "participants": [], 
                     "review_result": "
-\n  \n
-\n", 
+<div>\n  </div>\n
+<table class=\"dataTableNoBorder smallTable\">\n</table>", 
                     "review_result_file": {
                         "data": "http://localhost:8080/nuxeo/nxfile/default/75dfb9e0-65dd-4150-9d66-ade0597e27c2/var_ParallelDocumentReview:review_result_file/output.ftl", 
                         "digest": "f5bd3d4fc1431be93631ecc3862a4ddc", 
@@ -1027,8 +1023,8 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
                     "assignees": [], 
                     "comment": null, 
                     "review_result": "
-\n  \n
-\n"
+<div>\n  </div>\n
+<table class=\"dataTableNoBorder smallTable\">\n</table>"
                 }, 
                 "workflowInstanceId": "75dfb9e0-65dd-4150-9d66-ade0597e27c2", 
                 "workflowModelName": "ParallelDocumentReview"
@@ -1056,6 +1052,21 @@ Adding a content enricher is done by providing a Java class and a XML contributi
 
 Here is a sample to get you started, that provides a document's parent id, title and description.
 
+{{! multiexcerpt name='enricher-contrib'}}
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="org.nuxeo.sample.enrichers.parentDocEnricher">
+<!-- Start copying here if you declare the enricher in Nuxeo Studio -->
+<extension target="org.nuxeo.ecm.core.io.MarshallerRegistry" point="marshallers">
+  <register class="org.nuxeo.university.enrichers.ParentDocEnricher" enable="true" />
+</extension>
+<!-- Stop copying here if you declare the enricher in Nuxeo Studio -->
+</component> 
+```
+
+{{! /multiexcerpt}}{{! multiexcerpt name='enricher-class'}}
+
 ```
 package org.nuxeo.sample.enrichers;
 
@@ -1074,7 +1085,7 @@ import org.nuxeo.ecm.core.api.DocumentModel;
 // Priority defines which marshaller will be used in case of conflict. Priority is an integer. 
 // The higher the number, the more priority you get: 10 > 1 for instance.
 @Setup(mode = SINGLETON, priority = REFERENCE) 
-public class ParentDocEnricher extends AbstractJsonEnricher { // You could also enrich a user or anything else
+public class ParentDocEnricher extends AbstractJsonEnricher<DocumentModel> { // You could also enrich a user or anything else
 
 	// The enricher will be called using X-NXenrichers.document: name (name being parentDoc here)
 	// If you were enriching a user, you would call it using X-NXenrichers.user: name (X-NXenrichers.entity-type)
@@ -1110,9 +1121,23 @@ public class ParentDocEnricher extends AbstractJsonEnricher { // You could also 
 }
 ```
 
+{{! /multiexcerpt}}
+
 ### Specific Object Content Enricher
 
 Here is a sample to get you started with a content enricher for the object&nbsp;<span style="line-height: 21.58px;">org</span>.nuxeo.ecm.platform.audit.api.LogEntry:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="org.nuxeo.sample.enrichers.logEntryEnricher">
+<!-- Start copying here if you declare the enricher in Nuxeo Studio -->
+<extension target="org.nuxeo.ecm.core.io.MarshallerRegistry"
+           point="marshallers">
+  <register class="org.nuxeo.sample.enrichers.LogEntryEnricher" enable="true" />
+</extension>
+<!-- Stop copying here if you declare the enricher in Nuxeo Studio -->
+</component> 
+```
 
 ```
 package org.nuxeo.sample.enrichers;
@@ -1139,7 +1164,7 @@ import org.nuxeo.runtime.api.Framework;
 import com.google.common.base.Strings;
 
 @Setup(mode = SINGLETON, priority = REFERENCE)
-public class LogEntryEnricher extends AbstractJsonEnricher {
+public class LogEntryEnricher extends AbstractJsonEnricher<LogEntry> {
 
     public static final String NAME = "sfLogEntry";
 
@@ -1175,7 +1200,7 @@ public class LogEntryEnricher extends AbstractJsonEnricher {
 }
 ```
 
-{{#> callout type='warning' heading="REST Request Header"}}
+{{#> callout type='warning' heading='REST Request Header'}}
 
 Don't forget to set the proper header to use this enricher:
 

@@ -5,7 +5,6 @@ labels:
     - transaction
     - webengine
     - webengine-component
-    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950281'
@@ -101,7 +100,7 @@ You may want to adapt the transaction timeout per-request. In that case, you sho
 
 WebEngine provides a managed `CoreSession` to any JAX-RS resource that wants to connect to the repository.&nbsp;WebEngine will close the managed `CoreSession` when no more needed (at the end of the request) so you should not worry about leaks. This session can be used either in a JAX-RS resource method, or in JAX-RS a `MessageBodyReader` or `MessageBodyWriter`.
 
-To get the managed `<span>CoreSession</span>` &nbsp;from a JAX-RS resource you can use the following code:
+To get the managed `CoreSession` &nbsp;from a JAX-RS resource you can use the following code:
 
 ```
 UserSession.getCurrentSession(httpRequest);
@@ -179,6 +178,11 @@ The `cleanup` method will be invoked after the request is processed and the resp
 You can also configure how the transaction is managed on a subset of resources in your JAX-RS application. To do this you can contribute an extension as follows:
 
 ```
+<extension target="org.nuxeo.ecm.webengine.WebEngineComponent" point="request-configuration"> 
+  <path value="/mymodule1" autoTx="false" /> 
+  <path value="/mymodule2/resources" autoTx="true" /> 
+  <path value="/mymodule3/.*\.gif" autoTx="false" regex="true"/> 
+</extension> 
 
 ```
 

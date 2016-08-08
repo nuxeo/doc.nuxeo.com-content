@@ -2,7 +2,6 @@
 title: Upgrade to JSF2
 labels:
     - seam-jsf-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -70,7 +69,7 @@ Using this migration module might be useful when upgrading a Nuxeo application t
 
 The [README file on the GitHub project](https://github.com/nuxeo/nuxeo-jsf2-migration) describes how to use the tool and how to create new rules (if you find it useful for your own migration).
 
-{{#> callout type='note' heading="Migrated files"}}
+{{#> callout type='note' heading='Migrated files'}}
 
 When the automatic migration is set in the parameters of the tool, the migrated files will be created in the same directory as the original ones but with a .migrated extension. This allows the user to compare the migrations that have been done and to avoid overriding the JSF1.2 compliant files.
 
@@ -100,201 +99,259 @@ The main dependency changes are:
 
 Here is a list of maven dependency changes:
 
-<div class="row" data-equalizer="" data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 As of 5.8 (hot-fixed)
 
 ```
 properties>
   ...
-  3.3.1.GA-NX9.04
-  2.1.0.SP1
-  2.1.0.SP1-NX3
-
-      javax.faces
-      jsf-api
-      1.2_12
-
-      javax.faces
-      jsf-impl
-      1.2_12
-
-      com.sun.facelets
-      jsf-facelets
-      1.1.15.B1
-
-      org.richfaces.framework
-      richfaces-api
-      3.3.1.GA
-
-      org.richfaces.framework
-      richfaces-impl
-      ${nuxeo.richfaces.version}
-
-      org.richfaces.ui
-      richfaces-ui
-      ${nuxeo.richfaces.version}
-
-      org.jboss.seam
-      jboss-seam
-      ${nxseam.version}
-
-          javax.el
-          el-api
-
-      org.jboss.seam
-      jboss-seam-remoting
-      ${seam.version}
-
-      org.jboss.seam
-      jboss-seam-ui
-      ${seam.version}
-
-          com.google.code.guice
-          guice
-
-      org.jboss.seam
-      jboss-seam-mail
-      ${seam.version}
-
-      org.jboss.seam
-      jboss-seam-pdf
-      ${seam.version}
-
-      org.jboss.seam
-      jboss-seam-rss
-      ${seam.version}
-
-      net.sourceforge.yarfraw
-      yarfraw
-      0.92
-
-          javax.xml
-          jaxb-api
-
-          apache-httpclient
-          commons-httpclient
-
-      org.jboss.seam
-      jboss-seam-excel
-      ${seam.version}
-
-      net.sourceforge.jexcelapi
-      jxl
-      2.6.12
-
-      org.jboss.seam
-      jboss-seam-debug
-      ${seam.version}
-
-      org.jboss.el
-      jboss-el
-      1.0_02.CR2
-
+  <nuxeo.richfaces.version>3.3.1.GA-NX9.04</nuxeo.richfaces.version>
+  <seam.version>2.1.0.SP1</seam.version>
+  <nxseam.version>2.1.0.SP1-NX3</nxseam.version>
+</properties>
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>javax.faces</groupId>
+      <artifactId>jsf-api</artifactId>
+      <version>1.2_12</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.faces</groupId>
+      <artifactId>jsf-impl</artifactId>
+      <version>1.2_12</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.facelets</groupId>
+      <artifactId>jsf-facelets</artifactId>
+      <version>1.1.15.B1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.richfaces.framework</groupId>
+      <artifactId>richfaces-api</artifactId>
+      <version>3.3.1.GA</version>
+    </dependency>
+    <dependency>
+      <groupId>org.richfaces.framework</groupId>
+      <artifactId>richfaces-impl</artifactId>
+      <version>${nuxeo.richfaces.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.richfaces.ui</groupId>
+      <artifactId>richfaces-ui</artifactId>
+      <version>${nuxeo.richfaces.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam</artifactId>
+      <version>${nxseam.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.el</groupId>
+          <artifactId>el-api</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam-remoting</artifactId>
+      <version>${seam.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam-ui</artifactId>
+      <version>${seam.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.google.code.guice</groupId>
+          <artifactId>guice</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam-mail</artifactId>
+      <version>${seam.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam-pdf</artifactId>
+      <version>${seam.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam-rss</artifactId>
+      <version>${seam.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sourceforge.yarfraw</groupId>
+      <artifactId>yarfraw</artifactId>
+      <version>0.92</version>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.xml</groupId>
+          <artifactId>jaxb-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>apache-httpclient</groupId>
+          <artifactId>commons-httpclient</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam-excel</artifactId>
+      <version>${seam.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sourceforge.jexcelapi</groupId>
+      <artifactId>jxl</artifactId>
+      <version>2.6.12</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam-debug</artifactId>
+      <version>${seam.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.el</groupId>
+      <artifactId>jboss-el</artifactId>
+      <version>1.0_02.CR2</version>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
 ```
 
-</div>
-
-<div class="column medium-6">
+</div><div class="column medium-6">
 
 As of 6.0
 
 ```
-
+<properties>
   ...
-  2.2.6
-  2.2.6-NX01
-  4.5.0.Alpha3
-  2.3.1.Final
-  2.3.1.Final.NX01
-
-      com.sun.faces
-      jsf-api
-      ${jsf.version}
-
-      com.sun.faces
-      jsf-impl
-      ${nxjsf.version}
-
-      javax.validation
-      validation-api
-      1.0.0.GA
-
-      org.richfaces
-      richfaces
-      ${richfaces.version}
-
-      org.jboss.seam
-      jboss-seam
-      ${nxseam.version}
-
-          javax.el
-          el-api
-
-      org.jboss.seam
-      jboss-seam-remoting
-      ${nxseam.version}
-
-      org.jboss.seam
-      jboss-seam-ui
-      ${seam.version}
-
-          com.google.code.guice
-          guice
-
-      org.jboss.seam
-      jboss-seam-mail
-      ${seam.version}
-
-      org.jboss.seam
-      jboss-seam-pdf
-      ${seam.version}
-
-          org.jboss.spec.javax.faces
-          jboss-jsf-api_2.1_spec
-
-      org.jboss.seam
-      jboss-seam-rss
-      ${seam.version}
-
-      net.sourceforge.yarfraw
-      yarfraw
-      0.92
-
-          javax.xml
-          jaxb-api
-
-          javax.xml.bind
-          jsr173_api
-
-          apache-httpclient
-          commons-httpclient
-
-      org.jboss.seam
-      jboss-seam-excel
-      ${seam.version}
-
-      net.sourceforge.jexcelapi
-      jxl
-      2.6.12
-
-      org.jboss.seam
-      jboss-seam-debug
-      ${seam.version}
-
-      org.jboss.el
-      jboss-el
-      1.0_02.CR6
-
+  <jsf.version>2.2.6</jsf.version>
+  <nxjsf.version>2.2.6-NX01</nxjsf.version>
+  <richfaces.version>4.5.0.Alpha3</richfaces.version>
+  <seam.version>2.3.1.Final</seam.version>
+  <nxseam.version>2.3.1.Final.NX01</nxseam.version>
+</properties>
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>com.sun.faces</groupId>
+      <artifactId>jsf-api</artifactId>
+      <version>${jsf.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.faces</groupId>
+      <artifactId>jsf-impl</artifactId>
+      <version>${nxjsf.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+      <version>1.0.0.GA</version>
+    </dependency>
+    <dependency>
+      <groupId>org.richfaces</groupId>
+      <artifactId>richfaces</artifactId>
+      <version>${richfaces.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam</artifactId>
+      <version>${nxseam.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.el</groupId>
+          <artifactId>el-api</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam-remoting</artifactId>
+      <version>${nxseam.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam-ui</artifactId>
+      <version>${seam.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.google.code.guice</groupId>
+          <artifactId>guice</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam-mail</artifactId>
+      <version>${seam.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam-pdf</artifactId>
+      <version>${seam.version}</version>
+      <exclusions>
+        <!-- dep conflicting with JSF2 -->
+        <exclusion>
+          <groupId>org.jboss.spec.javax.faces</groupId>
+          <artifactId>jboss-jsf-api_2.1_spec</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam-rss</artifactId>
+      <version>${seam.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sourceforge.yarfraw</groupId>
+      <artifactId>yarfraw</artifactId>
+      <version>0.92</version>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.xml</groupId>
+          <artifactId>jaxb-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>javax.xml.bind</groupId>
+          <artifactId>jsr173_api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>apache-httpclient</groupId>
+          <artifactId>commons-httpclient</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam-excel</artifactId>
+      <version>${seam.version}</version>
+    </dependency>
+    <!-- NXP-11018 -->
+    <dependency>
+      <groupId>net.sourceforge.jexcelapi</groupId>
+      <artifactId>jxl</artifactId>
+      <version>2.6.12</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam-debug</artifactId>
+      <version>${seam.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.el</groupId>
+      <artifactId>jboss-el</artifactId>
+      <version>1.0_02.CR6</version>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
 ```
 
-</div>
-
-</div>
-
-{{#> callout type='warning' }}
+</div></div>{{#> callout type='warning' }}
 
 Note that versions stated above may vary depending on your hot-fix version.
 
@@ -311,8 +368,12 @@ This chapter lists changes on JSF tag libraries that are used in default Nuxeo p
 If you defined a `faces-config.xml` configuration file in your module, this file namespaces should be upgraded to JSF 2 standards:
 
 ```
-
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+  version="2.0">
 ...
+</faces-config>
 
 ```
 
@@ -401,12 +462,19 @@ _<span class="pl-ent">nxdir:chainSelect*</span>_
 *   This tag (and related subtags) behaviour has changed a little, please read [How to Create a N-Level Select Widget]({{page page='how-to-create-a-n-level-select-widget'}}) again to adapt your custom templates if you defined chain select widget templates for more than two levels. The modification should be simple:
 
     ```
-
-    -    
-    -  
+     <nxdir:chainSelectListbox index="0" size="1"
+       directoryName="#{widgetProperty_parentDirectory}"
+       localize="#{widgetProperty_localize}"
+       id="#{widget.id}_parent"
+       ordering="#{empty widgetProperty_ordering?'label':widgetProperty_ordering}">
+       <a4j:ajax event="change"
+    -    render="#{widget.id}_child,#{widget.id}_message"
+    -    immediate="true">
+    -    <a4j:ajaxListener type="org.ajax4jsf.ajax.ForceRender" />
+    -  </a4j:ajax>
     +    render="#{widget.id}_child #{widget.id}_message"
     +    immediate="true" />
-
+     </nxdir:chainSelectListbox>
     ```
 
 ## Migration for Core Tag Libraries
@@ -445,7 +513,15 @@ Some Javascript methods may need to be triggered again on ajax render. One possi
 Here is an example to trigger again the tipsy tooltip library on Ajax render:
 
 ```
+<ui:composition
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:a4j="http://richfaces.org/a4j">
 
+  <script type="text/javascript" src="scripts/jquery.nuxeo.tipsy.js">
+  </script>
+
+  <script>
     jQuery(document).ready(function() {
       jQuery('.tipsyShow').initTipsy(500, 5000);
     });
@@ -457,13 +533,15 @@ Here is an example to trigger again the tipsy tooltip library on Ajax render:
         jQuery('.tipsyShow').initTipsy(500, 5000);
       }
     });
+  </script>
 
+</ui:composition>
 ```
 
 Here is an example to show errors on Ajax requests:
 
 ```
-
+<script type="text/javascript">
   jsf.ajax.addOnError(function(data) {
     jQuery.ambiance({
       title: data.description,
@@ -472,7 +550,7 @@ Here is an example to show errors on Ajax requests:
       timeout: 0
     });
   });
-
+</script>
 ```
 
 Also, note that inline scripts that are part of the DOM updated by the Ajax render will be evaluated again.
@@ -482,7 +560,11 @@ Also, note that inline scripts that are part of the DOM updated by the Ajax rend
 Ajax request status can be made visible to the user by using the following code:
 
 ```
-
+<a4j:status>
+  <f:facet name="start">
+    <h:graphicImage value="/img/standart_waiter.gif"/>
+  </f:facet>
+</a4j:status>
 ```
 
 The corresponding icon used to be associated to an ajax region. It is not the case anymore, so multiple status icons could in theory be visible on the page, but all these statuses are now displayed on the top right corner of the page (using global CSS positioning) so these changes should not be visible to the end user.

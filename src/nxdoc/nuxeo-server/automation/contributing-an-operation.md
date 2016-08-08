@@ -3,7 +3,6 @@ title: Contributing an Operation
 labels:
     - operation
     - automation-component
-    - lts2015-ok
     - excerpt
 toc: true
 confluence:
@@ -289,10 +288,9 @@ history:
 
 This page gives all the information necessary for implementing an operation and is a must read for getting a good comprehension of the framework. You should also have a look at [some of our tutorials]({{page page='getting-started-with-nuxeo-ide'}}) that show how to use [Nuxeo IDE]({{page space='idedoc' page='documentation-center-for-nuxeo-platform-ides'}}) <span style="line-height: 21.58px;">to create new operations easily and quickly, using the provided wizard.</span>
 
-<span>You can also use the Codenvy factory that we have setup and that offers you [a ready-to-build sample operation](https://codenvy.com/f?id=0djlg2kc332ipv5u), with its unitary test. Just click on **Project** > **Build & Publish** so as to get a JAR of your operation. You can deploy your first operation "SampleOperation" into Nuxeo server in Codenvy by clicking on the green arrow on panel left top.
-</span>
+You can also use the Codenvy factory that we have setup and that offers you [a ready-to-build sample operation](https://codenvy.com/f?id=0djlg2kc332ipv5u), with its unitary test. Just click on **Project** > **Build & Publish** so as to get a JAR of your operation. You can deploy your first operation "SampleOperation" into Nuxeo server in Codenvy by clicking on the green arrow on panel left top.
 
-{{/callout}}
+{{/callout}} <div style="float:right"><script type="text/javascript" style="Advanced" src="https://codenvy.com/f?id=0djlg2kc332ipv5u"></script></div>
 
 ## Implementing an Operation
 
@@ -317,6 +315,11 @@ When registering an automation chain, the chain will be checked to find a path f
 To register your operation you should create a Nuxeo XML extension to the [`operations` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--operations). Example:
 
 ```
+<extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
+    point="operations">
+    <operation
+      class="org.nuxeo.example.TestOperation" />
+  </extension>
 
 ```
 
@@ -440,7 +443,7 @@ Let's look again at the operation class defined above. You can see that operatio
 
 This annotation has several attributes like a parameter name, a required flag, a default value if any, a widget type to be used by UI operation chain builders like [Nuxeo Studio]({{page space='studio' page='automation'}}) etc.
 
-The parameter name is important since it is the key you use when defining an operation chain to refer to a specific operation parameter. If the parameter is required then its value must be specified in the operation chain definition otherwise an exception is thrown at runtime. The other parameters are useful only for UI tools that introspect the operations. For example when building an operation chain in [Nuxeo Studio]({{page space='studio' page='nuxeo-studio-documentation-center'}}) you need to render each operation parameter using a widget. The default is to use a TextBox if the parameter is a String, a CheckBox if the parameter is a boolean, a ListBox for lists etc. But in some situations you may want to override this default mapping &mdash; for example you may want to use a TextArea instead of a TextBox for a string parameter: in that case you can use the `widget` attribute to specify your desired widget.
+The parameter name is important since it is the key you use when defining an operation chain to refer to a specific operation parameter. If the parameter is required then its value must be specified in the operation chain definition otherwise an exception is thrown at runtime. The other parameters are useful only for UI tools that introspect the operations. For example when building an operation chain in [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) you need to render each operation parameter using a widget. The default is to use a TextBox if the parameter is a String, a CheckBox if the parameter is a boolean, a ListBox for lists etc. But in some situations you may want to override this default mapping &mdash; for example you may want to use a TextArea instead of a TextBox for a string parameter: in that case you can use the `widget` attribute to specify your desired widget.
 
 ## Parameter Injection
 
