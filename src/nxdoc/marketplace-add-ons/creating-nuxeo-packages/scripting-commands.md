@@ -236,7 +236,7 @@ Lets take each command and see what will be executed.
 
     ```
 
-    &nbsp;You can see a `fail` attribute was used to put a guard on this command. The guard says that the command should fail if the target file exists (i.e a JAR with the same name already exists in the Nuxeo bundles directory). See below in the [Guard Attributes]({{page}}) section for more details on using guards.
+    &nbsp;You can see a `fail` attribute was used to put a guard on this command. The guard says that the command should fail if the target file exists (i.e a JAR with the same name already exists in the Nuxeo bundles directory). See below in the [Guard Attributes](#guard-attributes) section for more details on using guards.
 
 *   The second copy command will copy the `my.properties` file from the package root to the Nuxeo configuration directory but only if the current platform distribution is not based on JBoss.
 

@@ -185,7 +185,7 @@ In Nuxeo 5.5 for PostgreSQL we've added a better way to store fulltext informati
 
 If you don't do the upgrade described in [NXP-5689](https://jira.nuxeo.com/browse/NXP-5689), you'll get the following error message:
 
-```
+```sql
 Cannot use phrase search in fulltext compatibilty mode. Please upgrade the fulltext table: ...
 ```
 

@@ -372,9 +372,9 @@ A content view definition form is composed of two parts:
 
 So, designing a new content view takes three steps:
 
-1.  [Defining the filter query]({{page}})
-2.  [Defining the form for user to input some additional filtering]({{page}})
-3.  [Defining the results table]({{page}})
+1.  [Defining the filter query](#set-query-filter)
+2.  [Defining the form for user to input some additional filtering](#define-filter-form)
+3.  [Defining the results table](#configure-result-layout)
 
 ## Set Your Query Filter
 
@@ -515,7 +515,7 @@ There are several ways of using the content view you configured in your Nuxeo Pl
 
 *   [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
 *   [Configure a Domain Specific Advanced Search]({{page space='nxdoc58' page='configure-a-domain-specific-advanced-search'}})
-*   [undefined]({{page}})
+*   [undefined]()
 *   [How to Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
 *   [How-To Index]({{page page='how-to-index'}})
 

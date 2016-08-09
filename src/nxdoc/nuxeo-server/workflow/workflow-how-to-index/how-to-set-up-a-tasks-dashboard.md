@@ -115,7 +115,7 @@ We provide some quick steps to follow using [Extension points]({{page page='how-
 1.  **Activate Workflow tab**
     Add the following extension:
 
-    ```
+    ```xml
     <extension target="org.nuxeo.ecm.platform.actions.ActionService"
         point="actions">
        <action id="workflow_dashboard" link="view_workflow" label="label.main.tab.workflow"
@@ -138,7 +138,7 @@ We provide some quick steps to follow using [Extension points]({{page page='how-
 
         *   or the dedicated&nbsp;**Workflow** > **Apply Mapping on Input Task** operation, with the name of the mapping.&nbsp;A mapping can be contributed in the **Advanced settings** > **XML Extensions** feature:
 
-            ```
+            ```xml
             <extension target="org.nuxeo.ecm.core.api.propertiesmapping.PropertiesMappingComponent"
              point="mapping">
             <mapping name="taskMapping">
@@ -156,7 +156,7 @@ We provide some quick steps to follow using [Extension points]({{page page='how-
 4.  **Create the content views for each specific tasks queues you want to see**
     List of tasks in your dashboard are content views. Only the query is a bit different, with the NXQL keyword "`nt:type`". Here is an example:
 
-    ```
+    ```sql
     nt:type = 'Task626' AND ecm:currentLifeCycleState != 'ended'
     ```
 
@@ -171,7 +171,7 @@ We provide some quick steps to follow using [Extension points]({{page page='how-
 
     Finally, you want to display tabs with the content views inside. There is a specific convention to follow that will automatically match the tab and the content view, based on the content view ID, see the exemple below, better than a long paragraph:
 
-    ```
+    ```xml
     <extension target="org.nuxeo.ecm.platform.actions.ActionService"
       point="actions">
       <!-- The action below is adding the "Time off workflow" sub tab of the Main "Workflow 
@@ -220,9 +220,9 @@ We provide some quick steps to follow using [Extension points]({{page page='how-
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [undefined]({{page}})&nbsp;
+*   [undefined]()&nbsp;
 *   [How to Modify a Workflow Variable outside of Workflow Context]({{page page='how-to-modify-a-workflow-variable-outside-of-workflow-context'}})
-*   [undefined]({{page}})&nbsp;
+*   [undefined]()&nbsp;
 *   [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})&nbsp;
 *   [How-To Index]({{page page='how-to-index'}})
 

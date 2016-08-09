@@ -326,7 +326,7 @@ Reference JIRA issue: [NXP-17690](https://jira.nuxeo.com/browse/NXP-17690)
 
 The Nuxeo Platform distribution has been refactored to separate server-side features and the user interface. As a consequence the user interface is now available in a Nuxeo Package called [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui). This package should be installed on the new base distribution of the platform, called Nuxeo Server. Using Nuxeo Server with the Nuxeo JSF UI is the equivalent of the previous CAP distribution.
 
-```
+```bash
 $ nuxeoctl mp-install nuxeo-jsf-ui
 ```
 
@@ -342,7 +342,7 @@ Nuxeo is now sending the `X-FRAME-OPTIONS` header with `SAMEORIGIN` value. It re
 
 You can disable it using:
 
-```
+```xml
 <require>org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService.defaultContrib</require>
 
 <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService"
@@ -410,7 +410,7 @@ The permission checks done when adapting a document to a `FileSystemItem` are op
 
 The previous behavior can be re-activated using:
 
-```
+```xml
 <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration"> 
   <property name="org.nuxeo.drive.permissionCheckOptimized">false</property> 
 </extension> 

@@ -129,7 +129,7 @@ If you installed the Nuxeo CSV add-on from the Nuxeo Marketplace, you'll probabl
     {{/callout}}
 4.  Paste the following content in the text area and fill in the&nbsp;`<type>` tag with the ID of the document type on which you want to enable CSV import.
 
-    ```
+    ```xml
     <require>org.nuxeo.ecm.platform.actions</require>
     <extension target="org.nuxeo.ecm.platform.actions.ActionService"
       point="filters">

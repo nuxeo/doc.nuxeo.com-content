@@ -353,10 +353,10 @@ This is the very first recipe of this cookbook and it will be the basis for the 
 
 This recipe is composed of the major steps below:
 
-*   [Step 1: Create the basic project skeleton using Maven]({{page}})
-*   [Step 2: Complete the folder structure]({{page}})
-*   [Step 3: Adapt or create Files]({{page}})
-*   [Step 4: Install and check the deployment of your Bundle]({{page}})
+*   [Step 1: Create the basic project skeleton using Maven](#create-the-basic-project-skeleton-using-maven)
+*   [Step 2: Complete the folder structure](#complete-the-folder-structure)
+*   [Step 3: Adapt or create Files](#adapt-or-create-files)
+*   [Step 4: Install and check the deployment of your Bundle](#install-and-check-the-deployment-of-your-bundle)
 
 ## What you need
 

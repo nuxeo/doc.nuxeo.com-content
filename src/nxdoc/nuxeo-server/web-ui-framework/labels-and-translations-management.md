@@ -50,7 +50,7 @@ Labels can be gathered in .properties files and translated in properties file wi
 *   Let your resources files somewhere in your plugin hierarchy, for instance `OSGI-INF/l10n`
 *   Add an "append" instruction to the `deployment-fragment.xml` file of your plugin (and add this file if it is not added yet) for each translation file
 
-    ```
+    ```xml
      <append from="nuxeo.faceted.search.tmp/OSGI-INF/l10n/messages_fr.properties"
           to="nuxeo.war/WEB-INF/classes/messages_fr.properties" addNewLine="true" />
     ```
@@ -59,7 +59,7 @@ Then, you can reference your labels keys from the various context that are provi
 
 *   on Facelet Templates:&nbsp;
 
-    ```
+    ```xml
      <h:outputText value="#{messages['myLabelKey']}" />
     ```
 

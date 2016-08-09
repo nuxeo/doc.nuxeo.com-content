@@ -236,11 +236,11 @@ Of course this requires that the fulltext index includes the `relatedtext` schem
 
 ## HasStoryboard
 
-Marker facet to be set on types which you want to generate Storyboard, types on which you already added the [Video facet]({{page}}).
+Marker facet to be set on types which you want to generate Storyboard, types on which you already added the [Video facet](#video).
 
 ## HasVideoPreview
 
-Marker facet to be set on types which you want to generate a video preview (screenshot), and on which you already added the [Video facet]({{page}}).
+Marker facet to be set on types which you want to generate a video preview (screenshot), and on which you already added the [Video facet](#video).
 
 ## HiddenInNavigation
 

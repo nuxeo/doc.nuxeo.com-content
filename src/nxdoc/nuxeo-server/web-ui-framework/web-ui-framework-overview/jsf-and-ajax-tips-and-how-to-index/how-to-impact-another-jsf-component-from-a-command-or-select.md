@@ -122,7 +122,7 @@ The Seam Component [selectionActions](http://explorer.nuxeo.org/nuxeo/site/distr
 
 #### Sample Template Excerpt
 
-```
+```xml
 <ui:fragment
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:ui="http://java.sun.com/jsf/facelets"
@@ -182,7 +182,7 @@ The Seam Component [selectionActions](http://explorer.nuxeo.org/nuxeo/site/distr
 
 This is an excerpt of the [widget template displaying additional information about a selected flavor](https://github.com/nuxeo/nuxeo-features/blob/master/localconf/nuxeo-localconf-web/src/main/resources/web/nuxeo.war/widgets/select_flavor_widget_template.xhtml) in local configuration:
 
-```
+```xml
 <h:panelGroup>
   <nxu:set var="flavors"
     value="#{themeConfigurationActions.getAvailableFlavors(themeActions.defaultTheme)}"
@@ -244,7 +244,7 @@ Also, additional input fields to show are declared as standard sub-widgets to a 
 
 #### Sample Widget Template
 
-```
+```xml
 <ui:fragment
   xmlns:h="http://java.sun.com/jsf/html"
   xmlns:a4j="http://richfaces.org/a4j"
@@ -282,7 +282,7 @@ To use this template:
 
 Here is a sample contribution:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
   point="widgets">
 

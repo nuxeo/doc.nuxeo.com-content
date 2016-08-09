@@ -126,7 +126,7 @@ The Service API is composed by three services :
 
 You can use AuditReader to do simple queries using the JPA Query language, here an example of getting all the logs of the category 'MyExport' and ordered by the date of the event :
 
-```
+```java
 StringBuffer query = new StringBuffer("from LogEntry log where ");
 query.append(" log.category='");
 query.append("MyExport");
@@ -137,7 +137,7 @@ List result = reader.nativeQuery(query.toString(), 1, 1);
 
 A set of methods allows the user to do common queries quiet easily like getting all the log entries for a document, getting a specific log by its id, etc.
 
-```
+```java
 AuditReader reader = Framework.getService(AuditReader.class);
 
 // Getting of the logs for the document 'doc'
@@ -202,7 +202,7 @@ Those default auditable events match Nuxeo core base events :
 
 If you are sending new Nuxeo core events and want them audited, you have to extend the extension point **event**. Here is an example of a contribution to the extension point event :
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.audit.service.NXAuditEventsService" point="event">
 	<event name="documentCreated" />
     <event name="documentCreatedByCopy" />
@@ -243,7 +243,7 @@ To do this, you have to define an EL expression and associate it with a key. You
 
 If you want to contribute to the extended info of the service, you have to use the extension point **extendedInfo**. Here is an example of a contribution to the extension point :
 
-```
+```xml
 <extension point="extendedInfo" target="org.nuxeo.ecm.platform.audit.service.NXAuditEventsService">
     <extendedInfo expression="${source.dublincore.title}" key="title" />
     <extendedInfo expression="${message.cacheKey}" key="key" />
@@ -253,7 +253,7 @@ If you want to contribute to the extended info of the service, you have to use t
 
 Since 7.4, you can also extend the audit info per event name:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.audit.service.NXAuditEventsService"
     point="event">
     <event name="afterWorkflowStarted">
@@ -277,7 +277,7 @@ When the extension point is contributed, the data are stored into the tables NXP
 
 The contribution to the extension point **adapter** in component&nbsp;**org.nuxeo.ecm.platform.audit.service.NXAuditEventsService** allows to define the adapter that will be injected in EL context. Here is an example of a contribution to the extension point adapter.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.audit.service.NXAuditEventsService" point="adapter">
     <adapter name="myadapter" class="org.nuxeo.ecm.core.api.facet.VersioningDocument"/>
 </extension>
@@ -289,7 +289,7 @@ The contribution to the extension point **adapter** in component&nbsp;**org.nuxe
 
 A PostCommit asynchronous listener is defined and pushed an Event Bundle, which is an ordered set of events raised during an user operation, into the Audit log. Here is an example of a contribution to the extension point **listener**.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
 	<listener name="auditLoggerListener" async="true" postCommit="true"
     	class="org.nuxeo.ecm.platform.audit.listener.AuditEventLogger" />
@@ -302,7 +302,7 @@ A PostCommit asynchronous listener is defined and pushed an Event Bundle, which 
 
 Audit used Hibernate as a JPA provider, the configuration is done in the extension point **hibernate**&nbsp;for the target **org.nuxeo.ecm.core.persistence.PersistenceComponent**. This extension point lets you override the default hibernate configuration.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.persistence.PersistenceComponent" point="hibernate">
   <hibernateConfiguration name="nxaudit-logs">
     <datasource>nxaudit-logs</datasource>
@@ -319,7 +319,7 @@ Audit used Hibernate as a JPA provider, the configuration is done in the extensi
 
 It is also possible to configure queues used by the Audit Service. Each queue is using a separate queue and a single thread for logging. The extension point used to define the queues' parameters is **queue** for the target&nbsp;**org.nuxeo.ecm.core.work.service**.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.work.service" point="queues">
   <queue id="audit">
     <name>Audit queue</name>

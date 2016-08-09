@@ -406,7 +406,9 @@ The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/vi
 
 *   [`videoConversions`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.9.5/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--videoConversions) : Extension point to contribute video conversions that will be available on the VideoService.
 
-    ```
+    {{#> panel type='code' heading='Default conributions'}}
+
+    ```xml
     <extension target="org.nuxeo.ecm.platform.video.service.VideoService"
       point="videoConversions">
       <videoConversion name="MP4 480p" converter="convertToMP4" height="480"/>
@@ -415,15 +417,20 @@ The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/vi
     </extension>
     ```
 
+    {{/panel}}
 *   [`automaticVideoConversions`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.9.5/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--automaticVideoConversions) : Extension point to contribute which video conversion should be done automatically (through the `videoAutomaticConversions` listener).
 
-    ```
+    {{#> panel type='code' heading='Default contributions'}}
+
+    ```xml
     <extension target="org.nuxeo.ecm.platform.video.service.VideoService"
       point="automaticVideoConversions">
       <automaticVideoConversion name="MP4 480p" order="0" />
       <automaticVideoConversion name="WebM 480p" order="10" />
     </extension> 
     ```
+
+    {{/panel}}
 
 ### Audio
 

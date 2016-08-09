@@ -630,7 +630,7 @@ Hello ${Context.principal.name}! Your country is ${country}, and your city is ${
 
 {{#> callout type='note' }}
 
-The module declaration documented here is deprecated for Java based modules. See [Declaring a WebEngine Application in Nuxeo]({{page}}) for the new declaration. The `module.xml` file is now optional - and should be used to declare module shortcuts or to describe links. Groovy based modules still use the old declaration method.
+The module declaration documented here is deprecated for Java based modules. See [Declaring a WebEngine Application in Nuxeo](#declaring-webengine-module-in-nuxeo) for the new declaration. The `module.xml` file is now optional - and should be used to declare module shortcuts or to describe links. Groovy based modules still use the old declaration method.
 
 {{/callout}}
 

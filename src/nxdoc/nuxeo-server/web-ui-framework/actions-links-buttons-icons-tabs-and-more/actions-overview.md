@@ -118,7 +118,7 @@ Custom actions can be contributed to the actions service, using its extension po
 
 An action can be registered using the following example extension:
 
-```
+```html/xml
 <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
 
   <action id="newWorkspace" label="command.create.workspace" 
@@ -165,7 +165,7 @@ Do not forget to add the original component name requirement to ensure proper ov
 
 Here are some actions override examples:
 
-```
+```xml
 <require>org.nuxeo.ecm.platform.actions</require>
 
 <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
@@ -185,7 +185,7 @@ Here are more examples showing how to use actions in the default application.
 
 Here is a small sample to add a custom confirmation message on an action:
 
-```
+```xml
 <extension point="actions" target="org.nuxeo.ecm.platform.actions.ActionService">
 
   <action id="JenkinsReportSendMail" label="Send Mail" order="0" type="link"
@@ -219,7 +219,7 @@ Tab items on document views, for instance, are using actions to benefit from sor
 
 So tab actions are using the type "[Rest document link](http://showcase.nuxeo.com/nuxeo/layoutDemo/rest_document_linkAction)" and state in the "link" property the template to include for the tab content:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
 
   <action id="TAB_EDIT" link="/incl/tabs/document_edit.xhtml" order="20"
@@ -242,7 +242,7 @@ This action is showing the "Edit" tab on documents. It displays the content of t
 
 Here is another sample that displays the document permanent link inside a FancyBox:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
 
   <action id="permalinkAction" order="20" label="label.permalink" type="fancybox"

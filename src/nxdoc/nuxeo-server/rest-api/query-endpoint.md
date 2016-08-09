@@ -251,9 +251,11 @@ Read the following documentation to use the Query endpoint.
 ## Endpoint
 
 <table><tbody><tr><th colspan="1">Path</th><th colspan="1">Endpoint</th></tr><tr><td colspan="1">
+
 **GET**<br>
 `/api/v1/query`<br>
 `/api/v1/query/NXQL`
+
 </td><td colspan="1">
 
 Endpoint to perform queries on the repository in NXQL.
@@ -286,12 +288,14 @@ By default: `SELECT * FROM Document`
 `integer`
 
 </td><td colspan="1">
+
 {{#md}}
 The number of entries per page.
 
 By default: 0 (0 means no pagination.)
 
 The maximum number of entries per page is 1000 by default. See [nuxeo.pageprovider.default-<span class="il">max</span>-<span class="il">page</span>-<span class="il">size</span> ]({{page page='configuration-parameters-index-nuxeoconf'}}) to customize it.
+
 {{/md}}
 </td></tr><tr><td colspan="1">
 
@@ -381,11 +385,15 @@ Note this is only interesting when using a page provider, defined server side.
 
 &nbsp;
 
+{{#> panel type='code' heading='Examples'}}
+
 ```
 http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document
 
 http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document&pageSize=2&currentPageIndex=1
 ```
+
+{{/panel}}{{#> panel type='code' heading='Response'}}
 
 ```
 {
@@ -450,6 +458,8 @@ http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document&pageS
 }
 ```
 
+{{/panel}}
+
 ### Query - Elasticsearch
 
 &nbsp;In order to perform NXQL queries on Elasticsearch repository through the&nbsp;`query` endpoint, the following configuration must be added in `$NUXEO_HOME/bin/nuxeo.conf`:
@@ -468,7 +478,7 @@ Here are different use cases when defining page providers and making it possible
 
 #### Page Provider without Parameters
 
-```
+```xml
 <coreQueryPageProvider name="latest_docs">
   <pattern>
     SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation'
@@ -479,14 +489,18 @@ Here are different use cases when defining page providers and making it possible
 </coreQueryPageProvider>
 ```
 
+{{#> panel type='code' heading='Example'}}
+
 ```
 http://localhost:8080/nuxeo/site/api/v1/query/latest_docs
 
 ```
 
+{{/panel}}
+
 #### Page Provider with Parameters Referenced with the '?' Character
 
-```
+```xml
 <coreQueryPageProvider name="tree_children">
   <pattern>
     SELECT * FROM Document WHERE ecm:parentId = ? AND ecm:isProxy = 0
@@ -498,14 +512,18 @@ http://localhost:8080/nuxeo/site/api/v1/query/latest_docs
 </coreQueryPageProvider>
 ```
 
+{{#> panel type='code' heading='Example'}}
+
 ```
 http://localhost:8080/nuxeo/site/api/v1/query/tree_children?queryParams=47dd6d8d-d8d0-4a09-9e3e-e30fc8877df1
 
 ```
 
+{{/panel}}
+
 #### Page Provider with Named Parameter in the Pattern
 
-```
+```xml
 <coreQueryPageProvider name="docs_by_title_and_desc">
   <pattern>
     SELECT * FROM Document WHERE dc:title = :title AND dc:description LIKE :desc
@@ -515,14 +533,18 @@ http://localhost:8080/nuxeo/site/api/v1/query/tree_children?queryParams=47dd6d8d
 </coreQueryPageProvider>
 ```
 
+{{#> panel type='code' heading='Example'}}
+
 ```
 http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_and_desc?title=mytitle&desc=mydesc
 
 ```
 
+{{/panel}}
+
 #### Page Provider with Named Parameter in WHERE Clause
 
-```
+```xml
 <coreQueryPageProvider name="docs_by_title_if_any">
   <whereClause>
     <predicate parameter="dc:title" operator="=">
@@ -534,10 +556,14 @@ http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_and_desc?title=mytit
 </coreQueryPageProvider>
 ```
 
+{{#> panel type='code' heading='Example'}}
+
 ```
 http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_if_any?title=mytitle
 http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_if_any
 ```
+
+{{/panel}}
 
 In the second example, no filtering will be performed: the title parameter is not filled so the corresponding predicate will not be part of the resulting query.
 
@@ -547,7 +573,7 @@ Named parameters will be, by default, treated as String values. If you need furt
 
 Assuming a document type NamedParamDoc, with associated schema with prefix `np`, has been defined, the following query can be performed:
 
-```
+```xml
 <coreQueryPageProvider name="docs_by_title_complex">
   <searchDocumentType>NamedParamDoc</searchDocumentType>
   <whereClause>
@@ -563,9 +589,13 @@ Assuming a document type NamedParamDoc, with associated schema with prefix `np`,
 </coreQueryPageProvider>
 ```
 
+{{#> panel type='code' heading='Example'}}
+
 ```
 http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_complex?np%3Atitle=mytitle&np%3AisCheckedIn=true
 ```
+
+{{/panel}}{{#> panel type='code' heading='Response'}}
 
 ```
 {
@@ -611,9 +641,13 @@ http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_complex?np%3Atitle=m
 }
 ```
 
+{{/panel}}
+
 ### Page Provider - Elasticsearch
 
-```
+{{#> panel type='code' heading='Default Page provider in Nuxeo Server'}}
+
+```xml
 <genericPageProvider name="aggregates_1"
   class="org.nuxeo.elasticsearch.provider.ElasticSearchNxqlPageProvider">
   <property name="coreSession">#{documentManager}</property>
@@ -644,10 +678,14 @@ http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_complex?np%3Atitle=m
 
 ```
 
+{{/panel}}{{#> panel type='code' heading='Examples'}}
+
 ```
 http://localhost:8080/api/v1/query/aggregates_1
 
 ```
+
+{{/panel}}{{#> panel type='code' heading='Response'}}
 
 ```
 {
@@ -800,3 +838,5 @@ http://localhost:8080/api/v1/query/aggregates_1
   }
 }
 ```
+
+{{/panel}}

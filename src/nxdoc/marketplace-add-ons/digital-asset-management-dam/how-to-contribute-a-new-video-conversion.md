@@ -71,7 +71,9 @@ A video conversion depends of a `command`, a `converter`&nbsp;and a `videoConver
 
 ## Contributing the Command
 
-```
+{{#> panel type='code' heading='Command contribution'}}
+
+```xml
 <extension target="org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent"
   point="command">
 
@@ -86,6 +88,8 @@ A video conversion depends of a `command`, a `converter`&nbsp;and a `videoConver
 </extension>
 ```
 
+{{/panel}}
+
 **Parameters**:
 
 *   `inFilePath`&nbsp;and `outFilePath` will be filled by Nuxeo,
@@ -95,7 +99,7 @@ A video conversion depends of a `command`, a `converter`&nbsp;and a `videoConver
 
 The converter contribution depends of an already defined `command`.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"
   point="converter">
 
@@ -130,7 +134,7 @@ Here we use the generic `VideoConversionConverter`&nbsp;converter, only the `sou
 
 For instance, the converter to convert to MP4 looks like:
 
-```
+```xml
 <converter name="convertToMP4" class="org.nuxeo.ecm.platform.video.convert.VideoConversionConverter">
   <sourceMimeType>video/mpeg</sourceMimeType>
   <sourceMimeType>video/webm</sourceMimeType>
@@ -153,7 +157,7 @@ For instance, the converter to convert to MP4 looks like:
 
 The video conversion contribution depends on an already defined converter. The same converter could be used for more than one video conversion if you wanted different sizes.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.video.service.VideoService"
   point="videoConversions">
   <videoConversion name="WebM 480p" converter="convertToWebM" height="480"/>
@@ -169,7 +173,7 @@ The video conversion contribution depends on an already defined converter. The s
 
 Assuming `videoDocument`&nbsp;is a Document with the `Video` facet, to launch the "WebM 480p" video conversion on it:
 
-```
+```java
 DocumentModel videoDocument = ...
 VideoService videoService = Framework.getLocalService(VideoService.class);
 videoService.launchConversion(videoDocument, "WebM 480p");

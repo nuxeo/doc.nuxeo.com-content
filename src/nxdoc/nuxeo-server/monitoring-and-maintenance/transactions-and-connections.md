@@ -123,13 +123,13 @@ Troubleshooting issues with&nbsp;connections with transactional resources (datab
 
 Configure log4j in `$NUXEO_HOME/lib/log4j.xml` by adding the following keywords to your appender conversion pattern `%t` for the thread name and `%X`&nbsp;for the logging context map:
 
-```
+```html/xml
 <param name="ConversionPattern" value="%d{ISO8601} %t %-5p [%c] %m %X%n" />
 ```
 
 You should also add a new category if you want the traces to be enabled:
 
-```
+```html/xml
 <category name="org.nuxeo.ecm.core.management.jtajca">
   <priority value="TRACE" />
 </category>

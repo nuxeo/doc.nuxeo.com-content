@@ -585,7 +585,7 @@ Sample example on 3 levels with widget property `directoryName` filled with the 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [undefined]({{page}})
+*   [undefined]()
 *   [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
 *   [Customize the Versioning and Comment Widget]({{page page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
 *   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})

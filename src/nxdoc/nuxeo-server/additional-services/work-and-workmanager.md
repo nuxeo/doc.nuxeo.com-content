@@ -116,7 +116,7 @@ For long-running Work, `work()` should periodically check for `isSuspending()` a
 
 Once a Work instance is constructed, it must be sent to the WorkManager for execution using the `schedule()` method. The recommended way to call this method is:
 
-```
+```java
 WorkManager workManager = Framework.getService(WorkManager.class);
 workManager.schedule(work, true);
 ```
@@ -129,7 +129,7 @@ You should avoid using the `Scheduling` argument to the `schedule()` method, as 
 
 Every Work instance is queued in a Work Queue. Each queue is associated with a thread pool of one or more threads, which will execute the Work instances whenever a thread becomes available.
 
-```
+```xml
 <extension point="queues" target="org.nuxeo.ecm.core.work.service">
   <queue id="myqueue">
     <name>My Queue</name>
@@ -154,7 +154,7 @@ When using persistent queues (using Redis, see [Redis Configuration]({{page page
 
 If you want a given Nuxeo instance to stop processing a given queue, you can specify in this instance's configuration to disable the queue:
 
-```
+```xml
 <extension point="queues" target="org.nuxeo.ecm.core.work.service">
   <queue id="myqueue" processing="false"/>
 </extension>
@@ -162,7 +162,7 @@ If you want a given Nuxeo instance to stop processing a given queue, you can spe
 
 To disable all queues and just re-enable one you want to see active, you can use something like:
 
-```
+```xml
 <extension point="queues" target="org.nuxeo.ecm.core.work.service">
   <queue id="*" processing="false"/>
   <queue id="myqueue" processing="true"/>
@@ -201,7 +201,7 @@ This is where the queue configuration comes into play.
 
 Let's say you define a queue for managing Video conversions:
 
-```
+```xml
 <extension point="queues" target="org.nuxeo.ecm.core.work.service">
   <queue id="HeavyProcessing">
     <name>HeavyProcessingQueue</name>
@@ -214,7 +214,7 @@ Let's say you define a queue for managing Video conversions:
 
 Typically, the "interactive nodes" are configured to not consume this type of queue.
 
-```
+```xml
 <extension point="queues" target="org.nuxeo.ecm.core.work.service">
   <queue id="HeavyProcessing" processing="false"/>
 </extension>
@@ -222,7 +222,7 @@ Typically, the "interactive nodes" are configured to not consume this type of qu
 
 Then the "background processing nodes" are on the contrary, configured to consume these queues : so they will do the heavy processing that was scheduled by the interactive nodes.
 
-```
+```xml
 <extension point="queues" target="org.nuxeo.ecm.core.work.service">
   <queue id="HeavyProcessing" processing="true"/>
 </extension>

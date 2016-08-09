@@ -65,6 +65,8 @@ Example:
 
 I have to create an ExceptionTest extending the RestOperationException:
 
+{{#> panel type='code' heading='ExceptionTest.java'}}
+
 ```
 /*
  * (C) Copyright 2014 Nuxeo SA (http://nuxeo.com/) and contributors.
@@ -105,7 +107,11 @@ public class ExceptionTest extends RestOperationException {
 
 ```
 
+{{/panel}}
+
 Given a custom operation HttpStatusOperationTest:
+
+{{#> panel type='code' heading='HttpStatusOperationTest.java'}}
 
 ```
 /*
@@ -172,6 +178,8 @@ public class HttpStatusOperationTest {
 
 ```
 
+{{/panel}}
+
 I can decide to throw a custom exception (ExceptionTest) with the appropriate HTTP status code (here 405).
 
 {{#> callout type='warning' }}
@@ -187,6 +195,8 @@ In case you would like to specify a success HTTP status code in return of your c
 Example:
 
 Given a custom operation HttpStatusOperationTest:
+
+{{#> panel type='code' heading='HttpStatusOperationTest.java'}}
 
 ```
 /*
@@ -250,6 +260,8 @@ public class HttpStatusOperationTest {
 }
 
 ```
+
+{{/panel}}
 
 I can set into the context the appropriate http status code that will be attached to the rest call response. (here 206)
 

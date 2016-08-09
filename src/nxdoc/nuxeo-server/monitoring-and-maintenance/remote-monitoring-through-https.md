@@ -98,7 +98,7 @@ An easy way to start the web console is to:
 *   enable JMX on your server by uncommenting the&nbsp;`Enable JMX` line in your configuration (`nuxeo.conf`)
 *   use a JMX command line such as&nbsp;`jmxterm` and run the following commands
 
-```
+```text
 open localhost:1089
 bean org.nuxeo:format=html,type=jmx-adaptor
 run start
@@ -112,7 +112,7 @@ If you need more advanced services such as those provided by the Java Mission Co
 
 You must then add the DMK agent library `com.sun.jdmk:core`&nbsp; to the `JMX` client classpath. For example, with the&nbsp;Java Mission Control console, you have to add the following line to the&nbsp;`JVM` arguments section in your&nbsp;`jmc.ini`.
 
-```
+```text
 -vmargs
 -Xbootclasspath/a:/../nuxeo/nxserver/lib/core-1.0-b02.jar
 ```

@@ -178,7 +178,7 @@ history:
 *   **How can I disable the default existing workflow SerialDocumentReview for the documents of type File and Note?**
     It's very simple, just use the following contribution to override its availability filter:
 
-    ```
+    ```html/xml
     <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="filters">
         <filter id="filter@SerialDocumentReview" append="true">
           <rule grant="false">
@@ -193,7 +193,7 @@ history:
 
     Use the following contribution:
 
-    ```
+    ```html/xml
     <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="filters">
         <filter id="filter@SerialDocumentReview" append="true">
           <rule grant="true">

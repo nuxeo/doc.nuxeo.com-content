@@ -106,7 +106,7 @@ The general procedure to make a new plug-in available is to apply the initializa
 
 1.  Go to the [textcolor page](http://www.tinymce.com/wiki.php/Plugin:textcolor), that provides the initialization code.
 
-    ```
+    ```js
     tinymce.init({
         plugins: "textcolor",
         toolbar: "forecolor backcolor"
@@ -128,19 +128,19 @@ The general procedure to make a new plug-in available is to apply the initializa
 
 4.  Copy the `plugins` argument of the textcolor definition and insert it in the `plugins` argument of your file.
 
-    ```
+    ```js
     plugins : ["textcolor link image code searchreplace paste visualchars charmap table fullscreen preview nuxeoimageupload nuxeolink"],
     ```
 
 5.  Copy the `toolbar` argument of the textcolor definition and insert it in the `toolbar3` argument of your file. This will add the buttons on the third line of the TinyMCE toolbar.
 
-    ```
+    ```js
     toolbar3 : "forecolor backcolor | table | hr removeformat visualchars | subscript superscript | charmap preview | fullscreen nuxeoimageupload nuxeolink",
     ```
 
     The resulting code is:
 
-    ```
+    ```js
       tinyMCE
           .init({
             width : width,

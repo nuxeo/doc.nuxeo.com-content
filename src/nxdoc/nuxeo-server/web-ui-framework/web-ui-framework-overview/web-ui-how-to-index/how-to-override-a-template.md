@@ -73,7 +73,9 @@ Once your file is created and modified to suit your needs, you have to deploy it
 
 In the Nuxeo Platform, the WAR file is generated each time you start the server by looking into each JAR in `nxserver/bundles` and `nxserver/plugins`. More precisely, this happens because you set an `install` XML tag in the `deployment-fragment.xml` file. Content syntax of the tag is simply Ant. Create a file&nbsp;`deployment-fragment.xml` under `resources/OSGI-INF` _._
 
-```
+{{#> panel type='code' heading='deployment-fragment.xml'}}
+
+```xml
 <?xml version="1.0"?>
 <fragment version="1">
 
@@ -88,6 +90,8 @@ In the Nuxeo Platform, the WAR file is generated each time you start the server 
 
 </fragment>
 ```
+
+{{/panel}}
 
 &nbsp;
 

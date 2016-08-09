@@ -135,7 +135,7 @@ You may want to use [Nuxeo Platform Template Rendering add-on]({{page page='temp
 1.  In Studio, create the FreeMarker template (**Templates** > **Document template**).
     You can use the following sample for instance.
 
-    ```
+    ```xml
     <#list This as doc>
 
     <h1>${doc.title}</h1>

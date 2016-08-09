@@ -215,7 +215,7 @@ The collection reference is available in the event context map. For example, wit
 
 To do so you need to add the following XML contribution with[either Nuxeo Studio or a custom bundle]({{page page='how-to-contribute-to-an-extension'}}):
 
-```
+```xml
 <component name="org.nuxeo.drive.actions.collections">
 	<require>org.nuxeo.drive.actions</require>
 		<extension target="org.nuxeo.ecm.platform.actions.ActionService"

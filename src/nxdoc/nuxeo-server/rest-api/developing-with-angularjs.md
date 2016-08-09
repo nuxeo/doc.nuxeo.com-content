@@ -223,7 +223,7 @@ In order to get a clean installation, we will make use of [Yeoman's angular gene
 
 5.  Edit the `app/scripts/app.js` file to add the nuxeo module. The file should look somewhat like this:
 
-    ```
+    ```js
     angular
       .module('someModule', 
         '...', 
@@ -236,7 +236,7 @@ In order to get a clean installation, we will make use of [Yeoman's angular gene
     1.  Go to the `nuxeo-angular-sample-front/src/main/yo` folder.
     2.  Edit the `Grunfile.js` file to configure the dist folder as below. Replace `myapp` with the folder name you want to put your application into:
 
-        ```
+        ```js
         // Configurable paths for the application
           var appConfig = {
             app: require('./bower.json').appPath || 'app',
@@ -266,7 +266,7 @@ For detailed usage of the nuxeo angular client, take a look at its [GitHub docum
 
 ### Step 3 - Deploying the AngularJS Application in a Nuxeo Instance
 
-Deploying an embedded application consists in putting your AngularJS application into the Nuxeo Platform's `nuxeo.war` folder. By doing so, people will be able to access it using a URL like <span class="nolink">http://mynuxeoinstanceurl/nuxeo/myapp</span>. See the section [Deployment options]({{page}}).
+Deploying an embedded application consists in putting your AngularJS application into the Nuxeo Platform's `nuxeo.war` folder. By doing so, people will be able to access it using a URL like <span class="nolink">http://mynuxeoinstanceurl/nuxeo/myapp</span>. See the section [Deployment options](#deployment_options).
 
 The good news is the Nuxeo Angular Sample project already provides you with everything you need to deploy the application in a clean fashion, through a Nuxeo Package. Quick reminder: Nuxeo Packages allow you to deploy bundles, resources, libraries and much more on your server easily. They are versioned and can be installed, upgraded, uninstalled either from the graphical interface or the command line. All of this makes life easier for developers and sysadmins alike. See the page [Installing a New Package on Your Instance]({{page page='installing-a-new-package-on-your-instance'}}).
 

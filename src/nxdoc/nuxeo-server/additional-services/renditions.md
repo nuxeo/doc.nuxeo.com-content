@@ -89,7 +89,9 @@ Renditions are declared on a document through rendition definition contributions
 
 A rendition definition can be contributed through the&nbsp; [`renditionDefinitions`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.rendition.service.RenditionService--renditionDefinitions) extension point.
 
-```
+{{#> panel type='code' heading='Sample contribution for a PDF rendition'}}
+
+```xml
 <extension target="org.nuxeo.ecm.platform.rendition.service.RenditionService"
   point="renditionDefinitions">
   <renditionDefinition name="pdf">
@@ -105,11 +107,13 @@ A rendition definition can be contributed through the&nbsp; [`renditionDefinitio
 </extension>
 ```
 
+{{/panel}}
+
 By default, the rendition is computed through an automation chain, specified in the&nbsp;`operationChain` element. The rendition isn't stored permanently unless the code requesting it explicitly asks for it to be stored, but since Nuxeo 7.10 the default can be changed by using the&nbsp;`storeByDefault` element.
 
 When using an automation chain to compute the rendition, note that the **document** and the **main Blob** are pushed on the operation context. For instance, the&nbsp;`blobToPDF` chain uses the `Context.PopBlob` operation as the first operation to retrieve the Blob&nbsp;to convert, see its contribution:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
   point="chains">
   <chain id="blobToPDF">
@@ -132,7 +136,7 @@ We have some examples in the Nuxeo Platform, such as:
 
 Here is the contribution for the&nbsp;`PictureRenditionDefinitionProvider`:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.rendition.service.RenditionService"
   point="renditionDefinitionProviders">
   <renditionDefinitionProvider name="pictureRenditionDefinitionProvider"

@@ -120,7 +120,7 @@ The following example is executing a simple query against a remote server: `SELE
 
 &nbsp;
 
-```
+```php
 $client = new NuxeoPhpAutomationClient('http://localhost:8080/nuxeo/site/automation');
 
 $session = $client->getSession('Administrator','Administrator');
@@ -175,7 +175,7 @@ You can see here how to use the getters in order to retrieve information from th
 
 In order to attach a blob, we have to send a Multipart Request to Nuxeo. The first part of the request will contain the body of the request (params, context ...) and the second part will contain the blob (as an input).
 
-```
+```php
 $client = new NuxeoPhpAutomationClient('http://localhost:8080/nuxeo/site/automation');
 
 $session = $client->getSession('Administrator','Administrator');
@@ -192,7 +192,7 @@ That will attach the blob to an existing file. In order to send a blob, you use 
 
 In order to get a blog, you have to read the content of the 'tempfile' after using the appropriate headers.
 
-```
+```php
 $client = new NuxeoPhpAutomationClient('http://localhost:8080/nuxeo/site/automation');
 
 $session = $client->GetSession('Administrator','Administrator');

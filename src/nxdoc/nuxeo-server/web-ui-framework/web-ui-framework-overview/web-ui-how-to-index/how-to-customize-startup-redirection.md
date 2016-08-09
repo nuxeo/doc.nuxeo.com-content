@@ -73,7 +73,7 @@ After connection, the startup page is defined by the method `StartupHelper.initD
 
 The following example presents a customization redirecting every user to the dashboard except for the Administrators:
 
-```
+```java
 @Name("startupHelper")
 @Scope(SESSION)
 public class CustomStartupHelper extends StartupHelper {

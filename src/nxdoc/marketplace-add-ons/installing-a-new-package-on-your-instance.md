@@ -198,7 +198,7 @@ For Windows users, use `nuxeoctl.bat` instead of `./nuxeoctl` commands below.
 
 1.  Stop your server.
 
-    ```
+    ```bash
     ./nuxeoctl stop
     ```
 
@@ -206,7 +206,7 @@ For Windows users, use `nuxeoctl.bat` instead of `./nuxeoctl` commands below.
 
 3.  Install the package.
 
-    ```
+    ```bash
     ./nuxeoctl mp-install easyshare-1.1.1
     ```
 
@@ -230,7 +230,7 @@ For Windows users, use `nuxeoctl.bat` instead of `./nuxeoctl` commands below.
 
 4.  Confirm installation.
 
-    ```
+    ```text
     Do you want to continue (yes/no)? [yes] yes 
     ```
 
@@ -244,7 +244,7 @@ For Windows users, use `nuxeoctl.bat` instead of `./nuxeoctl` commands below.
 
 5.  Start your server.
 
-    ```
+    ```bash
     ./nuxeoctl start
     ```
 
@@ -361,13 +361,13 @@ It is possible to install packages available on the Nuxeo Marketplace even if yo
 
 1.  Stop your server.
 
-    ```
+    ```bash
     ./nuxeoctl stop
     ```
 
 2.  Install the package by providing the path to the downloaded .zip file.
 
-    ```
+    ```bash
     ./nuxeoctl mp-install /Users/NUXEO/Downloads/easyshare-1.1.1.zip 
     ```
 
@@ -394,7 +394,7 @@ It is possible to install packages available on the Nuxeo Marketplace even if yo
 
 3.  Confirm installation.
 
-    ```
+    ```text
     Do you want to continue (yes/no)? [yes] yes
     ```
 
@@ -404,7 +404,7 @@ It is possible to install packages available on the Nuxeo Marketplace even if yo
 
 4.  Start the server.
 
-    ```
+    ```bash
     ./nuxeoctl start
     ```
 
@@ -479,13 +479,13 @@ The instructions below provide the steps to follow to uninstall a package using 
 
 1.  Stop your server.
 
-    ```
+    ```bash
     ./nuxeoctl stop
     ```
 
 2.  In a terminal, get the list of packages available on your Nuxeo server.
 
-    ```
+    ```bash
     ./nuxeoctl mp-list
     ```
 
@@ -493,7 +493,7 @@ The instructions below provide the steps to follow to uninstall a package using 
 
 4.  Run the uninstallation:
 
-    ```
+    ```bash
     ./nuxeoctl mp-uninstall nuxeo-dam-6.0.0
     ```
 
@@ -516,7 +516,7 @@ The instructions below provide the steps to follow to uninstall a package using 
 
 5.  Confirm uninstallation.
 
-    ```
+    ```text
     Do you want to continue (yes/no)? [yes] yes
     ```
 
@@ -526,7 +526,7 @@ The instructions below provide the steps to follow to uninstall a package using 
 
 6.  Start the server.
 
-    ```
+    ```bash
     ./nuxeoctl start
     ```
 

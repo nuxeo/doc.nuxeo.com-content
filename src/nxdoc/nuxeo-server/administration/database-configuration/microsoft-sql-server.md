@@ -269,7 +269,7 @@ We've observed incorrect behavior (in particular with full-text search) if the S
 
 To make sure this is the case, use:
 
-```
+```sql
 SELECT collation_name FROM sys.databases WHERE name = 'master'
 ```
 
@@ -284,7 +284,7 @@ To work properly Nuxeo need to have some columns with a case-sensitive collation
 
 To make sure this is the case, use:
 
-```
+```sql
 SELECT collation_name FROM sys.databases WHERE name = 'nuxeo' -- or your custom database name
 ```
 
@@ -359,31 +359,43 @@ If you configure a full-text index in Nuxeo (which is the default), you will nee
 
 Failing to do this will provoke errors like:
 
+{{#> panel type='code' heading='SQL Server Msg 7601'}}
+
 ```
 Cannot use a CONTAINS or FREETEXT predicate on table or indexed view 'fulltext' because it is not full-text indexed.
 
 ```
+
+{{/panel}}{{#> panel type='code' heading='SQL Server Msg 7616'}}
 
 ```
 Full-Text Search is not enabled for the current database. Use sp_fulltext_database to enable full-text search for the database. The functionality to disable and enable full-text search for a database is deprecated. Please change your application.
 
 ```
 
+{{/panel}}
+
 The French version of these messages, for reference:
+
+{{#> panel type='code' heading='SQL Server Msg 7601'}}
 
 ```
 Impossible d'utiliser le prédicat CONTAINS ou FREETEXT sur table ou vue indexée 'fulltext', car il n'y a pas d'index de texte intégral.
 
 ```
 
+{{/panel}}{{#> panel type='code' heading='SQL Server Msg 7616'}}
+
 ```
 La recherche en texte intégral n'est pas activée dans la base de données en cours. Utilisez sp_fulltext_database pour l'activer sur cette base de données. La fonctionnalité de désactivation et d'activation d'une recherche en texte intégral pour une base de données est désapprouvée. Modifiez votre application.
 
 ```
 
+{{/panel}}
+
 You can verify if your SQL Server instance has its full-text feature installed before creating your database:
 
-```
+```sql
 SELECT SERVERPROPERTY('IsFullTextInstalled');
 ```
 
@@ -395,7 +407,7 @@ Nuxeo uses a full-text catalog named `nuxeo` by default, this can be changed in 
 
 The language used to analyze full-text (called a LANGUAGE in SQL Server parlance) can be specified in the configuration for the database, instead of "english" in the section `<fulltext analyzer="english">`. The available languages in your database can be listed by using:
 
-```
+```sql
 SELECT alias FROM sys.syslanguages
 ```
 
@@ -403,7 +415,7 @@ SELECT alias FROM sys.syslanguages
 
 If you do not get the expected results with a keyword like "table of contents", the problem could come from how SQL Server handles the stopwords ("of" in this case). It could be necessary to run this code:
 
-```
+```sql
 USE master;
 GO
 EXEC sp_configure 'transform noise words',1

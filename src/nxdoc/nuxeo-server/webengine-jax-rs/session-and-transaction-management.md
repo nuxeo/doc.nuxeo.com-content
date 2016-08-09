@@ -102,21 +102,21 @@ WebEngine provides a managed `CoreSession` to any JAX-RS resource that wants to 
 
 To get the managed `CoreSession` &nbsp;from a JAX-RS resource you can use the following code:
 
-```
+```java
 UserSession.getCurrentSession(httpRequest);
 
 ```
 
 If you don't have access to the current HTTP request object you can use this code (in that case a ThreadLocal variable will be used to retrieve the UserSession):
 
-```
+```java
  WebEngine.getActiveContext().getUserSession();
 
 ```
 
 Then using the `UserSession` object you can get&nbsp;either the current `Principal` or a `CoreSession`:
 
-```
+```java
 UserSession userSession = WebEngine.getActiveContext().getUserSession();
 Principal principal = userSession.getPrincipal();
 CoreSession session1 = userSession.getCoreSession();
@@ -161,7 +161,7 @@ Some JAX-RS resources will need to create temporary files or open other system r
 
 To register a cleanup handler you can do the following:
 
-```
+```java
 UserSession.addRequestCleanupHandler(httpRequest, new RequestCleanupHandler() {
     @Override
     public void cleanup(HttpServletRequest httpRequest) {
@@ -177,7 +177,7 @@ The `cleanup` method will be invoked after the request is processed and the resp
 
 You can also configure how the transaction is managed on a subset of resources in your JAX-RS application. To do this you can contribute an extension as follows:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.webengine.WebEngineComponent" point="request-configuration"> 
   <path value="/mymodule1" autoTx="false" /> 
   <path value="/mymodule2/resources" autoTx="true" /> 

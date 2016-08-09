@@ -372,7 +372,7 @@ The Nuxeo Platform is divided into several layers communicating with each other.
 
 ![]({{file name='schema-which-el.png'}} ?w=500)
 
-Numbers circled in orange specify available contexts. Have a look at the [available variables depending on context]({{page}}) section for further information.
+Numbers circled in orange specify available contexts. Have a look at the [available variables depending on context](#available-variables-depending-on-context) section for further information.
 
 ## What Expression/Scripting Language do I Need to Use?
 
@@ -383,7 +383,7 @@ Numbers circled in orange specify available contexts. Have a look at the [availa
 
 ## What Variables Can I Use?
 
-Before giving you a list of examples to work with, it is important to understand that the variables you can use depend on two major conditions: the scripting language and the context you are in. We already mentioned which language to use in which Nuxeo Platform layer (refer to the [previous section]({{page}})), so let's talk about the context within each layer.
+Before giving you a list of examples to work with, it is important to understand that the variables you can use depend on two major conditions: the scripting language and the context you are in. We already mentioned which language to use in which Nuxeo Platform layer (refer to the [previous section](#what-expression-scripting-language-do-i-need-to-use)), so let's talk about the context within each layer.
 
 The user interface can send information to the core layer in order to execute operations, however, the opposite is not possible. &nbsp;Any operation done automatically by the platform without a user interaction first (eg&nbsp;: scheduled jobs) cannot take advantage of what you currently see on screen.&nbsp;<span style="font-size: 10.0pt;line-height: 13.0pt;">Let's say that you launch an operation manually, for example by clicking on a button. The information can be sent to the core layer. &nbsp;The information sent &nbsp;depends on the screen you are using. Even though the information from the UI is available to the core layer do not expect any information originating in the core to be available to the UI layer. For example: A workflow variable cannot be used outside of a workflow.</span>
 
@@ -400,7 +400,7 @@ In order to determine more easily which of these variables will be usable in you
     *   No &rarr; Workflow variables can't be used.
     *   Yes &rarr; Workflow variables can be used.
 
-Please check the [availables variables depending on context]({{page}}) section for&nbsp;more detailed information.
+Please check the [availables variables depending on context](#available-variables-depending-on-context) section for&nbsp;more detailed information.
 
 ## What are the Main Differences Between Expression/Scripting Languages?
 
@@ -470,15 +470,15 @@ Please have a look at this page: [ Available variables in the automation context
 
 Please have a look at this page: [Available Variables in Email Templates]({{page page='available-variables-in-email-templates'}})
 
-### [![]({{file name='ELDependingOnComponent-3.png'}})]({{page}}) Document Templates
+### [![]({{file name='ELDependingOnComponent-3.png'}})](#schema-which-el) Document Templates
 
 Please have a look at this page: [Document Templates and Automation Rendering Service]({{page page='document-templates-and-automation-rendering-service'}})
 
-### [![]({{file name='ELDependingOnComponent-4.png'}})]({{page}}) Automation Chains
+### [![]({{file name='ELDependingOnComponent-4.png'}})](#schema-which-el) Automation Chains
 
 Please have a look at this page: [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}})
 
-### [![]({{file name='ELDependingOnComponent-5.png'}})]({{page}}) Event Handlers
+### [![]({{file name='ELDependingOnComponent-5.png'}})](#schema-which-el) Event Handlers
 
 Event handlers call automation chains, therefore you should refer to the [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}}) documentation.
 Event handlers also give access to the `Event` object, which contains interesting properties:
@@ -523,11 +523,11 @@ Please note that:
     *   `@{Document['[dc:title](http://dctitle)'] == "myTitle"}` will **not** work and generate an error.
 *   A bug currently affects Nuxeo Studio in that regard: [NXS-955](https://jira.nuxeo.com/browse/NXS-955)
 
-### [![]({{file name='ELDependingOnComponent-6.png'}})]({{page}}) Filters
+### [![]({{file name='ELDependingOnComponent-6.png'}})](#schema-which-el) Filters
 
 [Filters]({{page page='actions-links-buttons-icons-tabs-and-more'}}) use the EL expression language. You have access to all Seam components and should refer to [explorer.nuxeo.org](http://explorer.nuxeo.org) to get an exhaustive list depending on your platform version. See also information in the category 7: it is actually the same context.
 
-### [![]({{file name='ELDependingOnComponent-7.png'}})]({{page}}) Widgets, XHTML and Content Views
+### [![]({{file name='ELDependingOnComponent-7.png'}})](#schema-which-el) Widgets, XHTML and Content Views
 
 In widgets, layout, content views and in XHTML templates, you can use the EL expression language. You have access to all Seam components (see upper how to access them) and should refer to [explorer.nuxeo.org](http://explorer.nuxeo.org) to get an exhaustive list depending on your platform version. Here are a few interesting possibilities you could use to get started:
 

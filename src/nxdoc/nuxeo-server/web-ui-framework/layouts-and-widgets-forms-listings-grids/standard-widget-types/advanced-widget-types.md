@@ -75,7 +75,7 @@ A series of widget types for advanced usage.
 
 Id: `layout`
 
-The layout widget type displays a layout. This is useful to build high-level layouts, in combination with the [Form Actions]({{page page='tab-designer-widget-types'}}) widget type for instance.
+The layout widget type displays a layout. This is useful to build high-level layouts, in combination with the [Form Actions]({{page page='tab-designer-widget-types#documentactions'}}) widget type for instance.
 
 ## Set Variable
 
@@ -97,7 +97,7 @@ Id: `action`
 
 This widget type displays an action, with possibility to surround it by a form or not (and additional rendering properties).
 
-The difference with the [Form Action]({{page page='tab-designer-widget-types'}}) or [Toolbar Action]({{page page='tab-designer-widget-types'}}) widget types is that it needs the action to be already resolved. This makes it possible to display actions that would have been retrieved using a custom filtering context.
+The difference with the [Form Action]({{page page='tab-designer-widget-types#documentaction'}}) or [Toolbar Action]({{page page='tab-designer-widget-types#documentactionwithforms'}}) widget types is that it needs the action to be already resolved. This makes it possible to display actions that would have been retrieved using a custom filtering context.
 
 ## Actions
 
@@ -105,7 +105,7 @@ Id: `actions`
 
 This widget type displays actions, with possibility to surround it by a form or not (and additional rendering properties).
 
-The difference with the [Form Actions]({{page page='tab-designer-widget-types'}}) or [Toolbar Actions]({{page page='tab-designer-widget-types'}}) widget types is that it needs the action to be already resolved. This makes it possible to display actions that would have been retrieved using a custom filtering context.
+The difference with the [Form Actions]({{page page='tab-designer-widget-types#documentactions'}}) or [Toolbar Actions]({{page page='tab-designer-widget-types#documentactionswithforms'}}) widget types is that it needs the action to be already resolved. This makes it possible to display actions that would have been retrieved using a custom filtering context.
 
 ## Single Generic Suggestion
 

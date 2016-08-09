@@ -398,7 +398,7 @@ If you want to translate or update a specific label you saw in the UI but you ca
 
 Contributions on Crowdin side will be synchronized daily to the Nuxeo master source code. Translations that are not approved will also be taken into account.
 
-If you are not using Crowdin, please [contribute]({{page page='contributing-to-nuxeo'}}) your translation work back to Nuxeo so that other users can benefit from it.
+If you are not using Crowdin, please [contribute]({{page page='contributing-to-nuxeo#translations'}}) your translation work back to Nuxeo so that other users can benefit from it.
 
 ## Instructions for Developers
 
@@ -409,7 +409,7 @@ In documentation below, the `xx_XX` notation will be used to reference the four 
 1.  Place your custom messages.properties file in your bundle at `src/main/resources/OSGI-INF/l10n/messages_xx_XX.properties`.
 2.  Create of edit the file at `src/main/resources/OSGI-INF/deployment-fragment.xml` to contribute the translations to the main aggregated translation files used by the application:
 
-    ```
+    ```xml
     <?xml version="1.0"?>
     <fragment version="1">
 
@@ -441,7 +441,7 @@ In documentation below, the `xx_XX` notation will be used to reference the four 
 
 The `require` tag ensures that you are contributing to existing files, already created thanks to the default `nuxeo-platform-lang` and `nuxeo-platform-lang-ext` modules. If you are not contributing to an existing file, you should create it:
 
-```
+```xml
 <copy from="${bundle.fileName}.tmp/OSGI-INF/l10n/messages_xx_XX.properties"
   to="nuxeo.war/WEB-INF/classes/messages_xx_XX.properties"/>
 ```
@@ -452,7 +452,7 @@ You can also use the require tag to control ordering of contributions to the fin
 
 You can add your new properties file similarly, you just need to modify the `deployment-fragment.xml` file adding a new entry with your locale:
 
-```
+```xml
 <extension target="faces-config#APPLICATION_LOCALE">
   <locale-config>
     <supported-locale>xx_XX</supported-locale>

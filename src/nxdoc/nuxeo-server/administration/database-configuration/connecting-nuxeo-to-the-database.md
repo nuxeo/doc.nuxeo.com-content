@@ -276,7 +276,7 @@ The first time you start your Nuxeo server, a wizard is displayed to help you se
 
 ## Connecting Nuxeo to the Database From the nuxeo.conf File
 
-By default, the "default" template is enabled on your Nuxeo server (see the [Database templates]({{page}}) section for more information on this template). You need to edit it to change the template to be used.
+By default, the "default" template is enabled on your Nuxeo server (see the [Database templates](#database-templates) section for more information on this template). You need to edit it to change the template to be used.
 
 1.  Open your `nuxeo.conf` file with a text editor.
 
@@ -307,11 +307,11 @@ These are the minimum required parameters to enable the Nuxeo server to communic
 
 The default available database templates are:
 
-*   [Default]({{page}})
-*   [PostgreSQL (recommended)]({{page}})
-*   [Oracle]({{page}})
-*   [Microsoft SQL Server]({{page}})
-*   [MySQL]({{page}})
+*   [Default](#default)
+*   [PostgreSQL (recommended)](#postgresql)
+*   [Oracle](#oracle)
+*   [Microsoft SQL Server](#mssql)
+*   [MySQL](#mysql)
 
 ### Default
 

@@ -226,7 +226,7 @@ Nuxeo Automation Scripting allows you to write JavaScript code to use Automation
 
 *   The whole script must be wrapped into the `run()` function
 
-    ```
+    ```js
     /**
      * Wrapper function for the whole script
      *
@@ -242,7 +242,7 @@ Nuxeo Automation Scripting allows you to write JavaScript code to use Automation
 *   Passing parameters and variables through the operation context and input.
 *   Using operations/chains as JavaScript functions within this&nbsp;`run()` function
 
-    ```
+    ```js
     // For instance, the operation to display JSF messages
     WebUI.AddMessage(input, {
         /*required:true - type: string*/
@@ -254,7 +254,7 @@ Nuxeo Automation Scripting allows you to write JavaScript code to use Automation
 
 *   Using `for/if/print` or any other JavaScript feature
 
-    ```
+    ```js
       if(docs.length > 3){
         var index;
         for (index = 0; index < docs.length; ++index) {
@@ -271,7 +271,7 @@ Nuxeo Automation Scripting allows you to write JavaScript code to use Automation
 
 *   Operation Context can be used to read or write variables through `ctx` JavaScript object:
 
-    ```
+    ```js
     function run(input, params) {
 
         var root = Repository.GetDocument(null, {
@@ -402,7 +402,9 @@ This example cannot be applied anymore.
 
 The [AutomationScriptingService](https://cdn.rawgit.com/nuxeo/nuxeo/master/nuxeo-features/nuxeo-automation/nuxeo-automation-scripting/src/main/java/org/nuxeo/automation/scripting/api/AutomationScriptingService.java) provides API to run your JavaScript codes within the Nuxeo Automation engine:
 
-```
+{{#> panel type='code' heading='AutomationScriptingService'}}
+
+```java
 package org.nuxeo.automation.scripting.api;
 
 import javax.script.ScriptException;
@@ -433,9 +435,13 @@ public interface AutomationScriptingService {
 }
 ```
 
+{{/panel}}
+
 Usage:
 
-```
+{{#> panel type='code' heading='Example'}}
+
+```java
 ScriptRunner runner = scriptingService.getRunner(session);
 assertNotNull(runner);
 
@@ -444,11 +450,13 @@ assertNotNull(stream);
 runner.run(stream);
 ```
 
+{{/panel}}
+
 ### Contributing Automation Scripting Operations
 
 Automation scripting operation is made through an XML contribution on the [`operation` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.automation.scripting.internals.AutomationScriptingComponent--operation):
 
-```
+```xml
 <extension target="org.nuxeo.automation.scripting.AutomationScriptingComponent" point="operation">
   <scriptedOperation id="Scripting.TestBlob">
 
@@ -498,7 +506,9 @@ Automation scripting operations can be used as common Automation operations:
 
 *   Using it within chains, for instance:
 
-    ```
+    {{#> panel type='code' heading='The JavaScript Operation Definition'}}
+
+    ```xml
     <scriptedOperation id="javascript.HelloWorld">
       <inputType>string</inputType>
       <outputType>string</outputType>
@@ -515,7 +525,9 @@ Automation scripting operations can be used as common Automation operations:
     </scriptedOperation>
     ```
 
-    ```
+    {{/panel}}{{#> panel type='code' heading='The Chain Definition'}}
+
+    ```xml
     <extension point="chains" target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
       <chain id="Scripting.ChainedHello">
         <operation id="javascript.HelloWorld">
@@ -528,6 +540,7 @@ Automation scripting operations can be used as common Automation operations:
     </extension>
     ```
 
+    {{/panel}}
 *   Using it directly from the [Automation Service]({{page page='calling-automation-from-java'}}):
 
     ```

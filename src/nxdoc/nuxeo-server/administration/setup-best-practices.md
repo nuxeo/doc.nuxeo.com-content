@@ -202,7 +202,7 @@ The configuration of your application is saved in the `nuxeo.conf` configuration
 **To move the configuration file outside the Nuxeo directory:**
 
 1.  Move the `nuxeo.conf` file from its default location.
-2.  After you moved `nuxeo.conf`, you need to [define its location as an environment variable]({{page}}).
+2.  After you moved `nuxeo.conf`, you need to [define its location as an environment variable](#nuxeo_conf).
 
 By default, `data` and `log` directories are stored inside the Nuxeo tree. To ease backup and upgrades, it is highly recommended to move them outside the Nuxeo tree.
 

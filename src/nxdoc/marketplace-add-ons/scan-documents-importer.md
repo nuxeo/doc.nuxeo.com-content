@@ -123,7 +123,9 @@ These bundles provide you with a new service (`org.nuxeo.ecm.platform.importer.x
 
 A detailed documentation on the advanced XML parsing usage can be found on the [nuxeo-importer-xml-parser GitHub page](https://github.com/nuxeo/nuxeo-platform-importer/tree/master/nuxeo-importer-xml-parser). To get you started, below is a working example with the original XML file and the corresponding XML configuration that can be pasted into Nuxeo Studio.
 
-```
+{{#> panel type='code' heading='Original XML file'}}
+
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <invoice>
   <order_number value="Invoice NX38937987-421-690" />
@@ -154,7 +156,9 @@ A detailed documentation on the advanced XML parsing usage can be found on the [
 </invoice>
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='Corresponding XML extension into Nuxeo Studio'}}
+
+```xml
 <!-- Doctype to create depending on XML formatting
      In this case, having an invoice tag means I should create an Invoice document in Nuxeo --> 
 <extension target="org.nuxeo.ecm.platform.importer.xml.parser.XMLImporterComponent" point="documentMapping"> 
@@ -203,6 +207,8 @@ A detailed documentation on the advanced XML parsing usage can be found on the [
   </attributeConfig> 
 </extension>
 ```
+
+{{/panel}}
 
 &nbsp;
 

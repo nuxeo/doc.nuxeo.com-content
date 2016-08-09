@@ -160,7 +160,7 @@ history:
 
 You can force the locale by removing other locales support. This is done in the&nbsp;`deployment-fragment.xml`&nbsp;file of your plugin.
 
-{{! /excerpt}}
+{{! /excerpt}}{{#> panel type='code' heading='"Sample extract of deployment-fragment.xml replacing other bundles\' contributions to faces-config.xml"'}}
 
 ```
 <require>org.nuxeo.ecm.platform.lang.ext</require>
@@ -173,6 +173,8 @@ You can force the locale by removing other locales support. This is done in the&
 </extension>
 
 ```
+
+{{/panel}}
 
 The `mode="replace"` attribute will replace all the previously contributed `<extension target="faces-config#APPLICATION_LOCALE">`.
 

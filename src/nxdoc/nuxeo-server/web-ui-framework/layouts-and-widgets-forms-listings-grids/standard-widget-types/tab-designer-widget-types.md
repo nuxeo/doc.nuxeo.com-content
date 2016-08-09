@@ -88,7 +88,7 @@ Id: `documentActions`
 
 This widget type presents actions, not surrounded by a form. It is tied to the document on which this widget is rendered as [filters]({{page page='filters-and-access-controls'}}) are evaluated in its context. The actions to present are retrieved by category.
 
-This is useful in combination with the [`layout` widget]({{page page='advanced-widget-types'}}) for instance, or to build incremental layouts using "Summary Panel" categories (as widgets contributed to this category may already contain a form).
+This is useful in combination with the [`layout` widget]({{page page='advanced-widget-types#layou'}}) for instance, or to build incremental layouts using "Summary Panel" categories (as widgets contributed to this category may already contain a form).
 
 ## Toolbar Action
 

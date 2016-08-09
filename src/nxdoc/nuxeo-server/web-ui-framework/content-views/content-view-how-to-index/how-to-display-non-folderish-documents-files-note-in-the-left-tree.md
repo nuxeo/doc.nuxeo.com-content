@@ -72,7 +72,7 @@ The left tree is built using a query that is ran recursively. One of the clauses
 
 {{! /excerpt}}
 
-```
+```html/xml
 <require>org.nuxeo.ecm.webapp.pageproviders.contrib</require>
 
   <extension target="org.nuxeo.ecm.platform.query.api.PageProviderService"

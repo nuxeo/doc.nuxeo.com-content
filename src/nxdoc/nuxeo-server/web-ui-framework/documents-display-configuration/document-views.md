@@ -88,7 +88,7 @@ A standard JSF navigation rule can be defined in the `OSGI-INF/deployment-fragme
 
 Example of a navigation rule case definition:
 
-```
+```xml
 <extension target="faces-config#NAVIGATION">
 
     <navigation-case>
@@ -111,7 +111,7 @@ Example of a navigation rule case definition:
 
 A certain Nuxeo document type can have defined a default view (used to view/edit the document) and a create view (used to create the document). These views are specified in the `OSGI-INF/ecm-types-contrib.xml` file, as in the following example.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.types.TypeService" point="types">
     <type id="Workspace">
       <label>Workspace</label>
@@ -126,7 +126,7 @@ A certain Nuxeo document type can have defined a default view (used to view/edit
 
 The default view of a document is rendered as a list of tabs. The document tabs are defined as actions in the `OSGI-INF/actions-contrib.xml` file, having as [category]({{page page='actions-display'}}) `VIEW_ACTION_LIST`. A tab can be added to a document default view as shown in the following example.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
     <action id="TAB_EDIT" link="/incl/tabs/document_edit.xhtml" enabled="true"
       order="20" label="action.view.edit" icon="/icons/file.gif">

@@ -217,7 +217,7 @@ If the ticket is valid, the CAS server invokes the `pgtUrl` callback with two pa
 
 In case of success, the server responds to the portal with the following content
 
-```
+```xml
 <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
 .<cas:authenticationSuccess>
 ..<cas:user>slacoin</cas:user>
@@ -239,7 +239,7 @@ In the third phase, the portal asks the CAS server for a new service ticket that
 
 The CAS server generates a new ST and responds to the portal with the following content:
 
-```
+```xml
 <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
 .<cas:proxySuccess>
 ..<cas:proxyTicket>ST-82-20eCHgCqvMCvnP6AmZmz-cas</cas:proxyTicket>
@@ -262,7 +262,7 @@ The Nuxeo server validates the ticket by invoking the CAS server (c3).
 
 If the ticket is valid, the CAS server sends the following response:
 
-```
+```xml
 <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
 .<cas:authenticationSuccess>
 ..<cas:user>slacoin</cas>
@@ -277,7 +277,7 @@ If the ticket is valid, the CAS server sends the following response:
 
 The Nuxeo server creates an HTTP session and sends the AtomPub response message.
 
-```
+```xml
 <?xml version='1.0' encoding='UTF-8'?>
 <app:service xmlns:app="http://www.w3.org/2007/app" 
              xmlns:atom="http://www.w3.org/2005/Atom" 
@@ -315,7 +315,9 @@ In most of the case, each type of user will have access via a separated virtual 
     *   Default / main chain is the one using CAS2;
     *   You define specific chain for requests having the ``X-anonymous-access`.
 
-```
+{{#> panel type='code' heading='Sample Xml contribution'}}
+
+```xml
 <specificAuthenticationChain name="anonymous-access">
         <headers>
             <header name="X-anonymous-access">on</header>
@@ -325,6 +327,8 @@ In most of the case, each type of user will have access via a separated virtual 
         </allowedPlugins>
     </specificAuthenticationChain>
 ```
+
+{{/panel}}
 
 You can see&nbsp;[specificChains](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--specificChains) extension point for more info.
 

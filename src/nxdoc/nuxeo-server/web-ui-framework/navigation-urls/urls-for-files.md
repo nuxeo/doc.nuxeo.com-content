@@ -203,7 +203,7 @@ where, by default,&nbsp;`viewName`&nbsp;can be Original, OriginalJpeg, Medium, T
 
 For a single file, in schema "file", where blob field is named "file" and file name field is named "filename":
 
-```
+```xml
 <nxh:outputLink
   value="#{nxd:fileUrl('downloadFile', currentDocument, field.fullName, currentDocument.file.filename)}">
   <nxh:graphicImage
@@ -216,7 +216,7 @@ For a single file, in schema "file", where blob field is named "file" and file n
 
 For a list of files, in schema "files", where list name is "files" and in each item, blob field is named "file" and file name field is named "filename":
 
-```
+```xml
 <nxu:inputList value="#{currentDocument.files.files}" model="model"
 rendered="#{not empty currentDocument.files.files}">
   <nxh:outputLink

@@ -310,7 +310,7 @@ By default the Nuxeo Platform uses [ExifTool](http://www.sno.phy.queensu.ca/%7Ep
 
 Metadata mapping is made through an XML contribution on the [`metadataMappings`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.binary.metadata--metadataMappings) extension point:
 
-```
+```xml
    <!-- Map binary metadata to Nuxeo document metadata -->
 
   <extension target="org.nuxeo.binary.metadata"
@@ -338,7 +338,7 @@ This part is only needed if you plan to use your metadata mapping with the stand
 
 Metadata rules are defined through an XML contribution on the&nbsp;`metadataRules` extension point:
 
-```
+```xml
  <!-- Define which mappings will be called by the listener, and under which conditions -->
  <extension target="org.nuxeo.binary.metadata"
              point="metadataRules">
@@ -381,7 +381,7 @@ Metadata rules are defined through an XML contribution on the&nbsp;`metadataRule
 
 The Nuxeo default contribution for binary metadata processor is ExifTool:
 
-```
+```xml
 <extension target="org.nuxeo.binary.metadata"
              point="metadataProcessors">
     <processor id="exifTool"
@@ -393,7 +393,7 @@ If you need to add a new processor:
 
 1.  Declare a new contribution with specific id and class.
 
-    ```
+    ```xml
     <extension target="org.nuxeo.binary.metadata"
                  point="metadataProcessors">
         <processor id="myProcessor"
@@ -487,7 +487,9 @@ This feature gives the ability to get time execution informations through JMX: `
 
 Here is the default metadata mapping contribution in the Nuxeo Platform:
 
-```
+{{#> panel type='code' heading='Default Contribution'}}
+
+```xml
 <extension target="org.nuxeo.binary.metadata"
  point="metadataMappings">
   <metadataMapping id="EXIF" processor="exifTool" blobXPath="file:content" ignorePrefix="false">
@@ -536,6 +538,8 @@ Here is the default metadata mapping contribution in the Nuxeo Platform:
   </filter>
 </extension>
 ```
+
+{{/panel}}
 
 * * *
 

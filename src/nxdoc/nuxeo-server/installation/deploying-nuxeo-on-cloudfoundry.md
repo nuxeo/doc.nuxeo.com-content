@@ -116,7 +116,7 @@ Nuxeo is currently packaged with a Tomcat 7 instance (version 7.0.64). The follo
 
 1.  First unzip Nuxeo in /opt:
 
-    ```
+    ```bash
     cd /opt
     unzip nuxeo-coreserver-8.1-I20151208_0124-tomcat.zip
     mv coreserver-8.1-SNAPSHOT-tomcat nuxeo-coreserver-8.1-SNAPSHOT-tomcat
@@ -124,7 +124,7 @@ Nuxeo is currently packaged with a Tomcat 7 instance (version 7.0.64). The follo
 
 2.  Then edit some permission:
 
-    ```
+    ```bash
     chmod +x /opt/nuxeo-coreserver-8.1-SNAPSHOT-tomcat/bin/*.sh
     ```
 
@@ -134,7 +134,7 @@ Nuxeo is currently packaged with a Tomcat 7 instance (version 7.0.64). The follo
 
 This builds a ZIP containing a WAR and a few additional files, designed to be unpacked at the root of a Tomcat instance. It cannot be used directly as a pure WAR.
 
-```
+```bash
 cd /opt/nuxeo-coreserver-8.1-SNAPSHOT-tomcat
 bin/nuxeoctl pack /opt/nuxeotomcatwar.zip 
 ```
@@ -147,7 +147,7 @@ The resulting ZIP is all that's needed for the rest of the instructions.
 
 1.  Download and set up a new Tomcat 7 from scratch with the WAR that was just built.
 
-    ```
+    ```bash
     cd /opt
     unzip apache-tomcat-7.0.65.zip
     mv apache-tomcat-7.0.65 tomcat-7.0.65
@@ -158,7 +158,7 @@ The resulting ZIP is all that's needed for the rest of the instructions.
 
 2.  Now update the WAR to work in a Tomcat 7 instance without references to the toplevel `>lib/` directory:
 
-    ```
+    ```bash
     mv lib/commons-*.jar lib/h2-*.jar lib/lucene-*.jar lib/nuxeo-*.jar webapps/nuxeo/WEB-INF/lib/
     rm lib/derby-*.jar
     ```
@@ -167,7 +167,7 @@ The resulting ZIP is all that's needed for the rest of the instructions.
 
     Edit the file&nbsp;`webapps/nuxeo/META-INF/context.xml`. In this file the `<Resource>` elements that point to a global configuration in `server.xml` must be replaced by explicit resources:
 
-    ```
+    ```html/xml
       <Resource name="jdbc/NuxeoDS" accessToUnderlyingConnectionAllowed="true" auth="Container" driverClassName="org.h2.Driver" maxActive="100" maxIdle="30" maxWait="10000" password="" type="javax.sql.DataSource" url="jdbc:h2:nuxeo" username="sa" validationQuery=""/>
       <Resource name="jdbc/nxsqldirectory" accessToUnderlyingConnectionAllowed="true" auth="Container" driverClassName="org.h2.Driver" maxActive="100" maxIdle="30" maxWait="10000" password="" type="javax.sql.DataSource" url="jdbc:h2:nuxeo" username="sa" validationQuery=""/>
       <Resource name="jdbc/nxrelations-default-jena" accessToUnderlyingConnectionAllowed="true" auth="Container" driverClassName="org.h2.Driver" maxActive="100" maxIdle="30" maxWait="10000" password="" type="javax.sql.DataSource" url="jdbc:h2:nuxeo" username="sa" validationQuery=""/>
@@ -204,7 +204,7 @@ This is due to the fact that CloudFoundry has a limit of 256 file descriptors op
 
 In fact, it's the Tomcat classloader that uses a lot of file descriptors, because for performance reasons it keeps one open file descriptor per JAR in the `WEB-INF/lib` directory. To work around this problem, the non-Nuxeo JARs present in `WEB-INF/lib` can be merged into one big JAR, which solves the problem.
 
-```
+```bash
 cd webapps/nuxeo/WEB-INF/lib
 mkdir tmp
 mkdir bigjar
@@ -224,7 +224,7 @@ Before the above Tomcat 7 instance can be set up as a full &ldquo;standalone&rdq
 
 1.  The following is added to `bin/catalina.sh` :
 
-    ```
+    ```bash
     # USE VCAP PORT IF IT EXISTS, OTHERWISE DEFAULT TO 8080
     if [ -z ${VCAP_APP_PORT} ]; then
       export VCAP_APP_PORT=8080
@@ -244,7 +244,7 @@ Before the above Tomcat 7 instance can be set up as a full &ldquo;standalone&rdq
     *   Replace 8080 with the expression `${port.http.nonssl}` to use the PaaS configuration.
 4.  The Tomcat 7 application including the Nuxeo WAR is now ready to be pushed to CloudFoundry as a &ldquo;Standalone Application&rdquo;. For this, standard CloudFoundry mechanisms are used, don't forget to specify the Java 8 runtime:
 
-    ```
+    ```bash
     vmc push --runtime=java8 myapp
     ```
 

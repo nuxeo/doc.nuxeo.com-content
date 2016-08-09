@@ -581,7 +581,7 @@ Since cloud files can be changed externally Nuxeo Live Connect relies on a sched
 
 To change this interval users can override the default contribution:
 
-```
+```xml
 <component name="org.nuxeo.ecm.liveconnect.scheduler.override">
   <require>org.nuxeo.ecm.liveconnect.scheduler</require>
 

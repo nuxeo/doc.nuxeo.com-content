@@ -169,7 +169,7 @@ See the sample below:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-*   [undefined]({{page}})&nbsp;
+*   [undefined]()&nbsp;
 *   [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) &nbsp;
 *   [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}})
 *   [How-To Index]({{page page='how-to-index'}})

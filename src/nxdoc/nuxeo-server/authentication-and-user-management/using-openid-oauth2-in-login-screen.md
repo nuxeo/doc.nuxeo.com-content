@@ -85,7 +85,7 @@ By default, the username resolved with the identity provider user information mu
 Target: `org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry`
 Extension Point:&nbsp;`providers`
 
-```
+```xml
       <provider>
         <name>GoogleOpenIDConnect</name>
         <label>Google</label>
@@ -118,7 +118,7 @@ Require: `org.nuxeo.ecm.platform.oauth2.openid.google`
 Target: `org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry`
 Extension Point:&nbsp;`providers`
 
-```
+```xml
       <provider>
         <name>GoogleOpenIDConnect</name>
         <clientId><!--enter your clientId here --></clientId>

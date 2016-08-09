@@ -1143,15 +1143,19 @@ Here you must use the name of the document type (not the label).
 
 In this section, we will gather useful scripts so as to share experience on using scripting in automation, especially in the Run Script operation.
 
-```
+{{#> panel type='code' heading='Working with a list of properties'}}
+
+```java
 new ArrayList(Arrays.asList(WorkflowVariables["contributors"])); x.add(Context["workflowInitiator"]); WorkflowVariables["contributors"]=x;
 // This works for workflow variables, (NodeVariables and WorkflowVariables) but would also work for a list property of a document, see this question on answers (http://answers.nuxeo.com/questions/4240/add-string-to-a-list-string-property-in-pure-studioautomation-for-prototypes)
 ```
+
+{{/panel}}{{#> panel type='code' heading='Calling a Nuxeo service'}}
 
 ```
  @{org.nuxeo.runtime.api.Framework.getService(org.nuxeo.business.days.management.service.BusinessDaysService).getLimitDate("myRule",CurrentDate.date)}
 ```
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
+{{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Studio documentation'}} {{/panel}}</div></div>

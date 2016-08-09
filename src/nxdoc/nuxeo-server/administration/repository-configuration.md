@@ -304,7 +304,7 @@ In a standard Nuxeo this file is generated from a template, and many elements or
 
 This file is for illustration and contains many more options than are necessary by default.
 
-```
+```html/xml
 <?xml version="1.0"?>
 <component name="default-repository-config">
   <extension target="org.nuxeo.ecm.core.storage.sql.RepositoryService" point="repository">
@@ -358,7 +358,7 @@ This file is for illustration and contains many more options than are necessary 
 
 ## Pooling Options
 
-```
+```html/xml
 <pool minPoolSize="0" maxPoolSize="20"
   blockingTimeoutMillis="100" idleTimeoutMinutes="10" />
 
@@ -371,7 +371,7 @@ This file is for illustration and contains many more options than are necessary 
 
 <span style="color: rgb(0,0,0);font-size: 20.0px;">Clustering Options</span>
 
-```
+```html/xml
 <clustering id="12345" enabled="true" delay="1000" />
 
 ```
@@ -388,7 +388,7 @@ To specify length constraints on text fields, use restrictions in the XML Schema
 
 If you want the text field to a precise length limit:
 
-```
+```xml
   <xs:simpleType name="longString">
     <xs:restriction base="xs:string">
       <xs:maxLength value="65536" />
@@ -400,7 +400,7 @@ If you want the text field to a precise length limit:
 
 If you want the text field to have no length limit:
 
-```
+```xml
   <xs:simpleType name="clob">
     <xs:restriction base="xs:string">
       <xs:maxLength value="999999999" />
@@ -423,7 +423,7 @@ java.sql.SQLException: ORA-01461: can bind a LONG value only for insert into a L
 
 If you need to specify a length on a Nuxeo field and cannot change the XSD, you should use the following code in the repository configuration:
 
-```
+```html/xml
 <schema>
   <field type="largetext">note</field>
   <field type="largetext">my:field</field>
@@ -440,7 +440,7 @@ In standard Nuxeo the document id is a UUID stored as a string, for instance `9e
 
 Starting with Nuxeo 5.7.1, it's possible on select databases to use a more efficient id representation:
 
-```
+```xml
  <idType>varchar</idType>
 ```
 
@@ -460,7 +460,7 @@ Note that switching this option to a new value will require a full dump, manual 
 
 It is possible to configure the document types you want to index or you want to exclude from full-text indexing. This is possible using the tags `includedTypes` and `excludedTypes` inside the `indexing` tag:
 
-```
+```html/xml
 <includedTypes>
   <type>File</type>
   <type>Note</type>
@@ -470,7 +470,7 @@ It is possible to configure the document types you want to index or you want to 
 
 or
 
-```
+```html/xml
 <excludedTypes>
   <type>Root</type>
   <type>Workspace</type>
@@ -482,7 +482,7 @@ If you set both included and excluded types, only the included types configurati
 
 ### Full-Text
 
-```
+```html/xml
 <fulltext disabled="false" searchDisabled="true" analyzer="english" catalog="...">
   ...
 </fulltext>
@@ -505,7 +505,7 @@ Full-text indexes are queried in NXQL through the `ecm:fulltext` pseudo-field. A
 
 If no `<index>` elements are present, then a **default** index with all string and blob fields is used.
 
-```
+```html/xml
 <fulltext ...>
   <index name="title" analyzer="..." catalog="...">
     <field>dc:title</field>
@@ -533,14 +533,14 @@ If no `<fieldType>`, `<field>` or `<excludeField>` is present, then all string a
 
 ## Optimizations
 
-```
+```html/xml
 <pathOptimizations enabled="false"/>
 
 ```
 
 *   **pathOptimizations** **enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), it is possible to disable the path-based optimizations by using **false** (the default is **true**, i.e., path optimizations enabled).
 
-```
+```html/xml
 <aclOptimizations enabled="false"/>
 
 ```
@@ -548,7 +548,7 @@ If no `<fieldType>`, `<field>` or `<excludeField>` is present, then all string a
 *   **aclOptimizations** **enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), you can disable the read ACL optimizations by using **false** (the default is **true**, i.e., ACL optimizations enabled).
 *   You can set the property readAclMaxSize to define the size of the larger ACL for a document: this may be useful if you have mainly affected permissions to a lot of users, instead of using groups (do not set this attribute if you disable ACL optimizations).
 
-```
+```html/xml
 <usersSeparator key="," />
 
 ```
@@ -559,7 +559,7 @@ If no `<fieldType>`, `<field>` or `<excludeField>` is present, then all string a
 
 ## Database Creation Option
 
-```
+```html/xml
 
 <ddlMode>execute</ddlMode>
 
@@ -590,7 +590,7 @@ See [NXP-17396](https://jira.nuxeo.com/browse/NXP-17396)&nbsp;for details about 
 
 For compatibility with previous Nuxeo versions, if no `<ddlMode>` element is specified, then `<noDDL>`&nbsp;is checked. The value **true** is mapped to a ddlMode of&nbsp;**ignore**, and the value **false** mapped to the default ddlMode.
 
-```
+```html/xml
 <sqlInitFile>myconf.sql.txt</sqlInitFile>
 ```
 

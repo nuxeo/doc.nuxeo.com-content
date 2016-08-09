@@ -206,7 +206,9 @@ This part assumes you have [IDEDOC]({{page space='idedoc'}}) configured with the
 1.  Create a new&nbsp;Nuxeo Plugin Project.
 2.  Add the following component:
 
-    ```
+    {{#> panel type='code' heading='src/main/resources/OSGI-INF/test-computed-group-contrib.xml'}}
+
+    ```html/xml
     <?xml version="1.0"?>
     <component
     	name="org.nuxeo.mail.management.security.computer.group.contribution"
@@ -229,13 +231,17 @@ This part assumes you have [IDEDOC]({{page space='idedoc'}}) configured with the
     </component>
     ```
 
+    {{/panel}}
+
     &nbsp;
 
     *   The first contribution `computer` defines the class that will implement the logic that will return the list of virtual groups the user belongs to.
     *   The second contribution&nbsp;`computerChain`enables to contribute and chain multiple resolution logics.
 3.  Don't forget to reference the XML contribution in the `src/main/resources/META-INF/MANIFEST.MF`. The file must be like that:
 
-    ```
+    {{#> panel type='code' heading='MANIFEST.MF'}}
+
+    ```perl
     Bundle-ActivationPolicy: lazy
     Bundle-ClassPath: .
     Manifest-Version: 1.0
@@ -249,7 +255,7 @@ This part assumes you have [IDEDOC]({{page space='idedoc'}}) configured with the
 
     ```
 
-    {{#> callout type='warning' }}
+    {{/panel}}{{#> callout type='warning' }}
 
     Don't forget to let the last line empty, without any character.
 
@@ -272,7 +278,9 @@ In the previous section we asked Nuxeo Runtime to register our new computer grou
 2.  Mark it as extending the&nbsp;`AbstractGroupComputer` class.
     You must have something like that:
 
-    ```
+    {{#> panel type='code' heading='Simple Static Computer Group'}}
+
+    ```java
     package org.nuxeo.project.computed.group;
 
     import java.util.ArrayList;
@@ -313,6 +321,8 @@ In the previous section we asked Nuxeo Runtime to register our new computer grou
         }
     }
     ```
+
+    {{/panel}}
 
 **TEST**
 
@@ -356,7 +366,9 @@ Why do we need of this? Because in our example, we would like to fetch all works
 
 In other words, we would like to make the following query `SELECT * FROM Workspace WHERE wks:validators = 'theUsername'`,&nbsp;to get the id of each workspace to create the dynamic virtual groups list.&nbsp;Here is the code result:
 
-```
+{{#> panel type='code' heading='UnrestrictedRunner Example implementation: get Workspace Ids'}}
+
+```java
     protected class GetWorkspaceIds extends UnrestrictedSessionRunner {
 
         private static final String QUERY_GET_WORKSPACE_IDS = "SELECT ecm:uuid "
@@ -380,7 +392,7 @@ In other words, we would like to make the following query `SELECT * FROM Workspa
     }
 ```
 
-{{#> callout type='info' }}
+{{/panel}}{{#> callout type='info' }}
 
 You can create this class as a public class, but we suggest to create it directly into the Computer Group.
 
@@ -394,7 +406,9 @@ In this section we will just merge information from the two previous ones and te
 
 Here is the final version of the&nbsp;`ValidatorGroupComputer` class:
 
-```
+{{#> panel type='code' heading='ValidatorGroupComputer with dynamic groups'}}
+
+```java
 package org.nuxeo.project.computed.group;
 
 import java.io.Serializable;
@@ -472,6 +486,8 @@ public class ValidatorsGroupComputer extends AbstractGroupComputer {
     }
 }
 ```
+
+{{/panel}}
 
 **TEST 1**
 
@@ -567,8 +583,8 @@ Next steps could be:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [undefined]({{page}})
-*   [undefined]({{page}})
+*   [undefined]()
+*   [undefined]()
 *   [How-to index ]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

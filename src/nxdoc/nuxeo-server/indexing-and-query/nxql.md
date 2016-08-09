@@ -449,7 +449,7 @@ history:
 
 The general syntax of a NXQL expression is:
 
-```
+```sql
 SELECT (*|[DISTINCT] <select-clause>) FROM <from-clause> [WHERE <where-clause>] [ ORDER BY <order-by-clause> ]
 ```
 
@@ -540,7 +540,7 @@ The semantics of a few specific operators is described below.
 
 A Nuxeo property representing a list of simple values (like `dc:subjects`) can be queried as if it represented a simple value, and Nuxeo will automatically expand the query to match any of the value in the list. The following example will find the documents where **any** subject is _foo_:
 
-```
+```sql
 SELECT * FROM Document WHERE dc:subjects = 'foo'
 ```
 
@@ -550,7 +550,7 @@ The above example shows the `=` operator, and the same semantics apply for the o
 
 When using **negative queries**, though, the semantics get a bit more complex. The following example will find the documents where&nbsp;**no** subject is _foo_:
 
-```
+```sql
 SELECT * FROM Document WHERE dc:subjects <> 'foo'
 ```
 
@@ -560,7 +560,7 @@ The above&nbsp;example shows the `<>`&nbsp;operator, and the same semantics appl
 
 The complex property syntax (described in detail further down) can be used to match single list elements. The following two queries will do the same thing:
 
-```
+```sql
 SELECT * FROM Document WHERE dc:subjects = 'foo'
 SELECT * FROM Document WHERE dc:subjects/* = 'foo'
 ```
@@ -569,7 +569,7 @@ There is however an important difference in the mechanism with which these two r
 
 In the case where negative queries are used, however, the different execution mechanisms imply that the two syntaxes mean different things:
 
-```
+```sql
 SELECT * FROM Document WHERE dc:subjects <> 'foo'
 SELECT * FROM Document WHERE dc:subjects/* <> 'foo'     -- not the same thing as above
 ```
@@ -580,7 +580,7 @@ The second syntax will find the documents where there is **at least one** subjec
 
 To find documents whose list field is empty, you will use the `/*` syntax:
 
-```
+```sql
 SELECT * FROM Document WHERE dc:subjects/* IS NULL
 ```
 
@@ -612,14 +612,14 @@ The difference between `*` and `*1` gets important when you refer to the same ex
 
 This returns the documents with an attached text file of length 0:
 
-```
+```sql
 SELECT * FROM Document WHERE files/*1/file/name LIKE '%.txt' AND files/*1/file/length = 0
 
 ```
 
 This returns the documents with an attached text file and an attached file of length 0:
 
-```
+```sql
 SELECT * FROM Document WHERE files/*/file/name LIKE '%.txt' AND files/*/file/length = 0
 ```
 
@@ -683,7 +683,7 @@ The following properties are not legal as document property names, but are allow
 
 ## Examples
 
-```
+```sql
 SELECT * FROM Document
 SELECT * FROM Folder
 SELECT * FROM File
@@ -753,7 +753,7 @@ SELECT * FROM Document WHERE ecm:parentId = '62cc5f29-f33e-479e-b122-e3922396e60
 
 You can use `IS NULL`:
 
-```
+```sql
 SELECT * FROM Document WHERE dc:expired IS NOT NULL
 SELECT * FROM Document WHERE dc:language = '' OR dc:language IS NULL
 
@@ -761,7 +761,7 @@ SELECT * FROM Document WHERE dc:language = '' OR dc:language IS NULL
 
 You can use complex properties:
 
-```
+```sql
 SELECT * FROM File WHERE content/length > 0
 SELECT * FROM File WHERE content/name = 'testfile.txt'
 SELECT * FROM File ORDER BY content/length DESC
@@ -778,7 +778,7 @@ SELECT dc:subjects/*1 FROM Document WHERE dc:subjects/*1 LIKE 'abc%'
 
 Since Nuxeo 5.7.1 you can use&nbsp;`ecm:tag`:
 
-```
+```sql
 SELECT * FROM Document WHERE ecm:tag = 'tag1'
 SELECT * FROM Document WHERE ecm:tag IN ('tag1', 'tag2')               -- documents with either tag
 SELECT * FROM Document WHERE ecm:tag/* = 'tag1' AND ecm:tag/* = 'tag2' -- documents with both tags
@@ -790,20 +790,20 @@ SELECT ecm:tag FROM Document WHERE ecm:tag LIKE 'abc%' AND ecm:tag/* = 'tag1'  -
 
 Since Nuxeo 5.7.1 you can also use&nbsp;`ecm:proxyTargetId`&nbsp;and&nbsp;`ecm:proxyVersionableId`:
 
-```
+```sql
 SELECT * FROM Document WHERE ecm:proxyTargetId = '62cc5f29-f33e-479e-b122-e3922396e601'
 SELECT * FROM Document WHERE ecm:proxyVersionableId = '5442fff5-06f1-47c9-ac59-1e10ef8e985b'
 ```
 
 Since Nuxeo 5.7.3 you can match the "checked in" state of a document:
 
-```
+```sql
  SELECT * FROM Document WHERE ecm:isCheckedIn = 1
 ```
 
 Since Nuxeo 5.7.3 you can use additional version-related properties:
 
-```
+```sql
 SELECT * FROM Document WHERE ecm:isVersion = 1                        -- new name for ecm:isCheckedInVersion
 SELECT * FROM Document WHERE ecm:isLatestVersion = 1
 SELECT * FROM Document WHERE ecm:isLatestMajorVersion = 1
@@ -815,14 +815,14 @@ SELECT * FROM Document WHERE ecm:versionVersionableId = '5442fff5-06f1-47c9-ac59
 
 Since Nuxeo 5.9.2 you can use aggregates in queries made with `CoreSession.queryAndFetch`:
 
-```
+```sql
 SELECT COUNT(ecm:uuid) FROM Document WHERE dc:title = 'foo'
 SELECT MIN(my:value), MAX(my:value) FROM Document WHERE dc:title = 'bar'
 ```
 
 Since Nuxeo 5.9.6 you can use `ecm:ancestorId =`&nbsp;with an id as an alternative to `ecm:path STARTSWITH`&nbsp;with a path:
 
-```
+```sql
 SELECT * FROM Document WHERE ecm:ancestorId = 'c5904f77-299a-411e-8477-81d3102a81f9'
 SELECT * FROM Document WHERE ecm:ancestorId <> 'c5904f77-299a-411e-8477-81d3102a81f9'
 ```
@@ -839,7 +839,7 @@ SELECT * FROM Document WHERE ecm:acl/*1/principal = 'bob'
 
 This uses standard SQL LIKE and usually has poor performance:
 
-```
+```sql
 SELECT * FROM Document WHERE dc:title LIKE 'Test%'
 SELECT * FROM Document WHERE dc:title ILIKE 'test%'
 SELECT * FROM Document WHERE dc:contributors LIKE 'pe%'
@@ -850,27 +850,27 @@ SELECT * FROM Document WHERE dc:subjects NOT LIKE '%oo%'
 
 This is a standard full-text query (see&nbsp;[Full-Text Queries]({{page page='full-text-queries'}})&nbsp;for more):
 
-```
+```sql
 SELECT * FROM Document WHERE ecm:fulltext = 'foo'
 ```
 
 The following uses a full-text index that has to be additionally configured by administrators:
 
-```
+```sql
 SELECT * FROM Document WHERE ecm:fulltext_title = 'world'
 
 ```
 
 The following uses a full-text index if one is configured for the dc:title field, otherwise it uses ILIKE-based queries:
 
-```
+```sql
 SELECT * FROM Document WHERE ecm:fulltext.dc:title = 'brave'
 
 ```
 
 Since Nuxeo 5.9.6, use can express an explicit order on the full-text score, and request it from `CoreSession.queryAndFetch`:
 
-```
+```sql
 SELECT * FROM Document WHERE ecm:fulltext = 'foo' ORDER BY ecm:fulltextScore DESC
 SELECT ecm:uuid, ecm:fulltextScore FROM Document WHERE ecm:fulltext = 'foo'        -- with queryAndFetch
 ```
@@ -969,7 +969,7 @@ Where:
 
 Here are some examples of NXQL queries using Elasticsearch hints:
 
-```
+```sql
 -- Use an explicit Elasticsearch field
 SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.ngram) */ dc:title = 'foo'
 

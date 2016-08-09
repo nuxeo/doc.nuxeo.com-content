@@ -52,6 +52,8 @@ Components `org.nuxeo.ecm.core.search.api.client.querymodel.QueryModelService` a
 
 The XML syntax is very close, here is a sample migration of a query model contribution without a whereClause element:
 
+{{#> panel type='code' heading='Old Configuration'}}
+
 ```
 <extension target="org.nuxeo.ecm.core.search.api.client.querymodel.QueryModelService"
   point="model">
@@ -65,7 +67,11 @@ The XML syntax is very close, here is a sample migration of a query model contri
 </extension>
 ```
 
+{{/panel}}
+
 This can be translated into a page provider very easily (notice the pageSize and sort syntax changes):
+
+{{#> panel type='code' heading='New Configuration with Page Provider'}}
 
 ```
  <extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
@@ -80,6 +86,8 @@ This can be translated into a page provider very easily (notice the pageSize and
 </extension>
 ```
 
+{{/panel}}
+
 ### Code Migration
 
 Classes `QueryModel`, `QueryModelService` and `ResultsProviderFarm` have been removed.
@@ -91,6 +99,8 @@ Reading the [Custom Page Providers]({{page page='custom-page-providers'}}) and [
 ### Templates Migration
 
 Old templates displaying paged lists of documents have been removed, the template at [`/incl/content_view.xhtml`](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/incl/content_view.xhtml) can now be included to display the results using a listing layout configured on the content view.
+
+{{#> panel type='code' heading='Sample Old Template'}}
 
 ```
 
@@ -104,6 +114,8 @@ Old templates displaying paged lists of documents have been removed, the templat
 
 </div>
 ```
+
+{{/panel}}{{#> panel type='code' heading='Alternative Sample Old Template'}}
 
 ```
 
@@ -122,6 +134,8 @@ Old templates displaying paged lists of documents have been removed, the templat
 </div>
 ```
 
+{{/panel}}{{#> panel type='code' heading='Sample New Template'}}
+
 ```
 
 <div xmlns:ui="http://java.sun.com/jsf/facelets"
@@ -134,15 +148,19 @@ Old templates displaying paged lists of documents have been removed, the templat
 </div>
 ```
 
+{{/panel}}
+
 &nbsp;
 
-Also, the old templates displaying listings of documents were not relying on layouts, so migration may include defining [ listing layouts ]({{page page='layout-definitions'}}) and widget templates when migrating to content views.
+Also, the old templates displaying listings of documents were not relying on layouts, so migration may include defining [ listing layouts ]({{page page='layout-definitions#listing-layout'}}) and widget templates when migrating to content views.
 
 ## Migration Use Cases
 
 ### Migrating a `QueryModel` to a `PageProvider`
 
 Let's take again the above example:
+
+{{#> panel type='code' heading='Old Configuration'}}
 
 ```
 <extension target="org.nuxeo.ecm.core.search.api.client.querymodel.QueryModelService"
@@ -156,6 +174,8 @@ Let's take again the above example:
   </queryModel>
 </extension>
 ```
+
+{{/panel}}
 
 This query model is designed to perform a query on the Nuxeo Core Repository, using a parameter to fill the [ecm:uuid](http://ecmuuid) filtering criterion.
 
@@ -171,6 +191,8 @@ DocumentModelList list = qm.getDocuments(coreSession, params);
 
 Let's migrate the query model to a page provider:
 
+{{#> panel type='code' heading='New Configuration with Page Provider'}}
+
 ```
 <extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
   point="contentViews">
@@ -183,6 +205,8 @@ Let's migrate the query model to a page provider:
   </coreQueryPageProvider>
 </extension>
 ```
+
+{{/panel}}
 
 Let's also migrate the corresponding JAVA code:
 

@@ -128,7 +128,7 @@ This page talks about using JavaScript inside the Nuxeo web application (the bac
 
 Let's define two types of resources to be included later on pages:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.WebResources" point="resources">
   <resource name="myCss.css">
     <uri>/css/myCss.css</uri>
@@ -153,7 +153,7 @@ You can browse the [Nuxeo Resources JSF tag library documentation](http://commun
 
 Let's consider defining a new page template, using the main page template at [`/pages/basic_page.xhtml`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/basic_page.xhtml):
 
-```
+```xml
 <ui:composition template="basic_page.xhtml"
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:ui="http://java.sun.com/jsf/facelets">
@@ -171,7 +171,7 @@ This template uses a page named `myPage`.
 
 It can also reference the two resources defined above to include them too:
 
-```
+```xml
 <extension target="org.nuxeo.theme.styling.service" point="pages">
   <page name="myPage" charset="utf-8">
     <links>
@@ -196,7 +196,7 @@ It can also reference the two resources defined above to include them too:
 
 Alternatively, if the page already exists, resources can be appended to it:
 
-```
+```xml
 <require>component.defining.the.myPage.page<require>
 <extension target="org.nuxeo.theme.styling.service" point="pages">
   <page name="myPage">
@@ -210,7 +210,7 @@ Alternatively, if the page already exists, resources can be appended to it:
 
 Alternatively, resources can be included to a new resource bundle:
 
-```
+```xml
 <require>component.defining.the.myPage.page<require>
 <extension target="org.nuxeo.ecm.platform.WebResources" point="bundles">
   <bundle name="myBundle">
@@ -233,7 +233,7 @@ Alternatively, resources can be included to a new resource bundle:
 
 The default bundle named `nuxeo_includes`, defined by component `org.nuxeo.theme.nuxeo.webapp`, handles the inclusion of most of the JavaScript files used in default pages. New resources can be added to it so that they're available in all default pages:
 
-```
+```xml
 <require>org.nuxeo.theme.nuxeo.webapp</require>
 <extension target="org.nuxeo.ecm.platform.WebResources" point="bundles">
   <bundle name="nuxeo_includes">
@@ -254,7 +254,7 @@ When designing a page, you may want to include specific resources. The main page
 
 It also inserts additional templating zones to include additional resources, here is a sample usage:
 
-```
+```xml
 <ui:composition template="basic_page.xhtml"
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:h="http://java.sun.com/jsf/html"

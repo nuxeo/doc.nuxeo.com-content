@@ -293,7 +293,7 @@ The distribution is mainly an overlay to be extracted at the root of your Tomcat
 
 You must provide the Nuxeo logs path and start the Catalina with more memory than its defaults; for instance:
 
-```
+```none
 # Usually set in bin/catalina.sh rather than export
 export JAVA_OPTS="$JAVA_OPTS -Dnuxeo.log.dir=logs"
 export CATALINA_OPTS="$CATALINA_OPTS -Xms512m -Xmx1024m -XX:MaxPermSize=512m"

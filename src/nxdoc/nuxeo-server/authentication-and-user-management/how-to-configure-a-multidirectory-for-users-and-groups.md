@@ -115,7 +115,9 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
     *   With any of these two accounts, go to the **Admin** > **Users & Groups** menu to see new users or groups from the LDAP (use `*` to search all users/groups).
 5.  Stop the server and edit the XML file to change the parameters and the field mappings with your specific ones.
 
-```
+{{#> panel type='code' heading='default-multi-directories-config.xml'}}
+
+```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.directory.multi.storage.users">
   <implementation class="org.nuxeo.ecm.directory.ldap.LDAPDirectoryDescriptor" />
@@ -311,6 +313,8 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
   </extension>
 </component>
 ```
+
+{{/panel}}
 
 &nbsp;
 

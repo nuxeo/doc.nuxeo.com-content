@@ -178,11 +178,11 @@ Administrators are responsible for managing quotas on a global scale. Non-admini
 
 When you edit a document and save it as a new version (i.e. increment the document's version), the newly archived version is displayed until the document is modified. When the document is modified, you are displayed an unarchived modified version of the document, whose version number is based on the last archived version suffixed with a + sign. As a consequence, when the document only has one archived version, typically when its first version is created, the used space is the size of the newly archived version. As soon as the document is modified, the used space of the document is the sum of the archived version and the modified unarchived version.
 
-<span style="font-size: 10.0pt;line-height: 13.0pt;">More information on</span> [how versioning works]({{page space='userdoc' page='editing-content'}}).
+<span style="font-size: 10.0pt;line-height: 13.0pt;">More information on</span> [how versioning works]({{page space='userdoc' page='editing-content#versioning-overview'}}).
 
 {{/callout}}
 
-Users can also see [statistics]({{page}}) on how space is used.
+Users can also see [statistics](#consultingstatistics) on how space is used.
 
 When users try to create or edit a document and the maximum size of the workspace is / will be reached, they are displayed a message indicating that they need to free some space.
 
@@ -254,7 +254,7 @@ By default, there is no quota set on personal workspaces. Administrators can ena
 
 ### Consulting Statistics
 
-Users can see the [statistics]({{page}}) of a workspace or a domain as soon as they can access it.
+Users can see the [statistics](#statistics) of a workspace or a domain as soon as they can access it.
 
 **To see the statistics of a workspace:**
 

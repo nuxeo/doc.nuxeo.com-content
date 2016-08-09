@@ -282,7 +282,9 @@ Constraints are defined in schemas, on any field. It is based on XML Schema face
 
 Constraints are loaded by Nuxeo Core as Java objects implementing `org.nuxeo.ecm.core.schema.types.constraints.Constraint`.
 
-```
+{{#> panel type='code' heading='org.nuxeo.ecm.core.schema.types.constraints.Constraint'}}
+
+```java
 public interface Constraint extends Serializable {
     boolean validate(Object object);
     String getErrorMessage(Object invalidValue, Locale locale);
@@ -294,13 +296,17 @@ public interface Constraint extends Serializable {
 }
 ```
 
+{{/panel}}
+
 Constraints on a document field are available through the API by calling `org.nuxeo.ecm.core.schema.types.Field.getConstraints()`.
 
 Constraints on a field type are available through the API by calling `org.nuxeo.ecm.core.schema.types.SimpleType.getConstraints()`. Please note that constraints on fields integrate the constraints of the field type.
 
 Documents, document properties or simple values can be validated through Nuxeo service `org.nuxeo.ecm.core.api.validation.DocumentValidationService`.
 
-```
+{{#> panel type='code' heading='org.nuxeo.ecm.core.api.validation.DocumentValidationService'}}
+
+```java
 public interface DocumentValidationService {
     ConstraintViolationReport validate(DocumentModel document);
     ConstraintViolationReport validate(Property property);
@@ -308,6 +314,8 @@ public interface DocumentValidationService {
     ...
 }
 ```
+
+{{/panel}}
 
 Validation can be enabled/disabled at different level by means of the extension point [`activations`](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.core.api.DocumentValidationService.activations--activations) of the `org.nuxeo.ecm.core.api.DocumentValidationService` component.
 
@@ -331,7 +339,7 @@ Examples:
 
 *   An email
 
-    ```
+    ```xml
     <xs:element name="email">
       <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -343,7 +351,7 @@ Examples:
 
 *   US Zip Code + 4 digit extension Postal Code
 
-    ```
+    ```xml
     <xs:simpleType name="zipcodetype">
       <xs:restriction base="xs:integer">
         <xs:pattern value="[0-9]{5}([- /]?[0-9]{4})?" />
@@ -367,7 +375,7 @@ Behavior: This constraint ensures that the value of a field belongs to a set of 
 
 Example: Preference for use of a hand
 
-```
+```xml
 <xs:element name="mainColor">
   <xs:simpleType>
     <xs:restriction base="xs:string">
@@ -404,7 +412,7 @@ Examples:
 
 *   A login with a minimal size of 4 characters
 
-    ```
+    ```xml
     <xs:element name="login">
       <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -416,7 +424,7 @@ Examples:
 
 *   A credit card code with exactly 15 characters
 
-    ```
+    ```xml
     <xs:element name="code">
       <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -446,7 +454,7 @@ Examples:
 
 *   A month (Western calendar)
 
-    ```
+    ```xml
     <xs:element name="month">
       <xs:simpleType>
         <xs:restriction base="xs:integer">
@@ -459,7 +467,7 @@ Examples:
 
 *   The temperature in the universe (Fahrenheit degrees - above absolute zero)
 
-    ```
+    ```xml
     <xs:element name="temperature">
       <xs:simpleType>
         <xs:restriction base="xs:integer">
@@ -486,7 +494,7 @@ Behavior: This constraint ensures that a date is in a given time range. `null` v
 
 Example: Any date during 21 century
 
-```
+```xml
 <xs:element name="event21century">
   <xs:simpleType>
     <xs:restriction base="xs:date">
@@ -519,7 +527,7 @@ The non-standard `nillable` attribute must belong to a specific XML namespace: `
 
 Example: A mandatory description
 
-```
+```xml
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:nxsv="http://www.nuxeo.org/ecm/schemas/core/validation/"
            xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
@@ -570,7 +578,7 @@ Examples:
 
 *   A reference to another document in a field named "favorite" (note the attribute `ref:store="id"`, the reference will follow the document moves)
 
-    ```
+    ```xml
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
                xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
                xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
@@ -585,7 +593,7 @@ Examples:
 
 *   A reference to another document in a field named "workspace" (note the attribute `ref:store="path"`, the reference will not follow the document moves)
 
-    ```
+    ```xml
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
                xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
                xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
@@ -623,7 +631,7 @@ Examples:
 
 *   A reference to an author which must be a Nuxeo user (the `ref:type="user"` indicates the field must contain a user - not a group).
 
-    ```
+    ```xml
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
                xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
                xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
@@ -638,7 +646,7 @@ Examples:
 
 *   A reference to a Nuxeo group (the `ref:type="group"` indicates the field must contain a group - not a user).
 
-    ```
+    ```xml
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
                xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
                xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
@@ -653,7 +661,7 @@ Examples:
 
 *   A reference to a set of Nuxeo user or Nuxeo group (here, there is no `ref:type` attribute - the field accept user and group).
 
-    ```
+    ```xml
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
                xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
                xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
@@ -694,7 +702,7 @@ Please note that the namespace `http://www.nuxeo.org/ecm/schemas/core/external-r
 
 Example: A car brand (the `ref:directory="carBrands"` indicates the field must refer to an entry of the `carBrands` directory).
 
-```
+```xml
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
            xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
@@ -717,7 +725,7 @@ The validation API provides multiple operations to manage that.
 
 **Get the validation service**
 
-```
+```java
 import org.nuxeo.ecm.core.api.validation.DocumentValidationService;
 // ...
 DocumentValidationService validator = Framework.getService(DocumentValidationService.class);
@@ -725,7 +733,7 @@ DocumentValidationService validator = Framework.getService(DocumentValidationSer
 
 **Validating a full document**
 
-```
+```java
 DocumentModel doc = session.createDocumentModel("/", "doc1", "DocumentType");
 // update doc ...
 DocumentValidationReport report = validator.validate(doc);
@@ -733,7 +741,7 @@ DocumentValidationReport report = validator.validate(doc);
 
 **Validating the updated fields of a document**
 
-```
+```java
 DocumentModel doc = session.getDocument(new PathRef("/doc1"));
 // update the existing document
 DocumentValidationReport report = validator.validate(doc, true); // the second parameter enable "only dirty" validation
@@ -741,7 +749,7 @@ DocumentValidationReport report = validator.validate(doc, true); // the second p
 
 **Validating a document property**
 
-```
+```java
 DocumentModel doc = session.getDocument(new PathRef("/doc1"));
 // update the existing document
 DocumentValidationReport report = validator.validate(doc, true); // the second parameter enable "only dirty" validation
@@ -749,7 +757,7 @@ DocumentValidationReport report = validator.validate(doc, true); // the second p
 
 **Validating data according to a field definition**
 
-```
+```java
 SchemaManager schemaManager = Framework.getService(SchemaManager.class);
 Schema schema = schemaManager.getSchema("userprofile");
 Field field = schema.getField("birthdate");
@@ -759,7 +767,7 @@ DocumentValidationReport report = validator.validate(field, birthdate);
 
 **Validating data according to a field XPath**
 
-```
+```java
 GregorianCalendar birthdate = new GregorianCalendar(1984, 5, 15);
 DocumentValidationReport report = validator.validate("userprofile:birthdate", birthdate);
 ```
@@ -770,7 +778,7 @@ This feature allows to validate a value according to the definition of a simple 
 
 Given this schema:
 
-```
+```xml
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:nxv="http://nuxeo.com/schemas/validationSample"
@@ -807,7 +815,7 @@ Given this schema:
 
 You can do:
 
-```
+```java
 String firtname = "John";
 DocumentValidationReport report = validator.validate("schemprefix:users:user:firstname", firstname);
 ```
@@ -816,7 +824,7 @@ DocumentValidationReport report = validator.validate("schemprefix:users:user:fir
 
 Validation can be enable/disable at different level by contributing to the validation service:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.api.DocumentValidationService" point="activations">
   <validation context="createDocument" activated="true" />
   <validation context="saveDocument" activated="true" />
@@ -832,7 +840,7 @@ By default, the validation is fully activated (create, save, import).
 
 If activated, validation could throw `DocumentValidationException` while calling:
 
-```
+```java
 CoreSession.createDocument(DocumentModel);
 CoreSession.createDocument(DocumentModel[]);
 CoreSession.saveDocument(DocumentModel);
@@ -852,7 +860,7 @@ You can get a localized error message for each violation by calling `ConstraintV
 
 You can also get each violation, the broken constraint, the corresponding invalid value and the place where the violation append.
 
-```
+```java
 DocumentValidationReport report = validator.validate(document);
 // document constains a list of users with lastname/firtname (lastname and firstname should not be null and must contains non-space characters.
 if (report.hasError()) {
@@ -894,7 +902,7 @@ Through the APIs, you can get the constraints defined for each fields using:
 
 Example: a constraint introspection
 
-```
+```java
 for (Schema schema : doc.getDocumentType().getSchemas()) {
     for (Field field : schema.getFields()) {
         constraintIntrospection(field, Arrays.asList(field.getName().getPrefix()));
@@ -927,7 +935,7 @@ When a field is defined as a reference and is associated to a resolver, you can 
 
 Example, a reference to another document:
 
-```
+```xml
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
            xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
@@ -942,7 +950,7 @@ Example, a reference to another document:
 
 To know if a field is a reference:
 
-```
+```java
 SchemaManager schemaManager = Framework.getService(SchemaManager.class);
 Schema schema = schemaManager.getSchema("schema");
 Field field = schema.getField("favorite");
@@ -953,7 +961,7 @@ if (field.getType().getObjectResolver() != null) {
 
 To know if a property is a reference:
 
-```
+```java
 DocumentModel document = ...;
 if (document.getObjectResolver("schema:favorite") != null) {
   System.out.println("it's a reference to an object");
@@ -971,7 +979,7 @@ if (property.getType().getObjectResolver() != null) {
 
 To get the referenced value:
 
-```
+```java
 DocumentModel referenced = document.getObjectResolver("schema:favorite").fetch(DocumentModel.class);
 // or
 DocumentModel referenced = document.getProperty("schema:favorite").getObjectResolver().fetch(DocumentModel.class);
@@ -984,7 +992,7 @@ DocumentModel referenced = resolver.fetch(DocumentModel.class, reference);
 
 To set the referenced document:
 
-```
+```java
 DocumentModel referenced = ...;
 document.getObjectResolver("schema:favorite").setObject(referenced);
 // or

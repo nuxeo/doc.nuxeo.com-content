@@ -117,6 +117,8 @@ Two helpers are set by default into Nuxeo Platform: "**Fn**" and "**HTTP**".
 
 ### **HTTP** Examples
 
+{{#> panel type='code' heading='GET REST Call from Nuxeo to another Nuxeo repository'}}
+
 ```
 import org.nuxeo.ecm.core.api.Blob;
 import org.nuxeo.ecm.core.api.CoreSession;
@@ -137,6 +139,8 @@ automationService.run(ctx, "RunScript", params);
 // 'result' will be the JSON Payload definition of the document 'default-domain'
 String result = ((Blob) ctx.get("result")).getString();
 ```
+
+{{/panel}}{{#> panel type='code' heading='POST REST Call from Nuxeo to another Nuxeo repository'}}
 
 ```
 import org.nuxeo.ecm.core.api.Blob;
@@ -167,11 +171,13 @@ automationService.run(ctx, "RunScript", params);
 String result = ((Blob) ctx.get("result")).getString();
 ```
 
+{{/panel}}
+
 ## Contributions
 
 Automation Helpers can be contributed to the Nuxeo Platform easily through extension point:
 
-```
+```xml
 <extension-point name="contextHelpers">
   <documentation>
     <code>
@@ -185,7 +191,7 @@ Automation Helpers can be contributed to the Nuxeo Platform easily through exten
 
 ### Default Contribution
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
            point="contextHelpers">
   <contextHelper id="Fn" class="org.nuxeo.ecm.automation.features.PlatformFunctions"/>
@@ -197,14 +203,18 @@ Automation Helpers can be contributed to the Nuxeo Platform easily through exten
 
 In order to contribute custom Helpers contribution, you have to create your own POJO extending the interface 'org.nuxeo.ecm.automation.context.ContextHelper':
 
-```
+{{#> panel type='code' heading='XML Contribution'}}
+
+```xml
 <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
            point="contextHelpers">
   <contextHelper id="dummy" class="org.test.DummyHelper"/>
 </extension>
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='POJO'}}
+
+```java
 package org.test;
 
 import org.nuxeo.ecm.automation.context.ContextHelper;
@@ -217,3 +227,5 @@ public class DummyHelper implements ContextHelper {
 }
 
 ```
+
+{{/panel}}

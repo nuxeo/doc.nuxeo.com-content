@@ -223,7 +223,7 @@ This addon defines the `PublishableMedia`&nbsp;facet. This facet is added to the
 
 The `MediaPublishingService` exposes the `providers` extension point to contribute new publishing services.
 
-```
+```xml
 <extension-point name="providers" target="org.nuxeo.ecm.media.publishing.MediaPublishingService">
   <provider id="MyMediaPublishingProvider"
       enabled="true"
@@ -240,7 +240,7 @@ If you want to define other media publishing providers, you need to contribute a
 
 Nested in the component tag of your XML contribution file, set the implementation class and use the extension point&nbsp;`providers` to register your media publishing service.
 
-```
+```xml
 <component name="org.nuxeo.ecm.media.publishing.MyMediaPublishingProviderService">
   <implementation class="org.nuxeo.ecm.media.publishing.MyMediaPublishingProviderService" />
 
@@ -263,7 +263,7 @@ Your service implementation must implement the&nbsp;`MediaPublishingProvider` in
 1.  Nested in the component tag of your XML contribution file, add a `require`&nbsp;tag the&nbsp;`OAuth2ServiceProviderRegistry`.
 2.  Then, use the extension point&nbsp; [`providers`](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.oauth2.providers.OAuth2ServiceProviderRegistry--providers) &nbsp;of the `OAuth2ServiceProviderRegistry`&nbsp;service to register the OAuth provider.
 
-    ```
+    ```xml
     <component name="org.nuxeo.ecm.media.publishing.MyOAuthServiceProvider">
       <require>org.nuxeo.ecm.platform.oauth2.providers.OAuth2ServiceProviderRegistry</require>
 
@@ -286,7 +286,7 @@ Your service implementation must implement the&nbsp;`MediaPublishingProvider` in
 
 By default, when publishing a video, the only required field to fill in is the publishing account. However, since different services allow different metadata (e.g. privacy status of a video, channels, projects, tags) it is possible to contribute more options widgets to the publishing panel in the UI.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
   <action id="myprovider_options" type="widget">
     <category>MEDIA_PUBLISHING_OPTIONS_CATEGORY</category>

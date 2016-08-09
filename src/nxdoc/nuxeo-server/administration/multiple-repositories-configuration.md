@@ -98,7 +98,9 @@ In addition, when more than one repository is configured, certain optimizations 
 
 3.  For each additional repository, add a new file, either through custom templates, or directly in `$NUXEO/nxserver/config`, that defines your new datasource, like the example below.
 
-    ```
+    {{#> panel type='code' heading='datasources-secondrepo-config.xml'}}
+
+    ```xml
     <?xml version="1.0"?>
     <component name="datasources-secondrepo-config">
       <extension target="org.nuxeo.runtime.datasource" point="datasources">
@@ -114,6 +116,7 @@ In addition, when more than one repository is configured, certain optimizations 
     </component>
     ```
 
+    {{/panel}}
     *   The name&nbsp;`jdbc/repository_secondrepo` is important, as this name is actually &nbsp;`jdbc/repository_` followed by the name of the repository (`secondrepo`) that we will define below.
     *   Of course the `xaDataSource`&nbsp;and the various `property` values should be filled in according to your database parameters.{{#> callout type='note' heading='JAR Dependencies'}}
 
@@ -136,7 +139,9 @@ It's probably easier to do this by copying an existing working version of a&nbsp
 
 For instance you will get something like:
 
-```
+{{#> panel type='code' heading='repository-secondrepo-config.xml'}}
+
+```xml
 <?xml version="1.0"?>
 <component name="repository-secondrepo-config">
   <extension target="org.nuxeo.ecm.core.storage.sql.RepositoryService" point="repository">
@@ -157,6 +162,8 @@ For instance you will get something like:
 
  </component>
 ```
+
+{{/panel}}
 
 The part about&nbsp;`<repository name="secondrepo"`&nbsp;is important as it's where you define the name of your repository, which needs to be in sync with what you defined for the datasource.&nbsp;
 

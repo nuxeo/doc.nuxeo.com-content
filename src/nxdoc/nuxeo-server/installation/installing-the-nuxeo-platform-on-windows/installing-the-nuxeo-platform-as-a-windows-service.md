@@ -366,6 +366,8 @@ Deprecated Nuxeo scripts managing install as a Windows service were previously u
 
 As an example, here is the content of `jboss-native-2.0.4/bin/service.bat`:
 
+{{#> panel type='code' heading='Nuxeo JBoss Service Script for Windows'}}
+
 ```
 @echo off
 REM JBoss, the OpenSource webOS
@@ -489,6 +491,8 @@ goto cmdEnd
 
 ```
 
+{{/panel}}
+
 Other implementations were available from JBoss.
 
 {{#> callout type='note' }}
@@ -506,6 +510,8 @@ Using the Tomcat distribution of Nuxeo, you will find a `service.bat` script in 
 Tanuki's library provides [multiple methods for integrating a software as a service on various OS](http://wrapper.tanukisoftware.com/doc/english/integrate.html), the easier is to use the WrapperSimpleApp helper class to launch the application: see [the example of JBoss installed as a Windows service](http://wrapper.tanukisoftware.com/doc/english/integrate-simple-win.html).
 It requires to unzip the downloaded wrapper file, configure a `wrapper.conf` file pointing to `%NUXEO_HOME%\bin\nuxeoctl.bat`, then write a `wrapper.bat` file for managing test/install/uninstall:
 
+{{#> panel type='code' heading='JavaServiceWrapper usage'}}
+
 ```
 REM Test:
 wrapper.exe -c %NUXEO_HOME%\wrapper\wrapper.conf
@@ -517,11 +523,15 @@ REM Uninstall:
 wrapper.exe -r %NUXEO_HOME%\wrapper\wrapper.conf
 ```
 
+{{/panel}}
+
 This solution is known to work well but is sadly not redistributable for us because of its GPL/Commercial license.
 
 ### .NET InstallUtil
 
 .NET framework provides an `InstallUtil.exe` tool for installing/uninstalling services.
+
+{{#> panel type='code' heading='InstallUtil usage'}}
 
 ```
 REM Install
@@ -532,7 +542,7 @@ InstallUtil /u %NUXEO_HOME\bin\service.bat
 
 ```
 
-{{#> callout type='note' }}
+{{/panel}}{{#> callout type='note' }}
 
 There are some disadvantages such as failures in case of multiple frameworks installed and frontward/backward incompatibilities.
 

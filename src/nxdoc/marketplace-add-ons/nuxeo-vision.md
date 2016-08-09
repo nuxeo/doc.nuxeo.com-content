@@ -158,7 +158,7 @@ The default behavior is defined in two automation chains which can be overridden
 2.  Create your automation chains and use the operation inside them. You can use the [regular automation chains]({{page page='how-to-create-an-automation-chain'}}) or [Automation Scripting]({{page page='automation-scripting'}}).
 3.  [Create an XML extension]({{page page='how-to-contribute-to-an-extension'}}) that specifies that your automation chains should be used.
 
-    ```
+    ```xml
     <extension target="org.nuxeo.vision.core.service" point="configuration">
     	<configuration>
     		<pictureMapperChainName>MY_PICTURE_CHAIN</pictureMapperChainName>
@@ -173,7 +173,7 @@ The default behavior is defined in two automation chains which can be overridden
 
 The default behavior can also be completely disabled with the following contribution:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
 	<listener name="visionPictureConversionChangedListener" class="org.nuxeo.vision.core.listener.PictureConversionChangedListener" enabled="false></listener>
 	<listener name="visionVideoChangedListener" class="org.nuxeo.vision.core.listener.VideoStoryboardChangedListener" enabled="false"></listener>
@@ -188,7 +188,7 @@ The result of the operation is stored in a context variable and is an object of 
 
 Here&rsquo;s how the operation is used in the default chain:
 
-```
+```js
 function run(input, params) {
     var blob = Picture.GetView(input, {
         'viewName': 'Medium'

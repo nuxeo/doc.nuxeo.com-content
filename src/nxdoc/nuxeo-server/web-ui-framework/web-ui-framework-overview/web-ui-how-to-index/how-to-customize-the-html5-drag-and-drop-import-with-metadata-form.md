@@ -71,7 +71,7 @@ history:
         version: '1'
 
 ---
-HTML5 drag and drop enables users to [import documents in a folder]({{page space='userdoc' page='creating-content'}}) and fill their metadata at the same time.
+HTML5 drag and drop enables users to [import documents in a folder]({{page space='userdoc' page='creating-content#content-creation-dandd'}}) and fill their metadata at the same time.
 
 ![]({{file name='smartDnD_metadata.png' space='userdoc' page='creating-content'}} ?w=650,h=289,border=true)
 
@@ -79,7 +79,7 @@ Follow the steps to below to customize the import form.
 
 1.  In Nuxeo Studio, [create a new XML Extension]({{page page='how-to-contribute-to-an-extension'}}) with the following content:
 
-    ```
+    ```xml
     <extension target="org.nuxeo.ecm.platform.actions.ActionService"
       point="actions">
      <action id="Chain.FileManager.ImportWithMetaDataInSeam"

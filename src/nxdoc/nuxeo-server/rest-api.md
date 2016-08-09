@@ -556,7 +556,7 @@ Multiple resources are exposed:
 *   **Queries**: You can search by query, or by referencing a page provider contributed server-side.
     `<span class="java plain">nuxeo/site/api/v1/query?query={query}</span>` or `<span class="java plain">/nuxeo/site/api/v1/query/{page_provider_name}?queryParams={params_values}</span>`
     <span class="java plain">See the page [Query Endpoint]({{page page='query-endpoint'}}).</span>
-*   **Workflow**: Since 7.2, [new workflow endpoints]({{page page='workflow-apis'}}) are available.
+*   **Workflow**: Since 7.2, [new workflow endpoints]({{page page='workflow-apis#wfrestapi'}}) are available.
 *   **Upload batch**: Since 7.4, a [new upload endpoint]({{page page='blob-upload-for-batch-processing'}}) is available. It allows you to upload a set of files before using them in a transactional operation.
     `/nuxeo/api/v1/upload/{batchId}`
 

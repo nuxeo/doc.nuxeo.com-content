@@ -157,7 +157,7 @@ The&nbsp;[MimeTypePreviewer](http://explorer.nuxeo.org/nuxeo/site/distribution/c
 
 Note that it is by default called only from the converter-based&nbsp;`HtmlPreviewAdapter`. If you contribute your own adapter and also want to benefit from this logic, you need to call inside your HtmlPreviewAdapter implementation. The following extract of Nuxeo code illustrates how to use it:
 
-```
+```java
 ...
 String srcMT = blob.getMimeType();
 MimeTypePreviewer mtPreviewer = Framework.getService(PreviewAdapterManager.class).getPreviewer(srcMT);

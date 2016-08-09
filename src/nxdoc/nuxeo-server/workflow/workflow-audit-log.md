@@ -161,7 +161,7 @@ Since 7.4, a new audit category called&nbsp;**Routing**&nbsp;has been added for 
 *   `afterWorkflowTaskReassigned`
 *   `afterWorkflowTaskDelegated`
 
-For all these events, we log useful information regarding the workflow and/or node state in the&nbsp;[extended info]({{page page='audit'}})&nbsp;of the audit entry. The table below summarizes which extended info is logged depending on the event.
+For all these events, we log useful information regarding the workflow and/or node state in the&nbsp;[extended info]({{page page='audit#extendedinfo'}})&nbsp;of the audit entry. The table below summarizes which extended info is logged depending on the event.
 
 <table><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">modelName</th><th colspan="1">modelId</th><th colspan="1">workflowInitator</th><th colspan="1">taskActor</th><th colspan="1">workflowVariables</th><th colspan="1">nodeVariables</th><th colspan="1">action</th><th colspan="1">timeSinceWfStarted</th><th colspan="1">timeSinceTaskStarted</th></tr><tr><th colspan="1">afterWorkflow
 Finish</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td></tr><tr><th colspan="1">afterWorkflow
@@ -188,7 +188,7 @@ Where:
 
 {{#> callout type='info' }}
 
-Note that since Nuxeo 7.3, the audit is stored by default as an Elasticsearch index which offers the possibility to store the [extended info]({{page page='audit'}}) as plain JSON objects. The `workflowVariables` and `nodeVariables` are indeed maps of primitive types and therefore are stored in their current forms except for blob variables which are omitted.
+Note that since Nuxeo 7.3, the audit is stored by default as an Elasticsearch index which offers the possibility to store the [extended info]({{page page='audit#extendedinfo'}}) as plain JSON objects. The `workflowVariables` and `nodeVariables` are indeed maps of primitive types and therefore are stored in their current forms except for blob variables which are omitted.
 
 {{/callout}}
 
@@ -202,7 +202,7 @@ In the first step of the workflow called `wf.travelExpenses.create`, a user comp
 
 In order to have an overview of what is logged in the audit, we can use the [Elasticsearch Passthrough]({{page page='elasticsearch-passthrough'}}) to query the new entries added to the audit index as we are completing the above workflow. For instance the following request
 
-```
+```bash
 curl -XGET -u jdoe:jdoe  'http://localhost:8080/nuxeo/site/es/audit_wf/_search' -d '{ "query": { "match_all":{}}}'
 ```
 
@@ -212,7 +212,7 @@ Let's have a look to returned entries. First the workflow is started by a user, 
 
 *   One for the `afterWorkflowStarted` event
 
-    ```
+    ```js
     {
         "_id": "10267", 
         "_index": "audit", 
@@ -257,7 +257,7 @@ Let's have a look to returned entries. First the workflow is started by a user, 
 
 *   Another one for the `afterWorkflowTaskCreated` event because the workflow creates the task associated to the `wf.travelExpenses.create` node right after it started.
 
-    ```
+    ```js
     {
         "_id": "10266", 
         "_index": "audit", 
@@ -311,7 +311,7 @@ Then the user completes the task associated to the `wf.travelExpenses.create` no
 
 *   One for `afterWorkflowTaskEnded`
 
-    ```
+    ```js
     {
         "_id": "10271", 
         "_index": "audit", 
@@ -359,11 +359,11 @@ Then the user completes the task associated to the `wf.travelExpenses.create` no
     }
     ```
 
-    At this stage, the [extended info]({{page page='audit'}}) contains interesting data such as `timeSinceWfStarted`, `timeSinceTaskStarted`, `action` (i.e. the button the user clicked to complete the task), etc.
+    At this stage, the [extended info]({{page page='audit#extendedinfo'}}) contains interesting data such as `timeSinceWfStarted`, `timeSinceTaskStarted`, `action` (i.e. the button the user clicked to complete the task), etc.
 
 *   Another one for the `afterWorkflowTaskCreated` event because the workflow creates a task associated to the `Accept/Reject` node right after:
 
-    ```
+    ```js
      {
         "_id": "10275", 
         "_index": "audit", 
@@ -416,7 +416,7 @@ Eventually a manager will validate the request (associated audit entries will be
 
 *   A final audit entry for the `afterWorkflowFinish` event is added
 
-    ```
+    ```js
     {
         "_id": "10289", 
         "_index": "audit", 

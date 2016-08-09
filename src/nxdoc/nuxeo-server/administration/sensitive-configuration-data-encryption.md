@@ -163,7 +163,9 @@ For best security on the sensitive configuration data, it is recommended to:
 
 You can easily encrypt with the automatically generated server key&nbsp;`server.status.key`.
 
-```
+{{#> panel type='code' heading='Encrypt with the server.status.key'}}
+
+```bash
 # Generate a random server.status.key if unset; it will be used as the secret key
 $ bin/nuxeoctl configure -q
 
@@ -175,7 +177,9 @@ $ bin/nuxeoctl config server.status.key -q
 $ bin/nuxeoctl config some.sensitive.property someValue --encrypt -q
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='Decrypt with server.status.key'}}
+
+```bash
 # Key is stored encrypted in nuxeo.conf
 $ grep ^some.sensitive.property bin/nuxeo.conf 
 some.sensitive.property={$$t4Dgkiwa/LjK0Pd9cTlPkg==}
@@ -193,6 +197,8 @@ Please enter the secret key:
 someValue
 ```
 
+{{/panel}}
+
 &nbsp;
 
 *   The secret key asked above will be the server key `server.status.key`.
@@ -201,7 +207,9 @@ someValue
 
 Instead of using the server key, you can provide a custom secret key.
 
-```
+{{#> panel type='code' heading='Encrypt with a custom secret key'}}
+
+```bash
 # Set a custom secret key (either a raw value or an URL)
 $ bin/nuxeoctl config server.crypt.secretkey --set -q
 Please enter the value for server.crypt.secretkey:
@@ -210,6 +218,8 @@ Please enter the value for server.crypt.secretkey:
 $ bin/nuxeoctl config some.sensitive.property someValue --encrypt -q
 
 ```
+
+{{/panel}}
 
 &nbsp;
 
@@ -220,7 +230,9 @@ $ bin/nuxeoctl config some.sensitive.property someValue --encrypt -q
 
 You can configure Nuxeo to retrieve the secret key from a keystore.
 
-```
+{{#> panel type='code' heading='Encrypt with a key from a keystore'}}
+
+```bash
 # Generate a random server.status.key if unset; it will be used as the key password within the key store
 $ bin/nuxeoctl configure
 
@@ -236,7 +248,9 @@ $ bin/nuxeoctl config server.crypt.keystore.pass --set -q
 Please enter the value for server.crypt.keystore.pass:
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='Decrypt with a key from a keystore'}}
+
+```bash
 ## Check configuration and test encryption, decryption
 $ bin/nuxeoctl config --get-regexp 'server.crypt' -q
 server.crypt.keyalias=NuxeoSecretKey
@@ -263,6 +277,8 @@ $ bin/nuxeoctl config some.sensitive.property -q
 Please enter the secret key:
 someValue
 ```
+
+{{/panel}}
 
 &nbsp;
 

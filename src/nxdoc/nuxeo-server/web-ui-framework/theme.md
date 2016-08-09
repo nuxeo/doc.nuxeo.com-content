@@ -401,7 +401,7 @@ An [online UI Style Guide](http://showcase.nuxeo.com/style) is available to help
 
 When defining a new page, some default pages can be included to benefit from theme features. Here is a typical page example:
 
-```
+```xml
 <ui:composition template="/pages/workspace_page.xhtml"
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:ui="http://java.sun.com/jsf/facelets">
@@ -428,7 +428,7 @@ Let's describe in more details two different default pages so that you can defin
 
 The [Workspace page](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/workspace_page.xhtml) is the standard default page, showing a header and a footer, as well as a left column (showing the import button, document explorer, clipboard...):
 
-```
+```xml
 <ui:composition template="/pages/basic_page.xhtml"
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:ui="http://java.sun.com/jsf/facelets">
@@ -472,7 +472,7 @@ The [Workspace page](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-
 
 The [Popup page](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/popup_page.xhtml) page is the standard popup page, not showing any header or footer:
 
-```
+```xml
 <ui:composition template="basic_page.xhtml"
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:ui="http://java.sun.com/jsf/facelets">
@@ -494,7 +494,7 @@ The [Popup page](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-plat
 </ui:composition>
 ```
 
-This template uses an hardcoded page name, but still relies on [negotiations]({{page}}) for current flavor resolution.
+This template uses an hardcoded page name, but still relies on [negotiations](#negotiation) for current flavor resolution.
 
 ### Mechanism to Defer Parsing of JavaScript in JSF Pages
 
@@ -565,7 +565,7 @@ Here is an example of the `galaxy/default` default page definition:
 
 Resources that need to be included on a page need to define a `resource` contribution to the&nbsp; [`resources` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-7.3/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources). Resources define mainly a name and a type, here are sample contributions:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.WebResources" point="resources">
   <resource name="popup-utils.js">
     <uri>/scripts/popup-utils.js</uri>
@@ -579,7 +579,7 @@ Resources that need to be included on a page need to define a `resource` contrib
 
 Here the resource type is inferred from the resource name extension: it ends by ".css" for CSS files, and ".js" for JavaScript files. It can also be set explicitly on the `resource` element:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.WebResources" point="resources">
   <resource name="popup-utils.js" type="js">
     <uri>/scripts/popup-utils.js</uri>
@@ -603,7 +603,7 @@ Here files will be retrieved from the generated WAR directory (nuxeo.war)&nbsp; 
 
 Alternatively, the `path` element can be used to reference the resource in the current JAR:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.WebResources" point="resources">
   <resource name="popup-utils.js" type="js">
     <path>scripts/popup-utils.js</path>
@@ -644,7 +644,7 @@ When defining styles and JavaScript resources, you do not need to worry about us
 
 Bundles are a group of ordered resources. Bundles that need to be included on a page need to define a `bundle` contribution to the [`bundles` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-7.3/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--bundle):
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.WebResources" point="bundles">
   <bundle name="nuxeo_includes">
     <resources>
@@ -670,7 +670,7 @@ Bundles accept merge by adding an attribute `append="true"` to the `resources` e
 
 Also, most of Nuxeo default pages should already use the `nuxeo_includes` bundle (gathering most of JavaScript resources used throughout the default application), so contributing a new resource to it is a good way of making sure this resource will be present on all pages:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.WebResources" point="bundles">
   <!-- Require the contribution defining the bundle -->
   <require>org.nuxeo.theme.nuxeo.webapp</require>
@@ -687,7 +687,7 @@ Also, most of Nuxeo default pages should already use the `nuxeo_includes` bundle
 
 If you'd like to include all resources of a given bundle inside an XHTML page, without declaring this bundle on the `page` element (because there is no other template where these resources will be used, for instance), you can use the following tag:
 
-```
+```xml
 <ui:fragment
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:ui="http://java.sun.com/jsf/facelets"
@@ -704,7 +704,7 @@ If you'd like to include all resources of a given bundle inside an XHTML page, w
 
 This will generate the following HTML code:
 
-```
+```xml
 <link type="text/css" rel="stylesheet" href="/nuxeo/wro/api/v1/resource/bundle/my_bundle.css?flavor=default" />
 <script type="text/javascript" src="/nuxeo/wro/api/v1/resource/bundle/my_bundle.js?flavor=default"></script>
 ```
@@ -720,7 +720,7 @@ Main resources types are `scss`,&nbsp;`css` and `js`. But other types can also b
 *   HTML resources will be included on the page using an HTML import tag
 *   Resources using type `jsfjs` or `jsfcss` will be included as JSF resources:
 
-    ```
+    ```xml
     <extension target="org.nuxeo.ecm.platform.WebResources" point="resources">
       <resource name="widget-utils.js" type="jsfjs">
         <uri>org.nuxeo:widget-utils.js</uri>
@@ -780,7 +780,7 @@ Here is an example of the default flavor:
 *   `sass` contributions define a list of [scss variables](http://sass-lang.com/guide) that can be reused in several places in the SCSS files.
     For example in `themes/palettes/common_variables.scss` we can define:
 
-    ```
+    ```css
     // Fonts
     $font-color: #42444e;
     $title: #213f7d;
@@ -801,7 +801,7 @@ Here is an example of the default flavor:
 
 SCSS resources referencing variables will need to declare the Sass&nbsp;`processor`&nbsp;to be triggered:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.WebResources" point="resources">
   <resource name="buttons_and_actions.css">
     <path>themes/css/buttons_and_actions.css</path>

@@ -184,7 +184,7 @@ The following functions are available in the Escalation Rules Expression Editor 
 
 Rules are evaluated by default every five minutes. You can override the related scheduler contribution if you want to change it. You may want to reduce the frequency while you are doing the configuration, but then don't forget to set it back to a reasonable value when in production!
 
-```
+```xml
 <extension
  target="org.nuxeo.ecm.platform.scheduler.core.service.SchedulerRegistryService"
  point="schedule">

@@ -104,7 +104,7 @@ Layouts can be used to display various kinds of information, in various renderin
 
 ## Layout Registration
 
-Layouts are registered using a regular [extension point]({{page page='runtime-and-component-model'}}) on the [Nuxeo ECM layout service](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.forms.layout.WebLayoutManager). Here is a sample contribution.
+Layouts are registered using a regular [extension point]({{page page='runtime-and-component-model#extensions'}}) on the [Nuxeo ECM layout service](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.forms.layout.WebLayoutManager). Here is a sample contribution.
 
 ```
 <?xml version="1.0"?>
@@ -309,7 +309,7 @@ Layouts can also be used to render grid layouts, visible on documents "Summary" 
 
 Here is a sample contribution showing how to define grid slots and corresponding size. The online [Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide) shows detailed information about [grids styling](http://showcase.nuxeo.com/nuxeo/styleGuide/Grid).
 
-```
+```xml
 <layout name="grid_summary_layout">
   <templates>
     <template mode="any">

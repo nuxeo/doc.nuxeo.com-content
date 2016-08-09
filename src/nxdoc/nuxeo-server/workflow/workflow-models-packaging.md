@@ -86,7 +86,7 @@ This page deals with how a workflow model is created on a Nuxeo instance. Note t
 
 Nuxeo workflows are declared via the following contribution:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.routing.service" point="routeModelImporter">
 <template-resource id="TimeOffRequest" path="data/TimeOffRequest.zip"/>
 <template-resource id="TimeOffUpdateCancelRequest" path="data/TimeOffUpdateCancelRequest.zip"/>

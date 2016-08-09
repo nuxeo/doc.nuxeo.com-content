@@ -344,7 +344,7 @@ Testing is always welcome, particularly when Nuxeo submits a new Fast Track vers
 
 ## Improvements and Bug Fixes
 
-Improving a module is always welcome and is carefully managed by Nuxeo developers. Process is through a JIRA "Contribution" ticket and [GitHub](https://github.com/nuxeo). Depending on the nature of your changes, you might be asked to sign and return the [Contributor Agreement]({{page}}). This is mandatory for everything that isn't minor improvement or bugfix. You may get credentials to commit directly when you get used to submitting pull requests and that those one respect the framework logic and quality rules.&nbsp;
+Improving a module is always welcome and is carefully managed by Nuxeo developers. Process is through a JIRA "Contribution" ticket and [GitHub](https://github.com/nuxeo). Depending on the nature of your changes, you might be asked to sign and return the [Contributor Agreement](#contributoragreement). This is mandatory for everything that isn't minor improvement or bugfix. You may get credentials to commit directly when you get used to submitting pull requests and that those one respect the framework logic and quality rules.&nbsp;
 
 1.  Create a [JIRA "Contribution" ticket](http://jira.nuxeo.com/browse/NXP) that will hold a description of your improvements, functionally and technically.
 2.  Send an email to <a>the nuxeo-dev mailing list</a>, or&nbsp;post on [the Nuxeo Google+ community](https://plus.google.com/communities/117410347547563540242), to notify the community as well as Nuxeo developers.
@@ -361,7 +361,7 @@ Improving a module is always welcome and is carefully managed by Nuxeo developer
 Nuxeo is highly modularized and as a consequence, it is totally possible to develop a new feature that will be deeply mixed with existing interface. Our main recommendation, among respecting coding rules and design, is to respect the usual code layout: core, API, facade, web, &hellip; If you have such a project, Nuxeo will be glad to help you designing your module, and to provide a GitHub repository, aside a web page (Wiki) and a JIRA project for the visibility of your development.
 
 1.  Start by an introductory email in the mailing list, explaining purpose of the new module you want to develop (BEFORE developing it) and how you think of doing it or how you did it (although it is always better to contact the list before).
-2.  After a few exchanges in the mailing list, return the [Contributor Agreement]({{page}}) signed. Nuxeo will then add you to the GitHub organization and give you rights to commit in a new GitHub repository.
+2.  After a few exchanges in the mailing list, return the [Contributor Agreement](#contributoragreement) signed. Nuxeo will then add you to the GitHub organization and give you rights to commit in a new GitHub repository.
 3.  Read and respect the [Coding and design guidelines]({{page space='corg' page='coding-and-design-guidelines'}}).
 4.  Commit your development regularly (meaning don't wait to finish everything: on the contrary commit each of your developments on a very atomic mode, mentioning purpose of your commit in JIRA (take it as an advice more than a rule).
 5.  Unit tests are mandatory and Test Driven Development is strongly encouraged. Functional tests could also be integrated. We'll put your module under continuous integration, if the quality of the code respects Nuxeo criteria.

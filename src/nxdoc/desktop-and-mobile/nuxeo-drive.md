@@ -770,7 +770,7 @@ Since Nuxeo Platform 7.3&nbsp;we chose to use Elasticsearch as a default back en
 
 That's why we strongly recommend to keep this default configuration.
 
-Please read the related sections: [Triggering SQL to Elasticsearch Audit Logs Migration]({{page page='elasticsearch-setup'}})&nbsp;and&nbsp;[Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}).
+Please read the related sections: [Triggering SQL to Elasticsearch Audit Logs Migration]({{page page='elasticsearch-setup#triggeringsqltoelasticsearchauditlogsmigration'}})&nbsp;and&nbsp;[Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup#disablingelasticsearchforauditlogs'}}).
 
 {{! /multiexcerpt}}
 

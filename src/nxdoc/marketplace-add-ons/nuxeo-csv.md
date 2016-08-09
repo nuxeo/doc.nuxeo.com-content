@@ -252,7 +252,7 @@ Nuxeo CSV does support complex properties but not blob definition.
 
 To import documents using Nuxeo CSV:
 
-1.  Prepare the CSV file that defines the documents to import, following the rules explained in the [CSV file definition section]({{page}}).
+1.  Prepare the CSV file that defines the documents to import, following the rules explained in the [CSV file definition section](#nuxeo-csv-import-file-definition).
     Some specific use cases are explained below.
 2.  In the Nuxeo Platform, go on the workspace or folder you want to import documents into.
 3.  Click on the **Import a CSV file** button in the workspace or folder you want to import documents into.
@@ -288,7 +288,7 @@ You can use the attached file []({{file name='nuxeo-csv-import-sample1.csv'}}) t
 
 ### Importing Files
 
-It is possible to create documents of type File and to upload their main attachment using Nuxeo CSV. This requires that your administrator [enabled it in the server configuration]({{page}}) and to put the binary files in a folder that can be accessed by the server.
+It is possible to create documents of type File and to upload their main attachment using Nuxeo CSV. This requires that your administrator [enabled it in the server configuration](#configuration) and to put the binary files in a folder that can be accessed by the server.
 
 On your CSV file, use the&nbsp;`file:content` property in the first line and the name of your file on the document definition line.
 

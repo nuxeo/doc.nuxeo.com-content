@@ -80,7 +80,7 @@ Requirements:
 1.  [Check Java is correctly installed]({{page page='installation'}}).
 2.  Download the [Nuxeo Windows distribution](http://www.nuxeo.com/downloads/) (.exe).
 3.  [Install the Nuxeo Platform]({{page page='installing-the-nuxeo-platform-on-windows'}}).
-4.  [Start the Nuxeo instance]({{page page='server-start-and-stop'}}).
+4.  [Start the Nuxeo instance]({{page page='server-start-and-stop#start-windows'}}).
 5.  Open the Browser from the Windows Server (firewalls must be enabled) at the address [localhost:8080/nuxeo](http://localhost:8080/nuxeo).
 6.  [Configure the server]({{page page='configuration-wizard'}}): In **General Settings**, replace IP Address 0.0.0.0 by 127.0.0.1 to limit Tomcat to local answers.
 
@@ -223,6 +223,6 @@ If Nuxeo has a strange behavior, for instance:
 *   the Home Dashboard is empty
 *   etc&hellip;
 
-These problems may occur because you didn't [enhance the URL MAX Length parameter]({{page}}).
+These problems may occur because you didn't [enhance the URL MAX Length parameter](#enhancing-the-url-max-length-parameter).
 
 You can look into your firebug if some requests returned a 401, with a "bad url" message.

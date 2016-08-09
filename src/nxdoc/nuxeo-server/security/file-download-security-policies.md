@@ -109,7 +109,7 @@ If you are looking to dynamically restrict access to whole documents depending o
 
 {{/callout}}{{#> callout type='warning' }}
 
-File download security policies apply to **all** files in the Platform. Your filters need to be specific enough in order to avoid possible side-effects. Make sure to use the [available variables]({{page}}) at your disposal to check you are in the right use case first.
+File download security policies apply to **all** files in the Platform. Your filters need to be specific enough in order to avoid possible side-effects. Make sure to use the [available variables](#available-variables) at your disposal to check you are in the right use case first.
 
 Possible side-effects you may want to check include:
 
@@ -122,7 +122,7 @@ Possible side-effects you may want to check include:
 
 To additionally restrict the download of a given blob inside a document, you can contribute to the following extension point:
 
-```
+```xml
    <extension target="org.nuxeo.ecm.core.io.download.DownloadService" point="permissions">
     <permission name="myperm">
       <script language="JavaScript">
@@ -213,7 +213,7 @@ Here is a more complex (if unrealistic) example that uses most of the available 
 
 If you launched your Nuxeo instance in console mode (`./nuxeoctl console`), you can print output to the terminal for easier debugging. For instance, getting the available variables is done as following:
 
-```
+```js
 <extension target="org.nuxeo.ecm.core.io.download.DownloadService" point="permissions">
   <permission name="myperm">
     <script language="JavaScript">

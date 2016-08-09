@@ -573,7 +573,6 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
         ```
 
     2.  From your REST endpoints, just consume or return Product as usual.
-
         {{#> panel type='code' heading='Using marshallers'}}
 
         ```java
@@ -592,7 +591,6 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
             return Response.ok().build();
         }
         ```
-
         {{/panel}}
 *   Outside JAX-RS
 

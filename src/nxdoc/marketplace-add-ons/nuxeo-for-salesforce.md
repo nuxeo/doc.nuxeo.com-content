@@ -273,7 +273,7 @@ You can also set it up directly from your Salesforce dashboard.&nbsp;<span style
 1.  Authorize the framing of your Nuxeo server inside Salesforce.
     Since Nuxeo 8.3, for clickjacking protection the framing is restricted. To unrestrict it, [create a new XML extension]({{page page='how-to-contribute-to-an-extension'}}) containing:
 
-    ```
+    ```xml
     <require>org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService.defaultContrib</require>
       <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService"
         point="responseHeaders">
@@ -315,7 +315,9 @@ Each time a SF user is displaying a SF object in his SF console, Nuxeo is going 
 
 The Automation operation script `javascript.FetchSFObject` can be overriden in order to bind the current Salesforce object to a specific document in Nuxeo.&nbsp;
 
-```
+{{#> panel type='code' heading='javascript.FetchSFObject'}}
+
+```js
 <scriptedOperation id="javascript.FetchSFObject">
   <inputType>void</inputType>
   <outputType>void</outputType>
@@ -350,6 +352,8 @@ The Automation operation script `javascript.FetchSFObject` can be overriden in o
 </scriptedOperation>
 ```
 
+{{/panel}}
+
 In the operation, the parameter `param` of the function provides three attributes: `sfobjectid`, `sfobjectname` and `sfobjecttype`.
 
 ### Override Example
@@ -366,7 +370,9 @@ Here is an example of overriding the SF object binding: When I enter my SF objec
 <span style="line-height: 21.58px;">This behavior is implemented by this operation.
 </span>
 
-```
+{{#> panel type='code' heading='New Behavior'}}
+
+```js
 function run(input, params) {
       var sfobject = JSON.parse(params.sfObject);
       // We are checking if the document is existing. If not we're going to check the rules to create it accordingly.
@@ -455,7 +461,7 @@ function getProperties(doc, sfobject){
 }
 ```
 
-{{#> callout type='warning' heading='Studio'}}
+{{/panel}}{{#> callout type='warning' heading='Studio'}}
 
 Those two operations can be overriden inside a Nuxeo Studio project easily by creating two operations for instance: `SFGetChildren` and `FetchSFObject`.
 
@@ -467,7 +473,9 @@ Those two operations can be overriden inside a Nuxeo Studio project easily by cr
 
 The Automation operation script `javascript.SFGetChildren` provides a way for the developer to customize the listing of the document content bound to the Salesforce object.
 
-```
+{{#> panel type='code' heading='javascript.SFGetChildren'}}
+
+```js
 <scriptedOperation id="javascript.SFGetChildren">
   <inputType>document</inputType>
   <outputType>documents</outputType>
@@ -480,11 +488,15 @@ The Automation operation script `javascript.SFGetChildren` provides a way for th
 </scriptedOperation>
 ```
 
+{{/panel}}
+
 ### Override Example
 
 For instance, the listing execution could be executed in an unrestricted session to list "unauthorized" documents only for title viewing (Salesforce or Nuxeo rights are not affected).
 
-```
+{{#> panel type='code' heading='javascript.SFGetChildren'}}
+
+```js
 function run(input, params) {
   Auth.LoginAs(null, {});
   var children =  Document.GetChildren(input, {});
@@ -493,7 +505,7 @@ function run(input, params) {
 }
 ```
 
-{{#> callout type='warning' heading='Studio'}}
+{{/panel}}{{#> callout type='warning' heading='Studio'}}
 
 Those two operations can be overriden inside a Nuxeo Studio project easily by creating two operations for instance: `SFGetChildren` and `FetchSFObject`.
 

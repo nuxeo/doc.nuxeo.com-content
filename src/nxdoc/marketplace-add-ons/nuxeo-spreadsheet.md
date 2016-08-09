@@ -113,7 +113,7 @@ This add-on allows you to edit data in your repository as if you were in a sprea
 
 To visualise in a spreadsheet the content of a folder or of the result of a search, click on ![]({{file name='spreadsheet.png'}}).&nbsp;The spreadsheet editor opens and displays as many line as there are items in the result of the query. The columns that are displayed corresponds to the columns that were displayed on the content view. If you modify the list of columns in the content view&nbsp;clicking on the&nbsp; ![]({{file name='edit_columns.png' space='userdoc' page='icons-index'}})&nbsp;icon from the content view, this will be reflected on the spreadsheet when re-opening it. The spreadsheet module uses the layout introspection API&nbsp;to be able to list the columns displayed in the content view. A mapping is done for each Layout Widget so as to display an adapted cell editor, among Simple text, DirectoryValue suggest and calendar. See the limitations section for details of the mapping. Results are&nbsp;fetched page per page using the following page provider:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.query.api.PageProviderService"
   point="providers">
     <coreQueryPageProvider name="spreadsheet_query">
@@ -150,7 +150,7 @@ By using a set of vocabulary [content enrichers]({{page page='content-enricher'}
 
 To enable loading labels for a custom directory a new vocabulary content enricher must be configured, ex:
 
-```
+```xml
 <enricher name="myvocabulary" class="org.nuxeo.ecm.automation.io.services.enricher.VocabularyEnricher">
     <category>vocabularies</category>
     <parameter name="field">prefix:field</parameter>

@@ -141,6 +141,8 @@ The procedure described here is targeted for the **Debian** Wheezy distribution,
 
 Here is a sample script based on [the one used in the Debian package](https://github.com/nuxeo/nuxeo-packaging-debian/blob/master/resources/debian/nuxeo.init).
 
+{{#> panel type='code' heading='/etc/init.d/nuxeo'}}
+
 ```
 #!/bin/sh
 ### BEGIN INIT INFO
@@ -207,6 +209,8 @@ case "$1" in
 esac
 
 ```
+
+{{/panel}}
 
 1.  Copy the shell script to `/etc/init.d/nuxeo`, replacing paths to match your installation.
 2.  Enable the autostart creating the links in the rcX.d directories running the command (as root):

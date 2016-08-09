@@ -185,27 +185,27 @@ Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](htt
 *   You can contribute several extension points in the same XML Extensions feature. This is useful to group extensions that are contributed for the same high level functional goal.
     Thus, you can have:
 
-    ```
+    ```xml
     <extension point ="" target =""> ...</extension>
     ```
 
     or
 
-    ```
+    ```xml
     <require> component name</require>
     <extension point ="" target =""> ...</extension>
     ```
 
     or
 
-    ```
+    ```xml
     <extension point ="" target =""> ...</extension>
     <extension  point ="..." target="...">...</extension>
     ```
 
     or
 
-    ```
+    ```xml
     <require> component name</require>
     <require> component name bis</require>
     <extension  point ="..." target="...">...</extension>
@@ -293,7 +293,7 @@ Components deployment is linear, so if you want to override an existing configur
 
 **Follow the steps for your preferred tool (see above) combined the specific steps below.**
 
-1.  Identify this component: using Nuxeo Explorer, go to the extension point definition (see [the first section]({{page}}) ).
+1.  Identify this component: using Nuxeo Explorer, go to the extension point definition (see [the first section](#finding-extension-point) ).
 2.  Click on the contribution you want to override.
 3.  Copy the name of the component (value after **In component**).
 4.  Paste it in your component into a `<require>` item.

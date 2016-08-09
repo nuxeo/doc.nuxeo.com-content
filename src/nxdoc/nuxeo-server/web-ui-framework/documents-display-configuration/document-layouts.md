@@ -86,7 +86,7 @@ Layouts can be linked to a document type by specifying the layout names in its d
 
 Here is a sample configuration excerpt:
 
-```
+```xml
 <type id="Note">
   [...]
   <layouts mode="any">
@@ -101,7 +101,7 @@ Layouts are defined in a given mode; layouts in the "any" mode will be used as d
 
 It is possible to merge layouts when redefining the document type, adding a property `append="true"`:
 
-```
+```xml
 <layouts mode="any" append="true">
   <layout>newLayout</layout>
 </layouts>
@@ -114,7 +114,7 @@ Since 5.8, the property named&nbsp;`display` set on the layout configuration is 
 
 The [documentLayout tag](http://community.nuxeo.com/api/nuxeo/5.8/tlddoc/nxl/documentLayout.html) can be used to display the layouts of a document:
 
-```
+```xml
 
 <div xmlns="http://www.w3.org/1999/xhtml"
     xmlns:nxl="http://nuxeo.org/nxforms/layout">
@@ -125,7 +125,7 @@ The [documentLayout tag](http://community.nuxeo.com/api/nuxeo/5.8/tlddoc/nxl/doc
 
 It is possible to make a distinction between the layouts defined in a given mode on the document, and the mode used to render layouts, for instance:
 
-```
+```xml
 <nxl:documentLayout
   documentMode="header"
   mode="view"

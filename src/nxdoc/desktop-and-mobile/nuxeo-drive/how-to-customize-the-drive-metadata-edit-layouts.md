@@ -67,7 +67,7 @@ history:
         version: '1'
 
 ---
-You have created your own document types and defined forms and view that show properties specific to your business and users. Your users leverage Nuxeo Drive to work on Nuxeo documents from their desktop and you want them to be able to enjoy the [metadata edit feature of Nuxeo Drive]({{page space='userdoc' page='nuxeo-drive'}}).
+You have created your own document types and defined forms and view that show properties specific to your business and users. Your users leverage Nuxeo Drive to work on Nuxeo documents from their desktop and you want them to be able to enjoy the [metadata edit feature of Nuxeo Drive]({{page space='userdoc' page='nuxeo-drive#metadata-edit'}}).
 
 ![]({{file name='Drive_metadata_edit.png' space='userdoc' page='nuxeo-drive'}} ?w=400)
 
@@ -78,10 +78,10 @@ To do so:
 1.  In Nuxeo Studio, [create a new Form layout]({{page space='studio' page='form-layouts'}}) called&nbsp;`myDriveLayout` for instance.
 2.  Fill in the View Layout and Edit Layout with relevant widgets.
     You will probably end up with similar information as on your custom document type layouts.
-3.  [Create a new XML Extension]({{page page='how-to-contribute-to-an-extension'}}) called&nbsp;`DriveMetadataEdit` for instance.
+3.  [Create a new XML Extension]({{page page='how-to-contribute-to-an-extension#xml-extension-studio'}}) called&nbsp;`DriveMetadataEdit` for instance.
 4.  Use the following content and adapt it to your needs:
 
-    ```
+    ```xml
     <extension target="org.nuxeo.ecm.platform.types.TypeService"
       point="types">
       <type id="mydocumenttype">

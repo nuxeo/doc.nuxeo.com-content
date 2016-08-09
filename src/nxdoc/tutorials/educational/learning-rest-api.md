@@ -253,7 +253,7 @@ In Nuxeo Studio:
 
 {{#> accordian heading='CORS Configuration - Solution' closed='true'}}
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
   <corsConfig name="BigCorp" 
     allowGenericHttpRequests="true" 
@@ -277,14 +277,14 @@ In your Nuxeo Cloud instance:
     ![]({{file name='restart-instance.png' space='nxdoc710' page='learning-rest-api'}} ?w=500,h=508,border=true)
 3.  Open a terminal and launch the following commands to test your configuration:
 
-    ```
+    ```bash
     # Please replace https://your-instance-name.nuxeo.io by your real nuxeo.io instance URL. 
     # The following command should be denied by the CORS configuration.
     # You should see: Cross-Origin Resource Sharing (CORS) Filter: CORS origin denied: http://www.nuxeo.com
     curl --verbose -H "Origin: http://www.nuxeo.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS https://your-instance-name.nuxeo.io/nuxeo/site/foobar/upload
     ```
 
-    ```
+    ```bash
     # Please replace https://your-instance-name.nuxeo.io by your real nuxeo.io instance URL. 
     # The following command should be accepted by the CORS configuration.
     curl --verbose -H "Origin: https://jsfiddle.net" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS https://your-instance-name.nuxeo.io/nuxeo/site/foobar/upload
@@ -306,7 +306,9 @@ During this training we will focus on using the JavaScript client. The JavaScrip
 
 The JS client uses promises, that look like this:
 
-```
+{{#> panel type='code' heading='Promise Example'}}
+
+```js
 var nuxeo = new Nuxeo({...});
 
 nuxeo
@@ -322,6 +324,8 @@ nuxeo
     throw error;
   });
 ```
+
+{{/panel}}
 
 Latest release of the Nuxeo JavaScript Client can be found in the [Nuxeo JS client repository](https://github.com/nuxeo/nuxeo-js-client/releases). **You don't need to install it for this training**, all exercises will be provided in cloud based services.
 
@@ -340,7 +344,9 @@ Authenticating using the JS client is done by:
 2.  Set a `baseURL` property, unless you connect to your localhost.
 3.  Add an `auth` object into it, passing it the authentication method, username and password.
 
-    ```
+    {{#> panel type='code' heading='Sample'}}
+
+    ```js
     var nuxeo = new Nuxeo({
      baseUrl: 'http://localhost:8080/nuxeo',
      auth: {
@@ -350,6 +356,8 @@ Authenticating using the JS client is done by:
      }
     });
     ```
+
+    {{/panel}}
 
 #### Practice - Authentication Using the JS Client
 
@@ -375,7 +383,9 @@ Obviously, this is also slightly more complex, since it involves more steps:
 
 1.  Instantiating a Nuxeo client, using a `basic` authentication as you did in the previous exercise.
 
-    ```
+    {{#> panel type='code' heading='Sample'}}
+
+    ```js
     var tmpNuxeoClient = new Nuxeo({
      baseUrl: 'http://localhost:8080/nuxeo',
      auth: {
@@ -386,9 +396,12 @@ Obviously, this is also slightly more complex, since it involves more steps:
     });
     ```
 
+    {{/panel}}
 2.  Use this instance to obtain a token:
 
-    ```
+    {{#> panel type='code' heading='Sample'}}
+
+    ```js
     // Needed parameters for the function to obtain a token: 
     // application name (string, use whatever you see fit), 
     // unique device id (string, you'll probably want to use the device's id on a phone or use a specific function to generate one), 
@@ -402,9 +415,12 @@ Obviously, this is also slightly more complex, since it involves more steps:
       .catch(...)
     ```
 
+    {{/panel}}
 3.  Instantiate another Nuxeo client, this time using a `token` authentication mechanism:
 
-    ```
+    {{#> panel type='code' heading='Sample'}}
+
+    ```js
     var nuxeo = new Nuxeo({
      baseUrl: 'http://localhost:8080/nuxeo',
      auth: {
@@ -413,6 +429,8 @@ Obviously, this is also slightly more complex, since it involves more steps:
      }
     });
     ```
+
+    {{/panel}}
 
 For security purpose, you should avoid defining the first client using the `basic` authentication in the global scope, and place it in a function call instead. You will be able to see a sample in the exercise below.
 
@@ -438,9 +456,13 @@ Complete the following exercise.
 
 When using the Nuxeo JS client, fetching documents is done by using the [`Repository`](http://nuxeo.github.io/nuxeo-js-client/1.0.0/Repository.html) class.
 
-```
+{{#> panel type='code' heading='Fetching a Document'}}
+
+```js
 nuxeo.repository().fetch("document id or path")...
 ```
+
+{{/panel}}
 
 #### Headers
 
@@ -455,21 +477,29 @@ In the JS client, you can set headers:
 
 *   In the `Nuxeo` instance to make sure the headers will be sent for each call
 
-    ```
+    {{#> panel type='code' heading='Adding an Application-Wide Header'}}
+
+    ```js
     nuxeo.header("someHeader", "someValue");
     ```
+
+    {{/panel}}
 
     Note that some shortcut methods exist, for instance to define the schemas to retrieve. Look at the [`Nuxeo`](http://nuxeo.github.io/nuxeo-js-client/1.0.0/Nuxeo.html) class documentation for them.
 
 *   Only in a specific request to fine-tune a unique call.
 
-    ```
+    {{#> panel type='code' heading='Adding a Request-Specific Header'}}
+
+    ```js
     var callOptions = {
       'headers': { 'headerName': 'headerValue', ... } 	// overrides all headers set for this call only
       'schemas': ['dublincore', 'common', ...] 			// overrides the schemas set in the Nuxeo object for this call only
     };
     nuxeo.class().method(..., callOptions)
     ```
+
+    {{/panel}}
 
 {{#> callout type='info' heading='What You Should Remember'}}
 
@@ -528,7 +558,7 @@ On top of the `depth` header, you can use:
     Or `X-NXfetch.document:properties` instead to retrieve all objects at the same time.
 *   The corresponding JS client methods:
 
-    ```
+    ```js
     nuxeo.someClass().fetchProperty('entity-type', 'myschema:myProperty')... 
     // You can use it as many times as needed to add other properties
     // TODO: You need to replace someClass by the appropriate class!
@@ -598,7 +628,7 @@ Enrichers are provided in the response into the `contextParameters` object.
 
 The corresponding JS client methods:
 
-```
+```js
 nuxeo.someClass().enricher('entity-type', 'enricherName')... 
 // You can use it as many times as needed to add other enrichers
 // TODO: You need to replace someClass by the appropriate class!
@@ -659,7 +689,7 @@ Several adapters can be chained; in this case the result of the first adapter wi
 
 As adapters can virtually provide anything in the response, there is no specific class that can be used to call adapters in the JS client. Instead, you need to use the `Request` class and launch a call, passing the URL and the call method:
 
-```
+```js
 // Sample to retrieve the ACLs of the default domain
 nuxeo.request('/path/default-domain/@acl')
   .get()
@@ -737,7 +767,7 @@ The `document` parameter is a document object containing:
 *   the document id (in a `uid` field)
 *   the properties to update (in a `properties` object)
 
-```
+```js
 // Sample document object for an update call
 var documentToUpdate = {
   'entity-type': 'document',
@@ -793,7 +823,9 @@ File upload with the JS client is done in three main steps:
 
 The file can be attached to the document either during the document creation, or by updating it.
 
-```
+{{#> panel type='code' heading='File Upload Sample'}}
+
+```js
 // Create the blob wrapper
 // We assume you already obtained the file from a form and placed it into a selectedFile variable
 var nuxeoBlob = new Nuxeo.Blob({ 'content': selectedFile });
@@ -811,7 +843,7 @@ batch.upload(nuxeoBlob) // Note that we could also upload several blobs in the s
   });
 ```
 
-{{#> callout type='info' heading='What You Should Remember'}}
+{{/panel}}{{#> callout type='info' heading='What You Should Remember'}}
 
 *   Uploading files is done by creating `Nuxeo.Blob` objects, instantiating a batch, then uploading the files into the batch.
 *   Once the files are uploaded, you can attach them to your documents by creating new documents or updating existing documents.
@@ -882,6 +914,8 @@ Using the JS client, the [`Repository`](https://nuxeo.github.io/nuxeo-js-client/
 
 In that case, specify the NXQL query to be launched in the query property: `nuxeo.Repository().query({ 'query': myQuery })...` where `myQuery` is a variable containing the query to launch.
 
+{{#> panel type='code' heading='Sample NXQL Query for a Fulltext Search'}}
+
 ```
 SELECT * FROM Document 
 	WHERE ecm:mixinType != 'HiddenInNavigation' 
@@ -890,6 +924,8 @@ SELECT * FROM Document
 	AND ecm:currentLifeCycleState != 'deleted' 
 	AND ecm:fulltext LIKE 'MyKeyword'
 ```
+
+{{/panel}}
 
 See also the [NXQL]({{page space='nxdoc710' page='nxql'}}) documentation to get a glimpse of all possibilities offered.
 
@@ -902,7 +938,7 @@ In that case, you need to:
 1.  Specify the content view id as defined in Nuxeo Studio in the `pageProvider` property
 2.  Pass in the `queryParams` property an array containing the parameters, in the same order as they are defined in the content view.
 
-```
+```js
 nuxeo.Repository().query({ 'pageProvider': 'pageProviderId', queryParams['parameter1', 'parameter2'...] })...
 ```
 
@@ -911,7 +947,7 @@ nuxeo.Repository().query({ 'pageProvider': 'pageProviderId', queryParams['parame
 *   To query the database, you can use `nuxeo.Repository().query({ 'query': myQuery })...` where `myQuery` is a variable containing the query to launch.
 *   If you want to query on the Elasticsearch index instead, you can create a page provider by defining a content view in Studio (only the query part is required), then call it using the JS client:
 
-    ```
+    ```js
     nuxeo.Repository().query({ 'pageProvider': 'pageProviderId', queryParams['parameter1', 'parameter2'...] })...
     ```
 
@@ -975,7 +1011,9 @@ As soon as you create one of them in Nuxeo Studio and deploy your configuration 
 
 Using the JS client's [`Operation`](https://nuxeo.github.io/nuxeo-js-client/1.0.0/Operation.html) object.
 
-```
+{{#> panel type='code' heading='Call a Chain or Script'}}
+
+```js
 nuxeo.operation('MyChainOrScriptId')
   .input('a Document object or an id or a path here')
   .params({
@@ -993,6 +1031,8 @@ nuxeo.operation('MyChainOrScriptId')
   });
 ```
 
+{{/panel}}
+
 Note that automation scripts are prefixed by `javascript.` So if your automation script is called `myScript` in Nuxeo Studio, you should call `javascript.myScript`.
 
 {{#> callout type='info' heading='What You Should Remember'}}
@@ -1001,7 +1041,9 @@ Note that automation scripts are prefixed by `javascript.` So if your automation
 *   Any custom operation, chain or script you created is immediately available on the server, there is nothing special to do.
 *   The way to call them is similar, they all use the operation object:
 
-    ```
+    {{#> panel type='code' heading='Call a Chain or Script'}}
+
+    ```js
     nuxeo.operation('MyChainOrScriptId')
       .input('a Document object or an id or a path here')
       .params({
@@ -1019,6 +1061,8 @@ Note that automation scripts are prefixed by `javascript.` So if your automation
       });
     ```
 
+    {{/panel}}
+
 {{/callout}}
 
 ### Practice - Executing Business Logic
@@ -1034,7 +1078,7 @@ Note that automation scripts are prefixed by `javascript.` So if your automation
 
     {{#> accordian heading='Solution' closed='true'}}
 
-    ```
+    ```js
     /******
     Adds a document to a specific collection in the user's workspace
     The collection is created if it doesn't exist
@@ -1149,24 +1193,32 @@ With the JS client, you can use the `nuxeo.workflows().start('workflowId')` meth
 
 Once the document is fetched, use the `startWorkflow` method:
 
-```
+{{#> panel type='code' heading='Starting a Workflow On a Document'}}
+
+```js
 document.startWorkflow('workflowId');
 ```
+
+{{/panel}}
 
 #### Using the Workflow Class
 
 Before starting the workflow, you need to create an object containing the ids of the documents to attach.
 
-```
+{{#> panel type='code' heading='Workflow Options Object'}}
+
+```js
 var workflowOptions = {
       "attachedDocumentIds": 
         ["docId1", "docId2", ...]
   };
 ```
 
+{{/panel}}
+
 Then pass this object when starting the workflow.
 
-```
+```js
 nuxeo.workflows().start('workflowId', workflowOptions)...
 ```
 
@@ -1246,7 +1298,7 @@ Create a content enricher to obtain the contract's latest version.
 
 Copy the following Java class into your project and complete it:
 
-```
+```java
 package org.nuxeo.sample;
 import static org.nuxeo.ecm.core.io.registry.reflect.Instantiations.SINGLETON;
 import static org.nuxeo.ecm.core.io.registry.reflect.Priorities.REFERENCE;
@@ -1281,7 +1333,7 @@ public class LastVersionEnricher extends AbstractJsonEnricher<DocumentModel> {
 
 {{#> accordian heading='Solution' closed='true'}}
 
-```
+```java
 package org.nuxeo.sample;
 import static org.nuxeo.ecm.core.io.registry.reflect.Instantiations.SINGLETON;
 import static org.nuxeo.ecm.core.io.registry.reflect.Priorities.REFERENCE;
@@ -1322,11 +1374,15 @@ Declaring a content enricher is done through an XML component. You can declare i
 
 If you declare it in your Java project, make sure to reference it in the project's `manifest.mf` file in the `src/main/resources/META-INF` folder, into the `Nuxeo-Component` list:
 
-```
+{{#> panel type='code' heading='Manifest.mf File Extract'}}
+
+```text
 ...
 Nuxeo-Component:OSGI-INF/org.nuxeo.sample.enrichers.parentDocEnricher.xml,OSGI-INF/org.nuxeo.sample.another-contribution.xml,...
 
 ```
+
+{{/panel}}
 
 Now you can declare yours!
 
@@ -1341,6 +1397,6 @@ Declare your content enricher.
 
 ### Call the Content Enricher
 
-Now that the enricher is created, you need to [package and deploy your application](https://university.nuxeo.io/nuxeo/university/#%21/course/nuxeo-platform-developer-basics/package-deploy-application), then you can [call it]({{page}})! Your enricher name is the one you put inside the `NAME` variable.
+Now that the enricher is created, you need to [package and deploy your application](https://university.nuxeo.io/nuxeo/university/#%21/course/nuxeo-platform-developer-basics/package-deploy-application), then you can [call it](#restapitraining-enrichers)! Your enricher name is the one you put inside the `NAME` variable.
 
 {{! /multiexcerpt}}

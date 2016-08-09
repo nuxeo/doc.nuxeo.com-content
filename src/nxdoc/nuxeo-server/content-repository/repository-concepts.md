@@ -370,7 +370,7 @@ You may need to override an existing schema defined by Nuxeo. As usual, this pos
 For instance, you can add your own parameters into the user.xsd schema to add the extra information stored into your ldap and fetch them and store them into the principal instance (that represents every user).
 The contribution will be something like:
 
-```
+```xml
 <component name="fr.mycompanyname.myproject.schema.contribution">
   <!-- to be sure to deployed after the Nuxeo default contributions>
   <require>org.nuxeo.ecm.directory.types</require>

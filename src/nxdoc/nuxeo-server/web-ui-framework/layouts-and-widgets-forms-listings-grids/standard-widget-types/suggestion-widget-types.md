@@ -253,7 +253,7 @@ Since 5.7.2, Nuxeo uses [select2](http://ivaynberg.github.io/select2/) for the s
 
 Unlike the older JSF suggestion widgets, these select2-based widgets rely upon an [automation]({{page page='content-automation-concepts'}}) operation to retrieve suggestions according to the search term typed in the select2 box. The backing operation returns suggestions as an array of JSON objects that select2 is able to manipulate.
 
-As a result, it is quite easy to [customize the display]({{page}}) of selected/suggested entries.
+As a result, it is quite easy to [customize the display](#customdisplay) of selected/suggested entries.
 
 Also, these suggestion widgets can be used inside lists (older suggestion widgets had [limitations]({{page page='default-widget-types-known-limitations'}})).
 
@@ -286,7 +286,7 @@ By default, suggestion widgets assume the vocabulary labels are not localized. I
 <span style="color: rgb(61,61,61);">The translations are&nbsp;available&nbsp;is `message_xx.properties` files and the vocabulary only handles the label key. As of Nuxeo 5.8, labels will be translated if the widget is marked as translated in its configuration (but this should be tied to the "localize" property for better consistency so this will likely change in the future, see [NXP-13629](https://jira.nuxeo.com/browse/NXP-13629)):
 </span>
 
-```
+```xml
 <translated>true</translated>
 ```
 
@@ -294,13 +294,13 @@ By default, suggestion widgets assume the vocabulary labels are not localized. I
 
 The vocabulary handles as many label columns as supported locales. Again this is the case for&nbsp;ln10coverage and ln10subjects which have two columns for English and French translations. To support such vocabulary structure, the&nbsp;`dbl10n` widget property must be set to true:
 
-```
+```xml
 <property name="dbl10n">true</property>
 ```
 
 By convention, the field name associated to these label columns must respect the pattern&nbsp;**label_xx** where xx is the locale code. However this can be changed with the&nbsp;`labelFieldName` widget parameter. For instance, the following configuration means that labels are translated using the columns `language_en`, `language_fr`, etc. of your vocabulary.
 
-```
+```xml
 <property name="labelFieldName">language_{lang}</property>
 ```
 
@@ -356,11 +356,15 @@ Previously based on RichFaces suggestion box for Nuxeo Platform 5.6 and earlier 
 
 This operation uses the [`default_document_suggestion`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.webapp.pageproviders.contrib--providers) page provider. However, you can specify the NXQL query to be executed via the widget property named `query`.
 
-```
+{{#> panel type='code' heading='Query to suggest documents with title starting with the entered term'}}
+
+```xml
 <property name="query">
   SELECT * FROM  Document WHERE dc:title LIKE ? AND ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted'
 </property>
 ```
+
+{{/panel}}
 
 The specified query must have one parameter (the '?' character in the query above). This parameter will be be valued with the term entered in the select2\. Note that a '%' character will be automatically appended to the entered value.
 
@@ -370,11 +374,11 @@ Finally, it is also possible to tell these widgets to use another page provider 
 
 As explained above, the [DocumentPageProviderOperation](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/core/operations/services/DocumentPageProviderOperation.java)&nbsp;will return documents serialized as&nbsp;JSON objects. By default, the properties of the&nbsp;`dublincore` and&nbsp;`common` schemas are serialized. However, you can extend the list of schemas that must be returned in the document JSON serialization with the&nbsp;`documentSchemas` widget property:
 
-```
+```xml
 <property name="documentSchemas">dublincore,common</property>
 ```
 
-This is useful if you need to [customize the display of the suggested/selected entries]({{page}}) with specific document properties.
+This is useful if you need to [customize the display of the suggested/selected entries](#customdisplay) with specific document properties.
 
 ### Advanced Suggestion Widget Type
 
@@ -393,13 +397,13 @@ In case you'd like to build your own advanced suggestion widget, here are additi
 
 Specify the id of an automation operation that will be used to feed the widget with suggestion.
 
-```
+```xml
 <property name"operationId">your_operation_id</property>
 ```
 
 The term entered in select2 will be passed to the specified operation under the parameter&nbsp;`searchTerm`. Your operation must therefore at least have this parameter:
 
-```
+```java
 @Param(name = "searchTerm", required = false)
 protected String searchTerm;
 ```
@@ -408,7 +412,7 @@ protected String searchTerm;
 
 *   `id`: the value or reference to be submitted (i.e. saved in the bound field). In case of a JSON serialization of a document, it is the document uid. However, you can modify which element of the JSON object must be submitted with the&nbsp;`idProperty`&nbsp;widget property.
 
-*   `displayLabel`: the label to displayed by select2 in the UI. However, if you use&nbsp;[custom formatter]({{page}}), it will be ignored.
+*   `displayLabel`: the label to displayed by select2 in the UI. However, if you use&nbsp;[custom formatter](#customdisplay), it will be ignored.
 
 ## Custom Display
 
@@ -422,7 +426,9 @@ Suggestion widget appearance can be customized in a quite flexible way through t
 
 As explained above, each suggested entries are JSON objects returned by an automation operation. The idea is to define a JavaScript function that will generate the HTML to render this JSON object. For instance, the formatter used to render suggested documents in the above&nbsp;Picture 3 is:
 
-```
+{{#> panel type='code' heading='Example of formatter used in Picture 3'}}
+
+```js
   function myDocFormatter(doc) {
     var markup = "
 <table>
@@ -449,11 +455,13 @@ As explained above, each suggested entries are JSON objects returned by an autom
   }
 ```
 
+{{/panel}}
+
 You can define the JS code of&nbsp;your custom formatters directly&nbsp;in the inlinejs widget property, it will be injected in the rendered HTML page. Alternatively, you can define your formatters as global JavaScript resources by contributing them to the [Theme]({{page page='theme'}}).
 
 Once you have defined a custom formatter, you can tell your widgets to use it:
 
-```
+```xml
 <property name="suggestionFormatter">myformatter</property>
 <property name="selectionFormatter">myformatter</property>
 <property name="inlinejs">

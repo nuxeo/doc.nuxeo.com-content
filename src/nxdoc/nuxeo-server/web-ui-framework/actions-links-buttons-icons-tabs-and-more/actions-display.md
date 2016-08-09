@@ -108,7 +108,7 @@ Technical name: `VIEW_ACTION_LIST`.
 
 This category is used for tabs displayed on every document.
 
-```
+```html/xml
 <action id="TAB_VIEW" link="/incl/tabs/document_view.xhtml" enabled="true"
   order="0" label="action.view.summary" type="rest_document_link">
   <category>VIEW_ACTION_LIST</category>
@@ -143,7 +143,7 @@ Here are two ways of rendering actions.
 
 Here is a sample widget definition to render actions using category `MY_CATEGORY`:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
   point="widgets">
   <widget name="userActions" type="documentActionsWithForms">
@@ -159,7 +159,7 @@ Here is a sample widget definition to render actions using category `MY_CATEGORY
 
 This widget can be displayed on a page directly using the following sample code:
 
-```
+```xml
 
 <div xmlns:nxl="http://nuxeo.org/nxforms/layout">
   <nxl:widget name="userActions" mode="view" value="#{currentDocument}" />
@@ -172,7 +172,7 @@ Of course this widget definition can also be included within a layout definition
 
 It can also be useful to generate the widget definition dynamically from the widget template, by passing the widget properties as tag attributes to the&nbsp;[`nxl:widgetType`](http://nxlwidgetType) tag:
 
-```
+```xml
 
 <div xmlns:nxl="http://nuxeo.org/nxforms/layout">
   <nxl:widgetType name="documentActionsWithForms"

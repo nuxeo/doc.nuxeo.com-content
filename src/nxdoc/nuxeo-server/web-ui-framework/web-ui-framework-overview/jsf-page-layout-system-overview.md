@@ -79,7 +79,7 @@ The Document Management pages are using a Theme page layout defined&nbsp;[in the
 
 The slots themselves (called `view` in NXTheme) are defined in the&nbsp;[theme-contrib](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/theme-contrib.xml):
 
-```
+```xml
 <view name="nuxeo5 tree explorer" template-engine="jsf-facelets">
   <format-type>widget</format-type>
   <template>incl/multi_tree_explorer.xhtml</template>
@@ -90,7 +90,7 @@ This extract shows you were to find the XHTML code corresponding to the tree exp
 
 This view is referenced in the document.xml theme file via:
 
-```
+```xml
 <widget element="page[1]/section[2]/cell[1]/fragment[2]">
   <view>nuxeo5 tree explorer</view>
 </widget>
@@ -114,7 +114,7 @@ For Nuxeo DAM (and the current search view), the theme only defines the headers 
 
 The XHTML Facelet templates are rendered through the Theme Engine. The XHTML calls the theme engine via the NXTheme composition page:
 
-```
+```xml
 <nxthemes:composition xmlns="http://www.w3.org/1999/xhtml"
     xmlns:ui="http://java.sun.com/jsf/facelets"
     xmlns:nxthemes="http://nuxeo.org/nxthemes"
@@ -160,7 +160,7 @@ See the [sample DAM asset.xhtml](https://github.com/nuxeo/nuxeo-dam/blob/master/
 
 Content is defined by a `GridLayout`:
 
-```
+```xml
 <nxl:layout value="#{currentDocument}" name="gridDamSingleAssetLayout" mode="view" />
 ```
 
@@ -196,7 +196,7 @@ We use this Widget/Action association to provide a way to have [Incremental Layo
 
 Using that principle, the&nbsp;`damSingleAssetPanelLeft`&nbsp;will display all widgets associated to the action category `DAM_SINGLE_ASSET_PANEL_LEFT`: you will find 10 of them in the&nbsp;[same dam-layouts-contrib.xml contribution file](https://github.com/nuxeo/nuxeo-dam/blob/master/nuxeo-dam-jsf/src/main/resources/OSGI-INF/dam-layouts-contrib.xml), each of them being displayed according to the type of content.
 
-```
+```xml
 ...
  <action id="damAssetViewTitle" type="widget" order="200">
   <category>DAM_PANEL_RIGHT</category>
@@ -227,7 +227,7 @@ For Document Management pages, a similar system is used to contribute the part o
 
 The&nbsp;`documentTabs`&nbsp;widget will display the tabs defined as&nbsp;[actions contrib](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/actions-contrib.xml).
 
-```
+```xml
 ...
 <action id="TAB_VIEW" link="/incl/tabs/document_view.xhtml" order="0"
   label="action.view.summary" icon="/icons/file.gif" accessKey="v"

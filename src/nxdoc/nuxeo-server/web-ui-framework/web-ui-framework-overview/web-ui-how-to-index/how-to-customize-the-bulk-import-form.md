@@ -258,7 +258,7 @@ The action label is used in the "Import Options" select.&nbsp;
 
 The contribution of the default bulk import is:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.actions.ActionService"
   point="actions">
 
@@ -282,7 +282,7 @@ In this example we create an import option that puts the status of your document
 
 1.  In Studio, create this automation chain,
 
-    ```
+    ```xml
     - FileManager.Import:
         overwite: "true"
     - Document.Update:
@@ -295,7 +295,7 @@ In this example we create an import option that puts the status of your document
 
 2.  You can now create an xml extension to add an import option that call our chain,
 
-    ```
+    ```xml
     <extension target="org.nuxeo.ecm.platform.actions.ActionService"
       point="actions">
 
@@ -319,7 +319,7 @@ In this example we create an import option that puts the status of your document
 
 If you want to disable the default import option (after having contributed a new one for instance), you can do it with the following contribution:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.actions.ActionService"
   point="actions">
 

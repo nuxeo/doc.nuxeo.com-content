@@ -174,7 +174,7 @@ Additional datasources can be used, for instance when defining a Directory you h
 
 These datasources are all defined in Tomcat `nxserver/config/datasources-config.xml` (which is generated from `templates/common-base/nxserver/config/datasources-config.xml.nxftl`). The datasources are defined like this:
 
-```
+```xml
 <ResourceLink name="jdbc/NuxeoDS" global="jdbc/nuxeo" type="javax.sql.DataSource" />
 <ResourceLink name="jdbc/nxsqldirectory" global="jdbc/nuxeo" type="javax.sql.DataSource" />
 
@@ -182,7 +182,7 @@ These datasources are all defined in Tomcat `nxserver/config/datasources-config.
 
 So, by default they are actually linked to the common datasource `${nuxeo.db.commonds}`:
 
-```
+```xml
 <datasource name="${nuxeo.db.commonds}" driverClassName="${nuxeo.db.driver}"
  maxPoolSize="${nuxeo.db["max-pool-size"]}" minPoolSize="${nuxeo.db["min-pool-size"]}"
  blockingTimeoutMillis="${nuxeo.db["blocking-timeout-millis"]}"
@@ -202,7 +202,7 @@ You may need to access to multiple databases and then require to run the connect
 
 When you're deploying Nuxeo as a static WAR, you may want to share the database connections with other applications. You should then configure the datasource server side such as a global resource in Tomcat and instruct Nuxeo to acquire a connection from that pool instead of opening a new JDBC connection.
 
-```
+```xml
 <datasource name="${nuxeo.db.commonds}" datasource="jdbc/your-global-datasource"
  maxPoolSize="${nuxeo.db["max-pool-size"]}" minPoolSize="${nuxeo.db["min-pool-size"]}"
  blockingTimeoutMillis="${nuxeo.db["blocking-timeout-millis"]}"/>

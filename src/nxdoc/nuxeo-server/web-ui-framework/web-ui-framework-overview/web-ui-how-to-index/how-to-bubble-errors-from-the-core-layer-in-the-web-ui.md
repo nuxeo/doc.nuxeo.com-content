@@ -109,7 +109,7 @@ For custom codes, don't hesitate to use Nuxeo IDE.
 
 1.  Create a custom listener (e.g. listening to About To Create event). This listener is going to trigger your Automation chain.
 
-    ```
+    ```java
     package org.nuxeo.sample;
     import org.apache.commons.logging.Log;
     import org.apache.commons.logging.LogFactory;
@@ -171,7 +171,7 @@ For custom codes, don't hesitate to use Nuxeo IDE.
 
 2.  Create your custom operation, which is going to be deployed in your Studio Automation chain.
 
-    ```
+    ```java
     package org.nuxeo.sample;
     import org.nuxeo.ecm.automation.OperationContext;
     import org.nuxeo.ecm.automation.core.Constants;
@@ -200,7 +200,7 @@ For custom codes, don't hesitate to use Nuxeo IDE.
 
 3.  Check one last validation rule and throw a CustomBubbleException&nbsp;in case of one validation at least has failed.
 
-    ```
+    ```java
     package org.nuxeo.sample;
     import org.nuxeo.ecm.automation.OperationContext;
     import org.nuxeo.ecm.automation.core.Constants;
@@ -236,7 +236,7 @@ For custom codes, don't hesitate to use Nuxeo IDE.
 
 4.  Check also the custom exception.
 
-    ```
+    ```java
     package org.nuxeo.sample;
     import org.nuxeo.ecm.core.api.RecoverableClientException;
     public class CustomBubbleException extends RecoverableClientException {

@@ -351,7 +351,7 @@ Using XML extension points you can also define the different building blocks of 
 *   docType used for folderish Documents
 *   `documentModelFactoryClass`
 
-See&nbsp;[the developer documentation of Nuxeo Bulk Document Importer]({{page}})&nbsp;for details.
+See&nbsp;[the developer documentation of Nuxeo Bulk Document Importer]()&nbsp;for details.
 
 See&nbsp;[nuxeo-platform-importer Javadoc](http://community.nuxeo.com/api/addons/nuxeo-platform-importer/).
 
@@ -463,9 +463,9 @@ The format of this `.properties` file is the same as the one described above. If
 
 To use this node type you need to redefine the importer. There are two ways to do so:
 
-*   &nbsp;[ Add an XML extension in your Nuxeo Studio project&nbsp;]({{page page='how-to-contribute-to-an-extension'}})with the following content:
+*   &nbsp;[ Add an XML extension in your Nuxeo Studio project&nbsp;]({{page page='how-to-contribute-to-an-extension#xml-extension-studio'}})with the following content:
 
-    ```
+    ```xml
      <require>org.nuxeo.ecm.platform.importer.service.jaxrs.contrib</require>
 
     <extension target="org.nuxeo.ecm.platform.importer.service.DefaultImporterComponent" point="importerConfiguration">
@@ -477,7 +477,7 @@ To use this node type you need to redefine the importer. There are two ways to d
 
 *   Create an&nbsp;`importer-config.xml`&nbsp;with the following content in&nbsp;`nxserver/config`:
 
-    ```
+    ```xml
     <?xml version="1.0"?>
     <component name="customImporter">
     <require>org.nuxeo.ecm.platform.importer.service.jaxrs.contrib</require>
@@ -509,9 +509,9 @@ The structure used by this class is identical to what&nbsp;**FileWithIndividualM
 
 To enable this node type, redefine the importer using one of these methods:
 
-*   &nbsp;[&nbsp;Add an XML extension in your Nuxeo Studio project&nbsp;]({{page page='how-to-contribute-to-an-extension'}})with the following content:
+*   &nbsp;[&nbsp;Add an XML extension in your Nuxeo Studio project&nbsp;]({{page page='how-to-contribute-to-an-extension#xml-extension-studio'}})with the following content:
 
-    ```
+    ```xml
     <require>org.nuxeo.ecm.platform.importer.service.jaxrs.contrib</require>
 
     <extension target="org.nuxeo.ecm.platform.importer.service.DefaultImporterComponent" point="importerConfiguration">
@@ -523,7 +523,7 @@ To enable this node type, redefine the importer using one of these methods:
 
 *   Create an&nbsp;`importer-config.xml`&nbsp;with the following content in&nbsp;`nxserver/config`:
 
-    ```
+    ```xml
     <?xml version="1.0"?>
     <component name="customImporter">
     <require>org.nuxeo.ecm.platform.importer.service.jaxrs.contrib</require>
@@ -553,7 +553,7 @@ In case you need to have an audit support for the import, you can obtain one by 
 
 Here is an example of how such an importer can be instantiated:
 
-```
+```java
 TestSourceNode sourceNode = new TestSourceNode(...);
 GenericMultiThreadedImporter importer = new GenericMultiThreadedImporter(
     sourceNode, "/", 10, 5, super.getLogger());
@@ -578,7 +578,7 @@ The last 'tool' that can be provided to an 'importer' is the thread policy that 
 
 Here is an example of how such tools can be provided to an instantiated importer.
 
-```
+```java
 TestDocumentModelFactory documentModelFactory = new TestDocumentModelFactory(...);
 importer.setFactory(documentModelFactory);
 if (useMultiThread) {
@@ -594,7 +594,7 @@ importer.addFilter(filter);
 
 Usually such an 'importer' should be instantiated and configured in an instance method of a class that extends the&nbsp;`org.nuxeo.ecm.platform.importer.executor.AbstractImporterExecutor`&nbsp;class. In this instance method, after the importer is instantiated and configured, a call to a superclass method should be made, which will start the import.
 
-```
+```java
 super.doRun(importer, Boolean.TRUE);
 
 ```

@@ -158,6 +158,8 @@ The Nuxeo Platform provides an URL for monitoring the server status. This method
 *   [http://localhost:8080/nuxeo/runningstatus?info=started](http://localhost:8080/nuxeo/runningstatus?info=started) returns `true` if the server finished starting and the Nuxeo runtime is fine with its components.
 *   [http://localhost:8080/nuxeo/runningstatus?info=summary&key=xxx](http://localhost:8080/nuxeo/runningstatus?info=summary&key=xxx) returns `true` or `false` (see "info=started") and a detailed summary about components. Access to this URL is restricted by an access key configurable in `nuxeo.conf` (see `"server.status.key"` in [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})).
 
+{{#> panel type='code' heading='Sample output if something was wrong at startup (for instance, missing RelationService)'}}
+
 ```
 false
 ======================================================================
@@ -174,6 +176,8 @@ false
 ======================================================================
 
 ```
+
+{{/panel}}
 
 You can get that information with `./bin/nuxeoctl status` (see [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})).
 

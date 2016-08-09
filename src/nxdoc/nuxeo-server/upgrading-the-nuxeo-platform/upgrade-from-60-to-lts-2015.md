@@ -370,7 +370,7 @@ Defaults to false on server upgrade, true on new install.
 
 Only available for PostgreSQL, the ACLR should be factorized as "Everyone". Rebuild the ACLR table with `nx_rebuild_read_acls` stored procedure:
 
-```
+```sql
 SELECT nx_rebuild_read_acls();
 ```
 
@@ -420,7 +420,7 @@ See: [NXP-16704](https://jira.nuxeo.com/browse/NXP-16704).
 
 ###### Oracle
 
-```
+```bash
 $ sqlplus <nuxeo_user>/<nuxeo_password> @$NUXEO_HOME/bin/upgrade-6.0-7.10/notification-subscriptions-migration.oracle.sql
 ```
 
@@ -430,7 +430,7 @@ $ sqlplus <nuxeo_user>/<nuxeo_password> @$NUXEO_HOME/bin/upgrade-6.0-7.10/notifi
 
 Repository config must define a default blob provider. If you define your own **default-repository-config**, you must align it on [default-repository-config.xml.nxftl](https://github.com/nuxeo/nuxeo/blob/7.10/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/nxserver/config/default-repository-config.xml.nxftl)
 
-```
+```xml
   <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
 
     <blobprovider name="default">
@@ -485,7 +485,9 @@ To fix this error:
 1.  Remove the property from `nuxeo.conf`.
 2.  Add an XML contribution to `org.nuxeo.runtime.ConfigurationService#configuration`.
 
-    ```
+    {{#> panel type='code' heading='Sample XML contribution to configure nuxeo.jsf.useAjaxTabs'}}
+
+    ```xml
     <?xml version="1.0"?>
     <component name="org.nuxeo.ecm.platform.ajaxified.tabs.config">
       <!-- require the original component declaring the property -->
@@ -495,6 +497,8 @@ To fix this error:
       </extension>
     </component>
     ```
+
+    {{/panel}}
 
 Example of properties which have been migrated to ConfigurationService:
 
@@ -531,7 +535,7 @@ Please refer to the dedicated documentation at [Theme Upgrade to LTS 2015]({{pag
 
 ### Migrating Inline JavaScript Declarations
 
-When migrating from 7.4 to 7.10, [a new mechanism to defer loading of JavaScript resources]({{page space='nxdoc710' page='theme'}}) might break inline JavaScript declarations: most of JavaScript resources will be loaded at the end of the page body to optimize page rendering (except a few libraries like jQuery,JSF and RichFaces).
+When migrating from 7.4 to 7.10, [a new mechanism to defer loading of JavaScript resources]({{page space='nxdoc710' page='theme#mechanismtodeferparsingofjavascriptinjsfpages'}}) might break inline JavaScript declarations: most of JavaScript resources will be loaded at the end of the page body to optimize page rendering (except a few libraries like jQuery,JSF and RichFaces).
 
 If you get an error when loading JavaScript resources, the original template should be modified to rely on the `h:outputScript` tag instead a simple `script` HTML tag, and to use a variable available to all default pages for resource re-targeting. Here is a sample migration:
 

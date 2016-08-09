@@ -68,7 +68,9 @@ The garbage collection is done by an explicit administration step:
 
 ## Programmatically - Using the Nuxeo Shell or Java Code
 
-```
+{{#> panel type='code' heading='https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/client/scripts/deleteOrphanBinaries.groovy'}}
+
+```java
 import org.nuxeo.ecm.core.storage.binary.BinaryManagerStatus;
 import org.nuxeo.ecm.core.storage.sql.management.SQLRepositoryStatus;
 import org.nuxeo.ecm.core.storage.sql.management.SQLRepositoryStatusMBean;
@@ -80,6 +82,8 @@ if (!status.isBinariesGCInProgress()) {
     println("Orphaned binaries garbage collecting is already in progress.");
 }
 ```
+
+{{/panel}}
 
 <span style="color: rgb(68,68,68);">Since Nuxeo 7.2, the script file is available in&nbsp;`$NUXEO_HOME/client/scripts/deleteOrphanBinaries.groovy`.
 </span>

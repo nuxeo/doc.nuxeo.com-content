@@ -315,7 +315,7 @@ In addition, if you want to configure specific lexers or word lists then check [
 
 The Nuxeo Platform requires the configuration of&nbsp;`DB_BLOCK_SIZE`, the size of Oracle database blocks. Whereas typical values are&nbsp;`4096`&nbsp;and&nbsp;`8192` bytes, you need to set it to&nbsp;**8192** to make the Nuxeo Platform properly work. Use this query to get the current value set in your Oracle database:
 
-```
+```sql
 SELECT value FROM v$parameter WHERE name = 'db_block_size';
 ```
 

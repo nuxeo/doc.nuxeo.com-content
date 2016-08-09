@@ -438,13 +438,13 @@ You can use a CMIS 1.1 Browser Binding (JSON) client and point it at `http://loc
 
 If you want to check the JSON returned using the command line, this can be done using&nbsp;`curl`&nbsp;or&nbsp;`wget`:
 
-```
+```bash
 curl -u Administrator:Administrator http://localhost:8080/nuxeo/json/cmis | json_pp
 ```
 
 This will give you the description of the default repository:
 
-```
+```js
 {
    "default" : {
       "cmisVersionSupported" : "1.1",
@@ -510,13 +510,13 @@ This will give you the description of the default repository:
 
 To do a query you can do:
 
-```
+```bash
 curl -u Administrator:Administrator "http://localhost:8080/nuxeo/json/cmis/default?cmisselector=query&succinct=true&q=SELECT+cmis:objectId,+dc:title+FROM+cmis:folder+WHERE+dc:title+=+'Workspaces'" | json_pp
 ```
 
 Which returns:
 
-```
+```js
 {
    "numItems" : 1,
    "hasMoreItems" : false,
@@ -541,21 +541,21 @@ You can use a CMIS 1.1 AtomPub client and point it at `http://localhost:8080/nux
 
 If you want to check the AtomPub XML returned using the command line, this can be done using `curl` or `wget`:
 
-```
+```bash
 curl -u Administrator:Administrator http://localhost:8080/nuxeo/atom/cmis
 
 ```
 
 To do a query you can do:
 
-```
+```bash
 curl -u Administrator:Administrator "http://localhost:8080/nuxeo/atom/cmis/default/query?q=SELECT+cmis:objectId,+dc:title+FROM+cmis:folder+WHERE+dc:title+=+'Workspaces'&searchAllVersions=true"
 
 ```
 
 You should probably pipe this through `tidy` if you want a readable output:
 
-```
+```bash
 ... | tidy -q -xml -indent -wrap 999
 
 ```
@@ -587,7 +587,7 @@ Authentication is done using Web Services Security (WSS) UsernameToken.
 
 Here is a working example of a SOAP message to the DiscoveryService:
 
-```
+```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://docs.oasis-open.org/ns/cmis/messaging/200908/">
   <soapenv:Header>
     <Security xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">

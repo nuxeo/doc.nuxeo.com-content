@@ -105,7 +105,7 @@ By default, [quotas]({{page page='nuxeo-quota'}}) are available on domains and w
 
 1.  [Create a new XML extension]({{page page='how-to-contribute-to-an-extension'}}) with the following content:
 
-    ```
+    ```html/xml
     <extension target="org.nuxeo.ecm.platform.actions.ActionService"
         point="filters">
         <filter id="QUOTA_MANAGABLE_DOCTYPES" append="true">

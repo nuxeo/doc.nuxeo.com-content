@@ -77,11 +77,15 @@ history:
 ---
 ## Request all Documents as Administrator
 
-```
+{{#> panel type='code' heading='NXQL'}}
+
+```sql
 SELECT * FROM Document
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='SQL (PostgreSQL dialect)'}}
+
+```sql
 -- 1/ Get the result list (only ids)
 SELECT _C1 FROM (
   SELECT hierarchy.id AS _C1 
@@ -118,6 +122,8 @@ WHERE id IN ($1, $2, $3, $4, $5, $6, $7, $8, $9,$10, $11, $12)
 ORDER BY id, pos
 ```
 
+{{/panel}}
+
 The main request uses a `UNION ALL` to include proxies in the results. If you don't need the proxies you can add a "`AND ecm:isProxy = 0`" clause to reduce the size of the query.
 
 Note that requests to load fragments (steps 2 to 6) are not needed (or will be reduced) if the needed rows are already in the cache.
@@ -128,7 +134,9 @@ There is a `LIMIT`&nbsp;in the queries because the Page Provider for navigation 
 
 ## List Children of a Folder Ordered by Title
 
-```
+{{#> panel type='code' heading='NXQL'}}
+
+```sql
 SELECT * FROM Document 
 WHERE ecm:parentId = ? AND 
       ecm:isCheckedInVersion = 0 AND 
@@ -137,7 +145,9 @@ WHERE ecm:parentId = ? AND
 -- defaultSortColumn=dc:title
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='SQL'}}
+
+```sql
 SELECT _C1, _C2 FROM (
   SELECT hierarchy.id AS _C1, _F1.title AS _C2 
   FROM hierarchy 
@@ -155,13 +165,19 @@ ORDER BY _C2
 LIMIT 201 OFFSET 0
 ```
 
+{{/panel}}
+
 ## Select on a Complex Type
 
-```
+{{#> panel type='code' heading='NXQL'}}
+
+```sql
 SELECT * FROM Document WHERE files/*/file/name LIKE '%.jpg'
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='SQL'}}
+
+```sql
 SELECT DISTINCT _C1 FROM (
   SELECT hierarchy.id AS _C1 
   FROM hierarchy 
@@ -175,3 +191,5 @@ SELECT DISTINCT _C1 FROM (
  LIMIT 201 OFFSET 0
 -- parameters: $1 = 'files', $2 = 'file' .. $61 = '%.jpg'
 ```
+
+{{/panel}}

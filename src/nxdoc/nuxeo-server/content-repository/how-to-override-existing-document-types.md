@@ -284,7 +284,7 @@ You can also browse the [contributions to the Type extension](http://explorer.nu
 
 {{/callout}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-*   [undefined]({{page}})
+*   [undefined]()
 *   [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}}) &nbsp;
 *   [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
 *   [How-To Index]({{page page='how-to-index'}})

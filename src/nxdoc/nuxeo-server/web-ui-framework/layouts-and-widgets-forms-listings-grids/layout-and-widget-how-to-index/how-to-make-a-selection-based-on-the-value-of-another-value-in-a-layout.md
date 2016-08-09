@@ -99,7 +99,9 @@ Add two Single Document Suggestion widgets to a layout. Configure the first one 
 
 For the second widget define a custom page provider (see code block) and set the **Document page provider name** parameter to the name of the page provider. In the **Custom Properties Configuration** enter a new parameter `operationId` with value `Repository.PageProvider`.
 
-```
+{{#> panel type='code' heading='Custom page provider'}}
+
+```xml
 <extension point="providers" target="org.nuxeo.ecm.platform.query.api.PageProviderService">
   <coreQueryPageProvider name="myCustomDocs">
   <pattern escapeParameters="true" quoteParameters="true">
@@ -111,11 +113,15 @@ For the second widget define a custom page provider (see code block) and set the
 </extension>
 ```
 
+{{/panel}}
+
 ## Passing Additional Operation Parameters to select2
 
 In most cases a single value is passed to the page provider as a search term. In this case, two values are passed in a string array. This is done in a javascript function entered in the **Inline Javascript** parameter. See code block. The first search term is the `query.term` which is the string entered into the widget by the user. The second search term is the value of the Folder selection, which can be retrieved by jQuery. The two values are appended to a string list and passed to the operation in the `temp.searchTerm` variable. With the function code in place, enter a new parameter in the **Custom Properties Configuration** named `additionalOperationParameters` with the value set to the name of the defined inline function.&nbsp;
 
-```
+{{#> panel type='code' heading='Inline Javascript'}}
+
+```js
 function additionalParams(temp,params,query){
   var firstSelectionId = "input[id$='string1_select2']";
   var firstSelectionValue = jQuery(firstSelectionId).attr("value");
@@ -123,6 +129,8 @@ function additionalParams(temp,params,query){
   return temp;
 }
 ```
+
+{{/panel}}
 
 ## Identifying the First Selection by Its Id in the DOM
 

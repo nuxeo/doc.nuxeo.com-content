@@ -127,7 +127,7 @@ It is possible to override this behavior in the [widget definition]({{page page=
 
 It is also possible to use expressions to resolve this mode, for instance the following expression can be used to hide a widget displaying the `dublincore` field named `format` in `view` mode if this property is not filled on the document:
 
-```
+```xml
 <widgetModes>
   <mode value="view">#{empty layoutValue.dc.format?'hidden':'view'}</mode>
 </widgetModes>

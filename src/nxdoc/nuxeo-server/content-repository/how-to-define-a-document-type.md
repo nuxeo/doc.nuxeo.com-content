@@ -292,7 +292,7 @@ When you are in the application and you want to create a new document, you need 
 
 {{! excerpt}}
 
-You can create as many [document types]({{page page='essential-nuxeo-platform-terminology'}}) as you want with Nuxeo Studio. This how-to explains the different steps to do so.
+You can create as many [document types]({{page page='essential-nuxeo-platform-terminology#document-type'}}) as you want with Nuxeo Studio. This how-to explains the different steps to do so.
 
 {{! /excerpt}}
 
@@ -360,7 +360,7 @@ Since content is at the center of customization, the definition of&nbsp; a new d
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-*   [undefined]({{page}})
+*   [undefined]()
 *   [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}})
 *   [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}})
 *   [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})

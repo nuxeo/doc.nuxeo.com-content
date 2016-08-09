@@ -49,6 +49,8 @@ history:
 ---
 Here is a systemd script which starts Nuxeo as a daemon or like any other service after Elasticsearch and PostgreSQL.
 
+{{#> panel type='code' heading='/etc/systemd/system/nuxeo.service'}}
+
 ```
 [Unit]
 Description=Starts and stops a single Nuxeo instance
@@ -72,6 +74,8 @@ Environment=NUXEO_CONF=/etc/nuxeo/nuxeo.conf
 WantedBy=multi-user.target
 
 ```
+
+{{/panel}}
 
 1.  Copy the&nbsp;systemd script to `/etc/systemd/system/nuxeo.service`, replacing paths to match your installation.
 2.  Enable the autostart creating the links in the rcX.d directories running the command (as root):
@@ -100,4 +104,4 @@ systemctl [start|stop|reload] nuxeo
 
 &nbsp;
 
-Credits to [undefined]({{page}}) who contributed it for CentOs or SUSE.
+Credits to [undefined]() who contributed it for CentOs or SUSE.

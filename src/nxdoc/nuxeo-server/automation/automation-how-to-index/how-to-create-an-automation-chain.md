@@ -217,8 +217,8 @@ This how-to explains the different steps to create and configure an automation c
 
 This is done in two steps:
 
-1.  [Create the chain]({{page}}).
-2.  [Bind it]({{page}}) to a button, an [action]({{page space='studio' page='user-actions'}}), or an [event handler]({{page space='studio' page='event-handlers'}}).
+1.  [Create the chain](#automation-chain-creation).
+2.  [Bind it](#automation-chain-binding-event-handler) to a button, an [action]({{page space='studio' page='user-actions'}}), or an [event handler]({{page space='studio' page='event-handlers'}}).
 
 ## Create an Automation Chain
 

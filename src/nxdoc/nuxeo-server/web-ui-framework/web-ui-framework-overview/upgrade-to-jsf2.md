@@ -103,7 +103,7 @@ Here is a list of maven dependency changes:
 
 As of 5.8 (hot-fixed)
 
-```
+```xml
 properties>
   ...
   <nuxeo.richfaces.version>3.3.1.GA-NX9.04</nuxeo.richfaces.version>
@@ -227,7 +227,7 @@ properties>
 
 As of 6.0
 
-```
+```xml
 <properties>
   ...
   <jsf.version>2.2.6</jsf.version>
@@ -461,7 +461,7 @@ _<span class="pl-ent">nxdir:chainSelect*</span>_
 
 *   This tag (and related subtags) behaviour has changed a little, please read [How to Create a N-Level Select Widget]({{page page='how-to-create-a-n-level-select-widget'}}) again to adapt your custom templates if you defined chain select widget templates for more than two levels. The modification should be simple:
 
-    ```
+    ```diff
      <nxdir:chainSelectListbox index="0" size="1"
        directoryName="#{widgetProperty_parentDirectory}"
        localize="#{widgetProperty_localize}"
@@ -512,7 +512,7 @@ Some Javascript methods may need to be triggered again on ajax render. One possi
 
 Here is an example to trigger again the tipsy tooltip library on Ajax render:
 
-```
+```xml
 <ui:composition
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:ui="http://java.sun.com/jsf/facelets"
@@ -540,7 +540,7 @@ Here is an example to trigger again the tipsy tooltip library on Ajax render:
 
 Here is an example to show errors on Ajax requests:
 
-```
+```xml
 <script type="text/javascript">
   jsf.ajax.addOnError(function(data) {
     jQuery.ambiance({

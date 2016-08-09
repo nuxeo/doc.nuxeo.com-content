@@ -156,7 +156,9 @@ Beside the `docId` and `repoId` parameters, the `id` endpoint accepts the defini
 
 ### Updating a Document
 
-To update a document you have to <span class="s1">PUT</span> on the document resource, and pass a reduced version of the [entity type content]({{page page='rest-api-entity-types'}}) as the data. You can also pass the full set of data, but it is not mandatory.
+To update a document you have to <span class="s1">PUT</span> on the document resource, and pass a reduced version of the [entity type content]({{page page='rest-api-entity-types#document'}}) as the data. You can also pass the full set of data, but it is not mandatory.
+
+{{#> panel type='code' heading='PUT Request'}}
 
 ```
     PUT /nuxeo/site/api/v1/id/{idOfTheDoc}
@@ -173,6 +175,8 @@ To update a document you have to <span class="s1">PUT</span> on the document res
         }
     }
 ```
+
+{{/panel}}
 
 ### Creating a Document
 

@@ -119,7 +119,7 @@ Layouts can be displayed thanks to a series a JSF tags that will query the web l
 
 The more common way to display a given layout for a document is to use the [`nxl:layout` tag](http://community.nuxeo.com/api/nuxeo/7.1/tlddoc/nxl/layout.html):
 
-```
+```xml
 
 <div xmlns:nxl="http://nuxeo.org/nxforms/layout">
   <nxl:layout name="heading" mode="view" value="#{currentDocument}" />
@@ -127,7 +127,7 @@ The more common way to display a given layout for a document is to use the [`nxl
 
 ```
 
-Layouts that are referenced on a document type definition can use other helper tags, see the [corresponding documentation]({{page page='document-layouts'}}).
+Layouts that are referenced on a document type definition can use other helper tags, see the [corresponding documentation]({{page page='document-layouts#display'}}).
 
 {{#> callout type='note' }}
 
@@ -137,7 +137,7 @@ You can include a layout in a `dataTable` tag, but cannot make its mode depend o
 
 For instance, here is a sample display of a listing layout. The layout template is configured to display table rows. It will display header rows when the parameter&nbsp;`showListingHeader` is true.
 
-```
+```xml
 
 <table class="dataOutput">
   <c:forEach var="row" items="#{documents.rows}" varStatus="layoutListingStatus">
@@ -153,13 +153,13 @@ Some other advanced tags make it possible to display a global widget for instanc
 
 Here is a sample usage of the [`nxl:widget` tag](http://community.nuxeo.com/api/nuxeo/7.1/tlddoc/nxl/widget.html):
 
-```
+```xml
 <nxl:widget name="widgetName" mode="#{myMode}" value="#{myObject}" required="true" />
 ```
 
 Here is a sample usage of the [`nxl:widgetType` tag](http://community.nuxeo.com/api/nuxeo/7.1/tlddoc/nxl/widgetType.html) (creating a widget definition on the fly):
 
-```
+```xml
 <nxl:widgetType name="text" mode="#{myMode}" value="#{myText}" required="true" />
 ```
 

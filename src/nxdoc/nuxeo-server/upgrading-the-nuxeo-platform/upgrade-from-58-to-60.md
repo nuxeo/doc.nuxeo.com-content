@@ -196,7 +196,7 @@ This chapter highlights some major information about upgrade from Nuxeo Platform
 
 You can read&nbsp;[how to Update the Version of Your Target Platform in Studio]({{page space='studio' page='update-the-version-of-your-target-platform'}}).
 
-Due to some feature moves, you should also report to the page&nbsp;[Specific Upgrade Instructions]({{page space='studio' page='specific-upgrade-instructions'}})&nbsp;to migrate your project.
+Due to some feature moves, you should also report to the page&nbsp;[Specific Upgrade Instructions]({{page space='studio' page='specific-upgrade-instructions#to-60'}})&nbsp;to migrate your project.
 
 </div>
 

@@ -579,7 +579,7 @@ The next step is to adapt where the documents are created and how they are displ
 
 </div><div class="column medium-4">
 
-**[undefined]({{page}})**
+**[undefined]()**
 
 </div><div class="column medium-4">
 
