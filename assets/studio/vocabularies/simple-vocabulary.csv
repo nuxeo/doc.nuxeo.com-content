@@ -1,0 +1,4 @@
+"id","label","obsolete","ordering"
+article,Article,0,2
+memo,Memo,1,1
+invoice,Invoice,0,3
