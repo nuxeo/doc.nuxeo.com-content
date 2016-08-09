@@ -1,4 +1,4 @@
-# doc.nuxeo.com
+# Platform Spaces
 
 # Development
 See [main project readme](https://github.com/nuxeo/doc.nuxeo.com/blob/master/README.md) for requirements.
@@ -10,7 +10,6 @@ git lfs clone https://github.com/nuxeo/doc.nuxeo.com-platform-spaces
 cd doc.nuxeo.com-platform-spaces
 git lfs install
 git reset --hard
-npm install
 ```
 
 ## Run Locally

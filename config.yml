@@ -14,6 +14,32 @@ default:
                     -
                         label: '6.0'
                         url_path: '60'
+            -
+                space_path: userdoc
+                space_name: Nuxeo Platform User Documentation
+                versions:
+                    -
+                        label: FT
+                        is_current: true
+                    -
+                        label: LTS 2015
+                        url_path: '710'
+                    -
+                        label: '6.0'
+                        url_path: '60'
+            -
+                space_path: admindoc
+                space_name: Nuxeo Installation and Administration
+                versions:
+                    -
+                        label: FT
+                        is_current: true
+                    -
+                        label: LTS 2015
+                        url_path: '710'
+                    -
+                        label: '6.0'
+                        url_path: '60'
 
 development:
     isDev: true
