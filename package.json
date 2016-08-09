@@ -1,0 +1,46 @@
+{
+  "name": "Nuxeo-documentation-static-spaces",
+  "description": "doc.nuxeo.com Static Spaces",
+  "license": "UNLICENSED",
+  "private": true,
+  "version": "0.0.1",
+  "author": {
+    "name": "Andrew Goodricke",
+    "email": "github@andrewgoodricke.com",
+    "url": "http://andrewgoodricke.com"
+  },
+  "dependencies": {
+    "node-yaml-config": "0.0.4",
+    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v0.2.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.8",
+    "faucet": "0.0.1",
+    "nodemon": "^1.9.2",
+    "tape": "^4.5.1"
+  },
+  "main": "build.js",
+  "config": {
+    "browser": "chromium-browser"
+  },
+  "scripts": {
+    "pretest": "npm run yaml_lint config.yml",
+    "verify": "node verify | faucet",
+    "start": "npm run metalsmith",
+    "poststart": "npm run copy_assets && npm run verify",
+    "dev": "npm install && npm run browser_sync & NODE_ENV=development nodemon --exec 'npm start && npm run copy_module_assets && browser-sync reload'",
+    "copy_assets": "cp -r ./assets ./site",
+    "copy_module_assets": "cp -r ./node_modules/nuxeo-docs-builder/assets/* ./site/assets",
+    "metalsmith": "node .",
+    "browser_sync": "browser-sync start --server site --browser=$npm_package_config_browser",
+    "yaml_lint": "js-yaml -t > /dev/null"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nuxeo/doc.nuxeo.com-static-spaces.git"
+  },
+  "bugs": {
+    "url": "git@github.com:nuxeo/doc.nuxeo.com-static-spaces.git/issues"
+  },
+  "homepage": "http://doc.nuxeo.com"
+}

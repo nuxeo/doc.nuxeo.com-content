@@ -1,0 +1,9 @@
+default:
+    site:
+        spaces:
+            -
+                space_path: idedoc
+                space_name: Documentation Center for Nuxeo Platform IDEs
+
+development:
+    isDev: true

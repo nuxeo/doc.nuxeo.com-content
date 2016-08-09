@@ -1,0 +1,5 @@
+{
+  "ignore": ["site/*", "node_modules/*"],
+  "ext": "js, jsx, hbs, scss, md, html, yml",
+  "no_delay": "200ms"
+}
