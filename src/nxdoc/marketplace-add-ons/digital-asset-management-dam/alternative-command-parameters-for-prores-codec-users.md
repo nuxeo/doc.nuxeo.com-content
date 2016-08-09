@@ -48,7 +48,7 @@ The Nuxeo Platform automatically converts the new Video files ingested in the sy
 
 From our experience and our customers feedback, the mp4 conversion used by default does not suit all video format given as an input, in particular video encoded with ProRes codec. In this case, the playback is not displayed in the browser. Therefore you need to override the default `ffmpeg-tomp4` command with the following code:
 
-```
+```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.platform.video.convert.commandline.override">
 

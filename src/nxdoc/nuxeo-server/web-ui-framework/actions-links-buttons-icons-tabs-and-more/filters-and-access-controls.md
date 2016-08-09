@@ -118,7 +118,7 @@ Filters can be registered using their own [extension point](http://explorer.nuxe
 
 Example of a filter registration:
 
-```
+```html/xml
 <filter id="view_content">
   <rule grant="true">
     <permission>ReadChildren</permission>
@@ -133,7 +133,7 @@ Example of a filter registration:
 
 Example of a filter registration inside an action registration:
 
-```
+```html/xml
 <action id="newSection" link="#{documentActions.createDocument('Section')}"
     enabled="true" label="command.create.section"
     icon="/icons/action_add.gif">
@@ -180,7 +180,7 @@ Since 5.6, filters resolution can be done independently from actions. This makes
 
 For instance, `directoriesManagementAccess` makes it possible to control access to a given directory:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.actions.ActionService"
   point="filters">
   <filter id="directoriesManagementAccess">
@@ -194,14 +194,14 @@ For instance, `directoriesManagementAccess` makes it possible to control access 
 
 This can be looked up in the code, by calling the action service, and evaluating the filter given an evaluation context:
 
-```
+```java
 ActionManager actionManager = Framework.getLocalService(ActionManager.class);
 return actionManager.checkFilter("directoriesManagementAccess", createActionContext(ctx));
 ```
 
 This also can be looked up in XHTML templates, calling Seam component [webActions](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewSeamComponent/seam:webActions) and using its default evaluation context:
 
-```
+```xml
 <c:if test="#{webActions.checkFilter('directoriesManagementAccess')}">
   [...]
 </c:if>

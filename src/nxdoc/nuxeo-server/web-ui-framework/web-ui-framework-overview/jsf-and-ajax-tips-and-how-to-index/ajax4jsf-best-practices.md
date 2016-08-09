@@ -168,7 +168,7 @@ There seems to be bugs remaining with this method: it works most of the time but
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [JSF and Javascript ]({{page page='jsf-and-javascript'}})
-*   [undefined]({{page}})
+*   [undefined]()
 *   [Ajax Forms and Actions]({{page page='ajax-forms-and-actions'}})
 *   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 *   [How-To Index]({{page page='how-to-index'}})

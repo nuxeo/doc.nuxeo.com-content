@@ -44,7 +44,7 @@ Let's see how we can contribute a new converter changing the format of an image 
 
 Add a new command line called&nbsp;`changeFormat` that changes the image format.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent"
   point="command">
   <command name="changeFormat">
@@ -67,7 +67,7 @@ Add a new command line called&nbsp;`changeFormat` that changes the image format.
 
 Add a new converter using the&nbsp;`CommandLineConverter` class to call the&nbsp;`changeFormat` command line.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"
   point="converter">
   <converter name="changeFormat"
@@ -94,7 +94,7 @@ Add a new converter using the&nbsp;`CommandLineConverter` class to call the&nbsp
 
 Assuming you have a&nbsp;`BlobHolder` which is the input image and you want to change its format to&nbsp;`png`, you can use the following Java code:
 
-```
+```java
 ConversionService cs = Framework.getService(ConversionService.class);
 Map<String, Serializable> parameters = new HashMap<>();
 parameters.put("targetFileName", "newImage");

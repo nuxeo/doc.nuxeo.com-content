@@ -203,7 +203,7 @@ The principle of the template rendering feature is the following:
 2.  A Nuxeo user creates a Nuxeo template, to which he attaches the template file (or fills in the Note content in case of a web template). He fills in the template properties, that will define under which conditions the template is available: for which document types, under which circumstances...
 3.  When users in Nuxeo create a new document for which a template is available, they can use it. If some template elements are left to be edited or filled in by the document's contributors, they can set them.
 
-There are two types of Nuxeo templates: the "Template" will have an attached file in which some [values]({{page}}) are defined to be Nuxeo values. The "Web template" doesn't have an attachment. Its content is defined in a Note field.
+There are two types of Nuxeo templates: the "Template" will have an attached file in which some [values](#variables) are defined to be Nuxeo values. The "Web template" doesn't have an attachment. Its content is defined in a Note field.
 
 #### Creating a template file
 
@@ -217,7 +217,7 @@ To create a template file:
 
 1.  Create a regular office, HTML or XML file with your favorite tool.
 2.  In the document, put variables in `Input Fields` where you want to use information from Nuxeo (see below). You may want to use [XDocReport](https://github.com/opensagres/xdocreport) for .docx or .odt formats, [JXLS](http://jxls.sourceforge.net/) for .xls / .xlsx and .ods formats (see links below).
-3.  When the template is ready, [create the template document in Nuxeo]({{page}}) and attach the template to it.
+3.  When the template is ready, [create the template document in Nuxeo](#creating-the-template-document) and attach the template to it.
 
 Here are a few examples of the most common variables:
 
@@ -249,7 +249,7 @@ Templates can be created in the Templates space, in workspaces and in folders.
 3.  Fill in the template document's creation form (see below for template's properties).
 4.  Click on the **Create** button.
     The **Summary** tab of the template document is displayed.
-    You can now [create documents based on this template]({{page}}).
+    You can now [create documents based on this template](#creating-a-document-based-on-a-template).
 
 **Template properties**
 
@@ -390,15 +390,15 @@ There are several ways to associate a template to a document.
 
 ##### Creating a document based on a template
 
-To create a new document based on a template, users need to [use the **New document** button]({{page space='userdoc' page='creating-content'}}). If a template is available for the selected document type, an additional option is then available for the **Content** field, allowing users to select which template to use.
+To create a new document based on a template, users need to [use the **New document** button]({{page space='userdoc' page='creating-content#creating-a-document-using-the-new-document-button'}}). If a template is available for the selected document type, an additional option is then available for the **Content** field, allowing users to select which template to use.
 ![]({{file name='select_template.png'}} ?w=500,h=122,border=true)&nbsp;
 When the document is created, the template is used as content. An additional **Associated templates** tab is available.
 
 Users can then:
 
-*   [associate other templates to the document]({{page}}),
-*   [render the document using the template(s)]({{page}}),
-*   [publish the document using the template's available renditions]({{page}}).
+*   [associate other templates to the document](#associating-a-template-to-a-document),
+*   [render the document using the template(s)](#rendering-a-document-using-its-template),
+*   [publish the document using the template's available renditions](#publishing-a-documents-rendition).
 
 ##### Associating a template to a document
 

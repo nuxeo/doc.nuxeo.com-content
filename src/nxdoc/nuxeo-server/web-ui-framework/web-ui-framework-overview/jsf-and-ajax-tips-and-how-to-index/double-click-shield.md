@@ -150,7 +150,9 @@ The shield will intercept the submit event of a form. There are cases where a fo
 
 There are use cases where the shield might break the proper functioning of a form. For instance, if you have a component that needs to perform several Ajax submits. This is the case when using&nbsp;[`rich:fileupload`](http://richfileupload)&nbsp;which performs as many submits as there are files to upload. With the shield enabled, only the first file will be uploaded and the others will be ignored. To address these particular use cases, you can disable the shield on a particular form by adding the&nbsp;`disableDoubleClickShield="true"`&nbsp;attribute.
 
-```
+{{#> panel type='code' heading='Disabling Double Click Shield on a particular form'}}
+
+```xml
 <h:form enctype="multipart/form-data" id="document_files_edit" disableDoubleClickShield="true">
 
 	<rich:fileUpload uploadData="#{FileManageActions.uploadedFiles}"
@@ -163,6 +165,8 @@ There are use cases where the shield might break the proper functioning of a for
 
 </h:form>
 ```
+
+{{/panel}}
 
 ## How to Globally Disable the Shield
 

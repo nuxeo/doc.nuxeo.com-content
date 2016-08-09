@@ -308,7 +308,7 @@ You can customize the info layout for a document type by adding layouts to the `
     ![]({{file name='info_contract.png'}} ?w=450,h=350,border=true)
 2.  Create an XML extension in the advanced settings to reference the tab layout. The generated layout is always of the form `FeatureID@tabLayout`.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.types.TypeService" point="types">
   <type id="Contract">
     <layouts mode="info">

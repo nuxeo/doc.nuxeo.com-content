@@ -354,7 +354,7 @@ When users edit several documents at the same time using the bulk edit form, a n
 
 This versioning policy can be configured through the&nbsp;[versioning](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.webapp.bulkedit.BulkEditService--versioning)&nbsp;extension point:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.webapp.bulkedit.BulkEditService"
   point="versioning">
   <versioning>

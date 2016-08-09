@@ -52,7 +52,7 @@ Server and client do not share classes, so you need to provide two marshalling i
 
 Server side, you should provide a&nbsp;[codec](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.automation.server.AutomationServer--codecs). The implementation class is to be contributed to the automation server component using the&nbsp;`codecs`&nbsp;extension point.
 
-```
+```html/xml
   <extension target="org.nuxeo.ecm.automation.server.AutomationServer"
         point="codecs">
         <codec class="org.nuxeo.ecm.automation.server.test.MyObjectCodec" />

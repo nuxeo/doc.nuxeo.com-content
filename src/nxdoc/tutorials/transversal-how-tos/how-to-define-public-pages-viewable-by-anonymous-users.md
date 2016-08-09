@@ -233,7 +233,7 @@ The first step you need to take is to enable the anonymous user.
 
     *   This file needs to be named `what-you-want-config.xml` and to be deployed under `nxserver/config/`.
     *   Or you can use template system and copy it into `template/common/config/`.
-    *   Or you can add the `extension` element [as an **XML Extension** in Nuxeo Studio]({{page page='how-to-contribute-to-an-extension'}}).
+    *   Or you can add the `extension` element [as an **XML Extension** in Nuxeo Studio]({{page page='how-to-contribute-to-an-extension#xml-extension-studio'}}).
 2.  Modify `nuxeo.conf` and set&nbsp;`nuxeo.user.anonymous.enable=true`.
 3.  Restart the application server.&nbsp;
     After the server is up and running, when accessing Nuxeo again, the anonymous user will be used and logged into the application.
@@ -261,7 +261,7 @@ If you give Write access to the repository to this user, you will let anyone hav
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Implement Local Groups or Roles Using Computed Groups]({{page page='how-to-implement-local-groups-or-roles-using-computed-groups'}})
-*   [undefined]({{page}})
+*   [undefined]()
 *   [How-to index ]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

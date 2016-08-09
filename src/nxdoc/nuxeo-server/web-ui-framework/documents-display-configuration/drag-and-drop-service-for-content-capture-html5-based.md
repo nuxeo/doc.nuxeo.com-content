@@ -231,15 +231,21 @@ You can very simply define a new DropZone in your pages; you simply need to add 
 *   the '`dropzone`' CSS class,
 *   a context attribute.
 
+{{#> panel type='code' heading='Drop zone declaration'}}
+
 ```
 
 <div id="myDropZone" class="dropzone" context="myDropZone"> ... </div>
 
 ```
 
+{{/panel}}
+
 ### Associating Automation Chains
 
 Each dropzone context is associated with a set of content automation operations or automation chains. This association is configured via the action service:
+
+{{#> panel type='code' heading='Binding an operation chain to a drop zone'}}
 
 ```
 <action id="Chain.FileManager.ImportInSeam"
@@ -253,6 +259,8 @@ Each dropzone context is associated with a set of content automation operations 
 </action>
 
 ```
+
+{{/panel}}
 
 Where:
 
@@ -286,6 +294,8 @@ At some point, inside your automation chain you may need to access Seam Context.
 *   [`Seam.RunOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/RunOperation) : that can run an operation or a chain in the Seam context.
     For example, if you want to get available actions via the "Actions.GET" operation, but want to leverage Seam context for actions filters:
 
+    {{#> panel type='code' heading='Running an operation in Seam Context'}}
+
     ```
     <chain id="SeamActions.GET">
       <operation id="Seam.RunOperation">
@@ -295,7 +305,10 @@ At some point, inside your automation chain you may need to access Seam Context.
 
     ```
 
+    {{/panel}}
 *   [`Seam.InitContext`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/WebUI.InitSeamContext) / [`Seam.DestroyContext`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/WebUI.DestroySeamContext) : that can be used to initialize / destroy seam context:
+
+    {{#> panel type='code' heading='Manual Seam context management'}}
 
     ```
     <chain id="ImportClipboard">
@@ -308,16 +321,22 @@ At some point, inside your automation chain you may need to access Seam Context.
 
     ```
 
+    {{/panel}}
+
 ### Parameters Management
 
 In some cases, you may want user to provide some parameters via a form associated to the import operation he wants to run. For that, you can use the `link` attribute of the action used to bind your automation chain to a dropzone. This URL will be used to display your form within an iframe inside the default import UI.
 
 In order to send the collected parameters to the import wizard, you should call a JavaScript function inside the parent frame:
 
+{{#> panel type='code' heading='Calling back the import wizard'}}
+
 ```
 window.parent.dndFormFunctionCB(collectedData);
 
 ```
+
+{{/panel}}
 
 where `collectedData` is a JavaScript object that will then be sent (via JSON) as parameter of the operation call.
 

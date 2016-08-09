@@ -150,6 +150,8 @@ Here is an example of an exception when fetching a missing document.
 
 ### Simple Mode
 
+{{#> panel type='code' heading='JSON Response'}}
+
 ```
 {
   "entity-type": "exception",
@@ -158,6 +160,8 @@ Here is an example of an exception when fetching a missing document.
   "message": "Failed to get document /wrongID"
 }
 ```
+
+{{/panel}}
 
 ### Extended Mode
 
@@ -204,12 +208,19 @@ To toggle the display mode (simple or extended) during runtime execution, you ca
 *   Use the Automation `JsonStack.ToggleDisplay` Operation (Administrator role only).
     Example:
 
+    {{#> panel type='code' heading='cURL Call'}}
+
     ```
     curl -H 'Content-Type:application/json+nxrequest' -X POST -d '{"params":{},"context":{}}' -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/automation/JsonStack.ToggleDisplay
     ```
 
+    {{/panel}}
 *   use the following endpoint URL into your browser (Administrator role only).
+
+    {{#> panel type='code' heading='Type into your browser address'}}
 
     ```
     http://localhost:8080/nuxeo/site/automation/doc/toggleStackDisplay
     ```
+
+    {{/panel}}

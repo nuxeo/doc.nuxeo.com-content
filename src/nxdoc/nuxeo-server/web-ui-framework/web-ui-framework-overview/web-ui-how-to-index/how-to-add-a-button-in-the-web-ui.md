@@ -329,7 +329,7 @@ If you want to filter the button you are adding to the form only for a specific 
 
 You can [contribute an XML extension]({{page page='how-to-contribute-to-an-extension'}}) to remove the default button:
 
-```
+```xml
 <extension point="actions" target="org.nuxeo.ecm.platform.actions.ActionService">
   <action id="CREATE_DOCUMENT">
     <filter-id>is_not_creating_for_type_T</filter-id>

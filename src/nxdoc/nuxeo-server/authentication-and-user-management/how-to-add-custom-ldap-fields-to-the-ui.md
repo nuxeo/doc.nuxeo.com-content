@@ -93,7 +93,9 @@ To add a custom LDAP fields to the User interface you have to:
 
 1.  Create a custom schema based on nuxeo's user.xsd schema with custom fields related to the fields in your LDAP system.
 
-    ```
+    {{#> panel type='code' heading='schemas/myuser.xsd'}}
+
+    ```xml
      <?xml version="1.0"?>
      <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
         xmlns:nxs="http://www.nuxeo.org/ecm/schemas/myuser"
@@ -116,9 +118,12 @@ To add a custom LDAP fields to the User interface you have to:
 
     ```
 
+    {{/panel}}
 2.  Add your schema via Nuxeo's extension system.
 
-    ```
+    {{#> panel type='code' heading='OSGI-INF/schema-contrib.xml'}}
+
+    ```xml
      <?xml version="1.0"?>
      <component name="com.example.myproject.myuser.schema">
       <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
@@ -128,10 +133,13 @@ To add a custom LDAP fields to the User interface you have to:
 
     ```
 
+    {{/panel}}
 3.  Modify your LDAP configuration file in Nuxeo (`default-ldap-users-directory-bundle.xml`) to include:
     1.  your custom schema,
 
-        ```
+        {{#> panel type='code' heading='default-ldap-users-directory-bundle.xml'}}
+
+        ```xml
           <extension target="org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory"
             point="directories">
 
@@ -142,9 +150,12 @@ To add a custom LDAP fields to the User interface you have to:
 
         ```
 
+        {{/panel}}
     2.  mapping between your schema and your LDAP fields.
 
-        ```
+        {{#> panel type='code' heading='default-ldap-users-directory-bundle.xml (continued)'}}
+
+        ```xml
               <fieldMapping name="username">uid</fieldMapping>
               <fieldMapping name="password">userPassword</fieldMapping>
               <fieldMapping name="firstName">givenName</fieldMapping>
@@ -155,10 +166,13 @@ To add a custom LDAP fields to the User interface you have to:
 
         ```
 
+        {{/panel}}
 4.  Modify the UI.
     1.  Add your custom widget to the layout.
 
-        ```
+        {{#> panel type='code' heading='default-ldap-users-directory-bundle.xml(continued)'}}
+
+        ```xml
          <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
             point="layouts">
 
@@ -177,9 +191,12 @@ To add a custom LDAP fields to the User interface you have to:
 
         ```
 
+        {{/panel}}
     2.  Define a new widget for your custom field to be used in the layout above.
 
-        ```
+        {{#> panel type='code' heading='default-ldap-users-directory-bundle.xml(continued)'}}
+
+        ```xml
          <widget name="telephone" type="text">
          <labels>
          <label mode="any">telephone</label>
@@ -198,6 +215,8 @@ To add a custom LDAP fields to the User interface you have to:
          </widget>
 
         ```
+
+        {{/panel}}
 
         &nbsp;
 

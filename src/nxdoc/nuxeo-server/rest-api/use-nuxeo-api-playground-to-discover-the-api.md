@@ -308,7 +308,7 @@ We made an API Playground available that offers an interactive way to discover t
 
 ## Functional Overview
 
-Nuxeo API Playground can be used online at [http://nuxeo.github.io/api-playground/](http://nuxeo.github.io/api-playground/) or locally at [http://localhost:8080/nuxeo/playground](http://localhost:8080/nuxeo/playground.) after you install the Nuxeo Package on your server (see the [Installation and Configuration]({{page}}) section).
+Nuxeo API Playground can be used online at [http://nuxeo.github.io/api-playground/](http://nuxeo.github.io/api-playground/) or locally at [http://localhost:8080/nuxeo/playground](http://localhost:8080/nuxeo/playground.) after you install the Nuxeo Package on your server (see the [Installation and Configuration](#install-config) section).
 
 Note that the online version proposes to connect the API Playground to our demo.nuxeo.com instance by default, but you can use it with your own Nuxeo server.
 
@@ -349,7 +349,7 @@ For instance, to get information about the `userWorkspaceRoot` document type:
 
 ### Resources Endpoints
 
-In this section you can perform calls to all the ["Resources" endpoints]({{page page='rest-api'}}).
+In this section you can perform calls to all the ["Resources" endpoints]({{page page='rest-api#resources-endpoints'}}).
 
 ![]({{file name='playground_resources_endpoints_section.png'}} ?w=300,h=111,border=true)
 
@@ -382,7 +382,7 @@ The command endpoint section lists all the available [operations and chain of op
 
 1.  Click on operation category and then on the operation you want to run.
 2.  Fill in the operation parameters form.
-    See the [Operation parameters documentation]({{page page='content-automation-concepts'}}) or [operations list on the Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/current/listOperations) for more information on the parameters.
+    See the [Operation parameters documentation]({{page page='content-automation-concepts#operation-parameters'}}) or [operations list on the Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/current/listOperations) for more information on the parameters.
     Tip: For document input, click on the icon ![]({{file name='playground_browse_icon.png'}}) to browse the repository tree and find your document, instead of typing the document path.
 3.  Optionally click on the icon ![]({{file name='playground_settings_icon.png'}} ?w=16,thumbnail=true) to update the [request headers]({{page page='special-http-headers'}}) before running the call.
 4.  Click on the **Run** button.
@@ -402,7 +402,7 @@ The Batch Upload endpoint provides a way to upload one or more files and then re
 
 #### Pre-Requisites
 
-Because the Nuxeo API Playground currently uses the old API, you need to some configuration to enable. See the section [Enabling Batch Upload]({{page}}).
+Because the Nuxeo API Playground currently uses the old API, you need to some configuration to enable. See the section [Enabling Batch Upload](#enable-batch-upload).
 
 #### Creating a Batch Upload
 
@@ -439,13 +439,17 @@ Batch Upload on the API Playground currently uses the old API which is currently
 
 To enable Batch upload set the runtime configuration property `allowClientGeneratedBatchId` to "true", [using an XML extension]({{page page='how-to-contribute-to-an-extension'}}).
 
-```
+{{#> panel type='code' heading='nxserver/config/batch-upload-config.xml'}}
+
+```xml
 <component name="org.nuxeo.ecm.automation.server.BatchManager.configuration.test">
   <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
     <property name="allowClientGeneratedBatchId">true</property>
   </extension>
 </component>
 ```
+
+{{/panel}}
 
 ### Setting up a CORS Configuration
 

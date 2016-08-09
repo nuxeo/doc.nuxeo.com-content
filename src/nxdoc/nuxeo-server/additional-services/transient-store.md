@@ -83,11 +83,11 @@ The Transient Store allows to store temporary blobs and associated parameters on
 It is typically used by:
 
 *   The new&nbsp;[Batch Upload API]({{page page='blob-upload-for-batch-processing'}})&nbsp;to store a batch of uploaded blobs until they are attached to a document.
-*   The ConversionService to store the BlobHolder resulting from an&nbsp;[Asynchronous Conversion Work.]({{page page='conversion'}})
+*   The ConversionService to store the BlobHolder resulting from an&nbsp;[Asynchronous Conversion Work.]({{page page='conversion#rest-api-async-conversions'}})
 
 The new [TransientStore](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-core/nuxeo-core-cache/src/main/java/org/nuxeo/ecm/core/transientstore/api/TransientStore.java) API allows this simply:
 
-```
+```java
 void putBlobs(String key, List blobs);
 
 List getBlobs(String key);
@@ -105,7 +105,7 @@ Serializable getParameter(String key, String parameter);
 
 You can configure several Transient Stores with the following extension point:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent"
   point="store">
   <store name="myTransientStore" class="my.transientstore.implementation">
@@ -131,7 +131,9 @@ Nested configuration elements are:
 
 Have a look at the [default Transient Store configuration](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common/config/transient-store-config.xml.nxftl) defined in a template:
 
-```
+{{#> panel type='code' heading='Default Transient Store Configuration'}}
+
+```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.core.transient.store.config">
   <#if "${nuxeo.redis.enabled}" == "true">
@@ -151,6 +153,8 @@ Have a look at the [default Transient Store configuration](https://github.com/nu
   </extension>
 </component>
 ```
+
+{{/panel}}
 
 The class is dynamically defined depending on if [Redis]({{page page='redis-configuration'}}) is enabled or not.
 If you need to define a custom Transient Store we strongly recommend you use such a template with this dynamic class definition mechanism so that:
@@ -210,7 +214,7 @@ A [Work](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-core/nuxeo-core-event/
 
 It relies on the `transientStoreWorkCache` Transient Store, also not registered with a fall back on the default store.
 
-For example, the&nbsp;[Asynchronous Conversions]({{page page='conversion'}}) rely on such instances of&nbsp;`TransientStoreWork` via the&nbsp;`ConversionWork` class.
+For example, the&nbsp;[Asynchronous Conversions]({{page page='conversion#java-api-async-conversions'}}) rely on such instances of&nbsp;`TransientStoreWork` via the&nbsp;`ConversionWork` class.
 
 ## Time To Live and Garbage Collector
 

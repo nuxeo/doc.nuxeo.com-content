@@ -215,7 +215,7 @@ nuxeo.s3storage.crypt.key.password=the_key_password
 
 Alternatively, you can use [S3 Server-Side Encryption](http://docs.amazonwebservices.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) with the following option:
 
-```
+```text
 nuxeo.s3storage.crypt.serverside=true
 ```
 

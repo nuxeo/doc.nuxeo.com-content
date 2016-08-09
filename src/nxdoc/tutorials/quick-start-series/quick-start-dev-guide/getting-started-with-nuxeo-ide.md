@@ -522,13 +522,13 @@ From a command line:
 
 2.  Generate the project structure.
 
-    ```
+    ```bash
     yo nuxeo
     ```
 
 3.  Fill in the prompted parent project creation ("Multi module"):
 
-    ```
+    ```bash
     ? Use a parent artifact (for instance your company's BOM or the org.nuxeo.ecm.distribution:nuxeo-distribution POM)? y
     ? Parent Group id: org.nuxeo.ecm.distribution
     ? Parent Artifact id: nuxeo-distribution
@@ -541,7 +541,7 @@ From a command line:
 
 4.  Fill in the prompted project itself ("Single module"):
 
-    ```
+    ```bash
     ? Project Group id: com.bigcorp.contractmgt
     ? Project Artifact id: contract-mgt-project-core
     ? Project version: 1.0-SNAPSHOT
@@ -552,7 +552,7 @@ From a command line:
 
 5.  Generate Eclipse configuration files.
 
-    ```
+    ```bash
     mvn install
 
     # The following parameters (downloadSources, downloadJavadocs and useProjectReferences) are optional
@@ -575,13 +575,13 @@ From a command line:
 
 1.  Generate an operation code template:
 
-    ```
+    ```bash
     yo nuxeo operation
     ```
 
 2.  You are prompted for a few details:
 
-    ```
+    ```bash
     ? Operation package: com.bigcorp.contractmgt
     ? Operation class name: ContractUpdater
     ? Operation label: Contract Updater
@@ -590,7 +590,7 @@ From a command line:
 3.  In Eclipse, right-click on the project and press refresh (F5).
     You get something like this for the operation, in `src/main/java`:
 
-    ```
+    ```java
     package com.bigcorp.contractmgt;
     import org.apache.commons.lang3.StringUtils;
     import org.nuxeo.ecm.automation.core.Constants;
@@ -668,7 +668,7 @@ A unit test comes along in `src/test/java`. You will need it to pass in order to
 
 1.  Replace it with the following code:
 
-    ```
+    ```java
     package com.bigcorp.contractmgt;
     import static org.junit.Assert.assertEquals;
     import static org.junit.Assert.assertNotNull;

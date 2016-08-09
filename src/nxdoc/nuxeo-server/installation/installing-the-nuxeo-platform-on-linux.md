@@ -351,13 +351,13 @@ For the examples below, let's say you are using Ubuntu 14.04 LTS ("trusty") and 
 
 1.  Import the Nuxeo key.
 
-    ```
+    ```bash
     wget -q -O- http://apt.nuxeo.org/nuxeo.key | sudo apt-key add - 
     ```
 
 2.  Add the Nuxeo APT repository.
 
-    ```
+    ```bash
     sudo add-apt-repository "deb http://apt.nuxeo.org/ $(lsb_release -cs) releases"
     sudo add-apt-repository "deb http://apt.nuxeo.org/ $(lsb_release -cs) fasttracks"
     ```
@@ -373,13 +373,13 @@ For the examples below, let's say you are using Ubuntu 14.04 LTS ("trusty") and 
     {{/callout}}
 3.  Update your APT cache.
 
-    ```
+    ```bash
     sudo apt-get update
     ```
 
 4.  Install the Nuxeo Platform.
 
-    ```
+    ```bash
     sudo apt-get install nuxeo
     ```
 

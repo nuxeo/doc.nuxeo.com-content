@@ -122,7 +122,7 @@ You have already defined a new user registration document type as described in&n
 
 Nested the `component`&nbsp;tag of your XML contribution file, &nbsp;add first a&nbsp;`require` tag to reference your document type definition
 
-```
+```xml
  <require>studio.extensions.my-studio-project</require>
 ```
 
@@ -130,7 +130,7 @@ Nested the `component`&nbsp;tag of your XML contribution file, &nbsp;add first a
 
 Use the extension point&nbsp;`configuration` to register your new document type, schema and fields in the user registration service.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.user.registration.UserRegistrationService"
     point="configuration">
 	<configuration merge="true">

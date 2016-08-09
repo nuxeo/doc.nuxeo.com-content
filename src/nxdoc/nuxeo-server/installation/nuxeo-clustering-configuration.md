@@ -208,7 +208,7 @@ The caching directory used by any&nbsp;[Transient Store](https://doc.nuxeo.com/x
 
 By default there is only one&nbsp;Transient Store contribution named `default`:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent"
   point="store">
   <store name="default" class="...">
@@ -331,7 +331,7 @@ If you use a stateless load balancer such as Apache modules such as `mod_jk` and
     This will instruct the Nuxeo preprocessing phase to correctly fill the `jvmRoute` attribute of the `Engine` element in the generated `server.xml`.
 2.  Configure you stateless balancer to follow these routes, for instance here is the relevant configuration fragment when using `mod_proxy_balancer`:
 
-```
+```html/xml
 ProxyPass /nuxeo balancer://sticky-balancer stickysession=JSESSIONID|jsessionid  nofailover=On
 
 <Proxy balancer://sticky-balancer>
@@ -349,14 +349,14 @@ To test that the load balancer forwards the HTTP requests of a given session to 
 
     *   On the first node:
 
-        ```
+        ```html/xml
         <html><body>Node 1</body></html>
 
         ```
 
     *   and on the second node:
 
-        ```
+        ```html/xml
         <html><body>Node 2</body></html>
 
         ```

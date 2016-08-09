@@ -152,7 +152,7 @@ elasticsearch.enabled=true
 audit.elasticsearch.enabled=true
 ```
 
-you need to backup / restore both the `${seqgen.elasticsearch.indexName}`&nbsp;and&nbsp;`${audit.elasticsearch.indexName}`&nbsp;Elasticsearch indexes [defined in nuxeo.conf]({{page page='elasticsearch-setup'}}), following the Elasticsearch&nbsp;[Snapshot And Restore](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-snapshots.html) documentation.
+you need to backup / restore both the `${seqgen.elasticsearch.indexName}`&nbsp;and&nbsp;`${audit.elasticsearch.indexName}`&nbsp;Elasticsearch indexes [defined in nuxeo.conf]({{page page='elasticsearch-setup#configuringnuxeotoaccessthecluster'}}), following the Elasticsearch&nbsp;[Snapshot And Restore](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-snapshots.html) documentation.
 
 {{#> callout type='warning' }}
 
@@ -160,7 +160,7 @@ This is really important if as if you decide to use Elasticsearch as a backend f
 
 {{/callout}}{{#> callout type='info' }}
 
-Reminder: as stated in&nbsp;[Setting up an Elasticsearch Cluster]({{page page='elasticsearch-setup'}}), the embedded Elasticsearch mode&nbsp;**is only for testing purpose**&nbsp;and should not be used in production.
+Reminder: as stated in&nbsp;[Setting up an Elasticsearch Cluster]({{page page='elasticsearch-setup#settingupanelasticsearchcluster'}}), the embedded Elasticsearch mode&nbsp;**is only for testing purpose**&nbsp;and should not be used in production.
 
 Yet if you decide to use it for development or tests, to perform the backup / restore operations you will need to make the embedded Elasticsearch server accept HTTP request on port 9200 by setting `elasticsearch.httpEnabled=true` in `nuxeo.conf`.
 

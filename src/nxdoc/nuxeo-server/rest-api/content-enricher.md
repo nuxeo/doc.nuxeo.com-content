@@ -339,6 +339,8 @@ http://localhost:8080/nuxeo/site/api/v1/path/default-domain/workspaces?enrichers
 When specifying&nbsp;`X-NXenrichers.document: thumbnail`, the JSON payload of the document REST calls response that contains the related attached file thumbnail of the document:
 &nbsp;
 
+{{#> panel type='code' heading='Call Example'}}
+
 ```
 Request URL:
 http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
@@ -353,6 +355,8 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  X-NXproperties:
  dublincore
 ```
+
+{{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
@@ -387,11 +391,15 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 }
 ```
 
+{{/panel}}
+
 More details about the thumbnail enricher:&nbsp;[http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html)
 
 ### ACLs
 
 When specifying&nbsp;`X-NXenrichers.document: acls`, the JSON payload of the document REST calls response that contains all related ACLs of the document:
+
+{{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
@@ -407,6 +415,8 @@ acls
 X-NXproperties:
 dublincore
 ```
+
+{{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
@@ -472,12 +482,16 @@ dublincore
 }
 ```
 
+{{/panel}}
+
 More details about the acls enricher: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/permissions/ACLJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/permissions/ACLJsonEnricher.html)
 
 ### Preview
 
 When specifying&nbsp;`X-NXenrichers.document: preview`, the JSON payload of the document REST calls response that contains the related attached file preview of the document:
 &nbsp;
+
+{{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
@@ -493,6 +507,8 @@ http://localhost:18090/api/v1/repo/test/path/folder_1/photo.jpg
  X-NXproperties:
  dublincore
 ```
+
+{{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
@@ -527,9 +543,13 @@ http://localhost:18090/api/v1/repo/test/path/folder_1/photo.jpg
 }
 ```
 
+{{/panel}}
+
 More details about the preview enricher: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/preview/io/PreviewJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/preview/io/PreviewJsonEnricher.html)
 
 ### Breadcrumb
+
+{{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
@@ -545,6 +565,8 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  X-NXproperties:
  dublincore
 ```
+
+{{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
@@ -613,12 +635,16 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 }
 ```
 
+{{/panel}}
+
 More details about the breadcrumb enricher: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BreadcrumbJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BreadcrumbJsonEnricher.html)
 
 ### Favorites &nbsp;
 
 When specifying&nbsp;`X-NXenrichers.document: favorites`, the JSON payload of the document REST calls response that contains a boolean flag telling whether the document belongs to the current user's Favorites:&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+{{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
@@ -634,6 +660,8 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  X-NXproperties:
  dublincore
 ```
+
+{{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
@@ -667,12 +695,16 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 }
 ```
 
+{{/panel}}
+
 &nbsp;
 
 ### Collections &nbsp;
 
 When specifying&nbsp;`X-NXenrichers.document: collections`, the JSON payload of the document REST calls response that contains the collections the document belongs to:&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+{{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
@@ -688,6 +720,8 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  X-NXproperties:
  dublincore
 ```
+
+{{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
@@ -738,10 +772,14 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 }
 ```
 
+{{/panel}}
+
 ### Tags &nbsp;
 
 Since 8.3\. When specifying&nbsp;`X-NXenrichers.document: tags`, the JSON payload of the document REST calls response that contains the tags of the documents:&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+{{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
@@ -757,6 +795,8 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  X-NXproperties:
  dublincore
 ```
+
+{{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
@@ -792,12 +832,16 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 }
 ```
 
+{{/panel}}
+
 &nbsp;
 
 ### Running Workflows &nbsp;
 
 When specifying&nbsp;`X-NXenrichers.document: runningWorkflows`, the JSON payload of the document REST calls response that contains the workflow instances running on the document:&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+{{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
@@ -813,6 +857,8 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  X-NXproperties:
  dublincore
 ```
+
+{{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
@@ -878,12 +924,16 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 }
 ```
 
+{{/panel}}
+
 &nbsp;
 
 ### Runnable Workflows &nbsp;
 
 When specifying&nbsp;`X-NXenrichers.document: runnableWorkflows`, the JSON payload of the document REST calls response that contains the workflow models that can be launched on the document:&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+{{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
@@ -899,6 +949,8 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  X-NXproperties:
  dublincore
 ```
+
+{{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
@@ -948,12 +1000,16 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 }
 ```
 
+{{/panel}}
+
 &nbsp;
 
 ### Pending Tasks &nbsp;
 
 When specifying&nbsp;`X-NXenrichers.document: pendingTasks`, the JSON payload of the document REST calls response that contains the pending tasks on the document:&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+{{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
@@ -969,6 +1025,8 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  X-NXproperties:
  dublincore
 ```
+
+{{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
@@ -1034,6 +1092,8 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 }
 ```
 
+{{/panel}}
+
 &nbsp;
 
 ### Other Enrichers
@@ -1054,7 +1114,7 @@ Here is a sample to get you started, that provides a document's parent id, title
 
 {{! multiexcerpt name='enricher-contrib'}}
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="org.nuxeo.sample.enrichers.parentDocEnricher">
 <!-- Start copying here if you declare the enricher in Nuxeo Studio -->
@@ -1067,7 +1127,7 @@ Here is a sample to get you started, that provides a document's parent id, title
 
 {{! /multiexcerpt}}{{! multiexcerpt name='enricher-class'}}
 
-```
+```java
 package org.nuxeo.sample.enrichers;
 
 import static org.nuxeo.ecm.core.io.registry.reflect.Instantiations.SINGLETON;
@@ -1127,7 +1187,7 @@ public class ParentDocEnricher extends AbstractJsonEnricher<DocumentModel> { // 
 
 Here is a sample to get you started with a content enricher for the object&nbsp;<span style="line-height: 21.58px;">org</span>.nuxeo.ecm.platform.audit.api.LogEntry:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="org.nuxeo.sample.enrichers.logEntryEnricher">
 <!-- Start copying here if you declare the enricher in Nuxeo Studio -->
@@ -1139,7 +1199,7 @@ Here is a sample to get you started with a content enricher for the object&nbsp;
 </component> 
 ```
 
-```
+```java
 package org.nuxeo.sample.enrichers;
 import static org.nuxeo.ecm.core.io.registry.reflect.Instantiations.SINGLETON;
 import static org.nuxeo.ecm.core.io.registry.reflect.Priorities.REFERENCE;
@@ -1212,6 +1272,8 @@ Don't forget to set the proper header to use this enricher:
 
 &nbsp;
 
+{{#> panel type='code' heading='JSON Response Example'}}
+
 ```
 {
     "entity-type": "document",
@@ -1243,6 +1305,8 @@ Don't forget to set the proper header to use this enricher:
     }
 }
 ```
+
+{{/panel}}
 
 &nbsp;
 

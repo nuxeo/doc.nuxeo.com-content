@@ -142,7 +142,7 @@ The **cronExpression** is described in the following section.
 
 Here is an example contribution:
 
-```
+```xml
 <?xml version="1.0"?>
 <component name="com.example.nuxeo.schedule.monthly_stuff">
   <extension target="org.nuxeo.ecm.core.scheduler.SchedulerService"

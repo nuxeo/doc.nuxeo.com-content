@@ -238,7 +238,9 @@ This point allows you to configure the Login Screen : header, footer, styles, op
 
 Let's create the component `org.nuxeo.sample.loginPage`.
 
-```
+{{#> panel type='code' heading='src/main/resources/OSGI-INF/login-contribution.xml'}}
+
+```xml
 <component name="org.nuxeo.sample.loginPage">
   <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="loginScreen">
     <loginScreenConfig>
@@ -257,11 +259,11 @@ Let's create the component `org.nuxeo.sample.loginPage`.
 </component>
 ```
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
+{{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page page='how-to-declare-the-css-and-javascript-resources-used-in-your-templates'}})
-*   [undefined]({{page}})
-*   [undefined]({{page}})
+*   [undefined]()
+*   [undefined]()
 *   [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

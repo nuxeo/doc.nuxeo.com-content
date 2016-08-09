@@ -147,7 +147,9 @@ Nuxeo uses a filter to handle those cases. It is based on&nbsp;[Vladimir Dzhuvin
 
 Here is a the simplest contribution, to allow cross-domain request on the whole&nbsp;`foobar` site:
 
-```
+{{#> panel type='code' heading='Simplest contribution'}}
+
+```html/xml
 <component name="org.nuxeo.cors">
 <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
     <corsConfig name="foobar" supportedMethods ="GET,POST,HEAD,OPTIONS,DELETE,PUT">
@@ -157,7 +159,7 @@ Here is a the simplest contribution, to allow cross-domain request on the whole&
 </component>
 ```
 
-{{! /multiexcerpt}}
+{{/panel}}{{! /multiexcerpt}}
 
 ## Configuration
 
@@ -195,7 +197,9 @@ Indicates how long the results of a preflight request can be cached by the web b
 
 For instance, a `fooly` complete contribution could looks like:
 
-```
+{{#> panel type='code' heading='Fooly contribution'}}
+
+```html/xml
       <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
         <corsConfig name="fooly" allowGenericHttpRequests="true"
           allowOrigin="http://example.com http://example.com:8080"
@@ -208,17 +212,25 @@ For instance, a `fooly` complete contribution could looks like:
       </extension>
 ```
 
+{{/panel}}
+
 ## Making sure the contribution is taken into account
 
 To debug your CORS configuration, you might use `cURL`&nbsp;and look at the response. If you haven't blocked OPTIONS method, you should test with the preflight request for an expected POST request:
 
-```
+{{#> panel type='code' heading='Simulate preflight request'}}
+
+```bash
 curl --verbose -H "Origin: http://www.nuxeo.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://localhost:8080/nuxeo/site/foobar/upload
 ```
 
+{{/panel}}
+
 With the default configuration, preflight's response must looks like:
 
-```
+{{#> panel type='code' heading='Default response'}}
+
+```bash
 < HTTP/1.1 200 OK
 < Server: Apache-Coyote/1.1
 < Access-Control-Allow-Origin: http://www.nuxeo.com
@@ -227,5 +239,7 @@ With the default configuration, preflight's response must looks like:
 < Access-Control-Allow-Headers: X-Requested-With
 < Content-Length: 0 
 ```
+
+{{/panel}}
 
 With these "Access-Control-Allow-*" headers containing expected values.

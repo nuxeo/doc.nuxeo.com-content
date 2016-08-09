@@ -83,7 +83,9 @@ An helper class will help you to access configuration for the login page, like t
 
 Here is an example getting few configuration data:
 
-```
+{{#> panel type='code' heading='login.jsp'}}
+
+```java
 <%@ page import="org.nuxeo.ecm.platform.ui.web.auth.LoginScreenHelper"%>
 <%
 LoginScreenConfig screenConfig = LoginScreenHelper.getConfig();
@@ -101,6 +103,8 @@ String logoAlt = LoginScreenHelper.getValueWithDefault(screenConfig.getLogoAlt()
 String logoUrl = LoginScreenHelper.getValueWithDefault(screenConfig.getLogoUrl(), context + "/img/nuxeo_logo.png");
 %> 
 ```
+
+{{/panel}}
 
 # Deployment
 

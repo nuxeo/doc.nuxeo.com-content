@@ -156,7 +156,7 @@ If you need an exhaustive list, see the [5.6 -> 5.8 upgrade notes](https://jira.
 
 You may also want to have a look at the [5.8 release notes](http://nuxeo.github.io/releasenotes/5.8/).
 
-If you have followed the Fast Track releases since Nuxeo Platform 5.6, you can refer to the [Upgrade from 5.7.x to 5.8]({{page}}) section.
+If you have followed the Fast Track releases since Nuxeo Platform 5.6, you can refer to the [Upgrade from 5.7.x to 5.8](#57x-to-58) section.
 
 ## Installation & Configuration
 

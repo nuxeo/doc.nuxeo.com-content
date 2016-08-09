@@ -559,9 +559,13 @@ Hopefully you can control the number of threads used by ImageMagick either by:
 
 ### libfaac Support
 
+{{#> panel type='code' heading='Common issue with libfaac encoder'}}
+
 ```
 Unknown encoder 'libfaac'
 ```
+
+{{/panel}}
 
 Ubuntu does not supply FFmpeg with libfaac support. So you must compile FFmpeg from sources with `--enable-libfaac` option.
 

@@ -67,7 +67,7 @@ Since 5.8, it is easy to add your own action type to handle its configuration an
 
 You can take example on the "link" [action type registration](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-actions-jsf/src/main/resources/OSGI-INF/action-widgettypes-contrib.xml) for this. It is actually relying on widget types definition, here is a minimal definition for a custom action type:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.forms.layout.LayoutStore"
   point="widgettypes">
 

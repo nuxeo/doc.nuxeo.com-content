@@ -59,7 +59,9 @@ The [Nuxeo Datadog Reporter addon](https://connect.nuxeo.com/nuxeo/site/marketpl
 1.  {{{multiexcerpt 'MP-installation-easy' page='NXDOC:Generic Multi-Excerpts'}}}
 2.  Then add your Datadog API key in [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}):
 
-    ```
+    {{#> panel type='code' heading='Configuration'}}
+
+    ```text
     # Datadog API_KEY
     datadog.apikey=YOUR_OWN_API_KEY
 
@@ -70,6 +72,8 @@ The [Nuxeo Datadog Reporter addon](https://connect.nuxeo.com/nuxeo/site/marketpl
     # datadog.pollinterval=10
 
     ```
+
+    {{/panel}}
 
 ## Exploring Metrics in Datadog
 

@@ -122,7 +122,7 @@ If you want to modify these variables outside of the workflow context (from a li
 
 {{! /excerpt}}
 
-```
+```java
 void setVariables(Map<String, Serializable> map);
 Map<String, Serializable> getVariables();
 ```
@@ -144,7 +144,7 @@ List<DocumentRoute> getDocumentRoutesForAttachedDocument(CoreSession session, St
 For the second case, the `workflowTaskCompleted` event is triggered during a workflow every time a task is completed. On this event, the id of the workflow (route) instance documents is directly added into the map holding the properties of this event.
 Here is some sample data fetched with my debugger on a break point on `TaskEventNotificationHelper notifyEvent` method:
 
-```
+```java
 event: workflowTaskCompleted
 eventProperties:
 {category=eventDocumentCategory, sessionId=default-6778825317969559609, recipients=[Administrator, Administrator, test], 
@@ -169,8 +169,8 @@ So if you want to set a workflow variable from a listener listening to&nbsp;`wor
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [undefined]({{page}})&nbsp;
-*   [undefined]({{page}})
+*   [undefined]()&nbsp;
+*   [undefined]()
 *   [How to Set Up a Tasks Dashboard]({{page page='how-to-set-up-a-tasks-dashboard'}})&nbsp;
 *   [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})&nbsp;
 *   [How-To Index]({{page page='how-to-index'}})

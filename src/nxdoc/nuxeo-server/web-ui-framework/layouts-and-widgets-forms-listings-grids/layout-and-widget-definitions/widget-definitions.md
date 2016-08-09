@@ -204,7 +204,7 @@ Additional configuration can be set on a widget:
 *   `helpLabels`: a list that follows the same pattern as labels, but used to set help labels.
 *   `widgetModes`: the list of local mode mappings that override the default one. [Local mode]({{page page='layout-and-widget-modes'}}) is deduced from the layout mode or from the parent widget mode.
 *   `subWidgets`: the list of widget definitions, as the widget list, used to describe subwidgets use to help the configuration of some complex widget types.
-*   `controls`: an additional configuration to control the behavior of a widget (see the [Widget Controls section]({{page}}) below).
+*   `controls`: an additional configuration to control the behavior of a widget (see the [Widget Controls section](#controlswidgetcontrols) below).
 *   `aliases`: an optional alternative name for this widget. This is useful for compatibility management, when renaming a given widget. If another widget is declared with the same name, the last widget to be declared will be taken into account at runtime.
 
 Here is a more complex layout contribution that shows the syntax to use for these additional properties:
@@ -288,7 +288,7 @@ Here is a more complex layout contribution that shows the syntax to use for thes
 
 Here is a sample contribution showing subwidgets configuration:
 
-```
+```xml
 <widget name="dam_text_search" type="container">
   <handlingLabels>true</handlingLabels>
   <labels>
@@ -319,7 +319,7 @@ Here is a sample contribution showing subwidgets configuration:
 
 You can also reference global widgets for subwidgets. Here is a sample configuration:
 
-```
+```xml
 <widget name="dam_text_search" type="container">
   <handlingLabels>true</handlingLabels>
   <labels>
@@ -335,7 +335,7 @@ You can also reference global widgets for subwidgets. Here is a sample configura
 </widget>
 ```
 
-If you need a richer structure to handle subwidgets, you can also consider using a ["layout" widget type]({{page page='advanced-widget-types'}}) to render a layout via a widget.
+If you need a richer structure to handle subwidgets, you can also consider using a ["layout" widget type]({{page page='advanced-widget-types#layout'}}) to render a layout via a widget.
 
 ## Widget Controls
 
@@ -352,7 +352,7 @@ Default layout templates and widget types accepting subwidgets handle the follow
 
 Here is a sample configuration:
 
-```
+```xml
  <widget name="widgetWithControls" type="test">
   <controls mode="any">
     <control name="requireSurroundingForm">true</control>

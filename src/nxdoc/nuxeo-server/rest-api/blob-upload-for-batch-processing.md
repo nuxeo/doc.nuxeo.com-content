@@ -226,7 +226,7 @@ This request returns a 201&nbsp;_CREATED_&nbsp;status code with the following JS
 
 **This handshake phase is mandatory to acquire a server-side generated batch id to be used in subsequent requests as part of the REST resource path.**
 
-The batch id can be seens as an upload session id, especially for a [resumable upload]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}}).
+The batch id can be seens as an upload session id, especially for a [resumable upload]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint#uploadingafileinchunks'}}).
 
 ### Uploading a File
 
@@ -252,7 +252,7 @@ You also need to set some custom HTTP headers:
 {"batchId": batchId, "fileIdx": fileIdx, "uploadType": "normal", "uploadedSize": xxx}
 ```
 
-<span style="color: rgb(0,0,0);">The value of the&nbsp;`uploadType` field is&nbsp;`normal` by default, it can be&nbsp; `chunked` if the file was [uploaded by chunks]({{page}}).&nbsp;</span>
+<span style="color: rgb(0,0,0);">The value of the&nbsp;`uploadType` field is&nbsp;`normal` by default, it can be&nbsp; `chunked` if the file was [uploaded by chunks](#uploadingafilebychunks).&nbsp;</span>
 
 {{#> callout type='info' heading='About the file storage implementation'}}
 
@@ -304,7 +304,7 @@ Executing a batch will automatically remove it.
 
 ## Uploading a File by Chunks
 
-[Resumable upload]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}}) became a requirement otherwise uploading large files over a broken connection could take days.
+[Resumable upload]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint#uploadingafileinchunks'}}) became a requirement otherwise uploading large files over a broken connection could take days.
 
 Using chunking is a good idea since:
 

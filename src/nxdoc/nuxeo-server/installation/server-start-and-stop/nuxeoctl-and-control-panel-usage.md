@@ -278,7 +278,7 @@ Issue `nuxeoctl help` to print this information.
 
 {{#> callout type='tip' }}
 
-See [the Environment variables page]({{page page='setup-best-practices'}}) for setting Nuxeo Home and Configuration paths.
+See [the Environment variables page]({{page page='setup-best-practices#defineenvironmentvariables'}}) for setting Nuxeo Home and Configuration paths.
 
 {{/callout}}
 
@@ -835,11 +835,11 @@ On Windows, the `gui` option is activated by default.
 
 ### Commands
 
-See [the `nuxeoctl` commands]({{page}}).
+See [the `nuxeoctl` commands](#nuxeoctl-commands).
 
 ### Additional Parameters
 
-See [the `nuxeoctl` additional parameters]({{page}}).
+See [the `nuxeoctl` additional parameters](#nuxeoctl-addparam).
 
 ## Exit Code Values
 

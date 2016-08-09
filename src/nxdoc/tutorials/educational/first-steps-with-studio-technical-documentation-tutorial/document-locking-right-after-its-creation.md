@@ -208,7 +208,7 @@ To sum up what we saw:
 
 </div><div class="column medium-4">
 
-**[undefined]({{page}})**
+**[undefined]()**
 
 </div><div class="column medium-4">
 

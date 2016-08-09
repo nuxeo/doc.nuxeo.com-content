@@ -130,10 +130,10 @@ The Platform provides facilities for&nbsp;[uploading binaries under a given "bat
 
 There are two ways to upload a file:
 
-1.  [In one go]({{page}}): the full content of the file is transferred to the server as a binary stream in a single HTTP request. Such an upload is not resumable: in case of interruption you will need to start all over again.
-2.  [In chunks]({{page}}): the file content is transferred to the server as several binary streams in separate HTTP requests. Such an upload is resumable: in case of&nbsp;interruption you will only need to upload the remaining chunks.
+1.  [In one go](#uploadingafileinonego): the full content of the file is transferred to the server as a binary stream in a single HTTP request. Such an upload is not resumable: in case of interruption you will need to start all over again.
+2.  [In chunks](#uploadingafileinchunks): the file content is transferred to the server as several binary streams in separate HTTP requests. Such an upload is resumable: in case of&nbsp;interruption you will only need to upload the remaining chunks.
 
-Before uploading any file or chunk you need to [initialize an upload batch]({{page}}).
+Before uploading any file or chunk you need to [initialize an upload batch](#batchinitialization).
 
 ## Batch Initialization
 
@@ -226,7 +226,7 @@ The content of the chunk
 
 Or with curl:
 
-```
+```text
 curl -u Administrator:Administrator -H "X-Upload-Type:chunked" -H "X-Upload-Chunk-Index:<i>" -H "X-Upload-Chunk-Count:5" -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -H "X-File-Size:115090" -F file=@<chunk_i> http://<host>:<port>/nuxeo/api/v1/upload/<myBatchId>/0
 ```
 
@@ -239,8 +239,8 @@ Response:&nbsp;there are 3 cases here.
     {"batchId": myBatchId, "fileIdx": "0", "uploadType": "chunked", "uploadedSize": chunkSize, "uploadedChunkIds": [0, 1, 2], "chunkCount": 5}
     ```
 
-    => Repeat the step [Uploading Chunk i out of 5]({{page}})&nbsp;with `X-Upload-Chunk-Index`&nbsp;= index of the next chunk to upload, the easiest being <i + 1>.
-    At this point a request to [know the chunk completion]({{page}}) and determine the next chunk to upload can be made.
+    => Repeat the step [Uploading Chunk i out of 5](#uploadingchunkioutof5)&nbsp;with `X-Upload-Chunk-Index`&nbsp;= index of the next chunk to upload, the easiest being <i + 1>.
+    At this point a request to [know the chunk completion](#resumeaninterruptedupload) and determine the next chunk to upload can be made.
 
 2.  The chunk has been uploaded and the file is now complete, meaning this was the last chunk to upload.
 
@@ -251,7 +251,7 @@ Response:&nbsp;there are 3 cases here.
 
     => **End of upload**.
 
-3.  The request is interrupted or you recieve HTTP 503 Service Unavailable or any other 5xx response from the server, go to the [Resume an Interrupted Upload]({{page}})&nbsp;step.
+3.  The request is interrupted or you recieve HTTP 503 Service Unavailable or any other 5xx response from the server, go to the [Resume an Interrupted Upload](#resumeaninterruptedupload)&nbsp;step.
 
 ### Resume an Interrupted Upload
 
@@ -276,7 +276,7 @@ Response:&nbsp;again there are 3 cases here.
     {"name": myFile.doc, "size": 115090, "uploadType": "chunked", "uploadedChunkIds": [0, 1, 2], "chunkCount": 5}
     ```
 
-    => Repeat the step&nbsp;[Uploading Chunk i out of 5]({{page}})&nbsp;with&nbsp;`X-Upload-Chunk-Index`&nbsp;= index of the next chunk to upload, in this case 3.
+    => Repeat the step&nbsp;[Uploading Chunk i out of 5](#uploadingchunkioutof5)&nbsp;with&nbsp;`X-Upload-Chunk-Index`&nbsp;= index of the next chunk to upload, in this case 3.
 
 2.  The file is now complete, meaning all chunks have been uploaded.
     This could happen if the connection broke after all bytes were uploaded but before the client received a response from the server.
@@ -288,7 +288,7 @@ Response:&nbsp;again there are 3 cases here.
 
     => **End of upload**.
 
-3.  The request is interrupted or you recieve HTTP 503 Service Unavailable or any other 5xx response from the server,&nbsp;go to the&nbsp;[Resume an Interrupted Upload]({{page}})&nbsp;step.
+3.  The request is interrupted or you recieve HTTP 503 Service Unavailable or any other 5xx response from the server,&nbsp;go to the&nbsp;[Resume an Interrupted Upload](#resumeaninterruptedupload)&nbsp;step.
 
 ### Best Practices
 
@@ -300,7 +300,7 @@ You can create a document of type File and attach to it a file uploaded to a giv
 
 **That fact that the file has been uploaded in one go or in chunks has no incidence here.**
 
-```
+```text
 POST /api/v1/path/default-domain/workspaces/myworkspace
 {  
   "entity-type": "document", 
@@ -318,13 +318,13 @@ POST /api/v1/path/default-domain/workspaces/myworkspace
 
 Or with curl:
 
-```
+```text
 curl -X POST -H 'Content-Type: application/json' -u Administrator:Administrator -d '{"entity-type": "document", "name": "myNewDoc", "type": "File", "properties": {"dc:title": "My new doc", "file:content": {"upload-batch": "<myBatchId>", "upload-fileId": "0"}}}' http://<host>:<port>/nuxeo/api/v1/path/default-domain/workspaces/myworkspace
 ```
 
 Finally you now can access the content of your file by pointing to the following resource:
 
-```
+```text
 GET /api/v1/path/default-domain/workspaces/myworkspace/myNewDoc/@blob/file:content
 ```
 

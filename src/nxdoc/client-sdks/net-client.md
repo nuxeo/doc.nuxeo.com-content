@@ -200,7 +200,7 @@ You will need to have .NET Core available in your system in order to run the cli
 
 1.  Add the &ldquo;NuxeoClient&rdquo; dependency to your project.json file, which should look something like this:
 
-    ```
+    ```js
     {
       …,
       "dependencies": {
@@ -221,14 +221,14 @@ You will need to have .NET Core available in your system in order to run the cli
 
 1.  Before using the client, you must include a reference to the NuxeoClient namespaces in your .cs file:
 
-    ```
+    ```c#
     using NuxeoClient;
     using NuxeoClient.Wrappers;
     ```
 
 2.  Create a new instance of NuxeoClient, which will allow us to perform API requests to a Nuxeo server. Assuming that the server is running on the local machine and with default credentials, create the client as follows:
 
-    ```
+    ```c#
     Client client = new Client("http://localhost:8080/nuxeo/",
                             new Authorization("Administrator",
                                               "Administrator"));
@@ -236,7 +236,7 @@ You will need to have .NET Core available in your system in order to run the cli
 
     Or just omit the default values:
 
-    ```
+    ```c#
     Client client = new Client();
     ```
 
@@ -316,7 +316,7 @@ Similarly to `Operation`, the `Document` wrapper also provides methods to define
 
 *   Creating a document
 
-    ```
+    ```c#
     Document folder = (Document)await
                 client.DocumentFromPath("/")
                       .Post(new Document
@@ -332,7 +332,7 @@ Similarly to `Operation`, the `Document` wrapper also provides methods to define
 
 *   Updating the same document
 
-    ```
+    ```c#
     Document folder = (Document)await folder.Put(new Document
     {
          Properties = new Properties
@@ -344,20 +344,20 @@ Similarly to `Operation`, the `Document` wrapper also provides methods to define
 
 *   Getting the folder's child documents, using the&nbsp;`@children` adapter
 
-    ```
+    ```c#
     Documents children = (Documents)await folder.SetAdapter(new ChildrenAdapter())
                                                 .Get();
     ```
 
     Then, the list of children can be retrieved via:
 
-    ```
+    ```c#
     children.Entries
     ```
 
     Keep in mind that all the requests made to folder will be issued to the children adapter. The adapter can be unset by doing the following:
 
-    ```
+    ```c#
     folder.SetAdapter(null);
     ```
 
@@ -386,7 +386,7 @@ Now, imagine that you want to upload files to the server and import them as chil
 
 1.  Create a new instance of `Uploader`, which will upload files in chunks of 1 kB.
 
-    ```
+    ```c#
     Uploader uploader = client.Uploader()
                               .SetChunked(true)
                               .SetChunkSize(1024);
@@ -394,7 +394,7 @@ Now, imagine that you want to upload files to the server and import them as chil
 
 2.  Add files to the queue and start the upload process:
 
-    ```
+    ```c#
     await uploader.AddFile("Test.txt")
                   .AddFile("Puppy.docx")
                   .UploadFiles();
@@ -402,7 +402,7 @@ Now, imagine that you want to upload files to the server and import them as chil
 
 3.  Perform a batch operation `FileManager.Import`, which will import all files in the batch as children of folder:
 
-    ```
+    ```c#
     Documents documents = (Documents)await uploader.Operation("FileManager.Import")
                                                    .SetContext("currentDocument", folder.Path)
                                                    .Execute();  

@@ -104,7 +104,7 @@ The service handling document views allows registration of codecs. Codecs manage
 
 Examples of a document view codecs registration:
 
-```
+```xml
 <extension
   target="org.nuxeo.ecm.platform.url.service.DocumentViewCodecService"
   point="codecs">
@@ -130,7 +130,7 @@ The service handling URLs allows registration of patterns. These patterns help s
 
 Example of a URL pattern registration:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.ui.web.rest.URLService"
   point="urlpatterns">
 
@@ -169,7 +169,7 @@ The URL patterns need to be registered on the authentication service so that the
 
 Example of a start URL pattern registration:
 
-```
+```xml
 <extension
   target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
   point="startURL">
@@ -190,7 +190,7 @@ The URL patterns used also need to be handled by the default Nuxeo authenticatio
 
 Example authentication filter configuration:
 
-```
+```xml
 <extension target="web#STD-AUTH-FILTER">
   <filter-mapping>
     <filter-name>NuxeoAuthenticationFilter</filter-name>
@@ -210,7 +210,7 @@ There are some JSF tags and functions helping you to define what kind of GET URL
 
 Example of `nxd:restDocumentLink` use:
 
-```
+```xml
 <nxd:restDocumentLink document="#{doc}">
   <nxh:outputText value="#{nxd:titleOrId(doc)}" />
 </nxd:restDocumentLink>
@@ -225,7 +225,7 @@ Note that you can also use JSF functions to build the GET URL. This is what's do
 
 Example of a JSF function use:
 
-```
+```xml
 <nxh:outputLink rendered="#{doc.hasSchema('file') and !empty doc.file.content}"
   value="#{nxd:fileUrl('downloadFile', doc, 'file:content', doc.file.filename)}">
   <nxh:graphicImage value="/icons/download.png" style="vertical-align:middle"
@@ -236,7 +236,7 @@ Example of a JSF function use:
 
 Here is an the `fileURL` method code as an example:
 
-```
+```java
 public static String fileUrl(String patternName, DocumentModel doc,
         String blobPropertyName, String filename) {
     try {

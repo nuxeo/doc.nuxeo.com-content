@@ -82,7 +82,7 @@ Sometimes, the default localized messages are not satisfying. Especially when us
 
 1.  For example, if we get back to our previous email example:
 
-    ```
+    ```xml
     <xs:element name="email">
       <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -138,7 +138,7 @@ Let's suppose you want to make reference to `Product` objects provided by a `Pro
 
 1.  You have to create an `ObjectResolver`:
 
-    ```
+    ```java
     public class ProductResolver implements ObjectResolver {
         public void configure(Map<String, String> parameters) { /* no configuration needed */ }
         public String getName() {
@@ -183,7 +183,7 @@ Let's suppose you want to make reference to `Product` objects provided by a `Pro
 
 3.  And register it in a Nuxeo contribution:
 
-    ```
+    ```xml
     <?xml version="1.0"?>
     <component name="org.nuxeo.ecm.core.DocumentModel.resolver">
       <documentation>
@@ -197,7 +197,7 @@ Let's suppose you want to make reference to `Product` objects provided by a `Pro
 
 4.  You can now define your own custom fields:
 
-    ```
+    ```xml
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
                xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
                xmlns:nxs="http://www.nuxeo.org/ecm/schemas/example"
@@ -214,7 +214,7 @@ Let's suppose you want to make reference to `Product` objects provided by a `Pro
 
 5.  You'll be able to play with the Product class directly on the DocumentModel:
 
-    ```
+    ```java
     // get a referenced product
     Product product = document.getObjectResolver("pdt:productReference").fetch(Product.class);
 

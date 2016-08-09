@@ -131,7 +131,9 @@ In this example, you will define a filter for the action "`New`", which should b
 
     If you are not familiar with the contribution of an extension in Studio, please read this documentation: [How to Contribute to an Extension](http://doc.nuxeo.com/display/NXDOC/How+to+Contribute+to+an+Extension#HowtoContributetoanExtension-ContributingUsingNuxeoStudio).
 
-    ```
+    {{#> panel type='code' heading='src/main/resources/OSGI-INF/actions-contribution.xml'}}
+
+    ```xml
     <extension target="org.nuxeo.ecm.platform.actions.ActionService"
       point="actions">
       <action id="newDocument">
@@ -149,14 +151,19 @@ In this example, you will define a filter for the action "`New`", which should b
     </extension>
     ```
 
+    {{/panel}}
 3.  If you want to completely remove the action, the contribution is slightly different. You must add the parameter `enabled="false"` when defining the action.
 
-    ```
+    {{#> panel type='code' heading='src/main/resources/OSGI-INF/actions-contribution.xml'}}
+
+    ```xml
     <extension target="org.nuxeo.ecm.platform.actions.ActionService"
       point="actions">
       <action id="newDocument" enabled="false" />
     </extension>
     ```
+
+    {{/panel}}
 
 In this example, the name of the group to be excluded was hardcoded. It is also possible to create a method which returns a list of group names to exclude.
 

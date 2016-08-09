@@ -64,7 +64,9 @@ Configuration is a bit overkill for now; this could be simplified in the future,
 
 Here is a complete example, taken from the default Nuxeo Summary layout, and showing how some widgets are shown conditionally on the page.
 
-```
+{{#> panel type='code' heading='Summary Layout Definition'}}
+
+```xml
 <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
   point="layouts">
   <layout name="grid_summary_layout">
@@ -99,11 +101,15 @@ Here is a complete example, taken from the default Nuxeo Summary layout, and sho
 </extension>
 ```
 
-This layout is using a [grid]({{page page='layout-definitions'}}), so that widgets are piled up within grid slots and stacked up correctly when some widgets are not displayed.
+{{/panel}}
+
+This layout is using a [grid]({{page page='layout-definitions#gridlayoutdefinition'}}), so that widgets are piled up within grid slots and stacked up correctly when some widgets are not displayed.
 
 Let's look at the `summary_panel_left` widget configuration:
 
-```
+{{#> panel type='code' heading='Action Widget Definition'}}
+
+```xml
 <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
   point="widgets">
   <widget name="summary_panel_left" type="documentActions">
@@ -119,9 +125,11 @@ Let's look at the `summary_panel_left` widget configuration:
 </extension>
 ```
 
+{{/panel}}
+
 Actions can be displayed by this widget when using the category&nbsp;`SUMMARY_PANEL_LEFT`. Here is a sample action configuration:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.actions.ActionService"
   point="actions">
   <action id="summary_note_text" type="widget" order="100">
@@ -136,7 +144,7 @@ Actions can be displayed by this widget when using the category&nbsp;`SUMMARY_PA
 
 This action is using the type `widget`, referencing the widget named&nbsp;`summary_note_text`. Note that it's also using a filter that makes sure the widget will be shown only when the document has a schema named `note`:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.actions.ActionService"
   point="filters">
   <filter id="hasNote">
@@ -149,7 +157,7 @@ This action is using the type `widget`, referencing the widget named&nbsp;`summa
 
 Finally, here is the widget configuration:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
   point="widgets">
   <widget name="summary_note_text" type="richtext_with_mimetype">

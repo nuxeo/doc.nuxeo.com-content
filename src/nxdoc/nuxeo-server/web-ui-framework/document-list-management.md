@@ -56,7 +56,7 @@ The lists of documents can be invalidated when Seam events are raised. This is u
 
 Documents lists can be defined like in the following example ( [`OSGI-INF/documentslists-contrib.xml`](https://github.com/nuxeo/nuxeo-dm/blob/master/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/documentslists-contrib.xml) ):
 
-```
+```xml
 <extension target="org.nuxeo.ecm.webapp.documentsLists.DocumentsListsService" point="list">
 
   <documentsList name="CLIPBOARD">
@@ -80,7 +80,7 @@ Documents lists can be defined like in the following example ( [`OSGI-INF/docume
 
 Here is a sample code to get the list of selected documents within a Seam Component:
 
-```
+```java
 @In(create = true)
 protected transient DocumentsListsManager documentsListsManager;
 

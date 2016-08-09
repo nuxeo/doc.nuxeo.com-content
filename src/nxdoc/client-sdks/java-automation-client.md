@@ -19,397 +19,397 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/vwIz'
     source_link: /display/NXDOC/Java+Automation+Client
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-09 13:27'
         message: ''
         version: '79'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2016-04-06 22:00'
         message: ''
         version: '78'
-    -
+    - 
         author: Vincent Dutat
         date: '2016-03-18 18:18'
         message: ''
         version: '77'
-    -
+    - 
         author: Ronan Daniellou
         date: '2016-02-18 10:42'
         message: Added block how to update multi-lines properties.
         version: '76'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-23 08:30'
         message: Format
         version: '75'
-    -
+    - 
         author: Maxime Hilaire
         date: '2015-04-22 18:26'
         message: ''
         version: '74'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-04-13 15:43'
         message: ''
         version: '73'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-02-04 12:22'
         message: Reverted from v. 70
         version: '72'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-02-04 12:21'
         message: ''
         version: '71'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-05 19:13'
         message: Fix links to point to latest version
         version: '70'
-    -
+    - 
         author: Harlan Brown
         date: '2014-09-29 22:07'
         message: ''
         version: '69'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-13 14:44'
         message: ''
         version: '68'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-25 17:22'
         message: 'Updated links, formatted steps'
         version: '67'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-17 03:35'
         message: ''
         version: '66'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-17 03:35'
         message: ''
         version: '65'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-30 15:09'
         message: ''
         version: '64'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-31 11:52'
         message: ''
         version: '63'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-07-09 17:53'
         message: ''
         version: '62'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-27 15:20'
         message: ''
         version: '61'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-24 17:01'
         message: ''
         version: '60'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-24 12:44'
         message: ''
         version: '59'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-21 17:52'
         message: ''
         version: '58'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 18:29'
         message: ''
         version: '57'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 16:54'
         message: ''
         version: '56'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 16:54'
         message: ''
         version: '55'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2013-06-20 16:51'
         message: ''
         version: '54'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 16:49'
         message: ''
         version: '53'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 15:46'
         message: ''
         version: '52'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 15:37'
         message: ''
         version: '51'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 15:36'
         message: ''
         version: '50'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 15:03'
         message: ''
         version: '49'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 14:58'
         message: ''
         version: '48'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 12:15'
         message: ''
         version: '47'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 18:14'
         message: ''
         version: '46'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 18:02'
         message: ''
         version: '45'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 18:01'
         message: ''
         version: '44'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 17:48'
         message: ''
         version: '43'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 17:46'
         message: ''
         version: '42'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 16:10'
         message: ''
         version: '41'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 15:54'
         message: ''
         version: '40'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 15:42'
         message: ''
         version: '39'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 15:40'
         message: ''
         version: '38'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 15:38'
         message: ''
         version: '37'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-19 15:34'
         message: Added TOC
         version: '36'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 15:25'
         message: ''
         version: '35'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 15:08'
         message: ''
         version: '34'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 12:38'
         message: ''
         version: '33'
-    -
+    - 
         author: Brendan Coveney
         date: '2013-05-29 22:19'
         message: ''
         version: '32'
-    -
+    - 
         author: Antoine Taillefer
         date: '2012-11-15 18:11'
         message: ''
         version: '31'
-    -
+    - 
         author: Antoine Taillefer
         date: '2012-11-15 17:52'
         message: ''
         version: '30'
-    -
+    - 
         author: Antoine Taillefer
         date: '2012-11-15 17:00'
         message: ''
         version: '29'
-    -
+    - 
         author: Julien Carsique
         date: '2012-05-11 14:32'
         message: Migrated to Confluence 4.0
         version: '28'
-    -
+    - 
         author: Julien Carsique
         date: '2012-05-11 14:32'
         message: ''
         version: '27'
-    -
+    - 
         author: Julien Carsique
         date: '2012-03-14 18:25'
         message: ''
         version: '26'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2012-03-14 14:30'
         message: ''
         version: '25'
-    -
+    - 
         author: Olivier Grisel
         date: '2012-02-01 11:25'
         message: fix automation client download link
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-07 18:29'
         message: ''
         version: '23'
-    -
+    - 
         author: Julien Carsique
         date: '2011-02-03 11:55'
         message: ''
         version: '22'
-    -
+    - 
         author: Julien Carsique
         date: '2011-02-03 11:53'
         message: 'Add download link from http://maven.nuxeo.org/'
         version: '21'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-11-27 21:26'
         message: ''
         version: '20'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-11-27 20:52'
         message: ''
         version: '19'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-11-27 20:51'
         message: ''
         version: '18'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-08-03 15:55'
         message: ''
         version: '17'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-08-03 15:54'
         message: ''
         version: '16'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-08-03 15:54'
         message: ''
         version: '15'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-08-03 15:53'
         message: ''
         version: '14'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-29 17:51'
         message: ''
         version: '13'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 17:06'
         message: ''
         version: '12'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 17:03'
         message: ''
         version: '11'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 16:42'
         message: ''
         version: '10'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 16:25'
         message: ''
         version: '9'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 16:23'
         message: ''
         version: '8'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 16:21'
         message: ''
         version: '7'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 15:57'
         message: ''
         version: '6'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 15:55'
         message: ''
         version: '5'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 15:54'
         message: ''
         version: '4'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 15:53'
         message: ''
         version: '3'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 15:13'
         message: ''
         version: '2'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 11:56'
         message: ''
@@ -443,7 +443,7 @@ To use the Java Automation client you need to put a dependency on the following 
 
 &nbsp;
 
-```
+```xml
 <dependency>
     <groupId>org.nuxeo.ecm.automation</groupId>
     <artifactId>nuxeo-automation-client</artifactId>
@@ -452,7 +452,9 @@ To use the Java Automation client you need to put a dependency on the following 
 
 ```
 
-```
+{{#> panel type='code' heading='with dependencies'}}
+
+```xml
 <dependency>
     <groupId>org.nuxeo.ecm.automation</groupId>
     <artifactId>nuxeo-automation-client</artifactId>
@@ -461,6 +463,8 @@ To use the Java Automation client you need to put a dependency on the following 
  </dependency>
 
 ```
+
+{{/panel}}
 
 For a direct download, see [https://maven.nuxeo.org/](https://maven.nuxeo.org/nexus/index.html#nexus-search;quick%7Enuxeo-automation-client).
 
@@ -637,7 +641,7 @@ Here is an example with [Document.Create](http://explorer.nuxeo.org/nuxeo/site/d
 
 {{#> callout type='info' }}
 
-You can see [The Automation Client Service Adapter section]({{page}}) to know how CRUD operations are wrapped into DocumentService adapter and how to use it.
+You can see [The Automation Client Service Adapter section](#automation-client-service-adapter) to know how CRUD operations are wrapped into DocumentService adapter and how to use it.
 
 {{/callout}}
 
@@ -672,7 +676,7 @@ Operations examples above fetch the document with common properties: `common`, `
 
 ```
 import org.nuxeo.ecm.automation.client.model.Document;
-import org.nuxeo.ecm.automation.client.Session;
+import org.nuxeo.ecm.automation.client.Session; 
 import org.nuxeo.ecm.automation.client.Constants;
 import org.nuxeo.ecm.automation.client.model.IdRef;
 
@@ -696,7 +700,7 @@ You can fetch all updated properties during the session with the following metho
 PropertyMap dirties = document.getDirties();
 ```
 
-To see complex properties example and the use of `propertyMap`, see [the Managing Complex Properties section]({{page}}).
+To see complex properties example and the use of `propertyMap`, see [the Managing Complex Properties section](#managing-complex-properties).
 
 {{/callout}}
 
@@ -704,7 +708,7 @@ To see complex properties example and the use of `propertyMap`, see [the Managin
 
 Multi-lines values lines must end with `\\`. For example:
 
-```
+```java
 document.set("mySchema:myProperty", "line1\\\nline2");
 documentService.update(document);
 ```
@@ -725,63 +729,76 @@ The example will create a new File document into the root _"/"_ document and the
     Document root = (Document) session.newRequest("Document.Fetch").set("value", "/").execute();
 
     // create a file document
-    session.newRequest("Document.Create").setInput(root).set("type", "File").set("name", "myfile").set("properties", "dc:title=My File").execute();
+    session.newRequest("Document.Create").setInput(root).set("type", "File").set("name", "myfile").set("properties", "dc:title=My File").execute(); 
     ```
-    {{#> callout type='info' }}Note the usage of `setInput()` method. This is to specify that the create operation must be executed in the context of the root document - so the new document will be created under the root document. Also you can notice that the input object is a Document instance.{{/callout}}
+
+    {{#> callout type='info' }}
+
+    Note the usage of `setInput()` method. This is to specify that the create operation must be executed in the context of the root document - so the new document will be created under the root document. Also you can notice that the input object is a Document instance.
+
+    {{/callout}}
 2.  Now get the file to upload and put it into the newly created document.
 
     ```
-    File file = getTheFileToUpload();
-    FileBlob fb = new FileBlob(file);
-    fb.setMimeType("text/xml");
-    // uploading a file will return null since we used HEADER_NX_VOIDOP
-    session.newRequest("Blob.Attach").setHeader(
-            Constants.HEADER_NX_VOIDOP, "true").setInput(fb)
-            .set("document", "/myfile").execute();
+            File file = getTheFileToUpload();
+            FileBlob fb = new FileBlob(file);
+            fb.setMimeType("text/xml");
+            // uploading a file will return null since we used HEADER_NX_VOIDOP
+            session.newRequest("Blob.Attach").setHeader(
+                    Constants.HEADER_NX_VOIDOP, "true").setInput(fb)
+                    .set("document", "/myfile").execute();
+
     ```
+
     The last `execute` call will return `null` since the `HEADER_NX_VOIDOP` header was used. This is to avoid receiving back from the server the blob we just uploaded.
+
     {{#> callout type='info' }}
+
     Note that to upload a file we need to use a `Blob` object that wrap the file to upload.
+
     {{/callout}}
 3.  Now get the the file document where the blob was uploaded.
-
 4.  Then retrieve the blob remote URL from the document metadata. We can use this URL to download the blob.
 
-    ```
-    import org.nuxeo.ecm.automation.client.model.Document;
-    import org.nuxeo.ecm.automation.client.Session;
-    import org.nuxeo.ecm.automation.client.Constants;
+    ```java
+            import org.nuxeo.ecm.automation.client.model.Document;
+            import org.nuxeo.ecm.automation.client.Session;
+            import org.nuxeo.ecm.automation.client.Constants;
 
-    // get the file document where blob was attached
-    Document doc = (Document) session.newRequest(
-            "Document.Fetch").setHeader(
-            Constants.HEADER_NX_SCHEMAS, "*").set("value", "/myfile").execute();
-    // get the file content property
-    PropertyMap map = doc.getProperties().getMap("file:content");
-    // get the data URL
-    String path = map.getString("data");
+            // get the file document where blob was attached
+            Document doc = (Document) session.newRequest(
+                    "Document.Fetch").setHeader(
+                    Constants.HEADER_NX_SCHEMAS, "*").set("value", "/myfile").execute();
+            // get the file content property
+            PropertyMap map = doc.getProperties().getMap("file:content");
+            // get the data URL
+            String path = map.getString("data");
+
     ```
+
     You can see we used the special `HEADER_NX_SCHEMAS` header to specify we want all properties of the document to be included in the response.
-    
+
 5.  Now download the file located on the server under the `path` we retrieved from the document properties:
 
     ```
-    // download the file from its remote location
-    blob = (FileBlob) session.getFile(path);
-    // ... do something with the file
-    // at the end delete the temporary file
-    blob.getFile().delete();
+            // download the file from its remote location
+            blob = (FileBlob) session.getFile(path);
+            // ... do something with the file
+            // at the end delete the temporary file
+            blob.getFile().delete();
+
     ```
 
     We can do the same by invoking the `Blob.Get` operation.
 
     ```
-    // now test the GetBlob operation on the same blob
-    blob = (FileBlob) session.newRequest("Blob.Get").setInput(doc).set(
-            "xpath", "file:content").execute();
-    // ... do something with the file
-    // at the end delete the temporary file
-    blob.getFile().delete();
+            // now test the GetBlob operation on the same blob
+            blob = (FileBlob) session.newRequest("Blob.Get").setInput(doc).set(
+                    "xpath", "file:content").execute();
+            // ... do something with the file
+            // at the end delete the temporary file
+            blob.getFile().delete();
+
     ```
 
 ## Managing Complex Properties
@@ -790,13 +807,13 @@ Complex properties can have different levels complexity. This part of the docume
 
 Let's see a complex property schema example:
 
-```
+```xml
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:mc="http://nuxeo.org/schemas/dataset/"
            elementFormDefault="qualified"
            targetNamespace="http://nuxeo.org/schemas/dataset/">
-...
+... 
     <xs:complexType name="field">
         <xs:sequence>
             <xs:element name="name" type="xs:string"/>
@@ -821,6 +838,8 @@ Let's see a complex property schema example:
 ```
 
 Let's see a JSON example of these complex property values:
+
+{{#> panel type='code' heading='creation.json'}}
 
 ```
 [
@@ -883,6 +902,8 @@ Let's see a JSON example of these complex property values:
 
 ```
 
+{{/panel}}
+
 Finally updating a document with the JSON values into its related metadata looks like this.
 
 ```
@@ -908,7 +929,7 @@ session.newRequest(UpdateDocument.ID).setInput(document).set("properties",docume
 
 ## Managing Business Objects
 
-Since 5.7.2, managing business objects (Plain Old Java Object client side for mapping the [Nuxeo Document Model Adapter](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters) ([Documentation]({{page page='repository-concepts'}})) server side) is now available.
+Since 5.7.2, managing business objects (Plain Old Java Object client side for mapping the [Nuxeo Document Model Adapter](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters) ([Documentation]({{page page='repository-concepts#documentmodel-adapter'}})) server side) is now available.
 
 Why manage business object? To manipulate business object to avoid _Nuxeo Document_ manipulation on client side:
 
@@ -982,9 +1003,11 @@ Let's see an example.
             }
         }
     }
+
     ```
 
 2.  Declare a POJO on client side as following:
+
     ```
     import org.nuxeo.ecm.automation.client.annotations.EntityType;
 
@@ -1034,8 +1057,11 @@ Let's see an example.
      }
 
     ```
+
     {{#> callout type='note' }}
+
     We assume that the POJO client side stub is similar to the document model adapter stub server side.
+
     {{/callout}}
 
     So now we have on client side a POJO `BusinessBean` and on server side a Document Model Adapter `BusinessBeanAdapter`.
@@ -1043,11 +1069,11 @@ Let's see an example.
     We are going to use&nbsp;two operations for creating/updating process:
 
     *   [`Business.BusinessCreateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Business.BusinessCreateOperation)
-    *   [`Business.BusinessUpdateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Business.BusinessUpdateOperation)
+    *   [`Business.BusinessUpdateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Business.BusinessUpdateOperation){{#> callout type='info' }}
 
-    {{#> callout type='info' }}Since 5.7.2, you can see [the Automation Client Service Adapter section]({{page}}) to know how Business operations are wrapped into `BusinessService` adapter and how to use it.
+    Since 5.7.2, you can see [the Automation Client Service Adapter section](#automation-client-service-adapter) to know how Business operations are wrapped into `BusinessService` adapter and how to use it.
+
     {{/callout}}
-
 3.  Let's see how to map them directly using these operations:
 
     ```
@@ -1122,7 +1148,7 @@ myDocument = documentService.getDocument(folder, "*");
 
 ##### BusinessService Usage (since 5.7.2)
 
-Here is an example of using `BusinessService` API (this example is the same previous one with [Business Objects]({{page}}) but this time using `BusinessService`):
+Here is an example of using `BusinessService` API (this example is the same previous one with [Business Objects](#managing-business-objects) but this time using `BusinessService`):
 
 ```
 import org.nuxeo.ecm.automation.client.adapters.BusinessService;
@@ -1189,6 +1215,8 @@ AutomationClient client = factory.getClient(new URL("http://localhost:8080/nuxeo
 client = factory.getClient(new URL("http://localhost:8080/nuxeo/site/automation"), 3600);
 ```
 
+{{#> panel type='code' heading='MANIFEST.MF information declared into the Automation Client bundle'}}
+
 ```
 Bundle-SymbolicName: org.nuxeo.ecm.automation.client
 
@@ -1215,3 +1243,5 @@ Import-Package: javax.activation,javax.mail;version="1.4",javax.mail.i
  tion.client.adapters;version="0.0",org.nuxeo.ecm.automation.client.mo
  del;version="0.0",org.osgi.framework;version="1.5"
 ```
+
+{{/panel}}

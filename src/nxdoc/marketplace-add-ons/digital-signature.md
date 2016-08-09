@@ -188,7 +188,7 @@ This plug-in root certificate helps establishing a simple method of user certifi
 
 As the keystore configured in the installable package is a sample keystore containing a test configuration, it is required that it be replaced with the client keystore containing the keypair and the certificate to be used for signing user certificates. As of now the certificate+keypair need to be stored in a .jks formatted keystore and configured via the extension mechanism.
 
-The [user certificate generation step]({{page space='userdoc' page='digital-signature'}}) requires a Certificate Authority certificate (CA) to be set up inside the Nuxeo Platform system as all user certificates have to be signed by a CA with a recognizable identity &mdash; a company rather than a single user. The term local CA can be understood here as "company Certificate Authority" or "system-wide Certificate Authority". Note that there is only one CA certificate per system but each user can have his own certificate.
+The [user certificate generation step]({{page space='userdoc' page='digital-signature#generating-certificate'}}) requires a Certificate Authority certificate (CA) to be set up inside the Nuxeo Platform system as all user certificates have to be signed by a CA with a recognizable identity &mdash; a company rather than a single user. The term local CA can be understood here as "company Certificate Authority" or "system-wide Certificate Authority". Note that there is only one CA certificate per system but each user can have his own certificate.
 
 ##### Setting up a CA certificate from a 3rd party authority
 
@@ -356,9 +356,9 @@ Another extension provides general company information used in all certificates,
 
 When the Digital Signature add-on is installed on your Nuxeo Platform, you get some new tabs in your Nuxeo interface:
 
-*   Users have a new **Certificates** tab in their **Home**, from which they can [generate their certificate]({{page}}) to be able to sign documents.
+*   Users have a new **Certificates** tab in their **Home**, from which they can [generate their certificate](#generating-certificate) to be able to sign documents.
     ![]({{file name='signature-home-certificate-tab.png'}} ?w=650,border=true)
-*   Files documents have a new **Signature** tab, from which they can either see the signatures or [sign the document]({{page}}) if they have the right to.
+*   Files documents have a new **Signature** tab, from which they can either see the signatures or [sign the document](#signing-document) if they have the right to.
     ![]({{file name='signature-tab.png'}} ?w=650,border=true)
 
 ### Top-Level View
@@ -372,7 +372,7 @@ From a high-level functional point of view, here is what users need to be able t
 
 ### Generating a Certificate
 
-To be able to [sign documents]({{page}}), users need to have a certificate. Every user of the application can have a certificate. However, this not automatic: users have to generate it. When users generate their certificate, they are asked to choose a password, that will be required to sign the document.
+To be able to [sign documents](#signing-document), users need to have a certificate. Every user of the application can have a certificate. However, this not automatic: users have to generate it. When users generate their certificate, they are asked to choose a password, that will be required to sign the document.
 
 {{#> callout type='note' }}
 
@@ -414,7 +414,7 @@ Only users with "Edit" permission can sign documents.
 
     {{#> callout type='tip' }}
 
-    If you haven't [generated your certificate]({{page}}) yet, you are displayed a link to the certificate management instead of the signing form.
+    If you haven't [generated your certificate](#generating-certificate) yet, you are displayed a link to the certificate management instead of the signing form.
 
     {{/callout}}
 
@@ -448,7 +448,7 @@ The layout is defined by:
 
 By default the configuration sets lines number to 5, columns number to 3, starting cell to 1 and text size to 10px.
 
-```
+```xml
 <extension
           target="org.nuxeo.ecm.platform.signature.api.sign.SignatureService"
           point="signature">
@@ -464,7 +464,7 @@ It means signatures display begins in the first cell, at the top left of the PDF
 
 Here is an example of how to override this default configuration:
 
-```
+```xml
 <require>org.nuxeo.signature.config.default</require>
 <extension
           target="org.nuxeo.ecm.platform.signature.api.sign.SignatureService"

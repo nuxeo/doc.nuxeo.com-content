@@ -157,7 +157,7 @@ A document tree will be exported as directory tree. Here is an example of an exp
 
 Here is an XML that corresponds to a document containing a blob. The blob is exported as a separate file:
 
-```
+```html/xml
 <document repository="default" id="633cf240-0c03-4326-8b3b-0960cf1a4d80">
   <system>
     <type>File</type>
@@ -222,7 +222,7 @@ For each schema defined by the document type, there is a schema entry which cont
 
 Here is how the same blob will be serialized when inlining blobs (an option of the repository reader):
 
-```
+```html/xml
 <schema xmlns="http://www.nuxeo.org/ecm/schemas/file/" name="file">
     <content>
       <encoding></encoding>
@@ -245,7 +245,7 @@ Of course this is less optimized than writing the raw blob data in external file
 
 By default when exporting documents from the repository, blobs are not inlined. To activate the inlining option you must set call the method on the `DocumentModelReader` you are using to fetch data from the repository:
 
-```
+```java
 reader.setInlineBlobs(boolean inlineBlobs); 
 ```
 
@@ -273,13 +273,13 @@ In both cases (imports and exports) a document pipe is dealing with the same typ
 
 So the document pipe will use a reader to fetch data that will be passed through registered transformers and then written down using a document writer.
 
-See the [undefined]({{page}}) for examples on how to use a Document Pipe.
+See the [undefined](#api-examples) for examples on how to use a Document Pipe.
 
 ![]({{file name='pipe.jpg'}} ?w=450,border=true)
 
 ## Document Reader
 
-A document reader is responsible for reading some input data and converting it into a DOM representation. The DOM representation is using the format explained in [Document XML section]({{page}}). Currently dom4j documents are used as the DOM objects.
+A document reader is responsible for reading some input data and converting it into a DOM representation. The DOM representation is using the format explained in [Document XML section](#documentxml-format). Currently dom4j documents are used as the DOM objects.
 
 For example a reader may extract documents from the repository and output it as XML DOM objects. Or it may be used to read files from a file system and convert them into DOM objects to be able to import them in a Nuxeo repository.
 
@@ -292,7 +292,7 @@ To change the way documents are extracted and transformed to a DOM representatio
     *   `DocumentTreeReader` - this one reads the entire subtree rooted in the given document and export each node in the tree as a dom4j document;
     *   `DocumentListReader` - this one is taking a list of document models&nbsp;as input and export them as dom4j documents. This is useful when wanting to export a search result for example.
 *   External readers used to read data as DOM objects from external sources like file systems or databases. The following readers are provided:
-    *   `XMLDirectoryReader` - reads a directory tree in the format supported by Nuxeo (as described in [undefined]({{page}}) section). This can be used to import deflated Nuxeo archives or hand-created document directories;
+    *   `XMLDirectoryReader` - reads a directory tree in the format supported by Nuxeo (as described in [undefined](#export-format) section). This can be used to import deflated Nuxeo archives or hand-created document directories;
     *   `NuxeoArchiveReader` - reads Nuxeo Platform exported archives to import them in a repository. Note that only zip archives created by the Nuxeo exporter are supported;
     *   `ZipReader` - reads a zip archive and output DOM objects. This reader can read both Nuxeo zip archives and regular zip archives (hand-made).
         Reading a Nuxeo archive is more optimized, because Nuxeo zip archives entries are added to the archive in a predefined order that makes it possible to read the entire archive tree on the fly without unziping the content of the archive on the filesystem first.
@@ -315,7 +315,7 @@ The following `DocumentWriters` are provided by Nuxeo:
     *   `XMLDocumentWriter` - writes a document as a XML file with inlined blobs;
     *   `XMLDocumentTreeWriter` - writes a list of documents inside a unique XML file with inlined blobs. The document tags will be included in a `root` tag:
 
-        ```
+        ```html/xml
         <documents> .. </documents>
         ```
 
@@ -339,7 +339,7 @@ Performing exports and imports can be done by following these steps:
 
 1.  Instantiate a new document pipe:
 
-    ```
+    ```java
     // create a pipe that will process 10 documents on each iteration
     DocumentPipe pipe = new DocumentPipeImpl(10);
     ```
@@ -348,7 +348,7 @@ Performing exports and imports can be done by following these steps:
 
 2.  Create a new document reader that will be used to fetch data and put it into the pipe. Depending on the data you want to import you can choose between an&nbsp;existing document reader implementation or you may write your own if needed:
 
-    ```
+    ```java
     reader = new DocumentTreeReader(docMgr, src, true);
     pipe.setReader(reader);
     ```
@@ -359,7 +359,7 @@ Performing exports and imports can be done by following these steps:
 
 3.  Create a document writer that will be used to write down the output&nbsp;of the pipe.
 
-    ```
+    ```java
     writer = new XMLDirectoryWriter(new File("/tmp/export"));
     pipe.setWriter(writer);
     ```
@@ -368,20 +368,20 @@ Performing exports and imports can be done by following these steps:
 
 4.  Optionally you may add one or more document transformers to transform documents that enter the pipe.
 
-    ```
+    ```java
     MyTransformer transformer = new MyTransformer();
     pipe.addTransformer(transformer);
     ```
 
 5.  And now run the pipe.
 
-    ```
+    ```java
     pipe.run();
     ```
 
 ### Exporting Data from a Nuxeo Repository to a ZIP Archive
 
-```
+```java
 File zip = File.createTempFile("MyFile", ".zip");
 DocumentReader reader = null;
 DocumentWriter writer = null;
@@ -406,7 +406,7 @@ try {
 
 ### Importing Data from a ZIP Archive to a Nuxeo Repository
 
-```
+```java
 DocumentReader reader = null;
 DocumentWriter writer = null;
 try {
@@ -431,7 +431,7 @@ try {
 
 ### Exporting a Single Document as an XML with Inlined Blobs
 
-```
+```java
 DocumentReader reader = null;
 DocumentWriter writer = null;
 try { 

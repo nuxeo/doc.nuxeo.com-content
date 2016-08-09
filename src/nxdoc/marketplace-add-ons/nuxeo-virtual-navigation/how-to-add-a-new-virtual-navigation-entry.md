@@ -198,9 +198,9 @@ With Nuxeo Studio, you can configure as many virtual navigation views as you nee
 
 Just follow these steps:
 
-1.  [Make sure you have all the required elements]({{page}})
-2.  [Configure the link and the query]({{page}})
-3.  [Configure the result layout]({{page}})
+1.  [Make sure you have all the required elements](#required-element)
+2.  [Configure the link and the query](#configure-virtual-navigation)
+3.  [Configure the result layout](#configure-virtual-navigation-result-layout)
 
 ## Make Sure You Have All the Required Elements&nbsp;
 
@@ -292,9 +292,9 @@ This property should always be clicked when you contribute a new virtual navigat
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-tos'}}
 
-*   [undefined]({{page}})
+*   [undefined]()
 *   [Configure a Domain Specific Advanced Search]({{page space='nxdoc58' page='configure-a-domain-specific-advanced-search'}})
-*   [undefined]({{page}})
+*   [undefined]()
 *   [How to Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
 *   [How-To Index]({{page page='how-to-index'}})
 

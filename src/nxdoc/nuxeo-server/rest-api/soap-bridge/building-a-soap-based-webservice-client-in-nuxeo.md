@@ -201,4 +201,4 @@ You can learn [here]({{page page='building-a-soap-based-webservice-in-the-nuxeo-
 
 ## Advanced Client Configuration Using a Configuration XML File
 
-If you are looking how to create some advanced client configuration, since Apache CXF, you'll need some dependencies. The configuration behavior is the same as the server part, and described in the [advanced configuration section]({{page page='building-a-soap-based-webservice-in-the-nuxeo-platform'}}) of the [Building a SOAP-Based WebService in the Nuxeo Platform]({{page page='building-a-soap-based-webservice-in-the-nuxeo-platform'}}).
+If you are looking how to create some advanced client configuration, since Apache CXF, you'll need some dependencies. The configuration behavior is the same as the server part, and described in the [advanced configuration section]({{page page='building-a-soap-based-webservice-in-the-nuxeo-platform#advanced-configuration'}}) of the [Building a SOAP-Based WebService in the Nuxeo Platform]({{page page='building-a-soap-based-webservice-in-the-nuxeo-platform'}}).

@@ -85,7 +85,7 @@ The Automation service provides chain(s)/operation(s) parameters setting and [Op
 
 Chain Contribution:
 
-```
+```xml
 <extension point="chains"
              target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
 <chain id="contributedchain">
@@ -102,7 +102,7 @@ Chain Contribution:
 
 Automation Service API - with chain parameter setting:
 
-```
+```java
 org.nuxeo.ecm.core.api.DocumentModel doc;
 org.nuxeo.ecm.automation.AutomationService service;
 org.nuxeo.ecm.core.api.CoreSession session;
@@ -121,7 +121,7 @@ service.run(ctx, "contributedchain", params);
 
 Automation Service API - with chain/operations parameters setting:
 
-```
+```java
 org.nuxeo.ecm.core.api.DocumentModel doc;
 org.nuxeo.ecm.automation.AutomationService service;
 org.nuxeo.ecm.core.api.CoreSession session;
@@ -146,7 +146,7 @@ service.run(ctx, chain);
 
 Operation Contribution:
 
-```
+```xml
   <extension point="operations"
              target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
     <operation class="org.nuxeo.ecm.automation.core.test.Operation1" />
@@ -155,7 +155,7 @@ Operation Contribution:
 
 Java Class Operation:
 
-```
+```java
 @Operation(id = "o1")
 public class Operation1 {
 
@@ -172,7 +172,7 @@ public class Operation1 {
 
 Automation Service API - with operations parameters setting:
 
-```
+```java
 org.nuxeo.ecm.core.api.DocumentModel doc;
 org.nuxeo.ecm.automation.AutomationService service;
 org.nuxeo.ecm.core.api.CoreSession session;

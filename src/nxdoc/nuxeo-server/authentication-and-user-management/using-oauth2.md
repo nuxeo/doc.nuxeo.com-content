@@ -140,7 +140,7 @@ string
 
 </td></tr></tbody></table>{{#> callout type='note' }}
 
-User authentication is handled by accessing to `https://<nuxeoserver>/nuxeo/oauth2Grant.jsp` which is behind the default [`NuxeoAuthenticationFilter`]({{page page='authentication-and-user-management'}}). That lets you customize the way you want your users to identify themselves.
+User authentication is handled by accessing to `https://<nuxeoserver>/nuxeo/oauth2Grant.jsp` which is behind the default [`NuxeoAuthenticationFilter`]({{page page='authentication-and-user-management#pluggable-web-authentication-filter'}}). That lets you customize the way you want your users to identify themselves.
 
 {{/callout}}
 

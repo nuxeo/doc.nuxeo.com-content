@@ -160,7 +160,7 @@ The name of the Scheduler service component has changed from `org.nuxeo.ecm.plat
 
 The descriptor format has not changed so migrating should be as easy as changing extension point usages :
 
-```
+```html/xml
 <?xml version="1.0"?>
 <component name="com.example.nuxeo.schedule.monthly_stuff">
   <extension target="org.nuxeo.ecm.core.scheduler.SchedulerService"

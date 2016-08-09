@@ -188,7 +188,7 @@ This documentation page talks about the many aspects you can tune for improving 
 
 Here are some examples of common changes of the Elasticsearch mapping.
 
-All examples below should be done in a [custom template that redefines the Elasticsearch mapping]({{page page='elasticsearch-setup'}}). This way the mapping reference stay on the Nuxeo configuration side. If you update the mapping directly on the Elasticsearch side your changes will be lost when Nuxeo is performing a full repository reindexing.
+All examples below should be done in a [custom template that redefines the Elasticsearch mapping]({{page page='elasticsearch-setup#changingelasticsearchmapping'}}). This way the mapping reference stay on the Nuxeo configuration side. If you update the mapping directly on the Elasticsearch side your changes will be lost when Nuxeo is performing a full repository reindexing.
 
 ## Customizing the Language
 
@@ -383,7 +383,7 @@ To implement this use case:
 
 *   In the `analyzer` configuration, add an analyzer that will be used to index the main attachment's content:
 
-```
+```js
 "my_attachment_analyzer" : {
   "type" : "custom",
     "filter" : [
@@ -399,7 +399,7 @@ To implement this use case:
 
 *   In the `properties` configuration, update the `ecm:binarytext` field mapping configuration to the following:
 
-```
+```js
 "ecm:binarytext" : {
   "type" : "multi_field",
   "fields" : {

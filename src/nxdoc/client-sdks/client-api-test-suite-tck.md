@@ -214,6 +214,8 @@ Link JS
 
 ##### HTTP Captures
 
+{{#> panel type='code' heading='HTTP Signature - Document.Create'}}
+
 ```
 POST /nuxeo/site/automation/Document.Create HTTP/1.1
 Host: 127.0.0.1:8080
@@ -388,7 +390,9 @@ Content-Type: application/json+nxentity
 }
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='HTTP Signature - Document.Update'}}
+
+```html/xml
 POST /nuxeo/site/automation/Document.Update HTTP/1.1
 Host: 127.0.0.1:8080
 Content-Length: 133
@@ -452,6 +456,8 @@ Content-Type: application/json+nxentity
 
 ```
 
+{{/panel}}{{#> panel type='code' heading='HTTP Signature - Document.Fetch'}}
+
 ```
 POST /nuxeo/site/automation/Document.Fetch HTTP/1.1
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
@@ -487,6 +493,8 @@ Date: Thu, 25 Jul 2013 14:20:03 GMT
 }
 
 ```
+
+{{/panel}}{{#> panel type='code' heading='HTTP Signature - Document.GetChildren'}}
 
 ```
 POST /nuxeo/site/automation/Document.GetChildren HTTP/1.1
@@ -561,6 +569,8 @@ Date: Thu, 25 Jul 2013 14:20:03 GMT
 }
 ```
 
+{{/panel}}
+
 #### Pagination
 
 ##### Scenario
@@ -591,6 +601,8 @@ Date: Thu, 25 Jul 2013 14:20:03 GMT
 [GitHub Link for Pagination operations tests suite](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/RemoteAutomationClientTCK.java#L129-L175)
 
 ##### HTTP Capture
+
+{{#> panel type='code' heading='HTTP Signature - Document.PageProvider'}}
 
 ```
  POST /nuxeo/site/automation/Document.PageProvider HTTP/1.1
@@ -675,6 +687,8 @@ Date: Thu, 25 Jul 2013 15:24:47 GMT
 }
 ```
 
+{{/panel}}
+
 ### Blobs
 
 #### Direct Blob Upload
@@ -693,6 +707,8 @@ Date: Thu, 25 Jul 2013 15:24:47 GMT
 [GitHub link for Blob operations tests suite](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/RemoteAutomationClientTCK.java#L177-L247)
 
 ##### HTTP Capture
+
+{{#> panel type='code' heading='HTTP Signature - FileManager.Import'}}
 
 ```
 POST /nuxeo/site/automation/FileManager.Import HTTP/1.1
@@ -749,6 +765,8 @@ Date: Thu, 25 Jul 2013 15:35:16 GMT
   "contextParameters": {}
 }
 ```
+
+{{/panel}}{{#> panel type='code' heading='HTTP Signature - Blob.Attach'}}
 
 ```
 POST /nuxeo/site/automation/Blob.Attach HTTP/1.1
@@ -840,6 +858,8 @@ Server: Apache-Coyote/1.1
 Date: Thu, 25 Jul 2013 15:35:16 GMT
 ```
 
+{{/panel}}
+
 #### Blobs Upload via Batch Manager
 
 ##### Scenario
@@ -917,6 +937,8 @@ XXX Commented Http capture
 
 ##### HTTP Capture
 
+{{#> panel type='code' heading='HTTP Signature - Complex Properties - Document.Create'}}
+
 ```
 POST /nuxeo/site/automation/Document.Create HTTP/1.1
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
@@ -965,6 +987,8 @@ Date: Thu, 25 Jul 2013 15:45:25 GMT
 }
 ```
 
+{{/panel}}{{#> panel type='code' heading='HTTP Signature - Complex Properties - Document.Update'}}
+
 ```
 POST /nuxeo/site/automation/Document.Update HTTP/1.1
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
@@ -1010,6 +1034,8 @@ Date: Thu, 25 Jul 2013 15:45:25 GMT
   "contextParameters": {}
 }
 ```
+
+{{/panel}}
 
 #### Custom Marshaling
 
@@ -1072,6 +1098,8 @@ XXX Commented HTTP capture
 
 ##### HTTP Capture
 
+{{#> panel type='code' heading='HTTP Signature - Business.BusinessCreateOperation'}}
+
 ```
  POST /nuxeo/site/automation/Business.BusinessCreateOperation HTTP/1.1
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
@@ -1117,6 +1145,8 @@ Date: Thu, 25 Jul 2013 15:45:45 GMT
 }
 ```
 
+{{/panel}}{{#> panel type='code' heading='HTTP Signature - Business.BusinessUpdateOperation'}}
+
 ```
  POST /nuxeo/site/automation/Business.BusinessUpdateOperation HTTP/1.1
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
@@ -1158,6 +1188,8 @@ Date: Thu, 25 Jul 2013 15:45:45 GMT
   }
 }
 ```
+
+{{/panel}}
 
 ## Client Compatibility Matrix
 

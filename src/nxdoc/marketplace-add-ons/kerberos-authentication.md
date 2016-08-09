@@ -191,7 +191,7 @@ Before you install and configure Kerberos on your Nuxeo Platform, you need to se
 
 ### Using the Nuxeo Package
 
-See the package's [Nuxeo Kerberos addon]({{page}}) page.
+See the package's [Nuxeo Kerberos addon]() page.
 
 ### Manually
 
@@ -253,7 +253,7 @@ The login configuration MUST be called Nuxeo with an uppercase N.
 
 2.  Create a `$NUXEO_HOME/nxserver/config/kerberos-config.xml` with the following content:
 
-    ```
+    ```html/xml
     <?xml version="1.0"?>
      <component name="Kerberos-config">
       <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>

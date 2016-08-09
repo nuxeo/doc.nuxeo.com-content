@@ -57,7 +57,7 @@ There are 2 ways to configure these:
 
 {{#> callout type='note' }}
 
-If you set a custom trust store with your authorities exclusively, **Marketplace, Studio and hot fix distribution integration will not work anymore** since these servers expose certificates available in the default trust store. So I suggest that you [add your certificates to the default one]({{page}}).
+If you set a custom trust store with your authorities exclusively, **Marketplace, Studio and hot fix distribution integration will not work anymore** since these servers expose certificates available in the default trust store. So I suggest that you [add your certificates to the default one](#addingcertificatestodefaulttruststore).
 
 {{/callout}}
 
@@ -131,12 +131,17 @@ So if you want to set them at start time, you can add the following parameter ei
 
 *   into your `JAVA_OPTS`:
 
+    {{#> panel type='code' heading='$NUXEO_HOME/bin/nuxeo.conf'}}
+
     ```
     -Djavax.net.ssl.trustStore=/the/path/to/your/trust/store.jks -Djavax.net.ssl.keyStoreType=jks ... etc ...
 
     ```
 
+    {{/panel}}
 *   or into your Java code:
+
+    {{#> panel type='code' heading='MyClass.java'}}
 
     ```
             System.setProperty(
@@ -149,6 +154,8 @@ So if you want to set them at start time, you can add the following parameter ei
             ...etc...
 
     ```
+
+    {{/panel}}
 
 ## Dynamic Trust Store
 
@@ -175,7 +182,7 @@ So to add your certificates to the default trust store:
     <pre>keytool -import -file /path/to/your/certificate.pem -alias NameYouWantToGiveOfYourCertificate -keystore /path/to/the/copy/of/the/default/truststore.jks -storepass changeit
     </pre>
 
-3.  Set the trust store copy as your either [statically]({{page}}) or [dynamically]({{page}}).
+3.  Set the trust store copy as your either [statically](#statictruststore) or [dynamically](#dynamictruststore).
 4.  Restart your Nuxeo instance.
 
 ## Troubles

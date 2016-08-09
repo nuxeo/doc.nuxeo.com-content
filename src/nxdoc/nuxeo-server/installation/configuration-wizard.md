@@ -41,7 +41,7 @@ The Nuxeo Platform provides you with easy access to the configuration of your Nu
 
 The first time you start the Nuxeo Platform and go the URL [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo), a Startup Wizard will guide you to the main configuration steps and enable you to choose which add-ons you want to enable on the Platform. For each step, a default setting is proposed that enables you to test the application. You can change this default configuration to adapt it to specific environments.
 
-The settings defined during the initial setup can be changed afterward [using the Admin tab]({{page}}) or by [editing Nuxeo's configuration file]({{page page='configuration-parameters-index-nuxeoconf'}}) manually. Addons can also be added or removed afterwards from the Admin tab.
+The settings defined during the initial setup can be changed afterward [using the Admin tab](#setup-admincenter) or by [editing Nuxeo's configuration file]({{page page='configuration-parameters-index-nuxeoconf'}}) manually. Addons can also be added or removed afterwards from the Admin tab.
 
 {{#> callout type='tip' }}
 
@@ -82,7 +82,7 @@ By default users and groups are stored in the embedded database. You can however
 
 ### Mail Settings
 
-Nuxeo applications include email alert features. By default, no SMTP configuration is enabled and therefore no email alerts will be sent to users. You can refer to the [email alerts section]({{page page='setup-best-practices'}}) for more information about the SMTP configuration.
+Nuxeo applications include email alert features. By default, no SMTP configuration is enabled and therefore no email alerts will be sent to users. You can refer to the [email alerts section]({{page page='setup-best-practices#enable-email-alerts'}}) for more information about the SMTP configuration.
 
 ![]({{file name='Wizard_smtp_settings.png'}} ?w=550,border=true)
 

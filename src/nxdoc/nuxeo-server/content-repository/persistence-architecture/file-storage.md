@@ -187,7 +187,7 @@ A file is what is commonly handled on user's desktop or other file system. It is
 
 At the Core level, blobs are bound to documents via a property of type `BlobProperty`. So a document can store multiple files that are standalone blob properties, or list of blob properties. When configuring this property, it has to be of type&nbsp;
 
-```
+```xml
 <xs:element name="test" type="nxs:content"/>
 ```
 
@@ -219,7 +219,7 @@ A Nuxeo Platform instance can make use of several blobProviders on the same inst
 
 A typical low level Java call for creating a file is the following:
 
-```
+```java
 BlobManager blobManager = Framework.getService(BlobManager.class); Document doc = mockery.mock(Document.class); String key = blobManager.writeBlob(blob, doc);
 ```
 
@@ -249,7 +249,7 @@ The default implementation. Stores binaries using their MD5 (or other)&nbsp;hash
 
 </td><td colspan="1">
 
-[Configuration]({{page page='file-storage-configuration'}})
+[Configuration]({{page page='file-storage-configuration#configuringthedefaultblobprovider'}})
 
 </td></tr><tr><td colspan="1">
 
@@ -285,7 +285,7 @@ Reads content stored on an external file system.
 
 </td><td colspan="1">
 
-[Configuration]({{page}})
+[Configuration](#externalfilesystem)
 
 </td></tr><tr><td colspan="1">
 
@@ -305,7 +305,7 @@ Stores binaries as SQL BLOB objects in a SQL database.
 
 To register a new blobProvider, use the&nbsp; [`blobprovider`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.blob.BlobManager--configuration)&nbsp;extension point with the Java class for your blobProvider:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
   <blobprovider name="default">
     <class>org.nuxeo.ecm.core.blob.binary.DefaultBinaryManager</class>
@@ -493,7 +493,9 @@ Advanced dispatching configuration are possible using properties. Each property 
 
 For example, all the videos could be stored somewhere, the documents from a secret source in an encrypted area, and the rest in a third location. To do this, you would need to specify the following:
 
-```
+{{#> panel type='code' heading='Example Blob Dispatcher Configuration'}}
+
+```xml
 <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
   <blobdispatcher>
     <class>org.nuxeo.ecm.core.blob.DefaultBlobDispatcher</class>
@@ -505,9 +507,13 @@ For example, all the videos could be stored somewhere, the documents from a secr
 </extension>
 ```
 
+{{/panel}}
+
 This assumes that you have three blob providers configured, the default one and two additional ones,&nbsp;`videos`&nbsp;and&nbsp;`encrypted`. For example you could have:
 
-```
+{{#> panel type='code' heading='Defining Additional Binary Managers'}}
+
+```xml
 <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
   <blobprovider name="videos">
     <class>org.nuxeo.ecm.core.blob.binary.DefaultBinaryManager</class>
@@ -519,6 +525,8 @@ This assumes that you have three blob providers configured, the default one and 
   </blobprovider>
 </extension>
 ```
+
+{{/panel}}
 
 The default `DefaultBlobDispatcher` class can be replaced by your own implementation.
 
@@ -568,7 +576,7 @@ We provide a blob provider for being able to reference files that would be store
 
 The root path is a property of the contribution:
 
-```
+```xml
   <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
     <blobprovider name="fs">
       <class>org.nuxeo.ecm.core.blob.FilesystemBlobProvider</class>
@@ -581,7 +589,7 @@ The root path is a property of the contribution:
 
 The `preventUserUpdate` property will be used by the UI framework for not proposing to the user the ability to update. Such a blob provider can be used when creating a document with the following code:
 
-```
+```java
 BlobInfo blobInfo = new BlobInfo();
 blobInfo.key = "/opt/nuxeo/nxserver/blobs/foo/bar.pdf";
 blobInfo.mimeType = "application/pdf";

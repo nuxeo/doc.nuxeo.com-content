@@ -416,6 +416,8 @@ The Simple cache filter is deprecated, we recommend using the [`filterConfig` ex
 
 This extension point lets you contribute customized filter for a given pattern URL.
 
+{{#> panel type='code' heading='Example of a filterConfig Registration'}}
+
 ```
  <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService"
   point="filterConfig">
@@ -427,6 +429,8 @@ This extension point lets you contribute customized filter for a given pattern U
  </extension>
 
 ```
+
+{{/panel}}
 
 This contribution will ensure that every pattern matching URL will go through NuxeoRequestControllerFilter. The header of the corresponding request will be modified according to the extension point configuration. Here is a list of the possible options:
 
@@ -472,13 +476,15 @@ If you need to configure your Nuxeo Tomcat in HTTPS, the platform provides an&nb
 
 Add `https` to the `nuxeo.templates` property then edit the related properties.
 
-```
+{{#> panel type='code' heading='Sample configuration of properties related to the "https" template'}}
+
+```text
 nuxeo.server.https.port=8443
 nuxeo.server.https.keystoreFile=/path/to/keystore
 nuxeo.server.https.keystorePass=password
 ```
 
-{{#> callout type='info' heading='To create your keystore using Java'}}
+{{/panel}}{{#> callout type='info' heading='To create your keystore using Java'}}
 
 keytool -genkey -alias tomcat -keyalg RSA
 

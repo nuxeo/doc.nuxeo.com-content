@@ -106,7 +106,7 @@ We always recommend that you use the latest stable version.
 
 Since Nuxeo 8.1, Nuxeo needs access to the `mysql.proc` table to be able to determine if stored procedures need to be upgraded. You can grant this access using:
 
-```
+```sql
 GRANT SELECT ON `mysql`.`proc` TO 'nuxeo'@'%' 
 ```
 

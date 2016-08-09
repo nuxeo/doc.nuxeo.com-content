@@ -118,7 +118,7 @@ If you'd like to override a default style, here's an how-to, taking as example t
 
 For instance, here's the default styling for the class&nbsp;`facesStatusMessage` defined in `messages_and_tooltips.scss`:
 
-```
+```css
 .facesStatusMessage {
   position: fixed;
   right: 1em;
@@ -128,7 +128,7 @@ For instance, here's the default styling for the class&nbsp;`facesStatusMessage`
 
 Here's another example, showing a style using Sass variables:
 
-```
+```css
 .warningFeedback,
 .ambiance-warn {
   background-color: $warning-background;
@@ -172,7 +172,7 @@ Here's another example, showing a style using Sass variables:
 3.  Fill the theme contribution to declare your own CSS file.
     Here's an example:
 
-    ```
+    ```html/xml
     <?xml version="1.0"?>
 
     <component name="com.my.application.theme">
@@ -211,7 +211,7 @@ Here's another example, showing a style using Sass variables:
 
     An alternative way to proceed, when adding a CSS file to all pages, is to contribute the CSS file to the `nuxeo_includes` default resource bundle, already gathering common CSS and JS resources for all Nuxeo pages (and referenced on all default pages):
 
-    ```
+    ```html/xml
     <?xml version="1.0"?>
 
     <component name="com.my.application.theme">
@@ -245,7 +245,7 @@ Here's another example, showing a style using Sass variables:
 
     Here's an example contribution to put the feedback message at the center of the screen (instead of top right, as done by the original default style):
 
-    ```
+    ```css
     .facesStatusMessage {
       left: 40%;
       position: absolute;

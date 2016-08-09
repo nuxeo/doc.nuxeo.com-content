@@ -49,7 +49,7 @@ Below is an example, based on the results returned by the method `QueryAndFetch`
 
 *   Operation code&nbsp;
 
-    ```
+    ```java
     package org.nuxeo.support;
 
     import java.io.ByteArrayInputStream;
@@ -107,7 +107,7 @@ Below is an example, based on the results returned by the method `QueryAndFetch`
 
 *   Registering this operation
 
-    ```
+    ```html/xml
     <?xml version="1.0"?>
     <component name="org.nuxeo.support.operations">
 
@@ -121,7 +121,7 @@ Below is an example, based on the results returned by the method `QueryAndFetch`
 
 *   Sample code to use the result from the operation
 
-    ```
+    ```java
     HttpAutomationClient client = new HttpAutomationClient("http://localhost:8080/nuxeo/site/automation");
 
     Session session = client.getSession(ADMINISTRATOR, ADMINISTRATOR);

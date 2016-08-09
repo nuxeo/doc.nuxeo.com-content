@@ -81,7 +81,7 @@ It is possible to easily pinpoint slow NXQL. If you want trace all the queries t
 
     *   For VCS:
 
-        ```
+        ```xml
         <category name="org.nuxeo.ecm.core.storage.sql.SessionImpl" additivity="false">
             <priority value="INFO" />
             <appender-ref ref="SLOW" />
@@ -98,7 +98,7 @@ It is possible to easily pinpoint slow NXQL. If you want trace all the queries t
 
     *   For DBS (since Nuxeo Platform 8.3):
 
-        ```
+        ```xml
         <category name="org.nuxeo.ecm.core.storage.dbs.DBSSession" additivity="false">
             <priority value="INFO" />
             <appender-ref ref="SLOW" />
@@ -115,7 +115,7 @@ It is possible to easily pinpoint slow NXQL. If you want trace all the queries t
 
 To get the slowest queries:
 
-```
+```bash
 $ grep duration_ms log/slow-query.log | sed -e's/^[^\t]*\t//g' -e 's/{.*$//g' |sort -nr | head
 
 802.89  QueryFilter(principal=system, limit=0, offset=0)        query   SELECT * FROM Document WHERE ....

@@ -199,6 +199,8 @@ We reference here sample JSON objects expected by the Resources Endpoints, that 
 
 ### Result of a GET Request
 
+{{#> panel type='code' heading='GET Request'}}
+
 ```
 {
   "entity-type": "document",
@@ -254,6 +256,8 @@ We reference here sample JSON objects expected by the Resources Endpoints, that 
 }
 ```
 
+{{/panel}}
+
 A few useful information to understand the data exposed on the document:
 
 *   **properties** is an object of metadata values. Each property of this object is the XPath of the field ( [`dc:title`](http://dctitle) for example), and the value of the field. For multivalued fields, we have an array of values.&nbsp;Note that the content of this property may vary depending on which schemas you requested using the `X-NXDocumentProperties` header, as well as which properties [you configured on your document type]({{page space='nxdoc60' page='how-to-define-a-document-type'}}), using Nuxeo Studio.&nbsp;See the [repository documentation]({{page space='nxdoc60' page='repository-concepts'}}) for more information.
@@ -266,6 +270,8 @@ A few useful information to understand the data exposed on the document:
 {{! multiexcerpt name='restapi-doc-entity-post'}}
 
 When doing a POST request to create a document, you only need to specify a few elements : entity-type, document type and name. The properties object can be used to send more metadata. Here is a sample below:
+
+{{#> panel type='code' heading='POST Request Body'}}
 
 ```
 {
@@ -289,13 +295,15 @@ When doing a POST request to create a document, you only need to specify a few e
 }
 ```
 
-{{! /multiexcerpt}}
+{{/panel}}{{! /multiexcerpt}}
 
 ### Body for a PUT Request
 
 {{! multiexcerpt name='restapi-doc-entity-put'}}
 
 A PUT request is even simpler : you only need to send the entity type and the metadata you wish to update in the properties object.
+
+{{#> panel type='code' heading='PUT Request Body'}}
 
 ```
 {
@@ -307,7 +315,7 @@ A PUT request is even simpler : you only need to send the entity type and the me
 }
 ```
 
-{{! /multiexcerpt}}
+{{/panel}}{{! /multiexcerpt}}
 
 ## directoryEntry
 
@@ -367,7 +375,7 @@ The list of properties depends on the schema of the directory. See the [develope
 
 ## group
 
-```
+```js
 {
   "entity-type": "group",
   "groupname": "members",
@@ -433,11 +441,13 @@ The list of properties depends on the schema of the directory. See the [develope
 }
 ```
 
-*   **properties**: those are the properties defined for the user. [They can be customized]({{page page='authentication-and-user-management'}}).
+*   **properties**: those are the properties defined for the user. [They can be customized]({{page page='authentication-and-user-management#authenticationandusermanagement-addingnewfieldstotheuserprofileorgroupprofile'}}).
 
 *   **extendedGroups**: this section gathers the explicit groups and the computed groups (See an&nbsp;[exemple of using the computed groups]({{page page='how-to-implement-local-groups-or-roles-using-computed-groups'}})). This section is computed server-side and is not taken into account when posting a user object.&nbsp;
 
 ## acl
+
+{{#> panel type='code' heading='GET Request Response '}}
 
 ```
 {
@@ -475,9 +485,13 @@ The list of properties depends on the schema of the directory. See the [develope
 }
 ```
 
+{{/panel}}
+
 ## workflow
 
 ### Result of a GET Request
+
+{{#> panel type='code' heading='GET Request'}}
 
 ```
 {
@@ -506,9 +520,13 @@ The list of properties depends on the schema of the directory. See the [develope
     }
 ```
 
+{{/panel}}
+
 ### Body for a POST Request
 
 When doing a POST request to start a workflow, you only need to specify a few elements: entity-type, workflowModelName and attachedDocumentIds. Variables are not necessary to just start the workflow.
+
+{{#> panel type='code' heading='POST Request Body'}}
 
 ```
 {
@@ -522,9 +540,13 @@ When doing a POST request to start a workflow, you only need to specify a few el
 }
 ```
 
+{{/panel}}
+
 ## task
 
 ### Result of a GET Request
+
+{{#> panel type='code' heading='GET Request'}}
 
 ```
 {
@@ -592,6 +614,8 @@ When doing a POST request to start a workflow, you only need to specify a few el
     }
 ```
 
+{{/panel}}
+
 &nbsp;
 
 *   **Variables**: Variables are&nbsp;either the ones defined on the associated node from the workflow model or global variables (defined at workflow level).
@@ -603,6 +627,8 @@ When doing a PUT request to complete a task, you only need to specify a few elem
 
 In the example below, we'll use the task we got from the GET request above whose name is `wf.serialDocumentReview.DocumentValidation`, i.e. the validation of a document in an approval workflow. Since we want to approve the task, the PUT will be sent on the URL <span class="nolink">[http://demo.nuxeo.com/nuxeo/site/api/v1/task/7bb67cd2-5848-4687-93af-30b3e715453e/validate](http://demo.nuxeo.com/nuxeo/site/api/v1/task/7bb67cd2-5848-4687-93af-30b3e715453e/validate)</span> . To reject the task, we would send the PUT request on the URL <span class="nolink">[http://demo.nuxeo.com/nuxeo/site/api/v1/task/7bb67cd2-5848-4687-93af-30b3e715453e/reject](http://demo.nuxeo.com/nuxeo/site/api/v1/task/7bb67cd2-5848-4687-93af-30b3e715453e/reject)</span> .
 
+{{#> panel type='code' heading='PUT Request Body'}}
+
 ```
 {
       "entity-type": "task",
@@ -613,6 +639,8 @@ In the example below, we'll use the task we got from the GET request above whose
       }
     }
 ```
+
+{{/panel}}
 
 &nbsp;
 

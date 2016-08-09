@@ -61,7 +61,7 @@ To set up a new cache for your directory, wether for your vocabularies, users or
 1.  [Contribute a new XML extension]({{page page='how-to-contribute-to-an-extension'}}) that defines your cache:
     *   For a Java memory cache:
 
-        ```
+        ```xml
         <extension target="org.nuxeo.ecm.core.cache.CacheService"
            point="caches">
            <cache name="MYDIRECTORY-ENTRY-CACHE" class="org.nuxeo.ecm.core.cache.InMemoryCacheImpl">
@@ -79,7 +79,7 @@ To set up a new cache for your directory, wether for your vocabularies, users or
 
     *   For a Redis cache:
 
-        ```
+        ```xml
         <extension target="org.nuxeo.ecm.core.cache.CacheService"
            point="caches">
            <cache name="MYDIRECTORY-ENTRY-CACHE" class="org.nuxeo.ecm.core.redis.contribs.RedisCache">
@@ -102,7 +102,7 @@ To set up a new cache for your directory, wether for your vocabularies, users or
     *   `maxSize`: The maximum number of entries in the cache
 3.  For each directory that should use the cache, declare the cache in the directory definition [using an XML extension]({{page page='how-to-contribute-to-an-extension'}}).
 
-    ```
+    ```xml
     <extension target="org.nuxeo.ecm.directory.sql.SQLDirectoryFactory"
        point="directories">
        <directory name="MYDIRECTORY">

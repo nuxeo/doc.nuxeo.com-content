@@ -314,7 +314,7 @@ When registering an automation chain, the chain will be checked to find a path f
 
 To register your operation you should create a Nuxeo XML extension to the [`operations` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--operations). Example:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
     point="operations">
     <operation
@@ -327,7 +327,7 @@ where `org.nuxeo.example.TestOperation` is the class name of your operation (the
 
 Let's look at the following operation class to see how annotations were used:
 
-```
+```java
 import org.nuxeo.ecm.automation.core.Constants;
 import org.nuxeo.ecm.automation.core.annotations.Context;
 import org.nuxeo.ecm.automation.core.annotations.Operation;
@@ -423,7 +423,7 @@ If you need you can create your own operation executor. Just look into the exist
 
 The code needed to invoke an operation or an operation chain is pretty simple. You need to do something like this:
 
-```
+```java
 CoreSession session = fetchCoreSession();
   AutomationService automation = Framework.getService(AutomationService.class);
   OperationContext ctx = new OperationContext(session);
@@ -517,7 +517,7 @@ Sometimes operations may not require any input. In that case the operation shoul
 
 For example, the&nbsp;_Log_&nbsp;operation does not requires an input, since it is only writing in the log:
 
-```
+```java
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.nuxeo.ecm.automation.core.Constants;
@@ -574,7 +574,7 @@ Also there are rare cases when you don't want to return anything from an operati
 
 In Automation you can add aliases for each operation (and create a chain defining itself with operations aliases):
 
-```
+```java
 package org.nuxeo.ecm.automation.core.test;
 
 import org.nuxeo.ecm.automation.core.annotations.Operation;

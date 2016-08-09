@@ -187,7 +187,7 @@ Without layout:
 
 Inside a layout:
 
-```
+```xml
 <widget name="title" type="text">
   <translated>true</translated>
   <fields>
@@ -213,7 +213,7 @@ If you need to cross validate fields of a document (i.e.: makes sure `dc:title` 
 *   [JSF and Javascript ]({{page page='jsf-and-javascript'}})
 *   [Ajax4jsf Best Practices]({{page page='ajax4jsf-best-practices'}})
 *   [Ajax Forms and Actions]({{page page='ajax-forms-and-actions'}})
-*   [undefined]({{page}})
+*   [undefined]()
 *   [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

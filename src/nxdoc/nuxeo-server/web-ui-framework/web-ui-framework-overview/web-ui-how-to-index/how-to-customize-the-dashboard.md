@@ -135,7 +135,7 @@ Create a new XML extension named `dashboardContracts`. It has to contribute to t
     *   category: this will make this action an element of the dashboard. The dashboard defines two categories `DASHBOARD_LEFT` and `DASHBOARD_RIGHT`. `DASHBOARD_LEFT` is to put the element on the left column of the dashboard and `DASHBOARD_RIGHT` to put it on the right one.
     *   order: order is used to set the order of the elements in the dashboard column.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager" point="widgets">
   <widget name="dashboard_contracts" type="contentViewWithForms">
       <properties widgetMode="any">
@@ -173,7 +173,7 @@ In this how-to, let's go deeper in the customization of the dashboard: let's rep
 
 The extension defining the link **Dashboard** and the content of the tab is [<span class="componentTitle">org.nuxeo.ecm.user.center.dashboard.jsf.actions</span>](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.user.center.dashboard.jsf.actions--actions):
 
-```
+```xml
   <extension target="org.nuxeo.ecm.platform.actions.ActionService"
     point="actions">
     <action id="Dashboard" link="/user_center_fragment.xhtml" label="user.center.dashboard" icon="/icons/dashboard.png" order="10">
@@ -201,7 +201,7 @@ For this example, create a tab displaying a content view listing the document of
 
 As viewed in the first step, the part you will need to override is:
 
-```
+```xml
   <extension target="org.nuxeo.ecm.platform.actions.ActionService"
     point="actions">
     <action id="DashboardMain" link="/incl/dashboard/user_jsf_dashboard.xhtml" label="" order="10"
@@ -215,7 +215,7 @@ As viewed in the first step, the part you will need to override is:
 2.  Copy the contribution above but replace the value of the parameter`link` with the name of the generated XHTML by Studio.
     The name of the file will be `/studio_tabs/studio_tab_XXX.xhtml`, XXX is the name of the tab, so in our case`/studio_tabs/studio_tab_NewDashboard.xhtml`.
 
-    ```
+    ```xml
     <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
       <action id="DashboardMain" link="/studio_tabs/studio_tab_NewDashboard.xhtml" label="" order="10"
           type="admin_rest_document_link">

@@ -126,13 +126,13 @@ elasticsearch.httpReadOnly.baseUrl=http://your_es_instance:9200
 
 The Elasticsearch index name for the default repository is `nuxeo`.&nbsp;To query the `nuxeo` repository, you can issue the following request:
 
-```
+```bash
 curl -XGET -u jdoe:jdoe  'http://localhost:8080/nuxeo/site/es/nuxeo/_search' -d '{ "query": { "match_all":{}}}'
 ```
 
 The platform will use the [DefaultSearchRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/SearchRequestFilter.java)&nbsp;to rework the query applying ACL filtering as follow:
 
-```
+```js
 {
     "query": {
         "filtered": {
@@ -157,7 +157,7 @@ The platform will use the [DefaultSearchRequestFilter](https://github.com/nuxeo/
 
 The platform only allows Administrator users to query the audit index.
 
-```
+```bash
 curl -XGET -u Administrator:Administrator  'http://localhost:8080/nuxeo/site/es/audit/_search' -d '{ "query": { "match_all":{}}}'
 ```
 
@@ -179,7 +179,7 @@ The repository index and the audit index use by default respectively the&nbsp;[D
 
 The following contribution:
 
-```
+```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.platform.routing.es" version="1.0">
   <require>org.nuxeo.elasticsearch.http.readonly.RequestFilterService</require>

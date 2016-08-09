@@ -398,7 +398,7 @@ It is now time to add custom behaviors, such as the locking policy we decided in
 
 </div><div class="column medium-4">
 
-**[undefined]({{page}})**
+**[undefined]()**
 
 </div><div class="column medium-4">
 

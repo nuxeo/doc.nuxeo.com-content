@@ -236,9 +236,9 @@ The following is a simple example of code making a query:
 
 When constructing the&nbsp;`CallContext`, you should pass the&nbsp;`ServletContext`,&nbsp;`HttpServletRequest`&nbsp;and&nbsp;`HttpServletResponse`&nbsp;if available from your context. These are important for rendition URLs for instance.
 
-{{/callout}}
+{{/callout}}{{#> panel type='code' heading='Making a CMISQL Query'}}
 
-```
+```java
 import java.io.Serializable;
 import java.util.Map;
 
@@ -296,6 +296,8 @@ public class CMISQuery {
     }
 }
 ```
+
+{{/panel}}
 
 &nbsp;
 

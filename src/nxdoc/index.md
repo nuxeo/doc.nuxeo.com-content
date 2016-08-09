@@ -442,10 +442,7 @@ Welcome to the Developer Documentation Center of Nuxeo applications.
 
 ![]({{file name='pdf-16.png' space='alldoc' page='nuxeo-downloadable-documentation'}} ?w=16,h=16) [Download in PDF]({{file name='Nuxeo_Platform_8.x_technical_documentation.pdf' space='alldoc' page='nuxeo-downloadable-documentation'}})
 
-{{/panel}}
-</div></div>
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
+{{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Content Repository Customization
 
@@ -456,8 +453,7 @@ The pages below help you start customizing your content repository:
 *   [Indexing and Query]({{page page='indexing-and-query'}})
 *   [Understand everything about Nuxeo Runtime components and extensions]({{page page='runtime-and-component-model'}})
 
-{{/panel}}</div><div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
+{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Client Development
 
@@ -467,9 +463,7 @@ The Nuxeo Platform can be integrated with various standards and technologies, in
 *   Client SDKs: [JavaScript]({{page page='javascript-client'}}), [Java]({{page page='java-automation-client'}}), [iOS]({{page page='ios-client'}}), [PHP]({{page page='php-automation-client'}}), [Python]({{page page='python-client'}}), [Android]({{page page='android-client'}}), [cURL]({{page page='using-curl'}})
 *   [CMIS]({{page page='cmis'}})
 
-{{/panel}}
-</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
+{{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Web App Customization
 
@@ -480,8 +474,10 @@ Here are some key pages to customize the back office of the Nuxeo Platform:
 *   [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
 
 {{/panel}}
-</div><div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
+
+</div>
+<div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+
 ### Tutorials
 
 This section is intended to provide you with end-to-end recipes for achieving your customization goals of the Nuxeo Platform.
@@ -489,10 +485,7 @@ This section is intended to provide you with end-to-end recipes for achieving yo
 *   [How-To Index]({{page page='how-to-index'}})
 *   [Quick Start Series]({{page page='quick-start-series'}})
 
-{{/panel}}
-</div></div>
-
-&nbsp;
+{{/panel}}</div></div>
 
 {{! multiexcerpt name='license'}}{{#> callout type='info' }}
 
@@ -505,7 +498,3 @@ This documentation is copyrighted by Nuxeo and published under the Creative Comm
 </div>
 
 {{/callout}}{{! /multiexcerpt}}
-
-&nbsp;
-
-&nbsp;

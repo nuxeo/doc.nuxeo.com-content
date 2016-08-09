@@ -244,13 +244,13 @@ Several default adapters are provided by default.
 
 ### Getting the Children of a Given Document - @children
 
-{{! multiexcerpt name='restapi-adapters-children'}}
+{{! multiexcerpt name='restapi-adapters-children'}}{{#> panel type='code' heading='Example'}}
 
 ```
 GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@children?currentPageIndex=0&pagesize=20&maxResults=100
 ```
 
-{{! /multiexcerpt}}
+{{/panel}}{{! /multiexcerpt}}{{#> panel type='code' heading='Response'}}
 
 ```
 {
@@ -277,6 +277,8 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@children?currentPageIndex=0&pagesize
 }
 ```
 
+{{/panel}}
+
 In the response, for each document, you have a `documentURL` property that points to the API endpoint's id.
 
 ### Searching Documents - @search
@@ -286,6 +288,8 @@ In the response, for each document, you have a `documentURL` property that point
 ```
 GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?fullText=nuxeo&orderBy=dc:title
 ```
+
+{{#> panel type='code' heading='Response Example'}}
 
 ```
 {
@@ -356,15 +360,21 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?fullText=nuxeo&orderBy=dc:tit
 }
 ```
 
+{{/panel}}
+
 If the pointed resource is not a&nbsp;<span class="s1">Folder</span>, then the search is issued from the parent document.
 
 **NXQL Search**
 
 You can also make some direct NXQL queries with this endpoint, like this:
 
+{{#> panel type='code' heading='GET Request Body'}}
+
 ```
 GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?query=SELECT * FROM File
 ```
+
+{{/panel}}{{#> panel type='code' heading='Response Example'}}
 
 ```
 {
@@ -436,6 +446,8 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?query=SELECT * FROM File
 }
 ```
 
+{{/panel}}
+
 &nbsp;
 
 ## Custom Adapters
@@ -450,9 +462,13 @@ An other alternative is to use the `@bo` WebAdapter to leverage standard Nuxeo D
 
 ### Getting a Business Object
 
+{{#> panel type='code' heading='GET Request Body'}}
+
 ```
 GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
 ```
+
+{{/panel}}{{#> panel type='code' heading='Response'}}
 
 ```
 {
@@ -464,9 +480,13 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
 }
 ```
 
+{{/panel}}
+
 ### Updating a Business Object
 
 To update a business object, you just have to send a PUT request one the business object resource with its content data like this:
+
+{{#> panel type='code' heading='PUT Request Body'}}
 
 ```
 PUT /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
@@ -481,9 +501,13 @@ PUT /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
 }
 ```
 
+{{/panel}}
+
 ### Creating a Business Object
 
 And then to create a business object, you have to issue a&nbsp; <span class="s1">POST</span> &nbsp;on the object resource plus the name of the newly created document, like this:
+
+{{#> panel type='code' heading='POST Request Body'}}
 
 ```
 POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter/{newName}
@@ -498,15 +522,21 @@ POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter/{newName}
 }
 ```
 
+{{/panel}}
+
 ## Bridging Operations and Automation Chains
 
 {{! multiexcerpt name='restapi-adapters-op'}}
 
 The `@op` adapter can be used to pipe the identified Document as input of an operation.
 
+{{#> panel type='code' heading='Sample URL'}}
+
 ```
 /nuxeo/api/v1/id/{docId}/@op/{OperationName}
 ```
+
+{{/panel}}{{#> panel type='code' heading='Sample POST Request Body'}}
 
 ```
 POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/{myOperation}
@@ -517,15 +547,19 @@ POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/{myOperation}
 }
 ```
 
-{{! /multiexcerpt}}
+{{/panel}}{{! /multiexcerpt}}
 
 The response will depend on the result of the automation chain.
 
 You can also use it to run a chain by prefixing the chain name by `<span class="s1">Chain.</span>` , for instance:
 
+{{#> panel type='code' heading='Sample URL'}}
+
 ```
 /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
 ```
+
+{{/panel}}{{#> panel type='code' heading='Sample POST Request Body on a Document'}}
 
 ```
 POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
@@ -536,7 +570,7 @@ POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
 }
 ```
 
-{{! multiexcerpt name='restapi-adapters-piping'}}
+{{/panel}}{{! multiexcerpt name='restapi-adapters-piping'}}{{#> panel type='code' heading='Sample POST Request Body on a List of Documents'}}
 
 ```
 POST /nuxeo/site/api/v1/path/{pathOfTheFolder}/@children/@op/Chain.myChain
@@ -546,6 +580,8 @@ POST /nuxeo/site/api/v1/path/{pathOfTheFolder}/@children/@op/Chain.myChain
   }
 }
 ```
+
+{{/panel}}
 
 Pay attention to the fact that document list adapters are paged. That means that the chain will run on all document of the current page.
 
@@ -557,9 +593,13 @@ Adapters can be chained: the result of one adapter becomes the input of the next
 
 Here is an example :
 
+{{#> panel type='code' heading='Sample URL'}}
+
 ```
 /nuxeo/api/v1/id/{docId}/@blob/file:content/@op/Blob.ToPDF
 ```
+
+{{/panel}}
 
 &nbsp;
 

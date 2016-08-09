@@ -300,13 +300,19 @@ Since workflows, nodes and task are all documents, the&nbsp;[NXQL]({{page page='
 
 ### Using Life Cycle State
 
-```
+{{#> panel type='code' heading='Query all running workflows:'}}
+
+```sql
 Select * from DocumentRoute where ecm:currentLifeCycleState = 'running'
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='Query all available workflow models:'}}
+
+```sql
 Select * from DocumentRoute where ecm:currentLifeCycleState = 'validated'
 ```
+
+{{/panel}}
 
 ### Using Workflow and Node Variables
 
@@ -322,19 +328,25 @@ The name of this facet is stored as the property:
 
 So both workflow and node variables can be queried as any other Nuxeo property.
 
-```
+{{#> panel type='code' heading='Query all running default serial workflows, having the global variable "initialComment" set to "test"'}}
+
+```sql
 Select * from DocumentRoute where var_SerialDocumentReview:initiatorComment = 'test'  
 ```
 
-```
+{{/panel}}{{#> panel type='code' heading='Querry all running workflows for a given document'}}
+
+```sql
 Select * from DocumentRoute where docri:participatingDocuments IN ('$docId') AND ecm:currentLifeCycleState = 'running'
 ```
+
+{{/panel}}
 
 ### Querying Workflows Suspended at a given Step
 
 NXQL queries can reference any metadata. Using the&nbsp;[CoreSession#queryAndFetch](http://community.nuxeo.com/api/nuxeo/7.1/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#queryAndFetch%28java.lang.String,%20java.lang.String,%20java.lang.Object...%29)&nbsp;API we can look for workflows suspended on a given step. This will return in an&nbsp;[IterableQueryResult](http://community.nuxeo.com/api/nuxeo/7.1/javadoc/org/nuxeo/ecm/core/api/IterableQueryResult.html)&nbsp;the id of the document representing the workflow document.
 
-```
+```sql
 Select ecm:parentId from RouteNode  where rnode:nodeId = 'Task5237' and ecm:currentLifeCycleState = 'suspended'
 ```
 
@@ -342,9 +354,13 @@ where 'Task5237' is the unique id of the node.
 
 ## Querying Workflow Tasks
 
-```
+{{#> panel type='code' heading='Query for all opened tasks'}}
+
+```sql
 Select * from TaskDoc where ecm:currentLifeCycleState = 'opened'
 ```
+
+{{/panel}}
 
 &nbsp;
 
@@ -352,7 +368,7 @@ Select * from TaskDoc where ecm:currentLifeCycleState = 'opened'
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [undefined]({{page}})
+*   [undefined]()
 *   [How to Modify a Workflow Variable outside of Workflow Context]({{page page='how-to-modify-a-workflow-variable-outside-of-workflow-context'}})
 *   [How to Set Up a Tasks Dashboard]({{page page='how-to-set-up-a-tasks-dashboard'}})
 *   [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})&nbsp;

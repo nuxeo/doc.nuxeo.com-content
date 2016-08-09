@@ -101,19 +101,19 @@ history:
 
 *   [Bower](http://bower.io/) is currently **the&nbsp;**tool for managing web application dependencies. To install it just use:
 
-    ```
+    ```bash
     npm install -g bower
     ```
 
 *   [Gulp](http://gulpjs.com/) is a JavaScript task runner that lets you automate tasks.
 
-    ```
+    ```bash
     npm install -g gulp
     ```
 
 *   [Yeoman](http://yeoman.io/)&nbsp;is an opinionated generator that helps kickstarting projects. Use its&nbsp;[Polymer generator](https://github.com/yeoman/generator-polymer) to scaffold your app:
 
-    ```
+    ```bash
     npm install -g yo
     npm install -g generator-polymer
     ```
@@ -126,7 +126,7 @@ Let's build a very simple application showcasing usage of the `nuxeo-connection`
 
 1.  After creating a folder to hold the application's code&nbsp; scaffold it using Yeoman's Polymer generator:
 
-    ```
+    ```bash
     > mkdir -p nuxeo-elements-sample && cd $_
     > yo polymer
     ```
@@ -137,7 +137,7 @@ Let's build a very simple application showcasing usage of the `nuxeo-connection`
 
 2.  To run the application and see what has been generated, run gulp:
 
-    ```
+    ```bash
     gulp serve
     ```
 
@@ -153,7 +153,7 @@ Let's plug this application to the Nuxeo instance and change the hardcoded users
 
 1.  Install Nuxeo elements through Bower:
 
-    ```
+    ```bash
     bower install --save nuxeo/nuxeo-elements
     ```
 
@@ -161,11 +161,15 @@ Let's plug this application to the Nuxeo instance and change the hardcoded users
 
 2.  Once nuxeo-elements is downloaded import the elements the application will use:
 
-    ```
+    {{#> panel type='code' heading='app/elements/elements.html'}}
+
+    ```xml
     <link rel="import" href="../bower_components/nuxeo-elements/nuxeo-connection.html">
     <link rel="import" href="../bower_components/nuxeo-elements/nuxeo-resource.html">
     <link rel="import" href="../bower_components/nuxeo-elements/nuxeo-page-provider.html">
     ```
+
+    {{/panel}}
 
     Elements used by the application are usually all imported in a single file to simplify the [vulcanization](https://github.com/polymer/vulcanize) process which basically&nbsp;reduces an HTML file and its dependent HTML Imports into a single file to reduce network roundtrips and simplify deployment.
 
@@ -175,7 +179,9 @@ With Nuxeo Elements imports in place you can now use your custom elements.
 
 Declare the connection to Nuxeo.&nbsp; This connection will be shared by all Nuxeo data driven elements so it should be one of the first elements you declare in your application, i.e. right at the start of the template:
 
-```
+{{#> panel type='code' heading='app/index.html'}}
+
+```xml
 <body unresolved class="fullbleed layout vertical">
   <template is="dom-bind" id="app">
     <nuxeo-connection url="http://localhost:8080/nuxeo" username="Administrator" password="Administrator"></nuxeo-connection>
@@ -184,13 +190,15 @@ Declare the connection to Nuxeo.&nbsp; This connection will be shared by all Nux
 </body>
 ```
 
+{{/panel}}
+
 There is now a connection to the Nuxeo instance. Note that you will need to define a [Cross-Origin Resource Sharing (CORS) configuration]({{page page='cross-origin-resource-sharing-cors'}}) before going further if you wish to test your code with gulp.
 
 ### Retrieving Users
 
 Replace the hard-coded user listing with actual data: use the **nuxeo-resource&nbsp;**element and Nuxeo's REST API, namely the `/api/v1/user/search` endpoint, and to retrieve a list of users.
 
-```
+```xml
 <section data-route="users">
   <!-- GET /user/search and store the response in "users" -->
   <nuxeo-resource auto path="/user/search" params='{"q": "*"}' response="\{{users}}"></nuxeo-resource>
@@ -215,7 +223,9 @@ Thanks to our custom `nuxeo-resource` element and Polymer's data binding you can
 
 1.  Add a link in the application drawer:
 
-    ```
+    {{#> panel type='code' heading='app/index.html'}}
+
+    ```xml
     <!-- Drawer Content -->
     <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
       ...
@@ -227,18 +237,24 @@ Thanks to our custom `nuxeo-resource` element and Polymer's data binding you can
     </paper-menu>
     ```
 
+    {{/panel}}
 2.  Update the routing code to set the "route" to "notes" when the URL matches `/notes`:
 
-    ```
+    {{#> panel type='code' heading='app/elements/routing.html'}}
+
+    ```js
     page('/notes', function () {
       app.route = 'notes';
       app.scrollPageToTop();
     });
     ```
 
+    {{/panel}}
 3.  Add a new section to be displayed when current "route" is "notes".
 
-    ```
+    {{#> panel type='code' heading='app/index.html'}}
+
+    ```xml
     <section data-route="notes">
       <!-- perform a NXQL query and store the current page entries in "notes" -->
       <nuxeo-page-provider auto pageSize="5" query="select * from Note where ecm:currentLifeCycleState != 'deleted'" current-page="\{{notes}}"></nuxeo-page-provider>
@@ -252,6 +268,8 @@ Thanks to our custom `nuxeo-resource` element and Polymer's data binding you can
       </template>
     </section>
     ```
+
+    {{/panel}}
 
     Here the `nuxeo-page-provider` element is used with a simple NXQL query to retrieve all the Notes that haven't been deleted and displays a simple card for each of these with the Note's title and description.
 

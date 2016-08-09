@@ -122,13 +122,13 @@ history:
 
 {{! excerpt}}
 
-The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication) allows setting up Nuxeo as a Service Provider and supports WebSSO thus relying on an external SAML Identity Provider (IdP) for authentication. It has been successfully tested so far with OneLogin, Ping One, SSOCircle, Google, OIF and ADFS. If you are no familiar with SAML IdP, read the section [Background on SAML 2.0]({{page}}) below.
+The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication) allows setting up Nuxeo as a Service Provider and supports WebSSO thus relying on an external SAML Identity Provider (IdP) for authentication. It has been successfully tested so far with OneLogin, Ping One, SSOCircle, Google, OIF and ADFS. If you are no familiar with SAML IdP, read the section [Background on SAML 2.0](#saml20_presentation) below.
 
 1.  [Install the SAML2.0 Authentication addon]({{page page='installing-a-new-package-on-your-instance'}}) available from the Nuxeo Marketplace.
 2.  Retrieve your IdP SAML metadata configuration file. This file stores SAML configuration like supported bindings, endpoints, certificates, etc., that are used by our SAML plugin to configure you IdP. Some IdP make this metadata available in a URL which you can also reference directly in the next step.
 3.  Contribute ([in a Studio project]({{page page='how-to-contribute-to-an-extension'}}), or in the `nxserver/config` folder) a new authentication plugin that makes use of the `org.nuxeo.ecm.platform.auth.saml.SAMLAuthenticationProvider`, with a reference to the XML Metadata for specific configuration. Ex:
 
-    ```
+    ```xml
     <component name="org.nuxeo.ecm.platform.login.saml.auth"> 
     <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
      <require>org.nuxeo.ecm.platform.ui.web.auth.defaultConfig</require>
@@ -151,7 +151,7 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 
 4.  Use this new authentication plugin in the authentication chain, by contributing its definition from your Studio project (or in the previous XML component).
 
-    ```
+    ```xml
       <extension
                 target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
                 point="chain">
@@ -171,7 +171,7 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
         *   Or by configuring it manually on the IdP (in that case, you should use `http://<nuxeo_url>/nuxeo/nxstartup.faces` as the SAML consumer endpoints)
 6.  Optionally generate a keystore for enabling encryption. If you want to enable signing and/or encryption (not mandatory with some IdP) you have to generate a keystore and add the proper configuration to `nxserver/config` (ex: `saml-keystore-config.xml`):
 
-    ```
+    ```xml
     <component name="org.nuxeo.ecm.platform.auth.saml.key.contrib">
 
         <extension target="org.nuxeo.ecm.platform.auth.saml.key.KeyManager"
@@ -192,13 +192,13 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 
     To generate the keystore you can use keytool:
 
-    ```
+    ```bash
     keytool -genkeypair -keystore samlKeystore.jks -alias saml -keypass changeit -dname 'CN=Nuxeo O=Nuxeo' -storepass password
     ```
 
     If you have an existing certificate that you wish to use you should be able to import it using the keytool as well:
 
-    ```
+    ```bash
     keytool -import -alias foo -file certfile.cer -keystore publicKey.store
     ```
 

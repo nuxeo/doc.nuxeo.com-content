@@ -109,7 +109,7 @@ The conversion service provides:
 
 The Conversion Service can be accessed via the standard Nuxeo Service lookup:
 
-```
+```java
 ConversionService conversionService = Framework.getService(ConversionService.class)
 ```
 
@@ -117,7 +117,7 @@ ConversionService conversionService = Framework.getService(ConversionService.cla
 
 To convert a BlobHolder to a given destination mime type:
 
-```
+```java
 BlobHolder result = conversionService.convertToMimeType("text/plain", blobHolder, params);
 ```
 
@@ -125,7 +125,7 @@ BlobHolder result = conversionService.convertToMimeType("text/plain", blobHolder
 
 To use a known converter:
 
-```
+```java
 BlobHolder result = conversionService.convert("converterName", blobHolder, params);
 ```
 
@@ -135,7 +135,7 @@ Since 7.10, four new methods are available on the&nbsp;`ConversionService` to sc
 
 To schedule a new asynchronous conversion given a converter name:
 
-```
+```java
 String conversionId = conversionService.scheduleConversion("converterName", blobHolder, params);
 ```
 
@@ -149,7 +149,7 @@ Those methods return a conversion id to be used in the following methods to get 
 
 To retrieve the status of a scheduled conversion:
 
-```
+```java
 ConversionStatus status = conversionService.getConversionStatus(conversionId);
 ```
 
@@ -157,7 +157,7 @@ The&nbsp;`ConversionStatus` object holds the status of an asynchronous conversio
 
 When the status is&nbsp;`COMPLETED`, the result of the conversion can be retrieved with:
 
-```
+```java
 BlobHolder result = conversionService.getConversionResult(conversionId, true);
 ```
 
@@ -167,13 +167,13 @@ The second boolean parameter defines if the conversion result will be deleted, i
 
 Find a converter name for a given conversion:
 
-```
+```java
 String converterName = conversionService.getConverterName(sourceMimeType, destinationMimeType);
 ```
 
 Test if a converter is available:
 
-```
+```java
 String converterName = conversionService.getConverterName(sourceMimeType, destinationMimeType);
 ConverterCheckResult checkResult = conversionService.isConverterAvailable("converterName");
 ```
@@ -296,7 +296,7 @@ converter=any2pdf&async=true
 
 This POST returns a HTTP code 202 with the following data:
 
-```
+```js
 {
   "entity-type": "conversionScheduled",
   "conversionId": "id",
@@ -312,7 +312,7 @@ GET http://localhost:8080/nuxeo/api/v1/conversion/id/poll
 
 For a conversion not yet completed, it returns a HTTP code 200 with the following data:
 
-```
+```js
 {
   "entity-type": "conversionStatus",
   "conversionId": "id",
@@ -336,7 +336,7 @@ Returns the result of the conversion, or HTTP code 404 if there is no conversion
 
 The Conversion Service supports a global configuration via XML file in order to configure caching.
 
-```
+```xml
 <component name="org.nuxeo.ecm.core.convert.config">
   <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl" point="configuration">
     <configuration>
@@ -364,7 +364,7 @@ To contribute a new converter, you have to contribute a class that implement the
 *   One destination mime-type
 *   Optional named parameters
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl" point="converter">
   <converter name="html2text" class="org.nuxeo.ecm.core.convert.plugins.text.extractors.Html2TextConverter">
     <sourceMimeType>text/html</sourceMimeType>
@@ -383,7 +383,7 @@ See list of [built-in contributions](http://explorer.nuxeo.org/nuxeo/site/distri
 
 You can also contribute a converter that is a chain of existing converters. To to this, the contributed converter does not have to define an implementation class, just a chain of either converters or mime-types. If mime-types are used, the conversion service will automatically guess the converter chain from the mime-types steps.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl" point="converter">
   <!-- explicit chain of 2 converters : converter1 + converter2 -->
   <converter name="chainedConverter" >
@@ -417,7 +417,7 @@ For that purpose, we provide a base class for converters that are based on a com
 
 The base class `org.nuxeo.ecm.platform.convert.plugins.CommandLineBasedConverter` handles all the dirty work, and you only have to override the methods to define the parameters of the command line and the parsing of the output.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl" point="converter">
   <!-- converter based on the pdftohml command line -->
   <converter name="pdf2html" class="org.nuxeo.ecm.platform.convert.plugins.PDF2HtmlConverter">

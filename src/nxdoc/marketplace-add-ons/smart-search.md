@@ -275,8 +275,8 @@ Smart Search enables users to save their search in smart folders. A smart folder
 Smart folders can be created in workspaces and folders.
 There are two ways to create a smart folder:
 
-*   you can first create your query and&nbsp;[save it]({{page}})&nbsp;in your personal workspace,
-*   or you can&nbsp;[create a smart folder]({{page}})&nbsp;directly from a workspace.
+*   you can first create your query and&nbsp;[save it](#save-search)&nbsp;in your personal workspace,
+*   or you can&nbsp;[create a smart folder](#smart-folder)&nbsp;directly from a workspace.
 
 {{#> callout type='tip' }}
 
@@ -290,7 +290,7 @@ You can save a smart search from the search form directly or from the search res
 
 To save a search in a smart folder:
 
-1.  [Build your query]({{page}}).
+1.  [Build your query](#build-query).
 2.  From the search result page or from the search form, click on the&nbsp;**Save As**&nbsp;button.
 3.  Give the smart search a title and click on&nbsp;**Save**.
 
@@ -313,7 +313,7 @@ You can create a smart folder and then build the query that will be associated t
 
 1.  In a workspace, click on&nbsp;**New**.
 2.  In the modal window, click on&nbsp;**Smart folder**.
-3.  On the creation form, type a title, a description (optional) and&nbsp;[build your query]({{page}}).
+3.  On the creation form, type a title, a description (optional) and&nbsp;[build your query](#build-query).
 4.  Click on the&nbsp;**Create**&nbsp;button to save the smart folder and display its content.
     The smart folder is saved.&nbsp;
 
@@ -350,7 +350,7 @@ As a simple example, let's have a look at the widget to add a condition on the t
 
 &nbsp;
 
-```
+```xml
 <widget name="nxql_smart_query_condition_title"
   type="incremental_smart_query_condition">
   <labels>
@@ -401,7 +401,7 @@ As a more complex example, let's have a look at the widget used to add a conditi
 
 &nbsp;
 
-```
+```html/xml
 <widget name="nxql_smart_query_condition_modified" type="incremental_smart_query_condition">
   <labels>
     <label mode="any">label.dublincore.modified</label>

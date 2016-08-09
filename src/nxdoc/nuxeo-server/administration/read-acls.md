@@ -101,7 +101,7 @@ GO
 
 *   For long running instance with lots of users, you can call periodically a vacuum procedure at the database level, this should be done preferably when the application load is low:
 
-    ```
+    ```sql
     -- For PostgreSQL
     SELECT nx_vacuum_read_acls();
     -- For Oracle

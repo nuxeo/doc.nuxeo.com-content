@@ -76,7 +76,7 @@ You can configure two parameters of Nuxeo Drive versioning policy thanks to the 
 
 For example, to create a major version if the document is modified 30 minutes after the last change, use this contribution:
 
-```
+```xml
   <require>org.nuxeo.drive.adapters</require>
 
   <extension target="org.nuxeo.drive.service.FileSystemItemAdapterService"

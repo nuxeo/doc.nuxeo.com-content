@@ -169,7 +169,7 @@ The registration process only copies a file on your file system. This enables th
 
 ## How to Register
 
-To be able to register, you need to have an [Online Services account]({{page}}).
+To be able to register, you need to have an [Online Services account](#connect-account-creation).
 
 {{#> callout type='tip' }}
 
@@ -179,9 +179,9 @@ If you're using Nuxeo Cloud, your Nuxeo Platform instance is already registered.
 
 Registration can be done during the installation steps using the configuration wizard or at anytime later, through the **Admin** tab or using the&nbsp;[`nuxeoctl` script]({{page page='nuxeoctl-and-control-panel-usage'}}).
 
-Registration does not require an Internet access. If your server cannot connect to the Internet, follow the [offline registration steps]({{page}}). Otherwise, follow the [online registration steps]({{page}}).
+Registration does not require an Internet access. If your server cannot connect to the Internet, follow the [offline registration steps](#offline-registration). Otherwise, follow the [online registration steps](#online-registration).
 
-For development instances on which you may need to remove your data, you may need to [re-register your instance]({{page}}).
+For development instances on which you may need to remove your data, you may need to [re-register your instance](#re-registration).
 
 ### Registering Using nuxeoctl
 
@@ -207,7 +207,7 @@ For more information about the&nbsp;`nuxeoctl` script, read [nuxeoctl and Contro
 
 ### Creating your Nuxeo Online Services Account
 
-If you already have an account for Nuxeo Online Services, either because you are a Nuxeo customer, or because you created a trial account, you can continue to the [undefined]({{page}}) step. If not, follow those steps to get credentials to Online Services.
+If you already have an account for Nuxeo Online Services, either because you are a Nuxeo customer, or because you created a trial account, you can continue to the [undefined](#registering-online) step. If not, follow those steps to get credentials to Online Services.
 
 To subscribe to a Nuxeo Online Services trial:
 

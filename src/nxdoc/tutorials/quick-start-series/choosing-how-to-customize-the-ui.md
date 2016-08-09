@@ -155,8 +155,8 @@ The Nuxeo Platform proposes different technologies for the client side of the ap
 
 You mainly have two strategies for the UI you will propose to your users:
 
-*   Either [customize the existing web application]({{page}}), which is JSF/SEAM based. You'll be able to reach a great customization point by just using [Studio]({{page space='studio'}}), and you will also be able to extend it writing your own facelets (XHTML) templates and Seam components. In this approach, you can keep the standard layout and just add your "business" flavor from Studio, but you can also completely redesign the layout, as some of the Nuxeo Platform users did.
-*   Or [write your own application]({{page}}) UI with the technology of your choice, using our APIs and client SDKs.
+*   Either [customize the existing web application](#seam-jsf), which is JSF/SEAM based. You'll be able to reach a great customization point by just using [Studio]({{page space='studio'}}), and you will also be able to extend it writing your own facelets (XHTML) templates and Seam components. In this approach, you can keep the standard layout and just add your "business" flavor from Studio, but you can also completely redesign the layout, as some of the Nuxeo Platform users did.
+*   Or [write your own application](#own-application) UI with the technology of your choice, using our APIs and client SDKs.
 
 ## Customizing the Back Office
 

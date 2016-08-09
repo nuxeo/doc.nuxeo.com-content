@@ -70,7 +70,7 @@ The File Manager is used for creating documents from simple binaries.
 
 {{! /excerpt}}
 
-From a user perspective, the Nuxeo Platform offers many ways to capture a binary so as to make it a document with a binary property. It can be done from the browser's [drag'n drop]({{page space='userdoc' page='creating-content'}}), from the [upload REST API]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}}), from [WebDAV]({{page space='userdoc' page='working-with-webdav'}}), from [CMIS]({{page page='cmis'}}), from [Nuxeo Drive]({{page space='userdoc' page='nuxeo-drive'}}), &nbsp;...
+From a user perspective, the Nuxeo Platform offers many ways to capture a binary so as to make it a document with a binary property. It can be done from the browser's [drag'n drop]({{page space='userdoc' page='creating-content#content-creation-dandd'}}), from the [upload REST API]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}}), from [WebDAV]({{page space='userdoc' page='working-with-webdav'}}), from [CMIS]({{page page='cmis'}}), from [Nuxeo Drive]({{page space='userdoc' page='nuxeo-drive'}}), &nbsp;...
 
 The file manager service is a traditional Nuxeo Platform service that offers some methods that help standardize what happens when a file is captured in the Platform, in regard to:
 
@@ -97,7 +97,7 @@ Let's take a simple example where the document type depends on the parent folder
 
 1.  Write a class which extends&nbsp;`org.nuxeo.ecm.platform.filemanager.service.extension.AbstractFileImporter`.
 
-    ```
+    ```java
     public class SampleFilemanagerPlugin extends AbstractFileImporter {
 
         private static final long serialVersionUID = 1876876876L;
@@ -135,7 +135,7 @@ Let's take a simple example where the document type depends on the parent folder
 
 2.  Add a new contribution to the file manager service.
 
-    ```
+    ```xml
     <component name="org.nuxeo.sample.filemanager">
         <extension target="org.nuxeo.ecm.platform.filemanager.service.FileManagerService" point="plugins">
             <plugin name="SampleImporter" class="org.nuxeo.sample.SampleFilemanagerPlugin" order="0">

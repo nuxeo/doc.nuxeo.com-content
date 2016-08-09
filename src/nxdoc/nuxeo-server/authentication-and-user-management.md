@@ -253,17 +253,17 @@ You can find a [full example of contribution to the userManager](http://explorer
 
 Users are defined on the `users` element:
 
-```
+```xml
 <userManager>
     <users>
         <directory>somedirectory</directory> ...
 ```
 
-The value `somedirectory` is the name of a contributed directory (see [LDAP]({{page page='data-lists-and-directories'}}) and [ SQL users]({{page page='data-lists-and-directories'}}) contributions, as well as [multidirectory]({{page page='data-lists-and-directories'}})).
+The value `somedirectory` is the name of a contributed directory (see [LDAP]({{page page='data-lists-and-directories#ldapdirectories'}}) and [ SQL users]({{page page='data-lists-and-directories#sqldirectories'}}) contributions, as well as [multidirectory]({{page page='data-lists-and-directories#multi-directories'}})).
 
 Groups are defined on the `groups` element (also referencing already contributed directory).
 
-```
+```xml
  <groups>
     <directory>somegroupdir</directory>
     <membersField>members</membersField>
@@ -285,7 +285,7 @@ You may want to use other authentication protocols and / or identity providers. 
 
 **In any case**, you have to configure the "authentication chain" with the following extension file that you can deploy with Nuxeo Studio or by putting an XML file inside the folder `nxserver/config` (see [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})). You have to adapt the `authenticationChain` element content with the list of plugins you want to use (plugins are documented below on this page).
 
-```
+```xml
 <component name="org.nuxeo.ecm.anonymous.activation">
    <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
     <extension
@@ -507,7 +507,7 @@ To install this authentication plugin:
 3.  Put the plugin into the authentication chain as illustrated at the beginning of the section (use `NTLM_AUTH`).
 4.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) called&nbsp;`ntlm-auth-config.xml` with the following content:
 
-    ```
+    ```xml
     <component name="org.nuxeo.ecm.platform.authenticator.ntlm.config">
 
       <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
@@ -540,13 +540,13 @@ To install this authentication plugin:
 
 ## Customizing the Login Page
 
-You can customize the login page using[ Nuxeo Studio ]({{page space='studio' page='branding'}})(background picture, colors, logo).
+You can customize the login page using[ Nuxeo Studio ]({{page space='studio' page='branding#brandingconfiguration-loginpagetab'}})(background picture, colors, logo).
 
 ## Adding New Fields to The User Profile or Group Profile
 
 Users and groups profile are defined by schemas. The default user schema is:
 
-```
+```xml
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:nxs="http://www.nuxeo.org/ecm/schemas/user"
@@ -579,7 +579,7 @@ It is displayed in the Nuxeo Platform like this:
 
 If you want to add more fields than the default ones on the user profile, you can simply override the definition of the schema `user` (in a Studio project or in an XML component in `nxserver/config`).
 
-```
+```xml
 <extension point="schema" target="org.nuxeo.ecm.core.schema.TypeService"> 
     <<!-- override default user schema --> 
     <schema name="user" override="true" src="schemas/my_custom_user_schema.xsd"/>
@@ -594,7 +594,7 @@ You then have to update the forms used for editing the user profile (to be docum
 
 It works the same for the `group` schema, and you have to make sure to have some mandatory fields available for references and inverse references for the group hierarchy. See default one:
 
-```
+```xml
 <?xml version="1.0"?>
 
 <xs:schema targetNamespace="http://www.nuxeo.org/ecm/schemas/group"
@@ -669,7 +669,7 @@ When used in conjunction with `UserIdentificationInfoCallback` (Nuxeo custom Cal
 
 Because validating user identity can be more complex that just checking login/password, `NuxeoLoginModule` exposes an extension point to contribute new LoginPlugins. Each LoginPlugin has to implement the [`org.nuxeo.ecm.platform.login.LoginPlugin`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.login.LoginPluginRegistry) interface.
 
-This interface exposes the User Identity validation logic from the `UserIdentificationInfo` object populated by the Authenticator (see the [Pluggable Web Authentication Filter]({{page}}) section):
+This interface exposes the User Identity validation logic from the `UserIdentificationInfo` object populated by the Authenticator (see the [Pluggable Web Authentication Filter](#pluggable-web-authentication-filter) section):
 
 ```
 String validatedUserIdentity(UserIdentificationInfo userIdent)

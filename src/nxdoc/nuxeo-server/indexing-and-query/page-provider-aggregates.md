@@ -159,7 +159,7 @@ Note that aggregate results are either displayed with a checkbox-based widget or
 
 An aggregate is defined inside the page provider definition according to the following syntax:
 
-```
+```xml
 <aggregate id="aggregate_id" type="aggregate_type" parameter="aggregate_parameter">
   <field schema="agg_field_schema" name="agg_field_name" />
   <properties>
@@ -183,7 +183,7 @@ Here are the type of aggregates currently supported by the Nuxeo Platform.
 
 In the search layout on the above picture, you can see Author, Nature, Subjects, Coverage aggregate results. These are Terms aggregates respectively on `dc:creator`, `dc:nature`, `dc:subjects`, `dc:coverage` document properties defined as follow:
 
-```
+```xml
 <aggregate id="dc_nature_agg" type="terms" parameter="dc:nature">
   <field schema="default_search" name="dc_nature_agg" />
   <properties>
@@ -236,7 +236,7 @@ The type of such aggregate is `significant_terms`. The parameter must be of type
 
 Here is an example of Range aggregate on the `common:size` document property.
 
-```
+```xml
 <aggregate id="common_size_agg" type="range" parameter="common:size">
   <field schema="default_search" name="common_size_agg" />
   <ranges>
@@ -257,7 +257,7 @@ It has no specific properties but at least one `range` must be defined. A range 
 
 Here is an example of Date Range aggregate on the `dc:modified` document property.
 
-```
+```xml
 <aggregate id="dc_modified_agg" type="date_range" parameter="dc:modified">
   <field schema="default_search" name="dc_modified_agg" />
   <properties>
@@ -305,7 +305,7 @@ Date Histogram Aggregate
 
 Here is an example of Date Range aggregate on the `dc:created` document property.
 
-```
+```xml
 <aggregate id="dc_created_agg" type="date_histogram" parameter="dc:created">
   <field schema="default_search" name="dc_created_agg" />
   <properties>

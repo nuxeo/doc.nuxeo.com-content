@@ -91,7 +91,7 @@ A new Nuxeo synchronous core [event listener]({{page page='events-and-listeners'
 Furthermore it would be very useful to make the event listener manage a new local ACL that would render documents with blobs in quarantine only visible to the user who uploaded the last blob until it is moved out of quarantine or deleted. This feature would have the following purposes:
 
 *   Never propagate a contaminated blob to other users by denying access to the documents that contain contaminated files.
-*   Do not disrupt too much any existing Nuxeo components (e.g. Nuxeo Drive<sup><span class="error">[1]({{page}})</span></sup>) that usually expect any uploaded blob in a document to be immediately available.
+*   Do not disrupt too much any existing Nuxeo components (e.g. Nuxeo Drive<sup><span class="error">[1](#drive)</span></sup>) that usually expect any uploaded blob in a document to be immediately available.
 *   Make it possible for the uploader to introspect the state of the virus analysis by making a custom blob widget.
 
 The management of the dynamic facet, the ACL and the call to the `giveClearance` method should be wrapped in a single `AntivirusVirusAware` document adapter to abstract away all those operations in a simple and clean public API.

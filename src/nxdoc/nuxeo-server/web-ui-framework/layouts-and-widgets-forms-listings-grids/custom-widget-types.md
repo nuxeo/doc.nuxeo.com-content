@@ -156,7 +156,7 @@ Usually widget types are template widgets that are declared as widget types to m
 
 Here is a sample widget type registration, based on a widget template:
 
-```
+```xml
 <component name="org.nuxeo.ecm.platform.forms.layout.MyContribution">
 
   <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
@@ -177,7 +177,7 @@ Here is a sample widget type registration, based on a widget template:
 
 Before this contribution, the widgets needing this template were declaring (for instance):
 
-```
+```xml
 <widget name="my_widget" type="template">
   <labels>
     <label mode="any">My label</label>
@@ -195,7 +195,7 @@ Before this contribution, the widgets needing this template were declaring (for 
 
 With this configuration, the following widget definition can now be used:
 
-```
+```xml
 <widget name="my_widget" type="my_widget_type">
   <labels>
     <label mode="any">My label</label>
@@ -214,7 +214,7 @@ With this configuration, the following widget definition can now be used:
 
 Here is a more complex sample widget type registration:
 
-```
+```xml
 <?xml version="1.0"?>
 
 <component name="org.nuxeo.ecm.platform.forms.layout.MyContribution">
@@ -273,7 +273,7 @@ Some additional information can be put on a widget type for several purposes:
 
 Here is a sample configuration extract:
 
-```
+```xml
 <widgetType name="text">
   <configuration>
     <title>Text</title>

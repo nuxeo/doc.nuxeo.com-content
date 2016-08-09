@@ -101,7 +101,7 @@ The Nuxeo mobile application is available for iPhones SE, 5/5c/5s and 6/6+ with 
 
 ### Nuxeo Platform Requirements
 
-The Nuxeo mobile application is compliant with Nuxeo Platform 8.3 and Nuxeo LTS 2015 with hotfix 12\. See the [Limitations]({{page}}) section for previous hotfixes of Nuxeo Platform LTS 2015.
+The Nuxeo mobile application is compliant with Nuxeo Platform 8.3 and Nuxeo LTS 2015 with hotfix 12\. See the [Limitations](#limitations) section for previous hotfixes of Nuxeo Platform LTS 2015.
 
 ## Installation
 
@@ -125,7 +125,7 @@ As soon as the server is detected, the login page is displayed. Depending on you
 
 ### Browsing Content
 
-The **Browse** menu enables you to browse your documents. The thumbnail of the document is displayed whenever it's available, just like on the regular web user interface (see the [Limitations]({{page}}) section). Otherwise an icon is displayed. Tap to enter the workspace or see the document.
+The **Browse** menu enables you to browse your documents. The thumbnail of the document is displayed whenever it's available, just like on the regular web user interface (see the [Limitations](#limitations) section). Otherwise an icon is displayed. Tap to enter the workspace or see the document.
 
 For any non folderish document, such as notes and files typically, some information is displayed on the view layout:&nbsp;
 
@@ -167,7 +167,7 @@ Yet there are two limitations when running against Nuxeo LTS 2015 with hotfix 12
 *   Preview isn't available&nbsp;for the Picture and Video document types nor for the File type with PDF content. A simple file icon is displayed instead.
     To allow previewing these types of documents you can add the following [XML contribution]({{page page='how-to-contribute-to-an-extension'}}) to your Nuxeo instance:
 
-    ```
+    ```xml
     <?xml version="1.0"?>
     <component name="com.my.company.authChainContrib">
 

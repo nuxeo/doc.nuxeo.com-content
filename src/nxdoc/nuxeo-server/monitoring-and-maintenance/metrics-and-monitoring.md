@@ -329,7 +329,7 @@ Here is an extract of what this dashboard looks like when monitoring a daily ben
 
 ## Monitoring
 
-The Nuxeo Platform also comes with a set of default probes and administrative statuses for monitoring, that are provided by the [component Nuxeo Core Management](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.core.management.CoreManagementComponent). Both can be seen and managed [from JMX]({{page}}) and from [Admin Center]({{page page='admin-tab-overview'}}).
+The Nuxeo Platform also comes with a set of default probes and administrative statuses for monitoring, that are provided by the [component Nuxeo Core Management](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.core.management.CoreManagementComponent). Both can be seen and managed [from JMX](#enabling-jmx) and from [Admin Center]({{page page='admin-tab-overview'}}).
 
 ### Administrative Status
 
@@ -367,7 +367,7 @@ By default four probes are defined:
 
 ### Monitoring Using JMX Access
 
-You can use JVisualVM or similar tool to access Nuxeo JMX interface. See the section [Enabling JMX Access]({{page}}).
+You can use JVisualVM or similar tool to access Nuxeo JMX interface. See the section [Enabling JMX Access](#enabling-jmx).
 
 ### Monitoring Using the Admin Center
 

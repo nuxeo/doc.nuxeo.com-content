@@ -53,7 +53,7 @@ A `DeltaLong` is stored as a `Long`, but when used in the Java API to update a f
 
 The standard usage to add a value "count" to a property "myprop" is:&nbsp;
 
-```
+```java
 long count = 123;
 Number oldValue = (Number) doc.getPropertyValue("myprop");
 Number newValue = DeltaLong.deltaOrLong(oldValue, count);
@@ -64,13 +64,13 @@ doc.setPropertyValue("myprop", newValue);
 
 When using a SQL backend, this will emit code like:
 
-```
+```sql
 UPDATE myschema SET myprop = myprop + 123 WHERE id = 'the-doc-id';
 ```
 
 instead of:
 
-```
+```sql
 UPDATE myschema SET myprop = 123 WHERE id = 'the-doc-id';
 ```
 
@@ -78,7 +78,7 @@ which you'll agree gives different results if two threads are executing it at th
 
 For a MongoDB backend, the update will be done using:
 
-```
+```js
 db.default.update(
    { "ecm:id": "the-doc-id" },
    { $inc: { "myprop": 123 } }
@@ -87,7 +87,7 @@ db.default.update(
 
 instead of :
 
-```
+```js
 db.default.update(
    { "ecm:id": "the-doc-id" },
    { "myprop": 123 }

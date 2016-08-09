@@ -248,7 +248,7 @@ Here are the different components of the thumbnail feature:
 
 A thumbnail factory can be registered using the following example extension:
 
-```
+```html/xml
 <extension target="org.nuxeo.ecm.core.api.thumbnail.ThumbnailService"
   point="thumbnailFactory">
 
@@ -276,7 +276,7 @@ The listener [`UpdateThumbnailListener`](http://community.nuxeo.com/api/nuxeo/8.
 
 &nbsp;When computing your thumbnail, [`UpdateThumbnailListener`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/UpdateThumbnailListener.html) stores it into a specific metadata&nbsp; <span style="color: rgb(51,51,51);">`<span style="color: rgb(51,51,51);">thumb:thumbnail</span>` provided by the following schema:</span>
 
-```
+```html/xml
 <xs:schema xmlns:nxs="http://www.nuxeo.org/ecm/schemas/thumbnail"
   xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nuxeo.org/ecm/schemas/thumbnail">
 
@@ -294,7 +294,7 @@ This process can be useful to avoid lazy loading when displaying documents list.
 
 Here is an example with the picture thumbnail factory, which is fetching a image existing into the picture schema.
 
-```
+```java
 import org.nuxeo.common.utils.FileUtils;
 import org.nuxeo.ecm.core.api.Blob;
 import org.nuxeo.ecm.core.api.CoreSession;
@@ -336,7 +336,7 @@ public class ThumbnailPictureFactory implements ThumbnailFactory {
 
 And then the usage of `ThumbnailAdapter`:
 
-```
+```java
 import org.nuxeo.common.utils.FileUtils;
 import org.nuxeo.ecm.core.api.Blob;
 import org.nuxeo.ecm.core.api.CoreSession;
@@ -377,7 +377,7 @@ Default Nuxeo thumbnail factories fall back on **Nuxeo Document BigIcon** if no 
 
 Here is a way to find it properly:
 
-```
+```java
      Blob getDefaultThumbnail(DocumentModel doc) {
         if (doc == null) {
             return null;

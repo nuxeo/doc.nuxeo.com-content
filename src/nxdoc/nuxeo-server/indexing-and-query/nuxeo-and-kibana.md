@@ -239,7 +239,7 @@ We will allow the embedded Elasticsearch to answer any HTTP request on port 9200
     *   Uncomment the line&nbsp;elasticsearch.httpEnabled=true
     *   So basically, you now have:
 
-        ```
+        ```xml
         . . . 
         elasticsearch.httpEnabled=true 
         . . .
@@ -254,7 +254,7 @@ We will allow the embedded Elasticsearch to answer any HTTP request on port 9200
 5.  Start Kibana:
     *   Command:
 
-        ```
+        ```xml
         cd /path/to/kibana-4.1.1-darwin-x64/bin
         ./kibana
         ```

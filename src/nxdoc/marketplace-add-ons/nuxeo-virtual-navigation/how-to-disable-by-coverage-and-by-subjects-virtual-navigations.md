@@ -195,7 +195,7 @@ If you'd like to disable the By coverage and By Subject virtual navigations, you
 
 When disabling them outside of a Studio contribution, the following requirement is also needed to ensure that this contribution is loaded after the default ones:
 
-```
+```xml
 <require>
   org.nuxeo.ecm.virtualnavigation.directory.DirectoryTreeService.contrib
 </require>
@@ -219,7 +219,7 @@ In this case, you just need to hide these virtual navigations instead of disabli
 
 To hide the By Coverage and By Subjects virtual navigations, you just need to declare an XML extension from the **Advanced Settings** menu entry.
 
-```
+```xml
 <extension target="org.nuxeo.ecm.webapp.directory.DirectoryTreeService"
   point="trees">
   <directoryTree name="bySubjectsNavigation" isNavigationTree="false" />
@@ -230,7 +230,7 @@ To hide the By Coverage and By Subjects virtual navigations, you just need to de
 
 When hiding them outside of a Studio contribution, the following requirement is also needed to ensure that this contribution is loaded after the default ones:
 
-```
+```xml
 <require>
   org.nuxeo.ecm.virtualnavigation.directory.DirectoryTreeService.contrib
 </require>

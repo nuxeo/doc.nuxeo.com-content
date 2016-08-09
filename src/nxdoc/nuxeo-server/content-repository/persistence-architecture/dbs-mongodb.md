@@ -73,7 +73,7 @@ When configured for use with MongoDB, each Nuxeo document is stored as a single 
 
 A sample document could look like:
 
-```
+```js
 {
 	"_id" : ObjectId("542e9bd23004722355960895"),
 	"ecm:id" : "612d0632-e12a-4374-88de-d6bd005bdcdc",

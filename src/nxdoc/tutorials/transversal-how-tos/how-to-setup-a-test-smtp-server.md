@@ -52,7 +52,9 @@ For testing purpose, for instance with notifications, you often need to setup an
 
 To get this up and running, you only need to adjust your $NUXEO_HOME/bin/nuxeo.conf file to reflect this setup.
 
-```
+{{#> panel type='code' heading='$NUXEO_HOME/bin/nuxeo.conf'}}
+
+```bash
 ...
 
 # Mail settings (for notifications)
@@ -66,6 +68,8 @@ mail.transport.port=25000   # Adjust with FakeSMTP configuration
 
 ...
 ```
+
+{{/panel}}
 
 &nbsp;
 

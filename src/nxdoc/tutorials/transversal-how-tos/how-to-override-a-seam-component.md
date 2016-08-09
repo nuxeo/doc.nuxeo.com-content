@@ -89,7 +89,7 @@ The main steps to override a Seam component are:
 
 You should get a class structured like below:
 
-```
+```java
 package org.nuxeo.sample.howto;
 
 import org.jboss.seam.annotations.Install;

@@ -453,7 +453,7 @@ A content view is a notion to define all the elements needed to get a list of it
 
 The Nuxeo Content View framework makes it possible to define such an object, by registering content views to the service. Here is a sample contribution, that will display the children of the current document:
 
-```
+```html/xml
 <extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
   point="contentViews">
 
@@ -545,7 +545,7 @@ This kind of core query can also perform a more complex form of query, using a d
 
 Here is an example of such a registration:
 
-```
+```html/xml
 <extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
   point="contentViews">
 
@@ -610,7 +610,7 @@ The&nbsp;`fixedPart` element also accepts attributes to better control its behav
 
 Note that when using an Elasticsearch page provider you can use [NXQL hints](https://doc.nuxeo.com/display/NXDOC/NXQL#NXQL-ElasticsearchNXQLHints) inside predicates like this:
 
-```
+```xml
 <predicate hint="ES: INDEX(dc:title,dc:description)" parameter="dc:title" operator="FULLTEXT">
   <field schema="advanced_search" name="fulltext_all"/>
 </predicate>
@@ -629,7 +629,7 @@ The searchDocumentType element is an alternative way to define the search docume
 
 Sample usage:
 
-```
+```xml
 <contentView name="myContentView">
   <coreQueryPageProvider>
     <property name="coreSession">#{documentManager}</property>
@@ -652,7 +652,7 @@ The `waitForExecutionSentence` element can also be used to customize the text pr
 
 Sample declaration:
 
-```
+```xml
 <contentView name="myContentView">
   <waitForExecution>true</waitForExecution>
   <waitForExecutionSentence>
@@ -693,7 +693,7 @@ The `searchDocument` variable can be used in EL expressions to bind the page siz
 
 Sample usage:
 
-```
+```html/xml
 <contentView name="myContentView">
   <coreQueryPageProvider>
     <property name="coreSession">#{documentManager}</property>
@@ -717,7 +717,7 @@ The `searchDocument` element can be filled on a content view using an EL express
 
 Sample usage, showing how to add a clause to the search depending on title set on the current document (will display non deleted document with the same title):
 
-```
+```html/xml
 <contentView name="sampleContentViewWithCustomSearchDocument">
   <searchDocument>#{currentDocument}</searchDocument>
   <coreQueryPageProvider>
@@ -741,7 +741,7 @@ The `resultColumns` element can be filled on a content view using an EL expressi
 
 Sample usage, showing how to reuse selected columns set on the search document model already defined for filtering:
 
-```
+```html/xml
 <contentView name="myContentView">
   [...]
   <resultColumns>
@@ -757,7 +757,7 @@ The `resultLayout` element can be filled on a content view using an EL expressio
 
 Sample usage, showing how to reuse the selected result layout set on the search document model already defined for filtering:
 
-```
+```xml
 <contentView name="myContentView">
   [...]
   <resultLayout>
@@ -770,7 +770,7 @@ Sample usage, showing how to reuse the selected result layout set on the search 
 
 Additional rendering information can also be set, to be used by templates when rendering the content view:
 
-```
+```html/xml
 <contentView name="CURRENT_DOCUMENT_CHILDREN">
   <title>label.current.document.children</title>
   <translateTitle>true</translateTitle>
@@ -836,7 +836,7 @@ It is possible to define content views on a document type. This makes it easier 
 
 Here is the default configuration of content views for Nuxeo folderish documents:
 
-```
+```html/xml
 <type id="Folder">
   <label>Folder</label>
   ...

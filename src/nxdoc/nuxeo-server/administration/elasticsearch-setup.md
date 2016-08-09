@@ -635,7 +635,7 @@ The default mapping is located in the `${NUXEO_HOME}/templates/common-base/nxser
 
 2.  In this custom template create a `nxserver/config/elasticsearch-myapp-config.xml.nxftl` file and override the mapping contribution.
 
-    ```
+    ```xml
     <component name="org.nuxeo.elasticsearch.myapp">
       <require>org.nuxeo.elasticsearch.defaultConfig</require>
       <extension target="org.nuxeo.elasticsearch.ElasticSearchComponent"
@@ -696,7 +696,7 @@ To understand why a document is not present in search results or not indexed, yo
 
 Open at the `lib/log4j.xml` file and uncomment the ELASTIC section:
 
-```
+```xml
       <appender name="ELASTIC" class="org.apache.log4j.FileAppender">        
         <errorHandler class="org.apache.log4j.helpers.OnlyOnceErrorHandler" />
         <param name="File" value="${nuxeo.log.dir}/elastic.log" />
@@ -740,7 +740,7 @@ curl -XGET 'localhost:9200/nuxeo/_analyze?field=ecm:path.children&pretty' -d 'wo
 
 This can be done using a customized Luke tool and looking at the Lucene index level, or you can use the aggregates:
 
-```
+```bash
 # view indexed tokens for dc:title.fulltext of document 3d50118c-7472-4e99-9cc9-321deb4fe053
 curl -XGET 'localhost:9200/nuxeo/doc/_search?search_type=count&pretty' -d'{
  "query" : {"ids" : { "values" : ["3d50118c-7472-4e99-9cc9-321deb4fe053"] }},

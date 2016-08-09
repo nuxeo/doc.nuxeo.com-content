@@ -165,7 +165,7 @@ Available since 7.1.
 
 Let's add a new picture conversions called&nbsp;`Large` that will resize the picture to `800px`&nbsp;max.
 
-```
+```xml
  <extension target="org.nuxeo.ecm.platform.picture.ImagingComponent"
   point="pictureConversions">
 
@@ -197,7 +197,7 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
 
 1.  Contribute an XML extension to register a command line that will watermark the image:
 
-    ```
+    ```xml
     <extension
         target="org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent"
         point="command">
@@ -213,7 +213,7 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
 
 2.  Contribute an XML extension to register a converter that uses our new&nbsp;`watermarkWithText` command line:
 
-    ```
+    ```xml
     <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"
       point="converter">
       <converter name="watermarkWithText"
@@ -226,6 +226,8 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
     ```
 
 3.  <span style="line-height: 21.58px;">Create a chain that will be used for the picture conversion, getting the text from the&nbsp;</span> `pictureDocument` <span style="line-height: 21.58px;">&nbsp;and call the registered `watermarkWithText` converter to watermark the image. Here, for the example, we watermark the title of the document on the image:</span>
+
+    {{#> panel type='code' heading='WatermarkChain'}}
 
     ```
     - Blob.RunConverter:
@@ -243,9 +245,10 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
           yOffset: "0"
     ```
 
+    {{/panel}}
 4.  Add a new picture conversion that will watermark the image:
 
-    ```
+    ```xml
     <extension target="org.nuxeo.ecm.platform.picture.ImagingComponent"
       point="pictureConversions">
 
@@ -264,6 +267,8 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
 5.  If you need to open a&nbsp;`CoreSession` to retrieve a document, for instance the parent document which will hold the watermark text, you will need two chains, one opening a Transaction / CoreSession, and another one doing the watermarking.
     1.  First, create a chain that will retrieve the text, and put it in the&nbsp;`Context`:
 
+        {{#> panel type='code' heading='GetWatermarkTextChain'}}
+
         ```
         - Blob.Push
         - Auth.LoginAs: {}
@@ -275,7 +280,10 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
         - Blob.Pop
         ```
 
+        {{/panel}}
     2.  Now, we need the chain that will be used for the picture conversion, getting the text from the&nbsp;`Context` and call a custom operation that will watermark the image:
+
+        {{#> panel type='code' heading='WatermarkChain'}}
 
         ```
         - Context.RunFileOperation:
@@ -286,6 +294,8 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
         - WatermarkOperation:
             watermarkText: "@{Context[\"watermarkText\"]}"
         ```
+
+        {{/panel}}
 
 ## Filtering Picture Conversions
 
@@ -307,7 +317,7 @@ Let's say we want to execute the previous&nbsp;`Watermark` picture conversion on
 
 1.  First, contribute the filters:
 
-    ```
+    ```xml
     <extension target="org.nuxeo.ecm.platform.actions.ActionService"
       point="filters">
       <filter id="grantMyCompany">
@@ -325,7 +335,7 @@ Let's say we want to execute the previous&nbsp;`Watermark` picture conversion on
 
 2.  Then associate the filters to the picture conversion by&nbsp;updating the \{{Watermark}} picture conversion contribution:
 
-    ```
+    ```xml
     <extension target="org.nuxeo.ecm.platform.picture.ImagingComponent"
       point="pictureConversions">
 

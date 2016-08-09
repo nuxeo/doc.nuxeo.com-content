@@ -134,7 +134,7 @@ You also have a new **User Registration** tab in the **Admin** tab.
 
 ### Setting Up Email Sending
 
-The Nuxeo Platform User Registration add-on sends email to the invited user with his credentials. So your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='setup-best-practices'}}).
+The Nuxeo Platform User Registration add-on sends email to the invited user with his credentials. So your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='setup-best-practices#setup-mail'}}).
 
 ### Global Configuration
 
@@ -148,8 +148,8 @@ Possible configuration options are:
 
 The user registration process takes three steps:
 
-1.  A user with Manage everything right [invite]({{page}}) one or several persons to access a workspace (or another type of space).
-2.  The administrators of the application [review this invitation]({{page}}) and approve or reject it.
+1.  A user with Manage everything right [invite](#inviting-users) one or several persons to access a workspace (or another type of space).
+2.  The administrators of the application [review this invitation](#managing-pending-invitations) and approve or reject it.
 3.  If the invitation has been accepted by the administrators, an email is sent the invited user(s) so he validates his invitation.
     If the invitation has been rejected, it is canceled.
 
@@ -241,7 +241,7 @@ The user registration contributes to the `nuxeo-invite` and `nuxeo-webengine-inv
 
 ### Default Configuration of the User Registration
 
-```
+```xml
 <extension target="org.nuxeo.ecm.user.registration.UserRegistrationService"
              point="configuration">
     <configuration merge="true">

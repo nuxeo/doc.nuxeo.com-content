@@ -58,7 +58,7 @@ Some default document views present [content views]({{page page='content-views'}
 
 A `category` has been added to make the distinction between the different views, here is a sample configuration:
 
-```
+```xml
 <type id="Workspace">
   [...]
   <contentViews category="content">

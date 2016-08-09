@@ -99,7 +99,7 @@ According to the mimetype of the file you try to import, a specific plugin will 
 
 So, to create a document of your own type that, you have to set the&nbsp;`docType` attribute when overwriting the default contribution:
 
-```
+```xml
 <require>org.nuxeo.ecm.platform.filemanager.service.FileManagerService.Plugins</require>
 
 <extension target="org.nuxeo.ecm.platform.filemanager.service.FileManagerService" point="plugins">

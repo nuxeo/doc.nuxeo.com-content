@@ -54,7 +54,7 @@ This listener is not thread-safe: timing will be meaningful only in a controlled
 
 To activate it, add the following configuration to the `$SERVER/lib/log4j.xml` configuration:
 
-```
+```xml
 <category name="org.nuxeo.ecm.platform.ui.web.rest.JSFDebugPhaseListener">
   <priority value="DEBUG" />
 </category>
@@ -79,7 +79,7 @@ Tags are included inside each other: a given tag timing will show this tag proce
 
 To activate it, add the following configuration to the `$SERVER/lib/log4j.xml` configuration:
 
-```
+```xml
 <category name="org.nuxeo.ecm.platform.ui.web.util.FaceletDebugTracer">
   <priority value="DEBUG" />
 </category>
@@ -87,7 +87,7 @@ To activate it, add the following configuration to the `$SERVER/lib/log4j.xml` c
 
 Also, you have to specify some minimal threshold for this timer to show a log on the server, so that it is easier to show debug logs for the slowest rendering. The following contribution, named `enable-debug-jsf-tags-config.xml`, can be placed inside the `$SERVER/nxserver/config` directory:
 
-```
+```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.platform.enable.jsf.debug.tags.config">
 
@@ -122,7 +122,7 @@ Slow page rendering can be linked to heavy filtering processing on actions and/o
 
 To activate it, add the following configuration to the `$SERVER/lib/log4j.xml` configuration:
 
-```
+```xml
 <category name="org.nuxeo.ecm.platform.actions.ActionService">
   <priority value="DEBUG" />
 </category>
@@ -130,7 +130,7 @@ To activate it, add the following configuration to the `$SERVER/lib/log4j.xml` c
 
 Also, you have to specify some minimal threshold for this timer to show a log on the server, so that it is easier to show debug logs for the slowest rendering. The following contribution, named `enable-debug-jsf-actions-config.xml`, can be placed inside the `$SERVER/nxserver/config` directory:
 
-```
+```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.platform.enable.jsf.debug.actions.config">
 

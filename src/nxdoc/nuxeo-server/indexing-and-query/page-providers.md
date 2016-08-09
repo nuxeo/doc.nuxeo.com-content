@@ -184,7 +184,7 @@ Page providers defined inside content views are also registered on the `PageProv
 
 Here is a sample page provider definition:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.query.api.PageProviderService"
   point="providers">
 
@@ -207,7 +207,7 @@ This definition is identical to the one within a content view, except it cannot 
 
 A typical usage of this page provider would be:
 
-```
+```xml
 PageProviderService ppService = Framework.getService(PageProviderService.class);
 Map<String, Serializable> props = new HashMap<String, Serializable>();
 props.put(CoreQueryDocumentPageProvider.CORE_SESSION_PROPERTY,
@@ -223,7 +223,7 @@ Here you can see that the page provider properties (needed for the query to be e
 
 A typical usage of this page provider, referenced in a content view, would be:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
   point="contentViews">
 
@@ -254,7 +254,7 @@ The `<coreQueryPageProvider>` element makes it possible to answer to most common
 
 Here is a sample example of a custom page provider configuration:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
   point="contentViews">
 
@@ -303,7 +303,7 @@ list.add("\"Art/Architecture\", \"Art/Culture\"");
 
 And setting quoteParameters to false:
 
-```
+```xml
 <genericPageProvider class="org.nuxeo.ecm.platform.query.nxql.CoreQueryAndFetchPageProvider"
                      name="searchWithInOperatorAndQueryParams">
   <property name="searchAllRepositories">true</property>
@@ -329,7 +329,7 @@ SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation' AND ecm:isChe
 
 By setting quoteParameters to false:
 
-```
+```xml
 <genericPageProvider class="org.nuxeo.ecm.platform.query.nxql.CoreQueryAndFetchPageProvider" name="testPP">
   <property name="searchAllRepositories">true</property>
   <pattern quoteParameters="false">
@@ -341,7 +341,7 @@ By setting quoteParameters to false:
 
 And defining a named parameter date:
 
-```
+```xml
 <operation id="Repository.PageProvider">
   <param type="string" name="language">NXQL</param>
   <param type="properties" name="namedParameters">expr:mydate=@{CurrentDate}</param>

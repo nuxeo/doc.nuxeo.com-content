@@ -350,7 +350,7 @@ Directory references leverage two common ways of string relationship in LDAP dir
 
 The static reference strategy is to apply when a multi-valued attribute stores the exhaustive list of distinguished names of reference entries, for example the uniqueMember of the `groupOfUniqueNames` object.
 
-```
+```html/xml
 <ldapReference field="members" directory="userDirectory"
   staticAttributeId="uniqueMember" />
 
@@ -362,7 +362,7 @@ The `staticAttributeId` attribute contains directly the value which can be read 
 
 The dynamic attribute strategy is used when a potentially multi-value attribute stores a LDAP URL intensively, for example the `memberURL`'s attribute of the `groupOfURL` object class.
 
-```
+```html/xml
 <ldapReference field="members" directory="userDirectory"
   forceDnConsistencyCheck="false"
   dynamicAttributeId="memberURL" />
@@ -375,7 +375,7 @@ The value contained in `dynamicAttributeId` looks like `ldap:///ou=groups,dc=exa
 
 The LDAP tree reference can be used to resolve children in the LDAP tree hierarchy.
 
-```
+```html/xml
 <ldapTreeReference field="children" directory="groupDirectory"
   scope="subtree" />
 
@@ -393,7 +393,7 @@ Edit is NOT IMPLEMENTED: modifications to this field will be ignored when saving
 
 Inverse references are defined with the following declarations:
 
-```
+```html/xml
 <references>
   <inverseReference field="groups" directory="groupDirectory"
     dualReferenceField="members" />

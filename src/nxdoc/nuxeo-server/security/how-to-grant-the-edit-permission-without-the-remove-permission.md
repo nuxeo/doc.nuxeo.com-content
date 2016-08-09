@@ -86,7 +86,7 @@ As described on the page [Managing Permissions]({{page space='userdoc' page='man
 
 1.  [Add a new contribution]({{page page='how-to-contribute-to-an-extension'}}) to remove the `Remove` permission from `Write` permission.
 
-    ```
+    ```xml
       <extension target="org.nuxeo.ecm.core.security.SecurityService"
         point="permissions">
         <permission name="Write">

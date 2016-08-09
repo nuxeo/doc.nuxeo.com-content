@@ -160,7 +160,7 @@ To achieve this you need to follow these steps:
 
 1\. Add the JARs of `nuxeo-webengine-gwt` and `nuxeo-distribution-tools` v. 1.1 classifier "all" to your project classpath. When using Maven, this can be done by the following POM fragment:
 
-```
+```xml
 <dependency>
   <groupId>org.nuxeo.ecm.webengine</groupId>
   <artifactId>nuxeo-webengine-gwt</artifactId>
@@ -177,7 +177,7 @@ To achieve this you need to follow these steps:
 
 2\. Add to `war/WEB-INF/web.xml` a filter as following:
 
-```
+```xml
 <filter>
   <display-name>WebEngine Authentication Filter</display-name>
   <filter-name>NuxeoAuthenticationFilter</filter-name>
@@ -278,7 +278,7 @@ For this you need to create a simple WebEngine module that expose the GWT applic
 
 If your are using a WebEngine Module you only need to override the abstract class: `org.nuxeo.ecm.webengine.gwt.GwtResource` and implement a `@GET` method to server the GWT application home page like:
 
-```
+```java
 @WebObject(type="myGwtApp")
 public class MyGwtApp extends GwtResource {
     @GET @Produces("text/html")
@@ -291,7 +291,7 @@ public class MyGwtApp extends GwtResource {
 
 You can do the same from a raw JAX-RS resource by integrating the method from `GwtResource` into your resource:
 
-```
+```java
     @GET
     @Path("{path:.*}")
     public Response getResource(@PathParam("path") String path) {
@@ -363,7 +363,7 @@ To know if you are in development you can use `GWT.isScript()` on the client sid
 
 You can also configure the prefix used for redirection and enabling tracing of the redirected requests (that will be printed in the Eclipse console). This can be configured into `war/WEB-INF/web.xml` by adding some parameters to `NuxeoLauncher` filter:
 
-```
+```xml
 <!-- enable redirected request content tracing -->
 <init-param>
   <param-name>redirectTraceContent</param-name>
@@ -380,7 +380,7 @@ If you want to trace only headers use "redirectTrace" instead of "redirectTraceC
 
 ## Example of a pom.xml
 
-```
+```xml
   <properties>
     <gwtVersion>2.0</gwtVersion>
     <gwt.module>org.your_gwt_module</gwt.module>

@@ -224,7 +224,7 @@ Value could be:
 
 {{#> callout type='info' }}
 
-More details about properties you can fetch here: [Document JSON and Extended Fields]({{page page='json-marshalling'}})
+More details about properties you can fetch here: [Document JSON and Extended Fields]({{page page='json-marshalling#document-json-extended-fields'}})
 
 {{/callout}}
 
@@ -244,7 +244,7 @@ depth: children
 
 {{#> callout type='info' }}
 
-More details about the control of the depth here: [Aggregating Marshallers and Avoiding Infinite Loops]({{page page='json-marshalling'}})
+More details about the control of the depth here: [Aggregating Marshallers and Avoiding Infinite Loops]({{page page='json-marshalling#aggregating-marshallers-infinite-loops'}})
 
 {{/callout}}
 

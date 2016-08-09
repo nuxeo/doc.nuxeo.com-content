@@ -128,7 +128,7 @@ To know how to apply features provided by the Nuxeo Marketplace add-ons on your 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-*   [undefined]({{page}})&nbsp;
+*   [undefined]()&nbsp;
 *   [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) &nbsp;
 *   [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}}) &nbsp;
 *   [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})

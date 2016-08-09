@@ -127,7 +127,9 @@ If you prefer you can find below the source of a PostgreSQL function that can be
 *   to change the filtering done on audit record to filter,
 *   to match the syntax of other databases than PostgreSQL.
 
-```
+{{#> panel type='code' heading='nx_audit_purge for PostgreSQL'}}
+
+```sql
 CREATE OR REPLACE FUNCTION nx_audit_purge(olderThan character varying)
   RETURNS int AS
 $BODY$
@@ -182,9 +184,13 @@ ALTER FUNCTION nx_audit_purge(character varying) OWNER TO nuxeo;
 
 ```
 
+{{/panel}}
+
 Here is the same script for SQL Server:
 
-```
+{{#> panel type='code' heading='nx_audit_puge for SQL Server'}}
+
+```sql
 ALTER PROCEDURE [dbo].[nx_audit_purge]
   @olderThan varchar(11)
 AS
@@ -237,9 +243,13 @@ BEGIN
 END 
 ```
 
+{{/panel}}
+
 Here for Oracle:
 
-```
+{{#> panel type='code' heading='nx_audit_puge for Oracle'}}
+
+```sql
 CREATE GLOBAL TEMPORARY TABLE audit_purge_tmp (
   log_fk NUMBER(38),
   info_fk NUMBER(19)
@@ -285,6 +295,8 @@ BEGIN
   dbms_output.put_line('Total lines cleanup: '|| total);
 END;
 ```
+
+{{/panel}}
 
 &nbsp;
 

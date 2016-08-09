@@ -277,7 +277,7 @@ By default, the relations on the document in the workspace are not duplicated on
 
 To enable this duplication of relations, you need to add the following contribution to the Platform:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.core.event.EventServiceComponent"
     point="listener">
   <listener name="publishRelationsListener" async="false" postCommit="false"

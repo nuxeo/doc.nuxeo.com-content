@@ -160,7 +160,7 @@ This operation has the following parameters:
 *   **Root&nbsp;** **Path**: the root name of the structure of Nuxeo Platform that will be exported.
 *   **Query**: optional parameter. By default the query called by the exporter is:
 
-    ```
+    ```sql
     SELECT * FROM Document ecm:mixinType !='HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState !='deleted'
     ```
 
@@ -168,7 +168,7 @@ This operation has the following parameters:
 
 For example if you want to export all the documents even the ones in &ldquo;deleted&rdquo; state you can define this query in the field of the query parameter.
 
-```
+```sql
 SELECT * FROM Document WHERE ecm:mixinType !='HiddenInNavigation' AND ecm:isCheckedInVersion = 0
 ```
 

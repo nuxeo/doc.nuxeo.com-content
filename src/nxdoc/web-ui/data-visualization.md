@@ -183,7 +183,7 @@ Under the hood each query is built as a nested aggregation with a fixed number o
 
 For example, by using our `nuxeo-workflow-data` element with the following attributes:
 
-```
+```xml
 <nuxeo-workflow-data workflow="worflowModelName"
                      grouped-by="action"
                      with-ranges='{
@@ -198,7 +198,7 @@ For example, by using our `nuxeo-workflow-data` element with the following attri
 
 Our element would produce a request like this:
 
-```
+```js
 {
   query: { bool: { must: [...] },
   aggs: {
@@ -244,7 +244,7 @@ The quickest way to start building a dashboard is to use the Yeoman generator to
 
 1.  Generate a `nuxeo-sample` dashboard element:
 
-    ```
+    ```bash
     mkdir -p nuxeo-sample-dashboard && cd $_
     yo polymer:seed nuxeo-sample-dashboard
     ```
@@ -253,14 +253,16 @@ The quickest way to start building a dashboard is to use the Yeoman generator to
 
 2.  Once the&nbsp;`nuxeo-sample` element is generated you can install further client side dependencies. In this case you need the Nuxeo Data Visualization Elements and a charting library to produce charts for your dashboard:
 
-    ```
+    ```bash
     bower install --save nuxeo/nuxeo-dataviz-elements
     bower install --save GoogleWebComponents/google-chart
     ```
 
 3.  Yeoman scaffolded a sample custom element so you now need to replace this sample content with your own. In this example build a simple chart with the total number of Serial Review workflows started by each user:
 
-    ```
+    {{#> panel type='code' heading='nuxeo-dataviz-sample.html'}}
+
+    ```xml
     <dom-module id="nuxeo-dataviz-sample">
       <template>
 
@@ -297,9 +299,13 @@ The quickest way to start building a dashboard is to use the Yeoman generator to
     </script>
     ```
 
+    {{/panel}}
+
     Each Polymer element usually includes a usage demo which you can edit to see and showcase your custom element in action:
 
-    ```
+    {{#> panel type='code' heading='demo/index.html'}}
+
+    ```xml
     <html>
       <head>
         ...
@@ -315,9 +321,10 @@ The quickest way to start building a dashboard is to use the Yeoman generator to
     </html>
     ```
 
+    {{/panel}}
 4.  To checkout your element we recommend using [Polyserve](https://github.com/PolymerLabs/polyserve), a&nbsp;simple web server for using bower components locally, which you can install with:
 
-    ```
+    ```bash
     npm install -g polyserve
     polyserve -p 3000
     ```

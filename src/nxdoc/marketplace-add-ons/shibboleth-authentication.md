@@ -145,9 +145,9 @@ After you installed the package, a new **Shib Goups** tab is available in the **
 2.  Deploy it into your Tomcat or JBoss instance, in the `bundles` directory.
 3.  Add a new file named `shibboleth-config.xml` in the `config/` directory of your server. This file defines the login and logout URLs, the mapping between the user metadata and the headers names.
     *   `$NUXEO/nxserver/config` for a Tomcat distribution
-    *   `$NUXEO/server/default/deploy/nuxeo.ear/config` for a JBoss distribution
+    *   `$NUXEO/server/default/deploy/nuxeo.ear/config` for a JBoss distribution{{#> panel type='code' heading='shibboleth-config.xml'}}
 
-    ```
+    ```html/xml
     <?xml version="1.0"?>
     <component name="org.nuxeo.ecm.platform.login.shibboleth.config">
     <extension
@@ -169,6 +169,8 @@ After you installed the package, a new **Shib Goups** tab is available in the **
 
     ```
 
+    {{/panel}}
+
 ## Configuration
 
 ### Overriding the Default Authentication Chain
@@ -177,7 +179,9 @@ To enable the Shibboleth authentication, you need to add the Shibboleth plug-in 
 
 To override the default authentication chain in the Nuxeo Platform, add a new file named `authentication-chain-config.xml` in the `config/` directory of your server.
 
-```
+{{#> panel type='code' heading='authentication-chain-config.xml'}}
+
+```html/xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.platform.your.authentication.chain.config">
   <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
@@ -198,6 +202,8 @@ To override the default authentication chain in the Nuxeo Platform, add a new fi
 
 ```
 
+{{/panel}}
+
 **Note**: If you already defined your own authentication chain in any of your config or contrib files, you just need to add the `SHIB_AUTH` plug-in into your own chain.
 
 ### Anonymous Authentication Compatibility
@@ -208,7 +214,9 @@ For that, the `org.nuxeo.ecm.platform.shibboleth.auth.exceptionhandling.Shibbole
 
 To activate it, add a new file named `login-anonymous-config.xml` in the `config/` directory of your server.
 
-```
+{{#> panel type='code' heading='login-anonymous-config.xml'}}
+
+```html/xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.platform.your.anonymous.user.config">
   <extension target="org.nuxeo.ecm.platform.usermanager.UserService"
@@ -226,11 +234,13 @@ To activate it, add a new file named `login-anonymous-config.xml` in the `config
 
 ```
 
+{{/panel}}
+
 ### Full Sample Configuration File
 
 Here is a sample configuration file containing everything you need to set up the Shibboleth authentication module:
 
-```
+```html/xml
 <component name="sample.shibboleth.config">
 
   <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
