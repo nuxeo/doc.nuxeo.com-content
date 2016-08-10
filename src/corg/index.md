@@ -1,5 +1,7 @@
 ---
 title: Nuxeo Core Developer Guide
+slug: index
+no_side_menu: true
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
@@ -12,77 +14,77 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/B4BH'
     source_link: /display/CORG/Nuxeo+Core+Developer+Guide
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 15:05'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-05 16:18'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-28 17:17'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-28 15:53'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-28 15:53'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-05 11:33'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-05 10:04'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-05 16:03'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-05 16:03'
         message: Added downloadable PDF
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 16:32'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 16:11'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 16:11'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 16:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 16:04'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 16:00'
         message: ''

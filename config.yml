@@ -2,8 +2,20 @@ default:
     site:
         spaces:
             -
+                space_path: connect
+                space_name: Nuxeo Online Services Documentation
+            -
+                space_path: corg
+                space_name: Nuxeo Core Developer Guide
+            -
+                space_path: glos
+                space_name: Nuxeo Glossary of Terms
+            -
                 space_path: idedoc
                 space_name: Documentation Center for Nuxeo Platform IDEs
+            -
+                space_path: studio
+                space_name: Nuxeo Online Services
 
 development:
     isDev: true

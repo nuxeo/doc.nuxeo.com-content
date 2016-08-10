@@ -1,6 +1,6 @@
 ---
 title: Nuxeo Marketplace
-redirect: studionuxeo-marketplace
+redirect: /studio/nuxeo-marketplace
 redirect_source: 'Studio:Nuxeo Marketplace'
 confluence:
     ajs-parent-page-id: '4687017'
@@ -14,7 +14,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/SYHjAQ'
     source_link: /display/CONNECT/Nuxeo+Marketplace
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-12 09:27'
         message: ''

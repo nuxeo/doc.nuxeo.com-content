@@ -53,6 +53,12 @@ description: A description for search engines and social media to consume.
 Content of page goes here.
 ```
 
+#### Optional frontmatter
+- `draft: true` - Will show as normal in development but will be removed in production
+- `hidden: true` - Hidden from the hierarchy menu
+- `redirect: /redirect/location` - Adds a redirect to the location specified
+- `no_side_menu: true` - Hides the hierarchy menu for that page
+
 #### Markdown and Handlebars
 ##### Excerpts Definition
 Excerpts are to reuse content within the same page. In contrast Multi-excerpts can be reused in any page.
