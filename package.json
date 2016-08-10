@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "node-yaml-config": "0.0.4",
-    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v0.2.1"
+    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v0.2.3"
   },
   "devDependencies": {
     "browser-sync": "^2.12.8",
@@ -28,7 +28,8 @@
     "verify": "node verify | faucet",
     "start": "npm run metalsmith",
     "poststart": "npm run copy_assets && npm run verify",
-    "dev": "npm install && npm run browser_sync & NODE_ENV=development nodemon --exec 'npm start && npm run copy_module_assets && browser-sync reload'",
+    "predev": "npm install",
+    "dev": "npm run browser_sync & NODE_ENV=development nodemon --exec 'npm start && npm run copy_module_assets && browser-sync reload'",
     "copy_assets": "cp -r ./assets ./site",
     "copy_module_assets": "cp -r ./node_modules/nuxeo-docs-builder/assets/* ./site/assets",
     "metalsmith": "node .",
