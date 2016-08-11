@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "node-yaml-config": "0.0.4",
-    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v0.2.3"
+    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v0.3.2"
   },
   "devDependencies": {
     "browser-sync": "^2.12.8",
