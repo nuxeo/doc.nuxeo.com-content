@@ -27,304 +27,304 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/kwBu'
     source_link: /display/NXDOC/How+to+create+an+empty+bundle
 history:
-    - 
+    -
         author: Florent Guillaume
         date: '2015-01-12 10:21'
         message: igration of unmigrated content due to installation of a new plugi
         version: '60'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-01-12 10:21'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '59'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-01-12 10:21'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '58'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-01-12 10:21'
         message: better parent in pom
         version: '57'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-01-11 02:29'
         message: fix link
         version: '56'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-19 15:42'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '55'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-19 15:42'
         message: ''
         version: '54'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-19 15:42'
         message: ''
         version: '53'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-18 17:07'
         message: ''
         version: '52'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-03 21:00'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '51'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-03 21:00'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '50'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-03 21:00'
         message: ''
         version: '49'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-03 20:59'
         message: ''
         version: '48'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-03 20:58'
         message: ''
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-13 18:02'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '46'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-13 18:02'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-13 18:02'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-13 18:02'
         message: ''
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-13 18:02'
         message: ''
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-13 18:01'
         message: ''
         version: '41'
-    - 
+    -
         author: Benjamin Jalon
         date: '2011-12-07 15:30'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '40'
-    - 
+    -
         author: Benjamin Jalon
         date: '2011-12-07 15:30'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '39'
-    - 
+    -
         author: Benjamin Jalon
         date: '2011-12-07 15:30'
         message: Migrated to Confluence 4.0
         version: '38'
-    - 
+    -
         author: Benjamin Jalon
         date: '2011-12-07 15:30'
         message: ''
         version: '37'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-07-29 10:09'
         message: the maven command interactions
         version: '36'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2011-07-19 15:54'
         message: >-
             changed from "bundles" to "plugins" which is the recommended
             location for custom plugins
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-05 19:28'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-05 19:24'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-05 17:42'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-05 17:32'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-05 17:31'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-05 15:04'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-05 10:14'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-04 18:14'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-04 17:07'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-04 15:39'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-04 15:03'
         message: ''
         version: '24'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-05-03 11:35'
         message: ''
         version: '23'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-05-02 18:56'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-02 18:06'
         message: reorganized steps
         version: '21'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-29 10:35'
         message: ''
         version: '20'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-26 16:49'
         message: ''
         version: '19'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-26 16:38'
         message: ''
         version: '18'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-26 16:30'
         message: ''
         version: '17'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-26 15:57'
         message: ''
         version: '16'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-26 12:36'
         message: ''
         version: '15'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-22 18:01'
         message: ''
         version: '14'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-22 12:18'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-22 12:05'
         message: ''
         version: '12'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-22 11:58'
         message: ''
         version: '11'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-22 11:47'
         message: ''
         version: '10'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-22 11:04'
         message: ''
         version: '9'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-22 10:40'
         message: ''
         version: '8'
-    - 
+    -
         author: Benjamin Jalon
         date: '2011-04-22 03:01'
         message: ''
         version: '7'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-21 19:12'
         message: ''
         version: '6'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-21 18:53'
         message: ''
         version: '5'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-21 18:34'
         message: ''
         version: '4'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-21 14:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-21 12:10'
         message: ''
         version: '2'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-21 11:34'
         message: ''
@@ -345,7 +345,7 @@ This is the very first recipe of this cookbook and it will be the basis for the 
 
 &nbsp;
 
-{{! unmigrated-inline-wiki-markup: {multi-excerpt:name=recipe-tip}{tip:title=General remarks} * This recipe is not specific to a system or an IDE. You will have to adapt it to your needs. The sole obligation is to use Maven in a console. But, even this part, with experience, could be fitted to your IDE habits if you have any. * You'll find the most frequent and common errors and problems detailed and resolved in the [FAQ|KB:]. * For any remark about this recipe or about this cookbook, don't hesitate to leave us a comment on this page. {tip} {multi-excerpt} }}
+{{!-- unmigrated-inline-wiki-markup: {multi-excerpt:name=recipe-tip}{tip:title=General remarks} * This recipe is not specific to a system or an IDE. You will have to adapt it to your needs. The sole obligation is to use Maven in a console. But, even this part, with experience, could be fitted to your IDE habits if you have any. * You'll find the most frequent and common errors and problems detailed and resolved in the [FAQ|KB:]. * For any remark about this recipe or about this cookbook, don't hesitate to leave us a comment on this page. {tip} {multi-excerpt} --}}
 
 &nbsp;
 
@@ -738,7 +738,7 @@ It contains a list of files used to define various elements of your component. I
 
 &nbsp;
 
-{{! unmigrated-inline-wiki-markup: {multi-excerpt:name=manifest-format-warning}{warning:title=Formatting} The trickiest and most important part of a "MANIFEST.MF" file is its formatting. One mistake and the OSGi context can't be correctly started, leading to unexpected issues and an unreachable bundle. Here are the three formatting rules to respect: # Each property name: #* begins at the first character of the line; #* ends with a colon without space between the name of the property and the colon itself. # Each value: #* must be preceded by a space; #* ends with a "end of line" with eventually a comma before it. # There MUST be an EMPTY LINE at the END OF THE FILE. {warning}{multi-excerpt} }}
+{{!-- unmigrated-inline-wiki-markup: {multi-excerpt:name=manifest-format-warning}{warning:title=Formatting} The trickiest and most important part of a "MANIFEST.MF" file is its formatting. One mistake and the OSGi context can't be correctly started, leading to unexpected issues and an unreachable bundle. Here are the three formatting rules to respect: # Each property name: #* begins at the first character of the line; #* ends with a colon without space between the name of the property and the colon itself. # Each value: #* must be preceded by a space; #* ends with a "end of line" with eventually a comma before it. # There MUST be an EMPTY LINE at the END OF THE FILE. {warning}{multi-excerpt} --}}
 
 &nbsp;
 
@@ -790,7 +790,7 @@ The most important difference between this content and the one declared in the "
 
 &nbsp;
 
-{{! unmigrated-inline-wiki-markup: {multi-excerpt:name=bundle-deployment-steps} # Build your bundle, using the following Command Line Interface (CLI): {code:xml} $ mvn install {code} In the "/target" folder of your project, you get a JAR file whose name if formed like that: artifactId-1.0-SNAPSHOT.jar. # Copy your brand new jar into the sub-folder "nxserver/plugins/" of your nuxeo application's root folder: #* under Windows, assuming that the nuxeo-distribution is installed at the location "C:\Nuxeo\", copy the jar in "C:\Nuxeo\nxserver\plugins\"; #* under Linux, assuming that the nuxeo-distribution is installed at the location "/opt/nuxeo", copy the jar in "/opt/nuxeo/nxserver/plugins". # Start your server using the "./nuxeoctl console" command {tip}You can check the dedicated [Start and stop page|NXDOC:Server start and stop] of the technical documentation for more information about the different ways to start your server).{tip} # Check that your bundle is correctly deployed: check if its SymbolicName (as configured in the "/src/main/resources/META-INF") appears in the logs. The logs are displayed: #* in the console if you started your server using the "./nuxeoctl console" #* in the file "server.log" located in the "log" folder of your Nuxeo server root folder. This name is found in the list of the bundles deployed by Nuxeo in the very first lines of the logs, just after the line ended by " Preprocessing order:".{multi-excerpt} }}
+{{!-- unmigrated-inline-wiki-markup: {multi-excerpt:name=bundle-deployment-steps} # Build your bundle, using the following Command Line Interface (CLI): {code:xml} $ mvn install {code} In the "/target" folder of your project, you get a JAR file whose name if formed like that: artifactId-1.0-SNAPSHOT.jar. # Copy your brand new jar into the sub-folder "nxserver/plugins/" of your nuxeo application's root folder: #* under Windows, assuming that the nuxeo-distribution is installed at the location "C:\Nuxeo\", copy the jar in "C:\Nuxeo\nxserver\plugins\"; #* under Linux, assuming that the nuxeo-distribution is installed at the location "/opt/nuxeo", copy the jar in "/opt/nuxeo/nxserver/plugins". # Start your server using the "./nuxeoctl console" command {tip}You can check the dedicated [Start and stop page|NXDOC:Server start and stop] of the technical documentation for more information about the different ways to start your server).{tip} # Check that your bundle is correctly deployed: check if its SymbolicName (as configured in the "/src/main/resources/META-INF") appears in the logs. The logs are displayed: #* in the console if you started your server using the "./nuxeoctl console" #* in the file "server.log" located in the "log" folder of your Nuxeo server root folder. This name is found in the list of the bundles deployed by Nuxeo in the very first lines of the logs, just after the line ended by " Preprocessing order:".{multi-excerpt} --}}
 
 &nbsp;
 
