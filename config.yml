@@ -13,9 +13,9 @@ default:
         versions:
             -
                 label: FT
-                is_current_version: true
             -
                 label: LTS 2015
+                is_current_version: true
                 url_path: '710'
             -
                 label: '6.0'
