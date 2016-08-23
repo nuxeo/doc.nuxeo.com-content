@@ -18,107 +18,107 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/i4CyAQ'
     source_link: /display/NXDOC710/Nuxeo+Quota
 history:
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-24 12:43'
         message: ''
         version: '21'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-24 12:40'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-30 23:17'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-11 19:09'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-20 14:28'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-20 14:28'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-28 18:51'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-28 18:37'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-28 18:37'
         message: ''
         version: '13'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-28 18:16'
         message: ''
         version: '12'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-28 18:11'
         message: ''
         version: '11'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-28 18:03'
         message: ''
         version: '10'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-28 18:00'
         message: ''
         version: '9'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-28 17:54'
         message: ''
         version: '8'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-28 17:42'
         message: ''
         version: '7'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-28 17:09'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-28 17:08'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-28 17:07'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-27 20:43'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2012-09-11 18:12'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2012-09-11 18:12'
         message: ''
@@ -283,7 +283,7 @@ Only users with Manage everything permission can define the maximum size of a sp
 
     When the chosen quota is saved, the value is set and the maximum allowed size is displayed below the workspace's title.
 
-{{#> panel heading='Here is how the maximum size possible is calculated...'}} {{#> accordian heading='Here is how the maximum size possible is calculated...' closed='true'}}
+{{#> accordian heading='Here is how the maximum size possible is calculated...' closed='true'}}
 
 When you select a maximum size on a workspace and click on Save, a verification is done to check that the size you selected won't make the parent's quota be exceeded. Here is how it is calculated:
 
@@ -296,7 +296,7 @@ When you select a maximum size on a workspace and click on Save, a verification 
         This is repeated for all workspaces without maximum size, until the system can calculate a maximum size for each child of "The parent".
 3.  The system checks that the size you want to set on your workspace is not bigger than the difference between the parent's limit size and the sum of its children's.
 
-{{/accordian}} {{/panel}}
+{{/accordian}}
 
 &nbsp;
 
