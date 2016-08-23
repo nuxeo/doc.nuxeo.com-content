@@ -1,21 +1,21 @@
 ---
 title: Deleting Content
 labels:
-    - delete
     - trash
+    - delete
+    - lts2015-ok
     - last
-    - multiexcerpt
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Deleting+Content
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Deleting+Content'
-    page_id: '2392394'
-    shortlink: SoEk
-    shortlink_source: 'https://doc.nuxeo.com/x/SoEk'
-    source_link: /display/USERDOC/Deleting+Content
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Deleting+Content'
+    page_id: '29003020'
+    shortlink: DI26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/DI26AQ'
+    source_link: /display/USERDOC710/Deleting+Content
 history:
     - 
         author: Solen Guitter
@@ -159,7 +159,7 @@ To delete one or several documents, select them from the&nbsp;**Content** tab&nb
 
 You can also delete documents using right-click on document from the **Content** tab of the workspace.
 
-![]({{file name='right-click-menu.png' space='userdoc' page='editing-content'}} ?w=350,border=true)
+![]({{file name='right-click-menu.png' space='userdoc710' page='editing-content'}} ?w=350,border=true)
 
 ### Managing Deleted Documents
 
@@ -167,13 +167,13 @@ Users with "Manage everything" permissions can access the workspace's **Trash** 
 
 *   Restore documents by selecting them and clicking the **Restore** button.
     Documents are moved back to the **Content** tab of the workspace and available to users. They get the "project" life cycle state, even if their life cycle state before deletion was "approved".
-    ![]({{file name='trash-tab.png' space='userdoc' page='deleting-content'}} ?w=600,border=true)
+    ![]({{file name='trash-tab.png' space='userdoc710' page='deleting-content'}} ?w=600,border=true)
 *   Erase documents by selecting them and clicking the **Permanent delete** button.
-    Documents are permanently erased from the application. They cannot be restored.&nbsp;The&nbsp;[relations]({{page space='userdoc' page='editing-content#relations'}})&nbsp;to the deleted documents are deleted.
-    ![]({{file name='trash-tab.png' space='userdoc' page='deleting-content'}} ?w=600,border=true)
+    Documents are permanently erased from the application. They cannot be restored.&nbsp;The&nbsp;[relations]({{page space='userdoc710' page='editing-content#relations'}})&nbsp;to the deleted documents are deleted.
+    ![]({{file name='trash-tab.png' space='userdoc710' page='deleting-content'}} ?w=600,border=true)
 *   Empty the trash by clicking the corresponding button.
-    All deleted documents are permanently erased from the application. They cannot be restored.&nbsp;The&nbsp;[relations]({{page space='userdoc' page='editing-content#relations'}})&nbsp;to the deleted documents are deleted.
-    ![]({{file name='empty-trash.png' space='userdoc' page='deleting-content'}} ?w=500,h=179,border=true)
+    All deleted documents are permanently erased from the application. They cannot be restored.&nbsp;The&nbsp;[relations]({{page space='userdoc710' page='editing-content#relations'}})&nbsp;to the deleted documents are deleted.
+    ![]({{file name='empty-trash.png' space='userdoc710' page='deleting-content'}} ?w=500,h=179,border=true)
 
 {{! /multiexcerpt}}
 

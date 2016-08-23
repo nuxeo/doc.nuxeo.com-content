@@ -1,21 +1,23 @@
 ---
 title: Nuxeo Diff Pictures
+labels:
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Nuxeo+Diff+Pictures
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Diff+Pictures'
-    page_id: '26318218'
-    shortlink: ipWRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/ipWRAQ'
-    source_link: /display/NXDOC/Nuxeo+Diff+Pictures
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Nuxeo+Diff+Pictures'
+    page_id: '28475488'
+    shortlink: YICyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/YICyAQ'
+    source_link: /display/NXDOC710/Nuxeo+Diff+Pictures
 history:
     - 
         author: Solen Guitter
-        date: '2016-05-04 14:09'
+        date: '2016-05-04 14:10'
         message: ''
         version: '8'
     - 

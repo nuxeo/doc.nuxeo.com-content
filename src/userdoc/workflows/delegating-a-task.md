@@ -2,18 +2,18 @@
 title: Delegating a Task
 labels:
     - delegation
-    - multiexcerpt-include
+    - lts2015-ok
 confluence:
-    ajs-parent-page-id: '2392410'
+    ajs-parent-page-id: '29003030'
     ajs-parent-page-title: Workflows
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Delegating+a+Task
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Delegating+a+Task'
-    page_id: '16092383'
-    shortlink: 34z1
-    shortlink_source: 'https://doc.nuxeo.com/x/34z1'
-    source_link: /display/USERDOC/Delegating+a+Task
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Delegating+a+Task'
+    page_id: '29003014'
+    shortlink: Bo26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Bo26AQ'
+    source_link: /display/USERDOC710/Delegating+a+Task
 history:
     - 
         author: Manon Lumeau

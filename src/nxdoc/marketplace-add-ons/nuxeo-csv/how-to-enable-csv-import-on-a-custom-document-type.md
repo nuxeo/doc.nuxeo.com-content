@@ -11,29 +11,25 @@ details:
         topics: 'Document type, Nuxeo CSV'
 labels:
     - nuxeo-csv
-    - howto
+    - lts2015-ok
     - csv-importer-component
+    - howto
 confluence:
-    ajs-parent-page-id: '14255163'
+    ajs-parent-page-id: '28475534'
     ajs-parent-page-title: Nuxeo CSV
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: How+to+Enable+CSV+Import+on+a+Custom+Document+Type
     canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Enable+CSV+Import+on+a+Custom+Document+Type
-    page_id: '17794742'
-    shortlink: toYPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/toYPAQ'
-    source_link: /display/NXDOC/How+to+Enable+CSV+Import+on+a+Custom+Document+Type
+        https://doc.nuxeo.com/display/NXDOC710/How+to+Enable+CSV+Import+on+a+Custom+Document+Type
+    page_id: '28475818'
+    shortlink: qoGyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/qoGyAQ'
+    source_link: /display/NXDOC710/How+to+Enable+CSV+Import+on+a+Custom+Document+Type
 history:
     - 
-        author: Manon Lumeau
-        date: '2016-06-09 13:31'
-        message: ''
-        version: '16'
-    - 
         author: Frantz Fischer
-        date: '2016-04-13 10:18'
+        date: '2016-04-12 07:40'
         message: ''
         version: '15'
     - 

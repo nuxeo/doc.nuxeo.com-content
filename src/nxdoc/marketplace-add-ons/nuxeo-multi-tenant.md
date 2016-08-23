@@ -2,18 +2,18 @@
 title: Nuxeo Multi-Tenant
 labels:
     - multi-tenant
-    - excerpt-include
+    - content-review-lts2015
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Nuxeo+Multi-Tenant
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Multi-Tenant'
-    page_id: '14257328'
-    shortlink: sIzZ
-    shortlink_source: 'https://doc.nuxeo.com/x/sIzZ'
-    source_link: /display/NXDOC/Nuxeo+Multi-Tenant
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Nuxeo+Multi-Tenant'
+    page_id: '27604646'
+    shortlink: pjalAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/pjalAQ'
+    source_link: /display/NXDOC710/Nuxeo+Multi-Tenant
 history:
     - 
         author: Solen Guitter
@@ -36,7 +36,7 @@ history:
 
 ## Installation
 
-The Nuxeo Multi-tenant package requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin Center]({{page page='installing-a-new-package-on-your-instance'}}).
+The Nuxeo Multi-tenant package requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin Center]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}).
 
 After you installed it, a tab **Tenant isolation** is available in the Admin Center.
 

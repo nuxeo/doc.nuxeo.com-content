@@ -1,26 +1,26 @@
 ---
 title: Nuxeo Virtual Navigation
 labels:
-    - virtual-navigation
+    - lts2015-ok
     - virtual-navigation-component
-    - excerpt
+    - virtual-navigation
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Nuxeo+Virtual+Navigation
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Virtual+Navigation'
-    page_id: '20517205'
-    shortlink: VRE5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/VRE5AQ'
-    source_link: /display/NXDOC/Nuxeo+Virtual+Navigation
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Nuxeo+Virtual+Navigation'
+    page_id: '28475671'
+    shortlink: F4GyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/F4GyAQ'
+    source_link: /display/NXDOC710/Nuxeo+Virtual+Navigation
 history:
     - 
-        author: Ronan Daniellou
+        author: Anonymous
         date: '2015-11-18 14:48'
-        message: ''
+        message: oved description from "How to Add a New Virtual Navigation Entry
         version: '7'
     - 
         author: Solen Guitter
@@ -66,7 +66,7 @@ The Nuxeo Virtual Navigation add-on provides two navigation trees based on the S
 
 ## Installation
 
-The Nuxeo Virtual Navigation add-on requires no specific installation steps. It can be installed like any other package [from the Update Center or from the Marketplace]({{page page='installing-a-new-package-on-your-instance'}}).
+The Nuxeo Virtual Navigation add-on requires no specific installation steps. It can be installed like any other package [from the Update Center or from the Marketplace]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}).
 
 After it is installed, two new tabs are available in the Workspace tab left panel:
 

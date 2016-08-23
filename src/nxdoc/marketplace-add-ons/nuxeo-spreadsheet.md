@@ -3,19 +3,19 @@ title: Nuxeo Spreadsheet
 labels:
     - nuxeo-spreadsheet
     - spreadsheet-component
-    - excerpt
+    - lts2015-not-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Nuxeo+Spreadsheet
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Spreadsheet'
-    page_id: '20518099'
-    shortlink: 0xQ5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/0xQ5AQ'
-    source_link: /display/NXDOC/Nuxeo+Spreadsheet
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Nuxeo+Spreadsheet'
+    page_id: '28475609'
+    shortlink: 2YCyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/2YCyAQ'
+    source_link: /display/NXDOC710/Nuxeo+Spreadsheet
 history:
     - 
         author: Manon Lumeau
@@ -111,7 +111,7 @@ This add-on allows you to edit data in your repository as if you were in a sprea
 
 ## Opening the Spreadsheet to Edit the List of Documents
 
-To visualise in a spreadsheet the content of a folder or of the result of a search, click on ![]({{file name='spreadsheet.png'}}).&nbsp;The spreadsheet editor opens and displays as many line as there are items in the result of the query. The columns that are displayed corresponds to the columns that were displayed on the content view. If you modify the list of columns in the content view&nbsp;clicking on the&nbsp; ![]({{file name='edit_columns.png' space='userdoc' page='icons-index'}})&nbsp;icon from the content view, this will be reflected on the spreadsheet when re-opening it. The spreadsheet module uses the layout introspection API&nbsp;to be able to list the columns displayed in the content view. A mapping is done for each Layout Widget so as to display an adapted cell editor, among Simple text, DirectoryValue suggest and calendar. See the limitations section for details of the mapping. Results are&nbsp;fetched page per page using the following page provider:
+To visualise in a spreadsheet the content of a folder or of the result of a search, click on ![]({{file name='spreadsheet.png'}}).&nbsp;The spreadsheet editor opens and displays as many line as there are items in the result of the query. The columns that are displayed corresponds to the columns that were displayed on the content view. If you modify the list of columns in the content view&nbsp;clicking on the&nbsp; ![]({{file name='edit_columns.png' space='userdoc710' page='icons-index'}})&nbsp;icon from the content view, this will be reflected on the spreadsheet when re-opening it. The spreadsheet module uses the layout introspection API&nbsp;to be able to list the columns displayed in the content view. A mapping is done for each Layout Widget so as to display an adapted cell editor, among Simple text, DirectoryValue suggest and calendar. See the limitations section for details of the mapping. Results are&nbsp;fetched page per page using the following page provider:
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.query.api.PageProviderService"
@@ -163,6 +163,6 @@ Note that the spreadsheet expects the enricher's name to match the directory nam
 ## Limitations
 
 *   <span style="line-height: 21.58px;">The system information in read-only like Modified, Version and State are in grey to disable users to modify them.&nbsp;</span>
-*   For more information about the Mapping between listing layouts widgets and the displayed cell types, see&nbsp;[https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/master/src/main/js/app/ui/widgets.js#L57](https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/master/src/main/js/app/ui/widgets.js#L57)
+*   For more information about the Mapping between listing layouts widgets and the displayed cell types, see&nbsp;[https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/release-7.10/src/main/js/app/ui/widgets.js#L57](https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/release-7.10/src/main/js/app/ui/widgets.js#L57)
 
 The Nuxeo Spreadsheet add-on is done integrating&nbsp;[Handsontable](http://handsontable.com/).&nbsp;

@@ -1,43 +1,27 @@
 ---
 title: Installation and Administration
-slug: index
-no_side_menu: true
 labels:
-    - migration-sample
+    - lts2015-ok
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
-    ajs-space-key: ADMINDOC
-    ajs-space-name: Nuxeo Installation and Administration
+    ajs-space-key: ADMINDOC710
+    ajs-space-name: Nuxeo Installation and Administration — LTS 2015
     canonical: Installation+and+Administration
-    canonical_source: 'https://doc.nuxeo.com/display/ADMINDOC/Installation+and+Administration'
-    page_id: '950299'
-    shortlink: G4AO
-    shortlink_source: 'https://doc.nuxeo.com/x/G4AO'
-    source_link: /display/ADMINDOC/Installation+and+Administration
+    canonical_source: >-
+        https://doc.nuxeo.com/display/ADMINDOC710/Installation+and+Administration
+    page_id: '27604624'
+    shortlink: kDalAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/kDalAQ'
+    source_link: /display/ADMINDOC710/Installation+and+Administration
 history:
     - 
         author: Manon Lumeau
-        date: '2016-03-24 10:28'
-        message: ''
-        version: '40'
-    - 
-        author: Manon Lumeau
-        date: '2016-03-24 10:22'
-        message: ''
-        version: '39'
-    - 
-        author: Alain Escaffre
-        date: '2016-03-23 23:47'
-        message: ''
-        version: '38'
-    - 
-        author: Manon Lumeau
-        date: '2016-03-23 10:38'
-        message: ''
+        date: '2016-07-20 15:52'
+        message: 'emove children display macro  '
         version: '37'
     - 
-        author: Solen Guitter
+        author: Anonymous
         date: '2015-02-23 13:49'
         message: ''
         version: '36'
@@ -218,17 +202,36 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' }}
+{{#> panel type='primary'}}
 
-In order to improve the global consistency of our documentation, The section about Installation and Administration has been integrated to the Developer documentation.
+<span style="color: rgb(255,255,255);">Welcome in the Installation and Administration Documentation!</span>
 
-{{/callout}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+{{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
-### [Installation]({{page space='nxdoc' page='installation'}})
+### For testing purpose
+
+You want to evaluate or test the platform? Here the main steps you should follow to quickly install your Nuxeo application and get ready to use it.
+
+1.  [Check out the requirements]({{page page='hardware-and-software-requirements'}})
+2.  [Installation]({{page page='installation'}})
+3.  [Start]({{page page='server-start-and-stop'}})
+4.  [Setup the platform with a preset module]({{page page='setup'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
-### [Administration]({{page space='nxdoc' page='administration'}})
+### For production purpose
+
+You want to install the application to use it in a production environment? Follow the steps below:
+
+*   [Hardware and Software Requirements](https://doc.nuxeo.com/display/ADMINDOC710/Hardware+and+Software+Requirements)
+*   [Installation](https://doc.nuxeo.com/display/ADMINDOC710/Installation)
+*   [Setup](https://doc.nuxeo.com/display/ADMINDOC710/Setup)
+*   [Server Start and Stop](https://doc.nuxeo.com/display/ADMINDOC710/Server+Start+and+Stop)
+*   [Monitoring and Maintenance](https://doc.nuxeo.com/display/ADMINDOC710/Monitoring+and+Maintenance)
+*   [Upgrading the Nuxeo Platform](https://doc.nuxeo.com/display/ADMINDOC710/Upgrading+the+Nuxeo+Platform)
+*   [Nuxeo Shell](https://doc.nuxeo.com/display/ADMINDOC710/Nuxeo+Shell)
+*   [Admin Tab Overview](https://doc.nuxeo.com/display/ADMINDOC710/Admin+Tab+Overview)
+*   [Troubleshooting](https://doc.nuxeo.com/display/ADMINDOC710/Troubleshooting)
 
 {{/panel}}</div></div>
 

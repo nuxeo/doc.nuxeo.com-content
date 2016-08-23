@@ -11,21 +11,21 @@ details:
         tool: Nuxeo Platform
         topics: Vocabulary
 labels:
-    - howto
-    - relation
     - vocabulary
-    - excerpt
+    - howto
+    - lts2015-ok
+    - relation
 confluence:
-    ajs-parent-page-id: '2392405'
+    ajs-parent-page-id: '29003025'
     ajs-parent-page-title: Managing Vocabularies
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: How+to+Add+New+Relation+Types
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/How+to+Add+New+Relation+Types'
-    page_id: '20519318'
-    shortlink: lhk5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/lhk5AQ'
-    source_link: /display/USERDOC/How+to+Add+New+Relation+Types
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/How+to+Add+New+Relation+Types'
+    page_id: '29003070'
+    shortlink: Po26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Po26AQ'
+    source_link: /display/USERDOC710/How+to+Add+New+Relation+Types
 history:
     - 
         author: Solen Guitter

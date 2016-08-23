@@ -2,18 +2,19 @@
 title: User Preferences
 labels:
     - preferences
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '7536681'
+    ajs-parent-page-id: '29003055'
     ajs-parent-page-title: User Home
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: User+Preferences
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/User+Preferences'
-    page_id: '11043664'
-    shortlink: UIOo
-    shortlink_source: 'https://doc.nuxeo.com/x/UIOo'
-    source_link: /display/USERDOC/User+Preferences
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/User+Preferences'
+    page_id: '29003016'
+    shortlink: CI26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/CI26AQ'
+    source_link: /display/USERDOC710/User+Preferences
 history:
     - 
         author: Solen Guitter

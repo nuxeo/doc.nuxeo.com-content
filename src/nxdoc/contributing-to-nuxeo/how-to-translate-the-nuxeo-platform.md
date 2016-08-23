@@ -7,34 +7,25 @@ details:
         tool: Crowdin
         topics: 'Labels, Localization, Translation'
 labels:
-    - i10n
-    - internationalization
     - translation
+    - content-review-lts2015
+    - internationalization
+    - i10n
     - howto
-    - multiexcerpt-include
 toc: true
 confluence:
-    ajs-parent-page-id: '4687444'
+    ajs-parent-page-id: '28475648'
     ajs-parent-page-title: Contributing to Nuxeo
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: How+to+Translate+the+Nuxeo+Platform
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Translate+the+Nuxeo+Platform'
-    page_id: '3343476'
-    shortlink: dAQz
-    shortlink_source: 'https://doc.nuxeo.com/x/dAQz'
-    source_link: /display/NXDOC/How+to+Translate+the+Nuxeo+Platform
+    canonical_source: >-
+        https://doc.nuxeo.com/display/NXDOC710/How+to+Translate+the+Nuxeo+Platform
+    page_id: '28475755'
+    shortlink: a4GyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/a4GyAQ'
+    source_link: /display/NXDOC710/How+to+Translate+the+Nuxeo+Platform
 history:
-    - 
-        author: Anahide Tchertchian
-        date: '2016-06-17 07:50'
-        message: ''
-        version: '53'
-    - 
-        author: Julien Carsique
-        date: '2016-01-04 10:23'
-        message: ''
-        version: '52'
     - 
         author: Solen Guitter
         date: '2015-09-25 09:38'
@@ -302,14 +293,15 @@ Here are some instructions to help you contributing or changing translations, in
 
 ### Editing on Crowdin (Non-English Translations)
 
-[Join the Nuxeo project on Crowdin](http://crowdin.net/project/nuxeo/invite).
+There is a Nuxeo project on [Crowdin](https://crowdin.net/project/nuxeo). To join the project, create an account on Crowdin and follow this link: [http://crowdin.net/project/nuxeo/invite](http://crowdin.net/project/nuxeo/invite).
 
 If you are not familiar with Crowdin, take a look at their [quick start guide](http://crowdin.net/page/quick-start) [.](http://crowdin.net/project/nuxeo/invite)
+
 Basically here are the steps to contribute:
 
 {{{multiexcerpt 'translation-contribution-with-crowdin' page='Contributing to Nuxeo'}}}
 
-By default, new users have the translator status. It means you can propose new translations, but you can't validate them. To gain the proofreader status and have the validation permission, please contact one or several of the Crowdin project managers.
+By default, new users have the translator status. It means you can propose new translations, but can't validate them. To gain the proofreader status and have the validation permission, please contact one or several of the Crowdin project managers.
 
 Now here's a couple of tips:
 
@@ -323,7 +315,7 @@ Before every release, the translations are exported from Crowdin to the [nuxeo-p
 
 Please contact one or several managers of the project if you'd like to contribute translations to a language that's not available on Crowdin yet.
 
-Nuxeo developers will perform the additional steps for this language to be added to the Nuxeo source code (see [NXP-19840](https://jira.nuxeo.com/browse/NXP-19840) as a reference, for instance).
+Nuxeo developers will perform the additional steps for this language to be added to the Nuxeo source code.
 
 ### Manual Editing (English Translations)
 
@@ -489,7 +481,7 @@ public class TestMessages extends TranslationTestCase {
 }
 ```
 
-The [`TranslationTestCase`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/nuxeo-platform-test/src/main/java/org/nuxeo/ecm/platform/test/TranslationTestCase.java) file is defined in the `nuxeo-platform-test` module, so you should add the following to your project `pom.xml` file:
+The [`TranslationTestCase`](https://github.com/nuxeo/nuxeo/blob/release-7.10/nuxeo-services/nuxeo-platform-test/src/main/java/org/nuxeo/ecm/platform/test/TranslationTestCase.java) file is defined in the `nuxeo-platform-test` module, so you should add the following to your project `pom.xml` file:
 
 ```
 <dependency>
@@ -501,7 +493,7 @@ The [`TranslationTestCase`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-ser
 
 This test case will assume that the English translation file is at the "usual" location, you can override method `getEnTranslationsPath` if you placed your properties file elsewhere. It will check for simple things: syntax errors (errors in unicode characters can prevent the file from being loaded, for instance) and duplicate entries (that can happen easily when copy/pasting translations).
 
-Additional test cases exist if you'd like to check for consistency between translations of two different languages for instance, you can check the [TranslationEnFrTestCase](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/nuxeo-platform-test/src/main/java/org/nuxeo/ecm/platform/test/TranslationEnFrTestCase.java) logics or the [<span class="pl-en">TestExtMessages</span>](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/src/test/java/org/nuxeo/ecm/platform/lang/ext/test/TestExtMessages.java) parametrized tests on the `nuxeo-platform-lang-ext` module.
+Additional test cases exist if you'd like to check for consistency between translations of two different languages for instance, you can check the [TranslationEnFrTestCase](https://github.com/nuxeo/nuxeo/blob/release-7.10/nuxeo-services/nuxeo-platform-test/src/main/java/org/nuxeo/ecm/platform/test/TranslationEnFrTestCase.java) logics or the [<span class="pl-en">TestExtMessages</span>](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/release-7.10/src/test/java/org/nuxeo/ecm/platform/lang/ext/test/TestExtMessages.java) parametrized tests on the `nuxeo-platform-lang-ext` module.
 
 ### Nuxeo Crowdin Translations Synchronization Process
 
@@ -511,7 +503,7 @@ Since a Nuxeo application is composed of several bundles, which can contribute t
 
 Only the master branch is handled by Crowdin: changes to translation files in maintenance branches will have to be committed manually in GitHub.
 
-*   The generated aggregate file at [https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/src/main/resources/crowdin/messages.properties](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/src/main/resources/crowdin/messages.properties) is generated from all supported Nuxeo modules that hold a crowdin.ini file, referencing the relative path to their messages_en_US.properties file.
+*   The generated aggregate file at [https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/release-7.10/src/main/resources/crowdin/messages.properties](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/release-7.10/src/main/resources/crowdin/messages.properties) is generated from all supported Nuxeo modules that hold a crowdin.ini file, referencing the relative path to their messages_en_US.properties file.
     Here is a sample `crowdin.ini` file content:
 
     ```

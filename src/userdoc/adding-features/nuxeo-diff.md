@@ -1,25 +1,24 @@
 ---
 title: Nuxeo Diff
 labels:
-    - history
-    - worklist
     - versioning
     - screenshot-to-update
+    - worklist
     - nuxeo-diff
-    - excerpt
-    - multiexcerpt
+    - history
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '11043055'
+    ajs-parent-page-id: '29003017'
     ajs-parent-page-title: Adding Features
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Nuxeo+Diff
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Diff'
-    page_id: '11042953'
-    shortlink: iYCo
-    shortlink_source: 'https://doc.nuxeo.com/x/iYCo'
-    source_link: /display/USERDOC/Nuxeo+Diff
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Nuxeo+Diff'
+    page_id: '29003034'
+    shortlink: Go26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Go26AQ'
+    source_link: /display/USERDOC710/Nuxeo+Diff
 history:
     - 
         author: Solen Guitter

@@ -1,21 +1,35 @@
 ---
 title: Nuxeo Datadog Reporter
 labels:
+    - content-review-lts2015
     - last-review-20150708
-    - excerpt
-    - multiexcerpt-include
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Nuxeo+Datadog+Reporter
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Datadog+Reporter'
-    page_id: '26312787'
-    shortlink: U4CRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/U4CRAQ'
-    source_link: /display/NXDOC/Nuxeo+Datadog+Reporter
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Nuxeo+Datadog+Reporter'
+    page_id: '27604623'
+    shortlink: jzalAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/jzalAQ'
+    source_link: /display/NXDOC710/Nuxeo+Datadog+Reporter
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-08-12 12:39'
+        message: ''
+        version: '9'
+    - 
+        author: Solen Guitter
+        date: '2016-08-05 07:50'
+        message: ''
+        version: '8'
+    - 
+        author: Damien Metzler
+        date: '2016-08-04 08:42'
+        message: ''
+        version: '7'
     - 
         author: Solen Guitter
         date: '2015-09-28 08:32'
@@ -57,7 +71,7 @@ The [Nuxeo Datadog Reporter addon](https://connect.nuxeo.com/nuxeo/site/marketpl
 ## Installation / Configuration
 
 1.  {{{multiexcerpt 'MP-installation-easy' page='NXDOC:Generic Multi-Excerpts'}}}
-2.  Then add your Datadog API key in [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}):
+2.  Then add your Datadog API key in [nuxeo.conf]({{page space='admindoc710' page='configuration-parameters-index-nuxeoconf'}}):
 
     {{#> panel type='code' heading='Configuration'}}
 
@@ -65,12 +79,11 @@ The [Nuxeo Datadog Reporter addon](https://connect.nuxeo.com/nuxeo/site/marketpl
     # Datadog API_KEY
     datadog.apikey=YOUR_OWN_API_KEY
 
-    # Datadog HOSTNAME machine
+    # HOSTNAME for the machine used in Datadog
     datadog.host=myspecialhost.com
 
     # Optional: interval in seconds for reports to be sent to Datadog
     # datadog.pollinterval=10
-
     ```
 
     {{/panel}}

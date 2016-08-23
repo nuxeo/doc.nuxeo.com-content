@@ -1,20 +1,21 @@
 ---
 title: Nuxeo Shibboleth Invitation
 labels:
+    - lts2015-ok
     - shibboleth-component
     - github-readme
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Nuxeo+Shibboleth+Invitation
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Shibboleth+Invitation'
-    page_id: '26316755'
-    shortlink: 04_RAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/04_RAQ'
-    source_link: /display/NXDOC/Nuxeo+Shibboleth+Invitation
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Nuxeo+Shibboleth+Invitation'
+    page_id: '28475739'
+    shortlink: W4GyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/W4GyAQ'
+    source_link: /display/NXDOC710/Nuxeo+Shibboleth+Invitation
 history:
     - 
         author: Solen Guitter

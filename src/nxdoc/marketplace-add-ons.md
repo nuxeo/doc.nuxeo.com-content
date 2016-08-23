@@ -1,32 +1,31 @@
 ---
 title: Marketplace Add-Ons
 labels:
-    - excerpt
-    - multiexcerpt-include
+    - lts2015-ok
 confluence:
-    ajs-parent-page-id: '950332'
+    ajs-parent-page-id: '28475536'
     ajs-parent-page-title: Developer Documentation Center
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Marketplace+Add-Ons
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Marketplace+Add-Ons'
-    page_id: '16089349'
-    shortlink: BYH1
-    shortlink_source: 'https://doc.nuxeo.com/x/BYH1'
-    source_link: /display/NXDOC/Marketplace+Add-Ons
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Marketplace+Add-Ons'
+    page_id: '28475782'
+    shortlink: hoGyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/hoGyAQ'
+    source_link: /display/NXDOC710/Marketplace+Add-Ons
 history:
     - 
-        author: Julien Carsique
-        date: '2016-07-27 09:51'
-        message: PI Playground 1.1.1 (Nx 8.3
+        author: Manon Lumeau
+        date: '2016-06-09 11:41'
+        message: ''
         version: '8'
     - 
-        author: Manon Lumeau
-        date: '2016-07-25 13:55'
-        message: ''
+        author: Solen Guitter
+        date: '2016-06-01 14:32'
+        message: Fix addons list (use LTS 2015 and not Fast Track)
         version: '7'
     - 
-        author: Solen Guitter
+        author: Anonymous
         date: '2015-09-21 20:24'
         message: ''
         version: '6'
@@ -59,14 +58,8 @@ history:
 ---
 {{! excerpt}}
 
-This chapter presents list of Nuxeo Packages available on the Nuxeo Marketplace for the latest version of the Nuxeo Platform.
+This chapter presents how to apprehend and customize the additional packages available on the Nuxeo Platform, typically from the Nuxeo Marketplace.
 
-{{! /excerpt}}{{! multiexcerpt name='MP-packages-list'}}
+{{! /excerpt}}
 
-_Use the field below to search for a specific add-on._
-
-{{! table-filter removed }}
-
-Use: "In progress for x.y.z (JC)", "Ready for x.y.z" or "Released for x.y.z" or any other relevant comment.
-
-{{! /multiexcerpt}}
+{{{multiexcerpt 'MP-packages-list' page='USERDOC710:Adding Features'}}}

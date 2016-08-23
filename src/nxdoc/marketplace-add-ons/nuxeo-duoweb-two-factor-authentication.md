@@ -1,19 +1,20 @@
 ---
 title: Nuxeo DuoWeb Two-Factor Authentication
 labels:
+    - content-review-lts2015
     - duo-web-authentication-addon
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Nuxeo+DuoWeb+Two-Factor+Authentication
     canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Nuxeo+DuoWeb+Two-Factor+Authentication
-    page_id: '20517217'
-    shortlink: YRE5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/YRE5AQ'
-    source_link: /display/NXDOC/Nuxeo+DuoWeb+Two-Factor+Authentication
+        https://doc.nuxeo.com/display/NXDOC710/Nuxeo+DuoWeb+Two-Factor+Authentication
+    page_id: '28475674'
+    shortlink: GoGyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/GoGyAQ'
+    source_link: /display/NXDOC710/Nuxeo+DuoWeb+Two-Factor+Authentication
 history:
     - 
         author: Solen Guitter
@@ -58,9 +59,9 @@ The Nuxeo addon nuxeo-duoweb-authentication is an integration of [DuoWeb](http:/
 
 This plugin is available for Nuxeo Platform 5.8 and above.
 
-{{! /excerpt}}{{#> callout type='info' heading='Configuration'}}
+{{! /excerpt}} {{#> callout type='info' heading='Configuration'}}
 
-Please refer to this [README](https://github.com/nuxeo/nuxeo-duoweb-authentication/blob/master/README.md) to configure and activate the addon on your Nuxeo instance.
+Please refer to this [README](https://github.com/nuxeo/nuxeo-duoweb-authentication/blob/release-7.10/README.md) to configure and activate the addon on your Nuxeo instance.
 
 {{/callout}}
 

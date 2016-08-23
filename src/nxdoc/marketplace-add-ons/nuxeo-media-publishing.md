@@ -1,29 +1,29 @@
 ---
 title: Nuxeo Media Publishing
 labels:
+    - lts2015-ok
     - media-publishing-component
-    - excerpt
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Nuxeo+Media+Publishing
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Media+Publishing'
-    page_id: '25691068'
-    shortlink: vAOIAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/vAOIAQ'
-    source_link: /display/NXDOC/Nuxeo+Media+Publishing
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Nuxeo+Media+Publishing'
+    page_id: '28475514'
+    shortlink: eoCyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/eoCyAQ'
+    source_link: /display/NXDOC710/Nuxeo+Media+Publishing
 history:
     - 
-        author: Vincent Dutat
-        date: '2016-02-10 18:28'
+        author: Manon Lumeau
+        date: '2016-08-16 10:02'
         message: ''
         version: '18'
     - 
         author: Vincent Dutat
-        date: '2016-02-10 18:25'
+        date: '2016-02-10 18:29'
         message: ''
         version: '17'
     - 
@@ -141,7 +141,7 @@ Published videos can also be republished or unpublished from the external provid
 
 ## Installation and Configuration
 
-<div>This addon requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin tab]({{page page='installing-a-new-package-on-your-instance'}}). However, it requires the installation of the&nbsp;[Digital Asset Management (DAM) addon]({{page page='digital-asset-management-dam'}}) which provides multimedia files (picture, audio and video).</div>
+<div>This addon requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin tab]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}). However, it requires the installation of the&nbsp;[Digital Asset Management (DAM) addon]({{page page='digital-asset-management-dam'}}) which provides multimedia files (picture, audio and video).</div>
 
 <div>After the package is installed, two new OAuth2 service providers are added to Nuxeo (Admin > Cloud Services > Service providers). These providers must be properly configured before users can use them to publish their videos.</div>
 

@@ -1,40 +1,27 @@
 ---
 title: Digital Asset Management (DAM)
 labels:
+    - annotation
     - dam
     - picture
     - video
-    - audio
-    - annotation
+    - lts2015-ok
     - dam-component
+    - audio
+    - lts2015-update-screenshots
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=3866704
-    canonical_source: viewpage.action?pageId=3866704
-    page_id: '3866704'
-    shortlink: UAA7
-    shortlink_source: 'https://doc.nuxeo.com/x/UAA7'
-    source_link: /pages/viewpage.action?pageId=3866704
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
+    canonical: viewpage.action?pageId=28475697
+    canonical_source: viewpage.action?pageId=28475697
+    page_id: '28475697'
+    shortlink: MYGyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/MYGyAQ'
+    source_link: /pages/viewpage.action?pageId=28475697
 history:
-    - 
-        author: Manon Lumeau
-        date: '2016-06-09 11:49'
-        message: ''
-        version: '53'
-    - 
-        author: Solen Guitter
-        date: '2016-05-11 07:40'
-        message: 'Restrict TOC max level to h3 '
-        version: '52'
-    - 
-        author: Manon Lumeau
-        date: '2016-04-22 12:44'
-        message: ''
-        version: '51'
     - 
         author: Solen Guitter
         date: '2015-12-08 11:15'
@@ -299,13 +286,13 @@ history:
 
 {{! multiexcerpt name='MP-installation-easy'}}
 
-This add-on requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin tab]({{page page='installing-a-new-package-on-your-instance'}}).
+This add-on requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin tab]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}).
 
 {{! /multiexcerpt}}
 
-It is also possible to install it from the [Startup wizard]({{page page='configuration-wizard'}}).
+It is also possible to install it from the [Startup wizard](http://doc.nuxeo.com/display/ADMINDOC/Setup#Setup-module-installat).
 
-However some features depend on external software for conversion and transcoding. See the page [Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}}).
+However some features depend on external software for conversion and transcoding. See the page [Installing and Setting Up Related Software]({{page space='admindoc710' page='installing-and-setting-up-related-software'}}).
 
 After you installed Nuxeo DAM, you have three new document types available.
 
@@ -326,33 +313,33 @@ After you installed Nuxeo DAM, you have three new document types available.
 
 Some IPTC metadata are stored within dublincore. More information [Binary Metadata]({{page page='binary-metadata'}})
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--schema](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--schema).
+See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--schema](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--schema).
 
 #### Facets
 
 *   `Picture`: The facet to put on Document Types that should be considered as Picture . This facet comes with the following schemas:&nbsp;`file`&nbsp;(to store the picture file),&nbsp;`picture`, `image_metadata` and `iptc`.
 *   `MultiviewPicture`: The marker facet to be put on document types already having&nbsp;`Picture`&nbsp;facet to instantiate&nbsp;`MultiviewPictureAdapter`.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype).
+See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype).
 
 #### Document Type
 
 *   `Picture`: This is the default type in Nuxeo that handle picture files. It comes with the&nbsp;`Picture`&nbsp;and `MultiviewPicture` facets.
 
-See [http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype) .
+See [http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype) .
 
 #### Listeners
 
 *   `pictureChangedListener`: Synchronous listener checking if the main Picture file has changed. If so, pre-fills all the picture views with a placeholder and trigger an event&nbsp;`updatePictureview` to notify asynchronous listeners.
 *   `pictureViewListener`: Asynchronous listener computing the picture views.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.listeners--listener](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.listeners--listener).
+See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.ecm.platform.picture.listeners--listener](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.ecm.platform.picture.listeners--listener).
 
 #### File Manager Plug-in
 
 The plug-in&nbsp;`Imageplugin`&nbsp;is contributed to the File Manager to create&nbsp;`Picture`&nbsp;documents when the imported file mime type matches one of the contributed&nbsp;`image/*` mime types.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.filemanager.contrib--plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.filemanager.contrib--plugins).
+See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.ecm.platform.picture.filemanager.contrib--plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.ecm.platform.picture.filemanager.contrib--plugins).
 
 #### Picture conversions
 
@@ -370,7 +357,7 @@ The Nuxeo Platform provides an add-on with the following video features:
 
 *   `video`: Used to store the video info, the transcoded videos and the storyboard.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--schema](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--schema).
+See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--schema](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--schema).
 
 #### Facets
 
@@ -378,13 +365,13 @@ See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribut
 *   `HasStoryboard`: Marker facet to be set on types for which you want to generate Storyboard, types on which you already added the `Video` facet.
 *   `HasVideoPreview`: Marker facet to be set on types for which you want to generate a video preview (screenshot), and on which you already added the&nbsp;`Video`&nbsp;facet.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype).
+See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype).
 
 #### Document Type
 
 *   `Video`: This is the default type in the Nuxeo Platform that handles video files. It comes with the `Video`,&nbsp;`HasStoryboard` and&nbsp;`HasVideoPreview` facets.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype).
+See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype).
 
 #### Listeners
 
@@ -392,17 +379,17 @@ See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribut
 *   `videoStoryboardListener`: Asynchronous listener generating the preview screenshots (stored as picture views in the `picture` schema) and the storyboard of the video (stored in `vid:storyboard`).
 *   `videoAutomaticConversions`: Asynchronous listener computing the transcoded videos from the video conversions marked as automatic. Transcoded videos are stored in `vid:transcodedVideos`.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.platform.video.core.listeners--listener](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.platform.video.core.listeners--listener).
+See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.platform.video.core.listeners--listener](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.platform.video.core.listeners--listener).
 
 #### File Manager Plug-in
 
 The plug-in `VideoImporter` is contributed to the File Manager to create `Video` documents when the imported file mime type matches&nbsp;`video/*`.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.video.filemanager.contrib--plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.video.filemanager.contrib--plugins).
+See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.ecm.platform.video.filemanager.contrib--plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.ecm.platform.video.filemanager.contrib--plugins).
 
 #### Exposed Extension Points
 
-The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.video.service.VideoService) exposed two extension points:
+The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewComponent/org.nuxeo.ecm.platform.video.service.VideoService) exposed two extension points:
 
 *   [`videoConversions`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.9.5/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--videoConversions) : Extension point to contribute video conversions that will be available on the VideoService.
 
@@ -438,25 +425,25 @@ The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/vi
 
 *   `audio`: Used to store audio related information.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--schema](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--schema).
+See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--schema](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--schema).
 
 #### Facets
 
 *   `Audio`: Facet to put on document types that should be considered as Audio. This facet comes with the following schemas:&nbsp;`file`&nbsp;(to store the audio file), and&nbsp;`audio`.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype).
+See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype).
 
 #### Document Type
 
 *   `Audio`: This is the default type in the Nuxeo Platform that handles audio files. It comes with the `Audio` facet.
 
-See [http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype).
+See [http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype).
 
 #### File Manager Plug-in
 
 The plug-in&nbsp;`AudioImporter`&nbsp;is contributed to the File Manager to create&nbsp;`Audio`&nbsp;documents when the imported file mime type matches&nbsp;`audio/*`.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.audio.filemanager.contrib--plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.audio.filemanager.contrib--plugins).
+See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.ecm.platform.audio.filemanager.contrib--plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.ecm.platform.audio.filemanager.contrib--plugins).
 
 &nbsp;
 
@@ -470,7 +457,7 @@ See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribut
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}})
+*   [Installing and Setting Up Related Software]({{page space='admindoc710' page='installing-and-setting-up-related-software'}})
 *   [Events and Listeners]({{page page='events-and-listeners'}})
 
 {{/panel}}</div></div>

@@ -1,21 +1,20 @@
 ---
 title: Document Types
 labels:
+    - lts2015-ok
     - lifecyle
-    - multiexcerpt
-    - excerpt
 toc: true
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Document+Types
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Document+Types'
-    page_id: '2392395'
-    shortlink: S4Ek
-    shortlink_source: 'https://doc.nuxeo.com/x/S4Ek'
-    source_link: /display/USERDOC/Document+Types
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Document+Types'
+    page_id: '29003021'
+    shortlink: DY26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/DY26AQ'
+    source_link: /display/USERDOC710/Document+Types
 history:
     - 
         author: Solen Guitter
@@ -486,7 +485,7 @@ It is possible to implement rules on containers to integrate&nbsp;the business l
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Override Existing Document Types]({{page space='nxdoc' page='how-to-override-existing-document-types'}})
-*   [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
+*   [How to Override Existing Document Types]({{page space='nxdoc710' page='how-to-override-existing-document-types'}})
+*   [How to Define a Document Type]({{page space='nxdoc710' page='how-to-define-a-document-type'}})
 
 {{/panel}}</div></div>

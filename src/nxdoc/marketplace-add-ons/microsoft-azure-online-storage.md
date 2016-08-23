@@ -1,19 +1,19 @@
 ---
 title: Microsoft Azure Online Storage
 labels:
-    - excerpt
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Microsoft+Azure+Online+Storage
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Microsoft+Azure+Online+Storage'
-    page_id: '27590744'
-    shortlink: WAClAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/WAClAQ'
-    source_link: /display/NXDOC/Microsoft+Azure+Online+Storage
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Microsoft+Azure+Online+Storage'
+    page_id: '27604648'
+    shortlink: qDalAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/qDalAQ'
+    source_link: /display/NXDOC710/Microsoft+Azure+Online+Storage
 history:
     - 
         author: Solen Guitter
@@ -58,9 +58,9 @@ The&nbsp;[Microsoft Azure Online Storage](https://connect.nuxeo.com/nuxeo/site/m
 
 ## Configuration
 
-Be sure to protect your access keys using the [Configuration Data Encryption]({{page page='sensitive-configuration-data-encryption'}}).
+Be sure to protect your access keys using the [Configuration Data Encryption]({{page space='admindoc710' page='sensitive-configuration-data-encryption'}}).
 
-Configuration properties you have to set in your [`nuxeo.conf` file]({{page page='configuration-parameters-index-nuxeoconf'}}).
+Configuration properties you have to set in your [`nuxeo.conf` file]({{page space='admindoc710' page='configuration-parameters-index-nuxeoconf'}}).
 
 ## Enabling Azure Binary Manager
 
@@ -79,7 +79,7 @@ If you want to use Azure CDN as a front instead of Azure Storage:
 ### Mandatory Parameters
 
 <table><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default Value</th><th colspan="1">Description</th></tr><tr><td colspan="1">`nuxeo.storage.azure.container`</td><td colspan="1">&nbsp;</td><td colspan="1">The name of the Azure container</td></tr><tr><td colspan="1">`nuxeo.storage.azure.account.name`</td><td colspan="1">&nbsp;</td><td colspan="1">Your Azure storage account name</td></tr><tr><td colspan="1">`nuxeo.storage.azure.account.key`</td><td colspan="1">&nbsp;</td><td colspan="1">Your Azure storage access key.
-Do not forget to use [data encryption]({{page page='sensitive-configuration-data-encryption'}})</td></tr></tbody></table>
+Do not forget to use [data encryption]({{page space='admindoc710' page='sensitive-configuration-data-encryption'}})</td></tr></tbody></table>
 
 ### Optional Parameters
 

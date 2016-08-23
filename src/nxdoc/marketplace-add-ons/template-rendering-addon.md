@@ -2,35 +2,30 @@
 title: Template Rendering Addon
 labels:
     - template-rendering
-    - document-template
+    - lts2015-ok
     - template-rendering-addon-component
-    - multiexcerpt-include
+    - document-template
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Template+Rendering+Addon
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Template+Rendering+Addon'
-    page_id: '11044085'
-    shortlink: 9YSo
-    shortlink_source: 'https://doc.nuxeo.com/x/9YSo'
-    source_link: /display/NXDOC/Template+Rendering+Addon
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Template+Rendering+Addon'
+    page_id: '28475837'
+    shortlink: vYGyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/vYGyAQ'
+    source_link: /display/NXDOC710/Template+Rendering+Addon
 history:
     - 
         author: Vincent Dutat
-        date: '2016-07-26 17:31'
-        message: ''
-        version: '28'
-    - 
-        author: Karin Touchie
-        date: '2016-05-27 09:51'
+        date: '2016-07-26 17:48'
         message: ''
         version: '27'
     - 
-        author: Karin Touchie
-        date: '2016-05-27 09:50'
+        author: Solen Guitter
+        date: '2016-05-30 08:24'
         message: ''
         version: '26'
     - 
@@ -219,7 +214,7 @@ To create a template file:
 2.  In the document, put variables in `Input Fields` where you want to use information from Nuxeo (see below). You may want to use [XDocReport](https://github.com/opensagres/xdocreport) for .docx or .odt formats, [JXLS](http://jxls.sourceforge.net/) for .xls / .xlsx and .ods formats (see links below).
 3.  When the template is ready, [create the template document in Nuxeo](#creating-the-template-document) and attach the template to it.
 
-Here are a few examples of the most common variables:
+<a name="variables"></a>"Here are a few examples of the most common variables:
 
 *   `${doc.title`}: gets the title of the Nuxeo document
 *   `${doc['dc:description']`}: gets the content of the Description field of the Nuxeo document
@@ -229,11 +224,11 @@ Here are a few examples of the most common variables:
 
 {{#> callout type='tip' heading='More resources to help users create the template file'}}
 
-*   More information about the variables available (including functions) in the [Quick user guide](https://github.com/nuxeo/nuxeo-template-rendering/blob/master/QuickUserGuide.md) on the Nuxeo GitHub repository.
+*   More information about the variables available (including functions) in the [Quick user guide](https://github.com/nuxeo/nuxeo-template-rendering/blob/release-7.10/QuickUserGuide.md) on the Nuxeo GitHub repository.
 *   XDocReport [overview](https://github.com/opensagres/xdocreport/wiki/Overview) and [docx format user guide](https://github.com/opensagres/xdocreport/wiki/DocxDesignReport) / [odt format user guide](https://github.com/opensagres/xdocreport/wiki/ODTDesignReport): XDocReport is a tool that enables to insert fields in MS Office and OpenOffice / LibreOffice text files.
 *   [JXLS website](http://jxls.sourceforge.net): JXLS is a tool that enables to insert fields in MS Office and OpenOffice / LibreOffice spreadsheets.
-*   [Template rendering readme file](https://github.com/nuxeo/nuxeo-template-rendering/blob/master/ReadMe.md) on the Nuxeo GitHub repository
-*   [Template rendering Quick User Guide](https://github.com/nuxeo/nuxeo-template-rendering/blob/master/QuickUserGuide.md) on the Nuxeo GitHub repository
+*   [Template rendering readme file](https://github.com/nuxeo/nuxeo-template-rendering/blob/release-7.10/ReadMe.md) on the Nuxeo GitHub repository
+*   [Template rendering Quick User Guide](https://github.com/nuxeo/nuxeo-template-rendering/blob/release-7.10/QuickUserGuide.md) on the Nuxeo GitHub repository
 
 {{/callout}}
 
@@ -390,7 +385,7 @@ There are several ways to associate a template to a document.
 
 ##### Creating a document based on a template
 
-To create a new document based on a template, users need to [use the **New document** button]({{page space='userdoc' page='creating-content#creating-a-document-using-the-new-document-button'}}). If a template is available for the selected document type, an additional option is then available for the **Content** field, allowing users to select which template to use.
+To create a new document based on a template, users need to [use the **New document** button]({{page space='userdoc710' page='creating-content#creating-a-document-using-the-new-document-button'}}). If a template is available for the selected document type, an additional option is then available for the **Content** field, allowing users to select which template to use.
 ![]({{file name='select_template.png'}} ?w=500,h=122,border=true)&nbsp;
 When the document is created, the template is used as content. An additional **Associated templates** tab is available.
 
@@ -436,7 +431,7 @@ The Template rendering addon enables to publish a rendition of the document inst
     ![]({{file name='publish_tab.png'}} ?w=450,h=160,border=true)
 2.  In the **Publish a rendition** drop down list, select the rendition you want to publish.
 3.  Unfold the sections tree and click on the **Publish here** link corresponding to the section you want to publish the document in.
-    The document's rendition is submitted to publishing and must approved using the [usual publishing process]({{page space='userdoc' page='publishing-content'}}).
+    The document's rendition is submitted to publishing and must approved using the [usual publishing process]({{page space='userdoc710' page='publishing-content'}}).
 
 {{#> callout type='info' }}
 
@@ -517,7 +512,7 @@ or for a published document :
 
 **The Template**
 
-The template can be a corporate template with logo, table of contents, picture and content in MS Word or OpenOffice format. The template contains simple merge fields (like in Office templating), but also a&nbsp;_content_&nbsp;field.
+The template can be a corporate template with logo, table of content, picture and content in MS Word or OpenOffice format. The template contains simple merge fields (like in Office templating), but also a&nbsp;_content_&nbsp;field.
 
 **The associated Document**
 

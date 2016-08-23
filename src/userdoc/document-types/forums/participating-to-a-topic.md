@@ -2,18 +2,19 @@
 title: Participating to a Topic
 labels:
     - topic
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '2392376'
+    ajs-parent-page-id: '29003047'
     ajs-parent-page-title: Forums
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Participating+to+a+Topic
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Participating+to+a+Topic'
-    page_id: '2392377'
-    shortlink: OYEk
-    shortlink_source: 'https://doc.nuxeo.com/x/OYEk'
-    source_link: /display/USERDOC/Participating+to+a+Topic
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Participating+to+a+Topic'
+    page_id: '29003046'
+    shortlink: Jo26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Jo26AQ'
+    source_link: /display/USERDOC710/Participating+to+a+Topic
 history:
     - 
         author: Manon Lumeau

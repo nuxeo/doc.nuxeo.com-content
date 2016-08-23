@@ -1,21 +1,22 @@
 ---
 title: Nuxeo Platform Concepts
 labels:
-    - concepts
-    - home
     - search
+    - home
+    - concepts
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Nuxeo+Platform+Concepts
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Platform+Concepts'
-    page_id: '2392418'
-    shortlink: YoEk
-    shortlink_source: 'https://doc.nuxeo.com/x/YoEk'
-    source_link: /display/USERDOC/Nuxeo+Platform+Concepts
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Nuxeo+Platform+Concepts'
+    page_id: '29003032'
+    shortlink: GI26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/GI26AQ'
+    source_link: /display/USERDOC710/Nuxeo+Platform+Concepts
 history:
     - 
         author: Solen Guitter
@@ -462,13 +463,13 @@ This is where the majority of user's activity within the Nuxeo Platform will occ
 
 #### Content Hierarchy&nbsp;
 
-You can create different types of documents to be able to display the content hierarchy that you need in your application. By default you can create workspaces, folders, collections, templates, etc., but you can also&nbsp;[create your own document types]({{page space='nxdoc' page='how-to-define-a-document-type'}}).&nbsp;
+You can create different types of documents to be able to display the content hierarchy that you need in your application. By default you can create workspaces, folders, collections, templates, etc., but you can also&nbsp;[create your own document types]({{page space='nxdoc710' page='how-to-define-a-document-type'}}).&nbsp;
 
 The default navigation tree displayed on the left hand side of the pages is the folders navigation tree. It displays all the domain structure from the root. It enables you to easily access any space in the application structure.&nbsp;The navigation tree displays folderish documents, i.e. documents in which you can create other documents (workspaces, folders, etc.).
 
 {{#> callout type='tip' }}
 
-It is possible to add another type of navigation tree based on metadata instead of folder structure by installing the [Nuxeo Virtual Navigation add-on]({{page space='nxdoc' page='nuxeo-virtual-navigation'}}).
+It is possible to add another type of navigation tree based on metadata instead of folder structure by installing the [Nuxeo Virtual Navigation add-on]({{page space='nxdoc710' page='nuxeo-virtual-navigation'}}).
 
 {{/callout}}
 
@@ -506,7 +507,7 @@ The default tab of your Home is the Dashboard. It is composed of a set of boxes 
 
 {{#> callout type='tip' }}
 
-If you want to customize your dashboard, follow this [how-to]({{page space='nxdoc' page='how-to-customize-the-dashboard'}}).
+If you want to customize your dashboard, follow this [how-to]({{page space='nxdoc710' page='how-to-customize-the-dashboard'}}).
 
 {{/callout}}
 
@@ -524,7 +525,7 @@ Other main user-centric information available from the **Home** is:
     ![]({{file name='user_home_directories.png'}} ?w=650,border=true)
 *   **Searches**: Provides access to the user's saved searches
     ![]({{file name='home-searches-tab.png' page='saved-searches'}} ?w=650,border=true)
-*   **Authorized Applications**: Lists the external applications that can access Nuxeo data. See [Nuxeo Media Publishing]({{page space='nxdoc' page='nuxeo-media-publishing'}}) for instance.
+*   **Authorized Applications**: Lists the external applications that can access Nuxeo data. See [Nuxeo Media Publishing]({{page space='nxdoc710' page='nuxeo-media-publishing'}}) for instance.
 *   **Collections**: Lists the [collections]({{page page='collections'}}) the user can access
     ![]({{file name='collection-home-tab.png' page='collections'}} ?w=650,border=true)
 
@@ -536,7 +537,7 @@ Other main user-centric information available from the **Home** is:
 
 #### Facets
 
-The default search filter provides a faceted search, leveraging the [Elasticsearch aggregates]({{page space='nxdoc' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}}). You can search for documents from their metadata and other properties and search results are filtered as you add or remove criteria. Aggregate fields values are also filtered so as to display only relevant values and show the count of matching documents for each value.
+The default search filter provides a faceted search, leveraging the [Elasticsearch aggregates]({{page space='nxdoc710' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}}). You can search for documents from their metadata and other properties and search results are filtered as you add or remove criteria. Aggregate fields values are also filtered so as to display only relevant values and show the count of matching documents for each value.
 
 #### Result Layout
 
@@ -551,7 +552,7 @@ Users can change the way content is presented in the result layout. They can als
 
     {{/callout}}
 
-When you create new search forms, you can adapt the result layout to your own document types so as to display information relevant to your users. See [How to Define a New Content View]({{page space='nxdoc' page='how-to-define-a-new-content-view'}}) for instance.
+When you create new search forms, you can adapt the result layout to your own document types so as to display information relevant to your users. See [How to Define a New Content View]({{page space='nxdoc710' page='how-to-define-a-new-content-view'}}) for instance.
 
 {{! /multiexcerpt}}
 

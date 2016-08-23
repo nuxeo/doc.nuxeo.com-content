@@ -1,65 +1,30 @@
 ---
 title: SAML 2.0 Authentication
 labels:
+    - lts2015-ok
     - saml-component
-    - migration-sample
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: SAML+2.0+Authentication
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/SAML+2.0+Authentication'
-    page_id: '23364928'
-    shortlink: QIVkAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/QIVkAQ'
-    source_link: /display/NXDOC/SAML+2.0+Authentication
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/SAML+2.0+Authentication'
+    page_id: '28475794'
+    shortlink: koGyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/koGyAQ'
+    source_link: /display/NXDOC710/SAML+2.0+Authentication
 history:
     - 
-        author: Manon Lumeau
-        date: '2016-06-09 14:40'
-        message: ''
-        version: '20'
-    - 
-        author: Manon Lumeau
-        date: '2016-04-25 14:26'
-        message: ''
-        version: '19'
-    - 
-        author: Alain Escaffre
-        date: '2016-04-14 13:51'
-        message: ''
-        version: '18'
-    - 
         author: Solen Guitter
-        date: '2016-03-30 14:29'
-        message: Move how-to steps first
-        version: '17'
-    - 
-        author: Solen Guitter
-        date: '2016-03-30 14:14'
-        message: Fix steps format and typos.
-        version: '16'
-    - 
-        author: Frédéric Vadon
-        date: '2016-03-29 16:14'
-        message: Change order of bullet as the plugin has to be configured first
-        version: '15'
-    - 
-        author: Frédéric Vadon
-        date: '2016-03-29 15:38'
-        message: typo
-        version: '14'
-    - 
-        author: Manon Lumeau
-        date: '2016-03-29 15:01'
-        message: ''
+        date: '2016-03-30 14:59'
+        message: 'ove how-to steps first, fix steps order, fix typos and forma'
         version: '13'
     - 
         author: Damien Metzler
-        date: '2016-03-01 08:41'
-        message: Fix broken links
+        date: '2016-03-01 08:42'
+        message: ''
         version: '12'
     - 
         author: Alain Escaffre
@@ -118,15 +83,15 @@ history:
         version: '1'
 
 ---
-## Integrating the Nuxeo Platform with a SAML 2.0 IdP
+## Integrating Nuxeo Platform with a SAML 2.0 IdP
 
 {{! excerpt}}
 
-The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication) allows setting up Nuxeo as a Service Provider and supports WebSSO thus relying on an external SAML Identity Provider (IdP) for authentication. It has been successfully tested so far with OneLogin, Ping One, SSOCircle, Google, OIF and ADFS. If you are no familiar with SAML IdP, read the section [Background on SAML 2.0](#saml20_presentation) below.
+The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication) allows setting up Nuxeo as a Service Provider and supports WebSSO thus relying on an external SAML Identity Provider (IdP) for authentication.&nbsp;If you are no familiar with SAML IdP, read the section [SAML2.0_presentation]({{page page='saml20_presentation'}}) below.
 
-1.  [Install the SAML2.0 Authentication addon]({{page page='installing-a-new-package-on-your-instance'}}) available from the Nuxeo Marketplace.
+1.  [Install the SAML2.0 Authentication addon]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}) from the Nuxeo Marketplace.
 2.  Retrieve your IdP SAML metadata configuration file. This file stores SAML configuration like supported bindings, endpoints, certificates, etc., that are used by our SAML plugin to configure you IdP. Some IdP make this metadata available in a URL which you can also reference directly in the next step.
-3.  Contribute ([in a Studio project]({{page page='how-to-contribute-to-an-extension'}}), or in the `nxserver/config` folder) a new authentication plugin that makes use of the `org.nuxeo.ecm.platform.auth.saml.SAMLAuthenticationProvider`, with a reference to the XML Metadata for specific configuration. Ex:
+3.  Contribute ([in a Studio project]({{page page='how-to-contribute-to-an-extension'}}), or in the nxserver/config folder) a new authentication plugin that makes use of the `org.nuxeo.ecm.platform.auth.saml.SAMLAuthenticationProvider`, with a reference to the XML Metadata for specific configuration. Ex:
 
     ```xml
     <component name="org.nuxeo.ecm.platform.login.saml.auth"> 
@@ -147,9 +112,9 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
     </component> 
     ```
 
-    You can find more examples here: [https://github.com/nuxeo/nuxeo-platform-login/tree/master/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/nuxeo-platform-login-saml2/sample).
+    You can find more example here: [https://github.com/nuxeo/nuxeo-platform-login/tree/release-7.10/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo-platform-login/tree/release-7.10/nuxeo-platform-login-saml2/sample).
 
-4.  Use this new authentication plugin in the authentication chain, by contributing its definition from your Studio project (or in the previous XML component).
+4.  Use this new authentication plugin in the authentication chain, by contributing its definition from your studio project (or in the previous XML component).
 
     ```xml
       <extension
@@ -165,10 +130,11 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
     ```
 
 5.  Configure your Identity Provider:
+
     1.  Map user email to NameID metadata (check documentation of your IdP for doing so).
     2.  Declare your Nuxeo Platform server as a Service Provider:
         *   Either by uploading the XML metadata file provided at [http://HOSTNAME:8080/nuxeo/saml/metadata](http://localhost:8080/nuxeo/saml/metadata).
-        *   Or by configuring it manually on the IdP (in that case, you should use `http://<nuxeo_url>/nuxeo/nxstartup.faces` as the SAML consumer endpoints)
+        *   Or by configuring it manually on the IdP (in that case, you should use `http://<nuxeo_url>/nuxeo/nxstartup.faces` as the SAML consumer endpoints).
 6.  Optionally generate a keystore for enabling encryption. If you want to enable signing and/or encryption (not mandatory with some IdP) you have to generate a keystore and add the proper configuration to `nxserver/config` (ex: `saml-keystore-config.xml`):
 
     ```xml
@@ -208,19 +174,21 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 
 {{! /excerpt}}
 
+&nbsp;
+
 ## Sources
 
-Sources of the addon can can be found at [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/nuxeo-platform-login-saml2](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/nuxeo-platform-login-saml2/).
+Sources of the addon can can be found at &nbsp;[https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/nuxeo-platform-login-saml2](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/nuxeo-platform-login-saml2).
 
 You need to build the JAR and follow the sample at &nbsp;[https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/nuxeo-platform-login-saml2/sample).
 
-## Background on SAML 2.0
+## <a name="SAML2.0_presentation"></a>"Background on SAML 2.0
 
 Security Assertion Markup Language (SAML) 2.0&nbsp;is an XML-based protocol that uses security tokens containing assertions to pass information about a user between a SAML authority, known as the identity provider (IdP), and a SAML consumer, the service provider (SP).
 
 SAML 2.0 has a very broad scope with a large&nbsp;number of supported profiles but its primary use case is single sign-on which is specified in the Web Browser SSO Profile.
 
-When a web user tries to access a resource at a service provider they are redirected for authentication with the identity provider. This identity provider produces an authentication assertion, and the service provider consumes the assertion to establish a security context for the web user.
+When a web user tries to access a resource at a service provider they are redirected for authentication with the identity provider. The identity provider produces an authentication assertion, and the service provider consumes the assertion to establish a security context for the web user
 
 The specification of these assertions and of the request-response protocol messages themselves is independent of the&nbsp;underlying communications and messaging protocols. The mapping between these two is known in SAML as a 'binding'.
 

@@ -1,21 +1,21 @@
 ---
 title: Nuxeo Multi-Tenant
 labels:
-    - marketplace-package
     - multi-tenant
-    - excerpt
+    - marketplace-package
+    - content-review-lts2015
 toc: true
 confluence:
-    ajs-parent-page-id: '11043055'
+    ajs-parent-page-id: '29003017'
     ajs-parent-page-title: Adding Features
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Nuxeo+Multi-Tenant
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Multi-Tenant'
-    page_id: '11043208'
-    shortlink: iIGo
-    shortlink_source: 'https://doc.nuxeo.com/x/iIGo'
-    source_link: /display/USERDOC/Nuxeo+Multi-Tenant
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Nuxeo+Multi-Tenant'
+    page_id: '29003050'
+    shortlink: Ko26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Ko26AQ'
+    source_link: /display/USERDOC710/Nuxeo+Multi-Tenant
 history:
     - 
         author: Manon Lumeau
@@ -187,7 +187,7 @@ Tenant administrators are functional administrators who have access to a "light"
 
 ## Activating Multi-Tenancy
 
-Multi-tenancy is not automatically available on your Nuxeo Platform after the [package has been installed]({{page space='nxdoc' page='nuxeo-multi-tenant'}}). You need to activate it.
+Multi-tenancy is not automatically available on your Nuxeo Platform after the [package has been installed]({{page space='nxdoc710' page='nuxeo-multi-tenant'}}). You need to activate it.
 
 To activate multi-tenancy:
 
@@ -196,7 +196,7 @@ To activate multi-tenancy:
     Tenant isolation status goes to "enabled".
     You can now [create new tenants](#create-new-t).
 
-## Creating a New Tenant
+## <a name="create-new-tenant"></a>"Creating a New Tenant
 
 Only global administrators can create new tenants.
 

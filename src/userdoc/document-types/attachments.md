@@ -2,17 +2,18 @@
 title: Attachments
 labels:
     - attachment
+    - lts2015-ok
 confluence:
-    ajs-parent-page-id: '2392395'
+    ajs-parent-page-id: '29003021'
     ajs-parent-page-title: Document Types
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Attachments
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Attachments'
-    page_id: '23366442'
-    shortlink: KotkAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/KotkAQ'
-    source_link: /display/USERDOC/Attachments
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Attachments'
+    page_id: '29003051'
+    shortlink: K426AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/K426AQ'
+    source_link: /display/USERDOC710/Attachments
 history:
     - 
         author: Manon Lumeau

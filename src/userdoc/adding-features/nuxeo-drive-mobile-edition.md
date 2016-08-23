@@ -2,23 +2,23 @@
 title: Nuxeo Drive Mobile Edition
 labels:
     - nuxeo-drive-ios
-    - excerpt
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '11043055'
+    ajs-parent-page-id: '29003017'
     ajs-parent-page-title: Adding Features
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Nuxeo+Drive+Mobile+Edition
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Drive+Mobile+Edition'
-    page_id: '19235240'
-    shortlink: qIElAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/qIElAQ'
-    source_link: /display/USERDOC/Nuxeo+Drive+Mobile+Edition
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Nuxeo+Drive+Mobile+Edition'
+    page_id: '29003068'
+    shortlink: PI26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/PI26AQ'
+    source_link: /display/USERDOC710/Nuxeo+Drive+Mobile+Edition
 history:
     - 
         author: Manon Lumeau
-        date: '2016-03-21 15:32'
+        date: '2016-03-21 15:58'
         message: ''
         version: '49'
     - 
@@ -274,7 +274,7 @@ Here is the big picture of how Nuxeo Drive Mobile Edition&nbsp;works: It enables
 To enable the synchronization of Nuxeo Platform content on your iOS device, you need to install:
 
 *   [Nuxeo Drive Mobile Edition](https://itunes.apple.com/fr/app/nuxeo-drive-mobile-edition/id873138083?l=en&mt=8)&nbsp;on your device,
-*   [Nuxeo Drive]({{page space='nxdoc' page='nuxeo-drive'}}) on the server.
+*   [Nuxeo Drive]({{page space='nxdoc710' page='nuxeo-drive'}}) on the server.
 
 &nbsp;
 

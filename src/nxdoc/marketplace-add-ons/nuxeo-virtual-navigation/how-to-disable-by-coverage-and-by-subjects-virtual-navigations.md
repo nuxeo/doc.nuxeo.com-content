@@ -9,28 +9,28 @@ details:
         tool: 'Studio, XML extensions'
         topics: 'Content View, Virtual Navigation'
 labels:
-    - virtual-navigation
-    - howto
-    - content-view
-    - extension-point
     - vocabulary
-    - studio
+    - lts2015-ok
     - virtual-navigation-component
-    - excerpt
+    - content-view
+    - howto
+    - extension-point
+    - virtual-navigation
+    - studio
 toc: true
 confluence:
-    ajs-parent-page-id: '20517205'
+    ajs-parent-page-id: '28475671'
     ajs-parent-page-title: Nuxeo Virtual Navigation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: How+to+Disable+by+Coverage+and+by+Subjects+Virtual+Navigations
     canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Disable+by+Coverage+and+by+Subjects+Virtual+Navigations
-    page_id: '6030379'
-    shortlink: KwRc
-    shortlink_source: 'https://doc.nuxeo.com/x/KwRc'
+        https://doc.nuxeo.com/display/NXDOC710/How+to+Disable+by+Coverage+and+by+Subjects+Virtual+Navigations
+    page_id: '28475454'
+    shortlink: PoCyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/PoCyAQ'
     source_link: >-
-        /display/NXDOC/How+to+Disable+by+Coverage+and+by+Subjects+Virtual+Navigations
+        /display/NXDOC710/How+to+Disable+by+Coverage+and+by+Subjects+Virtual+Navigations
 history:
     - 
         author: Arnaud Kervern

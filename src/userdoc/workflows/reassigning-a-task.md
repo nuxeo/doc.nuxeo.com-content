@@ -2,18 +2,18 @@
 title: Reassigning a Task
 labels:
     - reassign
-    - multiexcerpt
+    - lts2015-ok
 confluence:
-    ajs-parent-page-id: '2392410'
+    ajs-parent-page-id: '29003030'
     ajs-parent-page-title: Workflows
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Reassigning+a+Task
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Reassigning+a+Task'
-    page_id: '18450389'
-    shortlink: 1YcZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/1YcZAQ'
-    source_link: /display/USERDOC/Reassigning+a+Task
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Reassigning+a+Task'
+    page_id: '29003045'
+    shortlink: JY26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/JY26AQ'
+    source_link: /display/USERDOC710/Reassigning+a+Task
 history:
     - 
         author: Solen Guitter
@@ -34,7 +34,7 @@ history:
 ---
 If you feel that you should not be responsible for a task, you can reassign it. Reassignment should not be confused with [delegation]({{page page='delegating-a-task'}}).
 
-{{! multiexcerpt name='delegate-vs-reassign'}}{{#> callout type='info' heading='Reassignment vs Delegation'}}
+{{! multiexcerpt name='delegate-vs-reassign'}} {{#> callout type='info' heading='Reassignment vs Delegation'}}
 
 &nbsp;When you delegate a task, you remain responsible for the task. You don't lose your rights on the document: you can still process the task if you want to. On the contrary, you lose your rights on the task and on the document when you reassign your task on a document. The user you reassign the task to becomes responsible for the task and it is as if you never had to review the document.
 

@@ -5,14 +5,14 @@ redirect_source: REST API
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Resources+Endpoints
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Resources+Endpoints'
-    page_id: '14256984'
-    shortlink: WIvZ
-    shortlink_source: 'https://doc.nuxeo.com/x/WIvZ'
-    source_link: /display/NXDOC/Resources+Endpoints
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Resources+Endpoints'
+    page_id: '28475444'
+    shortlink: NICyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/NICyAQ'
+    source_link: /display/NXDOC710/Resources+Endpoints
 history:
     - 
         author: Solen Guitter

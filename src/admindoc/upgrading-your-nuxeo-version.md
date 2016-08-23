@@ -5,14 +5,14 @@ redirect_source: Upgrading the Nuxeo Platform
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
-    ajs-space-key: ADMINDOC
-    ajs-space-name: Nuxeo Installation and Administration
+    ajs-space-key: ADMINDOC710
+    ajs-space-name: Nuxeo Installation and Administration — LTS 2015
     canonical: Upgrading+your+Nuxeo+Version
-    canonical_source: 'https://doc.nuxeo.com/display/ADMINDOC/Upgrading+your+Nuxeo+Version'
-    page_id: '3868590'
-    shortlink: rgc7
-    shortlink_source: 'https://doc.nuxeo.com/x/rgc7'
-    source_link: /display/ADMINDOC/Upgrading+your+Nuxeo+Version
+    canonical_source: 'https://doc.nuxeo.com/display/ADMINDOC710/Upgrading+your+Nuxeo+Version'
+    page_id: '27604691'
+    shortlink: 0zalAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/0zalAQ'
+    source_link: /display/ADMINDOC710/Upgrading+your+Nuxeo+Version
 history:
     - 
         author: Solen Guitter

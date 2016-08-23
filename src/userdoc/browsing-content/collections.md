@@ -2,20 +2,19 @@
 title: Collections
 labels:
     - collection
-    - excerpt
-    - multiexcerpt
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '2392400'
+    ajs-parent-page-id: '29003022'
     ajs-parent-page-title: Browsing Content
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Collections
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Collections'
-    page_id: '18451619'
-    shortlink: o4wZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/o4wZAQ'
-    source_link: /display/USERDOC/Collections
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Collections'
+    page_id: '29003062'
+    shortlink: No26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/No26AQ'
+    source_link: /display/USERDOC710/Collections
 history:
     - 
         author: Manon Lumeau

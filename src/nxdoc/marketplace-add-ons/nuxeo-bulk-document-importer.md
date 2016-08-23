@@ -1,86 +1,27 @@
 ---
 title: Nuxeo Bulk Document Importer
 labels:
+    - lts2015-ok
+    - platform-importer-addon-component
     - bulk-document-importer
     - import
-    - platform-importer-addon-component
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Nuxeo+Bulk+Document+Importer
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Bulk+Document+Importer'
-    page_id: '3343565'
-    shortlink: zQQz
-    shortlink_source: 'https://doc.nuxeo.com/x/zQQz'
-    source_link: /display/NXDOC/Nuxeo+Bulk+Document+Importer
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Nuxeo+Bulk+Document+Importer'
+    page_id: '28475776'
+    shortlink: gIGyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/gIGyAQ'
+    source_link: /display/NXDOC710/Nuxeo+Bulk+Document+Importer
 history:
     - 
         author: Manon Lumeau
-        date: '2016-06-09 09:08'
-        message: ''
-        version: '48'
-    - 
-        author: Manon Lumeau
-        date: '2016-06-09 09:06'
-        message: ''
-        version: '47'
-    - 
-        author: Manon Lumeau
-        date: '2016-06-09 09:03'
-        message: ''
-        version: '46'
-    - 
-        author: Manon Lumeau
-        date: '2016-06-09 08:50'
-        message: ''
-        version: '45'
-    - 
-        author: Manon Lumeau
-        date: '2016-06-09 08:49'
-        message: ''
-        version: '44'
-    - 
-        author: Manon Lumeau
-        date: '2016-06-08 13:53'
-        message: ''
-        version: '43'
-    - 
-        author: Manon Lumeau
-        date: '2016-06-07 09:12'
-        message: ''
-        version: '42'
-    - 
-        author: Harlan Brown
-        date: '2016-06-06 18:13'
-        message: Added FileWithNonHeritedIndividalMetaDataSourceNode info
-        version: '41'
-    - 
-        author: Solen Guitter
-        date: '2016-05-10 09:30'
-        message: Add nonUniform parameter
-        version: '40'
-    - 
-        author: Manon Lumeau
-        date: '2016-04-22 13:30'
-        message: ''
-        version: '39'
-    - 
-        author: Manon Lumeau
-        date: '2016-03-10 14:53'
-        message: ''
-        version: '38'
-    - 
-        author: Manon Lumeau
-        date: '2016-03-10 14:52'
-        message: ''
-        version: '37'
-    - 
-        author: Manon Lumeau
-        date: '2016-03-10 14:24'
-        message: Merge ADMINDOC with NXDOC
+        date: '2016-03-10 14:26'
+        message: erge ADMINDOC with NXDOC
         version: '36'
     - 
         author: Solen Guitter
@@ -261,17 +202,7 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
-{{! multiexcerpt name='bulk-importer'}}
-
-Available for any Nuxeo platform-based application, the&nbsp; [Bulk document importer package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer) &nbsp;enables mass document import in a Nuxeo repository. A single HTTP query launches a full, multi-threaded import from the server file system.
-
-{{! /multiexcerpt}}
-
-&nbsp;
-
-&nbsp;
+{{{excerpt 'ADMINDOC:Bulk document importer'}}}
 
 {{! excerpt}}
 
@@ -308,7 +239,7 @@ Be sure to fill in the&nbsp;**Auth**&nbsp;tab with your user credentials.
 
 ### Memory
 
-The importer requires a lot of memory. Make sure your maximum heap size is set as high as possible for your environment. Maximum heap size can be set in nuxeo.conf in the JAVA_OPTS variable. For example, argument&nbsp;`-Xmx4g`&nbsp;will set maximum heap size to 4 gigabytes. See&nbsp;[Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})&nbsp;for more details.
+The importer requires a lot of memory. Make sure your maximum heap size is set as high as possible for your environment. Maximum heap size can be set in nuxeo.conf in the JAVA_OPTS variable. For example, argument&nbsp;`-Xmx4g`&nbsp;will set maximum heap size to 4 gigabytes. See&nbsp;[Configuration Parameters Index (nuxeo.conf)]({{page space='admindoc710' page='configuration-parameters-index-nuxeoconf'}})&nbsp;for more details.
 
 ### REST API
 
@@ -328,21 +259,13 @@ N/A: no default value, the parameter is required.
 
 #### randomImporter/run
 
-<table><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">`targetPath`</td><td colspan="1">N/A</td><td colspan="1">Target path in Nuxeo</td></tr><tr><td colspan="1">`skipRootContainerCreation`</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`batchSize`</td><td colspan="1">&nbsp;</td><td colspan="1">Number of documents that will be created before doing a commit</td></tr><tr><td colspan="1">`nbThreads`</td><td colspan="1">&nbsp;</td><td colspan="1">Maximum number of importer threads that can be allocated</td></tr><tr><td colspan="1">`interactive`</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nbNodes`</td><td colspan="1">N/A</td><td colspan="1">Number of nodes to create</td></tr><tr><td colspan="1">`fileSizeKB`</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`onlyText`</td><td colspan="1">true</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`blockSyncPostCommitProcessing`</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`blockAsyncProcessing`</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`bulkMode`</td><td colspan="1">true</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nonUniform`</td><td colspan="1">false</td><td colspan="1">
-
-Allows a non uniform distribution of the number of nodes per folder:
-
-*   A small number of nodes (~= 1) 10% of the time.
-*   A big number of nodes (~= 5000) 10% of the time.
-*   A random variation of the default number of nodes ( ~= 100) 80% of the time.
-
-</td></tr></tbody></table>
+<table><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">`targetPath`</td><td colspan="1">N/A</td><td colspan="1">Target path in Nuxeo</td></tr><tr><td colspan="1">`skipRootContainerCreation`</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`batchSize`</td><td colspan="1">&nbsp;</td><td colspan="1">Number of documents that will be created before doing a commit</td></tr><tr><td colspan="1">`nbThreads`</td><td colspan="1">&nbsp;</td><td colspan="1">Maximum number of importer threads that can be allocated</td></tr><tr><td colspan="1">`interactive`</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nbNodes`</td><td colspan="1">N/A</td><td colspan="1">Number of nodes to create</td></tr><tr><td colspan="1">`fileSizeKB`</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`onlyText`</td><td colspan="1">true</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`blockSyncPostCommitProcessing`</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`blockAsyncProcessing`</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`bulkMode`</td><td colspan="1">true</td><td colspan="1">&nbsp;</td></tr></tbody></table>
 
 N/A: no default value, the parameter is required.
 
 ## Extend
 
-You can easily write your own importer, extending the&nbsp; [`org.nuxeo.ecm.platform.importer.base.GenericMultiThreadedImporter`](http://community.nuxeo.com/api/nuxeo/release-8.2/javadoc/org/nuxeo/ecm/platform/importer/base/class-use/GenericMultiThreadedImporter.html) &nbsp;class.
+You can easily write your own importer, extending the&nbsp;[&nbsp;`org.nuxeo.ecm.platform.importer.base.GenericMultiThreadedImporter`](http://community.nuxeo.com/api/nuxeo/release-7.10/javadoc/org/nuxeo/ecm/platform/importer/base/class-use/GenericMultiThreadedImporter.html)&nbsp;class.
 
 Using XML extension points you can also define the different building blocks of the importer:
 
@@ -371,11 +294,11 @@ As a result, if you import a big folder with a flat structure, you will only hav
 To be sure to be able to leverage multi-threading, you can either:
 
 *   Ensure the source filesystem is a tree with at least two levels
-*   Change the importer threading policy.
+*   Change the importer threading policy
 
 ## Importer and Metadata&nbsp;
 
-The default importer provides three classes to read the source files as well as metadata:
+The default importer provides two classes to read the source files as well as metadata:
 
 ### **FileWithMetadataSourceNode**
 
@@ -425,11 +348,11 @@ dc\:issued=2015-30-04T09:39:43.00Z
 Please note that:
 
 *   Date properties must be formatted using the ISO 8601 standard
-*   Multi-valued property syntax is&nbsp;`dc\:subjects=subject4|subject5`, the default separator being&nbsp;`|`
+*   multi-valued property syntax is&nbsp;`dc\:subjects=subject4|subject5`, the default separator being&nbsp;`|`
 *   Multi-valued property must embed a corresponding separator (`|`&nbsp;by default for lists) for the value to be interpreted correctly. For example with a single value:&nbsp;`dc\:subjects=subject4|`
-*   Complex properties are currently not supported
+*   complex properties are not supported currently.
 
-You can use the&nbsp;`ecm:primaryType`&nbsp;field to tell the importer to create a specific document type. In the following example, the importer will create a&nbsp;`DesignArt`&nbsp;custom document type for each file in the folder (`da`&nbsp;is the schema's prefix):
+You can use the&nbsp;[`ecm:primaryType`](http://ecmprimaryType)&nbsp;field to tell the importer to create a specific document type. In the following example, the importer will create a&nbsp;`DesignArt`&nbsp;custom document type for each file in the folder (`da`&nbsp;is the schema's prefix):
 
 ```
 ecm\:primaryType=DesignArt
@@ -438,9 +361,9 @@ da\:batch_import_id=123456
 da\:author=John Doe
 ```
 
-If&nbsp;the&nbsp;`ecm:primaryType`&nbsp;field is not found, the&nbsp;`leafType`&nbsp;is used.
+If&nbsp;the&nbsp;[`ecm:primaryType`](http://ecmprimaryType)&nbsp;field is not found, the&nbsp;`leafType`&nbsp;is used.
 
-### **FileWithIndividualMetadasSourceNode**
+### FileWithIndividualMetadasSourceNode
 
 This second implementation will try to file a property file for each imported file. This allows to have a per file metadata set.
 
@@ -457,22 +380,22 @@ A sample structure would be:
 
 {{#> callout type='tip' }}
 
-The format of this `.properties` file is the same as the one described above. If you use the `ecm:primaryType` field, you will be able to create a specific document type for each file.
+The format of this `.properties` file is the same as the one described above. If you use the [`ecm:primaryType`](http://ecmprimaryType) field, you will be able to create a specific document type for each file.
 
 {{/callout}}
 
 To use this node type you need to redefine the importer. There are two ways to do so:
 
-*   &nbsp;[ Add an XML extension in your Nuxeo Studio project&nbsp;]({{page page='how-to-contribute-to-an-extension#xml-extension-studio'}})with the following content:
+*   [Add an XML extension in your Nuxeo Studio project&nbsp;]({{page page='how-to-contribute-to-an-extension#xml-extension-studio'}})with the following content:
 
     ```xml
-     <require>org.nuxeo.ecm.platform.importer.service.jaxrs.contrib</require>
+    <require>org.nuxeo.ecm.platform.importer.service.jaxrs.contrib</require>
 
     <extension target="org.nuxeo.ecm.platform.importer.service.DefaultImporterComponent" point="importerConfiguration">
        <importerConfig sourceNodeClass ="org.nuxeo.ecm.platform.importer.source.FileWithIndividualMetadasSourceNode" >
           <documentModelFactory leafType="File" folderishType="Folder" documentModelFactoryClass="org.nuxeo.ecm.platform.importer.factories.DefaultDocumentModelFactory" />
         </importerConfig>
-    </extension>
+    </extension> 
     ```
 
 *   Create an&nbsp;`importer-config.xml`&nbsp;with the following content in&nbsp;`nxserver/config`:
@@ -490,55 +413,9 @@ To use this node type you need to redefine the importer. There are two ways to d
     </component>
     ```
 
-    You can name this file whatever you want, as long as the suffix is&nbsp;`-config.xml`. See the page&nbsp;[Runtime and Component Model]({{page page='runtime-and-component-model'}}).
+    You can name this file whatever you want, as long as the suffix is "-config.xml", see the page&nbsp;[Runtime and Component Model]({{page page='runtime-and-component-model'}}).
 
-### **FileWithNonHeritedIndividalMetaDataSourceNode**
-
-This implementation will provide a per-file metadata set. It differs from the&nbsp;**FileWithIndividualMetadasSourceNode** in that it does not provide inheritance&nbsp;&ndash; properties defined for a folderish document will not sync to its children. If this inheritance is not necessary for your import, using this class can improve performance, because it avoids the use of a structure shared between import threads, and avoids the overhead generated by the need to sync information between import threads.
-
-The structure used by this class is identical to what&nbsp;**FileWithIndividualMetadasSourceNode** &nbsp;uses:
-
-<pre>├── branch1
-│&nbsp;&nbsp; ├── branch11
-│&nbsp;&nbsp; │&nbsp;&nbsp; ├── hello11.pdf
-│&nbsp;&nbsp; │&nbsp;&nbsp; └── hello11.properties
-│&nbsp;&nbsp; ├── hello1.pdf
-│&nbsp;&nbsp; └── hello1.properties
-├── hello.pdf
-└── hello.properties</pre>
-
-To enable this node type, redefine the importer using one of these methods:
-
-*   &nbsp;[&nbsp;Add an XML extension in your Nuxeo Studio project&nbsp;]({{page page='how-to-contribute-to-an-extension#xml-extension-studio'}})with the following content:
-
-    ```xml
-    <require>org.nuxeo.ecm.platform.importer.service.jaxrs.contrib</require>
-
-    <extension target="org.nuxeo.ecm.platform.importer.service.DefaultImporterComponent" point="importerConfiguration">
-       <importerConfig sourceNodeClass ="org.nuxeo.ecm.platform.importer.source.FileWithNonHeritedIndividalMetaDataSourceNode" >
-          <documentModelFactory leafType="File" folderishType="Folder" documentModelFactoryClass="org.nuxeo.ecm.platform.importer.factories.DefaultDocumentModelFactory" />
-        </importerConfig>
-    </extension>
-    ```
-
-*   Create an&nbsp;`importer-config.xml`&nbsp;with the following content in&nbsp;`nxserver/config`:
-
-    ```xml
-    <?xml version="1.0"?>
-    <component name="customImporter">
-    <require>org.nuxeo.ecm.platform.importer.service.jaxrs.contrib</require>
-
-    <extension target="org.nuxeo.ecm.platform.importer.service.DefaultImporterComponent" point="importerConfiguration">
-       <importerConfig sourceNodeClass ="org.nuxeo.ecm.platform.importer.source.FileWithNonHeritedIndividalMetaDataSourceNode" >
-          <documentModelFactory leafType="File" folderishType="Folder" documentModelFactoryClass="org.nuxeo.ecm.platform.importer.factories.DefaultDocumentModelFactory" />
-        </importerConfig>
-    </extension>
-    </component>
-    ```
-
-    You can name this file whatever you want, as long as the suffix is&nbsp;`-config.xml`. See the page&nbsp;[Runtime and Component Model]({{page page='runtime-and-component-model'}}).
-
-<span style="color: rgb(0,0,0);font-size: 20.0px;line-height: 1.5;">Instantiating the Importer</span>
+## Instantiating the Importer
 
 It has a configurable framework which has as the main part, the `org.nuxeo.ecm.platform.importer.base.GenericMultiThreadedImporter` class. This 'importer' is responsible, depending on the way it is configured, for performing the import. The configuration of an 'importer' can be established starting with the instantiation of such an 'importer'.
 
@@ -606,3 +483,5 @@ This class will be the base class for the import, and the method that instantiat
 ## Download
 
 To download&nbsp;`nuxeo-importer-core`, check the&nbsp;[Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer)&nbsp;or, if needed, download a more recent version of the JAR (to be installed by hand) from&nbsp;[the Nuxeo Maven repository](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;quick~nuxeo-importer-core).
+
+&nbsp;

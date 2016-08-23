@@ -2,19 +2,19 @@
 title: Digital Signature
 labels:
     - digital-signature
-    - excerpt
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '11043055'
+    ajs-parent-page-id: '29003017'
     ajs-parent-page-title: Adding Features
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Digital+Signature
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Digital+Signature'
-    page_id: '16091701'
-    shortlink: NYr1
-    shortlink_source: 'https://doc.nuxeo.com/x/NYr1'
-    source_link: /display/USERDOC/Digital+Signature
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Digital+Signature'
+    page_id: '29003049'
+    shortlink: KY26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/KY26AQ'
+    source_link: /display/USERDOC710/Digital+Signature
 history:
     - 
         author: Manon Lumeau
@@ -89,7 +89,7 @@ history:
     - 
         author: Solen Guitter
         date: '2013-11-15 15:05'
-        message: 'Moved layout configuration section to NXDOC '
+        message: 'Moved layout configuration section to NXDOC710 '
         version: '5'
     - 
         author: Solen Guitter
@@ -147,7 +147,7 @@ Digital signatures uniquely identify the document signer. They provide a similar
 
 Before you sign a document you need a digital certificate. Certificates are attached to documents to verify the identity of the signer, that is to check that the person signing the message is who they claim to be. Certificates are issued by Certificate Authorities (CA, also known as Issuer). To verify that a certificate has not been tampered with, it has to be validated against the CA's public key. If this verification is passed it means that the CA certifies the authenticity of the signer. Digital certificates are formatted using PKI standards, the most common of them is X.509, which is also used in this addon.
 
-![]({{file name='certificate_viewer.png' space='nxdoc' page='digital-signature'}} ?w=500,border=true)
+![]({{file name='certificate_viewer.png' space='nxdoc710' page='digital-signature'}} ?w=500,border=true)
 
 ### Local and Root Certificate Authorities
 
@@ -214,7 +214,7 @@ From a high-level functional point of view, here is what users need to be able t
 3.  User B installs the root certificate in a PDF viewer.
 4.  User B opens a document, previews the document with a visible signature and can check its authenticity against the root certificate.
 
-### Generating a Certificate
+### <a name="generating-certificate"></a>"Generating a Certificate
 
 To be able to [sign documents](#sign-a-document), users need to have a certificate. Every user of the application can have a certificate. However, this not automatic: users have to generate it. When users generate their certificate, they are asked to choose a password, that will be required to sign the document.
 

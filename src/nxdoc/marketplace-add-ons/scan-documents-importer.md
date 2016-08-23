@@ -2,26 +2,21 @@
 title: Scan Documents Importer
 labels:
     - scan-documents-importer
+    - content-review-lts2015
     - update-needed
-    - multiexcerpt-include
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Scan+Documents+Importer
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Scan+Documents+Importer'
-    page_id: '18451825'
-    shortlink: cY0ZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/cY0ZAQ'
-    source_link: /display/NXDOC/Scan+Documents+Importer
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Scan+Documents+Importer'
+    page_id: '27604714'
+    shortlink: 6jalAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/6jalAQ'
+    source_link: /display/NXDOC710/Scan+Documents+Importer
 history:
-    - 
-        author: Solen Guitter
-        date: '2016-05-04 15:42'
-        message: ''
-        version: '15'
     - 
         author: Solen Guitter
         date: '2015-11-26 16:24'
@@ -98,7 +93,7 @@ The [Scan Documents Importer addon](https://connect.nuxeo.com/nuxeo/site/marketp
 
 ## Installation
 
-{{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
+The Scan Documents Importer addon is available as a Nuxeo Package. Look at [how to install a Nuxeo Package]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}) for further instuctions.
 
 ## Configuration
 
@@ -106,7 +101,7 @@ A step by step example explaining the addon configuration can be found in the Nu
 
 Please note that the XML can only be mapped to non-multivalued and non-complex fields. If you need this functionality, see the advanced XML parsing section.
 
-A [Java mapper class example](https://github.com/nuxeo/nuxeo-platform-importer/blob/master/nuxeo-importer-scan/src/test/java/org/nuxeo/platform/scanimporter/tests/SampleMapper.java) can be found on GitHub. This allows to create a specific Nuxeo document type depending on the XML source.
+A [Java mapper class example](https://github.com/nuxeo/nuxeo-platform-importer/blob/release-7.10/nuxeo-importer-scan/src/test/java/org/nuxeo/platform/scanimporter/tests/SampleMapper.java) can be found on GitHub. This allows to create a specific Nuxeo document type depending on the XML source.
 
 ## Advanced XML parsing
 
@@ -121,7 +116,7 @@ These bundles provide you with a new service (`org.nuxeo.ecm.platform.importer.x
 
 2.  `attributeMapping` to do the XML parsing and map to the corresponding metadata
 
-A detailed documentation on the advanced XML parsing usage can be found on the [nuxeo-importer-xml-parser GitHub page](https://github.com/nuxeo/nuxeo-platform-importer/tree/master/nuxeo-importer-xml-parser). To get you started, below is a working example with the original XML file and the corresponding XML configuration that can be pasted into Nuxeo Studio.
+A detailed documentation on the advanced XML parsing usage can be found on the [nuxeo-importer-xml-parser GitHub page](https://github.com/nuxeo/nuxeo-platform-importer/tree/release-7.10/nuxeo-importer-xml-parser). To get you started, below is a working example with the original XML file and the corresponding XML configuration that can be pasted into Nuxeo Studio.
 
 {{#> panel type='code' heading='Original XML file'}}
 

@@ -1,23 +1,20 @@
 ---
 title: Icons Index
+labels:
+    - lts2015-ok
 toc: true
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Icons+Index
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Icons+Index'
-    page_id: '16090382'
-    shortlink: DoX1
-    shortlink_source: 'https://doc.nuxeo.com/x/DoX1'
-    source_link: /display/USERDOC/Icons+Index
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Icons+Index'
+    page_id: '29003036'
+    shortlink: HI26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/HI26AQ'
+    source_link: /display/USERDOC710/Icons+Index
 history:
-    - 
-        author: Solen Guitter
-        date: '2016-01-25 09:13'
-        message: ''
-        version: '32'
     - 
         author: Manon Lumeau
         date: '2015-08-26 08:58'
@@ -303,7 +300,7 @@ Move to bottom icon.
 
 Click to move selected item(s) to the bottom of the list.
 
-</td></tr><tr><td colspan="1">![]({{file name='user.png'}})</td><td colspan="1">User icon: Indicates that the element is an individual user.</td></tr><tr><td colspan="1">![]({{file name='group.png'}} ?w=16,thumbnail=true)</td><td colspan="1">Group icon: Indicates that the element is a group composed of several users.</td></tr><tr><td colspan="1">![]({{file name='external.gif'}})</td><td colspan="1">Open in a new tab icon: opens the document in a new tab or window.</td></tr><tr><td colspan="1">![]({{file name='UpFolder_icon.gif'}})</td><td colspan="1">
+</td></tr><tr><td colspan="1">![]({{file name='user.png'}})</td><td colspan="1">User icon: Indicates that the element is an individual user.</td></tr><tr><td colspan="1">![]({{file name='group.png'}})</td><td colspan="1">Group icon: Indicates that the element is a group composed of several users.</td></tr><tr><td colspan="1">![]({{file name='external.gif'}})</td><td colspan="1">Open in a new tab icon: opens the document in a new tab or window.</td></tr><tr><td colspan="1">![]({{file name='UpFolder_icon.gif'}})</td><td colspan="1">
 
 Breadcrumbs icon.
 
@@ -331,7 +328,7 @@ Click on the icon to access the Manage tab of the collection.
 
 Preview icon.
 
-</td></tr><tr><td colspan="1">![]({{file name='CONTENT_TREE.png'}})</td><td colspan="1">Navigation tree tab icon.</td></tr><tr><td colspan="1">![]({{file name='TAG_CLOUD.png'}})</td><td colspan="1">Tag cloud tab icon.</td></tr><tr><td colspan="1">![]({{file name='edit_columns.png'}})</td><td colspan="1">Edit results columns icon.</td></tr><tr><td colspan="1">![]({{file name='delete_2.png'}} ?w=16,thumbnail=true)</td><td colspan="1">Delete icon, used on Permissions screens.</td></tr></tbody></table>
+</td></tr><tr><td colspan="1">![]({{file name='CONTENT_TREE.png'}})</td><td colspan="1">Navigation tree tab icon.</td></tr><tr><td colspan="1">![]({{file name='TAG_CLOUD.png'}})</td><td colspan="1">Tag cloud tab icon.</td></tr><tr><td colspan="1">![]({{file name='edit_columns.png'}})</td><td colspan="1">Edit results columns icon.</td></tr></tbody></table>
 
 ## Document Management Icons
 

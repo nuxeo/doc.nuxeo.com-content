@@ -1,19 +1,19 @@
 ---
 title: Local Configuration
 labels:
-    - excerpt
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Local+Configuration
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Local+Configuration'
-    page_id: '26314969'
-    shortlink: 2YiRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/2YiRAQ'
-    source_link: /display/USERDOC/Local+Configuration
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Local+Configuration'
+    page_id: '29003065'
+    shortlink: OY26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/OY26AQ'
+    source_link: /display/USERDOC710/Local+Configuration
 history:
     - 
         author: Solen Guitter
@@ -89,7 +89,7 @@ history:
 ---
 {{! excerpt}}
 
-Users with Manage everything permission can configure workspaces from the Nuxeo Platform user interface so they meet users specific needs. From the&nbsp;tab **Manage** > **Local Configuration**, they can set up the workspace colors, which document types are available in the workspace, how lists of documents are presented, if specific search forms re available from the workspace and where documents can be published.
+Users with Manage everything permission can configure workspaces from the Nuxeo Platform user interface so they meet users specific needs. From the workspace **Manage** > **Local Configuration** tab, they can set up the workspace colors, which document types are available in the workspace, how lists of documents are presented, if specific search forms re available from the workspace and where documents can be published.
 
 {{! /excerpt}}
 
@@ -141,7 +141,7 @@ To **define the default document type for import**, click on&nbsp;**Manage >** *
 
 {{#> callout type='tip' heading='Add your own document types'}}
 
-You can leverage this feature when you customize the Nuxeo Platform and create new document types that extend the File document type. Your document type will then be available in the "Default type" drop down list and you can select it instead of the default File. You can read a tutorial showing [how to create a new document type]({{page space='nxdoc' page='how-to-define-a-document-type'}}) using [Nuxeo Studio](https://doc.nuxeo.com/display/Studio).
+You can leverage this feature when you customize the Nuxeo Platform and create new document types that extend the File document type. Your document type will then be available in the "Default type" drop down list and you can select it instead of the default File. You can read a tutorial showing [how to create a new document type]({{page space='nxdoc710' page='how-to-define-a-document-type'}}) using [Nuxeo Studio](https://doc.nuxeo.com/display/Studio).
 
 {{/callout}}
 
@@ -163,7 +163,7 @@ You can define what content view will be used for folderish documents (i.e. docu
 
 {{#> callout type='tip' heading='Customized content views'}}
 
-You can leverage this feature when you customize the Nuxeo Platform and create new content views. Your content view will then be available in the drop down list and you can use locally for documents. You can read [How to define a new view]({{page space='nxdoc' page='how-to-define-a-new-content-view'}}) using [Studio]({{page space='studio'}}).
+You can leverage this feature when you customize the Nuxeo Platform and create new content views. Your content view will then be available in the drop down list and you can use locally for documents. You can read [How to define a new view]({{page space='nxdoc710' page='how-to-define-a-new-content-view'}}) using [Studio]({{page space='studio'}}).
 
 {{/callout}}
 
@@ -213,9 +213,9 @@ For more information about Publication Targets, read the page [Publishing Conten
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
-*   [How to Define a New Content View]({{page space='nxdoc' page='how-to-define-a-new-content-view'}})
-*   [How to Brand Your Application]({{page space='nxdoc' page='how-to-brand-your-application'}})
-*   [How to Configure a Search Filter With Facets and Other Aggregates]({{page space='nxdoc' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
+*   [How to Define a Document Type]({{page space='nxdoc710' page='how-to-define-a-document-type'}})
+*   [How to Define a New Content View]({{page space='nxdoc710' page='how-to-define-a-new-content-view'}})
+*   [How to Brand Your Application]({{page space='nxdoc710' page='how-to-brand-your-application'}})
+*   [How to Configure a Search Filter With Facets and Other Aggregates]({{page space='nxdoc710' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
 
 {{/panel}}</div></div>

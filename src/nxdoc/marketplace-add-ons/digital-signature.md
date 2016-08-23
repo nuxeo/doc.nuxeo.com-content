@@ -2,39 +2,25 @@
 title: Digital Signature
 labels:
     - digital-signature
+    - lts2015-ok
     - digital-signature-component
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Digital+Signature
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Digital+Signature'
-    page_id: '17793591'
-    shortlink: N4IPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/N4IPAQ'
-    source_link: /display/NXDOC/Digital+Signature
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Digital+Signature'
+    page_id: '28475473'
+    shortlink: UYCyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/UYCyAQ'
+    source_link: /display/NXDOC710/Digital+Signature
 history:
     - 
         author: Manon Lumeau
-        date: '2016-06-09 12:25'
-        message: ''
-        version: '12'
-    - 
-        author: Solen Guitter
-        date: '2016-05-27 14:06'
-        message: Use generic installation excerpt and screenshots from user doc
-        version: '11'
-    - 
-        author: Manon Lumeau
-        date: '2016-04-22 13:11'
-        message: ''
-        version: '10'
-    - 
-        author: Manon Lumeau
         date: '2016-01-19 10:42'
-        message: ''
+        message: 'eplace "Write" by "Edit"     '
         version: '9'
     - 
         author: Antoine Taillefer
@@ -165,14 +151,14 @@ On the other hand, if your local CA was self-signed, the CA certificate has to b
 
 ### Installation
 
-{{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
+The Digital Signature package requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin Center]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}).
 
 After the package is installed, users get some new tabs:
 
-*   a **Certificates** tab in the Home
-    ![]({{file name='certificate_home_tab.png' space='userdoc' page='digital-signature'}} ?w=600,border=true)
-*   a **Signature** tab on documents
-    ![]({{file name='signature_tab_without_signature.png' space='userdoc' page='digital-signature'}} ?w=600,border=true)
+*   a Certificates tab in the Home,
+    ![]({{file name='signature-home-certificate-tab.png'}} ?w=650,border=true)
+*   a Signature tab on documents.
+    ![]({{file name='signature-tab.png'}} ?w=650,border=true)
 
 ### Configuration
 
@@ -188,7 +174,7 @@ This plug-in root certificate helps establishing a simple method of user certifi
 
 As the keystore configured in the installable package is a sample keystore containing a test configuration, it is required that it be replaced with the client keystore containing the keypair and the certificate to be used for signing user certificates. As of now the certificate+keypair need to be stored in a .jks formatted keystore and configured via the extension mechanism.
 
-The [user certificate generation step]({{page space='userdoc' page='digital-signature#generating-certificate'}}) requires a Certificate Authority certificate (CA) to be set up inside the Nuxeo Platform system as all user certificates have to be signed by a CA with a recognizable identity &mdash; a company rather than a single user. The term local CA can be understood here as "company Certificate Authority" or "system-wide Certificate Authority". Note that there is only one CA certificate per system but each user can have his own certificate.
+The [user certificate generation step]({{page space='userdoc710' page='digital-signature#generating-certificate'}}) requires a Certificate Authority certificate (CA) to be set up inside the Nuxeo Platform system as all user certificates have to be signed by a CA with a recognizable identity &mdash; a company rather than a single user. The term local CA can be understood here as "company Certificate Authority" or "system-wide Certificate Authority". Note that there is only one CA certificate per system but each user can have his own certificate.
 
 ##### Setting up a CA certificate from a 3rd party authority
 
@@ -350,7 +336,7 @@ Another extension provides general company information used in all certificates,
 
 2.  Put the extension in the `config` directory of your server:
     *   `$NUXEO/nxserver/config` for a Tomcat distribution,
-    *   `$NUXEO/server/default/deploy/nuxeo.ear/config` for a JBoss distribution.
+    *   `$NUXEO/server/default/deploy/[nuxeo.ear/config](http://nuxeo.ear/config)` for a JBoss distribution.
 
 ## Use
 
@@ -370,7 +356,7 @@ From a high-level functional point of view, here is what users need to be able t
 3.  User B installs the root certificate in a PDF viewer.
 4.  User B opens a document, previews the document with a visible signature and can check its authenticity against the root certificate.
 
-### Generating a Certificate
+### <a name="generating-certificate"></a>"Generating a Certificate
 
 To be able to [sign documents](#signing-document), users need to have a certificate. Every user of the application can have a certificate. However, this not automatic: users have to generate it. When users generate their certificate, they are asked to choose a password, that will be required to sign the document.
 
@@ -403,7 +389,7 @@ The certificate generation relies on two sets of information:
     You certificate is generated and displayed.
     ![]({{file name='certificate.png'}} ?w=650,border=true)
 
-### Signing a Document
+### <a name="signing-document"></a>"Signing a Document
 
 Only users with "Edit" permission can sign documents.
 

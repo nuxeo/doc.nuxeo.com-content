@@ -3,29 +3,24 @@ title: Exporting Documents
 labels:
     - export
     - worklist
-    - multiexcerpt
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Exporting+Documents
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Exporting+Documents'
-    page_id: '9830819'
-    shortlink: owGW
-    shortlink_source: 'https://doc.nuxeo.com/x/owGW'
-    source_link: /display/USERDOC/Exporting+Documents
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Exporting+Documents'
+    page_id: '29003033'
+    shortlink: GY26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/GY26AQ'
+    source_link: /display/USERDOC710/Exporting+Documents
 history:
     - 
-        author: Manon Lumeau
-        date: '2016-01-04 16:27'
-        message: ix image
-        version: '28'
-    - 
-        author: Manon Lumeau
-        date: '2016-01-04 16:06'
-        message: Fix image
+        author: Solen Guitter
+        date: '2016-02-17 13:29'
+        message: ix screenshot
         version: '27'
     - 
         author: Manon Lumeau
@@ -204,7 +199,7 @@ The documents are added to your worklist, in the left part of the screen.
 
 ![]({{file name='worklist.png'}} ?w=250,border=true,thumbnail=true)
 
-Optionally go in other folders and add other documents to your worklist.&nbsp;In the worklist,&nbsp;**click on the&nbsp;****Export as ZIP** link and&nbsp;**S****ave**&nbsp;the "Clipboard.zip" folder.
+Optionally go in other folders and add other documents to your worklist.&nbsp;In the worklist,&nbsp;**click on the&nbsp;** **Export as ZIP** &nbsp;link and&nbsp;**S** **ave**&nbsp;the "Clipboard.zip" folder.
 
 When you unzip it, you get the documents' attachments and an INDEX.txt file that summarizes the content of the export.
 ![]({{file name='unzipped-zip-export.png'}} ?w=650,border=true)
@@ -232,7 +227,7 @@ The XML export of a document enables users to get a folder for the exported docu
 *   a document.xml file holding the document's various information (the applied access rights, the document's metadata, its path),
 *   a .blob file that holds the binary content of the document. This blob is referenced in the document.xml file.
 
-To**&nbsp;get the XML export of a document**, from the document, click on the icon&nbsp; ![]({{file name='export.png' page='icons-index'}}) &nbsp;or, if the icon is not available on the action bar, on the&nbsp;**Export&nbsp;**button**&nbsp;**of the&nbsp; **More**&nbsp;menu in the action bar.
+To**&nbsp;get the XML export of a document**, from the document, click on the icon&nbsp; ![]({{file name='export.png' page='icons-index'}}) &nbsp;or, if the icon is not available on the action bar, on the&nbsp; **Export&nbsp;** button **&nbsp;** of the&nbsp; **More** &nbsp;menu in the action bar.
 
 ![]({{file name='more-menu.png'}} ?w=250,border=true,thumbnail=true)
 
@@ -255,7 +250,7 @@ When you unzip it, you get a folder named from the document, that contains a doc
 
 It is possible to do an XML export of several documents in a single export, using the Worklist.
 
-To**&nbsp;export a selection of documents,** check the box that corresponds to the documents to export to select it.&nbsp;Click on the&nbsp;**Add to worklist** button.
+To**&nbsp;export a selection of documents, c** heck the box that corresponds to the documents to export to select it.&nbsp; Click on the&nbsp; **Add to worklist** &nbsp;button.
 
 The documents are added to your worklist, in the left part of the screen.
 ![]({{file name='more-menu.png'}} ?w=250,border=true,thumbnail=true)

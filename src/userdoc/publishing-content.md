@@ -3,29 +3,32 @@ title: Publishing Content
 labels:
     - section
     - publishing
+    - lts2015-ok
     - drag-and-drop
-    - excerpt
-    - excerpt-include
-    - multiexcerpt
 toc: true
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Publishing+Content
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Publishing+Content'
-    page_id: '2392407'
-    shortlink: V4Ek
-    shortlink_source: 'https://doc.nuxeo.com/x/V4Ek'
-    source_link: /display/USERDOC/Publishing+Content
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Publishing+Content'
+    page_id: '29003028'
+    shortlink: FI26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/FI26AQ'
+    source_link: /display/USERDOC710/Publishing+Content
 history:
     - 
         author: Solen Guitter
-        date: '2016-05-18 13:21'
+        date: '2016-05-18 13:25'
         message: >-
             pdate required rights in sections to be able to publish (Can ask for
             publishing instead of Read
+        version: '23'
+    - 
+        author: Manon Lumeau
+        date: '2016-01-11 11:16'
+        message: Fix links to 7.10
         version: '22'
     - 
         author: Solen Guitter
@@ -146,10 +149,10 @@ As in workspaces, the access to sections is determined by&nbsp;permissions.
 
 The main difference with workspaces is the fact that documents can't be edited in sections. The only actions available on published documents are:
 
-*   [relations actions](https://doc.nuxeo.com/display/USERDOC/Relations)
-*   [preview](https://doc.nuxeo.com/display/USERDOC/Preview)
-*   [tagging](https://doc.nuxeo.com/display/USERDOC/Tags)
-*   [alerts](https://doc.nuxeo.com/display/USERDOC/Alerts)
+*   [relations actions](https://doc.nuxeo.com/display/USERDOC710/Editing+Content#EditingContent-relations)
+*   [preview](https://doc.nuxeo.com/display/USERDOC710/Preview)
+*   [tagging](https://doc.nuxeo.com/display/USERDOC710/Tags)
+*   [alerts](https://doc.nuxeo.com/display/USERDOC/Collaborative+Features#CollaborativeFeatures-alertsAlerts)
 
 ### Publishing Documents
 
@@ -171,7 +174,7 @@ The following elements are not available on the published document:
 
     {{#> callout type='info' }}
 
-    It is possible to [enable the duplication of relations]({{page space='nxdoc' page='publisher#publication-relations-duplication'}}) when the document is published.
+    It is possible to [enable the duplication of relations]({{page space='nxdoc710' page='publisher#publication-relations-duplication'}}) when the document is published.
 
     {{/callout}}
 *   The archived versions of the document
@@ -180,8 +183,8 @@ The following elements are not available on the published document:
 
 To submit a document to publication, you need the following permissions:
 
-*   at least "Edit" on the workspace from which you want to publish,
-*   at least "Can ask for publishing" on the section into which you want to publish the document.
+*   at least "Edit" on the workspace from which you want to publish
+*   at least "Can ask for publishing" on the section into which you want to publish the document
 
 You can submit a document in several sections. The publishing workflows in the different sections are independent. The document can be published in a section and rejected in another one. The list of the sections in which you can publish a document is defined by your permissions.
 
@@ -207,7 +210,7 @@ The document submitted to publication in the section:
 
     {{#> callout type='tip' }}
 
-    If you have Edit or Management permissions in the selected section, the document is automatically published and visible to all section users. It doesn't need to be approved.
+    If you have edit or management permissions in the selected section, the document is automatically published and visible to all section users. It doesn't need to be approved.
 
     {{/callout}}
 
@@ -262,7 +265,7 @@ To**&nbsp;unpublish a document from a section**, in the&nbsp;**Content**&nbsp;ta
 
 {{{excerpt 'NXDOC:Nuxeo Media Publishing'}}}
 
-Read the page&nbsp;[Nuxeo Media Publishing]({{page space='nxdoc' page='nuxeo-media-publishing'}})&nbsp;for more information about this addon.&nbsp;
+Read the page&nbsp;[Nuxeo Media Publishing]({{page space='nxdoc710' page='nuxeo-media-publishing'}})&nbsp;for more information about this addon.&nbsp;
 
 ### Publication Targets
 
@@ -272,7 +275,7 @@ By default, workspaces don't have any targets defined.
 
 To**&nbsp;define the publication targets of a workspace,&nbsp;**click on the&nbsp;**Manage**&nbsp;> **Publication targets**, if no section has been defined yet, users can submit documents to publishing in any section (providing they have the permissions to publish). Unfold the sections tree and click on the&nbsp;**Add**&nbsp;link of the sections to which you want to restrict publishing from this workspace.&nbsp; The selected sections are displayed in a table below the tree. No&nbsp;**Add**&nbsp;link is available anymore for these sections.
 
-When they click on the&nbsp;**Publish**&nbsp;tab of documents to publish a document, only the selected sections are available to publish the document. To&nbsp;**remove&nbsp;**&nbsp;**a section**&nbsp;from the workspace's targets, click on&nbsp;![]({{file name='delete.png' space='userdoc58' page='icons-index'}})&nbsp;next to it.&nbsp;
+When they click on the&nbsp;**Publish**&nbsp;tab of documents to publish a document, only the selected sections are available to publish the document. To&nbsp;**remove&nbsp;**&nbsp;**a section**&nbsp;from the workspace targets, click on&nbsp;![]({{file name='delete.png' space='userdoc58' page='icons-index'}})&nbsp;next to it.&nbsp;
 
 ![]({{file name='publicationTargets-added.png'}} ?w=500,border=true)
 

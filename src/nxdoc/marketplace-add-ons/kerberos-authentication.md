@@ -1,28 +1,24 @@
 ---
 title: Kerberos Authentication
 labels:
+    - content-review-lts2015
     - kerberos-authentication-component
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Kerberos+Authentication
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Kerberos+Authentication'
-    page_id: '20518349'
-    shortlink: zRU5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/zRU5AQ'
-    source_link: /display/NXDOC/Kerberos+Authentication
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Kerberos+Authentication'
+    page_id: '27604710'
+    shortlink: 5jalAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/5jalAQ'
+    source_link: /display/NXDOC710/Kerberos+Authentication
 history:
     - 
-        author: Manon Lumeau
-        date: '2016-06-09 14:38'
-        message: ''
-        version: '12'
-    - 
         author: Thomas Roger
-        date: '2016-03-22 10:58'
+        date: '2016-03-22 10:59'
         message: ''
         version: '11'
     - 
@@ -335,7 +331,7 @@ More troubleshooting tips on the [Oracle documentation](http://docs.oracle.com/j
 
 ## Upgrade Notes
 
-If you are upgrading from a version of the package lower than 1.3.0 (i.e. from Nuxeo 5.x), remove the `-Djava.security.auth.login.config=xxx` option from your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}): it is now automatically added by the package.
+If you are upgrading from a version of the package lower than 1.3.0 (i.e. from Nuxeo 5.x), remove the `-Djava.security.auth.login.config=xxx` option from your [nuxeo.conf]({{page space='admindoc710' page='configuration-parameters-index-nuxeoconf'}}): it is now automatically added by the package.
 
 ## Configuration
 

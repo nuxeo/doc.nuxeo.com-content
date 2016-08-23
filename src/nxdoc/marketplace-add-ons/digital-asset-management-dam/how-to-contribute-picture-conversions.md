@@ -7,33 +7,29 @@ details:
         tool: XML Extension
         topics: 'Conversion, DAM'
 labels:
-    - howto
-    - conversion
     - picture
+    - lts2015-ok
     - convert-component
+    - conversion
+    - howto
 toc: true
 confluence:
-    ajs-parent-page-id: '3866704'
+    ajs-parent-page-id: '28475697'
     ajs-parent-page-title: Digital Asset Management (DAM)
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: How+to+Contribute+Picture+Conversions
     canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+Picture+Conversions
-    page_id: '20519904'
-    shortlink: 4Bs5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/4Bs5AQ'
-    source_link: /display/NXDOC/How+to+Contribute+Picture+Conversions
+        https://doc.nuxeo.com/display/NXDOC710/How+to+Contribute+Picture+Conversions
+    page_id: '28475482'
+    shortlink: WoCyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/WoCyAQ'
+    source_link: /display/NXDOC710/How+to+Contribute+Picture+Conversions
 history:
-    - 
-        author: Manon Lumeau
-        date: '2016-04-22 13:08'
-        message: ''
-        version: '24'
     - 
         author: Solen Guitter
         date: '2015-04-15 13:14'
-        message: Add links to the explorer
+        message: dd links to the explore
         version: '23'
     - 
         author: Manon Lumeau
@@ -262,7 +258,7 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
     ![]({{file name='conversion.png'}} ?w=450,border=true)
 
     You can now click on&nbsp;![]({{file name='download.png' space='userdoc58' page='icons-index'}})&nbsp; on the Watermark line to download the watermarked picture:
-    ![]({{file name='Watermark_nuxeo_landscape.jpeg'}} ?w=450,h=301,border=true)
+    ![]({{file name='Watermark_nuxeo_landscape.jpeg'}} ?w=450)
 
 5.  If you need to open a&nbsp;`CoreSession` to retrieve a document, for instance the parent document which will hold the watermark text, you will need two chains, one opening a Transaction / CoreSession, and another one doing the watermarking.
     1.  First, create a chain that will retrieve the text, and put it in the&nbsp;`Context`:

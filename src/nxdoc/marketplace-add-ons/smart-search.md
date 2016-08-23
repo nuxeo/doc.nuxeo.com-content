@@ -1,61 +1,51 @@
 ---
 title: Smart Search
 labels:
+    - smart-search-component
     - link-update
     - smart-search
-    - smart-search-component
-    - multiexcerpt
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Smart+Search
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Smart+Search'
-    page_id: '3868365'
-    shortlink: zQY7
-    shortlink_source: 'https://doc.nuxeo.com/x/zQY7'
-    source_link: /display/NXDOC/Smart+Search
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Smart+Search'
+    page_id: '28475587'
+    shortlink: w4CyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/w4CyAQ'
+    source_link: /display/NXDOC710/Smart+Search
 history:
     - 
         author: Manon Lumeau
-        date: '2016-04-29 16:31'
+        date: '2016-02-12 16:43'
         message: ''
-        version: '41'
-    - 
-        author: Manon Lumeau
-        date: '2016-02-11 10:06'
-        message: ''
-        version: '40'
-    - 
-        author: Anahide Tchertchian
-        date: '2016-02-11 08:13'
-        message: 'NXP-18626: adapt github links to modules merge'
         version: '39'
     - 
-        author: Anahide Tchertchian
-        date: '2016-02-11 08:11'
-        message: 'NXP-18626: adapt github links to modules merge'
+        author: Manon Lumeau
+        date: '2016-02-12 16:41'
+        message: 'Formatting '
         version: '38'
     - 
         author: Manon Lumeau
-        date: '2016-02-10 13:53'
-        message: 'Formatting '
+        date: '2016-02-12 16:23'
+        message: Merge Userdoc and Admindoc in NXDOC
         version: '37'
     - 
-        author: Manon Lumeau
-        date: '2016-02-10 13:45'
-        message: Merging Admin and User part on NXDOC
+        author: Solen Guitter
+        date: '2016-01-25 16:45'
+        message: ''
         version: '36'
     - 
         author: Solen Guitter
-        date: '2016-01-25 16:53'
-        message: Fix related pages
+        date: '2016-01-25 16:43'
+        message: Fix links to GitHub
         version: '35'
     - 
         author: Anahide Tchertchian
-        date: '2016-01-18 10:13'
+        date: '2016-01-18 10:16'
         message: 'NXDOC-666: update doc to fit latest changes'
         version: '34'
     - 
@@ -227,15 +217,15 @@ history:
 ---
 ## Installation
 
-The Smart search package requires no specific installation steps. It can be installed like any other package&nbsp;[from the Marketplace or from the Admin Center]({{page page='installing-a-new-package-on-your-instance'}}).
+The Smart search package requires no specific installation steps. It can be installed like any other package&nbsp;[from the Marketplace or from the Admin Center]({{page space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
 
 After the package is installed, the Smart Search form is available from the&nbsp;**Search**&nbsp;tab.
 
-![]({{file name='smart-search-link.png'}} ?w=310,border=true)
+![]({{file name='smart-search-link.png' space='nxdoc' page='smart-search'}} ?w=310,border=true)
 
 ## Functional Overview
 
-### Building a Smart Search
+### Building a Smart Search<a name="build-query"></a>"
 
 {{! multiexcerpt name='building-smart-search'}}
 
@@ -288,7 +278,7 @@ Permissions cannot be managed on smart folders. If you want to share a smart sea
 
 You can save a smart search from the search form directly or from the search results. When you save a smart search, it is automatically saved in your personal workspace.
 
-To save a search in a smart folder:
+<a name="save-search"></a>"To save a search in a smart folder:
 
 1.  [Build your query](#build-query).
 2.  From the search result page or from the search form, click on the&nbsp;**Save As**&nbsp;button.
@@ -308,7 +298,7 @@ To save a search in a smart folder:
 
 You can create a smart search in a workspace or in a folder.
 
-To create a smart folder:
+<a name="smart-folder"></a>"To create a smart folder:
 You can create a smart folder and then build the query that will be associated to it:
 
 1.  In a workspace, click on&nbsp;**New**.
@@ -328,7 +318,7 @@ You can create a smart folder and then build the query that will be associated t
 The smart query is designed to work in conjunction with a&nbsp;[content view](https://doc.nuxeo.com/display/NXDOC/Content+Views).
 This content view search layout displays a selector to help building a query part, and a text area with the existing query parts already aggregated:
 
-The&nbsp;[SmartQuery](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/master/src/main/java/org/nuxeo/ecm/platform/smart/query/SmartQuery.java)&nbsp;interface is very simple: it can build a query (or query part) and can check if it is in a valid state.
+The&nbsp; <u>[SmartQuery](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/master/src/main/java/org/nuxeo/ecm/platform/smart/query/SmartQuery.java)</u> &nbsp;interface is very simple: it can build a query (or query part) and can check if it is in a valid state.
 
 The&nbsp;[IncrementalSmartQuery](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/master/src/main/java/org/nuxeo/ecm/platform/smart/query/IncrementalSmartQuery.java)&nbsp;abstract class holds additional methods for a good interaction with UI JSF components. It is able to store an existing query part, and has getters and setters for the description of a new element to add to the query.
 
@@ -346,13 +336,8 @@ Here is an explanation on how to define this layout widgets, that need to be of 
 
 As a simple example, let's have a look at the widget to add a condition on the title:
 
-<div class="syntaxhighlighter nogutter  html">
-
-&nbsp;
-
 ```xml
-<widget name="nxql_smart_query_condition_title"
-  type="incremental_smart_query_condition">
+<widget name="nxql_smart_query_condition_title">
   <labels>
     <label mode="any">title</label>
   </labels>
@@ -373,14 +358,9 @@ As a simple example, let's have a look at the widget to add a condition on the t
     </widget>
   </subWidgets>
 </widget>
-
 ```
 
-&nbsp;
-
-</div>
-
-The properties&nbsp;`searchField`&nbsp;and&nbsp;`availableOperators`&nbsp;are used to set the left expression of the condition and the operator. The subwidget is a standard widget of type "text". It is bound to the "stringValue" field so it will be stored in the smart query instance field with the same name. Other additional properties supported by the "text" widget type can be added here (for instance, the&nbsp;`required`&nbsp;or&nbsp;`styleClass`&nbsp;properties).
+<span style="line-height: 21.58px;">The properties&nbsp;</span> `searchField` <span style="line-height: 21.58px;">&nbsp;and&nbsp;</span> `availableOperators` <span style="line-height: 21.58px;">&nbsp;are used to set the left expression of the condition and the operator. The subwidget is a standard widget of type "text". It is bound to the "stringValue" field so it will be stored in the smart query instance field with the same name. Other additional properties supported by the "text" widget type can be added here (for instance, the&nbsp;</span> `required` <span style="line-height: 21.58px;">&nbsp;or&nbsp;</span> `styleClass` <span style="line-height: 21.58px;">&nbsp;properties).</span>
 
 Here is the complete list of available field bindings:
 
@@ -397,11 +377,7 @@ Here is the complete list of available field bindings:
 
 As a more complex example, let's have a look at the widget used to add a condition on the modification date:
 
-<div class="syntaxhighlighter nogutter  html">
-
-&nbsp;
-
-```html/xml
+```xml
 <widget name="nxql_smart_query_condition_modified" type="incremental_smart_query_condition">
   <labels>
     <label mode="any">label.dublincore.modified</label>
@@ -452,14 +428,9 @@ As a more complex example, let's have a look at the widget used to add a conditi
     </widget>
   </subWidgets>
 </widget>
-
 ```
 
-&nbsp;
-
-</div>
-
-It is more complex as some subwidgets should not be shown depending on the chosen operator: when operator "BETWEEN" is selected, all of the three subwidgets should be displayed, whereas when other operators are selected, only the first subwidget should be shown. This is achieved by setting the widget mode according to the selected value.
+<span style="line-height: 21.58px;">It is more complex as some subwidgets should not be shown depending on the chosen operator: when operator "BETWEEN" is selected, all of the three subwidgets should be displayed, whereas when other operators are selected, only the first subwidget should be shown. This is achieved by setting the widget mode according to the selected value.</span>
 
 Let's have a close look at the condition&nbsp; _`#{(empty value.conditionalOperator or value.conditionalOperator=='BETWEEN' or value.conditionalOperator=='NOT BETWEEN')?'edit':'hidden'}`_ . In this expression,&nbsp;`value`&nbsp;references the value manipulated by the widget (e.g. the smart query instance). This variable is made available by the layout system. Here, if the conditional operator is not empty, and is different from 'BETWEEN' or 'NOT BETWEEN', the widget should be hidden. Otherwise, it can be shown in edit mode. The widgets shown when the conditional operator is empty should be suitable for the first operator within the list of available operators.
 

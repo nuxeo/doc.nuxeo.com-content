@@ -2,46 +2,20 @@
 title: Nuxeo Drive FAQ
 labels:
     - nuxeo-drive
-    - multiexcerpt
-    - excerpt
+    - content-review-lts2015
 toc: true
 confluence:
-    ajs-parent-page-id: '13664723'
+    ajs-parent-page-id: '29003064'
     ajs-parent-page-title: Nuxeo Drive
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Nuxeo+Drive+FAQ
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Drive+FAQ'
-    page_id: '23364863'
-    shortlink: '-4RkAQ'
-    shortlink_source: 'https://doc.nuxeo.com/x/-4RkAQ'
-    source_link: /display/USERDOC/Nuxeo+Drive+FAQ
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Nuxeo+Drive+FAQ'
+    page_id: '29003067'
+    shortlink: O426AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/O426AQ'
+    source_link: /display/USERDOC710/Nuxeo+Drive+FAQ
 history:
-    - 
-        author: Antoine Taillefer
-        date: '2016-05-30 17:25'
-        message: ''
-        version: '16'
-    - 
-        author: Antoine Taillefer
-        date: '2016-01-07 10:51'
-        message: ''
-        version: '15'
-    - 
-        author: Antoine Taillefer
-        date: '2016-01-07 10:49'
-        message: ''
-        version: '14'
-    - 
-        author: Antoine Taillefer
-        date: '2016-01-07 10:45'
-        message: ''
-        version: '13'
-    - 
-        author: Antoine Taillefer
-        date: '2016-01-06 16:43'
-        message: ''
-        version: '12'
     - 
         author: Antoine Taillefer
         date: '2015-10-27 13:50'
@@ -153,41 +127,6 @@ In the Settings screen, you can switch to another folder by clicking on the `...
 
 ![]({{file name='drive_Accounts_tab.png' page='nuxeo-drive'}} ?w=400)
 
-## How to Make Nuxeo Drive Work with a Nuxeo Cluster
-
-### Nuxeo LTS 2015 and higher
-
-You only need to make sure that:
-
-*   [Redis]({{page space='nxdoc' page='redis-configuration'}}) is enabled.
-*   The `$DATA_DIR/transientstores/default` directory is shared by all the Nuxeo instances, see the [related documentation](https://doc.nuxeo.com/display/ADMINDOC/Nuxeo+Clustering+Configuration#NuxeoClusteringConfiguration-TransientStore) for details.
-
-### Nuxeo 7.4 and lower
-
-You can:
-
-*   Configure Apache with `mod_proxy_balancer` to use [load balancing with stickyness](https://httpd.apache.org/docs/2.4/en/mod/mod_proxy_balancer.html).
-
-    {{#> panel type='code' heading='Apache-side sticky session'}}
-
-    ```
-    Header add Set-Cookie "ROUTEID=.%{BALANCER_WORKER_ROUTE}e; path=/" env=BALANCER_ROUTE_CHANGED
-    <Proxy balancer://nuxeocluster>
-        BalancerMember http://nuxeo1:8080 route=1
-        BalancerMember http://nuxeo2:8080 route=2
-    ProxySet stickysession=ROUTEID
-    </Proxy>
-    ProxyPass        "/" "balancer://nuxeocluster/"
-    ProxyPassReverse "/" "balancer://nuxeocluster/"
-    ProxyPreserveHost On
-    ```
-
-    {{/panel}}
-
-    Also see [https://wiki.apache.org/httpd/LoadBalanceWithoutStickyCookie](https://wiki.apache.org/httpd/LoadBalanceWithoutStickyCookie).
-
-*   Use AWS [Elastic Load Balancing with sticky sessions](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-sticky-sessions.html).
-
 ## How to Report Bugs or Problems about Nuxeo Drive Usage
 
 If you want to report any issue regarding Nuxeo Drive, you need to provide these informations:
@@ -203,9 +142,41 @@ If you want to report any issue regarding Nuxeo Drive, you need to provide these
 
 Currently Nuxeo Drive has some limitations:
 
+*   For performances reasons, the number of documents synchronized for a given folder is by default limited to 1000\. See below for a [changing this default limit](#configuringthemaximumnumbersofchildrenperfolder). (We plan to use pagination to overcome this, see [NXDRIVE-307](https://jira.nuxeo.com/browse/NXDRIVE-307)).
 *   Synchronizing very big files may be an issue if your network connection is slow or unstable. This will be improved by uploading files by chunks and allowing to resume uploads, see [NXDRIVE-457](https://jira.nuxeo.com/browse/NXDRIVE-457).
 *   The target use case is not to synchronize a huge tree on a lot of desktops: Nuxeo Drive is not optimized to replicate the Document Repository on each desktop.
 *   Complex synchronization cases where you delete files that are being synchronized.
+*   Needs a special configuration to work with a Nuxeo cluster for a version < 7.10:
+    *   Apache [Load balancing with stickyness](https://httpd.apache.org/docs/2.4/en/mod/mod_proxy_balancer.html).
+    *   AWS [Elastic Load Balancing with sticky sessions](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-sticky-sessions.html).
+
+## <a name="ConfiguringthemaximumnumbersofchildrenperFolder"></a>"Configuring the maximum numbers of children per Folder
+
+By default when synchronizing a Nuxeo folder the maximum number of documents fetched by Nuxeo Drive is limited to 1000\. If the folder has more than 1000 documents the exceeding documents will not be synchronized.
+
+This is defined by the [FOLDER_ITEM_CHILDREN](https://github.com/nuxeo/nuxeo-drive-server/blob/release-7.10/nuxeo-drive-core/src/main/resources/OSGI-INF/nuxeodrive-pageproviders-contrib.xml) page provider.You can easily override it to set a custom maximum number of documents (let's say 2000 for example) with an XML contribution like:
+
+```xml
+<?xml version="1.0"?>
+<component name="com.mycompany.drive.pageproviders.custom" version="1.0">
+  <require>org.nuxeo.drive.pageproviders</require>
+  <extension target="org.nuxeo.ecm.platform.query.api.PageProviderService"
+    point="providers">
+    <coreQueryPageProvider name="FOLDER_ITEM_CHILDREN">
+      <pattern>
+        SELECT * FROM Document WHERE ecm:parentId = ?
+        AND ecm:isCheckedInVersion = 0
+        AND ecm:currentLifeCycleState != 'deleted'
+        AND ecm:mixinType != 'HiddenInNavigation'
+      </pattern>
+      <sort column="dc:created" ascending="true" />
+      <pageSize>2000</pageSize>
+      <maxPageSize>2000</maxPageSize>
+      <property name="maxResults">PAGE_SIZE</property>
+    </coreQueryPageProvider>
+  </extension>
+</component>
+```
 
 {{! /multiexcerpt}}
 
@@ -214,9 +185,9 @@ Currently Nuxeo Drive has some limitations:
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Drive Related Documentation'}}
 
 *   [Nuxeo Drive user documentation]({{page page='nuxeo-drive'}})
-*   [Nuxeo Drive developer documentation]({{page space='nxdoc' page='nuxeo-drive'}})
-*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page space='nxdoc' page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
-*   [Nuxeo Drive Update Site]({{page space='nxdoc' page='nuxeo-drive-update-site'}})
+*   [Nuxeo Drive developer documentation]({{page space='nxdoc710' page='nuxeo-drive'}})
+*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page space='nxdoc710' page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+*   [Nuxeo Drive Update Site]({{page space='nxdoc710' page='nuxeo-drive-update-site'}})
 
 {{/panel}}
 

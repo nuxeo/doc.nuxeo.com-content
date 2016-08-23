@@ -1,19 +1,19 @@
 ---
 title: Nuxeo IMAP Connector
 labels:
-    - excerpt
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '11043055'
+    ajs-parent-page-id: '29003017'
     ajs-parent-page-title: Adding Features
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Nuxeo+IMAP+Connector
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+IMAP+Connector'
-    page_id: '2392392'
-    shortlink: SIEk
-    shortlink_source: 'https://doc.nuxeo.com/x/SIEk'
-    source_link: /display/USERDOC/Nuxeo+IMAP+Connector
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Nuxeo+IMAP+Connector'
+    page_id: '29003041'
+    shortlink: IY26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/IY26AQ'
+    source_link: /display/USERDOC710/Nuxeo+IMAP+Connector
 history:
     - 
         author: Solen Guitter

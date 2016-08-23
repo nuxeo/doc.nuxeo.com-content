@@ -2,183 +2,91 @@
 title: Adding Features
 labels:
     - marketplace
-    - multiexcerpt
+    - lts2015-ok
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Adding+Features
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Adding+Features'
-    page_id: '11043055'
-    shortlink: 74Co
-    shortlink_source: 'https://doc.nuxeo.com/x/74Co'
-    source_link: /display/USERDOC/Adding+Features
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Adding+Features'
+    page_id: '29003017'
+    shortlink: CY26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/CY26AQ'
+    source_link: /display/USERDOC710/Adding+Features
 history:
     - 
-        author: Manon Lumeau
-        date: '2016-07-25 13:57'
-        message: ''
-        version: '336'
-    - 
-        author: Manon Lumeau
-        date: '2016-07-25 13:55'
-        message: ''
-        version: '335'
-    - 
         author: Solen Guitter
-        date: '2016-07-22 10:08'
-        message: Fix Nuxeo Connect (now Nuxeo Online Services)
-        version: '334'
-    - 
-        author: Solen Guitter
-        date: '2016-07-21 12:40'
-        message: Add link to Nuxeo Connect Report Tools doc
-        version: '333'
-    - 
-        author: Solen Guitter
-        date: '2016-07-19 15:14'
-        message: >-
-            Add Nuxeo Web UI, Marklogic Persistence Engine and Nuxeo Connect
-            Report Tools
-        version: '332'
-    - 
-        author: Julien Carsique
-        date: '2016-07-19 12:37'
-        message: ''
-        version: '331'
-    - 
-        author: Julien Carsique
-        date: '2016-07-19 10:46'
-        message: release 8.3
-        version: '330'
-    - 
-        author: Solen Guitter
-        date: '2016-07-08 11:51'
-        message: Nuxeo Web Mobile is deprecated in 8.3
-        version: '329'
-    - 
-        author: Manon Lumeau
-        date: '2016-06-30 11:33'
-        message: added doc page for Adobe
-        version: '328'
-    - 
-        author: Solen Guitter
-        date: '2016-05-27 14:07'
-        message: Fix link to Digital signature addon (use FT instead of 5.6)
-        version: '327'
-    - 
-        author: Solen Guitter
-        date: '2016-05-04 13:01'
-        message: 'Nuxeo InDesign Connector is now called Nuxeo Adobe CC Connector '
-        version: '326'
-    - 
-        author: Solen Guitter
-        date: '2016-05-03 13:29'
-        message: Fix link to DAM doc
-        version: '325'
-    - 
-        author: Julien Carsique
-        date: '2016-05-03 13:10'
-        message: nuxeo-vision
-        version: '324'
-    - 
-        author: Julien Carsique
-        date: '2016-05-03 12:55'
-        message: 'NXP-19499, NXP-19500, NXP-19501'
-        version: '323'
-    - 
-        author: Anahide Tchertchian
-        date: '2016-04-11 17:03'
-        message: 'NXBT-1014: Release nuxeo-jenkins-report for 8.2'
-        version: '322'
-    - 
-        author: Pierre-Gildas Millon
-        date: '2016-04-11 08:55'
-        message: ''
-        version: '321'
-    - 
-        author: Solen Guitter
-        date: '2016-04-01 16:03'
-        message: Fix missing content
-        version: '320'
-    - 
-        author: Solen Guitter
-        date: '2016-03-22 10:40'
-        message: Add Nuxeo Vision
-        version: '319'
-    - 
-        author: Manon Lumeau
-        date: '2016-03-21 15:34'
-        message: ''
+        date: '2016-07-19 14:43'
+        message: dd Document Access Tracking in list of deprecated addon
         version: '318'
     - 
         author: Solen Guitter
-        date: '2016-03-17 11:23'
-        message: Update Nuxeo Jenkins Report last release
+        date: '2016-05-27 14:09'
+        message: Fix link to Digital signature addon (use FT instead of 5.6)
         version: '317'
     - 
-        author: Manon Lumeau
-        date: '2016-03-11 16:46'
-        message: 'Update with admin suppression '
+        author: Solen Guitter
+        date: '2016-04-01 16:04'
+        message: Fix missing content
         version: '316'
     - 
-        author: Manon Lumeau
-        date: '2016-03-10 16:03'
-        message: ''
+        author: Solen Guitter
+        date: '2016-03-22 10:43'
+        message: Add Nuxeo Vision
         version: '315'
     - 
         author: Manon Lumeau
-        date: '2016-03-10 15:13'
+        date: '2016-03-21 15:58'
         message: ''
         version: '314'
     - 
         author: Manon Lumeau
-        date: '2016-03-10 15:04'
-        message: ''
+        date: '2016-03-11 16:56'
+        message: 'Update with admin suppression  '
         version: '313'
     - 
         author: Manon Lumeau
-        date: '2016-03-10 14:47'
+        date: '2016-03-10 16:03'
         message: ''
         version: '312'
     - 
         author: Manon Lumeau
-        date: '2016-02-10 13:52'
+        date: '2016-03-10 15:44'
         message: ''
         version: '311'
     - 
-        author: Julien Carsique
-        date: '2016-01-28 17:33'
-        message: Release NXP 8.1
+        author: Manon Lumeau
+        date: '2016-03-10 15:32'
+        message: ''
         version: '310'
+    - 
+        author: Manon Lumeau
+        date: '2016-03-10 15:16'
+        message: ''
+        version: '309'
+    - 
+        author: Anahide Tchertchian
+        date: '2016-02-15 15:24'
+        message: ''
+        version: '308'
+    - 
+        author: Manon Lumeau
+        date: '2016-02-12 16:42'
+        message: 'Remove Admindoc for Smart Search '
+        version: '307'
     - 
         author: Julien Carsique
         date: '2016-01-12 14:08'
         message: InDesign Connector 1.0.1 (Nx 7.10)
-        version: '309'
-    - 
-        author: Anahide Tchertchian
-        date: '2016-01-12 13:00'
-        message: 'NXP-18627: mark Smart Search as released for 7.10'
-        version: '308'
-    - 
-        author: Solen Guitter
-        date: '2016-01-11 17:25'
-        message: 'Removing MongoDB GridFS Storage, which is actually built-in'
-        version: '307'
-    - 
-        author: Solen Guitter
-        date: '2016-01-11 09:21'
-        message: ''
         version: '306'
     - 
-        author: Solen Guitter
-        date: '2016-01-08 17:12'
-        message: Remove packages abandoned since 6.0
+        author: Anahide Tchertchian
+        date: '2016-01-12 13:04'
+        message: 'NXP-18627: mark Smart Search as released for 7.10'
         version: '305'
     - 
-        author: Nelson Silva
+        author: Anonymous
         date: '2015-12-07 17:42'
         message: ''
         version: '304'
@@ -1715,20 +1623,360 @@ history:
         version: '1'
 
 ---
-The Nuxeo Marketplace is Nuxeo's ECM application store. It offers plugins and packages, called Nuxeo Packages, that enable you to easily add features to your Nuxeo application. The list of available Nuxeo Packages is available to everyone, but some packages require a Nuxeo Online Services account to be able to install packages.
+The Nuxeo Marketplace is Nuxeo's ECM application store. It offers plugins and packages, called Nuxeo Packages, that enable you to easily add features to your Nuxeo application. The list of available Nuxeo Packages is available to everyone, but some packages require a Nuxeo Connect account to be able to install packages.
 
-The Marketplace offers packages aimed at developers and other that provide new features to end-users. Most of the packages can be [installed from the Update Center]({{page space='nxdoc' page='installing-a-new-package-on-your-instance'}}) very easily and don't require any additional installation or configuration step. However, some other addons, typically connectors with other systems, involve some additional configuration.
+The Marketplace offers packages aimed at developers and other that provide new features to end-users. Most of the packages can be [installed from the Update Center]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}) very easily and don't require any additional installation or configuration step. However, some other addons, typically connectors with other systems, involve some additional configuration.
 
-Each package has a dedicated page on the Marketplace, that describes the features the package enables, if there are prerequisites, etc. Most important information is:
+Each package has a dedicated page on the Marketplace, that describes the features the package enables, if there are prerequisites, etc. Here is the information available about the packages from the Marketplace:
 
-*   **Production state**: Indicates if the package is approved by Nuxeo or is still in testing phase.
-*   **Certification status**: Indicates if the packages has been certified by Nuxeo or not.
-*   **Vendor support**: Indicates if the package is covered by Nuxeo Online Services support contracts.
-*   **Target platforms**: Nuxeo applications on which you can install the package.
-*   **License**: License applied to the package.
-*   **Vendor**: Name of the person or company who developed the package.
-*   **Package dependencies**: Indicates if there are some requirements for the package to be correctly installed.
+*   &nbsp;&nbsp;&nbsp; **Production state**: Indicates if the package is approved by Nuxeo or is still in testing phase.
+*   &nbsp;&nbsp;&nbsp; **Certification status**: Indicates if the packages has been certified by Nuxeo or not.
+*   &nbsp;&nbsp;&nbsp; **Vendor support**: Indicates if the package is covered by Nuxeo Connect support contracts.
+*   &nbsp;&nbsp;&nbsp; **Type**: Possible types are: addons will provide new features, hotfixes provide corrections, and Studio packages install your Studio customizations in your instance.
+*   &nbsp;&nbsp;&nbsp; **Last version**: Most recent version number of the plugin.
+*   &nbsp;&nbsp;&nbsp; **Updated**: Date on which the package was last updated.
+*   &nbsp;&nbsp;&nbsp; **Target platforms**: Nuxeo applications on which you can install the package.
+*   &nbsp;&nbsp;&nbsp; **License**: License applied to the package.
+*   &nbsp;&nbsp;&nbsp; **Categories**: List of categories the package belongs to.
+*   &nbsp;&nbsp;&nbsp; **Rating**: Comments on the package.
+*   &nbsp;&nbsp;&nbsp; **Vendor**: Name of the person or company who developed the package.
+*   &nbsp;&nbsp;&nbsp; **Package dependencies**: Indicates if there are some requirements for the package to be correctly installed.
+*   &nbsp;&nbsp;&nbsp; **Hot-reload support**: Indicates if the plugin is immediately functional (i.e. no server reboot required).
+
+Although most packages are installed in a few clicks from the Update Center, some of them require specific installation or configuration steps.&nbsp;Below is the list of available Nuxeo Packages and their documentation.
+
+&nbsp;
 
 Here is a list of Nuxeo Packages available on the Nuxeo Marketplace for the latest version of the Nuxeo Platform.
 
-{{{multiexcerpt 'MP-packages-list' page='NXDOC:Marketplace Add-Ons'}}}
+{{! multiexcerpt name='MP-packages-list'}}
+
+_Use the field below to search for a specific add-on._
+
+{{! table-filter removed }}
+
+Use: "In progress for x.y.z (JC)", "Ready for x.y.z" or "Released for x.y.z" or any other relevant comment.
+
+Below is the list of Nuxeo Packages deprecated since the previous LTS version, Nuxeo Platform 6.0.
+
+<table><tbody><tr><th colspan="1">
+
+**Package name**
+
+</th><th colspan="1">
+
+**Public / Registered access**
+
+</th><th colspan="1">
+
+Documentation
+
+</th><th colspan="1">
+
+**Comments (especially about latest release)**
+
+</th></tr><tr><td colspan="1">
+
+Automated Document Categorization
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Administration documentation (6.0)]({{page space='nxdoc60' page='automated-document-categorization'}})
+
+[User documentation (6.0)]({{page space='userdoc60' page='automated-document-categorization'}})
+
+</td><td colspan="1">
+
+[Released for 7.4](https://connect.nuxeo.com/nuxeo/site/marketplace/package/automated-document-categorization?version=1.5.3)
+
+Deprecated since 7.4\. No more release.
+
+</td></tr><tr><td colspan="1">
+
+Document Access Tracking
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Developer Documentation (6.0)]({{page space='nxdoc60' page='document-access-tracking'}})
+
+[User Documentation (6.0)]({{page space='userdoc60' page='document-access-tracking'}})
+
+</td><td colspan="1">
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/audit-web-access?version=1.4.0)
+
+</td></tr><tr><td colspan="1">
+
+Faceted search
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Developer documentation (6.0)]({{page space='nxdoc60' page='faceted-search'}})
+
+[User documentation (6.0)]({{page space='userdoc60' page='faceted-search'}})
+
+</td><td colspan="1">
+
+[Released for 7.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-faceted-search?version=1.1.1)
+
+Deprecated since 6.0 and removed since 7.3
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo - BIRT Integration
+
+</td><td colspan="1">
+
+Registered access
+
+</td><td colspan="1">
+
+[Administration documentation (6.0)]({{page space='nxdoc60' page='nuxeo-birt-integration'}})
+
+[User documentation (6.0)]({{page space='userdoc60' page='nuxeo-birt-integration'}})
+
+</td><td colspan="1">
+
+[Released for 7.4](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-birt-integration?version=2.7.3)
+
+Deprecated since 7.4 and removed starting from LTS 2015.
+
+</td></tr><tr><td colspan="1">Nuxeo DAM PDF Export</td><td colspan="1">Public</td><td colspan="1">
+
+[Administration documentation (6.0)]({{page space='nxdoc60' page='nuxeo-dam-pdf-export'}})
+
+[User documentation (6.0)]({{page space='userdoc60' page='nuxeo-dam-pdf-export'}})
+
+</td><td colspan="1">
+
+[Released for 7.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam-pdf-export?version=1.5.1)
+
+Deprecated since 6.0 and removed since 7.3
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo DAM Compat
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Developer documentation (6.0)]({{page space='nxdoc60' page='nuxeo-dam-compat'}})
+
+[User documentation (6.0)]({{page space='userdoc60' page='nuxeo-dam-compat'}})
+
+</td><td colspan="1">
+
+[Released for 7.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam-compat?version=1.1.1)
+
+Deprecated since 6.0 and removed since 7.3
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo DM
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[User documentation (5.8)]({{page space='userdoc58' page='document-management'}})
+
+</td><td colspan="1">
+
+Deprecated since 6.0
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo Elasticsearch Integration
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Developer documentation]({{page space='nxdoc710' page='elasticsearch-indexing-logic'}})
+
+</td><td colspan="1">
+
+[Released for 5.9.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-elasticsearch?version=1.3.1)
+
+Included in CAP since 6.0
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo OpenSocial
+
+</td><td colspan="1">&nbsp;</td><td colspan="1">
+
+[Developer documentation (6.0)]({{page space='nxdoc60' page='nuxeo-opensocial'}})
+
+[User documentation (6.0)]({{page space='userdoc60' page='nuxeo-opensocial'}})
+
+</td><td colspan="1">
+
+[Released for 7.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-opensocial?version=1.1.1)
+
+Deprecated since 6.0 and removed since 7.3
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo Poll
+
+</td><td colspan="1">
+
+Registered access
+
+</td><td colspan="1">
+
+[Administration documentation (6.0)]({{page space='nxdoc60' page='nuxeo-poll'}})
+
+[User documentation (6.0)]({{page space='userdoc60' page='nuxeo-poll'}})
+
+</td><td colspan="1">
+
+[Released for 5.9.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-poll?version=1.4.4)
+
+Deprecated since 6.0 and removed since 7.3
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo RSS Reader
+
+</td><td colspan="1">
+
+Registered access
+
+</td><td colspan="1">
+
+[Administration Documentation (6.0)]({{page space='nxdoc60' page='nuxeo-rss-reader'}})
+
+[User Documentation (6.0)]({{page space='userdoc60' page='nuxeo-rss-reader'}})
+
+</td><td colspan="1">
+
+[Released for 5.9.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-rss-reader?version=1.2.4)
+
+Deprecated since 6.0 and removed since 7.3
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo Shared Bookmarks
+
+</td><td colspan="1">
+
+&nbsp;Public
+
+</td><td colspan="1">
+
+&nbsp;[User Documentation (6.0)]({{page space='userdoc60' page='nuxeo-shared-bookmarks'}})
+
+&nbsp;
+
+</td><td colspan="1">
+
+[Released for 5.9.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-shared-bookmarks?version=1.1.4)
+
+No more release unless requested
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo Sites and Blogs
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Administration documentation (6.0)]({{page space='nxdoc60' page='nuxeo-sites-and-blogs'}})
+
+[User documentation (6.0)]({{page space='userdoc60' page='nuxeo-sites-and-blogs'}})
+
+</td><td colspan="1">
+
+[Released for 7.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sites-blogs?version=1.3.2)
+
+No more release unless requested
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo Social Collaboration
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[User documentation (6.0)]({{page space='userdoc60' page='nuxeo-social-collaboration'}})
+
+</td><td colspan="1">
+
+[Released for 7.1](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-social-collaboration?version=6.1)
+
+Deprecated since 6.0 and removed since 7.3
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo Web Mobile (DM)
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">&nbsp;</td><td colspan="1">
+
+[Released for 5.9.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-mobile-dm?version=1.5.4)
+
+Deprecated since 6.0\. See Nuxeo Web Mobile.
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo Web Mobile (SC)
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">&nbsp;</td><td colspan="1">
+
+[Released for 7.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-mobile-sc?version=1.7.1)
+
+Deprecated since 6.0 and removed since 7.3\. See Nuxeo Web Mobile.
+
+</td></tr><tr><td colspan="1">
+
+Unicolor Flavors Set
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Administration Documentation (6.0)]({{page space='nxdoc60' page='unicolor-flavors-set'}})
+
+[User Documentation (6.0)]({{page space='userdoc60' page='unicolor-flavors-set'}})
+
+</td><td colspan="1">
+
+[Released for 5.9.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-flavors-unicolor?version=1.4.4)
+
+</td></tr></tbody></table>{{! /multiexcerpt}}

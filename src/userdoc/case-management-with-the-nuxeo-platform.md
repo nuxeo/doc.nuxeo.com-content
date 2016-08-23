@@ -3,24 +3,20 @@ title: Case Management with the Nuxeo Platform
 labels:
     - case-management
     - workflow
+    - lts2015-ok
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Case+Management+with+the+Nuxeo+Platform
     canonical_source: >-
-        https://doc.nuxeo.com/display/USERDOC/Case+Management+with+the+Nuxeo+Platform
-    page_id: '11534447'
-    shortlink: bwCw
-    shortlink_source: 'https://doc.nuxeo.com/x/bwCw'
-    source_link: /display/USERDOC/Case+Management+with+the+Nuxeo+Platform
+        https://doc.nuxeo.com/display/USERDOC710/Case+Management+with+the+Nuxeo+Platform
+    page_id: '29003056'
+    shortlink: MI26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/MI26AQ'
+    source_link: /display/USERDOC710/Case+Management+with+the+Nuxeo+Platform
 history:
-    - 
-        author: Solen Guitter
-        date: '2016-07-22 09:58'
-        message: dd border to screensho
-        version: '8'
     - 
         author: Manon Lumeau
         date: '2015-09-18 16:06'
@@ -74,4 +70,4 @@ On the Studio side, developers can define the different steps of the workflow, h
 After the Studio customizations have been deployed, users can make the documents go through the workflows from their usual Nuxeo Platform environment. An example of workflow is available by default on the Nuxeo Platform
 **Documentation: [Default Nuxeo Platform Workflows]({{page page='workflows'}})**
 
-![]({{file name='workflow-choose-reviewers-task-workflow-tab.png' page='serial-document-workflow'}} ?w=650,h=445,border=true)
+![]({{file name='workflow-choose-reviewers-task-workflow-tab.png' page='serial-document-workflow'}} ?w=650)

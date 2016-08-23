@@ -2,20 +2,20 @@
 title: Saved Searches
 labels:
     - search
+    - lts2015-ok
     - saved-search
-    - excerpt
 toc: true
 confluence:
-    ajs-parent-page-id: '2392416'
+    ajs-parent-page-id: '29003031'
     ajs-parent-page-title: Searching the Nuxeo Platform
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Saved+Searches
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Saved+Searches'
-    page_id: '20519012'
-    shortlink: ZBg5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/ZBg5AQ'
-    source_link: /display/USERDOC/Saved+Searches
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Saved+Searches'
+    page_id: '29003066'
+    shortlink: Oo26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Oo26AQ'
+    source_link: /display/USERDOC710/Saved+Searches
 history:
     - 
         author: Manon Lumeau
@@ -103,8 +103,8 @@ You can manage your saved searches from the **Searches** tab of your Home. Saved
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Configuring and Customizing Search '}}
 
-*   [Indexing and Querying How-To Index]({{page space='nxdoc' page='indexing-and-querying-how-to-index'}})
-*   [Full-Text Queries]({{page space='nxdoc' page='full-text-queries'}})
-*   [Indexing and Query]({{page space='nxdoc' page='indexing-and-query'}})
+*   [Indexing and Querying How-To Index]({{page space='nxdoc710' page='indexing-and-querying-how-to-index'}})
+*   [Full-Text Queries]({{page space='nxdoc710' page='full-text-queries'}})
+*   [Indexing and Query]({{page space='nxdoc710' page='indexing-and-query'}})
 
 {{/panel}}</div></div>

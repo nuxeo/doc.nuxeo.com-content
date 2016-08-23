@@ -1,27 +1,20 @@
 ---
 title: Generic Multi-Excerpts
-labels:
-    - multiexcerpt
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Generic+Multi-Excerpts
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Generic+Multi-Excerpts'
-    page_id: '20520186'
-    shortlink: _hw5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/_hw5AQ'
-    source_link: /display/NXDOC/Generic+Multi-Excerpts
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Generic+Multi-Excerpts'
+    page_id: '28475495'
+    shortlink: Z4CyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Z4CyAQ'
+    source_link: /display/NXDOC710/Generic+Multi-Excerpts
 history:
     - 
-        author: Alain Escaffre
-        date: '2016-08-02 12:11'
-        message: ''
-        version: '10'
-    - 
-        author: Alain Escaffre
-        date: '2016-08-02 12:10'
+        author: Solen Guitter
+        date: '2016-08-03 08:36'
         message: ''
         version: '9'
     - 
@@ -66,13 +59,13 @@ history:
         version: '1'
 
 ---
-{{! multiexcerpt name='DeprecatedAddon_7.4'}}{{#> callout type='note' }}
+{{! multiexcerpt name='DeprecatedAddon_7.4'}} {{#> callout type='note' }}
 
 This addon is deprecated since Nuxeo Platform 7.4.
 
 {{/callout}}{{! /multiexcerpt}}{{! multiexcerpt name='MP-installation-easy'}}
 
-This addon requires no specific installation steps. It can be installed like any other package with [nuxeoctl command line]({{page page='installing-a-new-package-on-your-instance'}}), [from the Marketplace or using the Update Center]({{page page='installing-a-new-package-on-your-instance'}}).
+This addon requires no specific installation steps. It can be installed like any other package [from the Update Center or using nuxeoctl command line]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}).
 
 {{! /multiexcerpt}}
 

@@ -1,25 +1,23 @@
 ---
 title: Collaborative Features
 labels:
-    - alert
-    - comment
-    - collaboration
     - lock
-    - excerpt
-    - multiexcerpt-include
-    - excerpt-include
+    - comment
+    - alert
+    - lts2015-ok
+    - collaboration
 toc: true
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Collaborative+Features
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Collaborative+Features'
-    page_id: '26314875'
-    shortlink: e4iRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/e4iRAQ'
-    source_link: /display/USERDOC/Collaborative+Features
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Collaborative+Features'
+    page_id: '29003053'
+    shortlink: LY26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/LY26AQ'
+    source_link: /display/USERDOC710/Collaborative+Features
 history:
     - 
         author: Manon Lumeau
@@ -105,7 +103,7 @@ See the [Versioning Overview section]({{page page='editing-content#versioning-ov
 
 See the page [Nuxeo Diff]({{page page='nuxeo-diff'}}) for more details.
 
-## Comments
+## <a name="comments"></a>"Comments
 
 Comments enable users to discuss about the document and its evolution. You can add comments on the documents, via the **Comments** tab.&nbsp;The last comments added on the document are displayed on the **Summary** tab of the document.
 
@@ -131,7 +129,7 @@ For users working with the [Digital Asset Management]({{page page='digital-asset
 
 {{{multiexcerpt 'picture-annotation-definition' page='USERDOC:Digital Asset Management with the Nuxeo Platform'}}}
 
-![]({{file name='DAM-annotation-rollover.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
+![]({{file name='DAM-annotation-rollover.png' space='nxdoc710' page='digital-asset-management-dam'}} ?w=600,border=true)
 
 See the page [Digital Asset Management with the Nuxeo Platform]({{page page='digital-asset-management-with-the-nuxeo-platform'}}) for more details.
 
@@ -143,7 +141,7 @@ The Nuxeo Platform includes a workflow engine that enables you to integrate busi
 
 See the page [Workflows]({{page page='workflows'}}) for more details.
 
-## Alerts
+## <a name="alerts"></a>"Alerts
 
 Alerts are emails automatically sent to users when an event occurs in a space to enable you to follow the activity of a document or a space.
 

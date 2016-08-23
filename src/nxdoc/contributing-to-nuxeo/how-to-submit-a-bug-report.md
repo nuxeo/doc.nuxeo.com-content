@@ -1,16 +1,18 @@
 ---
 title: How to Submit a Bug Report
+labels:
+    - content-review-lts2015
 confluence:
-    ajs-parent-page-id: '4687444'
+    ajs-parent-page-id: '28475648'
     ajs-parent-page-title: Contributing to Nuxeo
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: How+to+Submit+a+Bug+Report
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Submit+a+Bug+Report'
-    page_id: '17794676'
-    shortlink: dIYPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/dIYPAQ'
-    source_link: /display/NXDOC/How+to+Submit+a+Bug+Report
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/How+to+Submit+a+Bug+Report'
+    page_id: '28475815'
+    shortlink: p4GyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/p4GyAQ'
+    source_link: /display/NXDOC710/How+to+Submit+a+Bug+Report
 history:
     - 
         author: Solen Guitter

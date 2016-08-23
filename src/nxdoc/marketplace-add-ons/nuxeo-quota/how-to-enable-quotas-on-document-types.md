@@ -9,35 +9,26 @@ details:
         tool: Nuxeo Studio
         topics: 'Document type, Nuxeo Quota, Statistics'
 labels:
-    - quota
-    - howto
     - quotas-component
+    - lts2015-not-ok
+    - howto
+    - quota
 confluence:
-    ajs-parent-page-id: '11534351'
+    ajs-parent-page-id: '28475531'
     ajs-parent-page-title: Nuxeo Quota
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: How+to+Enable+Quotas+on+Document+Types
     canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Enable+Quotas+on+Document+Types
-    page_id: '12914459'
-    shortlink: Gw-F
-    shortlink_source: 'https://doc.nuxeo.com/x/Gw-F'
-    source_link: /display/NXDOC/How+to+Enable+Quotas+on+Document+Types
+        https://doc.nuxeo.com/display/NXDOC710/How+to+Enable+Quotas+on+Document+Types
+    page_id: '28475673'
+    shortlink: GYGyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/GYGyAQ'
+    source_link: /display/NXDOC710/How+to+Enable+Quotas+on+Document+Types
 history:
     - 
         author: Manon Lumeau
-        date: '2016-06-09 13:36'
-        message: ''
-        version: '14'
-    - 
-        author: Solen Guitter
-        date: '2016-04-14 12:43'
-        message: ''
-        version: '13'
-    - 
-        author: Manon Lumeau
-        date: '2016-03-21 10:15'
+        date: '2016-03-21 10:21'
         message: ''
         version: '12'
     - 
@@ -116,7 +107,7 @@ By default, [quotas]({{page page='nuxeo-quota'}}) are available on domains and w
     </extension>
     ```
 
-    Replace Folder in the `<type>` tag by the document type(s) on which you want to enable quotas.
+    Replace Folder in the <type> tag by the document type(s) on which you want to enable quotas.
 
 2.  [Update your Nuxeo instance with the Studio customization]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).
 

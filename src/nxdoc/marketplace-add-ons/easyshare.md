@@ -2,18 +2,18 @@
 title: EasyShare
 labels:
     - easyshare
-    - excerpt-include
+    - content-review-lts2015
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: EasyShare
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/EasyShare'
-    page_id: '19792580'
-    shortlink: xAIuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/xAIuAQ'
-    source_link: /display/NXDOC/EasyShare
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/EasyShare'
+    page_id: '27604651'
+    shortlink: qzalAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/qzalAQ'
+    source_link: /display/NXDOC710/EasyShare
 history:
     - 
         author: Solen Guitter

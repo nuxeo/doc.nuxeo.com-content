@@ -3,17 +3,18 @@ title: Default Search
 labels:
     - search
     - elasticsearch
+    - lts2015-ok
 confluence:
-    ajs-parent-page-id: '2392416'
+    ajs-parent-page-id: '29003031'
     ajs-parent-page-title: Searching the Nuxeo Platform
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Default+Search
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Default+Search'
-    page_id: '14255361'
-    shortlink: AYXZ
-    shortlink_source: 'https://doc.nuxeo.com/x/AYXZ'
-    source_link: /display/USERDOC/Default+Search
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Default+Search'
+    page_id: '29003061'
+    shortlink: NY26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/NY26AQ'
+    source_link: /display/USERDOC710/Default+Search
 history:
     - 
         author: Solen Guitter
@@ -149,7 +150,7 @@ history:
 ---
 The default search enables you to search a document using documents metadata. You can for instance select metadata of the searched document or the date of specific events such as publication, creation. You can also&nbsp;[customize what information is displayed in the search results](#customizing-search-results).
 
-The default search leverages Elasticsearch to provide a quicker and more efficient search. The search form uses [Elasticsearch aggregates]({{page space='nxdoc' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}}) for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.
+The default search leverages Elasticsearch to provide a quicker and more efficient search. The search form uses [Elasticsearch aggregates]({{page space='nxdoc710' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}}) for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.
 
 ![]({{file name='search-tab.png'}} ?w=600,border=true)
 
@@ -183,8 +184,8 @@ SELECT * FROM Document WHERE (criterion1 = value1 OR criterion1 = value2) AND (c
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Want to know more?'}}
 
-*   [Indexing and Querying How-To Index]({{page space='nxdoc' page='indexing-and-querying-how-to-index'}})
-*   [Indexing and Query]({{page space='nxdoc' page='indexing-and-query'}})
-*   [Full-Text Queries]({{page space='nxdoc' page='full-text-queries'}})
+*   [Indexing and Querying How-To Index]({{page space='nxdoc710' page='indexing-and-querying-how-to-index'}})
+*   [Indexing and Query]({{page space='nxdoc710' page='indexing-and-query'}})
+*   [Full-Text Queries]({{page space='nxdoc710' page='full-text-queries'}})
 
 {{/panel}}</div></div>

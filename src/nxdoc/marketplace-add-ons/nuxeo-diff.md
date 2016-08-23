@@ -1,21 +1,22 @@
 ---
 title: Nuxeo Diff
 labels:
+    - diff-component
+    - lts2015-not-ok
     - nuxeo-diff
     - link-update
-    - diff-component
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Nuxeo+Diff
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Diff'
-    page_id: '11043309'
-    shortlink: 7YGo
-    shortlink_source: 'https://doc.nuxeo.com/x/7YGo'
-    source_link: /display/NXDOC/Nuxeo+Diff
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Nuxeo+Diff'
+    page_id: '28475441'
+    shortlink: MYCyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/MYCyAQ'
+    source_link: /display/NXDOC710/Nuxeo+Diff
 history:
     - 
         author: Antoine Taillefer

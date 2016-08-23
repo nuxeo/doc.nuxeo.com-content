@@ -1,87 +1,40 @@
 ---
 title: Nuxeo for Salesforce
 labels:
+    - lts2015-ok
     - salesforce-component
-    - link-update
-    - excerpt
-    - multiexcerpt-include
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Nuxeo+for+Salesforce
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+for+Salesforce'
-    page_id: '26316748'
-    shortlink: zI_RAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/zI_RAQ'
-    source_link: /display/NXDOC/Nuxeo+for+Salesforce
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Nuxeo+for+Salesforce'
+    page_id: '28475742'
+    shortlink: XoGyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/XoGyAQ'
+    source_link: /display/NXDOC710/Nuxeo+for+Salesforce
 history:
     - 
         author: Solen Guitter
-        date: '2016-07-11 15:26'
-        message: ix format and lin
-        version: '40'
-    - 
-        author: Anne Jubert
-        date: '2016-07-11 15:21'
-        message: ''
-        version: '39'
-    - 
-        author: Anne Jubert
-        date: '2016-06-29 09:41'
-        message: ''
-        version: '38'
-    - 
-        author: Anne Jubert
-        date: '2016-06-29 08:03'
-        message: ''
-        version: '37'
-    - 
-        author: Anne Jubert
-        date: '2016-06-28 19:41'
-        message: ''
-        version: '36'
-    - 
-        author: Anne Jubert
-        date: '2016-06-28 19:39'
-        message: ''
-        version: '35'
-    - 
-        author: Anne Jubert
-        date: '2016-06-28 15:36'
-        message: ''
-        version: '34'
-    - 
-        author: Anne Jubert
-        date: '2016-06-28 15:34'
-        message: ''
-        version: '33'
-    - 
-        author: Anne Jubert
-        date: '2016-06-28 15:21'
-        message: ''
-        version: '32'
-    - 
-        author: Vladimir Pasquier
-        date: '2016-06-16 15:30'
+        date: '2016-03-18 09:38'
         message: ''
         version: '31'
     - 
-        author: Joshua Fletcher
-        date: '2016-02-05 00:35'
+        author: Vladimir Pasquier
+        date: '2016-03-15 18:25'
         message: ''
         version: '30'
     - 
         author: Solen Guitter
-        date: '2016-01-04 09:43'
-        message: ''
+        date: '2016-02-08 09:23'
+        message: 'Add tip '
         version: '29'
     - 
-        author: Joshua Fletcher
-        date: '2015-12-30 22:48'
-        message: Improve SFDC docs.
+        author: Solen Guitter
+        date: '2016-01-04 09:43'
+        message: ' Improve SFDC docs'
         version: '28'
     - 
         author: Solen Guitter
@@ -224,7 +177,7 @@ history:
 ---
 {{! excerpt}}
 
-The [Nuxeo for Salesforce addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce) allows Salesforce (SFDC) users to attach documents to their Salesforce Objects (such as Opportunities, Contacts, Accounts...) through the Salesforce UI within a Nuxeo server.
+The [Nuxeo for Salesforce addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce) allows Salesforce&nbsp;(SFDC) users to attach documents to their Salesforce Objects (such as Opportunities, Contacts, Accounts...) through the Salesforce UI within a Nuxeo server.
 
 {{! /excerpt}}
 
@@ -244,45 +197,10 @@ See [GitHub Readme](https://github.com/nuxeo/nuxeo-salesforce) for the Dev proje
 
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
-### <span style="line-height: 1.5625;">Salesforce Configuration</span>
-
-In your Salesforce account, you can setup the Nuxeo for Salesforce plugin through the Salesforce Marketplace (In progress).
-
-You can also set it up directly from your Salesforce dashboard.&nbsp;<span style="line-height: 21.58px;">Note that these instructions assume you are using "Salesforce Classic",&nbsp;</span>not <span style="line-height: 21.58px;">the "Lightning Experience". You can adapt them for the Lightning Experience, or disable it via &nbsp;</span> **Setup Home** >&nbsp;**Lightning Experience**. Scroll to the bottom to disable it
-
-1.  Go in your Salesforce dashboard.
-2.  Go on&nbsp;**Setup**&nbsp;(top right).
-3.  Go to&nbsp;**Build** > **Create** > **Apps**.
-4.  Click the **New** button under&nbsp;**Connected Apps**&nbsp;named `Nuxeo`&nbsp;(it MUST be named "Nuxeo"):
-    1.  Enable OAuth&nbsp;settings and set the callback URL:&nbsp; `<span class="nolink">https://NUXEO_URL/nuxeo/picker/callback/callback.html</span>` [.](https://NUXEO_URL/nuxeo/picker/callback/callback.html)
-    2.  Add all available **Scopes**.
-    3.  Enable Force.com Canvas and set the App URL&nbsp; `<span class="nolink">https://NUXEO_URL/nuxeo/picker</span>/`
-    4.  Select **OAuth Webflow** for **Access Method**.
-    5.  Configure **Canvas App locations**&nbsp;by adding&nbsp;**Layouts and Mobile Cards**.
-5.  Save the "Nuxeo" Connected App.
-6.  Go to **Build** >&nbsp;**Customize**&nbsp;and choose any SFDC Object, e.g.&nbsp;"Opportunities".
-7.  Click on&nbsp;**Page Layouts**&nbsp;to edit the SFDC Object page layout.
-8.  Add the Nuxeo&nbsp;Canvas App&nbsp;anywhere in the page.
-    *   Hint: choose "Canvas Apps" in the list of available objects.
-    *   Tip: if you add a new "Section" you need to save the layout before you can drop the Nuxeo Canvas App.
-9.  Save the layout.
-    Now when an Opportunity is opened the Nuxeo widget will be enabled. You have now access to the consumer key of the nuxeo app, this will be needed in the Nuxeo Platform Configuration part.&nbsp;
-
 ### Nuxeo Platform Configuration
 
-1.  Authorize the framing of your Nuxeo server inside Salesforce.
-    Since Nuxeo 8.3, for clickjacking protection the framing is restricted. To unrestrict it, [create a new XML extension]({{page page='how-to-contribute-to-an-extension'}}) containing:
-
-    ```xml
-    <require>org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService.defaultContrib</require>
-      <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService"
-        point="responseHeaders">
-      <header name="X-Frame-Options" enabled="false"/>
-      </extension>
-    ```
-
-2.  Set up the HTTPS configuration.
-    Salesforce requires the Nuxeo server to be accessed through HTTPS. Follow this&nbsp;[documentation]({{page page='http-and-https-reverse-proxy-configuration'}})&nbsp;to configure your reverse proxy for production purpose. For a dev or test environment, you can configure your Nuxeo server in HTTPS directly with the following configuration parameters example:
+1.  Set up the HTTPS configuration.
+    Salesforce is requiring Nuxeo server to be accessed through HTTPS. Follow this&nbsp;[documentation]({{page space='admindoc710' page='http-and-https-reverse-proxy-configuration'}})&nbsp;to configure your reverse proxy for production purpose. For a dev or test environment, you can configure your Nuxeo server in HTTPS directly with the following configuration parameters example:
 
     ```
     nuxeo.server.https.port=8443
@@ -292,22 +210,48 @@ You can also set it up directly from your Salesforce dashboard.&nbsp;<span style
 
     You can setup the keystore by following the&nbsp;[Oracle documentation](https://docs.oracle.com/cd/E19509-01/820-3503/ggfen/index.html).
 
-3.  Add the following configuration parameter (in&nbsp;**Admin**&nbsp;>&nbsp;**Cloud Services&nbsp;**>**&nbsp;Service Providers&nbsp;**>&nbsp;**OAuth2 Service Providers**&nbsp;>&nbsp;**Add**):
+2.  Add the following configuration parameter (in&nbsp;**Admin** > **Cloud Services** > **OAuth2 Provider** > **Add**):
 
     ```
-    Service Name=salesforce
+    ID=salesforce
     CliendID=YOUR_SALESFORCE_CONSUMER_KEY
     User Authorization URL=https://NUXEO_URL/nuxeo/picker/callback/callback.html
     ```
 
-4.  Set up your browser to access Nuxeo for Salesforce from within Salesforce.
+3.  Set up your browser to access Nuxeo for Salesforce from within Salesforce.
     If you're using&nbsp;Firefox&nbsp;browser, you don't need to configure it. However with Chrome, here are the guidelines to allow the access:
     1.  Authorize&nbsp;`Popups`&nbsp;from Salesforce (to allow OAuth execution).
-    2.  Go to&nbsp; `[https://NUXEO_URL/nuxeo](https://nuxeo_url:8443/nuxeo)&nbsp;`&nbsp;and allow Chrome&nbsp;to access in HTTPS your Nuxeo server.
+    2.  Go to&nbsp; [`https://NUXEO_URL:8443/nuxeo`](https://NUXEO_URL:8443/nuxeo) &nbsp;and allow Chrome&nbsp;to access in HTTPS your Nuxeo server.
+
+### Salesforce Configuration
+
+In your Salesforce account, you can setup the Nuxeo for Salesforce plugin through the Salesforce Marketplace (In progress).
+
+You can also set it up directly from your Salesforce dashboard. Note that these instructions assume you are using "Salesforce Classic",&nbsp;not the "Lightning Experience". You can adapt them for the Lightning Experience, or disable it via &nbsp;**Setup Home** >&nbsp;**Lightning Experience**. Scroll to the bottom to disable it.
+
+1.  Go in your Salesforce dashboard.
+2.  Go on&nbsp;**Setup**&nbsp;(top right).
+3.  Go to&nbsp;**Build** > **Create** > **Apps**.
+4.  Click the **New** button under **Connected Apps**&nbsp;named `Nuxeo` (it MUST be named "Nuxeo"):
+
+    1.  Enable OAuth&nbsp;settings and set the callback URL:&nbsp; `<span class="nolink">https://NUXEO_URL/nuxeo/picker/callback/callback.html</span>` [.](https://NUXEO_URL/nuxeo/picker/callback/callback.html)
+    2.  Add all available Scopes.
+    3.  Enable Force.com Canvas and set the&nbsp;App URL&nbsp; `<span class="nolink">https://NUXEO_URL/nuxeo/picker</span>/`.
+    4.  Select **OAuth Webflow** for **Access Method**.
+    5.  Configure **Canvas App locations** and add **Layouts and Mobile Cards**.
+5.  Save the "Nuxeo" Connected App.
+6.  Go to&nbsp;**Build** >&nbsp;**Customize**&nbsp;and choose any SFDC Object, e.g.&nbsp;"Opportunities".
+7.  Click on&nbsp;**Pages Layout** to edit the SFDC Object page layout.
+8.  Add the Nuxeo&nbsp;Canvas App&nbsp;anywhere in the page.
+
+    *   Hint: Choose "Canvas Apps" in the list of available objects.
+    *   Tip: if you add a new "Section" you need to save the layout before you can drop the Nuxeo Canvas App.
+9.  Save the layout.
+    Now when an Opportunity is opened the Nuxeo widget will be enabled.
 
 ## Synchronization - Salesforce vs Nuxeo
 
-The default behaviour of Nuxeo Salesforce plugin is to bind the current Salesforce Object to a `Workspace` document type and the way the metadata are synchronized. This document type `Workspace` has a new facet `salesforce` to store the SF object id.
+The default behavior of Nuxeo Salesforce plugin is to bind the current Salesforce Object to a `Workspace` document type and the way the metadata are synchronized. This document type `Workspace` has a new facet `salesforce` to store the SF object id.
 
 Each time a SF user is displaying a SF object in his SF console, Nuxeo is going to create/retrieve the related workspace, listing all its children.&nbsp;
 
@@ -380,7 +324,7 @@ function run(input, params) {
         'query': "SELECT * FROM Document WHERE ecm:currentLifeCycleState != 'deleted' AND sf:objectId = '" + sfobject.Id + "' AND ecm:isCheckedInVersion = 0 AND ecm:mixinType != 'HiddenInNavigation'",
       });
       if (docs.length>0) {
-        return nuxeoDocument(docs[0],sfobject);
+        return versarDocument(docs[0],sfobject);
       } else {
         var newSFobject = {};
           // We are checking if an account has a parent account or not and create it beneath the appropriate document.
@@ -430,7 +374,7 @@ function run(input, params) {
         return newSFobject;
        }
 }
-function nuxeoDocument(doc, sfobject){
+function versarDocument(doc, sfobject){
   if(sfobject.attributes.type === "Account") {
     var account = Repository.GetDocument(null, {'value': doc.id});
     return account;
@@ -461,9 +405,11 @@ function getProperties(doc, sfobject){
 }
 ```
 
-{{/panel}}{{#> callout type='warning' heading='Studio'}}
+{{/panel}} {{#> callout type='warning' heading='Studio'}}
 
 Those two operations can be overriden inside a Nuxeo Studio project easily by creating two operations for instance: `SFGetChildren` and `FetchSFObject`.
+
+In order to find all your metadata in Salesforce, go to **Setup** > **Customize** > **Your Object** > **Fields**. You will be able to map correctly all the Nuxeo and SF metadata with the appropriate field keys.
 
 {{/callout}}
 
@@ -505,7 +451,7 @@ function run(input, params) {
 }
 ```
 
-{{/panel}}{{#> callout type='warning' heading='Studio'}}
+{{/panel}} {{#> callout type='warning' heading='Studio'}}
 
 Those two operations can be overriden inside a Nuxeo Studio project easily by creating two operations for instance: `SFGetChildren` and `FetchSFObject`.
 

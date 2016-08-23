@@ -3,44 +3,39 @@ title: Amazon S3 Online Storage
 labels:
     - amazon-s3
     - binary-manager
-    - multiexcerpt-include
+    - content-review-lts2015
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Amazon+S3+Online+Storage
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Amazon+S3+Online+Storage'
-    page_id: '12912817'
-    shortlink: sQjF
-    shortlink_source: 'https://doc.nuxeo.com/x/sQjF'
-    source_link: /display/NXDOC/Amazon+S3+Online+Storage
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Amazon+S3+Online+Storage'
+    page_id: '27604604'
+    shortlink: fDalAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/fDalAQ'
+    source_link: /display/NXDOC710/Amazon+S3+Online+Storage
 history:
     - 
-        author: Alain Escaffre
-        date: '2016-08-02 12:07'
+        author: Manon Lumeau
+        date: '2016-08-19 15:17'
         message: ''
-        version: '17'
-    - 
-        author: Solen Guitter
-        date: '2016-06-01 14:30'
-        message: 'Use generic installation excerpt '
         version: '16'
+    - 
+        author: Manon Lumeau
+        date: '2016-08-12 12:42'
+        message: ''
+        version: '15'
+    - 
+        author: Manon Lumeau
+        date: '2016-06-02 08:51'
+        message: ''
+        version: '14'
     - 
         author: Solen Guitter
         date: '2016-02-04 16:55'
         message: ''
-        version: '15'
-    - 
-        author: Florent Guillaume
-        date: '2016-01-28 15:07'
-        message: add server-side encryption option
-        version: '14'
-    - 
-        author: Florent Guillaume
-        date: '2016-01-05 15:00'
-        message: cachecount+ cacheminage
         version: '13'
     - 
         author: Florent Guillaume
@@ -110,13 +105,13 @@ The Amazon S3 Online Storage is a Nuxeo Binary Manager for S3\. It stores Nuxeo'
 
 You should be familiar with Amazon S3 and be in possession of your credentials.
 
-## Installation
+## Installing the Package
 
-{{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
+<span style="color: rgb(0,0,0);">{{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}</span>
 
-## Configuration
+## <span style="color: rgb(0,0,0);">Nuxeo Configuration</span>
 
-In order to configure the package, you will need to provide values for the configuration parameters that define your S3 credentials, bucket and encryption choices.
+In order to configure the package, you will need to change a few Nuxeo templates, and provide values for the configuration variables that define your S3 credentials, bucket and encryption choices
 
 ### Specifying Your Amazon S3 Parameters
 
@@ -153,7 +148,7 @@ nuxeo.core.binarymanager=org.nuxeo.ecm.core.storage.sql.S3BinaryManager
 
 The bucket name is unique across all of Amazon, you should find something original and specific.
 
-{{/callout}}{{#> callout type='note' }}
+{{/callout}} {{#> callout type='note' }}
 
 The file `nuxeo.conf` now contains S3 secret access keys, you should protect it from prying eyes.
 
@@ -203,19 +198,11 @@ Don't forget to **make backups of the `/path/to/keystore/file` file** along with
 
 With all that above in mind, here are the crypto options that you can add to `nuxeo.conf` (they are all&nbsp;mandatory once you specify a keystore):
 
-```
-nuxeo.s3storage.crypt.keystore.file=/absolute/path/to/the/keystore/file
-nuxeo.s3storage.crypt.keystore.password=the_keystore_password
-nuxeo.s3storage.crypt.key.alias=the_key_alias
-nuxeo.s3storage.crypt.key.password=the_key_password
-
-```
-
 #### Server-Side Crypto Options
 
 Alternatively, you can use [S3 Server-Side Encryption](http://docs.amazonwebservices.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) with the following option:
 
-```text
+```
 nuxeo.s3storage.crypt.serverside=true
 ```
 
@@ -225,7 +212,7 @@ Client-Side Encryption is safer than Server-Side Encryption. With Client-Side En
 
 {{/callout}}
 
-#### <span style="color: rgb(0,0,0);font-size: 14.0px;">Cache Options</span>
+#### <span style="color: rgb(0,0,0);">Cache Options</span>
 
 Files retrieved from S3 are cached locally for speed. You can configure the maximum cache size (in bytes or with the standard KB, MB, GB or TB&nbsp;suffixes), the maximum number of files in the cache, and the minimum age (in seconds) a file should have before being eligible for purge (the age is the time since last file access).
 
@@ -277,3 +264,47 @@ INFO  [S3BinaryManager] Repository 'default' using S3BinaryManager
 Don't forget to enable the `INFO` level for the group `org.nuxeo` in `$NUXEO_HOME/lib/log4j.xml` to see INFO level messages from Nuxeo classes.
 
 If your configuration is incorrect, this line will be followed by some error messages describing the problems encountered.
+
+## AWS Configuration
+
+You must have appropriate permissions set on your bucket. In particular, note that the less commonly-used permissions&nbsp;`s3:AbortMultipartUpload`,&nbsp;`s3:ListMultipartUploadParts`&nbsp;and&nbsp;`s3:ListBucketMultipartUploads`&nbsp;are required.
+
+Here is a sample AWS S3 Policy that you can use; make sure that you replace&nbsp;`yourbucketname`&nbsp;with your own bucket name.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListAllMyBuckets"
+            ],
+            "Resource": "arn:aws:s3:::*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetBucketLocation",
+                "s3:AbortMultipartUpload",
+                "s3:ListMultipartUploadParts",
+                "s3:ListBucketMultipartUploads"
+            ],
+            "Resource": "arn:aws:s3:::yourbucketname"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:AbortMultipartUpload",
+                "s3:ListMultipartUploadParts",
+                "s3:ListBucketMultipartUploads"
+            ],
+            "Resource": "arn:aws:s3:::yourbucketname/*"
+        }
+    ]
+}
+```

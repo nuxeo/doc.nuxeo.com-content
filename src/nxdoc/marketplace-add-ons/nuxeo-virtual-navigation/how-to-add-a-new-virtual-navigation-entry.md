@@ -7,34 +7,30 @@ details:
         tool: Studio
         topics: 'Content View, Virtual Navigation, Vocabulary'
 labels:
-    - virtual-navigation
-    - howto
-    - content-view
-    - studio
+    - lts2015-ok
     - virtual-navigation-component
+    - content-view
+    - howto
+    - virtual-navigation
+    - studio
 toc: true
 confluence:
-    ajs-parent-page-id: '20517205'
+    ajs-parent-page-id: '28475671'
     ajs-parent-page-title: Nuxeo Virtual Navigation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: How+to+Add+a+New+Virtual+Navigation+Entry
     canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Add+a+New+Virtual+Navigation+Entry
-    page_id: '3342808'
-    shortlink: 2AEz
-    shortlink_source: 'https://doc.nuxeo.com/x/2AEz'
-    source_link: /display/NXDOC/How+to+Add+a+New+Virtual+Navigation+Entry
+        https://doc.nuxeo.com/display/NXDOC710/How+to+Add+a+New+Virtual+Navigation+Entry
+    page_id: '28475464'
+    shortlink: SICyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/SICyAQ'
+    source_link: /display/NXDOC710/How+to+Add+a+New+Virtual+Navigation+Entry
 history:
     - 
-        author: Manon Lumeau
-        date: '2016-06-09 13:37'
-        message: ''
-        version: '32'
-    - 
         author: Solen Guitter
-        date: '2016-04-14 16:08'
-        message: Fix Studio menu label
+        date: '2016-04-14 16:09'
+        message: ix Studio menu labe
         version: '31'
     - 
         author: Ronan Daniellou
@@ -202,14 +198,14 @@ Just follow these steps:
 2.  [Configure the link and the query](#configure-virtual-navigation)
 3.  [Configure the result layout](#configure-virtual-navigation-result-layout)
 
-## Make Sure You Have All the Required Elements&nbsp;
+## Make Sure You Have All the Required Elements&nbsp;<a name="required-element"></a>"
 
 **Required elements**
 
 1.  You need a hierarchical vocabulary: you can [configure one using Studio]({{page page='how-to-add-a-new-vocabulary'}});
 2.  You need to have a [document type]({{page page='how-to-define-a-document-type'}}) that uses the hierarchical vocabulary for filling the value in one of its forms.
 
-## Configure the Virtual Navigation Query and Link&nbsp;
+## Configure the Virtual Navigation Query and Link&nbsp;<a name="configure-virtual-navigation"></a>"
 
 **To create a new virtual navigation:**
 
@@ -279,11 +275,11 @@ This property should always be clicked when you contribute a new virtual navigat
 
 </td></tr></tbody></table>
 
-## Configure the Result Layout of Your Virtual Navigation&nbsp;
+## Configure the Result Layout of Your Virtual Navigation&nbsp;<a name="configure-virtual-navigation-result-layout"></a>"
 
 **To configure the virtual navigation**
 
-1.  On **Virtual navigation**s, click on **Results** tab.
+1.  On **Virtual navigation**, click on **Results** tab.
 2.  Follow the steps described on the [Customize search layout how to]({{page page='how-to-define-a-new-content-view'}}).
 
 &nbsp;
@@ -304,6 +300,6 @@ This property should always be clicked when you contribute a new virtual navigat
 *   [Content Views in Studio Documentation]({{page space='studio' page='content-views'}})
 *   [Custom Page Providers]({{page page='custom-page-providers'}})
 *   [Documents Display Configuration]({{page page='documents-display-configuration'}})
-*   [Default Search]({{page space='userdoc' page='default-search'}})
+*   [Default Search]({{page space='userdoc710' page='default-search'}})
 
 {{/panel}}</div></div>

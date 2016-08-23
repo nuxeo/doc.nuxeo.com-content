@@ -2,19 +2,19 @@
 title: Searching the Nuxeo Platform
 labels:
     - search
-    - multiexcerpt
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Searching+the+Nuxeo+Platform
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Searching+the+Nuxeo+Platform'
-    page_id: '2392416'
-    shortlink: YIEk
-    shortlink_source: 'https://doc.nuxeo.com/x/YIEk'
-    source_link: /display/USERDOC/Searching+the+Nuxeo+Platform
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Searching+the+Nuxeo+Platform'
+    page_id: '29003031'
+    shortlink: F426AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/F426AQ'
+    source_link: /display/USERDOC710/Searching+the+Nuxeo+Platform
 history:
     - 
         author: Manon Lumeau
@@ -335,9 +335,9 @@ The Nuxeo Platform provides a Search tab that enables you to browse and search t
 
 *   [Default search]({{page page='default-search'}})&nbsp;enables you to search on keywords, metadata and additional criteria such as the location in the application.&nbsp;
 *   [Quick search]({{page page='quick-search'}})&nbsp;is a full-text search. Quick search is available from the Search tab and from the top right corner of the screen. It provides suggestions of search results as you type your keywords. Note that this type of search can generate a lot of noise if you search for very generic keywords.
-*   [NXQL search]({{page space='nxdoc' page='nxql'}})&nbsp;enables you to query the content of the platform using&nbsp;[Nuxeo query language]({{page space='nxdoc' page='nxql'}}), giving you access to as many criteria as you need.
+*   [NXQL search]({{page space='nxdoc710' page='nxql'}})&nbsp;enables you to query the content of the platform using&nbsp;[Nuxeo query language]({{page space='nxdoc710' page='nxql'}}), giving you access to as many criteria as you need.
 
-You can&nbsp;[configure as many search forms as you need]({{page space='nxdoc' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})&nbsp;to provide users with search capabilities adapted to your business document types and rules.
+You can&nbsp;[configure as many search forms as you need]({{page space='nxdoc710' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})&nbsp;to provide users with search capabilities adapted to your business document types and rules.
 
 Documents are indexed using their title, description, content (note field, attached files), and metadata. But these different search forms don't have the same behaviors and may not give you&nbsp;the same results. They can provide text fields in which you can type keywords, date fields in which you can select a date to define a period, lists from which you can select values. Text fields can be full-text search fields or exact match fields.
 
@@ -392,7 +392,7 @@ The application's search engine uses boolean operators and wildcards, to enable 
 To avoid noise in the search results, some words are ignored. Typically, words like "the" or "no" are not taken into account. This is configured at the database level. For PostgreSQL, you may want to take a look at the&nbsp;[Text Search Functions and Operators page](http://www.postgresql.org/docs/9.1/static/functions-textsearch.html)&nbsp;for more details on how search works on the database.
 
 Some characters, that can often be used as wildward, are configured to be ignored if they are used in the search forms :&nbsp;`!#$%&'()*+,./\\\\:-@{|}`^~`.
-You can configure escaped characters in the&nbsp;[nuxeo.conf file]({{page space='nxdoc' page='configuration-parameters-index-nuxeoconf'}})&nbsp;using the&nbsp;`org.nuxeo.query.builder.ignored.chars`&nbsp;parameter.
+You can configure escaped characters in the&nbsp;[nuxeo.conf file]({{page space='admindoc710' page='configuration-parameters-index-nuxeoconf'}})&nbsp;using the&nbsp;`org.nuxeo.query.builder.ignored.chars`&nbsp;parameter.
 
 ### Case-Sensitivity
 
@@ -412,8 +412,8 @@ On the other hand, exact match text fields are case-sensitive. You must type the
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Configuring and Customizing Search '}}
 
-*   [Indexing and Querying How-To Index]({{page space='nxdoc' page='indexing-and-querying-how-to-index'}})
-*   [Full-Text Queries]({{page space='nxdoc' page='full-text-queries'}})
-*   [Database configuration]({{page space='nxdoc' page='database-configuration'}})
+*   [Indexing and Querying How-To Index]({{page space='nxdoc710' page='indexing-and-querying-how-to-index'}})
+*   [Full-Text Queries]({{page space='nxdoc710' page='full-text-queries'}})
+*   [Database configuration]({{page space='admindoc710' page='database'}})
 
 {{/panel}}</div></div>

@@ -1,37 +1,21 @@
 ---
 title: Digital Asset Management with the Nuxeo Platform
 labels:
-    - multiexcerpt
-    - multiexcerpt-include
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Digital+Asset+Management+with+the+Nuxeo+Platform
     canonical_source: >-
-        https://doc.nuxeo.com/display/USERDOC/Digital+Asset+Management+with+the+Nuxeo+Platform
-    page_id: '26312925'
-    shortlink: 3YCRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/3YCRAQ'
-    source_link: /display/USERDOC/Digital+Asset+Management+with+the+Nuxeo+Platform
+        https://doc.nuxeo.com/display/USERDOC710/Digital+Asset+Management+with+the+Nuxeo+Platform
+    page_id: '29003039'
+    shortlink: H426AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/H426AQ'
+    source_link: /display/USERDOC710/Digital+Asset+Management+with+the+Nuxeo+Platform
 history:
-    - 
-        author: Solen Guitter
-        date: '2016-04-20 08:00'
-        message: ''
-        version: '6'
-    - 
-        author: Manon Lumeau
-        date: '2016-04-19 15:36'
-        message: ''
-        version: '5'
-    - 
-        author: Solen Guitter
-        date: '2016-04-18 17:49'
-        message: Add note about annotations removed from 8.2
-        version: '4'
     - 
         author: Solen Guitter
         date: '2015-08-27 12:48'
@@ -61,13 +45,13 @@ Pictures are specific files. To take into account the specificities of pictures,
 *   The picture's EXIF metadata
 *   Additional picture views
 
-Pictures can be [created]({{page page='creating-content'}}) and [edited]({{page page='editing-content'}}) in workspaces and folders like any other document type. You can also classify and organize them in [collections]({{page space='nxdoc' page='collections'}}).
+Pictures can be [created]({{page page='creating-content'}}) and [edited]({{page page='editing-content'}}) in workspaces and folders like any other document type. You can also classify and organize them in [collections]({{page space='nxdoc710' page='collections'}}).
 
-When pictures are created, the EXIF metadata of the pictures are automatically extracted and displayed on the **Summary** tab. They cannot be modified. The IPTC legend, copyright and source are used to automatically fill in the description, rights and source metadata. See the page [Binary Metadata]({{page space='nxdoc' page='binary-metadata'}}) for more information.
+When pictures are created, the EXIF metadata of the pictures are automatically extracted and displayed on the **Summary** tab. They cannot be modified. The IPTC legend, copyright and source are used to automatically fill in the description, rights and source metadata. See the page [Binary Metadata]({{page space='nxdoc710' page='binary-metadata'}}) for more information.
 
-![]({{file name='picsMetadata.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=450,border=true)
+![]({{file name='picsMetadata.png' space='nxdoc710' page='digital-asset-management-dam'}} ?w=450,border=true)
 
-You can report to the page [Supported File Formats]({{page space='nxdoc' page='supported-file-formats'}}) to see which file formats are supported as pictures.
+You can report to the page [Supported File Formats]({{page space='nxdoc710' page='supported-file-formats'}}) to see which file formats are supported as pictures.
 
 #### Browsing Pictures
 
@@ -83,11 +67,7 @@ If no picture is available on the current page, it shows the icon ![]({{file nam
 
 Annotations are post-it notes that users can add on the picture to comment it or to comment a specific part of the picture.
 
-{{! /multiexcerpt}}{{#> callout type='note' }}
-
-{{{multiexcerpt 'upgrade-8.2-remove-annotations' page='NXDOC:Upgrade from LTS 2015 following Fast Tracks'}}}
-
-{{/callout}}
+{{! /multiexcerpt}}
 
 **To add an annotation on a picture:**
 
@@ -95,9 +75,9 @@ Annotations are post-it notes that users can add on the picture to comment it or
     A pop up opens.
 2.  Draw a frame on the part of the picture you want to annotate.
 3.  Type your annotation and click on&nbsp;**Submit**.
-    ![]({{file name='DAM-annotation.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
+    ![]({{file name='DAM-annotation.png' space='nxdoc710' page='digital-asset-management-dam'}} ?w=600,border=true)
     You can see your annotation when the mouse is over the zone you selected, and, in the margin, the list of annotations, and for each, the author, date and time of annotation and the text.
-    ![]({{file name='DAM-annotation-rollover.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
+    ![]({{file name='DAM-annotation-rollover.png' space='nxdoc710' page='digital-asset-management-dam'}} ?w=600,border=true)
 
 {{! /multiexcerpt}}
 
@@ -118,25 +98,25 @@ The original and medium pictures can be the same size when you download them if 
 
 To download the picture view that you want, click on&nbsp;![]({{file name='download.png' space='userdoc58' page='icons-index'}})&nbsp;in front of it.
 
-![]({{file name='Additionnal Picture Views Download.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
+![]({{file name='Additionnal Picture Views Download.png' space='nxdoc710' page='digital-asset-management-dam'}} ?w=600,border=true)
 
 {{#> callout type='info' }}
 
-To contribute new picture views, follow this [how-to]({{page space='nxdoc' page='how-to-contribute-picture-conversions'}}).
+To contribute new picture views, follow this [how-to]({{page space='nxdoc710' page='how-to-contribute-picture-conversions'}}).
 
 {{/callout}}
 
 A user interface is added in the Admin tab so that it is possible to re-compute picture conversions (Picture views). This is particularly useful when you add new conversions and want to compute them over existing images, or if you change the definition of some of the existing conversions.
 
-![]({{file name='Admin Picture Conversions.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=650,border=true)
+![]({{file name='Admin Picture Conversions.png' space='nxdoc710' page='digital-asset-management-dam'}} ?w=650,border=true)
 
 ### Video
 
 Video is a document types dedicated to the management of videos files. It provides the following specific features: A player to view the video from the application, a storyboard to navigate in the video and alternative video formats.
 
-Video documents can be [created]({{page page='creating-content'}}) and [edited]({{page page='editing-content'}}) like any other document type. See the page&nbsp;[Supported File Formats]({{page space='nxdoc' page='supported-file-formats'}})&nbsp;for supported video files.
+Video documents can be [created]({{page page='creating-content'}}) and [edited]({{page page='editing-content'}}) like any other document type. See the page&nbsp;[Supported File Formats]({{page space='nxdoc710' page='supported-file-formats'}})&nbsp;for supported video files.
 
-![]({{file name='video_document_type.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
+![]({{file name='video_document_type.png' space='nxdoc710' page='digital-asset-management-dam'}} ?w=600,border=true)
 
 #### Viewing Videos
 
@@ -171,9 +151,9 @@ Audio is a document types dedicated to audio files management. It provides a pla
 
 Audio documents can be [created]({{page page='creating-content'}}) and [edited]({{page page='editing-content'}}) like any other document type. They don't have any specific tab or action available.
 
-See the page [Supported File Formats]({{page space='nxdoc' page='supported-file-formats'}}) for supported audio files.
+See the page [Supported File Formats]({{page space='nxdoc710' page='supported-file-formats'}}) for supported audio files.
 
-![]({{file name='audio_document_type.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
+![]({{file name='audio_document_type.png' space='nxdoc710' page='digital-asset-management-dam'}} ?w=600,border=true)
 
 {{! /multiexcerpt}}
 
@@ -195,8 +175,8 @@ See the page [Supported File Formats]({{page space='nxdoc' page='supported-file-
 
 </div><div class="column medium-6">{{#> panel heading='Other Related Documentation '}}
 
-*   [DAM developer documentation]({{page space='nxdoc' page='digital-asset-management-dam'}})
-*   [How to Contribute a New Video Conversion]({{page space='nxdoc' page='how-to-contribute-a-new-video-conversion'}})
-*   [How to Contribute Picture Conversions]({{page space='nxdoc' page='how-to-contribute-picture-conversions'}})
+*   [DAM developer documentation]({{page space='nxdoc710' page='digital-asset-management-dam'}})
+*   [How to Contribute a New Video Conversion]({{page space='nxdoc710' page='how-to-contribute-a-new-video-conversion'}})
+*   [How to Contribute Picture Conversions]({{page space='nxdoc710' page='how-to-contribute-picture-conversions'}})
 
 {{/panel}}</div></div>

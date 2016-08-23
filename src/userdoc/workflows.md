@@ -3,19 +3,18 @@ title: Workflows
 labels:
     - workflow
     - life-cycle
-    - multiexcerpt-include
 toc: true
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Workflows
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Workflows'
-    page_id: '2392410'
-    shortlink: WoEk
-    shortlink_source: 'https://doc.nuxeo.com/x/WoEk'
-    source_link: /display/USERDOC/Workflows
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Workflows'
+    page_id: '29003030'
+    shortlink: Fo26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Fo26AQ'
+    source_link: /display/USERDOC710/Workflows
 history:
     - 
         author: Manon Lumeau

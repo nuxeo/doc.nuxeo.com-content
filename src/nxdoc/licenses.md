@@ -1,25 +1,20 @@
 ---
 title: Licenses
 labels:
+    - content-review-lts2015
     - license
-    - excerpt
 confluence:
-    ajs-parent-page-id: '950332'
+    ajs-parent-page-id: '28475536'
     ajs-parent-page-title: Developer Documentation Center
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Licenses
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Licenses'
-    page_id: '12288640'
-    shortlink: gIK7
-    shortlink_source: 'https://doc.nuxeo.com/x/gIK7'
-    source_link: /display/NXDOC/Licenses
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Licenses'
+    page_id: '28475708'
+    shortlink: PIGyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/PIGyAQ'
+    source_link: /display/NXDOC710/Licenses
 history:
-    - 
-        author: Florent Guillaume
-        date: '2015-12-29 12:37'
-        message: pache License onl
-        version: '25'
     - 
         author: Solen Guitter
         date: '2013-10-28 09:26'
@@ -150,11 +145,15 @@ The Nuxeo source code is licensed under various open source licenses, all compat
 
 There is no non-open source "enterprise" version of these products, or, in other words, the "open source versions" are already "enterprise-ready" for our customers. We encourage our customers to purchase&nbsp;[a support subscription](http://www.nuxeo.com/en/subscription/connect)&nbsp;to ensure that their Nuxeo instances stays fully operational as long as needed by its business users.
 
-Note also that third-parties are perfectly allowed, under the terms of the Apache License, to create non-open source products based on Nuxeo Platform.
+Note also that third-parties are perfectly allowed, under the terms of the LGPL, to create non-open source products based on Nuxeo Platform.
 
-## Nuxeo License
+## Nuxeo Licenses
 
-Nuxeo uses the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)&nbsp;described on the&nbsp;[Copyright and license headers]({{page space='corg' page='copyright-and-license-headers'}})&nbsp;page.
+Nuxeo developers use the following licenses described on the&nbsp;[Copyright and license headers]({{page space='corg' page='copyright-and-license-headers'}})&nbsp;page:
+
+*   LGPL 2.1:&nbsp;[GNU Lesser General Public License v2.1](http://www.gnu.org/licenses/lgpl-2.1.html)
+*   EPL 1.0: [Eclipse Public License v1.0](http://www.eclipse.org/legal/epl-v10.html)
+*   AL 2.0:&nbsp;[Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 ## Third-Party Licenses
 

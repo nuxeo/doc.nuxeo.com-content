@@ -5,15 +5,15 @@ redirect_source: How to Contribute to an Extension
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Contributing+to+an+Extension+Using+Nuxeo+IDE
     canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Contributing+to+an+Extension+Using+Nuxeo+IDE
-    page_id: '9275422'
-    shortlink: HoiN
-    shortlink_source: 'https://doc.nuxeo.com/x/HoiN'
-    source_link: /display/NXDOC/Contributing+to+an+Extension+Using+Nuxeo+IDE
+        https://doc.nuxeo.com/display/NXDOC710/Contributing+to+an+Extension+Using+Nuxeo+IDE
+    page_id: '28475502'
+    shortlink: boCyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/boCyAQ'
+    source_link: /display/NXDOC710/Contributing+to+an+Extension+Using+Nuxeo+IDE
 history:
     - 
         author: Solen Guitter

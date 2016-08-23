@@ -1,31 +1,27 @@
 ---
 title: Quick Search
 labels:
-    - search
     - suggestion-search
+    - search
+    - lts2015-ok
     - quick-search
 toc: true
 confluence:
-    ajs-parent-page-id: '2392416'
+    ajs-parent-page-id: '29003031'
     ajs-parent-page-title: Searching the Nuxeo Platform
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Quick+Search
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Quick+Search'
-    page_id: '14255346'
-    shortlink: 8oTZ
-    shortlink_source: 'https://doc.nuxeo.com/x/8oTZ'
-    source_link: /display/USERDOC/Quick+Search
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Quick+Search'
+    page_id: '29003058'
+    shortlink: Mo26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Mo26AQ'
+    source_link: /display/USERDOC710/Quick+Search
 history:
     - 
         author: Solen Guitter
-        date: '2016-06-20 15:04'
-        message: ''
-        version: '25'
-    - 
-        author: Solen Guitter
         date: '2015-07-27 15:09'
-        message: Remove Search on dates section (not relevant anymore)
+        message: emove Search on dates section (not relevant anymore
         version: '24'
     - 
         author: Solen Guitter
@@ -148,17 +144,11 @@ Quick search can be accessed from any site page. At any time, you can search a d
 
 ![]({{file name='search-box.png'}} ?w=314,h=42,border=true)
 
-Typing keywords in the search field and pressing the "Enter" key triggers a full-text search.
+Typing keywords in the search field and pressing the "Enter" key triggers a full-text search:
 
-{{! multiexcerpt name='full-text-search-user-desc'}}
-
-&nbsp;Full-text search follows the criteria below:
-
-*   Based on stemming
-*   With AND operator (all words must be in the document)
-*   Searching on the title, the description and the content (text of a note, content of the main attachment of a file)
-
-{{! /multiexcerpt}}
+*   Based on stemming,
+*   With AND operator (all words must be in the document),
+*   Searching on the title, the description and the content (text of a note, content of the main attachment of a file).
 
 **To search a document using quick search:**
 
@@ -242,8 +232,8 @@ When the system finds a user, it suggests to show his information.
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Configuring and Customizing Search '}}
 
-*   [Indexing and Querying How-To Index]({{page space='nxdoc' page='indexing-and-querying-how-to-index'}})
-*   [Full-Text Queries]({{page space='nxdoc' page='full-text-queries'}})
-*   [Indexing and Query]({{page space='nxdoc' page='indexing-and-query'}})
+*   [Indexing and Querying How-To Index]({{page space='nxdoc710' page='indexing-and-querying-how-to-index'}})
+*   [Full-Text Queries]({{page space='nxdoc710' page='full-text-queries'}})
+*   [Indexing and Query]({{page space='nxdoc710' page='indexing-and-query'}})
 
 {{/panel}}</div></div>

@@ -1,22 +1,23 @@
 ---
 title: Shibboleth Authentication
 labels:
+    - link-update
+    - lts2015-ok
+    - shibboleth-component
     - shibboleth
     - authentication
-    - link-update
-    - shibboleth-component
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Shibboleth+Authentication
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Shibboleth+Authentication'
-    page_id: '3868827'
-    shortlink: mwg7
-    shortlink_source: 'https://doc.nuxeo.com/x/mwg7'
-    source_link: /display/NXDOC/Shibboleth+Authentication
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Shibboleth+Authentication'
+    page_id: '27604702'
+    shortlink: 3jalAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/3jalAQ'
+    source_link: /display/NXDOC710/Shibboleth+Authentication
 history:
     - 
         author: Solen Guitter
@@ -133,7 +134,7 @@ The class [`org.nuxeo.ecm.platform.shibboleth.computedgroups.ShibbolethGroupComp
 ### Nuxeo Package Installation
 
 The Shibboleth authentication module could be installed through the Marketplace with the [Shibboleth Authentication package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication).
-See&nbsp;the&nbsp;page [Installing a New Package on Your Instance]({{page page='installing-a-new-package-on-your-instance'}}).
+See&nbsp;the&nbsp;page [Installing a New Package on Your Instance]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}).
 
 After you installed the package, a new **Shib Goups** tab is available in the **Admin** > **Users & Groups** tab.
 

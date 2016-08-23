@@ -1,22 +1,22 @@
 ---
 title: Traceability
 labels:
-    - editing
-    - history
     - versioning
-    - multiexcerpt
+    - history
+    - editing
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Traceability
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Traceability'
-    page_id: '2392375'
-    shortlink: N4Ek
-    shortlink_source: 'https://doc.nuxeo.com/x/N4Ek'
-    source_link: /display/USERDOC/Traceability
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Traceability'
+    page_id: '29003048'
+    shortlink: KI26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/KI26AQ'
+    source_link: /display/USERDOC710/Traceability
 history:
     - 
         author: Manon Lumeau
@@ -227,7 +227,7 @@ For instance, your document's version is currently 0.3\. When you click on the *
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Developer documentation about versioning and history'}}
 
-*   [Versioning developer documentation]({{page space='nxdoc' page='versioning'}})
-*   [How to Customize the Versioning and Comment Widget on Document Edit Form]({{page space='nxdoc' page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
+*   [Versioning developer documentation]({{page space='nxdoc710' page='versioning'}})
+*   [How to Customize the Versioning and Comment Widget on Document Edit Form]({{page space='nxdoc710' page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
 
 {{/panel}}</div></div>

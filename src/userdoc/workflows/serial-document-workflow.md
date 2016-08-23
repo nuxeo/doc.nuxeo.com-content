@@ -2,21 +2,19 @@
 title: Serial Document Workflow
 labels:
     - serial-workflow
-    - excerpt
-    - multiexcerpt-include
-    - multiexcerpt
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '2392410'
+    ajs-parent-page-id: '29003030'
     ajs-parent-page-title: Workflows
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Serial+Document+Workflow
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Serial+Document+Workflow'
-    page_id: '16091752'
-    shortlink: aIr1
-    shortlink_source: 'https://doc.nuxeo.com/x/aIr1'
-    source_link: /display/USERDOC/Serial+Document+Workflow
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Serial+Document+Workflow'
+    page_id: '29003063'
+    shortlink: N426AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/N426AQ'
+    source_link: /display/USERDOC710/Serial+Document+Workflow
 history:
     - 
         author: Manon Lumeau
@@ -133,7 +131,7 @@ The participants of a workflow can:
 *   Approve the document
 *   Reject the document
 
-{{! multiexcerpt name='tasks-assigned-to-group'}}{{#> callout type='info' heading='Tasks assigned to a group'}}
+{{! multiexcerpt name='tasks-assigned-to-group'}} {{#> callout type='info' heading='Tasks assigned to a group'}}
 
 A task assigned to a group is displayed to all the members of the group. As soon as a member of the group approves or rejects the document, the task is completed and the workflow continues.
 

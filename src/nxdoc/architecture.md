@@ -5,14 +5,14 @@ redirect_source: Developer Documentation Center
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Architecture
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Architecture'
-    page_id: '6029725'
-    shortlink: nQFc
-    shortlink_source: 'https://doc.nuxeo.com/x/nQFc'
-    source_link: /display/NXDOC/Architecture
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Architecture'
+    page_id: '28475842'
+    shortlink: woGyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/woGyAQ'
+    source_link: /display/NXDOC710/Architecture
 history:
     - 
         author: Solen Guitter

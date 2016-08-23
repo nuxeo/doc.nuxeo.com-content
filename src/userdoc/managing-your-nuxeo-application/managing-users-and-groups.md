@@ -1,27 +1,26 @@
 ---
 title: Managing Users and Groups
 labels:
-    - user-management
     - admin-center
-    - migration-sample
-    - multiexcerpt
+    - user-management
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '2392402'
+    ajs-parent-page-id: '29003026'
     ajs-parent-page-title: Managing Your Nuxeo Application
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Managing+Users+and+Groups
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Managing+Users+and+Groups'
-    page_id: '2392403'
-    shortlink: U4Ek
-    shortlink_source: 'https://doc.nuxeo.com/x/U4Ek'
-    source_link: /display/USERDOC/Managing+Users+and+Groups
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Managing+Users+and+Groups'
+    page_id: '29003027'
+    shortlink: E426AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/E426AQ'
+    source_link: /display/USERDOC710/Managing+Users+and+Groups
 history:
     - 
         author: Manon Lumeau
         date: '2015-11-25 17:22'
-        message: ''
+        message: eplace "rights" by "permissions
         version: '42'
     - 
         author: Manon Lumeau
@@ -243,7 +242,7 @@ When you use an external directory for users and groups, the actions available o
 Users and groups management is available:
 
 *   from the&nbsp;**Admin Center**, in the&nbsp;**Users & groups**&nbsp;tab,
-    ![]({{file name='AdminCenter-users-groups-tab.png' space='nxdoc' page='admin-tab-overview'}} ?w=650,h=172,border=true)
+    ![]({{file name='AdminCenter-users-groups-tab.png' space='admindoc710' page='admin-tab-overview'}} ?w=650,h=172,border=true)
 *   from the&nbsp;**Home**&nbsp;tab, in the&nbsp;**Users & groups**&nbsp;tab.
     ![]({{file name='home-user-tab.png'}} ?w=650,border=true)
 
@@ -293,7 +292,7 @@ Groups of which the user is a member.
 
 User must be at least in 'administrators' or 'members' group, or one of their sub-groups.
 
-</td></tr><tr><td colspan="1">Virtual groups for this user</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Avatar</td><td colspan="1">Image that represents the user in the application.</td></tr><tr><td colspan="1">Birth date</td><td colspan="1">User's birth date</td></tr><tr><td colspan="1">Phone number</td><td colspan="1">User's phone number</td></tr><tr><td colspan="1">Gender</td><td colspan="1">User's gender. Default value is Male.</td></tr></tbody></table>{{! /multiexcerpt}}{{#> callout type='tip' }}
+</td></tr><tr><td colspan="1">Virtual groups for this user</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Avatar</td><td colspan="1">Image that represents the user in the application.</td></tr><tr><td colspan="1">Birth date</td><td colspan="1">User's birth date</td></tr><tr><td colspan="1">Phone number</td><td colspan="1">User's phone number</td></tr><tr><td colspan="1">Gender</td><td colspan="1">User's gender. Default value is Male.</td></tr></tbody></table>{{! /multiexcerpt}} {{#> callout type='tip' }}
 
 The avatar, birth date, phone number and gender are personal information that can only be set by the user himself. They are not available from the Admin Center Users & Groups user interface.
 
@@ -334,7 +333,7 @@ To modify a user's properties, go to&nbsp;**Admin Center**&nbsp;>&nbsp;**Users &
 
 &nbsp;
 
-#### Changing a User's Password
+#### <a name="edit-password"></a>"Changing a User's Password
 
 Only administrators and power users can modify other users' password. However every user can modify his or her own password from his/her&nbsp;**Home**&nbsp;>&nbsp;**Profile**&nbsp;tab.
 

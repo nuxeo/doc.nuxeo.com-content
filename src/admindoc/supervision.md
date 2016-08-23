@@ -5,14 +5,14 @@ redirect_source: Metrics and Monitoring
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
-    ajs-space-key: ADMINDOC
-    ajs-space-name: Nuxeo Installation and Administration
+    ajs-space-key: ADMINDOC710
+    ajs-space-name: Nuxeo Installation and Administration — LTS 2015
     canonical: Supervision
-    canonical_source: 'https://doc.nuxeo.com/display/ADMINDOC/Supervision'
-    page_id: '12288276'
-    shortlink: FIG7
-    shortlink_source: 'https://doc.nuxeo.com/x/FIG7'
-    source_link: /display/ADMINDOC/Supervision
+    canonical_source: 'https://doc.nuxeo.com/display/ADMINDOC710/Supervision'
+    page_id: '27604606'
+    shortlink: fjalAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/fjalAQ'
+    source_link: /display/ADMINDOC710/Supervision
 history:
     - 
         author: Solen Guitter

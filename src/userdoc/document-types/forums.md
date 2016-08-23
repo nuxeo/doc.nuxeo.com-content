@@ -2,23 +2,22 @@
 title: Forums
 labels:
     - forum
-    - excerpt
-    - multiexcerpt-include
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '2392395'
+    ajs-parent-page-id: '29003021'
     ajs-parent-page-title: Document Types
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Forums
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Forums'
-    page_id: '2392376'
-    shortlink: OIEk
-    shortlink_source: 'https://doc.nuxeo.com/x/OIEk'
-    source_link: /display/USERDOC/Forums
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Forums'
+    page_id: '29003047'
+    shortlink: J426AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/J426AQ'
+    source_link: /display/USERDOC710/Forums
 history:
     - 
-        author: Solen Guitter
+        author: Anonymous
         date: '2015-12-08 14:28'
         message: ink updat
         version: '26'

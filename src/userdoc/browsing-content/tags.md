@@ -2,19 +2,19 @@
 title: Tags
 labels:
     - tag
-    - multiexcerpt
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '2392400'
+    ajs-parent-page-id: '29003022'
     ajs-parent-page-title: Browsing Content
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Tags
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Tags'
-    page_id: '2392380'
-    shortlink: PIEk
-    shortlink_source: 'https://doc.nuxeo.com/x/PIEk'
-    source_link: /display/USERDOC/Tags
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Tags'
+    page_id: '29003043'
+    shortlink: I426AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/I426AQ'
+    source_link: /display/USERDOC710/Tags
 history:
     - 
         author: Manon Lumeau

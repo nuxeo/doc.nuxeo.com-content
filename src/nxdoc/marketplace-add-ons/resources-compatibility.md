@@ -1,38 +1,34 @@
 ---
 title: Resources Compatibility
 labels:
+    - lts2015-ok
     - resources-compatibility
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Resources+Compatibility
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Resources+Compatibility'
-    page_id: '17793214'
-    shortlink: voAPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/voAPAQ'
-    source_link: /display/NXDOC/Resources+Compatibility
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Resources+Compatibility'
+    page_id: '28475477'
+    shortlink: VYCyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/VYCyAQ'
+    source_link: /display/NXDOC710/Resources+Compatibility
 history:
     - 
         author: Manon Lumeau
-        date: '2016-06-09 15:41'
-        message: ''
-        version: '14'
-    - 
-        author: Manon Lumeau
-        date: '2016-04-29 16:28'
+        date: '2016-03-10 16:02'
         message: ''
         version: '13'
     - 
         author: Manon Lumeau
-        date: '2016-03-10 16:02'
+        date: '2016-03-10 16:00'
         message: ''
         version: '12'
     - 
         author: Manon Lumeau
         date: '2016-03-10 15:59'
-        message: 'Merge ADMINDOC with NXDOC  '
+        message: 'Merge ADMINDOC with NXDOC   '
         version: '11'
     - 
         author: Solen Guitter
@@ -92,7 +88,7 @@ The&nbsp;[Resources Compatibility add-on](https://connect.nuxeo.com/nuxeo/site/m
 
 {{! /excerpt}}
 
-It requires no specific installation steps. It can be installed like any other package&nbsp;[from the Marketplace or from the Admin Center]({{page page='installing-a-new-package-on-your-instance'}}).
+It requires no specific installation steps. It can be installed like any other package&nbsp;[from the Marketplace or from the Admin Center]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}).
 
 It allows you to keep using elements that we have removed from a version of the Platform to another, like icons, XHTML templates, images, etc, in your customizations. To know which resources it holds, you need to explore the nuxeo-resources-compat JAR from `$NUXEO/nxserver/bundles`.
 

@@ -2,17 +2,18 @@
 title: Abandoning a Workflow
 labels:
     - workflow
+    - lts2015-ok
 confluence:
-    ajs-parent-page-id: '2392410'
+    ajs-parent-page-id: '29003030'
     ajs-parent-page-title: Workflows
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Abandoning+a+Workflow
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Abandoning+a+Workflow'
-    page_id: '2392412'
-    shortlink: XIEk
-    shortlink_source: 'https://doc.nuxeo.com/x/XIEk'
-    source_link: /display/USERDOC/Abandoning+a+Workflow
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Abandoning+a+Workflow'
+    page_id: '29003029'
+    shortlink: FY26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/FY26AQ'
+    source_link: /display/USERDOC710/Abandoning+a+Workflow
 history:
     - 
         author: Manon Lumeau

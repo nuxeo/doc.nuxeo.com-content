@@ -1,28 +1,32 @@
 ---
 title: Nuxeo Platform User Documentation
-slug: index
-no_side_menu: true
 labels:
-    - multiexcerpt-include
+    - lts2015-ok
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Nuxeo+Platform+User+Documentation
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Platform+User+Documentation'
-    page_id: '11043048'
-    shortlink: 6ICo
-    shortlink_source: 'https://doc.nuxeo.com/x/6ICo'
-    source_link: /display/USERDOC/Nuxeo+Platform+User+Documentation
+    canonical_source: >-
+        https://doc.nuxeo.com/display/USERDOC710/Nuxeo+Platform+User+Documentation
+    page_id: '29003015'
+    shortlink: B426AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/B426AQ'
+    source_link: /display/USERDOC710/Nuxeo+Platform+User+Documentation
 history:
     - 
         author: Solen Guitter
-        date: '2015-12-29 16:22'
+        date: '2015-12-29 16:21'
+        message: ''
+        version: '34'
+    - 
+        author: Solen Guitter
+        date: '2015-12-29 15:04'
         message: ''
         version: '33'
     - 
-        author: Manon Lumeau
+        author: Anonymous
         date: '2015-12-10 14:35'
         message: ''
         version: '32'
@@ -189,7 +193,7 @@ history:
 
 {{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
 
-![]({{file name='pdf-16.png' space='alldoc' page='nuxeo-downloadable-documentation'}} ?w=16,h=16) [Download in PDF]({{file name='Nuxeo_Platform_8.x_UserGuide.pdf' space='alldoc' page='nuxeo-downloadable-documentation'}})
+![]({{file name='pdf-16.png' space='alldoc' page='nuxeo-downloadable-documentation'}} ?w=16,h=16) [Download in PDF]({{file name='Nuxeo_Platform_LTS2015_UserGuide.pdf' space='alldoc' page='nuxeo-downloadable-documentation'}})
 
 {{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
@@ -207,7 +211,7 @@ This module provides core and advanced document management features.
 It provides browsing and edition features adapted to multimedia content.
 
 *   [Digital Asset Management with the Nuxeo Platform]({{page page='digital-asset-management-with-the-nuxeo-platform'}})
-*   [How to Contribute Picture Conversions]({{page space='nxdoc' page='how-to-contribute-picture-conversions'}})
+*   [How to Contribute Picture Conversions]({{page space='nxdoc710' page='how-to-contribute-picture-conversions'}})
 
 {{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 

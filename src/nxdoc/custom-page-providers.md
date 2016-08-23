@@ -5,14 +5,14 @@ redirect_source: Page Providers
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Custom+Page+Providers
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Custom+Page+Providers'
-    page_id: '5570788'
-    shortlink: 5ABV
-    shortlink_source: 'https://doc.nuxeo.com/x/5ABV'
-    source_link: /display/NXDOC/Custom+Page+Providers
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Custom+Page+Providers'
+    page_id: '28475808'
+    shortlink: oIGyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/oIGyAQ'
+    source_link: /display/NXDOC710/Custom+Page+Providers
 history:
     - 
         author: Solen Guitter

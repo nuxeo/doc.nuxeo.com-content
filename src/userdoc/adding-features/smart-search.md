@@ -3,40 +3,24 @@ title: Smart Search
 labels:
     - search
     - smart-search
-    - excerpt
-    - multiexcerpt-include
+    - lts2015-not-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '11043055'
+    ajs-parent-page-id: '29003017'
     ajs-parent-page-title: Adding Features
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Smart+Search
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Smart+Search'
-    page_id: '12911433'
-    shortlink: SQPF
-    shortlink_source: 'https://doc.nuxeo.com/x/SQPF'
-    source_link: /display/USERDOC/Smart+Search
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Smart+Search'
+    page_id: '29003060'
+    shortlink: NI26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/NI26AQ'
+    source_link: /display/USERDOC710/Smart+Search
 history:
     - 
         author: Manon Lumeau
-        date: '2016-02-10 13:48'
-        message: ormatting
-        version: '19'
-    - 
-        author: Manon Lumeau
-        date: '2016-02-10 13:46'
-        message: Reverted from v. 16
-        version: '18'
-    - 
-        author: Manon Lumeau
-        date: '2016-02-10 13:38'
-        message: 'Formatting '
-        version: '17'
-    - 
-        author: Manon Lumeau
-        date: '2016-01-04 12:55'
-        message: ''
+        date: '2016-02-12 16:46'
+        message: euse NXDOC710 conten
         version: '16'
     - 
         author: Solen Guitter
@@ -121,14 +105,13 @@ The [Smart Search package](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 
 {{! /excerpt}}
 
-## Building a Smart Search
+## Building a Smart Search<a name="build-query"></a>"
 
-<span style="color: rgb(0,0,0);">{{{multiexcerpt 'building-smart-search' page='NXDOC:Smart Search'}}}
-</span>
+{{{multiexcerpt 'building-smart-search' page='NXDOC710:Smart Search'}}}
 
 ## <span style="color: rgb(0,0,0);">Saving a Smart Search</span>
 
-{{{multiexcerpt 'saving-smart-search' page='NXDOC:Smart Search'}}}
+{{{multiexcerpt 'saving-smart-search' page='NXDOC710:Smart Search'}}}
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related sections'}}
 
@@ -137,6 +120,6 @@ The [Smart Search package](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
 
-*   [Smart Search developer documentation]({{page space='nxdoc' page='smart-search'}})
+*   [Smart Search developer documentation]({{page space='nxdoc710' page='smart-search'}})
 
 {{/panel}}</div></div>

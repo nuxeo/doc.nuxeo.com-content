@@ -1,382 +1,376 @@
 ---
 title: Editing Content
 labels:
+    - bulk-edit
+    - versioning
+    - worklist
     - editing
     - metadata
-    - versioning
-    - bulk-edit
-    - relation
-    - worklist
     - clipboard
+    - lts2015-ok
+    - relation
     - drag-and-drop
-    - excerpt
-    - multiexcerpt
 toc: true
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Editing+Content
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Editing+Content'
-    page_id: '2392396'
-    shortlink: TIEk
-    shortlink_source: 'https://doc.nuxeo.com/x/TIEk'
-    source_link: /display/USERDOC/Editing+Content
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Editing+Content'
+    page_id: '29003018'
+    shortlink: Co26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Co26AQ'
+    source_link: /display/USERDOC710/Editing+Content
 history:
-    -
+    - 
         author: Manon Lumeau
-        date: '2016-01-11 13:28'
-        message: everted from v. 6
-        version: '71'
-    -
-        author: Manon Lumeau
-        date: '2016-01-11 13:28'
-        message: Fix links to 7.10
+        date: '2016-01-11 13:30'
+        message: ix links to 7.1
         version: '70'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-07 15:26'
         message: ''
         version: '69'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-07 14:31'
         message: ''
         version: '68'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-07 13:31'
         message: ''
         version: '67'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-07 13:19'
         message: ''
         version: '66'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-07 10:58'
         message: ''
         version: '65'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-04 16:35'
         message: ''
         version: '64'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-11-23 17:03'
         message: ''
         version: '63'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-22 07:59'
         message: Fix broken screenshot
         version: '62'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-09-07 09:51'
         message: ''
         version: '61'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-31 12:38'
         message: ''
         version: '60'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-31 12:38'
         message: ''
         version: '59'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-31 12:38'
         message: Add relations screenshots
         version: '58'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-27 13:13'
         message: ''
         version: '57'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-27 10:05'
         message: ''
         version: '56'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-26 09:11'
         message: ''
         version: '55'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-26 08:57'
         message: ''
         version: '54'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-24 14:09'
         message: >-
             Add a section about Edit form customization, reorganize sections
             order
         version: '53'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-21 15:43'
         message: Reverted from v. 50
         version: '52'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-21 13:03'
         message: ''
         version: '51'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-18 16:02'
         message: ''
         version: '50'
-    -
+    - 
         author: Solen Guitter
         date: '2015-06-22 14:22'
         message: ''
         version: '49'
-    -
+    - 
         author: Solen Guitter
         date: '2015-03-19 16:47'
         message: ''
         version: '48'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-28 18:33'
         message: link to virtual nav addon
         version: '47'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 17:52'
         message: ''
         version: '46'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-24 14:38'
         message: ''
         version: '45'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-24 14:34'
         message: ''
         version: '44'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-04 00:47'
         message: Link update
         version: '43'
-    -
+    - 
         author: Solen Guitter
         date: '2014-02-24 14:54'
         message: ''
         version: '42'
-    -
+    - 
         author: Solen Guitter
         date: '2014-02-24 14:52'
         message: ''
         version: '41'
-    -
+    - 
         author: Solen Guitter
         date: '2014-02-21 09:27'
         message: ''
         version: '40'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-16 14:38'
         message: ''
         version: '39'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-16 14:31'
         message: Added note about draft version 0.0
         version: '38'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-26 14:52'
         message: Removed related topics from TOC
         version: '37'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-26 14:51'
         message: Added link to bulk edit dev doc and dev related doc
         version: '36'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-26 10:48'
         message: Reorganization
         version: '35'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2013-11-25 17:11'
         message: ''
         version: '34'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-31 15:05'
         message: Updated bulk edit screenshot for 5.8
         version: '33'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-31 15:02'
         message: Added details on safe edit
         version: '32'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-30 11:06'
         message: ''
         version: '31'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-22 17:53'
         message: ''
         version: '30'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-21 17:05'
         message: ''
         version: '29'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-01 14:25'
         message: ''
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-30 11:48'
         message: Added new 5.7.1 bulk edit feature
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-27 16:05'
         message: Added safe edit feature
         version: '26'
-    -
+    - 
         author: Solen Guitter
         date: '2013-02-06 17:41'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '25'
-    -
+    - 
         author: Solen Guitter
         date: '2013-02-06 17:41'
         message: ''
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2012-06-19 15:09'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2012-06-19 15:09'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2012-06-19 15:09'
         message: Migrated to Confluence 4.0
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2012-06-19 15:09'
         message: Fixed broken link
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2012-01-18 14:34'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2011-12-22 17:58'
         message: Fixed broken link
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2011-12-22 17:49'
         message: Updated screenshot
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-23 11:23'
         message: ''
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-23 10:28'
         message: 'Corrected wrong label '
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-23 10:26'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-22 16:05'
         message: Added last contributor metadata
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-08 19:09'
         message: Added link to virtual navitation
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-08 19:06'
         message: Added toc and related pages
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2011-10-28 15:02'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2011-06-06 16:02'
         message: fixed brocken link
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2011-06-06 14:41'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2011-06-06 11:33'
         message: ''
         version: '7'
-    -
+    - 
         author: Benoit Delbosc
         date: '2011-06-01 10:27'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2010-12-01 11:13'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2010-11-08 10:58'
         message: update new default version number
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2010-11-08 10:56'
         message: added new "nature" metadata
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2010-05-10 18:37'
         message: fixed broken links
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2010-04-26 17:59'
         message: ''
@@ -385,7 +379,7 @@ history:
 ---
 {{! excerpt}}
 
-Editing a document means modifying its content (i.e. the attached file of a [file]({{page space='userdoc' page='document-types'}}) document, the text of a [note]({{page space='userdoc' page='document-types'}}), etc.), or simply editing the title, description or any metadata of the document. You can edit documents individually using an edit form or apply modifications to several documents using the bulk edit form.
+Editing a document means modifying its content (i.e. the attached file of a [file]({{page page='document-types'}}) document, the text of a [note]({{page page='document-types'}}), etc.), or simply editing the title, description or any metadata of the document. You can edit documents individually using an edit form or apply modifications to several documents using the bulk edit form.
 
 {{! /excerpt}}
 
@@ -408,7 +402,7 @@ In the **Edit** tab type your modifications and indicate if you want to update t
 
 {{! multiexcerpt name='edit-form-custom-functional-overview'}}
 
-&nbsp;The Edit form can be customized to show your business metadata, using the [Edit layout]({{page space='studio' page='form-layouts'}}). You can define your Edit tab to show organized groups of metadata and make some fields editable [depending on a user property or document property]({{page space='nxdoc' page='how-to-control-the-display-mode-of-a-widget'}}).
+&nbsp;The Edit form can be customized to show your business metadata, using the [Edit layout]({{page space='studio' page='form-layouts'}}). You can define your Edit tab to show organized groups of metadata and make some fields editable [depending on a user property or document property]({{page space='nxdoc710' page='how-to-control-the-display-mode-of-a-widget'}}).
 
 {{! /multiexcerpt}}
 
@@ -424,7 +418,7 @@ Nature
 
 </td><td colspan="1">
 
-Nature of the document. Values come from the nature [vocabulary]({{page space='userdoc' page='managing-vocabularies'}}).
+Nature of the document. Values come from the nature [vocabulary]({{page page='managing-vocabularies'}}).
 
 </td></tr><tr><td colspan="1">
 
@@ -432,7 +426,7 @@ Subjects
 
 </td><td colspan="1">
 
-Topic(s) of the document.&nbsp;Values come from the I10nsubjects [vocabularies]({{page space='userdoc' page='managing-vocabularies'}}).
+Topic(s) of the document.&nbsp;Values come from the I10nsubjects [vocabularies]({{page page='managing-vocabularies'}}).
 
 </td></tr><tr><td colspan="1">
 
@@ -456,7 +450,7 @@ Coverage
 
 </td><td colspan="1">
 
-Information about the geographic reach of the document. Values come from the I10ncoverage [vocabulary]({{page space='userdoc' page='managing-vocabularies'}}).
+Information about the geographic reach of the document. Values come from the I10ncoverage [vocabulary]({{page page='managing-vocabularies'}}).
 
 </td></tr><tr><td colspan="1">
 
@@ -525,11 +519,11 @@ Last user who modified the document. This field is automatically filled in by th
 
 </td></tr></tbody></table>{{! /multiexcerpt}}
 
-Although metadata are not mandatory, filling them in will make your documents easier to find using [Nuxeo search engine]({{page space='userdoc' page='searching-the-nuxeo-platform'}}).
+Although metadata are not mandatory, filling them in will make your documents easier to find using [Nuxeo search engine]({{page page='searching-the-nuxeo-platform'}}).
 
 {{#> callout type='info' heading='Virtual navigation'}}
 
-Coverage and subjects are used for [virtual navigation]({{page space='nxdoc' page='nuxeo-virtual-navigation'}}), available as an addon.
+Coverage and subjects are used for [virtual navigation]({{page space='nxdoc710' page='nuxeo-virtual-navigation'}}), available as an addon.
 
 {{/callout}}
 
@@ -545,7 +539,7 @@ In browsers that allow it, a draft is automatically saved for recovery.
 
 ![]({{file name='draft-recovery-message.png' space='userdoc58' page='editing-content'}} ?w=350,h=115,border=true)
 
-## Bulk Editing
+## <a name="bulk-edit"></a>"Bulk Editing
 
 It is possible to edit several documents at the same time. When you bulk edit documents, you can edit a set of their metadata. You can bulk edit documents from:
 
@@ -557,13 +551,13 @@ To **edit several documents** at the same time, select the documents to edit usi
 
 {{#> callout type='tip' }}
 
-It is possible to change the default bulk edit versioning policy. See the page [Bulk Edit]({{page space='nxdoc' page='how-to-customize-the-bulk-edit-form'}}) in the developer documentation.
+It is possible to change the default bulk edit versioning policy. See the page [Bulk Edit]({{page space='nxdoc710' page='how-to-customize-the-bulk-edit-form'}}) in the developer documentation.
 
 {{/callout}}
 
-You can also use, [Nuxeo Spreadsheet]({{page space='nxdoc' page='nuxeo-spreadsheet'}}) to edit several documents at the same time&nbsp;in your repository as if you were in a spreadsheet-like grid, like copy and paste by dragging the cell's value.
+You can also use, [Nuxeo Spreadsheet]({{page space='nxdoc710' page='nuxeo-spreadsheet'}}) to edit several documents at the same time&nbsp;in your repository as if you were in a spreadsheet-like grid, like copy and paste by dragging the cell's value.
 
-![]({{file name='spreadsheet-view.png' space='nxdoc' page='nuxeo-spreadsheet'}} ?w=600,border=true)
+![]({{file name='spreadsheet-view.png' space='nxdoc710' page='nuxeo-spreadsheet'}} ?w=600,border=true)
 
 {{#> callout type='info' heading='Document selected in other pages remain selected'}}
 
@@ -575,10 +569,9 @@ When you navigate from page to page, you selection is not lost and you can bulk-
 
 &nbsp;
 
-## Versioning Overview
+## <a name="versioning-overview"></a>"Versioning Overview
 
-{{! multiexcerpt name='versioning'}}
-{{! multiexcerpt name='versioning-intro'}}
+{{! multiexcerpt name='versioning'}}{{! multiexcerpt name='versioning-intro'}}
 
 When you edit a document, you can decide to save your modifications as a new version of the document. This enables you&nbsp;and other users to easily revert to a specific version of the document if needed, without having to edit the document. Versions are accessible from the **History** tab of the document.
 
@@ -611,14 +604,14 @@ Let's say that your current document version is 0.1:&nbsp;
 
 ### Nuxeo Drive Versioning Policy
 
-When you edit a document, either from your Nuxeo Drive folder or using the online editing, a&nbsp;[new version](https://doc.nuxeo.com/display/USERDOC/Editing+Content)&nbsp;is automatically created on the Platform and the version number is updated:
+When you edit a document, either from your Nuxeo Drive folder or using the online editing, a&nbsp;[new version](https://doc.nuxeo.com/display/USERDOC710/Editing+Content)&nbsp;is automatically created on the Platform and the version number is updated:
 
 *   If you are not the last contributor of the document
 *   Or if your last edit is more than an hour ago
 
 Then, if your document's version was 1.0 before modification for instance, it automatically becomes 1.1+ after you edited it from the Nuxeo Drive folder and the 1.1 is archived as it is created. Otherwise, a simple modification is done on the document and logged in the document's History.
 
-See the page&nbsp;[How to Customize Nuxeo Drive Versioning Policy](https://doc.nuxeo.com/display/NXDOC/How+to+Customize+Nuxeo+Drive+Versioning+Policy)&nbsp;to change this behavior.
+See the page&nbsp;[How to Customize Nuxeo Drive Versioning Policy](https://doc.nuxeo.com/display/NXDOC710/How+to+Customize+Nuxeo+Drive+Versioning+Policy)&nbsp;to change this behavior.
 
 ### Drag and Drop Versioning Policy
 
@@ -628,7 +621,7 @@ The drag and drop versioning policy uses the minor version incrementation so, if
 
 {{! /multiexcerpt}}
 
-## Relations
+## <a name="relations"></a>"Relations
 
 Relations are information that connect the application's documents with other documents or external resources. Documents are thus part of a coherent and organized structure.
 
@@ -641,7 +634,7 @@ Available relations are:
 *   compliance relation (conforms to, has conform).
 
 A summary of the document's relations is displayed in the&nbsp;**Summary**&nbsp;tab.&nbsp;
-![]({{file name='relations-summary-tab.png' space='userdoc' page='editing-content'}} ?w=600,border=true)
+![]({{file name='relations-summary-tab.png'}} ?w=600,border=true)
 You can also see all the document's relations in the&nbsp;**Relations**&nbsp;tab of the document. In&nbsp;**Relations**&nbsp;tab, relations are sorted by outgoing and incoming relations. Outgoing relations are relations that were created from the current document. Incoming relations are relations which were created from another document and to the current document.
 
 The objects of the relation are hyperlinks: Click on the object's name to consult it.
@@ -666,29 +659,29 @@ In the **Relations** tab of the document, click on **Add a new relation**&nbsp;l
 
 The relation is displayed as an outgoing relation, under the relation creation form.&nbsp;An incoming relation is automatically created in the target document's **Relations**&nbsp;tab, that directs to the source document of the relation and&nbsp;Relations are also displayed in the&nbsp;**Summary** tab of the document.
 
-![]({{file name='incoming-relations.png' space='userdoc' page='editing-content'}} ?w=600,border=true)
+![]({{file name='incoming-relations.png'}} ?w=600,border=true)
 
 **To delete a relation:**
 
 In the **Relations** tab of the document, click on the **Delete**&nbsp;link corresponding to the relation.&nbsp;The relation is deleted and does not appear in the table anymore. It is also removed from the incoming relations of the target document.
 
-![]({{file name='relations-outgoing.png' space='userdoc' page='editing-content'}} ?w=600,border=true)
+![]({{file name='relations-outgoing.png'}} ?w=600,border=true)
 
 {{#> callout type='tip' }}
 
-If you want to go further, you can follow this [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}}).
+If you want to go further, you can follow this [How to Add New Relation Types]({{page page='how-to-add-new-relation-types'}}).
 
 {{/callout}}
 
 ## Copying and Moving Documents
 
-Copying and moving documents requires to have at least Read permission on the original document and Edit&nbsp;permission in the target workspace. Copy and move are possible in workspaces and workspaces templates. To copy a document in a section you need to&nbsp;[publish]({{page space='userdoc' page='publishing-content'}})&nbsp;it in the new section. To move it from a section to another, you need to&nbsp;[unpublish]({{page space='userdoc' page='publishing-content'}})&nbsp;it from the first section and&nbsp;[publish]({{page space='userdoc' page='publishing-content'}})&nbsp;it in the second one.
+Copying and moving documents requires to have at least Read permission on the original document and Edit&nbsp;permission in the target workspace. Copy and move are possible in workspaces and workspaces templates. To copy a document in a section you need to&nbsp;[publish]({{page page='publishing-content'}})&nbsp;it in the new section. To move it from a section to another, you need to&nbsp;[unpublish]({{page page='publishing-content'}})&nbsp;it from the first section and&nbsp;[publish]({{page page='publishing-content'}})&nbsp;it in the second one.
 
 Copying and Moving are done using the clipboard and worklist, which are located in the left part of the screen, below the navigation tree.
 
-![]({{file name='worklist-clipboard.png' space='userdoc' page='editing-content'}} ?w=180,h=169,border=true)
+![]({{file name='worklist-clipboard.png'}} ?w=180,h=169,border=true)
 
-### Clipboard and Worklist
+### <a name="clipboard-worklist"></a>"Clipboard and Worklist
 
 {{! multiexcerpt name='clipboard-worklist-overview'}}
 
@@ -696,11 +689,11 @@ What is the difference between the clipboard and the worklist?
 
 Both are used to select documents and apply actions on these documents. Possible actions are:
 
-*   [Editing Content]({{page space='userdoc' page='editing-content#copy'}})
-*   [move]({{page space='userdoc' page='editing-content#mov'}})
-*   [export]({{page space='userdoc' page='exporting-documents'}})
+*   [undefined](#copy)
+*   [move](#mov)
+*   [export]({{page page='exporting-documents'}})
 
-It is possible to add your own actions [in the clipboad or the worklist]({{page space='nxdoc' page='actions-display'}}).
+It is possible to add your own actions [in the clipboad or the worklist]({{page space='nxdoc710' page='actions-display'}}).
 
 There are two differences between the clipboard and the worklist:
 
@@ -709,7 +702,7 @@ There are two differences between the clipboard and the worklist:
 
 {{! /multiexcerpt}}
 
-### Copying Documents
+### <a name="copy"></a>"Copying Documents
 
 There are two ways to copy documents:
 
@@ -724,7 +717,7 @@ In the workspace **Content** tab, check the box(es) corresponding to the documen
 
 To do that, you need to add documents to your worklist instead of copying them.&nbsp;Go in a workspace,&nbsp;check the box(es) corresponding to the document(s) you want to copy and click on the&nbsp;**Add to worklist**&nbsp;button below the table.&nbsp;Repeat these steps as many times as you need. Once you have added&nbsp;all the documents you need to your worklist, go in the workspace where you want to paste the documents and&nbsp;**click on the**&nbsp;**Paste**&nbsp;button in the&nbsp;**Content**&nbsp;tab or the&nbsp;**Paste in current folder**&nbsp;link in the worklist.
 
-### Moving Documents
+### <a name="move"></a>"Moving Documents
 
 **From the Same Workspace**
 
@@ -732,7 +725,7 @@ To move one or several documents from a single workspace at the same time, you c
 
 You can also move documents one by one by dragging their icon from the **Content** tab to the target workspace in the navigation tree.
 
-![]({{file name='move-d&d.png' space='userdoc' page='editing-content'}} ?w=400,border=true)
+![]({{file name='move-d&d.png'}} ?w=400,border=true)
 
 **From Several Workspaces**
 
@@ -744,8 +737,8 @@ To move several documents from different workspaces at the same time,&nbsp;check
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-*   [Document's History]({{page space='userdoc' page='traceability'}})
-*   [Managing Vocabularies]({{page space='userdoc' page='managing-vocabularies'}})
+*   [Document's History]({{page page='traceability'}})
+*   [Managing Vocabularies]({{page page='managing-vocabularies'}})
 
 {{/panel}}
 
@@ -755,10 +748,10 @@ To move several documents from different workspaces at the same time,&nbsp;check
 
 </div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
-*   [How to Customize the Bulk Edit Form]({{page space='nxdoc' page='how-to-customize-the-bulk-edit-form'}})
-*   [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})
-*   [How to Control the Display Mode of a Widget]({{page space='nxdoc' page='how-to-control-the-display-mode-of-a-widget'}})
+*   [How to Define a Document Type]({{page space='nxdoc710' page='how-to-define-a-document-type'}})
+*   [How to Customize the Bulk Edit Form]({{page space='nxdoc710' page='how-to-customize-the-bulk-edit-form'}})
+*   [How to Add New Relation Types]({{page page='how-to-add-new-relation-types'}})
+*   [How to Control the Display Mode of a Widget]({{page space='nxdoc710' page='how-to-control-the-display-mode-of-a-widget'}})
 
 {{/panel}}
 

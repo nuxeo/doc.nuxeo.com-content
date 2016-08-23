@@ -2,19 +2,19 @@
 title: Nuxeo Jenkins Report
 labels:
     - nuxeo-jenkins-report
-    - excerpt
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '11043055'
+    ajs-parent-page-id: '29003017'
     ajs-parent-page-title: Adding Features
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Nuxeo+Jenkins+Report
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Jenkins+Report'
-    page_id: '14257459'
-    shortlink: M43Z
-    shortlink_source: 'https://doc.nuxeo.com/x/M43Z'
-    source_link: /display/USERDOC/Nuxeo+Jenkins+Report
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Nuxeo+Jenkins+Report'
+    page_id: '29003057'
+    shortlink: MY26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/MY26AQ'
+    source_link: /display/USERDOC710/Nuxeo+Jenkins+Report
 history:
     - 
         author: Manon Lumeau
@@ -128,7 +128,7 @@ The number of failing jobs from the previous report. This number must be manuall
 
 </td></tr><tr><td colspan="1">Previous nb unclaimed errors</td><td colspan="1">The number of unclaimed jobs from the previous report. This number must be manually filled in.</td></tr><tr><td colspan="1">Unstable Jobs</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Jenkins Duty Comments</td><td colspan="1">A summary of the report. This is usually filled in after a first version of the report has been audited and the report has been updated. See the [Updating a report](#updating-report) section.</td></tr></tbody></table>
 
-## Updating a Report
+## <a name="updating-report"></a>"Updating a Report
 
 ### Examining unstable jobs
 

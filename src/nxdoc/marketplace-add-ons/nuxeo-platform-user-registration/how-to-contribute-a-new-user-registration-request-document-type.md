@@ -7,21 +7,22 @@ details:
         tool: Studio
         topics: User registration
 labels:
-    - howto
     - user-registration
+    - lts2015-ok
     - user-registration-component
+    - howto
 toc: true
 confluence:
-    ajs-parent-page-id: '18450090'
+    ajs-parent-page-id: '28475499'
     ajs-parent-page-title: Nuxeo Platform User Registration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=22905593
-    canonical_source: viewpage.action?pageId=22905593
-    page_id: '22905593'
-    shortlink: _YJdAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/_YJdAQ'
-    source_link: /pages/viewpage.action?pageId=22905593
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
+    canonical: viewpage.action?pageId=28475838
+    canonical_source: viewpage.action?pageId=28475838
+    page_id: '28475838'
+    shortlink: voGyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/voGyAQ'
+    source_link: /pages/viewpage.action?pageId=28475838
 history:
     - 
         author: Solen Guitter

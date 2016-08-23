@@ -1,27 +1,27 @@
 ---
 title: Managing Vocabularies
 labels:
-    - metadata
     - admin-center
     - vocabulary
-    - multiexcerpt
+    - metadata
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '2392402'
+    ajs-parent-page-id: '29003026'
     ajs-parent-page-title: Managing Your Nuxeo Application
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Managing+Vocabularies
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Managing+Vocabularies'
-    page_id: '2392405'
-    shortlink: VYEk
-    shortlink_source: 'https://doc.nuxeo.com/x/VYEk'
-    source_link: /display/USERDOC/Managing+Vocabularies
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Managing+Vocabularies'
+    page_id: '29003025'
+    shortlink: EY26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/EY26AQ'
+    source_link: /display/USERDOC710/Managing+Vocabularies
 history:
     - 
         author: Solen Guitter
         date: '2015-09-03 15:51'
-        message: ''
+        message: 'XDOC-630: make content lighter, update related page'
         version: '19'
     - 
         author: Manon Lumeau

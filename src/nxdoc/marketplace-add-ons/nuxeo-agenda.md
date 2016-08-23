@@ -2,29 +2,19 @@
 title: Nuxeo Agenda
 labels:
     - nuxeo-agenda
-toc: true
+    - content-review-lts2015
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Nuxeo+Agenda
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Agenda'
-    page_id: '17794689'
-    shortlink: gYYPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/gYYPAQ'
-    source_link: /display/NXDOC/Nuxeo+Agenda
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Nuxeo+Agenda'
+    page_id: '27604674'
+    shortlink: wjalAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/wjalAQ'
+    source_link: /display/NXDOC710/Nuxeo+Agenda
 history:
-    - 
-        author: Manon Lumeau
-        date: '2016-06-09 15:55'
-        message: ''
-        version: '4'
-    - 
-        author: Solen Guitter
-        date: '2016-05-04 13:15'
-        message: Add functional overview
-        version: '3'
     - 
         author: Solen Guitter
         date: '2013-12-10 16:45'
@@ -39,14 +29,8 @@ history:
 ---
 {{{excerpt 'USERDOC:Nuxeo Agenda'}}}
 
-## Installation
-
-{{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
+The Nuxeo Agenda package requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin Center]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}).
 
 After the package is installed, a new document type is available from workspaces, called "Event" and users can add an Agenda gadget on their dashboard.
 
 ![]({{file name='nuxeo-agenda-document-type.png'}} ?w=650,h=340,border=true)
-
-## Functional Overview
-
-{{{multiexcerpt 'nuxeo-agenda-functional-overview' page='USERDOC:Nuxeo Agenda'}}}

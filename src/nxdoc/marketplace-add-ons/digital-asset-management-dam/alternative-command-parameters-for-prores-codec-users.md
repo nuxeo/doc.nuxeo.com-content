@@ -1,20 +1,20 @@
 ---
 title: Alternative Command Parameters for ProRes Codec Users
 labels:
+    - lts2015-ok
     - convert-component
-    - excerpt
 confluence:
-    ajs-parent-page-id: '3866704'
+    ajs-parent-page-id: '28475697'
     ajs-parent-page-title: Digital Asset Management (DAM)
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Alternative+Command+Parameters+for+ProRes+Codec+Users
     canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Alternative+Command+Parameters+for+ProRes+Codec+Users
-    page_id: '26317024'
-    shortlink: 4JCRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/4JCRAQ'
-    source_link: /display/NXDOC/Alternative+Command+Parameters+for+ProRes+Codec+Users
+        https://doc.nuxeo.com/display/NXDOC710/Alternative+Command+Parameters+for+ProRes+Codec+Users
+    page_id: '28475759'
+    shortlink: b4GyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/b4GyAQ'
+    source_link: /display/NXDOC710/Alternative+Command+Parameters+for+ProRes+Codec+Users
 history:
     - 
         author: Solen Guitter

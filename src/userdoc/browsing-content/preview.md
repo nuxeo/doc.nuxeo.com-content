@@ -3,29 +3,19 @@ title: Preview
 labels:
     - annotations
     - preview
-    - multiexcerpt
+    - lts2015-ok
 confluence:
-    ajs-parent-page-id: '2392400'
+    ajs-parent-page-id: '29003022'
     ajs-parent-page-title: Browsing Content
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Preview
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Preview'
-    page_id: '2392382'
-    shortlink: PoEk
-    shortlink_source: 'https://doc.nuxeo.com/x/PoEk'
-    source_link: /display/USERDOC/Preview
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Preview'
+    page_id: '29003042'
+    shortlink: Io26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Io26AQ'
+    source_link: /display/USERDOC710/Preview
 history:
-    - 
-        author: Solen Guitter
-        date: '2016-04-12 14:21'
-        message: ''
-        version: '37'
-    - 
-        author: Solen Guitter
-        date: '2016-04-12 14:18'
-        message: Only PDF files use pdf.js preview
-        version: '36'
     - 
         author: Manon Lumeau
         date: '2015-10-14 15:02'
@@ -207,23 +197,22 @@ history:
 
 The preview enables you to see an insight of your document.
 
-The PDF files preview leverages [pdf.js by Mozzilla](https://mozilla.github.io/pdf.js/). Other file types preview leverages the [Nuxeo Platform preview module]({{page space='nxdoc' page='preview'}}).
-
 Several means to preview documents are available.
 
-*   For office and PDF documents: Click on the icon ![]({{file name='preview.png' space='userdoc' page='icons-index'}}) next to the attachment name on the **Summary** tab.
-    The preview opens in a popup window.
-    ![]({{file name='DocumentPreviewer2.png' space='userdoc' page='preview'}} ?w=600,h=331,border=true)
-
+*   For office and PDF documents: Click on the icon ![]({{file name='preview.png' page='icons-index'}}) next to the attachment name on the **Summary** tab.
+    The preview opens in a new browser tab.
+    ![]({{file name='DocumentPreviewer2.png'}} ?w=600,h=331,border=true)
+    This preview leverages [pdf.js by Mozzilla](https://mozilla.github.io/pdf.js/).
 *   For all documents on the **Summary** tab of a document, click on **More** > **Preview.**
     The document preview is displayed in a popup window.
-    ![]({{file name='preview_popup.png' space='userdoc' page='preview'}} ?w=600,border=true)
-*   You can also preview a document along with its main metadata on the [Info-View pop-up]({{page space='nxdoc' page='how-to-customize-the-info-view-pop-up'}}), accessible from any thumbnail listing.
-    ![]({{file name='info_view_preview.png' space='userdoc' page='preview'}} ?w=600,border=true)
+    ![]({{file name='preview_popup.png'}} ?w=600,border=true)
+    This preview leverages the [Nuxeo Platform preview module]({{page space='nxdoc710' page='preview'}}).
+*   You can also preview a document along with its main metadata on the [Info-View pop-up]({{page space='nxdoc710' page='how-to-customize-the-info-view-pop-up'}}), accessible from any thumbnail listing.
+    ![]({{file name='Screenshot 2014-12-01 16.42.07.png'}} ?w=600,border=true)
 
 ## Supported Formats and Requirements
 
-The table below shows for which file formats the preview is available. The installation of [third-party software]({{page space='nxdoc' page='installing-and-setting-up-related-software'}}) is required for some formats of the list below.
+The table below shows for which file formats the preview is available. The installation of [third-party software]({{page space='admindoc710' page='installing-and-setting-up-related-software'}}) is required for some formats of the list below.
 
 {{#> callout type='note' heading='Reminder'}}
 

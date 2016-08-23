@@ -1,21 +1,21 @@
 ---
 title: Working with WebDAV
 labels:
-    - webdav
     - editing
-    - multiexcerpt
+    - webdav
+    - content-review-lts2015
 toc: true
 confluence:
-    ajs-parent-page-id: '2392396'
+    ajs-parent-page-id: '29003018'
     ajs-parent-page-title: Editing Content
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Working+with+WebDAV
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Working+with+WebDAV'
-    page_id: '2392398'
-    shortlink: ToEk
-    shortlink_source: 'https://doc.nuxeo.com/x/ToEk'
-    source_link: /display/USERDOC/Working+with+WebDAV
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Working+with+WebDAV'
+    page_id: '29003024'
+    shortlink: EI26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/EI26AQ'
+    source_link: /display/USERDOC710/Working+with+WebDAV
 history:
     - 
         author: Florent Guillaume
@@ -227,7 +227,7 @@ There are several known limitations with using the WebDAV protocol on Windows ma
 
 We recommend you to pay attention to [Nuxeo Drive]({{page page='nuxeo-drive'}}) that can offer you a file system access style without the above mentioned drawbacks.
 
-{{/callout}}{{#> callout type='note' heading='WSS'}}
+{{/callout}} {{#> callout type='note' heading='WSS'}}
 
 Since Nuxeo 7.3, Windows SharePoint Service (WSS) is not supported anymore (see [NXP-16972](https://jira.nuxeo.com/browse/NXP-16972)).
 
@@ -268,7 +268,7 @@ The plugin comes with a default configuration which supports only a few clients.
 *   cadaver, which enables you to browse the content of the Nuxeo application in command line like you would do with a FTP server;
 *   davfs, which enables your to mount the Nuxeo Platform and see it as a file system directory.
 
-It is possible to&nbsp;[configure the application to work with other WebDAV clients]({{page space='nxdoc' page='webdav'}}).
+It is possible to&nbsp;[configure the application to work with other WebDAV clients]({{page space='nxdoc710' page='webdav'}}).
 
 ### Browsing the Nuxeo Platform from Your OS
 
@@ -281,12 +281,12 @@ After you added the Nuxeo application as an external drive, you can browse the c
 *   notes,
 *   pictures.
 
-### Editing Documents&nbsp;
+### Editing Documents&nbsp;<a name="DAV-edit"></a>"
 
 You can edit office documents available in your Nuxeo workspaces and folders from your OS, like any other local documents.
 The document is automatically locked in the Nuxeo Platform. When you save your modifications, they are saved in the Nuxeo Platform directly. When done, closing the document will unlock the document in the Nuxeo Platform.
 
-### Creating Content in the Nuxeo Platform
+### Creating Content in the Nuxeo Platform<a name="DAV-create"></a>"
 
 You can create folders and documents in the Nuxeo Platform from your desktop.
 To create documents in a Nuxeo folder or workspace, you can:

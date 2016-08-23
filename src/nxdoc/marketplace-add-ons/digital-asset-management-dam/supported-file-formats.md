@@ -1,19 +1,20 @@
 ---
 title: Supported File Formats
 labels:
-    - dam-component
     - dam
+    - dam-component
+    - lts2015-not-ok
 confluence:
-    ajs-parent-page-id: '3866704'
+    ajs-parent-page-id: '28475697'
     ajs-parent-page-title: Digital Asset Management (DAM)
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Supported+File+Formats
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Supported+File+Formats'
-    page_id: '3343319'
-    shortlink: 1wMz
-    shortlink_source: 'https://doc.nuxeo.com/x/1wMz'
-    source_link: /display/NXDOC/Supported+File+Formats
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Supported+File+Formats'
+    page_id: '28475747'
+    shortlink: Y4GyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Y4GyAQ'
+    source_link: /display/NXDOC710/Supported+File+Formats
 history:
     - 
         author: Solen Guitter

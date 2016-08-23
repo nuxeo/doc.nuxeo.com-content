@@ -1,67 +1,43 @@
 ---
 title: Nuxeo CSV
 labels:
-    - csv
-    - import
-    - marketplace-package
     - nuxeo-csv
+    - csv
+    - lts2015-ok
     - csv-importer-component
+    - marketplace-package
+    - import
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Nuxeo+CSV
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+CSV'
-    page_id: '14255163'
-    shortlink: O4TZ
-    shortlink_source: 'https://doc.nuxeo.com/x/O4TZ'
-    source_link: /display/NXDOC/Nuxeo+CSV
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Nuxeo+CSV'
+    page_id: '28475534'
+    shortlink: joCyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/joCyAQ'
+    source_link: /display/NXDOC710/Nuxeo+CSV
 history:
     - 
         author: Frantz Fischer
-        date: '2016-07-29 10:32'
-        message: ''
-        version: '33'
-    - 
-        author: Frantz Fischer
-        date: '2016-07-29 10:23'
-        message: ''
-        version: '32'
-    - 
-        author: Solen Guitter
-        date: '2016-06-23 08:34'
-        message: ''
-        version: '31'
-    - 
-        author: Solen Guitter
-        date: '2016-06-10 09:06'
-        message: Update installation excerpt
-        version: '30'
-    - 
-        author: Manon Lumeau
-        date: '2016-06-09 12:32'
-        message: ''
-        version: '29'
-    - 
-        author: Solen Guitter
-        date: '2016-05-30 08:21'
+        date: '2016-07-29 10:33'
         message: ''
         version: '28'
     - 
-        author: Karin Touchie
-        date: '2016-05-27 14:46'
+        author: Frantz Fischer
+        date: '2016-07-29 10:25'
         message: ''
         version: '27'
     - 
-        author: Karin Touchie
-        date: '2016-05-27 14:39'
+        author: Frantz Fischer
+        date: '2016-07-29 10:24'
         message: ''
         version: '26'
     - 
         author: Solen Guitter
-        date: '2016-01-15 08:35'
+        date: '2016-05-30 08:20'
         message: ''
         version: '25'
     - 
@@ -190,36 +166,34 @@ history:
 
 The [Nuxeo CSV add-on](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv) enables users to proceed to a bulk import of documents in the Nuxeo Platform using a CSV file. This add-on enables users to create documents with their metadata filled in, to import files with their main attachment or to create a tree structure.
 
-{{! /excerpt}} {{! multiexcerpt name='nuxeo_csv_functional_introduction'}}
+{{! /excerpt}}
 
-Installing this add-on adds a button "Import a CSV file" for all users that have at least the Edit permission on any document in which it is possible to import a file. By default, this means workspaces and folders. If you configured other documents types in which it is possible to import files, then the button "Import a CSV file" can also be available (see the page [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})).&nbsp;
-
-{{! /multiexcerpt}}
+Installing this add-on adds a button "Import a CSV file" for all users that have at least the Edit permission on any document in which it is possible to import a file. By default, this means workspaces and folders. If you configured other documents types in which it is possible to import files, then the button "Import a CSV file" can also be available (see the page [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})).
 
 ## Installation
 
-{{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
+{{{multiexcerpt 'MP-installation-easy' page='Digital Asset Management (DAM)'}}}
 
 After the package is installed, users have a **Import a CSV file** button available in workspaces, folders and in any document where they can import files.
 
 ![]({{file name='nuxeo-csv-button.png'}} ?w=350,border=true)
 
-## Configuration
+## <a name="configuration"></a>"Configuration
 
-The Nuxeo CSV add-on enables users to create file documents and upload their main attachment at the same time. This requires to configure where the server will take the attachments. This is done adding the parameter&nbsp;`nuxeo.csv.blobs.folder` in the server [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) and giving it a value that is a local path to a folder that can be accessed by the server.
+The Nuxeo CSV add-on enables users to create file documents and upload their main attachment at the same time. This requires to configure where the server will take the attachments. This is done adding the parameter&nbsp;`nuxeo.csv.blobs.folder` in the server [nuxeo.conf]({{page space='admindoc710' page='configuration-parameters-index-nuxeoconf'}}) and giving it a value that is a local path to a folder that can be accessed by the server.
 
-## CSV File Definition
+## <a name="nuxeo-csv-import-file-definition"></a>"CSV File Definition
 
 The CSV file used to import documents in the Nuxeo Platform must respect the following rules:
 
-*   First line defines the properties that will be filled in
-*   Other lines define the documents to be imported
-*   Use a comma to separate properties
-*   Values must be between quotes
-*   Dates must use the format MM/dd/yyyy
-*   For multi-valued metadata, such as contributors, use a pipe character (`|`) to separate the different values
-*   For vocabularies values, use their id
-*   Lines defining the documents to import must define all properties specified on the first line, even empty ones (by using empty values)
+*   first line defines the properties that will be filled in,
+*   other lines define the documents to be imported,
+*   use a comma to separate properties,
+*   values must be between quotes,
+*   dates must use the format MM/dd/yyyy,
+*   for multi-valued metadata, such as contributors, use a pipe character (|) to separate the different values,
+*   for vocabularies values, use their id,
+*   lines defining the documents to import must define all properties specified on the first line, even empty ones (by using empty values).
 
 Here is a simple example of the structure of a CSV file:
 
@@ -228,8 +202,8 @@ Here is a simple example of the structure of a CSV file:
 
 In the example above:
 
-*   `name` is the id of the document (used in the URL)
-*   `type` is the id of document type (see the page&nbsp;[How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) for some default types properties)
+*   `name` is the id of the document (used in the URL),
+*   `type` is the id of document type (see the page&nbsp;[How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) for some default types properties),
 *   `dc:title` and&nbsp;`dc:description` are the title and description fields of the document from the Dublin Core (dc) schema. They follow the `schema:field` formatting.
 
 To have new lines in a field value (like `dc:description`), just write them as in the following CSV file example:
@@ -258,12 +232,12 @@ To import documents using Nuxeo CSV:
 3.  Click on the **Import a CSV file** button in the workspace or folder you want to import documents into.
 4.  Browse and select your CSV file.
     ![]({{file name='CSV Importer beginning.png'}} ?w=550,border=true)
-5.  Optionally check the box **<span style="color: rgb(68,68,68);">Send me the import report by email</span>** if you want to receive an email when the import is done which shows how the import went. This is useful in case of imports that take a long time.
+5.  Optionally check the box **<span style="color: rgb(68,68,68);">Send me the import report by email</span>** if you want to receive an email when the import is done, which shows how the import went. This is useful in case of imports that take a long time.
 6.  Click on the **Process** button.
     The import starts. You can either:
 
     *   wait for the import to be completed.
-        When it is completed, a report of the import is displayed ;
+        When it is completed, a report of the import is displayed;
         ![]({{file name='CSV Importer Imported.png'}} ?w=550,border=true)
     *   start a new import;
     *   browse the application.If you checked the box **<span style="color: rgb(68,68,68);">Send me the import report by email</span>** , you receive an email once the import is completed.
@@ -271,7 +245,7 @@ To import documents using Nuxeo CSV:
 
 ### Importing a Document Tree Structure
 
-It is possible to import a hierarchy of documents using Nuxeo CSV. To do that, the&nbsp;`name` property is used to determine where the document should be created in the hierarchy of documents you are importing: its `name` is composed of the names of its parents separated by `/`, forming a path.
+It is possible to import a hierarchy of documents using Nuxeo CSV. To do that, the&nbsp;`name` property is used to determine where the document should be created in the hierarchy of documents you are importing: its `name` is composed of the names of its parents separated by /, forming a path.
 
 Since the importer creates the documents in the order they are listed in the CSV file, you have to be careful about the order in which you declare the documents to import so as to be sure to create the workspace or folder before the documents it will hold.
 
@@ -304,7 +278,7 @@ Complex properties (mono and multi-valued) need to be JSON formatted like (see t
 "mynote","Note","a simple note","My Note","bender|leela|fry","12/12/2012","note content","",""
 "mycomplexfile","ComplexFile","a complex file","My Complex File","joe","12/21/2013","","{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\    "}","[{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\"},{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString2\"}]"</pre>
 
-You can use the attached file&nbsp;[]({{file name='docs_ok.csv'}})&nbsp;to better understand the syntax.
+You can use the attached file&nbsp;[]({{file name='docs_ok.csv' space='nxdoc' page='nuxeo-csv'}})&nbsp;to better understand the syntax.
 
 ### Setting Life Cycle State When Creating Documents
 
@@ -315,7 +289,7 @@ It is possible to set the life cycle state when the document is created through 
 
 ### Events
 
-Note that the event raised by this CSV import is a **creation event**, not an import one. An import event means that for the Nuxeo Platform, a full and ready Nuxeo document is imported. Here based on some data, a new Nuxeo document is created.
+Note that the event raised by this CSV import is a **creation event**, not an import one. An import event means that for the Nuxeo Platform a full and ready Nuxeo document is imported. Here based on some data, a new Nuxeo document is created.
 
 * * *
 

@@ -4,18 +4,18 @@ labels:
     - nuxeo-groups-rights-audit
     - export
     - last-review-20150226
-    - excerpt
+    - content-review-lts2015
 confluence:
-    ajs-parent-page-id: '11043055'
+    ajs-parent-page-id: '29003017'
     ajs-parent-page-title: Adding Features
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Nuxeo+Groups+and+Rights+Audit
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Groups+and+Rights+Audit'
-    page_id: '14257398'
-    shortlink: 9ozZ
-    shortlink_source: 'https://doc.nuxeo.com/x/9ozZ'
-    source_link: /display/USERDOC/Nuxeo+Groups+and+Rights+Audit
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Nuxeo+Groups+and+Rights+Audit'
+    page_id: '29003054'
+    shortlink: Lo26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Lo26AQ'
+    source_link: /display/USERDOC710/Nuxeo+Groups+and+Rights+Audit
 history:
     - 
         author: Solen Guitter

@@ -2,30 +2,24 @@
 title: Nuxeo Agenda
 labels:
     - nuxeo-agenda
-    - excerpt
-    - multiexcerpt
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '11043055'
+    ajs-parent-page-id: '29003017'
     ajs-parent-page-title: Adding Features
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Nuxeo+Agenda
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Agenda'
-    page_id: '17793895'
-    shortlink: Z4MPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/Z4MPAQ'
-    source_link: /display/USERDOC/Nuxeo+Agenda
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Nuxeo+Agenda'
+    page_id: '29003052'
+    shortlink: LI26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/LI26AQ'
+    source_link: /display/USERDOC710/Nuxeo+Agenda
 history:
     - 
         author: Solen Guitter
-        date: '2016-05-04 13:14'
-        message: ''
-        version: '10'
-    - 
-        author: Solen Guitter
         date: '2015-11-09 16:48'
-        message: Add TOC
+        message: dd TO
         version: '9'
     - 
         author: Solen Guitter
@@ -69,13 +63,13 @@ history:
         version: '1'
 
 ---
-{{! multiexcerpt name='nuxeo-agenda-functional-overview'}}{{! excerpt}}
+{{! excerpt}}
 
 The [Nuxeo Agenda package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda) provides users with a new documents type "Event" that enables them to manage their list of meetings and other events using an Agenda gadget on their dashboard.
 
 {{! /excerpt}}
 
-### Creating Events
+## Creating Events
 
 Events can be created in workspaces and folders.
 
@@ -104,7 +98,7 @@ Date and time at which the event starts
 
 </td></tr><tr><td colspan="1">End date</td><td colspan="1">Date and time at which the event ends</td></tr><tr><td colspan="1">Place</td><td colspan="1">Where the event takes place</td></tr></tbody></table>
 
-### Editing an Event
+## Editing an Event
 
 Events can be modified from the **Edit** tab. Unlike other documents, they don't have additional metadata from this tab, and users cannot choose to create a new version of the event when they edit it. The system automatically creates a new version of the event when it is modified.
 
@@ -115,7 +109,7 @@ Events can be modified from the **Edit** tab. Unlike other documents, they don't
 3.  Click on **Save**.
     The modifications are immediately available in the **Agenda** gadget. A new version of the event is automatically created by the system.
 
-### Browsing Events
+## Browsing Events
 
 Events are displayed in the **Agenda** gadget, which shows all the events you have access to.
 
@@ -130,7 +124,7 @@ The gadget offers two views of the events list.
 
 To see the details of an event, click on the event's title from the Agenda gadget or from the **Content** tab of the workspace or folder. The event's **Summary** tab is displayed. You can then edit it, link it to other documents, comment it and tag it.
 
-### Actions Available on Events
+## Actions Available on Events
 
 The features below are available on events:
 
@@ -138,4 +132,4 @@ The features below are available on events:
 *   [Comments]({{page page='collaborative-features#comments'}})
 *   [Tags]({{page page='tags'}})
 
-{{! /multiexcerpt}}
+&nbsp;

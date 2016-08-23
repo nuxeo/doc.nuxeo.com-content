@@ -2,59 +2,29 @@
 title: Managing Permissions
 labels:
     - access-rights
-    - multiexcerpt
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Managing+Permissions
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Managing+Permissions'
-    page_id: '2392401'
-    shortlink: UYEk
-    shortlink_source: 'https://doc.nuxeo.com/x/UYEk'
-    source_link: /display/USERDOC/Managing+Permissions
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Managing+Permissions'
+    page_id: '29003023'
+    shortlink: D426AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/D426AQ'
+    source_link: /display/USERDOC710/Managing+Permissions
 history:
     - 
-        author: Frédéric Vadon
-        date: '2016-05-25 20:45'
-        message: recise that audit and purge is in the admin cente
-        version: '53'
-    - 
         author: Solen Guitter
-        date: '2016-05-13 12:35'
-        message: ''
-        version: '52'
-    - 
-        author: Solen Guitter
-        date: '2016-04-07 08:30'
-        message: ''
-        version: '51'
-    - 
-        author: Solen Guitter
-        date: '2016-01-28 09:54'
-        message: ''
-        version: '50'
-    - 
-        author: Solen Guitter
-        date: '2016-01-22 16:33'
-        message: ''
-        version: '49'
-    - 
-        author: Solen Guitter
-        date: '2016-01-22 16:32'
-        message: ''
-        version: '48'
-    - 
-        author: Solen Guitter
-        date: '2016-01-19 14:47'
+        date: '2016-05-13 14:27'
         message: ''
         version: '47'
     - 
         author: Solen Guitter
-        date: '2016-01-18 16:23'
-        message: Add permission overview table
+        date: '2016-01-22 16:34'
+        message: ''
         version: '46'
     - 
         author: Manon Lumeau
@@ -287,7 +257,7 @@ history:
 ---
 {{! multiexcerpt name='permissions'}}
 
-A permission is a rule to grant access to a user or set of users to a Nuxeo document.&nbsp;User has a view in the dashboard where he can see the documents on which a permission is set. Managing permissions means granting or denying access permissions in a document or folder.
+A permission is a rule to grant access to a user or set of users to a Nuxeo document. User has a view in the dashboard where he can see the documents on which a permission is set. Managing permissions means granting or denying access permissions in a document or folder.
 
 Some permissions are granted automatically, for example when you create a workflow and grant access to a user on a document for the entire workflow or a particular task.
 
@@ -384,40 +354,25 @@ Submit documents for publishing
 
 ### Granting Permissions to the Application Users and Groups
 
-To&nbsp;add a permission, at the root of a workspace, a folder or a document, click on the&nbsp;**Permission**&nbsp;tab >&nbsp;**New Permission** and fill in the popup form.
+To add a permission, at the root of a workspace, a folder or a document, click on the **Permission** tab > **New Permission** and fill in the popup form.
 
 ![]({{file name='add_permission_popup.png'}} ?w=650,h=368,border=true)
 
-The new permission is displayed in the&nbsp;_Permissions defined locally_&nbsp;part of the screen.
-
-### Granting Permissions to External Users
-
-You can share documents and folders with people that don't usually have access to the application, using their email.
-
-In the _Permissions Assigned to External Users_ part of the screen, click **New** and fill in the popup form. The external person is sent an email notification that contains the link to the document or space. They can access the application only by clicking that link.
-
-![]({{file name='permissions_external_share_popup.png'}} ?w=300,thumbnail=true)
-
-**Notes:**
-
-*   You can only grant a temporary access to external users.
-*   External users are not created a user account on the application. They do not have login / password credentials. They can only use the link that is sent to them to access the application.&nbsp;
-*   External users have access to the content that was shared with them (either documents or workspaces and their content) and the Search tab.
-*   External users do not benefit from the following features: A personal workspace and the Home tab and its features (dashboard, alerts, users / groups search, etc.).
+The new permission is displayed in the _Permissions defined locally_ part of the screen.
 
 ### Editing Permissions
 
-To&nbsp;edit a permission&nbsp;click on&nbsp;![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}})&nbsp;next to it, from there you can modify the permission and/or the date frame.
+To edit a permission click on ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) next to it, from there you can modify the permission and/or the date frame.
 
 ### Deleting Permissions
 
-To&nbsp;delete a permission&nbsp;click on&nbsp;![]({{file name='delete_2.png' page='icons-index'}} ?w=16,thumbnail=true) next to the permission you want to delete, click&nbsp;**Ok**&nbsp;on the confirmation popup.&nbsp;
+To delete a permission click on ![]({{file name='delete_2.png' page='icons-index'}} ?w=16,thumbnail=true) next to the permission you want to delete, click **Ok** on the confirmation popup.
 
-![]({{file name='delete_permission_popup.png'}} ?w=350,border=true)&nbsp;
+![]({{file name='delete_permission_popup.png'}} ?w=350,border=true)
 
 ## Auditing and Purging Permissions
 
-In the Admin Center, the Permissions tab presents two sub-tabs: a **Search** tab and a **Purge** tab.
+This tab presents two sub-tabs: a **Search** tab and a **Purge** tab.
 
 ### Auditing Permissions
 
@@ -442,9 +397,9 @@ You can search permissions on the following criteria:
 
 ### Purging Permissions
 
-The **Purge** tab will&nbsp;enable admins to delete&nbsp;**all**&nbsp;the permissions granted to a user or on a section of the repository.
+The **Purge** tab will enable admins to delete **all** the permissions granted to a user or on a section of the repository.
 
-To&nbsp;**purge the permission**&nbsp;of a user: go to&nbsp;**Admin**&nbsp;>&nbsp;**Permissions**&nbsp;> &nbsp;**Purge**&nbsp;tab, search the user you want and click on&nbsp;**Search**. The available permissions are displayed, click on&nbsp;**Purge**&nbsp;to confirm. &nbsp;All the permissions for this user are removed.
+To **purge the permission** of a user: go to **Admin** > **Permissions** > **Purge** tab, search the user you want and click on **Search**. The available permissions are displayed, click on **Purge** to confirm. All the permissions for this user are removed.
 ![]({{file name='permissions_purge.png'}} ?w=600,border=true)
 
 {{! /multiexcerpt}}

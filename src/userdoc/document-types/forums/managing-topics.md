@@ -2,18 +2,19 @@
 title: Managing Topics
 labels:
     - topic
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '2392376'
+    ajs-parent-page-id: '29003047'
     ajs-parent-page-title: Forums
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Managing+Topics
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Managing+Topics'
-    page_id: '2392378'
-    shortlink: OoEk
-    shortlink_source: 'https://doc.nuxeo.com/x/OoEk'
-    source_link: /display/USERDOC/Managing+Topics
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Managing+Topics'
+    page_id: '29003044'
+    shortlink: JI26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/JI26AQ'
+    source_link: /display/USERDOC710/Managing+Topics
 history:
     - 
         author: Solen Guitter
@@ -163,7 +164,7 @@ The list of the topics available in a forum is displayed in a table in the **For
 
 ![]({{file name='forum-topics-list.png'}} ?w=650,border=true)
 
-## Moderating a Topic
+## Moderating a Topic<a name="topic-moderation"></a>"
 
 When a user creates a topic, he or she decides if the topic is moderated or not. Moderation is a process that makes comments available to moderators only when they are created, until they approve or reject the pending comments. Approval is thus mandatory to make comments available for other forum users.
 

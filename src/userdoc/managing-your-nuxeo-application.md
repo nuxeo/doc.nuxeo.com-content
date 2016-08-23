@@ -1,19 +1,21 @@
 ---
 title: Managing Your Nuxeo Application
+labels:
+    - lts2015-ok
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Managing+Your+Nuxeo+Application
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Managing+Your+Nuxeo+Application'
-    page_id: '2392402'
-    shortlink: UoEk
-    shortlink_source: 'https://doc.nuxeo.com/x/UoEk'
-    source_link: /display/USERDOC/Managing+Your+Nuxeo+Application
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Managing+Your+Nuxeo+Application'
+    page_id: '29003026'
+    shortlink: Eo26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Eo26AQ'
+    source_link: /display/USERDOC710/Managing+Your+Nuxeo+Application
 history:
     - 
-        author: Solen Guitter
+        author: Anonymous
         date: '2015-10-12 15:01'
         message: ashboard is no longer customizable by user
         version: '18'

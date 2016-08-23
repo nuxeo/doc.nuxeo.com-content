@@ -1,29 +1,27 @@
 ---
 title: Nuxeo File System Exporter
-labels:
-    - multiexcerpt-include
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Nuxeo+File+System+Exporter
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+File+System+Exporter'
-    page_id: '27099585'
-    shortlink: wYGdAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/wYGdAQ'
-    source_link: /display/NXDOC/Nuxeo+File+System+Exporter
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Nuxeo+File+System+Exporter'
+    page_id: '28475465'
+    shortlink: SYCyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/SYCyAQ'
+    source_link: /display/NXDOC710/Nuxeo+File+System+Exporter
 history:
     - 
         author: Solen Guitter
-        date: '2016-04-15 11:45'
-        message: ix Studio menu labe
+        date: '2016-04-15 11:42'
+        message: ix Studio menu label
         version: '11'
     - 
         author: Solen Guitter
         date: '2015-12-14 16:50'
-        message: ''
+        message: Fix title level
         version: '10'
     - 
         author: Manon Lumeau
@@ -92,8 +90,8 @@ After clicking on the export action, connected user has now access to the entire
 The following rules are implemented by default:
 
 *   All the document are exported&nbsp;
-*   When a document exported already exists in your File System directory, it will be prefixed with a timestamp. In this way, no document will be deleted&nbsp;
-*   The attached files to a document are exported in the same directory than the document. They are prefixed with the name of the document parent.
+*   <span style="line-height: 21.58px;">When a document exported already exists in your File System directory, it will be prefixed with a timestamp. In this way, no document will be deleted&nbsp;</span>
+*   <span style="line-height: 21.58px;">The a</span><span style="line-height: 21.58px;">ttached files to a document are exported in the same directory than the document. They are prefixed with the name of the document parent.</span>
 
 ## Installation
 
@@ -146,19 +144,19 @@ In Studio go to **Settings** > **Registries**, to create a new&nbsp;**Automation
 }
 ```
 
-If you don't know how to add an external operation, you will find all the information that you need on the page [Referencing an Externally Defined Operation]({{page space='studio' page='referencing-an-externally-defined-operation'}}).
+If you don't know how to add an external operation, you will find all the information that you need on the page [Referencing an Externally Defined Type]({{page space='studio' page='referencing-an-externally-defined-type'}}).
 
 ### Creating the Automation Chain
 
-This operation can be called in an automation chain called &ldquo;ExportFS&rdquo; in our example, and linked to a user action.
+This operation can be called in an automation chain called `ExportFS` in our example, and linked to a user action.
 
 ![]({{file name='Screen Shot 2015-11-10 at 16.41.35.png'}} ?w=650,border=true)
 
 This operation has the following parameters:
 
-*   **File System Target**: where the export will be done on the File System
-*   **Root&nbsp;** **Path**: the root name of the structure of Nuxeo Platform that will be exported.
-*   **Query**: optional parameter. By default the query called by the exporter is:
+*   **File System Target**: Where the export will be done on the File System
+*   **Root&nbsp;** **Path**: The root name of the structure of Nuxeo Platform that will be exported.
+*   **Query**: Optional parameter. By default the query called by the exporter is:
 
     ```sql
     SELECT * FROM Document ecm:mixinType !='HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState !='deleted'
@@ -174,7 +172,7 @@ SELECT * FROM Document WHERE ecm:mixinType !='HiddenInNavigation' AND ecm:isChec
 
 ## Customization
 
-If you want to go further you can decide to contribute to the extension point &ldquo;exportLogic&rdquo; with a custom class to have a new way of export:
+If you want to go further you can decide to contribute to the extension point `exportLogic` with a custom class to have a new way of export:
 
 *   Export only documents of type &ldquo;File&rdquo;
 *   Override existing documents (not using the timestamp prefix anymore)
@@ -182,9 +180,9 @@ If you want to go further you can decide to contribute to the extension point &l
 
 The following contribution has already been written:&nbsp;`CustomExporterPlugin`. It launches the default export (export all the documents under root path) and in addition, for each document exported, creates the XML version.
 
-You can use it with using the following XML extension in Studio : &nbsp;
+You can use it with using the following XML extension in Studio: &nbsp;
 
-```
+```xml
 <extension
 target="org.nuxeo.io.fsexporter.FSExporter"
 point="exportLogic">

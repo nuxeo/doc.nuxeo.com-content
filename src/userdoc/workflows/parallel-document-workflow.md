@@ -2,20 +2,19 @@
 title: Parallel Document Workflow
 labels:
     - parallel-workflow
-    - excerpt
-    - multiexcerpt-include
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '2392410'
+    ajs-parent-page-id: '29003030'
     ajs-parent-page-title: Workflows
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Parallel+Document+Workflow
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Parallel+Document+Workflow'
-    page_id: '16091766'
-    shortlink: dor1
-    shortlink_source: 'https://doc.nuxeo.com/x/dor1'
-    source_link: /display/USERDOC/Parallel+Document+Workflow
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Parallel+Document+Workflow'
+    page_id: '29003059'
+    shortlink: M426AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/M426AQ'
+    source_link: /display/USERDOC710/Parallel+Document+Workflow
 history:
     - 
         author: Manon Lumeau

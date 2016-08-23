@@ -1,52 +1,23 @@
 ---
 title: Nuxeo Quota
 labels:
-    - quota
-    - marketplace-package
+    - lts2015-ok
     - quotas-component
+    - marketplace-package
+    - quota
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
+    ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
     canonical: Nuxeo+Quota
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Quota'
-    page_id: '11534351'
-    shortlink: DwCw
-    shortlink_source: 'https://doc.nuxeo.com/x/DwCw'
-    source_link: /display/NXDOC/Nuxeo+Quota
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC710/Nuxeo+Quota'
+    page_id: '28475531'
+    shortlink: i4CyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/i4CyAQ'
+    source_link: /display/NXDOC710/Nuxeo+Quota
 history:
-    - 
-        author: Manon Lumeau
-        date: '2016-06-09 12:03'
-        message: ''
-        version: '27'
-    - 
-        author: Solen Guitter
-        date: '2016-05-12 07:55'
-        message: ''
-        version: '26'
-    - 
-        author: Solen Guitter
-        date: '2016-05-12 07:54'
-        message: ''
-        version: '25'
-    - 
-        author: Manon Lumeau
-        date: '2016-05-11 15:21'
-        message: Fix images size
-        version: '24'
-    - 
-        author: Anne Jubert
-        date: '2016-05-11 15:09'
-        message: ''
-        version: '23'
-    - 
-        author: Manon Lumeau
-        date: '2016-04-29 16:17'
-        message: ''
-        version: '22'
     - 
         author: Bertrand Chauvin
         date: '2015-09-24 12:43'
@@ -166,7 +137,7 @@ The [Nuxeo Quota add-on](https://connect.nuxeo.com/nuxeo/site/marketplace/packag
 
 After you installed Nuxeo Quota, a new tab **Quota / Statistics** is available in the Admin tab.
 
-![]({{file name='quotas_admin_tab.png'}} ?w=650,border=true)
+![]({{file name='quota-admin-center-user-workspace.png'}} ?w=600,border=true)
 
 ## Quota Overview
 
@@ -178,7 +149,8 @@ Administrators are responsible for managing quotas on a global scale. Non-admini
 
 When you edit a document and save it as a new version (i.e. increment the document's version), the newly archived version is displayed until the document is modified. When the document is modified, you are displayed an unarchived modified version of the document, whose version number is based on the last archived version suffixed with a + sign. As a consequence, when the document only has one archived version, typically when its first version is created, the used space is the size of the newly archived version. As soon as the document is modified, the used space of the document is the sum of the archived version and the modified unarchived version.
 
-<span style="font-size: 10.0pt;line-height: 13.0pt;">More information on</span> [how versioning works]({{page space='userdoc' page='editing-content#versioning-overview'}}).
+<span style="font-size: 10.0pt;line-height: 13.0pt;">More information on</span> [how versioning works]({{page space='userdoc710' page='editing-content#versioning-overview'}})<span style="font-size: 10.0pt;line-height: 13.0pt;">.
+</span>
 
 {{/callout}}
 
@@ -275,7 +247,7 @@ Users can see the [statistics](#statistics) of a workspace or a domain as soon a
 
     1.  Click on the **Filter** link displayed on top of the table.
         The filter form is displayed. By default the whole size range is selected.
-        ![]({{file name='quota-filter.png'}} ?w=600,border=true)
+        ![]({{file name='quota-filter.png'}} ?w=450,border=true)
     2.  Type keywords in the Title field and / or move the slider to define the size range you want to filter on.
     3.  Click on the **Filter** button.
         The list of documents displayed below displays only the documents matching your criteria.
@@ -309,11 +281,11 @@ Only users with Manage everything permission can define the maximum size of a sp
 
     {{/callout}}
 
-    When the chosen quota is saved, the value is set and the maximum allowed size is displayed below the workspace title.
+    When the chosen quota is saved, the value is set and the maximum allowed size is displayed below the workspace's title.
 
-**Note:**
+{{#> panel heading='Here is how the maximum size possible is calculated...'}} {{#> accordian heading='Here is how the maximum size possible is calculated...' closed='true'}}
 
-Here is how the maximum size is calculated. When you select a maximum size on a workspace and click on Save, a verification is done to check that the size you selected won't make the parent's quota be exceeded. Here is how it is calculated:
+When you select a maximum size on a workspace and click on Save, a verification is done to check that the size you selected won't make the parent's quota be exceeded. Here is how it is calculated:
 
 1.  The system checks the maximum size set on the parent of your workspace.
 
@@ -323,6 +295,8 @@ Here is how the maximum size is calculated. When you select a maximum size on a 
     *   If a child doesn't have a maximum size set, the system checks its children and makes the sum of their maximum sizes to calculate the parent's.
         This is repeated for all workspaces without maximum size, until the system can calculate a maximum size for each child of "The parent".
 3.  The system checks that the size you want to set on your workspace is not bigger than the difference between the parent's limit size and the sum of its children's.
+
+{{/accordian}} {{/panel}}
 
 &nbsp;
 

@@ -1,16 +1,18 @@
 ---
 title: Is source code needed?
+labels:
+    - content-review-lts2015
 confluence:
-    ajs-parent-page-id: '4687444'
+    ajs-parent-page-id: '28475648'
     ajs-parent-page-title: Contributing to Nuxeo
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=950314
-    canonical_source: viewpage.action?pageId=950314
-    page_id: '950314'
-    shortlink: KoAO
-    shortlink_source: 'https://doc.nuxeo.com/x/KoAO'
-    source_link: /pages/viewpage.action?pageId=950314
+    ajs-space-key: NXDOC710
+    ajs-space-name: Nuxeo Platform Developer Documentation — LTS 2015
+    canonical: viewpage.action?pageId=28475532
+    canonical_source: viewpage.action?pageId=28475532
+    page_id: '28475532'
+    shortlink: jICyAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/jICyAQ'
+    source_link: /pages/viewpage.action?pageId=28475532
 history:
     - 
         author: Solen Guitter

@@ -1,34 +1,36 @@
 ---
 title: Creating Content
 labels:
-    - creation
+    - lts2015-ok
     - drag-and-drop
-    - excerpt
-    - multiexcerpt
-    - multiexcerpt-include
-    - excerpt-include
+    - creation
 toc: true
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Creating+Content
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Creating+Content'
-    page_id: '2392397'
-    shortlink: TYEk
-    shortlink_source: 'https://doc.nuxeo.com/x/TYEk'
-    source_link: /display/USERDOC/Creating+Content
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Creating+Content'
+    page_id: '29003019'
+    shortlink: C426AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/C426AQ'
+    source_link: /display/USERDOC710/Creating+Content
 history:
     - 
-        author: Solen Guitter
-        date: '2016-03-29 15:58'
-        message: ix Nuxeo CSV broken excerp
+        author: Manon Lumeau
+        date: '2016-03-23 16:45'
+        message: ''
+        version: '48'
+    - 
+        author: Manon Lumeau
+        date: '2016-03-23 16:44'
+        message: ''
         version: '47'
     - 
         author: Solen Guitter
-        date: '2016-03-29 15:57'
-        message: Fix broken excerpts (migration from ADMINDOC to NXDOC)
+        date: '2016-01-15 08:34'
+        message: ''
         version: '46'
     - 
         author: Solen Guitter
@@ -269,7 +271,7 @@ You need to have "edit" or "manage everything" permissions to create documents.
 
 {{! multiexcerpt name='functional_overview'}}
 
-### Creating a Document Using the New Button
+### Creating a Document Using the New Button <a name="New-button"></a>"
 
 Creating a document using the **New** button enables you to select the type of document you want to create among all Nuxeo Platform's document types.
 
@@ -286,7 +288,7 @@ Creating a document using the **New** button enables you to select the type of d
 
 The **Summary** tab of the document is displayed.
 
-### Creating Documents Using the Import Button
+### Creating Documents Using the Import Button <a name="Import-button"></a>"
 
 You can use the **Import** button to create one or several documents in a faster way.
 
@@ -357,11 +359,11 @@ Picture
 
 </td></tr></tbody></table>{{! /multiexcerpt}}
 
-### Importing Documents Using Drag and Drop
+### <a name="content-creation-d&d"></a>"Importing Documents Using Drag and Drop
 
 Drag and drop is based on the HTML 5 standard and is available on all browsers that support the HTML 5 Drag and drop, without extension. Basically, this includes all browsers supported by the Nuxeo Platform:
 
-{{{multiexcerpt 'supported-browsers' page='NXDOC:Installation'}}}
+{{{multiexcerpt 'supported-browsers' page='ADMINDOC710:Hardware and Software Requirements'}}}
 
 As stated above, HTML5 grad & drop is currently a limitation of the Edge browser.
 
@@ -415,13 +417,13 @@ You can very easily import document by moving them from a desktop folder to a Nu
 
 {{{multiexcerpt 'nuxeo_csv_functional_introduction' page='NXDOC:Nuxeo CSV'}}}
 
-Read the [Nuxeo CSV documentation]({{page space='nxdoc' page='nuxeo-csv'}}) for more information.
+Read the [Nuxeo CSV documentation]({{page space='nxdoc710' page='nuxeo-csv'}}) for more information.
 
 ## Batch Import
 
-{{{excerpt 'NXDOC:Nuxeo Bulk Document Importer'}}}
+{{{excerpt 'NXDOC710:Nuxeo Bulk Document Importer'}}}
 
-Read the [Nuxeo Bulk Document Importer documentation]({{page space='nxdoc' page='nuxeo-bulk-document-importer'}}) for more information.
+Read the [Nuxeo Bulk Document Importer documentation]({{page space='nxdoc710' page='nuxeo-bulk-document-importer'}}) for more information.
 
 ## Automated Metadata Extraction
 
@@ -431,7 +433,7 @@ The Nuxeo Platform enables to extract information from the uploaded files attach
 
 {{! /multiexcerpt}}
 
-Read the [Binary Metadata]({{page space='nxdoc' page='binary-metadata'}}) documentation for more information.
+Read the [Binary Metadata]({{page space='nxdoc710' page='binary-metadata'}}) documentation for more information.
 
 &nbsp;
 
@@ -440,11 +442,11 @@ Read the [Binary Metadata]({{page space='nxdoc' page='binary-metadata'}}) docume
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
 *   [Nuxeo Drive]({{page page='nuxeo-drive'}})
-*   [Nuxeo CSV]({{page space='nxdoc' page='nuxeo-csv'}})
+*   [Nuxeo CSV]({{page space='nxdoc710' page='nuxeo-csv'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Customize the Bulk Import Form]({{page space='nxdoc' page='how-to-customize-the-bulk-import-form'}})
-*   [How to Enable Drag'n Drop and New Button on a Custom Content View]({{page space='nxdoc' page='how-to-enable-dragn-drop-and-new-button-on-a-custom-content-view'}})&nbsp;
+*   [How to Customize the Bulk Import Form]({{page space='nxdoc710' page='how-to-customize-the-bulk-import-form'}})
+*   [How to Enable Drag'n Drop and New Button on a Custom Content View]({{page space='nxdoc710' page='how-to-enable-dragn-drop-and-new-button-on-a-custom-content-view'}})&nbsp;
 
 {{/panel}}</div></div>

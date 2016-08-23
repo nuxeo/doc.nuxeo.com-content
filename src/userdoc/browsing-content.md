@@ -1,27 +1,29 @@
 ---
 title: Browsing Content
+labels:
+    - lts2015-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '11043048'
+    ajs-parent-page-id: '29003015'
     ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC710
+    ajs-space-name: Nuxeo Platform User Documentation — LTS 2015
     canonical: Browsing+Content
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Browsing+Content'
-    page_id: '2392400'
-    shortlink: UIEk
-    shortlink_source: 'https://doc.nuxeo.com/x/UIEk'
-    source_link: /display/USERDOC/Browsing+Content
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC710/Browsing+Content'
+    page_id: '29003022'
+    shortlink: Do26AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Do26AQ'
+    source_link: /display/USERDOC710/Browsing+Content
 history:
     - 
         author: Solen Guitter
-        date: '2016-02-19 15:32'
+        date: '2016-02-19 15:33'
         message: >-
             emove section "working with several docs", right-click menu is
             available when clicking the document's icon not the document titl
         version: '42'
     - 
-        author: Solen Guitter
+        author: Anonymous
         date: '2015-12-08 15:02'
         message: ''
         version: '41'
@@ -240,7 +242,7 @@ To access your dashboard, click on the&nbsp;**Home**&nbsp;main tab. Your dashboa
 
 {{#> callout type='tip' }}
 
-If you want to customize your dashboard, follow this [how-to]({{page space='nxdoc' page='how-to-customize-the-dashboard'}}).
+If you want to customize your dashboard, follow this [how-to]({{page space='nxdoc710' page='how-to-customize-the-dashboard'}}).
 
 {{/callout}}
 
@@ -256,7 +258,7 @@ The navigation tree displays folderish documents, i.e. documents in which you ca
 
 {{#> callout type='tip' }}
 
-It is possible to add another type of navigation tree based on metadata instead of folder structure by installing the [Nuxeo Virtual Navigation add-on]({{page space='nxdoc' page='nuxeo-virtual-navigation'}}).
+It is possible to add another type of navigation tree based on metadata instead of folder structure by installing the [Nuxeo Virtual Navigation add-on]({{page space='nxdoc710' page='nuxeo-virtual-navigation'}}).
 
 {{/callout}}
 
@@ -311,7 +313,7 @@ Here are some tips on how to leverage all the navigation means provided by the N
 
 **Going Back to a Previous Page**
 
-Due to&nbsp;[technical reasons]({{page space='nxdoc' page='back-and-next-buttons-paradigm-and-jsf-in-the-nuxeo-platform'}}), it is recommended to NOT use the browser's Back and Next buttons to navigate in the Platform. There are several ways to go back to a previous page. For example, to go up one level in the platform structure, the easiest way is to click on the icon&nbsp;![]({{file name='UpFolder_icon.gif' page='icons-index'}})&nbsp;in the breadcrumbs.
+Due to&nbsp;[technical reasons]({{page space='nxdoc710' page='back-and-next-buttons-paradigm-and-jsf-in-the-nuxeo-platform'}}), it is recommended to NOT use the browser's Back and Next buttons to navigate in the Platform. There are several ways to go back to a previous page. For example, to go up one level in the platform structure, the easiest way is to click on the icon&nbsp;![]({{file name='UpFolder_icon.gif' page='icons-index'}})&nbsp;in the breadcrumbs.
 
 ![]({{file name='breadcrumbs.png'}} ?border=true)
 
@@ -342,7 +344,7 @@ Some actions or features are accessible using access keys: Press shift-h to see 
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [How to Customize the Dashboard]({{page space='nxdoc' page='how-to-customize-the-dashboard'}})
-*   [Web UI How-To Index]({{page space='nxdoc' page='web-ui-how-to-index'}})
+*   [How to Customize the Dashboard]({{page space='nxdoc710' page='how-to-customize-the-dashboard'}})
+*   [Web UI How-To Index]({{page space='nxdoc710' page='web-ui-how-to-index'}})
 
 {{/panel}}</div></div>
