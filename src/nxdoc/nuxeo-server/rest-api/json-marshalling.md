@@ -1108,13 +1108,13 @@ $ curl -X GET 'http://localhost:8080/nuxeo/site/productApp/category/ref/12?fetch
 
 {{/panel}}
 
-![]({{file name='Marshalling example loops - New Page (1).png'}} ?w=500,h=412,border=true)
+![]({{file name='Marshalling example loops - New Page 1.png'}} ?w=500,h=412,border=true)
 
 &nbsp;
 
 To manage this case, we could use a counter put in the context but this will not work in most case because the counter will manage the first "line" of marshaller and disable the others: that's due to the processing which follows a "Depth First Search".
 
-![]({{file name='Marshalling example loops - New Page (2).png'}} ?w=500,h=413,border=true)
+![]({{file name='Marshalling example loops - New Page 2.png'}} ?w=500,h=413,border=true)
 
 The Nuxeo Platform provides a specific object to wrap the depth control in each "crossing line". Each time you call another marshaller, you should use it.
 
