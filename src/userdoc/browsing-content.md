@@ -13,214 +13,214 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/UIEk'
     source_link: /display/USERDOC/Browsing+Content
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-19 15:32'
         message: >-
             emove section "working with several docs", right-click menu is
             available when clicking the document's icon not the document titl
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 15:02'
         message: ''
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-04 16:43'
         message: Update Access Keys section
         version: '40'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-16 11:52'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-27 15:54'
         message: Add related documentation
         version: '38'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 17:30'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 18:32'
         message: link to virtual nav addon
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 09:42'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 09:42'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 15:27'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 15:25'
         message: Add paragraph about changing content list information
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-05 22:58'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-05 22:58'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-05 22:58'
         message: 'Adding changing content presentation section '
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 01:00'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 01:00'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 00:58'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 00:47'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 00:40'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 00:40'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 00:39'
         message: 'Merging dashboard, nav tree,  tag cloud and browsing tips pages'
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-17 16:22'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-18 17:48'
         message: Migrated to Confluence 4.0
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-18 17:48'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-18 17:48'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-18 17:44'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-18 17:41'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 16:15'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-29 14:22'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 10:02'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 10:00'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 10:00'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-08 10:53'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 17:55'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-06-28 09:10'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-25 18:01'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-25 16:41'
         message: move content access section to a new page
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-25 16:08'
         message: moved presentation section to a new page
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-25 15:55'
         message: added how to change presentation in folders and dashboard
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-25 14:54'
         message: added dashboard
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-25 12:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-22 11:07'
         message: ''
@@ -236,7 +236,7 @@ Every user has a personal dashboard that displays information he finds relevant 
 The dashboard is composed of a set of boxes that display either a list of documents matching a criteria (all the workspaces the user can access, the last documents he modified, the last documents that have been published...), or possibly a piece of information either from the Platform or from external websites.
 
 To access your dashboard, click on the&nbsp;**Home**&nbsp;main tab. Your dashboard is the default tab of your Home.
-![](false ?w=650,border=true)
+![](https://doc.nuxeo.com/download/attachments/2392400/CAP-dashboard.png?version=3&modificationDate=1417800556391&api=v2 ?w=650,border=true)
 
 {{#> callout type='tip' }}
 
@@ -276,10 +276,10 @@ Users can change the way content is presented in the folderish repositories (wor
 
 Two views of the content lists are available&nbsp;on the top right corner of&nbsp; **Content** tab:
 
-*   list view (default view) ![](false): this view displays title of the documents with a small icon (that depends on the type of document or main attachment type) and a set of metadata in a table;
-    ![](false ?w=600,border=true)
-*   thumbnail view ![](false): this view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
-    ![](false ?w=600,border=true)
+*   list view (default view) ![](https://doc.nuxeo.com/download/attachments/16090382/DM-list-view-icon.png?version=2&modificationDate=1383225794048&api=v2): this view displays title of the documents with a small icon (that depends on the type of document or main attachment type) and a set of metadata in a table;
+    ![](https://doc.nuxeo.com/download/attachments/2392400/list-view.png?version=6&modificationDate=1416994995269&api=v2 ?w=600,border=true)
+*   thumbnail view ![](https://doc.nuxeo.com/download/attachments/16090382/DM-icon-view-icon.png?version=2&modificationDate=1383225756162&api=v2): this view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
+    ![](https://doc.nuxeo.com/download/attachments/2392400/thumbnail-view.png?version=6&modificationDate=1416994972171&api=v2 ?w=600,border=true)
 
 **Changing Displayed Information**
 
@@ -291,9 +291,9 @@ Editing results column is possible from search results and the Content tab of fo
 
 {{/callout}}
 
-To change the information displayed in content lists, click on the icon&nbsp;![](false).&nbsp;A pop-up is displayed: The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and&nbsp;reorder columns using the vertical arrows. Once it's done, click on&nbsp;**Save**.
+To change the information displayed in content lists, click on the icon&nbsp;![](https://doc.nuxeo.com/download/attachments/16090382/edit_columns.png?version=1&modificationDate=1414434406170&api=v2).&nbsp;A pop-up is displayed: The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and&nbsp;reorder columns using the vertical arrows. Once it's done, click on&nbsp;**Save**.
 
-![](false ?w=350,border=true)
+![](https://doc.nuxeo.com/download/attachments/2392400/results-columns-popup.png?version=1&modificationDate=1416410656944&api=v2 ?w=350,border=true)
 
 ## Collections
 
