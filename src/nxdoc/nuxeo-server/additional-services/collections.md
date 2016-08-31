@@ -248,7 +248,7 @@ Yet you can always unsynchronize the collection from the Nuxeo Drive tab in the 
 
 # Core Implementation
 
-null {{! end_of_tabs }}
+null {{> end_of_tabs }}
 
 &nbsp;
 

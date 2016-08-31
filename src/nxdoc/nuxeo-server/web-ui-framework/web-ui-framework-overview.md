@@ -215,4 +215,4 @@ All this means that you can start from a standard Nuxeo Platform, and with simpl
 *   [Upgrade to JSF2](https://doc.nuxeo.com/display/NXDOC/Upgrade+to+JSF2)&nbsp;&mdash;&nbsp;<span class="smalltext">The Nuxeo Platform has been upgraded to JSF 2 for the 6.0 version. This page provides tools and notes to help you migrate your custom Nuxeo projects to this version.</span>
 *   [JSF and Ajax Tips and How-To Index](https://doc.nuxeo.com/display/NXDOC/JSF+and+Ajax+Tips+and+How-To+Index)
 
-{{! end_of_tabs }}
+{{> end_of_tabs }}
