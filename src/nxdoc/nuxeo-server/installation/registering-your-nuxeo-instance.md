@@ -16,147 +16,147 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/l4FH'
     source_link: /display/NXDOC/Registering+your+Nuxeo+Instance
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-04 14:32'
         message: dd since 8.3 mentio
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-04 14:32'
         message: Add section about nuxeoctl register
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-31 15:31'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-30 13:04'
         message: Rename Connect into Online Services
         version: '26'
-    - 
+    -
         author: Julie Allouch
         date: '2016-03-29 20:32'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-25 10:06'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-04 09:07'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-21 16:40'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-21 16:24'
         message: Update screenshots and content with new registration steps
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-23 14:27'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-10 18:15'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-10 18:04'
         message: Updated screenshot
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-10 17:27'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-10 17:23'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-16 16:52'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-14 12:00'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-11 14:33'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-11 14:32'
         message: Updated offline registration steps with latest Connect UI
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-07 18:04'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-07 18:04'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-14 09:48'
         message: Migrated to Confluence 4.0
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-14 09:48'
         message: Updated links
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-04-20 18:14'
         message: ''
         version: '7'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-01-20 10:02'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-15 10:13'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-08 18:08'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-05 16:57'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-05 16:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-05 16:44'
         message: ''
@@ -216,7 +216,7 @@ To subscribe to a Nuxeo Online Services trial:
 3.  Confirm registration by clicking on the link sent to the email address in the previous step.
     You can now use the Nuxeo Platform online from [Nuxeo Cloud](http://www.nuxeo.com/products/nuxeo-cloud/) or [download it](http://www.nuxeo.com/downloads/) if you want to use it on premises.
 
-### Registering Online through the Admin Tab
+### Registering Online through the Admin Tab {{> anchor 'online-registration'}}
 
 1.  Start your Nuxeo instance and connect as an administrator (Administrator/Administrator by default).
 2.  Click on the **Admin** tab.
