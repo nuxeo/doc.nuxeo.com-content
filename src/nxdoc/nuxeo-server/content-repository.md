@@ -257,7 +257,7 @@ history:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in this documentation'}}
 
-{{{content_by_label spaces='@self' showLabels='false' labels='document schema facet facelet layout' showSpace='false' type='page'}}}&nbsp;
+&nbsp;
 
 {{/panel}}
 
@@ -267,7 +267,7 @@ history:
 
 </div><div class="column medium-6">{{#> panel heading='Related topics in Studio documentation'}}
 
-{{>content_by_label spaces='Studio' showLabels='false' labels='document schema layout facet facelet' showSpace='false' type='page'}}&nbsp;
+&nbsp;
 
 {{/panel}}
 
