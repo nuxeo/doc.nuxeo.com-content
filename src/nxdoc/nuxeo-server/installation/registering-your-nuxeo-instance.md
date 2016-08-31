@@ -205,7 +205,7 @@ $ .\$NUXEO_HOME\bin\nuxeoctl.bat register
 
 For more information about the&nbsp;`nuxeoctl` script, read [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}}).
 
-### Creating your Nuxeo Online Services Account
+### Creating your Nuxeo Online Services Account {{> anchor 'connect-account-creation'}}
 
 If you already have an account for Nuxeo Online Services, either because you are a Nuxeo customer, or because you created a trial account, you can continue to the [undefined](#registering-online) step. If not, follow those steps to get credentials to Online Services.
 
@@ -226,7 +226,7 @@ To subscribe to a Nuxeo Online Services trial:
 5.  Select the project to associate with your instance.
     The pop-up closes. Your instance is now registered. You can now browse the various tabs of the Update Center area, and set up addons from the [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace) (see the page [Installing a New Package on Your Instance]({{page page='installing-a-new-package-on-your-instance'}})).
 
-### Registering Offline
+### Registering Offline {{> anchor 'offline-registration'}}
 
 Offline registration can be used when the server does not connect to the Internet. It enables to remove the Nuxeo Online Services registration message.
 
@@ -258,7 +258,7 @@ Offline registration can be used when the server does not connect to the Interne
 
 ## Re-Registering your Nuxeo Instance
 
-If you have removed your data from your Nuxeo application, in case of a development instance, for example, you will need to register your instance again.
+{{> anchor 're-registration'}}If you have removed your data from your Nuxeo application, in case of a development instance, for example, you will need to register your instance again.
 
 **To re-register your instance:**
 
