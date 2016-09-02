@@ -12,6 +12,7 @@ labels:
     - authentication-component
     - migration-sample
 tabbed_page: true
+toc: true
 confluence:
     ajs-parent-page-id: '31033314'
     ajs-parent-page-title: Nuxeo Server
@@ -189,8 +190,6 @@ It is also possible to [define a list of URL patterns](http://explorer.nuxeo.com
 ### Storage Options for Users and Groups
 
 The UserManager is the component in charge of managing users and groups. The default implementation stores them in the Nuxeo Platform via the "directory" abstraction: one directory for users and one for groups.
-
-`
 
 {{! multiexcerpt name='directories_implementations'}}
 
