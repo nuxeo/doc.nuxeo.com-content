@@ -1,0 +1,165 @@
+---
+title: Specific Upgrade Instructions
+labels:
+    - content-view
+    - upgrade
+    - theme
+    - content-review-6-0
+toc: true
+confluence:
+    ajs-parent-page-id: '7536933'
+    ajs-parent-page-title: Update the Version of Your Target Platform
+    ajs-space-key: Studio
+    ajs-space-name: Nuxeo Online Services
+    canonical: Specific+Upgrade+Instructions
+    canonical_source: 'https://doc.nuxeo.com/display/Studio/Specific+Upgrade+Instructions'
+    page_id: '20513297'
+    shortlink: EQI5AQ
+    shortlink_source: 'https://doc.nuxeo.com/x/EQI5AQ'
+    source_link: /display/Studio/Specific+Upgrade+Instructions
+history:
+    - 
+        author: Manon Lumeau
+        date: '2016-04-26 14:51'
+        message: 'ix Studio menu label '
+        version: '13'
+    - 
+        author: Manon Lumeau
+        date: '2016-02-09 15:37'
+        message: Remove theme migration mention
+        version: '12'
+    - 
+        author: Solen Guitter
+        date: '2015-10-12 20:23'
+        message: Fix DAM Compat link to point to 6.0 documentation
+        version: '11'
+    - 
+        author: Solen Guitter
+        date: '2014-12-30 17:17'
+        message: Add missing screenshot
+        version: '10'
+    - 
+        author: Solen Guitter
+        date: '2014-11-25 11:40'
+        message: ''
+        version: '9'
+    - 
+        author: Solen Guitter
+        date: '2014-11-04 21:18'
+        message: ''
+        version: '8'
+    - 
+        author: Solen Guitter
+        date: '2014-11-04 21:16'
+        message: ''
+        version: '7'
+    - 
+        author: Solen Guitter
+        date: '2014-10-20 16:46'
+        message: Add link to Nuxeo DAM Compat page
+        version: '6'
+    - 
+        author: Solen Guitter
+        date: '2014-10-20 16:17'
+        message: 'Add steps to migrate project to 6.0 (to be completed) '
+        version: '5'
+    - 
+        author: Solen Guitter
+        date: '2014-10-20 14:23'
+        message: ''
+        version: '4'
+    - 
+        author: Solen Guitter
+        date: '2014-08-21 15:40'
+        message: Change 5.7.2 to 5.8
+        version: '3'
+    - 
+        author: Anahide Tchertchian
+        date: '2014-08-20 17:20'
+        message: ''
+        version: '2'
+    - 
+        author: Anahide Tchertchian
+        date: '2014-08-20 17:17'
+        message: ''
+        version: '1'
+
+---
+{{! excerpt}}
+
+When upgrading your target platform in Studio, Studio will take care of generating the corresponding code for your target platform. Usually, no manual configuration changes are needed. This page lists a few exceptions.
+
+{{! /excerpt}}
+
+&nbsp;
+
+## {{> anchor 'to-60'}}Upgrading to 6.0
+
+Some packaging changes have occurred for Nuxeo Platform 6.0\. For instance some default features are now available as add-ons, some features have been moved to the default packaging. Although Studio will migrate most resources, here are some steps to follow to make sure you get the expected behavior.
+
+### Migrating Virtual Navigation Customization
+
+Virtual navigation used to come with the DM package. It is now an independent add-on. To keep your custom virtual navigations you need to:
+
+1.  Check the Virtual navigation target package in Studio
+2.  Install the Virtual navigation add-on on your Nuxeo Platform.
+
+### MIgrating Faceted Search Customization
+
+Faceted search used to come with the DM package. For Nuxeo Platform 6.0 it is an independent add-on and has been deprecated. From an end user point of view, the search experience provided by faceted search is now available by default in the Search tab.
+
+![]({{file name='search-tab.png' space='userdoc60' page='default-search'}} ?w=600,border=true)
+
+#### Migrating Your Faceted Searches to the New Search Tab
+
+When you choose the target platform 6.0, the faceted search target package is selected by default: uncheck it. Your faceted searches will be available in the Search tab as additional search filters.
+
+In Studio your content views automatically gets a **FACETED_SEARCH*** flag. Uncheck it and check the **Search** flag.
+
+#### Keeping Your Faceted Searches
+
+If you want to keep your faceted search left tab in the Workspace main tab:
+
+*   In Studio check the Faceted search target package in the Application Dependencies section.
+    The Faceted search flag is available and checked on your content views.
+*   In your Nuxeo Platform instance, install the Faceted search add-on.
+
+### Migrating a DM Project Extending the Picture Document Type
+
+Pictures were previously coming with the Document Management module, but are now available as part of the DAM add-on. When you migrate your project to 6.0, you need to:
+
+1.  Select the DAM target package in the Studio Application Dependencies section.
+2.  On your Nuxeo Platform instance, you need to install the DAM add-on.
+
+### Migrating a DAM Project
+
+For Nuxeo Platform 6.0, the DAM package has been simplified: it now holds the documents types Picture, Audio and Video.&nbsp; All the specific UI has been moved into the DAM compat add-on (see the page&nbsp;[Nuxeo DAM Compat]({{page space='nxdoc60' page='nuxeo-dam-compat'}}) for details).
+
+#### Migrating Your DAM Project
+
+##### Migrating DAM Content Views to the Search Tab
+
+When you select the target platform 6.0, you need to:
+
+1.  Select the DAM target package in Studio.
+2.  Install the DAM add-on on your Nuxeo Platform.
+
+This will bring you the DAM document types in Studio. Your DAM content views will be available in the Search tab of the Nuxeo Platform; in Studio they automatically have a **DAM*** flag. Uncheck it and check the **Search content view** flag.
+
+##### Keeping DAM Content Views in a DAM Dedicated Tab
+
+If you want to keep your content views available in a DAM dedicated main tab:
+
+1.  In Studio, select the target packages DAM and DAM compat.
+    The DAM flag is available and checked on content views.
+2.  Install the DAM and DAM compat add-ons on your Nuxeo Platform instance.
+
+## Upgrading to 5.8 or Higher
+
+### User Actions on Content View Actions of Ordered Folders
+
+Since [NXP-11845](https://jira.nuxeo.com/browse/NXP-11845), the default content view presenting ordering actions only presents actions with category&nbsp;`ORDERABLE_CURRENT_SELECTION_LIST` (labeled "Orderable Document List Toolbar" in Studio). It previously presented also actions available to non-orderable content views,&nbsp;`CURRENT_SELECTION_LIST` (labeled "Document List Toolbar" in Studio).
+
+When upgrading to 5.8 or higher, Studio User Actions using this category will need to be duplicated to use the "Orderable Document List Toolbar" category so that actions are still available on the default content view `orderable_document_content`.
+
+&nbsp;
