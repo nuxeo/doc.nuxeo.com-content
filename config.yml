@@ -1,6 +1,5 @@
 default:
     site:
-        review_period: '6 months'
         spaces:
             -
                 space_path: nxdoc
@@ -14,13 +13,19 @@ default:
         versions:
             -
                 label: FT
-                is_current_version: true
             -
                 label: LTS 2015
                 url_path: '710'
             -
+                is_current_version: true
                 label: '6.0'
                 url_path: '60'
+            -
+                label: '5.8'
+                url_path: '58'
+            -
+                label: '5.6'
+                url_path: '56'
 
 development:
     isDev: true
