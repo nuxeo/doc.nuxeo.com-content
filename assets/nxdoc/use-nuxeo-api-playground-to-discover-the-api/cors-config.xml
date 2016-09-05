@@ -1,7 +1,0 @@
-<component name="org.nuxeo.corsi.demo">
-  <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
-    <corsConfig name="foobar" supportedMethods ="GET,POST,HEAD,OPTIONS,DELETE,PUT">
-      <pattern>/nuxeo/.*</pattern>
-    </corsConfig>
-  </extension>
-</component>

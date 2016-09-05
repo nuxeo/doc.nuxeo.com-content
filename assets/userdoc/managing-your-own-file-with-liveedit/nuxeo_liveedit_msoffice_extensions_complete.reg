@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Accepted Documents]
+"liveedit_msoffice12_word_template"="application/x-nuxeo-liveedit;ext7=\"application!vnd.ms-word.template.macroEnabled.12\""
+"liveedit_msoffice12_excel_macro"="application/x-nuxeo-liveedit;ext9=\"application!vnd.ms-excel.sheet.macroEnabled.12\""
+"liveedit_msoffice12_excel_template"="application/x-nuxeo-liveedit;ext10=\"application!vnd.ms-excel.template.macroEnabled.12\""
+"liveedit_msoffice12_excel_binary"="application/x-nuxeo-liveedit;ext11=\"application!vnd.ms-excel.sheet.binary.macroEnabled.12\""
+"liveedit_msoffice12_excel_addin"="application/x-nuxeo-liveedit;ext12=\"application!vnd.ms-excel.addin.macroEnabled.12\""
+"liveedit_msoffice12_powerpoint_macro"="application/x-nuxeo-liveedit;ext14=\"application!vnd.ms-powerpoint.presentation.macroEnabled.12\""
+"liveedit_msoffice12_powerpoint_addin"="application/x-nuxeo-liveedit;ext15=\"application!vnd.ms-powerpoint.addin.macroEnabled.12\""
+"liveedit_msoffice12_powerpoint_slide_macro"="application/x-nuxeo-liveedit;ext16=\"application!vnd.ms-powerpoint.slideshow.macroEnabled.12\""
+"liveedit_msoffice_word_template"="application/x-nuxeo-liveedit;ext17=\"application!vnd.openxmlformats-officedocument.wordprocessingml.template\""
+"liveedit_msoffice_excel_template"="application/x-nuxeo-liveedit;ext18=\"application!vnd.openxmlformats-officedocument.spreadsheetml.template\""
+"liveedit_msoffice_powerpoint_template"="application/x-nuxeo-liveedit;ext19=\"application!vnd.openxmlformats-officedocument.presentationml.template\""
+"liveedit_msoffice_powerpoint_slide"="application/x-nuxeo-liveedit;ext20=\"application!vnd.openxmlformats-officedocument.presentationml.slideshow\""
+"liveedit_msoffice_word_macro_template12"="application/x-nuxeo-liveedit;ext21=\"application!vnd.ms-word.document.macroEnabled.12\""
+
