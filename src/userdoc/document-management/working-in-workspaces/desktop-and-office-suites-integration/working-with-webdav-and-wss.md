@@ -1,0 +1,274 @@
+---
+title: Working with WebDAV and WSS
+labels:
+    - editing
+    - sharepoint
+    - webdav
+    - wss
+toc: true
+confluence:
+    ajs-parent-page-id: '16092621'
+    ajs-parent-page-title: Desktop & Office Suites Integration
+    ajs-space-key: USERDOC58
+    ajs-space-name: Nuxeo Platform User Documentation - 5.8
+    canonical: Working+with+WebDAV+and+WSS
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC58/Working+with+WebDAV+and+WSS'
+    page_id: '16092622'
+    shortlink: zo31
+    shortlink_source: 'https://doc.nuxeo.com/x/zo31'
+    source_link: /display/USERDOC58/Working+with+WebDAV+and+WSS
+history:
+    - 
+        author: Solen Guitter
+        date: '2016-08-31 09:55'
+        message: ''
+        version: '30'
+    - 
+        author: Solen Guitter
+        date: '2015-08-28 08:46'
+        message: ''
+        version: '29'
+    - 
+        author: Solen Guitter
+        date: '2014-01-20 14:10'
+        message: Aded info about Nuxeo Drive
+        version: '28'
+    - 
+        author: Solen Guitter
+        date: '2013-10-22 18:05'
+        message: ''
+        version: '27'
+    - 
+        author: Solen Guitter
+        date: '2013-09-30 16:46'
+        message: Removed related topics from TOC
+        version: '26'
+    - 
+        author: Solen Guitter
+        date: '2013-02-06 17:57'
+        message: ''
+        version: '25'
+    - 
+        author: Solen Guitter
+        date: '2013-01-17 12:49'
+        message: ''
+        version: '24'
+    - 
+        author: Solen Guitter
+        date: '2012-10-30 11:00'
+        message: ''
+        version: '23'
+    - 
+        author: Solen Guitter
+        date: '2012-01-16 13:52'
+        message: Migrated to Confluence 4.0
+        version: '22'
+    - 
+        author: Solen Guitter
+        date: '2012-01-16 13:52'
+        message: ''
+        version: '21'
+    - 
+        author: Florent Guillaume
+        date: '2011-12-19 17:01'
+        message: ''
+        version: '20'
+    - 
+        author: Florent Guillaume
+        date: '2011-12-19 16:59'
+        message: typo
+        version: '19'
+    - 
+        author: Solen Guitter
+        date: '2011-11-30 12:05'
+        message: ''
+        version: '18'
+    - 
+        author: Solen Guitter
+        date: '2011-11-30 12:05'
+        message: ''
+        version: '17'
+    - 
+        author: Solen Guitter
+        date: '2011-11-30 12:04'
+        message: >-
+            Moved steps to add new clients in EP documentation and added related
+            content
+        version: '16'
+    - 
+        author: Solen Guitter
+        date: '2011-11-25 18:06'
+        message: Added XP WSS steps
+        version: '15'
+    - 
+        author: Thierry Martins
+        date: '2011-11-07 15:34'
+        message: support for other webdav clients
+        version: '14'
+    - 
+        author: Benoit Delbosc
+        date: '2011-06-01 11:25'
+        message: ''
+        version: '13'
+    - 
+        author: Benoit Delbosc
+        date: '2011-06-01 10:27'
+        message: ''
+        version: '12'
+    - 
+        author: Benoit Delbosc
+        date: '2011-05-19 13:48'
+        message: ''
+        version: '11'
+    - 
+        author: Benoit Delbosc
+        date: '2011-05-17 18:39'
+        message: ''
+        version: '10'
+    - 
+        author: Benoit Delbosc
+        date: '2011-05-17 18:26'
+        message: ''
+        version: '9'
+    - 
+        author: Benoit Delbosc
+        date: '2011-05-17 18:18'
+        message: Update for 5.4.2 wss support
+        version: '8'
+    - 
+        author: Solen Guitter
+        date: '2010-12-01 11:19'
+        message: ''
+        version: '7'
+    - 
+        author: Solen Guitter
+        date: '2010-10-01 14:15'
+        message: resized screenshots
+        version: '6'
+    - 
+        author: Solen Guitter
+        date: '2010-05-26 16:03'
+        message: added section for document creation
+        version: '5'
+    - 
+        author: Solen Guitter
+        date: '2010-05-26 12:42'
+        message: added section on document management information from MS Office
+        version: '4'
+    - 
+        author: Solen Guitter
+        date: '2010-05-26 11:54'
+        message: added screenhots
+        version: '3'
+    - 
+        author: Solen Guitter
+        date: '2010-05-25 19:27'
+        message: ''
+        version: '2'
+    - 
+        author: Solen Guitter
+        date: '2010-04-15 12:14'
+        message: ''
+        version: '1'
+
+---
+<div class="row"><div class="column medium-8">
+
+&nbsp;
+
+Nuxeo enables you to create and edit MS Office documents stored in Nuxeo directly from your OS desktop, without having to go on your Nuxeo application in your browser. This is possible thanks to the support of the WebDAV (_Web-based Distributed Authoring and Versioning_) and Windows SharePoint Service (WSS) protocols.
+
+For both protocols, you don't need to install an extension or configure Nuxeo. You just need to add Nuxeo as a network drive. You will then be able to do the following actions on Nuxeo MS Office documents, from your OS desktop directly:
+
+*   create documents and folders,
+*   edit documents,
+*   move documents and folders.
+
+&nbsp;
+
+{{#> callout type='info' heading='Nuxeo Drive'}}
+
+There are several known limitations with using WebDAV protocol on Windows machines to connect to the Nuxeo Platform: temporary files that are stored in the Nuxeo Platform, technical name displayed instead of title of the document. We hardly recommend to mount WebDAV drives on Windows machines but for some specific use cases. The behavior can be different depending on the version of Windows, the version of service pack, etc.
+
+We recommend you to pay attention to [Nuxeo Drive]({{page page='nuxeo-drive'}}) that can offer you a file system access style without the above mentioned drawbacks.
+
+{{/callout}}
+
+## Adding Nuxeo as an External Drive
+
+Depending on your OS, the steps to follow so Nuxeo is seen by the OS as an external drive are different depending on your OS.
+
+{{#> callout type='note' heading='Requirement'}}
+
+The first time you do the mapping, make sure that you have already logged in to the web interface once. This is required to setup the Windows authentication protocol.
+
+{{/callout}}
+
+### Adding a New Network Place from Windows XP
+
+1.  From the Windows Explorer, open **My Network Places**.
+2.  Click on **Add a network place**.
+    The **Add Network Place Wizard** opens.
+3.  When asked for the Internet or network address, type the address of your Nuxeo application, for instance "http://localhost:8080/nuxeo/".
+4.  When prompted, type your username and password.
+5.  Give the application a name. This is the name that will be displayed in the network places.
+6.  Finish the steps.
+    The network place is created. You can now browse the content of your Nuxeo application in the Windows Explorer, from the network places.
+    If you checked the **Open this network place when I click Finish** box, the workspaces of the application are displayed in the explorer.
+
+### Mapping a Network Drive from Windows 7 Explorer
+
+1.  Open the Windows Explorer.
+2.  Click **Map network drive**.
+3.  Choose a Drive letter.
+4.  In **Folder**, type the address of your Nuxeo application adding the **site/dav/** suffix, for instance "http://localhost:8080/nuxeo/site/dav/".
+    Make sure **Connect using different credentials** is selected.&nbsp;
+    ![]({{file name='map-network-drive-wss.png'}} ?w=450)
+5.  Click on **Finish**.
+    A connect window opens.
+6.  Type your login and your password and click on the **OK** button.
+
+### Connecting to Nuxeo from Mac OS Finder
+
+1.  From the Finder open the **Connect to Server** popup
+2.  Type the address of your Nuxeo application adding the **site/dav/** suffix, for instance "http://localhost:8080/nuxeo/site/dav/".
+3.  A connect window opens.Type your login and your password and click on the **OK** button.
+
+### Connecting to Nuxeo from Linux
+
+The plugin comes with a default configuration which supports only a few clients. On Linux, it supports:
+
+*   cadaver, which enables you to browse the content of the Nuxeo application in command line like you would do with a FTP server;
+*   davfs, which enables your to mount Nuxeo and see it as a file system directory.
+
+It is possible to [configure the application to work with other WebDAV clients]({{page space='nxdoc58' page='webdav'}}).
+
+## Browsing Nuxeo from Your OS
+
+After you added the Nuxeo application as an external drive, you can browse the content of Nuxeo from your OS. You can see:
+
+*   workspaces,
+*   folders,
+*   templates,
+*   files,
+*   notes,
+*   pictures.
+
+## Editing Documents {{> anchor 'dav-edit'}}
+
+You can edit office documents available in your Nuxeo workspaces and folders from your OS, like any other local documents.
+The document is automatically locked in Nuxeo. When you save your modifications, they are saved in Nuxeo directly. When done, closing the document will unlock the document in Nuxeo.
+
+## Creating Content in Nuxeo{{> anchor 'dav-create'}}
+
+You can create folders and documents in Nuxeo from your desktop.
+To create documents in a Nuxeo folder or workspace, you can:
+
+*   drag and drop files from a local folder into the target Nuxeo folder,
+*   create the document in the native office application and save it in the Nuxeo folder.
+
+You can then create, copy and move documents and folders in Nuxeo via the Windows Explorer or Mac Finder the same way you would do in a local folder.
+
+&nbsp;
+
+</div><div class="column medium-4">{{#> panel heading='On this page'}} {{/panel}}</div></div>

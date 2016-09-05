@@ -1,0 +1,93 @@
+---
+title: Participating to a Parallel Workflow
+labels:
+    - parallel-workflow
+toc: true
+confluence:
+    ajs-parent-page-id: '16092655'
+    ajs-parent-page-title: Parallel Document Workflow
+    ajs-space-key: USERDOC58
+    ajs-space-name: Nuxeo Platform User Documentation - 5.8
+    canonical: Participating+to+a+Parallel+Workflow
+    canonical_source: >-
+        https://doc.nuxeo.com/display/USERDOC58/Participating+to+a+Parallel+Workflow
+    page_id: '16092642'
+    shortlink: 4o31
+    shortlink_source: 'https://doc.nuxeo.com/x/4o31'
+    source_link: /display/USERDOC58/Participating+to+a+Parallel+Workflow
+history:
+    - 
+        author: Solen Guitter
+        date: '2013-11-03 16:33'
+        message: ''
+        version: '5'
+    - 
+        author: Solen Guitter
+        date: '2013-11-03 16:00'
+        message: ''
+        version: '4'
+    - 
+        author: Solen Guitter
+        date: '2013-11-03 15:58'
+        message: ''
+        version: '3'
+    - 
+        author: Solen Guitter
+        date: '2013-10-25 19:27'
+        message: ''
+        version: '2'
+    - 
+        author: Solen Guitter
+        date: '2013-10-25 15:16'
+        message: ''
+        version: '1'
+
+---
+<div class="row"><div class="column medium-8">
+
+After the workflow initiator has started the parallel workflow, two steps need to be completed:
+
+1.  Reviewers need to provide their opinion on the approval of the document: Would they approve the document, reject it, or do they not have an opinion. That's the Consultation step, in which there is no order between the participants.
+2.  The Workflow initiator can then approve or not the document, after seeing the result of the consultation step. That's the Validation step.
+
+</div><div class="column medium-4">{{#> panel heading='In this section'}}
+
+{{/panel}}</div></div>
+
+## Reviewing the Document
+
+After the workflow initiator started the workflow, all reviewers get a Consultation task displayed:
+
+*   In the My tasks gadget of their dashboard,
+*   In the Workflow tab of their Home.
+    ![]({{file name='parallel-workflow-Home- Workflow-tab.png'}} ?w=650,border=true)
+
+They also receive an email to inform them that they were assigned a task on a document:
+
+{{{multiexcerpt 'workflow-notification' page='Participating to a Serial Workflow'}}}
+
+The consultation task consists in saying if you would approve or reject the document, or if you have no opinion (N/A). All participants can review the document at any time: there is no order between them. But they need to review the document before the due date if they want to provide their opinion. When the due date is passed, all pending Consultation tasks are closed as N/A and the workflow goes to the Validation step.
+
+**To review a document:**
+
+1.  In your **Home**, click on the **Workflow** tab.
+    The list of tasks you have to do is displayed.
+2.  Optionally click on the icon ![]({{file name='external.gif' page='icons-index'}}) to open the document in a new tab and consult it.
+3.  Click on the **Process** button.
+    The Consultation task form is displayed in the Workflow tab.
+4.  If you think that you won't be able to process the task, [delegate it]({{page page='delegating-a-task'}}) to another user. If not switch to the next step.
+5.  Click on one of the buttons to provide your opinion on the document validation:
+    *   Approve: you agree with the document being approved;
+    *   Reject: you think that the document is not ready to be approved;
+    *   N/A: you are not concerned by the document or don't have an opinion about its validation.Your consultation task is done. The task is removed from your dashboard and your Workflow tab.
+    On the document, the consultation is displayed in the Previous tasks of the Workflow tab.
+
+{{#> callout type='tip' heading='Other location to process the task'}}
+
+The task form is also displayed on the document's Summary tab and its Workflow tab.
+
+{{/callout}}
+
+## Final Validation of the Document
+
+When all reviewers have done their consultation task, the document goes back to the initiator of the review so he can see the opinion of the reviewers and approve or reject the document.

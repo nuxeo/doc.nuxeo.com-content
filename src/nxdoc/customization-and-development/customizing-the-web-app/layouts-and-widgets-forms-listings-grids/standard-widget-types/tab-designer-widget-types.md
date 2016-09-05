@@ -1,0 +1,107 @@
+---
+title: Tab Designer Widget Types
+labels:
+    - widget-types
+toc: true
+confluence:
+    ajs-parent-page-id: '17334434'
+    ajs-parent-page-title: Standard Widget Types
+    ajs-space-key: NXDOC58
+    ajs-space-name: 'Nuxeo Platform Developer Documentation - 5.8 '
+    canonical: Tab+Designer+Widget+Types
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC58/Tab+Designer+Widget+Types'
+    page_id: '18449595'
+    shortlink: u4QZAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/u4QZAQ'
+    source_link: /display/NXDOC58/Tab+Designer+Widget+Types
+history:
+    - 
+        author: Solen Guitter
+        date: '2016-08-31 14:04'
+        message: ''
+        version: '3'
+    - 
+        author: Solen Guitter
+        date: '2014-01-22 14:54'
+        message: ''
+        version: '2'
+    - 
+        author: Solen Guitter
+        date: '2014-01-22 14:53'
+        message: ''
+        version: '1'
+
+---
+<div class="row"><div class="column medium-8">{{! excerpt}}
+
+Some higher level widget types are useful to design tab content, and come as an addition to [Summary Widget Types]({{page page='summary-widget-types'}}).
+
+{{! /excerpt}}
+
+## {{> anchor 'toggleablelayoutwithforms'}}Toggleable Layout
+
+Id: `toggleableLayoutWithForms`
+
+This widget type presents a layout in view mode, with toggle buttons to present the edit mode, as well as usual Save and Cancel buttons by default (these can be customized).
+
+## {{> anchor 'contentviewwithforms'}}Content View
+
+Id: `contentViewWithForms`
+
+This widget type presents a content view, with possibility to override some of the content view definition properties in the widget properties.
+
+</div><div class="column medium-4">{{#> panel heading='In this section'}} {{/panel}}</div></div>
+
+## {{> anchor 'documenttabswithforms'}}Tabs
+
+Id: `documentTabsWithForms`
+
+This widget type presents document tabs. It is tied to the document on which this widget is rendered as filters are evaluated in this context.
+
+## {{> anchor 'documentaction'}}Form Action
+
+Id: `documentAction`
+
+This widget type presents an action, not surrounded by a form. It is tied to the document on which this widget is rendered as [filters]({{page page='filters-and-access-controls'}}) are evaluated in its context. The action to present is retrieved by id.
+
+This is useful in combination with the "layout" widget for instance, or to build incremental layouts using "Summary Panel" categories (as widgets contributed to this category may already contain a form).
+
+## {{> anchor 'documentactions'}}Form Actions
+
+Id: `documentActions`
+
+This widget type presents actions, not surrounded by a form. It is tied to the document on which this widget is rendered as [filters]({{page page='filters-and-access-controls'}}) are evaluated in its context. The actions to present are retrieved by category.
+
+This is useful in combination with the [ `layout` widget]({{page page='advanced-widget-types'}}) for instance, or to build incremental layouts using "Summary Panel" categories (as widgets contributed to this category may already contain a form).
+
+## {{> anchor 'documentactionwithforms'}}Toolbar Action
+
+Id: `documentActionWithForms`
+
+This widget type presents an action, surrounded by a form. It is tied to the document on which this widget is rendered as [filters]({{page page='filters-and-access-controls'}}) are evaluated in its context.
+
+Form management performed by this widget type makes it possible to use FancyBox actions for instance (so that FancyBox content can itself contain a form).
+
+## {{> anchor 'documentactionswithforms'}}Toolbar Actions
+
+Id: `documentActionsWithForms`
+
+This widget type presents document tabs. It is tied to the document on which this widget is rendered as [filters]({{page page='filters-and-access-controls'}}) are evaluated in its context.
+
+Form management performed by this widget type makes it possible to use FancyBox actions for instance (so that FancyBox content can itself contain a form).
+
+&nbsp;
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in this documentation'}}
+
+*   [Standard Widget Types]({{page page='standard-widget-types'}})
+*   [Custom Widget Types]({{page page='custom-widget-types'}})
+
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related topics in Studio documentation'}}
+
+*   [Filtering Options Reference Page]({{page space='studio' page='filtering-options-reference-page'}})
+*   [Tabs]({{page space='studio' page='tabs'}})
+
+{{/panel}}</div></div>

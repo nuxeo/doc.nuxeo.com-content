@@ -1,0 +1,299 @@
+---
+title: Widget Definitions
+labels:
+    - widget
+toc: true
+confluence:
+    ajs-parent-page-id: '17334430'
+    ajs-parent-page-title: Layout and Widget Definitions
+    ajs-space-key: NXDOC58
+    ajs-space-name: 'Nuxeo Platform Developer Documentation - 5.8 '
+    canonical: Widget+Definitions
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC58/Widget+Definitions'
+    page_id: '18449618'
+    shortlink: 0oQZAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/0oQZAQ'
+    source_link: /display/NXDOC58/Widget+Definitions
+history:
+    - 
+        author: Solen Guitter
+        date: '2016-08-31 14:06'
+        message: ''
+        version: '6'
+    - 
+        author: Anahide Tchertchian
+        date: '2014-12-08 18:29'
+        message: >-
+            NXDOC-427: wording, do not use the term "properties" for additional
+            configuration, as it's easy to confuse with actual widget properties
+        version: '5'
+    - 
+        author: Anahide Tchertchian
+        date: '2014-12-08 16:44'
+        message: 'NXDOC-286: cosmit + fix anchor link to widget controls'
+        version: '4'
+    - 
+        author: Solen Guitter
+        date: '2014-01-23 17:16'
+        message: code block formatting
+        version: '3'
+    - 
+        author: Solen Guitter
+        date: '2014-01-22 15:14'
+        message: ''
+        version: '2'
+    - 
+        author: Solen Guitter
+        date: '2014-01-22 15:12'
+        message: ''
+        version: '1'
+
+---
+<div class="row"><div class="column medium-8">{{! excerpt}}
+
+This page describes the different elements that can be used to define widgets.
+
+{{! /excerpt}}
+
+&nbsp;
+
+> Last night a widget saved my life
+> 
+> &ndash; ui:Indeep
+
+## Sample Definition
+
+Here is a sample contribution of widget definitions inside a layout definition:
+
+</div><div class="column medium-4">{{#> panel heading='In this section'}} {{/panel}}</div></div>
+
+```
+<?xml version="1.0"?>
+
+<component name="org.nuxeo.ecm.platform.forms.layouts.webapp">
+
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="layouts">
+
+    <layout name="heading">
+      <templates>
+        <template mode="any">/layouts/layout_default_template.xhtml</template>
+      </templates>
+      <rows>
+        <row>
+          <widget>title</widget>
+        </row>
+        <row>
+          <widget>description</widget>
+        </row>
+      </rows>
+      <widget name="title" type="text">
+        <labels>
+          <label mode="any">label.dublincore.title</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>dc:title</field>
+        </fields>
+        <properties widgetMode="edit">
+          <property name="required">true</property>
+        </properties>
+      </widget>
+      <widget name="description" type="textarea">
+        <labels>
+          <label mode="any">label.dublincore.description</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>dc:description</field>
+        </fields>
+      </widget>
+    </layout>
+
+  </extension>
+
+</component>
+
+```
+
+Two widget definitions are presented on the above example. Let's look into the&nbsp;`title` widget and present its properties:
+
+*   `name`: the string used as an identifier in the layout context.
+    In the example, the widget name is `title`.
+*   `type`: the widget type that will manage the rendering of this widget.
+    In this example, the widget type is `text`. This widget type is a standard widget types, more information about widget types is available on the[ Standard Widget Types page]({{page page='standard-widget-types'}}).
+*   `labels`: the list of labels to use for this widget in a [given mode]({{page page='layout-and-widget-modes'}}). If no label is defined in a specific mode, the label defined in the "any" mode will be taken as default.
+    In the example, a single label is defined for any mode to the `label.dublicore.title` message. If no label is defined at all, a default label will be used following the convention: `label.widget.[layoutName].[widgetName]`.
+*   `translated`: the string representing a boolean value ("true" or "false") and defaulting to "false". When set as translated, the widget labels will be treated as messages and displayed translated. In the example, the `label.dublincore.title` message will be translated at rendering time.
+*   `fields`: the list of fields that will be managed by this widget. In the example, we handle the field&nbsp;`dc:title` where "dc" is the prefix for the "dublincore" schema. If the schema you would like to use does not have a prefix, use the schema name instead. Note that most of standard widget types only handle one field.&nbsp; Since 5.8, the field definition also accepts an EL expression. For more information about this please read [Field Binding and Expressions]({{page page='field-binding-and-expressions'}}).
+
+    {{#> callout type='tip' }}
+
+    When dealing with an attribute from the document that is not a metadata, you can use the property name as it will be resolved like a value expression of the form `#{document.attribute}`, like `#{document.id}` for instance.
+
+    {{/callout}}
+*   `properties`: the list of properties that will apply to the widget in a [given mode]({{page page='layout-and-widget-modes'}}). Properties listed in the "any" mode will be merged with properties for the specific mode. Depending on the widget type, these properties can be used to control what JSF component will be used and/or what attributes will be set on these components. In standard widget types, only one component is used given the mode, and properties will be set as attributes on the component. For instance, when using the&nbsp;`text` widget type, every property accepted by the&nbsp;`<h:inputText />` tag can be set as properties on "edit" and "create" modes, and every property accepted by the&nbsp;`<h:outputText />` tag can be set as properties. Properties can also be added in a given widget mode.
+
+## Additional Configuration
+
+Additional configuration can be set on a widget:
+
+*   `helpLabels`: a list that follows the same pattern as labels, but used to set help labels.
+*   `widgetModes`: the list of local mode mappings that override the default one. [Local mode]({{page page='layout-and-widget-modes'}}) is deduced from the layout mode or from the parent widget mode.
+*   `subWidgets`: the list of widget definitions, as the widget list, used to describe subwidgets use to help the configuration of some complex widget types.
+*   `controls`: an additional configuration to control the behavior of a widget (see the [Widget Controls section](#controlswidgetcontrols) below).
+
+Here is a more complex layout contribution that shows the syntax to use for these additional properties:
+
+```
+<?xml version="1.0"?>
+
+<component name="org.nuxeo.ecm.platform.forms.layouts.webapp">
+
+  <!-- WARNING: this extension point is only available from versions 5.1.7 and 5.2.0 -->
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="widgets">
+
+    <!-- global definition of a widget so that it can be used
+      in several layouts -->
+    <widget name="description" type="textarea">
+      <labels>
+        <label mode="any">description</label>
+      </labels>
+      <translated>true</translated>
+      <fields>
+        <field>dc:description</field>
+      </fields>
+      <properties widgetMode="edit">
+        <property name="styleClass">dataInputText</property>
+      </properties>
+    </widget>
+
+  </extension>
+
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="layouts">
+
+    <layout name="complex">
+      <templates>
+        <template mode="any">/layouts/layout_default_template.xhtml</template>
+      </templates>
+      <rows>
+        <row>
+          <widget>identifier</widget>
+        </row>
+        <row>
+          <!-- reference a global widget -->
+          <widget>description</widget>
+        </row>
+      </rows>
+      <widget name="identifier" type="text">
+        <labels>
+          <label mode="any">label.dublincore.title</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>uid:uid</field>
+        </fields>
+        <widgetModes>
+          <!-- not shown in create mode -->
+          <mode value="create">hidden</mode>
+        </widgetModes>
+        <properties widgetMode="edit">
+          <!-- required in widget mode edit -->
+          <property name="required">true</property>
+        </properties>
+        <properties mode="view">
+          <!-- property applying in view mode -->
+          <property name="styleClass">cssClass</property>
+        </properties>
+      </widget>
+    </layout>
+
+  </extension>
+
+</component>
+
+```
+
+&nbsp;
+
+Here is a sample contribution showing subwidgets configuration:
+
+```xml
+<widget name="dam_text_search" type="container">
+  <handlingLabels>true</handlingLabels>
+  <labels>
+    <label mode="any">label.dam.search.textSearch</label>
+  </labels>
+  <translated>true</translated>
+  <properties widgetMode="any">
+    <property name="hideSubLabels">true</property>
+  </properties>
+  <subWidgets>
+    <widget name="ecm_fulltext" type="text">
+      <labels>
+        <label mode="any"></label>
+      </labels>
+      <translated>false</translated>
+      <fields>
+        <field>dams:ecm_fulltext</field>
+      </fields>
+      <properties widgetMode="edit">
+        <property name="placeholder">
+          #{messages['label.dam.search.text.placeholder']}
+        </property>
+      </properties>
+    </widget>
+  </subWidgets>
+</widget>
+```
+
+Since 5.6, you can also reference global widgets for subwidgets. Here is a sample configuration:
+
+```xml
+<widget name="dam_text_search" type="container">
+  <handlingLabels>true</handlingLabels>
+  <labels>
+    <label mode="any">label.dam.search.textSearch</label>
+  </labels>
+  <translated>true</translated>
+  <properties widgetMode="any">
+    <property name="hideSubLabels">true</property>
+  </properties>
+  <subWidgetRefs>
+    <widget>globalSubWidgetName</widget>
+  </subWidgetRefs>
+</widget>
+```
+
+If you need a richer structure to handle subwidgets, you can also consider using a ["layout" widget type]({{page page='advanced-widget-types#layout'}}) to render a layout via a widget.
+
+## {{> anchor 'controls'}}Widget Controls
+
+Since 5.8, widgets definitions also accept a notion of "control".
+
+Controls can be seen as additional properties that can be set on the widget definition, and are managed by [mode]({{page page='layout-and-widget-modes'}}).
+
+They hold additional configurations that will not be filled on the underlying JSF component attributes, but will more likely be used by this widget parent layout or widget.
+
+Default layout templates and widget types accepting subwidgets handle the following controls:
+
+*   `requireSurroundingForm`: this makes it possible to surround the rendered widget by a form. If the control `useAjaxForm` is also set to true, then the form will be ajaxified.
+*   `handlingLabels`: this makes it possible to avoid making the parent widget or layout handle the label, maybe keeping an unneeded empty space visible. Widgets using a type that knows how to handle their label will then display the label themselves. Widgets using a type that does not know how to handle the label will not display the label at all.
+
+Here is a sample configuration:
+
+```xml
+ <widget name="widgetWithControls" type="test">
+  <controls mode="any">
+    <control name="requireSurroundingForm">true</control>
+    <control name="useAjaxForm">true</control>
+    <control name="handlingLabels">true</control>
+  </controls>
+</widget>
+```
+
+&nbsp;
+
+* * *

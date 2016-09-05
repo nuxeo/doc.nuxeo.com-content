@@ -1,0 +1,142 @@
+---
+title: Forums
+labels:
+    - forum
+confluence:
+    ajs-parent-page-id: '16092666'
+    ajs-parent-page-title: Working in Workspaces
+    ajs-space-key: USERDOC58
+    ajs-space-name: Nuxeo Platform User Documentation - 5.8
+    canonical: Forums
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC58/Forums'
+    page_id: '16092673'
+    shortlink: AY71
+    shortlink_source: 'https://doc.nuxeo.com/x/AY71'
+    source_link: /display/USERDOC58/Forums
+history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-01 14:11'
+        message: ''
+        version: '18'
+    - 
+        author: Solen Guitter
+        date: '2013-12-02 15:27'
+        message: ''
+        version: '17'
+    - 
+        author: Anonymous
+        date: '2013-10-22 18:16'
+        message: ''
+        version: '16'
+    - 
+        author: Solen Guitter
+        date: '2012-07-24 11:42'
+        message: ''
+        version: '15'
+    - 
+        author: Solen Guitter
+        date: '2012-07-24 11:42'
+        message: Fixed broken link
+        version: '14'
+    - 
+        author: Solen Guitter
+        date: '2012-07-24 11:38'
+        message: Fixed broken link
+        version: '13'
+    - 
+        author: Solen Guitter
+        date: '2012-07-03 14:52'
+        message: Fixed broken link
+        version: '12'
+    - 
+        author: Solen Guitter
+        date: '2012-01-20 14:54'
+        message: ''
+        version: '11'
+    - 
+        author: Solen Guitter
+        date: '2011-11-25 15:12'
+        message: Fixed broken link
+        version: '10'
+    - 
+        author: Solen Guitter
+        date: '2011-11-24 10:32'
+        message: ''
+        version: '9'
+    - 
+        author: Solen Guitter
+        date: '2011-11-24 10:30'
+        message: Added related content
+        version: '8'
+    - 
+        author: Solen Guitter
+        date: '2011-11-24 10:27'
+        message: Added related content
+        version: '7'
+    - 
+        author: Solen Guitter
+        date: '2011-11-09 09:48'
+        message: ''
+        version: '6'
+    - 
+        author: Solen Guitter
+        date: '2011-11-08 17:09'
+        message: ''
+        version: '5'
+    - 
+        author: Solen Guitter
+        date: '2011-06-06 14:42'
+        message: ''
+        version: '4'
+    - 
+        author: Solen Guitter
+        date: '2010-12-01 11:23'
+        message: ''
+        version: '3'
+    - 
+        author: Solen Guitter
+        date: '2010-05-10 18:41'
+        message: fixed broken links
+        version: '2'
+    - 
+        author: Solen Guitter
+        date: '2010-04-27 15:31'
+        message: ''
+        version: '1'
+
+---
+A forum is a discussion space in which users can talk together. A forum is organized around different topics, in which users can add comments. Topics and comments are displayed in threads.
+
+As for workspaces and sections, the access to a forum is defined by access rights. Forum access rights are the same as workspace access rights. However, in the case of a [moderated topic]({{page page='managing-topics#topic-moderation'}}), some users are declared "moderators" and are in charge of the approval of the topic content.
+
+Forum creation and edition are available for users with "Write" and "Manage" rights.
+Users with "Manage" rights can also manage the forum like a workspace, i.e. [give users access rights]({{page page='managing-access-rights'}}), set [alerts]({{page page='alerts'}}) and manage the forum's [trash]({{page page='managing-deleted-documents'}}).
+
+## Creating a Forum
+
+You need 'Write' or 'Manage' rights to be able to create a forum.
+
+You can create forums only in workspaces.
+
+**To create a forum:**
+
+{{{excerpt 'Creating content'}}}
+
+The forum is created. You can now create topics to start discussing.
+![]({{file name='forum-saved.png'}} ?w=650,border=true)
+
+## Editing a Forum
+
+You need 'Write' or 'Manage' rights to edit a forum.
+
+When you edit a forum, you modify its title and its description.
+
+**To edit a forum:**
+
+1.  On the forum, click on the **Edit** tab.
+2.  Modify the title or the description of the forum. You can also add a comment explaining what you edited on the forum.
+3.  Click on the **Save** button.
+    The modifications are saved and the **Forum** tab is displayed.
+
+&nbsp;
