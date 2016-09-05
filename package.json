@@ -13,7 +13,7 @@
     "co": "^4.6.0",
     "lodash.defaultsdeep": "^4.6.0",
     "node-yaml-config": "0.0.4",
-    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v1.12.2"
+    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v1.13.0"
   },
   "devDependencies": {
     "browser-sync": "^2.12.8",
@@ -32,8 +32,8 @@
     "poststart": "npm run copy_assets && npm run verify",
     "predev": "npm install",
     "dev": "npm run browser_sync & NODE_ENV=development nodemon --exec 'npm start && npm run copy_module_assets && browser-sync reload'",
-    "copy_assets": "cp -r ./assets ./site",
-    "copy_module_assets": "cp -r ./node_modules/nuxeo-docs-builder/assets/* ./site/assets",
+    "copy_assets": "mkdir -p ./site/assets/`./node_modules/nuxeo-docs-builder/bin/version-path` && cp -r ./assets/* ./site/assets/`./node_modules/nuxeo-docs-builder/bin/version-path`",
+    "copy_module_assets": "cp -r ./node_modules/nuxeo-docs-builder/assets/* ./site/assets/",
     "metalsmith": "node .",
     "browser_sync": "browser-sync start --server site --browser=$npm_package_config_browser",
     "yaml_lint": "js-yaml -t > /dev/null"
