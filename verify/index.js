@@ -10,7 +10,7 @@ test('lib assets directory should be generated', function (assert) {
 
     assert.doesNotThrow(function () { fs.accessSync(site_path, fs.F_OK); }, void 0, site_path + ' directory is present');
     assert.doesNotThrow(function () { fs.accessSync(site_path + 'assets', fs.F_OK); }, void 0, 'assets directory is present');
-    assert.doesNotThrow(function () { fs.accessSync(site_path + 'nxdoc', fs.F_OK); }, void 0, 'nxdoc space directory is present');
+    assert.doesNotThrow(function () { fs.accessSync(site_path + '58/nxdoc', fs.F_OK); }, void 0, 'nxdoc space directory is present');
 
     assert.end();
 });

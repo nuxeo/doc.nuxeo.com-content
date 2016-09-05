@@ -16,134 +16,134 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/OIAAAQ'
     source_link: /display/ADMINDOC58/Installing+the+Nuxeo+Platform+on+Windows
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-02 08:13'
         message: ''
         version: '26'
-    - 
+    -
         author: Anonymous
         date: '2013-10-15 11:14'
         message: ''
         version: '25'
-    - 
+    -
         author: Harlan Brown
         date: '2013-10-14 16:27'
         message: ''
         version: '24'
-    - 
+    -
         author: Harlan Brown
         date: '2013-10-14 16:13'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 16:00'
         message: ''
         version: '22'
-    - 
+    -
         author: Harlan Brown
         date: '2013-10-14 15:52'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-10 16:23'
         message: ''
         version: '20'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2013-08-23 16:31'
         message: ''
         version: '19'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-07-03 14:37'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-03 11:19'
         message: >-
             Changed recommended path installation from root of C:\ to root of
             any disk
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-28 14:31'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-28 14:31'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-28 14:30'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-28 11:45'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-11-28 09:12'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-11-28 09:12'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-14 11:45'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-14 11:45'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-14 11:45'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-14 11:45'
         message: Added details on VM installation
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-12 23:59'
         message: Added toc
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 11:59'
         message: Added related content
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 11:10'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 10:54'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 10:53'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 10:53'
         message: ''
@@ -174,7 +174,7 @@ Installing the Nuxeo Platform using the .zip package installs the Nuxeo Platform
 
 **To install the Nuxeo Platform zip archive:**
 
-{{! multiexcerpt name=''}}
+{{! multiexcerpt name='install-zip'}}
 
 Unzip the .zip archive using your favorite tool.
 
