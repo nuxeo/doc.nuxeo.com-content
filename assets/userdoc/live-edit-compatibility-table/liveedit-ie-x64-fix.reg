@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Accepted Documents]
+"liveedit_msoffice_excel"="application/x-nuxeo-liveedit;ext0=\"application!vnd.ms-excel\""
+"liveedit_msoffice12_excel"="application/x-nuxeo-liveedit;ext0=\"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\""
+"liveedit_msoffice12_powerpoint"="application/x-nuxeo-liveedit;ext0=\"application/vnd.openxmlformats-officedocument.presentationml.presentation\""
+"liveedit_msoffice12_word"="application/x-nuxeo-liveedit;ext0=\"application/vnd.openxmlformats-officedocument.wordprocessingml.document\""
+"liveedit_msoffice_powerpoint"="application/x-nuxeo-liveedit;ext1=\"application!vnd.ms-powerpoint\""
+"liveedit_msoffice_word"="application/x-nuxeo-liveedit;ext2=\"application!msword\""
+
