@@ -24,9 +24,6 @@ default:
             -
                 label: '5.8'
                 url_path: '58'
-            -
-                label: '5.6'
-                url_path: '56'
 
 development:
     isDev: true
