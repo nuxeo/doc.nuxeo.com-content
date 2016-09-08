@@ -1,7 +1,8 @@
 default:
     site:
         review_period: '6 months'
-        review_release_date: 2016-01-01
+        review_release_date: 2015-11-09
+        review_allow_no_date_set: true
         spaces:
             -
                 space_path: nxdoc
