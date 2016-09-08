@@ -3,6 +3,7 @@ title: Simple Workflow Example
 labels:
     - excerpt
 toc: true
+toc_no_h4: true
 confluence:
     ajs-parent-page-id: '19235786'
     ajs-parent-page-title: Workflow Use Cases
@@ -15,252 +16,252 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/KhTF'
     source_link: /display/NXDOC/Simple+Workflow+Example
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-18 16:06'
         message: 'eplace "Write" by "Edit"  '
         version: '50'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-06 14:51'
         message: ''
         version: '49'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 08:58'
         message: ''
         version: '48'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 08:57'
         message: Reverted from v. 45
         version: '47'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 08:57'
         message: ''
         version: '46'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 08:56'
         message: ''
         version: '45'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-26 15:08'
         message: ''
         version: '44'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-26 14:49'
         message: ''
         version: '43'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-26 14:48'
         message: ''
         version: '42'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-26 14:02'
         message: ''
         version: '41'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-26 13:51'
         message: ''
         version: '40'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-26 13:13'
         message: ''
         version: '39'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-26 11:13'
         message: ''
         version: '38'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-26 10:52'
         message: ''
         version: '37'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-26 10:40'
         message: ''
         version: '36'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-26 09:46'
         message: ''
         version: '35'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-25 17:34'
         message: ''
         version: '34'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-25 17:19'
         message: ''
         version: '33'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-25 17:16'
         message: ''
         version: '32'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-25 16:21'
         message: ''
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-25 16:06'
         message: ''
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-25 14:49'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-25 14:46'
         message: ''
         version: '28'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-25 14:10'
         message: ''
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-25 14:09'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-25 13:55'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 16:36'
         message: ''
         version: '24'
-    - 
+    -
         author: Harlan Brown
         date: '2013-10-03 17:42'
         message: ''
         version: '23'
-    - 
+    -
         author: Harlan Brown
         date: '2013-10-03 16:24'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-11 12:26'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-11 12:25'
         message: Updated screenshots
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-11 12:17'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-09 18:49'
         message: ''
         version: '18'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-05-06 01:28'
         message: ''
         version: '17'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-05-06 01:28'
         message: ''
         version: '16'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-30 15:12'
         message: Formatting tentative
         version: '15'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-30 14:51'
         message: Added pre requisites
         version: '14'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-30 14:44'
         message: ''
         version: '13'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-30 14:36'
         message: ''
         version: '12'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-30 14:36'
         message: ''
         version: '11'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-30 14:33'
         message: ''
         version: '10'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-30 14:30'
         message: ''
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-29 18:01'
         message: ''
         version: '8'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-29 17:59'
         message: ''
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-29 17:59'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-29 17:11'
         message: Headings definition
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-27 16:39'
         message: Formatting
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-27 16:31'
         message: Formatting
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-26 16:48'
         message: Copy from my initial word document
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-04-23 19:08'
         message: ''
