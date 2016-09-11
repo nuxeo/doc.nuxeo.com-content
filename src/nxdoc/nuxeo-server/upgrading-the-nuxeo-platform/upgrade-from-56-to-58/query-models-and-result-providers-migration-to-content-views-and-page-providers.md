@@ -2,6 +2,10 @@
 title: >-
     Query Models and Result Providers Migration to Content Views and Page
     Providers
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - multiexcerpt
     - excerpt

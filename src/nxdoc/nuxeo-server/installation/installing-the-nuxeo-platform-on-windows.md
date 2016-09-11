@@ -1,5 +1,9 @@
 ---
 title: Installing the Nuxeo Platform on Windows
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - install-windows
     - last-review-20141126
@@ -332,7 +336,7 @@ The Nuxeo Platform is available as ready-to-use 64b virtual machine images from 
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
 
-*   [From the Web UI to Nuxeo Studio]({{page page='from-the-web-ui-to-nuxeo-studio'}})
+*   [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
 *   [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
 *   [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
 

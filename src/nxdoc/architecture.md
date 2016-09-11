@@ -1,5 +1,9 @@
 ---
 title: Architecture
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 redirect: developer-documentation-center
 redirect_source: Developer Documentation Center
 confluence:

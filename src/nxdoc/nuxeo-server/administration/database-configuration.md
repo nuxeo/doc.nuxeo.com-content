@@ -1,5 +1,9 @@
 ---
 title: Database Configuration
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration

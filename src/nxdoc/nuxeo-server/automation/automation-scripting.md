@@ -1,5 +1,9 @@
 ---
 title: Automation Scripting
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - automation
     - javascript
@@ -23,7 +27,7 @@ history:
     - 
         author: Solen Guitter
         date: '2016-08-11 08:19'
-        message: dd section "Entering Data in a Complex Multi-Valued Field
+        message: ''
         version: '36'
     - 
         author: Solen Guitter
@@ -328,7 +332,7 @@ Automation Scripting allows Studio users to bind their JavaScript contribution t
 
 To bind an Automation JavaScript to an action:
 
-1.  [Create your action]({{page page='how-to-add-a-button-in-the-web-ui'}}).
+1.  [Create your action]({{page page='how-to-add-a-button-in-the-jsf-ui'}}).
 2.  In the **Action Execution**, select your custom operation.
     ![]({{file name='automation_scripting_action_binding.png'}} ?w=500,border=true)
 

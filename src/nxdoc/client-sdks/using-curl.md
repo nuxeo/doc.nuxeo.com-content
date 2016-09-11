@@ -1,5 +1,9 @@
 ---
 title: Using cURL
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - curl
     - client

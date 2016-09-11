@@ -1,5 +1,9 @@
 ---
 title: Upgrade to 5.4 and JBoss 5
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - multiexcerpt
 toc: true

@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 6.0 to 7.10
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 redirect: upgrade-from-60-to-lts-2015
 redirect_source: Upgrade from 6.0 to LTS 2015
 confluence:

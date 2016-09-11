@@ -1,5 +1,9 @@
 ---
 title: How to Add Complex Fields on Your Document Type
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: Learn how to add complex fields on a document type.

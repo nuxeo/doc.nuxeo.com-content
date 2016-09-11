@@ -1,5 +1,9 @@
 ---
 title: nuxeoctl and Control Panel Usage
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - nuxeoctl
     - launcher

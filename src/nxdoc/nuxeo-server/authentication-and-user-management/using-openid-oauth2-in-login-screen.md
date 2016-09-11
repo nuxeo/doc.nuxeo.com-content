@@ -1,5 +1,9 @@
 ---
 title: Using OpenID / OAuth2 in Login Screen
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - openid
     - oauth

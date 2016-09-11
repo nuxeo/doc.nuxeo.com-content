@@ -1,5 +1,9 @@
 ---
 title: Understand Expression and Scripting Languages Used in Nuxeo
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - el
     - mvel

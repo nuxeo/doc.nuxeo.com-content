@@ -1,5 +1,9 @@
 ---
 title: Runtime and Component Model
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     '':
         excerpt: >-
@@ -28,6 +32,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/DIAO'
     source_link: /display/NXDOC/Runtime+and+Component+Model
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-05 12:13'
+        message: ''
+        version: '60'
     - 
         author: Alain Escaffre
         date: '2015-09-24 21:23'
@@ -348,7 +357,7 @@ Implementing your own _bundle_, your will be able to contribute to existing _ext
 *   Enforce business policies:
     *   Use content automation&nbsp;(supported by Nuxeo Studio),
     *   Write custom listener scripts,
-*   Customize the Web UI:
+*   Customize the UI:
     *   Make your own branding&nbsp;(supported by Nuxeo Studio),
     *   Add buttons, tabs, links, views&nbsp;(supported by Nuxeo Studio),
     *   Build your own theme via the ThemeManager,

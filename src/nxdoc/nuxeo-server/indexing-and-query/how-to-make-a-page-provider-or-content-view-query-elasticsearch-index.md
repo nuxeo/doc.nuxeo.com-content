@@ -1,5 +1,9 @@
 ---
 title: How to Make a Page Provider or Content View Query Elasticsearch Index
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: >-

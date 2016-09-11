@@ -1,5 +1,9 @@
 ---
 title: Web Object Model
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - howto
     - webengine

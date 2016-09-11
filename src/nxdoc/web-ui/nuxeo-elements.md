@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Elements
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '26316892'
@@ -25,7 +29,7 @@ history:
         version: '1'
 
 ---
-The Nuxeo Web UI Framework allows users to build&nbsp;business applications while keeping the UI simple and pluggable. It relies on Java Server Faces (JSF) and Facelets to provide a [declarative component based UI Framework]({{page page='web-ui-framework'}}).
+The Nuxeo Web UI Framework allows users to build&nbsp;business applications while keeping the UI simple and pluggable. It relies on Java Server Faces (JSF) and Facelets to provide a [declarative component based UI Framework]({{page page='jsf-ui-framework'}}).
 
 **Nuxeo Elements** is an ongoing work to build upon the same goals of simplicity and pluggability and leverage emerging Web standards to take our component-based UI framework to the client&nbsp;with DOM as the &ldquo;framework&rdquo; and HTML as its familiar declarative syntax.
 

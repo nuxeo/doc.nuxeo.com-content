@@ -1,5 +1,9 @@
 ---
 title: Contributing to an Extension Using Nuxeo IDE
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 redirect: how-to-contribute-to-an-extension
 redirect_source: How to Contribute to an Extension
 confluence:

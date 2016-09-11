@@ -1,5 +1,9 @@
 ---
 title: Client API Test suite (TCK)
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - automation
     - todo

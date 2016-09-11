@@ -1,5 +1,9 @@
 ---
 title: Deployment Options
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - deployment
     - clustering

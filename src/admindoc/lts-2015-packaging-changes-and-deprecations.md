@@ -1,5 +1,9 @@
 ---
 title: LTS 2015 Packaging Changes and Deprecations
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 redirect: admindocupgrade-from-60-to-lts-2015
 redirect_source: 'ADMINDOC:Upgrade from 6.0 to LTS 2015'
 confluence:

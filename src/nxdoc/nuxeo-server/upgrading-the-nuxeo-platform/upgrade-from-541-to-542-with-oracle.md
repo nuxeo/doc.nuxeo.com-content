@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 5.4.1 to 5.4.2 with Oracle
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - multiexcerpt
 confluence:

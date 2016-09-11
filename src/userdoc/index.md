@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Platform User Documentation
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - multiexcerpt-include
 confluence:

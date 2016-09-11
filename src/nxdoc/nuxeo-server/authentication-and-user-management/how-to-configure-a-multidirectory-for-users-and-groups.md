@@ -1,5 +1,9 @@
 ---
 title: How to Configure a Multidirectory for Users and Groups
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: >-

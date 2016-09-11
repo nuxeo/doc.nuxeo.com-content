@@ -1,5 +1,9 @@
 ---
 title: Cross-Origin Resource Sharing (CORS)
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - cors
     - rest-api

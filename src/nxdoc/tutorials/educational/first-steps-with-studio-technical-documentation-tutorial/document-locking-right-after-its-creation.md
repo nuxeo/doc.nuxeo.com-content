@@ -1,5 +1,9 @@
 ---
 title: Document Locking Right after Its Creation
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - lock
     - multiexcerpt

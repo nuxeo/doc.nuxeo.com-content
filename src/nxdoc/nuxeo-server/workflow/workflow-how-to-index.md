@@ -1,5 +1,9 @@
 ---
 title: Workflow How-To Index
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - workflow
     - index
@@ -37,4 +41,4 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC Studio' label='howto' filter='Topics=Workflow'}}}

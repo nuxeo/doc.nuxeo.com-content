@@ -1,5 +1,9 @@
 ---
 title: How to Override a Seam Component
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: Learn how to override a seam component.
@@ -121,7 +125,7 @@ In this example, we overrode the [startupHelper](https://github.com/nuxeo/nuxeo-
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Web UI Framework Overview]({{page page='web-ui-framework-overview'}})
-*   [Web UI Limitations]({{page page='web-ui-limitations'}})
+*   [JSF UI Framework Overview]({{page page='jsf-ui-framework-overview'}})
+*   [JSF UI Limitations]({{page page='jsf-ui-limitations'}})
 
 {{/panel}}</div></div>

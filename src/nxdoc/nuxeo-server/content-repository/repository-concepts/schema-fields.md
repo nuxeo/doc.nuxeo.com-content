@@ -1,5 +1,9 @@
 ---
 title: Schema Fields
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - schema-component
     - excerpt

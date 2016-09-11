@@ -1,5 +1,9 @@
 ---
 title: How-To Index
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - migration-sample
 confluence:
@@ -14,6 +18,16 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/ywYuAQ'
     source_link: /display/NXDOC/How-To+Index
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 14:35'
+        message: ''
+        version: '25'
+    - 
+        author: Manon Lumeau
+        date: '2016-09-08 13:29'
+        message: ''
+        version: '24'
     - 
         author: Solen Guitter
         date: '2014-11-27 17:39'
@@ -131,6 +145,4 @@ history:
         version: '1'
 
 ---
-Click on the categories below to see the available how-tos.
-
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC IDEDOC NXDOC Studio USERDOC' label='howto'}}}

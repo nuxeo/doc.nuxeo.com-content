@@ -1,5 +1,9 @@
 ---
 title: Upgrade from LTS 2015 following Fast Tracks
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - multiexcerpt
 tabbed_page: true

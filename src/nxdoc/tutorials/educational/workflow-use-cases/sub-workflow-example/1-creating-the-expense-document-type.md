@@ -1,5 +1,9 @@
 ---
 title: 1- Creating the Expense Document Type
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - workflow
     - subworkflow

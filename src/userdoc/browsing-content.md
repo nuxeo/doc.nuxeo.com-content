@@ -1,5 +1,9 @@
 ---
 title: Browsing Content
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '11043048'
@@ -16,9 +20,7 @@ history:
     - 
         author: Solen Guitter
         date: '2016-02-19 15:32'
-        message: >-
-            emove section "working with several docs", right-click menu is
-            available when clicking the document's icon not the document titl
+        message: ''
         version: '42'
     - 
         author: Solen Guitter
@@ -343,6 +345,6 @@ Some actions or features are accessible using access keys: Press shift-h to see 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
 *   [How to Customize the Dashboard]({{page space='nxdoc' page='how-to-customize-the-dashboard'}})
-*   [Web UI How-To Index]({{page space='nxdoc' page='web-ui-how-to-index'}})
+*   [JSF UI How-To Index]({{page space='nxdoc' page='jsf-ui-how-to-index'}})
 
 {{/panel}}</div></div>

@@ -1,5 +1,9 @@
 ---
 title: How to Submit a Bug Report
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 confluence:
     ajs-parent-page-id: '4687444'
     ajs-parent-page-title: Contributing to Nuxeo

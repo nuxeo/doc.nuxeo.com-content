@@ -1,5 +1,9 @@
 ---
 title: Scan Documents Importer
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - scan-documents-importer
     - update-needed

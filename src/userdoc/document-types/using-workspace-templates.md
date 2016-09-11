@@ -1,5 +1,9 @@
 ---
 title: Using Workspace Templates
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - templates
 confluence:

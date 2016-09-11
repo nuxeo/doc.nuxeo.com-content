@@ -1,5 +1,9 @@
 ---
 title: Functional tour
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 confluence:
     ajs-parent-page-id: '3345551'
     ajs-parent-page-title: One step validation flow based on lifecycle only

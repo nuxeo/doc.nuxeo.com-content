@@ -1,5 +1,9 @@
 ---
 title: Connecting Nuxeo to the Database
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - templates
     - database

@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Media Publishing
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - media-publishing-component
     - excerpt

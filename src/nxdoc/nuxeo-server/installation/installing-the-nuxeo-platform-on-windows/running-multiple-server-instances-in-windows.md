@@ -1,5 +1,9 @@
 ---
 title: Running Multiple Server Instances in Windows
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - install-windows
     - last-review-20141126

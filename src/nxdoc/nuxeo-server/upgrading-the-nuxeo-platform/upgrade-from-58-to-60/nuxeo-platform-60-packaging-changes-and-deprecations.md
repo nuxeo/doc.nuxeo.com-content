@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Platform 6.0 Packaging Changes and Deprecations
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - excerpt
     - multiexcerpt

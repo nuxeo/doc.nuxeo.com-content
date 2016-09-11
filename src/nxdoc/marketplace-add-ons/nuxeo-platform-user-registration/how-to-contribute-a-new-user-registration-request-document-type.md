@@ -1,5 +1,9 @@
 ---
 title: How to Contribute a New "User Registration Request" Document Type
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: Learn how to contribute new request types to the  add-on.

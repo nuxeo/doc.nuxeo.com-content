@@ -1,5 +1,9 @@
 ---
 title: Repository Concepts
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - concepts
     - excerpt
@@ -275,7 +279,7 @@ Fields can be of several types:
 *   Simple lists (multi-valued simple field),
 *   Complex types.
 
-![]({{file name='S&eacute;lection_004.png'}} ?w=650,border=true)
+![]({{file name='Selection_004.png'}} ?w=650,border=true)
 
 A file is a special case of a complex field that contains:
 
@@ -501,7 +505,7 @@ Each document type can be bound to a life cycle. The life cycle is responsible f
 *   The possible states of the document (ex: draft, validated, obsolete, ...),
 *   The possible transitions between states (ex : validate, make obsolete, ...).
 
-![]({{file name='S&eacute;lection_005.png'}} ?w=650,border=true)
+![]({{file name='Selection_005.png'}} ?w=650,border=true)
 
 Life cycle is not workflow, but:
 
@@ -524,7 +528,7 @@ Proxies are used to be able to see the same document from several places without
 The initial use case for proxies in the Nuxeo Platform is local publishing:&nbsp;when you are happy with a document (and possibly successfully completed a review workflow), you want to create a version for this document. This version will be the one validated and the live document stays in the workspace where you created it. Then you may want to give access to this valid document to several people.&nbsp;For that, you can publish the document into one or several sections: this means creating proxies pointing to the validated version.
 Depending on their rights, people that cannot read the document from the workspace (because they can not access it) may be able to see it from one or several sections (that may even be public).
 
-![]({{file name='S&eacute;lection_006.png'}} ?w=650,border=true)
+![]({{file name='Selection_006.png'}} ?w=650,border=true)
 
 The second use cases for proxies is multi-filling.
 

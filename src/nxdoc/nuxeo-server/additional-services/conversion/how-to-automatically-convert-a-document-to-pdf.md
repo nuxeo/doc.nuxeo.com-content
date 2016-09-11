@@ -1,5 +1,9 @@
 ---
 title: How to Automatically Convert a Document to PDF
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: >-

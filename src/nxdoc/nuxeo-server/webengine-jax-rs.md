@@ -1,5 +1,9 @@
 ---
 title: WebEngine (JAX-RS)
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - webengine
     - webengine-component
@@ -16,6 +20,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/CYAO'
     source_link: /pages/viewpage.action?pageId=950281
 history:
+    - 
+        author: Estelle Giuly
+        date: '2016-09-09 14:53'
+        message: emove brackets in WebEngine module declaration exampl
+        version: '58'
     - 
         author: Kevin Leturc
         date: '2015-11-24 10:50'
@@ -426,7 +435,7 @@ You will learn more about Web Object Types in the following sections.
 The simplest way to declare a WebEngine module is to add a line like the following one in your manifest:
 
 ```
-Nuxeo-WebModule: org.nuxeo.ecm.webengine.app.WebEngineModule;name=myWebApp[;extends=base;package=org/mywebapp]
+Nuxeo-WebModule: org.nuxeo.ecm.webengine.app.WebEngineModule;name=myWebApp;extends=base;package=org/mywebapp
 ```
 
 the **name** attribute is mandatory, **extends** and **package** are optional and are explained above.

@@ -1,5 +1,9 @@
 ---
 title: Hotfixes Management for Nuxeo Platform LTS 2015
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 redirect: admindoc710hotfixes-management-for-nuxeo-platform-lts-2015
 redirect_source: 'ADMINDOC710:Hotfixes Management for Nuxeo Platform LTS 2015'
 confluence:

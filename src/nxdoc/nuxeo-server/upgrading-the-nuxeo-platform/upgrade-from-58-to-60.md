@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 5.8 to 6.0
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - multiexcerpt
 toc: true

@@ -1,5 +1,9 @@
 ---
 title: PHP Automation Client
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - php
     - client

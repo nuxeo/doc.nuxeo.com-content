@@ -1,5 +1,9 @@
 ---
 title: Deploying Nuxeo on Amazon AWS
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - amazon-aws
     - cloud-deployment

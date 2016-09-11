@@ -1,5 +1,9 @@
 ---
 title: Managing Performance
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - performance
 toc: true
@@ -15,6 +19,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/9oMlAQ'
     source_link: /display/NXDOC/Managing+Performance
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-05 12:02'
+        message: ''
+        version: '19'
     - 
         author: Solen Guitter
         date: '2016-08-30 14:07'
@@ -124,7 +133,7 @@ In short, one must be able to quantify or measure performance issues, in order t
 What you are testing, and how you are testing it? &nbsp;Consider the following elements:
 
 *   Which of the Nuxeo entry points are you testing?
-    *   JSF UI (the default Web UI for Nuxeo),
+    *   JSF UI,
     *   Rest API,
     *   Java API,
     *   other.

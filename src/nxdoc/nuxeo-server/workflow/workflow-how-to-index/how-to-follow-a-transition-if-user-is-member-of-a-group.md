@@ -1,5 +1,9 @@
 ---
 title: How to Follow a Transition If User Is Member of a Group
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: >-

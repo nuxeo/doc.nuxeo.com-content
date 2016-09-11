@@ -1,5 +1,9 @@
 ---
 title: Web Adapters for the REST API
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - link-update
     - rest-api

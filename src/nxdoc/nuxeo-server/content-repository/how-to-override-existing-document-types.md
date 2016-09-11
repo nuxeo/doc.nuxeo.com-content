@@ -1,5 +1,9 @@
 ---
 title: How to Override Existing Document Types
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: Learn how to override an existing document type in Nuxeo Studio.

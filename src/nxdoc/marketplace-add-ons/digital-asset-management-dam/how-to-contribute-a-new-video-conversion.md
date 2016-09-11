@@ -1,5 +1,9 @@
 ---
 title: How to Contribute a New Video Conversion
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: >-
@@ -29,6 +33,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/pRA5AQ'
     source_link: /display/NXDOC/How+to+Contribute+a+New+Video+Conversion
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-09-08 13:03'
+        message: ''
+        version: '7'
     - 
         author: Thomas Roger
         date: '2015-10-13 09:28'
@@ -196,12 +205,25 @@ To run the "WebM 480p" video conversion automatically:
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
-{{! Please update the label in the Content by Label macro below. }}
+*   [How to Contribute a New Video Conversion]({{page space='NXDOC' page='How to+Contribute+a+New+Video+Conversion'}})
+*   <div>[Conversion]({{page space='NXDOC' page='Conversion'}})</div>
 
-</div><div class="column medium-6">
+*   <div>[Supported File Formats]({{page space='NXDOC' page='Supported File+Formats'}})</div>
 
-{{! Please update the label and target spaces in the Content by Label macro below. }}
+*   <div>[How to Automatically Convert a Document to PDF]({{page space='NXDOC' page='How to+Automatically+Convert+a+Document+to+PDF'}})</div>
 
-</div></div>
+*   <div>[How to Contribute a Command Line Converter]({{page space='NXDOC' page='How to+Contribute+a+Command+Line+Converter'}})</div>
+
+*   <div>[How to Contribute Picture Conversions]({{page space='NXDOC' page='How to+Contribute+Picture+Conversions'}})</div>
+
+*   <div>[How to Quickly Generate a PDF Using Document Template]({{page space='NXDOC' page='How to+Quickly+Generate+a+PDF+Using+Document+Template'}})</div>
+
+*   <div>[Digital Asset Management (DAM)](https://doc.nuxeo.com/pages/viewpage.action?pageId=3866704)</div>
+
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
+
+*   [User actions categories]({{page space='Studio' page='User actions+categories'}})<span class="smalltext">(Nuxeo Online Services)</span>
+
+{{/panel}}</div></div>

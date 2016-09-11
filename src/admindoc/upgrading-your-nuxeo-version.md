@@ -1,5 +1,9 @@
 ---
 title: Upgrading your Nuxeo Version
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 redirect: upgrading-the-nuxeo-platform
 redirect_source: Upgrading the Nuxeo Platform
 confluence:

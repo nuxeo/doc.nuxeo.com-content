@@ -1,5 +1,9 @@
 ---
 title: How to Define Public Pages (Viewable by Anonymous Users)
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: Learn how to make some pages visible by anonymous users.

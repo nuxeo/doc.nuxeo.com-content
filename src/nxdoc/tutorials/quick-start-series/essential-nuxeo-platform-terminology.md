@@ -1,5 +1,9 @@
 ---
 title: Essential Nuxeo Platform Terminology
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - bootstrap
     - excerpt

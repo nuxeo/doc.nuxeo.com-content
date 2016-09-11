@@ -1,5 +1,9 @@
 ---
 title: Writing a Bundle Manifest
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - runtimecomponent
     - excerpt

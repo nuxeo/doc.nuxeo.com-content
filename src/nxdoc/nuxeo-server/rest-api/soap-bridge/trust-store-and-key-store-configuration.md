@@ -1,5 +1,9 @@
 ---
 title: Trust Store and Key Store Configuration
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - todo
     - certificate

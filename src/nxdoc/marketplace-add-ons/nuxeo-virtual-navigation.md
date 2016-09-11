@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Virtual Navigation
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - virtual-navigation
     - virtual-navigation-component

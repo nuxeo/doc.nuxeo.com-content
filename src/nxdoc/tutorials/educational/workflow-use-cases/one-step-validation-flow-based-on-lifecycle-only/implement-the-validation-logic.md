@@ -1,5 +1,9 @@
 ---
 title: Implement the validation logic
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - tuto-automation
 confluence:

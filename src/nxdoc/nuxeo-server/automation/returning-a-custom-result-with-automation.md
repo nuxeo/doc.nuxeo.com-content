@@ -1,5 +1,9 @@
 ---
 title: Returning a Custom Result with Automation
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - automation
     - automation-component

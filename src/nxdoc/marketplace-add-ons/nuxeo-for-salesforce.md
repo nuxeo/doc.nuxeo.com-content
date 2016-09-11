@@ -1,5 +1,9 @@
 ---
 title: Nuxeo for Salesforce
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - salesforce-component
     - link-update

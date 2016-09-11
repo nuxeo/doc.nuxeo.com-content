@@ -1,5 +1,9 @@
 ---
 title: Web UI Overview
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '26316892'

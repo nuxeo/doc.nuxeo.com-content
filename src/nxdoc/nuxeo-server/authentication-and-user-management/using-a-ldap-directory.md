@@ -1,5 +1,9 @@
 ---
 title: Using a LDAP Directory
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - ldap
     - authentication

@@ -1,5 +1,9 @@
 ---
 title: How to Complete a Workflow Task Programmatically
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: Learn how to complete a workflow task programmatically.

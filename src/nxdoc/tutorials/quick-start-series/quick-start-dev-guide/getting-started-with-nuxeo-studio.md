@@ -1,5 +1,9 @@
 ---
 title: Getting Started with Nuxeo Studio
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: Learn how to start working with Nuxeo Studio.
@@ -22,6 +26,16 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/CBU5AQ'
     source_link: /display/NXDOC/Getting+Started+with+Nuxeo+Studio
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-07 09:23'
+        message: ''
+        version: '26'
+    - 
+        author: Solen Guitter
+        date: '2016-09-07 09:12'
+        message: 'NXDOC-857: remove nuxeo.io'
+        version: '25'
     - 
         author: Manon Lumeau
         date: '2016-05-06 13:02'
@@ -151,44 +165,26 @@ This page explains how to start customizing the Nuxeo Platform using Nuxeo Studi
 *   Change the logo of your Nuxeo Platform instance
 *   Create a new Contract document type in Studio
 
-## Step 1 - Get a Nuxeo Online Services Account
-
 Nuxeo Studio is a Nuxeo tool provided as part of the Nuxeo Online Services subscription offer. If you are a Nuxeo customer, you should already have a username/password to connect and access to your Studio project. Otherwise, we provide a 30-day trial offer so you can discover Nuxeo Studio and its configuration capabilities.
 
-1.  Go to the&nbsp;[Nuxeo Platform Online Trial registration form](http://www.nuxeo.com/downloads/#online-trial).
-2.  Fill in the form. Provide a valid email address or else registration will not be completed.
-3.  Confirm registration by clicking on the link sent to the email address in the previous step.
-    Your Online Trial account is created.
-    You can now access Nuxeo Studio by clicking on the&nbsp;link&nbsp;provided in the last email received.
+## Step 1 - Get a Nuxeo Platform Instance
 
-## Step 2 - Getting a Nuxeo Platform Instance
-
-You automatically get a nuxeo.io instance created when you subscribe to the Nuxeo Platform Online Trial offer. Thus&nbsp;you can now either use a nuxeo.io instance in the Cloud. &nbsp;Or you can run a Nuxeo Platform instance on your computer.&nbsp;
-
-### Working in the Cloud...
-
-When you register to [Nuxeo Platform Online Trial](http://www.nuxeo.com/downloads/#online-trial)&nbsp;a Nuxeo Platform environment is automatically created. This environment is bound to the first Nuxeo Studio project you have. All third-party software are installed and set up.
-
-1.  Go to [nuxeo.io](https://manager.nuxeo.io).
-    Your environment is stopped by default.
-2.  Click on the **Start** button.
-3.  Click on the instance URL to access your Nuxeo Platform environment.
-    Your Nuxeo Platform instance is ready to be customized.
-    Development mode is activated so you can enjoy hot reload of your Nuxeo Studio configuration.
-
-![]({{file name='nuxeo_io.png'}} ?w=570,border=true)
-
-### ...Or Working on Your Desktop
+The Nuxeo Platform is available in different packages. Here let's use the ZIP archive.
 
 Installing the Nuxeo Platform using the&nbsp;[.zip package](http://www.nuxeo.com/downloads/)&nbsp;installs the Nuxeo Platform only. External dependencies must be&nbsp;[installed separately]({{page page='installing-and-setting-up-related-software'}}).
 
-**To install and start the Nuxeo Platform zip archive:**
+**To install and start the Nuxeo Platform ZIP archive:**
 
 1.  Unzip the .zip archive using your favorite tool.
 2.  Click on the Start Nuxeo.command to start the server.
 3.  In a browser, go to [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
 4.  Fill in the information in the configuration wizard steps.
-5.  At the Nuxeo Connect step, use your Nuxeo Online Services account created above.
+5.  At the Nuxeo Online Services step, provide your Nuxeo Online Services credentials if you already have a Nuxeo Online Services account or register to the 30-day trial offer.
+
+    1.  Provide a valid email address or else registration will not be completed.
+    2.  Confirm registration by clicking on the link sent to the email address you provided.
+        Your Online Trial account is created.
+        You can now access Nuxeo Studio by clicking on the&nbsp;link&nbsp;provided in the last email received.
 6.  Click on&nbsp;**Start**&nbsp;at the final step.&nbsp;
     Your application is ready to use.&nbsp;
     You now need to activate development mode so as to enjoy the hot reload of your Nuxeo Studio configuration.
@@ -204,9 +200,9 @@ Installing the Nuxeo Platform using the&nbsp;[.zip package](http://www.nuxeo.com
 
 Once your project registered on Online Services, you can start customizing your Nuxeo Application. The first&nbsp;customizations&nbsp;occur in Nuxeo Studio, where you can easily create new&nbsp;[document types]({{page space='studio' page='documents'}}),&nbsp;[content views]({{page space='studio' page='content-views'}})&nbsp;, etc. Here, we will change the logo and then create a document type "Contract".
 
-You can now access Nuxeo Studio from Online Services by clicking on this&nbsp;link: [connect.nuxeo.com/nuxeo/](http://connect.nuxeo.com/nuxeo/).&nbsp;
+You can now access Nuxeo Studio from Online Services by clicking on this&nbsp;link: [connect.nuxeo.com/nuxeo/](http://connect.nuxeo.com/nuxeo/).
 
-## Step 3 - Editing the Logo
+## Step 2 - Edit the Logo
 
 Goal is to change the logo displayed in the banner of the Nuxeo Platform application. You must preliminary have a logo in PNG or JPG.
 
@@ -231,13 +227,14 @@ Goal is to change the logo displayed in the banner of the Nuxeo Platform applica
 ### **Deploying Changes on Your Nuxeo Platform Instance
 **
 
-1.  Go to your Nuxeo Platform instance, typically available&nbsp;<span style="line-height: 21.58px;">at</span> <span class="s2" style="line-height: 21.58px;">[http://localhost:8080/nuxeo](http://localhost:8080/nuxeo). If you have decided to work in the Cloud, it will be available at&nbsp;[https://manager.nuxeo.io](https://manager.nuxeo.io/).</span>
+1.  Go to your Nuxeo Platform instance, typically available&nbsp;at <span class="s2">[http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
+    </span>
 2.  Connect as Administrator with Administrator password.
 3.  Click on&nbsp;**Admin Center**&nbsp;>&nbsp;**Update Center**&nbsp;>&nbsp;**Nuxeo Studio**.
 4.  Click on the&nbsp;**Update**&nbsp;button.
     Your logo is updated.
 
-## {{> anchor 'contract-doc-type'}}Step 4 - Create a Contract Document Type&nbsp;
+## {{> anchor 'contract-doc-type'}}Step 3 - Create a Contract Document Type&nbsp;
 
 Here we want to create a document type "Contract" that will hold specific metadata related to the notion of contract: contract owner, starting date, policy.
 
@@ -271,22 +268,21 @@ Here we want to create a document type "Contract" that will hold specific metada
 ### **Deploying Changes on Your Nuxeo Platform Instance
 **
 
-1.  Go to your Nuxeo Platform instance, typically available&nbsp;at&nbsp;<span class="s2">[http://localhost:8080/nuxeo](http://localhost:8080/nuxeo). If you have decided to work in the Cloud, it will be available at&nbsp;[https://manager.nuxeo.io](https://manager.nuxeo.io/).</span>
+1.  Go to your Nuxeo Platform instance, typically available&nbsp;at&nbsp;<span class="s2">[http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
+    </span>
 2.  Connect as Administrator with Administrator password.
 3.  Click on&nbsp;**Admin Center**&nbsp;>&nbsp;**Update Center**&nbsp;>&nbsp;**Nuxeo Studio**.
 4.  Click on the&nbsp;**Update**&nbsp;button.
 5.  Go in a workspace and create a new Contract.
     ![]({{file name='create_contract.png'}} ?w=350,h=271,border=true)
 
+&nbsp;
+
 {{#> callout type='info' }}
 
-You are now ready to use Nuxeo Studio !&nbsp;You can :
+You are now ready to use Nuxeo Studio!&nbsp;You can:
 
-*   Go deeper with learning more of Nuxeo Studio and Nuxeo Platform, by following a&nbsp;[complete tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}})
-*   Go to the next step of this quick start, so as to discover how you can contribute new java development to the server. Click on the Next Step link below.
+*   Go deeper with learning more of Nuxeo Studio and Nuxeo Platform, by following a&nbsp;[complete tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}}).
+*   Go to the next step of this quick start, so as to discover how you can contribute new Java development to the server.
 
 {{/callout}}
-
-&nbsp;
-
-&nbsp;

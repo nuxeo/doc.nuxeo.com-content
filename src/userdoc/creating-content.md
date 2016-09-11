@@ -1,5 +1,9 @@
 ---
 title: Creating Content
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - creation
     - drag-and-drop

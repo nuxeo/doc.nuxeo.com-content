@@ -1,5 +1,9 @@
 ---
 title: Setting up a HA Configuration Using the Nuxeo Platform and PostgreSQL
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - ha
     - clustering

@@ -1,5 +1,9 @@
 ---
 title: REST API Entity Types
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - rest-api
     - blogs

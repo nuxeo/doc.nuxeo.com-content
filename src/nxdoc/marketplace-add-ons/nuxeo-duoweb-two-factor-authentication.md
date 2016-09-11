@@ -1,5 +1,9 @@
 ---
 title: Nuxeo DuoWeb Two-Factor Authentication
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - duo-web-authentication-addon
 confluence:

@@ -1,5 +1,9 @@
 ---
 title: Registering your Nuxeo Instance
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - admin-center
     - update-center
@@ -18,8 +22,13 @@ confluence:
 history:
     - 
         author: Solen Guitter
+        date: '2016-09-08 11:57'
+        message: 'XDOC-857: remove nuxeo.i'
+        version: '30'
+    - 
+        author: Solen Guitter
         date: '2016-07-04 14:32'
-        message: dd since 8.3 mentio
+        message: Add since 8.3 mention
         version: '29'
     - 
         author: Solen Guitter
@@ -171,13 +180,7 @@ The registration process only copies a file on your file system. This enables th
 
 To be able to register, you need to have an [Online Services account](#connect-account-creation).
 
-{{#> callout type='tip' }}
-
-If you're using Nuxeo Cloud, your Nuxeo Platform instance is already registered.
-
-{{/callout}}
-
-Registration can be done during the installation steps using the configuration wizard or at anytime later, through the **Admin** tab or using the&nbsp;[`nuxeoctl` script]({{page page='nuxeoctl-and-control-panel-usage'}}).
+Registration can be done during the installation steps using the configuration wizard or at any time later, through the **Admin** tab or using the&nbsp;[`nuxeoctl` script]({{page page='nuxeoctl-and-control-panel-usage'}}).
 
 Registration does not require an Internet access. If your server cannot connect to the Internet, follow the [offline registration steps](#offline-registration). Otherwise, follow the [online registration steps](#online-registration).
 
@@ -214,7 +217,7 @@ To subscribe to a Nuxeo Online Services trial:
 1.  Go to the [Nuxeo Platform trial registration form](https://connect.nuxeo.com/register/#/).
 2.  Fill in the form. Provide a valid email address or else registration will not be completed.
 3.  Confirm registration by clicking on the link sent to the email address in the previous step.
-    You can now use the Nuxeo Platform online from [Nuxeo Cloud](http://www.nuxeo.com/products/nuxeo-cloud/) or [download it](http://www.nuxeo.com/downloads/) if you want to use it on premises.
+    You can now use the [Nuxeo Platform online](https://doc.nuxeo.com/www.nuxeo.com/downloads#online-trial) or [download it](http://www.nuxeo.com/downloads/) if you want to use it on premises.
 
 ### Registering Online through the Admin Tab {{> anchor 'online-registration'}}
 
@@ -265,7 +268,7 @@ Offline registration can be used when the server does not connect to the Interne
 1.  Log in to the [Nuxeo Online Services portal](http://connect.nuxeo.com).
 2.  In the associated instances, click on your Nuxeo instances link.
     The page listing the associated instances for your project opens.
-3.  Copy the Identifier of the instance you want to register (Identifier is of the form f`dedaf21-be00-412e-b0ab-f2394479d5f8--885dcf60-5a4a-46e8-a904-0123456789ab`).
+3.  Copy the Identifier of the instance you want to register (Identifier is of the form `dedaf21-be00-412e-b0ab-f2394479d5f8--885dcf60-5a4a-46e8-a904-0123456789ab`).
     In the Nuxeo Admin tab, paste this identifier in the CLID field and click on the **Register this instance** button.
     ![]({{file name='AdminCenter-offline-registration-3.png'}} ?w=450,border=true)
     Your instance is registered again and the registration summary is displayed.

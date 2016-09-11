@@ -1,5 +1,9 @@
 ---
 title: Several Document Types vs One Document Type with a Nature Metadata
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - excerpt
 toc: true

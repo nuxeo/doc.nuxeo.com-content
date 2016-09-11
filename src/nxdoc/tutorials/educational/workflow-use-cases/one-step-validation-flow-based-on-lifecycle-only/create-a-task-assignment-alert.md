@@ -1,5 +1,9 @@
 ---
 title: Create a task assignment alert
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - studio-20
     - tuto-automation

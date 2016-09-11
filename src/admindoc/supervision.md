@@ -1,5 +1,9 @@
 ---
 title: Supervision
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 redirect: metrics-and-monitoring
 redirect_source: Metrics and Monitoring
 confluence:

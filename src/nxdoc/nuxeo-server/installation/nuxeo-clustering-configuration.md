@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Clustering Configuration
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - clustering
     - quartz
@@ -20,6 +24,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/34HZ'
     source_link: /display/NXDOC/Nuxeo+Clustering+Configuration
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-05 12:05'
+        message: ''
+        version: '31'
     - 
         author: Solen Guitter
         date: '2016-07-05 08:17'
@@ -306,7 +315,7 @@ If the session affinity can not be restored, for example because the target serv
 
 ### State Management and UI Rendering
 
-The Web UI can be stateful or stateless:
+The UI can be stateful or stateless:
 
 *   Default back office is based on JSF that is stateful
 *   The Nuxeo Platform also provides Stateless UI like WebEngine/Freemarker and AngularJS.

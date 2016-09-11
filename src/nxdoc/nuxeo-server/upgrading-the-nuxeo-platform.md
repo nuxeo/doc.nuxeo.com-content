@@ -1,5 +1,9 @@
 ---
 title: Upgrading the Nuxeo Platform
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - upgrade
     - last-review-20141126

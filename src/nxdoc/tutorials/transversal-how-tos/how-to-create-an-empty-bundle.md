@@ -1,5 +1,9 @@
 ---
 title: How to create an empty bundle
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: Learn the basics of a Nuxeo module and is IDE agnostic.

@@ -1,5 +1,9 @@
 ---
 title: Platform as a Service
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - deployment
     - architecture
@@ -17,6 +21,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/oxg5AQ'
     source_link: /display/NXDOC/Platform+as+a+Service
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-07 09:56'
+        message: ''
+        version: '9'
     - 
         author: Alain Escaffre
         date: '2015-10-13 13:46'
@@ -61,7 +70,7 @@ history:
 ---
 {{! excerpt}}
 
-This document explains how the Nuxeo Platform (and nuxeo.io) can be used to provide an application factory system that allows to instantiate on demand applications for a given configuration.
+This document explains how the Nuxeo Platform can be used to provide an application factory system that allows to instantiate on demand applications for a given configuration.
 
 {{! /excerpt}}
 
@@ -149,7 +158,7 @@ The `nuxeo-multi-tenants` add-on provides a multi-tenant isolation system that a
 *   A user isolation at tenant level: Except for main administrators, users and groups and defined and managed at tenant level.
 *   A data isolation at tenant level: Documents are isolated a on per tenant basis using a security policy and ACLs.
 
-Depending on the way you define a tenant, you could also use completely separated repositories for each tenants (allowing to have physically separated Databases and BinaryStores).
+Depending on the way you define a tenant, you could also use completely separated repositories for each tenant (allowing to have physically separated Databases and BinaryStores).
 
 ![](https://www.lucidchart.com/publicSegments/view/544ff2b8-2e80-4037-a0d8-70490a004d3d/image.png)
 
@@ -159,11 +168,11 @@ The multi-tenant model has some intrinsic limits.
 
 #### All Resources Are Indeed Shared
 
-The first drawback is that since all resources are shared inside the same application, one tenant can create issues by consuming too much resources or creating errors.
+The first drawback is that since all resources are shared inside the same application, one tenant can create issues by consuming too many resources or creating errors.
 
 The application layer can manage some quotas (the platform provides that for the storage for example), but as long as the tenant isolation remains at application level, it is not possible to prohibit one tenant to use too much CPU, memory or bandwidth.
 
-#### Configuration and Customization Has to Be Limited
+#### Configuration and Customization Have to Be Limited
 
 As long as all tenants run inside the same application, the configuration and customization must be limited.
 
@@ -178,9 +187,9 @@ As long as all tenants run inside the same application, the configuration and cu
 
 Concentrating the different projects/customers/tenants on the same application automatically makes it highly critical.
 
-Hosting three non critical applications for three separated continents is easy. But if you run them as three tenants on the same application the maintenance window automatically become very small and the application needs to be HA 24/24 7/7.
+Hosting three non-critical applications for three separated continents is easy. But if you run them as three tenants on the same application the maintenance window automatically become very small and the application needs to be HA 24/24 7/7.
 
-In terms of project constraints, it also means that all projects needs to agree on the upgrade schedule: Sadly, when the number of projects increases, getting that agreement can end up being much more complicated than the actual technical upgrade itself.
+In terms of project constraints, it also means that all projects need to agree on the upgrade schedule: Sadly, when the number of projects increases, getting that agreement can end up being much more complicated than the actual technical upgrade itself.
 
 #### Scalability Issues
 
@@ -192,7 +201,7 @@ With Nuxeo, you have the option of using a per-tenant repository, but in this ca
 
 #### BackUp / Restore
 
-As long as the data isolation is handled at application level, you can not rely on system level backup restore tool, at least, not if you want to restore a data from a particular tenant without restoring the data for all tenants.
+As long as the data isolation is handled at application level, you can not rely on system-level backup restore tool, at least, not if you want to restore a data from a particular tenant without restoring the data for all tenants.
 
 ## nuxeo.io: Platform as a Service
 
@@ -234,7 +243,7 @@ Actually nuxeo.io also provides a web portal that can be used to configure and p
 
 ![](http://arken.io/img/nuxeoioSC3.png)
 
-### High Density Containers
+### High-Density Containers
 
 nuxeo.io use the Docker lightweight container technology to multiplex several application containers on a single host.
 
@@ -257,7 +266,7 @@ To manage this container factory `nuxeo.io` is based on several key components:
     *   Fleet: as manager to distribute services across the cluster
     *   etcd: as distributed registry
 *   Gogeta: as dynamic load balancer
-*   nuxeo.io manager: the Nuxeo based application used to control the whole system
+*   nuxeo.io manager: the Nuxeo-based application used to control the whole system
 
 ![](https://www.lucidchart.com/publicSegments/view/5450599b-5a40-4a34-8243-49f40a005489/image.png)
 
@@ -301,7 +310,7 @@ Here again nuxeo.io provides a clean solution, we just need to have the underlyi
 
 ### Subsidiaries / Regional Deployment
 
-Let's consider a use case where in a large international company each region must have it's own "flavor" of the corporate DAM.
+Let's consider a use case where in a large international company each region must have its own "flavor" of the corporate DAM.
 
 However, when looking in more details, each region should have access to two repositories:
 

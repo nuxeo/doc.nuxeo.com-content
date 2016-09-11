@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 5.3.1 to 5.3.2
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - multiexcerpt
 confluence:

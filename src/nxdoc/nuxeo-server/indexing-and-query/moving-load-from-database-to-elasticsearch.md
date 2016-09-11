@@ -1,5 +1,9 @@
 ---
 title: Moving Load from Database to Elasticsearch
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - elasticsearch
     - query-pageprovider-component

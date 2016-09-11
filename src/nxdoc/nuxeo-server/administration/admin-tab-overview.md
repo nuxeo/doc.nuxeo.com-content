@@ -1,5 +1,9 @@
 ---
 title: Admin Tab Overview
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - admin-center
     - admin-center-component

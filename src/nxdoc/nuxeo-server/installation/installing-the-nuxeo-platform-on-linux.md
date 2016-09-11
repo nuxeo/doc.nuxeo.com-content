@@ -1,5 +1,9 @@
 ---
 title: Installing the Nuxeo Platform on Linux
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - install-linux
     - mg
@@ -22,7 +26,7 @@ history:
     - 
         author: Manon Lumeau
         date: '2016-08-26 15:06'
-        message: 'emove wiki markup '
+        message: ''
         version: '56'
     - 
         author: Solen Guitter
@@ -453,7 +457,7 @@ While setting `nuxeo.tmp.dir` property in nuxeo.conf, we recommend not to use th
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
 
-*   [From the Web UI to Nuxeo Studio]({{page page='from-the-web-ui-to-nuxeo-studio'}})
+*   [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
 *   [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
 *   [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
 

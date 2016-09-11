@@ -1,5 +1,9 @@
 ---
 title: File Download Security Policies
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - security-policy
     - blob-manager-component

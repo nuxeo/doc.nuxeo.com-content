@@ -1,5 +1,9 @@
 ---
 title: Remote Monitoring through HTTP/S
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - monitoring-component
     - excerpt

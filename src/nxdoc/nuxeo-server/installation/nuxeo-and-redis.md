@@ -1,5 +1,9 @@
 ---
 title: Nuxeo and Redis
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - redis
     - rediscomponent

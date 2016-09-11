@@ -1,5 +1,9 @@
 ---
 title: Installing and Setting Up Related Software
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - installation
     - requirements

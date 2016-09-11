@@ -1,5 +1,9 @@
 ---
 title: Upgrade from LTS 2015 to 8.3
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '3343538'

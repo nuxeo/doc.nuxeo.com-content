@@ -1,5 +1,9 @@
 ---
 title: Learning REST API
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - multiexcerpt-include
 toc: true

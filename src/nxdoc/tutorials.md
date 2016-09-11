@@ -1,5 +1,9 @@
 ---
 title: Tutorials
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - home
 confluence:
@@ -14,6 +18,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/dABu'
     source_link: /display/NXDOC/Tutorials
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-05 10:31'
+        message: ix link
+        version: '18'
     - 
         author: Manon Lumeau
         date: '2016-04-15 14:39'
@@ -109,17 +118,17 @@ history:
 
 ### Quick Start Series
 
-*   [Quick Start Dev Guide](http://doc.nuxeo.com/x/monZ)
-*   [From the Web UI to Nuxeo Studio](http://doc.nuxeo.com/x/VANc)
+*   [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
+*   [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
 *   [Quick Overview]({{page page='quick-overview'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Educational
 
-*   [Simple Workflow Example](http://doc.nuxeo.com/x/KhTF)
-*   [Design Tips](http://doc.nuxeo.com/x/Eg7F)
-*   [Understand Expression and Scripting Languages Used in Nuxeo](http://doc.nuxeo.com/x/L4PZ)
+*   [Simple Workflow Example]({{page page='simple-workflow-example'}})
+*   [Design Tips]({{page page='design-tips'}})
+*   [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
 
 {{/panel}}</div></div>
 

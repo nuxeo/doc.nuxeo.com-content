@@ -1,5 +1,9 @@
 ---
 title: Choosing How to Customize the UI
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - excerpt
 toc: true
@@ -174,7 +178,7 @@ The Nuxeo Platform's JSF interface is fully modular and very easy to customize:
 *   Business application,
 *   Document management back office.
 
-More information on the&nbsp;[Studio]({{page space='studio' page='nuxeo-online-services'}})&nbsp;space and on the "[Web UI Framework]({{page page='web-ui-framework'}})" section.
+More information on the&nbsp;[Studio]({{page space='studio' page='nuxeo-online-services'}})&nbsp;space and on the "[JSF UI Framework]({{page page='jsf-ui-framework'}})" section.
 
 ## {{> anchor 'own-application'}}Front Apps
 

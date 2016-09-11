@@ -1,5 +1,9 @@
 ---
 title: Managing Your Nuxeo Application
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 confluence:
     ajs-parent-page-id: '11043048'
     ajs-parent-page-title: Nuxeo Platform User Documentation

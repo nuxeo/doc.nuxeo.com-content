@@ -1,5 +1,9 @@
 ---
 title: Supported Application Servers
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 redirect: compatibility-matrix
 redirect_source: Compatibility Matrix
 confluence:

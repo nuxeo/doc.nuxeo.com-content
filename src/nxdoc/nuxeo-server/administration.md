@@ -1,5 +1,9 @@
 ---
 title: Administration
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 confluence:
     ajs-parent-page-id: '31033314'
     ajs-parent-page-title: Nuxeo Server

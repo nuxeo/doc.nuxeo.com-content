@@ -1,11 +1,13 @@
 ---
 title: Installation
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - multiexcerpt
     - multiexcerpt-include
 toc: true
-review: 
-    date: 2015-12-01
 confluence:
     ajs-parent-page-id: '31033314'
     ajs-parent-page-title: Nuxeo Server
@@ -18,6 +20,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/PQA7'
     source_link: /display/NXDOC/Installation
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-06 14:06'
+        message: ''
+        version: '46'
     - 
         author: Solen Guitter
         date: '2016-05-13 15:04'
@@ -252,10 +259,12 @@ The Nuxeo Platform comes in different packages and can be installed on any opera
 *   a virtual machine image (works on any operating system),
 *   a .deb package (works on Linux Debian and Ubuntu).
 
+## General Installation Process
+
 Installing Nuxeo Platform is done in a few steps:
 
 1.  Have a look at our Hardware and Software Requirements in the section below, as well as our [supported databases]({{page page='supported-databases'}}) and [application servers]({{page page='supported-application-servers'}}). You may also want to read our page regarding [required storage space]({{page page='how-to-estimate-volume-usage'}}).
-2.  [Install and Set up related required software]({{page page='installing-and-setting-up-related-software'}}) (unless you deploy on Amazon where the Image already includes it).
+2.  [Install and Set up related required software]({{page page='installing-and-setting-up-related-software'}}) (unless you deploy on Amazon where the image already includes it).
 3.  Install and start the Nuxeo Platform server.
     To understand how to start a Nuxeo Platform server on those various environments you can read and follow one of our recipes:
     *   [Installing the Nuxeo Platform on Linux]({{page page='installing-the-nuxeo-platform-on-linux'}})

@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 7.10 to 8.1
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 redirect: upgrade-from-lts-2015-to-81
 redirect_source: Upgrade from LTS 2015 to 8.1
 confluence:

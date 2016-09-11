@@ -1,5 +1,9 @@
 ---
 title: CMIS
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - cmis
     - soap
@@ -18,6 +22,16 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/JIAO'
     source_link: /display/NXDOC/CMIS
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-08 13:09'
+        message: ''
+        version: '79'
+    - 
+        author: Solen Guitter
+        date: '2016-09-08 13:04'
+        message: ''
+        version: '78'
     - 
         author: Manon Lumeau
         date: '2016-08-02 15:18'
@@ -414,17 +428,15 @@ Nuxeo supports CMIS through the following modules:
 *   The [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) library (an Apache project to which Nuxeo is a contributor), which is a general-purpose Java library allowing developers to easily write CMIS clients and servers,
 *   Specific Nuxeo OpenCMIS connector bundles, allowing the Nuxeo Platform to be used as a CMIS server with the help of OpenCMIS. The CMIS connector is included in the Nuxeo Platform by default.
 
-## Online Trial
-
-You can start a [Nuxeo Platform online trial](https://connect.nuxeo.com/register/#/) to test the CMIS integration. From your trial instance you can access the different services from the following URLs:
-
-*   Browser Binding root URL:&nbsp;`http://your-instance-url/nuxeo/json/cmis`
-*   AtomPub service document: `http://your-instance-url/nuxeo/atom/cmis`
-*   SOAP WSDL for the repository service: `http://your-instance-url/nuxeo/webservices/cmis/RepositoryService?wsdl`
-
 ## Usage
 
 The following documentation uses `http://localhost:8080/nuxeo` as the URL of the Nuxeo server but you can replace it with `http://your-instance-url/nuxeo` if you have another instance available.
+
+You can access the different services from the following URLs:
+
+*   Browser Binding root URL:&nbsp;`<span class="nolink">http://localhost:8080/nuxeo/json/cmis</span>`
+*   AtomPub service document: `<span class="nolink">http://localhost:8080/nuxeo/atom/cmis</span>`
+*   SOAP WSDL for the repository service: `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/RepositoryService?wsdl</span>`
 
 ### JSON
 
@@ -611,7 +623,7 @@ Here is a working example of a SOAP message to the DiscoveryService:
 
 ### CMIS Clients
 
-Several free clients for CMIS 1.1 are available. The most complete is the [CMIS Workbench](http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html), part of OpenCMIS.
+Several free clients for CMIS 1.1 are available. The most complete isthe [CMIS Workbench](http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html), part of OpenCMIS.
 
 Developers can use the [Chemistry libraries](http://chemistry.apache.org/) to produce their own client (Java, Python, PHP, .NET). Documentation and sample for using OpenCMIS libraries can be found on the [OpenCMIS developer wiki](http://chemistry.apache.org/java/developing/index.html) with also [example code](http://chemistry.apache.org/java/examples/index.html) and [how-to guides](http://chemistry.apache.org/java/how-to/index.html).
 

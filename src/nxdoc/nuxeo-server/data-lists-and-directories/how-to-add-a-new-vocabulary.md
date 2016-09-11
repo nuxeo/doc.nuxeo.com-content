@@ -1,5 +1,9 @@
 ---
 title: How to Add a New Vocabulary
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: Learn how to create a vocabulary using Nuxeo Studio.

@@ -1,5 +1,9 @@
 ---
 title: Python Client
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - python-client
     - client

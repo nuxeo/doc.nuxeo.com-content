@@ -1,5 +1,9 @@
 ---
 title: Using the Java API Server-Side
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - runtimecomponent
 toc: true

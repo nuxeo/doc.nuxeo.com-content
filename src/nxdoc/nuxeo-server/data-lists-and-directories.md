@@ -1,5 +1,9 @@
 ---
 title: Data Lists and Directories
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - ldap
     - sql

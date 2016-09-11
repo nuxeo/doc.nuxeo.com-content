@@ -1,5 +1,9 @@
 ---
 title: Amazon S3 Online Storage
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - amazon-s3
     - binary-manager

@@ -1,5 +1,9 @@
 ---
 title: Microsoft Azure Online Storage
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - excerpt
 toc: true

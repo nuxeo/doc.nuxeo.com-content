@@ -1,5 +1,9 @@
 ---
 title: Available Facets
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - facet
     - core-component

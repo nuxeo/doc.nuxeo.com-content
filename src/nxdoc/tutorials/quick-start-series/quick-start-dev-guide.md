@@ -1,5 +1,9 @@
 ---
 title: Quick Start Dev Guide
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - home
 confluence:

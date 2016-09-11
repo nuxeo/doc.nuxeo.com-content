@@ -1,5 +1,9 @@
 ---
 title: Web UI
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - nuxeo-elements
     - nuxeo-elements-component

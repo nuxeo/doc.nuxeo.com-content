@@ -1,5 +1,9 @@
 ---
 title: Participating to a Topic
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - topic
 toc: true

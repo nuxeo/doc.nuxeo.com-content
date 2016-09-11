@@ -1,5 +1,9 @@
 ---
 title: Automation How-To Index
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 confluence:
     ajs-parent-page-id: '18451738'
     ajs-parent-page-title: Automation
@@ -12,6 +16,16 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/OoMlAQ'
     source_link: /display/NXDOC/Automation+How-To+Index
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 14:29'
+        message: 'everted from v. '
+        version: '6'
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 13:44'
+        message: ''
+        version: '5'
     - 
         author: Solen Guitter
         date: '2014-12-03 15:47'
@@ -34,4 +48,4 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC Studio' label='howto' filter='Topics=Automation'}}}

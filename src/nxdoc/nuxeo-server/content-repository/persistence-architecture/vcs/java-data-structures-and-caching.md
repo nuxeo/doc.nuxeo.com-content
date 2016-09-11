@@ -1,5 +1,9 @@
 ---
 title: Java Data Structures and Caching
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - vcs
     - cache

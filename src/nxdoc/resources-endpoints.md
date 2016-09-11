@@ -1,5 +1,9 @@
 ---
 title: Resources Endpoints
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 redirect: rest-api
 redirect_source: REST API
 confluence:

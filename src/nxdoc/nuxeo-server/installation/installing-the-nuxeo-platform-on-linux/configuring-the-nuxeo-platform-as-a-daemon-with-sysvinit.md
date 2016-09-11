@@ -1,5 +1,9 @@
 ---
 title: Configuring the Nuxeo Platform as a Daemon with SysVinit
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - install-linux
 confluence:

@@ -2,6 +2,10 @@
 title: >-
     How to Change the Default Document Type When Importing a File in the Nuxeo
     Platform?
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - import
     - howto
@@ -20,6 +24,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/IYwZAQ'
     source_link: /pages/viewpage.action?pageId=18451489
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-09-08 09:42'
+        message: ''
+        version: '15'
     - 
         author: Solen Guitter
         date: '2016-08-30 15:37'
@@ -111,11 +120,6 @@ So, to create a document of your own type that, you have to set the&nbsp;`docTyp
     <plugin name="DefaultFileImporter" merge="true" docType="MyCustomFileType" />
 </extension>
 ```
-
-You can consult these pages about the same topic:
-
-*   [Create Your Own Documents on File Drag and Drop blog post](http://www.nuxeo.com/blog/development/2012/05/monday-dev-heaven-fileimporter-plugin/)
-*   [New Document Type in Nuxeo Studio on Nuxeo Answers](http://answers.nuxeo.com/questions/7276/new-document-type-in-nuxeo-studio)
 
 &nbsp;
 

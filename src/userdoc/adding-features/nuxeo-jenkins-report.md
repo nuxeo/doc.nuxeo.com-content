@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Jenkins Report
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - nuxeo-jenkins-report
     - excerpt

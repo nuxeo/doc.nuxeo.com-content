@@ -1,5 +1,9 @@
 ---
 title: Using OAuth2
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - oauth
     - oauth-component

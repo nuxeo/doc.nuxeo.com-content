@@ -1,5 +1,9 @@
 ---
 title: Desktop and Mobile
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 confluence:
     ajs-parent-page-id: '950332'
     ajs-parent-page-title: Developer Documentation Center

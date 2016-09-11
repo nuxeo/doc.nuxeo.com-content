@@ -1,5 +1,9 @@
 ---
 title: Installing a New Package on Your Instance
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - admin-center
     - update-center

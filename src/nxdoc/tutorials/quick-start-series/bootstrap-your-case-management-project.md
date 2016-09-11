@@ -1,5 +1,9 @@
 ---
 title: Bootstrap Your Case Management Project
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - bootstrap
     - excerpt

@@ -1,5 +1,9 @@
 ---
 title: SAML 2.0 Authentication
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - saml-component
     - migration-sample

@@ -1,5 +1,9 @@
 ---
 title: 'First Steps With Studio: Technical Documentation Tutorial'
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - tutorial
     - excerpt

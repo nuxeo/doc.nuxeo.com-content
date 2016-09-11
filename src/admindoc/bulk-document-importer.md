@@ -1,5 +1,9 @@
 ---
 title: Bulk Document Importer
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 redirect: nxdocnuxeo-bulk-document-importer
 redirect_source: 'NXDOC:Nuxeo Bulk Document Importer'
 confluence:

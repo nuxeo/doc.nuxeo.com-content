@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Live Connect
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - live-connect-component
     - university
@@ -16,6 +20,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/EgOIAQ'
     source_link: /display/NXDOC/Nuxeo+Live+Connect
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-05 12:10'
+        message: ''
+        version: '55'
     - 
         author: Anne Jubert
         date: '2016-06-24 13:05'
@@ -314,12 +323,12 @@ Live Connect is designed to allow many implementations. Default implementations 
 Live Connect provides a set of features described below.
 
 *   **File download**: File download is made by redirecting the user's browser to the native download URL of the considered backend.
-*   **Full-text indexation**: The text of the content is extracted and sent to the Elasticsearch index so as to be able to perform native Nuxeo Platform search using NXQL and standard search screens of the Web UI.
+*   **Full-text indexation**: The text of the content is extracted and sent to the Elasticsearch index so as to be able to perform native Nuxeo Platform search using NXQL and standard search screens of the UI.
 *   **File conversion in PDF**, using the provider's conversion system: When a PDF conversion is asked for a Live Connect file, the user's browser is redirected to the provider's direct URL for getting the PDF version.
 *   **File preview**, using native provider's preview.
 *   **Thumbnail generation**, using provider's thumbnail.
 *   **Apps link**: Links that can be used to edit the file in the cloud.
-*   **Update of the document**: If a document is updated on the backend, the reference will be updated (full text index, thumbnail, filename...)
+*   **Update of the document**: If a document is updated on the backend, the reference will be updated (full-text index, thumbnail, filename...)
 *   **Native versioning**: When a version of the document is created in the Nuxeo Platform, a versioning order is sent to the backend so as to make a version of the file on the backend and make sure to be able to get back the file in the future.
 
 Depending on the backend capabilities of the provider, not all features are available.

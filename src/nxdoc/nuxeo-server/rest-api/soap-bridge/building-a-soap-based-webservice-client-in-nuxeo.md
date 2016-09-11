@@ -1,5 +1,9 @@
 ---
 title: Building a SOAP-Based WebService Client in Nuxeo
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - soap
     - soap-component

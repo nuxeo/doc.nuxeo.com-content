@@ -1,5 +1,9 @@
 ---
 title: How to Contribute Picture Conversions
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: Learn how to contribute new picture conversions.

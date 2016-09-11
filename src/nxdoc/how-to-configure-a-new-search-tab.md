@@ -1,5 +1,9 @@
 ---
 title: How to Configure a New Search Tab
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 redirect: how-to-configure-a-new-default-search-form-in-the-search-tab
 redirect_source: How to Configure a New Default Search Form in the Search Tab
 confluence:

@@ -1,5 +1,9 @@
 ---
 title: How to Fetch Documents with a Query on Date Parameters
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: >-

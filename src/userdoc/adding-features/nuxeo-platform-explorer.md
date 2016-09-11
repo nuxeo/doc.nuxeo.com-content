@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Platform Explorer
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 confluence:
     ajs-parent-page-id: '11043055'
     ajs-parent-page-title: Adding Features

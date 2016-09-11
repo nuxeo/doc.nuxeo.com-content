@@ -1,5 +1,9 @@
 ---
 title: Implementing Encryption
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - encryption
     - binary-manager

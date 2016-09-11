@@ -1,5 +1,9 @@
 ---
 title: Deploying Nuxeo on CloudFoundry
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - cloudfoundry
     - cloud-deployment

@@ -1,5 +1,9 @@
 ---
 title: Understanding Bundles Deployment
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 labels:
     - deployment
     - nuxeoctl

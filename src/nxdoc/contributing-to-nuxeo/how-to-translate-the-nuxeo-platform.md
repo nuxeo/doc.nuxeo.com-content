@@ -1,5 +1,9 @@
 ---
 title: How to Translate the Nuxeo Platform
+review:
+    comment: ''
+    date: '2015-12-01'
+    status: ok
 details:
     howto:
         excerpt: Learn how to translate the Nuxeo Platform
