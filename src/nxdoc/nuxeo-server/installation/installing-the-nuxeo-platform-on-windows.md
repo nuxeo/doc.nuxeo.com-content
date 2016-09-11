@@ -22,194 +22,194 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/2YON'
     source_link: /display/NXDOC/Installing+the+Nuxeo+Platform+on+Windows
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-22 15:52'
         message: ''
         version: '38'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 13:41'
         message: ''
         version: '37'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-23 10:34'
         message: ''
         version: '36'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-17 15:51'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-23 14:29'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-23 14:29'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-23 14:16'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 14:06'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 10:59'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-31 15:28'
         message: Only 1 ovf file remains
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-31 15:01'
         message: Added limitations on VM installation
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-31 14:53'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-05 11:23'
         message: Add Checking requirements section
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-15 11:14'
         message: ''
         version: '25'
-    - 
+    -
         author: Harlan Brown
         date: '2013-10-14 16:27'
         message: ''
         version: '24'
-    - 
+    -
         author: Harlan Brown
         date: '2013-10-14 16:13'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 16:00'
         message: ''
         version: '22'
-    - 
+    -
         author: Harlan Brown
         date: '2013-10-14 15:52'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-10 16:23'
         message: ''
         version: '20'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2013-08-23 16:31'
         message: ''
         version: '19'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-07-03 14:37'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-03 11:19'
         message: >-
             Changed recommended path installation from root of C:\ to root of
             any disk
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-28 14:31'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-28 14:31'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-28 14:30'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-28 11:45'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-11-28 09:12'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-11-28 09:12'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-14 11:45'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-14 11:45'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-14 11:45'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-14 11:45'
         message: Added details on VM installation
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-12 23:59'
         message: Added toc
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 11:59'
         message: Added related content
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 11:10'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 10:54'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 10:53'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 10:53'
         message: ''
@@ -311,10 +311,11 @@ The Nuxeo Platform is available as ready-to-use 64b virtual machine images from 
     The [startup wizard]({{page page='configuration-wizard'}}) is displayed to help you configure your application.
 
     {{#> callout type='info' heading='Shell root access'}}
-
+    <div class="callout info nuxeo">
+        <i class="fa fa-info-circle"></i>
     The password for the&nbsp;`root` and&nbsp;`nuxeo` users are generated the first time you start the virtual machine and are displayed on the console.&nbsp;
 
-    {{/callout}}
+    </div>
 
 **Limitations:**
 
