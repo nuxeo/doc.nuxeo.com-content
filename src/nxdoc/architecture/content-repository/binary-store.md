@@ -1,5 +1,9 @@
 ---
 title: Binary Store
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - binarystore
 toc: true

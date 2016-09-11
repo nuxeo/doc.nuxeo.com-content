@@ -1,5 +1,9 @@
 ---
 title: Starting your project with Nuxeo Studio
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '17334418'

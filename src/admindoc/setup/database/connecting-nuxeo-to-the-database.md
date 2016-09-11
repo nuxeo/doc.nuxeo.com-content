@@ -1,5 +1,9 @@
 ---
 title: Connecting Nuxeo to the Database
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - templates
     - database
@@ -254,7 +258,7 @@ By default, the "default" template is enabled on your Nuxeo server (see the [Dat
 
 1.  Open your `nuxeo.conf` file with a text editor.
 
-    {{!-- unmigrated-inline-wiki-markup: {multi-excerpt-include:Setup|name=nuxeo-conf-editor-warning|nopanel=true} --}}
+    {{!-- unmigrated-wiki-markup: {multi-excerpt-include:Setup|name=nuxeo-conf-editor-warning|nopanel=true} --}}
 2.  If needed, uncomment or edit the `nuxeo.templates` parameter and replace `default` with the wanted database template's name.
 3.  Uncomment or edit the parameters below and provide their values:
     *   `nuxeo.db.name`

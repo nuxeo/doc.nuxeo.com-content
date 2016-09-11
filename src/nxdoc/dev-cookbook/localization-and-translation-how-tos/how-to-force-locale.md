@@ -1,5 +1,9 @@
 ---
 title: How to Force Locale
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - localization
 confluence:

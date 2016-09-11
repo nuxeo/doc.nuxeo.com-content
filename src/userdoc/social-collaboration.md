@@ -1,5 +1,9 @@
 ---
 title: Social Collaboration
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '16092549'
     ajs-parent-page-title: Nuxeo Platform User Documentation

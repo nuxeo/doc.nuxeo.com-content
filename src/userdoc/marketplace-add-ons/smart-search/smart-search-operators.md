@@ -1,5 +1,9 @@
 ---
 title: Smart search operators
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - search
     - search-operators

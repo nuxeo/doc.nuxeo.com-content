@@ -1,5 +1,9 @@
 ---
 title: Document Views
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - view_action_list
     - document-tab

@@ -1,5 +1,9 @@
 ---
 title: Dependencies
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334408'
     ajs-parent-page-title: Video

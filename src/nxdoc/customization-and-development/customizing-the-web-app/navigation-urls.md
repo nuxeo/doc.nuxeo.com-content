@@ -1,5 +1,9 @@
 ---
 title: Navigation URLs
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - url
 toc: true

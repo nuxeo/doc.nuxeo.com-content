@@ -1,5 +1,9 @@
 ---
 title: Page Providers without Content Views
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - page-provider
 confluence:

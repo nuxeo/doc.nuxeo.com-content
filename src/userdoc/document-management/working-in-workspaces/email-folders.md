@@ -1,5 +1,9 @@
 ---
 title: Email Folders
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - dm-document
 toc: true

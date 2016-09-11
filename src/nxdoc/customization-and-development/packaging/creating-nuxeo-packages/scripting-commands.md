@@ -1,5 +1,9 @@
 ---
 title: Scripting Commands
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - el
     - scripting

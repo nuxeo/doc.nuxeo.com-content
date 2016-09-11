@@ -1,5 +1,9 @@
 ---
 title: Documents Display Configuration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - layout
     - content-views

@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Android Connector
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334402'
     ajs-parent-page-title: Other UI Frameworks
@@ -105,7 +109,7 @@ Using Automation brings several advantages :
 
 *   Thanks to Operation Chains, you can have a single call executing several operations within the same transaction
 
-![]({{file name='S&eacute;lection_109.png'}} ?w=650,border=true)
+![]({{file name='Selection_109.png'}} ?w=650,border=true)
 
 The heart of Nuxeo SDK for Android is the Nuxeo Automation Client.
 

@@ -1,5 +1,9 @@
 ---
 title: Seam JSF Webapp Limitations
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - jsf
     - seam

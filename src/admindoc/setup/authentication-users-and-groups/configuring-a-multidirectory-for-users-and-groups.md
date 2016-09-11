@@ -1,5 +1,9 @@
 ---
 title: Configuring a Multidirectory for Users and Groups
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '16810077'
     ajs-parent-page-title: 'Authentication, users and groups'

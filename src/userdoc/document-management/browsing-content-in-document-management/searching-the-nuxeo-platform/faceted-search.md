@@ -1,5 +1,9 @@
 ---
 title: Faceted Search
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - search
     - faceted-search

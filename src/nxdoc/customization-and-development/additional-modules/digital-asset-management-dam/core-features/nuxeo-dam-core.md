@@ -1,5 +1,9 @@
 ---
 title: Nuxeo DAM Core
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '17334334'

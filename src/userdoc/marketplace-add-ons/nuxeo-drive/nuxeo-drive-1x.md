@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Drive 1.x
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - marketplace-package
     - nuxeo-drive

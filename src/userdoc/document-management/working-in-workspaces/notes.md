@@ -1,5 +1,9 @@
 ---
 title: Notes
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - dm-document
     - cap-document

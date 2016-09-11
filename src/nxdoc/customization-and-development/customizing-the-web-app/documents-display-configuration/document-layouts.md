@@ -1,5 +1,9 @@
 ---
 title: Document Layouts
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - layout
 confluence:

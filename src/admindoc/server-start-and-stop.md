@@ -1,5 +1,9 @@
 ---
 title: Server Start and Stop
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '16810081'
@@ -231,24 +235,24 @@ Depending on your OS, there are different ways to start the application. The ste
 
 ### Starting Your Application on Windows {{> anchor 'start-windows'}}
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt:name=start_windows} # Open the Nuxeo Control Panel: #* In the folder \{{C:\Nuxeo application}}, double-click on \{{Start Nuxeo.bat}}. #* In the folder \{{C:\Nuxeo application\bin\}}, double-click on \{{nuxeoctl.bat}}. The Nuxeo Control Panel opens. # Click on the *Start* button. Starting the Nuxeo server takes between a few seconds and several minutes, depending on your hardware and the distribution you have chosen to install. When the server is started, the *Start* button becomes a *Stop* button. # Open a browser and type the URL [http://localhost:8080/nuxeo/].{multi-excerpt} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt:name=start_windows} # Open the Nuxeo Control Panel: #* In the folder \{{C:\Nuxeo application}}, double-click on \{{Start Nuxeo.bat}}. #* In the folder \{{C:\Nuxeo application\bin\}}, double-click on \{{nuxeoctl.bat}}. The Nuxeo Control Panel opens. # Click on the *Start* button. Starting the Nuxeo server takes between a few seconds and several minutes, depending on your hardware and the distribution you have chosen to install. When the server is started, the *Start* button becomes a *Stop* button. # Open a browser and type the URL [http://localhost:8080/nuxeo/].{multi-excerpt} --}}
 
 If the server is started for the first time after the installation, the [startup wizard]({{page page='setup#wizard'}}) is displayed so you can select what module you want to install on the platform and help you configure it.
 Otherwise, the login page is displayed so you can use the application.
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt:name=infos_windows} {info} On Windows 7, you need to run the \{{nuxeoctl.bat}} and \{{Start Nuxeo.bat}} commands as an administrator if you haven't installed your Nuxeo application at the root of \{{C:\}} (for instance in \{{C:\Program Files}}). To run them as an administrator, right-click on the command and click on "Run as administrator". {info} On Windows, it is possible to start Nuxeo as a service. Please report the [Installing the Nuxeo Platform as a Windows service] page for guidelines and examples.{multi-excerpt} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt:name=infos_windows} {info} On Windows 7, you need to run the \{{nuxeoctl.bat}} and \{{Start Nuxeo.bat}} commands as an administrator if you haven't installed your Nuxeo application at the root of \{{C:\}} (for instance in \{{C:\Program Files}}). To run them as an administrator, right-click on the command and click on "Run as administrator". {info} On Windows, it is possible to start Nuxeo as a service. Please report the [Installing the Nuxeo Platform as a Windows service] page for guidelines and examples.{multi-excerpt} --}}
 
 ### Starting Your Application on Linux {{> anchor 'start-linux'}}
 
 Nuxeo applications are started using scripts.
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt:name=start_linux}# Launch a terminal and go to your installation directory. # Start the server using the \{{nuxeoctl}} script (located in the \{{bin}} directory): {code}./bin/nuxeoctl gui{code} {tip} The command used to launch the Control Panel may not be executable by default. If it is the case, in the terminal go to the \{{bin}} directory of Nuxeo and type the line below to be able to use it: \{{chmod +x *.sh *ctl}} {tip} The Control Panel opens. # Click on the *Start* button. Starting the Nuxeo server takes between 30 sec and several minutes, depending on your hardware and the distribution you have chosen to install. When the server is started, the *Start* button becomes a *Stop* button. # Open a browser and type the URL [http://localhost:8080/nuxeo/]. If the server is started for the first time after the installation, the [startup wizard|Setup#wizard] is displayed so you can select what module you want to install on the platform and help you configure it. Otherwise, the login page is displayed so you can use the application.{multi-excerpt} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt:name=start_linux}# Launch a terminal and go to your installation directory. # Start the server using the \{{nuxeoctl}} script (located in the \{{bin}} directory): {code}./bin/nuxeoctl gui{code} {tip} The command used to launch the Control Panel may not be executable by default. If it is the case, in the terminal go to the \{{bin}} directory of Nuxeo and type the line below to be able to use it: \{{chmod +x *.sh *ctl}} {tip} The Control Panel opens. # Click on the *Start* button. Starting the Nuxeo server takes between 30 sec and several minutes, depending on your hardware and the distribution you have chosen to install. When the server is started, the *Start* button becomes a *Stop* button. # Open a browser and type the URL [http://localhost:8080/nuxeo/]. If the server is started for the first time after the installation, the [startup wizard|Setup#wizard] is displayed so you can select what module you want to install on the platform and help you configure it. Otherwise, the login page is displayed so you can use the application.{multi-excerpt} --}}
 
 ### Starting Your Application on Mac OS X {{> anchor 'start-macos'}}
 
 Mac OS users can use either the [same steps as Linux users](#start-linux) or some Mac OS convenient commands (see below).
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt:name=start_macosx}# From the Finder, click on "Start Nuxeo.command". You can also drag and drop the start script in the terminal and press Enter. {tip} The command may not be executable by default. If it is the case, in the terminal go to the \{{bin}} directory of Nuxeo and type the line below: \{{chmod +x *.command}} {tip} The Control Panel opens. # Click on the *Start* button. Starting the Nuxeo server takes between 30 sec and several minutes, depending on your hardware and the distribution you have chosen to install. When the server is started, the *Start* button becomes a *Stop* button. # Open a browser and type the URL [http://localhost:8080/nuxeo/]. If the server is started for the first time after the installation, the [startup wizard|Setup#wizard] is displayed so you can select what module you want to install on the platform and help you configure it. Otherwise, the login page is displayed so you can use the application.{multi-excerpt} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt:name=start_macosx}# From the Finder, click on "Start Nuxeo.command". You can also drag and drop the start script in the terminal and press Enter. {tip} The command may not be executable by default. If it is the case, in the terminal go to the \{{bin}} directory of Nuxeo and type the line below: \{{chmod +x *.command}} {tip} The Control Panel opens. # Click on the *Start* button. Starting the Nuxeo server takes between 30 sec and several minutes, depending on your hardware and the distribution you have chosen to install. When the server is started, the *Start* button becomes a *Stop* button. # Open a browser and type the URL [http://localhost:8080/nuxeo/]. If the server is started for the first time after the installation, the [startup wizard|Setup#wizard] is displayed so you can select what module you want to install on the platform and help you configure it. Otherwise, the login page is displayed so you can use the application.{multi-excerpt} --}}
 
 ## Stopping Your Nuxeo Application
 

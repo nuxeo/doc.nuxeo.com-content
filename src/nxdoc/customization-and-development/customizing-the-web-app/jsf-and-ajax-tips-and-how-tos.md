@@ -1,5 +1,9 @@
 ---
 title: JSF and Ajax Tips and How-Tos
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334377'
     ajs-parent-page-title: Customizing the web app

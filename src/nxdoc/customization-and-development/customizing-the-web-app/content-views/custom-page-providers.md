@@ -1,5 +1,9 @@
 ---
 title: Custom Page Providers
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - page-provider
     - content-views

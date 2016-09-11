@@ -1,5 +1,9 @@
 ---
 title: Abandoning a Workflow
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - workflow
 confluence:

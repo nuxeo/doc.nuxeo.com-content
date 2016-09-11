@@ -1,5 +1,9 @@
 ---
 title: Configuring PostgreSQL
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - postgresql
     - database

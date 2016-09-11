@@ -1,5 +1,9 @@
 ---
 title: Platform Key Features Overview
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - reviewed
 toc: true

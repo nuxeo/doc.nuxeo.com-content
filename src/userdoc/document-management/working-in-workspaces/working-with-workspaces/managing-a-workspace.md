@@ -1,5 +1,9 @@
 ---
 title: Managing a Workspace
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - workspace
 confluence:

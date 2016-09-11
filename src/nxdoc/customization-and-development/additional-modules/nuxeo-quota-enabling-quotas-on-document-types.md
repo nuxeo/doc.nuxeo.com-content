@@ -1,5 +1,9 @@
 ---
 title: 'Nuxeo Quota: Enabling Quotas on Document Types'
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - quota
 confluence:

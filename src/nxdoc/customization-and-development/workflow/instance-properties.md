@@ -1,5 +1,9 @@
 ---
 title: Instance Properties
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - workflow
 toc: true

@@ -1,5 +1,9 @@
 ---
 title: Configure a Domain Specific Advanced Search
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

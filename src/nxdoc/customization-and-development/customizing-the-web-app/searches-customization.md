@@ -1,5 +1,9 @@
 ---
 title: Searches Customization
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - search
 confluence:

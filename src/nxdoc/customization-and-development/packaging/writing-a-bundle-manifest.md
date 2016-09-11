@@ -1,5 +1,9 @@
 ---
 title: Writing a bundle manifest
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334304'
     ajs-parent-page-title: Packaging

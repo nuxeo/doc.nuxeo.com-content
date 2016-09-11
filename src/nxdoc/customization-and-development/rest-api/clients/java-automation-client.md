@@ -1,5 +1,9 @@
 ---
 title: Java Automation Client
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - automation
     - 5-6

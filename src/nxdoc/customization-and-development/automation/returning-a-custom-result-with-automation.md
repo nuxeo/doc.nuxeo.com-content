@@ -1,5 +1,9 @@
 ---
 title: Returning a Custom Result with Automation
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334309'
     ajs-parent-page-title: Automation

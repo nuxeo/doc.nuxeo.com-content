@@ -1,5 +1,9 @@
 ---
 title: Using Shibboleth
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - shibboleth
     - authentication

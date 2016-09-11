@@ -1,5 +1,9 @@
 ---
 title: Installing the Nuxeo Platform as a Windows Service
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - windows-service
     - install-windows

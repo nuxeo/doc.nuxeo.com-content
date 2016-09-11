@@ -1,5 +1,9 @@
 ---
 title: Importing Content Using Drag and Drop
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - extensions
     - drag-and-drop

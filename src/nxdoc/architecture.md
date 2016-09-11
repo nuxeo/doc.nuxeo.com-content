@@ -1,5 +1,9 @@
 ---
 title: Architecture
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - todo
 confluence:

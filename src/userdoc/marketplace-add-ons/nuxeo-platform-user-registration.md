@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Platform User Registration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-user-registration
 toc: true

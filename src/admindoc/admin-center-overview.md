@@ -1,5 +1,9 @@
 ---
 title: Admin Center overview
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - admin-center
 toc: true

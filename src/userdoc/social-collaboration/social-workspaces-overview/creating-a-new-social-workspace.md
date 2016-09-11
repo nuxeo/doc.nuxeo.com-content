@@ -1,5 +1,9 @@
 ---
 title: Creating a New Social Workspace
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - social-workspace
 confluence:

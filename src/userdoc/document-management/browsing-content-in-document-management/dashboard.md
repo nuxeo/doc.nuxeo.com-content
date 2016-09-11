@@ -1,5 +1,9 @@
 ---
 title: Dashboard
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - dashboard
 toc: true

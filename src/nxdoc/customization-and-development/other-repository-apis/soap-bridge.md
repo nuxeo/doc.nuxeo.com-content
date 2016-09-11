@@ -1,5 +1,9 @@
 ---
 title: SOAP Bridge
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - soap
 toc: true

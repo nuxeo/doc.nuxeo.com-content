@@ -1,5 +1,9 @@
 ---
 title: Mini Messages Overview
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - mini-messages
 toc: true

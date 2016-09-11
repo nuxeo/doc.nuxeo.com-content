@@ -1,5 +1,9 @@
 ---
 title: Adding an Antivirus
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - antivirus
 toc: true

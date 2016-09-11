@@ -1,5 +1,9 @@
 ---
 title: Installing Live Edit Silently
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - live-edit
 confluence:

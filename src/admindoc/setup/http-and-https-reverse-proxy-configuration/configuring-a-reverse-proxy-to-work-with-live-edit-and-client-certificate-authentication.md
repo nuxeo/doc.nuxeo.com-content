@@ -2,6 +2,10 @@
 title: >-
     Configuring a Reverse Proxy to Work with Live Edit and Client Certificate
     Authentication
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - authentication
     - reverse-proxy

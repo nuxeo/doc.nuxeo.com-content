@@ -1,5 +1,9 @@
 ---
 title: Available installers
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334389'
     ajs-parent-page-title: Nuxeo Distributions

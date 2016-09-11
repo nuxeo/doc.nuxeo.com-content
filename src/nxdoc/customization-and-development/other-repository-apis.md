@@ -1,5 +1,9 @@
 ---
 title: Other Repository APIs
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - api
 confluence:

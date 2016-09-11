@@ -1,5 +1,9 @@
 ---
 title: Managing Deleted Documents
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - delete
 confluence:

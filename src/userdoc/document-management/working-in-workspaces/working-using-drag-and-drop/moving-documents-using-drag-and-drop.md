@@ -1,5 +1,9 @@
 ---
 title: Moving Documents Using Drag and Drop
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - drag-and-drop
 confluence:

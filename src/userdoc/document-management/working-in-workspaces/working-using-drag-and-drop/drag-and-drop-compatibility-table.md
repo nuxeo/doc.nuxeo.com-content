@@ -1,5 +1,9 @@
 ---
 title: Drag and Drop Compatibility Table
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - drag-and-drop
 confluence:

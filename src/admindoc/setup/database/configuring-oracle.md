@@ -1,5 +1,9 @@
 ---
 title: Configuring Oracle
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - oracle
     - database

@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Platform Modules Overview
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - '571'
     - modules

@@ -1,5 +1,9 @@
 ---
 title: Tag Cloud
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - tags
 confluence:

@@ -1,5 +1,9 @@
 ---
 title: Using Nuxeo Gadgets from Other Applications
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - gadgets
 confluence:
@@ -155,7 +159,7 @@ In this page, we will take the example of iGoogle, which is a pretty easy exampl
 
 Before users can use the Nuxeo Platform gadgets in another application, the administrator must authorize this application to access Nuxeo content.
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt-include:Managing authentication with other applications|name=iGoogle_OAuth_steps|nopanel=true} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt-include:Managing authentication with other applications|name=iGoogle_OAuth_steps|nopanel=true} --}}
 
 ## Adding the Nuxeo Gadget in the External Application
 

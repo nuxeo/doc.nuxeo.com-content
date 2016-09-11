@@ -1,5 +1,9 @@
 ---
 title: Registering your Nuxeo Instance
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - update-center
     - admin-center
@@ -16,6 +20,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/FIAAAQ'
     source_link: /display/ADMINDOC58/Registering+your+Nuxeo+Instance
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-08 12:03'
+        message: ''
+        version: '18'
     - 
         author: Solen Guitter
         date: '2016-03-31 15:22'
@@ -103,6 +112,17 @@ history:
         version: '1'
 
 ---
+<div class="row"><div class="column medium-8">
+
+Registering your Nuxeo application with [Nuxeo Connect](http://www.nuxeo.com/products/online-services/) will give you access to a wide range of services, such as:
+
+*   the Update Center, so that you can easily install patches and bug fixes,
+*   a global view of your open support tickets,
+*   the [Nuxeo Marketplace](http://marketplace.nuxeo.com), the app store for the Nuxeo community, that provides an easy and powerful way to add features and plugins to your Nuxeo application,
+*   an interface to update of your Nuxeo application with your Studio configuration, including hot redeploy.
+
+The registration process only copies a file on your file system. This enables the Nuxeo Connect portal to identify the instance among all the registered instances. You can register multiple instances.
+
 ## How to Register
 
 To be able to register, you need to have a [Nuxeo Connect account](#connect-account-creation).
@@ -175,3 +195,5 @@ Offline registration can be used when the server doesn't connect to the Internet
     ![]({{file name='AdminCenter-offline-registration-3.png'}} ?w=450,border=true)
     Your instance is registered again and the registration summary is displayed.
     ![]({{file name='AdminCenter-registration-status.png'}} ?w=450,border=true)
+
+</div><div class="column medium-4">{{#> panel heading='On this page'}} {{/panel}}</div></div>

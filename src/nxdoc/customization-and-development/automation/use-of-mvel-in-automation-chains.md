@@ -1,5 +1,9 @@
 ---
 title: Use of MVEL in Automation Chains
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - mvel
     - scripting

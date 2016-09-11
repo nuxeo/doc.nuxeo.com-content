@@ -1,5 +1,9 @@
 ---
 title: How to Show Theme Fragment Conditionaly
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - theme
     - fragment

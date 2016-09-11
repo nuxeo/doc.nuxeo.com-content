@@ -1,5 +1,9 @@
 ---
 title: Node Properties
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - todo
     - node

@@ -1,5 +1,9 @@
 ---
 title: Setting Publication Targets
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - publication
 confluence:

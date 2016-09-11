@@ -1,5 +1,9 @@
 ---
 title: DAM Bulk Edit
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - bulk-edit
 confluence:

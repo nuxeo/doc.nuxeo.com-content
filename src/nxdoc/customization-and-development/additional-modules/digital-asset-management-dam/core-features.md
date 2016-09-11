@@ -1,5 +1,9 @@
 ---
 title: Core Features
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334501'
     ajs-parent-page-title: Digital Asset Management (DAM)

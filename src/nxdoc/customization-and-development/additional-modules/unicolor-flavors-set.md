@@ -1,5 +1,9 @@
 ---
 title: Unicolor Flavors Set
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - unicolor-flavors-set
 confluence:

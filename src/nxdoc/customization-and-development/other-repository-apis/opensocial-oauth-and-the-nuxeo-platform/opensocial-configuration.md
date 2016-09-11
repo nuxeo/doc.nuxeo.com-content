@@ -1,5 +1,9 @@
 ---
 title: OpenSocial configuration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - opensocial
 confluence:

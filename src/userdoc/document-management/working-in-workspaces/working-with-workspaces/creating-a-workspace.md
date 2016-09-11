@@ -1,5 +1,9 @@
 ---
 title: Creating a Workspace
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - workspace
 toc: true

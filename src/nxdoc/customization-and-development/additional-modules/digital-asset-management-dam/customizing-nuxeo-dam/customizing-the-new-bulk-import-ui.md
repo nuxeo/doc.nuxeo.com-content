@@ -1,5 +1,9 @@
 ---
 title: Customizing the new Bulk Import UI
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - dam
     - bulk-import

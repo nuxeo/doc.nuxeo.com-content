@@ -1,5 +1,9 @@
 ---
 title: Rich User Profile Overview
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - profile
 confluence:

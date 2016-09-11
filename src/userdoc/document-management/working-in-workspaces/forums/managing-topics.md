@@ -1,5 +1,9 @@
 ---
 title: Managing Topics
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - topic
 toc: true

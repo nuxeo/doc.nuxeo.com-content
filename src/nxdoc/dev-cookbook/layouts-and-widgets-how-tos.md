@@ -1,5 +1,9 @@
 ---
 title: Layouts and Widgets How-tos
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - summary-layout
 confluence:

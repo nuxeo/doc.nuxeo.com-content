@@ -1,5 +1,9 @@
 ---
 title: From the old workflow system to the new 5.4 workflow system
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '18449478'
     ajs-parent-page-title: Upgrade from 5.3.2 to 5.4.0

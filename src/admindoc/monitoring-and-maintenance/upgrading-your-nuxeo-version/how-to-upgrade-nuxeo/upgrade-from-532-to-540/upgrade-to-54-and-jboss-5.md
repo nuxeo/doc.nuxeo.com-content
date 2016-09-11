@@ -1,5 +1,9 @@
 ---
 title: Upgrade to 5.4 and JBoss 5
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - toreview
 toc: true

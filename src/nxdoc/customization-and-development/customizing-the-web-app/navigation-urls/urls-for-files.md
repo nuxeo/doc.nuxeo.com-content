@@ -1,5 +1,9 @@
 ---
 title: URLs for Files
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - url
 confluence:

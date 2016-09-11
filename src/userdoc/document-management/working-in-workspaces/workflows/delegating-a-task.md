@@ -1,5 +1,9 @@
 ---
 title: Delegating a Task
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - delegation
 confluence:

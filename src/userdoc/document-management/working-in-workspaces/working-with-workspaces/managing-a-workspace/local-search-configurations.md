@@ -1,5 +1,9 @@
 ---
 title: Local Search Configurations
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - local-configuration
     - faceted-search

@@ -1,5 +1,9 @@
 ---
 title: Redis Configuration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - redis
     - clustering

@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 5.4.1 to 5.4.2 with Oracle
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '16810015'
     ajs-parent-page-title: How to Upgrade Nuxeo

@@ -1,5 +1,9 @@
 ---
 title: Using OAuth
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - oauth
     - authentication
@@ -198,7 +202,7 @@ For example, you may want to use iGoogle as a consumer of some of your Nuxeo Gad
 *   Use RSA1 key as documented [here](http://code.google.com/intl/fr/apis/gadgets/docs/oauth.html#rsa);
 *   Provide in Nuxeo the callback URL [http://oauth.gmodules.com/gadgets/oauthcallback](http://oauth.gmodules.com/gadgets/oauthcallback).
 
-![]({{file name='S&eacute;lection_059.png'}} ?w=500,border=true)
+![]({{file name='Selection_059.png'}} ?w=500,border=true)
 
 #### The Special Case of Nuxeo/Shindig
 

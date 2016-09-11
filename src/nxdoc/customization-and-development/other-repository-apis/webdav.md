@@ -1,5 +1,9 @@
 ---
 title: WebDAV
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - webdav
 confluence:

@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Distributions
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - jetty
     - distribution

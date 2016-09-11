@@ -1,5 +1,9 @@
 ---
 title: Resources Endpoints
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - 5-7-2
     - endpoint

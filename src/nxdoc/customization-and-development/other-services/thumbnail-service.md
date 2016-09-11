@@ -1,5 +1,9 @@
 ---
 title: Thumbnail service
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - thumbnail
     - 5-7-1

@@ -1,5 +1,9 @@
 ---
 title: Migrating my Customized Theme
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - theme
 toc: true

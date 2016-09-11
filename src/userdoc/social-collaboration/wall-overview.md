@@ -1,5 +1,9 @@
 ---
 title: Wall Overview
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - 5-6
     - wall

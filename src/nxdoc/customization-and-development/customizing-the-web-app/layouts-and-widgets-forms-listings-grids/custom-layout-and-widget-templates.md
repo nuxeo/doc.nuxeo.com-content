@@ -1,5 +1,9 @@
 ---
 title: Custom Layout and Widget Templates
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - summary-layout
     - widget

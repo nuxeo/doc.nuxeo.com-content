@@ -1,5 +1,9 @@
 ---
 title: iOS Client
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - ios
 confluence:

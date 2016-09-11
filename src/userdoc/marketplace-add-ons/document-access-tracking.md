@@ -1,5 +1,9 @@
 ---
 title: Document access tracking
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - access-tracking
 confluence:

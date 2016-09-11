@@ -1,5 +1,9 @@
 ---
 title: Tab Designer Widget Types
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - widget-types
 toc: true

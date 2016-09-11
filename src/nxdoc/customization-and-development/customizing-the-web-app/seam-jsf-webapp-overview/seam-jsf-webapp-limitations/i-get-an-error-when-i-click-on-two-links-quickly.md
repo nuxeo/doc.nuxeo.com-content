@@ -1,5 +1,9 @@
 ---
 title: I Get an Error When I Click on Two Links Quickly
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - double-click
 confluence:

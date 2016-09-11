@@ -1,5 +1,9 @@
 ---
 title: Querying and Searching
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334376'
     ajs-parent-page-title: Repository features

@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 5.6 to 5.8
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - 5-7-3
     - 5-7-2

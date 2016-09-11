@@ -1,5 +1,9 @@
 ---
 title: Configuring the Nuxeo Platform as a Daemon on Debian
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - install-linux
 confluence:

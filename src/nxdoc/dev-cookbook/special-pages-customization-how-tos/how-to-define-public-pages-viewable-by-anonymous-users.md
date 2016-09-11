@@ -1,5 +1,9 @@
 ---
 title: How to Define Public Pages (Viewable by Anonymous Users)
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - anonymous
 toc: true

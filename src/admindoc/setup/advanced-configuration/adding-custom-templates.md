@@ -1,5 +1,9 @@
 ---
 title: Adding Custom Templates
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - templates
 confluence:

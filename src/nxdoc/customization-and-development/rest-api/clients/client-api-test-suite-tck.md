@@ -1,5 +1,9 @@
 ---
 title: Client API Test suite (TCK)
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - automation
     - todo
@@ -9,8 +13,8 @@ confluence:
     ajs-parent-page-title: Clients
     ajs-space-key: NXDOC58
     ajs-space-name: 'Nuxeo Platform Developer Documentation - 5.8 '
-    canonical: pages/viewpage.action?pageId=17334476
-    canonical_source: 'https://doc.nuxeo.com/pages/viewpage.action?pageId=17334476'
+    canonical: viewpage.action?pageId=17334476
+    canonical_source: viewpage.action?pageId=17334476
     page_id: '17334476'
     shortlink: zIAIAQ
     shortlink_source: 'https://doc.nuxeo.com/x/zIAIAQ'

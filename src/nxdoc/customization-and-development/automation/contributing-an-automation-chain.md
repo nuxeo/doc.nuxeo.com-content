@@ -1,5 +1,9 @@
 ---
 title: Contributing an Automation Chain
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - automation-chain
     - 5-7-2

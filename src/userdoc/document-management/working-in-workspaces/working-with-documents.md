@@ -1,5 +1,9 @@
 ---
 title: Working with Documents
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lifecyle
 confluence:

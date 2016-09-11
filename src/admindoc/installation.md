@@ -1,5 +1,9 @@
 ---
 title: Installation
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '16810081'
     ajs-parent-page-title: Installation and Administration

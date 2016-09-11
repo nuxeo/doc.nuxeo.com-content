@@ -1,5 +1,9 @@
 ---
 title: Social Workspaces Overview
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - social-workspace
     - dashboard

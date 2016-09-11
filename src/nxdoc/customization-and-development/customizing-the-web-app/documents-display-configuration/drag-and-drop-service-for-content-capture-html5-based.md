@@ -1,5 +1,9 @@
 ---
 title: Drag and Drop Service for Content Capture (HTML5-Based)
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - 5-7-1
     - automation
@@ -11,8 +15,8 @@ confluence:
     ajs-parent-page-title: Documents Display Configuration
     ajs-space-key: NXDOC58
     ajs-space-name: 'Nuxeo Platform Developer Documentation - 5.8 '
-    canonical: pages/viewpage.action?pageId=17334337
-    canonical_source: 'https://doc.nuxeo.com/pages/viewpage.action?pageId=17334337'
+    canonical: viewpage.action?pageId=17334337
+    canonical_source: viewpage.action?pageId=17334337
     page_id: '17334337'
     shortlink: QYAIAQ
     shortlink_source: 'https://doc.nuxeo.com/x/QYAIAQ'

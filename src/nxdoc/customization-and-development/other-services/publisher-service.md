@@ -1,5 +1,9 @@
 ---
 title: Publisher service
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - publishing
 toc: true

@@ -1,5 +1,9 @@
 ---
 title: How to implement an Action
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - bundle
     - manifest

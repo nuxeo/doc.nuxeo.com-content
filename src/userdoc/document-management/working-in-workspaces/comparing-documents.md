@@ -1,5 +1,9 @@
 ---
 title: Comparing Documents
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - comparison
 confluence:

@@ -1,5 +1,9 @@
 ---
 title: 'Actions (Links, Buttons, Icons, Tabs and More)'
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - 5-7-3
     - user-action

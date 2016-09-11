@@ -1,5 +1,9 @@
 ---
 title: Nuxeo and Redis
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - redis
 toc: true

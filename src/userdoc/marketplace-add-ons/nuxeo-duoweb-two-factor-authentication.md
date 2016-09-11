@@ -1,5 +1,9 @@
 ---
 title: Nuxeo DuoWeb Two-Factor Authentication
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '16092550'
     ajs-parent-page-title: Marketplace Add-Ons

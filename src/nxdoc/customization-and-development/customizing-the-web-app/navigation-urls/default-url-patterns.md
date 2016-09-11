@@ -1,5 +1,9 @@
 ---
 title: Default URL Patterns
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - url
 confluence:

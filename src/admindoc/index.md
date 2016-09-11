@@ -1,5 +1,9 @@
 ---
 title: Installation and Administration
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''

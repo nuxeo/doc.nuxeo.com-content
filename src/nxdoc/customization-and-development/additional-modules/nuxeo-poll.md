@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Poll
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334336'
     ajs-parent-page-title: Additional Modules

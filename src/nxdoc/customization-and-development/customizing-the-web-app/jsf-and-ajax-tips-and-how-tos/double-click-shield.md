@@ -1,5 +1,9 @@
 ---
 title: Double Click Shield
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - jquery
     - double-click

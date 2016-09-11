@@ -1,5 +1,9 @@
 ---
 title: Document Management Concepts
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - access-rights
     - section
@@ -378,7 +382,7 @@ history:
 
 ![]({{file name='DM-members-tabs.png'}} ?w=650,border=true)
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt-include:Digital Asset Management Concepts|name=admins-tabs|nopanel=true} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt-include:Digital Asset Management Concepts|name=admins-tabs|nopanel=true} --}}
 
 ![]({{file name='DM-admins-tabs.png'}} ?w=650,border=true)
 

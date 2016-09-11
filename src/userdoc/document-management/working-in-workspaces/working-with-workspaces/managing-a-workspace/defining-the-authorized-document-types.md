@@ -1,5 +1,9 @@
 ---
 title: Defining the Authorized Document Types
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - local-configuration
 toc: true

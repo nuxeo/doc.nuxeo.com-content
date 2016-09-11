@@ -1,5 +1,9 @@
 ---
 title: Participating to a Serial Workflow
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - workflow
 toc: true

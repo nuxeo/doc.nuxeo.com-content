@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Automation client
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334467'
     ajs-parent-page-title: Nuxeo Android Connector

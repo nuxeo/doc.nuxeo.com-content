@@ -1,5 +1,9 @@
 ---
 title: Content Automation
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - automation-chain
     - 5-7-2

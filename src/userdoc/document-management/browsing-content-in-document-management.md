@@ -1,5 +1,9 @@
 ---
 title: Browsing Content in Document Management
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '16092644'
     ajs-parent-page-title: Document Management

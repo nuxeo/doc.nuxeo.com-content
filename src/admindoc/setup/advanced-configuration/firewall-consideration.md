@@ -1,5 +1,9 @@
 ---
 title: Firewall Consideration
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '16809993'
     ajs-parent-page-title: Advanced Configuration

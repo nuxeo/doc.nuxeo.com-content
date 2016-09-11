@@ -1,5 +1,9 @@
 ---
 title: How to track the performances of your platform
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - funkload
     - link-update

@@ -1,5 +1,9 @@
 ---
 title: Editing Content
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - editing
     - metadata

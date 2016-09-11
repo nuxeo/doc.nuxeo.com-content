@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Groups and Rights Audit
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-groups-rights-audit
     - export

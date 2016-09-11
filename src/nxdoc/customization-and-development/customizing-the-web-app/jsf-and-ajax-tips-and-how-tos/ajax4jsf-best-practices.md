@@ -1,5 +1,9 @@
 ---
 title: Ajax4jsf Best Practices
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - a4j
     - ajax4jsf

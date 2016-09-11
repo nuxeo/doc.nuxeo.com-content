@@ -1,5 +1,9 @@
 ---
 title: Digital Asset Management
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - dam
 confluence:

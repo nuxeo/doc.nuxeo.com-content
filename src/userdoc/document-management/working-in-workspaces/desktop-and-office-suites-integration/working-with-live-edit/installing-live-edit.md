@@ -1,5 +1,9 @@
 ---
 title: Installing Live Edit
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - live-edit
 toc: true

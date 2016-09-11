@@ -1,5 +1,9 @@
 ---
 title: How to Override a Default Style
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - theme
     - style

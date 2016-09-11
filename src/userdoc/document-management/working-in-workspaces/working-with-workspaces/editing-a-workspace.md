@@ -1,5 +1,9 @@
 ---
 title: Editing a Workspace
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - metadata
     - workspace
@@ -133,7 +137,7 @@ To edit a workspace, you need to have Write right on the workspace.
 
 When you edit a workspace, you can edit its properties (title and description) and its metadata. The metadata of workspaces are the same as for all the other documents:
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt-include:Editing content|name=metadata|nopanel=true} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt-include:Editing content|name=metadata|nopanel=true} --}}
 
 **To edit a workspace:**
 

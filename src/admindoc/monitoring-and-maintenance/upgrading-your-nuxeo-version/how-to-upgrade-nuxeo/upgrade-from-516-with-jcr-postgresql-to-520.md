@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 5.1.6 with JCR + PostgreSQL to 5.2.0
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '16810015'
     ajs-parent-page-title: How to Upgrade Nuxeo

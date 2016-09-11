@@ -1,5 +1,9 @@
 ---
 title: Trust Store and Key Store Configuration
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '17334384'

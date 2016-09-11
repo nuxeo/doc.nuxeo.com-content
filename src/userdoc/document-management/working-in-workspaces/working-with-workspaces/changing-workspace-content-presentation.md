@@ -1,5 +1,9 @@
 ---
 title: Changing Workspace Content Presentation
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - 5-7-1
     - thumbnail

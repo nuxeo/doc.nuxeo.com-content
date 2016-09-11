@@ -1,5 +1,9 @@
 ---
 title: How to Let User Set Rights on Non Folderish Documents
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '18449899'
     ajs-parent-page-title: Actions and Filters How-tos

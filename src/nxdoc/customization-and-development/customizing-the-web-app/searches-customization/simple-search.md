@@ -1,5 +1,9 @@
 ---
 title: Simple Search
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - search
     - simple-search

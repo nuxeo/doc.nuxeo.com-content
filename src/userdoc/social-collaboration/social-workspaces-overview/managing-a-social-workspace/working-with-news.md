@@ -1,5 +1,9 @@
 ---
 title: Working with News
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - news
 confluence:

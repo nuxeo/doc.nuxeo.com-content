@@ -1,5 +1,9 @@
 ---
 title: 'OpenSocial, OAuth and the Nuxeo Platform'
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - opensocial
     - gadget

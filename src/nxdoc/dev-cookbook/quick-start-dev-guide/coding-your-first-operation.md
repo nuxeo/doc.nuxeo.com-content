@@ -1,5 +1,9 @@
 ---
 title: Coding your first operation
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - operation
 toc: true

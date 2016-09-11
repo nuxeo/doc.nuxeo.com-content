@@ -1,5 +1,9 @@
 ---
 title: Extension points configuration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - reviewed
     - extension-point

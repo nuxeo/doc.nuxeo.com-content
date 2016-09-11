@@ -1,5 +1,9 @@
 ---
 title: JSF and Javascript
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334513'
     ajs-parent-page-title: JSF and Ajax Tips and How-Tos

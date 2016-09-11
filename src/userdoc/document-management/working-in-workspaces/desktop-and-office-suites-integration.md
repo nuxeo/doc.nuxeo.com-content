@@ -1,5 +1,9 @@
 ---
 title: Desktop & Office Suites Integration
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '16092666'
     ajs-parent-page-title: Working in Workspaces

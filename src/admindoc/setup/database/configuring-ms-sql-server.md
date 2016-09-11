@@ -1,5 +1,9 @@
 ---
 title: Configuring MS SQL Server
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - database
     - sqlserver

@@ -1,5 +1,9 @@
 ---
 title: Installing the Nuxeo Platform on Linux
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - install-linux
 toc: true
@@ -205,7 +209,7 @@ history:
 ---
 ## How to Install a Nuxeo Virtual Machine Image
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt-include:Installing the Nuxeo Platform on Windows|name=install-vm|nopanel=true} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt-include:Installing the Nuxeo Platform on Windows|name=install-vm|nopanel=true} --}}
 
 ## How to Install the Nuxeo Platform from the APT Repository for Debian and Ubuntu
 
@@ -230,7 +234,7 @@ For the examples below, let's say you are using Ubuntu 12.04 LTS ("precise") and
 
 &nbsp;
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt:name=apt-repo-install-UI} {note} This requires X11. {note} # Edit the "Software sources" (run "\{{gksudo software-properties-gtk}}",use the Unity Dash or browse "\{{System/Administration/Software Sources}}" Gnome 2 menu). # [Download the Nuxeo key|http://apt.nuxeo.org/nuxeo.key] and import it in the "Authentication" tab. # Add the Nuxeo APT repository: on the "Other Software" tab, add "\{{deb}} \{{[http://apt.nuxeo.org/]}} \{{precise releases}}" to the sources. (if you're using another version of Ubuntu, replace precise by the adequate name, for instance *raring* for Ubuntu 13.04) # Click on:{html}[apt://nuxeo](apt://nuxeo){html}. # Follow the instructions displayed. If it's your first install, you can configure: #* the bind address, #* the port, #* the database (a preconfigured PostgreSQL database is suggested by default). The platform is installed as a service. It is automatically started and set to automatically start at boot. # Open a browser and type the URL [http://localhost:8080/nuxeo/]. The [startup wizard|Setup#Setup-wizard] is displayed so you can setup your Nuxeo platform and select the module you want to install.{multi-excerpt} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt:name=apt-repo-install-UI} {note} This requires X11. {note} # Edit the "Software sources" (run "\{{gksudo software-properties-gtk}}",use the Unity Dash or browse "\{{System/Administration/Software Sources}}" Gnome 2 menu). # [Download the Nuxeo key|http://apt.nuxeo.org/nuxeo.key] and import it in the "Authentication" tab. # Add the Nuxeo APT repository: on the "Other Software" tab, add "\{{deb}} \{{[http://apt.nuxeo.org/]}} \{{precise releases}}" to the sources. (if you're using another version of Ubuntu, replace precise by the adequate name, for instance *raring* for Ubuntu 13.04) # Click on:{html}[apt://nuxeo](apt://nuxeo){html}. # Follow the instructions displayed. If it's your first install, you can configure: #* the bind address, #* the port, #* the database (a preconfigured PostgreSQL database is suggested by default). The platform is installed as a service. It is automatically started and set to automatically start at boot. # Open a browser and type the URL [http://localhost:8080/nuxeo/]. The [startup wizard|Setup#Setup-wizard] is displayed so you can setup your Nuxeo platform and select the module you want to install.{multi-excerpt} --}}
 
 ### Installing from the APT Sources from the Terminal
 

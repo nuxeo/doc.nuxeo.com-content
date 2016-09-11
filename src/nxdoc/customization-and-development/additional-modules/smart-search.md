@@ -1,5 +1,9 @@
 ---
 title: Smart Search
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - smart-search
 confluence:

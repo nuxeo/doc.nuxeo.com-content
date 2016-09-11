@@ -1,5 +1,9 @@
 ---
 title: Pictures
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - pictures
 toc: true

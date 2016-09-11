@@ -1,5 +1,9 @@
 ---
 title: Creating a Nuxeo Static WAR
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - static-war
     - war

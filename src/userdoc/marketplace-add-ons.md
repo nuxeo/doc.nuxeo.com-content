@@ -1,5 +1,9 @@
 ---
 title: Marketplace Add-Ons
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - marketplace
 confluence:

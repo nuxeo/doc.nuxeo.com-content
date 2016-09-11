@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Security Hotfixes
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '16810051'

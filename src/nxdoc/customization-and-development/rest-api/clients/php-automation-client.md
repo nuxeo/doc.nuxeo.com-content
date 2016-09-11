@@ -1,5 +1,9 @@
 ---
 title: PHP Automation Client
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '17334278'

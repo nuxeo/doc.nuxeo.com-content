@@ -1,5 +1,9 @@
 ---
 title: Browsing and Searching Assets
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - search
     - tagging

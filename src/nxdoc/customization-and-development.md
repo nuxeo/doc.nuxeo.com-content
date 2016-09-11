@@ -1,5 +1,9 @@
 ---
 title: Customization and Development
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - dev-guide
 confluence:

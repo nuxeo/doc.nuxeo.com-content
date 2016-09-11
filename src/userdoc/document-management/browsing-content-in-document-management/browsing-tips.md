@@ -1,5 +1,9 @@
 ---
 title: Browsing Tips
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - tips
 toc: true

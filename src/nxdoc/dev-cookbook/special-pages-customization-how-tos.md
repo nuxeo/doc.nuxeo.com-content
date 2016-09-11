@@ -1,5 +1,9 @@
 ---
 title: Special Pages Customization How-Tos
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334435'
     ajs-parent-page-title: Dev Cookbook

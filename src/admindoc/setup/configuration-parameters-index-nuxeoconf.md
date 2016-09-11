@@ -1,5 +1,9 @@
 ---
 title: Configuration Parameters Index (nuxeo.conf)
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - properties
     - nuxeo_conf

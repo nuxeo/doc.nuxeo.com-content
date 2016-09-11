@@ -1,5 +1,9 @@
 ---
 title: Supported Databases
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '16810061'
     ajs-parent-page-title: Hardware and Software Requirements

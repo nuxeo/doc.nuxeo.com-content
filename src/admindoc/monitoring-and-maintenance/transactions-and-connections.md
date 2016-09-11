@@ -1,5 +1,9 @@
 ---
 title: Transactions and Connections
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - logs
     - transaction

@@ -1,5 +1,9 @@
 ---
 title: Installing Drag and Drop Extensions
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - extensions
     - drag-and-drop

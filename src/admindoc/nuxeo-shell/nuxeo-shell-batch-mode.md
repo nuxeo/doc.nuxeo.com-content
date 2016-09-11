@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Shell Batch Mode
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - shell
 toc: true

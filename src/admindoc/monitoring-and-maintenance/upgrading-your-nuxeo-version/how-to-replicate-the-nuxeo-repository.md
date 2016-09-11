@@ -1,5 +1,9 @@
 ---
 title: How to Replicate the Nuxeo Repository
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - replication
 toc: true

@@ -1,5 +1,9 @@
 ---
 title: More Information on Document Resources Endpoints
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334312'
     ajs-parent-page-title: Resources Endpoints

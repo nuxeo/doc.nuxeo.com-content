@@ -1,5 +1,9 @@
 ---
 title: Upgrading your Nuxeo Version
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - upgrade
 confluence:

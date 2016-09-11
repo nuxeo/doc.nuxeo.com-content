@@ -1,5 +1,9 @@
 ---
 title: Package Manifest
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334494'
     ajs-parent-page-title: Creating Nuxeo Packages

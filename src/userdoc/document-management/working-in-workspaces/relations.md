@@ -1,5 +1,9 @@
 ---
 title: Relations
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - relations
 confluence:

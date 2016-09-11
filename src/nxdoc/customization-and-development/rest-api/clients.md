@@ -1,5 +1,9 @@
 ---
 title: Clients
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334531'
     ajs-parent-page-title: REST API

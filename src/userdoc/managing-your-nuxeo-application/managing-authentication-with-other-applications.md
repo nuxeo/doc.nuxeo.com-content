@@ -1,5 +1,9 @@
 ---
 title: Managing Authentication with Other Applications
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - gadgets
     - admin-center

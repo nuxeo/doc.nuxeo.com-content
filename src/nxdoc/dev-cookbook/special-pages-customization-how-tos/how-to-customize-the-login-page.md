@@ -1,5 +1,9 @@
 ---
 title: How to Customize the Login Page
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - login-page
 confluence:

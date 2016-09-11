@@ -1,5 +1,9 @@
 ---
 title: Applying a Preset Look to a Space
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - presentation
     - theme

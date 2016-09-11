@@ -1,5 +1,9 @@
 ---
 title: Android Client
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334278'
     ajs-parent-page-title: Clients

@@ -1,5 +1,9 @@
 ---
 title: Content Views
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - 5-7-1
     - content-views

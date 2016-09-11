@@ -1,5 +1,9 @@
 ---
 title: Enabling Drag and Drop for Internet Explorer
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - drag-and-drop
 confluence:

@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Multi-Tenant
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - marketplace-package
     - multi-tenant

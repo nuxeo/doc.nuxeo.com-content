@@ -1,5 +1,9 @@
 ---
 title: Nuxeo jBPM
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-jbpm
 confluence:

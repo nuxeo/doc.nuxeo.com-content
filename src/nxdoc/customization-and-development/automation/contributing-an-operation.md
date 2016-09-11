@@ -1,5 +1,9 @@
 ---
 title: Contributing an Operation
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - operation
 toc: true

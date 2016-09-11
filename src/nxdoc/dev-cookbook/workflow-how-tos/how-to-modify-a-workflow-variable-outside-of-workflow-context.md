@@ -1,5 +1,9 @@
 ---
 title: How to modify a workflow variable outside of workflow context
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - workflow
     - event

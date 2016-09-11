@@ -1,5 +1,9 @@
 ---
 title: Event Bus
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334300'
     ajs-parent-page-title: Architecture

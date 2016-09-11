@@ -1,5 +1,9 @@
 ---
 title: Deploying your project on the server
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '17334418'

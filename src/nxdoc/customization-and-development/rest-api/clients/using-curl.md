@@ -1,5 +1,9 @@
 ---
 title: Using cURL
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - curl
 confluence:

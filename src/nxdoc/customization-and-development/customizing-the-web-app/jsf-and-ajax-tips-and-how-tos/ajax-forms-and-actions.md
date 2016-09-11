@@ -1,5 +1,9 @@
 ---
 title: Ajax Forms and Actions
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - ajax
 toc: true

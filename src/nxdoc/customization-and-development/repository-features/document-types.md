@@ -1,5 +1,9 @@
 ---
 title: Document types
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - document-type
     - facelet

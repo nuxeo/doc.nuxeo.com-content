@@ -1,5 +1,9 @@
 ---
 title: Publishing Documents
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - publication
 toc: true

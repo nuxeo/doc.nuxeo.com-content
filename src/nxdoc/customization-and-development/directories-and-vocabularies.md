@@ -1,5 +1,9 @@
 ---
 title: Directories and Vocabularies
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - vocabulary
     - directory

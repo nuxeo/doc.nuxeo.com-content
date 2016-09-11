@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Deployment Model
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - deployment
     - nuxeoctl

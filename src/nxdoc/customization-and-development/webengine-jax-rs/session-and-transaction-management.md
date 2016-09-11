@@ -1,5 +1,9 @@
 ---
 title: Session and Transaction Management
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '17334372'

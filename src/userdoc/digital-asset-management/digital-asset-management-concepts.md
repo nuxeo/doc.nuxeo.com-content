@@ -1,5 +1,9 @@
 ---
 title: Digital Asset Management Concepts
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - module-concepts
 toc: true
@@ -255,6 +259,6 @@ The user interface is divided in three parts, as shown below:
 
 The DAM access rights are:
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt:name=DAM-access-rights} || Right || Actions in DAM \\ || | Read | Consult content \\ Comment documents \\ Annotate documents \\ | | Write | Import documents \\ Edit documents \\ + Read actions \\ | | Everything | Manage access rights \\ + Write and Read actions | | Remove | Delete documents \\ {tip}The Remove permission is most intended to be denied, so as to restrict the actions available to users with "Write" permission.{tip}| {multi-excerpt} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt:name=DAM-access-rights} || Right || Actions in DAM \\ || | Read | Consult content \\ Comment documents \\ Annotate documents \\ | | Write | Import documents \\ Edit documents \\ + Read actions \\ | | Everything | Manage access rights \\ + Write and Read actions | | Remove | Delete documents \\ {tip}The Remove permission is most intended to be denied, so as to restrict the actions available to users with "Write" permission.{tip}| {multi-excerpt} --}}
 
 The [management of access rights]({{page page='managing-access-rights'}}) to the DAM module takes place from the Asset Library's Document Management interface.

@@ -1,5 +1,9 @@
 ---
 title: How to Customize the Error Page
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - error-page
 confluence:

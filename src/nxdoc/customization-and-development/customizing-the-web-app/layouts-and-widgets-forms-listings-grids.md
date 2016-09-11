@@ -1,5 +1,9 @@
 ---
 title: 'Layouts and Widgets (Forms, Listings, Grids)'
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - layouts
     - widgets

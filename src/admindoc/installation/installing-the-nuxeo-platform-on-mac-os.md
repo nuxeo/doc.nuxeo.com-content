@@ -1,5 +1,9 @@
 ---
 title: Installing the Nuxeo Platform on Mac OS
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '16810055'
     ajs-parent-page-title: Installation
@@ -128,4 +132,4 @@ You want to do a complete installation, compatible for a production environment?
 
 ## How to install a Nuxeo Virtual Machine Image
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt-include:Installing the Nuxeo Platform on Windows|name=install-vm|nopanel=true} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt-include:Installing the Nuxeo Platform on Windows|name=install-vm|nopanel=true} --}}

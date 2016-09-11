@@ -1,5 +1,9 @@
 ---
 title: Component Model
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - bundle
     - extension-point

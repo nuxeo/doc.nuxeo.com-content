@@ -1,5 +1,9 @@
 ---
 title: Adding Custom LDAP Fields to the UI
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - ldap
 confluence:

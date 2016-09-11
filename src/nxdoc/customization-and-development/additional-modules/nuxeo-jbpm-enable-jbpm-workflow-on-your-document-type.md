@@ -1,5 +1,9 @@
 ---
 title: 'Nuxeo jBPM: Enable jBPM Workflow on Your Document Type'
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - howto
     - create-task-operation

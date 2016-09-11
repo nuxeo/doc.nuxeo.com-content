@@ -1,5 +1,9 @@
 ---
 title: Dev Cookbook
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334400'
     ajs-parent-page-title: Developer Documentation Center

@@ -1,5 +1,9 @@
 ---
 title: Data Lists and Directories
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '17334300'
     ajs-parent-page-title: Architecture
@@ -57,7 +61,7 @@ These data can be:
 
 Basically we try to map all data that can be manipulated like record via directories. For that, directories provide a simple CRUD API and an abstraction on the actual implementation. This means that the services of the platform do not have to worry about where and how the data is stored, they just access the API.
 
-![]({{file name='S&eacute;lection_026.png' page='platform-apis'}} ?w=650,h=290,border=true)
+![]({{file name='Selection_026.png' page='platform-apis'}} ?w=650,h=290,border=true)
 
 Directories comes with several implementations:
 

@@ -1,5 +1,9 @@
 ---
 title: Nuxeo RSS Reader
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - rss-reader
 confluence:

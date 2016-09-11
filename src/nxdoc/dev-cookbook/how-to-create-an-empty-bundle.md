@@ -1,5 +1,9 @@
 ---
 title: How to create an empty bundle
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - bundle
     - customization

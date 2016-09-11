@@ -1,5 +1,9 @@
 ---
 title: Deleting a Workspace
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - delete
     - workspace

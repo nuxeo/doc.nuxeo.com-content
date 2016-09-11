@@ -1,5 +1,9 @@
 ---
 title: Counting documents
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '16810080'
     ajs-parent-page-title: Monitoring and Maintenance

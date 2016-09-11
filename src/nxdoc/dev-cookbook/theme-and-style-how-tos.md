@@ -1,5 +1,9 @@
 ---
 title: Theme and Style How-Tos
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - theme
     - style

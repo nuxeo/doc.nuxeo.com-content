@@ -1,5 +1,9 @@
 ---
 title: Seam JSF Webapp Overview
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - todo
     - jsf

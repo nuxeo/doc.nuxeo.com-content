@@ -1,5 +1,9 @@
 ---
 title: Actions and Filters How-tos
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - user-action
     - action

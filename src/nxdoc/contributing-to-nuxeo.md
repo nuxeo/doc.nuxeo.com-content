@@ -1,5 +1,9 @@
 ---
 title: Contributing to Nuxeo
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - git
 toc: true

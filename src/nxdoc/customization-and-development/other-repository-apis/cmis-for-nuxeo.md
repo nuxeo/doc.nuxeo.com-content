@@ -1,5 +1,9 @@
 ---
 title: CMIS for Nuxeo
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - soap
     - cmis

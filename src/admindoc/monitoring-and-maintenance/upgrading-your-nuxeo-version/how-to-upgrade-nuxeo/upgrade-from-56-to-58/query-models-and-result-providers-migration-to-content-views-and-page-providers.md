@@ -2,6 +2,10 @@
 title: >-
     Query Models and Result Providers Migration to Content Views and Page
     Providers
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '16810043'

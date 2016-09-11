@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Shared Bookmarks
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - shared-bookmarks
 confluence:

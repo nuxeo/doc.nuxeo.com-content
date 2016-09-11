@@ -1,5 +1,9 @@
 ---
 title: How to Add a New Style to Default Pages
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - style
 confluence:

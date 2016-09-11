@@ -1,5 +1,9 @@
 ---
 title: JSF number of views configuration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - jsf
     - 5-7-2

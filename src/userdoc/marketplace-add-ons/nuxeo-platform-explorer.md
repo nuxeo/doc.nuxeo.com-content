@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Platform Explorer
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - dm-540
 confluence:

@@ -1,5 +1,9 @@
 ---
 title: Exporting Assets
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - export
 toc: true
