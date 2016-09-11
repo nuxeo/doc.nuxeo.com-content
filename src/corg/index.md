@@ -16,92 +16,84 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/B4BH'
     source_link: /display/CORG/Nuxeo+Core+Developer+Guide
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 15:05'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-05 16:18'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-28 17:17'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-28 15:53'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-28 15:53'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-05 11:33'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-05 10:04'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-05 16:03'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-05 16:03'
         message: Added downloadable PDF
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 16:32'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 16:11'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 16:11'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 16:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 16:04'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 16:00'
         message: ''
         version: '1'
 
 ---
-<div class="row"><div class="column medium-8">{{#> panel type='primary'}}
-
-<span style="color: rgb(255,255,255);">Welcome to the Nuxeo Core Developer Guide!</span>
-
-{{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
-
-![]({{file name='pdf-16.png' space='alldoc' page='nuxeo-downloadable-documentation'}} ?w=16,h=16) [Download this documentation in PDF]({{file name='Nuxeo_Core_dev_guide.pdf' space='alldoc' page='nuxeo-downloadable-documentation'}})
-
-{{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### [Developer Environment Setup]({{page page='developer-environment-setup'}})
 

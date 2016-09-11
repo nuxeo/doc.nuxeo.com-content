@@ -16,37 +16,29 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/fAcuAQ'
     source_link: /display/Studio/Nuxeo+Studio
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-12 09:01'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-30 17:00'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-15 16:07'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-15 16:06'
         message: ''
         version: '1'
 
 ---
-<div class="row"><div class="column medium-8">{{#> panel type='primary'}}
-
-[Try Studio now for free!](https://connect.nuxeo.com/register/#/)
-
-{{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
-
-![]({{file name='pdf-16.png' space='alldoc' page='nuxeo-downloadable-documentation'}} ?w=16,h=16) [Download this documentation in PDF]({{file name='Nuxeo_Studio_documentation.pdf' space='alldoc' page='nuxeo-downloadable-documentation'}})
-
-{{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Getting started
 
