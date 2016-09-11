@@ -1,5 +1,9 @@
 ---
 title: What is Needed to Design a REST API
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - rest-api
 toc: true

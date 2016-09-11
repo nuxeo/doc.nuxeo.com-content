@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Online Services Portal
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '1409040'
     ajs-parent-page-title: Nuxeo Online Services

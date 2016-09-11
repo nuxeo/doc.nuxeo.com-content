@@ -1,5 +1,9 @@
 ---
 title: Installing Git
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - git
 toc: true

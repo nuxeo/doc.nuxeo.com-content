@@ -1,5 +1,9 @@
 ---
 title: Suivi des tickets client
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: studiosuivi-des-tickets-client
 redirect_source: 'Studio:Suivi des tickets client'
 confluence:

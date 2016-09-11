@@ -1,5 +1,9 @@
 ---
 title: Configuring a Nuxeo Online Services Account
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - studio-project
     - howto

@@ -1,5 +1,9 @@
 ---
 title: Automation Scripting
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - automation
     - javascript

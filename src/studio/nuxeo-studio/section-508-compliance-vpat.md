@@ -1,5 +1,9 @@
 ---
 title: Section 508 Compliance (VPAT)
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-6-0
 confluence:

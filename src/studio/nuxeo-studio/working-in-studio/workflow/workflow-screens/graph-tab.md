@@ -1,5 +1,9 @@
 ---
 title: Graph tab
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - graph
     - content-review-6-0

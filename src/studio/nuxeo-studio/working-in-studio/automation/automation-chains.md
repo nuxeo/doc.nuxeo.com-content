@@ -1,5 +1,9 @@
 ---
 title: Automation Chains
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - automation-chain
     - content-review-6-0

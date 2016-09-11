@@ -1,19 +1,44 @@
 ---
-title: Mercurial usage
+title: Mercurial Usage
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - mercurial
+toc: true
 confluence:
     ajs-parent-page-id: '3868947'
     ajs-parent-page-title: Development Tools and Process
     ajs-space-key: CORG
     ajs-space-name: Core Developer Guide
-    canonical: Mercurial+usage
-    canonical_source: 'https://doc.nuxeo.com/display/CORG/Mercurial+usage'
+    canonical: Mercurial+Usage
+    canonical_source: 'https://doc.nuxeo.com/display/CORG/Mercurial+Usage'
     page_id: '3868951'
     shortlink: Fwk7
     shortlink_source: 'https://doc.nuxeo.com/x/Fwk7'
-    source_link: /display/CORG/Mercurial+usage
+    source_link: /display/CORG/Mercurial+Usage
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-09-07 15:13'
+        message: ''
+        version: '22'
+    - 
+        author: Manon Lumeau
+        date: '2016-09-07 10:03'
+        message: ''
+        version: '21'
+    - 
+        author: Manon Lumeau
+        date: '2016-09-07 10:02'
+        message: ''
+        version: '20'
+    - 
+        author: Manon Lumeau
+        date: '2016-09-07 09:25'
+        message: ''
+        version: '19'
     - 
         author: Solen Guitter
         date: '2016-09-02 07:43'
@@ -106,6 +131,14 @@ history:
         version: '1'
 
 ---
+{{#> callout type='note' }}
+
+The entire Nuxeo Platform code base was moved to GitHub at&nbsp; [https://github.com/nuxeo](https://github.com/nuxeo) , see next chapter about&nbsp; [Installing Git]({{page space='CORG' page='Installing Git'}}).
+
+However, you may still need to install the Mercurial distributed source control management tool (aka&nbsp; `hg`) to work with projects hosted on Nuxeo Mercurial repository at&nbsp; [http://hg.nuxeo.org/](http://hg.nuxeo.org/).
+
+{{/callout}}
+
 ## Installing Mercurial
 
 Nuxeo EP source are tracked using [Mercurial](http://mercurial.selenic.com/) from Selenic.
@@ -143,7 +176,7 @@ For Mac OS X, our preferred method is to use the [MacPorts](http://www.macports.
 $ port install mercurial
 ```
 
-### Setting a username
+### Setting a Username
 
 If you plan to checkin in nuxeo's hg repositories, you should provide a valid user name. This is achieved by setting the username property in the .hgrc settings file.
 
@@ -155,7 +188,7 @@ username = firstname lastname <you@your-domain>
 ...
 ```
 
-### Activating pre-integrated extensions
+### Activating Pre-Integrated Extensions
 
 You should activate some pre-integrated extensions for working with nuxeo repositories. This is achieved by adding the following lines to the extensions section of your .hgrc.
 
@@ -179,7 +212,7 @@ The Mercurial Forest extension was used to manage the different source trees tha
 
 {{/callout}}
 
-## Overview and online documentation
+## Overview and Online Documentation
 
 See [http://mercurial.selenic.com/wiki/UnderstandingMercurial](http://mercurial.selenic.com/wiki/UnderstandingMercurial).
 
@@ -191,17 +224,17 @@ The store contains a sufficient data to provide any file at any revision or tag 
 
 Mercurial groups related changes to multiple files (commits) into single atomic changesets. Every commit generates a changeset recording the state of the working directory relative to its parents, so merging is really easier and more efficient than with other SCM.
 
-### Mercurial home site
+### Mercurial Home Site
 
 [http://mercurial.selenic.com/wiki/Mercurial](http://mercurial.selenic.com/wiki/Mercurial).
 
 There are &ldquo;getting started&rdquo; and &ldquo;using Mercurial&rdquo; documentations, even some help for developers used to other SCM systems.
 
-### Nuxeo documentation
+### Nuxeo Documentation
 
 You will find useful tips and scripts in [Nuxeo FAQ]({{page space='kb' page='nuxeo-technical-knowledge-base-faq'}}) and some workarounds or guidelines for specific cases.
 
-### Nested repositories and Forest extension
+### Nested Repositories and Forest Extension
 
 When migrating from Subversion to Mercurial, we looked for a feature replacing "svn externals".
 
@@ -213,15 +246,15 @@ So, there is currently no Mercurial solution for running a command on a "full" N
 
 Nuxeo provides [NXDOC:Shell scripts|#shellscripts] for managing repositories containing sub-repositories (see `hgf`, `hgx`, `clone.sh`, ...).
 
-## Nuxeo common usage
+## Nuxeo Common Usage
 
-### Centralized repositories
+### Centralized Repositories
 
 Although Mercurial is decentralized, Nuxeo hosts &ldquo;centralized&rdquo; Mercurial repositories which are the &ldquo;reference&rdquo; repositories, they are backed up and changesets made on local repositories must finally be pushed on those remote repositories.
 
 The public "centralized" Mercurial repository is [https://hg.nuxeo.org/](https://hg.nuxeo.org/).
 
-### Server-side hooks
+### Server-Side Hooks
 
 We've set some Mercurial &ldquo;hooks&rdquo; on the central repositories filtering changesets according to whether they comply to the following rules:
 
@@ -290,7 +323,7 @@ Setting such hooks was not mandatory but they guarantee the developers are follo
 
 It is sometimes possible to force a push in spite of the hooks, when you know the hook message is not an error but a warning and it can be securely circumvented.
 
-### Branch layout and policy
+### Branch Layout and Policy
 
 We usually define stable, maintenance and development branches.
 
@@ -308,7 +341,7 @@ We usually define stable, maintenance and development branches.
     Developers are strongly encouraged to use as much branches as they need (one per JIRA issue or per development iteration). Those branches may or not be automatically tested, their purpose is code isolation while it is unstable: they are merged to main dev or stable branch after being fully tested.
     I.e. 5.2-NXP-9999-some_user_story will host code linked to implement some user story until the end of the iteration (or some point the code is considered mostly stable and usable).
 
-## Best practices
+## Best Practices
 
 Here are some recommended practices using Mercurial at Nuxeo.
 
@@ -325,13 +358,13 @@ Here are some recommended practices using Mercurial at Nuxeo.
 
 *   Never &ldquo;force&rdquo; a push unless being sure it has to be done.
 
-## Useful scripts, commands and tips{{> anchor 'shellscripts'}}
+## Useful Scripts, Commands and Tips{{> anchor 'shellscripts'}}
 
-### The following Mercurial commands are given with useful parameters into brackets, other parameters may be available.
+The following Mercurial commands are given with useful parameters into brackets, other parameters may be available.
 
 See `hg help [NXDOC:COMMAND]` for available commands listing or help on a specific command.
 
-### Nuxeo shell and batch scripts
+### Nuxeo Shell and Batch Scripts
 
 They are mainly used for Nuxeo repositories which contain sub-repositories. Those scripts provide an alternative to the Forest extension.
 
@@ -417,13 +450,13 @@ hg %3 %NXC%
 cd %PWD%
 ```
 
-#### Check incoming changes
+#### Check Incoming Changes
 
 ```
 hg in [-p] [-r REVISION]
 ```
 
-#### Check uncommitted changes
+#### Check Uncommitted Changes
 
 ```
 hg st [--rev REVISION]
@@ -433,7 +466,7 @@ This gives you modified (M), added (A), removed (R) and uncontrolled files (?) .
 
 Use `hg add`, `hg rm`, `hg addremove [NXDOC:-s 100]` and/or `hg ci` to commit these changes.
 
-#### Check current branch, working directory status
+#### Check Current Branch, Working Directory Status
 
 ```
 hg id [-inbt]
@@ -447,7 +480,7 @@ hg parents [-r REVISION]
 
 Show the parents of the working directory or revision.
 
-#### Show latest changeset, existing heads, branches and tags
+#### Show Latest Changeset, Existing Heads, Branches and Tags
 
 ```
 hg tip [-p]
@@ -473,7 +506,7 @@ hg tags
 
 Gives all available tags and their corresponding revision and branch.
 
-#### Follow changesets history
+#### Follow Changesets History
 
 ```
 hg log [-r REVISION] [-l LIMIT] [-p]
@@ -493,7 +526,7 @@ hg ann [-r] [-f] [-u] [-d] [-n] [-l]
 
 Show changeset information per file line. Useful when you need to know who changed a specific part of a file.
 
-#### Undo commands
+#### Undo Commands
 
 ```
 hg strip REVISION
@@ -529,9 +562,9 @@ Restore individual files or directories to an earlier state.
 
 Don't use `hg pull -u` but prefer `hg pull && hg up`, there are sometimes issues with the first one. Also, check your current branch with `hg id` after `hg clone` as it goes by default on `tip` branch.
 
-## Advanced usage and specific use cases
+## Advanced Usage and Specific Use Cases
 
-### Merging policy from stable to development branch
+### Merging Policy from Stable to Development Branch
 
 Merge stable branch on your development one as much as possible. It can be automated at morning and then manually done day by day each time there is some work merged on stable.
 
@@ -542,7 +575,7 @@ hg merge stablebranch && hg ci -m"automated merge from stablebranch" [-u...] && 
 
 See [http://svn.nuxeo.org/nuxeo/tools/mercurial/automerge.sh](http://svn.nuxeo.org/nuxeo/tools/mercurial/automerge.sh).
 
-### Merging policy from development to stable branch
+### Merging Policy from Development to Stable Branch
 
 It happens at the end of a development iteration, when code to merge is implementing a group of User Stories/Use Cases.
 
@@ -566,7 +599,7 @@ The development branch to merge must have been fully tested:
 
     Use "-f" only if stablebranch was no more a head.
 
-### Managing multiple heads
+### Managing Multiple Heads
 
 If two developers worked on the same branch with different parents, it may result in two simultaneous branches with the same name (see server-side hooks).
 
@@ -590,7 +623,7 @@ hg ci -m"merge two heads"
 hg push
 ```
 
-### Checks before pushing
+### Checks Before Pushing
 
 In case of doubts, before pushing, you can check what you've done with multiple commands:
 
@@ -600,7 +633,7 @@ hg glog [-l LIMIT] [|less]
 hg heads someBranch
 ```
 
-### Saving bandwidth
+### Saving Bandwidth
 
 Thanks to Mercurial which is decentralized, even if Nuxeo's repositories are not, you can pull from Internet to a local repository and then pull from this repository. Then, you can update the .hg/hgrc file to bind it on the central repository or continue using the local one, pushing on it and then pushing changesets from it to the remote one.
 
@@ -640,7 +673,7 @@ You can for instance transform a group of changesets made on a wrong branch to p
 
 See [http://mercurial.selenic.com/wiki/MqExtension](http://mercurial.selenic.com/wiki/MqExtension) or [Mercurial: The Definitive Guide by Bryan O'Sullivan](http://hgbook.red-bean.com/read/mercurial-queues-reference.html).
 
-#### Changing descriptions of changesets not pushed yet
+#### Changing Descriptions of Changesets Not Pushed Yet
 
 You need to have mqueue extension activated in your `~/.hgrc` file:
 
@@ -694,6 +727,24 @@ hg qfinish -a
 
 ```
 
-That's all :)
+<div>
 
-&nbsp;
+## Graphical Tools
+
+[TortoiseHg](http://tortoisehg.bitbucket.org/)&nbsp;provides useful Shell extension and applications for Mercurial under Windows. It also works with Gnome Nautilus (Linux). A Mac OS X port is currently in progress.
+
+[MercurialEclipse](http://www.javaforge.com/project/HGE)&nbsp;is a plugin providing support for Mercurial within the Eclipse IDE.
+
+</div>
+
+<div>There are a number of other Mercurial graphical user interfaces and editor integration tools, see&nbsp;[http://mercurial.selenic.com/wiki/OtherTools](http://mercurial.selenic.com/wiki/OtherTools).</div>
+
+<div>
+
+## Manage Security Check on Nuxeo's Self-Signed Certificate
+
+Since version 1.7.x, when connecting to an HTTPS server, Mercurial will now verify the server's certificate correctly and reject the connection if the server identity can't be confirmed - but only if Certification Authorities (CAs) have been configured. As of 1.7.3, Mercurial will warn if CAs haven't been configured.
+
+See&nbsp;[http://mercurial.selenic.com/wiki/CACertificates](http://mercurial.selenic.com/wiki/CACertificates)&nbsp;for how-to fix your setup and no more get that warning.&nbsp;
+
+</div>

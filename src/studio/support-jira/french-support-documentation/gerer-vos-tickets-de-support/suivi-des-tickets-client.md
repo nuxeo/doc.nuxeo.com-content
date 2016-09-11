@@ -1,5 +1,9 @@
 ---
 title: Suivi des tickets client
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - jira-fr
 confluence:

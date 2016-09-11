@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Glossary
+review:
+    comment: ''
+    date: ''
+    status: ok
 no_side_menu: true
 slug: index
 confluence:

@@ -1,5 +1,9 @@
 ---
 title: Jenkins duty
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-jenkins-report
 toc: true

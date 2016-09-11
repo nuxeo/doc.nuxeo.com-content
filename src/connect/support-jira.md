@@ -1,5 +1,9 @@
 ---
 title: Support / JIRA
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: studiosupport-jira
 redirect_source: 'Studio:Support / JIRA'
 confluence:

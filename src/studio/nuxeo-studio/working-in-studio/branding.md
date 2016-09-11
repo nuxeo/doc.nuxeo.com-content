@@ -1,11 +1,15 @@
 ---
 title: Branding
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to customize your application.
         level: Beginner
         tool: Studio
-        topics: 'Theme, Web UI'
+        topics: 'Theme, JSF UI'
 labels:
     - branding
     - lts2015-ok
@@ -23,6 +27,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/AQXF'
     source_link: /display/Studio/Branding
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-05 09:52'
+        message: pdate how-to topic
+        version: '72'
     - 
         author: Manon Lumeau
         date: '2016-02-09 15:39'
@@ -554,7 +563,7 @@ Just tick the&nbsp;**Disable theme branding**&nbsp;option above the tabs. The ta
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Theme]({{page space='NXDOC' page='Theme'}})
-*   [Web UI Framework Overview]({{page space='nxdoc' page='web-ui-framework-overview'}})
+*   [JSF UI Framework Overview]({{page space='nxdoc' page='jsf-ui-framework-overview'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-tos'}}
 

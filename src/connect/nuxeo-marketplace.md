@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Marketplace
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: studionuxeo-marketplace
 redirect_source: 'Studio:Nuxeo Marketplace'
 confluence:

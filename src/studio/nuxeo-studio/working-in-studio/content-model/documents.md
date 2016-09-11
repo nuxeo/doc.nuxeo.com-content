@@ -1,5 +1,9 @@
 ---
 title: Documents
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - document-type
     - content-review-6-0

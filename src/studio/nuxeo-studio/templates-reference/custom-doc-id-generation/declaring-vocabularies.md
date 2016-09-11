@@ -1,5 +1,9 @@
 ---
 title: Declaring Vocabularies
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - tuto-vocabulary
     - content-review-6-0

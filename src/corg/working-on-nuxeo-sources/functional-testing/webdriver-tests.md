@@ -1,5 +1,9 @@
 ---
 title: WebDriver Tests
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '6422538'
@@ -14,9 +18,14 @@ confluence:
     source_link: /display/CORG/WebDriver+Tests
 history:
     - 
+        author: Antoine Taillefer
+        date: '2016-09-06 08:57'
+        message: ''
+        version: '11'
+    - 
         author: Ronan Daniellou
         date: '2015-11-13 16:33'
-        message: dded missing title for section Firefox locatio
+        message: Added missing title for section Firefox location
         version: '10'
     - 
         author: Ronan Daniellou
@@ -67,7 +76,7 @@ history:
 ---
 ## Compatible Firefox Location
 
-Webdriver tests run on selenium 2.39.0 and they pass on Firefox 26, 27, 28\. You can use the following system property while running the tests to make Webdriver use the correct Firefox:
+Webdriver tests run on selenium 2.53.0 and they pass on Firefox 26 to 46 included. You can use the following system property while running the tests to make Webdriver use the correct Firefox:
 
 ```
 -Dwebdriver.firefox.bin="/path/to/firefox/binary"

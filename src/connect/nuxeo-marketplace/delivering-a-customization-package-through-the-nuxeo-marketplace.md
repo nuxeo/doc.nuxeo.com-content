@@ -1,5 +1,9 @@
 ---
 title: Delivering a Customization Package through the Nuxeo Marketplace
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: studiodelivering-a-customization-package-through-the-nuxeo-marketplace
 redirect_source: 'Studio:Delivering a Customization Package through the Nuxeo Marketplace'
 confluence:

@@ -1,5 +1,9 @@
 ---
 title: User Actions
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - user-action
     - content-review-6-0

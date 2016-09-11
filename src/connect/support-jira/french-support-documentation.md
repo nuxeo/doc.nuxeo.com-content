@@ -1,5 +1,9 @@
 ---
 title: French Support Documentation
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: studiofrench-support-documentation
 redirect_source: 'Studio:French Support Documentation'
 confluence:

@@ -1,5 +1,9 @@
 ---
 title: Getting the Nuxeo Source Code
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - git
     - 5-7-1
@@ -18,9 +22,14 @@ confluence:
     source_link: /display/CORG/Getting+the+Nuxeo+Source+Code
 history:
     - 
+        author: Manon Lumeau
+        date: '2016-09-06 16:07'
+        message: ''
+        version: '37'
+    - 
         author: Anahide Tchertchian
         date: '2016-07-12 11:42'
-        message: emove -T 1C build option until NXP-20081 is fixe
+        message: remove -T 1C build option until NXP-20081 is fixed
         version: '36'
     - 
         author: Julien Carsique
@@ -203,7 +212,7 @@ history:
 
 Nuxeo Platform sources shall be retrieved and worked with using [Git](http://git-scm.com/download). Nuxeo core developers should have a look at [Nuxeo's Git usage]({{page page='git-usage'}}).
 
-Some (mostly deprecated) code and scripts may be retrieved and worked with using [Mercurial](http://www.selenic.com/mercurial/) (see the documentation at [Getting the Nuxeo source code (deprecated)]({{page page='getting-the-nuxeo-source-code-deprecated'}})) or [SubVersion](http://subversion.apache.org/).
+Some (mostly deprecated) code and scripts may be retrieved and worked with using [Mercurial](http://www.selenic.com/mercurial/) (see the documentation at [SubVersion](http://subversion.apache.org/)).
 
 {{#> callout type='note' }}
 

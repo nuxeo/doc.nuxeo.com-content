@@ -1,5 +1,9 @@
 ---
 title: Setting up a Nuxeo SDK
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '22905665'

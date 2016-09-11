@@ -1,5 +1,9 @@
 ---
 title: Event Handlers
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - event-handler
     - content-review-6-0

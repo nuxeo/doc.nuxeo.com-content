@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Studio and Connect architecture
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-6-0
 confluence:

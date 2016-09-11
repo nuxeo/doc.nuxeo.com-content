@@ -1,5 +1,9 @@
 ---
 title: Implement document validation chain
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - tuto-automation
 confluence:

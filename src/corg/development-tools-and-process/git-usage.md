@@ -1,5 +1,9 @@
 ---
 title: Git Usage
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - git
 toc: true

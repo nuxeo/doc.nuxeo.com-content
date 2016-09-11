@@ -1,5 +1,9 @@
 ---
 title: Graph
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '3868922'
     ajs-parent-page-title: Nuxeo Glossary

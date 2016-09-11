@@ -1,5 +1,9 @@
 ---
 title: Creating Your Own Distribution
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - ant-assembly-maven-plugin
     - packaging

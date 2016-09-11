@@ -1,5 +1,9 @@
 ---
 title: Ticket Follow Up
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - jira
 confluence:

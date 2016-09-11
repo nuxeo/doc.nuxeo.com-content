@@ -1,5 +1,9 @@
 ---
 title: Filtering Options Reference Page
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - filter
     - content-review-6-0

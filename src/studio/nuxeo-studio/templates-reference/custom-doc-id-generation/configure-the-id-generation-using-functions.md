@@ -1,5 +1,9 @@
 ---
 title: Configure the ID generation using functions
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - tuto-automation
     - tuto-event-handler

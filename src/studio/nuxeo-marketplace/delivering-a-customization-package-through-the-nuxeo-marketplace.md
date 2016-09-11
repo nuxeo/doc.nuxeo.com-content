@@ -1,5 +1,9 @@
 ---
 title: Delivering a Customization Package through the Nuxeo Marketplace
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - marketplace
 toc: true

@@ -1,5 +1,9 @@
 ---
 title: Deploying Your Project in Dev Mode
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - howto-deployement
     - content-review-6-0

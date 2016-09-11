@@ -1,5 +1,9 @@
 ---
 title: Compiling Nuxeo from sources
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '9275231'

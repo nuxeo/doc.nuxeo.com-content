@@ -1,5 +1,9 @@
 ---
 title: Settings Eclipse Development Templates
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - link-update
     - howto

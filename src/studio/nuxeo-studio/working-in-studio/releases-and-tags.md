@@ -1,5 +1,9 @@
 ---
 title: Releases & Tags
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '12911781'

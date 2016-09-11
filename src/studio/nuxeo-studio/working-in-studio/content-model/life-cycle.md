@@ -1,5 +1,9 @@
 ---
 title: Life cycle
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - life-cycle
     - content-review-6-0

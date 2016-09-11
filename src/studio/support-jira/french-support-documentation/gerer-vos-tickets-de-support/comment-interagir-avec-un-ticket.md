@@ -1,5 +1,9 @@
 ---
 title: Comment interagir avec un ticket
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - jira-fr
 toc: true

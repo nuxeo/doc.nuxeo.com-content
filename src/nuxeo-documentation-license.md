@@ -1,5 +1,9 @@
 ---
 title: Nuxeo documentation license
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '3868746'
     ajs-parent-page-title: Nuxeo Documentation Center Home

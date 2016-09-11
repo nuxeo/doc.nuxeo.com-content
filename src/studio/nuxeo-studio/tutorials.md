@@ -1,5 +1,9 @@
 ---
 title: Tutorials
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-6-0
 confluence:
@@ -73,7 +77,7 @@ The configuration changes you will make in Nuxeo Studio require Development Mode
 
 ## Customization How-Tos Using Nuxeo Studio
 
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level, Tool' spaces='ADMINDOC IDEDOC NXDOC Studio USERDOC' label='howto'}}}
 
 &nbsp;
 

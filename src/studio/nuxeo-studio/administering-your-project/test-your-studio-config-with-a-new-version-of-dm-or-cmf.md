@@ -1,5 +1,9 @@
 ---
 title: Test your Studio config with a new version of DM or CMF
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-6-0
 confluence:

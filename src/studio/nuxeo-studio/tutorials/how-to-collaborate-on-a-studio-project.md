@@ -1,5 +1,9 @@
 ---
 title: How to Collaborate on a Studio Project
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

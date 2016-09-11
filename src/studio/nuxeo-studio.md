@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Studio
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '1409040'
     ajs-parent-page-title: Nuxeo Online Services
@@ -15,7 +19,7 @@ history:
     - 
         author: Manon Lumeau
         date: '2016-07-12 09:01'
-        message: ew Home Pag
+        message: ''
         version: '4'
     - 
         author: Solen Guitter
@@ -80,7 +84,7 @@ This section provides you an overview of how you can manage your own application
 The goal of this section is to provide ready to use examples. They can be followed step by step to learn how to use Studio on practical use cases.
 
 *   [Deploying Your Project in Dev Mode]({{page page='deploying-your-project-in-dev-mode'}})
-*   [From the Web UI to Nuxeo Studio]({{page space='nxdoc' page='from-the-web-ui-to-nuxeo-studio'}})
+*   [From the JSF UI to Nuxeo Studio]({{page space='nxdoc' page='from-the-jsf-ui-to-nuxeo-studio'}})
 
 {{/panel}}</div></div>
 

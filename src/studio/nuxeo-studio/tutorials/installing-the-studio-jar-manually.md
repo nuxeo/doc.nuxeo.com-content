@@ -1,5 +1,9 @@
 ---
 title: Installing the Studio JAR Manually
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - howto-deployement
     - content-review-6-0

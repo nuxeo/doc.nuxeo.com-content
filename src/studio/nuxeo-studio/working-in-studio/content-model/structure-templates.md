@@ -1,5 +1,9 @@
 ---
 title: Structure Templates
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - structure-template
     - lts2015-ok

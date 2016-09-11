@@ -1,5 +1,9 @@
 ---
 title: Contract management
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-6-0
 toc: true

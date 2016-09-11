@@ -1,5 +1,9 @@
 ---
 title: Quality Assurance and Continuous Integration
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '3868947'

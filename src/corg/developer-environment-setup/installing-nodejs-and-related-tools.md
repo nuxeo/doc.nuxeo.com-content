@@ -1,5 +1,9 @@
 ---
 title: Installing NodeJS and related tools
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nodejs
     - npm

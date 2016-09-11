@@ -1,5 +1,9 @@
 ---
 title: Flavor
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - flavor
 confluence:

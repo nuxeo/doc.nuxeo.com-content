@@ -1,5 +1,9 @@
 ---
 title: Hot Reloading XHTML templates
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '11043369'
     ajs-parent-page-title: Supporting Hot Reload

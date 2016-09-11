@@ -1,5 +1,9 @@
 ---
 title: Marketplace FAQ
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: studiomarketplace-faq
 redirect_source: 'Studio:Marketplace FAQ'
 confluence:

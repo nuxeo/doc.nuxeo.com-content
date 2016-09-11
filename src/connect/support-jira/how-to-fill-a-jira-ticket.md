@@ -1,5 +1,9 @@
 ---
 title: How to Fill a JIRA Ticket
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: studiohow-to-fill-a-jira-ticket
 redirect_source: 'Studio:How to Fill a JIRA Ticket'
 confluence:

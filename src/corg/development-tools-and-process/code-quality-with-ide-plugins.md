@@ -1,5 +1,9 @@
 ---
 title: Code Quality with IDE Plugins
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '3868947'
     ajs-parent-page-title: Development Tools and Process

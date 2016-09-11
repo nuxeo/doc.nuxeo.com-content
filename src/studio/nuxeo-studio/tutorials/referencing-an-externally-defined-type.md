@@ -1,5 +1,9 @@
 ---
 title: Referencing an Externally Defined Type
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - howto-registries
     - content-review-6-0

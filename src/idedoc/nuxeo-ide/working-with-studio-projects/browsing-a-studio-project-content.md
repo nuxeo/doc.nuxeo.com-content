@@ -1,5 +1,9 @@
 ---
 title: Browsing a Studio Project Content
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - studio-view
     - studio-project

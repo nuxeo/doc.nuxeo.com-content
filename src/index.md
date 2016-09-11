@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Documentation Center Home
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''

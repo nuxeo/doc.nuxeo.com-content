@@ -1,5 +1,9 @@
 ---
 title: Tabs
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - 5-6
     - 5-7-1

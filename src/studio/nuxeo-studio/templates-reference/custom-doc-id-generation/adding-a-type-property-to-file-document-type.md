@@ -1,5 +1,9 @@
 ---
 title: Adding a "Type" Property to File Document Type
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - tuto-override-doc-type
     - tuto-document-type

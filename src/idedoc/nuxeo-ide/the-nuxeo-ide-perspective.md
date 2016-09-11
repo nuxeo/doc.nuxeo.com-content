@@ -1,5 +1,9 @@
 ---
 title: The Nuxeo IDE perspective
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-perspective
 confluence:

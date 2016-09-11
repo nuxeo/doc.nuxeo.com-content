@@ -1,5 +1,9 @@
 ---
 title: Frequently Asked Questions
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-6-0
 confluence:

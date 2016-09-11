@@ -1,5 +1,9 @@
 ---
 title: Data and Configuration Changes between Nuxeo Versions
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '4685848'

@@ -1,5 +1,9 @@
 ---
 title: Custom Doc ID Generation
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - tutorial
     - content-review-6-0

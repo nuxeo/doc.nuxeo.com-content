@@ -1,5 +1,9 @@
 ---
 title: nuxeo.io
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '1409040'

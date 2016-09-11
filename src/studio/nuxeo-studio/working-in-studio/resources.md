@@ -1,5 +1,9 @@
 ---
 title: Resources
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - studio-resources
     - content-review-6-0

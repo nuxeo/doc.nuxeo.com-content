@@ -1,5 +1,9 @@
 ---
 title: Artifact
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - maven
     - artifact

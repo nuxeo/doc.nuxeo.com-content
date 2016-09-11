@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Online Services
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-6-0
 confluence:
@@ -14,6 +18,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/EIAV'
     source_link: /display/Studio/Nuxeo+Online+Services
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-07 08:16'
+        message: 'XDOC-857: remove nuxeo.i'
+        version: '82'
     - 
         author: Manon Lumeau
         date: '2016-07-12 09:05'
@@ -434,7 +443,6 @@ history:
 *   [Consult and create JIRA issues]({{page page='support-jira'}})
 *   [How to edit your application's target environment]({{page page='nuxeo-online-services-portal'}})
 *   [Register a new instance for your application]({{page space='nxdoc' page='registering-your-nuxeo-instance'}})
-*   [nuxeo.io]({{page page='nuxeoio'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
@@ -443,7 +451,6 @@ history:
 *   [How to use Nuxeo Studio]()
 *   [Register a new instance for your application]({{page space='nxdoc' page='registering-your-nuxeo-instance'}})
 *   [Updating your Instance with Studio Configuration]({{page page='deploying-your-project-in-dev-mode'}})
-*   [nuxeo.io]({{page page='nuxeoio'}})
 
 {{/panel}}</div></div>
 

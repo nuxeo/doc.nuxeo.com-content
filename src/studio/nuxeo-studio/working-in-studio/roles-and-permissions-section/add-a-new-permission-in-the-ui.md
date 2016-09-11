@@ -1,5 +1,9 @@
 ---
 title: Add a new Permission in the UI
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - howto
     - permission
@@ -69,7 +73,7 @@ history:
 
 ---
 This howto gives you the steps to add a new permission in the permissions list of Nuxeo applications. For instance, in the Permissions tab in Nuxeo Platform.
-You can then leverage this permission in the [definition of new user actions]({{page space='nxdoc' page='how-to-add-a-button-in-the-web-ui'}}) to filter who should see the new button, link or icon or in [automation chains]({{page space='nxdoc' page='how-to-create-an-automation-chain'}}).
+You can then leverage this permission in the [definition of new user actions]({{page space='nxdoc' page='how-to-add-a-button-in-the-jsf-ui'}}) to filter who should see the new button, link or icon or in [automation chains]({{page space='nxdoc' page='how-to-create-an-automation-chain'}}).
 
 To create a new permission in Nuxeo:
 

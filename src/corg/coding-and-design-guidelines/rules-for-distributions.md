@@ -1,5 +1,9 @@
 ---
 title: Rules for Distributions
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '4685848'

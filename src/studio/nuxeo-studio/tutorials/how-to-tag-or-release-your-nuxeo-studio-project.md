@@ -1,5 +1,9 @@
 ---
 title: How to Tag or Release Your Nuxeo Studio Project
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to use the tags and releases features of Nuxeo Studio.

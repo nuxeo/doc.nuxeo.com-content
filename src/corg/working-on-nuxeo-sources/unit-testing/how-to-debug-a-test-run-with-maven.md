@@ -1,5 +1,9 @@
 ---
 title: How to Debug a Test Run with Maven
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '950316'
     ajs-parent-page-title: Unit Testing

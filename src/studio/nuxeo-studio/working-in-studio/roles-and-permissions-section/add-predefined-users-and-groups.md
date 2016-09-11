@@ -1,5 +1,9 @@
 ---
 title: Add predefined users and groups
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - studio-20
     - user-management

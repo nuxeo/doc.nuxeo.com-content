@@ -1,5 +1,9 @@
 ---
 title: Deploying a Project with Studio Dependencies
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - studio-project
     - howto

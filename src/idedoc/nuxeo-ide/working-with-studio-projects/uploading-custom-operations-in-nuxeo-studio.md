@@ -1,5 +1,9 @@
 ---
 title: Uploading Custom Operations in Nuxeo Studio
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - studio-project
     - howto

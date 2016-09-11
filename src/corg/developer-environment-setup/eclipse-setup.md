@@ -1,5 +1,9 @@
 ---
 title: Eclipse setup
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '9275205'
     ajs-parent-page-title: Developer Environment Setup

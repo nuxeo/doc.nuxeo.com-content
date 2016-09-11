@@ -1,5 +1,9 @@
 ---
 title: Configuration Management
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - marketplace-package
     - proxies

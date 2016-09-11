@@ -1,5 +1,9 @@
 ---
 title: Automation
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-6-0
 confluence:
@@ -15,9 +19,14 @@ confluence:
     source_link: /display/Studio/Automation
 history:
     - 
+        author: Solen Guitter
+        date: '2016-09-06 14:49'
+        message: ''
+        version: '12'
+    - 
         author: Manon Lumeau
         date: '2016-08-16 09:43'
-        message: emove deleted page
+        message: 'remove deleted page '
         version: '11'
     - 
         author: Manon Lumeau
@@ -73,7 +82,6 @@ history:
 ---
 Before starting your own content automation chains, we advise you to take a look at the concepts and tutorial parts to understand [what Nuxeo Content Automation chains are]({{page space='nxdoc' page='content-automation-concepts'}}) and find sample use cases like:
 
-*   [A validation chain]({{page page='implement-document-validation-chain'}})
 *   [A metadata inheritance chain]({{page space='nxdoc' page='how-to-inherit-a-metadata-from-a-parent-document'}})
 *   [A task assignment chain]({{page page='add-a-new-permission-in-the-ui'}})
 

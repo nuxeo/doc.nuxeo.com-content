@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Package
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '19794080'
     ajs-parent-page-title: Nuxeo Platform

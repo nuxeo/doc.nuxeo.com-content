@@ -1,5 +1,9 @@
 ---
 title: Ticket Follow Up
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: studioticket-follow-up
 redirect_source: 'Studio:Ticket Follow Up'
 confluence:

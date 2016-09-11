@@ -1,5 +1,9 @@
 ---
 title: Using Application Templates
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - application-template
     - content-review-6-0

@@ -1,5 +1,9 @@
 ---
 title: JavaScript code style
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '4685848'
     ajs-parent-page-title: Coding and Design Guidelines

@@ -1,5 +1,9 @@
 ---
 title: Gérer vos tickets de support
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: studiogandeacuterer-vos-tickets-de-support
 redirect_source: 'Studio:G&eacute;rer vos tickets de support'
 confluence:

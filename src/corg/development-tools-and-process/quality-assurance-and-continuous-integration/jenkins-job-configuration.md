@@ -1,5 +1,9 @@
 ---
 title: Jenkins Job Configuration
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '3868997'
     ajs-parent-page-title: Quality Assurance and Continuous Integration

@@ -1,5 +1,9 @@
 ---
 title: Creating a Custom Nuxeo Package
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - howto
     - nuxeo-ide

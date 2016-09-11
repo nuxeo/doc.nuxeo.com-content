@@ -1,5 +1,9 @@
 ---
 title: Update the Version of Your Target Platform
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-6-0
 confluence:

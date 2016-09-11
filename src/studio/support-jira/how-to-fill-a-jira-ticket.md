@@ -1,5 +1,9 @@
 ---
 title: How to Fill a JIRA Ticket
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - jira
 toc: true

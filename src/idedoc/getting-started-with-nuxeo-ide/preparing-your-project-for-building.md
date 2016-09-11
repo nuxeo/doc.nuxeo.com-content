@@ -1,5 +1,9 @@
 ---
 title: Preparing your project for building
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: nxdocgetting-started-with-nuxeo-ide
 redirect_source: 'NXDOC:Getting Started with Nuxeo IDE'
 confluence:

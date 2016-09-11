@@ -1,5 +1,9 @@
 ---
 title: JIRA Tickets Workflow
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: studiojira-tickets-workflow
 redirect_source: 'Studio:JIRA Tickets Workflow'
 confluence:

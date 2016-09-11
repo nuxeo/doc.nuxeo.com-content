@@ -1,5 +1,9 @@
 ---
 title: Binding Studio Projects to an Nuxeo IDE Project
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - studio-project
     - howto

@@ -1,5 +1,9 @@
 ---
 title: Writing tests working with dates
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '4685848'

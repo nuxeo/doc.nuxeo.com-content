@@ -1,5 +1,9 @@
 ---
 title: Generating Packages and Installers
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '9275231'
     ajs-parent-page-title: Working on Nuxeo sources

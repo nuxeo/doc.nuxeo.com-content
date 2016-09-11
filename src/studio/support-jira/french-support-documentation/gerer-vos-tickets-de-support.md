@@ -1,5 +1,9 @@
 ---
 title: Gérer vos tickets de support
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - jira-fr
 confluence:

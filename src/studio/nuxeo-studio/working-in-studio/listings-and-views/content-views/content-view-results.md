@@ -1,5 +1,9 @@
 ---
 title: Content View - Results
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-view
     - content-review-6-0

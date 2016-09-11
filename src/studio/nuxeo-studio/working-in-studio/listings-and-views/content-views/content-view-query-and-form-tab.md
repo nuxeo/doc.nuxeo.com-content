@@ -1,5 +1,9 @@
 ---
 title: Content View - Query and Form Tab
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-view
     - content-review-6-0

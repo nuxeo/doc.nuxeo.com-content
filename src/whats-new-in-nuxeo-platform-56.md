@@ -1,5 +1,9 @@
 ---
 title: What's new in Nuxeo Platform 5.6
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '3868746'
@@ -15,8 +19,13 @@ confluence:
 history:
     - 
         author: Solen Guitter
+        date: '2016-09-05 13:11'
+        message: ''
+        version: '8'
+    - 
+        author: Solen Guitter
         date: '2012-09-14 18:21'
-        message: igrated to Confluence 4.
+        message: Migrated to Confluence 4.0
         version: '7'
     - 
         author: Solen Guitter
@@ -61,9 +70,13 @@ Nuxeo Platform 5.6 also features the new [template rendering system](https://git
 
 Nuxeo Studio features a tab designer that enables to create new tabs, leveraging the improvements on layouts, content views and widgets.
 
+&nbsp;
+
 ### For administrators
 
 For administrators, new configuration parameters are available, enabling them to make the deployment of new features easier on a test environment for instance. The control panel script has also been improved with new options.
+
+&nbsp;
 
 ## On a functional side
 
@@ -72,3 +85,5 @@ The Nuxeo Platform gets new social features to keep the initiative started with 
 The [alert]({{page space='userdoc56' page='alerts'}}) system has been simplified: users now just need to indicate that they want to follow the activities on a document or a space. No need to select one or several events, with one click, they get emails whenever the document is modified, commented or a workflow started.
 
 Users can now create documents from a [template]({{page space='userdoc56' page='template-rendering-addon'}}), with content being automatically extracted from Nuxeo, and to have an automated rendering generated from a set of user-defined preferences.
+
+&nbsp;

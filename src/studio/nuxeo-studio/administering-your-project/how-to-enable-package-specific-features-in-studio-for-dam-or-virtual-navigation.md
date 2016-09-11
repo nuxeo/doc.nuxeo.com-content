@@ -2,6 +2,10 @@
 title: >-
     How to Enable Package Specific Features in Studio for DAM or Virtual
     Navigation?
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - target-package
     - project-settings

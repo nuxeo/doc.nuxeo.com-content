@@ -1,5 +1,9 @@
 ---
 title: Comment interagir avec un ticket
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: studiocomment-interagir-avec-un-ticket
 redirect_source: 'Studio:Comment interagir avec un ticket'
 confluence:

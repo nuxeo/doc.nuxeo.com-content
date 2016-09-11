@@ -1,5 +1,9 @@
 ---
 title: Cross Site Scripting
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - scripting
     - xss

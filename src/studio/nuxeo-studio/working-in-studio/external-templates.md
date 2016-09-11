@@ -1,5 +1,9 @@
 ---
 title: External Templates
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-6-0
 confluence:

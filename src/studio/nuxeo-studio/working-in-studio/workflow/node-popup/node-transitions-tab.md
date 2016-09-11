@@ -1,5 +1,9 @@
 ---
 title: Node Transitions Tab
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - node
     - content-review-6-0

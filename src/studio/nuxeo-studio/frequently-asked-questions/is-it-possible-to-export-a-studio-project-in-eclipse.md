@@ -1,5 +1,9 @@
 ---
 title: Is it possible to export a Studio project in Eclipse ?
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-6-0
 confluence:

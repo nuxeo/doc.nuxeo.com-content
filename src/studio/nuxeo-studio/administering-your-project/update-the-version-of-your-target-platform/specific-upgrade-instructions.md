@@ -1,5 +1,9 @@
 ---
 title: Specific Upgrade Instructions
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-view
     - upgrade

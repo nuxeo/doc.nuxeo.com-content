@@ -1,5 +1,9 @@
 ---
 title: Working with Studio Projects
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22905665'
     ajs-parent-page-title: Nuxeo IDE

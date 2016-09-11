@@ -1,5 +1,9 @@
 ---
 title: French Support Documentation
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '4687694'
     ajs-parent-page-title: Support / JIRA

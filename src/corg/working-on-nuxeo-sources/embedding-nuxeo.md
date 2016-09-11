@@ -1,5 +1,9 @@
 ---
 title: Embedding Nuxeo
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-not-ok
 toc: true

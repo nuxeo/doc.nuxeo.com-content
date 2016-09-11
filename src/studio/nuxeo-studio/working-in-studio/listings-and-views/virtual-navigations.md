@@ -1,5 +1,9 @@
 ---
 title: Virtual Navigations
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-6-0
 toc: true

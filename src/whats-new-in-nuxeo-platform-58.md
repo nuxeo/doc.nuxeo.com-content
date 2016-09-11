@@ -1,5 +1,9 @@
 ---
 title: What's New in Nuxeo Platform 5.8
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '3868746'
@@ -13,6 +17,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/MgXF'
     source_link: /display/MAIN/What%27s+New+in+Nuxeo+Platform+5.8
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-05 13:11'
+        message: ''
+        version: '23'
     - 
         author: Solen Guitter
         date: '2014-01-20 10:56'
@@ -129,11 +138,15 @@ Nuxeo Studio benefits from several new features and improvements: the DAM module
 
 The Nuxeo Platform now supports Tomcat 7.
 
+&nbsp;
+
 ### For administrators
 
 New parameters have been added to nuxeo.conf to make the drag and drop more configurable and to make sessions more configurable.
 
 The Nuxeo Platform now uses Yammer Metrics, enabling lots of internal metrics, accessible from JMX or Graphite.
+
+&nbsp;
 
 ## On a functional side
 

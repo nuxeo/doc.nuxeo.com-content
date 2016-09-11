@@ -1,5 +1,9 @@
 ---
 title: nuxeo.io
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: studionuxeoio
 redirect_source: 'Studio:nuxeo.io'
 confluence:

@@ -1,5 +1,9 @@
 ---
 title: Nuxeo IDE
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '8684133'
     ajs-parent-page-title: Documentation Center for Nuxeo Platform IDEs

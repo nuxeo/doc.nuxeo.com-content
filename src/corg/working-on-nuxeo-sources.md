@@ -1,5 +1,9 @@
 ---
 title: Working on Nuxeo sources
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '4685831'
     ajs-parent-page-title: Nuxeo Core Developer Guide

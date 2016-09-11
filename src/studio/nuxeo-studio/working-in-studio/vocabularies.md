@@ -1,5 +1,9 @@
 ---
 title: Vocabularies
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - vocabulary
     - content-review-6-0

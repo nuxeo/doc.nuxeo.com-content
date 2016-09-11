@@ -1,5 +1,9 @@
 ---
 title: Node General tab
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - 5-7-2
     - node
