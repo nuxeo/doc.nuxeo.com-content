@@ -1,5 +1,9 @@
 ---
 title: Event and Listener How To Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - index
@@ -37,4 +41,4 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='Studio NXDOC710 IDEDOC' label='howto' filter='Topics=Event'}}}

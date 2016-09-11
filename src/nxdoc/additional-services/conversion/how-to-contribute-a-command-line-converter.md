@@ -1,5 +1,9 @@
 ---
 title: How to Contribute a Command Line Converter
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to contribute a new command line converter.

@@ -1,5 +1,9 @@
 ---
 title: Theme Upgrade to LTS 2015
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - themes-component

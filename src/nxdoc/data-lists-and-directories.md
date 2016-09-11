@@ -1,5 +1,9 @@
 ---
 title: Data Lists and Directories
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - directory
     - vocabulary

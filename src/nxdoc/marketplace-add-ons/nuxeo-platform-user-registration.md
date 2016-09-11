@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Platform User Registration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - user-registration
     - content-review-lts2015

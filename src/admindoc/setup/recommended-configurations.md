@@ -1,5 +1,9 @@
 ---
 title: Recommended Configurations
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - configuration
     - alerts

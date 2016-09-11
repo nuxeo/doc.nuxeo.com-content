@@ -1,5 +1,9 @@
 ---
 title: Double Click Shield
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to use the "Double Click Shield" feature.

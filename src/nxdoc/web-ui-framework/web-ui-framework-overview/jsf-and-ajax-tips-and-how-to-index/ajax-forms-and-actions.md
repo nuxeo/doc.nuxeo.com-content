@@ -1,5 +1,9 @@
 ---
 title: Ajax Forms and Actions
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn the tips and tricks when working with Ajax forms or actions.

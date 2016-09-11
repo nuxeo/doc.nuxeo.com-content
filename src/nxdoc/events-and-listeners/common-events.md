@@ -1,5 +1,9 @@
 ---
 title: Common Events
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
     - core-component

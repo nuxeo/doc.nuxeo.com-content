@@ -1,5 +1,9 @@
 ---
 title: Installing the Nuxeo Platform on Linux
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - install-linux
     - mg

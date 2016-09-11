@@ -1,5 +1,9 @@
 ---
 title: nuxeoctl and Control Panel Usage
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeoctl
     - bootstrap-component

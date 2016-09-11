@@ -1,5 +1,9 @@
 ---
 title: Logs Analysis
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - log4j
     - error

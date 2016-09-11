@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Security Update - 2015-02-27 - Critical
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
 toc: true

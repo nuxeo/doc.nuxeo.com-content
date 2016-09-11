@@ -1,5 +1,9 @@
 ---
 title: Sub Workflow Example
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - sub-workflow
     - subworkflow

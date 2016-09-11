@@ -1,5 +1,9 @@
 ---
 title: How to Contribute to an Extension
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

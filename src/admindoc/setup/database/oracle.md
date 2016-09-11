@@ -1,5 +1,9 @@
 ---
 title: Oracle
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - database
     - oracle

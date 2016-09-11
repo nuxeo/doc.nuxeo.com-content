@@ -1,5 +1,9 @@
 ---
 title: Elasticsearch Hints Cheat Sheet
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - elasticsearch
     - lts2015-ok

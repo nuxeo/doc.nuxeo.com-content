@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Agenda
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-agenda
     - content-review-lts2015

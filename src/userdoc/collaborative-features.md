@@ -1,5 +1,9 @@
 ---
 title: Collaborative Features
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lock
     - comment

@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 5.3.0 to 5.3.1
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 confluence:

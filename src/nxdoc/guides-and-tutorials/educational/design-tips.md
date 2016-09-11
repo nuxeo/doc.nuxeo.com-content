@@ -1,5 +1,9 @@
 ---
 title: Design Tips
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
 confluence:

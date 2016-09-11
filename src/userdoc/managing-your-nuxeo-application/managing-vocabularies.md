@@ -1,5 +1,9 @@
 ---
 title: Managing Vocabularies
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - admin-center
     - vocabulary

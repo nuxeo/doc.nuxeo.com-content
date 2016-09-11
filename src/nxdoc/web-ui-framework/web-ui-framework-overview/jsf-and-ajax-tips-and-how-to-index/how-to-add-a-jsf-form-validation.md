@@ -1,5 +1,9 @@
 ---
 title: How to Add a JSF Form Validation
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

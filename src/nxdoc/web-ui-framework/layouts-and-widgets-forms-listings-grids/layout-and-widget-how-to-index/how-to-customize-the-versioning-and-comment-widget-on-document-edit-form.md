@@ -1,5 +1,9 @@
 ---
 title: How to Customize the Versioning and Comment Widget on Document Edit Form
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto-info:
         excerpt: >-

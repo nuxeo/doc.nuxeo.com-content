@@ -1,5 +1,9 @@
 ---
 title: Remote Monitoring through HTTP/S
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - monitoring-component
     - lts2015-ok

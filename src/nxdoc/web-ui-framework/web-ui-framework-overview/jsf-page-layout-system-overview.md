@@ -1,5 +1,9 @@
 ---
 title: JSF Page Layout System Overview
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - jsf
     - seam-jsf-component

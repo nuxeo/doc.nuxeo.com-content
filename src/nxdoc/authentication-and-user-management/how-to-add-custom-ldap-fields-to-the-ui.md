@@ -1,5 +1,9 @@
 ---
 title: How to Add Custom LDAP Fields to the UI
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

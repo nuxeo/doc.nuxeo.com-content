@@ -1,5 +1,9 @@
 ---
 title: User Preferences
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - preferences
     - lts2015-ok

@@ -1,5 +1,9 @@
 ---
 title: Creating Content
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - drag-and-drop

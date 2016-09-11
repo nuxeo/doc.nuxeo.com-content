@@ -1,5 +1,9 @@
 ---
 title: Managing Permissions
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - access-rights
     - lts2015-ok

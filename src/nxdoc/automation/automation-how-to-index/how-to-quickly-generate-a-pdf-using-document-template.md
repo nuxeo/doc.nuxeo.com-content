@@ -1,5 +1,9 @@
 ---
 title: How to Quickly Generate a PDF Using Document Template
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

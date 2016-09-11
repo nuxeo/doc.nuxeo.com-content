@@ -1,5 +1,9 @@
 ---
 title: Default Search
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - search
     - elasticsearch

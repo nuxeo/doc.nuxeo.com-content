@@ -1,5 +1,9 @@
 ---
 title: Quick Start Dev Guide
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - home
     - lts2015-ok

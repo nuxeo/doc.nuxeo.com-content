@@ -1,5 +1,9 @@
 ---
 title: How to Define a New Content View
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to configure a new content view with Nuxeo Studio.

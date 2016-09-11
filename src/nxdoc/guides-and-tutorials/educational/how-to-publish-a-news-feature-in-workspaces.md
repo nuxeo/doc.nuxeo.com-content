@@ -1,5 +1,9 @@
 ---
 title: How to Publish a News Feature in Workspaces
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
     - tutorial

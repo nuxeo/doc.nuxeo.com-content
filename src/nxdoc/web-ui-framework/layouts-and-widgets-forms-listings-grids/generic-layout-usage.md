@@ -1,5 +1,9 @@
 ---
 title: Generic Layout Usage
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - layout-widgets-component

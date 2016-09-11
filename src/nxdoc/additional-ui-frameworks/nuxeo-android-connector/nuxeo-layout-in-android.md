@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Layout in Android
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - android-connector-component

@@ -1,5 +1,9 @@
 ---
 title: Directory and UI
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - directory
     - vocabulary

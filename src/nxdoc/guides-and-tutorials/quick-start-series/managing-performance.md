@@ -1,5 +1,9 @@
 ---
 title: Managing Performance
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - performance
     - content-review-lts2015

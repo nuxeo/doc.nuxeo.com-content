@@ -1,5 +1,9 @@
 ---
 title: How to Brand Your Application
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: httpsdocnuxeocomdisplaystudiobrandingconfiguration
 redirect_source: 'https://doc.nuxeo.com/display/Studio/Branding+Configuration'
 confluence:

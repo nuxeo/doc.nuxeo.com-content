@@ -1,5 +1,9 @@
 ---
 title: Serial Document Workflow
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - serial-workflow
     - lts2015-ok

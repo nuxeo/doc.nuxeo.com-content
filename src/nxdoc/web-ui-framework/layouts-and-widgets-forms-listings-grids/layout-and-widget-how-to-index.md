@@ -1,5 +1,9 @@
 ---
 title: Layout & Widget How-To Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - index
@@ -16,6 +20,16 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/s4CyAQ'
     source_link: /pages/viewpage.action?pageId=28475571
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 14:31'
+        message: 'everted from v. '
+        version: '8'
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 13:52'
+        message: ''
+        version: '7'
     - 
         author: Anonymous
         date: '2014-12-03 16:00'
@@ -48,4 +62,4 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC710 Studio' label='howto' filter='Topics=Layout'}}}

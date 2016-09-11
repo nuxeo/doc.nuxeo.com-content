@@ -1,5 +1,9 @@
 ---
 title: Nuxeo and Kibana
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - elasticsearch-component
     - kibana

@@ -1,5 +1,9 @@
 ---
 title: MySQL
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - database
     - mysql

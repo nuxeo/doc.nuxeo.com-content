@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Drive Mobile Edition
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-drive-ios
     - lts2015-ok

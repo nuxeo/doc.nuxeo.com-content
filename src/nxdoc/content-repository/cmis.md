@@ -1,5 +1,9 @@
 ---
 title: CMIS
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - blogs
     - soap
@@ -19,6 +23,16 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/iICyAQ'
     source_link: /display/NXDOC710/CMIS
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-08 13:08'
+        message: ''
+        version: '79'
+    - 
+        author: Solen Guitter
+        date: '2016-09-08 13:05'
+        message: ''
+        version: '78'
     - 
         author: Manon Lumeau
         date: '2016-08-02 15:40'
@@ -415,17 +429,15 @@ Nuxeo supports CMIS through the following modules:
 *   The [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) library (an Apache project to which Nuxeo is a contributor), which is a general-purpose Java library allowing developers to easily write CMIS clients and servers,
 *   Specific Nuxeo OpenCMIS connector bundles, allowing the Nuxeo Platform to be used as a CMIS server with the help of OpenCMIS. The CMIS connector is included in the Nuxeo Platform by default.
 
-## Online Trial
-
-You can start a [Nuxeo Platform online trial](https://connect.nuxeo.com/register/#/) to test the CMIS integration. From your trial instance you can access the different services from the following URLs:
-
-*   Browser Binding root URL:&nbsp;`http://your-instance-url/nuxeo/json/cmis`
-*   AtomPub service document: `http://your-instance-url/nuxeo/atom/cmis`
-*   SOAP WSDL for the repository service: `http://your-instance-url/nuxeo/webservices/cmis/RepositoryService?wsdl`
-
 ## Usage
 
 The following documentation uses `http://localhost:8080/nuxeo` as the URL of the Nuxeo server but you can replace it with `http://your-instance-url/nuxeo` if you have another instance available.
+
+You can access the different services from the following URLs:
+
+*   Browser Binding root URL:&nbsp;`<span class="nolink">http://localhost:8080/nuxeo/json/cmis</span>`
+*   AtomPub service document: `<span class="nolink">http://localhost:8080/nuxeo/atom/cmis</span>`
+*   SOAP WSDL for the repository service: `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/RepositoryService?wsdl</span>`
 
 ### JSON
 

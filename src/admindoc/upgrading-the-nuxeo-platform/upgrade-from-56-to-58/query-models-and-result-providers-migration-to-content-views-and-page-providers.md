@@ -2,6 +2,10 @@
 title: >-
     Query Models and Result Providers Migration to Content Views and Page
     Providers
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 toc: true

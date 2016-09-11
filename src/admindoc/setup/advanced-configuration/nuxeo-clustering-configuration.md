@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Clustering Configuration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - configuration
     - vcs

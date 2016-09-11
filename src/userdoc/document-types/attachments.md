@@ -1,5 +1,9 @@
 ---
 title: Attachments
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - attachment
     - lts2015-ok

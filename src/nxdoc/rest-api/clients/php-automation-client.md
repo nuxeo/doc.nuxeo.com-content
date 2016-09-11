@@ -1,5 +1,9 @@
 ---
 title: PHP Automation Client
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - php-client-component

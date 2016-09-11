@@ -1,5 +1,9 @@
 ---
 title: Using OAuth2
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - oauth-component

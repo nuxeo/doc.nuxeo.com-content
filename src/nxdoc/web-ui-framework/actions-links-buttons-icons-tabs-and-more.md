@@ -1,5 +1,9 @@
 ---
 title: 'Actions (Links, Buttons, Icons, Tabs and More)'
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - home
     - content-review-lts2015

@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Live Connect
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - live-connect-component

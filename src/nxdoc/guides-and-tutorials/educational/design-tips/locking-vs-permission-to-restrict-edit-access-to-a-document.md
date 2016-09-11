@@ -1,5 +1,9 @@
 ---
 title: Locking vs Permission to Restrict Edit Access to a Document
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
     - lock

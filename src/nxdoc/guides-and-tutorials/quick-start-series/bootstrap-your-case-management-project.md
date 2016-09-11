@@ -1,5 +1,9 @@
 ---
 title: Bootstrap Your Case Management Project
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - bootstrap
     - lts2015-ok

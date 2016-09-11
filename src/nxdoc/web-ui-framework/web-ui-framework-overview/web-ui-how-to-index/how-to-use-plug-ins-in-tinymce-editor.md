@@ -1,5 +1,9 @@
 ---
 title: How to Use Plug-Ins in TinyMCE Editor
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

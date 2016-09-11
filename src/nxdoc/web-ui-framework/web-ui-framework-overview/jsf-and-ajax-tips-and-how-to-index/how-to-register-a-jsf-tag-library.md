@@ -1,5 +1,9 @@
 ---
 title: How to Register a JSF Tag Library
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to use the JSF tag library registration.

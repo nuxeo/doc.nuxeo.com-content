@@ -1,5 +1,9 @@
 ---
 title: Custom Widget Types
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - layout-widgets-component

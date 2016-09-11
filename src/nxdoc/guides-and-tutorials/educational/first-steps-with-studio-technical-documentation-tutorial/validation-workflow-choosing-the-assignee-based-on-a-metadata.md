@@ -1,5 +1,9 @@
 ---
 title: Validation Workflow Choosing the Assignee Based on a Metadata
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 toc: true

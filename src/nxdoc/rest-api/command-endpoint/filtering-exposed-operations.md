@@ -1,5 +1,9 @@
 ---
 title: Filtering Exposed Operations
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - operation
     - content-review-lts2015

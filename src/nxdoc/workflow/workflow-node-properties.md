@@ -1,5 +1,9 @@
 ---
 title: Workflow Node Properties
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - workflow
     - lts2015-ok

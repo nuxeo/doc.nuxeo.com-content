@@ -1,5 +1,9 @@
 ---
 title: Runtime and Component Model
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     '':
         excerpt: >-

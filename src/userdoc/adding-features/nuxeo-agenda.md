@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Agenda
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-agenda
     - lts2015-ok

@@ -1,5 +1,9 @@
 ---
 title: Hotfixes Installation Notes for Nuxeo Platform LTS 2015
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '27604627'

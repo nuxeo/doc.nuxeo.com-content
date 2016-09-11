@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Bulk Document Importer
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - platform-importer-addon-component

@@ -1,5 +1,9 @@
 ---
 title: How to Customize Document Validation
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

@@ -1,5 +1,9 @@
 ---
 title: Nuxeo for Salesforce
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - salesforce-component

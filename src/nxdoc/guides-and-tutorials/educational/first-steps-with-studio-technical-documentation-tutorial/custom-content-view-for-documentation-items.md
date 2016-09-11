@@ -1,5 +1,9 @@
 ---
 title: Custom Content View for Documentation Items
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - tuto-content-view

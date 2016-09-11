@@ -1,5 +1,9 @@
 ---
 title: How to Bubble Errors from the Core Layer in the Web UI
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to bubble errors from the core layer in the Web UI.

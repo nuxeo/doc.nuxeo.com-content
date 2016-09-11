@@ -1,5 +1,9 @@
 ---
 title: Registering your Nuxeo Instance
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - admin-center
     - update-center
@@ -20,8 +24,13 @@ confluence:
 history:
     - 
         author: Solen Guitter
+        date: '2016-09-08 12:00'
+        message: 'XDOC-857: remove nuxeo.i'
+        version: '25'
+    - 
+        author: Solen Guitter
         date: '2016-03-31 15:05'
-        message: 'pdate links, replace Nuxeo Connect by Nuxeo Online Service'
+        message: 'Update links, replace Nuxeo Connect by Nuxeo Online Services'
         version: '24'
     - 
         author: Solen Guitter
@@ -148,12 +157,6 @@ The registration process only copies a file on your file system. This enables th
 
 To be able to register, you need to have an [Online Services account](#connect-account-creation).
 
-{{#> callout type='tip' }}
-
-If you're using Nuxeo Cloud, your Nuxeo Platform instance is already registered.
-
-{{/callout}}
-
 Registration can be done during the installation steps, using the configuration wizard or at anytime later, through the Admin tab. Registration doesn't require an Internet access. If your server cannot connect to the Internet, follow the [offline registration steps](#offline-registration). Otherwise, follow the [online registration steps](#online-registration).
 
 For development instances on which you may need to remove your data, you may need to [re-register your instance](#re-registration).
@@ -167,7 +170,7 @@ To subscribe to a Nuxeo Online Services trial:
 1.  Go to the [Nuxeo Platform trial registration form](https://connect.nuxeo.com/register/#/).
 2.  Fill in the form. Provide a valid email address or else registration will not be completed.
 3.  Confirm registration by clicking on the link sent to the email address in the previous step.
-    You can now use the Nuxeo Platform online from [Nuxeo Cloud](http://www.nuxeo.com/products/nuxeo-cloud/) or [download it](http://www.nuxeo.com/downloads/) if you want to use it on premises.
+    You can now [download it](http://nuxeo.github.io/downloads) if you want to use it on premises.
 
 ### Registering Online {{> anchor 'online-registration'}}
 

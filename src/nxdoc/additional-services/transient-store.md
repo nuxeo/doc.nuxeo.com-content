@@ -1,5 +1,9 @@
 ---
 title: Transient Store
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - core-component
     - link-update

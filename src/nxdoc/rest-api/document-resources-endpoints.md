@@ -1,5 +1,9 @@
 ---
 title: Document Resources Endpoints
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - rest-api-component

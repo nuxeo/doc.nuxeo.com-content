@@ -1,5 +1,9 @@
 ---
 title: Monitoring Slow NXQL Queries
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - monitoring
     - nxql

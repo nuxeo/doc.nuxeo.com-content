@@ -1,5 +1,9 @@
 ---
 title: DocumentProviders in Android Connector
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - android-connector-component

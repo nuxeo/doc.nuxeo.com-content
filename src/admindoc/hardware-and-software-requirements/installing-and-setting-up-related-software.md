@@ -1,5 +1,9 @@
 ---
 title: Installing and Setting Up Related Software
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - installation
     - third-party-software

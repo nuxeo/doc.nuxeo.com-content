@@ -1,5 +1,9 @@
 ---
 title: Installing the Nuxeo Platform on Mac OS
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - installation
     - lts2015-ok

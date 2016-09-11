@@ -1,5 +1,9 @@
 ---
 title: Authentication and User Management
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - oauth-component
@@ -673,13 +677,13 @@ Nuxeo Authentication is based on the JAAS standard. Authentication infrastructur
 Users and groups are managed via the `UserManagerService` that handles the indirection to users and groups directories (SQL or LDAP or else).
 The Nuxeo authentication framework is pluggable so that you can contribute new plugins and don't have to rewrite and reconfigure a complete JAAS infrastructure.
 
-![]({{file name='Sélection_014.png'}} ?w=600,border=true)
+![]({{file name='Selection_014.png'}} ?w=600,border=true)
 
 &nbsp;
 
 The initial identification can be done at Java level via JAAS or at HTTP level via a dedicated filter. The filter is pluggable so that the way of retrieving credentials can be an adapter to the target system. The JAAS login module is also pluggable so that you can define how the credentials are validated. By default, credentials are validated against directory that use LDAP, SQL or an external application.
 
-![]({{file name='Sélection_013.png'}} ?w=600,border=true)
+![]({{file name='Selection_013.png'}} ?w=600,border=true)
 
 ### Pluggable JAAS Login Module - NuxeoLoginModule
 

@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 6.0 to LTS 2015
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 toc: true

@@ -1,5 +1,9 @@
 ---
 title: Trainings
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '28475804'
     ajs-parent-page-title: Guides and Tutorials

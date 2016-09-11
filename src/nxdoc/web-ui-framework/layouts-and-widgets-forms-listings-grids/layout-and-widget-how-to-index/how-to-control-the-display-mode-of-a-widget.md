@@ -1,5 +1,9 @@
 ---
 title: How to Control the Display Mode of a Widget
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

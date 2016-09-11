@@ -1,5 +1,9 @@
 ---
 title: Developing with AngularJS
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-js
     - angular-js

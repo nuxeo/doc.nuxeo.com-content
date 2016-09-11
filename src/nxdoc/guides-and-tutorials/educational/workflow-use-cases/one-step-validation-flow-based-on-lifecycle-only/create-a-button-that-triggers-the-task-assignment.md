@@ -1,5 +1,9 @@
 ---
 title: Create a button that triggers the task assignment
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
     - tuto-user-action

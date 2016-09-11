@@ -1,5 +1,9 @@
 ---
 title: How to setup a test SMTP server
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to setup a SMTP server for testing purpose.

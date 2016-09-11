@@ -1,5 +1,9 @@
 ---
 title: Quick Start Series
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - home
     - content-review-lts2015

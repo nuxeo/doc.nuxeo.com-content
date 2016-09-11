@@ -1,5 +1,9 @@
 ---
 title: How to Customize the Default Content and Trash Listings
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

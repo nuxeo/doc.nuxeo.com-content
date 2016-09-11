@@ -1,5 +1,9 @@
 ---
 title: How to Make a Selection Based on the Value of Another Value in a Layout
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

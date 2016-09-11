@@ -1,5 +1,9 @@
 ---
 title: Data Visualization
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - data-visualization-component

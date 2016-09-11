@@ -1,5 +1,9 @@
 ---
 title: Conversion How-To Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - index
@@ -37,4 +41,4 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC710 Studio' label='howto' filter='Topics=Conversion'}}}

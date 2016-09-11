@@ -1,5 +1,9 @@
 ---
 title: Returning a Custom Result with Automation
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - automation-component
     - lts2015-not-ok

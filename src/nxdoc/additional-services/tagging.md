@@ -1,5 +1,9 @@
 ---
 title: Tagging
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - tags
     - content-review-lts2015

@@ -1,5 +1,9 @@
 ---
 title: Web Adapters for the REST API
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - rest-api-component

@@ -1,5 +1,9 @@
 ---
 title: How to Write Reusable Automation Chains
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: 'Learn how to factorize similar automation chains. '

@@ -1,5 +1,9 @@
 ---
 title: Deleting Documents
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - delete
     - content-review-lts2015

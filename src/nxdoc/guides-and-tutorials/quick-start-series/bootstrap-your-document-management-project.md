@@ -1,5 +1,9 @@
 ---
 title: Bootstrap Your Document Management Project
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - bootstrap
     - lts2015-ok
@@ -17,6 +21,11 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/L4CyAQ'
     source_link: /display/NXDOC710/Bootstrap+Your+Document+Management+Project
 history:
+    - 
+        author: Solen Guitter
+        date: '2016-09-08 09:49'
+        message: 'XDOC-857: remove nuxeo.i'
+        version: '27'
     - 
         author: Manon Lumeau
         date: '2016-03-10 15:15'
@@ -157,11 +166,10 @@ Due to the business flavor of&nbsp; most of the projects made with Nuxeo Platfor
 
 ## Get an Instance of Nuxeo Platform
 
-You can [download the Nuxeo Platform](http://www.nuxeo.com/downloads/) and [install it]({{page space='admindoc710' page='installation'}}) on site. Or you can use a trial instance of Nuxeo Cloud, available in the [Nuxeo Online Services trial offer](https://connect.nuxeo.com/register/#/). In both cases, you can subscribe to the trial offer to get access to Nuxeo Studio and easily customize your Nuxeo Platform instance.
+[Download the Nuxeo Platform](http://www.nuxeo.com/downloads/) and [install it]({{page space='admindoc710' page='installation'}}) on site. You can also subscribe to the trial offer to get access to Nuxeo Studio and easily customize your Nuxeo Platform instance.
 
 {{#> callout type='info' heading='Related Documentation'}}
 
-*   [nuxeo.io]({{page space='studio' page='nuxeoio'}})
 *   [Installation]({{page space='admindoc710' page='installation'}})
 
 {{/callout}}

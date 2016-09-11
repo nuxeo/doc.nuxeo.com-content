@@ -1,5 +1,9 @@
 ---
 title: Configuring the Elasticsearch Mapping
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - elasticsearch
     - lts2015-ok

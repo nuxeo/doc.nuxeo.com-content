@@ -1,5 +1,9 @@
 ---
 title: Participating to a Topic
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - topic
     - lts2015-ok

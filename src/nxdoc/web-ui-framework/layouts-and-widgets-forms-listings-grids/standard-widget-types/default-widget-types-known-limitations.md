@@ -1,5 +1,9 @@
 ---
 title: Default Widget Types Known Limitations
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - limitations
     - lts2015-ok

@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 5.3.2 to 5.4.0
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 toc: true

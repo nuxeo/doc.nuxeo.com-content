@@ -1,5 +1,9 @@
 ---
 title: Getting Started with Nuxeo IDE
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to start working with Nuxeo IDE.

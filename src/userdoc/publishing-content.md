@@ -1,5 +1,9 @@
 ---
 title: Publishing Content
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - section
     - publishing

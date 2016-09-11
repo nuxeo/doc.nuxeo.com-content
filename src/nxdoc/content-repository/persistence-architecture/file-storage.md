@@ -1,5 +1,9 @@
 ---
 title: File Storage
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - binary-manager
     - lts2015-ok

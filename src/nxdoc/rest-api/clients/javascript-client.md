@@ -1,5 +1,9 @@
 ---
 title: JavaScript Client
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-js
     - lts2015-ok

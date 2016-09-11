@@ -1,5 +1,9 @@
 ---
 title: Microsoft Azure Online Storage
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 toc: true

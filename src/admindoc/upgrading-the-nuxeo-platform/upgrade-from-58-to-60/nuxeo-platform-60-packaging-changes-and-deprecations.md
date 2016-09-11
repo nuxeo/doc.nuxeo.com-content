@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Platform 6.0 Packaging Changes and Deprecations
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 toc: true

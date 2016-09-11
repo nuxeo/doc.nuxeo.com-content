@@ -1,5 +1,9 @@
 ---
 title: Web UI Limitations
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - jsf
     - limitations

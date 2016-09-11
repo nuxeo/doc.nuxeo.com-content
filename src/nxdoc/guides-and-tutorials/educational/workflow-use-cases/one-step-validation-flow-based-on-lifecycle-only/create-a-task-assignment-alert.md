@@ -1,5 +1,9 @@
 ---
 title: Create a task assignment alert
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
     - tuto-template

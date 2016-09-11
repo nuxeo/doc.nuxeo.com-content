@@ -1,5 +1,9 @@
 ---
 title: How to Customize Email Templates
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

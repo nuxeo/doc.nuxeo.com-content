@@ -1,5 +1,9 @@
 ---
 title: Configuring the Nuxeo Platform as a Daemon with Systemd
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - install-linux
     - lts2015-ok

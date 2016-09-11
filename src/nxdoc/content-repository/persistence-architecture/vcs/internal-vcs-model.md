@@ -1,5 +1,9 @@
 ---
 title: Internal VCS Model
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - vcs
     - lts2015-ok

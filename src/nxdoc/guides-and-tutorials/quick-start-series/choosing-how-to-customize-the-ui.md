@@ -1,5 +1,9 @@
 ---
 title: Choosing How to Customize the UI
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
 toc: true

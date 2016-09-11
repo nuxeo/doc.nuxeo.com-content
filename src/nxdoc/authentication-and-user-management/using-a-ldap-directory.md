@@ -1,5 +1,9 @@
 ---
 title: Using a LDAP Directory
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - active-directory
     - lts2015-ok

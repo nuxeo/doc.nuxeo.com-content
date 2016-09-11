@@ -1,5 +1,9 @@
 ---
 title: How to Upload Labels Translations in Nuxeo Studio (i18n)
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to upload your own translation of labels in Nuxeo Studio.

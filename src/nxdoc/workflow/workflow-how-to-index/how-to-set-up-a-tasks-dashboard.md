@@ -1,5 +1,9 @@
 ---
 title: How to Set Up a Tasks Dashboard
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to manage a tasks dashboard.

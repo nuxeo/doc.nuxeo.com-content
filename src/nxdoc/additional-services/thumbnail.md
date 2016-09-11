@@ -1,5 +1,9 @@
 ---
 title: Thumbnail
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - thumbnail
     - community-links

@@ -1,5 +1,9 @@
 ---
 title: Security
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - security-component

@@ -1,5 +1,9 @@
 ---
 title: 'First Steps With Studio: Technical Documentation Tutorial'
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - tutorial

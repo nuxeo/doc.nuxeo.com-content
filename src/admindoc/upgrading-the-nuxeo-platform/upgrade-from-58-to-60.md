@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 5.8 to 6.0
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 toc: true

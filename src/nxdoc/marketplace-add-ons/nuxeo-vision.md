@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Vision
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - link-update
 toc: true

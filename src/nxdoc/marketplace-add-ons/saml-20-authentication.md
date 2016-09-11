@@ -1,5 +1,9 @@
 ---
 title: SAML 2.0 Authentication
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - saml-component

@@ -1,5 +1,9 @@
 ---
 title: Setup
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - wizard
     - admin-center

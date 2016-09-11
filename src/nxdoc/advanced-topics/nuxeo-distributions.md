@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Distributions
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - ant-assembly-maven-plugin
     - lts2015-ok

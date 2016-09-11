@@ -1,5 +1,9 @@
 ---
 title: How to Add a New Widget to the Default Summary Layout
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

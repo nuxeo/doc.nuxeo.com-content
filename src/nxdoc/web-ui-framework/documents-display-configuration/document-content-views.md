@@ -1,5 +1,9 @@
 ---
 title: Document Content Views
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - web-ui-component

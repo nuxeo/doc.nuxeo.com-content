@@ -1,5 +1,9 @@
 ---
 title: REST API How-To Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - index
@@ -15,6 +19,16 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/AoGyAQ'
     source_link: /display/NXDOC710/REST+API+How-To+Index
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 14:04'
+        message: 'everted from v. '
+        version: '7'
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 13:59'
+        message: ''
+        version: '6'
     - 
         author: Solen Guitter
         date: '2014-12-03 15:55'
@@ -42,4 +56,4 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC710 Studio ' label='howto' filter='Topics=REST API'}}}

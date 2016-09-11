@@ -1,5 +1,9 @@
 ---
 title: How to Customize the Bulk Edit Form
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to customize the bulk edit form using Nuxeo Studio.

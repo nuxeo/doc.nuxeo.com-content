@@ -1,5 +1,9 @@
 ---
 title: Sensitive Configuration Data Encryption
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - encryption

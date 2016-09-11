@@ -1,5 +1,9 @@
 ---
 title: How to Customize the Info-View Pop-Up
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

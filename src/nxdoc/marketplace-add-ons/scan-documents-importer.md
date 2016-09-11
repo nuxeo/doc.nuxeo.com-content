@@ -1,5 +1,9 @@
 ---
 title: Scan Documents Importer
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - scan-documents-importer
     - content-review-lts2015

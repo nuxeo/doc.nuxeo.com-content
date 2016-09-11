@@ -1,5 +1,9 @@
 ---
 title: Document List Management
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - clipboard
     - lts2015-ok

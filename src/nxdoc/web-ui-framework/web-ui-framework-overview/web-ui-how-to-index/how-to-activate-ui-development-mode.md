@@ -1,5 +1,9 @@
 ---
 title: How to Activate UI Development Mode
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

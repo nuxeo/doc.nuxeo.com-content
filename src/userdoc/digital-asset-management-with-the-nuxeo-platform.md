@@ -1,5 +1,9 @@
 ---
 title: Digital Asset Management with the Nuxeo Platform
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 toc: true

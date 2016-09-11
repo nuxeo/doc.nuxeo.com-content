@@ -1,5 +1,9 @@
 ---
 title: Publisher
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - community-links
     - lts2015-ok

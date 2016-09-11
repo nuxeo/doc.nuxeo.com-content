@@ -1,5 +1,9 @@
 ---
 title: Collections
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - collection
     - lts2015-ok

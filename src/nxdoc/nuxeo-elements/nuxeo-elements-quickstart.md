@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Elements Quickstart
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to start working with Nuxeo Elements.

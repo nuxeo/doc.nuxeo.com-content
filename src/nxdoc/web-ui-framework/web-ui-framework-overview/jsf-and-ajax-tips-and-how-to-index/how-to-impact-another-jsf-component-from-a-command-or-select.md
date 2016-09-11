@@ -1,5 +1,9 @@
 ---
 title: How to Impact Another JSF Component from a Command or Select
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to impact another JSF component from a Command or Select.

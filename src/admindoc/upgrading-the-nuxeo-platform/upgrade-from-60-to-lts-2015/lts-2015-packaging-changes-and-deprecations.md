@@ -1,5 +1,9 @@
 ---
 title: LTS 2015 Packaging Changes and Deprecations
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 confluence:

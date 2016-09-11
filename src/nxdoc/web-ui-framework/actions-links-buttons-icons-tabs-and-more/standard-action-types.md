@@ -1,5 +1,9 @@
 ---
 title: Standard Action Types
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - action
     - lts2015-ok

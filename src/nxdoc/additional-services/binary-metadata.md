@@ -1,5 +1,9 @@
 ---
 title: Binary Metadata
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - binary-metadata

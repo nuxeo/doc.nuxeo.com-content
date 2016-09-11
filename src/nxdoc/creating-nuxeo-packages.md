@@ -1,5 +1,9 @@
 ---
 title: Creating Nuxeo Packages
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - packaging-component

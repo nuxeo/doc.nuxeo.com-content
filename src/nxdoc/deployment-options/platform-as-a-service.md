@@ -1,5 +1,9 @@
 ---
 title: Platform as a Service
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - architecture
     - lts2015-ok

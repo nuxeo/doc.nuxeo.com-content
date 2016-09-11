@@ -1,5 +1,9 @@
 ---
 title: Working with WebDAV
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - editing
     - webdav

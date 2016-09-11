@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 5.1.6 with JCR + PostgreSQL to 5.2.0
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 confluence:

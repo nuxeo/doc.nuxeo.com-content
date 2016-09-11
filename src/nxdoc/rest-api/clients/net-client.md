@@ -1,5 +1,9 @@
 ---
 title: .NET Client
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - client
     - netcore

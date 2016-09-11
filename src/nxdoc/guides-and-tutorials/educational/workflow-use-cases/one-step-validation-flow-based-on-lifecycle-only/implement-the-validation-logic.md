@@ -1,5 +1,9 @@
 ---
 title: Implement the validation logic
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
     - tuto-automation

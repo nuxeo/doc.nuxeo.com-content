@@ -1,5 +1,9 @@
 ---
 title: Security Policy Service
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - community-links
     - acl

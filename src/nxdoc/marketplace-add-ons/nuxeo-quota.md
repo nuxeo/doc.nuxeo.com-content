@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Quota
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - quotas-component

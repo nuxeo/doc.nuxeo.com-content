@@ -1,5 +1,9 @@
 ---
 title: Installation and Administration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 confluence:

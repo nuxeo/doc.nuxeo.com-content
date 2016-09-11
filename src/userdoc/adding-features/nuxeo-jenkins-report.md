@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Jenkins Report
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-jenkins-report
     - lts2015-ok

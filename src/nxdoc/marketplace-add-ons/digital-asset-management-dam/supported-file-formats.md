@@ -1,5 +1,9 @@
 ---
 title: Supported File Formats
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - dam
     - dam-component

@@ -1,5 +1,9 @@
 ---
 title: Counting documents
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - dataviz-component
     - lts2015-ok

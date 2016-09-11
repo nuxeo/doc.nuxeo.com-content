@@ -1,5 +1,9 @@
 ---
 title: Remote Monitoring Through a SSH Tunnel
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - monitoring
     - ssh

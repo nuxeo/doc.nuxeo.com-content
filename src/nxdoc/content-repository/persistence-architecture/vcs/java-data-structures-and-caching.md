@@ -1,5 +1,9 @@
 ---
 title: Java Data Structures and Caching
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - vcs
     - lts2015-ok

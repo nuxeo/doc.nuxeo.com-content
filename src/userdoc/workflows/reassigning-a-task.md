@@ -1,5 +1,9 @@
 ---
 title: Reassigning a Task
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - reassign
     - lts2015-ok

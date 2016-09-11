@@ -1,5 +1,9 @@
 ---
 title: JSF and JavaScript
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to get a tag client using DOM.

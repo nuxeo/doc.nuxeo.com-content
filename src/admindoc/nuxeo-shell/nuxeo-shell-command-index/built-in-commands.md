@@ -1,5 +1,9 @@
 ---
 title: Built-in Commands
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - shell
     - lts2015-ok

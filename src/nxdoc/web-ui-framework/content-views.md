@@ -1,5 +1,9 @@
 ---
 title: Content Views
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - content-views-component

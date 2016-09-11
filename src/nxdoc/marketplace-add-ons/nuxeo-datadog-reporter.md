@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Datadog Reporter
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
     - last-review-20150708

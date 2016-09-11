@@ -1,5 +1,9 @@
 ---
 title: Using OpenID / OAuth2 in Login Screen
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - openid-component

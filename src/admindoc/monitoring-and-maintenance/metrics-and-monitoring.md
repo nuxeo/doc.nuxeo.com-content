@@ -1,5 +1,9 @@
 ---
 title: Metrics and Monitoring
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - metrics
     - monitoring-component

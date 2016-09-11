@@ -1,5 +1,9 @@
 ---
 title: From the old workflow system to the new 5.4 workflow system
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 confluence:

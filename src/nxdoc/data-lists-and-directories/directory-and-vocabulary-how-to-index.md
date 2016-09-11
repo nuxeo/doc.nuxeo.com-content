@@ -1,5 +1,9 @@
 ---
 title: Directory & Vocabulary How-To Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
 confluence:
@@ -14,6 +18,16 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/qICyAQ'
     source_link: /pages/viewpage.action?pageId=28475560
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 14:30'
+        message: 'everted from v. '
+        version: '6'
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 13:50'
+        message: ''
+        version: '5'
     - 
         author: Solen Guitter
         date: '2014-12-03 15:57'
@@ -36,4 +50,4 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC710 Studio USERDOC710' label='howto' filter='Topics=Vocabulary'}}}

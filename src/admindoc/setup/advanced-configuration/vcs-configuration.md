@@ -1,5 +1,9 @@
 ---
 title: VCS Configuration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - vcs
     - binarymanager

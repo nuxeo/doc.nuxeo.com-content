@@ -1,5 +1,9 @@
 ---
 title: Custom Page Providers
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: page-providers
 redirect_source: Page Providers
 confluence:

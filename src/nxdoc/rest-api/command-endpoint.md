@@ -1,5 +1,9 @@
 ---
 title: Command Endpoint
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
     - automation-component

@@ -1,5 +1,9 @@
 ---
 title: Firewall Consideration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - proxy
     - database

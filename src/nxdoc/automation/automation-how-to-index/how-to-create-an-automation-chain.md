@@ -1,5 +1,9 @@
 ---
 title: How to Create an Automation Chain
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

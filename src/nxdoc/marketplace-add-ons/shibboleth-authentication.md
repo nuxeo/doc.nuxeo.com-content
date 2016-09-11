@@ -1,5 +1,9 @@
 ---
 title: Shibboleth Authentication
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - link-update
     - lts2015-ok

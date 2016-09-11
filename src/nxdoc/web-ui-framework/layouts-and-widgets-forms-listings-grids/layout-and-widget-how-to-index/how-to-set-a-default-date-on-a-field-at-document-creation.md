@@ -1,5 +1,9 @@
 ---
 title: How to Set a Default Date on a Field at Document Creation
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

@@ -1,5 +1,9 @@
 ---
 title: Web UI Framework Overview
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - jsf
     - lts2015-ok

@@ -1,5 +1,9 @@
 ---
 title: How to Enable the Trash Feature
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

@@ -1,5 +1,9 @@
 ---
 title: Implement the News "Publishing" Process
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - tuto-user-action

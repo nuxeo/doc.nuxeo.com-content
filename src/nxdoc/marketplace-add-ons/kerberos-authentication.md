@@ -1,5 +1,9 @@
 ---
 title: Kerberos Authentication
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
     - kerberos-authentication-component

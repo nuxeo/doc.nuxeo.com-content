@@ -1,5 +1,9 @@
 ---
 title: Package Manifest
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
     - packaging-component

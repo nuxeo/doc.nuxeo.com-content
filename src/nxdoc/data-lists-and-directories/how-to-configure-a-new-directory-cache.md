@@ -1,5 +1,9 @@
 ---
 title: How to Configure a New Directory Cache
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

@@ -1,5 +1,9 @@
 ---
 title: Configuring the JSF Number of Views
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - jsf
     - lts2015-ok

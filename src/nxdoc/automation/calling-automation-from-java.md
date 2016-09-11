@@ -1,5 +1,9 @@
 ---
 title: Calling Automation from Java
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - automation-component

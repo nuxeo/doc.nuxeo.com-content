@@ -1,5 +1,9 @@
 ---
 title: Quick Search
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - suggestion-search
     - search

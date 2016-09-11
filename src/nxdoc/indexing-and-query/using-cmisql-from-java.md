@@ -1,5 +1,9 @@
 ---
 title: Using CMISQL from Java
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

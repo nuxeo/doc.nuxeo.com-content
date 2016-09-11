@@ -1,5 +1,9 @@
 ---
 title: Automation Scripting
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - scripting
     - lts2015-ok

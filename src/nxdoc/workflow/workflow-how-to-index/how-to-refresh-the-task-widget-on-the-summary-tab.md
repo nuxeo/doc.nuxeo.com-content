@@ -1,5 +1,9 @@
 ---
 title: How to Refresh the Task Widget on the Summary Tab
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to refresh the task widget on the Summary tab.

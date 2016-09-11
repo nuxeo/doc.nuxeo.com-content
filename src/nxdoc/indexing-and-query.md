@@ -1,5 +1,9 @@
 ---
 title: Indexing and Query
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
     - query-pageprovider-component

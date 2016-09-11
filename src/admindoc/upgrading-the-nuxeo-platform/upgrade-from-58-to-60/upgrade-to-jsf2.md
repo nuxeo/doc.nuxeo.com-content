@@ -1,5 +1,9 @@
 ---
 title: Upgrade to JSF2
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 confluence:

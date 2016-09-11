@@ -1,5 +1,9 @@
 ---
 title: Digital Signature
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - digital-signature
     - lts2015-ok

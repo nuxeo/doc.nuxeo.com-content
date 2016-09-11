@@ -1,5 +1,9 @@
 ---
 title: How to Customize the Drive Metadata Edit Layouts
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

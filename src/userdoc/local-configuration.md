@@ -1,5 +1,9 @@
 ---
 title: Local Configuration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 toc: true

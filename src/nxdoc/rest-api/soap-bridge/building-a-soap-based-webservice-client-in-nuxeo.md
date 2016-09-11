@@ -1,5 +1,9 @@
 ---
 title: Building a SOAP-Based WebService Client in Nuxeo
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - soap
     - lts2015-ok

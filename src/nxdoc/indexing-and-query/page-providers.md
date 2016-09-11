@@ -1,5 +1,9 @@
 ---
 title: Page Providers
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - query-pageprovider-component

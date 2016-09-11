@@ -1,5 +1,9 @@
 ---
 title: Using CAS2 Authentication
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - cas-authentication-component
     - lts2015-not-ok

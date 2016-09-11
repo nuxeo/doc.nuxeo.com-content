@@ -1,5 +1,9 @@
 ---
 title: Web UI How-To Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - index
@@ -15,6 +19,16 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/14CyAQ'
     source_link: /display/NXDOC710/Web+UI+How-To+Index
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 14:37'
+        message: 'everted from v. '
+        version: '7'
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 13:44'
+        message: ''
+        version: '6'
     - 
         author: Anonymous
         date: '2015-01-13 10:28'
@@ -42,4 +56,4 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC710 Studio' label='howto' filter='Topics=Web UI'}}}

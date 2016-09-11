@@ -1,5 +1,9 @@
 ---
 title: Hardware and Software Requirements
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - requirements
     - lts2015-ok

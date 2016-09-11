@@ -1,5 +1,9 @@
 ---
 title: Garbage-Collecting Orphaned Binaries
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - delete
     - lts2015-ok

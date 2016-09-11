@@ -1,5 +1,9 @@
 ---
 title: File Manager
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - file-manager

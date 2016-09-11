@@ -1,5 +1,9 @@
 ---
 title: Reporting Problems
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
 toc: true

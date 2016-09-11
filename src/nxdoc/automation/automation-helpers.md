@@ -1,5 +1,9 @@
 ---
 title: Automation Helpers
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - automation-component

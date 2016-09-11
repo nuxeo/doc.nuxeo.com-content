@@ -1,5 +1,9 @@
 ---
 title: Moving Load from Database to Elasticsearch
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - elasticsearch
     - content-review-lts2015

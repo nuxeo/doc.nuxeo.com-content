@@ -1,5 +1,9 @@
 ---
 title: Using Workspace Templates
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - templates
     - lts2015-ok

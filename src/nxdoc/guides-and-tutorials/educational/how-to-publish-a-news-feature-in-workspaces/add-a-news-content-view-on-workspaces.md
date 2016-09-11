@@ -1,5 +1,9 @@
 ---
 title: Add a News Content View on Workspaces
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - tuto-content-view

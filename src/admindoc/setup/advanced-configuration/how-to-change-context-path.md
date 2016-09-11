@@ -1,5 +1,9 @@
 ---
 title: How to Change Context Path
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

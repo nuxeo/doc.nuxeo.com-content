@@ -1,5 +1,9 @@
 ---
 title: Nuxeo CSV
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-csv
     - csv

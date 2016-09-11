@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Media Publishing
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - media-publishing-component

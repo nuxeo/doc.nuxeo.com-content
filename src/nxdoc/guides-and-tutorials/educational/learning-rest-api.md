@@ -1,5 +1,9 @@
 ---
 title: Learning REST API
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '28475557'

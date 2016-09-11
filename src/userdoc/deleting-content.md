@@ -1,5 +1,9 @@
 ---
 title: Deleting Content
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - trash
     - delete

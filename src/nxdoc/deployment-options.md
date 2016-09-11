@@ -1,5 +1,9 @@
 ---
 title: Deployment Options
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - architecture
     - lts2015-ok

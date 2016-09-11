@@ -1,5 +1,9 @@
 ---
 title: NXQL
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
     - query-pageprovider-component

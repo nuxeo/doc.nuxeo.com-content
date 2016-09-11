@@ -1,5 +1,9 @@
 ---
 title: How to Debug Slow Page Rendering
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: |-

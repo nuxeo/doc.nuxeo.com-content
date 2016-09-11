@@ -1,5 +1,9 @@
 ---
 title: Nuxeo and Redis
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - redis
     - content-review-lts2015

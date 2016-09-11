@@ -1,8 +1,13 @@
 ---
 title: Android Connector and Caching
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - android-connector-component
+toc: true
 confluence:
     ajs-parent-page-id: '28475544'
     ajs-parent-page-title: Nuxeo Android Connector

@@ -1,5 +1,9 @@
 ---
 title: How to Create a Nuxeo Static WAR
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

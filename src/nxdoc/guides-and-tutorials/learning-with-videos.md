@@ -1,5 +1,9 @@
 ---
 title: Learning with Videos
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-review-lts2015
 confluence:

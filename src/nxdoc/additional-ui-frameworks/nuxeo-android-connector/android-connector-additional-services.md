@@ -1,5 +1,9 @@
 ---
 title: Android Connector additional Services
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - android-connector-component

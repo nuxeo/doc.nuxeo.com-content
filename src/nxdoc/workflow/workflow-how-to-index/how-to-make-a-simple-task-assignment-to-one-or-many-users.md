@@ -1,5 +1,9 @@
 ---
 title: How to Make a Simple Task Assignment to One or Many Users
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to create a task and assign it to one or many users.

@@ -1,5 +1,9 @@
 ---
 title: Available installers
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - distributions-component

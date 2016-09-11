@@ -1,5 +1,9 @@
 ---
 title: Drag and Drop Service for Content Capture (HTML5-Based)
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - file-upload-component

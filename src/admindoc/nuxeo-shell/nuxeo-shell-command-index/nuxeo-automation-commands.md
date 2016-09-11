@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Automation Commands
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - shell
     - automation

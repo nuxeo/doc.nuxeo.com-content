@@ -1,5 +1,9 @@
 ---
 title: Implement the News Document
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - tuto-user-action

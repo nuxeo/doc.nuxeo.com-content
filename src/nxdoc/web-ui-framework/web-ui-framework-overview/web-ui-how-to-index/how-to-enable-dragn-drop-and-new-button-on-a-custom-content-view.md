@@ -1,5 +1,9 @@
 ---
 title: How to Enable Drag'n Drop and New Button on a Custom Content View
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Make a custom content view look like the default Content tab.

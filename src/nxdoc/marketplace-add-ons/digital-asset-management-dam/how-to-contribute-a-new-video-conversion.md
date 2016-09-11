@@ -1,5 +1,9 @@
 ---
 title: How to Contribute a New Video Conversion
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

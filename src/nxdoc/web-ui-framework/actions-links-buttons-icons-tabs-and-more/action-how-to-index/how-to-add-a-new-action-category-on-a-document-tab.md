@@ -1,5 +1,9 @@
 ---
 title: How to Add a New Action Category on a Document Tab
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

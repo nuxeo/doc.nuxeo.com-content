@@ -1,5 +1,9 @@
 ---
 title: Where Are the Log and Configuration Files in Windows?
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - log
     - lts2015-ok

@@ -1,5 +1,9 @@
 ---
 title: How to Declare the CSS and JavaScript Resources Used in Your Templates
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

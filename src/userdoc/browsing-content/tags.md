@@ -1,5 +1,9 @@
 ---
 title: Tags
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - tag
     - lts2015-ok

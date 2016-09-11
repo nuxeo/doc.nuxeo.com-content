@@ -1,5 +1,9 @@
 ---
 title: Upgrading the Nuxeo Platform
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - upgrade
     - content-review-lts2015

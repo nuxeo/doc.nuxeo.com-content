@@ -1,5 +1,9 @@
 ---
 title: Incremental Layouts and Actions
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lts2015-ok
     - layout-widgets-component

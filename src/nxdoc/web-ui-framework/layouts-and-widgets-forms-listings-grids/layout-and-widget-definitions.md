@@ -1,5 +1,9 @@
 ---
 title: Layout and Widget Definitions
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - home
     - content-review-lts2015

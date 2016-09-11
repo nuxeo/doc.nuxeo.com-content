@@ -1,5 +1,9 @@
 ---
 title: Query Endpoint
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

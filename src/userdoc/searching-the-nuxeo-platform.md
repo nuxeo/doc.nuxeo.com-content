@@ -1,5 +1,9 @@
 ---
 title: Searching the Nuxeo Platform
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - search
     - lts2015-ok

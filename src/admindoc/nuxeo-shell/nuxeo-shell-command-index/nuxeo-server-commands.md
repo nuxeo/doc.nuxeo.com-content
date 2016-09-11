@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Server Commands
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - shell
     - nxdoc-751
