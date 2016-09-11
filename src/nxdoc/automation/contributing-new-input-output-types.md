@@ -1,5 +1,9 @@
 ---
 title: Contributing New Input-Output Types
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - marshalling
     - codec

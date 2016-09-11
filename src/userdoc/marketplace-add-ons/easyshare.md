@@ -1,5 +1,9 @@
 ---
 title: EasyShare
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - easyshare
 toc: true

@@ -1,5 +1,9 @@
 ---
 title: Back and Next Buttons Paradigm and JSF in the Nuxeo Platform
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - jsf
 confluence:

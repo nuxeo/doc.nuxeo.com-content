@@ -1,5 +1,9 @@
 ---
 title: Ajax4jsf Best Practices
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

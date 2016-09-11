@@ -1,5 +1,9 @@
 ---
 title: Managing a Social Workspace
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '21299519'
     ajs-parent-page-title: Social Workspaces Overview

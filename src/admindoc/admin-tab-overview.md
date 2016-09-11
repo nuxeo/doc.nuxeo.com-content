@@ -1,5 +1,9 @@
 ---
 title: Admin Tab Overview
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20141121
     - admin-center

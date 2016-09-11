@@ -1,5 +1,9 @@
 ---
 title: How to Translate a Vocabulary
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to translate an existing vocabulary.

@@ -1,5 +1,9 @@
 ---
 title: How to Contribute to an Extension
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-
@@ -256,7 +260,7 @@ In the previous section you have created your configuration. You must now declar
 
 2.  If the `Nuxeo-Component` already exists with another component declaration, separate them by commas.
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt-include:How to create an empty bundle|name=manifest-format-warning|nopanel=true} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt-include:How to create an empty bundle|name=manifest-format-warning|nopanel=true} --}}
 
 ## Overriding the Nuxeo Default Configuration
 

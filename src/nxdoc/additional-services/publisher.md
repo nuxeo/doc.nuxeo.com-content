@@ -1,5 +1,9 @@
 ---
 title: Publisher
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - publishing
     - link-update

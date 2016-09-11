@@ -1,5 +1,9 @@
 ---
 title: Operations Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - operation
 confluence:

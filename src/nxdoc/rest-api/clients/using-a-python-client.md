@@ -1,5 +1,9 @@
 ---
 title: Using a Python Client
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - python-client
     - client

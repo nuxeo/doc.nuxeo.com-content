@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Security System
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - security-policy
     - security

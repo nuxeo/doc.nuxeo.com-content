@@ -1,5 +1,9 @@
 ---
 title: Web Adapters for the REST API
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380806'
     ajs-parent-page-title: Resources Endpoints

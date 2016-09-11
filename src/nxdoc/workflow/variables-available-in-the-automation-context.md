@@ -1,5 +1,9 @@
 ---
 title: Variables Available in the Automation Context
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - scripting
     - variable

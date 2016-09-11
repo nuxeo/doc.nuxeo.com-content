@@ -1,5 +1,9 @@
 ---
 title: Validation Workflow Choosing the Assignee Based on a Metadata
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '22380605'

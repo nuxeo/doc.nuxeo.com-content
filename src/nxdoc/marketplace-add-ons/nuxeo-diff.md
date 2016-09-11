@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Diff
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - link-update
     - nuxeo-diff

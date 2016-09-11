@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 5.5 to 5.6
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '21921796'

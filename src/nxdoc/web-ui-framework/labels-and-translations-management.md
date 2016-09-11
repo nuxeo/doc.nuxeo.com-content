@@ -1,5 +1,9 @@
 ---
 title: Labels and Translations Management
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - todo
 confluence:

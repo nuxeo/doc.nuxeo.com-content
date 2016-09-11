@@ -1,5 +1,9 @@
 ---
 title: Marketplace Add-Ons
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - marketplace
 confluence:
@@ -1322,6 +1326,557 @@ Here is the list of Nuxeo Platform add-ons available on the Nuxeo Marketplace.
 _Use the field below to search for a specific add-on._
 
 {{! table-filter removed }}
+
+**Package name**
+
+**Public / Registered access**
+
+Documentation
+
+**Comments (especially about latest release)**
+
+Amazon S3 Online Storage
+
+Registered access
+
+[Documentation]({{page space='nxdoc60' page='amazon-s3-online-storage'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage?version=1.5)
+
+Automated Document Categorization
+
+Public
+
+[Developer documentation]({{page space='nxdoc60' page='automated-document-categorization'}})
+
+[User documentation]({{page page='automated-document-categorization'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/automated-document-categorization?version=1.4.0)
+
+Bulk document importer
+
+Registered access
+
+[Documentation]({{page space='nxdoc60' page='nuxeo-bulk-document-importer'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer?version=1.5.0)
+
+CAS2 Authentication
+
+Registered access
+
+[Documentation]({{page space='NXDOC60' page='Using CAS2+Authentication'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication?version=1.2.0)
+
+Configuration Management
+
+Registered access
+
+[Studio documentation]({{page space='studio' page='configuration-management'}})
+
+[Released for 5.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/configuration-management-nux?version=0.1.0)
+
+Digital Signature
+
+Registered access
+
+[Developer documentation]({{page space='nxdoc60' page='digital-signature'}})
+
+[User documentation]({{page page='digital-signature'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-signature?version=2.3.0)
+
+Display email in user suggestion
+
+Registered access
+
+[Administration documentation (5.6)]({{page space='admindoc56' page='display-email-in-user-suggestion'}})
+
+[User documentation (5.6)]({{page space='userdoc56' page='display-email-in-user-suggestions'}})
+
+[Released for 5.6](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-email-suggestion?version=1.2.0)
+
+Since 5.9.1, available as a parameter in nuxeo.conf
+
+Document access tracking
+
+Public
+
+[Developer documentation]({{page space='nxdoc60' page='document-access-tracking'}})
+
+[User documentation]({{page page='document-access-tracking'}})
+
+[Released for 5.8](https://connect.nuxeo.com/nuxeo/site/marketplace/package/audit-web-access?version=1.2)
+
+Easy Bookmark Plugin
+
+Public
+
+[User documentation (5.4)]({{page space='dmdoc54' page='easy-bookmark-plugin'}})
+
+[Released for 5.4](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easybookmark?version=1.0.0)
+
+No more release unless requested
+
+EasyShare
+
+Public
+
+[Developer documentation]({{page space='nxdoc60' page='easyshare'}})
+
+[User documentation]({{page page='easyshare'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare?version=1.1.0)
+
+Faceted search
+
+Public
+
+[Developer documentation]({{page space='nxdoc60' page='faceted-search'}})
+
+[User documentation]({{page page='faceted-search'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-faceted-search?version=1.0)
+
+Deprecated since 6.0
+
+Frequently Asked Questions
+
+Public
+
+[User documentation (5.5)]({{page space='dmdoc55' page='faq-plugin'}})
+
+[Released for 5.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/FAQ?version=1.1.0)
+
+Kerberos Authentication
+
+Public
+
+[Administration documentation]({{page space='admindoc60' page='using-kerberos'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/kerberos-authentication?version=1.3.0)
+
+Nuxeo Agenda
+
+Registered access
+
+[Developer documentation]({{page space='nxdoc60' page='nuxeo-agenda'}})
+
+[User documentation]({{page page='nuxeo-agenda'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda?version=1.2.1) (depends on HF10)
+
+Nuxeo - BIRT Integration
+
+Registered access
+
+[Developer documentation]({{page space='nxdoc60' page='nuxeo-birt-integration'}})
+
+[User documentation]({{page page='nuxeo-birt-integration'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-birt-integration?version=2.6.0)
+
+Nuxeo Box API
+
+Public
+
+&nbsp;
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-box-api?version=1.1.0)
+
+Nuxeo CMF
+
+Public
+
+[Developer documentation (5.5)]({{page space='cmdoc55' page='nuxeo-cmf-developer-documentation'}})
+
+[User documentation (5.5)]({{page space='cmdoc55' page='nuxeo-cmf-55-user-guide'}})
+
+[Last release with the Nuxeo Platform 5.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cmf)
+
+Deprecated since 5.6
+
+Nuxeo CSV
+
+Public
+
+[Documentation]({{page space='nxdoc60' page='nuxeo-csv'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv?version=1.3.0)
+
+Nuxeo DAM
+
+Public
+
+[Documentation]({{page space='damdoc55' page='nuxeo-dam-developer-documentation'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam?version=6.0)
+
+Nuxeo DAM PDF Export Public
+
+[Developer documentation]({{page space='nxdoc60' page='nuxeo-dam-pdf-export'}})
+
+[User documentation]({{page page='nuxeo-dam-pdf-export'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam-pdf-export?version=1.4.0)
+
+Nuxeo DAM Compat
+
+PUBLIC
+
+[Developer documentation]({{page space='nxdoc60' page='nuxeo-dam-compat'}})
+
+[User documentation]({{page page='nuxeo-dam-compat'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam-compat?version=1.0)
+
+Nuxeo Diff
+
+Public
+
+[Developer documentation]({{page space='nxdoc60' page='nuxeo-diff'}})
+
+[User documentation]({{page page='nuxeo-diff'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff?version=1.5.0)
+
+Included in Nuxeo DM since 5.8
+
+Nuxeo DM
+
+Public
+
+[User documentation (5.8)]({{page space='userdoc58' page='document-management'}})
+
+Deprecated since 6.0
+
+Nuxeo Document Count
+
+Registered access
+
+&nbsp;
+
+[Released for 5.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-document-count)
+
+Included in Nuxeo Quota since 5.6
+
+Nuxeo Drive
+
+Public
+
+[Developer documentation]({{page space='nxdoc60' page='nuxeo-drive'}})
+
+[User documentation]({{page page='nuxeo-drive'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive?version=1.4.0)
+
+Nuxeo DuoWeb Two Factors Authentication Public [User documentation]({{page page='nuxeo-duoweb-two-factor-authentication'}}) [Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-duoweb-authentication?version=1.2.0)
+
+Nuxeo Elasticsearch Integration
+
+Public
+
+[Documentation]({{page space='nxdoc60' page='elasticsearch-indexing-logic'}})
+
+[Released for 5.9.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-elasticsearch?version=1.3.1)
+
+Included in CAP since 6.0
+
+Nuxeo Exalead Connector
+
+Registered access
+
+&nbsp;
+
+[Released for 5.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-exalead-connector?version=1.0.0)
+
+No more release unless requested
+
+Nuxeo Flex connector
+
+Registered access
+
+[Developer documentation (5.4.2)]({{page space='nxdoc54' page='nuxeo-flex-connector'}})
+
+[Released for 5.4.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/flex-connector?version=1.1.0)
+
+No more release unless requested
+
+Nuxeo Flex samples
+
+Registered access
+
+[Developer documentation (5.4.2)]({{page space='nxdoc54' page='nuxeo-flex-connector'}})
+
+[Released for 5.4.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/flex-samples?version=1.1.0)
+
+No more release unless requested
+
+Nuxeo Groups and Rights Audit
+
+Registered access
+
+[Developer documentation]({{page space='nxdoc60' page='nuxeo-groups-and-rights-audit'}})
+
+[User documentation]({{page page='nuxeo-groups-and-rights-audit'}})
+
+[Released for 5.8](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit?version=1.4.0)
+
+Nuxeo GSA Connector
+
+Registered access
+
+[Administration documentation (5.5)]({{page space='admindoc55' page='nuxeo-gsa-connector'}})
+
+[Released for 5.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/gsa-connector?version=5.5.0-HF05)
+
+No more release unless requested
+
+Nuxeo IMAP Connector Public &nbsp;[User documentation]({{page page='nuxeo-imap-connector'}}) [Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector?version=1.0)
+
+Nuxeo Indexing Gateway
+
+Registered access
+
+&nbsp;
+
+[Released for 5.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-indexing-gateway?version=1.0.0)
+
+Nuxeo jBPM
+
+Registered access
+
+[Developer documentation (5.8)]({{page space='nxdoc58' page='nuxeo-jbpm'}})
+
+[User documentation (5.8)]({{page space='userdoc58' page='nuxeo-jbpm'}})
+
+[Released for 5.7.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-jbpm?version=1.1.0)
+
+No more release unless requested
+
+Nuxeo Jenkins Report
+
+Public
+
+[Developer documentation]({{page space='nxdoc60' page='nuxeo-jenkins-report'}})
+
+[User documentation]({{page page='nuxeo-jenkins-report'}})
+
+[Released for 5.9.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jenkins-report-mp?version=3.5.4)
+
+Nuxeo Multi-tenant
+
+Registered access
+
+[Developer documentation]({{page space='nxdoc60' page='nuxeo-multi-tenant'}})
+
+[User documentation]({{page page='nuxeo-multi-tenant'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant?version=1.4.0)
+
+Nuxeo OpenSocial &nbsp;
+
+[Developer documentation]({{page space='nxdoc60' page='nuxeo-opensocial'}})
+
+[User documentation]({{page page='nuxeo-opensocial'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-opensocial?version=1.0)
+
+Nuxeo Platform User Registration
+
+Public
+
+[Documentation]({{page space='nxdoc60' page='nuxeo-platform-user-registration'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-user-registration?version=1.5.0)
+Included in the [Social Collaboration module]({{page page='nuxeo-social-collaboration'}}) since 5.7
+
+Nuxeo Poll
+
+Registered access
+
+[Developer documentation]({{page space='nxdoc60' page='nuxeo-poll'}})
+
+[User documentation]({{page page='nuxeo-poll'}})
+
+[Released for 5.9.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-poll?version=1.4.4)
+
+Nuxeo Quality Systems Engineering
+
+Registered access
+
+&nbsp;
+
+[Released for 5.4.1](https://connect.nuxeo.com/nuxeo/site/marketplace/package/qse)
+
+Nuxeo Quota
+
+Public
+
+[Documentation]({{page space='nxdoc60' page='nuxeo-quota'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-quota?version=1.4.0)
+
+Nuxeo REST API Public [Documentation]({{page space='nxdoc60' page='rest-api'}}) [Automatically released with the Platform](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-rest-api)
+
+Nuxeo RSS Reader
+
+Registered access
+
+[Developer documentation]({{page space='nxdoc60' page='nuxeo-rss-reader'}})
+
+[User Documentation]({{page page='nuxeo-rss-reader'}})
+
+[Released for 5.9.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-rss-reader?version=1.2.4)
+
+Nuxeo Salesforce Public
+
+Administration Documentation
+
+User Documentation
+
+&nbsp;Released for 7.4
+
+Nuxeo Shared Bookmarks
+
+Public
+
+[Developer documentation]({{page space='nxdoc60' page='nuxeo-shared-bookmarks'}})
+
+[User documentation]({{page page='nuxeo-shared-bookmarks'}})
+
+[Released for 5.9.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-shared-bookmarks?version=1.1.4)
+
+Nuxeo Sites and Blogs
+
+Public
+
+[Developer documentation]({{page space='nxdoc60' page='nuxeo-sites-and-blogs'}})
+
+[User documentation]({{page page='nuxeo-sites-and-blogs'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sites-blogs?version=1.2.0)
+
+Nuxeo Social Collaboration Public [User documentation]({{page page='nuxeo-social-collaboration'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-social-collaboration?version=6.0)
+
+Nuxeo Spreadsheet Public [Documentation]({{page space='nxdoc60' page='nuxeo-spreadsheet'}}) [Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet?version=1.0)
+
+Nuxeo Virtual Navigation
+
+Public
+
+[Documentation]({{page space='nxdoc60' page='nuxeo-virtual-navigation'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation?version=1.0)
+
+Nuxeo Web Mobile (DM)
+
+Public
+
+&nbsp;
+
+[Released for 5.9.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-mobile-dm?version=1.5.4)
+
+Deprecated since 6.0\. See Nuxeo Web Mobile.
+
+Nuxeo Web Mobile
+
+Public
+
+&nbsp;
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-mobile?version=1.6.0)
+
+Nuxeo Web Mobile (SC)
+
+Public
+
+&nbsp;
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-mobile-sc?version=1.6.0)
+
+Platform Explorer
+
+Public
+
+[User documentation]({{page page='nuxeo-platform-explorer'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/platform-explorer?version=1.4.0)
+
+Resources Compatibility
+
+Registered access
+
+[Documentation]({{page space='nxdoc60' page='resources-compatibility'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/resources-compat?version=1.2.0)
+
+Samples
+
+Public
+
+&nbsp;
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample?version=2.1.0)
+
+Scan Documents Importer
+
+Registered access
+
+[Documentation]({{page space='nxdoc60' page='scan-documents-importer'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer?version=1.1.0)
+
+Semantic entities
+
+Public
+
+[Administration documentation (5.4)]({{page space='nxdoc54' page='semantic-entities-installation-and-configuration'}})
+
+[User documentation (5.4)]({{page space='dmdoc54' page='semantic-entities'}})
+
+[Released for 5.4.1](https://connect.nuxeo.com/nuxeo/site/marketplace/package/semantic-entities?version=1.0.1)
+
+No more release unless requested
+
+Shibboleth Authentication
+
+Registered access
+
+[Administration documentation]({{page space='admindoc60' page='using-shibboleth'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication?version=2.2.0)
+
+Smart Search
+
+Public
+
+[Developer documentation]({{page space='nxdoc60' page='smart-search'}})
+
+[User documentation]({{page page='smart-search'}})
+
+[Released for 6.0 (from 6.0-HF26)](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-smart-search?version=1.6.1)
+
+Template Rendering Addon
+
+Public
+
+[User documentation]({{page page='template-rendering-addon'}})
+
+[Released for 6.0](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering?version=6.4.0)
+
+Unicolor Flavors Set
+
+Public
+
+[Developer documentation]({{page space='nxdoc60' page='unicolor-flavors-set'}})
+
+[User documentation]({{page page='unicolor-flavors-set'}})
+
+<span style="color: rgb(34,34,34);">Deprecated since Nuxeo Platform 5.9.6</span>
 
 Use: "In progress for x.y.z (JC)", "Ready for x.y.z" or "Released for x.y.z" or any other relevant comment.
 

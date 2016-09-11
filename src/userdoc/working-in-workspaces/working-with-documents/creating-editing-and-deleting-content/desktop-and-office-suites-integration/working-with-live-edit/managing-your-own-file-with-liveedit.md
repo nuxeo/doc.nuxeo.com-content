@@ -1,5 +1,9 @@
 ---
 title: Managing Your Own File with LiveEdit
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - live-edit
 toc: true

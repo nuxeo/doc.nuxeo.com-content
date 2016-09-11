@@ -1,5 +1,9 @@
 ---
 title: Web UI How-To Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380912'
     ajs-parent-page-title: Web UI Framework Overview
@@ -12,6 +16,16 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/UIFVAQ'
     source_link: /display/NXDOC60/Web+UI+How-To+Index
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 14:38'
+        message: 'everted from v. '
+        version: '6'
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 13:37'
+        message: ''
+        version: '5'
     - 
         author: Anonymous
         date: '2014-12-03 15:59'
@@ -34,4 +48,4 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC60 Studio' label='howto' filter='Topics=JSF'}}}

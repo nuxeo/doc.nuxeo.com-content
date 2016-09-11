@@ -1,5 +1,9 @@
 ---
 title: Installing the Nuxeo Platform on Windows
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20141126
     - install-windows

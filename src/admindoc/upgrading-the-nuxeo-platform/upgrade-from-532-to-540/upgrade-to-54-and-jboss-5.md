@@ -1,5 +1,9 @@
 ---
 title: Upgrade to 5.4 and JBoss 5
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '21921846'

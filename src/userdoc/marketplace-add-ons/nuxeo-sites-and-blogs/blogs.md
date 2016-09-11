@@ -1,5 +1,9 @@
 ---
 title: Blogs
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - blogs
     - webengine

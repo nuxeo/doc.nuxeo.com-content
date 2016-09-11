@@ -1,5 +1,9 @@
 ---
 title: How to Let Users Set Rights on Non Folderish Documents
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

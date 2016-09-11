@@ -1,5 +1,9 @@
 ---
 title: How to Customize Nuxeo Drive Versioning Policy
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - howto
     - nuxeo-drive

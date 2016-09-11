@@ -1,5 +1,9 @@
 ---
 title: Using Kerberos
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - howto
     - kerberos

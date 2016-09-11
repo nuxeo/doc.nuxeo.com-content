@@ -1,5 +1,9 @@
 ---
 title: Design Tips
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380615'
     ajs-parent-page-title: Educational

@@ -1,5 +1,9 @@
 ---
 title: Configuration Templates
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - templates
     - configuration

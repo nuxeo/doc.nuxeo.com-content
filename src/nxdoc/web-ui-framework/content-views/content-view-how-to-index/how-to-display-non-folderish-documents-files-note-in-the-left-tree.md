@@ -1,5 +1,9 @@
 ---
 title: 'How to Display Non-Folderish Documents (Files, Note, ...) in the Left Tree'
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

@@ -1,5 +1,9 @@
 ---
 title: Automation Chain
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - automation
 confluence:

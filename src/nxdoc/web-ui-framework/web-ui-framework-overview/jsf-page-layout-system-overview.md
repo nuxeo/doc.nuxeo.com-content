@@ -1,5 +1,9 @@
 ---
 title: JSF Page Layout System Overview
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '22380912'

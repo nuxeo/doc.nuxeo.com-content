@@ -1,5 +1,9 @@
 ---
 title: How to Add New Relation Types
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

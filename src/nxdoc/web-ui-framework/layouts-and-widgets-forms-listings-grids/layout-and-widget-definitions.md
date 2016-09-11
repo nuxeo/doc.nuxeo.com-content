@@ -1,5 +1,9 @@
 ---
 title: Layout and Widget Definitions
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380894'
     ajs-parent-page-title: 'Layouts and Widgets (Forms, Listings, Grids)'

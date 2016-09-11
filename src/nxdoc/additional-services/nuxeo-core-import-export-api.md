@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Core Import / Export API
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - documentreader
     - documentwriter

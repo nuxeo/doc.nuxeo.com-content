@@ -1,5 +1,9 @@
 ---
 title: Debugging Automation Chains
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - automation
     - trace

@@ -1,5 +1,9 @@
 ---
 title: Field Binding and Expressions
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - scripting
     - el

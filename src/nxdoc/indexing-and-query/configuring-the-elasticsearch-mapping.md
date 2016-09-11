@@ -1,5 +1,9 @@
 ---
 title: Configuring the Elasticsearch Mapping
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - elasticsearch
     - full-text

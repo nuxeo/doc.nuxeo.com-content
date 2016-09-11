@@ -1,5 +1,9 @@
 ---
 title: How to Export Data Using Document Template and Automation
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

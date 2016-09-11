@@ -1,5 +1,9 @@
 ---
 title: Managing Links
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - howto
     - webengine

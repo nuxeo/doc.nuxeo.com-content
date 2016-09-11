@@ -1,5 +1,9 @@
 ---
 title: VCS
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - vcs
 toc: true

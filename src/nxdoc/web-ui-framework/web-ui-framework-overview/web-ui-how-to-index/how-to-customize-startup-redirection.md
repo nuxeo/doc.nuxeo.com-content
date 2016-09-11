@@ -1,5 +1,9 @@
 ---
 title: How to Customize Startup Redirection
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

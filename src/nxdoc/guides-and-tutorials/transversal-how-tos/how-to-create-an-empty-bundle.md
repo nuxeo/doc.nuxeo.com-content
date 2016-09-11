@@ -1,5 +1,9 @@
 ---
 title: How to create an empty bundle
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn the basics of a Nuxeo module and is IDE agnostic.
@@ -336,7 +340,7 @@ This recipe describes the steps to create the bare structure of a Nuxeo add-on p
 
 This is the very first recipe of this cookbook and it will be the basis for the development of new bundles, of new features, even of new UI elements all along this cookbook. All the other recipes will assume that this recipe has been done.
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt:name=recipe-tip}{tip:title=General remarks} * This recipe is not specific to a system or an IDE. You will have to adapt it to your needs. The sole obligation is to use Maven in a console. But, even this part, with experience, could be fitted to your IDE habits if you have any. * You'll find the most frequent and common errors and problems detailed and resolved in the [FAQ|KB:]. * For any remark about this recipe or about this cookbook, don't hesitate to leave us a comment on this page. {tip} {multi-excerpt} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt:name=recipe-tip}{tip:title=General remarks} * This recipe is not specific to a system or an IDE. You will have to adapt it to your needs. The sole obligation is to use Maven in a console. But, even this part, with experience, could be fitted to your IDE habits if you have any. * You'll find the most frequent and common errors and problems detailed and resolved in the [FAQ|KB:]. * For any remark about this recipe or about this cookbook, don't hesitate to leave us a comment on this page. {tip} {multi-excerpt} --}}
 
 &nbsp;
 
@@ -733,7 +737,7 @@ It contains a list of files used to define various elements of your component. I
 
 &nbsp;
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt:name=manifest-format-warning}{warning:title=Formatting} The trickiest and most important part of a "MANIFEST.MF" file is its formatting. One mistake and the OSGi context can't be correctly started, leading to unexpected issues and an unreachable bundle. Here are the three formatting rules to respect: # Each property name: #* begins at the first character of the line; #* ends with a colon without space between the name of the property and the colon itself. # Each value: #* must be preceded by a space; #* ends with a "end of line" with eventually a comma before it. # There MUST be an EMPTY LINE at the END OF THE FILE. {warning}{multi-excerpt} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt:name=manifest-format-warning}{warning:title=Formatting} The trickiest and most important part of a "MANIFEST.MF" file is its formatting. One mistake and the OSGi context can't be correctly started, leading to unexpected issues and an unreachable bundle. Here are the three formatting rules to respect: # Each property name: #* begins at the first character of the line; #* ends with a colon without space between the name of the property and the colon itself. # Each value: #* must be preceded by a space; #* ends with a "end of line" with eventually a comma before it. # There MUST be an EMPTY LINE at the END OF THE FILE. {warning}{multi-excerpt} --}}
 
 &nbsp;
 
@@ -797,7 +801,7 @@ The most important difference between this content and the one declared in the "
 
 &nbsp;
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt:name=bundle-deployment-steps} # Build your bundle, using the following Command Line Interface (CLI): {code:xml} $ mvn install {code} In the "/target" folder of your project, you get a JAR file whose name if formed like that: artifactId-1.0-SNAPSHOT.jar. # Copy your brand new jar into the sub-folder "nxserver/plugins/" of your nuxeo application's root folder: #* under Windows, assuming that the nuxeo-distribution is installed at the location "C:\Nuxeo\", copy the jar in "C:\Nuxeo\nxserver\plugins\"; #* under Linux, assuming that the nuxeo-distribution is installed at the location "/opt/nuxeo", copy the jar in "/opt/nuxeo/nxserver/plugins". # Start your server using the "./nuxeoctl console" command {tip}You can check the dedicated [Start and stop page|NXDOC:Server start and stop] of the technical documentation for more information about the different ways to start your server).{tip} # Check that your bundle is correctly deployed: check if its SymbolicName (as configured in the "/src/main/resources/META-INF") appears in the logs. The logs are displayed: #* in the console if you started your server using the "./nuxeoctl console" #* in the file "server.log" located in the "log" folder of your Nuxeo server root folder. This name is found in the list of the bundles deployed by Nuxeo in the very first lines of the logs, just after the line ended by " Preprocessing order:".{multi-excerpt} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt:name=bundle-deployment-steps} # Build your bundle, using the following Command Line Interface (CLI): {code:xml} $ mvn install {code} In the "/target" folder of your project, you get a JAR file whose name if formed like that: artifactId-1.0-SNAPSHOT.jar. # Copy your brand new jar into the sub-folder "nxserver/plugins/" of your nuxeo application's root folder: #* under Windows, assuming that the nuxeo-distribution is installed at the location "C:\Nuxeo\", copy the jar in "C:\Nuxeo\nxserver\plugins\"; #* under Linux, assuming that the nuxeo-distribution is installed at the location "/opt/nuxeo", copy the jar in "/opt/nuxeo/nxserver/plugins". # Start your server using the "./nuxeoctl console" command {tip}You can check the dedicated [Start and stop page|NXDOC:Server start and stop] of the technical documentation for more information about the different ways to start your server).{tip} # Check that your bundle is correctly deployed: check if its SymbolicName (as configured in the "/src/main/resources/META-INF") appears in the logs. The logs are displayed: #* in the console if you started your server using the "./nuxeoctl console" #* in the file "server.log" located in the "log" folder of your Nuxeo server root folder. This name is found in the list of the bundles deployed by Nuxeo in the very first lines of the logs, just after the line ended by " Preprocessing order:".{multi-excerpt} --}}
 
 &nbsp;
 

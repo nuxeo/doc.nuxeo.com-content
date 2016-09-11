@@ -1,5 +1,9 @@
 ---
 title: Hotfixes Management for Nuxeo Platform 6.0
+review:
+    comment: ''
+    date: ''
+    status: ok
 redirect: admindoc60hotfixes-installation-notes-for-nuxeo-platform-60
 redirect_source: 'ADMINDOC60:Hotfixes Installation Notes for Nuxeo Platform 6.0'
 confluence:

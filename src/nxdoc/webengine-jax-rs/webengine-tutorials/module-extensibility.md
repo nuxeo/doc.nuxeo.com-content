@@ -1,5 +1,9 @@
 ---
 title: Module Extensibility
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - howto
     - webengine

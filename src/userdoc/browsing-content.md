@@ -1,5 +1,9 @@
 ---
 title: Browsing Content
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '21299462'

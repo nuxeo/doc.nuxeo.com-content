@@ -1,5 +1,9 @@
 ---
 title: REST API Entity Types
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - rest-api
 toc: true

@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Poll
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - poll
     - nuxeo-poll

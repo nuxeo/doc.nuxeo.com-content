@@ -1,5 +1,9 @@
 ---
 title: SDK provided base classes
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380574'
     ajs-parent-page-title: Nuxeo Android Connector

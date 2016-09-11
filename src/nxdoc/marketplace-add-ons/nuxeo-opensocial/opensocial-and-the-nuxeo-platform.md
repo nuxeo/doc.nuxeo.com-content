@@ -1,5 +1,9 @@
 ---
 title: OpenSocial and the Nuxeo Platform
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - link-update
     - opensocial

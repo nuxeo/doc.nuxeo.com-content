@@ -1,5 +1,9 @@
 ---
 title: Common Events
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - event
 toc: true

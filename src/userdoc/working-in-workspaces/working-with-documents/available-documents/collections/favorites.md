@@ -1,5 +1,9 @@
 ---
 title: Favorites
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - collection
     - last-review-20141128

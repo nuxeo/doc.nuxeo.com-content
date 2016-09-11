@@ -1,5 +1,9 @@
 ---
 title: How to Query Workflow Objects
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to query workflow objects using NXQL.

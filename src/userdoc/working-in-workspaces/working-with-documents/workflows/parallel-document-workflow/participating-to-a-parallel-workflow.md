@@ -1,5 +1,9 @@
 ---
 title: Participating to a Parallel Workflow
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - parallel-workflow
 toc: true

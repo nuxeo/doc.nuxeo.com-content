@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 5.6 to 5.8
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '21921796'
     ajs-parent-page-title: Upgrading the Nuxeo Platform

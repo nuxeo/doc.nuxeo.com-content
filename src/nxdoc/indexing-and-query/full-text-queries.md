@@ -1,5 +1,9 @@
 ---
 title: Full-Text Queries
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - search
     - full-text

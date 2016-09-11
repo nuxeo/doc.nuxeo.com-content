@@ -1,5 +1,9 @@
 ---
 title: Managing Access Rights in DAM
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - access-rights
 confluence:
@@ -209,7 +213,7 @@ Access to documents and the actions allowed are determined by access rights on t
 
 The DAM permissions are:
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt-include:Digital Asset Management Concepts|name=DAM-access-rights|nopanel=true} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt-include:Digital Asset Management Concepts|name=DAM-access-rights|nopanel=true} --}}
 
 To manage access rights on a DAM folder, you can :
 

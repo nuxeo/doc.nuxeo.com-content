@@ -1,5 +1,9 @@
 ---
 title: Licenses
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - license
 confluence:

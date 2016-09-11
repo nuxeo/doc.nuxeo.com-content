@@ -1,5 +1,9 @@
 ---
 title: Indexing and Querying How-To Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380787'
     ajs-parent-page-title: Indexing and Query
@@ -29,7 +33,7 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC60 Studio' label='howto' filter='Topics=query'}}}
 
 &nbsp;
 

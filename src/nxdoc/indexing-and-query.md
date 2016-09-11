@@ -1,5 +1,9 @@
 ---
 title: Indexing and Query
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '22380898'

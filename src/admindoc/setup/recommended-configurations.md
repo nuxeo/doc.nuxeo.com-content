@@ -1,5 +1,9 @@
 ---
 title: Recommended Configurations
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - alerts
     - last-review-20141126

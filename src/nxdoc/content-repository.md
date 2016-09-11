@@ -1,5 +1,9 @@
 ---
 title: Content Repository
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - document-type
     - doctype

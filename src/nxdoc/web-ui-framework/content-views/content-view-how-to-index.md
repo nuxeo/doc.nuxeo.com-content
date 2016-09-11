@@ -1,5 +1,9 @@
 ---
 title: Content View How-To Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380596'
     ajs-parent-page-title: Content Views
@@ -12,6 +16,16 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/ToBVAQ'
     source_link: /display/NXDOC60/Content+View+How-To+Index
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 14:28'
+        message: 'everted from v. '
+        version: '6'
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 13:38'
+        message: ''
+        version: '5'
     - 
         author: Anonymous
         date: '2014-12-03 16:01'
@@ -34,4 +48,4 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC60 Studio' label='howto' filter='Topics=Content View'}}}

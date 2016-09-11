@@ -1,5 +1,9 @@
 ---
 title: Reassigning a Task
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20141202
     - reassign

@@ -1,5 +1,9 @@
 ---
 title: Content Automation Concepts
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - automation
     - link-update

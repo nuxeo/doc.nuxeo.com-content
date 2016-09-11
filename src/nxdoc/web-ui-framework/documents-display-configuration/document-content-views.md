@@ -1,5 +1,9 @@
 ---
 title: Document Content Views
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - document-content-view
 confluence:

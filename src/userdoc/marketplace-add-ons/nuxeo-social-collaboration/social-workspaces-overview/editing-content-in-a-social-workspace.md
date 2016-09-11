@@ -1,5 +1,9 @@
 ---
 title: Editing Content in a Social Workspace
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - editing
 toc: true

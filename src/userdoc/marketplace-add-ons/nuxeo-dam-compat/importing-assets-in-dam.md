@@ -1,5 +1,9 @@
 ---
 title: Importing Assets in DAM
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - drag-and-drop
     - import

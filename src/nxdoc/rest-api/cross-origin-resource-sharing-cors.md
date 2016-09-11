@@ -1,5 +1,9 @@
 ---
 title: Cross-Origin Resource Sharing (CORS)
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - cors
 toc: true

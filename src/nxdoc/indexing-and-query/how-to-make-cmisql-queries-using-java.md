@@ -1,5 +1,9 @@
 ---
 title: How to Make CMISQL Queries Using Java
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

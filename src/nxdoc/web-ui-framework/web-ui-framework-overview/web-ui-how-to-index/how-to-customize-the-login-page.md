@@ -1,5 +1,9 @@
 ---
 title: How to Customize the Login Page
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to customize the login page using an XML extension.

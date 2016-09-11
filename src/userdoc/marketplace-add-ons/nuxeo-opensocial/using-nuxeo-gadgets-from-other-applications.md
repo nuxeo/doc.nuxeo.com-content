@@ -1,5 +1,9 @@
 ---
 title: Using Nuxeo Gadgets from Other Applications
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - gadgets
 confluence:

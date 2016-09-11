@@ -1,5 +1,9 @@
 ---
 title: Configuration Commands
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - shell
 toc: true

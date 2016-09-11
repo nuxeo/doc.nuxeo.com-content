@@ -1,5 +1,9 @@
 ---
 title: How to Customize the HTML5 Drag and Drop Import with Metadata Form
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

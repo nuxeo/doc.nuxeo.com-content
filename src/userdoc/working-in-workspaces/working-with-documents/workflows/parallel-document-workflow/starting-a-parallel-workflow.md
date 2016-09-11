@@ -1,5 +1,9 @@
 ---
 title: Starting a parallel workflow
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20141202
     - parallel-workflow

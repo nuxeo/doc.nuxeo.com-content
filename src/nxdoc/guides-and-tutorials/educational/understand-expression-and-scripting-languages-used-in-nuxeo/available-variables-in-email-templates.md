@@ -1,5 +1,9 @@
 ---
 title: Available Variables in Email Templates
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - variable
     - email

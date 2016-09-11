@@ -1,5 +1,9 @@
 ---
 title: Document Locking Right after Its Creation
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lock
 toc: true

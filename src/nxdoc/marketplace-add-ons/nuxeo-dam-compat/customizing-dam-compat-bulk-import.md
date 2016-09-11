@@ -1,5 +1,9 @@
 ---
 title: Customizing DAM Compat Bulk Import
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - bulk-import
     - dam

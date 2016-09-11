@@ -1,5 +1,9 @@
 ---
 title: User Home
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - dashboard
     - home

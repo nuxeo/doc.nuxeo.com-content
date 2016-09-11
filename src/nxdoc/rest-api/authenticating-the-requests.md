@@ -1,5 +1,9 @@
 ---
 title: Authenticating the requests
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380745'
     ajs-parent-page-title: REST API

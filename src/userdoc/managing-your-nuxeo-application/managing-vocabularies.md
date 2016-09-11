@@ -1,5 +1,9 @@
 ---
 title: Managing Vocabularies
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - vocabulary
     - last-review-20141124

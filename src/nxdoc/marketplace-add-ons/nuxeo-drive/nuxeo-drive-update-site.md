@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Drive Update Site
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-drive
     - last-review-20150609

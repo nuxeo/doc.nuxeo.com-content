@@ -1,5 +1,9 @@
 ---
 title: Managing Your Nuxeo Application
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last
     - last-review-20141203

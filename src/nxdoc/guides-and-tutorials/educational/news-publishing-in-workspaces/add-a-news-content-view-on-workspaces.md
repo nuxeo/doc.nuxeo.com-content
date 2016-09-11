@@ -1,5 +1,9 @@
 ---
 title: Add a News content view on workspaces
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - tuto-override-doc-type
     - tuto-document-type

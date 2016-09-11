@@ -1,5 +1,9 @@
 ---
 title: Consulting and Editing Assets
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - metadata
 toc: true

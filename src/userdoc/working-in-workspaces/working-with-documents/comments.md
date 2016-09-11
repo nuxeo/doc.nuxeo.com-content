@@ -1,5 +1,9 @@
 ---
 title: Comments
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20141201
     - comment

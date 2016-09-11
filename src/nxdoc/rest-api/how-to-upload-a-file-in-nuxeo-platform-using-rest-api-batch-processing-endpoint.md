@@ -2,6 +2,10 @@
 title: >-
     How to Upload a File in Nuxeo Platform Using REST API Batch Processing
     Endpoint
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

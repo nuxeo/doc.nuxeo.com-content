@@ -1,5 +1,9 @@
 ---
 title: Educational
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380664'
     ajs-parent-page-title: Guides and Tutorials

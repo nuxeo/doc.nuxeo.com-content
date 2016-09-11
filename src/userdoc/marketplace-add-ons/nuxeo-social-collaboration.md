@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Social Collaboration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - social-collaboration
 confluence:

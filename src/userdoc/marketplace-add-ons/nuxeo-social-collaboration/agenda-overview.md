@@ -1,5 +1,9 @@
 ---
 title: Agenda Overview
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - social-collaboration-document
     - event

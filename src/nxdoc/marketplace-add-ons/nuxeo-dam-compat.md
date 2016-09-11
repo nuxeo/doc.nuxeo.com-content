@@ -1,5 +1,9 @@
 ---
 title: Nuxeo DAM Compat
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-dam-compat
 toc: true

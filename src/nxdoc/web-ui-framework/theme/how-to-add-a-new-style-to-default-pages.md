@@ -1,5 +1,9 @@
 ---
 title: How to Add a New Style to Default Pages
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to add a new style to your default pages.

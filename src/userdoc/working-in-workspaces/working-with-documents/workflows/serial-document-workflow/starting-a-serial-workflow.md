@@ -1,5 +1,9 @@
 ---
 title: Starting a Serial Workflow
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20141202
     - workflow

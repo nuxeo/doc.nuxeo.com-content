@@ -1,5 +1,9 @@
 ---
 title: Package Web Page
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - '0'
 confluence:

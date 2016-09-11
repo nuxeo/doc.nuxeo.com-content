@@ -1,5 +1,9 @@
 ---
 title: How to Customize the Dashboard
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

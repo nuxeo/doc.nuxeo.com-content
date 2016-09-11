@@ -1,5 +1,9 @@
 ---
 title: How to Register a JavaScript Resource
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

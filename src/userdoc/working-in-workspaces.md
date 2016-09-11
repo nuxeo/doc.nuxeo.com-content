@@ -1,5 +1,9 @@
 ---
 title: Working in Workspaces
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '21299462'
     ajs-parent-page-title: Nuxeo Platform User Documentation

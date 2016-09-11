@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Virtual Navigation
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - virtual-navigation
 toc: true

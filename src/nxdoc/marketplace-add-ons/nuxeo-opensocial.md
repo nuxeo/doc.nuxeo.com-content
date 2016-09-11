@@ -1,5 +1,9 @@
 ---
 title: Nuxeo OpenSocial
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - opensocial
 toc: true

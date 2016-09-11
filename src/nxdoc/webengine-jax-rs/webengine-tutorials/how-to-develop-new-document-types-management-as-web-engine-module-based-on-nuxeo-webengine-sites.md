@@ -2,6 +2,10 @@
 title: >-
     How to develop new document types management as web engine module based on
     nuxeo-webengine-sites
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - howto
     - webengine

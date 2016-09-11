@@ -1,5 +1,9 @@
 ---
 title: Bootstrap Your Document Management Project
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - todo
 toc: true

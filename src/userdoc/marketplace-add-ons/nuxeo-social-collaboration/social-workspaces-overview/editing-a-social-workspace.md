@@ -1,5 +1,9 @@
 ---
 title: Editing a Social Workspace
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - social-workspace
 confluence:

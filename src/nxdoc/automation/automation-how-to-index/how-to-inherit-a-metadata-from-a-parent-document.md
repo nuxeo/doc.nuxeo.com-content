@@ -1,5 +1,9 @@
 ---
 title: How to Inherit a Metadata from a Parent Document
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

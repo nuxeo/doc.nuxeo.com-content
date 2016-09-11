@@ -1,5 +1,9 @@
 ---
 title: Customizing DAM Compat Bulk Edit
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - bulk-edit
 confluence:

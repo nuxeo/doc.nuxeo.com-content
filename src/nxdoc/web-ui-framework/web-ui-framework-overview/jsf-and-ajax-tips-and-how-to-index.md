@@ -1,5 +1,9 @@
 ---
 title: JSF and Ajax Tips and How-To Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380912'
     ajs-parent-page-title: Web UI Framework Overview
@@ -13,9 +17,19 @@ confluence:
     source_link: /display/NXDOC60/JSF+and+Ajax+Tips+and+How-To+Index
 history:
     - 
+        author: Manon Lumeau
+        date: '2016-09-09 14:34'
+        message: everted from v. 1
+        version: '12'
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 13:58'
+        message: ''
+        version: '11'
+    - 
         author: Anahide Tchertchian
         date: '2014-12-09 15:28'
-        message: 'emove warning, will be placed on sub page'
+        message: 'remove warning, will be placed on sub pages'
         version: '10'
     - 
         author: Anahide Tchertchian
@@ -64,4 +78,4 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC60 Studio' label='howto' filter='Topics=JSF'}}}

@@ -1,5 +1,9 @@
 ---
 title: Implement the News document
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - tuto-document-type
     - tuto-user-action

@@ -1,5 +1,9 @@
 ---
 title: How to Enable CSV Import on a Custom Document Type
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

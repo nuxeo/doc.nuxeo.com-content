@@ -1,5 +1,9 @@
 ---
 title: Building a SOAP-Based WebService in the Nuxeo Platform
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '22380916'

@@ -1,5 +1,9 @@
 ---
 title: Searching the Nuxeo Platform
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20141120
     - search

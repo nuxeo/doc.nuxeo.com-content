@@ -1,5 +1,9 @@
 ---
 title: How to Add a Button in the Web UI
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

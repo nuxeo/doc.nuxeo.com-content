@@ -1,5 +1,9 @@
 ---
 title: Adding Content to a Social Workspace
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - articles
 confluence:

@@ -1,5 +1,9 @@
 ---
 title: How to Make the New Button Appear on a Custom Folderish Document
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

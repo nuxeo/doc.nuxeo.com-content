@@ -1,5 +1,9 @@
 ---
 title: Summary Widget Types
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - summary
     - widget-types

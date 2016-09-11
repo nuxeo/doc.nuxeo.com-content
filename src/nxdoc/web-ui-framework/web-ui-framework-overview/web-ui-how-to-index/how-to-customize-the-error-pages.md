@@ -1,5 +1,9 @@
 ---
 title: How to Customize the Error Pages
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to customize the error pages.

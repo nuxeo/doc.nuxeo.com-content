@@ -1,5 +1,9 @@
 ---
 title: How to Force Locale
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to force the locale by removing other locales support

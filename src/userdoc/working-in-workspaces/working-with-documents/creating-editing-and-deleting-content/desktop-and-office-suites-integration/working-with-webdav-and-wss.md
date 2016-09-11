@@ -1,5 +1,9 @@
 ---
 title: Working with WebDAV and WSS
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - sharepoint
     - wss

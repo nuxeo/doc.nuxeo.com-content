@@ -1,5 +1,9 @@
 ---
 title: Default Search
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - elasticsearch
     - last-review-20141120

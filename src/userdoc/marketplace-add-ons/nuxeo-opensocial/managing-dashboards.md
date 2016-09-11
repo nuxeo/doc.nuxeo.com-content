@@ -1,5 +1,9 @@
 ---
 title: Managing Dashboards
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - opensocial
     - dashboard

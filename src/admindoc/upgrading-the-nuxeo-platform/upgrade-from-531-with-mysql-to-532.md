@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 5.3.1 with MySQL to 5.3.2
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '21921796'
     ajs-parent-page-title: Upgrading the Nuxeo Platform

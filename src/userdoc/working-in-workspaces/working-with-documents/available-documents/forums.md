@@ -1,5 +1,9 @@
 ---
 title: Forums
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20141126
     - forum

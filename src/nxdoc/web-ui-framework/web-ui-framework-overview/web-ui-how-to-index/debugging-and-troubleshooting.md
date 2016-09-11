@@ -1,5 +1,9 @@
 ---
 title: Debugging and Troubleshooting
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380880'
     ajs-parent-page-title: Web UI How-To Index

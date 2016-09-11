@@ -1,5 +1,9 @@
 ---
 title: Integrating with JPA
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380897'
     ajs-parent-page-title: Advanced topics

@@ -1,5 +1,9 @@
 ---
 title: Commenting Assets
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - comment
 confluence:

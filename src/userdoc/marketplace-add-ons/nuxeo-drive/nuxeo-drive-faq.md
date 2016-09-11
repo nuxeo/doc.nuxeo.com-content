@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Drive FAQ
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-drive
 toc: true

@@ -1,5 +1,9 @@
 ---
 title: Document Type How-To Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380905'
     ajs-parent-page-title: Content Repository
@@ -54,4 +58,4 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC60 Studio' label='howto' filter='Topics=Document Type'}}}

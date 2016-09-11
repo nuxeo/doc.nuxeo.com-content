@@ -1,5 +1,9 @@
 ---
 title: How to Enable Quotas on Document Types
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

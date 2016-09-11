@@ -1,5 +1,9 @@
 ---
 title: How to Customize the Bulk Import Form
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to customize the bulk import form using Nuxeo Studio.

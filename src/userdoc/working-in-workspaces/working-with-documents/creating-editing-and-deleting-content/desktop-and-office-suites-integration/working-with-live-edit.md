@@ -1,5 +1,9 @@
 ---
 title: Working with Live Edit
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - extensions
     - live-edit

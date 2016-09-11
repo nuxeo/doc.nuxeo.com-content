@@ -1,5 +1,9 @@
 ---
 title: Using OAuth
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - authentication
     - oauth
@@ -126,7 +130,7 @@ In this context, the end user may have different accounts on each application.
 
 The User may also want to grant more or less rights to the consumer. Typically, when Application A accesses services of Application B, it may be granted only read access. But when using Application C, users wants to grant Read/Write.
 
-![]({{file name='S&eacute;lection_061.png'}} ?w=500,border=true)
+![]({{file name='Selection_061.png'}} ?w=500,border=true)
 
 ### 3-Legged OAuth
 
@@ -228,7 +232,7 @@ For example, you may want to use iGoogle as a consumer of some of your Nuxeo Gad
 *   Use RSA1 key as documented [here.](http://code.google.com/intl/fr/apis/gadgets/docs/oauth.html#rsa)
 *   Provide in Nuxeo the callback URL [http://oauth.gmodules.com/gadgets/oauthcallback](http://oauth.gmodules.com/gadgets/oauthcallback).
 
-![]({{file name='S&eacute;lection_059.png'}} ?w=500,border=true)
+![]({{file name='Selection_059.png'}} ?w=500,border=true)
 
 #### The Special Case of Nuxeo/Shindig
 

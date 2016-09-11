@@ -1,5 +1,9 @@
 ---
 title: Is source code needed?
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380778'
     ajs-parent-page-title: Contributing to Nuxeo

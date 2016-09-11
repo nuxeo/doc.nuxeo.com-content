@@ -1,5 +1,9 @@
 ---
 title: Document Templates and Automation Rendering Service
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - freemarker
     - mvel

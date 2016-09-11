@@ -1,5 +1,9 @@
 ---
 title: How to Brand Your Application
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-
@@ -236,7 +240,7 @@ When you define a new theme for your application, you can define all the colors 
 
     &nbsp;
 
-    {{!-- unmigrated-inline-wiki-markup: {multi-excerpt:name=add-resources}# Click on *Resources* Studio tree item. # Click on *Browse* to select a picture on your file system. # Click on *Upload*. You should see the picture name just below now.{multi-excerpt} --}}
+    {{!-- unmigrated-wiki-markup: {multi-excerpt:name=add-resources}# Click on *Resources* Studio tree item. # Click on *Browse* to select a picture on your file system. # Click on *Upload*. You should see the picture name just below now.{multi-excerpt} --}}
 
     &nbsp;
 

@@ -1,5 +1,9 @@
 ---
 title: Live Edit Compatibility Table
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - live-edit
 toc: true

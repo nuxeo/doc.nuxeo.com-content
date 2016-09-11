@@ -1,5 +1,9 @@
 ---
 title: Choosing How to Import Data in the Nuxeo Platform
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - import
 toc: true

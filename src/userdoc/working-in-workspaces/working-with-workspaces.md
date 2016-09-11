@@ -1,5 +1,9 @@
 ---
 title: Working with Workspaces
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20141106
 toc: true

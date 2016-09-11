@@ -1,5 +1,9 @@
 ---
 title: Page Provider Aggregates
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - elasticsearch
     - aggregate

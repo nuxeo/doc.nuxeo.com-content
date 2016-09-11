@@ -1,5 +1,9 @@
 ---
 title: Purging Audit Logs (NXP_LOGS)
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - logs
     - audit

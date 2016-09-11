@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Sites and Blogs
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - sites-blogs
     - webengine

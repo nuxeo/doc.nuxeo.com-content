@@ -1,5 +1,9 @@
 ---
 title: How to use the Document Resources Endpoint
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - endpoint
 toc: true

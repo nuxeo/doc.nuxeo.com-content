@@ -1,5 +1,9 @@
 ---
 title: Several Document Types vs One Document Type with a Nature Metadata
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '22380735'

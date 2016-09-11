@@ -1,5 +1,9 @@
 ---
 title: Document's History
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - versioning
     - history

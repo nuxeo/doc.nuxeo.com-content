@@ -1,5 +1,9 @@
 ---
 title: Quick Start Dev Guide
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380617'
     ajs-parent-page-title: Quick Start Series

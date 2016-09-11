@@ -1,5 +1,9 @@
 ---
 title: Event and Listener How To Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380901'
     ajs-parent-page-title: Events and Listeners
@@ -34,4 +38,4 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='Studio NXDOC60 IDEDOC' label='howto' filter='Topics=Event'}}}

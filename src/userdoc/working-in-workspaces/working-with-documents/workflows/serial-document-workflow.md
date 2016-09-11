@@ -1,5 +1,9 @@
 ---
 title: Serial Document Workflow
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '21299495'
     ajs-parent-page-title: Workflows

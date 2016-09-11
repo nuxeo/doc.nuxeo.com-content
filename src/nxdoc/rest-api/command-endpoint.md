@@ -1,5 +1,9 @@
 ---
 title: Command Endpoint
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - rest
     - todo

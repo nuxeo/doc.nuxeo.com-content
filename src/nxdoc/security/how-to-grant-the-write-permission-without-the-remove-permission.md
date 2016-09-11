@@ -1,5 +1,9 @@
 ---
 title: How to Grant the Write Permission without the Remove Permission
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

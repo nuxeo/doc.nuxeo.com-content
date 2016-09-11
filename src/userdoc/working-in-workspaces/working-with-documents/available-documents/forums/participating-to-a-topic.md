@@ -1,5 +1,9 @@
 ---
 title: Participating to a Topic
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20141127
     - topic

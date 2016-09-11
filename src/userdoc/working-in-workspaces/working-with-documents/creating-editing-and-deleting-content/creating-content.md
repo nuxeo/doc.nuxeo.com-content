@@ -1,5 +1,9 @@
 ---
 title: Creating Content
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - creation
     - last-review-20141128

@@ -1,5 +1,9 @@
 ---
 title: REST API How-To Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380745'
     ajs-parent-page-title: REST API
@@ -39,4 +43,4 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC60 Studio ' label='howto' filter='Topics=REST API'}}}

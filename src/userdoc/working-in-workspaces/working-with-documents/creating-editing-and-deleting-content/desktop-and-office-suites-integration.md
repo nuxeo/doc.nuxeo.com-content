@@ -1,5 +1,9 @@
 ---
 title: Desktop & Office Suites Integration
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '21299520'
     ajs-parent-page-title: 'Creating, Editing and Deleting Content'

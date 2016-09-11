@@ -1,5 +1,9 @@
 ---
 title: Template Rendering Addon
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - template-rendering
     - document-template

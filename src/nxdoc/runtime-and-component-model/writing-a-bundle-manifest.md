@@ -1,5 +1,9 @@
 ---
 title: Writing a Bundle Manifest
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380900'
     ajs-parent-page-title: Runtime and Component Model

@@ -1,5 +1,9 @@
 ---
 title: Attachments
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20150223
     - attachment

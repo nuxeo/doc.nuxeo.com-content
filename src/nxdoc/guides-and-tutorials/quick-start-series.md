@@ -1,5 +1,9 @@
 ---
 title: Quick Start Series
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20150212
 confluence:

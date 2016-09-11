@@ -1,5 +1,9 @@
 ---
 title: 'Authentication, users and groups'
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - authentication
 toc: true
@@ -149,7 +153,7 @@ The Nuxeo Platform authentication infrastructure is based on the JAAS standard a
 
 You can see below a schema showing how the global authentication process works:
 
-![]({{file name='S&eacute;lection_014.png'}} ?w=650,h=383,border=true)
+![]({{file name='Selection_014.png'}} ?w=650,h=383,border=true)
 
 The blue blocks represents the pluggability points:
 
@@ -157,7 +161,7 @@ The blue blocks represents the pluggability points:
 *   validating user credentials against a backend (SQL DB, LDAP directory, external application ...)
 
 You can see below the flow chart for an authentication.
-![]({{file name='S&eacute;lection_013.png'}} ?w=650,h=292,border=true)
+![]({{file name='Selection_013.png'}} ?w=650,h=292,border=true)
 
 ## Built-in Login Plug-ins
 

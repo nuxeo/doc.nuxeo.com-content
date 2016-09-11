@@ -1,5 +1,9 @@
 ---
 title: Understand Expression and Scripting Languages Used in Nuxeo
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - freemarker
     - scripting

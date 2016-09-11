@@ -1,5 +1,9 @@
 ---
 title: Upgrade from 5.8 to 6.0
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20141125
 toc: true

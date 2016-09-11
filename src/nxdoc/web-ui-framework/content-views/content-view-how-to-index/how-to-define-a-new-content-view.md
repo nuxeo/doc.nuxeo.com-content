@@ -1,5 +1,9 @@
 ---
 title: How to Define a New Content View
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to configure a new content view with Nuxeo Studio.
@@ -376,7 +380,7 @@ You can set a filter form that can be used:
 
     &nbsp;
 
-    {{!-- unmigrated-inline-wiki-markup: {multi-excerpt:name=filter_form_creation}# Set the number of columns and rows using the *Add column*, *Add row* or *Set Table Size* buttons. # Drag and drop the widget corresponding to the criterion you want to display from the widget list onto an empty table cell. !STUDIO_drop_search_field.png|border=1,width=550! The widget is added in the content cell. # Click on the icon !STUDIO_edit_icon.png|border=1! to edit the widget and edit the search field's label, search operator, sort criterion... !STUDIO_widget_search_operator_edition.png|border=1,width=300! # When done editing, click on the *Save* button. # Repeat these steps until your form is complete.{multi-excerpt} --}}
+    {{!-- unmigrated-wiki-markup: {multi-excerpt:name=filter_form_creation}# Set the number of columns and rows using the *Add column*, *Add row* or *Set Table Size* buttons. # Drag and drop the widget corresponding to the criterion you want to display from the widget list onto an empty table cell. !STUDIO_drop_search_field.png|border=1,width=550! The widget is added in the content cell. # Click on the icon !STUDIO_edit_icon.png|border=1! to edit the widget and edit the search field's label, search operator, sort criterion... !STUDIO_widget_search_operator_edition.png|border=1,width=300! # When done editing, click on the *Save* button. # Repeat these steps until your form is complete.{multi-excerpt} --}}
 
 2.  Click on the&nbsp;**Save**&nbsp;button to save your changes.
 

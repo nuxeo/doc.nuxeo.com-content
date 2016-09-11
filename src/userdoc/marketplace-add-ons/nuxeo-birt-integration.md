@@ -1,5 +1,9 @@
 ---
 title: Nuxeo - BIRT Integration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - marketplace-package
     - birt

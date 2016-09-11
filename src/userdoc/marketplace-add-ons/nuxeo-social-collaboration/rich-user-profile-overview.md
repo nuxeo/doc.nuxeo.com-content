@@ -1,5 +1,9 @@
 ---
 title: Rich User Profile Overview
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - profile
 confluence:
@@ -167,7 +171,7 @@ The Social Collaboration module brings rich features to the user's profile.
 
 The default user information is:
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt-include:Managing users and groups|name=user-info|nopanel=true} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt-include:Managing users and groups|name=user-info|nopanel=true} --}}
 
 The social collaboration user information is:
 

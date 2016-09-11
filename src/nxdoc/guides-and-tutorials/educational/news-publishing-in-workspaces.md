@@ -1,5 +1,9 @@
 ---
 title: News publishing in workspaces
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - tutorial
     - studio

@@ -1,5 +1,9 @@
 ---
 title: Localization and Translation How-To Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - translation
     - localization
@@ -83,4 +87,4 @@ For the different ways to contribute translations, see the page [How to translat
 
 &nbsp;
 
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC60 Studio' label='howto' filter='Topics=Localization'}}}

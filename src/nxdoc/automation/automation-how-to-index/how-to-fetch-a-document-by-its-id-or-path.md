@@ -1,5 +1,9 @@
 ---
 title: How to Fetch a Document by Its ID or Path
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: >-

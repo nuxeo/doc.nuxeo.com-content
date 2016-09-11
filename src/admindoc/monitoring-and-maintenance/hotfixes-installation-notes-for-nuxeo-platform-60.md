@@ -1,5 +1,9 @@
 ---
 title: Hotfixes Installation Notes for Nuxeo Platform 6.0
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - hotfix
     - installation

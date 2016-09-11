@@ -1,5 +1,9 @@
 ---
 title: Packaging examples
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380599'
     ajs-parent-page-title: Creating Nuxeo Packages

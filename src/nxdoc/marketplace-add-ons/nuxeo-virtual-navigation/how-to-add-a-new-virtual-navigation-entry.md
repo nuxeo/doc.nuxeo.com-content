@@ -1,5 +1,9 @@
 ---
 title: How to Add a New Virtual Navigation Entry
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to configure a virtual navigation view with Nuxeo Studio.

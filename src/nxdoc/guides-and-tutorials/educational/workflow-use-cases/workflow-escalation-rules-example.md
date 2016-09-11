@@ -1,5 +1,9 @@
 ---
 title: Workflow Escalation Rules Example
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - 5-7-2
     - escalation

@@ -1,5 +1,9 @@
 ---
 title: How to Override a Template
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to override a Nuxeo template.

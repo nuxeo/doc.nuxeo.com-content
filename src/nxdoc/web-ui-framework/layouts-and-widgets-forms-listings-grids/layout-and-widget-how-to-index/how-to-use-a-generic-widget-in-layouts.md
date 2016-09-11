@@ -1,5 +1,9 @@
 ---
 title: How to Use a Generic Widget in Layouts
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to use a generic widget in Studio.

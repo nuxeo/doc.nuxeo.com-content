@@ -1,5 +1,9 @@
 ---
 title: PDF Renditions
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '21299491'
     ajs-parent-page-title: Working with Documents

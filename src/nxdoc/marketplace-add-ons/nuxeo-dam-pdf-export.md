@@ -1,5 +1,9 @@
 ---
 title: Nuxeo DAM PDF Export
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - dam-pdf-export
 confluence:

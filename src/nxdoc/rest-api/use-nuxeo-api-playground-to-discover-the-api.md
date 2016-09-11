@@ -1,5 +1,9 @@
 ---
 title: Use Nuxeo API Playground to Discover the API
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to use the API Playground and leverage the Nuxeo REST API.

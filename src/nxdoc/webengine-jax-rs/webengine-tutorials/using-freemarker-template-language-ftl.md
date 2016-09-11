@@ -1,5 +1,9 @@
 ---
 title: Using FreeMarker Template Language (FTL)
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - howto
     - webengine

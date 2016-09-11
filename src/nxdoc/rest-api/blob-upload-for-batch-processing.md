@@ -1,5 +1,9 @@
 ---
 title: Blob Upload for Batch Processing
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - upload
     - blob

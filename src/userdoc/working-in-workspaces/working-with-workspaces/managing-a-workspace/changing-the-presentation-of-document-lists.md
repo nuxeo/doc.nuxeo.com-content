@@ -1,5 +1,9 @@
 ---
 title: Changing the Presentation of Document Lists
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20141126
     - content-view

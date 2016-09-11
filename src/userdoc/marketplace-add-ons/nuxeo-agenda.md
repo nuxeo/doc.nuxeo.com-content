@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Agenda
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo-agenda
     - last-review-20141114

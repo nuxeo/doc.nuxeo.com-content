@@ -1,5 +1,9 @@
 ---
 title: Managing Deleted Documents
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last
     - last-review-20141125

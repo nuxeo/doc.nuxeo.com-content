@@ -1,5 +1,9 @@
 ---
 title: How to Configure a New Default Search Form in the Search Tab
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: Learn how to add a new search search

@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Platform Concepts
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - section
     - access-rights

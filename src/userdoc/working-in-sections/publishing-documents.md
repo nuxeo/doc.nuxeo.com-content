@@ -1,5 +1,9 @@
 ---
 title: Publishing Documents
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20141203
     - publication

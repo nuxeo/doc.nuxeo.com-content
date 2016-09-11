@@ -1,5 +1,9 @@
 ---
 title: Annotating Assets
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - annotations
 confluence:

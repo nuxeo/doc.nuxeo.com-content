@@ -1,5 +1,9 @@
 ---
 title: I Can't Delete My PostgreSQL Database
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - postgresql
 confluence:

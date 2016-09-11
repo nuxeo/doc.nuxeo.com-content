@@ -1,5 +1,9 @@
 ---
 title: Managing Access Rights
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - access-rights
     - last-review-20141121

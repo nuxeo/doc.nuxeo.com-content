@@ -1,5 +1,9 @@
 ---
 title: Suggestion Widget Types
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - widget-types
     - select2

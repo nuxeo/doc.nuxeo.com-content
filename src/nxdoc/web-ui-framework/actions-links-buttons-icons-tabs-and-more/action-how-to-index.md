@@ -1,5 +1,9 @@
 ---
 title: Action How-To Index
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - action
 confluence:
@@ -14,6 +18,16 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/UYBVAQ'
     source_link: /display/NXDOC60/Action+How-To+Index
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 14:32'
+        message: 'everted from v. '
+        version: '9'
+    - 
+        author: Manon Lumeau
+        date: '2016-09-09 13:54'
+        message: ''
+        version: '8'
     - 
         author: Anonymous
         date: '2014-12-03 16:02'
@@ -51,7 +65,7 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC60 Studio' label='howto' filter='Topics=User action'}}}
 
 &nbsp;
 

@@ -1,5 +1,9 @@
 ---
 title: Working Using Drag and Drop
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - drag-and-drop
 toc: true

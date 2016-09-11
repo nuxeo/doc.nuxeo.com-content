@@ -1,5 +1,9 @@
 ---
 title: Parallel Document Workflow
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - parallel-workflow
 confluence:

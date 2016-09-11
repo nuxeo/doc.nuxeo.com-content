@@ -1,5 +1,9 @@
 ---
 title: 'How to Estimate Disk, Database and Elasticsearch Usage'
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: |-

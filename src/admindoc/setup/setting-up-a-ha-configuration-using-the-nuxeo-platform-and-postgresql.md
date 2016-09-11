@@ -1,5 +1,9 @@
 ---
 title: Setting up a HA Configuration Using the Nuxeo Platform and PostgreSQL
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - vcs
     - postgresql

@@ -1,5 +1,9 @@
 ---
 title: Configuration Examples
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - live-edit
     - port

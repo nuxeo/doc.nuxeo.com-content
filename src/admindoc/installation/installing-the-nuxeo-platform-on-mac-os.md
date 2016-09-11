@@ -1,5 +1,9 @@
 ---
 title: Installing the Nuxeo Platform on Mac OS
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - installation
     - last-review-20141126
@@ -153,4 +157,4 @@ You want to do a complete installation, compatible for a production environment?
 
 ## Installing a Nuxeo Virtual Machine Image
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt-include:Installing the Nuxeo Platform on Windows|name=install-vm|nopanel=true} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt-include:Installing the Nuxeo Platform on Windows|name=install-vm|nopanel=true} --}}

@@ -1,5 +1,9 @@
 ---
 title: From the Web UI to Nuxeo Studio
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20150203
 toc: true
@@ -52,7 +56,7 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 **Related How-Tos**
 
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='NXDOC60 ADMINDOC60 Studio USERDOC60' label='howto' filter='Topics=Theme, Level=Beginner'}}}
 
 ## Document Creation Screen {{> anchor 'creationscreen'}}
 
@@ -68,7 +72,7 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 **Related How-Tos**
 
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC60 NXDOC60 Studio USERDOC60' label='howto' filter='Topics=Document Type, Level=Beginner'}}}
 
 ## Metadata View of a Document on the Summary Screen {{> anchor 'metadataview'}}
 
@@ -84,7 +88,7 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 **Related How-Tos**
 
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC60 NXDOC60 Studio USERDOC60' label='howto' filter='Topics=Document Type, Level=Beginner'}}}
 
 ## Document Edit Screen {{> anchor 'editscreen'}}
 
@@ -100,7 +104,7 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 **Related How-Tos**
 
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC60 NXDOC60 Studio USERDOC60' label='howto' filter='Topics=Document Type, Level=Beginner'}}}
 
 ## Summary Tab {{> anchor 'summarytab'}}
 
@@ -116,7 +120,7 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 **Related How-Tos**
 
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC60 NXDOC60 Studio USERDOC60' label='howto' filter='Topics=Tab, Level=Beginner'}}}
 
 ## Filtering the Tabs Displayed on a Document Type {{> anchor 'filteringtabs'}}
 
@@ -134,7 +138,7 @@ Choosing what tabs should be displayed or not is done on a per document type bas
 
 **Related How-Tos**
 
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC60 NXDOC60 Studio USERDOC60' label='howto' filter='Topics=Tab, Level=Beginner'}}}
 
 ## Search Tab {{> anchor 'advancedsearch'}}
 
@@ -150,7 +154,7 @@ Choosing what tabs should be displayed or not is done on a per document type bas
 
 **Related How-Tos**
 
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC60 NXDOC60 Studio USERDOC60' label='howto' filter='Topics=Search, Level=Beginner'}}}
 
 ## Default Columns of a Folder, a Workspace or a Custom Container {{> anchor 'containercontentview'}}
 
@@ -168,7 +172,7 @@ Choosing what tabs should be displayed or not is done on a per document type bas
 
 **Related How-Tos**
 
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC60 NXDOC60 Studio USERDOC60' label='howto' filter='Topics=Content view, Level=Beginner'}}}
 
 ## Drop-down Lists, like Coverage or Subjects {{> anchor 'vocabulary'}}
 
@@ -186,7 +190,7 @@ Choosing what tabs should be displayed or not is done on a per document type bas
 
 **Related How-Tos**
 
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC60 NXDOC60 Studio USERDOC60' label='howto' filter='Topics=Vocabulary'}}}
 
 ## Workflows
 
@@ -202,4 +206,4 @@ Choosing what tabs should be displayed or not is done on a per document type bas
 
 **Related How-Tos**
 
-{{! table-filter removed }}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC60 NXDOC60 Studio USERDOC60' label='howto' filter='Topics=Workflow, Level=Intermediate'}}}

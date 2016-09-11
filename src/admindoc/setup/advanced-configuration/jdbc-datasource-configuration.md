@@ -1,5 +1,9 @@
 ---
 title: JDBC Datasource Configuration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - datasource
 toc: true

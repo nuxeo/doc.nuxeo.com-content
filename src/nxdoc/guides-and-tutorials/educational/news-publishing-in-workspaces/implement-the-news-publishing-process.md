@@ -1,5 +1,9 @@
 ---
 title: Implement the News "publishing" process
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - tuto-automation
     - tuto-user-action

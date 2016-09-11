@@ -1,5 +1,9 @@
 ---
 title: Multiple Repositories Configuration
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20150507
 toc: true

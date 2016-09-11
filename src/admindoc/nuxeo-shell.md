@@ -1,5 +1,9 @@
 ---
 title: Nuxeo Shell
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - shell
     - link-update

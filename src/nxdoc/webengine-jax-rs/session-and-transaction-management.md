@@ -1,5 +1,9 @@
 ---
 title: Session and Transaction Management
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - webengine
     - transaction

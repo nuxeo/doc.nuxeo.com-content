@@ -1,5 +1,9 @@
 ---
 title: 'How to Hide a Tab, a Link or a Button for a Group or a User'
+review:
+    comment: ''
+    date: ''
+    status: ok
 details:
     howto:
         excerpt: |-

@@ -1,5 +1,9 @@
 ---
 title: Setup
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - nuxeo_conf
     - last-review-20141120

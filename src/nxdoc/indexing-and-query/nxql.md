@@ -1,5 +1,9 @@
 ---
 title: NXQL
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - query
     - search

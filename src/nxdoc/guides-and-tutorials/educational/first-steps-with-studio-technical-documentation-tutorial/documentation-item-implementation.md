@@ -1,5 +1,9 @@
 ---
 title: Documentation Item Implementation
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - tuto-document-type
 toc: true

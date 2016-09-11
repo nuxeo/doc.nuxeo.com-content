@@ -1,5 +1,9 @@
 ---
 title: Digital Asset Management (DAM)
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - dam
     - annotation

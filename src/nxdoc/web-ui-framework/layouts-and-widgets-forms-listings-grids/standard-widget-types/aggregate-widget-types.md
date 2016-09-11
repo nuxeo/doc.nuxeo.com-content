@@ -1,5 +1,9 @@
 ---
 title: Aggregate Widget Types
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - elasticsearch
     - aggregate

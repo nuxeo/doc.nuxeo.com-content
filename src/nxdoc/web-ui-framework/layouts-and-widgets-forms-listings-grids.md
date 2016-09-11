@@ -1,5 +1,9 @@
 ---
 title: 'Layouts and Widgets (Forms, Listings, Grids)'
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - layouts
     - widgets
@@ -337,7 +341,7 @@ Layouts and Widgets can be configured using Studio: Check out the [Form Layouts]
 
 In a document oriented perspective, layouts are mostly used to display a document metadata in different use cases: present a form to set its schema fields when creating or editing the document, and present these fields values when simply displaying the document. A single layout definition can be used to address these use cases as it will be rendered for a given document and in a given [mode]({{page page='layout-and-widget-modes'}}).
 
-{{!-- unmigrated-inline-wiki-markup: {multi-excerpt:layout-definition}A layout is a group of widgets that specifies how widgets are assembled and displayed. It manages widget rows and has global control on the rendering of each of its widgets.{multi-excerpt} --}}
+{{!-- unmigrated-wiki-markup: {multi-excerpt:layout-definition}A layout is a group of widgets that specifies how widgets are assembled and displayed. It manages widget rows and has global control on the rendering of each of its widgets.{multi-excerpt} --}}
 
 &nbsp;
 

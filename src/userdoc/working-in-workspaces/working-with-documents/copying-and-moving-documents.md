@@ -1,5 +1,9 @@
 ---
 title: Copying and Moving Documents
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20141202
     - clipboard

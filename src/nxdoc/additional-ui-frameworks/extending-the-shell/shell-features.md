@@ -1,5 +1,9 @@
 ---
 title: Shell Features
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - shell
 toc: true

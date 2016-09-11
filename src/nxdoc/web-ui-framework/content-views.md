@@ -1,5 +1,9 @@
 ---
 title: Content Views
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - link-update
     - document-content-view

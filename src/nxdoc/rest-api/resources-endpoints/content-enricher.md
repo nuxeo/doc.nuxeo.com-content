@@ -1,5 +1,9 @@
 ---
 title: Content Enricher
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - 5-9-5
 toc: true

@@ -1,5 +1,9 @@
 ---
 title: Supported File Formats
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380861'
     ajs-parent-page-title: Digital Asset Management (DAM)

@@ -1,5 +1,9 @@
 ---
 title: Using CAS2 Authentication
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - authentication
     - cas2

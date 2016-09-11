@@ -1,5 +1,9 @@
 ---
 title: Content Views Display
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - content-view
 toc: true

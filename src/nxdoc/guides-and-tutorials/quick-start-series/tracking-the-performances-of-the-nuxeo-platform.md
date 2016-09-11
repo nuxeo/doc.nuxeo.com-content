@@ -1,5 +1,9 @@
 ---
 title: Tracking the Performances of the Nuxeo Platform
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - funkload
     - performance

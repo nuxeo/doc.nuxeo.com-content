@@ -1,5 +1,9 @@
 ---
 title: Elasticsearch Setup
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - elasticsearch
     - last-review-20141201

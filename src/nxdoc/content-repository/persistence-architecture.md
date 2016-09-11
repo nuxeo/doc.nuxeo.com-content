@@ -1,5 +1,9 @@
 ---
 title: Persistence Architecture
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380905'
     ajs-parent-page-title: Content Repository

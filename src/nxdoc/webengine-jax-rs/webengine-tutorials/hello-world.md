@@ -1,5 +1,9 @@
 ---
 title: Hello World
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - howto
     - webengine

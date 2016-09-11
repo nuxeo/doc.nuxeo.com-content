@@ -1,5 +1,9 @@
 ---
 title: Android Client
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - android
     - client

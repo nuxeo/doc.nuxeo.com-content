@@ -1,5 +1,9 @@
 ---
 title: Locking vs Permission to Restrict Write Access to a Document
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - lock
 toc: true

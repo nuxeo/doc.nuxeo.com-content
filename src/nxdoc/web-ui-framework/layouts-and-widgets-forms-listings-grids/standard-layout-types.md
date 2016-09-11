@@ -1,5 +1,9 @@
 ---
 title: Standard Layout Types
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '22380894'

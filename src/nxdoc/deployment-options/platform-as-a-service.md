@@ -1,5 +1,9 @@
 ---
 title: Platform as a Service
+review:
+    comment: ''
+    date: ''
+    status: ok
 toc: true
 confluence:
     ajs-parent-page-id: '22380917'

@@ -1,5 +1,9 @@
 ---
 title: Managing Topics
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - last-review-20141127
     - topic

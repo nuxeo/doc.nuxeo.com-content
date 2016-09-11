@@ -1,5 +1,9 @@
 ---
 title: Widget Definitions
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - widget
 toc: true

@@ -1,5 +1,9 @@
 ---
 title: Automated Document Categorization
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - document-categorization
 confluence:

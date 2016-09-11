@@ -1,5 +1,9 @@
 ---
 title: One step validation flow based on lifecycle only
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '22380606'
     ajs-parent-page-title: Workflow Use Cases

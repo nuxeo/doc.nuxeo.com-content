@@ -1,5 +1,9 @@
 ---
 title: Resources Compatibility
+review:
+    comment: ''
+    date: ''
+    status: ok
 labels:
     - resources-compatibility
 confluence:

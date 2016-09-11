@@ -1,5 +1,9 @@
 ---
 title: Upgrade to JSF2
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '21921826'
     ajs-parent-page-title: Upgrade from 5.8 to 6.0

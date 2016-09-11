@@ -1,5 +1,9 @@
 ---
 title: Advanced Configuration
+review:
+    comment: ''
+    date: ''
+    status: ok
 confluence:
     ajs-parent-page-id: '21921866'
     ajs-parent-page-title: Setup
