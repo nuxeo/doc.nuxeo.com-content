@@ -7,8 +7,6 @@ review:
 details:
     howto:
         excerpt: >-
-            BLOCK
-
             Learn how to customize TinyMCE by adding new plug-ins. We will use
             the textcolor plug-in as an example.
         level: Intermediate
@@ -31,47 +29,47 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/a4BVAQ'
     source_link: /display/NXDOC60/How+to+Use+Plug-Ins+in+TinyMCE+Editor
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-30 13:13'
         message: ink updat
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 11:40'
         message: Add link to nuxeo.conf page
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 11:29'
         message: ''
         version: '7'
-    - 
+    -
         author: Thierry Martins
         date: '2014-11-29 22:06'
         message: ''
         version: '6'
-    - 
+    -
         author: Thierry Martins
         date: '2014-11-28 19:45'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Martins
         date: '2014-11-28 19:37'
         message: wip
         version: '4'
-    - 
+    -
         author: Thierry Martins
         date: '2014-11-27 14:14'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Martins
         date: '2014-11-26 19:02'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2014-11-26 16:33'
         message: ''
