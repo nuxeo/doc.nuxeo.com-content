@@ -7,12 +7,10 @@ review:
 details:
     howto:
         excerpt: >-
-            BLOCK
-
             The Nuxeo Platform offers the capability to change the context path,
-            i.e.&nbsp;/nuxeo&nbsp;in the URL of your application.
+            i.e. /nuxeo in the URL of your application.
         level: Intermediate
-        tool: '&nbsp;'
+        tool: ''
         topics: 'Server configuration, URL'
 labels:
     - howto
@@ -28,17 +26,17 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/MYPjAQ'
     source_link: /display/NXDOC/How+to+Change+Context+Path
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-25 07:45'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-25 07:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-07-22 13:47'
         message: ''
@@ -59,7 +57,7 @@ This configuration is done in two steps:
     org.nuxeo.ecm.contextPath=/myapp
 
     # if you have configured nuxeo.url, update it as well
-    nuxeo.url=http://localhost:8080/myapp 
+    nuxeo.url=http://localhost:8080/myapp
     ```
 
 2.  Rename the file&nbsp;`$NUXEO_HOME/templates/common-base/conf/Catalina/localhost/nuxeo.xml.nxftl`&nbsp;into&nbsp;`$NUXEO_HOME/templates/common-base/conf/Catalina/localhost/myapp.xml.nxftl`.

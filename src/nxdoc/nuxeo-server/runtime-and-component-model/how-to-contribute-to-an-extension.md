@@ -7,13 +7,8 @@ review:
 details:
     howto:
         excerpt: >-
-
-            e21dafyJVfBJNAUxBLOCK
-
             Lean how to create an XML extension in Nuxeo Studio and in Nuxeo IDE
             and how to override a Nuxeo contribution.
-
-            e21dafyJVfBJNAUxend
         level: Intermediate
         tool: 'Nuxeo IDE, Studio'
         topics: Extension point
@@ -37,127 +32,127 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/iw7F'
     source_link: /display/NXDOC/How+to+Contribute+to+an+Extension
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-25 16:26'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 13:44'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-29 12:10'
         message: ''
         version: '23'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-11-06 14:09'
         message: 'misspelling: extention -> extension'
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-08 09:15'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-08 09:15'
         message: ''
         version: '20'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-09-28 15:38'
         message: Deleted superfluous 'you'
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-30 10:08'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-30 10:08'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-30 10:08'
         message: link update
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-08 17:42'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-08 17:42'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-08 17:42'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-08 17:39'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-05-23 12:02'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-05-05 09:11'
         message: Formatting
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-02 14:48'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-18 17:44'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-02-15 13:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-02-15 13:44'
         message: Updating the content due to some evolutions of the feature
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-25 14:56'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-25 14:56'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-25 14:51'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-25 14:41'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-25 14:29'
         message: ''
