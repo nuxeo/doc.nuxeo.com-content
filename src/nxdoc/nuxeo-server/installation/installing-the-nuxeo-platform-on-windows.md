@@ -311,9 +311,8 @@ The Nuxeo Platform is available as ready-to-use 64b virtual machine images from 
     The [startup wizard]({{page page='configuration-wizard'}}) is displayed to help you configure your application.
 
     {{#> callout type='info' heading='Shell root access'}}
-    <div class="callout info nuxeo">
-        <i class="fa fa-info-circle"></i>
     The password for the&nbsp;`root` and&nbsp;`nuxeo` users are generated the first time you start the virtual machine and are displayed on the console.&nbsp;
+    {{/callout}}
 
     </div>
 
