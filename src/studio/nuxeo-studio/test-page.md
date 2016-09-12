@@ -6,9 +6,8 @@ review:
     status: not-ok
 labels:
     - test
-version_override: /710/nxdoc/from-the-web-ui-to-nuxeo-studio/
 ---
-![]({{file name='STUDIO_rename_confirmation.png'}} ?w=350,border=true)
+
 
 {{! excerpt name='test'}}
 This is my excerpt
