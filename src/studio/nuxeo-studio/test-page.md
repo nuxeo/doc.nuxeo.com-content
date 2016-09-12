@@ -9,7 +9,7 @@ labels:
 ---
 
 
-{{! excerpt name='test'}}
+{{! excerpt}}
 This is my excerpt
 {{! /excerpt}}
 
@@ -21,4 +21,4 @@ This is my multi-excerpt
 
 {{{multiexcerpt 'my-multiexcerpt' page='Test Page'}}}
 
-{{{excerpt 'test'}}}
+{{{excerpt}}}
