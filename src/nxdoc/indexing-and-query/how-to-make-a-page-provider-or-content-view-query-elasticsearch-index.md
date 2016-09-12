@@ -7,9 +7,9 @@ review:
 details:
     howto:
         excerpt: >-
-            BLOCKLearn how to make a content view query Elasticsearch instead of
+            Learn how to make a content view query Elasticsearch instead of
             the Core API.
-              
+
         level: Beginner
         tool: Studio
         topics: 'Content view, Elasticsearch, Query'
@@ -35,102 +35,102 @@ confluence:
     source_link: >-
         /display/NXDOC710/How+to+Make+a+Page+Provider+or+Content+View+Query+Elasticsearch+Index
 history:
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-12-03 15:56'
         message: dded vide
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-23 09:25'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:23'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 16:39'
         message: ''
         version: '17'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 15:33'
         message: ''
         version: '16'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 15:32'
         message: ''
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-04 02:23'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-04 02:20'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 09:27'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 09:08'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 23:24'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 23:24'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 22:25'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-05 11:30'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-18 16:25'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-04-18 10:42'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-04-17 19:11'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-17 19:07'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-17 18:59'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-17 18:58'
         message: ''

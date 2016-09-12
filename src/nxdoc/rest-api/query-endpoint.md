@@ -7,8 +7,6 @@ review:
 details:
     howto:
         excerpt: >-
-            BLOCK
-
             This how-to provides an example of how to use the REST API to query
             the Nuxeo repository.
         level: Advanced
@@ -35,182 +33,182 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/U4GyAQ'
     source_link: /display/NXDOC710/Query+Endpoint
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-06 12:59'
         message: ix typo
         version: '36'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 10:25'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-20 13:11'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-20 13:07'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-14 09:12'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-14 09:11'
         message: ''
         version: '31'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-01-13 13:48'
         message: ''
         version: '30'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-17 17:20'
         message: format
         version: '29'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-17 17:19'
         message: remove leftover chapters
         version: '28'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-17 17:18'
         message: fill doc with named parameters examples
         version: '27'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-17 16:33'
         message: add related  content + link to interesting page
         version: '26'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-17 16:28'
         message: format
         version: '25'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-17 16:23'
         message: remove dupe content (bad previous copy/paste)
         version: '24'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-12-11 14:46'
         message: ''
         version: '23'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-10-29 17:34'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-22 10:31'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-22 10:31'
         message: ''
         version: '20'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-18 15:45'
         message: add es provider
         version: '19'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-12 16:22'
         message: ''
         version: '18'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-12 11:59'
         message: ''
         version: '17'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-12 11:58'
         message: ''
         version: '16'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-09-11 18:24'
         message: ''
         version: '15'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-11 15:46'
         message: Query Endpoint
         version: '14'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-11 15:43'
         message: ''
         version: '13'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-11 15:42'
         message: ''
         version: '12'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-11 15:37'
         message: ''
         version: '11'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-11 15:28'
         message: ''
         version: '10'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-11 15:28'
         message: ''
         version: '9'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-11 15:23'
         message: ''
         version: '8'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-11 14:59'
         message: ''
         version: '7'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-11 14:54'
         message: ''
         version: '6'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-11 14:53'
         message: ''
         version: '5'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-11 14:53'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-10 10:39'
         message: ''
         version: '3'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-09 18:54'
         message: wip query endpoint
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-09-09 18:47'
         message: ''
@@ -381,7 +379,7 @@ Note this is only interesting when using a page provider, defined server side.
 ```
 http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document
 
-http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document&pageSize=2&currentPageIndex=1 
+http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document&pageSize=2&currentPageIndex=1
 ```
 
 {{/panel}}{{#> panel type='code' heading='Response'}}
