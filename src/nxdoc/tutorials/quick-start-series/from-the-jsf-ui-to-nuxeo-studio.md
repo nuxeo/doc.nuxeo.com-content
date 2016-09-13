@@ -16,8 +16,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/VANc'
     source_link: /display/NXDOC/From+the+JSF+UI+to+Nuxeo+Studio
 version_override: 
-    LTS: '710/nxdoc/from-the-web-ui-to-nuxeo-studio/' 
-    6.0: '60/nxdoc/from-the-web-ui-to-nuxeo-studio/'
+    LTS: '710/nxdoc/from-the-web-ui-to-nuxeo-studio' 
+    6.0: '60/nxdoc/from-the-web-ui-to-nuxeo-studio'
 history:
     -
         author: Solen Guitter
