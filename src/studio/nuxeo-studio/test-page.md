@@ -6,6 +6,7 @@ review:
     status: not-ok
 labels:
     - test
+version_override: 70/nxdoc/from-the-web-ui-to-nuxeo-studio
 ---
 
 
