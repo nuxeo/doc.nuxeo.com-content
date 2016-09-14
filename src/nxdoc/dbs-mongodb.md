@@ -4,7 +4,7 @@ review:
     comment: ''
     date: '2015-12-01'
     status: ok
-redirect: dbs
+redirect: nxdoc/dbs
 redirect_source: DBS
 confluence:
     ajs-parent-page-id: ''
@@ -17,6 +17,7 @@ confluence:
     shortlink: 74TjAQ
     shortlink_source: 'https://doc.nuxeo.com/x/74TjAQ'
     source_link: /display/NXDOC/DBS+-+MongoDB
+hidden: true
 history:
     - 
         author: Solen Guitter
