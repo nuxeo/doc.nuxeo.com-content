@@ -19,7 +19,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/uodkAQ'
     source_link: /display/NXDOC60/From+the+Web+UI+to+Nuxeo+Studio
 version_override:
-    'FT': 'nxdoc/from-the-jsf-ui-to-nuxeo-studio/'
+    'FT': 'nxdoc/from-the-jsf-ui-to-nuxeo-studio'
 history:
     - 
         author: Solen Guitter
