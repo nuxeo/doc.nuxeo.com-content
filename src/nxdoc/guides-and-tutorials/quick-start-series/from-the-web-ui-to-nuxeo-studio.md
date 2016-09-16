@@ -17,6 +17,8 @@ confluence:
     shortlink: OICyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/OICyAQ'
     source_link: /display/NXDOC710/From+the+Web+UI+to+Nuxeo+Studio
+version_override: 
+    'FT': 'nxdoc/from-the-jsf-ui-to-nuxeo-studio'
 history:
     - 
         author: Manon Lumeau
