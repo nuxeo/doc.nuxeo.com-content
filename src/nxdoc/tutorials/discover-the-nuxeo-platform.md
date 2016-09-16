@@ -14,7 +14,7 @@ This tutorial will guide you on a tour to discover the Nuxeo Platform and its fe
 
 **[Using the JavaScript Client]({{page page='Using the JavaScript Client'}})**
 
-{{excerpt 'using-javascript-client'}}
+{{excerpt 'using-the-javascript-client'}}
 
 **[Manipulating Documents]({{page page='Manipulating Documents'}})**
 
