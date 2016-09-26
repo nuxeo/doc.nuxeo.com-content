@@ -131,4 +131,4 @@ history:
 
 {{/panel}}</div></div>
 
-{{{multiexcerpt 'license' page='NXDOC:Developer Documentation Center'}}}
+{{{multiexcerpt 'license' page='NXDOC:index'}}}
