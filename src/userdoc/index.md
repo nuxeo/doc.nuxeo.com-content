@@ -225,4 +225,4 @@ You can download and install optional product plugins from the Nuxeo Marketplace
 
 {{/panel}}</div></div>
 
-{{{multiexcerpt 'License' page='NXDOC:Developer Documentation Center'}}}
+{{{multiexcerpt 'License' page='NXDOC:index'}}}
