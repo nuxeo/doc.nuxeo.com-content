@@ -660,26 +660,25 @@ history:
         version: '1'
 
 ---
-
 {{> header_standard}}
 
 <div class="row">
-    <div class="column large-10 large-centered text-center">
+    <div id="home" class="column large-10 large-centered text-center">
         <div class="row">
-            <div id="search" class="column">
-                <div class="input-group">
-                    <span class="input-group-label">Search</span>
-                    <input type="text" class="input-group-field" placeholder="…">
-                    <div class="input-group-button">
-                        <button type="submit" class="button"><i class="fa fa-search"></i></button>
+            <div class="column space-top-3">
+                <div id="search">
+                    <div class="input-group">
+                        <span class="input-group-label">Search Documentation</span>
+                        <input type="text" class="input-group-field" placeholder="…">
+                        <span class="input-group-icon"><i class="fa fa-lg fa-search"></i></span>
                     </div>
                 </div>
             </div>
-            <div class="column">
+            <div class="column space-top-2">
                 <h2>Quick Access to Popular Documenation</h2>
             </div>
         </div>
-        <div id="quick-access" class="row medium-up-3">
+        <div id="quick-access" class="row medium-up-3 space-top-1">
             <div class="column">
                 <a class="button expanded" href="#">Installation</a>
             </div>
@@ -699,135 +698,49 @@ history:
                 <a class="button expanded" href="#">Workflows</a>
             </div>
         </div>
-        <div id="client-libs">
-            <div class="row">
-                <div class="column small-centered text-center">
-                    <h2>Client Libraries</h2>
-                </div>
-            </div>
-            <div id="client-libraries" class="row small-up-2 medium-up-4 large-up-8">
-                <div class="column">
-                    <a href="#">
-                        <img src="http://placehold.it/32x32?text=Java" width="32" height="32">
-                        Java
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="#">
-                        <img src="http://placehold.it/32x32?text=Python" width="32" height="32">
-                        Python
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="#">
-                        <img src="http://placehold.it/32x32?text=CMIS" width="32" height="32">
-                        CMIS
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="#">
-                        <img src="http://placehold.it/32x32?text=JavaScript" width="32" height="32">
-                        JavaScript
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="#">
-                        <img src="http://placehold.it/32x32?text=Ruby" width="32" height="32">
-                        Ruby
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="#">
-                        <img src="http://placehold.it/32x32?text=Android" width="32" height="32">
-                        Android
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="#">
-                        <img src="http://placehold.it/32x32?text=iOS" width="32" height="32">
-                        iOS
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="#">
-                        <img src="http://placehold.it/32x32?text=PHP" width="32" height="32">
-                        PHP
-                    </a>
+        <div class="row">
+            <div class="space-top-2 column">
+                <div id="client-libs">
+                    <div class="row">
+                        <div class="column small-centered text-center space-top-1">
+                            <h2>Client Libraries</h2>
+                        </div>
+                    </div>
+                    <div class="row small-up-2 medium-up-4 large-up-8 space-top-1 space-bottom-2">
+                        {{> home_client_lib url='#' lang='Java'}}
+                        {{> home_client_lib url='#' lang='Python'}}
+                        {{> home_client_lib url='#' lang='CMIS'}}
+                        {{> home_client_lib url='#' lang='JavaScript'}}
+                        {{> home_client_lib url='#' lang='Ruby'}}
+                        {{> home_client_lib url='#' lang='Android'}}
+                        {{> home_client_lib url='#' lang='iOS'}}
+                        {{> home_client_lib url='#' lang='PHP'}}
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="column text-center">
+            <div class="column text-center space-top-2">
                 <h2>Explore Fast Track Documentation</h2>
             </div>
         </div>
         <div class="row medium-up-2 large-up-4 text-center">
-            <div class="column tutorial">
-                <div class="fast-track">
-
-                    <a href="#">
-                        <img src="http://placehold.it/64x64?text=Tutorials" width="64" height="64">
-                        Tutorials
-                    </a>
-                </div>
-            </div>
-            <div class="column server">
-                <div class="fast-track">
-                    <a href="#">
-                        <img src="http://placehold.it/64x64?text=Nuxeo+Server" width="64" height="64">
-                        Nuxeo Server
-                    </a>
-                </div>
-            </div>
-            <div class="column web-ui">
-                <div class="fast-track">
-                    <a href="#">
-                        <img src="http://placehold.it/64x64?text=Web-UI" width="64" height="64">
-                        Web-UI
-                    </a>
-                </div>
-            </div>
-            <div class="column desktop-mob">
-                <div class="fast-track">
-                    <a href="#">
-                        <img src="http://placehold.it/64x64?text=Desktop/Mobile" width="64" height="64">
-                        Desktop/Mobile
-                    </a>
-                </div>
-            </div>
+            {{> home_section url='#' id='tutorial' name='Tutorials'}}
+            {{> home_section url='#' id='server' name='Nuxeo Server'}}
+            {{> home_section url='#' id='web-ui' name='Web-UI'}}
+            {{> home_section url='#' id='desktop-mob' name='Desktop/Mobile'}}
         </div>
         <div class="row text-center">
             <div class="column large-9 large-centered">
                 <div class="row medium-up-3">
-                    <div class="column packages">
-                        <div class="fast-track">
-                            <a href="#">
-                                <img src="http://placehold.it/64x64?text=Nuxeo+Packages" width="64" height="64">
-                                Nuxeo Packages
-                            </a>
-                        </div>
-                    </div>
-                    <div class="column services">
-                        <div class="fast-track">
-                            <a href="#">
-                                <img src="http://placehold.it/64x64?text=Online+Services" width="64" height="64">
-                                Online Services
-                            </a>
-                        </div>
-                    </div>
-                    <div class="column tools">
-                        <div class="fast-track">
-                            <a href="#">
-                                <img src="http://placehold.it/64x64?text=Tools" width="64" height="64">
-                                Tools
-                            </a>
-                        </div>
-                    </div>
+                    {{> home_section url='#' id='packages' name='Nuxeo Packages'}}
+                    {{> home_section url='#' id='services' name='Online Services'}}
+                    {{> home_section url='#' id='tools' name='Tools'}}
                 </div>
             </div>
         </div>
 
-        <div class="row text-center">
+        <div class="row text-center space-top-2">
             <div class="column medium-6">
                 <div class="callout secondary">
                     Quick Start Quide
