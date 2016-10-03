@@ -79,496 +79,492 @@ This chapter presents list of Nuxeo Packages available on the Nuxeo Marketplace 
 
 _Use the field below to search for a specific add-on._
 
-<div class="table-scroll">
-<table class="hover">
-    <tbody>
-        <tr><th>
-                <p><strong>Package name</strong></p>
-            </th><th>
-                <p><strong>Public / Registered access</strong></p>
-            </th><th>
-                <p>Documentation</p>
-            </th><th>
-                <p><strong>Comments (especially about latest release)</strong></p>
-            </th></tr>
-        <tr>
-            <td>
-                <p>Amazon S3 Online Storage</p>
-            </td>
-            <td>
-                <p>Registered access</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage?version=1.7.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>API Playground</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-api-playground?version=1.1.1">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>
-                <p>Bulk document importer</p>
-            </td>
-            <td>
-                <p>Registered access</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer?version=1.7.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>CAS2 Authentication</p>
-            </td>
-            <td>
-                <p>Registered access</p>
-            </td>
-            <td>
-                <p><a href="http://doc.nuxeo.com/x/popH">Documentation</a></p>
-            </td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication?version=1.4.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Digital Signature</p>
-            </td>
-            <td>
-                <p>Registered access</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-signature?version=2.5.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>EasyShare</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare?version=1.3.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Kerberos Authentication</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>
-                <p>Documentation</p>
-            </td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/kerberos-authentication?version=1.5.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>Marklogic Persistence Engine</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-marklogic-connector?version=1.0.0">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>Microsoft Azure Online Storage</td>
-            <td>Registered access</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage?version=1.1.2">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo Agenda</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda?version=1.4.1">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo Box API</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-box-api?version=1.3.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>Nuxeo Connect Report Tools</td>
-            <td>Registered access</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report?version=0.0.0">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo CSV</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv?version=1.5.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo DAM</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam?version=6.2.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>Nuxeo Datadog Reporter</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-datadog-reporter?version=2.1.2">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo Diff</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff?version=1.7.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>Nuxeo Diff Pictures</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures?version=1.1.2">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo Drive</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive?version=1.6.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>Nuxeo DuoWeb Two Factors Authentication</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-duoweb-authentication?version=1.4.2">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>Nuxeo for Salesforce</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce?version=1.1.2">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>Nuxeo FS Exporter</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/fs-exporter?version=1.4.2">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo Groups and Rights Audit</p>
-            </td>
-            <td>
-                <p>Registered access</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit?version=1.8.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>Nuxeo Adobe CC Connector</td>
-            <td>Registered access</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-indesign-connector-marketplace?version=1.1.1">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>Nuxeo IMAP Connector</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector?version=1.2.2">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo Jenkins Report</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jenkins-report-mp?version=3.8.3">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>Nuxeo Live Connect</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect?version=1.1.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>Nuxeo Media Publishing</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing?version=1.2.2">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo Multi-tenant</p>
-            </td>
-            <td>
-                <p>Registered access</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant?version=1.6.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo Platform User Registration</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>
-                <p>Documentation</p>
-            </td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-user-registration?version=1.7.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo Quota</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-quota?version=1.6.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>Nuxeo Review Workflows Dashboards</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-review-workflows-dashboards?version=1.1.2">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo SAML 2.0 Authentication</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication?version=1.2.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>Nuxeo Showcase Content</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-showcase-content?version=1.1.2">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>Nuxeo Spreadsheet</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet?version=1.2.2">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>Nuxeo Travel Expenses</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-travel-expenses?version=1.1.2">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo Virtual Navigation</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation?version=1.2.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo Vision</p>
-            </td>
-            <td>
-                <p>Registered access</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision?version=1.1.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo Web Mobile</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-mobile?version=1.8.2">Released for 8.3</a><br />Deprecated.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Nuxeo Web UI</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui?version=0.7.0">Released for 8.3</a></p>
-                <p>Preview edition</p>
-            </td>
-        </tr>
-        <tr>
-            <td>OpenID Authentication</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/openid-authentication?version=1.1.2">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>
-                <p>Platform Explorer</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/platform-explorer?version=1.6.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Resources Compatibility</p>
-            </td>
-            <td>
-                <p>Registered access</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/resources-compat?version=1.4.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Samples</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample?version=2.3.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Scan Documents Importer</p>
-            </td>
-            <td>
-                <p>Registered access</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer?version=1.3.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Shibboleth Authentication</p>
-            </td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication?version=2.4.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>Shibboleth Invitation Addon</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-shibboleth-invitation?version=1.2.2">Released for 8.3</a></td>
-        </tr>
-        <tr>
-            <td>
-                <p>Smart Search</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-smart-search?version=1.8.3">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Template Rendering Addon</p>
-            </td>
-            <td>
-                <p>Public</p>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-                <p><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering?version=6.6.2">Released for 8.3</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>Template Rendering Samples</td>
-            <td>Public</td>
-            <td>&nbsp;</td>
-            <td><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering-samples?version=6.6.2">Released for 8.3</a></td>
-        </tr>
-    </tbody>
-</table>
-</div>
+{{! table-filter removed }}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+
+**Package name**
+
+</th><th colspan="1">
+
+**Public / Registered access**
+
+</th><th colspan="1">
+
+Documentation
+
+</th><th colspan="1">
+
+**Comments (especially about latest release)**
+
+</th></tr><tr><td colspan="1">
+
+Amazon S3 Online Storage
+
+</td><td colspan="1">
+
+Registered access
+
+</td><td colspan="1">
+
+[Documentation]({{page page='amazon-s3-online-storage'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage?version=1.7.2)
+
+</td></tr><tr><td colspan="1">API Playground</td><td colspan="1">Public</td><td colspan="1">[Documentation]({{page page='use-nuxeo-api-playground-to-discover-the-api'}})</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-api-playground?version=1.1.1)</td></tr><tr><td colspan="1">
+
+Bulk document importer
+
+</td><td colspan="1">
+
+Registered access
+
+</td><td colspan="1">
+
+[Documentation]({{page page='nuxeo-bulk-document-importer'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer?version=1.7.2)
+
+</td></tr><tr><td colspan="1">
+
+CAS2 Authentication
+
+</td><td colspan="1">
+
+Registered access
+
+</td><td colspan="1">
+
+[Documentation](http://doc.nuxeo.com/x/popH)
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication?version=1.4.2)
+
+</td></tr><tr><td colspan="1">
+
+Digital Signature
+
+</td><td colspan="1">
+
+Registered access
+
+</td><td colspan="1">
+
+[Developer documentation]({{page page='digital-signature'}})
+
+[User documentation]({{page space='userdoc' page='digital-signature'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-signature?version=2.5.2)
+
+</td></tr><tr><td colspan="1">
+
+EasyShare
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Developer documentation]({{page page='easyshare'}})
+
+[User documentation]({{page space='userdoc' page='easyshare'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare?version=1.3.2)
+
+</td></tr><tr><td colspan="1">
+
+Kerberos Authentication
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[ Documentation ]({{page page='kerberos-authentication'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/kerberos-authentication?version=1.5.2)
+
+</td></tr><tr><td colspan="1">Marklogic Persistence Engine</td><td colspan="1">Public</td><td colspan="1">[Documentation]({{page page='marklogic'}})</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-marklogic-connector?version=1.0.0)</td></tr><tr><td colspan="1">Microsoft Azure Online Storage</td><td colspan="1">Registered access</td><td colspan="1">&nbsp;</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage?version=1.1.2)</td></tr><tr><td colspan="1">
+
+Nuxeo Agenda
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Developer documentation]({{page page='nuxeo-agenda'}})
+
+[User documentation]({{page space='userdoc' page='nuxeo-agenda'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda?version=1.4.1)
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo Box API
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">&nbsp;</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-box-api?version=1.3.2)
+
+</td></tr><tr><td colspan="1">Nuxeo Connect Report Tools</td><td colspan="1">Registered access</td><td colspan="1">[Documentation]({{page page='nuxeo-connect-report-tools'}})</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report?version=0.0.0)</td></tr><tr><td colspan="1">
+
+Nuxeo CSV
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Documentation]({{page page='nuxeo-csv'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv?version=1.5.2)
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo DAM
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Documentation]({{page page='digital-asset-management-dam'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam?version=6.2.2)
+
+</td></tr><tr><td colspan="1">Nuxeo Datadog Reporter</td><td colspan="1">Public</td><td colspan="1">[Documentation]({{page page='nuxeo-datadog-reporter'}})</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-datadog-reporter?version=2.1.2)</td></tr><tr><td colspan="1">
+
+Nuxeo Diff
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Developer documentation]({{page page='nuxeo-diff'}})
+
+[User documentation]({{page space='userdoc' page='nuxeo-diff'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff?version=1.7.2)
+
+</td></tr><tr><td colspan="1">Nuxeo Diff Pictures</td><td colspan="1">Public</td><td colspan="1">[User documentation]({{page page='nuxeo-diff-pictures'}})</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures?version=1.1.2)</td></tr><tr><td colspan="1">
+
+Nuxeo Drive
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Developer documentation]({{page page='nuxeo-drive'}})
+
+[User documentation]({{page space='userdoc' page='nuxeo-drive'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive?version=1.6.2)
+
+</td></tr><tr><td colspan="1">Nuxeo DuoWeb Two Factors Authentication</td><td colspan="1">Public</td><td colspan="1">[Documentation]({{page page='nuxeo-duoweb-two-factor-authentication'}})</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-duoweb-authentication?version=1.4.2)</td></tr><tr><td colspan="1">Nuxeo for Salesforce</td><td colspan="1">Public</td><td colspan="1">[Documentation]({{page page='nuxeo-for-salesforce'}})</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce?version=1.1.2)</td></tr><tr><td colspan="1">Nuxeo FS Exporter</td><td colspan="1">Public</td><td colspan="1">[Documentation]({{page page='nuxeo-file-system-exporter'}})</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/fs-exporter?version=1.4.2)</td></tr><tr><td colspan="1">
+
+Nuxeo Groups and Rights Audit
+
+</td><td colspan="1">
+
+Registered access
+
+</td><td colspan="1">
+
+[Developer documentation]({{page page='nuxeo-groups-and-rights-audit'}})
+
+[User documentation]({{page page='nuxeo-groups-and-rights-audit'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit?version=1.8.2)
+
+</td></tr><tr><td colspan="1">Nuxeo Adobe CC Connector</td><td colspan="1">Registered access</td><td colspan="1">[Documentation]({{page page='nuxeo-adobe-cc-connector'}})</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-indesign-connector-marketplace?version=1.1.1)</td></tr><tr><td colspan="1">Nuxeo IMAP Connector</td><td colspan="1">Public</td><td colspan="1">[User documentation]({{page space='userdoc' page='nuxeo-imap-connector'}})</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector?version=1.2.2)</td></tr><tr><td colspan="1">
+
+Nuxeo Jenkins Report
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Administration documentation]({{page page='nuxeo-jenkins-report'}})
+
+[User documentation]({{page space='userdoc' page='nuxeo-jenkins-report'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jenkins-report-mp?version=3.8.3)
+
+</td></tr><tr><td colspan="1">Nuxeo Live Connect</td><td colspan="1">Public</td><td colspan="1">[Documentation]({{page page='nuxeo-live-connect'}})</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect?version=1.1.2)
+
+</td></tr><tr><td colspan="1">Nuxeo Media Publishing</td><td colspan="1">Public</td><td colspan="1">[Documentation]({{page page='nuxeo-media-publishing'}})</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing?version=1.2.2)</td></tr><tr><td colspan="1">
+
+Nuxeo Multi-tenant
+
+</td><td colspan="1">
+
+Registered access
+
+</td><td colspan="1">
+
+[Developer documentation]({{page page='nuxeo-multi-tenant'}})
+
+[User documentation]({{page space='userdoc' page='nuxeo-multi-tenant'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant?version=1.6.2)
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo Platform User Registration
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Documentation ]({{page page='nuxeo-platform-user-registration'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-user-registration?version=1.7.2)
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo Quota
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Documentation]({{page page='nuxeo-quota'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-quota?version=1.6.2)
+
+</td></tr><tr><td colspan="1">Nuxeo Review Workflows Dashboards</td><td colspan="1">Public</td><td colspan="1">&nbsp;</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-review-workflows-dashboards?version=1.1.2)</td></tr><tr><td colspan="1">
+
+Nuxeo SAML 2.0 Authentication
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Documentation]({{page page='saml-20-authentication'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication?version=1.2.2)
+
+</td></tr><tr><td colspan="1">Nuxeo Showcase Content</td><td colspan="1">Public</td><td colspan="1">&nbsp;</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-showcase-content?version=1.1.2)</td></tr><tr><td colspan="1">Nuxeo Spreadsheet</td><td colspan="1">Public</td><td colspan="1">[Documentation]({{page page='nuxeo-spreadsheet'}})</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet?version=1.2.2)</td></tr><tr><td colspan="1">Nuxeo Travel Expenses</td><td colspan="1">Public</td><td colspan="1">&nbsp;</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-travel-expenses?version=1.1.2)</td></tr><tr><td colspan="1">
+
+Nuxeo Virtual Navigation
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Documentation]({{page page='nuxeo-virtual-navigation'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation?version=1.2.2)
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo Vision
+
+</td><td colspan="1">
+
+Registered access
+
+</td><td colspan="1">
+
+[Documentation]({{page page='nuxeo-vision'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision?version=1.1.2)
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo Web Mobile
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">&nbsp;</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-mobile?version=1.8.2)
+Deprecated.
+
+</td></tr><tr><td colspan="1">
+
+Nuxeo Web UI
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">&nbsp;</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui?version=0.7.0)
+
+Preview edition
+
+</td></tr><tr><td colspan="1">OpenID Authentication</td><td colspan="1">Public</td><td colspan="1">&nbsp;</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/openid-authentication?version=1.1.2)</td></tr><tr><td colspan="1">
+
+Platform Explorer
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[User documentation]({{page space='userdoc' page='nuxeo-platform-explorer'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/platform-explorer?version=1.6.2)
+
+</td></tr><tr><td colspan="1">
+
+Resources Compatibility
+
+</td><td colspan="1">
+
+Registered access
+
+</td><td colspan="1">
+
+[Documentation]({{page page='resources-compatibility'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/resources-compat?version=1.4.2)
+
+</td></tr><tr><td colspan="1">
+
+Samples
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">&nbsp;</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample?version=2.3.2)
+
+</td></tr><tr><td colspan="1">
+
+Scan Documents Importer
+
+</td><td colspan="1">
+
+Registered access
+
+</td><td colspan="1">
+
+[Documentation]({{page page='scan-documents-importer'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer?version=1.3.2)
+
+</td></tr><tr><td colspan="1">
+
+Shibboleth Authentication
+
+</td><td colspan="1">Public</td><td colspan="1">
+
+[Documentation]({{page page='shibboleth-authentication'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication?version=2.4.2)
+
+</td></tr><tr><td colspan="1">Shibboleth Invitation Addon</td><td colspan="1">Public</td><td colspan="1">[Documentation]({{page page='nuxeo-shibboleth-invitation'}})</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-shibboleth-invitation?version=1.2.2)</td></tr><tr><td colspan="1">
+
+Smart Search
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Developer documentation]({{page page='smart-search'}})
+
+[User documentation]({{page space='userdoc' page='smart-search'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-smart-search?version=1.8.3)
+
+</td></tr><tr><td colspan="1">
+
+Template Rendering Addon
+
+</td><td colspan="1">
+
+Public
+
+</td><td colspan="1">
+
+[Documentation]({{page page='template-rendering-addon'}})
+
+</td><td colspan="1">
+
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering?version=6.6.2)
+
+</td></tr><tr><td colspan="1">Template Rendering Samples</td><td colspan="1">Public</td><td colspan="1">&nbsp;</td><td colspan="1">[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering-samples?version=6.6.2)</td></tr></tbody></table></div>
 
 Use: "In progress for x.y.z (JC)", "Ready for x.y.z" or "Released for x.y.z" or any other relevant comment.
 
