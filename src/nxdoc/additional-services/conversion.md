@@ -226,7 +226,7 @@ POST http://localhost:8080/nuxeo/api/v1/path/{docPath}/@blob/file:content/@conve
 
 Parameters
 
-<table><tbody><tr><th colspan="1">Name</th><th colspan="1">Type</th><th colspan="1">Description</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Name</th><th colspan="1">Type</th><th colspan="1">Description</th></tr><tr><td colspan="1">
 
 converter
 
@@ -274,7 +274,7 @@ boolean
 
 `true` to schedule an asynchronous conversion, `false` other wise. Default to `false`.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Note that at least one of the parameters&nbsp;`converter`,&nbsp;`type` or&nbsp;`format` must be set.
 

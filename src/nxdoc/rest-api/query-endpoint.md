@@ -235,7 +235,7 @@ Read the following documentation to use the Query endpoint.
 
 ## Endpoint
 
-<table><tbody><tr><th colspan="1">Path</th><th colspan="1">Endpoint</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Path</th><th colspan="1">Endpoint</th></tr><tr><td colspan="1">
 
 **GET
 **
@@ -255,11 +255,11 @@ Endpoint to perform queries on the repository in NXQL.
 
 `**/api/v1/query/{providerName}**`
 
-</td><td colspan="1">Endpoint to perform a query based on page provider registered on the application.</td></tr></tbody></table>
+</td><td colspan="1">Endpoint to perform a query based on page provider registered on the application.</td></tr></tbody></table></div>
 
 ## Properties
 
-<table><tbody><tr><th colspan="1">Key</th><th colspan="1">Value</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Key</th><th colspan="1">Value</th></tr><tr><td colspan="1">
 
 **query
 **
@@ -366,7 +366,7 @@ Parameter names should be strictly different from property names (and other quer
 
 Note this is only interesting when using a page provider, defined server side.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Examples
 
@@ -379,7 +379,7 @@ Note this is only interesting when using a page provider, defined server side.
 ```
 http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document
 
-http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document&pageSize=2&currentPageIndex=1
+http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document&pageSize=2&currentPageIndex=1 
 ```
 
 {{/panel}}{{#> panel type='code' heading='Response'}}

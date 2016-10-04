@@ -33,7 +33,7 @@ history:
 ---
 The SDK tries to provide as much as possible base classes that you can rely on to avoid having to do too much plumbing.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Class Name
 
@@ -105,4 +105,4 @@ Activity
 
 Manage display of a list of documents
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>

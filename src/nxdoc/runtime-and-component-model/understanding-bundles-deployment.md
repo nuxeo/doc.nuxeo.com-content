@@ -216,7 +216,7 @@ In a sense, NuxeoCtl is close to what is provided in several &ldquo;Cloud packag
 
 Nuxeo Platform currently supports several deployment targets.
 
-<table><tbody><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
 
 &nbsp;
 
@@ -404,7 +404,7 @@ No
 
 No
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Depending on the target platform:
 

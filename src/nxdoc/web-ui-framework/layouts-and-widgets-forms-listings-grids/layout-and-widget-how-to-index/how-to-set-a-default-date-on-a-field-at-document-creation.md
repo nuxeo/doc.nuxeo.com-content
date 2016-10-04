@@ -116,7 +116,7 @@ Name your chain and click on&nbsp;**OK**.
 
 In the automation chain, use the following operations and parameters:
 
-<table><tbody><tr><th colspan="1">Operation</th><th colspan="1">Parameter</th><th colspan="1">Value</th></tr><tr><td colspan="1">Fetch > Context document(s)</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Document > Update property</td><td colspan="1">Value</td><td colspan="1">`@{CurrentDate.calendar}`</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Xpath</td><td colspan="1">`schema:field`</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Operation</th><th colspan="1">Parameter</th><th colspan="1">Value</th></tr><tr><td colspan="1">Fetch > Context document(s)</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Document > Update property</td><td colspan="1">Value</td><td colspan="1">`@{CurrentDate.calendar}`</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Xpath</td><td colspan="1">`schema:field`</td></tr></tbody></table></div>
 
 And that's it! Note that the previous parameter will set today's date, but you may use Nuxeo Studio's expression builder to change it. Many possibilities exist in that regard.
 

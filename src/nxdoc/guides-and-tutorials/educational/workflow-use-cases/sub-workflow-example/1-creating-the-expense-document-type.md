@@ -132,7 +132,7 @@ Before creating the document type, we will create the vocabulary so that we have
 3.  Leave the default vocabulary type, a simple vocabulary is exactly what we need.
 4.  Add the following entries into the vocabulary (leave the default values for elements not indicated in the table):
 
-    <table><tbody><tr><th colspan="1">Id</th><th colspan="1">Label</th></tr><tr><td colspan="1">Hotel</td><td colspan="1">Hotel</td></tr><tr><td colspan="1">Transportation</td><td colspan="1">Transportation</td></tr><tr><td colspan="1">Misc</td><td colspan="1">Misc</td></tr></tbody></table>
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Id</th><th colspan="1">Label</th></tr><tr><td colspan="1">Hotel</td><td colspan="1">Hotel</td></tr><tr><td colspan="1">Transportation</td><td colspan="1">Transportation</td></tr><tr><td colspan="1">Misc</td><td colspan="1">Misc</td></tr></tbody></table></div>
 5.  Save your vocabulary.
     You can take a look at the expected result below:
     ![]({{file name='expense-type-vocabulary.png'}} ?w=650,border=true)
@@ -176,8 +176,8 @@ We will need to add two specific fields: amount and type.
 
 1.  In the&nbsp;**Creation Layout**&nbsp;tab, create the layout as following:
 
-    <table><tbody><tr><th colspan="1">Schema</th><th colspan="1">Field</th><th colspan="1">Widget type</th><th colspan="1">Required?</th></tr><tr><td colspan="1">dublincore</td><td colspan="1">title</td><td colspan="1">Text</td><td colspan="1">Yes</td></tr><tr><td colspan="1">dublincore</td><td colspan="1">description</td><td colspan="1">Textarea</td><td colspan="1">No</td></tr><tr><td colspan="1">expense</td><td colspan="1">amount</td><td colspan="1">Floating point</td><td colspan="1">Yes</td></tr><tr><td colspan="1">expense</td><td colspan="1">expensetype</td><td colspan="1">Vocabulary
-    (use the expenseType vocabulary here!)</td><td colspan="1">Yes</td></tr><tr><td colspan="1">file</td><td colspan="1">content</td><td colspan="1">File</td><td colspan="1">Yes</td></tr></tbody></table>
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Schema</th><th colspan="1">Field</th><th colspan="1">Widget type</th><th colspan="1">Required?</th></tr><tr><td colspan="1">dublincore</td><td colspan="1">title</td><td colspan="1">Text</td><td colspan="1">Yes</td></tr><tr><td colspan="1">dublincore</td><td colspan="1">description</td><td colspan="1">Textarea</td><td colspan="1">No</td></tr><tr><td colspan="1">expense</td><td colspan="1">amount</td><td colspan="1">Floating point</td><td colspan="1">Yes</td></tr><tr><td colspan="1">expense</td><td colspan="1">expensetype</td><td colspan="1">Vocabulary
+    (use the expenseType vocabulary here!)</td><td colspan="1">Yes</td></tr><tr><td colspan="1">file</td><td colspan="1">content</td><td colspan="1">File</td><td colspan="1">Yes</td></tr></tbody></table></div>
 2.  Import this (create) layout in the&nbsp;**Edit Layout**&nbsp;and&nbsp;**View Layout**&nbsp;tabs.
 3.  Save your modifications.
     See the result:

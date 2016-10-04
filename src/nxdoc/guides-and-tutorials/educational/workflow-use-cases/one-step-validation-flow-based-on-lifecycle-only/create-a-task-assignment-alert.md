@@ -127,7 +127,7 @@ Here, we want to create the template of the email that will be sent to the users
 
 Create the mail template as described on the how-to [How to Customize Email Templates]({{page page='how-to-customize-email-templates'}}), with the parameters below.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -163,11 +163,11 @@ Hello,<br />
  Link to the document : <a href="${docUrl}">${Document['dc:title']}</a><br />\
 ```
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 The context Variables UserFirstName and UserLastName are here to pass into a mail template the values of CurrentUser.FirstName and CurrentUser.LastName. To load these variables, you just need to put into the chain the blocks &laquo; Execution Context > Set Context Variable &raquo;.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 N&deg;
 
@@ -215,7 +215,7 @@ name: UserFirstName
 
 value: `@{CurrentUser.FirstName}`
 
-</td></tr></tbody></table>{{#> callout type='tip' }}
+</td></tr></tbody></table></div>{{#> callout type='tip' }}
 
 Sending an email to a group of users
 

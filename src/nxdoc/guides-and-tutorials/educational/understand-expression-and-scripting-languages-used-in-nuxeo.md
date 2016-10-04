@@ -409,7 +409,7 @@ Please check the [availables variables depending on context](#available-variable
 
 ## What are the Main Differences Between Expression/Scripting Languages?
 
-<table><colgroup><col> <col> <col> <col></colgroup> <tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">EL</th><th colspan="1">MVEL</th><th colspan="1">FreeMarker</th></tr><tr><td colspan="1">Concept</td><td colspan="1">Advanced scripting language.</td><td colspan="1">Advanced scripting and templating language.</td><td colspan="1">Templating language. Used for email or document templates.</td></tr><tr><td colspan="1">Expression syntax</td><td colspan="1">`#{myExpression.property}`</td><td colspan="1">`@{myExpression.property}`</td><td colspan="1">`${myExpression.property}`</td></tr><tr><td colspan="1">Variables available</td><td colspan="1">Has access to the SEAM (user interface) components, providing many variables.</td><td colspan="1">Can use the variables provided by the UI layer.</td><td colspan="1">Depends on context: send mail operation, doc rendering operation or workflow email notification.</td></tr><tr><td colspan="1">Current document variable</td><td colspan="1">`#{**currentDocument**.property}`</td><td colspan="1">`@{**Document**.property}`</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><colgroup><col> <col> <col> <col></colgroup> <tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">EL</th><th colspan="1">MVEL</th><th colspan="1">FreeMarker</th></tr><tr><td colspan="1">Concept</td><td colspan="1">Advanced scripting language.</td><td colspan="1">Advanced scripting and templating language.</td><td colspan="1">Templating language. Used for email or document templates.</td></tr><tr><td colspan="1">Expression syntax</td><td colspan="1">`#{myExpression.property}`</td><td colspan="1">`@{myExpression.property}`</td><td colspan="1">`${myExpression.property}`</td></tr><tr><td colspan="1">Variables available</td><td colspan="1">Has access to the SEAM (user interface) components, providing many variables.</td><td colspan="1">Can use the variables provided by the UI layer.</td><td colspan="1">Depends on context: send mail operation, doc rendering operation or workflow email notification.</td></tr><tr><td colspan="1">Current document variable</td><td colspan="1">`#{**currentDocument**.property}`</td><td colspan="1">`@{**Document**.property}`</td><td colspan="1">
 
 Send mail / doc rendering:`
 ${**Document**.property}`
@@ -417,7 +417,7 @@ ${**Document**.property}`
 Workflow email notification:`
 ${**workflowDocuments[0]**.property}`
 
-</td></tr></tbody></table>{{#> callout type='note' heading='Variable name and context'}}
+</td></tr></tbody></table></div>{{#> callout type='note' heading='Variable name and context'}}
 
 The same object may be given a different variable name depending on language or context, as shown in bold in the previous table.
 
@@ -567,7 +567,7 @@ In widgets, layout, content views and in XHTML templates, you can use the EL exp
 
 ## Tips and Tricks
 
-<table><colgroup><col> <col> <col> <col></colgroup> <tbody><tr><th colspan="1">Document type</th><th colspan="1">Language</th><th colspan="1">Context</th><th colspan="1">Tip</th></tr><tr><td colspan="1">Email template</td><td colspan="1">FreeMarker</td><td colspan="1">Workflow email notification</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><colgroup><col> <col> <col> <col></colgroup> <tbody><tr><th colspan="1">Document type</th><th colspan="1">Language</th><th colspan="1">Context</th><th colspan="1">Tip</th></tr><tr><td colspan="1">Email template</td><td colspan="1">FreeMarker</td><td colspan="1">Workflow email notification</td><td colspan="1">
 
 Schema prefixes cannot be used when using the `${workflowDocuments[0].property}` variable.
 
@@ -600,7 +600,7 @@ EL expressions can be used to evaluate conditions. A few examples:
 *   Checking that the worklist is not empty:
     `#{documentsListsManager.isWorkingListEmpty("CURRENT_SELECTION") == false}`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Related Links
 

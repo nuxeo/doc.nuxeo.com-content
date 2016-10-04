@@ -169,7 +169,7 @@ A Scheduler cron expression is similar to a [Unix cron expression](http://en.wik
 
 The expression is a sequence of 6 or 7 fields. Each field can hold a number or a wildcard, or in complex cases a sequence of numbers or an additional increment specification. The fields and their allowed values are:
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 seconds
 
@@ -225,7 +225,7 @@ year
 
 optional
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 A star (`*`) can be used to mean "all values". A question mark (`?`) can be used to mean "no specific value" and is allowed for one (but not both) of the **day of month** and **day of week** fields.
 

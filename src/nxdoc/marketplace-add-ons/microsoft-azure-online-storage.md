@@ -82,12 +82,12 @@ If you want to use Azure CDN as a front instead of Azure Storage:
 
 ### Mandatory Parameters
 
-<table><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default Value</th><th colspan="1">Description</th></tr><tr><td colspan="1">`nuxeo.storage.azure.container`</td><td colspan="1">&nbsp;</td><td colspan="1">The name of the Azure container</td></tr><tr><td colspan="1">`nuxeo.storage.azure.account.name`</td><td colspan="1">&nbsp;</td><td colspan="1">Your Azure storage account name</td></tr><tr><td colspan="1">`nuxeo.storage.azure.account.key`</td><td colspan="1">&nbsp;</td><td colspan="1">Your Azure storage access key.
-Do not forget to use [data encryption]({{page space='admindoc710' page='sensitive-configuration-data-encryption'}})</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default Value</th><th colspan="1">Description</th></tr><tr><td colspan="1">`nuxeo.storage.azure.container`</td><td colspan="1">&nbsp;</td><td colspan="1">The name of the Azure container</td></tr><tr><td colspan="1">`nuxeo.storage.azure.account.name`</td><td colspan="1">&nbsp;</td><td colspan="1">Your Azure storage account name</td></tr><tr><td colspan="1">`nuxeo.storage.azure.account.key`</td><td colspan="1">&nbsp;</td><td colspan="1">Your Azure storage access key.
+Do not forget to use [data encryption]({{page space='admindoc710' page='sensitive-configuration-data-encryption'}})</td></tr></tbody></table></div>
 
 ### Optional Parameters
 
-<table><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default value ("|" separates possible values)</th><th colspan="1">Description</th></tr><tr><td colspan="1">`nuxeo.storage.azure.endpointProtocol`</td><td colspan="1">HTTPS</td><td colspan="1">The URL protocol</td></tr><tr><td colspan="1">`nuxeo.storage.azure.cachesize`</td><td colspan="1">100MB</td><td colspan="1">The size of the local cache</td></tr><tr><td colspan="1">`nuxeo.storage.azure.directdownload`</td><td colspan="1">false</td><td colspan="1">Enables direct download from Azure servers</td></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default value ("|" separates possible values)</th><th colspan="1">Description</th></tr><tr><td colspan="1">`nuxeo.storage.azure.endpointProtocol`</td><td colspan="1">HTTPS</td><td colspan="1">The URL protocol</td></tr><tr><td colspan="1">`nuxeo.storage.azure.cachesize`</td><td colspan="1">100MB</td><td colspan="1">The size of the local cache</td></tr><tr><td colspan="1">`nuxeo.storage.azure.directdownload`</td><td colspan="1">false</td><td colspan="1">Enables direct download from Azure servers</td></tr><tr><td colspan="1">
 
 `nuxeo.storage.azure.cdn.host`
 
@@ -97,7 +97,7 @@ Your Azure CDN host where your blobs are available.
 
 **Note:** Only if you enable direct download and use the Azure CDN.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 {{! Don't put anything here. }}
 

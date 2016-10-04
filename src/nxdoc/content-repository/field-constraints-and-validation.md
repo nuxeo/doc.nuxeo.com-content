@@ -558,7 +558,7 @@ Parameters: none
 
 Behavior: This constraint controls the Java types supported by the field. It depends on the XSD datatype on which the element is based.`null` value is always valid (use the `NotNullConstraint` in combination).
 
-<table><tbody><tr><th colspan="1">Constraint name</th><th colspan="1">Supported Java types</th></tr><tr><td colspan="1">`string`</td><td colspan="1">any</td></tr><tr><td colspan="1">`long`</td><td colspan="1">any `java.lang.Number`</td></tr><tr><td colspan="1">`integer`</td><td colspan="1">any `java.lang.Number`</td></tr><tr><td colspan="1">`double`</td><td colspan="1">any `java.lang.Number`</td></tr><tr><td colspan="1">`date`</td><td colspan="1">any `java.util.Date` or `java.util.Calendar`</td></tr><tr><td colspan="1">`boolean`</td><td colspan="1">`java.lang.Boolean`</td></tr><tr><td colspan="1">`binary`</td><td colspan="1">_-_</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Constraint name</th><th colspan="1">Supported Java types</th></tr><tr><td colspan="1">`string`</td><td colspan="1">any</td></tr><tr><td colspan="1">`long`</td><td colspan="1">any `java.lang.Number`</td></tr><tr><td colspan="1">`integer`</td><td colspan="1">any `java.lang.Number`</td></tr><tr><td colspan="1">`double`</td><td colspan="1">any `java.lang.Number`</td></tr><tr><td colspan="1">`date`</td><td colspan="1">any `java.util.Date` or `java.util.Calendar`</td></tr><tr><td colspan="1">`boolean`</td><td colspan="1">`java.lang.Boolean`</td></tr><tr><td colspan="1">`binary`</td><td colspan="1">_-_</td></tr></tbody></table></div>
 
 ## Setting up References
 

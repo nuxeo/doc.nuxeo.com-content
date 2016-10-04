@@ -130,7 +130,7 @@ Be careful to select the **Override** deployment mode from the **Advanced Config
 
 Below are the document types provided by the default Nuxeo Platform, the Document Management and Digital Asset Management modules. Don't hesitate to give feedback if you encounter troubles.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Document type label
 
@@ -282,7 +282,7 @@ SuperSpace
 
 The SuperSpace facet is required for children documents to get default notifications configured in the 'Alerts' tab.
 
-</td></tr><tr><td colspan="1">WorkspaceRoot</td><td colspan="1">WorkspaceRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">SuperSpace</td><td colspan="1">&nbsp;</td></tr></tbody></table>{{#> callout type='tip' }}
+</td></tr><tr><td colspan="1">WorkspaceRoot</td><td colspan="1">WorkspaceRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">SuperSpace</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>{{#> callout type='tip' }}
 
 You can also browse the [contributions to the Type extension](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype) for more document types or leave a comment on this page.
 

@@ -134,7 +134,7 @@ history:
 ---
 The Platform Digital Asset Management module supports a large number of file formats.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Format
 
@@ -1190,7 +1190,7 @@ X
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 *Client browser must have the associated plug-in installed
 
