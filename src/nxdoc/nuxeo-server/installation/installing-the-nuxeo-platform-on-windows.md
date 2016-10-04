@@ -314,8 +314,6 @@ The Nuxeo Platform is available as ready-to-use 64b virtual machine images from 
     The password for the&nbsp;`root` and&nbsp;`nuxeo` users are generated the first time you start the virtual machine and are displayed on the console.&nbsp;
     {{/callout}}
 
-    </div>
-
 **Limitations:**
 
 *   As a 64 bit virtual image, it cannot be installed on a 32 bit system.
