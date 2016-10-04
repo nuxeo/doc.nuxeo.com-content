@@ -140,7 +140,7 @@ The Easy Share folder is created. You can now create new documents in it or shar
 
 **Easy Share Folder creation parameters**
 
-<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Title</td><td colspan="1">It will be visible to your recipients in the Easy Share folder public view.</td></tr><tr><td colspan="1">Expiration Date</td><td colspan="1">Determines until which day the Easy Share folder in the&nbsp; will be available.
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Title</td><td colspan="1">It will be visible to your recipients in the Easy Share folder public view.</td></tr><tr><td colspan="1">Expiration Date</td><td colspan="1">Determines until which day the Easy Share folder in the&nbsp; will be available.
 After this date, the folder will still exist in Nuxeo but will show as expired when attempting external access.</td></tr><tr><td colspan="1"><span class="widgetLabel tipsyShow tipsyGravityNW  ">Active notification</span></td><td colspan="1">If this option is checked, a notification is sent to the contact email when a document is downloaded from the Easy Share folder.</td></tr><tr><td colspan="1">Share Comment</td><td colspan="1">The message displayed on the Easy Share folder public view.</td></tr><tr><td colspan="1">
 
 Contact Email
@@ -151,7 +151,7 @@ The email address to which an email will be sent each time a document is downloa
 
 People who can access the Easy Share folder can also use it to contact someone from the organization.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Adding Documents to an Easy Share Folder
 

@@ -267,7 +267,7 @@ Some permissions are granted automatically, for example when you create a workfl
 
 ## Permissions Overview
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Permission
 
@@ -352,7 +352,7 @@ Submit documents for publishing
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Managing Permissions on Content
 

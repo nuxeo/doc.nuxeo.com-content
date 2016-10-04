@@ -416,7 +416,7 @@ Metadata are information describing some properties of the workspace, so that th
 
 The Nuxeo Platform uses Dublin Core metadata by default. They are listed below:
 
-{{! multiexcerpt name='metadata'}}<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">
+{{! multiexcerpt name='metadata'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">
 
 Nature
 
@@ -521,7 +521,7 @@ Last contributor
 
 Last user who modified the document. This field is automatically filled in by the system.
 
-</td></tr></tbody></table>{{! /multiexcerpt}}
+</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
 Although metadata are not mandatory, filling them in will make your documents easier to find using [Nuxeo search engine]({{page page='searching-the-nuxeo-platform'}}).
 

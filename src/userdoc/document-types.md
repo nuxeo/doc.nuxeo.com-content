@@ -334,7 +334,7 @@ The default format of the note is HTML. The other formats available are .txt, .x
 
 A note is composed of the fields below:
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -374,7 +374,7 @@ Format
 
 Format of the automatically created file used to export notes from the Nuxeo Platform.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 To create a note, in the&nbsp;**Content**&nbsp;tab of the workspace, click on the&nbsp;**New**&nbsp;button.&nbsp;On the window&nbsp;**Available document types**, click on the desired document, fill in the document's creation form and click on the&nbsp;**Create**&nbsp;button.
 
