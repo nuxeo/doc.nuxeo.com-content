@@ -168,9 +168,8 @@ The default URL patterns for downloading files from within the JSF environment a
 
 *   <pre>http://{server}:{port}/nuxeo/nxfile/{repository}/{uuid}/{propertyXPath}/{fileName}</pre>
 
-<div>Where :</div>
+Where :
 
-<div>
 
 *   `nxfile` is the download servlet.
     Note that `nxbigfile`&nbsp;is also accepted for compatibility with older versions.
@@ -198,7 +197,6 @@ Here are some examples:
 *   The main file of the document inside the browser instead of being downloaded:&nbsp;
     `<span class="nolink"><span class="nolink"><span class="nolink"><span class="nolink">http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496?inline=true</span></span></span></span>`
 
-</div>
 
 For Picture document type, a similar system is available to be able to get the attachments depending on the view name:
 
