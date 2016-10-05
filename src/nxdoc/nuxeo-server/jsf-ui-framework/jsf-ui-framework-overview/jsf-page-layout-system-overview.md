@@ -337,5 +337,3 @@ However, if you think the custom UI is the way to go, we'll be happy to help you
 &nbsp;
 
 * * *
-
-</div>
