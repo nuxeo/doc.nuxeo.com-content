@@ -156,7 +156,6 @@ The main content of the page is actually defined via facelet templating (i.e. us
   <nxl:widget name="documentTabs" mode="view" value="#{currentDocument}" />
 ```
 
-<div class="line">
 
 ### Digital Asset Management Example
 
