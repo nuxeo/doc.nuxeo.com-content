@@ -20,37 +20,37 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/NoCe'
     source_link: /display/NXDOC/H2+Limitations
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-25 16:30'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 14:03'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-10-29 11:31'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 11:40'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 11:40'
         message: Added related pages
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-04-03 15:39'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-04-03 15:37'
         message: ''
@@ -68,3 +68,16 @@ H2 limitations:
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [PostgreSQL]({{page page='postgresql'}})
+*   [Oracle]({{page page='oracle'}})
+*   [MySQL]({{page page='mysql'}})
+*   [Microsoft SQL Server]({{page page='microsoft-sql-server'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>
