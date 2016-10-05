@@ -167,7 +167,7 @@ Here are the steps to create the button to create news from a Workspace into the
     *   Current document has type : `Workspace`
 3.  Create new operation chain `CreateNewsChain`:
 
-    <table><tbody><tr><th colspan="1">
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
     Step
 
@@ -215,7 +215,7 @@ Here are the steps to create the button to create news from a Workspace into the
 
     Value: `News`
 
-    </td></tr></tbody></table>
+    </td></tr></tbody></table></div>
 
     You should end up with something like this:
     ![]({{file name='CreateNewsChain.png'}} ?w=600,border=true)

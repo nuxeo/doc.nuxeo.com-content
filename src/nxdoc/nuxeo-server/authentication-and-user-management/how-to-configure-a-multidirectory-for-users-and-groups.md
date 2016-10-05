@@ -30,57 +30,57 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/mwcuAQ'
     source_link: /display/NXDOC/How+to+Configure+a+Multidirectory+for+Users+and+Groups
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-18 10:03'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-16 14:31'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 22:25'
         message: ''
         version: '9'
-    -
+    - 
         author: Thierry Martins
         date: '2014-11-27 18:11'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-27 18:01'
         message: fix xml and add details in steps
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-27 17:38'
         message: ''
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-07-17 10:15'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-17 10:14'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-17 10:06'
         message: ''
         version: '3'
-    -
+    - 
         author: Thierry Martins
         date: '2014-07-16 12:22'
         message: ''
         version: '2'
-    -
+    - 
         author: Thierry Martins
         date: '2014-07-16 12:05'
         message: ''
@@ -252,15 +252,15 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
       <dataFile>groups.csv</dataFile>
       <createTablePolicy>on_missing_columns</createTablePolicy>
       <autoincrementIdField>false</autoincrementIdField>
-      <!-- Add 10 min cache to avoid refetching the groups during login -->
+      <!-- Add 10 min cache to avoid refetching the groups during login --> 
       <cacheTimeout>360</cacheTimeout>
       <cacheMaxSize>1000</cacheMaxSize>
       <references>
         <tableReference field="members" directory="multiUserDirectory"
-          table="user2group" sourceColumn="groupId" targetColumn="userId" schema="user2group"
+          table="user2group" sourceColumn="groupId" targetColumn="userId" schema="user2group" 
           dataFile="user2group.csv" />
         <tableReference field="subGroups" directory="sqlGroupDirectory"
-          table="group2group" sourceColumn="parentGroupId"
+          table="group2group" sourceColumn="parentGroupId" 
           targetColumn="childGroupId" schema="group2group" />
         <inverseReference field="parentGroups" directory="sqlGroupDirectory"
           dualReferenceField="subGroups" />
@@ -322,3 +322,14 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other LDAP related pages'}}
+
+*   [Using a LDAP Directory]({{page page='using-a-ldap-directory'}})
+*   [How to Add Custom LDAP Fields to the UI]({{page page='how-to-add-custom-ldap-fields-to-the-ui'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

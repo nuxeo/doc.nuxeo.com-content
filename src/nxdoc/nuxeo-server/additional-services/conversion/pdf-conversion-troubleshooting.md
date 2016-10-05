@@ -101,3 +101,15 @@ You probably have the same issue: the `JodConverter` component cannot communicat
 {{! Don't put anything here. }}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [How to Automatically Convert a Document to PDF]({{page page='how-to-automatically-convert-a-document-to-pdf'}})
+*   [How to Quickly Generate a PDF Using Document Template]({{page page='how-to-quickly-generate-a-pdf-using-document-template'}})
+*   [Preview]({{page page='preview'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

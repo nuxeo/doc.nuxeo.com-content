@@ -157,3 +157,18 @@ Symbolic links to both packages (MSI and DMG) of the latest Nuxeo Drive version 
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about Nuxeo Drive'}}
+
+*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+*   [How to Customize Nuxeo Drive Versioning Policy]({{page page='how-to-customize-nuxeo-drive-versioning-policy'}})
+*   [Nuxeo Drive user documentation]({{page space='userdoc' page='nuxeo-drive'}})
+*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

@@ -23,397 +23,397 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/vwIz'
     source_link: /display/NXDOC/Java+Automation+Client
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-09 13:27'
         message: ''
         version: '79'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2016-04-06 22:00'
         message: ''
         version: '78'
-    -
+    - 
         author: Vincent Dutat
         date: '2016-03-18 18:18'
         message: ''
         version: '77'
-    -
+    - 
         author: Ronan Daniellou
         date: '2016-02-18 10:42'
         message: Added block how to update multi-lines properties.
         version: '76'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-23 08:30'
         message: Format
         version: '75'
-    -
+    - 
         author: Maxime Hilaire
         date: '2015-04-22 18:26'
         message: ''
         version: '74'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-04-13 15:43'
         message: ''
         version: '73'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-02-04 12:22'
         message: Reverted from v. 70
         version: '72'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-02-04 12:21'
         message: ''
         version: '71'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-05 19:13'
         message: Fix links to point to latest version
         version: '70'
-    -
+    - 
         author: Harlan Brown
         date: '2014-09-29 22:07'
         message: ''
         version: '69'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-13 14:44'
         message: ''
         version: '68'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-25 17:22'
         message: 'Updated links, formatted steps'
         version: '67'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-17 03:35'
         message: ''
         version: '66'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-17 03:35'
         message: ''
         version: '65'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-30 15:09'
         message: ''
         version: '64'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-31 11:52'
         message: ''
         version: '63'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-07-09 17:53'
         message: ''
         version: '62'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-27 15:20'
         message: ''
         version: '61'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-24 17:01'
         message: ''
         version: '60'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-24 12:44'
         message: ''
         version: '59'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-21 17:52'
         message: ''
         version: '58'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 18:29'
         message: ''
         version: '57'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 16:54'
         message: ''
         version: '56'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 16:54'
         message: ''
         version: '55'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2013-06-20 16:51'
         message: ''
         version: '54'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 16:49'
         message: ''
         version: '53'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 15:46'
         message: ''
         version: '52'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 15:37'
         message: ''
         version: '51'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 15:36'
         message: ''
         version: '50'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 15:03'
         message: ''
         version: '49'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 14:58'
         message: ''
         version: '48'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-20 12:15'
         message: ''
         version: '47'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 18:14'
         message: ''
         version: '46'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 18:02'
         message: ''
         version: '45'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 18:01'
         message: ''
         version: '44'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 17:48'
         message: ''
         version: '43'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 17:46'
         message: ''
         version: '42'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 16:10'
         message: ''
         version: '41'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 15:54'
         message: ''
         version: '40'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 15:42'
         message: ''
         version: '39'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 15:40'
         message: ''
         version: '38'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 15:38'
         message: ''
         version: '37'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-19 15:34'
         message: Added TOC
         version: '36'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 15:25'
         message: ''
         version: '35'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 15:08'
         message: ''
         version: '34'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-06-19 12:38'
         message: ''
         version: '33'
-    -
+    - 
         author: Brendan Coveney
         date: '2013-05-29 22:19'
         message: ''
         version: '32'
-    -
+    - 
         author: Antoine Taillefer
         date: '2012-11-15 18:11'
         message: ''
         version: '31'
-    -
+    - 
         author: Antoine Taillefer
         date: '2012-11-15 17:52'
         message: ''
         version: '30'
-    -
+    - 
         author: Antoine Taillefer
         date: '2012-11-15 17:00'
         message: ''
         version: '29'
-    -
+    - 
         author: Julien Carsique
         date: '2012-05-11 14:32'
         message: Migrated to Confluence 4.0
         version: '28'
-    -
+    - 
         author: Julien Carsique
         date: '2012-05-11 14:32'
         message: ''
         version: '27'
-    -
+    - 
         author: Julien Carsique
         date: '2012-03-14 18:25'
         message: ''
         version: '26'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2012-03-14 14:30'
         message: ''
         version: '25'
-    -
+    - 
         author: Olivier Grisel
         date: '2012-02-01 11:25'
         message: fix automation client download link
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-07 18:29'
         message: ''
         version: '23'
-    -
+    - 
         author: Julien Carsique
         date: '2011-02-03 11:55'
         message: ''
         version: '22'
-    -
+    - 
         author: Julien Carsique
         date: '2011-02-03 11:53'
         message: 'Add download link from http://maven.nuxeo.org/'
         version: '21'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-11-27 21:26'
         message: ''
         version: '20'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-11-27 20:52'
         message: ''
         version: '19'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-11-27 20:51'
         message: ''
         version: '18'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-08-03 15:55'
         message: ''
         version: '17'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-08-03 15:54'
         message: ''
         version: '16'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-08-03 15:54'
         message: ''
         version: '15'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-08-03 15:53'
         message: ''
         version: '14'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-29 17:51'
         message: ''
         version: '13'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 17:06'
         message: ''
         version: '12'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 17:03'
         message: ''
         version: '11'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 16:42'
         message: ''
         version: '10'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 16:25'
         message: ''
         version: '9'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 16:23'
         message: ''
         version: '8'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 16:21'
         message: ''
         version: '7'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 15:57'
         message: ''
         version: '6'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 15:55'
         message: ''
         version: '5'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 15:54'
         message: ''
         version: '4'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 15:53'
         message: ''
         version: '3'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 15:13'
         message: ''
         version: '2'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-19 11:56'
         message: ''
@@ -680,7 +680,7 @@ Operations examples above fetch the document with common properties: `common`, `
 
 ```
 import org.nuxeo.ecm.automation.client.model.Document;
-import org.nuxeo.ecm.automation.client.Session;
+import org.nuxeo.ecm.automation.client.Session; 
 import org.nuxeo.ecm.automation.client.Constants;
 import org.nuxeo.ecm.automation.client.model.IdRef;
 
@@ -733,7 +733,7 @@ The example will create a new File document into the root _"/"_ document and the
     Document root = (Document) session.newRequest("Document.Fetch").set("value", "/").execute();
 
     // create a file document
-    session.newRequest("Document.Create").setInput(root).set("type", "File").set("name", "myfile").set("properties", "dc:title=My File").execute();
+    session.newRequest("Document.Create").setInput(root).set("type", "File").set("name", "myfile").set("properties", "dc:title=My File").execute(); 
     ```
 
     {{#> callout type='info' }}
@@ -817,7 +817,7 @@ Let's see a complex property schema example:
            xmlns:mc="http://nuxeo.org/schemas/dataset/"
            elementFormDefault="qualified"
            targetNamespace="http://nuxeo.org/schemas/dataset/">
-...
+... 
     <xs:complexType name="field">
         <xs:sequence>
             <xs:element name="name" type="xs:string"/>
@@ -1075,10 +1075,12 @@ Let's see an example.
     *   [`Business.BusinessCreateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Business.BusinessCreateOperation)
     *   [`Business.BusinessUpdateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Business.BusinessUpdateOperation)
     {{#> callout type='info' }}
+
     Since 5.7.2, you can see [the Automation Client Service Adapter section](#automation-client-service-adapter) to know how Business operations are wrapped into `BusinessService` adapter and how to use it.
     {{/callout}}
 
 3.  Let's see how to map them directly using these operations:
+
     ```
     import org.nuxeo.ecm.automation.client.jaxrs.spi.JsonMarshalling;
 

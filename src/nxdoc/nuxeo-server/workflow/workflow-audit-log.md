@@ -167,14 +167,14 @@ Since 7.4, a new audit category called&nbsp;**Routing**&nbsp;has been added for 
 
 For all these events, we log useful information regarding the workflow and/or node state in the&nbsp;[extended info]({{page page='audit#extendedinfo'}})&nbsp;of the audit entry. The table below summarizes which extended info is logged depending on the event.
 
-<table><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">modelName</th><th colspan="1">modelId</th><th colspan="1">workflowInitator</th><th colspan="1">taskActor</th><th colspan="1">workflowVariables</th><th colspan="1">nodeVariables</th><th colspan="1">action</th><th colspan="1">timeSinceWfStarted</th><th colspan="1">timeSinceTaskStarted</th></tr><tr><th colspan="1">afterWorkflow
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">modelName</th><th colspan="1">modelId</th><th colspan="1">workflowInitator</th><th colspan="1">taskActor</th><th colspan="1">workflowVariables</th><th colspan="1">nodeVariables</th><th colspan="1">action</th><th colspan="1">timeSinceWfStarted</th><th colspan="1">timeSinceTaskStarted</th></tr><tr><th colspan="1">afterWorkflow
 Finish</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td></tr><tr><th colspan="1">afterWorkflow
 Started &nbsp;</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td></tr><tr><th colspan="1">beforeWorkflow
 Canceled</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td></tr><tr><th colspan="1">afterWorkflow
 TaskCreated</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td></tr><tr><th colspan="1">afterWorkflow
 TaskEnded</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td></tr><tr><th colspan="1">afterWorkflow
 TaskReassigned</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">x</td></tr><tr><th colspan="1">afterWorkflow
-TaskDelegated</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">x</td></tr></tbody></table>
+TaskDelegated</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">x</td></tr></tbody></table></div>
 
 Where:
 

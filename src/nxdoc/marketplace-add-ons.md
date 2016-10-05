@@ -19,52 +19,52 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/BYH1'
     source_link: /display/NXDOC/Marketplace+Add-Ons
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 13:51'
         message: hange visibility of Nuxeo Adobe CC Connecto
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-05 09:13'
         message: Add link to MarkLogic documentation
         version: '9'
-    -
+    - 
         author: Julien Carsique
         date: '2016-07-27 09:51'
         message: API Playground 1.1.1 (Nx 8.3)
         version: '8'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-07-25 13:55'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-21 20:24'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-03 14:36'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-06 16:54'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-06 16:54'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-17 00:10'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-05 17:55'
         message: ''

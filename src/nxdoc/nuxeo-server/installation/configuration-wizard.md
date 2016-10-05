@@ -131,3 +131,14 @@ To validate your configuration, click on the **Start** button. The server will a
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Admin Tab Overview]({{page page='admin-tab-overview'}})
+*   [Setup Best Practices]({{page page='setup-best-practices'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

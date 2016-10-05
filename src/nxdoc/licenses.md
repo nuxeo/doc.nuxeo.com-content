@@ -180,7 +180,7 @@ The licenses used are:
 *   W3C:&nbsp;[W3C Software Notice and License](http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231)
 *   PD: Public Domain (not actually a license)
 
-<table><tbody><tr><th colspan="1">Jar Name</th><th colspan="1">Project</th><th colspan="1">Version</th><th colspan="1">License</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Jar Name</th><th colspan="1">Project</th><th colspan="1">Version</th><th colspan="1">License</th></tr><tr><td colspan="1">
 
 activation-1.1.jar
 
@@ -3540,4 +3540,4 @@ yarfraw-0.92.jar
 
 AL 2.0
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>

@@ -307,3 +307,15 @@ When doing this, binaries will be stored in the `default.fs`&nbsp;GridFS bucket,
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
+
+*   [DBS - MongoDB developer documentation]({{page page='dbs'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

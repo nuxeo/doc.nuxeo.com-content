@@ -333,7 +333,7 @@ nuxeoctl pack <target> [-d [<categories>]|-q]
 
 ### Options
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Option
 
@@ -460,11 +460,11 @@ This option is implicit if no&nbsp;`--get` or&nbsp;`--get-regexp` option is used
 (Since Nuxeo 7.4) Get the value for a given key. Returns error code 6 if the key was not found.
 This option is implicit if&nbsp;`--set` option is not used and there are more or less than two parameters.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### Commands {{> anchor 'nuxeoctl-commands'}}
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Command
 
@@ -697,7 +697,7 @@ Install all the available hotfixes for the current platform (requires a register
 
 Get all the available upgrades for the Marketplace packages currently installed.
 
-</td></tr><tr><td colspan="1">`mp-show`</td><td colspan="1">(Since Nuxeo 5.7.1) Show Marketplace package(s) information. You must provide the package file(s), name(s) or ID(s) as parameter.</td></tr></tbody></table>
+</td></tr><tr><td colspan="1">`mp-show`</td><td colspan="1">(Since Nuxeo 5.7.1) Show Marketplace package(s) information. You must provide the package file(s), name(s) or ID(s) as parameter.</td></tr></tbody></table></div>
 
 The following commands are always executed in console/headless mode (no GUI): `configure`, `mp-init`, `mp-purge`, `mp-add`, `mp-install`, `mp-uninstall`, `mp-request`, `mp-remove`, `mp-hotfix`, `mp-upgrade`, `mp-reset`, `mp-list`, `mp-listall`, `mp-update`, `status`, `showconf`,&nbsp;`mp-show`,&nbsp;`mp-set`,&nbsp;`config`,&nbsp;`encrypt`,&nbsp;`decrypt`,&nbsp;`help`.
 
@@ -723,7 +723,7 @@ All parameters following a command which accepts no parameter are passed to the 
 
 Here are the OS environment variables which are read by `nuxeoctl`.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Variable
 
@@ -767,7 +767,7 @@ Path to the&nbsp;`java` executable.
 
 Path to the Java home directory. Can also be defined in `nuxeo.conf`.
 
-</td></tr><tr><td colspan="1">`JAVA_OPTS`</td><td colspan="1">Optional values passed to the JVM. Can also be defined in `nuxeo.conf`.</td></tr><tr><td colspan="1">`REQUIRED_JAVA_VERSION`</td><td colspan="1">Nuxeo requirement on Java version.</td></tr></tbody></table>
+</td></tr><tr><td colspan="1">`JAVA_OPTS`</td><td colspan="1">Optional values passed to the JVM. Can also be defined in `nuxeo.conf`.</td></tr><tr><td colspan="1">`REQUIRED_JAVA_VERSION`</td><td colspan="1">Nuxeo requirement on Java version.</td></tr></tbody></table></div>
 
 ## Java Usage
 
@@ -785,7 +785,7 @@ java [-Dlauncher.java.opts="JVM options"] [-Dnuxeo.home="/path/to/nuxeo"] [-Dnux
 
 ### Java Options
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Option
 
@@ -835,7 +835,7 @@ Launcher with a graphical user interface.
 On Linux/Mac OS X, default is in headless/console mode.
 On Windows, the `gui` option is activated by default.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### Commands
 
@@ -851,7 +851,7 @@ Exit code values are following the [Linux Standard Base Core Specification 4.1](
 
 If the status command was requested, `nuxeoctl` will return the following exit status codes:
 
-<table><tbody><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
 
 0
 
@@ -875,11 +875,11 @@ Program is not running
 
 Program or service status is unknown
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 In case of an error while processing any action except for status, `nuxeoctl` shall print an error message and exit with a non-zero status code:
 
-<table><tbody><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
 
 1
 
@@ -935,6 +935,16 @@ Program is not configured
 
 Program is not running
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

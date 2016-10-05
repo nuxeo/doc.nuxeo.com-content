@@ -225,3 +225,14 @@ For instance, under Linux, you could setup:
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   <span style="line-height: 21.58px;">[Connecting Nuxeo to the Database]({{page page='connecting-nuxeo-to-the-database'}})</span>
+*   [Configuration Parameters Index (nuxeo.conf) ]({{page page='configuration-parameters-index-nuxeoconf'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

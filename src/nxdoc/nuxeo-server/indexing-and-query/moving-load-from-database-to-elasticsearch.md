@@ -218,3 +218,18 @@ See the addon [README](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+*   [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
+*   [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
+*   [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

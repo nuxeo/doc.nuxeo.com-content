@@ -111,7 +111,7 @@ The new permission will now be available in the list of permissions on Workspace
     *   Selection is not empty: checked.
 2.  Create the operation chain `PublishNewsChain`:
 
-    <table><tbody><tr><th colspan="1">
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
     Step
 
@@ -191,7 +191,7 @@ The new permission will now be available in the list of permissions on Workspace
 
     value: `@{CurrentDate.date` }
 
-    </td></tr></tbody></table>
+    </td></tr></tbody></table></div>
 
     You should end up with something like this:
     ![]({{file name='PublishNewsChain.png'}} ?w=600,h=400,border=true)

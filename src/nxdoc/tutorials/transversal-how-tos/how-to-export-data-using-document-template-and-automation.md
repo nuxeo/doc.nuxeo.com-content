@@ -204,7 +204,7 @@ data_A2, data_B2, data_C2
 
 This will produce a table like this:
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 column_name1
 
@@ -240,7 +240,7 @@ data_B2
 
 data_C2
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 **To create the template:**
 

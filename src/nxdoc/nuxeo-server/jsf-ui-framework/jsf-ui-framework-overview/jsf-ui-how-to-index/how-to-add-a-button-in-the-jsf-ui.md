@@ -35,222 +35,222 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/kQF9'
     source_link: /display/NXDOC/How+to+Add+a+Button+in+the+JSF+UI
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 10:00'
         message: ''
         version: '44'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-01-19 10:44'
         message: 'replace "Write" by "Edit"     '
         version: '43'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-10-13 13:07'
         message: ''
         version: '42'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-26 16:48'
         message: ''
         version: '41'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-03 11:47'
         message: ''
         version: '40'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-12-02 22:38'
         message: ''
         version: '39'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-12-02 22:32'
         message: ''
         version: '38'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-12-02 22:32'
         message: ''
         version: '37'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-02 18:41'
         message: ''
         version: '36'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 22:32'
         message: ''
         version: '35'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-01 12:12'
         message: ''
         version: '34'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-19 10:17'
         message: ''
         version: '33'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-19 10:01'
         message: ''
         version: '32'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-06-05 15:28'
         message: ''
         version: '31'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-05-23 15:14'
         message: ''
         version: '30'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-05-23 15:11'
         message: ''
         version: '29'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-05-23 15:01'
         message: ''
         version: '28'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-05-14 11:10'
         message: ''
         version: '27'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-05-14 11:06'
         message: ''
         version: '26'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-10-17 17:44'
         message: ''
         version: '25'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-10-17 17:30'
         message: ''
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-02 15:32'
         message: Fixed broken screenshots
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-17 17:26'
         message: Added excerpt
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2011-09-06 15:50'
         message: Migrated to Confluence 4.0
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2011-09-06 15:50'
         message: Added related tutorials
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2011-09-02 14:53'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2011-09-02 12:33'
         message: ''
         version: '18'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-19 16:23'
         message: ''
         version: '17'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-19 16:19'
         message: ''
         version: '16'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-08 11:22'
         message: ''
         version: '15'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-08 11:21'
         message: ''
         version: '14'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-08 11:21'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2011-08-06 00:56'
         message: ''
         version: '12'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-05 18:01'
         message: ''
         version: '11'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-05 17:59'
         message: ''
         version: '10'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-05 17:58'
         message: ''
         version: '9'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-05 17:56'
         message: ''
         version: '8'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-05 17:55'
         message: ''
         version: '7'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-05 17:53'
         message: ''
         version: '6'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-05 17:52'
         message: ''
         version: '5'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-05 17:37'
         message: ''
         version: '4'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-05 17:36'
         message: ''
         version: '3'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-05 16:53'
         message: ''
         version: '2'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-05 16:52'
         message: ''

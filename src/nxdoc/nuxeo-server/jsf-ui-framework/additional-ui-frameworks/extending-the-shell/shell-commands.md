@@ -468,3 +468,14 @@ return result;
 &nbsp;
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
+
+*   [Extending The Shell]({{page page='extending-the-shell'}})
+*   [Nuxeo Shell administration documentation]({{page page='nuxeo-shell'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

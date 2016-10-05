@@ -284,10 +284,10 @@ This widget allows you to do a full-text search on a particular&nbsp;field of a 
 1.  Drag and drop a Container widget from the right to the grid.
 2.  Edit the container:
 
-    <table><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Container Contract Number</td></tr><tr><th colspan="1">Label</th><td colspan="1">Contract Number</td></tr><tr><th colspan="1">Handle Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Display</th><td colspan="1">Block (Label on top)</td></tr></tbody></table>
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Container Contract Number</td></tr><tr><th colspan="1">Label</th><td colspan="1">Contract Number</td></tr><tr><th colspan="1">Handle Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Display</th><td colspan="1">Block (Label on top)</td></tr></tbody></table></div>
 3.  Click on&nbsp;![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}), drag and drop the Contract Number widget from the right to the grid and edit it:
 
-    <table><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Contract Number</td></tr><tr><th colspan="1">Label</th><td colspan="1">Contract Number</td></tr><tr><th colspan="1">Hide Label</th><td colspan="1">Yes</td></tr></tbody></table>
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Contract Number</td></tr><tr><th colspan="1">Label</th><td colspan="1">Contract Number</td></tr><tr><th colspan="1">Hide Label</th><td colspan="1">Yes</td></tr></tbody></table></div>
 4.  Click on **Save**.&nbsp;
 
 5.  Click on **Go back to previous page**.
@@ -300,14 +300,14 @@ The Terms aggregate works with text properties like vocabularies, here we work w
 
 1.  Drag and drop a Container widget from the right to the grid.
 
-    <table><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Container Operational Health Rating</td></tr><tr><th colspan="1">Label</th><td colspan="1">Operational Health Rating</td></tr><tr><th colspan="1">Handle Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Display</th><td colspan="1">Block (Label on top)</td></tr></tbody></table>
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Container Operational Health Rating</td></tr><tr><th colspan="1">Label</th><td colspan="1">Operational Health Rating</td></tr><tr><th colspan="1">Handle Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Display</th><td colspan="1">Block (Label on top)</td></tr></tbody></table></div>
 2.  Click on&nbsp;![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}), drag and drop the Terms aggregate from the right to the grid.
 
 3.  Select **Contract** > **OperationalHealthRating** > **Ok**.
 
 4.  Fill the Layout widget Editor:
 
-    <table><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Terms</td></tr><tr><th colspan="1">Label</th><td colspan="1">Operational Health Rating</td></tr><tr><th colspan="1">Hide Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Widget Type</th><td colspan="1">Directory Checkbox</td></tr><tr><th colspan="1">Vocabulary</th><td colspan="1">Rating</td></tr><tr><th colspan="1">Layout</th><td colspan="1">Page direction</td></tr></tbody></table>
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Terms</td></tr><tr><th colspan="1">Label</th><td colspan="1">Operational Health Rating</td></tr><tr><th colspan="1">Hide Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Widget Type</th><td colspan="1">Directory Checkbox</td></tr><tr><th colspan="1">Vocabulary</th><td colspan="1">Rating</td></tr><tr><th colspan="1">Layout</th><td colspan="1">Page direction</td></tr></tbody></table></div>
 5.  Click on **Save**.
 
 6.  Click on **Go back to previous page**.
@@ -321,14 +321,14 @@ This aggregate returns significant occurrences of terms in a set, not just the m
 1.  Drag and drop a Container widget from the right to the grid.
 2.  Edit the container:
 
-    <table><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Container Significant Terms</td></tr><tr><th colspan="1">Label</th><td colspan="1">Significant Terms</td></tr><tr><th colspan="1">Handle Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Display</th><td colspan="1">Block (Label on top)</td></tr></tbody></table>
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Container Significant Terms</td></tr><tr><th colspan="1">Label</th><td colspan="1">Significant Terms</td></tr><tr><th colspan="1">Handle Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Display</th><td colspan="1">Block (Label on top)</td></tr></tbody></table></div>
 3.  Click on&nbsp;![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}), drag and drop the Significant Terms aggregate from the right to the grid.
 
 4.  Select **dublincore** > **Source** and click on **OK**.
 
 5.  Fill the Layout widget Editor:
 
-    <table><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Significant Terms</td></tr><tr><th colspan="1">Label</th><td colspan="1">Significant Terms</td></tr><tr><th colspan="1">Hide Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Widget Type</th><td colspan="1">Checkbox</td></tr><tr><th colspan="1">Layout</th><td colspan="1">Page direction</td></tr></tbody></table>
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Significant Terms</td></tr><tr><th colspan="1">Label</th><td colspan="1">Significant Terms</td></tr><tr><th colspan="1">Hide Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Widget Type</th><td colspan="1">Checkbox</td></tr><tr><th colspan="1">Layout</th><td colspan="1">Page direction</td></tr></tbody></table></div>
 6.  Click on **Save.**&nbsp;
 
 7.  Click on **Go back to previous page**.
@@ -342,21 +342,21 @@ This aggregate is dedicated to date values. It allows you to see the documents c
 1.  Drag and drop a Container widget from the right to the grid.
 2.  Edit the container:
 
-    <table><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Container Creation Date</td></tr><tr><th colspan="1">Label</th><td colspan="1">Creation Date</td></tr><tr><th colspan="1">Handle Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Display</th><td colspan="1">Block (Label on top)</td></tr></tbody></table>
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Container Creation Date</td></tr><tr><th colspan="1">Label</th><td colspan="1">Creation Date</td></tr><tr><th colspan="1">Handle Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Display</th><td colspan="1">Block (Label on top)</td></tr></tbody></table></div>
 3.  Click on&nbsp;![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}), drag and drop the Date Range aggregate from the right to the grid.
 
 4.  Select **dublincore** > **Created** and click on **OK**.
 
 5.  Fill the Layout widget Editor:
 
-    <table><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Creation Date</td></tr><tr><th colspan="1">Label</th><td colspan="1">Creation Date</td></tr><tr><th colspan="1">Hide Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Date Ranges</th><td colspan="1">
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Creation Date</td></tr><tr><th colspan="1">Label</th><td colspan="1">Creation Date</td></tr><tr><th colspan="1">Hide Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Date Ranges</th><td colspan="1">
 
     *   Label: `Last year` From: `now-1y` To: `now-1M`
     *   Label: `Last month` From: `now-1M` To: `now-7d`
     *   Label: `Last week` From: `now-7d` To: `now-24H`
     *   Label: `Last 24h` From: `now-24H` To: `now`
 
-    </td></tr><tr><th colspan="1">Widget Type</th><td colspan="1">Date Range Checkbox</td></tr><tr><th colspan="1">Layout</th><td colspan="1">Page direction</td></tr></tbody></table>
+    </td></tr><tr><th colspan="1">Widget Type</th><td colspan="1">Date Range Checkbox</td></tr><tr><th colspan="1">Layout</th><td colspan="1">Page direction</td></tr></tbody></table></div>
 6.  Click on **Save.**
 
 7.  Click on **Go back to previous page**.
@@ -370,16 +370,16 @@ This aggregate allows you to define a set of ranges and works as the date range 
 1.  Drag and drop a Container widget from the right to the grid.
 2.  Edit the container:
 
-    <table><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Container RPM Numbers</td></tr><tr><th colspan="1">Label</th><td colspan="1">RPM Numbers</td></tr><tr><th colspan="1">Handle Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Display</th><td colspan="1">Block (Label on top)</td></tr></tbody></table>
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Container RPM Numbers</td></tr><tr><th colspan="1">Label</th><td colspan="1">RPM Numbers</td></tr><tr><th colspan="1">Handle Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Display</th><td colspan="1">Block (Label on top)</td></tr></tbody></table></div>
 3.  Click on&nbsp;![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}), drag and drop the Range aggregate from the right to the grid.
 
 4.  Select **Contract** > **RPMNumbers** and click on **OK**.
 
 5.  Fill the Layout widget Editor:
 
-    <table><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">RPM Numbers</td></tr><tr><th colspan="1">Label</th><td colspan="1">RPM Numbers</td></tr><tr><th colspan="1">Hide Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Ranges</th><td colspan="1">Label: `Less than 10` From: `0` To: `10`
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">RPM Numbers</td></tr><tr><th colspan="1">Label</th><td colspan="1">RPM Numbers</td></tr><tr><th colspan="1">Hide Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Ranges</th><td colspan="1">Label: `Less than 10` From: `0` To: `10`
     Label: `Between 11 and 100` From: `11` To: `100`
-    Label: `More than 100` From: `101` To: `100,000`</td></tr><tr><th colspan="1">Widget Type</th><td colspan="1">Range Checkbox</td></tr><tr><th colspan="1">Layout</th><td colspan="1">Page direction</td></tr></tbody></table>
+    Label: `More than 100` From: `101` To: `100,000`</td></tr><tr><th colspan="1">Widget Type</th><td colspan="1">Range Checkbox</td></tr><tr><th colspan="1">Layout</th><td colspan="1">Page direction</td></tr></tbody></table></div>
 6.  Click on **Save**.
 
 7.  Click on **Go back to previous page**.
@@ -396,3 +396,16 @@ This aggregate allows you to define a set of ranges and works as the date range 
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+*   [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
+*   [Aggregate Widget Types]({{page page='aggregate-widget-types'}})
+*   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

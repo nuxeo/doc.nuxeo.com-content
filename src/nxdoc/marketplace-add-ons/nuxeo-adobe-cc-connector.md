@@ -187,3 +187,13 @@ Updated documents in the Nuxeo instance or in an Adobe application will be repli
 {{! Don't put anything here. }}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

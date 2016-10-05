@@ -383,7 +383,7 @@ This recipe is composed of the major steps below:
 
 ## What you need
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Tool
 
@@ -415,7 +415,7 @@ Packaged Nuxeo DM distribution
 
 [5.4.1-Tomcat](http://community.nuxeo.com/static/releases/nuxeo-5.4.1/nuxeo-dm-5.4.1-tomcat.zip)
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Create the basic project skeleton using Maven
 
@@ -444,7 +444,7 @@ To create your project structure, follow the steps below.
     {{/callout}}
 3.  You are prompted a series of choices to create your project. Accept the default propositions (by pressing Enter) except for the `groupId` and `artifactId`of your project which must be:
 
-    <table><tbody><tr><td colspan="1">
+    <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
 
     `**groupId**`
 
@@ -460,7 +460,7 @@ To create your project structure, follow the steps below.
 
     `bareproject`
 
-    </td></tr></tbody></table>
+    </td></tr></tbody></table></div>
 4.  Confirm the defined settings.
     The logs indicate that the build was successful.
 

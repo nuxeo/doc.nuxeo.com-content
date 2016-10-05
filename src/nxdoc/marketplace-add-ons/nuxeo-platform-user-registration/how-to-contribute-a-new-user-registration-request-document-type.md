@@ -52,7 +52,7 @@ You have already defined a new user registration document type as described in&n
 
 *   A new schema `custom-userinfo` that must have&nbsp;at least the following attributes:
 
-<table><tbody><tr><th colspan="1">Attribute Name</th><th colspan="1">Type</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Attribute Name</th><th colspan="1">Type</th></tr><tr><td colspan="1">
 
 <pre>login</pre>
 
@@ -100,7 +100,7 @@ You have already defined a new user registration document type as described in&n
 
 <pre>string, Multi-Valued</pre>
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 *   The schema `registration`, added in **Settings** > **Registries** > **Document Schemas**:
 

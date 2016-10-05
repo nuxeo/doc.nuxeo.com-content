@@ -63,13 +63,13 @@ history:
 ---
 ## Java
 
-{{! multiexcerpt name='java_requirement'}}<table><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
+{{! multiexcerpt name='java_requirement'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
 FT 8.x</th><th colspan="1">Nuxeo Platform
 LTS 2015</th><th colspan="1">Nuxeo Platform
 6.0</th><th colspan="1">Nuxeo Platform
 5.8</th></tr><tr><td colspan="1">JDK</td><td colspan="1">1.8.0_91</td><td colspan="1">1.8.0_91</td><td colspan="1">1.7.0_80
 1.8.0_91</td><td colspan="1">1.7.0_80
-1.8.0_91 (since 5.8-HF06)</td></tr></tbody></table>
+1.8.0_91 (since 5.8-HF06)</td></tr></tbody></table></div>
 
 As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for a given major version, for instance the latest bugfix version of Java 8 was 8u91 (1.8.0_91) at the time of this writing.
 
@@ -85,7 +85,7 @@ More information on the page [Installation]({{page page='installation'}}).
 
 The Nuxeo Platform supports the following databases.
 
-<table><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
 FT 8.x</th><th colspan="1">Nuxeo Platform
 LTS 2015</th><th colspan="1">Nuxeo Platform
 6.0</th><th colspan="1">Nuxeo Platform
@@ -129,7 +129,7 @@ LTS 2015</th><th colspan="1">Nuxeo Platform
 2012 (Azure)</td><td colspan="1">2008
 2008r2
 2012
-2012 (Azure)</td></tr></tbody></table>
+2012 (Azure)</td></tr></tbody></table></div>
 
 **Notes**
 
@@ -146,11 +146,11 @@ More information about database configuration in the&nbsp;[Database Configuratio
 
 The Nuxeo Platform can be based on [JBoss](http://www.jboss.org/jbossas/) or [Tomcat](http://tomcat.apache.org/). Here is a table showing which versions of these application servers are known to work with the Nuxeo Platform.
 
-<table><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
 FT 8.x</th><th colspan="1">Nuxeo Platform
 LTS 2015</th><th colspan="1">Nuxeo Platform
 6.0</th><th colspan="1">Nuxeo Platform
-5.8</th></tr><tr><th colspan="1">Apache Tomcat</th><td colspan="1">7.0.64</td><td colspan="1">7.0.64</td><td colspan="1">7.0.56</td><td colspan="1">7.0.42</td></tr><tr><th colspan="1">JBoss / WildFly</th><td colspan="1">WildFly 8.1.0</td><td colspan="1">WildFly 8.1.0</td><td colspan="1">WildFly 8.1.0</td><td colspan="1">-</td></tr></tbody></table>
+5.8</th></tr><tr><th colspan="1">Apache Tomcat</th><td colspan="1">7.0.64</td><td colspan="1">7.0.64</td><td colspan="1">7.0.56</td><td colspan="1">7.0.42</td></tr><tr><th colspan="1">JBoss / WildFly</th><td colspan="1">WildFly 8.1.0</td><td colspan="1">WildFly 8.1.0</td><td colspan="1">WildFly 8.1.0</td><td colspan="1">-</td></tr></tbody></table></div>
 
 **Other Application Servers**
 
@@ -160,33 +160,33 @@ The Nuxeo Platform can be delivered [via a standard static WAR ]({{page page='de
 
 ## Redis
 
-{{! multiexcerpt name='redis_supported_versions'}}<table><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
+{{! multiexcerpt name='redis_supported_versions'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
 FT 8.x</th><th colspan="1">Nuxeo Platform
 LTS 2015</th><th colspan="1">Nuxeo Platform
 6.0</th><th colspan="1">Nuxeo Platform
 5.8</th></tr><tr><th colspan="1">Redis</th><td colspan="1">2.8.x
 3.0.x</td><td colspan="1">2.8.x
-3.0.x</td><td colspan="1">2.8</td><td colspan="1">2.6</td></tr></tbody></table>{{! /multiexcerpt}}
+3.0.x</td><td colspan="1">2.8</td><td colspan="1">2.6</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
 More information on the pages [Nuxeo and Redis]({{page page='nuxeo-and-redis'}}) and [Redis Configuration]({{page page='redis-configuration'}}).
 
 ## Elasticsearch
 
-{{! multiexcerpt name='elasticsearch_supported_versions'}}<table><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
+{{! multiexcerpt name='elasticsearch_supported_versions'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
 FT 8.x</th><th colspan="1">Nuxeo Platform
 LTS 2015</th><th colspan="1">Nuxeo Platform
 6.0</th><th colspan="1">Nuxeo Platform
 5.8</th></tr><tr><th colspan="1">Elasticsearch</th><td colspan="1">Library: 1.5.2
 Cluster: 1.1.2 to 1.7.x</td><td colspan="1">Library: 1.5.2
 Cluster: 1.1.2 to 1.7.x</td><td colspan="1">Library: 1.1.2
-Cluster: 1.1.2 to 1.7.x</td><td colspan="1">Available as a Nuxeo Package starting from 5.8-HF16</td></tr></tbody></table>{{! /multiexcerpt}}
+Cluster: 1.1.2 to 1.7.x</td><td colspan="1">Available as a Nuxeo Package starting from 5.8-HF16</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
 More information on the page [Elasticsearch Setup]({{page page='elasticsearch-setup'}}).
 
 ## Browsers
 
-{{! multiexcerpt name='supported-browsers'}}<table><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
+{{! multiexcerpt name='supported-browsers'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
 FT 8.x</th><th colspan="1">Nuxeo Platform
 LTS 2015</th><th colspan="1">Nuxeo Platform
 6.0</th><th colspan="1">Nuxeo Platform
-5.8</th></tr><tr><th colspan="1">Chrome</th><td colspan="1">46 and greater</td><td colspan="1">46 and greater</td><td colspan="1">37 and greater</td><td colspan="1">8 and greater</td></tr><tr><th colspan="1">Edge</th><td colspan="1">Subject to the browser's limitations such as [Drag and Drop support](https://connect.microsoft.com/IE/feedback/details/1544800/ms-edge-drop-files-from-explorer-to-browser-does-not-work-as-expected)</td><td colspan="1">Subject to the browser's limitations such as [Drag and Drop support](https://connect.microsoft.com/IE/feedback/details/1544800/ms-edge-drop-files-from-explorer-to-browser-does-not-work-as-expected)</td><td colspan="1">-</td><td colspan="1">-</td></tr><tr><th colspan="1">Firefox</th><td colspan="1">38 ESR and greater</td><td colspan="1">38 ESR and greater</td><td colspan="1">31 ESR and greater</td><td colspan="1">10 and greater</td></tr><tr><th colspan="1">Internet Explorer</th><td colspan="1">11</td><td colspan="1">11</td><td colspan="1">10 and greater</td><td colspan="1">8 and greater with activeX enabled</td></tr><tr><th colspan="1">Safari</th><td colspan="1">9 and greater</td><td colspan="1">9 and greater</td><td colspan="1">6.2 and greater</td><td colspan="1">4 and greater</td></tr></tbody></table>{{! /multiexcerpt}}
+5.8</th></tr><tr><th colspan="1">Chrome</th><td colspan="1">46 and greater</td><td colspan="1">46 and greater</td><td colspan="1">37 and greater</td><td colspan="1">8 and greater</td></tr><tr><th colspan="1">Edge</th><td colspan="1">Subject to the browser's limitations such as [Drag and Drop support](https://connect.microsoft.com/IE/feedback/details/1544800/ms-edge-drop-files-from-explorer-to-browser-does-not-work-as-expected)</td><td colspan="1">Subject to the browser's limitations such as [Drag and Drop support](https://connect.microsoft.com/IE/feedback/details/1544800/ms-edge-drop-files-from-explorer-to-browser-does-not-work-as-expected)</td><td colspan="1">-</td><td colspan="1">-</td></tr><tr><th colspan="1">Firefox</th><td colspan="1">38 ESR and greater</td><td colspan="1">38 ESR and greater</td><td colspan="1">31 ESR and greater</td><td colspan="1">10 and greater</td></tr><tr><th colspan="1">Internet Explorer</th><td colspan="1">11</td><td colspan="1">11</td><td colspan="1">10 and greater</td><td colspan="1">8 and greater with activeX enabled</td></tr><tr><th colspan="1">Safari</th><td colspan="1">9 and greater</td><td colspan="1">9 and greater</td><td colspan="1">6.2 and greater</td><td colspan="1">4 and greater</td></tr></tbody></table></div>{{! /multiexcerpt}}

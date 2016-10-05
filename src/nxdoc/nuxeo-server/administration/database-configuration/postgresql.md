@@ -820,7 +820,7 @@ See the PostgreSQL section of the [Monitoring and Maintenance]({{page page='moni
 
 Here are some values that can be used as a starting point for a dedicated server depending on the amount of memory.
 
-<table><tbody><tr><th colspan="1">Amount of RAM</th><th colspan="1">4&nbsp;GB</th><th colspan="1">8&nbsp;GB</th><th colspan="1">16&nbsp;GB</th><th colspan="1">32&nbsp;GB</th></tr><tr><td colspan="1">shared_buffers</td><td colspan="1">1GB</td><td colspan="1">2GB</td><td colspan="1">4GB</td><td colspan="1">8GB</td></tr><tr><td colspan="1">effective_cache_size</td><td colspan="1">1536MB</td><td colspan="1">4GB</td><td colspan="1">8GB</td><td colspan="1">16GB</td></tr><tr><td colspan="1">work_mem</td><td colspan="1">12MB</td><td colspan="1">12MB</td><td colspan="1">16MB</td><td colspan="1">20MB</td></tr><tr><td colspan="1">maintenance_work_mem</td><td colspan="1">512MB</td><td colspan="1">1GB</td><td colspan="1">1GB</td><td colspan="1">1GB</td></tr><tr><td colspan="1">max_connections</td><td colspan="1">63</td><td colspan="1">103</td><td colspan="1">153</td><td colspan="1">203</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Amount of RAM</th><th colspan="1">4&nbsp;GB</th><th colspan="1">8&nbsp;GB</th><th colspan="1">16&nbsp;GB</th><th colspan="1">32&nbsp;GB</th></tr><tr><td colspan="1">shared_buffers</td><td colspan="1">1GB</td><td colspan="1">2GB</td><td colspan="1">4GB</td><td colspan="1">8GB</td></tr><tr><td colspan="1">effective_cache_size</td><td colspan="1">1536MB</td><td colspan="1">4GB</td><td colspan="1">8GB</td><td colspan="1">16GB</td></tr><tr><td colspan="1">work_mem</td><td colspan="1">12MB</td><td colspan="1">12MB</td><td colspan="1">16MB</td><td colspan="1">20MB</td></tr><tr><td colspan="1">maintenance_work_mem</td><td colspan="1">512MB</td><td colspan="1">1GB</td><td colspan="1">1GB</td><td colspan="1">1GB</td></tr><tr><td colspan="1">max_connections</td><td colspan="1">63</td><td colspan="1">103</td><td colspan="1">153</td><td colspan="1">203</td></tr></tbody></table></div>
 
 ## Specific Configuration
 
@@ -954,3 +954,15 @@ If you have a database configuration problem and you want to fill a JIRA ticket,
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Content'}}
+
+*   [Connecting Nuxeo to the Database]({{page page='connecting-nuxeo-to-the-database'}})
+*   [How to Estimate Volume Usage]({{page page='how-to-estimate-volume-usage'}})
+*   [Setting up a HA Configuration Using the Nuxeo Platform and PostgreSQL]({{page page='setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

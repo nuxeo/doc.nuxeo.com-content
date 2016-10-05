@@ -184,7 +184,7 @@ If you had already upgraded to previous 8.x Fast Track versions, check out the p
 
 ### New Parameters
 
-<table><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Description</th><th colspan="1">Reference</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Description</th><th colspan="1">Reference</th></tr><tr><td colspan="1">
 
 `nuxeo.automation.properties.value.trim`
 
@@ -196,11 +196,11 @@ Force Automation properties value to be trimmed (default:`false`)
 
 [NXP-19170](https://jira.nuxeo.com/browse/NXP-19170)
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### Parameters to Update
 
-<table><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Modification</th><th colspan="1">Reference</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Modification</th><th colspan="1">Reference</th></tr><tr><td colspan="1">
 
 `nuxeo.s3storage.bucket.prefix`
 
@@ -224,7 +224,7 @@ Force Automation properties value to be trimmed (default:`false`)
 
 [NXP-17396](https://jira.nuxeo.com/browse/NXP-17396)
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### Notes
 

@@ -755,12 +755,12 @@ Nuxeo Drive has different parameters that you can set up through:
 *   A config.ini file inside the Drive binary folder or the Drive personal folder (.nuxeo-drive)
 *   or with a registry key inside `HKEY_LOCAL_MACHINE\Software\Nuxeo\Drive` (registry since Nuxeo Drive 2.1.331)
 
-<table><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default Value</th><th colspan="1">Description</th></tr><tr><td colspan="1">`ndrive-home`</td><td colspan="1">`%USER_HOME%/.nuxeo-drive`</td><td colspan="1">Define the personal folder.</td></tr><tr><td colspan="1">`log-level-file`</td><td colspan="1">&nbsp;</td><td colspan="1">Define level for file log. Can be TRACE, DEBUG, INFO, WARNING, ERROR.
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default Value</th><th colspan="1">Description</th></tr><tr><td colspan="1">`ndrive-home`</td><td colspan="1">`%USER_HOME%/.nuxeo-drive`</td><td colspan="1">Define the personal folder.</td></tr><tr><td colspan="1">`log-level-file`</td><td colspan="1">&nbsp;</td><td colspan="1">Define level for file log. Can be TRACE, DEBUG, INFO, WARNING, ERROR.
 This can also be set up from the Settings window.</td></tr><tr><td colspan="1">`log-level-console`</td><td colspan="1">INFO</td><td colspan="1">Define level for console log. Can be TRACE, DEBUG, INFO, WARNING, ERROR.</td></tr><tr><td colspan="1">`log-filename`</td><td colspan="1">&nbsp;</td><td colspan="1">The name of the log file.</td></tr><tr><td colspan="1">`locale`</td><td colspan="1">&nbsp;</td><td colspan="1">Set up the language if not already defined.
 This can also be set up by the user from the Settings window.</td></tr><tr><td colspan="1">`force-locale`</td><td colspan="1">&nbsp;</td><td colspan="1">Force the reset to the language.</td></tr><tr><td colspan="1">`update-site-url`</td><td colspan="1">http://community.nuxeo.com/static/drive/</td><td colspan="1">Configure custom update website.
 See [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}}) for more details.</td></tr><tr><td colspan="1">`beta-update-site-url`</td><td colspan="1">http://community.nuxeo.com/static/drive-tests/</td><td colspan="1">Configure custom beta update website.</td></tr><tr><td colspan="1">`debug`</td><td colspan="1">false</td><td colspan="1">Activate the debug window, and debug mode.</td></tr><tr><td colspan="1">`nofscheck`</td><td colspan="1">0</td><td colspan="1">Disable the standard check for binding, to allow installation on network filesystem.</td></tr><tr><td colspan="1">`proxy-server`</td><td colspan="1">None</td><td colspan="1">Define proxy server.
 This can also be set up by the user from the Settings window.</td></tr><tr><td colspan="1">`proxy-type`</td><td colspan="1">None</td><td colspan="1">Define proxy type.
-This can also be set up by the user from the Settings window.</td></tr><tr><td colspan="1">`proxy-exceptions`</td><td colspan="1">None</td><td colspan="1">Define URLs exception for the proxy.</td></tr><tr><td colspan="1">`consider-ssl-errors`</td><td colspan="1">false</td><td colspan="1">Define if SSL errors should be ignored.</td></tr><tr><td colspan="1">`delay`</td><td colspan="1">30</td><td colspan="1">Define the delay before each remote check.</td></tr><tr><td colspan="1">`handshake-timeout`</td><td colspan="1">60</td><td colspan="1">Define the handshake timeout.</td></tr><tr><td colspan="1">`timeout`</td><td colspan="1">20</td><td colspan="1">Define the socket timeout.</td></tr><tr><td colspan="1">`update-check-delay`</td><td colspan="1">3600</td><td colspan="1">Define the auto-update check delay. 0 means disabled.</td></tr><tr><td colspan="1">`max-errors`</td><td colspan="1">3</td><td colspan="1">Define the maximum number of retries before considering the file as in error.</td></tr></tbody></table>
+This can also be set up by the user from the Settings window.</td></tr><tr><td colspan="1">`proxy-exceptions`</td><td colspan="1">None</td><td colspan="1">Define URLs exception for the proxy.</td></tr><tr><td colspan="1">`consider-ssl-errors`</td><td colspan="1">false</td><td colspan="1">Define if SSL errors should be ignored.</td></tr><tr><td colspan="1">`delay`</td><td colspan="1">30</td><td colspan="1">Define the delay before each remote check.</td></tr><tr><td colspan="1">`handshake-timeout`</td><td colspan="1">60</td><td colspan="1">Define the handshake timeout.</td></tr><tr><td colspan="1">`timeout`</td><td colspan="1">20</td><td colspan="1">Define the socket timeout.</td></tr><tr><td colspan="1">`update-check-delay`</td><td colspan="1">3600</td><td colspan="1">Define the auto-update check delay. 0 means disabled.</td></tr><tr><td colspan="1">`max-errors`</td><td colspan="1">3</td><td colspan="1">Define the maximum number of retries before considering the file as in error.</td></tr></tbody></table></div>
 
 When use as command line argument you need to prefix with long argument modifier `--`.
 
@@ -785,3 +785,16 @@ Please read the related sections: [Triggering SQL to Elasticsearch Audit Logs Mi
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+*   [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}})
+*   [Nuxeo Drive user documentation
+    ]({{page space='userdoc' page='nuxeo-drive'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

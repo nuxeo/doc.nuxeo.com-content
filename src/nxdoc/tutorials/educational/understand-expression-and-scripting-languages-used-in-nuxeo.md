@@ -24,349 +24,349 @@ confluence:
     source_link: >-
         /display/NXDOC/Understand+Expression+and+Scripting+Languages+Used+in+Nuxeo
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-01 09:10'
         message: ''
         version: '69'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2016-02-09 15:20'
         message: ''
         version: '68'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-01-18 17:03'
         message: 'replace "Write" by "Edit"     '
         version: '67'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-10 12:11'
         message: ''
         version: '66'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-09-10 09:27'
         message: Added freemarker link
         version: '65'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-09-10 09:26'
         message: Added MVEL link
         version: '64'
-    -
+    - 
         author: Michaël Vachette
         date: '2014-12-30 17:31'
         message: ''
         version: '63'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-10-06 11:26'
         message: ''
         version: '62'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-30 10:42'
         message: ''
         version: '61'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-29 14:24'
         message: Fix link to JIRA issue and formatting
         version: '60'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-06-25 11:12'
         message: ''
         version: '59'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2014-06-23 16:47'
         message: Reverted from v. 56
         version: '58'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2014-06-23 16:46'
         message: Added anchor
         version: '57'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2014-06-23 16:42'
         message: Updated schema image
         version: '56'
-    -
+    - 
         author: Thierry Martins
         date: '2014-04-16 11:58'
         message: ''
         version: '55'
-    -
+    - 
         author: Vincent Dutat
         date: '2014-04-04 21:16'
         message: ''
         version: '54'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-08 10:44'
         message: ''
         version: '53'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2014-01-07 23:05'
         message: ''
         version: '52'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2014-01-07 22:59'
         message: ''
         version: '51'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2014-01-07 22:58'
         message: ''
         version: '50'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 12:03'
         message: ''
         version: '49'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-09 11:14'
         message: Removed related topics from TOC
         version: '48'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-09 11:13'
         message: ''
         version: '47'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2013-09-06 00:20'
         message: ''
         version: '46'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2013-09-05 20:03'
         message: ''
         version: '45'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-04 18:28'
         message: ''
         version: '44'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-04 17:24'
         message: ''
         version: '43'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-04 17:21'
         message: ''
         version: '42'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2013-09-04 17:17'
         message: ''
         version: '41'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-25 17:54'
         message: ''
         version: '40'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-25 17:54'
         message: Reverted from v. 37
         version: '39'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-25 17:53'
         message: Removed JIRA ticket regarding inverted EL filter (fixed)
         version: '38'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-15 11:16'
         message: Fixed typo
         version: '37'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-12 14:05'
         message: ''
         version: '36'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-12 14:01'
         message: ''
         version: '35'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-12 09:55'
         message: Modified event handler example
         version: '34'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-11 14:51'
         message: ''
         version: '33'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-11 14:49'
         message: Added filters and widgets available variables
         version: '32'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-11 13:54'
         message: Added event handlers part
         version: '31'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-11 11:43'
         message: Added automation chains variables
         version: '30'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-11 11:06'
         message: Added doc templates variables
         version: '29'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-11 10:20'
         message: Taille des images (spéciale dédicace AE)
         version: '28'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-07-11 01:34'
         message: ''
         version: '27'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-07-11 01:34'
         message: ''
         version: '26'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-09 12:14'
         message: ''
         version: '25'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-08 16:48'
         message: ''
         version: '24'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-08 14:29'
         message: Formatting
         version: '23'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-08 14:24'
         message: >-
             Started to add available variables depending on context (with
             workflow context)
         version: '22'
-    -
+    - 
         author: Karl Harris
         date: '2013-07-03 16:01'
         message: ''
         version: '21'
-    -
+    - 
         author: Karl Harris
         date: '2013-07-03 15:07'
         message: ''
         version: '20'
-    -
+    - 
         author: Karl Harris
         date: '2013-07-03 15:03'
         message: ''
         version: '19'
-    -
+    - 
         author: Karl Harris
         date: '2013-07-03 14:55'
         message: ''
         version: '18'
-    -
+    - 
         author: Karl Harris
         date: '2013-07-03 14:54'
         message: ''
         version: '17'
-    -
+    - 
         author: Karl Harris
         date: '2013-07-03 14:48'
         message: ''
         version: '16'
-    -
+    - 
         author: Karl Harris
         date: '2013-07-03 14:44'
         message: ''
         version: '15'
-    -
+    - 
         author: Karl Harris
         date: '2013-07-03 14:42'
         message: ''
         version: '14'
-    -
+    - 
         author: Karl Harris
         date: '2013-07-03 14:40'
         message: ''
         version: '13'
-    -
+    - 
         author: Karl Harris
         date: '2013-07-03 14:40'
         message: ''
         version: '12'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-07-01 13:49'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-27 11:12'
         message: Fixed typos and format
         version: '10'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-06-13 16:37'
         message: ''
         version: '9'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-06-13 16:34'
         message: ''
         version: '8'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-06-13 16:24'
         message: ''
         version: '7'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-06-13 15:09'
         message: ''
         version: '6'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-06-13 14:37'
         message: ''
         version: '5'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-06-13 14:18'
         message: ''
         version: '4'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-06-13 14:18'
         message: schema
         version: '3'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-06-13 14:13'
         message: Presentation
         version: '2'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-06-13 13:55'
         message: ''
@@ -413,7 +413,7 @@ Please check the [availables variables depending on context](#available-variable
 
 ## What are the Main Differences Between Expression/Scripting Languages?
 
-<table><colgroup><col> <col> <col> <col></colgroup> <tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">EL</th><th colspan="1">MVEL</th><th colspan="1">FreeMarker</th></tr><tr><td colspan="1">Concept</td><td colspan="1">Advanced scripting language.</td><td colspan="1">Advanced scripting and templating language.</td><td colspan="1">Templating language. Used for email or document templates.</td></tr><tr><td colspan="1">Expression syntax</td><td colspan="1">`#{myExpression.property}`</td><td colspan="1">`@{myExpression.property}`</td><td colspan="1">`${myExpression.property}`</td></tr><tr><td colspan="1">Variables available</td><td colspan="1">Has access to the SEAM (user interface) components, providing many variables.</td><td colspan="1">Can use the variables provided by the UI layer.</td><td colspan="1">Depends on context: send mail operation, doc rendering operation or workflow email notification.</td></tr><tr><td colspan="1">Current document variable</td><td colspan="1">`#{**currentDocument**.property}`</td><td colspan="1">`@{**Document**.property}`</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><colgroup><col> <col> <col> <col></colgroup> <tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">EL</th><th colspan="1">MVEL</th><th colspan="1">FreeMarker</th></tr><tr><td colspan="1">Concept</td><td colspan="1">Advanced scripting language.</td><td colspan="1">Advanced scripting and templating language.</td><td colspan="1">Templating language. Used for email or document templates.</td></tr><tr><td colspan="1">Expression syntax</td><td colspan="1">`#{myExpression.property}`</td><td colspan="1">`@{myExpression.property}`</td><td colspan="1">`${myExpression.property}`</td></tr><tr><td colspan="1">Variables available</td><td colspan="1">Has access to the SEAM (user interface) components, providing many variables.</td><td colspan="1">Can use the variables provided by the UI layer.</td><td colspan="1">Depends on context: send mail operation, doc rendering operation or workflow email notification.</td></tr><tr><td colspan="1">Current document variable</td><td colspan="1">`#{**currentDocument**.property}`</td><td colspan="1">`@{**Document**.property}`</td><td colspan="1">
 
 Send mail / doc rendering:`
 ${**Document**.property}`
@@ -421,7 +421,7 @@ ${**Document**.property}`
 Workflow email notification:`
 ${**workflowDocuments[0]**.property}`
 
-</td></tr></tbody></table>{{#> callout type='note' heading='Variable name and context'}}
+</td></tr></tbody></table></div>{{#> callout type='note' heading='Variable name and context'}}
 
 The same object may be given a different variable name depending on language or context, as shown in bold in the previous table.
 
@@ -571,7 +571,7 @@ In widgets, layout, content views and in XHTML templates, you can use the EL exp
 
 ## Tips and Tricks
 
-<table><colgroup><col> <col> <col> <col></colgroup> <tbody><tr><th colspan="1">Document type</th><th colspan="1">Language</th><th colspan="1">Context</th><th colspan="1">Tip</th></tr><tr><td colspan="1">Email template</td><td colspan="1">FreeMarker</td><td colspan="1">Workflow email notification</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><colgroup><col> <col> <col> <col></colgroup> <tbody><tr><th colspan="1">Document type</th><th colspan="1">Language</th><th colspan="1">Context</th><th colspan="1">Tip</th></tr><tr><td colspan="1">Email template</td><td colspan="1">FreeMarker</td><td colspan="1">Workflow email notification</td><td colspan="1">
 
 Schema prefixes cannot be used when using the `${workflowDocuments[0].property}` variable.
 
@@ -604,7 +604,7 @@ EL expressions can be used to evaluate conditions. A few examples:
 *   Checking that the worklist is not empty:
     `#{documentsListsManager.isWorkingListEmpty("CURRENT_SELECTION") == false}`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Related Links
 
@@ -626,3 +626,15 @@ You may find more information in these related pages :
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in Developer Documentation'}}
+
+*   [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}})
+*   [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
+*   [Field Binding and Expressions]({{page page='field-binding-and-expressions'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

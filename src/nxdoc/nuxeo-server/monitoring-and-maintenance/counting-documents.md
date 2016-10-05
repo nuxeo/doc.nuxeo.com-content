@@ -57,3 +57,14 @@ You can filter the statisticts on a specific time period.
 ![]({{file name='admin_repository_analytics_tab.png'}} ?w=600,h=321,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Admin Tab Overview]({{page page='admin-tab-overview'}})
+*   [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

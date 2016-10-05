@@ -36,112 +36,112 @@ confluence:
     source_link: >-
         /display/NXDOC/How+to+Customize+the+Versioning+and+Comment+Widget+on+Document+Edit+Form
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 10:01'
         message: pdate how-to topic
         version: '22'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-12-08 13:37'
         message: ''
         version: '21'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-12-08 13:36'
         message: ''
         version: '20'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-01-13 10:27'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 21:53'
         message: ''
         version: '18'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-12 15:52'
         message: ''
         version: '17'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-12 15:34'
         message: ''
         version: '16'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-12 14:21'
         message: ''
         version: '15'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-12 14:15'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-08 14:31'
         message: ''
         version: '13'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-08-22 09:34'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-22 11:48'
         message: ''
         version: '11'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-07-17 21:08'
         message: 'NXDOC-341: fix widget mode in samples'
         version: '10'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-07-17 20:46'
         message: 'NXDOC-341: format'
         version: '9'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-07-17 20:45'
         message: 'NXDOC-341: add missing extension tags'
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-17 19:18'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-17 19:17'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-17 19:16'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-17 19:16'
         message: Formatting
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-07-17 18:50'
         message: 'NXDOC-341: fix require tags'
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-07-17 18:50'
         message: 'NXDOC-341: complete doc about edit options layout'
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-07-17 18:46'
         message: ''

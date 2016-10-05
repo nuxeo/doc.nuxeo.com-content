@@ -29,117 +29,117 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/G4D1'
     source_link: /display/NXDOC/Authentication+and+User+Management
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-30 09:44'
         message: dd details on section SSO with Portal
         version: '23'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-09 16:30'
         message: ''
         version: '22'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-30 09:44'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-11 16:30'
         message: ''
         version: '20'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-04 13:55'
         message: ''
         version: '19'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-04 13:54'
         message: ''
         version: '18'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-04 13:51'
         message: ''
         version: '17'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-04 13:49'
         message: ''
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-01 17:04'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-02 13:36'
         message: Fix TOC style in Install & Config tab
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-02 13:05'
         message: Shorter titles in install&config tab
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-02 13:01'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-02 12:57'
         message: Fix some anchor links
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-02 12:48'
         message: Fix some fomat issues
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-02 12:40'
         message: ''
         version: '9'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-09-22 00:56'
         message: ''
         version: '8'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-09-22 00:55'
         message: ''
         version: '7'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-09-22 00:54'
         message: ''
         version: '6'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-09-22 00:11'
         message: ''
         version: '5'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-09-22 00:02'
         message: ''
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-09-21 23:48'
         message: ''
         version: '3'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-07-13 12:59'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 10:20'
         message: ''
@@ -278,7 +278,7 @@ Groups are defined on the `groups` element (also referencing already contributed
     <subGroupsField>subgroups</subGroupsField>
     <parentGroupsField>parentgroup</parentGroupsField>
     <listingMode>search_only</listingMode>
-</groups>
+</groups> 
 ```
 
 ## Default Users and Groups Configuration
@@ -526,7 +526,7 @@ nxServer.setSharedSecretAuthentication("Administrator", "nuxeo5secretkey");
 Configure it to connect to a server that uses `platform-login-portal-sso` by using an interceptor:
 
 ```java
-client.setAuthenticationMethod( new PortalSSOAuthInterceptor("nuxeo5secretkey", "Administrator") );
+client.setAuthenticationMethod( new PortalSSOAuthInterceptor("nuxeo5secretkey", "Administrator") ); 
 ```
 
 **Manual HTTP Calls**
@@ -652,8 +652,8 @@ It is displayed in the Nuxeo Platform like this:
 If you want to add more fields than the default ones on the user profile, you can simply override the definition of the schema `user` (in a Studio project or in an XML component in `nxserver/config`).
 
 ```xml
-<extension point="schema" target="org.nuxeo.ecm.core.schema.TypeService">
-    <<!-- override default user schema -->
+<extension point="schema" target="org.nuxeo.ecm.core.schema.TypeService"> 
+    <<!-- override default user schema --> 
     <schema name="user" override="true" src="schemas/my_custom_user_schema.xsd"/>
 </extension>
 ```
@@ -845,3 +845,12 @@ Some authentication plugins may choose to trigger or not the `LoginPrompt` depen
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
+
+*   [Collections user documentation]({{page space='userdoc' page='collections'}})
+*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+*   [Nuxeo Drive user documentation]({{page space='userdoc' page='nuxeo-drive'}})
+*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+
+{{/panel}}</div><div class="column medium-6">null</div></div>

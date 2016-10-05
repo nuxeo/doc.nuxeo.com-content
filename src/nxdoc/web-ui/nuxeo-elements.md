@@ -89,7 +89,7 @@ This elements uses a &ldquo;conceptual singleton&rdquo; (MonoState Pattern) so&n
 
 As mentioned before, in Polymer, non visual elements are the standard way to expose remote services. So we built a set of custom Nuxeo data elements to interact with Nuxeo&rsquo;s APIs:
 
-<table><tbody><tr><th colspan="1">Tag</th><th colspan="1">Description</th><th colspan="1">Example</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Tag</th><th colspan="1">Description</th><th colspan="1">Example</th></tr><tr><td colspan="1">
 
 nuxeo-connection
 
@@ -174,7 +174,7 @@ Wraps a `Repository.PageProvider` operation to provide paginated results for a g
 </nuxeo-page-provider>
 ```
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 **Note:**&nbsp;Most data elements support an `auto` attribute which, when set, automatically calls the GET method whenever the element properties change.
 

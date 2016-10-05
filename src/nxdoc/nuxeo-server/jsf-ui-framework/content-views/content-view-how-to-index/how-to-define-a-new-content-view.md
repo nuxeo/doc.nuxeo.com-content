@@ -492,7 +492,7 @@ Search results, and so content listings, are presented in a table. You can confi
 
 The first part of the result configuration form is dedicated to setting up some general parameters about the results that will be displayed.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Parameter
 
@@ -525,7 +525,7 @@ Enable additional actions
 You can define new buttons or actions that will be displayed next to the default document list toolbar: Click **Create a new action** to define [a new user action (button, icon or link)]({{page page='actions-links-buttons-icons-tabs-and-more'}}) to be displayed below the list of documents.
 See the tutorial [Create a button that triggers the task assignment]({{page page='create-a-button-that-triggers-the-task-assignment'}}) for an example of user action configuration.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Use The Content View
 

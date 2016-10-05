@@ -462,3 +462,16 @@ If your Nuxeo server and the API Playground are not in the same domain, you need
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Special HTTP Headers]({{page page='special-http-headers'}})
+*   [Automation]({{page page='automation'}})
+*   [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
+*   [REST API]({{page page='rest-api'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

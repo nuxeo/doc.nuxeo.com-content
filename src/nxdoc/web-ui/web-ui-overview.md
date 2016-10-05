@@ -149,7 +149,7 @@ The menu displays different tabs. Clicking on one of them will open a side panel
 
 This new pattern allows to&nbsp;start browsing without changing the context of work.
 
-<table><tbody><tr><td colspan="1">![]({{file name='dashboard_home.png'}} ?w=48,thumbnail=true)</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">![]({{file name='dashboard_home.png'}} ?w=48,thumbnail=true)</td><td colspan="1">
 
 **Dashboard:** Displays the dashboard
 
@@ -193,7 +193,7 @@ This new pattern allows to&nbsp;start browsing without changing the context of w
 
 **User Settings:** Displays a **Drive** tab to manage the synchronization roots and a **Themes** tab to manage branding.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### **Main View**
 
@@ -228,3 +228,14 @@ The main area is reserved for displaying the current page's content. Our router 
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Elements]({{page page='nuxeo-elements'}})
+*   [Data Visualization]({{page page='data-visualization'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

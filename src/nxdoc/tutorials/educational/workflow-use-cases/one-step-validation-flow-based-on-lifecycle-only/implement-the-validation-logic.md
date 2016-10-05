@@ -140,7 +140,7 @@ In this step, we will just create this chain, not adding anything to call it, ne
 
 **Validation chain parameters**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 N&deg;
 
@@ -220,7 +220,7 @@ event: `Document_Validated`
 
 category: `automation`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Reject chain
 
@@ -234,7 +234,7 @@ Like the validation chain, the refusal automation chain will be used by the user
 
 **Reject chain parameters**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 N&deg;
 
@@ -282,4 +282,4 @@ event: `Validation_rejected`
 
 category: `automation`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>

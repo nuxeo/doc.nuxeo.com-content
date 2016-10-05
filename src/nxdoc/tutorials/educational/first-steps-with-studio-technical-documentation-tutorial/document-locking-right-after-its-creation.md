@@ -218,4 +218,15 @@ To sum up what we saw:
 
 [Validation Workflow Choosing the Assignee Based on a Metadata >>]({{page page='validation-workflow-choosing-the-assignee-based-on-a-metadata'}})
 
+</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Locking vs Permission to Restrict Edit Access to a Document]({{page page='locking-vs-permission-to-restrict-edit-access-to-a-document'}})
+*   [Automation Chains in Studio]({{page space='studio' page='automation-chains'}})
+*   [Content automation chain reference
+    ]({{page page='content-automation-concepts'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
 </div></div>

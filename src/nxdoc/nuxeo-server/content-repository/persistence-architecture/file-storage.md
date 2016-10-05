@@ -237,7 +237,7 @@ Bellow is a sequence diagram of what happens when writing a binary stream.
 
 Without installing any additional addon, you will find several blobProviders implementations that you can use. &nbsp;
 
-<table><tbody><tr><th colspan="1">Name</th><th colspan="1">Class</th><th colspan="1">Description</th><th colspan="1">Resources</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Name</th><th colspan="1">Class</th><th colspan="1">Description</th><th colspan="1">Resources</th></tr><tr><td colspan="1">
 
 Default
 
@@ -305,7 +305,7 @@ storage.sql.SQLBinaryManager
 
 Stores binaries as SQL BLOB objects in a SQL database.
 
-</td><td colspan="1">&nbsp;</td></tr></tbody></table>
+</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>
 
 To register a new blobProvider, use the&nbsp; [`blobprovider`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.blob.BlobManager--configuration)&nbsp;extension point with the Java class for your blobProvider:
 
@@ -322,7 +322,7 @@ To register a new blobProvider, use the&nbsp; [`blobprovider`](http://explorer.n
 
 &nbsp;In addition to the default ones listed above, the following implementations exist and can be used:
 
-<table><tbody><tr><th colspan="1">Name</th><th colspan="1">Class</th><th colspan="1">Description</th><th colspan="1">Resources</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Name</th><th colspan="1">Class</th><th colspan="1">Description</th><th colspan="1">Resources</th></tr><tr><td colspan="1">
 
 Azure
 
@@ -475,7 +475,7 @@ Reads and writes content into MongoDB Binary Manager
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## BlobDispatcher and&nbsp;HSM
 

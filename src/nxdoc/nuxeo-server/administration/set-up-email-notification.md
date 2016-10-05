@@ -61,7 +61,7 @@ The default Nuxeo Platform email configuration is filled in with neutral values 
 
 **Email information configuration**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field / Property
 
@@ -185,7 +185,7 @@ Sender address mail
 
 Email address that will displayed as the sender's address.
 
-</td></tr></tbody></table>{{#> callout type='info' }}
+</td></tr></tbody></table></div>{{#> callout type='info' }}
 
 If you have complex mail server configurations, you may want to check the [Javamail API FAQ](http://www.oracle.com/technetwork/java/faq-135477.html) for more information.
 
@@ -194,3 +194,14 @@ If you have complex mail server configurations, you may want to check the [Javam
 {{! Don't put anything here. }}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [How to Customize Email Templates]({{page page='how-to-customize-email-templates'}})
+*   [Collaborative Features]({{page space='userdoc' page='collaborative-features'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

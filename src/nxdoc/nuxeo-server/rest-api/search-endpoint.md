@@ -35,122 +35,122 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/j4fjAQ'
     source_link: /display/NXDOC/Search+Endpoint
 history:
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-29 13:26'
         message: ''
         version: '24'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-29 13:25'
         message: ''
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-29 13:14'
         message: ''
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-29 12:53'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-29 12:52'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-29 09:44'
         message: 'Fix formatting in endpoint, parameters and properties tables'
         version: '19'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 15:06'
         message: ''
         version: '18'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 15:05'
         message: ''
         version: '17'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 14:57'
         message: ''
         version: '16'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 14:36'
         message: ''
         version: '15'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 14:22'
         message: ''
         version: '14'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 14:18'
         message: ''
         version: '13'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 14:17'
         message: ''
         version: '12'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 14:13'
         message: ''
         version: '11'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 14:00'
         message: ''
         version: '10'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 13:35'
         message: ''
         version: '9'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 12:03'
         message: ''
         version: '8'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 11:44'
         message: ''
         version: '7'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 11:38'
         message: ''
         version: '6'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 11:38'
         message: ''
         version: '5'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 11:37'
         message: ''
         version: '4'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 11:35'
         message: ''
         version: '3'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 11:28'
         message: ''
         version: '2'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 11:19'
         message: ''
@@ -165,7 +165,7 @@ The Search endpoint is available since 8.3.
 
 The endpoint allows for the storage and execution of two particular types of search: by **query** and by **page provider**.
 
-<table><tbody><tr><th colspan="1">Path</th><th colspan="1">Description</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Path</th><th colspan="1">Description</th></tr><tr><td colspan="1">
 
 GET
 
@@ -255,13 +255,13 @@ GET
 
 Executes a saved search.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Execution Parameters
 
 Searches can be parametrized by execution parameters, which&nbsp;that can be passed to all `/search/**/execute` endpoints.&nbsp;
 
-<table><tbody><tr><th colspan="1">Key</th><th colspan="1">Value</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Key</th><th colspan="1">Value</th></tr><tr><td colspan="1">
 
 **query
 **
@@ -370,13 +370,13 @@ Parameter names should be strictly different from property names (and other quer
 
 Note this is only interesting when using a page provider, defined server side.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Saved Search Properties
 
 Saved Searches are composed by the following properties:
 
-<table><tbody><tr><th colspan="1">Property</th><th colspan="1">Description</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Property</th><th colspan="1">Description</th></tr><tr><td colspan="1">
 
 **queryParams**
 
@@ -436,7 +436,7 @@ The name of the page provider to use in the search, mutually exclusive with `que
 
 A JSON object containing content view related data
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 These properties are particularly relevant for creating and updating saved searches.&nbsp;Search execution parameters can also be stored as properties of the saved search, which will be used when the search is executed. These parameters can also be overridden if passed again with new values&nbsp;to the execution endpoint.
 
@@ -449,7 +449,7 @@ These properties are particularly relevant for creating and updating saved searc
 ```
 http://localhost:8080/nuxeo/site/api/v1/search/lang/NXQL/execute?query=select * from Document
 
-http://localhost:8080/nuxeo/site/api/v1/search/lang/NXQL/execute?query=select * from Document&pageSize=2&currentPageIndex=1
+http://localhost:8080/nuxeo/site/api/v1/search/lang/NXQL/execute?query=select * from Document&pageSize=2&currentPageIndex=1 
 ```
 
 {{/panel}}{{#> panel type='code' heading='Response'}}
@@ -1066,7 +1066,7 @@ In the above example the search has a search document model, containing its own 
 
 ```
 [HEADER] X-NXproperties: default_search
-GET http://localhost:8080/nuxeo/site/api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c
+GET http://localhost:8080/nuxeo/site/api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c 
 ```
 
 {{/panel}}{{#> panel type='code' heading='Response'}}
@@ -1139,3 +1139,18 @@ GET http://localhost:8080/nuxeo/site/api/v1/search/saved/f0c173cc-4bbc-42b1-ac66
 {{! Don't put anything here. }}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
+*   [REST API Entity Types]({{page page='rest-api-entity-types'}})
+*   [Page Providers]({{page page='page-providers'}})
+*   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

@@ -146,7 +146,7 @@ The administrators can set up some configuration directly from the **Admin** > *
 
 Possible configuration options are:
 
-<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Allow New User Creation</td><td colspan="1">Enables users to invite user that don't have an account on the Platform. A new user account is then created. The new user is not included in any group by default.</td></tr><tr><td colspan="1">Force Rights Assignment</td><td colspan="1">This option is useful when user is manually created at a later time or comes from a computed group.</td></tr><tr><td colspan="1">Direct Validation If User Exists</td><td colspan="1">If a user invites a user that has already been invited to another space and so who already has a account on the Platform, then the administrators don't have to approve the invitation again. It is directly approved by the system.</td></tr><tr><td colspan="1">Local Registration Tab</td><td colspan="1">Displays a User registration requests subtab in the local **Manage** tab of a space, that displays the invitations that were done from the current space and their status.</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Allow New User Creation</td><td colspan="1">Enables users to invite user that don't have an account on the Platform. A new user account is then created. The new user is not included in any group by default.</td></tr><tr><td colspan="1">Force Rights Assignment</td><td colspan="1">This option is useful when user is manually created at a later time or comes from a computed group.</td></tr><tr><td colspan="1">Direct Validation If User Exists</td><td colspan="1">If a user invites a user that has already been invited to another space and so who already has a account on the Platform, then the administrators don't have to approve the invitation again. It is directly approved by the system.</td></tr><tr><td colspan="1">Local Registration Tab</td><td colspan="1">Displays a User registration requests subtab in the local **Manage** tab of a space, that displays the invitations that were done from the current space and their status.</td></tr></tbody></table></div>
 
 ## Functional Overview
 
@@ -173,7 +173,7 @@ To invite a user:
 
 **Invitation form details**
 
-<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Email</td><td colspan="1">The email address to which the invitation will be sent.</td></tr><tr><td colspan="1">User name</td><td colspan="1">The username the invited user will use to log in.</td></tr><tr><td colspan="1">First name</td><td colspan="1">The invited user's first name.</td></tr><tr><td colspan="1">Last name</td><td colspan="1">The invited user's last name.</td></tr><tr><td colspan="1">Permission</td><td colspan="1">The access right you want to give the invited user on the space.</td></tr><tr><td colspan="1">Comment</td><td colspan="1">A comment for the invited user to explain why he's invited, for instance. This comment will be in the invitation email.</td></tr><tr><td colspan="1">Send me a copy</td><td colspan="1">Your email address will be in the Cc recipients of the invitation email.</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Email</td><td colspan="1">The email address to which the invitation will be sent.</td></tr><tr><td colspan="1">User name</td><td colspan="1">The username the invited user will use to log in.</td></tr><tr><td colspan="1">First name</td><td colspan="1">The invited user's first name.</td></tr><tr><td colspan="1">Last name</td><td colspan="1">The invited user's last name.</td></tr><tr><td colspan="1">Permission</td><td colspan="1">The access right you want to give the invited user on the space.</td></tr><tr><td colspan="1">Comment</td><td colspan="1">A comment for the invited user to explain why he's invited, for instance. This comment will be in the invitation email.</td></tr><tr><td colspan="1">Send me a copy</td><td colspan="1">Your email address will be in the Cc recipients of the invitation email.</td></tr></tbody></table></div>
 
 #### Inviting Several Users
 
@@ -188,7 +188,7 @@ To invite several users at the same time to a space:
 
 **Bulk Invitation Form Details**
 
-<table><tbody><tr><th colspan="1">Fields</th><th colspan="1">Description</th></tr><tr><td colspan="1">List of Recipients</td><td colspan="1">The email addresses of the users you want to invite to the space. The email address will be their login. Use a comma (`,`) to separate the emails.</td></tr><tr><td colspan="1">Permission</td><td colspan="1">The access right you want to give the invited users on the space.</td></tr><tr><td colspan="1">Comment</td><td colspan="1">A comment for the invited user to explain why he's invited, for instance. This comment will be in the invitation emails.</td></tr><tr><td colspan="1">Send me a copy</td><td colspan="1">Your email address will be in the Cc recipients of the invitation emails.</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Fields</th><th colspan="1">Description</th></tr><tr><td colspan="1">List of Recipients</td><td colspan="1">The email addresses of the users you want to invite to the space. The email address will be their login. Use a comma (`,`) to separate the emails.</td></tr><tr><td colspan="1">Permission</td><td colspan="1">The access right you want to give the invited users on the space.</td></tr><tr><td colspan="1">Comment</td><td colspan="1">A comment for the invited user to explain why he's invited, for instance. This comment will be in the invitation emails.</td></tr><tr><td colspan="1">Send me a copy</td><td colspan="1">Your email address will be in the Cc recipients of the invitation emails.</td></tr></tbody></table></div>
 
 &nbsp;
 
@@ -301,3 +301,16 @@ See the page [How to Contribute a New "User Registration Request" Document Type]
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Authentication and User Management]({{page page='authentication-and-user-management'}}) (developer documentation)
+*   [How to Contribute a New "User Registration Request" Document Type]({{page page='how-to-contribute-a-new-user-registration-request-document-type'}})
+*   [Managing Users and Groups]({{page space='userdoc' page='managing-users-and-groups'}}) (user documentation)
+*   [Setup Best Practices]({{page page='setup-best-practices'}}) (admin documentation)
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

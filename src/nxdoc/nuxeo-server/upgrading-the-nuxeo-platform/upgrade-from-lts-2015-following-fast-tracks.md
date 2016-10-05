@@ -184,7 +184,7 @@ history:
 
 ### Parameters to Update
 
-<table><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Modification</th><th colspan="1">Reference</th></tr><tr><td colspan="1">`nuxeo.s3storage.bucket.prefix`</td><td colspan="1">**Moved** to `nuxeo.s3storage.bucket_prefix`</td><td colspan="1">[NXP-18565](https://jira.nuxeo.com/browse/NXP-18565)</td></tr><tr><td colspan="1">`nuxeo.vcs.ddlmode`</td><td colspan="1">**New default value** to `execute` (previously: `compat`)</td><td colspan="1">[NXP-17396](https://jira.nuxeo.com/browse/NXP-17396)</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Modification</th><th colspan="1">Reference</th></tr><tr><td colspan="1">`nuxeo.s3storage.bucket.prefix`</td><td colspan="1">**Moved** to `nuxeo.s3storage.bucket_prefix`</td><td colspan="1">[NXP-18565](https://jira.nuxeo.com/browse/NXP-18565)</td></tr><tr><td colspan="1">`nuxeo.vcs.ddlmode`</td><td colspan="1">**New default value** to `execute` (previously: `compat`)</td><td colspan="1">[NXP-17396](https://jira.nuxeo.com/browse/NXP-17396)</td></tr></tbody></table></div>
 
 ## Code Changes
 
@@ -241,7 +241,7 @@ To upgrade your code:
 
 </div>
 
-<table><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Description</th><th colspan="1">Reference</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Description</th><th colspan="1">Reference</th></tr><tr><td colspan="1">
 
 `nuxeo.automation.properties.value.trim`
 
@@ -253,7 +253,7 @@ Force Automation properties value to be trimmed (default:`false`)
 
 [NXP-19170](https://jira.nuxeo.com/browse/NXP-19170)
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 <div>
 
@@ -457,3 +457,14 @@ The&nbsp; [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/packag
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Upgrade from LTS 2015 to 8.3]({{page page='upgrade-from-lts-2015-to-83'}})
+*   [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

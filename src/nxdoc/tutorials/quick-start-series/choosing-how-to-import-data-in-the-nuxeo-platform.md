@@ -146,7 +146,7 @@ By default, the Nuxeo Platform allows users to import several documents at a tim
 
 **Import criteria details**
 
-<table><tbody><tr><th colspan="1">Criteria</th><th colspan="1">Value</th><th colspan="1">Comment</th></tr><tr><td colspan="1">Average import speed</td><td colspan="1">Low</td><td colspan="1">A few documents.</td></tr><tr><td colspan="1">Custom logic handling</td><td colspan="1">Built-in</td><td colspan="1">All custom logic will be called.</td></tr><tr><td colspan="1">Ability to handle huge volume</td><td colspan="1">No</td><td colspan="1">No transaction batch management.</td></tr><tr><td colspan="1">Production interruption</td><td colspan="1">No</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Blob upload</td><td colspan="1">In transaction</td><td colspan="1">The blob upload is part of the import transaction.</td></tr><tr><td colspan="1">Post import tasks</td><td colspan="1">None</td><td colspan="1">&nbsp;</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Criteria</th><th colspan="1">Value</th><th colspan="1">Comment</th></tr><tr><td colspan="1">Average import speed</td><td colspan="1">Low</td><td colspan="1">A few documents.</td></tr><tr><td colspan="1">Custom logic handling</td><td colspan="1">Built-in</td><td colspan="1">All custom logic will be called.</td></tr><tr><td colspan="1">Ability to handle huge volume</td><td colspan="1">No</td><td colspan="1">No transaction batch management.</td></tr><tr><td colspan="1">Production interruption</td><td colspan="1">No</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Blob upload</td><td colspan="1">In transaction</td><td colspan="1">The blob upload is part of the import transaction.</td></tr><tr><td colspan="1">Post import tasks</td><td colspan="1">None</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>
 
 The key point is that all these user import systems are designed to be easy to use, but are not designed for high performance and huge volume.
 
@@ -176,11 +176,11 @@ Using the API allows you to easily define import custom logic on the client side
 
 **Import criteria details**
 
-<table><tbody><tr><th colspan="1">Criteria</th><th colspan="1">Value</th><th colspan="1">Comment</th></tr><tr><td colspan="1">Average import speed</td><td colspan="1">Low / Medium</td><td colspan="1">Several documents (between 5 and 20 docs).</td></tr><tr><td colspan="1">Custom logic handling</td><td colspan="1">Built-in</td><td colspan="1">All custom logic will be called.</td></tr><tr><td colspan="1">Ability to handle huge volume</td><td colspan="1">No</td><td colspan="1">No easy transaction batch management.</td></tr><tr><td colspan="1">Production interruption</td><td colspan="1">No</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Blob upload</td><td colspan="1">In process</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Criteria</th><th colspan="1">Value</th><th colspan="1">Comment</th></tr><tr><td colspan="1">Average import speed</td><td colspan="1">Low / Medium</td><td colspan="1">Several documents (between 5 and 20 docs).</td></tr><tr><td colspan="1">Custom logic handling</td><td colspan="1">Built-in</td><td colspan="1">All custom logic will be called.</td></tr><tr><td colspan="1">Ability to handle huge volume</td><td colspan="1">No</td><td colspan="1">No easy transaction batch management.</td></tr><tr><td colspan="1">Production interruption</td><td colspan="1">No</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Blob upload</td><td colspan="1">In process</td><td colspan="1">
 
 The blob upload is part of the import process.
 
-</td></tr><tr><td colspan="1">Post import tasks</td><td colspan="1">None</td><td colspan="1">&nbsp;</td></tr></tbody></table>{{#> panel heading='For more information'}}
+</td></tr><tr><td colspan="1">Post import tasks</td><td colspan="1">None</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>{{#> panel heading='For more information'}}
 
 *   [REST API]({{page page='rest-api'}})
 *   [Automation]({{page page='automation'}})
@@ -204,13 +204,13 @@ The importer does handle several aspects that are important for managing perform
 
 **Import criteria details**
 
-<table><tbody><tr><th colspan="1">Criteria</th><th colspan="1">Value</th><th colspan="1">Comment</th></tr><tr><td colspan="1">Average import speed</td><td colspan="1">High</td><td colspan="1">Several hundreds of documents (between 50 and 500 docs).</td></tr><tr><td colspan="1">Custom logic handling</td><td colspan="1">Built-in</td><td colspan="1">Most custom logic will be called: depending on which listeners are removed.</td></tr><tr><td colspan="1">Ability to handle huge volume</td><td colspan="1">Yes</td><td colspan="1">Native handling of transaction batch + bulk event handler mode.</td></tr><tr><td colspan="1">Production interruption</td><td colspan="1">Yes</td><td colspan="1">The bulk mode is not adapted for a normal usage: at least a dedicated Nuxeo node should be allocated.
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Criteria</th><th colspan="1">Value</th><th colspan="1">Comment</th></tr><tr><td colspan="1">Average import speed</td><td colspan="1">High</td><td colspan="1">Several hundreds of documents (between 50 and 500 docs).</td></tr><tr><td colspan="1">Custom logic handling</td><td colspan="1">Built-in</td><td colspan="1">Most custom logic will be called: depending on which listeners are removed.</td></tr><tr><td colspan="1">Ability to handle huge volume</td><td colspan="1">Yes</td><td colspan="1">Native handling of transaction batch + bulk event handler mode.</td></tr><tr><td colspan="1">Production interruption</td><td colspan="1">Yes</td><td colspan="1">The bulk mode is not adapted for a normal usage: at least a dedicated Nuxeo node should be allocated.
 High speed import is likely to saturate the database: this will slow down all interactive usages.</td></tr><tr><td colspan="1">Blob upload</td><td colspan="1">Separated</td><td colspan="1">
 
 Blobs are directly read on the server side FileSystem.
 
 </td></tr><tr><td colspan="1">Post import tasks</td><td colspan="1">May need to restart full text indexing.
-May need to restart process for listeners that were by-passed .</td><td colspan="1">In a lot of cases, the full text indexing is deactivated during processing, as well as other slow processes like video conversation, thumbnails generation, etc. After import, these processes need to be restarted.</td></tr></tbody></table>{{#> panel heading='For more information'}}
+May need to restart process for listeners that were by-passed .</td><td colspan="1">In a lot of cases, the full text indexing is deactivated during processing, as well as other slow processes like video conversation, thumbnails generation, etc. After import, these processes need to be restarted.</td></tr></tbody></table></div>{{#> panel heading='For more information'}}
 
 *   [Nuxeo Bulk Document Importer Developer Documentation]({{page page='nuxeo-bulk-document-importer'}})
 
@@ -224,7 +224,7 @@ Of course, this is by far the fastest technique, but since you will bypass all t
 
 **Import criteria details**
 
-<table><tbody><tr><th colspan="1">Criteria</th><th colspan="1">Value</th><th colspan="1">Comment</th></tr><tr><td colspan="1">Average import speed</td><td colspan="1">Very high</td><td colspan="1">Several thousands of Documents (between 500 and 5000 docs).</td></tr><tr><td colspan="1">Custom logic handling</td><td colspan="1">Bypass</td><td colspan="1">All Java Layer is by-passed.</td></tr><tr><td colspan="1">Ability to handle huge volume</td><td colspan="1">Yes</td><td colspan="1">Native handling of transaction batch + bulk event handler mode.</td></tr><tr><td colspan="1">Production interruption</td><td colspan="1">Yes</td><td colspan="1">Usually, the database server configuration is changed to make the bulk insert more efficient.</td></tr><tr><td colspan="1">Blob upload</td><td colspan="1">Not handled</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Criteria</th><th colspan="1">Value</th><th colspan="1">Comment</th></tr><tr><td colspan="1">Average import speed</td><td colspan="1">Very high</td><td colspan="1">Several thousands of Documents (between 500 and 5000 docs).</td></tr><tr><td colspan="1">Custom logic handling</td><td colspan="1">Bypass</td><td colspan="1">All Java Layer is by-passed.</td></tr><tr><td colspan="1">Ability to handle huge volume</td><td colspan="1">Yes</td><td colspan="1">Native handling of transaction batch + bulk event handler mode.</td></tr><tr><td colspan="1">Production interruption</td><td colspan="1">Yes</td><td colspan="1">Usually, the database server configuration is changed to make the bulk insert more efficient.</td></tr><tr><td colspan="1">Blob upload</td><td colspan="1">Not handled</td><td colspan="1">
 
 Blobs needs to be managed by a separated process.
 
@@ -235,7 +235,7 @@ May need to restart some triggers.</td><td colspan="1">
 *   Rebuild ancestors cache.
 *   Rebuild read-ACLs
 
-</td></tr></tbody></table>{{#> panel heading='For more information'}}
+</td></tr></tbody></table></div>{{#> panel heading='For more information'}}
 
 *   [VCS]({{page page='vcs'}})
 *   [Internal VCS Model]({{page space='NXDOC' page='Internal VCS+Model'}})

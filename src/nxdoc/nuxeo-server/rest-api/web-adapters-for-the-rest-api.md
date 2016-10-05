@@ -608,3 +608,15 @@ Here is an example :
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [WebEngine (JAX-RS)]({{page page='webengine-jax-rs'}})
+*   [REST API]({{page page='rest-api'}})
+*   [Content Enricher]({{page page='content-enricher'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

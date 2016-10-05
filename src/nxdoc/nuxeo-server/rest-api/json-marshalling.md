@@ -22,386 +22,386 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/RJBkAQ'
     source_link: /display/NXDOC/JSON+Marshalling
 history:
-    -
+    - 
         author: Guillaume Renard
         date: '2016-06-01 12:38'
         message: ''
         version: '76'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-04-04 15:35'
         message: ''
         version: '75'
-    -
+    - 
         author: Thomas Roger
         date: '2015-11-04 13:33'
         message: ''
         version: '74'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-15 09:31'
         message: Add anchor
         version: '73'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-15 09:29'
         message: ''
         version: '72'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-15 16:05'
         message: >-
             Split table in section JSON Marshallers Provided by the Nuxeo
             Platform
         version: '71'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-15 15:19'
         message: ''
         version: '70'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-15 14:46'
         message: 'Fix format page '
         version: '69'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-09-15 14:31'
         message: ''
         version: '68'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-20 11:56'
         message: Add links
         version: '67'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-20 09:43'
         message: fix typo
         version: '66'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-16 15:13'
         message: >-
             Add links to javadoc in table JSON Marshallers Provided by the Nuxeo
             Platform
         version: '65'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-16 11:59'
         message: split table in section RenderingContext API
         version: '64'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-16 11:47'
         message: fix typo
         version: '63'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-16 10:07'
         message: ''
         version: '62'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-16 09:55'
         message: Add link to marshalling service on explorer
         version: '61'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-15 15:17'
         message: Fix typos and add links
         version: '60'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-07 14:38'
         message: cleanup formatting
         version: '59'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-03-26 14:34'
         message: ''
         version: '58'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-03-26 14:33'
         message: ''
         version: '57'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-03-26 14:07'
         message: ''
         version: '56'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-03-26 13:54'
         message: ''
         version: '55'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-25 14:33'
         message: ''
         version: '54'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-25 07:52'
         message: ''
         version: '53'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-25 07:46'
         message: ''
         version: '52'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 16:46'
         message: ''
         version: '51'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 16:43'
         message: ''
         version: '50'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 16:36'
         message: ''
         version: '49'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 16:35'
         message: ''
         version: '48'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 16:32'
         message: ''
         version: '47'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 16:04'
         message: ''
         version: '46'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 16:02'
         message: ''
         version: '45'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 16:00'
         message: ''
         version: '44'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 15:58'
         message: ''
         version: '43'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 15:20'
         message: ''
         version: '42'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 15:17'
         message: ''
         version: '41'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 14:47'
         message: ''
         version: '40'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 14:45'
         message: ''
         version: '39'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 14:40'
         message: ''
         version: '38'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 14:24'
         message: ''
         version: '37'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 14:20'
         message: ''
         version: '36'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 14:05'
         message: ''
         version: '35'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 13:21'
         message: ''
         version: '34'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 12:46'
         message: ''
         version: '33'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 12:42'
         message: ''
         version: '32'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 12:37'
         message: ''
         version: '31'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 12:32'
         message: ''
         version: '30'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 12:26'
         message: ''
         version: '29'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 11:28'
         message: ''
         version: '28'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 11:13'
         message: ''
         version: '27'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 10:57'
         message: ''
         version: '26'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 10:28'
         message: ''
         version: '25'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 09:59'
         message: ''
         version: '24'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 09:58'
         message: ''
         version: '23'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 09:56'
         message: ''
         version: '22'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-24 09:45'
         message: ''
         version: '21'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 16:19'
         message: ''
         version: '20'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 16:17'
         message: ''
         version: '19'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 16:09'
         message: ''
         version: '18'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 15:25'
         message: ''
         version: '17'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 15:24'
         message: ''
         version: '16'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 15:16'
         message: ''
         version: '15'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 15:13'
         message: ''
         version: '14'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 15:09'
         message: ''
         version: '13'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 15:08'
         message: ''
         version: '12'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 14:39'
         message: ''
         version: '11'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 14:24'
         message: ''
         version: '10'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 12:36'
         message: ''
         version: '9'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 12:13'
         message: ''
         version: '8'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 12:10'
         message: ''
         version: '7'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 12:05'
         message: ''
         version: '6'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 11:57'
         message: ''
         version: '5'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 11:30'
         message: ''
         version: '4'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 11:29'
         message: ''
         version: '3'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 11:29'
         message: ''
         version: '2'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-03-23 09:51'
         message: ''
@@ -431,7 +431,7 @@ Let's suppose we'd like to create marshallers for the following Java object:
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
 
-}
+} 
 ```
 
 ### Creating a Java-to-JSON Marshaller
@@ -553,7 +553,7 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
     <register class="org.nuxeo.example.ProductListJsonWriter" enable="true" />
     <register class="org.nuxeo.example.ProductListJsonReader" enable="true" />
   </extension>
-</component>
+</component> 
 ```
 
 {{/panel}}
@@ -720,7 +720,7 @@ You can send the parameters using HTTP GET parameter or HTTP header (useful for 
 
 ```bash
 $ curl -X GET 'http://localhost:8080/nuxeo/site/productApp/product/ref/10001?loadProductDescription=true'
-$ curl -X GET -H 'loadProductDescription:true' 'http://localhost:8080/nuxeo/site/productApp/product/ref/10001'
+$ curl -X GET -H 'loadProductDescription:true' 'http://localhost:8080/nuxeo/site/productApp/product/ref/10001' 
 ```
 
 {{/panel}}
@@ -760,7 +760,7 @@ private static final String CTX_KEY = "_STORED_GENERATED_RENDERING_CONTEXT";
 
 #### Setting/Getting the Nuxeo Base URL
 
-<table><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">Retrieved from the HTTP call</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">Retrieved from the HTTP call</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
 
 ```
 ctx = CtxBuilder.base("http://server/nuxeo").get();
@@ -772,11 +772,11 @@ ctx = CtxBuilder.base("http://server/nuxeo").get();
 String url = ctx.getBaseUrl();
 ```
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### Setting/Getting the Current Locale
 
-<table><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">Retrieved from the end-user's browser</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">Retrieved from the end-user's browser</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
 
 ```
 ctx = CtxBuilder.locale(Locale.FRENCH).get();
@@ -788,11 +788,11 @@ ctx = CtxBuilder.locale(Locale.FRENCH).get();
 Locale locale = ctx.getLocale();
 ```
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### Delivering/Using a CoreSession to/in Marshallers
 
-<table><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">Retrieved from the WebContext, or from a document or created from a `nxrepository` parameter or created from a X-NXrepository header.</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">Retrieved from the WebContext, or from a document or created from a `nxrepository` parameter or created from a X-NXrepository header.</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
 
 ```
 CoreSession session = ...;
@@ -813,11 +813,11 @@ try (SessionWrapper wrapper = ctx.getSession(null)) {CoreSession session = wrapp
     }
 ```
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### Setting/Getting Any Parameter
 
-<table><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
 
 URL:
 
@@ -851,11 +851,11 @@ List<Object> list = ctx.getParameters("paramName");
 boolean b = ctx.getBooleanParameter("paramName");
 ```
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### Loading Some Document Properties
 
-<table><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
 
 URL:
 
@@ -888,13 +888,13 @@ ctx.setParameterValues("properties", "dublincore", "file");
 Set<String> properties = ctx.getProperties();
 ```
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### Loading Additional Parts of an Object Whose entity-type Is 'objectType'
 
 The corresponding behavior depends on the marshaller.
 
-<table><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
 
 URL:
 
@@ -927,13 +927,13 @@ ctx.setParameterValues("fetch.objectType", "part1", "part2");
 Set<String> toLoad = ctx.getFetched("objectType");
 ```
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### Enabling Enricher for an objectType
 
 The enricher will contribute to the object marshalling. The object marshaller must extend `ExtensibleEntityJsonWriter`. The given enricher name must match an existing enricher for this object type.
 
-<table><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
 
 URL:
 
@@ -947,7 +947,7 @@ HTTP Header:
 </td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">{{#> panel type='code' heading='Only for documents'}}
 
 ```
-ctx = CtxBuilder.enrichDoc("children", "acl").get();
+ctx = CtxBuilder.enrichDoc("children", "acl").get(); 
 ```
 
 {{/panel}}
@@ -966,11 +966,11 @@ ctx.setParameterValues("enrichers.objectType", "children", "acl");
 Set<String> enricherToActivate = ctx.getEnrichers("objectType");
 ```
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### Translating Some Part of an Object Which May Contains Some l10n Key
 
-<table><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
 
 URL:
 
@@ -996,13 +996,13 @@ ctx.setParameterValues("translate.objectType", "elementToTranslate");
 Set<String> toTranslate = ctx.getTranslated("objectType");
 ```
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### {{> anchor 'renderingcontext-api-depth-aggregation'}}Controlling the Aggregation Depth
 
 Available values are: root for no aggregation, children for 1 level, max for 2 levels. Default value is 'children'. See next chapter for more details
 
-<table><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
 
 URL:
 
@@ -1032,7 +1032,7 @@ try (Closeable resource = ctx.wrap().controlDepth().open()) {
 }
 ```
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### {{> anchor 'aggregating-marshallers-infinite-loops'}}Aggregating Marshallers and Avoiding Infinite Loops
 
@@ -1197,7 +1197,7 @@ An enrichable JSON object provides a `contextParameters` field which contains al
         "theThirdEnricherKey-Entry1": { ... },
         "theThirdEnricherKey-Entry2": { ... }
     }
-}
+} 
 ```
 
 {{/panel}}
@@ -1235,7 +1235,7 @@ Of course, like any JSON marshaller, you have to register it.
   <extension target="org.nuxeo.ecm.core.io.MarshallerRegistry" point="marshallers">
     <register class="org.nuxeo.example.BreadcrumbJsonEnricher" enable="true" />
   </extension>
-</component>
+</component> 
 ```
 
 {{/panel}}
@@ -1311,7 +1311,7 @@ Each existing marshaller class provides a well documented Javadoc. Please, read 
 
 #### **document**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 DocumentModel
 
@@ -1358,11 +1358,11 @@ Reads a document from JSON. Supports either reference or JSON object for extende
 *   Otherwise, you have to specify the name and the type of the document.
 *   The result is a SimpleDocumentModel.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **document / acls**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 DocumentModel
 
@@ -1380,11 +1380,11 @@ Enriches a document. Adds document ACLs.
 
 Activated with `enrichers.document=acls.`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **document / permissions**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 DocumentModel
 
@@ -1402,11 +1402,11 @@ Enriches a document. Adds user's permission on the document.
 
 Activated with `enrichers.document=permissions`.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **document / breadcrumb**
 
-<table><tbody><tr><th colspan="1">Managed Java type</th><th colspan="1">Type</th><th colspan="1">Java class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java type</th><th colspan="1">Type</th><th colspan="1">Java class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 DocumentModel
 
@@ -1424,11 +1424,11 @@ Enriches a document. Add the parent's documents.
 
 Activated with `enrichers.document=breadcrumb`.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **document / children**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 DocumentModel
 
@@ -1446,11 +1446,11 @@ Enriches a document. Adds the children documents.
 
 Activated with `enrichers.document=children`.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **document / contextualParameters**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 DocumentModel
 
@@ -1467,16 +1467,16 @@ Java-to-JSON Enricher
 Enriches a document with free key/value pair. Only from the server side.
 
 ```
-String name = "contextualParameters";
-Map<String, String> keyValues = ...;
+String name = "contextualParameters"; 
+Map<String, String> keyValues = ...; 
 ctx.enrich(name).param(name, keyValues).get();
 ```
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **document / preview**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 DocumentModel
 
@@ -1494,11 +1494,11 @@ Enriches a document. Adds the URL of its preview.
 
 Activated with `enrichers.document=preview`.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **document / thumbnail**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 DocumentModel
 
@@ -1516,11 +1516,11 @@ Enriches a document. Adds the URL of its thumbnail.
 
 Activated with `enrichers.document=thumbnail`.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **documents**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 List<DocumentModel>
 
@@ -1558,11 +1558,11 @@ Reads a list of document from JSON.
 
 Delegates the document's reading to the Nuxeo Platform.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **acls**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 ACP
 
@@ -1578,11 +1578,11 @@ Java-to-JSON
 
 Writes a set of access right as JSON. It is enrichable and extendable
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **docType**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 DocumentType
 
@@ -1602,11 +1602,11 @@ It is enrichable and extendable
 
 Delegates the writing of the type's schemas to the Nuxeo Platform.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **docTypes**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 List<DocumentType>
 
@@ -1626,11 +1626,11 @@ Supports paginated lists and provides pagination information.
 
 Delegates the type's writing to the Nuxeo Platform.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **facet**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 CompositeType
 
@@ -1650,11 +1650,11 @@ It is enrichable and extendable.
 
 Delegates the writing of the facet's schemas to the Nuxeo Platform.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **facets**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 List<CompositeType>
 
@@ -1674,11 +1674,11 @@ Supports paginated lists and provides pagination information.
 
 Delegates the facet's writing to the Nuxeo Platform.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **schema**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 Schema
 
@@ -1696,11 +1696,11 @@ Writes a schema as JSON.
 
 It is enrichable and extendable.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **schemas**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 List<Schema>
 
@@ -1720,11 +1720,11 @@ Supports paginated lists and provides pagination information.
 
 Delegates the schema's writing to the Nuxeo Platform.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **validation_constraint**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 Constraint
 
@@ -1742,11 +1742,11 @@ Writes a validation constraint as JSON.
 
 It is enrichable and extendable.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **validation_constraints**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 List<Constraint>
 
@@ -1766,11 +1766,11 @@ Supports paginated lists and provides pagination information.
 
 Delegates the constraint's writing to the Nuxeo Platform.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **validation_report**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 DocumentValidationReport
 
@@ -1790,11 +1790,11 @@ It is enrichable and extendable.
 
 Delegates the constraint's writing to the Nuxeo Platform.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **user**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 NuxeoPrincipal
 
@@ -1828,11 +1828,11 @@ JSON-to-Java
 
 Reads a user from JSON
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **users**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 List<NuxeoPrincipal>
 
@@ -1872,11 +1872,11 @@ Reads a list of users from JSON.
 
 Delegates the user's reading to the Nuxeo Platform
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **group**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 NuxeoGroup
 
@@ -1910,11 +1910,11 @@ JSON-to-Java
 
 Reads a group from JSON
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **groups**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 List<NuxeoGroup>
 
@@ -1952,11 +1952,11 @@ Reads a list of groups from JSON.
 
 Delegates the group's reading to the Nuxeo Platform.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### directoryEntry
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 DirectoryEntry
 
@@ -1995,11 +1995,11 @@ JSON-to-Java
 
 Reads a directory entry from JSON
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **directoryEntries**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 List<DirectoryEntry>
 
@@ -2037,11 +2037,11 @@ Reads a list of directory entries from JSON.
 
 Delegates the directory entries reading to the Nuxeo Platform.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **logEntry**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 LogEntry
 
@@ -2079,11 +2079,11 @@ It is enrichable and extendable.
 
 Delegates the entries writing to the Nuxeo Platform.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **workflow**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 DocumentRoute
 
@@ -2104,11 +2104,11 @@ Writes a workflow instance (DocumentRoute) as JSON. It is enrichable and extenda
 *   `fetch.workflow=attachedDocumentIds`
     Resolves the attached document Ids
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### **task**
 
-<table><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
 
 Task
 
@@ -2129,7 +2129,7 @@ Writes a task as JSON. It is enrichable and extendable.
 *   `fetch.task=targetDocumentIds`
     Resolves the target document Ids
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## {{> anchor 'document-json-extended-fields'}}Document JSON and Extended Fields
 
@@ -2382,7 +2382,7 @@ System.out.println( json.has("field1.field2").toString() );
         "field3": "myDataShouldBeHere"
     } ]
   }
-}
+} 
 ```
 
 {{/panel}}

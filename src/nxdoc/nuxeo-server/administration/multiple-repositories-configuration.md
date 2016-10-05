@@ -195,3 +195,12 @@ There must be an Elasticsearch index associated for each repository. See the [El
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [JDBC Datasource]({{page page='jdbc-datasource'}})
+*   [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
+*   [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+*   [File Storage]({{page page='file-storage'}})
+
+{{/panel}}</div><div class="column medium-6">null</div></div>

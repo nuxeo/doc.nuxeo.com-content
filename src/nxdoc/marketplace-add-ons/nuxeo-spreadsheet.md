@@ -175,3 +175,16 @@ Note that the spreadsheet expects the enricher's name to match the directory nam
 *   For more information about the Mapping between listing layouts widgets and the displayed cell types, see&nbsp;[https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/master/src/main/js/app/ui/widgets.js#L57](https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/master/src/main/js/app/ui/widgets.js#L57)
 
 The Nuxeo Spreadsheet add-on is done integrating&nbsp;[Handsontable](http://handsontable.com/).&nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Content View - Results]({{page space='studio' page='content-view-results'}})
+*   [Adding Features]({{page space='userdoc' page='adding-features'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

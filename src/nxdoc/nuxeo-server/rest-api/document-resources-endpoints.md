@@ -92,7 +92,7 @@ We provide some sample usages of the REST API. You can also have a try of the RE
 
 ## id Endpoint
 
-<table><tbody><tr><th colspan="1">Path</th><th colspan="1">Endpoint</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Path</th><th colspan="1">Endpoint</th></tr><tr><td colspan="1">
 
 GET
 
@@ -152,7 +152,7 @@ DELETE
 
 `/api/v1/repo/{repoId}/id/{docId}`
 
-</td><td colspan="1">Deletes a document by its id in a specific repository</td></tr></tbody></table>
+</td><td colspan="1">Deletes a document by its id in a specific repository</td></tr></tbody></table></div>
 
 ### Properties
 
@@ -212,7 +212,7 @@ DELETE /nuxeo/site/api/v1/id/{idOfTheDoc}
 
 ## Path Endpoint
 
-<table><tbody><tr><th colspan="1">Path</th><th colspan="1">Endpoint</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Path</th><th colspan="1">Endpoint</th></tr><tr><td colspan="1">
 
 GET
 
@@ -260,10 +260,17 @@ POST
 
 `/api/v1/repo/{repoId}/path/{docPath}`
 
-</td><td colspan="1">Creates a document in a specific repository by its parent path</td></tr></tbody></table>
+</td><td colspan="1">Creates a document in a specific repository by its parent path</td></tr></tbody></table></div>
 
 ### Properties
 
 The `path` endpoint does not requires paramets besides the `docPath` and `repoId` parameters. It can however leverage web adapters such as `@children`, `@search`, `@bo`. See the examples on the page [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}}).
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [REST API Entity Types]({{page page='rest-api-entity-types'}})
+*   [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}})
+
+{{/panel}}</div><div class="column medium-6">null</div></div>

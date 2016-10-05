@@ -262,7 +262,7 @@ Templates can be created in the Templates space, in workspaces and in folders.
 
 **Template properties**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -389,7 +389,7 @@ Rendering output format
 
 Select the rendition's format. If the chosen format is different from the template's file format, the rendition will be converted once generated.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### Using template documents
 

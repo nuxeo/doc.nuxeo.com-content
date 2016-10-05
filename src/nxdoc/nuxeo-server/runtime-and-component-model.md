@@ -30,302 +30,302 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/DIAO'
     source_link: /display/NXDOC/Runtime+and+Component+Model
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 12:13'
         message: ''
         version: '60'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-09-24 21:23'
         message: ''
         version: '59'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-05 19:33'
         message: ''
         version: '58'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-03 15:21'
         message: ''
         version: '57'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-09-22 23:55'
         message: ''
         version: '56'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-09-22 23:54'
         message: ''
         version: '55'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-09-22 23:52'
         message: ''
         version: '54'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-19 11:16'
         message: ''
         version: '53'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-13 15:20'
         message: Updated links
         version: '52'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-29 15:50'
         message: ''
         version: '51'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-21 16:49'
         message: ''
         version: '50'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-17 17:53'
         message: ''
         version: '49'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-17 17:36'
         message: ''
         version: '48'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 23:36'
         message: ''
         version: '47'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 23:25'
         message: ''
         version: '46'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 23:16'
         message: ''
         version: '45'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 23:12'
         message: Reverted from v. 41
         version: '44'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 23:09'
         message: ''
         version: '43'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 23:08'
         message: ''
         version: '42'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 14:42'
         message: ''
         version: '41'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 13:51'
         message: ''
         version: '40'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 13:26'
         message: ''
         version: '39'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 13:21'
         message: ''
         version: '38'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 13:15'
         message: ''
         version: '37'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 12:01'
         message: ''
         version: '36'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 11:58'
         message: ''
         version: '35'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 11:52'
         message: ''
         version: '34'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 11:51'
         message: ''
         version: '33'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 11:49'
         message: ''
         version: '32'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-16 11:43'
         message: ''
         version: '31'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 14:35'
         message: ''
         version: '30'
-    -
+    - 
         author: Benjamin Jalon
         date: '2012-04-10 11:16'
         message: Migrated to Confluence 4.0
         version: '29'
-    -
+    - 
         author: Benjamin Jalon
         date: '2012-04-10 11:16'
         message: ''
         version: '28'
-    -
+    - 
         author: Benjamin Jalon
         date: '2012-04-10 11:15'
         message: ''
         version: '27'
-    -
+    - 
         author: Benjamin Jalon
         date: '2012-03-16 14:19'
         message: ''
         version: '26'
-    -
+    - 
         author: Benjamin Jalon
         date: '2012-03-16 14:02'
         message: ''
         version: '25'
-    -
+    - 
         author: Benjamin Jalon
         date: '2012-03-16 13:54'
         message: ''
         version: '24'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2011-11-15 17:08'
         message: ''
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-19 11:29'
         message: ''
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-06 19:15'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-06 19:08'
         message: formatting and typos
         version: '20'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-06-02 01:46'
         message: ''
         version: '19'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-06-02 01:45'
         message: ''
         version: '18'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-06-02 01:44'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2010-05-20 18:15'
         message: formatting and typos
         version: '16'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-11 13:05'
         message: ''
         version: '15'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-11 13:04'
         message: ''
         version: '14'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-11 12:54'
         message: ''
         version: '13'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-11 12:07'
         message: ''
         version: '12'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-11 12:07'
         message: ''
         version: '11'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-11 12:05'
         message: ''
         version: '10'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-11 11:58'
         message: ''
         version: '9'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-11 11:54'
         message: ''
         version: '8'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-11 11:50'
         message: ''
         version: '7'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-11 11:48'
         message: ''
         version: '6'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-11 11:46'
         message: ''
         version: '5'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-11 11:41'
         message: ''
         version: '4'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-11 11:37'
         message: ''
         version: '3'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-05-11 11:37'
         message: ''
         version: '2'
-    -
+    - 
         author: Admin name placeholder
         date: '2010-02-26 10:25'
         message: ''

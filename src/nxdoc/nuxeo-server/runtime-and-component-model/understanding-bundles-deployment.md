@@ -225,7 +225,7 @@ In a sense, NuxeoCtl is close to what is provided in several &ldquo;Cloud packag
 
 Nuxeo Platform currently supports several deployment targets.
 
-<table><tbody><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
 
 &nbsp;
 
@@ -413,7 +413,7 @@ No
 
 No
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Depending on the target platform:
 
@@ -432,3 +432,14 @@ In the static deployment model NuxeoCtl pack command is run to:
     ![]({{file name='Nx-static-deploy.png'}} ?w=600,h=313,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related sections in this documentation'}}
+
+*   [Deployment Options]({{page page='deployment-options'}})
+*   [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

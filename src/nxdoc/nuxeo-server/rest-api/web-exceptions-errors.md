@@ -110,7 +110,7 @@ Simple mode is activated by default. The extended mode can be configured through
 
 ## Properties
 
-<table><tbody><tr><th colspan="1">Key</th><th colspan="1">Value</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Key</th><th colspan="1">Value</th></tr><tr><td colspan="1">
 
 `entity-type`
 
@@ -146,7 +146,7 @@ string
 
 json object
 
-</td><td colspan="1">All stack trace wrapped into JSON Object</td></tr></tbody></table>
+</td><td colspan="1">All stack trace wrapped into JSON Object</td></tr></tbody></table></div>
 
 ## Exception Example
 

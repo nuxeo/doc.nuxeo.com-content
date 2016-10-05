@@ -95,3 +95,17 @@ if (!status.isBinariesGCInProgress()) {
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Deleting Content]({{page space='userdoc' page='deleting-content'}}) (User documentation)
+*   [Deleting Documents]({{page page='deleting-documents'}})
+*   [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

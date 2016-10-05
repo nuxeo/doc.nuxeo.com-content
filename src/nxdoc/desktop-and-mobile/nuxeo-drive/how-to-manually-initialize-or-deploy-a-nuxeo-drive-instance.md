@@ -248,3 +248,17 @@ To set up the MSI variables:
 {{! /multiexcerpt}}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about Nuxeo Drive'}}
+
+*   [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}})
+*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+*   [Nuxeo Drive user documentation]({{page space='userdoc' page='nuxeo-drive'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

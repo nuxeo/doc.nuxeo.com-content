@@ -109,3 +109,13 @@ systemctl [start|stop|reload] nuxeo
 &nbsp;
 
 Credits to [undefined]() who contributed it for CentOs or SUSE.
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Linux-Related Documentation'}}
+
+*   [Installing the Nuxeo Platform on Linux]({{page space='admindoc' page='installing-the-nuxeo-platform-on-linux'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -67,3 +67,13 @@ After the package is installed, a new collaborative space is available, called E
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about EasyShare'}}
+
+*   [EasyShare user documentation]({{page space='userdoc' page='easyshare'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -219,7 +219,7 @@ By default, `data` and `log` directories are stored inside the Nuxeo tree. To ea
 
 **Data and log directories configuration**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field / Property
 
@@ -247,7 +247,7 @@ Log directory
 Log directory (absolute or relative to NUXEO_HOME).
 Linux recommended path: `/var/log/nuxeo/...`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Defining Environment Variables
 
@@ -292,3 +292,14 @@ Before going live, you should configure one of the production-safe database supp
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related content'}}
+
+*   [Admin Tab Overview]({{page page='admin-tab-overview'}})
+*   [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -58,7 +58,7 @@ The solution is simple: `nuxeo.war` tree should not be at root of the JAR.
 
 Sample directory structure:
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 <span style="color: rgb(0,0,0);">Before (Jboss 4.2)</span>
 
@@ -91,11 +91,11 @@ Sample directory structure:
 `-- nuxeo.war
 `-- my_page.xhtml
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 This implies a small change in the deployment-fragment:
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Before (Jboss 4.2)
 
@@ -125,7 +125,7 @@ After (Jboss 5.1)
 
 ```
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 If this is not done, or if there is still a "nuxeo.war" directory present in your jar, you will get an exception like:
 
@@ -175,7 +175,7 @@ This involves doing some small changes in the way the WebService are implemented
 Because of some limitation of the JBossWS EJB3 deployer we can not deploy WebServices on top of EJB3 if we want to keep endpoint URLs consistent.
 So this simply means you should remove the @Stateless annotation in the Beans providing WebService.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Before (Jboss 4.2)
 
@@ -200,7 +200,7 @@ public class WSAuditBean extends AbstractNuxeoWebService implements
 @SOAPBinding(style = Style.DOCUMENT)
 public class WSAuditBean extends AbstractNuxeoWebService implements
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 #### SUN-JAX-WS vs JBossWS binding
 
@@ -209,7 +209,7 @@ Basically, SUN-JAX-WS uses a dedicated `sun-jax-ws.xml` file and JBossWS uses th
 
 The Nuxeo template system are configured so that you can declare both bindings in your bundle and Nuxeo will deploy the right one depending on the target deployment host.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 JBossWS binding
 
@@ -243,7 +243,7 @@ NB: Yes, you declare you Bean as a servlet even if it does not implement the nee
 `url-pattern="/webservices/nuxeoaudit" />`
 `</extension>`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### Requirements declaration
 
@@ -349,7 +349,7 @@ Following structure changes in `nuxeo.ear`, templates structure has changed a li
 
 If you override a template, check the directories. For instance, here are the `default` template changes:
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 <span style="color: rgb(0,0,0);">Before (Jboss 4.2)</span>
 
@@ -380,7 +380,7 @@ If you override a template, check the directories. For instance, here are the `d
 |-- default-repository-config.xml
 `-- sql.properties
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 As defined in `nuxeo.defaults` ("`default.target=server/default/deploy`"), the target directory of this template is now `server/default/deploy` instead of `server/default/deploy/nuxeo.ear`.
 

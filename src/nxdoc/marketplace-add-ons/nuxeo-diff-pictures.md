@@ -95,3 +95,16 @@ If you want to visualize the content changes, click on the icon&nbsp;![]({{file 
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Diff]({{page space='userdoc' page='nuxeo-diff'}})
+*   [Traceability]({{page space='userdoc' page='traceability'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

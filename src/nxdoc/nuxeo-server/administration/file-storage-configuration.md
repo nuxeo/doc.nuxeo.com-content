@@ -206,3 +206,16 @@ Usually, if you don't use the advanced Blob Dispatcher capabilities, you will ne
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [DefaultBinaryManager Configuration]({{page space='admindoc' page='defaultbinarymanager-configuration'}})
+*   [Implementing Encryption]({{page space='admindoc' page='implementing-encryption'}})
+*   [Amazon S3 Online Storage]({{page space='admindoc' page='amazon-s3-online-storage'}})
+*   [Nuxeo Live Connect]({{page space='admindoc' page='nuxeo-live-connect'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -120,3 +120,18 @@ history:
 * * *
 
 </div>
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Managing Performance]({{page page='managing-performance'}})
+*   [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
+*   [Tracking the Performance of the Nuxeo Platform]({{page page='tracking-the-performance-of-the-nuxeo-platform'}})
+*   [Monitoring Slow NXQL Queries]({{page page='monitoring-slow-nxql-queries'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

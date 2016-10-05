@@ -362,7 +362,7 @@ Take into account the audit related Elasticsearch indexes when backing up / rest
 
 **Related Configuration Parameters**
 
-<table><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">
 
 `audit.elasticsearch.enabled`
 
@@ -376,7 +376,7 @@ Since Nuxeo 7.3\. See [Disabling Elasticsearch for Audit Logs]({{page space='ADM
 
 Defaults to false on server upgrade, true on new install.
 
-</td></tr><tr><td colspan="1">`audit.elasticsearch.migration`</td><td colspan="1">false</td><td colspan="1">See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page space='NXDOC' page='Elasticsearch Setup#ElasticsearchSetup-TriggeringSQLtoElasticsearchAuditLogsMigration'}})</td></tr><tr><td colspan="1">`audit.elasticsearch.migration.batchSize`</td><td colspan="1">1000</td><td colspan="1">See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page space='NXDOC' page='Elasticsearch Setup#ElasticsearchSetup-TriggeringSQLtoElasticsearchAuditLogsMigration'}})</td></tr><tr><td colspan="1">`audit.elasticsearch.indexName`</td><td colspan="1">`${elasticsearch.indexName}-audit`</td><td colspan="1">See [Configuring Nuxeo to Access the Cluster]({{page space='NXDOC' page='Elasticsearch Setup#ElasticsearchSetup-ConfiguringNuxeoToAccessTheClusterConfiguringNuxeotoAccesstheCluster'}})</td></tr></tbody></table>
+</td></tr><tr><td colspan="1">`audit.elasticsearch.migration`</td><td colspan="1">false</td><td colspan="1">See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page space='NXDOC' page='Elasticsearch Setup#ElasticsearchSetup-TriggeringSQLtoElasticsearchAuditLogsMigration'}})</td></tr><tr><td colspan="1">`audit.elasticsearch.migration.batchSize`</td><td colspan="1">1000</td><td colspan="1">See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page space='NXDOC' page='Elasticsearch Setup#ElasticsearchSetup-TriggeringSQLtoElasticsearchAuditLogsMigration'}})</td></tr><tr><td colspan="1">`audit.elasticsearch.indexName`</td><td colspan="1">`${elasticsearch.indexName}-audit`</td><td colspan="1">See [Configuring Nuxeo to Access the Cluster]({{page space='NXDOC' page='Elasticsearch Setup#ElasticsearchSetup-ConfiguringNuxeoToAccessTheClusterConfiguringNuxeotoAccesstheCluster'}})</td></tr></tbody></table></div>
 
 ### ACL Factorization
 
@@ -462,7 +462,7 @@ Repository config must define a default blob provider. If you define your own **
 
 ### New Configuration Parameters
 
-<table><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">`org.nuxeo.cmis.enableComplexProperties`</td><td colspan="1">false</td><td colspan="1">When true, complex properties are exposed as JSON-encoded strings.</td></tr><tr><td colspan="1">`nuxeo.lock.manager`</td><td colspan="1">redis</td><td colspan="1">If Redis is used, lock management is done through it.</td></tr><tr><td colspan="1">`org.nuxeo.cmis.elasticsearch`</td><td colspan="1">false</td><td colspan="1">To send the CMISQL queries to Elasticsearch, set to true.</td></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">`org.nuxeo.cmis.enableComplexProperties`</td><td colspan="1">false</td><td colspan="1">When true, complex properties are exposed as JSON-encoded strings.</td></tr><tr><td colspan="1">`nuxeo.lock.manager`</td><td colspan="1">redis</td><td colspan="1">If Redis is used, lock management is done through it.</td></tr><tr><td colspan="1">`org.nuxeo.cmis.elasticsearch`</td><td colspan="1">false</td><td colspan="1">To send the CMISQL queries to Elasticsearch, set to true.</td></tr><tr><td colspan="1">
 
 `nuxeo.server.tomcat_admin.host`
 
@@ -477,7 +477,7 @@ Example: [https://my.nuxeo.com/](https://my.nuxeo.com/)</td></tr><tr><td colspan
 
 See [Configuring Nuxeo to Access the Cluster]({{page space='NXDOC' page='Elasticsearch Setup#ElasticsearchSetup-ConfiguringNuxeoToAccessTheClusterConfiguringNuxeotoAccesstheCluster'}})
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Code Migration
 
@@ -516,7 +516,7 @@ To fix this error:
 
 Example of properties which have been migrated to ConfigurationService:
 
-<table><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">nuxeo.automation.properties.value.trim</td><td colspan="1">true</td><td colspan="1">The Properties in automation, are of the form `key=myvalue`. This property allows trimming of spaces around the value. For example `key = myvalue`, would result in the value being `"myvalue"` or `" myvalue"` (note the space at the beginning of the value), depending on this configuration.</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">nuxeo.automation.properties.value.trim</td><td colspan="1">true</td><td colspan="1">The Properties in automation, are of the form `key=myvalue`. This property allows trimming of spaces around the value. For example `key = myvalue`, would result in the value being `"myvalue"` or `" myvalue"` (note the space at the beginning of the value), depending on this configuration.</td></tr></tbody></table></div>
 
 ### New Batch Upload API
 

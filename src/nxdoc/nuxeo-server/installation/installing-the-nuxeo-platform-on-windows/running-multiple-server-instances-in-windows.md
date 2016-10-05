@@ -130,3 +130,14 @@ To launch multiple instances of Nuxeo you need to:
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Windows-Related Documentation'}}
+
+*   [Installing the Nuxeo Platform on Windows]({{page page='installing-the-nuxeo-platform-on-windows'}})
+*   [Installing the Nuxeo Platform as a Windows Service]({{page page='installing-the-nuxeo-platform-as-a-windows-service'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>
