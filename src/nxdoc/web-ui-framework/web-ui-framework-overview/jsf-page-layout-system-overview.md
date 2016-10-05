@@ -157,8 +157,6 @@ The main content of the page is actually defined via facelet templating (i.e. us
   <nxl:widget name="documentTabs" mode="view" value="#{currentDocument}" />
 ```
 
-<div class="line">
-
 ### Digital Asset Management Example
 
 See the [sample DAM asset.xhtml](https://github.com/nuxeo/nuxeo-dam/blob/release-7.10/nuxeo-dam-jsf/src/main/resources/web/nuxeo.war/dam/asset.xhtml).
@@ -339,5 +337,3 @@ However, if you think the custom UI is the way to go, we'll be happy to help you
 &nbsp;
 
 * * *
-
-</div>
