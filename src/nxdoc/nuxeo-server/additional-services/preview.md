@@ -113,11 +113,14 @@ history:
 
 # Installation & Configuration
 
-null
+For all document previews make sure you installed the [related softwares]({{page page='installing-and-setting-up-related-software'}}) corresponding to your document types.
 
 # Customization
 
-null
+You may want to check the following how-tos for customization:
+
+*   [How to Customize the Info-View Pop-Up]({{page page='how-to-customize-the-info-view-pop-up'}})
+*   [How to Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
 
 # Core Implementation
 

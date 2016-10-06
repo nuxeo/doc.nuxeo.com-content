@@ -193,7 +193,8 @@ history:
         version: '1'
 
 ---
-{{! multiexcerpt name='functional-overview'}}{{! excerpt}}
+{{! multiexcerpt name='functional-overview'}}
+{{! excerpt}}
 
 Collections are a folder-like document in which you can classify existing documents. Documents are not actually copied or moved into the collection, which only holds a link to the document in its original location.
 
