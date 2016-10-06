@@ -1124,11 +1124,11 @@ The table below lists the properties that you can set in nuxeo.conf. Properties 
 
 _Looking for a specific parameter?_
 
-{{! table-filter removed }}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+{{! table-filter removed }}<div class="table-scroll"><table class="hover"><tbody><tr><th width="250" colspan="1">
 
 Parameter
 
-</th><th colspan="1">
+</th><th width="250" colspan="1">
 
 Default value ("|" separates possible values)
 
@@ -1136,7 +1136,7 @@ Default value ("|" separates possible values)
 
 Description
 
-</th><th colspan="1">Since</th></tr><tr><td colspan="1">
+</th><th width="150" colspan="1">Since</th></tr><tr><td colspan="1">
 
 `JAVA_HOME`
 
@@ -1733,7 +1733,8 @@ Database username.
 
 Database password.
 
-</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
+</td><td colspan="1">&nbsp;</td>
+</tr><tr><td colspan="1">
 
 `nuxeo.db.host`
 
