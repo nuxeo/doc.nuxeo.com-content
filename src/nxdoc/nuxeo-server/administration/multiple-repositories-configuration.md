@@ -17,57 +17,57 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/NwZvAQ'
     source_link: /display/NXDOC/Multiple+Repositories+Configuration
 history:
-    - 
+    -
         author: Ronan Daniellou
         date: '2016-08-22 13:20'
         message: ixes "blockTimeoutMillis" -> "blockingTimeoutMillis
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-25 16:41'
         message: ''
         version: '10'
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-03-18 09:39'
         message: ''
         version: '9'
-    - 
+    -
         author: Michaël Vachette
         date: '2015-09-03 12:40'
         message: ''
         version: '8'
-    - 
+    -
         author: Michaël Vachette
         date: '2015-09-03 12:36'
         message: ''
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-05-05 12:56'
         message: typo
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-05-05 10:12'
         message: 'Format steps, add related documentation'
         version: '5'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-05-04 15:59'
         message: Add a note about Elasticsearch multi repo conf
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-05-04 15:38'
         message: clearer paths
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-05-04 15:35'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-05-04 15:34'
         message: ''
@@ -106,9 +106,7 @@ In addition, when more than one repository is configured, certain optimizations 
     The templates configuring the default datasources in Nuxeo will use XA parameters for them.
 
 3.  For each additional repository, add a new file, either through custom templates, or directly in `$NUXEO/nxserver/config`, that defines your new datasource, like the example below.
-
     {{#> panel type='code' heading='datasources-secondrepo-config.xml'}}
-
     ```xml
     <?xml version="1.0"?>
     <component name="datasources-secondrepo-config">
@@ -124,17 +122,14 @@ In addition, when more than one repository is configured, certain optimizations 
       </extension>
     </component>
     ```
-
     {{/panel}}
     *   The name&nbsp;`jdbc/repository_secondrepo` is important, as this name is actually &nbsp;`jdbc/repository_` followed by the name of the repository (`secondrepo`) that we will define below.
-    *   Of course the `xaDataSource`&nbsp;and the various `property` values should be filled in according to your database parameters.{{#> callout type='note' heading='JAR Dependencies'}}
-
+    *   Of course the `xaDataSource`&nbsp;and the various `property` values should be filled in according to your database parameters.
+    {{#> callout type='note' heading='JAR Dependencies'}}
     If you want to connect to a database that's not already in a template configured in `nuxeo.conf`, don't forget to put the necessary JDBC JARs in the `lib/` directory of Nuxeo.
-
     {{/callout}}
 
-## <span style="color: rgb(0,0,0);">Repository Configuration
-</span>
+## Repository Configuration
 
 The standard repository definition in Nuxeo Platform is done through a template in `$NUXEO/templates/common-base/nxserver/config/default-repository-config.xml.nxftl`&nbsp;which generates `$NUXEO/nxserver/config/default-repository-config.xml`.
 
