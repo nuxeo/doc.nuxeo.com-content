@@ -74,7 +74,7 @@ history:
         version: '1'
 
 ---
-<div class="action-body flooded">{{! excerpt}}
+{{! excerpt}}
 
 This is a recurrent demand from our customers. So here is a quick guide to add an antivirus scanner when uploading blobs in Nuxeo documents.
 
@@ -118,5 +118,3 @@ The software architecture of binary management has slightly changed. Instead of 
 <sub><span class="error">{{> anchor 'drive'}}1</span>: Such an ACL might still make updated document temporarily look as if deleted to other Nuxeo Drive users while the antivirus analysis is taking place.</sub>
 
 &nbsp;
-
-</div>
