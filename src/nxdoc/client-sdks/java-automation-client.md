@@ -1075,7 +1075,6 @@ Let's see an example.
     *   [`Business.BusinessCreateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Business.BusinessCreateOperation)
     *   [`Business.BusinessUpdateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Business.BusinessUpdateOperation)
     {{#> callout type='info' }}
-
     Since 5.7.2, you can see [the Automation Client Service Adapter section](#automation-client-service-adapter) to know how Business operations are wrapped into `BusinessService` adapter and how to use it.
     {{/callout}}
 
