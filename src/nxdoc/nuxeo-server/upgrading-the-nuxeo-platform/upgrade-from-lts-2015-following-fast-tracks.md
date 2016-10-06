@@ -450,7 +450,7 @@ The&nbsp; [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/packag
 
 </div>
 
-{{! end_of_tabs }}
+{{> end_of_tabs }}
 
 &nbsp;
 

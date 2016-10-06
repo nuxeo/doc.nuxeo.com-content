@@ -177,7 +177,7 @@ MimeTypePreviewer mtPreviewer = Framework.getService(PreviewAdapterManager.class
 ....
 ```
 
-{{! end_of_tabs }}
+{{> end_of_tabs }}
 
 * * *
 

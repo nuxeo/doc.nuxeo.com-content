@@ -263,7 +263,7 @@ For instance, when deleting a collection, an asynchronous work will update the d
 
 Finally, when copying a collection, an asynchronous work will also duplicate its content.
 
-{{! end_of_tabs }}
+{{> end_of_tabs }}
 
 &nbsp;
 

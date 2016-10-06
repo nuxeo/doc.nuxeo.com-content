@@ -840,7 +840,7 @@ Some authentication plugins may choose to trigger or not the `LoginPrompt` depen
 
 &nbsp;
 
-{{! end_of_tabs }}
+{{> end_of_tabs }}
 
 &nbsp;
 
