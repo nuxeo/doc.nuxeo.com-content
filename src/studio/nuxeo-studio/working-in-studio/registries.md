@@ -79,4 +79,15 @@ Registries never impact what happens on the runtime when you deploy your plugins
 
 For that reason, you can for instance only complete the "id" of a schema without the property detail, and you'll be able to assign this schema to a document type. But in that case you won't have the properties listed when editing some layouts on documents that hold this schema. You'll need to give the complete JSON definition for this.
 
-{{/callout}}{{! /multiexcerpt}}
+{{/callout}}{{! /multiexcerpt}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Referencing an Externally Defined Type]({{page page='referencing-an-externally-defined-type'}})
+*   [Referencing an Externally Defined Operation]({{page page='referencing-an-externally-defined-operation'}})
+*   [How to Contribute a New "User Registration Request" Document Type]({{page space='nxdoc' page='how-to-contribute-a-new-user-registration-request-document-type'}})
+*   [How to Add a New Action Category on a Document Tab]({{page space='nxdoc' page='how-to-add-a-new-action-category-on-a-document-tab'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

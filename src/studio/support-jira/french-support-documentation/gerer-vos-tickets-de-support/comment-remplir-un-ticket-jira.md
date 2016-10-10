@@ -145,7 +145,7 @@ Un ticket doit correspondre &agrave; un probl&egrave;me. N'h&eacute;sitez pas &a
 
 Voici la liste des champs que vous devez renseigner, si possible, lorsque vous cr&eacute;ez un nouveau ticket [JIRA](https://fr.atlassian.com/software/jira). Les autres champs seront remplis par l'&eacute;quipe Support lors de l'analyse du ticket.
 
-<table><tbody><tr><th colspan="1">Champ</th><th colspan="1">Description</th></tr><tr><th colspan="2">Main fields</th></tr><tr><td colspan="1">Projet</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Champ</th><th colspan="1">Description</th></tr><tr><th colspan="2">Main fields</th></tr><tr><td colspan="1">Projet</td><td colspan="1">
 
 S&eacute;lectionnez le projet Support Nuxeo Connect.
 Voir le paragraphe [Projet](#field-project).
@@ -231,7 +231,7 @@ Reporter
 
 Ce champ est pr&eacute;-rempli avec votre nom d'utilisateur.
 
-</td></tr><tr><td colspan="1">R&eacute;f&eacute;rence SFD</td><td colspan="1">Si vous avez des sp&eacute;cifications fonctionnelles, vous pouvez indiquez leur r&eacute;f&eacute;rence ici pour le reste de votre &eacute;quipe.</td></tr><tr><td colspan="1">Tags</td><td colspan="1">Tapez un mot-cl&eacute; qui peut vous aider &agrave; cat&eacute;goriser vos tickets.</td></tr></tbody></table>
+</td></tr><tr><td colspan="1">R&eacute;f&eacute;rence SFD</td><td colspan="1">Si vous avez des sp&eacute;cifications fonctionnelles, vous pouvez indiquez leur r&eacute;f&eacute;rence ici pour le reste de votre &eacute;quipe.</td></tr><tr><td colspan="1">Tags</td><td colspan="1">Tapez un mot-cl&eacute; qui peut vous aider &agrave; cat&eacute;goriser vos tickets.</td></tr></tbody></table></div>
 
 ## {{> anchor 'field-project'}}Projet
 
@@ -303,7 +303,7 @@ Le client doit indiquer quelle version principale de la plateforme Nuxeo il util
 
 Le client indique ici le niveau de criticit&eacute; du ticket cr&eacute;&eacute; :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 **Niveau de gravit&eacute;**
 
@@ -367,7 +367,7 @@ Probl&egrave;me d&rsquo;affichage ou de traduction, questions d'utilisation g&ea
 
 Non applicable
 
-</td></tr><tr><td colspan="1">5\. Cosm&eacute;tique (Detail)</td><td colspan="1">D&eacute;tail n'ayant pas d'incidence sur le fonctionnement de l'application (libell&eacute;, style, etc.).</td><td colspan="1">D&eacute;tail n'ayant pas d'incidence sur le fonctionnement de l'application (libell&eacute;, style, etc.).</td></tr></tbody></table>
+</td></tr><tr><td colspan="1">5\. Cosm&eacute;tique (Detail)</td><td colspan="1">D&eacute;tail n'ayant pas d'incidence sur le fonctionnement de l'application (libell&eacute;, style, etc.).</td><td colspan="1">D&eacute;tail n'ayant pas d'incidence sur le fonctionnement de l'application (libell&eacute;, style, etc.).</td></tr></tbody></table></div>
 
 La criticit&eacute; ne d&eacute;pend pas de crit&egrave;res de priorisation mais uniquement des termes pr&eacute;cis&eacute;s ci-dessus.
 
@@ -443,3 +443,15 @@ Quelques conseils pour am&eacute;liorer la qualit&eacute; du ticket :
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Pages connexes'}}
+
+*   [Comment interagir avec un ticket]({{page space='connect' page='comment-interagir-avec-un-ticket'}})
+*   [Suivi des tickets client]({{page space='connect' page='suivi-des-tickets-client'}})
+*   [G&eacute;rer vos tickets de support]({{page space='connect' page='gandeacuterer-vos-tickets-de-support'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

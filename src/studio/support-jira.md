@@ -20,6 +20,11 @@ confluence:
 history:
     - 
         author: Solen Guitter
+        date: '2016-10-07 14:01'
+        message: pdate link to supported-versions page
+        version: '34'
+    - 
+        author: Solen Guitter
         date: '2015-03-03 07:39'
         message: ''
         version: '33'
@@ -198,7 +203,7 @@ You can follow the evolution of your issues directly from the Online Services Po
 
 {{#> callout type='info' heading='Maintenance'}}
 
-The page [http://www.nuxeo.com/services/Supported-versions](http://www.nuxeo.com/services/Supported-versions) presents the maintenance policy of the different versions of Nuxeo software. It can be useful to plan the upgrades of the customer's applications.&nbsp;
+The page [https://www.nuxeo.com/legal/supported-versions/](https://www.nuxeo.com/legal/supported-versions/) presents the maintenance policy of the different versions of Nuxeo software. It can be useful to plan the upgrades of the customer's applications.&nbsp;
 
 {{/callout}}
 
@@ -236,3 +241,15 @@ For more information, check out the [JIRA Tickets Workflow]({{page page='jira-ti
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
+
+*   [Ticket Follow Up]({{page page='ticket-follow-up'}})
+*   [How to Fill a JIRA Ticket]({{page page='how-to-fill-a-jira-ticket'}})
+*   [JIRA Tickets Workflow]({{page page='jira-tickets-workflow'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

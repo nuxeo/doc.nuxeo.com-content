@@ -30,7 +30,7 @@ history:
     - 
         author: Solen Guitter
         date: '2016-09-05 09:52'
-        message: pdate how-to topic
+        message: ''
         version: '72'
     - 
         author: Manon Lumeau
@@ -405,11 +405,11 @@ The Main Pages tab is where you will specify the main elements that define a bra
 
 ### Changing the Logo displayed on Header
 
-{{! multiexcerpt name='change-logo'}}<table><tbody><tr><th colspan="1">Before</th><th colspan="1">Studio Configuration</th><th colspan="1">After</th></tr><tr><td colspan="1">![]({{file name='branding_logo.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='branding_logo1.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='branding_logo2.png'}} ?w=300,border=true,thumbnail=true)</td></tr></tbody></table>{{! /multiexcerpt}}
+{{! multiexcerpt name='change-logo'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Before</th><th colspan="1">Studio Configuration</th><th colspan="1">After</th></tr><tr><td colspan="1">![]({{file name='branding_logo.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='branding_logo1.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='branding_logo2.png'}} ?w=300,border=true,thumbnail=true)</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
 ### <span style="color: rgb(0,0,0);">Changing the Header and Footer</span>
 
-{{! multiexcerpt name='change-header-footer'}}<table><tbody><tr><th colspan="1">Before</th><th colspan="1">Studio Configuration</th><th colspan="1">After</th></tr><tr><td colspan="1">![]({{file name='default_header_footer.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='header_and_footer.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='custom_header_footer.png'}} ?w=300,border=true,thumbnail=true)</td></tr></tbody></table>{{! /multiexcerpt}}
+{{! multiexcerpt name='change-header-footer'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Before</th><th colspan="1">Studio Configuration</th><th colspan="1">After</th></tr><tr><td colspan="1">![]({{file name='default_header_footer.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='header_and_footer.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='custom_header_footer.png'}} ?w=300,border=true,thumbnail=true)</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
 &nbsp;
 
@@ -417,8 +417,8 @@ The Main Pages tab is where you will specify the main elements that define a bra
 
 The additional branding elements section contains all the customizable elements relative to the page contents: links colors, font family used and color of backgrounds and buttons.
 
-<table><tbody><tr><th colspan="2">Studio Configuration</th><th colspan="1">Result</th></tr><tr><td colspan="2">
-![]({{file name='additional_branding_elements.png'}} ?w=450,border=true)</td><td colspan="1">![]({{file name='additional_branding_custom.png'}} ?w=450,border=true)</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="2">Studio Configuration</th><th colspan="1">Result</th></tr><tr><td colspan="2">
+![]({{file name='additional_branding_elements.png'}} ?w=450,border=true)</td><td colspan="1">![]({{file name='additional_branding_custom.png'}} ?w=450,border=true)</td></tr></tbody></table></div>
 
 {{> anchor 'login'}}
 
@@ -428,7 +428,7 @@ This tab will let you manage the customization of the login page view.
 
 ### Common Changes
 
-{{! multiexcerpt name='login-page-tab'}}<table><tbody><tr><th colspan="2">Basic Studio Configuration</th><th colspan="1">Steps</th></tr><tr><td colspan="2">![]({{file name='login_customization.png'}} ?w=450,border=true)</td><td colspan="1">
+{{! multiexcerpt name='login-page-tab'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="2">Basic Studio Configuration</th><th colspan="1">Steps</th></tr><tr><td colspan="2">![]({{file name='login_customization.png'}} ?w=450,border=true)</td><td colspan="1">
 
 &nbsp;
 
@@ -441,7 +441,7 @@ That's it!
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Most of our customers apply the following strategies for their login page background image:
 
@@ -452,7 +452,7 @@ With a web designer's help, you can have many other possibilities.
 
 ### Additional Options
 
-<table><tbody><tr><th colspan="1">Login page layout</th><th colspan="1">Studio Configuration</th><th colspan="1">Role</th></tr><tr><td colspan="1">![]({{file name='login_layout.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Login page layout</th><th colspan="1">Studio Configuration</th><th colspan="1">Role</th></tr><tr><td colspan="1">![]({{file name='login_layout.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">
 
 ![]({{file name='login_remove_boxes.png'}} ?w=310,border=true)
 
@@ -466,7 +466,7 @@ If you have a simple color used as the background image in the login page, you c
 
 This option must be used carefully: don't use heavy patterns or things that will make the readability difficult or hamper the interpretation. The login box style must stay very simple and light to keep the login action as a user-friendly step.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 &nbsp;
 
@@ -492,7 +492,7 @@ You can add style classes in your widgets in&nbsp;[forms]({{page page='form-layo
 
 Let's add a background color on a widget's container:
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 1.  Widget Editor
 
@@ -516,7 +516,7 @@ Define a class in the widget editor.
 
 &nbsp;
 
-</td><td colspan="1">Enjoy your blue container.</td></tr></tbody></table>
+</td><td colspan="1">Enjoy your blue container.</td></tr></tbody></table></div>
 
 ### Overriding an Existing Rule
 
@@ -524,7 +524,7 @@ You want to change an existing style to fit your needs? In addition to the&nbsp;
 
 &nbsp;Let's display the main title of pages in pink:
 
-<table><tbody><tr><th colspan="1">1\. Inspect the existing style</th><th colspan="1">2\. Declare your new rule</th><th colspan="1">3\. See the result</th></tr><tr><td colspan="1">![]({{file name='override_inspect.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='disable_branding.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='override_result.png'}} ?w=300,border=true,thumbnail=true)</td></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">1\. Inspect the existing style</th><th colspan="1">2\. Declare your new rule</th><th colspan="1">3\. See the result</th></tr><tr><td colspan="1">![]({{file name='override_inspect.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='disable_branding.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='override_result.png'}} ?w=300,border=true,thumbnail=true)</td></tr><tr><td colspan="1">
 
 The pink arrows show the main title at the top of the page, the code and its CSS declaration are at the bottom, in the web inspector. Seeing this, you will need to override the `default.CSS****` `h1` rule that contains the color declaration.
 
@@ -536,7 +536,7 @@ Your rule contains three selectors: `.content`, .`mainFragment` and `h1`.
 
 That way, you're sure that your new style will be stronger than the original style declared with only two selectors: `default.CSS***` and `h1`.
 
-</td><td colspan="1">Your title is pink now. You can see that your new rule is displayed at the top of the default one, and the original black color value is striked, so not used anymore.</td></tr></tbody></table>
+</td><td colspan="1">Your title is pink now. You can see that your new rule is displayed at the top of the default one, and the original black color value is striked, so not used anymore.</td></tr></tbody></table></div>
 
 &nbsp;
 
@@ -563,7 +563,7 @@ Just tick the&nbsp;**Disable theme branding**&nbsp;option above the tabs. The ta
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Theme]({{page space='NXDOC' page='Theme'}})
-*   [JSF UI Framework Overview]({{page space='nxdoc' page='jsf-ui-framework-overview'}})
+*   [Nuxeo JSF UI]({{page space='nxdoc' page='nuxeo-jsf-ui'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-tos'}}
 

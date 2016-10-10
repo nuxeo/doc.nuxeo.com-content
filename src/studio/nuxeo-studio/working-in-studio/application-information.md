@@ -49,3 +49,16 @@ This page displays properties defined for the entire application without any con
 {{! Don't put anything here. }}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Specific Upgrade Instructions]({{page page='specific-upgrade-instructions'}})
+*   [Update the Version of Your Target Platform]({{page page='update-the-version-of-your-target-platform'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

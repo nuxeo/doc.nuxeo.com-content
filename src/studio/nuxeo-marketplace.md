@@ -18,8 +18,13 @@ confluence:
 history:
     - 
         author: Manon Lumeau
+        date: '2016-10-06 13:05'
+        message: ''
+        version: '35'
+    - 
+        author: Manon Lumeau
         date: '2016-07-20 16:31'
-        message: 'emove children display macro  '
+        message: 'remove children display macro   '
         version: '34'
     - 
         author: Manon Lumeau
@@ -188,8 +193,6 @@ history:
         version: '1'
 
 ---
-<div class="row"><div class="column medium-8">
-
 Nuxeo Marketplace is Nuxeo ECM application store. It offers Nuxeo Packages that enable you to easily add features to your Nuxeo application.
 
 ![]({{file name='CONNECT-marketplace.png'}} ?w=650,border=true)
@@ -221,21 +224,3 @@ Each package has a dedicated page on the Marketplace, that describes the feature
 *   [Nuxeo Packages developer documentation]({{page space='nxdoc' page='marketplace-add-ons'}})
 *   [Admin Center documentation]({{page space='nxdoc' page='admin-tab-overview'}})
 *   [Registering your Nuxeo Instance]({{page space='nxdoc' page='registering-your-nuxeo-instance'}})
-
-</div><div class="column medium-4">{{#> panel heading='Latest packages user documentation'}}
-
-*   [Digital Signature]({{page space='USERDOC' page='Digital Signature'}})
-*   [EasyShare]({{page space='USERDOC' page='EasyShare'}})
-*   [Nuxeo Agenda]({{page space='USERDOC' page='Nuxeo Agenda'}})
-*   [Nuxeo Diff]({{page space='USERDOC' page='Nuxeo Diff'}})
-*   [Nuxeo Drive]({{page space='USERDOC' page='Nuxeo Drive'}})
-*   [Nuxeo Drive Mobile Edition]({{page space='USERDOC' page='Nuxeo Drive+Mobile+Edition'}})
-*   [Nuxeo Groups and Rights Audit]({{page space='USERDOC' page='Nuxeo Groups+and+Rights+Audit'}})
-*   [Nuxeo IMAP Connector]({{page space='USERDOC' page='Nuxeo IMAP+Connector'}})
-*   [Nuxeo Jenkins Report]({{page space='USERDOC' page='Nuxeo Jenkins+Report'}})
-*   [Nuxeo Multi-Tenant]({{page space='USERDOC' page='Nuxeo Multi-Tenant'}})
-*   [Nuxeo Platform Explorer]({{page space='USERDOC' page='Nuxeo Platform+Explorer'}})
-*   [Nuxeo Web Mobile]({{page space='USERDOC' page='Nuxeo Web+Mobile'}})
-*   [Smart Search]({{page space='USERDOC' page='Smart Search'}})
-
-{{/panel}}</div></div>

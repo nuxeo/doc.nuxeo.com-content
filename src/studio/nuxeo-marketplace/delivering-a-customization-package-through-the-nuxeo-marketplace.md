@@ -137,7 +137,7 @@ The target instance(s) can get the package from [Nuxeo Connect](http://connect.n
     The package is uploaded. It is now available in the **Private packages** tab of the **Update Center** for the instances that match your package's client(s) and project(s).
     ![]({{file name='Admin-Center-private-packages-tab.png'}} ?w=650,border=true)
 
-<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">
 
 Package data
 
@@ -173,7 +173,7 @@ Select the clients and projects for which the package must be available.
 
 You can select a client to make the package available for all that client's projects.
 
-{{/callout}}</td></tr></tbody></table>
+{{/callout}}</td></tr></tbody></table></div>
 
 ### Using the REST API
 
@@ -203,3 +203,15 @@ with:
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More documentation about the Marketplace'}}
+
+*   [Creating Nuxeo Packages]({{page space='nxdoc' page='creating-nuxeo-packages'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

@@ -92,4 +92,12 @@ Don't forget to translate the permission label [using an I18N translation file](
 
 After you updated your Nuxeo application with Studio customizations, you must restart your server so the new permission is displayed.
 
-{{/callout}}
+{{/callout}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
+
+*   [Implement the News "Publishing" Process]({{page space='nxdoc' page='implement-the-news-publishing-process'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

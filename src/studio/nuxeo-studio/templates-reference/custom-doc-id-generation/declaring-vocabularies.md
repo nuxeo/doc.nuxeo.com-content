@@ -106,7 +106,7 @@ See [how to add a new vocabulary]({{page space='nxdoc' page='how-to-add-a-new-vo
 
 1.  Create a simple vocabulary "TypeLabel" with the values below, that will fill the drop-down list to edit the "type" metadata.
 
-    <table><tbody><tr><th colspan="1">
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
     ID
 
@@ -146,10 +146,10 @@ See [how to add a new vocabulary]({{page space='nxdoc' page='how-to-add-a-new-vo
 
     Advertisement
 
-    </td></tr></tbody></table>
+    </td></tr></tbody></table></div>
 2.  Create a simple vocabulary "TypePrefix", that will give the corresponding prefix for UID generation, depending on the selected "type".
 
-    <table><tbody><tr><th colspan="1">
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
     ID
 
@@ -189,7 +189,7 @@ See [how to add a new vocabulary]({{page space='nxdoc' page='how-to-add-a-new-vo
 
     Ad
 
-    </td></tr></tbody></table>{{#> callout type='tip' }}
+    </td></tr></tbody></table></div>{{#> callout type='tip' }}
 
     The values ID must be the same in both vocabularies.
 

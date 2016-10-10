@@ -247,3 +247,14 @@ Issue management: [https://jira.nuxeo.com/browse/NXBT/component/12309](https://j
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Jenkins Report user documentation]({{page space='userdoc' page='nuxeo-jenkins-report'}})
+*   [Nuxeo Jenkins Report admin documentation]({{page space='nxdoc' page='nuxeo-jenkins-report'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

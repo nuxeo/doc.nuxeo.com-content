@@ -126,7 +126,7 @@ The back buttons should be located on the left, separated from the other actions
 *   <span class="ph">Sentence capitalization</span>
     <span class="ph">Example: To start the search, please type at least 0 character(s).</span>
 
-<table><tbody><tr><th colspan="1">Element</th><th colspan="1">Capitalization Style</th><th colspan="1">Example</th></tr><tr><td colspan="1">Button & Actions</td><td colspan="1">Title</td><td colspan="1">Add to Collection
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Element</th><th colspan="1">Capitalization Style</th><th colspan="1">Example</th></tr><tr><td colspan="1">Button & Actions</td><td colspan="1">Title</td><td colspan="1">Add to Collection
 Edit Status
 Save
 Clear List</td></tr><tr><td colspan="1">Browser window title</td><td colspan="1">Title</td><td colspan="1">Nuxeo Platform - Home</td></tr><tr><td colspan="1">Popup titles</td><td colspan="1">Title</td><td colspan="1">Add a Permission
@@ -140,7 +140,7 @@ First Name</td></tr><tr><td colspan="1">Feedback messages</td><td colspan="1">Se
 No user or group selected.</td></tr><tr><td colspan="1">Options (radio, checkbox, dropdown)</td><td colspan="1">Sentence (no final dot)</td><td colspan="1">Anonymous proxy
 Less than 100KB</td></tr><tr><td colspan="1">Placeholders</td><td colspan="1">Sentence (no final dot)</td><td colspan="1">Select a value</td></tr><tr><td colspan="1">Help messages</td><td colspan="1">Sentence</td><td colspan="1">This folder contains no document.
 The table below shows all the tasks for which you have been requested to perform an operation.</td></tr><tr><td colspan="1">Tooltips</td><td colspan="1">Sentence</td><td colspan="1">This field is used by virtual navigation.
-Current version of the document</td></tr><tr><td colspan="1">Popup messages</td><td colspan="1">Sentence</td><td colspan="1">Delete selected document(s)?</td></tr></tbody></table>
+Current version of the document</td></tr><tr><td colspan="1">Popup messages</td><td colspan="1">Sentence</td><td colspan="1">Delete selected document(s)?</td></tr></tbody></table></div>
 
 ### Punctuation
 
@@ -152,5 +152,5 @@ Current version of the document</td></tr><tr><td colspan="1">Popup messages</td>
 
 ### Terminology and Spelling
 
-<table><tbody><tr><th colspan="1">OK</th><th colspan="1">Not OK</th></tr><tr><td colspan="1">addon</td><td colspan="1">add-on</td></tr><tr><td colspan="1">hotfix</td><td colspan="1">hot-fix, HotFix</td></tr><tr><td colspan="1">life cycle</td><td colspan="1">life-cycle
-lifecycle</td></tr><tr><td colspan="1">plugin</td><td colspan="1">plug-in</td></tr><tr><td colspan="1">username</td><td colspan="1">user name</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">OK</th><th colspan="1">Not OK</th></tr><tr><td colspan="1">addon</td><td colspan="1">add-on</td></tr><tr><td colspan="1">hotfix</td><td colspan="1">hot-fix, HotFix</td></tr><tr><td colspan="1">life cycle</td><td colspan="1">life-cycle
+lifecycle</td></tr><tr><td colspan="1">plugin</td><td colspan="1">plug-in</td></tr><tr><td colspan="1">username</td><td colspan="1">user name</td></tr></tbody></table></div>

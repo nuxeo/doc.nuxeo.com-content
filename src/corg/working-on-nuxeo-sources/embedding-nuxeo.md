@@ -118,7 +118,7 @@ Syntax: java ... org.nuxeo.dev.Main [options] home
 
 ```
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Option
 
@@ -211,7 +211,7 @@ If used the "shared" mode will be used when creating the application classloader
 By default the application is launched in an isolated classloader to avoid problems between libraries in bootstrap classloader and those existing in Nuxeo.
 But in some situations you may want to use the same classloader (the bootstrap one) and to add to it the Nuxeo JARs. This is used for example by the integration of Nuxeo in GWT IDE.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### Using the Nuxeo Embedded Eclipse Plug-in
 

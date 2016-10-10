@@ -100,3 +100,11 @@ For more information about application templates you can see the page [Using App
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Using Application Templates]({{page page='using-application-templates'}})
+*   [Default configuration templates]({{page page='default-configuration-templates'}})
+*   [Templates reference]({{page page='templates-reference'}})
+
+{{/panel}}</div><div class="column medium-6">null</div></div>

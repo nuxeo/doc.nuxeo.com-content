@@ -132,7 +132,7 @@ Here is the result of the validation we want to achieve on the document's metada
 
 ##### The pdf conversion subchain parameters
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 N&deg;
 
@@ -260,7 +260,7 @@ file: `expr:pdf`
 
 xpath: `pdf_version`
 
-</td></tr></tbody></table>{{#> callout type='tip' }}
+</td></tr></tbody></table></div>{{#> callout type='tip' }}
 
 The input and output of some of the operations (3,4,5) handles a different type: "Blob". If you don't order well the elements, it will alert you by coloring the operation in red. See the [Operation flow - input and output typing]({{page space='studio' page='operation-flow-input-and-output-typing'}}) page.
 
@@ -268,7 +268,7 @@ The input and output of some of the operations (3,4,5) handles a different type:
 
 ##### The validation chain parameters
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 N&deg;
 
@@ -428,7 +428,7 @@ value: `expr:module_version`
 
 xpath: `documentationitem:first_module_version`
 
-</td></tr></tbody></table>{{#> callout type='tip' }}
+</td></tr></tbody></table></div>{{#> callout type='tip' }}
 
 In Validation chain step 3 we call the subchain that operates the PDF conversion.
 

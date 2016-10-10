@@ -150,7 +150,7 @@ After clicking the **Create** link the listener is automatically saved and the o
 3.  Click **Save**.
     You can now deploy your plugin in a Nuxeo DM application.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Step
 
@@ -246,7 +246,7 @@ Value: `@{idValue}`
 
 xpath: `uid:uid`
 
-</td></tr></tbody></table>{{#> callout type='note' }}
+</td></tr></tbody></table></div>{{#> callout type='note' }}
 
 If you use the editor, be careful to remove the key's double quotes in functions.
 

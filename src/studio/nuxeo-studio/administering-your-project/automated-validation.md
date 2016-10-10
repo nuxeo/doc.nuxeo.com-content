@@ -87,7 +87,7 @@ history:
 ---
 Nuxeo Studio will perform some consistency check as soon as you configure some features, to be sure that, for instance, if it references another one, that other one has already been created or referenced in the registries. This page aims at referencing all the checks that are performed. You can add a comment at the end of this page for suggesting some additional checks.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Feature
 
@@ -887,7 +887,7 @@ A Document.GetUsersAndGroups operation reference an undefined permission
 
 the validation is done only on static field values (expressions are ignored)
 
-</td></tr></tbody></table><table><tbody><tr><td colspan="1">
+</td></tr></tbody></table></div><div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
 
 &nbsp;
 
@@ -1087,11 +1087,11 @@ one of the referenced operation chains does not exist
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Layouts validation is detailed here:
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Item
 
@@ -1235,4 +1235,4 @@ widget type does not match the accepted types for bound field
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>

@@ -161,3 +161,19 @@ The Studio Automation Chain integrates a new editor called YAML editor which&nbs
 For more information on&nbsp;the Studio Automation Chains, see [all the operations available](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.9.4/listOperations).&nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [How to Create an Automation Chain]({{page space='nxdoc' page='how-to-create-an-automation-chain'}})
+*   [How to Write Reusable Automation Chains]({{page space='nxdoc' page='how-to-write-reusable-automation-chains'}})
+*   [How to Inherit a Metadata from a Parent Document]({{page space='nxdoc' page='how-to-inherit-a-metadata-from-a-parent-document'}})
+*   [Debugging Automation Chains]({{page space='nxdoc' page='debugging-automation-chains'}})
+*   [Calling Automation from Java]({{page space='nxdoc' page='calling-automation-from-java'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

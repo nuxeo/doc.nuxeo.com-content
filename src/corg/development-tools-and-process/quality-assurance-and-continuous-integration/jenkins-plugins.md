@@ -81,7 +81,7 @@ Comments and recommendations are welcome.
 
 &nbsp;
 
-<table><tbody><tr><th colspan="1">Usage</th><th colspan="1">Jenkins administration, job configuration and capabilities</th></tr><tr><td colspan="1">Required</td><td colspan="1">[LDAP Plug-in](http://wiki.jenkins-ci.org/display/JENKINS/LDAP+Plugin)</td></tr><tr><td colspan="1">Recommended</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Usage</th><th colspan="1">Jenkins administration, job configuration and capabilities</th></tr><tr><td colspan="1">Required</td><td colspan="1">[LDAP Plug-in](http://wiki.jenkins-ci.org/display/JENKINS/LDAP+Plugin)</td></tr><tr><td colspan="1">Recommended</td><td colspan="1">
 
 <div>[Priority Sorter](http://wiki.hudson-ci.org/display/HUDSON/Priority+Sorter+Plugin)</div>
 
@@ -454,13 +454,13 @@ This plugin allows slaves to be dynamically provisioned using [Docker](http://ww
 This plugin allows to add various [Docker](https://www.docker.com/) commands into your job as a build step</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">[CloudBees Pull Request Builder for GitHub](https://release-notes.cloudbees.com/product/CloudBees+Pull+Request+Builder+for+GitHub)
 Automatically build GitHub pull requests</td></tr><tr><td colspan="1">Required</td><td colspan="1">[CloudBees Quiet Start Plugin](https://release-notes.cloudbees.com/product/CloudBees+Quiet+Start+Plugin)
 Allows you to request that Jenkins be in the &ldquo;quieting down&rdquo; state after a restart.</td></tr><tr><td colspan="1">Required</td><td colspan="1">[Role Based Access Control Plugin (RBAC)](https://release-notes.cloudbees.com/product/Role+Based+Access+Control+Plugin)
-CloudBees Jenkins Enterprise plugin that provides an authorization strategy that provides for role-based access control.</td></tr></tbody></table>
+CloudBees Jenkins Enterprise plugin that provides an authorization strategy that provides for role-based access control.</td></tr></tbody></table></div>
 
 &nbsp;
 
 &nbsp;
 
-<table><tbody><tr><th colspan="1">Usage</th><th colspan="1">Build management, analysis and reporting</th></tr><tr><td colspan="1">Required</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Usage</th><th colspan="1">Build management, analysis and reporting</th></tr><tr><td colspan="1">Required</td><td colspan="1">
 
 <div>[Change Log History](http://wiki.jenkins-ci.org/display/JENKINS/Change+Log+History+Plugin)</div>
 
@@ -688,13 +688,13 @@ CloudBees Jenkins Enterprise plugin that provides an authorization strategy that
 This plugin allows to post build notifications to a [Slack](https://slack.com/) channel.</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">[Gatling Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Gatling+Plugin)
 This plugin integrates [Gatling](http://gatling-tool.org), an Open Source stress tool, with Jenkins.</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">[CloudBees Restart Aborted Builds Plugin](https://release-notes.cloudbees.com/product/CloudBees+Restart+Aborted+Builds+Plugin)
 Tracks builds interrupted by abrupt halts and offers to restart them.</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">[Skip Next Build Plugin](https://release-notes.cloudbees.com/product/Skip+Next+Build+Plugin)
-Stop running builds for a specified period of time (usually if there are known errors that are being fixed)</td></tr></tbody></table>
+Stop running builds for a specified period of time (usually if there are known errors that are being fixed)</td></tr></tbody></table></div>
 
 &nbsp;
 
 &nbsp;
 
-<table><tbody><tr><th colspan="1">Usage</th><th colspan="1">View, display</th></tr><tr><td colspan="1">Required</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Usage</th><th colspan="1">View, display</th></tr><tr><td colspan="1">Required</td><td colspan="1">
 
 <div>[Radiator View Plug-in](http://wiki.jenkins-ci.org/display/JENKINS/Radiator+View+Plugin)</div>
 
@@ -778,13 +778,13 @@ Stop running builds for a specified period of time (usually if there are known e
 This plugin prevents the stack trace reported by Jenkins when a processing fails unexpectedly. This allows security sensitive deployments of Jenkins to minimize the information revealed to unprivileged/anonymous users.</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">[Embeddable Build Status Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Embeddable+Build+Status+Plugin)
 This plugin allows Jenkins to&nbsp;expose the current status of your build as an image in a fixed URL.</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">[CloudBees Groovy View Plugin](https://release-notes.cloudbees.com/product/CloudBees+Groovy+View+Plugin)
 Adds a view type rendering a Groovy script. Useful in conjunction with Templates.</td></tr><tr><td colspan="1">Recommended</td><td colspan="1">[Build Trigger Badge Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Build+Trigger+Badge+Plugin)
-This plugin&nbsp;displays icon(s) representing the cause(s) of a build directly in the build history. It lets you quickly know which cause triggered a build.</td></tr></tbody></table>
+This plugin&nbsp;displays icon(s) representing the cause(s) of a build directly in the build history. It lets you quickly know which cause triggered a build.</td></tr></tbody></table></div>
 
 See {{jira server='Nuxeo Issue Tracker' key='NXBT-306'}} for plugins under review.
 
 Beside the pure Jenkins plugins, there are external tools related with Jenkins:
 
-<table><tbody><tr><th colspan="1">Usage</th><th colspan="1">Tools</th></tr><tr><td colspan="1">Required</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Usage</th><th colspan="1">Tools</th></tr><tr><td colspan="1">Required</td><td colspan="1">
 
 [Nuxeo Jenkins report](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jenkins-report-mp)
 This Nuxeo plug-in generates reports from Jenkins builds inside Nuxeo. It helps to monitor the global CI status and to manage the duty planning between developers.
@@ -819,7 +819,7 @@ Android widget for monitoring Jenkins.</td></tr><tr><td colspan="1">&nbsp;</td><
 [Jenkins build monitor](https://addons.mozilla.org/fr/firefox/addon/jenkins-build-monitor/)
 Firefox addon for monitoring Jenkins.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 &nbsp;
 

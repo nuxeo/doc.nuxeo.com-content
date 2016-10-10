@@ -114,7 +114,7 @@ When you register to Nuxeo Connect an environment is automatically created. This
 
 **Environment properties**
 
-<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Description</td><td colspan="1">A text that explains what the environment is meant for. Typically you can indicate if it's a development, a staging or a production environment.</td></tr><tr><td colspan="1">Studio Project</td><td colspan="1">Select the Studio project you want to be able to deploy on the Nuxeo Platform instance of this environment. This list shows all the Nuxeo Studio projects you have access to.</td></tr><tr><td colspan="1">Domain</td><td colspan="1">The URL at which the Nuxeo Platform is available.</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Description</td><td colspan="1">A text that explains what the environment is meant for. Typically you can indicate if it's a development, a staging or a production environment.</td></tr><tr><td colspan="1">Studio Project</td><td colspan="1">Select the Studio project you want to be able to deploy on the Nuxeo Platform instance of this environment. This list shows all the Nuxeo Studio projects you have access to.</td></tr><tr><td colspan="1">Domain</td><td colspan="1">The URL at which the Nuxeo Platform is available.</td></tr></tbody></table></div>
 
 ### Deleting an Environment
 

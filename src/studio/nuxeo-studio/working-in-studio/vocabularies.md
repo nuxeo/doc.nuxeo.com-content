@@ -178,3 +178,18 @@ This types has more parameters than the others, :
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
+
+*   [Managing Vocabularies]({{page space='userdoc' page='managing-vocabularies'}})
+*   [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})
+*   [How to Add a New Vocabulary]({{page space='nxdoc' page='how-to-add-a-new-vocabulary'}})
+*   [How to Translate a Vocabulary]({{page space='nxdoc' page='how-to-translate-a-vocabulary'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

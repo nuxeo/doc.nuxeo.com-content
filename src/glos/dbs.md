@@ -37,3 +37,15 @@ DBS implementations for the Nuxeo Platform are:
 *   MarkLogic
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [DBS]({{page space='nxdoc' page='dbs'}})
+*   [MarkLogic]({{page space='nxdoc' page='marklogic'}})
+*   [MongoDB]({{page space='nxdoc' page='mongodb'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

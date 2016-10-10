@@ -98,7 +98,7 @@ Developers have their own dedicated job for building a branch, testing it and ev
 1.  Push your changes to the GitHub Nuxeo repo(s) of your choice under a branch named "feature-NXP-9999-changes-description" (see [Nuxeo common usage and best practices]({{page page='git-usage'}}) about branch naming).
 2.  Create a [new Jenkins job](http://qa.nuxeo.org/jenkins/view/Dashboard/newJob) and choose the "**Nuxeo On-Demand test and push**" template:
 
-    <table><tbody><tr><td colspan="1">**Name**</td></tr><tr><td colspan="1">
+    <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">**Name**</td></tr><tr><td colspan="1">
 
     <div class="help">Name it&nbsp;`ondemand-testandpush-USERNAME[-mavenX]` (for instance: "ondemand-testandpush-jcarsique" or "ondemand-testandpush-jcarsique-maven3"). If you need to create multiple instances, you can add a numbering at the end.</div>
 
@@ -106,14 +106,14 @@ Developers have their own dedicated job for building a branch, testing it and ev
 
     <div class="help">E-mail and Jabber ID to send notifications to. If empty, they are automatically retrieved from the logged user. However there's a drawback: When the template is edited, the retrieved user is the system.</div>
 
-    </td></tr></tbody></table>
+    </td></tr></tbody></table></div>
 
     The job is ready for use.
 
 3.  Click on **Build with Parameters**.
 4.  Fill the build parameters.
 
-    <table><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">BRANCH</td><td colspan="1">feature-NXROADMAP-131-layouts</td><td colspan="1">Branch to test, fall-backs on $PARENT_BRANCH if not found.</td></tr><tr><td colspan="1">PARENT_BRANCH</td><td colspan="1">master</td><td colspan="1">The branch to fall-back on when $BRANCH is not found. This is also the branch on which $BRANCH is merged (before or after build and tests depending on $MERGE_BEFORE_BUILD value).</td></tr><tr><td colspan="1">MERGE_BEFORE_BUILD</td><td colspan="1">true</td><td colspan="1">
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">BRANCH</td><td colspan="1">feature-NXROADMAP-131-layouts</td><td colspan="1">Branch to test, fall-backs on $PARENT_BRANCH if not found.</td></tr><tr><td colspan="1">PARENT_BRANCH</td><td colspan="1">master</td><td colspan="1">The branch to fall-back on when $BRANCH is not found. This is also the branch on which $BRANCH is merged (before or after build and tests depending on $MERGE_BEFORE_BUILD value).</td></tr><tr><td colspan="1">MERGE_BEFORE_BUILD</td><td colspan="1">true</td><td colspan="1">
 
     If true, merge on $PARENT_BRANCH before build then, if merge is successful, run the tests.
     If false, merge will be done after tests.
@@ -126,7 +126,7 @@ Developers have their own dedicated job for building a branch, testing it and ev
 
     `-Pqa,all-tests` (Maven 3)
 
-    </td><td colspan="1">Maven profiles to activate</td></tr><tr><td colspan="1">JDK_PATH</td><td colspan="1">&nbsp;</td><td colspan="1">If not empty, overrides the job configuration.</td></tr><tr><td colspan="1">Slave</td><td colspan="1">ondemand</td><td colspan="1">Default value (ondemand) uses AWS on-demand slave. Other recommended labels are: SLAVE, SLAVE4GB, OSXSLAVE, WINSLAVE</td></tr></tbody></table>
+    </td><td colspan="1">Maven profiles to activate</td></tr><tr><td colspan="1">JDK_PATH</td><td colspan="1">&nbsp;</td><td colspan="1">If not empty, overrides the job configuration.</td></tr><tr><td colspan="1">Slave</td><td colspan="1">ondemand</td><td colspan="1">Default value (ondemand) uses AWS on-demand slave. Other recommended labels are: SLAVE, SLAVE4GB, OSXSLAVE, WINSLAVE</td></tr></tbody></table></div>
 
 ### Configuration Details
 

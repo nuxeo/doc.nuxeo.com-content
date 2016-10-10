@@ -204,7 +204,7 @@ history:
 ---
 Content view is the Nuxeo technology used to define a list of documents to display. The Nuxeo Platform uses this technology in these following cases:
 
-<table><tbody><tr><th colspan="1">Content tab Listing</th><th colspan="1">Search</th></tr><tr><td colspan="1">![]({{file name='list-view.png' space='userdoc' page='browsing-content'}} ?w=300,h=181)</td><td colspan="1">![]({{file name='search-tab.png' space='userdoc' page='default-search'}} ?w=300,h=167)</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Content tab Listing</th><th colspan="1">Search</th></tr><tr><td colspan="1">![]({{file name='list-view.png' space='userdoc' page='browsing-content'}} ?w=300,h=181)</td><td colspan="1">![]({{file name='search-tab.png' space='userdoc' page='default-search'}} ?w=300,h=167)</td></tr></tbody></table></div>
 
 A Content View is defined by three notions:
 
@@ -214,11 +214,11 @@ A Content View is defined by three notions:
 
 Here is how these notions are visible&nbsp;in the Nuxeo Platform interface:
 
-<table><tbody><tr><th colspan="1">Content tab Listing</th><th colspan="1">Search</th></tr><tr><td colspan="1">![]({{file name='Content View - Content.png'}} ?w=300,thumbnail=true)</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Content tab Listing</th><th colspan="1">Search</th></tr><tr><td colspan="1">![]({{file name='Content View - Content.png'}} ?w=300,thumbnail=true)</td><td colspan="1">
 
 ![]({{file name='Content View - Search tab.png'}} ?w=300,thumbnail=true)
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Content View Configuration Overview
 

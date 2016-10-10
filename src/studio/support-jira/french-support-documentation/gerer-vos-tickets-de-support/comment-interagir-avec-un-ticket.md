@@ -84,3 +84,15 @@ Vous pourrez toutefois demander un court compl&eacute;ment de r&eacute;ponse en 
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Pages connexes'}}
+
+*   [Comment remplir un ticket Jira]({{page space='connect' page='comment-remplir-un-ticket-jira'}})
+*   [Suivi des tickets client]({{page space='connect' page='suivi-des-tickets-client'}})
+*   [Gérer vos tickets de support]({{page space='connect' page='gandeacuterer-vos-tickets-de-support'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

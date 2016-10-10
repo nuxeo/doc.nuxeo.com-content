@@ -87,7 +87,7 @@ The steps to add a new user or a new group are basically the same.
 
 **Users properties**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -151,11 +151,11 @@ Groups
 
 Use the > and < arrows to add or remove the user from one of the predefined groups.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 **Groups properties**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -187,4 +187,4 @@ Users
 
 Use the > and < arrows to add or remove predefined users from the group by default.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>

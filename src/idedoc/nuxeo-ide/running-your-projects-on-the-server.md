@@ -164,7 +164,7 @@ The server launcher can be configured from the Eclipse preferences.
 
 **Run/Debug parameters**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -196,7 +196,7 @@ Suspend server
 
 Indicate if you want the server to wait for the debugger to be attached to it before actually starting.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## {{> anchor 'deploymentprofiles'}}Deployment Profiles
 

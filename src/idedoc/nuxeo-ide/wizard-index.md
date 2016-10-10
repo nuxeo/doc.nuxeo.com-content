@@ -48,7 +48,7 @@ Here is the list of all wizards available on the IDE:
 
 ## Projects
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Name
 
@@ -97,11 +97,11 @@ Creates an empty WebEngine project.
 *   `src/main/resources/skin/views/MyRoot/index.ftl`
 *   `pom.xml`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Automation
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Name
 
@@ -126,11 +126,11 @@ Creates the operation and its XML contribution. You can choose the input/output 
 *   `src/main/java/packagePath/MyOperation.java`
 *   `src/main/resources/OSGI-INF/extensions/extensions.xml`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Component
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Name
 
@@ -155,11 +155,11 @@ Creates a Java class extending `DefaultComponent` that can be exposed as a servi
 *   `src/main/java/packagePath/MyComponent.java`
 *   `src/main/resources/OSGI-INF/extensions/extensions.xml`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## DocumentModel
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Name
 
@@ -198,11 +198,11 @@ Generates a listener and the appropriate XML contribution.
 *   `src/main/java/packagePath/MyListener.java`
 *   `src/main/resources/OSGI-INF/extensions/extensions.xml`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## OpenSocial
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Name
 
@@ -249,11 +249,11 @@ Creates a gadget structure. Only difference with the Automation Gadget is in the
 *   `resources/gadget/gadgetName/gadgetName.xml`
 *   `resources/gadget/gadgetName/gadgets-contrib.xml`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Seam
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Name
 
@@ -328,11 +328,11 @@ This is a simple service wrapper that allow to inject a Nuxeo Runtime service as
 
 *   `src/main/seam/packagePath/MyServiceWrapperBean.java`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Security
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Name
 
@@ -381,4 +381,4 @@ Creates a Java file extending `AbstractSecurityPolicy` and the appropriate XML c
 *   `src/main/java/packagePath/MySecurityPolicy.java`
 *   `src/main/resources/OSGI-INF/extensions/extensions.xml`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>

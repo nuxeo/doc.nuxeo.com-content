@@ -64,3 +64,13 @@ Double-clicking on any of these customizations opens Nuxeo Studio in a browser. 
 ![]({{file name='NxIDE_studio_view.png'}} ?w=650,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Binding Studio Projects to an Nuxeo IDE Project]({{page page='binding-studio-projects-to-an-nuxeo-ide-project'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

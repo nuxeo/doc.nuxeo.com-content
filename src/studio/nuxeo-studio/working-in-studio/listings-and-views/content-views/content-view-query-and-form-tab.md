@@ -285,13 +285,13 @@ To express a dynamic expression:
 
 Here are some examples.
 
-<table><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Query filter</th><th colspan="1">Query parameter</th></tr><tr><td colspan="1">Keeping the documents created by the current user</td><td colspan="1">`dc:creator = ?`</td><td colspan="1">`#{currentUser.name}`</td></tr><tr><td colspan="1">Keeping the children documents of the currently displayed document</td><td colspan="1">`ecm:parentId = ?`</td><td colspan="1">`#{currentDocument.id}`</td></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Query filter</th><th colspan="1">Query parameter</th></tr><tr><td colspan="1">Keeping the documents created by the current user</td><td colspan="1">`dc:creator = ?`</td><td colspan="1">`#{currentUser.name}`</td></tr><tr><td colspan="1">Keeping the children documents of the currently displayed document</td><td colspan="1">`ecm:parentId = ?`</td><td colspan="1">`#{currentDocument.id}`</td></tr><tr><td colspan="1">
 
 Keeping the descendant of the currently displayed&nbsp;document
 
 Note that this request is less efficient than the previous one.
 
-</td><td colspan="1">`ecm:path&nbsp;STARTSWITH ?`</td><td colspan="1">`#{currentDocument.path}`</td></tr><tr><td colspan="1">Keeping documents issued before today</td><td colspan="1">`dc:issued < ?`</td><td colspan="1">`#{currentDate.toString()}`</td></tr></tbody></table>
+</td><td colspan="1">`ecm:path&nbsp;STARTSWITH ?`</td><td colspan="1">`#{currentDocument.path}`</td></tr><tr><td colspan="1">Keeping documents issued before today</td><td colspan="1">`dc:issued < ?`</td><td colspan="1">`#{currentDate.toString()}`</td></tr></tbody></table></div>
 
 When your query filter has several `?` parameters, you must add the query parameters in the same order as the criteria in the query filter.
 

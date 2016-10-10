@@ -359,7 +359,7 @@ gitfa [some Git command]
 
 ### Summary Sample
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 SCM Branch
 
@@ -472,7 +472,7 @@ usually same as on master
 
 development branch dedicated to NXP-9999 feature or bug fix
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Releases are built from tags set on their maintenance branch.
 

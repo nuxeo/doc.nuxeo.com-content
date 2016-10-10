@@ -114,3 +114,17 @@ The **Parameters** tab to add custom parameters accessible through the `params` 
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
+
+*   [Automation in Nuxeo Studio]({{page page='automation'}})
+*   [Content Automation Concepts]({{page space='nxdoc' page='content-automation-concepts'}})
+*   [Automation Scripting developer documentation]({{page space='nxdoc' page='automation-scripting'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

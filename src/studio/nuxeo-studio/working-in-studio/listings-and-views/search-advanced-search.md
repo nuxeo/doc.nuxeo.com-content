@@ -64,3 +64,20 @@ Please report to the [Content Views]({{page page='content-views'}}) documentatio
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
+
+{{! Please update the label in the Content by Label macro below. }}
+
+{{#> panel heading='Related Documentation'}}
+
+*   [Content Views]({{page page='content-views'}})
+*   [Content View - Query and Form Tab]({{page page='content-view-query-and-form-tab'}})
+*   [Content View - Results]({{page page='content-view-results'}})
+*   [How to Configure a New Default Search Form in the Search Tab]({{page space='nxdoc' page='how-to-configure-a-new-default-search-form-in-the-search-tab'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

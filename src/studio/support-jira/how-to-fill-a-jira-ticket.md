@@ -135,7 +135,7 @@ A ticket must concern only one issue. Do not hesitate to create a new ticket to 
 
 This is the list of fields you should fill in, if possible, when you create a new ticket. The other fields will be filled in by the Nuxeo Support team when the ticket is analyzed.
 
-<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><th colspan="2">Main fields</th></tr><tr><td colspan="1">Project</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><th colspan="2">Main fields</th></tr><tr><td colspan="1">Project</td><td colspan="1">
 
 Select the Support Nuxeo Connect project.
 See the [Project section](#field-project).
@@ -221,7 +221,7 @@ Reporter
 
 This is prefilled with your username.
 
-</td></tr><tr><td colspan="1">R&eacute;f&eacute;rence SFD</td><td colspan="1">If you have functional specifications, you can fill in their reference here for your own team's benefit.</td></tr><tr><td colspan="1">Tags</td><td colspan="1">Type labels that can help you categorise your tickets.</td></tr></tbody></table>
+</td></tr><tr><td colspan="1">R&eacute;f&eacute;rence SFD</td><td colspan="1">If you have functional specifications, you can fill in their reference here for your own team's benefit.</td></tr><tr><td colspan="1">Tags</td><td colspan="1">Type labels that can help you categorise your tickets.</td></tr></tbody></table></div>
 
 ## {{> anchor 'field-project'}}Project
 
@@ -293,7 +293,7 @@ You must indicate which version of Nuxeo you are using (5.5, 5.6, 5.8, etc.), in
 
 Indicate the criticality of the issue, which also depends on the target environment (Production vs Staging/Development):
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Severity Level
 
@@ -349,7 +349,7 @@ General queries relating to use and/or implementation of the Nuxeo Platform, whi
 
 Display or translation problems; general use questions, recommendations for future product enhancements or modifications. There is no impact on the quality, performance or functionality of the Nuxeo Platform .
 
-</td><td colspan="1">N/A</td></tr><tr><td colspan="1">5\. Detail</td><td colspan="1">Cosmetic issue (label, style, etc.).</td><td colspan="1">Cosmetic issue (label, style, etc.).</td></tr></tbody></table>
+</td><td colspan="1">N/A</td></tr><tr><td colspan="1">5\. Detail</td><td colspan="1">Cosmetic issue (label, style, etc.).</td><td colspan="1">Cosmetic issue (label, style, etc.).</td></tr></tbody></table></div>
 
 The severity depends only on the ticket criticality, as it is described above.
 
@@ -424,3 +424,15 @@ Here are some good practices to improve the ticket:
 *   bullet lists.
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
+
+*   [JIRA Tickets Workflow]({{page space='connect' page='jira-tickets-workflow'}})
+*   [Ticket Follow Up]({{page space='connect' page='ticket-follow-up'}})
+*   [Support / JIRA]({{page space='connect' page='support-jira'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -106,7 +106,7 @@ For setting CI over a common Nuxeo Addon with a Maven build:
 2.  Add your addon in the [Addons POM](https://github.com/nuxeo/addons/blob/master/pom.xml) or in the [Optionals Addons POM](https://github.com/nuxeo/addons/blob/master/pom-optionals.xml);
 3.  Create a [new Jenkins job](http://qa.nuxeo.org/jenkins/view/Dashboard/newJob) and choose "**Nuxeo Addon**" template:
 
-    <table><tbody><tr><td colspan="1">**Name**</td></tr><tr><td colspan="1">Name it&nbsp;`addons_MODULE_NAME-BRANCH` (for instance: "addons_nuxeo-diff-master" for the "master" branch of "[https://github.com/nuxeo/nuxeo-diff](https://github.com/nuxeo/nuxeo-diff)")</td></tr><tr><td colspan="1">**Addon name**</td></tr><tr><td colspan="1">
+    <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">**Name**</td></tr><tr><td colspan="1">Name it&nbsp;`addons_MODULE_NAME-BRANCH` (for instance: "addons_nuxeo-diff-master" for the "master" branch of "[https://github.com/nuxeo/nuxeo-diff](https://github.com/nuxeo/nuxeo-diff)")</td></tr><tr><td colspan="1">**Addon name**</td></tr><tr><td colspan="1">
 
     <div class="help">This is the repository name on GitHub. For instance:&nbsp;`nuxeo-diff` for [https://github.com/nuxeo/nuxeo-diff](https://github.com/nuxeo/nuxeo-diff).</div>
 
@@ -129,7 +129,7 @@ For setting CI over a common Nuxeo Addon with a Maven build:
 
     <div class="help">Default is&nbsp;`SLAVE`</div>
 
-    </td></tr></tbody></table>
+    </td></tr></tbody></table></div>
 
 ### Nuxeo Packages
 
@@ -139,7 +139,7 @@ For setting CI over a common Nuxeo Package with a Maven build:
 2.  Add your package in [marketplace.ini](https://github.com/nuxeo/integration-scripts/blob/master/marketplace.ini);
 3.  Create a [new Jenkins job](http://qa.nuxeo.org/jenkins/view/Dashboard/newJob) and choose the "**Nuxeo Package**" template:
 
-    <table><tbody><tr><td colspan="1">**Name**</td></tr><tr><td colspan="1">
+    <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">**Name**</td></tr><tr><td colspan="1">
 
     <div class="help">Name it `addons_FT_MODULE_NAME-BRANCH` (for instance: `addons_FT_nuxeo-diff-master` for the master branch of [https://github.com/nuxeo/marketplace-diff](https://github.com/nuxeo/marketplace-diff), MP of [https://github.com/nuxeo/nuxeo-diff](https://github.com/nuxeo/nuxeo-diff). Note MODULE_NAME=nuxeo-diff and not marketplace-diff).</div>
 
@@ -206,7 +206,7 @@ For setting CI over a common Nuxeo Package with a Maven build:
 
     <div class="help">Default is&nbsp;`SLAVE`</div>
 
-    </td></tr></tbody></table>
+    </td></tr></tbody></table></div>
 
 ### Nuxeo Plugins
 
@@ -216,7 +216,7 @@ For setting CI over a standalone Nuxeo Plugin (Addon + Package hosted together i
 2.  Add your plugin in the [Optionals Addons POM](https://github.com/nuxeo/addons/blob/master/pom-optionals.xml);
 3.  Create a [new Jenkins job](http://qa.nuxeo.org/jenkins/view/Dashboard/newJob) and choose the "**Nuxeo Plugin**" template:
 
-    <table><tbody><tr><td colspan="1">**Name**</td></tr><tr><td colspan="1">
+    <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">**Name**</td></tr><tr><td colspan="1">
 
     <div class="help">Name it `plugins_MODULE_NAME-BRANCH-NXP_BRANCH`
     For instance:&nbsp;`plugins_nuxeo-timeoff-master-master` for the&nbsp;`master` branch of "[https://github.com/nuxeo/nuxeo-timeoff](https://github.com/nuxeo/nuxeo-timeoff)", building a plugin and its package based on the&nbsp;`master` branch of the Nuxeo Platform.
@@ -301,7 +301,7 @@ For setting CI over a standalone Nuxeo Plugin (Addon + Package hosted together i
 
     <div class="help">Default is&nbsp;`SLAVE`</div>
 
-    </td></tr></tbody></table>
+    </td></tr></tbody></table></div>
 
 &nbsp;
 
