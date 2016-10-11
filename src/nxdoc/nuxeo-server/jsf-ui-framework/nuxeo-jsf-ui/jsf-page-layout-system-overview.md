@@ -11,7 +11,7 @@ labels:
 toc: true
 confluence:
     ajs-parent-page-id: '950313'
-    ajs-parent-page-title: JSF UI Framework Overview
+    ajs-parent-page-title: Nuxeo JSF UI
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: JSF+Page+Layout+System+Overview
@@ -156,6 +156,7 @@ The main content of the page is actually defined via facelet templating (i.e. us
   <nxl:widget name="documentTabs" mode="view" value="#{currentDocument}" />
 ```
 
+<div class="line">
 
 ### Digital Asset Management Example
 
@@ -337,3 +338,17 @@ However, if you think the custom UI is the way to go, we'll be happy to help you
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
+*   [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
+*   [Layouts and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
+*   [Theme]({{page page='theme'}})
+*   [JSF UI How-To Index]({{page page='jsf-ui-how-to-index'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div></div>

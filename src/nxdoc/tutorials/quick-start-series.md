@@ -21,6 +21,11 @@ confluence:
 history:
     - 
         author: Solen Guitter
+        date: '2016-10-06 08:41'
+        message: eplace From JSF UI bu Getting Started with the Nuxeo Platfor
+        version: '6'
+    - 
+        author: Solen Guitter
         date: '2015-02-12 15:20'
         message: ''
         version: '5'
@@ -79,8 +84,8 @@ You don't know how to get your project started? Here are some tips for you.
 
 Here are some resources to help you start your Nuxeo Platform application:
 
+*   [Getting Started with the Nuxeo Platform]({{page page='getting-started-with-the-nuxeo-platform'}})
 *   [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
-*   [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
 *   [First Steps With Studio: Technical Documentation Tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}})
 
 {{/panel}}</div></div>

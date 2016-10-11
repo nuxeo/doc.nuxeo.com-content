@@ -24,8 +24,13 @@ confluence:
 history:
     - 
         author: Manon Lumeau
+        date: '2016-10-03 14:57'
+        message: ''
+        version: '55'
+    - 
+        author: Manon Lumeau
         date: '2016-04-20 14:23'
-        message: avadoc links updated
+        message: 'javadoc links updated '
         version: '54'
     - 
         author: Solen Guitter
@@ -436,7 +441,7 @@ If you need to add a new processor:
         public Map<String, Object> readMetadata(Blob blob, boolean ignorePrefix);
     ```
 
-    Here is the [ExifTool example](https://cdn.rawgit.com/nuxeo/nuxeo-binary-metadata/fix-NXP-12452-binary/src/main/java/org/nuxeo/binary/metadata/internals/ExifToolProcessor.java) `org.nuxeo.binary.metadata.internals.ExifToolProcessor` and the [command line documentation](http://doc.nuxeo.com/x/joNdAQ) to execute third command lines from the Nuxeo Platform.
+    Here is the [ExifTool example](https://raw.githubusercontent.com/nuxeo/nuxeo-binary-metadata/master/src/main/java/org/nuxeo/binary/metadata/internals/ExifToolProcessor.java) `org.nuxeo.binary.metadata.internals.ExifToolProcessor` and the [command line documentation](http://doc.nuxeo.com/x/joNdAQ) to execute third command lines from the Nuxeo Platform.
 
 ## ExifTool Extraction Example
 

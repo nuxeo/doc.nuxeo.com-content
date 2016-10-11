@@ -21,9 +21,14 @@ confluence:
     source_link: /display/NXDOC/Elasticsearch+Setup
 history:
     - 
+        author: Solen Guitter
+        date: '2016-10-10 07:34'
+        message: ''
+        version: '87'
+    - 
         author: Frédéric Vadon
         date: '2016-08-24 09:47'
-        message: yp
+        message: typo
         version: '86'
     - 
         author: Manon Lumeau
@@ -684,7 +689,7 @@ Here the index is a primary storage and you can not rebuild it. So we need a too
     ./stream2es es --source http://localhost:9200/nuxeo-audit --target http://localhost:9200/nuxeo-audit2 --replace 
     ```
 
-## Configuration for Multi Repositories
+## {{> anchor 'conf_multi_repositories'}}Configuration for Multi Repositories
 
 You need to define an index for each repository. This is done by adding an `elasticSearchIndex` contribution.
 

@@ -23,6 +23,16 @@ confluence:
     source_link: /display/NXDOC/nuxeoctl+and+Control+Panel+Usage
 history:
     - 
+        author: Bertrand Chauvin
+        date: '2016-10-05 15:16'
+        message: ''
+        version: '49'
+    - 
+        author: Bertrand Chauvin
+        date: '2016-09-29 15:30'
+        message: 'Update help to reflect NXP-15037, NXP-14019 and others'
+        version: '48'
+    - 
         author: Arnaud Kervern
         date: '2016-07-11 08:59'
         message: ''
@@ -687,7 +697,7 @@ Uninstall and remove all packages from the local cache.
 
 </td><td colspan="1">
 
-Install all the available hotfixes for the current platform (requires a registered instance).
+Install all the available hotfixes for the current platform, but do not upgrade already installed hotfixes versions. For the latter, please use `mp-upgrade` (to upgrade everything) or `mp-install` with the desired version (to install a specific package) instead. (requires a registered instance).
 
 </td></tr><tr><td colspan="1">
 
@@ -695,7 +705,7 @@ Install all the available hotfixes for the current platform (requires a register
 
 </td><td colspan="1">
 
-Get all the available upgrades for the Marketplace packages currently installed.
+Get all the available upgrades for the Nuxeo Packages currently installed (including installed hotfixes and Studio package(s)). If a snapshot package is installed, it will not be reinstalled even if it has been updated. In this case, you should use `mp-remove` then `mp-install` instead.
 
 </td></tr><tr><td colspan="1">`mp-show`</td><td colspan="1">(Since Nuxeo 5.7.1) Show Marketplace package(s) information. You must provide the package file(s), name(s) or ID(s) as parameter.</td></tr></tbody></table></div>
 

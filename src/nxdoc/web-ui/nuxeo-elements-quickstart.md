@@ -28,6 +28,31 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Elements+Quickstart
 history:
     - 
+        author: Solen Guitter
+        date: '2016-09-16 09:57'
+        message: ''
+        version: '19'
+    - 
+        author: Arnaud Kervern
+        date: '2016-09-15 15:35'
+        message: ''
+        version: '18'
+    - 
+        author: Arnaud Kervern
+        date: '2016-09-15 15:31'
+        message: ''
+        version: '17'
+    - 
+        author: Arnaud Kervern
+        date: '2016-09-15 15:28'
+        message: ''
+        version: '16'
+    - 
+        author: Arnaud Kervern
+        date: '2016-09-15 14:47'
+        message: ''
+        version: '15'
+    - 
         author: Vincent Dutat
         date: '2016-01-12 20:34'
         message: ''
@@ -101,26 +126,27 @@ history:
 ---
 ## Requirements
 
-*   [Node.js](https://nodejs.org/)&nbsp;is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client side development is built with Node.js and distributed with npm, the package manager for node, so just make sure you download and install your OS specific version first.
-
-*   [Bower](http://bower.io/) is currently **the&nbsp;**tool for managing web application dependencies. To install it just use:
-
-    ```bash
-    npm install -g bower
-    ```
-
-*   [Gulp](http://gulpjs.com/) is a JavaScript task runner that lets you automate tasks.
+*   **Node.js**
+    [Node.js](https://nodejs.org/) is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client-side development is built with Node.js and distributed with npm, the package manager for Node.js. Make sure you download and install your OS specific version first.
+*   **Bower**
+    [Bower](http://bower.io/) is currently **the&nbsp;**tool for managing web application dependencies. To install it just use:
 
     ```bash
-    npm install -g gulp
+    $ npm install -g bower
     ```
 
-*   [Yeoman](http://yeoman.io/)&nbsp;is an opinionated generator that helps kickstarting projects. Use its&nbsp;[Polymer generator](https://github.com/yeoman/generator-polymer) to scaffold your app:
+*   **Gulp**[
+    Gulp](http://gulpjs.com/) is a JavaScript task runner that lets you automate tasks. To install it just use:
 
     ```bash
-    npm install -g yo
-    npm install -g generator-polymer
+    $ npm install -g gulp
     ```
+
+*   **Yeoman[
+    Yeoman](http://yeoman.io/)** &nbsp;is an opinionated generator that helps kickstarting projects. Depending on your needs you have two possibilities to use it.
+
+    *   Use it under the hood with the&nbsp;[Polymer CLI](https://github.com/Polymer/polymer-cli) to scaffold your standalone application:&nbsp;your application is **hosted outside** the Nuxeo Server and uses it as a service
+    *   Use the [Nuxeo Generator](https://github.com/yeoman/generator-nuxeo) to scaffold your application **as a Nuxeo Bundle** and deploy it in a Nuxeo Server: your application is **hosted inside** theNuxeo Server, as a bundle, and uses it as a backend.
 
 ## Building an Application
 
@@ -128,26 +154,58 @@ Let's build a very simple application showcasing usage of the `nuxeo-connection`
 
 ### Scaffolding
 
-1.  After creating a folder to hold the application's code&nbsp; scaffold it using Yeoman's Polymer generator:
+#### As a Nuxeo Bundle
 
-    ```bash
-    > mkdir -p nuxeo-elements-sample && cd $_
-    > yo polymer
+1.  ```bash
+    $ npm install -g yo generator-nuxeo
+    $ mkdir -p nuxeo-elements-sample && cd $_ 
+    $ yo nuxeo polymer && npm install && bower install
     ```
 
-    ![]({{file name='polymer_starter_kit.png'}} ?w=600,border=true)
+    The Nuxeo Generator (`generator-nuxeo`) will ask you several questions about what is the artifact name, etc.&nbsp;
 
-    Yeoman will scaffold the application based on the&nbsp;[Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit) a&nbsp;starting point for building web applications with Polymer built and maintained by the Polymer team.
-
-2.  To run the application and see what has been generated, run gulp:
+2.  Run gulp to run the application and see what has been generated.
 
     ```bash
-    gulp serve
+    $ gulp serve
+    ```
+
+    The produced application includes some sample elements and showcases Google's Material Design through the use of Paper Elements.
+
+3.  Build the Nuxeo Package containing the Polymer Application.
+
+    ```bash
+    $ mvn package
+    $ cp target/nuxeo-elements-sample-<VERSION>.jar <NUXEO_SERVER>/nxserver/bundles/
+    ```
+
+    {{#> callout type='info' }}
+
+    Do not hesitate to take a look at the others templates available with the [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo), especially the `Package Generator` that helps you package your bundles as a [Nuxeo Package]({{page page='creating-nuxeo-packages'}}).
+
+    {{/callout}}
+
+#### As a Standalone Polymer Application
+
+1.  After creating a folder to hold the application's code, scaffold it using Yeoman's Polymer generator:
+
+    ```bash
+    $ npm install -g polymer-cli
+    $ mkdir -p nuxeo-elements-sample && cd $_
+    $ polymer init starter-kit
+    ```
+
+    The&nbsp;[Polymer CLI](https://github.com/Polymer/polymer-cli)&nbsp;helps you as a&nbsp;starting point for building web applications with Polymer. It is maintained by the Polymer team.
+
+2.  Run gulp to run the application and see what has been generated.
+
+    ```bash
+    $ polymer serve
     ```
 
     **Note:&nbsp;**the README.md includes detailed information about the generated application so it's a good starting point to understand its structure.
 
-    ![]({{file name='polymer_app_sample.png'}} ?w=600,border=true)
+    ![]({{file name='image2016-9-15 11:9:56.png'}} ?w=600,border=true)
 
     The produced application includes some sample elements and showcases Google's Material Design through the use of Paper Elements.
 
@@ -158,12 +216,12 @@ Let's plug this application to the Nuxeo instance and change the hardcoded users
 1.  Install Nuxeo elements through Bower:
 
     ```bash
-    bower install --save nuxeo/nuxeo-elements
+    $ bower install --save nuxeo/nuxeo-elements
     ```
 
-    This adds `nuxeo-elements` as a dependency in `bower.json` and dowloads the latest release from our GitHub [repository](https://github.com/nuxeo/nuxeo-elements) into bower_components.
+    This adds `nuxeo-elements` as a dependency in `bower.json` and dowloads the latest release from our GitHub [repository](https://github.com/nuxeo/nuxeo-elements) into `bower_components`.
 
-2.  Once nuxeo-elements is downloaded import the elements the application will use:
+2.  Once nuxeo-elements is downloaded import the elements the application will use.
 
     {{#> panel type='code' heading='app/elements/elements.html'}}
 
@@ -175,13 +233,13 @@ Let's plug this application to the Nuxeo instance and change the hardcoded users
 
     {{/panel}}
 
-    Elements used by the application are usually all imported in a single file to simplify the [vulcanization](https://github.com/polymer/vulcanize) process which basically&nbsp;reduces an HTML file and its dependent HTML Imports into a single file to reduce network roundtrips and simplify deployment.
+    Elements used by the application are usually all imported in a single file to simplify the [vulcanization](https://github.com/polymer/vulcanize) process which basically&nbsp;reduces an HTML file and its dependent HTML imports into a single file to reduce network roundtrips and simplify deployment.
 
 ### Connecting to Nuxeo
 
 With Nuxeo Elements imports in place you can now use your custom elements.
 
-Declare the connection to Nuxeo.&nbsp; This connection will be shared by all Nuxeo data driven elements so it should be one of the first elements you declare in your application, i.e. right at the start of the template:
+Declare the connection to Nuxeo.&nbsp; This connection will be shared by all Nuxeo data driven elements so it should be one of the first elements you declare in your application, i.e. right at the start of the template.
 
 {{#> panel type='code' heading='app/index.html'}}
 
@@ -200,7 +258,7 @@ There is now a connection to the Nuxeo instance. Note that you will need to defi
 
 ### Retrieving Users
 
-Replace the hard-coded user listing with actual data: use the **nuxeo-resource&nbsp;**element and Nuxeo's REST API, namely the `/api/v1/user/search` endpoint, and to retrieve a list of users.
+Replace the hard-coded user listing with actual data: use the `nuxeo-resource`**&nbsp;**element and Nuxeo's REST API, namely the `/api/v1/user/search` endpoint, and retrieve a list of users.
 
 ```xml
 <section data-route="users">
@@ -242,7 +300,7 @@ Thanks to our custom `nuxeo-resource` element and Polymer's data binding you can
     ```
 
     {{/panel}}
-2.  Update the routing code to set the "route" to "notes" when the URL matches `/notes`:
+2.  Update the routing code to set the `route` to `notes` when the URL matches `/notes`.
 
     {{#> panel type='code' heading='app/elements/routing.html'}}
 
@@ -254,7 +312,7 @@ Thanks to our custom `nuxeo-resource` element and Polymer's data binding you can
     ```
 
     {{/panel}}
-3.  Add a new section to be displayed when current "route" is "notes".
+3.  Add a new section to be displayed when current `route` is `notes`.
 
     {{#> panel type='code' heading='app/index.html'}}
 
@@ -275,7 +333,7 @@ Thanks to our custom `nuxeo-resource` element and Polymer's data binding you can
 
     {{/panel}}
 
-    Here the `nuxeo-page-provider` element is used with a simple NXQL query to retrieve all the Notes that haven't been deleted and displays a simple card for each of these with the Note's title and description.
+    Here the `nuxeo-page-provider` element is used with a simple NXQL query to retrieve all the Notes that haven't been deleted and displays a simple card for each of these with the note's title and description.
 
     Here is what the final application looks like:
 

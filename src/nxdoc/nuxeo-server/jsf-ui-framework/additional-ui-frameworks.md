@@ -78,7 +78,7 @@ history:
 ---
 {{! excerpt}}
 
-Nuxeo uses several UI frameworks beside the [default JSF technology]({{page page='jsf-ui-framework-overview'}}).
+Nuxeo uses several UI frameworks beside the [default JSF technology]({{page page='nuxeo-jsf-ui'}}).
 
 {{! /excerpt}}
 

@@ -23,6 +23,11 @@ confluence:
     source_link: /display/NXDOC/CMIS
 history:
     - 
+        author: Lise Kemen
+        date: '2016-10-10 08:28'
+        message: ''
+        version: '80'
+    - 
         author: Solen Guitter
         date: '2016-09-08 13:09'
         message: ''
@@ -682,7 +687,7 @@ Watch this 15 min video presenting a case processing application leveraging CMIS
 
 ### Documentation
 
-*   [CMIS 1.1 (HTML)](http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html)
+*   [CMIS 1.1 (HTML)](http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html),
 *   [CMIS 1.1 (PDF)](http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.pdf) (1.3 MB).
 
 ### Slide Decks

@@ -21,6 +21,11 @@ confluence:
     source_link: /display/NXDOC/Repository+Concepts
 history:
     - 
+        author: Solen Guitter
+        date: '2016-09-28 14:01'
+        message: ''
+        version: '48'
+    - 
         author: Alain Escaffre
         date: '2014-09-19 16:23'
         message: ''
@@ -496,7 +501,7 @@ Standard categories used in the Nuxeo DM interface are:
 
 Other categories can freely be defined.
 
-### Life Cycle
+### {{> anchor 'lifecycle'}}Life Cycle
 
 Nuxeo Core includes a life cycle service.
 

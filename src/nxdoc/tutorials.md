@@ -20,8 +20,13 @@ confluence:
 history:
     - 
         author: Solen Guitter
+        date: '2016-10-06 08:39'
+        message: eplace From JSF UI bu Getting Started with the Nuxeo Platfor
+        version: '19'
+    - 
+        author: Solen Guitter
         date: '2016-09-05 10:31'
-        message: ix link
+        message: Fix links
         version: '18'
     - 
         author: Manon Lumeau
@@ -119,7 +124,7 @@ history:
 ### Quick Start Series
 
 *   [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
-*   [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
+*   [Getting Started with the Nuxeo Platform]({{page page='getting-started-with-the-nuxeo-platform'}})
 *   [Quick Overview]({{page page='quick-overview'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}

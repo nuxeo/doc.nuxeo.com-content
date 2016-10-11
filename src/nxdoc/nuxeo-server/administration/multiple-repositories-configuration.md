@@ -17,57 +17,62 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/NwZvAQ'
     source_link: /display/NXDOC/Multiple+Repositories+Configuration
 history:
-    -
+    - 
+        author: Solen Guitter
+        date: '2016-10-10 07:35'
+        message: ix link to multi repositories con
+        version: '12'
+    - 
         author: Ronan Daniellou
         date: '2016-08-22 13:20'
-        message: ixes "blockTimeoutMillis" -> "blockingTimeoutMillis
+        message: Fixes "blockTimeoutMillis" -> "blockingTimeoutMillis"
         version: '11'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-25 16:41'
         message: ''
         version: '10'
-    -
+    - 
         author: Antoine Taillefer
         date: '2016-03-18 09:39'
         message: ''
         version: '9'
-    -
+    - 
         author: Michaël Vachette
         date: '2015-09-03 12:40'
         message: ''
         version: '8'
-    -
+    - 
         author: Michaël Vachette
         date: '2015-09-03 12:36'
         message: ''
         version: '7'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-05-05 12:56'
         message: typo
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2015-05-05 10:12'
         message: 'Format steps, add related documentation'
         version: '5'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-05-04 15:59'
         message: Add a note about Elasticsearch multi repo conf
         version: '4'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-05-04 15:38'
         message: clearer paths
         version: '3'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-05-04 15:35'
         message: ''
         version: '2'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-05-04 15:34'
         message: ''
@@ -185,7 +190,7 @@ In the above repository configuration, we defined `<property name="path">binarie
 
 ## Elasticsearch Configuration
 
-There must be an Elasticsearch index associated for each repository. See the [Elasticsearch multi repository configuration documentation]({{page space='ADMINDOC' page='Elasticsearch setup#ElasticsearchSetup-ConfigurationforMultiRepositories'}}) for more information.
+There must be an Elasticsearch index associated for each repository. See the [Elasticsearch multi repository configuration documentation]({{page page='elasticsearch-setup#conf_multi_repositories'}}) for more information.
 
 &nbsp;
 

@@ -26,6 +26,11 @@ confluence:
     source_link: /display/NXDOC/Blob+Upload+for+Batch+Processing
 history:
     - 
+        author: Gabriel Barata
+        date: '2016-10-07 17:35'
+        message: hanged "Dropping a Batch" and added "Deleting a File from a Batch"
+        version: '32'
+    - 
         author: Antoine Taillefer
         date: '2016-03-08 13:04'
         message: ''
@@ -222,7 +227,7 @@ Before uploading any file you need to initialize a batch, even if there is only 
 POST /api/v1/upload/
 ```
 
-This request returns a 201&nbsp;_CREATED_&nbsp;status code with the following JSON data:
+This request returns a 201&nbsp;_CREATED_ &nbsp;status code with the following JSON data:
 
 ```
 {"batchId": batchId}
@@ -256,7 +261,7 @@ You also need to set some custom HTTP headers:
 {"batchId": batchId, "fileIdx": fileIdx, "uploadType": "normal", "uploadedSize": xxx}
 ```
 
-<span style="color: rgb(0,0,0);">The value of the&nbsp;`uploadType` field is&nbsp;`normal` by default, it can be&nbsp; `chunked` if the file was [uploaded by chunks](#uploadingafilebychunks).&nbsp;</span>
+<span style="color: rgb(0,0,0);">The value of the&nbsp; `uploadType` field is&nbsp;`normal` by default, it can be&nbsp; `chunked` if the file was [uploaded by chunks](#uploadingafilebychunks).&nbsp;</span>
 
 {{#> callout type='info' heading='About the file storage implementation'}}
 
@@ -298,13 +303,21 @@ JSON response data:
 DELETE /api/v1/upload/{batchId} 
 ```
 
-Returns a 200&nbsp;_OK_&nbsp;status code with the following JSON data:
+Returns a 200&nbsp;_OK_ &nbsp;status code with the following JSON data:
 
 ```
 {"batchId": batchId, "dropped": "true"}
 ```
 
-Executing a batch will automatically remove it.
+By default, executing a batch will automatically remove it. You can prevent this behavior by executing it with the header `X-Batch-No-Drop`&nbsp;set to **"true"**. In such a case, you have to take care of dropping the batch manually after you are done with it.
+
+### Deleting a File from a Batch
+
+```
+DELETE /api/v1/upload/{batchId}/{fileId} 
+```
+
+Returns a 204 NO CONTENT and removes the file from the batch.
 
 ## {{> anchor 'uploadingafilebychunks'}}Uploading a File by Chunks
 

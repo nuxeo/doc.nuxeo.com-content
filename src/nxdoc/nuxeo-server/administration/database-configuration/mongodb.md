@@ -22,6 +22,11 @@ confluence:
     source_link: /display/NXDOC/MongoDB
 history:
     - 
+        author: Florent Guillaume
+        date: '2016-09-22 14:07'
+        message: ongodb-quartz-cluste
+        version: '39'
+    - 
         author: Solen Guitter
         date: '2016-08-05 09:24'
         message: ''
@@ -272,6 +277,12 @@ or
 ```
 nuxeo.templates=default,mongodb
 ```
+
+{{#> callout type='note' heading='Cluster Mode'}}
+
+If you're using Nuxeo in cluster mode, you should use the template `mongodb-quartz-cluster` instead, to get a proper cluster-aware Quartz configuration that doesn't need a SQL database. (Quartz is the component that deals with periodic event scheduling in Nuxeo.)
+
+{{/callout}}
 
 The following properties are available in `nuxeo.conf`:
 

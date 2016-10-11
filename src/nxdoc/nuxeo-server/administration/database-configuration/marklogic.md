@@ -21,6 +21,16 @@ confluence:
 history:
     - 
         author: Solen Guitter
+        date: '2016-09-15 08:06'
+        message: ''
+        version: '9'
+    - 
+        author: Kevin Leturc
+        date: '2016-09-14 08:33'
+        message: ''
+        version: '8'
+    - 
+        author: Solen Guitter
         date: '2016-08-05 09:24'
         message: ''
         version: '7'
@@ -102,6 +112,18 @@ or
 ```
 nuxeo.templates=default,marklogic
 ```
+
+### Range Index Configuration
+
+In order to properly work, MarkLogic needs a range element index for each elements you want to compare using&nbsp;`<`,&nbsp;`<=`,&nbsp;`>=` or&nbsp;`>` in a NXQL query.
+
+Here's a list of basic Nuxeo elements needing a range element index:
+
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Element</th><th colspan="1">Scalar Type</th></tr><tr><td colspan="1">created</td><td colspan="1">dateTime</td></tr><tr><td colspan="1">replaced</td><td colspan="1">dateTime</td></tr><tr><td colspan="1">version-id</td><td colspan="1">unsignedLong</td></tr><tr><td colspan="1">begin</td><td colspan="1">dateTime</td></tr><tr><td colspan="1">end</td><td colspan="1">dateTime</td></tr><tr><td colspan="1">dc__created</td><td colspan="1">dateTime</td></tr><tr><td colspan="1">dc__modified</td><td colspan="1">dateTime</td></tr><tr><td colspan="1">length</td><td colspan="1">long</td></tr><tr><td colspan="1">rend__modificationDate</td><td colspan="1">dateTime</td></tr><tr><td colspan="1">rend__sourceModificationDate</td><td colspan="1">dateTime</td></tr></tbody></table></div>
+
+In order to create these indexes, go to your MarkLogic server configuration, under your database you'll find&nbsp;`Element Range Indexes`. In this section you can create an range element index for each elements with the correct scalar type. Leave `namespace uri`&nbsp;empty, set&nbsp;`range value positions` to false, and&nbsp;`invalid values` to ignore.
+
+&nbsp;
 
 &nbsp;
 

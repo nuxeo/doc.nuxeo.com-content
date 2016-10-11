@@ -1,5 +1,5 @@
 ---
-title: JSF UI Framework Overview
+title: Nuxeo JSF UI
 review:
     comment: ''
     date: '2015-12-01'
@@ -17,13 +17,23 @@ confluence:
     ajs-parent-page-title: JSF UI Framework
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: JSF+UI+Framework+Overview
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/JSF+UI+Framework+Overview'
+    canonical: Nuxeo+JSF+UI
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+JSF+UI'
     page_id: '950313'
     shortlink: KYAO
     shortlink_source: 'https://doc.nuxeo.com/x/KYAO'
-    source_link: /display/NXDOC/JSF+UI+Framework+Overview
+    source_link: /display/NXDOC/Nuxeo+JSF+UI
 history:
+    - 
+        author: Manon Lumeau
+        date: '2016-09-27 12:54'
+        message: ''
+        version: '26'
+    - 
+        author: Manon Lumeau
+        date: '2016-09-26 16:11'
+        message: ''
+        version: '25'
     - 
         author: Solen Guitter
         date: '2016-09-05 09:37'
@@ -224,5 +234,21 @@ All this means that you can start from a standard Nuxeo Platform, and with simpl
 *   [Web UI How-To Index]({{page space='NXDOC' page='Web UI+How-To+Index'}})
 *   [Upgrade to JSF2]({{page space='NXDOC' page='Upgrade to+JSF2'}})&nbsp;&mdash;&nbsp;<span class="smalltext">The Nuxeo Platform has been upgraded to JSF 2 for the 6.0 version. This page provides tools and notes to help you migrate your custom Nuxeo projects to this version.</span>
 *   [JSF and Ajax Tips and How-To Index]({{page space='NXDOC' page='JSF and+Ajax+Tips+and+How-To+Index'}})
+
+# Installation & Configuration
+
+## Installation
+
+### Installing Nuxeo JSF UI Addon &nbsp;
+
+{{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
+
+Once the addon is installed, you can go to [https://host:port/nuxeo](https://hostport) and after authentication, you will be able to browse the JSF UI and start creating content, upload files, browse and search for content.
+
+## Configuration
+
+### Configuring Nuxeo JSF UI Addon
+
+There is no additional configuration step required to start using the addon. Customisation is done via Nuxeo Studio.
 
 {{> end_of_tabs }}

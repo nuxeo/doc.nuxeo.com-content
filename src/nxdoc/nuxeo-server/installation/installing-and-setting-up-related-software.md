@@ -26,6 +26,11 @@ confluence:
     source_link: /display/NXDOC/Installing+and+Setting+Up+Related+Software
 history:
     - 
+        author: Dave Hintemeyer
+        date: '2016-09-21 16:16'
+        message: dded Tip about OSx OpenOffic
+        version: '101'
+    - 
         author: Vincent Dutat
         date: '2016-08-08 18:12'
         message: ''
@@ -636,6 +641,16 @@ Download and install them from:
 
 *   LibreOffice: [http://www.libreoffice.org/](http://www.libreoffice.org/)
 *   OpenOffice: [http://www.openoffice.org/](http://www.openoffice.org/)
+
+{{#> callout type='tip' heading='OpenOffice'}}
+
+&nbsp;If you are using the default installation, you must rename OpenOffice.app to OpenOffice.org.app in order for Nuxeo to find it
+
+{{/callout}}
+
+&nbsp;
+
+&nbsp;
 
 {{! /multiexcerpt}}{{! multiexcerpt name='ooo-libreoffice-configuration'}}
 

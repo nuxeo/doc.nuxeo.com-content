@@ -24,6 +24,11 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+CSV
 history:
     - 
+        author: Karin Touchie
+        date: '2016-10-07 12:19'
+        message: dd Import Mode option to CSV importe
+        version: '34'
+    - 
         author: Frantz Fischer
         date: '2016-07-29 10:32'
         message: ''
@@ -261,9 +266,10 @@ To import documents using Nuxeo CSV:
 2.  In the Nuxeo Platform, go on the workspace or folder you want to import documents into.
 3.  Click on the **Import a CSV file** button in the workspace or folder you want to import documents into.
 4.  Browse and select your CSV file.
-    ![]({{file name='CSV Importer beginning.png'}} ?w=550,border=true)
+    ![]({{file name='CSV Importer beginning.png'}} ?w=550)
 5.  Optionally check the box **<span style="color: rgb(68,68,68);">Send me the import report by email</span>** if you want to receive an email when the import is done which shows how the import went. This is useful in case of imports that take a long time.
-6.  Click on the **Process** button.
+6.  Optionally check the box&nbsp;**Enable document import mode** if you&nbsp;want to import documents while maintaining original UUID, creation date, modification date, author and contributors.
+7.  Click on the **Process** button.
     The import starts. You can either:
 
     *   wait for the import to be completed.

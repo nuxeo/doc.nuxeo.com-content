@@ -19,6 +19,46 @@ confluence:
 history:
     - 
         author: Solen Guitter
+        date: '2016-10-05 08:04'
+        message: ''
+        version: '26'
+    - 
+        author: Anne Jubert
+        date: '2016-10-04 09:44'
+        message: ''
+        version: '25'
+    - 
+        author: Anne Jubert
+        date: '2016-10-03 14:29'
+        message: ''
+        version: '24'
+    - 
+        author: Anne Jubert
+        date: '2016-10-03 14:28'
+        message: ''
+        version: '23'
+    - 
+        author: Anne Jubert
+        date: '2016-10-03 14:20'
+        message: ''
+        version: '22'
+    - 
+        author: Anne Jubert
+        date: '2016-10-03 14:18'
+        message: ''
+        version: '21'
+    - 
+        author: Anne Jubert
+        date: '2016-10-03 13:17'
+        message: ''
+        version: '20'
+    - 
+        author: Anne Jubert
+        date: '2016-10-03 13:07'
+        message: ''
+        version: '19'
+    - 
+        author: Solen Guitter
         date: '2016-09-02 08:24'
         message: ''
         version: '18'
@@ -109,11 +149,7 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}
-
-The Nuxeo mobile application lets you access content stored in Nuxeo Platform servers on your phone. It provides a seamless experience on essential features such as searching, browsing and managing favorite documents.
-
-{{! /excerpt}}
+{{! excerpt}}The Nuxeo mobile application lets you access content stored in Nuxeo Platform servers on your phone. It provides a seamless experience on essential features such as searching, browsing and managing favorite documents. Available for iOS.{{! /excerpt}}
 
 &nbsp;
 
@@ -121,7 +157,7 @@ The Nuxeo mobile application lets you access content stored in Nuxeo Platform se
 
 ### iPhone Requirements
 
-The Nuxeo mobile application is available for iPhones SE, 5/5c/5s and 6/6+ with a minimum version of iOS 8 required.
+The Nuxeo mobile application is available for iPhones SE, 5/5c/5s, 6/6+, 7/7+&nbsp;with a minimum version of iOS 8 required.
 
 ### Nuxeo Platform Requirements
 
@@ -129,63 +165,63 @@ The Nuxeo mobile application is compliant with Nuxeo Platform 8.3 and Nuxeo LTS 
 
 ## Installation
 
-The Nuxeo application can be installed from the Apple Store.
+The Nuxeo iOS application can be installed from the [Apple Store](https://itunes.apple.com/app/apple-store/id1103802613?mt=8).&nbsp;
 
 ## Functional Overview
 
-The Nuxeo application allows you to authenticate against a Nuxeo server and browse and search the Nuxeo repository and your favorites documents. It provides a menu giving access to all menu entries, except when you are browsing.
+The Nuxeo application allows you to authenticate against a Nuxeo server, browse and search the Nuxeo repository In addition you can manage your favorite documents and access your shared/personal collections. It provides a menu giving access to all menu entries, except when you are browsing.
 
 ![]({{file name='MobileMenu.jpg'}} ?w=200,h=355,border=true)
 
 ### Authenticating
 
-Once the application is installed and opened, indicate the Nuxeo server you want to connect to by filling the HTTP information. For example "[http://myserver.nuxeo.com/nuxeo](http://myserver.nuxeo.com/nuxeo)".
+Once the application is installed and opened, indicate the Nuxeo server you want to connect to by filling the HTTP information. For example "[http://myserver.nuxeo.com/nuxeo](http://myserver.nuxeo.com/nuxeo)".As soon as the server is detected, the login page is displayed. Depending on your server configuration, it is the default one or your customized login page providing authentication through CAS, OpenID or another authentication system.
 
-![]({{file name='MobileServerConnection.PNG'}} ?w=200,h=355,border=true)
-
-As soon as the server is detected, the login page is displayed. Depending on your server configuration, it is the default one or your customized login page providing authentication through CAS, OpenID or another authentication system.
-
-![]({{file name='MobileLoginPage.jpg'}} ?w=200,h=355,border=true)
+![]({{file name='MobileServerConnection.PNG'}} ?w=200,h=355,border=true)&nbsp; &nbsp;&nbsp;![]({{file name='MobileLoginPage.jpg'}} ?w=200,h=355,border=true)
 
 ### Browsing Content
 
-The **Browse** menu enables you to browse your documents. The thumbnail of the document is displayed whenever it's available, just like on the regular web user interface (see the [Limitations](#limitations) section). Otherwise an icon is displayed. Tap to enter the workspace or see the document.
+The **Browse** menu enables you to browse your documents. The thumbnail of the document is displayed whenever it's available, just like on the regular web user interface (see the [Limitations](#limitations) section). Otherwise an icon is displayed. Tap to enter the workspace or see the document.Actions on documents are available by **sliding**:
 
-Actions on documents are available by **sliding**: share and add/remove from favorites so far (see below for details).
+*   Share&nbsp;
+*   Add to/Remove from favorites (see below for details)
+*   Add to Collections
 
 ![]({{file name='ActionsbySliding.jpg'}} ?w=200,h=355,border=true)
 
 For any non folderish document, such as notes and files typically, some information is displayed on the view layout:&nbsp;
 
-*   The document thumbnail if available or the preview of&nbsp;content &nbsp;for notes
+*   The document thumbnail if available or the preview of&nbsp;content for notes
 *   The filename and size of the attached file if any
 *   The creation date, creator username, version, state and list of contributors
 
 If the PDF preview is available, tap the thumbnail zone to preview it. If the document is a text document with several pages, you can navigate through it.
 
-![]({{file name='MobileUnstarred.jpg'}} ?w=200,h=355,border=true)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;![]({{file name='MobileDocumentView.jpg'}} ?w=200,h=355,border=true)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;![]({{file name='MobilePreview.jpg'}} ?w=200,h=355,border=true)
+![]({{file name='MobileBrowsing.jpg'}} ?w=200,h=356,border=true)&nbsp; &nbsp;&nbsp;![]({{file name='MobileDocumentView.jpg'}} ?w=200,h=356,border=true)&nbsp; &nbsp; ![]({{file name='MobilePreview.jpg'}} ?w=200,h=355,border=true)
 
 ### Favorites
 
-You are able to mark as favorite the list of documents you are interested in. "Star" and "Unstar" actions are available for all document types whether the document is folderish or not. Select the "..." action available on the toolbar to add documents to your favorites or to remove them. Favorite documents are available directly from the **Favorites** menu.
+You are able to mark as favorite the list of documents you are interested in. "Add to" and "Remove from" favorites actions are available for all document types whether the document is folderish or not. Select the "..." action available on the toolbar. Favorite documents are available directly from the **Favorites** menu.
 
-![]({{file name='AddToFavorites.png'}} ?w=200,h=357,border=true) ![]({{file name='RemoveFromFavorites.png'}} ?w=200,h=357,border=true) ![]({{file name='Favorites.png'}} ?w=200,h=357,border=true)
+![]({{file name='Favorites.png'}} ?w=200,h=357,border=true)&nbsp;&nbsp;![]({{file name='AddToFavorites.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;![]({{file name='RemoveFromFavorites.png'}} ?w=200,h=357,border=true)
+
+### Collections
+
+The dedicated menu entry enables you to directly access collections: Shared and Personal. Personal collections have been created by yourself and Shared collections are collections where you have been granted at least read permissions.
+
+Browsing your repository, you can add a document to one or several collections. Once you have selected the list of collections, you can view them and uncheck some.
+
+&nbsp;![]({{file name='CollectionsBrowsing.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;&nbsp;![]({{file name='SelectCollections.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp; &nbsp;&nbsp;![]({{file name='ViewSelectedCollections.png'}} ?w=200,h=357,border=true)
 
 ### Share / Open in
 
-You are able to **share** any document through messages, mail.... any available application on your phone for that purpose. The Share action is available on the toolbar of the document view, besides the filename.
-
-In addition, you are able to **Open directly** documents on your phone by tapping on the document link above the thumbnail.
+You are able to **share** any document through messages, mail.... any available application on your phone for that purpose. The Share action is available on the toolbar of the document view, besides the filename.In addition, you are able to **Open directly** documents on your phone by tapping on the document link above the thumbnail.
 
 ![]({{file name='OpenDocument.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;![]({{file name='OpenIn.jpg'}} ?w=200,h=355,border=true)
 
 ### Search
 
-The **Search** menu enables you to query documents on their title and content, by performing a full-text search.&nbsp;
-
-{{{multiexcerpt 'full-text-search-user-desc' page='USERDOC:Quick Search'}}}
-
-A list of matching documents is provided and you can directly have access them. Once on a document, tap the back icon to go back to search results.
+The **Search** menu enables you to query documents on their title and content, by performing a full-text search.&nbsp;{{{multiexcerpt 'full-text-search-user-desc' page='USERDOC:Quick Search'}}}A list of matching documents is provided and you can directly have access them. Once on a document, tap the back icon to go back to search results.
 
 ![]({{file name='MobileSearch.jpg'}} ?w=200,h=355,border=true)
 
@@ -199,7 +235,7 @@ The personal workspace menu gives you a direct access to your collections and pe
 
 Yet there are two limitations when running against Nuxeo LTS 2015 with hotfix 12, aka. Nuxeo 7.10-HF12:
 
-*   It is not possible to mark a document as Favorite from the mobile app but you can have access to documents marked as favorites from the web UI
+*   It is not possible to mark a document as Favorite from the mobile app but you can have access to documents marked as favorites from the web UI.
 *   Preview isn't available&nbsp;for the Picture and Video document types nor for the File type with PDF content. A simple file icon is displayed instead.
     To allow previewing these types of documents you can add the following [XML contribution]({{page page='how-to-contribute-to-an-extension'}}) to your Nuxeo instance:
 

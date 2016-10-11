@@ -177,7 +177,7 @@ As a reminder, the tag library documentation file, `mylibrary.tld`, is usually p
 
 *   [JavaScript Client]({{page page='javascript-client'}})
 *   [JSF UI Framework]({{page page='jsf-ui-framework'}})
-*   [JSF UI Framework Overview]({{page page='jsf-ui-framework-overview'}})
+*   [Nuxeo JSF UI]({{page page='nuxeo-jsf-ui'}})
 *   [JSF UI Limitations]({{page page='jsf-ui-limitations'}})&nbsp;
 
 {{/panel}}</div></div>

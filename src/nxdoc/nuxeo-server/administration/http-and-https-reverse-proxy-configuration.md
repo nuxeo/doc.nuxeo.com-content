@@ -29,6 +29,21 @@ confluence:
     source_link: /display/NXDOC/HTTP+and+HTTPS+Reverse-Proxy+Configuration
 history:
     - 
+        author: Manon Lumeau
+        date: '2016-09-29 09:44'
+        message: ''
+        version: '40'
+    - 
+        author: Gildas Lefevre
+        date: '2016-09-28 13:50'
+        message: ''
+        version: '39'
+    - 
+        author: Gildas Lefevre
+        date: '2016-09-28 13:41'
+        message: Add configuration between ELB and Apache
+        version: '38'
+    - 
         author: Solen Guitter
         date: '2016-02-01 16:31'
         message: ''
@@ -467,6 +482,25 @@ By using the `deployment-fragment.xml` you can also put some specific resources 
 When the Nuxeo Platform is virtual hosted with apache you can use `mod_cache` to use the reverse-proxy as cache server.
 
 You can also use Squid or any other caching system that is compliant with the standard HTTP caching policy.
+
+### Configuration Between AWS Elastic Load Balancing (ELB) and Apache
+
+When using Apache as a backend server for ELB, it is really important to pay attention to the configuration of both otherwise you may encounter several performance issues. The ELB is creating connections on the Apache and put them in idle, but if Apache has a way shorter timeout, it will close them before they are actually used. We recommend using a slightly high value for the Apache keep alive timeout than the idle timeout configured on the ELB.
+
+Here is an example of a configuration on Apache (apache2.conf file) and on ELB:
+
+{{#> panel type='code' heading='Apache configuration'}}
+
+```bash
+KeepAlive On    
+KeepAliveTimeout 300
+MaxKeepAliveRequests 100
+AcceptFilter http none
+```
+
+{{/panel}}
+
+![]({{file name='elb.png'}})
 
 ## Nuxeo Tomcat HTTPS Configuration
 

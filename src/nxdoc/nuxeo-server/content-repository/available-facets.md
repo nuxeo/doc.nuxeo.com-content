@@ -21,6 +21,11 @@ confluence:
     source_link: /display/NXDOC/Available+Facets
 history:
     - 
+        author: Estelle Giuly
+        date: '2016-09-29 15:02'
+        message: dd BigFolder in available facet
+        version: '37'
+    - 
         author: Thomas Roger
         date: '2014-12-05 16:14'
         message: ''
@@ -211,6 +216,10 @@ Marker facet to be set on types which you want to see in the DAM compat view.
 ## Audio
 
 This facet should be set on any type which you want to store a audio. It comes with the&nbsp;`file`,&nbsp;and&nbsp;`audio`&nbsp;schemas.
+
+## BigFolder
+
+This facet should be set on types that are to be considered as "big folders", for which the list of children is not displayed in the navigation tree, contrary to the "Folderish" facet.
 
 ## BrowseViaSearch
 

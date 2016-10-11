@@ -8,7 +8,7 @@ labels:
     - index
 confluence:
     ajs-parent-page-id: '950313'
-    ajs-parent-page-title: JSF UI Framework Overview
+    ajs-parent-page-title: Nuxeo JSF UI
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: JSF+UI+How-To+Index
