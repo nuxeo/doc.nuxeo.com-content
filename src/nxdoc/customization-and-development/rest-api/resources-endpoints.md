@@ -368,3 +368,15 @@ POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter/{newName}
 	}
 }
 ```
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
+
+*   [Contributing a New Endpoint]({{page page='contributing-a-new-endpoint'}})
+*   [REST API]({{page page='rest-api'}})
+*   [Command Endpoint]({{page page='command-endpoint'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

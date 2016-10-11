@@ -180,3 +180,15 @@ The FancyBox content is defined by "/incl/permalink_box.xhtml". Note that if the
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related sections'}}
+
+*   [Actions Display]({{page page='actions-display'}})
+*   [Standard Action Types]({{page page='standard-action-types'}})
+*   [Custom Action Types]({{page page='custom-action-types'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

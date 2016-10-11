@@ -58,3 +58,15 @@ history:
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about Nuxeo Drive'}}
+
+*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+*   [Nuxeo Drive user documentation]({{page space='userdoc58' page='nuxeo-drive'}})
+*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

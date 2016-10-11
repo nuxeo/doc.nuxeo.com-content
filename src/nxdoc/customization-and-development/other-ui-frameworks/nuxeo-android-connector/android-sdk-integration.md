@@ -94,7 +94,7 @@ Nuxeo's SDK try to expose as much as possible of the content via the Android `Co
 The provider authority is `nuxeo` and depending on the requested `URI` content, the call will be directed to a nuxeo service.
 Basically :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 URI pattern
 
@@ -182,7 +182,7 @@ download and cache the blob <idx> of the doc with the given UUID
 
 download and cache the blob contained in the field <subpath> of the doc with the given UUID
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 This ContentProvider allows :
 

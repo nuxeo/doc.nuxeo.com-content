@@ -44,3 +44,13 @@ After you installed the package, an "Access" action is logged in the History tab
 ![]({{file name='MP-document-access-package.png' space='userdoc58' page='document-access-tracking'}} ?w=650,h=287,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Document Access Tracking user documentation]({{page space='userdoc58' page='document-access-tracking'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

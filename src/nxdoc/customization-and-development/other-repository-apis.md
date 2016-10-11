@@ -224,5 +224,5 @@ Finally, the Nuxeo Platform also implements standard&nbsp;[CMIS]({{page page='cm
 *   [CMIS for Nuxeo]({{page space='NXDOC58' page='CMIS for+Nuxeo'}})
 *   [WebDAV]({{page space='NXDOC58' page='WebDAV'}})
 *   [OpenSocial, OAuth and the Nuxeo Platform]({{page space='NXDOC58' page='OpenSocial%2C OAuth+and+the+Nuxeo+Platform'}})
-*   [Cross-Origin Resource Sharing (CORS)](https://doc.nuxeo.com/pages/viewpage.action?pageId=17334317)
+*   [Cross-Origin Resource Sharing (CORS)](/pages/viewpage.action?pageId=17334317)
 *   [Legacy Restlets]({{page space='NXDOC58' page='Legacy Restlets'}})

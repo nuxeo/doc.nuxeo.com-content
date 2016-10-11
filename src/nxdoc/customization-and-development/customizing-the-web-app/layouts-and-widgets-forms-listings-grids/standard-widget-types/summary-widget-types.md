@@ -131,3 +131,16 @@ This widget type displays a selector with the list of available workflows that c
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in this documentation'}}
+
+*   [Standard Widget Types]({{page page='standard-widget-types'}})
+*   [Custom Widget Types]({{page page='custom-widget-types'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

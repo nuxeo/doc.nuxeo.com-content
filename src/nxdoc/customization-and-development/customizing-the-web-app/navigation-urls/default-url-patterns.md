@@ -93,3 +93,14 @@ Other URLs:
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other URL related documentation'}}
+
+*   [URLs for Files]({{page page='urls-for-files'}})
+*   [Navigation URLs]({{page page='navigation-urls'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

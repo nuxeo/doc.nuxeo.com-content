@@ -147,3 +147,13 @@ You can disable the shield for the whole Nuxeo application by adding the followi
 ```
 nuxeo.jsf.enableDoubleClickShield=false
 ```
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics'}}
+
+*   [I Get an Error When I Click on Two Links Quickly]({{page page='i-get-an-error-when-i-click-on-two-links-quickly'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

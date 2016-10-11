@@ -50,3 +50,25 @@ If you start workflow automatically using the&nbsp;[Workflow > StartWorkflow](ht
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Workflow in Nuxeo Studio]({{page space='studio' page='workflow'}})
+*   [Fulltext Queries]({{page page='full-text-queries'}})
+*   [NXQL]({{page page='nxql'}})
+*   [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
+*   [Workflow]({{page page='workflow'}})
+
+{{/panel}}
+
+&nbsp;
+
+&nbsp;
+
+</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

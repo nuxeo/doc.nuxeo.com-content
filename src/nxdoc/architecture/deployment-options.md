@@ -272,3 +272,14 @@ Nuxeo can be hosted on various Clouds and virtualization systems:
 &nbsp;
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
+
+*   [Nuxeo and Redis]({{page page='nuxeo-and-redis'}})
+*   [Nuxeo Clustering Configuration]({{page space='admindoc58' page='nuxeo-clustering-configuration'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

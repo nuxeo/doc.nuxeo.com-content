@@ -39,3 +39,13 @@ After the package is installed, two new document types are available when you cl
 ![]({{file name='available-doctypes-website-blog.png' space='userdoc58' page='websites'}} ?w=400,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Sites and Blogs user documentation]({{page space='userdoc58' page='nuxeo-sites-and-blogs'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

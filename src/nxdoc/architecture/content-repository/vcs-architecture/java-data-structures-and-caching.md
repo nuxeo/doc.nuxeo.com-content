@@ -67,3 +67,14 @@ The Selection (list of children, proxies or versions) are also cached using Soft
 Both Row and Selection caches expose metrics so it is possible to get the cache hit ratio.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
+
+*   [VCS Architecture]({{page page='vcs-architecture'}})
+*   [Performance Recommendations]({{page page='performance-recommendations'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -125,3 +125,10 @@ View online demo: [http://showcase.nuxeo.com/nuxeo/layoutDemo/listing_lifecycleW
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in this documentation'}}
+
+*   [Standard Widget Types]({{page page='standard-widget-types'}})
+*   [Custom Widget Types]({{page page='custom-widget-types'}})
+
+{{/panel}}</div><div class="column medium-6"></div></div>

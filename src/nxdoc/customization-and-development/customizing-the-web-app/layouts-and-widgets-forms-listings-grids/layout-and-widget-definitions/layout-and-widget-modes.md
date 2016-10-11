@@ -58,7 +58,7 @@ The **widget modes** are more restricted and widget types will usually only hand
 
 Here is a table of the default mappings:
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Layout Mode
 
@@ -106,7 +106,7 @@ any other value
 
 'view' before 5.4.2, 'plain' after
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 It is possible to override this behavior in the [widget definition]({{page page='widget-definitions'}}) and state that, for instance, whatever the layout mode, the widget will be in `view` mode. This enables to make the widget display only read-only values. The pseudo-mode&nbsp;`hidden` can also be used in a widget definition to exclude this widget from the layout in a given mode.
 

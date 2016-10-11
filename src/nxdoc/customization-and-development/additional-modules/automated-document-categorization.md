@@ -39,3 +39,13 @@ After the package is installed, new documents directly have some metadata filled
 ![]({{file name='MP-Categorization-package.png' space='userdoc58' page='automated-document-categorization'}} ?w=650,h=294,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about this package'}}
+
+*   [Automated Document Categorization user documentation]({{page space='userdoc58' page='automated-document-categorization'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

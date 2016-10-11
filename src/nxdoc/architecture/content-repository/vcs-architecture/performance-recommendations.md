@@ -71,7 +71,7 @@ history:
 *   Consider disabling the OS swapping (sudo swapoff -a) or try to lower the swapiness (vm .swappiness = 1)
 *   Check the network latency between the application and the database.
 *   [Configure ImageMagick]({{page space='admindoc58' page='installing-and-setting-up-related-software'}}) to use a single thread.
-*   [Monitor](http://doc.nuxeo.com/x/gBDF) everything, JVM, GC, VCS cache hit ratio, database, system.
+*   [Monitor](/x/gBDF) everything, JVM, GC, VCS cache hit ratio, database, system.
 
 &nbsp;
 

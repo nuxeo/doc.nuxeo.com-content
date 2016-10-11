@@ -123,3 +123,14 @@ Of course, you should provide an "equinox" namespace to have this working - othe
 If your namespace need to execute some code when the shell is launched and your namespace is activated (because you set it as the default one) then you should override the method `CommandRegistry.autorun(Shell shell)` and provide your logic there. You can use this to automatically connect to a remote host if the connection details were specified on the command line when starting the shell. See the AutomationFeature "remote" namespace - this is the way it is automatically connecting when you specify the connection details on the shell command line.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
+
+*   [Extending The Shell]({{page page='extending-the-shell'}})
+*   [Nuxeo Shell administration documentation]({{page space='admindoc58' page='nuxeo-shell'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

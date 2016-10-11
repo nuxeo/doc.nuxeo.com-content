@@ -113,7 +113,7 @@ You can do a simple POST with the payload containing your file.
 
 However, you will need to set some custom HTTP headers:
 
-<table><tbody><tr><th colspan="1">Header name</th><th colspan="1">Description</th></tr><tr><td colspan="1">`X-Batch-Id`</td><td colspan="1">Batch identifier</td></tr><tr><td colspan="1">`X-File-Idx`</td><td colspan="1">Index of the file inside the batch</td></tr><tr><td colspan="1">`X-File-Name`</td><td colspan="1">Name of the file</td></tr><tr><td colspan="1">`X-File-Size`</td><td colspan="1">Size of the file in bytes</td></tr><tr><td colspan="1">`X-File-Type`</td><td colspan="1">Mime type of the file</td></tr><tr><td colspan="1">`Content-Type`</td><td colspan="1">Should be set to "`binary/octet-stream`"</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Header name</th><th colspan="1">Description</th></tr><tr><td colspan="1">`X-Batch-Id`</td><td colspan="1">Batch identifier</td></tr><tr><td colspan="1">`X-File-Idx`</td><td colspan="1">Index of the file inside the batch</td></tr><tr><td colspan="1">`X-File-Name`</td><td colspan="1">Name of the file</td></tr><tr><td colspan="1">`X-File-Size`</td><td colspan="1">Size of the file in bytes</td></tr><tr><td colspan="1">`X-File-Type`</td><td colspan="1">Mime type of the file</td></tr><tr><td colspan="1">`Content-Type`</td><td colspan="1">Should be set to "`binary/octet-stream`"</td></tr></tbody></table></div>
 
 <span style="font-size: 10.0pt;line-height: 13.0pt;">Optionally depending on the HTTP client you are using you might need to add the Content-Length header to specify the size of the file in bytes.</span>
 

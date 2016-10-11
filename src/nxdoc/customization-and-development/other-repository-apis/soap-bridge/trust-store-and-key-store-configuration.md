@@ -40,7 +40,7 @@ If you set a custom trust store with your authorities exclusively, **Marketplace
 
 To set the trust store and key store statically, you just have to add the following parameter into the environment variable:
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 What for
 
@@ -100,7 +100,7 @@ javax.net.ssl.keyStorePassword
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 So if you want to set them at start time, you can add the following parameter either:
 

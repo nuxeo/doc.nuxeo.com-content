@@ -377,7 +377,7 @@ You can browse [the CMIS 1.1 HTML version](http://docs.oasis-open.org/cmis/CMIS/
 
 The Nuxeo OpenCMIS connector implements the following capabilities from the specification:
 
-<table><tbody><tr><td colspan="3">**Navigation Capabilities**</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="3">**Navigation Capabilities**</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">
 
 Get descendants supported
 
@@ -437,7 +437,7 @@ ACLs
 
 None
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Model Mapping {{> anchor 'mapping'}}
 

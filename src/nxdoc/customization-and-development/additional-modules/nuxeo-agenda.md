@@ -49,3 +49,13 @@ After the package is installed, a new document type is available from workspaces
 ![]({{file name='nuxeo-agenda-document-type.png'}} ?w=650,h=340,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Agenda user documentation]({{page space='userdoc58' page='nuxeo-agenda'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

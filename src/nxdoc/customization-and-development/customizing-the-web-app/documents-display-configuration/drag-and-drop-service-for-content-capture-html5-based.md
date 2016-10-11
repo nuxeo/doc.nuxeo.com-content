@@ -262,3 +262,17 @@ where `collectedData` is a JavaScript object that will then be sent (via JSON) a
 In the default JSF WebApp you can have a look at `DndFormActionBean` and `dndFormCollector.xhtml`.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Enabling Drag and Drop for Internet Explorer]({{page space='admindoc58' page='enabling-drag-and-drop-for-internet-explorer'}})
+*   [Working Using Drag and Drop]({{page space='userdoc58' page='working-using-drag-and-drop'}})
+*   [Drag and Drop Compatibility Table]({{page space='userdoc58' page='drag-and-drop-compatibility-table'}})
+*   [How to Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
+*   [Blob Upload for Batch Processing]({{page page='blob-upload-for-batch-processing'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

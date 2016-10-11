@@ -188,3 +188,13 @@ If you want to implement a workflow that is more "controlled", not built by the 
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other pages about Nuxeo jBPM'}}
+
+*   [Nuxeo jBPM user documentation]({{page space='userdoc58' page='nuxeo-jbpm'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

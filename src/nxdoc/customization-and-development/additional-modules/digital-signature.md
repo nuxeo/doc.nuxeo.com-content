@@ -290,4 +290,12 @@ If signatures number is higher than available cells number, the document will be
 
 </div><div class="column medium-4">{{#> panel heading='In this section'}}
 
-{{/panel}}</div></div>
+{{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
+
+*   [Digital Signature user documentation]({{page space='userdoc58' page='digital-signature'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

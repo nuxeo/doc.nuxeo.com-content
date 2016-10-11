@@ -227,7 +227,7 @@ In this section, authors consider you know how to practically apply what you rea
 *   [Automation]({{page space='NXDOC58' page='Automation'}})&nbsp;&mdash;&nbsp;<span class="smalltext">In this section you'll find information on how to use the Automation service, how to contribute a new chain, a new operation, etc.</span>
 *   [Customizing the web app]({{page space='NXDOC58' page='Customizing the+web+app'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This chapter presents the different ways to customize what is displayed on the application.</span>
 *   [Workflow]({{page space='NXDOC58' page='Workflow'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This page and its subpages explain all the concepts and provide a documentation on how the workflow engine works.</span>
-*   [WebEngine (JAX-RS)](https://doc.nuxeo.com/pages/viewpage.action?pageId=17334372)
+*   [WebEngine (JAX-RS)](/pages/viewpage.action?pageId=17334372)
 *   [Other services]({{page space='NXDOC58' page='Other services'}})
 *   [Other UI Frameworks]({{page space='NXDOC58' page='Other UI+Frameworks'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Nuxeo uses several UI frameworks beside the default JSF technology.</span>
 *   [Additional Modules]({{page space='NXDOC58' page='Additional Modules'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This chapter presents how to apprehend and customize the additional packages available on the Nuxeo Platform, typically from the Nuxeo Marketplace.</span>

@@ -108,3 +108,13 @@ Below is an example where BitKinex is added:
 </component>
 
 ```
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Working with WebDAV and WSS]({{page space='userdoc58' page='working-with-webdav-and-wss'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

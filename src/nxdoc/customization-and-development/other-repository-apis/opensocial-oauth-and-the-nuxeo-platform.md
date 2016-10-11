@@ -403,7 +403,7 @@ When generating the gadget spec you need to take into account several parameters
 
 In order to address these problems the Freemarker template is rendered against the following context:
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Variable name
 
@@ -483,7 +483,7 @@ Base URL for accessing the gadget virtual directory.
 
 Access to a Java Helper class to manage the "Nuxeo context" of the gadget if needed: Repository name, domain path ...
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 The inside flag is "automatically" determined by Nuxeo, but in case the consumer application and Nuxeo are on the same host (i.e. communication via localhost or 127.0.0.1), you may force the external mode by adding&nbsp;`external=true` to the gadget spec URL:
 

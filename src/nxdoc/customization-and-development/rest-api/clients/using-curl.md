@@ -20,10 +20,15 @@ confluence:
 history:
     - 
         author: Solen Guitter
+        date: '2016-10-07 15:06'
+        message: ix the Lock url by adding a missing "/
+        version: '19'
+    - 
+        author: Solen Guitter
         date: '2013-12-19 12:11'
         message: >-
-            pdated last command example to escape double-quotes and fixed ecm
-            type
+            Updated last command example to escape double-quotes and fixed ecm
+            type 
         version: '18'
     - 
         author: Solen Guitter
@@ -137,7 +142,7 @@ In a Windows environment, Nuxeo recommends to use cygwin shell to avoid all form
 3.  Now, "lock" this document we have just created by calling an Automation operation from command API on the document resource.
 
     ```
-    curl -X POST -H "Content-Type: application/json+nxrequest"   -u Administrator:Administrator -d '{"params":{}}'  http://demo.nuxeo.com/nuxeo/api/v1/path/default-domain/newDoc@op/Document.Lock
+    curl -X POST -H "Content-Type: application/json+nxrequest"   -u Administrator:Administrator -d '{"params":{}}'  http://demo.nuxeo.com/nuxeo/api/v1/path/default-domain/newDoc/@op/Document.Lock
     ```
 
     Pay attention to the Content-Type that is specific when using the `@op` adapter.

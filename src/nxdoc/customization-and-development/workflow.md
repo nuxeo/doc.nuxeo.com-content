@@ -136,7 +136,7 @@ You can use this workflow engine for case management projects, for form digitiza
 **Section's content:**
 
 *   [Models Packaging]({{page space='NXDOC58' page='Models Packaging'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This page deals with how a workflow model is created on a Nuxeo instance. Note that when using Nuxeo Studio, everything is done transparently. The goal of this page is to let you understand what Studio generates in the JAR when you use the Studio feature and how the workflow is created and persisted when deploying the Studio project.</span>
-*   [Runtime Instantiation & Execution Logic](https://doc.nuxeo.com/pages/viewpage.action?pageId=17334295)&nbsp;&mdash;&nbsp;<span class="smalltext">This page gives you technical details about the execution of workflow.</span>
+*   [Runtime Instantiation & Execution Logic](/pages/viewpage.action?pageId=17334295)&nbsp;&mdash;&nbsp;<span class="smalltext">This page gives you technical details about the execution of workflow.</span>
 *   [Instance Properties]({{page space='NXDOC58' page='Instance Properties'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This page describes information that is persisted on a workflow instance.</span>
 *   [Node Properties]({{page space='NXDOC58' page='Node Properties'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This page lists all the properties of a node. A workflow instance is made of several nodes linked by some transitions.</span>
 *   [Escalation Service]({{page space='NXDOC58' page='Escalation Service'}})&nbsp;&mdash;&nbsp;<span class="smalltext">The Nuxeo workflow engine comes with an escalation service useful for having some automated evolution in the workflow graph.&nbsp;</span>

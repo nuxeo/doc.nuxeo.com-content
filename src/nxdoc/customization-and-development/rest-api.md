@@ -451,7 +451,7 @@ We provide several client SDKs for making it even easier to integrate with the N
     *   [Java Automation Client]({{page space='NXDOC58' page='Java Automation+Client'}})
     *   [PHP Automation Client]({{page space='NXDOC58' page='PHP Automation+Client'}})
     *   [Using a Python Client]({{page space='NXDOC58' page='Using a+Python+Client'}})
-    *   [Client API Test suite (TCK)](https://doc.nuxeo.com/pages/viewpage.action?pageId=17334476)
+    *   [Client API Test suite (TCK)](/pages/viewpage.action?pageId=17334476)
     *   [iOS Client]({{page space='NXDOC58' page='iOS Client'}})
     *   [Android Client]({{page space='NXDOC58' page='Android Client'}})
     *   [Using cURL]({{page space='NXDOC58' page='Using cURL'}})

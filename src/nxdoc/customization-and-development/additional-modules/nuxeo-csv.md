@@ -111,4 +111,8 @@ If you don't want to use Studio and prefer using your IDE, you can just [add a c
 
 {{/callout}}</div><div class="column medium-4">{{#> panel heading='In this section'}}
 
-{{/panel}}</div></div>
+{{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other pages about Nuxeo CSV'}}
+
+*   [Nuxeo CSV user documentation]({{page space='userdoc58' page='nuxeo-csv'}})
+
+{{/panel}}</div><div class="column medium-6"></div></div>

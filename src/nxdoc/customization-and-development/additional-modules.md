@@ -43,7 +43,7 @@ This chapter presents how to apprehend and customize the additional packages ava
 
 *   [Amazon S3 Online Storage]({{page space='NXDOC58' page='Amazon S3+Online+Storage'}})
 *   [Automated Document Categorization]({{page space='NXDOC58' page='Automated Document+Categorization'}})
-*   [Digital Asset Management (DAM)](https://doc.nuxeo.com/pages/viewpage.action?pageId=17334501)&nbsp;&mdash;&nbsp;<span class="smalltext">The navigation is not document-centric and organized in collaborative&nbsp;workspaces as in Nuxeo DM but is instead search-centric. Furthermore, the&nbsp;application ergonomy should feel like a rich collection browser such as iTunes&nbsp;or iPhoto by extensively using Ajax. Speed and responsiveness to user actions&nbsp;should be considered a major feature of Nuxeo DAM.</span>
+*   [Digital Asset Management (DAM)](/pages/viewpage.action?pageId=17334501)&nbsp;&mdash;&nbsp;<span class="smalltext">The navigation is not document-centric and organized in collaborative&nbsp;workspaces as in Nuxeo DM but is instead search-centric. Furthermore, the&nbsp;application ergonomy should feel like a rich collection browser such as iTunes&nbsp;or iPhoto by extensively using Ajax. Speed and responsiveness to user actions&nbsp;should be considered a major feature of Nuxeo DAM.</span>
 *   [Digital Signature]({{page space='NXDOC58' page='Digital Signature'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Digital Signature implements a layout on signed documents to display the signature information, which can be customized.</span>
 *   [Document Access Tracking]({{page space='NXDOC58' page='Document Access+Tracking'}})
 *   [Nuxeo Agenda]({{page space='NXDOC58' page='Nuxeo Agenda'}})

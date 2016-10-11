@@ -579,3 +579,16 @@ org.nuxeo.drive.beta.update.site.url=http://community.nuxeo.com/static/drive-tes
 ```
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+*   [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}})
+*   [Nuxeo Drive user documentation
+    ]({{page space='userdoc58' page='nuxeo-drive'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

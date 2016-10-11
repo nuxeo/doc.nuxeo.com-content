@@ -60,3 +60,18 @@ So, to create a document of your own type that, you have to set the&nbsp;`docTyp
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in developer documentation'}}
+
+*   [Importing Data in Nuxeo]({{page page='importing-data-in-nuxeo'}})
+*   [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
+*   [Nuxeo CSV]({{page page='nuxeo-csv'}})
+*   [Drag and Drop Service for Content Capture (HTML5-Based)]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

@@ -104,3 +104,14 @@ Some widgets have limitations in some specific conditions of use. We maintain a 
     *   The parent widgets field definitions, used to build the document property XPath, can be retrieved using variables `widget_0` for instance: this assumes that the widget at the first level of the layout holds the list property path.
     *   The widget template needs to know the file/image index, and is relying on variable `model.rowData` for it: this is only available within a widget of type `list`.
     *   Facelets tags evaluated at build time (like a c:if tag) cannot check elements within the list, because these items are only exposed at render time.
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Widget Related Documentation'}}
+
+*   [Standard Widget Types]({{page page='standard-widget-types'}})
+*   [Custom Widget Types]({{page page='custom-widget-types'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

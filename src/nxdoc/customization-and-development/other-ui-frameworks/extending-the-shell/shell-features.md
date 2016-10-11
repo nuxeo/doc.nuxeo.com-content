@@ -304,3 +304,14 @@ Then we activate this registry so that the active namespace in the interactive s
 In the same manner we can implement the disconnect method - after disconnecting it will unregister the remote namespace and switch on the **local** namespace.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
+
+*   [Extending The Shell]({{page page='extending-the-shell'}})
+*   [Nuxeo Shell administration documentation]({{page space='admindoc58' page='nuxeo-shell'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>
