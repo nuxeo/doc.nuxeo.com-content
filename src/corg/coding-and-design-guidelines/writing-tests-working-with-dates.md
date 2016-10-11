@@ -16,33 +16,34 @@ confluence:
     shortlink: CYvZ
     shortlink_source: 'https://doc.nuxeo.com/x/CYvZ'
     source_link: /display/CORG/Writing+tests+working+with+dates
+tree_item_index: 1000
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-29 13:58'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-29 11:31'
         message: Added TOC and fixed formatting
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2013-07-23 17:36'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2013-07-23 14:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2013-07-23 14:47'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2013-07-23 14:18'
         message: ''

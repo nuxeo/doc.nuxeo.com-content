@@ -16,28 +16,29 @@ confluence:
     shortlink: CgBi
     shortlink_source: 'https://doc.nuxeo.com/x/CgBi'
     source_link: /display/CORG/Functional+testing
+tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 16:34'
         message: 'emove children display macro   '
         version: '5'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-11-13 16:36'
         message: Fixes layout + adds Nuxeo TOC
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-20 17:43'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-20 17:43'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2011-04-08 19:12'
         message: ''

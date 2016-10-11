@@ -15,23 +15,24 @@ confluence:
     shortlink: YIeN
     shortlink_source: 'https://doc.nuxeo.com/x/YIeN'
     source_link: /display/CORG/GWT+compilation+tuning
+tree_item_index: 600
 history:
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-02-03 16:59'
         message: igrated to Confluence 4.
         version: '4'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-02-03 16:59'
         message: ''
         version: '3'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-01-09 17:03'
         message: ''
         version: '2'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-01-09 17:02'
         message: ''

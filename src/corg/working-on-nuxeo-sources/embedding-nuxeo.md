@@ -1,9 +1,9 @@
 ---
 title: Embedding Nuxeo
 review:
-    comment: ''
-    date: ''
-    status: ok
+    comment: 'This page needs to be reviewed'
+    date: '2016-10-11'
+    status: not-ok
 labels:
     - lts2015-not-ok
 toc: true
@@ -18,63 +18,64 @@ confluence:
     shortlink: RAQz
     shortlink_source: 'https://doc.nuxeo.com/x/RAQz'
     source_link: /display/CORG/Embedding+Nuxeo
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-29 14:01'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-04 15:36'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 18:38'
         message: Migrated to Confluence 4.0
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 18:38'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 18:02'
         message: Reverted from v. 6
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 16:49'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 16:28'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-21 19:57'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-21 19:56'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-21 19:55'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-21 19:51'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 15:31'
         message: ''

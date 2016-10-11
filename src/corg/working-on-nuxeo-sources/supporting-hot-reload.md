@@ -18,77 +18,78 @@ confluence:
     shortlink: KYKo
     shortlink_source: 'https://doc.nuxeo.com/x/KYKo'
     source_link: /display/CORG/Supporting+Hot+Reload
+tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-29 14:02'
         message: ''
         version: '14'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-10-18 15:38'
         message: >-
             rephrase first sentence to make it clear that this is supported
             since 5.6
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-18 15:28'
         message: >-
             NXDOC-242: Updated WebEngine paragraph to reflect NXP-12749 changes
             in 5.8
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-18 12:13'
         message: Added TOC
         version: '11'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-07-03 09:32'
         message: Migrated to Confluence 4.0
         version: '10'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-07-03 09:32'
         message: ''
         version: '9'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-29 17:01'
         message: ''
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-28 17:47'
         message: ''
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-28 17:42'
         message: ''
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-28 16:34'
         message: ''
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-27 19:20'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-27 19:08'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-27 19:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-27 19:05'
         message: ''

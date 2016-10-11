@@ -19,88 +19,89 @@ confluence:
     shortlink: BIAO
     shortlink_source: 'https://doc.nuxeo.com/x/BIAO'
     source_link: /display/CORG/Creating+Your+Own+Distribution
+tree_item_index: 600
 history:
-    - 
+    -
         author: Julien Carsique
         date: '2015-09-07 14:56'
         message: pdate sampl
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-28 10:23'
         message: ''
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2014-04-25 15:46'
         message: ''
         version: '15'
-    - 
+    -
         author: Julien Carsique
         date: '2014-04-25 15:22'
         message: ''
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-17 18:57'
         message: Migrated to Confluence 4.0
         version: '13'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-17 18:57'
         message: ''
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-22 11:42'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-22 11:42'
         message: ''
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-22 11:41'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-22 11:40'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-15 12:03'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-15 12:03'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2010-09-13 18:27'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2010-05-03 17:36'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2010-04-28 16:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2010-04-28 16:04'
         message: ''
         version: '2'
-    - 
+    -
         author: Admin name placeholder
         date: '2010-03-01 13:29'
         message: ''

@@ -15,53 +15,54 @@ confluence:
     shortlink: IwzF
     shortlink_source: 'https://doc.nuxeo.com/x/IwzF'
     source_link: /display/CORG/Java+Code+Style
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-23 09:13'
         message: ''
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-18 15:53'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-18 14:32'
         message: ''
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-18 14:25'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-18 14:19'
         message: Javadoc
         version: '6'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-08-03 08:20'
         message: i -> I
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-08-19 11:31'
         message: add "remove trailing white spaces" configuration info
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2013-02-08 14:29'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2013-02-08 14:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2013-02-07 12:26'
         message: ''

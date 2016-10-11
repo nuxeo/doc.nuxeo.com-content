@@ -18,38 +18,39 @@ confluence:
     shortlink: '-YH1'
     shortlink_source: 'https://doc.nuxeo.com/x/-YH1'
     source_link: /display/CORG/What+is+Needed+to+Design+a+REST+API
+tree_item_index: 1100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-02 07:48'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-29 13:59'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-16 11:00'
         message: ''
         version: '5'
-    - 
+    -
         author: Damien Metzler
         date: '2013-09-13 15:56'
         message: ''
         version: '4'
-    - 
+    -
         author: Damien Metzler
         date: '2013-09-13 15:53'
         message: ''
         version: '3'
-    - 
+    -
         author: Damien Metzler
         date: '2013-09-13 15:52'
         message: ''
         version: '2'
-    - 
+    -
         author: Damien Metzler
         date: '2013-09-13 15:45'
         message: ''
@@ -122,7 +123,7 @@ GET /directory/{directoryName}
 ```
 GET /directory/{directoryName}/{entryId}
 @pathparam {directoryName} the name of the directory
-@pathparam {entryId} the id of the entry to fetch 
+@pathparam {entryId} the id of the entry to fetch
 @return directoryEntries
 @exception : 404 entry or directory not found
 @exception : 500 server error
@@ -215,7 +216,7 @@ POST /directory/{directoryName}
           "administrators"
         ]
       }
-    }, 
+    },
 ...
   ]
 }

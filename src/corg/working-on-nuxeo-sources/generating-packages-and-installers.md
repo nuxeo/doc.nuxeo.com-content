@@ -15,93 +15,94 @@ confluence:
     shortlink: 9wFz
     shortlink_source: 'https://doc.nuxeo.com/x/9wFz'
     source_link: /display/CORG/Generating+Packages+and+Installers
+tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 10:12'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-28 10:27'
         message: ''
         version: '17'
-    - 
+    -
         author: Julien Carsique
         date: '2014-04-25 15:35'
         message: point to MP private channel doc
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2013-02-08 14:42'
         message: ''
         version: '15'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-27 19:07'
         message: Migrated to Confluence 4.0
         version: '14'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-27 19:07'
         message: ''
         version: '13'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-27 19:07'
         message: ''
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-23 18:05'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-16 19:52'
         message: ''
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-16 19:47'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-16 16:59'
         message: ''
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-16 15:33'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-16 15:32'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-16 15:32'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-16 15:31'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-16 14:50'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-16 12:57'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-16 12:56'
         message: ''

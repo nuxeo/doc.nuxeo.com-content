@@ -15,23 +15,24 @@ confluence:
     shortlink: ohDF
     shortlink_source: 'https://doc.nuxeo.com/x/ohDF'
     source_link: /display/CORG/JavaScript+code+style
+tree_item_index: 800
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-08-19 11:20'
         message: dd eclipse configuration inf
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-20 14:41'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-03-20 12:22'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-20 11:53'
         message: ''

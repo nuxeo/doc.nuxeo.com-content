@@ -18,183 +18,184 @@ confluence:
     shortlink: LIAO
     shortlink_source: 'https://doc.nuxeo.com/x/LIAO'
     source_link: /display/CORG/Unit+Testing
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-29 07:56'
         message: ''
         version: '36'
-    - 
+    -
         author: Clément Chevalier
         date: '2016-07-28 14:51'
         message: ''
         version: '35'
-    - 
+    -
         author: Clément Chevalier
         date: '2016-07-28 14:50'
         message: part on the logcapturefilter
         version: '34'
-    - 
+    -
         author: Ronan Daniellou
         date: '2016-07-21 14:49'
         message: Adds "Mockito Feature" section
         version: '33'
-    - 
+    -
         author: Florent Guillaume
         date: '2016-04-13 14:33'
         message: ''
         version: '32'
-    - 
+    -
         author: Florent Guillaume
         date: '2016-04-13 14:32'
         message: Remove obsolete stuff about repo type.
         version: '31'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-04-11 13:05'
         message: Update links
         version: '30'
-    - 
+    -
         author: Ronan Daniellou
         date: '2016-01-08 10:51'
         message: Typo
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-25 16:14'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-25 16:14'
         message: Fix TOC
         version: '27'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-07-22 09:42'
         message: 'Typo: should extends -> extend'
         version: '26'
-    - 
+    -
         author: Julien Carsique
         date: '2014-10-24 13:54'
         message: ''
         version: '25'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-10-23 18:00'
         message: ''
         version: '24'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-10-23 17:29'
         message: ''
         version: '23'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-10-23 17:07'
         message: ''
         version: '22'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2013-11-22 11:48'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-15 11:08'
         message: 'Removed 5.3.1 reference, fixed typos, formatting'
         version: '20'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2013-10-14 11:20'
         message: ''
         version: '19'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2013-10-14 10:50'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-29 11:42'
         message: Added TOC
         version: '17'
-    - 
+    -
         author: Julien Carsique
         date: '2013-07-23 16:24'
         message: ''
         version: '16'
-    - 
+    -
         author: Antoine Taillefer
         date: '2013-04-26 09:51'
         message: ''
         version: '15'
-    - 
+    -
         author: stan
         date: '2013-01-14 15:58'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 19:05'
         message: Migrated to Confluence 4.0
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 19:05'
         message: Reverted from v. 9
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 18:39'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 18:38'
         message: ''
         version: '10'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-24 14:50'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-21 16:13'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-21 16:03'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-21 15:54'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-21 15:51'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-21 15:50'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-21 15:46'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-21 15:32'
         message: ''
         version: '2'
-    - 
+    -
         author: Admin name placeholder
         date: '2010-03-01 17:58'
         message: ''
@@ -422,7 +423,7 @@ Now we can write our Google search test like this:
 @HomePage(type=MyHomePage.class, url="http://www.google.com")
 @Browser(type=BrowserFamily.HTML_UNIT)
 public class WebTest {
-    @Inject 
+    @Inject
     protected MyHomePage home;
 
     @Test

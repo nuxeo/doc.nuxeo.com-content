@@ -16,128 +16,129 @@ confluence:
     shortlink: xgLF
     shortlink_source: 'https://doc.nuxeo.com/x/xgLF'
     source_link: /display/CORG/Maven+Coding+Rules
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-09 09:48'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-29 13:56'
         message: ''
         version: '24'
-    - 
+    -
         author: Julien Carsique
         date: '2015-09-04 14:28'
         message: ''
         version: '23'
-    - 
+    -
         author: Julien Carsique
         date: '2015-09-04 14:26'
         message: ''
         version: '22'
-    - 
+    -
         author: Julien Carsique
         date: '2014-08-28 18:33'
         message: ''
         version: '21'
-    - 
+    -
         author: Julien Carsique
         date: '2014-08-28 18:30'
         message: IDE sync POM limitations
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-28 17:43'
         message: ''
         version: '19'
-    - 
+    -
         author: Julien Carsique
         date: '2014-08-28 17:24'
         message: ''
         version: '18'
-    - 
+    -
         author: Julien Carsique
         date: '2014-08-28 17:22'
         message: declare all direct dependencies
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-31 10:29'
         message: formatting
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2014-01-30 16:20'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-11-26 17:28'
         message: JIRA Issue macro params updated with additional server info
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-11-26 17:28'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-11-26 17:26'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-11-26 17:10'
         message: Added toc and titles
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2012-11-19 19:19'
         message: ''
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2012-11-19 19:13'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2012-11-19 19:12'
         message: ''
         version: '8'
-    - 
+    -
         author: Antoine Taillefer
         date: '2012-11-19 18:52'
         message: ''
         version: '7'
-    - 
+    -
         author: Antoine Taillefer
         date: '2012-11-19 18:50'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2012-11-19 17:05'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2012-11-19 16:18'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2012-11-19 16:15'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2012-11-19 12:56'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2012-11-15 14:13'
         message: ''

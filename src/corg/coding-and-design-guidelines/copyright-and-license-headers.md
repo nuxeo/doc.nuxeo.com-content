@@ -15,48 +15,49 @@ confluence:
     shortlink: Q4eN
     shortlink_source: 'https://doc.nuxeo.com/x/Q4eN'
     source_link: /display/CORG/Copyright+and+license+headers
+tree_item_index: 100
 history:
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-28 11:41'
         message: emoved LGPL and EPL example
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-02 17:07'
         message: JAutodoc templates
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2014-01-09 14:29'
         message: ''
         version: '7'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-01-08 17:38'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-08-28 12:26'
         message: 2012->2013
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-01-10 14:43'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-01-10 14:43'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-01-10 14:42'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 14:18'
         message: ''
@@ -87,7 +88,7 @@ You can import them in [JAutodoc Eclipse plugin](http://jautodoc.sourceforge.net
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
+ *
  * Contributors:
  *     ...
  */

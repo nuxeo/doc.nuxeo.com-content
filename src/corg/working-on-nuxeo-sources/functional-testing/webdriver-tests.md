@@ -16,58 +16,59 @@ confluence:
     shortlink: 5YeN
     shortlink_source: 'https://doc.nuxeo.com/x/5YeN'
     source_link: /display/CORG/WebDriver+Tests
+tree_item_index: 200
 history:
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-09-06 08:57'
         message: ''
         version: '11'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-11-13 16:33'
         message: Added missing title for section Firefox location
         version: '10'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-11-13 16:31'
         message: Fixed layout + added Nuxeo TOC
         version: '9'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-11-13 16:30'
         message: Added a section about xvfb for running headless
         version: '8'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-24 15:40'
         message: ''
         version: '7'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-24 15:39'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-08 10:35'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-08 10:35'
         message: ''
         version: '4'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-04-07 11:58'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-20 17:41'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-20 17:41'
         message: ''

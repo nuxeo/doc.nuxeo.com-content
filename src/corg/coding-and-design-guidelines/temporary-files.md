@@ -16,28 +16,29 @@ confluence:
     shortlink: mIHBAQ
     shortlink_source: 'https://doc.nuxeo.com/x/mIHBAQ'
     source_link: /display/CORG/Temporary+Files
+tree_item_index: 1500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-02 12:32'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Martins
         date: '2016-04-27 16:39'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2016-01-14 17:22'
         message: add ImageIO case
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-12 10:00'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2016-01-11 13:42'
         message: ''

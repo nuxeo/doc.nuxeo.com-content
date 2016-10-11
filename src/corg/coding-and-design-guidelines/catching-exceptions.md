@@ -16,48 +16,49 @@ confluence:
     shortlink: wYCe
     shortlink_source: 'https://doc.nuxeo.com/x/wYCe'
     source_link: /display/CORG/Catching+Exceptions
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-29 13:57'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 11:28'
         message: Added TOC
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2013-08-03 00:38'
         message: ''
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-08-02 18:35'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2013-03-06 17:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-02-17 22:39'
         message: ''
         version: '4'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2012-04-27 15:20'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2012-04-27 15:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-04-27 14:26'
         message: ''

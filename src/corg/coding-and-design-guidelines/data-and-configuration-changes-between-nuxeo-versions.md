@@ -17,13 +17,14 @@ confluence:
     shortlink: BIXBAQ
     shortlink_source: 'https://doc.nuxeo.com/x/BIXBAQ'
     source_link: /display/CORG/Data+and+Configuration+Changes+between+Nuxeo+Versions
+tree_item_index: 1600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-05 10:28'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2016-01-29 17:57'
         message: ''

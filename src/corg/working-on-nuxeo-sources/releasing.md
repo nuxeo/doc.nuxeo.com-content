@@ -15,68 +15,69 @@ confluence:
     shortlink: KAJz
     shortlink_source: 'https://doc.nuxeo.com/x/KAJz'
     source_link: /display/CORG/Releasing
+tree_item_index: 900
 history:
-    - 
+    -
         author: Ronan Daniellou
         date: '2016-06-21 13:47'
         message: pdates "IT-release-on-demand-addon" target UR
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 10:11'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2015-06-23 13:09'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2013-06-18 03:07'
         message: ''
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-15 11:47'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2012-07-18 14:30'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2012-07-18 14:30'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2012-07-18 14:20'
         message: NXDOC-125 - update release doc
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-27 19:07'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-22 17:18'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-22 14:29'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-22 12:03'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-16 16:46'
         message: ''

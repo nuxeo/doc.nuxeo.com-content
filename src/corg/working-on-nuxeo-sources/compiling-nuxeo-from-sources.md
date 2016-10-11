@@ -16,93 +16,94 @@ confluence:
     shortlink: xION
     shortlink_source: 'https://doc.nuxeo.com/x/xION'
     source_link: /display/CORG/Compiling+Nuxeo+from+sources
+tree_item_index: 100
 history:
-    - 
+    -
         author: Frantz Fischer
         date: '2016-04-06 14:09'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 10:18'
         message: ''
         version: '17'
-    - 
+    -
         author: Julien Carsique
         date: '2015-02-11 15:23'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-10 15:22'
         message: 'Update minumum version of Maven, add Java 8 since 7.2'
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-15 14:33'
         message: ''
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2014-11-12 15:11'
         message: NodeJS
         version: '13'
-    - 
+    -
         author: Julien Carsique
         date: '2014-11-12 14:59'
         message: ''
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2014-04-25 13:23'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2013-10-01 17:02'
         message: ''
         version: '10'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-05-06 20:06'
         message: ''
         version: '9'
-    - 
+    -
         author: Laurent Doguin
         date: '2013-04-12 17:28'
         message: ''
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-10 12:29'
         message: Migrated to Confluence 4.0
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-10 12:29'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 18:40'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-12-13 15:38'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-12-13 15:37'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-12-01 21:48'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-12-01 21:47'
         message: ''

@@ -15,63 +15,64 @@ confluence:
     shortlink: tYlkAQ
     shortlink_source: 'https://doc.nuxeo.com/x/tYlkAQ'
     source_link: /display/CORG/README+Template
+tree_item_index: 1200
 history:
-    - 
+    -
         author: Pierre-Gildas Millon
         date: '2016-08-24 15:09'
         message: ''
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2016-02-11 18:17'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2016-02-11 18:15'
         message: ''
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2016-02-11 13:01'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2016-02-11 12:51'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 10:12'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2015-09-07 14:35'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2015-09-07 14:30'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2015-09-07 14:16'
         message: Add QA Build Status
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2015-02-16 11:42'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-13 13:52'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-13 13:50'
         message: ''
@@ -95,7 +96,7 @@ Use for instance https://github.com/ekalinin/github-markdown-toc
 
 # Installation
 
-Sample: 
+Sample:
 - From the Nuxeo Marketplace: install [the Sample Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample).
 - From the Nuxeo server web UI "Admin / Update Center / Packages from Nuxeo Marketplace"
 - From the command line: `nuxeoctl mp-install nuxeo-sample`
@@ -156,9 +157,9 @@ The [Nuxeo Platform](http://www.nuxeo.com/products/content-management-platform/)
 
 The Nuxeo Platform is developed and supported by Nuxeo, with contributions from the community.
 
-Nuxeo dramatically improves how content-based applications are built, managed and deployed, making customers more agile, innovative and successful. Nuxeo provides a next generation, enterprise ready platform for building traditional and cutting-edge content oriented applications. Combining a powerful application development environment with 
-SaaS-based tools and a modular architecture, the Nuxeo Platform and Products provide clear business value to some of the most recognizable brands including Verizon, Electronic Arts, Sharp, FICO, the U.S. Navy, and Boeing. Nuxeo is headquartered in New York and Paris. 
-More information is available at [www.nuxeo.com](http://www.nuxeo.com). 
+Nuxeo dramatically improves how content-based applications are built, managed and deployed, making customers more agile, innovative and successful. Nuxeo provides a next generation, enterprise ready platform for building traditional and cutting-edge content oriented applications. Combining a powerful application development environment with
+SaaS-based tools and a modular architecture, the Nuxeo Platform and Products provide clear business value to some of the most recognizable brands including Verizon, Electronic Arts, Sharp, FICO, the U.S. Navy, and Boeing. Nuxeo is headquartered in New York and Paris.
+More information is available at [www.nuxeo.com](http://www.nuxeo.com).
 
 ```
 

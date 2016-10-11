@@ -16,123 +16,124 @@ confluence:
     shortlink: gIFH
     shortlink_source: 'https://doc.nuxeo.com/x/gIFH'
     source_link: /display/CORG/Rules+for+Distributions
+tree_item_index: 700
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-29 13:57'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-28 10:47'
         message: ''
         version: '23'
-    - 
+    -
         author: Julien Carsique
         date: '2014-04-25 14:09'
         message: ''
         version: '22'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-24 11:56'
         message: Migrated to Confluence 4.0
         version: '21'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-24 11:55'
         message: Reverted from v. 18
         version: '20'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-24 11:51'
         message: ''
         version: '19'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-24 11:42'
         message: NXP-7905 - Generate Nuxeo SDK resource per application
         version: '18'
-    - 
+    -
         author: Julien Carsique
         date: '2011-10-17 11:01'
         message: 'use nuxeo-distribution-tools:nuxeo-expand sdk mode'
         version: '17'
-    - 
+    -
         author: Julien Carsique
         date: '2011-10-04 18:38'
         message: udpate SDK Ant targets snipets
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2011-09-26 14:35'
         message: ''
         version: '15'
-    - 
+    -
         author: Julien Carsique
         date: '2011-09-26 14:28'
         message: Nuxeo IDE requirements
         version: '14'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-08-18 15:50'
         message: ''
         version: '13'
-    - 
+    -
         author: Julien Carsique
         date: '2011-08-17 18:27'
         message: add product name
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-16 16:39'
         message: ''
         version: '11'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-02-25 17:17'
         message: ''
         version: '10'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-02-25 17:14'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2011-02-25 16:14'
         message: ''
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2011-02-25 16:10'
         message: startup wizard requirements
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2010-11-04 17:09'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2010-11-04 17:07'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2010-11-04 17:07'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2010-11-04 15:07'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2010-11-04 15:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2010-11-04 15:05'
         message: ''

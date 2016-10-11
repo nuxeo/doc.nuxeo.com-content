@@ -16,78 +16,79 @@ confluence:
     shortlink: LIeRAQ
     shortlink_source: 'https://doc.nuxeo.com/x/LIeRAQ'
     source_link: /display/CORG/User+Interface+Guidelines
+tree_item_index: 1300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-19 14:35'
         message: eplace "access rights" by "permissions"
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-14 09:20'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-11 12:56'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-11 12:54'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-10 16:03'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-09 15:19'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-09 15:18'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-09 14:57'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-09 14:57'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-09 14:03'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-09 13:43'
         message: ''
         version: '5'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-08-19 11:59'
         message: Fixed capitalization
         version: '4'
-    - 
+    -
         author: Lise Kemen
         date: '2015-08-19 10:24'
         message: ''
         version: '3'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-08-19 10:08'
         message: ''
         version: '2'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-08-19 09:56'
         message: ''
