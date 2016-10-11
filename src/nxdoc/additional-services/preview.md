@@ -108,11 +108,14 @@ history:
 
 # Installation & Configuration
 
-null
+For all document previews make sure you installed the [related softwares]({{page space='admindoc710' page='installing-and-setting-up-related-software'}}) corresponding to your document types.
 
 # Customization
 
-null
+You may want to check the following how-tos for customization:
+
+*   [How to Customize the Info-View Pop-Up]({{page page='how-to-customize-the-info-view-pop-up'}})
+*   [How to Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
 
 # Core Implementation
 
@@ -169,8 +172,19 @@ MimeTypePreviewer mtPreviewer = Framework.getService(PreviewAdapterManager.class
 ....
 ```
 
-{{! end_of_tabs }}
+{{> end_of_tabs }}
 
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
+
+*   [Installing and Setting Up Related Software]({{page space='ADMINDOC' page='Installing and+Setting+Up+Related+Software'}})
+*   [How to Customize the Info-View Pop-Up]({{page space='NXDOC' page='How to+Customize+the+Info-View+Pop-Up'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

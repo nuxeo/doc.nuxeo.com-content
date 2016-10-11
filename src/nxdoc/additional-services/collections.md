@@ -158,7 +158,7 @@ history:
 
 # Installation & Configuration
 
-null
+The collection module has no specific installation step as it is already included in the default Nuxeo Platform distribution.
 
 # Customization
 
@@ -250,8 +250,27 @@ Yet you can always unsynchronize the collection from the Nuxeo Drive tab in the 
 
 # Core Implementation
 
-null {{! end_of_tabs }}
+A collection holds the list of references of the documents it contains. Conversely, a document holds the list of references of the collections it belongs to.
+
+Collection operation are offered by the [CollectionManager.java](https://github.com/nuxeo/nuxeo-features/blob/release-6.0/nuxeo-platform-collections/nuxeo-platform-collections-core/src/main/java/org/nuxeo/ecm/collections/api/CollectionManager.java) service.
+
+Because a collection can potentially contain a large number of documents and, to a lesser extent, a document can belong to many collections, some tasks are performed asynchronously.
+
+For instance, when deleting a collection, an asynchronous work will update the documents it contains to remove the reference of the deleted collection. In the same way, when a document is removed, an asynchronous work will update the collection it belonged to in order to remove the reference of the deleted document.
+
+Finally, when copying a collection, an asynchronous work will also duplicate its content.
+
+{{> end_of_tabs }}
 
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
+
+*   [Collections user documentation]({{page space='userdoc710' page='collections'}})
+*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+*   [Nuxeo Drive user documentation]({{page space='userdoc710' page='nuxeo-drive'}})
+*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+
+{{/panel}}</div><div class="column medium-6">null</div></div>

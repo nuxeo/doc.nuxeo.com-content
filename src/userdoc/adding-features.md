@@ -20,9 +20,14 @@ confluence:
     source_link: /display/USERDOC710/Adding+Features
 history:
     - 
+        author: Manon Lumeau
+        date: '2016-10-05 09:30'
+        message: emove filter search
+        version: '319'
+    - 
         author: Solen Guitter
         date: '2016-07-19 14:43'
-        message: dd Document Access Tracking in list of deprecated addon
+        message: Add Document Access Tracking in list of deprecated addons
         version: '318'
     - 
         author: Solen Guitter
@@ -1653,11 +1658,7 @@ Although most packages are installed in a few clicks from the Update Center, som
 
 Here is a list of Nuxeo Packages available on the Nuxeo Marketplace for the latest version of the Nuxeo Platform.
 
-{{! multiexcerpt name='MP-packages-list'}}
-
-_Use the field below to search for a specific add-on._
-
-{{! table-filter removed }}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+{{! multiexcerpt name='MP-packages-list'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 **Package name**
 
@@ -1975,7 +1976,7 @@ Public
 
 </td><td colspan="1">
 
-[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication?version=1.1.1)
+[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication?version=1.1.1) &nbsp;
 
 </td></tr><tr><td colspan="1">Nuxeo Showcase Content</td><td colspan="1">Public</td><td colspan="1">&nbsp;</td><td colspan="1">[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-showcase-content?version=1.0.0)</td></tr><tr><td colspan="1">Nuxeo Spreadsheet</td><td colspan="1">Public</td><td colspan="1">&nbsp;[Documentation]({{page space='nxdoc710' page='nuxeo-spreadsheet'}})</td><td colspan="1">[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet?version=1.1.4)</td></tr><tr><td colspan="1">Nuxeo Travel Expenses</td><td colspan="1">Public</td><td colspan="1">&nbsp;</td><td colspan="1">[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-travel-expenses?version=1.0)</td></tr><tr><td colspan="1">
 

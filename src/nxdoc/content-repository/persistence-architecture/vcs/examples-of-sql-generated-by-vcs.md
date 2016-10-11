@@ -202,4 +202,14 @@ SELECT DISTINCT _C1 FROM (
 -- parameters: $1 = 'files', $2 = 'file' .. $61 = '%.jpg'
 ```
 
-{{/panel}}
+{{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [VCS]({{page page='vcs'}})
+*   [Microsoft SQL Server]({{page space='admindoc710' page='microsoft-sql-server'}})
+*   [PostgreSQL]({{page space='admindoc710' page='postgresql'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

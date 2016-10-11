@@ -622,3 +622,15 @@ You may find more information in these related pages :
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in Developer Documentation'}}
+
+*   [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}})
+*   [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
+*   [Field Binding and Expressions]({{page page='field-binding-and-expressions'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

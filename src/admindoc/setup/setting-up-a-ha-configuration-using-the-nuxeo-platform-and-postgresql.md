@@ -25,7 +25,7 @@ confluence:
     shortlink: 0DalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/0DalAQ'
     source_link: >-
-        /display/ADMINDOC710/Setting+up+a+HA+Configuration+Using+the+Nuxeo+Platform+and+PostgreSQL
+        https://doc.nuxeo.com/display/ADMINDOC710/Setting+up+a+HA+Configuration+Using+the+Nuxeo+Platform+and+PostgreSQL
 history:
     - 
         author: Solen Guitter

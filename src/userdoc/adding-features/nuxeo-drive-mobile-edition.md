@@ -330,7 +330,7 @@ To set up the preferences:
 
 ### Nuxeo Drive Mobile&nbsp;icons
 
-<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">![]({{file name='orange-cloud.png' page='icons-index'}} ?w=30,thumbnail=true)</td><td colspan="1">Go to the local folders</td></tr><tr><td colspan="1">![]({{file name='grey-cloud.png' page='icons-index'}})</td><td colspan="1">Synchronization in progress</td></tr><tr><td colspan="1">![](http://doc.nuxeo.com/download/attachments/16092681/nuxeo_drive_systray_icon_stopping.png?version=1&modificationDate=1387364852206&api=v2 ?w=25,thumbnail=true)</td><td colspan="1">Update all your folders</td></tr><tr><td colspan="1">![]({{file name='folder-info-icon.png' page='icons-index'}} ?w=25,thumbnail=true)</td><td colspan="1">See the local folder menu.</td></tr><tr><td colspan="1">![]({{file name='folder-update-icon.png'}} ?w=25,thumbnail=true)</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">![]({{file name='orange-cloud.png' page='icons-index'}} ?w=30,thumbnail=true)</td><td colspan="1">Go to the local folders</td></tr><tr><td colspan="1">![]({{file name='grey-cloud.png' page='icons-index'}})</td><td colspan="1">Synchronization in progress</td></tr><tr><td colspan="1">![](/download/attachments/16092681/nuxeo_drive_systray_icon_stopping.png?version=1&modificationDate=1387364852206&api=v2 ?w=25,thumbnail=true)</td><td colspan="1">Update all your folders</td></tr><tr><td colspan="1">![]({{file name='folder-info-icon.png' page='icons-index'}} ?w=25,thumbnail=true)</td><td colspan="1">See the local folder menu.</td></tr><tr><td colspan="1">![]({{file name='folder-update-icon.png'}} ?w=25,thumbnail=true)</td><td colspan="1">
 
 See the local folder information.
 
@@ -431,3 +431,16 @@ You can't delete a document from your device, you can only unsynchronize it.&nbs
 3.  <span style="color: rgb(0,0,0);">Click on **Delete** to confirm.</span>
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
+
+*   [Nuxeo Drive]({{page page='nuxeo-drive'}})
+*   [Nuxeo Drive FAQ]({{page page='nuxeo-drive-faq'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

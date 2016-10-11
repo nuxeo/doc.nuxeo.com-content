@@ -109,9 +109,9 @@ history:
 
 ### Quick Start Series
 
-*   [Quick Start Dev Guide](http://doc.nuxeo.com/x/monZ)
-*   [From the Web UI to Nuxeo Studio](http://doc.nuxeo.com/x/VANc)
-*   [First Steps With Studio: Technical Documentation Tutorial](http://doc.nuxeo.com/x/x4MlAQ)
+*   [Quick Start Dev Guide](/x/monZ)
+*   [From the Web UI to Nuxeo Studio](/x/VANc)
+*   [First Steps With Studio: Technical Documentation Tutorial](/x/x4MlAQ)
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
@@ -125,17 +125,17 @@ history:
 
 ### Educational
 
-*   [Simple Workflow Example](http://doc.nuxeo.com/x/KhTF)
-*   [Design Tips](http://doc.nuxeo.com/x/Eg7F)
-*   [Understand Expression and Scripting Languages Used in Nuxeo](http://doc.nuxeo.com/x/L4PZ)
+*   [Simple Workflow Example](/x/KhTF)
+*   [Design Tips](/x/Eg7F)
+*   [Understand Expression and Scripting Languages Used in Nuxeo](/x/L4PZ)
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### How-To Index
 
-*   [How to Define a New Content View](http://doc.nuxeo.com/x/3o1H)
-*   [How to Define a Document Type](http://doc.nuxeo.com/x/nYAV)
-*   [How to Contribute to an Extension](http://doc.nuxeo.com/x/iw7F)
+*   [How to Define a New Content View](/x/3o1H)
+*   [How to Define a Document Type](/x/nYAV)
+*   [How to Contribute to an Extension](/x/iw7F)
 
 {{/panel}}</div></div>
 

@@ -190,7 +190,7 @@ Note also that FINER and FINEST logs will be ignored anyway.
 
 Here are descriptions of the most common logs coming from Nuxeo or its third-parties. The list is not exhaustive but aims at helping to understand the most common logs you may encounter while using the Nuxeo Platform. If you don't find what you need here, you can check [answers.nuxeo.com](http://answers.nuxeo.com/) if someone already asked about it. You can also search the web about third parties logs if they are not in this list.
 
-<table><tbody><tr><th colspan="1">Level</th><th colspan="1">Source
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Level</th><th colspan="1">Source
 Message</th><th colspan="1">Cause</th></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">
 
 `Cannot set databaseTransactionEnabled attribute to false for model publication, other models already exist with value true`
@@ -341,8 +341,21 @@ WARN
 
 `Session invoked in a container without a transaction active: turn on debug logs for more information about the faulty call.`
 
-</td><td colspan="1">See [NXP-7170](https://jira.nuxeo.com/browse/NXP-7170) upgrade notes.</td></tr></tbody></table>
+</td><td colspan="1">See [NXP-7170](https://jira.nuxeo.com/browse/NXP-7170) upgrade notes.</td></tr></tbody></table></div>
 
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Purging Audit Logs (NXP_LOGS)]({{page page='purging-audit-logs-nxp_logs'}})
+*   [Recommended Configurations]({{page page='recommended-configurations'}})
+*   [How to Estimate Disk, Database and Elasticsearch Usage]({{page page='how-to-estimate-disk-database-and-elasticsearch-usage'}})
+*   [Where Are the Log and Configuration Files in Windows?]({{page page='where-are-the-log-and-configuration-files-in-windows'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

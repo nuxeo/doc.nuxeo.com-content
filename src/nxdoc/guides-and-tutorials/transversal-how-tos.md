@@ -56,7 +56,7 @@ history:
 
 ---
 *   [How to Fetch Documents with a Query on Date Parameters]({{page space='NXDOC710' page='How to+Fetch+Documents+with+a+Query+on+Date+Parameters'}})&nbsp;&mdash;&nbsp;<span class="smalltext">In this how-to we will see how to make it possible to process a list of document depending on a date parameter. An example would be how to display or do an operation on all documents expiring in less than 3 months.</span>
-*   [How to Define Public Pages (Viewable by Anonymous Users)](https://doc.nuxeo.com/pages/viewpage.action?pageId=28475768)&nbsp;&mdash;&nbsp;<span class="smalltext">To make some pages or parts of the repository visible to people without requiring them to be authenticated to the Platform, follow the following steps.</span>
+*   [How to Define Public Pages (Viewable by Anonymous Users)](/pages/viewpage.action?pageId=28475768)&nbsp;&mdash;&nbsp;<span class="smalltext">To make some pages or parts of the repository visible to people without requiring them to be authenticated to the Platform, follow the following steps.</span>
 *   [How to setup a test SMTP server]({{page space='NXDOC710' page='How to+setup+a+test+SMTP+server'}})
 *   [How to Implement Local Groups or Roles Using Computed Groups]({{page space='NXDOC710' page='How to+Implement+Local+Groups+or+Roles+Using+Computed+Groups'}})
 *   [How to Export Data Using Document Template and Automation]({{page space='NXDOC710' page='How to+Export+Data+Using+Document+Template+and+Automation'}})&nbsp;&mdash;&nbsp;<span class="smalltext">In a few steps, we will show how to generate a CSV file that lists all the documents of your Nuxeo Platform repository and some metadata.</span>

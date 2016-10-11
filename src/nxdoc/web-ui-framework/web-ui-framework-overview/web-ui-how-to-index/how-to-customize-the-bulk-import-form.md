@@ -335,3 +335,15 @@ If you want to disable the default import option (after having contributed a new
 ![]({{file name='custom_import.png'}} ?w=450,h=303,border=true)
 
 After deploying your changes, you can only see your custom import option when you click on **Import**.&nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [JSF and Ajax Tips and How-To Index]({{page page='jsf-and-ajax-tips-and-how-to-index'}})
+*   [Layout and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
+*   [How-To Index]({{page page='how-to-index'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

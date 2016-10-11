@@ -195,3 +195,14 @@ To send the report:
 &nbsp;
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Jenkins duty]({{page space='corg' page='jenkins-duty'}})
+*   [Nuxeo Jenkins Report dev documentation]({{page space='nxdoc710' page='nuxeo-jenkins-report'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

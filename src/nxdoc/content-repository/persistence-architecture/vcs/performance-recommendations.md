@@ -114,10 +114,25 @@ history:
 *   Consider disabling the OS swapping (`sudo swapoff -a`) or try to lower the swapiness (`<span class="pln">vm</span>`<span class="pun">.</span><span class="pln">swappiness</span> <span class="pun">=</span><span class="lit">1</span><span class="pln">)</span>
 *   Check the network latency between the application and the database.
 *   [Configure ImageMagick]({{page space='admindoc710' page='installing-and-setting-up-related-software'}}) to use a single thread.
-*   [Monitor](http://doc.nuxeo.com/x/gBDF) everything, JVM, GC, VCS cache hit ratio, database, system.
+*   [Monitor](/x/gBDF) everything, JVM, GC, VCS cache hit ratio, database, system.
 
 &nbsp;
 
 * * *
 
 </div>
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Managing Performance]({{page page='managing-performance'}})
+*   [Metrics and Monitoring]({{page space='admindoc710' page='metrics-and-monitoring'}})
+*   [Tracking the Performance of the Nuxeo Platform]({{page page='tracking-the-performance-of-the-nuxeo-platform'}})
+*   [Monitoring Slow NXQL Queries]({{page space='admindoc710' page='monitoring-slow-nxql-queries'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

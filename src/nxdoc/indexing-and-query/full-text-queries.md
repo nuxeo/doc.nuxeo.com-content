@@ -177,3 +177,14 @@ With an Elasticsearch page provider, the full-text syntax used is the Elasticsea
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics'}}
+
+*   [VCS]({{page page='vcs'}})
+*   [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

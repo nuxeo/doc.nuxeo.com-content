@@ -99,3 +99,10 @@ Depending on the addons you've installed, you could also expose these URLs:
 *   `/nuxeo/site/mobile`: URL for the mobile application
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics'}}
+
+*   [WebEngine (JAX-RS)]({{page page='webengine-jax-rs'}})
+*   [Navigation URLs]({{page page='navigation-urls'}})
+
+{{/panel}}</div><div class="column medium-6">null</div></div>

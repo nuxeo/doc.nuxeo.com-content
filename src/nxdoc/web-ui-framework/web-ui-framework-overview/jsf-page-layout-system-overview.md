@@ -337,3 +337,17 @@ However, if you think the custom UI is the way to go, we'll be happy to help you
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [From the Web UI to Nuxeo Studio]({{page page='from-the-web-ui-to-nuxeo-studio'}})
+*   [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
+*   [Layouts and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
+*   [Theme]({{page page='theme'}})
+*   [Web UI How-To Index]({{page page='web-ui-how-to-index'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div></div>

@@ -160,7 +160,7 @@ By default, `data` and `log` directories are stored inside the Nuxeo tree. To ea
 
 **Data and log directories configuration**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field / Property
 
@@ -188,7 +188,7 @@ Log directory
 Log directory (absolute or relative to NUXEO_HOME).
 Linux recommended path: `/var/log/nuxeo/...`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Defining Environment Variables
 
@@ -249,7 +249,7 @@ The default Nuxeo Platform email configuration is filled in with neutral values 
 
 **Email information configuration**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field / Property
 
@@ -373,7 +373,7 @@ Sender address mail
 
 Email address that will displayed as the sender's address.
 
-</td></tr></tbody></table>{{#> callout type='info' }}
+</td></tr></tbody></table></div>{{#> callout type='info' }}
 
 If you have complex mail server configurations, you may want to check the [Javamail API FAQ](http://www.oracle.com/technetwork/java/faq-135477.html) for more information.
 
@@ -384,3 +384,17 @@ If you have complex mail server configurations, you may want to check the [Javam
 * * *
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related content'}}
+
+*   [Admin Tab Overview]({{page page='admin-tab-overview'}})
+*   [Configuration Examples]({{page page='configuration-examples'}})
+*   [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
+*   [Database]({{page page='database'}})
+*   [Where Are the Log and Configuration Files in Windows?]({{page page='where-are-the-log-and-configuration-files-in-windows'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

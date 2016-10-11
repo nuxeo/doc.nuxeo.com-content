@@ -231,3 +231,14 @@ When you delete a topic, it is definitively erased from the application.
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Participating to a Topic]({{page page='participating-to-a-topic'}})
+*   [Forums]({{page page='forums'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

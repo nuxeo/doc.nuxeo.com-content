@@ -114,3 +114,16 @@ If you need to make more changes on the versioning mechanism in Nuxeo Drive:
 {{! /multiexcerpt}}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Drive user documentation]({{page space='userdoc710' page='nuxeo-drive'}})
+*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+*   [Nuxeo Drive FAQ]({{page space='userdoc710' page='nuxeo-drive-faq'}})
+*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

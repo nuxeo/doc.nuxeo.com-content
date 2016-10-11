@@ -34,7 +34,7 @@ confluence:
     shortlink: PoCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/PoCyAQ'
     source_link: >-
-        /display/NXDOC710/How+to+Disable+by+Coverage+and+by+Subjects+Virtual+Navigations
+        https://doc.nuxeo.com/display/NXDOC710/How+to+Disable+by+Coverage+and+by+Subjects+Virtual+Navigations
 history:
     - 
         author: Arnaud Kervern
@@ -246,3 +246,17 @@ When hiding them outside of a Studio contribution, the following requirement is 
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-tos'}}
+
+*   [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
+*   [Configure a Domain Specific Advanced Search]({{page space='nxdoc58' page='configure-a-domain-specific-advanced-search'}})
+*   [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
+*   [How to Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
+*   [How-To Index]({{page page='how-to-index'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

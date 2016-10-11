@@ -193,7 +193,7 @@ To maintain inheritance, you need to use the event "Document Updated" and select
 
 To complete this how-to, you need the elements below to be already configured in your Nuxeo Studio project.
 
-*   A document type called [`DocumentationItem`](https://doc.nuxeo.com/x/Ng7F).
+*   A document type called [`DocumentationItem`](/x/Ng7F).
 
 ## Creating the Event Handler
 

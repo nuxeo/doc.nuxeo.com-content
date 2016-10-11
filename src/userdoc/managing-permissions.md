@@ -406,4 +406,8 @@ The **Purge** tab will enable admins to delete **all** the permissions granted t
 To **purge the permission** of a user: go to **Admin** > **Permissions** > **Purge** tab, search the user you want and click on **Search**. The available permissions are displayed, click on **Purge** to confirm. All the permissions for this user are removed.
 ![]({{file name='permissions_purge.png'}} ?w=600,border=true)
 
-{{! /multiexcerpt}}
+{{! /multiexcerpt}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Want to add your own access rights?'}}
+
+*   [Add a new Permission in the UI]({{page space='studio' page='add-a-new-permission-in-the-ui'}})
+
+{{/panel}}</div><div class="column medium-6">null</div></div>

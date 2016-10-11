@@ -309,3 +309,18 @@ By default, when publishing a video, the only required field to fill in is the p
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Using OAuth2]({{page page='using-oauth2'}})
+*   [Using OpenID / OAuth2 in Login Screen]({{page page='using-openid-oauth2-in-login-screen'}})
+*   [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
+*   [Publisher]({{page page='publisher'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

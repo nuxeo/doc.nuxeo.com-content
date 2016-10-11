@@ -82,3 +82,16 @@ To reassign a task from **the Home Workflow tab:**
     The Workflow tab of the document is displayed: you have no task anymore.
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Delegating a Task]({{page page='delegating-a-task'}})
+*   [Workflows]({{page page='workflows'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

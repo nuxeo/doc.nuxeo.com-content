@@ -102,3 +102,14 @@ Your Azure CDN host where your blobs are available.
 {{! Don't put anything here. }}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [File Storage]({{page page='file-storage'}})
+*   [Amazon S3 Online Storage]({{page page='amazon-s3-online-storage'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

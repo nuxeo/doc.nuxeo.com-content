@@ -31,42 +31,42 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/5ICyAQ'
     source_link: /display/NXDOC710/How+to+Customize+Startup+Redirection
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2015-10-14 12:26'
         message: ''
         version: '8'
-    -
+    - 
         author: Gildas Lefevre
         date: '2015-10-13 21:44'
         message: ''
         version: '7'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-01-13 10:06'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-06 11:37'
         message: ''
         version: '5'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-06 11:03'
         message: ''
         version: '4'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-05 16:03'
         message: ''
         version: '3'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-05 15:55'
         message: ''
         version: '2'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-05 15:21'
         message: ''

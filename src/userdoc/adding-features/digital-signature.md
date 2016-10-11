@@ -298,3 +298,13 @@ To verify the signature of the PDF, you need to:
 *   [http://www.nuxeo.com/blog/digital-signatures-within-nuxeo-document-management/](http://www.nuxeo.com/blog/digital-signatures-within-nuxeo-document-management/)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Digital signature dev documentation]({{page space='nxdoc710' page='digital-signature'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

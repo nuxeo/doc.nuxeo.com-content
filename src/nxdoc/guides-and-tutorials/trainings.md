@@ -37,4 +37,24 @@ history:
 
 Welcome to the Nuxeo trainings space! You will find here valuable resources to learn and practice the various aspects of Nuxeo Platform.
 
-{{/panel}}
+{{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+{{#> panel type='secondary' match_height='true'}}
+
+### [REST API]({{page page='learning-rest-api'}})
+
+Learn the principles of the Nuxeo REST API and practice using the Nuxeo JavaScript client. {{/panel}}
+
+&nbsp;
+
+&nbsp;
+
+</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

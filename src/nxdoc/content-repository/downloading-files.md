@@ -102,3 +102,14 @@ Here are some examples:
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Documentation About URLs'}}
+
+*   [Default URL Patterns]({{page page='default-url-patterns'}})
+*   [URLs for Files]({{page page='urls-for-files'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

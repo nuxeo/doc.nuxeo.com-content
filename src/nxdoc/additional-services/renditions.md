@@ -165,3 +165,13 @@ Since 7.2, both contributions can be filtered through standard filters we alread
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

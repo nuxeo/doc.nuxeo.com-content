@@ -803,8 +803,17 @@ The `NuxeoAuthenticationFilter` will use this chain to trigger the login prompt.
 
 Some authentication plugins may choose to trigger or not the `LoginPrompt` depending on the situation. For example: the `BasicAuthentication` plugin generates the login prompt (an HTTP basic authentication which takes the form of a popup) only for specific URLs used by RSS feeds or Restlet calls. This allows the platform to be easily called by Restlets and RSS clients without bothering browser clients who are displayed web forms to authenticate.
 
-{{! end_of_tabs }}
+{{> end_of_tabs }}
 
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
+
+*   [Collections user documentation]({{page space='userdoc710' page='collections'}})
+*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+*   [Nuxeo Drive user documentation]({{page space='userdoc710' page='nuxeo-drive'}})
+*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+
+{{/panel}}</div><div class="column medium-6">null</div></div>

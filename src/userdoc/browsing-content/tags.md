@@ -205,3 +205,13 @@ When you&nbsp;[publish a document]({{page page='publishing-content'}}), the tags
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More documentation about tags'}}
+
+*   [Tags developer documentation]({{page space='nxdoc710' page='tagging'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

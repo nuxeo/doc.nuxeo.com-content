@@ -20,6 +20,11 @@ confluence:
     source_link: /display/ADMINDOC710/LTS+2015+Packaging+Changes+and+Deprecations
 history:
     - 
+        author: Manon Lumeau
+        date: '2016-09-23 15:03'
+        message: ''
+        version: '11'
+    - 
         author: Solen Guitter
         date: '2016-03-17 10:35'
         message: ''
@@ -71,7 +76,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'lts2015-packaging-changes' page='ADMINDOC:Upgrade from 6.0 to LTS 2015'}}}
+{{{multiexcerpt 'lts2015-packaging-changes' page='NXDOC:Upgrade from 6.0 to LTS 2015'}}}
 
 {{! Don't put anything here. }}
 

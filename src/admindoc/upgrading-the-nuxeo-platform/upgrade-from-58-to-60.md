@@ -189,3 +189,16 @@ history:
 For the general upgrade process, see the [How to Upgrade Nuxeo]({{page page='upgrading-the-nuxeo-platform'}}) page.
 
 {{{multiexcerpt 'from-5.8-to-6.0' page='NXDOC:Upgrade from 5.8 to 6.0'}}}
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Platform 6.0 Packaging Changes and Deprecations]({{page page='nuxeo-platform-60-packaging-changes-and-deprecations'}})
+*   [Upgrade to JSF2]({{page page='upgrade-to-jsf2'}})
+*   [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}})
+*   [Studio Project Specific Upgrade Instructions]({{page space='studio' page='specific-upgrade-instructions'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

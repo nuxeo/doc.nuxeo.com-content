@@ -76,3 +76,15 @@ The default timeout to process the export of rights is 1200 seconds (20 minutes)
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Groups and Rights Audit user documentation]({{page space='userdoc710' page='nuxeo-groups-and-rights-audit'}})
+*   [Recommended Configurations]({{page space='admindoc710' page='recommended-configurations'}})
+*   [Configuration Parameters Index (nuxeo.conf)]({{page space='admindoc710' page='configuration-parameters-index-nuxeoconf'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

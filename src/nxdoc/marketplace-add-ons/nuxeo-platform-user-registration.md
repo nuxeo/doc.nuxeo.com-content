@@ -273,3 +273,16 @@ See the page [How to Contribute a New "User Registration Request" Document Type]
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Authentication and User Management]({{page page='authentication-and-user-management'}}) (developer documentation)
+*   [How to Contribute a New "User Registration Request" Document Type]({{page page='how-to-contribute-a-new-user-registration-request-document-type'}})
+*   [Managing Users and Groups]({{page space='userdoc710' page='managing-users-and-groups'}}) (user documentation)
+*   [Recommended Configurations]({{page space='admindoc710' page='recommended-configurations'}}) (admin documentation)
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -423,3 +423,14 @@ In the static deployment model NuxeoCtl pack command is run to:
     ![]({{file name='Nx-static-deploy.png'}} ?w=600,h=313,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related sections in this documentation'}}
+
+*   [Deployment Options]({{page page='deployment-options'}})
+*   [nuxeoctl and Control Panel Usage]({{page space='admindoc710' page='nuxeoctl-and-control-panel-usage'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -184,7 +184,7 @@ However, in order for various no-copy optimizations to be effective, the tempora
 
 ### Transient Store
 
-The caching directory used by any&nbsp;[Transient Store](https://doc.nuxeo.com/x/AQalAQ) accessed by multiple Nuxeo instances&nbsp;**must be** shared by all instances. This caching directory&nbsp;is located in `nxserver/data/transientstores/<transientstore_name>`.
+The caching directory used by any&nbsp;[Transient Store](/x/AQalAQ) accessed by multiple Nuxeo instances&nbsp;**must be** shared by all instances. This caching directory&nbsp;is located in `nxserver/data/transientstores/<transientstore_name>`.
 
 By default there is only one&nbsp;Transient Store contribution named `default`:
 
@@ -345,3 +345,15 @@ To test that the load balancer forwards the HTTP requests of a given session to 
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [VCS developer documentation]({{page space='nxdoc710' page='vcs'}})
+*   [Redis Configuration]({{page page='redis-configuration'}})
+*   [Setting up a HA Configuration Using the Nuxeo Platform and PostgreSQL]({{page page='setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

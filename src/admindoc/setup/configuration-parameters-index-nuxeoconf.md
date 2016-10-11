@@ -991,253 +991,349 @@ Some parameters can be set By contributing to the [Configuration Service.](http:
 
 _Looking for a specific parameter?_
 
-{{! table-filter removed }}
+{{! table-filter removed }}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Parameter
 
+</th><th colspan="1">
+
 Default value ("|" separates possible values)
+
+</th><th colspan="1">
 
 Description
 
-Since
+</th><th colspan="1">Since</th></tr><tr><td colspan="1">
 
 `JAVA_HOME`
+
+</td><td colspan="1">
 
 None.
 If undefined nuxeoctl script will try to discover it.
 
+</td><td colspan="1">
+
 Path to Java home directory.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `JAVA_OPTS`
+
+</td><td colspan="1">
 
 `-Xms512m -Xmx1024m -XX:MaxPermSize=512m`
 `-Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000`
 `-Dfile.encoding=UTF-8`
 
+</td><td colspan="1">
+
 Optional values passed to the JVM.
 Nuxeo requires at least 1024 Mo in JVM heap size and 256Mo as maximum permanent size (512 recommended).
 Decreasing garbage collector frequency avoid having too much CPU usage (Sun Java specific options, recommended by JBoss).
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `launcher.start.max.wait`
 
+</td><td colspan="1">
+
 300
+
+</td><td colspan="1">
 
 In seconds. Maximum time to wait for effective Nuxeo server start before giving up (applies on commands "start" and "restart").
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `launcher.stop.max.wait`
 
+</td><td colspan="1">
+
 60
+
+</td><td colspan="1">
 
 In seconds. Maximum time to wait for effective Nuxeo server stop cleanly before using forced stop.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `launcher.override.java.tmpdir`
 
+</td><td colspan="1">
+
 true
+
+</td><td colspan="1">
 
 Possible values: `true` or `false` .
 If true, will set `java.io.tmpdir = ${nuxeo.tmp.dir}`.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.log.dir`
 
+</td><td colspan="1">
+
 log
+
+</td><td colspan="1">
 
 Log directory (absolute or relative to `NUXEO_HOME`).
 Linux recommended path: `/var/log/nuxeo/...`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.pid.dir`
 
+</td><td colspan="1">
+
 bin
+
+</td><td colspan="1">
 
 Directory where to store Nuxeo PID file.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.data.dir`
 
+</td><td colspan="1">
+
 data
+
+</td><td colspan="1">
 
 Data directory (absolute or relative to NUXEO_HOME). It involves all data not being stored in database.
 Linux recommended path: `/var/lib/nuxeo/...`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.tmp.dir`
+
+</td><td colspan="1">
 
 `server/default/tmp` (JBoss)
 `tmp` (Tomcat)
 `tmp` (Jetty)
 
+</td><td colspan="1">
+
 Location of the temporary files.
 
-&nbsp; `nuxeo.mp.dir` `packages` Since Nuxeo 5.9.4\. Nuxeo Packages directory. Since Nuxeo 5.9.4
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.mp.dir`</td><td colspan="1">`packages`</td><td colspan="1">Since Nuxeo 5.9.4\. Nuxeo Packages directory.</td><td colspan="1">Since Nuxeo 5.9.4</td></tr><tr><td colspan="1">
 
 `nuxeo.force.generation`
 
+</td><td colspan="1">
+
 `true` | `once`
+
+</td><td colspan="1">
 
 If "`true`", will force generation of configuration files; otherwise they are only generated when not existing.
 If "`once`", will force one time and switch to false after successful generation.
 If "`false`", configuration changes are ignored.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.templates`
 
+</td><td colspan="1">
+
 default
+
+</td><td colspan="1">
 
 Comma separated list of templates to include.
 Templates paths are absolute or relative to `$NUXEO_HOME/templates/`.
 Available templates: postgresql, mysql, mssql, oracle, custom, ...
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.bind.address`
 
+</td><td colspan="1">
+
 0.0.0.0
+
+</td><td colspan="1">
 
 Server binding address. "0.0.0.0" means "all available network interfaces".
 WARNING: when changing `nuxeo.bind.address`, you must accordingly change `nuxeo.loopback.url`.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.server.http.port`
 
+</td><td colspan="1">
+
 8080
+
+</td><td colspan="1">
 
 Server HTTP listen port.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.server.ajp.port`
 
+</td><td colspan="1">
+
 8009
+
+</td><td colspan="1">
 
 Server AJP listen port.
 This is not available on Jetty.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.server.jvmRoute`
 
+</td><td colspan="1">
+
 nuxeo
+
+</td><td colspan="1">
 
 Server AJP route for load-balancing
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.server.tomcat_admin.host`
 
-localhost Since Nuxeo 7.3\. Tomcat server's "admin" host.
-This is the address on which the server waits for a shutdown command. Since Nuxeo 7.3
+</td><td colspan="1">localhost</td><td colspan="1">Since Nuxeo 7.3\. Tomcat server's "admin" host.
+This is the address on which the server waits for a shutdown command.</td><td colspan="1">Since Nuxeo 7.3</td></tr><tr><td colspan="1">
 
 `nuxeo.server.tomcat-admin.port`
 
+</td><td colspan="1">
+
 8005
+
+</td><td colspan="1">
 
 Deprecated since Nuxeo 5.6 and replaced by&nbsp;`nuxeo.server.tomcat_admin.port`. Tomcat server's "admin" port.
 This is only useful if you have another Tomcat server running and want to avoid port conflicts.
 
-Deprecated since Nuxeo 5.6
+</td><td colspan="1">Deprecated since Nuxeo 5.6</td></tr><tr><td colspan="1">
 
 `nuxeo.server.tomcat_admin.port`
 
+</td><td colspan="1">
+
 8005
+
+</td><td colspan="1">
 
 Since Nuxeo 5.6\. Tomcat server's "admin" port.
 Replaces `nuxeo.server.tomcat-admin.port`. This is only useful if you have another Tomcat server running and want to avoid port conflicts.
 
-Since Nuxeo 5.6
+</td><td colspan="1">Since Nuxeo 5.6</td></tr><tr><td colspan="1">
 
 `nuxeo.server.https.port`
 
+</td><td colspan="1">
+
 8443
+
+</td><td colspan="1">
 
 Server HTTPS listen port.
 This is only useful if you have modified the application server to use HTTPS.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.server.emptySessionPath`
 
+</td><td colspan="1">
+
 false
+
+</td><td colspan="1">
 
 (Tomcat only) Since Nuxeo 5.5, until 5.7.1\. If set to true, all paths for session cookies will be set to /.
 May be useful to enable authentication on proxyfied WebEngine applications (see [HTTP and HTTPS Reverse-Proxy Configuration]({{page page='http-and-https-reverse-proxy-configuration'}})).
 Removed since Nuxeo 5.7.2 (see [http://tomcat.apache.org/migration-7.html#Session_cookie_configuration](http://tomcat.apache.org/migration-7.html#Session_cookie_configuration)).
 
-Since Nuxeo 5.5, until Nuxeo 5.7.1 `nuxeo.server.signature` None (Tomcat only) Since Nuxeo 6.0\. If set, this will replace the default value of the "Server:" HTTP response header. &nbsp;
+</td><td colspan="1">Since Nuxeo 5.5, until Nuxeo 5.7.1</td></tr><tr><td colspan="1">`nuxeo.server.signature`</td><td colspan="1">None</td><td colspan="1">(Tomcat only) Since Nuxeo 6.0\. If set, this will replace the default value of the "Server:" HTTP response header.</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `org.nuxeo.ecm.instance.name`
 
+</td><td colspan="1">
+
 Nuxeo 5.9.3-SNAPSHOT
+
+</td><td colspan="1">
 
 Server name.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `org.nuxeo.ecm.instance.description`
 
+</td><td colspan="1">
+
 Nuxeo
+
+</td><td colspan="1">
 
 Server description.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `org.nuxeo.ecm.product.name`
 
+</td><td colspan="1">
+
 Nuxeo Platform
+
+</td><td colspan="1">
 
 Product name, displayed in the page title on your browser.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `org.nuxeo.ecm.product.version`
 
-5.9.3-SNAPSHOT &nbsp; &nbsp; {{> anchor 'orgnuxeodev'}} `org.nuxeo.dev`
+</td><td colspan="1">5.9.3-SNAPSHOT</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">{{> anchor 'orgnuxeodev'}} `org.nuxeo.dev`
 
 &nbsp;
 
+</td><td colspan="1">
+
 false
+
+</td><td colspan="1">
 
 Since Nuxeo 5.6, this property uses the "dev" mode when running the Nuxeo application. This parameter should not be set to `true` on a production server, as it disables some caches, and enables hot redeploy of some JARs (Studio JARs for instance). For more information about the dev mode, see [How to do incremental deployment (hot reload) in the JSF-Seam layer]({{page space='corg' page='supporting-hot-reload'}}).
 
 Before 5.6, setting this property to true stopped the runtime when an error occured at deployment. This behaviour has been removed from the dev mode and is now controlled by the property `org.nuxeo.runtime.strict`.
 
-Since Nuxeo 5.6 `org.nuxeo.prod` false Since Nuxeo 5.8, setting this property to "true" will display a quite visible warning message in the Admin tab, stating that this is a production instance. This is useful for administrators who are sometimes confusing their Nuxeo production server with their test server (not to rat anyone out). Since Nuxeo 5.8 {{! multiexcerpt name='org.nuxeo.rest.stack.enable'}}
+</td><td colspan="1">Since Nuxeo 5.6</td></tr><tr><td colspan="1">`org.nuxeo.prod`</td><td colspan="1">false</td><td colspan="1">Since Nuxeo 5.8, setting this property to "true" will display a quite visible warning message in the Admin tab, stating that this is a production instance. This is useful for administrators who are sometimes confusing their Nuxeo production server with their test server (not to rat anyone out).</td><td colspan="1">Since Nuxeo 5.8</td></tr><tr><td colspan="1">{{! multiexcerpt name='org.nuxeo.rest.stack.enable'}}
 
 `org.nuxeo.rest.stack.enable`
 
-{{! /multiexcerpt}} {{! multiexcerpt name='org.nuxeo.rest.stack.enable-default'}}
+{{! /multiexcerpt}}</td><td colspan="1">{{! multiexcerpt name='org.nuxeo.rest.stack.enable-default'}}
 
 false
 
-{{! /multiexcerpt}} {{! multiexcerpt name='org.nuxeo.rest.stack.enable-description'}}
+{{! /multiexcerpt}}</td><td colspan="1">{{! multiexcerpt name='org.nuxeo.rest.stack.enable-description'}}
 
 Since Nuxeo 6.0, you can enable this mode if you'd like to display exception stacktraces in JSON response when error occurs after REST calls.
 
 See [Web Exceptions documentation]({{page space='nxdoc710' page='web-exceptions-errors'}}) to get modes description and examples.
 
-{{! /multiexcerpt}} Since Nuxeo 6.0 {{! multiexcerpt name='org.nuxeo.automation.trace'}}
+{{! /multiexcerpt}}</td><td colspan="1">Since Nuxeo 6.0</td></tr><tr><td colspan="1">{{! multiexcerpt name='org.nuxeo.automation.trace'}}
 
 `org.nuxeo.automation.trace`
 
-{{! /multiexcerpt}} {{! multiexcerpt name='org.nuxeo.automation.trace-default'}}
+{{! /multiexcerpt}}</td><td colspan="1">{{! multiexcerpt name='org.nuxeo.automation.trace-default'}}
 
 false
 
-{{! /multiexcerpt}}
+{{! /multiexcerpt}}</td><td colspan="1">
 
 Enable this mode if you'd like to display automation traces during runtime:
 
@@ -1247,26 +1343,30 @@ Enable this mode if you'd like to display automation traces during runtime:
 *   The automation trace mode is disabled by default (not suitable for production).
 *   It can be activated through JMX via `org.nuxeo:TracerFactory` MBean during runtime.
 
-{{! /multiexcerpt}} &nbsp; {{! multiexcerpt name='org.nuxeo.automation.trace.printable'}}
+{{! /multiexcerpt}}</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">{{! multiexcerpt name='org.nuxeo.automation.trace.printable'}}
 
 `org.nuxeo.automation.trace.printable`
 
-{{! /multiexcerpt}} {{! multiexcerpt name='org.nuxeo.automation.trace.printable-default'}}
+{{! /multiexcerpt}}</td><td colspan="1">{{! multiexcerpt name='org.nuxeo.automation.trace.printable-default'}}
 
 *
 
-{{! /multiexcerpt}} {{! multiexcerpt name='org.nuxeo.automation.trace.printable-description'}}
+{{! /multiexcerpt}}</td><td colspan="1">{{! multiexcerpt name='org.nuxeo.automation.trace.printable-description'}}
 
 By default, all automation executions are 'printable' (appear in logs) when automation trace mode is on.
 
 *   You can filter chain and/or operation execution trace printing by setting this property to chain name and/or operation separated by comma.
 *   Comment this property to get all automation chains/operations back in printing (by default set to * (star))
 
-{{! /multiexcerpt}} &nbsp;
+{{! /multiexcerpt}}</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `org.nuxeo.ecm.webapp.dashboard.mode`
 
+</td><td colspan="1">
+
 auto
+
+</td><td colspan="1">
 
 DEPRECATED since Nuxeo 6.0.
 
@@ -1276,660 +1376,890 @@ Defines the dashboard mode. There are three modes:
 *   `old`: force usage of the 'old' JSF based dashboard for all users.
 *   `opensocial`: force usage of the new OpenSocial based dashboard for all users.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `_templateName_.target`
 
+</td><td colspan="1">
+
 `server/default/deploy/nuxeo.ear`
+
+</td><td colspan="1">
 
 Directory where _templateName_ files will be deployed.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `mailservice.user`
 
+</td><td colspan="1">
+
 nobody
+
+</td><td colspan="1">
 
 (JBoss only) User for e-mail authentication.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `mailservice.password`
 
+</td><td colspan="1">
+
 password
+
+</td><td colspan="1">
 
 (JBoss only) Password for e-mail authentication.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `mail.store.protocol`
 `mail.transport.protocol`
 
+</td><td colspan="1">
+
 pop3
 smtp
 
+</td><td colspan="1">
+
 Server protocol parameters for e-mailing.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `mail.user`
 
+</td><td colspan="1">
+
 nobody
+
+</td><td colspan="1">
 
 User who will receive e-mail (unused in Nuxeo).
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `mail.store.host`
 
+</td><td colspan="1">
+
 localhost
+
+</td><td colspan="1">
 
 e-Mail server.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `mail.store.user`
 
+</td><td colspan="1">
+
 anonymous
 
-&nbsp; &nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `mail.store.password`
 
+</td><td colspan="1">
+
 password
 
-&nbsp; &nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `mail.debug`
 
+</td><td colspan="1">
+
 false
+
+</td><td colspan="1">
 
 Enable debugging output from the JavaMail classes.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.notification.eMailSubjectPrefix`
 
+</td><td colspan="1">
+
 [Nuxeo]
+
+</td><td colspan="1">
 
 Subject prefix in Nuxeo notification e-mails.
 
-&nbsp; `nuxeo.notification.eMailSigner` The Nuxeo team Signer of the sent e-mail. &nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.notification.eMailSigner`</td><td colspan="1">The Nuxeo team</td><td colspan="1">Signer of the sent e-mail.</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `mail.transport.host`
 
+</td><td colspan="1">
+
 localhost
+
+</td><td colspan="1">
 
 SMTP gateway server.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `mail.transport.port`
+
+</td><td colspan="1">
 
 25 (without authentication)
 587 (with authentication)
 465 (SSL)
 
+</td><td colspan="1">
+
 e-Mail server port.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `mail.transport.usetls`
 
+</td><td colspan="1">
+
 false
+
+</td><td colspan="1">
 
 Use TLS for the SMTP connection.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `mail.transport.auth`
 
+</td><td colspan="1">
+
 true
 
-&nbsp; &nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `mail.transport.user`
 
+</td><td colspan="1">
+
 anonymous
 
-&nbsp; &nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `mail.transport.password`
 
+</td><td colspan="1">
+
 password
 
-&nbsp; &nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `mail.from`
 
+</td><td colspan="1">
+
 noreply@nuxeo.com
+
+</td><td colspan="1">
 
 The e-mail address will be sent from.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.db.name`
 
+</td><td colspan="1">
+
 nuxeo | NUXEO
+
+</td><td colspan="1">
 
 Database name.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.db.user`
 
+</td><td colspan="1">
+
 sa | nuxeo
+
+</td><td colspan="1">
 
 Database username.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.db.password`
 
+</td><td colspan="1">
+
 (empty value) | password
+
+</td><td colspan="1">
 
 Database password.
 
-&nbsp; &nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.db.host`
 
+</td><td colspan="1">
+
 localhost
+
+</td><td colspan="1">
 
 Database host URL.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.db.port`
+
+</td><td colspan="1">
 
 3700 (DB2)
 
 5432 (PostgreSQL)
 3306 (MySQL)
 1521 (Oracle)
-1433 (MSSQL)
+1433 (MSSQL)</td><td colspan="1">
 
 Database host port.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.db.jdbc.url`
 
+</td><td colspan="1">
+
 (database-dependent)
+
+</td><td colspan="1">
 
 Database JDBC connection URL for Nuxeo datasources, for instance `jdbc:postgresql://${nuxeo.db.host}:${nuxeo.db.port}/${nuxeo.db.name`}.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.db.validationQuery`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 Database validation query, a `SELECT` statement used to check connections before using them, usually `SELECT 1`. Using this has a noticeable speed impact but makes connections resilient to network or sever problems.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.db.min-pool-size`
 
+</td><td colspan="1">
+
 5
+
+</td><td colspan="1">
 
 Database minimum pool size for Nuxeo datasources.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.db.max-pool-size`
+
+</td><td colspan="1">
 
 20 (JBoss)
 100 (Tomcat)
 
+</td><td colspan="1">
+
 Database maximum pool size for Nuxeo datasources.
 
-&nbsp; `nuxeo.db.idle-timeout-minutes` 0 (no timeout)
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.db.idle-timeout-minutes`</td><td colspan="1">0 (no timeout)</td><td colspan="1">
 
 Since Nuxeo 6.0\. Database timeout after which connections not in use are removed from the pool.
 
-Since Nuxeo 6.0
+</td><td colspan="1">Since Nuxeo 6.0</td></tr><tr><td colspan="1">
 
 `nuxeo.db.embeddedDatasources`
 
+</td><td colspan="1">
+
 true
 
-Embed datasources in nuxeo runtime &nbsp; `nuxeo.db.xaMode` false Enable XA mode (required if multiple datasources configured) &nbsp;
+</td><td colspan="1">Embed datasources in nuxeo runtime</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.db.xaMode`</td><td colspan="1">false</td><td colspan="1">Enable XA mode (required if multiple datasources configured)</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.vcs.min-pool-size`
 
+</td><td colspan="1">
+
 0
+
+</td><td colspan="1">
 
 Database minimum pool size for Nuxeo repository (VCS).
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.vcs.max-pool-size`
 
+</td><td colspan="1">
+
 20
+
+</td><td colspan="1">
 
 Database maximum pool size for Nuxeo repository (VCS).
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 ```
 nuxeo.vcs.blocking-timeout-millis
 ```
 
+</td><td colspan="1">
+
 100
+
+</td><td colspan="1">
 
 Since Nuxeo 5.8\. Database maximum wait time to get a connection from the pool when all connections are in use, for Nuxeo repository (VCS).
 
-Since Nuxeo 5.8
+</td><td colspan="1">Since Nuxeo 5.8</td></tr><tr><td colspan="1">
 
 `nuxeo.vcs.idle-timeout-minutes`
 
+</td><td colspan="1">
+
 10
+
+</td><td colspan="1">
 
 Since Nuxeo 5.8\. Database timeout after which connections not in use are removed from the pool, for Nuxeo repository (VCS).
 
-Since Nuxeo 5.8
+</td><td colspan="1">Since Nuxeo 5.8</td></tr><tr><td colspan="1">
 
 `nuxeo.vcs.fulltext.disabled`
 
-false Since Nuxeo 5.8\. Whether full text indexing and querying should be completely disabled in the repository. See [VCS Configuration]({{page page='vcs-configuration'}}) for details. Since Nuxeo 5.8 `nuxeo.vcs.fulltext.search.disabled` false Since Nuxeo 6.0\. Full text querying from VCS (database backend) is disabled, full text extraction is done. See [VCS Configuration]({{page page='vcs-configuration'}}) for details. Since Nuxeo 6.0 `nuxeo.vcs.fulltext.analyzer.language` english Since Nuxeo 7.3\. Full text analyzer language. Only applies to&nbsp;`postgresql` and `mssql` database types (see `nuxeo.db.type`). Since Nuxeo 7.3 `nuxeo.vcs.noddl` false Since Nuxeo 5.8\. Where DDL generation should be disabled in the repository. See [VCS Configuration]({{page page='vcs-configuration'}}) for details. Since Nuxeo 5.8 `nuxeo.vcs.ddlmode` execute Since Nuxeo 7.10-HF01\. What kind of DDL generation is done. See [VCS Configuration]({{page page='vcs-configuration'}}) for details. Since Nuxeo 7.10-HF01 `nuxeo.vcs.idtype` varchar Since Nuxeo 5.8\. The type of `id` column. See [VCS Configuration]({{page page='vcs-configuration'}}) for details. Since Nuxeo 5.8 `nuxeo.vcs.copy.findFreeName.disabled` false Since Nuxeo 7.3\. Set to true to disable free-name detection and let the database raise a constraint error in case of collisions **if the constraints have been added by hand**. Since Nuxeo 7.3
+</td><td colspan="1">false</td><td colspan="1">Since Nuxeo 5.8\. Whether full text indexing and querying should be completely disabled in the repository. See [VCS Configuration]({{page page='vcs-configuration'}}) for details.</td><td colspan="1">Since Nuxeo 5.8</td></tr><tr><td colspan="1">`nuxeo.vcs.fulltext.search.disabled`</td><td colspan="1">false</td><td colspan="1">Since Nuxeo 6.0\. Full text querying from VCS (database backend) is disabled, full text extraction is done. See [VCS Configuration]({{page page='vcs-configuration'}}) for details.</td><td colspan="1">Since Nuxeo 6.0</td></tr><tr><td colspan="1">`nuxeo.vcs.fulltext.analyzer.language`</td><td colspan="1">english</td><td colspan="1">Since Nuxeo 7.3\. Full text analyzer language. Only applies to&nbsp;`postgresql` and `mssql` database types (see `nuxeo.db.type`).</td><td colspan="1">Since Nuxeo 7.3</td></tr><tr><td colspan="1">`nuxeo.vcs.noddl`</td><td colspan="1">false</td><td colspan="1">Since Nuxeo 5.8\. Where DDL generation should be disabled in the repository. See [VCS Configuration]({{page page='vcs-configuration'}}) for details.</td><td colspan="1">Since Nuxeo 5.8</td></tr><tr><td colspan="1">`nuxeo.vcs.ddlmode`</td><td colspan="1">execute</td><td colspan="1">Since Nuxeo 7.10-HF01\. What kind of DDL generation is done. See [VCS Configuration]({{page page='vcs-configuration'}}) for details.</td><td colspan="1">Since Nuxeo 7.10-HF01</td></tr><tr><td colspan="1">`nuxeo.vcs.idtype`</td><td colspan="1">varchar</td><td colspan="1">Since Nuxeo 5.8\. The type of `id` column. See [VCS Configuration]({{page page='vcs-configuration'}}) for details.</td><td colspan="1">Since Nuxeo 5.8</td></tr><tr><td colspan="1">`nuxeo.vcs.copy.findFreeName.disabled`</td><td colspan="1">false</td><td colspan="1">Since Nuxeo 7.3\. Set to true to disable free-name detection and let the database raise a constraint error in case of collisions **if the constraints have been added by hand**.</td><td colspan="1">Since Nuxeo 7.3</td></tr><tr><td colspan="1">
 
 `nuxeo.url`
 
+</td><td colspan="1">
+
 [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo)
+
+</td><td colspan="1">
 
 Application URL (without final slash), should be the public URL of your server (i.e.: [http://www.yourdomain.com/](http://www.yourdomain.com/)....)
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.loopback.url`
 
+</td><td colspan="1">
+
 [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo)
+
+</td><td colspan="1">
 
 Nuxeo URL, for connections from Nuxeo to itself (theme banks default). The port should be the same as `nuxeo.server.http.port.`
 
 If not explicitly configured, the loop back URL is generated from `nuxeo.bind.address`, `nuxeo.server.http.port` and `org.nuxeo.ecm.contextPath` values.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `org.nuxeo.ecm.contextPath`
 
+</td><td colspan="1">
+
 /nuxeo
+
+</td><td colspan="1">
 
 Application context path.
 Before 5.6, you also have to accordingly rename all occurrences of nuxeo.xml (for Tomcat)
 
 Note: Changing this parameter is not enough. See [How to Change Context Path]({{page page='how-to-change-context-path'}})
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `org.nuxeo.ecm.platform.transform.ooo.host.name`
 
+</td><td colspan="1">
+
 127.0.0.1
+
+</td><td colspan="1">
 
 DEPRECATED.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `org.nuxeo.ecm.platform.transform.ooo.host.port`
 
+</td><td colspan="1">
+
 8100
+
+</td><td colspan="1">
 
 DEPRECATED.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `org.nuxeo.ecm.platform.transform.ooo.version`
 
+</td><td colspan="1">
+
 2.2.1
+
+</td><td colspan="1">
 
 DEPRECATED.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `org.nuxeo.ecm.platform.transform.ooo.enableDaemon`
 
+</td><td colspan="1">
+
 true
+
+</td><td colspan="1">
 
 DEPRECATED.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `jod.connection.protocol`
 
+</td><td colspan="1">
+
 SOCKET
+
+</td><td colspan="1">
 
 OpenOffice Connection protocol, either PIPE or SOCKET.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `jod.max.tasks.per.process`
 
+</td><td colspan="1">
+
 200
+
+</td><td colspan="1">
 
 Maximum task per Office instance before restarting it.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `jod.task.execution.timeout`
 
+</td><td colspan="1">
+
 120000
+
+</td><td colspan="1">
 
 Will stop the task if it s not completed after timeout.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `jod.task.queue.timeout`
 
+</td><td colspan="1">
+
 30000
+
+</td><td colspan="1">
 
 Will stop looking for the next task in the queue after timeout.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `jod.office.home`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 Home directory of OpenOffice or LibreOffice.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `jod.office.ports`
 
+</td><td colspan="1">
+
 2003
+
+</td><td colspan="1">
 
 When running in SOCKET mode, comma-separated list of ports used for the office connection.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `jod.office.pipes`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 When running in PIPE mode, comma-separated list of pipe names used for the office connection.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `jod.jpipe.lib.path`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 Path to Jpipe library. Only used when connecting to OO through PIPE.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `jod.template.profile.dir`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 Path to custom OO template directory.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `opensocial.gadgets.host`
 
+</td><td colspan="1">
+
 localhost
 
-DEPRECATED since Nuxeo 6.0 &nbsp;
+</td><td colspan="1">DEPRECATED since Nuxeo 6.0</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `opensocial.gadgets.port`
 
+</td><td colspan="1">
+
 8080
 
-DEPRECATED since Nuxeo 6.0 &nbsp;
+</td><td colspan="1">DEPRECATED since Nuxeo 6.0</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `opensocial.proxy.proxySet`
 
+</td><td colspan="1">
+
 false
+
+</td><td colspan="1">
 
 DEPRECATED since Nuxeo 5.6
 
-Deprecated since Nuxeo 5.6
+</td><td colspan="1">Deprecated since Nuxeo 5.6</td></tr><tr><td colspan="1">
 
 `opensocial.proxy.proxyHost`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 DEPRECATED since Nuxeo 5.6 (use default `nuxeo.http.proxy.host`)
 
-Deprecated since Nuxeo 5.6
+</td><td colspan="1">Deprecated since Nuxeo 5.6</td></tr><tr><td colspan="1">
 
 `opensocial.proxy.proxyPort`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 DEPRECATED since Nuxeo 5.6 (use default `nuxeo.http.proxy.port`)
 
-Deprecated since Nuxeo 5.6
+</td><td colspan="1">Deprecated since Nuxeo 5.6</td></tr><tr><td colspan="1">
 
 `opensocial.proxy.user`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 DEPRECATED since Nuxeo 5.6 (use default `nuxeo.http.proxy.login`)
 
-Deprecated since Nuxeo 5.6
+</td><td colspan="1">Deprecated since Nuxeo 5.6</td></tr><tr><td colspan="1">
 
 `opensocial.proxy.password`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 DEPRECATED since Nuxeo 5.6 (use default `nuxeo.http.proxy.password`)
 
-Deprecated since Nuxeo 5.6
+</td><td colspan="1">Deprecated since Nuxeo 5.6</td></tr><tr><td colspan="1">
 
 `repository.clustering.enabled`
 
+</td><td colspan="1">
+
 false
+
+</td><td colspan="1">
 
 Activate clustering mode.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `repository.clustering.id`
 
+</td><td colspan="1">
+
 &nbsp;
+
+</td><td colspan="1">
 
 Since Nuxeo 7.3\. The cluster node id for this Nuxeo instance, usually a number (see [NXP-17180](https://jira.nuxeo.com/browse/NXP-17180)).
 
-Since Nuxeo 7.3
+</td><td colspan="1">Since Nuxeo 7.3</td></tr><tr><td colspan="1">
 
 `repository.clustering.delay`
 
+</td><td colspan="1">
+
 1000
+
+</td><td colspan="1">
 
 When clustering is activated, defines the delay during which invalidations don't need to be processed (expressed in milliseconds).
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `repository.binary.store`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 Defines the folder where binaries are stored. Useful when using clustering or to change the location of binaries to another location.
 
-&nbsp; `nuxeo.core.binarymanager` &nbsp; Custom class for the Binary Manager, to replace the default file-base storage. &nbsp; `nuxeo.core.binarymanager_key` &nbsp; Since Nuxeo 6.0\. Key configuration for the binary manager, if applicable. Since Nuxeo 6.0
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.core.binarymanager`</td><td colspan="1">&nbsp;</td><td colspan="1">Custom class for the Binary Manager, to replace the default file-base storage.</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.core.binarymanager_key`</td><td colspan="1">&nbsp;</td><td colspan="1">Since Nuxeo 6.0\. Key configuration for the binary manager, if applicable.</td><td colspan="1">Since Nuxeo 6.0</td></tr><tr><td colspan="1">
 
 `nuxeo.templates.parsing.extensions`
 
+</td><td colspan="1">
+
 xml,properties
+
+</td><td colspan="1">
 
 Deprecated since Nuxeo 5.6\. Files extensions being parsed for parameters replacement when copying templates.
 
-Deprecated since Nuxeo 5.6
+</td><td colspan="1">Deprecated since Nuxeo 5.6</td></tr><tr><td colspan="1">
 
 `nuxeo.plaintext_parsing_extensions`
 
+</td><td colspan="1">
+
 xml,properties
+
+</td><td colspan="1">
 
 Since Nuxeo 5.6\. Files extensions being parsed for parameters replacement when copying templates.
 
-Since Nuxeo 5.6
+</td><td colspan="1">Since Nuxeo 5.6</td></tr><tr><td colspan="1">
 
 `org.nuxeo.ecm.jboss.configuration`
 
+</td><td colspan="1">
+
 default
+
+</td><td colspan="1">
 
 JBoss configuration to use (`default`, `minimal`, `all`, ...)
 Pay attention to the fact that this won't apply to templates defining their own `_template_.target` value (for instance, "default" template sets `default.target=server/default/deploy` without being aware of `org.nuxeo.ecm.jboss.configuration` value).
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `zip.entry.encoding`
 
+</td><td colspan="1">
+
 &nbsp;
+
+</td><td colspan="1">
 
 Choose how to encode filename when exporting documents to zip in the worklist.
 
 Since Nuxeo 7.1, the ZIP entries names are encoded in UTF8&nbsp; by default. If you want to get the old behavior back (having entry name encoded in ascii), use `zip.entry.encoding=ascii`.
 
-Modified since Nuxeo 7.1
+</td><td colspan="1">Modified since Nuxeo 7.1</td></tr><tr><td colspan="1">
 
 `org.nuxeo.ecm.platform.liveedit.autoversioning`
 
+</td><td colspan="1">
+
 none,minor,major
+
+</td><td colspan="1">
 
 see [Configuration Examples]({{page page='configuration-examples'}})
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.wizard.done`
 
+</td><td colspan="1">
+
 true or false depending on the package
+
+</td><td colspan="1">
 
 If set to false, will start a setup wizard before starting Nuxeo.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.http.proxy.host`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 HTTP proxy host.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.http.proxy.port`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 HTTP proxy port.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.http.proxy.login`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 HTTP proxy login.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.http.proxy.password`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 HTTP proxy password.
 
-&nbsp; `nuxeo.http.proxy.ntlm.host` &nbsp; NT Lan Manager (NTLM) Proxy. Host name of the Windows machine running the Nuxeo server. &nbsp; `nuxeo.http.proxy.ntlm.domain` &nbsp; NT Lan Manager (NTLM) Proxy. Domain name to authenticate against. &nbsp; `nuxeo.http.proxy.pac.url` &nbsp; Since Nuxeo 5.9.3\. Proxy auto-config (PAC) file URL. Since Nuxeo 5.9.3
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.http.proxy.ntlm.host`</td><td colspan="1">&nbsp;</td><td colspan="1">NT Lan Manager (NTLM) Proxy. Host name of the Windows machine running the Nuxeo server.</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.http.proxy.ntlm.domain`</td><td colspan="1">&nbsp;</td><td colspan="1">NT Lan Manager (NTLM) Proxy. Domain name to authenticate against.</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.http.proxy.pac.url`</td><td colspan="1">&nbsp;</td><td colspan="1">Since Nuxeo 5.9.3\. Proxy auto-config (PAC) file URL.</td><td colspan="1">Since Nuxeo 5.9.3</td></tr><tr><td colspan="1">
 
 `facelets.REFRESH_PERIOD`
 
+</td><td colspan="1">
+
 -1
+
+</td><td colspan="1">
 
 Indicates to the compiler the number of seconds to wait between subsequent checks for changes in modified JSF facelets in a running application. Useful for facelet debugging.
 To disable this compiler check use a value of -1 which is a recommended value for production deployments as compiler checks have an impact on application performance.
 
 Since Nuxeo 5.6, the parameter [`undefined`](#orgnuxeodev) should be used instead as it forces this parameter to value "2".
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.db.transactiontimeout`
 
+</td><td colspan="1">
+
 300
+
+</td><td colspan="1">
 
 Database transaction timeout in seconds (available for Tomcat server only)
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `server.status.key`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 Secure key for connecting to server status monitoring servlet. It is randomly generated if not set.
 It is also used by default&nbsp;for sensitive configuration data encryption, see `server.crypt.secretkey`.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `session.timeout`
 
+</td><td colspan="1">
+
 60
+
+</td><td colspan="1">
 
 Session timeout (see [web.xml session-timeout](http://www.google.com/search?q=web.xml+session-timeout)).
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.updatecenter.disabled`
 
+</td><td colspan="1">
+
 false (unset)
+
+</td><td colspan="1">
 
 Disables the Update Center feature.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `theme.useOldLocalConfiguration`
 
+</td><td colspan="1">
+
 false (unset)
+
+</td><td colspan="1">
 
 Uses the old local configuration for theme, selecting a theme page instead of a flavor.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `org.nuxeo.big.file.size.limit`
 
+</td><td colspan="1">
+
 5Mi (unset)
+
+</td><td colspan="1">
 
 Redirects onto the big file download URL if size exceeds limit.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `org.nuxeo.ecm.platform.ui.web.auth`
 `.NuxeoAuthenticationFilter.isLoginNotSynchronized`
 
+</td><td colspan="1">
+
 false (unset)
+
+</td><td colspan="1">
 
 Disables login synchronization.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.wizard.packages.url`
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 Defines the base URL used by the Setup Wizard to get the packages.xml file describing the available software packages options.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `nuxeo.wizard.skippedpages`
 
+</td><td colspan="1">
+
 null
+
+</td><td colspan="1">
 
 Comma separated list of pages that should be skipped inside the wizard.
 
-&nbsp; `org.nuxeo.dnd.upload.timeout` 30000 Since Nuxeo 5.7.1 (5.6-HF08), maximum time for uploading a file via Drag & Drop to the server. Since Nuxeo 5.7.1 `org.nuxeo.dnd.exec.timeout` 30000 Since Nuxeo 5.7.1 (5.6-HF08), maximum time for executing import of files uploaded via Drag & Drop Since Nuxeo 5.7.1 `org.nuxeo.dnd.extendedmode.timeout` 2000 Since Nuxeo 5.7.1 (5.6-HF08), mouse over time before switching to extended mode UI (setting to -1 disables the extended mode) Since Nuxeo 5.7.1 `<span style="color: rgb(34,34,34);">nuxeo.jsf.</span> <span style="color: rgb(34,34,34);">numberOfConversationsInSession</span>` 4 Since Nuxeo 5.7.2, Parameter to control the number of conversation states that are saved in session. Each conversation holds a number of view states that is defined by `nuxeo.jsf.numberOfViewsInSession` Since Nuxeo 5.7.2 `nuxeo.jsf.numberOfViewsInSession` 4 Since Nuxeo 5.7.2 (5.6-HF20) Parameter to control the JSF init parameter `com.sun.faces.numberOfViewsInSession` Since Nuxeo 5.7.2 `nuxeo.jsf.numberOfLogicalViews` 4 Since Nuxeo 5.7.2 (5.6-HF20) Parameter to control the JSF init parameter `com.sun.faces.numberOfLogicalViews` Since Nuxeo 5.7.2
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`org.nuxeo.dnd.upload.timeout`</td><td colspan="1">30000</td><td colspan="1">Since Nuxeo 5.7.1 (5.6-HF08), maximum time for uploading a file via Drag & Drop to the server.</td><td colspan="1">Since Nuxeo 5.7.1</td></tr><tr><td colspan="1">`org.nuxeo.dnd.exec.timeout`</td><td colspan="1">30000</td><td colspan="1">Since Nuxeo 5.7.1 (5.6-HF08), maximum time for executing import of files uploaded via Drag & Drop</td><td colspan="1">Since Nuxeo 5.7.1</td></tr><tr><td colspan="1">`org.nuxeo.dnd.extendedmode.timeout`</td><td colspan="1">2000</td><td colspan="1">Since Nuxeo 5.7.1 (5.6-HF08), mouse over time before switching to extended mode UI (setting to -1 disables the extended mode)</td><td colspan="1">Since Nuxeo 5.7.1</td></tr><tr><td colspan="1">`<span style="color: rgb(34,34,34);">nuxeo.jsf.</span> <span style="color: rgb(34,34,34);">numberOfConversationsInSession</span>`</td><td colspan="1">4</td><td colspan="1">Since Nuxeo 5.7.2, Parameter to control the number of conversation states that are saved in session. Each conversation holds a number of view states that is defined by `nuxeo.jsf.numberOfViewsInSession`</td><td colspan="1">Since Nuxeo 5.7.2</td></tr><tr><td colspan="1">`nuxeo.jsf.numberOfViewsInSession`</td><td colspan="1">4</td><td colspan="1">Since Nuxeo 5.7.2 (5.6-HF20) Parameter to control the JSF init parameter `com.sun.faces.numberOfViewsInSession`</td><td colspan="1">Since Nuxeo 5.7.2</td></tr><tr><td colspan="1">`nuxeo.jsf.numberOfLogicalViews`</td><td colspan="1">4</td><td colspan="1">Since Nuxeo 5.7.2 (5.6-HF20) Parameter to control the JSF init parameter `com.sun.faces.numberOfLogicalViews`</td><td colspan="1">Since Nuxeo 5.7.2</td></tr><tr><td colspan="1">
 
 `nuxeo.jsf.enableDoubleClickShield`
 
-true (unset) Since Nuxeo 5.7.3\. Enable a shield on forms to prevent users from submitting twice the same form (accidental double-click). Default value was false in 5.7.3 and is true since Nuxeo 5.8. Since Nuxeo 5.7.3
+</td><td colspan="1">true (unset)</td><td colspan="1">Since Nuxeo 5.7.3\. Enable a shield on forms to prevent users from submitting twice the same form (accidental double-click). Default value was false in 5.7.3 and is true since Nuxeo 5.8.</td><td colspan="1">Since Nuxeo 5.7.3</td></tr><tr><td colspan="1">
 
 `nuxeo.jsf.useAjaxTabs`
 
-false (unset) Since Nuxeo 5.8\. Enable ajaxified tabs on document views. Activation also relies on the user's browser because this feature requires manipulating the browser's session history in JavaScript to preserve bookmarkable URLs (see compatibility table at [http://caniuse.com/#search=pushstate](http://caniuse.com/#search=pushstate), for instance). Since Nuxeo 5.8 `<span style="color: rgb(34,34,34);">nuxeo.jsf.tmp.dir</span>` <span style="color: rgb(34,34,34);">`nuxeo.tmp.dir` (unset)</span> <span style="color: rgb(34,34,34);">Since Nuxeo 6.0\. Faces Servlet multi-part config: <span style="color: rgb(0,0,0);">an absolute path to a directory on the file system. The&nbsp;</span>location<span style="color: rgb(0,0,0);">&nbsp;attribute does&nbsp;</span> **not** <span style="color: rgb(0,0,0);">&nbsp;support a path relative to the application context. This location is used to store files temporarily while the parts are processed or when the size of the file exceeds the specified&nbsp;</span>fileSizeThreshold<span style="color: rgb(0,0,0);">&nbsp;setting. The default location is&nbsp;</span>""<span style="color: rgb(0,0,0);">.</span></span> <span style="color: rgb(34,34,34);">Since Nuxeo 6.0</span> `<span style="color: rgb(34,34,34);">nuxeo.jsf.</span> <span style="color: rgb(34,34,34);">maxFileSize</span>` -1 (unlimited) (unset) <span style="color: rgb(34,34,34);">Since Nuxeo 6.0\. Faces Servlet multi-part config: <span style="color: rgb(0,0,0);">&nbsp;the maximum size allowed for uploaded files, in bytes</span> <span style="color: rgb(0,0,0);">. The default size is unlimited.</span></span> <span style="color: rgb(34,34,34);">Since Nuxeo 6.0</span> `<span style="color: rgb(34,34,34);">nuxeo.jsf.</span> <span style="color: rgb(34,34,34);">maxRequestSize</span>` -1 (unlimited) (unset) <span style="color: rgb(34,34,34);">Since Nuxeo 6.0\. Faces Servlet multi-part config: t<span style="color: rgb(0,0,0);">he maximum size allowed for a&nbsp;</span>multipart/form-data<span style="color: rgb(0,0,0);">&nbsp;request, in bytes. The default size is unlimited.</span></span> <span style="color: rgb(34,34,34);">Since Nuxeo 6.0</span> `<span style="color: rgb(34,34,34);">nuxeo.</span> <span style="color: rgb(34,34,34);">jsf.fileSizeThreshold</span>` 0 (unset) <span style="color: rgb(34,34,34);">Since Nuxeo 6.0\. Faces Servlet multi-part config: <span style="color: rgb(0,0,0);">The file size in bytes after which the file will be temporarily stored on disk. The default size is 0 bytes.</span></span> <span style="color: rgb(34,34,34);">Since Nuxeo 6.0</span>
+</td><td colspan="1">false (unset)</td><td colspan="1">Since Nuxeo 5.8\. Enable ajaxified tabs on document views. Activation also relies on the user's browser because this feature requires manipulating the browser's session history in JavaScript to preserve bookmarkable URLs (see compatibility table at [http://caniuse.com/#search=pushstate](http://caniuse.com/#search=pushstate), for instance).</td><td colspan="1">Since Nuxeo 5.8</td></tr><tr><td colspan="1">`<span style="color: rgb(34,34,34);">nuxeo.jsf.tmp.dir</span>`</td><td colspan="1"><span style="color: rgb(34,34,34);">`nuxeo.tmp.dir` (unset)</span></td><td colspan="1"><span style="color: rgb(34,34,34);">Since Nuxeo 6.0\. Faces Servlet multi-part config: <span style="color: rgb(0,0,0);">an absolute path to a directory on the file system. The&nbsp;</span>location<span style="color: rgb(0,0,0);">&nbsp;attribute does&nbsp;</span> **not** <span style="color: rgb(0,0,0);">&nbsp;support a path relative to the application context. This location is used to store files temporarily while the parts are processed or when the size of the file exceeds the specified&nbsp;</span>fileSizeThreshold<span style="color: rgb(0,0,0);">&nbsp;setting. The default location is&nbsp;</span>""<span style="color: rgb(0,0,0);">.</span></span></td><td colspan="1"><span style="color: rgb(34,34,34);">Since Nuxeo 6.0</span></td></tr><tr><td colspan="1">`<span style="color: rgb(34,34,34);">nuxeo.jsf.</span> <span style="color: rgb(34,34,34);">maxFileSize</span>`</td><td colspan="1">-1 (unlimited) (unset)</td><td colspan="1"><span style="color: rgb(34,34,34);">Since Nuxeo 6.0\. Faces Servlet multi-part config: <span style="color: rgb(0,0,0);">&nbsp;the maximum size allowed for uploaded files, in bytes</span> <span style="color: rgb(0,0,0);">. The default size is unlimited.</span></span></td><td colspan="1"><span style="color: rgb(34,34,34);">Since Nuxeo 6.0</span></td></tr><tr><td colspan="1">`<span style="color: rgb(34,34,34);">nuxeo.jsf.</span> <span style="color: rgb(34,34,34);">maxRequestSize</span>`</td><td colspan="1">-1 (unlimited) (unset)</td><td colspan="1"><span style="color: rgb(34,34,34);">Since Nuxeo 6.0\. Faces Servlet multi-part config: t<span style="color: rgb(0,0,0);">he maximum size allowed for a&nbsp;</span>multipart/form-data<span style="color: rgb(0,0,0);">&nbsp;request, in bytes. The default size is unlimited.</span></span></td><td colspan="1"><span style="color: rgb(34,34,34);">Since Nuxeo 6.0</span></td></tr><tr><td colspan="1">`<span style="color: rgb(34,34,34);">nuxeo.</span> <span style="color: rgb(34,34,34);">jsf.fileSizeThreshold</span>`</td><td colspan="1">0 (unset)</td><td colspan="1"><span style="color: rgb(34,34,34);">Since Nuxeo 6.0\. Faces Servlet multi-part config: <span style="color: rgb(0,0,0);">The file size in bytes after which the file will be temporarily stored on disk. The default size is 0 bytes.</span></span></td><td colspan="1"><span style="color: rgb(34,34,34);">Since Nuxeo 6.0</span></td></tr><tr><td colspan="1">
 
 `nuxeo.vcs.use-nulls-last-on-desc`
 
-true (unset)
+</td><td colspan="1">true (unset)</td><td colspan="1">
 
 Since Nuxeo 5.8\. Ask the database to use "NULLS LAST" when sorting DESC. True by default to get the same result order between different databases.
 
@@ -1937,37 +2267,41 @@ Also turning this option to false enable PostgreSQL and Oracle to use an index o
 
 &nbsp;
 
-Since Nuxeo 5.8 `org.nuxeo.connect.connector.cache.duration` 60min (5min for Studio packages) Since Nuxeo 5.6\. Nuxeo Packages list cache (in minutes). Since Nuxeo 5.6 `org.nuxeo.connect.server.reachable` true Since Nuxeo 5.7\. Launcher online/offline mode for connections to Nuxeo Connect. Since Nuxeo 5.7 `org.nuxeo.connect.url` [https://connect.nuxeo.com/nuxeo/site/](https://connect.nuxeo.com/nuxeo/site/) Nuxeo Connect URL. &nbsp; `nuxeo.automation.properties.multiline.escape` false
+</td><td colspan="1">Since Nuxeo 5.8</td></tr><tr><td colspan="1">`org.nuxeo.connect.connector.cache.duration`</td><td colspan="1">60min (5min for Studio packages)</td><td colspan="1">Since Nuxeo 5.6\. Nuxeo Packages list cache (in minutes).</td><td colspan="1">Since Nuxeo 5.6</td></tr><tr><td colspan="1">`org.nuxeo.connect.server.reachable`</td><td colspan="1">true</td><td colspan="1">Since Nuxeo 5.7\. Launcher online/offline mode for connections to Nuxeo Connect.</td><td colspan="1">Since Nuxeo 5.7</td></tr><tr><td colspan="1">`org.nuxeo.connect.url`</td><td colspan="1">[https://connect.nuxeo.com/nuxeo/site/](https://connect.nuxeo.com/nuxeo/site/)</td><td colspan="1">Nuxeo Connect URL.</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.automation.properties.multiline.escape`</td><td colspan="1">false</td><td colspan="1">
 
 Enable/Disable multi-line strings escaped with a trailing \ when using `Document.Update` or `Workflow.SetWorkflowVariables` Automation operations.
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 `org.nuxeo.cmis.joins`
 
-false Since Nuxeo 6.0\. When true, CMISQL JOINs are allowed if VCS is used. Incompatible with `org.nuxeo.cmis.proxies=true`. Since Nuxeo 6.0
+</td><td colspan="1">false</td><td colspan="1">Since Nuxeo 6.0\. When true, CMISQL JOINs are allowed if VCS is used. Incompatible with `org.nuxeo.cmis.proxies=true`.</td><td colspan="1">Since Nuxeo 6.0</td></tr><tr><td colspan="1">
 
 `org.nuxeo.cmis.proxies`
 
-false Since Nuxeo 7.10-HF08 / Nuxeo 8.3\. When true, CMIS can see proxies. Incompatible with `org.nuxeo.cmis.joins=true`. Since Nuxeo 7.10-HF08
+</td><td colspan="1">false</td><td colspan="1">Since Nuxeo 7.10-HF08 / Nuxeo 8.3\. When true, CMIS can see proxies. Incompatible with `org.nuxeo.cmis.joins=true`.</td><td colspan="1">Since Nuxeo 7.10-HF08</td></tr><tr><td colspan="1">
 
 `org.nuxeo.cmis.enableComplexProperties`
 
-false Since Nuxeo 7.1\. When true, complex properties are exposed as JSON-encoded strings. Since Nuxeo 7.1 `nuxeo.security.allowNegativeACL` false
+</td><td colspan="1">false</td><td colspan="1">Since Nuxeo 7.1\. When true, complex properties are exposed as JSON-encoded strings.</td><td colspan="1">Since Nuxeo 7.1</td></tr><tr><td colspan="1">`nuxeo.security.allowNegativeACL`</td><td colspan="1">false</td><td colspan="1">
 
 Since Nuxeo 6.0\. When true, enables adding negative ACL (deny permissions) in the UI, otherwise only grant permissions are available.
 
-Since Nuxeo 6.0
+</td><td colspan="1">Since Nuxeo 6.0</td></tr><tr><td colspan="1">
 
 `audit.elasticsearch.enabled`
 
+</td><td colspan="1">
+
 false | true
+
+</td><td colspan="1">
 
 Since Nuxeo 7.3\. See [Disabling Elasticsearch for Audit Logs]({{page space='ADMINDOC' page='Elasticsearch Setup#ElasticsearchSetup-DisablingElasticsearchforAuditLogs'}})
 
 Defaults to false on server upgrade, true on new install.
 
-Since Nuxeo 7.3 `audit.elasticsearch.indexName` `${elasticsearch.indexName}`-audit Name of the Elasticsearch index for audit logs. Since Nuxeo 7.10 `seqgen.elasticsearch.indexName` `${elasticsearch.indexName}`-uidgen Name of the Elasticsearch index for the uid sequencer. Since Nuxeo 7.10 `audit.elasticsearch.migration` false Since Nuxeo 7.3\. See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page space='ADMINDOC' page='Elasticsearch Setup#ElasticsearchSetup-TriggeringSQLtoElasticsearchAuditLogsMigration'}}) Since Nuxeo 7.3 `audit.elasticsearch.migration.batchSize` 1000 Since Nuxeo 7.3\. See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page space='ADMINDOC' page='Elasticsearch Setup#ElasticsearchSetup-TriggeringSQLtoElasticsearchAuditLogsMigration'}}) Since Nuxeo 7.3 `org.nuxeo.cmis.elasticsearch` false Since Nuxeo 7.2\. To send the CMISQL queries to Elasticsearch, set to true. Since Nuxeo 7.2
+</td><td colspan="1">Since Nuxeo 7.3</td></tr><tr><td colspan="1">`audit.elasticsearch.indexName`</td><td colspan="1">`${elasticsearch.indexName}`-audit</td><td colspan="1">Name of the Elasticsearch index for audit logs.</td><td colspan="1">Since Nuxeo 7.10</td></tr><tr><td colspan="1">`seqgen.elasticsearch.indexName`</td><td colspan="1">`${elasticsearch.indexName}`-uidgen</td><td colspan="1">Name of the Elasticsearch index for the uid sequencer.</td><td colspan="1">Since Nuxeo 7.10</td></tr><tr><td colspan="1">`audit.elasticsearch.migration`</td><td colspan="1">false</td><td colspan="1">Since Nuxeo 7.3\. See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page space='ADMINDOC' page='Elasticsearch Setup#ElasticsearchSetup-TriggeringSQLtoElasticsearchAuditLogsMigration'}})</td><td colspan="1">Since Nuxeo 7.3</td></tr><tr><td colspan="1">`audit.elasticsearch.migration.batchSize`</td><td colspan="1">1000</td><td colspan="1">Since Nuxeo 7.3\. See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page space='ADMINDOC' page='Elasticsearch Setup#ElasticsearchSetup-TriggeringSQLtoElasticsearchAuditLogsMigration'}})</td><td colspan="1">Since Nuxeo 7.3</td></tr><tr><td colspan="1">`org.nuxeo.cmis.elasticsearch`</td><td colspan="1">false</td><td colspan="1">Since Nuxeo 7.2\. To send the CMISQL queries to Elasticsearch, set to true.</td><td colspan="1">Since Nuxeo 7.2</td></tr><tr><td colspan="1">
 
 <div class="container" title="Hint: double-click to select code">
 
@@ -1975,19 +2309,31 @@ Since Nuxeo 7.3 `audit.elasticsearch.indexName` `${elasticsearch.indexName}`-aud
 
 </div>
 
-false Set to true to activate Redis. Since Nuxeo 5.8 `nuxeo.redis.host` redishost &nbsp; Since Nuxeo 5.8 `nuxeo.redis.port` 6379 &nbsp; Since Nuxeo 5.8 `nuxeo.redis.password` &nbsp; &nbsp; Since Nuxeo 5.8 `nuxeo.redis.database` 0 &nbsp; Since Nuxeo 5.8 `nuxeo.redis.timeout` 2000 &nbsp; Since Nuxeo 5.8 `nuxeo.redis.maxTotal` 16 The maximum size of the Redis connections pool. Since Nuxeo 7.10-HF05 `nuxeo.redis.maxIdle` 8 The maximum number of Redis idle connections in the pool. Since Nuxeo 7.10-HF05 `nuxeo.redis.prefix` nuxeo: This allows you to use a single Redis server between several Nuxeo cluster installations by having a different prefix for each cluster. See the page [Redis Configuration]({{page page='redis-configuration'}}) for more details. Since Nuxeo 5.8 `server.crypt.secretkey` `${server.status.key}` Custom secret key used for sensitive configuration data encryption. It takes either a raw value or an URL (e.g. <a class="external-link" rel="nofollow">file:///path/to/secretkey</a> or [http://some.online.file.com](http://some.online.file.com)). Since Nuxeo 7.4 `server.crypt.keystore.path` `${javax.net.ssl.keyStore}` Path to the&nbsp;keystore to use for sensitive configuration data encryption. Since Nuxeo 7.4 `server.crypt.keystore.pass` `${javax.net.ssl.keyStorePassword:="changeit"}` The password used to protect the integrity of the keystore contents. Since Nuxeo 7.4 `server.crypt.keyalias` &nbsp; The alias prefix where to retrieve the secret key from the keystore. It is automatically suffixed with the algorithm ("AES" or "DES"). Since Nuxeo 7.4 `nuxeo.virtual.host` &nbsp;
+</td><td colspan="1">false</td><td colspan="1">Set to true to activate Redis.</td><td colspan="1">Since Nuxeo 5.8</td></tr><tr><td colspan="1">`nuxeo.redis.host`</td><td colspan="1">redishost</td><td colspan="1">&nbsp;</td><td colspan="1">Since Nuxeo 5.8</td></tr><tr><td colspan="1">`nuxeo.redis.port`</td><td colspan="1">6379</td><td colspan="1">&nbsp;</td><td colspan="1">Since Nuxeo 5.8</td></tr><tr><td colspan="1">`nuxeo.redis.password`</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">Since Nuxeo 5.8</td></tr><tr><td colspan="1">`nuxeo.redis.database`</td><td colspan="1">0</td><td colspan="1">&nbsp;</td><td colspan="1">Since Nuxeo 5.8</td></tr><tr><td colspan="1">`nuxeo.redis.timeout`</td><td colspan="1">2000</td><td colspan="1">&nbsp;</td><td colspan="1">Since Nuxeo 5.8</td></tr><tr><td colspan="1">`nuxeo.redis.maxTotal`</td><td colspan="1">16</td><td colspan="1">The maximum size of the Redis connections pool.</td><td colspan="1">Since Nuxeo 7.10-HF05</td></tr><tr><td colspan="1">`nuxeo.redis.maxIdle`</td><td colspan="1">8</td><td colspan="1">The maximum number of Redis idle connections in the pool.</td><td colspan="1">Since Nuxeo 7.10-HF05</td></tr><tr><td colspan="1">`nuxeo.redis.prefix`</td><td colspan="1">nuxeo:</td><td colspan="1">This allows you to use a single Redis server between several Nuxeo cluster installations by having a different prefix for each cluster. See the page [Redis Configuration]({{page page='redis-configuration'}}) for more details.</td><td colspan="1">Since Nuxeo 5.8</td></tr><tr><td colspan="1">`server.crypt.secretkey`</td><td colspan="1">`${server.status.key}`</td><td colspan="1">Custom secret key used for sensitive configuration data encryption. It takes either a raw value or an URL (e.g. <a class="external-link" rel="nofollow">file:///path/to/secretkey</a> or [http://some.online.file.com](http://some.online.file.com)).</td><td colspan="1">Since Nuxeo 7.4</td></tr><tr><td colspan="1">`server.crypt.keystore.path`</td><td colspan="1">`${javax.net.ssl.keyStore}`</td><td colspan="1">Path to the&nbsp;keystore to use for sensitive configuration data encryption.</td><td colspan="1">Since Nuxeo 7.4</td></tr><tr><td colspan="1">`server.crypt.keystore.pass`</td><td colspan="1">`${javax.net.ssl.keyStorePassword:="changeit"}`</td><td colspan="1">The password used to protect the integrity of the keystore contents.</td><td colspan="1">Since Nuxeo 7.4</td></tr><tr><td colspan="1">`server.crypt.keyalias`</td><td colspan="1">&nbsp;</td><td colspan="1">The alias prefix where to retrieve the secret key from the keystore. It is automatically suffixed with the algorithm ("AES" or "DES").</td><td colspan="1">Since Nuxeo 7.4</td></tr><tr><td colspan="1">`nuxeo.virtual.host`</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 This parameter can be used to replace the nuxeo-virtual-host request header (usually when using HTTPS) when it is not possible to set it at the reverse-proxy level.
 The use of the header is still preferred as the parameter forces your Nuxeo instance to be accessible from one URL only.
 
 Example: https://my.nuxeo.com/
 
-Since Nuxeo 7.4 `elasticsearch.enabled` `true` Switch to enable/disable Elasticsearch usage
+</td><td colspan="1">Since Nuxeo 7.4</td></tr><tr><td colspan="1">`elasticsearch.enabled`</td><td colspan="1">`true`</td><td colspan="1">Switch to enable/disable Elasticsearch usage</td><td colspan="1">
 
 Since 6.0
 
-`elasticsearch.indexName` `nuxeo` Name of the Elasticsearch index for the default document repository &nbsp; `elasticsearch.addressList` &nbsp; Comma separated list of Elasticsearch nodes, if empty use a local in JVM node (not for production) &nbsp; `elasticsearch.clusterName` `nuxeoCluster` Name of the Elasticsearch cluster to join &nbsp; `elasticsearch.indexNumberOfReplicas` `1` Number of replicas (not for local node) &nbsp; `elasticsearch.indexNumberOfShards` `5` Number of shards (not for local node) &nbsp; `elasticsearch.nodeName` `nuxeoNode` Name of the local node &nbsp; `elasticsearch.httpEnabled` `false` Does the local node accept HTTP request on port 9200 &nbsp; `elasticsearch.override.pageproviders` `default_search,DEFAULT_DOCUMENT_SUGGESTION` Comma separated list of CorePageProvider names to supersede by Elasticsearch &nbsp; `elasticsearch.reindex.bucketReadSize` `500` Reindexing option, number of documents to process per worker &nbsp; `elasticsearch.reindex.bucketWriteSize` `50` Reindexing option, number of documents to submit to Elasticsearch per bulk command &nbsp; `elasticsearch.indexing.maxThreads` `4` Maximum size of the indexing thread pool &nbsp; `elasticsearch.indexing.clearCompletedAfterSeconds` `90` Time to keep the completed indexing worker states &nbsp; `elasticsearch.adminCenter.displayClusterInfo` `false` Display Elasticsearch cluster and nodes information in the admin center @since 6.0-HF06, always true for embedded mode &nbsp; `elasticsearch.reindex.onStartup` `false` Reindex the repository content on startup if the index is empty &nbsp; `elasticsearch.httpReadOnly.baseUrl` `http://localhost:9200/` Required when using a standalone Elasticsearch instance. See [Elasticsearch Passthrough]({{page space='nxdoc710' page='elasticsearch-passthrough'}}). Since Nuxeo 7.10 `<span style="color: rgb(61,60,64);">nuxeo.directory.type</span>` `default` Type of directory, used for LDAP or multi-directory configuration. Possible values are `default`, `ldap`, `multi`. Since 6.0
+</td></tr><tr><td colspan="1">`elasticsearch.indexName`</td><td colspan="1">`nuxeo`</td><td colspan="1">Name of the Elasticsearch index for the default document repository</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`elasticsearch.addressList`</td><td colspan="1">&nbsp;</td><td colspan="1">Comma separated list of Elasticsearch nodes, if empty use a local in JVM node (not for production)</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`elasticsearch.clusterName`</td><td colspan="1">`nuxeoCluster`</td><td colspan="1">Name of the Elasticsearch cluster to join</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`elasticsearch.indexNumberOfReplicas`</td><td colspan="1">`1`</td><td colspan="1">Number of replicas (not for local node)</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`elasticsearch.indexNumberOfShards`</td><td colspan="1">`5`</td><td colspan="1">Number of shards (not for local node)</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`elasticsearch.nodeName`</td><td colspan="1">`nuxeoNode`</td><td colspan="1">Name of the local node</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`elasticsearch.httpEnabled`</td><td colspan="1">`false`</td><td colspan="1">Does the local node accept HTTP request on port 9200</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`elasticsearch.override.pageproviders`</td><td colspan="1">`default_search,DEFAULT_DOCUMENT_SUGGESTION`</td><td colspan="1">Comma separated list of CorePageProvider names to supersede by Elasticsearch</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`elasticsearch.reindex.bucketReadSize`</td><td colspan="1">`500`</td><td colspan="1">Reindexing option, number of documents to process per worker</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`elasticsearch.reindex.bucketWriteSize`</td><td colspan="1">`50`</td><td colspan="1">Reindexing option, number of documents to submit to Elasticsearch per bulk command</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`elasticsearch.indexing.maxThreads`</td><td colspan="1">`4`</td><td colspan="1">Maximum size of the indexing thread pool</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`elasticsearch.indexing.clearCompletedAfterSeconds`</td><td colspan="1">`90`</td><td colspan="1">Time to keep the completed indexing worker states</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`elasticsearch.adminCenter.displayClusterInfo`</td><td colspan="1">`false`</td><td colspan="1">Display Elasticsearch cluster and nodes information in the admin center @since 6.0-HF06, always true for embedded mode</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`elasticsearch.reindex.onStartup`</td><td colspan="1">`false`</td><td colspan="1">Reindex the repository content on startup if the index is empty</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`elasticsearch.httpReadOnly.baseUrl`</td><td colspan="1">`http://localhost:9200/`</td><td colspan="1">Required when using a standalone Elasticsearch instance. See [Elasticsearch Passthrough]({{page space='nxdoc710' page='elasticsearch-passthrough'}}).</td><td colspan="1">Since Nuxeo 7.10</td></tr><tr><td colspan="1">`<span style="color: rgb(61,60,64);">nuxeo.directory.type</span>`</td><td colspan="1">`default`</td><td colspan="1">Type of directory, used for LDAP or multi-directory configuration. Possible values are `default`, `ldap`, `multi`.</td><td colspan="1">Since 6.0</td></tr></tbody></table></div>
 
 &nbsp;
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related content'}}
+
+*   [Recommended Configurations]({{page page='recommended-configurations'}})
+*   [Configuration Examples]({{page page='configuration-examples'}})
+*   [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

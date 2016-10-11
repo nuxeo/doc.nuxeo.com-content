@@ -172,3 +172,15 @@ There are several possibilities:
     *   virtual groups.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Security]({{page page='security'}})
+*   [Security Policy Service]({{page page='security-policy-service'}})
+*   [ACLs]({{page page='acls'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -271,3 +271,18 @@ See the [Managing Vocabularies]({{page page='managing-vocabularies'}}) page.
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related user documentation'}}
+
+*   [Managing Users and Groups]({{page page='managing-users-and-groups'}})
+*   [Managing Permissions]({{page page='managing-permissions'}})
+*   [Managing Vocabularies]({{page page='managing-vocabularies'}})
+*   [Local Configuration]({{page page='local-configuration'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

@@ -380,3 +380,14 @@ If you started the server using the `nuxeoctl start` command, in a terminal exec
 If you started the server using the&nbsp;`nuxeoctl console` command, use `Ctrl+C` to stop the server.
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
+*   [Setup]({{page page='setup'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

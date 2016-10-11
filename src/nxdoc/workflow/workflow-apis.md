@@ -115,7 +115,7 @@ The framework provides a few interesting Automation operation, in the category "
 *   [Start Workflow](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewOperation/Context.StartWorkflow): Starts a workflow with the given&nbsp;`id`&nbsp;and to initialize its workflow variable. The document id of the created workflow instance is available under the&nbsp;`workflowInstanceId`&nbsp;context variable.
     The&nbsp;`id`&nbsp;parameter is the id of the workflow definition, as it was configured in Studio.
 *   [Cancel Workflow](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.7.3/viewOperation/Context.CancelWorkflow): Cancels a workflow giving its id. The&nbsp;`id`&nbsp;parameter is the id of the document representing the workflow instance.
-*   [Resume Workflow](http://doc.nuxeo.com/explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.7.3/viewOperation/Workflow.ResumeNodeOperation): Allows to resume a node of the workflow. It probably was suspended waiting for a task to be solved. This operation allows to force the resuming, and will let the task in a "cancelled" state.
+*   [Resume Workflow](/explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.7.3/viewOperation/Workflow.ResumeNodeOperation): Allows to resume a node of the workflow. It probably was suspended waiting for a task to be solved. This operation allows to force the resuming, and will let the task in a "cancelled" state.
 *   [Complete task](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.7.3/viewOperation/Workflow.CompleteTaskOperation): Allows to close a task as if it was done via the user interface, with the ability to pass some data, as if it came from a form.
 *   [Set Workflow Variable](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewOperation/Context.SetWorkflowVar): Allows to set workflow variables, either from within the execution of a workflow automation chain (input, output, transition) or externally, provided the workflow instance id.
 *   [Set Node Variable](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewOperation/Context.SetWorkflowNodeVar): Allows to set node variables within the execution of a workflow automation chain (input, output, transition).
@@ -124,7 +124,7 @@ The framework provides a few interesting Automation operation, in the category "
 
 Since 7.2, the framework provides a new REST API to initiate and run worflows. Endpoints documentation is available on:
 
-*   the [API Playground](http://nuxeo.github.io/api-playground/)(see this&nbsp;[documentation](http://doc.nuxeo.com/x/9QUuAQ) to add the needed contribution to be able to browse your local instance)
+*   the [API Playground](http://nuxeo.github.io/api-playground/)(see this&nbsp;[documentation](/x/9QUuAQ) to add the needed contribution to be able to browse your local instance)
 *   the REST API explorer of your instance at&nbsp;[http://localhost:8080/nuxeo/api/v1/doc](http://localhost:8080/nuxeo/api/v1/doc)
 
 A client sample&nbsp;[nuxeo-travel-expenses](https://github.com/nuxeo/nuxeo-travel-expenses) (available on [GitHub](https://github.com/nuxeo/nuxeo-travel-expenses)) based on&nbsp;Web Components and [Polymer framework](https://www.polymer-project.org)&nbsp;demonstrates how to use the workflow REST API.

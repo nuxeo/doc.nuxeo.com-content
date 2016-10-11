@@ -93,4 +93,15 @@ We provide you with thematic how-tos to show you examples of customization and h
 *   [Content View How-To Index]({{page page='content-view-how-to-index'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div></div>
+{{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+
+### Additional Web UI Elements
+
+Find out about more UI related features.
+
+*   [JSF and Ajax Tips]({{page page='jsf-and-ajax-tips-and-how-to-index'}})
+*   [Navigation URLs]({{page page='navigation-urls'}})
+*   [Labels and Translations Management]({{page page='labels-and-translations-management'}})
+*   [Documents Display Configuration]({{page page='documents-display-configuration'}})
+
+{{/panel}}</div><div class="column medium-6">null</div></div>

@@ -184,3 +184,13 @@ Users with "Manage everything" permissions can access the workspace's **Trash** 
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Deleting documents in developer documentation]({{page space='nxdoc710' page='deleting-documents'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

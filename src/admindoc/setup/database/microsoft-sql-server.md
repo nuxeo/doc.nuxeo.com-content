@@ -263,7 +263,7 @@ history:
         version: '1'
 
 ---
-[https://doc.nuxeo.com/x/EgI7](https://doc.nuxeo.com/x/EgI7)
+[/x/EgI7](/x/EgI7)
 
 Nuxeo supported the following versions of Microsoft SQL Server:
 
@@ -488,3 +488,13 @@ Here are some limitations in the context of the Nuxeo Platform:
 *   It does not support circular ON CASCADE DELETE constraints ([KB321843](http://support.microsoft.com/kb/321843)).
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
+
+*   [Connecting Nuxeo to the Database]({{page page='connecting-nuxeo-to-the-database'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

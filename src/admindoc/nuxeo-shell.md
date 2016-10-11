@@ -23,6 +23,16 @@ confluence:
     source_link: /display/ADMINDOC710/Nuxeo+Shell
 history:
     - 
+        author: Frantz Fischer
+        date: '2016-09-14 10:23'
+        message: ''
+        version: '42'
+    - 
+        author: Frantz Fischer
+        date: '2016-09-14 10:21'
+        message: ''
+        version: '41'
+    - 
         author: Julien Carsique
         date: '2015-12-09 17:19'
         message: ''
@@ -298,7 +308,7 @@ Because of potential security issues the scripting feature is available only whe
 Nuxeo Shell is providing scripting capabilities through Groovy or Mvel. You can execute thus your Groovy scripts on the server JVM. There are two ways of executing scripts:
 
 1.  Either invoke a script file from your file system using the **script** command.
-2.  Either write a command that execute a script (instead of executing a remote automation operation).
+2.  Or write a command that execute a script (instead of executing a remote automation operation).
 
 ### Documentation Generation
 
@@ -332,7 +342,7 @@ In the interactive mode unchecked exceptions are printed in red on the screen. C
 
 A Shell feature is providing Shell configuration such as namespaces, commands, completors, etc. To extend the capabilities of the Shell you can register a new feature which will install the new capabilities into the Shell at boot time.
 
-The Shell can be extended wither by modifying the Nuxeo Shell JAR either by adding on the classpath JARs containing additional Nuxeo Shell features.
+The Shell can be extended either by modifying the Nuxeo Shell JAR or by adding on the classpath JARs containing additional Nuxeo Shell features.
 
 See [Extending the Shell]({{page space='nxdoc710' page='extending-the-shell'}}) section for more details.
 
@@ -359,7 +369,7 @@ You can launch the Shell either by running the command:
 java -jar nuxeo-shell.jar
 ```
 
-either by running:
+or by running:
 
 ```
 java -cp nuxeo-shell.jar org.nuxeo.shell.Main

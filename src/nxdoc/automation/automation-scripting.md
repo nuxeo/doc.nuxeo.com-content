@@ -556,3 +556,13 @@ Automation scripting operations can be used as common Automation operations:
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Automation Scripting in Nuxeo Studio]({{page space='studio' page='automation-scripting'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

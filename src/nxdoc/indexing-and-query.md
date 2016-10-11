@@ -438,7 +438,7 @@ This embedded mode&nbsp;**is only for testing purpose**&nbsp;and should not be u
 
 {{/callout}}
 
-See the [administration documentation to setup and configure an Elasticsearch](http://doc.nuxeo.com/x/UBY5AQ) cluster.
+See the [administration documentation to setup and configure an Elasticsearch](/x/UBY5AQ) cluster.
 
 ## Full-Text Capabilities
 

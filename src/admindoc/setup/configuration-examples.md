@@ -150,3 +150,17 @@ Nuxeo applications run on the 8080 port by default. As it may be used by another
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
+
+*   [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
+*   [Admin Tab Overview]({{page page='admin-tab-overview'}})
+*   [Recommended Configurations]({{page page='recommended-configurations'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

@@ -262,7 +262,7 @@ You also need to set some custom HTTP headers:
 
 The files uploaded to the batch are stored on a temporary disk space&nbsp;until the batch is executed or dropped.
 
-For this purpose the batch upload relies on the default [Transient Store](https://doc.nuxeo.com/x/AQalAQ) that stores the uploaded files inside&nbsp;`${nuxeo.data.dir}/transientstores/default`).
+For this purpose the batch upload relies on the default [Transient Store](/x/AQalAQ) that stores the uploaded files inside&nbsp;`${nuxeo.data.dir}/transientstores/default`).
 
 {{/callout}}
 

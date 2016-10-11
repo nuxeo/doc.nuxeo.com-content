@@ -187,3 +187,20 @@ It allows the parameters associated to the stored blobs to be shared across clus
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
+
+{{! Please update the label in the Content by Label macro below. }}
+
+{{#> panel heading='Related Documentation'}}
+
+*   [Redis Configuration]({{page space='admindoc710' page='redis-configuration'}})
+*   [Work and WorkManager]({{page page='work-and-workmanager'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

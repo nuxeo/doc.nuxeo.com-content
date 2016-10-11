@@ -190,3 +190,20 @@ Range aggregates define a set of ranges for which we can define the label to be 
   </controls>
 </widget>
 ```
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
+
+{{! Please update the label in the Content by Label macro below. }}
+
+{{#> panel heading='Related Documentation'}}
+
+*   [How to Configure a Search Filter With Facets and Other Aggregates]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
+*   [Page Provider Aggregates]({{page page='page-provider-aggregates'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

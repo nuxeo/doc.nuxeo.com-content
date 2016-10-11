@@ -139,7 +139,7 @@ history:
 
 &nbsp;The Nuxeo Platform supports the following databases.
 
-<table><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">PostgreSQL</th><th colspan="1">MySQL</th><th colspan="1">Oracle</th><th colspan="1">SQL Server</th><th colspan="1">MongoDB</th></tr><tr><th colspan="1">Nuxeo Platform LTS 2015</th><td colspan="1">{{! multiexcerpt name='7.10-postgreSQL-supported'}}9.3
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">PostgreSQL</th><th colspan="1">MySQL</th><th colspan="1">Oracle</th><th colspan="1">SQL Server</th><th colspan="1">MongoDB</th></tr><tr><th colspan="1">Nuxeo Platform LTS 2015</th><td colspan="1">{{! multiexcerpt name='7.10-postgreSQL-supported'}}9.3
 9.4{{! /multiexcerpt}}</td><td colspan="1">{{! multiexcerpt name='7.10-mySQL-supported'}}5.6
 5.7 (upcoming){{! /multiexcerpt}}</td><td colspan="1">{{! multiexcerpt name='7.10-oracle-supported'}}11g
 12c{{! /multiexcerpt}}</td><td colspan="1">{{! multiexcerpt name='7.10-SQLserver-supported'}}2012
@@ -160,7 +160,7 @@ history:
 11 (Amazon RDS)</td><td colspan="1">2008
 2008r2
 2012
-2012 (Azure)</td><td colspan="1">-</td></tr></tbody></table>
+2012 (Azure)</td><td colspan="1">-</td></tr></tbody></table></div>
 
 **Notes**
 

@@ -183,3 +183,14 @@ If you want more information about the future evolutions and improvements, see [
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [EasyShare admin documentation]({{page space='nxdoc710' page='easyshare'}})
+*   [Collections]({{page page='collections'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

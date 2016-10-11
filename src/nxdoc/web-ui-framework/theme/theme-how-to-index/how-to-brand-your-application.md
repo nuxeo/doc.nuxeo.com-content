@@ -4,8 +4,8 @@ review:
     comment: ''
     date: ''
     status: ok
-redirect: httpsdocnuxeocomdisplaystudiobrandingconfiguration
-redirect_source: 'https://doc.nuxeo.com/display/Studio/Branding+Configuration'
+redirect: studio/branding-configuration
+redirect_source: '/display/Studio/Branding+Configuration'
 confluence:
     ajs-parent-page-id: '28475572'
     ajs-parent-page-title: Theme How-To Index

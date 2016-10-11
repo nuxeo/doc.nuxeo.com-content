@@ -221,3 +221,17 @@ A detailed documentation on the advanced XML parsing usage can be found on the [
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
+
+*   [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
+*   [Nuxeo Bulk Document Importer]({{page page='nuxeo-bulk-document-importer'}})
+*   [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

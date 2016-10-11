@@ -391,3 +391,12 @@ history:
 {{{multiexcerpt 'drive_2_FT_page' page='USERDOC:Nuxeo Drive'}}}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Drive FAQ]({{page page='nuxeo-drive-faq'}})
+*   [Nuxeo Drive developer documentation]({{page space='nxdoc710' page='nuxeo-drive'}})
+*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page space='nxdoc710' page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+*   [How to Customize Nuxeo Drive Versioning Policy]({{page space='nxdoc710' page='how-to-customize-nuxeo-drive-versioning-policy'}})
+
+{{/panel}}</div><div class="column medium-6">null</div></div>

@@ -192,3 +192,15 @@ When you edit a forum, you modify its title and its description.
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Managing Permissions]({{page page='managing-permissions'}})
+*   [Participating to a Topic]({{page page='participating-to-a-topic'}})
+*   [Managing Topics]({{page page='managing-topics'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

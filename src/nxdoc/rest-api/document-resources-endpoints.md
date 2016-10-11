@@ -263,3 +263,10 @@ POST
 The `path` endpoint does not requires paramets besides the `docPath` and `repoId` parameters. It can however leverage web adapters such as `@children`, `@search`, `@bo`. See the examples on the page [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}}).
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [REST API Entity Types]({{page page='rest-api-entity-types'}})
+*   [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}})
+
+{{/panel}}</div><div class="column medium-6">null</div></div>

@@ -507,3 +507,16 @@ Otherwise, features like the Permissions tab will not work.
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
+
+*   [Internet Information Services (IIS) Configuration]({{page page='internet-information-services-iis-configuration'}})
+*   [Default URL Patterns]({{page space='nxdoc710' page='default-url-patterns'}})
+*   [Navigation URLs]({{page space='nxdoc710' page='navigation-urls'}})
+*   [Firewall Consideration]({{page page='firewall-consideration'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

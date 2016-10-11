@@ -26,6 +26,11 @@ confluence:
 history:
     - 
         author: Manon Lumeau
+        date: '2016-10-04 16:00'
+        message: ''
+        version: '34'
+    - 
+        author: Manon Lumeau
         date: '2016-07-19 09:16'
         message: ''
         version: '33'
@@ -435,10 +440,6 @@ To implement this use case:
 You can now configure hints in Nuxeo Studio using the common operator when querying on the `ecm:binarytext.common` index.
 
 {{! /multiexcerpt}}
-
-&nbsp;
-
-<span class="blob-code-inner">+ "ngram_tokenizer": {</span><div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">&nbsp;</td></tr></tbody></table></div><div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1"><span class="blob-code-inner">+ "type": "nGram",</span></td></tr></tbody></table></div><div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">&nbsp;</td></tr></tbody></table></div><div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1"><span class="blob-code-inner">+ "min_gram": 3,</span></td></tr></tbody></table></div><div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">&nbsp;</td></tr></tbody></table></div><div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1"><span class="blob-code-inner">+ "max_gram": 12</span></td></tr></tbody></table></div><div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">&nbsp;</td></tr></tbody></table></div><span class="blob-code-inner">+ }</span>
 
 &nbsp;
 
