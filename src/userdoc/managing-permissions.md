@@ -21,9 +21,14 @@ confluence:
     source_link: /display/USERDOC/Managing+Permissions
 history:
     - 
+        author: Alain Escaffre
+        date: '2016-10-06 21:16'
+        message: ''
+        version: '54'
+    - 
         author: Frédéric Vadon
         date: '2016-05-25 20:45'
-        message: recise that audit and purge is in the admin cente
+        message: precise that audit and purge is in the admin center
         version: '53'
     - 
         author: Solen Guitter
@@ -297,7 +302,7 @@ Some permissions are granted automatically, for example when you create a workfl
 
 ## Permissions Overview
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Permission
 
@@ -382,7 +387,7 @@ Submit documents for publishing
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Managing Permissions on Content
 
@@ -394,7 +399,7 @@ To&nbsp;add a permission, at the root of a workspace, a folder or a document, cl
 
 The new permission is displayed in the&nbsp;_Permissions defined locally_&nbsp;part of the screen.
 
-### Granting Permissions to External Users
+### Granting Permissions to External Users (Instant Share)
 
 You can share documents and folders with people that don't usually have access to the application, using their email.
 
@@ -451,4 +456,13 @@ The **Purge** tab will&nbsp;enable admins to delete&nbsp;**all**&nbsp;the permis
 To&nbsp;**purge the permission**&nbsp;of a user: go to&nbsp;**Admin**&nbsp;>&nbsp;**Permissions**&nbsp;> &nbsp;**Purge**&nbsp;tab, search the user you want and click on&nbsp;**Search**. The available permissions are displayed, click on&nbsp;**Purge**&nbsp;to confirm. &nbsp;All the permissions for this user are removed.
 ![]({{file name='permissions_purge.png'}} ?w=600,border=true)
 
-{{! /multiexcerpt}}
+{{! /multiexcerpt}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Want to add your own access rights?'}}
+
+*   [Add a new Permission in the UI]({{page space='studio' page='add-a-new-permission-in-the-ui'}})
+*   [How to Grant the Edit Permission without the Remove Permission]({{page space='nxdoc' page='how-to-grant-the-edit-permission-without-the-remove-permission'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

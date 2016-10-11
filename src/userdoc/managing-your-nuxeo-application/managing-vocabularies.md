@@ -150,7 +150,7 @@ By default, the labels of default vocabularies entries are the IDs of labels in 
 
 ## Vocabulary Entries Parameters
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -199,7 +199,7 @@ Order
 Indicates the rank of the entry in the vocabulary.
 Order is set at "10,000,000" by default.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Editing Vocabularies
 
@@ -234,3 +234,18 @@ To delete vocabulary entry, click on the **Delete** button of the entry to erase
 {{! /multiexcerpt}}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Admin Tab Overview]({{page space='nxdoc' page='admin-tab-overview'}})
+*   [How to Add a New Vocabulary]({{page space='nxdoc' page='how-to-add-a-new-vocabulary'}})
+*   [How to Translate a Vocabulary]({{page space='nxdoc' page='how-to-translate-a-vocabulary'}})
+*   [How to Add New Relation Types]({{page page='how-to-add-new-relation-types'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

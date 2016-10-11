@@ -102,11 +102,11 @@ In the Agenda gadget, events can be created from the list view only.
 
 **Events properties**
 
-<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Title</td><td colspan="1">Name of the event</td></tr><tr><td colspan="1">Description</td><td colspan="1">What the event is about</td></tr><tr><td colspan="1">Start date</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Title</td><td colspan="1">Name of the event</td></tr><tr><td colspan="1">Description</td><td colspan="1">What the event is about</td></tr><tr><td colspan="1">Start date</td><td colspan="1">
 
 Date and time at which the event starts
 
-</td></tr><tr><td colspan="1">End date</td><td colspan="1">Date and time at which the event ends</td></tr><tr><td colspan="1">Place</td><td colspan="1">Where the event takes place</td></tr></tbody></table>
+</td></tr><tr><td colspan="1">End date</td><td colspan="1">Date and time at which the event ends</td></tr><tr><td colspan="1">Place</td><td colspan="1">Where the event takes place</td></tr></tbody></table></div>
 
 ### Editing an Event
 

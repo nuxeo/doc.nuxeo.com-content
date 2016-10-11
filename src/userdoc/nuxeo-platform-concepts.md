@@ -560,3 +560,16 @@ When you create new search forms, you can adapt the result layout to your own do
 {{! /multiexcerpt}}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Pages'}}
+
+*   [Document Types]({{page page='document-types'}})
+*   [Publishing Content]({{page page='publishing-content'}})
+*   [Managing Permissions]({{page page='managing-permissions'}})
+*   [Managing Users and Groups]({{page page='managing-users-and-groups'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

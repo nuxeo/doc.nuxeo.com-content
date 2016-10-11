@@ -284,3 +284,13 @@ Bookmarking documents in your favorites can be done like when you add documents 
 {{! /multiexcerpt}}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Collections developer documentation]({{page space='nxdoc' page='collections'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

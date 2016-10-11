@@ -316,7 +316,7 @@ Depending on the uploaded file type, the system will create a note, a file or a 
 
 Here are some examples of most commonly used item types and their output in Nuxeo:
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Item type
 
@@ -364,7 +364,7 @@ Picture (.jpg, .png, etc)
 
 Picture
 
-</td></tr></tbody></table>{{! /multiexcerpt}}
+</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
 ### {{> anchor 'content-creation-dandd'}}Importing Documents Using Drag and Drop
 

@@ -309,3 +309,15 @@ You can then create, copy and move documents and folders in the Nuxeo Platform v
 * * *
 
 </div>
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [WebDAV developer documentation ]({{page space='nxdoc' page='webdav'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>
