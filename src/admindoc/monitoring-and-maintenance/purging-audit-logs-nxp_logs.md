@@ -272,3 +272,15 @@ END;
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related sections'}}
+
+*   [Logs Analysis]({{page page='logs-analysis'}})
+*   [Audit]({{page space='nxdoc60' page='audit'}})
+*   [Where Are the Log and Configuration Files in Windows?]({{page page='where-are-the-log-and-configuration-files-in-windows'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -29,42 +29,42 @@ confluence:
     source_link: >-
         /display/ADMINDOC60/How+to+Estimate+Disk%2C+Database+and+Elasticsearch+Usage
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-16 10:29'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-26 17:13'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-26 17:12'
         message: Add links
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-05 12:03'
         message: ''
         version: '5'
-    -
+    - 
         author: Julien Carsique
         date: '2012-03-17 01:23'
         message: ''
         version: '4'
-    -
+    - 
         author: Julien Carsique
         date: '2012-03-17 01:23'
         message: ''
         version: '3'
-    -
+    - 
         author: Julien Carsique
         date: '2011-07-15 19:02'
         message: ''
         version: '2'
-    -
+    - 
         author: Julien Carsique
         date: '2011-06-14 15:29'
         message: ''
@@ -107,3 +107,15 @@ So, based on the above information, if you have X GB of documents of which Y GB 
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Database]({{page page='database'}})
+*   [Logs Analysis]({{page page='logs-analysis'}})
+*   [Where Are the Log and Configuration Files in Windows?]({{page page='where-are-the-log-and-configuration-files-in-windows'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

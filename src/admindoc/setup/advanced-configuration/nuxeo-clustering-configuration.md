@@ -294,3 +294,15 @@ To test that the load balancer forwards the HTTP requests of a given session to 
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [VCS developer documentation]({{page space='nxdoc60' page='vcs'}})
+*   [Redis Configuration]({{page page='redis-configuration'}})
+*   [Setting up a HA Configuration Using the Nuxeo Platform and PostgreSQL]({{page page='setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -170,7 +170,7 @@ If you have `gdb` installed, you can generate a core dump without killing the ap
 
 &nbsp;
 
-<table><tbody><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
 
 <div class="container" title="Hint: double-click to select code">
 
@@ -178,7 +178,7 @@ If you have `gdb` installed, you can generate a core dump without killing the ap
 
 </div>
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 &nbsp;
 

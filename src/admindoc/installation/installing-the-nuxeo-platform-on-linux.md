@@ -353,3 +353,13 @@ For the examples below, let's say you are using Ubuntu 14.04 LTS ("trusty") and 
 {{! /multiexcerpt}}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Linux-Related Documentation'}}
+
+*   &nbsp;[Configuring the Nuxeo Platform as a Daemon on Debian]({{page page='configuring-the-nuxeo-platform-as-a-daemon-on-debian'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

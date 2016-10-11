@@ -505,3 +505,15 @@ This will give you more informations such as:
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [How to Configure a Multidirectory for Users and Groups]({{page page='how-to-configure-a-multidirectory-for-users-and-groups'}})
+*   [How to Add Custom LDAP Fields to the UI]({{page space='nxdoc60' page='how-to-add-custom-ldap-fields-to-the-ui'}})
+*   [Data Lists and Directories]({{page space='nxdoc60' page='data-lists-and-directories'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

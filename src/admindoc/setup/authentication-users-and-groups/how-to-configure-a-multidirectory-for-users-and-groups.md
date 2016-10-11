@@ -30,47 +30,47 @@ confluence:
     source_link: >-
         /display/ADMINDOC60/How+to+Configure+a+Multidirectory+for+Users+and+Groups
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 22:25'
         message: ''
         version: '9'
-    -
+    - 
         author: Thierry Martins
         date: '2014-11-27 18:11'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-27 18:01'
         message: fix xml and add details in steps
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-27 17:38'
         message: ''
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-07-17 10:15'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-17 10:14'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-17 10:06'
         message: ''
         version: '3'
-    -
+    - 
         author: Thierry Martins
         date: '2014-07-16 12:22'
         message: ''
         version: '2'
-    -
+    - 
         author: Thierry Martins
         date: '2014-07-16 12:05'
         message: ''
@@ -312,3 +312,14 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other LDAP related pages'}}
+
+*   [Using a LDAP Directory]({{page page='using-a-ldap-directory'}})
+*   [How to Add Custom LDAP Fields to the UI]({{page space='nxdoc60' page='how-to-add-custom-ldap-fields-to-the-ui'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

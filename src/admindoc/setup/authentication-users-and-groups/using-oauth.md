@@ -232,7 +232,7 @@ For example, you may want to use iGoogle as a consumer of some of your Nuxeo Gad
 *   Use RSA1 key as documented [here.](http://code.google.com/intl/fr/apis/gadgets/docs/oauth.html#rsa)
 *   Provide in Nuxeo the callback URL [http://oauth.gmodules.com/gadgets/oauthcallback](http://oauth.gmodules.com/gadgets/oauthcallback).
 
-![]({{file name='Selection_059.png'}} ?w=500,border=true)
+![]({{file name='S&eacute;lection_059.png'}} ?w=500,border=true)
 
 #### The Special Case of Nuxeo/Shindig
 
@@ -281,3 +281,14 @@ You can use the Admin tab screens to:
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Using OAuth2]({{page space='nxdoc60' page='using-oauth2'}})
+*   [Nuxeo OpenSocial]({{page space='nxdoc60' page='nuxeo-opensocial'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

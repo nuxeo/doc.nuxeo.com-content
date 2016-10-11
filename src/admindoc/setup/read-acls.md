@@ -79,4 +79,4 @@ ReadACL ON is the default choice because in most cases people would prefer to pr
     GO
     ```
 
-Another solution if you need both write and read high performance is to disable the ReadACL and [move slow queries from the database to Elasticsearch](http://doc.nuxeo.com/x/F4tkAQ).
+Another solution if you need both write and read high performance is to disable the ReadACL and [move slow queries from the database to Elasticsearch](/x/F4tkAQ).

@@ -63,3 +63,16 @@ H2 limitations:
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Configuring PostgreSQL]({{page page='configuring-postgresql'}})
+*   [Configuring Oracle]({{page page='configuring-oracle'}})
+*   [Configuring MySQL]({{page page='configuring-mysql'}})
+*   [Configuring MS SQL Server]({{page page='configuring-ms-sql-server'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

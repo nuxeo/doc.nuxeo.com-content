@@ -116,3 +116,15 @@ For MongoDB beginners, note that if you want to clear your MongoDB instance of N
 $ mongo nuxeo
 > db.default.remove({})
 ```
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [DBS - MongoDB]({{page space='nxdoc60' page='dbs-mongodb'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

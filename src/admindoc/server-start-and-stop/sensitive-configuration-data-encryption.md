@@ -227,3 +227,14 @@ In order to enforce the system security:
 {{! Don't put anything here. }}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
+*   [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -359,3 +359,14 @@ Administrator:Administrator http://localhost:8080/nuxeo/site/automation/Counters
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics'}}
+
+*   [Remote Monitoring Through a SSH Tunnel]({{page page='remote-monitoring-through-a-ssh-tunnel'}})
+*   [Transactions and Connections]({{page page='transactions-and-connections'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

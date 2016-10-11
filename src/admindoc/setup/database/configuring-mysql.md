@@ -121,3 +121,26 @@ If you choose MySQL for your Nuxeo project, you should know that in the past, we
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+{{#> panel heading='Related topics'}}
+
+*   [Connecting Nuxeo to the Database]({{page page='connecting-nuxeo-to-the-database'}})
+*   [How to Estimate Disk, Database and Elasticsearch Usage]({{page page='how-to-estimate-disk-database-and-elasticsearch-usage'}})
+
+{{/panel}}
+
+&nbsp;
+
+&nbsp;
+
+</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

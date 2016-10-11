@@ -94,7 +94,7 @@ history:
 
 &nbsp;The Nuxeo Platform supports the following databases.
 
-<table><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">PostgreSQL</th><th colspan="1">MySQL</th><th colspan="1">Oracle</th><th colspan="1">SQL Server</th><th colspan="1">MongoDB</th></tr><tr><th colspan="1">Nuxeo Platform 6.0</th><td colspan="1">{{! multiexcerpt name='6.0-postgreSQL-supported'}}9.3
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">PostgreSQL</th><th colspan="1">MySQL</th><th colspan="1">Oracle</th><th colspan="1">SQL Server</th><th colspan="1">MongoDB</th></tr><tr><th colspan="1">Nuxeo Platform 6.0</th><td colspan="1">{{! multiexcerpt name='6.0-postgreSQL-supported'}}9.3
 9.4{{! /multiexcerpt}}</td><td colspan="1">{{! multiexcerpt name='6.0-mySQL-supported'}}5.6
 5.7 (upcoming){{! /multiexcerpt}}</td><td colspan="1">{{! multiexcerpt name='6.0-oracle-supported'}}11g
 12c{{! /multiexcerpt}}</td><td colspan="1">{{! multiexcerpt name='6.0-SQLserver-supported'}}2012
@@ -123,7 +123,7 @@ history:
 9.0
 9.1</td><td colspan="1">5.1</td><td colspan="1">10
 11</td><td colspan="1">2005
-2008</td><td colspan="1">-</td></tr></tbody></table>
+2008</td><td colspan="1">-</td></tr></tbody></table></div>
 
 **Notes**
 

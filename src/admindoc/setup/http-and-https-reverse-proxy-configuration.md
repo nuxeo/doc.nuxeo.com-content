@@ -376,3 +376,17 @@ keytool -genkey -alias tomcat -keyalg RSA
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
+
+*   [Configuring a Reverse Proxy to Work with Live Edit and Client Certificate Authentication]({{page page='configuring-a-reverse-proxy-to-work-with-live-edit-and-client-certificate-authentication'}})
+*   [Internet Information Services (IIS) Configuration]({{page page='internet-information-services-iis-configuration'}})
+*   [Default URL Patterns]({{page space='nxdoc60' page='default-url-patterns'}})
+*   [Navigation URLs]({{page space='nxdoc60' page='navigation-urls'}})
+*   [Firewall Consideration]({{page page='firewall-consideration'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -67,7 +67,7 @@ Refer to [mod_proxy](http://httpd.apache.org/docs/2.2/mod/mod_proxy.html) docume
 
 Database pool can try to reconnect on invalid connection ([NXP-7528](https://jira.nuxeo.com/browse/NXP-7528)) but it is better to enable the keep alive on your database. For instance using PostgreSQL, this can be achieved with the following options:
 
-<table><tbody><tr><th colspan="1">Option</th><th colspan="1">Value</th><th colspan="1">Description</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Option</th><th colspan="1">Value</th><th colspan="1">Description</th></tr><tr><td colspan="1">
 
 <pre>tcp_keepalives_count</pre>
 
@@ -79,7 +79,7 @@ Database pool can try to reconnect on invalid connection ([NXP-7528](https://jir
 
 <pre>tcp_keepalives_interval</pre>
 
-</td><td colspan="1">60</td><td colspan="1">Time between TCP keepalive retransmits.</td></tr></tbody></table>
+</td><td colspan="1">60</td><td colspan="1">Time between TCP keepalive retransmits.</td></tr></tbody></table></div>
 
 ## Firewall Between the Nuxeo Platform and LDAP
 
@@ -90,3 +90,15 @@ Here, there are [no keep alive alternative](http://docs.oracle.com/javase/jndi/t
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [HTTP and HTTPS Reverse-Proxy Configuration]({{page page='http-and-https-reverse-proxy-configuration'}})
+*   [Database]({{page page='database'}})
+*   [Using a LDAP Directory]({{page page='using-a-ldap-directory'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

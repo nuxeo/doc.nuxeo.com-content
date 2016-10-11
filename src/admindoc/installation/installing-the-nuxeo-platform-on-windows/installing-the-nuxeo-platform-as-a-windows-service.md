@@ -486,3 +486,14 @@ You may want to have a look at [http://msdn2.microsoft.com/en-US/library/system.
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Windows-Related Documentation'}}
+
+*   [Installing the Nuxeo Platform on Windows]({{page page='installing-the-nuxeo-platform-on-windows'}})
+*   [Running Multiple Server Instances in Windows]({{page page='running-multiple-server-instances-in-windows'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

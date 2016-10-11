@@ -274,3 +274,15 @@ The Nuxeo Platform is available as ready-to-use 64b virtual machine images from 
 {{! /multiexcerpt}}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Windows-Related Documentation'}}
+
+*   [Running Multiple Server Instances in Windows]({{page page='running-multiple-server-instances-in-windows'}})
+*   [Installing the Nuxeo Platform as a Windows Service]({{page page='installing-the-nuxeo-platform-as-a-windows-service'}})
+*   [Where Are the Log and Configuration Files in Windows?]({{page page='where-are-the-log-and-configuration-files-in-windows'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -148,3 +148,17 @@ When users [edit documents with Live Edit]({{page space='userdoc60' page='workin
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
+
+*   [Admin Tab Overview]({{page page='admin-tab-overview'}})
+*   [Recommended Configurations]({{page page='recommended-configurations'}})
+*   [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

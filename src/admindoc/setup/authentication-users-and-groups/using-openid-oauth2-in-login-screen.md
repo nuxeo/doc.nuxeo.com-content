@@ -161,3 +161,20 @@ You have the possibility to change some behaviors by adding the following parame
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
+
+{{! Please update the label in the Content by Label macro below. }}
+
+{{#> panel heading='Other OAuth / OPenID Related Documentation'}}
+
+*   [Using OAuth]({{page page='using-oauth'}})
+*   [Using OAuth2]({{page space='nxdoc60' page='using-oauth2'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

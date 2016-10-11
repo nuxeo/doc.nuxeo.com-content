@@ -157,3 +157,14 @@ You cannot run that way commands that contains illegal characters and needs to b
 &nbsp;
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Shell]({{page page='nuxeo-shell'}})
+*   [Extending The Shell]({{page space='nxdoc60' page='extending-the-shell'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>
