@@ -136,7 +136,7 @@ documentsList.updateDocument(Update);
 The actual implementation on the server side of the create/update operations will depend on your business logic.
 Typically, if you list represent the content of a folder or a list of documents matching a topic, you will have different create/update/delete implementations.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 List nature
 
@@ -200,7 +200,7 @@ Update document
 
 distribute to next actor of the workflow
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 The default implementation create the document with a path that can be configured and does a simple update of the document.
 

@@ -647,7 +647,7 @@ Usage of `empty` variable allows user to evaluate expression to empty string. Fo
 
 ## Date Management Example
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Operation
 
@@ -791,7 +791,7 @@ Current Date
 
 `@{CurrentDate.date}`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 If you have an error like that in your logs:
 
@@ -804,7 +804,7 @@ This means that you are presenting a DateWrapper value type into a field that wa
 
 ## User and Group Management Example
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Operation
 
@@ -964,11 +964,11 @@ User & Group > Get Users and Groups&nbsp;
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Numbers Management example
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Operation
 
@@ -1008,13 +1008,13 @@ integer
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Document management example
 
 ### Field management
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Operation
 
@@ -1114,7 +1114,7 @@ File
 
 Here you must use the name of the document type (not the label).
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Referencing Automation Chain Parameters
 
@@ -1143,4 +1143,16 @@ new ArrayList(Arrays.asList(WorkflowVariables["contributors"])); x.add(Context["
  @{org.nuxeo.runtime.api.Framework.getService(org.nuxeo.business.days.management.service.BusinessDaysService).getLimitDate("myRule",CurrentDate.date)}
 ```
 
-{{/panel}}
+{{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
+*   [Automation]({{page page='automation'}})
+*   [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

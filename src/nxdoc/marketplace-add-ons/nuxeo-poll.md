@@ -66,3 +66,13 @@ To check that the Nuxeo Poll package was correctly installed, browse the Nuxeo P
 ![]({{file name='polls-tab.png'}} ?w=273,h=149,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about this package'}}
+
+*   [Nuxeo Poll user documentation]({{page space='userdoc60' page='nuxeo-poll'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

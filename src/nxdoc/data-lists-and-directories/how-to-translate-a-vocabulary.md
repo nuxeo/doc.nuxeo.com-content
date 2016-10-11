@@ -100,7 +100,7 @@ By default, vocabularies are not translated. This means that if your application
 
 In order to translate a vocabulary, you must:
 
-1.  Put the labels translation in a "message_LANGUAGE.properties" file as explained on the page [Uploading Labels Translations in Studio (i18n)](http://doc.nuxeo.com/pages/viewpage.action?pageId=3867532) and upload the properties file in the **Resources** menu of Studio.
+1.  Put the labels translation in a "message_LANGUAGE.properties" file as explained on the page [Uploading Labels Translations in Studio (i18n)](/pages/viewpage.action?pageId=3867532) and upload the properties file in the **Resources** menu of Studio.
 2.  Go on the layout on which the vocabulary should be used.
 3.  Assign the vocabulary to a document field (see the&nbsp;[Define a Document Type]({{page space='NXDOC' page='Define a+Document+Type'}})&nbsp;how-to).
 4.  On the widget's edition form, select **Yes** for Localize.
@@ -117,3 +117,17 @@ In order to translate a vocabulary, you must:
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Howtos'}}
+
+*   [How to Add a New Vocabulary]({{page page='how-to-add-a-new-vocabulary'}})
+*   [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
+*   [How to translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxeo-platform'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

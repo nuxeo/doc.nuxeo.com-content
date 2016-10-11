@@ -84,7 +84,7 @@ The new permission will now be available in the list of permissions on Workspace
     *   Selection is not empty: checked.
 2.  Create the operation chain `PublishNewsChain`:
 
-    <table><tbody><tr><th colspan="1">
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
     Step
 
@@ -164,4 +164,4 @@ The new permission will now be available in the list of permissions on Workspace
 
     xpath: `dc:valid`
 
-    </td></tr></tbody></table>
+    </td></tr></tbody></table></div>

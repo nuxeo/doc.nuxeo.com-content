@@ -134,3 +134,13 @@ If this is not enough, or if this problem is happening on some specific pages, t
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics'}}
+
+*   [Double Click Shield]({{page page='double-click-shield'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

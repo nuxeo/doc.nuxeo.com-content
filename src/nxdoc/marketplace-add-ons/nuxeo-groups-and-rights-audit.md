@@ -67,3 +67,13 @@ The Nuxeo Groups and Rights Audit addon sends email to the administrator who req
 The default timeout to process the export of rights is 1200 seconds (20 minutes). You can change this default timeout by adding the parameter `nuxeo.audit.acl.timeout` to the [nuxeo.conf file]({{page space='admindoc60' page='configuration-parameters-index-nuxeoconf'}}) and defining another value than 1200, like 3600 (1 hour) for instance.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Groups and Rights Audit user doc]({{page space='userdoc60' page='nuxeo-groups-and-rights-audit'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

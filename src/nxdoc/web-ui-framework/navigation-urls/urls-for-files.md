@@ -234,3 +234,10 @@ xmlns:nxu="http://nuxeo.org/nxweb/util"
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in this documentation'}}
+
+*   [Default URL Patterns]({{page page='default-url-patterns'}})
+*   [Navigation URLs]({{page page='navigation-urls'}})
+
+{{/panel}}</div><div class="column medium-6">null</div></div>

@@ -202,7 +202,7 @@ With Nuxeo Studio, you can configure as many virtual navigation views as you nee
 5.  Fill in the Virtual Navigation configuration (see parameters below).
 6.  Click on the **Save** button.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -258,7 +258,7 @@ Enabled
 
 This property should always be clicked when you contribute a new virtual navigation view. Actually, it is useful when you want to disable an existing one.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Configure the Result Layout of Your Virtual Navigation&nbsp;{{> anchor 'configure-virtual-navigation-result-layout'}}
 

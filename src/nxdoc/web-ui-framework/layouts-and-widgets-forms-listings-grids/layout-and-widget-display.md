@@ -132,7 +132,7 @@ Layouts that are referenced on a document type definition can use other helper t
 
 {{#> callout type='note' }}
 
-You can include a layout in a `dataTable` tag, but cannot make its mode depend on the iteration variable. If you need to do so, recommendation is to use the `c:forEach` tag and handle all the `<table>`, `<tr>`, `<td>`... tags by yourself.
+You can include a layout in a `dataTable` tag, but cannot make its mode depend on the iteration variable. If you need to do so, recommendation is to use the `c:forEach` tag and handle all the <table>, <tr>, <td>... tags by yourself.
 
 {{/callout}}
 

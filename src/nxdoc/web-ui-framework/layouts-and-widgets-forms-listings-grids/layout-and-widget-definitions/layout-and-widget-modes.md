@@ -78,7 +78,7 @@ The **widget modes** are more restricted and widget types will usually only hand
 
 Here is a table of the default mappings:
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Layout Mode
 
@@ -126,7 +126,7 @@ any other value
 
 plain
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 The pseudo mode&nbsp;`any` is only used in layouts and widgets definitions to set up default values.
 

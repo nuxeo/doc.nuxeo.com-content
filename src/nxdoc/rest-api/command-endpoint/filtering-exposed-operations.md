@@ -151,3 +151,14 @@ Here is the complete of attributes and elements you can use in the extension:
 *   `**secure**` : "true" or "false". Default is "false". If "true" the request must be done through a secured channel like HTTPS. If this guard is used the connection **must** be secured, so that even if the groups guard is matched the operation is not accessible if the connection is not secured.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [REST API]({{page page='rest-api'}})
+*   [Command Endpoint]({{page page='command-endpoint'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

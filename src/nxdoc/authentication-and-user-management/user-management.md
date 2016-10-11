@@ -708,3 +708,14 @@ Do not forget to put `<require>org.nuxeo.ecm.platform.forms.layouts.webapp</requ
 ```
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Authentication, users and groups]({{page space='admindoc60' page='authentication-users-and-groups'}})
+*   [Authentication Overview]({{page page='authentication-overview'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

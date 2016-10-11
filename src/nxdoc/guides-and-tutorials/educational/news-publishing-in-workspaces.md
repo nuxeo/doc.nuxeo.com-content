@@ -166,4 +166,4 @@ The "publish news" button is quite simple, just operating a "follow transition" 
 
 *   [Implement the News document]({{page space='NXDOC60' page='Implement the+News+document'}})
 *   [Add a News content view on workspaces]({{page space='NXDOC60' page='Add a+News+content+view+on+workspaces'}})
-*   [Implement the News "publishing" process](https://doc.nuxeo.com/pages/viewpage.action?pageId=22380658)
+*   [Implement the News "publishing" process](/pages/viewpage.action?pageId=22380658)

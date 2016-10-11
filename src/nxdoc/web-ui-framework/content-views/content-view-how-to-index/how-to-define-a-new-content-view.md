@@ -418,7 +418,7 @@ Search results, and so content listings, are presented in a table. You can confi
 
 The first part of the result configuration form is dedicated to setting up some general parameters about the results that will be displayed.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Parameter
 
@@ -467,7 +467,7 @@ Use additional standard listing layouts
 
 Check the box if you want to display the icons ![]({{file name='DM-list-view-icon.png'}}), ![]({{file name='DM-icon-view-icon.png'}}) and ![]({{file name='DM-compact-view-icon.png'}}) to enable users to switch from the table presentation of documents to the other default presentations.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 &nbsp;
 

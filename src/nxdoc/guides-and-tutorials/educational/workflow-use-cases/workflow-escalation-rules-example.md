@@ -225,8 +225,8 @@ In this tab we will create the automation chains corresponding to the button the
 2.  Name the chain: `validatePressRelease`.
 3.  Use the following operations:
 
-    <table><tbody><tr><th colspan="1">Name</th><th colspan="1">Parameters</th></tr><tr><td colspan="1">Fetch > Context document(s)</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Document > Publish Document</td><td colspan="1">**Target:** `/default-domain/sections/press releases`
-    **Override:** `true`</td></tr></tbody></table>
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Name</th><th colspan="1">Parameters</th></tr><tr><td colspan="1">Fetch > Context document(s)</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Document > Publish Document</td><td colspan="1">**Target:** `/default-domain/sections/press releases`
+    **Override:** `true`</td></tr></tbody></table></div>
 4.  Save your automation chain.
 
 ### Updating the Graph
@@ -300,7 +300,7 @@ We need two rules for this node: one that reminds Jane to review the document ev
 
     5.  The chain should be configured as following:
 
-        <table><tbody><tr><th colspan="1">Operation</th><th colspan="1">Parameters</th></tr><tr><td colspan="1">Fetch > Context document(s)</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Notification > Send Email</td><td colspan="1">
+        <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Operation</th><th colspan="1">Parameters</th></tr><tr><td colspan="1">Fetch > Context document(s)</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Notification > Send Email</td><td colspan="1">
 
         **From:**
         no-reply@ohmydoc.com
@@ -319,7 +319,7 @@ We need two rules for this node: one that reminds Jane to review the document ev
         **HTML:**
         true
 
-        </td></tr></tbody></table>
+        </td></tr></tbody></table></div>
 4.  Click on **Save**.
     That's it! Our first rule is ready.
 
@@ -342,11 +342,11 @@ Now we'll go for the second one.
 
     5.  The chain should be configured as following:
 
-        <table><tbody><tr><th colspan="1">Operation</th><th colspan="1">Parameters</th></tr><tr><td colspan="1">Fetch > Context document(s)</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Workflow context > Get open tasks</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Fetch > Document</td><td colspan="1">
+        <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Operation</th><th colspan="1">Parameters</th></tr><tr><td colspan="1">Fetch > Context document(s)</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Workflow context > Get open tasks</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Fetch > Document</td><td colspan="1">
 
         **Value:** @{This.get(0).id}
 
-        </td></tr><tr><td colspan="1">Workflow Context > Complete task</td><td colspan="1">&nbsp;</td></tr></tbody></table>
+        </td></tr><tr><td colspan="1">Workflow Context > Complete task</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>
 
         It is not possible to simply change the assignee of a particular task. To do so we use:
 

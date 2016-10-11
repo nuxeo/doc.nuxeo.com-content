@@ -264,3 +264,17 @@ For custom codes, don't hesitate to use Nuxeo IDE.
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
+
+*   [Web UI How-To Index]({{page page='web-ui-how-to-index'}})
+*   [Uploading Custom Operations in Nuxeo Studio]({{page space='idedoc' page='uploading-custom-operations-in-nuxeo-studio'}})
+*   [Contributing an Operation]({{page page='contributing-an-operation'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

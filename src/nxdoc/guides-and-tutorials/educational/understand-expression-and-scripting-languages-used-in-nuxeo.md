@@ -388,7 +388,7 @@ Please check the [availables variables depending on context](#available-variable
 
 ## What are the Main Differences Between Expression/Scripting Languages?
 
-<table><colgroup><col> <col> <col> <col></colgroup> <tbody><tr><td colspan="1">&nbsp;</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><colgroup><col> <col> <col> <col></colgroup> <tbody><tr><td colspan="1">&nbsp;</td><td colspan="1">
 
 EL
 
@@ -468,7 +468,7 @@ ${**Document**.property}`
 Workflow email notification:`
 ${**workflowDocuments[0]**.property}`
 
-</td></tr></tbody></table>{{#> callout type='note' heading='Variable name and context'}}
+</td></tr></tbody></table></div>{{#> callout type='note' heading='Variable name and context'}}
 
 The same object may be given a different variable name depending on language or context, as shown in bold in the previous table.
 
@@ -618,7 +618,7 @@ In widgets, layout, content views and in XHTML templates, you can use the EL exp
 
 ## Tips and Tricks
 
-<table><colgroup><col> <col> <col> <col></colgroup> <tbody><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><colgroup><col> <col> <col> <col></colgroup> <tbody><tr><td colspan="1">
 
 Document type
 
@@ -679,7 +679,7 @@ EL expressions can be used to evaluate conditions. A few examples:
 *   Checking that the worklist is not empty:
     `#{documentsListsManager.isWorkingListEmpty("CURRENT_SELECTION") == false}`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Related Links
 
@@ -697,3 +697,15 @@ You may find more information in these related pages :
     *   [FreeMarker manual](http://freemarker.sourceforge.net/docs/)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in Developer Documentation'}}
+
+*   [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}})
+*   [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
+*   [Field Binding and Expressions]({{page page='field-binding-and-expressions'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

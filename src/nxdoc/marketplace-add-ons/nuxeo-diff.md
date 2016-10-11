@@ -74,3 +74,13 @@ Services:
 [http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewService/org.nuxeo.ecm.diff.service.DocumentDiffService](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewService/org.nuxeo.ecm.diff.service.DocumentDiffService)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Nuxeo Diff documentation'}}
+
+*   [Nuxeo Diff user documentation]({{page space='userdoc60' page='nuxeo-diff'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

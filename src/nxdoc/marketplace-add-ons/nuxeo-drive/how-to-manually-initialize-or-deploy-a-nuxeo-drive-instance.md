@@ -160,3 +160,11 @@ This page is about Nuxeo Drive 2\. For versions 1.x see the page [Nuxeo Drive 1.
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about Nuxeo Drive'}}
+
+*   [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}})
+*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+*   [Nuxeo Drive user documentation]({{page space='userdoc60' page='nuxeo-drive'}})
+
+{{/panel}}</div><div class="column medium-6">null</div></div>

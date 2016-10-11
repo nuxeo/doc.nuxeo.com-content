@@ -213,3 +213,16 @@ Nuxeo WebEngine is designed to expose the Nuxeo Platform's managed content in a 
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Web UI Framework]({{page page='web-ui-framework'}})
+*   [Clients]({{page page='clients'}})
+*   [How-To Index]({{page page='how-to-index'}})
+*   [REST API]({{page page='rest-api'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

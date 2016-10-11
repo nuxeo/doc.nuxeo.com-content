@@ -81,3 +81,13 @@ The Nuxeo - BIRT Integration addon requires that your Nuxeo application runs wit
 &nbsp;
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo - BIRT Integration user documentation]({{page space='userdoc60' page='nuxeo-birt-integration'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

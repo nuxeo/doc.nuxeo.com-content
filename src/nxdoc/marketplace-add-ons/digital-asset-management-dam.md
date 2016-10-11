@@ -306,7 +306,7 @@ To download the picture view that you want, click on&nbsp;![]({{file name='downl
 
 {{#> callout type='info' }}
 
-To contribute new picture views, follow this [how-to](http://doc.nuxeo.com/x/4Bs5AQ).
+To contribute new picture views, follow this [how-to](/x/4Bs5AQ).
 
 {{/callout}}
 

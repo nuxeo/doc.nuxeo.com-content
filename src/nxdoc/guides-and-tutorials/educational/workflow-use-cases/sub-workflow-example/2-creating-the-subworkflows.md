@@ -215,7 +215,7 @@ Set the following values:
 2.  Name your chain `validateDoc`.
 3.  Set your chain as following:
 
-    <table><tbody><tr><th colspan="1">Operation</th><th colspan="1">Parameters</th></tr><tr><td colspan="1">Fetch > Context Document(s)</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Document > Follow Life Cycle Transition</td><td colspan="1">**Value**: approve</td></tr></tbody></table>
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Operation</th><th colspan="1">Parameters</th></tr><tr><td colspan="1">Fetch > Context Document(s)</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Document > Follow Life Cycle Transition</td><td colspan="1">**Value**: approve</td></tr></tbody></table></div>
 4.  Save your modifications.
 
 ## Creating the Accounting + General Manager (GM) Validation Workflow

@@ -31,147 +31,147 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/_IBVAQ'
     source_link: /display/NXDOC60/Query+Endpoint
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2015-09-16 10:25'
         message: ''
         version: '29'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-20 13:19'
         message: Update related pages
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-20 13:17'
         message: ''
         version: '27'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-17 17:27'
         message: fill doc with named parameters examples
         version: '26'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-17 17:05'
         message: ''
         version: '25'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-17 16:36'
         message: format + add related content
         version: '24'
-    -
+    - 
         author: Guillaume Renard
         date: '2014-12-11 14:48'
         message: ''
         version: '23'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-10-29 17:34'
         message: ''
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-22 10:31'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-22 10:31'
         message: ''
         version: '20'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-18 15:45'
         message: add es provider
         version: '19'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-12 16:22'
         message: ''
         version: '18'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-12 11:59'
         message: ''
         version: '17'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-12 11:58'
         message: ''
         version: '16'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2014-09-11 18:24'
         message: ''
         version: '15'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-11 15:46'
         message: Query Endpoint
         version: '14'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-11 15:43'
         message: ''
         version: '13'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-11 15:42'
         message: ''
         version: '12'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-11 15:37'
         message: ''
         version: '11'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-11 15:28'
         message: ''
         version: '10'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-11 15:28'
         message: ''
         version: '9'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-11 15:23'
         message: ''
         version: '8'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-11 14:59'
         message: ''
         version: '7'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-11 14:54'
         message: ''
         version: '6'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-11 14:53'
         message: ''
         version: '5'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-11 14:53'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-10 10:39'
         message: ''
         version: '3'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-09 18:54'
         message: wip query endpoint
         version: '2'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-09-09 18:47'
         message: ''
@@ -182,7 +182,7 @@ The query endpoint allows REST clients to query the Nuxeo repository.
 
 ## Endpoint
 
-<table><tbody><tr><th colspan="1">Path</th><th colspan="1">Endpoint</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Path</th><th colspan="1">Endpoint</th></tr><tr><td colspan="1">
 
 **GET
 **
@@ -202,11 +202,11 @@ Endpoint to perform queries on the repository in NXQL.
 
 `**/api/v1/query/{providerName}**`
 
-</td><td colspan="1">Endpoint to perform a query based on page provider registered on the application.</td></tr></tbody></table>
+</td><td colspan="1">Endpoint to perform a query based on page provider registered on the application.</td></tr></tbody></table></div>
 
 ## Properties
 
-<table><tbody><tr><th colspan="1">Key</th><th colspan="1">Value</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Key</th><th colspan="1">Value</th></tr><tr><td colspan="1">
 
 **query
 **
@@ -313,7 +313,7 @@ Parameter names should be strictly different from property names (and other quer
 
 Note this is only interesting when using a page provider, defined server side.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Examples
 
@@ -326,7 +326,7 @@ Note this is only interesting when using a page provider, defined server side.
 ```
 http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document
 
-http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document&pageSize=2&currentPageIndex=1
+http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document&pageSize=2&currentPageIndex=1 
 ```
 
 {{/panel}}{{#> panel type='code' heading='Response'}}
@@ -774,4 +774,15 @@ http://localhost:8080/api/v1/query/aggregates_1
 }
 ```
 
-{{/panel}}
+{{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [How to use the Document Resources Endpoint]({{page page='how-to-use-the-document-resources-endpoint'}})
+*   [REST API Entity Types]({{page page='rest-api-entity-types'}})
+*   [Page Providers]({{page page='page-providers'}})
+*   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

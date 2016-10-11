@@ -214,7 +214,7 @@ history:
     All the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). In order to fetch the current user, you have to use: `CurrentUser.originatingUser==null?CurrentUser.name:CurrentUser.originatingUser`.
 
 *   **Is the availability filter configured on the workflow also evaluated when the workflow is started using the operation "StartWorkflow"?**
-    No, this filter is actually an [Action Filter](http://doc.nuxeo.com/x/EYAO) used to control the visibility of workflow models in the list of workflows displayed by the widget type "Workflow Process".
+    No, this filter is actually an [Action Filter](/x/EYAO) used to control the visibility of workflow models in the list of workflows displayed by the widget type "Workflow Process".
 
 *   **Can I have a workflow variable and a node variable with the same name?**
     No, the workflow engine doesn't handle this case. They could have the same name,&nbsp; but as long as they are not both used on the same node. But we recommend you to choose different names and to avoid this situation.

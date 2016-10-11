@@ -217,14 +217,14 @@ When configuring a widget to select collections, the field that needs to be refe
     ![]({{file name='collections_widget_editor.png' page='how-to-customize-the-bulk-edit-form'}} ?w=350,border=true)
 3.  Fill in the Edit Properties:
 
-    <table><tbody><tr><td colspan="1">
+    <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
 
     <div class="gwt-HTML form-label" title="Editor for property 'pageProviderName'">Document page provider name</div>
 
-    </td><td colspan="1">`default_document_suggestion`</td></tr><tr><td colspan="1">Selection Formatter</td><td colspan="1">`formatSelectedCollection`</td></tr><tr><td colspan="1"><span style="color: rgb(67,67,67);">Suggestion Formatter</span></td><td colspan="1">`formatSuggestedCollection`</td></tr></tbody></table>
+    </td><td colspan="1">`default_document_suggestion`</td></tr><tr><td colspan="1">Selection Formatter</td><td colspan="1">`formatSelectedCollection`</td></tr><tr><td colspan="1"><span style="color: rgb(67,67,67);">Suggestion Formatter</span></td><td colspan="1">`formatSuggestedCollection`</td></tr></tbody></table></div>
 4.  In the Custom Properties fill in the following fields:
 
-    <table><tbody><tr><td colspan="1">restoreSeamCtx</td><td colspan="1">false</td></tr><tr><td colspan="1">operationId</td><td colspan="1">Collection.Suggestion</td></tr></tbody></table>
+    <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">restoreSeamCtx</td><td colspan="1">false</td></tr><tr><td colspan="1">operationId</td><td colspan="1">Collection.Suggestion</td></tr></tbody></table></div>
 5.  Click on&nbsp;**Save**&nbsp;and deploy your changes on your instance.
 
 You should end up with something like this:
@@ -313,3 +313,15 @@ If you want to disable the default import option (after having contributed a new
 ![]({{file name='custom_import.png'}} ?w=450,h=303,border=true)
 
 After deploying your changes, you can only see your custom import option when you click on **Import**.&nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [JSF and Ajax Tips and How-To Index]({{page page='jsf-and-ajax-tips-and-how-to-index'}})
+*   [Layout and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
+*   [How-To Index]({{page page='how-to-index'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -52,3 +52,16 @@ history:
 {{{multiexcerpt 'drive_versioning_policy' page='NXDOC:How to Customize Nuxeo Drive Versioning Policy'}}}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Drive user documentation]({{page space='userdoc60' page='nuxeo-drive'}})
+*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+*   [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}})
+*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

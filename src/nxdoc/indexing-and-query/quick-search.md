@@ -94,3 +94,17 @@ Suggesters can be contributed to this search box. See the contribution at [http:
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in this documentation'}}
+
+*   [Full-Text Queries]({{page page='full-text-queries'}})
+*   [NXQL]({{page page='nxql'}})
+*   [How to Configure a New Default Search Form in the Search Tab]({{page page='how-to-configure-a-new-default-search-form-in-the-search-tab'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

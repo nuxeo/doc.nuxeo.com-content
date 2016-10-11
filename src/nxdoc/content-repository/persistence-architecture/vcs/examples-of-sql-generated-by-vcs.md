@@ -206,3 +206,17 @@ SELECT DISTINCT _C1 FROM (
 {{/panel}}</div>
 
 </div>
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [VCS]({{page page='vcs'}})
+*   [Configuring MS SQL Server]({{page space='admindoc60' page='configuring-ms-sql-server'}})
+*   [Configuring PostgreSQL]({{page space='admindoc60' page='configuring-postgresql'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

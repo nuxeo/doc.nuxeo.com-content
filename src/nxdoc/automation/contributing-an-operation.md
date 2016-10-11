@@ -521,3 +521,15 @@ Also there are rare cases when you don't want to return anything from an operati
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Pages'}}
+
+*   [Content Automation Concepts]({{page page='content-automation-concepts'}})
+*   [Automation How-To Index]({{page page='automation-how-to-index'}})
+*   [Debugging Automation Chains]({{page page='debugging-automation-chains'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

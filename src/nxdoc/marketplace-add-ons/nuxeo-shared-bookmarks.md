@@ -46,3 +46,17 @@ After the package is installed, a new button **Bookmark** button is available ne
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
+
+{{! Please update the label in the Content by Label macro below. }}
+
+{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Shared Bookmarks user documentation]({{page space='userdoc60' page='nuxeo-shared-bookmarks'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

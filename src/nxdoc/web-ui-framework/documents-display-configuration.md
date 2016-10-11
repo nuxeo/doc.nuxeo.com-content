@@ -87,7 +87,7 @@ In this section:
 *   [Document Views]({{page space='NXDOC60' page='Document Views'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Pages visible for a given document can be configured depending on the document type.</span>
 *   [Document Layouts]({{page space='NXDOC60' page='Document Layouts'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Layouts can be linked to a document type by specifying the layout names in its definition.</span>
 *   [Document Content Views]({{page space='NXDOC60' page='Document Content+Views'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Content Views can be linked to a document type by specifying the content view names in its definition.</span>
-*   [Drag and Drop Service for Content Capture (HTML5-Based)](https://doc.nuxeo.com/pages/viewpage.action?pageId=22380686)&nbsp;&mdash;&nbsp;<span class="smalltext">You can use the native HTML5 Drag and Drop features on recent browsers (Firefox 3.6+, Google Chrome 9+, Safari 5+). This new Drag and Drop import model is pluggable so you can adapt the import behavior to your custom needs.</span>
+*   [Drag and Drop Service for Content Capture (HTML5-Based)](/pages/viewpage.action?pageId=22380686)&nbsp;&mdash;&nbsp;<span class="smalltext">You can use the native HTML5 Drag and Drop features on recent browsers (Firefox 3.6+, Google Chrome 9+, Safari 5+). This new Drag and Drop import model is pluggable so you can adapt the import behavior to your custom needs.</span>
 
 ## UI Document Types
 

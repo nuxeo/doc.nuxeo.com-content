@@ -56,3 +56,13 @@ After the package is installed, new flavors are available in workspaces Theme co
 ![]({{file name='unicolor_flavor_pink.png' space='userdoc60' page='unicolor-flavors-set'}} ?w=650,h=341,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Unicolor Flavors Set user documentation]({{page space='userdoc60' page='unicolor-flavors-set'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

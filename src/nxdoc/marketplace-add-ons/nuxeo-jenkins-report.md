@@ -63,3 +63,14 @@ Since this addon enables users to send the report from the Nuxeo Platform, your 
 &nbsp;
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Jenkins duty]({{page space='corg' page='jenkins-duty'}})
+*   [Nuxeo Jenkins Report user documentation]({{page space='userdoc60' page='nuxeo-jenkins-report'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

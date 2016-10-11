@@ -46,3 +46,13 @@ After the package is installed, a new **Export as PDF** button is displayed at t
 ![]({{file name='dam-pdf-export-selection.png' space='userdoc60' page='nuxeo-dam-pdf-export'}} ?w=650,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo DAM PDF Export user documentation]({{page space='userdoc60' page='nuxeo-dam-pdf-export'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -68,156 +68,182 @@ history:
         version: '1'
 
 ---
-{{! table-filter removed }} **Feature
-****CAP / Add-on** **Comment** Documentation **Document types**&nbsp; &nbsp; Article Nuxeo Social Collaboration Deprecated in 6.0 [Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}}) Agenda Nuxeo Agenda &nbsp; [Nuxeo Agenda user documentation]({{page space='userdoc60' page='nuxeo-agenda'}}) Asset Library domain DAM Compat Deprecated in 6.0 [Nuxeo DAM Compat user documentation]({{page space='userdoc60' page='nuxeo-dam-compat'}}) Audio DAM &nbsp; [Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}}) Collection CAP &nbsp;
+{{! table-filter removed }}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">**Feature
+**</th><th colspan="1">**CAP / Add-on**</th><th colspan="1">**Comment**</th><th colspan="1">Documentation</th></tr><tr><th colspan="1">**Document types**</th><th colspan="1"></th><th colspan="1">&nbsp;</th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">Article</td><td colspan="1">Nuxeo Social Collaboration</td><td colspan="1">Deprecated in 6.0</td><td colspan="1">[Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}})</td></tr><tr><td colspan="1">Agenda</td><td colspan="1">Nuxeo Agenda</td><td colspan="1">&nbsp;</td><td colspan="1">[Nuxeo Agenda user documentation]({{page space='userdoc60' page='nuxeo-agenda'}})</td></tr><tr><td colspan="1">Asset Library domain</td><td colspan="1">DAM Compat</td><td colspan="1">Deprecated in 6.0</td><td colspan="1">[Nuxeo DAM Compat user documentation]({{page space='userdoc60' page='nuxeo-dam-compat'}})</td></tr><tr><td colspan="1">Audio</td><td colspan="1">DAM</td><td colspan="1">&nbsp;</td><td colspan="1">[Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}})</td></tr><tr><td colspan="1">Collection</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [Developer documentation]({{page page='collections'}})
 *   [User documentation]({{page space='userdoc60' page='collections'}})
 
-Domain CAP &nbsp; &nbsp; Email folder Nuxeo IMAP connector &nbsp;Used to be known as Mail folder in 5.8 Document Management module [Nuxeo IMAP Connector user documentation]({{page space='userdoc60' page='nuxeo-imap-connector'}}) Event Nuxeo Agenda &nbsp; [Nuxeo Agenda user documentation]({{page space='userdoc60' page='nuxeo-agenda'}}) File CAP &nbsp; [Files user documentation]({{page space='userdoc60' page='files'}}) Folder CAP &nbsp; [Folders user documentation]({{page space='userdoc60' page='folders'}}) Forum CAP &nbsp; [Forums user documentation]({{page space='userdoc60' page='forums'}}) News item Nuxeo Social Collaboration Deprecated in 6.0 [Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}}) Note CAP &nbsp; [Notes user documentation]({{page space='userdoc60' page='notes'}}) Ordered folder CAP &nbsp; [Folders user documentation]({{page space='userdoc60' page='folders'}}) Personal workspace CAP &nbsp; &nbsp; Picture DAM &nbsp; [Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}}) Picture folder DAM compat Deprecated in 6.0 &nbsp; Section CAP &nbsp; [Sections user documentation]({{page space='userdoc60' page='working-in-sections'}}) Social domain Nuxeo Social Collaboration Deprecated in 6.0 [Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}}) Social workspace Nuxeo Social Collaboration Deprecated in 6.0 [Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}}) Workspace CAP &nbsp; [Working with Workspaces]({{page space='userdoc60' page='working-with-workspaces'}}) Workspace templates CAP &nbsp; &nbsp; Video DAM &nbsp; [Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}}) **Document creation**&nbsp; &nbsp; Bulk import CAP &nbsp;
+</td></tr><tr><td colspan="1">Domain</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Email folder</td><td colspan="1">Nuxeo IMAP connector</td><td colspan="1">&nbsp;Used to be known as Mail folder in 5.8 Document Management module</td><td colspan="1">[Nuxeo IMAP Connector user documentation]({{page space='userdoc60' page='nuxeo-imap-connector'}})</td></tr><tr><td colspan="1">Event</td><td colspan="1">Nuxeo Agenda</td><td colspan="1">&nbsp;</td><td colspan="1">[Nuxeo Agenda user documentation]({{page space='userdoc60' page='nuxeo-agenda'}})</td></tr><tr><td colspan="1">File</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">[Files user documentation]({{page space='userdoc60' page='files'}})</td></tr><tr><td colspan="1">Folder</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">[Folders user documentation]({{page space='userdoc60' page='folders'}})</td></tr><tr><td colspan="1">Forum</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">[Forums user documentation]({{page space='userdoc60' page='forums'}})</td></tr><tr><td colspan="1">News item</td><td colspan="1">Nuxeo Social Collaboration</td><td colspan="1">Deprecated in 6.0</td><td colspan="1">[Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}})</td></tr><tr><td colspan="1">Note</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">[Notes user documentation]({{page space='userdoc60' page='notes'}})</td></tr><tr><td colspan="1">Ordered folder</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">[Folders user documentation]({{page space='userdoc60' page='folders'}})</td></tr><tr><td colspan="1">Personal workspace</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Picture</td><td colspan="1">DAM</td><td colspan="1">&nbsp;</td><td colspan="1">[Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}})</td></tr><tr><td colspan="1">Picture folder</td><td colspan="1">DAM compat</td><td colspan="1">Deprecated in 6.0</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Section</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">[Sections user documentation]({{page space='userdoc60' page='working-in-sections'}})</td></tr><tr><td colspan="1">Social domain</td><td colspan="1">Nuxeo Social Collaboration</td><td colspan="1">Deprecated in 6.0</td><td colspan="1">[Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}})</td></tr><tr><td colspan="1">Social workspace</td><td colspan="1">Nuxeo Social Collaboration</td><td colspan="1">Deprecated in 6.0</td><td colspan="1">[Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}})</td></tr><tr><td colspan="1">Workspace</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">[Working with Workspaces]({{page space='userdoc60' page='working-with-workspaces'}})</td></tr><tr><td colspan="1">Workspace templates</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Video</td><td colspan="1">DAM</td><td colspan="1">&nbsp;</td><td colspan="1">[Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}})</td></tr><tr><th colspan="1">**Document creation**</th><th colspan="1"></th><th colspan="1">&nbsp;</th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">Bulk import</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [Document creation user documentation]({{page space='userdoc60' page='creating-content'}})
 *   [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
 
-Form CAP &nbsp; [Document creation user documentation]({{page space='userdoc60' page='creating-content'}}) HTML 5 Drag & Drop CAP &nbsp;
+</td></tr><tr><td colspan="1">Form</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">[Document creation user documentation]({{page space='userdoc60' page='creating-content'}})</td></tr><tr><td colspan="1">HTML 5 Drag & Drop</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [Drag and Drop User Documentation]({{page space='userdoc60' page='working-using-drag-and-drop'}})
 *   [Drag and Drop Developer documentation]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
 
-Metadata processing at import CAP &nbsp; &nbsp; **Document edition**&nbsp; &nbsp; Attachments CAP &nbsp; &nbsp; Bulk edit CAP &nbsp;
+</td></tr><tr><td colspan="1">Metadata processing at import</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><th colspan="1">**Document edition**</th><th colspan="1"></th><th colspan="1">&nbsp;</th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">Attachments</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Bulk edit</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [Document edition user documentation]({{page space='userdoc60' page='editing-content'}})
 *   [How to Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})
 
-Copy/paste/move CAP &nbsp; [Copying and Moving Documents]({{page space='userdoc60' page='copying-and-moving-documents'}}) Form CAP &nbsp; &nbsp; Lock /Unlock CAP &nbsp; &nbsp; History CAP &nbsp; &nbsp; Versioning CAP &nbsp;
+</td></tr><tr><td colspan="1">Copy/paste/move</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">[Copying and Moving Documents]({{page space='userdoc60' page='copying-and-moving-documents'}})</td></tr><tr><td colspan="1">Form</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Lock /Unlock</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">History</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Versioning</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [User documentation]({{page space='userdoc60' page='editing-content'}})
 *   [Developer documentation]({{page page='versioning'}})
 
-Version / Document comparison Nuxeo Diff Used to be included in 5.8 Document Management module
+</td></tr><tr><td colspan="1">Version / Document comparison</td><td colspan="1">Nuxeo Diff</td><td colspan="1">Used to be included in 5.8 Document Management module</td><td colspan="1">
 
 *   [Developer documentation]({{page page='nuxeo-diff'}})
 *   [User documentation]({{page space='userdoc60' page='nuxeo-diff'}})
 
-**Desktop integration** &nbsp; &nbsp; &nbsp; Edit in native application from web application Nuxeo Drive &nbsp;
+</td></tr><tr><th colspan="1">**Desktop integration**</th><th colspan="1">&nbsp;</th><th colspan="1">&nbsp;</th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">Edit in native application from web application</td><td colspan="1">Nuxeo Drive</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [Developer documentation]({{page page='nuxeo-drive'}})
 *   [User documentation]({{page space='userdoc60' page='nuxeo-drive'}})
 
-&nbsp; Live Edit Deprecated in 6.0 [Working with Live Edit]({{page space='userdoc60' page='working-with-live-edit'}}) Offline synchronization Nuxeo Drive &nbsp;
+</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Live Edit</td><td colspan="1">Deprecated in 6.0</td><td colspan="1">[Working with Live Edit]({{page space='userdoc60' page='working-with-live-edit'}})</td></tr><tr><td colspan="1">Offline synchronization</td><td colspan="1">Nuxeo Drive</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [User documentation]({{page space='userdoc60' page='nuxeo-drive'}})
 
-&nbsp; WebDav &nbsp;
+</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">WebDav</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [User documentation]({{page space='userdoc60' page='working-with-webdav-and-wss'}})
 *   [Developer documentation]({{page page='webdav'}})
 
-Metadata edit from desktop Nuxeo Drive &nbsp;
+</td></tr><tr><td colspan="1">Metadata edit from desktop</td><td colspan="1">Nuxeo Drive</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [User documentation]({{page space='userdoc60' page='nuxeo-drive'}})
 
-**Workflows**&nbsp; Approval workflow CAP &nbsp;
+</td></tr><tr><th colspan="1">**Workflows**</th><th colspan="1"></th><th colspan="1"></th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">Approval workflow</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [User documentation]({{page space='userdoc60' page='workflows'}})
 *   [Developer documentation]({{page page='workflow'}})
 *   [Workflow How-To Index]({{page page='workflow-how-to-index'}})
 
-Parallel workflow CAP &nbsp;
+</td></tr><tr><td colspan="1">Parallel workflow</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [User documentation]({{page space='userdoc60' page='workflows'}})
 *   [Developer documentation]({{page page='workflow'}})
 *   [Workflow How-To Index]({{page page='workflow-how-to-index'}})
 
-Content routing CAP &nbsp;
+</td></tr><tr><td colspan="1">Content routing</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [User documentation]({{page space='userdoc60' page='workflows'}})
 *   [Developer documentation]({{page page='workflow'}})
 *   [Workflow How-To Index]({{page page='workflow-how-to-index'}})
 
-**Publication**&nbsp; Publication approval workflow CAP &nbsp;
+</td></tr><tr><th colspan="1">**Publication**</th><th colspan="1"></th><th colspan="1"></th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">Publication approval workflow</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [User documentation]({{page space='userdoc60' page='working-in-sections'}})
 *   [Developer documentation]({{page page='publisher'}})
 
-Publication targets CAP &nbsp; [Setting Publication Targets]({{page space='userdoc60' page='setting-publication-targets'}}) Simplified publication (private / public documents) Nuxeo Social Collaboration Deprecated in 6.0 [Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}}) **Browsing**&nbsp; Activity stream Nuxeo Social Collaboration Deprecated in 6.0 [Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}}) Dashboard (static) CAP &nbsp;
+</td></tr><tr><td colspan="1">Publication targets</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">[Setting Publication Targets]({{page space='userdoc60' page='setting-publication-targets'}})</td></tr><tr><td colspan="1">Simplified publication (private / public documents)</td><td colspan="1">Nuxeo Social Collaboration</td><td colspan="1">Deprecated in 6.0</td><td colspan="1">[Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}})</td></tr><tr><th colspan="1">**Browsing**</th><th colspan="1"></th><th colspan="1"></th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">Activity stream</td><td colspan="1">Nuxeo Social Collaboration</td><td colspan="1">Deprecated in 6.0</td><td colspan="1">[Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}})</td></tr><tr><td colspan="1">Dashboard (static)</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [User documentation]({{page space='userdoc60' page='browsing-content'}})
 *   [How to Customize the Dashboard]({{page page='how-to-customize-the-dashboard'}})
 
+</td></tr><tr><td colspan="1">
+
 Dashboard (customizable)
 
+</td><td colspan="1">
+
 Nuxeo OpenSocial
+
+</td><td colspan="1">
 
 Deprecated since 6.0
 
 Used to be included in 5.8 Document Management module
+
+</td><td colspan="1">
 
 *   [Developer documentation]({{page page='nuxeo-opensocial'}})
 *   [User documentation]({{page space='userdoc60' page='nuxeo-opensocial'}})
 
+</td></tr><tr><td colspan="1">
+
 External gadgets
 
+</td><td colspan="1">
+
 Nuxeo OpenSocial
+
+</td><td colspan="1">
 
 Deprecated since 6.0
 
 Used to be included in 5.8 Document Management module
 
-&nbsp; Local dashboards Nuxeo Social Collaboration Deprecated since 6.0 &nbsp; Mini-message Nuxeo Social Collaboration Deprecated since 6.0 [Mini Messages Overview]({{page space='userdoc60' page='mini-messages-overview'}}) Tree structure browsing CAP &nbsp; [Browsing Content]({{page space='userdoc60' page='browsing-content'}}) Tags CAP &nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Local dashboards</td><td colspan="1">Nuxeo Social Collaboration</td><td colspan="1">Deprecated since 6.0</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Mini-message</td><td colspan="1">Nuxeo Social Collaboration</td><td colspan="1">Deprecated since 6.0</td><td colspan="1">[Mini Messages Overview]({{page space='userdoc60' page='mini-messages-overview'}})</td></tr><tr><td colspan="1">Tree structure browsing</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">[Browsing Content]({{page space='userdoc60' page='browsing-content'}})</td></tr><tr><td colspan="1">Tags</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [Developer documentation]({{page page='tagging'}})
 *   [User documentation]({{page space='userdoc60' page='tags'}})
 
-Virtual navigation Nuxeo Virtual Navigation Used to be included in 5.8 Document Management module [Nuxeo Virtual Navigation developer documentation]({{page page='nuxeo-virtual-navigation'}}) Wall Nuxeo Social Collaboration Deprecated since 6.0 [Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}}) **Access**&nbsp; Administrator / members access rights Nuxeo Social Collaboration Deprecated since 6.0 [Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}}) Read / Write / Manage access rights CAP &nbsp;
+</td></tr><tr><td colspan="1">Virtual navigation</td><td colspan="1">Nuxeo Virtual Navigation</td><td colspan="1">Used to be included in 5.8 Document Management module</td><td colspan="1">[Nuxeo Virtual Navigation developer documentation]({{page page='nuxeo-virtual-navigation'}})</td></tr><tr><td colspan="1">Wall</td><td colspan="1">Nuxeo Social Collaboration</td><td colspan="1">Deprecated since 6.0</td><td colspan="1">[Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}})</td></tr><tr><th colspan="1">**Access**</th><th colspan="1"></th><th colspan="1"></th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">Administrator / members access rights</td><td colspan="1">Nuxeo Social Collaboration</td><td colspan="1">Deprecated since 6.0</td><td colspan="1">[Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}})</td></tr><tr><td colspan="1">Read / Write / Manage access rights</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [ACLs developer documentation]({{page page='acls'}})
 *   [Access Rights user documentation]({{page space='userdoc60' page='managing-access-rights'}})
 
-Deny rights CAP Need configuration &nbsp; User invitations CAP Also available as an independent Marketplace package &nbsp; **Additional features**&nbsp; Alerts / Follow CAP &nbsp; &nbsp; Annotations DAM Pictures only. Used to be included in 5.8 Document Management module. [Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}}) Comments CAP &nbsp; &nbsp; Preview CAP &nbsp;
+</td></tr><tr><td colspan="1">Deny rights</td><td colspan="1">CAP</td><td colspan="1">Need configuration</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">User invitations</td><td colspan="1">CAP</td><td colspan="1">Also available as an independent Marketplace package</td><td colspan="1">&nbsp;</td></tr><tr><th colspan="1">**Additional features**</th><th colspan="1"></th><th colspan="1"></th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">Alerts / Follow</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Annotations</td><td colspan="1">DAM</td><td colspan="1">Pictures only. Used to be included in 5.8 Document Management module.</td><td colspan="1">[Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}})</td></tr><tr><td colspan="1">Comments</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Preview</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [User documentation]({{page space='userdoc60' page='preview'}})
 *   [Developer documentation]({{page page='preview'}})
 
-Relations CAP &nbsp;
+</td></tr><tr><td colspan="1">Relations</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [User documentation]({{page space='userdoc60' page='relations'}})
 *   [How to Add New Relation Types]({{page space='userdoc60' page='how-to-add-new-relation-types'}})
 
-Trash CAP &nbsp; &nbsp; Thumbnail CAP &nbsp; [Developer documentation]({{page page='thumbnail'}}) Export &nbsp; &nbsp; &nbsp; Excel export of content view CAP &nbsp; &nbsp; PDF export of content views &nbsp; Removed from Nuxeo Platform 6.0 &nbsp; PDF export of documents CAP &nbsp; &nbsp; RSS and Atom export &nbsp; Removed from Nuxeo Platform 6.0 &nbsp; XML export CAP &nbsp; &nbsp; Zip export CAP &nbsp; &nbsp; **Local configuration**&nbsp; Advanced search configuration CAP &nbsp; &nbsp; Document content configuration CAP &nbsp; &nbsp; Document types configuration CAP &nbsp; &nbsp; Faceted search configuration Faceted search Used to be included in 5.8 Document Management module.
+</td></tr><tr><td colspan="1">Trash</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Thumbnail</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">[Developer documentation]({{page page='thumbnail'}})</td></tr><tr><th colspan="1">Export</th><th colspan="1">&nbsp;</th><th colspan="1">&nbsp;</th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">Excel export of content view</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">PDF export of content views</td><td colspan="1">&nbsp;</td><td colspan="1">Removed from Nuxeo Platform 6.0</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">PDF export of documents</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">RSS and Atom export</td><td colspan="1">&nbsp;</td><td colspan="1">Removed from Nuxeo Platform 6.0</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">XML export</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Zip export</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><th colspan="1">**Local configuration**</th><th colspan="1"></th><th colspan="1"></th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">Advanced search configuration</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Document content configuration</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Document types configuration</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Faceted search configuration</td><td colspan="1">Faceted search</td><td colspan="1">Used to be included in 5.8 Document Management module.</td><td colspan="1">
 
 *   [Developer documentation]({{page page='faceted-search'}})
 *   [User documentation]({{page space='userdoc60' page='faceted-search'}})
 
-Theme configuration CAP &nbsp; &nbsp; **User-related features**&nbsp; Network Nuxeo Social Collaboration Deprecated since 6.0 [Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}}) User profile CAP &nbsp; &nbsp; Rich user profile Nuxeo Social Collaboration Deprecated since 6.0 &nbsp; **Search**&nbsp; &nbsp; Advanced search &nbsp; The Search tab default form (Elasticsearch) replaced the Nuxeo Platform 5.8 Advanced search form. &nbsp; Elasticsearch CAP &nbsp; &nbsp; Faceted search Faceted search Deprecated &mdash; Used to be included in 5.8 Document Management module. &nbsp; Full text search CAP &nbsp; &nbsp; Quick search N/A Comes with suggestion by default in 6.0. &nbsp; Quick search with suggestion CAP &nbsp; &nbsp; **Application Administration
-(Admin tab)**&nbsp; &nbsp;
+</td></tr><tr><td colspan="1">Theme configuration</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><th colspan="1">**User-related features**</th><th colspan="1"></th><th colspan="1"></th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">Network</td><td colspan="1">Nuxeo Social Collaboration</td><td colspan="1">Deprecated since 6.0</td><td colspan="1">[Nuxeo Social Collaboration user documentation]({{page space='userdoc60' page='nuxeo-social-collaboration'}})</td></tr><tr><td colspan="1">User profile</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Rich user profile</td><td colspan="1">Nuxeo Social Collaboration</td><td colspan="1">Deprecated since 6.0</td><td colspan="1">&nbsp;</td></tr><tr><th colspan="1">**Search**</th><th colspan="1"></th><th colspan="1">&nbsp;</th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">Advanced search</td><td colspan="1">&nbsp;</td><td colspan="1">The Search tab default form (Elasticsearch) replaced the Nuxeo Platform 5.8 Advanced search form.</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Elasticsearch</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Faceted search</td><td colspan="1">Faceted search</td><td colspan="1">Deprecated &mdash; Used to be included in 5.8 Document Management module.</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Full text search</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Quick search</td><td colspan="1">N/A</td><td colspan="1">Comes with suggestion by default in 6.0.</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Quick search with suggestion</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><th colspan="1">**Application Administration
+(Admin tab)**</th><th colspan="1"></th><th colspan="1">&nbsp;</th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">
 
 Activity charts
 
+</td><td colspan="1">
+
 Nuxeo OpenSocial
+
+</td><td colspan="1">
 
 Deprecated since 6.0
 
 Used to be included in 5.8 Document Management module
 
-&nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 Dashboard configuration
 
+</td><td colspan="1">
+
 Nuxeo OpenSocial
+
+</td><td colspan="1">
 
 Deprecated since 6.0
 
 Used to be included in 5.8 Document Management module
 
-&nbsp; Monitoring CAP &nbsp; &nbsp; Nuxeo Connect CAP &nbsp; &nbsp; OAuth configuration CAP &nbsp; &nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Monitoring</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Nuxeo Connect</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">OAuth configuration</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 OpenSocial
 
+</td><td colspan="1">
+
 Nuxeo OpenSocial
+
+</td><td colspan="1">
 
 Deprecated since 6.0
 
 Used to be included in 5.8 Document Management module
 
-&nbsp; Power users CAP &nbsp; &nbsp; Update Center CAP &nbsp; &nbsp; User and Groups CAP &nbsp; &nbsp; Vocabularies CAP &nbsp; &nbsp;
+</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Power users</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Update Center</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">User and Groups</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Vocabularies</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>

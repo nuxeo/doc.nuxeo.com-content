@@ -255,3 +255,14 @@ The `<genericPageProvider>` element accepts all the other configurations present
 The properties can be defined as EL expressions and make it possible for the query provider to have access to contextual information. In the above example, the core session to the Nuxeo repository is taken from the Seam context and passed as the property with name `coreSession`.
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Page provider related topics'}}
+
+*   [Custom Page Providers]({{page page='custom-page-providers'}})
+*   [Page Provider Aggregates]({{page page='page-provider-aggregates'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

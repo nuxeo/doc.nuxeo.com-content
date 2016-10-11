@@ -257,7 +257,7 @@ Some additional information can be put on a widget type for several purposes:
 
 *   Sample JSON export URLs:
 
-    <table><tbody><tr><td colspan="1">[http://demo.nuxeo.com/nuxeo/site/layout-manager/widget-types/widgetTypes/document](http://demo.nuxeo.com/nuxeo/site/layout-manager/widget-types/widgetTypes/document)</td><td colspan="1">
+    <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">[http://demo.nuxeo.com/nuxeo/site/layout-manager/widget-types/widgetTypes/document](http://demo.nuxeo.com/nuxeo/site/layout-manager/widget-types/widgetTypes/document)</td><td colspan="1">
 
     All widget types with category "document"
 
@@ -269,7 +269,7 @@ Some additional information can be put on a widget type for several purposes:
 
     All widget types with both categories "document" and "studio", filtering widget types with a version strictly higher than 5.4.0.
 
-    </td></tr></tbody></table>
+    </td></tr></tbody></table></div>
 *   documentation and showcase of this widget type (see [http://showcase.nuxeo.com/layout](http://showcase.nuxeo.com/layout)):
     ![]({{file name='widget_type_preview.png'}} ?w=650,border=true)
 

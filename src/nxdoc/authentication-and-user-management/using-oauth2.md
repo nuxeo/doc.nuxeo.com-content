@@ -67,7 +67,7 @@ GET https://<nuxeoserver>/oauth2/authorization
 
 **Query parameters:**
 
-<table><tbody><tr><th colspan="1">Name</th><th colspan="1">Type</th><th colspan="1">Description</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Name</th><th colspan="1">Type</th><th colspan="1">Description</th></tr><tr><td colspan="1">
 
 response_type
 
@@ -127,7 +127,7 @@ string
 
 **REQUIRED.** An enabled client identification.
 
-</td></tr></tbody></table>{{#> callout type='note' }}
+</td></tr></tbody></table></div>{{#> callout type='note' }}
 
 User authentication is handled by accessing to `https://<nuxeoserver>/nuxeo/oauth2Grant.jsp` which is behind the default [ `NuxeoAuthenticationFilter`]({{page page='authentication#nuxeoauthenticationfilter'}}). That lets you customize the way you want your users to identify themselves.
 
@@ -143,7 +143,7 @@ GET https://<nuxeoserver>/oauth2/token
 
 **Query parameters:**
 
-<table><tbody><tr><th colspan="1">Name</th><th colspan="1">Type</th><th colspan="1">Description</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Name</th><th colspan="1">Type</th><th colspan="1">Description</th></tr><tr><td colspan="1">
 
 grant_type
 
@@ -203,7 +203,7 @@ string
 
 **REQUIRED.** Client's secret.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 **Response:**
 
@@ -228,7 +228,7 @@ Pragma: no-cache
 
 **Query parameters:**
 
-<table><tbody><tr><th colspan="1">Name</th><th colspan="1">Type</th><th colspan="1">Description</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Name</th><th colspan="1">Type</th><th colspan="1">Description</th></tr><tr><td colspan="1">
 
 grant_type
 
@@ -276,7 +276,7 @@ string
 
 **REQUIRED.** Client's secret.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 **Response:**
 
@@ -302,3 +302,13 @@ curl -H "Authorization: Bearer gsQwO6X4zdOOegaR1EZEpRNJ2LK6J8d6" http://<nuxeose
 ```
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Using OAuth]({{page space='admindoc60' page='using-oauth'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -106,3 +106,16 @@ As described on the page [Managing Access Rights]({{page space='userdoc60' page=
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Managing Access Rights]({{page space='userdoc60' page='managing-access-rights'}})
+*   [How to Upload Labels Translations in Nuxeo Studio (i18n)]({{page page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}})
+*   [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
+*   [How-To Index]({{page page='how-to-index'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

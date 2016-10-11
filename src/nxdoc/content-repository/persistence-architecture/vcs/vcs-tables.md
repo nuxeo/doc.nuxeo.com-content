@@ -114,7 +114,7 @@ Each node has a row in the main hierarchy table defining its containment informa
 
 Table `**hierarchy**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -194,7 +194,7 @@ mydoc
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Note that:
 
@@ -213,7 +213,7 @@ When retrieving a node by its id the `primarytype` and `mixintypes` are consulte
 
 Table `**hierarchy**` (continued):
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -309,7 +309,7 @@ MyType
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 The `isproperty` column holds a boolean that distinguishes normal children from complex properties,
 
@@ -323,7 +323,7 @@ A "myschema" fragment (corresponding to a Nuxeo schema with the same name) will 
 
 Table `**myschema**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -355,7 +355,7 @@ The Mouse
 
 2008-08-01 12:56:15.000
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 A consequence is that to retrieve the content of a node, a `SELECT` will have to be done in each of the tables corresponding to the node type and all its inherited node types. However lazy retrieval of a node's content means that in many cases only a subset of these tables will be needed.
 
@@ -365,7 +365,7 @@ A multi-valued property is represented as data from a separate array table holdi
 
 Table `**my_subjects**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -401,7 +401,7 @@ USA
 
 CTU
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### Files and Binaries
 
@@ -409,7 +409,7 @@ The blob abstraction in Nuxeo is treated by the storage as any other schema, "co
 
 Table `**hierarchy**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -577,11 +577,11 @@ content
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Table `**content**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -693,11 +693,11 @@ ISO-8859-1
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Table `**file**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -729,7 +729,7 @@ test.txt
 
 test_copy.txt
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 The filename is also stored in a separate `file` table just because the current Nuxeo schemas are split that way (the filename is a property of the document, but the content is a child complex property). The filename of a blob is also stored in the `name` column of the `content` table.
 
@@ -743,7 +743,7 @@ Some internal relations are stored using VCS. By default they are the relations 
 
 Table `**relation**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -815,7 +815,7 @@ Table `**relation**` :
 
 "some text"
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 The `source` and `target` columns hold document ids (keyed by the `hierarchy` table). The relation object itself is a document, so its id is present in the `hierarchy` table as well, with the `primarytype` "Relation" or a subtype of it.
 
@@ -835,7 +835,7 @@ Version nodes don't have a parent (they are unfiled), but have more meta-informa
 
 Table `**hierarchy**` (continued):
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -1031,7 +1031,7 @@ TRUE
 
 3
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Note that:
 
@@ -1040,7 +1040,7 @@ Note that:
 
 Table `**versions**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -1152,7 +1152,7 @@ TRUE
 
 FALSE
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Note that:
 
@@ -1169,7 +1169,7 @@ Proxies by themselves don't have additional content-related schema, but still ha
 
 Table `**proxies**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -1193,7 +1193,7 @@ Table `**proxies**` :
 
 5675
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Note that:
 
@@ -1206,7 +1206,7 @@ The locks are held in a table containing the lock owner and a timestamp of the l
 
 Table `**locks**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -1254,7 +1254,7 @@ jbauer
 
 2008-08-21 14:21:13.488
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 When a document is unlocked, the corresponding line is deleted.
 
@@ -1270,7 +1270,7 @@ The Nuxeo security model is based on the following:
 
 Table `**acls**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -1382,7 +1382,7 @@ kbauer
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 This table is slightly denormalized (names with identical values follow each other by `pos` ordering), but this is to minimize the number of `JOIN`s to get all ACLs for a document. Also one cannot have a named ACL with an empty list of ACEs in it, but this is not a problem given the semantics of ACLs.
 
@@ -1398,7 +1398,7 @@ Two Nuxeo "system properties" of documents in use by the workflow are also avail
 
 Table `**misc**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -1494,7 +1494,7 @@ TRUE
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### Full-text
 
@@ -1502,7 +1502,7 @@ The full-text indexing table holds information about the fulltext extracted from
 
 Table `**fulltext**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -1542,7 +1542,7 @@ Mickey Mouse USA CTU report pdf
 
 reporttitle ...
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 The `simpletext` column holds text extracted from the string properties of the document configured for indexing. The `binarytext` column holds text extracted from the blob properties of the document configured for indexing. The `fulltext` column is the concatenation of the two and is the one usually indexed as fulltext by the database. A database trigger updates `fulltext` as soon as `simpletext` or `binarytext` is changed.
 
@@ -1554,7 +1554,7 @@ The above three columns show the data stored and indexed for the default fulltex
 
 Table `**fulltext**` (continued):
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -1594,7 +1594,7 @@ bla
 
 &nbsp;
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Other System Tables
 
@@ -1604,7 +1604,7 @@ This table hold the root id for each repository. Usually Nuxeo has only one repo
 
 Table `**repositories**` :
 
-<table><tbody><tr><th colspan="1">id</th><th colspan="1">name</th></tr><tr><td colspan="1">1</td><td colspan="1">default</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">id</th><th colspan="1">name</th></tr><tr><td colspan="1">1</td><td colspan="1">default</td></tr></tbody></table></div>
 
 Note that the `id` column is a `FOREIGN KEY` to `hierarchy.id`.
 
@@ -1616,7 +1616,7 @@ A new row is created automatically in the cluster nodes table when a new cluster
 
 Table `**cluster_nodes**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `nodeid`
 
@@ -1648,7 +1648,7 @@ Table `**cluster_nodes**` :
 
 2008-08-01 12:35:27.184
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Note that:
 
@@ -1659,7 +1659,7 @@ The cluster invalidations are inserted when a transaction commits, the invalidat
 
 Table `**cluster_invals**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `nodeid`
 
@@ -1739,7 +1739,7 @@ dublincore
 
 1
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Note that:
 
@@ -1755,7 +1755,7 @@ When path optimizations are enabled (this is the default on supported databases)
 
 Table `**descendants**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -1787,7 +1787,7 @@ Table `**descendants**` :
 
 5678
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Note that `descendantid` is a `FOREIGN KEY` to `hierarchy.id`.
 
@@ -1795,7 +1795,7 @@ Another more efficient optimization is used instead for PostgreSQL (see [NXP-539
 
 Table `**ancestors**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -1819,7 +1819,7 @@ Table `**ancestors**` :
 
 [1, 1234]
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 The `ancestors` column contains the array of ordered ancestors of each document (not complex properties), with the root at the beginning of the array and the direct parent at the end.
 
@@ -1831,7 +1831,7 @@ The `hierarchy_read_acl` table stores information about the complete ACL that ap
 
 Table `**hierarchy_read_acl**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `id`
 
@@ -1847,7 +1847,7 @@ Table `**hierarchy_read_acl**` :
 
 bc61ba9c8dbf034468ac361ae068912b
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 The `acl_id` is the unique identifier for the complete read ACL (merged with ancestors) for this document. It references the `id` column in the `read_acls` table, but not using a `FOREIGN KEY` for speed reasons.
 
@@ -1855,7 +1855,7 @@ The `read_acls` table stores all the possibles ACLs and their unique id.
 
 Table `**aclr**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `acl_id`
 
@@ -1871,7 +1871,7 @@ bc61ba9c8dbf034468ac361ae068912b
 
 -Reviewer,-kbauer,Administrator,administrators
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 The unique ACL id is computed through a hash to simplify unicity checks.
 
@@ -1881,7 +1881,7 @@ The `NX_GET_READ_ACLS_FOR` stored procedure has to find all ACLs for a given use
 
 Table `**aclr_user_map**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `users_id`
 
@@ -1929,11 +1929,11 @@ c5ad3c99
 
 1234
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Table `**aclr_user**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `user_id`
 
@@ -1959,7 +1959,7 @@ kbauer,members
 
 ...
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Note:
 
@@ -1970,7 +1970,7 @@ An additional table, `aclr_modified`, is used to temporarily log document ids wh
 
 Table `**aclr_modified**` :
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 `hierarchy_id`
 
@@ -1994,7 +1994,7 @@ FALSE
 
 TRUE
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Note that:
 
@@ -2008,3 +2008,23 @@ To be more efficient in read/write concurrency, when a new ACL is added the list
 ![]({{file name='aclr-trigger.png'}} ?w=500,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
+
+*   [VCS]({{page page='vcs'}})
+*   [Examples of SQL Generated by VCS]({{page page='examples-of-sql-generated-by-vcs'}})
+*   [Internal VCS Model]({{page page='internal-vcs-model'}})
+
+{{/panel}}
+
+&nbsp;
+
+&nbsp;
+
+</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

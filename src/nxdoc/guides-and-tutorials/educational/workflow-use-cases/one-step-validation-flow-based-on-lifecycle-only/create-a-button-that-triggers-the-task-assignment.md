@@ -193,7 +193,7 @@ First you have to define a user action, then, go to the bottom of the option pag
 
 **The** `**RequestForValidationChain**` **chain parameters**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 N&deg;
 
@@ -589,7 +589,7 @@ As HTML: checked
 
 viewID: `view_documents`
 
-</td></tr></tbody></table>{{#> callout type='tip' }}
+</td></tr></tbody></table></div>{{#> callout type='tip' }}
 
 In this sample, when the user validates, we call the validation chain and everything stops. We could also have decided to run another "Create Task" in that `ValidationChain`, so as to create the task for next step validation, and continue all along the life cycle of the document if necessary.
 

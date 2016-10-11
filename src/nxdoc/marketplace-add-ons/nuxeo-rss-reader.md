@@ -91,3 +91,13 @@ A new gadget is also available on your home page called **RSS Reader.**
 **
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo RSS Reader user documentation]({{page space='userdoc60' page='nuxeo-rss-reader'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

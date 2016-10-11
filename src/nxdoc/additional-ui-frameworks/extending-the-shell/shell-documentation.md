@@ -157,3 +157,14 @@ Here are instructions on how to synchronize the wiki page with the modifications
 2.  Copy/Paste the content of the exported wiki file to the Wiki Page under [Nuxeo Shell Command Index]({{page space='admindoc60' page='nuxeo-shell-command-index'}}) corresponding to the updated namespace.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
+
+*   [Extending The Shell]({{page page='extending-the-shell'}})
+*   [Nuxeo Shell administration documentation]({{page space='admindoc60' page='nuxeo-shell'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

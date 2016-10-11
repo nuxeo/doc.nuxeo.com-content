@@ -163,7 +163,7 @@ Here is a the simplest contribution, to allow cross-domain request on the whole&
 
 Here is the list of all contribution attributes. There are all optional.
 
-<table><tbody><tr><th colspan="1">Attribute name</th><th colspan="1">Description</th><th colspan="1">Default value</th><th colspan="1"><span style="color: rgb(102,153,204);">Possible values</span> <span style="color: rgb(102,153,204);">(</span><span style="color: rgb(102,153,204);">"|"</span> <span style="color: rgb(102,153,204);">separates possible values)</span></th></tr><tr><td colspan="1">`allowGenericHttpRequests`</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Attribute name</th><th colspan="1">Description</th><th colspan="1">Default value</th><th colspan="1"><span style="color: rgb(102,153,204);">Possible values</span> <span style="color: rgb(102,153,204);">(</span><span style="color: rgb(102,153,204);">"|"</span> <span style="color: rgb(102,153,204);">separates possible values)</span></th></tr><tr><td colspan="1">`allowGenericHttpRequests`</td><td colspan="1">
 
 If false, only valid and accepted CORS requests that be allowed (strict CORS filtering).
 
@@ -191,7 +191,7 @@ Indicates whether user credentials, such as cookies, HTTP authentication or clie
 
 Indicates how long the results of a preflight request can be cached by the web browser, in seconds.
 
-</td><td colspan="1">`-1`</td><td colspan="1">`integer`</td></tr></tbody></table>
+</td><td colspan="1">`-1`</td><td colspan="1">`integer`</td></tr></tbody></table></div>
 
 For instance, a `fooly` complete contribution could looks like:
 

@@ -570,7 +570,7 @@ Note that when using an Elasticsearch page provider you can use [NXQL hints]({{p
 
 &nbsp;
 
-<table><tbody><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
 
 <div class="container" title="Hint: double-click to select code">
 
@@ -582,7 +582,7 @@ Note that when using an Elasticsearch page provider you can use [NXQL hints]({{p
 
 </div>
 
-</td></tr></tbody></table></div>
+</td></tr></tbody></table></div></div>
 
 </div>
 

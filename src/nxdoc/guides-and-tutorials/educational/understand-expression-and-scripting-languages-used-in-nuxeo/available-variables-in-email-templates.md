@@ -53,7 +53,7 @@ In your email templates, you have access to different variables depending if you
 
 Variables that can be used to set up an email in an automation chain.
 
-*   `${Document}` **-** The context document. This is the document on which some action was done and the [send mail operation](http://doc.nuxeo.com/explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform 6.0/viewOperation/Notification.SendMail) was triggered. See [Use of MVEL in Automation chains (document wrapper)]({{page page='use-of-mvel-in-automation-chains'}}) for details.
+*   `${Document}` **-** The context document. This is the document on which some action was done and the [send mail operation](/explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform 6.0/viewOperation/Notification.SendMail) was triggered. See [Use of MVEL in Automation chains (document wrapper)]({{page page='use-of-mvel-in-automation-chains'}}) for details.
 *   `${docUrl}` - The document URL.
 *   `${viewId}` **-** The view of the document which will be displayed by the document URL.
 *   `${subject}` - The mail subject.
@@ -99,3 +99,16 @@ Variables that can be used when a notification is set up from a workflow node's 
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
+*   [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
+*   [How to Customize Email Templates]({{page page='how-to-customize-email-templates'}})
+*   [Alerts]({{page space='userdoc60' page='alerts'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -139,3 +139,13 @@ MimeTypePreviewer mtPreviewer = Framework.getService(PreviewAdapterManager.class
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
+
+*   [Preview]({{page space='userdoc60' page='preview'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

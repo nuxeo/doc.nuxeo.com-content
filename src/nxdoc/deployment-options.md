@@ -262,7 +262,7 @@ You can configure&nbsp;
     *   SQL Database
     *   S3
 
-<table><tbody><tr><td colspan="1">![]({{file name='VCS1.png'}} ?w=200,thumbnail=true)</td><td colspan="1">![]({{file name='VCS2.png'}} ?w=200,thumbnail=true)</td><td colspan="1">![]({{file name='DBS.png'}} ?w=200,h=317)</td></tr><tr><td colspan="1">**_PosgreSQL + FileSystem_**</td><td colspan="1">_**Oracle + S3**_</td><td colspan="1">_**MongoDB + S3**_</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">![]({{file name='VCS1.png'}} ?w=200,thumbnail=true)</td><td colspan="1">![]({{file name='VCS2.png'}} ?w=200,thumbnail=true)</td><td colspan="1">![]({{file name='DBS.png'}} ?w=200,h=317)</td></tr><tr><td colspan="1">**_PosgreSQL + FileSystem_**</td><td colspan="1">_**Oracle + S3**_</td><td colspan="1">_**MongoDB + S3**_</td></tr></tbody></table></div>
 
 ### <span style="color: rgb(0,0,0);">Indexes</span>
 
@@ -338,8 +338,8 @@ For more information, please see the page [Setting up a HA Configuration Using t
 
 ### Scaling out processing&nbsp;
 
-<table><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">![]({{file name='cluster.png'}} ?w=500)</td><td colspan="1">Nuxeo Cluster system by itself allows to scale out processing :
-you can add new Nuxeo nodes as the number of requests increase.</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">![]({{file name='cluster.png'}} ?w=500)</td><td colspan="1">Nuxeo Cluster system by itself allows to scale out processing :
+you can add new Nuxeo nodes as the number of requests increase.</td></tr></tbody></table></div>
 
 ### Dedicated Processing nodes
 
@@ -536,3 +536,16 @@ The Nuxeo Platform being flexible, you can use several add-ons together to achie
 ![]({{file name='distant.png'}} ?w=500,h=417,border=true)
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
+
+*   [Nuxeo and Redis]({{page page='nuxeo-and-redis'}})
+*   [Nuxeo Clustering Configuration]({{page space='admindoc60' page='nuxeo-clustering-configuration'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

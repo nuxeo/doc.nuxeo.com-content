@@ -143,3 +143,15 @@ If you don't want to use Studio and prefer using your IDE, you can just [add a c
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo CSV]({{page page='nuxeo-csv'}})
+*   [Marketplace Add-Ons]({{page page='marketplace-add-ons'}})
+*   [How-To Index]({{page page='how-to-index'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

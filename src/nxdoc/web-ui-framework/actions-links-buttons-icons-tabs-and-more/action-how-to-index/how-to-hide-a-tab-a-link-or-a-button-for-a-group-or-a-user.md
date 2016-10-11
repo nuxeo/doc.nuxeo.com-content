@@ -31,67 +31,67 @@ confluence:
     source_link: >-
         /display/NXDOC60/How+to+Hide+a+Tab%2C+a+Link+or+a+Button+for+a+Group+or+a+User
 history:
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-08 18:47'
         message: dd link to action filters configuratio
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 21:44'
         message: ''
         version: '12'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-01 12:12'
         message: ''
         version: '11'
-    -
+    - 
         author: Anne Jubert
         date: '2014-11-24 16:22'
         message: ''
         version: '10'
-    -
+    - 
         author: Thierry Martins
         date: '2014-11-07 17:01'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-07 16:34'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-07 16:33'
         message: ''
         version: '7'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-06 17:22'
         message: 'NXDOC-441: Add a link to the ''how to'' for activate the dev mode'
         version: '6'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-06 16:51'
         message: 'NXDOC-441: Update layout of the page'
         version: '5'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-06 16:02'
         message: ''
         version: '4'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-06 12:50'
         message: 'NXDOC-441: Add the Studio contribution'
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-06 09:34'
         message: 'Format, add links'
         version: '2'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-05 18:22'
         message: ''

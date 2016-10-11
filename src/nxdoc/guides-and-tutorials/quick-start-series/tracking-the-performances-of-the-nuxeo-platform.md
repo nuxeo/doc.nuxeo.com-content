@@ -340,7 +340,7 @@ Our advice is to use a Gigabit Ethernet connection and check that any router/fir
 
 Here are some example of the command _ping -s PACKETSIZE_ in the same network (MTU 1500) that can give you an idea of the latency added to each JDBC round trip:
 
-<table><tbody><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
 
 **Ping packet size**
 
@@ -404,7 +404,7 @@ default
 
 6.0543131
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 While the database will process a simple request in less than 0.05ms most of the JDBC time will be spend on the network
 
@@ -707,3 +707,14 @@ The bench procedure can be customized to validate customer installation:
 *   Scripts can be combined to create realistic loads.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in developer documentation'}}
+
+*   [Performance Recommendations]({{page page='performance-recommendations'}})
+*   [Managing Performance]({{page page='managing-performance'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>
