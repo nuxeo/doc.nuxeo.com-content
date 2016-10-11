@@ -72,3 +72,17 @@ if (!status.isBinariesGCInProgress()) {
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Deleting Content]({{page space='userdoc58' page='deleting-content'}}) (User documentation)
+*   [Managing Deleted Documents]({{page space='userdoc58' page='managing-deleted-documents'}}) (User documentation)
+*   [Deleting Documents]({{page space='nxdoc58' page='deleting-documents'}}) (Developer documentation)
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

@@ -74,7 +74,7 @@ history:
 
 ## JBoss
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 &nbsp;
 
@@ -362,11 +362,11 @@ x
 
 &nbsp;
 
-</td></tr><tr><th colspan="1">Nuxeo Platform 5.8</th><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr></tbody></table>
+</td></tr><tr><th colspan="1">Nuxeo Platform 5.8</th><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>
 
 ## Apache Tomcat
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 &nbsp;
 
@@ -450,4 +450,4 @@ x
 
 &nbsp;
 
-</td></tr><tr><th colspan="1">Nuxeo Platform 5.8</th><td colspan="1">&nbsp;</td><td colspan="1">x (since Nuxeo 5.7.2)</td></tr></tbody></table>{{! /multiexcerpt}}
+</td></tr><tr><th colspan="1">Nuxeo Platform 5.8</th><td colspan="1">&nbsp;</td><td colspan="1">x (since Nuxeo 5.7.2)</td></tr></tbody></table></div>{{! /multiexcerpt}}

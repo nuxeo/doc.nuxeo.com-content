@@ -42,7 +42,7 @@ The pages below are about advanced configurations that are not mandatory and are
 
 *   [Adding Custom Templates]({{page space='ADMINDOC58' page='Adding Custom+Templates'}})
 *   [Changing Context Path]({{page space='ADMINDOC58' page='Changing Context+Path'}})
-*   [Configuring User & Group Storage and Authentication](https://doc.nuxeo.com/pages/viewpage.action?pageId=16810014)
+*   [Configuring User & Group Storage and Authentication](/pages/viewpage.action?pageId=16810014)
 *   [Creating a Nuxeo Static WAR]({{page space='ADMINDOC58' page='Creating a+Nuxeo+Static+WAR'}})
 *   [Firewall Consideration]({{page space='ADMINDOC58' page='Firewall Consideration'}})
 *   [JDBC Datasource Configuration]({{page space='ADMINDOC58' page='JDBC Datasource+Configuration'}})

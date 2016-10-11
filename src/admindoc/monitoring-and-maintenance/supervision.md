@@ -188,7 +188,7 @@ You can use JVisualVM or similar tool to access Nuxeo JMX interface.
 
 JMX Remote access is by default disabled. You can activate it by adding the required option (for example in [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}))
 
-<table><tbody><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
 
 <div class="container" title="Hint: double-click to select code">
 
@@ -196,7 +196,7 @@ JMX Remote access is by default disabled. You can activate it by adding the requ
 
 </div>
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 However, you will then have to manage security for this access, since there is no authentication by default.
 

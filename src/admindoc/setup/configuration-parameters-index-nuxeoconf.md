@@ -646,7 +646,7 @@ Here is a list of available parameters for `nuxeo.conf`. This list may not be ex
 
 Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Parameter
 
@@ -1981,7 +1981,7 @@ Also turning this option to false enable PostgreSQL and Oracle to use an index o
 
 Since 5.8 HF-13 - Enable/Disable multi-line strings escaped with a trailing \ when using `Document.Update` or `Workflow.SetWorkflowVariables` Automation operations.
 
-</td></tr><tr><td colspan="1">`org.nuxeo.ecm.platform.query.nxql.defaultNavigationResults`</td><td colspan="1">200</td><td colspan="1">Since Nuxeo 5.6\. [Maximum number of results for page providers]({{page space='nxdoc' page='content-views#maxresults'}}).</td></tr></tbody></table>
+</td></tr><tr><td colspan="1">`org.nuxeo.ecm.platform.query.nxql.defaultNavigationResults`</td><td colspan="1">200</td><td colspan="1">Since Nuxeo 5.6\. [Maximum number of results for page providers]({{page space='nxdoc' page='content-views#maxresults'}}).</td></tr></tbody></table></div>
 
 &nbsp;
 

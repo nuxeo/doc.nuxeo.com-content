@@ -59,3 +59,16 @@ MySQL 5.6 and MySQL 5.7 compatibility needs an update in the ROW_FORMAT used for
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related content in this documentation'}}
+
+*   [Connecting Nuxeo to the Database]({{page page='connecting-nuxeo-to-the-database'}})
+*   [How to Estimate Disk and Database Usage]({{page page='how-to-estimate-disk-and-database-usage'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

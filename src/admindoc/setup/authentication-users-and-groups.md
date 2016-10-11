@@ -20,107 +20,107 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/XYAAAQ'
     source_link: /display/ADMINDOC58/Authentication%2C+users+and+groups
 history:
-    -
+    - 
         author: Anonymous
         date: '2013-07-08 17:39'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-08 17:33'
         message: Fixed formatting
         version: '20'
-    -
+    - 
         author: Laurent Doguin
         date: '2013-07-04 11:11'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-11 12:21'
         message: Migrated to Confluence 4.0
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-11 12:21'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-04 17:32'
         message: ''
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-03 15:41'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-03 15:41'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-03 15:41'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-03 15:38'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2011-02-23 14:53'
         message: formatting
         version: '11'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-02-07 17:00'
         message: ''
         version: '10'
-    -
+    - 
         author: Thierry Delprat
         date: '2011-02-07 16:54'
         message: ''
         version: '9'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-12-27 10:19'
         message: ''
         version: '8'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-12-22 11:52'
         message: ''
         version: '7'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-12-22 11:36'
         message: ''
         version: '6'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 16:35'
         message: ''
         version: '5'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 16:31'
         message: ''
         version: '4'
-    -
+    - 
         author: Quentin Lamerand
         date: '2010-10-19 15:23'
         message: ''
         version: '3'
-    -
+    - 
         author: Admin name placeholder
         date: '2010-03-01 13:34'
         message: ''
         version: '2'
-    -
+    - 
         author: Admin name placeholder
         date: '2010-03-01 13:34'
         message: ''

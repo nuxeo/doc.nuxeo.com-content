@@ -124,7 +124,7 @@ Here is the way to create your own static WAR distribution:
 1.  Download a Nuxeo Tomcat distribution.
 2.  Unzip it in somewhere (let's call it `$NUXEO_HOME`).
 3.  Copy your specific bundles into `$NUXEO_HOME/nxserver/bundles/`.
-4.  Create your [own templates](http://doc.nuxeo.com/x/LANc) and configuration files as needed.
+4.  Create your [own templates](/x/LANc) and configuration files as needed.
 5.  Start your Nuxeo Tomcat instance as usual .
 6.  Check that your Nuxeo is well configured (database configuration, ldap configuration, etc...).
 7.  Stop your Nuxeo instance.

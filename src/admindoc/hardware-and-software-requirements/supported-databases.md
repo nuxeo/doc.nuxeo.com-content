@@ -72,7 +72,7 @@ history:
 
 &nbsp;The Nuxeo Platform supports the following databases.
 
-<table><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Jackrabbit</th><th colspan="1">H2</th><th colspan="1">PostgreSQL</th><th colspan="1">MySQL</th><th colspan="1">Oracle</th><th colspan="1">SQL Server</th><th colspan="1">DB2</th></tr><tr><th colspan="1">Nuxeo EP 5.1.x</th><td colspan="1">1.3.3</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Jackrabbit</th><th colspan="1">H2</th><th colspan="1">PostgreSQL</th><th colspan="1">MySQL</th><th colspan="1">Oracle</th><th colspan="1">SQL Server</th><th colspan="1">DB2</th></tr><tr><th colspan="1">Nuxeo EP 5.1.x</th><td colspan="1">1.3.3</td><td colspan="1">
 
 <span style="color: rgb(0,0,0);">-</span>
 
@@ -279,7 +279,7 @@ history:
 2012
 2012 (Azure)
 
-</td><td colspan="1">&nbsp;</td></tr></tbody></table>
+</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>
 
 Note that only the latest service pack is supported for a given version. For the open source databases this means upgrading to the latest minor version (ex: MySQL 5.5.28 or PostgreSQL 9.2.1 at the time of this writing).&nbsp;For For Oracle this means the latest patchset (ex: 11.2.0.3 at the time of this writing). For SQL Server this means the latest service pack (ex:&nbsp;Service Pack 2,&nbsp;10.50.4000&nbsp;&nbsp;at the time of this writing).
 

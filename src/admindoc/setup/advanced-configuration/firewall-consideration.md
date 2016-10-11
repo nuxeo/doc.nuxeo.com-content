@@ -57,7 +57,7 @@ Refer to [mod_proxy](http://httpd.apache.org/docs/2.2/mod/mod_proxy.html) docume
 
 Since Nuxeo Platform 5.5.0, database pool can try to reconnect on invalid connection ([NXP-7528](https://jira.nuxeo.com/browse/NXP-7528)) but it is better to enable the keep alive on your database. For instance using PostgreSQL, this can be achieved with the following options:
 
-<table><tbody><tr><th colspan="1">Option</th><th colspan="1">Value</th><th colspan="1">Description</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Option</th><th colspan="1">Value</th><th colspan="1">Description</th></tr><tr><td colspan="1">
 
 <pre>tcp_keepalives_count</pre>
 
@@ -69,7 +69,7 @@ Since Nuxeo Platform 5.5.0, database pool can try to reconnect on invalid connec
 
 <pre>tcp_keepalives_interval</pre>
 
-</td><td colspan="1">60</td><td colspan="1">Time between TCP keepalive retransmits.</td></tr></tbody></table>
+</td><td colspan="1">60</td><td colspan="1">Time between TCP keepalive retransmits.</td></tr></tbody></table></div>
 
 ## Firewall Between Nuxeo and LDAP
 

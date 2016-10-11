@@ -204,7 +204,7 @@ See [the Environment variables page]({{page page='recommended-configurations#def
 
 ### Options
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Option
 
@@ -296,11 +296,11 @@ Show detailed help
 
 (Since Nuxeo 5.6) Output XML for mp-commands
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### Commands {{> anchor 'nuxeoctl-commands'}}
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Command
 
@@ -521,7 +521,7 @@ Install all the available hotfixes for the current platform (requires a register
 
 Get all the available upgrades for the Marketplace packages currently installed (requires a registered instance).
 
-</td></tr><tr><td colspan="1">`mp-show`</td><td colspan="1">(Since Nuxeo 5.7.1) Show Marketplace package(s) information. You must provide the package file(s), name(s) or ID(s) as parameter.</td></tr></tbody></table>{{#> callout type='tip' }}
+</td></tr><tr><td colspan="1">`mp-show`</td><td colspan="1">(Since Nuxeo 5.7.1) Show Marketplace package(s) information. You must provide the package file(s), name(s) or ID(s) as parameter.</td></tr></tbody></table></div>{{#> callout type='tip' }}
 
 Most `mp-*` commands will have different behavior if the instance is registered or not (they need an authenticated access to the private Marketplace channels).
 If the server has no access to Internet, `mp-*` commands will only use packages available in the local cache.
@@ -550,7 +550,7 @@ java [-Dlauncher.java.opts="JVM options"] [-Dnuxeo.home="/path/to/nuxeo"] [-Dnux
 
 ### Java Options
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Option
 
@@ -600,7 +600,7 @@ Launcher with a graphical user interface.
 On Linux/Mac OS X, default is in headless/console mode.
 On Windows, the `gui` option is activated by default.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### Commands
 
@@ -616,7 +616,7 @@ Exit code values are following the [Linux Standard Base Core Specification 4.1](
 
 If the status command was requested, nuxeoctl will return the following exit status codes:
 
-<table><tbody><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
 
 0
 
@@ -640,11 +640,11 @@ program is not running
 
 program or service status is unknown
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 In case of an error while processing any action except for status, nuxeoctl shall print an error message and exit with a non-zero status code:
 
-<table><tbody><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
 
 1
 
@@ -700,4 +700,4 @@ program is not configured
 
 program is not running
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>

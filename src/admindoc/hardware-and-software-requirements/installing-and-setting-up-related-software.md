@@ -22,369 +22,369 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/CoAAAQ'
     source_link: /display/ADMINDOC58/Installing+and+Setting+up+Related+Software
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-02-12 11:02'
         message: 'ix Homebrew  '
         version: '73'
-    -
+    - 
         author: Guillaume Renard
         date: '2015-08-11 12:20'
         message: ''
         version: '72'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-03 11:23'
         message: ''
         version: '71'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-02 14:41'
         message: ''
         version: '70'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-02 14:24'
         message: Add warning about FFmpeg libfaac support
         version: '69'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-02 12:30'
         message: ffmpeg -> FFmpeg
         version: '68'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-19 10:34'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '67'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-19 10:34'
         message: ''
         version: '66'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-19 10:30'
         message: ''
         version: '65'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-18 14:12'
         message: ''
         version: '64'
-    -
+    - 
         author: Michaël Vachette
         date: '2013-11-15 14:48'
         message: ''
         version: '63'
-    -
+    - 
         author: Michaël Vachette
         date: '2013-11-15 13:55'
         message: ''
         version: '62'
-    -
+    - 
         author: Michaël Vachette
         date: '2013-11-15 12:18'
         message: ''
         version: '61'
-    -
+    - 
         author: Michaël Vachette
         date: '2013-11-15 11:41'
         message: ''
         version: '60'
-    -
+    - 
         author: Michaël Vachette
         date: '2013-11-15 11:34'
         message: ''
         version: '59'
-    -
+    - 
         author: Michaël Vachette
         date: '2013-11-15 11:33'
         message: ''
         version: '58'
-    -
+    - 
         author: Michaël Vachette
         date: '2013-11-15 11:32'
         message: ''
         version: '57'
-    -
+    - 
         author: Michaël Vachette
         date: '2013-11-15 11:27'
         message: ''
         version: '56'
-    -
+    - 
         author: Michaël Vachette
         date: '2013-11-15 11:22'
         message: ''
         version: '55'
-    -
+    - 
         author: Michaël Vachette
         date: '2013-11-15 11:18'
         message: ''
         version: '54'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-12 17:13'
         message: Added ghostscript to the requirements
         version: '53'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-14 15:57'
         message: ''
         version: '52'
-    -
+    - 
         author: Harlan Brown
         date: '2013-10-07 10:33'
         message: ''
         version: '51'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-27 17:29'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '50'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-27 17:29'
         message: Added link to the Windows poppler binary
         version: '49'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-27 15:44'
         message: ''
         version: '48'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-26 14:24'
         message: ''
         version: '47'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-26 14:21'
         message: Removed duplicated content
         version: '46'
-    -
+    - 
         author: Benoit Delbosc
         date: '2013-08-22 17:46'
         message: ''
         version: '45'
-    -
+    - 
         author: Benoit Delbosc
         date: '2013-08-22 17:44'
         message: ''
         version: '44'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-25 15:47'
         message: Install poppler instead of pdftohtml
         version: '43'
-    -
+    - 
         author: Julien Carsique
         date: '2013-07-10 16:44'
         message: ''
         version: '42'
-    -
+    - 
         author: Julien Carsique
         date: '2013-07-10 16:43'
         message: ''
         version: '41'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2013-06-29 16:13'
         message: ''
         version: '40'
-    -
+    - 
         author: Julien Carsique
         date: '2013-06-18 12:40'
         message: ''
         version: '39'
-    -
+    - 
         author: Solen Guitter
         date: '2013-05-24 11:36'
         message: Added title to non-latin fonts tip
         version: '38'
-    -
+    - 
         author: Florent Guillaume
         date: '2013-05-23 13:58'
         message: ''
         version: '37'
-    -
+    - 
         author: Laurent Doguin
         date: '2013-02-07 14:13'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '36'
-    -
+    - 
         author: Laurent Doguin
         date: '2013-02-07 14:13'
         message: change ffmpeg build site adress
         version: '35'
-    -
+    - 
         author: Julien Carsique
         date: '2013-01-10 14:46'
         message: fix APT links
         version: '34'
-    -
+    - 
         author: Solen Guitter
         date: '2013-01-10 12:42'
         message: ''
         version: '33'
-    -
+    - 
         author: Antoine Taillefer
         date: '2012-11-05 23:29'
         message: ''
         version: '32'
-    -
+    - 
         author: Antoine Taillefer
         date: '2012-11-05 20:07'
         message: ''
         version: '31'
-    -
+    - 
         author: Solen Guitter
         date: '2012-10-10 18:11'
         message: ''
         version: '30'
-    -
+    - 
         author: Florent Guillaume
         date: '2012-04-15 18:21'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '29'
-    -
+    - 
         author: Florent Guillaume
         date: '2012-04-15 18:21'
         message: Migrated to Confluence 4.0
         version: '28'
-    -
+    - 
         author: Florent Guillaume
         date: '2012-04-15 18:21'
         message: ''
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2012-03-28 18:12'
         message: ''
         version: '26'
-    -
+    - 
         author: Julien Carsique
         date: '2012-02-02 01:11'
         message: ''
         version: '25'
-    -
+    - 
         author: Mathieu Guillaume
         date: '2012-01-09 14:36'
         message: ''
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2012-01-04 16:35'
         message: Added tip about .exe installer
         version: '23'
-    -
+    - 
         author: Olivier Grisel
         date: '2012-01-02 12:21'
         message: apt link for ufraw
         version: '22'
-    -
+    - 
         author: Julien Carsique
         date: '2012-01-02 12:15'
         message: ''
         version: '21'
-    -
+    - 
         author: Julien Carsique
         date: '2012-01-02 12:15'
         message: ''
         version: '20'
-    -
+    - 
         author: Julien Carsique
         date: '2012-01-02 12:07'
         message: ''
         version: '19'
-    -
+    - 
         author: Julien Carsique
         date: '2012-01-02 12:01'
         message: ''
         version: '18'
-    -
+    - 
         author: Julien Carsique
         date: '2012-01-02 11:59'
         message: ''
         version: '17'
-    -
+    - 
         author: Julien Carsique
         date: '2011-12-09 17:41'
         message: ''
         version: '16'
-    -
+    - 
         author: Julien Carsique
         date: '2011-12-09 17:36'
         message: add brew install ffmpeg
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2011-12-07 15:17'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2011-07-26 14:38'
         message: ''
         version: '13'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-07-18 17:15'
         message: ''
         version: '12'
-    -
+    - 
         author: Wojciech Sulejman
         date: '2011-07-15 17:12'
         message: >-
             Update from the OOoDaemonService to OOoManagerService config
             starting with 5.4.0
         version: '11'
-    -
+    - 
         author: Julien Carsique
         date: '2011-06-27 16:30'
         message: info about libwpd thirdparty
         version: '10'
-    -
+    - 
         author: Julien Carsique
         date: '2011-05-13 14:34'
         message: ''
         version: '9'
-    -
+    - 
         author: Julien Carsique
         date: '2011-05-13 14:32'
         message: Add information about LibreOffice
         version: '8'
-    -
+    - 
         author: Julien Carsique
         date: '2011-04-05 16:56'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-10 18:01'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-10 18:00'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-10 17:56'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-10 17:52'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-10 17:50'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-10 17:48'
         message: ''

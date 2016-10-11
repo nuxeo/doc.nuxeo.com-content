@@ -56,3 +56,15 @@ Since Tomcat 7, drag and drop doesn't work on Internet Explorer because of a sec
     Users can now [use the Internet Explorer drag and drop extension]({{page space='userdoc58' page='working-using-drag-and-drop'}}).
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Drag and Drop Compatibility Table]({{page space='userdoc58' page='drag-and-drop-compatibility-table'}})
+*   [Working Using Drag and Drop]({{page space='userdoc58' page='working-using-drag-and-drop'}})
+*   [Drag and Drop Service for Content Capture (HTML5-Based)]({{page space='nxdoc58' page='drag-and-drop-service-for-content-capture-html5-based'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

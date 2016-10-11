@@ -352,3 +352,19 @@ We recommend using a near-infinite [wait_timeout](http://dev.mysql.com/doc/refma
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related content in admin documentation'}}
+
+*   [Configuring PostgreSQL]({{page page='configuring-postgresql'}})
+*   [Configuring MS SQL Server]({{page page='configuring-ms-sql-server'}})
+*   [Configuring Oracle]({{page page='configuring-oracle'}})
+*   [Configuring MySQL]({{page page='configuring-mysql'}})
+*   [Configuration Templates]({{page page='configuration-templates'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

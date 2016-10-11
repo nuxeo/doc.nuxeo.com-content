@@ -148,7 +148,7 @@ Note also that FINER and FINEST logs will be ignored anyway.
 
 Here are descriptions of the most common logs coming from Nuxeo or its third-parties. The list is not exhaustive but aims at helping to understand the most common logs you may encounter while using the Nuxeo platform. If you don't find what you need here, you can check [answers.nuxeo.com](http://answers.nuxeo.com/) if someone already asked about it. You can also google third parties logs if they are not in this list.
 
-<table><tbody><tr><th colspan="1">Level</th><th colspan="1">Source
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Level</th><th colspan="1">Source
 Message</th><th colspan="1">Cause</th></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">
 
 `Cannot set databaseTransactionEnabled attribute to false for model publication, other models already exist with value true`
@@ -276,7 +276,7 @@ WARN
 
 <pre>Session invoked in a container without a transaction active: turn on debug logs for more information about the faulty call.</pre>
 
-</td><td colspan="1">&nbsp;See {{jira server='Nuxeo Issue Tracker' key='NXP-7170'}} upgrade notes.</td></tr></tbody></table>
+</td><td colspan="1">&nbsp;See {{jira server='Nuxeo Issue Tracker' key='NXP-7170'}} upgrade notes.</td></tr></tbody></table></div>
 
 &nbsp;
 

@@ -262,3 +262,13 @@ END;
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related sections'}}
+
+*   [Logs Analysis]({{page page='logs-analysis'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

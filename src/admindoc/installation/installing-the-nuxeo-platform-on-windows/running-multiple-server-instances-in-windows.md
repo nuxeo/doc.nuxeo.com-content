@@ -114,3 +114,14 @@ To launch multiple instances of Nuxeo you'd need to remove the registry key (set
 Note that you'd also want to have different `nuxeo.data.dir`, `nuxeo.log.dir`, `nuxeo.tmp.dir`, `nuxeo.server.http.port` and `nuxeo.server.tomcat-admin.port` in the two `nuxeo.conf` files (you can set `nuxeo.server.ajp.port` to 0 to disable AJP if you don't use it).
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Installation on Windows Documentation'}}
+
+*   [Installing the Nuxeo Platform on Windows]({{page page='installing-the-nuxeo-platform-on-windows'}})
+*   [Installing the Nuxeo Platform as a Windows Service]({{page page='installing-the-nuxeo-platform-as-a-windows-service'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>
