@@ -15,18 +15,19 @@ confluence:
     shortlink: X4eN
     shortlink_source: 'https://doc.nuxeo.com/x/X4eN'
     source_link: /display/CORG/Working+on+Nuxeo+sources
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 16:34'
         message: 'emove children display macro   '
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 16:58'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 16:58'
         message: ''

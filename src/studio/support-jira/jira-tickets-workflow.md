@@ -18,28 +18,29 @@ confluence:
     shortlink: C4EZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/C4EZAQ'
     source_link: /display/Studio/JIRA+Tickets+Workflow
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-30 16:48'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-03 15:34'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 17:08'
         message: Formatting
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:50'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:05'
         message: ''

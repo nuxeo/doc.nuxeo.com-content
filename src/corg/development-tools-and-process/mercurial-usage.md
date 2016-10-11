@@ -18,113 +18,114 @@ confluence:
     shortlink: Fwk7
     shortlink_source: 'https://doc.nuxeo.com/x/Fwk7'
     source_link: /display/CORG/Mercurial+Usage
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-09-07 15:13'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-09-07 10:03'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-09-07 10:02'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-09-07 09:25'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-02 07:43'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-03 16:53'
         message: ''
         version: '17'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-17 11:29'
         message: Migrated to Confluence 4.0
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-17 11:29'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-11-09 17:52'
         message: ''
         version: '14'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2011-10-01 12:49'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-02 15:59'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-11-08 19:06'
         message: ''
         version: '11'
-    - 
+    -
         author: stan
         date: '2010-10-28 18:11'
         message: ''
         version: '10'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-10-26 13:05'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 11:43'
         message: ''
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 15:39'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 15:36'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 15:27'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 15:26'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 15:25'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 15:23'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 14:27'
         message: ''

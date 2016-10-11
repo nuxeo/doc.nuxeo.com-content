@@ -20,33 +20,34 @@ confluence:
     shortlink: woKE
     shortlink_source: 'https://doc.nuxeo.com/x/woKE'
     source_link: /display/IDEDOC/Browsing+a+Studio+Project+Content
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 15:36'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-27 15:25'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-04 17:19'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-04 17:19'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-03 14:36'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-28 17:02'
         message: ''

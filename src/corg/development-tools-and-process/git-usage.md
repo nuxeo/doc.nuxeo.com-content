@@ -18,507 +18,508 @@ confluence:
     shortlink: BgBi
     shortlink_source: 'https://doc.nuxeo.com/x/BgBi'
     source_link: /display/CORG/Git+Usage
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-02 07:41'
         message: ''
         version: '100'
-    - 
+    -
         author: Julien Carsique
         date: '2016-07-28 13:31'
         message: Git LFS
         version: '99'
-    - 
+    -
         author: Julien Carsique
         date: '2016-06-24 15:22'
         message: ''
         version: '98'
-    - 
+    -
         author: Julien Carsique
         date: '2016-06-24 15:14'
         message: fetch pull requests
         version: '97'
-    - 
+    -
         author: Julien Carsique
         date: '2016-06-24 15:07'
         message: fetch pull requests
         version: '96'
-    - 
+    -
         author: Julien Carsique
         date: '2016-03-21 11:18'
         message: ''
         version: '95'
-    - 
+    -
         author: Julien Carsique
         date: '2016-03-21 11:18'
         message: pull request merge instructions
         version: '94'
-    - 
+    -
         author: Julien Carsique
         date: '2016-02-15 09:59'
         message: curl -L because of redirect to patch-diff.githubusercontent.com
         version: '93'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-25 11:27'
         message: ''
         version: '92'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-25 11:07'
         message: ''
         version: '91'
-    - 
+    -
         author: Thomas Roger
         date: '2015-11-24 13:46'
         message: ''
         version: '90'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-23 13:43'
         message: >-
-            prepare_repo.sh is required until 
+            prepare_repo.sh is required until
             https://github.com/robinst/git-merge-repos/issues/3
         version: '89'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-30 16:16'
         message: ''
         version: '88'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-15 13:16'
         message: git-up
         version: '87'
-    - 
+    -
         author: Arnaud Kervern
         date: '2015-10-09 09:03'
         message: ''
         version: '86'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-25 16:19'
         message: Fix page layout to use 2/3 layout
         version: '85'
-    - 
+    -
         author: Julien Carsique
         date: '2015-02-26 15:40'
         message: ''
         version: '84'
-    - 
+    -
         author: Julien Carsique
         date: '2015-02-26 15:39'
         message: Normalize end of lines
         version: '83'
-    - 
+    -
         author: Julien Carsique
         date: '2015-02-12 17:13'
         message: NXDOC-535
         version: '82'
-    - 
+    -
         author: Julien Carsique
         date: '2015-01-30 14:49'
         message: ''
         version: '81'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-10-27 10:04'
         message: ''
         version: '80'
-    - 
+    -
         author: Thomas Roger
         date: '2014-10-23 19:30'
         message: ''
         version: '79'
-    - 
+    -
         author: Julien Carsique
         date: '2014-10-13 16:12'
         message: ''
         version: '78'
-    - 
+    -
         author: Julien Carsique
         date: '2014-10-08 14:40'
         message: ''
         version: '77'
-    - 
+    -
         author: Julien Carsique
         date: '2014-10-08 14:36'
         message: ''
         version: '76'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 14:21'
         message: ''
         version: '75'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 14:20'
         message: >-
             Move section Use Case Moving an Add-on into a Nuxeo-Features out of
             warning
         version: '74'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-10-08 14:06'
         message: ''
         version: '73'
-    - 
+    -
         author: Julien Carsique
         date: '2014-09-15 17:03'
         message: ''
         version: '72'
-    - 
+    -
         author: Julien Carsique
         date: '2014-09-15 16:58'
         message: NXP-14878 - extract repository
         version: '71'
-    - 
+    -
         author: Julien Carsique
         date: '2014-09-15 16:10'
         message: NXP-14878 - merge repositories
         version: '70'
-    - 
+    -
         author: Julien Carsique
         date: '2014-07-29 17:39'
         message: ''
         version: '69'
-    - 
+    -
         author: Julien Carsique
         date: '2014-07-29 17:37'
         message: ''
         version: '68'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-02 14:55'
         message: ''
         version: '67'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-02 14:54'
         message: ''
         version: '66'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-17 10:32'
         message: ''
         version: '65'
-    - 
+    -
         author: Julien Carsique
         date: '2014-06-16 18:25'
         message: ''
         version: '64'
-    - 
+    -
         author: Julien Carsique
         date: '2014-06-16 18:25'
         message: ''
         version: '63'
-    - 
+    -
         author: Julien Carsique
         date: '2013-07-30 12:57'
         message: ''
         version: '62'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-28 16:37'
         message: ''
         version: '61'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-28 16:36'
         message: Fixed typos
         version: '60'
-    - 
+    -
         author: Julien Carsique
         date: '2013-06-20 10:44'
         message: ''
         version: '59'
-    - 
+    -
         author: Julien Carsique
         date: '2013-06-20 10:11'
         message: ''
         version: '58'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-30 12:07'
         message: ''
         version: '57'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-23 15:13'
         message: ''
         version: '56'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-23 15:06'
         message: ''
         version: '55'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-02-21 17:24'
         message: add help to remove remote branch
         version: '54'
-    - 
+    -
         author: Julien Carsique
         date: '2013-01-28 16:41'
         message: GitHub pull-request tip
         version: '53'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-03 17:06'
         message: ''
         version: '52'
-    - 
+    -
         author: Antoine Taillefer
         date: '2012-05-11 11:08'
         message: Migrated to Confluence 4.0
         version: '51'
-    - 
+    -
         author: Antoine Taillefer
         date: '2012-05-11 11:08'
         message: ''
         version: '50'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-04-13 18:25'
         message: ''
         version: '49'
-    - 
+    -
         author: Julien Carsique
         date: '2012-04-13 17:41'
         message: ''
         version: '48'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-04-13 17:31'
         message: ''
         version: '47'
-    - 
+    -
         author: Antoine Taillefer
         date: '2012-04-10 14:55'
         message: ''
         version: '46'
-    - 
+    -
         author: Julien Carsique
         date: '2012-02-02 15:59'
         message: ''
         version: '45'
-    - 
+    -
         author: Julien Carsique
         date: '2012-02-02 15:57'
         message: ''
         version: '44'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-02-02 14:59'
         message: ''
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-31 10:46'
         message: ''
         version: '42'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 18:38'
         message: ''
         version: '41'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 18:14'
         message: ''
         version: '40'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 18:05'
         message: ''
         version: '39'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 17:58'
         message: ''
         version: '38'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 17:58'
         message: ''
         version: '37'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 17:55'
         message: ''
         version: '36'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 17:41'
         message: ''
         version: '35'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-16 15:10'
         message: ''
         version: '34'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-16 15:08'
         message: ''
         version: '33'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-16 15:06'
         message: ''
         version: '32'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-11 19:19'
         message: ''
         version: '31'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-11 19:16'
         message: ''
         version: '30'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-11 19:09'
         message: ''
         version: '29'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-11 19:02'
         message: Updated Git aliases
         version: '28'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-01-09 17:22'
         message: ''
         version: '27'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-05 18:59'
         message: add pullr alias
         version: '26'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-05 17:02'
         message: ''
         version: '25'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-05 17:02'
         message: ''
         version: '24'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-05 16:35'
         message: ''
         version: '23'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-05 16:33'
         message: ''
         version: '22'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-04 15:50'
         message: ''
         version: '21'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-04 15:42'
         message: ''
         version: '20'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-04 15:40'
         message: ''
         version: '19'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-04 14:41'
         message: ''
         version: '18'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-04 14:40'
         message: ''
         version: '17'
-    - 
+    -
         author: Olivier Grisel
         date: '2012-01-03 14:59'
         message: ''
         version: '16'
-    - 
+    -
         author: Olivier Grisel
         date: '2012-01-03 14:58'
         message: ''
         version: '15'
-    - 
+    -
         author: Olivier Grisel
         date: '2012-01-03 14:56'
         message: ''
         version: '14'
-    - 
+    -
         author: Olivier Grisel
         date: '2012-01-03 14:06'
         message: git commit --ament
         version: '13'
-    - 
+    -
         author: Olivier Grisel
         date: '2011-12-29 16:29'
         message: ''
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2011-12-21 14:44'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2011-12-21 14:44'
         message: git cherry-pick
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2011-12-21 12:28'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2011-12-21 12:16'
         message: git equivalent for hg cat
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2011-12-19 11:11'
         message: add sample commands
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2011-12-15 12:46'
         message: ''
         version: '6'
-    - 
+    -
         author: Thomas Roger
         date: '2011-11-30 23:01'
         message: ''
         version: '5'
-    - 
+    -
         author: Thomas Roger
         date: '2011-11-30 21:48'
         message: ''
         version: '4'
-    - 
+    -
         author: Thomas Roger
         date: '2011-08-16 14:59'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2011-04-08 18:46'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2011-04-08 18:39'
         message: ''
@@ -687,7 +688,7 @@ git reset --soft HEAD~1
 ```
 gitf checkout master
 gitf checkout -b new_branch
-gitfa status -sb 
+gitfa status -sb
 ```
 
 ### Main Rules
@@ -789,7 +790,7 @@ $ curl -L https://github.com/nuxeo/nuxeo/pull/67.patch | git am
 ```
 # Fetch is useless if you properly configured remote.origin.fetch at global or repository level
 $ git fetch origin +pull/67/head:pull/67
-$ git checkout pull/67 
+$ git checkout pull/67
 ```
 
 #### Fetch the pull request changes
@@ -1040,8 +1041,8 @@ You can set such an automatic conversion on all branches with the following:
 {{#> panel type='code' heading='Automatic EOL conversion on all branches'}}
 
 ```bash
-echo "*.sh eol=lf" >>.git/info/attributes 
-echo "*.bat eol=crlf" >>.git/info/attributes 
+echo "*.sh eol=lf" >>.git/info/attributes
+echo "*.bat eol=crlf" >>.git/info/attributes
 ```
 
 {{/panel}}
@@ -1211,7 +1212,7 @@ LFS has the batch mode for downloading files from a server. But it does not work
 
 ```
 # change the smudge filter configuration
-git config --global filter.lfs.smudge "git-lfs smudge --skip %f" 
+git config --global filter.lfs.smudge "git-lfs smudge --skip %f"
 # check
 git lfs env
 

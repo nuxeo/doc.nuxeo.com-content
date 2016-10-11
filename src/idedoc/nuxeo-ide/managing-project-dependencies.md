@@ -16,148 +16,149 @@ confluence:
     shortlink: zIKE
     shortlink_source: 'https://doc.nuxeo.com/x/zIKE'
     source_link: /display/IDEDOC/Managing+Project+Dependencies
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-01 11:53'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-28 17:39'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-25 12:24'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-25 12:23'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-25 12:23'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-25 12:23'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-25 12:23'
         message: ''
         version: '23'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-07-06 15:30'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '22'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-07-06 15:30'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '21'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-07-06 15:30'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '20'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-07-06 15:30'
         message: Migrated to Confluence 4.0
         version: '19'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-07-06 15:30'
         message: ''
         version: '18'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2012-06-26 18:33'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-05 17:44'
         message: ''
         version: '16'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-10-05 15:13'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-05 14:26'
         message: ''
         version: '14'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-10-05 14:21'
         message: ''
         version: '13'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-10-05 14:20'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-03 18:36'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-03 14:21'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-30 17:55'
         message: added user libraries
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-30 16:33'
         message: Reverted from v. 6
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-30 15:39'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-30 15:38'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-30 15:33'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-30 15:25'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-30 12:12'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-28 17:16'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-28 17:15'
         message: ''

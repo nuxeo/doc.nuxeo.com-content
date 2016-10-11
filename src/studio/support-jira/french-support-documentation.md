@@ -15,28 +15,29 @@ confluence:
     shortlink: '-gcuAQ'
     shortlink_source: 'https://doc.nuxeo.com/x/-gcuAQ'
     source_link: /display/Studio/French+Support+Documentation
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 16:30'
         message: 'emove children display macro  '
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 10:04'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 10:03'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 10:03'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 10:02'
         message: ''

@@ -16,73 +16,74 @@ confluence:
     shortlink: hgcuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/hgcuAQ'
     source_link: /display/Studio/nuxeo.io
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-14 13:05'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:21'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 17:58'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-29 16:48'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-29 16:34'
         message: 'Add development mode ON on default conf '
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-22 16:03'
         message: ''
         version: '9'
-    - 
+    -
         author: Bob Canaway
         date: '2014-09-10 16:11'
         message: ''
         version: '8'
-    - 
+    -
         author: Bob Canaway
         date: '2014-09-10 15:48'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-16 18:21'
         message: Add Passivated status
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-16 18:04'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-16 16:56'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-16 16:53'
         message: Add screen shots
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-16 12:34'
         message: Add instance default configuration
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-15 18:43'
         message: ''

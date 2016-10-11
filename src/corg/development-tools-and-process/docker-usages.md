@@ -16,28 +16,29 @@ confluence:
     shortlink: BoHZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/BoHZAQ'
     source_link: /display/CORG/Docker+usages
+tree_item_index: 700
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-15 14:43'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-15 14:42'
         message: ''
         version: '4'
-    - 
+    -
         author: Ronan Daniellou
         date: '2016-03-14 15:45'
         message: 'Typo: fell -> feel'
         version: '3'
-    - 
+    -
         author: Damien Metzler
         date: '2016-03-14 15:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Damien Metzler
         date: '2016-03-14 15:05'
         message: ''
@@ -49,7 +50,7 @@ history:
 First you have to start a clean Nuxeo container using the official images:
 
 ```bash
-docker run -d --name NXP-88888 -p 8888:8080 nuxeo:8.1 
+docker run -d --name NXP-88888 -p 8888:8080 nuxeo:8.1
 ```
 
 Nuxeo is then available on the port 8888 of the Docker's host (hopefully your local machine if you run Linux or the result of&nbsp;`docker-machine ip default` on other systems). The name of your container will be&nbsp;`NXP-88888` which will be referred in the next commands.

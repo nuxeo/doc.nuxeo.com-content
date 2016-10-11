@@ -20,58 +20,59 @@ confluence:
     shortlink: yoKE
     shortlink_source: 'https://doc.nuxeo.com/x/yoKE'
     source_link: /display/IDEDOC/Deploying+a+Project+with+Studio+Dependencies
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 16:22'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-01 12:04'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-27 15:22'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-27 15:22'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-06 15:44'
         message: Migrated to Confluence 4.0
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-06 15:44'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-06 11:43'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-06 11:41'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-10-05 15:32'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-10-05 15:32'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-28 17:03'
         message: ''

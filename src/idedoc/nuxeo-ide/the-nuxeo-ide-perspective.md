@@ -17,63 +17,64 @@ confluence:
     shortlink: bYKE
     shortlink_source: 'https://doc.nuxeo.com/x/bYKE'
     source_link: /display/IDEDOC/The+Nuxeo+IDE+perspective
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 16:14'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-10 12:02'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-05 12:40'
         message: Migrated to Confluence 4.0
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-05 12:40'
         message: ''
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-13 12:43'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-06 16:09'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-04 15:20'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-27 16:19'
         message: added screenshots
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-27 10:21'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-09-26 20:42'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-09-26 20:38'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-26 16:56'
         message: ''

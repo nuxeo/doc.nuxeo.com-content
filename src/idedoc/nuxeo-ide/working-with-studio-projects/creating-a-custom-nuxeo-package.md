@@ -18,68 +18,69 @@ confluence:
     shortlink: JIQPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/JIQPAQ'
     source_link: /display/IDEDOC/Creating+a+Custom+Nuxeo+Package
+tree_item_index: 600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 09:16'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-09 08:35'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-08 15:31'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2015-09-08 13:23'
         message: ''
         version: '10'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-11-14 15:34'
         message: ''
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-11-14 15:34'
         message: ''
         version: '8'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-11-14 15:33'
         message: Added instructions on generating the actual marketplace package
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-11-14 15:01'
         message: Fixed typo
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-01 12:05'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-27 15:21'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-27 15:20'
         message: ''
         version: '3'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-11-26 18:35'
         message: ''
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-11-26 18:34'
         message: ''

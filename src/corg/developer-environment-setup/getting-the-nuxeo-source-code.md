@@ -20,188 +20,189 @@ confluence:
     shortlink: DIBH
     shortlink_source: 'https://doc.nuxeo.com/x/DIBH'
     source_link: /display/CORG/Getting+the+Nuxeo+Source+Code
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-09-06 16:07'
         message: ''
         version: '37'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2016-07-12 11:42'
         message: remove -T 1C build option until NXP-20081 is fixed
         version: '36'
-    - 
+    -
         author: Julien Carsique
         date: '2016-02-24 13:40'
         message: ''
         version: '35'
-    - 
+    -
         author: Ronan Daniellou
         date: '2016-02-24 13:34'
         message: 'Typo: missing space'
         version: '34'
-    - 
+    -
         author: Ronan Daniellou
         date: '2016-02-24 13:32'
         message: Added Maven "eclipse.workspace" option.
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 10:17'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-10 15:51'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-14 10:16'
         message: ''
         version: '30'
-    - 
+    -
         author: Julien Carsique
         date: '2014-11-12 12:38'
         message: ''
         version: '29'
-    - 
+    -
         author: Julien Carsique
         date: '2014-04-29 14:16'
         message: ''
         version: '28'
-    - 
+    -
         author: Jean-Christophe Melaunay
         date: '2014-04-29 11:35'
         message: ''
         version: '27'
-    - 
+    -
         author: Michaël Vachette
         date: '2014-02-14 15:13'
         message: ''
         version: '26'
-    - 
+    -
         author: Michaël Vachette
         date: '2014-02-14 14:45'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-18 14:24'
         message: Changed since 5.7 for 5.7.1
         version: '24'
-    - 
+    -
         author: Julien Carsique
         date: '2013-05-06 19:02'
         message: ''
         version: '23'
-    - 
+    -
         author: Julien Carsique
         date: '2013-05-06 19:02'
         message: ''
         version: '22'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-05-06 18:30'
         message: ''
         version: '21'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-02-21 16:44'
         message: ''
         version: '20'
-    - 
+    -
         author: Julien Carsique
         date: '2012-11-23 11:36'
         message: ''
         version: '19'
-    - 
+    -
         author: Jane Zupan
         date: '2012-10-18 23:06'
         message: ''
         version: '18'
-    - 
+    -
         author: Martin Pernollet
         date: '2012-09-10 17:47'
         message: Migrated to Confluence 4.0
         version: '17'
-    - 
+    -
         author: Martin Pernollet
         date: '2012-09-10 17:47'
         message: ''
         version: '16'
-    - 
+    -
         author: Martin Pernollet
         date: '2012-09-10 15:48'
         message: ''
         version: '15'
-    - 
+    -
         author: Olivier Grisel
         date: '2012-04-16 20:18'
         message: increase heapspace for maven and use -DskipTests
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-31 11:28'
         message: ''
         version: '13'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 18:29'
         message: ''
         version: '12'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 18:26'
         message: ''
         version: '11'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 18:25'
         message: ''
         version: '10'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 18:23'
         message: moving HG stuff to a sub page
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 16:40'
         message: ''
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 16:37'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 16:35'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 16:33'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 16:30'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-12-01 21:22'
         message: '-> 5.5'
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2010-11-15 20:11'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 16:06'
         message: ''
@@ -277,7 +278,7 @@ mvn eclipse:clean eclipse:eclipse -Paddons,distrib [-DdownloadSources=true] [-Dd
 # Linux and OS X users should then run the following script to make Eclipse use different build directories than Maven:
 ./fixeclipse
 # A cross-platform script is also available for Windows users:
-# python scripts/fixeclipse.py 
+# python scripts/fixeclipse.py
 ```
 
 {{/panel}}

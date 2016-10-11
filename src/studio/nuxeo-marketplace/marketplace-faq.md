@@ -16,23 +16,24 @@ confluence:
     shortlink: 8Yr1
     shortlink_source: 'https://doc.nuxeo.com/x/8Yr1'
     source_link: /display/Studio/Marketplace+FAQ
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 09:12'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-28 09:57'
         message: Fixed typos and terminology
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-28 00:11'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 23:58'
         message: ''

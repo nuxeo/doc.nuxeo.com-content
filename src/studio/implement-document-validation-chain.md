@@ -17,83 +17,84 @@ confluence:
     shortlink: YYEV
     shortlink_source: 'https://doc.nuxeo.com/x/YYEV'
     source_link: /display/Studio/Implement+document+validation+chain
+hidden: true
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-20 14:21'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-20 14:21'
         message: look changes
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-20 14:18'
         message: typo and added link
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-19 11:19'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-19 11:09'
         message: Reorganized instructions
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 20:26'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 20:25'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 20:21'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 20:21'
         message: li
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 20:16'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 20:14'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 20:09'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 20:07'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 19:59'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 19:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 19:42'
         message: ''

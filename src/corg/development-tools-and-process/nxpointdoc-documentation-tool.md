@@ -15,38 +15,39 @@ confluence:
     shortlink: Pwk7
     shortlink_source: 'https://doc.nuxeo.com/x/Pwk7'
     source_link: /display/CORG/NXPointDoc+Documentation+tool
+tree_item_index: 200
 history:
-    - 
+    -
         author: Florent Guillaume
         date: '2012-04-27 14:01'
         message: igrated to Confluence 4.
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-04-27 14:01'
         message: ''
         version: '6'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2012-02-09 13:27'
         message: svn -> hg
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-11-08 19:14'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 16:51'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 16:49'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 16:34'
         message: ''

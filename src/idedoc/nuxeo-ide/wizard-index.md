@@ -16,28 +16,29 @@ confluence:
     shortlink: uoSN
     shortlink_source: 'https://doc.nuxeo.com/x/uoSN'
     source_link: /display/IDEDOC/Wizard+Index
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-01 12:12'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-13 18:29'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-15 10:32'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-15 10:32'
         message: ''
         version: '2'
-    - 
+    -
         author: Laurent Doguin
         date: '2011-12-13 14:53'
         message: ''

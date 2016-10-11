@@ -20,18 +20,19 @@ confluence:
     shortlink: h4QPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/h4QPAQ'
     source_link: /display/IDEDOC/Settings+Eclipse+Development+Templates
+tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-01 12:06'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-03 15:38'
         message: 'Formatted steps, updated link, fixed typos'
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-11-28 15:40'
         message: ''

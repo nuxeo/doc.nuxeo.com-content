@@ -15,48 +15,49 @@ confluence:
     shortlink: Ewk7
     shortlink_source: 'https://doc.nuxeo.com/x/Ewk7'
     source_link: /display/CORG/Development+Tools+and+Process
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 16:33'
         message: 'emove children display macro  '
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 14:24'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 14:24'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 14:13'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 16:24'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 17:01'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 15:42'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 14:15'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 12:39'
         message: ''

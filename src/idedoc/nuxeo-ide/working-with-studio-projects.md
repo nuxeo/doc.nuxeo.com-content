@@ -15,38 +15,39 @@ confluence:
     shortlink: u4KE
     shortlink_source: 'https://doc.nuxeo.com/x/u4KE'
     source_link: /display/IDEDOC/Working+with+Studio+Projects
+tree_item_index: 600
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 16:35'
         message: 'emove children display macro   '
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-27 15:27'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-03 12:25'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-03 12:25'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-30 16:03'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-28 15:09'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-28 15:06'
         message: ''

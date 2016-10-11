@@ -17,123 +17,124 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/fAQz'
     source_link: >-
         /display/CORG/Working+with+multiple+versions+of+Nuxeo+sources+at+the+same+time
+tree_item_index: 600
 history:
-    - 
+    -
         author: Julien Carsique
         date: '2015-09-04 16:42'
         message: ''
         version: '24'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 18:22'
         message: ''
         version: '23'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 18:22'
         message: ''
         version: '22'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 16:43'
         message: ''
         version: '21'
-    - 
+    -
         author: Julien Carsique
         date: '2011-12-16 12:42'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2011-08-30 11:03'
         message: ''
         version: '19'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 14:43'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:27'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:23'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:13'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:13'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:07'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:54'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:50'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:10'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:03'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:20'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:00'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:38'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:22'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:17'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:11'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:09'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:00'
         message: ''

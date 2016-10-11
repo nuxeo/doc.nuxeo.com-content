@@ -16,73 +16,74 @@ confluence:
     shortlink: KQ3F
     shortlink_source: 'https://doc.nuxeo.com/x/KQ3F'
     source_link: /display/CORG/Isolated+Testing
+tree_item_index: 100
 history:
-    - 
+    -
         author: Kevin Leturc
         date: '2016-02-02 10:19'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-29 13:49'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-02 14:39'
         message: ''
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2014-06-20 15:11'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2014-06-17 15:42'
         message: ''
         version: '10'
-    - 
+    -
         author: Thomas Roger
         date: '2013-10-01 15:05'
         message: ''
         version: '9'
-    - 
+    -
         author: Thomas Roger
         date: '2013-10-01 11:11'
         message: ''
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-29 15:52'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-29 15:45'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-29 14:59'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-29 14:54'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-29 13:55'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2013-02-19 12:18'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2013-02-14 12:27'
         message: ''

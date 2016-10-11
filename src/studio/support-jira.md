@@ -17,173 +17,174 @@ confluence:
     shortlink: TodH
     shortlink_source: 'https://doc.nuxeo.com/x/TodH'
     source_link: /pages/viewpage.action?pageId=4687694
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-07 14:01'
         message: pdate link to supported-versions page
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-03 07:39'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-30 16:42'
         message: Nuxeo Connect -> Nuxeo Online Services
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-15 16:23'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-03 15:31'
         message: Added info on maintenance
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-03 15:01'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:34'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:33'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:19'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:18'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:16'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:16'
         message: 'Moved detailed content to new pages, added quick starts'
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 15:41'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 15:41'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 15:40'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 15:16'
         message: ''
         version: '19'
-    - 
+    -
         author: Thierry Martins
         date: '2013-12-27 15:57'
         message: ''
         version: '18'
-    - 
+    -
         author: Thierry Martins
         date: '2013-12-27 15:55'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-27 15:00'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-07 15:31'
         message: Migrated to Confluence 4.0
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-07 15:31'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-07 15:30'
         message: added issue creation from connect UI
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-22 16:00'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-30 16:34'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-26 11:02'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-25 18:32'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-25 10:31'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-25 10:27'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-24 16:13'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-24 16:07'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-24 16:04'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-24 16:02'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-24 14:49'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-24 12:36'
         message: ''

@@ -15,48 +15,49 @@ confluence:
     shortlink: GIBH
     shortlink_source: 'https://doc.nuxeo.com/x/GIBH'
     source_link: /display/CORG/Coding+and+Design+Guidelines
+tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 12:13'
         message: emove children display macr
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-12 15:04'
         message: ''
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-12 15:02'
         message: code quality continuous improvement
         version: '7'
-    - 
+    -
         author: Eric Barroca
         date: '2015-08-18 20:52'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 15:25'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 15:25'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 14:14'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-07-18 14:30'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-26 16:28'
         message: ''

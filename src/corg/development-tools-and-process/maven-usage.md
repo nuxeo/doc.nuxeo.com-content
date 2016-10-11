@@ -16,245 +16,246 @@ confluence:
     shortlink: JQk7
     shortlink_source: 'https://doc.nuxeo.com/x/JQk7'
     source_link: /display/CORG/Maven+Usage
+tree_item_index: 500
 history:
-    - 
+    -
         author: Ronan Daniellou
         date: '2016-06-21 12:03'
         message: eplaces 'maven.in' by 'mavenin
         version: '48'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-01 14:26'
         message: ''
         version: '47'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-01 13:24'
         message: ''
         version: '46'
-    - 
+    -
         author: Julien Carsique
         date: '2016-03-08 11:18'
         message: Hotfix customer account
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-05 14:26'
         message: Make TOC shorter
         version: '44'
-    - 
+    -
         author: Julien Carsique
         date: '2016-02-03 12:57'
         message: ''
         version: '43'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-15 17:10'
         message: ''
         version: '42'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-15 17:09'
         message: ''
         version: '41'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-14 17:04'
         message: hotfix
         version: '40'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-09 13:21'
         message: ''
         version: '39'
-    - 
+    -
         author: Julien Carsique
         date: '2015-09-01 09:52'
         message: Maven 3.3.3 recommended
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-10 15:20'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-14 10:36'
         message: ''
         version: '36'
-    - 
+    -
         author: Julien Carsique
         date: '2014-12-31 14:12'
         message: password encryption in settings.xml
         version: '35'
-    - 
+    -
         author: Julien Carsique
         date: '2014-09-24 17:59'
         message: ''
         version: '34'
-    - 
+    -
         author: Julien Carsique
         date: '2014-09-24 17:43'
         message: ''
         version: '33'
-    - 
+    -
         author: Julien Carsique
         date: '2014-09-24 17:42'
         message: Skip Tests
         version: '32'
-    - 
+    -
         author: Thomas Roger
         date: '2014-09-24 16:26'
         message: ''
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-11 10:55'
         message: ''
         version: '30'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-09-10 12:27'
         message: ''
         version: '29'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-09-10 12:26'
         message: ''
         version: '28'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-09-10 12:25'
         message: Add build test jar part
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-31 10:27'
         message: ''
         version: '26'
-    - 
+    -
         author: Julien Carsique
         date: '2014-01-30 16:54'
         message: ''
         version: '25'
-    - 
+    -
         author: Julien Carsique
         date: '2014-01-30 16:52'
         message: ''
         version: '24'
-    - 
+    -
         author: Julien Carsique
         date: '2014-01-30 16:50'
         message: >-
             Maven 3 update (and new options); sample settings.xml for Nuxeo Core
             dev
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-29 11:45'
         message: Added TOC
         version: '22'
-    - 
+    -
         author: Julien Carsique
         date: '2013-07-23 13:52'
         message: ''
         version: '21'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-11 14:16'
         message: ''
         version: '20'
-    - 
+    -
         author: Julien Carsique
         date: '2013-02-21 18:09'
         message: ''
         version: '19'
-    - 
+    -
         author: Julien Carsique
         date: '2012-07-12 17:14'
         message: Migrated to Confluence 4.0
         version: '18'
-    - 
+    -
         author: Julien Carsique
         date: '2012-07-12 17:14'
         message: ''
         version: '17'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-08 18:41'
         message: workaround for MECLIPSE-668
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2011-05-03 16:51'
         message: fix url display
         version: '15'
-    - 
+    -
         author: Julien Carsique
         date: '2011-03-03 19:28'
         message: ''
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2011-03-03 19:11'
         message: ''
         version: '13'
-    - 
+    -
         author: Julien Carsique
         date: '2011-03-03 19:10'
         message: add information about Maven repositories managed by Nuxeo
         version: '12'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-03-03 12:07'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2011-02-07 16:22'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-11-08 19:13'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-11-08 19:11'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-11-08 19:09'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 16:25'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 16:22'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 16:20'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 16:07'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 15:53'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 15:48'
         message: ''
@@ -292,9 +293,9 @@ In the knowledge base: [How to debug test run with Maven]({{page page='how-to-de
 Quoting the Wikipedia entry for Maven:
 
 > Maven is a software tool for Java programming language project management and automated software build. It is similar in functionality to the Apache Ant tool, but has a simpler build configuration model, based on an XML format. Maven is hosted by the Apache Software Foundation, where it was formerly part of the Jakarta Project.
-> 
+>
 > Maven uses a construct known as a Project Object Model (POM) to describe the software project being built, its dependencies on other external modules and components, and the build order. It comes with predefined targets for performing certain well defined tasks such as compilation of code and its packaging.
-> 
+>
 > A key feature of Maven is that it is network-ready. The core engine can dynamically download plugins from a repository, the same repository that provides access to many versions of different Open Source Java projects, from Apache and other organizations and developers. This repository and its reorganized successor the Maven 2 repository are the de facto distribution mechanism for Java applications. Maven provides built in support not just for retrieving files from this repository, but to upload artifacts at the end of the build. A local cache of downloaded artifacts acts as the primary means of synchronizing the output of projects on a local system.
 
 Nuxeo is fully "Maven managed".

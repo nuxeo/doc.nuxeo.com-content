@@ -20,103 +20,104 @@ confluence:
     shortlink: xIKE
     shortlink_source: 'https://doc.nuxeo.com/x/xIKE'
     source_link: /display/IDEDOC/Binding+Studio+Projects+to+an+Nuxeo+IDE+Project
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 16:21'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-01 11:59'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-27 15:24'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-06 16:06'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-06 16:06'
         message: Fixed typo
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-06 15:19'
         message: added screenshot
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-06 14:10'
         message: added screenshot
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-06 12:18'
         message: ''
         version: '13'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-10-05 15:48'
         message: ''
         version: '12'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-10-05 15:47'
         message: ''
         version: '11'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-10-05 15:47'
         message: ''
         version: '10'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-10-05 15:46'
         message: ''
         version: '9'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-10-05 15:45'
         message: ''
         version: '8'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-10-05 15:37'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-04 18:03'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-04 18:02'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-04 17:19'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-04 17:08'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-04 15:51'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-28 17:02'
         message: ''

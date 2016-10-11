@@ -20,48 +20,49 @@ confluence:
     shortlink: yIKE
     shortlink_source: 'https://doc.nuxeo.com/x/yIKE'
     source_link: /display/IDEDOC/Uploading+Custom+Operations+in+Nuxeo+Studio
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 16:23'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-01 12:01'
         message: Formatiing
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-27 15:23'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-04 17:19'
         message: Migrated to Confluence 4.0
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-04 17:19'
         message: added related pages
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-04 16:45'
         message: added screenshots
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-04 16:25'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-03 15:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-28 17:03'
         message: ''

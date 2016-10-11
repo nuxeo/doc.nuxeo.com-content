@@ -18,243 +18,244 @@ confluence:
     shortlink: cYeN
     shortlink_source: 'https://doc.nuxeo.com/x/cYeN'
     source_link: /display/CORG/Installing+Git
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-02 07:46'
         message: ''
         version: '48'
-    - 
+    -
         author: Julien Carsique
         date: '2016-06-24 15:11'
         message: fetch pull requests
         version: '47'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-01 17:34'
         message: oldest-ancestor
         version: '46'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-29 13:37'
         message: ''
         version: '45'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-29 13:35'
         message: ''
         version: '44'
-    - 
+    -
         author: Julien Carsique
         date: '2015-09-07 10:24'
         message: improve pullr alias
         version: '43'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-14 08:01'
         message: ''
         version: '42'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-13 13:06'
         message: ''
         version: '41'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-13 13:06'
         message: pullr with autosquash
         version: '40'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-13 10:35'
         message: ''
         version: '39'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-13 10:35'
         message: ''
         version: '38'
-    - 
+    -
         author: Julien Carsique
         date: '2015-07-28 10:16'
         message: ''
         version: '37'
-    - 
+    -
         author: Julien Carsique
         date: '2015-07-17 13:33'
         message: ''
         version: '36'
-    - 
+    -
         author: Julien Carsique
         date: '2015-07-17 13:32'
         message: ''
         version: '35'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-04-02 13:59'
         message: fix link
         version: '34'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-04-02 13:58'
         message: warn about accents
         version: '33'
-    - 
+    -
         author: Julien Carsique
         date: '2015-02-26 16:09'
         message: sample global config
         version: '32'
-    - 
+    -
         author: Julien Carsique
         date: '2015-02-26 15:53'
         message: ''
         version: '31'
-    - 
+    -
         author: Julien Carsique
         date: '2015-02-26 15:38'
         message: ''
         version: '30'
-    - 
+    -
         author: Julien Carsique
         date: '2015-02-26 15:23'
         message: Git recommended global conf
         version: '29'
-    - 
+    -
         author: Julien Carsique
         date: '2014-12-01 18:36'
         message: improved fix alias for empty commits
         version: '28'
-    - 
+    -
         author: Julien Carsique
         date: '2014-07-22 15:19'
         message: ''
         version: '27'
-    - 
+    -
         author: Julien Carsique
         date: '2014-07-22 15:01'
         message: ''
         version: '26'
-    - 
+    -
         author: Julien Carsique
         date: '2014-07-22 14:59'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-12 12:09'
         message: ''
         version: '24'
-    - 
+    -
         author: Julien Carsique
         date: '2013-11-07 18:08'
         message: ''
         version: '23'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-09-27 16:32'
         message: ''
         version: '22'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-09-27 15:30'
         message: ''
         version: '21'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-09-27 15:28'
         message: ''
         version: '20'
-    - 
+    -
         author: Julien Carsique
         date: '2013-07-04 17:52'
         message: Make fix alias compliant with dash and avoid useless call to stash
         version: '19'
-    - 
+    -
         author: Julien Carsique
         date: '2013-07-01 12:43'
         message: ''
         version: '18'
-    - 
+    -
         author: Julien Carsique
         date: '2013-06-28 16:56'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-25 21:56'
         message: ''
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2012-12-06 16:11'
         message: Better id alias
         version: '15'
-    - 
+    -
         author: Julien Carsique
         date: '2012-12-04 12:30'
         message: ''
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2012-12-03 17:08'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-03 17:04'
         message: ''
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-31 11:06'
         message: Migrated to Confluence 4.0
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-31 11:06'
         message: ''
         version: '10'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 18:14'
         message: ''
         version: '9'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 17:56'
         message: ''
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 17:34'
         message: ''
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 17:33'
         message: ''
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 17:30'
         message: ''
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 17:30'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 17:21'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 16:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 18:42'
         message: ''

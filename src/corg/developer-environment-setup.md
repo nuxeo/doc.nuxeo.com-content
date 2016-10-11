@@ -15,28 +15,29 @@ confluence:
     shortlink: RYeN
     shortlink_source: 'https://doc.nuxeo.com/x/RYeN'
     source_link: /display/CORG/Developer+Environment+Setup
+tree_item_index: 100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 16:33'
         message: 'emove children display macro   '
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-04 16:07'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 15:26'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 15:26'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-09 14:20'
         message: ''

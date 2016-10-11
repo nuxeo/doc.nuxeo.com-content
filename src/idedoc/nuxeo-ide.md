@@ -15,23 +15,24 @@ confluence:
     shortlink: QYNdAQ
     shortlink_source: 'https://doc.nuxeo.com/x/QYNdAQ'
     source_link: /display/IDEDOC/Nuxeo+IDE
+tree_item_index: 100
 history:
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-01-05 15:04'
         message: ix Nuxeo website UR
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-30 10:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-15 15:59'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-15 15:55'
         message: ''

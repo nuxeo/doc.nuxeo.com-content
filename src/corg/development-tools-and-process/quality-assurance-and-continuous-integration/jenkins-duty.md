@@ -18,108 +18,109 @@ confluence:
     shortlink: bxPF
     shortlink_source: 'https://doc.nuxeo.com/x/bxPF'
     source_link: /display/CORG/Jenkins+duty
+tree_item_index: 200
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2016-03-08 10:12'
         message: ''
         version: '21'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2016-03-08 10:10'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 10:16'
         message: Fix title capitalization
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 10:13'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '18'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-11-02 10:11'
         message: 'Typo: Jankins -> Jenkins'
         version: '17'
-    - 
+    -
         author: Pierre-Gildas Millon
         date: '2015-10-05 08:54'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-29 13:52'
         message: ''
         version: '15'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-08-27 13:51'
         message: no need to report previous stats anymore
         version: '14'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-08-12 17:58'
         message: no need to report previous stats anymore
         version: '13'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-09-17 10:12'
         message: 'explain that report must be updated regurlarly, not just on Friday '
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 18:02'
         message: Added links to other Jenkins Report documentation
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-22 19:13'
         message: ''
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-22 18:53'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-22 18:04'
         message: ''
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-22 15:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-22 15:39'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-22 15:30'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-22 15:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-19 13:14'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-19 13:13'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-19 12:57'
         message: ''

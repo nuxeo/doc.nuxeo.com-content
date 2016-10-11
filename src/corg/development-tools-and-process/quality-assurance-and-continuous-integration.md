@@ -17,93 +17,94 @@ confluence:
     shortlink: RQk7
     shortlink_source: 'https://doc.nuxeo.com/x/RQk7'
     source_link: /display/CORG/Quality+Assurance+and+Continuous+Integration
+tree_item_index: 100
 history:
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-30 17:41'
         message: ''
         version: '18'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-30 17:37'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 10:17'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-29 13:51'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-02 13:16'
         message: ''
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2015-05-22 09:41'
         message: Update release process description
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-05-22 11:23'
         message: ''
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2014-04-30 17:22'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-04-30 16:55'
         message: ''
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2014-04-29 16:29'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2013-02-14 12:23'
         message: ''
         version: '8'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2012-02-09 13:49'
         message: Migrated to Confluence 4.0
         version: '7'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2012-02-09 13:48'
         message: svn -> hg + updates
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-05 10:12'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-11-08 19:18'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-11-08 19:16'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 17:00'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 16:58'
         message: ''

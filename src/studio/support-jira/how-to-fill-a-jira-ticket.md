@@ -18,83 +18,84 @@ confluence:
     shortlink: CYEZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/CYEZAQ'
     source_link: /display/Studio/How+to+Fill+a+JIRA+Ticket
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 13:55'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-18 12:28'
         message: Change layout to use 2/3 layout
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-30 16:46'
         message: format
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-28 15:20'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-28 15:15'
         message: ''
         version: '12'
-    - 
+    -
         author: Thierry Martins
         date: '2014-06-30 14:19'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-27 11:24'
         message: ''
         version: '10'
-    - 
+    -
         author: Thierry Martins
         date: '2014-01-15 10:43'
         message: Detail on severity
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-03 15:33'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-03 15:33'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 17:04'
         message: typos
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:58'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:56'
         message: Added anchors
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:45'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:04'
         message: ''

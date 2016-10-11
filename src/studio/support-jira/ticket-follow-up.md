@@ -17,38 +17,39 @@ confluence:
     shortlink: D4EZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/D4EZAQ'
     source_link: /display/Studio/Ticket+Follow+Up
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-30 16:49'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-03 15:34'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:50'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:49'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:49'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:08'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 16:07'
         message: ''

@@ -15,73 +15,74 @@ confluence:
     shortlink: z4IlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/z4IlAQ'
     source_link: /display/CORG/Jenkins+Job+Configuration
+tree_item_index: 300
 history:
-    - 
+    -
         author: Julien Carsique
         date: '2016-09-02 15:39'
         message: ''
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2016-09-02 15:36'
         message: ''
         version: '13'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-09-02 15:00'
         message: update maven version info
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-27 15:18'
         message: 'Fix Studio menu label   '
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2016-01-18 16:24'
         message: New Plugin template
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 10:10'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '9'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-23 14:17'
         message: mention that jenkins_pub is for public Studio projects
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2014-06-20 15:08'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-05-22 10:52'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-05-22 10:29'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-05-22 10:29'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2014-05-05 18:33'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2014-04-30 17:30'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2014-04-29 16:29'
         message: ''

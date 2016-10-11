@@ -15,58 +15,59 @@ confluence:
     shortlink: Jw3F
     shortlink_source: 'https://doc.nuxeo.com/x/Jw3F'
     source_link: /display/CORG/Jenkins+plugins
+tree_item_index: 400
 history:
-    - 
+    -
         author: Julien Carsique
         date: '2016-06-30 14:45'
         message: pdate plugin usag
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2014-09-26 17:34'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-23 18:14'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-23 18:07'
         message: ''
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2014-05-06 16:20'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-29 17:13'
         message: JIRA Issue macro params updated with additional server info
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2013-04-29 17:13'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2013-02-14 18:19'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-14 18:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2013-02-14 18:15'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2013-02-14 12:24'
         message: ''

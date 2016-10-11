@@ -20,83 +20,84 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/qIkZAQ'
     source_link: >-
         /display/Studio/Delivering+a+Customization+Package+through+the+Nuxeo+Marketplace
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 15:28'
         message: ''
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2016-02-08 15:11'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 10:03'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-19 14:00'
         message: ''
         version: '13'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-21 09:29'
         message: MP version policy
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2015-09-08 13:42'
         message: Versioning Policy
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 08:58'
         message: Fix TOC
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-16 17:40'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2014-02-27 13:21'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-27 10:19'
         message: Added links and fixed typos
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-02-26 17:56'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2014-02-26 17:51'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-02-26 11:23'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-25 17:42'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-25 17:35'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-25 17:06'
         message: ''

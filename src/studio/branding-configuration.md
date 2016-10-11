@@ -6,6 +6,7 @@ review:
     status: ok
 redirect: branding
 redirect_source: Branding
+hidden: true
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
@@ -18,7 +19,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/i4-jAQ'
     source_link: /display/Studio/Branding+Configuration
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-28 09:11'
         message: ''

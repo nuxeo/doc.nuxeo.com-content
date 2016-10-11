@@ -15,23 +15,24 @@ confluence:
     shortlink: fAcuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/fAcuAQ'
     source_link: /display/Studio/Nuxeo+Studio
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-12 09:01'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-30 17:00'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-15 16:07'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-15 16:06'
         message: ''

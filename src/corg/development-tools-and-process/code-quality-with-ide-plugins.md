@@ -15,18 +15,19 @@ confluence:
     shortlink: Ogk7
     shortlink_source: 'https://doc.nuxeo.com/x/Ogk7'
     source_link: /display/CORG/Code+Quality+with+IDE+Plugins
+tree_item_index: 600
 history:
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 16:31'
         message: igrated to Confluence 4.
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 16:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-25 16:27'
         message: ''
