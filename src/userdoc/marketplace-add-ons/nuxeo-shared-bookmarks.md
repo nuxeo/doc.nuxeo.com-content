@@ -19,41 +19,40 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/WQFFAQ'
     source_link: /display/USERDOC60/Nuxeo+Shared+Bookmarks
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 12:19'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-13 08:10'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-13 08:10'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 11:56'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-26 21:39'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-26 15:43'
         message: ''
         version: '1'
 
 ---
-{{! excerpt}}
-
 {{{multiexcerpt 'DeprecatedAddOn_6.0' page='NXDOC60:Generic Multi-Excerpts'}}}
+{{! excerpt}}
 
 The [Nuxeo Shared Bookmarks](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-shared-bookmarks) addon enables users to bookmark documents and organize their bookmarks in folders. They can thus organize existing documents in a new tree structure without duplicating content.
 
