@@ -183,3 +183,13 @@ Deleting a comment is a permanent action. You cannot restore deleted comments.
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Commenting Assets]({{page page='commenting-assets'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

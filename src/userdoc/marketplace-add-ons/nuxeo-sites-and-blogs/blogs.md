@@ -105,7 +105,7 @@ Blogs can be created in workspaces only. You just need to have "Write" right to 
 
 **Blog parameters**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -181,7 +181,7 @@ Moderation Type
 
 Select if comments posted on your blog should be should be approved to become visible by users (beforehand moderation) or if they are published immediately (afterwards moderation).
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Adding Content to Your Blog
 

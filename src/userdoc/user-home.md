@@ -200,3 +200,15 @@ Every user has a **Home** tab, that offers user-centric tabs.
     ![]({{file name='collection-home-tab.png' page='collections'}} ?w=650,border=true)
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
+
+*   [Alerts]({{page page='alerts'}})
+*   [Managing Dashboards]({{page page='managing-dashboards'}})
+*   [Social Workspaces Overview]({{page page='social-workspaces-overview'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

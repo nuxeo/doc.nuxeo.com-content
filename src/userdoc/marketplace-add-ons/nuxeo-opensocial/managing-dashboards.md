@@ -187,7 +187,7 @@ As an administrator, you can add and manage gadgets from other applications or w
 
 **External gadget properties**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -243,7 +243,7 @@ Icon URL
 
 URL of the icon to be displayed on the gadget selection pop up if the external gadget has no icon provided by default.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### Modifying an External Gadget
 

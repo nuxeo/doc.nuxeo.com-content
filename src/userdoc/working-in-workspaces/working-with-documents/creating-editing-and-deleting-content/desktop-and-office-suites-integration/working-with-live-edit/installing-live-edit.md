@@ -331,7 +331,7 @@ The table below sumarizes the extensions and packages you need to install for ea
 
 The Microsoft Office extension is available in 32- and 64-bit. You need to install the version corresponding to Microsoft Office, not the operating system (if you run MS Office 32-bit on Windows 7 64-bit, you need to install Live Edit for MS Office 32-bit).
 
-<table><tbody><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
 
 &nbsp;
 
@@ -383,7 +383,7 @@ OpenOffice.org / LibreOffice
 [Live Edit OpenOffice.org extension (.oxt)](http://download.nuxeo.org/desktop-integration/live-edit/nuxeo-liveedit-ooo-lateststable.oxt)
 [Firefox Protocol Handler for FF <3.6](http://download.nuxeo.org/desktop-integration/live-edit/nuxeo-liveedit-ff-protocolhandler-0.4.13.xpi) or [Firefox Protocol Handler for FF 4+](https://updates.nuxeo.org/desktop-integration/live-edit/nuxeo-liveedit-ff-protocolhandler.xpi)
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 All Live Edit extension versions are available from:&nbsp;[http://download.nuxeo.org/desktop-integration/live-edit/](http://download.nuxeo.org/desktop-integration/live-edit/).
 
@@ -476,7 +476,7 @@ At this stage, you still won't see the online editing icons in the application. 
 
 **MS Office mimetype mapping with MS Office**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 File extension
 
@@ -594,7 +594,7 @@ Check the [Installation for Internet Explorer and MS Office instructions](#livee
 
 `%s`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## For OpenOffice.org and Internet Explorer Users&nbsp;{{> anchor 'liveedit-ooo-ie'}}
 
@@ -669,7 +669,7 @@ At this stage, you still won't see the online editing icons in the application. 
 
 **OpenOffice.org and MS Office mimetype mapping with OpenOffice.org or LibreOffice**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 File extension
 
@@ -765,7 +765,7 @@ Path to the OpenOffice.org or LibreOffice `soffice.exe` file, for instance `C:\P
 
 [`macro:///LiveEditOOo.launcher.load(%s)`](macro://doc.nuxeo.com/LiveEditOOo.launcher.load(%s))
 
-</td></tr></tbody></table>{{#> callout type='note' heading='Microsoft Office 2007 compatibility'}}
+</td></tr></tbody></table></div>{{#> callout type='note' heading='Microsoft Office 2007 compatibility'}}
 
 Live Edit OpenOffice.org is not compatible with MS Office 2007 documents yet.
 

@@ -242,7 +242,7 @@ Two workarounds are possible:
 
 ## Windows XP Environment
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 &nbsp;
 
@@ -474,7 +474,7 @@ OK
 
 Testing in progress
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Windows 7 64b Environment
 
@@ -487,7 +487,7 @@ To enable the detection of your LiveEdit installation with Internet Explorer run
 
 As LiveEdit installer is only built in 32&nbsp;bits yet, Windows will wrote the registry entries into a compatibility node (WoW6432Node) read by 32&nbsp;bits application running on 64&nbsp;bits OS, and this file will add necessary keys to the default registry node read.
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 &nbsp;
 
@@ -743,11 +743,11 @@ Testing in progress
 
 Testing in progress
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Windows 7 32b Environment
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 &nbsp;
 
@@ -1003,4 +1003,4 @@ Testing in progress
 
 Testing in progress
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>

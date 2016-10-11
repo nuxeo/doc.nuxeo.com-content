@@ -65,3 +65,13 @@ You can at anytime edit the document to change and complete the metadata of the 
 ![]({{file name='MP-Categorization-package.png'}} ?w=725,h=370,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about this package'}}
+
+*   [Automated Document Categorization dev documentation]({{page space='nxdoc60' page='automated-document-categorization'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

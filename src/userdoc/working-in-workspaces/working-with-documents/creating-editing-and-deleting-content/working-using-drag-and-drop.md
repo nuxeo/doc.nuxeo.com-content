@@ -165,7 +165,7 @@ You can drop any file type in Nuxeo.
 
 Here are some examples of most commonly used item types and their output in Nuxeo:
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Item type
 
@@ -213,7 +213,7 @@ Picture (.jpg, .png, etc)
 
 Picture
 
-</td></tr></tbody></table>{{! /multiexcerpt}}
+</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
 ### Import with Metadata
 
@@ -263,3 +263,15 @@ To publish a document using drag and drop:
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Creating Content]({{page page='creating-content'}})
+*   [Copying and Moving Documents]({{page page='copying-and-moving-documents'}})
+*   [Publishing Documents]({{page page='publishing-documents'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

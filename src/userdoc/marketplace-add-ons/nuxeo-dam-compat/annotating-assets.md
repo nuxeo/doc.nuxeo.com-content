@@ -226,3 +226,14 @@ You can add annotations on pictures when you have at least "Read" permission.
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
+
+*   [Nuxeo DAM Compat]({{page page='nuxeo-dam-compat'}})
+*   [Preview]({{page page='preview'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

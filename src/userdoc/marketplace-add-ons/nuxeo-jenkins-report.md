@@ -87,9 +87,9 @@ Jenkins Reports Containers can be created in workspaces and folders, by users wh
 
 **Jenkins Report Container metadata**
 
-<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1"><span class="widgetLabel  required">Title</span></td><td colspan="1">The name of the folder</td></tr><tr><td colspan="1"><span class="widgetLabel  ">Description</span></td><td colspan="1">A short text that explains what will be in the container, for instance what project it will be about.</td></tr><tr><td colspan="1">Jenkins View URL</td><td colspan="1">The URL from which the report will be generated, allowing you to define reports depending on the view configuration in Jenkins.</td></tr><tr><td colspan="1"><span class="widgetLabel  ">Jenkins Claims URL</span></td><td colspan="1">The URL where Jenkins claims are visible (sadly not showing claims for multi-db jobs)</td></tr><tr><td colspan="1"><span class="widgetLabel  required">Report email</span></td><td colspan="1">The e-mail address to which users will be able to send the reports to. It can typically be a mailing list address for your development team.</td></tr><tr><td colspan="1"><span class="widgetLabel  ">Jira Browse URL</span></td><td colspan="1">The URL of the JIRA instance that will be referenced from Jenkins.
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1"><span class="widgetLabel  required">Title</span></td><td colspan="1">The name of the folder</td></tr><tr><td colspan="1"><span class="widgetLabel  ">Description</span></td><td colspan="1">A short text that explains what will be in the container, for instance what project it will be about.</td></tr><tr><td colspan="1">Jenkins View URL</td><td colspan="1">The URL from which the report will be generated, allowing you to define reports depending on the view configuration in Jenkins.</td></tr><tr><td colspan="1"><span class="widgetLabel  ">Jenkins Claims URL</span></td><td colspan="1">The URL where Jenkins claims are visible (sadly not showing claims for multi-db jobs)</td></tr><tr><td colspan="1"><span class="widgetLabel  required">Report email</span></td><td colspan="1">The e-mail address to which users will be able to send the reports to. It can typically be a mailing list address for your development team.</td></tr><tr><td colspan="1"><span class="widgetLabel  ">Jira Browse URL</span></td><td colspan="1">The URL of the JIRA instance that will be referenced from Jenkins.
 This is used with the "JIRA projects" to generate clickable links in the reports to the JIRA issues.</td></tr><tr><td colspan="1"><span class="widgetLabel  ">Jira projects</span></td><td colspan="1">The ID of the JIRA projects that will be referenced from Jenkins.
-This is used with the "JIRA Browse URL" to generate clickable links in the reports to the JIRA issues.</td></tr><tr><td colspan="1"><span class="widgetLabel  ">Duty planning</span></td><td colspan="1">Indicate if you have a planning of who will be in charge of doing the Jenkins reports and when.</td></tr></tbody></table>
+This is used with the "JIRA Browse URL" to generate clickable links in the reports to the JIRA issues.</td></tr><tr><td colspan="1"><span class="widgetLabel  ">Duty planning</span></td><td colspan="1">Indicate if you have a planning of who will be in charge of doing the Jenkins reports and when.</td></tr></tbody></table></div>
 
 ## Creating a Report
 
@@ -116,7 +116,7 @@ This is used with the "JIRA Browse URL" to generate clickable links in the repor
 
 **Jenkins report metadata**
 
-<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Title</td><td colspan="1">This is prefilled with the current date, but you can edit it to put any name that is relevant for your report.</td></tr><tr><td colspan="1"><span class="widgetLabel  required">Reporter</span></td><td colspan="1">This is already filled in with the current user. It can be changed with any user of the application using the suggestion search.</td></tr><tr><td colspan="1"><span class="widgetLabel  required">Report date</span></td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Title</td><td colspan="1">This is prefilled with the current date, but you can edit it to put any name that is relevant for your report.</td></tr><tr><td colspan="1"><span class="widgetLabel  required">Reporter</span></td><td colspan="1">This is already filled in with the current user. It can be changed with any user of the application using the suggestion search.</td></tr><tr><td colspan="1"><span class="widgetLabel  required">Report date</span></td><td colspan="1">
 
 Date of the report. Already filled in with the current date.
 
@@ -124,7 +124,7 @@ Date of the report. Already filled in with the current date.
 
 The number of failing jobs from the previous report. This number must be manually filled in.
 
-</td></tr><tr><td colspan="1">Previous nb unclaimed errors</td><td colspan="1">The number of unclaimed jobs from the previous report. This number must be manually filled in.</td></tr><tr><td colspan="1">Unstable Jobs</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Jenkins Duty Comments</td><td colspan="1">A summary of the report. This is usually filled in after a first version of the report has been audited and the report has been updated. See the [Updating a report](#updating-report) section.</td></tr></tbody></table>
+</td></tr><tr><td colspan="1">Previous nb unclaimed errors</td><td colspan="1">The number of unclaimed jobs from the previous report. This number must be manually filled in.</td></tr><tr><td colspan="1">Unstable Jobs</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Jenkins Duty Comments</td><td colspan="1">A summary of the report. This is usually filled in after a first version of the report has been audited and the report has been updated. See the [Updating a report](#updating-report) section.</td></tr></tbody></table></div>
 
 ## {{> anchor 'updating-report'}}Updating a Report
 
@@ -184,3 +184,14 @@ To send the report:
 &nbsp;
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Jenkins duty]({{page space='corg' page='jenkins-duty'}})
+*   [Nuxeo Jenkins Report dev documentation]({{page space='nxdoc60' page='nuxeo-jenkins-report'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

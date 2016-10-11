@@ -150,3 +150,14 @@ By default, workspaces don't have any targets defined.
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Publishing Documents]({{page page='publishing-documents'}})
+*   [Publisher]({{page space='nxdoc60' page='publisher'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

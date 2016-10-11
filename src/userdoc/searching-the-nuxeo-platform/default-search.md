@@ -173,7 +173,7 @@ SELECT * FROM Document WHERE (criterion1 = value1 OR criterion1 = value2) AND (c
 
 **Available search criteria**
 
-<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">
 
 Text search
 
@@ -273,7 +273,7 @@ You can limit the search to a specific workspaces / section / folder by selectin
 
 **Note**: The tree displayed is not pre-filtered depending on already selected search criteria, you are always displayed the whole tree (depending on your access rights).
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 &nbsp;
 

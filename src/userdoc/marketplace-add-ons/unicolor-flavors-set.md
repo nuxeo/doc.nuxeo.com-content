@@ -113,3 +113,13 @@ history:
 To use the Unicolor Flavor Set and understand what is a flavor, you should report to the [workspace theme configuration]({{page page='applying-a-preset-look-to-a-space'}}).
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Unicolor Flavors Set dev documentation]({{page space='nxdoc60' page='unicolor-flavors-set'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

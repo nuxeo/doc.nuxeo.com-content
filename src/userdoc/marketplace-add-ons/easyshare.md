@@ -124,14 +124,14 @@ The Easy Share folder is created. You can now create new documents in it or shar
 
 **Easy Share Folder creation parameters**
 
-<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Title</td><td colspan="1">It will be visible to your recipients in the Easy Share folder public view.</td></tr><tr><td colspan="1">Expiration Date</td><td colspan="1">Determines until which day the Easy Share folder in the&nbsp; will be available.
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Title</td><td colspan="1">It will be visible to your recipients in the Easy Share folder public view.</td></tr><tr><td colspan="1">Expiration Date</td><td colspan="1">Determines until which day the Easy Share folder in the&nbsp; will be available.
 After this date, the folder will still exist in Nuxeo but will show as expired when attempting external access.</td></tr><tr><td colspan="1">Share Comment</td><td colspan="1">The message displayed on the Easy Share folder public view.</td></tr><tr><td colspan="1">Contact Email</td><td colspan="1">
 
 The email address to which an email will be sent each time a document is downloaded.
 
 People who can access the Easy Share folder can also use it to contact someone from the organization.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Adding Documents to an Easy Share Folder
 
@@ -168,7 +168,7 @@ It is possible to share a document in an Easy Share folder without creating the 
 4.  Click on **Share in Easy Share Folder** in your worklist.
     The document(s) are added to the folder.&nbsp;
 
-{{#> callout type='tip' }} See [Copying and Moving Documents](http://doc.nuxeo.com/x/IwHF) page to learn how to use the worklist. {{/callout}}
+{{#> callout type='tip' }} See [Copying and Moving Documents](/x/IwHF) page to learn how to use the worklist. {{/callout}}
 
 ## Sharing an Easy Share Folder
 
@@ -189,3 +189,13 @@ If you want more information about the future evolutions and improvements, see [
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about EasyShare'}}
+
+*   [EasyShare dev documentation]({{page space='nxdoc60' page='easyshare'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

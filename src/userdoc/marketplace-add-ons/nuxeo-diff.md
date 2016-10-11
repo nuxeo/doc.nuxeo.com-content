@@ -161,3 +161,21 @@ It is also possible to compare two distinct documents.
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
+
+*   [Nuxeo Diff developer documentation]({{page space='nxdoc60' page='nuxeo-diff'}})
+
+{{/panel}}
+
+&nbsp;
+
+&nbsp;
+
+</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

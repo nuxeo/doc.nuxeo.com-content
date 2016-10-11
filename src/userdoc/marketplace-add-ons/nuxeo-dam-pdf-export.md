@@ -66,3 +66,13 @@ What is exported:
     ![]({{file name='dam-pdf-export.png'}} ?w=650,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo DAM PDF Export dev documentation]({{page space='nxdoc60' page='nuxeo-dam-pdf-export'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

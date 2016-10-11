@@ -58,3 +58,16 @@ The addon [Template Rendering]({{page page='template-rendering-addon'}}) provide
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Template Rendering Addon]({{page page='template-rendering-addon'}})
+*   [Files]({{page page='files'}})
+*   [Notes]({{page page='notes'}})
+*   [Digital Asset Management (DAM)]({{page space='nxdoc60' page='digital-asset-management-dam'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -64,3 +64,15 @@ Only administrators can do an audit of the permissions of a folder.
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Groups and Rights Audit admin doc]({{page space='nxdoc60' page='nuxeo-groups-and-rights-audit'}})
+*   [Exporting Documents]({{page page='exporting-documents'}})
+*   [Nuxeo Core Import / Export API]({{page space='nxdoc60' page='nuxeo-core-import-export-api'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

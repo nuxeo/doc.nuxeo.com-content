@@ -200,3 +200,13 @@ The tag is immediately removed.
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More documentation about tags'}}
+
+*   [Tagging]({{page space='nxdoc60' page='tagging'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

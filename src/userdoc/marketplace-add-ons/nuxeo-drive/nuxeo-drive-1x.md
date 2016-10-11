@@ -210,7 +210,7 @@ After you start Nuxeo Drive the first time, it will be automatically started whe
 
 Here are the different statuses of Nuxeo Drive:
 
-<table><tbody><tr><th colspan="1">Icon</th><th colspan="1">Status</th></tr><tr><td colspan="1">![]({{file name='drive_unsynced.png'}})</td><td colspan="1">Synchronization is disabled (offline mode or suspended synchronization).</td></tr><tr><td colspan="1">![]({{file name='drive_synced.png'}})</td><td colspan="1">Nuxeo Drive has successfully synchronized.</td></tr><tr><td colspan="1">![]({{file name='nuxeo_drive_icon_16.png'}})</td><td colspan="1">Nuxeo Drive is synchronizing with the Nuxeo Platform.</td></tr><tr><td colspan="1">![]({{file name='nuxeo_drive_systray_icon_update_available_18.png'}})</td><td colspan="1">An update of Nuxeo Drive is available.</td></tr><tr><td colspan="1">![]({{file name='nuxeo_drive_systray_icon_stopping.png'}})</td><td colspan="1">Nuxeo Drive is ending the synchronization with the Nuxeo Platform</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Icon</th><th colspan="1">Status</th></tr><tr><td colspan="1">![]({{file name='drive_unsynced.png'}})</td><td colspan="1">Synchronization is disabled (offline mode or suspended synchronization).</td></tr><tr><td colspan="1">![]({{file name='drive_synced.png'}})</td><td colspan="1">Nuxeo Drive has successfully synchronized.</td></tr><tr><td colspan="1">![]({{file name='nuxeo_drive_icon_16.png'}})</td><td colspan="1">Nuxeo Drive is synchronizing with the Nuxeo Platform.</td></tr><tr><td colspan="1">![]({{file name='nuxeo_drive_systray_icon_update_available_18.png'}})</td><td colspan="1">An update of Nuxeo Drive is available.</td></tr><tr><td colspan="1">![]({{file name='nuxeo_drive_systray_icon_stopping.png'}})</td><td colspan="1">Nuxeo Drive is ending the synchronization with the Nuxeo Platform</td></tr></tbody></table></div>
 
 ### Accessing the Nuxeo Drive Folder
 
@@ -278,7 +278,7 @@ There are to ways to desynchronize a folder. From the server, when you desynchro
 
 By default, once you have synchronized a folder all its content (files and folders) are synchronized, but you can decide locally which folders you want to keep. This feature will enable you to manage the storage space dedicated to the synchronization, which is especially useful if you use a device with a low-storage capacity.
 
-1.  Click on the ![](http://doc.nuxeo.com/download/attachments/13664723/drive_synced.png?version=1&modificationDate=1368620225712&api=v2) icon (in the top menu bar on Mac OS X, in the system tray on Windows).
+1.  Click on the ![](/download/attachments/13664723/drive_synced.png?version=1&modificationDate=1368620225712&api=v2) icon (in the top menu bar on Mac OS X, in the system tray on Windows).
 2.  Go to **Settings**.
     A pop-up window appears.
 3.  Click on the **Folders** tab.
@@ -537,3 +537,12 @@ To uninstall Nuxeo Drive:
 {{! /multiexcerpt}}
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Drive FAQ]({{page page='nuxeo-drive-faq'}})
+*   [Nuxeo Drive developer documentation]({{page space='nxdoc60' page='nuxeo-drive'}})
+*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page space='nxdoc60' page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+*   [How to Customize Nuxeo Drive Versioning Policy]({{page space='nxdoc60' page='how-to-customize-nuxeo-drive-versioning-policy'}})
+
+{{/panel}}</div><div class="column medium-6">null</div></div>

@@ -328,3 +328,13 @@ If a user has inherited rights that you don't want him to have in the current sp
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Want to add your own access rights?'}}
+
+*   [Add a new Permission in the UI]({{page space='studio' page='add-a-new-permission-in-the-ui'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

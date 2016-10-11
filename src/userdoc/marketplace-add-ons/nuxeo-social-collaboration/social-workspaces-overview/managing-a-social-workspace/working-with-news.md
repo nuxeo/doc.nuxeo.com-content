@@ -131,7 +131,7 @@ The dashboard must display the Document library gadget.
 
 **News items properties**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -187,4 +187,4 @@ Format
 
 Select which format should be used for the news item.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>

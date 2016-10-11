@@ -91,7 +91,7 @@ Poll can be created only in spaces that have the "SuperSpace" facet. On a defaul
 
 **Poll parameters**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -139,7 +139,7 @@ End Date
 
 Select the date at which the poll will close.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Defining Who Can Participate to the Poll
 
@@ -169,3 +169,13 @@ When a poll is open, it is automatically displayed to users in the left column o
 ![]({{file name='NxPolls_results_pie_chart.png'}} ?border=true) ![]({{file name='NxPolls_results_bar_chart.png'}} ?border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about this package'}}
+
+*   [Nuxeo Poll dev documentation]({{page space='nxdoc60' page='nuxeo-poll'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

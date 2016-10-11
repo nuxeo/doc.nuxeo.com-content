@@ -206,3 +206,25 @@ Users with management rights can see the documents the users follow. They can al
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+{{#> panel heading='Customization'}}
+
+*   [How to Customize Email Templates]({{page space='nxdoc60' page='how-to-customize-email-templates'}})
+
+{{/panel}}
+
+&nbsp;
+
+&nbsp;
+
+</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -123,3 +123,13 @@ The Collaboration domain also comes with a default dashboard, that the applicati
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
+
+*   [Managing Dashboards]({{page page='managing-dashboards'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

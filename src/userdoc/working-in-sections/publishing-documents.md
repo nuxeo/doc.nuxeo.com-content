@@ -306,3 +306,13 @@ Unpublishing a document deletes the document from the section, but it does not d
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
+
+*   [Setting Publication Targets]({{page page='setting-publication-targets'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

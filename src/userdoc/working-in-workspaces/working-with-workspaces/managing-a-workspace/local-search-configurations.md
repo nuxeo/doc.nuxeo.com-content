@@ -139,3 +139,14 @@ To remove a search, move it back to the "Existing content view" list on the left
 * * *
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
+*   [How to Configure a Search Filter With Facets and Other Aggregates]({{page space='nxdoc60' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>
