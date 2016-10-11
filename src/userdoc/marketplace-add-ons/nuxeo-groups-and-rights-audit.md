@@ -62,3 +62,13 @@ Only administrators can do an audit of the permissions of a folder.
     The export is processes as a background task. You will receive an email with the exported Excel file when it is completed.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
+
+*   [Nuxeo Groups and Rights Audit dev doc]({{page space='nxdoc58' page='nuxeo-groups-and-rights-audit'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

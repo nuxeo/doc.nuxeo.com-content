@@ -130,3 +130,13 @@ If the feed you want is not already defined, you can add it by yourself.&nbsp;
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo RSS Reader dev documentation]({{page space='nxdoc58' page='nuxeo-rss-reader'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

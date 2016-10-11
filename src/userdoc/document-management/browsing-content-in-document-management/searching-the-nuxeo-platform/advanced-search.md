@@ -124,7 +124,7 @@ history:
 ---
 Available search criteria are:
 
-<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Required words</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Required words</td><td colspan="1">
 
 This field is equivalent to the simple search field: keywords are searched for in the title, description and content, using stemming. You can use operators to refine your search.
 
@@ -185,7 +185,7 @@ This is an exact search field. It behaves like the Rights field.**&nbsp;**
 
 Select "Yes" if you want deleted documents to be included in search results.
 
-</td></tr></tbody></table>{{! multiexcerpt name='advanced-search-steps'}}
+</td></tr></tbody></table></div>{{! multiexcerpt name='advanced-search-steps'}}
 
 &nbsp;**To search documents using detailed criteria:**
 

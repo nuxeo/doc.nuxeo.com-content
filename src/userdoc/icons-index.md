@@ -107,7 +107,7 @@ This page references the icons used in the Nuxeo Platform and their use.
 
 ## CAP Icons
 
-<table><tbody><tr><th colspan="1">Icon</th><th colspan="1">Description</th></tr><tr><td colspan="1">![]({{file name='workspace.gif'}})</td><td colspan="1">Workspace icon.</td></tr><tr><td colspan="1">![]({{file name='folder_template.gif'}})</td><td colspan="1">Workspace template icon.</td></tr><tr><td colspan="1">![]({{file name='folder.gif'}})</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Icon</th><th colspan="1">Description</th></tr><tr><td colspan="1">![]({{file name='workspace.gif'}})</td><td colspan="1">Workspace icon.</td></tr><tr><td colspan="1">![]({{file name='folder_template.gif'}})</td><td colspan="1">Workspace template icon.</td></tr><tr><td colspan="1">![]({{file name='folder.gif'}})</td><td colspan="1">
 
 *   Section (at the root of the navigation tree and in the Sections part of the tree)
 *   Folder (in the Workspaces part of the tree)
@@ -242,11 +242,11 @@ Breadcrumbs icon.
 
 Click to go up one level in the tree structure.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## Document Management Icons
 
-<table><tbody><tr><th colspan="1">Icon</th><th colspan="1">Description</th></tr><tr><td colspan="1">![]({{file name='preview.png'}})</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Icon</th><th colspan="1">Description</th></tr><tr><td colspan="1">![]({{file name='preview.png'}})</td><td colspan="1">
 
 Preview icon.
 
@@ -256,15 +256,15 @@ Annotations icons.
 
 Displays the number of annotations on the document.
 
-</td></tr><tr><td colspan="1">![]({{file name='CONTENT_TREE.png'}})</td><td colspan="1">Navigation tree tab icon.</td></tr><tr><td colspan="1">![]({{file name='facetedSearch.png'}})</td><td colspan="1">Faceted search tab icon.</td></tr><tr><td colspan="1">![]({{file name='TAG_CLOUD.png'}})</td><td colspan="1">Tag cloud tab icon.</td></tr><tr><td colspan="1">![]({{file name='byCoverageNavigation.png'}})</td><td colspan="1">Coverage virtual navigation tab icon.</td></tr><tr><td colspan="1">![]({{file name='bySubjectsNavigation.png'}})</td><td colspan="1">Subject virtual navigation tab icon.</td></tr></tbody></table>
+</td></tr><tr><td colspan="1">![]({{file name='CONTENT_TREE.png'}})</td><td colspan="1">Navigation tree tab icon.</td></tr><tr><td colspan="1">![]({{file name='facetedSearch.png'}})</td><td colspan="1">Faceted search tab icon.</td></tr><tr><td colspan="1">![]({{file name='TAG_CLOUD.png'}})</td><td colspan="1">Tag cloud tab icon.</td></tr><tr><td colspan="1">![]({{file name='byCoverageNavigation.png'}})</td><td colspan="1">Coverage virtual navigation tab icon.</td></tr><tr><td colspan="1">![]({{file name='bySubjectsNavigation.png'}})</td><td colspan="1">Subject virtual navigation tab icon.</td></tr></tbody></table></div>
 
 ## Digital Asset Management Icons
 
-<table><tbody><tr><th colspan="1">Icon</th><th colspan="1">Description</th></tr><tr><td colspan="1">![]({{file name='switch.png'}})</td><td colspan="1">Switch view icon: enables users to go from the DAM view of the asset to its DM view, and the other way around.</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Icon</th><th colspan="1">Description</th></tr><tr><td colspan="1">![]({{file name='switch.png'}})</td><td colspan="1">Switch view icon: enables users to go from the DAM view of the asset to its DM view, and the other way around.</td></tr></tbody></table></div>
 
 ## Social Collaboration Icons
 
-<table><tbody><tr><th colspan="1">Icon</th><th colspan="1">Description</th></tr><tr><td colspan="1">![]({{file name='like.png'}})</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Icon</th><th colspan="1">Description</th></tr><tr><td colspan="1">![]({{file name='like.png'}})</td><td colspan="1">
 
 Like icon: enables users to vote for a document.
 
@@ -288,4 +288,4 @@ Add folder icon.
 
 Enables the user to create folders from the Document library gadget.
 
-</td></tr><tr><td colspan="1">![]({{file name='publish_to_all.png'}})</td><td colspan="1">Make public icon: clicking this icon makes the document public in the social workspace.</td></tr><tr><td colspan="1">![]({{file name='publish_to_social_workspace.png'}})</td><td colspan="1">Make private icon: clicking this icon makes the document private to social workspaces only.</td></tr></tbody></table>
+</td></tr><tr><td colspan="1">![]({{file name='publish_to_all.png'}})</td><td colspan="1">Make public icon: clicking this icon makes the document public in the social workspace.</td></tr><tr><td colspan="1">![]({{file name='publish_to_social_workspace.png'}})</td><td colspan="1">Make private icon: clicking this icon makes the document private to social workspaces only.</td></tr></tbody></table></div>

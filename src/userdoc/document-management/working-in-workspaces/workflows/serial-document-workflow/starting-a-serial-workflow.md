@@ -171,3 +171,15 @@ To start a workflow, you need to select the workflow type, reviewers and review 
     The first participant(s) on the review get(s) an email and have his (their) task displayed on his (their) dashboard.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Participating to a Serial Workflow]({{page page='participating-to-a-serial-workflow'}})
+*   [Workflows user documentation]({{page page='workflows'}})
+*   [Workflow in Nuxeo Studio]({{page space='studio' page='workflow'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

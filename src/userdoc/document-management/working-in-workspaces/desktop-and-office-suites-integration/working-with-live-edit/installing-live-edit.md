@@ -349,7 +349,7 @@ At this stage, you still won't see the online editing icons in the application. 
 
 **MS Office mimetype mapping with MS Office**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 File extension
 
@@ -467,7 +467,7 @@ Check the [Installation for Internet Explorer and MS Office instructions](#livee
 
 `%s`
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ## For OpenOffice.org and Internet Explorer users {{> anchor 'liveedit-ooo-ie'}}
 
@@ -545,7 +545,7 @@ At this stage, you still won't see the online editing icons in the application. 
 
 **OpenOffice.org and MS Office mimetype mapping with OpenOffice.org or LibreOffice**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 File extension
 
@@ -641,7 +641,7 @@ Path to the OpenOffice.org or LibreOffice `soffice.exe` file, for instance `C:\P
 
 `macro:///LiveEditOOo.launcher.load(%s)`
 
-</td></tr></tbody></table>{{#> callout type='note' heading='Microsoft Office 2007 compatibility'}}
+</td></tr></tbody></table></div>{{#> callout type='note' heading='Microsoft Office 2007 compatibility'}}
 
 Live Edit OpenOffice.org is not compatible with MS Office 2007 documents yet.
 

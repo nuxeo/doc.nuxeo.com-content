@@ -112,3 +112,15 @@ Only users with management rights can manage the trash of a space and delete doc
     The [relations]({{page page='relations'}}) to the deleted document are deleted.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More in this documentation'}}
+
+*   [Deleting Content]({{page page='deleting-content'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

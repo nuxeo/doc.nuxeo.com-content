@@ -408,7 +408,7 @@ Access to documents and the actions allowed are determined by access rights. Som
 
 The available access rights are:
 
-{{! excerpt}}<table><tbody><tr><th colspan="1">
+{{! excerpt}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Right
 
@@ -532,7 +532,7 @@ Submit documents for publishing (this permission in included in **Read** right)
 
 The "Can ask for publishing" permission is intended to be denied, so as to restrict the actions available to users with "Read" permission, typically to enable users to see the content of a section without being able to publish in the section.
 
-{{/callout}}</td></tr></tbody></table>{{! /excerpt}}
+{{/callout}}</td></tr></tbody></table></div>{{! /excerpt}}
 
 Access rights are given on folderish spaces (workspaces, sections, templates, domains, but also folders, picture books, forum) and are inherited in the sub-spaces.
 

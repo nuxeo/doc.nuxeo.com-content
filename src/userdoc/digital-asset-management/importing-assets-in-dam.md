@@ -286,7 +286,7 @@ You can import an asset individually using a form, that enables you to fill a mi
 
 **Asset metadata**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -318,7 +318,7 @@ Authoring date
 
 Date at which the content was created.
 
-</td></tr></tbody></table>{{#> callout type='tip' }}
+</td></tr></tbody></table></div>{{#> callout type='tip' }}
 
 This is the default product metadata set, that can be adapted to your own properties.
 

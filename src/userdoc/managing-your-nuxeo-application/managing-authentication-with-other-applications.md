@@ -123,7 +123,7 @@ In this section, we will take the example of iGoogle, that we want to authorize 
 
 **Google consumer parameters**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -209,7 +209,7 @@ Enabled&nbsp;
 
 Check "Yes".
 
-</td></tr></tbody></table>{{! /multiexcerpt}}
+</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
 For more information, take a look at these pages:
 

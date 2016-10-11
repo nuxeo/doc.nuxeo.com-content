@@ -156,3 +156,16 @@ You can leverage this feature when you customize the Nuxeo Platform and create n
 3.  In the Document content configuration, click on the icon&nbsp;![]({{file name='delete.png' page='icons-index'}}) of the document type - content view association you want to remove.
 4.  Click on the **Save** button.
     The document type has its default content view.
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
+
+*   [Managing a Workspace]({{page page='managing-a-workspace'}})
+*   [Applying a Preset Look to a Space]({{page page='applying-a-preset-look-to-a-space'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

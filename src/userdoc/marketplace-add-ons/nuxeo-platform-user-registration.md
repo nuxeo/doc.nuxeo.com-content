@@ -89,7 +89,7 @@ To invite a user:
 
 **Invitation form details**
 
-<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Email</td><td colspan="1">The email address to which the invitation will be sent.</td></tr><tr><td colspan="1">User name</td><td colspan="1">The username the invited user will use to log in.</td></tr><tr><td colspan="1">First name</td><td colspan="1">The invited user's first name.</td></tr><tr><td colspan="1">Last name</td><td colspan="1">The invited user's last name.</td></tr><tr><td colspan="1">Permission</td><td colspan="1">The access right you want to give the invited user on the space.</td></tr><tr><td colspan="1">Comment</td><td colspan="1">A comment for the invited user to explain why he's invited, for instance. This comment will be in the invitation email.</td></tr><tr><td colspan="1">Send me a copy</td><td colspan="1">Your email address will be in the Cc recipients of the invitation email.</td></tr></tbody></table>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Email</td><td colspan="1">The email address to which the invitation will be sent.</td></tr><tr><td colspan="1">User name</td><td colspan="1">The username the invited user will use to log in.</td></tr><tr><td colspan="1">First name</td><td colspan="1">The invited user's first name.</td></tr><tr><td colspan="1">Last name</td><td colspan="1">The invited user's last name.</td></tr><tr><td colspan="1">Permission</td><td colspan="1">The access right you want to give the invited user on the space.</td></tr><tr><td colspan="1">Comment</td><td colspan="1">A comment for the invited user to explain why he's invited, for instance. This comment will be in the invitation email.</td></tr><tr><td colspan="1">Send me a copy</td><td colspan="1">Your email address will be in the Cc recipients of the invitation email.</td></tr></tbody></table></div>
 
 ### Inviting Several Users
 
@@ -107,7 +107,7 @@ To invite several users at the same time to a space:
 
 **Bulk invitation form details**
 
-<table><tbody><tr><th colspan="1">Fields</th><th colspan="1">Description</th></tr><tr><td colspan="1">List of recipients</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Fields</th><th colspan="1">Description</th></tr><tr><td colspan="1">List of recipients</td><td colspan="1">
 
 The email addresses of the users you want to invite to the space. The email address will be their login.
 
@@ -115,7 +115,7 @@ The email addresses of the users you want to invite to the space. The email addr
 
 Be careful to use `;` to separate the different email addresses, it is the only accepted separator. If you use another separator (like the `,` for instance, only one invitation will be created.
 
-{{/callout}}</td></tr><tr><td colspan="1">Permission</td><td colspan="1">The access right you want to give the invited users on the space.</td></tr><tr><td colspan="1">Comment</td><td colspan="1">A comment for the invited user to explain why he's invited, for instance. This comment will be in the invitation emails.</td></tr><tr><td colspan="1">Send me a copy</td><td colspan="1">Your email address will be in the Cc recipients of the invitation emails.</td></tr></tbody></table>
+{{/callout}}</td></tr><tr><td colspan="1">Permission</td><td colspan="1">The access right you want to give the invited users on the space.</td></tr><tr><td colspan="1">Comment</td><td colspan="1">A comment for the invited user to explain why he's invited, for instance. This comment will be in the invitation emails.</td></tr><tr><td colspan="1">Send me a copy</td><td colspan="1">Your email address will be in the Cc recipients of the invitation emails.</td></tr></tbody></table></div>
 
 &nbsp;
 

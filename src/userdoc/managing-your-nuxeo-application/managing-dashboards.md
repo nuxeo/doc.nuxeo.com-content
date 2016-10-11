@@ -144,7 +144,7 @@ As an administrator, you can add and manage gadgets from other applications or w
 
 **External gadget properties**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -200,7 +200,7 @@ Icon URL
 
 URL of the icon to be displayed on the gadget selection pop up if the external gadget has no icon provided by default.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### Modifying an External Gadget
 
@@ -233,3 +233,15 @@ When you delete an external gadget, it is **not** removed from the dashboard of 
     The gadget is deleted and is not in the gadget list anymore. However it is still displayed on the dashboard of users who added it to their dashboard.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Dashboard Related Pages'}}
+
+*   [Social Workspaces Overview]({{page page='social-workspaces-overview'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

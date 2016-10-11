@@ -203,3 +203,15 @@ Tenant administrators can edit the vocabularies to customize the metadata values
 See the [Managing Vocabularies]({{page page='managing-vocabularies'}}) page.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related user documentation'}}
+
+*   [Managing Users and Groups]({{page page='managing-users-and-groups'}})
+*   [Managing Access Rights]({{page page='managing-access-rights'}})
+*   [Managing Vocabularies]({{page page='managing-vocabularies'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

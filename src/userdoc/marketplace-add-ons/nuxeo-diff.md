@@ -154,3 +154,13 @@ It is also possible to compare two distinct documents.
     A window pops up showing what's been added in green and what's been removed in red.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
+
+*   [Nuxeo Diff developer documentation]({{page space='nxdoc58' page='nuxeo-diff'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

@@ -275,4 +275,12 @@ You can then create, copy and move documents and folders in Nuxeo via the Window
 
 &nbsp;
 
-</div><div class="column medium-4">{{#> panel heading='On this page'}} {{/panel}}</div></div>
+</div><div class="column medium-4">{{#> panel heading='On this page'}} {{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [WebDAV]({{page space='nxdoc58' page='webdav'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

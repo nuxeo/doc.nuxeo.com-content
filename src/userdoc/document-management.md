@@ -19,9 +19,14 @@ confluence:
     source_link: /display/USERDOC58/Document+Management
 history:
     - 
+        author: Solen Guitter
+        date: '2016-09-14 07:56'
+        message: ''
+        version: '26'
+    - 
         author: Manon Lumeau
         date: '2016-07-20 14:13'
-        message: emove children display macro
+        message: 'remove children display macro '
         version: '25'
     - 
         author: Solen Guitter
@@ -149,7 +154,7 @@ history:
 
 &nbsp;
 
-The Nuxeo Platform offers a set of default content management features to provide organizations with the features they need to enable their teams to manage their documents more efficiently either on a project-basis or on longer term business processes. The [Document Management](http://www.nuxeo.com/en/products/dm) module brings additional features to this default set of features.
+The Nuxeo Platform offers a set of default content management features to provide organizations with the features they need to enable their teams to manage their documents more efficiently either on a project-basis or on longer term business processes. The [Document Management](https://www.nuxeo.com/solutions/document-management/) module brings additional features to this default set of features.
 
 This user guide provides information and step-by-step instructions to help you use the default and Document Management features of the Nuxeo Platform. Collaborative work takes place in [workspaces]({{page page='working-in-workspaces'}}), where you can create documents, share and edit them. When documents are ready for distribution, you can publish them in [sections]({{page page='working-in-sections'}}), which are the spaces devoted to content distribution.
 
@@ -172,7 +177,7 @@ For administrators, the integrated Admin Center provides tools to manage, monito
     *   [Files]({{page space='USERDOC58' page='Files'}})
     *   [Folders]({{page space='USERDOC58' page='Folders'}})
     *   [Working Using Drag and Drop]({{page space='USERDOC58' page='Working Using+Drag+and+Drop'}})
-    *   [Desktop & Office Suites Integration](https://doc.nuxeo.com/pages/viewpage.action?pageId=16092621)
+    *   [Desktop & Office Suites Integration](/pages/viewpage.action?pageId=16092621)
     *   [Relations]({{page space='USERDOC58' page='Relations'}})
     *   [Comments]({{page space='USERDOC58' page='Comments'}})
     *   [Annotations and Preview]({{page space='USERDOC58' page='Annotations and+Preview'}})

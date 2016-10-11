@@ -191,3 +191,16 @@ You can leverage this feature when you customize the Nuxeo Platform and create n
 &nbsp;
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
+
+*   [Managing a Workspace]({{page page='managing-a-workspace'}})
+*   [Changing the Presentation of Document Lists]({{page page='changing-the-presentation-of-document-lists'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

@@ -158,7 +158,7 @@ The emails imported in the email folder cannot be modified in Nuxeo.
 
 **Email folder parameters**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -254,7 +254,7 @@ Limit of new fetched emails
 
 Indicate the maximum number of emails to be fetched at the same time.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 The actions available on an email folder are:
 

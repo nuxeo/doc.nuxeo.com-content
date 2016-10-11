@@ -44,3 +44,13 @@ The [Nuxeo Agenda package](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 The Nuxeo Agenda is included in the Social Collaboration module. See the page&nbsp;[Agenda Overview]({{page page='agenda-overview'}}).
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Agenda dev documentation]({{page space='nxdoc58' page='nuxeo-agenda'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

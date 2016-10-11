@@ -49,3 +49,13 @@ In this **History** tab, when a user clicks on the document, a new event is regi
 ![]({{file name='MP-document-access-package.png'}} ?w=650,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Document Access Tracking dev documentation]({{page space='nxdoc58' page='document-access-tracking'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

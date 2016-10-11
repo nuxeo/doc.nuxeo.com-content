@@ -39,3 +39,16 @@ The comparison features comes as a Marketplace addon on the naked Platform, call
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages '}}
+
+*   [Nuxeo Diff user documentation]({{page page='nuxeo-diff'}})
+*   [Nuxeo Diff dev documentation]({{page space='nxdoc58' page='nuxeo-diff'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

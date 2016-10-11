@@ -960,7 +960,7 @@ Here is the list of Nuxeo Platform add-ons available on the Nuxeo Marketplace:
 
 Released for 5.8
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 **Package
 **
@@ -1011,7 +1011,7 @@ Registered access
 
 [Developer documentation]({{page space='nxdoc58' page='nuxeo-bulk-document-importer'}})
 
-</td><td colspan="1">[Released for 5.8](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer?version=1.3.0)</td></tr><tr><td colspan="1">CAS2 Authentication</td><td colspan="1">Registered access</td><td colspan="1">[Administration documentation](http://doc.nuxeo.com/x/popH)</td><td colspan="1">[Released for 5.8](https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication?version=1.0.0)</td></tr><tr><td colspan="1">Configuration Management</td><td colspan="1">Registered access</td><td colspan="1">[Studio documentation]({{page space='studio' page='configuration-management'}})</td><td colspan="1">[Released for 5.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/configuration-management-nux?version=0.1.0)</td></tr><tr><td colspan="1">
+</td><td colspan="1">[Released for 5.8](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer?version=1.3.0)</td></tr><tr><td colspan="1">CAS2 Authentication</td><td colspan="1">Registered access</td><td colspan="1">[Administration documentation](/x/popH)</td><td colspan="1">[Released for 5.8](https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication?version=1.0.0)</td></tr><tr><td colspan="1">Configuration Management</td><td colspan="1">Registered access</td><td colspan="1">[Studio documentation]({{page space='studio' page='configuration-management'}})</td><td colspan="1">[Released for 5.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/configuration-management-nux?version=0.1.0)</td></tr><tr><td colspan="1">
 
 Digital Signature
 
@@ -1419,7 +1419,7 @@ Public
 [Released for 5.5](https://connect.nuxeo.com/nuxeo/site/marketplace/package/ValidatorResolvedByPermissionWorkflow_nux?version=1.2.3)
 Useless on 5.7 until updated to use routing.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 Use: "In progress (JC)", "Ready for x.y.z" or "Released for x.y.z" or any other relevant comment.
 

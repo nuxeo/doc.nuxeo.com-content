@@ -162,3 +162,15 @@ When the document is rejected by the first reviewer, the document is sent back t
 The workflow automatically ends when the last reviewer approves the document, and the document changes state if the initiator [chose to do a validation review]({{page page='starting-a-serial-workflow'}}).
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Starting a Serial Workflow]({{page page='starting-a-serial-workflow'}})
+*   [Workflows user documentation]({{page page='workflows'}})
+*   [Workflow in Nuxeo Studio]({{page space='studio' page='workflow'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

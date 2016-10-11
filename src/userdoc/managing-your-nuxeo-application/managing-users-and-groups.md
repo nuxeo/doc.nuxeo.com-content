@@ -171,7 +171,7 @@ history:
 
 ### User's Parameters
 
-{{! multiexcerpt name='user-info'}}<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Username</td><td colspan="1">
+{{! multiexcerpt name='user-info'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Username</td><td colspan="1">
 
 The name the user will use to log in.
 
@@ -203,7 +203,7 @@ Groups of which the user is a member.
 
 User must be at least in 'administrators' or 'members' group, or one of their sub-groups.
 
-</td></tr><tr><td colspan="1">Virtual groups for this user</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Avatar</td><td colspan="1">Image that represents the user in the application.</td></tr><tr><td colspan="1">Birth date</td><td colspan="1">User's birth date</td></tr><tr><td colspan="1">Phone number</td><td colspan="1">User's phone number</td></tr><tr><td colspan="1">Gender</td><td colspan="1">User's gender. Default value is Male.</td></tr><tr><td colspan="1">Public profile</td><td colspan="1">Visibility of the information about the user. By default, profiles are public.</td></tr></tbody></table>{{! /multiexcerpt}}
+</td></tr><tr><td colspan="1">Virtual groups for this user</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Avatar</td><td colspan="1">Image that represents the user in the application.</td></tr><tr><td colspan="1">Birth date</td><td colspan="1">User's birth date</td></tr><tr><td colspan="1">Phone number</td><td colspan="1">User's phone number</td></tr><tr><td colspan="1">Gender</td><td colspan="1">User's gender. Default value is Male.</td></tr><tr><td colspan="1">Public profile</td><td colspan="1">Visibility of the information about the user. By default, profiles are public.</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
 ### Creating a User
 
@@ -324,7 +324,7 @@ Groups can be composed of users and of sub-groups. Sub-group's members automatic
 
 ### Groups Parameters
 
-{{! multiexcerpt name='group-info'}}<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">
+{{! multiexcerpt name='group-info'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">
 
 Group name
 
@@ -358,7 +358,7 @@ Sub-groups
 
 Groups that belong to the group.
 
-</td></tr></tbody></table>{{! /multiexcerpt}}
+</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
 ### Creating a Group
 

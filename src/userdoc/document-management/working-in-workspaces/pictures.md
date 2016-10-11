@@ -198,7 +198,7 @@ You need to have at least Write right to be able to create a picture book.
 
 **Picture book creation parameters**
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
 
@@ -244,7 +244,7 @@ Default views available are:
 *   Original: original size picture,
 *   OriginalJpeg: original size picture in .jpg format.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### Editing a Picture Book
 

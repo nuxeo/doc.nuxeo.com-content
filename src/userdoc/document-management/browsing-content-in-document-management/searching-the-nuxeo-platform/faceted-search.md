@@ -120,7 +120,7 @@ history:
 
 The faceted search tab offers several criteria to filter the content of the application.
 
-<table><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Keywords</td><td colspan="1">The keywords field behaves like the simple search field. It makes a full-text search. You can use full-text operators in this field to refine your search.</td></tr><tr><td colspan="1">Dates</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Keywords</td><td colspan="1">The keywords field behaves like the simple search field. It makes a full-text search. You can use full-text operators in this field to refine your search.</td></tr><tr><td colspan="1">Dates</td><td colspan="1">
 
 The creation date and modification date criteria have the same behavior. The system will just respectively query the "Created at" and "Last modified at" fields.
 These fields enable you to select a time period (from Apr. 19th 2013 to Apr. 23rd 2013 for instance) or just a limit date (from Apr. 19th 2013 or until Apr. 19th 2013 for instance).
@@ -137,7 +137,7 @@ You can limit the search to a specific workspaces / section / folder by selectin
 
 If you have several domains (for instance if you use the Social Collaboration or Digital Asset Management modules), note that the Folder popup window will display the tree structure of the domain you are currently browsing. To select folders in several domains, go on the application's root (using the icon ![]({{file name='UpFolder_icon.gif' page='icons-index'}})) before filling in the faceted search form.
 
-{{/callout}}</td></tr></tbody></table>
+{{/callout}}</td></tr></tbody></table></div>
 
 **To browse the content of the application using faceted search:**
 

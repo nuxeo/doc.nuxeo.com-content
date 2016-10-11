@@ -122,3 +122,14 @@ By default, workspaces don't have any targets defined.
 4.  Click on the icon to remove a section from the workspace's targets.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Publishing Documents]({{page page='publishing-documents'}})
+*   [Publisher service]({{page space='nxdoc58' page='publisher-service'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

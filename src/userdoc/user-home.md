@@ -159,3 +159,16 @@ The [Social Collaboration module]({{page page='social-collaboration'}}) adds thr
     ![]({{file name='mini-messages.png' page='social-collaboration'}} ?w=650,border=true)
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
+
+*   [Dashboard]({{page page='dashboard'}})
+*   [Alerts]({{page page='alerts'}})
+*   [Managing Dashboards]({{page page='managing-dashboards'}})
+*   [Social Workspaces Overview]({{page page='social-workspaces-overview'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

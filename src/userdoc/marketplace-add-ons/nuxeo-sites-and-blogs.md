@@ -126,8 +126,16 @@ The [Nuxeo Sites and Blogs package](https://connect.nuxeo.com/nuxeo/site/marketp
 
 Websites and blogs have in common some specific behaviors, like the fact that they have some specific access rights and that comments can be moderated. Both can also be created in workspaces only.
 
-<table><tbody><tr><th colspan="1">Right</th><th colspan="1">Actions in workspace</th></tr><tr><td colspan="1">Comment</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Right</th><th colspan="1">Actions in workspace</th></tr><tr><td colspan="1">Comment</td><td colspan="1">
 
 Add comments on websites and blogs.
 
-</td></tr><tr><td colspan="1">Moderate</td><td colspan="1">Moderate comments on websites and blogs if moderation is set to "Beforehand".</td></tr></tbody></table>
+</td></tr><tr><td colspan="1">Moderate</td><td colspan="1">Moderate comments on websites and blogs if moderation is set to "Beforehand".</td></tr></tbody></table></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Sites and Blogs dev documentation]({{page space='nxdoc58' page='nuxeo-sites-and-blogs'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>

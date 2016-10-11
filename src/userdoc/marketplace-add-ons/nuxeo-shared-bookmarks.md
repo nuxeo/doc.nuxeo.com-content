@@ -122,3 +122,15 @@ See the page [Managing Access Rights]({{page page='managing-access-rights'}}).
 &nbsp;
 
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+*   [Nuxeo Shared Bookmarks dev documentation]({{page space='nxdoc58' page='nuxeo-shared-bookmarks'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

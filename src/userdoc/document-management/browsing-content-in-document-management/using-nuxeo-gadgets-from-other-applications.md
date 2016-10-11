@@ -178,3 +178,16 @@ Before users can use the Nuxeo Platform gadgets in another application, the admi
         iGoogle is available in the "Authorized Applications" tab of your home, so you can set how long iGoogle can access the Nuxeo Platform content.
 
 &nbsp;
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
+
+*   [Managing Dashboards]({{page page='managing-dashboards'}})
+*   [User Home]({{page page='user-home'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+&nbsp;
+
+</div></div>

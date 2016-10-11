@@ -230,7 +230,7 @@ _Picture metadata edit mode:_
 
 &nbsp;
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Title
 
@@ -390,7 +390,7 @@ Duration
 
 Duration of the video and audio assets. This is only displayed on video and audio assets.
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 ### IPTC and EXIF Metadata
 

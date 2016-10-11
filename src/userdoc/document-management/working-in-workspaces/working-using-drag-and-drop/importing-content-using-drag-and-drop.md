@@ -152,7 +152,7 @@ You can drop any file type in Nuxeo.
 
 Here are some examples of most commonly used item types and their output in Nuxeo:
 
-<table><tbody><tr><th colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Item type
 
@@ -200,7 +200,7 @@ Picture (.jpg, .png, etc)
 
 Picture
 
-</td></tr></tbody></table>{{! /multiexcerpt}}
+</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
 ## Import with Metadata
 

@@ -34,7 +34,7 @@ history:
 ---
 Smart search enables to build queries using the fields and operators below.
 
-<table><tbody><tr><th colspan="1">Metadata</th><th colspan="1">Search field</th><th colspan="1">Operator</th></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Metadata</th><th colspan="1">Search field</th><th colspan="1">Operator</th></tr><tr><td colspan="1">
 
 Content
 
@@ -112,7 +112,7 @@ NOT IN
 STARTS WITH
 DOES NOT START WITH
 
-</td></tr></tbody></table>
+</td></tr></tbody></table></div>
 
 **Date fields**
 
