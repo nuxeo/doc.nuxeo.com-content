@@ -21,218 +21,219 @@ confluence:
     shortlink: QwjF
     shortlink_source: 'https://doc.nuxeo.com/x/QwjF'
     source_link: /display/Studio/Form+Layouts
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 15:31'
         message: ''
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-08 15:21'
         message: Add grid icons description
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 08:56'
         message: Fix TOC
         version: '41'
-    - 
+    -
         author: Harlan Brown
         date: '2015-06-02 21:47'
         message: ''
         version: '40'
-    - 
+    -
         author: Harlan Brown
         date: '2015-06-02 21:46'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 15:28'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-30 11:25'
         message: ''
         version: '37'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-08 17:25'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-08 14:51'
         message: typos and formatting
         version: '35'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-07 15:38'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-04 11:15'
         message: ''
         version: '33'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 17:40'
         message: ''
         version: '32'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 16:27'
         message: ''
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 11:33'
         message: ''
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 11:27'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 11:22'
         message: ''
         version: '28'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 11:20'
         message: ''
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 17:19'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 17:17'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 17:16'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 17:16'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 17:15'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 17:00'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 15:36'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 10:37'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 17:36'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 17:08'
         message: ''
         version: '17'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-04-09 17:33'
         message: ''
         version: '16'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-04-09 17:23'
         message: add link to tech doc about custom widget templates
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 18:48'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 18:43'
         message: ''
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 18:41'
         message: ''
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 18:14'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 18:13'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 18:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 18:07'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 17:41'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 17:28'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 17:28'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 17:27'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 16:23'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 16:08'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 14:22'
         message: ''

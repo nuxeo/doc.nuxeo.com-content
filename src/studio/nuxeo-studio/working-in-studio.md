@@ -17,68 +17,69 @@ confluence:
     shortlink: pQTF
     shortlink_source: 'https://doc.nuxeo.com/x/pQTF'
     source_link: /display/Studio/Working+in+Studio
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 12:14'
         message: emove children display macr
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-12 11:51'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-10 09:10'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-07 16:18'
         message: ''
         version: '10'
-    - 
+    -
         author: jballina
         date: '2013-03-04 22:59'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 00:41'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 00:41'
         message: ''
         version: '7'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 17:22'
         message: ''
         version: '6'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 12:25'
         message: ''
         version: '5'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 12:20'
         message: ''
         version: '4'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 12:10'
         message: ''
         version: '3'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 10:34'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 10:17'
         message: ''

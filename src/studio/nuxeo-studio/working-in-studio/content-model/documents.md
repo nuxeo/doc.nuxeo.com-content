@@ -19,158 +19,159 @@ confluence:
     shortlink: awXF
     shortlink_source: 'https://doc.nuxeo.com/x/awXF'
     source_link: /display/Studio/Documents
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-28 13:44'
         message: 'ix Studio menu label     '
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-09 16:13'
         message: Add screenshot for schema and layouts tabs
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-09 10:53'
         message: 'NXDOC-769: update Schema tab description'
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 09:17'
         message: Fix format and update related how-to's.
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 16:09'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 16:05'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 15:30'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-05 23:01'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-17 14:49'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-12 16:37'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-14 11:05'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-10 16:20'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 15:29'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 11:59'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 11:55'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 12:39'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 10:35'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 18:00'
         message: ''
         version: '14'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-07-05 01:40'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-04 12:05'
         message: 'Added links, fixed typos and resized screenshots'
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-03 11:06'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-03 05:13'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-03 05:09'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-03 01:01'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-03 00:59'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 01:18'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 01:12'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 01:09'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 00:52'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 00:18'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-12-04 08:41'
         message: ''

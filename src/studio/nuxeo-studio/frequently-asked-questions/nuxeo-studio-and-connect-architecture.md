@@ -18,68 +18,69 @@ confluence:
     shortlink: gIPZ
     shortlink_source: 'https://doc.nuxeo.com/x/gIPZ'
     source_link: /display/Studio/Nuxeo+Studio+and+Connect+architecture
+tree_item_index: 200
 history:
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-17 16:07'
         message: ''
         version: '13'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-17 16:06'
         message: ''
         version: '12'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-06-17 15:49'
         message: ''
         version: '11'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-06-17 15:42'
         message: ''
         version: '10'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-17 15:21'
         message: ''
         version: '9'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-17 15:19'
         message: ''
         version: '8'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-17 15:13'
         message: ''
         version: '7'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-17 14:57'
         message: ''
         version: '6'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-17 14:57'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-17 14:54'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-17 14:53'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-17 14:52'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-06-17 14:36'
         message: ''

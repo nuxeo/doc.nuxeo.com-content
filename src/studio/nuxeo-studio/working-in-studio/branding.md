@@ -26,363 +26,364 @@ confluence:
     shortlink: AQXF
     shortlink_source: 'https://doc.nuxeo.com/x/AQXF'
     source_link: /display/Studio/Branding
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 09:52'
         message: ''
         version: '72'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-02-09 15:39'
         message: ''
         version: '71'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-02-09 15:34'
         message: ''
         version: '70'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-02-09 15:20'
         message: ''
         version: '69'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-29 13:50'
         message: 'Formatting '
         version: '68'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-29 13:38'
         message: 'Formatting '
         version: '67'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-29 13:34'
         message: 'Formatting '
         version: '66'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-29 13:16'
         message: ''
         version: '65'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-24 17:45'
         message: ''
         version: '64'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-14 11:12'
         message: ''
         version: '63'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-07 14:24'
         message: ''
         version: '62'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-04 11:56'
         message: ''
         version: '61'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-04 11:35'
         message: ''
         version: '60'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-04 11:27'
         message: ''
         version: '59'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-04 10:56'
         message: ''
         version: '58'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-04 10:54'
         message: ''
         version: '57'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-04 10:53'
         message: ''
         version: '56'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-04 10:52'
         message: ''
         version: '55'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-03 17:58'
         message: ''
         version: '54'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-03 17:56'
         message: ''
         version: '53'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-03 17:51'
         message: ''
         version: '52'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-03 17:47'
         message: ''
         version: '51'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-03 17:31'
         message: ''
         version: '50'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-03 17:27'
         message: ''
         version: '49'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-03 16:47'
         message: ''
         version: '48'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-03 16:43'
         message: ''
         version: '47'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-03 16:21'
         message: ''
         version: '46'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-03 15:23'
         message: ''
         version: '45'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-03 15:14'
         message: ''
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-11 18:08'
         message: ''
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-22 11:09'
         message: Formatting
         version: '42'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-20 11:30'
         message: ''
         version: '41'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-20 11:28'
         message: ''
         version: '40'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-19 17:54'
         message: ''
         version: '39'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-19 17:18'
         message: ''
         version: '38'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-19 17:02'
         message: ''
         version: '37'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-19 17:00'
         message: ''
         version: '36'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-19 16:59'
         message: ''
         version: '35'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-19 16:54'
         message: ''
         version: '34'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-19 12:11'
         message: ''
         version: '33'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-18 19:49'
         message: ''
         version: '32'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-18 19:23'
         message: ''
         version: '31'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-18 19:22'
         message: ''
         version: '30'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-18 17:53'
         message: ''
         version: '29'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-18 17:22'
         message: ''
         version: '28'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-18 16:56'
         message: ''
         version: '27'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-18 16:50'
         message: ''
         version: '26'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-18 16:49'
         message: ''
         version: '25'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-18 16:46'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-18 14:44'
         message: Removed related topics from TOC
         version: '23'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-14 17:50'
         message: ''
         version: '22'
-    - 
+    -
         author: Lise Kemen
         date: '2013-11-14 17:11'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-30 13:40'
         message: Formatting and added TOC
         version: '20'
-    - 
+    -
         author: jballina
         date: '2013-03-05 15:54'
         message: ''
         version: '19'
-    - 
+    -
         author: jballina
         date: '2013-03-04 23:21'
         message: ''
         version: '18'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-14 09:18'
         message: ''
         version: '17'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-11 23:55'
         message: ''
         version: '16'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-11 23:55'
         message: ''
         version: '15'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-11 23:49'
         message: ''
         version: '14'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-11 23:48'
         message: ''
         version: '13'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-11 23:46'
         message: ''
         version: '12'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-11 18:11'
         message: ''
         version: '11'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-11 17:38'
         message: ''
         version: '10'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-11 17:27'
         message: ''
         version: '9'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-12-14 11:53'
         message: ''
         version: '8'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-12-14 11:08'
         message: ''
         version: '7'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-12-14 10:54'
         message: ''
         version: '6'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-12-14 10:50'
         message: ''
         version: '5'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-12-14 10:50'
         message: ''
         version: '4'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-12-13 15:36'
         message: ''
         version: '3'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-12-13 15:36'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 18:45'
         message: ''

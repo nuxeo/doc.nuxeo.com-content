@@ -17,33 +17,34 @@ confluence:
     shortlink: 1AGw
     shortlink_source: 'https://doc.nuxeo.com/x/1AGw'
     source_link: /display/Studio/Workflow+creation+form
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-07 11:07'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-06 14:02'
         message: Updated screenshot
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 18:35'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 18:20'
         message: Resized screenshot
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-27 23:10'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-27 23:10'
         message: ''

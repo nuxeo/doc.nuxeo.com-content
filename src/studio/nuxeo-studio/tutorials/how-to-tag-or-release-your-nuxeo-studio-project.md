@@ -25,13 +25,14 @@ confluence:
     shortlink: FYzZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/FYzZAQ'
     source_link: /display/Studio/How+to+Tag+or+Release+Your+Nuxeo+Studio+Project
+tree_item_index: 900
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-11 12:43'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-11 12:34'
         message: ''

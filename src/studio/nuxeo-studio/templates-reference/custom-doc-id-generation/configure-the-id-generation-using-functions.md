@@ -20,103 +20,104 @@ confluence:
     shortlink: pQM7
     shortlink_source: 'https://doc.nuxeo.com/x/pQM7'
     source_link: /display/Studio/Configure+the+ID+generation+using+functions
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-07 08:01'
         message: ix vocabulary "TypePrefix" instead of "TypePrefixVocabulary
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-07 17:21'
         message: Formatting
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 17:05'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 17:05'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 15:38'
         message: ''
         version: '16'
-    - 
+    -
         author: Darcy Carrié
         date: '2011-02-11 16:16'
         message: ''
         version: '15'
-    - 
+    -
         author: Darcy Carrié
         date: '2011-02-11 16:15'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 15:32'
         message: added note on key double quotes
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 11:27'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 10:53'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 10:48'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 10:48'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 10:47'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 10:46'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 10:46'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 10:22'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-15 17:39'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-13 07:27'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-13 07:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 18:24'
         message: ''

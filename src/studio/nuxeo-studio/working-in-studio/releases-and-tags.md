@@ -16,28 +16,29 @@ confluence:
     shortlink: 34LZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/34LZAQ'
     source_link: /pages/viewpage.action?pageId=31032031
+tree_item_index: 1100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-11 13:06'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-11 13:05'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-11 13:04'
         message: Added section about tags
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-22 10:47'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-21 23:09'
         message: ''

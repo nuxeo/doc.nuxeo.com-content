@@ -17,68 +17,69 @@ confluence:
     shortlink: KYBH
     shortlink_source: 'https://doc.nuxeo.com/x/KYBH'
     source_link: /pages/viewpage.action?pageId=4685865
+tree_item_index: 100
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-21 22:47'
         message: ''
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-21 22:47'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-28 09:43'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-28 00:18'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-28 00:17'
         message: ''
         version: '9'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-27 15:29'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-27 15:29'
         message: ''
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-27 15:29'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-19 10:36'
         message: Fixed typos
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-10-27 21:42'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-10-27 21:36'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-10-27 21:32'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-10-27 21:32'
         message: ''

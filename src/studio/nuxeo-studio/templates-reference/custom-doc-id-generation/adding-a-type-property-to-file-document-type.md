@@ -22,143 +22,144 @@ confluence:
     shortlink: mwM7
     shortlink_source: 'https://doc.nuxeo.com/x/mwM7'
     source_link: /pages/viewpage.action?pageId=3867547
+tree_item_index: 100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-26 14:02'
         message: ix Studio menu label
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-10 13:55'
         message: Schemas are now selected in Schema tab instead of Definition tab
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 09:28'
         message: Add TCO
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-07 16:43'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-07 16:19'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-10 15:57'
         message: Migrated to Confluence 4.0
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-10 15:57'
         message: ''
         version: '22'
-    - 
+    -
         author: whajeri
         date: '2010-12-06 16:13'
         message: ''
         version: '21'
-    - 
+    -
         author: whajeri
         date: '2010-12-06 15:52'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 14:51'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 14:16'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 11:10'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-23 18:55'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-15 15:41'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-15 15:39'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-15 15:28'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-15 15:27'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-15 15:25'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-15 01:46'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-15 01:45'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-15 01:45'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-12 10:12'
         message: ''
         version: '7'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2010-09-09 17:38'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 19:45'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 19:12'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 18:31'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 18:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 18:20'
         message: ''

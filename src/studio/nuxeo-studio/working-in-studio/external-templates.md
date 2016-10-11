@@ -17,63 +17,64 @@ confluence:
     shortlink: qYGE
     shortlink_source: 'https://doc.nuxeo.com/x/qYGE'
     source_link: /display/Studio/External+Templates
+tree_item_index: 900
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-07 16:21'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-13 10:54'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-13 10:53'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-26 17:30'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:40'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:40'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:24'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:23'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:21'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:16'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:13'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:11'
         message: ''

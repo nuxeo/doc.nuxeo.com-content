@@ -18,28 +18,29 @@ confluence:
     shortlink: l4QPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/l4QPAQ'
     source_link: /display/Studio/Collaboration+Mode
+tree_item_index: 700
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-21 22:48'
         message: pdate collobration mode to what remains availabl
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 09:31'
         message: Fix TOC
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-23 08:12'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-03 16:45'
         message: 'Resized screenshots, fixed typos, added links'
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-11-28 22:52'
         message: ''

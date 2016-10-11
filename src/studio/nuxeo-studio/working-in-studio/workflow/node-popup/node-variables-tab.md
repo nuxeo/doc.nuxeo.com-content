@@ -17,33 +17,34 @@ confluence:
     shortlink: 8AGw
     shortlink_source: 'https://doc.nuxeo.com/x/8AGw'
     source_link: /display/Studio/Node+Variables+Tab
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-07 10:54'
         message: dded border to screensho
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-06 14:37'
         message: Updated screenshot
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-23 10:05'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-23 10:02'
         message: Resized screenshot
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-28 09:22'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-28 09:22'
         message: ''

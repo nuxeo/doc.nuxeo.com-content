@@ -17,28 +17,29 @@ confluence:
     shortlink: 1wJz
     shortlink_source: 'https://doc.nuxeo.com/x/1wJz'
     source_link: /display/Studio/Automated+renaming
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-29 17:41'
         message: igrated to Confluence 4.
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-29 17:41'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-29 17:12'
         message: added screenshot
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-29 14:41'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-29 14:38'
         message: ''

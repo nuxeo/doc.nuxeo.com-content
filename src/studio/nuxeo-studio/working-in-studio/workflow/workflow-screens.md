@@ -17,38 +17,39 @@ confluence:
     shortlink: 0gGw
     shortlink_source: 'https://doc.nuxeo.com/x/0gGw'
     source_link: /display/Studio/Workflow+screens
+tree_item_index: 100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 16:21'
         message: 'emove children display macro  '
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 18:35'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-28 08:47'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-28 08:47'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-28 08:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-28 00:13'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-27 23:06'
         message: ''

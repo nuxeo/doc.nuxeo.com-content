@@ -17,68 +17,69 @@ confluence:
     shortlink: gAJu
     shortlink_source: 'https://doc.nuxeo.com/x/gAJu'
     source_link: /display/Studio/Automated+validation
+tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-28 12:34'
         message: 'ix Studio menu label     '
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-27 16:28'
         message: 'Fix Studio menu label     '
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-26 14:36'
         message: ''
         version: '11'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-06-13 17:15'
         message: Migrated to Confluence 4.0
         version: '10'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-06-13 17:15'
         message: ''
         version: '9'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-06-13 17:14'
         message: ''
         version: '8'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-06-13 17:12'
         message: ''
         version: '7'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-06-08 17:48'
         message: ''
         version: '6'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-06-08 17:34'
         message: ''
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-06-08 10:40'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-06-08 10:39'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-06-07 19:24'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-05-18 14:23'
         message: ''

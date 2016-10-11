@@ -18,18 +18,19 @@ confluence:
     shortlink: 1AJu
     shortlink_source: 'https://doc.nuxeo.com/x/1AJu'
     source_link: /display/Studio/Test+your+Studio+config+with+a+new+version+of+DM+or+CMF
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-27 15:19'
         message: 'ix Studio menu label  '
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-05-23 11:17'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-05-23 11:17'
         message: ''

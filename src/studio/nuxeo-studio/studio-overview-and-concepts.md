@@ -16,78 +16,79 @@ confluence:
     shortlink: pgF9
     shortlink_source: 'https://doc.nuxeo.com/x/pgF9'
     source_link: /display/Studio/Studio+Overview+and+Concepts
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-04 09:12'
         message: dd link to university cours
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 15:12'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:59'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-23 10:31'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-11 18:01'
         message: ''
         version: '11'
-    - 
+    -
         author: jballina
         date: '2013-03-04 21:48'
         message: ''
         version: '10'
-    - 
+    -
         author: jballina
         date: '2013-03-04 21:48'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 00:55'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 00:55'
         message: ''
         version: '7'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-28 11:11'
         message: ''
         version: '6'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-28 11:11'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-06 01:42'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-06 01:42'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-08-05 18:36'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-08-05 18:15'
         message: ''

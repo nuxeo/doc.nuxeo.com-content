@@ -18,53 +18,54 @@ confluence:
     shortlink: 9wGw
     shortlink_source: 'https://doc.nuxeo.com/x/9wGw'
     source_link: /display/Studio/Node+Transitions+Tab
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-07 10:55'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-07 10:55'
         message: Added border to screenshot
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-06 14:35'
         message: Updated screenshot
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-23 10:11'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-23 10:11'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-21 00:26'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-29 16:05'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-28 10:18'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-28 10:18'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-28 10:16'
         message: ''

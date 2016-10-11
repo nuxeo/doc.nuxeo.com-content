@@ -19,123 +19,124 @@ confluence:
     shortlink: hgM7
     shortlink_source: 'https://doc.nuxeo.com/x/hgM7'
     source_link: /display/Studio/Referencing+an+Externally+Defined+Operation
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 15:30'
         message: ''
         version: '24'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-06-16 13:41'
         message: fix automation operations registry name
         version: '23'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 14:11'
         message: ''
         version: '22'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-05 15:12'
         message: ''
         version: '21'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-05 14:38'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 18:38'
         message: 'Added excerpt, formatting'
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-02 16:47'
         message: Migrated to Confluence 4.0
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-02 16:47'
         message: removed obsolete note and added related howtos
         version: '17'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-10-18 16:20'
         message: ''
         version: '16'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-10-18 15:28'
         message: ''
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-10-18 15:27'
         message: ''
         version: '14'
-    - 
+    -
         author: whajeri
         date: '2010-10-13 11:01'
         message: ''
         version: '13'
-    - 
+    -
         author: whajeri
         date: '2010-10-13 11:00'
         message: ''
         version: '12'
-    - 
+    -
         author: whajeri
         date: '2010-10-13 10:59'
         message: ''
         version: '11'
-    - 
+    -
         author: whajeri
         date: '2010-10-13 10:58'
         message: ''
         version: '10'
-    - 
+    -
         author: whajeri
         date: '2010-10-13 10:53'
         message: ''
         version: '9'
-    - 
+    -
         author: whajeri
         date: '2010-10-13 10:49'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-15 12:08'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-15 12:00'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-15 12:00'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 16:16'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 16:02'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 15:58'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 15:33'
         message: ''

@@ -19,123 +19,124 @@ confluence:
     shortlink: 7gGw
     shortlink_source: 'https://doc.nuxeo.com/x/7gGw'
     source_link: /display/Studio/Node+General+tab
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 14:56'
         message: ''
         version: '24'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-20 00:31'
         message: ''
         version: '23'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-20 00:26'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-24 16:51'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-24 16:47'
         message: Fixed screenshots
         version: '20'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-07-23 00:31'
         message: Exclusive Node Added
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-11 01:34'
         message: ''
         version: '18'
-    - 
+    -
         author: Karl Harris
         date: '2013-07-03 14:40'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-01 11:07'
         message: Added links and fixed typos
         version: '16'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-06-30 22:15'
         message: ''
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-06-30 21:58'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-06-30 21:58'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-23 10:05'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-23 10:05'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-23 10:01'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 18:48'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 18:47'
         message: Resized screenshots
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-04-22 11:43'
         message: ''
         version: '7'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-03-28 11:09'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-03-15 17:33'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-21 00:27'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-21 00:25'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-28 09:06'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-28 09:06'
         message: ''

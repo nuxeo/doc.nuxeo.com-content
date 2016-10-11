@@ -19,83 +19,84 @@ confluence:
     shortlink: GwRc
     shortlink_source: 'https://doc.nuxeo.com/x/GwRc'
     source_link: /display/Studio/Referencing+an+Externally+Defined+Type
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 15:30'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-26 12:13'
         message: Fix Studio menu label
         version: '15'
-    - 
+    -
         author: Brendan Coveney
         date: '2015-06-23 17:58'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-05 15:12'
         message: ''
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-05 15:11'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 14:53'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-02 16:50'
         message: Migrated to Confluence 4.0
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-02 16:50'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-02 12:16'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-01 17:13'
         message: updated screenshots and steps with latest UI
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-03-29 18:21'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-03-29 18:19'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-03-29 18:11'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-03-29 18:10'
         message: New page about using registries
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-03-29 17:48'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-03-29 17:47'
         message: ''

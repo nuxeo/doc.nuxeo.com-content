@@ -17,13 +17,14 @@ confluence:
     shortlink: wgTF
     shortlink_source: 'https://doc.nuxeo.com/x/wgTF'
     source_link: /pages/viewpage.action?pageId=12911810
+tree_item_index: 700
 history:
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 10:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 10:44'
         message: ''

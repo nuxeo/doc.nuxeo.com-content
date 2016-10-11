@@ -29,203 +29,204 @@ confluence:
     shortlink: NISRAQ
     shortlink_source: 'https://doc.nuxeo.com/x/NISRAQ'
     source_link: /display/Studio/How+to+Implement+Features+Using+Branches
+tree_item_index: 700
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-17 17:17'
         message: ''
         version: '40'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-17 15:31'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 10:07'
         message: ''
         version: '38'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-08-11 11:50'
         message: ''
         version: '37'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-10 09:15'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-07 15:02'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-07 14:50'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-06 15:33'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-06 15:29'
         message: ''
         version: '32'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-05 13:11'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-05 12:48'
         message: ''
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-05 12:33'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-05 10:01'
         message: ''
         version: '28'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-05 09:58'
         message: ''
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-05 09:44'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-05 09:41'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-04 16:19'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-04 15:54'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-04 14:56'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-04 14:54'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-04 14:53'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-04 14:29'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-04 09:50'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-04 08:52'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-04 08:41'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-04 08:40'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-03 16:19'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-03 16:15'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-03 16:15'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-03 16:15'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-03 15:46'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-03 13:25'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-03 13:21'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-03 12:38'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-03 12:38'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-31 16:02'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-31 16:02'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-31 16:01'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-31 14:57'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-31 14:57'
         message: ''

@@ -19,108 +19,109 @@ confluence:
     shortlink: TA7F
     shortlink_source: 'https://doc.nuxeo.com/x/TA7F'
     source_link: /display/Studio/Event+Handlers
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 15:26'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-28 13:26'
         message: Fix related content
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-03-12 09:34'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-12 14:46'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 17:21'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 17:25'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 14:44'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 13:51'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 13:50'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 13:50'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 12:48'
         message: Fixed typos
         version: '11'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 19:39'
         message: Title formatting
         version: '10'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-01 12:04'
         message: ''
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-01 11:50'
         message: ''
         version: '8'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-01 11:45'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 19:18'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 18:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 18:36'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 18:23'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 18:17'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 18:03'
         message: ''

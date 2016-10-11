@@ -18,23 +18,24 @@ confluence:
     shortlink: JQFz
     shortlink_source: 'https://doc.nuxeo.com/x/JQFz'
     source_link: /display/Studio/Update+the+Version+of+Your+Target+Platform
+tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 15:36'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-07-19 16:48'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-07-19 16:48'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-06-09 20:54'
         message: ''

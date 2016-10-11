@@ -19,53 +19,54 @@ confluence:
     shortlink: RwBz
     shortlink_source: 'https://doc.nuxeo.com/x/RwBz'
     source_link: /display/Studio/Add+a+new+Permission+in+the+UI
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 15:28'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-25 17:36'
         message: replace "access rights" by "permissions"
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-05-13 13:58'
         message: Replaced mention of DM
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-11 18:34'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-30 10:19'
         message: Fixed broken picture
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 15:36'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 15:36'
         message: Added related tutorials
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 14:30'
         message: ''
         version: '3'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 16:19'
         message: ''
         version: '2'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 16:08'
         message: ''

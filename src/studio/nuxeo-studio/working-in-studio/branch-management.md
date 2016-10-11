@@ -16,173 +16,174 @@ confluence:
     shortlink: 2QOIAQ
     shortlink_source: 'https://doc.nuxeo.com/x/2QOIAQ'
     source_link: /display/Studio/Branch+Management
+tree_item_index: 1000
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-10 08:58'
         message: ''
         version: '34'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-22 11:21'
         message: ''
         version: '33'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-22 10:08'
         message: ''
         version: '32'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-22 09:28'
         message: ''
         version: '31'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-21 23:02'
         message: ''
         version: '30'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-21 22:59'
         message: ''
         version: '29'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-21 22:43'
         message: more details on available actions
         version: '28'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-21 21:53'
         message: ''
         version: '27'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-21 21:51'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-18 16:00'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-18 14:58'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-17 14:43'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-16 14:09'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-07 16:16'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-07 16:11'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-07 16:10'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-07 16:10'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-07 16:10'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-31 09:34'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-30 10:06'
         message: ''
         version: '15'
-    - 
+    -
         author: Thierry Martins
         date: '2015-07-30 09:52'
         message: ''
         version: '14'
-    - 
+    -
         author: Thierry Martins
         date: '2015-07-30 09:46'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-24 09:56'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-24 09:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-24 09:18'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-23 16:03'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-23 16:01'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-23 16:00'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-23 15:47'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-23 15:46'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-23 14:37'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-16 09:21'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-24 14:26'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-24 14:24'
         message: ''

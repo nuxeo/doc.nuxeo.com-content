@@ -15,13 +15,14 @@ confluence:
     shortlink: 2oHZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/2oHZAQ'
     source_link: /display/Studio/Application+Information
+tree_item_index: 1300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-18 11:10'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-18 11:00'
         message: ''

@@ -19,73 +19,74 @@ confluence:
     shortlink: V4CE
     shortlink_source: 'https://doc.nuxeo.com/x/V4CE'
     source_link: /display/Studio/Human+resources+-+Vacation+request+workflow
+tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-23 10:22'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 09:30'
         message: Fix TOC
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-10-02 23:49'
         message: ''
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-10-02 23:47'
         message: ''
         version: '11'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-01-03 15:51'
         message: Migrated to Confluence 4.0
         version: '10'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-01-03 15:51'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-08-30 19:39'
         message: ''
         version: '8'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-30 14:59'
         message: ''
         version: '7'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-30 14:49'
         message: ''
         version: '6'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-30 14:43'
         message: ''
         version: '5'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-30 14:40'
         message: ''
         version: '4'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-30 14:39'
         message: ''
         version: '3'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-30 14:38'
         message: ''
         version: '2'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-29 18:40'
         message: ''

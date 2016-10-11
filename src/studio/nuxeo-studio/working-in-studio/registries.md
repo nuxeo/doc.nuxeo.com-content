@@ -17,48 +17,49 @@ confluence:
     shortlink: F4GE
     shortlink_source: 'https://doc.nuxeo.com/x/F4GE'
     source_link: /display/Studio/Registries
+tree_item_index: 1500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-18 11:14'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-12 16:42'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-31 11:09'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-03 16:40'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 12:46'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 12:45'
         message: Fixed typos
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-29 00:59'
         message: More info on what registries are really
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-06 11:47'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-06 11:47'
         message: ''

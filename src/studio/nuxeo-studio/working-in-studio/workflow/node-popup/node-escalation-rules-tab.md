@@ -20,83 +20,84 @@ confluence:
     shortlink: Ko3Z
     shortlink_source: 'https://doc.nuxeo.com/x/Ko3Z'
     source_link: /display/Studio/Node+Escalation+Rules+Tab
+tree_item_index: 500
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:58'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-28 10:25'
         message: ''
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 14:42'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 14:38'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-07 11:40'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-07 11:40'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-06 16:25'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-06 15:32'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-06 15:31'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-05 20:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-05 14:52'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-05 14:51'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-07 10:53'
         message: Fixed formatting and typos
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-06 15:15'
         message: ''
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-06 15:13'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-06 15:13'
         message: ''

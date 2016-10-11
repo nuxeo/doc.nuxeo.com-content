@@ -18,113 +18,114 @@ confluence:
     shortlink: aQXF
     shortlink_source: 'https://doc.nuxeo.com/x/aQXF'
     source_link: /display/Studio/Schemas
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-02 08:46'
         message: pdate content with contraints (Studio 31
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-09 17:34'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-29 15:36'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 15:53'
         message: link update
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-23 16:31'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 15:49'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 15:42'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 12:28'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 11:52'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 11:34'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 12:42'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 12:41'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 12:22'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 12:21'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-04 11:16'
         message: Fixed typos and resized screenshots
         version: '8'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-14 11:48'
         message: ''
         version: '7'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-14 11:46'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 02:35'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 02:32'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 02:20'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 01:55'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-12-04 08:41'
         message: ''

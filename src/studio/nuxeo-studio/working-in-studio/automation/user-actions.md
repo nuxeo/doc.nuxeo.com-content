@@ -19,68 +19,69 @@ confluence:
     shortlink: MInZ
     shortlink_source: 'https://doc.nuxeo.com/x/MInZ'
     source_link: /display/Studio/User+Actions
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 13:31'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-28 13:16'
         message: 'Fix Studio menu label     '
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-03-12 09:50'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 17:20'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 17:50'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 10:36'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 14:42'
         message: ''
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 19:44'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 19:42'
         message: ''
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 19:42'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 19:38'
         message: ''
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 19:38'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 19:36'
         message: ''

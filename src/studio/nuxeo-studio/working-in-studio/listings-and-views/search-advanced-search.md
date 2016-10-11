@@ -19,23 +19,24 @@ confluence:
     shortlink: eRE5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/eRE5AQ'
     source_link: /pages/viewpage.action?pageId=20517241
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 17:09'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 17:08'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 16:54'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 16:16'
         message: ''

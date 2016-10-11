@@ -19,98 +19,99 @@ confluence:
     shortlink: X40ZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/X40ZAQ'
     source_link: /display/Studio/Automation+Chains
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 14:24'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-03-12 09:49'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-01 18:18'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-01 18:17'
         message: ''
         version: '16'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-31 18:38'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-30 12:05'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-30 12:05'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-30 12:03'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-30 11:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-30 11:45'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-30 11:32'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-30 11:26'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 11:15'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 11:07'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-12 00:05'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-12 00:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-07 11:27'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-02 02:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-02 02:31'
         message: ''

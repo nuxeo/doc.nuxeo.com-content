@@ -17,63 +17,64 @@ confluence:
     shortlink: vgTF
     shortlink_source: 'https://doc.nuxeo.com/x/vgTF'
     source_link: /display/Studio/Automation
+tree_item_index: 600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-06 14:49'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-16 09:43'
         message: 'remove deleted page '
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 16:22'
         message: 'remove children display macro   '
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-07 11:31'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-02 02:00'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 22:05'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:53'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:53'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:50'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-11 18:31'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 03:02'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 10:44'
         message: ''

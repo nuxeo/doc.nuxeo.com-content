@@ -20,48 +20,49 @@ confluence:
     shortlink: b4Ce
     shortlink_source: 'https://doc.nuxeo.com/x/b4Ce'
     source_link: /display/Studio/Configuration+Management
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-27 15:44'
         message: 'ix Studio menu label  '
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 10:06'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 09:27'
         message: Add TOC
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-04-16 01:34'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-04-16 01:34'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-04-16 01:33'
         message: typos
         version: '4'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-04-13 15:21'
         message: ''
         version: '3'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-04-13 15:12'
         message: ''
         version: '2'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-04-13 15:09'
         message: ''

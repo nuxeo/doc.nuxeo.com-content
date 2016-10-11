@@ -15,38 +15,39 @@ confluence:
     shortlink: h4JkAQ
     shortlink_source: 'https://doc.nuxeo.com/x/h4JkAQ'
     source_link: /display/Studio/Application+Dependencies
+tree_item_index: 1400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-18 11:06'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-07 16:20'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-12 14:11'
         message: Add some details
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-09 16:00'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-31 14:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-31 14:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-31 14:18'
         message: ''

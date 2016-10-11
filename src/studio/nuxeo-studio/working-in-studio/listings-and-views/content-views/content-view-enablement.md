@@ -17,28 +17,29 @@ confluence:
     shortlink: wxA5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/wxA5AQ'
     source_link: /display/Studio/Content+View+-+Enablement
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 09:19'
         message: ename page to fix anchor link
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 19:02'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 18:58'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 18:57'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-21 18:41'
         message: ''

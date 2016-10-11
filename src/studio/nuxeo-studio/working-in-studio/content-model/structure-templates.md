@@ -19,88 +19,89 @@ confluence:
     shortlink: bQXF
     shortlink_source: 'https://doc.nuxeo.com/x/bQXF'
     source_link: /display/Studio/Structure+Templates
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 14:34'
         message: ''
         version: '17'
-    - 
+    -
         author: Frantz Fischer
         date: '2016-06-03 12:16'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-26 10:19'
         message: replace "access rights" by "permissions"
         version: '15'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-05-12 09:41'
         message: ''
         version: '14'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-05-12 09:40'
         message: Added explanations
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-12 11:36'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-12 11:34'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-12 11:29'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-12 11:28'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-12 11:27'
         message: ''
         version: '8'
-    - 
+    -
         author: Karl Harris
         date: '2013-06-10 12:06'
         message: ''
         version: '7'
-    - 
+    -
         author: Karl Harris
         date: '2013-06-10 12:03'
         message: ''
         version: '6'
-    - 
+    -
         author: Karl Harris
         date: '2013-06-10 12:02'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-03 14:00'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-03 13:50'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-03 13:46'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-12-04 08:41'
         message: ''

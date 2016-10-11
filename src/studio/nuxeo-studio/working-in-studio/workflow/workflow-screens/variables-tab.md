@@ -17,53 +17,54 @@ confluence:
     shortlink: 2wGw
     shortlink_source: 'https://doc.nuxeo.com/x/2wGw'
     source_link: /display/Studio/Variables+tab
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-07 11:05'
         message: dded border to screensho
         version: '10'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-06 14:08'
         message: Updated screenshot
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-23 10:04'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 18:36'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 18:36'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 18:27'
         message: Resized screenshot and fixed typos
         version: '5'
-    - 
+    -
         author: Vincent Dutat
         date: '2013-05-10 16:49'
         message: ''
         version: '4'
-    - 
+    -
         author: Vincent Dutat
         date: '2013-05-10 16:48'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-28 00:23'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-28 00:23'
         message: ''

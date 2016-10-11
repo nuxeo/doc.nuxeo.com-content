@@ -19,108 +19,109 @@ confluence:
     shortlink: bYgZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/bYgZAQ'
     source_link: /display/Studio/Vocabularies
+tree_item_index: 800
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 14:34'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-17 13:49'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-03 09:51'
         message: ' on missing columns becomes Don’t override existing values'
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 13:38'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-10 18:34'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-10 18:34'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-10 18:33'
         message: Add example csv files and note about 1st line in csv
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 11:32'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-27 17:27'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-27 17:04'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-27 17:04'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-27 15:53'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-27 15:22'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-27 15:05'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 18:15'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-17 10:10'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-17 10:10'
         message: Updated related topics
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-02-14 19:21'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-02-14 19:17'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-02-14 19:08'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-02-14 19:03'
         message: ''

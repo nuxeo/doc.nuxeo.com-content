@@ -22,43 +22,44 @@ confluence:
     shortlink: 0YTZ
     shortlink_source: 'https://doc.nuxeo.com/x/0YTZ'
     source_link: /pages/viewpage.action?pageId=14255313
+tree_item_index: 600
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-27 13:38'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-27 13:38'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-26 14:30'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 13:33'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 09:26'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 14:26'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 11:24'
         message: Fixed typos
         version: '2'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-06-20 17:32'
         message: ''

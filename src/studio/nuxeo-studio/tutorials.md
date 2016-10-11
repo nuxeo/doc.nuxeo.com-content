@@ -17,48 +17,49 @@ confluence:
     shortlink: JQjF
     shortlink_source: 'https://doc.nuxeo.com/x/JQjF'
     source_link: /display/Studio/Tutorials
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-29 15:03'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-29 14:21'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-29 14:18'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-29 14:17'
         message: ''
         version: '6'
-    - 
+    -
         author: Harlan Brown
         date: '2013-10-03 13:50'
         message: ''
         version: '5'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-02-21 15:05'
         message: ''
         version: '4'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-02-21 15:05'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 03:16'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 03:15'
         message: ''

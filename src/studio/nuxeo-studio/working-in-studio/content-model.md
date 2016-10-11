@@ -17,23 +17,24 @@ confluence:
     shortlink: uQTF
     shortlink_source: 'https://doc.nuxeo.com/x/uQTF'
     source_link: /display/Studio/Content+Model
+tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 16:22'
         message: 'emove children display macro  '
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 01:54'
         message: ''
         version: '3'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-12-14 14:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 10:43'
         message: ''

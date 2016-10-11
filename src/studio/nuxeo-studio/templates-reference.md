@@ -17,23 +17,24 @@ confluence:
     shortlink: uYGE
     shortlink_source: 'https://doc.nuxeo.com/x/uYGE'
     source_link: /display/Studio/Templates+reference
+tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 16:29'
         message: 'emove children display macro  '
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-26 17:32'
         message: Added list of template description available
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:34'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:34'
         message: ''

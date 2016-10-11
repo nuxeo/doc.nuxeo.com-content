@@ -19,38 +19,39 @@ confluence:
     shortlink: n41H
     shortlink_source: 'https://doc.nuxeo.com/x/n41H'
     source_link: /display/Studio/Add+predefined+users+and+groups
+tree_item_index: 200
 history:
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-24 15:58'
         message: igrated to Confluence 4.
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-24 15:58'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-05 17:46'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-14 08:44'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-14 08:42'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-12 16:36'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-11 18:16'
         message: ''

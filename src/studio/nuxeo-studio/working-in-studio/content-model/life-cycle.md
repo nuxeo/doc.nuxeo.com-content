@@ -18,28 +18,29 @@ confluence:
     shortlink: bwXF
     shortlink_source: 'https://doc.nuxeo.com/x/bwXF'
     source_link: /display/Studio/Life+cycle
+tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-08 17:36'
         message: ''
         version: '5'
-    - 
+    -
         author: Frédéric Vadon
         date: '2014-06-12 17:18'
         message: typo
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-03 11:50'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 00:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-12-04 08:42'
         message: ''

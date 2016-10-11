@@ -18,88 +18,89 @@ confluence:
     shortlink: lAM7
     shortlink_source: 'https://doc.nuxeo.com/x/lAM7'
     source_link: /display/Studio/Custom+Doc+ID+Generation
+tree_item_index: 400
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:42'
         message: ''
         version: '17'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:42'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 15:32'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 10:46'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-23 17:15'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-15 14:34'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-15 14:33'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-13 07:28'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-13 07:20'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-12 10:12'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-12 10:10'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 18:24'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 18:23'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 18:19'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 18:19'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 18:01'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 17:30'
         message: ''

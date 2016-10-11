@@ -18,108 +18,109 @@ confluence:
     shortlink: jAE7
     shortlink_source: 'https://doc.nuxeo.com/x/jAE7'
     source_link: /display/Studio/Deploying+Your+Project+in+Dev+Mode
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 15:29'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-21 09:30'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 10:07'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 10:05'
         message: ''
         version: '18'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-07 00:28'
         message: ''
         version: '17'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-07 00:27'
         message: ''
         version: '16'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-05 15:06'
         message: ''
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-05 14:57'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-05 14:44'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-26 18:29'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-07 18:04'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-07 16:42'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-05 16:40'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-05 16:40'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-05 16:40'
         message: Migrated to Confluence 4.0
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-05 16:40'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-26 10:46'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-26 10:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-22 12:36'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-08-12 01:16'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-08-12 01:16'
         message: ''

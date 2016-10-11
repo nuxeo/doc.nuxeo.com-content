@@ -18,123 +18,124 @@ confluence:
     shortlink: Vw7F
     shortlink_source: 'https://doc.nuxeo.com/x/Vw7F'
     source_link: /display/Studio/Filtering+Options+Reference+Page
+tree_item_index: 400
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-02 02:58'
         message: ''
         version: '24'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-16 12:46'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-16 10:03'
         message: ''
         version: '22'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-15 17:09'
         message: Corrected info on mutable docs
         version: '21'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-15 17:02'
         message: ''
         version: '20'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-15 17:01'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-15 16:58'
         message: ''
         version: '18'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-15 13:56'
         message: Added info on mutable document
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 13:50'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 13:47'
         message: Fixed typos
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-11 01:34'
         message: ''
         version: '14'
-    - 
+    -
         author: Karl Harris
         date: '2013-07-03 14:40'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2013-06-28 17:03'
         message: ''
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 22:02'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 21:59'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 21:58'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 21:56'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 21:51'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 21:37'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 19:31'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 19:15'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 19:15'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 19:10'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-24 18:40'
         message: ''

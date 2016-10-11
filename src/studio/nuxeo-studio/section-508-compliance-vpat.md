@@ -17,53 +17,54 @@ confluence:
     shortlink: _IIlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/_IIlAQ'
     source_link: /pages/viewpage.action?pageId=19235576
+tree_item_index: 900
 history:
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-04-30 22:26'
         message: ''
         version: '10'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-04-30 22:24'
         message: ''
         version: '9'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-04-30 22:23'
         message: ''
         version: '8'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-04-30 22:20'
         message: ''
         version: '7'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-04-30 22:19'
         message: ''
         version: '6'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-04-30 22:17'
         message: ''
         version: '5'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-04-30 22:15'
         message: ''
         version: '4'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-04-30 20:53'
         message: ''
         version: '3'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-04-30 20:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-04-30 20:43'
         message: ''

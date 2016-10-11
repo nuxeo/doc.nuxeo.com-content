@@ -17,18 +17,19 @@ confluence:
     shortlink: r4GE
     shortlink_source: 'https://doc.nuxeo.com/x/r4GE'
     source_link: /display/Studio/Default+configuration+templates
+tree_item_index: 100
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:20'
         message: igrated to Confluence 4.
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:16'
         message: ''

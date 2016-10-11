@@ -18,78 +18,79 @@ confluence:
     shortlink: ogM7
     shortlink_source: 'https://doc.nuxeo.com/x/ogM7'
     source_link: /display/Studio/Declaring+Vocabularies
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-07 17:12'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 14:58'
         message: Migrated to Confluence 4.0
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 14:58'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 10:03'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 10:01'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 10:01'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-24 10:00'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-15 17:29'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-15 17:14'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-15 17:13'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-12 23:16'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-12 10:26'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-12 10:25'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-12 10:15'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-09-06 18:23'
         message: ''

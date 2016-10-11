@@ -18,43 +18,44 @@ confluence:
     shortlink: tQTF
     shortlink_source: 'https://doc.nuxeo.com/x/tQTF'
     source_link: /display/Studio/Resources
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-02 09:35'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-08 10:21'
         message: Resized screenshot
         version: '7'
-    - 
+    -
         author: jballina
         date: '2013-03-04 23:06'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 01:48'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 00:56'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 00:56'
         message: ''
         version: '3'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 12:17'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 10:42'
         message: ''

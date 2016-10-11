@@ -19,68 +19,69 @@ confluence:
     shortlink: IwGw
     shortlink_source: 'https://doc.nuxeo.com/x/IwGw'
     source_link: /display/Studio/Workflow
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 16:26'
         message: 'emove children display macro  '
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-20 00:20'
         message: ''
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-20 00:13'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 16:20'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-05-06 01:32'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-05-06 01:31'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-05-06 01:31'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 02:42'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 02:38'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 02:37'
         message: ''
         version: '4'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 10:42'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-16 14:12'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-16 14:12'
         message: ''

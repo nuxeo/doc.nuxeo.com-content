@@ -18,43 +18,44 @@ confluence:
     shortlink: QhM5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/QhM5AQ'
     source_link: /display/Studio/Virtual+Navigations
+tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-26 14:35'
         message: 'ix Studio menu label '
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-01 13:13'
         message: ''
         version: '7'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-11-18 14:58'
         message: Fixes layout + adds Nuxeo TOC
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-12 15:25'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-31 16:32'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-31 16:32'
         message: Add note about virtual navigation activation
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 18:33'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 16:25'
         message: ''

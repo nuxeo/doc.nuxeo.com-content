@@ -19,193 +19,194 @@ confluence:
     shortlink: 7QnF
     shortlink_source: 'https://doc.nuxeo.com/x/7QnF'
     source_link: /display/Studio/Content+View+-+Query+and+Form+Tab
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 09:19'
         message: ''
         version: '38'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-28 14:40'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 18:55'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 16:11'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 16:09'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-21 16:55'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-21 16:00'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-21 15:56'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-21 15:56'
         message: 'Add 6.0 flags, update screenshots, format'
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-30 11:26'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-22 10:17'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-22 10:16'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-22 10:16'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-21 12:10'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-14 15:09'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-14 15:09'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-26 12:21'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-29 17:23'
         message: ''
         version: '21'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-02-11 17:04'
         message: ''
         version: '20'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-02-11 16:28'
         message: ''
         version: '19'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-02-11 16:14'
         message: ''
         version: '18'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-02-11 14:56'
         message: ''
         version: '17'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-02-11 14:41'
         message: ''
         version: '16'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-02-11 14:41'
         message: ''
         version: '15'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-02-11 13:14'
         message: ''
         version: '14'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-02-11 13:14'
         message: ''
         version: '13'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 20:02'
         message: ''
         version: '12'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 20:01'
         message: ''
         version: '11'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 20:01'
         message: ''
         version: '10'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 19:03'
         message: ''
         version: '9'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 18:50'
         message: ''
         version: '8'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 18:32'
         message: ''
         version: '7'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 18:32'
         message: ''
         version: '6'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 18:26'
         message: ''
         version: '5'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 18:26'
         message: ''
         version: '4'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 18:24'
         message: ''
         version: '3'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 18:24'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 17:53'
         message: ''

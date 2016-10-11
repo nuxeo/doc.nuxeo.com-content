@@ -29,98 +29,99 @@ confluence:
     shortlink: iIORAQ
     shortlink_source: 'https://doc.nuxeo.com/x/iIORAQ'
     source_link: /display/Studio/How+to+Work+with+Maintenance+Branches
+tree_item_index: 800
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-18 10:49'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 10:07'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-10 09:19'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-07 15:35'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-07 15:34'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-05 09:44'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-04 15:38'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-04 13:44'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-04 13:05'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-03 14:43'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-03 14:12'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-03 08:01'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-31 15:58'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-31 15:11'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-31 14:55'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-30 11:51'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-29 14:40'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-29 14:32'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-29 14:32'
         message: ''

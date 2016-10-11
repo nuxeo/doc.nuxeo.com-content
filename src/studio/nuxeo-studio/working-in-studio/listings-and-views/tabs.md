@@ -27,170 +27,171 @@ confluence:
     shortlink: bICo
     shortlink_source: 'https://doc.nuxeo.com/x/bICo'
     source_link: /display/Studio/Tabs
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 15:30'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 16:03'
         message: link update and typos
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 15:26'
         message: ''
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-09 10:47'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-11 18:26'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-23 09:28'
         message: 'Removed related topics from TOC, formatting'
         version: '28'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-09-21 15:50'
         message: cosmit
         version: '27'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-09-21 15:49'
         message: >-
             NXS-1758: introduce the "Tabs" widget type and explain how to
             configure sub tabs
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:27'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:26'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-29 17:23'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-18 14:29'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-18 14:28'
         message: Changed since 5.7 for 5.7.1
         version: '21'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-06-06 10:29'
         message: Added some information about widget types
         version: '20'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-06-04 17:50'
         message: Added Toggleable form widget type properties
         version: '19'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-06-04 09:44'
         message: ''
         version: '18'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-06-03 19:24'
         message: Added exhaustive permissions list
         version: '17'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-06-03 19:15'
         message: ''
         version: '16'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-05-14 08:53'
         message: ''
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-05-14 08:52'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-05-14 08:52'
         message: ''
         version: '13'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-12-27 12:41'
         message: adding new tabs widget types from 5.7
         version: '12'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-12-27 12:35'
         message: ''
         version: '11'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-12-27 12:35'
         message: remove beta marker
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-05 17:36'
         message: Migrated to Confluence 4.0
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-05 17:36'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-05 17:36'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-05-31 06:47'
         message: ''
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-05-28 12:16'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-25 18:06'
         message: Added related howtos
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-25 18:03'
         message: Added content view and toggable layout widgets description
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-25 16:51'
         message: Added steps to define the tab
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-25 14:26'
         message: ''

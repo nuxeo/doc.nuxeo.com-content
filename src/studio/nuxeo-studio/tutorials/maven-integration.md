@@ -17,163 +17,164 @@ confluence:
     shortlink: NwAz
     shortlink_source: 'https://doc.nuxeo.com/x/NwAz'
     source_link: /display/Studio/Maven+Integration
+tree_item_index: 500
 history:
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-12 14:46'
         message: pdated information - using versions instead of tags no
         version: '32'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-21 22:58'
         message: ''
         version: '31'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-21 22:58'
         message: ''
         version: '30'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-21 22:46'
         message: ''
         version: '29'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-04-20 16:46'
         message: add updatePolicy always on snapshots repo conf
         version: '28'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-04-20 16:45'
         message: ''
         version: '27'
-    - 
+    -
         author: Julien Carsique
         date: '2014-01-30 15:50'
         message: ''
         version: '26'
-    - 
+    -
         author: Julien Carsique
         date: '2014-01-30 15:42'
         message: ''
         version: '25'
-    - 
+    -
         author: Julien Carsique
         date: '2012-05-09 14:03'
         message: Migrated to Confluence 4.0
         version: '24'
-    - 
+    -
         author: Julien Carsique
         date: '2012-05-09 14:03'
         message: ''
         version: '23'
-    - 
+    -
         author: Julien Carsique
         date: '2012-05-09 14:03'
         message: ''
         version: '22'
-    - 
+    -
         author: Thierry Martins
         date: '2011-08-25 10:12'
         message: ''
         version: '21'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-16 19:45'
         message: ''
         version: '20'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-16 19:44'
         message: ''
         version: '19'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-16 19:42'
         message: ''
         version: '18'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-16 19:42'
         message: ''
         version: '17'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-16 19:39'
         message: ''
         version: '16'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-16 19:38'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-19 15:07'
         message: fixed typo
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-22 12:45'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 11:50'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-06 08:46'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2010-07-05 18:17'
         message: formatting and typos
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-06-28 10:54'
         message: ''
         version: '9'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-21 18:59'
         message: ''
         version: '8'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-21 18:51'
         message: ''
         version: '7'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-21 16:28'
         message: ''
         version: '6'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-21 16:27'
         message: ''
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-21 16:08'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-21 15:16'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-21 15:13'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-21 14:59'
         message: ''

@@ -19,38 +19,39 @@ confluence:
     shortlink: '-gnF'
     shortlink_source: 'https://doc.nuxeo.com/x/-gnF'
     source_link: /display/Studio/Content+View+-+Results
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 09:19'
         message: ''
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 19:34'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 18:58'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-21 18:37'
         message: ''
         version: '4'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-03-07 18:10'
         message: ''
         version: '3'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 18:32'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 18:31'
         message: ''

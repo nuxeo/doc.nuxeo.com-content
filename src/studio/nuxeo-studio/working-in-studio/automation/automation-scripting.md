@@ -19,48 +19,49 @@ confluence:
     shortlink: JIB4AQ
     shortlink_source: 'https://doc.nuxeo.com/x/JIB4AQ'
     source_link: /display/Studio/Automation+Scripting
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-17 17:28'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-17 17:27'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 09:21'
         message: 'Add missing borders to screenshots  '
         version: '7'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-06-01 15:51'
         message: ''
         version: '6'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-06-01 15:49'
         message: ''
         version: '5'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-25 18:37'
         message: ''
         version: '4'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-25 16:23'
         message: ''
         version: '3'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-25 16:15'
         message: ''
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-25 15:38'
         message: ''

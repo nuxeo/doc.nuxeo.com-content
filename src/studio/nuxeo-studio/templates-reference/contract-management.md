@@ -18,153 +18,154 @@ confluence:
     shortlink: d4aN
     shortlink_source: 'https://doc.nuxeo.com/x/d4aN'
     source_link: /display/Studio/Contract+management
+tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-23 10:26'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 09:28'
         message: Fix TOC
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2012-11-06 19:01'
         message: Fixed typos and added links
         version: '28'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-01-09 17:50'
         message: Migrated to Confluence 4.0
         version: '27'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-01-09 17:50'
         message: ''
         version: '26'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-01-09 17:49'
         message: ''
         version: '25'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-01-09 17:46'
         message: ''
         version: '24'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-01-09 17:46'
         message: ''
         version: '23'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-01-09 17:27'
         message: ''
         version: '22'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-01-09 11:38'
         message: ''
         version: '21'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-01-09 11:37'
         message: ''
         version: '20'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-01-09 11:35'
         message: ''
         version: '19'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-01-09 11:35'
         message: ''
         version: '18'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-01-09 11:34'
         message: ''
         version: '17'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-01-04 19:02'
         message: ''
         version: '16'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-01-04 19:00'
         message: ''
         version: '15'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-01-04 18:52'
         message: ''
         version: '14'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-01-03 19:02'
         message: ''
         version: '13'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-01-03 16:58'
         message: ''
         version: '12'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-01-03 16:37'
         message: ''
         version: '11'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-01-03 16:33'
         message: ''
         version: '10'
-    - 
+    -
         author: Frédéric Vadon
         date: '2012-01-03 16:21'
         message: ''
         version: '9'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-12-22 19:47'
         message: ''
         version: '8'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-12-22 19:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-12-22 19:43'
         message: ''
         version: '6'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-12-22 19:07'
         message: ''
         version: '5'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-12-22 18:48'
         message: ''
         version: '4'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-12-22 17:51'
         message: ''
         version: '3'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-12-22 17:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-12-22 17:39'
         message: ''

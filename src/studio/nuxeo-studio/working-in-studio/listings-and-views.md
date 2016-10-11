@@ -17,33 +17,34 @@ confluence:
     shortlink: uwTF
     shortlink_source: 'https://doc.nuxeo.com/x/uwTF'
     source_link: /pages/viewpage.action?pageId=12911803
+tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 16:24'
         message: 'emove children display macro  '
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-11 18:19'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 14:47'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-02 14:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 10:43'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-11-29 10:43'
         message: ''
