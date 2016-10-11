@@ -43,7 +43,7 @@ history:
         version: '1'
 
 ---
-*   [Configuration Parameters Index (nuxeo.conf)](https://doc.nuxeo.com/pages/viewpage.action?pageId=3866689)
+*   [Configuration Parameters Index (nuxeo.conf)](/pages/viewpage.action?pageId=3866689)
 *   [Configuration Templates]({{page space='NXDOC' page='Configuration Templates'}})
 *   [Sensitive Configuration Data Encryption]({{page space='NXDOC' page='Sensitive Configuration+Data+Encryption'}})
 *   [Setup Best Practices]({{page space='NXDOC' page='Setup Best+Practices'}})

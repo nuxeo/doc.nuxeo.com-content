@@ -324,7 +324,7 @@ file = FileUtils.getResourceFileFromContext("blob.json");
 batchUpload.upload(file.getName(), file.length(), "json", batchUpload.getBatchId(), "2", file);
 List<BatchFile> batchFiles = batchUpload.fetchBatchFiles();
 ```
-Batch upload can be executed in a [chunk mode](https://doc.nuxeo.com/display/NXDOC/Blob+Upload+for+Batch+Processing?src=search#BlobUploadforBatchProcessing-UploadingaFilebyChunksUploadingaFilebyChunks).
+Batch upload can be executed in a [chunk mode](/display/NXDOC/Blob+Upload+for+Batch+Processing?src=search#BlobUploadforBatchProcessing-UploadingaFilebyChunksUploadingaFilebyChunks).
 
 ```java
 // Upload file chunks

@@ -112,8 +112,8 @@ history:
 *   When using Nuxeo in cluster mode, consider using [Redis VCS row cache invalidation]({{page space='NXDOC' page='Nuxeo and+Redis#NuxeoandRedis-VCSRowCacheInvalidation'}}).
 *   Consider disabling the OS swapping (`sudo swapoff -a`) or try to lower the swapiness (`<span class="pln">vm</span>`<span class="pun">.</span><span class="pln">swappiness</span> <span class="pun">=</span><span class="lit">1</span><span class="pln">)</span>
 *   Check the network latency between the application and the database.
-*   [Configure ImageMagick]({{page page='installing-and-setting-up-related-software'}}) [to use a single thread.](http://doc.nuxeo.com/x/gBDF)
-*   [Monitor](http://doc.nuxeo.com/x/gBDF) everything, JVM, GC, VCS cache hit ratio, database, system.
+*   [Configure ImageMagick]({{page page='installing-and-setting-up-related-software'}}) [to use a single thread.](/x/gBDF)
+*   [Monitor](/x/gBDF) everything, JVM, GC, VCS cache hit ratio, database, system.
 
 &nbsp;
 

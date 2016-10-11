@@ -253,7 +253,7 @@ Here is the way to create your own static WAR distribution:
 3.  Customize and configure your application as usual:
 
     1.  Deploy some Nuxeo Packages.
-    2.  Create your [own configuration templates](http://doc.nuxeo.com/x/LANc).
+    2.  Create your [own configuration templates](/x/LANc).
     3.  Configure&nbsp;`nuxeo.conf` .
     4.  Copy your specific bundles into `$NUXEO_HOME/nxserver/bundles/`.
 

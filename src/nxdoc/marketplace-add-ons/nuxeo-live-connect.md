@@ -444,7 +444,7 @@ Dropbox documents can be searched in the Nuxeo Platform like any other document:
 
 {{#> callout type='info' }}
 
-Please note that Dropbox only allows http for localhost. For all other sites https must be used. See [HTTP and HTTPS Reverse-Proxy Configuration](https://doc.nuxeo.com/x/GAFc).
+Please note that Dropbox only allows http for localhost. For all other sites https must be used. See [HTTP and HTTPS Reverse-Proxy Configuration](/x/GAFc).
 
 {{/callout}} {{#> callout type='info' }}
 
@@ -497,7 +497,7 @@ Box documents can be searched in the Nuxeo Platform like any other document: the
 
     {{#> callout type='info' }}
 
-    Please note that Box allows HTTP only for localhost. For all other sites HTTPS must be used. See [HTTP and HTTPS Reverse-Proxy Configuration](https://doc.nuxeo.com/x/GAFc).
+    Please note that Box allows HTTP only for localhost. For all other sites HTTPS must be used. See [HTTP and HTTPS Reverse-Proxy Configuration](/x/GAFc).
 
     {{/callout}}
 6.  Copy the client_id and client_secret.

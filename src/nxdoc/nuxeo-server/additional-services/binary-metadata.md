@@ -376,7 +376,7 @@ Metadata rules are defined through an XML contribution on the&nbsp;`metadataRule
   </extension>
 ```
 
-[Filters contribution](http://doc.nuxeo.com/x/D4UPAQ) documentation.
+[Filters contribution](/x/D4UPAQ) documentation.
 
 ## Default Operations
 
@@ -441,7 +441,7 @@ If you need to add a new processor:
         public Map<String, Object> readMetadata(Blob blob, boolean ignorePrefix);
     ```
 
-    Here is the [ExifTool example](https://raw.githubusercontent.com/nuxeo/nuxeo-binary-metadata/master/src/main/java/org/nuxeo/binary/metadata/internals/ExifToolProcessor.java) `org.nuxeo.binary.metadata.internals.ExifToolProcessor` and the [command line documentation](http://doc.nuxeo.com/x/joNdAQ) to execute third command lines from the Nuxeo Platform.
+    Here is the [ExifTool example](https://raw.githubusercontent.com/nuxeo/nuxeo-binary-metadata/master/src/main/java/org/nuxeo/binary/metadata/internals/ExifToolProcessor.java) `org.nuxeo.binary.metadata.internals.ExifToolProcessor` and the [command line documentation](/x/joNdAQ) to execute third command lines from the Nuxeo Platform.
 
 ## ExifTool Extraction Example
 

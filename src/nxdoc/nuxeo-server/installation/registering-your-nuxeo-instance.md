@@ -217,7 +217,7 @@ To subscribe to a Nuxeo Online Services trial:
 1.  Go to the [Nuxeo Platform trial registration form](https://connect.nuxeo.com/register/#/).
 2.  Fill in the form. Provide a valid email address or else registration will not be completed.
 3.  Confirm registration by clicking on the link sent to the email address in the previous step.
-    You can now use the [Nuxeo Platform online](https://doc.nuxeo.com/www.nuxeo.com/downloads#online-trial) or [download it](http://www.nuxeo.com/downloads/) if you want to use it on premises.
+    You can now use the [Nuxeo Platform online](/www.nuxeo.com/downloads#online-trial) or [download it](http://www.nuxeo.com/downloads/) if you want to use it on premises.
 
 ### Registering Online through the Admin Tab {{> anchor 'online-registration'}}
 

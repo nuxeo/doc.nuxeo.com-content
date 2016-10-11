@@ -213,7 +213,7 @@ However, in order for various no-copy optimizations to be effective, the tempora
 
 ### Transient Store
 
-The caching directory used by any&nbsp;[Transient Store](https://doc.nuxeo.com/x/AQalAQ) accessed by multiple Nuxeo instances&nbsp;**must be** shared by all instances. This caching directory&nbsp;is located in `nxserver/data/transientstores/<transientstore_name>`.
+The caching directory used by any&nbsp;[Transient Store](/x/AQalAQ) accessed by multiple Nuxeo instances&nbsp;**must be** shared by all instances. This caching directory&nbsp;is located in `nxserver/data/transientstores/<transientstore_name>`.
 
 By default there is only one&nbsp;Transient Store contribution named `default`:
 

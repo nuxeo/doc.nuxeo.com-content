@@ -186,7 +186,7 @@ Registered access
 
 </td><td colspan="1">
 
-[Documentation](http://doc.nuxeo.com/x/popH)
+[Documentation](/x/popH)
 
 </td><td colspan="1">
 

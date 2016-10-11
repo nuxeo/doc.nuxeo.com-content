@@ -478,7 +478,7 @@ It is possible to add another type of navigation tree based on metadata instead 
 
 #### Breadcrumb
 
-Breadcrumb enables you to navigate in the platform.&nbsp;For example, you can go up one level in the platform structure, by clicking on the&nbsp;![](https://doc.nuxeo.com/download/attachments/16090382/UpFolder_icon.gif?version=1&modificationDate=1383173485999&api=v2)&nbsp;icon&nbsp;in the breadcrumbs.&nbsp;Users can also click on the workspace's title in the breadcrumbs directly or in the navigation tree. They can go up several levels in the document's path in a single click that way.
+Breadcrumb enables you to navigate in the platform.&nbsp;For example, you can go up one level in the platform structure, by clicking on the&nbsp;![](/download/attachments/16090382/UpFolder_icon.gif?version=1&modificationDate=1383173485999&api=v2)&nbsp;icon&nbsp;in the breadcrumbs.&nbsp;Users can also click on the workspace's title in the breadcrumbs directly or in the navigation tree. They can go up several levels in the document's path in a single click that way.
 
 ![]({{file name='breadcrumbs.png' page='browsing-content'}} ?w=376,h=36,border=true)
 
@@ -506,7 +506,7 @@ On a same document users with different profiles will have access to different t
 Every user has a set of personal dashboards from the **Home** tab that display the information he finds relevant and helps him have a global view of the application's activity.
 
 The default tab of your Home is the Dashboard. It is composed of a set of boxes that display either a list of documents matching a criteria (all the workspaces the user can access, the last documents he modified, the last documents that have been published...), or possibly a piece of information either from the Platform or from external websites.
-![](https://doc.nuxeo.com/download/attachments/2392400/CAP-dashboard.png?version=3&modificationDate=1417800556391&api=v2 ?w=650,border=true)
+![](/download/attachments/2392400/CAP-dashboard.png?version=3&modificationDate=1417800556391&api=v2 ?w=650,border=true)
 
 {{#> callout type='tip' }}
 
@@ -546,7 +546,7 @@ The default search filter provides a faceted search, leveraging the [Elasticsear
 
 Users can change the way content is presented in the result layout. They can also change the displayed information. At the top right and corner of the results pages, you have different options to display your content list.&nbsp;
 
-*   **Thumbnail view**![](https://doc.nuxeo.com/download/attachments/16090382/DM-icon-view-icon.png?version=2&modificationDate=1383225756162&api=v2)&nbsp;: this view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
+*   **Thumbnail view**![](/download/attachments/16090382/DM-icon-view-icon.png?version=2&modificationDate=1383225756162&api=v2)&nbsp;: this view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
 *   **Edit Result Columns**![]({{file name='edit_columns.png' space='userdoc60' page='icons-index'}}): this button lets you&nbsp;change the information displayed in content lists.&nbsp;The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and&nbsp;reorder columns using the vertical arrows.&nbsp;
 
     {{#> callout type='info' }}

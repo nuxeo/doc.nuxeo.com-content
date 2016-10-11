@@ -165,7 +165,7 @@ If you want to expose the same field with the same validator on the Edit layout,
 
 Nuxeo IDE provides an easy way to create you own Seam Component:
 
-1.  First you need to install Nuxeo IDE and a new plugin project. See the&nbsp;[Getting Started with Nuxeo IDE](http://doc.nuxeo.com/x/aoKE)&nbsp;page.
+1.  First you need to install Nuxeo IDE and a new plugin project. See the&nbsp;[Getting Started with Nuxeo IDE](/x/aoKE)&nbsp;page.
 2.  In Nuxeo IDE, create your Seam Component.
 3.  Call this component `myValidatorBean`.
 4.  Add the method that will call JSF to validate your field:

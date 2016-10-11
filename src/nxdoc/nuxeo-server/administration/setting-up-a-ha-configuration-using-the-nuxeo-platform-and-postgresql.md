@@ -23,7 +23,7 @@ confluence:
     shortlink: HYQZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/HYQZAQ'
     source_link: >-
-        /display/NXDOC/Setting+up+a+HA+Configuration+Using+the+Nuxeo+Platform+and+PostgreSQL
+        https://doc.nuxeo.com/display/NXDOC/Setting+up+a+HA+Configuration+Using+the+Nuxeo+Platform+and+PostgreSQL
 history:
     - 
         author: Solen Guitter

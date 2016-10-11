@@ -348,7 +348,7 @@ Nuxeo labels are stored in ASCII files. We use the&nbsp;[UTF-8](http://www.utf8-
 
 ## {{> anchor 'documentation'}}Documentation
 
-Contribution is welcome both for technical (books and guides, FAQ, tutorials) and functional documentation. Ask a contributor account for&nbsp;[http://doc.nuxeo.com](http://doc.nuxeo.com/)&nbsp;on&nbsp;[Nuxeo Answers](https://answers.nuxeo.com/),&nbsp;<a>the nuxeo-dev mailing list</a>&nbsp;or on&nbsp;[the Nuxeo Google+ community](https://plus.google.com/communities/117410347547563540242).
+Contribution is welcome both for technical (books and guides, FAQ, tutorials) and functional documentation. Ask a contributor account for&nbsp;[http://doc.nuxeo.com](/)&nbsp;on&nbsp;[Nuxeo Answers](https://answers.nuxeo.com/),&nbsp;<a>the nuxeo-dev mailing list</a>&nbsp;or on&nbsp;[the Nuxeo Google+ community](https://plus.google.com/communities/117410347547563540242).
 
 ## Testing
 

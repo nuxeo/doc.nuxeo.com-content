@@ -220,7 +220,7 @@ To run the "WebM 480p" video conversion automatically:
 
 *   <div>[How to Quickly Generate a PDF Using Document Template]({{page space='NXDOC' page='How to+Quickly+Generate+a+PDF+Using+Document+Template'}})</div>
 
-*   <div>[Digital Asset Management (DAM)](https://doc.nuxeo.com/pages/viewpage.action?pageId=3866704)</div>
+*   <div>[Digital Asset Management (DAM)](/pages/viewpage.action?pageId=3866704)</div>
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
 
