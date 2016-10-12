@@ -17,78 +17,79 @@ confluence:
     shortlink: XIEk
     shortlink_source: 'https://doc.nuxeo.com/x/XIEk'
     source_link: /display/USERDOC/Abandoning+a+Workflow
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 12:45'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-18 16:14'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-18 16:03'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-02 18:32'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-25 16:23'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:16'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-12 16:26'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-12 16:26'
         message: Updated content with latest version workflow
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:24'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 14:42'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-24 12:17'
         message: fixed broken steps
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-24 12:16'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-28 12:16'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-27 15:41'
         message: added screenshot
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-29 18:08'
         message: ''

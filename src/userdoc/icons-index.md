@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 toc: true
+hidden: true
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
@@ -17,162 +18,162 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/DoX1'
     source_link: /display/USERDOC/Icons+Index
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-25 09:13'
         message: ''
         version: '32'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-26 08:58'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-05 17:09'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-05 17:07'
         message: 'Add picture, video and audio icons'
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-05 16:16'
         message: Add slideshow icons
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 23:11'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 18:27'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 18:24'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 18:23'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-04-16 17:03'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-04-16 16:59'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-27 12:01'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-26 11:49'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-03 18:39'
         message: Added Live Edit icon
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-31 12:16'
         message: Added gadget settings icon
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-04 19:00'
         message: 'Added some Social Collaboration icons '
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 14:23'
         message: Added Annotations icon
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-30 22:52'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-30 21:50'
         message: Added navigation tabs icons.
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-25 15:44'
         message: Updated lock icon and added "open in a new tab" icon
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 20:08'
         message: Added user and group icons
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 20:05'
         message: Added like icons
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 20:01'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 12:19'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 17:01'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 16:35'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 16:26'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 15:54'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 15:43'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 15:07'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 14:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 14:05'
         message: ''

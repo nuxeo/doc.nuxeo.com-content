@@ -19,158 +19,159 @@ confluence:
     shortlink: PIEk
     shortlink_source: 'https://doc.nuxeo.com/x/PIEk'
     source_link: /display/USERDOC/Tags
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-23 14:27'
         message: ew Edit permissio
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-27 13:14'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-10 08:05'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-09 16:09'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-09 15:53'
         message: ''
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-09 15:44'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 17:28'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-01 17:26'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 00:58'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-30 00:20'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 18:18'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-24 10:43'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-12 10:38'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-25 14:46'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 14:48'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 17:17'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 17:15'
         message: Added 5.8 tagging behavior regarding versioning and publication
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 17:08'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-01 14:57'
         message: Updated Add a tab steps with 5.7.1 new UI
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-17 17:40'
         message: Updated Add tags steps
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-27 17:52'
         message: Migrated to Confluence 4.0
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-27 17:52'
         message: Added TOC and fixed broken link to image
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-18 12:15'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:06'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 11:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-31 18:00'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-01 11:20'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-20 10:41'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 17:55'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-28 15:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-14 11:27'
         message: ''

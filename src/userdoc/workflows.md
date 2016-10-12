@@ -20,98 +20,99 @@ confluence:
     shortlink: WoEk
     shortlink_source: 'https://doc.nuxeo.com/x/WoEk'
     source_link: /display/USERDOC/Workflows
+tree_item_index: 1200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-21 09:35'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 00:45'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 15:14'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-25 13:56'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-24 15:03'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-24 14:41'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-04 12:21'
         message: ''
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 02:37'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-12 16:19'
         message: Migrated to Confluence 4.0
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-12 16:19'
         message: Updated content with last version changes (5.6 workflow)
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-18 17:41'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 10:00'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 11:47'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-20 10:41'
         message: ''
         version: '6'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2010-08-30 15:50'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 17:55'
         message: added brief description of workflows
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-26 18:15'
         message: added brief description of workflows
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-26 17:55'
         message: added schema
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-14 17:17'
         message: ''

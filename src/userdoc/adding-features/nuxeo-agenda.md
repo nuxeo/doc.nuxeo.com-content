@@ -20,53 +20,54 @@ confluence:
     shortlink: Z4MPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/Z4MPAQ'
     source_link: /display/USERDOC/Nuxeo+Agenda
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-04 13:14'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-09 16:48'
         message: Add TOC
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-09 16:47'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-09 16:47'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-09 16:47'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-09 16:46'
         message: Migrate content from obsolete Social Collaboration doc
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-14 18:01'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-10 16:46'
         message: Added related topics
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-10 16:38'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-22 11:38'
         message: ''

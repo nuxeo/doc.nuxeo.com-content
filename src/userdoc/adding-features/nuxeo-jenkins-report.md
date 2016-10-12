@@ -19,43 +19,44 @@ confluence:
     shortlink: M43Z
     shortlink_source: 'https://doc.nuxeo.com/x/M43Z'
     source_link: /display/USERDOC/Nuxeo+Jenkins+Report
+tree_item_index: 900
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 14:46'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-25 16:26'
         message: new Edit permission
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-26 09:24'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 11:47'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-20 14:42'
         message: Removed related topics from TOC
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 18:39'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-08-06 17:58'
         message: 'NXDOC-176: review jenkins report doc'
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 17:36'
         message: ''

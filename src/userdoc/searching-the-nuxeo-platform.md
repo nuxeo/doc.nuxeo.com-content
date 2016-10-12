@@ -19,314 +19,315 @@ confluence:
     shortlink: YIEk
     shortlink_source: 'https://doc.nuxeo.com/x/YIEk'
     source_link: /display/USERDOC/Searching+the+Nuxeo+Platform
+tree_item_index: 1100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-07 16:15'
         message: ''
         version: '61'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-06 14:57'
         message: ''
         version: '60'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-27 13:59'
         message: Add sentence about search form customization
         version: '59'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-20 11:31'
         message: ''
         version: '58'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-18 17:53'
         message: >-
             Updated list of available searches and removed search results
-            export 
+            export
         version: '57'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-14 17:11'
         message: ''
         version: '56'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-20 14:44'
         message: Formatting
         version: '55'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-21 11:24'
         message: ''
         version: '54'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 17:06'
         message: Added children pages
         version: '53'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-17 18:08'
         message: ''
         version: '52'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-26 16:27'
         message: ''
         version: '51'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-26 16:26'
         message: Removed related topics from TOC
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 11:25'
         message: ''
         version: '49'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:18'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:06'
         message: ''
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-19 17:59'
         message: Updated Share a search with 5.7.1 new behavior
         version: '46'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-13 17:52'
         message: >-
             Added details on advanced search results, faceted search, suggestion
             search, operators
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-18 18:29'
         message: ''
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-18 18:29'
         message: ''
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-06 17:34'
         message: ''
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-15 10:25'
         message: ''
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2012-11-20 18:36'
         message: ''
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2012-11-12 17:11'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migrated to Confluence 4.0
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:38'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-18 17:48'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-18 14:22'
         message: Added DM module note and Studio related content
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-11 14:33'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 20:06'
         message: Updated with 5.5 changes
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 10:18'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 10:02'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 09:57'
         message: Removed 5.4 references
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 18:06'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 17:41'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 17:09'
         message: corrected link
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 12:32'
         message: corrected link
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-14 16:42'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-14 16:36'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-14 16:23'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-14 16:22'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-14 16:16'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-14 16:04'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-14 15:53'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-31 12:20'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-31 11:59'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-20 12:30'
         message: added advanced search filter screenshots
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-20 12:15'
         message: >-
             added 5.4.2 new search features (export, advanced search results
             filter)
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-20 10:15'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-02-21 15:21'
         message: removed obsolete section about moving columns
         version: '10'
-    - 
+    -
         author: Delphine Renevey
         date: '2011-02-14 16:04'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-29 11:15'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-08 12:49'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-08 12:46'
         message: updated search column selected with new feature
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-08 12:37'
         message: added faceted search feature
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-01 14:06'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-01 12:07'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-25 18:00'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-14 11:44'
         message: ''

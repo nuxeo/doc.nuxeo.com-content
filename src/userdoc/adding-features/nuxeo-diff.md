@@ -24,83 +24,84 @@ confluence:
     shortlink: iYCo
     shortlink_source: 'https://doc.nuxeo.com/x/iYCo'
     source_link: /display/USERDOC/Nuxeo+Diff
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 16:04'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-09 14:28'
         message: Add requirement for file comparison
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-09 13:51'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 11:44'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-24 15:35'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-24 15:09'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-11 12:00'
         message: Added detail icon and update screenshots
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-13 11:06'
         message: Added other Diff pages
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-19 16:45'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-19 16:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-31 15:11'
         message: Migrated to Confluence 4.0
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-31 15:11'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-31 11:56'
         message: Updated content with 5.6RC1 improvements and added screenshots
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-30 18:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-06 14:34'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-30 16:58'
         message: ''
