@@ -15,13 +15,14 @@ confluence:
     shortlink: yoMlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/yoMlAQ'
     source_link: /display/NXDOC/Workflow+Use+Cases
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 12:22'
         message: emove children display macr
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 01:08'
         message: ''

@@ -16,128 +16,129 @@ confluence:
     shortlink: nITjAQ
     shortlink_source: 'https://doc.nuxeo.com/x/nITjAQ'
     source_link: /display/NXDOC/Using+Renditions
+tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-06 09:00'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-05 11:56'
         message: ''
         version: '24'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-09-21 20:32'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-21 12:55'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-21 12:38'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-20 15:29'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-20 15:12'
         message: ''
         version: '19'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-09-20 14:38'
         message: ''
         version: '18'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-09-20 14:36'
         message: fix excerpt
         version: '17'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-09-20 14:23'
         message: Reverted from v. 14
         version: '16'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-09-20 14:21'
         message: fix code
         version: '15'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-09-20 14:12'
         message: fix rendition doc name
         version: '14'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-09-07 09:34'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-02 15:54'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-16 10:00'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-16 09:30'
         message: ''
         version: '10'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-10 08:45'
         message: ''
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-05 11:53'
         message: ''
         version: '8'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-04 08:13'
         message: ''
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-04 08:13'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-04 08:12'
         message: ''
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-03 17:50'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-03 17:49'
         message: ''
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-03 09:56'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-02 15:58'
         message: ''

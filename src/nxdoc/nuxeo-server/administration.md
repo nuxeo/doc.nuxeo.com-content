@@ -15,28 +15,33 @@ confluence:
     shortlink: MYPZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/MYPZAQ'
     source_link: /display/NXDOC/Administration
+tree_item_index: 200
+version_override:
+    'LTS 2015': 710/admindoc/setup
+    '6.0': 60/admindoc/setup
+    '5.8': 58/admindoc/setup
 history:
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-11 10:35'
         message: ix link to setup best practice
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-07-22 13:18'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 12:10'
         message: remove children display macro
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 23:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-23 10:13'
         message: ''

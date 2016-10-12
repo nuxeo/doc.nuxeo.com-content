@@ -15,68 +15,69 @@ confluence:
     shortlink: iQ0z
     shortlink_source: 'https://doc.nuxeo.com/x/iQ0z'
     source_link: /display/NXDOC/Functional+tour
+tree_item_index: 100
 history:
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 15:48'
         message: ''
         version: '13'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 15:48'
         message: ''
         version: '12'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 15:45'
         message: ''
         version: '11'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 15:45'
         message: ''
         version: '10'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 15:44'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2010-08-25 17:23'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2010-08-18 10:59'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-28 02:15'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-28 02:14'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-28 01:39'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-28 01:38'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-28 01:19'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-28 01:19'
         message: ''

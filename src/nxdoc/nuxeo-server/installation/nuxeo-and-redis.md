@@ -19,78 +19,79 @@ confluence:
     shortlink: hY1kAQ
     shortlink_source: 'https://doc.nuxeo.com/x/hY1kAQ'
     source_link: /display/NXDOC/Nuxeo+and+Redis
+tree_item_index: 1500
 history:
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-07-22 08:03'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 12:18'
         message: ''
         version: '14'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-05-13 16:02'
         message: ''
         version: '13'
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-02-04 12:54'
         message: ''
         version: '12'
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-02-04 12:52'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-14 10:09'
         message: Formatting
         version: '10'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-12-11 16:43'
         message: ''
         version: '9'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-12-11 16:12'
         message: ''
         version: '8'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-12-11 16:10'
         message: Add a note about VCS row invalidation
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-04-27 14:31'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-06 13:07'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-06 13:06'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-06 10:37'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-05 16:40'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-05 16:38'
         message: ''

@@ -15,23 +15,24 @@ confluence:
     shortlink: 4ofZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/4ofZAQ'
     source_link: /display/NXDOC/Nuxeo+Server
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-15 15:28'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-15 15:23'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-15 15:17'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-15 15:16'
         message: ''

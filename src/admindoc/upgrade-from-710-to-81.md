@@ -17,8 +17,9 @@ confluence:
     shortlink: M4XBAQ
     shortlink_source: 'https://doc.nuxeo.com/x/M4XBAQ'
     source_link: /display/ADMINDOC/Upgrade+from+7.10+to+8.1
+hidden: true
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-01 14:22'
         message: ''

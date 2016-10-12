@@ -15,23 +15,28 @@ confluence:
     shortlink: IoPjAQ
     shortlink_source: 'https://doc.nuxeo.com/x/IoPjAQ'
     source_link: /display/NXDOC/Set+Up+Email+Notification
+tree_item_index: 1400
+version_override:
+    'LTS 2015': 710/admindoc/recommended-configurations
+    '6.0': 60/admindoc/recommended-configurations
+    '5.8': 58/admindoc/recommended-configurations
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-25 07:55'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-07-22 13:33'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-07-22 13:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-07-22 13:28'
         message: ''

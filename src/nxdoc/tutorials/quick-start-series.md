@@ -18,33 +18,34 @@ confluence:
     shortlink: XYMlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/XYMlAQ'
     source_link: /display/NXDOC/Quick+Start+Series
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-06 08:41'
         message: eplace From JSF UI bu Getting Started with the Nuxeo Platfor
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-12 15:20'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-28 14:45'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 16:59'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-04 00:40'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-04 00:33'
         message: ''

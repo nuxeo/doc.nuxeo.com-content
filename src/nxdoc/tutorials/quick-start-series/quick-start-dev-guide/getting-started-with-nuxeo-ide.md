@@ -25,388 +25,389 @@ confluence:
     shortlink: DhU5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/DhU5AQ'
     source_link: /display/NXDOC/Getting+Started+with+Nuxeo+IDE
+tree_item_index: 200
 history:
-    - 
+    -
         author: Thibaud Arguillere
         date: '2016-08-26 17:56'
         message: ''
         version: '77'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-21 08:52'
         message: Update link to SDK to use 8.3
         version: '76'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-25 14:04'
         message: ''
         version: '75'
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-18 17:41'
         message: Update FT SDK link to 8.2
         version: '74'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-04-14 14:01'
         message: fix missing comment
         version: '73'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-04-13 15:31'
         message: Added Studio project binding
         version: '72'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-03-21 15:55'
         message: ''
         version: '71'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-03-21 15:55'
         message: ''
         version: '70'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-03-21 15:55'
         message: ''
         version: '69'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-21 15:34'
         message: Fix page layout
         version: '68'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-21 15:28'
         message: Fix screenshot max size and remove empty code block
         version: '67'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-03-21 15:26'
         message: ''
         version: '66'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-03-21 15:26'
         message: ''
         version: '65'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-03-21 15:25'
         message: fix image size
         version: '64'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-03-21 15:23'
         message: ''
         version: '63'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-03-21 15:18'
         message: fix link
         version: '62'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-03-21 15:16'
         message: fix anchor
         version: '61'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-03-21 15:14'
         message: Replace with generator version
         version: '60'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-01 15:38'
         message: Update SDK download link to point to 8.1 SDK
         version: '59'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-01-07 11:26'
         message: Add imports and package declaration in final result
         version: '58'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-01-07 11:14'
         message: Fix parent version for parent POM
         version: '57'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-01-05 15:08'
         message: Fix SDK link
         version: '56'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-12-30 14:45'
         message: ''
         version: '55'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-12-30 14:43'
         message: Update to LTS 2015 SDK
         version: '54'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-30 17:11'
         message: ''
         version: '53'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-04 13:42'
         message: Fixed typos
         version: '52'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-04 13:28'
         message: typo
         version: '51'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-04 13:26'
         message: typo
         version: '50'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-04 13:25'
         message: ''
         version: '49'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-04 13:23'
         message: Updated intro
         version: '48'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-04 11:21'
         message: Complete / Fix / Refactor doc
         version: '47'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-04 10:44'
         message: Complete doc until step 3
         version: '46'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-04 10:24'
         message: Rename step
         version: '45'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-04 10:23'
         message: Update SDK link
         version: '44'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-04 10:22'
         message: Update prerequisites
         version: '43'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-29 13:56'
         message: update site URLs
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 09:00'
         message: Fix anchors and page layout
         version: '41'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-25 13:32'
         message: ''
         version: '40'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-25 13:30'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-03 07:37'
         message: ''
         version: '38'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-31 13:59'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-21 09:19'
         message: ''
         version: '36'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-05-25 08:07'
         message: Updated Nuxeo SDK version to HF12
         version: '35'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-29 14:29'
         message: ''
         version: '34'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-29 14:27'
         message: ''
         version: '33'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-29 14:24'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-26 14:05'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-26 13:42'
         message: 'Add link to previous step, typos'
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 14:50'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 14:47'
         message: ''
         version: '28'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 14:46'
         message: ''
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 14:45'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 14:42'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 14:34'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 14:32'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 14:13'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 13:56'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 13:44'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 13:27'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 13:17'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 11:12'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 11:07'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 10:56'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-22 16:59'
         message: ''
         version: '14'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-12-20 17:38'
         message: ''
         version: '13'
-    - 
+    -
         author: Anne Jubert
         date: '2014-11-25 15:29'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-25 14:53'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-17 14:33'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-17 14:32'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-17 14:31'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-17 14:27'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:59'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:59'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 12:29'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 12:28'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 12:26'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 12:25'
         message: ''
@@ -701,7 +702,7 @@ A unit test comes along in `src/test/java`. You will need it to pass in order to
     @RepositoryConfig(init = DefaultRepositoryInit.class, cleanup = Granularity.METHOD)
     // Replace "your.studio.project.symbolic.name"
     // With studio.extensions.MAVEN-ARTIFACT-ID
-    // The bundle's Maven artifact id can be found in: 
+    // The bundle's Maven artifact id can be found in:
     // Settings / Application Information / Maven Artifact id field
     @Deploy({"com.bigcorp.contractmgt.contract-mgt-project-core", "your.studio.project.symbolic.name"})
     public class TestContractUpdater {

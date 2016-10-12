@@ -20,138 +20,139 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/7onZ'
     source_link: >-
         /display/NXDOC/Validation+Workflow+Choosing+the+Assignee+Based+on+a+Metadata
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-19 17:04'
         message: ''
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-19 16:59'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-19 15:05'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-19 14:08'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-19 14:06'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-18 16:33'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-18 14:46'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-18 14:45'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-26 15:05'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 17:46'
         message: ''
         version: '18'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 17:45'
         message: ''
         version: '17'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 17:44'
         message: ''
         version: '16'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 16:48'
         message: ''
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 16:33'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-13 14:50'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-13 14:21'
         message: ''
         version: '12'
-    - 
+    -
         author: Frédéric Vadon
         date: '2014-06-12 18:25'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 11:42'
         message: ''
         version: '10'
-    - 
+    -
         author: Frédéric Vadon
         date: '2014-05-12 18:09'
         message: ''
         version: '9'
-    - 
+    -
         author: Frédéric Vadon
         date: '2014-05-12 17:58'
         message: ''
         version: '8'
-    - 
+    -
         author: Frédéric Vadon
         date: '2014-05-07 11:04'
         message: ''
         version: '7'
-    - 
+    -
         author: Frédéric Vadon
         date: '2014-05-06 18:50'
         message: ''
         version: '6'
-    - 
+    -
         author: Frédéric Vadon
         date: '2014-05-06 18:49'
         message: ''
         version: '5'
-    - 
+    -
         author: Frédéric Vadon
         date: '2014-05-05 19:02'
         message: ''
         version: '4'
-    - 
+    -
         author: Frédéric Vadon
         date: '2014-03-24 11:41'
         message: ''
         version: '3'
-    - 
+    -
         author: Frédéric Vadon
         date: '2014-03-20 18:05'
         message: ''
         version: '2'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-07-16 10:57'
         message: ''

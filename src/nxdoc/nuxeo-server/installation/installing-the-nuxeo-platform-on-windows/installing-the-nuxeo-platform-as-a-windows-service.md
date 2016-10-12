@@ -21,213 +21,218 @@ confluence:
     shortlink: 6QJc
     shortlink_source: 'https://doc.nuxeo.com/x/6QJc'
     source_link: /display/NXDOC/Installing+the+Nuxeo+Platform+as+a+Windows+Service
+tree_item_index: 100
+version_override:
+    'LTS 2015': 710/admindoc/installing-the-nuxeo-platform-as-a-windows-service
+    '6.0': 60/admindoc/installing-the-nuxeo-platform-as-a-windows-service
+    '5.8': 58/admindoc/installing-the-nuxeo-platform-as-a-windows-service
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 13:39'
         message: ''
         version: '42'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 13:38'
         message: ''
         version: '41'
-    - 
+    -
         author: Gabriel Barata
         date: '2015-12-09 14:36'
         message: ''
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-23 14:30'
         message: update related pages
         version: '39'
-    - 
+    -
         author: Julien Carsique
         date: '2015-02-02 10:14'
         message: ''
         version: '38'
-    - 
+    -
         author: Benjamin Jalon
         date: '2015-01-30 14:39'
         message: ''
         version: '37'
-    - 
+    -
         author: Benjamin Jalon
         date: '2015-01-30 14:38'
         message: ''
         version: '36'
-    - 
+    -
         author: Benjamin Jalon
         date: '2015-01-30 14:25'
         message: ''
         version: '35'
-    - 
+    -
         author: Benjamin Jalon
         date: '2015-01-30 14:25'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 11:07'
         message: Nuxeo DM -> Nuxeo Platform
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 11:05'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 11:03'
         message: format
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-11 17:37'
         message: Added note about wrapper static configuration vs nuxeo.conf
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-27 10:32'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-27 10:32'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-26 18:44'
         message: Fixed step order
         version: '27'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-08-20 17:47'
         message: ''
         version: '26'
-    - 
+    -
         author: Julien Carsique
         date: '2013-02-15 11:54'
         message: ''
         version: '25'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-02-15 11:33'
         message: No space in installation path for YAJSW
         version: '24'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-02-13 17:48'
         message: nogui > --gui=false
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-28 17:27'
         message: Migrated to Confluence 4.0
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-28 17:26'
         message: Added related pages
         version: '21'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2012-02-09 13:54'
         message: svn -> hg + updates
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 14:48'
         message: format
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 12:24'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 12:23'
         message: ''
         version: '17'
-    - 
+    -
         author: Julien Carsique
         date: '2011-07-15 10:55'
         message: ''
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2011-07-15 10:47'
         message: ''
         version: '15'
-    - 
+    -
         author: Julien Carsique
         date: '2011-04-20 18:24'
         message: ''
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2011-04-20 18:23'
         message: ''
         version: '13'
-    - 
+    -
         author: Julien Carsique
         date: '2011-04-20 18:22'
         message: ''
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2011-04-20 18:15'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-19 14:38'
         message: steps format
         version: '10'
-    - 
+    -
         author: Thierry Martins
         date: '2011-04-19 12:12'
         message: ''
         version: '9'
-    - 
+    -
         author: Thierry Martins
         date: '2011-04-19 12:08'
         message: ''
         version: '8'
-    - 
+    -
         author: Thierry Martins
         date: '2011-04-19 12:07'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-19 11:34'
         message: fixed broken style
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-23 18:02'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2011-03-22 17:59'
         message: add YAJSW and Tomcat Service
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2011-03-18 18:16'
         message: Install Nuxeo as a Windows service
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 10:12'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 10:12'
         message: ''

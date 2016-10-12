@@ -15,13 +15,14 @@ confluence:
     shortlink: 64fZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/64fZAQ'
     source_link: /display/NXDOC/Desktop+and+Mobile
+tree_item_index: 400
 history:
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-06-15 11:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-15 15:36'
         message: ''

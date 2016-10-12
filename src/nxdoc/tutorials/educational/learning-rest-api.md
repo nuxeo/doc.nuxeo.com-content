@@ -18,78 +18,79 @@ confluence:
     shortlink: dY3ZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/dY3ZAQ'
     source_link: /display/NXDOC/Learning+REST+API
+tree_item_index: 800
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-02 14:16'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-02 13:58'
         message: Remove icon from info panel
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-02 13:12'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-01 16:23'
         message: Move useful resources into prerequisites section
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-01 15:59'
         message: source cleanup
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-01 15:44'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-29 16:25'
         message: Fix page reference
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-29 15:58'
         message: Add borders to pictures
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2016-06-14 08:37'
         message: ''
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-06-10 11:15'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-05-24 15:36'
         message: ''
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-05-24 15:02'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-05-19 14:57'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-05-19 14:49'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-05-19 14:49'
         message: ''
@@ -259,10 +260,10 @@ In Nuxeo Studio:
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
-  <corsConfig name="BigCorp" 
-    allowGenericHttpRequests="true" 
+  <corsConfig name="BigCorp"
+    allowGenericHttpRequests="true"
     allowOrigin="https://jsfiddle.net https://jshell.net"
-    allowSubdomains="true" 
+    allowSubdomains="true"
     supportedMethods="GET, PUT, POST, DELETE, HEAD, OPTIONS">
     <pattern>/nuxeo/.*</pattern>
   </corsConfig>
@@ -282,14 +283,14 @@ In your Nuxeo Cloud instance:
 3.  Open a terminal and launch the following commands to test your configuration:
 
     ```bash
-    # Please replace https://your-instance-name.nuxeo.io by your real nuxeo.io instance URL. 
+    # Please replace https://your-instance-name.nuxeo.io by your real nuxeo.io instance URL.
     # The following command should be denied by the CORS configuration.
     # You should see: Cross-Origin Resource Sharing (CORS) Filter: CORS origin denied: http://www.nuxeo.com
     curl --verbose -H "Origin: http://www.nuxeo.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS https://your-instance-name.nuxeo.io/nuxeo/site/foobar/upload
     ```
 
     ```bash
-    # Please replace https://your-instance-name.nuxeo.io by your real nuxeo.io instance URL. 
+    # Please replace https://your-instance-name.nuxeo.io by your real nuxeo.io instance URL.
     # The following command should be accepted by the CORS configuration.
     curl --verbose -H "Origin: https://jsfiddle.net" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS https://your-instance-name.nuxeo.io/nuxeo/site/foobar/upload
     ```
@@ -406,12 +407,12 @@ Obviously, this is also slightly more complex, since it involves more steps:
     {{#> panel type='code' heading='Sample'}}
 
     ```js
-    // Needed parameters for the function to obtain a token: 
-    // application name (string, use whatever you see fit), 
-    // unique device id (string, you'll probably want to use the device's id on a phone or use a specific function to generate one), 
-    // device description (string, use whatever you like), 
+    // Needed parameters for the function to obtain a token:
+    // application name (string, use whatever you see fit),
+    // unique device id (string, you'll probably want to use the device's id on a phone or use a specific function to generate one),
+    // device description (string, use whatever you like),
     // permission (string, see notes below)
-    // Notes: 
+    // Notes:
     // The permission parameter is required but its content is not used currently,
     // we recommend you to use the 'rw' value in the meantime
     tmpNuxeoClient.requestAuthenticationToken(applicationName, uniqueDeviceId, deviceDescription, permission)
@@ -563,7 +564,7 @@ On top of the `depth` header, you can use:
 *   The corresponding JS client methods:
 
     ```js
-    nuxeo.someClass().fetchProperty('entity-type', 'myschema:myProperty')... 
+    nuxeo.someClass().fetchProperty('entity-type', 'myschema:myProperty')...
     // You can use it as many times as needed to add other properties
     // TODO: You need to replace someClass by the appropriate class!
 
@@ -633,7 +634,7 @@ Enrichers are provided in the response into the `contextParameters` object.
 The corresponding JS client methods:
 
 ```js
-nuxeo.someClass().enricher('entity-type', 'enricherName')... 
+nuxeo.someClass().enricher('entity-type', 'enricherName')...
 // You can use it as many times as needed to add other enrichers
 // TODO: You need to replace someClass by the appropriate class!
 
@@ -921,11 +922,11 @@ In that case, specify the NXQL query to be launched in the query property: `nuxe
 {{#> panel type='code' heading='Sample NXQL Query for a Fulltext Search'}}
 
 ```
-SELECT * FROM Document 
-	WHERE ecm:mixinType != 'HiddenInNavigation' 
-	AND ecm:isProxy = 0 
-	AND ecm:isCheckedInVersion = 0 
-	AND ecm:currentLifeCycleState != 'deleted' 
+SELECT * FROM Document
+	WHERE ecm:mixinType != 'HiddenInNavigation'
+	AND ecm:isProxy = 0
+	AND ecm:isCheckedInVersion = 0
+	AND ecm:currentLifeCycleState != 'deleted'
 	AND ecm:fulltext LIKE 'MyKeyword'
 ```
 
@@ -1092,24 +1093,24 @@ Note that automation scripts are prefixed by `javascript.` So if your automation
     ******/
     function run(input, params) {
 
-      // TODO: If the collectionName context variable is not set, 
+      // TODO: If the collectionName context variable is not set,
       // use "Contracts" as a default value
       if(!ctx.collectionName) {
         ctx.collectionName = "YOUPI";
       }
 
-      // TODO: Retrieve the user's workspace 
+      // TODO: Retrieve the user's workspace
       // and place the result in a userWorkspace variable
       var userWorkspace = User.GetUserWorkspace(
         input, {
       });
 
       var collection = getCollectionInUserWorkspace(input, ctx.collectionName);
-      // TODO: If the collection variable is null, 
+      // TODO: If the collection variable is null,
       // create a collection with the context variable's collectionName value
       // and place it in the collection variable.
-      // 
-      // The collection needs to be created in the user workspace, 
+      //
+      // The collection needs to be created in the user workspace,
       // so make sure to send it as the input for the operation
       if(!collection) {
         collection = Collection.Create(
@@ -1213,7 +1214,7 @@ Before starting the workflow, you need to create an object containing the ids of
 
 ```js
 var workflowOptions = {
-      "attachedDocumentIds": 
+      "attachedDocumentIds":
         ["docId1", "docId2", ...]
   };
 ```
@@ -1315,7 +1316,7 @@ import org.nuxeo.ecm.core.io.registry.reflect.Setup;
 
 @Setup(mode = SINGLETON, priority = REFERENCE)
 
-public class LastVersionEnricher extends AbstractJsonEnricher<DocumentModel> { 
+public class LastVersionEnricher extends AbstractJsonEnricher<DocumentModel> {
     public static final String NAME = "lastVersion";
     public SampleEnricher() {
         super(NAME);
@@ -1348,7 +1349,7 @@ import org.nuxeo.ecm.core.api.DocumentModel;
 import org.nuxeo.ecm.core.io.marshallers.json.enrichers.AbstractJsonEnricher;
 import org.nuxeo.ecm.core.io.registry.reflect.Setup;
 @Setup(mode = SINGLETON, priority = REFERENCE)
-public class LastVersionEnricher extends AbstractJsonEnricher<DocumentModel> { 
+public class LastVersionEnricher extends AbstractJsonEnricher<DocumentModel> {
     public static final String NAME = "lastVersion";
     public SampleEnricher() {
         super(NAME);

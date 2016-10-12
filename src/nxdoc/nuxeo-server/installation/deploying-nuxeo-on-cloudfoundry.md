@@ -19,83 +19,88 @@ confluence:
     shortlink: FRHF
     shortlink_source: 'https://doc.nuxeo.com/x/FRHF'
     source_link: /display/NXDOC/Deploying+Nuxeo+on+CloudFoundry
+tree_item_index: 800
+version_override:
+    'LTS 2015': 710/admindoc/deploying-nuxeo-on-cloudfoundry
+    '6.0': 60/admindoc/deploying-nuxeo-on-cloudfoundry
+    '5.8': 58/admindoc/deploying-nuxeo-on-cloudfoundry
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-23 10:33'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-09 11:10'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-09 11:06'
         message: Formatting
         version: '14'
-    - 
+    -
         author: Kevin Leturc
         date: '2015-12-08 12:45'
         message: ''
         version: '13'
-    - 
+    -
         author: Kevin Leturc
         date: '2015-12-08 11:07'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 14:57'
         message: Update table of contents look
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 16:04'
         message: ''
         version: '10'
-    - 
+    -
         author: Prateeksha Barman
         date: '2013-06-13 23:15'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 13:47'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 13:45'
         message: Added TOC
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-25 15:28'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-25 15:26'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-25 15:25'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-25 15:23'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-25 15:23'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-25 15:20'
         message: ''
@@ -255,16 +260,16 @@ Before the above Tomcat 7 instance can be set up as a full &ldquo;standalone&rdq
     The following CloudFoundry YML manifest corresponds to a full setup (`myapp` should be replaced by your namespace):
 
     ```
-    --- 
-    applications: 
-      .: 
+    ---
+    applications:
+      .:
         mem: 1G
         instances: 1
         url: myapp.cloudfoundry.com
-        framework: 
-          info: 
+        framework:
+          info:
             mem: 64M
-            exec: 
+            exec:
             description: Standalone Application
           name: standalone
         command: bin/startup.sh

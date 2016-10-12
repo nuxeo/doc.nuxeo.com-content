@@ -17,28 +17,29 @@ confluence:
     shortlink: Eg7F
     shortlink_source: 'https://doc.nuxeo.com/x/Eg7F'
     source_link: /display/NXDOC/Design+Tips
+tree_item_index: 600
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 13:20'
         message: emove children display macr
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 11:21'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 01:07'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 17:21'
         message: ''
         version: '2'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-02-21 16:36'
         message: ''

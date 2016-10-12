@@ -17,8 +17,9 @@ confluence:
     shortlink: f4tkAQ
     shortlink_source: 'https://doc.nuxeo.com/x/f4tkAQ'
     source_link: /display/NXDOC/How+to+Configure+a+New+Search+Tab
+hidden: true
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-24 15:51'
         message: ''

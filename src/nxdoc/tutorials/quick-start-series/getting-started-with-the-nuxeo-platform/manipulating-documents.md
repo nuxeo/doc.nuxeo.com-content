@@ -16,192 +16,193 @@ confluence:
     shortlink: 2oHjAQ
     shortlink_source: 'https://doc.nuxeo.com/x/2oHjAQ'
     source_link: /display/NXDOC/Manipulating+Documents
+tree_item_index: 300
 history:
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-10-05 12:57'
         message: dd headers lin
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-05 12:02'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-05 11:49'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-05 11:49'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-28 14:15'
         message: ''
         version: '33'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-09-21 20:14'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-21 12:19'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-21 12:18'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-20 15:25'
         message: ''
         version: '29'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-09-20 09:15'
         message: display breadcrumb explicitly
         version: '28'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-09-20 08:49'
         message: Show only custom clauses in result when updating
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-19 12:10'
         message: Fix createContract.js
         version: '26'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-09-16 13:42'
         message: don't put dashes in tel for juridical contact
         version: '25'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-09-07 09:05'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-17 08:06'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-17 07:44'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-12 15:32'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-11 15:02'
         message: ''
         version: '20'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-09 16:13'
         message: ''
         version: '19'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-09 09:24'
         message: >-
             Remove amount in contract to be able to launch workflow properly
             later
         version: '18'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-08 12:56'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-02 16:17'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-02 14:50'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-29 15:50'
         message: ''
         version: '14'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-29 14:33'
         message: ''
         version: '13'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-29 11:10'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-28 12:07'
         message: ''
         version: '11'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-19 13:15'
         message: >-
             Use custom clauses (complex multivalued property) instead of
             updating a simple property
         version: '10'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-19 10:17'
         message: Removed permissions mgt => going to a different page
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-19 10:00'
         message: ''
         version: '8'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-19 09:43'
         message: ''
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-18 18:25'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-18 18:06'
         message: ''
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-18 16:19'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-18 16:03'
         message: ''
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-18 15:37'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-18 15:02'
         message: ''

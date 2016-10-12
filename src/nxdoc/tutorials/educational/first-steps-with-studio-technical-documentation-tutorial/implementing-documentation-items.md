@@ -19,345 +19,346 @@ confluence:
     shortlink: Ng7F
     shortlink_source: 'https://doc.nuxeo.com/x/Ng7F'
     source_link: /display/NXDOC/Implementing+Documentation+Items
+tree_item_index: 100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-27 16:00'
         message: 'ix Studio menu label   '
         version: '68'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-10 13:49'
         message: ''
         version: '67'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-12 17:05'
         message: Use a custom metadata for Nature
         version: '66'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-06 10:05'
         message: ''
         version: '65'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 16:58'
         message: ''
         version: '64'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 16:58'
         message: ''
         version: '63'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 16:46'
         message: Fix screenshots
         version: '62'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 15:44'
         message: ''
         version: '61'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 15:32'
         message: ''
         version: '60'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 15:30'
         message: ''
         version: '59'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 15:11'
         message: ''
         version: '58'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 15:08'
         message: ''
         version: '57'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 15:01'
         message: ''
         version: '56'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 13:59'
         message: ''
         version: '55'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 13:23'
         message: ''
         version: '54'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 11:03'
         message: ''
         version: '53'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 10:59'
         message: ''
         version: '52'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 10:52'
         message: ''
         version: '51'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-30 10:24'
         message: ''
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-29 15:54'
         message: ''
         version: '49'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-10 12:04'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-09 18:39'
         message: ''
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-09 18:15'
         message: ''
         version: '46'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 11:43'
         message: ''
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 11:35'
         message: ''
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 11:27'
         message: ''
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 11:12'
         message: ''
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 11:08'
         message: ''
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 11:00'
         message: ''
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 10:58'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 10:56'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 10:47'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 10:28'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 10:28'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-07 19:01'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-07 18:57'
         message: Review title levels
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-07 18:48'
         message: Add related documentation by sections
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-07 18:39'
         message: Add related documentation by section
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-07 18:31'
         message: >-
             Review steps and remove some explanations available from linked
             pages
         version: '30'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 18:51'
         message: ''
         version: '29'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 17:21'
         message: ''
         version: '28'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 17:20'
         message: ''
         version: '27'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 17:02'
         message: ''
         version: '26'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 16:59'
         message: ''
         version: '25'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 16:46'
         message: ''
         version: '24'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 16:46'
         message: ''
         version: '23'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 16:31'
         message: ''
         version: '22'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 16:28'
         message: ''
         version: '21'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 15:51'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 11:38'
         message: ''
         version: '19'
-    - 
+    -
         author: Mike Obrebski
         date: '2013-12-04 14:26'
         message: ''
         version: '18'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-08-21 10:01'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-08 16:38'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-08 16:31'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-08 14:34'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-08 14:32'
         message: 'Resized screenshots, fixed some typos, reorganized steps'
         version: '13'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-07-05 15:53'
         message: ''
         version: '12'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-07-03 17:48'
         message: ''
         version: '11'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-07-03 17:30'
         message: ''
         version: '10'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-07-03 17:30'
         message: ''
         version: '9'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-07-03 17:27'
         message: ''
         version: '8'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-07-02 19:36'
         message: ''
         version: '7'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-07-02 19:35'
         message: ''
         version: '6'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-03-08 17:35'
         message: ''
         version: '5'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-02-22 18:18'
         message: ''
         version: '4'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-02-22 18:17'
         message: ''
         version: '3'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-02-22 18:16'
         message: ''
         version: '2'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-02-22 17:36'
         message: ''

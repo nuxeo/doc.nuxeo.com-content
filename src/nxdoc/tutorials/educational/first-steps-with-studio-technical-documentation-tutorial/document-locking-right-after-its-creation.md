@@ -20,123 +20,124 @@ confluence:
     shortlink: kojZ
     shortlink_source: 'https://doc.nuxeo.com/x/kojZ'
     source_link: /display/NXDOC/Document+Locking+Right+after+Its+Creation
+tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-28 13:47'
         message: 'ix Studio menu label     '
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-19 17:05'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-18 13:33'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-09 17:18'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-09 17:17'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-09 17:17'
         message: Review steps and add read more
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 17:35'
         message: ''
         version: '18'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 17:31'
         message: ''
         version: '17'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 17:23'
         message: ''
         version: '16'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 17:23'
         message: ''
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 17:23'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 16:48'
         message: ''
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 16:31'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 11:41'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 22:04'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:57'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 14:36'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 14:35'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 13:50'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-10 23:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-07-10 19:55'
         message: ''
         version: '4'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-07-10 19:52'
         message: ''
         version: '3'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-07-10 19:50'
         message: ''
         version: '2'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-07-10 15:13'
         message: ''

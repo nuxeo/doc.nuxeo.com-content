@@ -19,103 +19,104 @@ confluence:
     shortlink: ZY5H
     shortlink_source: 'https://doc.nuxeo.com/x/ZY5H'
     source_link: /display/NXDOC/Create+a+task+assignment+alert
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-29 14:11'
         message: ormat and UR
         version: '20'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-01-22 12:31'
         message: ''
         version: '19'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 18:27'
         message: Migrated to Confluence 4.0
         version: '18'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 18:27'
         message: ''
         version: '17'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 18:24'
         message: ''
         version: '16'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 16:49'
         message: ''
         version: '15'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 16:47'
         message: ''
         version: '14'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 16:44'
         message: ''
         version: '13'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 16:43'
         message: ''
         version: '12'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 16:43'
         message: ''
         version: '11'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 16:42'
         message: ''
         version: '10'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 16:41'
         message: ''
         version: '9'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 16:41'
         message: ''
         version: '8'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 16:40'
         message: ''
         version: '7'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 16:38'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-27 19:12'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-26 15:16'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-17 15:40'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-17 15:38'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-17 15:37'
         message: ''
@@ -149,16 +150,16 @@ Content
 </td><td colspan="1">
 
 ```
-Hello,<br /> 
- <br /> 
- The user ${Context['UserFirstName']} ${Context['UserLastName']} needs your approval for the following document :<br /> 
- <br /> 
- Title : ${Document['dc:title']}<br /> 
- <br /> 
- Description : ${Document['dc:description']}<br /> 
- <br /> 
- Creation date : ${Document['dc:created']}<br /> 
- <br /> 
+Hello,<br />
+ <br />
+ The user ${Context['UserFirstName']} ${Context['UserLastName']} needs your approval for the following document :<br />
+ <br />
+ Title : ${Document['dc:title']}<br />
+ <br />
+ Description : ${Document['dc:description']}<br />
+ <br />
+ Creation date : ${Document['dc:created']}<br />
+ <br />
  Link to the document : <a href="${docUrl}">${Document['dc:title']}</a><br />\
 ```
 

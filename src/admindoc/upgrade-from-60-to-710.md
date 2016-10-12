@@ -17,8 +17,9 @@ confluence:
     shortlink: NYXBAQ
     shortlink_source: 'https://doc.nuxeo.com/x/NYXBAQ'
     source_link: /display/ADMINDOC/Upgrade+from+6.0+to+7.10
+hidden: true
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-01 14:23'
         message: ''

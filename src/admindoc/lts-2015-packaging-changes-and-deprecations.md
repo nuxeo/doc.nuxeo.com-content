@@ -18,8 +18,9 @@ confluence:
     shortlink: hIbBAQ
     shortlink_source: 'https://doc.nuxeo.com/x/hIbBAQ'
     source_link: /display/ADMINDOC/LTS+2015+Packaging+Changes+and+Deprecations
+hidden: true
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-09 13:22'
         message: ''

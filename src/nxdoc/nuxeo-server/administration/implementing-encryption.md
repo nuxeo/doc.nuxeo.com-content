@@ -19,53 +19,57 @@ confluence:
     shortlink: UoIlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/UoIlAQ'
     source_link: /display/NXDOC/Implementing+Encryption
+tree_item_index: 1300
+version_override:
+    'LTS 2015': 710/admindoc/implementing-encryption
+    '6.0': 60/admindoc/implementing-encryption
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-25 16:43'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 22:59'
         message: ''
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-07-13 10:04'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 14:07'
         message: Formatting and links
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-10-10 15:21'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-10-10 15:19'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-10-10 15:16'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-10-09 19:11'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-10-09 18:56'
         message: ''
         version: '2'
-    - 
+    -
         author: Mike Obrebski
         date: '2014-04-24 22:54'
         message: ''

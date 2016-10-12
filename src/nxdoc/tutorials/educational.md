@@ -15,18 +15,19 @@ confluence:
     shortlink: X4MlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/X4MlAQ'
     source_link: /display/NXDOC/Educational
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 12:23'
         message: emove children display macr
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 11:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-04 00:34'
         message: ''

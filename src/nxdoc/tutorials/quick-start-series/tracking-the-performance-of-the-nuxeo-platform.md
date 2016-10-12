@@ -22,238 +22,239 @@ confluence:
     shortlink: uAAt
     shortlink_source: 'https://doc.nuxeo.com/x/uAAt'
     source_link: /display/NXDOC/Tracking+the+Performance+of+the+Nuxeo+Platform
+tree_item_index: 800
 history:
-    - 
+    -
         author: Stuart Miller
         date: '2016-02-03 20:05'
         message: ''
         version: '47'
-    - 
+    -
         author: Stuart Miller
         date: '2016-02-03 20:03'
         message: ''
         version: '46'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 14:38'
         message: ''
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 14:28'
         message: Fix some typos and formatting
         version: '44'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-10-13 15:50'
         message: ''
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2015-05-18 08:41'
         message: typos
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-11 10:35'
         message: ''
         version: '41'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-02-10 05:25'
         message: ''
         version: '40'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-02-10 05:22'
         message: ''
         version: '39'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-02-10 05:13'
         message: ''
         version: '38'
-    - 
+    -
         author: Brendan Coveney
         date: '2015-02-05 20:34'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-05 15:45'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 19:31'
         message: format
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 19:27'
         message: Fix links to point to latest version
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-14 18:28'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 10:53'
         message: Updated link
         version: '32'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-12 17:50'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-22 15:41'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:03'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:03'
         message: ''
         version: '28'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-06-24 11:15'
         message: ''
         version: '27'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-04-19 15:57'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-06 16:32'
         message: Migrated to Confluence 4.0
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-06 16:32'
         message: Updated links to recent reports
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-16 11:38'
         message: Fixed typos
         version: '23'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2012-01-06 17:55'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-20 10:09'
         message: Fixed link and terminology
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 11:45'
         message: Fixed broken links
         version: '20'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-07-05 15:51'
         message: ''
         version: '19'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-07-05 11:29'
         message: cosmit
         version: '18'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-07-05 11:23'
         message: cosmit
         version: '17'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-07-05 11:18'
         message: Adding note about network latency
         version: '16'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-02-11 16:33'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-07 11:26'
         message: ''
         version: '14'
-    - 
+    -
         author: Olivier Grisel
         date: '2010-12-11 01:21'
         message: ''
         version: '13'
-    - 
+    -
         author: cmckinnon
         date: '2010-10-27 15:17'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-26 15:13'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-26 12:07'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-26 11:48'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-26 11:22'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-15 11:22'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-15 11:22'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-15 11:15'
         message: formatting and typos
         version: '5'
-    - 
+    -
         author: stan
         date: '2010-09-07 20:17'
         message: ''
         version: '4'
-    - 
+    -
         author: stan
         date: '2010-09-07 20:10'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-06-14 00:02'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-06-13 23:51'
         message: ''
