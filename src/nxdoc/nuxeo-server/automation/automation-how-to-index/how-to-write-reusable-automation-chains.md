@@ -27,73 +27,74 @@ confluence:
     shortlink: wgEuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/wgEuAQ'
     source_link: /display/NXDOC/How+to+Write+Reusable+Automation+Chains
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 15:34'
         message: ix broken excerpt includ
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:59'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-16 11:26'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-09 18:09'
         message: 'Fix formatting in ChangeCaseStatus chain, update links'
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 10:31'
         message: Added related topics
         version: '10'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-06-12 00:31'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-12 00:10'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-12 00:09'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-12 00:09'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-12 00:08'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-12 00:07'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-11 23:50'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-11 23:46'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-04 15:05'
         message: ''

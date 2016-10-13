@@ -21,63 +21,64 @@ confluence:
     shortlink: JxLF
     shortlink_source: 'https://doc.nuxeo.com/x/JxLF'
     source_link: /display/NXDOC/Examples+of++SQL+Generated+by+VCS
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 09:27'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 15:37'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 15:36'
         message: Formatting cleanup
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 15:35'
         message: ''
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-10-13 15:15'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 08:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 17:21'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 17:21'
         message: TOC
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:52'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:50'
         message: Removed related topics from TOC
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 17:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 16:50'
         message: ''
@@ -97,37 +98,37 @@ SELECT * FROM Document
 ```sql
 -- 1/ Get the result list (only ids)
 SELECT _C1 FROM (
-  SELECT hierarchy.id AS _C1 
+  SELECT hierarchy.id AS _C1
   FROM hierarchy
   WHERE ((hierarchy.primarytype IN ($1, ... $58)))
-UNION ALL 
-  SELECT _H.id AS _C1 FROM hierarchy _H 
-  JOIN proxies ON _H.id = proxies.id 
-  JOIN hierarchy ON proxies.targetid = hierarchy.id 
-  WHERE ((hierarchy.primarytype IN ($59, ... $116)))) AS _T 
+UNION ALL
+  SELECT _H.id AS _C1 FROM hierarchy _H
+  JOIN proxies ON _H.id = proxies.id
+  JOIN hierarchy ON proxies.targetid = hierarchy.id
+  WHERE ((hierarchy.primarytype IN ($59, ... $116)))) AS _T
 LIMIT 201 OFFSET 0
 
 -- 2/ load hierarchy fragment for the 12 documents
 SELECT id, parentid, pos, name, isproperty, primarytype, ...
-FROM hierarchy 
+FROM hierarchy
 WHERE id IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
 
--- 3/ load prefetch dublincore fragment 
+-- 3/ load prefetch dublincore fragment
 SELECT id, creator, source,nature, created, description, ...
-FROM dublincore 
+FROM dublincore
 WHERE id IN ($1, $2,$3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
 
 -- 4/ load dublincore multi valued contributors fields
-SELECT id, item FROM dc_contributors 
-WHERE id IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) 
+SELECT id, item FROM dc_contributors
+WHERE id IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
 ORDER BY id, pos
 
 -- 5/ load other fragments dc_subject, misc
 SELECT ...
 -- 6/ load ACL
-SELECT id, name, grant, permission, user,group 
-FROM acls 
-WHERE id IN ($1, $2, $3, $4, $5, $6, $7, $8, $9,$10, $11, $12) 
+SELECT id, name, grant, permission, user,group
+FROM acls
+WHERE id IN ($1, $2, $3, $4, $5, $6, $7, $8, $9,$10, $11, $12)
 ORDER BY id, pos
 ```
 
@@ -146,9 +147,9 @@ There is a `LIMIT`&nbsp;in the queries because the Page Provider for navigation 
 {{#> panel type='code' heading='NXQL'}}
 
 ```sql
-SELECT * FROM Document 
-WHERE ecm:parentId = ? AND 
-      ecm:isCheckedInVersion = 0 AND 
+SELECT * FROM Document
+WHERE ecm:parentId = ? AND
+      ecm:isCheckedInVersion = 0 AND
       ecm:mixinType != 'HiddenInNavigation' AND
       ecm:currentLifeCycleState != 'deleted'
 -- defaultSortColumn=dc:title
@@ -158,17 +159,17 @@ WHERE ecm:parentId = ? AND
 
 ```sql
 SELECT _C1, _C2 FROM (
-  SELECT hierarchy.id AS _C1, _F1.title AS _C2 
-  FROM hierarchy 
-  LEFT JOIN dublincore _F1 ON hierarchy.id = _F1.id 
-  LEFT JOIN misc _F2 ON hierarchy.id = _F2.id 
-  JOIN hierarchy_read_acl _RACL ON hierarchy.id = _RACL.id 
-  WHERE ((hierarchy.primarytype IN ($1, ... , $33)) AND 
+  SELECT hierarchy.id AS _C1, _F1.title AS _C2
+  FROM hierarchy
+  LEFT JOIN dublincore _F1 ON hierarchy.id = _F1.id
+  LEFT JOIN misc _F2 ON hierarchy.id = _F2.id
+  JOIN hierarchy_read_acl _RACL ON hierarchy.id = _RACL.id
+  WHERE ((hierarchy.primarytype IN ($1, ... , $33)) AND
         (hierarchy.parentid = $34) AND
-        (hierarchy.isversion IS NULL) AND 
-        (_F2.lifecyclestate <> $35)) AND 
-        _RACL.acl_id IN (SELECT * FROM nx_get_read_acls_for($36)) 
-UNION ALL 
+        (hierarchy.isversion IS NULL) AND
+        (_F2.lifecyclestate <> $35)) AND
+        _RACL.acl_id IN (SELECT * FROM nx_get_read_acls_for($36))
+UNION ALL
   -- same select for proxies
 ORDER BY _C2
 LIMIT 201 OFFSET 0
@@ -188,15 +189,15 @@ SELECT * FROM Document WHERE files/*/file/name LIKE '%.jpg'
 
 ```sql
 SELECT DISTINCT _C1 FROM (
-  SELECT hierarchy.id AS _C1 
-  FROM hierarchy 
-  LEFT JOIN hierarchy _H1 ON hierarchy.id = _H1.parentid AND _H1.name = $1 
-  LEFT JOIN hierarchy _H2 ON _H1.id = _H2.parentid AND _H2.name = $2 
-  LEFT JOIN content _F1 ON _H2.id = _F1.id 
-  WHERE  ((hierarchy.primarytype IN ($3, ... $60)) AND 
-   (_F1.name LIKE $61)) 
-  UNION ALL 
-    -- same select for proxies AS _T 
+  SELECT hierarchy.id AS _C1
+  FROM hierarchy
+  LEFT JOIN hierarchy _H1 ON hierarchy.id = _H1.parentid AND _H1.name = $1
+  LEFT JOIN hierarchy _H2 ON _H1.id = _H2.parentid AND _H2.name = $2
+  LEFT JOIN content _F1 ON _H2.id = _F1.id
+  WHERE  ((hierarchy.primarytype IN ($3, ... $60)) AND
+   (_F1.name LIKE $61))
+  UNION ALL
+    -- same select for proxies AS _T
  LIMIT 201 OFFSET 0
 -- parameters: $1 = 'files', $2 = 'file' .. $61 = '%.jpg'
 ```

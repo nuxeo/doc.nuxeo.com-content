@@ -20,23 +20,24 @@ confluence:
     shortlink: wQvF
     shortlink_source: 'https://doc.nuxeo.com/x/wQvF'
     source_link: /display/NXDOC/Returning+a+Custom+Result+with+Automation
+tree_item_index: 1200
 history:
-    - 
+    -
         author: Thierry Martins
         date: '2015-12-07 09:59'
         message: emove old class usag
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-20 17:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Martins
         date: '2013-02-05 11:17'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2013-02-05 10:58'
         message: ''

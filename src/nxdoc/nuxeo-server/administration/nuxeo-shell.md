@@ -20,208 +20,213 @@ confluence:
     shortlink: E4dH
     shortlink_source: 'https://doc.nuxeo.com/x/E4dH'
     source_link: /display/NXDOC/Nuxeo+Shell
+tree_item_index: 2100
+version_override:
+    'LTS 2015': 710/admindoc/nuxeo-shell
+    '6.0': 60/admindoc/nuxeo-shell
+    '5.8': 58/admindoc/nuxeo-shell
 history:
-    - 
+    -
         author: Frantz Fischer
         date: '2016-09-14 10:25'
         message: ''
         version: '41'
-    - 
+    -
         author: Julien Carsique
         date: '2015-12-09 17:19'
         message: ''
         version: '40'
-    - 
+    -
         author: Julien Carsique
         date: '2015-12-09 17:08'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-29 11:46'
         message: Fix page layout to use 2/3 layout
         version: '38'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 16:13'
         message: ''
         version: '37'
-    - 
+    -
         author: Julien Carsique
         date: '2014-11-28 15:08'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-25 14:46'
         message: Remove availability panel
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-15 12:06'
         message: Added TOC
         version: '34'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-13 12:44'
         message: Migrated to Confluence 4.0
         version: '33'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-13 12:44'
         message: ''
         version: '32'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-13 12:43'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 16:18'
         message: Fixed typos
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 18:58'
         message: ''
         version: '29'
-    - 
+    -
         author: Julien Carsique
         date: '2011-04-13 12:13'
         message: download info for Shell
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 17:39'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 17:39'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 16:08'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 15:58'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 15:42'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 15:35'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 15:14'
         message: ''
         version: '21'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-02-23 15:26'
         message: ''
         version: '20'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-01-03 18:29'
         message: ''
         version: '19'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-30 19:37'
         message: ''
         version: '18'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-25 12:35'
         message: ''
         version: '17'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 17:49'
         message: ''
         version: '16'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 17:48'
         message: ''
         version: '15'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 15:38'
         message: ''
         version: '14'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 15:38'
         message: ''
         version: '13'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 14:42'
         message: ''
         version: '12'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 13:02'
         message: ''
         version: '11'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 12:42'
         message: ''
         version: '10'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 12:41'
         message: ''
         version: '9'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 12:19'
         message: ''
         version: '8'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 12:13'
         message: ''
         version: '7'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 12:12'
         message: ''
         version: '6'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 11:52'
         message: ''
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-23 22:17'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-23 22:17'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-23 21:12'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-23 21:09'
         message: ''

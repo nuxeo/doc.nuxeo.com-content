@@ -22,123 +22,124 @@ confluence:
     shortlink: tY_RAQ
     shortlink_source: 'https://doc.nuxeo.com/x/tY_RAQ'
     source_link: /display/NXDOC/Workflow+Audit+Log
+tree_item_index: 1000
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-16 09:57'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-15 11:59'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-13 10:09'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-13 09:55'
         message: Fix some formatting issues
         version: '21'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-10-02 16:12'
         message: ''
         version: '20'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 15:10'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-29 14:31'
         message: ''
         version: '18'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 11:49'
         message: ''
         version: '17'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 11:46'
         message: ''
         version: '16'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 11:40'
         message: ''
         version: '15'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 11:39'
         message: ''
         version: '14'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 10:27'
         message: ''
         version: '13'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 10:26'
         message: ''
         version: '12'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 10:25'
         message: ''
         version: '11'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 10:20'
         message: ''
         version: '10'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 10:19'
         message: ''
         version: '9'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 10:18'
         message: ''
         version: '8'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 09:24'
         message: ''
         version: '7'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 08:58'
         message: ''
         version: '6'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-28 15:48'
         message: ''
         version: '5'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-28 15:47'
         message: ''
         version: '4'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-28 15:44'
         message: ''
         version: '3'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-28 15:43'
         message: ''
         version: '2'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-28 14:18'
         message: ''
@@ -218,41 +219,41 @@ Let's have a look to returned entries. First the workflow is started by a user, 
 
     ```js
     {
-        "_id": "10267", 
-        "_index": "audit", 
-        "_score": null, 
+        "_id": "10267",
+        "_index": "audit",
+        "_score": null,
         "_source": {
-            "category": "Routing", 
-            "comment": null, 
-            "docLifeCycle": "running", 
-            "docPath": "/document-route-instances-root/2015/09/28/TravelExpenseValidation", 
-            "docType": "DocumentRoute", 
-            "docUUID": "e2777d7e-5fac-4264-94be-818a13ea13dd", 
-            "entity-type": "logEntry", 
-            "eventDate": "2015-09-28T15:01:21.786+02:00", 
-            "eventId": "afterWorkflowStarted", 
+            "category": "Routing",
+            "comment": null,
+            "docLifeCycle": "running",
+            "docPath": "/document-route-instances-root/2015/09/28/TravelExpenseValidation",
+            "docType": "DocumentRoute",
+            "docUUID": "e2777d7e-5fac-4264-94be-818a13ea13dd",
+            "entity-type": "logEntry",
+            "eventDate": "2015-09-28T15:01:21.786+02:00",
+            "eventId": "afterWorkflowStarted",
             "extended": {
-                "modelId": "5e7980bc-12f1-4b5f-a7df-149af96bc899", 
-                "modelName": "TravelExpenseValidation", 
-                "workflowInitiator": "jdoe", 
+                "modelId": "5e7980bc-12f1-4b5f-a7df-149af96bc899",
+                "modelName": "TravelExpenseValidation",
+                "workflowInitiator": "jdoe",
                 "workflowVariables": {
-                    "amount": null, 
-                    "department": "it", 
-                    "description": null, 
-                    "destination": null, 
-                    "expensenature": "transportation", 
-                    "file": null, 
-                    "label": null, 
+                    "amount": null,
+                    "department": "it",
+                    "description": null,
+                    "destination": null,
+                    "expensenature": "transportation",
+                    "file": null,
+                    "label": null,
                     "user": null
                 }
-            }, 
-            "id": 10267, 
-            "logDate": "2015-09-28T15:01:22.395+02:00", 
-            "principalName": "Administrator", 
+            },
+            "id": 10267,
+            "logDate": "2015-09-28T15:01:22.395+02:00",
+            "principalName": "Administrator",
             "repositoryId": "default"
-        }, 
-        "_type": "entry", 
-        "_version": 1, 
+        },
+        "_type": "entry",
+        "_version": 1,
         "sort": [
             1443445281786
         ]
@@ -263,46 +264,46 @@ Let's have a look to returned entries. First the workflow is started by a user, 
 
     ```js
     {
-        "_id": "10266", 
-        "_index": "audit", 
-        "_score": null, 
+        "_id": "10266",
+        "_index": "audit",
+        "_score": null,
         "_source": {
-            "category": "Routing", 
-            "comment": null, 
-            "docLifeCycle": "opened", 
-            "docPath": "/task-root/Task4fb", 
-            "docType": "RoutingTask", 
-            "docUUID": "587464f7-daba-4c07-9b43-9f04f201d421", 
-            "entity-type": "logEntry", 
-            "eventDate": "2015-09-28T15:01:21.771+02:00", 
-            "eventId": "afterWorkflowTaskCreated", 
+            "category": "Routing",
+            "comment": null,
+            "docLifeCycle": "opened",
+            "docPath": "/task-root/Task4fb",
+            "docType": "RoutingTask",
+            "docUUID": "587464f7-daba-4c07-9b43-9f04f201d421",
+            "entity-type": "logEntry",
+            "eventDate": "2015-09-28T15:01:21.771+02:00",
+            "eventId": "afterWorkflowTaskCreated",
             "extended": {
                 "actors": [
                     "jdoe"
-                ], 
-                "modelId": "5e7980bc-12f1-4b5f-a7df-149af96bc899", 
-                "modelName": "TravelExpenseValidation", 
-                "nodeVariables": {}, 
-                "taskName": "wf.travelExpenses.create", 
-                "workflowInitiator": "Administrator", 
+                ],
+                "modelId": "5e7980bc-12f1-4b5f-a7df-149af96bc899",
+                "modelName": "TravelExpenseValidation",
+                "nodeVariables": {},
+                "taskName": "wf.travelExpenses.create",
+                "workflowInitiator": "Administrator",
                 "workflowVariables": {
-                    "amount": null, 
-                    "department": "it", 
-                    "description": null, 
-                    "destination": null, 
-                    "expensenature": "transportation", 
-                    "file": null, 
-                    "label": null, 
+                    "amount": null,
+                    "department": "it",
+                    "description": null,
+                    "destination": null,
+                    "expensenature": "transportation",
+                    "file": null,
+                    "label": null,
                     "user": null
                 }
-            }, 
-            "id": 10266, 
-            "logDate": "2015-09-28T15:01:22.331+02:00", 
-            "principalName": "Administrator", 
+            },
+            "id": 10266,
+            "logDate": "2015-09-28T15:01:22.331+02:00",
+            "principalName": "Administrator",
             "repositoryId": "default"
-        }, 
-        "_type": "entry", 
-        "_version": 1, 
+        },
+        "_type": "entry",
+        "_version": 1,
         "sort": [
             1443445281771
         ]
@@ -317,46 +318,46 @@ Then the user completes the task associated to the `wf.travelExpenses.create` no
 
     ```js
     {
-        "_id": "10271", 
-        "_index": "audit", 
-        "_score": null, 
+        "_id": "10271",
+        "_index": "audit",
+        "_score": null,
         "_source": {
-            "category": "Routing", 
-            "comment": null, 
-            "docLifeCycle": "ended", 
-            "docPath": "/task-root/Task4fb", 
-            "docType": "RoutingTask", 
-            "docUUID": "587464f7-daba-4c07-9b43-9f04f201d421", 
-            "entity-type": "logEntry", 
-            "eventDate": "2015-09-28T15:02:04.830+02:00", 
-            "eventId": "afterWorkflowTaskEnded", 
+            "category": "Routing",
+            "comment": null,
+            "docLifeCycle": "ended",
+            "docPath": "/task-root/Task4fb",
+            "docType": "RoutingTask",
+            "docUUID": "587464f7-daba-4c07-9b43-9f04f201d421",
+            "entity-type": "logEntry",
+            "eventDate": "2015-09-28T15:02:04.830+02:00",
+            "eventId": "afterWorkflowTaskEnded",
             "extended": {
                 "action": "submit",
-                "modelName": "TravelExpenseValidation", 
-                "nodeVariables": {}, 
-                "taskActor": "jdoe", 
-                "taskName": "wf.travelExpenses.create", 
-                "timeSinceTaskStarted": 43052, 
-                "timeSinceWfStarted": 43044, 
-                "workflowInitiator": "jdoe", 
+                "modelName": "TravelExpenseValidation",
+                "nodeVariables": {},
+                "taskActor": "jdoe",
+                "taskName": "wf.travelExpenses.create",
+                "timeSinceTaskStarted": 43052,
+                "timeSinceWfStarted": 43044,
+                "workflowInitiator": "jdoe",
                 "workflowVariables": {
-                    "amount": 12, 
-                    "department": "marketing", 
-                    "description": "Morning breakfast", 
-                    "destination": null, 
-                    "expensenature": "lunch", 
-                    "file": null, 
-                    "label": "Breakfast", 
+                    "amount": 12,
+                    "department": "marketing",
+                    "description": "Morning breakfast",
+                    "destination": null,
+                    "expensenature": "lunch",
+                    "file": null,
+                    "label": "Breakfast",
                     "user": null
                 }
-            }, 
-            "id": 10271, 
-            "logDate": "2015-09-28T15:02:05.097+02:00", 
-            "principalName": "Administrator", 
+            },
+            "id": 10271,
+            "logDate": "2015-09-28T15:02:05.097+02:00",
+            "principalName": "Administrator",
             "repositoryId": "default"
-        }, 
-        "_type": "entry", 
-        "_version": 1, 
+        },
+        "_type": "entry",
+        "_version": 1,
         "sort": [
             1443445324830
         ]
@@ -369,47 +370,47 @@ Then the user completes the task associated to the `wf.travelExpenses.create` no
 
     ```js
      {
-        "_id": "10275", 
-        "_index": "audit", 
-        "_score": null, 
+        "_id": "10275",
+        "_index": "audit",
+        "_score": null,
         "_source": {
-            "category": "Routing", 
-            "comment": null, 
-            "docLifeCycle": "opened", 
-            "docPath": "/task-root/Task12ef", 
-            "docType": "RoutingTask", 
-            "docUUID": "0a06570a-5e74-45a4-8a06-66989b543555", 
-            "entity-type": "logEntry", 
-            "eventDate": "2015-09-28T15:02:04.906+02:00", 
-            "eventId": "afterWorkflowTaskCreated", 
+            "category": "Routing",
+            "comment": null,
+            "docLifeCycle": "opened",
+            "docPath": "/task-root/Task12ef",
+            "docType": "RoutingTask",
+            "docUUID": "0a06570a-5e74-45a4-8a06-66989b543555",
+            "entity-type": "logEntry",
+            "eventDate": "2015-09-28T15:02:04.906+02:00",
+            "eventId": "afterWorkflowTaskCreated",
             "extended": {
                 "actors": [
                     "group:managers"
-                ], 
-                "modelId": "5e7980bc-12f1-4b5f-a7df-149af96bc899", 
-                "modelName": "TravelExpenseValidation", 
-                "nodeVariables": {}, 
-                "taskName": "Accept/ Reject", 
-                "timeSinceWfStarted": 43120, 
-                "workflowInitiator": "jdoe", 
+                ],
+                "modelId": "5e7980bc-12f1-4b5f-a7df-149af96bc899",
+                "modelName": "TravelExpenseValidation",
+                "nodeVariables": {},
+                "taskName": "Accept/ Reject",
+                "timeSinceWfStarted": 43120,
+                "workflowInitiator": "jdoe",
                 "workflowVariables": {
-                    "amount": 12, 
-                    "department": "marketing", 
-                    "description": "Morning breakfast", 
-                    "destination": null, 
-                    "expensenature": "lunch", 
-                    "file": null, 
-                    "label": "Breakfast", 
+                    "amount": 12,
+                    "department": "marketing",
+                    "description": "Morning breakfast",
+                    "destination": null,
+                    "expensenature": "lunch",
+                    "file": null,
+                    "label": "Breakfast",
                     "user": null
                 }
-            }, 
-            "id": 10275, 
-            "logDate": "2015-09-28T15:02:05.160+02:00", 
-            "principalName": "Administrator", 
+            },
+            "id": 10275,
+            "logDate": "2015-09-28T15:02:05.160+02:00",
+            "principalName": "Administrator",
             "repositoryId": "default"
-        }, 
-        "_type": "entry", 
-        "_version": 1, 
+        },
+        "_type": "entry",
+        "_version": 1,
         "sort": [
             1443445324906
         ]
@@ -422,42 +423,42 @@ Eventually a manager will validate the request (associated audit entries will be
 
     ```js
     {
-        "_id": "10289", 
-        "_index": "audit", 
-        "_score": null, 
+        "_id": "10289",
+        "_index": "audit",
+        "_score": null,
         "_source": {
-            "category": "Routing", 
-            "comment": null, 
-            "docLifeCycle": "done", 
-            "docPath": "/document-route-instances-root/2015/09/28/TravelExpenseValidation", 
-            "docType": "DocumentRoute", 
-            "docUUID": "e2777d7e-5fac-4264-94be-818a13ea13dd", 
-            "entity-type": "logEntry", 
-            "eventDate": "2015-09-28T15:02:14.958+02:00", 
-            "eventId": "afterWorkflowFinish", 
+            "category": "Routing",
+            "comment": null,
+            "docLifeCycle": "done",
+            "docPath": "/document-route-instances-root/2015/09/28/TravelExpenseValidation",
+            "docType": "DocumentRoute",
+            "docUUID": "e2777d7e-5fac-4264-94be-818a13ea13dd",
+            "entity-type": "logEntry",
+            "eventDate": "2015-09-28T15:02:14.958+02:00",
+            "eventId": "afterWorkflowFinish",
             "extended": {
-                "modelId": "5e7980bc-12f1-4b5f-a7df-149af96bc899", 
-                "modelName": "TravelExpenseValidation", 
-                "timeSinceWfStarted": 53171, 
-                "workflowInitiator": "jdoe", 
+                "modelId": "5e7980bc-12f1-4b5f-a7df-149af96bc899",
+                "modelName": "TravelExpenseValidation",
+                "timeSinceWfStarted": 53171,
+                "workflowInitiator": "jdoe",
                 "workflowVariables": {
-                    "amount": 12, 
-                    "department": "marketing", 
-                    "description": "Morning breakfast", 
-                    "destination": null, 
-                    "expensenature": "lunch", 
-                    "file": null, 
-                    "label": "Breakfast", 
+                    "amount": 12,
+                    "department": "marketing",
+                    "description": "Morning breakfast",
+                    "destination": null,
+                    "expensenature": "lunch",
+                    "file": null,
+                    "label": "Breakfast",
                     "user": null
                 }
-            }, 
-            "id": 10289, 
-            "logDate": "2015-09-28T15:02:15.089+02:00", 
-            "principalName": "jdoe", 
+            },
+            "id": 10289,
+            "logDate": "2015-09-28T15:02:15.089+02:00",
+            "principalName": "jdoe",
             "repositoryId": "default"
-        }, 
-        "_type": "entry", 
-        "_version": 1, 
+        },
+        "_type": "entry",
+        "_version": 1,
         "sort": [
             1443445334958
         ]

@@ -28,200 +28,201 @@ confluence:
     shortlink: qQQz
     shortlink_source: 'https://doc.nuxeo.com/x/qQQz'
     source_link: /display/NXDOC/Using+CMISQL+from+Java
+tree_item_index: 1400 
 history:
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-09 14:29'
         message: etail
         version: '39'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-10-13 14:42'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:07'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 14:31'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 14:31'
         message: ''
         version: '35'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-09-11 19:41'
         message: ''
         version: '34'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-09-03 15:17'
         message: ''
         version: '33'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-09-03 15:12'
         message: ''
         version: '32'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-09-03 15:10'
         message: ''
         version: '31'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-09-03 15:02'
         message: ''
         version: '30'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-09-03 15:00'
         message: ''
         version: '29'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-09-03 14:59'
         message: ''
         version: '28'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-09-03 14:36'
         message: ''
         version: '27'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-09-03 14:28'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-22 11:26'
         message: Removed 5.4 reference
         version: '25'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-06-15 17:15'
         message: ''
         version: '24'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-06-15 17:15'
         message: Added CallContext stuff
         version: '23'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-06-15 16:54'
         message: ''
         version: '22'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-06-15 16:46'
         message: Updated to OpenCMIS APIs.
         version: '21'
-    - 
+    -
         author: Olivier Grisel
         date: '2011-04-27 16:38'
         message: fixed broken link
         version: '20'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-03-31 11:24'
         message: >-
             adding link to CMIS specifications for having more information on
             CMISQL
         version: '19'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 16:50'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 14:43'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:27'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:24'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:14'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:14'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:09'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:54'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:51'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:05'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:21'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:01'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:23'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:11'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:00'
         message: ''

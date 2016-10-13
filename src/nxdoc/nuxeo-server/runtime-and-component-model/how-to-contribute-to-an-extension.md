@@ -31,6 +31,7 @@ confluence:
     shortlink: iw7F
     shortlink_source: 'https://doc.nuxeo.com/x/iw7F'
     source_link: /display/NXDOC/How+to+Contribute+to+an+Extension
+tree_item_index: 200
 history:
     -
         author: Manon Lumeau

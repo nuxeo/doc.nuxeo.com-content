@@ -32,270 +32,271 @@ confluence:
     shortlink: 9QUuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/9QUuAQ'
     source_link: /display/NXDOC/Use+Nuxeo+API+Playground+to+Discover+the+API
+tree_item_index: 1600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-16 10:50'
         message: ''
         version: '53'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-16 10:10'
         message: ''
         version: '52'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:32'
         message: ''
         version: '51'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:29'
         message: ''
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:27'
         message: Resize screenshot
         version: '49'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:18'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:17'
         message: ''
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:17'
         message: ''
         version: '46'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:16'
         message: ''
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:16'
         message: ''
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:16'
         message: ''
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:16'
         message: ''
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:15'
         message: ''
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:15'
         message: ''
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:14'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:14'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:13'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:13'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:12'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:12'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 17:11'
         message: >-
             Move allowClientGeneratedBatchId setup to configuration section,
             review command endpoint and batch upload sections
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-15 14:30'
         message: ''
         version: '32'
-    - 
+    -
         author: Nelson Silva
         date: '2015-12-07 17:45'
         message: Add link to marketplace package
         version: '31'
-    - 
+    -
         author: Nelson Silva
         date: '2015-12-07 17:07'
         message: ''
         version: '30'
-    - 
+    -
         author: Nelson Silva
         date: '2015-12-07 16:46'
         message: ''
         version: '29'
-    - 
+    -
         author: Nelson Silva
         date: '2015-12-07 16:43'
         message: Added Batch Upload documentation
         version: '28'
-    - 
+    -
         author: Nelson Silva
         date: '2015-12-07 16:13'
         message: Update according to repository browser changes
         version: '27'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2015-10-23 21:15'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-08 18:35'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 16:09'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 16:09'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 15:48'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 15:48'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 15:47'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 15:47'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 15:45'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 15:44'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 15:44'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 15:43'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 15:42'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 15:41'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 15:36'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 12:08'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 12:06'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 02:35'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 02:33'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 02:33'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 02:27'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 02:23'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 02:22'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 02:12'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 01:57'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 01:53'
         message: ''

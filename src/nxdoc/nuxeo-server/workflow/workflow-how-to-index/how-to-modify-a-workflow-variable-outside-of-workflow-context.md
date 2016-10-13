@@ -30,88 +30,89 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/PQzF'
     source_link: >-
         /display/NXDOC/How+to+Modify+a+Workflow+Variable+outside+of+Workflow+Context
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 16:37'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 16:13'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 15:37'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-18 14:56'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-16 15:06'
         message: ''
         version: '13'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:58'
         message: ''
         version: '12'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:58'
         message: ''
         version: '11'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:55'
         message: ''
         version: '10'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:48'
         message: ''
         version: '9'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:45'
         message: ''
         version: '8'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:42'
         message: ''
         version: '6'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:42'
         message: ''
         version: '5'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:38'
         message: ''
         version: '4'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:36'
         message: ''
         version: '3'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:34'
         message: ''
         version: '2'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:30'
         message: ''
@@ -151,12 +152,12 @@ Here is some sample data fetched with my debugger on a break point on `TaskEvent
 ```java
 event: workflowTaskCompleted
 eventProperties:
-{category=eventDocumentCategory, sessionId=default-6778825317969559609, recipients=[Administrator, Administrator, test], 
+{category=eventDocumentCategory, sessionId=default-6778825317969559609, recipients=[Administrator, Administrator, test],
 comment=szss, repositoryName=default, taskInstance=org.nuxeo.ecm.platform.task.TaskImpl@65fff289, documentLifeCycle=project}
 
 ((org.nuxeo.ecm.platform.task.TaskImpl)eventProperties.get("taskInstance")).getVariables()
-taskVariables: {createdFromTaskService=true, taskNotificationTemplate=myTemplate, document.routing.step=0be590a5-8d03-48ef-9649-a82f06d8001a, 
-nodeId=Taska2e, documentRepositoryName=default, routeInstanceDocId=d05b14e4-8d60-41be-bea2-0d4063196c0b, directive=Aknowledgement, validated=false, 
+taskVariables: {createdFromTaskService=true, taskNotificationTemplate=myTemplate, document.routing.step=0be590a5-8d03-48ef-9649-a82f06d8001a,
+nodeId=Taska2e, documentRepositoryName=default, routeInstanceDocId=d05b14e4-8d60-41be-bea2-0d4063196c0b, directive=Aknowledgement, validated=false,
 documentId=5b09103d-2fe1-40de-8737-a64b49425a6e}
 ```
 

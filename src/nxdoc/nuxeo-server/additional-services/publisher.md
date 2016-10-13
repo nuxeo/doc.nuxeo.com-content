@@ -24,68 +24,69 @@ confluence:
     shortlink: mYGE
     shortlink_source: 'https://doc.nuxeo.com/x/mYGE'
     source_link: /display/NXDOC/Publisher
+tree_item_index: 800
 history:
-    - 
+    -
         author: Thomas Roger
         date: '2015-11-17 13:36'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-27 13:51'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 18:19'
         message: Fix links to point to latest version
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-02 16:03'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 14:07'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-18 18:30'
         message: Added how to enable duplication of relations on published doc
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 17:44'
         message: Formatting
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 17:44'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-21 14:36'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-21 14:36'
         message: Updated link to 5.5
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-15 17:38'
         message: Fixed typos and formatting
         version: '3'
-    - 
+    -
         author: Thomas Roger
         date: '2011-09-15 16:00'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-15 14:56'
         message: ''

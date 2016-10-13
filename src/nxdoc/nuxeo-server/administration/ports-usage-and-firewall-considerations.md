@@ -23,58 +23,63 @@ confluence:
     shortlink: jgfF
     shortlink_source: 'https://doc.nuxeo.com/x/jgfF'
     source_link: /display/NXDOC/Ports+Usage+and+Firewall+Considerations
+tree_item_index: 1700
+version_override:
+    'LTS 2015': 710/admindoc/firewall-consideration
+    '6.0': 60/admindoc/firewall-consideration
+    '5.8': 58/admindoc/firewall-consideration
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-25 08:27'
         message: dd TOC and link to nuxeo.conf do
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-07-22 13:45'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-29 09:57'
         message: Fix links
         version: '9'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2015-12-08 11:54'
         message: ''
         version: '8'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2015-12-08 11:53'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 13:53'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:14'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-21 17:10'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-21 17:07'
         message: ''
         version: '3'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-12-21 14:05'
         message: ''
         version: '2'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-12-21 12:58'
         message: ''

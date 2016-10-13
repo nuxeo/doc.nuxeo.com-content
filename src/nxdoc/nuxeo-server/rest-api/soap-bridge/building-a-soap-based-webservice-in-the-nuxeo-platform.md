@@ -20,103 +20,104 @@ confluence:
     shortlink: BYGN
     shortlink_source: 'https://doc.nuxeo.com/x/BYGN'
     source_link: /display/NXDOC/Building+a+SOAP-Based+WebService+in+the+Nuxeo+Platform
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 09:54'
         message: 'XDOC-658: Marketplace packages are now called Nuxeo Package'
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 13:56'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-30 11:24'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-27 11:29'
         message: ''
         version: '17'
-    - 
+    -
         author: Arnaud Kervern
         date: '2014-06-27 11:20'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-27 11:07'
         message: ''
         version: '15'
-    - 
+    -
         author: Arnaud Kervern
         date: '2014-01-27 10:42'
         message: ''
         version: '14'
-    - 
+    -
         author: Antoine Taillefer
         date: '2012-06-25 14:11'
         message: Migrated to Confluence 4.0
         version: '13'
-    - 
+    -
         author: Antoine Taillefer
         date: '2012-06-25 14:11'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-16 17:05'
         message: ''
         version: '11'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-17 15:49'
         message: ''
         version: '10'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-16 12:26'
         message: ''
         version: '9'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-16 12:24'
         message: ''
         version: '8'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-15 16:12'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-15 15:54'
         message: Fixed typos and formatting
         version: '6'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-15 14:27'
         message: ''
         version: '5'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-15 09:42'
         message: ''
         version: '4'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-14 17:40'
         message: ''
         version: '3'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-14 16:11'
         message: ''
         version: '2'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-14 15:02'
         message: ''

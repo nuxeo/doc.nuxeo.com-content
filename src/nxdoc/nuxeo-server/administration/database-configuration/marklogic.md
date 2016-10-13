@@ -18,48 +18,49 @@ confluence:
     shortlink: 4YTjAQ
     shortlink_source: 'https://doc.nuxeo.com/x/4YTjAQ'
     source_link: /display/NXDOC/MarkLogic
+tree_item_index: 600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-15 08:06'
         message: ''
         version: '9'
-    - 
+    -
         author: Kevin Leturc
         date: '2016-09-14 08:33'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-05 09:24'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-05 09:10'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-05 09:03'
         message: ''
         version: '5'
-    - 
+    -
         author: Kevin Leturc
         date: '2016-08-04 12:08'
         message: ''
         version: '4'
-    - 
+    -
         author: Kevin Leturc
         date: '2016-08-04 10:09'
         message: ''
         version: '3'
-    - 
+    -
         author: Kevin Leturc
         date: '2016-08-04 08:54'
         message: ''
         version: '2'
-    - 
+    -
         author: Kevin Leturc
         date: '2016-08-04 08:45'
         message: ''

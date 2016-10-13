@@ -22,125 +22,126 @@ confluence:
     shortlink: 7hQ5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/7hQ5AQ'
     source_link: /display/NXDOC/Page+Provider+Aggregates
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 13:23'
         message: ''
         version: '24'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-08-22 14:19'
         message: >-
             remove notion of  month and quarter because they are not real
             interval
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-04 11:03'
         message: Add note about terms aggregate size property
         version: '22'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-12-08 13:26'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 09:29'
         message: Add exclude and include properties on terms aggregate definition
         version: '20'
-    - 
+    -
         author: Joshua Fletcher
         date: '2015-05-04 23:31'
         message: ''
         version: '19'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-17 14:17'
         message: format samples
         version: '18'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-02 09:19'
         message: add page-provider label to related content
         version: '17'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 11:51'
         message: ''
         version: '16'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-14 17:41'
         message: ''
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-10 00:14'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-07 15:44'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-07 15:30'
         message: ''
         version: '12'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-06 17:58'
         message: ''
         version: '11'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-06 17:57'
         message: ''
         version: '10'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-06 17:03'
         message: ''
         version: '9'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-06 15:56'
         message: ''
         version: '8'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-06 15:54'
         message: ''
         version: '7'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-06 15:51'
         message: ''
         version: '6'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-06 15:50'
         message: ''
         version: '5'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-06 15:50'
         message: ''
         version: '4'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-06 15:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-06 13:03'
         message: ''
         version: '2'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-06 11:35'
         message: ''
@@ -316,7 +317,7 @@ The use of `extendedBoundsMin` and `extendedBoundsMax` is strongly recommended. 
 
 {{/callout}}
 
-## 
+##
 {{> anchor 'datehistogramagg'}}Date Histogram Aggregate
 
 Here is an example of Date Range aggregate on the `dc:created` document property.

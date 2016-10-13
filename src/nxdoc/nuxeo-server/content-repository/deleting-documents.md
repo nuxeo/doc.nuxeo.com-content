@@ -22,65 +22,66 @@ confluence:
     shortlink: r4AlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/r4AlAQ'
     source_link: /display/NXDOC/Deleting+Documents
+tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 14:24'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-16 15:13'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-16 15:12'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-23 13:59'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-23 13:59'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-23 13:58'
         message: >-
             Update related pages, move Garbage-Collecting Orphaned Binaries in
             ADMINDOC, formatting
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2015-01-22 09:42'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 16:15'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-04-25 12:30'
         message: soft-delete details
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-11 10:55'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-04-10 15:14'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-04-10 15:00'
         message: ''

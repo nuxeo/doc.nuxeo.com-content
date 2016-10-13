@@ -34,143 +34,144 @@ confluence:
     shortlink: IIEV
     shortlink_source: 'https://doc.nuxeo.com/x/IIEV'
     source_link: /display/NXDOC/How+to+Inherit+a+Metadata+from+a+Parent+Document
+tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-16 14:15'
         message: ''
         version: '28'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-16 14:10'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:59'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-16 13:31'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-16 10:54'
         message: Add related links
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-15 17:57'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-15 17:56'
         message: ''
         version: '22'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 15:28'
         message: ''
         version: '21'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 15:06'
         message: ''
         version: '20'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 15:06'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-20 14:13'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-20 14:13'
         message: typo
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-19 08:53'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-18 19:03'
         message: Added link and reorganized instructions
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 20:27'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 17:41'
         message: ''
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 17:40'
         message: ''
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 17:25'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 17:23'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 17:18'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 17:17'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 17:16'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 17:15'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 17:01'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 16:33'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 16:33'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 16:32'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-23 16:32'
         message: ''

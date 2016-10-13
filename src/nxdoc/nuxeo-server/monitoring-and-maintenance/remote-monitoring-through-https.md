@@ -19,68 +19,71 @@ confluence:
     shortlink: 5ZORAQ
     shortlink_source: 'https://doc.nuxeo.com/x/5ZORAQ'
     source_link: /pages/viewpage.action?pageId=26317797
+tree_item_index: 500
+version_override:
+    'LTS 2015': 710/admindoc/remote-monitoring-through-https  
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-02 16:29'
         message: emove <span>
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-19 09:37'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-16 09:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-16 09:55'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-14 08:37'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-13 16:26'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 16:19'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 16:18'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 16:17'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 16:16'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 16:15'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 14:44'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 13:59'
         message: ''

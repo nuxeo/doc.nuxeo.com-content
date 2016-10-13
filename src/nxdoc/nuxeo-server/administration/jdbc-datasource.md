@@ -18,158 +18,163 @@ confluence:
     shortlink: NYAO
     shortlink_source: 'https://doc.nuxeo.com/x/NYAO'
     source_link: /display/NXDOC/JDBC+Datasource
+tree_item_index: 1900
+version_override:
+    'LTS 2015': 710/admindoc/jdbc-datasource-configuration
+    '6.0': 60/admindoc/jdbc-datasource-configuration
+    '5.8': 58/admindoc/jdbc-datasource-configuration
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-19 15:30'
         message: ix titl
         version: '31'
-    - 
+    -
         author: Florent Guillaume
         date: '2016-08-16 15:00'
         message: various cleanups
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-02 16:23'
         message: ''
         version: '29'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-07-22 13:37'
         message: ''
         version: '28'
-    - 
+    -
         author: Florent Guillaume
         date: '2016-05-18 12:18'
         message: ''
         version: '27'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2016-05-18 09:04'
         message: ''
         version: '26'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2016-05-17 14:35'
         message: ''
         version: '25'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2016-05-17 13:36'
         message: ''
         version: '24'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2016-05-17 13:22'
         message: ''
         version: '23'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2016-05-17 13:20'
         message: ''
         version: '22'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2016-05-17 12:52'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-06 09:14'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-06 09:05'
         message: typos
         version: '19'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 13:30'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 13:28'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 13:25'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 13:24'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 13:23'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 13:23'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 13:21'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 13:20'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 13:20'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 12:59'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 14:18'
         message: formatting
         version: '8'
-    - 
+    -
         author: Thierry Martins
         date: '2014-04-30 15:46'
         message: example on single datasource exclusion
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 13:38'
         message: Added TOC
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-10-10 16:21'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-10-10 16:20'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-06-17 17:05'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-06-17 17:05'
         message: ''
         version: '2'
-    - 
+    -
         author: Admin name placeholder
         date: '2010-03-01 00:57'
         message: ''
@@ -201,7 +206,7 @@ So, by default they are actually linked to the common datasource `${nuxeo.db.com
   url="${nuxeo.db.jdbc.url}"
   username="${nuxeo.db.user}"
   password="${nuxeo.db.password}"
-  maxPoolSize="${nuxeo.db["max-pool-size"]}" 
+  maxPoolSize="${nuxeo.db["max-pool-size"]}"
   minPoolSize="${nuxeo.db["min-pool-size"]}"
   blockingTimeoutMillis="${nuxeo.db["blocking-timeout-millis"]}"
   idleTimeoutMinutes="${nuxeo.db["idle-timeout-minutes"]}"
@@ -223,7 +228,7 @@ When you're deploying Nuxeo as a static WAR, you may want to share the database 
 ```xml
 <datasource name="${nuxeo.db.commonds}"
   datasource="jdbc/your-global-datasource"
-  maxPoolSize="${nuxeo.db["max-pool-size"]}" 
+  maxPoolSize="${nuxeo.db["max-pool-size"]}"
   minPoolSize="${nuxeo.db["min-pool-size"]}"
   blockingTimeoutMillis="${nuxeo.db["blocking-timeout-millis"]}"
   idleTimeoutMinutes="${nuxeo.db["idle-timeout-minutes"]}"

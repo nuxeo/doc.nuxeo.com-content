@@ -24,73 +24,78 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/HYQZAQ'
     source_link: >-
         https://doc.nuxeo.com/display/NXDOC/Setting+up+a+HA+Configuration+Using+the+Nuxeo+Platform+and+PostgreSQL
+tree_item_index: 1600
+version_override:
+    'LTS 2015': 710/admindoc/setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql
+    '6.0': 60/admindoc/setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql
+    '5.8': 58/admindoc/setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 09:58'
         message: ''
         version: '14'
-    - 
+    -
         author: Thierry Martins
         date: '2016-05-04 09:39'
         message: Remove the reference to the validationQuery attribute
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-29 09:52'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 15:24'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-22 12:00'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-22 11:58'
         message: ''
         version: '9'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-21 19:06'
         message: ''
         version: '8'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-21 19:06'
         message: ''
         version: '7'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-21 18:16'
         message: ''
         version: '6'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-01-21 17:53'
         message: ''
         version: '5'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-01-21 16:00'
         message: ''
         version: '4'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-01-21 15:59'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-20 19:14'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-20 19:04'
         message: ''

@@ -24,8 +24,12 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/mQJvAQ'
     source_link: >-
         /display/NXDOC/Query+Models+and+Result+Providers+Migration+to+Content+Views+and+Page+Providers
+version_override:
+    'LTS 2015': 710/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
+    '6.0': 60/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
+    '5.8': 58/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-14 14:46'
         message: ''

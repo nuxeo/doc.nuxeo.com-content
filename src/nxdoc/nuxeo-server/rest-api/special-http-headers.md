@@ -21,80 +21,81 @@ confluence:
     shortlink: mwM5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/mwM5AQ'
     source_link: /display/NXDOC/Special+HTTP+Headers
+tree_item_index: 200
 history:
-    - 
+    -
         author: Thierry Martins
         date: '2015-11-20 13:46'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-15 09:32'
         message: Improve anchor links
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-15 09:27'
         message: Remove deprecated headers
         version: '13'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-10-14 15:24'
         message: ''
         version: '12'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-10-14 15:23'
         message: ''
         version: '11'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-10-14 15:22'
         message: ''
         version: '10'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-10-13 15:47'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-20 11:58'
         message: Add details on depth and  X-NXfetch.document
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-20 10:11'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-20 10:09'
         message: Add  X-NXfetch.document and depth
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-20 09:53'
         message: >-
             Add X-NXproperties and X-NXenrichers.document, replacing deprecated
             X-NXDocumentProperties and X-NXContext-Category
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-10-13 10:01'
         message: ''
         version: '4'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-10-10 11:37'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-01 10:12'
         message: ''
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-28 14:28'
         message: ''

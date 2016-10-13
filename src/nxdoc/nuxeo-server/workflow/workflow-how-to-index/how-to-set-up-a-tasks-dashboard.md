@@ -28,78 +28,79 @@ confluence:
     shortlink: OhDF
     shortlink_source: 'https://doc.nuxeo.com/x/OhDF'
     source_link: /display/NXDOC/How+to+Set+Up+a+Tasks+Dashboard
+tree_item_index: 400
 history:
-    - 
+    -
         author: Guillaume Renard
         date: '2015-12-08 14:35'
         message: orma
         version: '15'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-12-08 14:34'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 17:55'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 17:37'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-11 15:19'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-23 10:05'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-04-22 11:43'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-04-22 11:43'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-03-27 07:01'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-03-27 07:00'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-03-27 06:50'
         message: ''
         version: '5'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-03-16 05:06'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-03-15 17:34'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-03-15 17:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-03-15 16:51'
         message: ''
@@ -178,7 +179,7 @@ We provide some quick steps to follow using [Extension points]({{page page='how-
     ```xml
     <extension target="org.nuxeo.ecm.platform.actions.ActionService"
       point="actions">
-      <!-- The action below is adding the "Time off workflow" sub tab of the Main "Workflow 
+      <!-- The action below is adding the "Time off workflow" sub tab of the Main "Workflow
         tab". -->
       <action id="timeOff_request" link="/incl/tabs/workflow_dashboard_tab.xhtml"
         label="tor.timeoffrequest" order="20">
@@ -195,7 +196,7 @@ We provide some quick steps to follow using [Extension points]({{page page='how-
           </rule>
         </filter>
       </action>
-      <!-- The action below is adding a tab that do contain a content view of tasks. 
+      <!-- The action below is adding a tab that do contain a content view of tasks.
         The convention is : "id of action = id of content view" and category is: parent_tab_id_sub_tab" -->
       <action id="tor_manager_approval" link="/incl/tabs/workflow_dashboard_sub_tab.xhtml"
         label="tor.managerapproval.label" order="50">

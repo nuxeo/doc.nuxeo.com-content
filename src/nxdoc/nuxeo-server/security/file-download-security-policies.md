@@ -21,78 +21,79 @@ confluence:
     shortlink: BI_RAQ
     shortlink_source: 'https://doc.nuxeo.com/x/BI_RAQ'
     source_link: /display/NXDOC/File+Download+Security+Policies
+tree_item_index: 500
 history:
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-12-03 15:38'
         message: dded vide
         version: '15'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-23 13:52'
         message: 'Link to REST API doc, add mention about document security policies'
         version: '14'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-23 13:43'
         message: Improve webengine reason description
         version: '13'
-    - 
+    -
         author: Thomas Roger
         date: '2015-11-04 13:34'
         message: ''
         version: '12'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-10-23 14:45'
         message: ''
         version: '11'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-10-23 14:44'
         message: bold names
         version: '10'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-23 12:56'
         message: Possible side effects
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-23 12:53'
         message: Added warning
         version: '8'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-10-22 22:14'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-22 08:14'
         message: formatting
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-21 16:26'
         message: formatting
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-21 16:24'
         message: Added debugging section
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-10-13 13:50'
         message: consistent download reasons
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-09-25 12:26'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-09-22 12:59'
         message: ''

@@ -22,93 +22,94 @@ confluence:
     shortlink: EQGw
     shortlink_source: 'https://doc.nuxeo.com/x/EQGw'
     source_link: /display/NXDOC/Variables+Available+in+the+Automation+Context
+tree_item_index: 900
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-11-27 16:55'
         message: orma
         version: '18'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-27 16:52'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-14 11:37'
         message: ''
         version: '16'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-31 15:11'
         message: ''
         version: '15'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-31 15:08'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 13:42'
         message: ''
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-09 17:18'
         message: ''
         version: '12'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-16 16:38'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-11 01:34'
         message: ''
         version: '10'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-08 16:51'
         message: ''
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-08 14:20'
         message: Added originating user
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 17:45'
         message: ''
         version: '7'
-    - 
+    -
         author: stan
         date: '2012-12-13 11:21'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-10-03 11:05'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-10-03 11:05'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-16 11:36'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-16 11:36'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-16 11:36'
         message: ''

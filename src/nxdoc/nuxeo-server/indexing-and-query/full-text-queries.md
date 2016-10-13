@@ -21,88 +21,89 @@ confluence:
     shortlink: ggU7
     shortlink_source: 'https://doc.nuxeo.com/x/ggU7'
     source_link: /display/NXDOC/Full-Text+Queries
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 09:39'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 13:39'
         message: ''
         version: '16'
-    - 
+    -
         author: Florent Guillaume
         date: '2016-04-05 13:17'
         message: No fulltext prefix matching on MongoDB
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 09:11'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 18:59'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-24 16:45'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 17:52'
         message: ''
         version: '11'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-12-13 18:47'
         message: Migrated to Confluence 4.0
         version: '10'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-12-13 18:47'
         message: typos
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-12-13 18:46'
         message: ''
         version: '8'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-12-13 16:14'
         message: ''
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-12-13 16:08'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-12-13 16:05'
         message: Added prefix search and details on PostgreSQL phrase search.
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-28 14:38'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-10-24 23:02'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-10-15 15:57'
         message: Adding doc on OR
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-09-28 11:30'
         message: ''

@@ -20,93 +20,94 @@ confluence:
     shortlink: IoGN
     shortlink_source: 'https://doc.nuxeo.com/x/IoGN'
     source_link: /display/NXDOC/Building+a+SOAP-Based+WebService+Client+in+Nuxeo
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 13:55'
         message: pdate table of contents loo
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-30 11:24'
         message: ''
         version: '17'
-    - 
+    -
         author: Arnaud Kervern
         date: '2014-06-30 11:16'
         message: ''
         version: '16'
-    - 
+    -
         author: Antoine Taillefer
         date: '2012-06-25 14:12'
         message: ''
         version: '15'
-    - 
+    -
         author: Antoine Taillefer
         date: '2012-06-25 14:12'
         message: ''
         version: '14'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-17 15:48'
         message: ''
         version: '13'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-16 12:30'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-15 15:34'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-15 15:31'
         message: Added toc and reordered some steps
         version: '10'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-15 14:28'
         message: ''
         version: '9'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-15 09:41'
         message: ''
         version: '8'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-15 09:39'
         message: ''
         version: '7'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-14 20:10'
         message: ''
         version: '6'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-14 19:52'
         message: ''
         version: '5'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-14 18:51'
         message: ''
         version: '4'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-14 17:51'
         message: ''
         version: '3'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-14 17:46'
         message: ''
         version: '2'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-11-14 17:43'
         message: ''
