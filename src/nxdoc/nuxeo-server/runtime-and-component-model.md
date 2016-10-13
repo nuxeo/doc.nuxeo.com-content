@@ -504,32 +504,30 @@ Extension points are declared via the XML component that declares the Java compo
 
 Here is a simple example:
 
-{{#> panel }}
-
+```
 <?xml version="1.0"?>
-<component **name="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"**>
-&nbsp;&nbsp;<documentation>
-&nbsp;&nbsp;&nbsp;Service to handle conversions
-&nbsp;&nbsp;</documentation>
-&nbsp;&nbsp;<**implementation**&nbsp;class="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"/>*
-&nbsp;&nbsp;**<service>**
-&nbsp;&nbsp;&nbsp;<provide interface="org.nuxeo.ecm.core.convert.api.ConversionService"/>*
-**&nbsp;&nbsp;</service>**
-&nbsp;&nbsp;**<extension-point name="converter">**
-&nbsp;&nbsp; &nbsp;<documentation>
-&nbsp;&nbsp; &nbsp; &nbsp;This extension can be used to register new converters
-&nbsp;&nbsp; &nbsp;</documentation>
-&nbsp;&nbsp; &nbsp;<object class="org.nuxeo.ecm.core.convert.extension.ConverterDescriptor"/>
-&nbsp;&nbsp;</extension-point>
-&nbsp;&nbsp;**<extension-point name="configuration">**
-&nbsp;&nbsp; &nbsp;<documentation>
-&nbsp;&nbsp; &nbsp; &nbsp;This extension can be used to configure conversion service
-&nbsp;&nbsp; &nbsp;</documentation>
-&nbsp;&nbsp; &nbsp;<object class="org.nuxeo.ecm.core.convert.extension.GlobalConfigDescriptor"/>
-&nbsp;&nbsp;</extension-point>
+<component name="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl">
+    <documentation>
+        Service to handle conversions
+    </documentation>
+    <implementation class="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"/>*
+    <service>
+        <provide interface="org.nuxeo.ecm.core.convert.api.ConversionService"/>*
+    </service>
+    <extension-point name="converter">
+        <documentation>
+            This extension can be used to register new converters
+        </documentation>
+        <object class="org.nuxeo.ecm.core.convert.extension.ConverterDescriptor"/>
+    </extension-point>
+    <extension-point name="configuration">
+        <documentation>
+            This extension can be used to configure conversion service
+        </documentation>
+        <object class="org.nuxeo.ecm.core.convert.extension.GlobalConfigDescriptor"/>
+    </extension-point>
 </component>
-
-{{/panel}}
+```
 
 What we can read in this XML component is:
 
@@ -564,23 +562,17 @@ Expected XML syntax is defined by the XMap object referenced in the extension po
 
 Here is an example contribution to an extension point:
 
-{{#> panel }}
-
+```
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.platform.convert.plugins">
-
-&nbsp;&nbsp;<**extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"&nbsp;point="converter"**>
-
-&nbsp;&nbsp; &nbsp;**<converter name="zip2html" class="org.nuxeo.ecm.platform.convert.plugins.Zip2HtmlConverter">**
-**&nbsp;&nbsp; &nbsp; &nbsp;<destinationMimeType>text/html</destinationMimeType>**
-**&nbsp;&nbsp; &nbsp; &nbsp;<sourceMimeType>application/zip</sourceMimeType>**
-**&nbsp;&nbsp; &nbsp;</converter>**
-
-&nbsp;&nbsp; </extension>
-
+    <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"point="converter">
+        <converter name="zip2html" class="org.nuxeo.ecm.platform.convert.plugins.Zip2HtmlConverter">
+            <destinationMimeType>text/html</destinationMimeType>
+            <sourceMimeType>application/zip</sourceMimeType>
+        </converter>
+    </extension>
 </component>
-
-{{/panel}}
+```
 
 #### Extension Points Everywhere
 
