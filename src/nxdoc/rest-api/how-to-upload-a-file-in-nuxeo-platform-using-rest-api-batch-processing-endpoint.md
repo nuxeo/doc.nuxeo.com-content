@@ -38,87 +38,87 @@ confluence:
     source_link: >-
         /display/NXDOC710/How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 12:25'
         message: ''
         version: '17'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-11-03 11:25'
         message: ''
         version: '16'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-19 16:11'
         message: ''
         version: '15'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-19 16:03'
         message: ''
         version: '14'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-19 15:57'
         message: course title
         version: '13'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-19 09:16'
         message: Added video
         version: '12'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-07 09:28'
         message: ''
         version: '11'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-06 16:21'
         message: ''
         version: '10'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-06 16:02'
         message: ''
         version: '9'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-06 14:31'
         message: ''
         version: '8'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-09-14 10:20'
         message: ''
         version: '7'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-09-14 10:17'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:45'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-08 17:53'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-08 14:47'
         message: Add related how-tos
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 12:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 01:07'
         message: ''
@@ -218,7 +218,7 @@ Here is an example of a resumable upload of a file cut up into 5 chunks.
 
 ### {{> anchor 'uploadingchunkioutof5'}}Uploading Chunk i out of 5
 
-This step will be repeated 5 times, one for each chunk. Let's just start with <i> = 0.
+This step will be repeated 5 times, one for each chunk. Let's just start with &lt;i&gt; = 0.
 
 ```
 POST /api/v1/upload/<myBatchId>/0
@@ -312,10 +312,10 @@ You can create a document of type File and attach to it a file uploaded to a giv
 ```text
 POST /api/v1/path/default-domain/workspaces/myworkspace
 {  
-  "entity-type": "document", 
-  "name":"myNewDoc", 
+  "entity-type": "document",
+  "name":"myNewDoc",
   "type": "File",  
-  "properties" : { 
+  "properties" : {
     "dc:title":"My new doc",
     "file:content": {
       "upload-batch":"<myBatchId>",
