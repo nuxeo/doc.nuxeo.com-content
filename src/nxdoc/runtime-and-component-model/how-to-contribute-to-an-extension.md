@@ -36,7 +36,17 @@ tree_item_index: 200
 history:
     -
         author: Manon Lumeau
-        date: '2016-08-26 15:48'
+        date: '2016-08-25 16:26'
+        message: ''
+        version: '25'
+    -
+        author: Manon Lumeau
+        date: '2016-06-09 13:44'
+        message: ''
+        version: '24'
+    -
+        author: Manon Lumeau
+        date: '2016-03-29 12:10'
         message: ''
         version: '23'
     -
@@ -223,20 +233,17 @@ Once you have found the extension point you want to contribute to:
 
 1.  Create a file `myproject-servicewhereIcontribute-contribution.xml` into the directory `src/main/resources/OSGI-INF/` of your project.
 2.  Declare an empty component into this file, like that:
-
     ```
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
 
     </component>
     ```
-
     {{#> callout type='note' heading='Naming your component'}}
     *   In Nuxeo, we follow this naming way `org.mycompany.myproject.extension.point.where.we.contribute.contribution`.
         You can follow your way but be careful to avoid conflicts.
     *   You must give a **unique name** for your component. If the name of your package is not unique it will **not be deployed**.{{/callout}}
 3.  Add your contribution that express the configuration you want in the component XML fragment. You get something like:
-
     ```
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
@@ -247,7 +254,6 @@ Once you have found the extension point you want to contribute to:
               ...
             </extension>
     </component>
-
     ```
 
 ### Declaring Your Contribution into Your Bundle
@@ -255,7 +261,6 @@ Once you have found the extension point you want to contribute to:
 In the previous section you have created your configuration. You must now declare your component in your bundle so it's deployed in your Nuxeo server. This declaration is made through the `src/main/resources/META-INF/MANIFEST.MF` file.
 
 1.  Create a new parameter, if it does not exist.
-
     ```
     Manifest-Version: 1.0
     Bundle-Vendor: Nuxeo
@@ -271,7 +276,6 @@ In the previous section you have created your configuration. You must now declar
     Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 
     ```
-
     ```
     Manifest-Version: 1.0
     ... all the existing element already set ...
@@ -297,7 +301,6 @@ Components deployment is linear, so if you want to override an existing configur
 3.  Copy the name of the component (value after **In component**).
 4.  Paste it in your component into a `<require>` item.
     You will have something like that:
-
     ```
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
