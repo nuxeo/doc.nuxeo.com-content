@@ -754,7 +754,8 @@ The other properties are:
 Although not used in this recipe, there is one more property you should know of: "Nuxeo-Component:".
 It contains a list of files used to define various elements of your component. Its use is detailed in [Writing a Bundle Manifest]({{page page='writing-a-bundle-manifest'}}).
 
-{{! multiexcerpt name='manifest-format-warning'}} {{#> callout type='warning' heading='Formatting'}}
+{{! multiexcerpt name='manifest-format-warning'}}
+{{#> callout type='warning' heading='Formatting'}}
 
 The trickiest and most important part of a "MANIFEST.MF" file is its formatting. One mistake and the OSGi context can't be correctly started, leading to unexpected issues and an unreachable bundle. Here are the three formatting rules to respect:
 
@@ -766,7 +767,8 @@ The trickiest and most important part of a "MANIFEST.MF" file is its formatting.
     *   ends with a "end of line" with eventually a comma before it.
 3.  There MUST be an EMPTY LINE at the END OF THE FILE.
 
-{{/callout}}{{! /multiexcerpt}}
+{{/callout}}
+{{! /multiexcerpt}}
 
 &nbsp;
 
