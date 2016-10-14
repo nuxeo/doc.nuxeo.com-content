@@ -16,7 +16,7 @@ labels:
 toc: true
 confluence:
     ajs-parent-page-id: '14256538'
-    ajs-parent-page-title: Quick Start Dev Guide
+    ajs-parent-page-title: Start Customizing the Nuxeo Platform
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Getting+Started+with+Nuxeo+Studio

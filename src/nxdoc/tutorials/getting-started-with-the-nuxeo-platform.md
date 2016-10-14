@@ -5,8 +5,8 @@ review:
     date: '2015-12-01'
     status: ok
 confluence:
-    ajs-parent-page-id: '19235677'
-    ajs-parent-page-title: Quick Start Series
+    ajs-parent-page-id: '7209076'
+    ajs-parent-page-title: Tutorials
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Getting+Started+with+the+Nuxeo+Platform
@@ -16,7 +16,7 @@ confluence:
     shortlink: bYjBAQ
     shortlink_source: 'https://doc.nuxeo.com/x/bYjBAQ'
     source_link: /display/NXDOC/Getting+Started+with+the+Nuxeo+Platform
-tree_item_index: 400
+tree_item_index: 100
 history:
     -
         author: Solen Guitter
@@ -80,21 +80,21 @@ This tutorial will guide you on a tour to discover the Nuxeo Platform and its fe
 
 This tutorial is composed of the following steps:
 
-1.  [Setting up Your Nuxeo Environment]({{page page='setting-up-your-nuxeo-environment'}})
+1.[Setting up Your Nuxeo Environment]({{page page='setting-up-your-nuxeo-environment'}})
     {{{excerpt 'Setting up Your Nuxeo Environment'}}}
-2.  [Setting up Your JavaScript Environment]({{page page='setting-up-your-javascript-environment'}})
+2.[Setting up Your JavaScript Environment]({{page page='setting-up-your-javascript-environment'}})
     {{{excerpt 'Setting up Your JavaScript Environment'}}}
-3.  [Manipulating Documents]({{page page='manipulating-documents'}})
+3.[Manipulating Documents]({{page page='manipulating-documents'}})
     {{{excerpt 'Manipulating Documents'}}}
-4.  [Handling Permissions]({{page page='handling-permissions'}})
+4.[Handling Permissions]({{page page='handling-permissions'}})
     {{{excerpt 'Handling Permissions'}}}
-5.  [Managing Files]({{page page='managing-files'}})
+5.[Managing Files]({{page page='managing-files'}})
     {{{excerpt 'Managing Files'}}}
-6.  [Retrieving Audit Log]({{page page='retrieving-audit-log'}})
+6.[Retrieving Audit Log]({{page page='retrieving-audit-log'}})
     {{{excerpt 'Retrieving Audit Log'}}}
-7.  [Using Renditions]({{page page='using-renditions'}})
+7.[Using Renditions]({{page page='using-renditions'}})
     {{{excerpt 'Using Renditions'}}}
-8.  [Using Workflows]({{page page='using-workflows'}})
+8.[Using Workflows]({{page page='using-workflows'}})
     {{{excerpt 'Using Workflows'}}}
-9.  [Using Automation]({{page page='using-automation'}})
+9.[Using Automation]({{page page='using-automation'}})
     {{{excerpt 'Automation'}}}

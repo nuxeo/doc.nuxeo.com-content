@@ -18,7 +18,7 @@ confluence:
     shortlink: XYMlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/XYMlAQ'
     source_link: /display/NXDOC/Quick+Start+Series
-tree_item_index: 300
+tree_item_index: 400
 history:
     -
         author: Solen Guitter

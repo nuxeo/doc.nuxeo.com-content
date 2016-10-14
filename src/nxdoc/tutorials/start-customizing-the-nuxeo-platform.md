@@ -1,5 +1,5 @@
 ---
-title: Quick Start Dev Guide
+title: Start Customizing the Nuxeo Platform
 review:
     comment: ''
     date: '2015-12-01'
@@ -7,8 +7,8 @@ review:
 labels:
     - home
 confluence:
-    ajs-parent-page-id: '19235677'
-    ajs-parent-page-title: Quick Start Series
+    ajs-parent-page-id: '7209076'
+    ajs-parent-page-title: Tutorials
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Quick+Start+Dev+Guide
@@ -17,7 +17,7 @@ confluence:
     shortlink: monZ
     shortlink_source: 'https://doc.nuxeo.com/x/monZ'
     source_link: /display/NXDOC/Quick+Start+Dev+Guide
-tree_item_index: 500
+tree_item_index: 200
 history:
     -
         author: Manon Lumeau

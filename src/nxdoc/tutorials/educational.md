@@ -15,7 +15,7 @@ confluence:
     shortlink: X4MlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/X4MlAQ'
     source_link: /display/NXDOC/Educational
-tree_item_index: 400
+tree_item_index: 500
 history:
     -
         author: Manon Lumeau

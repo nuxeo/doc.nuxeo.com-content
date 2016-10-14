@@ -15,7 +15,7 @@ confluence:
     shortlink: YYMlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/YYMlAQ'
     source_link: /display/NXDOC/Transversal+How-Tos
-tree_item_index: 500
+tree_item_index: 600
 history:
     -
         author: Manon Lumeau
