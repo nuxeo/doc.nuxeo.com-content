@@ -15,7 +15,6 @@ confluence:
     shortlink: q4RH
     shortlink_source: 'https://doc.nuxeo.com/x/q4RH'
     source_link: /display/Studio/Nuxeo+Marketplace
-tree_item_index: 200
 history:
     -
         author: Manon Lumeau

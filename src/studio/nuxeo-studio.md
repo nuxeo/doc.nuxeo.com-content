@@ -15,7 +15,7 @@ confluence:
     shortlink: fAcuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/fAcuAQ'
     source_link: /display/Studio/Nuxeo+Studio
-tree_item_index: 400
+tree_item_index: 200
 history:
     -
         author: Manon Lumeau

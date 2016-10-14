@@ -16,7 +16,7 @@ confluence:
     shortlink: 8Yr1
     shortlink_source: 'https://doc.nuxeo.com/x/8Yr1'
     source_link: /display/Studio/Marketplace+FAQ
-tree_item_index: 200
+hidden: true
 history:
     -
         author: Solen Guitter
