@@ -20,260 +20,261 @@ confluence:
     shortlink: zQQz
     shortlink_source: 'https://doc.nuxeo.com/x/zQQz'
     source_link: /display/NXDOC/Nuxeo+Bulk+Document+Importer
+tree_item_index: 1100
 history:
-    - 
+    -
         author: Florent Guillaume
         date: '2016-08-08 12:31'
         message: lockIndexin
         version: '51'
-    - 
+    -
         author: Florent Guillaume
         date: '2016-08-08 12:27'
         message: ''
         version: '50'
-    - 
+    -
         author: Florent Guillaume
         date: '2016-08-08 12:26'
         message: bulk mode
         version: '49'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 09:08'
         message: ''
         version: '48'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 09:06'
         message: ''
         version: '47'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 09:03'
         message: ''
         version: '46'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 08:50'
         message: ''
         version: '45'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 08:49'
         message: ''
         version: '44'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-08 13:53'
         message: ''
         version: '43'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-07 09:12'
         message: ''
         version: '42'
-    - 
+    -
         author: Harlan Brown
         date: '2016-06-06 18:13'
         message: Added FileWithNonHeritedIndividalMetaDataSourceNode info
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-10 09:30'
         message: Add nonUniform parameter
         version: '40'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-22 13:30'
         message: ''
         version: '39'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-10 14:53'
         message: ''
         version: '38'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-10 14:52'
         message: ''
         version: '37'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-10 14:24'
         message: Merge ADMINDOC with NXDOC
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 15:15'
         message: ''
         version: '35'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-13 15:42'
         message: phrasing
         version: '34'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-13 15:40'
         message: 'code blocks: uses Java syntax highlighting'
         version: '33'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-13 14:41'
         message: >-
             Moved section about 'Nuxeo replication' to same page 5.8 (version of
             deprecation)
         version: '32'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-13 14:15'
         message: fixes TOC overlay
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-16 17:36'
         message: ''
         version: '30'
-    - 
+    -
         author: Stuart Miller
         date: '2014-10-24 18:42'
         message: typo
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-07 14:18'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-07 14:17'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-07 14:16'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-13 16:38'
         message: ''
         version: '25'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-25 19:32'
         message: Migrated to Confluence 4.0
         version: '24'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-25 19:32'
         message: ''
         version: '23'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-08-30 13:49'
         message: ''
         version: '22'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-06-17 17:42'
         message: ''
         version: '21'
-    - 
+    -
         author: Julien Carsique
         date: '2011-05-18 11:15'
         message: update links
         version: '20'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-21 20:02'
         message: ''
         version: '19'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 12:38'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 14:43'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:28'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:24'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:16'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:15'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:10'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:51'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:06'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:21'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:02'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:24'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:12'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:01'
         message: ''

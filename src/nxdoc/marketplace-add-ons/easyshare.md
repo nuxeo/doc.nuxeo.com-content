@@ -18,38 +18,39 @@ confluence:
     shortlink: xAIuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/xAIuAQ'
     source_link: /display/NXDOC/EasyShare
+tree_item_index: 600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 15:41'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-30 18:03'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-30 18:02'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-11 15:26'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-11 15:24'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-11 15:23'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-11 15:21'
         message: ''

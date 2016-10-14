@@ -19,63 +19,64 @@ confluence:
     shortlink: N4IPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/N4IPAQ'
     source_link: /display/NXDOC/Digital+Signature
+tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 12:25'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-27 14:06'
         message: Use generic installation excerpt and screenshots from user doc
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-22 13:11'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-19 10:42'
         message: ''
         version: '9'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-13 12:31'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-19 14:17'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-30 11:59'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-30 11:34'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-30 11:10'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-30 11:08'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-15 15:01'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-15 15:00'
         message: ''

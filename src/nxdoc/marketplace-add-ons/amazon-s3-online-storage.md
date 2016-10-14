@@ -20,98 +20,99 @@ confluence:
     shortlink: sQjF
     shortlink_source: 'https://doc.nuxeo.com/x/sQjF'
     source_link: /display/NXDOC/Amazon+S3+Online+Storage
+tree_item_index: 300
 history:
-    - 
+    -
         author: Florent Guillaume
         date: '2016-08-17 09:53'
         message: ermission clarificatio
         version: '19'
-    - 
+    -
         author: Florent Guillaume
         date: '2016-08-11 15:30'
         message: added s3 policy
         version: '18'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-08-02 12:07'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2016-06-01 14:30'
         message: 'Use generic installation excerpt '
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-04 16:55'
         message: ''
         version: '15'
-    - 
+    -
         author: Florent Guillaume
         date: '2016-01-28 15:07'
         message: add server-side encryption option
         version: '14'
-    - 
+    -
         author: Florent Guillaume
         date: '2016-01-05 15:00'
         message: cachecount+ cacheminage
         version: '13'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-16 13:19'
         message: bucket_prefix
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-27 13:55'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '11'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2015-10-07 08:57'
         message: ''
         version: '10'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-09-22 12:21'
         message: Download From S3
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-29 10:02'
         message: ''
         version: '8'
-    - 
+    -
         author: Michaël Vachette
         date: '2015-03-20 11:00'
         message: ''
         version: '7'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-05-05 18:12'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-21 17:44'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-01-20 18:20'
         message: NXP-13550 connection pool doc
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-16 17:03'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-05 16:33'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-04 10:51'
         message: ''
@@ -177,7 +178,7 @@ You can also add the following optional parameters:
 
 ```
 nuxeo.s3storage.region=us-west-1
-nuxeo.s3storage.bucket_prefix=myfolder/ 
+nuxeo.s3storage.bucket_prefix=myfolder/
 ```
 
 The region code can be:

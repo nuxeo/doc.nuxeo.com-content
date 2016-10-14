@@ -19,103 +19,104 @@ confluence:
     shortlink: QIVkAQ
     shortlink_source: 'https://doc.nuxeo.com/x/QIVkAQ'
     source_link: /display/NXDOC/SAML+2.0+Authentication
+tree_item_index: 3100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 14:40'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-25 14:26'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-04-14 13:51'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-30 14:29'
         message: Move how-to steps first
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-30 14:14'
         message: Fix steps format and typos.
         version: '16'
-    - 
+    -
         author: Frédéric Vadon
         date: '2016-03-29 16:14'
         message: Change order of bullet as the plugin has to be configured first
         version: '15'
-    - 
+    -
         author: Frédéric Vadon
         date: '2016-03-29 15:38'
         message: typo
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-29 15:01'
         message: ''
         version: '13'
-    - 
+    -
         author: Damien Metzler
         date: '2016-03-01 08:41'
         message: Fix broken links
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-15 12:54'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-15 12:47'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-15 12:43'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-15 11:59'
         message: ''
         version: '8'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-06-19 13:07'
         message: ''
         version: '7'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-06-19 10:08'
         message: ''
         version: '6'
-    - 
+    -
         author: Nelson Silva
         date: '2015-05-18 11:44'
         message: ''
         version: '5'
-    - 
+    -
         author: Nelson Silva
         date: '2015-05-18 08:33'
         message: ''
         version: '4'
-    - 
+    -
         author: Nelson Silva
         date: '2015-05-15 15:08'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-22 09:13'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-01-21 14:08'
         message: ''
@@ -133,7 +134,7 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 3.  Contribute ([in a Studio project]({{page page='how-to-contribute-to-an-extension'}}), or in the `nxserver/config` folder) a new authentication plugin that makes use of the `org.nuxeo.ecm.platform.auth.saml.SAMLAuthenticationProvider`, with a reference to the XML Metadata for specific configuration. Ex:
 
     ```xml
-    <component name="org.nuxeo.ecm.platform.login.saml.auth"> 
+    <component name="org.nuxeo.ecm.platform.login.saml.auth">
     <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
      <require>org.nuxeo.ecm.platform.ui.web.auth.defaultConfig</require>
     <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
@@ -148,7 +149,7 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
                 </parameters>
             </authenticationPlugin>
         </extension>
-    </component> 
+    </component>
     ```
 
     You can find more examples here: [https://github.com/nuxeo/nuxeo-platform-login/tree/master/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/nuxeo-platform-login-saml2/sample).

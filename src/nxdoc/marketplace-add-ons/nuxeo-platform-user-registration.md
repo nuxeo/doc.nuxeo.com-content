@@ -19,93 +19,94 @@ confluence:
     shortlink: qoYZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/qoYZAQ'
     source_link: /display/NXDOC/Nuxeo+Platform+User+Registration
+tree_item_index: 2400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 12:17'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-13 15:02'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-13 14:31'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-13 10:18'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-12 16:24'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-29 15:38'
         message: ''
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-22 00:45'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-12 15:36'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-12 10:54'
         message: formatting
         version: '10'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-12-11 21:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-12-11 21:03'
         message: ''
         version: '8'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-12-11 21:01'
         message: ''
         version: '7'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-12-11 20:57'
         message: ''
         version: '6'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-12-11 20:56'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-11 14:54'
         message: Merging all docs about Nuxeo Platform User Registration
         version: '4'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-12-10 23:40'
         message: ''
         version: '3'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-12-10 23:39'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-29 15:58'
         message: ''

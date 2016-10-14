@@ -20,38 +20,39 @@ confluence:
     shortlink: VRE5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/VRE5AQ'
     source_link: /display/NXDOC/Nuxeo+Virtual+Navigation
+tree_item_index: 2800
 history:
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-11-18 14:48'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 18:23'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 18:23'
         message: merging all docs about this add-on
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 18:12'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 16:43'
         message: Add links
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 11:41'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 11:34'
         message: ''

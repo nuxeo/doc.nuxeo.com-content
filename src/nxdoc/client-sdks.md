@@ -18,6 +18,10 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/oIf1'
     source_link: /display/NXDOC/Client+SDKs
 tree_item_index: 600
+version_override:
+    'LTS 2015': 710/admindoc/clients
+    '6.0': 60/admindoc/clients
+    '5.8': 58/admindoc/clients
 history:
     -
         author: Solen Guitter

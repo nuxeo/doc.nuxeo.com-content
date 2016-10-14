@@ -18,28 +18,29 @@ confluence:
     shortlink: WAClAQ
     shortlink_source: 'https://doc.nuxeo.com/x/WAClAQ'
     source_link: /display/NXDOC/Microsoft+Azure+Online+Storage
+tree_item_index: 800
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 13:46'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-23 11:06'
         message: Put parameters in table (like nuxeo.conf page)
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-18 09:44'
         message: ''
         version: '3'
-    - 
+    -
         author: Arnaud Kervern
         date: '2015-11-17 13:34'
         message: ''
         version: '2'
-    - 
+    -
         author: Arnaud Kervern
         date: '2015-11-17 13:33'
         message: ''

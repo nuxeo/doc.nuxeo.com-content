@@ -18,63 +18,64 @@ confluence:
     shortlink: zRU5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/zRU5AQ'
     source_link: /display/NXDOC/Kerberos+Authentication
+tree_item_index: 700
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 14:38'
         message: ''
         version: '12'
-    - 
+    -
         author: Thomas Roger
         date: '2016-03-22 10:58'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-27 15:01'
         message: ''
         version: '10'
-    - 
+    -
         author: Damien Metzler
         date: '2015-10-20 12:59'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-22 00:44'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-22 00:35'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-22 00:34'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-22 00:33'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 16:31'
         message: Add note about required configuration before installation
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-10 22:04'
         message: Add links
         version: '3'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2014-11-07 15:12'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-07 14:49'
         message: ''
@@ -208,7 +209,7 @@ To enable Kerberos, you need to use a login configuration implementation. You ha
 1.  In $`JAVA_HOME/jre/lib/security/java.security`, find the login config url (it's commented out by default):
 
     ```
-       #login.config.url.1=file:${user.home}/.java.login.config 
+       #login.config.url.1=file:${user.home}/.java.login.config
     ```
 
 2.  Set this to a regular file, e.g. `/opt/nuxeo/java.login.config.`
@@ -218,13 +219,13 @@ To enable Kerberos, you need to use a login configuration implementation. You ha
 In&nbsp;`nuxeo.conf`, add the following line:
 
 ```
-JAVA_OPTS=$JAVA_OPTS -Djava.security.auth.login.config=./java.login.config 
+JAVA_OPTS=$JAVA_OPTS -Djava.security.auth.login.config=./java.login.config
 ```
 
 Note that using one equal sign appends or overrides parts of the default `java.security` file, whereas using two equal signs completely overrides the default `java.security` file content.
 
 ```
-JAVA_OPTS=$JAVA_OPTS -Djava.security.auth.login.config==./java.login.config 
+JAVA_OPTS=$JAVA_OPTS -Djava.security.auth.login.config==./java.login.config
 ```
 
 #### Configuring JAAS
@@ -241,7 +242,7 @@ Open the `java.login.config` file you've setup and add the following configurati
   useKeyTab=true
   keyTab="/complete/path/to/keytab"
   principal="HTTP/servername@REALM";
- }; 
+ };
 
 ```
 
@@ -278,7 +279,7 @@ The login configuration MUST be called Nuxeo with an uppercase N.
         </plugins>
        </authenticationChain>
       </extension>
-      </component> 
+      </component>
     ```
 
     For now we assume all configuration - realm, kdc, server principal, etc. &minus; lives in the server's standard configuration, i.e. either `java.login.config` or `krb5.conf`. An interesting update would be to make these configurable in Nuxeo.

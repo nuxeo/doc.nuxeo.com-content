@@ -19,280 +19,281 @@ confluence:
     shortlink: EgOIAQ
     shortlink_source: 'https://doc.nuxeo.com/x/EgOIAQ'
     source_link: /display/NXDOC/Nuxeo+Live+Connect
+tree_item_index: 2100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 12:10'
         message: ''
         version: '55'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-24 13:05'
         message: ''
         version: '54'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 13:06'
         message: ''
         version: '53'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-30 15:58'
         message: Add min required version of Nuxeo Platform for OneDrive
         version: '52'
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-21 14:33'
         message: Merge notes about HTTP / HTTPS Box support
         version: '51'
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-21 13:40'
         message: Add note about Box allowing only https
         version: '50'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-14 10:19'
         message: Fix images border
         version: '49'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-14 10:12'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-04 15:01'
         message: ''
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-04 15:00'
         message: ''
         version: '46'
-    - 
+    -
         author: Kevin Leturc
         date: '2016-03-03 13:37'
         message: ''
         version: '45'
-    - 
+    -
         author: Kevin Leturc
         date: '2016-03-02 16:50'
         message: ''
         version: '44'
-    - 
+    -
         author: Kevin Leturc
         date: '2016-03-02 14:44'
         message: ''
         version: '43'
-    - 
+    -
         author: Kevin Leturc
         date: '2016-03-02 14:02'
         message: ''
         version: '42'
-    - 
+    -
         author: Kevin Leturc
         date: '2016-01-11 17:01'
         message: ''
         version: '41'
-    - 
+    -
         author: Kevin Leturc
         date: '2016-01-11 15:58'
         message: ''
         version: '40'
-    - 
+    -
         author: Kevin Leturc
         date: '2016-01-11 15:49'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-11 14:34'
         message: Fix duplicated content
         version: '38'
-    - 
+    -
         author: Michaël Vachette
         date: '2015-12-11 17:28'
         message: ''
         version: '37'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-12-03 15:51'
         message: Add link to video course
         version: '36'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-18 11:11'
         message: formatting
         version: '35'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-18 11:10'
         message: formatting
         version: '34'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-18 11:10'
         message: Added video
         version: '33'
-    - 
+    -
         author: Arnaud Kervern
         date: '2015-10-27 16:21'
         message: ''
         version: '32'
-    - 
+    -
         author: Arnaud Kervern
         date: '2015-10-27 16:20'
         message: ''
         version: '31'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-10-05 15:23'
         message: cosmit
         version: '30'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-10-05 15:22'
         message: cosmit
         version: '29'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-10-05 15:22'
         message: follow google drive ui changes
         version: '28'
-    - 
+    -
         author: Joshua Fletcher
         date: '2015-09-17 22:48'
         message: Clarify field mapping.
         version: '27'
-    - 
+    -
         author: Joshua Fletcher
         date: '2015-09-17 22:45'
         message: >-
             Add missing step for Dropbox configuration, add note about SSL
             requirement.
         version: '26'
-    - 
+    -
         author: Nelson Silva
         date: '2015-08-24 10:28'
         message: ''
         version: '25'
-    - 
+    -
         author: Nelson Silva
         date: '2015-07-08 08:26'
         message: Added synchronization scheduler configuration notes
         version: '24'
-    - 
+    -
         author: Joshua Fletcher
         date: '2015-07-01 17:28'
         message: typos
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-01 08:11'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-01 08:11'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-30 14:53'
         message: ''
         version: '20'
-    - 
+    -
         author: Joshua Fletcher
         date: '2015-06-29 20:17'
         message: typo
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-29 14:53'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-24 14:34'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-24 14:14'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-24 13:21'
         message: Update feature table
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-24 13:15'
         message: Add functional overview for Google Drive
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-24 12:17'
         message: Add Dropbox set up steps
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-23 10:02'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-22 15:51'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 17:19'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 17:17'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 17:12'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 17:11'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 17:10'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 17:02'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 16:59'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 16:54'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 16:53'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 16:40'
         message: ''

@@ -21,88 +21,89 @@ confluence:
     shortlink: mwg7
     shortlink_source: 'https://doc.nuxeo.com/x/mwg7'
     source_link: /display/NXDOC/Shibboleth+Authentication
+tree_item_index: 3300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-27 13:37'
         message: ''
         version: '17'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-15 13:01'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 16:01'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 16:01'
         message: reorganize page and add screenshot
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 14:12'
         message: formatting
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 11:27'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 16:44'
         message: ''
         version: '11'
-    - 
+    -
         author: Arnaud Kervern
         date: '2013-09-13 14:34'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-02 21:08'
         message: Updated link to version 5.6 jar
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-20 15:10'
         message: Updated links to source code and fixed formatting
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-05 23:06'
         message: Migrated to Confluence 4.0
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-05 23:06'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 15:41'
         message: ''
         version: '5'
-    - 
+    -
         author: Thomas Roger
         date: '2010-12-24 11:39'
         message: ''
         version: '4'
-    - 
+    -
         author: Quentin Lamerand
         date: '2010-10-21 19:05'
         message: ''
         version: '3'
-    - 
+    -
         author: Quentin Lamerand
         date: '2010-10-21 16:54'
         message: ''
         version: '2'
-    - 
+    -
         author: Quentin Lamerand
         date: '2010-10-19 19:28'
         message: ''

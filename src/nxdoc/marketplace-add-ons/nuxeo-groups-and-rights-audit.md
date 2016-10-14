@@ -20,28 +20,29 @@ confluence:
     shortlink: _4zZ
     shortlink_source: 'https://doc.nuxeo.com/x/_4zZ'
     source_link: /display/NXDOC/Nuxeo+Groups+and+Rights+Audit
+tree_item_index: 1900
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-26 11:14'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-26 11:14'
         message: update related pages and format
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-16 17:06'
         message: Removed related topics from TOC
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-07 11:34'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 12:39'
         message: ''
