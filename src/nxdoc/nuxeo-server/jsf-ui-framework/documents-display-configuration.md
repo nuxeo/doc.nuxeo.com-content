@@ -21,58 +21,59 @@ confluence:
     shortlink: XwFc
     shortlink_source: 'https://doc.nuxeo.com/x/XwFc'
     source_link: /display/NXDOC/Documents+Display+Configuration
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 13:40'
         message: dd page TO
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 12:12'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-17 17:08'
         message: ''
         version: '9'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-12 18:14'
         message: even better title
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-12 17:46'
         message: better title
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-05 15:41'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 16:38'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 09:47'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 09:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 09:17'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 08:56'
         message: ''

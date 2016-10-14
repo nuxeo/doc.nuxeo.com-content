@@ -16,6 +16,7 @@ confluence:
     shortlink: qgHRAQ
     shortlink_source: 'https://doc.nuxeo.com/x/qgHRAQ'
     source_link: /pages/viewpage.action?pageId=30474666
+tree_item_index: 1000
 history:
     -
         author: Manon Lumeau

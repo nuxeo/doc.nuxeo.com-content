@@ -19,28 +19,29 @@ confluence:
     shortlink: ZgMz
     shortlink_source: 'https://doc.nuxeo.com/x/ZgMz'
     source_link: /display/NXDOC/Working+with+Documents
+tree_item_index: 400
 history:
-    - 
+    -
         author: Damien Metzler
         date: '2015-10-20 14:09'
         message: ''
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:54'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:54'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:35'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:34'
         message: ''
@@ -70,15 +71,15 @@ import org.nuxeo.ecm.webengine.model.exceptions.*;
  * WebObjects that expose documents. By default all documents are exposed as DocumentObject instances (which is an WebObject).
  * If you need specific control over your document type you need then to explicitely declare a new WebObject using the same
  * type name as your document type. This way, the default binding to DocumentObject will be replaced with your own WebObject.
- * 
+ *
 <p>
  * <b>Note</b> that it is recommended to subclass the DocumentObject when redefining document WebObjects.
- * 
+ *
 <p>
  * Also, Documents as WebObjects may have a set of facets. Documents facets are transparently exposed as WebObject facets.
  * When redefining the WebObject used to expose a Document you can add new facets using @WebObject annotation
  * (these new facets that are not existing at document level but only at WebObject level).
- * 
+ *
 <p>
  * To work with documents you need first to get a view on the repository. This can be done using the following methods:
  * <br>
@@ -88,7 +89,7 @@ import org.nuxeo.ecm.webengine.model.exceptions.*;
  * the newly created document WebObject as the root of the request chain.
  * The document WebObject created using the DocumentFactory helper class will represent the root of your repository view.
  * To go deeper in the repository tree you can use the <code>newDocument</code> methods on the DocumentObject instance.
- * 
+ *
 <p>
  * <b>Remember</b> that when working with documents you may need to log in to be able to access the repository.
  * (it depends on whether or not the repository root is accessible to Anonymous user)
@@ -100,7 +101,7 @@ import org.nuxeo.ecm.webengine.model.exceptions.*;
  * To ensure exceptions are correclty redirected to your error handler you must catch all exceptions thrown in your resource methods
  * and rethrowing them as following: <code> ... } catch (Throwable t) { throw WebException.wrap(t); } </code>.
  * The exception wrapping is automatically converting exceptions to the ones defined by WebEngine model.
- * 
+ *
 <p>
  * The default exception handling defined in ModuleRoot class is simply printing the exception on the output stream.
  *

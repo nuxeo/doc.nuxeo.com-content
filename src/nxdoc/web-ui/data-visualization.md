@@ -21,108 +21,109 @@ confluence:
     shortlink: WZCRAQ
     shortlink_source: 'https://doc.nuxeo.com/x/WZCRAQ'
     source_link: /display/NXDOC/Data+Visualization
+tree_item_index: 400
 history:
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-12-03 15:48'
         message: ixed link
         version: '21'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-12-03 15:45'
         message: Add link to video course
         version: '20'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-12-03 15:42'
         message: Add link to video course
         version: '19'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-18 11:15'
         message: Added video
         version: '18'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-18 11:13'
         message: Added videos
         version: '17'
-    - 
+    -
         author: Nelson Silva
         date: '2015-10-21 14:59'
         message: Update prefix of Nuxeo Elements
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-19 08:49'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-19 08:49'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-19 08:48'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-19 08:46'
         message: 'Title capitalization, step formatting'
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-09 14:03'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-09 14:02'
         message: Formatting
         version: '10'
-    - 
+    -
         author: Nelson Silva
         date: '2015-10-06 11:46'
         message: ''
         version: '9'
-    - 
+    -
         author: Nelson Silva
         date: '2015-10-06 11:42'
         message: ''
         version: '8'
-    - 
+    -
         author: Nelson Silva
         date: '2015-10-06 11:38'
         message: ''
         version: '7'
-    - 
+    -
         author: Nelson Silva
         date: '2015-10-02 12:00'
         message: ''
         version: '6'
-    - 
+    -
         author: Nelson Silva
         date: '2015-10-01 10:37'
         message: ''
         version: '5'
-    - 
+    -
         author: Nelson Silva
         date: '2015-09-30 17:13'
         message: ''
         version: '4'
-    - 
+    -
         author: Nelson Silva
         date: '2015-09-30 17:08'
         message: ''
         version: '3'
-    - 
+    -
         author: Nelson Silva
         date: '2015-09-30 16:39'
         message: ''
         version: '2'
-    - 
+    -
         author: Nelson Silva
         date: '2015-09-30 09:27'
         message: ''

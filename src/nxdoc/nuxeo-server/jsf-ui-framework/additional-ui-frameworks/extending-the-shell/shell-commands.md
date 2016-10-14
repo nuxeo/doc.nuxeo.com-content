@@ -20,103 +20,104 @@ confluence:
     shortlink: VIdH
     shortlink_source: 'https://doc.nuxeo.com/x/VIdH'
     source_link: /display/NXDOC/Shell+Commands
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 14:39'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 14:34'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-05 16:32'
         message: ''
         version: '18'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-12-24 16:28'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 16:45'
         message: Migrated to Confluence 4.0
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 16:45'
         message: Added related pages
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 16:48'
         message: ''
         version: '14'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-25 10:28'
         message: ''
         version: '13'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-25 09:24'
         message: ''
         version: '12'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-25 00:13'
         message: ''
         version: '11'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 23:08'
         message: ''
         version: '10'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 23:05'
         message: ''
         version: '9'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 22:53'
         message: ''
         version: '8'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 22:28'
         message: ''
         version: '7'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 21:57'
         message: ''
         version: '6'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 21:56'
         message: §a
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 18:55'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 18:43'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 15:41'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 12:44'
         message: ''
@@ -272,7 +273,7 @@ Now we are ready to implement the **run** method. I will omit the fields declara
     public void run() {
         if (doc == null) {
             // get the current document if target doc was not specified.
-            doc = ctx.getDocument(); 
+            doc = ctx.getDocument();
         }  
         ShellConsole console = ctx.getShell().getConsole();
         try {
@@ -348,7 +349,7 @@ public class Lst implements Runnable {
     public void run() {
         if (doc == null) {
             // get the current document if target doc was not specified.
-            doc = ctx.getDocument(); 
+            doc = ctx.getDocument();
         }  
         ShellConsole console = ctx.getShell().getConsole();
         try {

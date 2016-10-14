@@ -32,137 +32,138 @@ confluence:
     shortlink: 2ABc
     shortlink_source: 'https://doc.nuxeo.com/x/2ABc'
     source_link: /display/NXDOC/How+to+Create+a+N-Level+Select+Widget
+tree_item_index: 400
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-05-04 12:06'
         message: ''
         version: '26'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-04-03 10:04'
         message: 'NXP-16605: templates update again (wrong version edited before...)'
         version: '25'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-04-03 09:58'
         message: >-
             NXP-16605: another template update for incmplete selection related
             bugs
         version: '24'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-04-02 17:05'
         message: fix the "onchange" event to "change" (again...)
         version: '23'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-03-25 21:37'
         message: fix the "onchange" event to "change"
         version: '22'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-03-23 17:57'
         message: fix the "onchange" event to "change"
         version: '21'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-03-06 10:26'
         message: >-
             NXP-16605: update templates to fix "Incomplete selections are not
             allowed" validation message issue
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:30'
         message: ''
         version: '19'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-11-28 17:41'
         message: ''
         version: '18'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-11-28 17:37'
         message: 'NXDOC-414: update samples for JSF2 migration'
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-12 15:39'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-11 17:59'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-25 11:39'
         message: Remove 5.4 reference
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-25 10:31'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 14:54'
         message: ''
         version: '12'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-05-11 11:24'
         message: Migrated to Confluence 4.0
         version: '11'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-05-11 11:24'
         message: fix size value on multiselect example
         version: '10'
-    - 
+    -
         author: Laurent Doguin
         date: '2012-03-02 17:32'
         message: ''
         version: '9'
-    - 
+    -
         author: Laurent Doguin
         date: '2012-03-02 17:20'
         message: add template widget configuration screenshot
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-05 18:45'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-05-25 20:11'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-03-23 11:27'
         message: ''
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-03 19:17'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-03 18:36'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-03 18:16'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-03-02 20:27'
         message: ''

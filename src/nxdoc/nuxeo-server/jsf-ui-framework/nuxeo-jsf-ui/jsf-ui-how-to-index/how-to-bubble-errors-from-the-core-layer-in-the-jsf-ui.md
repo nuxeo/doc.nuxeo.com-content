@@ -26,83 +26,87 @@ confluence:
     shortlink: oYIlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/oYIlAQ'
     source_link: /display/NXDOC/How+to+Bubble+Errors+from+the+Core+Layer+in+the+JSF+UI
+tree_item_index: 100
+version_override:
+    'LTS 2015': 710/admindoc/how-to-bubble-errors-from-the-core-layer-in-the-web-ui
+    '6.0': 60/admindoc/how-to-bubble-errors-from-the-core-layer-in-the-web-ui
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 09:41'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 13:26'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:03'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-24 16:55'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-28 10:39'
         message: ''
         version: '12'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-08-27 17:48'
         message: ''
         version: '11'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-27 17:44'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-29 13:48'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-04-29 10:01'
         message: ''
         version: '8'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-04-28 16:18'
         message: ''
         version: '7'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-04-28 16:17'
         message: ''
         version: '6'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-04-28 15:47'
         message: ''
         version: '5'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-04-28 15:44'
         message: ''
         version: '4'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-04-28 15:35'
         message: ''
         version: '3'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-04-28 15:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-28 15:23'
         message: ''

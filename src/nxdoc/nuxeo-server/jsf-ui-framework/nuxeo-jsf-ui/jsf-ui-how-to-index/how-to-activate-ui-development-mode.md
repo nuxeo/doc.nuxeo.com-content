@@ -26,28 +26,29 @@ confluence:
     shortlink: XxU5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/XxU5AQ'
     source_link: /display/NXDOC/How+to+Activate+UI+Development+Mode
+tree_item_index: 800
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 10:02'
         message: pdate how-to topic
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-12-08 11:17'
         message: change level to "Beginner"
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:09'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-07 16:38'
         message: ''
         version: '2'
-    - 
+    -
         author: Gildas Lefevre
         date: '2014-11-06 17:20'
         message: ''

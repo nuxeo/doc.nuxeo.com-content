@@ -33,48 +33,49 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/iQhvAQ'
     source_link: >-
         /display/NXDOC/How+to+Make+a+Selection+Based+on+the+Value+of+Another+Value+in+a+Layout
+tree_item_index: 800
 history:
-    - 
+    -
         author: Frantz Fischer
         date: '2016-05-13 14:29'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-15 08:29'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 13:36'
         message: ''
         version: '7'
-    - 
+    -
         author: Harlan Brown
         date: '2015-05-22 13:25'
         message: ''
         version: '6'
-    - 
+    -
         author: Harlan Brown
         date: '2015-05-21 20:44'
         message: ''
         version: '5'
-    - 
+    -
         author: Harlan Brown
         date: '2015-05-21 20:32'
         message: ''
         version: '4'
-    - 
+    -
         author: Harlan Brown
         date: '2015-05-20 20:28'
         message: ''
         version: '3'
-    - 
+    -
         author: Harlan Brown
         date: '2015-05-20 20:13'
         message: ''
         version: '2'
-    - 
+    -
         author: Harlan Brown
         date: '2015-05-20 19:57'
         message: ''

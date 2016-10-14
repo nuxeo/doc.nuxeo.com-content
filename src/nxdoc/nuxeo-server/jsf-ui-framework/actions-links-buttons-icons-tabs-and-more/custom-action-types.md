@@ -20,48 +20,49 @@ confluence:
     shortlink: PIgPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/PIgPAQ'
     source_link: /display/NXDOC/Custom+Action+Types
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 15:09'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 18:28'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 18:28'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-22 17:27'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-20 15:27'
         message: ''
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-01-10 11:58'
         message: typo
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 18:19'
         message: add excerpt
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 18:18'
         message: explain how to define a custom action type
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 17:54'
         message: ''

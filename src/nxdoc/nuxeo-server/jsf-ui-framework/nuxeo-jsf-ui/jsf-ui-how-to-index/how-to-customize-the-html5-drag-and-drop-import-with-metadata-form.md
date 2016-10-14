@@ -27,48 +27,49 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/3IpkAQ'
     source_link: >-
         /display/NXDOC/How+to+Customize+the+HTML5+Drag+and+Drop+Import+with+Metadata+Form
+tree_item_index: 1400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-21 09:55'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 11:11'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 11:07'
         message: link update
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-07 15:08'
         message: Update link
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-27 15:28'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Martins
         date: '2015-11-12 08:49'
         message: update action according to NXP-18128
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-20 16:52'
         message: link update
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-20 16:44'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-20 16:43'
         message: ''

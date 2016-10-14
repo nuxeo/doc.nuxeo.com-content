@@ -21,38 +21,39 @@ confluence:
     shortlink: DYYPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/DYYPAQ'
     source_link: /display/NXDOC/Tab+Designer+Widget+Types
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 14:05'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-08 14:59'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-08 16:43'
         message: ''
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-06 19:07'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-06 19:01'
         message: add default tab designer widget types
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-06 15:19'
         message: add structure
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-06 15:00'
         message: ''

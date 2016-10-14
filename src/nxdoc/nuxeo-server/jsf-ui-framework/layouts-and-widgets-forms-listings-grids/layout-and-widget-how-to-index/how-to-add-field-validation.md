@@ -31,103 +31,104 @@ confluence:
     shortlink: XYSE
     shortlink_source: 'https://doc.nuxeo.com/x/XYSE'
     source_link: /display/NXDOC/How+to+Add+Field+Validation
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-24 16:46'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 13:25'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:53'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-12 15:51'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-11 15:17'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-11 14:49'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-11 14:44'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-11 14:44'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-10 18:02'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-10 17:29'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-10 17:26'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-10 17:01'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-17 09:27'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-17 09:27'
         message: Added TOC and related topics
         version: '7'
-    - 
+    -
         author: Harlan Brown
         date: '2014-02-14 22:45'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 13:44'
         message: Fixed typos and format
         version: '5'
-    - 
+    -
         author: Benjamin Jalon
         date: '2011-10-26 15:47'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Benjamin Jalon
         date: '2011-10-26 15:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Benjamin Jalon
         date: '2011-10-26 15:43'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2011-10-26 15:31'
         message: ''

@@ -21,73 +21,74 @@ confluence:
     shortlink: LIOE
     shortlink_source: 'https://doc.nuxeo.com/x/LIOE'
     source_link: /display/NXDOC/Nuxeo+Android+Connector
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-05 17:44'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 17:56'
         message: Migrated to Confluence 4.0
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 17:56'
         message: ''
         version: '12'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 02:07'
         message: ''
         version: '11'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 01:54'
         message: ''
         version: '10'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 01:17'
         message: ''
         version: '9'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 01:17'
         message: ''
         version: '8'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 00:40'
         message: ''
         version: '7'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 19:00'
         message: ''
         version: '6'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 14:29'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 14:15'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 14:15'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 11:02'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 10:52'
         message: ''

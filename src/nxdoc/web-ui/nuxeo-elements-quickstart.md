@@ -26,98 +26,99 @@ confluence:
     shortlink: yJCRAQ
     shortlink_source: 'https://doc.nuxeo.com/x/yJCRAQ'
     source_link: /display/NXDOC/Nuxeo+Elements+Quickstart
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-16 09:57'
         message: ''
         version: '19'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-09-15 15:35'
         message: ''
         version: '18'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-09-15 15:31'
         message: ''
         version: '17'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-09-15 15:28'
         message: ''
         version: '16'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-09-15 14:47'
         message: ''
         version: '15'
-    - 
+    -
         author: Vincent Dutat
         date: '2016-01-12 20:34'
         message: ''
         version: '14'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-09 09:35'
         message: Added note about CORS config
         version: '13'
-    - 
+    -
         author: Nelson Silva
         date: '2015-10-21 14:56'
         message: Update prefix of Nuxeo Elements
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-19 08:52'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-19 08:51'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-19 08:50'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-16 15:54'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-16 15:53'
         message: Make page available in how-to's list
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-16 15:47'
         message: Steps formatting
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-09 15:34'
         message: formatting
         version: '5'
-    - 
+    -
         author: Nelson Silva
         date: '2015-10-02 11:40'
         message: ''
         version: '4'
-    - 
+    -
         author: Nelson Silva
         date: '2015-10-02 10:41'
         message: ''
         version: '3'
-    - 
+    -
         author: Nelson Silva
         date: '2015-10-02 09:53'
         message: ''
         version: '2'
-    - 
+    -
         author: Nelson Silva
         date: '2015-10-01 19:00'
         message: ''
@@ -158,7 +159,7 @@ Let's build a very simple application showcasing usage of the `nuxeo-connection`
 
 1.  ```bash
     $ npm install -g yo generator-nuxeo
-    $ mkdir -p nuxeo-elements-sample && cd $_ 
+    $ mkdir -p nuxeo-elements-sample && cd $_
     $ yo nuxeo polymer && npm install && bower install
     ```
 

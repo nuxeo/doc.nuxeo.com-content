@@ -16,108 +16,109 @@ confluence:
     shortlink: boPjAQ
     shortlink_source: 'https://doc.nuxeo.com/x/boPjAQ'
     source_link: /display/NXDOC/Web+UI+Overview
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-01 08:31'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-01 08:31'
         message: ''
         version: '20'
-    - 
+    -
         author: Nelson Silva
         date: '2016-07-29 12:00'
         message: ''
         version: '19'
-    - 
+    -
         author: Nelson Silva
         date: '2016-07-29 11:32'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-28 15:17'
         message: Add screenshot of UI with side panel
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-28 14:57'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-27 14:34'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-27 09:52'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-27 09:49'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-26 16:10'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-26 15:56'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-26 15:18'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-26 15:12'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-26 14:52'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-26 14:26'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-26 14:12'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-26 10:10'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-26 09:36'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-26 09:21'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-25 15:51'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-25 09:52'
         message: ''

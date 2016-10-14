@@ -16,13 +16,14 @@ confluence:
     shortlink: hYPjAQ
     shortlink_source: 'https://doc.nuxeo.com/x/hYPjAQ'
     source_link: /display/NXDOC/Nuxeo+Elements
+tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-25 14:05'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-25 14:03'
         message: ''

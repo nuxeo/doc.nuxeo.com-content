@@ -20,85 +20,86 @@ confluence:
     shortlink: IoUPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/IoUPAQ'
     source_link: /display/NXDOC/Layout+Definitions
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 13:00'
         message: ''
         version: '16'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 18:22'
         message: 'NXDOC-427: mention layout aliases'
         version: '15'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 18:20'
         message: 'NXDOC-286: more info about layout types'
         version: '14'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 18:16'
         message: 'NXDOC-427: reference the listingTable layout type in sample'
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 18:56'
         message: Remove link to advanced search page (obsolete)
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-04 17:13'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-03 15:38'
         message: link update
         version: '10'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-01-09 16:57'
         message: add anchor and link to listing widget types
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-08 15:53'
         message: format
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-07 17:04'
         message: Added related topics
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-07 17:00'
         message: Added TOC and links
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-17 16:47'
         message: add reference to the field bindings and expressions doc
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-05 14:23'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-05 14:22'
         message: >-
             add info about grid layouts and other kinds of layouts (generic
             usage)
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-04 13:52'
         message: moving layout definitions doc to a dedicated page
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-03 16:53'
         message: ''

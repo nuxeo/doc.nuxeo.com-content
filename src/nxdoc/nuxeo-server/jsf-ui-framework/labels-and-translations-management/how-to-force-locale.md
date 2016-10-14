@@ -27,133 +27,134 @@ confluence:
     shortlink: ywQz
     shortlink_source: 'https://doc.nuxeo.com/x/ywQz'
     source_link: /display/NXDOC/How+to+Force+Locale
+tree_item_index: 100
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-05-22 13:28'
         message: xplain how to force locale on the login pag
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-15 17:55'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 14:48'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 14:43'
         message: Removed instructions for before 5.4.3
         version: '23'
-    - 
+    -
         author: Julien Carsique
         date: '2011-08-10 15:50'
         message: ''
         version: '22'
-    - 
+    -
         author: Julien Carsique
         date: '2011-08-10 15:50'
         message: ''
         version: '21'
-    - 
+    -
         author: Julien Carsique
         date: '2011-08-10 15:25'
         message: 'fix sample locale contribution, add 5.4.3 improvement (NXP-7353)'
         version: '20'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-04 11:36'
         message: ''
         version: '19'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 16:59'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 14:43'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:28'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:24'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:16'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:15'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:10'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:51'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:06'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:21'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:02'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:24'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:12'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:01'
         message: ''

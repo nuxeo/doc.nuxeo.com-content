@@ -19,33 +19,34 @@ confluence:
     shortlink: aAMz
     shortlink_source: 'https://doc.nuxeo.com/x/aAMz'
     source_link: /display/NXDOC/Module+Extensibility
+tree_item_index: 500
 history:
-    - 
+    -
         author: Damien Metzler
         date: '2015-10-20 14:11'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 17:09'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 17:09'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:59'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:58'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:34'
         message: ''
@@ -83,7 +84,7 @@ import org.nuxeo.ecm.webengine.model.exceptions.*;
  * To extend another module you should use the <code>base="BaseModule"</code> in the <code>@WebModule</code>
  * annotation. This way the new module will inherit all templates and resources defined in the base module.
  * You can thus create a chain of inherited web modules.
- * 
+ *
 <p>
  * Here is how template resolval will be impacted by the module inheritance:
  * <br>
@@ -95,10 +96,10 @@ import org.nuxeo.ecm.webengine.model.exceptions.*;
  * <br>
  * <b>Note</b> that only the <i>skin</i> directory is stacked over the one in the base module.
  * The other directories in the module are not inheritable.
- * 
+ *
 <p>
  * Also, resource types defined by the base module will become visible in the derived one.
- * 
+ *
 <p>
  * In this example you will also find a very useful feature of WebEngine: the builtin <b>view service adapter</b>.
  * This adapter can be used on any web object to locate any view declared on that object.
@@ -106,15 +107,15 @@ import org.nuxeo.ecm.webengine.model.exceptions.*;
  * And the following request path will point to a Document WebObject: <code>/my/doc</code>.
  * Then to display the <i>info</i> view we can use the builtin views adapter this way:
  * <code>/my/doc/@views/info</code>.
- * 
+ *
 <p>
  * Obviously, you can redefine the WebObject corresponding to your document type and add a new method that will dispatch
  * the view <info>info</info> using a pretty path like <code>/my/doc/info</code>. But this involves changing code.
  * If you don't want this then the views adapter will be your friend.
  *
- * 
+ *
 <p>
- * 
+ *
 <p>
  * This example will extend the module defined in sample5 and will reuse and add more templates.
  * Look into template files to see how base module templates are reused.

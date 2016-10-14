@@ -32,60 +32,61 @@ confluence:
     shortlink: '-4pH'
     shortlink_source: 'https://doc.nuxeo.com/x/-4pH'
     source_link: /display/NXDOC/Ajax4jsf+Best+Practices
+tree_item_index: 100
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 15:31'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-18 11:08'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-17 17:23'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-17 12:41'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 15:27'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 15:21'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 15:17'
         message: Added TOC and formatting
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-04-29 16:44'
         message: >-
             NXP-11472: add doc about attribute layout="block" on tag
             a4j:outputPanel
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-13 22:04'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-13 22:04'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-21 15:15'
         message: ''
@@ -139,7 +140,7 @@ Hence the sort title controls can be ajaxified in the following way:
       <f:param name="providerName" value="#{providerName}" />
       <f:param name="sortColumn" value="dc:title" />
       <f:param name="invalidateSeamVariables" value="filterSelectModel" />
-      <h:panelGroup rendered="#{provider.sortInfo.sortColumn == 'dc:title' }" 
+      <h:panelGroup rendered="#{provider.sortInfo.sortColumn == 'dc:title' }"
         <h:graphicImage value="/icons/arrow_down.gif"
             rendered="#{provider.sortInfo.sortAscending}" />
         <h:graphicImage value="/icons/arrow_up.gif"

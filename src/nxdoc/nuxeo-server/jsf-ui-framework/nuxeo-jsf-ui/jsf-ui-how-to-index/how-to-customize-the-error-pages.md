@@ -27,198 +27,199 @@ confluence:
     shortlink: vAQz
     shortlink_source: 'https://doc.nuxeo.com/x/vAQz'
     source_link: /display/NXDOC/How+to+Customize+the+Error+Pages
+tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 09:57'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 09:57'
         message: Update how-to topics
         version: '38'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-02-09 15:19'
         message: ''
         version: '37'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-10-13 16:34'
         message: ''
         version: '36'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-08-03 12:19'
         message: ''
         version: '35'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:31'
         message: ''
         version: '34'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:07'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 09:39'
         message: ''
         version: '32'
-    - 
+    -
         author: Gildas Lefevre
         date: '2014-11-05 17:44'
         message: ''
         version: '31'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-11-04 16:18'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-03 15:22'
         message: Link update
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-17 12:13'
         message: ''
         version: '28'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 17:44'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 17:06'
         message: Formatting
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 12:07'
         message: ''
         version: '25'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-04 15:09'
         message: ''
         version: '24'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-04 15:08'
         message: add warning (outdated content)
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-13 22:06'
         message: Migrated to Confluence 4.0
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-13 22:06'
         message: ''
         version: '21'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-02-06 17:54'
         message: ''
         version: '20'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-02-06 17:52'
         message: ''
         version: '19'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 17:30'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 14:43'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:27'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:24'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:14'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:14'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:10'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:51'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:06'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:21'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:01'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:23'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:12'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:00'
         message: ''

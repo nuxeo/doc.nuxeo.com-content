@@ -19,33 +19,34 @@ confluence:
     shortlink: YgMz
     shortlink_source: 'https://doc.nuxeo.com/x/YgMz'
     source_link: /pages/viewpage.action?pageId=3343202
+tree_item_index: 200
 history:
-    - 
+    -
         author: Damien Metzler
         date: '2015-10-20 14:06'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2010-11-16 16:44'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2010-11-16 16:44'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:41'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:24'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:33'
         message: ''
@@ -78,7 +79,7 @@ import org.nuxeo.ecm.webengine.model.*;
  * You may ask yourself, ok cool, The response rendering is pretty well separated from the resource logic.
  * But how can I modify response headers?
  * In that case you must return a javax.ws.rs.Response that may be used to customize your response headers.
- * 
+ *
 <p>
  * WebEngine is adding a new type of response objects: templates.
  * Templates are freemarker based templates that can be used to render your objects depending on the request context.
@@ -87,26 +88,26 @@ import org.nuxeo.ecm.webengine.model.*;
  * Using blocks, you can write a base template that may define the site layout (using blocks containing empty or generic content) and then
  * write final <i>skins</i> for your layout by extending the base template and redefining blocks you are interested in.
  * See the <i>skin</i> directory for template examples.
- * 
+ *
 <p>
  * Templates are stored in files under the <i>skin</i> directory. Templates are always resolved relative to the <i>skin</i> directory,
  * even if you are using absolute paths.
  * The following variables are accessible from a template when rendered at rendering time:
- * 
+ *
 <ul>
- * 
+ *
 <li> <code>Context</code>  - the WebContext instance
- * 
+ *
 <li> <code>Engine</code>   - the WebEngine instance
- * 
+ *
 <li> <code>This</code>     - the target Web Object.
- * 
+ *
 <li> <code>Root</code>     - the root WebObject.
- * 
+ *
 <li> <code>Document</code> - the target Document if any otherwise null.
- * 
+ *
 <li> <code>Session</code>  - the Repository Session. (aka Core Session)
- * 
+ *
 <li> <code>basePath</code> - the request base path (context path + servlet path)
  * </ul>
  * To render a template as a response you need to instantiate it and then return it from the resource method.

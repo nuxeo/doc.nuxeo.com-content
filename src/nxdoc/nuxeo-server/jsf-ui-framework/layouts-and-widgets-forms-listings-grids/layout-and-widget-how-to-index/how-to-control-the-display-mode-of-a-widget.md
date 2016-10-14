@@ -34,143 +34,144 @@ confluence:
     shortlink: eY1H
     shortlink_source: 'https://doc.nuxeo.com/x/eY1H'
     source_link: /display/NXDOC/How+to+Control+the+Display+Mode+of+a+Widget
+tree_item_index: 700
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-27 16:54'
         message: ''
         version: '28'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-27 16:52'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:54'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-12 16:12'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-12 15:53'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-12 15:24'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-12 14:29'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-22 10:48'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-22 10:48'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-22 10:47'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-03 16:31'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 16:31'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 16:30'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 18:06'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 14:44'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-27 11:34'
         message: Added related EL topics
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-12 12:42'
         message: Migrated to Confluence 4.0
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-12 12:42'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-19 16:03'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-21 14:54'
         message: formatting and typos
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-20 14:39'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-20 09:49'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-18 09:55'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-11 09:35'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-11 09:32'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-11 09:32'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-11 09:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-11 09:11'
         message: ''

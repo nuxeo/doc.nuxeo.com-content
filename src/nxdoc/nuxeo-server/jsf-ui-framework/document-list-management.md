@@ -20,18 +20,19 @@ confluence:
     shortlink: SIgPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/SIgPAQ'
     source_link: /display/NXDOC/Document+List+Management
+tree_item_index: 700
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 18:32'
         message: orma
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-20 16:21'
         message: ''
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 19:03'
         message: ''

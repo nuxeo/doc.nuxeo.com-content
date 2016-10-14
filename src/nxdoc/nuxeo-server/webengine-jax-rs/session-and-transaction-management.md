@@ -21,78 +21,79 @@ confluence:
     shortlink: L4BH
     shortlink_source: 'https://doc.nuxeo.com/x/L4BH'
     source_link: /display/NXDOC/Session+and+Transaction+Management
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 14:09'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-04 13:43'
         message: ''
         version: '14'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2016-03-03 20:51'
         message: ''
         version: '13'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2016-03-03 20:49'
         message: ''
         version: '12'
-    - 
+    -
         author: Vincent Dutat
         date: '2015-08-31 22:01'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 14:27'
         message: Update table of contents look
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-30 14:54'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-30 14:53'
         message: Added TOC and related topics
         version: '8'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-01-29 13:18'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2012-12-27 14:54'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 17:06'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 17:06'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-10-28 13:19'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-10-28 13:15'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-10-28 12:17'
         message: ''
@@ -187,11 +188,11 @@ The `cleanup` method will be invoked after the request is processed and the resp
 You can also configure how the transaction is managed on a subset of resources in your JAX-RS application. To do this you can contribute an extension as follows:
 
 ```xml
-<extension target="org.nuxeo.ecm.webengine.WebEngineComponent" point="request-configuration"> 
-  <path value="/mymodule1" autoTx="false" /> 
-  <path value="/mymodule2/resources" autoTx="true" /> 
-  <path value="/mymodule3/.*\.gif" autoTx="false" regex="true"/> 
-</extension> 
+<extension target="org.nuxeo.ecm.webengine.WebEngineComponent" point="request-configuration">
+  <path value="/mymodule1" autoTx="false" />
+  <path value="/mymodule2/resources" autoTx="true" />
+  <path value="/mymodule3/.*\.gif" autoTx="false" regex="true"/>
+</extension>
 
 ```
 

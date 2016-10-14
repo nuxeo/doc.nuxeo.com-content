@@ -28,53 +28,54 @@ confluence:
     shortlink: y4ON
     shortlink_source: 'https://doc.nuxeo.com/x/y4ON'
     source_link: /display/NXDOC/How+to+Use+a+Generic+Widget+in+Layouts
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:54'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:54'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-12 17:10'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-12 15:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-11 17:51'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 14:48'
         message: ''
         version: '5'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-06-17 18:00'
         message: added syntax to bind to fields
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-12-02 18:45'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-12-02 18:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-12-02 18:44'
         message: ''
