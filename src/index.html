@@ -681,22 +681,22 @@ history:
         </div>
         <div id="quick-access" class="row medium-up-3 space-top-1">
             <div class="column">
-                <a class="button expanded" href="#">Installation</a>
+                <a class="button expanded" href="{{page space='NXDOC' page='Installation'}}">Installation</a>
             </div>
             <div class="column">
-                <a class="button expanded" href="#">Rest API</a>
+                <a class="button expanded" href="{{page space='Studio' page='REST API'}}">REST API</a>
             </div>
             <div class="column">
-                <a class="button expanded" href="#">Indexing &amp; Query</a>
+                <a class="button expanded" href="{{page space='NXDOC' page='Indexing and Query'}}">Indexing &amp; Query</a>
             </div>
             <div class="column">
-                <a class="button expanded" href="#">Authentication</a>
+                <a class="button expanded" href="{{page space='NXDOC' page='Authentication and User Management'}}">Authentication</a>
             </div>
             <div class="column">
-                <a class="button expanded" href="#">Security</a>
+                <a class="button expanded" href="{{page space='NXDOC' page='Security'}}">Security</a>
             </div>
             <div class="column">
-                <a class="button expanded" href="#">Workflows</a>
+                <a class="button expanded" href="{{page space='NXDOC' page='Workflow'}}">Workflows</a>
             </div>
         </div>
         <div class="row">
@@ -707,15 +707,14 @@ history:
                             <h2>Client Libraries</h2>
                         </div>
                     </div>
-                    <div class="row small-up-2 medium-up-4 large-up-8 space-top-1 space-bottom-2">
-                        {{> home_client_lib url='#' lang='Java'}}
-                        {{> home_client_lib url='#' lang='Python'}}
-                        {{> home_client_lib url='#' lang='CMIS'}}
-                        {{> home_client_lib url='#' lang='JavaScript'}}
-                        {{> home_client_lib url='#' lang='Ruby'}}
-                        {{> home_client_lib url='#' lang='Android'}}
-                        {{> home_client_lib url='#' lang='iOS'}}
-                        {{> home_client_lib url='#' lang='PHP'}}
+                    <div class="row small-up-2 medium-up-4 large-up-7 space-top-1 space-bottom-2">
+                        {{> home_client_lib url='nxdoc/java-automation-client' lang='Java'}}
+                        {{> home_client_lib url='nxdoc/python-client' lang='Python'}}
+                        {{> home_client_lib url='nxdoc/cmis' lang='CMIS'}}
+                        {{> home_client_lib url='nxdoc/javascript' lang='JavaScript'}}
+                        {{> home_client_lib url='nxdoc/android-client' lang='Android'}}
+                        {{> home_client_lib url='nxdoc/ios-client' lang='iOS'}}
+                        {{> home_client_lib url='nxdoc/php-automation-client' lang='PHP'}}
                     </div>
                 </div>
             </div>
