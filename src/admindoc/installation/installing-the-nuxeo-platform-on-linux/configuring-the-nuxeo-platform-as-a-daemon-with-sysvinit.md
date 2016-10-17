@@ -20,123 +20,128 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/rDalAQ'
     source_link: >-
         /display/ADMINDOC710/Configuring+the+Nuxeo+Platform+as+a+Daemon+with+SysVinit
+tree_item_index: 100
+version_override:
+    'FT': nxdoc/configuring-the-nuxeo-platform-as-a-daemon-with-sysvinit
+    '6.0': 60/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-sysvinit
+    '5.8': 58/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-sysvinit
 history:
-    - 
+    -
         author: Julien Carsique
         date: '2015-07-15 12:53'
         message: ''
         version: '24'
-    - 
+    -
         author: Julien Carsique
         date: '2015-07-15 12:47'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 11:34'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 11:26'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 16:02'
         message: ''
         version: '20'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2013-01-15 11:55'
         message: ''
         version: '19'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2013-01-15 11:53'
         message: ''
         version: '18'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2012-01-09 14:17'
         message: Migrated to Confluence 4.0
         version: '17'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2012-01-09 14:17'
         message: Updated with current script
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 12:23'
         message: ''
         version: '15'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-15 15:31'
         message: ''
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-15 15:27'
         message: ''
         version: '13'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-15 15:05'
         message: changed "nuxeo" with "$NUXEO_USER"
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2011-07-19 15:18'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2011-07-19 15:18'
         message: Point to source code of init.d scripts
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 15:35'
         message: ''
         version: '9'
-    - 
+    -
         author: Benjamin Jalon
         date: '2010-12-10 21:26'
         message: ''
         version: '8'
-    - 
+    -
         author: Benjamin Jalon
         date: '2010-12-10 20:52'
         message: ''
         version: '7'
-    - 
+    -
         author: Benjamin Jalon
         date: '2010-12-10 19:53'
         message: ''
         version: '6'
-    - 
+    -
         author: Benjamin Jalon
         date: '2010-12-10 19:53'
         message: ''
         version: '5'
-    - 
+    -
         author: Benjamin Jalon
         date: '2010-12-10 19:52'
         message: ''
         version: '4'
-    - 
+    -
         author: Benjamin Jalon
         date: '2010-12-10 19:51'
         message: ''
         version: '3'
-    - 
+    -
         author: Benjamin Jalon
         date: '2010-12-10 19:51'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2010-12-10 19:46'
         message: ''

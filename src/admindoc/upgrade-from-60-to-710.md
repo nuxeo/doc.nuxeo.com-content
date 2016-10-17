@@ -17,8 +17,9 @@ confluence:
     shortlink: OYXBAQ
     shortlink_source: 'https://doc.nuxeo.com/x/OYXBAQ'
     source_link: /display/ADMINDOC710/Upgrade+from+6.0+to+7.10
+hidden: true
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-01 14:25'
         message: ''

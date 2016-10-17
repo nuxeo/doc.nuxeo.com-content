@@ -18,23 +18,28 @@ confluence:
     shortlink: 2TalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/2TalAQ'
     source_link: /display/ADMINDOC710/Counting+documents
+tree_item_index: 900
+version_override:
+    'FT': nxdoc/counting-documents
+    '6.0': 60/admindoc/counting-documents
+    '5.8': 58/admindoc/counting-documents
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-03 14:22'
         message: pdate for LTS 2015 with new Repository Analytics ta
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-29 21:23'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-29 18:05'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 22:40'
         message: ''

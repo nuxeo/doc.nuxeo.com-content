@@ -19,38 +19,43 @@ confluence:
     shortlink: jTalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/jTalAQ'
     source_link: /display/ADMINDOC710/Read+ACLs
+tree_item_index: 1000
+version_override:
+    'FT': nxdoc/read-acls
+    '6.0': 60/admindoc/read-acls
+    '5.8': 58/admindoc/read-acls
 history:
-    - 
+    -
         author: Harlan Brown
         date: '2016-05-26 14:49'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-08 09:35'
         message: add a note on how to rebuild the read acls
         version: '6'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-05-06 08:55'
         message: Add note about vacuum procedure and Elasticsearch alternative
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 15:58'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-25 10:44'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Martins
         date: '2013-11-22 16:56'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2013-11-22 16:49'
         message: ''

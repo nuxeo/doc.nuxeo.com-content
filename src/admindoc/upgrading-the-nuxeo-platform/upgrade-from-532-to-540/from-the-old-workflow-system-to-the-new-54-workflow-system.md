@@ -19,23 +19,27 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/yzalAQ'
     source_link: >-
         /display/ADMINDOC710/From+the+old+workflow+system+to+the+new+5.4+workflow+system
+version_override:
+    'FT': nxdoc/from-the-old-workflow-system-to-the-new-54-workflow-system
+    '6.0': 60/admindoc/from-the-old-workflow-system-to-the-new-54-workflow-system
+    '5.8': 58/admindoc/from-the-old-workflow-system-to-the-new-54-workflow-system
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-31 13:37'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-29 10:57'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-14 15:13'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 12:16'
         message: ''

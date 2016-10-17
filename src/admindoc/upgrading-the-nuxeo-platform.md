@@ -20,399 +20,403 @@ confluence:
     shortlink: nzalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/nzalAQ'
     source_link: /display/ADMINDOC710/Upgrading+the+Nuxeo+Platform
+tree_item_index: 600
+version_override:
+    'FT': nxdoc/upgrading-the-nuxeo-platform
+    '6.0': 60/admindoc/upgrading-the-nuxeo-platform
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-15 10:02'
         message: pdate Studio menu label
         version: '78'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-12-14 15:52'
         message: ''
         version: '77'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-26 16:04'
         message: ''
         version: '76'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-26 16:03'
         message: >-
             NXDOC-658: Marketplace packages are now called Nuxeo Packages, add
             links to 7.10 release notes and upgrade notes
         version: '75'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-12 10:26'
         message: Replace 7.x FT by LTS 2015 version
         version: '74'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-02 14:57'
         message: ''
         version: '73'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-02 16:05'
         message: >-
             Removed mp-reset step in  Upgrading Your Nuxeo Marketplace Packages
             section
         version: '72'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-30 15:17'
         message: ''
         version: '71'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-06-30 14:24'
         message: ''
         version: '70'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 17:47'
         message: ''
         version: '69'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-18 10:27'
         message: ''
         version: '68'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 15:05'
         message: move upgrade policy from dedicated page
         version: '67'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 14:47'
         message: Added step for manually copied JARs upgrade
         version: '66'
-    - 
+    -
         author: Julien Carsique
         date: '2014-08-08 17:19'
         message: ''
         version: '65'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-23 18:40'
         message: ''
         version: '64'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-23 18:18'
         message: Reorganize update steps
         version: '63'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-23 11:59'
         message: ''
         version: '62'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-21 14:02'
         message: Added section about custom code upgrade
         version: '61'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-07 14:48'
         message: >-
             Page formatting, added links to the 5.8 release notes and 5.7.3
             upgrade notes
         version: '60'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:30'
         message: ''
         version: '59'
-    - 
+    -
         author: Julien Carsique
         date: '2013-08-12 12:29'
         message: ''
         version: '58'
-    - 
+    -
         author: Julien Carsique
         date: '2013-08-12 12:21'
         message: ''
         version: '57'
-    - 
+    -
         author: Julien Carsique
         date: '2013-08-06 17:32'
         message: ''
         version: '56'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 13:49'
         message: ''
         version: '55'
-    - 
+    -
         author: Julien Carsique
         date: '2013-07-02 12:31'
         message: ''
         version: '54'
-    - 
+    -
         author: Julien Carsique
         date: '2013-07-02 12:30'
         message: ''
         version: '53'
-    - 
+    -
         author: Julien Carsique
         date: '2013-07-02 12:27'
         message: ''
         version: '52'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 12:14'
         message: ''
         version: '51'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 12:14'
         message: ''
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 11:05'
         message: ''
         version: '49'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 10:54'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 10:51'
         message: ''
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 10:22'
         message: ''
         version: '46'
-    - 
+    -
         author: Delphine Renevey
         date: '2013-06-13 18:35'
         message: ''
         version: '45'
-    - 
+    -
         author: Julien Carsique
         date: '2012-10-29 18:16'
         message: ''
         version: '44'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-10-29 17:52'
         message: reference 5.7 upgrade notes
         version: '43'
-    - 
+    -
         author: Julien Carsique
         date: '2012-10-16 16:42'
         message: upgrade notes 5.6
         version: '42'
-    - 
+    -
         author: Thierry Martins
         date: '2012-09-04 10:46'
         message: Migrated to Confluence 4.0
         version: '41'
-    - 
+    -
         author: Thierry Martins
         date: '2012-09-04 10:46'
         message: ''
         version: '40'
-    - 
+    -
         author: Thierry Martins
         date: '2012-09-03 14:10'
         message: add entry to upgrade to 5.6
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-22 17:40'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-22 17:39'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-22 17:39'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-22 17:39'
         message: ''
         version: '35'
-    - 
+    -
         author: stan
         date: '2012-05-03 19:19'
         message: ''
         version: '34'
-    - 
+    -
         author: stan
         date: '2012-05-03 19:00'
         message: ''
         version: '33'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2011-12-16 16:04'
         message: ''
         version: '32'
-    - 
+    -
         author: Julien Carsique
         date: '2011-12-14 12:39'
         message: ''
         version: '31'
-    - 
+    -
         author: Julien Carsique
         date: '2011-07-19 17:08'
         message: workflow change was on 5.2
         version: '30'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-16 19:00'
         message: Add links to upgrade notes per release version
         version: '29'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-16 17:08'
         message: ''
         version: '28'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-16 17:07'
         message: ''
         version: '27'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-15 14:23'
         message: ''
         version: '26'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-15 14:01'
         message: ''
         version: '25'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-15 14:00'
         message: ''
         version: '24'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-15 14:00'
         message: ''
         version: '23'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-15 13:59'
         message: ''
         version: '22'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-15 12:26'
         message: ''
         version: '21'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-15 12:25'
         message: Review layout and provide details per version
         version: '20'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-15 11:07'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-16 16:01'
         message: format
         version: '18'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 14:43'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:27'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:24'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:14'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:14'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:10'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:51'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:05'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:21'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:01'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:23'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:12'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:00'
         message: ''

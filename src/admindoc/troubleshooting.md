@@ -17,23 +17,24 @@ confluence:
     shortlink: 2jalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/2jalAQ'
     source_link: /display/ADMINDOC710/Troubleshooting
+tree_item_index: 900
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 15:44'
         message: 'emove children display macro  '
         version: '4'
-    - 
+    -
         author: Anonymous
         date: '2013-10-29 17:48'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 22:59'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 22:58'
         message: ''

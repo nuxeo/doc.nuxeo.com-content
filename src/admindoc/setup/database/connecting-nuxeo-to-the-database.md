@@ -21,210 +21,216 @@ confluence:
     shortlink: 0TalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/0TalAQ'
     source_link: /display/ADMINDOC710/Connecting+Nuxeo+to+the+Database
+tree_item_index: 600
+version_override:
+    'FT': nxdoc/connecting-nuxeo-to-the-database
+    '6.0': 60/admindoc/connecting-nuxeo-to-the-database
+    '5.8': 58/admindoc/connecting-nuxeo-to-the-database
+
 history:
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-09 13:33'
         message: ''
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 17:43'
         message: ''
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 17:41'
         message: 'Screenshot and link update '
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-09 17:34'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-09 17:34'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-09 17:34'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-25 11:11'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-25 11:10'
         message: ''
         version: '34'
-    - 
+    -
         author: Thierry Martins
         date: '2014-03-21 22:58'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-19 15:05'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-19 15:05'
         message: Updated screenshot
         version: '31'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-12-18 15:40'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-10 16:57'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 11:14'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 11:14'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 11:14'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 11:14'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 11:14'
         message: Migrated to Confluence 4.0
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 11:14'
         message: Added related pages in other documentation
         version: '23'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-04-03 15:28'
         message: Added related content
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 10:05'
         message: Added related content
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-27 12:22'
         message: added instructions for nuxeo.conf edition and Startup wizard
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 12:20'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 11:22'
         message: ''
         version: '18'
-    - 
+    -
         author: Julien Carsique
         date: '2011-03-09 11:45'
         message: ''
         version: '17'
-    - 
+    -
         author: Julien Carsique
         date: '2011-03-09 11:43'
         message: ''
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2011-03-09 11:43'
         message: ''
         version: '15'
-    - 
+    -
         author: Julien Carsique
         date: '2011-03-09 11:41'
         message: ''
         version: '14'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2011-03-08 21:10'
         message: cleanup
         version: '13'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2011-03-08 21:09'
         message: >-
             Provided database connection information using templates. Added
             examples.
         version: '12'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2011-03-08 20:42'
         message: ''
         version: '11'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2011-03-08 20:42'
         message: ''
         version: '10'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2011-03-08 20:41'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 17:23'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 17:22'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 17:22'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 17:22'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 17:21'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-29 11:27'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-28 15:02'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-28 14:51'
         message: ''

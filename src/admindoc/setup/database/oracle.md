@@ -20,273 +20,278 @@ confluence:
     shortlink: wTalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/wTalAQ'
     source_link: /display/ADMINDOC710/Oracle
+tree_item_index: 200
+version_override:
+    'FT': nxdoc/oracle
+    '6.0': 60/admindoc/configuring-oracle
+    '5.8': 58/admindoc/configuring-oracle
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-08 09:57'
         message: ''
         version: '54'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-22 13:32'
         message: typo
         version: '53'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-09 14:11'
         message: removed v$session grant now unneeded
         version: '52'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-09 14:03'
         message: ''
         version: '51'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-04 13:43'
         message: ''
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-25 10:05'
         message: ''
         version: '49'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-10 11:15'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-10 11:01'
         message: typos and terminology
         version: '47'
-    - 
+    -
         author: Thierry Martins
         date: '2014-12-09 19:51'
         message: Add DB_BLOCK_SIZE configuration
         version: '46'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-10-28 11:25'
         message: ''
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-13 17:36'
         message: Updated supported versions for 6.0
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-25 14:44'
         message: Remove 5.3 reference
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-24 15:39'
         message: Moved limitations from independent page into Oracle page
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-17 10:18'
         message: ''
         version: '41'
-    - 
+    -
         author: Thierry Martins
         date: '2014-02-14 17:00'
         message: DB with no GRANT
         version: '40'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-12-09 15:11'
         message: ''
         version: '39'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-12-03 15:54'
         message: ''
         version: '38'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-12-03 15:54'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-10 16:52'
         message: Removed related topics from TOC
         version: '36'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-06-04 12:09'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '35'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-06-04 12:09'
         message: ''
         version: '34'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-04-19 12:28'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '33'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-04-19 12:28'
         message: ''
         version: '32'
-    - 
+    -
         author: Thierry Martins
         date: '2013-03-08 17:09'
         message: add hibernate sequence paragraph
         version: '31'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-01-23 11:41'
         message: ''
         version: '30'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-12-03 16:41'
         message: ''
         version: '29'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-09-26 12:02'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '28'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-09-26 12:02'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '27'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-09-26 12:02'
         message: Migrated to Confluence 4.0
         version: '26'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-09-26 12:02'
         message: no GRANT ALTER TABLE exists
         version: '25'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-09-24 16:24'
         message: ''
         version: '24'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-09-24 16:21'
         message: Adding a reporting problems section
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 12:13'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 11:17'
         message: Added related pages
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-28 18:27'
         message: Added TOC
         version: '20'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2012-03-28 17:53'
         message: ''
         version: '19'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-02-17 14:28'
         message: Amazon RDS
         version: '18'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-01-26 14:13'
         message: ''
         version: '17'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-01-26 13:59'
         message: ''
         version: '16'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-12-23 19:02'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-11-23 14:08'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-11-23 14:05'
         message: ''
         version: '13'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2011-03-08 20:42'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 17:22'
         message: ''
         version: '11'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-01-18 15:34'
         message: ''
         version: '10'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-01-18 15:06'
         message: ''
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-23 15:45'
         message: ''
         version: '8'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-23 15:41'
         message: ''
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-11-25 12:52'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-29 18:16'
         message: 'moved driver information to [NXDOC710:Configuring Nuxeo EP]'
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-29 12:22'
         message: Add jdbc driver information
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-10-07 18:49'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-09-08 18:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-08-13 16:07'
         message: ''

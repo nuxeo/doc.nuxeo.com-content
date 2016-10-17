@@ -20,23 +20,28 @@ confluence:
     shortlink: cDalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/cDalAQ'
     source_link: /display/ADMINDOC710/Monitoring+Slow+NXQL+Queries
+tree_item_index: 1000
+version_override:
+    'FT': nxdoc/monitoring-slow-nxql-queries
+    '6.0': 60/admindoc/monitoring-slow-nxql-queries
+    '5.8': 58/admindoc/monitoring-slow-nxql-queries
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-14 08:54'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-14 08:52'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-01-13 08:15'
         message: ''
         version: '2'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-01-12 16:16'
         message: ''

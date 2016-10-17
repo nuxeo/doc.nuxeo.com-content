@@ -19,105 +19,110 @@ confluence:
     shortlink: zDalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/zDalAQ'
     source_link: /display/ADMINDOC710/Redis+Configuration
+tree_item_index: 900
+version_override:
+    'FT': nxdoc/redic-configuration
+    '6.0': 60/admindoc/redis-configuration
+    '5.8': 58/admindoc/redis-configuration
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-25 09:31'
         message: ''
         version: '20'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-07-22 08:02'
         message: Explain how to flush redis db
         version: '19'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-06-13 13:04'
         message: >-
             Remove redis preferable location because it is not explained there
-            are many options that deserve a new paragraph 
+            are many options that deserve a new paragraph
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-16 08:44'
         message: Update Redis supported versions.
         version: '17'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-04-20 10:07'
         message: Update with vcs row cache invalidation info
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-03 13:54'
         message: Add nuxeo.redis.maxIdle and nuxeo.redis.maxTotal parameters
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-08 13:25'
         message: ''
         version: '14'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-12-16 15:05'
         message: ''
         version: '13'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-12-16 15:03'
         message: ''
         version: '12'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-12-16 15:01'
         message: ''
         version: '11'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-12-09 13:43'
         message: ''
         version: '10'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-12-09 13:37'
         message: ''
         version: '9'
-    - 
+    -
         author: Maxime Hilaire
         date: '2015-08-03 15:14'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-05-18 14:18'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-05-18 14:13'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-11-12 12:03'
         message: Info about prefix.
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-04 13:31'
         message: use Nuxeo Platform 5.8 instead of Nuxeo 5.8
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 17:49'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 17:38'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 16:50'
         message: ''

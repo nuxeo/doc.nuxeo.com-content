@@ -21,78 +21,81 @@ confluence:
     shortlink: iTalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/iTalAQ'
     source_link: /display/ADMINDOC710/Blob+Storage+Configuration
+tree_item_index: 600
+version_override:
+    'FT': nxdoc/file-storage-configuration
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-13 22:59'
         message: ''
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-13 22:54'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-13 22:51'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-10 08:11'
         message: Fix typo and formatting
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-11-09 15:48'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-11-09 15:41'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-01 12:07'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-01 09:58'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-01 09:56'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-29 12:34'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-29 09:35'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-06-23 13:04'
         message: link to aes
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-06-23 13:03'
         message: link to S3
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-06-23 13:01'
         message: "link to DefaultBinaryManager\uFEFF page"
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-06-23 12:43'
         message: ''

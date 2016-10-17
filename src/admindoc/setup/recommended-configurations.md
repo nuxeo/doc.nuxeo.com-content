@@ -22,108 +22,113 @@ confluence:
     shortlink: sTalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/sTalAQ'
     source_link: /display/ADMINDOC710/Recommended+Configurations
+tree_item_index: 100
+version_override:
+    'FT': nxdoc/setup-best-practices
+    '6.0': 60/admindoc/recommended-configurations
+    '5.8': 58/admindoc/recommended-configurations
 history:
-    - 
+    -
         author: Anonymous
         date: '2014-11-26 14:07'
         message: ormatting and link updat
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-11 10:15'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-30 13:13'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-30 10:27'
         message: Added some links and removed obsolete information
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-30 10:17'
         message: Added section about production-safe databases
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-10 16:41'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 15:12'
         message: ''
         version: '15'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-03-14 15:17'
         message: Migrated to Confluence 4.0
         version: '14'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-03-14 15:17'
         message: ''
         version: '13'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-03-14 15:16'
         message: ''
         version: '12'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-03-14 15:06'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 00:02'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 00:01'
         message: ''
         version: '9'
-    - 
+    -
         author: Thierry Martins
         date: '2011-05-20 17:35'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-21 15:01'
         message: 'added steps to move conf, data and logs'
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-21 11:35'
         message: added environment variables definition steps
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-04-01 18:27'
         message: fix data vs log confusion
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 17:02'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 15:41'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2011-03-11 15:18'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 11:40'
         message: ''

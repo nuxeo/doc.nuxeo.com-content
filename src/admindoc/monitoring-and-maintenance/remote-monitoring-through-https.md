@@ -19,63 +19,68 @@ confluence:
     shortlink: zTalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/zTalAQ'
     source_link: /pages/viewpage.action?pageId=27604685
+tree_item_index: 600
+version_override:
+    'FT': nxdoc/remote-monitoring-through-https
+    '6.0': 60/admindoc/remote-monitoring-through-https
+    '5.8': 58/admindoc/remote-monitoring-through-https
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-19 09:37'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-16 09:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-16 09:55'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-14 08:37'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-13 16:26'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 16:19'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 16:18'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 16:17'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 16:16'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 16:15'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 14:44'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-10-13 13:59'
         message: ''

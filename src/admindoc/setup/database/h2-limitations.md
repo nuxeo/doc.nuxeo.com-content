@@ -20,33 +20,37 @@ confluence:
     shortlink: 6TalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/6TalAQ'
     source_link: /display/ADMINDOC710/H2+Limitations
+tree_item_index: 700
+version_override:
+    'FT': nxdoc/h2-limitations
+    '6.0': 60/admindoc/h2-limitations
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 14:03'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-10-29 11:31'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 11:40'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 11:40'
         message: Added related pages
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-04-03 15:39'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-04-03 15:37'
         message: ''

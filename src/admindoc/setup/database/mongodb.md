@@ -21,148 +21,151 @@ confluence:
     shortlink: 6DalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/6DalAQ'
     source_link: /display/ADMINDOC710/MongoDB
+tree_item_index: 500
+version_override:
+    'FT': nxdoc/mongodb
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-08 16:43'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-08 09:56'
         message: ''
         version: '28'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-03-07 09:54'
         message: ''
         version: '27'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-03-07 09:48'
         message: HF07 can work with mongodb 3.2
         version: '26'
-    - 
+    -
         author: Gildas Lefevre
         date: '2016-03-04 20:59'
         message: ''
         version: '25'
-    - 
+    -
         author: Gildas Lefevre
         date: '2016-03-04 20:58'
         message: ''
         version: '24'
-    - 
+    -
         author: Gildas Lefevre
         date: '2016-03-04 17:12'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-20 16:11'
         message: 'Formatting '
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-20 16:08'
         message: 'NXP-18773: restored MongoDB parameters'
         version: '21'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-09 13:44'
         message: added gridfs
         version: '20'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-04 13:44'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-04 13:41'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-12 08:48'
         message: 'Update link, cleanup page format, update related pages'
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-14 09:10'
         message: ''
         version: '16'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-10-13 15:42'
         message: ''
         version: '15'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-10-09 14:50'
         message: ''
         version: '14'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-10-09 14:48'
         message: Emphasis on the URI connection options
         version: '13'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-08-11 13:41'
         message: ''
         version: '12'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-07-01 14:39'
         message: Added nuxeo.mongodb.dbname and detailed server syntax
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-10-08 10:58'
         message: ''
         version: '10'
-    - 
+    -
         author: Rémi Cattiau
         date: '2014-10-07 02:22'
         message: As requested by Brendan
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-08-05 12:47'
         message: ''
         version: '8'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-07-30 17:31'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-30 14:35'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-23 19:47'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-23 19:46'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-12 15:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-04 17:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-04 17:25'
         message: ''

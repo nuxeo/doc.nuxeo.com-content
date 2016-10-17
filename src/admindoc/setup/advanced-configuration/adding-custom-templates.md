@@ -18,68 +18,69 @@ confluence:
     shortlink: tzalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/tzalAQ'
     source_link: /display/ADMINDOC710/Adding+Custom+Templates
+tree_item_index: 100
 history:
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-16 15:57'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-16 14:04'
         message: ''
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-13 10:56'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-13 10:46'
         message: ''
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-13 10:43'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 11:18'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 11:18'
         message: update related pages
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2014-09-05 17:15'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:09'
         message: Added related topics
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:08'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 18:20'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 18:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 17:11'
         message: ''

@@ -19,28 +19,33 @@ confluence:
     shortlink: dDalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/dDalAQ'
     source_link: /display/ADMINDOC710/Nuxeo+Shell+Command+Index
+tree_item_index: 100
+version_override:
+    'FT': nxdoc/nuxeo-shell-command-index
+    '6.0': 60/admindoc/nuxeo-shell-command-index
+    '5.8': 58/admindoc/nuxeo-shell-command-index
 history:
-    - 
+    -
         author: Anonymous
         date: '2015-12-09 17:24'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-13 12:44'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-13 12:44'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 09:26'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-23 22:18'
         message: ''

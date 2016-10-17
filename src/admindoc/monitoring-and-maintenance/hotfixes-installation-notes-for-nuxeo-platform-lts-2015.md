@@ -18,128 +18,133 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/wzalAQ'
     source_link: >-
         /display/ADMINDOC710/Hotfixes+Installation+Notes+for+Nuxeo+Platform+LTS+2015
+tree_item_index: 1300
+version_override:
+    'FT': nxdoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015
+    '6.0': 60/admindoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015
+    '5.8': 58/admindoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-22 13:30'
         message: ''
         version: '25'
-    - 
+    -
         author: Thierry Martins
         date: '2016-07-22 13:24'
         message: ''
         version: '24'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2016-07-11 15:48'
         message: 'NXDOC-840: insert slot for JSF optims'
         version: '23'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2016-07-11 15:46'
         message: 'NXDOC-840: insert slot for JSF optims'
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-05 08:06'
         message: ''
         version: '21'
-    - 
+    -
         author: Thierry Martins
         date: '2016-07-04 09:08'
         message: ''
         version: '20'
-    - 
+    -
         author: Thierry Martins
         date: '2016-07-04 08:54'
         message: ''
         version: '19'
-    - 
+    -
         author: Thierry Martins
         date: '2016-07-04 08:53'
         message: ''
         version: '18'
-    - 
+    -
         author: Thierry Martins
         date: '2016-05-25 09:38'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-04 09:03'
         message: ''
         version: '16'
-    - 
+    -
         author: Ronan Daniellou
         date: '2016-04-19 10:49'
         message: format
         version: '15'
-    - 
+    -
         author: Ronan Daniellou
         date: '2016-04-19 10:46'
         message: Capitalization
         version: '14'
-    - 
+    -
         author: Ronan Daniellou
         date: '2016-04-19 10:45'
         message: 'Upgrade note for HF09: blob URL fixed'
         version: '13'
-    - 
+    -
         author: Thierry Martins
         date: '2016-03-24 09:52'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-03 13:58'
         message: Fix typos
         version: '11'
-    - 
+    -
         author: Thierry Martins
         date: '2016-03-02 08:15'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-02-19 14:05'
         message: ''
         version: '9'
-    - 
+    -
         author: Thierry Martins
         date: '2016-02-18 10:10'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-29 13:23'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-29 13:18'
         message: Add HF03
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-22 14:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-21 09:45'
         message: Formatting
         version: '4'
-    - 
+    -
         author: Thierry Martins
         date: '2015-12-17 10:06'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Martins
         date: '2015-12-09 17:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2015-12-09 17:24'
         message: ''

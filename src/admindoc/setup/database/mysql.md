@@ -20,73 +20,78 @@ confluence:
     shortlink: jDalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/jDalAQ'
     source_link: /display/ADMINDOC710/MySQL
+tree_item_index: 400
+version_override:
+    'FT': nxdoc/mysql
+    '6.0': 60/admindoc/configuring-mysql
+    '5.8': 58/admindoc/configuring-mysql
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 15:26'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-08 09:58'
         message: ''
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-04 13:43'
         message: ''
         version: '12'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-11-30 17:34'
         message: add grant on mysql.proc
         version: '11'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-08-31 16:11'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-25 10:05'
         message: ''
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-10-30 11:41'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-13 17:41'
         message: Updated supported versions for 6.0
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-24 15:33'
         message: Moved limitations from independent page into MySQL page
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-26 18:03'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-23 11:00'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-11 16:55'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-05-09 17:42'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-05-09 16:57'
         message: ''

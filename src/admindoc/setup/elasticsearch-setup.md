@@ -20,415 +20,420 @@ confluence:
     shortlink: gjalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/gjalAQ'
     source_link: /display/ADMINDOC710/Elasticsearch+Setup
+tree_item_index: 1200
+version_override:
+    'FT': nxdoc/elasticsearch-setup
+    '6.0': 60/admindoc/elasticsearch-setup
+    '5.8': 58/admindoc/elasticsearch-setup
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-24 09:54'
         message: ''
         version: '82'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-07-28 09:16'
         message: change title to have direct link on section
         version: '81'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-22 15:36'
         message: ''
         version: '80'
-    - 
+    -
         author: Thierry Martins
         date: '2016-05-10 16:57'
         message: Reverted from v. 77
         version: '79'
-    - 
+    -
         author: Thierry Martins
         date: '2016-05-10 16:55'
         message: ''
         version: '78'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-05-04 15:45'
         message: add an anchor to access reporting pb section
         version: '77'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-04-25 16:03'
         message: dump more information on ES stats
         version: '76'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-25 15:29'
         message: ''
         version: '75'
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-03-18 10:10'
         message: ''
         version: '74'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-15 14:35'
         message: ''
         version: '73'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-03-14 11:02'
         message: document how to change the audit mapping/settings
         version: '72'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-02-11 10:12'
         message: ''
         version: '71'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-23 10:03'
         message: ''
         version: '70'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-11-20 15:36'
         message: ''
         version: '69'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-11-20 15:35'
         message: ''
         version: '68'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-11-20 08:54'
         message: ''
         version: '67'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-11-20 08:47'
         message: >-
             Better explanation on how to create a new template to override the
             ES mapping
         version: '66'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-14 10:02'
         message: ''
         version: '65'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-10-13 11:23'
         message: ''
         version: '64'
-    - 
+    -
         author: Joshua Fletcher
         date: '2015-10-05 18:32'
         message: Grammar.
         version: '63'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-05 08:15'
         message: ''
         version: '62'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-05 08:12'
         message: ''
         version: '61'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-05 08:10'
         message: ''
         version: '60'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-05 08:04'
         message: ''
         version: '59'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-05 07:40'
         message: ''
         version: '58'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-05 07:18'
         message: ''
         version: '57'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-09-24 12:36'
         message: ''
         version: '56'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-09-14 07:13'
         message: Use same JVM for Nuxeo and Es
         version: '55'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-25 07:52'
         message: ''
         version: '54'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-08-24 10:48'
         message: ''
         version: '53'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-08-13 14:13'
         message: ''
         version: '52'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-08-13 14:12'
         message: ''
         version: '51'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-08-10 07:51'
         message: ''
         version: '50'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-08-10 07:48'
         message: 'Add some ES tuning '
         version: '49'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-07-01 13:00'
         message: ''
         version: '48'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-07-01 11:58'
         message: ''
         version: '47'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-07-01 11:39'
         message: ''
         version: '46'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-07-01 11:37'
         message: ''
         version: '45'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-07-01 09:20'
         message: ''
         version: '44'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-07-01 09:09'
         message: ''
         version: '43'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-07-01 08:28'
         message: ''
         version: '42'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-06-30 12:57'
         message: ''
         version: '41'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-06-30 10:21'
         message: ''
         version: '40'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-06-24 12:41'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-23 09:19'
         message: Title cap
         version: '38'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-06-22 16:06'
         message: ''
         version: '37'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-06-17 15:25'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2015-05-18 08:11'
         message: Move supported versions in a dedicated section
         version: '35'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-05-12 08:17'
         message: ''
         version: '34'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-05-12 08:17'
         message: Update on ES version supported
         version: '33'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-03-26 17:18'
         message: Adding esync ref
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-25 10:13'
         message: ''
         version: '31'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-03-24 09:52'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-18 08:54'
         message: ''
         version: '29'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-03-17 09:10'
         message: ''
         version: '28'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-20 11:04'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-05 14:24'
         message: ''
         version: '26'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-03 08:48'
         message: ''
         version: '25'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-03 08:44'
         message: ''
         version: '24'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-12-15 13:53'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 17:22'
         message: ''
         version: '22'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-12-01 17:12'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 16:24'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 15:50'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 15:28'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 15:24'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 14:47'
         message: format
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 14:44'
         message: ''
         version: '15'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 14:57'
         message: ''
         version: '14'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 12:34'
         message: ''
         version: '13'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 12:33'
         message: ''
         version: '12'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 12:32'
         message: ''
         version: '11'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 12:10'
         message: ''
         version: '10'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 10:44'
         message: ''
         version: '9'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-12 14:14'
         message: ''
         version: '8'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 16:49'
         message: ''
         version: '7'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 16:33'
         message: ''
         version: '6'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 14:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 14:34'
         message: ''
         version: '4'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 14:32'
         message: ''
         version: '3'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 14:13'
         message: ''
         version: '2'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 12:34'
         message: ''
@@ -632,7 +637,7 @@ The default mapping is located in the `${NUXEO_HOME}/templates/common-base/nxser
         point="elasticSearchIndex">
         <elasticSearchIndex name="nuxeo" type="doc" repository="default">
          <mapping>
-    ... Here copy and adapt the default mapping 
+    ... Here copy and adapt the default mapping
          </mapping>
         </elasticSearchIndex>
       </extension>
@@ -662,7 +667,7 @@ Here the index is a primary storage and you can not rebuild it. So we need a too
 
     ```
     curl -O download.elasticsearch.org/stream2es/stream2es; chmod +x stream2es
-    ./stream2es es --source http://localhost:9200/nuxeo-audit --target http://localhost:9200/nuxeo-audit2 --replace 
+    ./stream2es es --source http://localhost:9200/nuxeo-audit --target http://localhost:9200/nuxeo-audit2 --replace
     ```
 
 ## Configuration for Multi Repositories
@@ -698,7 +703,7 @@ Open at the `lib/log4j.xml` file and uncomment the ELASTIC section:
       <category name="org.nuxeo.elasticsearch" additivity="false">
         <priority value="TRACE" />
         <appender-ref ref="ELASTIC" />
-      </category> 
+      </category>
 ```
 
 &nbsp;The `elastic.log` file will contain all the requests done by the Nuxeo Platform to Elasticsearch including the `curl` command ready to be copy/past/debug in a term.

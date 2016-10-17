@@ -20,23 +20,28 @@ confluence:
     shortlink: qTalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/qTalAQ'
     source_link: /display/ADMINDOC710/Garbage-Collecting+Orphaned+Binaries
+tree_item_index: 1100
+version_override:
+    'FT': nxdoc/garbage-collecting-orphaned-binaries
+    '6.0': 60/admindoc/garbage-collecting-orphaned-binaries
+    '5.8': 58/admindoc/garbage-collecting-orphaned-binaries
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 14:24'
         message: ink updat
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 15:02'
         message: Fix broken anchors
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2015-02-16 13:33'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-23 13:58'
         message: ''

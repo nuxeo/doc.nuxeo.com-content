@@ -20,78 +20,82 @@ confluence:
     shortlink: hjalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/hjalAQ'
     source_link: /display/ADMINDOC710/Sensitive+Configuration+Data+Encryption
+version_override:
+    'FT': nxdoc/sensitive-configuration-data-encryption
+    '6.0': 60/admindoc/sensitive-configuration-data-encryption
+    '5.8': 58/admindoc/sensitive-configuration-data-encryption
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-03 10:46'
         message: 'dd Implemented Entropy section, NXP-19071 --set optio'
         version: '15'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-22 11:17'
         message: ''
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-22 10:44'
         message: Reverted from v. 11
         version: '13'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-22 10:30'
         message: Explain values can be encrypted from prompt
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-31 10:34'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-31 10:04'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-25 07:51'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-25 07:49'
         message: Add related doc
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-24 14:27'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-24 14:04'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-24 13:29'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-24 12:58'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-24 12:57'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-24 12:57'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-24 12:18'
         message: ''
@@ -153,10 +157,10 @@ $ bin/nuxeoctl configure
 # Encrypt the key "some.sensitive.property"
 $ bin/nuxeoctl config --encrypt --set some.sensitive.property someValue
 
-$ grep some.sensitive.property bin/nuxeo.conf 
+$ grep some.sensitive.property bin/nuxeo.conf
 some.sensitive.property={$$xavP1dYG0aWSrY/hyPhpWg==}
 
-$ bin/nuxeoctl config --get some.sensitive.property 
+$ bin/nuxeoctl config --get some.sensitive.property
 Please enter the secret key:
 someValue
 ```
@@ -165,7 +169,7 @@ someValue
 
 ```bash
 # Key is stored encrypted in nuxeo.conf
-$ grep ^some.sensitive.property bin/nuxeo.conf 
+$ grep ^some.sensitive.property bin/nuxeo.conf
 some.sensitive.property={$$t4Dgkiwa/LjK0Pd9cTlPkg==}
 
 # With a wrong key or without any key, the raw value is returned (ie: encrypted); here, the "--get" option is implicit
@@ -177,7 +181,7 @@ Please enter the secret key:
 someValue
 
 $ bin/nuxeoctl decrypt '{$$CiuHEqqac75rGdPszYr6Pw==}' -q
-Please enter the secret key: 
+Please enter the secret key:
 someValue
 ```
 
@@ -219,7 +223,7 @@ $ bin/nuxeoctl configure
 
 # Generate a random AES secret key stored in the keystore "/path/to/keystore.jceks", with the keystore password "changeit", the key password "$SERVER_STATUS_KEY" and the key alias "NuxeoSecretKeyAES" (by convention, the key alias must be suffixed with the keyalg: "AES")
 $ SERVER_STATUS_KEY=$(bin/nuxeoctl config server.status.key -q)
-$ keytool -genseckey -keystore /path/to/keystore.jceks -storetype jceks -storepass changeit -keyalg AES -keysize 128 -alias NuxeoSecretKeyAES -keypass $SERVER_STATUS_KEY 
+$ keytool -genseckey -keystore /path/to/keystore.jceks -storetype jceks -storepass changeit -keyalg AES -keysize 128 -alias NuxeoSecretKeyAES -keypass $SERVER_STATUS_KEY
 
 # Configure Nuxeo to use that keystore and the key alias prefix "NuxeoSecretKey"
 $ bin/nuxeoctl config server.crypt.keystore.path /path/to/keystore.jceks -q
@@ -243,7 +247,7 @@ $ bin/nuxeoctl encrypt clearValue otherValue -q
 {$$P3u9HHXmcq0l5s5HvZJy0A==}
 
 $ bin/nuxeoctl decrypt '{$$CZjbsiX748UF583qkbinsQ==}' '{$$P3u9HHXmcq0l5s5HvZJy0A==}' -q
-Please enter the secret key: 
+Please enter the secret key:
 clearValue
 otherValue
 
@@ -251,7 +255,7 @@ otherValue
 $ bin/nuxeoctl config some.sensitive.property someValue --encrypt -q
 
 # Key is stored encrypted in nuxeo.conf
-$ grep ^some.sensitive.property bin/nuxeo.conf 
+$ grep ^some.sensitive.property bin/nuxeo.conf
 some.sensitive.property={$$pXRNM4JG2cAdn8senJf07w==}
 
 $ bin/nuxeoctl config some.sensitive.property -q

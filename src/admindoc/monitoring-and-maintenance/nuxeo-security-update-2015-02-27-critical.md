@@ -19,123 +19,124 @@ confluence:
     shortlink: rjalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/rjalAQ'
     source_link: /display/ADMINDOC710/Nuxeo+Security+Update+-+2015-02-27+-+Critical
+tree_item_index: 300
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-03-03 16:14'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-03 10:05'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-03 07:50'
         message: ''
         version: '22'
-    - 
+    -
         author: Thierry Martins
         date: '2015-03-02 17:46'
         message: add instructions for 5.9.5
         version: '21'
-    - 
+    -
         author: Thierry Martins
         date: '2015-03-02 13:16'
         message: ''
         version: '20'
-    - 
+    -
         author: Thierry Martins
         date: '2015-03-02 13:08'
         message: ''
         version: '19'
-    - 
+    -
         author: Thierry Martins
         date: '2015-03-02 10:38'
         message: ''
         version: '18'
-    - 
+    -
         author: Thierry Martins
         date: '2015-03-02 10:17'
         message: ''
         version: '17'
-    - 
+    -
         author: Thierry Martins
         date: '2015-03-02 10:05'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-03-02 10:03'
         message: ''
         version: '15'
-    - 
+    -
         author: Thierry Martins
         date: '2015-02-27 18:09'
         message: ''
         version: '14'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-02-27 18:00'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-27 17:57'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-27 17:54'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-27 17:53'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-27 17:50'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-27 17:47'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-27 17:35'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-27 17:35'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-27 17:32'
         message: ''
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-02-27 17:26'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Martins
         date: '2015-02-27 17:25'
         message: update procedure to install HF
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-27 17:11'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-27 17:07'
         message: ''
@@ -232,8 +233,8 @@ No valid Nuxeo request should contain `..` as part of the Query String. You can 
 Here is a sample Apache config:
 
 ```
-RewriteCond %{QUERY_STRING} .*\.\..* [OR] 
-RewriteCond %{QUERY_STRING} .*%2E%2E.* 
+RewriteCond %{QUERY_STRING} .*\.\..* [OR]
+RewriteCond %{QUERY_STRING} .*%2E%2E.*
 RewriteRule ^/.*$ /404.html [R=404,L]
 ```
 

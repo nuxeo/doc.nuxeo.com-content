@@ -22,128 +22,133 @@ confluence:
     shortlink: eDalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/eDalAQ'
     source_link: /display/ADMINDOC710/Installing+a+New+Package+on+Your+Instance
+tree_item_index: 200
+version_override:
+    'FT': nxdoc/installing-a-new-package-on-your-instance
+    '6.0': 60/admindoc/installing-a-new-package-on-your-instance
+    '5.8': 58/admindoc/installing-a-new-package-on-your-instance
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-11 13:52'
         message: 'erge install and uninstall package '
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-26 14:08'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-26 13:41'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 18:27'
         message: Add note about dependencies in offline mode
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 18:09'
         message: ''
         version: '21'
-    - 
+    -
         author: Thierry Martins
         date: '2014-11-24 18:00'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 17:54'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 17:49'
         message: Add nuxeoctl steps and related pages
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 16:14'
         message: Update screenshot for offline and Marketplace installation steps
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 15:10'
         message: Screenshot update
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 14:13'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-16 16:58'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-19 15:33'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-19 15:02'
         message: Added offline installation steps
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-14 12:09'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-14 12:00'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-14 12:00'
         message: Updated steps
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-07 18:04'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-07 17:22'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-07 17:22'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-07 17:22'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-07 17:22'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-07 15:08'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-15 12:07'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-05 16:52'
         message: ''
@@ -299,7 +304,7 @@ For Windows users, use&nbsp;`nuxeoctl.bat` instead of `./nuxeoctl` commands belo
 4.  Confirm installation.
 
     ```text
-    Do you want to continue (yes/no)? [yes] yes 
+    Do you want to continue (yes/no)? [yes] yes
     ```
 
     The package is downloaded and installed.
@@ -372,7 +377,7 @@ Depending on the package you want to install, you may need to be logged in to th
 2.  Install the package by providing the path to the downloaded .zip file.
 
     ```bash
-    ./nuxeoctl mp-install /Users/NUXEO/Downloads/easyshare-1.1.1.zip 
+    ./nuxeoctl mp-install /Users/NUXEO/Downloads/easyshare-1.1.1.zip
     ```
 
     The server checks possible dependencies.

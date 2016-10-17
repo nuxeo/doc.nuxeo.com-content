@@ -21,193 +21,198 @@ confluence:
     shortlink: fzalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/fzalAQ'
     source_link: /display/ADMINDOC710/Metrics+and+Monitoring
+tree_item_index: 100
+version_override:
+    'FT': nxdoc/metrics-and-monitoring
+    '6.0': 60/admindoc/metrics-and-monitoring
+    '5.8': 58/admindoc/metrics-and-monitoring
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-12 09:25'
         message: dd nuxeo.ActionService (since HF12
         version: '38'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-06-15 07:32'
         message: ''
         version: '37'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-06-15 07:24'
         message: ''
         version: '36'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-02-25 10:31'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-24 15:25'
         message: ''
         version: '34'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-02-24 11:24'
         message: Update admin center activity view
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-03 15:12'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-03 15:11'
         message: Add List of metrics section
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-14 09:33'
         message: ''
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-14 09:33'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-14 09:26'
         message: ''
         version: '28'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-10-13 14:37'
         message: ''
         version: '27'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-10-13 14:35'
         message: ''
         version: '26'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-10-13 14:34'
         message: Update metrics list for 7.10
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-19 14:37'
         message: Update related pages
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-26 12:49'
         message: Fix metrics.graphite.port to 2003 instead of 2030
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 16:15'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-29 15:31'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-29 15:29'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-29 15:28'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-29 15:13'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-18 17:07'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:28'
         message: Added TOC
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 15:56'
         message: Fixed broken link to Diamond and added related topics
         version: '15'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-06-27 17:31'
         message: ''
         version: '14'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-06-27 17:31'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-18 14:35'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-03-26 22:31'
         message: ''
         version: '11'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-25 14:58'
         message: ''
         version: '10'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-25 14:46'
         message: ''
         version: '9'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-21 11:27'
         message: ''
         version: '8'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-21 11:26'
         message: ''
         version: '7'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-19 15:55'
         message: ''
         version: '6'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-19 15:53'
         message: ''
         version: '5'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-19 15:46'
         message: ''
         version: '4'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-19 15:33'
         message: ''
         version: '3'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-19 15:24'
         message: ''
         version: '2'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-19 15:16'
         message: ''
@@ -403,8 +408,8 @@ Counter are exposed via Automation API [Counters.GET](http://explorer.nuxeo.org/
 Sample CURL call:
 
 ```
-curl -H 'Content-Type:application/json+nxrequest' -X POST -d 
-'{"params":{"counterNames":"org.nuxeo.web.requests"}}' -u 
+curl -H 'Content-Type:application/json+nxrequest' -X POST -d
+'{"params":{"counterNames":"org.nuxeo.web.requests"}}' -u
 Administrator:Administrator http://localhost:8080/nuxeo/site/automation/Counters.GET
 ```
 

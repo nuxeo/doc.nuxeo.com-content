@@ -23,18 +23,22 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/zzalAQ'
     source_link: >-
         /display/ADMINDOC710/Query+Models+and+Result+Providers+Migration+to+Content+Views+and+Page+Providers
+version_override:
+    'FT': nxdoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
+    '6.0': 60/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
+    '5.8': 58/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-31 13:35'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-29 11:02'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-14 14:46'
         message: ''
