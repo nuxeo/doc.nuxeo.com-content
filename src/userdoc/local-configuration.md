@@ -18,73 +18,74 @@ confluence:
     shortlink: OY26AQ
     shortlink_source: 'https://doc.nuxeo.com/x/OY26AQ'
     source_link: /display/USERDOC710/Local+Configuration
+tree_item_index: 1500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-25 15:13'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 14:59'
         message: link update
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-25 17:10'
         message: replace "access rights" by "permissions"
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 08:56'
         message: 'Add related pages, fix links, capitalize titles, add introduction'
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-28 13:26'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-28 13:25'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-28 12:57'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-28 12:14'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-28 09:55'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-28 09:53'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-28 09:36'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-28 09:36'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-28 09:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-27 15:41'
         message: ''

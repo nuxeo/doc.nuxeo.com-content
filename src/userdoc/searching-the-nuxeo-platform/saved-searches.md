@@ -20,43 +20,44 @@ confluence:
     shortlink: Oo26AQ
     shortlink_source: 'https://doc.nuxeo.com/x/Oo26AQ'
     source_link: /display/USERDOC710/Saved+Searches
+tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-25 17:07'
         message: eplace "access rights" by "permissions
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-27 15:30'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-20 14:42'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-20 11:20'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 18:01'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 18:00'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 17:59'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 17:53'
         message: ''

@@ -19,63 +19,64 @@ confluence:
     shortlink: N426AQ
     shortlink_source: 'https://doc.nuxeo.com/x/N426AQ'
     source_link: /display/USERDOC710/Serial+Document+Workflow
+tree_item_index: 100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-25 17:03'
         message: eplace "access rights" by "permissions
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-24 15:14'
         message: new Edit permission
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-21 09:07'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-21 09:05'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-21 09:05'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-21 08:58'
         message: Merge approving and rejecting sections
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-18 16:13'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-18 16:04'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-18 15:51'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-09 08:53'
         message: Add precisions about lock status during workflow
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-25 13:46'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-25 10:02'
         message: ''

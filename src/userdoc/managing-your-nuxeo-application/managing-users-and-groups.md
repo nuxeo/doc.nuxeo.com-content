@@ -20,218 +20,219 @@ confluence:
     shortlink: E426AQ
     shortlink_source: 'https://doc.nuxeo.com/x/E426AQ'
     source_link: /display/USERDOC710/Managing+Users+and+Groups
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 14:32'
         message: ''
         version: '43'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-25 17:22'
         message: replace "rights" by "permissions"
         version: '42'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-25 17:00'
         message: replace "access rights" by "permissions"
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-27 13:38'
         message: 'User doc reorganization: fix link to alerts'
         version: '40'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-13 12:53'
         message: ''
         version: '39'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-10 16:18'
         message: ''
         version: '38'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-10 16:12'
         message: ''
         version: '37'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-10 16:09'
         message: ''
         version: '36'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-10 15:32'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-18 13:52'
         message: Update steps and screenshot to match 7.2 improved UI
         version: '34'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-25 15:08'
         message: ''
         version: '33'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-25 15:06'
         message: ''
         version: '32'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-24 17:26'
         message: ''
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-24 17:24'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-08 15:24'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-29 14:44'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-26 20:07'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-04 22:58'
         message: Fixed screenshots size
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-04 22:54'
         message: Updated screenshots for 5.8
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:50'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-25 18:56'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-23 13:45'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-03 18:14'
         message: Added links to Admin Center related pages
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-16 12:11'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-27 15:45'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-27 15:45'
         message: Migrated to Confluence 4.0
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-27 15:45'
         message: Added missing screenshot
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-14 11:09'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 14:43'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 14:42'
         message: Merged Managing users and Managing groups pages
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-12 14:20'
         message: Added link to the User home page
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-07 15:16'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-25 18:01'
         message: Added link to related customization page
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 15:55'
         message: Added new 5.5 user profile information
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 11:16'
         message: Removed 5.4 references
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-18 10:28'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 18:50'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 18:46'
         message: Added toc and related pages
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 15:04'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-24 16:41'
         message: updated with new 5.4.2 main tabs
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-01 11:26'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-10 18:47'
         message: fixed broken link to image
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-23 15:46'
         message: ''

@@ -19,18 +19,19 @@ confluence:
     shortlink: H426AQ
     shortlink_source: 'https://doc.nuxeo.com/x/H426AQ'
     source_link: /display/USERDOC710/Digital+Asset+Management+with+the+Nuxeo+Platform
+tree_item_index: 1700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-27 12:48'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-10 09:30'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-10 09:30'
         message: ''

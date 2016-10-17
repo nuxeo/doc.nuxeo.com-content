@@ -19,205 +19,206 @@ confluence:
     shortlink: DY26AQ
     shortlink_source: 'https://doc.nuxeo.com/x/DY26AQ'
     source_link: /display/USERDOC710/Document+Types
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 14:58'
         message: ink update and move workspace excerp
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 14:39'
         message: link update
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 10:56'
         message: ''
         version: '38'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-25 09:58'
         message: new Edit permission
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-27 13:37'
         message: ''
         version: '36'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-27 13:16'
         message: ''
         version: '35'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-26 09:26'
         message: ''
         version: '34'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-26 09:20'
         message: ''
         version: '33'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-26 08:49'
         message: ''
         version: '32'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-25 15:46'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 23:35'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 18:44'
         message: >-
             Removing pictures, picture books and mail folders (now in DAM and
             IMAP connector add-ons)
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-07 17:04'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-24 15:05'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-24 14:28'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-03 15:09'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 17:51'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 15:56'
         message: '5.8: removed website / blog document types that are now in an addon'
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-19 14:53'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-19 14:53'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 23:46'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 16:04'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 16:03'
         message: fixed brocken link
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 14:41'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-20 10:44'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-20 10:42'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-20 10:42'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-20 10:41'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-20 10:41'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-20 10:41'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-01 14:09'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-01 14:08'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-30 11:47'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-27 17:48'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-27 17:48'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-27 17:43'
         message: fixed broken links
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-23 17:01'
         message: fixed broken links
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-28 17:23'
         message: fixed broken links
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-10 18:35'
         message: fixed broken links
         version: '2'
-    - 
+    -
         author: Eric Barroca
         date: '2010-04-23 17:14'
         message: ''
