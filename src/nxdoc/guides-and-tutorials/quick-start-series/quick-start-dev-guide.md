@@ -18,28 +18,29 @@ confluence:
     shortlink: 8ICyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/8ICyAQ'
     source_link: /display/NXDOC710/Quick+Start+Dev+Guide
+tree_item_index: 400
 history:
-    - 
+    -
         author: Anonymous
         date: '2015-11-06 13:35'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 17:01'
         message: fix broken link
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 12:08'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-16 10:30'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 13:57'
         message: ''

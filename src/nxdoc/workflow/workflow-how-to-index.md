@@ -19,23 +19,24 @@ confluence:
     shortlink: soCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/soCyAQ'
     source_link: /display/NXDOC710/Workflow+How-To+Index
+tree_item_index: 1200
 history:
-    - 
+    -
         author: Anonymous
         date: '2014-12-03 15:56'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 18:20'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-13 10:43'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-02 14:55'
         message: ''

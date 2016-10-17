@@ -15,48 +15,49 @@ confluence:
     shortlink: Z4CyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/Z4CyAQ'
     source_link: /display/NXDOC710/Generic+Multi-Excerpts
+hidden: true
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-03 08:36'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-16 14:43'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-27 15:56'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-20 15:21'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-13 07:54'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-08 10:02'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-08 09:25'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-11 10:44'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 14:32'
         message: ''

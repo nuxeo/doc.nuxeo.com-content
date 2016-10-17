@@ -29,128 +29,129 @@ confluence:
     shortlink: N4CyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/N4CyAQ'
     source_link: /display/NXDOC710/How+to+Enable+the+Trash+Feature
+tree_item_index: 1300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 14:23'
         message: ink updat
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-29 15:54'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:21'
         message: ''
         version: '23'
-    - 
+    -
         author: Michaël Vachette
         date: '2014-11-13 14:39'
         message: ''
         version: '22'
-    - 
+    -
         author: Michaël Vachette
         date: '2014-11-13 14:34'
         message: ''
         version: '21'
-    - 
+    -
         author: Michaël Vachette
         date: '2014-11-13 14:33'
         message: ''
         version: '20'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 16:15'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 11:17'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-08 17:56'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-08 17:49'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-03 16:12'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 15:36'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 15:35'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 15:08'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 15:08'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 14:57'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 14:56'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 14:55'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 14:45'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-09 09:48'
         message: Migrated to Confluence 4.0
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-09 09:48'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-12 12:44'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-19 16:20'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-03-15 14:23'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-03-15 14:23'
         message: ''

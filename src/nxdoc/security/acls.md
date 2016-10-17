@@ -19,13 +19,14 @@ confluence:
     shortlink: NIGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/NIGyAQ'
     source_link: /display/NXDOC710/ACLs
+tree_item_index: 100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-18 15:22'
         message: 'eplace "Write" by "Edit" '
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 12:16'
         message: ''

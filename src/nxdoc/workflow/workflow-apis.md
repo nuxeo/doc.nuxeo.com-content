@@ -20,73 +20,74 @@ confluence:
     shortlink: LICyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/LICyAQ'
     source_link: /display/NXDOC710/Workflow+APIs
+tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-23 09:19'
         message: arallel workflow example step formattin
         version: '14'
-    - 
+    -
         author: Gabriel Barata
         date: '2015-12-22 17:34'
         message: ''
         version: '13'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-04-14 11:32'
         message: ''
         version: '12'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-04-14 08:41'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-19 11:11'
         message: ''
         version: '10'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-31 15:00'
         message: ''
         version: '9'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-31 14:59'
         message: ''
         version: '8'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-31 14:58'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 14:42'
         message: Added links to the Explorer
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 11:34'
         message: Added links to the explorer
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-19 15:16'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-19 15:15'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-19 15:14'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-19 15:13'
         message: ''

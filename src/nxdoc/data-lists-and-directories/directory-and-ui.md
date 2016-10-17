@@ -21,18 +21,19 @@ confluence:
     shortlink: LoGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/LoGyAQ'
     source_link: /display/NXDOC710/Directory+and+UI
+tree_item_index: 400
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-04-20 14:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-19 14:35'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-19 14:31'
         message: ''

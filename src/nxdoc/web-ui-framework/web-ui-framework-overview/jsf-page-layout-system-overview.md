@@ -21,23 +21,24 @@ confluence:
     shortlink: KoGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/KoGyAQ'
     source_link: /display/NXDOC710/JSF+Page+Layout+System+Overview
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-20 16:02'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-20 16:01'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-18 16:04'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-18 16:02'
         message: ''
@@ -104,7 +105,7 @@ This view is referenced in the document.xml theme file via:
 The XPath indicates what part of the page layout will be used to display the tree explorer.
 
 ```
-<!-- tree view --> 
+<!-- tree view -->
 <fragment perspectives="default,multiple_domains" type="generic fragment"/>
 ```
 

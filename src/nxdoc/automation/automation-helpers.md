@@ -20,83 +20,84 @@ confluence:
     shortlink: 54CyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/54CyAQ'
     source_link: /display/NXDOC710/Automation+Helpers
+tree_item_index: 1500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 10:18'
         message: ix page layout to use 2/3 layou
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 10:17'
         message: ''
         version: '15'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-26 13:22'
         message: ''
         version: '14'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-26 13:21'
         message: ''
         version: '13'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-26 13:18'
         message: ''
         version: '12'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-26 13:17'
         message: ''
         version: '11'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-26 13:15'
         message: ''
         version: '10'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-26 13:14'
         message: ''
         version: '9'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-26 13:14'
         message: ''
         version: '8'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-26 13:14'
         message: ''
         version: '7'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-26 13:13'
         message: ''
         version: '6'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-26 13:13'
         message: ''
         version: '5'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-26 13:13'
         message: ''
         version: '4'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-26 13:12'
         message: ''
         version: '3'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-26 12:43'
         message: ''
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-05-25 18:45'
         message: ''

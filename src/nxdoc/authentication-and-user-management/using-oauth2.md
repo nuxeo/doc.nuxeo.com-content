@@ -20,38 +20,39 @@ confluence:
     shortlink: e4CyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/e4CyAQ'
     source_link: /display/NXDOC710/Using+OAuth2
+tree_item_index: 100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-16 10:01'
         message: ''
         version: '7'
-    - 
+    -
         author: Damien Metzler
         date: '2015-10-20 13:12'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-08 15:27'
         message: Remove mentions of 5.9.2
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 17:10'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-11 11:50'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-11 11:44'
         message: Formatting
         version: '2'
-    - 
+    -
         author: Arnaud Kervern
         date: '2014-02-10 15:54'
         message: ''

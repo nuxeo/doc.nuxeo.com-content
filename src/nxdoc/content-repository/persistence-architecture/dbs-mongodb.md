@@ -20,43 +20,44 @@ confluence:
     shortlink: 1YCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/1YCyAQ'
     source_link: /display/NXDOC710/DBS+-+MongoDB
+tree_item_index: 300
 history:
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-09 15:09'
         message: etail
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 15:17'
         message: ''
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-10-13 15:41'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-08-11 13:59'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-08-11 13:40'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-11-04 16:09'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-11-04 16:09'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-11-04 15:56'
         message: ''

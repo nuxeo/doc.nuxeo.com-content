@@ -29,53 +29,54 @@ confluence:
     shortlink: V4GyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/V4GyAQ'
     source_link: /display/NXDOC710/How+to+Customize+Document+Validation
+tree_item_index: 1500
 history:
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-10-29 20:23'
         message: ''
         version: '10'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-10-29 20:23'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-20 08:07'
         message: Fix field name formatting and typos
         version: '8'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-10-19 09:23'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-12 17:07'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-12 11:11'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-12 11:10'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-12 11:10'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-12 11:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-12 11:04'
         message: ''
@@ -178,7 +179,7 @@ Let's suppose you want to make reference to `Product` objects provided by a `Pro
         public String getConstraintErrorMessage(Object invalidValue, Locale locale) {
             return ObjectResolver.Helper.getConstraintErrorMessage(this, invalidValue, locale);
         }
-    } 
+    }
     ```
 
 2.  Add a message to manage validation error:
@@ -198,7 +199,7 @@ Let's suppose you want to make reference to `Product` objects provided by a `Pro
       <extension target="org.nuxeo.ecm.core.schema.ObjectResolverService" point="resolvers">
         <resolver type="productResolver" class="com.mycompany.nuxeo.ProductResolver" />
       </extension>
-    </component> 
+    </component>
     ```
 
 4.  You can now define your own custom fields:

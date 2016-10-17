@@ -20,48 +20,49 @@ confluence:
     shortlink: j4GyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/j4GyAQ'
     source_link: /display/NXDOC710/Listing+Widget+Types
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 12:24'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 14:14'
         message: Update table of contents look
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-08 16:17'
         message: Added IDs and related topics
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-06 15:17'
         message: add right menu
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-06 15:15'
         message: add some default widget types
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-05 18:18'
         message: add links to javadoc
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-05 18:16'
         message: wording
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-05 18:15'
         message: add intro + warning about field bindings.
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-05 17:28'
         message: ''

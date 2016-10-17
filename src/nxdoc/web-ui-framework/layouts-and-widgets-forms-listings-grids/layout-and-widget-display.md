@@ -22,103 +22,104 @@ confluence:
     shortlink: yoCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/yoCyAQ'
     source_link: /display/NXDOC710/Layout+and+Widget+Display
+tree_item_index: 600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 13:12'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-11 14:02'
         message: Fix links to 7.10
         version: '19'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-12-08 14:17'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 19:06'
         message: Fix links to point to latest version
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 11:25'
         message: Added related topics
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-10 15:32'
         message: ''
         version: '15'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 15:39'
         message: ''
         version: '14'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-12 18:07'
         message: add more examples for advanced layouts tag usage
         version: '13'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-05 17:34'
         message: better title
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 16:57'
         message: Updated link
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 16:06'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-11 21:28'
         message: Migrated to Confluence 4.0
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-11 21:28'
         message: ''
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-07-31 20:21'
         message: ''
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-04 12:13'
         message: ''
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-04-18 18:55'
         message: ''
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-14 18:17'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-04 14:41'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2010-10-13 15:47'
         message: ''
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2010-10-12 15:08'
         message: ''

@@ -19,48 +19,53 @@ confluence:
     shortlink: jIGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/jIGyAQ'
     source_link: /display/NXDOC710/Web+UI+Framework
+tree_item_index: 1600
+version_override:
+    'FT': nxdoc/jsf-ui-framework
+    '6.0': 60/admindoc/web-ui-framework
+    '5.8': 58/admindoc/web-ui-framework
 history:
-    - 
+    -
         author: Anonymous
         date: '2015-01-28 13:40'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-24 16:52'
         message: ''
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-01-13 15:11'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-01-10 18:17'
         message: ''
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 15:05'
         message: ''
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-03 16:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-03 16:02'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-06 15:39'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-05 15:39'
         message: ''

@@ -20,103 +20,104 @@ confluence:
     shortlink: aYGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/aYGyAQ'
     source_link: /display/NXDOC710/Widget+Definitions
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 14:06'
         message: ''
         version: '20'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-12-08 13:51'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-09 10:18'
         message: format
         version: '18'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 18:26'
         message: 'NXDOC-427: mention widget aliases'
         version: '17'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 16:41'
         message: 'NXDOC-286: remove "since 5.8" mentions'
         version: '16'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 16:29'
         message: 'NXDOC-286: fix anchor link to widget controls'
         version: '15'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 16:27'
         message: 'NXDOC-286: cosmit'
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 17:18'
         message: Code block formatting
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-07 18:26'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-07 17:46'
         message: Added links
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-07 17:29'
         message: ''
         version: '10'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-17 16:43'
         message: add reference to the field bindings and expressions doc
         version: '9'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-12 17:30'
         message: add anchor for controls
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-12 14:55'
         message: fix name for default control
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-12 14:21'
         message: fix typo
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-06 19:39'
         message: add controls + table of contents
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-06 15:22'
         message: remove useless excerpt
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-05 17:39'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-04 13:53'
         message: move widget definitions to a dedicated page
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-03 16:54'
         message: ''
@@ -132,7 +133,7 @@ This page describes the different elements that can be used to define widgets.
 &nbsp;
 
 > Last night a widget saved my life
-> 
+>
 > &ndash; ui:Indeep
 
 ## Sample Definition

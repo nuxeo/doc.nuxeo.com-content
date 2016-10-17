@@ -22,130 +22,131 @@ confluence:
     shortlink: O4GyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/O4GyAQ'
     source_link: /display/NXDOC710/Collections
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-06-24 08:05'
         message: >-
             dd missing <require> in Synchronizing a Collection with Nuxeo Drive
             contributio
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-03 15:53'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-03 15:47'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-03 15:41'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-03 15:33'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 10:09'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 10:08'
         message: 'NXDOC-647 : use tabs to show Collections related docs'
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-11 11:51'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-07 14:09'
         message: 'NXDOC-614: Add functional overview'
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-19 10:45'
         message: format
         version: '16'
-    - 
+    -
         author: Michaël Vachette
         date: '2015-02-18 16:43'
         message: ''
         version: '15'
-    - 
+    -
         author: Antoine Taillefer
         date: '2014-11-19 14:42'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-12 11:54'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-12 11:53'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-10 22:48'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-10 22:47'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-10 22:40'
         message: Add links
         version: '9'
-    - 
+    -
         author: Antoine Taillefer
         date: '2014-11-07 18:09'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-10 16:43'
         message: ''
         version: '7'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-04-09 18:03'
         message: ''
         version: '6'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-04-09 18:01'
         message: ''
         version: '5'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-04-09 17:58'
         message: ''
         version: '4'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-04-04 16:49'
         message: ''
         version: '3'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-04-04 16:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-04-04 16:30'
         message: ''

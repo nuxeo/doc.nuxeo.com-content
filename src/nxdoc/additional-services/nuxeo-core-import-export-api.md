@@ -21,98 +21,99 @@ confluence:
     shortlink: O4CyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/O4CyAQ'
     source_link: /pages/viewpage.action?pageId=28475451
+tree_item_index: 200
 history:
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-15 08:24'
         message: hrasin
         version: '19'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-15 08:22'
         message: form -> from
         version: '18'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-15 08:20'
         message: fixes words order
         version: '17'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-15 08:16'
         message: Fixes classes packages (api)
         version: '16'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-15 08:11'
         message: phrasing
         version: '15'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-14 16:51'
         message: fixes bullet list homogeneity
         version: '14'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-14 16:41'
         message: Fixes "Export Format" anchor link
         version: '13'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-14 14:09'
         message: Fixes anchor target for API Examples
         version: '12'
-    - 
+    -
         author: Arnaud Kervern
         date: '2015-10-14 10:07'
         message: ''
         version: '11'
-    - 
+    -
         author: Arnaud Kervern
         date: '2015-10-14 08:29'
         message: ''
         version: '10'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-13 15:57'
         message: fixes tree structure indentation
         version: '9'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-13 15:52'
         message: 'typo: you -> your'
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 14:06'
         message: Update table of contents look
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 14:15'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 01:10'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-23 11:02'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-09-05 18:59'
         message: Completed example
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 14:31'
         message: Fixed formatting
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 14:30'
         message: ''
@@ -233,7 +234,7 @@ Here is how the same blob will be serialized when inlining blobs (an option of t
       <mime-type>application/octet-stream</mime-type>
       <data>
        b3JnLmpib3NzLnJlbW90aW5nLkNhbm5vdENvbm5lY3RFeGNlcHRpb246IENhbiBub3QgZ2V0IGNv
-       bm5lY3Rpb24gdG8gc2VydmVyLiAgUHJvYmxlbSBlc3RhYmxpc2hpbmcgc29ja2V0IGNvbm5lY3Rp 
+       bm5lY3Rpb24gdG8gc2VydmVyLiAgUHJvYmxlbSBlc3RhYmxpc2hpbmcgc29ja2V0IGNvbm5lY3Rp
        [...]
        </data>
     </content>
@@ -398,13 +399,13 @@ try {
   pipe.setReader(reader);
   pipe.setWriter(writer);
   pipe.run();   
-} finally { 
+} finally {
   if (reader != null) {
-    reader.close(); 
+    reader.close();
   }
-  if (writer != null) { 
-    writer.close(); 
-  } 
+  if (writer != null) {
+    writer.close();
+  }
 }
 ```
 
@@ -423,12 +424,12 @@ try {
   pipe.setReader(reader);
   pipe.setWriter(writer);
   pipe.run();
-} finally { 
+} finally {
   if (reader != null) {
-    reader.close(); 
-  } 
+    reader.close();
+  }
   if (writer != null) {
-    writer.close(); 
+    writer.close();
   }
 }
 ```
@@ -438,7 +439,7 @@ try {
 ```java
 DocumentReader reader = null;
 DocumentWriter writer = null;
-try { 
+try {
   DocumentModel src = getTestWorkspace();
   reader = new SingleDocumentReader(docMgr, src);
 
@@ -454,11 +455,11 @@ try {
   pipe.setReader(reader);
   pipe.setWriter(writer); pipe.run();
 
-} finally { 
+} finally {
   if (reader != null) {
-    reader.close(); 
-  } 
-  if (writer != null) { 
+    reader.close();
+  }
+  if (writer != null) {
     writer.close();
   }
 }

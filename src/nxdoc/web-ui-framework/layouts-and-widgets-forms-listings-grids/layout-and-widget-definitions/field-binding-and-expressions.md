@@ -24,128 +24,129 @@ confluence:
     shortlink: pYGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/pYGyAQ'
     source_link: /display/NXDOC710/Field+Binding+and+Expressions
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 09:13'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 13:17'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 13:16'
         message: Fix links
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 14:13'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 14:12'
         message: Update table of contents look
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-30 11:20'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 17:21'
         message: ''
         version: '19'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-01-10 18:38'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-09 17:06'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-08 17:52'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-07 19:37'
         message: 'Formatting, removed mentions of old versions, '
         version: '15'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-17 17:22'
         message: complete doc + remove WIP warning
         version: '14'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-03 15:45'
         message: add links to Studio doc + fix tld link
         version: '13'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-03 15:31'
         message: update related topics
         version: '12'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-10-03 19:01'
         message: 'NXP-12692: mention new widgetProperties variable'
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 16:05'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-11 21:25'
         message: Migrated to Confluence 4.0
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-11 21:25'
         message: ''
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-08-01 18:42'
         message: ''
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-07-31 20:40'
         message: ''
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-07-31 20:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-07-31 20:38'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-07-31 20:37'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-07-31 20:35'
         message: ''
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-07-31 20:25'
         message: ''

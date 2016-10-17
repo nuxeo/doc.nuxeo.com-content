@@ -26,128 +26,129 @@ confluence:
     shortlink: 3oCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/3oCyAQ'
     source_link: /display/NXDOC710/Getting+Started+with+Nuxeo+Studio
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-07 09:28'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-07 09:23'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-07 09:22'
         message: 'NXDOC-857: remove nuxeo.io'
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-06 13:01'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-14 12:40'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-12 12:51'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-31 15:46'
         message: Fix links
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-02 09:31'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-02 09:30'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-08 11:01'
         message: Update titles to fix anchor links
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-01 15:51'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-01 15:51'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-03 07:39'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-31 13:50'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-31 13:20'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-29 16:26'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:48'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:48'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:47'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:44'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:44'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:39'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:35'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 12:23'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 12:21'
         message: ''

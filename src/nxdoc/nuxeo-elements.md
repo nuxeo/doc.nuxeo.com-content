@@ -20,58 +20,59 @@ confluence:
     shortlink: gYGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/gYGyAQ'
     source_link: /display/NXDOC710/Nuxeo+Elements
+tree_item_index: 1800
 history:
-    - 
+    -
         author: Frédéric Vadon
         date: '2015-10-27 19:37'
         message: yp
         version: '11'
-    - 
+    -
         author: Nelson Silva
         date: '2015-10-21 14:53'
         message: Update prefix on Nuxeo Elements
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-16 14:34'
         message: Add links
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-09 14:30'
         message: Formatting
         version: '8'
-    - 
+    -
         author: Nelson Silva
         date: '2015-10-01 15:56'
         message: ''
         version: '7'
-    - 
+    -
         author: Nelson Silva
         date: '2015-09-30 15:17'
         message: ''
         version: '6'
-    - 
+    -
         author: Nelson Silva
         date: '2015-09-30 13:29'
         message: ''
         version: '5'
-    - 
+    -
         author: Nelson Silva
         date: '2015-09-30 11:25'
         message: ''
         version: '4'
-    - 
+    -
         author: Nelson Silva
         date: '2015-09-30 10:51'
         message: ''
         version: '3'
-    - 
+    -
         author: Nelson Silva
         date: '2015-09-30 10:47'
         message: ''
         version: '2'
-    - 
+    -
         author: Nelson Silva
         date: '2015-09-30 09:40'
         message: ''

@@ -31,320 +31,321 @@ confluence:
     shortlink: n4GyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/n4GyAQ'
     source_link: /display/NXDOC710/How+to+create+an+empty+bundle
+tree_item_index: 600
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-26 15:45'
         message: 'emove wiki markup  '
         version: '63'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-26 13:55'
         message: 'remove wiki markup '
         version: '62'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-17 10:07'
         message: remove deleted page
         version: '61'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-01-12 10:21'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '60'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-01-12 10:21'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '59'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-01-12 10:21'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '58'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-01-12 10:21'
         message: better parent in pom
         version: '57'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-01-11 02:29'
         message: fix link
         version: '56'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-19 15:42'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '55'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-19 15:42'
         message: ''
         version: '54'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-19 15:42'
         message: ''
         version: '53'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-18 17:07'
         message: ''
         version: '52'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-03 21:00'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '51'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-03 21:00'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '50'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-03 21:00'
         message: ''
         version: '49'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-03 20:59'
         message: ''
         version: '48'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-03 20:58'
         message: ''
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-13 18:02'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '46'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-13 18:02'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-13 18:02'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-13 18:02'
         message: ''
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-13 18:02'
         message: ''
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-13 18:01'
         message: ''
         version: '41'
-    - 
+    -
         author: Benjamin Jalon
         date: '2011-12-07 15:30'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '40'
-    - 
+    -
         author: Benjamin Jalon
         date: '2011-12-07 15:30'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '39'
-    - 
+    -
         author: Benjamin Jalon
         date: '2011-12-07 15:30'
         message: Migrated to Confluence 4.0
         version: '38'
-    - 
+    -
         author: Benjamin Jalon
         date: '2011-12-07 15:30'
         message: ''
         version: '37'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-07-29 10:09'
         message: the maven command interactions
         version: '36'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2011-07-19 15:54'
         message: >-
             changed from "bundles" to "plugins" which is the recommended
             location for custom plugins
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-05 19:28'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-05 19:24'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-05 17:42'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-05 17:32'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-05 17:31'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-05 15:04'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-05 10:14'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-04 18:14'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-04 17:07'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-04 15:39'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-04 15:03'
         message: ''
         version: '24'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-05-03 11:35'
         message: ''
         version: '23'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-05-02 18:56'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-02 18:06'
         message: reorganized steps
         version: '21'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-29 10:35'
         message: ''
         version: '20'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-26 16:49'
         message: ''
         version: '19'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-26 16:38'
         message: ''
         version: '18'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-26 16:30'
         message: ''
         version: '17'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-26 15:57'
         message: ''
         version: '16'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-26 12:36'
         message: ''
         version: '15'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-22 18:01'
         message: ''
         version: '14'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-22 12:18'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-22 12:05'
         message: ''
         version: '12'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-22 11:58'
         message: ''
         version: '11'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-22 11:47'
         message: ''
         version: '10'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-22 11:04'
         message: ''
         version: '9'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-22 10:40'
         message: ''
         version: '8'
-    - 
+    -
         author: Benjamin Jalon
         date: '2011-04-22 03:01'
         message: ''
         version: '7'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-21 19:12'
         message: ''
         version: '6'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-21 18:53'
         message: ''
         version: '5'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-21 18:34'
         message: ''
         version: '4'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-21 14:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-21 12:10'
         message: ''
         version: '2'
-    - 
+    -
         author: Ronan Le Gall
         date: '2011-04-21 11:34'
         message: ''

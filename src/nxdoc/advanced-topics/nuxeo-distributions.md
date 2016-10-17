@@ -27,88 +27,89 @@ confluence:
     shortlink: gYCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/gYCyAQ'
     source_link: /display/NXDOC710/Nuxeo+Distributions
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 09:24'
         message: 'XDOC-658: Marketplace packages are now called Nuxeo Package'
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-15 12:04'
         message: ''
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-13 10:21'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-20 15:14'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 23:55'
         message: ''
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 23:52'
         message: ''
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 23:51'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 23:51'
         message: ''
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-10 12:33'
         message: Migrated to Confluence 4.0
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-10 12:33'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-15 11:59'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2010-09-13 18:46'
         message: formatting and typos
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-20 18:28'
         message: formatting and typos
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2010-04-28 14:04'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2010-04-28 12:19'
         message: ''
         version: '3'
-    - 
+    -
         author: Admin name placeholder
         date: '2010-03-29 19:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Admin name placeholder
         date: '2010-03-01 13:29'
         message: ''

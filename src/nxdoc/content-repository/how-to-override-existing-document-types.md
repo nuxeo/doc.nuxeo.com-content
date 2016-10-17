@@ -26,88 +26,89 @@ confluence:
     shortlink: OYCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/OYCyAQ'
     source_link: /display/NXDOC710/How+to+Override+Existing+Document+Types
+tree_item_index: 1100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-29 16:15'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:47'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 11:13'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-08 17:55'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-08 16:40'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-27 13:49'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-27 13:48'
         message: format
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-24 17:24'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 14:46'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 16:33'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 16:33'
         message: Added related tutorials
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-19 16:56'
         message: format
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-15 17:20'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-03-15 10:16'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-03-15 10:12'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-03-15 10:11'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-03-15 09:27'
         message: ''

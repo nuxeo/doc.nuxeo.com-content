@@ -19,18 +19,19 @@ confluence:
     shortlink: uYCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/uYCyAQ'
     source_link: /display/NXDOC710/DocumentProviders+in+Android+Connector
+tree_item_index: 400
 history:
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 01:15'
         message: igrated to Confluence 4.
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 01:15'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 00:46'
         message: ''

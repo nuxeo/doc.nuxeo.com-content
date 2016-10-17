@@ -20,263 +20,264 @@ confluence:
     shortlink: WICyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/WICyAQ'
     source_link: /display/NXDOC710/Contributing+an+Operation
+tree_item_index: 500
 history:
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-08-16 09:35'
         message: ''
         version: '52'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-03 09:36'
         message: ''
         version: '51'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2015-12-23 10:53'
         message: ''
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 16:47'
         message: link update
         version: '49'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-01-05 15:38'
         message: ''
         version: '48'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-01-05 15:37'
         message: alias operation
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-26 14:27'
         message: Add related pages
         version: '46'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-12-19 13:50'
         message: ''
         version: '45'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-12-19 13:49'
         message: ''
         version: '44'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-11-25 15:35'
         message: ''
         version: '43'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-13 17:42'
         message: ''
         version: '42'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-13 17:34'
         message: ''
         version: '41'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 12:31'
         message: ''
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-09 16:36'
         message: ''
         version: '39'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-04-30 17:16'
         message: ''
         version: '38'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-04-30 17:14'
         message: ''
         version: '37'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-04-30 17:13'
         message: ''
         version: '36'
-    - 
+    -
         author: Laurent Doguin
         date: '2014-04-29 15:36'
         message: ''
         version: '35'
-    - 
+    -
         author: Laurent Doguin
         date: '2014-04-29 15:29'
         message: ''
         version: '34'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-29 14:15'
         message: Adding link to a Codenvy factory
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-07 11:14'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-07 11:14'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-07 11:14'
         message: ''
         version: '30'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-02 02:44'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-20 17:14'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-20 17:09'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 12:03'
         message: ''
         version: '26'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-01 13:49'
         message: ''
         version: '25'
-    - 
+    -
         author: Roland Benedetti
         date: '2012-02-24 01:29'
         message: Migrated to Confluence 4.0
         version: '24'
-    - 
+    -
         author: Roland Benedetti
         date: '2012-02-24 01:29'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 18:25'
         message: corrected links
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2011-08-06 01:02'
         message: ''
         version: '21'
-    - 
+    -
         author: stan
         date: '2011-07-12 15:10'
         message: ''
         version: '20'
-    - 
+    -
         author: stan
         date: '2011-07-12 15:08'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-08-12 09:12'
         message: ''
         version: '18'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-08-03 14:18'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-06-28 08:29'
         message: ''
         version: '16'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 17:01'
         message: ''
         version: '15'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 16:59'
         message: ''
         version: '14'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 16:48'
         message: ''
         version: '13'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 16:15'
         message: ''
         version: '12'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 16:01'
         message: ''
         version: '11'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 15:44'
         message: ''
         version: '10'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 15:28'
         message: ''
         version: '9'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 15:02'
         message: ''
         version: '8'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 14:52'
         message: ''
         version: '7'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 14:47'
         message: ''
         version: '6'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 13:01'
         message: ''
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-24 23:37'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-24 23:37'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-24 23:36'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-24 23:36'
         message: ''

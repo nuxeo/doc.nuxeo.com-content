@@ -20,138 +20,139 @@ confluence:
     shortlink: L4CyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/L4CyAQ'
     source_link: /display/NXDOC710/Bootstrap+Your+Document+Management+Project
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-08 09:49'
         message: 'XDOC-857: remove nuxeo.i'
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-10 15:15'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 14:49'
         message: ''
         version: '25'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-08 11:13'
         message: ''
         version: '24'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-08 11:01'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 12:19'
         message: Remove link
         version: '22'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-22 00:45'
         message: ''
         version: '21'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-21 23:55'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-26 09:39'
         message: ''
         version: '19'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-07-10 09:41'
         message: typo
         version: '18'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-07-10 09:38'
         message: fixes double "you have" string
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-25 13:42'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 15:58'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 15:49'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-17 19:01'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-17 18:52'
         message: Formatting
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-04 00:43'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-30 12:04'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-29 15:19'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-08-23 15:43'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-31 16:14'
         message: Added TOC
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-31 16:11'
         message: Added links anf fixed typos
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-24 21:34'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-24 21:34'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-24 21:32'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-24 21:30'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-24 21:15'
         message: ''

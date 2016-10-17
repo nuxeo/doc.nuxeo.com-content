@@ -22,43 +22,44 @@ confluence:
     shortlink: hIGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/hIGyAQ'
     source_link: /display/NXDOC710/Nuxeo+Security+System
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 12:47'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-18 15:48'
         message: 'replace "Write" by "Edit"   '
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-21 23:54'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 12:26'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 11:55'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-04 11:41'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-04 11:40'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-11-27 18:00'
         message: ''

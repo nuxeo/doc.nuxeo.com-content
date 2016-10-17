@@ -27,158 +27,159 @@ confluence:
     shortlink: 5oCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/5oCyAQ'
     source_link: /display/NXDOC710/How+to+Customize+the+Bulk+Import+Form
+tree_item_index: 1200
 history:
-    - 
+    -
         author: Joshua Fletcher
         date: '2015-04-17 23:56'
         message: ypo
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-20 15:19'
         message: Add note about Where and Files fields
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-11 11:00'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-11 10:44'
         message: ''
         version: '28'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-10 14:22'
         message: ''
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-10 10:24'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:30'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:11'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-21 17:36'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-19 18:11'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-19 18:10'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 17:21'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:45'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:43'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:40'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:32'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:32'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:31'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:29'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:28'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 15:46'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 15:45'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 11:00'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-13 18:15'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-13 18:13'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 17:35'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 17:29'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 17:20'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 17:17'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 17:09'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-05 15:49'
         message: ''
@@ -275,7 +276,7 @@ The contribution of the default bulk import is:
       <property name="chainId">FileManager.ImportWithMetaDataInSeam</property>
       <property name="layout">bulkImport@create</property>
     </properties>
-  </action> 
+  </action>
 </extension>
 ```
 

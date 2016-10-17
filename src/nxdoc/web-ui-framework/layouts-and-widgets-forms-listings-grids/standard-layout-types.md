@@ -20,13 +20,14 @@ confluence:
     shortlink: QoCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/QoCyAQ'
     source_link: /display/NXDOC710/Standard+Layout+Types
+tree_item_index: 200
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 19:21'
         message: 'XDOC-427: document default layout type'
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 17:10'
         message: ''

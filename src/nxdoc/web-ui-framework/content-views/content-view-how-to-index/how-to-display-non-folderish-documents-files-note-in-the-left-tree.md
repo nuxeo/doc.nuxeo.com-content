@@ -32,38 +32,39 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/G4GyAQ'
     source_link: >-
         /display/NXDOC710/How+to+Display+Non-Folderish+Documents+%28Files%2C+Note%2C+...%29+in+the+Left+Tree
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:56'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-15 16:01'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 16:47'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 11:51'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 15:15'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-25 14:58'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-02-25 14:26'
         message: ''

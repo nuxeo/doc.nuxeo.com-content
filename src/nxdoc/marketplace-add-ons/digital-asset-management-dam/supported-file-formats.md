@@ -19,113 +19,114 @@ confluence:
     shortlink: Y4GyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/Y4GyAQ'
     source_link: /display/NXDOC710/Supported+File+Formats
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-31 14:59'
         message: ''
         version: '22'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-10-24 20:25'
         message: Tested .ai and .psd files => have thumbnails and previews ok
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-05 11:04'
         message: Reported changes from 5.6 documentation
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-08 12:01'
         message: Migrated to Confluence 4.0
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-08 12:01'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-07 18:07'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 19:26'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2010-07-28 15:01'
         message: format
         version: '15'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 19:40'
         message: ''
         version: '14'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 19:39'
         message: ''
         version: '13'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 19:39'
         message: ''
         version: '12'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 19:38'
         message: ''
         version: '11'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 19:34'
         message: ''
         version: '10'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 19:33'
         message: ''
         version: '9'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 19:33'
         message: ''
         version: '8'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 19:31'
         message: ''
         version: '7'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 19:31'
         message: ''
         version: '6'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 19:30'
         message: ''
         version: '5'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 19:30'
         message: ''
         version: '4'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 19:30'
         message: ''
         version: '3'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 19:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 19:29'
         message: ''

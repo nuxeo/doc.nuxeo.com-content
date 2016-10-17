@@ -20,53 +20,54 @@ confluence:
     shortlink: rICyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/rICyAQ'
     source_link: /display/NXDOC710/File+Manager
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 08:39'
         message: ''
         version: '10'
-    - 
+    -
         author: Anonymous
         date: '2015-12-07 15:23'
         message: link update
         version: '9'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-13 10:32'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-06 13:02'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-01 09:58'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-01 09:50'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-15 08:03'
         message: Step formatting
         version: '4'
-    - 
+    -
         author: Michaël Vachette
         date: '2015-06-12 10:13'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-02 16:00'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-02 15:57'
         message: ''

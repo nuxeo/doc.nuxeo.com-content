@@ -22,110 +22,111 @@ confluence:
     shortlink: '-oCyAQ'
     shortlink_source: 'https://doc.nuxeo.com/x/-oCyAQ'
     source_link: /display/NXDOC710/Web+Adapters+for+the+REST+API
+tree_item_index: 700
 history:
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-04-26 21:11'
         message: ''
         version: '21'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-04-26 18:24'
         message: ''
         version: '20'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-04-26 18:13'
         message: ''
         version: '19'
-    - 
+    -
         author: Damien Metzler
         date: '2016-02-25 09:28'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-04 17:46'
         message: Fix links to 7.10
         version: '17'
-    - 
+    -
         author: Arnaud Kervern
         date: '2015-10-15 13:02'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-14 13:58'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-29 09:05'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-29 09:05'
         message: Add examples from page Document Resources Endpoints
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-23 09:58'
         message: Add task and workflow web adapters
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-22 14:29'
         message: page formatting
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-22 14:28'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-22 14:27'
         message: >-
             Add convert, rendition and search web adapters and related
             documentation
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-03 08:56'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-03 08:55'
         message: ''
         version: '7'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-02 17:58'
         message: ''
         version: '6'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-02 17:34'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-02 17:32'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-02 17:23'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-02 16:56'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 00:51'
         message: ''

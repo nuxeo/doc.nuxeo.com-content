@@ -21,58 +21,59 @@ confluence:
     shortlink: 0oCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/0oCyAQ'
     source_link: /pages/viewpage.action?pageId=28475602
+tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-16 10:04'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2014-11-28 11:03'
         message: ''
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2014-11-28 11:01'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2014-11-28 11:00'
         message: ''
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2014-11-28 10:59'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 10:27'
         message: Add screenshot
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 10:26'
         message: ''
         version: '5'
-    - 
+    -
         author: Arnaud Kervern
         date: '2014-11-04 17:10'
         message: ''
         version: '4'
-    - 
+    -
         author: Arnaud Kervern
         date: '2014-11-04 17:09'
         message: ''
         version: '3'
-    - 
+    -
         author: Arnaud Kervern
         date: '2014-11-04 17:03'
         message: ''
         version: '2'
-    - 
+    -
         author: Arnaud Kervern
         date: '2014-11-04 16:51'
         message: ''

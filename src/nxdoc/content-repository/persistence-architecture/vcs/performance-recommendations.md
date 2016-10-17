@@ -20,78 +20,79 @@ confluence:
     shortlink: CYGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/CYGyAQ'
     source_link: /display/NXDOC710/Performance+Recommendations
+tree_item_index: 500
 history:
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-04-20 09:27'
         message: dd a note about redis invalidation in cluster mod
         version: '15'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-04-14 10:02'
         message: Add a note about swap
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-15 09:49'
         message: Update related pages
         version: '13'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-10-13 15:08'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 08:45'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-05 11:04'
         message: ''
         version: '10'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-08-04 10:17'
         message: ''
         version: '9'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-08-04 10:16'
         message: ''
         version: '8'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-08-04 10:14'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-16 12:18'
         message: Formatting
         version: '6'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-01-15 11:00'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:53'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-27 15:46'
         message: Added ImageMagick configuration
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 17:22'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 16:58'
         message: ''

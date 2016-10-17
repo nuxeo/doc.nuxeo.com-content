@@ -24,160 +24,161 @@ confluence:
     shortlink: K4GyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/K4GyAQ'
     source_link: /display/NXDOC710/Blob+Upload+for+Batch+Processing
+tree_item_index: 1100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-09 15:04'
         message: ''
         version: '31'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-12-09 13:59'
         message: ''
         version: '30'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-11-03 16:07'
         message: ''
         version: '29'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-11-03 10:52'
         message: ''
         version: '28'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-19 16:10'
         message: ''
         version: '27'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-19 16:02'
         message: ''
         version: '26'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-19 15:56'
         message: course title
         version: '25'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-19 09:18'
         message: Added video
         version: '24'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-06 16:32'
         message: ''
         version: '23'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-06 16:29'
         message: ''
         version: '22'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-06 12:19'
         message: ''
         version: '21'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-06 12:10'
         message: ''
         version: '20'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-06 11:56'
         message: ''
         version: '19'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-06 10:08'
         message: ''
         version: '18'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-06 09:53'
         message: ''
         version: '17'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-06 09:40'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 13:50'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-25 14:53'
         message: Removed related topics from TOC
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-23 13:36'
         message: ''
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-17 03:34'
         message: ''
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-17 03:02'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-30 12:23'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 15:05'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-03 15:19'
         message: >-
             Reported changes from 5.6 documentation on Content-Type and
             Content-Length headers and fileIdx parameter.  
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-01 11:15'
         message: Fixed typos
         version: '7'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-26 17:57'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-04 10:01'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-03 20:31'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-03 20:08'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-03 20:02'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-03 19:54'
         message: ''
@@ -295,7 +296,7 @@ JSON response data:
 ### <span style="color: rgb(0,0,0);">Dropping a Batch</span>
 
 ```
-DELETE /api/v1/upload/{batchId} 
+DELETE /api/v1/upload/{batchId}
 ```
 
 Returns a 200&nbsp;_OK_ &nbsp;status code with the following JSON data:
@@ -455,7 +456,7 @@ You can use the `batchId` property for blob in the JSON document you're sending 
     "title": "Default domain",
     "lastModified": "2013-09-06T08:53:10.00Z",
     "properties": {
-        "file:content": { 
+        "file:content": {
              "upload-batch":"batchId-50b2ccb2-ce69-4fdc-b24e-b4ea8c155a05",
              "upload-fileId":"0" // referencing the first file of the batch
          }

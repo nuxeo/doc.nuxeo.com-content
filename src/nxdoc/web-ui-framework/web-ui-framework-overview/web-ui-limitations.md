@@ -21,33 +21,34 @@ confluence:
     shortlink: oYGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/oYGyAQ'
     source_link: /display/NXDOC710/Web+UI+Limitations
+tree_item_index: 200
 history:
-    - 
+    -
         author: Anonymous
         date: '2015-10-14 14:05'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-24 16:54'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-07 15:36'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 15:17'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-04 15:05'
         message: typo
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-04 15:05'
         message: ''

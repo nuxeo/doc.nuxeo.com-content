@@ -19,238 +19,239 @@ confluence:
     shortlink: h4CyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/h4CyAQ'
     source_link: /display/NXDOC710/Repository+Concepts
+tree_item_index: 100
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 16:23'
         message: ''
         version: '47'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 14:47'
         message: ''
         version: '46'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 14:26'
         message: ''
         version: '45'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 14:24'
         message: ''
         version: '44'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 12:11'
         message: ''
         version: '43'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 11:50'
         message: ''
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 11:18'
         message: ''
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-30 12:23'
         message: Added children pages
         version: '40'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-11-26 18:51'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-25 16:09'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-19 12:09'
         message: 'Fixed typos, removed Jackrabbit from persistence back ends'
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-18 18:01'
         message: Fixed some typos
         version: '36'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 13:56'
         message: ''
         version: '35'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 13:56'
         message: ''
         version: '34'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 13:18'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 12:07'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 12:06'
         message: Formatting
         version: '31'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-09-13 23:15'
         message: Migrated to Confluence 4.0
         version: '30'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-09-13 23:15'
         message: document repository -> content repository
         version: '29'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-02-10 17:46'
         message: Jackrabbit backend is obsolete
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-06 18:01'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-04 17:53'
         message: formatting and typos
         version: '26'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-15 17:18'
         message: ''
         version: '25'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-15 17:15'
         message: ''
         version: '24'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-15 17:14'
         message: ''
         version: '23'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-15 17:13'
         message: ''
         version: '22'
-    - 
+    -
         author: Jane Zupan
         date: '2010-09-30 23:15'
         message: ''
         version: '21'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-06-28 08:13'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-20 17:31'
         message: formatting and typos
         version: '19'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-19 11:37'
         message: ''
         version: '18'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-19 10:58'
         message: ''
         version: '17'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-19 03:17'
         message: ''
         version: '16'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-19 02:47'
         message: ''
         version: '15'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-19 01:55'
         message: ''
         version: '14'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-19 01:53'
         message: ''
         version: '13'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-19 01:51'
         message: ''
         version: '12'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-19 01:50'
         message: ''
         version: '11'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-19 01:49'
         message: ''
         version: '10'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-19 01:43'
         message: ''
         version: '9'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-19 01:37'
         message: ''
         version: '8'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-19 01:33'
         message: ''
         version: '7'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-19 01:32'
         message: ''
         version: '6'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-19 01:29'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-12 11:20'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-12 11:09'
         message: ''
         version: '3'
-    - 
+    -
         author: Admin name placeholder
         date: '2010-03-01 00:38'
         message: ''
         version: '2'
-    - 
+    -
         author: Admin name placeholder
         date: '2010-03-01 00:37'
         message: ''

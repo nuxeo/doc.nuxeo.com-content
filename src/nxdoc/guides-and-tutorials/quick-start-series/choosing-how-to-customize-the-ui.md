@@ -18,133 +18,134 @@ confluence:
     shortlink: fICyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/fICyAQ'
     source_link: /display/NXDOC710/Choosing+How+to+Customize+the+UI
+tree_item_index: 600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 14:45'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-10 15:31'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-19 18:31'
         message: ''
         version: '24'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-17 18:30'
         message: ''
         version: '23'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 18:26'
         message: ''
         version: '22'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 18:26'
         message: ''
         version: '21'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 18:24'
         message: ''
         version: '20'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 18:20'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 18:19'
         message: ''
         version: '18'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 18:17'
         message: ''
         version: '17'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 15:53'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 14:53'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 14:52'
         message: Formatting
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 18:24'
         message: Updated JBoss RichFaces version
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-16 11:25'
         message: Migrated to Confluence 4.0
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-16 11:25'
         message: Fixed link
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 19:20'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-06 18:29'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-30 11:52'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-30 11:52'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-06-28 08:19'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-20 17:49'
         message: formatting and typos
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-04-27 11:16'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-04-27 11:13'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-04-27 11:10'
         message: ''
         version: '2'
-    - 
+    -
         author: Admin name placeholder
         date: '2010-02-26 10:25'
         message: ''

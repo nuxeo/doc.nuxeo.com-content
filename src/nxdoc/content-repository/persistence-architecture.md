@@ -17,23 +17,24 @@ confluence:
     shortlink: OYGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/OYGyAQ'
     source_link: /display/NXDOC710/Persistence+Architecture
+tree_item_index: 200
 history:
-    - 
+    -
         author: Anonymous
         date: '2014-11-04 16:00'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 16:09'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 16:02'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 15:26'
         message: ''

@@ -21,48 +21,49 @@ confluence:
     shortlink: KoCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/KoCyAQ'
     source_link: /display/NXDOC710/Workflow+Instance+Properties
+tree_item_index: 300
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-29 14:45'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 13:58'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-31 09:40'
         message: ''
         version: '7'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-30 18:57'
         message: ''
         version: '6'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-30 18:28'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 11:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 10:13'
         message: Formatting and added link to the explorer
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-19 12:39'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 16:25'
         message: ''

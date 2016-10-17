@@ -20,73 +20,74 @@ confluence:
     shortlink: FYGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/FYGyAQ'
     source_link: /display/NXDOC710/Nuxeo+and+Redis
+tree_item_index: 200
 history:
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-07-22 07:45'
         message: dd a note about redis usage and memory evictio
         version: '14'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-05-13 15:55'
         message: ''
         version: '13'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2016-04-01 08:55'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-08 13:30'
         message: Add Transient Store section
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-14 10:09'
         message: Formatting
         version: '10'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-12-11 16:43'
         message: ''
         version: '9'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-12-11 16:12'
         message: ''
         version: '8'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-12-11 16:10'
         message: Add a note about VCS row invalidation
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-04-27 14:31'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-06 13:07'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-06 13:06'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-06 10:37'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-05 16:40'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-05 16:38'
         message: ''

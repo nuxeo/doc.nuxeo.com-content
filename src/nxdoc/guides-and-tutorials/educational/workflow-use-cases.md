@@ -17,13 +17,14 @@ confluence:
     shortlink: moCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/moCyAQ'
     source_link: /display/NXDOC710/Workflow+Use+Cases
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 13:45'
         message: emove children display macro
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 01:08'
         message: ''

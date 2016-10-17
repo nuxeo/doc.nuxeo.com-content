@@ -32,33 +32,34 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/ZIGyAQ'
     source_link: >-
         /display/NXDOC710/How+to+Grant+the+Edit+Permission+without+the+Remove+Permission
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-18 15:36'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-18 14:35'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-04 14:12'
         message: Fix Explorer link
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-09 13:45'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Martins
         date: '2015-04-09 09:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2015-04-09 09:43'
         message: ''
@@ -88,7 +89,7 @@ As described on the page [Managing Permissions]({{page space='userdoc' page='man
 
     ```
       <extension target="org.nuxeo.ecm.core.security.SecurityService"
-        point="permissions"> 
+        point="permissions">
        <permission name="ReadWriteAndRemove">
             <include>Read</include>
             <include>Write</include>

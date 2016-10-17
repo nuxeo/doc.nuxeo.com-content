@@ -20,58 +20,59 @@ confluence:
     shortlink: BoGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/BoGyAQ'
     source_link: /display/NXDOC710/Internal+VCS+Model
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 15:13'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 17:04'
         message: TOC
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-11 17:53'
         message: ''
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-10-31 13:55'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-19 14:52'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:52'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:46'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:45'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 17:17'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 17:03'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 16:04'
         message: ''

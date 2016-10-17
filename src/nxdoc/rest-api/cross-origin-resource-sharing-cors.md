@@ -21,138 +21,139 @@ confluence:
     shortlink: NoCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/NoCyAQ'
     source_link: /pages/viewpage.action?pageId=28475446
+tree_item_index: 1200
 history:
-    - 
+    -
         author: Frantz Fischer
         date: '2016-09-02 13:50'
         message: ''
         version: '27'
-    - 
+    -
         author: Frantz Fischer
         date: '2016-09-02 13:44'
         message: ''
         version: '26'
-    - 
+    -
         author: Frantz Fischer
         date: '2016-09-02 13:44'
         message: ''
         version: '25'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-04-20 17:04'
         message: give name to excerpt
         version: '24'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-04-20 17:02'
         message: Make contribution sample an excerpt for REST API training
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 13:53'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 13:52'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 13:51'
         message: Update table of contents look
         version: '20'
-    - 
+    -
         author: Arnaud Kervern
         date: '2014-02-25 11:02'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-01 15:35'
         message: ''
         version: '18'
-    - 
+    -
         author: Arnaud Kervern
         date: '2013-07-29 18:33'
         message: ''
         version: '17'
-    - 
+    -
         author: Arnaud Kervern
         date: '2013-07-29 18:33'
         message: ''
         version: '16'
-    - 
+    -
         author: Arnaud Kervern
         date: '2013-07-29 18:32'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-29 17:22'
         message: Added Since 5.7.2
         version: '14'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-07-29 17:10'
         message: ''
         version: '13'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-07-29 17:10'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-29 17:00'
         message: Fixed typos
         version: '11'
-    - 
+    -
         author: Arnaud Kervern
         date: '2013-07-29 16:38'
         message: ''
         version: '10'
-    - 
+    -
         author: Arnaud Kervern
         date: '2013-07-29 16:38'
         message: ''
         version: '9'
-    - 
+    -
         author: Arnaud Kervern
         date: '2013-07-29 16:36'
         message: ''
         version: '8'
-    - 
+    -
         author: Arnaud Kervern
         date: '2013-07-29 16:35'
         message: ''
         version: '7'
-    - 
+    -
         author: Arnaud Kervern
         date: '2013-07-29 16:34'
         message: ''
         version: '6'
-    - 
+    -
         author: Arnaud Kervern
         date: '2013-07-29 16:34'
         message: ''
         version: '5'
-    - 
+    -
         author: Arnaud Kervern
         date: '2013-07-29 16:32'
         message: ''
         version: '4'
-    - 
+    -
         author: Arnaud Kervern
         date: '2013-07-29 16:31'
         message: ''
         version: '3'
-    - 
+    -
         author: Arnaud Kervern
         date: '2013-07-29 16:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Arnaud Kervern
         date: '2013-07-29 16:29'
         message: ''

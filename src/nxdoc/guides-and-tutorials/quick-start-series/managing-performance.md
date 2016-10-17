@@ -19,78 +19,79 @@ confluence:
     shortlink: l4CyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/l4CyAQ'
     source_link: /display/NXDOC710/Managing+Performance
+tree_item_index: 800
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 14:05'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-02-25 13:58'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-20 14:58'
         message: Fix page layout to use 2/3 layout
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 16:34'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-05-23 11:10'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-05-22 17:56'
         message: ''
         version: '10'
-    - 
+    -
         author: Stuart Miller
         date: '2014-05-07 21:49'
         message: ''
         version: '9'
-    - 
+    -
         author: Stuart Miller
         date: '2014-05-07 21:00'
         message: ''
         version: '8'
-    - 
+    -
         author: Stuart Miller
         date: '2014-05-07 20:07'
         message: ''
         version: '7'
-    - 
+    -
         author: Stuart Miller
         date: '2014-05-07 18:52'
         message: ''
         version: '6'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-05-07 17:38'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-05-07 17:29'
         message: ''
         version: '4'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-05-07 00:42'
         message: ''
         version: '3'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-05-07 00:36'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-05-07 00:09'
         message: ''

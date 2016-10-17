@@ -21,58 +21,59 @@ confluence:
     shortlink: LYCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/LYCyAQ'
     source_link: /display/NXDOC710/About+Tasks
+tree_item_index: 600
 history:
-    - 
+    -
         author: Vincent Dutat
         date: '2016-05-12 20:07'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-25 15:57'
         message: ''
         version: '10'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-12-08 14:45'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 13:59'
         message: ''
         version: '8'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-31 14:29'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-28 10:14'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 14:25'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 11:48'
         message: Added link
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-20 00:08'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-20 00:07'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-19 16:53'
         message: ''

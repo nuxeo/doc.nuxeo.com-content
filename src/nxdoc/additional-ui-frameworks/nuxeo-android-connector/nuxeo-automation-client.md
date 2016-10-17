@@ -18,58 +18,59 @@ confluence:
     shortlink: m4CyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/m4CyAQ'
     source_link: /display/NXDOC710/Nuxeo+Automation+client
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 17:59'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 17:59'
         message: ''
         version: '10'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 14:27'
         message: ''
         version: '9'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 14:26'
         message: ''
         version: '8'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 14:23'
         message: ''
         version: '7'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 14:23'
         message: ''
         version: '6'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 14:23'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 14:22'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 14:22'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 14:22'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 14:21'
         message: ''
@@ -108,8 +109,8 @@ Once you have the `NuxeoContext` you can directly access to the settings and the
 
 ```
 
-  ctx.getServerConfig().setLogin("jdoe"); 
-  ctx.getServerConfig().setPassword("secret"); 
+  ctx.getServerConfig().setLogin("jdoe");
+  ctx.getServerConfig().setPassword("secret");
   ctx.getServerConfig().setServerBaseUrl("http://10.0.2.2:8080/nuxeo/");
 
   if (ctx.getNetworkStatus().isNuxeoServerReachable()) {

@@ -29,130 +29,131 @@ confluence:
     shortlink: T4GyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/T4GyAQ'
     source_link: /display/NXDOC710/Authentication+and+User+Management
+tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 09:19'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 09:12'
         message: >-
             SSO with Portals: Add Manual HTTP Calls section and replace Java
             Automation client with Java client
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 08:27'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-29 16:03'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-29 14:07'
         message: Nuxeo Platform -> the Nuxeo Platform
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-17 10:10'
         message: 'remove deleted page '
         version: '20'
-    - 
+    -
         author: Anonymous
         date: '2015-12-04 13:55'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-04 13:54'
         message: ''
         version: '18'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-04 13:51'
         message: ''
         version: '17'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-04 13:49'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-01 17:04'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-02 13:36'
         message: Fix TOC style in Install & Config tab
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-02 13:05'
         message: Shorter titles in install&config tab
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-02 13:01'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-02 12:57'
         message: Fix some anchor links
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-02 12:48'
         message: Fix some fomat issues
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-02 12:40'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-22 00:56'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-22 00:55'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-22 00:54'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-22 00:11'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-22 00:02'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-21 23:48'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-13 12:59'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 10:20'
         message: ''
@@ -283,7 +284,7 @@ Groups are defined on the `groups` element (also referencing already contributed
   <subGroupsField>subgroups</subGroupsField>
   <parentGroupsField>parentgroup</parentGroupsField>
   <listingMode>search_only</listingMode>
-</groups> 
+</groups>
 ```
 
 ## Default Users and Groups Configuration

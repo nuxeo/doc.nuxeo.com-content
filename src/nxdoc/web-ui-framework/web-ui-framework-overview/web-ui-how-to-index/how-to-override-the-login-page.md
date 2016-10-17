@@ -28,48 +28,49 @@ confluence:
     shortlink: 6ICyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/6ICyAQ'
     source_link: /display/NXDOC710/How+to+Override+the+Login+Page
+tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-14 15:36'
         message: ''
         version: '9'
-    - 
+    -
         author: Arnaud Kervern
         date: '2015-10-13 09:16'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:32'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:05'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 11:09'
         message: ''
         version: '5'
-    - 
+    -
         author: Gildas Lefevre
         date: '2014-11-05 17:22'
         message: ''
         version: '4'
-    - 
+    -
         author: Gildas Lefevre
         date: '2014-11-05 16:48'
         message: ''
         version: '3'
-    - 
+    -
         author: Gildas Lefevre
         date: '2014-11-05 16:46'
         message: 'NXDOC-363: How to override the login page'
         version: '2'
-    - 
+    -
         author: Gildas Lefevre
         date: '2014-11-05 16:23'
         message: ''
@@ -106,7 +107,7 @@ String logoWidth = LoginScreenHelper.getValueWithDefault(screenConfig.getLogoWid
 String logoHeight = LoginScreenHelper.getValueWithDefault(screenConfig.getLogoHeight(), "20");
 String logoAlt = LoginScreenHelper.getValueWithDefault(screenConfig.getLogoAlt(), "Nuxeo");
 String logoUrl = LoginScreenHelper.getValueWithDefault(screenConfig.getLogoUrl(), context + "/img/nuxeo_logo.png");
-%> 
+%>
 ```
 
 {{/panel}}

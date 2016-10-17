@@ -21,163 +21,164 @@ confluence:
     shortlink: SIGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/SIGyAQ'
     source_link: /display/NXDOC710/Elasticsearch+Indexing+Logic
+tree_item_index: 600
 history:
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-12-17 14:18'
         message: ix typ
         version: '32'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-12-17 14:17'
         message: Added video
         version: '31'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-08-06 09:44'
         message: ''
         version: '30'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-07-02 13:27'
         message: Fixed typo
         version: '29'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-26 13:48'
         message: ''
         version: '28'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-26 13:47'
         message: ''
         version: '27'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-26 13:45'
         message: ''
         version: '26'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-20 09:03'
         message: ''
         version: '25'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-12-01 17:02'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 16:55'
         message: Add subtitiles
         version: '23'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 15:33'
         message: ''
         version: '22'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 16:13'
         message: ''
         version: '21'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 22:29'
         message: ''
         version: '20'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 22:27'
         message: ''
         version: '19'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-08-04 11:02'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-30 10:27'
         message: ''
         version: '17'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-09 12:17'
         message: 'Removing the Indexing strategy part which is incomplete. '
         version: '16'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-07-09 11:23'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 16:01'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-02 16:45'
         message: ''
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-02 16:24'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-18 19:13'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-18 16:28'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-18 16:19'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-18 10:21'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-17 19:19'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-17 19:17'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-17 19:16'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-17 19:01'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-17 18:59'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-17 18:32'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-17 18:26'
         message: ''

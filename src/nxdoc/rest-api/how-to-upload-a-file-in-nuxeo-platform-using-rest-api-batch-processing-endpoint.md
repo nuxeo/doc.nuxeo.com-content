@@ -37,6 +37,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/AYGyAQ'
     source_link: >-
         /display/NXDOC710/How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
+tree_item_index: 1800
 history:
     -
         author: Solen Guitter

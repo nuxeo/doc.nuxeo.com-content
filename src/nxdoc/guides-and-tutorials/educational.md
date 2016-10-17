@@ -17,18 +17,19 @@ confluence:
     shortlink: pYCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/pYCyAQ'
     source_link: /display/NXDOC710/Educational
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 13:46'
         message: emove children display macr
         version: '3'
-    - 
+    -
         author: Anonymous
         date: '2014-09-02 11:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-04 00:34'
         message: ''

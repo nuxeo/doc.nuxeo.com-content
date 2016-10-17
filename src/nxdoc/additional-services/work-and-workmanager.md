@@ -22,38 +22,39 @@ confluence:
     shortlink: U4CyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/U4CyAQ'
     source_link: /display/NXDOC710/Work+and+WorkManager
+tree_item_index: 1100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-06-27 08:14'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-22 11:56'
         message: Add Dedicated Nodes section
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-02-04 14:43'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-04 14:08'
         message: 'Updated links, added TOC'
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 18:49'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 18:42'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 17:53'
         message: ''

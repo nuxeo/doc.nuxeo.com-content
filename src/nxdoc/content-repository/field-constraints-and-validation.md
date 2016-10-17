@@ -20,248 +20,249 @@ confluence:
     shortlink: UICyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/UICyAQ'
     source_link: /display/NXDOC710/Field+Constraints+and+Validation
+tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-10 13:12'
         message: ix explorer link
         version: '49'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-04 17:24'
         message: Fix links to 7.10
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-15 12:49'
         message: Add links to explorer.nuxeo.com
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-10 09:32'
         message: ''
         version: '46'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2015-01-26 19:12'
         message: ''
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-12 17:06'
         message: 'Moving Extending section in a dedicated how-to '
         version: '44'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-01-05 12:07'
         message: ''
         version: '43'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-01-05 12:06'
         message: ''
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-29 13:48'
         message: typos and formatting
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-29 10:23'
         message: Typo
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-26 15:22'
         message: ''
         version: '39'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-23 13:50'
         message: Formatting
         version: '38'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-23 11:28'
         message: ''
         version: '37'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-23 10:47'
         message: ''
         version: '36'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-23 09:53'
         message: ''
         version: '35'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-23 09:49'
         message: ''
         version: '34'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-23 09:04'
         message: ''
         version: '33'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-23 09:03'
         message: ''
         version: '32'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-23 09:02'
         message: ''
         version: '31'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-22 17:25'
         message: ''
         version: '30'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-22 16:49'
         message: ''
         version: '29'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-22 15:39'
         message: ''
         version: '28'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-22 14:54'
         message: ''
         version: '27'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-22 12:25'
         message: ''
         version: '26'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-22 11:37'
         message: ''
         version: '25'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 17:39'
         message: ''
         version: '24'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 15:46'
         message: ''
         version: '23'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 15:42'
         message: ''
         version: '22'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 15:36'
         message: ''
         version: '21'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 15:33'
         message: ''
         version: '20'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 15:29'
         message: ''
         version: '19'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 15:06'
         message: ''
         version: '18'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 13:24'
         message: ''
         version: '17'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 13:08'
         message: ''
         version: '16'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 12:58'
         message: ''
         version: '15'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 12:38'
         message: ''
         version: '14'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 12:00'
         message: ''
         version: '13'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 11:33'
         message: ''
         version: '12'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 11:31'
         message: ''
         version: '11'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 11:29'
         message: ''
         version: '10'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 11:19'
         message: ''
         version: '9'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 11:10'
         message: ''
         version: '8'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 10:54'
         message: ''
         version: '7'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 10:48'
         message: ''
         version: '6'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 10:48'
         message: ''
         version: '5'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 10:47'
         message: ''
         version: '4'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 09:52'
         message: ''
         version: '3'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-18 09:22'
         message: ''
         version: '2'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2014-12-17 17:48'
         message: ''
@@ -931,7 +932,7 @@ private void constraintIntrospection(Field field, List<String> path) {
             constraintIntrospection(childField, newPath);
         }
     }
-} 
+}
 // output:
 vs:users has constraints: []
 vs:users:user has constraints: []

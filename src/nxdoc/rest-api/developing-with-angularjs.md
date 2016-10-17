@@ -24,143 +24,144 @@ confluence:
     shortlink: bICyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/bICyAQ'
     source_link: /display/NXDOC710/Developing+with+AngularJS
+tree_item_index: 1700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 09:19'
         message: 'XDOC-658: Marketplace packages are now called Nuxeo Package'
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-16 08:36'
         message: ''
         version: '27'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2015-07-15 20:09'
         message: ''
         version: '26'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-07-10 09:48'
         message: ''
         version: '25'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-07-10 09:45'
         message: Fixed tutorial
         version: '24'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-07-10 09:23'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-10 07:39'
         message: ''
         version: '22'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-07-09 15:41'
         message: Added bower install npm install
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-01 09:03'
         message: Reorganize content
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-30 16:06'
         message: Format and typos
         version: '19'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-23 10:50'
         message: Added tags and related doc
         version: '18'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-23 10:46'
         message: Formatting
         version: '17'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-23 10:46'
         message: Formatting
         version: '16'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-23 10:45'
         message: Added reporting info
         version: '15'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-23 10:43'
         message: Removed todo and restriction warning
         version: '14'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-23 10:30'
         message: Formatting
         version: '13'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-23 10:29'
         message: Formatting
         version: '12'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-23 10:28'
         message: Formatting
         version: '11'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-23 10:27'
         message: Added app bootstrapping details
         version: '10'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-22 13:49'
         message: ''
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-22 13:48'
         message: Added embedded deployment first details
         version: '8'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-22 10:41'
         message: Added dev environment setup
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-22 09:12'
         message: angular-nuxeo introduction
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-19 16:55'
         message: ''
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-18 16:52'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-18 16:51'
         message: Started adding deployment options
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-18 15:59'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-06-18 14:58'
         message: ''
@@ -229,8 +230,8 @@ In order to get a clean installation, we will make use of [Yeoman's angular gene
 
     ```js
     angular
-      .module('someModule', 
-        '...', 
+      .module('someModule',
+        '...',
         'nuxeo'
       ])
     ```

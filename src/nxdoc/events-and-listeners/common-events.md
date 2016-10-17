@@ -20,33 +20,34 @@ confluence:
     shortlink: g4GyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/g4GyAQ'
     source_link: /display/NXDOC710/Common+Events
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 15:19'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-25 13:44'
         message: Fix anchors in TOC
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 11:50'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 14:04'
         message: Update table of contents look
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-27 12:03'
         message: Added about to create
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-09 11:40'
         message: ''

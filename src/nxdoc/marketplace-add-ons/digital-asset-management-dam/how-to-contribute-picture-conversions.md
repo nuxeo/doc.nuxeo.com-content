@@ -29,118 +29,119 @@ confluence:
     shortlink: WoCyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/WoCyAQ'
     source_link: /display/NXDOC710/How+to+Contribute+Picture+Conversions
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-15 13:14'
         message: dd links to the explore
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-09 14:50'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-08 17:01'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-08 17:00'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-08 16:56'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-08 16:56'
         message: ''
         version: '18'
-    - 
+    -
         author: Thomas Roger
         date: '2015-01-08 13:41'
         message: ''
         version: '17'
-    - 
+    -
         author: Thomas Roger
         date: '2015-01-08 13:39'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-16 18:15'
         message: 'Format steps, add related pages'
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-03 15:59'
         message: ''
         version: '14'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 19:49'
         message: ''
         version: '13'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 19:03'
         message: ''
         version: '12'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 16:18'
         message: ''
         version: '11'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 16:14'
         message: ''
         version: '10'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 15:30'
         message: ''
         version: '9'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 15:24'
         message: ''
         version: '8'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 12:09'
         message: ''
         version: '7'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 11:17'
         message: ''
         version: '6'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-01 10:47'
         message: ''
         version: '5'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-28 19:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-28 19:02'
         message: ''
         version: '3'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-28 18:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-28 18:24'
         message: ''

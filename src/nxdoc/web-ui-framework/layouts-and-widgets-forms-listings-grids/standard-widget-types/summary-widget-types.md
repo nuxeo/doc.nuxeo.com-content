@@ -21,33 +21,34 @@ confluence:
     shortlink: mIGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/mIGyAQ'
     source_link: /display/NXDOC710/Summary+Widget+Types
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 12:22'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 14:15'
         message: Update table of contents look
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-08 16:29'
         message: Added IDs and related topics
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-06 16:00'
         message: add the list of most of default summary widget types
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-06 15:18'
         message: add structure
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-05 17:28'
         message: ''

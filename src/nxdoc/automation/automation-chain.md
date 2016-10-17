@@ -19,105 +19,106 @@ confluence:
     shortlink: V4CyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/V4CyAQ'
     source_link: /display/NXDOC710/Automation+Chain
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 16:10'
         message: ''
         version: '20'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2015-12-23 10:27'
         message: ''
         version: '19'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-01-05 15:29'
         message: alias chain
         version: '18'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-02 17:04'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-07 11:12'
         message: ''
         version: '16'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-02 02:48'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-20 17:15'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-20 17:10'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-29 12:18'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-29 12:17'
         message: Fixed formatting and typos
         version: '11'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-23 12:12'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 14:47'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 12:03'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 12:03'
         message: >-
             Added link, formatting, replaced "operation chain" with "automation
             chain"
         version: '7'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-16 16:35'
         message: ''
         version: '6'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-16 16:34'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 18:25'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 18:25'
         message: corrected links
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 18:02'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-24 23:37'
         message: ''

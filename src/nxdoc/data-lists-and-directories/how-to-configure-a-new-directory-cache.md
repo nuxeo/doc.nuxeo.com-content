@@ -28,33 +28,34 @@ confluence:
     shortlink: GIGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/GIGyAQ'
     source_link: /display/NXDOC710/How+to+Configure+a+New+Directory+Cache
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-16 16:55'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-16 16:54'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-16 16:43'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-16 16:35'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-16 16:33'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-16 16:06'
         message: ''

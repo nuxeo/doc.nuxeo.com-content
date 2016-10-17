@@ -17,23 +17,24 @@ confluence:
     shortlink: p4GyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/p4GyAQ'
     source_link: /display/NXDOC710/How+to+Submit+a+Bug+Report
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-11 09:40'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-11 09:40'
         message: ''
         version: '3'
-    - 
+    -
         author: Laurent Doguin
         date: '2013-12-10 14:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Laurent Doguin
         date: '2013-12-10 14:39'
         message: ''

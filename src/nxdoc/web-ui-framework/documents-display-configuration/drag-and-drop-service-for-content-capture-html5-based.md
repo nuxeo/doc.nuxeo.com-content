@@ -22,143 +22,144 @@ confluence:
     shortlink: cIGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/cIGyAQ'
     source_link: /pages/viewpage.action?pageId=28475760
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 11:11'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 11:09'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-07 15:22'
         message: link update
         version: '26'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-15 12:39'
         message: ''
         version: '25'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-13 11:10'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-22 15:13'
         message: Format and reduce related pages
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-17 17:50'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-17 17:46'
         message: Updated screenshots
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 17:53'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 17:52'
         message: Formatting
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 18:27'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-18 10:53'
         message: Added links to explorer
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 15:02'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-11 15:58'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-18 17:44'
         message: Added related topics
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-18 15:07'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-18 15:02'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-18 15:01'
         message: Fixed typos and format
         version: '11'
-    - 
+    -
         author: Thomas Roger
         date: '2013-06-18 14:43'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-17 09:19'
         message: Migrated to Confluence 4.0
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-17 09:19'
         message: added toc
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2011-08-09 17:13'
         message: ''
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-05-10 12:12'
         message: ''
         version: '6'
-    - 
+    -
         author: Eric Barroca
         date: '2011-05-06 20:59'
         message: ''
         version: '5'
-    - 
+    -
         author: Eric Barroca
         date: '2011-05-06 20:59'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-05-06 10:32'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-05-06 10:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-05-06 10:27'
         message: ''

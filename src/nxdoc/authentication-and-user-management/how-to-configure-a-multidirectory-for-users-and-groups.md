@@ -29,58 +29,59 @@ confluence:
     shortlink: P4GyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/P4GyAQ'
     source_link: /display/NXDOC710/How+to+Configure+a+Multidirectory+for+Users+and+Groups
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-18 10:02'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-18 10:00'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:25'
         message: ''
         version: '9'
-    - 
+    -
         author: Thierry Martins
         date: '2014-11-27 18:11'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 18:01'
         message: fix xml and add details in steps
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 17:38'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-17 10:15'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-17 10:14'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-17 10:06'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Martins
         date: '2014-07-16 12:22'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2014-07-16 12:05'
         message: ''

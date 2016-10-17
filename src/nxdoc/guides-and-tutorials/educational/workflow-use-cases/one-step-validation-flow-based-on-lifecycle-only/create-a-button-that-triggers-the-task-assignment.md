@@ -20,153 +20,154 @@ confluence:
     shortlink: FIGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/FIGyAQ'
     source_link: /display/NXDOC710/Create+a+button+that+triggers+the+task+assignment
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-28 12:37'
         message: 'ix Studio menu label     '
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-18 15:38'
         message: 'replace "Write" by "Edit"  '
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 16:51'
         message: link update
         version: '28'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-01-22 12:32'
         message: ''
         version: '27'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-08-30 17:46'
         message: Migrated to Confluence 4.0
         version: '26'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-08-30 17:46'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2011-08-06 00:56'
         message: ''
         version: '24'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 18:28'
         message: ''
         version: '23'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 18:25'
         message: ''
         version: '22'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 17:24'
         message: ''
         version: '21'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 17:23'
         message: ''
         version: '20'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-06-01 17:05'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-27 19:15'
         message: Added "send email" step in operation chain
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2010-08-30 15:25'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2010-08-30 15:25'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2010-08-30 15:22'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2010-08-30 14:44'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2010-08-18 11:36'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2010-08-18 11:35'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2010-08-18 11:34'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2010-08-18 11:17'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2010-08-18 11:08'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-28 01:45'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-28 00:40'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-28 00:34'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-28 00:11'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-27 09:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-27 09:02'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-27 09:02'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-27 08:46'
         message: ''

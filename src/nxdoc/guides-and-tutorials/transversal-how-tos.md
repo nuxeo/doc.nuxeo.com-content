@@ -17,38 +17,39 @@ confluence:
     shortlink: pICyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/pICyAQ'
     source_link: /display/NXDOC710/Transversal+How-Tos
+tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-17 12:33'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-17 11:58'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 13:45'
         message: 'remove children display macro '
         version: '5'
-    - 
+    -
         author: Anonymous
         date: '2014-07-18 15:49'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 15:24'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 00:21'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-04 00:36'
         message: ''

@@ -22,6 +22,7 @@ confluence:
     shortlink: LYGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/LYGyAQ'
     source_link: /display/NXDOC710/JSON+Marshalling
+tree_item_index: 1000
 history:
     -
         author: Manon Lumeau

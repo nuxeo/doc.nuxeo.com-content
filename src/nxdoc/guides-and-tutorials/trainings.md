@@ -15,18 +15,19 @@ confluence:
     shortlink: bojZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/bojZAQ'
     source_link: /display/NXDOC710/Trainings
+tree_item_index: 500
 history:
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-04-20 13:19'
         message: ''
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-04-20 13:17'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-04-20 13:16'
         message: ''

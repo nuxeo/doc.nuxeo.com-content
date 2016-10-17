@@ -18,28 +18,29 @@ confluence:
     shortlink: QICyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/QICyAQ'
     source_link: /display/NXDOC710/Clients
+tree_item_index: 1400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 13:49'
         message: emove children display macr
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-04-21 14:20'
         message: testing to see if I can get a clients list for the rest api training
         version: '4'
-    - 
+    -
         author: Anonymous
         date: '2013-10-17 11:39'
         message: Added list of children pages with excerpts
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-16 17:01'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-16 01:56'
         message: ''

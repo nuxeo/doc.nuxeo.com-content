@@ -23,222 +23,223 @@ confluence:
     shortlink: '-4CyAQ'
     shortlink_source: 'https://doc.nuxeo.com/x/-4CyAQ'
     source_link: /display/NXDOC710/Content+Enricher
+tree_item_index: 800
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-02 09:53'
         message: ''
         version: '43'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-05-03 13:05'
         message: ''
         version: '42'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-05-02 17:33'
         message: ''
         version: '41'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-04 17:43'
         message: Fix links to 7.10
         version: '40'
-    - 
+    -
         author: Thomas Roger
         date: '2015-11-04 13:32'
         message: ''
         version: '39'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-11-02 18:49'
         message: ''
         version: '38'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-11-02 18:39'
         message: ''
         version: '37'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-02 15:57'
         message: ''
         version: '36'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-19 16:09'
         message: ''
         version: '35'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-19 16:06'
         message: Added video
         version: '34'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-10-13 14:47'
         message: ''
         version: '33'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-10-13 14:44'
         message: ''
         version: '32'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-09-16 10:11'
         message: Fix header format
         version: '31'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-09-10 19:08'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-08 07:40'
         message: Format
         version: '29'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-07 09:37'
         message: Added how to call enrichers section
         version: '28'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-07 09:28'
         message: Fixed typo
         version: '27'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-07 09:28'
         message: Fixed contributing your enricher section
         version: '26'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-04 09:00'
         message: Fixed formatting and unneeded text
         version: '25'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-04 08:59'
         message: 'Added how to contribute an enricher, fixed XML'
         version: '24'
-    - 
+    -
         author: Thomas Roger
         date: '2015-08-05 09:39'
         message: ''
         version: '23'
-    - 
+    -
         author: Thomas Roger
         date: '2015-08-05 09:38'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2015-05-04 09:03'
         message: >-
             Add links to javadoc, and children and permission enrichers in
             additional enrichers sections
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-30 15:54'
         message: 'Update response examples from 7.2, add breadcrumb enricher'
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-30 09:58'
         message: >-
             Replacing deprecated headers X-NXContext-Category and
             X-NXDocumentProperties by X-NXenrichers.document and X-NXproperties
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-30 09:26'
         message: typo
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-16 10:48'
         message: ''
         version: '17'
-    - 
+    -
         author: Nelson Silva
         date: '2014-12-16 10:30'
         message: ''
         version: '16'
-    - 
+    -
         author: Nelson Silva
         date: '2014-12-15 10:21'
         message: Add parameters and vocabulary enricher
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-10-06 11:35'
         message: ''
         version: '14'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-10-02 14:04'
         message: ''
         version: '13'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-10-02 14:02'
         message: Add preview content enricher
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 15:09'
         message: Formatting
         version: '11'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-20 11:08'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-28 09:23'
         message: formatting
         version: '9'
-    - 
+    -
         author: Vincent Dutat
         date: '2014-07-24 17:55'
         message: ''
         version: '8'
-    - 
+    -
         author: Vincent Dutat
         date: '2014-07-24 17:49'
         message: ''
         version: '7'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-07-24 17:15'
         message: little update on content enrich
         version: '6'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-07-24 15:54'
         message: renaming rest contrib into content enrich
         version: '5'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-07-24 14:18'
         message: ''
         version: '4'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-07-22 11:05'
         message: ''
         version: '3'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-07-22 11:03'
         message: Rest Contributors
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 00:58'
         message: ''
@@ -624,7 +625,7 @@ Here is a sample to get you started, that provides a document's parent id, title
 <extension target="org.nuxeo.ecm.core.io.MarshallerRegistry" point="marshallers">
   <register class="org.nuxeo.university.enrichers.ParentDocEnricher" enable="true" />
 </extension>
-<!-- Stop copying here if you declare the enricher in Nuxeo Studio --> 
+<!-- Stop copying here if you declare the enricher in Nuxeo Studio -->
 </component>
 ```
 
@@ -645,9 +646,9 @@ import org.nuxeo.ecm.core.api.CoreSession;
 import org.nuxeo.ecm.core.api.DocumentModel;
 
 // The class will be instanciated as a singleton
-// Priority defines which marshaller will be used in case of conflict. Priority is an integer. 
+// Priority defines which marshaller will be used in case of conflict. Priority is an integer.
 // The higher the number, the more priority you get: 10 > 1 for instance.
-@Setup(mode = SINGLETON, priority = REFERENCE) 
+@Setup(mode = SINGLETON, priority = REFERENCE)
 public class ParentDocEnricher extends AbstractJsonEnricher<DocumentModel> { // You could also enrich a user or anything else
 
 	// The enricher will be called using X-NXenrichers.document: name (name being parentDoc here)
@@ -698,7 +699,7 @@ Here is a sample to get you started with a content enricher for the object&nbsp;
            point="marshallers">
   <register class="org.nuxeo.sample.enrichers.LogEntryEnricher" enable="true" />
 </extension>
-<!-- Stop copying here if you declare the enricher in Nuxeo Studio --> 
+<!-- Stop copying here if you declare the enricher in Nuxeo Studio -->
 </component>
 ```
 

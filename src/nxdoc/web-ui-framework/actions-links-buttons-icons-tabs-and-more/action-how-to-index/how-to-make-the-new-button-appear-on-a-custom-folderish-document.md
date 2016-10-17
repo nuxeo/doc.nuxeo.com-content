@@ -30,113 +30,114 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/J4GyAQ'
     source_link: >-
         /display/NXDOC710/How+to+Make+the+New+Button+Appear+on+a+Custom+Folderish+Document
+tree_item_index: 100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-07 11:01'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:32'
         message: ''
         version: '21'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 12:12'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-17 10:55'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-16 17:58'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 17:18'
         message: Renamed titles
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-05 15:04'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-05-23 15:46'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-05-23 15:44'
         message: ''
         version: '14'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-05-14 11:09'
         message: ''
         version: '13'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-05-14 11:05'
         message: ''
         version: '12'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-05-14 11:04'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 14:49'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 14:49'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-06 08:08'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-06 08:07'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 12:51'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 12:50'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 12:39'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-27 23:11'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-27 23:08'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-27 23:06'
         message: ''

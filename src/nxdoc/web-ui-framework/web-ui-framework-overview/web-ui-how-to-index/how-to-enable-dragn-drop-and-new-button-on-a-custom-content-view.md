@@ -28,23 +28,24 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/aICyAQ'
     source_link: >-
         /display/NXDOC710/How+to+Enable+Drag%27n+Drop+and+New+Button+on+a+Custom+Content+View
+tree_item_index: 1500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-21 10:24'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Martins
         date: '2015-07-21 16:15'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-21 16:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2015-07-20 09:17'
         message: ''

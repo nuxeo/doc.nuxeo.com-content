@@ -21,75 +21,76 @@ confluence:
     shortlink: WIGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/WIGyAQ'
     source_link: /display/NXDOC710/Elasticsearch+Passthrough
+tree_item_index: 800
 history:
-    - 
+    -
         author: Guillaume Renard
         date: '2016-06-20 12:58'
         message: ix typ
         version: '14'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-12-08 11:17'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-05 09:04'
         message: Add link to nuxeo.conf and fix typos
         version: '12'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-11-04 13:00'
         message: ''
         version: '11'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-03 15:22'
         message: Fixed typo
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-21 15:47'
         message: >-
             Fix request filters names and links in Contributing a Custom Index
             View with a SearchRequestFilter
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-16 12:09'
         message: ''
         version: '8'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-10-02 16:08'
         message: ''
         version: '7'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-10-02 15:51'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-10-02 12:01'
         message: ''
         version: '5'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 16:02'
         message: ''
         version: '4'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 15:34'
         message: ''
         version: '3'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 11:55'
         message: ''
         version: '2'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 08:47'
         message: ''
@@ -143,12 +144,12 @@ The platform will use the [DefaultSearchRequestFilter](https://github.com/nuxeo/
             "filter": {
                 "terms": {
                     "ecm:acl": [
-                        "members", 
-                        "jdoe", 
+                        "members",
+                        "jdoe",
                         "Everyone"
                     ]
                 }
-            }, 
+            },
             "query": {
                 "match_all": {}
             }

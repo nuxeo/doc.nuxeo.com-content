@@ -20,78 +20,79 @@ confluence:
     shortlink: tYGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/tYGyAQ'
     source_link: /display/NXDOC710/Choosing+How+to+Import+Data+in+the+Nuxeo+Platform
+tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 14:07'
         message: emove children display macro
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-10 14:32'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-09 14:50'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-07 15:11'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-07 15:11'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-17 09:10'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-06 11:34'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 10:46'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 15:50'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-21 10:55'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 11:27'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 11:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-16 15:44'
         message: Added links to related pages for each import approach
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-16 15:16'
         message: 'Typos, added TOC and related topics'
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-12-16 14:48'
         message: ''

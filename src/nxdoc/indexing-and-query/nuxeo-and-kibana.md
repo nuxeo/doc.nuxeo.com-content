@@ -19,28 +19,29 @@ confluence:
     shortlink: X4CyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/X4CyAQ'
     source_link: /display/NXDOC710/Nuxeo+and+Kibana
+tree_item_index: 1000
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-13 15:28'
         message: ''
         version: '5'
-    - 
+    -
         author: Anne Jubert
         date: '2015-10-12 13:56'
         message: ''
         version: '4'
-    - 
+    -
         author: Anne Jubert
         date: '2015-10-12 10:13'
         message: ''
         version: '3'
-    - 
+    -
         author: Anne Jubert
         date: '2015-10-12 10:13'
         message: ''
         version: '2'
-    - 
+    -
         author: Anne Jubert
         date: '2015-10-12 10:01'
         message: ''
@@ -244,8 +245,8 @@ We will allow the embedded Elasticsearch to answer any HTTP request on port 9200
     *   So basically, you now have:
 
         ```xml
-        . . . 
-        elasticsearch.httpEnabled=true 
+        . . .
+        elasticsearch.httpEnabled=true
         . . .
         ```
 
