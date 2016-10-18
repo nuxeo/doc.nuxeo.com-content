@@ -35,6 +35,10 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/94CyAQ'
     source_link: /display/NXDOC710/How+to+Add+a+Button+in+the+Web+UI
 tree_item_index: 1100
+version_override:
+    'FT': 'nxdoc/how-to-add-a-button-in-the-jsf-ui'
+    '6.0': 60/admindoc/how-to-add-a-button-in-the-web-ui
+    '5.8': 58/admindoc/how-to-add-a-button-in-the-web-ui
 history:
     -
         author: Manon Lumeau

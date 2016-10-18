@@ -24,7 +24,7 @@ confluence:
     source_link: /display/ADMINDOC710/Installing+a+New+Package+on+Your+Instance
 tree_item_index: 200
 version_override:
-    'FT': nxdoc/installing-a-new-package-on-your-instance
+    'FT': 'nxdoc/installing-a-new-package-on-your-instance'
     '6.0': 60/admindoc/installing-a-new-package-on-your-instance
     '5.8': 58/admindoc/installing-a-new-package-on-your-instance
 history:

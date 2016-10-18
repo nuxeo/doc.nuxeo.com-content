@@ -21,7 +21,7 @@ confluence:
     source_link: /pages/viewpage.action?pageId=27604685
 tree_item_index: 600
 version_override:
-    'FT': nxdoc/remote-monitoring-through-https
+    'FT': 'nxdoc/remote-monitoring-through-https'
     '6.0': 60/admindoc/remote-monitoring-through-https
     '5.8': 58/admindoc/remote-monitoring-through-https
 history:

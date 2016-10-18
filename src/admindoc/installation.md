@@ -19,7 +19,7 @@ confluence:
     source_link: /display/ADMINDOC710/Installation
 tree_item_index: 200
 version_override:
-    'FT': nxdoc/installation
+    'FT': 'nxdoc/installation'
     '6.0': 60/admindoc/installation
     '5.8': 58/admindoc/installation
 history:

@@ -20,7 +20,7 @@ confluence:
     source_link: /display/ADMINDOC710/Counting+documents
 tree_item_index: 900
 version_override:
-    'FT': nxdoc/counting-documents
+    'FT': 'nxdoc/counting-documents'
     '6.0': 60/admindoc/counting-documents
     '5.8': 58/admindoc/counting-documents
 history:

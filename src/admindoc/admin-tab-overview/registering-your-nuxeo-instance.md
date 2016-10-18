@@ -23,7 +23,7 @@ confluence:
     source_link: /display/ADMINDOC710/Registering+your+Nuxeo+Instance
 tree_item_index: 100
 version_override:
-    'FT': nxdoc/registering-your-nuxeo-instance
+    'FT': 'nxdoc/registering-your-nuxeo-instance'
     '6.0': 60/admindoc/registering-your-nuxeo-instance
     '5.8': 58/admindoc/registering-your-nuxeo-instance
 history:

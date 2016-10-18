@@ -23,7 +23,7 @@ confluence:
     source_link: /display/ADMINDOC710/Deploying+Nuxeo+on+CloudFoundry
 tree_item_index: 500
 version_override:
-    'FT': nxdoc/deploying-nuxeo-on-cloudfoundry
+    'FT': 'nxdoc/deploying-nuxeo-on-cloudfoundry'
     '6.0': 60/admindoc/deploying-nuxeo-on-cloudfoundry
     '5.8': 58/admindoc/deploying-nuxeo-on-cloudfoundry
 history:

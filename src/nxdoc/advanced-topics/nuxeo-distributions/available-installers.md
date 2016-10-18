@@ -19,42 +19,42 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/nYGyAQ'
     source_link: /display/NXDOC710/Available+installers
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-02-12 10:56'
         message: 'ix Homebrew '
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-13 12:58'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-04 15:30'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2013-09-16 18:46'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2011-05-02 17:27'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2011-05-02 17:27'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2011-05-02 17:26'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-21 18:08'
         message: ''

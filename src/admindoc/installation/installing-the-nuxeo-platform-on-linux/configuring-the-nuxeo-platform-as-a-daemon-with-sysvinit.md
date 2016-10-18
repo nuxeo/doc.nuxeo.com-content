@@ -22,7 +22,7 @@ confluence:
         /display/ADMINDOC710/Configuring+the+Nuxeo+Platform+as+a+Daemon+with+SysVinit
 tree_item_index: 100
 version_override:
-    'FT': nxdoc/configuring-the-nuxeo-platform-as-a-daemon-with-sysvinit
+    'FT': 'nxdoc/configuring-the-nuxeo-platform-as-a-daemon-with-sysvinit'
     '6.0': 60/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-sysvinit
     '5.8': 58/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-sysvinit
 history:

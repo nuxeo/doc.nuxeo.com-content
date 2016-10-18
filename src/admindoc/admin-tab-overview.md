@@ -22,7 +22,7 @@ confluence:
     source_link: /display/ADMINDOC710/Admin+Tab+Overview
 tree_item_index: 800
 version_override:
-    'FT': nxdoc/admin-tab-overview
+    'FT': 'nxdoc/admin-tab-overview'
     '6.0': 60/admindoc/admin-tab-overview
     '5.8': 58/admindoc/admin-tab-overview
 history:

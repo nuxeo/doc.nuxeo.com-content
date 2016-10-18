@@ -23,7 +23,7 @@ confluence:
     source_link: /display/ADMINDOC710/Monitoring+and+Maintenance
 tree_item_index: 500
 version_override:
-    'FT': nxdoc/monitoring-and-maintenance
+    'FT': 'nxdoc/monitoring-and-maintenance'
     '6.0': 60/admindoc/monitoring-and-maintenance
     '5.8': 58/admindoc/monitoring-and-maintenance
 history:

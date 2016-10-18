@@ -24,7 +24,7 @@ confluence:
     source_link: /display/ADMINDOC710/Logs+Analysis
 tree_item_index: 400
 version_override:
-    'FT': nxdoc/logs-analysis
+    'FT': 'nxdoc/logs-analysis'
     '6.0': 60/admindoc/logs-analysis
     '5.8': 58/admindoc/logs-analysis
 history:

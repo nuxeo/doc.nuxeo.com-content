@@ -32,7 +32,7 @@ confluence:
         /display/ADMINDOC710/How+to+Estimate+Disk%2C+Database+and+Elasticsearch+Usage
 tree_item_index: 600
 version_override:
-    'FT': nxdoc/how-to-estimate-volume-usage
+    'FT': 'nxdoc/how-to-estimate-volume-usage'
     '6.0': 60/admindoc/how-to-estimate-disk-database-and-elasticsearch-usage
     '5.8': 58/admindoc/how-to-estimate-disk-database-and-elasticsearch-usage
 history:

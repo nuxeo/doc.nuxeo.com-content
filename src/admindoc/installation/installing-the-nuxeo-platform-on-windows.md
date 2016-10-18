@@ -23,7 +23,7 @@ confluence:
     source_link: /display/ADMINDOC710/Installing+the+Nuxeo+Platform+on+Windows
 tree_item_index: 300
 version_override:
-    'FT': nxdoc/installing-the-nuxeo-platform-on-windows
+    'FT': 'nxdoc/installing-the-nuxeo-platform-on-windows'
     '6.0': 60/admindoc/installing-the-nuxeo-platform-on-windows
     '5.8': 58/admindoc/installing-the-nuxeo-platform-on-windows
 history:

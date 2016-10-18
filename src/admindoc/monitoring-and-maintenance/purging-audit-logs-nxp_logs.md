@@ -22,7 +22,7 @@ confluence:
     source_link: /pages/viewpage.action?pageId=27604613
 tree_item_index: 500
 version_override:
-    'FT': nxdoc/purging-audit-logs-nxp_logs
+    'FT': 'nxdoc/purging-audit-logs-nxp_logs'
     '6.0': 60/admindoc/purging-audit-logs-nxp_logs
     '5.8': 58/admindoc/purging-audit-logs-nxp_logs
 history:

@@ -21,7 +21,7 @@ confluence:
     source_link: /display/ADMINDOC710/Transactions+and+Connections
 tree_item_index: 800
 version_override:
-    'FT': nxdoc/transactions-and-connections
+    'FT': 'nxdoc/transactions-and-connections'
     '6.0': 60/admindoc/transactions-and-connections
     '5.8': 58/admindoc/transactions-and-connections
 history:
