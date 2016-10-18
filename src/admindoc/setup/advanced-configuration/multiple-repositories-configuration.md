@@ -19,23 +19,24 @@ confluence:
     shortlink: qgZvAQ
     shortlink_source: 'https://doc.nuxeo.com/x/qgZvAQ'
     source_link: /display/ADMINDOC60/Multiple+Repositories+Configuration
+tree_item_index: 900
 history:
-    - 
+    -
         author: Ronan Daniellou
         date: '2016-08-22 13:14'
         message: ixes "blockTimeoutMillis" -> "blockingTimeoutMillis
         version: '4'
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-03-18 09:41'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-05-07 09:26'
         message: Update links
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-05-07 09:25'
         message: ''

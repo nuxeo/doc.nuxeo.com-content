@@ -19,93 +19,94 @@ confluence:
     shortlink: G4BOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/G4BOAQ'
     source_link: /display/ADMINDOC60/Using+OAuth
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 17:02'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 12:20'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-30 00:38'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-24 11:35'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-29 15:09'
         message: 'Updated screenshots, added links to the explorer, fixed formatting.'
         version: '14'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-08-28 14:32'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 15:41'
         message: Migrated to Confluence 4.0
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 15:41'
         message: ''
         version: '11'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-02-09 15:17'
         message: ''
         version: '10'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-02-09 15:17'
         message: ''
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-02-09 15:14'
         message: ''
         version: '8'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-02-09 15:02'
         message: ''
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-02-09 15:00'
         message: typography cleanups
         version: '6'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-02-07 17:13'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-02-07 17:09'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-02-07 16:45'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-02-07 16:44'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-02-07 14:03'
         message: ''

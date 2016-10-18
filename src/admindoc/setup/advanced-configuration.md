@@ -15,23 +15,24 @@ confluence:
     shortlink: OoBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/OoBOAQ'
     source_link: /display/ADMINDOC60/Advanced+Configuration
+tree_item_index: 800
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 15:59'
         message: 'emove children display macro '
         version: '4'
-    - 
+    -
         author: Anonymous
         date: '2013-10-14 17:09'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 18:19'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 18:19'
         message: ''

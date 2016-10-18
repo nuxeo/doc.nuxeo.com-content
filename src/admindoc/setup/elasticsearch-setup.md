@@ -19,200 +19,201 @@ confluence:
     shortlink: CoBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/CoBOAQ'
     source_link: /display/ADMINDOC60/Elasticsearch+Setup
+tree_item_index: 1100
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 15:53'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-23 10:06'
         message: ''
         version: '38'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-11-20 08:57'
         message: >-
             Better explanation on how to create a new template to override the
             ES mapping
         version: '37'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-10-13 11:24'
         message: ''
         version: '36'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-09-14 07:14'
         message: Use same JVM for Nuxeo and Es
         version: '35'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-09-07 07:46'
         message: remove deprecated info about reindexing
         version: '34'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-08-24 10:48'
         message: ''
         version: '33'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-08-13 14:09'
         message: ''
         version: '32'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-08-10 07:53'
         message: Add some basic ES tuning
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-18 07:56'
         message: Add tip about Installing the Elasticsearch Cluster
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2015-05-18 08:12'
         message: Move supported versions in a dedicated section
         version: '29'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-03-26 17:20'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-25 10:46'
         message: ''
         version: '27'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-03-24 09:53'
         message: ''
         version: '26'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-20 11:05'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-05 14:25'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-05 14:23'
         message: Add multi repository configuration
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 17:22'
         message: ''
         version: '22'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-12-01 17:12'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 16:24'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 15:50'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 15:28'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 15:24'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 14:47'
         message: format
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 14:44'
         message: ''
         version: '15'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 14:57'
         message: ''
         version: '14'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 12:34'
         message: ''
         version: '13'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 12:33'
         message: ''
         version: '12'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 12:32'
         message: ''
         version: '11'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 12:10'
         message: ''
         version: '10'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 10:44'
         message: ''
         version: '9'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-12 14:14'
         message: ''
         version: '8'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 16:49'
         message: ''
         version: '7'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 16:33'
         message: ''
         version: '6'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 14:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 14:34'
         message: ''
         version: '4'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 14:32'
         message: ''
         version: '3'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 14:13'
         message: ''
         version: '2'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 12:34'
         message: ''
@@ -344,7 +345,7 @@ The default mapping is located in the `${NUXEO_HOME}/templates/common-base/nxser
         point="elasticSearchIndex">
         <elasticSearchIndex name="nuxeo" type="doc" repository="default">
          <mapping>
-    ... Here copy and adapt the default mapping 
+    ... Here copy and adapt the default mapping
          </mapping>
         </elasticSearchIndex>
       </extension>
@@ -373,7 +374,7 @@ You may want to change the mapping but keep the existing indexed data. You can d
 
     ```
     curl -O download.elasticsearch.org/stream2es/stream2es; chmod +x stream2es
-    ./stream2es es --source http://localhost:9200/nuxeo_v1 --target http://localhost:9200/nuxeo_v2 
+    ./stream2es es --source http://localhost:9200/nuxeo_v1 --target http://localhost:9200/nuxeo_v2
     ```
 
 ## Using an Index Alias
@@ -383,8 +384,8 @@ You can even change a mapping without restarting Nuxeo if you use an [alias](htt
 For instance the Nuxeo Platform will only know the&nbsp;`nuxeo`&nbsp;alias and once your mapping is ready on&nbsp;`nuxeo_v2`&nbsp;you can atomically switch:
 
 ```
-curl -XPOST 'localhost:9200/_aliases' -d '{ "actions" : [ 
-    { "remove" : { "index" : "nuxeo_v1", "alias" : "nuxeo" } }, 
+curl -XPOST 'localhost:9200/_aliases' -d '{ "actions" : [
+    { "remove" : { "index" : "nuxeo_v1", "alias" : "nuxeo" } },
     { "add" : { "index" : "nuxeo_v2", "alias" : "nuxeo" } } ] }'
 ```
 
@@ -421,7 +422,7 @@ Open at the `lib/log4j.xml` file and uncomment the ELASTIC section:
       <category name="org.nuxeo.elasticsearch" additivity="false">
         <priority value="TRACE" />
         <appender-ref ref="ELASTIC" />
-      </category> 
+      </category>
 ```
 
 &nbsp;The `elastic.log` file will contain all the requests done by the Nuxeo Platform to Elasticsearch including the `curl` command ready to be copy/past/debug in a term.

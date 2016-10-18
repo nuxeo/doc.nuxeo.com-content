@@ -15,18 +15,19 @@ confluence:
     shortlink: KYBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/KYBOAQ'
     source_link: /display/ADMINDOC60/Counting+documents
+tree_item_index: 800
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-29 21:23'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-29 18:05'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 22:40'
         message: ''

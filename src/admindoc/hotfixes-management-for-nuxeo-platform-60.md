@@ -18,8 +18,9 @@ confluence:
     shortlink: DYvZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/DYvZAQ'
     source_link: /display/ADMINDOC60/Hotfixes+Management+for+Nuxeo+Platform+6.0
+hidden: true
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-04 09:10'
         message: ''

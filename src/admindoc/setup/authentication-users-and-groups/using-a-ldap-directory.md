@@ -21,193 +21,194 @@ confluence:
     shortlink: HIBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/HIBOAQ'
     source_link: /display/ADMINDOC60/Using+a+LDAP+Directory
+tree_item_index: 100
 history:
-    - 
+    -
         author: Vladimir Pasquier
         date: '2016-01-20 18:03'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-21 09:42'
         message: changed component name in XML contrib and add tip on wizard
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-21 09:31'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-21 09:31'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-21 09:31'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 12:03'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-22 10:40'
         message: Formatting
         version: '32'
-    - 
+    -
         author: Thierry Martins
         date: '2014-09-19 16:48'
         message: ''
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-17 10:29'
         message: ''
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-17 10:29'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-17 10:26'
         message: ''
         version: '28'
-    - 
+    -
         author: Thierry Martins
         date: '2014-07-16 11:03'
         message: add links to attachments
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 11:12'
         message: Updated link
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-10 16:59'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 13:00'
         message: Formatted steps and added related pages
         version: '24'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-05-20 10:40'
         message: ''
         version: '23'
-    - 
+    -
         author: Julien Carsique
         date: '2012-12-18 16:57'
         message: Add a link to NXDOC/Directories+and+Vocabularies
         version: '22'
-    - 
+    -
         author: Olivier Grisel
         date: '2012-12-12 11:57'
         message: ''
         version: '21'
-    - 
+    -
         author: Olivier Grisel
         date: '2012-12-12 11:57'
         message: ''
         version: '20'
-    - 
+    -
         author: Olivier Grisel
         date: '2012-12-12 11:56'
         message: ''
         version: '19'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-10-11 14:37'
         message: mark LDAP issue as fixed on 5.6
         version: '18'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-02-09 14:46'
         message: Migrated to Confluence 4.0
         version: '17'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-02-09 14:46'
         message: ''
         version: '16'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-02-09 14:45'
         message: ''
         version: '15'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-13 14:53'
         message: ''
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-13 14:52'
         message: ''
         version: '13'
-    - 
+    -
         author: Thierry Martins
         date: '2011-10-07 10:11'
         message: ''
         version: '12'
-    - 
+    -
         author: Thierry Martins
         date: '2011-10-07 10:10'
         message: ''
         version: '11'
-    - 
+    -
         author: Thierry Martins
         date: '2011-09-08 17:49'
         message: ''
         version: '10'
-    - 
+    -
         author: Thierry Martins
         date: '2011-09-08 17:45'
         message: ''
         version: '9'
-    - 
+    -
         author: Thierry Martins
         date: '2011-09-08 17:42'
         message: add config for DM >= 5.4.2
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-20 12:07'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-20 12:05'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-15 16:19'
         message: workaround for NXP-6574
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-14 19:53'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-02-08 15:15'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-02-07 19:08'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-02-07 18:51'
         message: ''

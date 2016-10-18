@@ -19,73 +19,74 @@ confluence:
     shortlink: V4BOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/V4BOAQ'
     source_link: /display/ADMINDOC60/Using+Kerberos
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 17:26'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-10 22:23'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-07 15:21'
         message: format
         version: '12'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2014-11-07 14:51'
         message: ''
         version: '11'
-    - 
+    -
         author: Gildas Lefevre
         date: '2014-07-29 14:55'
         message: ''
         version: '10'
-    - 
+    -
         author: Gildas Lefevre
         date: '2014-07-29 12:14'
         message: ''
         version: '9'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2014-07-21 18:08'
         message: Added missing param in Windows commands
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-14 11:41'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 16:45'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-03-20 23:07'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-03-20 22:57'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-03-20 22:51'
         message: ''
         version: '3'
-    - 
+    -
         author: Laurent Doguin
         date: '2013-03-20 22:11'
         message: add missing word....
         version: '2'
-    - 
+    -
         author: Laurent Doguin
         date: '2013-03-15 18:39'
         message: ''
@@ -213,7 +214,7 @@ To enable Kerberos, you need to use a login configuration implementation. You ha
 1.  In $`JAVA_HOME/jre/lib/security/java.security`, find the login config url (it's commented out by default):
 
     ```
-       #login.config.url.1=file:${user.home}/.java.login.config 
+       #login.config.url.1=file:${user.home}/.java.login.config
     ```
 
 2.  Set this to a regular file, e.g. `/opt/nuxeo/java.login.config.`
@@ -223,13 +224,13 @@ To enable Kerberos, you need to use a login configuration implementation. You ha
 In&nbsp;`nuxeo.conf`, add the following line:
 
 ```
-JAVA_OPTS=$JAVA_OPTS -Djava.security.auth.login.config=./java.login.config 
+JAVA_OPTS=$JAVA_OPTS -Djava.security.auth.login.config=./java.login.config
 ```
 
 Note that using one equal sign appends or overrides parts of the default `java.security` file, whereas using two equal signs completely overrides the default `java.security` file content.
 
 ```
-JAVA_OPTS=$JAVA_OPTS -Djava.security.auth.login.config==./java.login.config 
+JAVA_OPTS=$JAVA_OPTS -Djava.security.auth.login.config==./java.login.config
 ```
 
 #### Configuring JAAS
@@ -246,7 +247,7 @@ Open the `java.login.config` file you've setup and add the following configurati
   useKeyTab=true
   keyTab="/complete/path/to/keytab"
   principal="HTTP/servername@REALM";
- }; 
+ };
 
 ```
 
@@ -283,7 +284,7 @@ The login configuration MUST be called Nuxeo with an uppercase N.
         </plugins>
        </authenticationChain>
       </extension>
-      </component> 
+      </component>
     ```
 
     For now we assume all configuration - realm, kdc, server principal, etc. &minus; lives in the server's standard configuration, i.e. either `java.login.config` or `krb5.conf`. An interesting update would be to make these configurable in Nuxeo.

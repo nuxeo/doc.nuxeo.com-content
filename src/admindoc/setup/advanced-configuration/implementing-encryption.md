@@ -18,38 +18,39 @@ confluence:
     shortlink: CIBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/CIBOAQ'
     source_link: /display/ADMINDOC60/Implementing+Encryption
+tree_item_index: 600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 14:07'
         message: ''
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-10-10 15:21'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-10-10 15:19'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-10-10 15:16'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-10-09 19:11'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-10-09 18:56'
         message: ''
         version: '2'
-    - 
+    -
         author: Mike Obrebski
         date: '2014-04-24 22:54'
         message: ''

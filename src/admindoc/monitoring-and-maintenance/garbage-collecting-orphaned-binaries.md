@@ -19,23 +19,24 @@ confluence:
     shortlink: qoVkAQ
     shortlink_source: 'https://doc.nuxeo.com/x/qoVkAQ'
     source_link: /display/ADMINDOC60/Garbage-Collecting+Orphaned+Binaries
+tree_item_index: 1100
 history:
-    - 
+    -
         author: Julien Carsique
         date: '2015-01-23 17:16'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-23 14:02'
         message: Remove 7.2 content
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-23 14:01'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-23 14:00'
         message: ''

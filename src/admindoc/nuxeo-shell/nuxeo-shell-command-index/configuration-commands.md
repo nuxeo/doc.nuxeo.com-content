@@ -18,28 +18,29 @@ confluence:
     shortlink: NIBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/NIBOAQ'
     source_link: /display/ADMINDOC60/Configuration+Commands
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 12:31'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 16:13'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 16:13'
         message: Fixed wrong links and added related pages
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 12:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-01-04 00:13'
         message: ''

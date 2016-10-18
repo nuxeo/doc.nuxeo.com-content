@@ -19,138 +19,139 @@ confluence:
     shortlink: T4BOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/T4BOAQ'
     source_link: /display/ADMINDOC60/Metrics+and+Monitoring
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-24 15:19'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-24 15:17'
         message: Add information on Activity tab
         version: '26'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-10-13 16:15'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-19 14:44'
         message: update related pages
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-26 12:49'
         message: Fix metrics.graphite.port to 2003 instead of 2030
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 16:16'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-29 15:31'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-29 15:29'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-29 15:28'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-29 15:13'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-18 17:07'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:28'
         message: Added TOC
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 15:56'
         message: Fixed broken link to Diamond and added related topics
         version: '15'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-06-27 17:31'
         message: ''
         version: '14'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-06-27 17:31'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-18 14:35'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-03-26 22:31'
         message: ''
         version: '11'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-25 14:58'
         message: ''
         version: '10'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-25 14:46'
         message: ''
         version: '9'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-21 11:27'
         message: ''
         version: '8'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-21 11:26'
         message: ''
         version: '7'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-19 15:55'
         message: ''
         version: '6'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-19 15:53'
         message: ''
         version: '5'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-19 15:46'
         message: ''
         version: '4'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-19 15:33'
         message: ''
         version: '3'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-19 15:24'
         message: ''
         version: '2'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-19 15:16'
         message: ''
@@ -351,8 +352,8 @@ This API is used inside the Admin Center to be able to generate the small graphs
 Sample CURL call:
 
 ```
-curl -H 'Content-Type:application/json+nxrequest' -X POST -d 
-'{"params":{"counterNames":"org.nuxeo.web.requests"}}' -u 
+curl -H 'Content-Type:application/json+nxrequest' -X POST -d
+'{"params":{"counterNames":"org.nuxeo.web.requests"}}' -u
 Administrator:Administrator http://localhost:8080/nuxeo/site/automation/Counters.GET
 ```
 

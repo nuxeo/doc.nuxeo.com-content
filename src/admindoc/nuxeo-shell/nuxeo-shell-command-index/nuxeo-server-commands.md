@@ -17,73 +17,74 @@ confluence:
     shortlink: boBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/boBOAQ'
     source_link: /display/ADMINDOC60/Nuxeo+Server+Commands
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 12:47'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 16:10'
         message: Migrated to Confluence 4.0
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 16:10'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 16:09'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 15:34'
         message: Added related pages
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 15:29'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 15:22'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 15:20'
         message: Fixed wrong links and typos
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 12:29'
         message: ''
         version: '6'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-01-04 00:17'
         message: ''
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 10:07'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 09:58'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 08:34'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-23 22:20'
         message: ''

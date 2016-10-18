@@ -19,63 +19,64 @@ confluence:
     shortlink: JIBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/JIBOAQ'
     source_link: /display/ADMINDOC60/DBS+-+MongoDB+Configuration
+tree_item_index: 1200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 12:23'
         message: ''
         version: '12'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-08-11 14:00'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-10-08 10:58'
         message: ''
         version: '10'
-    - 
+    -
         author: Rémi Cattiau
         date: '2014-10-07 02:22'
         message: As requested by Brendan
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-08-05 12:47'
         message: ''
         version: '8'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-07-30 17:31'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-30 14:35'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-23 19:47'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-23 19:46'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-12 15:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-04 17:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-04 17:25'
         message: ''

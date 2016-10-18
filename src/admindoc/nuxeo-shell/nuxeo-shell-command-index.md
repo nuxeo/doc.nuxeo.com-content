@@ -17,23 +17,24 @@ confluence:
     shortlink: doBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/doBOAQ'
     source_link: /display/ADMINDOC60/Nuxeo+Shell+Command+Index
+tree_item_index: 100
 history:
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-13 12:44'
         message: igrated to Confluence 4.
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-13 12:44'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 09:26'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-23 22:18'
         message: ''

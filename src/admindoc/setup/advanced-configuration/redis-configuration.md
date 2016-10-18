@@ -18,38 +18,39 @@ confluence:
     shortlink: SIBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/SIBOAQ'
     source_link: /display/ADMINDOC60/Redis+Configuration
+tree_item_index: 1000
 history:
-    - 
+    -
         author: Maxime Hilaire
         date: '2015-08-03 15:13'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-05-18 14:26'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-11-12 12:03'
         message: Info about prefix.
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-04 13:31'
         message: use Nuxeo Platform 5.8 instead of Nuxeo 5.8
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 17:49'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 17:38'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 16:50'
         message: ''

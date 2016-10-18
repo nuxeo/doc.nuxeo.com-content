@@ -18,68 +18,69 @@ confluence:
     shortlink: b4BOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/b4BOAQ'
     source_link: /display/ADMINDOC60/Filesystem+Commands
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 12:28'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 12:28'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-11 10:23'
         message: ''
         version: '11'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-04-10 13:55'
         message: typo
         version: '10'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-13 12:44'
         message: Migrated to Confluence 4.0
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-13 12:44'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 16:09'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 15:33'
         message: Added related pages
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 15:11'
         message: Fixed wrong links
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 12:31'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 10:09'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 08:32'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-23 22:19'
         message: ''

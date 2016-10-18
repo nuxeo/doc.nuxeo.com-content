@@ -19,6 +19,7 @@ confluence:
     shortlink: K4BOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/K4BOAQ'
     source_link: /display/ADMINDOC60/Deploying+Nuxeo+on+CloudFoundry
+tree_item_index: 500
 history:
     -
         author: Solen Guitter

@@ -17,28 +17,29 @@ confluence:
     shortlink: fYBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/fYBOAQ'
     source_link: /pages/viewpage.action?pageId=21921917
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:13'
         message: ''
         version: '5'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-19 06:00'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-19 06:00'
         message: ''
         version: '3'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-19 05:58'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-19 05:58'
         message: ''

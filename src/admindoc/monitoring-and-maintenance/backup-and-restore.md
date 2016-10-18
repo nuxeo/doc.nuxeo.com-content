@@ -17,73 +17,74 @@ confluence:
     shortlink: foBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/foBOAQ'
     source_link: /display/ADMINDOC60/Backup+and+Restore
+tree_item_index: 200
 history:
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-26 16:00'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-30 10:22'
         message: Added links
         version: '13'
-    - 
+    -
         author: Julien Carsique
         date: '2013-10-28 00:32'
         message: ''
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 22:34'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 22:34'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 22:33'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 22:09'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:29'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 19:02'
         message: Migrated to Confluence 4.0
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 19:02'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-06 15:52'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-06 15:49'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-06-17 16:52'
         message: ''
         version: '2'
-    - 
+    -
         author: Admin name placeholder
         date: '2010-03-01 00:58'
         message: ''

@@ -24,68 +24,69 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/NYBOAQ'
     source_link: >-
         /display/ADMINDOC60/Setting+up+a+HA+Configuration+Using+the+Nuxeo+Platform+and+PostgreSQL
+tree_item_index: 1000
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 12:16'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-09 12:50'
         message: ' Remove the reference to the validationQuery attribute'
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 15:45'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-22 12:00'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-22 11:58'
         message: ''
         version: '9'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-21 19:06'
         message: ''
         version: '8'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-21 19:06'
         message: ''
         version: '7'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-21 18:16'
         message: ''
         version: '6'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-01-21 17:53'
         message: ''
         version: '5'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-01-21 16:00'
         message: ''
         version: '4'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-01-21 15:59'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-20 19:14'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-20 19:04'
         message: ''

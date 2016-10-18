@@ -18,58 +18,59 @@ confluence:
     shortlink: bIBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/bIBOAQ'
     source_link: /display/ADMINDOC60/Deploying+Nuxeo+on+Amazon+AWS
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 11:34'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2014-05-07 12:20'
         message: ''
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2014-05-07 12:19'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 16:03'
         message: ''
         version: '8'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-25 15:25'
         message: ''
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-25 15:25'
         message: ''
         version: '6'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2012-03-19 20:45'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2012-03-19 20:45'
         message: ''
         version: '4'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2011-12-13 16:29'
         message: ''
         version: '3'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2011-06-10 16:44'
         message: ''
         version: '2'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2011-06-10 16:42'
         message: ''

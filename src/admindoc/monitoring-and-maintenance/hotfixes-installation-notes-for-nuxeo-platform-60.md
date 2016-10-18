@@ -20,298 +20,299 @@ confluence:
     shortlink: '-oJkAQ'
     shortlink_source: 'https://doc.nuxeo.com/x/-oJkAQ'
     source_link: /display/ADMINDOC60/Hotfixes+Installation+Notes+for+Nuxeo+Platform+6.0
+tree_item_index: 900
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-22 14:47'
         message: ''
         version: '59'
-    - 
+    -
         author: Thierry Martins
         date: '2016-08-19 09:02'
         message: ''
         version: '58'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-05-04 09:02'
         message: ''
         version: '57'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-04 08:08'
         message: ''
         version: '56'
-    - 
+    -
         author: Thierry Martins
         date: '2016-05-03 12:45'
         message: ''
         version: '55'
-    - 
+    -
         author: Thierry Martins
         date: '2016-05-03 09:45'
         message: ''
         version: '54'
-    - 
+    -
         author: Thierry Martins
         date: '2016-05-03 08:54'
         message: ''
         version: '53'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-29 12:58'
         message: ''
         version: '52'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-22 09:41'
         message: ''
         version: '51'
-    - 
+    -
         author: Thierry Martins
         date: '2016-03-17 10:54'
         message: ''
         version: '50'
-    - 
+    -
         author: Thierry Martins
         date: '2016-03-17 10:34'
         message: ''
         version: '49'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-11 09:36'
         message: ''
         version: '48'
-    - 
+    -
         author: Thierry Martins
         date: '2016-03-10 21:50'
         message: ''
         version: '47'
-    - 
+    -
         author: Thierry Martins
         date: '2016-02-19 09:26'
         message: ''
         version: '46'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-08 09:18'
         message: Format steps
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-08 09:09'
         message: ''
         version: '44'
-    - 
+    -
         author: Thierry Martins
         date: '2016-01-06 10:42'
         message: ''
         version: '43'
-    - 
+    -
         author: Thierry Martins
         date: '2016-01-05 14:58'
         message: ''
         version: '42'
-    - 
+    -
         author: Thierry Martins
         date: '2016-01-05 10:27'
         message: ''
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-28 09:20'
         message: ''
         version: '40'
-    - 
+    -
         author: Thierry Martins
         date: '2015-12-18 15:10'
         message: ''
         version: '39'
-    - 
+    -
         author: Thierry Martins
         date: '2015-12-18 14:03'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-23 09:11'
         message: Titile capitalization
         version: '37'
-    - 
+    -
         author: Thierry Martins
         date: '2015-11-19 14:54'
         message: ''
         version: '36'
-    - 
+    -
         author: Thierry Martins
         date: '2015-11-18 19:06'
         message: ''
         version: '35'
-    - 
+    -
         author: Thierry Martins
         date: '2015-11-18 14:27'
         message: ''
         version: '34'
-    - 
+    -
         author: Thierry Martins
         date: '2015-10-22 07:39'
         message: HF22
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-15 16:18'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-15 16:07'
         message: Fix title capitalization
         version: '31'
-    - 
+    -
         author: Thierry Martins
         date: '2015-10-15 16:04'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-21 08:17'
         message: ''
         version: '29'
-    - 
+    -
         author: Thierry Martins
         date: '2015-09-18 09:44'
         message: hotfix 20
         version: '28'
-    - 
+    -
         author: Thierry Martins
         date: '2015-08-03 07:05'
         message: ''
         version: '27'
-    - 
+    -
         author: Thierry Martins
         date: '2015-07-20 09:52'
         message: ''
         version: '26'
-    - 
+    -
         author: Thierry Martins
         date: '2015-07-20 09:42'
         message: ''
         version: '25'
-    - 
+    -
         author: Thierry Martins
         date: '2015-07-20 09:41'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-05 09:26'
         message: Title format and typo
         version: '23'
-    - 
+    -
         author: Thierry Martins
         date: '2015-06-04 21:49'
         message: hotfix 13
         version: '22'
-    - 
+    -
         author: Thierry Martins
         date: '2015-05-22 14:22'
         message: hf12
         version: '21'
-    - 
+    -
         author: Thierry Martins
         date: '2015-05-20 12:09'
         message: ''
         version: '20'
-    - 
+    -
         author: Thierry Martins
         date: '2015-05-20 12:09'
         message: ''
         version: '19'
-    - 
+    -
         author: Thierry Martins
         date: '2015-04-28 08:46'
         message: HF11
         version: '18'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-04-16 12:36'
         message: Fixed typo
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-16 11:42'
         message: Add link
         version: '16'
-    - 
+    -
         author: Thierry Martins
         date: '2015-04-16 09:23'
         message: ''
         version: '15'
-    - 
+    -
         author: Thierry Martins
         date: '2015-04-01 14:19'
         message: ''
         version: '14'
-    - 
+    -
         author: Thierry Martins
         date: '2015-03-31 21:54'
         message: ''
         version: '13'
-    - 
+    -
         author: Thierry Martins
         date: '2015-02-25 09:16'
         message: HF06 changes
         version: '12'
-    - 
+    -
         author: Thierry Martins
         date: '2015-01-20 10:19'
         message: add NXP-16031 support
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-09 11:18'
         message: Add tip and link to page listing all hotfixes
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-09 11:04'
         message: Add section Installing Hotfixes from the Update Center
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-09 10:33'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-09 09:57'
         message: 'Add related pages, title capitalization, format'
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-01-09 08:31'
         message: typo
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-01-08 16:41'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Martins
         date: '2015-01-08 15:10'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Martins
         date: '2015-01-08 14:56'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Martins
         date: '2015-01-08 13:44'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2015-01-07 10:47'
         message: ''
@@ -683,7 +684,7 @@ If you have installed the version 1.0.0 of `nuxeo-6.0-HF08`, you have to remove 
 And the `templates/common-base/nuxeo.defaults` has been automatically updated with the last version which contains this new line
 
 ```
-# Display Elasticsearch cluster and nodes information in the admin center @since 6.0-HF06, always true for embedded mode 
+# Display Elasticsearch cluster and nodes information in the admin center @since 6.0-HF06, always true for embedded mode
 elasticsearch.adminCenter.displayClusterInfo=false
 ```
 

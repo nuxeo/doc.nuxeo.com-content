@@ -18,28 +18,29 @@ confluence:
     shortlink: YoBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/YoBOAQ'
     source_link: /display/ADMINDOC60/Read+ACLs
+tree_item_index: 900
 history:
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-05-06 08:58'
         message: dd note about vacuum procedure and Elasticsearch alternativ
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 15:58'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-25 10:44'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Martins
         date: '2013-11-22 16:56'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2013-11-22 16:49'
         message: ''

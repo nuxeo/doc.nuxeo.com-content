@@ -17,18 +17,19 @@ confluence:
     shortlink: '-oxkAQ'
     shortlink_source: 'https://doc.nuxeo.com/x/-oxkAQ'
     source_link: /display/ADMINDOC60/Nuxeo+Security+Update+-+2015-02-27+-+Critical
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-29 09:38'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-03 10:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-03 07:51'
         message: ''

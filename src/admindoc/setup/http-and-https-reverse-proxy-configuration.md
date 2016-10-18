@@ -25,108 +25,109 @@ confluence:
     shortlink: Y4BOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/Y4BOAQ'
     source_link: /display/ADMINDOC60/HTTP+and+HTTPS+Reverse-Proxy+Configuration
+tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-19 10:36'
         message: ix deployment-fragment.xml nam
         version: '21'
-    - 
+    -
         author: Anonymous
         date: '2014-11-28 13:55'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 00:14'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-16 10:52'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-04 10:43'
         message: ''
         version: '17'
-    - 
+    -
         author: Julien Carsique
         date: '2014-03-03 18:33'
         message: ''
         version: '16'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-03-03 18:22'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-14 11:34'
         message: ''
         version: '14'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-11-13 12:01'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-10 17:02'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-11 12:01'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-11 12:00'
         message: Formatting
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-11 01:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-15 11:17'
         message: Added related pages
         version: '8'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2012-09-10 12:22'
         message: Migrated to Confluence 4.0
         version: '7'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2012-09-10 12:22'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-27 15:10'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2011-03-24 16:20'
         message: missing ProxyPreserveHost
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 12:22'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 17:23'
         message: ''
         version: '2'
-    - 
+    -
         author: Quentin Lamerand
         date: '2011-03-03 16:00'
         message: ''

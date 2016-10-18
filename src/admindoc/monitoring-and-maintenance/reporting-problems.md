@@ -16,48 +16,49 @@ confluence:
     shortlink: P4hkAQ
     shortlink_source: 'https://doc.nuxeo.com/x/P4hkAQ'
     source_link: /display/ADMINDOC60/Reporting+Problems
+tree_item_index: 1200
 history:
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-03-23 13:23'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-19 10:43'
         message: Add security section
         version: '8'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-03-18 08:36'
         message: ''
         version: '7'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-03-13 08:49'
         message: ''
         version: '6'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-18 09:16'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-05 15:50'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-05 15:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-05 15:46'
         message: link update
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-05 15:41'
         message: ''

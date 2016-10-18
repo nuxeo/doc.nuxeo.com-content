@@ -22,427 +22,428 @@ confluence:
     shortlink: PoBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/PoBOAQ'
     source_link: /display/ADMINDOC60/Installing+and+Setting+up+Related+Software
+tree_item_index: 100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-02-12 11:01'
         message: 'ix Homebrew  '
         version: '84'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-08-11 12:18'
         message: ''
         version: '83'
-    - 
+    -
         author: Anonymous
         date: '2014-11-24 18:31'
         message: ''
         version: '82'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-10 22:58'
         message: Add link
         version: '81'
-    - 
+    -
         author: Frédéric Vadon
         date: '2014-11-07 17:17'
         message: ''
         version: '80'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 14:53'
         message: ''
         version: '79'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 11:37'
         message: ''
         version: '78'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 11:26'
         message: Reorganize steps by OS
         version: '77'
-    - 
+    -
         author: Thomas Roger
         date: '2014-10-31 15:11'
         message: ''
         version: '76'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-10-21 16:06'
         message: ''
         version: '75'
-    - 
+    -
         author: Julien Carsique
         date: '2014-10-01 14:43'
         message: NXBT-807
         version: '74'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-09-30 22:15'
         message: Check yams before compiling ffmpeg
         version: '73'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-13 12:10'
         message: ''
         version: '72'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-13 12:05'
         message: ''
         version: '71'
-    - 
+    -
         author: Julien Carsique
         date: '2014-08-12 11:47'
         message: ''
         version: '70'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-07-02 15:35'
         message: ''
         version: '69'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-02 14:43'
         message: ''
         version: '68'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-19 10:56'
         message: ''
         version: '67'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-18 09:43'
         message: ''
         version: '66'
-    - 
+    -
         author: Julien Carsique
         date: '2014-06-17 19:00'
         message: ''
         version: '65'
-    - 
+    -
         author: Julien Carsique
         date: '2014-06-17 18:59'
         message: ''
         version: '64'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-20 09:50'
         message: Formatting
         version: '63'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-19 10:35'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '62'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-19 10:35'
         message: ''
         version: '61'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-19 10:30'
         message: ''
         version: '60'
-    - 
+    -
         author: Michaël Vachette
         date: '2013-11-18 18:03'
         message: ''
         version: '59'
-    - 
+    -
         author: Michaël Vachette
         date: '2013-11-18 17:56'
         message: ''
         version: '58'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-18 15:25'
         message: Added Mac OS libwpd Homebrew installation commands
         version: '57'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-18 14:10'
         message: >-
             Added Windows installation and configuration information for
-            ImageMagick and UFRaw 
+            ImageMagick and UFRaw
         version: '56'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-14 15:23'
         message: ''
         version: '55'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-12 16:23'
         message: ''
         version: '54'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-12 16:22'
         message: Added ghostscript to the requirements
         version: '53'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 15:57'
         message: ''
         version: '52'
-    - 
+    -
         author: Harlan Brown
         date: '2013-10-07 10:33'
         message: ''
         version: '51'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-27 17:29'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-27 17:29'
         message: Added link to the Windows poppler binary
         version: '49'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-27 15:44'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-26 14:24'
         message: ''
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-26 14:21'
         message: Removed duplicated content
         version: '46'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-08-22 17:46'
         message: ''
         version: '45'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-08-22 17:44'
         message: ''
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-25 15:47'
         message: Install poppler instead of pdftohtml
         version: '43'
-    - 
+    -
         author: Julien Carsique
         date: '2013-07-10 16:44'
         message: ''
         version: '42'
-    - 
+    -
         author: Julien Carsique
         date: '2013-07-10 16:43'
         message: ''
         version: '41'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-06-29 16:13'
         message: ''
         version: '40'
-    - 
+    -
         author: Julien Carsique
         date: '2013-06-18 12:40'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-24 11:36'
         message: Added title to non-latin fonts tip
         version: '38'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-05-23 13:58'
         message: ''
         version: '37'
-    - 
+    -
         author: Laurent Doguin
         date: '2013-02-07 14:13'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '36'
-    - 
+    -
         author: Laurent Doguin
         date: '2013-02-07 14:13'
         message: change ffmpeg build site adress
         version: '35'
-    - 
+    -
         author: Julien Carsique
         date: '2013-01-10 14:46'
         message: fix APT links
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-10 12:42'
         message: ''
         version: '33'
-    - 
+    -
         author: Antoine Taillefer
         date: '2012-11-05 23:29'
         message: ''
         version: '32'
-    - 
+    -
         author: Antoine Taillefer
         date: '2012-11-05 20:07'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-10 18:11'
         message: ''
         version: '30'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-04-15 18:21'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '29'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-04-15 18:21'
         message: Migrated to Confluence 4.0
         version: '28'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-04-15 18:21'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-28 18:12'
         message: ''
         version: '26'
-    - 
+    -
         author: Julien Carsique
         date: '2012-02-02 01:11'
         message: ''
         version: '25'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2012-01-09 14:36'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-04 16:35'
         message: Added tip about .exe installer
         version: '23'
-    - 
+    -
         author: Olivier Grisel
         date: '2012-01-02 12:21'
         message: apt link for ufraw
         version: '22'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-02 12:15'
         message: ''
         version: '21'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-02 12:15'
         message: ''
         version: '20'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-02 12:07'
         message: ''
         version: '19'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-02 12:01'
         message: ''
         version: '18'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-02 11:59'
         message: ''
         version: '17'
-    - 
+    -
         author: Julien Carsique
         date: '2011-12-09 17:41'
         message: ''
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2011-12-09 17:36'
         message: add brew install ffmpeg
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 15:17'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-26 14:38'
         message: ''
         version: '13'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-07-18 17:15'
         message: ''
         version: '12'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2011-07-15 17:12'
         message: >-
             Update from the OOoDaemonService to OOoManagerService config
             starting with 5.4.0
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-27 16:30'
         message: info about libwpd thirdparty
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2011-05-13 14:34'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2011-05-13 14:32'
         message: Add information about LibreOffice
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2011-04-05 16:56'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-10 18:01'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-10 18:00'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-10 17:56'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-10 17:52'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-10 17:50'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-10 17:48'
         message: ''
@@ -603,11 +604,11 @@ FFmpeg is required by the Nuxeo DAM add-on. It is used to create the storyboard 
 *   Using Homebrew:&nbsp;
 
     ```
-    brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype 
-    --with-frei0r --with-libass --with-libbluray --with-libcaca 
-    --with-libquvi --with-libvidstab --with-libvo-aacenc --with-libvorbis 
-    --with-libvpx --with-opencore-amr --with-openjpeg --with-openssl 
-    --with-opus --with-rtmpdump --with-schroedinger --with-speex 
+    brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype
+    --with-frei0r --with-libass --with-libbluray --with-libcaca
+    --with-libquvi --with-libvidstab --with-libvo-aacenc --with-libvorbis
+    --with-libvpx --with-opencore-amr --with-openjpeg --with-openssl
+    --with-opus --with-rtmpdump --with-schroedinger --with-speex
     --with-theora --with-tools --with-x265
     ```
 

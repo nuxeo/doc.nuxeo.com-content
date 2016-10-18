@@ -15,23 +15,24 @@ confluence:
     shortlink: KoBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/KoBOAQ'
     source_link: /display/ADMINDOC60/Troubleshooting
+tree_item_index: 900
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 16:03'
         message: 'emove children display macro  '
         version: '4'
-    - 
+    -
         author: Anonymous
         date: '2013-10-29 17:48'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 22:59'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 22:58'
         message: ''

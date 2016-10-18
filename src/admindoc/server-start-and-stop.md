@@ -16,193 +16,194 @@ confluence:
     shortlink: RIBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/RIBOAQ'
     source_link: /display/ADMINDOC60/Server+Start+and+Stop
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:21'
         message: igration of unmigrated content due to installation of a new plugi
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:20'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:20'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:20'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:20'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:20'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:20'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:20'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:20'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-27 10:32'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-27 10:32'
         message: ''
         version: '28'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-13 12:43'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '27'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-13 12:43'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '26'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-13 12:43'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '25'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-13 12:43'
         message: Migrated to Confluence 4.0
         version: '24'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-13 12:43'
         message: Removed 5.4 specific steps
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 14:48'
         message: Removed 5.4 specific steps
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 12:36'
         message: Removed 5.4 specific steps
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 12:24'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-07 12:23'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-16 12:41'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-19 09:50'
         message: added Windows 7 info
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-16 15:28'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-26 17:00'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-26 16:47'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-22 19:00'
         message: fixed typo
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-22 18:57'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-22 18:46'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-22 18:42'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-22 18:25'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-12 10:13'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-12 10:05'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-11 19:41'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-24 17:32'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-22 18:40'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-22 18:39'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2011-03-11 18:55'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 15:12'
         message: ''

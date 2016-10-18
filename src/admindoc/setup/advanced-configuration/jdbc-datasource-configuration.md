@@ -18,43 +18,44 @@ confluence:
     shortlink: aYBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/aYBOAQ'
     source_link: /display/ADMINDOC60/JDBC+Datasource+Configuration
+tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 14:18'
         message: ormattin
         version: '8'
-    - 
+    -
         author: Thierry Martins
         date: '2014-04-30 15:46'
         message: example on single datasource exclusion
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 13:38'
         message: Added TOC
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-10-10 16:21'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-10-10 16:20'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-06-17 17:05'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-06-17 17:05'
         message: ''
         version: '2'
-    - 
+    -
         author: Admin name placeholder
         date: '2010-03-01 00:57'
         message: ''
