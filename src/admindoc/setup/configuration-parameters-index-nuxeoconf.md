@@ -994,7 +994,6 @@ Those parameters can be either environment parameters used by Nuxeo runtime or t
 
 Some parameters can be set By contributing to the [Configuration Service.](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute)
 
-_Looking for a specific parameter?_
 
 {{! table-filter removed }}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 

@@ -147,9 +147,7 @@ bin/nuxeoctl pack /opt/nuxeotomcatwar.zip 
 
 The resulting ZIP is all that's needed for the rest of the instructions.
 
-## <a name="__RefHeading__3874_1562447000">Preparing a full Tomcat 7 with Nuxeo WAR</a>
-
-<a name="__RefHeading__3874_1562447000">
+## Preparing a full Tomcat 7 with Nuxeo WAR
 
 1.  Download and set up a new Tomcat 7 from scratch with the WAR that was just built.
 
@@ -198,9 +196,7 @@ The resulting ZIP is all that's needed for the rest of the instructions.
 
 </a>
 
-## <a name="__RefHeading__3874_1562447000"></a><a name="__RefHeading__3876_1562447000">Deploying to CloudFoundry</a>
-
-<a name="__RefHeading__3876_1562447000">
+## Deploying to CloudFoundry
 
 ### Patching the WAR
 
@@ -276,8 +272,6 @@ Before the above Tomcat 7 instance can be set up as a full &ldquo;standalone&rdq
 
 ## Testing Nuxeo CMIS
 
-</a>
-
-<a name="__RefHeading__3876_1562447000">Once deployed and started, Nuxeo CoreServer does not provide a web-accessible graphical user interface (because the CoreServer version doesn't have those), but it can be addressed through a CMIS client like the Apache CMIS Workbench available at</a> [http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html](http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html).
+Once deployed and started, Nuxeo CoreServer does not provide a web-accessible graphical user interface (because the CoreServer version doesn't have those), but it can be addressed through a CMIS client like the Apache CMIS Workbench available at</a> [http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html](http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html).
 
 It must point to Nuxeo, whose CMIS address is described by the Nuxeo startup page, usually it is of the form [http://localhost:8080/nuxeo/atom/cmis](http://localhost:8080/nuxeo/atom/cmis). The default Nuxeo user/password is Administrator/Administrator.

@@ -159,7 +159,6 @@ history:
         date: '2013-02-25 14:29'
         message: ''
         version: '1'
-
 ---
 &nbsp;
 
@@ -274,21 +273,18 @@ In the previous section you have created your configuration. You must now declar
     Bundle-ManifestVersion: 2
     Bundle-SymbolicName: jalon-dm-bundle
     Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-
     ```
     ```
     Manifest-Version: 1.0
     ... all the existing element already set ...
     Nuxeo-Component: OSGI-INF/myproject-servicewhereIcontribute-contribution.xml
-
     ```
 
 2.  If the `Nuxeo-Component` already exists with another component declaration, separate them by commas.
 
 {{{multiexcerpt 'manifest-format-warning' page='How to create an empty bundle'}}}
 
-## <span style="color: rgb(0,0,0);">
-Overriding the Nuxeo Default Configuration</span>
+## Overriding the Nuxeo Default Configuration
 
 Most of the time you will want to override an existing Nuxeo Component. Each extension point has its own logic (even if most of the time you will just have to contribute the same item with the same name). So look into the extension point definition to see how to override an existing configuration.
 
@@ -312,5 +308,4 @@ Components deployment is linear, so if you want to override an existing configur
             ...
        </extension>
     </component>
-
     ```
