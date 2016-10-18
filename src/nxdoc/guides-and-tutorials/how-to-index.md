@@ -142,4 +142,4 @@ history:
 ---
 &nbsp;
 
-{{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC IDEDOC NXDOC Studio USERDOC' label='howto'}}}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC60 IDEDOC NXDOC60 Studio USERDOC60' label='howto'}}}

@@ -38,4 +38,4 @@ history:
         version: '1'
 
 ---
-{{{table_from_details headings='Excerpt, Topics, Level' spaces='Studio NXDOC IDEDOC' label='howto' filter='Topics=Event'}}}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='Studio NXDOC60 IDEDOC' label='howto' filter='Topics=Event'}}}

@@ -20,52 +20,52 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/K4BOAQ'
     source_link: /display/ADMINDOC60/Deploying+Nuxeo+on+CloudFoundry
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 16:04'
         message: ''
         version: '10'
-    - 
+    -
         author: Prateeksha Barman
         date: '2013-06-13 23:15'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 13:47'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 13:45'
         message: Added TOC
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-25 15:28'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-25 15:26'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-25 15:25'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-25 15:23'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-25 15:23'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-25 15:20'
         message: ''
@@ -125,9 +125,7 @@ bin/nuxeoctl pack /opt/nuxeotomcatwar.zip 
 
 The resulting ZIP is all that's needed for the rest of the instructions.
 
-## <a name="__RefHeading__3874_1562447000">Preparing a full Tomcat 7 with Nuxeo WAR</a>
-
-<a name="__RefHeading__3874_1562447000">
+## Preparing a full Tomcat 7 with Nuxeo WAR
 
 1.  Set up a new Tomcat 7 from scratch with the WAR that was just built.
 
@@ -177,9 +175,7 @@ The resulting ZIP is all that's needed for the rest of the instructions.
 
 </a>
 
-## <a name="__RefHeading__3874_1562447000"></a><a name="__RefHeading__3876_1562447000">Deploying to CloudFoundry</a>
-
-<a name="__RefHeading__3876_1562447000">
+## Deploying to CloudFoundry
 
 ### Patching the WAR
 
@@ -239,16 +235,16 @@ Before the above Tomcat 7 instance can be set up as a full &ldquo;standalone&rdq
     The following CloudFoundry YML manifest corresponds to a full setup ( `myapp` should be replaced by your namespace):
 
     ```
-    --- 
-    applications: 
-      .: 
+    ---
+    applications:
+      .:
         mem: 1G
         instances: 1
         url: myapp.cloudfoundry.com
-        framework: 
-          info: 
+        framework:
+          info:
             mem: 64M
-            exec: 
+            exec:
             description: Standalone Application
           name: standalone
         command: bin/startup.sh
@@ -258,8 +254,6 @@ Before the above Tomcat 7 instance can be set up as a full &ldquo;standalone&rdq
 
 ## Testing Nuxeo CMIS
 
-</a>
-
-<a name="__RefHeading__3876_1562447000">Once deployed and started, Nuxeo CoreServer does not provide a web-accessible graphical user interface (because the CoreServer version doesn't have those), but it can be addressed through a CMIS client like the Apache CMIS Workbench available at</a> [http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html](http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html) .
+Once deployed and started, Nuxeo CoreServer does not provide a web-accessible graphical user interface (because the CoreServer version doesn't have those), but it can be addressed through a CMIS client like the Apache CMIS Workbench available at</a> [http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html](http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html) .
 
 It must point to Nuxeo, whose CMIS address is described by the Nuxeo startup page, usually it is of the form [http://localhost:8080/nuxeo/atom/cmis](http://localhost:8080/nuxeo/atom/cmis) . The default Nuxeo user/password is Administrator/Administrator.
