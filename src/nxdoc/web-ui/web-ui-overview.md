@@ -125,7 +125,8 @@ history:
         version: '1'
 
 ---
-The Nuxeo Web UI is a user interface designed in&nbsp;Web Component (HTML) / Polymer framework.&nbsp;It allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full screen suggester. [Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) is a first class choice for projects where visual and workflows are important requirements. Let's discover what are the functional evolutions present on this new interface.
+
+The Nuxeo Web UI is a user interface designed in Web Component (HTML) / Polymer framework. It allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full screen suggester. [Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) is a first class choice for projects where visual and workflows are important requirements. Let's discover what are the functional evolutions present on this new interface.
 
 ## Functional Overview
 
@@ -133,14 +134,14 @@ Three important parts are visible on every single pages:
 
 ![]({{file name='web_ui.png'}} ?w=650,border=true)
 
-### Header Toolbar&nbsp;
+### Header Toolbar
 
 ![]({{file name='header_toolbar.png'}} ?w=650,border=true)
 
 1.  **Default Domain**: The title of the selected view
 2.  **Sub-Views**: The sub-views available on the selected view
 3.  **Actions**: The possible actions according to the selected view
-4.  **Quick search:**&nbsp;Search by keywords or users**&nbsp;**
+4.  **Quick search**: Search by keywords or users
 
 ### Side Menu
 
@@ -148,7 +149,7 @@ The menu displays different tabs. Clicking on one of them will open a side panel
 
 ![]({{file name='web_ui_with_side_panel.png'}} ?w=650,border=true)
 
-This new pattern allows to&nbsp;start browsing without changing the context of work.
+This new pattern allows to start browsing without changing the context of work.
 
 <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">![]({{file name='dashboard_home.png'}} ?w=48,thumbnail=true)</td><td colspan="1">
 
@@ -196,11 +197,11 @@ This new pattern allows to&nbsp;start browsing without changing the context of w
 
 </td></tr></tbody></table></div>
 
-### **Main View**
+### Main View
 
 The last part of the UI is the main view that depends of what has been selected on the side menu. The main view will usually show lists of documents or a document and its details.&nbsp; Lists of documents are presented in a table that proposes different functionalities like the infinite scroll instead of pagination, faceted filters in the header, easy columns selection with persistence of user's choice and a great visibility of selected elements.
 
-A create button ![]({{file name='create_button.png'}} ?w=25,thumbnail=true)&nbsp;is also displayed on the main view to let you create or import documents in your application.
+A create button ![]({{file name='create_button.png'}} ?w=25,thumbnail=true) is also displayed on the main view to let you create or import documents in your application.
 
 ## Technical Overview
 
@@ -225,17 +226,24 @@ The drawer's content is managed by `<iron-pages>` which toggles between its chil
 The main area is reserved for displaying the current page's content. Our router relies on [page.js](https://visionmedia.github.io/page.js/) and is in charge of parsing the URL and setting the current page and context data in `<nuxeo-app>` accordingly.
 
 ![]({{file name='Web UI search page.png'}} ?w=959,h=614,border=true)
-
 &nbsp;
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
 
-*   [Nuxeo Elements]({{page page='nuxeo-elements'}})
-*   [Data Visualization]({{page page='data-visualization'}})
+<div class="column medium-6">
 
-{{/panel}}</div><div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
+
+* [Nuxeo Elements]({{page page='nuxeo-elements'}})
+[Data Visualization]({{page page='data-visualization'}})
+
+{{/panel}}
+
+</div>
+
+<div class="column medium-6">
 
 &nbsp;
 

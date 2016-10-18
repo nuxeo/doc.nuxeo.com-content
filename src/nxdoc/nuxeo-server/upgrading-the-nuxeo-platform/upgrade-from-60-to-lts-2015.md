@@ -330,7 +330,6 @@ JDK 1.8 update 40 (8u40) is required.
 
 Upgrading Elasticsearch to the latest 1.5.x is not mandatory but advised (1.1.x is still supported).
 
-<div>
 
 ### Elasticsearch for Audit Logs
 
@@ -383,8 +382,6 @@ Defaults to false on server upgrade, true on new install.
 
 ### ACL Factorization
 
-</div>
-
 Only available for PostgreSQL, the ACLR should be factorized as "Everyone". Rebuild the ACLR table with `nx_rebuild_read_acls` stored procedure:
 
 ```sql
@@ -421,11 +418,10 @@ See [NXP-17180](https://jira.nuxeo.com/browse/NXP-17180) for details.
 
 ### Notification Subscriptions Upgrade
 
-<div>
-
 Notification subscriptions have to be migrated using the `migrate_notifications.sql` script, only available for PostgreSQL and Oracle databases.
 
 Run the script file to migrate notification subscriptions ([PostgreSQL](https://raw.githubusercontent.com/nuxeo/nuxeo/7.10/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/bin/upgrade-6.0-7.10/notification-subscriptions-migration.psql.sql), [Oracle](https://raw.githubusercontent.com/nuxeo/nuxeo/7.10/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/bin/upgrade-6.0-7.10/notification-subscriptions-migration.oracle.sql)) (also available in your Nuxeo distribution):
+
 
 ###### Postgresql
 
@@ -442,8 +438,6 @@ $ sqlplus <nuxeo_user>/<nuxeo_password> @$NUXEO_HOME/bin/upgrade-6.0-7.10/notifi
 ```
 
 ### Blob Management
-
-</div>
 
 Repository config must define a default blob provider. If you define your own **default-repository-config**, you must align it on [default-repository-config.xml.nxftl](https://github.com/nuxeo/nuxeo/blob/7.10/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/nxserver/config/default-repository-config.xml.nxftl)
 
@@ -523,8 +517,6 @@ Example of properties which have been migrated to ConfigurationService:
 
 ### New Batch Upload API
 
-<div>
-
 The [batch upload API]({{page page='blob-upload-for-batch-processing'}}) has changed to be exposed as a REST resource endpoint. The old API using `/site/automation/batch/upload` is deprecated but kept for backward compatibility.
 
 {{#> callout type='note' }}
@@ -537,8 +529,6 @@ If this is not possible for any reason and you absolutely need to keep using the
 
 *   Not passing the `X-Batch-Id` header. The batch id will then be automatically generated server-side.
 *   Setting the `allowClientGeneratedBatchId` configuration property to `true` (not recommended).
-
-</div>
 
 ### Removal of the IPTC Schema
 
