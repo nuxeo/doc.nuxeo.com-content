@@ -18,143 +18,144 @@ confluence:
     shortlink: WAFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/WAFFAQ'
     source_link: /display/USERDOC60/Adding+Content+to+a+Social+Workspace
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 15:23'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-18 13:52'
         message: ''
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:16'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:16'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:16'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:16'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:16'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-02 15:48'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-02 15:48'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-02 15:48'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-02 15:48'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-02 15:48'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-04 19:00'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:26'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-10 11:08'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-10 11:08'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-10 11:08'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-10 11:08'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-09 18:31'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 16:52'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 16:52'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 16:52'
         message: Fixed links
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-21 16:54'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-20 18:07'
         message: Added link to News creation
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-20 18:06'
         message: Added screenshots
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-21 18:03'
         message: Added steps from Document Management View
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-17 16:26'
         message: Added creation steps from document library gadget
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-17 15:33'
         message: ''

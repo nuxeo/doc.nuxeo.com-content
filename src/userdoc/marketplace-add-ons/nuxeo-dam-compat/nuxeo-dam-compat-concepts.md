@@ -18,212 +18,213 @@ confluence:
     shortlink: 9ABFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/9ABFAQ'
     source_link: /display/USERDOC60/Nuxeo+DAM+Compat+Concepts
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-18 13:43'
         message: ''
         version: '41'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 10:57'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '40'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 10:57'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '39'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 10:57'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '38'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 10:57'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '37'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 10:56'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 17:59'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 17:59'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 16:39'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-17 18:15'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-17 18:15'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-17 18:15'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:37'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:37'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-18 13:37'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-18 13:37'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-12 15:05'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 19:08'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 19:08'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 19:08'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 19:08'
         message: Migrated to Confluence 4.0
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 19:08'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 12:00'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:41'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-04 15:46'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-04 15:13'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-14 10:30'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-29 14:32'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-08 12:01'
         message: >-
             Added information on default tab after logging in and added tabs
             screenshots
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 12:18'
         message: >-
             Added information on default tab after logging in and added tabs
             screenshots
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 11:57'
         message: Added main tabs description
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 11:09'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 19:27'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 19:22'
         message: ''
         version: '8'
-    - 
+    -
         author: Darcy Carrié
         date: '2011-04-29 13:50'
         message: ''
         version: '7'
-    - 
+    -
         author: Darcy Carrié
         date: '2011-04-29 12:39'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-22 15:51'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-07-29 14:28'
         message: ''
         version: '4'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-29 12:32'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-07-29 09:49'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-07-29 09:23'
         message: ''

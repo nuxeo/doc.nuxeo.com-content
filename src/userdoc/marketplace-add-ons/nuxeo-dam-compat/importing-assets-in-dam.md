@@ -19,263 +19,264 @@ confluence:
     shortlink: 5gBFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/5gBFAQ'
     source_link: /display/USERDOC60/Importing+Assets+in+DAM
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 14:01'
         message: ''
         version: '52'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-18 13:45'
         message: ''
         version: '51'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 11:05'
         message: ''
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-05 23:08'
         message: ''
         version: '49'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-20 10:46'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-12 17:08'
         message: ''
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 20:20'
         message: ''
         version: '46'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:37'
         message: ''
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-16 14:13'
         message: ''
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-11 12:27'
         message: Added screenshot of the bulk import popup
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-19 15:52'
         message: Added drag and drop import description
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-17 17:32'
         message: ''
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-13 14:40'
         message: Updated for 5.7.1 .
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-04 16:03'
         message: Migrated to Confluence 4.0
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-04 16:03'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-01 10:33'
         message: Updated screenshots
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-29 18:10'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-29 14:38'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 22:07'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2010-07-29 11:42'
         message: added language metadata description
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2010-07-29 11:26'
         message: reformatting of instructions
         version: '32'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 15:41'
         message: ''
         version: '31'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 15:41'
         message: ''
         version: '30'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 15:40'
         message: ''
         version: '29'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 15:39'
         message: ''
         version: '28'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 15:39'
         message: ''
         version: '27'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 15:39'
         message: ''
         version: '26'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:37'
         message: ''
         version: '25'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:28'
         message: ''
         version: '24'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:24'
         message: ''
         version: '23'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:21'
         message: ''
         version: '22'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:20'
         message: ''
         version: '21'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:19'
         message: ''
         version: '20'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-21 00:00'
         message: ''
         version: '19'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 23:58'
         message: ''
         version: '18'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 23:58'
         message: ''
         version: '17'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 23:57'
         message: ''
         version: '16'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 23:56'
         message: ''
         version: '15'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 23:53'
         message: ''
         version: '14'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 23:03'
         message: ''
         version: '13'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 22:56'
         message: ''
         version: '12'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 22:40'
         message: ''
         version: '11'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 22:39'
         message: ''
         version: '10'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 22:37'
         message: ''
         version: '9'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 22:34'
         message: ''
         version: '8'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 22:29'
         message: ''
         version: '7'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 22:23'
         message: ''
         version: '6'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 22:23'
         message: ''
         version: '5'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 18:11'
         message: ''
         version: '4'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 18:11'
         message: ''
         version: '3'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 18:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 18:06'
         message: ''

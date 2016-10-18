@@ -15,38 +15,39 @@ confluence:
     shortlink: HwFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/HwFFAQ'
     source_link: /pages/viewpage.action?pageId=21299487
+tree_item_index: 400
 history:
-    - 
+    -
         author: Anonymous
         date: '2014-11-24 15:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-24 14:54'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-18 12:15'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-27 16:23'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-27 16:23'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-04-04 10:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Eric Barroca
         date: '2010-04-28 11:50'
         message: ''

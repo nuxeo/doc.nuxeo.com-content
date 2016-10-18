@@ -18,133 +18,134 @@ confluence:
     shortlink: MAFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/MAFFAQ'
     source_link: /display/USERDOC60/Starting+a+Serial+Workflow
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-09 08:52'
         message: dd precisions about lock status during workflo
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-06 14:20'
         message: Add note about tasks assigned to a group and update related pages
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-02 15:57'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-25 15:29'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-25 15:21'
         message: Fixed typos
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 16:03'
         message: 'Updated screenshots for 5.8, added link to task delegation'
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 15:20'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:15'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 14:07'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-18 12:45'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-02 15:50'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-12 16:21'
         message: Migrated to Confluence 4.0
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-12 16:21'
         message: Updated content with latest version workflow
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-19 16:55'
         message: Updated screenshots
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:11'
         message: Removed 5.4 references
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:09'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 11:47'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-24 12:15'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-24 12:15'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-24 12:06'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-24 12:06'
         message: updated with 5.4.2 new features
         version: '6'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2010-08-30 15:53'
         message: added screenshots
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-27 10:26'
         message: added screenshots
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-26 19:03'
         message: added link
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-26 18:26'
         message: added link
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-29 18:08'
         message: ''

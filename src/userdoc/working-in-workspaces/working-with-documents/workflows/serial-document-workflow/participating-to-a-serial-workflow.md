@@ -20,128 +20,129 @@ confluence:
     shortlink: 2QBFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/2QBFAQ'
     source_link: /display/USERDOC60/Participating+to+a+Serial+Workflow
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 14:29'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 14:29'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-06 14:18'
         message: Add note about tasks assigned to a group
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 00:51'
         message: formatting and update link to dashboard doc
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-10 16:46'
         message: Added link to reassignment page
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-25 15:42'
         message: Removed related topics from TOC
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-25 15:41'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 16:34'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 16:32'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 16:29'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 16:28'
         message: 'Updated screenshots for 5.8, added delegation step'
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 16:21'
         message: Updated Validation step
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 15:20'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:15'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 17:10'
         message: Removed related topics from TOC
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 15:10'
         message: Fixed broken link to abandon workflow
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-18 15:04'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-12 16:24'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-12 16:24'
         message: Updated content with latest version workflow
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:24'
         message: Added toc
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 14:41'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-24 12:16'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-24 12:15'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-01 11:23'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-28 11:57'
         message: ''

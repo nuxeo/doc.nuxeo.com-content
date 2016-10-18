@@ -21,123 +21,124 @@ confluence:
     shortlink: '-ABFAQ'
     shortlink_source: 'https://doc.nuxeo.com/x/-ABFAQ'
     source_link: /display/USERDOC60/Changing+the+Presentation+of+Document+Lists
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 13:23'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-28 14:17'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 11:22'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 11:22'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 11:22'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 11:21'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 11:20'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 18:36'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 17:44'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 16:28'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 16:27'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-29 17:23'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-06 17:38'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-29 21:23'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-19 12:13'
         message: Migrated to Confluence 4.0
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-19 12:13'
         message: Added related user guide pages
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 23:31'
         message: Added related content
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 23:20'
         message: Updated screenshots
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 10:09'
         message: Removed 5.4 references
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-31 12:38'
         message: updated with 5.4.2 icon
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-23 16:45'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-23 15:33'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-23 12:36'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-23 11:45'
         message: ''

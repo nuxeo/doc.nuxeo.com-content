@@ -15,28 +15,29 @@ confluence:
     shortlink: 7wBFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/7wBFAQ'
     source_link: /display/USERDOC60/Serial+Document+Workflow
+tree_item_index: 100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 14:10'
         message: emove children display macro
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-18 15:53'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-09 08:53'
         message: Add precisions about lock status during workflow
         version: '3'
-    - 
+    -
         author: Anonymous
         date: '2013-10-25 13:46'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-25 10:02'
         message: ''

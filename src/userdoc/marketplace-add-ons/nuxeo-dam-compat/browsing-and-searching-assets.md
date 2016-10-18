@@ -19,260 +19,261 @@ confluence:
     shortlink: 5QBFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/5QBFAQ'
     source_link: /display/USERDOC60/Browsing+and+Searching+Assets
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 14:35'
         message: ''
         version: '51'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-18 13:44'
         message: ''
         version: '50'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 11:01'
         message: ''
         version: '49'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-05 23:14'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-10 17:39'
         message: ''
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-31 11:14'
         message: Updated faceted search fields with collection;
         version: '46'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-20 17:24'
         message: ''
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-02 16:32'
         message: ''
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 21:00'
         message: ''
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:39'
         message: Removed related topics from TOC
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:38'
         message: ''
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-18 16:46'
         message: Added precision on DAM tab displaying only assets
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-16 14:53'
         message: Updated screenshots
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-16 14:31'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:26'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-19 18:02'
         message: Added steps to save a search and share it
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-14 18:03'
         message: Added search by tags
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-13 19:55'
         message: >-
             Removed library filter, updated metadata filter search and fulltext
             search
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-24 18:45'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-12 15:52'
         message: Migrated to Confluence 4.0
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-12 15:52'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-06 12:10'
         message: Updated screenshots
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 22:32'
         message: ''
         version: '29'
-    - 
+    -
         author: Jane Zupan
         date: '2010-08-06 17:19'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2010-07-29 14:50'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2010-07-29 12:48'
         message: ''
         version: '26'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 15:21'
         message: ''
         version: '25'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 15:18'
         message: ''
         version: '24'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 15:16'
         message: ''
         version: '23'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 15:15'
         message: ''
         version: '22'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 14:59'
         message: ''
         version: '21'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 14:57'
         message: ''
         version: '20'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 14:57'
         message: ''
         version: '19'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 14:42'
         message: ''
         version: '18'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 14:31'
         message: ''
         version: '17'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 14:29'
         message: ''
         version: '16'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 14:23'
         message: ''
         version: '15'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 14:22'
         message: ''
         version: '14'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 14:21'
         message: ''
         version: '13'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 14:20'
         message: ''
         version: '12'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 14:19'
         message: ''
         version: '11'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 14:18'
         message: ''
         version: '10'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 14:18'
         message: ''
         version: '9'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 14:16'
         message: ''
         version: '8'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 14:13'
         message: ''
         version: '7'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 18:20'
         message: ''
         version: '6'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 18:18'
         message: ''
         version: '5'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 17:23'
         message: ''
         version: '4'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 18:12'
         message: ''
         version: '3'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 18:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-20 18:06'
         message: ''

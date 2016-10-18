@@ -15,18 +15,19 @@ confluence:
     shortlink: QY9kAQ
     shortlink_source: 'https://doc.nuxeo.com/x/QY9kAQ'
     source_link: /display/USERDOC60/PDF+Renditions
+tree_item_index: 1300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-17 16:16'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-17 15:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-17 15:06'
         message: ''

@@ -17,163 +17,164 @@ confluence:
     shortlink: PAFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/PAFFAQ'
     source_link: /display/USERDOC60/Creating+a+New+Social+Workspace
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 13:56'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-18 13:51'
         message: ''
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:16'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:16'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:15'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '28'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:15'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:15'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-20 18:20'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-20 18:20'
         message: Formatting
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-14 11:44'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-25 18:27'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-25 18:27'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-25 18:26'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-25 18:26'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-25 18:26'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:25'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:25'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-23 11:11'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-23 11:11'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-23 11:11'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 16:44'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 16:44'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 16:44'
         message: Migrated to Confluence 4.0
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 16:44'
         message: Updated default tab after creation
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-21 12:42'
         message: Added screenshot and links to dashboard configuration
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-20 10:33'
         message: Added screenshot and links to dashboard configuration
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-17 17:35'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-17 14:13'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-17 11:14'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-17 11:11'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-17 10:56'
         message: Added creation steps from DM view
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-16 18:02'
         message: ''

@@ -18,18 +18,19 @@ confluence:
     shortlink: VwFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/VwFFAQ'
     source_link: /display/USERDOC60/Reassigning+a+Task
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 14:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-02 18:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-10 16:41'
         message: ''

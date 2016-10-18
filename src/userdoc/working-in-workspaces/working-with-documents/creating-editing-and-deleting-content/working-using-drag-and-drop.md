@@ -18,118 +18,119 @@ confluence:
     shortlink: EwFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/EwFFAQ'
     source_link: /display/USERDOC60/Working+Using+Drag+and+Drop
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 11:14'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-03 13:38'
         message: Add moving and publishing using D&D
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-22 15:16'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 18:42'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 18:42'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 18:32'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 15:21'
         message: ''
         version: '17'
-    - 
+    -
         author: Anonymous
         date: '2014-02-24 14:49'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 17:57'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-18 15:38'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-17 18:05'
         message: 'Update for 5.8: no more Chrome Frame, no more FF extension'
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-18 18:40'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-27 11:57'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-27 11:56'
         message: Added note about Google Chrome Frame
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-06 17:48'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-18 11:58'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-18 11:57'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-23 12:02'
         message: Migrated to Confluence 4.0
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-23 12:02'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 11:19'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-31 17:01'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-10 18:39'
         message: fixed broken links
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-23 18:20'
         message: ''

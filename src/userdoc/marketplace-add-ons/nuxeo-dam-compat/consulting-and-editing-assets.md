@@ -18,203 +18,204 @@ confluence:
     shortlink: _gBFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/_gBFAQ'
     source_link: /display/USERDOC60/Consulting+and+Editing+Assets
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-18 13:45'
         message: ''
         version: '40'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 11:02'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 18:02'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-05 23:12'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-31 14:46'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-31 11:59'
         message: Added new 5.9.3 full screen mode
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-28 18:08'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-20 18:26'
         message: Added precision about tags bulk edit behavior
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-20 17:54'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-26 18:01'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-12 17:46'
         message: Added bulk edit description
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:41'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-18 16:05'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-16 17:29'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-16 16:30'
         message: 'Updated screenshots, added switch to DM view'
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-02 11:30'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-04 17:30'
         message: Migrated to Confluence 4.0
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-04 17:30'
         message: Updated links
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-13 11:01'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-01 18:52'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-01 16:46'
         message: Updated screenshots
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 23:09'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 23:02'
         message: ''
         version: '18'
-    - 
+    -
         author: Jane Zupan
         date: '2010-08-06 17:34'
         message: ''
         version: '17'
-    - 
+    -
         author: Jane Zupan
         date: '2010-08-06 17:30'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2010-07-29 16:32'
         message: added video storyboarding information and toc
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2010-07-29 15:27'
         message: moved export to a new page and formated instructions
         version: '14'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-28 10:48'
         message: ''
         version: '13'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:44'
         message: ''
         version: '12'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:44'
         message: ''
         version: '11'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:41'
         message: ''
         version: '10'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:39'
         message: ''
         version: '9'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:37'
         message: ''
         version: '8'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:37'
         message: ''
         version: '7'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:36'
         message: ''
         version: '6'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:33'
         message: ''
         version: '5'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:32'
         message: ''
         version: '4'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:31'
         message: ''
         version: '3'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:30'
         message: ''
         version: '2'
-    - 
+    -
         author: Delphine Renevey
         date: '2010-07-27 14:29'
         message: ''

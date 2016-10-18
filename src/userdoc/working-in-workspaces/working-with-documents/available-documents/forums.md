@@ -18,118 +18,119 @@ confluence:
     shortlink: CAFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/CAFFAQ'
     source_link: /display/USERDOC60/Forums
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 14:09'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 17:37'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 17:29'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 17:26'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-26 12:28'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-24 14:20'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-02 15:33'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:16'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Fixed broken link
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:38'
         message: Fixed broken link
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-03 14:52'
         message: Fixed broken link
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-20 14:54'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-25 15:12'
         message: Fixed broken link
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:32'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:30'
         message: Added related content
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:27'
         message: Added related content
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-09 09:48'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 17:09'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 14:42'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-01 11:23'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-10 18:41'
         message: fixed broken links
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-27 15:31'
         message: ''

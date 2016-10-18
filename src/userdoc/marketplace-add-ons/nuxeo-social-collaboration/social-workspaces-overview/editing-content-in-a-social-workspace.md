@@ -19,53 +19,54 @@ confluence:
     shortlink: VAFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/VAFFAQ'
     source_link: /display/USERDOC60/Editing+Content+in+a+Social+Workspace
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 14:09'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-18 13:52'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:17'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-04 19:17'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:27'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:27'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-10 11:54'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-20 18:24'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-20 18:24'
         message: Added screenshots
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-22 18:40'
         message: ''

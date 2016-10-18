@@ -17,118 +17,119 @@ confluence:
     shortlink: PQFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/PQFFAQ'
     source_link: /display/USERDOC60/Editing+a+Social+Workspace
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 13:56'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-18 13:52'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:16'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:16'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:16'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:16'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:16'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:26'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:26'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:26'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:26'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:26'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-23 11:11'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-23 11:11'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-23 11:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 16:45'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 16:45'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 16:45'
         message: Migrated to Confluence 4.0
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 16:45'
         message: Updated default tab after edition
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-20 16:41'
         message: Added screenshot
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-17 14:13'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-17 11:16'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-17 11:07'
         message: ''

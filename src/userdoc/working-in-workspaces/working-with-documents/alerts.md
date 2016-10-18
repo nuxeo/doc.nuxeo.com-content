@@ -20,108 +20,109 @@ confluence:
     shortlink: HgFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/HgFFAQ'
     source_link: /display/USERDOC60/Alerts
+tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 14:38'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-27 13:51'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-27 13:50'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-01 17:34'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-25 11:35'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 18:21'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-25 14:58'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:14'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 16:01'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 16:00'
         message: Updated icons
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 12:13'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-30 11:06'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-01 17:44'
         message: Added Home Alerts tab screenshot
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-03 16:14'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-03 16:14'
         message: Added related customization pages
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-03 14:06'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-28 17:10'
         message: Updated content to the new 5.6 follow system
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:09'
         message: Added toc
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-01 11:50'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-01 11:21'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-28 11:05'
         message: ''

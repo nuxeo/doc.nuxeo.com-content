@@ -16,23 +16,24 @@ confluence:
     shortlink: QAFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/QAFFAQ'
     source_link: /display/USERDOC60/Creating%2C+Editing+and+Deleting+Content
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 14:12'
         message: emove children display macro
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 11:14'
         message: ''
         version: '3'
-    - 
+    -
         author: Anonymous
         date: '2014-02-24 14:44'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-24 14:31'
         message: ''

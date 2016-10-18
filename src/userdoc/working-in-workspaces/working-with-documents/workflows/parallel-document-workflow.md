@@ -17,28 +17,29 @@ confluence:
     shortlink: 6QBFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/6QBFAQ'
     source_link: /display/USERDOC60/Parallel+Document+Workflow
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 14:11'
         message: emove children display macro
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-18 16:28'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-09 08:50'
         message: Add precisions about lock status dureing workflow
         version: '3'
-    - 
+    -
         author: Anonymous
         date: '2013-10-25 14:41'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-25 13:54'
         message: ''

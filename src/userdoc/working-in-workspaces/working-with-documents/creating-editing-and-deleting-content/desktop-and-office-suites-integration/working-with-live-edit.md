@@ -22,143 +22,144 @@ confluence:
     shortlink: LgFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/LgFFAQ'
     source_link: /display/USERDOC60/Working+with+Live+Edit
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 14:20'
         message: ''
         version: '28'
-    - 
+    -
         author: Anonymous
         date: '2014-11-26 10:53'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 10:47'
         message: ''
         version: '26'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-24 15:46'
         message: ''
         version: '25'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-24 15:46'
         message: ''
         version: '24'
-    - 
+    -
         author: Thierry Martins
         date: '2014-09-19 10:50'
         message: Add troubleshooting section
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-03 18:41'
         message: Formatting
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:00'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 16:44'
         message: Removed related topics from TOC
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-15 18:07'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-06 17:50'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2012-11-07 11:52'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-18 12:14'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-27 17:03'
         message: Migrated to Confluence 4.0
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-27 17:03'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-10 16:41'
         message: Updated supported Office versions and added IE 9 note
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-20 12:14'
         message: Added toc and related content
         version: '12'
-    - 
+    -
         author: Arnaud Kervern
         date: '2011-12-01 11:11'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-25 11:04'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 15:32'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-07-25 14:51'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 11:39'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-21 18:49'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-21 18:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-21 18:18'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-08 11:22'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-03 12:07'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-27 16:00'
         message: ''

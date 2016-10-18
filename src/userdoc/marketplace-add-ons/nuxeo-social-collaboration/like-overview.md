@@ -19,93 +19,94 @@ confluence:
     shortlink: FQFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/FQFFAQ'
     source_link: /display/USERDOC60/Like+Overview
+tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 13:25'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-18 13:56'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:24'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 18:24'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 18:23'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-04 19:32'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 20:02'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 20:02'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:34'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-16 17:15'
         message: Added screenshots
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-16 16:57'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-16 16:55'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-02 16:18'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-02 16:18'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-02 16:18'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-11 18:26'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-11 18:26'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-11 18:26'
         message: ''

@@ -19,195 +19,196 @@ confluence:
     shortlink: IQFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/IQFFAQ'
     source_link: /display/USERDOC60/Managing+Access+Rights
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 14:39'
         message: ''
         version: '38'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-02 13:55'
         message: ''
         version: '37'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-21 11:12'
         message: ''
         version: '36'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-21 11:11'
         message: ''
         version: '35'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-21 11:05'
         message: ''
         version: '34'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-20 19:10'
         message: ''
         version: '33'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-20 18:51'
         message: ''
         version: '32'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-20 17:56'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 22:31'
         message: >-
             Denying access rights now disabled by default, but can be activated
             through nuxeo.conf
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 10:25'
         message: wording
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-14 16:53'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-26 17:40'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-26 17:40'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-26 17:40'
         message: Added anchor to rights inheritance
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:48'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:48'
         message: Removed related topics from TOC
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:48'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migrated to Confluence 4.0
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:38'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-07 14:44'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-07 14:27'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-07 11:40'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-07 11:38'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-30 10:45'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-24 11:44'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-23 17:48'
         message: Fixed broken link to Access rights table
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 11:11'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-09 10:56'
         message: Added toc and related customization content
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 17:09'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 15:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-12 10:29'
         message: added rights prioritization section
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-01 11:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-23 15:38'
         message: ''

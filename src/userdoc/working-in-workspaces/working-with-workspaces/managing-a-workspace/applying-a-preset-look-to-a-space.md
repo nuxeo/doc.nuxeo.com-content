@@ -21,103 +21,104 @@ confluence:
     shortlink: DAFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/DAFFAQ'
     source_link: /display/USERDOC60/Applying+a+Preset+Look+to+a+Space
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 13:17'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-28 13:54'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 16:28'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-04 16:01'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-04 15:59'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-04 11:54'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-03 11:57'
         message: Added obsolete perspective paragraph
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 17:43'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-06 17:36'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-02 15:05'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-19 12:11'
         message: Migrated to Confluence 4.0
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-19 12:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-19 11:58'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-19 11:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 22:44'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 22:38'
         message: Updated screenshot and added related content
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 10:04'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 11:23'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-20 16:59'
         message: updated steps with new 5.4.2 local configuration
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-23 16:31'
         message: ''

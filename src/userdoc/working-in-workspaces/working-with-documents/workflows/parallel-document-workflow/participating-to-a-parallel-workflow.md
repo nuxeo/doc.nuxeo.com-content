@@ -19,48 +19,49 @@ confluence:
     shortlink: 6ABFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/6ABFAQ'
     source_link: /display/USERDOC60/Participating+to+a+Parallel+Workflow
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-18 13:28'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-06 14:24'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-02 18:11'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-10 16:45'
         message: Added link to reassignment page
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 16:33'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 16:00'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 15:58'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-25 19:27'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-25 15:16'
         message: ''

@@ -20,163 +20,164 @@ confluence:
     shortlink: _QBFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/_QBFAQ'
     source_link: /display/USERDOC60/Defining+the+Authorized+Document+Types
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 13:21'
         message: ''
         version: '32'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-28 14:22'
         message: ''
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 16:28'
         message: ''
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 16:16'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 16:15'
         message: ''
         version: '28'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 16:15'
         message: ''
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 16:12'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 16:06'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 16:04'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 16:01'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 15:47'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 12:12'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-03 14:20'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 17:46'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 17:45'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 16:37'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 16:25'
         message: Removed related topics from TOC
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-15 10:13'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-29 11:08'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-02 15:10'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-02 15:09'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-19 12:28'
         message: Migrated to Confluence 4.0
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-19 12:28'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 23:35'
         message: Added related content
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 23:30'
         message: Updated screenshots
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 10:11'
         message: Removed 5.4 references
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-09 10:42'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-23 11:53'
         message: added inheritance of document type configuration
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-20 22:06'
         message: added screenshots
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-20 21:52'
         message: added introduction and links to sections
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-20 21:46'
         message: added "default type" and "deny all types" sections
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-20 18:10'
         message: ''

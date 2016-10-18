@@ -20,118 +20,119 @@ confluence:
     shortlink: UgFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/UgFFAQ'
     source_link: /display/USERDOC60/Exporting+Documents
+tree_item_index: 1000
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-23 13:40'
         message: dd details on Export options
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-03-20 10:18'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-02 23:20'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-14 10:05'
         message: Added icon
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:21'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 15:58'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 15:56'
         message: Added export icons.
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 17:56'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 17:56'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-30 11:23'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-30 11:23'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-03 15:36'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-03 15:36'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-03 15:31'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-03 18:00'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-03 18:00'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-03 18:00'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-18 17:48'
         message: Added XML export options
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-04-11 17:18'
         message: Added XML export options
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-04-06 17:51'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-04-06 12:19'
         message: fixed screenshots width
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-04-06 12:17'
         message: Fixed broken link
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-20 17:49'
         message: ''

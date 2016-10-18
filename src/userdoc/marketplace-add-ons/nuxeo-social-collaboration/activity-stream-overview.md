@@ -18,68 +18,69 @@ confluence:
     shortlink: OwFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/OwFFAQ'
     source_link: /display/USERDOC60/Activity+Stream+Overview
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-18 13:56'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:22'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-05 17:07'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:32'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-12 15:16'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-03 14:07'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-21 17:38'
         message: Migrated to Confluence 4.0
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-21 17:38'
         message: Added screenshots
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-21 16:11'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-21 15:13'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-18 18:38'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-18 11:52'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-16 12:15'
         message: ''

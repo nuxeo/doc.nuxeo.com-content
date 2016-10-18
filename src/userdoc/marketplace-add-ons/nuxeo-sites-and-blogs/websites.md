@@ -19,173 +19,174 @@ confluence:
     shortlink: SgFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/SgFFAQ'
     source_link: /display/USERDOC60/Websites
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 15:50'
         message: ''
         version: '34'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 12:01'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 14:39'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 14:32'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 14:26'
         message: Update for 5.8
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 17:23'
         message: Removed related topics from TOC
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 15:36'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-01 18:29'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migrated to Confluence 4.0
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:38'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-03 17:45'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-03 17:12'
         message: Added related pages
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:41'
         message: Added toc
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 17:09'
         message: ''
         version: '20'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-23 14:35'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 14:54'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-03 16:47'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-15 11:58'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-29 15:20'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-29 13:55'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-29 12:21'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-29 11:57'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-29 11:50'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-29 11:39'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-29 10:04'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-28 18:24'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-28 17:35'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-28 17:18'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-28 17:01'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-28 15:34'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-28 15:22'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-27 18:09'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-27 17:54'
         message: ''

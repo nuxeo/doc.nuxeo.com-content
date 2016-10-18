@@ -15,28 +15,29 @@ confluence:
     shortlink: MwFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/MwFFAQ'
     source_link: /display/USERDOC60/Working+in+Workspaces
+tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 15:29'
         message: ''
         version: '5'
-    - 
+    -
         author: Anonymous
         date: '2013-10-22 15:40'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-17 18:21'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-14 11:21'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-14 11:21'
         message: ''

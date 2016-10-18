@@ -18,108 +18,109 @@ confluence:
     shortlink: DQFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/DQFFAQ'
     source_link: /display/USERDOC60/Setting+Publication+Targets
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 14:14'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-28 08:20'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 16:27'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-25 16:20'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-25 16:19'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-25 16:16'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-25 16:15'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 17:43'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-01 10:14'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 21:01'
         message: Migrated to Confluence 4.0
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 21:01'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 17:55'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 11:23'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-16 09:50'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-01 10:36'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-01 10:36'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-01 10:35'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-01 10:29'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-01 10:29'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-30 18:27'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-20 17:48'
         message: ''

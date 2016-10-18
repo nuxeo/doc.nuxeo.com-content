@@ -18,73 +18,74 @@ confluence:
     shortlink: NAFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/NAFFAQ'
     source_link: /display/USERDOC60/Working+with+Workspaces
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 00:29'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 00:28'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 00:18'
         message: 'Merging workspace creation, edition and deletion pages'
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-17 18:23'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-06 17:35'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-06 17:34'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-29 21:40'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migrated to Confluence 4.0
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:38'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 20:46'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 17:09'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-10 18:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-23 16:33'
         message: ''

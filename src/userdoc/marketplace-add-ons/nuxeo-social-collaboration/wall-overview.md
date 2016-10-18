@@ -20,68 +20,69 @@ confluence:
     shortlink: GQFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/GQFFAQ'
     source_link: /display/USERDOC60/Wall+Overview
+tree_item_index: 800
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 13:47'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-18 13:57'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:25'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 18:24'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 18:23'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-04 19:39'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:36'
         message: Removed related topics from TOC
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:35'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-12 18:18'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-12 16:34'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-12 16:34'
         message: Added like from wall description
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-12 12:21'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-11 18:57'
         message: ''

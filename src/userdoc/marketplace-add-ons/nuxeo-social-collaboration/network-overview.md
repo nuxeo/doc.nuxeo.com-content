@@ -17,58 +17,59 @@ confluence:
     shortlink: OgFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/OgFFAQ'
     source_link: /display/USERDOC60/Network+Overview
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-18 13:54'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:20'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-14 11:47'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-14 11:45'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:30'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-12 11:51'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-22 10:22'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-22 10:22'
         message: Updated instructions and added screenshot
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-21 17:06'
         message: Added how to remove a user steps
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-21 16:57'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-16 12:15'
         message: ''

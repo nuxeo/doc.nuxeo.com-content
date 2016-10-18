@@ -22,243 +22,244 @@ confluence:
     shortlink: JAFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/JAFFAQ'
     source_link: /display/USERDOC60/Editing+Content
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 15:15'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 18:33'
         message: link to virtual nav addon
         version: '47'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-28 17:52'
         message: ''
         version: '46'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-24 14:38'
         message: ''
         version: '45'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-24 14:34'
         message: ''
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 00:47'
         message: Link update
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-24 14:54'
         message: ''
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-24 14:52'
         message: ''
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-21 09:27'
         message: ''
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-16 14:38'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-16 14:31'
         message: Added note about draft version 0.0
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-26 14:52'
         message: Removed related topics from TOC
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-26 14:51'
         message: Added link to bulk edit dev doc and dev related doc
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-26 10:48'
         message: Reorganization
         version: '35'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-11-25 17:11'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-31 15:05'
         message: Updated bulk edit screenshot for 5.8
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-31 15:02'
         message: Added details on safe edit
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-30 11:06'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 17:53'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 17:05'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-01 14:25'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-30 11:48'
         message: Added new 5.7.1 bulk edit feature
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-27 16:05'
         message: Added safe edit feature
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-06 17:41'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-06 17:41'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-19 15:09'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-19 15:09'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-19 15:09'
         message: Migrated to Confluence 4.0
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-19 15:09'
         message: Fixed broken link
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-18 14:34'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-22 17:58'
         message: Fixed broken link
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-22 17:49'
         message: Updated screenshot
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 11:23'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 10:28'
         message: 'Corrected wrong label '
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 10:26'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-22 16:05'
         message: Added last contributor metadata
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 19:09'
         message: Added link to virtual navitation
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 19:06'
         message: Added toc and related pages
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-28 15:02'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 16:02'
         message: fixed brocken link
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 14:41'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 11:33'
         message: ''
         version: '7'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-06-01 10:27'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-01 11:13'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-08 10:58'
         message: update new default version number
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-08 10:56'
         message: added new "nature" metadata
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-10 18:37'
         message: fixed broken links
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-26 17:59'
         message: ''

@@ -20,33 +20,34 @@ confluence:
     shortlink: SwFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/SwFFAQ'
     source_link: /display/USERDOC60/Case+Management+with+the+Nuxeo+Platform
+tree_item_index: 800
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-02 17:08'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-04 12:20'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 02:37'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-11 10:15'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-13 16:05'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-13 16:05'
         message: ''

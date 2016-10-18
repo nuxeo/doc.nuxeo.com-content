@@ -18,83 +18,84 @@ confluence:
     shortlink: RAFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/RAFFAQ'
     source_link: /display/USERDOC60/Mini+Messages+Overview
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-18 13:55'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:21'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-14 12:23'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-14 17:32'
         message: Update button label
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-02 16:17'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-26 16:39'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:31'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-23 14:40'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-12 11:56'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-12 11:22'
         message: Migrated to Confluence 4.0
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-12 11:22'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-12 11:21'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-21 18:18'
         message: Added screenshots
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-21 14:36'
         message: Added delete steps
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-21 14:14'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-16 12:15'
         message: ''
