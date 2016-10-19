@@ -41,18 +41,55 @@ history:
 ---
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
-### [Installation]({{page page='installation'}})
+</br>
 
+### Installation
+
+</br>
+
+The Nuxeo Platform comes in different packages and can be installed on any operating system. Learn how to install, configure and use the Nuxeo Platform.
+
+</br>
+
+<div align="right">[More >>]({{page page='installation'}})</div>
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
-### [Administration]({{page page='administration'}})
+</br>
 
+### Administration
+
+</br>
+
+Discover some configuration that we recommend to do, especially for advanced testing or before going into production.
+
+</br>
+
+<div align="right">[More >>]({{page page='administration'}})</div>
 {{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
-### [REST API]({{page page='rest-api'}})
+</br>
 
+### REST API
+
+</br>
+
+The Nuxeo Platform contains a native REST API to let you build custom interfaces or integrate its functionalities in your applications.
+
+</br>
+
+<div align="right">[More >>]({{page page='rest-api'}})</div>
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
-### [Automation]({{page page='automation'}})
+</br>
 
+### Automation
+
+</br>
+
+The main goal of Content Automation is to enable users to rapidly build complex business logic without writing any Java code.
+
+</br>
+
+
+<div align="right">[More >>]({{page page='automation'}})</div>
 {{/panel}}</div></div>
