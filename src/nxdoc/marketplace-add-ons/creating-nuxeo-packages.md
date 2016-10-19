@@ -299,11 +299,7 @@ history:
 
 This section gives instructions on how to wrap a plugin and its required dependencies into a Nuxeo Package.
 
-{{! /excerpt}} {{#> callout type='tip' }}
-
-To ease building your custom Nuxeo Packages, you can check our [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo).
-
-{{/callout}}
+{{! /excerpt}}
 
 A&nbsp;Nuxeo Package usually&nbsp;contains new features or patches along with installation instructions and optional constraints towards other packages (dependency, conflict). It is the **easiest** way to distribute a plugin, as it contains in one single ZIP file all the bundles, libraries, configuration properties and templates that are required to make the plugin work. Moreover, it is the most **reliable** and **sustainable** way to install a plugin, as it provides install history, rollback capabilities, dependencies and conflicts resolution and much more.
 Nuxeo uses the Nuxeo Package format for distributing all its plugins on [the Nuxeo Marketplace](http://marketplace.nuxeo.com/).&nbsp;Nuxeo Packages are also recommended for delivering your customization.
@@ -354,6 +350,18 @@ Apart these special files you can put anything inside a package (web resources, 
 
 You can see that most of the files listed above are optional or generated. So for a minimal package you will only need 2 files: the&nbsp;**package.xml**&nbsp;and the&nbsp;**install.xml**&nbsp;file.
 
+## Create an Empty Nuxeo Package
+
+The easiest way to create a package is to use the [Nuxeo Code Generator](https://www.npmjs.com/package/generator-nuxeo).
+
+```
+$ mkdir my-project && cd $_
+$ yo nuxeo package
+```
+
+* **my-project/src/main/resources/package.xml** is your [Package Manifest]({{page page='package-manifest'}}).
+* **my-project/src/main/resources/install.xml** is your [Scripting Commands Descriptor]({{page page='scripting-commands'}}).
+
 ## The Package Manifest
 
 The package metadata is stored in&nbsp;**package.xml**&nbsp;file.
@@ -379,20 +387,6 @@ See&nbsp;[Scripting Commands]({{page page='scripting-commands'}})&nbsp;for more 
 
 Below is the list of available properties you can use in command files to parameterize your commands.
 
-## Using Ant for the&nbsp;Scripting Commands (deprecated)
-
-When using Ant you must write two scripts: the `install.xml` and `uninstall.xml` files.
-Each of these scripts must have at least two targets.
-The **default** target of the `install.xml` script will be used to execute the installation. The other required target of the script is a target named **rollback** which will be called to do the rollback if anything went wrong during the installation (i.e. during the execution of the **default** target). The same rule applies for the `uninstall.xml` script.
-
-See below the list of useful properties that will be injected in the Ant context and thus are available in the scripts.
-
-{{#> callout type='note' }}
-
-Using Ant is not recommended since a safe rollback is difficult to handle.
-
-{{/callout}}
-
 ## Context Properties Available in Scripting Commands
 
 Here is the list of properties available to install scripts:
@@ -415,3 +409,4 @@ Here is the list of properties available to install scripts:
 *   **sys.timestamp:**&nbsp;The timestamp when the install task was created - a string in the format `yyMMddHHmmss`.
 
 &nbsp;
+
