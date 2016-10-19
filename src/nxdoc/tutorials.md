@@ -128,8 +128,8 @@ history:
 
 ### Quick Start Series
 
-*   [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
 *   [Getting Started with the Nuxeo Platform]({{page page='getting-started-with-the-nuxeo-platform'}})
+*   [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
 *   [Quick Overview]({{page page='quick-overview'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}

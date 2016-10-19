@@ -92,7 +92,7 @@ history:
         version: '1'
 
 ---
-<span class="s1">Nuxeo Web UI is a standard base application for Nuxeo Server that connects via HTTP and displays all the features of the platform to the users.</span> Customizable, scalable and built upon a framework of Web components, it allows the Nuxeo Platform developers to build their own front-application using these components.
+<span class="s1">Nuxeo Web UI is a standard base application for Nuxeo Server that connects via HTTP and displays all the features of the platform to the users.</span> Customizable, scalable and built upon a framework of Web components, it allows the Nuxeo Platform developers to build their own front-application using these components. The [Nuxeo Web UI addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui?version=0.7.0) is available in beta version on our marketplace.
 
 <div class="row"><div class="column medium-4">{{#> panel type='primary'}}
 
