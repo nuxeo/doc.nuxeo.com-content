@@ -1,5 +1,7 @@
 ---
-title: Nuxeo Documentation Center Home
+title: 404
+description: Page not found
+style: error
 review:
     comment: ''
     date: ''
@@ -8,26 +10,22 @@ no_side_menu: true
 
 ---
 {{> header_standard}}
-<script>
-(function() {
-    var cx = '{{site.cse_id}}';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-    '//cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-})();
-</script>
-<div class="row">
-    <div class="text-center">
-        <h1>
-            Search Nuxeo Documentation
-        </h1>
+<div class="row expanded error-background">
+    <div class="space-top-3">
+        <div class="row">
+            <div class="text-center">
+                <h1>
+                    {{title}}
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column medium-8 medium-offset-2 end text-center">
+                <p>
+                    {{description}}
+                </p>
+            </div>
+        </div>
     </div>
-</div>
-<div id="search" class="row column">
-    <gcse:search></gcse:search>
 </div>
 {{> footer_standard}}
