@@ -195,9 +195,9 @@ history:
 ---
 ## Concept
 
-The Nuxeo workflow engine provides the usual features you would expect from a workflow engine and leverages the main modules of the platform: the repository, the Automation service, layouts for all the user interactions and process implementations. It provides high level features regarding task management such as filterable tasks lists, reminders, task reassignment, task delegation, task reminders.&nbsp;You need to understand correctly those concepts before playing with the workflow engine.&nbsp;
+The Nuxeo workflow engine provides the usual features you would expect from a workflow engine and leverages the main modules of the platform: the repository, the Automation service, layouts for all the user interactions and process implementations. It provides high level features regarding task management such as filterable tasks lists, reminders, task reassignment, task delegation, task reminders.&nbsp;You need to understand correctly those concepts before playing with the workflow engine.
 
-A workflow&nbsp;is conceptually defined&nbsp;using a graph. Workflow graphs are&nbsp;[configured from Nuxeo Studio]({{page space='Studio' page='Workflow'}}).
+A workflow is conceptually defined using a graph. Workflow graphs are [configured from Nuxeo Studio]({{page space='Studio' page='Workflow'}}).
 
 The workflow engine provides means to implement most of BPMN concepts: Fork, merge, decision, branching point, exclusiveness, inclusiveness, looping, human tasks, services tasks, multiple instances, events, data objects, subprocess, join. Note that those standard concepts are not all exposed as is on the graph editor, but can still be implemented leveraging what is provided.
 
@@ -213,23 +213,22 @@ The workflow engine provides means to implement most of BPMN concepts: Fork, mer
 
 The Nuxeo Platform proposes two default workflows that showcase the possibilities of the Workflow.
 
-*   {{{excerpt 'USERDOC:Serial Document Workflow'}}}
-
-*   {{{excerpt 'USERDOC:Parallel Document Workflow'}}}
+* {{{excerpt 'USERDOC:Serial Document Workflow'}}}
+* {{{excerpt 'USERDOC:Parallel Document Workflow'}}}
 
 {{! /multiexcerpt}}
 
-They are also available as an application template in Nuxeo Studio so as to enable you to see how they are configured. This application template is called **Default&nbsp;** **Nuxeo Platform Workflows Configuration**.
+They are also available as an application template in Nuxeo Studio so as to enable you to see how they are configured. This application template is called **Default Nuxeo Platform Workflows Configuration**.
 
 ![]({{file name='Screenshot 2015-06-02 11.27.17.png'}} ?w=600,border=true)
 
-It is possible to import this package from your Studio project : Go to **Customization**&nbsp;> **External Templates**&nbsp;> **Default&nbsp;** **Nuxeo Platform Workflows Configuration** **&nbsp;** and click on **Import**.
+It is possible to import this package from your Studio project : Go to **Customization**&nbsp;> **External Templates**&nbsp;> **Default&nbsp;** **Nuxeo Platform Workflows Configuration** and click on **Import**.
 
-See the page [Serial Document Workflow]({{page space='userdoc' page='serial-document-workflow'}}) and [Parallel Document Workflow]({{page space='userdoc' page='parallel-document-workflow'}}) for more details about showcased default workflows.
+See the pages [Serial Document Workflow]({{page space='userdoc' page='serial-document-workflow'}}) and [Parallel Document Workflow]({{page space='userdoc' page='parallel-document-workflow'}}) for more details about showcased default workflows.
 
 ## Configuring a New Workflow
 
-To create a new workflow, simply go to the workflow section of Studio, click&nbsp;**New** and choose a name.
+To create a new workflow, simply go to the workflow section of Studio, click **New** and choose a name.
 
 ![]({{file name='Screenshot 2015-06-02 12.04.21.png'}} ?w=650,border=true)
 
@@ -247,36 +246,34 @@ A workflow must start with a node for which the "start node" property is checked
 
 To start the workflow graph:
 
-1.  Click on the&nbsp;**Graph**&nbsp;tab.
+1.  Click on the **Graph** tab.
 2.  Drag the Start node and drop it on the graph.
     ![](https://www.lucidchart.com/publicSegments/view/54ede03e-bcb8-4715-a9f3-1f500a008a99/image.png ?w=250,border=true)
-3.  Repeat this operation for every node and transition that you need to create your own workflow.&nbsp;Click on one node to open the editor to edit its properties and add possible transitions. Each possible transition is represented as an endpoint on the node.
+3.  Repeat this operation for every node and transition that you need to create your own workflow. Click on one node to open the editor to edit its properties and add possible transitions. Each possible transition is represented as an endpoint on the node.
 
 **Working with Workflow:**
 
-*   [Workflow Variables]({{page page='variables-available-in-the-automation-context'}})
-*   [Instance Properties -]({{page page='workflow-instance-properties'}}) [Workflow Node Properties]({{page page='workflow-node-properties'}})
-*   [Node General Tab in Studio Documentation]({{page space='studio' page='node-general-tab'}})
-*   [Workflow Naming Conventions]({{page page='workflow-naming-conventions'}})
+* [Workflow Variables]({{page page='variables-available-in-the-automation-context'}})
+* [Instance Properties -]({{page page='workflow-instance-properties'}}) [Workflow Node Properties]({{page page='workflow-node-properties'}})
+* [Node General Tab in Studio Documentation]({{page space='studio' page='node-general-tab'}})
+* [Workflow Naming Conventions]({{page page='workflow-naming-conventions'}})
 
 ## Discover More
 
-To go further, read the page&nbsp;[Simple Workflow Example]({{page page='simple-workflow-example'}}), and follow the creation of a workflow step by step with a specific use case.
-
-&nbsp;
+To go further, read the page [Simple Workflow Example]({{page page='simple-workflow-example'}}), and follow the creation of a workflow step by step with a specific use case.
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Workflow How-Tos'}}
 
-*   [How to Query Workflow Objects]({{page page='how-to-query-workflow-objects'}})
-*   [How to Complete a Workflow Task Programmatically]({{page page='how-to-complete-a-workflow-task-programmatically'}})
-*   [How to Set Up a Tasks Dashboard]({{page page='how-to-set-up-a-tasks-dashboard'}})&nbsp;
+- [How to Query Workflow Objects]({{page page='how-to-query-workflow-objects'}})
+- [How to Complete a Workflow Task Programmatically]({{page page='how-to-complete-a-workflow-task-programmatically'}})
+- [How to Set Up a Tasks Dashboard]({{page page='how-to-set-up-a-tasks-dashboard'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading=' Advanced Features and Understanding'}}
 
-*   [Escalation Service]({{page page='escalation-service'}})&nbsp;[](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/platform/routing/api/DocumentRoutingService.html)
-*   [Workflow Models Packaging]({{page page='workflow-models-packaging'}})
-*   [Runtime Instantiation & Execution Logic]({{page page='runtime-instantiation-and-execution-logic'}})[](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/platform/routing/api/DocumentRoutingService.html)
+- [Escalation Service]({{page page='escalation-service'}})
+- [Workflow Models Packaging]({{page page='workflow-models-packaging'}})
+- [Runtime Instantiation & Execution Logic]({{page page='runtime-instantiation-and-execution-logic'}})
 
 {{/panel}}</div></div>
