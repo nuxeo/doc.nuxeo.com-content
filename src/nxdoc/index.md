@@ -442,10 +442,10 @@ history:
 
 The pages below help you start customizing your content repository:
 
-*   [Repository Concepts]({{page page='repository-concepts'}})
-*   [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
-*   [Indexing and Query]({{page page='indexing-and-query'}})
-*   [Understand everything about Nuxeo Runtime components and extensions]({{page page='runtime-and-component-model'}})
+- [Repository Concepts]({{page page='repository-concepts'}})
+- [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
+- [Indexing and Query]({{page page='indexing-and-query'}})
+- [Understand everything about Nuxeo Runtime components and extensions]({{page page='runtime-and-component-model'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
@@ -453,9 +453,9 @@ The pages below help you start customizing your content repository:
 
 The Nuxeo Platform can be integrated with various standards and technologies, including:
 
-*   [REST API]({{page page='rest-api'}})
-*   Client SDKs: [JavaScript]({{page page='javascript-client'}}), [Java]({{page page='java-automation-client'}}), [iOS]({{page page='ios-client'}}), [PHP]({{page page='php-automation-client'}}), [Python]({{page page='python-client'}}), [Android]({{page page='android-client'}}), [cURL]({{page page='using-curl'}})
-*   [CMIS]({{page page='cmis'}})
+- [REST API]({{page page='rest-api'}})
+- Client SDKs: [JavaScript]({{page page='javascript-client'}}), [Java]({{page page='java-automation-client'}}), [iOS]({{page page='ios-client'}}), [PHP]({{page page='php-automation-client'}}), [Python]({{page page='python-client'}}), [Android]({{page page='android-client'}}), [cURL]({{page page='using-curl'}})
+- [CMIS]({{page page='cmis'}})
 
 {{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
@@ -463,9 +463,9 @@ The Nuxeo Platform can be integrated with various standards and technologies, in
 
 Here are some key pages to customize the back office of the Nuxeo Platform:
 
-*   [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
-*   [Layouts and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
-*   [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
+- [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
+- [Layouts and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
+- [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
 
 {{/panel}}
 
@@ -479,8 +479,8 @@ Here are some key pages to customize the back office of the Nuxeo Platform:
 
 This section is intended to provide you with end-to-end recipes for achieving your customization goals of the Nuxeo Platform.
 
-*   [How-To Index]({{page page='how-to-index'}})
-*   [Quick Start Series]({{page page='quick-start-series'}})
+- [How-To Index]({{page page='how-to-index'}})
+- [Quick Start Series]({{page page='quick-start-series'}})
 
 {{/panel}}</div></div>
 
