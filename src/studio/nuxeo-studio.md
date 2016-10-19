@@ -45,8 +45,8 @@ history:
 
 Get an overview of what can be done with Nuxeo Studio and how you can create your own Nuxeo Studio projects step by step.
 
-*   [Quick Start Dev Guide]({{page space='nxdoc' page='quick-start-dev-guide'}})
-*   [Studio Overview and Concepts]({{page page='studio-overview-and-concepts'}})
+- [Quick Start Dev Guide]({{page space='nxdoc' page='quick-start-dev-guide'}})
+- [Studio Overview and Concepts]({{page page='studio-overview-and-concepts'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
@@ -54,11 +54,10 @@ Get an overview of what can be done with Nuxeo Studio and how you can create you
 
 In this chapter we will explain each screen exposed by Nuxeo Studio. If you are blocked in your configuration process on a specific screen!
 
-*   [Documents]({{page page='documents'}})
-*   [Content Views]({{page page='content-views'}})
-*   [Workflow]({{page page='workflow'}})
-
-*   [Automation]({{page page='automation'}})
+- [Documents]({{page page='documents'}})
+- [Content Views]({{page page='content-views'}})
+- [Workflow]({{page page='workflow'}})
+- [Automation]({{page page='automation'}})
 
 {{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
@@ -66,9 +65,9 @@ In this chapter we will explain each screen exposed by Nuxeo Studio. If you are 
 
 This section provides you an overview of how you can manage your own application (versioning, naming, etc.)
 
-*   [How to Enable Package Specific Features in Studio for DAM or DM]({{page page='how-to-enable-package-specific-features-in-studio-for-dam-or-virtual-navigation'}})
-*   [Use Registries for Referencing Externally Defined Objects]({{page page='registries'}})
-*   [Update the Version of Your Target Platform]({{page page='update-the-version-of-your-target-platform'}})
+- [How to Enable Package Specific Features in Studio for DAM or DM]({{page page='how-to-enable-package-specific-features-in-studio-for-dam-or-virtual-navigation'}})
+- [Use Registries for Referencing Externally Defined Objects]({{page page='registries'}})
+- [Update the Version of Your Target Platform]({{page page='update-the-version-of-your-target-platform'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
@@ -76,8 +75,8 @@ This section provides you an overview of how you can manage your own application
 
 The goal of this section is to provide ready to use examples. They can be followed step by step to learn how to use Studio on practical use cases.
 
-*   [Deploying Your Project in Dev Mode]({{page page='deploying-your-project-in-dev-mode'}})
-*   [From the JSF UI to Nuxeo Studio]({{page space='nxdoc' page='from-the-jsf-ui-to-nuxeo-studio'}})
+- [Deploying Your Project in Dev Mode]({{page page='deploying-your-project-in-dev-mode'}})
+- [From the JSF UI to Nuxeo Studio]({{page space='nxdoc' page='from-the-jsf-ui-to-nuxeo-studio'}})
 
 {{/panel}}</div></div>
 
