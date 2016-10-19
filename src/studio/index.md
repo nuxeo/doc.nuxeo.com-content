@@ -440,19 +440,21 @@ history:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
-### Nuxeo Online Services subscribers
+### Nuxeo Platform Trial Users
+
+- [How to use Nuxeo Studio]({{page page='nuxeo-studio'}})
+- [Register a new instance for your application]({{page space='nxdoc' page='registering-your-nuxeo-instance'}})
+- [Updating your Instance with Studio Configuration]({{page page='deploying-your-project-in-dev-mode'}})
+
+
+{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+
+### Nuxeo Online Services Subscribers
 
 - [Consult and create JIRA issues]({{page page='support-jira'}})
 - [How to edit your application's target environment]({{page page='nuxeo-online-services-portal'}})
 - [Register a new instance for your application]({{page space='nxdoc' page='registering-your-nuxeo-instance'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-
-### Nuxeo Platform trial users
-
-- [How to use Nuxeo Studio]()
-- [Register a new instance for your application]({{page space='nxdoc' page='registering-your-nuxeo-instance'}})
-- [Updating your Instance with Studio Configuration]({{page page='deploying-your-project-in-dev-mode'}})
 
 {{/panel}}</div></div>
 

@@ -210,7 +210,6 @@ The page [https://www.nuxeo.com/legal/supported-versions/](https://www.nuxeo.com
 
 Here are some quick start steps. However, for good practices and complete descriptions, we recommend you check the related pages (see below).
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 ## How to Create a New JIRA Ticket
 
@@ -220,24 +219,24 @@ Here are some quick start steps. However, for good practices and complete descri
 
 Check out the page [How to Fill a JIRA Ticket]({{page page='how-to-fill-a-jira-ticket'}}) for the complete list of available fields and good practices.
 
-{{/callout}}</div><div class="column medium-6">
+{{/callout}}
 
 ## Ticket Statuses
 
-*   Open / Acknowledged / in Progress / Reopened
+- Open / Acknowledged / in Progress / Reopened
     &rarr;&nbsp;Nuxeo is working on the issue. Depending on the provided elements, the ticket will evolve to "Resolved" or "Feedback required".
-*   Feedback required
+- Feedback required
     &rarr;&nbsp;Nuxeo is expecting more elements. The customer should answer the questions asked by Nuxeo or provide the missing elements and then use the "Give feedback" button to put the ticket back to the "Open" status.
-*   Resolved
+- Resolved
     &rarr;&nbsp;Nuxeo provides an answer considered as satisfactory. The customer must approve the answer by making the ticket go to the "Closed" status or reopen the issue and indicate what is not correct in the provided answer (ticket goes to "Reopened").
-*   Closed
+- Closed
     &rarr;&nbsp;The end of the request.&nbsp;
 
 {{#> callout type='tip' }}
 
 For more information, check out the [JIRA Tickets Workflow]({{page page='jira-tickets-workflow'}}) and the [Ticket Follow Up]({{page page='ticket-follow-up'}}) pages.
 
-{{/callout}}</div></div>
+{{/callout}}
 
 &nbsp;
 
@@ -245,9 +244,9 @@ For more information, check out the [JIRA Tickets Workflow]({{page page='jira-ti
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
-*   [Ticket Follow Up]({{page page='ticket-follow-up'}})
-*   [How to Fill a JIRA Ticket]({{page page='how-to-fill-a-jira-ticket'}})
-*   [JIRA Tickets Workflow]({{page page='jira-tickets-workflow'}})
+- [Ticket Follow Up]({{page page='ticket-follow-up'}})
+- [How to Fill a JIRA Ticket]({{page page='how-to-fill-a-jira-ticket'}})
+- [JIRA Tickets Workflow]({{page page='jira-tickets-workflow'}})
 
 {{/panel}}</div><div class="column medium-6">
 
