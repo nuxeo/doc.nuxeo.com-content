@@ -2,7 +2,7 @@
 title: Managing Files
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-10-19'
     status: ok
 toc: true
 confluence:
@@ -150,8 +150,6 @@ history:
 Learn how to upload files on your Nuxeo server and attach them to a document.
 
 {{! /excerpt}}
-
-&nbsp;
 
 ## Create a Document from an Existing File
 
@@ -400,3 +398,8 @@ The contract for Skynet AI maintenance you just created should also contain othe
 *   [How to Upload a File in Nuxeo Platform Using REST API Batch Processing Endpoint]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}})
 
 {{/callout}}
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">&larr;&nbsp;[Handling Permissions]({{page page='handling-permissions'}})</div>
+<div class="column medium-6" style="text-align:right">[Retrieving Audit Log]({{page page='retrieving-audit-log'}})&nbsp;&rarr;</div>
+</div>

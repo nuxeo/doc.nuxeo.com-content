@@ -2,7 +2,7 @@
 title: Using Renditions
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-10-19'
     status: ok
 toc: true
 confluence:
@@ -357,3 +357,8 @@ The marketing department wants to use the companies logos stored in the portfoli
 *   [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
 
 {{/callout}}
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">&larr;&nbsp;[Retrieving Audit Log]({{page page='retrieving-audit-log'}})</div>
+<div class="column medium-6" style="text-align:right">[Using Workflows]({{page page='using-workflows'}})&nbsp;&rarr;</div>
+</div>

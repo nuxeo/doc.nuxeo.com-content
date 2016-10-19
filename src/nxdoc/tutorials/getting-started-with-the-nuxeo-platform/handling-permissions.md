@@ -2,7 +2,7 @@
 title: Handling Permissions
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-10-19'
     status: ok
 toc: true
 confluence:
@@ -130,8 +130,6 @@ history:
 Learn how to set up permissions on a structure and see the results of a security policy.
 
 {{! /excerpt}}
-
-&nbsp;
 
 ## Assigning Permissions
 
@@ -313,3 +311,8 @@ A file download security policy has been defined in the addon Nuxeo xxx. It allo
 *   [File Download Security Policies]({{page page='file-download-security-policies'}})
 
 {{/callout}}
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">&larr;&nbsp;[Manipulating Documents]({{page page='manipulating-documents'}})</div>
+<div class="column medium-6" style="text-align:right">[Managing Files]({{page page='managing-files'}})&nbsp;&rarr;</div>
+</div>

@@ -2,7 +2,7 @@
 title: Setting up Your Nuxeo Environment
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-10-19'
     status: ok
 toc: true
 confluence:
@@ -398,12 +398,13 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
 
     Your server is now running. You benefit from the following features brought by the addon Getting started with the Nuxeo Platform.
 
-    {{! multiexcerpt name='studio_configuration_desc'}}
-    *   The portfolio document type (`BCPortfolio`) holds the contracts of a customer. Its holds properties about the customer: the company name, industry and size, and the customer&rsquo;s juridical contact information.
-    *   The contract document type (`BCContract`) have several properties: an owner (an application user), some dates (signature, start, expiration dates), a type, an amount. It inherits customer information from its portfolio.
-    *   Some vocabularies are used to populate the portfolio and contract metadata (`companySize`, `contractType` and `industry`)
-    *   Contracts have a specific life cycle, so they can evolve though the states `draft`, `approval`, `running`, `renegociation`, `void`, `deleted` and `restored`
-    *   Some business logic through automation chains and event handlers make contracts inherit properties from its portfolio, and evolve following its life cycle{{! /multiexcerpt}}
+The addon brings the following document types:
+{{! multiexcerpt name='studio_configuration_desc'}}
+* The portfolio document type (`BCPortfolio`) holds the contracts of a customer. Its holds properties about the customer: the company name, industry and size, and the customer&rsquo;s juridical contact information.
+* The contract document type (`BCContract`) have several properties: an owner (an application user), some dates (signature, start, expiration dates), a type, an amount. It inherits customer information from its portfolio.
+* Some vocabularies are used to populate the portfolio and contract metadata (`companySize`, `contractType` and `industry`)
+* Contracts have a specific life cycle, so they can evolve though the states `draft`, `approval`, `running`, `renegociation`, `void`, `deleted` and `restored`
+* Some business logic through automation chains and event handlers make contracts inherit properties from its portfolio, and evolve following its life cycle{{! /multiexcerpt}}
 
 {{#> callout type='info' heading='Learn more'}}
 
@@ -506,7 +507,8 @@ To install a Nuxeo Package:
 
     Your server is now running. You benefit from the following features brought by the addon Getting started with the Nuxeo Platform.
 
-    {{{multiexcerpt 'studio_configuration_desc' page='Setting up Your Nuxeo Environment'}}}
+The addon brings the following document types:
+{{{multiexcerpt 'studio_configuration_desc' page='Setting up Your Nuxeo Environment'}}}
 
 {{#> callout type='info' heading='Learn more'}}
 
@@ -643,7 +645,8 @@ To install a Nuxeo Package:
 
     Your server is now running. You benefit from the following features brought by the addon Getting started with the Nuxeo Platform.
 
-    {{{multiexcerpt 'studio_configuration_desc' page='Setting up Your Nuxeo Environment'}}}
+The addon brings the following document types:
+{{{multiexcerpt 'studio_configuration_desc' page='Setting up Your Nuxeo Environment'}}}
 
 {{#> callout type='info' heading='Learn more'}}
 
@@ -654,4 +657,4 @@ To install a Nuxeo Package:
 
 &nbsp;
 
-[Setting up Your JavaScript Environment]({{page page='setting-up-your-javascript-environment'}}) &rarr;
+<div align="right">[Setting up Your JavaScript Environment]({{page page='setting-up-your-javascript-environment'}}) &rarr;</div>

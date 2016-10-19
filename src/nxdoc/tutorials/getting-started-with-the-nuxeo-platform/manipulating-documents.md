@@ -2,7 +2,7 @@
 title: Manipulating Documents
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-10-19'
     status: ok
 toc: true
 confluence:
@@ -619,3 +619,8 @@ The contract to delete has been identified as being the `2015 Annual Conference`
     ```
 
 **Note**: This method does not include a "trash" behavior. The document is immediately erased. You should use the delete state and transitions to get documents to be moved to a trash before being permanently deleted.
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">&larr;&nbsp;[Setting up Your JavaScript Environment]({{page page='setting-up-your-javascript-environment'}})</div>
+<div class="column medium-6" style="text-align:right">[Handling Permissions]({{page page='handling-permissions'}})&nbsp;&rarr;</div>
+</div>

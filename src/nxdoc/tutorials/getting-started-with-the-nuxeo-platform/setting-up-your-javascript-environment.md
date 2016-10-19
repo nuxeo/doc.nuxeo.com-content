@@ -2,7 +2,7 @@
 title: Setting up Your JavaScript Environment
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-10-19'
     status: ok
 toc: true
 confluence:
@@ -372,3 +372,8 @@ To create the users:
 *   [Authentication and User Management]({{page page='authentication-and-user-management'}})
 
 {{/callout}}
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">&larr;&nbsp;[Setting up Your Nuxeo Environment]({{page page='setting-up-your-nuxeo-environment'}})</div>
+<div class="column medium-6" style="text-align:right">[Manipulating Documents]({{page page='manipulating-documents'}})&nbsp;&rarr;</div>
+</div>

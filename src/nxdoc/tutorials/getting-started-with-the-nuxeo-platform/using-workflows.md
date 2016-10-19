@@ -2,7 +2,7 @@
 title: Using Workflows
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-10-19'
     status: ok
 toc: true
 confluence:
@@ -413,6 +413,7 @@ This time a task has been assigned to the `managers` group (represented by Sarah
 
 {{/callout}}
 
-&nbsp;
-
-&nbsp;
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">&larr;&nbsp;[Using Renditions]({{page page='using-renditions'}})</div>
+<div class="column medium-6" style="text-align:right">[Using Automation]({{page page='using-automation'}})&nbsp;&rarr;</div>
+</div>

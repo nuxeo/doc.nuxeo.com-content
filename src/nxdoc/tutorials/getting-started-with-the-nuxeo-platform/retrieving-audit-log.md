@@ -2,7 +2,7 @@
 title: Retrieving Audit Log
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-10-19'
     status: ok
 confluence:
     ajs-parent-page-id: '29460589'
@@ -157,3 +157,8 @@ Retrieve a document's audit log to gather its history. All actions made on a doc
 *   [Audit]({{page page='audit'}})
 
 {{/callout}}
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">&larr;&nbsp;[Managing Files]({{page page='managing-files'}})</div>
+<div class="column medium-6" style="text-align:right">[Using Renditions]({{page page='using-renditions'}})&nbsp;&rarr;</div>
+</div>
