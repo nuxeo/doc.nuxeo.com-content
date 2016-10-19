@@ -21,7 +21,7 @@ confluence:
 tree_item_index: 200
 version_override:
     'FT': 'nxdoc/tutorials'
-    '6.0': 60/admindoc/guides-and-tutorials
+    '6.0': 60/nxdoc/guides-and-tutorials
 history:
     -
         author: Anonymous
