@@ -668,11 +668,13 @@ history:
         <div class="row">
             <div class="column space-top-3">
                 <div id="search">
-                    <div class="input-group">
-                        <span class="input-group-label">Search Documentation</span>
-                        <input type="text" class="input-group-field" placeholder="…">
-                        <span class="input-group-icon"><i class="fa fa-lg fa-search"></i></span>
-                    </div>
+                    <form id="search-box" action="search" method="get">
+                        <div class="input-group">
+                            <span class="input-group-label">Search Documentation</span>
+                            <input type="text" name="q" value="" class="input-group-field" placeholder="…" autofocus>
+                            <span class="input-group-icon"><i class="fa fa-lg fa-search"></i></span>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="column space-top-2">
