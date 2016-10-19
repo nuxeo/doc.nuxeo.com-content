@@ -14,7 +14,7 @@ Nuxeo offers a series of tools to help you develop on the Nuxeo Platform and cus
 {{{excerpt 'nuxeo-dev-tools-extension'}}}
 
 **Customize Your Nuxeo Platform Instance with [Nuxeo Studio]({{page space='studio' page='nuxeo-studio'}})**
-{{{excerpt 'studio-overview-and-concepts'}}}
+{{{excerpt space='studio' page='studio-overview-and-concepts'}}}
 
 **Extend the Nuxeo Platform with [Nuxeo IDE]({{page space='idedoc' page='index'}})**
 
