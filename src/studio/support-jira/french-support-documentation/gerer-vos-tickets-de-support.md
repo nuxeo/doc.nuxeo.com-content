@@ -18,42 +18,42 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/M4EZAQ'
     source_link: /pages/viewpage.action?pageId=18448691
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-30 16:54'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-03 15:30'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-03 15:29'
         message: ''
         version: '6'
-    - 
+    -
         author: Thierry Martins
         date: '2014-01-03 15:05'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-03 14:58'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-03 14:55'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-03 14:43'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 17:58'
         message: ''
@@ -73,7 +73,7 @@ Vous pouvez suivre l'&eacute;volution de vos tickets directement depuis le porta
 
 {{#> callout type='info' heading='Maintenance'}}
 
-La page [http://www.nuxeo.com/en/services/Supported-versions](http://www.nuxeo.com/en/services/Supported-versions) pr&eacute;sente la politique de maintenance des diff&eacute;rentes versions de Nuxeo. Elle pourra &ecirc;tre utile pour planifier les mont&eacute;es en version des applications du client.
+La page [http://www.nuxeo.com/en/services/Supported-versions](https://www.nuxeo.com/legal/supported-versions/) pr&eacute;sente la politique de maintenance des diff&eacute;rentes versions de Nuxeo. Elle pourra &ecirc;tre utile pour planifier les mont&eacute;es en version des applications du client.
 
 {{/callout}}
 
