@@ -5,9 +5,7 @@ review:
     date: ''
     status: ok
 labels:
-    - 5-7-2
     - node
-    - content-review-6-0
 confluence:
     ajs-parent-page-id: '11534824'
     ajs-parent-page-title: Node popup

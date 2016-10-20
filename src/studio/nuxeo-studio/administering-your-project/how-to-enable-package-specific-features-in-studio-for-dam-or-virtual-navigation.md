@@ -9,7 +9,6 @@ review:
 labels:
     - target-package
     - project-settings
-    - content-review-6-0
 toc: true
 confluence:
     ajs-parent-page-id: '12912674'

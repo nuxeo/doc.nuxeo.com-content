@@ -6,7 +6,6 @@ review:
     status: ok
 labels:
     - application-template
-    - content-review-6-0
 confluence:
     ajs-parent-page-id: '8683945'
     ajs-parent-page-title: External Templates
@@ -19,62 +18,62 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/1QJz'
     source_link: /display/Studio/Using+Application+Templates
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-26 12:30'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-26 16:07'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:21'
         message: Migrated to Confluence 4.0
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:21'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:18'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-09-18 21:15'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-08-31 11:54'
         message: Added default configuration templates description
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-07-13 12:22'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-07-01 11:00'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-30 10:31'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-29 18:17'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-29 11:10'
         message: ''

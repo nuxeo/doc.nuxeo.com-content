@@ -9,7 +9,6 @@ labels:
     - tuto-document-type
     - file
     - tuto-layout
-    - content-review-6-0
 toc: true
 confluence:
     ajs-parent-page-id: '3867540'

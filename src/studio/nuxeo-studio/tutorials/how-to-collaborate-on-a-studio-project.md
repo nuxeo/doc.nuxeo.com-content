@@ -2,7 +2,7 @@
 title: How to Collaborate on a Studio Project
 review:
     comment: ''
-    date: ''
+    date: '2015-08-07'
     status: ok
 details:
     howto:
@@ -15,7 +15,6 @@ details:
 labels:
     - howto
     - branch-management
-    - last-review-20150807
 toc: true
 confluence:
     ajs-parent-page-id: '12912677'

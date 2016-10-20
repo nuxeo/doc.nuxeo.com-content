@@ -7,7 +7,6 @@ review:
 labels:
     - content-routing
     - workflow
-    - content-review-6-0
 confluence:
     ajs-parent-page-id: '12911781'
     ajs-parent-page-title: Working in Studio

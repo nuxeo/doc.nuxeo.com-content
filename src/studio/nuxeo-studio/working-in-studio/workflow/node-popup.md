@@ -6,7 +6,6 @@ review:
     status: ok
 labels:
     - node
-    - content-review-6-0
 confluence:
     ajs-parent-page-id: '11534627'
     ajs-parent-page-title: Workflow

@@ -4,8 +4,6 @@ review:
     comment: ''
     date: ''
     status: ok
-labels:
-    - content-review-6-0
 confluence:
     ajs-parent-page-id: '12912674'
     ajs-parent-page-title: Administering your project

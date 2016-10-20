@@ -6,7 +6,6 @@ review:
     status: ok
 labels:
     - automation-chain
-    - content-review-6-0
 toc: true
 confluence:
     ajs-parent-page-id: '12911806'

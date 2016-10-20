@@ -9,7 +9,6 @@ labels:
     - action
     - action-category
     - user-action
-    - content-review-6-0
 toc: true
 confluence:
     ajs-parent-page-id: '14256432'
@@ -23,274 +22,274 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/fYvZ'
     source_link: /display/Studio/User+actions+categories
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-10-13 15:24'
         message: dd content view actions to CAP advanced categorie
         version: '54'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:50'
         message: ''
         version: '53'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:50'
         message: ''
         version: '52'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:50'
         message: ''
         version: '51'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:39'
         message: ''
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:39'
         message: ''
         version: '49'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:39'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:38'
         message: ''
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:38'
         message: ''
         version: '46'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:38'
         message: ''
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:38'
         message: ''
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:36'
         message: ''
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:36'
         message: ''
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:36'
         message: ''
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:36'
         message: ''
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:35'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:35'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:35'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:34'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:34'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:34'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:34'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 23:34'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 11:48'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-12 15:17'
         message: Added Breadcrumbs category
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 15:57'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 15:43'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 15:38'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 14:56'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 14:56'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 14:56'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 14:55'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 14:55'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 14:52'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 14:52'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 14:51'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 14:51'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 14:51'
         message: ''
         version: '17'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-10-31 17:58'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '16'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-10-31 17:58'
         message: 'NXDOC-250: add new action categories (add @since 5.8)'
         version: '15'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-10-31 17:54'
         message: 'NXDOC-250: add new action categories'
         version: '14'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-10-31 15:57'
         message: >-
             NXDOC-450: move summary panel categories to an "CAP advanced
             categories" section
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-30 19:29'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-30 19:29'
         message: Added "since" versions
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-30 19:06'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-30 19:05'
         message: Added missing screenshots
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-30 18:30'
         message: Added anchors for Studiio links
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-30 18:24'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-30 18:23'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-30 17:46'
         message: Added DAM action categories
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-30 15:29'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-29 11:26'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-29 11:16'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-26 11:57'
         message: ''

@@ -5,16 +5,12 @@ review:
     date: ''
     status: ok
 labels:
-    - 5-6
-    - 5-7-1
     - tab
     - layout
-    - 5-7-3
     - howto-layout
     - howto-content-view
     - howto-tab
     - content-view
-    - content-review-6-0
 toc: true
 confluence:
     ajs-parent-page-id: '12911803'

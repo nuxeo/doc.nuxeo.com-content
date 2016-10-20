@@ -4,8 +4,6 @@ review:
     comment: ''
     date: ''
     status: ok
-labels:
-    - content-review-6-0
 confluence:
     ajs-parent-page-id: '3345622'
     ajs-parent-page-title: Frequently Asked Questions

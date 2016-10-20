@@ -7,7 +7,6 @@ review:
 labels:
     - tuto-automation
     - tuto-event-handler
-    - content-review-6-0
 confluence:
     ajs-parent-page-id: '3867540'
     ajs-parent-page-title: Custom Doc ID Generation

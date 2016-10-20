@@ -6,7 +6,6 @@ review:
     status: ok
 labels:
     - event-handler
-    - content-review-6-0
 toc: true
 confluence:
     ajs-parent-page-id: '12911806'

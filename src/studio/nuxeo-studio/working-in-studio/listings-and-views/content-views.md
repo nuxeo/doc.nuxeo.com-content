@@ -2,12 +2,11 @@
 title: Content Views
 review:
     comment: ''
-    date: ''
+    date: '2014-11-26'
     status: ok
 labels:
     - search
     - content-view
-    - last-review-20141126
 confluence:
     ajs-parent-page-id: '12911803'
     ajs-parent-page-title: Listings & Views

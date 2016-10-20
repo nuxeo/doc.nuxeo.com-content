@@ -6,7 +6,6 @@ review:
     status: ok
 labels:
     - howto-deployement
-    - content-review-6-0
 confluence:
     ajs-parent-page-id: '12912677'
     ajs-parent-page-title: Tutorials

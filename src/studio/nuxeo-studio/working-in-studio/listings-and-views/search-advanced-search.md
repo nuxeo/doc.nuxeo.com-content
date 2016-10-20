@@ -7,7 +7,6 @@ review:
 labels:
     - search
     - content-view
-    - content-review-6-0
 confluence:
     ajs-parent-page-id: '12911803'
     ajs-parent-page-title: Listings & Views

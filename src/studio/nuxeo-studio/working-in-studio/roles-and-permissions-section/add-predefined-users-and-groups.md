@@ -5,9 +5,7 @@ review:
     date: ''
     status: ok
 labels:
-    - studio-20
     - user-management
-    - content-review-6-0
 confluence:
     ajs-parent-page-id: '12911810'
     ajs-parent-page-title: Roles & Permissions Section

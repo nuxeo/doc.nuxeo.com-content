@@ -7,7 +7,6 @@ review:
 labels:
     - marketplace-package
     - proxies
-    - content-review-6-0
 toc: true
 confluence:
     ajs-parent-page-id: '8683961'

@@ -8,7 +8,6 @@ labels:
     - content-view
     - upgrade
     - theme
-    - content-review-6-0
 toc: true
 confluence:
     ajs-parent-page-id: '7536933'
@@ -22,67 +21,67 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/EQI5AQ'
     source_link: /display/Studio/Specific+Upgrade+Instructions
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-26 14:51'
         message: 'ix Studio menu label '
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-02-09 15:37'
         message: Remove theme migration mention
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 20:23'
         message: Fix DAM Compat link to point to 6.0 documentation
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-30 17:17'
         message: Add missing screenshot
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-25 11:40'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 21:18'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 21:16'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-20 16:46'
         message: Add link to Nuxeo DAM Compat page
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-20 16:17'
         message: 'Add steps to migrate project to 6.0 (to be completed) '
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-20 14:23'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 15:40'
         message: Change 5.7.2 to 5.8
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-08-20 17:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-08-20 17:17'
         message: ''

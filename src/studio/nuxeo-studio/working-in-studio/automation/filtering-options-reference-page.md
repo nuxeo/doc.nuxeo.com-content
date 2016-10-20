@@ -6,7 +6,6 @@ review:
     status: ok
 labels:
     - filter
-    - content-review-6-0
 confluence:
     ajs-parent-page-id: '12911806'
     ajs-parent-page-title: Automation

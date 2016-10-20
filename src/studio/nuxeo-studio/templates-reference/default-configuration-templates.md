@@ -4,8 +4,6 @@ review:
     comment: ''
     date: ''
     status: ok
-labels:
-    - content-review-6-0
 confluence:
     ajs-parent-page-id: '8683961'
     ajs-parent-page-title: Templates reference

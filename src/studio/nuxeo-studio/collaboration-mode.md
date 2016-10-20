@@ -4,8 +4,6 @@ review:
     comment: ''
     date: ''
     status: ok
-labels:
-    - content-review-6-0
 toc: true
 confluence:
     ajs-parent-page-id: '19793788'

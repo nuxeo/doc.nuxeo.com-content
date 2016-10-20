@@ -8,7 +8,6 @@ labels:
     - layout
     - form
     - tab
-    - content-review-6-0
 toc: true
 confluence:
     ajs-parent-page-id: '12911803'
