@@ -506,12 +506,11 @@ By default, the `nuxeo.conf` file is located in `$NUXEO_HOME/bin`. If you instal
 
 If you plan to use the application in production, you should [move the configuration file outside the Nuxeo home directory]({{page page='recommended-configurations'}}), to make upgrades easier and more secured: your data and configuration won't risk to be overridden or lost.
 
-{{! multiexcerpt name='nuxeo-conf-editor-warning'}} {{#> callout type='warning' heading='For Windows users'}}
-
-&nbsp;Do not use Office writers, nor Notepad.
+{{! multiexcerpt name='nuxeo-conf-editor-warning'}}
+{{#> callout type='warning' heading='For Windows users'}}
+Do not use Office writers, nor Notepad.
 
 Wordpad is fine, Notepad+\+ and SciTE are good text editors, there are a lot of [other text editors](http://en.wikipedia.org/wiki/List_of_text_editors).
-
 {{/callout}}{{! /multiexcerpt}}
 
 You can report to the [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}}) for the list of available paramaters.

@@ -260,7 +260,6 @@ The first time you start your Nuxeo server, a wizard is displayed to help you se
 By default, the "default" template is enabled on your Nuxeo server (see the [Database templates](#database-templates) section for more information on this template). You need to edit it to change the template to be used.
 
 1.  Open your `nuxeo.conf` file with a text editor.
-
     {{{multiexcerpt 'nuxeo-conf-editor-warning' page='Setup'}}}
 2.  If needed, uncomment or edit the `nuxeo.templates` parameter and replace `default` with the wanted database template's name (see below).
 3.  Uncomment or edit the parameters below and provide their values:
