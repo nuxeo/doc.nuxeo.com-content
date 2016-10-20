@@ -62,4 +62,4 @@ history:
         version: '1'
 
 ---
-{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC710 Studio' label='howto' filter='Topics=Document Type'}}}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='idedoc 710/nxdoc studio' label='howto' filter='Topics=Document Type'}}}
