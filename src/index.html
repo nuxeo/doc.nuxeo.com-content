@@ -662,19 +662,29 @@ history:
 
 ---
 {{> header_standard}}
-
+<script>
+(function() {
+    var cx = '{{site.cse_id}}';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+    '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+})();
+</script>
 <div class="row">
     <div id="home" class="column large-10 large-centered text-center">
         <div class="row">
             <div class="column space-top-3">
-                <div id="search">
-                    <form id="search-box" action="search" method="get">
-                        <div class="input-group">
-                            <span class="input-group-label">Search Documentation</span>
-                            <input type="text" name="q" value="" class="input-group-field" placeholder="…" autofocus>
-                            <span class="input-group-icon"><i class="fa fa-lg fa-search"></i></span>
+                <div id="search-area">
+                    <div class="input-group">
+                        <span class="input-group-label">Search Documentation</span>
+                        <div id="search" class="column">
+                            <gcse:search></gcse:search>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
             <div class="column space-top-2">
