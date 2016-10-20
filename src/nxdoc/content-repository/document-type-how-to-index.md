@@ -59,4 +59,4 @@ history:
         version: '1'
 
 ---
-{{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC60 NXDOC60 IDEDOC STUDIO' label='howto' filter='Topics=Document Type'}}}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='60/admindoc 60/nxdoc idedoc studio' label='howto' filter='Topics=Document Type'}}}
