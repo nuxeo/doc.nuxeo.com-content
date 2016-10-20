@@ -19,6 +19,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/YoBOAQ'
     source_link: /display/ADMINDOC60/Read+ACLs
 tree_item_index: 900
+version_override:
+    'FT': 'nxdoc/read-acls'
 history:
     -
         author: Benoit Delbosc

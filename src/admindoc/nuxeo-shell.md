@@ -20,6 +20,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/coBOAQ'
     source_link: /display/ADMINDOC60/Nuxeo+Shell
 tree_item_index: 700
+version_override:
+    'FT': 'nxdoc/nuxeo-shell'
 history:
     -
         author: Frantz Fischer

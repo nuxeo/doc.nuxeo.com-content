@@ -20,6 +20,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/eYBOAQ'
     source_link: /display/ADMINDOC60/Authentication%2C+users+and+groups
 tree_item_index: 600
+version_override:
+    'FT': 'nxdoc/authentication-and-user-management'
 history:
     -
         author: Anonymous

@@ -20,6 +20,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/CoBOAQ'
     source_link: /display/ADMINDOC60/Elasticsearch+Setup
 tree_item_index: 1100
+version_override:
+    'FT': 'nxdoc/elasticsearch-setup'
 history:
     -
         author: Alain Escaffre

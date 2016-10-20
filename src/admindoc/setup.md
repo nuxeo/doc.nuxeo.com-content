@@ -22,6 +22,10 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/SoBOAQ'
     source_link: /display/ADMINDOC60/Setup
 tree_item_index: 300
+version_override:
+    'FT': 'nxdoc/configuration-wizard'
+    'LTS 2015': 710/admindoc/setup
+    '5.8': 58/admindoc/setup
 history:
     -
         author: Anonymous

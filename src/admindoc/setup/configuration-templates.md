@@ -19,6 +19,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/J4BOAQ'
     source_link: /display/ADMINDOC60/Configuration+Templates
 tree_item_index: 300
+version_override:
+    'FT': 'nxdoc/configuration-templates'
 history:
     -
         author: Solen Guitter

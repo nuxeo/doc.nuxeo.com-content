@@ -20,6 +20,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/ZIBOAQ'
     source_link: /display/ADMINDOC60/H2+Limitations
 tree_item_index: 600
+version_override:
+    'FT': 'nxdoc/h2-limitations'
 history:
     -
         author: Solen Guitter

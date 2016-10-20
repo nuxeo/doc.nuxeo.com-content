@@ -25,6 +25,8 @@ confluence:
     source_link: >-
         /display/ADMINDOC60/Setting+up+a+HA+Configuration+Using+the+Nuxeo+Platform+and+PostgreSQL
 tree_item_index: 1000
+version_override:
+    'FT': 'nxdoc/setting-up-a-ha-configuration-using-the-nuxeo-platform-postgresql'
 history:
     -
         author: Solen Guitter

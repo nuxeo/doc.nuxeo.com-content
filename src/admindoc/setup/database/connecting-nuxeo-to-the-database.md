@@ -20,6 +20,8 @@ confluence:
     shortlink: P4BOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/P4BOAQ'
     source_link: /display/ADMINDOC60/Connecting+Nuxeo+to+the+Database
+version_override:
+    'FT': 'nxdoc/connecting-nuxeo-to-the-database'
 tree_item_index: 500
 history:
     -

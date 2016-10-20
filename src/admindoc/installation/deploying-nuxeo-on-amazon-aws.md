@@ -19,6 +19,10 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/bIBOAQ'
     source_link: /display/ADMINDOC60/Deploying+Nuxeo+on+Amazon+AWS
 tree_item_index: 400
+version_override:
+    'FT': 'nxdoc/deploying-nuxeo-amazon-aws'
+    'LTS 2015': 710/admindoc/deploying-nuxeo-amazon-aws
+    '5.8': 58/admindoc/deploying-nuxeo-amazon-aws
 history:
     -
         author: Solen Guitter

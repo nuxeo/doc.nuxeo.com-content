@@ -18,6 +18,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/boBOAQ'
     source_link: /display/ADMINDOC60/Nuxeo+Server+Commands
 tree_item_index: 300
+version_override:
+    'FT': 'nxdoc/nuxeo-server-commands'
 history:
     -
         author: Solen Guitter

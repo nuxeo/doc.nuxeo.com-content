@@ -19,6 +19,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/CIBOAQ'
     source_link: /display/ADMINDOC60/Implementing+Encryption
 tree_item_index: 600
+version_override:
+    'FT': 'nxdoc/implementing-encryption'
 history:
     -
         author: Solen Guitter

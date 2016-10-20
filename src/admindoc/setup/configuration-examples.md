@@ -22,6 +22,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/EYBOAQ'
     source_link: /display/ADMINDOC60/Configuration+Examples
 tree_item_index: 200
+version_override:
+    'FT': 'nxdoc/configuration-examples'
 history:
     -
         author: Solen Guitter

@@ -19,6 +19,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/b4BOAQ'
     source_link: /display/ADMINDOC60/Filesystem+Commands
 tree_item_index: 200
+version_override:
+    'FT': 'nxdoc/filesystem-commands'
 history:
     -
         author: Solen Guitter

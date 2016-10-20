@@ -20,18 +20,20 @@ confluence:
     shortlink: IQelAQ
     shortlink_source: 'https://doc.nuxeo.com/x/IQelAQ'
     source_link: /display/ADMINDOC60/Sensitive+Configuration+Data+Encryption
+version_override:
+    'FT': 'nxdoc/sensitive-configuration-data-encryption'
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-03 11:04'
         message: 'dd Implemented Entropy section, NXP-19071 --set optio'
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-15 09:04'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-15 09:03'
         message: ''
@@ -102,7 +104,7 @@ $ bin/nuxeoctl config some.sensitive.property someValue --encrypt -q
 
 ```bash
  # Key is stored encrypted in nuxeo.conf
-$ grep ^some.sensitive.property bin/nuxeo.conf 
+$ grep ^some.sensitive.property bin/nuxeo.conf
 some.sensitive.property={$$t4Dgkiwa/LjK0Pd9cTlPkg==}
 
 # With a wrong key or without any key, the raw value is returned (ie: encrypted); here, the "--get" option is implicit
@@ -114,7 +116,7 @@ Please enter the secret key:
 someValue
 
 $ bin/nuxeoctl decrypt '{$$CiuHEqqac75rGdPszYr6Pw==}' -q
-Please enter the secret key: 
+Please enter the secret key:
 someValue
 ```
 
@@ -154,7 +156,7 @@ $ bin/nuxeoctl configure
 
 # Generate a random AES secret key stored in the keystore "/path/to/keystore.jceks", with the keystore password "changeit", the key password "$SERVER_STATUS_KEY" and the key alias "NuxeoSecretKeyAES" (by convention, the key alias must be suffixed with the keyalg: "AES")
 $ SERVER_STATUS_KEY=$(bin/nuxeoctl config server.status.key -q)
-$ keytool -genseckey -keystore /path/to/keystore.jceks -storetype jceks -storepass changeit -keyalg AES -keysize 128 -alias NuxeoSecretKeyAES -keypass $SERVER_STATUS_KEY 
+$ keytool -genseckey -keystore /path/to/keystore.jceks -storetype jceks -storepass changeit -keyalg AES -keysize 128 -alias NuxeoSecretKeyAES -keypass $SERVER_STATUS_KEY
 
 # Configure Nuxeo to use that keystore and the key alias prefix "NuxeoSecretKey"
 $ bin/nuxeoctl config server.crypt.keystore.path /path/to/keystore.jceks -q
@@ -178,7 +180,7 @@ $ bin/nuxeoctl encrypt clearValue otherValue -q
 {$$P3u9HHXmcq0l5s5HvZJy0A==}
 
 $ bin/nuxeoctl decrypt '{$$CZjbsiX748UF583qkbinsQ==}' '{$$P3u9HHXmcq0l5s5HvZJy0A==}' -q
-Please enter the secret key: 
+Please enter the secret key:
 clearValue
 otherValue
 
@@ -186,7 +188,7 @@ otherValue
 $ bin/nuxeoctl config some.sensitive.property someValue --encrypt -q
 
 # Key is stored encrypted in nuxeo.conf
-$ grep ^some.sensitive.property bin/nuxeo.conf 
+$ grep ^some.sensitive.property bin/nuxeo.conf
 some.sensitive.property={$$pXRNM4JG2cAdn8senJf07w==}
 
 $ bin/nuxeoctl config some.sensitive.property -q

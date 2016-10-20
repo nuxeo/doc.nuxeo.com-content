@@ -16,6 +16,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/PYBOAQ'
     source_link: /display/ADMINDOC60/Database
 tree_item_index: 500
+version_override:
+    'FT': 'nxdoc/database-configuration'
 history:
     -
         author: Solen Guitter

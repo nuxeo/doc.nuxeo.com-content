@@ -16,6 +16,9 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/eIBVAQ'
     source_link: /display/NXDOC60/Guides+and+Tutorials
 tree_item_index: 200
+version_override:
+    'FT': 'nxdoc/tutorials'
+    'LTS 2015': 710/nxdoc/guides-and-tutorials
 history:
     -
         author: Manon Lumeau

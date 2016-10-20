@@ -18,7 +18,9 @@ confluence:
     shortlink: cIBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/cIBOAQ'
     source_link: /display/ADMINDOC60/Nuxeo+Automation+Commands
-tree_item_index: 400    
+tree_item_index: 400
+version_override:
+    'FT': 'nxdoc/nuxeo-automation-commands'
 history:
     -
         author: Solen Guitter

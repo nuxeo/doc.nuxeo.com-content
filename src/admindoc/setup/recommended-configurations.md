@@ -22,6 +22,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/QoBOAQ'
     source_link: /display/ADMINDOC60/Recommended+Configurations
 tree_item_index: 100
+version_override:
+    'FT': 'nxdoc/setup-best-practices'
 history:
     -
         author: Anonymous

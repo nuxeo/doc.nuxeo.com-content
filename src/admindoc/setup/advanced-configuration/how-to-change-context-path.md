@@ -30,6 +30,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/gIBOAQ'
     source_link: /display/ADMINDOC60/How+to+Change+Context+Path
 tree_item_index: 200
+version_override:
+    'FT': 'nxdoc/how-to-change-context-path'
 history:
     -
         author: Solen Guitter

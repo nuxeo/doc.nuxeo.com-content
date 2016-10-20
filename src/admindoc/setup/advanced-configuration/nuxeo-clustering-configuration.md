@@ -23,6 +23,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/VoBOAQ'
     source_link: /display/ADMINDOC60/Nuxeo+Clustering+Configuration
 tree_item_index: 800
+version_override:
+    'FT': 'nxdoc/nuxeo-clustering-configuration'
 history:
     -
         author: Solen Guitter

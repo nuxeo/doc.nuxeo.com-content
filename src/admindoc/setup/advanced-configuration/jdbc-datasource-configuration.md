@@ -19,6 +19,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/aYBOAQ'
     source_link: /display/ADMINDOC60/JDBC+Datasource+Configuration
 tree_item_index: 700
+version_override:
+    'FT': 'nxdoc/jdbc-datasource'
 history:
     -
         author: Solen Guitter

@@ -21,6 +21,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/DYBOAQ'
     source_link: /display/ADMINDOC60/Firewall+Consideration
 tree_item_index: 500
+version_override:
+    'FT': 'nxdoc/ports-usage-and-firewall-consideration'
 history:
     -
         author: Solen Guitter

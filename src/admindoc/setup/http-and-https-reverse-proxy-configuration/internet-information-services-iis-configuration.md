@@ -22,28 +22,30 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/JYBOAQ'
     source_link: >-
         /display/ADMINDOC60/Internet+Information+Services+%28IIS%29+Configuration
+version_override:
+    'FT': 'nxdoc/internet-information-services-iis'
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 11:16'
         message: ormattin
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-25 11:20'
         message: Added section "Preserving the Host Header"
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-11 11:41'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-11 01:09'
         message: ''
@@ -193,7 +195,7 @@ If you have errors, please check the next section.
 ### Error 1
 
 > 502 - Web server received an invalid response while acting as a gateway or proxy server.
-> 
+>
 > There is a problem with the page you are looking for, and it cannot be displayed. When the web server (while acting as a gateway or proxy) contacted the upstream content server, it received an invalid response from the content server.
 
 In the rule you defined the target is&nbsp;[http://internal.address.ip:8080](http://internal.address.ip:8080). This error might occur because the server can't&nbsp;reach this address.
@@ -201,7 +203,7 @@ In the rule you defined the target is&nbsp;[http://internal.address.ip:8080](htt
 ### Error 2
 
 > 500 - Internal server error.
-> 
+>
 > There is a problem with the resource you are looking for, and it cannot be displayed.
 
 This error means you made a mistake during the rule configuration and about the server variable name.
