@@ -82,8 +82,10 @@ The goal of this section is to provide ready to use examples. They can be follow
 
 * * *
 
-### An overview of Nuxeo Studio features in&nbsp;this screencast:
+### An overview of Nuxeo Studio features in this screencast:
 
-{{> wistia_video id='96b4bb3b8d'}}
+{{> wistia_video id='me59a8g79l'}}
+
+Extract from the course ["Getting Started With Nuxeo Studio"](https://university.nuxeo.io/nuxeo/university/#!/course/getting-started-nuxeo-studio) on [Nuxeo University](https://university.nuxeo.io/)
 
 {{{multiexcerpt 'license' page='NXDOC:Developer Documentation Center'}}}
