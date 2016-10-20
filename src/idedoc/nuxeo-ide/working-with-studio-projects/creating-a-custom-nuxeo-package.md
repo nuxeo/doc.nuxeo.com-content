@@ -88,18 +88,16 @@ history:
 
 ---
 {{! excerpt}}
-
 Nuxeo IDE enables you to create Nuxeo Packages for your Nuxeo project. A Nuxeo Package is the easiest way to distribute a plugin, as it contains all the bundles, libraries and runtime properties that would be required to make your new plugin work, all in one single ZIP file.
+{{! /excerpt}}
 
-{{! /excerpt}} {{#> callout type='tip' }}
-
+{{#> callout type='tip' }}
 The whole Nuxeo Package structure and metadata are detailed on the page [Creating Nuxeo Packages]({{page space='nxdoc' page='creating-nuxeo-packages'}}).
+{{/callout}}
 
-{{/callout}} {{#> callout type='warning' }}
-
+{{#> callout type='warning' }}
 Please note that this functionality may not be fully compliant on Nuxeo IDE versions 1.2.1 to 1.2.3 included when using a Nuxeo Platform 5.8 SDK. For users using this configuration, an upgrade to Nuxeo IDE 1.2.4 is recommended.
 A workaround can also be found in the following JIRA ticket : [Allow marketplace package generation with Nuxeo Platform 5.8 / Maven 3](https://jira.nuxeo.com/browse/NXIDE-336)
-
 {{/callout}}
 
 **To create your Nuxeo Package in Nuxeo IDE:**
@@ -126,8 +124,7 @@ A workaround can also be found in the following JIRA ticket : [Allow marketplace
     1.  Make sure the bound POM file contains all necessary dependencies. You can right click on your project and choose "Nuxeo / synchronize POM" to ease the process.
         ![]({{file name='nx-ide-pom-synchro.png'}} ?w=500,h=308,border=true)
     2.  From the bound project, use Maven to compile and install the project's JAR file into your local repository (`mvn clean install` command)
-    3.  From the Eclipse Marketplace project, use Maven to generate the Nuxeo Package (`mvn clean package` command){{#> callout type='warning' }}
-
+    3.  From the Eclipse Marketplace project, use Maven to generate the Nuxeo Package (`mvn clean package` command)
+    {{#> callout type='warning' }}
     Since Nuxeo IDE 1.2.1, Maven 3 is being used to compile projects and generate Nuxeo Packages. Refer to the [Use Maven 3](https://jira.nuxeo.com/browse/NXP-13555) JIRA ticket for more information about switching from Maven 2 to Maven 3 impacts.
-
     {{/callout}}
