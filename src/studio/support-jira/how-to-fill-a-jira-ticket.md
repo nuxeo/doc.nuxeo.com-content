@@ -285,7 +285,7 @@ This type is for behaviors that are not available by default on the Nuxeo Platfo
 
 ## {{> anchor 'field-affects-version'}}Affects Versions
 
-You must indicate which version of Nuxeo you are using (5.5, 5.6, 5.8, etc.), independently from the installed hotfixes (which will be indicated in the [ **Environment** field](#field-environment)).
+You must indicate which version of Nuxeo you are using (6.0, 7.10, etc.), independently from the installed hotfixes (which will be indicated in the [ **Environment** field](#field-environment)).
 
 ## {{> anchor 'field-severity'}}Severity
 

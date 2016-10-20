@@ -299,7 +299,7 @@ Une am&eacute;lioration est un comportement qui n'est pas disponible dans la pla
 
 ## {{> anchor 'field-affects-version'}}Versions
 
-Le client doit indiquer quelle version principale de la plateforme Nuxeo il utilise (5.5, 5.6, 5.8), ind&eacute;pendamment des hotfixes install&eacute;s (ce qui sera pr&eacute;cis&eacute; dans l'environnement).
+Le client doit indiquer quelle version principale de la plateforme Nuxeo il utilise (6.0, 7.10, etc.), ind&eacute;pendamment des hotfixes install&eacute;s (ce qui sera pr&eacute;cis&eacute; dans l'environnement).
 
 ## {{> anchor 'field-severity'}}Criticit&eacute;
 
