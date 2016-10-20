@@ -20,307 +20,308 @@ confluence:
     shortlink: aYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/aYBVAQ'
     source_link: /display/NXDOC60/NXQL
+tree_item_index: 100
 history:
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-07-01 15:59'
         message: ecurity policy limitatio
         version: '60'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-04-22 12:58'
         message: ''
         version: '59'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-04-22 09:30'
         message: Update on simple_query_string hint operator
         version: '58'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-22 08:35'
         message: 'Add section Path Search with the STARTSWITH Operator '
         version: '57'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-17 16:05'
         message: >-
             Add Elasticsearch NXQL Hints section and info on elasticsearch
             limitations, fix formatting
         version: '56'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-03-17 08:27'
         message: ''
         version: '55'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-10 10:51'
         message: '(add ecm:acl/*/pos)'
         version: '54'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-14 09:28'
         message: Format and related pages update
         version: '53'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 14:49'
         message: ''
         version: '52'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 14:44'
         message: ''
         version: '51'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-12 14:26'
         message: ''
         version: '50'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-30 16:32'
         message: ''
         version: '49'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-30 16:05'
         message: ''
         version: '48'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-30 16:04'
         message: Adding limitations when using an elasticsearch page provider
         version: '47'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-09-01 19:19'
         message: ''
         version: '46'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-08-29 14:46'
         message: ''
         version: '45'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-08-29 14:22'
         message: ''
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 15:56'
         message: ''
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 13:46'
         message: Removed 5.4 reference and formatting
         version: '42'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-05-19 23:51'
         message: ''
         version: '41'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-05-19 23:50'
         message: ''
         version: '40'
-    - 
+    -
         author: Thierry Martins
         date: '2014-04-11 15:58'
         message: typo
         version: '39'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-02-06 18:18'
         message: details
         version: '38'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-02-06 18:15'
         message: details
         version: '37'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-02-06 18:12'
         message: aggregates
         version: '36'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-09-06 17:34'
         message: examples
         version: '35'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-09-06 17:20'
         message: New NXP-12104 props
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 17:49'
         message: ''
         version: '33'
-    - 
+    -
         author: Thierry Martins
         date: '2013-08-23 14:19'
         message: use prefix to query the filename
         version: '32'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-05-13 15:19'
         message: 'note about != '
         version: '31'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-05-13 15:09'
         message: adding ORDER BY syntax
         version: '30'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-05-13 15:04'
         message: ''
         version: '29'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-05-02 11:55'
         message: ''
         version: '28'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-05-02 11:52'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-11 13:26'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-11 13:25'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-11 13:24'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-11 13:20'
         message: ''
         version: '23'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-02-11 13:13'
         message: ''
         version: '22'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-02-07 17:29'
         message: ''
         version: '21'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 18:48'
         message: ''
         version: '20'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-01-15 18:47'
         message: ''
         version: '19'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-12-07 04:55'
         message: ''
         version: '18'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-12-07 04:51'
         message: ''
         version: '17'
-    - 
+    -
         author: Laurent Doguin
         date: '2012-11-14 13:57'
         message: fix files complex list queries
         version: '16'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-09-24 14:30'
         message: Migrated to Confluence 4.0
         version: '15'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-09-24 14:30'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-16 16:43'
         message: >-
             replaced interpreted backslash with \ so they are correctly
             displayed
         version: '13'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-02-07 12:26'
         message: 'ecm:lockOwner + ecm:lockCreated'
         version: '12'
-    - 
+    -
         author: Thierry Martins
         date: '2011-12-07 10:28'
         message: ''
         version: '11'
-    - 
+    -
         author: Thierry Martins
         date: '2011-11-25 16:25'
         message: ''
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-14 13:55'
         message: Update references to 5.4.3 with 5.5
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-09-07 11:19'
         message: ''
         version: '8'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-09-06 19:05'
         message: ''
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-09-06 19:03'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-09-06 19:02'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-09-06 18:42'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-09-06 18:30'
         message: add IS NULL notes
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-24 17:21'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-24 17:19'
         message: ''
@@ -848,7 +849,7 @@ SELECT * FROM Document WHERE /*+ES: OPERATOR(fuzzy) */ dc:title = 'zorkspaces'
 SELECT * FROM Document WHERE /*+ES: OPERATOR(common) */ dc:title = 'this is bonsai cool'
 
 -- Use default ES simple_query_string search on dc:title.fulltext field
-SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.fulltext) OPERATOR(simple_query_string) */ dc:title = '\"fried eggs\" +(eggplant | potato) -frittata' 
+SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.fulltext) OPERATOR(simple_query_string) */ dc:title = '\"fried eggs\" +(eggplant | potato) -frittata'
 
 -- Use ES query_string on multiple fields using a fulltext analyzer
 SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.fulltext,dc:description.fulltext) ANALYZER(fulltext) OPERATOR(query_string) */ dc:title = 'this AND that OR thus'

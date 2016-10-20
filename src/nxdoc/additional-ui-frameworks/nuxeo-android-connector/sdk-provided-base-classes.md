@@ -15,13 +15,14 @@ confluence:
     shortlink: LYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/LYBVAQ'
     source_link: /display/NXDOC60/SDK+provided+base+classes
+tree_item_index: 700
 history:
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 02:13'
         message: igrated to Confluence 4.
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 02:13'
         message: ''

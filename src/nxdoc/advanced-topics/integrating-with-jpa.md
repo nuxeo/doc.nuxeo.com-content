@@ -15,108 +15,109 @@ confluence:
     shortlink: 7oBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/7oBVAQ'
     source_link: /display/NXDOC60/Integrating+with+JPA
+tree_item_index: 100
 history:
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 15:55'
         message: igrated to Confluence 4.
         version: '21'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 15:54'
         message: ''
         version: '20'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 15:54'
         message: ''
         version: '19'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 15:05'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 15:04'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 15:04'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 15:02'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 14:57'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 14:48'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 14:46'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 14:44'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 14:44'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 13:25'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 13:25'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 13:23'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 13:21'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 13:20'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 13:19'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 12:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 12:41'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-11-15 11:15'
         message: ''

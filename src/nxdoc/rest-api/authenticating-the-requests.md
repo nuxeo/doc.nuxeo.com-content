@@ -15,28 +15,29 @@ confluence:
     shortlink: xoBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/xoBVAQ'
     source_link: /display/NXDOC60/Authenticating+the+requests
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 12:36'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 10:24'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 02:37'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-02-10 18:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-02-10 16:46'
         message: ''

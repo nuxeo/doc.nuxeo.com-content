@@ -17,53 +17,54 @@ confluence:
     shortlink: 3IBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/3IBVAQ'
     source_link: /display/NXDOC60/Bootstrap+Your+Case+Management+Project
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-16 08:32'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 15:50'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-21 11:27'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 10:50'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 10:48'
         message: formatting
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-04 00:44'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-29 14:09'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-29 14:03'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-29 13:30'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-29 13:18'
         message: ''

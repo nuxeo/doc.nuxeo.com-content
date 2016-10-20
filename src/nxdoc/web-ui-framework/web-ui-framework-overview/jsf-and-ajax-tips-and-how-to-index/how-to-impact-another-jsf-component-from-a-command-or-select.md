@@ -26,33 +26,34 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/gIBVAQ'
     source_link: >-
         /display/NXDOC60/How+to+Impact+Another+JSF+Component+from+a+Command+or+Select
+tree_item_index: 900
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-08-18 09:35'
         message: 'XDOC-649: fix first example, ajaxifying i'
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-09 17:05'
         message: Fix typos
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 16:59'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 16:27'
         message: 'NXDOC-363 : add howtos about selectionActions helpers'
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 14:52'
         message: ''
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 14:52'
         message: ''

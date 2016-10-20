@@ -15,153 +15,154 @@ confluence:
     shortlink: yoBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/yoBVAQ'
     source_link: /display/NXDOC60/Writing+a+Bundle+Manifest
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-23 11:06'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-20 15:08'
         message: ''
         version: '29'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-17 00:13'
         message: ''
         version: '28'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 23:44'
         message: ''
         version: '27'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 23:24'
         message: ''
         version: '26'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-11-29 10:36'
         message: Migrated to Confluence 4.0
         version: '25'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-11-29 10:36'
         message: ''
         version: '24'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-10 01:03'
         message: ''
         version: '23'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-10 01:00'
         message: ''
         version: '22'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-10 00:59'
         message: ''
         version: '21'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-10 00:57'
         message: ''
         version: '20'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-10 00:56'
         message: ''
         version: '19'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-10 00:55'
         message: ''
         version: '18'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-10 00:51'
         message: ''
         version: '17'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-10 00:42'
         message: ''
         version: '16'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-10 00:36'
         message: ''
         version: '15'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-10 00:30'
         message: ''
         version: '14'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-10 00:29'
         message: ''
         version: '13'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-10 00:29'
         message: ''
         version: '12'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-09 23:53'
         message: ''
         version: '11'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-09 18:27'
         message: ''
         version: '10'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-09 17:34'
         message: ''
         version: '9'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-09 17:33'
         message: ''
         version: '8'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-09 17:31'
         message: ''
         version: '7'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-09 17:28'
         message: ''
         version: '6'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-09 17:25'
         message: ''
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-09 16:38'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-09 16:38'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-09 16:37'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-09 12:55'
         message: ''

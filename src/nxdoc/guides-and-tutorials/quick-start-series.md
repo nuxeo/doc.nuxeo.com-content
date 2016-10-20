@@ -17,23 +17,24 @@ confluence:
     shortlink: SYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/SYBVAQ'
     source_link: /display/NXDOC60/Quick+Start+Series
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-12 15:21'
         message: ''
         version: '4'
-    - 
+    -
         author: Anonymous
         date: '2014-07-18 16:59'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-04 00:40'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-04 00:33'
         message: ''

@@ -21,43 +21,44 @@ confluence:
     shortlink: U4FVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/U4FVAQ'
     source_link: /pages/viewpage.action?pageId=22380883
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 11:54'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 11:53'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 14:15'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 01:10'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-23 11:02'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-09-05 18:59'
         message: Completed example
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 14:31'
         message: Fixed formatting
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 14:30'
         message: ''
@@ -178,7 +179,7 @@ Here is how the same blob will be serialized when inlining blobs (an option of t
       <mime-type>application/octet-stream</mime-type>
       <data>
        b3JnLmpib3NzLnJlbW90aW5nLkNhbm5vdENvbm5lY3RFeGNlcHRpb246IENhbiBub3QgZ2V0IGNv
-       bm5lY3Rpb24gdG8gc2VydmVyLiAgUHJvYmxlbSBlc3RhYmxpc2hpbmcgc29ja2V0IGNvbm5lY3Rp 
+       bm5lY3Rpb24gdG8gc2VydmVyLiAgUHJvYmxlbSBlc3RhYmxpc2hpbmcgc29ja2V0IGNvbm5lY3Rp
        [...]
        </data>
     </content>
@@ -343,13 +344,13 @@ try {
   pipe.setReader(reader);
   pipe.setWriter(writer);
   pipe.run();   
-} finally { 
+} finally {
   if (reader != null) {
-    reader.close(); 
+    reader.close();
   }
-  if (writer != null) { 
-    writer.close(); 
-  } 
+  if (writer != null) {
+    writer.close();
+  }
 }
 ```
 
@@ -368,12 +369,12 @@ try {
   pipe.setReader(reader);
   pipe.setWriter(writer);
   pipe.run();
-} finally { 
+} finally {
   if (reader != null) {
-    reader.close(); 
-  } 
+    reader.close();
+  }
   if (writer != null) {
-    writer.close(); 
+    writer.close();
   }
 }
 ```
@@ -383,7 +384,7 @@ try {
 ```java
 DocumentReader reader = null;
 DocumentWriter writer = null;
-try { 
+try {
   DocumentModel src = getTestWorkspace();
   reader = new SingleDocumentReader(docMgr, src);
 
@@ -399,11 +400,11 @@ try {
   pipe.setReader(reader);
   pipe.setWriter(writer); pipe.run();
 
-} finally { 
+} finally {
   if (reader != null) {
-    reader.close(); 
-  } 
-  if (writer != null) { 
+    reader.close();
+  }
+  if (writer != null) {
     writer.close();
   }
 }

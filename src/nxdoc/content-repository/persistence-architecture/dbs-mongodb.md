@@ -16,28 +16,29 @@ confluence:
     shortlink: T4FVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/T4FVAQ'
     source_link: /display/NXDOC60/DBS+-+MongoDB
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 15:03'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-08-11 14:05'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-11-04 16:09'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-11-04 16:09'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-11-04 15:56'
         message: ''

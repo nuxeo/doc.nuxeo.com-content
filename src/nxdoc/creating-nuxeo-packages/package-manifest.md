@@ -15,63 +15,64 @@ confluence:
     shortlink: OYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/OYBVAQ'
     source_link: /display/NXDOC60/Package+Manifest
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-21 12:00'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-21 12:00'
         message: Fixed link format
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-16 18:50'
         message: ''
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2011-02-03 18:40'
         message: updated pointer to explanation of each package property
         version: '9'
-    - 
+    -
         author: whajeri
         date: '2010-11-12 13:03'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-06 08:27'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-06 08:27'
         message: ''
         version: '6'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-08 01:59'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-07-07 21:58'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-07 16:22'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-07 16:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-07 11:25'
         message: ''

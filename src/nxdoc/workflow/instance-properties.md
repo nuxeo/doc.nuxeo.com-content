@@ -18,43 +18,44 @@ confluence:
     shortlink: FYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/FYBVAQ'
     source_link: /display/NXDOC60/Instance+Properties
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 11:39'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-31 09:40'
         message: ''
         version: '7'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-30 18:57'
         message: ''
         version: '6'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-30 18:28'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 11:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 10:13'
         message: Formatting and added link to the explorer
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-19 12:39'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 16:25'
         message: ''

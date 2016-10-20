@@ -18,88 +18,89 @@ confluence:
     shortlink: MoBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/MoBVAQ'
     source_link: /display/NXDOC60/News+publishing+in+workspaces
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 14:20'
         message: emove children display macro
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 17:12'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:27'
         message: Migrated to Confluence 4.0
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:27'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 14:44'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 14:43'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 14:43'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-27 19:18'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-27 00:37'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-26 17:53'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-26 17:51'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-26 17:16'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-26 16:50'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-19 08:38'
         message: formatting and typos
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-18 18:32'
         message: fixed typoes
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-18 08:37'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-18 08:34'
         message: ''

@@ -15,6 +15,7 @@ confluence:
     shortlink: SoBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/SoBVAQ'
     source_link: /pages/viewpage.action?pageId=22380618
+tree_item_index: 300
 history:
     -
         author: Manon Lumeau

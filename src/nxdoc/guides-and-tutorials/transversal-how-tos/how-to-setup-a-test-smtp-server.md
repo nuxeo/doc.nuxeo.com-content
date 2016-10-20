@@ -24,28 +24,29 @@ confluence:
     shortlink: rYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/rYBVAQ'
     source_link: /display/NXDOC60/How+to+setup+a+test+SMTP+server
+tree_item_index: 300
 history:
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-11-12 20:30'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-10-06 11:12'
         message: typo
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-18 15:11'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-18 15:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Damien Metzler
         date: '2013-03-07 11:04'
         message: ''

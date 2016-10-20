@@ -24,43 +24,44 @@ confluence:
     shortlink: YYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/YYBVAQ'
     source_link: /display/NXDOC60/How+to+Override+a+Seam+Component
+tree_item_index: 800
 history:
-    - 
+    -
         author: Gildas Lefevre
         date: '2014-11-04 18:15'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-19 15:58'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-19 15:57'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-18 17:21'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-27 15:06'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-27 12:09'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Martins
         date: '2014-05-26 17:59'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2014-05-26 17:50'
         message: ''

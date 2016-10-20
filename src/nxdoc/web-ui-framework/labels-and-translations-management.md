@@ -17,18 +17,19 @@ confluence:
     shortlink: QIBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/QIBVAQ'
     source_link: /display/NXDOC60/Labels+and+Translations+Management
+tree_item_index: 900
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 16:42'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 00:11'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-05 23:57'
         message: ''

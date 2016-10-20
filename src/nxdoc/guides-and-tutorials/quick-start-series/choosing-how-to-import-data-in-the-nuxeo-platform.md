@@ -19,68 +19,69 @@ confluence:
     shortlink: MoFVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/MoFVAQ'
     source_link: /display/NXDOC60/Choosing+How+to+Import+Data+in+the+Nuxeo+Platform
+tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 14:28'
         message: 'emove children display macro '
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-10 14:57'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-09 14:51'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-17 08:51'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-06 11:34'
         message: Fixed broken link
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 10:46'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 15:50'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-21 10:55'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 11:27'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 11:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-16 15:44'
         message: Added links to related pages for each import approach
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-16 15:16'
         message: 'Typos, added TOC and related topics'
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-12-16 14:48'
         message: ''

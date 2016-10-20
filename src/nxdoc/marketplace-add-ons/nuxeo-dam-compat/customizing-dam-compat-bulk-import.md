@@ -19,63 +19,64 @@ confluence:
     shortlink: o4BVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/o4BVAQ'
     source_link: /display/NXDOC60/Customizing+DAM+Compat+Bulk+Import
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 15:54'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-21 17:12'
         message: ''
         version: '11'
-    - 
+    -
         author: Thomas Roger
         date: '2014-10-31 17:42'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-29 10:36'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-29 10:34'
         message: ''
         version: '8'
-    - 
+    -
         author: Harlan Brown
         date: '2014-06-30 16:53'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-11 15:57'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-11 15:53'
         message: Added screenshot and reorganized steps
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-11 00:04'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-11 00:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-07-09 19:03'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2013-07-09 18:29'
         message: ''

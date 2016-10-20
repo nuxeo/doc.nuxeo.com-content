@@ -21,23 +21,24 @@ confluence:
     shortlink: LoFVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/LoFVAQ'
     source_link: /display/NXDOC60/Document+Templates+and+Automation+Rendering+Service
+tree_item_index: 1200
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 00:38'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 10:58'
         message: ''
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 10:57'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 10:57'
         message: ''

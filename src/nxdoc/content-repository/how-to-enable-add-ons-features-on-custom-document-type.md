@@ -27,73 +27,74 @@ confluence:
     shortlink: JoFVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/JoFVAQ'
     source_link: /display/NXDOC60/How+to+Enable+Add-Ons+Features+on+Custom+Document+Type
+tree_item_index: 1400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:48'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 11:58'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 11:54'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 11:28'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 11:25'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 11:24'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-08 17:54'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-02 11:17'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-13 11:05'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-27 14:23'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-05 14:21'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-05 14:20'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-17 16:41'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-12 11:15'
         message: ''

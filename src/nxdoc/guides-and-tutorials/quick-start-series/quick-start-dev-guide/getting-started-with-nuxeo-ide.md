@@ -16,118 +16,119 @@ confluence:
     shortlink: FYFVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/FYFVAQ'
     source_link: /display/NXDOC60/Getting+Started+with+Nuxeo+IDE
+tree_item_index: 200
 history:
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-01-05 15:06'
         message: pdate eclipse descriptio
         version: '23'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-01-05 15:06'
         message: Fix SDK link
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 09:05'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 09:03'
         message: Fix anchors and page payout
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-30 10:28'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-29 14:22'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-29 10:08'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 14:50'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 14:14'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-24 14:12'
         message: ''
         version: '14'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-12-20 17:39'
         message: ''
         version: '13'
-    - 
+    -
         author: Anne Jubert
         date: '2014-11-25 15:29'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-25 14:53'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-17 14:33'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-17 14:32'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-17 14:31'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-17 14:27'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:59'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:59'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 12:29'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 12:28'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 12:26'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 12:25'
         message: ''
@@ -254,7 +255,7 @@ public class ContractUpdater {
     public static final String ID = "ContractUpdater";
     @OperationMethod(collector=DocumentModelCollector.class)
     public DocumentModel run(DocumentModel input) {
-      return null; 
+      return null;
     }    
 }
 ```

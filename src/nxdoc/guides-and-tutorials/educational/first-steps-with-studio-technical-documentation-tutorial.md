@@ -17,48 +17,49 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/PYBVAQ'
     source_link: >-
         /display/NXDOC60/First+Steps+With+Studio%3A+Technical+Documentation+Tutorial
+tree_item_index: 100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 14:22'
         message: 'emove children display macro '
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-07 11:25'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 18:50'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 16:24'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 16:20'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 15:49'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-06 15:48'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 01:05'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 01:03'
         message: ''

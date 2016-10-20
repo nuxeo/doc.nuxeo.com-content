@@ -18,103 +18,104 @@ confluence:
     shortlink: nIBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/nIBVAQ'
     source_link: /display/NXDOC60/Page+Providers
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 09:48'
         message: ''
         version: '20'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-17 15:57'
         message: merge custom page providers doc
         version: '19'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-17 14:14'
         message: wording + remove hardcoded links to confluence pages
         version: '18'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 14:54'
         message: ''
         version: '17'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 10:45'
         message: ''
         version: '16'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 10:35'
         message: ''
         version: '15'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 10:31'
         message: ''
         version: '14'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 10:31'
         message: ''
         version: '13'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 10:08'
         message: ''
         version: '12'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 10:07'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-23 08:04'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-17 17:07'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 16:58'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 16:58'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-13 16:57'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 16:30'
         message: Added related topics
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-04-26 18:05'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-04-26 18:05'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-04-26 17:28'
         message: ''
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-04-26 17:28'
         message: ''

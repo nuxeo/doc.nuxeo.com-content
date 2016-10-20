@@ -19,153 +19,154 @@ confluence:
     shortlink: t4BVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/t4BVAQ'
     source_link: /display/NXDOC60/Thumbnail
+tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 17:54'
         message: ix links to point to 6.0 release tag
         version: '30'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-02 16:04'
         message: ''
         version: '29'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-11-14 17:16'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 12:40'
         message: Updated javadoc links to 5.8 release
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-05 15:51'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 16:43'
         message: ''
         version: '25'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-22 14:21'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-28 14:10'
         message: Fixed format
         version: '23'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-20 15:55'
         message: ''
         version: '22'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-20 11:08'
         message: ''
         version: '21'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-20 11:04'
         message: ''
         version: '20'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-20 10:58'
         message: ''
         version: '19'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-20 10:58'
         message: ''
         version: '18'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-20 10:34'
         message: ''
         version: '17'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-19 15:56'
         message: ''
         version: '16'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-18 18:37'
         message: ''
         version: '15'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-18 18:25'
         message: ''
         version: '14'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-18 17:56'
         message: ''
         version: '13'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-18 17:53'
         message: ''
         version: '12'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-18 15:50'
         message: ''
         version: '11'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-18 15:48'
         message: ''
         version: '10'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-18 15:48'
         message: ''
         version: '9'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-18 15:48'
         message: ''
         version: '8'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-18 15:46'
         message: ''
         version: '7'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-18 15:46'
         message: ''
         version: '6'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-18 15:23'
         message: ''
         version: '5'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-18 15:22'
         message: ''
         version: '4'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-18 12:38'
         message: ''
         version: '3'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-18 11:09'
         message: ''
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-06-18 10:24'
         message: ''

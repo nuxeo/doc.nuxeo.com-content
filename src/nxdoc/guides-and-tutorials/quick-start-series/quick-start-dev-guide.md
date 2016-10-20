@@ -15,18 +15,19 @@ confluence:
     shortlink: JIFVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/JIFVAQ'
     source_link: /display/NXDOC60/Quick+Start+Dev+Guide
+tree_item_index: 400
 history:
-    - 
+    -
         author: Anonymous
         date: '2014-11-06 12:08'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-16 10:30'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 13:57'
         message: ''

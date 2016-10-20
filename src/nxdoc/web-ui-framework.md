@@ -15,48 +15,49 @@ confluence:
     shortlink: d4BVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/d4BVAQ'
     source_link: /display/NXDOC60/Web+UI+Framework
+tree_item_index: 1600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-12 15:26'
         message: ''
         version: '9'
-    - 
+    -
         author: Anonymous
         date: '2014-11-24 16:52'
         message: ''
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-01-13 15:11'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-01-10 18:17'
         message: ''
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 15:05'
         message: ''
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-03 16:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-03 16:02'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-06 15:39'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-05 15:39'
         message: ''

@@ -17,43 +17,44 @@ confluence:
     shortlink: LIBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/LIBVAQ'
     source_link: /display/NXDOC60/Downloading+Files
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 15:32'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-03 15:32'
         message: JSF only content was moved on page URLs for Files
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-01 14:30'
         message: ''
         version: '6'
-    - 
+    -
         author: Vincent Dutat
         date: '2014-02-13 01:59'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 14:17'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 01:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-17 11:38'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-16 17:08'
         message: ''

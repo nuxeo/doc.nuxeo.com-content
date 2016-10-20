@@ -20,143 +20,144 @@ confluence:
     shortlink: doFVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/doFVAQ'
     source_link: /display/NXDOC60/Authentication
+tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 14:43'
         message: ''
         version: '28'
-    - 
+    -
         author: Thierry Martins
         date: '2014-12-03 10:26'
         message: ssoNeverRedirect parameter
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 11:51'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-10 17:14'
         message: Added section about services specific authentication
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 17:27'
         message: ''
         version: '24'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-11-13 12:13'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-07 10:07'
         message: Removed related topics from TOC
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 17:40'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-29 12:00'
         message: ''
         version: '20'
-    - 
+    -
         author: Antoine Taillefer
         date: '2013-05-28 12:09'
         message: ''
         version: '19'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2013-05-28 11:46'
         message: CAS2 block formatting
         version: '18'
-    - 
+    -
         author: Olivier Grisel
         date: '2012-04-28 03:10'
         message: Migrated to Confluence 4.0
         version: '17'
-    - 
+    -
         author: Olivier Grisel
         date: '2012-04-28 03:10'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2012-03-20 11:42'
         message: updated configuration according to current distribution
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-16 18:41'
         message: 'Added links to plugins, fixed typos and added related pages'
         version: '14'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-15 12:44'
         message: ''
         version: '13'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-15 12:31'
         message: ''
         version: '12'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-15 12:18'
         message: ''
         version: '11'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-15 12:14'
         message: ''
         version: '10'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-15 12:09'
         message: ''
         version: '9'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-15 12:06'
         message: ''
         version: '8'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-15 12:06'
         message: ''
         version: '7'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-15 12:02'
         message: ''
         version: '6'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-15 11:46'
         message: ''
         version: '5'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-15 11:45'
         message: ''
         version: '4'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-15 11:44'
         message: ''
         version: '3'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-15 11:36'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-15 11:33'
         message: ''

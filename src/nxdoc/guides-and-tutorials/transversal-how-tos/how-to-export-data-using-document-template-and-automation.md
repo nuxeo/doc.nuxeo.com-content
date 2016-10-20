@@ -8,7 +8,7 @@ details:
     howto:
         excerpt: >-
             Learn how to generate a CSV file listing all the documents of your
-            Nuxeo Platform repository. 
+            Nuxeo Platform repository.
         level: Beginner
         tool: Studio
         topics: 'Automation, Document template'
@@ -35,133 +35,134 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/lIBVAQ'
     source_link: >-
         /display/NXDOC60/How+to+Export+Data+Using+Document+Template+and+Automation
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:55'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-15 15:44'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-21 12:37'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-21 12:33'
         message: ''
         version: '23'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 00:20'
         message: ''
         version: '22'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 00:18'
         message: ''
         version: '21'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 00:16'
         message: ''
         version: '20'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 22:02'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 22:01'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 18:07'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 16:00'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-27 11:28'
         message: Added related topics
         version: '15'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-28 14:48'
         message: Migrated to Confluence 4.0
         version: '14'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-28 14:48'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-05 15:51'
         message: Updated instructions and added related howtos
         version: '12'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-07-13 11:24'
         message: ''
         version: '11'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-07-13 11:23'
         message: ''
         version: '10'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-07-13 11:19'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-12 12:43'
         message: fixed typos and formatting
         version: '8'
-    - 
+    -
         author: Arthur Gallouin
         date: '2011-07-11 11:02'
         message: ''
         version: '7'
-    - 
+    -
         author: whajeri
         date: '2011-02-15 16:45'
         message: ''
         version: '6'
-    - 
+    -
         author: whajeri
         date: '2011-02-08 17:26'
         message: ''
         version: '5'
-    - 
+    -
         author: whajeri
         date: '2011-02-08 17:00'
         message: ''
         version: '4'
-    - 
+    -
         author: whajeri
         date: '2011-02-08 16:34'
         message: ''
         version: '3'
-    - 
+    -
         author: whajeri
         date: '2011-02-04 19:33'
         message: ''
         version: '2'
-    - 
+    -
         author: whajeri
         date: '2011-02-04 18:15'
         message: ''

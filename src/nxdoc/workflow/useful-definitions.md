@@ -18,68 +18,69 @@ confluence:
     shortlink: loBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/loBVAQ'
     source_link: /display/NXDOC60/Useful+Definitions
+tree_item_index: 1100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 08:38'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-12 14:54'
         message: ''
         version: '12'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-31 15:46'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 14:07'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 13:25'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 12:37'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-20 00:17'
         message: ''
         version: '7'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-09-13 15:45'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-06 13:51'
         message: ''
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-06 13:50'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-06 13:49'
         message: Added sub workflow and escalation rule quick description.
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 18:09'
         message: Moved main concepts from dedicated page to this one.
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-12-31 02:53'
         message: ''

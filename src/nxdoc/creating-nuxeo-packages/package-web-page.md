@@ -17,13 +17,14 @@ confluence:
     shortlink: O4BVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/O4BVAQ'
     source_link: /display/NXDOC60/Package+Web+Page
+hidden: true
 history:
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-07 11:29'
         message: igrated to Confluence 4.
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-07 11:29'
         message: ''

@@ -20,18 +20,19 @@ confluence:
     source_link: /display/NXDOC60/From+the+Web+UI+to+Nuxeo+Studio
 version_override:
     'FT': 'nxdoc/from-the-jsf-ui-to-nuxeo-studio'
+tree_item_index: 1000
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-12 15:09'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-03 10:58'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-03 10:55'
         message: ''

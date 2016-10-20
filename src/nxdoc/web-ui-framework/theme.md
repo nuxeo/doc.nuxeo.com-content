@@ -18,203 +18,204 @@ confluence:
     shortlink: X4FVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/X4FVAQ'
     source_link: /display/NXDOC60/Theme
+tree_item_index: 800
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 09:17'
         message: ''
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-03 15:25'
         message: link update
         version: '39'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-17 11:09'
         message: ''
         version: '38'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 16:53'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 12:09'
         message: Removed 5.5 references and formattin
         version: '36'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-04 17:19'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 18:32'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-07 14:32'
         message: Fixed broken related content links
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-07 11:53'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-07 11:53'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-06 17:23'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-06 17:20'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 18:44'
         message: ''
         version: '28'
-    - 
+    -
         author: Lise Kemen
         date: '2013-05-03 11:59'
         message: ''
         version: '27'
-    - 
+    -
         author: Lise Kemen
         date: '2012-12-04 16:34'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-04 09:33'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-11 22:27'
         message: Migrated to Confluence 4.0
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-11 22:27'
         message: ''
         version: '23'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-08-07 12:16'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-19 11:55'
         message: Added related pages
         version: '21'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2012-01-02 10:40'
         message: ''
         version: '20'
-    - 
+    -
         author: Lise Kemen
         date: '2011-12-23 18:33'
         message: ''
         version: '19'
-    - 
+    -
         author: Lise Kemen
         date: '2011-12-23 18:32'
         message: ''
         version: '18'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-12-21 13:42'
         message: ''
         version: '17'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-12-20 17:01'
         message: ''
         version: '16'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-12-19 13:16'
         message: ''
         version: '15'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-12-19 13:15'
         message: ult
         version: '14'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-12-19 13:13'
         message: ''
         version: '13'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-12-19 13:11'
         message: ''
         version: '12'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-12-19 13:05'
         message: ''
         version: '11'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-12-19 13:03'
         message: ''
         version: '10'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-12-19 12:56'
         message: ''
         version: '9'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-12-19 12:53'
         message: ''
         version: '8'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-12-19 12:37'
         message: ''
         version: '7'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-12-19 12:26'
         message: ''
         version: '6'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-12-19 11:50'
         message: age
         version: '5'
-    - 
+    -
         author: Antoine Taillefer
         date: '2011-12-19 11:12'
         message: age
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-12-12 18:00'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-30 10:53'
         message: ''
         version: '2'
-    - 
+    -
         author: Admin name placeholder
         date: '2010-03-01 00:50'
         message: ''

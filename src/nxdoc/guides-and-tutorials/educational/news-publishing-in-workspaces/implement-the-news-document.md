@@ -18,53 +18,54 @@ confluence:
     shortlink: c4BVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/c4BVAQ'
     source_link: /display/NXDOC60/Implement+the+News+document
+tree_item_index: 100
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 00:53'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:29'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:29'
         message: updated reference howtos
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:23'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:21'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:17'
         message: moving workspace content view section
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 11:22'
         message: added all content type and structure instructions
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-27 00:25'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-27 00:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-27 00:09'
         message: ''

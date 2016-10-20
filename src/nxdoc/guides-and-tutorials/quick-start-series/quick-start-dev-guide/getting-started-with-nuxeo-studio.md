@@ -16,78 +16,79 @@ confluence:
     shortlink: FoFVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/FoFVAQ'
     source_link: /display/NXDOC60/Getting+Started+with+Nuxeo+Studio
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-07 09:28'
         message: 'XDOC-857: remove nuxeo.i'
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-14 12:41'
         message: Update Studio menu labels
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-31 15:48'
         message: Fix links
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-02 09:30'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-02 09:26'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-08 11:02'
         message: Update titles to fix anchor links
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:48'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:48'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:47'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:44'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:44'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:39'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 10:35'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 12:23'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 12:21'
         message: ''

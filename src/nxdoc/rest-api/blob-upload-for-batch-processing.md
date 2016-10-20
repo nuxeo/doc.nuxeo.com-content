@@ -21,85 +21,86 @@ confluence:
     shortlink: soBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/soBVAQ'
     source_link: /display/NXDOC60/Blob+Upload+for+Batch+Processing
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 13:41'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 10:26'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-25 14:53'
         message: Removed related topics from TOC
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-23 13:36'
         message: ''
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-17 03:34'
         message: ''
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-17 03:02'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-30 12:23'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 15:05'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-03 15:19'
         message: >-
             Reported changes from 5.6 documentation on Content-Type and
             Content-Length headers and fileIdx parameter.  
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-01 11:15'
         message: Fixed typos
         version: '7'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-26 17:57'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-04 10:01'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-03 20:31'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-03 20:08'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-03 20:02'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-03 19:54'
         message: ''
@@ -242,7 +243,7 @@ You can use the `batchId` property for blob in the JSON document you're sending 
     "title": "Default domain",
     "lastModified": "2013-09-06T08:53:10.00Z",
     "properties": {
-        "file:content": { 
+        "file:content": {
              "upload-batch":"batchId-20358",
              "upload-fileId":"0" // referencing the first file of the batch
          }

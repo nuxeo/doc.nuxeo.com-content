@@ -19,78 +19,79 @@ confluence:
     shortlink: 9IBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/9IBVAQ'
     source_link: /display/NXDOC60/Versioning
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 15:34'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 18:37'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 14:31'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 11:07'
         message: Removed 5.4 reference and formatting
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-16 14:35'
         message: Added related topics
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 15:59'
         message: Updated links and terminology
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 16:42'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-11 21:43'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-11 21:43'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-21 13:59'
         message: Updated links to 5.5
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-21 11:18'
         message: Updated link to 5.5
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-12-26 17:33'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-24 14:50'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-11-29 14:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-11-29 11:32'
         message: ''

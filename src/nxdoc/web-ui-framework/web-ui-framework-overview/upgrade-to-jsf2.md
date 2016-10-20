@@ -16,43 +16,44 @@ confluence:
     shortlink: gIBdAQ
     shortlink_source: 'https://doc.nuxeo.com/x/gIBdAQ'
     source_link: /display/NXDOC60/Upgrade+to+JSF2
+tree_item_index: 400
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 15:26'
         message: ''
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 15:01'
         message: 'NXDOC-363: rename chapter to avoid bug on anchor'
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 15:00'
         message: 'NXDOC-363: remove doc unrelated to JSF2 migration'
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 14:33'
         message: 'NXDOC-363: report javascript resources doc'
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 14:23'
         message: 'NXDOC-363: document low level changes'
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 14:05'
         message: 'NXDOC-363: document changes on ajax status'
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-05 18:23'
         message: move JSF2 upgrade page to NXDOC
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-05 18:22'
         message: ''

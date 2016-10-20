@@ -15,38 +15,39 @@ confluence:
     shortlink: JYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/JYBVAQ'
     source_link: /display/NXDOC60/Android+SDK+Integration
+tree_item_index: 500
 history:
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 01:53'
         message: igrated to Confluence 4.
         version: '7'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 01:53'
         message: ''
         version: '6'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 01:52'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 01:46'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 01:43'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 01:41'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 01:22'
         message: ''

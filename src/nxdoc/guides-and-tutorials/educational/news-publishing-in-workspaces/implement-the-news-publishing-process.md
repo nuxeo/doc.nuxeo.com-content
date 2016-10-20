@@ -19,38 +19,39 @@ confluence:
     shortlink: coBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/coBVAQ'
     source_link: /pages/viewpage.action?pageId=22380658
+tree_item_index: 300
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 00:55'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:32'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:32'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 11:54'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 11:50'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-27 00:30'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-27 00:27'
         message: ''

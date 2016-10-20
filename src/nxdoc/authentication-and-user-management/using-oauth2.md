@@ -19,23 +19,24 @@ confluence:
     shortlink: yIBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/yIBVAQ'
     source_link: /display/NXDOC60/Using+OAuth2
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 17:10'
         message: ormattin
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-11 11:50'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-11 11:44'
         message: Formatting
         version: '2'
-    - 
+    -
         author: Arnaud Kervern
         date: '2014-02-10 15:54'
         message: ''

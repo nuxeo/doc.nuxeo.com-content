@@ -9,7 +9,7 @@ details:
         excerpt: >-
             Learn how to enable users to set rights on non folderish document by
             overwriting the&nbsp;TAB_RIGTS&nbsp;action contribution to use a
-            filter that doesn't filter on&nbsp;Folderish&nbsp;facet. 
+            filter that doesn't filter on&nbsp;Folderish&nbsp;facet.
         level: Intermediate
         tool: XML extension
         topics: Access rights
@@ -30,138 +30,139 @@ confluence:
     shortlink: hIBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/hIBVAQ'
     source_link: /display/NXDOC60/How+to+Let+Users+Set+Rights+on+Non+Folderish+Documents
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 09:30'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:06'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 12:33'
         message: ''
         version: '25'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-05-14 11:05'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 18:38'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 18:38'
         message: ''
         version: '22'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-17 17:26'
         message: add WIP warn
         version: '21'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-04 11:35'
         message: ''
         version: '20'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-04 11:35'
         message: ''
         version: '19'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 17:02'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 14:43'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:28'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:24'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:16'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:15'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:10'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:51'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:06'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:21'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:02'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:24'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:12'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:01'
         message: ''

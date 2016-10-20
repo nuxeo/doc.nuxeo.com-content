@@ -27,8 +27,9 @@ confluence:
     shortlink: qQelAQ
     shortlink_source: 'https://doc.nuxeo.com/x/qQelAQ'
     source_link: /display/NXDOC60/How+to+Configure+a+New+Directory+Cache
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-16 16:59'
         message: ''

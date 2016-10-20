@@ -16,38 +16,39 @@ confluence:
     shortlink: kYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/kYBVAQ'
     source_link: /display/NXDOC60/Returning+a+Custom+Result+with+Automation
+tree_item_index: 1100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-07 11:17'
         message: 'everted from v. '
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-07 10:17'
         message: remove old class usage
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-07 09:49'
         message: Reverted from v. 3
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-07 09:46'
         message: Use StringBlob instead of InputStreamBlob
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-20 17:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Martins
         date: '2013-02-05 11:17'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2013-02-05 10:58'
         message: ''

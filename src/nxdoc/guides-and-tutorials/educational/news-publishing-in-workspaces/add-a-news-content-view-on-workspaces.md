@@ -21,33 +21,34 @@ confluence:
     shortlink: cIBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/cIBVAQ'
     source_link: /display/NXDOC60/Add+a+News+content+view+on+workspaces
+tree_item_index: 200
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 00:54'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:38'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:38'
         message: added tip on widget style
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:31'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:26'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:19'
         message: ''

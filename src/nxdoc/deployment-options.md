@@ -19,188 +19,189 @@ confluence:
     shortlink: dYFVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/dYFVAQ'
     source_link: /display/NXDOC60/Deployment+Options
+tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 13:08'
         message: ''
         version: '37'
-    - 
+    -
         author: Anonymous
         date: '2014-11-20 10:21'
         message: ''
         version: '36'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-11-19 23:38'
         message: ''
         version: '35'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-11-19 23:37'
         message: ''
         version: '34'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-11-19 23:29'
         message: ''
         version: '33'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-11-19 21:23'
         message: ''
         version: '32'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-11-19 21:03'
         message: ''
         version: '31'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 15:21'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-24 11:20'
         message: merging current page with Data segregation page
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 12:01'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-21 18:48'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-21 18:48'
         message: Added related topics
         version: '26'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-20 19:04'
         message: ''
         version: '25'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-20 18:40'
         message: ''
         version: '24'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-20 18:09'
         message: ''
         version: '23'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-20 16:46'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-27 14:41'
         message: ''
         version: '21'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-12-13 11:39'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-17 11:17'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-16 01:45'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-20 09:51'
         message: Fixed typos
         version: '17'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-17 04:06'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 14:57'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 14:42'
         message: ''
         version: '14'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-03-30 00:28'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-06 15:39'
         message: Migrated to Confluence 4.0
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-06 15:39'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-07 11:19'
         message: added toc
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-07 11:18'
         message: ''
         version: '9'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-10-19 13:54'
         message: ''
         version: '8'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-10-19 13:49'
         message: ''
         version: '7'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-06-14 12:02'
         message: ''
         version: '6'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-06-14 02:41'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-06-14 02:38'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-25 12:12'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-05-24 19:23'
         message: ''
         version: '2'
-    - 
+    -
         author: Admin name placeholder
         date: '2010-03-01 00:55'
         message: ''

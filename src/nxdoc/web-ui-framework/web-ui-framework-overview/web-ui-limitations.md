@@ -19,33 +19,34 @@ confluence:
     shortlink: DIFVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/DIFVAQ'
     source_link: /display/NXDOC60/Web+UI+Limitations
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 14:23'
         message: 'emove children display macro '
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-24 16:54'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-07 15:36'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 15:17'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-04 15:05'
         message: typo
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-04 15:05'
         message: ''

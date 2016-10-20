@@ -16,13 +16,14 @@ confluence:
     shortlink: AwRvAQ
     shortlink_source: 'https://doc.nuxeo.com/x/AwRvAQ'
     source_link: /display/NXDOC60/JSF+Page+Layout+System+Overview
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-20 16:12'
         message: pdate links to point to 6.0 resource
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-20 16:03'
         message: ''
@@ -89,7 +90,7 @@ This view is referenced in the document.xml theme file via:
 The XPath indicates what part of the page layout will be used to display the tree explorer.
 
 ```
-<!-- tree view --> 
+<!-- tree view -->
 <fragment perspectives="default,multiple_domains" type="generic fragment"/>
 ```
 

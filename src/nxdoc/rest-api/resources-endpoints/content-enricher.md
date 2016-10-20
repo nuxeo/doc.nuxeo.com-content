@@ -18,88 +18,89 @@ confluence:
     shortlink: SoFVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/SoFVAQ'
     source_link: /display/NXDOC60/Content+Enricher
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-16 10:48'
         message: ''
         version: '17'
-    - 
+    -
         author: Nelson Silva
         date: '2014-12-16 10:32'
         message: ''
         version: '16'
-    - 
+    -
         author: Nelson Silva
         date: '2014-12-15 10:39'
         message: Add parameters and vocabulary enricher
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-10-06 11:35'
         message: ''
         version: '14'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-10-02 14:04'
         message: ''
         version: '13'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-10-02 14:02'
         message: Add preview content enricher
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 15:09'
         message: Formatting
         version: '11'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-20 11:08'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-28 09:23'
         message: formatting
         version: '9'
-    - 
+    -
         author: Vincent Dutat
         date: '2014-07-24 17:55'
         message: ''
         version: '8'
-    - 
+    -
         author: Vincent Dutat
         date: '2014-07-24 17:49'
         message: ''
         version: '7'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-07-24 17:15'
         message: little update on content enrich
         version: '6'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-07-24 15:54'
         message: renaming rest contrib into content enrich
         version: '5'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-07-24 14:18'
         message: ''
         version: '4'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-07-22 11:05'
         message: ''
         version: '3'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-07-22 11:03'
         message: Rest Contributors
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 00:58'
         message: ''

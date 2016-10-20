@@ -32,13 +32,14 @@ confluence:
     shortlink: r4ZkAQ
     shortlink_source: 'https://doc.nuxeo.com/x/r4ZkAQ'
     source_link: /display/NXDOC60/How+to+Customize+Email+Templates
+tree_item_index: 600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-29 14:05'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-29 14:04'
         message: ''

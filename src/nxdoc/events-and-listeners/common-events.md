@@ -18,33 +18,34 @@ confluence:
     shortlink: cYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/cYBVAQ'
     source_link: /display/NXDOC60/Common+Events
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 15:18'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-25 13:45'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-25 13:44'
         message: Fix anchors in TOC
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 11:49'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-27 12:03'
         message: Added about to create
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-09 11:40'
         message: ''

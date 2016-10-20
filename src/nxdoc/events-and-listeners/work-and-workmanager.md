@@ -18,33 +18,34 @@ confluence:
     shortlink: P4FVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/P4FVAQ'
     source_link: /display/NXDOC60/Work+and+WorkManager
+tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 11:51'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-02-04 14:43'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-04 14:08'
         message: 'Updated links, added TOC'
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 18:49'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 18:42'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 17:53'
         message: ''

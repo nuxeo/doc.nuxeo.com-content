@@ -15,6 +15,7 @@ confluence:
     shortlink: T4BVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/T4BVAQ'
     source_link: /display/NXDOC60/Document+Type+How-To+Index
+tree_item_index: 1500
 history:
     -
         author: Solen Guitter

@@ -18,23 +18,24 @@ confluence:
     shortlink: 4IBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/4IBVAQ'
     source_link: /display/NXDOC60/Special+HTTP+Headers
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2014-10-13 10:01'
         message: ''
         version: '4'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-10-10 11:37'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-01 10:12'
         message: ''
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-28 14:28'
         message: ''

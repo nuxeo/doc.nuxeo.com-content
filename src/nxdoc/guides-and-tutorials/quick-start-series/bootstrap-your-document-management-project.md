@@ -19,83 +19,84 @@ confluence:
     shortlink: AIFVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/AIFVAQ'
     source_link: /display/NXDOC60/Bootstrap+Your+Document+Management+Project
+tree_item_index: 100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-10 15:17'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 15:58'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 15:49'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-17 19:01'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-17 18:52'
         message: Formatting
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-04 00:43'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-30 12:04'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-29 15:19'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-08-23 15:43'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-31 16:14'
         message: Added TOC
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-31 16:11'
         message: Added links anf fixed typos
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-24 21:34'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-24 21:34'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-24 21:32'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-24 21:30'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-24 21:15'
         message: ''

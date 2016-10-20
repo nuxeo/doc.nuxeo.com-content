@@ -27,143 +27,144 @@ confluence:
     shortlink: h4BVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/h4BVAQ'
     source_link: /display/NXDOC60/JSF+troubleshoot
+tree_item_index: 700
 history:
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-28 10:40'
         message: ''
         version: '28'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-28 10:38'
         message: ''
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 12:08'
         message: ''
         version: '26'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 15:34'
         message: add deprecation warning
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-18 11:06'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-17 17:33'
         message: typos
         version: '23'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-02-06 17:54'
         message: Migrated to Confluence 4.0
         version: '22'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-02-06 17:54'
         message: ''
         version: '21'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-05-17 17:05'
         message: ''
         version: '20'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-05-04 15:35'
         message: ''
         version: '19'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 17:33'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 14:43'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:27'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:24'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:14'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:14'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:10'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:51'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:06'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:21'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:01'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:23'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:12'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:00'
         message: ''

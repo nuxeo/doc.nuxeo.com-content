@@ -17,6 +17,7 @@ confluence:
     shortlink: O4FVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/O4FVAQ'
     source_link: /display/NXDOC60/How-To+Index
+tree_item_index: 500
 history:
     -
         author: Manon Lumeau

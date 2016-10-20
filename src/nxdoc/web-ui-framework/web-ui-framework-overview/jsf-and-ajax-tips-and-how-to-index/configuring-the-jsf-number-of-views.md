@@ -19,38 +19,39 @@ confluence:
     shortlink: voBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/voBVAQ'
     source_link: /display/NXDOC60/Configuring+the+JSF+Number+of+Views
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 16:03'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-28 16:43'
         message: Format
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-06-25 18:18'
         message: fix links
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-06-25 18:09'
         message: 'NXP-11423: add configuration for JSF number of views'
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-06-20 16:29'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-06-20 16:27'
         message: ''
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-06-20 12:56'
         message: ''

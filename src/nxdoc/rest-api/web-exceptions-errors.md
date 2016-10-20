@@ -18,63 +18,64 @@ confluence:
     shortlink: z4BVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/z4BVAQ'
     source_link: /display/NXDOC60/Web+Exceptions+-+Errors
+tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 15:17'
         message: ormatting and spellin
         version: '12'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-21 12:02'
         message: ''
         version: '11'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-21 12:01'
         message: ''
         version: '10'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-21 11:27'
         message: ''
         version: '9'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-21 00:36'
         message: ''
         version: '8'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-21 00:10'
         message: ''
         version: '7'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-21 00:00'
         message: ''
         version: '6'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-20 23:59'
         message: ''
         version: '5'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-20 23:59'
         message: ''
         version: '4'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-20 23:58'
         message: ''
         version: '3'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-20 23:49'
         message: adding web exception documentation
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-20 23:41'
         message: ''

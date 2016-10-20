@@ -21,143 +21,144 @@ confluence:
     shortlink: WYBOAQ
     shortlink_source: 'https://doc.nuxeo.com/x/WYBOAQ'
     source_link: /display/NXDOC60/Using+CAS2+Authentication
+tree_item_index: 600
 history:
-    - 
+    -
         author: Frantz Fischer
         date: '2016-07-01 09:25'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 12:08'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 16:42'
         message: Added TOC
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-23 10:45'
         message: ''
         version: '25'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-09-20 21:57'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 15:41'
         message: Migrated to Confluence 4.0
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 15:41'
         message: ''
         version: '22'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 18:37'
         message: ''
         version: '21'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 18:30'
         message: ''
         version: '20'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 18:29'
         message: ''
         version: '19'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 18:28'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 18:26'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 18:26'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 18:17'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 18:04'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 17:46'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 17:41'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 17:40'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 17:39'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 17:28'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 17:23'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 17:18'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 17:05'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 17:05'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 16:59'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 16:55'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 16:51'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2010-12-16 16:50'
         message: ''
@@ -205,7 +206,7 @@ In the second phase, the portal validates the service ticket and requests for a 
 If the ticket is valid, the CAS server invokes the `pgtUrl` callback with two parameters `pgtIou` and `pgtId` (b2).
 
 <pre>GET /ticket/accept?pgtIou=PGTIOU-34-jJZH23r2wbKUqbc3dLFt-cas&
-    pgtId=TGT-45-sSnfcQ7A0TXGsQR2gJONm74rObZ0qRQzhENJWTdZJG5rcGN2T5-cas 
+    pgtId=TGT-45-sSnfcQ7A0TXGsQR2gJONm74rObZ0qRQzhENJWTdZJG5rcGN2T5-cas
 </pre>
 
 In case of success, the server responds to the portal with the following content
@@ -272,9 +273,9 @@ The Nuxeo server creates an HTTP session and sends the AtomPub response message.
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>
-<app:service xmlns:app="http://www.w3.org/2007/app" 
-             xmlns:atom="http://www.w3.org/2005/Atom" 
-             xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/" 
+<app:service xmlns:app="http://www.w3.org/2007/app"
+             xmlns:atom="http://www.w3.org/2005/Atom"
+             xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/"
              xmlns:cmisra="http://docs.oasis-open.org/ns/cmis/restatom/200908/">
   <app:workspace>...</app:workspace>
 </app:service>

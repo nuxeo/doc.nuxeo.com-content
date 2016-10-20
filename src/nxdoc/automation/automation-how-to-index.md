@@ -15,6 +15,7 @@ confluence:
     shortlink: TYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/TYBVAQ'
     source_link: /display/NXDOC60/Automation+How-To+Index
+tree_item_index: 1300
 history:
     -
         author: Manon Lumeau

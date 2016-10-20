@@ -16,38 +16,39 @@ confluence:
     shortlink: I4BVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/I4BVAQ'
     source_link: /display/NXDOC60/Android+Connector+additional+Services
+tree_item_index: 300
 history:
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 00:38'
         message: igrated to Confluence 4.
         version: '7'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 00:38'
         message: ''
         version: '6'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 00:38'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 00:37'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-05 00:34'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 19:17'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2011-10-04 19:12'
         message: ''

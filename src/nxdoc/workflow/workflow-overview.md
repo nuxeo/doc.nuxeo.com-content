@@ -15,13 +15,14 @@ confluence:
     shortlink: 7YBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/7YBVAQ'
     source_link: /display/NXDOC60/Workflow+Overview
+tree_item_index: 100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-19 10:53'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-19 10:53'
         message: ''

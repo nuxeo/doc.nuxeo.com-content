@@ -15,33 +15,34 @@ confluence:
     shortlink: fIBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/fIBVAQ'
     source_link: /display/NXDOC60/Marketplace+Add-Ons
+tree_item_index: 1900
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-10 13:05'
         message: ''
         version: '6'
-    - 
+    -
         author: Anonymous
         date: '2014-12-03 14:36'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 16:54'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 16:54'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-17 00:10'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-05 17:55'
         message: ''

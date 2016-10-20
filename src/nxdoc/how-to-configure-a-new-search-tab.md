@@ -17,8 +17,9 @@ confluence:
     shortlink: gotkAQ
     shortlink_source: 'https://doc.nuxeo.com/x/gotkAQ'
     source_link: /display/NXDOC60/How+to+Configure+a+New+Search+Tab
+hidden: true
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-24 15:53'
         message: ''

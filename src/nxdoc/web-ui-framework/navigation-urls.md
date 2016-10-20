@@ -19,68 +19,69 @@ confluence:
     shortlink: lYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/lYBVAQ'
     source_link: /display/NXDOC60/Navigation+URLs
+tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 18:22'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 18:22'
         message: fix links to point to 6.0 release tags
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 14:01'
         message: Removed 5.5 reference
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 18:16'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 15:44'
         message: Updated links and fixed formatting
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 18:56'
         message: Added TOC
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-31 12:23'
         message: Added related topics
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-21 14:03'
         message: Migrated to Confluence 4.0
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-21 14:03'
         message: Updated link to 5.6
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-14 15:29'
         message: replaced 5.4.3 with 5.5
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-07-07 16:26'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-07-06 19:08'
         message: ''
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-04-29 16:33'
         message: ''

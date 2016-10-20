@@ -15,6 +15,7 @@ confluence:
     shortlink: CoBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/CoBVAQ'
     source_link: /display/NXDOC60/Clients
+tree_item_index: 800
 history:
     -
         author: Manon Lumeau

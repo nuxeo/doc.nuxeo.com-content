@@ -17,6 +17,7 @@ confluence:
     shortlink: UoBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/UoBVAQ'
     source_link: /display/NXDOC60/Workflow+How-To+Index
+tree_item_index: 1200
 history:
     -
         author: Manon Lumeau

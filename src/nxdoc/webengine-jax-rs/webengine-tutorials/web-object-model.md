@@ -18,28 +18,29 @@ confluence:
     shortlink: GoBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/GoBVAQ'
     source_link: /display/NXDOC60/Web+Object+Model
+tree_item_index: 300
 history:
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:46'
         message: igrated to Confluence 4.
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:46'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:42'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:33'
         message: ''
@@ -75,23 +76,23 @@ import org.nuxeo.ecm.webengine.model.*;
  * WebEngine Object Model.
  *
  * This sample is explaining the basics of Nuxeo WebEngine Object Model.
- * 
+ *
 <p>
  *
- * 
+ *
 <h3>Resource Model</h3>
  * Resources are objects used to serve the request. WebEngine Resources are always stateless (a new instance is created on each request).
  * There are three type of resources defined by WebEngine:
- * 
+ *
 <ul>
- * 
+ *
 <li> Module Resource - this is the Web Module entry point as we've seen in sample3.
  * This is the root resource. The other type of resources are JAX-RS sub-resources.
  * A WebModule entry point is a special kind of WebObject having as type name the module name.
- * 
+ *
 <li> Web Object - this represents an object that can be requested via HTTP methods.
  *  This resource is usually wrapping some internal object to expose it as a JAX-RS resource.
- * 
+ *
 <li> Web Adapter - this is a special kind of resource that can be used to adapt Web Objects
  * to application specific needs.
  * These adapters are useful to add new functionalities on Web Objects without breaking application modularity
@@ -101,15 +102,15 @@ import org.nuxeo.ecm.webengine.model.*;
  * For example let say you defined a DocumentObject which will expose documents as JAX-RS resources.
  * A JAX-RS resources will be able to respond to any HTTP method like GET, POST, PUT, DELETE.
  * So let say we use:
- * 
+ *
 <ul>
- * 
+ *
 <li> <code>GET</code> to get a view on the DocumentObject
- * 
+ *
 <li> <code>POST</code> to create a DocumentObject
- * 
+ *
 <li> <code>PUT</code> to update a document object
- * 
+ *
 <li> <code>DELETE</code> to delete a DocumentObject.
  * </ul>
  * But what if I want to put a lock on the document? Or to query the lock state? or to remove the lock?
@@ -125,18 +126,18 @@ import org.nuxeo.ecm.webengine.model.*;
  * Web Objects from Web Adapters.
  * Thus in our lock example to request the lock adapter on an object you will use a request path of like the following:
  * <code>GET /my/document/@lock</code> or <code>POST /my/document/@lock</code> etc.
- * 
+ *
 <p>
  * When defining a Web Adapter you can specify on which type of Web Object it may be used. (this is done using annotations)
  * </ul>
  * All WebEngine resources have a type, a super type, an optional set of facets and an optional guard (these are declared using annotations)
  * By using types and super types you can create hierarchies or resources, so that derived resource types will inherit attributes of the super types.
- * 
+ *
 <p>
  *
  * There is a builtin adapter that is managing Web Objects views. The adapter name is <code>@views</code>.
  * You will see in the view model an example on how to use it.
- * 
+ *
 <p>
  *
  * Thus, request paths will be resolved to a resource chain usually of the form: WebModule -> WebObject -> ... -> WebObject [ -> WebAdapter ].
@@ -150,11 +151,11 @@ import org.nuxeo.ecm.webengine.model.*;
  * <b>Note</b> that the root resource is not necessarily the first one, and the target resource is not necessarily the last one!
  * More, the root and the target resources are never WebAdapters. They can be only WebObjects or WebModule entry points
  * (that are aspecial kind of WebObjects).
- * 
+ *
 <p>
  * The root resource is by default the module entry point (i.e. the first resource in the chain) but can be programatically set to point to any other
  * WebObject from the chain.
- * 
+ *
 <p>
  * The target resource will be always the last WebObject resource from the chain.(so any trailing WebAdapters are excluded).
  * This means in the chain: <code>/my/space/doc/@lock</code>, the root will be by default <code>my</code> which is the module entry point,
@@ -163,21 +164,21 @@ import org.nuxeo.ecm.webengine.model.*;
  * So when an adapter view is rendered the <code>$This</code> variable will point to the adapted WebObject and not to the adapter itself.
  * In that case you can retrieve the adapter using <code>${This.activeAdapter}</code>.
  * This is an important aspect in order to correctly understand the behavior of the <code>$This</code> object exposed in templates.
- * 
+ *
 <p>
- * 
+ *
 <p>
- * 
+ *
 <h3>View Model</h3>
  * The view model is an extension of the template model we discussed in the previous sample.
  * The difference between views and templates is that views are always attached to an Web Object. Also, the view file resolution is
  * a bit different from template files. Templates are all living in <code>skin</skin> directory. Views may live in two places:
- * 
+ *
 <ul>
- * 
+ *
 <li> in the skin/views/${type-name} folders where type-name is the resource type name the view is applying on.
  * This location will be consulted first when a view file is resolved, so it can be used by derived modules to replace views on already defined objects.
- * 
+ *
 <li> in the same folder (e.g. java package) as the resource class.
  * This location is useful to defining views inside JARs along with resource classes.
  * </ul>
@@ -188,7 +189,7 @@ import org.nuxeo.ecm.webengine.model.*;
  * <br>
  * Another difference between templates and views is that views may vary depending on the response media-type.
  * A view is identified by an ID. The view file name is computed as follow:
- * 
+ *
 <pre>
  * view_id + [-media_type_id] + ".ftl"
  * </pre>

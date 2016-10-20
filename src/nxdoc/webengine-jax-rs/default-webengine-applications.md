@@ -18,52 +18,52 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/BYFVAQ'
     source_link: /display/NXDOC60/Default+WebEngine+Applications
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 15:46'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 18:21'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-22 17:59'
         message: ''
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2013-12-06 18:17'
         message: ''
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-06 18:04'
         message: remove mention of theme-banks
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2013-12-05 12:11'
         message: ''
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-04 18:01'
         message: menton layout-manager webengine URL
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-04 17:41'
         message: add WIP info
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-04 17:39'
         message: adding list of default URLs for default webengine apps
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-03 15:59'
         message: ''

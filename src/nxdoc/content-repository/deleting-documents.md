@@ -20,33 +20,34 @@ confluence:
     shortlink: vYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/vYBVAQ'
     source_link: /display/NXDOC60/Deleting+Documents
+tree_item_index: 600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-23 14:04'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 16:15'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-04-25 12:30'
         message: soft-delete details
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-11 10:55'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-04-10 15:14'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-04-10 15:00'
         message: ''

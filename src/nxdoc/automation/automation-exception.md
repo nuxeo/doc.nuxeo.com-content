@@ -22,88 +22,89 @@ confluence:
     shortlink: f4BVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/f4BVAQ'
     source_link: /display/NXDOC60/Automation+Exception
+tree_item_index: 700
 history:
-    - 
+    -
         author: Vincent Dutat
         date: '2014-09-16 22:00'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-01 17:09'
         message: ''
         version: '16'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-11-26 00:10'
         message: ''
         version: '15'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-10-16 17:43'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-20 17:49'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-20 17:47'
         message: 'Use nuxeo.conf reference page content, formatting'
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 11:42'
         message: Formatting
         version: '11'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-08-30 11:02'
         message: ''
         version: '10'
-    - 
+    -
         author: Vincent Dutat
         date: '2013-08-29 19:00'
         message: ''
         version: '9'
-    - 
+    -
         author: Vincent Dutat
         date: '2013-08-29 18:52'
         message: ''
         version: '8'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-08-29 17:10'
         message: ''
         version: '7'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-08-29 16:37'
         message: ''
         version: '6'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-08-29 16:14'
         message: ''
         version: '5'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-08-29 16:12'
         message: ''
         version: '4'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-08-29 16:06'
         message: ''
         version: '3'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-08-29 16:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-08-29 15:54'
         message: ''

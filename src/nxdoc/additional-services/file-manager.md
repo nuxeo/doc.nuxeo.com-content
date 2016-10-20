@@ -16,23 +16,24 @@ confluence:
     shortlink: VYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/VYBVAQ'
     source_link: /display/NXDOC60/File+Manager
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 08:37'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 11:52'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-02 16:00'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-02 15:57'
         message: ''

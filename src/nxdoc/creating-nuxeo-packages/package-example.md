@@ -15,53 +15,54 @@ confluence:
     shortlink: MYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/MYBVAQ'
     source_link: /display/NXDOC60/Package+Example
+tree_item_index: 300
 history:
-    - 
+    -
         author: Julien Carsique
         date: '2014-09-15 14:55'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-15 12:13'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2014-09-12 15:27'
         message: 'NXDOC-122: use configuration template instead of form'
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2014-09-12 15:22'
         message: 'NXDOC-122: ParametrizedCopy'
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-12 18:07'
         message: Migrated to Confluence 4.0
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-12 18:07'
         message: ''
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-08 11:50'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-08 11:45'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-08 02:10'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-08 01:57'
         message: ''

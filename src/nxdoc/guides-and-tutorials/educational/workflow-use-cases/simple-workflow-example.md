@@ -16,133 +16,134 @@ confluence:
     shortlink: JIBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/JIBVAQ'
     source_link: /display/NXDOC60/Simple+Workflow+Example
+tree_item_index: 100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 08:59'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-26 14:59'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 16:36'
         message: ''
         version: '24'
-    - 
+    -
         author: Harlan Brown
         date: '2013-10-03 17:42'
         message: ''
         version: '23'
-    - 
+    -
         author: Harlan Brown
         date: '2013-10-03 16:24'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-11 12:26'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-11 12:25'
         message: Updated screenshots
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-11 12:17'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-09 18:49'
         message: ''
         version: '18'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-05-06 01:28'
         message: ''
         version: '17'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-05-06 01:28'
         message: ''
         version: '16'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-30 15:12'
         message: Formatting tentative
         version: '15'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-30 14:51'
         message: Added pre requisites
         version: '14'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-30 14:44'
         message: ''
         version: '13'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-30 14:36'
         message: ''
         version: '12'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-30 14:36'
         message: ''
         version: '11'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-30 14:33'
         message: ''
         version: '10'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-30 14:30'
         message: ''
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-29 18:01'
         message: ''
         version: '8'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-29 17:59'
         message: ''
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-29 17:59'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-29 17:11'
         message: Headings definition
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-27 16:39'
         message: Formatting
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-27 16:31'
         message: Formatting
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin (perso)
         date: '2013-04-26 16:48'
         message: Copy from my initial word document
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-04-23 19:08'
         message: ''

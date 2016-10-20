@@ -19,63 +19,64 @@ confluence:
     shortlink: zoBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/zoBVAQ'
     source_link: /display/NXDOC60/Node+Properties
+tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 11:40'
         message: ''
         version: '12'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-31 14:06'
         message: ''
         version: '11'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-31 13:52'
         message: ''
         version: '10'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-31 11:30'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-31 09:38'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-31 09:37'
         message: Fixed link
         version: '7'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-30 19:19'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 11:23'
         message: Formatting
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-19 12:37'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-19 12:31'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-19 12:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-19 12:24'
         message: ''

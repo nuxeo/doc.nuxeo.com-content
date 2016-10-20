@@ -19,43 +19,44 @@ confluence:
     shortlink: Z4BVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/Z4BVAQ'
     source_link: /display/NXDOC60/Tagging
+tree_item_index: 600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 08:49'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 11:59'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-30 13:58'
         message: 'Typos, added TOC and related topics'
         version: '6'
-    - 
+    -
         author: Thomas Roger
         date: '2014-01-30 12:43'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 16:52'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 09:18'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 09:18'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-28 17:44'
         message: ''

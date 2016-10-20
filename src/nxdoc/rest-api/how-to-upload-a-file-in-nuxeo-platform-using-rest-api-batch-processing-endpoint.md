@@ -32,38 +32,39 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/SIFVAQ'
     source_link: >-
         /display/NXDOC60/How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
+tree_item_index: 1000
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 12:26'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-15 08:20'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:45'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-08 17:53'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-08 14:47'
         message: Add related how-tos
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 12:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 01:07'
         message: ''
@@ -107,10 +108,10 @@ The Platform provides facilities for&nbsp;[uploading binaries under a given "bat
     ```text
     POST http://localhost:8080/nuxeo/api/v1/path/default-domain/workspaces/myworkspace
     {  
-      "entity-type": "document", 
-      "name":"myNewDoc", 
+      "entity-type": "document",
+      "name":"myNewDoc",
       "type": "File",  
-      "properties" : { 
+      "properties" : {
         "dc:title":"My new doc",
         "file:content": {
           "upload-batch":"mybatchid",

@@ -180,8 +180,8 @@ history:
 
 This module provides core and advanced document management features.
 
-*   [Nuxeo Platform Concepts]({{page page='nuxeo-platform-concepts'}})
-*   [Browsing Content]({{page page='browsing-content'}})
+- [Nuxeo Platform Concepts]({{page page='nuxeo-platform-concepts'}})
+- [Browsing Content]({{page page='browsing-content'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
@@ -189,8 +189,8 @@ This module provides core and advanced document management features.
 
 It provides browsing and edition features adapted to multimedia content.
 
-*   [Nuxeo DAM Compat Concepts]({{page page='nuxeo-dam-compat-concepts'}})
-*   [Importing Assets in DAM]({{page page='importing-assets-in-dam'}})
+- [Nuxeo DAM Compat Concepts]({{page page='nuxeo-dam-compat-concepts'}})
+- [Importing Assets in DAM]({{page page='importing-assets-in-dam'}})
 
 {{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
@@ -198,9 +198,8 @@ It provides browsing and edition features adapted to multimedia content.
 
 Administrators can configure some elements directly from the Nuxeo Platform's user interface.
 
-*   [Managing Access Rights]({{page page='managing-access-rights'}})
-
-*   [Managing Users and Groups]({{page page='managing-users-and-groups'}})
+- [Managing Access Rights]({{page page='managing-access-rights'}})
+- [Managing Users and Groups]({{page page='managing-users-and-groups'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
@@ -208,10 +207,9 @@ Administrators can configure some elements directly from the Nuxeo Platform's us
 
 You can download and install optional product plugins from the Nuxeo Marketplace.
 
-*   [Nuxeo Drive]({{page page='nuxeo-drive'}})
-
-*   [EasyShare]({{page page='easyshare'}})
+- [Nuxeo Drive]({{page page='nuxeo-drive'}})
+- [EasyShare]({{page page='easyshare'}})
 
 {{/panel}}</div></div>
 
-{{{multiexcerpt 'License' page='NXDOC:index'}}}
+{{{multiexcerpt 'License' page='nxdoc/index'}}}

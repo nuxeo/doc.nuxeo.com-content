@@ -21,83 +21,84 @@ confluence:
     shortlink: OoFVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/OoFVAQ'
     source_link: /display/NXDOC60/Configuring+the+Elasticsearch+Mapping
+tree_item_index: 500
 history:
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-03-05 16:32'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-04 15:33'
         message: fix brocken link
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 16:31'
         message: ''
         version: '14'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 14:34'
         message: ''
         version: '13'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-25 14:33'
         message: ''
         version: '12'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 17:01'
         message: ''
         version: '11'
-    - 
+    -
         author: Michaël Vachette
         date: '2014-11-10 11:25'
         message: ''
         version: '10'
-    - 
+    -
         author: Michaël Vachette
         date: '2014-11-10 11:19'
         message: ''
         version: '9'
-    - 
+    -
         author: Michaël Vachette
         date: '2014-11-05 11:01'
         message: ''
         version: '8'
-    - 
+    -
         author: Michaël Vachette
         date: '2014-11-05 10:56'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 09:23'
         message: Formatting
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-02 22:57'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 22:39'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-31 09:55'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-30 17:39'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-30 17:12'
         message: ''
@@ -138,18 +139,18 @@ If you want to do case insensitive search using an&nbsp;`ILIKE`&nbsp;operation:
 2.  Declare your field as a `multi_field` with a `lowercase` index:
 
     ```
-    "my:field" : { 
-      "type" : "multi_field", 
-      "fields" : { 
-        "my:field" : { 
-          "include_in_all" : "true", 
+    "my:field" : {
+      "type" : "multi_field",
+      "fields" : {
+        "my:field" : {
+          "include_in_all" : "true",
           "type" : "string"
-        }, 
-        "lowercase" : { 
-          "type": "string", 
+        },
+        "lowercase" : {
+          "type": "string",
           "analyzer" : "lowercase_analyzer"
         }
-      } 
+      }
     }
     ```
 
@@ -158,19 +159,19 @@ If you want to do case insensitive search using an&nbsp;`ILIKE`&nbsp;operation:
 To use the full-text search syntax on a custom field you need to create a `multi_field` with a `fulltext` index like this:
 
 ```
-"my:text" : { 
-  "type" : "multi_field", 
-  "fields" : { 
-    "my:text" : { 
-      "include_in_all" : "true", 
+"my:text" : {
+  "type" : "multi_field",
+  "fields" : {
+    "my:text" : {
+      "include_in_all" : "true",
       "type" : "string"
-    }, 
-    "fulltext" : { 
-      "type": "string", 
-      "analyzer" : "fulltext" 
+    },
+    "fulltext" : {
+      "type": "string",
+      "analyzer" : "fulltext"
     }
-  } 
-} 
+  }
+}
 
 ```
 
@@ -193,8 +194,8 @@ Then you can disable the default index on the field by adding after the second `
 Suppose you want to exclude&nbsp;`my:secret`&nbsp;field from the&nbsp;`ecm:fulltext`&nbsp;search:
 
 ```
- "my:secret" : { 
-    "type" : "string", 
+ "my:secret" : {
+    "type" : "string",
     "include_in_all" : false
  }
 ```

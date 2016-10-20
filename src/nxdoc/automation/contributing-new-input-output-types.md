@@ -19,13 +19,14 @@ confluence:
     shortlink: K4FVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/K4FVAQ'
     source_link: /display/NXDOC60/Contributing+New+Input-Output+Types
+tree_item_index: 1000
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-31 17:54'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 09:34'
         message: ''

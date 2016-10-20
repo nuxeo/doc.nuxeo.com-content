@@ -16,53 +16,54 @@ confluence:
     shortlink: 1YBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/1YBVAQ'
     source_link: /display/NXDOC60/Calling+Automation+from+Java
+tree_item_index: 600
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 10:21'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-10 17:54'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-10 17:50'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-07 11:04'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-04-02 02:49'
         message: ''
         version: '6'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-10-23 12:15'
         message: ''
         version: '5'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-10-23 12:09'
         message: ''
         version: '4'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-10-23 12:02'
         message: ''
         version: '3'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-10-23 11:56'
         message: ''
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-10-23 11:29'
         message: ''
@@ -127,16 +128,16 @@ org.nuxeo.ecm.automation.AutomationService service;
 org.nuxeo.ecm.core.api.CoreSession session;
 
 // Input setting
-org.nuxeo.ecm.automation.OperationContext ctx = new OperationContext(session); 
+org.nuxeo.ecm.automation.OperationContext ctx = new OperationContext(session);
 ctx.setInput(doc);
-org.nuxeo.ecm.automation.OperationChain chain = new OperationChain("notRegisteredChain"); 
+org.nuxeo.ecm.automation.OperationChain chain = new OperationChain("notRegisteredChain");
 // Adding operations - operations parameters setting
-chain.add("Document.Fetch"); 
-chain.add("o1").set("param1", "Hello 1!"); 
-chain.add("o2").set("param2", "Hello 2!"); 
-// Setting parameters of the chain 
-Map<String, Object> params = new HashMap<String, Object>(); 
-params.put("messageChain", "Hello i'm a chain!"); 
+chain.add("Document.Fetch");
+chain.add("o1").set("param1", "Hello 1!");
+chain.add("o2").set("param2", "Hello 2!");
+// Setting parameters of the chain
+Map<String, Object> params = new HashMap<String, Object>();
+params.put("messageChain", "Hello i'm a chain!");
 chain.addChainParameters(params);
 // Run Automation service
 service.run(ctx, chain);
@@ -178,10 +179,10 @@ org.nuxeo.ecm.automation.AutomationService service;
 org.nuxeo.ecm.core.api.CoreSession session;
 
 // Input setting
-org.nuxeo.ecm.automation.OperationContext ctx = new OperationContext(session); 
+org.nuxeo.ecm.automation.OperationContext ctx = new OperationContext(session);
 ctx.setInput(doc);
 // Operation1 parameter setting
-Map<String,Object> params = new HashMap<String,Object>(); 
-params.put("message","messageValue"); 
+Map<String,Object> params = new HashMap<String,Object>();
+params.put("message","messageValue");
 service.run(ctx, "o1", params);
 ```

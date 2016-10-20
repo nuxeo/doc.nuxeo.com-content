@@ -8,7 +8,7 @@ details:
     howto:
         excerpt: >-
             Learn how to let managers of a workspace determine who is part of
-            locally defined groups (local to the workspace). 
+            locally defined groups (local to the workspace).
         level: Advanced
         tool: Studio
         topics: Access rights
@@ -30,78 +30,79 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/oIBVAQ'
     source_link: >-
         /display/NXDOC60/How+to+Implement+Local+Groups+or+Roles+Using+Computed+Groups
+tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-30 13:10'
         message: ''
         version: '15'
-    - 
+    -
         author: Vincent Dutat
         date: '2014-12-12 21:56'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-11 15:06'
         message: update link to Nuxeo Platform User Registration
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:19'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-19 14:47'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-18 16:57'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-18 16:49'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-22 11:34'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-21 12:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-12 14:49'
         message: ''
         version: '6'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-07-11 12:27'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-11 01:01'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-11 01:01'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-11 00:59'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-05 19:02'
         message: ''

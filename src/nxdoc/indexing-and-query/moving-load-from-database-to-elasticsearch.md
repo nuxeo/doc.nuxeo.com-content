@@ -20,73 +20,74 @@ confluence:
     shortlink: t4pkAQ
     shortlink_source: 'https://doc.nuxeo.com/x/t4pkAQ'
     source_link: /display/NXDOC60/Moving+Load+from+Database+to+Elasticsearch
+tree_item_index: 1300
 history:
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-05-22 06:57'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-08 08:52'
         message: ''
         version: '13'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-04-07 09:14'
         message: Add deactivating database fulltext section
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-25 09:39'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-18 09:30'
         message: ''
         version: '10'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-23 10:22'
         message: ''
         version: '9'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-23 10:20'
         message: ''
         version: '8'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-23 10:09'
         message: ''
         version: '7'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-23 10:00'
         message: ''
         version: '6'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-23 09:54'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-23 09:18'
         message: ''
         version: '4'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-20 10:55'
         message: ''
         version: '3'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-20 10:46'
         message: ''
         version: '2'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-20 09:42'
         message: ''
@@ -150,7 +151,7 @@ ElasticSearchAdmin esa = Framework.getService(ElasticSearchAdmin.class);
 TransactionHelper.commitOrRollbackTransaction();
 TransactionHelper.startTransaction();
 esa.prepareWaitForIndexing().get(20, TimeUnit.SECONDS); // wait for indexing
-esa.refresh(); // explicit refresh 
+esa.refresh(); // explicit refresh
 
 ess.query(new NxQueryBuilder(session).nxql("SELECT * FROM Document WHERE dc:title = 'A new title'").limit(-1)); // "doc" is returned
 ```

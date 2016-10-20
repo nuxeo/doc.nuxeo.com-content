@@ -18,18 +18,19 @@ confluence:
     shortlink: NYFVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/NYFVAQ'
     source_link: /display/NXDOC60/Document+List+Management
+tree_item_index: 600
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 18:32'
         message: orma
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-20 16:21'
         message: ''
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 19:03'
         message: ''

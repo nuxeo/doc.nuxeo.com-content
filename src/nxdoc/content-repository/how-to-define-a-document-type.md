@@ -25,258 +25,259 @@ confluence:
     shortlink: 1oBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/1oBVAQ'
     source_link: /display/NXDOC60/How+to+Define+a+Document+Type
+tree_item_index: 1000
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-15 09:22'
         message: ix Studio menu labe
         version: '51'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 15:50'
         message: link update
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:23'
         message: ''
         version: '49'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-20 16:58'
         message: ''
         version: '48'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 11:10'
         message: ''
         version: '47'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 11:03'
         message: ''
         version: '46'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-08 17:53'
         message: ''
         version: '45'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-08 15:20'
         message: ''
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-03 15:30'
         message: ''
         version: '43'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-02 10:50'
         message: ''
         version: '42'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 10:37'
         message: ''
         version: '41'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 10:37'
         message: ''
         version: '40'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-01 10:37'
         message: ''
         version: '39'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 17:58'
         message: ''
         version: '38'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 17:57'
         message: ''
         version: '37'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 17:55'
         message: ''
         version: '36'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 16:46'
         message: ''
         version: '35'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 16:06'
         message: ''
         version: '34'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 15:57'
         message: ''
         version: '33'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 15:56'
         message: ''
         version: '32'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 15:56'
         message: ''
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 15:55'
         message: ''
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 15:54'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 15:52'
         message: ''
         version: '28'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-30 15:45'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 11:50'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 11:59'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 15:06'
         message: Migrated to Confluence 4.0
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 15:06'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2011-08-06 00:31'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2011-08-06 00:30'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-12 09:32'
         message: updated screenshots with latest UI
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-11 19:31'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-27 18:03'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-27 18:02'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-10 15:18'
         message: added link to vocabulary creation howto
         version: '16'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-06-28 10:49'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-18 14:44'
         message: Removed example pasted from tutorial
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-17 18:11'
         message: changed screenshot
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-17 17:37'
         message: added screenshots and reorganized instructions
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-17 14:50'
         message: added link to doc type definition
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-30 17:59'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-27 00:20'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-27 00:20'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-26 18:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-26 18:39'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-26 18:38'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-26 18:38'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-26 18:37'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-26 18:36'
         message: ''
         version: '2'
-    - 
+    -
         author: Eric Barroca
         date: '2010-04-23 01:44'
         message: ''

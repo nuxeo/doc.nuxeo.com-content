@@ -18,223 +18,224 @@ confluence:
     shortlink: q4BVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/q4BVAQ'
     source_link: /display/NXDOC60/VCS
+tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 09:08'
         message: ''
         version: '44'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 16:12'
         message: ''
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-12 12:37'
         message: ''
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-12 12:36'
         message: ''
         version: '41'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-04 18:18'
         message: ''
         version: '40'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-10-31 14:03'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-29 17:36'
         message: Fixed typos
         version: '38'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 22:20'
         message: ''
         version: '37'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 22:18'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-19 12:11'
         message: Formatting
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-09 10:27'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 15:53'
         message: Format
         version: '33'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-22 10:52'
         message: ''
         version: '32'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-22 10:45'
         message: ''
         version: '31'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-22 10:35'
         message: Reverted from v. 28
         version: '30'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-22 10:33'
         message: ''
         version: '29'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-03-22 10:29'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-06 11:25'
         message: ''
         version: '27'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-12-05 18:34'
         message: Update ACLR table
         version: '26'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-03-06 11:40'
         message: Migrated to Confluence 4.0
         version: '25'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-03-06 11:40'
         message: relation for 5.5
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-14 15:29'
         message: replaced 5.4.3 with 5.5
         version: '23'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-07-29 18:08'
         message: ''
         version: '22'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-07-29 18:01'
         message: Adding more info on read acls optimization
         version: '21'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-02-16 17:09'
         message: ''
         version: '20'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-02-14 16:15'
         message: ''
         version: '19'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-01-27 19:30'
         message: Added ancestors table for PostgreSQL
         version: '18'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-01-27 19:19'
         message: ''
         version: '17'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-01-27 19:14'
         message: Updated locks table info after NXP-6054
         version: '16'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-01-18 16:57'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-01-18 16:57'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-01-18 16:56'
         message: ''
         version: '13'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-01-11 14:29'
         message: ''
         version: '12'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-24 14:50'
         message: Improved File section
         version: '11'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-21 18:32'
         message: Improved File section
         version: '10'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-21 18:17'
         message: Added mixins info
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-21 17:53'
         message: Updated version info
         version: '8'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-10-13 14:24'
         message: Documented relations in 5.3.2
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-06-29 11:52'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-06-17 19:38'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-06-17 19:34'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-06-17 19:31'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-06-17 19:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-06-17 17:06'
         message: ''

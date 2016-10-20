@@ -18,58 +18,59 @@ confluence:
     shortlink: toBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/toBVAQ'
     source_link: /display/NXDOC60/Documents+Display+Configuration
+tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 14:33'
         message: 'emove children display macro '
         version: '11'
-    - 
+    -
         author: Anonymous
         date: '2014-09-19 12:12'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-17 17:08'
         message: ''
         version: '9'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-12 18:14'
         message: even better title
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-12 17:46'
         message: better title
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-05 15:41'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 16:38'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 09:47'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 09:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 09:17'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 08:56'
         message: ''

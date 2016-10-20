@@ -20,38 +20,39 @@ confluence:
     shortlink: 3YBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/3YBVAQ'
     source_link: /display/NXDOC60/iOS+Client
+tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 11:30'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 11:30'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-19 15:55'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-19 15:46'
         message: ''
         version: '4'
-    - 
+    -
         author: Arnaud Kervern
         date: '2013-11-12 11:50'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-29 17:58'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 21:20'
         message: ''
@@ -374,8 +375,8 @@ NUXHierarchy *hierarchy = [NUXHierarchy hierarchyWithName:@"mainHierarchy"];
  NUXDocument *doc = (NUXDocument *)entity;
  if ([self shouldLoadDocumentsForNode:doc withDepth:depth] == YES)
 {
- NUXSession *nuxSession = [NUXSession sharedSession]; // retrieve all 
-documents in this node in synchronize mode NSString *subRequestFormat = 
+ NUXSession *nuxSession = [NUXSession sharedSession]; // retrieve all
+documents in this node in synchronize mode NSString *subRequestFormat =
 @"SELECT * FROM Document where ecm:parentId = '%@'and ecm:currentLifeCycleState <> 'deleted'"; NSString *subRequestQuery = [NSString stringWithFormat:subRequestFormat, doc.uid]; NUXRequest *nuxSubRequest = [nuxSession requestQuery:subRequestQuery]; [nuxSubRequest startSynchronous]; NUXDocuments *documents = [nuxSubRequest responseEntityWithError:nil]; return documents.entries; }return nil;
  };
 NUXRequest *request = [session requestQuery:@"select * from Document where ecm:mixinType = 'Folderish'"];

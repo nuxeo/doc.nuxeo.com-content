@@ -19,48 +19,49 @@ confluence:
     shortlink: FoBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/FoBVAQ'
     source_link: /display/NXDOC60/Understanding+Bundles+Deployment
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 13:19'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-23 11:06'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-23 00:35'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-23 00:03'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:54'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 14:55'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-21 14:37'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-21 14:37'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-21 14:37'
         message: ''

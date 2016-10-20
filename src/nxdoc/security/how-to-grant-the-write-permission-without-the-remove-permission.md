@@ -29,23 +29,24 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/wQFvAQ'
     source_link: >-
         /display/NXDOC60/How+to+Grant+the+Write+Permission+without+the+Remove+Permission
+tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-18 13:55'
         message: anonical UR
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-09 13:51'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-09 13:50'
         message: Update link to use 6.0 resources
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-09 13:49'
         message: ''
@@ -75,7 +76,7 @@ As described on the page [Managing Access Rights]({{page space='userdoc60' page=
 
     ```
       <extension target="org.nuxeo.ecm.core.security.SecurityService"
-        point="permissions"> 
+        point="permissions">
        <permission name="ReadWriteAndRemove">
             <include>Read</include>
             <include>Write</include>

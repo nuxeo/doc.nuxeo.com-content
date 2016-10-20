@@ -15,33 +15,34 @@ confluence:
     shortlink: doBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/doBVAQ'
     source_link: /display/NXDOC60/Additional+Services
+tree_item_index: 1500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 14:17'
         message: emove children display macro
         version: '6'
-    - 
+    -
         author: Anonymous
         date: '2014-09-19 11:13'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-02 16:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-23 11:05'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-17 01:53'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-05 15:49'
         message: ''

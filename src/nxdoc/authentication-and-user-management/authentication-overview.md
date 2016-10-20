@@ -19,98 +19,99 @@ confluence:
     shortlink: fYBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/fYBVAQ'
     source_link: /display/NXDOC60/Authentication+Overview
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 14:03'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 15:11'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 11:49'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 11:48'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-04 12:09'
         message: Removed related topics from TOC
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-04 12:08'
         message: 'Added related topics, TOC, formatting'
         version: '14'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-11-27 16:55'
         message: ''
         version: '13'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-11-27 16:39'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-19 15:03'
         message: Formatting
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-17 17:54'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 14:42'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 14:23'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 14:23'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 14:20'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 14:19'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 14:16'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 14:14'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 14:11'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 14:10'
         message: ''

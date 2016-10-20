@@ -15,28 +15,29 @@ confluence:
     shortlink: v4BVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/v4BVAQ'
     source_link: /display/NXDOC60/Design+Tips
+tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 14:22'
         message: 'emove children display macro '
         version: '5'
-    - 
+    -
         author: Anonymous
         date: '2014-09-02 11:21'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 01:07'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 17:21'
         message: ''
         version: '2'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-02-21 16:36'
         message: ''

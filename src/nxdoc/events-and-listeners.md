@@ -21,113 +21,114 @@ confluence:
     shortlink: ZYFVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/ZYFVAQ'
     source_link: /display/NXDOC60/Events+and+Listeners
+tree_item_index: 1400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 09:28'
         message: ''
         version: '22'
-    - 
+    -
         author: Anonymous
         date: '2014-09-19 12:17'
         message: Merging Event Bus page with Events and Listeners page
         version: '21'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-02-17 04:52'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-09 11:42'
         message: Moved Common Events section to new dedicated page
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 16:49'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 16:48'
         message: Removed related topics from TOC
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 11:37'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-16 15:10'
         message: Added related pages
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 18:20'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 18:00'
         message: ''
         version: '13'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-04-04 11:58'
         message: ''
         version: '12'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-04-29 12:53'
         message: Migrated to Confluence 4.0
         version: '11'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-04-29 12:53'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-04-28 12:37'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 09:52'
         message: reference lifecycle_transition_event
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 09:51'
         message: reference lifecycle_transition_event
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-02-21 11:02'
         message: reference lifecycle_transition_event
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-24 15:46'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-08-02 14:30'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-08-02 13:57'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-08-02 13:24'
         message: ''
         version: '2'
-    - 
+    -
         author: Admin name placeholder
         date: '2010-03-01 01:25'
         message: ''

@@ -18,43 +18,44 @@ confluence:
     shortlink: sIBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/sIBVAQ'
     source_link: /display/NXDOC60/Binary+Store
+tree_item_index: 100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 17:01'
         message: O
         version: '8'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-10-09 18:56'
         message: ''
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-10-09 18:53'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-10-09 18:52'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-30 12:20'
         message: Added TOC
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-29 18:26'
         message: Typos
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-28 17:27'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-01-28 16:57'
         message: ''

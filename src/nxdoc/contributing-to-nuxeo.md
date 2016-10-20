@@ -19,243 +19,244 @@ confluence:
     shortlink: 6oBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/6oBVAQ'
     source_link: /display/NXDOC60/Contributing+to+Nuxeo
+tree_item_index: 2300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 15:28'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 09:56'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 18:41'
         message: ''
         version: '46'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 17:54'
         message: format
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 16:08'
         message: ''
         version: '44'
-    - 
+    -
         author: Julien Carsique
         date: '2013-10-30 15:08'
         message: ''
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-30 10:54'
         message: ''
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 16:19'
         message: ''
         version: '41'
-    - 
+    -
         author: Laurent Doguin
         date: '2013-10-17 15:31'
         message: ''
         version: '40'
-    - 
+    -
         author: Laurent Doguin
         date: '2013-10-17 15:31'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-16 16:03'
         message: Updated contributor agreement with new fax number
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-16 15:03'
         message: ''
         version: '37'
-    - 
+    -
         author: Laurent Doguin
         date: '2013-10-11 17:26'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-20 14:29'
         message: Removed related topics from TOC
         version: '35'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-17 00:09'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-16 12:28'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-16 12:27'
         message: ''
         version: '32'
-    - 
+    -
         author: Julien Carsique
         date: '2013-09-13 10:48'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-04 14:59'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2012-11-15 16:52'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-17 16:49'
         message: Migrated to Confluence 4.0
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-17 16:49'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-17 16:00'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-17 09:15'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2012-08-10 16:14'
         message: Fixed links and format
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 11:45'
         message: Fixed links and format
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 11:45'
         message: Fixed links and format
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 11:44'
         message: Fixed links and format
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 10:36'
         message: Fixed links and format
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-13 10:35'
         message: Fixed links and format
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-21 11:57'
         message: Fixed links and format
         version: '18'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 18:13'
         message: ''
         version: '17'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 18:13'
         message: ''
         version: '16'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-01-30 18:12'
         message: ''
         version: '15'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-11 15:02'
         message: ''
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-11 14:59'
         message: ''
         version: '13'
-    - 
+    -
         author: Laurent Doguin
         date: '2012-01-10 19:07'
         message: 'Simplification, update to github'
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-11 16:02'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 19:39'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-08-30 10:03'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2011-08-17 13:25'
         message: Add link to detailed instructions for translations
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-02 15:15'
         message: ''
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-02-19 16:45'
         message: ''
         version: '6'
-    - 
+    -
         author: Rob Day
         date: '2010-12-10 11:00'
         message: Some minor grammatical fixes
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-11-16 15:15'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-11-16 15:14'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-11-16 15:14'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2010-11-16 15:09'
         message: ''

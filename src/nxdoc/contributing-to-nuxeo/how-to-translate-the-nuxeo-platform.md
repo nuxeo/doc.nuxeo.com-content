@@ -27,175 +27,176 @@ confluence:
     shortlink: CIBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/CIBVAQ'
     source_link: /display/NXDOC60/How+to+translate+the+Nuxeo+Platform
+tree_item_index: 200
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-04-27 09:10'
         message: dd page topic
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-02 10:50'
         message: Fixed typos
         version: '33'
-    - 
+    -
         author: Laurent Doguin
         date: '2013-12-30 15:30'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 16:19'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 16:13'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 16:12'
         message: ''
         version: '29'
-    - 
+    -
         author: Laurent Doguin
         date: '2013-10-17 16:27'
         message: ''
         version: '28'
-    - 
+    -
         author: Laurent Doguin
         date: '2013-10-17 14:50'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-13 18:02'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-17 09:14'
         message: Migrated to Confluence 4.0
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-17 09:14'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-21 11:59'
         message: Updated mercurial link to github URL
         version: '23'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2011-08-17 14:45'
         message: ''
         version: '22'
-    - 
+    -
         author: Julien Carsique
         date: '2011-08-17 13:14'
         message: >-
             update translation documentation, add login page and contribution
             informations
         version: '21'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 18:56'
         message: ''
         version: '20'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 18:42'
         message: ''
         version: '19'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 14:43'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:27'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:23'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:12'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:13'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:07'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:54'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:50'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:10'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:03'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:20'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:00'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:38'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:22'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:17'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:11'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:09'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:00'
         message: ''

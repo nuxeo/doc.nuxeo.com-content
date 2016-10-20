@@ -19,58 +19,59 @@ confluence:
     shortlink: aIFVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/aIFVAQ'
     source_link: /display/NXDOC60/User+Management
+tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 12:10'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 12:10'
         message: formatting
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 14:04'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 17:42'
         message: ''
         version: '8'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-09-03 19:36'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2012-10-08 15:26'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2012-10-08 15:22'
         message: add info about multi-directories
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-21 15:06'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-21 15:06'
         message: Added toc and related pages and fixed typos and format
         version: '3'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-15 15:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-03-15 15:16'
         message: ''

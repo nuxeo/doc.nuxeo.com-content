@@ -15,23 +15,24 @@ confluence:
     shortlink: EIBVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/EIBVAQ'
     source_link: /display/NXDOC60/Generic+Multi-Excerpts
+hidden: true
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-03 08:51'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-27 15:56'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-15 11:49'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 14:32'
         message: ''

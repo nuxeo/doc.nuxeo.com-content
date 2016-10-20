@@ -18,83 +18,84 @@ confluence:
     shortlink: _4BVAQ
     shortlink_source: 'https://doc.nuxeo.com/x/_4BVAQ'
     source_link: /display/NXDOC60/Shell+Features
+tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 14:32'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 12:26'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 12:25'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 12:24'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-05 16:26'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-05 16:21'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 16:45'
         message: Migrated to Confluence 4.0
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 16:45'
         message: Added related pages
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 16:50'
         message: ''
         version: '8'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-01-03 18:32'
         message: ''
         version: '7'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-28 14:03'
         message: ''
         version: '6'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 18:54'
         message: ''
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 18:40'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 18:24'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 12:56'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 12:55'
         message: ''
@@ -126,7 +127,7 @@ public interface ShellFeature {
      * Install the feature in the given shell instance. This is typically
      * registering new global commands, namespaces, value adapters or
      * completors.
-     * 
+     *
      * @param shell
      */
     public void install(Shell shell);
@@ -258,14 +259,14 @@ This is how Automation Feature is implemented.
 public class MyRemoteFeature implements ShellFeature {
     ...
 
-    public void install(Shell shell) { 
+    public void install(Shell shell) {
        GlobalCommands.INSTANCE.addAnnotatedCommand(MyConnectCommand.class);
     }
 
     public CommandRegistry createRemoteRegistry() {
         CommandRegistry reg = new CommandRegistry();
         // add commands to registry here
-        return reg; 
+        return reg;
     }
 
     ...
