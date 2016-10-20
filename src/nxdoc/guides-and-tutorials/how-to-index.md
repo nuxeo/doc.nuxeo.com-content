@@ -143,4 +143,4 @@ history:
 ---
 &nbsp;
 
-{{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC60 IDEDOC NXDOC60 Studio USERDOC60' label='howto'}}}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='60/admindoc idedoc 60/nxdoc studio 60/userdoc' label='howto'}}}
