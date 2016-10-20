@@ -79,8 +79,21 @@ A database structure change was introduced with Nuxeo 5.3.2 to fix query with op
 
 Below is an example of structure change:
 
-{{#> panel type='code' heading='Sample structure in Nuxeo DM <= 5.3.1'}}<pre="" class="">`CREATE TABLE `common` ( `id` varchar(36) NOT NULL, `icon` varchar(4000) DEFAULT NULL, `icon-expanded` varchar(4000) DEFAULT NULL, `size` bigint(20) DEFAULT NULL, PRIMARY KEY (`id`), KEY `common_id_hierarchy_fk` (`id`), CONSTRAINT `common_id_hierarchy_fk` FOREIGN KEY (`id`) REFERENCES `hierarchy` (`id`) ON DELETE CASCADE ) ENGINE=InnoDB DEFAULT CHARSET=latin1` {{/panel}}{{#> panel type='code' heading='Sample structure in Nuxeo DM >= 5.3.2'}}
+{{#> panel type='code' heading='Sample structure in Nuxeo DM <= 5.3.1'}}
+```
+CREATE TABLE `common` (
+ `id` varchar(36) NOT NULL,
+ `icon` varchar(4000) DEFAULT NULL,
+ `icon-expanded` varchar(4000) DEFAULT NULL,
+ `size` bigint(20) DEFAULT NULL,
+ PRIMARY KEY (`id`),
+ KEY `common_id_hierarchy_fk` (`id`),
+ CONSTRAINT `common_id_hierarchy_fk` FOREIGN KEY (`id`) REFERENCES `hierarchy` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+```
+{{/panel}}
 
+{{#> panel type='code' heading='Sample structure in Nuxeo DM >= 5.3.2'}}
 ```
 CREATE TABLE `common` (
  `id` varchar(36) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL DEFAULT '',
@@ -93,7 +106,6 @@ CREATE TABLE `common` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1
 
 ```
-
 {{/panel}}
 
 See the part `CHARACTER SET latin1COLLATE latin1_bin` that was added for the column `id`.
@@ -184,9 +196,3 @@ Once you've downloaded and unzipped it,
 *   contemplate that all data are present :smile:
 
 {{! /multiexcerpt}}
-
-&nbsp;
-
-&nbsp;
-
-</pre="">
