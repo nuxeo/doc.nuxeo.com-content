@@ -130,15 +130,16 @@ Un ticket doit correspondre &agrave; un probl&egrave;me. N'h&eacute;sitez pas &a
 
 {{! multiexcerpt name='jira-ticket-creation-steps'}}
 
-1.  &nbsp;Dans JIRA, cliquez sur le bouton **Cr&eacute;er une demande**.
-2.  S&eacute;lectionnez le projet **Support Nuxeo Connect**.
-3.  Remplissez les champs aussi pr&eacute;cis&eacute;ment que possible. Selon le type de ticket que vous cr&eacute;ez, les &eacute;l&eacute;ments suivants peuvent &ecirc;tre n&eacute;cessaires :
+1. &nbsp;Dans JIRA, cliquez sur le bouton **Cr&eacute;er une demande**.
+2. S&eacute;lectionnez le projet **Support Nuxeo Connect**.
+3. Remplissez les champs aussi pr&eacute;cis&eacute;ment que possible. Selon le type de ticket que vous cr&eacute;ez, les &eacute;l&eacute;ments suivants peuvent &ecirc;tre n&eacute;cessaires :
 
-    *   &eacute;tapes &agrave; suivre pour reproduire le probl&egrave;me,
-    *   copies d'&eacute;cran,
-    *   d&eacute;veloppement client,
-    *   description de l'environnement.Voir ci-dessous pour la description d&eacute;taill&eacute;e des champs disponibles.
-4.  Cliquez sur le bouton **Cr&eacute;er**.
+    * &eacute;tapes &agrave; suivre pour reproduire le probl&egrave;me,
+    * copies d'&eacute;cran,
+    * d&eacute;veloppement client,
+    * description de l'environnement.
+    Voir ci-dessous pour la description d&eacute;taill&eacute;e des champs disponibles.
+4. Cliquez sur le bouton **Cr&eacute;er**.
 
 {{! /multiexcerpt}}
 
@@ -171,7 +172,7 @@ Descriptif
 </td><td colspan="1">
 
 Tapez la description d&eacute;taill&eacute;e de ce que vous essayez de faire. Si possible, indiquez les &eacute;tapes &agrave; suivre pour reproduire le comportement constat&eacute;.
-Voir le paragraphe [Descriptif](#field-descr).
+Voir le paragraphe [Descriptif](#field-description).
 
 </td></tr><tr><td colspan="1">Affecte la/les version(s)</td><td colspan="1">
 
@@ -222,7 +223,7 @@ Additional Participant groups
 </td><td colspan="1">
 
 Si vous avez plusieurs utilisateurs Connect travaillant sur le m&ecirc;me projet, s&eacute;lectionnez votre groupe de support pour que les autres utilisateurs puissent recevoir des notifications sur le ticket et participer &agrave; son traitement si besoin est.
-Voir le paragraphe [Additional Participant groups](#field-additional-participant-groups).
+Voir le paragraphe [Additional Participant groups](#field-additional-participant-group).
 
 </td></tr><tr><td colspan="1">
 
@@ -242,16 +243,16 @@ Toutes les demandes de support doivent &ecirc;tre faites dans la cat&eacute;gori
 
 Ce champ indique le type d'incident li&eacute; au ticket cr&eacute;&eacute;. Les choix propos&eacute;s sont :
 
-*   [Question](#ticket-questi): toute question autour de la plateforme Nuxeo,
-*   [Anomalie](#ticket-bug): probl&egrave;me li&eacute; &agrave; la plateforme Nuxeo,
-*   [Incident](#ticket-probl): probl&egrave;me li&eacute; &agrave; vos d&eacute;veloppements,
-*   [Amélioration](#ticket-improvement): demande d'am&eacute;liorations ou de nouvelles fonctionnalit&eacute;s, qui pourra faire l'objet d'une estimation, en vue d'une r&eacute;alisation au forfait.
+* [Question](#ticket-question): toute question autour de la plateforme Nuxeo,
+* [Anomalie](#ticket-bug): probl&egrave;me li&eacute; &agrave; la plateforme Nuxeo,
+* [Incident](#ticket-problem): probl&egrave;me li&eacute; &agrave; vos d&eacute;veloppements,
+* [Amélioration](#ticket-improvement): demande d'am&eacute;liorations ou de nouvelles fonctionnalit&eacute;s, qui pourra faire l'objet d'une estimation, en vue d'une r&eacute;alisation au forfait.
 
 Cette identification est importante pour fournir les &eacute;l&eacute;ments n&eacute;cessaires &agrave; la description du ticket, trait&eacute; au paragraphe [Description](#field-description).
 
 ## {{> anchor 'field-description'}}Descriptif
 
-Le contenu de ce champ d&eacute;pend du [type de ticket](#field-issue-typ) et est essentiel &agrave; son traitement. Vous devez donc le renseigner avec soin.
+Le contenu de ce champ d&eacute;pend du [type de ticket](#field-issue-type) et est essentiel &agrave; son traitement. Vous devez donc le renseigner avec soin.
 
 ### {{> anchor 'ticket-question'}}Type Question
 
@@ -261,20 +262,20 @@ En cas de question jug&eacute;e trop complexe ou trop d&eacute;pendante du conte
 
 ### {{> anchor 'ticket-bug'}}Type Anomalie
 
-Dans un premier temps, vous devez v&eacute;rifier qu'il s'agit d'un bug de la plateforme Nuxeo et non d'un incident, c'est-&agrave;-dire un probl&egrave;me li&eacute; &agrave; vos d&eacute;veloppements. Pour cela, Nuxeo met &agrave; disposition un site de d&eacute;mo sur [http://demo.nuxeo.com](http://demo.nuxeo.com) sur lequel vous pourrez v&eacute;rifier la reproductibilit&eacute; du sc&eacute;nario propos&eacute;.
+Dans un premier temps, vous devez v&eacute;rifier qu'il s'agit d'un bug de la plateforme Nuxeo et non d'un incident, c'est-&agrave;-dire un probl&egrave;me li&eacute; &agrave; vos d&eacute;veloppements. Pour cela, v&eacute;rifiez la reproductibilit&eacute; du sc&eacute;nario propos&eacute; sur une instance de la plateforme Nuxeo sur laquelle vos plugins ou personnalisations Studio ne sont pas installés.
 
-Si l'anomalie n'est pas reproduite sur le site de d&eacute;mo :
+Si l'anomalie n'est pas reproduite sur le site de d&eacute;mo&nbsp;:
 
-*   cela peut &ecirc;tre li&eacute; &agrave; un environnement diff&eacute;rent de la d&eacute;mo (sous Linux Ubuntu 64 bit et PostgreSQL 9.1). Dans ce cas, vous devrez pr&eacute;ciser ces diff&eacute;rences dans la [description de votre environnement](#field-environment) ;
-*   il peut s'agit d'un probl&egrave;me introduit par vos d&eacute;veloppements. Dans ce cas, vous choisirez le [type « Incident »](#ticket-prob).
+* cela peut &ecirc;tre li&eacute; &agrave; un environnement diff&eacute;rent de la d&eacute;mo (sous Linux Ubuntu 64 bit et PostgreSQL 9.1). Dans ce cas, vous devrez pr&eacute;ciser ces diff&eacute;rences dans la [description de votre environnement](#field-environment)&nbsp;;
+* il peut s'agit d'un probl&egrave;me introduit par vos d&eacute;veloppements. Dans ce cas, vous choisirez le [type « Incident »](#ticket-problem).
 
 En cas de doute, il vaut mieux privil&eacute;gier le type &laquo; Incident &raquo; pour lequel vous devrez fournir plus de d&eacute;tails.
 
 Si l'on se trouve dans le cas d'un bug, il est essentiel de fournir &agrave; l'&eacute;quipe de support un moyen de reproduction de l'anomalie. Vous devez donc indiquer :
 
-*   le sc&eacute;nario pas &agrave; pas pour reproduire le bug ;
-*   puis les logs du serveur : vous pouvez essayer d'extraire la derni&egrave;re stacktrace dans la console ou le fichier server.log ou encore le message affich&eacute; dans l'interface web ;
-*   et une capture d'&eacute;cran montrant l'interface web avant/apr&egrave;s si c'est pertinent pour le bug remont&eacute;.
+* le sc&eacute;nario pas &agrave; pas pour reproduire le bug&nbsp;;
+* puis les logs du serveur : vous pouvez essayer d'extraire la derni&egrave;re stacktrace dans la console ou le fichier server.log ou encore le message affich&eacute; dans l'interface web&nbsp;;
+* et une capture d'&eacute;cran montrant l'interface web avant/apr&egrave;s si c'est pertinent pour le bug remont&eacute;.
 
 Un seul de ces &eacute;l&eacute;ments peut suffire &agrave; l'identification de l'anomalie et &agrave; sa r&eacute;solution, mais mieux le ticket sera d&eacute;crit, plus il sera trait&eacute; rapidement et efficacement.
 
@@ -282,13 +283,13 @@ Un seul de ces &eacute;l&eacute;ments peut suffire &agrave; l'identification de 
 
 Cela concerne un probl&egrave;me directement li&eacute; aux d&eacute;veloppements du client. Dans ce cas, en plus des &eacute;l&eacute;ments &agrave; fournir pour une anomalie, vous devrez :
 
-*   fournir les plugins que vous avez d&eacute;velopp&eacute;s ET/OU les d&eacute;veloppements que vous pensez &ecirc;tre li&eacute;s &agrave; l'incident (classes Java, templates, tests unitaires, fichiers de configuration XML),
-*   identifier les derniers changements effectu&eacute;s sur la plateforme depuis le dernier moment o&ugrave; &ccedil;a fonctionnait.
+* fournir les plugins que vous avez d&eacute;velopp&eacute;s ET/OU les d&eacute;veloppements que vous pensez &ecirc;tre li&eacute;s &agrave; l'incident (classes Java, templates, tests unitaires, fichiers de configuration XML),
+* identifier les derniers changements effectu&eacute;s sur la plateforme depuis le dernier moment o&ugrave; &ccedil;a fonctionnait.
 
 Si vous travaillez avec Nuxeo Studio, il est probable que vous allez poursuivre votre travail de configuration pendant la r&eacute;solution du ticket : dans ce cas, il faut que Nuxeo puisse travailler sur une version fig&eacute;e du projet. Pour cela :
 
-*   attachez au ticket JIRA le plugin Studio (fichier .jar) en place au moment des tests,
-*   ou posez un tag dans Nuxeo Studio avec le nom du ticket JIRA que vous venez de cr&eacute;er.
+* attachez au ticket JIRA le plugin Studio (fichier .jar) en place au moment des tests,
+* ou posez un tag dans Nuxeo Studio avec le nom du ticket JIRA que vous venez de cr&eacute;er.
 
 En environnement de production, il est important d'identifier la date du probl&egrave;me, pour retrouver les erreurs correspondantes dans les logs.
 
@@ -386,9 +387,9 @@ Ce champ permet &agrave; l'&eacute;quipe de support de conna&icirc;tre les &eacu
 
 Les diff&eacute;rents types d'instance sont :
 
-*   Development : le sujet du ticket porte sur un environnement de d&eacute;veloppement. Certains crit&egrave;res, comme la conservation des donn&eacute;es, peuvent &ecirc;tre consid&eacute;r&eacute;es comme non critiques sur une instance de d&eacute;veloppement.
-*   Testing/QA : le sujet du ticket porte sur un environnement de test, qui a g&eacute;n&eacute;ralement un nombre limit&eacute; d'utilisateurs.
-*   Production : le sujet du ticket porte sur un environnement de production. L'&eacute;quipe de support peut &ecirc;tre amen&eacute;e &agrave; proposer une solution de contournement dans un premier temps, afin de d&eacute;bloquer les utilisateurs rapidement, sans attendre de solution &agrave; long terme, qui peut &ecirc;tre plus longue &agrave; mettre en place. L'&eacute;quipe de support peut &eacute;galement vous proposer un appel t&eacute;l&eacute;phonique afin d'obtenir plus d'informations rapidement.
+* Development : le sujet du ticket porte sur un environnement de d&eacute;veloppement. Certains crit&egrave;res, comme la conservation des donn&eacute;es, peuvent &ecirc;tre consid&eacute;r&eacute;es comme non critiques sur une instance de d&eacute;veloppement.
+* Testing/QA : le sujet du ticket porte sur un environnement de test, qui a g&eacute;n&eacute;ralement un nombre limit&eacute; d'utilisateurs.
+* Production : le sujet du ticket porte sur un environnement de production. L'&eacute;quipe de support peut &ecirc;tre amen&eacute;e &agrave; proposer une solution de contournement dans un premier temps, afin de d&eacute;bloquer les utilisateurs rapidement, sans attendre de solution &agrave; long terme, qui peut &ecirc;tre plus longue &agrave; mettre en place. L'&eacute;quipe de support peut &eacute;galement vous proposer un appel t&eacute;l&eacute;phonique afin d'obtenir plus d'informations rapidement.
 
 ## {{> anchor 'field-environment'}}Environnement
 
@@ -396,13 +397,13 @@ Dans le cas d'un bug ou d'un probl&egrave;me, il est important de pr&eacute;cise
 
 A partir de Nuxeo Platform 5.6, le plus simple est de fournir le r&eacute;sultat de la commande `showconf`, qui donne un r&eacute;sum&eacute; de la configuration (nuxeo.conf et packages) en obfusquant les mots de passe.
 
-*   Sous Linux:
+* Sous Linux:
 
     ```
     # ./nuxeoctl showconf
     ```
 
-*   Sous MS Windows:
+* Sous MS Windows:
 
     ```
     > nuxeoctl.bat showconf
@@ -410,12 +411,12 @@ A partir de Nuxeo Platform 5.6, le plus simple est de fournir le r&eacute;sultat
 
 En plus de ces donn&eacute;es, il peut &ecirc;tre int&eacute;ressant de pr&eacute;ciser les informations suivantes afin que Nuxeo connaisse exactement l'&eacute;tat de votre serveur :
 
-*   syst&egrave;me d'exploitation (Redhat EL 5.4 64 bits, Windows 2003 SP2 32 bits, &hellip;) du serveur et du poste client ;
-*   navigateur (IE8, Firefox 17, Chrome 23, etc &hellip;) : important pour les probl&egrave;mes li&eacute;s aux postes client ;
-*   base de donn&eacute;es utilis&eacute;e (PostgreSQL 9.1, Oracle 11g, etc &hellip;) ;
-*   packages additionnels install&eacute;s ;
-*   serveur d'application (Tomcat par d&eacute;faut, ou JBoss) ;
-*   niveau de hotfix install&eacute;.
+* syst&egrave;me d'exploitation (Redhat EL 5.4 64 bits, Windows 2003 SP2 32 bits, &hellip;) du serveur et du poste client ;
+* navigateur (IE8, Firefox 17, Chrome 23, etc &hellip;) : important pour les probl&egrave;mes li&eacute;s aux postes client ;
+* base de donn&eacute;es utilis&eacute;e (PostgreSQL 9.1, Oracle 11g, etc &hellip;) ;
+* packages additionnels install&eacute;s ;
+* serveur d'application (Tomcat par d&eacute;faut, ou JBoss) ;
+* niveau de hotfix install&eacute;.
 
 ## {{> anchor 'field-components'}}Composants
 
@@ -433,26 +434,25 @@ Le nom du groupe &agrave; renseigner fait partie des groupes de l'utilisateur, c
 
 Quelques conseils pour am&eacute;liorer la qualit&eacute; du ticket :
 
-*   &Eacute;viter de d&eacute;crire le ticket dans un fichier .doc ou .docx, pour que le ticket soit enti&egrave;rement lisible quelque soit le media utilis&eacute; pour sa consultation (navigation sur smartphone, application pour smartphone, tablette, navigation classique sur PC).
-*   Ne pas coller des centaines de lignes de logs dans un commentaire et pr&eacute;f&eacute;rer l'attachement des logs en pi&egrave;ce jointe si la trace fait plus d'une vingtaine de lignes.
-*   Pour les utilisateurs avanc&eacute;s, ne pas h&eacute;siter &agrave; utiliser les possibilit&eacute;s de formatage offertes par JIRA pour mettre en valeur la description :
-    *   texte format&eacute;,
-    *   code source,
-    *   lien,
-    *   puces.
-
-&nbsp;
+* &Eacute;viter de d&eacute;crire le ticket dans un fichier .doc ou .docx, pour que le ticket soit enti&egrave;rement lisible quelque soit le media utilis&eacute; pour sa consultation (navigation sur smartphone, application pour smartphone, tablette, navigation classique sur PC).
+* Ne pas coller des centaines de lignes de logs dans un commentaire et pr&eacute;f&eacute;rer l'attachement des logs en pi&egrave;ce jointe si la trace fait plus d'une vingtaine de lignes.
+* Pour les utilisateurs avanc&eacute;s, ne pas h&eacute;siter &agrave; utiliser les possibilit&eacute;s de formatage offertes par JIRA pour mettre en valeur la description :
+    * texte format&eacute;,
+    * code source,
+    * lien,
+    * puces.
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Pages connexes'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Pages connexes'}}
 
-*   [Comment interagir avec un ticket]({{page space='connect' page='comment-interagir-avec-un-ticket'}})
-*   [Suivi des tickets client]({{page space='connect' page='suivi-des-tickets-client'}})
-*   [G&eacute;rer vos tickets de support]({{page space='connect' page='gandeacuterer-vos-tickets-de-support'}})
+- [Comment interagir avec un ticket]({{page space='connect' page='comment-interagir-avec-un-ticket'}})
+- [Suivi des tickets client]({{page space='connect' page='suivi-des-tickets-client'}})
+- [G&eacute;rer vos tickets de support]({{page space='connect' page='gandeacuterer-vos-tickets-de-support'}})
 
-{{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-</div></div>
+{{/panel}}
+</div>
+<div class="column medium-6"></div>
+</div>

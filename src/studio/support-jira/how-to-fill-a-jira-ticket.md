@@ -104,11 +104,11 @@ history:
 ---
 {{#> callout type='info' heading='Before you start'}}
 
-Tickets that follow the recommendations below will be processed more quickly. Tickets can be filled in English or in French.&nbsp;
+Tickets that follow the recommendations below will be processed more quickly. Tickets can be filled in English or in French.
 
 {{/callout}}
 
-The ticket creation screen is divided in two parts: the first tab,&nbsp;**Main fields**, displays the main fields that you need to fill in (title, description, priority, version), and the second tab,&nbsp;**Advanced fields**, presents optionals fields or fields that are less important for the ticket's resolution.
+The ticket creation screen is divided in two parts: the first tab, **Main fields**, displays the main fields that you need to fill in (title, description, priority, version), and the second tab, **Advanced fields**, presents optionals fields or fields that are less important for the ticket's resolution.
 
 {{#> callout type='info' }}
 
@@ -120,15 +120,16 @@ A ticket must concern only one issue. Do not hesitate to create a new ticket to 
 
 {{! multiexcerpt name='jira-ticket-creation-steps'}}
 
-1.  &nbsp;In JIRA, click on&nbsp;**Create Issue**.
-2.  Select the project&nbsp;**Support Nuxeo Connect**.
-3.  Fill in the description as precisely as possible. Depending on the type of your issue, provide the appropriate items in the following list:
-    *   steps to reproduce the issue,
-    *   logs,
-    *   screenshots,
-    *   customer development,
-    *   environment.See below for detailed field descriptions.
-4.  Click on the&nbsp;**Create**&nbsp;button.
+1. In JIRA, click on **Create Issue**.
+2. Select the project **Support Nuxeo Connect**.
+3. Fill in the description as precisely as possible. Depending on the type of your issue, provide the appropriate items in the following list:
+    * steps to reproduce the issue
+    * logs
+    * screenshots
+    * customer development
+    * environment.
+    See below for detailed field descriptions.
+4. Click on the **Create** button.
 
 {{! /multiexcerpt}}
 
@@ -161,12 +162,12 @@ Description
 </td><td colspan="1">
 
 Type the detailed description of what you are trying to achieve. If possible, provide steps to reproduce.
-See the [Description section](#field-descr).
+See the [Description section](#field-description).
 
 </td></tr><tr><td colspan="1">Affects version</td><td colspan="1">
 
 Select the version of the Nuxeo Platform your application is based on.
-See the [Affects version section](#field-affects-).
+See the [Affects version section](#field-affects-version).
 
 </td></tr><tr><td colspan="1">
 
@@ -212,7 +213,7 @@ Additional Participant Groups
 </td><td colspan="1">
 
 If you are several Connect users working on the same project, select your support group so other users can participate and get alerts on the ticket.
-See the [Additional Participant Groups section](#field-additional-participant-groups).
+See the [Additional Participant Groups section](#field-additional-participant-group).
 
 </td></tr><tr><td colspan="1">
 
@@ -232,10 +233,10 @@ All support tickets must be created in the Support Nuxeo Connect category. Shoul
 
 This field indicates the type of incident described by the ticket. Possible ticket types are:
 
-*   [Question](#ticket-questi): any question about the Nuxeo Platform,
-*   [Bug](#ticket-bug): incident linked to the Nuxeo Platform,
-*   [Problem](#ticket-probl): incident linked to the customer's developments,
-*   [Improvement](#ticket-improvement): request for improvements or new features, for which Nuxeo can do an estimate for a development package.
+* [Question](#ticket-question): any question about the Nuxeo Platform,
+* [Bug](#ticket-bug): incident linked to the Nuxeo Platform,
+* [Problem](#ticket-problem): incident linked to the customer's developments,
+* [Improvement](#ticket-improvement): request for improvements or new features, for which Nuxeo can do an estimate for a development package.
 
 Identifying the type of issue is important because it determines what elements will be needed to describe the ticket (see the [Description section](#field-description)).
 
@@ -247,24 +248,20 @@ The content of this field depends on the [type of the ticket](#field-issue-type)
 
 You must describe precisely what information you're looking for or what you're trying to do, providing the context of the question so we can give an accurate answer.
 
-If the question is too complex or too dependent on the business context, the Support team can suggest a consulting service so Nuxeo can analyse the customer needs more precisly and provide a more complete answer.
+If the question is too complex or too dependent on the business context, the Support team can suggest a consulting service so Nuxeo can analyze the customer needs more precisely and provide a more complete answer.
 
 ### {{> anchor 'ticket-bug'}}Bug Ticket
 
-First, you must check it is actually a bug from the Nuxeo Platform and not a problem, i.e. an incident linked to the customer's developements. To this end, Nuxeo provides a demo site at the URL [http://demo.nuxeo.com](http://demo.nuxeo.com/) (or [http://lts.nuxeo.com](http://lts.nuxeo.com) for LTS version like 5.8), on which you can check your scenario can be reproduced on a stock Nuxeo Platform.
-
-There can be several reasons why the bug cannot be reproduced on the demo site:
-
-*   The environment of the demo may be different from yours (demo site uses Linux Ubuntu 64 bit and PostgreSQL 9.1). In that case, you should indicate the differences in the [Environment description](#field-environment).
-*   The bug can be the result of your developments. In that case, you must select the [type "Problem"](#ticket-pron).
+First, you must check it is actually a bug from the Nuxeo Platform and not a problem, i.e. an incident linked to the customer's developments.
+To do so, check your scenario can be reproduced on a stock Nuxeo Platform, without the customer's plugins or Studio customizations.
 
 If not sure, it is better to create a "Problem" issue for which the customer provides more information.
 
 In case of a bug, it is essential to provide the Support team with a way to reproduce the bug. You must provide:
 
-*   the step-by-step scenario to reproduce the bug;
-*   the server logs: you can try to extract the last stacktrace from the console or the `server.log` file or the message displayed on the web user interface;
-*   a screenshot showing the user interface before and after the bug, if relevant.
+* the step-by-step scenario to reproduce the bug;
+* the server logs: you can try to extract the last stacktrace from the console or the `server.log` file or the message displayed on the web user interface;
+* a screenshot showing the user interface before and after the bug, if relevant.
 
 Even if only one of these elements might be enough to identify the bug, the better the bug is described, the quicker and more efficiently the bug will be fixed.
 
@@ -272,23 +269,23 @@ Even if only one of these elements might be enough to identify the bug, the bett
 
 This type is for incidents linked to the customer's developments. In that case, you must provide the elements needed in case of a bug and you should also:
 
-*   provide the plugins you developed AND/OR the developments you think are related to the problem (Java classes, templates, unit tests, XML configuration files),
-*   identify the last changes done on the platform since the moment it worked fine.
+* provide the plugins you developed AND/OR the developments you think are related to the problem (Java classes, templates, unit tests, XML configuration files),
+* identify the last changes done on the platform since the moment it worked fine.
 
 If you work with Nuxeo Studio, you will probably keep working on your project as Nuxeo works on the ticket. In that case, Nuxeo needs to be able to work on a frozen version of the project. To enable that, you can:
 
-*   attach the Studio plugin (.jar file) used at the time of the tests to the JIRA ticket,
-*   put a tag on the Studio project, named from the JIRA ticket.
+* attach the Studio plugin (.jar file) used at the time of the tests to the JIRA ticket,
+* put a tag on the Studio project, named from the JIRA ticket.
 
 On a production environment, it is important to identify the date at which the incident occurred, to find the corresponding errors in the logs.
 
 ### {{> anchor 'ticket-improvement'}}Improvement Ticket
 
-This type is for behaviours that are not available by default on the Nuxeo Platform and that you would like to implement. It enables you to ask the Nuxeo team for advices or good practices to implement a new behaviour. For this type of ticket, you just need to indicate the wanted behaviour and possible constraints in the Description field.
+This type is for behaviors that are not available by default on the Nuxeo Platform and that you would like to implement. It enables you to ask the Nuxeo team for advices or good practices to implement a new behavior. For this type of ticket, you just need to indicate the wanted behavior and possible constraints in the Description field.
 
 ## {{> anchor 'field-affects-version'}}Affects Versions
 
-You must indicate which version of Nuxeo you are using (5.5, 5.6, 5.8, etc.), independently from the installed hotfixes (which will be indicated in the [ **Environment** field](#field-environm)).
+You must indicate which version of Nuxeo you are using (5.5, 5.6, 5.8, etc.), independently from the installed hotfixes (which will be indicated in the [ **Environment** field](#field-environment)).
 
 ## {{> anchor 'field-severity'}}Severity
 
@@ -354,23 +351,23 @@ Display or translation problems; general use questions, recommendations for futu
 
 The severity depends only on the ticket criticality, as it is described above.
 
-The detailed information on the response and resolution time depending on the SLA (Service Level Agreement) are available on this page : [http://www.nuxeo.com/products/support/](http://www.nuxeo.com/products/support/).
+The detailed information on the response and resolution time depending on the SLA (Service Level Agreement) are available on this page: [http://www.nuxeo.com/products/support/](http://www.nuxeo.com/products/support/).
 
 ## {{> anchor 'field-nuxeo-connect-support'}}Nuxeo Connect Support
 
-That drop down list enables to link the JIRA ticket and the Connect contract. This enables the Support team to have a minimum set of information on the customer's application (Nuxeo Plateform version, OS, database), and to have a quick overview of the environment in which Nuxeo is deployed.
+That drop down list enables to link the JIRA ticket and the Connect contract. This enables the Support team to have a minimum set of information on the customer's application (Nuxeo Platform version, OS, database), and to have a quick overview of the environment in which Nuxeo is deployed.
 
 If your Nuxeo Connect account is associated to one contract, only this contract is available in the list. If you have several contracts, you should be careful to select the good one.
 
 ## {{> anchor 'field-instance-type'}}Instance Type
 
-The fields enables the Support team to know about possible contraints linked to the type of instance. This may have an impact on the recommandations the Support team will give you.
+The fields enables the Support team to know about possible constraints linked to the type of instance. This may have an impact on the recommendations the Support team will give you.
 
 The different types of instance are:
 
-*   Development: the issue occurs on a development environment. On a development instance, some criteria like data conservation my be considered as not critical.
-*   Testing/QA: the issue occurs on the testing environment, which may typically have a limited number of users.
-*   Production: the issue occurs on the live environment. The Support team may provide a workaround solution first so as to unblock users quickly, before providing a long-term solution. They may also suggest a conference call to get some more detailed information more quickly.
+* Development: the issue occurs on a development environment. On a development instance, some criteria like data conservation my be considered as not critical.
+* Testing/QA: the issue occurs on the testing environment, which may typically have a limited number of users.
+* Production: the issue occurs on the live environment. The Support team may provide a workaround solution first so as to unblock users quickly, before providing a long-term solution. They may also suggest a conference call to get some more detailed information more quickly.
 
 ## {{> anchor 'field-environment'}}Environment
 
@@ -378,13 +375,13 @@ In case of a bug or a problem, it is important to describe the application's env
 
 From Nuxeo Platform 5.6, the easiest way is to provide the result of the `showconf` command, that gives a summary of the configuration (nuxeo.conf and packages) with passwords obfuscated.
 
-*   On Linux:
+* On Linux:
 
     ```
     # ./nuxeoctl showconf
     ```
 
-*   On MS Windows:
+* On MS Windows:
 
     ```
     > nuxeoctl.bat showconf
@@ -392,12 +389,12 @@ From Nuxeo Platform 5.6, the easiest way is to provide the result of the `showco
 
 It can also be interesting to precise the information below so the test server corresponds to the client's :
 
-*   OS (Redhat EL 5.4 64 bits, Windows 2003 SP2 32 bits, &hellip;) of both the server and the client machine,
-*   browser (IE8, Firefox 17, Chrome 23, etc &hellip;): important for incidents linked to the client machine,
-*   database (PostgreSQL 9.1, Oracle 11g, etc &hellip;),
-*   additional packages installed,
-*   application server (Tomcat by default, JBoss),
-*   installed hotfixes.
+* OS (Redhat EL 5.4 64 bits, Windows 2003 SP2 32 bits, &hellip;) of both the server and the client machine,
+* browser (IE8, Firefox 17, Chrome 23, etc &hellip;): important for incidents linked to the client machine,
+* database (PostgreSQL 9.1, Oracle 11g, etc &hellip;),
+* additional packages installed,
+* application server (Tomcat by default, JBoss),
+* installed hotfixes.
 
 ## {{> anchor 'field-components'}}Component/s
 
@@ -411,29 +408,29 @@ This field enables to share a ticket with a group of users. This is particularly
 
 The expected group is one of the groups the user is a member of, which can be seen from the user's profile ([https://jira.nuxeo.com/secure/ViewProfile.jspa](https://jira.nuxeo.com/secure/ViewProfile.jspa)), and usually looks like "support-COMPANYNAME".
 
-## Additional recommendations
+## Additional Recommendations
 
 Here are some good practices to improve the ticket:
 
-*   Do not describe your issue in a .doc or .docx file, so that the ticket remains readable on any device or media (smartphone browser, smartphone application, tablet, computer browser).
-*   Do not paste hundreds of lines of logs in a comment, but attach the logs to the ticket in a .txt file if the stacktrace is longer than 20 lines or so.
-*   For advanced users, do not hesitate to use the formatting features of JIRA to improve your description
-
-*   formatted text,
-*   source code,
-*   links,
-*   bullet lists.
+* Do not describe your issue in a .doc or .docx file, so that the ticket remains readable on any device or media (smartphone browser, smartphone application, tablet, computer browser).
+* Do not paste hundreds of lines of logs in a comment, but attach the logs to the ticket in a .txt file if the stacktrace is longer than 20 lines or so.
+* For advanced users, do not hesitate to use the formatting features of JIRA to improve your description:
+    * formatted text
+    * source code
+    * links
+    * bullet lists
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related pages'}}
 
-*   [JIRA Tickets Workflow]({{page space='connect' page='jira-tickets-workflow'}})
-*   [Ticket Follow Up]({{page space='connect' page='ticket-follow-up'}})
-*   [Support / JIRA]({{page space='connect' page='support-jira'}})
+- [JIRA Tickets Workflow]({{page space='connect' page='jira-tickets-workflow'}})
+- [Ticket Follow Up]({{page space='connect' page='ticket-follow-up'}})
+- [Support / JIRA]({{page space='connect' page='support-jira'}})
 
-{{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-</div></div>
+{{/panel}}
+</div>
+<div class="column medium-6"></div>
+</div>
