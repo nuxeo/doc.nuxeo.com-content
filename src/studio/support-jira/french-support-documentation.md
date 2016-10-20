@@ -46,8 +46,7 @@ history:
 ---
 The pages below explain in French how to interact with the Support team:
 
-*   [G&eacute;rer vos tickets de support](https://doc.nuxeo.com/pages/viewpage.action?pageId=18448691)
-
-*   *   [Comment remplir un ticket Jira]({{page space='Studio' page='Comment remplir+un+ticket+Jira'}})
-    *   [Comment interagir avec un ticket]({{page space='Studio' page='Comment interagir+avec+un+ticket'}})
-    *   [Suivi des tickets client]({{page space='Studio' page='Suivi des+tickets+client'}})
+* [G&eacute;rer vos tickets de support]({{page page='gerer-vos-tickets-de-support'}})
+    * [Comment remplir un ticket Jira]({{page page='comment-remplir-un-ticket-Jira'}})
+    * [Comment interagir avec un ticket]({{page page='comment-interagir-avec-un-ticket'}})
+    * [Suivi des tickets client]({{page page='suivi-des-tickets-client'}})
