@@ -61,8 +61,7 @@ The garbage collection is done by an explicit administration step:
 
 ## Programmatically (Using the Nuxeo Shell or Java Code)
 
-{{#> panel type='code' heading='https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/client/scripts/deleteOrphanBinaries.groovy'}}
-
+##### https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/client/scripts/deleteOrphanBinaries.groovy
 ```java
 import org.nuxeo.ecm.core.storage.binary.BinaryManagerStatus;
 import org.nuxeo.ecm.core.storage.sql.management.SQLRepositoryStatus;
@@ -76,10 +75,6 @@ if (!status.isBinariesGCInProgress()) {
 }
 ```
 
-{{/panel}}
-
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
@@ -90,9 +85,5 @@ if (!status.isBinariesGCInProgress()) {
 *   [How to Enable the Trash Feature]({{page space='nxdoc60' page='how-to-enable-the-trash-feature'}}) (Developer documentation)
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-&nbsp;
 
 </div></div>
