@@ -388,11 +388,11 @@ We recommend using a near-infinite [wait_timeout](http://dev.mysql.com/doc/refma
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Admin Documentation'}}
 
-*   [How to Estimate Volume Usage]({{page page='how-to-estimate-volume-usage'}})
-*   [MySQL]({{page page='mysql'}})
-*   [Microsoft SQL Server]({{page page='microsoft-sql-server'}})
-*   [Oracle]({{page page='oracle'}})
-*   [PostgreSQL]({{page page='postgresql'}})
+- [How to Estimate Volume Usage]({{page page='how-to-estimate-volume-usage'}})
+- [MySQL]({{page page='mysql'}})
+- [Microsoft SQL Server]({{page page='microsoft-sql-server'}})
+- [Oracle]({{page page='oracle'}})
+- [PostgreSQL]({{page page='postgresql'}})
 
 {{/panel}}</div><div class="column medium-6">
 

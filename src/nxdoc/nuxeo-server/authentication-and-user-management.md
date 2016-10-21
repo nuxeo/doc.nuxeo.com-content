@@ -294,25 +294,20 @@ You may want to use other authentication protocols and / or identity providers. 
 
 **In any case**, you have to configure the "authentication chain".
 
-{{! multiexcerpt name='authentication_chain_contribution'}}
-
-[Contribute an XML extension]({{page page='how-to-contribute-to-an-extension'}}) from the following content. Adapt the `authenticationChain` element content with the list of plugins you want to use.
-
-```xml
-<extension
-  target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
-  point="chain">
-  <authenticationChain>
-    <plugins>
-      <plugin>BASIC_AUTH</plugin>
-      <plugin>ANONYMOUS_AUTH</plugin>
-      <plugin>THE_PLUGIN_I_WANT_TO_USE</plugin>
-    </plugins>
-  </authenticationChain>
-</extension>
-
-```
-
+{{! multiexcerpt name='authentication_chain_contribution'}}[Contribute an XML extension]({{page page='how-to-contribute-to-an-extension'}}) from the following content. Adapt the `authenticationChain` element content with the list of plugins you want to use.
+  ```xml
+  <extension
+    target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
+    point="chain">
+    <authenticationChain>
+      <plugins>
+        <plugin>BASIC_AUTH</plugin>
+        <plugin>ANONYMOUS_AUTH</plugin>
+        <plugin>THE_PLUGIN_I_WANT_TO_USE</plugin>
+      </plugins>
+    </authenticationChain>
+  </extension>
+  ```
 {{! /multiexcerpt}}
 
 The Nuxeo Platform will use the plugins in the order they are chained. First attempt for each plugin will be to retrieve credentials (see implementation for a better understanding). If no credential is found, it will try to call the `showLoginPrompt` method for each of the plugin up until one is successful.
@@ -333,10 +328,9 @@ This plugin provides anonymous authentication. Users are automatically logged as
 
 To activate anonymous authentication:
 
-1.  Add the plugin to the authentication chain.
-    {{{multiexcerpt 'authentication_chain_contribution' page='Authentication and User Management'}}}
-    Use `ANONYMOUS_AUTH`.
-2.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) called `anonymous-auth-config.xml` with the following content:
+1. Add the plugin to the authentication chain.</br>
+{{{multiexcerpt 'authentication_chain_contribution' page='Authentication and User Management'}}} Use `ANONYMOUS_AUTH`.
+2. Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) called `anonymous-auth-config.xml` with the following content:
 
     ```
     <?xml version="1.0"?>
@@ -358,8 +352,8 @@ To activate anonymous authentication:
 
     ```
 
-3.  Adapt the `anonymousUser` id and properties.
-4.  Save.
+3. Adapt the `anonymousUser` id and properties.
+4. Save.
 
 ### OAuth
 
@@ -367,8 +361,8 @@ OAuth 2 is natively supported by the Nuxeo Platform, which means there is no bun
 
 To configure a key for your client:
 
-1.  Go to the Nuxeo Platform web application, then browse **Admin Center > Cloud Services > Consumer** tab.
-2.  Provide a name, a ClientId, and a ClientSecret and save.
+1. Go to the Nuxeo Platform web application, then browse **Admin Center > Cloud Services > Consumer** tab.
+2. Provide a name, a ClientId, and a ClientSecret and save.
     OAuth endpoints are ready to be used.
 
 ![]({{file name='OAuth2-ConsumerToken.png'}} ?w=500,h=266,border=true)
@@ -849,9 +843,9 @@ Some authentication plugins may choose to trigger or not the `LoginPrompt` depen
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
 
-*   [Collections user documentation]({{page space='userdoc' page='collections'}})
-*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
-*   [Nuxeo Drive user documentation]({{page space='userdoc' page='nuxeo-drive'}})
-*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+- [Collections user documentation]({{page space='userdoc' page='collections'}})
+- [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+- [Nuxeo Drive user documentation]({{page space='userdoc' page='nuxeo-drive'}})
+- [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>

@@ -40,9 +40,6 @@ history:
 
 ---
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-
-</br>
-
 ### Installation
 
 </br>
@@ -53,9 +50,6 @@ The Nuxeo Platform comes in different packages and can be installed on any opera
 
 <div align="right">[More >>]({{page page='installation'}})</div>
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-
-</br>
-
 ### Administration
 
 </br>
@@ -66,9 +60,6 @@ Discover some configuration that we recommend to do, especially for advanced tes
 
 <div align="right">[More >>]({{page page='administration'}})</div>
 {{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-
-</br>
-
 ### REST API
 
 </br>
@@ -79,9 +70,6 @@ The Nuxeo Platform contains a native REST API to let you build custom interfaces
 
 <div align="right">[More >>]({{page page='rest-api'}})</div>
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-
-</br>
-
 ### Automation
 
 </br>
