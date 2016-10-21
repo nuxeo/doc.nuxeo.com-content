@@ -17,105 +17,117 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/hY31'
     source_link: /display/USERDOC58/Nuxeo+Platform+User+Documentation
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-07-20 14:15'
         message: emove children display macro
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-05-22 18:46'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-06 15:42'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-06 15:42'
         message: Updated PDF version
         version: '17'
-    - 
+    -
         author: Anonymous
         date: '2013-11-05 11:59'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-17 16:17'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 13:59'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-26 14:48'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-25 11:22'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-24 16:39'
         message: Reverted from v. 9
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-24 16:38'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-24 16:38'
         message: Added info about the new release cycle
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-05 11:54'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-20 16:22'
         message: Migrated to Confluence 4.0
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-20 16:22'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-05 16:10'
         message: Added downloadable PDF
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-05 10:35'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-06 17:48'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-06 17:09'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-06 15:58'
         message: ''
         version: '1'
 
 ---
+The Nuxeo Platform is a modular content management platform that enables developers to create business applications to manage specific types of content. Several tools are available to develop business applications on top of the Platform, like [Nuxeo Online Services]({{page space='Studio' page='index'}}) for the customization and configuration of the Platform, or [Nuxeo IDE]({{page space='Studio' page='index'}}) to help developers design new features. The Nuxeo Platform itself comes with several modules, dedicated to a generic content management use case and help manage and track the flow of content through the business cycle, from capture and creation, to sharing, to approval and publishing. These [modules]({{page page='nuxeo-platform-modules-overview'}}) can be used out-of-the-box or as a basis for customization.
+
+The naked Platform provides a default set of document management features and can be enriched by the modules below:
+- Document Management, which provides additional document management features,
+- Social Collaboration, which provides project and user-centric views of content,
+- Digital Asset Management, which provides browsing and edition features adapted to multimedia content.
+
+Nuxeo Addons are also available from the [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace), from which you can download and install optional product plugins.
+
+You will find in this documentation all the guides to help you work with the different modules and addons of the Nuxeo Platform. For installation and administration of the Platform and its modules and [addons]({{page page='Marketplace Add-ons'}}), you can refer to the Installation and Administration Guide.
+
+{{{multiexcerpt 'License' page='NXDOC:index'}}}
