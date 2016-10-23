@@ -124,7 +124,7 @@ The local configuration enables users to set some document types preferences at 
 
 Users with Manage permission&nbsp;in a space can define what document types can be created in the current space by restricting the list of allowed document types proposed by default.
 
-To **define what document types can be created in a space,**&nbsp;click on&nbsp;**Manage**&nbsp;>&nbsp;**Local configuration.&nbsp;** The list of the available local configurations are displayed.&nbsp;If needed, click on the **Enable**&nbsp;link of the "Document types configuration".&nbsp;The document types configuration form is displayed. By default, all types are allowed.&nbsp;**Move** the document types you don't want users to be able to create to the left column using the icon&nbsp; ![](/download/attachments/16090382/move_left.png?version=1&modificationDate=1380558573072&api=v2) and **Save**. ![]({{file name='doctype_config_remove_doctype.png'}} ?w=600,border=true)
+To **define what document types can be created in a space,**&nbsp;click on&nbsp;**Manage**&nbsp;>&nbsp;**Local configuration.&nbsp;** The list of the available local configurations are displayed.&nbsp;If needed, click on the **Enable**&nbsp;link of the "Document types configuration".&nbsp;The document types configuration form is displayed. By default, all types are allowed.&nbsp;**Move** the document types you don't want users to be able to create to the left column using the icon&nbsp; ![]({{file name='move_left.png' page='icons-index'}}) and **Save**. ![]({{file name='doctype_config_remove_doctype.png'}} ?w=600,border=true)
 
 The document types you removed from the default selection cannot be created in the current space anymore: they are not displayed anymore when users clicks on the&nbsp;**New**&nbsp;button.
 

@@ -444,7 +444,7 @@ The smart folder creation and edition pages is very close to the smart search fo
 
 Note that it needs another content view to be defined (see&nbsp;[smart-folder-contentviews-contrib.xml](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/master/src/main/resources/OSGI-INF/smart-folder-contentviews-contrib.xml)) so that this content view uses the query, sort information, result columns and page size as set on the document properties (note the usage of tags parameter, sortInfosBinding, resultColumns and pageSizeBinding).
 
-![](/download/attachments/12911433/Smart-Search-results.png?version=2&modificationDate=1450949511082&api=v2 ?w=650,border=true)
+![]({{file name='Smart-Search-results.png' space='userdoc' page='smart-search'}} ?w=650,border=true)
 
 ### Result Layout, Column and Sort Selection
 

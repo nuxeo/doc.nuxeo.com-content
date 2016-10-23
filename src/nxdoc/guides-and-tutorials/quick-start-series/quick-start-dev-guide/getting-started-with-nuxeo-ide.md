@@ -688,7 +688,7 @@ The code can either be tested through unit tests, or manually.
 
 ### **Using Unit** Tests
 
-1.  In Eclipse, click on the **Refresh** button on the Nuxeo Studio tab of the left menu (![](/download/attachments/8684145/NxIDE_refresh_button.png?version=1&modificationDate=1317137136657&api=v2 ?w=16,h=17)).
+1.  In Eclipse, click on the **Refresh** button on the Nuxeo Studio tab of the left menu (![]({{file name='NxIDE_refresh_button.png' space='idedoc' page='creating-your-first-nuxeo-project'}} ?w=16,h=17)).
 
 2.  Go back to the Project Explorer tab, right-click on your project, and choose **Run As, JUnit Test**.
     The tests should now pass.
@@ -712,7 +712,7 @@ At this stage we want to create a new default profile, called "My Projects" that
 8.  Click on the **OK** button.
 9.  Here is what you should get:
     ![]({{file name='NxIDE_deployment_profile.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=450,border=true)
-    Now every time you start the Nuxeo server or you click on the **Reload projects on server** button ![](/download/attachments/8684145/NxIDE_refresh_button.png?version=1&modificationDate=1317137136657&api=v2 ?w=16,h=17) in the Nuxeo Server tab toolbar, the projects selected in the current profile will be (re)deployed on the server.
+    Now every time you start the Nuxeo server or you click on the **Reload projects on server** button ![]({{file name='NxIDE_refresh_button.png' space='idedoc' page='creating-your-first-nuxeo-project'}} ?w=16,h=17) in the Nuxeo Server tab toolbar, the projects selected in the current profile will be (re)deployed on the server.
 
 #### Starting the Server
 
@@ -728,7 +728,7 @@ To start the server:
     You can open the browser by clicking the **Browse** button (![]({{file name='NxIDE_browse_button.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}})).
 
     {{/callout}}
-4.  Click on the **Reload projects on server** button in the **Nuxeo Server** tab (![](/download/attachments/8684145/NxIDE_refresh_button.png?version=1&modificationDate=1317137136657&api=v2 ?w=16,h=17)).
+4.  Click on the **Reload projects on server** button in the **Nuxeo Server** tab (![]({{file name='NxIDE_refresh_button.png' space='idedoc' page='creating-your-first-nuxeo-project'}} ?w=16,h=17)).
 5.  In Nuxeo Platform, create a new contract with the following information:
     *   Title: Maintenance Contract
     *   Contract Owner: Nuxeo
