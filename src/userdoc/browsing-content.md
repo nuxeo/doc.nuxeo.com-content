@@ -239,7 +239,7 @@ Every user has a personal dashboard that displays information he finds relevant 
 The dashboard is composed of a set of boxes that display either a list of documents matching a criteria (all the workspaces the user can access, the last documents he modified, the last documents that have been published...), or possibly a piece of information either from the Platform or from external websites.
 
 To access your dashboard, click on the&nbsp;**Home**&nbsp;main tab. Your dashboard is the default tab of your Home.
-![](/download/attachments/2392400/CAP-dashboard.png?version=3&modificationDate=1417800556391&api=v2 ?w=650,border=true)
+![]({{file name='CAP-dashboard.png'}} ?w=650,border=true)
 
 {{#> callout type='tip' }}
 
@@ -267,7 +267,7 @@ It is possible to add another type of navigation tree based on metadata instead 
 
 The Document Management module includes&nbsp;[tagging of documents]({{page page='tags'}}), which enables users to apply their own labels on documents. The tag cloud lists all tags on documents, with their size growing as the tag is applied on several documents.
 
-![]({{file name='tag-cloud.png' space='userdoc60' page='browsing-content'}} ?w=350,border=true)
+![]({{file name='tag-cloud.png' version='60' space='userdoc' page='browsing-content'}} ?w=350,border=true)
 
 To see all documents tagged with the same label, click on the tag in the tag cloud.
 
@@ -279,10 +279,10 @@ Users can change the way content is presented in the folderish repositories (wor
 
 Two views of the content lists are available&nbsp;on the top right corner of&nbsp; **Content** tab:
 
-*   list view (default view) ![](/download/attachments/16090382/DM-list-view-icon.png?version=2&modificationDate=1383225794048&api=v2): this view displays title of the documents with a small icon (that depends on the type of document or main attachment type) and a set of metadata in a table;
-    ![](/download/attachments/2392400/list-view.png?version=6&modificationDate=1416994995269&api=v2 ?w=600,border=true)
-*   thumbnail view ![](/download/attachments/16090382/DM-icon-view-icon.png?version=2&modificationDate=1383225756162&api=v2): this view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
-    ![](/download/attachments/2392400/thumbnail-view.png?version=6&modificationDate=1416994972171&api=v2 ?w=600,border=true)
+*   list view (default view) ![]({{file name='DM-list-view-icon.png' page='icons-index'}}): this view displays title of the documents with a small icon (that depends on the type of document or main attachment type) and a set of metadata in a table;
+    ![]({{file name='list-view.png'}} ?w=600,border=true)
+*   thumbnail view ![]({{file name='DM-icon-view-icon.png' page='icons-index'}}): this view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
+    ![]({{file name='thumbnail-view.png'}} ?w=600,border=true)
 
 **Changing Displayed Information**
 
@@ -294,9 +294,9 @@ Editing results column is possible from search results and the Content tab of fo
 
 {{/callout}}
 
-To change the information displayed in content lists, click on the icon&nbsp;![](/download/attachments/16090382/edit_columns.png?version=1&modificationDate=1414434406170&api=v2).&nbsp;A pop-up is displayed: The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and&nbsp;reorder columns using the vertical arrows. Once it's done, click on&nbsp;**Save**.
+To change the information displayed in content lists, click on the icon&nbsp;![]({{file name='edit_columns.png' page='icons-index'}}).&nbsp;A pop-up is displayed: The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and&nbsp;reorder columns using the vertical arrows. Once it's done, click on&nbsp;**Save**.
 
-![](/download/attachments/2392400/results-columns-popup.png?version=1&modificationDate=1416410656944&api=v2 ?w=350,border=true)
+![]({{file name='results-columns-popup.png'}} ?w=350,border=true)
 
 ## Collections
 

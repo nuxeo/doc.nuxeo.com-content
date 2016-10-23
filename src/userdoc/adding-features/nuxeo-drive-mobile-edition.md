@@ -331,7 +331,7 @@ To set up the preferences:
 
 ### Nuxeo Drive Mobile&nbsp;icons
 
-<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">![]({{file name='orange-cloud.png' page='icons-index'}} ?w=30,thumbnail=true)</td><td colspan="1">Go to the local folders</td></tr><tr><td colspan="1">![]({{file name='grey-cloud.png' page='icons-index'}})</td><td colspan="1">Synchronization in progress</td></tr><tr><td colspan="1">![](/download/attachments/16092681/nuxeo_drive_systray_icon_stopping.png?version=1&modificationDate=1387364852206&api=v2 ?w=25,thumbnail=true)</td><td colspan="1">Update all your folders</td></tr><tr><td colspan="1">![]({{file name='folder-info-icon.png' page='icons-index'}} ?w=25,thumbnail=true)</td><td colspan="1">See the local folder menu.</td></tr><tr><td colspan="1">![]({{file name='folder-update-icon.png'}} ?w=25,thumbnail=true)</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">![]({{file name='orange-cloud.png' page='icons-index'}} ?w=30,thumbnail=true)</td><td colspan="1">Go to the local folders</td></tr><tr><td colspan="1">![]({{file name='grey-cloud.png' page='icons-index'}})</td><td colspan="1">Synchronization in progress</td></tr><tr><td colspan="1">![]({{file name='nuxeo_drive_systray_icon_stopping.png' version='60' space='userdoc' page='nuxeo-drive-1x'}} ?w=25,thumbnail=true)</td><td colspan="1">Update all your folders</td></tr><tr><td colspan="1">![]({{file name='folder-info-icon.png' page='icons-index'}} ?w=25,thumbnail=true)</td><td colspan="1">See the local folder menu.</td></tr><tr><td colspan="1">![]({{file name='folder-update-icon.png'}} ?w=25,thumbnail=true)</td><td colspan="1">
 
 See the local folder information.
 
