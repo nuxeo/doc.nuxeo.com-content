@@ -20,37 +20,37 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/BQlvAQ'
     source_link: /display/USERDOC60/Nuxeo+Drive+1.x
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-21 17:02'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-17 14:34'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-13 10:06'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-29 14:12'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-29 14:11'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-05-26 08:16'
         message: Add link to Nuxeo Drive 2 documentation
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-05-22 15:10'
         message: ''
@@ -278,7 +278,7 @@ There are to ways to desynchronize a folder. From the server, when you desynchro
 
 By default, once you have synchronized a folder all its content (files and folders) are synchronized, but you can decide locally which folders you want to keep. This feature will enable you to manage the storage space dedicated to the synchronization, which is especially useful if you use a device with a low-storage capacity.
 
-1.  Click on the ![](/download/attachments/13664723/drive_synced.png?version=1&modificationDate=1368620225712&api=v2) icon (in the top menu bar on Mac OS X, in the system tray on Windows).
+1.  Click on the ![]({{file name='drive_synced.png' page='nuxeo-drive'}}) icon (in the top menu bar on Mac OS X, in the system tray on Windows).
 2.  Go to **Settings**.
     A pop-up window appears.
 3.  Click on the **Folders** tab.

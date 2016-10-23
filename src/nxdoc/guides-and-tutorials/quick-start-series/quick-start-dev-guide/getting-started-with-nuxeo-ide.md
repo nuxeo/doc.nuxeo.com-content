@@ -361,7 +361,7 @@ You know have to create an Event Handlers in order to call your operation when a
 
 Now, you can try it on your server by deploying your changes on your Nuxeo Platform instance, to do so:
 
-1.  In Eclipse, click on the **Refresh** button in the **Nuxeo Server** view (![](/download/attachments/8684145/NxIDE_refresh_button.png?version=1&modificationDate=1317137136657&api=v2 ?w=16,h=17)).
+1.  In Eclipse, click on the **Refresh** button in the **Nuxeo Server** view (![]({{file name='NxIDE_refresh_button.png' space='idedoc' page='creating-your-first-nuxeo-project'}} ?w=16,h=17)).
 
 2.  Go back in the browser, and refresh the [http://localhost:8080/nuxeo/site/test](http://localhost:8080/nuxeo/site/test) page.
 
