@@ -125,7 +125,6 @@ history:
         version: '1'
 
 ---
-
 The Nuxeo Web UI is a user interface designed in Web Component (HTML) / Polymer framework. It allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full screen suggester. [Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) is a first class choice for projects where visual and workflows are important requirements. Let's discover what are the functional evolutions present on this new interface.
 
 ## Functional Overview
@@ -235,16 +234,10 @@ The main area is reserved for displaying the current page's content. Our router 
 <div class="column medium-6">
 
 {{#> panel heading='Related Documentation'}}
-
-* [Nuxeo Elements]({{page page='nuxeo-elements'}})
-[Data Visualization]({{page page='data-visualization'}})
-
+- [Nuxeo Elements]({{page page='nuxeo-elements'}})
+- [Data Visualization]({{page page='data-visualization'}})
 {{/panel}}
 
 </div>
 
-<div class="column medium-6">
-
-&nbsp;
-
-</div></div>
+</div>

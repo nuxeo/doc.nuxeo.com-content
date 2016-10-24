@@ -225,14 +225,13 @@ Goal is to change the logo displayed in the banner of the Nuxeo Platform applica
     5.  Click on the&nbsp;**Ok**&nbsp;button at the bottom of the popup window.
         The path to the uploaded image is displayed next to the&nbsp;**Select resource**&nbsp;button.
 
-### **Deploying Changes on Your Nuxeo Platform Instance
-**
+### Deploying Changes on Your Nuxeo Platform Instance
 
 1.  Go to your Nuxeo Platform instance, typically available&nbsp;at <span class="s2">[http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
     </span>
 2.  Connect as Administrator with Administrator password.
-3.  Click on&nbsp;**Admin Center**&nbsp;>&nbsp;**Update Center**&nbsp;>&nbsp;**Nuxeo Studio**.
-4.  Click on the&nbsp;**Update**&nbsp;button.
+3.  Click on **Admin Center** > **Update Center** > **Nuxeo Studio**.
+4.  Click on the **Update** button.
     Your logo is updated.
 
 ## {{> anchor 'contract-doc-type'}}Step 3 - Create a Contract Document Type&nbsp;
@@ -266,8 +265,7 @@ Here we want to create a document type "Contract" that will hold specific metada
 7.  Repeat the Edit layout steps on the View Layout.
 8.  Click on&nbsp;**Save.**
 
-### **Deploying Changes on Your Nuxeo Platform Instance
-**
+### Deploying Changes on Your Nuxeo Platform Instance
 
 1.  Go to your Nuxeo Platform instance, typically available&nbsp;at&nbsp;<span class="s2">[http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
     </span>
