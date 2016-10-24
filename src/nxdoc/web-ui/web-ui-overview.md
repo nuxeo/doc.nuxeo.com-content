@@ -143,7 +143,7 @@ Three important parts are visible on every single pages:
 3.  **Actions**: The possible actions according to the selected view
 4.  **Quick search**: Search by keywords or users
 
-### Side Menu
+### Side Menu&nbsp;
 
 The menu displays different tabs. Clicking on one of them will open a side panel with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area. We will see the description of the main area on the last part of this documentation.
 
