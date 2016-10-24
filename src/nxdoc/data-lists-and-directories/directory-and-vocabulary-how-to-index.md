@@ -51,4 +51,4 @@ history:
         version: '1'
 
 ---
-{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC710 Studio USERDOC710' label='howto' filter='Topics=Vocabulary'}}}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC 710/nxdoc Studio USERDOC710' label='howto' filter='Topics=Vocabulary'}}}

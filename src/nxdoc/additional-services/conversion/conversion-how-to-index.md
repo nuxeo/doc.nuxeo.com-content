@@ -42,4 +42,4 @@ history:
         version: '1'
 
 ---
-{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC710 Studio' label='howto' filter='Topics=Conversion'}}}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC 710/nxdoc Studio' label='howto' filter='Topics=Conversion'}}}
