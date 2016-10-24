@@ -49,4 +49,4 @@ history:
         version: '1'
 
 ---
-{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC60 Studio USERDOC60' label='howto' filter='Topics=Vocabulary'}}}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='idedox 60/nxdoc Studio 60/userdoc' label='howto' filter='Topics=Vocabulary'}}}
