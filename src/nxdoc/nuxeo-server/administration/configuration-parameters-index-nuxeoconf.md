@@ -1127,8 +1127,6 @@ You can also take a look at the following pages for recommendations and examples
 
 The table below lists the properties that you can set in nuxeo.conf. Properties that can be contributed to the Configuration service are available [from the Nuxeo Platform Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
 
-_Looking for a specific parameter?_
-
 {{! table-filter removed }}<div class="table-scroll"><table class="hover"><tbody><tr><th width="250" colspan="1">
 
 Parameter
@@ -2442,9 +2440,9 @@ Since 6.0
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related content'}}
 
-*   [Setup Best Practices]({{page page='setup-best-practices'}})
+_ [Setup Best Practices]({{page page='setup-best-practices'}})
 
-*   [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
+- [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
 
 {{/panel}}</div><div class="column medium-6">
 
