@@ -727,4 +727,4 @@ new ArrayList(Arrays.asList(WorkflowVariables["contributors"])); x.add(Context["
 *   [Automation]({{page page='automation'}})
 *   [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>
