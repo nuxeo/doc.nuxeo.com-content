@@ -268,8 +268,6 @@ history:
         version: '1'
 
 ---
-[/x/EgI7](/x/EgI7)
-
 Nuxeo supported the following versions of Microsoft SQL Server:
 
 {{{multiexcerpt '7.10-SQLserver-supported' page='Supported Databases'}}}
