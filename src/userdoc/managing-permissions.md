@@ -411,4 +411,4 @@ To **purge the permission** of a user: go to **Admin** > **Permissions** > **Pur
 
 *   [Add a new Permission in the UI]({{page space='studio' page='add-a-new-permission-in-the-ui'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>

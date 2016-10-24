@@ -270,4 +270,4 @@ The `path` endpoint does not requires paramets besides the `docPath` and `repoId
 *   [REST API Entity Types]({{page page='rest-api-entity-types'}})
 *   [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>

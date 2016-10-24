@@ -267,4 +267,4 @@ xmlns:nxu="http://nuxeo.org/nxweb/util"
 *   [Default URL Patterns]({{page page='default-url-patterns'}})
 *   [Navigation URLs]({{page page='navigation-urls'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>

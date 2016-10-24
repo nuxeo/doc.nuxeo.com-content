@@ -817,4 +817,4 @@ Some authentication plugins may choose to trigger or not the `LoginPrompt` depen
 *   [Nuxeo Drive user documentation]({{page space='userdoc710' page='nuxeo-drive'}})
 *   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>
