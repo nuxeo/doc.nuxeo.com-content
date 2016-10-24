@@ -20,6 +20,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/T4BOAQ'
     source_link: /display/ADMINDOC60/Metrics+and+Monitoring
 tree_item_index: 100
+version_override:
+  'FT': 'nxdoc/metrics-and-monitoring'
 history:
     -
         author: Solen Guitter

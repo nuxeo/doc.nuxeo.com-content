@@ -16,6 +16,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/dYBOAQ'
     source_link: /pages/viewpage.action?pageId=21921909
 tree_item_index: 1000
+version_override:
+    'FT': 'nxdoc/upgrade-from-516-with-jcr-postgresql-to-520'
 history:
     -
         author: Solen Guitter

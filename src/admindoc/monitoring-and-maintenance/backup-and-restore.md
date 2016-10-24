@@ -18,6 +18,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/foBOAQ'
     source_link: /display/ADMINDOC60/Backup+and+Restore
 tree_item_index: 200
+version_override:
+    'FT': 'nxdoc/backup-and-restore'
 history:
     -
         author: Florent Guillaume

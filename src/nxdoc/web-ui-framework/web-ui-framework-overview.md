@@ -20,6 +20,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/cIFVAQ'
     source_link: /display/NXDOC60/Web+UI+Framework+Overview
 tree_item_index: 100
+version_override:
+    'FT': 'nxdoc/jsf-ui-framework-overview'
 history:
     -
         author: Manon Lumeau

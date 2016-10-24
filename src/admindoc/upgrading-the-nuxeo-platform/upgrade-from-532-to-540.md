@@ -16,6 +16,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/NoBOAQ'
     source_link: /display/ADMINDOC60/Upgrade+from+5.3.2+to+5.4.0
 tree_item_index: 600
+version_override:
+    'FT': 'nxdoc/upgrade-from-532-to-540'
 history:
     -
         author: Solen Guitter

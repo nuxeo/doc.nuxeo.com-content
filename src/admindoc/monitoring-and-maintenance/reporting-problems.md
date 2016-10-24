@@ -17,6 +17,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/P4hkAQ'
     source_link: /display/ADMINDOC60/Reporting+Problems
 tree_item_index: 1200
+version_override:
+    'FT': 'nxdoc/reporting-problems'
 history:
     -
         author: Benoit Delbosc

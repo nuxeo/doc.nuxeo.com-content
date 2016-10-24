@@ -21,6 +21,9 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/-oJkAQ'
     source_link: /display/ADMINDOC60/Hotfixes+Installation+Notes+for+Nuxeo+Platform+6.0
 tree_item_index: 900
+version_override:
+    'FT': 'nxdoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015'
+    'LTS 2015': 710/admindoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015
 history:
     -
         author: Manon Lumeau

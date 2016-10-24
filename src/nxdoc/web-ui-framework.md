@@ -16,13 +16,15 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/d4BVAQ'
     source_link: /display/NXDOC60/Web+UI+Framework
 tree_item_index: 1600
+version_override:
+    'FT': 'nxdoc/jsf-ui-framework'
 history:
     -
         author: Solen Guitter
         date: '2015-02-12 15:26'
         message: ''
         version: '9'
-    -
+    -   
         author: Anonymous
         date: '2014-11-24 16:52'
         message: ''

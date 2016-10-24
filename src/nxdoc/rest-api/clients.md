@@ -16,6 +16,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/CoBVAQ'
     source_link: /display/NXDOC60/Clients
 tree_item_index: 800
+version_override:
+    'FT': 'nxdoc/client-sdks'
 history:
     -
         author: Manon Lumeau

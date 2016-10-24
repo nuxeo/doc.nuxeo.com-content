@@ -16,6 +16,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/UIFVAQ'
     source_link: /display/NXDOC60/Web+UI+How-To+Index
 tree_item_index: 300
+version_override:
+    'FT': 'nxdoc/jsf-ui-how-to-index'
 history:
     -
         author: Manon Lumeau

@@ -16,6 +16,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/TYBOAQ'
     source_link: /display/ADMINDOC60/Upgrade+from+5.3.1+to+5.3.2
 tree_item_index: 700
+version_override:
+    'FT': 'nxdoc/upgrade-from-531-to-532'
 history:
     -
         author: Solen Guitter

@@ -16,6 +16,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/E4BOAQ'
     source_link: /display/ADMINDOC60/Upgrade+from+5.4.2+to+5.5
 tree_item_index: 400
+version_override:
+    'FT': 'nxdoc/upgrade-from-542-to-55'
 history:
     -
         author: Solen Guitter

@@ -19,6 +19,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/PoFVAQ'
     source_link: /display/NXDOC60/Using+a+Python+Client
 tree_item_index: 500
+version_override:
+    'FT': 'nxdoc/python-client'
 history:
     -
         author: Solen Guitter

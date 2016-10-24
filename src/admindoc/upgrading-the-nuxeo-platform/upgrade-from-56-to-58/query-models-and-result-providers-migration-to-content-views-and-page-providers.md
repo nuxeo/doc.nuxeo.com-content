@@ -21,13 +21,15 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/nAJvAQ'
     source_link: >-
         /display/ADMINDOC60/Query+Models+and+Result+Providers+Migration+to+Content+Views+and+Page+Providers
+version_override:
+    'FT': 'nxdoc/query-models-and-result-providers-migration-to-content-views-and-page-providers'
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-31 13:35'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-14 14:48'
         message: ''

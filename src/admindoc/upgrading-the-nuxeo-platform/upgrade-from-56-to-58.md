@@ -16,6 +16,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/LYBOAQ'
     source_link: /display/ADMINDOC60/Upgrade+from+5.6+to+5.8
 tree_item_index: 200
+version_override:
+    'FT': 'nxdoc/upgrade-from-56-to-58'
 history:
     -
         author: Solen Guitter

@@ -17,18 +17,20 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/JoBOAQ'
     source_link: >-
         /display/ADMINDOC60/From+the+old+workflow+system+to+the+new+5.4+workflow+system
+version_override:
+    'FT': 'nxdoc/from-the-old-workflow-system-to-the-new-54-workflow-system'
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-31 13:36'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-14 15:15'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 12:16'
         message: ''

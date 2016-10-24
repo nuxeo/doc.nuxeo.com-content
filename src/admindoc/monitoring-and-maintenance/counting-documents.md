@@ -16,6 +16,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/KYBOAQ'
     source_link: /display/ADMINDOC60/Counting+documents
 tree_item_index: 800
+version_override:
+    'FT': 'nxdoc/counting-documents'
 history:
     -
         author: Solen Guitter

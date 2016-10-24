@@ -20,6 +20,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/qoVkAQ'
     source_link: /display/ADMINDOC60/Garbage-Collecting+Orphaned+Binaries
 tree_item_index: 1100
+version_override:
+    'FT': 'nxdoc/garbage-collecting-orphaned-binaries'
 history:
     -
         author: Julien Carsique

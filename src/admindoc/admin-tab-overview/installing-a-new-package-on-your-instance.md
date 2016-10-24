@@ -21,6 +21,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/GIBOAQ'
     source_link: /display/ADMINDOC60/Installing+a+New+Package+on+Your+Instance
 tree_item_index: 200
+version_override:
+    'FT': 'nxdoc/installing-a-new-package-on-your-instance'
 history:
     -
         author: Manon Lumeau

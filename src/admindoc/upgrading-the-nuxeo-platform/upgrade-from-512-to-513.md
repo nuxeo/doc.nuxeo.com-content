@@ -16,6 +16,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/c4BOAQ'
     source_link: /display/ADMINDOC60/Upgrade+from+5.1.2+to+5.1.3
 tree_item_index: 1100
+version_override:
+    'FT': 'nxdoc/upgrade-from-512-to-513'
 history:
     -
         author: Solen Guitter
