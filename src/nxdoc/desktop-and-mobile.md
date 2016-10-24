@@ -30,8 +30,6 @@ history:
 
 ---
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-</br>
-
 ### Nuxeo Drive
 
 </br>
@@ -41,9 +39,6 @@ The Nuxeo Drive addon enables bidirectional synchronization of content between t
 
 <div align="right">[Discover >>]({{page page='nuxeo-drive'}})</div>
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-
-</br>
-
 ### Nuxeo Mobile
 
 </br>

@@ -118,10 +118,7 @@ If it cannot force it, you will get an exception `java.security.InvalidKeyExcept
 
 {{/callout}}
 
-<dl>
 
 ## S3 Encryption
 
 The configuration is described in&nbsp;[Amazon S3 Online Storage]({{page page='amazon-s3-online-storage'}}).
-
-</dl>
