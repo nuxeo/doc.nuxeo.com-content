@@ -336,17 +336,15 @@ The Nuxeo Platform stores documents and their property values either in a databa
 
 The natural way of expressing a query in the Nuxeo Platform is with [NXQL]({{page page='nxql'}}), the Nuxeo Query Language.&nbsp;
 
-{{#> panel }}
-
-`SELECT * FROM Document WHERE`
-`dc:contributors = ?` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_&nbsp;&nbsp; -- simple match on a multi-valued field_
-`AND ecm:mixinType != 'Folderish'` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; _-- use facet to remove all folderish documents_
-`AND ecm:mixinType != 'HiddenInNavigation'` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _-- use facet to remove all documents that should be hidden_
-`AND ecm:isCheckedInVersion = 0` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _-- only get checked-out documents_
-`AND ecm:isProxy = 0 AND` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _-- don't return proxies_
-`ecm:currentLifeCycleState != 'deleted'` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _-- don't return documents that are in the trash_
-
-{{/panel}}
+```
+SELECT * FROM Document WHERE
+dc:contributors = ?                          -- simple match on a multi-valued field
+AND ecm:mixinType != 'Folderish'             -- use facet to remove all folderish documents
+AND ecm:mixinType != 'HiddenInNavigation'    -- use facet to remove all documents that should be hidden
+AND ecm:isCheckedInVersion = 0               -- only get checked-out documents
+AND ecm:isProxy = 0 AND                      -- don't return proxies
+ecm:currentLifeCycleState != 'deleted'       -- don't return documents that are in the trash
+```
 
 As you may see, there is no security clause, because the repository will always only return documents that the current user can see. Security filtering is built-in, so you don't have to post-filter results returned by a search, even if you use complex custom security policies.
 
