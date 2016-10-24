@@ -340,4 +340,4 @@ If your Nuxeo server and the API Playground are not in the same domain, you need
 *   [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
 *   [REST API]({{page page='rest-api'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>

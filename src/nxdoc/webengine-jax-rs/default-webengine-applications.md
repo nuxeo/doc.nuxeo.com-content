@@ -102,4 +102,4 @@ Depending on the addons you've installed, you could also expose these URLs:
 *   [WebEngine (JAX-RS)]({{page page='webengine-jax-rs'}})
 *   [Navigation URLs]({{page page='navigation-urls'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>

@@ -101,4 +101,4 @@ Find out about more UI related features.
 *   [Labels and Translations Management]({{page page='labels-and-translations-management'}})
 *   [Documents Display Configuration]({{page page='documents-display-configuration'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>

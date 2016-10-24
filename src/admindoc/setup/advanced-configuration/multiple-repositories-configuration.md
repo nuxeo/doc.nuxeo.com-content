@@ -164,4 +164,4 @@ There must be an Elasticsearch index associated for each repository. See the [El
 *   [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
 *   [Binary Store]({{page space='nxdoc60' page='binary-store'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>

@@ -262,4 +262,4 @@ history:
 *   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page space='nxdoc60' page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
 *   [How to Customize Nuxeo Drive Versioning Policy]({{page space='nxdoc60' page='how-to-customize-nuxeo-drive-versioning-policy'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>

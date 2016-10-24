@@ -167,4 +167,4 @@ This page is about Nuxeo Drive 2\. For versions 1.x see the page [Nuxeo Drive 1.
 *   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
 *   [Nuxeo Drive user documentation]({{page space='userdoc60' page='nuxeo-drive'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>

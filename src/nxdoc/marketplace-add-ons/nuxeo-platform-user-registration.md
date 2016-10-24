@@ -241,4 +241,4 @@ Each&nbsp;user invitation request is actually a document stored in a specific co
 *   [Recommended Configurations]({{page space='admindoc60' page='recommended-configurations'}}) (admin documentation)
 *   [Authentication, users and groups]({{page space='admindoc60' page='authentication-users-and-groups'}}) (admin documentation)
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>

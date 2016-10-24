@@ -565,4 +565,4 @@ To handle a sublist property, you can use take example on this definition:
 *   [Standard Widget Types]({{page page='standard-widget-types'}})
 *   [Custom Widget Types]({{page page='custom-widget-types'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>

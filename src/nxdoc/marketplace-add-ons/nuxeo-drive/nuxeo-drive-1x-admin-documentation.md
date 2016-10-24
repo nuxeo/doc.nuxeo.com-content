@@ -266,4 +266,4 @@ The Settings popup should appear waiting for the user's credentials only.
 *   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
 *   [Nuxeo Drive user documentation]({{page space='userdoc60' page='nuxeo-drive'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>
