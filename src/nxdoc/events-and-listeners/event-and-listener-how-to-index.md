@@ -42,4 +42,4 @@ history:
         version: '1'
 
 ---
-{{{table_from_details headings='Excerpt, Topics, Level' spaces='Studio NXDOC710 IDEDOC' label='howto' filter='Topics=Event'}}}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='Studio 710/nxdoc IDEDOC' label='howto' filter='Topics=Event'}}}
