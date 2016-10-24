@@ -155,4 +155,4 @@ This widget type displays a selector with the list of available workflows that c
 *   [Custom Widget Types]({{page page='custom-widget-types'}})
 *   [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>

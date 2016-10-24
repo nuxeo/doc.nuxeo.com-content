@@ -1015,4 +1015,4 @@ document.setPropertyValue("schema:favorite", reference);
 *   [How to Customize Document Validation]({{page page='how-to-customize-document-validation'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>

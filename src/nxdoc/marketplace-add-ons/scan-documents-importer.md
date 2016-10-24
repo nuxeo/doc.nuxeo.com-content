@@ -229,4 +229,4 @@ A detailed documentation on the advanced XML parsing usage can be found on the [
 *   [Nuxeo Bulk Document Importer]({{page page='nuxeo-bulk-document-importer'}})
 *   [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>

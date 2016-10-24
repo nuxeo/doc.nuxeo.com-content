@@ -207,4 +207,4 @@ There must be an Elasticsearch index associated for each repository. See the [El
 *   [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
 *   [File Storage]({{page page='file-storage'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}</div><div class="column medium-6"></div></div>
