@@ -131,7 +131,6 @@ history:
 *   [Getting Started with the Nuxeo Platform]({{page page='getting-started-with-the-nuxeo-platform'}})
 *   [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
 *   [Quick Overview]({{page page='quick-overview'}})
-
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Educational
@@ -139,7 +138,6 @@ history:
 *   [Simple Workflow Example]({{page page='simple-workflow-example'}})
 *   [Design Tips]({{page page='design-tips'}})
 *   [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
-
 {{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### How-To Index
@@ -147,7 +145,6 @@ history:
 *   [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
 *   [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
 *   [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
-
 {{/panel}}</div><div class="column medium-6">
 
 &nbsp;

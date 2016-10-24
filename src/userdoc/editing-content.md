@@ -759,10 +759,10 @@ To move several documents from different workspaces at the same time,&nbsp;check
 
 </div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
-*   [How to Customize the Bulk Edit Form]({{page space='nxdoc' page='how-to-customize-the-bulk-edit-form'}})
-*   [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})
-*   [How to Control the Display Mode of a Widget]({{page space='nxdoc' page='how-to-control-the-display-mode-of-a-widget'}})
+- [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
+- [How to Customize the Bulk Edit Form]({{page space='nxdoc' page='how-to-customize-the-bulk-edit-form'}})
+- [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})
+- [How to Control the Display Mode of a Widget]({{page space='nxdoc' page='how-to-control-the-display-mode-of-a-widget'}})
 
 {{/panel}}
 
