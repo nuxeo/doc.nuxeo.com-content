@@ -270,11 +270,11 @@ Adding a tab that displays a content view using this feature is easy and straigh
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
-*   [How to Add Complex Fields on Your Document Type]({{page space='nxdoc' page='how-to-add-complex-fields-on-your-document-type'}})
-*   [How to Override Existing Document Types]({{page space='nxdoc60' page='how-to-override-existing-document-types'}})
-*   [How to Enable Add-Ons Features on Custom Document Type]({{page space='nxdoc' page='how-to-enable-add-ons-features-on-custom-document-type'}})
-*   [How-To Index]({{page space='nxdoc' page='how-to-index'}})
+- [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
+- [How to Add Complex Fields on Your Document Type]({{page space='nxdoc' page='how-to-add-complex-fields-on-your-document-type'}})
+- [How to Override Existing Document Types]({{page space='nxdoc60' page='how-to-override-existing-document-types'}})
+- [How to Enable Add-Ons Features on Custom Document Type]({{page space='nxdoc' page='how-to-enable-add-ons-features-on-custom-document-type'}})
+- [How-To Index]({{page space='nxdoc' page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">
 
