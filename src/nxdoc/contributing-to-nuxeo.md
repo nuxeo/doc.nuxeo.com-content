@@ -383,7 +383,7 @@ Nuxeo is highly modularized and as a consequence, it is totally possible to deve
 4.  Commit your development regularly (meaning don't wait to finish everything: on the contrary commit each of your developments on a very atomic mode, mentioning purpose of your commit in JIRA (take it as an advice more than a rule).
 5.  Unit tests are mandatory and Test Driven Development is strongly encouraged. Functional tests could also be integrated. We'll put your module under continuous integration, if the quality of the code respects Nuxeo criteria.
 6.  You can ask for a code review in the&nbsp;[nuxeo-dev mailing list](mailto:nuxeo-dev@lists.nuxeo.com).
-7.  [Package your plugin as a Nuxeo Package]({{page page='creating-nuxeo-packages'}}), if you want it to be on&nbsp;[Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/product/all)&nbsp; Plus it will be much easier for people to install it.
+7.  [Package your plugin as a Nuxeo Package]({{page page='creating-nuxeo-packages'}}), if you want it to be on&nbsp;[Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/)&nbsp; Plus it will be much easier for people to install it.
 
 In addition to code conventions and development good practices above-mentioned, wen creating a new module you should also take the following recommendations into considerations:
 
