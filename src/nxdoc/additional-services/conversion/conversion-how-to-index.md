@@ -38,4 +38,4 @@ history:
         version: '1'
 
 ---
-{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC60 ADMINDOC60 Studio' label='howto' filter='Topics=Conversion'}}}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='idedoc 60/nxdoc 60/admindoc Studio' label='howto' filter='Topics=Conversion'}}}

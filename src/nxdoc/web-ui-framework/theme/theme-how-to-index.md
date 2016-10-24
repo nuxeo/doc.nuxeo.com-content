@@ -19,26 +19,26 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/VIBVAQ'
     source_link: /display/NXDOC60/Theme+How-To+Index
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-03 16:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 17:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-05-23 15:07'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-02 15:14'
         message: ''
         version: '1'
 
 ---
-{{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC60 Studio' label='howto' filter='Topics=Theme'}}}
+{{{table_from_details headings='Excerpt, Topics, Level' spaces='idedoc 60/nxdoc Studio' label='howto' filter='Topics=Theme'}}}
