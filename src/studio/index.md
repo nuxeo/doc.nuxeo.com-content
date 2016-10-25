@@ -448,14 +448,7 @@ history:
 
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-
-### Nuxeo Online Services Subscribers
-
-- [Consult and create JIRA issues]({{page page='support-jira'}})
-- [How to edit your application's target environment]({{page page='nuxeo-online-services-portal'}})
-- [Register a new instance for your application]({{page space='nxdoc' page='registering-your-nuxeo-instance'}})
-
-
+{{> wistia_video id='me59a8g79l'}}
 {{/panel}}</div></div>
 
 {{{multiexcerpt 'license' page='NXDOC:index'}}}
