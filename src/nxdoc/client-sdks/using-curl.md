@@ -120,10 +120,10 @@ In a Windows environment, Nuxeo recommends to use cygwin shell to avoid all form
 
 {{/callout}}{{! multiexcerpt name='curl-examples'}}
 
-1.  Here is how to create a new File document type on the&nbsp;[Nuxeo demo instance](http://demo.nuxeo.com/), right under the default domain (you can copy, paste and test):
+1.  Here is how to create a new File document type on the&nbsp;[Nuxeo demo instance](https://nightly.nuxeo.com/), right under the default domain (you can copy, paste and test):
 
     ```
-    curl -X POST -H "Content-Type: application/json" -u Administrator:Administrator -d '{ "entity-type": "document", "name":"newDoc", "type": "File","properties": { "dc:title": "Specifications", "dc:description": "Created via a so cool and simple REST API", "common:icon": "/icons/file.gif", "common:icon-expanded": null, "common:size": null}}' http://demo.nuxeo.com/nuxeo/api/v1/path/default-domain
+    curl -X POST -H "Content-Type: application/json" -u Administrator:Administrator -d '{ "entity-type": "document", "name":"newDoc", "type": "File","properties": { "dc:title": "Specifications", "dc:description": "Created via a so cool and simple REST API", "common:icon": "/icons/file.gif", "common:icon-expanded": null, "common:size": null}}' https://nightly.nuxeo.com/nuxeo/api/v1/path/default-domain
     ```
 
 2.  You can get the new resource doing a standard GET (actually the JSON object was already returned in previous response):
@@ -135,17 +135,17 @@ In a Windows environment, Nuxeo recommends to use cygwin shell to avoid all form
 3.  Now, "lock" this document we have just created by calling an Automation operation from command API on the document resource.
 
     ```
-    curl -X POST -H "Content-Type: application/json+nxrequest"   -u Administrator:Administrator -d '{"params":{}}'  http://demo.nuxeo.com/nuxeo/api/v1/path/default-domain/newDoc/@op/Document.Lock
+    curl -X POST -H "Content-Type: application/json+nxrequest"   -u Administrator:Administrator -d '{"params":{}}'  https://nightly.nuxeo.com/nuxeo/api/v1/path/default-domain/newDoc/@op/Document.Lock
     ```
 
     Pay attention to the Content-Type that is specific when using the&nbsp;`@op` adapter.
 
-    You can check the result of your request on the web app ([http://demo.nuxeo.com/nuxeo/nxpath/default@view_domains](http://demo.nuxeo.com/nuxeo/nxpath/default@view_domains), credentials:&nbsp; Administrator/Administrator).
+    You can check the result of your request on the web app ([https://nightly.nuxeo.com/nuxeo/nxpath/default@view_domains](https://nightly.nuxeo.com/nuxeo/nxpath/default@view_domains), credentials:&nbsp; Administrator/Administrator).
 
 4.  You can also directly call an automation operation or chain, from the "Command endpoint". Here we return all the worskpaces of the demo.nuxeo.com instance:
 
     ```
-    curl -H 'Content-Type:application/json+nxrequest' -X POST -d '{"params":{"query":"SELECT * FROM Document WHERE ecm:primaryType=\"Workspace\""},"context":{}}'   -u Administrator:Administrator http://demo.nuxeo.com/nuxeo/api/v1/automation/Document.Query
+    curl -H 'Content-Type:application/json+nxrequest' -X POST -d '{"params":{"query":"SELECT * FROM Document WHERE ecm:primaryType=\"Workspace\""},"context":{}}'   -u Administrator:Administrator https://nightly.nuxeo.com/nuxeo/api/v1/automation/Document.Query
     ```
 
 {{! /multiexcerpt}}
