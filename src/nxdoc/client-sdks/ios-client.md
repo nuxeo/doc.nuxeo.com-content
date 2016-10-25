@@ -21,7 +21,7 @@ confluence:
     shortlink: 2Ir1
     shortlink_source: 'https://doc.nuxeo.com/x/2Ir1'
     source_link: /display/NXDOC/iOS+Client
-tree_item_index: 300
+tree_item_index: 500
 history:
     -
         author: Manon Lumeau

@@ -23,7 +23,7 @@ confluence:
     shortlink: dwSlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/dwSlAQ'
     source_link: /display/NXDOC/.NET+Client
-tree_item_index: 900
+tree_item_index: 400
 history:
     -
         author: Solen Guitter

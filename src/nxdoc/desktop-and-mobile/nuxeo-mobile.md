@@ -17,132 +17,132 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/TJHZAQ'
     source_link: /display/NXDOC/Nuxeo+Mobile
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-05 08:04'
         message: ''
         version: '26'
-    - 
+    -
         author: Anne Jubert
         date: '2016-10-04 09:44'
         message: ''
         version: '25'
-    - 
+    -
         author: Anne Jubert
         date: '2016-10-03 14:29'
         message: ''
         version: '24'
-    - 
+    -
         author: Anne Jubert
         date: '2016-10-03 14:28'
         message: ''
         version: '23'
-    - 
+    -
         author: Anne Jubert
         date: '2016-10-03 14:20'
         message: ''
         version: '22'
-    - 
+    -
         author: Anne Jubert
         date: '2016-10-03 14:18'
         message: ''
         version: '21'
-    - 
+    -
         author: Anne Jubert
         date: '2016-10-03 13:17'
         message: ''
         version: '20'
-    - 
+    -
         author: Anne Jubert
         date: '2016-10-03 13:07'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-02 08:24'
         message: ''
         version: '18'
-    - 
+    -
         author: Anne Jubert
         date: '2016-08-31 13:17'
         message: ''
         version: '17'
-    - 
+    -
         author: Anne Jubert
         date: '2016-08-31 13:05'
         message: ''
         version: '16'
-    - 
+    -
         author: Anne Jubert
         date: '2016-08-31 13:01'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2016-06-20 15:38'
         message: 'Add links, rephrase and reorganise content a bit'
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2016-06-20 12:43'
         message: ''
         version: '13'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-20 12:37'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2016-06-20 10:09'
         message: ''
         version: '11'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-20 10:07'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-06-19 22:34'
         message: ''
         version: '9'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-17 19:59'
         message: ''
         version: '8'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-17 19:57'
         message: ''
         version: '7'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-17 19:52'
         message: ''
         version: '6'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-17 14:01'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-06-16 12:10'
         message: ''
         version: '4'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-15 13:49'
         message: ''
         version: '3'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-15 12:48'
         message: ''
         version: '2'
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-06-15 11:30'
         message: ''
@@ -175,7 +175,7 @@ The Nuxeo application allows you to authenticate against a Nuxeo server, browse 
 
 ### Authenticating
 
-Once the application is installed and opened, indicate the Nuxeo server you want to connect to by filling the HTTP information. For example "[http://myserver.nuxeo.com/nuxeo](http://myserver.nuxeo.com/nuxeo)".As soon as the server is detected, the login page is displayed. Depending on your server configuration, it is the default one or your customized login page providing authentication through CAS, OpenID or another authentication system.
+Once the application is installed and opened, indicate the Nuxeo server you want to connect to by filling the HTTP information. For example `http://myserver.nuxeo.com/nuxeo`.As soon as the server is detected, the login page is displayed. Depending on your server configuration, it is the default one or your customized login page providing authentication through CAS, OpenID or another authentication system.
 
 ![]({{file name='MobileServerConnection.PNG'}} ?w=200,h=355,border=true)&nbsp; &nbsp;&nbsp;![]({{file name='MobileLoginPage.jpg'}} ?w=200,h=355,border=true)
 

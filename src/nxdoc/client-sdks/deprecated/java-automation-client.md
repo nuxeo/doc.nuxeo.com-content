@@ -12,8 +12,7 @@ labels:
     - java-client-component
 toc: true
 confluence:
-    ajs-parent-page-id: '16091040'
-    ajs-parent-page-title: Client SDKs
+    ajs-parent-page-title: Deprecated
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Java+Automation+Client

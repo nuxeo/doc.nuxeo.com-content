@@ -61,12 +61,10 @@ The platform already provides multiple clients for accessing the platform remote
 
 *   [JavaScript Client]({{page space='NXDOC' page='JavaScript Client'}})
 *   [Java Client]({{page space='NXDOC' page='Javaandroid Client'}})
+*   [Python Client]({{page space='NXDOC' page='Python Client'}})
+*   [.NET Client]({{page space='NXDOC' page='.NET Client'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Nuxeo .NET Client is a cross-platform client library developed in C# for the Nuxeo Automation and REST API.</span>
 *   [iOS Client]({{page space='NXDOC' page='iOS Client'}})
 *   [PHP Automation Client]({{page space='NXDOC' page='PHP Automation+Client'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A PHP automation client is made available on GitHub. You can use it and ask for commit rights on the project if you want to improve it or fix a bug. The project contains the library and some sample use cases.</span>
-*   [Python Client]({{page space='NXDOC' page='Python Client'}})
 *   [Client API Test suite (TCK)](/pages/viewpage.action?pageId=14255551)&nbsp;&mdash;&nbsp;<span class="smalltext">This chapter provides a test suite that can be used to test the implementation of an automation client library.</span>
 *   [Using cURL]({{page space='NXDOC' page='Using cURL'}})&nbsp;&mdash;&nbsp;<span class="smalltext">In this example we are using the UNIX curl command line tool to demonstrate how to invoke remote operations.</span>
-*   [.NET Client]({{page space='NXDOC' page='.NET Client'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Nuxeo .NET Client is a cross-platform client library developed in C# for the Nuxeo Automation and REST API.</span>
-*   [Java Automation Client]({{page space='NXDOC' page='Java Automation+Client'}})&nbsp;&mdash;&nbsp;<span class="smalltext">DEPRECATED Nuxeo provides a high level client implementation for Java programmers: Nuxeo Automation Client API simplifies your task since it handles all the protocol level details.</span>
-
 {{! /multiexcerpt}}

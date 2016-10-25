@@ -20,7 +20,7 @@ confluence:
     shortlink: pgA7
     shortlink_source: 'https://doc.nuxeo.com/x/pgA7'
     source_link: /display/NXDOC/Python+Client
-tree_item_index: 500
+tree_item_index: 300
 version_override:
     'LTS 2015': 710/nxdoc/using-a-python-client
     '6.0': 60/nxdoc/using-a-python-client

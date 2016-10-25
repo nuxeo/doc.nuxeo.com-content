@@ -21,7 +21,7 @@ confluence:
     shortlink: HwJu
     shortlink_source: 'https://doc.nuxeo.com/x/HwJu'
     source_link: /display/NXDOC/PHP+Automation+Client
-tree_item_index: 400
+tree_item_index: 600
 history:
     -
         author: Vincent Dutat
