@@ -39,12 +39,9 @@ history:
         version: '1'
 
 ---
-*   [Automated renaming]({{page space='Studio' page='Automated renaming'}})
-*   [Test your Studio config with a new version of DM or CMF]({{page space='Studio' page='Test your+Studio+config+with+a+new+version+of+DM+or+CMF'}})
-*   [Update the Version of Your Target Platform]({{page space='Studio' page='Update the+Version+of+Your+Target+Platform'}})
-*   [Naming Conventions]({{page space='Studio' page='Naming Conventions'}})
-*   [Automated validation]({{page space='Studio' page='Automated validation'}})
-*   [How to Enable Package Specific Features in Studio for DAM or Virtual Navigation?](https://doc.nuxeo.com/pages/viewpage.action?pageId=14255313)
-*   [Fast Track Cycle]({{page space='Studio' page='Fast Track+Cycle'}})
-
-&nbsp;
+* [Automated renaming]({{page space='Studio' page='Automated renaming'}})
+* [Test your Studio config with a new version of DM or CMF]({{page space='Studio' page='Test your+Studio+config+with+a+new+version+of+DM+or+CMF'}})
+* [Update the Version of Your Target Platform]({{page space='Studio' page='Update the+Version+of+Your+Target+Platform'}})
+* [Naming Conventions]({{page space='Studio' page='Naming Conventions'}})
+* [Automated validation]({{page space='Studio' page='Automated validation'}})
+* [How to Enable Package Specific Features in Studio for DAM or Virtual Navigation?](https://doc.nuxeo.com/pages/viewpage.action?pageId=14255313)

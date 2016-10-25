@@ -91,7 +91,7 @@ The Nuxeo Enterprise Platform workflow engine, a.k.a. Content Routing, aims at p
 
 You should first read the [Workflow pages of the Customization and Development section of the technical documentation]({{page space='nxdoc' page='workflow'}}) for knowing more about workflows. On the Studio documentation area, you will find details about the Studio screens and a tutorial to [start using the workflow engine]({{page space='nxdoc' page='simple-workflow-example'}}).
 
-*   [Workflow screens]({{page space='Studio' page='Workflow screens'}})
-*   [Node popup]({{page space='Studio' page='Node popup'}})
+* [Workflow screens]({{page space='Studio' page='Workflow screens'}})
+* [Node popup]({{page space='Studio' page='Node popup'}})
 
-<span style="font-size: 10.0pt;line-height: 13.0pt;">See also the</span> <span style="font-size: 10.0pt;line-height: 13.0pt;">[step by step example]({{page space='nxdoc' page='simple-workflow-example'}}).</span>
+See also the< [step by step example]({{page space='nxdoc' page='simple-workflow-example'}}).

@@ -29,3 +29,6 @@ history:
         version: '1'
 
 ---
+
+* [Add a new Permission in the UI]({{page page='add-a-new-permission-in-the-ui'}})
+* [Add predefined users and groups]({{page page='add-predefined-users-and-groups'}})

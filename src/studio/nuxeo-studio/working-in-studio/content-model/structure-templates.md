@@ -110,7 +110,7 @@ history:
 ---
 ## Concept
 
-When thinking of the structure of your repository, you might identify block of structures that will always be the same. For instance, by default with Nuxeo DM, when you create a Domain, you get subfolders Workspaces, Sections and Templates. You might also want such behavior when doing case management, so as to organize the structure of your case, ... Structure templates are actually a way of defining an automated structure that is bound to a folderish content type.
+When thinking of the structure of your repository, you might identify block of structures that will always be the same. For instance, when you create a Domain, you get subfolders Workspaces, Sections and Templates. You might also want such behavior when doing case management, so as to organize the structure of your case, ... Structure templates are actually a way of defining an automated structure that is bound to a folderish content type.
 
 In simple words: "**Each time I create a document of such type, I will also instantiate children documents of this type and this type... with this ACL (security) configuration**". With Studio, you can contribute several of such rules.
 
@@ -122,8 +122,8 @@ To create a structure template, click on **New**.
 
 ![]({{file name='NewStructureTemplate.png'}} ?w=350,h=269,border=true)
 
-*   **Feature ID**: Technical ID of the feature
-*   **Target&nbsp;** **document type**: This drop down list identifies all the document types of the platform and the one(s) you have created (see [how to override an existing document type]({{page space='nxdoc60' page='how-to-override-existing-document-types'}})).
+* **Feature ID**: Technical ID of the feature
+* **Target document type**: This drop down list identifies all the document types of the platform and the one(s) you have created (see [how to override an existing document type]({{page space='nxdoc60' page='how-to-override-existing-document-types'}})).
 
 ## Editing a Structure Template
 
@@ -131,18 +131,18 @@ Once you have selected the target document type and clicked on **Next**, you wil
 
 ![]({{file name='StructureTemplate-Domain.png'}} ?w=650,h=195,border=true)
 
-*   **Add**: Add another document type to the structure template.&nbsp;
-*   **ACL**:
-    *   **Add**: A pop-up window is displayed where you have to manage the permissions&nbsp;to this structure (see the documentation about [permissions]({{page space='userdoc' page='managing-permissions'}})).&nbsp;
-    *   **Edit**: Edit an access control.
-    *   **Block Inheritance**: Block the permissions inheritance.
-    *   **Delete**: Delete an access control (you can select several lines at a time).
+* **Add**: Add another document type to the structure template.
+* **ACL**:
+    * **Add**: A pop-up window is displayed where you have to manage the permissions to this structure (see the documentation about [permissions]({{page space='userdoc' page='managing-permissions'}})).
+    * **Edit**: Edit an access control.
+    * **Block Inheritance**: Block the permissions inheritance.
+    * **Delete**: Delete an access control (you can select several lines at a time).
 
 On every document type that you want to add to your structure, you will have to define the **node properties**.
 
 ![]({{file name='StructureTemplate-Workspace.png'}} ?w=650,h=315,border=true)
 
-*   **Node Type**: The ID node.
-*   **Node Name**: The name displayed in Studio.
-*   **Title**: The name of the document type displayed on your Nuxeo Platform.
-*   **Description**: The description of the document type. This description is here for information purposes.
+* **Node Type**: The ID node.
+* **Node Name**: The name displayed in Studio.
+* **Title**: The name of the document type displayed on your Nuxeo Platform.
+* **Description**: The description of the document type. This description is here for information purposes.
