@@ -450,7 +450,7 @@ This procedure can only be used for **Nuxeo 6.0 and later** versions. **For Nuxe
 8.  Nuxeo IDE is installed.
     A new button is available in the Eclipse toolbar: ![]({{file name='NxIDE_button.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}})
 9.  Open the Nuxeo perspective:
-    Using the open perspective button ![]({{file name='open-perspective.png'}}) or from the Window, Perspective menu.
+    Using the open perspective button ![]({{file name='open-perspective.png'}} ?thumbnail=true) or from the Window, Perspective menu.
     Choose the Nuxeo perspective.
     ![]({{file name='nuxeo-perspective.png'}})
     A new set of tabs will then be available to interact with your projects and your Nuxeo Platform server.
@@ -476,7 +476,7 @@ This procedure can only be used for **Nuxeo 6.0 and later** versions. **For Nuxe
 8.  Open the Nuxeo perspective:
     Using the open perspective button at the top right corner from the Eclipse window ![]({{file name='open-perspective.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}}) or from the Window, Perspective menu.
     Choose the Nuxeo perspective.
-    ![]({{file name='nuxeo-perspective.png'}})
+    ![]({{file name='nuxeo-perspective.png'}} ?thumbnail=true)
     A new set of tabs will then be available to interact with your projects and your Nuxeo Platform server.
 
 ## Step 2 - Register a Nuxeo Online Services Account
