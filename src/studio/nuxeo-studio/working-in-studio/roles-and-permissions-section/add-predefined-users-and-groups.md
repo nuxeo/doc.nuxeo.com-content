@@ -66,20 +66,17 @@ The steps to add a new user or a new group are basically the same.
 1.  In the left menu, click **Roles and Permissions** and **Users & Groups**.
     *   If users and groups have already been created, the Users tab is displayed with already existing users listed. Jump to step 3 to add new users.
     *   If users and groups haven't been defined yet, a **Create** button is displayed. Continue to step 2 to create default users and groups.
+
 2.  If no user and group have been defined, click on the **Create** button.
     The "Administrator" user and the groups "members" and "administrators" are automatically created by the system. You can now add new default users and groups.
 3.  In the Users or Groups tab, click the **Add** button.
-4.  In the window that pops up, type the new user's or group's name.
-    ![]({{file name='STUDIO-UsersGroups.png'}} ?w=600)
+4.  In the window that pops up, type the new user's or group's name. ![]({{file name='STUDIO-UsersGroups.png'}} ?w=600)
 5.  Edit the user's or group properties (see below for more details).
 6.  Click **Save**. {{#> callout type='note' }}
-
     When you deploy your customizations, you will need to empty your database to enable the creation of these users and groups. Until you do so, you will only have the users and groups of a default Nuxeo application.
-
-    {{/callout}} {{#> callout type='warning' }}
-
+    {{/callout}}
+    {{#> callout type='warning' }}
     If you choose a Creation Policy of "Always", then at each reload or restart the Studio-defined users and groups will **completely replace** anything you may have changed from Nuxeo. Any updates, additions or removals done from Nuxeo will be lost.
-
     {{/callout}}
 
 {{/panel}}
