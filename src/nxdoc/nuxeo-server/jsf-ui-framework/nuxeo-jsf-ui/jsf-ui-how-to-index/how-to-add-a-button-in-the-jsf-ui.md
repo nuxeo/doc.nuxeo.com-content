@@ -362,10 +362,10 @@ You can [contribute an XML extension]({{page page='how-to-contribute-to-an-exten
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-*   [How to Hide a Tab, a Link or a Button for a Group or a User]({{page page='how-to-hide-a-tab-a-link-or-a-button-for-a-group-or-a-user'}})
-*   [How to Make the New Button Appear on a Custom Folderish Document]({{page page='how-to-make-the-new-button-appear-on-a-custom-folderish-document'}})
-*   [How to Add a New Action Category on a Document Tab]({{page page='how-to-add-a-new-action-category-on-a-document-tab'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Hide a Tab, a Link or a Button for a Group or a User]({{page page='how-to-hide-a-tab-a-link-or-a-button-for-a-group-or-a-user'}})
+- [How to Make the New Button Appear on a Custom Folderish Document]({{page page='how-to-make-the-new-button-appear-on-a-custom-folderish-document'}})
+- [How to Add a New Action Category on a Document Tab]({{page page='how-to-add-a-new-action-category-on-a-document-tab'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}
 
@@ -375,9 +375,9 @@ You can [contribute an XML extension]({{page page='how-to-contribute-to-an-exten
 
 </div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Standard Action Types]({{page page='standard-action-types'}})
-*   [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
-*   [User Actions in Nuxeo Studio]({{page space='studio' page='user-actions'}})
-*   [User actions categories]({{page space='studio' page='user-actions-categories'}})
+- [Standard Action Types]({{page page='standard-action-types'}})
+- [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
+- [User Actions in Nuxeo Studio]({{page space='studio' page='user-actions'}})
+- [User actions categories]({{page space='studio' page='user-actions-categories'}})
 
 {{/panel}}</div></div>
