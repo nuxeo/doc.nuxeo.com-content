@@ -20,8 +20,8 @@ confluence:
     source_link: /display/NXDOC/Marketplace+Add-Ons
 tree_item_index: 500
 version_override:
-    'LTS 2015': 710/nxdoc/marketplace-add-ons/
-    '6.0': 60/nxdoc/marketplace-add-ons/
+    'LTS 2015': 710/nxdoc/marketplace-add-ons
+    '6.0': 60/nxdoc/marketplace-add-ons
 history:
     -
         author: Manon Lumeau
