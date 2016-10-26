@@ -58,8 +58,8 @@ history:
 
 Find out about the features and concepts of the Nuxeo Platform.
 
-*   [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
-*   [Nuxeo Platform Feature Table]({{page page='nuxeo-platform-feature-table'}})
+- [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
+- [Nuxeo Platform Feature Table]({{page page='nuxeo-platform-feature-table'}})
 
 {{/panel}}{{#> panel type='secondary' match_height='true'}}
 
@@ -67,8 +67,8 @@ Find out about the features and concepts of the Nuxeo Platform.
 
 Any project requires to choose between several possible implementations. Here are some tips to do the choices that best fit your needs.
 
-*   [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
-*   [Choosing How to Customize the UI]({{page page='choosing-how-to-customize-the-ui'}})
+- [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
+- [Choosing How to Customize the UI]({{page page='choosing-how-to-customize-the-ui'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
@@ -76,8 +76,8 @@ Any project requires to choose between several possible implementations. Here ar
 
 You don't know how to get your project started? Here are some tips for you.
 
-*   [Bootstrap Your Document Management Project]({{page page='bootstrap-your-document-management-project'}})
-*   [Bootstrap Your Case Management Project]({{page page='bootstrap-your-case-management-project'}})
+- [Bootstrap Your Document Management Project]({{page page='bootstrap-your-document-management-project'}})
+- [Bootstrap Your Case Management Project]({{page page='bootstrap-your-case-management-project'}})
 
 {{/panel}}{{#> panel type='secondary' match_height='true'}}
 
@@ -85,8 +85,8 @@ You don't know how to get your project started? Here are some tips for you.
 
 Here are some resources to help you start your Nuxeo Platform application:
 
-*   [Getting Started with the Nuxeo Platform]({{page page='getting-started-with-the-nuxeo-platform'}})
-*   [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
-*   [First Steps With Studio: Technical Documentation Tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}})
+- [Getting Started with the Nuxeo Platform]({{page page='getting-started-with-the-nuxeo-platform'}})
+- [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
+- [First Steps With Studio: Technical Documentation Tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}})
 
 {{/panel}}</div></div>
