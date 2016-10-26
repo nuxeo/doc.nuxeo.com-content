@@ -935,23 +935,19 @@ At this point you have uninstalled the Nuxeo Drive program and its configuration
 
 To uninstall Nuxeo Drive:
 
-1.  Quit Nuxeo Drive:
-    1.  Click on the icon in the system tray.
-    2.  Click on **Quit** in the menu.{{#> callout type='info' }}
+1. Quit Nuxeo Drive:
+    1. Click on the icon in the system tray.
+    2. Click on **Quit** in the menu.{{#> callout type='info' }}
 
     At this point you can check that there are no `ndrivew.exe` or `ndrive.exe` remaining processes in the **Processes** tab of the **Windows Task Manager** that you can open by typing Ctrl + Shift + Esc.
 
     If you find such processes, kill them manually by right-clicking on their name and clicking on **End Process**.
-
     {{/callout}}
-2.  Uninstall the Nuxeo Drive application like a regular program using the Control Panel.
-
+2. Uninstall the Nuxeo Drive application like a regular program using the Control Panel.
     {{#> callout type='tip' }}
-
     If you have any problem during the uninstallation process you can try using this [Microsoft tool](https://support.microsoft.com/fr-fr/mats/program_install_and_uninstall) to uninstall Nuxeo Drive properly.
-
     {{/callout}}
-3.  Waiting for&nbsp;[NXDRIVE-476](https://jira.nuxeo.com/browse/NXDRIVE-476)&nbsp;to be resolved you also need to manually delete the empty&nbsp;`C:\Program Files (x86)\Nuxeo`&nbsp;directory.
+3. Waiting for&nbsp;[NXDRIVE-476](https://jira.nuxeo.com/browse/NXDRIVE-476)&nbsp;to be resolved you also need to manually delete the empty&nbsp;`C:\Program Files (x86)\Nuxeo`&nbsp;directory.
 
 {{#> callout type='warning' }}
 
