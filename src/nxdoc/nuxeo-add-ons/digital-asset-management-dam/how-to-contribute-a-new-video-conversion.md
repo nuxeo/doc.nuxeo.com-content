@@ -206,24 +206,16 @@ To run the "WebM 480p" video conversion automatically:
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
-
-*   [How to Contribute a New Video Conversion]({{page space='NXDOC' page='How to+Contribute+a+New+Video+Conversion'}})
-*   <div>[Conversion]({{page space='NXDOC' page='Conversion'}})</div>
-
-*   <div>[Supported File Formats]({{page space='NXDOC' page='Supported File+Formats'}})</div>
-
-*   <div>[How to Automatically Convert a Document to PDF]({{page space='NXDOC' page='How to+Automatically+Convert+a+Document+to+PDF'}})</div>
-
-*   <div>[How to Contribute a Command Line Converter]({{page space='NXDOC' page='How to+Contribute+a+Command+Line+Converter'}})</div>
-
-*   <div>[How to Contribute Picture Conversions]({{page space='NXDOC' page='How to+Contribute+Picture+Conversions'}})</div>
-
-*   <div>[How to Quickly Generate a PDF Using Document Template]({{page space='NXDOC' page='How to+Quickly+Generate+a+PDF+Using+Document+Template'}})</div>
-
-*   <div>[Digital Asset Management (DAM)](/pages/viewpage.action?pageId=3866704)</div>
-
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
-
-*   [User actions categories]({{page space='Studio' page='User actions+categories'}})<span class="smalltext">(Nuxeo Online Services)</span>
+- [How to Contribute a New Video Conversion]({{page space='NXDOC' page='How to+Contribute+a+New+Video+Conversion'}})
+- [Conversion]({{page space='NXDOC' page='Conversion'}})
+- [Supported File Formats]({{page space='NXDOC' page='Supported File+Formats'}})
+- [How to Automatically Convert a Document to PDF]({{page space='NXDOC' page='How to+Automatically+Convert+a+Document+to+PDF'}})
+- [How to Contribute a Command Line Converter]({{page space='NXDOC' page='How to+Contribute+a+Command+Line+Converter'}})
+- [How to Contribute Picture Conversions]({{page space='NXDOC' page='How to+Contribute+Picture+Conversions'}})
+- [How to Quickly Generate a PDF Using Document Template]({{page space='NXDOC' page='How to+Quickly+Generate+a+PDF+Using+Document+Template'}})
+- [Digital Asset Management (DAM)](/pages/viewpage.action?pageId=3866704)
+{{/panel}}</div><div class="column medium-6">
+{{#> panel heading='Related pages in other documentation'}}
+- [User actions categories]({{page space='Studio' page='User actions+categories'}})<span class="smalltext">(Nuxeo Online Services)</span>
 
 {{/panel}}</div></div>
