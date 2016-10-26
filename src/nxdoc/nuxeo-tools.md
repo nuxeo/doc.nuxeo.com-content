@@ -14,7 +14,8 @@ Nuxeo offers a series of tools to help you develop on the Nuxeo Platform and cus
 {{{excerpt 'nuxeo-dev-tools-extension'}}}
 
 **Customize Your Nuxeo Platform Instance with [Nuxeo Studio]({{page space='studio' page='nuxeo-studio'}})**
-{{{excerpt space='studio' page='studio-overview-and-concepts'}}}
+
+Nuxeo Studio is a SaaS (Software as a Service) application allowing you to customize Nuxeo products, from minor details to significant changes. With its graphical user interface, you can develop real new applications from the Nuxeo Platform without writing code.
 
 **Extend the Nuxeo Platform with [Nuxeo IDE]({{page space='idedoc' page='index'}})**
 
