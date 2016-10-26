@@ -350,9 +350,9 @@ If you think you've found a security issue, please report it privately to [secur
 
 {{#> panel heading='Related Documentation'}}
 
-*   [Monitoring and Maintenance]({{page page='monitoring-and-maintenance'}})
-*   [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
-*   [Transactions and Connections]({{page page='transactions-and-connections'}})
+- [Monitoring and Maintenance]({{page page='monitoring-and-maintenance'}})
+- [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
+- [Transactions and Connections]({{page page='transactions-and-connections'}})
 
 {{/panel}}</div><div class="column medium-6">
 

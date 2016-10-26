@@ -191,8 +191,8 @@ It allows the parameters associated to the stored blobs to be shared accross clu
 
 {{#> panel heading='Related Documentation'}}
 
-*   [Redis Configuration]({{page page='redis-configuration'}})
-*   [Work and WorkManager]({{page page='work-and-workmanager'}})
+- [Redis Configuration]({{page page='redis-configuration'}})
+- [Work and WorkManager]({{page page='work-and-workmanager'}})
 
 {{/panel}}</div><div class="column medium-6">
 

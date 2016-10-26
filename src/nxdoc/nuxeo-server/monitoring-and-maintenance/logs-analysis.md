@@ -363,10 +363,10 @@ WARN
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Purging Audit Logs (NXP_LOGS)]({{page page='purging-audit-logs-nxp_logs'}})
-*   [Setup Best Practices]({{page page='setup-best-practices'}})
-*   [How to Estimate Volume Usage]({{page page='how-to-estimate-volume-usage'}})
-*   [Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)
+- [Purging Audit Logs (NXP_LOGS)]({{page page='purging-audit-logs-nxp_logs'}})
+- [Setup Best Practices]({{page page='setup-best-practices'}})
+- [How to Estimate Volume Usage]({{page page='how-to-estimate-volume-usage'}})
+- [Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)
 
 {{/panel}}</div><div class="column medium-6">
 

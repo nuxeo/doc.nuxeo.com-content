@@ -318,9 +318,9 @@ END;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Logs Analysis]({{page page='logs-analysis'}})
-*   [Audit]({{page page='audit'}})
-*   [Workflow Audit Log]({{page page='workflow-audit-log'}})
+- [Logs Analysis]({{page page='logs-analysis'}})
+- [Audit]({{page page='audit'}})
+- [Workflow Audit Log]({{page page='workflow-audit-log'}})
 
 {{/panel}}</div><div class="column medium-6">
 

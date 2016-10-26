@@ -173,8 +173,8 @@ If you choose MySQL for your Nuxeo project, you should know that in the past, we
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics'}}
 
-*   [Connecting Nuxeo to the Database]({{page page='connecting-nuxeo-to-the-database'}})
-*   [How to Estimate Volume Usage]({{page page='how-to-estimate-volume-usage'}})
+- [Connecting Nuxeo to the Database]({{page page='connecting-nuxeo-to-the-database'}})
+- [How to Estimate Volume Usage]({{page page='how-to-estimate-volume-usage'}})
 
 {{/panel}}</div><div class="column medium-6">
 

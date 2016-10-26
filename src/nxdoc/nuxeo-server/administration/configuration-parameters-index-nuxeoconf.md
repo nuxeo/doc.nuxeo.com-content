@@ -2440,7 +2440,7 @@ Since 6.0
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related content'}}
 
-_ [Setup Best Practices]({{page page='setup-best-practices'}})
+- [Setup Best Practices]({{page page='setup-best-practices'}})
 
 - [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
 

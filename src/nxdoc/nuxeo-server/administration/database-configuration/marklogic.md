@@ -132,7 +132,7 @@ In order to create these indexes, go to your MarkLogic server configuration, und
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
-*   [DBS]({{page page='dbs'}})
+- [DBS]({{page page='dbs'}})
 
 {{/panel}}</div><div class="column medium-6">
 

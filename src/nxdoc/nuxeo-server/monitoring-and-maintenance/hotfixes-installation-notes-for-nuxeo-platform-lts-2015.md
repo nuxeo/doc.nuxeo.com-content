@@ -79,11 +79,11 @@ history:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
-*   [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
+- [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
+- [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [List of hotfixes for Nuxeo Platform LTS 205](https://connect.nuxeo.com/nuxeo/site/marketplace/hotfixes/cap-7.10)
+- [List of hotfixes for Nuxeo Platform LTS 205](https://connect.nuxeo.com/nuxeo/site/marketplace/hotfixes/cap-7.10)
 
 {{/panel}}</div></div>

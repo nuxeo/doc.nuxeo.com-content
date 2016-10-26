@@ -65,8 +65,8 @@ You can filter the statisticts on a specific time period.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Admin Tab Overview]({{page page='admin-tab-overview'}})
-*   [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
+- [Admin Tab Overview]({{page page='admin-tab-overview'}})
+- [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
 
 {{/panel}}</div><div class="column medium-6">
 

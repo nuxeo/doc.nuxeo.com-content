@@ -300,8 +300,8 @@ Before going live, you should configure one of the production-safe database supp
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related content'}}
 
-*   [Admin Tab Overview]({{page page='admin-tab-overview'}})
-*   [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
+- [Admin Tab Overview]({{page page='admin-tab-overview'}})
+- [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
 
 {{/panel}}</div><div class="column medium-6">
 

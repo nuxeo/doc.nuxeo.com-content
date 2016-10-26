@@ -193,9 +193,9 @@ Based on the above estimations, you must reserve dedicated place(s) to store the
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Database Configuration]({{page page='database-configuration'}})
-*   [Logs Analysis]({{page page='logs-analysis'}})
-*   [Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)
+- [Database Configuration]({{page page='database-configuration'}})
+- [Logs Analysis]({{page page='logs-analysis'}})
+- [Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)
 
 {{/panel}}</div><div class="column medium-6">
 
