@@ -165,44 +165,41 @@ history:
 
 The default URL patterns for downloading files from within the JSF environment are:
 
-*   <pre>http://{server}:{port}/nuxeo/nxfile/{repository}/{uuid}/blobholder:{blobIndex}/{fileName}</pre>
-
-*   <pre>http://{server}:{port}/nuxeo/nxfile/{repository}/{uuid}/{propertyXPath}/{fileName}</pre>
+- `http://{server}:{port}/nuxeo/nxfile/{repository}/{uuid}/blobholder:{blobIndex}/{fileName}`
+- `http://{server}:{port}/nuxeo/nxfile/{repository}/{uuid}/{propertyXPath}/{fileName}`
 
 Where :
 
 
-*   `nxfile` is the download servlet.
+- `nxfile` is the download servlet.
     Note that `nxbigfile`&nbsp;is also accepted for compatibility with older versions.
-*   `repository`&nbsp;is the identifier of the target repository.
-*   `uuid`&nbsp;is the uuid of the target document.
-*   `blobIndex`&nbsp;is the index of the Blob inside the&nbsp;`BlobHolder`&nbsp;adapter corresponding to the target Document Type,starting at 0: `blobholder:0`,&nbsp;`blobholder:1`.
-*   `propertyXPath`&nbsp;is the xPath of the target Blob property inside the target document. For instance: `file:content` ,&nbsp; `files:files/0/file`.
-*   `fileName`&nbsp;is the name of the file as it should be downloaded.
+- `repository`&nbsp;is the identifier of the target repository.
+- `uuid`&nbsp;is the uuid of the target document.
+- `blobIndex`&nbsp;is the index of the Blob inside the&nbsp;`BlobHolder`&nbsp;adapter corresponding to the target Document Type,starting at 0: `blobholder:0`,&nbsp;`blobholder:1`.
+- `propertyXPath`&nbsp;is the xPath of the target Blob property inside the target document. For instance: `file:content` ,&nbsp; `files:files/0/file`.
+- `fileName`&nbsp;is the name of the file as it should be downloaded.
     This information is optional and is actually not used to do the resolution.
-*   `?inline=true` is an optional parameter to force the download to be made with&nbsp;`Content-Disposition: inline`. This means that the content will be displayed in the browser (if possible) instead of being downloaded.
+- `?inline=true` is an optional parameter to force the download to be made with&nbsp;`Content-Disposition: inline`. This means that the content will be displayed in the browser (if possible) instead of being downloaded.
 
 Here are some examples:
 
-*   The main file of the document:
-    `<span class="nolink"><span class="nolink"><span class="nolink"><span class="nolink">http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496</span></span></span></span>`
-*   The main file of the document with a different name:
-    `<span class="nolink"><span class="nolink"><span class="nolink"><span class="nolink">http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:0/mydocument.pdf</span></span></span></span>`
-*   An attached file of the document:
-    `<span class="nolink"><span class="nolink"><span class="nolink"><span class="nolink">http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:1</span></span></span></span>`
-*   A file stored in the given property:
-    `<span class="nolink"><span class="nolink"><span class="nolink"><span class="nolink">http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/myschema:content</span></span></span></span>`
-*   A file stored in the given complex property, downloaded with a specific filename:
-    `<span class="nolink"><span class="nolink"><span class="nolink"><span class="nolink">http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/files:files/0/file/myimage.png</span></span></span></span>
-    `
-*   The main file of the document inside the browser instead of being downloaded:&nbsp;
-    `<span class="nolink"><span class="nolink"><span class="nolink"><span class="nolink">http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496?inline=true</span></span></span></span>`
+- The main file of the document:
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496`
+- The main file of the document with a different name:
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:0/mydocument.pdf`
+- An attached file of the document:
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:1`
+- A file stored in the given property:
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/myschema:content`
+- A file stored in the given complex property, downloaded with a specific filename:
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/files:files/0/file/myimage.png`
+- The main file of the document inside the browser instead of being downloaded:&nbsp;
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496?inline=true`
 
-</div>
 
 For Picture document type, a similar system is available to be able to get the attachments depending on the view name:
 
-*   `http://{server}:{port}/nuxeo/nxpicsfile/{repository}/{uuid}/{viewName}:content/{fileName}`
+- `http://{server}:{port}/nuxeo/nxpicsfile/{repository}/{uuid}/{viewName}:content/{fileName}`
 
 where, by default,&nbsp;`viewName`&nbsp;can be Original, OriginalJpeg, Medium, Thumbnail.
 
@@ -264,7 +261,7 @@ xmlns:nxu="http://nuxeo.org/nxweb/util"
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in this documentation'}}
 
-*   [Default URL Patterns]({{page page='default-url-patterns'}})
-*   [Navigation URLs]({{page page='navigation-urls'}})
+- [Default URL Patterns]({{page page='default-url-patterns'}})
+- [Navigation URLs]({{page page='navigation-urls'}})
 
 {{/panel}}</div><div class="column medium-6"></div></div>
