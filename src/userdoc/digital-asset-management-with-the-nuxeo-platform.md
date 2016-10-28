@@ -188,9 +188,9 @@ See the page [Supported File Formats]({{page space='nxdoc' page='supported-file-
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related User Documentation'}}
 
-*   [Creating Content]({{page page='creating-content'}})
-*   [Editing Content]({{page page='editing-content'}})
-*   [Collections]({{page page='collections'}})
+- [Creating Content]({{page page='creating-content'}})
+- [Editing Content]({{page page='editing-content'}})
+- [Collections]({{page page='collections'}})
 
 {{/panel}}
 
@@ -200,8 +200,8 @@ See the page [Supported File Formats]({{page space='nxdoc' page='supported-file-
 
 </div><div class="column medium-6">{{#> panel heading='Other Related Documentation '}}
 
-*   [DAM developer documentation]({{page space='nxdoc' page='digital-asset-management-dam'}})
-*   [How to Contribute a New Video Conversion]({{page space='nxdoc' page='how-to-contribute-a-new-video-conversion'}})
-*   [How to Contribute Picture Conversions]({{page space='nxdoc' page='how-to-contribute-picture-conversions'}})
+- [DAM developer documentation]({{page space='nxdoc' page='digital-asset-management-dam'}})
+- [How to Contribute a New Video Conversion]({{page space='nxdoc' page='how-to-contribute-a-new-video-conversion'}})
+- [How to Contribute Picture Conversions]({{page space='nxdoc' page='how-to-contribute-picture-conversions'}})
 
 {{/panel}}</div></div>
