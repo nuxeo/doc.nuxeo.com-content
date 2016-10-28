@@ -249,7 +249,7 @@ Response:&nbsp;there are 3 cases here.
     {"batchId": myBatchId, "fileIdx": "0", "uploadType": "chunked", "uploadedSize": chunkSize, "uploadedChunkIds": [0, 1, 2], "chunkCount": 5}
     ```
 
-    => Repeat the step [Uploading Chunk i out of 5](#uploadingchunkioutof5)&nbsp;with `X-Upload-Chunk-Index`&nbsp;= index of the next chunk to upload, the easiest being <i + 1>.
+    => Repeat the step [Uploading Chunk i out of 5](#uploadingchunkioutof5)&nbsp;with `X-Upload-Chunk-Index`&nbsp;= index of the next chunk to upload, the easiest being `<i + 1>`.
     At this point a request to [know the chunk completion](#resumeaninterruptedupload) and determine the next chunk to upload can be made.
 
 2.  The chunk has been uploaded and the file is now complete, meaning this was the last chunk to upload.
