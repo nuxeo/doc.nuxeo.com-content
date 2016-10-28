@@ -373,11 +373,9 @@ The numbers below are given as an idea, sizing obviously depends on your usage o
 
 {{! /multiexcerpt}}
 
-#### Default Configuration
+#### Embedded Database:H2
 
-The default persistence configuration is lightweight and easy to use, but it is not made for performance.
-
-The Nuxeo Platform uses:
+The distribution comes with a default persistence configuration that is lightweight and easy to use, but it is not made for poduction usage:
 
 {{! multiexcerpt name='default-configuration'}}
 
@@ -385,14 +383,15 @@ The Nuxeo Platform uses:
 *   Filesystem persistence with&nbsp;[VCS]({{page space='glos' page='vcs'}}) for the Document repository.
 
 {{! /multiexcerpt}}
+You should adapt that configuration as soon as you want to use your application for real life use cases.
 
 #### For Optimal Performances
 
 {{! multiexcerpt name='optimal-configuration'}}
 
 *   Linux 64&nbsp;bits,
-*   PostgreSQL 9.3, Use PostgreSQL for document repository and all other services.
-*   Have plenty of RAM (>= 4&nbsp;GB).
+*   PostgreSQL 9.5, Use PostgreSQL for document repository and all other services.
+*   Have plenty of RAM (>= 8&nbsp;GB).
 
 {{! /multiexcerpt}}
 
