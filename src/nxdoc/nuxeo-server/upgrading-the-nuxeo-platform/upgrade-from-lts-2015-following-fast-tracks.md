@@ -451,6 +451,24 @@ The&nbsp; [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/packag
 
 </div>
 
+# From 8.3 to LTS 2016
+
+## Installation & Configuration
+
+### Elasticsearch Upgrade
+
+Upgrading Elasticsearch to 2.3.x is required. Please have a look at Elasticsearch breaking changes [here](https://www.elastic.co/guide/en/elasticsearch/reference/2.0/breaking-changes-2.0.html).
+
+In order to upgrade your cluster to 2.3.x, please follow these [steps](https://www.elastic.co/guide/en/elasticsearch/reference/current/restart-upgrade.html).
+
+As dot are not longer accepted as a property name, we replaced property like `ecm:path.depth` by `ecm:path@depth`. So you need to drop your index containing propertiesf with dot, upgrade Elasticsearch cluster + Nuxeo and re-index your repository. In Nuxeo case, only the index storing documents needs to be re-indexed.
+
+Furthermore `NxQueryBuilder.limit(int)` won't accept `-1` soon due to ElasticSearch change on `index.max_result_window`. This parameter is now 10000 by default, which prevent us to set Integer.MAX_VALUE in order to return all documents.
+In order to fetch all documents, we recommend you to use the scroll API instead (`ElasticSearchComponent.scroll(NxQueryBuilder, long)`).
+All queries made with a `-1` as limit will fail unless you update the `index.max_result_window` setting on ES cluster (highly unrecommended).
+
+See [NXP-19194](https://jira.nuxeo.com/browse/NXP-19194).
+
 {{> end_of_tabs }}
 
 &nbsp;

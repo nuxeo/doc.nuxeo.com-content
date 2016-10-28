@@ -181,9 +181,13 @@ More information on the pages [Nuxeo and Redis]({{page page='nuxeo-and-redis'}})
 FT 8.x</th><th colspan="1">Nuxeo Platform
 LTS 2015</th><th colspan="1">Nuxeo Platform
 6.0</th><th colspan="1">Nuxeo Platform
-5.8</th></tr><tr><th colspan="1">Elasticsearch</th><td colspan="1">Library: 1.5.2
-Cluster: 1.1.2 to 1.7.x</td><td colspan="1">Library: 1.5.2
-Cluster: 1.1.2 to 1.7.x</td><td colspan="1">Library: 1.1.2
+5.8</th></tr><tr><th colspan="1">Elasticsearch</th><td colspan="1">From 8.1 to 8.3:<br/>
+Library: 1.5.2
+Cluster: 1.5.2 to 1.7.x<br/>
+From 8.10:<br/>
+Library: 2.3.5
+Cluster: 2.3.x</td><td colspan="1">Library: 1.5.2
+Cluster: 1.5.2 to 1.7.x</td><td colspan="1">Library: 1.1.2
 Cluster: 1.1.2 to 1.7.x</td><td colspan="1">Available as a Nuxeo Package starting from 5.8-HF16</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
 More information on the page [Elasticsearch Setup]({{page page='elasticsearch-setup'}}).
