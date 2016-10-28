@@ -336,8 +336,7 @@ These aliases are stored in the ~/.gitconfig file, you can also edit it manually
 
 Here are some aliases inspired from our Mercurial usage and from our current experience with Git:{{! multiexcerpt name='git-aliases'}}
 
-&nbsp;
-
+```
 ## Before Git 1.8.3 (May 24, 2013), remove the occurrences of `%C(auto)` or replace them with fixed colors such as&nbsp;`%Cgreen`, `%C(bold blue)`...
 
 # Simple shortcuts
@@ -389,7 +388,7 @@ Here are some aliases inspired from our Mercurial usage and from our current exp
 `authorship = "!git ls-files -z|xargs -0 -n1 -E'\n' | git blame --date short -wCMcp -- | perl -pe 's/^.*?\\((.*?) +\\d{4}-\\d{2}-\\d{2} +\\d+\\).*/\\1/'| sort | uniq -c | sort -rn"`
 
 #&nbsp;See [https://gist.github.com/jcarsique/24f8dd46d176bb67253e](https://gist.github.com/jcarsique/24f8dd46d176bb67253e) for more aliases.
-
+```
 {{! /multiexcerpt}}
 
 ## Integration
