@@ -1835,9 +1835,7 @@ Database maximum pool size for Nuxeo repository (VCS).
 
 </td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
-```
-nuxeo.vcs.blocking-timeout-millis
-```
+`nuxeo.vcs.blocking-timeout-millis`
 
 </td><td colspan="1">
 
@@ -2411,7 +2409,7 @@ Defaults to false on server upgrade, true on new install.
 
 </td><td colspan="1">Since Nuxeo 7.3</td></tr><tr><td colspan="1">`audit.elasticsearch.indexName`</td><td colspan="1">`${elasticsearch.indexName}`-audit</td><td colspan="1">Name of the Elasticsearch index for audit logs.</td><td colspan="1">Since Nuxeo 7.10</td></tr><tr><td colspan="1">`seqgen.elasticsearch.indexName`</td><td colspan="1">`${elasticsearch.indexName}`-uidgen</td><td colspan="1">Name of the Elasticsearch index for the uid sequencer.</td><td colspan="1">Since Nuxeo 7.10</td></tr><tr><td colspan="1">`audit.elasticsearch.migration`</td><td colspan="1">false</td><td colspan="1">Since Nuxeo 7.3\. See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page space='ADMINDOC' page='Elasticsearch Setup#ElasticsearchSetup-TriggeringSQLtoElasticsearchAuditLogsMigration'}})</td><td colspan="1">Since Nuxeo 7.3</td></tr><tr><td colspan="1">`audit.elasticsearch.migration.batchSize`</td><td colspan="1">1000</td><td colspan="1">Since Nuxeo 7.3\. See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page space='ADMINDOC' page='Elasticsearch Setup#ElasticsearchSetup-TriggeringSQLtoElasticsearchAuditLogsMigration'}})</td><td colspan="1">Since Nuxeo 7.3</td></tr><tr><td colspan="1">`elasticsearch.httpReadOnly.baseUrl`</td><td colspan="1">
 
-<pre>http://localhost:9200/</pre>
+http://localhost:9200/
 
 </td><td colspan="1">Required when using a standalone Elasticsearch instance. See [Elasticsearch Passthrough]({{page space='NXDOC' page='Elasticsearch Passthrough#ElasticsearchPassthrough-Requirement'}})</td><td colspan="1">Since Nuxeo 7.10</td></tr><tr><td colspan="1">`org.nuxeo.cmis.elasticsearch`</td><td colspan="1">false</td><td colspan="1">Since Nuxeo 7.2\. To send the CMISQL queries to Elasticsearch, set to true.</td><td colspan="1">Since Nuxeo 7.2</td></tr><tr><td colspan="1">
 
