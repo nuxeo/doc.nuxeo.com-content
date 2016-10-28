@@ -185,7 +185,27 @@ history:
 
 ### Parameters to Update
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Modification</th><th colspan="1">Reference</th></tr><tr><td colspan="1">`nuxeo.s3storage.bucket.prefix`</td><td colspan="1">**Moved** to `nuxeo.s3storage.bucket_prefix`</td><td colspan="1">[NXP-18565](https://jira.nuxeo.com/browse/NXP-18565)</td></tr><tr><td colspan="1">`nuxeo.vcs.ddlmode`</td><td colspan="1">**New default value** to `execute` (previously: `compat`)</td><td colspan="1">[NXP-17396](https://jira.nuxeo.com/browse/NXP-17396)</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Parameter</th>
+<th colspan="1">Modification</th>
+<th colspan="1">Reference</th>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.s3storage.bucket.prefix`</td>
+<td colspan="1">**Moved** to `nuxeo.s3storage.bucket_prefix`</td>
+<td colspan="1">[NXP-18565](https://jira.nuxeo.com/browse/NXP-18565)</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.vcs.ddlmode`</td>
+<td colspan="1">**New default value** to `execute` (previously: `compat`)</td>
+<td colspan="1">[NXP-17396](https://jira.nuxeo.com/browse/NXP-17396)</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ## Code Changes
 
@@ -205,63 +225,55 @@ Calls to `Environment.getHome()` might need to be replaced with `Environment.get
 
 Several changes in `BatchUpdateBlobProvider` break compatibility with custom code created on LTS 2015 or before. We removed two public methods only used internally:
 
-*   `getPageProviderNameForUpdate()`
-*   `getBlobProviderId()`
+* `getPageProviderNameForUpdate()`
+* `getBlobProviderId()`
 
 The code of `BatchUpdateBlobProvider#processDocumentsUpdate()` was moved to an abstract class `AbstractLiveConnectBlobProvider` which provides a default implementation above interface.
 
 To upgrade your code:
 
-1.  Make your classes to extend `AbstractLiveConnectBlobProvider` which provides implementation of `BatchUpdateBlobProvider`.
-2.  Remove call to `getBlobProvider()` or implement it in your custom code. See [NXP-18660](https://jira.nuxeo.com/browse/NXP-18660).
+1. Make your classes to extend `AbstractLiveConnectBlobProvider` which provides implementation of `BatchUpdateBlobProvider`.
+2. Remove call to `getBlobProvider()` or implement it in your custom code. See [NXP-18660](https://jira.nuxeo.com/browse/NXP-18660).
 
 {{! /multiexcerpt}}
-
-&nbsp;
 
 #### Nuxeo Multi Tenant
 
 {{! multiexcerpt name='upgrade-8.1-multi-tenant'}}
 
-&nbsp;We removed `multi_tenant_user.xsd` and `multi_tenant_group.xsd` schemas. The `tenantId` field is now part of default `user.xsd` and `group.xsd` schemas. See&nbsp;[NXP-18496](https://jira.nuxeo.com/browse/NXP-18496).
+We removed `multi_tenant_user.xsd` and `multi_tenant_group.xsd` schemas. The `tenantId` field is now part of default `user.xsd` and `group.xsd` schemas. See [NXP-18496](https://jira.nuxeo.com/browse/NXP-18496).
 
 {{! /multiexcerpt}}
 
 ## Complementary Information
 
-*   [Upgrade notes for 8.1](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.1%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
-*   [Release notes for 8.1](http://nuxeo.github.io/releasenotes/8.1/)
+* [Upgrade notes for 8.1](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.1%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+* [Release notes for 8.1](http://nuxeo.github.io/releasenotes/8.1/)
 
 # From 8.1 to 8.2
 
 ## Configuration
 
-<div>
-
 ### New Parameters
 
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Parameter</th>
+<th colspan="1">Description</th>
+<th colspan="1">Reference</th>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.automation.properties.value.trim`</td>
+<td colspan="1">Force Automation properties value to be trimmed (default:`false`)</td>
+<td colspan="1">[NXP-19170](https://jira.nuxeo.com/browse/NXP-19170)</td>
+</tr>
+</tbody>
+</table>
 </div>
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Description</th><th colspan="1">Reference</th></tr><tr><td colspan="1">
-
-`nuxeo.automation.properties.value.trim`
-
-</td><td colspan="1">
-
-Force Automation properties value to be trimmed (default:`false`)
-
-</td><td colspan="1">
-
-[NXP-19170](https://jira.nuxeo.com/browse/NXP-19170)
-
-</td></tr></tbody></table></div>
-
-<div>
-
-###
-Notes
-
-</div>
+### Notes
 
 {{! multiexcerpt name='upgrade-8.2-hidden-stacktraces'}}
 
@@ -269,26 +281,25 @@ Stacktraces are now hidden per default in error pages. Activate the `dev mode` (
 
 {{! /multiexcerpt}}
 
-## Code Changes&nbsp;
+## Code Changes
 
 ### Deleted APIs
 
 {{! multiexcerpt name='upgrade-8.2-api-REST-group'}}
 
-REST endpoint `/group/{groupname}` no longer marshall members (users and groups) per default. To keep them present in the response, use `fetch.group=memberUsers` and/or `fetch.group=memberGroups` properties in the request. See: [NXP-19112](https://jira.nuxeo.com/browse/NXP-19112).
+REST endpoint `/group/{groupname}` no longer marshall members (users and groups) per default. To keep them present in the response, use `fetch.group=memberUsers` and/or `fetch.group=memberGroups` properties in the request. See [NXP-19112](https://jira.nuxeo.com/browse/NXP-19112).
 
 {{! /multiexcerpt}}
 
-### <span style="color: rgb(0,0,0);">Deleted Features</span>
+### Deleted Features
 
 {{! multiexcerpt name='upgrade-8.2-remove-annotations'}}
 
-Annotations were removed from Nuxeo Platform 8.2\. A new integration of annotations will be implemented for the pdf.js previewer before Nuxeo Platform LTS 2016.
+Annotations were removed from Nuxeo Platform 8.2. A new integration of annotations will be implemented for the pdf.js previewer before Nuxeo Platform LTS 2016.
 
 {{! /multiexcerpt}}
 
-### <span style="color: rgb(0,0,0);">JSF Performance Optimization Changes
-</span>
+### SF Performance Optimization Changes
 
 {{! multiexcerpt name='JSF-optimizations'}}
 
@@ -296,9 +307,9 @@ Nuxeo 8.2 and Nuxeo 7.10-HF12 hold changes optimizing performance of JSF pages r
 
 These improvements rely on:
 
-1.  Optimizations of variables exposure in the context
-2.  Optimizations of pluggable actions rendering
-3.  Optimizations of document listings rendering
+1. Optimizations of variables exposure in the context
+2. Optimizations of pluggable actions rendering
+3. Optimizations of document listings rendering
 
 Some helpers have also been defined to help analyzing what element is taking time when rendering a page, see [How to Debug Slow Page Rendering]({{page page='how-to-debug-slow-page-rendering'}}).
 
@@ -316,17 +327,16 @@ Reference JIRA issue: [NXP-17690](https://jira.nuxeo.com/browse/NXP-17690)
 
 {{! /multiexcerpt}}
 
-### <span style="color: rgb(0,0,0);">Complementary Information</span>
+### Complementary Information
 
-*   [Upgrade notes for 8.2](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.2%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
-*   [Release notes for 8.2](http://nuxeo.github.io/releasenotes/8.2/)
+* [Upgrade notes for 8.2](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.2%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+* [Release notes for 8.2](http://nuxeo.github.io/releasenotes/8.2/)
 
 # From 8.2 to 8.3
 
 ## Distribution Changes
 
-### <span style="color: rgb(0,0,0);font-size: 16.0px;line-height: 1.5625;">UI Dedicated Package
-</span>
+### UI Dedicated Package
 
 {{! multiexcerpt name='upgrade-8.3-jsf-ui'}}
 
@@ -338,7 +348,7 @@ $ nuxeoctl mp-install nuxeo-jsf-ui
 
 {{! /multiexcerpt}}
 
-## <span style="color: rgb(0,0,0);">Code Changes</span>
+## Code Changes
 
 ### Nuxeo and iframe
 
@@ -358,7 +368,6 @@ You can disable it using:
 ```
 
 This is required for the addon [Nuxeo for Salesforce](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce).
-
 See [NXP-19629](https://jira.nuxeo.com/browse/NXP-19629) for details.
 
 {{! /multiexcerpt}}
@@ -369,13 +378,10 @@ See [NXP-19629](https://jira.nuxeo.com/browse/NXP-19629) for details.
 
 The following methods are deprecated in order to introduce same methods with a `var args` argument `CopyOption`.
 
-*   `CoreSession#copy(DocumentRef, DocumentRef, String)`
-
-*   `CoreSession#copy(List<DocumentRef>, DocumentRef)`
-
-*   `CoreSession#copyProxyAsDocument(DocumentRef, DocumentRef, String)`
-
-*   `CoreSession#copyProxyAsDocument(List<DocumentRef>, DocumentRef)`
+* `CoreSession#copy(DocumentRef, DocumentRef, String)`
+* `CoreSession#copy(List<DocumentRef>, DocumentRef)`
+* `CoreSession#copyProxyAsDocument(DocumentRef, DocumentRef, String)`
+* `CoreSession#copyProxyAsDocument(List<DocumentRef>, DocumentRef)`
 
 See [NXP-19740](https://jira.nuxeo.com/browse/NXP-19740) for details.
 
@@ -387,7 +393,6 @@ See [NXP-19740](https://jira.nuxeo.com/browse/NXP-19740) for details.
 
 The `canceled` and `completed` states are removed from the work's API. So you can't get results from completed works anymore. Instead you should store results by means of the `transient store`.
 The previous way of querying for queue's counter has been deprecated by a the new API `org.nuxeo.ecm.core.work.api.WorkManager.getMetrics(String)` which provides you with the consistent set of counters.
-
 See [NXP-19160](https://jira.nuxeo.com/browse/NXP-19160) for details.
 
 {{! /multiexcerpt}}
@@ -398,15 +403,11 @@ See [NXP-19160](https://jira.nuxeo.com/browse/NXP-19160) for details.
 
 The `url` property of a workflow blob has been moved to the `data` property. See [NXP-19640](https://jira.nuxeo.com/browse/NXP-19640) for details.
 
-The `url` property of a blob is now following the correct pattern. Previously `../[thumbnail:thumb:thumbnail/retrievedFile.png](http://thumbnailthumbthumbnail)` is now `../[thumb:thumbnail/retrievedFile.png](http://thumbthumbnail)`.See [NXP-18239](http://jira.nuxeo.com/browse/NXP-18239) for details.
+The `url` property of a blob is now following the correct pattern. Previously `../[thumbnail:thumb:thumbnail/retrievedFile.png](http://thumbnailthumbthumbnail)` is now `../[thumb:thumbnail/retrievedFile.png](http://thumbthumbnail)`. See [NXP-18239](http://jira.nuxeo.com/browse/NXP-18239) for details.
 
 {{! /multiexcerpt}}
 
-&nbsp;
-
 ## Optimizations
-
-<div>
 
 ### Nuxeo Drive
 
@@ -440,16 +441,14 @@ See [NXP-19441](https://jira.nuxeo.com/browse/NXP-19441) for details.
 
 {{! multiexcerpt name='upgrade-8.3-NuxeoPackages-jsfui'}}
 
-The&nbsp; [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui) package lets you install the old Nuxeo UI based on JSF technologies.
+The [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui) package lets you install the old Nuxeo UI based on JSF technologies.
 
 {{! /multiexcerpt}}
 
-## <span style="color: rgb(0,0,0);">Complementary Information</span>
+## Complementary Information
 
-*   [Upgrade notes for 8.3](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
-*   [Release notes for 8.3](http://nuxeo.github.io/releasenotes/8.3/)
-
-</div>
+* [Upgrade notes for 8.3](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+* [Release notes for 8.3](http://nuxeo.github.io/releasenotes/8.3/)
 
 # From 8.3 to LTS 2016
 
@@ -457,13 +456,23 @@ The&nbsp; [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/packag
 
 ### Elasticsearch Upgrade
 
+#### Upgrade Elasticsearch Version
+
 Upgrading Elasticsearch to 2.3.x is required. Please have a look at Elasticsearch breaking changes [here](https://www.elastic.co/guide/en/elasticsearch/reference/2.0/breaking-changes-2.0.html).
 
 In order to upgrade your cluster to 2.3.x, please follow these [steps](https://www.elastic.co/guide/en/elasticsearch/reference/current/restart-upgrade.html).
 
-As dot are not longer accepted as a property name, we replaced property like `ecm:path.depth` by `ecm:path@depth`. So you need to drop your index containing propertiesf with dot, upgrade Elasticsearch cluster + Nuxeo and re-index your repository. In Nuxeo case, only the index storing documents needs to be re-indexed.
+#### Update Properties with Dots
 
-Furthermore `NxQueryBuilder.limit(int)` won't accept `-1` soon due to ElasticSearch change on `index.max_result_window`. This parameter is now 10000 by default, which prevent us to set Integer.MAX_VALUE in order to return all documents.
+As dots (`.`) are not longer accepted in a property name, we replaced properties like `ecm:path.depth` by this form `ecm:path@depth`. So you need to:
+1. Drop your index containing properties with dot.
+2. Upgrade Elasticsearch cluster + Nuxeo.
+3. Re-index your repository. In Nuxeo case, only the index storing documents needs to be re-indexed.
+
+#### Use Scroll API to Fetch All Documents
+
+`NxQueryBuilder.limit(int)` won't accept `-1` soon due to Elasticsearch changes on `index.max_result_window`. This parameter is now 10000 by default, which prevent us to set `Integer.MAX_VALUE` in order to return all documents.
+
 In order to fetch all documents, we recommend you to use the scroll API instead (`ElasticSearchComponent.scroll(NxQueryBuilder, long)`).
 All queries made with a `-1` as limit will fail unless you update the `index.max_result_window` setting on ES cluster (highly unrecommended).
 
@@ -471,19 +480,17 @@ See [NXP-19194](https://jira.nuxeo.com/browse/NXP-19194).
 
 {{> end_of_tabs }}
 
-&nbsp;
-
 * * *
 
-&nbsp;
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+- [Upgrade from LTS 2015 to 8.3]({{page page='upgrade-from-lts-2015-to-83'}})
+- [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}})
 
-*   [Upgrade from LTS 2015 to 8.3]({{page page='upgrade-from-lts-2015-to-83'}})
-*   [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}})
-
-{{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-</div></div>
+{{/panel}}
+</div>
+<div class="column medium-6">
+</div>
+</div>
