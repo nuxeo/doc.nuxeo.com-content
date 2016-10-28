@@ -364,13 +364,11 @@ Java packages and instructions for installation are available from the Oracle we
 
 {{! multiexcerpt name='hardware-configuration'}}
 
-The Nuxeo Platform is designed to be scalable and can thus to be deployed on many servers. It can be installed on only one server for a start, and can also easily be installed on many servers. The constant is that there is the need to have one modern server with good performances. Then the other servers can be more lower-end.
+The Nuxeo Platform is designed to be scalable and can thus to be deployed on many servers. It can be installed on only one server for a start, and can also easily be installed on many servers.
+The numbers below are given as an idea, sizing obviously depends on your usage of the platform.
 
-The numbers below are given for the one needed high-end server.
-
-*   RAM: 2&nbsp;GB is the minimum requirement for using Nuxeo,
-*   CPU: Intel Core 2 or equivalent and better.
-    You might want to avoid machines from the Intel Pentium 4 Xeon series since some models have a too small amount of cache. This impairs performance greatly compared to other CPU architecture of the same generation. (Intel Pentium 4 servers are quite widespread because of an attractive price policy.)
+*   RAM: 2&nbsp;GB is the minimum requirement for using Nuxeo 4 to 8 is advised, per Nuxeo node.
+*   CPU: 4 CPU per Nuxeo node at least.
 *   Storage (disk) space: the minimum Nuxeo installation, along with the needed server and libs, takes something between 200&nbsp;MB and 280&nbsp;MB on a filesystem. Then, the final size will of course depend on the amount of data that will be stored in Nuxeo. A safe bet (until we provide better numbers) is to consider data space ratio of 1.5 to 2.
 
 {{! /multiexcerpt}}
