@@ -281,12 +281,6 @@ or
 nuxeo.templates=default,mongodb
 ```
 
-{{#> callout type='note' heading='Cluster Mode'}}
-
-If you're using Nuxeo in cluster mode, you should use the template `mongodb-quartz-cluster` instead, to get a proper cluster-aware Quartz configuration that doesn't need a SQL database. (Quartz is the component that deals with periodic event scheduling in Nuxeo.)
-
-{{/callout}}
-
 The following properties are available in `nuxeo.conf`:
 
 *   `nuxeo.mongodb.server`: (defaults to&nbsp; [`localhost:27017`](http://localhost:27017) )
