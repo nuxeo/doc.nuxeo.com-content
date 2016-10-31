@@ -531,13 +531,13 @@ Upgrade notes:
 
 [6.0 release notes.](http://nuxeo.github.io/releasenotes/6.0/)
 
-[5.9.5 upgrade notes.](https://jira.nuxeo.com/browse/NXP-14884?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.5%22%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)%20ORDER%20BY%20component%20ASC%2C%20key%20ASC)
+[5.9.5 upgrade notes.](https://jira.nuxeo.com/browse/NXP-14884?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.5%22%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%20ORDER%20BY%20component%20ASC%2C%20key%20ASC)
 
-[5.9.4 upgrade notes.](https://jira.nuxeo.com/browse/NXP-14478?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.4%22%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)%20ORDER%20BY%20component%20ASC%2C%20key%20ASC)
+[5.9.4 upgrade notes.](https://jira.nuxeo.com/browse/NXP-14478?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.4%22%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%20ORDER%20BY%20component%20ASC%2C%20key%20ASC)
 
-[5.9.3 upgrade notes.](https://jira.nuxeo.com/browse/NXP-13877?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.3%22%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)%20ORDER%20BY%20component%20ASC%2C%20key%20ASC)
+[5.9.3 upgrade notes.](https://jira.nuxeo.com/browse/NXP-13877?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.3%22%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%20ORDER%20BY%20component%20ASC%2C%20key%20ASC)
 
-[5.9.1 upgrade notes.](https://jira.nuxeo.com/browse/NXP-13268?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.1%22%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)%20ORDER%20BY%20component%20ASC%2C%20key%20ASC)
+[5.9.1 upgrade notes.](https://jira.nuxeo.com/browse/NXP-13268?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.1%22%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%20ORDER%20BY%20component%20ASC%2C%20key%20ASC)
 
 See [Upgrade from 5.8 to 6.0]({{page page='upgrade-from-58-to-60'}})
 
