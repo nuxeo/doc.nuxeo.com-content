@@ -2,7 +2,7 @@
 
 # Development
 ## Requirements
-See [the main project requirements](https://github.com/nuxeo/doc.nuxeo.com/blob/master/README.md#requirements).
+See [the main project requirements](https://github.com/nuxeo/doc.nuxeo.com/blob/master/README.md#requirements) as well as [the authoring requirements](https://github.com/nuxeo/doc.nuxeo.com/blob/master/docs/writing-documentation.md#requirements).
 
 ## Installation
 Clone the repository to your local machine (and remember where it's saved :)), using your favorite git client or the command line:
@@ -17,6 +17,8 @@ git reset --hard
 ```bash
 npm run dev
 ```
+
+Refer to [the authoring instrutions](https://github.com/nuxeo/doc.nuxeo.com/blob/master/docs/writing-documentation.md#installation) for further details. Hint: append `/nxdoc` or `/userdoc` to the URL.
 
 ### Change browser
 To [change the from the default browser](https://github.com/nuxeo/doc.nuxeo.com/blob/master/README.md#change-browser).
