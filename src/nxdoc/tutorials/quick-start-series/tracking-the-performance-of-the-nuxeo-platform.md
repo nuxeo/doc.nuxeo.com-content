@@ -576,7 +576,7 @@ We also use Nuxeo Platform addon tools like [`nuxeo-platform-importer`](https://
 
 You can also use other tools to get more information:
 
-*   [Oracle flight recording]({{page space='ADMINDOC' version='710 page='reporting-problems/#oracle-jvm-flight-recording'}})
+*   [Oracle flight recording]({{page version='710' space='admindoc' page='reporting-problems/#oracle-jvm-flight-recording'}})
 *   [Nuxeo Slow NXQL Queries]({{page page='monitoring-slow-nxql-queries'}})
 *   [PostgreSQL monitoring]({{page space='ADMINDOC' page='Configuring PostgreSQL'}})
 *   [sysstat sar](http://pagesperso-orange.fr/sebastien.godard/) and [atop](http://www.atoptool.nl/) to monitoring the system activity (CPU, disk, network,&nbsp; memory ...).
