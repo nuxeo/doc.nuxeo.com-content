@@ -20,7 +20,7 @@ confluence:
     source_link: /display/NXDOC710/Clients
 tree_item_index: 1400
 version_override:
-    'FT': 'nxdoc/client-sdks'
+    'FT': '/nxdoc/client-sdks'
     '6.0': 60/admindoc/clients
     '5.8': 58/admindoc/clients
 history:

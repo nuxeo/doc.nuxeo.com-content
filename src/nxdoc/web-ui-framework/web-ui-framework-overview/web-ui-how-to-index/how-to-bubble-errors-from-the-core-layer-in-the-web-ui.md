@@ -29,7 +29,7 @@ confluence:
     source_link: /display/NXDOC710/How+to+Bubble+Errors+from+the+Core+Layer+in+the+Web+UI
 tree_item_index: 100
 version_override:
-    'FT': 'nxdoc/how-to-bubble-errors-from-the-core-layer-in-the-jsf-ui'
+    'FT': '/nxdoc/how-to-bubble-errors-from-the-core-layer-in-the-jsf-ui'
     '6.0': 60/admindoc/how-to-bubble-errors-from-the-core-layer-in-the-web-ui
     '5.8': 58/admindoc/how-to-bubble-errors-from-the-core-layer-in-the-web-ui
 history:

@@ -22,7 +22,7 @@ confluence:
     source_link: /display/ADMINDOC710/Installing+the+Nuxeo+Platform+on+Mac+OS
 tree_item_index: 200
 version_override:
-    'FT': 'nxdoc/installing-the-nuxeo-platform-on-mac-os'
+    'FT': '/nxdoc/installing-the-nuxeo-platform-on-mac-os'
     '6.0': 60/admindoc/installing-the-nuxeo-platform-on-mac-os
     '5.8': 58/admindoc/installing-the-nuxeo-platform-on-mac-os
 history:

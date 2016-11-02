@@ -22,7 +22,7 @@ confluence:
     source_link: /display/ADMINDOC710/Monitoring+Slow+NXQL+Queries
 tree_item_index: 1000
 version_override:
-    'FT': 'nxdoc/monitoring-slow-nxql-queries'
+    'FT': '/nxdoc/monitoring-slow-nxql-queries'
     '6.0': 60/admindoc/monitoring-slow-nxql-queries
     '5.8': 58/admindoc/monitoring-slow-nxql-queries
 history:

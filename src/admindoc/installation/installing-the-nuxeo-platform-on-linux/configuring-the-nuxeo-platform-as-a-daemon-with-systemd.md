@@ -22,7 +22,7 @@ confluence:
         /display/ADMINDOC710/Configuring+the+Nuxeo+Platform+as+a+Daemon+with+Systemd
 tree_item_index: 200
 version_override:
-    'FT': 'nxdoc/configuring-the-nuxeo-platform-as-a-daemon-with-systemd'
+    'FT': '/nxdoc/configuring-the-nuxeo-platform-as-a-daemon-with-systemd'
     '6.0': 60/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-systemd
     '5.8': 58/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-systemd
 history:

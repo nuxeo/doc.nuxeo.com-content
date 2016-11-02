@@ -18,7 +18,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/OICyAQ'
     source_link: /display/NXDOC710/From+the+Web+UI+to+Nuxeo+Studio
 version_override:
-    'FT': 'nxdoc/from-the-jsf-ui-to-nuxeo-studio'
+    'FT': '/nxdoc/from-the-jsf-ui-to-nuxeo-studio'
     '6.0': 60/admindoc/from-the-web-ui-to-nuxeo-studio
     '5.8': 58/admindoc/from-the-web-ui-to-nuxeo-studio
 tree_item_index: 1000

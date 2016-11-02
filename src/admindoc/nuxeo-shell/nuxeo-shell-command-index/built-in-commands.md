@@ -22,7 +22,7 @@ confluence:
     source_link: /display/ADMINDOC710/Built-in+Commands
 tree_item_index: 100
 version_override:
-    'FT': 'nxdoc/built-in-commands'
+    'FT': '/nxdoc/built-in-commands'
     '6.0': 60/admindoc/built-in-commands
     '5.8': 58/admindoc/built-in-commands
 history:
