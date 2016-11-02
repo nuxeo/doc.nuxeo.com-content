@@ -21,7 +21,7 @@ confluence:
     source_link: /display/ADMINDOC60/Upgrading+the+Nuxeo+Platform
 tree_item_index: 600
 version_override:
-    'FT': 'nxdoc/upgrading-the-nuxeo-platform'
+    'FT': '/nxdoc/upgrading-the-nuxeo-platform'
     'LTS 2015': 710/admindoc/upgrading-the-nuxeo-platform
 history:
     -

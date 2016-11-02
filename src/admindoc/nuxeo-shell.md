@@ -21,7 +21,7 @@ confluence:
     source_link: /display/ADMINDOC60/Nuxeo+Shell
 tree_item_index: 700
 version_override:
-    'FT': 'nxdoc/nuxeo-shell'
+    'FT': '/nxdoc/nuxeo-shell'
 history:
     -
         author: Frantz Fischer

@@ -19,7 +19,7 @@ confluence:
     source_link: /display/USERDOC60/Marketplace+Add-Ons
 tree_item_index: 900
 version_override:
-    'FT': 'userdoc/adding-features'
+    'FT': '/userdoc/adding-features'
     'LTS 2015': 710/userdoc/adding-features
     '5.8': 58/userdoc/marketplace-add-ons
 history:

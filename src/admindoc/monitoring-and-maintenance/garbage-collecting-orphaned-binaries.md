@@ -21,7 +21,7 @@ confluence:
     source_link: /display/ADMINDOC60/Garbage-Collecting+Orphaned+Binaries
 tree_item_index: 1100
 version_override:
-    'FT': 'nxdoc/garbage-collecting-orphaned-binaries'
+    'FT': '/nxdoc/garbage-collecting-orphaned-binaries'
 history:
     -
         author: Julien Carsique

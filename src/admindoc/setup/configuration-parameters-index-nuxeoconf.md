@@ -23,7 +23,7 @@ confluence:
     source_link: /pages/viewpage.action?pageId=21921865
 tree_item_index: 400
 version_override:
-    'FT': 'nxdoc/configuration-parameters-index-nuxeoconf'
+    'FT': '/nxdoc/configuration-parameters-index-nuxeoconf'
 history:
     -
         author: Ronan Daniellou

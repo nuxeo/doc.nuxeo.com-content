@@ -20,7 +20,7 @@ confluence:
     source_link: /display/ADMINDOC60/Implementing+Encryption
 tree_item_index: 600
 version_override:
-    'FT': 'nxdoc/implementing-encryption'
+    'FT': '/nxdoc/implementing-encryption'
 history:
     -
         author: Solen Guitter

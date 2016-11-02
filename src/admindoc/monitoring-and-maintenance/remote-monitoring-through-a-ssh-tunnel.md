@@ -21,7 +21,7 @@ confluence:
     source_link: /display/ADMINDOC60/Remote+Monitoring+Through+a+SSH+Tunnel
 tree_item_index: 600
 version_override:
-    'FT': 'nxdoc/remote-monitoring-through-a-ssh-tunnel'
+    'FT': '/nxdoc/remote-monitoring-through-a-ssh-tunnel'
 history:
     -
         author: Solen Guitter

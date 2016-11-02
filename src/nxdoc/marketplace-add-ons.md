@@ -17,7 +17,7 @@ confluence:
     source_link: /display/NXDOC60/Marketplace+Add-Ons
 tree_item_index: 1900
 version_override:
-    'FT': 'nxdoc/nuxeo-add-ons'
+    'FT': '/nxdoc/nuxeo-add-ons'
 history:
     -
         author: Manon Lumeau

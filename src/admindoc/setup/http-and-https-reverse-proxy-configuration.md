@@ -27,7 +27,7 @@ confluence:
     source_link: /display/ADMINDOC60/HTTP+and+HTTPS+Reverse-Proxy+Configuration
 tree_item_index: 700
 version_override:
-    'FT': 'nxdoc/http-and-https-reverse-proxy-configuration'
+    'FT': '/nxdoc/http-and-https-reverse-proxy-configuration'
 history:
     -
         author: Solen Guitter

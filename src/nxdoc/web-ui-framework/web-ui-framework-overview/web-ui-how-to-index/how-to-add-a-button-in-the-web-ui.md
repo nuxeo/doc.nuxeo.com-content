@@ -34,7 +34,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/KIFVAQ'
     source_link: /display/NXDOC60/How+to+Add+a+Button+in+the+Web+UI
 version_override:
-    'FT': 'nxdoc/how-to-add-a-button-in-the-jsf-ui'
+    'FT': '/nxdoc/how-to-add-a-button-in-the-jsf-ui'
 history:
     -
         author: Solen Guitter

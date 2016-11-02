@@ -18,7 +18,7 @@ confluence:
     source_link: >-
         /display/ADMINDOC60/From+the+old+workflow+system+to+the+new+5.4+workflow+system
 version_override:
-    'FT': 'nxdoc/from-the-old-workflow-system-to-the-new-54-workflow-system'
+    'FT': '/nxdoc/from-the-old-workflow-system-to-the-new-54-workflow-system'
 history:
     -
         author: Solen Guitter

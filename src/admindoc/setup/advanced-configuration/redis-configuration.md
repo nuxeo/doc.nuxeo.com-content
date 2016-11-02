@@ -20,7 +20,7 @@ confluence:
     source_link: /display/ADMINDOC60/Redis+Configuration
 tree_item_index: 1000
 version_override:
-    'FT': 'nxdoc/redis-configuration'
+    'FT': '/nxdoc/redis-configuration'
 history:
     -
         author: Maxime Hilaire

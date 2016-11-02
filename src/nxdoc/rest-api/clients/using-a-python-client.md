@@ -20,7 +20,7 @@ confluence:
     source_link: /display/NXDOC60/Using+a+Python+Client
 tree_item_index: 500
 version_override:
-    'FT': 'nxdoc/python-client'
+    'FT': '/nxdoc/python-client'
 history:
     -
         author: Solen Guitter

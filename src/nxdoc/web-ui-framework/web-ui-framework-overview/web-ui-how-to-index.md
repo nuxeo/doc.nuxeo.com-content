@@ -17,7 +17,7 @@ confluence:
     source_link: /display/NXDOC60/Web+UI+How-To+Index
 tree_item_index: 300
 version_override:
-    'FT': 'nxdoc/jsf-ui-how-to-index'
+    'FT': '/nxdoc/jsf-ui-how-to-index'
 history:
     -
         author: Manon Lumeau

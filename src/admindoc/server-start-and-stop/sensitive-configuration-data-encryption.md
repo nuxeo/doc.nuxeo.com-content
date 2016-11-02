@@ -21,7 +21,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/IQelAQ'
     source_link: /display/ADMINDOC60/Sensitive+Configuration+Data+Encryption
 version_override:
-    'FT': 'nxdoc/sensitive-configuration-data-encryption'
+    'FT': '/nxdoc/sensitive-configuration-data-encryption'
 history:
     -
         author: Solen Guitter

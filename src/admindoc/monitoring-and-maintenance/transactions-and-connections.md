@@ -20,7 +20,7 @@ confluence:
     source_link: /display/ADMINDOC60/Transactions+and+Connections
 tree_item_index: 700
 version_override:
-    'FT': 'nxdoc/transactions-and-connections'
+    'FT': '/nxdoc/transactions-and-connections'
 history:
     -
         author: Solen Guitter

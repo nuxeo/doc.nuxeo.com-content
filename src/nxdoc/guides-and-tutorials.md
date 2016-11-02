@@ -17,7 +17,7 @@ confluence:
     source_link: /display/NXDOC60/Guides+and+Tutorials
 tree_item_index: 200
 version_override:
-    'FT': 'nxdoc/tutorials'
+    'FT': '/nxdoc/tutorials'
     'LTS 2015': 710/nxdoc/guides-and-tutorials
 history:
     -

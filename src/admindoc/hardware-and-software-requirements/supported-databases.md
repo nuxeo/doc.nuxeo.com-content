@@ -19,7 +19,7 @@ confluence:
     source_link: /display/ADMINDOC60/Supported+Databases
 tree_item_index: 300
 version_override:
-    'FT': 'nxdoc/compatibility-matrix'
+    'FT': '/nxdoc/compatibility-matrix'
     'LTS 2015': 710/admindoc/supported-databases
     '5.8': 58/admindoc/supported-databases
 history:

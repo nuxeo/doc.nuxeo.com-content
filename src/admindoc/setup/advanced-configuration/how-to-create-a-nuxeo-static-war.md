@@ -31,7 +31,7 @@ confluence:
     source_link: /display/ADMINDOC60/How+to+Create+a+Nuxeo+Static+WAR
 tree_item_index: 400
 version_override:
-    'FT': 'nxdoc/how-to-create-a-nuxeo-static-war'
+    'FT': '/nxdoc/how-to-create-a-nuxeo-static-war'
     'LTS 2015': 710/admindoc/how-to-create-a-nuxeo-static-war
 history:
     -

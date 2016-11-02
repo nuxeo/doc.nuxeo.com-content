@@ -17,7 +17,7 @@ confluence:
     source_link: /display/ADMINDOC60/Installation
 tree_item_index: 200
 version_override:
-    'FT': 'nxdoc/installation'
+    'FT': '/nxdoc/installation'
     'LTS 2015': 710/admindoc/installation
     '5.8': 58/admindoc/installation
 history:
