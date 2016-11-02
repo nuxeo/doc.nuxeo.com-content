@@ -90,60 +90,95 @@ More information on the page [Installation]({{page page='installation'}}).
 
 The Nuxeo Platform supports the following databases.
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
-FT 8.x</th><th colspan="1">Nuxeo Platform
-LTS 2015</th><th colspan="1">Nuxeo Platform
-6.0</th><th colspan="1">Nuxeo Platform
-5.8</th></tr><tr><th colspan="1">MarkLogic</th><td colspan="1">{{! multiexcerpt name='MarkLogic-supported'}}
-
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr><th colspan="1">&nbsp;</th>
+<th colspan="1">Nuxeo Platform FT 8.x</th>
+<th colspan="1">Nuxeo Platform LTS 2015</th>
+<th colspan="1">Nuxeo Platform 6.0</th>
+<th colspan="1">Nuxeo Platform 5.8</th></tr>
+<tr><th colspan="1">MarkLogic</th>
+<td colspan="1">
+{{! multiexcerpt name='MarkLogic-supported'}}
 8.0
-
-{{! /multiexcerpt}}</td><td colspan="1">-</td><td colspan="1">-</td><td colspan="1">-</td></tr><tr><th colspan="1">MongoDB</th><td colspan="1">{{! multiexcerpt name='FT-mongoDB-supported'}}
-
-2.8
-3.0
+{{! /multiexcerpt}}</td>
+<td colspan="1">-</td>
+<td colspan="1">-</td>
+<td colspan="1">-</td></tr>
+<tr><th colspan="1">MongoDB</th>
+<td colspan="1">
+{{! multiexcerpt name='FT-mongoDB-supported'}}
+2.8<br />
+3.0<br />
 3.2 (Since 8.2)
-
-{{! /multiexcerpt}}</td><td colspan="1">2.8
-3.0
-3.2 (Since 7.10-HF07)</td><td colspan="1">2.6</td><td colspan="1">-</td></tr><tr><th colspan="1">MySQL</th><td colspan="1">{{! multiexcerpt name='FT-mySQL-supported'}}5.6
-5.7{{! /multiexcerpt}}</td><td colspan="1">5.6
-5.7</td><td colspan="1">5.6
-5.7</td><td colspan="1">5.1
-5.5
-5.5 (Amazon RDS)</td></tr><tr><th colspan="1">Oracle</th><td colspan="1">{{! multiexcerpt name='7.x-oracle-supported'}}11g
-12c{{! /multiexcerpt}}</td><td colspan="1">11g
-12c</td><td colspan="1">11g
-12c</td><td colspan="1">10
-11
-11 (Amazon RDS)</td></tr><tr><th colspan="1">PostgreSQL</th><td colspan="1">{{! multiexcerpt name='7.x-postgreSQL-supported'}}
-
-9.3
-9.4
+{{! /multiexcerpt}}</td>
+<td colspan="1">2.8<br />
+3.0<br />
+3.2 (Since 7.10-HF07)</td>
+<td colspan="1">2.6</td>
+<td colspan="1">-</td></tr>
+<tr><th colspan="1">MySQL</th>
+<td colspan="1">
+{{! multiexcerpt name='FT-mySQL-supported'}}5.6<br />
+5.7{{! /multiexcerpt}}
+</td>
+<td colspan="1">5.6<br />
+5.7</td>
+<td colspan="1">5.6<br />
+5.7</td>
+<td colspan="1">5.1<br />
+5.5<br />
+5.5 (Amazon RDS)</td></tr>
+<tr><th colspan="1">Oracle</th>
+<td colspan="1">
+{{! multiexcerpt name='7.x-oracle-supported'}}11g<br />
+12c{{! /multiexcerpt}}</td>
+<td colspan="1">11g<br />
+12c</td>
+<td colspan="1">11g<br />
+12c</td>
+<td colspan="1">10<br />
+11<br />
+11 (Amazon RDS)</td></tr>
+<tr><th colspan="1">PostgreSQL</th>
+<td colspan="1">
+{{! multiexcerpt name='7.x-postgreSQL-supported'}}
+9.3<br />
+9.4<br />
 9.5 (Since 8.3)
-
-{{! /multiexcerpt}}</td><td colspan="1">9.3
-9.4</td><td colspan="1">9.3
-9.4</td><td colspan="1">8.4
-9.0
-9.1
-9.2
-9.3</td></tr><tr><th colspan="1">SQL Server</th><td colspan="1">{{! multiexcerpt name='7.x-SQLserver-supported'}}2012
-2012 (Azure){{! /multiexcerpt}}</td><td colspan="1">2012
-2012 (Azure)</td><td colspan="1">2012
-2012 (Azure)</td><td colspan="1">2008
-2008r2
-2012
+{{! /multiexcerpt}}</td>
+<td colspan="1">9.3<br />
+9.4</td>
+<td colspan="1">9.3<br />
+9.4</td>
+<td colspan="1">8.4<br />
+9.0<br />
+9.1<br />
+9.2<br />
+9.3</td></tr>
+<tr><th colspan="1">SQL Server</th>
+<td colspan="1">
+{{! multiexcerpt name='7.x-SQLserver-supported'}}2012<br />
+2012 (Azure)
+{{! /multiexcerpt}}</td>
+<td colspan="1">2012<br />
+2012 (Azure)</td>
+<td colspan="1">2012<br />
+2012 (Azure)</td>
+<td colspan="1">2008<br />
+2008r2<br />
+2012<br />
 2012 (Azure)</td></tr></tbody></table></div>
 
 **Notes**
 
-*   Only the latest service pack is supported for a given version. For the open source databases this means upgrading to the latest minor version. For Oracle this means the latest patchset. For SQL Server this means the latest service pack.
-*   Older versions of the different databases may work but are not supported.
+* Only the latest service pack is supported for a given version. For the open source databases this means upgrading to the latest minor version. For Oracle this means the latest patchset. For SQL Server this means the latest service pack.
+* Older versions of the different databases may work but are not supported.
 
 {{! /multiexcerpt}}
 
-More information about database configuration in the&nbsp;[Database Configuration]({{page page='database-configuration'}}) section.
+More information about database configuration in the [Database Configuration]({{page page='database-configuration'}}) section.
 
 ## Application Servers
 
@@ -151,11 +186,25 @@ More information about database configuration in the&nbsp;[Database Configuratio
 
 The Nuxeo Platform can be based on [JBoss](http://www.jboss.org/jbossas/) or [Tomcat](http://tomcat.apache.org/). Here is a table showing which versions of these application servers are known to work with the Nuxeo Platform.
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
-FT 8.x</th><th colspan="1">Nuxeo Platform
-LTS 2015</th><th colspan="1">Nuxeo Platform
-6.0</th><th colspan="1">Nuxeo Platform
-5.8</th></tr><tr><th colspan="1">Apache Tomcat</th><td colspan="1">7.0.64</td><td colspan="1">7.0.64</td><td colspan="1">7.0.56</td><td colspan="1">7.0.42</td></tr><tr><th colspan="1">JBoss / WildFly</th><td colspan="1">WildFly 8.1.0</td><td colspan="1">WildFly 8.1.0</td><td colspan="1">WildFly 8.1.0</td><td colspan="1">-</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr><th colspan="1">&nbsp;</th>
+<th colspan="1">Nuxeo Platform FT 8.x</th>
+<th colspan="1">Nuxeo Platform LTS 2015</th>
+<th colspan="1">Nuxeo Platform 6.0</th>
+<th colspan="1">Nuxeo Platform 5.8</th></tr>
+<tr><th colspan="1">Apache Tomcat</th>
+<td colspan="1">7.0.64</td>
+<td colspan="1">7.0.64</td>
+<td colspan="1">7.0.56</td>
+<td colspan="1">7.0.42</td></tr>
+<tr><th colspan="1">JBoss / WildFly</th>
+<td colspan="1">WildFly 8.1.0</td>
+<td colspan="1">WildFly 8.1.0</td>
+<td colspan="1">WildFly 8.1.0</td>
+<td colspan="1">-</td></tr></tbody></table>
+</div>
 
 **Other Application Servers**
 
@@ -165,37 +214,90 @@ The Nuxeo Platform can be delivered [via a standard static WAR ]({{page page='de
 
 ## Redis
 
-{{! multiexcerpt name='redis_supported_versions'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
-FT 8.x</th><th colspan="1">Nuxeo Platform
-LTS 2015</th><th colspan="1">Nuxeo Platform
-6.0</th><th colspan="1">Nuxeo Platform
-5.8</th></tr><tr><th colspan="1">Redis</th><td colspan="1">2.8.x
-3.0.x</td><td colspan="1">2.8.x
-3.0.x</td><td colspan="1">2.8</td><td colspan="1">2.6</td></tr></tbody></table></div>{{! /multiexcerpt}}
+{{! multiexcerpt name='redis_supported_versions'}}
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr><th colspan="1">&nbsp;</th>
+<th colspan="1">Nuxeo Platform FT 8.x</th>
+<th colspan="1">Nuxeo Platform LTS 2015</th>
+<th colspan="1">Nuxeo Platform 6.0</th>
+<th colspan="1">Nuxeo Platform 5.8</th></tr>
+<tr><th colspan="1">Redis</th>
+<td colspan="1">2.8.x <br />
+3.0.x</td>
+<td colspan="1">2.8.x<br />
+3.0.x</td>
+<td colspan="1">2.8</td>
+<td colspan="1">2.6</td></tr>
+</tbody></table></div>
+{{! /multiexcerpt}}
 
 More information on the pages [Nuxeo and Redis]({{page page='nuxeo-and-redis'}}) and [Redis Configuration]({{page page='redis-configuration'}}).
 
 ## Elasticsearch
 
-{{! multiexcerpt name='elasticsearch_supported_versions'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
-FT 8.x</th><th colspan="1">Nuxeo Platform
-LTS 2015</th><th colspan="1">Nuxeo Platform
-6.0</th><th colspan="1">Nuxeo Platform
-5.8</th></tr><tr><th colspan="1">Elasticsearch</th><td colspan="1">From 8.1 to 8.3:<br/>
-Library: 1.5.2
+{{! multiexcerpt name='elasticsearch_supported_versions'}}
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr><th colspan="1">&nbsp;</th>
+<th colspan="1">Nuxeo Platform FT 8.x</th>
+<th colspan="1">Nuxeo Platform LTS 2015</th>
+<th colspan="1">Nuxeo Platform 6.0</th>
+<th colspan="1">Nuxeo Platform 5.8</th></tr>
+<tr><th colspan="1">Elasticsearch</th>
+<td colspan="1">**From 8.1 to 8.3:**<br/>
+Library: 1.5.2<br />
 Cluster: 1.5.2 to 1.7.x<br/>
-From 8.10:<br/>
-Library: 2.3.5
-Cluster: 2.3.x</td><td colspan="1">Library: 1.5.2
-Cluster: 1.5.2 to 1.7.x</td><td colspan="1">Library: 1.1.2
-Cluster: 1.1.2 to 1.7.x</td><td colspan="1">Available as a Nuxeo Package starting from 5.8-HF16</td></tr></tbody></table></div>{{! /multiexcerpt}}
+**From 8.10:**<br/>
+Library: 2.3.5<br />
+Cluster: 2.3.x</td>
+<td colspan="1">Library: 1.5.2<br />
+Cluster: 1.5.2 to 1.7.x</td>
+<td colspan="1">Library: 1.1.2<br />
+Cluster: 1.1.2 to 1.7.x</td>
+<td colspan="1">Available as a Nuxeo Package starting from 5.8-HF16</td>
+</tr></tbody></table>
+</div>{{! /multiexcerpt}}
 
 More information on the page [Elasticsearch Setup]({{page page='elasticsearch-setup'}}).
 
 ## Browsers
 
-{{! multiexcerpt name='supported-browsers'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
-FT 8.x</th><th colspan="1">Nuxeo Platform
-LTS 2015</th><th colspan="1">Nuxeo Platform
-6.0</th><th colspan="1">Nuxeo Platform
-5.8</th></tr><tr><th colspan="1">Chrome</th><td colspan="1">46 and greater</td><td colspan="1">46 and greater</td><td colspan="1">37 and greater</td><td colspan="1">8 and greater</td></tr><tr><th colspan="1">Edge</th><td colspan="1">Subject to the browser's limitations such as [Drag and Drop support](https://connect.microsoft.com/IE/feedback/details/1544800/ms-edge-drop-files-from-explorer-to-browser-does-not-work-as-expected)</td><td colspan="1">Subject to the browser's limitations such as [Drag and Drop support](https://connect.microsoft.com/IE/feedback/details/1544800/ms-edge-drop-files-from-explorer-to-browser-does-not-work-as-expected)</td><td colspan="1">-</td><td colspan="1">-</td></tr><tr><th colspan="1">Firefox</th><td colspan="1">38 ESR and greater</td><td colspan="1">38 ESR and greater</td><td colspan="1">31 ESR and greater</td><td colspan="1">10 and greater</td></tr><tr><th colspan="1">Internet Explorer</th><td colspan="1">11</td><td colspan="1">11</td><td colspan="1">10 and greater</td><td colspan="1">8 and greater with activeX enabled</td></tr><tr><th colspan="1">Safari</th><td colspan="1">9 and greater</td><td colspan="1">9 and greater</td><td colspan="1">6.2 and greater</td><td colspan="1">4 and greater</td></tr></tbody></table></div>{{! /multiexcerpt}}
+{{! multiexcerpt name='supported-browsers'}}
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr><th colspan="1">&nbsp;</th>
+<th colspan="1">Nuxeo Platform FT 8.x</th>
+<th colspan="1">Nuxeo Platform LTS 2015</th>
+<th colspan="1">Nuxeo Platform 6.0</th>
+<th colspan="1">Nuxeo Platform 5.8</th></tr>
+<tr><th colspan="1">Chrome</th>
+<td colspan="1">46 and greater</td>
+<td colspan="1">46 and greater</td>
+<td colspan="1">37 and greater</td>
+<td colspan="1">8 and greater</td></tr>
+<tr><th colspan="1">Edge</th>
+<td colspan="1">Subject to the browser's limitations such as [Drag and Drop support](https://connect.microsoft.com/IE/feedback/details/1544800/ms-edge-drop-files-from-explorer-to-browser-does-not-work-as-expected)</td>
+<td colspan="1">Subject to the browser's limitations such as [Drag and Drop support](https://connect.microsoft.com/IE/feedback/details/1544800/ms-edge-drop-files-from-explorer-to-browser-does-not-work-as-expected)</td>
+<td colspan="1">-</td>
+<td colspan="1">-</td></tr>
+<tr><th colspan="1">Firefox</th>
+<td colspan="1">38 ESR and greater</td>
+<td colspan="1">38 ESR and greater</td>
+<td colspan="1">31 ESR and greater</td>
+<td colspan="1">10 and greater</td></tr>
+<tr><th colspan="1">Internet Explorer</th>
+<td colspan="1">11</td>
+<td colspan="1">11</td>
+<td colspan="1">10 and greater</td>
+<td colspan="1">8 and greater with activeX enabled</td></tr>
+<tr><th colspan="1">Safari</th>
+<td colspan="1">9 and greater</td>
+<td colspan="1">9 and greater</td>
+<td colspan="1">6.2 and greater</td>
+<td colspan="1">4 and greater</td></tr>
+</tbody></table></div>
+{{! /multiexcerpt}}

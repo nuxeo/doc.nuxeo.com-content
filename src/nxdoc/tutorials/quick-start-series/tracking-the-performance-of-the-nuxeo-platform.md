@@ -576,7 +576,7 @@ We also use Nuxeo Platform addon tools like [`nuxeo-platform-importer`](https://
 
 You can also use other tools to get more information:
 
-*   [Oracle flight recording]({{page space='ADMINDOC' page='Reporting problems#ReportingProblems-OracleJVMFlightRecording'}})
+*   [Oracle flight recording]({{page page='710/admindoc/reporting-problems#oracle-jvm-flight-recording'}})
 *   [Nuxeo Slow NXQL Queries]({{page page='monitoring-slow-nxql-queries'}})
 *   [PostgreSQL monitoring]({{page space='ADMINDOC' page='Configuring PostgreSQL'}})
 *   [sysstat sar](http://pagesperso-orange.fr/sebastien.godard/) and [atop](http://www.atoptool.nl/) to monitoring the system activity (CPU, disk, network,&nbsp; memory ...).
@@ -652,11 +652,11 @@ This benchmark was initially run in 2010 against a Nuxeo 5.3.1.
 
 #### Steps
 
-1.  Tune the database following tips in the Nuxeo PostgreSQL&nbsp;[FAQ](http://www.nuxeo.org/xwiki/bin/view/FAQ/PostgreSQLSettings).
-2.  Tune Nuxeo: for mass import, we disable the full-text indexing (as described in the ["Mass import specific tuning" section of PostgreSQL configuration page]({{page page='postgresql#mass-import-tuning'}})) and disable the ACL optimization ([NXP-4524](https://jira.nuxeo.org/browse/NXP-4524)).
+1.  Tune the database following tips in the Nuxeo PostgreSQL&nbsp;[FAQ](https://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server).
+2.  Tune Nuxeo: for mass import, we disable the full-text indexing (as described in the ["Mass import specific tuning" section of PostgreSQL configuration page]({{page page='postgresql#-anchor-mass-import-tuning-mass-import-specific-tuning'}})) and disable the ACL optimization ([NXP-4524](https://jira.nuxeo.com/browse/NXP-4524)).
 3.  Import content: mass import is done using a multi-threaded importer to create File document with an attached text file randomly generated using a French dictionary. Only a percentage of the text file will be indexed for the full text, this ratio simulate the proportion of text in a binary format.
     [Sources of the nuxeo-platform-importer](https://github.com/nuxeo/nuxeo-platform-importer/blob/master/README.md)
-4.  Rebuild full text as described in the ["Mass import specific tuning" FAQ](http://www.nuxeo.org/xwiki/bin/view/FAQ/PostgreSQLSettings).
+4.  Rebuild full text as described in the ["Mass import specific tuning" FAQ](https://doc.nuxeo.com/nxdoc/postgresql/#-anchor-mass-import-tuning-mass-import-specific-tuning).
 5.  Generate random ACLs on documents. This can be done with a simple scripts that generate SQL inserts into the ACL table.
 6.  Enable the read ACLs optimization, performing the SQL command:
 
@@ -665,7 +665,7 @@ This benchmark was initially run in 2010 against a Nuxeo 5.3.1.
 
     ```
 
-7.  Enable the ACL optimization ([NXP-4524](https://jira.nuxeo.org/browse/NXP-4524)).
+7.  Enable the ACL optimization ([NXP-4524](https://jira.nuxeo.com/browse/NXP-4524)).
 8.  Bench using the same scripts as in continuous integration for writer and reader. In addition we have a navigation bench that randomly browses folders and documents.
 
 #### Results Overview
@@ -759,9 +759,9 @@ The bench procedure can be customized to validate customer installation:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Performance Recommendations]({{page page='performance-recommendations'}})
-*   [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
-*   [Managing Performance]({{page page='managing-performance'}})
+- [Performance Recommendations]({{page page='performance-recommendations'}})
+- [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
+- [Managing Performance]({{page page='managing-performance'}})
 
 {{/panel}}</div><div class="column medium-6">
 
