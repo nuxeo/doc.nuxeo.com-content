@@ -113,136 +113,87 @@ history:
         version: '1'
 
 ---
-## Different Tools for Different Use Cases
 
-The Nuxeo Platform provides several tools for managing imports. Choosing the right tool will depend on your exact use cases:
+## Importing Capabilities of The Nuxeo Platform
+The Nuxeo Platform provides tools and apis for importing content:
 
-*   What amount of data do you need to import?
-    Hundreds, thousands, millions?
-*   Do you need to do the import while the application is running?
-    Initial / one time import vs&nbsp;everyday import.
-*   How complex is your import?
-    How many business rules are integrated in your import?
-*   What is the source you want to import from?
-    Database, XML, files, ...
-*   What are your skills?
-    SQL, ETL/ESB, Java dev, ...
+ * from 10s of documents to billions of them, with import rates such as 10 000s of documents per second
+ * with our without metadata
+ * handling security, lifecycle and other sytem properties if necessary.
+ 
+Those tools provide native handling of several formats for specifying document properties:
 
-{{! excerpt}}
+ * XLM (one XML file per document or one for all documents)
+ * CSV (one line per document)
+ * Properties file (one property file per file to import for instance, or per folder)
 
-This page will walk you through the different import options and give you the pros and cons of each approach.
 
-{{! /excerpt}}
+## Different Strategies
 
-## Possible Approaches
+Importing content in Nuxeo Platform means:
 
-### User Imports
+ * Creating a document that will store the metadata and reference the binaries
+ * Importing the binaries (when there are some, some projects do not handle files, just busines objects)
+ 
+There can be several strategies for creating the documents:
 
-By default, the Nuxeo Platform allows users to import several documents at a time via:
+   * Use the REST API 
+     * +:The most simple. Can be done remotely as long as there is an http access.
+     * -:The less peformant, although proven rates of thousands of documents per seconds can be reache
+   * Use the Java API server side
+     * +:Transactional, multi-theaded, Highly Performant, Ability to disable Events processing, ability to bundle event processing
+     * -:A bit more complex to understand logics, requires a server-side plugin to deploy for any customisation.  
+   * Fill-in the database directly (SQL Scripts, MongoDB collections, ...)
+     * +: The most performant.
+     * -: Requires knowledge of Nuxeo Platform internals. May break business logic as Listeners are not handled, no event is fired in the repository. For instance, there won't be any audit, unless you fill the table at the same time. You still have to perform some aditional tasks manually after that like rebuild full text, rebuild ancestors cache, rebuild read-ACLs
 
-*   The [ Import popup ]({{page space='userdoc' page='creating-content'}})
-*   [ Drag & Drop ]({{page space='userdoc' page='creating-content#content-creation-dandd'}})
-*   [WebDAV]({{page space='userdoc' page='working-with-webdav'}})
-*   [Nuxeo Drive]({{page space='userdoc' page='nuxeo-drive'}}).
 
-**Import criteria details**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Criteria</th><th colspan="1">Value</th><th colspan="1">Comment</th></tr><tr><td colspan="1">Average import speed</td><td colspan="1">Low</td><td colspan="1">A few documents.</td></tr><tr><td colspan="1">Custom logic handling</td><td colspan="1">Built-in</td><td colspan="1">All custom logic will be called.</td></tr><tr><td colspan="1">Ability to handle huge volume</td><td colspan="1">No</td><td colspan="1">No transaction batch management.</td></tr><tr><td colspan="1">Production interruption</td><td colspan="1">No</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Blob upload</td><td colspan="1">In transaction</td><td colspan="1">The blob upload is part of the import transaction.</td></tr><tr><td colspan="1">Post import tasks</td><td colspan="1">None</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>
+Similarily, there can be several strategies for uploading the binary content (the files):
 
-The key point is that all these user import systems are designed to be easy to use, but are not designed for high performance and huge volume.
+ * Using the REST API. The REST API provides the batch endpoint for uploading content, with ability to upload by chunks and thus implement resume upload patterns.
+  * +:Can upload file from anywhere, just need an HTTP access.
+  * -:Network becomes a strong limitation to import rates
+  
+ * Uploading them on a file system accessible from the Nuxeo Server
+  * +:No network limitation as files may then be just "moved" to the right place (unless they are then stored on an object store in the cloud)
+  * -: it is not always easy to open access to the file system of the folder, so this solution cannot be seen as a generic strategy for central repository use case.
+  
+ * Moving the file right to the place it will then be stored by Nuxeo. May it be a file system binary store or an S3 or Azure Object store one, it is always possible to drop the files in the right place to limitate operations.
+  * +:Most efficient way to do, especially when it is very large multi-tera bytes files.
+  * -:Not easy to handle as a general integration pattern, requires to compute hash of the file first.
+  
+ 
+ 
+ 
+## Existing Import Tools
 
-{{#> panel heading='For more information'}}
+### Tools Diectory
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Features</th><th colspan="1">Customisation Language</th><th colspan="1">Customisation Logic</th><th colspan="1">Limitations</th></tr>
 
-*   [ Content Creation User Documentation ]({{page space='userdoc' page='creating-content'}})
-*   [WebDAV User Documentation]({{page space='userdoc' page='working-with-webdav'}})
-*   [WebDAV Developer Documentation]({{page page='webdav'}})
-*   [Nuxeo Drive User Documentation]({{page space='userdoc' page='nuxeo-drive'}})
-*   [Nuxeo Drive Developer Documentation]({{page page='nuxeo-drive'}})
+<tr><th colspan="1"><a href="https://github.com/nuxeo-sandbox/nuxeo-node-importer" target="_blank">node.js Importer</a></th>
+<td colspan="1">
+The node.js importer makes use of the REST API and provides you with additional services compared to the bare approach:<br>
+- multi-threading<br>
+- Client side browsing of a complete hierachy of content (folders,sub folders and files).</td><td>JavaScript</td><td>Fork and override a single object implementation. It is quite easy to add custom logic for stating a workflow on the document at the same time, or changing its lifecycle, or setting a custom ACL. A <a href="https://github.com/nuxeo-sandbox/nuxeo-node-custom-importer" target="_blank">sample fork with custom rules</a> is provided on github.</td><td>No out of the box format format for metadata values specification. Also not recommended if import rate is the critical factor, since data transits over HTTP.</TD</tr>
 
-{{/panel}}
+<tr><th colspan="1"><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer" target="_blank">Nuxeo Platform Importer</a></th>
+<td colspan="1">
+Nuxeo Platform importer is an importer framework provided as an addon that can be used to build custom importers. It relies on a standard crawler, tansformer, Writer scheme. Scan importer and csv importer are using that framework. It is the defacto choice when you want to reach hyperscale numbers with importing content (up to 10 000s of documents per second) All you need to do is write your own Document Factory that will be in charge of the document creation logic in the repository. You can then easily launch the import controlling how many documents re done in a batch, how many batch per transaction, etc ..</td><td>Java</td><td>The importer framework offers many customisation possibilties, you can read the <a href="{{page space="NXDOC page="nuxeo-bulk-document-importer"}}target="_blank">Nuxeo Platform Importer documentation</a> to learn more.</td><td>Files must be available on a file system mounted on the Nuxeo server</TD></tr>
 
-### HTTP API
+<tr><th colspan="1"><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer" target="_blank">Nuxeo Platform Scan Importer</a></th>
+<td colspan="1">
+Nuxeo Platform Scan importer is a sub-module of the importer framework and is typically used for the output of a digitisation chain. Scan importer listens to a given folder and will import all content referenced via XML files, with their metadata, etc. Scan importer also offers very advanced XML <--> documents mapping possibilities, with ability to use some automation processing during the import phase. </TD><td>Java</td><td>Scan Importer is configurable via XML extensions for the Metadata mapping. The documentation provides links to <a target="_blank" href="{{page space='NXDOC' page='scan-documents-importer'}}">simple and advanced use cases</a>.</td><td></td><td></td></tr>
 
-Nuxeo HTTP Automation API can be used to run imports inside the Nuxeo Platform.
+<tr><th colspan="1"><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv" target="_blank"> Nuxeo CSV Importer</a></th>
+<td colspan="1">
+Nuxeo CSV Importer makes use of the importer framework and provides a UI for uploading a csv file whose content will be used to map columns values to properties of created documents. </TD><TD>Java</TD><TD>See <a target="_blank" href="{{page space="NXDOC" page="nuxeo-csv"}}">documentation</a>. It is possible to customize the creation logic with new Document factory classes. Yet it is in the roadmap to make this importer more configurable out of the box.</TD><td></td></tr>
+</tbody></table></div>
 
-You can use Automation from custom code, custom scripting or from tools like:
+### Using the bare REST API
+ You can straightly use the REST API and implement the importing logic you need from there.
+ 
+### Using the bare Java API
+You can use the CoreSession object in a server-side deployed custom java component and implement the importing logic you need from there. We also povide a default [import/export format]({{page page="nuxeo-core-import-export-api" space="NXDOC"}}) for the repository with piping logic.
 
-*   ETL: see the [Talend Connector](https://github.com/tiry/nuxeo-talend-components/blob/master/doc/create_update.md)
-*   ESB: see the [Mule Connector](https://github.com/tiry/nuxeo-mule-connector/blob/master/doc/sample.md)
 
-Using the API allows you to easily define import custom logic on the client side, but:
-
-*   blobs upload will be part of the process,
-*   doing transaction batch is not easy since it requires to create custom chains.
-
-**Import criteria details**
-
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Criteria</th><th colspan="1">Value</th><th colspan="1">Comment</th></tr><tr><td colspan="1">Average import speed</td><td colspan="1">Low / Medium</td><td colspan="1">Several documents (between 5 and 20 docs).</td></tr><tr><td colspan="1">Custom logic handling</td><td colspan="1">Built-in</td><td colspan="1">All custom logic will be called.</td></tr><tr><td colspan="1">Ability to handle huge volume</td><td colspan="1">No</td><td colspan="1">No easy transaction batch management.</td></tr><tr><td colspan="1">Production interruption</td><td colspan="1">No</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Blob upload</td><td colspan="1">In process</td><td colspan="1">
-
-The blob upload is part of the import process.
-
-</td></tr><tr><td colspan="1">Post import tasks</td><td colspan="1">None</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>{{#> panel heading='For more information'}}
-
-*   [REST API]({{page page='rest-api'}})
-*   [Automation]({{page page='automation'}})
-
-{{/panel}}
-
-### Platform Importer
-
-[The Platform importer ]({{page page='nuxeo-bulk-document-importer'}})is a framework that can be used to build custom importers that use the Java API.
-
-Unlike the previous methods:
-
-*   The Java API is directly used: no network and marshaling overhead.
-*   Blobs are read from a local filesystem: no network cost.
-
-The importer does handle several aspects that are important for managing performances:
-
-*   transaction batch,
-*   de-activating some listeners,
-*   process event handles in bulk-mode.
-
-**Import criteria details**
-
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Criteria</th><th colspan="1">Value</th><th colspan="1">Comment</th></tr><tr><td colspan="1">Average import speed</td><td colspan="1">High</td><td colspan="1">Several hundreds of documents (between 50 and 500 docs).</td></tr><tr><td colspan="1">Custom logic handling</td><td colspan="1">Built-in</td><td colspan="1">Most custom logic will be called: depending on which listeners are removed.</td></tr><tr><td colspan="1">Ability to handle huge volume</td><td colspan="1">Yes</td><td colspan="1">Native handling of transaction batch + bulk event handler mode.</td></tr><tr><td colspan="1">Production interruption</td><td colspan="1">Yes</td><td colspan="1">The bulk mode is not adapted for a normal usage: at least a dedicated Nuxeo node should be allocated.
-High speed import is likely to saturate the database: this will slow down all interactive usages.</td></tr><tr><td colspan="1">Blob upload</td><td colspan="1">Separated</td><td colspan="1">
-
-Blobs are directly read on the server side FileSystem.
-
-</td></tr><tr><td colspan="1">Post import tasks</td><td colspan="1">May need to restart full text indexing.
-May need to restart process for listeners that were by-passed .</td><td colspan="1">In a lot of cases, the full text indexing is deactivated during processing, as well as other slow processes like video conversation, thumbnails generation, etc. After import, these processes need to be restarted.</td></tr></tbody></table></div>{{#> panel heading='For more information'}}
-
-*   [Nuxeo Bulk Document Importer Developer Documentation]({{page page='nuxeo-bulk-document-importer'}})
-
-{{/panel}}
-
-### SQL Import
-
-Thanks to the VCS Repository [clear and clean SQL structure]({{page page='vcs-tables'}}), you can directly use SQL injection.
-
-Of course, this is by far the fastest technique, but since you will bypass all the Java business layer, you will need to do some checks and post processing. In addition, if you want the SQL import to be really fast, you may want to deactivate some of the integrity constraints and triggers.
-
-**Import criteria details**
-
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Criteria</th><th colspan="1">Value</th><th colspan="1">Comment</th></tr><tr><td colspan="1">Average import speed</td><td colspan="1">Very high</td><td colspan="1">Several thousands of Documents (between 500 and 5000 docs).</td></tr><tr><td colspan="1">Custom logic handling</td><td colspan="1">Bypass</td><td colspan="1">All Java Layer is by-passed.</td></tr><tr><td colspan="1">Ability to handle huge volume</td><td colspan="1">Yes</td><td colspan="1">Native handling of transaction batch + bulk event handler mode.</td></tr><tr><td colspan="1">Production interruption</td><td colspan="1">Yes</td><td colspan="1">Usually, the database server configuration is changed to make the bulk insert more efficient.</td></tr><tr><td colspan="1">Blob upload</td><td colspan="1">Not handled</td><td colspan="1">
-
-Blobs needs to be managed by a separated process.
-
-</td></tr><tr><td colspan="1">Post import tasks</td><td colspan="1">May need to restart full text indexing.
-May need to restart some triggers.</td><td colspan="1">
-
-*   Rebuild full text.
-*   Rebuild ancestors cache.
-*   Rebuild read-ACLs
-
-</td></tr></tbody></table></div>{{#> panel heading='For more information'}}
-
-*   [VCS]({{page page='vcs'}})
-*   [Internal VCS Model]({{page space='NXDOC' page='Internal VCS+Model'}})
-*   [VCS Tables]({{page space='NXDOC' page='VCS Tables'}})
-*   [Examples of SQL Generated by VCS]({{page space='NXDOC' page='Examples of++SQL+Generated+by+VCS'}})
-*   [Java Data Structures and Caching]({{page space='NXDOC' page='Java Data+Structures+and+Caching'}})
-*   [Performance Recommendations]({{page space='NXDOC' page='Performance Recommendations'}})
-
-{{/panel}}
