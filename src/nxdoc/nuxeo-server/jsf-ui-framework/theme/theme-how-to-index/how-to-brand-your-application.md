@@ -5,7 +5,6 @@ review:
     date: '2015-12-01'
     status: ok
 redirect: studio/branding-configuration
-redirect_source: '/display/Studio/Branding+Configuration'
 confluence:
     ajs-parent-page-id: '19235625'
     ajs-parent-page-title: Theme How-To Index
@@ -17,7 +16,7 @@ confluence:
     shortlink: poAV
     shortlink_source: 'https://doc.nuxeo.com/x/poAV'
     source_link: /display/NXDOC/How+to+Brand+Your+Application
-tree_item_index: 100
+hidden: true
 history:
     -
         author: Manon Lumeau

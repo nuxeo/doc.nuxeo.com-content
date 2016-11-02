@@ -194,6 +194,6 @@ Automation chains allow you to optimize the number of calls needed to execute bu
 
 {{/callout}}
 
-You have now completed this tutorial. To start discovering how to customize the Nuxeo Platform, check our [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}}).
+You have now completed this tutorial. To start discovering how to customize the Nuxeo Platform, check our [Quick Start Dev Guide]({{page page='start-customizing-the-nuxeo-platform'}}).
 
 &larr; [Using Workflows]({{page page='using-workflows'}})
