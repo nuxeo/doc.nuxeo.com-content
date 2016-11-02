@@ -49,7 +49,22 @@ node('SLAVE') {
             sh 'echo "Run some tests"'
         }
     } catch (e) {
-        currentBuild.result = 'FAILURE'
+        step([$class: 'ClaimPublisher'])
+        throw e
+    }
+}
+```
+
+## Maven build
+
+```
+node('SLAVE') {
+    try {
+        wrap([$class: 'TimestamperBuildWrapper']) {
+            def mvnHome = tool name: 'maven-3.3', type: 'hudson.tasks.Maven$MavenInstallation'
+            sh "${mvnHome}/bin/mvn clean install"
+        }
+    } catch (e) {
         step([$class: 'ClaimPublisher'])
         throw e
     }
@@ -89,11 +104,29 @@ try {
 
 At the time of this writing, the JIRA plugin is not fully compatible with pipelines.
 
-The way to make it work is to use the `scm` variable exposed by the `git` step :
+The way to make it work is to use the `scm` variable exposed by the `git` step:
 
 ```
 git poll: false, url: 'git@github.com:nuxeo/nuxeo.git'
 step([$class: 'JiraIssueUpdater', issueSelector: [$class: 'DefaultIssueSelector'], scm: scm])
+```
+
+## Email Usage
+
+At the time of this writing, the Email-ext plugin is not compatible with pipelines.
+
+In order to send email, you have to fallback on the standard email step:
+
+```
+try {
+    if('SUCCESS' != currentBuild.getPreviousBuild().getResult()) {
+        mail (to: 'xxx@nuxeo.com', subject: "${env.JOB_NAME}' (${env.BUILD_NUMBER}) - Back to normal", body: "Build back to normal: ${env.BUILD_URL}.");
+    } else {
+        mail (to: 'xxx@nuxeo.com', subject: "${env.JOB_NAME}' (${env.BUILD_NUMBER}) - Back success", body: "Build success: ${env.BUILD_URL}.");
+    }
+} catch (e) {
+    mail (to: 'xxx@nuxeo.com', subject: "${env.JOB_NAME}' (${env.BUILD_NUMBER}) - Failure!", body: "Build failed ${env.BUILD_URL}.");
+}
 ```
 
 ## Docker Usage
