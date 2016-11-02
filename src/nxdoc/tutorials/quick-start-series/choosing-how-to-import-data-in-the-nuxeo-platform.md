@@ -175,11 +175,19 @@ Similarily, there can be several strategies for uploading the binary content (th
 <td colspan="1">
 The node.js importer makes use of the REST API and provides you with additional services compared to the bare approach:<br>
 - multi-threading<br>
+<<<<<<< HEAD
 - Client side browsing of a complete hierachy of content (folders,sub folders and files).</td><td>JavaScript</td><td>Fork and override a single object implementation. It is quite easy to add custom logic for stating a workflow on the document at the same time, or changing its lifecycle, or setting a custom ACL. A <a href="https://github.com/nuxeo-sandbox/nuxeo-node-custom-importer" target="_blank">sample fork with custom rules</a> is provided on github.</td><td>No out of the box format format for metadata values specification. Also not recommended if import rate is the critical factor, since data transits over HTTP.</td</tr>
 
 <tr><th colspan="1"><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer" target="_blank">Nuxeo Platform Importer</a></th>
 <td colspan="1">
 Nuxeo Platform importer is an importer framework provided as an addon that can be used to build custom importers. It relies on a standard crawler, tansformer, Writer scheme. Scan importer and csv importer are using that framework. It is the defacto choice when you want to reach hyperscale numbers with importing content (up to 10 000s of documents per second) All you need to do is write your own Document Factory that will be in charge of the document creation logic in the repository. You can then easily launch the import controlling how many documents re done in a batch, how many batch per transaction, etc ..</td><td>Java</td><td>The importer framework offers many customisation possibilties, you can read the <a href="{{page space='NXDOC' page='nuxeo-bulk-document-importer'}}target="_blank">Nuxeo Platform Importer documentation</a> to learn more.</td><td>Files must be available on a file system mounted on the Nuxeo server</td></tr>
+=======
+- Client side browsing of a complete hierachy of content (folders,sub folders and files).</td><td>JavaScript</td><td>Fork and override a single object implementation. It is quite easy to add custom logic for stating a workflow on the document at the same time, or changing its lifecycle, or setting a custom ACL. A <a href="https://github.com/nuxeo-sandbox/nuxeo-node-custom-importer" target="_blank">sample fork with custom rules</a> is provided on github.</td><td>No out of the box format format for metadata values specification. Also not recommended if import rate is the critical factor, since data transits over HTTP.</td></tr>
+
+<tr><th colspan="1"><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer" target="_blank">Nuxeo Platform Importer</a></th>
+<td colspan="1">
+Nuxeo Platform importer is an importer framework provided as an addon that can be used to build custom importers. It relies on a standard crawler, tansformer, Writer scheme. Scan importer and csv importer are using that framework. It is the defacto choice when you want to reach hyperscale numbers with importing content (up to 10 000s of documents per second) All you need to do is write your own Document Factory that will be in charge of the document creation logic in the repository. You can then easily launch the import controlling how many documents re done in a batch, how many batch per transaction, etc ..</td><td>Java</td><td>The importer framework offers many customisation possibilties, you can read the <a href="{{page space='NXDOC' page='nuxeo-bulk-document-importer'}}" target="_blank">Nuxeo Platform Importer documentation</a> to learn more.</td><td>Files must be available on a file system mounted on the Nuxeo server</td></tr>
+>>>>>>> e5a067fbc4a70358146563ab7f9dfa3ad3e7e3f2
 
 <tr><th colspan="1"><a href="https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer" target="_blank">Nuxeo Platform Scan Importer</a></th>
 <td colspan="1">
@@ -194,6 +202,10 @@ Nuxeo CSV Importer makes use of the importer framework and provides a UI for upl
  You can straightly use the REST API and implement the importing logic you need from there.
  
 ### Using the bare Java API
+<<<<<<< HEAD
 You can use the CoreSession object in a server-side deployed custom java component and implement the importing logic you need from there. We also povide a default [import/export format]({{page page='nuxeo-core-import-export-api' space='NXDOC'}}) for the repository with piping logic.
 
 
+=======
+You can use the CoreSession object in a server-side deployed custom java component and implement the importing logic you need from there. We also provide a default [import/export format]({{page page="nuxeo-core-import-export-api" space="NXDOC"}}) for the repository with piping logic.
+>>>>>>> e5a067fbc4a70358146563ab7f9dfa3ad3e7e3f2
