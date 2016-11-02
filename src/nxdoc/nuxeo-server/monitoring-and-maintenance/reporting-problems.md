@@ -288,7 +288,7 @@ curl "localhost:9200/_cat/nodes?v"
 curl "localhost:9200/_cat/indices?v"
 ```
 
-In addition If the problem is related to unexpected search results or errors, follow this procedure: [Reporting Settings and Mapping]({{page page='elasticsearch-setup#reportingsettingsandmapping'}})
+In addition If the problem is related to unexpected search results or errors, follow this procedure: [Reporting Settings and Mapping]({{page page='elasticsearch-setup#-anchor-reportingproblem-reporting-settings-and-mapping'}})
 
 ## Network
 
