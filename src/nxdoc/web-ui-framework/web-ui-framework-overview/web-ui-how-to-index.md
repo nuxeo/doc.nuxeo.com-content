@@ -20,7 +20,7 @@ confluence:
     source_link: /display/NXDOC710/Web+UI+How-To+Index
 tree_item_index: 300
 version_override:
-    'FT': 'nxdoc/jsf-ui-how-to-index'
+    'FT': '/nxdoc/jsf-ui-how-to-index'
     '6.0': 60/admindoc/web-ui-how-to-index
 history:
     -

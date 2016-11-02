@@ -23,7 +23,7 @@ confluence:
     source_link: /display/ADMINDOC710/Nuxeo+Shell
 tree_item_index: 700
 version_override:
-    'FT': 'nxdoc/nuxeo-shell'
+    'FT': '/nxdoc/nuxeo-shell'
     '6.0': 60/admindoc/nuxeo-shell
     '5.8': 58/admindoc/nuxeo-shell
 history:

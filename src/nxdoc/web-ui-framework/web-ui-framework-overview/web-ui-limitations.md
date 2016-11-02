@@ -23,7 +23,7 @@ confluence:
     source_link: /display/NXDOC710/Web+UI+Limitations
 tree_item_index: 200
 version_override:
-    'FT': 'nxdoc/jsf-ui-limitations'
+    'FT': '/nxdoc/jsf-ui-limitations'
     '6.0': 60/admindoc/web-ui-limitations
 history:
     -

@@ -23,7 +23,7 @@ confluence:
     source_link: /display/ADMINDOC710/Remote+Monitoring+Through+a+SSH+Tunnel
 tree_item_index: 700
 version_override:
-    'FT': 'nxdoc/remote-monitoring-through-a-ssh-tunnel'
+    'FT': '/nxdoc/remote-monitoring-through-a-ssh-tunnel'
     '6.0': 60/admindoc/remote-monitoring-through-a-ssh-tunnel
     '5.8': 58/admindoc/remote-monitoring-through-a-ssh-tunnel
 history:

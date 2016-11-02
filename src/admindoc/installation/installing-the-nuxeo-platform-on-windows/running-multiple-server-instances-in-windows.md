@@ -21,7 +21,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/mTalAQ'
     source_link: /display/ADMINDOC710/Running+Multiple+Server+Instances+in+Windows
 version_override:
-    'FT': 'nxdoc/running-multiple-server-instances-in-windows'
+    'FT': '/nxdoc/running-multiple-server-instances-in-windows'
     '6.0': 60/admindoc/running-multiple-server-instances-in-windows
     '5.8': 58/admindoc/running-multiple-server-instances-in-windows
 history:

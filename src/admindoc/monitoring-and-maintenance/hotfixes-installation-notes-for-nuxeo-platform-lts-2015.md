@@ -20,7 +20,7 @@ confluence:
         /display/ADMINDOC710/Hotfixes+Installation+Notes+for+Nuxeo+Platform+LTS+2015
 tree_item_index: 1300
 version_override:
-    'FT': 'nxdoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015'
+    'FT': '/nxdoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015'
     '6.0': 60/admindoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015
     '5.8': 58/admindoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015
 history:

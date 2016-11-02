@@ -22,7 +22,7 @@ confluence:
     source_link: /display/ADMINDOC710/Upgrading+the+Nuxeo+Platform
 tree_item_index: 600
 version_override:
-    'FT': 'nxdoc/upgrading-the-nuxeo-platform'
+    'FT': '/nxdoc/upgrading-the-nuxeo-platform'
     '6.0': 60/admindoc/upgrading-the-nuxeo-platform
 history:
     -

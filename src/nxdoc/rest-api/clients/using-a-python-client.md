@@ -22,7 +22,7 @@ confluence:
     source_link: /display/NXDOC710/Using+a+Python+Client
 tree_item_index: 500
 version_override:
-    'FT': 'nxdoc/python-client'
+    'FT': '/nxdoc/python-client'
     '6.0': 60/admindoc/using-a-python-client
     '5.8': 58/admindoc/using-a-python-client
 history:
