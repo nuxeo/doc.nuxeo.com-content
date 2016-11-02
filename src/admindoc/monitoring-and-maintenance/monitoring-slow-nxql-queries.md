@@ -19,7 +19,7 @@ confluence:
     source_link: /display/ADMINDOC60/Monitoring+Slow+NXQL+Queries
 tree_item_index: 1000
 version_override:
-    'FT': 'nxdoc/monitoring-slow-nxql-queries'
+    'FT': '/nxdoc/monitoring-slow-nxql-queries'
 history:
     -
         author: Solen Guitter

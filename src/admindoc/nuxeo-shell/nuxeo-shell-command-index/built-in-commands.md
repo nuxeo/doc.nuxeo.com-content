@@ -20,7 +20,7 @@ confluence:
     source_link: /display/ADMINDOC60/Built-in+Commands
 tree_item_index: 100
 version_override:
-    'FT': 'ndoc/built-in-commands'
+    'FT': '/ndoc/built-in-commands'
 history:
     -
         author: Solen Guitter

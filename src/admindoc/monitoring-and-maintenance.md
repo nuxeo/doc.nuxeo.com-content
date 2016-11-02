@@ -21,7 +21,7 @@ confluence:
     source_link: /display/ADMINDOC60/Monitoring+and+Maintenance
 tree_item_index: 500
 version_override:
-    'FT': 'nxdoc/monitoring-and-maintenance'
+    'FT': '/nxdoc/monitoring-and-maintenance'
 history:
     -
         author: Solen Guitter

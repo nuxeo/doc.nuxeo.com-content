@@ -23,7 +23,7 @@ confluence:
     source_link: >-
         /display/ADMINDOC60/Internet+Information+Services+%28IIS%29+Configuration
 version_override:
-    'FT': 'nxdoc/internet-information-services-iis'
+    'FT': '/nxdoc/internet-information-services-iis'
 history:
     -
         author: Solen Guitter

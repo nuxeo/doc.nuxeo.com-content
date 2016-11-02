@@ -20,7 +20,7 @@ confluence:
     source_link: /display/ADMINDOC60/Nuxeo+Shell+Batch+Mode
 tree_item_index: 200
 version_override:
-    'FT': 'nxdoc/nuxeo-shell-batch-mode'
+    'FT': '/nxdoc/nuxeo-shell-batch-mode'
 history:
     -
         author: Solen Guitter

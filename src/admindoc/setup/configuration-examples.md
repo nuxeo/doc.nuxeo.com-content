@@ -23,7 +23,7 @@ confluence:
     source_link: /display/ADMINDOC60/Configuration+Examples
 tree_item_index: 200
 version_override:
-    'FT': 'nxdoc/configuration-examples'
+    'FT': '/nxdoc/configuration-examples'
 history:
     -
         author: Solen Guitter

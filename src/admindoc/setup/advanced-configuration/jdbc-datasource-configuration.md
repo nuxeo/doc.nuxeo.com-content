@@ -20,7 +20,7 @@ confluence:
     source_link: /display/ADMINDOC60/JDBC+Datasource+Configuration
 tree_item_index: 700
 version_override:
-    'FT': 'nxdoc/jdbc-datasource'
+    'FT': '/nxdoc/jdbc-datasource'
 history:
     -
         author: Solen Guitter

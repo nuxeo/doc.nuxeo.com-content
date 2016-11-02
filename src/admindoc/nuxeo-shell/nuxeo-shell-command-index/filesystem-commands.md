@@ -20,7 +20,7 @@ confluence:
     source_link: /display/ADMINDOC60/Filesystem+Commands
 tree_item_index: 200
 version_override:
-    'FT': 'nxdoc/filesystem-commands'
+    'FT': '/nxdoc/filesystem-commands'
 history:
     -
         author: Solen Guitter

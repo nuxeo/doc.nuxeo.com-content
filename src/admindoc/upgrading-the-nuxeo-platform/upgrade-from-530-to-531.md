@@ -17,7 +17,7 @@ confluence:
     source_link: /display/ADMINDOC60/Upgrade+from+5.3.0+to+5.3.1
 tree_item_index: 900
 version_override:
-    'FT': 'nxdoc/upgrade-from-530-to-531'
+    'FT': '/nxdoc/upgrade-from-530-to-531'
 history:
     -
         author: Solen Guitter

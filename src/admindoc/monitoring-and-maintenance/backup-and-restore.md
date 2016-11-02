@@ -19,7 +19,7 @@ confluence:
     source_link: /display/ADMINDOC60/Backup+and+Restore
 tree_item_index: 200
 version_override:
-    'FT': 'nxdoc/backup-and-restore'
+    'FT': '/nxdoc/backup-and-restore'
 history:
     -
         author: Florent Guillaume

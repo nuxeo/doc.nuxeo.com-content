@@ -21,7 +21,7 @@ confluence:
     source_link: /display/NXDOC60/Web+UI+Limitations
 tree_item_index: 200
 version_override:
-    'FT': 'nxdoc/jsf-ui-limitations'
+    'FT': '/nxdoc/jsf-ui-limitations'
 history:
     -
         author: Manon Lumeau

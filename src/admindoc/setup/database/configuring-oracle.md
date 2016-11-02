@@ -21,7 +21,7 @@ confluence:
     source_link: /display/ADMINDOC60/Configuring+Oracle
 tree_item_index: 200
 version_override:
-    'FT': 'nxdoc/oracle'
+    'FT': '/nxdoc/oracle'
     'LTS 2015': 710/admindoc/oracle
     '5.8': 58/admindoc/configuring-oracle
 history:

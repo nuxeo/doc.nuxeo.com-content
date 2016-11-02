@@ -23,7 +23,7 @@ confluence:
     source_link: /display/ADMINDOC60/Logs+Analysis
 tree_item_index: 400
 version_override:
-    'FT': 'nxdoc/logs-analysis'
+    'FT': '/nxdoc/logs-analysis'
 history:
     -
         author: Julien Carsique

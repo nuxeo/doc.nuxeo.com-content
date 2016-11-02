@@ -17,7 +17,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/FYBOAQ'
     source_link: /display/ADMINDOC60/Upgrade+to+5.4+and+JBoss+5
 version_override:
-    'FT': 'nxdoc/upgrade-to-54-and-jboss-5'
+    'FT': '/nxdoc/upgrade-to-54-and-jboss-5'
 history:
     -
         author: Solen Guitter

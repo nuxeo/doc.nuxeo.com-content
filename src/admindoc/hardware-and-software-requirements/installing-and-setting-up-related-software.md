@@ -24,7 +24,7 @@ confluence:
     source_link: /display/ADMINDOC60/Installing+and+Setting+up+Related+Software
 tree_item_index: 100
 version_override:
-    'FT': 'nxdoc/installing-and-setting-up-related-software'
+    'FT': '/nxdoc/installing-and-setting-up-related-software'
     'LTS 2015': 710/admindoc/installing-and-setting-up-related-software
     '5.8': 58/admindoc/installing-and-setting-up-related-software
 history:

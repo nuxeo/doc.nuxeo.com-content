@@ -23,7 +23,7 @@ confluence:
     source_link: /display/ADMINDOC60/Recommended+Configurations
 tree_item_index: 100
 version_override:
-    'FT': 'nxdoc/setup-best-practices'
+    'FT': '/nxdoc/setup-best-practices'
 history:
     -
         author: Anonymous

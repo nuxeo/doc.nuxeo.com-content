@@ -20,7 +20,7 @@ confluence:
     source_link: /pages/viewpage.action?pageId=21921832
 tree_item_index: 500
 version_override:
-    'FT': 'nxdoc/purging-audit-logs-nxp_logs'
+    'FT': '/nxdoc/purging-audit-logs-nxp_logs'
 history:
     -
         author: Solen Guitter

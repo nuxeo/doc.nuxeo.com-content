@@ -21,7 +21,7 @@ confluence:
     source_link: /display/ADMINDOC60/Configuring+MS+SQL+Server
 tree_item_index: 300
 version_override:
-    'FT': 'nxdoc/microsoft-sql-server'
+    'FT': '/nxdoc/microsoft-sql-server'
     'LTS 2015': 710/admindoc/microsoft-sql-server
     '5.8': 58/admindoc/configuring-ms-sql-server
 history:

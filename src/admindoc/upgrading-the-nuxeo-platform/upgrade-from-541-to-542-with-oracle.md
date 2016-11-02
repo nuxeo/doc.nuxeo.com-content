@@ -18,7 +18,7 @@ confluence:
     source_link: /display/ADMINDOC60/Upgrade+from+5.4.1+to+5.4.2+with+Oracle
 tree_item_index: 500
 version_override:
-    'FT': 'nxdoc/upgrade-from-541-to-542-with-oracle'
+    'FT': '/nxdoc/upgrade-from-541-to-542-with-oracle'
 history:
     -
         author: Solen Guitter

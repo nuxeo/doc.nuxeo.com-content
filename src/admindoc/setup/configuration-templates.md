@@ -20,7 +20,7 @@ confluence:
     source_link: /display/ADMINDOC60/Configuration+Templates
 tree_item_index: 300
 version_override:
-    'FT': 'nxdoc/configuration-templates'
+    'FT': '/nxdoc/configuration-templates'
 history:
     -
         author: Solen Guitter

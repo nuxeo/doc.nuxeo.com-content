@@ -21,7 +21,7 @@ confluence:
     source_link: /display/NXDOC60/Web+UI+Framework+Overview
 tree_item_index: 100
 version_override:
-    'FT': 'nxdoc/jsf-ui-framework-overview'
+    'FT': '/nxdoc/jsf-ui-framework-overview'
 history:
     -
         author: Manon Lumeau

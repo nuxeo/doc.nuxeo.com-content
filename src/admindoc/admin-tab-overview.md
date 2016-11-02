@@ -21,7 +21,7 @@ confluence:
     source_link: /display/ADMINDOC60/Admin+Tab+Overview
 tree_item_index: 800
 version_override:
-    'FT': 'nxdoc/admin-tab-overview'
+    'FT': '/nxdoc/admin-tab-overview'
 history:
     -
         author: Solen Guitter

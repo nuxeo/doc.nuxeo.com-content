@@ -21,7 +21,7 @@ confluence:
     source_link: /display/ADMINDOC60/Configuring+MySQL
 tree_item_index: 400
 version_override:
-    'FT': 'nxdoc/mysql'
+    'FT': '/nxdoc/mysql'
     'LTS 2015': 710/admindoc/mysql
     '5.8': 58/admindoc/configuring-mysql
 history:

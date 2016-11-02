@@ -17,7 +17,7 @@ confluence:
     source_link: /display/NXDOC60/Web+UI+Framework
 tree_item_index: 1600
 version_override:
-    'FT': 'nxdoc/jsf-ui-framework'
+    'FT': '/nxdoc/jsf-ui-framework'
 history:
     -
         author: Solen Guitter

@@ -20,7 +20,7 @@ confluence:
     source_link: /display/ADMINDOC60/Nuxeo+Automation+Commands
 tree_item_index: 400
 version_override:
-    'FT': 'nxdoc/nuxeo-automation-commands'
+    'FT': '/nxdoc/nuxeo-automation-commands'
 history:
     -
         author: Solen Guitter

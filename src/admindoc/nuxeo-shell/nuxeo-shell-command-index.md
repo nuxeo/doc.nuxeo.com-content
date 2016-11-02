@@ -19,7 +19,7 @@ confluence:
     source_link: /display/ADMINDOC60/Nuxeo+Shell+Command+Index
 tree_item_index: 100
 version_override:
-    'FT': 'nxdoc/nuxeo-shell-command-index'
+    'FT': '/nxdoc/nuxeo-shell-command-index'
 history:
     -
         author: Florent Guillaume
