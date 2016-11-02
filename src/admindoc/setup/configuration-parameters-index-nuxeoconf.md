@@ -2297,9 +2297,9 @@ Since 6.0
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related content'}}
 
-*   [Recommended Configurations]({{page page='recommended-configurations'}})
-*   [Configuration Examples]({{page page='configuration-examples'}})
-*   [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
+- [Recommended Configurations]({{page page='recommended-configurations'}})
+- [Configuration Examples]({{page page='configuration-examples'}})
+- [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
 
 {{/panel}}</div><div class="column medium-6">
 
