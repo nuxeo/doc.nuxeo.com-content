@@ -4,6 +4,8 @@ review:
     comment: ''
     date: ''
     status: ok
+version_override:
+    'FT': /nxdoc/start-customizing-the-nuxeo-platform/
 confluence:
     ajs-parent-page-id: '17334435'
     ajs-parent-page-title: Dev Cookbook
@@ -16,17 +18,17 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/koAIAQ'
     source_link: /display/NXDOC58/Quick+Start+Dev+Guide
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-30 10:10'
         message: ''
         version: '3'
-    - 
+    -
         author: Anonymous
         date: '2013-07-16 10:30'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 13:57'
         message: ''
