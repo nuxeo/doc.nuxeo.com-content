@@ -164,7 +164,7 @@ Upload a file to your Nuxeo Platform instance and create a contract with the new
 
 **Procedure**
 
-1.  Download the following file: []({{file name='AwesomeTech-Contract.docx'}}). You will upload it in the next steps.
+1.  Download the file [AwesomeTech-Contract.docx]({{file name='AwesomeTech-Contract.docx'}}). You will upload it in the next steps.
 2.  Using your favorite text editor or IDE, create a file called `uploadContract.js` with the following content. Make sure to replace the `filePath` variable with the path to the contract you want to upload.
 
     ```js
@@ -265,7 +265,7 @@ The contract for Skynet AI maintenance you just created should also contain othe
 
 **Procedure**
 
-1.  Download the following file:&nbsp;[]({{file name='contract-attachments.zip'}}) and unzip it. You will attach the files it contains to the contract in the next steps.
+1.  Download the file [contract-attachments.zip]({{file name='contract-attachments.zip'}}) and unzip it. You will attach the files it contains to the contract in the next steps.
 2.  Using your favorite text editor or IDE, create a file called `attachFilesToContract.js` with the following content. Make sure to replace the `filePath` variable with the path to the unzipped attachment folder.
 
     ```js
