@@ -20,7 +20,7 @@ confluence:
     source_link: /display/ADMINDOC710/Upgrade+from+5.3.1+with+MySQL+to+5.3.2
 tree_item_index: 900
 version_override:
-    'FT': nxdoc/upgrade-from-531-with-mysql-to-532
+    'FT': /nxdoc/upgrade-from-531-with-mysql-to-532
     '6.0': 60/admindoc/upgrade-from-531-with-mysql-to-532
     '5.8': 58/admindoc/upgrade-from-531-with-mysql-to-532
 history:

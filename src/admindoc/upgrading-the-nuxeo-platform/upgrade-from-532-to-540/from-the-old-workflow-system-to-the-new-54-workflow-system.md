@@ -20,7 +20,7 @@ confluence:
     source_link: >-
         /display/ADMINDOC710/From+the+old+workflow+system+to+the+new+5.4+workflow+system
 version_override:
-    'FT': nxdoc/from-the-old-workflow-system-to-the-new-54-workflow-system
+    'FT': /nxdoc/from-the-old-workflow-system-to-the-new-54-workflow-system
     '6.0': 60/admindoc/from-the-old-workflow-system-to-the-new-54-workflow-system
     '5.8': 58/admindoc/from-the-old-workflow-system-to-the-new-54-workflow-system
 history:

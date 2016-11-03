@@ -22,7 +22,7 @@ confluence:
     source_link: /display/ADMINDOC710/Elasticsearch+Setup
 tree_item_index: 1200
 version_override:
-    'FT': nxdoc/elasticsearch-setup
+    'FT': /nxdoc/elasticsearch-setup
     '6.0': 60/admindoc/elasticsearch-setup
     '5.8': 58/admindoc/elasticsearch-setup
 history:

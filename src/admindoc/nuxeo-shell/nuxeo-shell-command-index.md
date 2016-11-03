@@ -21,7 +21,7 @@ confluence:
     source_link: /display/ADMINDOC710/Nuxeo+Shell+Command+Index
 tree_item_index: 100
 version_override:
-    'FT': nxdoc/nuxeo-shell-command-index
+    'FT': /nxdoc/nuxeo-shell-command-index
     '6.0': 60/admindoc/nuxeo-shell-command-index
     '5.8': 58/admindoc/nuxeo-shell-command-index
 history:

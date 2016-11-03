@@ -21,7 +21,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/hjalAQ'
     source_link: /display/ADMINDOC710/Sensitive+Configuration+Data+Encryption
 version_override:
-    'FT': nxdoc/sensitive-configuration-data-encryption
+    'FT': /nxdoc/sensitive-configuration-data-encryption
     '6.0': 60/admindoc/sensitive-configuration-data-encryption
     '5.8': 58/admindoc/sensitive-configuration-data-encryption
 history:

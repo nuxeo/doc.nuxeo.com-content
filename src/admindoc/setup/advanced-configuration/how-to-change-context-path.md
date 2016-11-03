@@ -31,7 +31,7 @@ confluence:
     source_link: /display/ADMINDOC710/How+to+Change+Context+Path
 tree_item_index: 200
 version_override:
-    'FT': nxdoc/how-to-change-context-path
+    'FT': /nxdoc/how-to-change-context-path
     '6.0': 60/admindoc/how-to-change-context-path
 history:
     -

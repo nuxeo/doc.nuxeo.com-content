@@ -22,7 +22,7 @@ confluence:
     source_link: /display/ADMINDOC710/Configuration+Commands
 tree_item_index: 500
 version_override:
-    'FT': nxdoc/configuration-commands
+    'FT': /nxdoc/configuration-commands
     '6.0': 60/admindoc/configuration-commands
     '5.8': 58/admindoc/configuration-commands
 history:

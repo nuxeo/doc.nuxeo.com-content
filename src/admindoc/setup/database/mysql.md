@@ -22,7 +22,7 @@ confluence:
     source_link: /display/ADMINDOC710/MySQL
 tree_item_index: 400
 version_override:
-    'FT': nxdoc/mysql
+    'FT': /nxdoc/mysql
     '6.0': 60/admindoc/configuring-mysql
     '5.8': 58/admindoc/configuring-mysql
 history:

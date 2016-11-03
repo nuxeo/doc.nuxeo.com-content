@@ -19,7 +19,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/vjalAQ'
     source_link: /display/ADMINDOC710/Upgrade+to+5.4+and+JBoss+5
 version_override:
-    'FT': nxdoc/upgrade-to-54-and-jboss-5
+    'FT': /nxdoc/upgrade-to-54-and-jboss-5
     '6.0': 60/admindoc/upgrade-to-54-and-jboss-5
     '5.8': 58/admindoc/upgrade-to-54-and-jboss-5
 history:

@@ -23,7 +23,7 @@ confluence:
     source_link: /display/ADMINDOC710/Firewall+Consideration
 tree_item_index: 400
 version_override:
-    'FT': nxdoc/ports-usage-and-firewall-considerations
+    'FT': /nxdoc/ports-usage-and-firewall-considerations
     '6.0': 60/admindoc/firewall-consideration
     '5.8': 58/admindoc/firewall-consideration
 history:

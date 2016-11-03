@@ -22,7 +22,7 @@ confluence:
     source_link: /display/ADMINDOC710/Implementing+Encryption
 tree_item_index: 500
 version_override:
-    'FT': nxdoc/implementing-encryption
+    'FT': /nxdoc/implementing-encryption
     '6.0': 60/admindoc/implementing-encryption
 history:
     -

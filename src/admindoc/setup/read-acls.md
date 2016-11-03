@@ -21,7 +21,7 @@ confluence:
     source_link: /display/ADMINDOC710/Read+ACLs
 tree_item_index: 1000
 version_override:
-    'FT': nxdoc/read-acls
+    'FT': /nxdoc/read-acls
     '6.0': 60/admindoc/read-acls
     '5.8': 58/admindoc/read-acls
 history:

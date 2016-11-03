@@ -23,7 +23,7 @@ confluence:
     source_link: /display/ADMINDOC710/Connecting+Nuxeo+to+the+Database
 tree_item_index: 600
 version_override:
-    'FT': nxdoc/connecting-nuxeo-to-the-database
+    'FT': /nxdoc/connecting-nuxeo-to-the-database
     '6.0': 60/admindoc/connecting-nuxeo-to-the-database
     '5.8': 58/admindoc/connecting-nuxeo-to-the-database
 

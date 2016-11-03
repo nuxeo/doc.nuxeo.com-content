@@ -22,7 +22,7 @@ confluence:
     source_link: /display/ADMINDOC710/H2+Limitations
 tree_item_index: 700
 version_override:
-    'FT': nxdoc/h2-limitations
+    'FT': /nxdoc/h2-limitations
     '6.0': 60/admindoc/h2-limitations
 history:
     -

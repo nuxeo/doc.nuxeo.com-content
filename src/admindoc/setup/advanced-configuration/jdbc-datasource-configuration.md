@@ -21,7 +21,7 @@ confluence:
     source_link: /display/ADMINDOC710/JDBC+Datasource+Configuration
 tree_item_index: 600
 version_override:
-    'FT': nxdoc/jdbc-datasource
+    'FT': /nxdoc/jdbc-datasource
     '6.0': 60/admindoc/jdbc-datasource-configuration
     '5.8': 58/admindoc/jdbc-datasource-configuration
 history:

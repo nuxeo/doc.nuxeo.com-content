@@ -20,7 +20,7 @@ confluence:
     source_link: /display/ADMINDOC710/Upgrade+from+5.8+to+6.0
 tree_item_index: 200
 version_override:
-    'FT': nxdoc/upgrade-from-58-to-60
+    'FT': /nxdoc/upgrade-from-58-to-60
     '6.0': 60/admindoc/upgrade-from-58-to-60
 history:
     -

@@ -23,7 +23,7 @@ confluence:
     source_link: /pages/viewpage.action?pageId=27604705
 tree_item_index: 400
 version_override:
-    'FT': nxdoc/configuration-parameters-index-nuxeoconf
+    'FT': /nxdoc/configuration-parameters-index-nuxeoconf
     '6.0': 60/admindoc/configuration-parameters-index-nuxeoconf
     '5.8': 58/admindoc/configuration-parameters-index-nuxeoconf
 history:

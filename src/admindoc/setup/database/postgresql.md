@@ -22,7 +22,7 @@ confluence:
     source_link: /display/ADMINDOC710/PostgreSQL
 tree_item_index: 100
 version_override:
-    'FT': nxdoc/postgresql
+    'FT': /nxdoc/postgresql
     '6.0': 60/admindoc/configuring-postgresql
     '5.8': 58/admindoc/configuring-postgresql
 history:

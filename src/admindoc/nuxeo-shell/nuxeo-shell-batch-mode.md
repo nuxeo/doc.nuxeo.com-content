@@ -23,7 +23,7 @@ confluence:
     source_link: /display/ADMINDOC710/Nuxeo+Shell+Batch+Mode
 tree_item_index: 200
 version_override:
-    'FT': nxdoc/nuxeo-shell-batch-mode
+    'FT': /nxdoc/nuxeo-shell-batch-mode
     '6.0': 60/admindoc/nuxeo-shell-batch-mode
     '5.8': 58/admindoc/nuxeo-shell-batch-mode
 history:

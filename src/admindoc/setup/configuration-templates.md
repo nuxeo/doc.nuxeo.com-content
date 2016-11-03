@@ -22,7 +22,7 @@ confluence:
     source_link: /display/ADMINDOC710/Configuration+Templates
 tree_item_index: 300
 version_override:
-    'FT': nxdoc/configuration-templates
+    'FT': /nxdoc/configuration-templates
     '6.0': 60/admindoc/configuration-templates
     '5.8': 58/admindoc/configuration-templates
 history:

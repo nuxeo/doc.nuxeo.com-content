@@ -19,7 +19,7 @@ confluence:
     source_link: /display/ADMINDOC710/Upgrade+from+5.1.2+to+5.1.3
 tree_item_index: 1200
 version_override:
-    'FT': nxdoc/upgrade-from-512-to-513
+    'FT': /nxdoc/upgrade-from-512-to-513
     '6.0': 60/admindoc/upgrade-from-512-to-513
     '5.8': 58/admindoc/upgrade-from-512-to-513
 history:

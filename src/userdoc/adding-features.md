@@ -20,7 +20,7 @@ confluence:
     source_link: /display/USERDOC710/Adding+Features
 tree_item_index: 1900
 version_override:
-    'FT': userdoc/adding-features
+    'FT': /userdoc/adding-features
     '6.0': 60/userdoc/marketplace-add-ons
     '5.8': 58/userdoc/marketplace-add-ons
 history:

@@ -20,7 +20,7 @@ confluence:
     source_link: /display/ADMINDOC710/Upgrade+from+5.3.2+to+5.4.0
 tree_item_index: 700
 version_override:
-    'FT': nxdoc/upgrade-from-532-to-540
+    'FT': /nxdoc/upgrade-from-532-to-540
     '6.0': 60/admindoc/upgrade-from-532-to-540
     '5.8': 58/admindoc/upgrade-from-532-to_540
 history:
