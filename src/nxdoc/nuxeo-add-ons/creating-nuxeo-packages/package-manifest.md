@@ -134,8 +134,8 @@ Let's look at a minimal example of package.xml file:
   <description>A service that enables building complex business logic on top of Nuxeo services
     using scriptable operation chains</description>
   <platforms>
-    <platform>dm-5.3.2</platform>
-    <platform>dam-5.3.2</platform>
+    <platform>cap-8.3</platform>
+    <platform>server-8.4*</platform>
   </platforms>
 </package>
 
@@ -172,12 +172,12 @@ Let's look at the full version of the same package manifest:
   <uninstaller class="org.nuxeo.connect.update.impl.task.UninstallTask" restart="false"/>
   <validator class="org.nuxeo.MyValidator"/>
   <platforms>
-    <platform>dm-5.3.2</platform>
-    <platform>dam-5.3.2</platform>
+    <platform>cap-8.3</platform>
+    <platform>server-8.4*</platform>
   </platforms>
   <dependencies>
-    <package>nuxeo-core:5.3.1:5.3.2</package>
-    <package>nuxeo-runtime:5.3.1</package>
+    <package>nuxeo-core:8.3.1:8.3.2</package>
+    <package>nuxeo-runtime:8.3.1</package>
   </dependencies>
   <optional-dependencies>
     <package>nuxeo-web-ui:1.0.0:1.0.2</package>
@@ -197,34 +197,34 @@ Let's look at the full version of the same package manifest:
 
 You can see the usage of `installer` and `uninstaller` elements. These are used to specify the task implementation to be used when installing and uninstalling.
 
-Here are the available fields (see the [<span class="nolink">PackageDefinition</span> Javadoc](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/model/PackageDefinition.html) for a full description):
+Here are the available fields (see the [<span class="nolink">PackageDefinition</span> Javadoc](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/model/PackageDefinition.html) for a full description):
 
 *   `package type`:&nbsp; `studio`,&nbsp;`hotfix` or `addon`. The installation behavior may vary depending on the package type. For instance, the&nbsp;`mp-hotfix` command looks for&nbsp;`hotfix` packages and the&nbsp;`studio` packages have a special treatment in the Administration page and some specific packages dependency resolution rules.
-    See [org.nuxeo.connect.update.PackageType](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/PackageType.html).
+    See [org.nuxeo.connect.update.PackageType](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/PackageType.html).
 *   `package name`: Open field. The name is used to reference the package in `nuxeoctl`, in the Administration page and on&nbsp;[http://marketplace.nuxeo.com/](http://marketplace.nuxeo.com/), so it is recommended to use a lowercase dash-separated name.
 *   `package version`: Versions are in the form&nbsp;`major.minor.patch-classifier` with some "special" classifiers like "beta", "SNAPSHOT"...
-    See [org.nuxeo.connect.update.Version](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/Version.html).
+    See [org.nuxeo.connect.update.Version](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/Version.html).
 *   `title`: Open field.
 *   `description`: HTML field.
 *   `classifier`: Unused.
 *   `home-page`: The URL where more information can be found about this package.
 *   `vendor`: The vendor represent the entity providing and maintaining the package.
-*   `installer` and&nbsp;`uninstaller`: See [org.nuxeo.connect.update.model.TaskDefinition](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/model/TaskDefinition.html).
-*   `validator`: See [org.nuxeo.connect.update.Validator](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/Validator.html).
+*   `installer` and&nbsp;`uninstaller`: See [org.nuxeo.connect.update.model.TaskDefinition](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/model/TaskDefinition.html).
+*   `validator`: See [org.nuxeo.connect.update.Validator](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/Validator.html).
 *   `supported`: True or False. Is the package maintenance guaranteed by a support contract with the vendor.
 *   `hotreload-support`: True or False. Can the package be "hot reloaded" (cf Nuxeo IDE, Nuxeo Studio, Dev mode...).
 *   `require-terms-and-conditions-acceptance`: True or False. Determines if the package install requires terms and conditions acceptance by the administrator.
 *   `nuxeo-validation`: A validation status: `none`, `inprocess`, `primary_validation` or `nuxeo_certified`.
-    See [org.nuxeo.connect.update.NuxeoValidationState.](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/NuxeoValidationState.html)
+    See [org.nuxeo.connect.update.NuxeoValidationState.](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/NuxeoValidationState.html)
 *   `production-state`: A production status: `proto`, `testing`, `production_ready`.
-    See [org.nuxeo.connect.update.ProductionState](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/ProductionState.html).
+    See [org.nuxeo.connect.update.ProductionState](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/ProductionState.html).
 *   `license`: Open field: GPL, BSD, LGPL...
 *   `license-url`: If no URL is provided, then a `license.txt` file should be included in the package.
 *   `visibility`:&nbsp;`PRIVATE` (restricted to specific users and/or projects),&nbsp;`MARKETPLACE` (restricted to registered users), `DEV` (restricted to registered users) or `PUBLIC` (no restriction). The visibility determines the channel where the package will be distributed and how it can be installed.
-    See [org.nuxeo.connect.update.PackageVisibility](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/PackageVisibility.html).
+    See [org.nuxeo.connect.update.PackageVisibility](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/PackageVisibility.html).
 *   `platforms`: The list of platforms supported by this package.
 *   `dependencies`: The list of package dependencies.
-    See [org.nuxeo.connect.update.PackageDependency](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/PackageDependency.html).
+    See [org.nuxeo.connect.update.PackageDependency](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/PackageDependency.html).
 *   `optional-dependencies`: The list of package optional dependencies. Used for packages which use the conditional bundle installation.
 *   `conflicts`: The list of packages conflicting with the current package.
 *   `provides`: The list of packages useless if the current package is installed.
@@ -232,7 +232,7 @@ Here are the available fields (see the [<span class="nolink">PackageDefinition</
 ## Package Versions
 
 Versions are in the form&nbsp;`major.minor.patch-classifier` with some "special" classifiers like "beta", "SNAPSHOT"...
-See [org.nuxeo.connect.update.Version](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/Version.html).
+See [org.nuxeo.connect.update.Version](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/Version.html).
 
 ### Release vs SNAPSHOT
 
@@ -264,7 +264,7 @@ Maintenance branches are usually named `major.minor` or&nbsp;`major.minor_LTS`: 
 ## Package Dependencies
 
 Package dependencies, optional-dependencies, conflicts and provides are in the form `packageName[:[minVersion][:maxVersion]]`.
-See [org.nuxeo.connect.update.PackageDependency](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/PackageDependency.html).
+See [org.nuxeo.connect.update.PackageDependency](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/PackageDependency.html).
 
 ### Meta-Package
 
