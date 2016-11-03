@@ -6,6 +6,10 @@ review:
     status: ok
 labels:
     - home
+version_override:
+    'LTS 2015': 710/nxdoc/quick-start-dev-guide/
+    '6.0': 60/nxdoc/quick-start-dev-guide/
+    '5.8': 58/nxdoc/quick-start-dev-guide/
 confluence:
     ajs-parent-page-id: '7209076'
     ajs-parent-page-title: Tutorials
