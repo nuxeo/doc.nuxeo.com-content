@@ -179,6 +179,10 @@ Let's look at the full version of the same package manifest:
     <package>nuxeo-core:5.3.1:5.3.2</package>
     <package>nuxeo-runtime:5.3.1</package>
   </dependencies>
+  <optional-dependencies>
+    <package>nuxeo-web-ui:1.0.0:1.0.2</package>
+    <package>nuxeo-jsf-ui:1.0.0</package>
+  </optional-dependencies>
   <supported>false</supported>
   <hotreload-support>true</hotreload-support>
   <require-terms-and-conditions-acceptance>false</require-terms-and-conditions-acceptance>
@@ -221,6 +225,7 @@ Here are the available fields (see the [<span class="nolink">PackageDefinition</
 *   `platforms`: The list of platforms supported by this package.
 *   `dependencies`: The list of package dependencies.
     See [org.nuxeo.connect.update.PackageDependency](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/PackageDependency.html).
+*   `optional-dependencies`: The list of package optional dependencies. Used for packages which use the conditional bundle installation.
 *   `conflicts`: The list of packages conflicting with the current package.
 *   `provides`: The list of packages useless if the current package is installed.
 
@@ -258,7 +263,7 @@ Maintenance branches are usually named `major.minor` or&nbsp;`major.minor_LTS`: 
 
 ## Package Dependencies
 
-Package dependencies, conflicts and provides are in the form `packageName[:[minVersion][:maxVersion]]`.
+Package dependencies, optional-dependencies, conflicts and provides are in the form `packageName[:[minVersion][:maxVersion]]`.
 See [org.nuxeo.connect.update.PackageDependency](http://qa.nuxeo.org/jenkins/job/nuxeo-connect-master/site/apidocs/org/nuxeo/connect/update/PackageDependency.html).
 
 ### Meta-Package
@@ -294,3 +299,11 @@ If you really want to make a package depending on a hotfix package:
 *   Think about only stating that dependency in the package description, else
 *   Check that the package is not PUBLIC
 *   Do it only for the release and remove the dependency for the next SNAPSHOT.
+
+### Optional Dependencies
+
+Some packages may use the conditional bundle install in their install.xml (TODO: add link to conditional bundle installation documentation https://jira.nuxeo.com/browse/NXP-19789).
+When a package is being installed together with one of the packages referenced in his install.xml, those must be installed in the right order to avoid incomplete installation.
+This is the purpose of the optional dependencies. An optional dependency will never be required, but will always be installed before its dependant package.
+
+In the above example, if you try to install `nuxeo-automation` along with `nuxeo-jsf-ui`, `nuxeo-jsf-ui` will be installed first. But you still can have `nuxeo-automation` installed without having `nuxeo-jsf-ui` installed.
