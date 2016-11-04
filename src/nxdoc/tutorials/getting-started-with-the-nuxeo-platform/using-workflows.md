@@ -265,7 +265,7 @@ When the workflow was started, a check was performed, that realized no amount is
           console.log('No task to do! Cool!\n');
           return;
         }
-        tasks.forEach(currentTask => {
+        tasks.entries.forEach(currentTask => {
           console.log('Name: ' + currentTask.name);
           console.log('Status: ' + currentTask.state);
           console.log('What to do: ' + currentTask.directive);
@@ -356,7 +356,7 @@ This time a task has been assigned to the `managers` group (represented by Sarah
                 console.log('No task to do! Cool!\n');
                 return;
             }
-            tasks.forEach(currentTask => {
+            tasks.entries.forEach(currentTask => {
                 console.log('Name: ' + currentTask.name);
                 console.log('Status: ' + currentTask.state);
                 console.log('What to do: ' + currentTask.directive);
