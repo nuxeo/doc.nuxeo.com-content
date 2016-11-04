@@ -5,7 +5,7 @@ review:
     date: ''
     status: ok
 version_override:
-    'FT': /nxdoc/start-customizing-the-nuxeo-platform/
+    'FT': /nxdoc/start-customizing-the-nuxeo-platform
 confluence:
     ajs-parent-page-id: '17334435'
     ajs-parent-page-title: Dev Cookbook
