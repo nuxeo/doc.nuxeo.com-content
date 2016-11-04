@@ -228,14 +228,19 @@ The Nuxeo JavaScript Client is a JavaScript client library for the Nuxeo Automat
 
 In this part, you will set up your work environment: install Node.js on your system, install the Nuxeo JavaScript client and prepare a folder on your system in which you will save your JavaScript files.
 
-1.  Install the Current version of [Node.js.](http://nodejs.org/#download)
-2.  Create a folder called&nbsp;`nuxeo_tutorial` on your computer.
+1.  Install [Node.js.](http://nodejs.org/#download). The minimum required version is v6.5.0.
+
+    If you previously installed Node.js, you can check your version with the following command:
+    ```
+    $ node --version
+    ```
+2.  Create a folder called `nuxeo_tutorial` on your computer.
 3.  Install the JavaScript Client package in that folder.
 
-    1.  &nbsp;Open a terminal and go that folder.
+    1.  Open a terminal and go that folder.
 
         ```
-        $ cd nuxeo_tutorial
+        $ cd PATH/TO/nuxeo_tutorial
         ```
 
     2.  Initiate the Node module and follow the steps displayed to generate the module `package.json` file.
@@ -250,7 +255,7 @@ In this part, you will set up your work environment: install Node.js on your sys
         $ npm install nuxeo@2.x --save
         ```
 
-        A&nbsp;`node_modules` folder is now available in&nbsp;`nuxeo_tutorial`.
+        A `node_modules` folder is now available in `nuxeo_tutorial`.
 
     You are now set: you have a folder in which you will save your JavaScript files, and in which the Nuxeo JavaScript client is available.
 
@@ -260,8 +265,6 @@ In this part, you will set up your work environment: install Node.js on your sys
 *   [Nuxeo JavaScript library](http://nuxeo.github.io/nuxeo-js-client)
 
 {{/callout}}
-
-&nbsp;
 
 ## Creating Users and Groups
 
