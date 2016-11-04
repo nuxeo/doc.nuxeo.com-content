@@ -357,8 +357,8 @@ The contract for Skynet AI maintenance you just created should also contain othe
                     var currentFile = uploadedFiles.blobs[uploadedFilesIndex];
                     propertiesToUpdate['files:files'].push({
                         'file': {
-                            'upload-batch': currentFile.blob['upload-batch'],
-                            'upload-fileId': currentFile.blob['fileIdx']
+                            'upload-batch': currentFile['upload-batch'],
+                            'upload-fileId': currentFile['fileIdx']
                         }
                     });
                 }
