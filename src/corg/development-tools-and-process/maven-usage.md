@@ -746,10 +746,6 @@ Regarding the tests, with&nbsp;`-fae` option, Maven will remember the failing te
 -fn,--fail-never                       NEVER fail the build, regardless of project result
 ```
 
-<dl>
-
-&nbsp;
-
 ## Tips and Workarounds
 
 ### Fix `maven-eclipse-plugin`&nbsp;Warning about Workspace's vm (Mac OS X Only)
@@ -1041,9 +1037,3 @@ Then, to use this test package in your code you must define a dependency like th
       <scope>test</scope>
 </dependency>
 ```
-
-&nbsp;
-
-&nbsp;
-
-</dl>
