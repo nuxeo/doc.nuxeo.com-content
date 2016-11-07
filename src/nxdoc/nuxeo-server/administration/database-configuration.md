@@ -158,6 +158,7 @@ This takes two steps:
     *   [MS SQL Server ]({{page page='microsoft-sql-server'}})
     *   [MySQL]({{page page='mysql'}})
     *   [MongoDB]({{page page='mongodb'}})
+    *   [MarkLogic]({{page page='marklogic'}})
 2.  [Connect Nuxeo to the database]({{page page='connecting-nuxeo-to-the-database'}}).
 
 &nbsp;
