@@ -181,7 +181,18 @@ In order to properly work, MarkLogic needs a range element index for each elemen
 
 Here's a list of basic Nuxeo elements needing a range element index:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Element</th><th colspan="1">Scalar Type</th></tr><tr><td colspan="1">created</td><td colspan="1">dateTime</td></tr><tr><td colspan="1">replaced</td><td colspan="1">dateTime</td></tr><tr><td colspan="1">version-id</td><td colspan="1">unsignedLong</td></tr><tr><td colspan="1">begin</td><td colspan="1">dateTime</td></tr><tr><td colspan="1">end</td><td colspan="1">dateTime</td></tr><tr><td colspan="1">dc\_\_created</td><td colspan="1">dateTime</td></tr><tr><td colspan="1">dc\_\_modified</td><td colspan="1">dateTime</td></tr><tr><td colspan="1">length</td><td colspan="1">long</td></tr><tr><td colspan="1">rend\_\_modificationDate</td><td colspan="1">dateTime</td></tr><tr><td colspan="1">rend\_\_sourceModificationDate</td><td colspan="1">dateTime</td></tr></tbody></table></div>
+| Element | Scalar Type |
+| ------- | ----------- |
+| created | dateTime |
+| replaced | dateTime |
+| version-id | unsignedLong |
+| begin | dateTime |
+| end | dateTime |
+| dc\_\_created | dateTime |
+| dc\_\_modified | dateTime |
+| length | long |
+| rend\_\_modificationDate | dateTime |
+| rend\_\_sourceModificationDate | dateTime |
 
 In order to create these indexes, go to your MarkLogic server configuration, under your database you'll find `Element Range Indexes`. In this section you can create an range element index for each elements with the correct scalar type. Leave `namespace uri` empty, set `range value positions` to false, and `invalid values` to ignore.
 
