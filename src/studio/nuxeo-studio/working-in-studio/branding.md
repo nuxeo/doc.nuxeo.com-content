@@ -563,17 +563,17 @@ Just tick the&nbsp;**Disable theme branding**&nbsp;option above the tabs. The ta
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Theme]({{page space='NXDOC' page='Theme'}})
-*   [Nuxeo JSF UI]({{page space='nxdoc' page='nuxeo-jsf-ui'}})
+- [Theme]({{page space='NXDOC' page='Theme'}})
+- [Nuxeo JSF UI]({{page space='nxdoc' page='nuxeo-jsf-ui'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-tos'}}
 
-*   [Theme How-To Index]({{page space='NXDOC' page='Theme How-To+Index'}})
-*   [How to Brand Your Application]({{page space='NXDOC' page='How to+Brand+Your+Application'}})&nbsp;
-*   [How to Override the Login Page]({{page space='NXDOC' page='How to+Override+the+Login+Page'}})&nbsp;
-*   [How to Customize the Login Page]({{page space='NXDOC' page='How to+Customize+the+Login+Page'}})&nbsp;
-*   [How to Override a Default Style]({{page space='NXDOC' page='How to+Override+a+Default+Style'}})&nbsp;
-*   [How to Customize the Error Pages]({{page space='NXDOC' page='How to+Customize+the+Error+Pages'}})&nbsp;
-*   [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page space='NXDOC' page='How to+Declare+the+CSS+and+JavaScript+Resources+Used+in+Your+Templates'}})&nbsp;
+- [Theme How-To Index]({{page space='NXDOC' page='Theme How-To+Index'}})
+- [How to Brand Your Application]({{page space='NXDOC' page='How to+Brand+Your+Application'}})&nbsp;
+- [How to Override the Login Page]({{page space='NXDOC' page='How to+Override+the+Login+Page'}})&nbsp;
+- [How to Customize the Login Page]({{page space='NXDOC' page='How to+Customize+the+Login+Page'}})&nbsp;
+- [How to Override a Default Style]({{page space='NXDOC' page='How to+Override+a+Default+Style'}})&nbsp;
+- [How to Customize the Error Pages]({{page space='NXDOC' page='How to+Customize+the+Error+Pages'}})&nbsp;
+- [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page space='NXDOC' page='How to+Declare+the+CSS+and+JavaScript+Resources+Used+in+Your+Templates'}})&nbsp;
 
 {{/panel}}</div></div>
