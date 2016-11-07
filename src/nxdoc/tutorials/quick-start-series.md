@@ -68,7 +68,6 @@ Find out about the features and concepts of the Nuxeo Platform.
 Any project requires to choose between several possible implementations. Here are some tips to do the choices that best fit your needs.
 
 - [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
-- [Choosing How to Customize the UI]({{page page='choosing-how-to-customize-the-ui'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
