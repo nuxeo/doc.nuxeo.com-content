@@ -62,10 +62,10 @@ Installing Nuxeo IDE adds a new perspective to Eclipse, called Nuxeo, which enab
 
 ### [Working with Studio Projects]({{page page='working-with-studio-projects'}})
 
-*   [Configuring a Nuxeo Online Services Account]({{page page='configuring-a-nuxeo-online-services-account'}})
-*   [Binding Studio Projects to an Nuxeo IDE Project]({{page page='binding-studio-projects-to-an-nuxeo-ide-project'}})
-*   [Deploying a Project with Studio Dependencies]({{page page='deploying-a-project-with-studio-dependencies'}})
-*   [Settings Eclipse Development Templates]({{page page='settings-eclipse-development-templates'}})
+- [Configuring a Nuxeo Online Services Account]({{page page='configuring-a-nuxeo-online-services-account'}})
+- [Binding Studio Projects to an Nuxeo IDE Project]({{page page='binding-studio-projects-to-an-nuxeo-ide-project'}})
+- [Deploying a Project with Studio Dependencies]({{page page='deploying-a-project-with-studio-dependencies'}})
+- [Settings Eclipse Development Templates]({{page page='settings-eclipse-development-templates'}})
 
 {{/panel}}</div></div>
 
