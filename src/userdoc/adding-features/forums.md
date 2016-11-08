@@ -20,7 +20,7 @@ confluence:
     shortlink: OIEk
     shortlink_source: 'https://doc.nuxeo.com/x/OIEk'
     source_link: /display/USERDOC/Forums
-tree_item_index: 100
+tree_item_index: 650
 history:
     -
         author: Solen Guitter

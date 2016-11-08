@@ -144,7 +144,7 @@ When a comment has been added, you can reply to it. The answer is inserted right
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Managing Topics]({{page page='managing-topics'}})
-- [Forums]({{page page='forums'}})
+- [Nuxeo Forum]({{page page='forums'}})
 
 {{/panel}}</div><div class="column medium-6">
 
