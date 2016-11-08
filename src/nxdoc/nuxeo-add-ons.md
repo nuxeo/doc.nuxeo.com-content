@@ -534,7 +534,7 @@ Public
 
 </td><td colspan="1">
 
-&nbsp;
+Deprecated for LTS 2016
 
 </td></tr><tr><td colspan="1">
 

@@ -1,5 +1,5 @@
 ---
-title: Forums
+title: Nuxeo Forum
 review:
     comment: ''
     date: '2015-12-01'
@@ -156,16 +156,22 @@ history:
 ---
 {{! excerpt}}
 
-A forum is a discussion space in which users can talk together. A forum is organized around different topics, in which users can add comments. Topics and comments are displayed in threads.
+[Nuxeo Forum](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-forum) brings forums into the Nuxeo Platform. A forum is a discussion space in which users can talk together. A forum is organized around different topics, in which users can add comments. Topics and comments are displayed in threads.
 
 {{! /excerpt}}
+
+## Installation
+
+{{{multiexcerpt 'MP-installation-easy' space='nxdoc' page='Generic Multi-Excerpts'}}}
+
+## Functional Overview
 
 As for workspaces and sections, the access to a forum is defined by permissions. Forum permissions are the same as workspace permissions. However, in the case of a [moderated topic]({{page page='managing-topics#topic-moderation'}}), some users are declared "moderators" and are in charge of the approval of the topic content.
 
 Forum creation and edition are available for users with "Edit" and "Manage" permissions.
 Users with "Manage" permissions can also manage the forum like a workspace, i.e. [give users permissions]({{page page='managing-permissions'}}), set [alerts]({{page page='collaborative-features#alerts'}}) and manage the forum's [trash]({{page page='deleting-content'}}).
 
-## Creating a Forum
+### Creating a Forum
 
 You need "Edit" or "Manage" permissions to be able to create a forum.
 
@@ -178,7 +184,7 @@ You can create forums only in workspaces.
 The forum is created. You can now create topics to start discussing.
 ![]({{file name='forum-saved.png'}} ?w=650,border=true)
 
-## Editing a Forum
+### Editing a Forum
 
 You need "Edit" or "Manage" permissions to edit a forum.
 
@@ -193,13 +199,11 @@ When you edit a forum, you modify its title and its description.
 
 * * *
 
-&nbsp;
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Managing Permissions]({{page page='managing-permissions'}})
-*   [Participating to a Topic]({{page page='participating-to-a-topic'}})
-*   [Managing Topics]({{page page='managing-topics'}})
+- [Managing Permissions]({{page page='managing-permissions'}})
+- [Participating to a Topic]({{page page='participating-to-a-topic'}})
+- [Managing Topics]({{page page='managing-topics'}})
 
 {{/panel}}</div><div class="column medium-6">
 
