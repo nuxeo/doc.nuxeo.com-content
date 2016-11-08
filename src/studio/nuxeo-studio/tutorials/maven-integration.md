@@ -181,21 +181,21 @@ history:
 ---
 Nuxeo Studio offers a dedicated servlet that provides Maven artifacts for:
 
-*   released versions of your project
-*   current snapshot of all common branches of your project
-*   current snapshot of all branches of each user's workspace (ie the work they are doing on a given branch but haven't yet shared by pushing staged commits).
+* released versions of your project
+* current snapshot of all common branches of your project
+* current snapshot of all branches of each user's workspace (i.e. the work they are doing on a given branch but haven't yet shared by pushing staged commits).
 
-You can get all available artifact on the following page: &nbsp;&nbsp;[https://connect.nuxeo.com/nuxeo/site/studio/maven/nuxeo-studio/PROJECT_ID](https://connect.nuxeo.com/nuxeo/site/studio/maven/nuxeo-studio/glefevre-SANDBOX/)
+You can get all available artifact on the following page: [https://connect.nuxeo.com/nuxeo/site/studio/maven/nuxeo-studio/PROJECT_ID](https://connect.nuxeo.com/nuxeo/site/studio/maven/nuxeo-studio/glefevre-SANDBOX/)
 
-You can then easily integrate your Studio configuration to your build process. Of course, all projects exposed through Maven are protected so that only contributors on the project are able to access the project in the Studio Maven repository. Hence you need to declare this "maven repository" on your local maven settings, with correct credentials.
+You can then easily integrate your Studio configuration to your build process. Of course, all projects exposed through Maven are protected so that only contributors on the project are able to access the project in the Studio Maven repository. Hence you need to declare this "maven repository" on your local Maven settings, with correct credentials.
 
-{{#> panel heading='This is how to setup the Maven client to be able to access Studio Maven artifacts:'}}
+**This is how to setup the Maven client to be able to access Studio Maven artifacts**
 
 1.  First you need to tag your project from Studio Client.
     This will generate a version of your project that can be accessed by Maven.
 2.  Then you need to configure your Maven client to use authentication when accessing the Studio Maven repository. For this, edit (or create if it does not exist) the `~/.m2/settings.xml` file and add the following entry under the settings tag:
 
-    ```
+    ```xml
     <servers>
       ....
       <server>
@@ -210,7 +210,7 @@ You can then easily integrate your Studio configuration to your build process. O
 
 3.  Then in the POM (or a parent POM) where you need to add the dependency to the Studio project you should declare the Studio Maven repository like this:
 
-    ```
+    ```xml
     <repositories>
       ...
       <repository>
@@ -239,9 +239,9 @@ You can then easily integrate your Studio configuration to your build process. O
     *   The&nbsp;`maven_group` defaults to&nbsp;`nuxeo-studio`but can be changed from the **Application Information** view in Studio project. It is recommended to use the pattern _com.mycompany_ for commercial (closed source) projects and _org.mycompany_ for Open Source projects.
     *   The&nbsp;`project_id`is the ID of you project and is unique between all projects in Studio - you can get you project ID from the **Application Information** view in Studio project - look after **Maven Artifact id** property.
     *   The&nbsp;`version`is the released version of your project.
-        Let say you created a release with version number _1.0_ and your project ID is _myproject_ and you are using the default _nuxeo-studio_ group. In that case your Maven dependency will be:
+        Let say you created a release with version number `1.0` and your project ID is `myproject` and you are using the default `nuxeo-studio` group. In that case your Maven dependency will be:
 
-        ```
+        ```xml
         <dependency>
           <groupId>nuxeo-studio</groupId>
           <artifactId>myproject</artifactId>
@@ -250,18 +250,19 @@ You can then easily integrate your Studio configuration to your build process. O
 
         ```
 
-{{/panel}}
-
 The list of available versions for a given project is visible at:
-
-<pre>https://connect.nuxeo.com/nuxeo/site/studio/projects/{PROJECT_ID}</pre>
-
+```
+https://connect.nuxeo.com/nuxeo/site/studio/projects/{PROJECT_ID}
+```
 or
+```
+https://connect.nuxeo.com/nuxeo/site/studio/maven/{MAVEN_GROUP}/{PROJECT_ID}/
+```
+with `MAVEN_GROUP=nuxeo-studio` by default.
 
-<pre>https://connect.nuxeo.com/nuxeo/site/studio/maven/{MAVEN_GROUP}/{PROJECT_ID}/
-with MAVEN_GROUP=nuxeo-studio by default.</pre>
 
 The list of available resources for a given project and version is visible at the given URL:
-
-<pre>https://connect.nuxeo.com/nuxeo/site/studio/maven/{MAVEN_GROUP}/{PROJECT_ID}/{VERSION}/
-with MAVEN_GROUP=nuxeo-studio by default and VERSION=0.0.0-SNAPSHOT for the current development code.</pre>
+```
+https://connect.nuxeo.com/nuxeo/site/studio/maven/{MAVEN_GROUP}/{PROJECT_ID}/{VERSION}/
+```
+with `MAVEN_GROUP=nuxeo-studio` by default and `VERSION=0.0.0-SNAPSHOT` for the current development code.
