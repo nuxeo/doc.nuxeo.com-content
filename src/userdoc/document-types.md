@@ -230,7 +230,7 @@ history:
 
 ### Domain
 
-Sections, workspaces and templates are grouped in&nbsp;**domains**. A domain can be considered as a mini-application in Nuxeo or a root in the application. Typically, you can use domains to open the application to two or more very different populations of users. For instance, you can have an "intranet" domain and an "extranet" domain. Domains can be totally independent or not, depending on the permissions you set on each domain.
+Sections, workspaces and templates are grouped in **domains**. A domain can be considered as a mini-application in Nuxeo or a root in the application. Typically, you can use domains to open the application to two or more very different populations of users. For instance, you can have an "intranet" domain and an "extranet" domain. Domains can be totally independent or not, depending on the permissions you set on each domain.
 
 ### Workspace
 
@@ -238,9 +238,9 @@ Sections, workspaces and templates are grouped in&nbsp;**domains**. A domain can
 
 There are two types of workspaces:
 
-*   _shared workspaces_&nbsp;are workspaces meant for collaborative work, that is to say that the workspace's content is meant to be shared and modified by several users. Collaborative workspaces are workspaces created in the root space called&nbsp;**Workspaces**&nbsp;and shared between users. Once documents are ready for distribution, they must be published in a section.
+*   _shared workspaces_ are workspaces meant for collaborative work, that is to say that the workspace's content is meant to be shared and modified by several users. Collaborative workspaces are workspaces created in the root space called **Workspaces** and shared between users. Once documents are ready for distribution, they must be published in a section.
 
-*   _personal workspaces_&nbsp;can only be accessed by their owner, by default. You can of course share the access to your personal workspace with other users. Personal workspaces are accessible in the header of the application.
+*   _personal workspaces_ can only be accessed by their owner, by default. You can of course share the access to your personal workspace with other users. Personal workspaces are accessible in the header of the application.
 
 {{#> callout type='tip' heading='Personal workspaces behaviour'}}
 
@@ -248,15 +248,15 @@ Content creation and edition, as well as management, works the same way in perso
 
 {{/callout}}
 
-By default, no workspace is available at workspaces root. Thus, you can create the structure you need for your project, edit it if needed. You can also&nbsp;[set the appropriate permission]({{page page='managing-permissions'}})&nbsp;for users to be able to collaborate in the workspaces.
+By default, no workspace is available at workspaces root. Thus, you can create the structure you need for your project, edit it if needed. You can also [set the appropriate permission]({{page page='managing-permissions'}}) for users to be able to collaborate in the workspaces.
 
-Workspaces management also includes setting&nbsp;[alerts]({{page page='collaborative-features#alerts'}})&nbsp;for users to be informed when content is created or edited in workspaces and handling content deletion.
+Workspaces management also includes setting [alerts]({{page page='collaborative-features#alerts'}}) for users to be informed when content is created or edited in workspaces and handling content deletion.
 
 {{! /multiexcerpt}}
 
 ### Folder
 
-In workspaces, you can create and manage your documents in folders. A folder works like a workspace, but the documents available for creation are limited.&nbsp;In a folder, you can create: Notes, Files, Collections and Sub-folders.&nbsp;
+In workspaces, you can create and manage your documents in folders. A folder works like a workspace, but the documents available for creation are limited. In a folder, you can create: Notes, Files, Collections and Sub-folders.
 
 {{! excerpt}}
 
@@ -266,14 +266,14 @@ There are two types of folders: regular folders and ordered folders. The differe
 
 **Regular Folders**
 
-Regular folders, called "Folders", have the same behavior as workspaces.&nbsp;In a regular folder, documents are sorted on the title by default. You can change the sort criterion by clicking on the content table columns title. You can thus sort them on their state, author, etc.&nbsp;In a folder, you can:
+Regular folders, called "Folders", have the same behavior as workspaces. In a regular folder, documents are sorted on the title by default. You can change the sort criterion by clicking on the content table columns title. You can thus sort them on their state, author, etc. In a folder, you can:
 
-*   [Create documents]({{page page='creating-content'}})&nbsp;and do all the actions available on them (edit, approve, manage relations, etc),
+*   [Create documents]({{page page='creating-content'}}) and do all the actions available on them (edit, approve, manage relations, etc),
 *   [Manage permissions]({{page page='managing-permissions'}}),
 *   [Subscribe to and manage alerts]({{page page='collaborative-features#alerts'}}),
 *   [Manage the folder's trash]({{page page='deleting-content'}}).
 
-Like in a workspace, you can use&nbsp;drag & drop&nbsp;to create content in a folder.
+Like in a workspace, you can use drag & drop to create content in a folder.
 
 **Ordered Folders**
 
@@ -286,7 +286,7 @@ An ordered folder has the same presentation as a regular folder, but it has some
 *   Move to top
 *   Move to bottom
 
-To change the content's order, select a document using the checkbox on the left and click on the **move** button you need.&nbsp;The document is moved in the list of documents available in the folder.
+To change the content's order, select a document using the checkbox on the left and click on the **move** button you need. The document is moved in the list of documents available in the folder.
 
 {{#> callout type='tip' heading='Moving documents restrictions'}}
 
@@ -310,7 +310,7 @@ A file is composed of:
 
 ![]({{file name='file-summary.png'}} ?w=650,border=true)
 
-To create a file, in the&nbsp;**Content**&nbsp;tab of the workspace, click on the&nbsp;**New**&nbsp;button.&nbsp;On the window **Available document types**, click on the desired document.&nbsp;Fill in the document's creation form and click on the **Create**&nbsp;button.
+To create a file, in the **Content** tab of the workspace, click on **New** button. On the window **Available document types**, click on the desired document. Fill in the document's creation form and click on the **Create** button.
 
 {{#> callout type='tip' heading='Other ways to create a file'}}
 
@@ -318,7 +318,7 @@ You can also create a file using the[ **Import** button]({{page page='creating-c
 
 {{/callout}}
 
-When the file is created, users can enhance it by&nbsp;[filling its metadata]({{page page='editing-content'}}), adding attached files on it. When the document is completed, you can&nbsp;[publish]({{page page='publishing-content'}})&nbsp;it in one or several section(s).
+When the file is created, users can enhance it by [filling its metadata]({{page page='editing-content'}}), adding attached files on it. When the document is completed, you can [publish]({{page page='publishing-content'}}) it in one or several section(s).
 
 ### Note
 
@@ -328,57 +328,57 @@ The note is a basic rich text container that consists in a text displayed in the
 
 {{! /excerpt}}
 
-&nbsp;
-
 ![]({{file name='note.png'}} ?w=600,h=384,border=true)
 
 The default format of the note is HTML. The other formats available are .txt, .xml and Markdown.
 
 A note is composed of the fields below:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-
+<div class="table-scroll">
+<table class="hover"><tbody><tr><th colspan="1">
 Field
-
-</th><th colspan="1">
-
+</th>
+<th colspan="1">
 Description
-
-</th></tr><tr><td colspan="1">
-
+</th>
+</tr>
+<tr>
+<td colspan="1">
 Title
-
-</td><td colspan="1">
-
+</td>
+<td colspan="1">
 Note's title
-
-</td></tr><tr><td colspan="1">
-
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Description
-
-</td><td colspan="1">
-
+</td>
+<td colspan="1">
 Text that explains what the note is about.
-
-</td></tr><tr><td colspan="1">
-
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Content
-
-</td><td colspan="1">
-
+</td>
+<td colspan="1">
 Text of the note created using a rich text editor.
-
-</td></tr><tr><td colspan="1">
-
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Format
-
-</td><td colspan="1">
-
+</td>
+<td colspan="1">
 Format of the automatically created file used to export notes from the Nuxeo Platform.
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-</td></tr></tbody></table></div>
-
-To create a note, in the&nbsp;**Content**&nbsp;tab of the workspace, click on the&nbsp;**New**&nbsp;button.&nbsp;On the window&nbsp;**Available document types**, click on the desired document, fill in the document's creation form and click on the&nbsp;**Create**&nbsp;button.
+To create a note, in the **Content** tab of the workspace, click on the **New** button. On the window **Available document types**, click on the desired document, fill in the document's creation form and click on the **Create** button.
 
 {{#> callout type='tip' heading='Other ways to create a note'}}
 
@@ -386,13 +386,13 @@ You can also create a note by importing a .txt, a .html or a .xml file using [ *
 
 {{/callout}}
 
-When the note is created, users can enhance it by adding&nbsp;[comments]({{page page='collaborative-features#comments'}}), attached files on it, or just&nbsp;[editing it]({{page page='editing-content'}}).
+When the note is created, users can enhance it by adding [comments]({{page page='collaborative-features#comments'}}), attached files on it, or just [editing it]({{page page='editing-content'}}).
 
 ### Attachment
 
-It is possible to add attachments to&nbsp;Files&nbsp;and&nbsp;Notes&nbsp;using the&nbsp;**Files**&nbsp;tab. This tab is available to users with at least Edit permission. There is no limit to the number of attachments.
+It is possible to add attachments to Files and Notes using the **Files** tab. This tab is available to users with at least Edit permission. There is no limit to the number of attachments.
 
-For more information about attachment documents, read the page [Attachments]({{page page='attachments'}}).&nbsp;
+For more information about attachment documents, read the page [Attachments]({{page page='attachments'}}).
 
 ### Collections
 
@@ -404,36 +404,36 @@ Collections are a folder-like document in which you can classify existing docume
 
 It enables you to create your own organization of the content without duplicating content and having the size of the content growing uncontrollably.
 
-The list of collections available to you is available from your Home, in the&nbsp;**Collections**&nbsp;tab.![]({{file name='collection-home-tab.png' page='collections'}} ?w=650,border=true)
+The list of collections available to you is available from your Home, in the **Collections** tab.![]({{file name='collection-home-tab.png' page='collections'}} ?w=650,border=true)
 
 ### Section
 
-When documents are finished and ready, they are published in **sections**. Traditionally opened to a wider audience than workspaces, sections are dedicated to content distribution and communication and are designed for content consultation. That is why users cannot change documents (edit or move them) in sections: documents published in sections are frozen versions of workspace documents. [Publishing]({{page page='publishing-content'}})&nbsp;is controlled using a workflow, that requires publishing requests to be [approved]({{page page='publishing-content'}})&nbsp;so documents can be seen in sections.
+When documents are finished and ready, they are published in **sections**. Traditionally opened to a wider audience than workspaces, sections are dedicated to content distribution and communication and are designed for content consultation. That is why users cannot change documents (edit or move them) in sections: documents published in sections are frozen versions of workspace documents. [Publishing]({{page page='publishing-content'}}) is controlled using a workflow, that requires publishing requests to be [approved]({{page page='publishing-content'}}) so documents can be seen in sections.
 
 ### Workspace Template
 
 Templates are the easiest way to automate the creation of workspace tree structures. This is useful in many cases, for example when:
 
-*   you have many workspaces to create and want them to follow a certain structure of Folders, Files, or any type of documents.
-*   you want to keep a consistency among different workspaces that users will create. For example, you may want each team's workspace to have a mail folder, a "projects" workspace, etc.
+* you have many workspaces to create and want them to follow a certain structure of Folders, Files, or any type of documents.
+* you want to keep a consistency among different workspaces that users will create. For example, you may want each team's workspace to have a mail folder, a "projects" workspace, etc.
 
-To **create a template**, click on the left panel of Nuxeo Platform on&nbsp;**Templates**.&nbsp;Once a new Template has been created, you can&nbsp;create many workspaces from this template.
+To **create a template**, click on the left panel of Nuxeo Platform on **Templates**. Once a new Template has been created, you can create many workspaces from this template.
 
-### Picture&nbsp;
+### Picture
 
 Pictures are specific files. To take into account the specificities of pictures, their Summary tab shows additional pieces of information, such as:
 
-*   Rotate actions
-*   The picture's EXIF metadata
-*   Additional picture views
+* Rotate actions
+* The picture's EXIF metadata
+* Additional picture views
 
-For more information about picture document, take a look to the [Digital Asset Management page]({{page page='digital-asset-management-with-the-nuxeo-platform'}}).&nbsp;
+For more information about picture document, take a look to the [Digital Asset Management page]({{page page='digital-asset-management-with-the-nuxeo-platform'}}).
 
 ### Video
 
 Video is a document types dedicated to the management of videos files. It provides the following specific features: A player to view the video from the application, a storyboard to navigate in the video and alternative video formats.
 
-For more information about video document, take a look to the&nbsp;[Digital Asset Management page]({{page page='digital-asset-management-with-the-nuxeo-platform'}}).&nbsp;
+For more information about video document, take a look to the [Digital Asset Management page]({{page page='digital-asset-management-with-the-nuxeo-platform'}}).
 
 ### Audio
 
@@ -441,37 +441,35 @@ Audio is a document types dedicated to audio files management. It provides a pla
 
 Audio documents can be [created]({{page page='creating-content'}}) and [edited]({{page page='editing-content'}}) like any other document type. They don't have any specific tab or action available.
 
-For more information about audio document, take a look to the&nbsp;[Digital Asset Management page]({{page page='digital-asset-management-with-the-nuxeo-platform'}}).&nbsp;
+For more information about audio document, take a look to the [Digital Asset Management page]({{page page='digital-asset-management-with-the-nuxeo-platform'}}).
 
 ## Documents Evolution
 
 The evolution of a document, each time contributors edit it, constitutes its life cycle. This life cycle is composed of the following states:
 
-*   **Project**: the document has been created and it can be modified;
-*   **Approved**: the document has been approved and is considered as valid. Modifying it makes it back to project life cycle state;
-*   **Obsolete**: the document is not accurate anymore and, for instance, has been replaced by a new version;
-*   **Deleted**: the document is moved into the workspace or folder trash.
+* **Project**: the document has been created and it can be modified;
+* **Approved**: the document has been approved and is considered as valid. Modifying it makes it back to project life cycle state;
+* **Obsolete**: the document is not accurate anymore and, for instance, has been replaced by a new version;
+* **Deleted**: the document is moved into the workspace or folder trash.
 
 To change the life cycle state of a document, you need to submit it to a [workflow]({{page page='workflows'}}).
 
 ## Containers Logic
 
-When a document is folderish this means its a container&nbsp;in which you can create other documents (workspaces, folders, etc. are folderish documents).
+When a document is folderish this means its a container in which you can create other documents (workspaces, folders, etc. are folderish documents).
 
-It is possible to implement rules on containers to integrate&nbsp;the business logic of your application. In Nuxeo Studio when you select the folderish document facet, you have to choose which children are accepted in this document type. For example, in a folderish document type Library, if I have Edit&nbsp;permissions I can only create a children type Book in it.&nbsp;
+It is possible to implement rules on containers to integrate the business logic of your application. In Nuxeo Studio when you select the folderish document facet, you have to choose which children are accepted in this document type. For example, in a folderish document type Library, if I have Edit permissions I can only create a children type Book in it.
 
 * * *
 
-&nbsp;
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related User Documentation'}}
 
-*   [Creating Content]({{page page='creating-content'}})
-*   [Editing Content]({{page page='editing-content'}})
+- [Creating Content]({{page page='creating-content'}})
+- [Editing Content]({{page page='editing-content'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Override Existing Document Types]({{page space='nxdoc' page='how-to-override-existing-document-types'}})
-*   [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
+- [How to Override Existing Document Types]({{page space='nxdoc' page='how-to-override-existing-document-types'}})
+- [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
 
 {{/panel}}</div></div>
