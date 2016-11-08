@@ -414,30 +414,10 @@ When documents are finished and ready, they are published in **sections**. Tradi
 
 Templates are the easiest way to automate the creation of workspace tree structures. This is useful in many cases, for example when:
 
-*   you have many workspaces to create and want them to follow a certain structure of Folders, Files, or any type of documents (Forum, etc).
+*   you have many workspaces to create and want them to follow a certain structure of Folders, Files, or any type of documents.
 *   you want to keep a consistency among different workspaces that users will create. For example, you may want each team's workspace to have a mail folder, a "projects" workspace, etc.
 
 To **create a template**, click on the left panel of Nuxeo Platform on&nbsp;**Templates**.&nbsp;Once a new Template has been created, you can&nbsp;create many workspaces from this template.
-
-### Forum
-
-{{! excerpt}}
-
-A forum is a discussion space in which users can talk together. A forum is organized around different topics, in which users can add comments. Topics and comments are displayed in threads. You can create forums only in workspaces.
-
-{{! /excerpt}}
-
-As for workspaces and sections, the access to a forum is defined by permissions. However, in the case of a&nbsp;[moderated topic]({{page page='managing-topics#topic-moderation'}}), some users are declared "moderators" and are in charge of the approval of the topic content.
-
-Users with "Edit" and "Manage" permissions&nbsp;can create and edit forums and also manage the forum like a workspace, i.e.&nbsp;[give users permissions]({{page page='managing-permissions'}}), set&nbsp;[alerts]({{page page='collaborative-features#alerts'}})&nbsp;and manage the forum's&nbsp;[trash]({{page page='deleting-content'}}).
-
-To **create a forum,** in the **Content**&nbsp;tab of the workspace, click on the **New** button.&nbsp;On the window&nbsp;**Available document types**, click on Forum, fill in the document's creation form and click on the&nbsp;**Create**&nbsp;button.&nbsp;The forum is created. You can now create topics to start discussing.
-
-![]({{file name='forum-saved.png' page='forums'}} ?w=650,border=true)
-
-To **edit a forum**, on the forum, click on the&nbsp;**Edit**&nbsp;tab.&nbsp;Modify the title or the description of the forum. You can also add a comment explaining what you edited on the forum and click on the **Save** button.
-
-&nbsp;
 
 ### Picture&nbsp;
 

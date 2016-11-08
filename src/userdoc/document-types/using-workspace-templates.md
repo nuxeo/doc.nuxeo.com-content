@@ -103,7 +103,7 @@ history:
 ---
 Templates are the easiest way to automate the creation of workspace tree structures. This is useful in many cases, for example when:
 
-*   You have many workspaces to create and want them to follow a certain structure of Folders, Files, or any type of documents (Forum, etc).
+*   You have many workspaces to create and want them to follow a certain structure of Folders, Files, or any type of documents.
 *   You want to keep a consistency among different workspaces that users will create. For example, you may want each team's workspace to have a mail folder, a "projects" workspace, etc.
 
 **To create a template:**
