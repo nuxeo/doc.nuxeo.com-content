@@ -78,4 +78,4 @@ This is where you should select the modules that you have deployed or plan to de
 ## What Packages Are Available for My Target Platform?
 
 *   Virtual Navigation is available from Nuxeo Platform 6.0 and above.
-*   DAM is available from Nuxeo Platform 5.7.1 and above.
+*   DAM is available from Nuxeo Platform 5.8 and above.
