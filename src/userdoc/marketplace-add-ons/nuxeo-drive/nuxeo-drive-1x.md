@@ -58,21 +58,16 @@ history:
 
 ---
 {{! multiexcerpt name='Drive1x_page_content'}} {{#> callout type='info' }}
-
 This documentation is about Nuxeo Drive 1.x. For the latest version of Nuxeo Drive, please read the page [Nuxeo Drive]({{page page='nuxeo-drive'}}).
 
 {{/callout}}{{! excerpt}}
-
 Nuxeo Drive is a Nuxeo addon that enables the synchronization of folders or workspaces from the Nuxeo Platform with local folder on your computer.
-
 {{! /excerpt}}
 
 Here is the big picture of how Nuxeo Drive works: on the Nuxeo Platform web interface, you mark some workspaces or folders to synchronize. After you installed the Nuxeo Drive client on your computer and bound it to a Nuxeo server, documents are saved on your computer so you can access them and work on them offline. And the next time you have an Internet connection, changes in your local folder are uploaded to the Nuxeo Platform. Changes on the server are also automatically downloaded to your computer. Nuxeo Drive also enables to edit synchronized documents locally from your computer.
 
 {{#> callout type='warning' }}
-
 Please note that the main purpose of Nuxeo Drive is to allow synchronization between a file system and some mount points of a Nuxeo repository. Nuxeo Drive is neither a bulk import tool, nor a repository backup / synchronization tool.
-
 {{/callout}}
 
 To enable Nuxeo Drive, you need to install Nuxeo Drive client on your computer so your computer can communicate with the Nuxeo Platform.
@@ -87,9 +82,7 @@ The Nuxeo Drive package adds the following elements to your Nuxeo Platform appli
 ## Installing Nuxeo Drive on Your Computer
 
 {{#> callout type='tip' }}
-
 For the installation of the Nuxeo Drive package on the server, please see the [Installation and Administration Guide]({{page space='admindoc60' page='installation-and-administration'}}).
-
 {{/callout}}
 
 To be able to synchronize folders on your computer, you need to install the Nuxeo Drive client on your computer. We provide OS-specific installer for Mac OS X and Windows, available from the Nuxeo Drive tab of the Home. A Linux installer will come shortly.
@@ -116,11 +109,8 @@ Nuxeo Drive is known to work on Windows XP, Windows 7.
 1.  Download the Windows installer (.msi file) from the Nuxeo Drive tab in the Home.
 2.  Run the installer: indicate where Nuxeo Drive should be installed (typically `C:\Program Files` or `C:\Program Files (x86)`) and click **Next** until the installation process is done.
     Nuxeo Drive is now installed on your computer.
-
     {{#> callout type='tip' }}
-
     If you have any problem due to a previous installlation of Nuxeo Drive you can try using this [Microsoft tool](https://support.microsoft.com/fr-fr/mats/program_install_and_uninstall) to uninstall it properly.
-
     {{/callout}}
 3.  You now need to [start Nuxeo Drive](#starting-nuxeo-drive) to use it.
     A new `Nuxeo Drive` Folder will be created by the system in your local Documents folder `(C:\Documents and Settings\USER\Documents\` or `C:\Users\USER\Documents\` depending on the Windows version). This is the place where synchronized documents will be stored on your computer.
@@ -132,7 +122,6 @@ The .deb package of the client is not yet available. In the mean time you can ma
 **To Install Nuxeo Drive on your Linux computer:**
 
 1.  Install [pip](http://www.pip-installer.org/) using your favorite package manager and then use it to grab all the dev dependencies and tools at once:
-
     ```
     sudo apt-get install python-pip python-dev python-pyside
     sudo pip install -U -r https://raw.github.com/nuxeo/nuxeo-drive/1.4/requirements.txt
@@ -142,7 +131,6 @@ The .deb package of the client is not yet available. In the mean time you can ma
     For now, the systray icon is not visible under Unity desktop. As a consequence, the configuration window only appears at the first launch.
 
 2.  If you want to change it, issue the following commands:
-
     ```
     pkill ndrive
     rm ~/.nuxeo-drive/nxdrive.db
@@ -150,7 +138,6 @@ The .deb package of the client is not yet available. In the mean time you can ma
     ```
 
 3.  Now configure automatic start:
-
     ```
     curl https://gist.github.com/jcarsique/5421710/raw/5621c388f85bf6dda7de6d0f726545d6551b5dde/ndrive.desktop -o ~/.config/autostart/ndrive.desktop --create-dirs
     ```
@@ -179,19 +166,15 @@ After you installed Nuxeo Drive, you need to start it manually and provide the a
 
     *   On Windows, Nuxeo Drive is started from **Start** > **Programs** > **Nuxeo Drive**.
     *   On Mac OS X, Nuxeo Drive is in the Applications directory.
-
         {{#> callout type='note' }}
-
         When you double click on the icon, a security message appears. To bypass it, you can modify your security settings or click right on Nuxeo Drive application and click on **Open** .
-
         ![]({{file name='Screen Shot 2014-11-04 at 11.36.38.png'}} ?w=350,h=196,border=true)
-
         {{/callout}}
     *   On Linux, press Alt+F2 then enter `ndrive`.The Nuxeo Drive icon ![]({{file name='drive_unsynced.png'}}) is displayed:
-
-    *   In the top menu bar on Mac OS X,
-    *   in the system tray on Windows.
-    *   In the system tray on Linux desktops (except Unity).An authentication window pops up.
+      - In the top menu bar on Mac OS X,
+      - in the system tray on Windows,
+      - in the system tray on Linux desktops (except Unity).
+    An authentication window pops up.
     ![]({{file name='drive-local-authentication.png'}} ?w=300,h=282,border=true)
 2.  Type the path where you want your Nuxeo Drive folder to be created.
 3.  Type the URL of your Nuxeo application, with the `/nuxeo/` suffix ( [`http://www.mynuxeoapp.com/nuxeo`](http://www.mynuxeoapp.com/nuxeo) for instance), your username and your password.
@@ -201,9 +184,7 @@ After you installed Nuxeo Drive, you need to start it manually and provide the a
     ![]({{file name='drive-home-tokens.png'}} ?w=650,border=true)
 
 {{#> callout type='tip' }}
-
 After you start Nuxeo Drive the first time, it will be automatically started when you start your computer. So you won't need to repeat these steps.
-
 {{/callout}}
 
 ### Nuxeo Drive Synchronization Status
@@ -226,18 +207,20 @@ Quick access to this folder is possible at any time using the Nuxeo Drive icon: 
 Nuxeo Drive enables the synchronization of the document types below and their content:
 
 *   Document Management module:
-
     *   workspace,
     *   folder,
     *   picture book,
     *   ordered folder,
-*   Social collaboration module:
 
+
+*   Social collaboration module:
     *   social workspace,
     *   news folder,
-*   Digital Asset Management module:
 
+
+*   Digital Asset Management module:
     *   Asset library domain.
+
 
 #### Synchronizing a Folder
 
@@ -284,18 +267,12 @@ By default, once you have synchronized a folder all its content (files and folde
 3.  Click on the **Folders** tab.
     You can see all the tree structures of the synchronization root.
 4.  Unselect the folders that you do not want to keep using the checkboxes.
-
     {{#> callout type='tip' }}
-
     Even if you unselect a folder, it's still visible in your settings, you just have to reselect it to synchronize it.
-
     {{/callout}}
 5.  Click on **OK** to confirm.
-
     {{#> callout type='tip' }}
-
     When you deactivate the synchronization of folders locally, they are still marked as synchronized on your web UI.
-
     {{/callout}}
 
 ##### Unsynchronizing Folders from the Server
@@ -323,12 +300,10 @@ Adding a new document in a Drive-synchronized folder from your computer will cre
 #### Versioning
 
 {{! multiexcerpt name='drive-versioning'}}
-
 When you edit a document, either from your Nuxeo Drive folder or using the online editing, a [new version]({{page page='editing-content#versionning-overview'}}) is automatically created on the Platform and the version number is updated:
 
 *   if you are not the last contributor of the document,
 *   or if your last edit is more than an hour ago.
-
 {{! /multiexcerpt}}
 
 Then, if your document's version was 1.0 before modification for instance, it automatically becomes 1.1+ after you edited it from the Nuxeo Drive folder and the 1.1 is archived as it is created. Otherwise, a simple modification is done on the document and logged in the document's History.
@@ -348,9 +323,7 @@ It can happen that a document is edited by several users locally at more or less
 #### Online Editing
 
 {{#> callout type='info' }}
-
 Drive Edit is available starting from Nuxeo Platform 6.0.
-
 {{/callout}}
 
 Drive Edit enables you to edit any of your document&rsquo;s content from their summary tab even if they are not synchronised. To be able to use correctly Drive Edit you need the Drive add-on on your server and you must turn on Drive on your computer. This saves you the fastidious steps of opening your document, modify it and reimport it on your platform.
@@ -426,7 +399,7 @@ To revoke an authentication token:
 
 ## Advanced Usages
 
-You can use the command line for some advanced options. For example, you can bind the server to a specific folder of your desktop, instead of the default "<span style="color: rgb(34,34,34);">\My Documents\Nuxeo Drive'". For example you can use:</span>
+You can use the command line for some advanced options. For example, you can bind the server to a specific folder of your desktop, instead of the default "\My Documents\Nuxeo Drive'". For example you can use:
 
 ```
 ndrive bind-server --local-folder LOCAL_FOLDER username nuxeo_url
@@ -447,21 +420,16 @@ To uninstall Nuxeo Drive from your computer, you need to remove the following it
 To uninstall Nuxeo Drive:
 
 1.  Quit Nuxeo Drive:
-    1.  Click on the icon in the system tray.
-    2.  Click on **Quit** in the menu.
+    *  Click on the icon in the system tray.
+    *  Click on **Quit** in the menu.
 2.  Open a terminal and execute the following command:
-
     ```
     rm -rf ~/.nuxeo-drive
     ```
-
 3.  Remove Nuxeo Drive from your applications like you usually remove any application.
 4.  Delete the Nuxeo Drive item from your Favorites in the Finder.
-
 {{#> callout type='warning' }}
-
 At this point you have uninstalled the Nuxeo Drive program and its configuration. If you want to get rid of the synchronized data you also need to delete the Nuxeo Drive folder like you delete any regular folder.
-
 {{/callout}}
 
 ### Uninstalling Nuxeo Drive on Windows
@@ -469,45 +437,31 @@ At this point you have uninstalled the Nuxeo Drive program and its configuration
 To uninstall Nuxeo Drive:
 
 1.  Quit Nuxeo Drive:
-    1.  Click on the icon in the system tray.
-    2.  Click on **Quit** in the menu.{{#> callout type='info' }}
-
+    *  Click on the icon in the system tray.
+    *  Click on **Quit** in the menu.{{#> callout type='info' }}
     At this point you can check that there are no `ndrivew.exe` or `ndrive.exe` remaining processes in the **Processes** tab of the **Windows Task Manager** that you can open by typing Ctrl + Shift + Esc.
-
     If you find such processes, kill them manually by right-clicking on their name and clicking on **End Process**.
-
     {{/callout}}
 2.  Open a command window:
     *   Open the explorer, type `cmd` and validate,
     *   or in the Windows menu, click on **Accessories** > **Command Prompt**.
 3.  Go to your user directory using the `cd` command. Your user directory would typically be in `C:\Users\jdoe.`
-
     ```
     cd C:\Users\jdoe
     ```
-
 4.  Remove the .nuxeo-drive folder by executing the following command:
-
     ```
     rmdir /S /Q .nuxeo-drive
     ```
-
 5.  Uninstall the Nuxeo Drive application like a regular program using the Control Panel.
-
     {{#> callout type='tip' }}
-
     If you have any problem during the uninstallation process you can try using this [Microsoft tool](https://support.microsoft.com/fr-fr/mats/program_install_and_uninstall) to uninstall Nuxeo Drive properly.
-
     {{/callout}}
 6.  Waiting for [NXDRIVE-270](https://jira.nuxeo.com/browse/NXDRIVE-270) to be resolved you also need to manually delete the `C:\Program Files (x86)\Nuxeo` directory.
 
 {{#> callout type='warning' }}
-
 At this point you have uninstalled the Nuxeo Drive program and its configuration. If you want to get rid of the synchronized data you also need to delete the Nuxeo Drive folder like you delete any regular Windows folder.
-
 {{/callout}}
-
-&nbsp;
 
 ### Uninstalling Nuxeo Drive on Linux
 
@@ -517,32 +471,24 @@ To uninstall Nuxeo Drive:
     *   Click on the icon in the system tray.
     *   Click on **Quit** in the menu.
 2.  Open a terminal and execute the following command:
-
     ```
     rm -rf ~/.nuxeo-drive
     ```
-
 3.  Uninstall the Nuxeo Drive application using the following command:
-
     ```
     sudo pip uninstall nuxeo-drive
     ```
 
     {{#> callout type='warning' }}
-
     At this point you have uninstalled the Nuxeo Drive program and its configuration. If you want to get rid of the synchronized data you also need to delete the Nuxeo Drive folder like you delete any regular Linux folder.
-
     {{/callout}}
-
 {{! /multiexcerpt}}
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
-
-*   [Nuxeo Drive FAQ]({{page page='nuxeo-drive-faq'}})
-*   [Nuxeo Drive developer documentation]({{page space='nxdoc60' page='nuxeo-drive'}})
-*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page space='nxdoc60' page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
-*   [How to Customize Nuxeo Drive Versioning Policy]({{page space='nxdoc60' page='how-to-customize-nuxeo-drive-versioning-policy'}})
-
-{{/panel}}</div><div class="column medium-6"></div></div>
+- [Nuxeo Drive FAQ]({{page page='nuxeo-drive-faq'}})
+- [Nuxeo Drive developer documentation]({{page space='nxdoc60' page='nuxeo-drive'}})
+- [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page space='nxdoc60' page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+- [How to Customize Nuxeo Drive Versioning Policy]({{page space='nxdoc60' page='how-to-customize-nuxeo-drive-versioning-policy'}})
+{{/panel}}</div></div>
