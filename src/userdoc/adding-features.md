@@ -1729,14 +1729,14 @@ The Marketplace offers packages aimed at developers and other that provide new f
 
 Each package has a dedicated page on the Marketplace, that describes the features the package enables, if there are prerequisites, etc. Most important information is:
 
-*   **Production state**: Indicates if the package is approved by Nuxeo or is still in testing phase.
-*   **Certification status**: Indicates if the packages has been certified by Nuxeo or not.
-*   **Vendor support**: Indicates if the package is covered by Nuxeo Online Services support contracts.
-*   **Target platforms**: Nuxeo applications on which you can install the package.
-*   **License**: License applied to the package.
-*   **Vendor**: Name of the person or company who developed the package.
-*   **Package dependencies**: Indicates if there are some requirements for the package to be correctly installed.
+* **Production state**: Indicates if the package is approved by Nuxeo or is still in testing phase.
+* **Certification status**: Indicates if the packages has been certified by Nuxeo or not.
+* **Vendor support**: Indicates if the package is covered by Nuxeo Online Services support contracts.
+* **Target platforms**: Nuxeo applications on which you can install the package.
+* **License**: License applied to the package.
+* **Vendor**: Name of the person or company who developed the package.
+* **Package dependencies**: Indicates if there are some requirements for the package to be correctly installed.
 
 Here is a list of Nuxeo Packages available on the Nuxeo Marketplace for the latest version of the Nuxeo Platform.
 
-{{{multiexcerpt 'MP-packages-list' page='NXDOC:Marketplace Add-Ons'}}}
+{{{multiexcerpt 'MP-packages-list' space='nxdoc' page='nuxeo-add-ons'}}}
