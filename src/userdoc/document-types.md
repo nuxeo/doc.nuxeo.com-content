@@ -445,14 +445,14 @@ For more information about audio document, take a look to the [Digital Asset Man
 
 ## Documents Evolution
 
-The evolution of a document, each time contributors edit it, constitutes its life cycle. This life cycle is composed of the following states:
+The evolution of a document, each time contributors edit it, constitutes its lifecycle. This lifecycle is composed of the following states:
 
 * **Project**: the document has been created and it can be modified;
-* **Approved**: the document has been approved and is considered as valid. Modifying it makes it back to project life cycle state;
+* **Approved**: the document has been approved and is considered as valid. Modifying it makes it back to project lifecycle state;
 * **Obsolete**: the document is not accurate anymore and, for instance, has been replaced by a new version;
 * **Deleted**: the document is moved into the workspace or folder trash.
 
-To change the life cycle state of a document, you need to submit it to a [workflow]({{page page='workflows'}}).
+To change the lifecycle state of a document, you need to submit it to a [workflow]({{page page='workflows'}}).
 
 ## Containers Logic
 
