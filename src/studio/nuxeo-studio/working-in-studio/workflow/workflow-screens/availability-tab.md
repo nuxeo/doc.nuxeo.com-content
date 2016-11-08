@@ -1,5 +1,5 @@
 ---
-title: Availability tab
+title: Availability Tab
 review:
     comment: ''
     date: ''

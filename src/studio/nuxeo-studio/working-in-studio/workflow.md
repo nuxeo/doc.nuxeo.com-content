@@ -90,8 +90,26 @@ history:
 The Nuxeo Enterprise Platform workflow engine, a.k.a. Content Routing, aims at providing a framework and tools for automatizing some content-based organizational processes in a maintainable way. It can be used as soon as you have a multi-steps process that involves various human actors and automated steps. It will accelerate the roll-out of your realization and make it easily understandable for future evolutions. Such multi-steps process can be complex documents authoring and validation (purchase order validation, product sheet, &hellip;), form flow (such as vacation request, training requests, expenses, travel authorization), and, of course, usual office document validation process.
 
 You should first read the [Workflow pages of the Customization and Development section of the technical documentation]({{page space='nxdoc' page='workflow'}}) for knowing more about workflows. On the Studio documentation area, you will find details about the Studio screens and a tutorial to [start using the workflow engine]({{page space='nxdoc' page='simple-workflow-example'}}).
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Workflow Screens
+- [Workflow creation form]({{page page='workflow-creation-form'}})
+- [Definition tab]({{page page='definition-tab'}})
+- [Variables tab]({{page page='variables-tab'}})
+- [Availability tab]({{page page='availability-tab'}})
+- [Graph tab]({{page page='graph-tab'}})
+{{/panel}}
+</div>
 
-* [Workflow screens]({{page space='Studio' page='Workflow screens'}})
-* [Node popup]({{page space='Studio' page='Node popup'}})
-
-See also the< [step by step example]({{page space='nxdoc' page='simple-workflow-example'}}).
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Node Popup
+- [General tab]({{page page='node-general-tab'}})
+- [Form tab]({{page page='node-form-tab'}})
+- [Transition tab]({{page page='node-transitions-tab'}})
+- [Variables tab]({{page page='node-variables-tab'}})
+- [Escalation rules tab]({{page page='node-escalation-rules-tab'}})
+{{/panel}}
+</div>
+</div>

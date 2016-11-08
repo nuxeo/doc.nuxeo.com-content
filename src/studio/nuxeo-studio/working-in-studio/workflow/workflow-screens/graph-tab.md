@@ -1,5 +1,5 @@
 ---
-title: Graph tab
+title: Graph Tab
 review:
     comment: ''
     date: ''

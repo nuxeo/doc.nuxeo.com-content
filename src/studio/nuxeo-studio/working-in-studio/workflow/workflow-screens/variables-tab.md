@@ -1,5 +1,5 @@
 ---
-title: Variables tab
+title: Variables Tab
 review:
     comment: ''
     date: ''

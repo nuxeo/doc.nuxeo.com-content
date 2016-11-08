@@ -1,5 +1,5 @@
 ---
-title: Definition tab
+title: Definition Tab
 review:
     comment: ''
     date: ''

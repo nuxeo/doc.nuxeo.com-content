@@ -1,5 +1,5 @@
 ---
-title: Node General tab
+title: Node General Tab
 review:
     comment: ''
     date: ''

@@ -1,5 +1,5 @@
 ---
-title: Node form tab
+title: Node Form Tab
 review:
     comment: ''
     date: ''

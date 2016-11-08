@@ -1,5 +1,5 @@
 ---
-title: Workflow creation form
+title: Workflow Creation Form
 review:
     comment: ''
     date: ''
