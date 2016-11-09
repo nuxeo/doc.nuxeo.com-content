@@ -256,6 +256,10 @@ Let's create the component `org.nuxeo.sample.loginPage`.
     <loginScreenConfig>
       <bodyBackgroundStyle>url("${org.nuxeo.ecm.contextPath}/img/newBackground.jpg") 0px 0px no-repeat #000</bodyBackgroundStyle>
       <disableBackgroundSizeCover>false</disableBackgroundSizeCover>
+      <videos loop="false" muted="true">
+        <video src="//media.nuxeo.com/videos/login_8_10.webm" type="video/webm" />
+        <video src="//media.nuxeo.com/videos/login_8_10.mp4" type="video/mp4" />
+      </videos>
       <headerStyle></headerStyle>
       <footerStyle></footerStyle>
       <loginBoxBackgroundStyle>url("${org.nuxeo.ecm.contextPath}/img/newLoginBox.jpg") 0 0 no-repeat #ff0000</loginBoxBackgroundStyle>
@@ -267,6 +271,25 @@ Let's create the component `org.nuxeo.sample.loginPage`.
     </loginScreenConfig>
   </extension>
 </component>
+```
+
+It is recommended to have several video encoded with main standards. Offering a `WEBM` and a `MP4` fallback helps you providing your video for all your users. Here is a script, using `ffmpeg` to encode any source with 2 pass encoding for a better result:
+
+```bash
+#!/bin/bash
+
+IN=$1
+OUT=$(echo $1 | sed 's/^\(.*\)\.[a-zA-Z0-9]*$/\1/')
+SIZE=960x540
+
+# webm 2 pass
+ffmpeg -y -i $IN -f webm -threads 0 -b:v 555k -crf 22 -s $SIZE -pass 1 -an  /dev/null
+ffmpeg -y -i $IN -f webm -threads 0 -b:v 555k -crf 22 -s $SIZE -pass 2 -an $OUT.webm
+
+# mp4 2 pass
+ffmpeg -y -i $IN -vcodec libx264 -f mp4 -threads 0 -b:v 555k -crf 22 -s $SIZE -pass 1 -an  /dev/null
+ffmpeg -y -i $IN -vcodec libx264 -f mp4 -threads 0 -b:v 555k -crf 22 -s $SIZE -pass 2 -an $OUT.mp4
+
 ```
 
 {{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
