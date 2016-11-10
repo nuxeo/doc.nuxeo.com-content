@@ -213,7 +213,24 @@ The Package Scripting Commands provides a easy to use format for defining the in
 
 When writing your installation using scripting commands you don't need to write the uninstall script. This script will be automatically generated after the installation is successfully done.
 
-Lets look at the following install.xml file:
+## Typical installations
+
+A typical `install.xml` file looks like this:
+
+```
+<install>
+   <update file="${package.root}/install/bundles" todir="${env.bundles}" />
+   <update file="${package.root}/install/bundles-jsf-ui" todir="${env.bundles}" if="Packages.contains('nuxeo-jsf-ui')" />
+   <update file="${package.root}/install/bundles-web-ui" todir="${env.bundles}" if="Packages.contains('nuxeo-web-ui')" />
+   <update file="${package.root}/install/lib" todir="${env.lib}" />
+</install>
+```
+
+This instructs Nuxeo to use the bundles from the `bundles` directory, and in addition use those from the `bundles-jsf-ui` directory only if the `nuxeo-jsf-ui` package is installed (and similarly for `nuxeo-web-ui`). It also instructs Nuxeo to use the plain Java libraries from the `lib` directory.
+
+## Specialized installations
+
+Let's now look at a more complex `install.xml` file, which would be used only for very specialized packages:
 
 ```
 <install>
@@ -230,7 +247,7 @@ Lets look at the following install.xml file:
 
 You can see the file is using contextual variables as&nbsp;`env.bundles`.&nbsp;etc. See&nbsp;[Creating Nuxeo Packages]({{page page='creating-nuxeo-packages'}}) for the complete list of context variables.
 
-Lets take each command and see what will be executed.
+Let's take each command and see what will be executed.
 
 *   The first copy command is copying the file named `myplugin.jar` from the package root into the Nuxeo bundles directory (by preserving the file name).
 
@@ -281,9 +298,11 @@ We've seen that there are two special attributes that can be used on any command
 
 *   `fail`: this is an EL expression that can be used to force command to fail in some circumstances.
 *   `ignore`: this is an EL expression that can be used to avoid executing the command in some circumstances.
+*   `if`: this is an EL expression that can be used to only execute the command in some circumstances.
 
 The variable available in EL context are:
 
+*   `Packages`: a packages helper. Only one method is available, `contains`, that will check if the given package is installed (or being installed) in the platform.
 *   `Version`: a version helper. See `VersionHelper` class for the list of all available methods.
     Example: `Version.isGreater(version, '1.0')`
 *   `Platform`: a platform helper that provides methods to check the type of the currently running Nuxeo Platform (name, version etc.).
@@ -446,6 +465,26 @@ To deploy your command you should put your class into the package (the command c
 
 This is a list of all commands provided by the Nuxeo Platform:
 
+### Update
+
+Updates a JAR file.
+
+Usage:
+
+```
+<update file="file_to_copy" tofile="destination"/>
+```
+
+Or
+
+```
+<update file="file_to_copy" todir="destination_dir"/>
+```
+
+A boolean `upgradeOnly` attribute (false by default) can be specified to avoid creating the JAR if there is no previously-existing one.
+
+A boolean `allowDowngrade` attribute (false by default) can be specified to avoid overwriting a JAR whose version is lower than the new one.
+
 ### Copy
 
 Copies a file to a given destination. This command can be used to add new files or to upgrade existing files to a new version.
@@ -546,4 +585,3 @@ Usage:
 
 TODO: add more info about other existing commands
 
-&nbsp;
