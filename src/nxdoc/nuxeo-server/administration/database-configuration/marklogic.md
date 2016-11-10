@@ -238,7 +238,7 @@ In order to create these indexes, go to your MarkLogic server configuration, und
 
 ## Storage Restrictions
 
-Due to the nature of the MarkLogic storage, we use a transaction model equivalent to READ UNCOMMITTED, which means that a transaction may read data written but not yet committed by another transaction.
+Due to the nature of DBS, we use a transaction model equivalent to READ UNCOMMITTED, which means that a transaction may read data written but not yet committed by another transaction.
 
 Full-text configuration is disabled, you should use Elasticsearch with a suitable full-text configuration.
 
