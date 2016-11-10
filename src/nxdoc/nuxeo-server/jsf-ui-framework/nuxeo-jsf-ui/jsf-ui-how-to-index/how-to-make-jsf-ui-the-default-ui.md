@@ -47,14 +47,14 @@ history:
         version: '1'
 
 ---
-Starting from Nuxeo 8.4, in case both _nuxeo-jsf-ui_&nbsp;and _nuxeo-web-ui_ addons are installed, the login page redirects to the new Web UI.
-If you want to change this behavior to be redirected to the JSF UI you can add the following XML contribution:
+On Nuxeo 8.10, in case both _nuxeo-jsf-ui_&nbsp;and _nuxeo-web-ui_ addons are installed, the login page redirects to the JSF UI.
+If you want to change this behavior to be redirected to the new Web UI you can add the following XML contribution:
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="loginScreen">
   <loginScreenConfig>
     <startupPages>
-      <startupPage id="jsf" priority="1000" />
+      <startupPage id="web" priority="1000" />
     </startupPages>
   </loginScreenConfig>
 </extension>
@@ -62,8 +62,8 @@ If you want to change this behavior to be redirected to the JSF UI you can add t
 
 Note that the default `priority`&nbsp;values are:
 
-*   JSF UI (`id="jsf"`): 10
-*   Web UI ( `id="web"` ): 100
+*   JSF UI (`id="jsf"`): 100
+*   Web UI ( `id="web"` ): 10
 
 The highest priority wins.
 
