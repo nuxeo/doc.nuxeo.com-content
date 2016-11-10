@@ -283,12 +283,12 @@ OUT=$(echo $1 | sed 's/^\(.*\)\.[a-zA-Z0-9]*$/\1/')
 SIZE=960x540
 
 # webm 2 pass
-ffmpeg -y -i $IN -f webm -threads 0 -b:v 555k -crf 22 -s $SIZE -pass 1 -an  /dev/null
-ffmpeg -y -i $IN -f webm -threads 0 -b:v 555k -crf 22 -s $SIZE -pass 2 -an $OUT.webm
+ffmpeg -y -i $IN -f webm -threads 0 -b:v 1M -crf 22 -s $SIZE -pass 1 -an  /dev/null
+ffmpeg -y -i $IN -f webm -threads 0 -b:v 1M -crf 22 -s $SIZE -pass 2 -an $OUT.webm
 
 # mp4 2 pass
-ffmpeg -y -i $IN -vcodec libx264 -f mp4 -threads 0 -b:v 555k -crf 22 -s $SIZE -pass 1 -an  /dev/null
-ffmpeg -y -i $IN -vcodec libx264 -f mp4 -threads 0 -b:v 555k -crf 22 -s $SIZE -pass 2 -an $OUT.mp4
+ffmpeg -y -i $IN -vcodec libx264 -f mp4 -threads 0 -b:v 1M -crf 22 -s $SIZE -pass 1 -an  /dev/null
+ffmpeg -y -i $IN -vcodec libx264 -f mp4 -threads 0 -b:v 1M -crf 22 -s $SIZE -pass 2 -an $OUT.mp4
 
 ```
 
