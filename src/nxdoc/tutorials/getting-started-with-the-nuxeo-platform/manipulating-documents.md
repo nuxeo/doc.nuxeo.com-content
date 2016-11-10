@@ -584,7 +584,7 @@ Find a contract that needs to be deleted: it expired before 2016 and has a limit
 
 ## Deleting a Document
 
-The contract to delete has been identified as being the `2015 Annual Conference` belonging to the `Bon App&eacute;tit Caterer` portfolio. Delete it.
+The contract to delete has been identified as being the `2015 Annual Conference` belonging to the `Bon Appétit Caterer` portfolio. Delete it.
 
 1.  Using your favorite text editor or IDE, create a file called `deleteContract.js` with the following content.
 

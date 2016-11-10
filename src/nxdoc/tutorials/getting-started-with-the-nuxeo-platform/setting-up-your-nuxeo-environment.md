@@ -501,6 +501,10 @@ The addon brings the following document types:
 
 OS: Linux, Mac OS, Windows
 
+### Prerequisites
+
+Contrarily to the brew installation or docker image, the universal zip package comes without the related software needed for this tutorial. Please [install and set up related software]({{page page='installing-and-setting-up-related-software'}}) before going to the next step.
+
 ### Installation
 
 1.  Unzip the [Nuxeo Platform .zip](http://www.nuxeo.com/downloads/).
