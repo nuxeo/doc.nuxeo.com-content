@@ -1,8 +1,8 @@
 ---
 title: Setting up Your Nuxeo Environment
 review:
-    comment: ''
-    date: '2016-10-19'
+    comment: 'Bertrand: used zip package, did not test with brew or docker'
+    date: '2016-11-10'
     status: ok
 toc: true
 confluence:
@@ -351,16 +351,15 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
 4.  Install the addons required for this tutorial.
 
     ```
-    $ docker exec -ti mynuxeo bin/nuxeoctl mp-install nuxeo-dam nuxeo-drive nuxeo-jsf-ui nuxeo-showcase-content nuxeo-template-rendering-samples nuxeo-web-ui nuxeo-platform-getting-started
+    $ docker exec -ti mynuxeo bin/nuxeoctl mp-install nuxeo-dam nuxeo-jsf-ui nuxeo-platform-getting-started
     ```
 
 5.  Validate the dependency resolution step.
 
     ```
     Dependency resolution:
-      Installation order (8):        nuxeo-jsf-ui-8.3.0/nuxeo-template-rendering-6.6.2/nuxeo-template-rendering-samples-6.6.2/nuxeo-dam-6.2.2/nuxeo-drive-1.6.2/nuxeo-showcase-content-1.1.2/nuxeo-web-ui-0.7.0/nuxeo-platform-getting-started-1.0.0
-      Packages to download (3):      nuxeo-web-ui:0.7.0, nuxeo-platform-getting-started:1.0.0, nuxeo-template-rendering:6.6.2
-      Local packages to install (5): nuxeo-template-rendering-samples:6.6.2, nuxeo-jsf-ui:8.3.0, nuxeo-dam:6.2.2, nuxeo-showcase-content:1.1.2, nuxeo-drive:1.6.2
+      Installation order (3):        nuxeo-dam-6.2.3/nuxeo-jsf-ui-8.10.0/nuxeo-platform-getting-started-1.1.0
+      Packages to download (3):      nuxeo-jsf-ui:8.10.0, nuxeo-dam:6.2.3, nuxeo-platform-getting-started:1.1.0
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -371,18 +370,9 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
     $ docker exec mynuxeo bin/nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started    nuxeo-dam (id: nuxeo-dam-6.2.2)
-     addon  downloaded    nuxeo-diff (id: nuxeo-diff-1.7.2)
-     addon     started    nuxeo-drive (id: nuxeo-drive-1.6.2)
-     addon     started    nuxeo-jsf-ui (id: nuxeo-jsf-ui-8.3.0)
-     addon  downloaded    nuxeo-liveconnect (id: nuxeo-liveconnect-1.1.2)
-     addon  downloaded    nuxeo-review-workflows-dashboards (id: nuxeo-review-workflows-dashboards-1.1.2)
-     addon     started    nuxeo-showcase-content (id: nuxeo-showcase-content-1.1.2)
-     addon  downloaded    nuxeo-spreadsheet (id: nuxeo-spreadsheet-1.2.2)
-     addon     started    nuxeo-template-rendering (id: nuxeo-template-rendering-6.6.2)
-     addon     started    nuxeo-template-rendering-samples (id: nuxeo-template-rendering-samples-6.6.2)
-     addon     started    nuxeo-web-ui (id: nuxeo-web-ui-0.7.0)
-     addon     started    nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.0.0)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.2.3)
+     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-8.10.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.1.0)
     ```
 
     The installed addons now have the status started.
@@ -463,16 +453,15 @@ To install a Nuxeo Package:
 3.  Install the addons required for this tutorial.
 
     ```
-    $ nuxeoctl mp-install nuxeo-dam nuxeo-drive nuxeo-jsf-ui nuxeo-showcase-content nuxeo-template-rendering-samples nuxeo-web-ui nuxeo-platform-getting-started
+    $ nuxeoctl mp-install nuxeo-dam nuxeo-jsf-ui nuxeo-platform-getting-started
     ```
 
 4.  Validate the dependency resolution step.
 
     ```
     Dependency resolution:
-      Installation order (8):        nuxeo-jsf-ui-8.3.0/nuxeo-template-rendering-6.6.2/nuxeo-template-rendering-samples-6.6.2/nuxeo-dam-6.2.2/nuxeo-drive-1.6.2/nuxeo-showcase-content-1.1.2/nuxeo-web-ui-0.7.0/nuxeo-platform-getting-started-1.0.0
-      Packages to download (3):      nuxeo-web-ui:0.7.0, nuxeo-platform-getting-started:1.0.0, nuxeo-template-rendering:6.6.2
-      Local packages to install (5): nuxeo-template-rendering-samples:6.6.2, nuxeo-jsf-ui:8.3.0, nuxeo-dam:6.2.2, nuxeo-showcase-content:1.1.2, nuxeo-drive:1.6.2
+      Installation order (3):        nuxeo-dam-6.2.3/nuxeo-jsf-ui-8.10.0/nuxeo-platform-getting-started-1.1.0
+      Packages to download (3):      nuxeo-jsf-ui:8.10.0, nuxeo-dam:6.2.3, nuxeo-platform-getting-started:1.1.0
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -483,18 +472,9 @@ To install a Nuxeo Package:
     $ nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started    nuxeo-dam (id: nuxeo-dam-6.2.2)
-     addon  downloaded    nuxeo-diff (id: nuxeo-diff-1.7.2)
-     addon     started    nuxeo-drive (id: nuxeo-drive-1.6.2)
-     addon     started    nuxeo-jsf-ui (id: nuxeo-jsf-ui-8.3.0)
-     addon  downloaded    nuxeo-liveconnect (id: nuxeo-liveconnect-1.1.2)
-     addon  downloaded    nuxeo-review-workflows-dashboards (id: nuxeo-review-workflows-dashboards-1.1.2)
-     addon     started    nuxeo-showcase-content (id: nuxeo-showcase-content-1.1.2)
-     addon  downloaded    nuxeo-spreadsheet (id: nuxeo-spreadsheet-1.2.2)
-     addon     started    nuxeo-template-rendering (id: nuxeo-template-rendering-6.6.2)
-     addon     started    nuxeo-template-rendering-samples (id: nuxeo-template-rendering-samples-6.6.2)
-     addon     started    nuxeo-web-ui (id: nuxeo-web-ui-0.7.0)
-     addon     started    nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.0.0)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.2.3)
+     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-8.10.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.1.0)
     ```
 
     The installed addons now have the status started.
@@ -576,19 +556,18 @@ To install a Nuxeo Package:
 
     ```
     # Linux and Mac OS
-    $ ./nuxeoctl mp-install nuxeo-dam nuxeo-drive nuxeo-jsf-ui nuxeo-showcase-content nuxeo-template-rendering-samples nuxeo-web-ui nuxeo-platform-getting-started
+    $ ./nuxeoctl mp-install nuxeo-dam nuxeo-jsf-ui nuxeo-platform-getting-started
 
     # Windows
-    $ .\nuxeoctl.bat mp-install nuxeo-dam nuxeo-drive nuxeo-jsf-ui nuxeo-showcase-content nuxeo-template-rendering-samples nuxeo-web-ui nuxeo-platform-getting-started
+    $ .\nuxeoctl.bat mp-install nuxeo-dam nuxeo-jsf-ui nuxeo-platform-getting-started
     ```
 
 4.  Validate the dependency resolution step.
 
     ```
     Dependency resolution:
-      Installation order (8):        nuxeo-jsf-ui-8.3.0/nuxeo-template-rendering-6.6.2/nuxeo-template-rendering-samples-6.6.2/nuxeo-dam-6.2.2/nuxeo-drive-1.6.2/nuxeo-showcase-content-1.1.2/nuxeo-web-ui-0.7.0/nuxeo-platform-getting-started-1.0.0
-      Packages to download (3):      nuxeo-web-ui:0.7.0, nuxeo-platform-getting-started:1.0.0, nuxeo-template-rendering:6.6.2
-      Local packages to install (5): nuxeo-template-rendering-samples:6.6.2, nuxeo-jsf-ui:8.3.0, nuxeo-dam:6.2.2, nuxeo-showcase-content:1.1.2, nuxeo-drive:1.6.2
+      Installation order (3):        nuxeo-dam-6.2.3/nuxeo-jsf-ui-8.10.0/nuxeo-platform-getting-started-1.1.0
+      Packages to download (3):      nuxeo-jsf-ui:8.10.0, nuxeo-dam:6.2.3, nuxeo-platform-getting-started:1.1.0
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -600,35 +579,17 @@ To install a Nuxeo Package:
     $ ./nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started    nuxeo-dam (id: nuxeo-dam-6.2.2)
-     addon  downloaded    nuxeo-diff (id: nuxeo-diff-1.7.2)
-     addon     started    nuxeo-drive (id: nuxeo-drive-1.6.2)
-     addon     started    nuxeo-jsf-ui (id: nuxeo-jsf-ui-8.3.0)
-     addon  downloaded    nuxeo-liveconnect (id: nuxeo-liveconnect-1.1.2)
-     addon  downloaded    nuxeo-review-workflows-dashboards (id: nuxeo-review-workflows-dashboards-1.1.2)
-     addon     started    nuxeo-showcase-content (id: nuxeo-showcase-content-1.1.2)
-     addon  downloaded    nuxeo-spreadsheet (id: nuxeo-spreadsheet-1.2.2)
-     addon     started    nuxeo-template-rendering (id: nuxeo-template-rendering-6.6.2)
-     addon     started    nuxeo-template-rendering-samples (id: nuxeo-template-rendering-samples-6.6.2)
-     addon     started    nuxeo-web-ui (id: nuxeo-web-ui-0.7.0)
-     addon     started    nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.0.0)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.2.3)
+     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-8.10.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.1.0)
 
     # Windows
     $ .\nuxeoctl.bat mp-list
     [...]
     Local packages:
-     addon     started    nuxeo-dam (id: nuxeo-dam-6.2.2)
-     addon  downloaded    nuxeo-diff (id: nuxeo-diff-1.7.2)
-     addon     started    nuxeo-drive (id: nuxeo-drive-1.6.2)
-     addon     started    nuxeo-jsf-ui (id: nuxeo-jsf-ui-8.3.0)
-     addon  downloaded    nuxeo-liveconnect (id: nuxeo-liveconnect-1.1.2)
-     addon  downloaded    nuxeo-review-workflows-dashboards (id: nuxeo-review-workflows-dashboards-1.1.2)
-     addon     started    nuxeo-showcase-content (id: nuxeo-showcase-content-1.1.2)
-     addon  downloaded    nuxeo-spreadsheet (id: nuxeo-spreadsheet-1.2.2)
-     addon     started    nuxeo-template-rendering (id: nuxeo-template-rendering-6.6.2)
-     addon     started    nuxeo-template-rendering-samples (id: nuxeo-template-rendering-samples-6.6.2)
-     addon     started    nuxeo-web-ui (id: nuxeo-web-ui-0.7.0)
-     addon     started    nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.0.0)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.2.3)
+     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-8.10.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.1.0)
     ```
 
     The installed addons now have the status started.
