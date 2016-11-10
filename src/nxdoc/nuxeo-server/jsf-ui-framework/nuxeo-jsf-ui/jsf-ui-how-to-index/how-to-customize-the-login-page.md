@@ -249,7 +249,6 @@ This point allows you to configure the Login Screen : header, footer, styles, op
 Let's create the component `org.nuxeo.sample.loginPage`.
 
 {{#> panel type='code' heading='src/main/resources/OSGI-INF/login-contribution.xml'}}
-
 ```xml
 <component name="org.nuxeo.sample.loginPage">
   <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="loginScreen">
@@ -291,19 +290,23 @@ ffmpeg -y -i $IN -vcodec libx264 -f mp4 -threads 0 -b:v 1M -crf 22 -s $SIZE -pas
 ffmpeg -y -i $IN -vcodec libx264 -f mp4 -threads 0 -b:v 1M -crf 22 -s $SIZE -pass 2 -an $OUT.mp4
 
 ```
+{{/panel}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related How-Tos'}}
+- [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page page='how-to-declare-the-css-and-javascript-resources-used-in-your-templates'}})
+- [How to Customize the Error Pages]({{page page='how-to-customize-the-error-pages'}})
+- [How-To Index]({{page page='how-to-index'}})
+{{/panel}}
+</div>
 
-{{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
-
-*   [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page page='how-to-declare-the-css-and-javascript-resources-used-in-your-templates'}})
-*   [How to Customize the Error Pages]({{page page='how-to-customize-the-error-pages'}})
-*   [How-To Index]({{page page='how-to-index'}})
-
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
-
-*   [Theme in Developer Documentation]({{page page='theme'}})
-*   [Branding in Studio Documentation]({{page space='studio' page='branding'}})
-*   [Runtime and Component Model]({{page page='runtime-and-component-model'}})
-*   [JSF UI Framework]({{page page='jsf-ui-framework'}})
-*   [Online UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)
-
-{{/panel}}</div></div>
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
+- [Theme in Developer Documentation]({{page page='theme'}})
+- [Branding in Studio Documentation]({{page space='studio' page='branding'}})
+- [Runtime and Component Model]({{page page='runtime-and-component-model'}})
+- [JSF UI Framework]({{page page='jsf-ui-framework'}})
+- [Online UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)
+{{/panel}}
+</div>
+</div>
