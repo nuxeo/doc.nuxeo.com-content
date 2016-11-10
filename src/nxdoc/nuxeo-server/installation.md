@@ -390,7 +390,7 @@ You should adapt that configuration as soon as you want to use your application 
 {{! multiexcerpt name='optimal-configuration'}}
 
 *   Linux 64&nbsp;bits,
-*   PostgreSQL 9.5, Use PostgreSQL for document repository and all other services.
+*   PostgreSQL 9.6, Use PostgreSQL for document repository and all other services.
 *   Have plenty of RAM (>= 8&nbsp;GB).
 
 {{! /multiexcerpt}}
