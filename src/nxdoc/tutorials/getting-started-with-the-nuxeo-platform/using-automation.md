@@ -125,7 +125,7 @@ Leverage Automation and trigger business logic to obtain the contract and all of
 
 **Procedure**
 
-1.  Using your favorite text editor or IDE, create a file called `generateContractWithAttachments.js`&nbsp; with the following content. Make sure to replace the `filePath` variable with the path to the folder where the PDF file should be downloaded.
+1.  Create a file called `generateContractWithAttachments.js`&nbsp; with the following content. Be sure to replace the `filePath` variable with the path to the folder where the PDF file should be downloaded.
 
     ```js
     let Nuxeo = require('nuxeo');
@@ -158,15 +158,15 @@ Leverage Automation and trigger business logic to obtain the contract and all of
         try {
           var stats = fs.statSync(filePath);
           if (!stats.isDirectory()) {
-            console.log(filePath + ' is not a folder.\nPlease check the filePath variable (currently set to: ' + filePath + ')\nand make sure you have the proper rights on that folder.');
+            console.log(`${filePath} is is not a folder.\nPlease check the filePath variable (currently set to: ${filepath} )\nand make sure you have the proper rights on that folder.`);
             return;
           }
-          const writable = fs.createWriteStream(filePath + 'contract-with-attachments.pdf');
+          const writable = fs.createWriteStream(`${filePath}contract-with-attachments.pdf`);
           response.body.pipe(writable);
           console.log('The complete PDF contract has been downloaded!');
-          console.log('You can take a look at it here: ' + filePath + 'contract-with-attachments.pdf')
+          console.log(`You can take a look at it here: ${filePath}contract-with-attachments.pdf`)
         } catch (error) {
-          console.log('The folder where the contract with its attachments should be downloaded cannot be accessed.\nPlease check the filePath variable (currently set to: ' + filePath + ')\nand make sure you have write access on that folder.');
+          console.log(`The folder where the rendition should be downloaded cannot be accessed.\nPlease check the filePath variable (currently set to: ${filePath})\nand make sure you have write access on that folder.`);
           console.log(error);
           return;
         }
@@ -185,7 +185,7 @@ Leverage Automation and trigger business logic to obtain the contract and all of
     $ node generateContractWithAttachments.js
     ```
 
-Automation chains allow you to optimize the number of calls needed to execute business logic, while maintaining data integrity. All automation chains are executed in a transaction: if the chain fails at some point, it will be rolled back to keep your data safe.
+Automation chains allow you to optimize the number of calls needed to execute business logic while maintaining data integrity. All automation chains are executed in a transaction: if the chain fails at some point, it will be rolled back to keep your data safe.
 
 {{#> callout type='info' heading='Learn more'}}
 

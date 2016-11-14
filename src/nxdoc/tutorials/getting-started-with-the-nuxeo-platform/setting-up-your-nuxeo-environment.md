@@ -292,7 +292,7 @@ history:
 ---
 {{! excerpt}}
 
-This how-to is the first step of the tutorial Getting Started with the Nuxeo Platform, that allows to explore the Nuxeo Platform through its REST API. It provides instructions to install and run a Nuxeo Platform instance using Docker, Homebrew or the ZIP package.
+This how-to is the first step of the tutorial Getting Started with the Nuxeo Platform, allowing you to explore the Nuxeo Platform through its REST API. It provides instructions for installing and running a Nuxeo Platform instance using Docker, Homebrew or the ZIP package.
 
 {{! /excerpt}}
 
@@ -324,9 +324,9 @@ OS: Linux, Mac OS, Windows
 
 ### Setting up Environment
 
-You now have a Nuxeo Platform instance ready to run. At this step, you need to install some addons, in particular the addon Getting started with the Nuxeo Platform.
+You now have a Nuxeo Platform instance ready to run. In this step, you need to install some addons, in particular the addon Getting started with the Nuxeo Platform.
 
-The addon Getting started with the Nuxeo Platform will add some business logic and documents to your Nuxeo Platform instance, that we will leverage all through this tutorial.
+The addon Getting started with the Nuxeo Platform will add some business logic and documents to your Nuxeo Platform instance which we will leverage throughout this tutorial.
 
 1.  Stop the server.
 
@@ -346,7 +346,7 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
     $ docker exec mynuxeo bin/nuxeoctl mp-list
     ```
 
-    You get the list of local addons, whose status is downloaded.
+    You get a list of the local addons that have been downloaded.
 
 4.  Install the addons required for this tutorial.
 
@@ -365,7 +365,7 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
     Do you want to continue (yes/no)? [yes]
     ```
 
-6.  Check the Nuxeo addons were correctly installed.
+6.  Check that the Nuxeo addons were correctly installed.
 
     ```
     $ docker exec mynuxeo bin/nuxeoctl mp-list
@@ -385,7 +385,7 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
      addon     started    nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.0.0)
     ```
 
-    The installed addons now have the status started.
+    The installed addons now have the status 'started'.
 
 7.  Start the server:
 
@@ -396,15 +396,15 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
 
     ```
 
-    Your server is now running. You benefit from the following features brought by the addon Getting started with the Nuxeo Platform.
+    Your server is now running with the addon Getting started with the Nuxeo Platform.
 
 The addon brings the following document types:
 {{! multiexcerpt name='studio_configuration_desc'}}
-* The portfolio document type (`BCPortfolio`) holds the contracts of a customer. Its holds properties about the customer: the company name, industry and size, and the customer&rsquo;s juridical contact information.
-* The contract document type (`BCContract`) have several properties: an owner (an application user), some dates (signature, start, expiration dates), a type, an amount. It inherits customer information from its portfolio.
-* Some vocabularies are used to populate the portfolio and contract metadata (`companySize`, `contractType` and `industry`)
-* Contracts have a specific life cycle, so they can evolve though the states `draft`, `approval`, `running`, `renegociation`, `void`, `deleted` and `restored`
-* Some business logic through automation chains and event handlers make contracts inherit properties from its portfolio, and evolve following its life cycle{{! /multiexcerpt}}
+* The portfolio document type (`BCPortfolio`) holds the contracts of a customer. It holds properties about the customer: the company name, industry and size, and the customer&rsquo;s legal contact information.
+* The contract document type (`BCContract`) has several properties: an owner (an application user), some dates (signature, start, expiration dates), a type, and an amount. It inherits customer information from its portfolio.
+* Some vocabularies are used to populate the portfolio and contract metadata (`companySize`, `contractType` and `industry`).
+* Contracts have a specific lifecycle, so they can evolve though the states `draft`, `approval`, `running`, `renegociation`, `void`, `deleted` and `restored`.
+* Some business logic through automation chains and event handlers make contracts inherit properties from its portfolio, and evolve following its lifecycle.{{! /multiexcerpt}}
 
 {{#> callout type='info' heading='Learn more'}}
 
@@ -440,9 +440,9 @@ OS: Mac OS
 
 ### Setting up Environment
 
-You now have a Nuxeo Platform instance ready to run. At this step, you need to install some addons, in particular the addon Getting started with the Nuxeo Platform.
+You now have a Nuxeo Platform instance ready to run. In this step, you need to install some addons, in particular the addon Getting started with the Nuxeo Platform.
 
-The addon Getting started with the Nuxeo Platform will add some business logic and documents to your Nuxeo Platform instance, that we will leverage all through this tutorial.
+The addon Getting started with the Nuxeo Platform will add some business logic and documents to your Nuxeo Platform instance which we will leverage throughout this tutorial.
 
 To install a Nuxeo Package:
 
@@ -458,7 +458,7 @@ To install a Nuxeo Package:
     $ nuxeoctl mp-list
     ```
 
-    You get the list of local addons, whose status is downloaded.
+    You get a list of the local addons that have been downloaded.
 
 3.  Install the addons required for this tutorial.
 
@@ -477,7 +477,7 @@ To install a Nuxeo Package:
     Do you want to continue (yes/no)? [yes]
     ```
 
-5.  Check the Nuxeo addons were correctly installed.
+5.  Check that the Nuxeo addons were correctly installed.
 
     ```
     $ nuxeoctl mp-list
@@ -497,7 +497,7 @@ To install a Nuxeo Package:
      addon     started    nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.0.0)
     ```
 
-    The installed addons now have the status started.
+    The installed addons now have the status 'started'.
 
 6.  Start the server
 
@@ -505,7 +505,7 @@ To install a Nuxeo Package:
     $ nuxeoctl console
     ```
 
-    Your server is now running. You benefit from the following features brought by the addon Getting started with the Nuxeo Platform.
+    Your server is now running with the addon Getting started with the Nuxeo Platform.
 
 The addon brings the following document types:
 {{{multiexcerpt 'studio_configuration_desc' page='Setting up Your Nuxeo Environment'}}}
@@ -544,9 +544,9 @@ OS: Linux, Mac OS, Windows
 
 ### Setting up Environment
 
-You now have a Nuxeo Platform instance ready to run. At this step, you need to install some addons, in particular the addon Getting started with the Nuxeo Platform.
+You now have a Nuxeo Platform instance ready to run. In this step, you need to install some addons, in particular the addon Getting started with the Nuxeo Platform.
 
-The addon Getting started with the Nuxeo Platform will add some business logic and documents to your Nuxeo Platform instance, that we will leverage all through this tutorial.
+The addon Getting started with the Nuxeo Platform will add some business logic and documents to your Nuxeo Platform instance which we will leverage throughout this tutorial.
 
 To install a Nuxeo Package:
 
@@ -570,7 +570,7 @@ To install a Nuxeo Package:
     $ .\nuxeoctl.bat mp-list
     ```
 
-    You get the list of local addons, whose status is downloaded.
+    You get a list of the local addons that have been downloaded.
 
 3.  Install the addons required for this tutorial.
 
@@ -593,7 +593,7 @@ To install a Nuxeo Package:
     Do you want to continue (yes/no)? [yes]
     ```
 
-5.  Check the Nuxeo addons were correctly installed.
+5.  Check that the Nuxeo addons were correctly installed.
 
     ```
     # Linux and Mac OS
@@ -631,7 +631,7 @@ To install a Nuxeo Package:
      addon     started    nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.0.0)
     ```
 
-    The installed addons now have the status started.
+    The installed addons now have the status 'started'.
 
 6.  Start the server.
 
@@ -643,7 +643,7 @@ To install a Nuxeo Package:
     $ .\nuxeoctl.bat console
     ```
 
-    Your server is now running. You benefit from the following features brought by the addon Getting started with the Nuxeo Platform.
+    Your server is now running with the addon Getting started with the Nuxeo Platform.
 
 The addon brings the following document types:
 {{{multiexcerpt 'studio_configuration_desc' page='Setting up Your Nuxeo Environment'}}}

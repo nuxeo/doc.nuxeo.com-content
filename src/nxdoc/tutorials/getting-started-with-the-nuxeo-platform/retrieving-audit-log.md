@@ -114,11 +114,11 @@ Retrieve a document's audit log to gather its history. All actions made on a doc
 
 **Prerequisites**
 
-*   {{! multiexcerpt name='prerequisite_contract_skynet'}}Having created the `skynet-ai-maintenance` contract. See [Manipulating Documents]({{page page='manipulating-documents'}}){{! /multiexcerpt}}
+*   {{! multiexcerpt name='prerequisite_contract_skynet'}}Create the `skynet-ai-maintenance` contract. See [Manipulating Documents]({{page page='manipulating-documents'}}){{! /multiexcerpt}}
 
 **Procedure**
 
-1.  Using your favorite text editor or IDE, create a file called `getDocumentAudit.js` with the following content.
+1.  Create a file called `getDocumentAudit.js` with the following content.
 
     ```js
     #!/usr/bin/env node
@@ -137,7 +137,7 @@ Retrieve a document's audit log to gather its history. All actions made on a doc
             return doc.fetchAudit();
         })
         .then(audit => {
-            console.log(`Document's audit log is as following:`);
+            console.log(`Document's audit log is as follows:`);
             console.log(audit);
         })
         .catch(error => {

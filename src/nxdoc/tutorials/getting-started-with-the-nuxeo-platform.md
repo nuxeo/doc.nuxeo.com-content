@@ -72,13 +72,13 @@ history:
 ---
 {{! excerpt}}
 
-This tutorial will guide you on a tour to discover the Nuxeo Platform and its features through its APIs.
+This tutorial will guide you on a tour of the Nuxeo Platform and its features through its APIs.
 
 {{! /excerpt}}
 
 {{! &nbsp;Your content here... }}
 
-This tutorial is composed of the following steps:
+The tutorial is composed of the following steps:
 
 1.[Setting up Your Nuxeo Environment]({{page page='setting-up-your-nuxeo-environment'}})
     {{{excerpt 'Setting up Your Nuxeo Environment'}}}
