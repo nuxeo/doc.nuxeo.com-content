@@ -295,7 +295,7 @@ REST endpoint `/group/{groupname}` no longer marshall members (users and groups)
 
 {{! multiexcerpt name='upgrade-8.2-remove-annotations'}}
 
-Annotations were removed from Nuxeo Platform 8.2. A new integration of annotations will be implemented for the pdf.js previewer before Nuxeo Platform LTS 2016.
+Annotations were removed from Nuxeo Platform 8.2.
 
 {{! /multiexcerpt}}
 
