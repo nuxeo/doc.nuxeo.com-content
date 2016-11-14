@@ -388,7 +388,62 @@ Fn.getEmail("Administrator")
 
 [Helper contributions]({{page page='automation-helpers'}}) are available to create custom functions to use directly in Automation Scripting and [MVEL]({{page page='use-of-mvel-in-automation-chains'}}).
 
-### <span style="line-height: 1.5;">Logging - Debugging</span>
+### Dates comparaison
+
+```
+function run(input, params) {
+
+ // nowDate, javascript instantiated date should be ISO stringified as follow
+ var nowDate = new Date().toISOString();
+
+ // releaseDate, document property should be formatted and stringified as follow
+ var releaseDate = Fn.calendar(input['ncf:releaseDate']).format("yyyy-MM-dd");
+
+ // Then all comparaisons can be made
+ var compare = (nowDate > releaseDate);
+ if (compare) {
+   WebUI.AddInfoMessage(
+     input, {
+       'message': 'Now less than release date'
+     }
+   );
+ }
+ else {
+   WebUI.AddInfoMessage(
+     input, {
+       'message': 'Now greater than release date'
+     }
+   );
+ }
+}
+```
+
+### <span style="line-height: 1.5;">JVM Nashorn Debugging</span>
+
+The Nashorn Engine provides a simple way to remotely debug Automation Scripts via the JVM for having a view on javascript variables status:
+
+- Add the `debugger;` reserved method of Nashorn inside of your script where the debug session will begin.
+- Run the Nuxeo server in debug JVM mode.
+- Add a breakpoint directly inside the method `jdk.nashorn.internal.runtime.ScriptRuntime#DEBUGGER`.
+- The IDE will break on this method once the script is executed.
+- Actioning a step out during this debug session will show the current scope script variables view.
+
+Example:
+
+```
+function run(input, params) {
+	var nowDate = new Date().toISOString();
+	debugger;
+	WebUI.AddInfoMessage(
+	 input, {
+	   /*required:true - type: string*/
+	   'message': nowDate
+	 }
+	);
+}
+```
+
+### <span style="line-height: 1.5;">Javascript Logging</span>
 
 When printing values as follow, the output is redirected to the console:
 
