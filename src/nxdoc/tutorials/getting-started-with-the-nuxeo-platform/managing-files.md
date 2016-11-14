@@ -155,7 +155,7 @@ Learn how to upload files on your Nuxeo server and attach them to a document.
 
 **Goal**
 
-Upload a file to your Nuxeo Platform instance and create a contract with the newly uploaded file as the main attachment.
+Upload a file to your Nuxeo Platform instance, create a contract and attach the file to the contract.
 
 **Prerequisites**
 
@@ -164,8 +164,8 @@ Upload a file to your Nuxeo Platform instance and create a contract with the new
 
 **Procedure**
 
-1.  Download the file [AwesomeTech-Contract.docx]({{file name='AwesomeTech-Contract.docx'}}). You will upload it in the next steps.
-2.  Using your favorite text editor or IDE, create a file called `uploadContract.js` with the following content. Make sure to replace the `filePath` variable with the path to the contract you want to upload.
+1.  Download the file [AwesomeTech-Contract.docx]({{file name='AwesomeTech-Contract.docx'}}). You will upload it in the next few steps.
+2.  Create a file called `uploadContract.js` with the following content. Be sure to replace the `filePath` variable with the path to the contract you want to upload.
 
     ```js
     // We need to require path and fs to browse the filesystem
@@ -181,7 +181,7 @@ Upload a file to your Nuxeo Platform instance and create a contract with the new
     });
 
     // Full path to the file that should be uploaded
-    // Make sure to change that one
+    // ** Be sure to modify the path **
     let filePath = '/path/to/file/filename.something';
 
     // Path where the document should be created in Nuxeo Platform
@@ -212,7 +212,7 @@ Upload a file to your Nuxeo Platform instance and create a contract with the new
           console.log('File is uploaded, we will now create a document to attach it.');
 
           // We create a contract and attach the file to it
-          // But we could also add the file to an existing contract
+          // We could also attach the file to an existing contract
           let contractToCreate = {
             'entity-type': 'document',
             'type': 'BCContract',
@@ -226,7 +226,7 @@ Upload a file to your Nuxeo Platform instance and create a contract with the new
           return nuxeo.repository().create(whereToCreate, contractToCreate, { schemas: ['*'] });
         })
         .then(contract => {
-          console.log('Contract has been created as following:');
+          console.log('Contract has been created as follows:');
           console.log(contract);
           console.log(`Blob can be downloaded here: ${contract.get('file:content').data}.\nNote that a file security policy restricts downloads to members of the managers group.\nYou can log in as sconnor / sconnor to download it.`);
         })
@@ -257,7 +257,7 @@ Upload a file to your Nuxeo Platform instance and create a contract with the new
 
 **Goal**
 
-The contract for Skynet AI maintenance you just created should also contain other files that have been signed: a non-disclosure agreement, rates and specific conditions. Attach them to the contract on top of the existing file.
+The contract for Skynet AI maintenance you just created should contain other files that have been signed: a non-disclosure agreement, rates and specific conditions. Attach them to the contract on top of the existing file.
 
 **Prerequisites**
 
@@ -265,8 +265,8 @@ The contract for Skynet AI maintenance you just created should also contain othe
 
 **Procedure**
 
-1.  Download the file [contract-attachments.zip]({{file name='contract-attachments.zip'}}) and unzip it. You will attach the files it contains to the contract in the next steps.
-2.  Using your favorite text editor or IDE, create a file called `attachFilesToContract.js` with the following content. Make sure to replace the `filePath` variable with the path to the unzipped attachment folder.
+1.  Download the file [contract-attachments.zip]({{file name='contract-attachments.zip'}}) and unzip it. You will attach the files it contains to the contract in the next few steps.
+2.  Create a file called `attachFilesToContract.js` with the following content. Be sure to replace the `filePath` variable with the path to the unzipped attachment folder.
 
     ```js
     // We need to require path and fs to browse the filesystem
@@ -287,30 +287,30 @@ The contract for Skynet AI maintenance you just created should also contain othe
     // Phase 0
     // Defining the variables that will be needed to attach files to the document:
     // Where attachments are located on the disk
-    // ** Please make sure to update that one - include the trailing slash please **
+    // ** Be sure to modify the path, keeping the trailing slash **
     let filesPath = '/path/to/contract-attachments/';
-    // Which contract to update - No need to change that if you followed our indications so far
+    // Which contract to update - No need to change if you followed our instructions so far
     let contractToUpdatePath = '/default-domain/workspaces/North America/awesome-tech/awesome-contract';
     // In which document property we'll store the attachments
-    // Please DO NOT change that or you would need to adapt the code in phase 2
+    // Please DO NOT change or you would need to adapt the code in phase 2
     let propertiesToUpdate = {
       'files:files': []
     };
 
     // Phase 1
     // Look for attachments and upload them in an upload batch
-    // The upload batch's content can be attached to a document afterwards
+    // The upload batch's content can be attached to a document afterward
     fs.readdir(filesPath, (err, files) => {
         if (err) {
             console.log(`Attachments folder cannot be found.\nPlease check the filesPath variable (currently set to ${filesPath}).`);
             return;
         }
 
-        // We create an empty batch and will upload files into it
+        // Create an empty batch into which we will upload files
         let attachmentsBatch = nuxeo.batchUpload();
         files.forEach(file => {
                 try {
-                    // Make sure to use statSync
+                    // Be sure to use statSync
                     // By using a synchronous method we won't have to deal with the callback
                     // and will prevent attaching the batch's content to the document too soon
                     let stats = fs.statSync(`${filesPath}/${file}`);
