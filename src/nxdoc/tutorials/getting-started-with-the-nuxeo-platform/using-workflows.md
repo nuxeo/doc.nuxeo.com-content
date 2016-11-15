@@ -153,9 +153,9 @@ Learn how to manage a contract validation workflow using the REST API. Log in as
 
 The contract validation workflow follows the following steps:
 
-1.  When the workflow starts, the contract goes to the&nbsp;`approval` state and a verification is done by the system that the amount property is filled in. If not, the workflow initiator must fill in it.
+1.  When the workflow starts, the contract state changes to the&nbsp;`approval` and the system verifies that the amount property is filled in. If not, the workflow initiator must fill it in.
 2.  A manager reviews the contract to approve it. If they reject it, the workflow initiator must fix it.
-3.  When the manager approves the contract, it goes to the&nbsp;`running` state.
+3.  When the manager approves the contract, the state changes to&nbsp;`running`.
 
 ## Starting the Workflow
 
@@ -171,7 +171,7 @@ Start a workflow on a contract, leveraging the contract validation workflow prov
 
 **Procedure**
 
-1.  Using your favorite text editor or IDE, create a file called `startContractValidationWorkflow.js` with the following content.
+1.  Create a file called `startContractValidationWorkflow.js` with the following content.
 
     ```js
     #!/usr/bin/env node
@@ -237,11 +237,11 @@ The workflow looks like this:
 
 ![]({{file name='contract-validation-workflow-fillAmount.png'}} ?w=481,h=637,border=true)
 
-When the workflow was started, a check was performed, that realized no amount is filled in the contract properties. Therefore, a task has been assigned to the workflow initiator (Alicia Fraser in this case) so that she may fill it in before having it reviewed by a manager.
+When the workflow started, a verification was performed that determined no amount was given in the contract properties. Therefore, a task has been assigned to the workflow initiator (Alicia Fraser in this case) so that she may fill it in before having it reviewed by a manager.
 
 **Procedure**
 
-1.  Using your favorite text editor or IDE, create a file called `handleUserWorkflowTasks.js` with the following content. While completing a task, you can send the information filled in by a user (Alicia Fraser in this case). Here send the contract amount.
+1.  Create a file called `handleUserWorkflowTasks.js` with the following content. While completing a task, you can send the information filled in by a user (Alicia Fraser in this case). Here, send the contract amount.
 
     ```js
     #!/usr/bin/env node
@@ -334,7 +334,7 @@ This time a task has been assigned to the `managers` group (represented by Sarah
 
 **Procedure**
 
-1.  Using your favorite text editor or IDE, create a file called `handleManagerWorkflowTasks.js` with the following content. Log in as `Sarah Connor` this time since she is a manager, and as such the one that needs to complete this task.
+1.  Create a file called `handleManagerWorkflowTasks.js` with the following content. Log in as `Sarah Connor` this time since she is a manager, and as such the one that needs to complete this task.
 
     ```js
     #!/usr/bin/env node

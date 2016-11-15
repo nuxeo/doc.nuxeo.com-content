@@ -147,7 +147,7 @@ history:
 ---
 {{! excerpt}}
 
-Learn how to convert an office file and an image in other formats and sizes.
+Learn how to convert an office file and an image to other formats and sizes.
 
 {{! /excerpt}}
 
@@ -162,13 +162,13 @@ Convert a file from an office format into PDF format.
 *   {{{multiexcerpt 'prerequisite_users' page='Handling Permissions'}}}
 *   {{! multiexcerpt name='prerequisite_fileupload'}}
 
-    Having created the `AwesomeTech-Contract` contract and its attachments. See [Managing Files]({{page page='managing-files'}}).
+    Create the `AwesomeTech-Contract` contract and its attachments. See [Managing Files]({{page page='managing-files'}}).
 
     {{! /multiexcerpt}}
 
 **Procedure**
 
-1.  Using your favorite text editor or IDE, create a file called `downloadPDFRendition.js` with the following content. Make sure to replace the `filePath` variable with the path to the folder where the PDF rendition should be downloaded.
+1.  Create a file called `downloadPDFRendition.js` with the following content. Be sure to replace the `filePath` variable with the path to the folder where the PDF rendition should be downloaded.
 
     ```js
     #!/usr/bin/env node
@@ -186,7 +186,7 @@ Convert a file from an office format into PDF format.
     // Change this value to indicate in which folder the PDF rendition file should be downloaded
     // Don't forget the trailing slash
     let filePath = '/tmp/';
-    // Which contract to fetch a rendition for - No need to change that if you followed our indications so far
+    // Which contract to fetch a rendition for - No need to change if you followed our instructions so far
     let contractToFetch = '/default-domain/workspaces/North America/awesome-tech/awesome-contract';
     // Further calls will return all document properties
     nuxeo.schemas('*');
@@ -247,7 +247,7 @@ Convert a file from an office format into PDF format.
     $ node downloadPDFRendition.js
     ```
 
-**Note:** The contract's file stored on the Nuxeo server remains in its initial format. The rendition is applied on the fly so only the downloaded file is converted.
+**Note:** The contract's file stored on the Nuxeo server remains in its initial format. The rendition is applied on the fly so that only the downloaded file is converted.
 
 {{#> callout type='info' heading='Learn more'}}
 
@@ -261,7 +261,7 @@ Convert a file from an office format into PDF format.
 
 **Goal**
 
-The marketing department wants to use the companies logos stored in the portfolios for testimonials. They need all these images to have the same dimensions. Use a rendition to cover this need.
+The marketing department wants to use the companies' logos stored in the portfolios for testimonials. They need all these images to have the same dimensions. Use a rendition to cover this need.
 
 **Prerequisites**
 
@@ -270,7 +270,7 @@ The marketing department wants to use the companies logos stored in the portfoli
 
 **Procedure**
 
-1.  Using your favorite text editor or IDE, create a file called `downloadResizedLogo.js` with the following content. Make sure to replace the `filePath` variable with the path to the folder where the resized logo should be downloaded.
+1.  Create a file called `downloadResizedLogo.js` with the following content. Be sure to replace the `filePath` variable with the path to the folder where the resized logo should be downloaded.
 
     ```js
     #!/usr/bin/env node
@@ -288,7 +288,7 @@ The marketing department wants to use the companies logos stored in the portfoli
     // Change this value to indicate in which folder the image rendition file should be downloaded
     // Don't forget the trailing slash
     let filePath = '/tmp/';
-    // Which portfolio to fetch a rendition for - No need to change that if you followed our indications so far
+    // Which portfolio to fetch a rendition for - No need to change if you followed our instructions so far
     let portfolioToFetch = '/default-domain/workspaces/North America/Money Bank';
     // Size of the company logo rendition you want to obtain
     // You can change "Medium" to "Thumbnail", "Small" or "OriginalJpeg" to see the difference for yourself
@@ -308,12 +308,11 @@ The marketing department wants to use the companies logos stored in the portfoli
                 console.log(currentPictureView.title);
                 console.log(currentPictureView.info);
                 // Store the rendition format to generate the filename later
-                // XXX Please check this line
                 if (currentPictureView.title === renditionSize) {
                     fileFormat = currentPictureView.info.format.toLowerCase();
                 }
             });
-            console.log('\nWe\'ll ask for a ' + renditionSize + ' sized company logo in the ' + fileFormat + ' format.');
+            console.log('\nWe\'ll ask for a ' + renditionSize + '-sized company logo in the ' + fileFormat + ' format.');
             return portfolio.fetchRendition(renditionSize);
         })
         .then(response => {
@@ -321,7 +320,7 @@ The marketing department wants to use the companies logos stored in the portfoli
             try {
                 var stats = fs.statSync(filePath);
                 if (!stats.isDirectory()) {
-                    console.log(`${filePath} is not a folder.\nPlease check the filePath variable (currently set to: ' + filePath + ')\nand make sure you have the proper rights on that folder.`);
+                    console.log(`${filePath} is not a folder.\nPlease check the filePath variable (currently set to: ${filePath})\nand make sure you have the proper rights on that folder.`);
                     return;
                 }
                 let renditionFilePath = path.join(filePath, `${companyName}-${renditionSize}.${fileFormat}`);
