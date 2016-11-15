@@ -225,7 +225,7 @@ Here's a list of basic Nuxeo elements needing a range element index:
 | collectionMember:collectionIds | collectionMember\_\_collectionIds\_\_item | string |
 | created | created | dateTime |
 | replaced | replaced | dateTime |
-| version-id | version-id | Nuxeo: long<br/> MarkLogic: unsignedLong |
+| version-id | version-id | long |
 | begin | begin | dateTime |
 | end | end | dateTime |
 | dc:created | dc\_\_created | dateTime |
