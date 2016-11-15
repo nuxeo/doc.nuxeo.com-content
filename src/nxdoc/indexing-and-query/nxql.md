@@ -770,7 +770,7 @@ When an NXQL query is processed by an [Elasticsearch PageProvider]({{page page='
 
 *   Canonical name for complex properties without prefix are not supported.
     You need to write&nbsp;`file:content/name` and not just&nbsp;`content/name`. See&nbsp;[NXP-15426](https://jira.nuxeo.com/browse/NXP-15426)&nbsp;for more information.
-*   When using `queryAndFetch` the select clause is limited to scalar properties: There is no support of NXQL aggregate like: `DISTINCT`, `COUNT`, `AVERAGE`, `MAX`, `MIN`, or operators like: `+ - / *`.
+*   When using `query`, `queryAndFetch` or `queryAndAggregate` the select clause is limited to scalar properties: There is no support of NXQL aggregate like: `DISTINCT`, `COUNT`, `AVERAGE`, `MAX`, `MIN`, or operators like: `+ - / *`.
 *   Custom securityPolicy expressible in NXQL is taken in account since [NXP-17371](https://jira.nuxeo.com/browse/NXP-17371), if the securityPolicy is not expressible in NXQL then total count or aggregates counts can be wrong.
 
 ### Required Elasticsearch Configuration
