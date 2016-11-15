@@ -418,7 +418,7 @@ function run(input, params) {
 }
 ```
 
-### <span style="line-height: 1.5;">JVM Nashorn Debugging</span>
+### JVM Nashorn Debugging
 
 The Nashorn Engine provides a simple way to remotely debug Automation Scripts via the JVM for having a view on javascript variables status:
 
@@ -443,7 +443,7 @@ function run(input, params) {
 }
 ```
 
-### <span style="line-height: 1.5;">Javascript Logging</span>
+### Javascript Logging
 
 When printing values as follow, the output is redirected to the console:
 
@@ -467,7 +467,7 @@ To get the value of a Context Variable you should use the following syntax:
 ctx.get('var')
 ```
 
-### <span style="color: rgb(0,0,0);">Activating Metrics</span>
+### Activating Metrics
 
 Metrics have been added to Automation Scripting services to monitor Nashorn performances with the Nuxeo Platform.
 
