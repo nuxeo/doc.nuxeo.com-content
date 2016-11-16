@@ -388,7 +388,7 @@ Fn.getEmail("Administrator")
 
 [Helper contributions]({{page page='automation-helpers'}}) are available to create custom functions to use directly in Automation Scripting and [MVEL]({{page page='use-of-mvel-in-automation-chains'}}).
 
-### Dates comparaison
+### Dates Comparison
 
 ```
 function run(input, params) {
@@ -420,7 +420,7 @@ function run(input, params) {
 
 ### JVM Nashorn Debugging
 
-The Nashorn Engine provides a simple way to remotely debug Automation Scripts via the JVM for having a view on javascript variables status:
+The Nashorn Engine provides a simple way to remotely debug Automation Scripts via the JVM for having a view on JavaScript variables status:
 
 - Add the `debugger;` reserved method of Nashorn inside of your script where the debug session will begin.
 - Run the Nuxeo server in debug JVM mode.
@@ -443,7 +443,7 @@ function run(input, params) {
 }
 ```
 
-### Javascript Logging
+### JavaScript Logging
 
 When printing values as follow, the output is redirected to the console:
 
