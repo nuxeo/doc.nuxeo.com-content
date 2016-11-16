@@ -139,7 +139,7 @@ You also have a new **User Registration** tab in the **Admin** tab.
 
 ### Setting Up Email Sending
 
-The Nuxeo Platform User Registration add-on sends email to the invited user with his credentials. So your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='setup-best-practices#setup-mail'}}).
+The Nuxeo Platform User Registration add-on sends email to the invited user with his credentials. So your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='set-up-email-notification'}}).
 
 ### Global Configuration
 
@@ -305,10 +305,10 @@ See the page [How to Contribute a New "User Registration Request" Document Type]
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Authentication and User Management]({{page page='authentication-and-user-management'}}) (developer documentation)
-*   [How to Contribute a New "User Registration Request" Document Type]({{page page='how-to-contribute-a-new-user-registration-request-document-type'}})
-*   [Managing Users and Groups]({{page space='userdoc' page='managing-users-and-groups'}}) (user documentation)
-*   [Setup Best Practices]({{page page='setup-best-practices'}}) (admin documentation)
+- [Authentication and User Management]({{page page='authentication-and-user-management'}}) (developer documentation)
+- [How to Contribute a New "User Registration Request" Document Type]({{page page='how-to-contribute-a-new-user-registration-request-document-type'}})
+- [Managing Users and Groups]({{page space='userdoc' page='managing-users-and-groups'}}) (user documentation)
+- [Setup Best Practices]({{page page='setup-best-practices'}}) (admin documentation)
 
 {{/panel}}</div><div class="column medium-6">
 
