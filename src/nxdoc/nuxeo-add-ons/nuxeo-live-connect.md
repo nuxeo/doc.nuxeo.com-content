@@ -570,6 +570,8 @@ OneDrive documents can be searched in the Nuxeo Platform like any other document
 
 For OneDrive for Business follow steps&nbsp;[here](https://dev.onedrive.com/app-registration.htm#register-your-app-for-onedrive-for-business)&nbsp;and copy the Client id and Client secret.
 
+In your application permissions, you need `Read user profiles`, `Read and write user items` and `Read and write items in all site collections` for an Office 365 SharePoint Online application.
+
 **Step 2: Configuring the Nuxeo Platform**
 
 1.  Install the package Nuxeo Live Connect if it is not already installed.
