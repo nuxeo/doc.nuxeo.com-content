@@ -221,6 +221,29 @@ It is possible to convert the video to various formats from the Web UI user inte
 
 To convert the video, click on&nbsp;![]({{file name='download.png' space='userdoc' page='icons-index'}})&nbsp;corresponding to the format you want.
 
+#### Browsing Assets
+
+Once DAM installed and assets documents created, a new search type is displayed in the left menu, the `Assets` search. This search will let you search by assets metadata, such as:
+- Type
+- Format
+- Width
+- Height
+- Etc.
+
+&nbsp;
+The Assets search leverages Elasticsearch to provide a quicker and more efficient search. The search form uses Elasticsearch aggregates for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.
+
+![]({{file name='assets-search.png' space='userdoc' page='digital-asset-management-with-the-nuxeo-platform'}} ?w=600,border=true)
+
+The Assets search form offers several search criteria, that you can associate to define your search and find documents. Search results use the thumbnail view by default. Clicking on a document thumbnail will lead you directly to the document.
+
+**To search documents using detailed criteria:**
+
+* Click on the `Assets` tab.
+* Fill in the form with your criteria and/or select the search criteria corresponding to your needs.
+<br/>
+  The search results will be automatically updated according to the criteria selected.
+
 {{! /multiexcerpt}}
 
 {{! Don't put anything here. }}
