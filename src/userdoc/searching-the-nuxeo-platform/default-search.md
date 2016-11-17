@@ -181,15 +181,15 @@ SELECT * FROM Document WHERE (criterion1 = value1 OR criterion1 = value2) AND (c
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More in User Documentation '}}
 
-*   [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
-*   [Browsing Content]({{page page='browsing-content'}})
-*   [Quick Search]({{page page='quick-search'}})
-*   [Saved Searches]({{page page='saved-searches'}})
+- [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
+- [Browsing Content]({{page page='browsing-content'}})
+- [Quick Search]({{page page='quick-search'}})
+- [Saved Searches]({{page page='saved-searches'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Want to know more?'}}
 
-*   [Indexing and Querying How-To Index]({{page space='nxdoc' page='indexing-and-querying-how-to-index'}})
-*   [Indexing and Query]({{page space='nxdoc' page='indexing-and-query'}})
-*   [Full-Text Queries]({{page space='nxdoc' page='full-text-queries'}})
+- [Indexing and Querying How-To Index]({{page space='nxdoc' page='indexing-and-querying-how-to-index'}})
+- [Indexing and Query]({{page space='nxdoc' page='indexing-and-query'}})
+- [Full-Text Queries]({{page space='nxdoc' page='full-text-queries'}})
 
 {{/panel}}</div></div>
