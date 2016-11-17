@@ -20,6 +20,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/3Ir1'
     source_link: /display/NXDOC/Android+Client
 tree_item_index: 900
+hidden: true
 history:
     -
         author: Alain Escaffre
