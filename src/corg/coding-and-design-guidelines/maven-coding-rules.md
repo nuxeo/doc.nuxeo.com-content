@@ -160,7 +160,7 @@ Maven POMs are written in XML, always start them with:
 
 {{#> panel type='code' heading='XML header'}}
 
-```html/xml
+```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -178,7 +178,7 @@ Format your code.
 
 {{#> panel type='code' heading='Comments sample'}}
 
-```html/xml
+```xml
 <!-- <dependency> -->
 <!-- <groupId>org.nuxeo.runtime</groupId> -->
 <!-- <artifactId>nuxeo-runtime-start</artifactId> -->
@@ -191,10 +191,10 @@ Format your code.
 ### Dependencies and Plugins Definition
 
 Define dependencies' versions in the `dependencyManagement` section and plugins' versions in the `pluginManagement` section.
-Note that not only the version is managed, those definitions also include the&nbsp;`exclusions`,&nbsp;`configuration`, ...
-The&nbsp;`reporting` plugins versions are not inherited from the `pluginManagement`, they must be repeated. Using a property to avoid duplication is a good idea.
+Note that not only the version is managed, those definitions also include the `exclusions`, `configuration`, ...
+The `reporting` plugins versions are not inherited from the `pluginManagement`, they must be repeated. Using a property to avoid duplication is a good idea.
 
-`LATEST` and&nbsp;`RELEASE` keywords are forbidden, as well as&nbsp;`pom.*` properties but you can use variables prefixed "`project.`" to reference any field of the POM that is a single value element. For instance, you can use "`${project.version}`".
+`LATEST` and `RELEASE` keywords are forbidden, as well as `pom.*` properties but you can use variables prefixed "`project.`" to reference any field of the POM that is a single value element. For instance, you can use "`${project.version}`".
 You can also use variables named `nuxeo.something.version` or `marketplace.something.version` : when releasing Nuxeo, the version replacement only applies on each POM on the parent version, the project version and all the properties named "`nuxeo|marketplace.*version`".
 
 #### SNAPSHOT plugins
@@ -203,7 +203,7 @@ You can also use variables named `nuxeo.something.version` or `marketplace.somet
 
 If you need to temporarily use a SNAPSHOT plugin:
 
-*   add it to the `unCheckedPluginList` in&nbsp;`org.nuxeo:nuxeo-ecm`
+*   add it to the `unCheckedPluginList` in `org.nuxeo:nuxeo-ecm`
 
     {{#> panel type='code' heading='build/pluginManagement/plugins/maven-enforcer-plugin/configuration/rules/requirePluginVersions/unCheckedPluginList'}}
 
@@ -237,7 +237,7 @@ Note that the SNAPSHOT dependency will be tolerated during nightly releases, but
 
 Dependency version doubt is forbidden and transitive dependency upgrade is allowed but not the downgrade.
 
-If a project&nbsp;`libA` depends on the artifact&nbsp;`libZ` and another project&nbsp;`libB` also depends on&nbsp;`libZ`, then Maven will perform automatic version resolution to find the best match. On Nuxeo code, we want that version being explicitly set in the dependencyManagement.
+If a project `libA` depends on the artifact `libZ` and another project `libB` also depends on `libZ`, then Maven will perform automatic version resolution to find the best match. On Nuxeo code, we want that version being explicitly set in the dependencyManagement.
 Here are the possible cases:
 
 1.  libA => libZ:**1**, libB => libZ:**1**, **no dependencyManagement on libZ**
@@ -246,10 +246,10 @@ Here are the possible cases:
     Error: you have to state **libZ:2** in the dependencyManagement.
 3.  libA => libZ:**1**, libB => libZ:**2**, dependencyManagement **libZ:2**
     Ok
-4.  libA => libZ:**1**, libB => libZ:**3**, dependencyManagement **libZ:2
-    **Error: you have to state **libZ:3**&nbsp;in the dependencyManagement.
-5.  libA => libZ:**1**, libB => libZ:**2**, dependencyManagement **libZ:3
-    **Ok, it's an upgrade.
+4.  libA => libZ:**1**, libB => libZ:**3**, dependencyManagement **libZ:2**
+    Error: you have to state **libZ:3** in the dependencyManagement.
+5.  libA => libZ:**1**, libB => libZ:**2**, dependencyManagement **libZ:3**
+    Ok, it's an upgrade.
 
 ### Duplication
 
@@ -259,7 +259,7 @@ Avoid duplication as much as possible (even if it is not always possible or easy
 
     {{#> panel type='code' heading='Sample use of a property for setting a version'}}
 
-    ```html/xml
+    ```xml
     <properties>
       <apacheds.version>1.5.1</apacheds.version>
     </properties>
@@ -295,7 +295,7 @@ Avoid duplication as much as possible (even if it is not always possible or easy
 
     {{#> panel type='code' heading='Parent POM inheritance'}}
 
-    ```html/xml
+    ```xml
     <parent>
       <groupId>org.nuxeo</groupId>
       <artifactId>nuxeo-ecm</artifactId>
@@ -305,7 +305,7 @@ Avoid duplication as much as possible (even if it is not always possible or easy
 
     {{/panel}}{{#> panel type='code' heading='Dependencies inheritance'}}
 
-    ```html/xml
+    ```xml
     <dependencies>
       <dependency>
         <groupId>org.nuxeo.ecm.distribution</groupId>
@@ -317,7 +317,7 @@ Avoid duplication as much as possible (even if it is not always possible or easy
 
     {{/panel}}{{#> panel type='code' heading='BOM (Bill Of Materials) import sample'}}
 
-    ```html/xml
+    ```xml
     <dependencyManagement>
       <dependencies>
         <dependency>
@@ -340,7 +340,7 @@ Using a transitive dependency in your code is weak and error prone: for instance
 
 There are two complementary solutions to optimize your POM and add missing direct dependencies:
 
-*   [ Use Nuxeo IDE "Synchronize POM" feature ]({{page space='idedoc' page='managing-project-dependencies#sync-poms'}}).
+*   [Use Nuxeo IDE "Synchronize POM" feature ]({{page space='idedoc' page='managing-project-dependencies#sync-poms'}}).
 
     {{#> callout type='info' }}
 
@@ -377,16 +377,16 @@ There are two complementary solutions to optimize your POM and add missing direc
     [WARNING]    org.nuxeo.ecm.platform:nuxeo-platform-directory-types-contrib:jar:5.9.3:test
     ```
 
-    A call to "`mvn dependency:tree`" will help to visualize the transitivity making the compile possible.
+    A call to `mvn dependency:tree` will help to visualize the transitivity making the compile possible.
 
 ## Maven Issues, Common Mistakes and Rules
 
-*   Since Maven 3.0, all&nbsp;`pom.*` properties are deprecated, replaced with ``project.*``
-*   Plugin configuration can be done in `plugin/some.plugin/configuration` and&nbsp;`plugin/some.plugin/executions/execution/configuration` depending on what you want (set a global configuration or an execution's specific configuration) but be careful that when using both kinds of configuration, the way they are merged or overwritten depends on the plugin implementation. Do not expect any default behavior.
-*   All modules should set a&nbsp;`description` in complement of the&nbsp;`name`.
-*   Do not use two different POMs for defining the&nbsp;`modules` and the `dependencies`.
+* Since Maven 3.0, all `pom.*` properties are deprecated, replaced with ``project.*``
+* Plugin configuration can be done in `plugin/some.plugin/configuration` and `plugin/some.plugin/executions/execution/configuration` depending on what you want (set a global configuration or an execution's specific configuration) but be careful that when using both kinds of configuration, the way they are merged or overwritten depends on the plugin implementation. Do not expect any default behavior.
+* All modules should set a `description` in complement of the `name`.
+* Do not use two different POMs for defining the `modules` and the `dependencies`.
 
-*   The `relativePath` definition works differently with Maven 2 and 3 and is useless if equal to&nbsp;`../pom.xml`. As of Maven 3, it is mandatory if `../pom.xml`does not point at the right parent.
+* The `relativePath` definition works differently with Maven 2 and 3 and is useless if equal to `../pom.xml`. As of Maven 3, it is mandatory if `../pom.xml`does not point at the right parent.
 
     ```xml
     <parent>
@@ -394,13 +394,13 @@ There are two complementary solutions to optimize your POM and add missing direc
       <artifactId>nuxeo-ecm</artifactId>
       <version>5.7-SNAPSHOT</version>
       <relativePath>../pom.xml</relativePath>
-    </parent
+    </parent>
     ```
 
-    If the parent isn't supposed to be resolved locally, then set an empty relative path to force Maven looking for the parent POM in the repositories:&nbsp;`<relativePath />`.
+If the parent is not supposed to be resolved locally, then set an empty relative path to force Maven looking for the parent POM in the repositories: `<relativePath />`.
 
-*   Do not rely on&nbsp;`~/.m2/settings.xml` for build-ability: a project must be build-able without information provided from outside however it is legitimate and highly recommended to use the local settings for setting passwords and custom environments (for instance repositories replacement, mirrors, ...).
-    [m2eclipse](http://eclipse.org/m2e/)&nbsp;plugin can have some incompatibilities with other plugins (see for instance {{jira server='Nuxeo Issue Tracker' key='NXP-8625'}}) and require such workaround configuration:
+* Do not rely on `~/.m2/settings.xml` for build-ability: a project must be build-able without information provided from outside however it is legitimate and highly recommended to use the local settings for setting passwords and custom environments (for instance repositories replacement, mirrors, ...).
+    [m2eclipse](http://eclipse.org/m2e/) plugin can have some incompatibilities with other plugins (see for instance {{jira server='Nuxeo Issue Tracker' key='NXP-8625'}}) and require such workaround configuration:
 
     ```xml
     <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself. -->
@@ -504,8 +504,8 @@ A lot of definitions (artifacts' and plugins' versions, helper plugins configura
 
 Nuxeo defines a super POM (which is also the corporate POM) inherited by all other Nuxeo projects and modules: see [org.nuxeo:nuxeo-ecm:5.6](https://maven.nuxeo.org/nexus/index.html#nexus-search;gav%7Eorg.nuxeo%7Enuxeo-ecm%7E5.6%7E%7E).
 
-It is generally a good idea to gather all&nbsp;`dependencyManagement` and&nbsp;`pluginManagement` sections of all modules into a unique one, preferably a common parent project to those modules, a common BOM or the super POM.
-In Nuxeo, they are mainly set in&nbsp; [`org.nuxeo:nuxeo-ecm`](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;gav%7Eorg.nuxeo%7Enuxeo-ecm%7E%7E%7E) , [`org.nuxeo:nuxeo-addons-parent`](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;gav%7Eorg.nuxeo%7Enuxeo-addons-parent%7E%7E%7E) and&nbsp; [`org.nuxeo.ecm.distribution:nuxeo-distribution`](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;gav%7Eorg.nuxeo.ecm.distribution%7Enuxeo-distribution%7E%7E%7E) POMs.
+It is generally a good idea to gather all `dependencyManagement` and `pluginManagement` sections of all modules into a unique one, preferably a common parent project to those modules, a common BOM or the super POM.
+In Nuxeo, they are mainly set in  [`org.nuxeo:nuxeo-ecm`](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;gav%7Eorg.nuxeo%7Enuxeo-ecm%7E%7E%7E) , [`org.nuxeo:nuxeo-addons-parent`](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;gav%7Eorg.nuxeo%7Enuxeo-addons-parent%7E%7E%7E) and  [`org.nuxeo.ecm.distribution:nuxeo-distribution`](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;gav%7Eorg.nuxeo.ecm.distribution%7Enuxeo-distribution%7E%7E%7E) POMs.
 
 Every project super POM should define the following if not defined (or different from those) into the corporate POM:
 
@@ -594,13 +594,11 @@ Since you host your own repository manager, you must not add other repositories 
 
 {{/callout}}
 
-&nbsp;
-
 ## Make Use of Helper Plugins
 
 There are a lot of available Maven plugins which can help to check, enforce and improve your POMs.
 
-Versions have been removed from the following extracts: pick up the latest one from the dedicated sites and remember to define them in the&nbsp;`pluginManagement`section (and/or&nbsp;`reporting`section if relevant).
+Versions have been removed from the following extracts: pick up the latest one from the dedicated sites and remember to define them in the `pluginManagement`section (and/or `reporting`section if relevant).
 
 ### [maven-compiler-plugin](http://maven.apache.org/plugins/maven-compiler-plugin/)
 
@@ -618,15 +616,13 @@ Versions have been removed from the following extracts: pick up the latest one f
 </plugin>
 ```
 
-&nbsp;
-
 ### [maven-help-plugin](http://maven.apache.org/plugins/maven-help-plugin/)
 
-Get relative information about a project or the system. The&nbsp;`"mvn help:effective-pom`" command is particularly useful.
+Get relative information about a project or the system. The `"mvn help:effective-pom`" command is particularly useful.
 
 ### [maven-dependency-plugin](http://maven.apache.org/plugins/maven-dependency-plugin/)
 
-That plugin has various analysis and reporting goals. The&nbsp;`"mvn dependency:tree"` command can be used to better understand where an artifact comes from in a given version. It is very similar to the output of `"artifact:print"` command of [nuxeo-distribution-tools](https://github.com/nuxeo/nuxeo-distribution-tools) plugin.
+That plugin has various analysis and reporting goals. The `"mvn dependency:tree"` command can be used to better understand where an artifact comes from in a given version. It is very similar to the output of `"artifact:print"` command of [nuxeo-distribution-tools](https://github.com/nuxeo/nuxeo-distribution-tools) plugin.
 
 ```xml
 <plugin>
@@ -644,8 +640,6 @@ That plugin has various analysis and reporting goals. The&nbsp;`"mvn dependency:
   </executions>
 </plugin>
 ```
-
-&nbsp;
 
 ### [maven-enforcer-plugin](http://maven.apache.org/plugins/maven-enforcer-plugin/)
 
@@ -815,8 +809,6 @@ Various checks and reports on artifacts.
 </plugin>
 ```
 
-&nbsp;
-
 ### [maven-pmd-plugin](http://maven.apache.org/plugins/maven-pmd-plugin/)
 
 PMD code analysis tool (including the separate Copy/Paste Detector tool &minus; or CPD &minus; distributed with PMD).
@@ -894,5 +886,3 @@ This plugin manages the license of a maven project and its dependencies (update 
   </plugins>
 </reporting>
 ```
-
-&nbsp;

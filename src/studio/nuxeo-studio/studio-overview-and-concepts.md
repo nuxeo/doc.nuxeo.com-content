@@ -146,9 +146,3 @@ Here are a list of resources to start working with Nuxeo Studio:
 *   [Working in Studio]({{page page='working-in-studio'}}): This section of the documentation provides screen by screen descriptions of the tool
 *   [Essential Nuxeo Platform Terminology]({{page space='nxdoc' page='essential-nuxeo-platform-terminology'}}): Get familiar with the concepts and terms used in the Platform
 *   [Quick Start Dev Guide]({{page space='nxdoc' page='quick-start-dev-guide'}}): Start a Nuxeo Platform customization project using Nuxeo Studio and Nuxeo IDE
-
-&nbsp;
-
-&nbsp;
-
-* * *
