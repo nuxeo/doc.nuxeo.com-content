@@ -152,7 +152,7 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
     </component>
     ```
 
-    You can find more examples here: [https://github.com/nuxeo/nuxeo-platform-login/tree/master/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/nuxeo-platform-login-saml2/sample).
+    You can find more examples here: [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample).
 
 4.  Use this new authentication plugin in the authentication chain, by contributing its definition from your Studio project (or in the previous XML component).
 
