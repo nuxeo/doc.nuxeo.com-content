@@ -45,7 +45,7 @@ history:
 ---
 {{! excerpt}}
 
-The default Nuxeo Platform email configuration is filled in with neutral values that you need to edit to make the platform&nbsp; work with your mail server. Unless you do that, alerts emails won't be sent to users.
+The default Nuxeo Platform email configuration is filled in with neutral values that you need to edit to make the platform work with your mail server. Unless you do that, alerts emails won't be sent to users.
 
 {{! /excerpt}}
 
@@ -55,11 +55,8 @@ The default Nuxeo Platform email configuration is filled in with neutral values 
 
 1.  In the **Admin** tab, click on the **Setup** tab of System Information section.
 2.  Edit and fill in the values of the Email information section (see below for expected parameters).
-
     {{#> callout type='tip' }}
-
     To enable alerts, filling in the SMTP parameters should be sufficient for most mail server configurations.
-
     {{/callout}}
 3.  Click the button **Save**.
     As indicated on top of the page, you need to restart your server so the new configuration is taken into account.
@@ -86,7 +83,7 @@ Default value is "[Nuxeo]". You can change is to whatever value you like.
 
 </td></tr><tr><td colspan="1">
 
-Mail store protocol
+Mail store protocol<br/>
 `mail.store.protocol`
 
 </td><td colspan="1">
@@ -106,17 +103,47 @@ Default value is "smtp". This should work in most cases.
 
 </td></tr><tr><td colspan="1">
 
-Host name for POP3
-`mail.pop3.host`
+Host Name for Store<br/>
+`mail.store.host`
 
 </td><td colspan="1">
 
 Name of the mail server host used to receive and store emails.
-Default value is "pop3.nosuchhost.nosuchdomain.com". You need to change it.
+Default value is "localhost". You need to change it.
+
+</td>
+</tr>
+<tr><td colspan="1">
+
+Port Number for Store<br/>
+`mail.store.port`
+
+</td><td colspan="1">
+
+Mail server port to receive and store emails.
+Default value is 110.
 
 </td></tr><tr><td colspan="1">
 
-Debug mode
+Username for Store</br>
+`mail.store.user`
+
+</td><td colspan="1">
+
+Type the username that will be used if you set the authentication for SMTP parameter to "true".
+
+</td></tr><tr><td colspan="1">
+
+Password for Store<br/>
+`mail.store.password`
+
+</td><td colspan="1">
+
+Type the password that will be used if you set the authentication for SMTP parameter to "true".
+
+</td></tr><tr><td colspan="1">
+
+Debug mode<br/>
 `mail.debug`
 
 </td><td colspan="1">
@@ -125,18 +152,17 @@ Default value is set to "false". Change it to "true" if you want to have the det
 
 </td></tr><tr><td colspan="1">
 
-Host name for SMTP
-`mail.smtp.host`
+Host Name for Transport<br/>
+`mail.transport.host`
 
 </td><td colspan="1">
 
-Mail server host name for outgoing mails.
-Default value is "localhost". You need to change it so emails can be sent from the server.
+Mail server host name for outgoing mails. Default value is "localhost". You need to change it so emails can be sent from the server.
 
 </td></tr><tr><td colspan="1">
 
-Port number for SMTP
-`mail.smtp.port`
+Port Number for Transport
+`mail.transport.port`
 
 </td><td colspan="1">
 
@@ -145,52 +171,34 @@ Default value is 25.
 
 </td></tr><tr><td colspan="1">
 
-Use authentication for SMTP
-`mail.smtp.auth`
+Use Authentication for Transport
+`mail.transport.auth`
 
 </td><td colspan="1">
 
 Indicate if authentication is needed for the mail server to send emails.
-Default value is "true". You should change it to "false" if no authentication for sending email is required.
 
 </td></tr><tr><td colspan="1">
 
-Use STARTTLS for SMTP
-`mail.smtp.usetls`
-
-</td><td colspan="1">
-
-Indicate if STARTTLS is needed for the mail server.
-Default value is "false". You should change it to "true" if your SMTP requires STARTTLS
-
-</td></tr><tr><td colspan="1">
-
-SMTP username
-`mail.smtp.username`
-
-</td><td colspan="1">
-
-Type the username that will be used if you set the authentication for SMTP parameter to "true".
-
-</td></tr><tr><td colspan="1">
-
-SMTP password
-`mail.smtp.password`
-
-</td><td colspan="1">
-
-Type the password that will be used if you set the authentication for SMTP parameter to "true".
-
-</td></tr><tr><td colspan="1">
-
-Sender address mail
+Sender Address Mail<br/>
 `mail.from`
 
 </td><td colspan="1">
 
 Email address that will displayed as the sender's address.
 
-</td></tr></tbody></table></div>{{#> callout type='info' }}
+</td></tr><tr><td colspan="1">
+
+Transport Connection using TLS
+`mail.transport.usetls`
+
+</td><td colspan="1">
+
+Indicate if TLS is needed for the mail server.
+Default value is "false". You should change it to "true" if your SMTP requires TLS
+
+</td></tr>
+</tbody></table></div>{{#> callout type='info' }}
 
 If you have complex mail server configurations, you may want to check the [Javamail API FAQ](http://www.oracle.com/technetwork/java/faq-135477.html) for more information.
 
@@ -198,7 +206,6 @@ If you have complex mail server configurations, you may want to check the [Javam
 
 {{! Don't put anything here. }}
 
-* * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
