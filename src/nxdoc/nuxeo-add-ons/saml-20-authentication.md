@@ -127,11 +127,11 @@ history:
 
 {{! excerpt}}
 
-The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication) allows setting up Nuxeo as a Service Provider and supports WebSSO thus relying on an external SAML Identity Provider (IdP) for authentication. It has been successfully tested so far with OneLogin, Ping One, SSOCircle, Google, OIF and ADFS. If you are no familiar with SAML IdP, read the section [Background on SAML 2.0](#saml20_presentation) below.
+The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication) allows setting up Nuxeo as a Service Provider and supports WebSSO thus relying on an external SAML Identity Provider (IdP) for authentication. It has been successfully tested so far with Okta, OneLogin, Ping One, SSOCircle, Google, OIF and ADFS. If you are no familiar with SAML IdP, read the section [Background on SAML 2.0](#saml20_presentation) below.
 
 1.  [Install the SAML2.0 Authentication addon]({{page page='installing-a-new-package-on-your-instance'}}) available from the Nuxeo Marketplace.
-2.  Retrieve your IdP SAML metadata configuration file. This file stores SAML configuration like supported bindings, endpoints, certificates, etc., that are used by our SAML plugin to configure you IdP. Some IdP make this metadata available in a URL which you can also reference directly in the next step.
-3.  Contribute ([in a Studio project]({{page page='how-to-contribute-to-an-extension'}}), or in the `nxserver/config` folder) a new authentication plugin that makes use of the `org.nuxeo.ecm.platform.auth.saml.SAMLAuthenticationProvider`, with a reference to the XML Metadata for specific configuration. Ex:
+1.  Retrieve your IdP SAML metadata configuration file. This file stores SAML configuration like supported bindings, endpoints, certificates, etc., that are used by our SAML plugin to configure you IdP. Some IdP make this metadata available in a URL which you can also reference directly in the next step.
+1.  Contribute ([in a Studio project]({{page page='how-to-contribute-to-an-extension'}}), or in the `nxserver/config` folder) a new authentication plugin that makes use of the `org.nuxeo.ecm.platform.auth.saml.SAMLAuthenticationProvider`, with a reference to the XML Metadata for specific configuration. Ex:
 
     ```xml
     <component name="org.nuxeo.ecm.platform.login.saml.auth">
@@ -142,9 +142,17 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
             <authenticationPlugin name="SAML_AUTH" enabled="true"
                                   class="org.nuxeo.ecm.platform.auth.saml.SAMLAuthenticationProvider">
                 <loginModulePlugin>Trusting_LM</loginModulePlugin>
+                <!-- Setting needStartingURLSaving
+                  - to true: user will be redirected to the URL initially asked for after authentication. 
+                  - to false: user will always be redirected to the home page after authentication. -->
                 <needStartingURLSaving>true</needStartingURLSaving>
                 <parameters>
+                    <!-- Make sure to use a unique name, especially if you have several identity providers -->
                     <parameter name="name">MyIdP</parameter>
+                    <!-- The idp's icon will only be shown if SAML auth is displayed 
+                    as an alternative login option in the login form. -->
+                    <!-- <parameter name="icon">nuxeo.war/img/idpIcon.png</parameter> -->
+                    <!-- The metadata parameter can either be a URL or a path to a static file -->
                     <parameter name="metadata">nxserver/config/metadata-idp.xml</parameter>
                 </parameters>
             </authenticationPlugin>
@@ -154,27 +162,49 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 
     You can find more examples here: [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample).
 
-4.  Use this new authentication plugin in the authentication chain, by contributing its definition from your Studio project (or in the previous XML component).
+1.  Configure the user attributes mapping for your identity provider's response. Either add a [XML contribution]({{page page='how-to-contribute-to-an-extension'}}) into your Studio project, or in the previous XML component. This mapping configuration can be achieved by providing a JavaScript or Groovy script. A sample is provided below using JavaScript code.
+
+    ```xml
+      <extension 
+        target="org.nuxeo.usermapper.service.UserMapperComponent"
+        point="mapper">
+        <mapper name="saml" type="js">
+          <mapperScript>
+            searchAttributes.put("username", userObject.getNameID().getValue());
+            userAttributes.put("email", userObject.getNameID().getValue());
+          </mapperScript>
+        </mapper>
+      </extension>
+    ```
+
+1.  Use this new authentication plugin in the authentication chain, by [contributing its definition]({{page page='how-to-contribute-to-an-extension'}}) from your Studio project (or in the previous XML component).
 
     ```xml
       <extension
-                target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
-                point="chain">
-            <authenticationChain>
-                <plugins>
-                    <plugin>BASIC_AUTH</plugin>
-                    <plugin>SAML_AUTH</plugin>
-                </plugins>
-            </authenticationChain>
-        </extension>
+        target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
+        point="chain">
+        <authenticationChain>
+          <plugins>
+            <plugin>BASIC_AUTH</plugin>
+              <!-- Optionally, add the FORM_AUTH
+              if you want to see the SAML authentication appear 
+              as an alternative option on the login form.
+              In this case, make sure to fill in the icon's path 
+              in the authentication plugin parameters.
+              -->
+              <!-- <plugin>FORM_AUTH</plugin> -->
+            <plugin>SAML_AUTH</plugin>
+          </plugins>
+        </authenticationChain>
+      </extension>
     ```
 
-5.  Configure your Identity Provider:
+1.  Configure your Identity Provider:
     1.  Map user email to NameID metadata (check documentation of your IdP for doing so).
     2.  Declare your Nuxeo Platform server as a Service Provider:
         *   Either by uploading the XML metadata file provided at [http://HOSTNAME:8080/nuxeo/saml/metadata](http://localhost:8080/nuxeo/saml/metadata).
         *   Or by configuring it manually on the IdP (in that case, you should use `http://<nuxeo_url>/nuxeo/nxstartup.faces` as the SAML consumer endpoints)
-6.  Optionally generate a keystore for enabling encryption. If you want to enable signing and/or encryption (not mandatory with some IdP) you have to generate a keystore and add the proper configuration to `nxserver/config` (ex: `saml-keystore-config.xml`):
+1.  Optionally generate a keystore for enabling encryption. If you want to enable signing and/or encryption (not mandatory with some IdP) you have to generate a keystore and add the proper configuration to `nxserver/config` (ex: `saml-keystore-config.xml`):
 
     ```xml
     <component name="org.nuxeo.ecm.platform.auth.saml.key.contrib">
@@ -215,9 +245,9 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 
 ## Sources
 
-Sources of the addon can can be found at [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/nuxeo-platform-login-saml2](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/nuxeo-platform-login-saml2/).
+Sources of the addon can can be found at [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/).
 
-You need to build the JAR and follow the sample at &nbsp;[https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/nuxeo-platform-login-saml2/sample).
+You need to build the JAR and follow the sample at [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2//sample).
 
 ## {{> anchor 'saml20_presentation'}}Background on SAML 2.0
 
