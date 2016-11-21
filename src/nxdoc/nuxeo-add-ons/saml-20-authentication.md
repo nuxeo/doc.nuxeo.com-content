@@ -203,7 +203,9 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
     1.  Map user email to NameID metadata (check documentation of your IdP for doing so).
     2.  Declare your Nuxeo Platform server as a Service Provider:
         *   Either by uploading the XML metadata file provided at [http://HOSTNAME:8080/nuxeo/saml/metadata](http://localhost:8080/nuxeo/saml/metadata).
-        *   Or by configuring it manually on the IdP (in that case, you should use `http://<nuxeo_url>/nuxeo/nxstartup.faces` as the SAML consumer endpoints)
+        *   Or by configuring it manually on the IdP. In that case, you should use as the SAML consumer endpoints:
+            - `http://<nuxeo_url>/nuxeo/nxstartup.faces` if you are using the JSF UI or both uis
+            - `http://<nuxeo_url>/nuxeo/ui` as the SAML if you are using the web UI alone
 1.  Optionally generate a keystore for enabling encryption. If you want to enable signing and/or encryption (not mandatory with some IdP) you have to generate a keystore and add the proper configuration to `nxserver/config` (ex: `saml-keystore-config.xml`):
 
     ```xml
