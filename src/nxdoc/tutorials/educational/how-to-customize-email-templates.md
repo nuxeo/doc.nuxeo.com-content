@@ -161,10 +161,10 @@ Default templates for mail notifications can be overridden. Just follow those st
 
 &nbsp;
 
-## How to Make the Document Links in Notification Emails Point to the New Web UI
+## Making the Document Links in Notification Emails Point to the Web UI
 
 On Nuxeo 8.10, in case both `nuxeo-jsf-ui` and `nuxeo-web-ui` packages are installed, the document links in notification emails point to the JSF UI.
-If you want to change this behavior to make them point to the new Web UI you need to add the following XML contribution:
+If you want to change this behavior to make them point to the Web UI you need to add the following XML contribution:
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.url.service.DocumentViewCodecService" point="codecs">
