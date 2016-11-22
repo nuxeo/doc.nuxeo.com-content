@@ -480,7 +480,7 @@ See [NXP-19194](https://jira.nuxeo.com/browse/NXP-19194).
 
 ## Distribution Changes
 
-### Nuxeo Server as the Base Distribution and CAP removal
+### Nuxeo Server as the Base Distribution and CAP Removal
 
 As stated in the *From 8.2 to 8.3 > UI Dedicated Package* section, the new base distribution is Nuxeo Server, and Nuxeo CAP has been removed.
 Thus the following changes in [nuxeo-distribution](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution):
@@ -575,7 +575,7 @@ Same thing about the `nuxeo-web-ui` package.
 
 #### Package Functional Tests
 
-As mentioned above in the [Functional Tests](#functional-tests) section, if the functional tests of a Nuxeo package need to be run against a distribution including the  `nuxeo-jsf-ui` package, it needs to be specified explicitely in the `itests.xml` file.
+As mentioned above in the [Functional Tests](#functional-tests) section, if the functional tests of a Nuxeo package need to be run against a distribution including the `nuxeo-jsf-ui` package, it needs to be specified explicitely in the `itests.xml` file.
 
 See [NXP-20939](https://jira.nuxeo.com/browse/NXP-20939) for details.
 
