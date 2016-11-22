@@ -478,6 +478,107 @@ All queries made with a `-1` as limit will fail unless you update the `index.max
 
 See [NXP-19194](https://jira.nuxeo.com/browse/NXP-19194).
 
+## Distribution Changes
+
+### Nuxeo Server as the Base Distribution and CAP Removal
+
+As stated in the *From 8.2 to 8.3 > UI Dedicated Package* section, the new base distribution is Nuxeo Server, and Nuxeo CAP has been removed.
+Thus the following changes in [nuxeo-distribution](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution):
+
+#### Renamed Maven Modules
+
+- `nuxeo-distribution-server` => `nuxeo-nxr-server`
+- `nuxeo-distribution-jsf-ui` => `nuxeo-nxr-jsf-ui`
+- `nuxeo-distribution-tests` => `nuxeo-test-dependencies`
+- `nuxeo-distribution-tomcat-wizard-tests` => `nuxeo-wizard-tests`
+- `nuxeo-distribution-cap-cmis-tests` => `nuxeo-server-cmis-tests`
+- `nuxeo-distribution-cap-funkload-tests` => `nuxeo-jsf-ui-funkload-tests`
+- `nuxeo-distribution-cap-gatling-tests` => `nuxeo-jsf-ui-gatling-tests`
+- `nuxeo-distribution-cap-webdriver-tests` => `nuxeo-jsf-ui-webdriver-tests`
+- `nuxeo-distribution-tomcat` => `nuxeo-server-tomcat`, no more `-nuxeo-cap`
+classifier
+
+#### Added Maven Module
+
+`nuxeo-server-tests`
+
+#### Functional Tests
+
+The default distribution tested in functionnal tests is now a simple
+`nuxeo-server-tomcat` without the `nuxeo-jsf-ui` package installed.
+
+[tools-nuxeo-ftest](https://github.com/nuxeo/tools-nuxeo-ftest)
+has been updated for this purpose, see [NXBT-1351](https://jira.nuxeo.com/browse/NXBT-1351).
+
+Consequently, if you need to run functional tests against a distribution including the `nuxeo-jsf-ui` package, you need to specify it explicitely in the `itests.xml` file:
+
+```xml
+<property name="mp.install" value="file:${out.dir}/nuxeo-marketplace-jsf-ui-${maven.project.version}.zip" />
+...
+<target name="XXX">
+  <copy todir="${out.dir}">
+    <artifact:file key="org.nuxeo.ecm.distribution:nuxeo-marketplace-jsf-ui::zip" />
+  </copy>
+</target>
+```
+
+Having the following dependency in the `pom.xml`:
+
+```xml
+<dependency>
+  <groupId>org.nuxeo.ecm.distribution</groupId>
+  <artifactId>nuxeo-marketplace-jsf-ui</artifactId>
+  <type>zip</type>
+  <scope>provided</scope>
+</dependency>
+```
+
+See [NXP-19790](https://jira.nuxeo.com/browse/NXP-19790) for details.
+
+### Impact on Nuxeo Packages
+
+#### Target Platform
+
+The default target platform is now the `server` distribution, so the `package.xml` file of a Nuxeo package must contain:
+
+```xml
+<platforms>
+  <platform>server-@DISTRIB_VERSION@</platform>
+  <platform>server-@DISTRIB_VERSION@-*</platform>
+</platforms>
+```
+
+#### Dependency on nuxeo-jsf-ui
+
+If a Nuxeo package depends on the `nuxeo-jsf-ui` package at runtime then it needs to be added as a dependency in `package.xml`:
+
+```xml
+<dependencies>
+  <package>nuxeo-jsf-ui</package>
+</dependencies>
+```
+
+#### Optional Dependencies
+
+If a Nuxeo package can be installed on a `server` distribution with or without the `nuxeo-jsf-ui` package, the `package.xml` file must contain an optional dependency instead:
+
+```xml
+<optional-dependencies>
+  <package>nuxeo-jsf-ui</package>
+</optional-dependencies>
+```
+
+In this case the package assembly needs to handle the split of the
+bundles and libs into the `bundles`/`bundles-jsf-ui`/`bundles-web-ui` and `lib`/`lib-jsf-ui`/`lib-web-ui` directories of the package. See for example [marketplace-dam](https://github.com/nuxeo/marketplace-dam/blob/master/marketplace/src/main/assemble/assembly.xml), [marketplace-drive](https://github.com/nuxeo/marketplace-drive/blob/master/marketplace/src/main/assemble/assembly.xml), [marketplace-quota](https://github.com/nuxeo/marketplace-quota/blob/master/marketplace/src/main/assemble/assembly.xml).
+
+Same thing about the `nuxeo-web-ui` package.
+
+#### Package Functional Tests
+
+As mentioned above in the [Functional Tests](#functional-tests) section, if the functional tests of a Nuxeo package need to be run against a distribution including the `nuxeo-jsf-ui` package, it needs to be specified explicitely in the `itests.xml` file.
+
+See [NXP-20939](https://jira.nuxeo.com/browse/NXP-20939) for details.
+
 {{> end_of_tabs }}
 
 * * *
