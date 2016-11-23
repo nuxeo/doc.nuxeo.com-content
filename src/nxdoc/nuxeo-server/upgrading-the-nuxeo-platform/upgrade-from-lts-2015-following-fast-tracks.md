@@ -478,7 +478,7 @@ All queries made with a `-1` as limit will fail unless you update the `index.max
 
 See [NXP-19194](https://jira.nuxeo.com/browse/NXP-19194).
 
-## Distribution Changes
+## Distribution Changes&nbsp;
 
 ### Nuxeo Server as the Base Distribution and CAP Removal
 
