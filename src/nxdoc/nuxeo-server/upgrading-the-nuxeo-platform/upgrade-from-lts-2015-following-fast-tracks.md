@@ -452,7 +452,7 @@ The [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxe
 
 # From 8.3 to LTS 2016
 
-## Installation and Configuration
+## Installation and Configuration&nbsp;
 
 ### Elasticsearch Upgrade
 
