@@ -322,7 +322,7 @@ After you installed Nuxeo DAM, you have three new document types available.
 
 ## Technical Overview
 
-### Picture
+### Picture&nbsp;
 
 #### Schema
 
@@ -363,7 +363,7 @@ See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribut
 
 Picture conversions are used to generate the picture views of document having the&nbsp;`Picture` facet. Default picture conversions (Thumbnail, Small, Medium and OriginalJpeg) are contributed to the&nbsp;`pictureConversions` extension point. They are marked as&nbsp;`default` and so are always generated, their associated filters are not evaluated.
 
-### Video
+### Video&nbsp;
 
 The Nuxeo Platform provides an add-on with the following video features:
 
@@ -437,7 +437,7 @@ The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/vi
 
     {{/panel}}
 
-### Audio
+### Audio&nbsp;
 
 #### Schema
 
