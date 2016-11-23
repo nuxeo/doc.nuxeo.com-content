@@ -115,23 +115,34 @@ This first contribution only defines the provider, but not the _client name_ or 
 
 There are two ways to handle it.
 
-#### Using a Second Contribution
+#### Using nuxeo.conf
 
-{{#> callout type='note' }}
+Set up the following values in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) depending on your target provider. You can only set the ones you need.
 
-This contribution is only read the first time you register a provider.
+```
+# Github
+nuxeo.openid.github.client.id=
+nuxeo.openid.github.client.secret=
 
-{{/callout}}
+# Google
+nuxeo.openid.google.client.id=
+nuxeo.openid.google.client.secret=
 
-```xml
-<require>org.nuxeo.ecm.platform.oauth2.openid.google</require>
-<extension point="providers" target="org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry">
-    <provider>
-        <name>GoogleOpenIDConnect</name>
-        <clientId><!--enter your clientId here --></clientId>
-        <clientSecret><!--enter your clientSecret key here --></clientSecret>
-    </provider>
-</extension>
+# Google+
+nuxeo.openid.googleplus.client.id=
+nuxeo.openid.googleplus.client.secret=
+
+# LinkedIn
+nuxeo.openid.linkedin.client.id=
+nuxeo.openid.linkedin.client.secret=
+
+# Amazon Connect
+nuxeo.openid.amazon.client.id=
+nuxeo.openid.amazon.client.secret=
+
+# Facebook Connect
+nuxeo.openid.facebook.client.id=
+nuxeo.openid.facebook.client.secret=
 ```
 
 #### Using the Admin Tab
@@ -144,7 +155,7 @@ Once registered, you should be able to view/edit it though the Admin tab to set 
 
 Each identity provider has its own way to handle user identity in his `UserInfo` endpoint. You may need to add your own mapping class.
 
-You just have to extend the `org.nuxeo.ecm.platform.oauth2.openid.auth.OpenIDUserInfo`&nbsp;class with the expected fields. Do not forget to set it in your provider contribution.
+You just have to extend the `org.nuxeo.ecm.platform.oauth2.openid.auth.OpenIDUserInfo` class with the expected fields. Do not forget to set it in your provider contribution.
 
 You can take a look to our implementation like [`org.nuxeo.ecm.platform.oauth2.openid.auth.google.GoogleUserInfo`](https://github.com/nuxeo/nuxeo-platform-login/blob/master/nuxeo-platform-login-openid/src/main/java/org/nuxeo/ecm/platform/oauth2/openid/auth/google/GoogleUserInfo.java) or [`org.nuxeo.ecm.platform.oauth2.openid.auth.DefaultOpenIDUserInfo`](https://github.com/nuxeo/nuxeo-platform-login/blob/master/nuxeo-platform-login-openid/src/main/java/org/nuxeo/ecm/platform/oauth2/openid/auth/DefaultOpenIDUserInfo.java) .
 
