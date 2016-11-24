@@ -546,7 +546,7 @@ The Nuxeo Platform modules use external software for some features. They need to
 On a naked default Nuxeo Platform, you need the following software:
 
 *   For web preview of office documents: LibreOffice and pdftohtml
-    *   LibreOffice: converts office file into PDF
+    *   LibreOffice (version >= 5): converts office file into PDF
     *   pdftohtml: converts converted PDF into HTML preview
 *   For thumbnail generation: ImageMagick and Ghostscript for most file formats. UFRaw for RAW files.
 *   For metadata extraction: Exiftool
@@ -560,9 +560,15 @@ Thumbnails and previews are created when documents are imported into Nuxeo, not 
 
 Under Debian or Ubuntu, all of this can be installed by the following command:
 
-<a href="apt://openjdk-8-jdk,imagemagick,ufraw,poppler-utils,libreoffice,ffmpeg,libwpd-tools,ghostscript,exiftool">sudo apt-get install openjdk-8-jdk imagemagick ufraw poppler-utils libreoffice ffmpeg libwpd-tools ghostscript exiftool</a>
+<pre>sudo apt-get install openjdk-8-jdk imagemagick ufraw poppler-utils libreoffice ffmpeg libwpd-tools ghostscript exiftool</pre>
 
-### OpenOffice / LibreOffice Configuration
+### LibreOffice Configuration
+
+{{! multiexcerpt name='libreoffice-5'}}
+{{#> callout type='note'}}
+The minimum version required is LibreOffice 5. The soffice program must be added to the PATH environment variable.
+{{/callout}}
+{{! /multiexcerpt}}
 
 {{{multiexcerpt 'ooo-libreoffice-configuration' page='Installing and Setting up Related Software'}}}
 
@@ -596,7 +602,7 @@ Or run [the Nuxeo script for compiling FFmpeg](https://github.com/nuxeo/ffmpeg-n
 
 {{#> callout type='warning' }}
 
-**Running the ffmpeg build script on the same machine than where you installed Nuxeo Platform would result in uninstalling existing <span style="color: rgb(34,34,34);">nuxeo already installed with the debian package along with its data.</span>**
+Running the ffmpeg build script on the same machine than where you installed the Nuxeo Platform would result in uninstalling existing nuxeo already installed with the Debian package along with its data.
 
 {{/callout}}
 
@@ -620,11 +626,13 @@ For a &nbsp;manual build:
 
 The OS X installation instructions provided use&nbsp;[Homebrew](http://mxcl.github.com/homebrew/).
 
-### OpenOffice/LibreOffice and pdftohtml for Office and PDF Preview
+### LibreOffice and pdftohtml for Office and PDF Preview
+
+{{{multiexcerpt 'libreoffice-5' page='installing-and-setting-up-related-software'}}}
 
 {{! multiexcerpt name='ooo-pdftohaml-intro'}}
 
-Installing OpenOffice / LibreOffice and pdftohtml on the server is only required if you need to use preview on PDF and office documents. pdftohtml is used for previewing PDF files. It is included in poppler.
+Installing LibreOffice and pdftohtml on the server is only required if you need to use preview on PDF and office documents. pdftohtml is used for previewing PDF files. It is included in poppler.
 
 {{! /multiexcerpt}}
 
@@ -636,35 +644,25 @@ To install pdfttohtml using Homebrew:
 brew install poppler
 ```
 
-#### OpenOffice / LibreOffice
+#### LibreOffice
 
 {{! multiexcerpt name='ooo-libreoffice-installation'}}
 
-OpenOffice / LibreOffice are used for preview on office documents in association to pdftohtml.
+LibreOffice are used for preview on office documents in association to pdftohtml.
 
 Download and install them from:
 
 *   LibreOffice: [http://www.libreoffice.org/](http://www.libreoffice.org/)
-*   OpenOffice: [http://www.openoffice.org/](http://www.openoffice.org/)
 
-{{#> callout type='tip' heading='OpenOffice'}}
-
-&nbsp;If you are using the default installation, you must rename OpenOffice.app to OpenOffice.org.app in order for Nuxeo to find it
-
-{{/callout}}
-
-&nbsp;
-
-&nbsp;
 
 {{! /multiexcerpt}}{{! multiexcerpt name='ooo-libreoffice-configuration'}}
 
 If you'll be working with non-latin languages:
 
-1.  Start OpenOffice/LibreOffice manually.
-2.  Install&nbsp; the additional fonts you may need for non-default languages.
+1.  Start LibreOffice manually.
+2.  Install the additional fonts you may need for non-default languages.
 
-For preview to work, the Nuxeo Platform should start OpenOffice / LibreOffice. You can see the places the Nuxeo Platform looks for OpenOffice / LibreOffice in the [PlatformUtils.java definition](https://github.com/nuxeo/jodconverter/blob/3.0-NX/jodconverter-core/src/main/java/org/artofsolving/jodconverter/util/PlatformUtils.java).
+For preview to work, the Nuxeo Platform should start LibreOffice. You can see the places the Nuxeo Platform looks for LibreOffice in the [PlatformUtils.java definition](https://github.com/nuxeo/jodconverter/blob/3.0-NX/jodconverter-core/src/main/java/org/artofsolving/jodconverter/util/PlatformUtils.java).
 
 If you haven't installed them at a traditional location, you may need to add the soffice program to your path: Edit the `Path` system variable and add `;OFFICE_INSTALL_DIRECTORY\program.`
 
@@ -801,7 +799,8 @@ If not already present on the system, you will have the option to automatically 
     The output will tell you which command is in the `PATH`.
 2.  If you don't see ImageMagick in the result (it must be the first ot the list, or the only one), then you must add the path to ImageMagick to the `PATH` System variable.
 
-### OpenOffice / LibreOffice and pdftohtml
+### LibreOffice and pdftohtml
+{{{multiexcerpt 'libreoffice-5'}}}
 
 {{{multiexcerpt 'ooo-pdftohaml-intro' page='Installing and Setting up Related Software'}}}
 
@@ -813,7 +812,7 @@ If not already present on the system, you will have the option to automatically 
 
     {{#> callout type='info' }} Old pdftohtml binaries are available from [http://sourceforge.net/projects/pdftohtml/files/](http://sourceforge.net/projects/pdftohtml/files/%7Chttp://sourceforge.net/projects/pdftohtml/files/), but they are obsolete. It is recommended to use poppler. {{/callout}}
 
-#### OpenOffice / LibreOffice
+#### LibreOffice
 
 {{{multiexcerpt 'ooo-libreoffice-installation' page='Installing and Setting up Related Software'}}}
 

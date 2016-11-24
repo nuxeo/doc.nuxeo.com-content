@@ -294,8 +294,6 @@ The only requirement is to run Java. Below are the Nuxeo-Java compatibilities:
 
 {{{multiexcerpt 'java_requirement' page='Compatibility Matrix'}}}
 
-&nbsp;You need a **Java Development Kit (JDK)** to develop on the platform, but a JRE is enough to just run it.
-
 {{! /multiexcerpt}}
 
 We currently support Oracle's JDK and OpenJDK. Don't hesitate to contact us if you need us to support a JDK from another vendor.

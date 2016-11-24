@@ -327,7 +327,7 @@ Reference JIRA issue: [NXP-17690](https://jira.nuxeo.com/browse/NXP-17690)
 
 {{! /multiexcerpt}}
 
-### Complementary Information
+### Complementary Information&nbsp;
 
 * [Upgrade notes for 8.2](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.2%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 * [Release notes for 8.2](http://nuxeo.github.io/releasenotes/8.2/)
@@ -348,7 +348,7 @@ $ nuxeoctl mp-install nuxeo-jsf-ui
 
 {{! /multiexcerpt}}
 
-## Code Changes
+## Code Changes&nbsp;
 
 ### Nuxeo and iframe
 
@@ -445,7 +445,7 @@ The [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxe
 
 {{! /multiexcerpt}}
 
-## Complementary Information
+## Complementary Information&nbsp;
 
 * [Upgrade notes for 8.3](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 * [Release notes for 8.3](http://nuxeo.github.io/releasenotes/8.3/)
@@ -477,6 +477,14 @@ In order to fetch all documents, we recommend you to use the scroll API instead 
 All queries made with a `-1` as limit will fail unless you update the `index.max_result_window` setting on ES cluster (highly unrecommended).
 
 See [NXP-19194](https://jira.nuxeo.com/browse/NXP-19194).
+
+### Requirements
+
+#### OpenOffice
+OpenOffice is no longer supported.
+
+#### LibreOffice
+The minimum version required is LibreOffice 5 and the soffice program must be added to the PATH environment variable.
 
 ## Distribution Changes&nbsp;
 
