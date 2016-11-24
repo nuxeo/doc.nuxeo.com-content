@@ -247,7 +247,8 @@ Full-text configuration is disabled, you should use Elasticsearch with a suitabl
 The following features are planned for a later Nuxeo version but are not implemented currently:
 
 - tags aren't supported ([NXP-17670](https://jira.nuxeo.com/browse/NXP-17670))
-- features on search, [see list](https://jira.nuxeo.com/browse/NXP-19942?jql=%22Epic%20Link%22%20%3D%20%22NXP-19214%22%20and%20status%20%3D%20%22open%22)
+- querying n-th element of a list is not supported ([NXP-21187](https://jira.nuxeo.com/browse/NXP-21187))
+- NOT NXQL constraints such as `item/*` can return false positive ([NXP-21184](https://jira.nuxeo.com/browse/NXP-21184))
 - Range index querying is not supported on a date element
 
 ## For Nuxeo 8.3
