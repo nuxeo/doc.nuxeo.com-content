@@ -392,11 +392,11 @@ If you have complex mail server configurations, you may want to check the [Javam
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related content'}}
 
-*   [Admin Tab Overview]({{page page='admin-tab-overview'}})
-*   [Configuration Examples]({{page page='configuration-examples'}})
-*   [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
-*   [Database]({{page page='database'}})
-*   [Where Are the Log and Configuration Files in Windows?]({{page page='where-are-the-log-and-configuration-files-in-windows'}})
+- [Admin Tab Overview]({{page page='admin-tab-overview'}})
+- [Configuration Examples]({{page page='configuration-examples'}})
+- [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
+- [Database]({{page page='database'}})
+- [Where Are the Log and Configuration Files in Windows?]({{page page='where-are-the-log-and-configuration-files-in-windows'}})
 
 {{/panel}}</div><div class="column medium-6">
 
