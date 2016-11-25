@@ -109,7 +109,7 @@ SBT:
 libraryDependencies += "org.nuxeo.java.client" % "nuxeo-java-client" % "0.1-SNAPSHOT"
 ```
 
-###Usage
+### Usage
 
 **Creating a client**
 
@@ -434,8 +434,6 @@ When no response is needed (204 No Content Status for example), use `retrofit2.C
 **Custom Endpoints**
 
 **Marshalling**
-
-
 
 **Cache**
 
