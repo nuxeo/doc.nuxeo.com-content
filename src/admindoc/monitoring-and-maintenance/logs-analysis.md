@@ -354,11 +354,10 @@ WARN
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Purging Audit Logs (NXP_LOGS)]({{page page='purging-audit-logs-nxp_logs'}})
-*   [Recommended Configurations]({{page page='recommended-configurations'}})
-*   [How to Estimate Disk, Database and Elasticsearch Usage]({{page page='how-to-estimate-disk-database-and-elasticsearch-usage'}})
-*   [Where Are the Log and Configuration Files in Windows?]({{page page='where-are-the-log-and-configuration-files-in-windows'}})
-
+- [Purging Audit Logs (NXP_LOGS)]({{page page='purging-audit-logs-nxp_logs'}})
+- [Recommended Configurations]({{page page='recommended-configurations'}})
+- [How to Estimate Disk, Database and Elasticsearch Usage]({{page page='how-to-estimate-disk-database-and-elasticsearch-usage'}})
+- [Where Are the Log and Configuration Files in Windows?]({{page page='where-are-the-log-and-configuration-files-in-windows'}})
 {{/panel}}</div><div class="column medium-6">
 
 &nbsp;
