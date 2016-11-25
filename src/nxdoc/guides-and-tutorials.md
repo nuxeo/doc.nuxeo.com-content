@@ -106,41 +106,44 @@ history:
 
 ---
 {{#> panel type='primary'}}
+Welcome to the Nuxeo Developer Tutorials Section!
+{{/panel}}
 
-<span style="color: rgb(255,255,255);">Welcome to the Nuxeo Developer Tutorials Section!</span>
-
-{{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 ### Quick Start Series
+- [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
+- [From the Web UI to Nuxeo Studio]({{page page='from-the-web-ui-to-nuxeo-studio'}})
+- [First Steps With Studio: Technical Documentation Tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}})
+{{/panel}}
+</div>
 
-*   [Quick Start Dev Guide](/x/monZ)
-*   [From the Web UI to Nuxeo Studio](/x/VANc)
-*   [First Steps With Studio: Technical Documentation Tutorial](/x/x4MlAQ)
-
-{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 ### Learn with Videos
+- [What is Nuxeo Studio](https://university.nuxeo.io/nuxeo/university/#!/course/getting-started-nuxeo-studio/what-is-nuxeo-studio)
+- [Create a Document Type ](https://university.nuxeo.io/nuxeo/university/#!/course/getting-started-nuxeo-studio/creating-a-document-type)
+- [Branding Your Application with Nuxeo Studio](https://university.nuxeo.io/nuxeo/university/#!/course/getting-started-nuxeo-studio/branding-your-application)
+{{/panel}}
+</div>
+</div>
 
-*   [What is Nuxeo Studio]({{page page='learning-with-videos#what-is-studio'}})
-*   [Create a Document Type ]({{page page='learning-with-videos#create-doc-type'}})
-*   [Branding Your Application with Nuxeo Studio]({{page page='learning-with-videos#branding'}})
-
-{{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 ### Educational
+- [Simple Workflow Example]({{page page='simple-workflow-example'}})
+- [Design Tips]({{page page='design-tips'}})
+- [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
+{{/panel}}
+</div>
 
-*   [Simple Workflow Example](/x/KhTF)
-*   [Design Tips](/x/Eg7F)
-*   [Understand Expression and Scripting Languages Used in Nuxeo](/x/L4PZ)
-
-{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 ### How-To Index
-
-*   [How to Define a New Content View](/x/3o1H)
-*   [How to Define a Document Type](/x/nYAV)
-*   [How to Contribute to an Extension](/x/iw7F)
-
+- [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
+- [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
+- [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
 {{/panel}}</div></div>
 
 &nbsp;
