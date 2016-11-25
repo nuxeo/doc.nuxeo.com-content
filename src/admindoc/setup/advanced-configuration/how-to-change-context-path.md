@@ -109,12 +109,12 @@ This configuration is done with two steps:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Administration How-Tos'}}
 
-*   [How to Configure a Multidirectory for Users and Groups]({{page space='nxdoc710' page='how-to-configure-a-multidirectory-for-users-and-groups'}})
-*   [How-To Index]({{page space='nxdoc710' page='how-to-index'}})
+- [How to Configure a Multidirectory for Users and Groups]({{page space='nxdoc710' page='how-to-configure-a-multidirectory-for-users-and-groups'}})
+- [How-To Index]({{page space='nxdoc710' page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [HTTP and HTTPS Reverse-Proxy Configuration]({{page page='http-and-https-reverse-proxy-configuration'}})
-*   [Default URL Patterns]({{page space='nxdoc710' page='default-url-patterns'}})
+- [HTTP and HTTPS Reverse-Proxy Configuration]({{page page='http-and-https-reverse-proxy-configuration'}})
+- [Default URL Patterns]({{page space='nxdoc710' page='default-url-patterns'}})
 
 {{/panel}}</div></div>
