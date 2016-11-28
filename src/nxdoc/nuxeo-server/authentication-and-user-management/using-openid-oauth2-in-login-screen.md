@@ -82,15 +82,23 @@ history:
 ---
 {{! excerpt}}
 
-You can use any OpenID / OAuth2 identity provider in the authentication chain. The default behavior is to display a sign-in button per identity provider to start the authentication challenge, then building the expected `UserIdentificationInfo` with the provided `UserInfo`.
+You can use any OpenID / OAuth2 identity provider in the authentication chain. A Nuxeo addon, [OpenID Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/openid-authentication), is available to make this possible.
+
+The default behavior is to display a sign-in button per identity provider to start the authentication challenge, then building the expected `UserIdentificationInfo` with the provided `UserInfo`.
 
 By default, the username resolved with the identity provider user information must be in the user directory to allow it to access the Nuxeo Platform.
 
 {{! /excerpt}}
 
+## Installation
+
+The Nuxeo addon [OpenID Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/openid-authentication) enables you to use OpenID Connect, the identity layer on top of the OAuth 2.0 protocol, and so to use OAuth2 providers as Identity providers.
+
+{{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
+
 ## Configuration
 
-### Declaring a New IdentityProvider
+### Declaring a New IdentityProvider in Nuxeo
 
 ```xml
 <extension point="providers" target="org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry">
@@ -111,11 +119,14 @@ By default, the username resolved with the identity provider user information mu
 
 This first contribution only defines the provider, but not the _client name_ or _client secret_ to prevent them to be in the base contribution file.
 
+### Setting up the Authorized Redirect URI
+
+In your identity provider configuration, set up the Authorized Redirect URI to the Nuxeo server. For a local Nuxeo instance using GoogleOpenIDConnect for instance this would be:
+```
+http://localhost:8080/nuxeo/nxstartup.faces?provider=GoogleOpenIDConnect&forceAnonymousLogin=true
+```
+
 ### Appending Provider Secrets
-
-There are two ways to handle it.
-
-#### Using nuxeo.conf
 
 Set up the following values in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) depending on your target provider. You can only set the ones you need.
 
@@ -144,12 +155,6 @@ nuxeo.openid.amazon.client.secret=
 nuxeo.openid.facebook.client.id=
 nuxeo.openid.facebook.client.secret=
 ```
-
-#### Using the Admin Tab
-
-Once registered, you should be able to view/edit it though the Admin tab to set your client id, secret, scopes, etc.
-
-![]({{file name='AdminCenter_OAuth2_service_providers.png'}} ?w=600,border=true)
 
 ### UserInfo Mapping
 
