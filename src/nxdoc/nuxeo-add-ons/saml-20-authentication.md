@@ -2,7 +2,7 @@
 title: SAML 2.0 Authentication
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-11-21'
     status: ok
 labels:
     - saml-component
@@ -143,13 +143,13 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
                                   class="org.nuxeo.ecm.platform.auth.saml.SAMLAuthenticationProvider">
                 <loginModulePlugin>Trusting_LM</loginModulePlugin>
                 <!-- Setting needStartingURLSaving
-                  - to true: user will be redirected to the URL initially asked for after authentication. 
+                  - to true: user will be redirected to the URL initially asked for after authentication.
                   - to false: user will always be redirected to the home page after authentication. -->
                 <needStartingURLSaving>true</needStartingURLSaving>
                 <parameters>
                     <!-- Make sure to use a unique name, especially if you have several identity providers -->
                     <parameter name="name">MyIdP</parameter>
-                    <!-- The idp's icon will only be shown if SAML auth is displayed 
+                    <!-- The idp's icon will only be shown if SAML auth is displayed
                     as an alternative login option in the login form. -->
                     <!-- <parameter name="icon">nuxeo.war/img/idpIcon.png</parameter> -->
                     <!-- The metadata parameter can either be a URL or a path to a static file -->
@@ -165,7 +165,7 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 1.  Configure the user attributes mapping for your identity provider's response. Either add a [XML contribution]({{page page='how-to-contribute-to-an-extension'}}) into your Studio project, or in the previous XML component. This mapping configuration can be achieved by providing a JavaScript or Groovy script. A sample is provided below using JavaScript code.
 
     ```xml
-      <extension 
+      <extension
         target="org.nuxeo.usermapper.service.UserMapperComponent"
         point="mapper">
         <mapper name="saml" type="js">
@@ -187,9 +187,9 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
           <plugins>
             <plugin>BASIC_AUTH</plugin>
               <!-- Optionally, add the FORM_AUTH
-              if you want to see the SAML authentication appear 
+              if you want to see the SAML authentication appear
               as an alternative option on the login form.
-              In this case, make sure to fill in the icon's path 
+              In this case, make sure to fill in the icon's path
               in the authentication plugin parameters.
               -->
               <!-- <plugin>FORM_AUTH</plugin> -->

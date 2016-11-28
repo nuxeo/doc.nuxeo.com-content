@@ -2,7 +2,7 @@
 title: Using OpenID / OAuth2 in Login Screen
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-11-28'
     status: ok
 labels:
     - openid
