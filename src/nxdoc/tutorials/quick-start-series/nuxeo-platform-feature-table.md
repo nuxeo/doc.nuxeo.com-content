@@ -258,8 +258,8 @@ history:
 <td colspan="1">Default distribution</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [Developer documentation]({{page page='collections'}})
-- [User documentation]({{page space='userdoc' page='collections'}})
+[Developer documentation]({{page page='collections'}})<br/>
+[User documentation]({{page space='userdoc' page='collections'}})
 </td>
 </tr>
 <tr>
@@ -375,8 +375,8 @@ history:
 <td colspan="1">Default distribution</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [Document creation user documentation]({{page space='userdoc' page='creating-content'}})
-- [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
+[Document creation user documentation]({{page space='userdoc' page='creating-content'}})<br/
+[How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
 </td>
 </tr>
 <tr>
@@ -396,8 +396,8 @@ history:
 <td colspan="1">Default distribution</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [User documentation]({{page space='userdoc' page='creating-content#content-creation-dandd'}})
-- [Drag and Drop Developer documentation]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
+[User documentation]({{page space='userdoc' page='creating-content#content-creation-dandd'}})<br/>
+[Drag and Drop Developer documentation]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
 </td>
 </tr>
 <tr>
@@ -421,13 +421,13 @@ history:
 <tr>
 <td colspan="1">Bulk edit</td>
 <td colspan="1">
-- Default distribution
-- [Nuxeo Spreadsheet](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet)
+Default distribution<br/>
+[Nuxeo Spreadsheet](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet)
 </td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [Document modification user documentation]({{page space='userdoc' page='editing-content'}})
-- [How to Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})
+[Document modification user documentation]({{page space='userdoc' page='editing-content'}})<br/>
+[How to Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})
 </td>
 </tr>
 <tr>
@@ -465,20 +465,20 @@ history:
 <td colspan="1">Default distribution</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [User documentation]({{page space='userdoc' page='editing-content'}})
-- [Developer documentation]({{page page='versioning'}})
+[User documentation]({{page space='userdoc' page='editing-content'}})<br/>
+[Developer documentation]({{page page='versioning'}})
 </td>
 </tr>
 <tr>
 <td colspan="1">Version / Document comparison</td>
 <td colspan="1">
-- [Nuxeo Diff](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff)
-- [Nuxeo Diff Picture](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures)
+[Nuxeo Diff](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff)<br/>
+[Nuxeo Diff Picture](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures)
 </td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [Developer documentation]({{page page='nuxeo-diff'}})
-- [User documentation]({{page space='userdoc' page='nuxeo-diff'}})
+[Developer documentation]({{page page='nuxeo-diff'}})<br/>
+[User documentation]({{page space='userdoc' page='nuxeo-diff'}})
 </td>
 </tr>
 <tr>
@@ -492,8 +492,8 @@ history:
 <td colspan="1">[Nuxeo Drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive)</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [Developer documentation]({{page page='nuxeo-drive'}})
-- [User documentation]({{page space='userdoc' page='nuxeo-drive'}})
+[Developer documentation]({{page page='nuxeo-drive'}})<br/>
+[User documentation]({{page space='userdoc' page='nuxeo-drive'}})
 </td>
 </tr>
 <tr>
@@ -513,8 +513,8 @@ history:
 <td colspan="1">WebDav</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [User documentation]({{page space='userdoc' page='working-with-webdav'}})
-- [Developer documentation]({{page page='webdav'}})
+[User documentation]({{page space='userdoc' page='working-with-webdav'}})<br/>
+[Developer documentation]({{page page='webdav'}})
 </td>
 </tr>
 <tr>
@@ -528,9 +528,9 @@ history:
 <td colspan="1">Default distribution</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [User documentation]({{page space='userdoc' page='workflows'}})
-- [Developer documentation]({{page page='workflow'}})
-- [Workflow How-To Index]({{page page='workflow-how-to-index'}})
+[User documentation]({{page space='userdoc' page='workflows'}})<br/>
+[Developer documentation]({{page page='workflow'}})<br/>
+[Workflow How-To Index]({{page page='workflow-how-to-index'}})
 </td>
 </tr>
 <tr>
@@ -538,9 +538,9 @@ history:
 <td colspan="1">Default distribution</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [User documentation]({{page space='userdoc' page='workflows'}})
-- [Developer documentation]({{page page='workflow'}})
-- [Workflow How-To Index]({{page page='workflow-how-to-index'}})
+[User documentation]({{page space='userdoc' page='workflows'}})<br/>
+[Developer documentation]({{page page='workflow'}})<br/>
+[Workflow How-To Index]({{page page='workflow-how-to-index'}})
 </td>
 </tr>
 <tr>
@@ -548,9 +548,9 @@ history:
 <td colspan="1">Default distribution</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [User documentation]({{page space='userdoc' page='workflows'}})
-- [Developer documentation]({{page page='workflow'}})
-- [Workflow How-To Index]({{page page='workflow-how-to-index'}})
+[User documentation]({{page space='userdoc' page='workflows'}})<br/>
+[Developer documentation]({{page page='workflow'}})<br/>
+[Workflow How-To Index]({{page page='workflow-how-to-index'}})
 </td>
 </tr>
 <tr>
@@ -570,8 +570,8 @@ history:
 <td colspan="1">Default distribution</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [User documentation]({{page space='userdoc' page='publishing-content'}})
-- [Developer documentation]({{page page='publisher'}})
+[User documentation]({{page space='userdoc' page='publishing-content'}})<br/>
+[Developer documentation]({{page page='publisher'}})
 </td>
 </tr>
 <tr>
@@ -597,8 +597,8 @@ history:
 <td colspan="1">Default distribution</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [User documentation]({{page space='userdoc' page='browsing-content'}})
-- [How to Customize the Dashboard]({{page page='how-to-customize-the-dashboard'}})
+[User documentation]({{page space='userdoc' page='browsing-content'}})<br/>
+[How to Customize the Dashboard]({{page page='how-to-customize-the-dashboard'}})
 </td>
 </tr>
 <tr>
@@ -612,8 +612,8 @@ history:
 <td colspan="1">Default distribution</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [Developer documentation]({{page page='tagging'}})
-- [User documentation]({{page space='userdoc' page='tags'}})
+[Developer documentation]({{page page='tagging'}})<br/>
+[User documentation]({{page space='userdoc' page='tags'}})
 </td>
 </tr>
 <tr>
@@ -633,8 +633,8 @@ history:
 <td colspan="1">Default distribution</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [ACLs developer documentation]({{page page='acls'}})
-- [Permissions user documentation]({{page space='userdoc' page='managing-permissions'}})
+[ACLs developer documentation]({{page page='acls'}})<br/>
+[Permissions user documentation]({{page space='userdoc' page='managing-permissions'}})
 </td>
 </tr>
 <tr>
@@ -672,17 +672,15 @@ history:
 <td colspan="1">[Nuxeo Groups and Rights Audit](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit)</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [Administration documentation]({{page page='nuxeo-groups-and-rights-audit'}})
-- [User documentation]({{page space='userdoc' page='nuxeo-groups-and-rights-audit'}})
+[Administration documentation]({{page page='nuxeo-groups-and-rights-audit'}})<br/>
+[User documentation]({{page space='userdoc' page='nuxeo-groups-and-rights-audit'}})
 </td>
 </tr>
 <tr>
 <td colspan="1">Share with external users</td>
 <td colspan="1">Default distribution</td>
 <td colspan="1">&nbsp;</td>
-<td colspan="1">
-- [Permissions user documentation]({{page space='userdoc' page='managing-permissions'}})
-</td>
+<td colspan="1">[Permissions user documentation]({{page space='userdoc' page='managing-permissions'}})</td>
 </tr>
 <tr>
 <th colspan="1">**Additional Features**</th>
@@ -708,8 +706,8 @@ history:
 <td colspan="1">Default distribution</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [User documentation]({{page space='userdoc' page='preview'}})
-- [Developer documentation]({{page page='preview'}})
+[User documentation]({{page space='userdoc' page='preview'}})<br/>
+[Developer documentation]({{page page='preview'}})
 </td>
 </tr>
 <tr>
@@ -717,8 +715,8 @@ history:
 <td colspan="1">Default distribution</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [ User documentation ]({{page space='userdoc' page='editing-content#relations'}})
-- [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})
+[ User documentation ]({{page space='userdoc' page='editing-content#relations'}})<br/>
+[How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})
 </td>
 </tr>
 <tr>
@@ -726,8 +724,8 @@ history:
 <td colspan="1">Default distribution</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [User documentation]({{page space='userdoc' page='deleting-content'}})
-- [Developer documentation]({{page page='deleting-documents'}})
+[User documentation]({{page space='userdoc' page='deleting-content'}})<br/>
+[Developer documentation]({{page page='deleting-documents'}})
 </td>
 </tr>
 <tr>
@@ -889,13 +887,13 @@ history:
 <tr>
 <td colspan="1">Shibboleth integration</td>
 <td colspan="1">
-- [Shibboleth Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication)
-- [Shibboleth Invitation Addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-shibboleth-invitation)
+[Shibboleth Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication)<br/>
+[Shibboleth Invitation Addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-shibboleth-invitation)
 </td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">
-- [Shibboleth Authentication admin documentation]({{page page='shibboleth-authentication'}})
-- [Shibboleth Invitation Addon documentation]({{page page='nuxeo-shibboleth-invitation'}})
+[Shibboleth Authentication admin documentation]({{page page='shibboleth-authentication'}})<br/>
+[Shibboleth Invitation Addon documentation]({{page page='nuxeo-shibboleth-invitation'}})
 </td>
 </tr>
 <tr>
@@ -909,8 +907,8 @@ history:
 <td colspan="1">Default distribution, [Nuxeo Datadog reporter](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-datadog-reporter)</td>
 <td colspan="1">Some monitoring features are available by default in the Admin tab of the Nuxeo Platform. You can complete these features by using addons, such as Nuxeo Datadog reporter.</td>
 <td colspan="1">
-- [Metrics and Monitoring admin documentation]({{page page='metrics-and-monitoring'}})
-- [Nuxeo Datadog Reporter documentation]({{page page='nuxeo-datadog-reporter'}})
+[Metrics and Monitoring admin documentation]({{page page='metrics-and-monitoring'}})<br/>
+[Nuxeo Datadog Reporter documentation]({{page page='nuxeo-datadog-reporter'}})
 </td>
 </tr>
 <tr>
