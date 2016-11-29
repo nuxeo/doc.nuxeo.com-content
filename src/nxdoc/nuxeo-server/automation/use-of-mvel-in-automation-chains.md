@@ -1168,8 +1168,7 @@ new ArrayList(Arrays.asList(WorkflowVariables["contributors"])); x.add(Context["
 
 {{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
-*   [Automation]({{page page='automation'}})
-*   [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
-
+- [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
+- [Automation]({{page page='automation'}})
+- [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
 {{/panel}}</div><div class="column medium-6"></div></div>

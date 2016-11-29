@@ -283,9 +283,9 @@ I can set into the context the appropriate http status code that will be attache
 
 {{#> panel heading='Related Documentation'}}
 
-*   [Automation]({{page page='automation'}})
-*   [REST API]({{page page='rest-api'}})
-*   [Automation How-To Index]({{page page='automation-how-to-index'}})
+- [Automation]({{page page='automation'}})
+- [REST API]({{page page='rest-api'}})
+- [Automation How-To Index]({{page page='automation-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">
 
@@ -293,6 +293,6 @@ I can set into the context the appropriate http status code that will be attache
 
 {{#> panel heading='Other Related Documentation '}}
 
-*   [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
+- [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
 
 {{/panel}}</div></div>

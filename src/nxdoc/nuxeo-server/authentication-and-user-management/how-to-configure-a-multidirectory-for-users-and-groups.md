@@ -326,8 +326,8 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other LDAP related pages'}}
 
-*   [Using a LDAP Directory]({{page page='using-a-ldap-directory'}})
-*   [How to Add Custom LDAP Fields to the UI]({{page page='how-to-add-custom-ldap-fields-to-the-ui'}})
+- [Using a LDAP Directory]({{page page='using-a-ldap-directory'}})
+- [How to Add Custom LDAP Fields to the UI]({{page page='how-to-add-custom-ldap-fields-to-the-ui'}})
 
 {{/panel}}</div><div class="column medium-6">
 

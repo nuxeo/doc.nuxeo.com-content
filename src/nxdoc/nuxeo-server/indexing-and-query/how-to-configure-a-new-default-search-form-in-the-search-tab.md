@@ -97,14 +97,14 @@ To set a new search form that will replace the Default search form displayed whe
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
-*   [How to Configure a Search Filter With Facets and Other Aggregates]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
+- [How to Configure a Search Filter With Facets and Other Aggregates]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Search screen in Nuxeo Studio]({{page space='studio' page='search-advanced-search'}})
-*   &nbsp;[Content Views in Nuxeo Studio documentation]({{page space='studio' page='content-views'}})
-*   [Content Views in developer documentation]({{page page='content-views'}})
+- [Search screen in Nuxeo Studio]({{page space='studio' page='search-advanced-search'}})
+- [Content Views in Nuxeo Studio documentation]({{page space='studio' page='content-views'}})
+- [Content Views in developer documentation]({{page page='content-views'}})
 
 {{/panel}}</div></div>
