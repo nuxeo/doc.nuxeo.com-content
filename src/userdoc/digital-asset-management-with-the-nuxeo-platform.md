@@ -80,30 +80,6 @@ Nuxeo DAM add the possibility to view pictures in a slideshow mode from the thum
 
 If no picture is available on the current page, it shows the icon ![]({{file name='slideshow_disabled.png' page='icons-index'}}).
 
-{{! multiexcerpt name='annotating-pictures'}}
-
-##### Annotating Pictures
-
-{{! multiexcerpt name='picture-annotation-definition'}}
-Annotations are post-it notes that users can add on the picture to comment it or to comment a specific part of the picture.
-{{! /multiexcerpt}} {{#> callout type='note' }}
-
-{{{multiexcerpt 'upgrade-8.2-remove-annotations' page='NXDOC:Upgrade from LTS 2015 following Fast Tracks'}}}
-
-{{/callout}}
-
-**To add an annotation on a picture:**
-
-1.  To access to the image view, click on the icon&nbsp;![]({{file name='preview.png' page='icons-index'}})&nbsp;in the&nbsp;**More**&nbsp;menu.
-    A pop up opens.
-2.  Draw a frame on the part of the picture you want to annotate.
-3.  Type your annotation and click on&nbsp;**Submit**.
-    ![]({{file name='DAM-annotation.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
-    You can see your annotation when the mouse is over the zone you selected, and, in the margin, the list of annotations, and for each, the author, date and time of annotation and the text.
-    ![]({{file name='DAM-annotation-rollover.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
-
-{{! /multiexcerpt}}
-
 ##### Picture Views
 
 When you import a&nbsp;document having the `Picture` facet on your platform, additional formats are available on it.&nbsp;The default ones are:

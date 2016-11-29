@@ -130,16 +130,6 @@ Deleting a comment is a permanent action. You cannot restore deleted comments.
 
 {{/callout}}
 
-## Picture Annotations
-
-For users working with the [Digital Asset Management]({{page page='digital-asset-management-with-the-nuxeo-platform'}}) addon, picture annotations provide an easy way to collaborate on images.
-
-{{{multiexcerpt 'picture-annotation-definition' page='USERDOC:Digital Asset Management with the Nuxeo Platform'}}}
-
-![]({{file name='DAM-annotation-rollover.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
-
-See the page [Digital Asset Management with the Nuxeo Platform]({{page page='digital-asset-management-with-the-nuxeo-platform'}}) for more details.
-
 ## Validation Workflows
 
 The Nuxeo Platform includes a workflow engine that enables you to integrate business processes and review documents.
