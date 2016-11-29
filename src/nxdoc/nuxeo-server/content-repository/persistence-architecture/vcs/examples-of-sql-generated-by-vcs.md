@@ -204,9 +204,9 @@ SELECT DISTINCT _C1 FROM (
 
 {{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [VCS]({{page page='vcs'}})
-*   [Microsoft SQL Server]({{page page='microsoft-sql-server'}})
-*   [PostgreSQL]({{page page='postgresql'}})
+- [VCS]({{page page='vcs'}})
+- [Microsoft SQL Server]({{page page='microsoft-sql-server'}})
+- [PostgreSQL]({{page page='postgresql'}})
 
 {{/panel}}</div><div class="column medium-6">
 
