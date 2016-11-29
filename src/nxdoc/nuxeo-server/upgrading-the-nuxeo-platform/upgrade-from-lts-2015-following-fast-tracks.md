@@ -248,7 +248,7 @@ We removed `multi_tenant_user.xsd` and `multi_tenant_group.xsd` schemas. The `te
 
 ## Complementary Information
 
-* [Upgrade notes for 8.1](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.1%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+* [Upgrade notes for 8.1](https://jira.nuxeo.com/issues/?jql=project%20in%20(NXP)%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20(%228.1%22%20)%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 * [Release notes for 8.1](http://nuxeo.github.io/releasenotes/8.1/)
 
 # From 8.1 to 8.2
@@ -330,7 +330,7 @@ Reference JIRA issue: [NXP-17690](https://jira.nuxeo.com/browse/NXP-17690)
 
 ### Complementary Information&nbsp;
 
-* [Upgrade notes for 8.2](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.2%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+* [Upgrade notes for 8.2](https://jira.nuxeo.com/issues/?jql=project%20in%20(NXP)%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20(%228.2%22%20)%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 * [Release notes for 8.2](http://nuxeo.github.io/releasenotes/8.2/)
 
 # From 8.2 to 8.3
@@ -448,12 +448,78 @@ The [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxe
 
 ## Complementary Information&nbsp;
 
-* [Upgrade notes for 8.3](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+* [Upgrade notes for 8.3](https://jira.nuxeo.com/issues/?jql=project%20in%20(NXP)%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20(%228.3%22%20)%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 * [Release notes for 8.3](http://nuxeo.github.io/releasenotes/8.3/)
 
 # From 8.3 to LTS 2016
 
+## Code
+
+## Deprecated APIs
+
+- Extension point `request-configuration` of `org.nuxeo.ecm.webengine.WebEngineComponent` is now obsolete: a transaction will always be started when calling a WebEngine endpoint. [NXP-20045](https://jira.nuxeo.com/browse/NXP-20045)
+- `NuxeoAuthenticationFilter#DEFAULT_START_PAGE` has been removed, use `LoginScreenHelper.getStartupPagePath()` instead. [NXP-19992](https://jira.nuxeo.com/browse/NXP-19992)
+- Compatibility `AssetLibrary` document type has been removed. You must update your database to change the type from `AssetLibrary` to `Domain`. [NXP-20943](https://jira.nuxeo.com/browse/NXP-20943)
+    ```
+    # PostgreSQL Update Query
+    UPDATE hierarchy SET primarytype = 'Domain' WHERE primarytype = 'AssetLibrary';
+    ```
+- `Framework.getService(CoreSession.class)` has been removed. You must use `Framework.getService(CoreSessionService.class).createCoreSession(repositoryName, principal)` instead. [NXP-20083](https://jira.nuxeo.com/browse/NXP-20083)
+- All DataModel and DocumentPart public APIs have been deprecated, and reserved for internal use:
+    ```
+    Deprecated:
+    - DataModel
+    - DataModelMap
+    - DocumentModel.getDataModelsCollection
+    - DocumentModel.getDataModels
+    - DocumentModel.getDataModel
+
+    Deprecated:
+    - DocumentPart
+    - DocumentModel.getPart(schema)
+    - DocumentModel.getParts()
+    New methods:
+    - DocumentModel.getPropertyObject(schema, name)
+    - DocumentModel.getPropertyObjects(schema)
+    ```
+
 ## Installation and Configuration&nbsp;
+
+{{! multiexcerpt name='upgrade-8.10-installation-requirements'}}
+
+### Requirements
+
+#### Java
+JDK 1.8.0_112 is required.
+
+#### OpenOffice
+OpenOffice is no longer supported.
+
+#### LibreOffice
+LibreOffice minimum version required is 5.x and the `soffice` program must be added to the `PATH` environment variable.
+
+{{! /multiexcerpt}}
+
+### Parameters to Update
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Parameter</th>
+<th colspan="1">Modification</th>
+<th colspan="1">Reference</th>
+</tr>
+<tr>
+<td colspan="1">`elastcisearch.reindex.onStartup`</td>
+<td colspan="1">**Moved** to `elasticsearch.reindex.onStartup`</td>
+<td colspan="1">[NXP-20867](https://jira.nuxeo.com/browse/NXP-20867)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+{{! multiexcerpt name='upgrade-8.10-installation-elasticsearch-upgrade'}}
 
 ### Elasticsearch Upgrade
 
@@ -479,13 +545,7 @@ All queries made with a `-1` as limit will fail unless you update the `index.max
 
 See [NXP-19194](https://jira.nuxeo.com/browse/NXP-19194).
 
-### Requirements
-
-#### OpenOffice
-OpenOffice is no longer supported.
-
-#### LibreOffice
-The minimum version required is LibreOffice 5 and the soffice program must be added to the PATH environment variable.
+{{! /multiexcerpt}}
 
 ## Distribution Changes&nbsp;
 
@@ -506,10 +566,6 @@ Thus the following changes in [nuxeo-distribution](https://github.com/nuxeo/nuxe
 - `nuxeo-distribution-cap-webdriver-tests` => `nuxeo-jsf-ui-webdriver-tests`
 - `nuxeo-distribution-tomcat` => `nuxeo-server-tomcat`, no more `-nuxeo-cap`
 classifier
-
-#### Added Maven Module
-
-`nuxeo-server-tests`
 
 #### Functional Tests
 
@@ -595,6 +651,23 @@ See [NXP-20939](https://jira.nuxeo.com/browse/NXP-20939) for details.
 The operations used by select2 widgets have been extracted from the nuxeo-platform-ui-select2 bundle to the nuxeo-automation-features one:
  - [org.nuxeo.ecm.platform.ui.select2.automation.SuggestUserEntries](https://github.com/nuxeo/nuxeo/blob/7.10/nuxeo-features/nuxeo-platform-ui-select2/src/main/java/org/nuxeo/ecm/platform/ui/select2/automation/SuggestUserEntries.java) is now  [org.nuxeo.ecm.automation.core.operations.users.SuggestUserEntries](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/core/operations/users/SuggestUserEntries.java)
  - [org.nuxeo.ecm.platform.ui.select2.automation.SuggestDirectoryEntries](https://github.com/nuxeo/nuxeo/blob/7.10/nuxeo-features/nuxeo-platform-ui-select2/src/main/java/org/nuxeo/ecm/platform/ui/select2/automation/SuggestDirectoryEntries.java) is now  [org.nuxeo.ecm.automation.core.operations.services.directory.SuggestDirectoryEntries](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/core/operations/services/directory/SuggestDirectoryEntries.java)
+
+## Nuxeo Packages
+
+### Packages Updates
+
+#### Nuxeo Digital Signature
+
+{{! multiexcerpt name='upgrade-8.10-NuxeoPackages-digital-signature'}}
+
+Only administrators can use `signPDF` and `signPDFDocument` Operations. Otherwise an `OperationException` is thrown. [NXP-15990](https://jira.nuxeo.com/browse/NXP-15990)
+
+{{! /multiexcerpt}}
+
+## Complementary Information&nbsp;
+
+* [Upgrade notes for LTS 2016](https://jira.nuxeo.com/issues/?jql=project%20in%20(NXP)%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20(%228.10%22%20)%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+* [Release notes for LTS 2016](http://nuxeo.github.io/releasenotes/8.10/)
 
 {{> end_of_tabs }}
 

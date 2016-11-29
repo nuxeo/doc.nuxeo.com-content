@@ -1,5 +1,5 @@
 ---
-title: Upgrade from LTS 2015 to 8.3
+title: Upgrade from LTS 2015 to LTS 2016
 review:
     comment: ''
     date: '2015-12-01'
@@ -12,12 +12,12 @@ confluence:
     ajs-parent-page-title: Upgrading the Nuxeo Platform
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Upgrade+from+LTS+2015+to+8.3
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Upgrade+from+LTS+2015+to+8.3'
+    canonical: Upgrade+from+LTS+2015+to+LTS+2016
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Upgrade+from+LTS+2015+to+LTS+2016'
     page_id: '29459028'
     shortlink: VILBAQ
     shortlink_source: 'https://doc.nuxeo.com/x/VILBAQ'
-    source_link: /display/NXDOC/Upgrade+from+LTS+2015+to+8.3
+    source_link: /display/NXDOC/Upgrade+from+LTS+2015+to+LTS+2016
 tree_item_index: 100
 history:
     -
@@ -171,17 +171,24 @@ For the general upgrade process, see the&nbsp;page [Upgrading the Nuxeo Platform
 
 {{! excerpt}}
 
-This chapter highlights some major information about upgrade from Nuxeo Platform LTS 2015 (7.10) to Nuxeo Platform Fast Track 8.3\. We strongly encourage you to also have a quick read of the [upgrade notes](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.2%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC).
+This chapter highlights some major information about upgrade from Nuxeo Platform LTS 2015 (7.10) to Nuxeo Platform LTS 2016\. We strongly encourage you to also have a quick read of the [upgrade notes](https://jira.nuxeo.com/issues/?jql=project%20in%20(NXP)%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20(%228.10%22%20)%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)%20ORDER%20BY%20component%20DESC%2C%20key%20DESC).
 
-If you had already upgraded to previous 8.x Fast Track versions, check out the page [Upgrade from LTS 2015 following Fast Tracks]({{page page='upgrade-from-lts-2015-following-fast-tracks'}}) for upgrade instructions from 8.1 to 8.2 or 8.2 to 8.3.
+If you had already upgraded to previous 8.x Fast Track versions, check out the page [Upgrade from LTS 2015 following Fast Tracks]({{page page='upgrade-from-lts-2015-following-fast-tracks'}}) for upgrade instructions from 8.1 to 8.2 or 8.2 to 8.3 or 8.3 to LTS 2016.
 
 {{! /excerpt}}
 
 ## Distribution Changes
 
-### UI Dedicated Package
+### Nuxeo Server as the Base Distribution and CAP Removal
 
-{{{multiexcerpt 'upgrade-8.3-jsf-ui' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+As stated in the *From 8.2 to 8.3 > UI Dedicated Package* section, the new base distribution is Nuxeo Server, and Nuxeo CAP has been removed.
+Thus the following changes in [nuxeo-distribution](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution) can be found precisely in [Upgrade from LTS 2015 following Fast Tracks]({{page page='upgrade-from-lts-2015-following-fast-tracks'}}) > *From 8.3 to LTS 2016*.
+
+## Installation
+
+{{{multiexcerpt 'upgrade-8.10-installation-requirements' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+
+{{{multiexcerpt 'upgrade-8.10-installation-elasticsearch-upgrade' page='Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ## Configuration
 
@@ -227,7 +234,13 @@ Force Automation properties value to be trimmed (default:`false`)
 
 [NXP-17396](https://jira.nuxeo.com/browse/NXP-17396)
 
-</td></tr></tbody></table></div>
+</td></tr>
+<tr>
+<td colspan="1">`elastcisearch.reindex.onStartup`</td>
+<td colspan="1">**Moved** to `elasticsearch.reindex.onStartup`</td>
+<td colspan="1">[NXP-20867](https://jira.nuxeo.com/browse/NXP-20867)</td>
+</tr>
+</tbody></table></div>
 
 ### Notes
 
@@ -277,6 +290,10 @@ Force Automation properties value to be trimmed (default:`false`)
 
 ### Code Changes
 
+#### Nuxeo Digital Signature
+
+{{{multiexcerpt 'upgrade-8.10-NuxeoPackages-digital-signature' page='Upgrade from LTS 2015 following Fast Tracks'}}} 
+
 #### Nuxeo Live Connect
 
 {{{multiexcerpt 'upgrade-8.1-live-connect' page='Upgrade from LTS 2015 following Fast Tracks'}}}
@@ -297,12 +314,14 @@ Force Automation properties value to be trimmed (default:`false`)
 
 Upgrade notes:
 
+*   [Upgrade notes for LTS 2016](https://jira.nuxeo.com/issues/?jql=project%20in%20(NXP)%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20(%228.10%22%20)%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 *   [Upgrade notes for 8.3](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 *   [Upgrade notes for 8.2](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.2%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 *   [Upgrade notes for 8.1](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.1%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 
 Release notes:
 
+*   [Release notes for LTS 2016](http://nuxeo.github.io/releasenotes/8.10/)
 *   [Release notes for 8.3](http://nuxeo.github.io/releasenotes/8.3/)
 *   [Release notes for 8.2](http://nuxeo.github.io/releasenotes/8.2/)
 *   [Release notes for 8.1](http://nuxeo.github.io/releasenotes/8.1/)
