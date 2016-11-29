@@ -6,6 +6,7 @@ review:
     status: ok
 labels:
     - acl
+    - security-component
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
