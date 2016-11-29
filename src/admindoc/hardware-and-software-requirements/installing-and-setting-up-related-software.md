@@ -24,6 +24,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/tDalAQ'
     source_link: /display/ADMINDOC710/Installing+and+Setting+Up+Related+Software
 tree_item_index: 100
+version_override:
+    'FT': '/nxdoc/installing-and-setting-up-related-software'
 history:
     -
         author: Solen Guitter
