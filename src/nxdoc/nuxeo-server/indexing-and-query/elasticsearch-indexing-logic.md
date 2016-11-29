@@ -232,14 +232,14 @@ Only the simplified ACL is supported with Elasticsearch (this is the default sec
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Elasticsearch Documentation'}}
 
-*   [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
-*   [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
-*   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+- [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
+- [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+- [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Indexing related pages'}}
 
-*   [Indexing and Query]({{page page='indexing-and-query'}})
-*   [Full-Text Queries]({{page page='full-text-queries'}})
-*   [Indexing and Querying How-To Index]({{page page='indexing-and-querying-how-to-index'}})
+- [Indexing and Query]({{page page='indexing-and-query'}})
+- [Full-Text Queries]({{page page='full-text-queries'}})
+- [Indexing and Querying How-To Index]({{page page='indexing-and-querying-how-to-index'}})
 
 {{/panel}}</div></div>
