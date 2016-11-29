@@ -290,8 +290,8 @@ The following features are planned but are not yet implemented as of Nuxeo Platf
 
 {{#> panel heading='Related Documentation'}}
 
-*   [MongoDB]({{page page='mongodb'}})
-*   [MarkLogic]({{page page='marklogic'}})
+- [MongoDB]({{page page='mongodb'}})
+- [MarkLogic]({{page page='marklogic'}})
 
 {{/panel}}</div><div class="column medium-6">
 
