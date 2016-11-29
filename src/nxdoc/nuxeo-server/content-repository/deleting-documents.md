@@ -140,12 +140,12 @@ If soft-delete is not enabled, or when the periodic cleanup process for soft-del
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-To'}}
 
-*   [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
-*   [Action How-To Index]({{page page='action-how-to-index'}})
+- [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
+- [Action How-To Index]({{page page='action-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [Deleting Content]({{page space='userdoc' page='deleting-content'}}) (User documentation)
-*   [Garbage-Collecting Orphaned Binaries]({{page page='garbage-collecting-orphaned-binaries'}})
+- [Deleting Content]({{page space='userdoc' page='deleting-content'}}) (User documentation)
+- [Garbage-Collecting Orphaned Binaries]({{page page='garbage-collecting-orphaned-binaries'}})
 
 {{/panel}}</div></div>
