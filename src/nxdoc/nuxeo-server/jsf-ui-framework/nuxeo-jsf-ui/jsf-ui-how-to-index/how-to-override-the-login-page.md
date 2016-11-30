@@ -138,14 +138,14 @@ We want our bundle to be loaded after this module because our custom login page 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Brand Your Application]({{page page='how-to-brand-your-application'}})
-*   [How to Customize the Error Pages]({{page page='how-to-customize-the-error-pages'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Brand Your Application]({{page page='how-to-brand-your-application'}})
+- [How to Customize the Error Pages]({{page page='how-to-customize-the-error-pages'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [Theme in Developer Documentation]({{page page='theme'}})
-*   [Branding in Studio Documentation]({{page space='Studio' page='Branding'}})
-*   [Online UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)
+- [Theme in Developer Documentation]({{page page='theme'}})
+- [Branding in Studio Documentation]({{page space='Studio' page='Branding'}})
+- [Online UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)
 
 {{/panel}}</div></div>

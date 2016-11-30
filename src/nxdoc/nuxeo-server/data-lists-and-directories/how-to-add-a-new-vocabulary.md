@@ -286,7 +286,7 @@ There are 3 types of vocabulary:
     Click on **Import CSV** to import content from a .csv file instead of typing each entry manually. See example files:[ simple-vocabulary.csv]({{file name='simple-vocabulary.csv' space='studio' page='vocabularies'}}) and []({{file name='hierarchical-vocabulary.csv' space='studio' page='vocabularies'}}).
 
     {{/callout}}
-5.  Click on the **Save&nbsp;**button.
+5.  Click on the **Save** button.
     You can now use the vocabulary on [layouts]({{page page='layout-and-widget-how-to-index'}}) to populate drop-down lists. After you deploy your customization on your Nuxeo Platform, the vocabulary is [available in the Admin Center]({{page space='userdoc' page='managing-vocabularies'}}) so power users and administrators can easily add new entries to the vocabulary.
 
 &nbsp;
@@ -295,13 +295,13 @@ There are 3 types of vocabulary:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Howtos'}}
 
-*   [Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
-*   [Translating a Vocabulary]({{page page='how-to-translate-a-vocabulary'}})
+- [Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
+- [Translating a Vocabulary]({{page page='how-to-translate-a-vocabulary'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Tutorials'}}
 
-*   [Data Lists and Directories]({{page page='data-lists-and-directories'}})
-*   [Declaring Vocabularies]({{page space='studio' page='declaring-vocabularies'}})
-*   [Managing Vocabularies]({{page space='userdoc' page='managing-vocabularies'}})
+- [Data Lists and Directories]({{page page='data-lists-and-directories'}})
+- [Declaring Vocabularies]({{page space='studio' page='declaring-vocabularies'}})
+- [Managing Vocabularies]({{page space='userdoc' page='managing-vocabularies'}})
 
 {{/panel}}</div></div>

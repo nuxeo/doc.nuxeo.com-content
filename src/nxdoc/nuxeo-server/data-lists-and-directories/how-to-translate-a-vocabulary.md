@@ -119,9 +119,9 @@ In order to translate a vocabulary, you must:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Howtos'}}
 
-*   [How to Add a New Vocabulary]({{page page='how-to-add-a-new-vocabulary'}})
-*   [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
-*   [How to Translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxeo-platform'}})
+- [How to Add a New Vocabulary]({{page page='how-to-add-a-new-vocabulary'}})
+- [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
+- [How to Translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxeo-platform'}})
 
 {{/panel}}</div><div class="column medium-6">
 

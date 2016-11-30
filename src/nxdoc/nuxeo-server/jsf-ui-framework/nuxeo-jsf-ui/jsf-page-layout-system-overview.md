@@ -46,17 +46,17 @@ history:
 ---
 A Nuxeo Platform page is made up of several layers:
 
-*   Nuxeo Theme (aka NXTheme)
+- Nuxeo Theme (aka NXTheme)
 
-    *   Defines a page level layout (slots)
-    *   Defines CSS resources
-*   XHTML/facelet
+    - Defines a page level layout (slots)
+    - Defines CSS resources
+- XHTML/facelet
 
-    *   Fills the NXTheme slots
-    *   Uses Nuxeo Tags to render Layouts, Widgets, Actions
-*   Layouts/Widgets/Actions
-    *   This is the application meta-model
-    *   This is the part that is configured via Nuxeo Studio
+    - Fills the NXTheme slots
+    - Uses Nuxeo Tags to render Layouts, Widgets, Actions
+- Layouts/Widgets/Actions
+    - This is the application meta-model
+    - This is the part that is configured via Nuxeo Studio
 
 Here is a very quick walk-through of the main principles with some examples and links to code or documentation.
 
@@ -66,10 +66,10 @@ The Nuxeo Theme is a page layout engine that also handles resources management. 
 
 As any other Nuxeo component, the&nbsp;[Theme system](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.theme.styling.service)&nbsp;uses extension points to define:
 
-*   [pages](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.theme.styling.service--pages): Define what slots should be available in the page
-*   [styles](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.theme.styling.service--styles): Define CSS styles
-*   [flavors](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.theme.styling.service--flavors): Define variables used in CSS
-*   [resources](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.theme.styling.service--resources): Define JavaScript to be injected in the page
+- [pages](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.theme.styling.service--pages): Define what slots should be available in the page
+- [styles](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.theme.styling.service--styles): Define CSS styles
+- [flavors](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.theme.styling.service--flavors): Define variables used in CSS
+- [resources](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.theme.styling.service--resources): Define JavaScript to be injected in the page
 
 Let's see how Document Management and Digital Asset Management pages as examples.
 
@@ -79,8 +79,8 @@ The Document Management pages are using a Theme page layout defined&nbsp;[in the
 
 `nxMainContainer`&nbsp;has two columns (i.e.&nbsp;`<cell>`):
 
-*   The first column contains three slots (i.e.&nbsp;`<fragment>`).
-*   The second column contains two slots (i.e.&nbsp;`<fragment>`).
+- The first column contains three slots (i.e.&nbsp;`<fragment>`).
+- The second column contains two slots (i.e.&nbsp;`<fragment>`).
 
 The slots themselves (called `view` in NXTheme) are defined in the&nbsp;[theme-contrib](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/theme-contrib.xml):
 
@@ -112,13 +112,12 @@ The XPath indicates what part of the page layout will be used to display the tre
 
 For Nuxeo DAM (and the current search view), the theme only defines the headers and footer. The actual content of the main slot will be handled by the application layer.
 
-*   [nuxeo-dam theme](https://github.com/nuxeo/nuxeo-dam/blob/master/nuxeo-dam-theme/src/main/resources/themes/nuxeo-dam.xml)&nbsp;only defines a&nbsp;`nxMainContainer`&nbsp;that will be structured via layouts.
-*   There is no specific view (structure of the&nbsp;`nxMainContainer`&nbsp;will be done via XHTML).
+- [nuxeo-dam theme](https://github.com/nuxeo/nuxeo-dam/blob/master/nuxeo-dam-theme/src/main/resources/themes/nuxeo-dam.xml) only defines a `nxMainContainer` that will be structured via layouts.
+- There is no specific view (structure of the `nxMainContainer` will be done via XHTML).
 
 ## XHTML/Facelets
 
 The XHTML Facelet templates are rendered through the Theme Engine. The XHTML calls the theme engine via the NXTheme composition page:
-
 ```xml
 <nxthemes:composition xmlns="http://www.w3.org/1999/xhtml"
     xmlns:ui="http://java.sun.com/jsf/facelets"
@@ -157,8 +156,6 @@ The main content of the page is actually defined via facelet templating (i.e. us
   <nxl:widget name="documentTabs" mode="view" value="#{currentDocument}" />
 ```
 
-<div class="line">
-
 ### Digital Asset Management Example
 
 See the [sample DAM asset.xhtml](https://github.com/nuxeo/nuxeo-dam/blob/master/nuxeo-dam-jsf/src/main/resources/web/nuxeo.war/dam/asset.xhtml).
@@ -175,8 +172,8 @@ This is the very core of the Nuxeo application level model: that's the part that
 
 There is plenty of documentation about this:
 
-*   [Layouts and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
-*   [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
+- [Layouts and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
+- [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
 
 You can also use the&nbsp;[Layout Showcase site](http://showcase.nuxeo.com/nuxeo/layoutDemo/).
 
@@ -184,20 +181,20 @@ Let's continue with the previous example pages for DM and DAM.
 
 ### Digital Asset Management Pages
 
-For DAM, the main layout is&nbsp;[dam-layouts-contrib.xml](https://github.com/nuxeo/nuxeo-dam/blob/master/nuxeo-dam-jsf/src/main/resources/OSGI-INF/dam-layouts-contrib.xml), it defines:
+For DAM, the main layout is [dam-layouts-contrib.xml](https://github.com/nuxeo/nuxeo-dam/blob/master/nuxeo-dam-jsf/src/main/resources/OSGI-INF/dam-layouts-contrib.xml), it defines:
 
-*   Some widgets
-*   The&nbsp;`gridDamSingleAssetLayout`&nbsp;that itself defines two columns:
-    *   The&nbsp;`damSingleAssetPanelLeft`&nbsp;widget
-    *   The&nbsp;`damSingleAssetPanelRight`&nbsp;widget
+- Some widgets
+- The&nbsp;`gridDamSingleAssetLayout`&nbsp;that itself defines two columns:
+    - The&nbsp;`damSingleAssetPanelLeft`&nbsp;widget
+    - The&nbsp;`damSingleAssetPanelRight`&nbsp;widget
 
 Both widgets are of type&nbsp;`documentAction`&nbsp;meaning they use the action system to resolve what are the subwidgets.
 
 We use this Widget/Action association to provide a way to have [Incremental Layouts]({{page page='incremental-layouts-and-actions'}}): the idea being that the content of the screen is the result of the aggregation of:
 
-*   What is contributed by the deployed plugin
-    If workflow is deployed you will have some WF related information displayed.
-*   What is contributed by your Studio configuration
+- What is contributed by the deployed plugin
+  If workflow is deployed you will have some WF related information displayed.
+- What is contributed by your Studio configuration
 
 Using that principle, the&nbsp;`damSingleAssetPanelLeft`&nbsp;will display all widgets associated to the action category `DAM_SINGLE_ASSET_PANEL_LEFT`: you will find 10 of them in the&nbsp;[same dam-layouts-contrib.xml contribution file](https://github.com/nuxeo/nuxeo-dam/blob/master/nuxeo-dam-jsf/src/main/resources/OSGI-INF/dam-layouts-contrib.xml), each of them being displayed according to the type of content.
 
@@ -266,15 +263,15 @@ So far we have defined view level components. These views will need to get some 
 
 This is the role of the Seam layer:
 
-*   Seam Beans can be used as Controllers that access the Nuxeo Service to push/retrieve data.
-*   Seam Context is used to manage the web context and the associated transient state.
+- Seam Beans can be used as Controllers that access the Nuxeo Service to push/retrieve data.
+- Seam Context is used to manage the web context and the associated transient state.
 
 Because of the way the screen are rendered inside the Nuxeo Platform, all Nuxeo navigations do not correspond to JSF navigation. Actually, in a lot of cases you always render the same JSF view, but thanks to the Actions/Layout/Widget model the actual content displayed in the page will change according to the context:
 
-*   What is the document you are looking at
-*   What is the currently selected tab
-*   What is the life cycle of the document
-*   ...
+- What is the document you are looking at
+- What is the currently selected tab
+- What is the life cycle of the document
+- ...
 
 However, sometimes, there is an actual JSF level navigation that relies on standard JSF navigation case. For that, each Nuxeo Bundle can contribute navigation cases to the JSF config via a&nbsp;[deployment-fragment](https://github.com/nuxeo/nuxeo-dam/blob/master/nuxeo-dam-theme/src/main/resources/OSGI-INF/deployment-fragment.xml).
 
@@ -305,29 +302,27 @@ Nuxeo Studio provides a high level configuration UI to configure Actions, Layout
 For now, Nuxeo Studio allows you to customize pretty much everything that is inside the "slots" defined by the target XHTML/Theme template (DM or DAM). However, Nuxeo Studio does not give you direct access to the "low level" model.
 
 {{#> callout type='info' }}
-
 In the context of 7.x, we are working on replacing all the low level model by layouts only.
-
 {{/callout}}
 
 ### Custom Web Templates
 
 As the rest of the framework, the JSF web framework is extensible:
 
-*   You can contribute new XHTML pages
-*   You can extend the theme
-*   You can contribute to the Action/Widget/Layout system
-*   You an contribute new Seam beans
+- You can contribute new XHTML pages
+- You can extend the theme
+- You can contribute to the Action/Widget/Layout system
+- You an contribute new Seam beans
 
 At the same time, as long as your screens logic depends on Action/Widgets/Layouts, you will be able to use Studio to configure it.
 
 However, going that road requires more knowledge and skills:
 
-*   You have to be familiar with underlying technologies
-    *   Java/JSF/Seam
-    *   Nuxeo Extension Point model
-    *   Actions/Layout/Widget
-*   On the Studio side, things will be less polished
+- You have to be familiar with underlying technologies
+    - Java/JSF/Seam
+    - Nuxeo Extension Point model
+    - Actions/Layout/Widget
+- On the Studio side, things will be less polished
     For example you will have to know the name of the layout you want to change since it won't be one of the default layout from DAM/DM
 
 We are not saying that this road is not good, we just want to make it clear that the technical requirements are higher: more freedom but also more responsibilities.
@@ -341,15 +336,13 @@ However, if you think the custom UI is the way to go, we'll be happy to help you
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
-
-*   [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
-*   [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
-*   [Layouts and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
-*   [Theme]({{page page='theme'}})
-*   [JSF UI How-To Index]({{page page='jsf-ui-how-to-index'}})
-
+- [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
+- [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
+- [Layouts and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
+- [Theme]({{page page='theme'}})
+- [JSF UI How-To Index]({{page page='jsf-ui-how-to-index'}})
 {{/panel}}</div><div class="column medium-6">
 
 &nbsp;
 
-</div></div></div>
+</div></div>

@@ -176,10 +176,10 @@ There are several possibilities:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Security]({{page page='security'}})
-*   [Security Recommendations]({{page page='security-recommendations'}})
-*   [File Download Security Policies]({{page page='file-download-security-policies'}})
-*   [ACLs]({{page page='acls'}})
+- [Security]({{page page='security'}})
+- [Security Recommendations]({{page page='security-recommendations'}})
+- [File Download Security Policies]({{page page='file-download-security-policies'}})
+- [ACLs]({{page page='acls'}})
 
 {{/panel}}</div><div class="column medium-6">
 
