@@ -1143,10 +1143,10 @@ GET http://localhost:8080/nuxeo/site/api/v1/search/saved/f0c173cc-4bbc-42b1-ac66
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
-*   [REST API Entity Types]({{page page='rest-api-entity-types'}})
-*   [Page Providers]({{page page='page-providers'}})
-*   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+- [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
+- [REST API Entity Types]({{page page='rest-api-entity-types'}})
+- [Page Providers]({{page page='page-providers'}})
+- [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 
 {{/panel}}</div><div class="column medium-6">
 

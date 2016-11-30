@@ -313,8 +313,8 @@ We are always eager to receive feedback on our projects. Please report bugs, wis
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [REST API]({{page page='rest-api'}})
-*   [JavaScript Client]({{page page='javascript-client'}})
+- [REST API]({{page page='rest-api'}})
+- [JavaScript Client]({{page page='javascript-client'}})
 
 {{/panel}}</div><div class="column medium-6">
 

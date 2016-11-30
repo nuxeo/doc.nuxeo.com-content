@@ -21,94 +21,94 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/uwAz'
     source_link: /display/NXDOC/Filtering+Exposed+Operations
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 15:45'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-25 14:50'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-23 13:48'
         message: ''
         version: '16'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-17 03:34'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-30 14:54'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-30 14:52'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-30 12:19'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 14:59'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 14:59'
         message: >-
             Added related topics and replaced "operation chain" with "automation
             chain"
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2011-05-02 17:53'
         message: Migrated to Confluence 4.0
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2011-05-02 17:53'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 15:19'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 15:18'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-06-29 11:54'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-06-28 08:42'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 17:40'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-24 16:47'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-24 16:47'
         message: ''
@@ -156,9 +156,9 @@ Here is the complete of attributes and elements you can use in the extension:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [REST API]({{page page='rest-api'}})
-*   [Command Endpoint]({{page page='command-endpoint'}})
-*   [Operations Index]({{page page='operations-index'}})
+- [REST API]({{page page='rest-api'}})
+- [Command Endpoint]({{page page='command-endpoint'}})
+- [Operations Index]({{page page='operations-index'}})
 
 {{/panel}}</div><div class="column medium-6">
 
