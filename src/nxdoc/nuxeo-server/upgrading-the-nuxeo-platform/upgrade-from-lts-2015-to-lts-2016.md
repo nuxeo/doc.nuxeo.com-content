@@ -167,13 +167,13 @@ history:
         version: '1'
 
 ---
-For the general upgrade process, see the&nbsp;page [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}}).
+For the general upgrade process, see the page [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}}).
 
 {{! excerpt}}
 
-This chapter highlights some major information about upgrade from Nuxeo Platform LTS 2015 (7.10) to Nuxeo Platform LTS 2016\. We strongly encourage you to also have a quick read of the [upgrade notes](https://jira.nuxeo.com/issues/?jql=project%20in%20(NXP)%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20(%228.10%22%20)%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)%20ORDER%20BY%20component%20DESC%2C%20key%20DESC).
+This chapter highlights some major information about upgrade from Nuxeo Platform LTS 2015 (7.10) to Nuxeo Platform LTS 2016 (8.10). We strongly encourage you to also have a quick read of the [upgrade notes](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%228.10%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC).
 
-If you had already upgraded to previous 8.x Fast Track versions, check out the page [Upgrade from LTS 2015 following Fast Tracks]({{page page='upgrade-from-lts-2015-following-fast-tracks'}}) for upgrade instructions from 8.1 to 8.2 or 8.2 to 8.3 or 8.3 to LTS 2016.
+If you had already upgraded to previous 8.x Fast Track versions, check out the page [Upgrade from LTS 2015 following Fast Tracks]({{page page='upgrade-from-lts-2015-following-fast-tracks'}}) for upgrade instructions from 8.1 to 8.2, 8.2 to 8.3 or 8.3 to LTS 2016.
 
 {{! /excerpt}}
 
@@ -181,8 +181,11 @@ If you had already upgraded to previous 8.x Fast Track versions, check out the p
 
 ### Nuxeo Server as the Base Distribution and CAP Removal
 
-As stated in the *From 8.2 to 8.3 > UI Dedicated Package* section, the new base distribution is Nuxeo Server, and Nuxeo CAP has been removed.
-Thus the following changes in [nuxeo-distribution](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution) can be found precisely in [Upgrade from LTS 2015 following Fast Tracks]({{page page='upgrade-from-lts-2015-following-fast-tracks'}}) > *From 8.3 to LTS 2016*.
+{{{multiexcerpt 'upgrade-8.3-jsf-ui' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+
+Thus the following changes in [nuxeo-distribution](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution):
+
+{{{multiexcerpt 'upgrade-8.10-distributionChanges' page='Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ## Installation
 
@@ -262,6 +265,9 @@ Force Automation properties value to be trimmed (default:`false`)
 
 {{{multiexcerpt 'upgrade-8.3-api-coreSession_methods' page='Upgrade from LTS 2015 following Fast Tracks'}}}
 
+{{{multiexcerpt 'upgrade-8.10-deprecated-apis' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+
+
 ### Nuxeo and iframe
 
 {{{multiexcerpt 'upgrade-8.3-code-iframe' page='Upgrade from LTS 2015 following Fast Tracks'}}}
@@ -280,11 +286,9 @@ Force Automation properties value to be trimmed (default:`false`)
 
 {{{multiexcerpt 'upgrade-8.3-optims-drive' page='Upgrade from LTS 2015 following Fast Tracks'}}}
 
-### <span style="color: rgb(0,0,0);">JSF Pages Rendering and Processing</span>
+### JSF Pages Rendering and Processing
 
 {{{multiexcerpt 'JSF-optimizations' page='Upgrade from LTS 2015 following Fast Tracks'}}}
-
-&nbsp;
 
 ## Nuxeo Packages
 
@@ -292,7 +296,7 @@ Force Automation properties value to be trimmed (default:`false`)
 
 #### Nuxeo Digital Signature
 
-{{{multiexcerpt 'upgrade-8.10-NuxeoPackages-digital-signature' page='Upgrade from LTS 2015 following Fast Tracks'}}} 
+{{{multiexcerpt 'upgrade-8.10-NuxeoPackages-digital-signature' page='Upgrade from LTS 2015 following Fast Tracks'}}}
 
 #### Nuxeo Live Connect
 
@@ -308,13 +312,15 @@ Force Automation properties value to be trimmed (default:`false`)
 
 ### Deprecated Packages
 
+{{{multiexcerpt 'upgrade-8.10-NuxeoPackages-deprecated' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+
 {{{multiexcerpt 'upgrade-8.3-NuxeoPackages-webMobile' page='Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ## Complementary Information
 
 Upgrade notes:
 
-*   [Upgrade notes for LTS 2016](https://jira.nuxeo.com/issues/?jql=project%20in%20(NXP)%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20(%228.10%22%20)%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+*   [Upgrade notes for LTS 2016](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20(%228.10%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 *   [Upgrade notes for 8.3](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 *   [Upgrade notes for 8.2](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.2%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 *   [Upgrade notes for 8.1](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.1%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
