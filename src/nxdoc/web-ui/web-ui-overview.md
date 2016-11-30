@@ -5,6 +5,8 @@ review:
     date: '2015-12-01'
     status: ok
 toc: true
+labels:
+    - nuxeo-elements-component
 confluence:
     ajs-parent-page-id: '26316892'
     ajs-parent-page-title: Web UI
