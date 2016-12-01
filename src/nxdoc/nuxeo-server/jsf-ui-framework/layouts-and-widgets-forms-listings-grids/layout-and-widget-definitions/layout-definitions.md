@@ -361,14 +361,14 @@ As an example, [Studio]({{page space='studio'}}) generates specific layout templ
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
-*   [Standard Layout Types]({{page page='standard-layout-types'}})
-*   [Layout and Widget Modes]({{page page='layout-and-widget-modes'}})
-*   [Generic Layout Usage]({{page page='generic-layout-usage'}})
-*   [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
+- [Standard Layout Types]({{page page='standard-layout-types'}})
+- [Layout and Widget Modes]({{page page='layout-and-widget-modes'}})
+- [Generic Layout Usage]({{page page='generic-layout-usage'}})
+- [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in Studio documentation'}}
 
-*   [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
-*   [Tabs in Nuxeo Studio]({{page space='studio' page='tabs'}})
+- [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
+- [Tabs in Nuxeo Studio]({{page space='studio' page='tabs'}})
 
 {{/panel}}</div></div>

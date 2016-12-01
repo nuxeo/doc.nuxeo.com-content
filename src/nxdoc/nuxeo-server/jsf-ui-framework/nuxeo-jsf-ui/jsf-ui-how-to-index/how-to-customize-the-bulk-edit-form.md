@@ -375,9 +375,9 @@ This versioning policy can be configured through the&nbsp;[versioning](http://ex
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [JSF and Ajax Tips and How-To Index]({{page page='jsf-and-ajax-tips-and-how-to-index'}})
-*   [Layout and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [JSF and Ajax Tips and How-To Index]({{page page='jsf-and-ajax-tips-and-how-to-index'}})
+- [Layout and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">
 

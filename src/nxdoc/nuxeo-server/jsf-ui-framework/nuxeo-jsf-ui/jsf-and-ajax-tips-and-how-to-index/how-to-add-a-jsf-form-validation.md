@@ -220,17 +220,16 @@ If you need to cross validate fields of a document (i.e.: makes sure `dc:title` 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [JSF and Javascript ]({{page page='jsf-and-javascript'}})
-*   [Ajax4jsf Best Practices]({{page page='ajax4jsf-best-practices'}})
-*   [Ajax Forms and Actions]({{page page='ajax-forms-and-actions'}})
-*   [undefined]()
-*   [How-To Index]({{page page='how-to-index'}})
+- [JSF and Javascript ]({{page page='jsf-and-javascript'}})
+- [Ajax4jsf Best Practices]({{page page='ajax4jsf-best-practices'}})
+- [Ajax Forms and Actions]({{page page='ajax-forms-and-actions'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [JavaScript Client]({{page page='javascript-client'}})
-*   [JSF UI Framework]({{page page='jsf-ui-framework'}})
-*   [Nuxeo JSF UI]({{page page='nuxeo-jsf-ui'}})
-*   [JSF UI Limitations]({{page page='jsf-ui-limitations'}})&nbsp;
+- [JavaScript Client]({{page page='javascript-client'}})
+- [JSF UI Framework]({{page page='jsf-ui-framework'}})
+- [Nuxeo JSF UI]({{page page='nuxeo-jsf-ui'}})
+- [JSF UI Limitations]({{page page='jsf-ui-limitations'}})&nbsp;
 
 {{/panel}}</div></div>

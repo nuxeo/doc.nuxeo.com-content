@@ -255,17 +255,17 @@ You have to override this&nbsp;`nuxeo_error.jsp`&nbsp;page in a custom project.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Override a Template]({{page page='how-to-override-a-template'}})
-*   [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page page='how-to-declare-the-css-and-javascript-resources-used-in-your-templates'}})
-*   [How to Customize the Login Page]({{page page='how-to-customize-the-login-page'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Override a Template]({{page page='how-to-override-a-template'}})
+- [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page page='how-to-declare-the-css-and-javascript-resources-used-in-your-templates'}})
+- [How to Customize the Login Page]({{page page='how-to-customize-the-login-page'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Theme in Developer Documentation]({{page page='theme'}})
-*   [Branding in Studio Documentation]({{page space='studio' page='branding'}})
-*   [Runtime and Component Model]({{page page='runtime-and-component-model'}})
-*   [JSF UI Framework]({{page page='jsf-ui-framework'}})
-*   [Online UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)
+- [Theme in Developer Documentation]({{page page='theme'}})
+- [Branding in Studio Documentation]({{page space='studio' page='branding'}})
+- [Runtime and Component Model]({{page page='runtime-and-component-model'}})
+- [JSF UI Framework]({{page page='jsf-ui-framework'}})
+- [Online UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)
 
 {{/panel}}</div></div>

@@ -848,11 +848,11 @@ You can contribute custom negotiators to the [`negotiations` extension point](ht
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-*   [Theme How-to Index]({{page page='theme-how-to-index'}})
+- [Theme How-to Index]({{page page='theme-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
 
-*   [Branding in Nuxeo Studio]({{page space='studio' page='branding'}})
-*   [Local Configuration]({{page space='userdoc' page='local-configuration'}})
+- [Branding in Nuxeo Studio]({{page space='studio' page='branding'}})
+- [Local Configuration]({{page space='userdoc' page='local-configuration'}})
 
 {{/panel}}</div></div>
