@@ -1,31 +1,31 @@
 ---
-title: Getting Started with Nuxeo IDE
+title: Getting Started with Nuxeo Generator
 review:
     comment: ''
     date: '2015-12-01'
     status: ok
 details:
     howto:
-        excerpt: Learn how to start working with Nuxeo IDE.
+        excerpt: Learn how to start working with Nuxeo Generator.
         level: Intermediate
-        tool: 'Nuxeo IDE, Nuxeo Studio'
+        tool: 'Nuxeo Generator, Nuxeo Studio'
         topics: 'Automation, Layout'
 labels:
     - content-review-lts2016
     - howto
-    - ide
+    - generator
 toc: true
 confluence:
     ajs-parent-page-id: '14256538'
     ajs-parent-page-title: Start Customizing the Nuxeo Platform
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Getting+Started+with+Nuxeo+IDE
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Getting+Started+with+Nuxeo+IDE'
+    canonical: Getting+Started+with+Nuxeo+Generator
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Getting+Started+with+Nuxeo+Generator'
     page_id: '20518158'
     shortlink: DhU5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/DhU5AQ'
-    source_link: /display/NXDOC/Getting+Started+with+Nuxeo+IDE
+    source_link: /display/NXDOC/Getting+Started+with+Nuxeo+Generator
 tree_item_index: 200
 history:
     -
@@ -426,85 +426,12 @@ Here we want to add some server side Java logic that will update the contract's 
 *   A Nuxeo SDK: [Nuxeo Platform 8.3 SDK](http://cdn.nuxeo.com/nuxeo-8.3/nuxeo-cap-8.3-tomcat-sdk.zip)
 *   npm 2.12.0+
 
-## Step 1 - Install Nuxeo IDE
 
-### From Eclipse Marketplace
-
-{{#> callout type='warning' }}
-
-This procedure can only be used for **Nuxeo 6.0 and later** versions. **For Nuxeo 5.8**, please refer to the **installation from the Eclipse Menu**.
-
-{{/callout}}
-
-1.  In Eclipse, go into the **Help**, **Eclipse Marketplace** menu.
-2.  The Eclipse Marketplace window opens.
-    Search for **Nuxeo**, select **Nuxeo IDE** and click on the **Install** button.
-    ![]({{file name='eclipse-marketplace-nx-ide.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=400,border=true)
-3.  Nuxeo IDE and Nuxeo Shell are automatically selected and downloaded.
-4.  When Nuxeo IDE and Nuxeo Shell are downloaded, click on the **Next** button.
-5.  Accept license when prompted.
-    Installation begins. After a few seconds, a security warning is prompted.
-6.  On the security warning window, click on **OK**.
-    Installation continues.
-    ![]({{file name='NxIDE_install6.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=350)
-7.  Restart Eclipse when prompted.
-8.  Nuxeo IDE is installed.
-    A new button is available in the Eclipse toolbar: ![]({{file name='NxIDE_button.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}})
-9.  Open the Nuxeo perspective:
-    Using the open perspective button ![]({{file name='open-perspective.png'}}) or from the Window, Perspective menu.
-    Choose the Nuxeo perspective.
-    ![]({{file name='nuxeo-perspective.png'}} ?thumbnail=true)
-    A new set of tabs will then be available to interact with your projects and your Nuxeo Platform server.
-
-### From Eclipse Menu
-
-1.  Open the install dialog from the Eclipse menu: **Help** > **Install New Software...**
-2.  Click on **Add...** button and enter the Update Site URL (stable for the latest released version, or development for a development snapshot) and name and click the **OK** button.
-
-*   Update site for latest Nuxeo IDE **development** version: [http://community.nuxeo.com/static/nuxeo-ide/dev/site/](http://community.nuxeo.com/static/nuxeo-ide/dev/site/)
-*   Update site for latest Nuxeo IDE **stable** version: [http://community.nuxeo.com/static/nuxeo-ide/stable/site/](http://community.nuxeo.com/static/nuxeo-ide/stable/site/)
-*   Update site **archives** are available in: [http://community.nuxeo.com/static/nuxeo-ide/releases/](http://community.nuxeo.com/static/nuxeo-ide/releases/)
-    ![]({{file name='NxIDE_install1.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=350,border=true)
-
-4.  If nothing appears, uncheck the **Group items by category** box.
-5.  Check both **Nuxeo IDE** and **Nuxeo Shell** and click **Next.**
-    **![]({{file name='NxIDE_install2.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=400,h=326,border=true)
-    **
-6.  Follow the wizard: accept license when prompted and click Next until the software is downloaded.
-    ![]({{file name='NxIDE_install6.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=350,border=true)
-7.  Restart Eclipse when prompted.
-    Nuxeo IDE is installed. A new button is available in the Eclipse toolbar: ![]({{file name='NxIDE_button.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}})
-8.  Open the Nuxeo perspective:
-    Using the open perspective button at the top right corner from the Eclipse window ![]({{file name='open-perspective.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}}) or from the Window, Perspective menu.
-    Choose the Nuxeo perspective.
-    ![]({{file name='nuxeo-perspective.png'}} ?thumbnail=true)
-    A new set of tabs will then be available to interact with your projects and your Nuxeo Platform server.
-
-## Step 2 - Register a Nuxeo Online Services Account
-
-**To configure a Nuxeo Online Services account:**
-
-1.  Open Eclipse preferences (Window, Preferences menu in Windows and Linux or from Eclipse, Preferences in Mac OS) and go to **Nuxeo** > **Nuxeo Connect**.
-    The Host name is already filled in with Nuxeo Connect address.
-2.  Type your Nuxeo Online Services login and password and click on the **Connect** button.
-    The lists of Studio projects associated to your account is displayed. No need to choose something from the list here, it serves only for information purpose.
-    ![]({{file name='NxIDE_pref_connect_account.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=450,border=true)
-3.  Click on **OK**.
-    The Preferences window closes.
-    You can now go to the "Nuxeo Studio" tab to browse your Studio customizations.
-
-## Step 3 - Register a Nuxeo SDK
-
-1.  Open the **Nuxeo SDK** preference page (**Window** / **Preferences** / **Nuxeo** / **Nuxeo SDK** menu on Windows and Linux or **Eclipse** / **Preferences** / **Nuxeo** / **Nuxeo SDK** on Mac OS).
-2.  Click on **Add** and browse to your Nuxeo Platform SDK directory.
-3.  **Check** that SDK in the list and click on the **OK** button to finish.
-    The checkbox marks the Nuxeo Platform SDK version to use in the Eclipse workspace. You can easily switch from a Nuxeo Platform SDK version to another, for instance when testing your developments against a newer Nuxeo Platform version.
-
-## Step 4 - Install Nuxeo Generator
+## Step 1 - Install Nuxeo Generator
 
 From a command line prompt, type:
 
-```
+```bash
 npm install -g yo generator-nuxeo
 ```
 
@@ -512,7 +439,8 @@ The Nuxeo Generator lets you easily scaffold common Nuxeo components like empty 
 
 We'll use it to generate a new Nuxeo project and an operation.
 
-## Step 5 - Implement an Operation
+
+## Step 2 - Implement an Operation
 
 We want to create an operation that indicates the date of renegotiation of a contract, by fetching the document's start date and adding three months to it.
 
@@ -520,13 +448,14 @@ An operation is a Java class in which you can put custom business logic. It is u
 
 Once created, the operation can be exposed in Nuxeo Studio and used as any other operation, in automation chains and automation scripts. See the [Automation]({{page page='automation'}}) section for more information about operations.
 
-#### Create Your Nuxeo Plugin Project
+
+#### Create Your Project
 
 From a command line:
 
 1.  Create an empty folder to store your project.
 
-    ```
+    ```bash
     mkdir contract-mgt-project
     cd contract-mgt-project
     ```
@@ -539,7 +468,7 @@ From a command line:
 
 3.  Fill in the prompted parent project creation ("Multi module"):
 
-    ```bash
+    ```
     ? Use a parent artifact (for instance your company's BOM or the org.nuxeo.ecm.distribution:nuxeo-distribution POM)? y
     ? Parent Group id: org.nuxeo.ecm.distribution
     ? Parent Artifact id: nuxeo-distribution
@@ -552,7 +481,7 @@ From a command line:
 
 4.  Fill in the prompted project itself ("Single module"):
 
-    ```bash
+    ```
     ? Project Group id: com.bigcorp.contractmgt
     ? Project Artifact id: contract-mgt-project-core
     ? Project version: 1.0-SNAPSHOT
@@ -580,7 +509,7 @@ From a command line:
     1.  Select **File** / **Import** / **General** / **Existing Projects into Workspace**.
     2.  Browse to your project root folder (`contract-mgt-project`), then click **Finish**.
         ![]({{file name='eclipse_import_project.png'}} ?w=400)
-7.  Convert the project to a Nuxeo project: right-click on the project name, then choose **Nuxeo** / **Convert to Nuxeo Project**.
+
 
 #### Code Your Operation
 
@@ -592,17 +521,24 @@ From a command line:
 
 2.  You are prompted for a few details:
 
-    ```bash
+    ```
     ? Operation package: com.bigcorp.contractmgt
     ? Operation class name: ContractUpdater
     ? Operation label: Contract Updater
     ```
 
-3.  In Eclipse, right-click on the project and press refresh (F5).
+3.  Update the dependencies:
+
+    ```bash
+    mvn eclipse:eclipse
+    ```
+
+4.  In Eclipse, right-click on the project and press refresh (F5).
     You get something like this for the operation, in `src/main/java`:
 
     ```java
     package com.bigcorp.contractmgt;
+
     import org.apache.commons.lang3.StringUtils;
     import org.nuxeo.ecm.automation.core.Constants;
     import org.nuxeo.ecm.automation.core.annotations.Context;
@@ -612,6 +548,7 @@ From a command line:
     import org.nuxeo.ecm.core.api.CoreSession;
     import org.nuxeo.ecm.core.api.DocumentModel;
     import org.nuxeo.ecm.core.api.PathRef;
+
     /**
      *
      */
@@ -633,13 +570,11 @@ From a command line:
     }
     ```
 
-4.  Time to fill the skeleton and start coding. Here is the final result:
+4.  Time to fill in the skeleton and start coding. Here is the final result:
 
-    ```
-    /**
-     * @author mlumeau
-     */
+    ```java
     package com.bigcorp.contractmgt;
+
     import java.util.Calendar;
     import org.nuxeo.ecm.automation.core.Constants;
     import org.nuxeo.ecm.automation.core.annotations.Operation;
@@ -647,6 +582,10 @@ From a command line:
     import org.nuxeo.ecm.automation.core.collectors.DocumentModelCollector;
     import org.nuxeo.ecm.core.api.DocumentModel;
     import org.nuxeo.ecm.core.api.NuxeoException;
+
+    /**
+     *
+     */
     @Operation(id = ContractUpdater.ID, category = Constants.CAT_DOCUMENT, label = "Contract Updater", description = "On a contract, sets the reminder date to three months after its start date.")
     public class ContractUpdater {
 
@@ -673,20 +612,24 @@ From a command line:
     }
     ```
 
+
 #### Update the Unit Test
 
-A unit test comes along in `src/test/java`. You will need it to pass in order to compile and deploy your project.
+A unit test has been created in `src/test/java`. You will need it to pass in order to compile and deploy your project.
 
 1.  Replace it with the following code:
 
     ```java
     package com.bigcorp.contractmgt;
+
     import static org.junit.Assert.assertEquals;
     import static org.junit.Assert.assertNotNull;
     import static org.junit.Assert.assertNull;
+
     import java.util.Calendar;
     import java.util.GregorianCalendar;
     import javax.inject.Inject;
+
     import org.junit.Test;
     import org.junit.runner.RunWith;
     import org.nuxeo.ecm.automation.test.AutomationFeature;
@@ -698,14 +641,16 @@ A unit test comes along in `src/test/java`. You will need it to pass in order to
     import org.nuxeo.runtime.test.runner.Deploy;
     import org.nuxeo.runtime.test.runner.Features;
     import org.nuxeo.runtime.test.runner.FeaturesRunner;
+
     @RunWith(FeaturesRunner.class)
     @Features(AutomationFeature.class)
     @RepositoryConfig(init = DefaultRepositoryInit.class, cleanup = Granularity.METHOD)
-    // Replace "your.studio.project.symbolic.name"
-    // With studio.extensions.MAVEN-ARTIFACT-ID
-    // The bundle's Maven artifact id can be found in:
+
+    // Be sure to replace studio.extensions.MAVEN-ARTIFACT-ID
+    // with your Studio project's symbolic name.
+    // You can find it here:
     // Settings / Application Information / Maven Artifact id field
-    @Deploy({"com.bigcorp.contractmgt.contract-mgt-project-core", "your.studio.project.symbolic.name"})
+    @Deploy({"com.bigcorp.contractmgt.contract-mgt-project-core", "studio.extensions.MAVEN-ARTIFACT-ID"})
     public class TestContractUpdater {
           @Inject
           protected CoreSession session;
@@ -719,44 +664,49 @@ A unit test comes along in `src/test/java`. You will need it to pass in order to
               // At this stage, the reminder date should be empty
               assertNull(doc.getPropertyValue(ContractUpdater.CONTRACT_REMINDER));
 
-              // We'll save the document in the database
-              // That should trigger an event handler that will set the reminder date
+              // We'll save the document in the database which will
+              // trigger an event handler that sets the reminder date
               doc = session.createDocument(doc);
               session.save();
 
               // Now we'll check that the reminder date is set as expected
+              int currentMonth = now.get(Calendar.MONTH);
               GregorianCalendar reminder = (GregorianCalendar) doc.getPropertyValue(ContractUpdater.CONTRACT_REMINDER);
               assertNotNull("Reminder date is not set, check your automation chain.", reminder);
-              assertEquals("Reminder date is not set in three months from now", now.get(Calendar.MONTH) + 3, reminder.get(Calendar.MONTH));
+              assertEquals("Reminder date is not set in three months from now", (((currentMonth + 3) > 12) ? (currentMonth - 9):(currentMonth + 3)), reminder.get(Calendar.MONTH));
           }
     }
     ```
 
-2.  Now replace `your.studio.project.symbolic.name` by `studio.extensions.MAVEN-ARTIFACT-ID`. To get the Maven artifact ID go to Settings / Application Information and use the value found in the Maven Artifact id field.
+2.  Replace the `MAVEN-ARTIFACT-ID` in `studio.extensions.MAVEN-ARTIFACT-ID` with your Studio project's symbolic name. To get the Maven artifact ID, go to **Settings** > **Application Information** and use the value found in the **Maven Artifact id** field.
 
-If you try running the test (in Eclipse, right-click on your project and choose **Run As, JUnit Test**), you will notice that the test fails because we miss things in our Studio project. We need to add them to make the test pass; that's test driven development.
+If you try running the test (in Eclipse, right-click on your project and choose **Run As, JUnit Test**), you will notice that the test fails because our Studio project is missing a few things. We need to add them to make the test pass.
 
-#### Send the Operation in Studio
 
-1.  Click on the Export Operation button ![]({{file name='export.gif' space='nxdoc58' page='getting-familiar-with-nuxeo-ide'}}) on the Nuxeo Studio tab of the left menu.
-2.  Select the Studio project in the drop down menu, and the Eclipse project to look for operation. Then click **Next**.
-    ![]({{file name='select_studio_project.png'}} ?w=450,border=true)
-    You should now see your operation under the Document category in automation. Which means we can now finish our automation chain.
+#### Send the Operation to Studio
 
-## Step 6 - Create Your Chain in Nuxeo Studio
+1.  Build a jar file (without running the tests):
 
-**Step 1: Create an automation chain**
+    ```bash
+    mvn -DskipTests package
+    ```
+
+2.  Deploy the jar in your Nuxeo server by copying it to **$NuxeoServer/nxserver/bundles**, then restart your server. You should now see the **Contract Updater** operation under the Document category in Automation, which means we can now finish our Automation Chain.
+
+
+## Step 3 - Create Your Chain in Nuxeo Studio
+
+**Create an Automation Chain**
 
 1.  In the Studio menu **Automation** > **Automation Chains**, click on **New.**
 2.  Call your chain `ContractUpdater`.
 3.  Keep the **Fetch > Context Document(s)** operation and add your own operation, available in **Document > ContractUpdater.**
-    **![]({{file name='contractUpdater_chain.png'}} ?w=600,border=true)
-    **
+    **![]({{file name='contractUpdater_chain.png'}} ?w=600,border=true)**
 4.  Click on **Save**.
 
-**Step 2: Create an Event Handler**
+**Create an Event Handler**
 
-You now have to create an Event Handler in order to call your operation when a contract is created.
+Now create an Event Handler in order to call your operation when a contract is created.
 
 1.  In the Studio menu **Automation** > **Event Handlers**, click on **New**.
 2.  Call the event handler `SetReminderDate`.
@@ -766,21 +716,72 @@ You now have to create an Event Handler in order to call your operation when a c
     *   **Event Handler Execution**: Choose your automation chain `ContractUpdater`.
 4.  Click on **Save**.
 
-Now, you can try it on your server either by running the unit tests, or by testing manually.
+Now you can try it on your server either by running the unit tests or by testing manually.
 
-## Step 7 - Test the Code
 
-The code can either be tested through unit tests, or manually.You need to bind the Studio project anyway to have it deployed during the unit tests or on the server when testing manually.
+## Step 4 - Test the Code
+
+The code can either be tested through unit tests or manually. You need to bind the Studio project first to have it deployed during the unit tests or on the server when testing manually.
+
 
 ### Bind the Studio Project
 
-Right-click on your project name, then choose "**Properties**".
+1.  Under **Source Control** > **Branch Management**, tag or release the most recent commit on your project. This will generate a version of your project that can be accessed by Maven.
 
-In the **Nuxeo / Nuxeo Studio** menu,check your Nuxeo Studio project and press OK.
+2.  Add the following entry to your `~/.m2/settings.xml` file. This configures your Maven client to use authentication when accessing the Studio Maven repository.
 
-![]({{file name='studio-project-binding.png'}} ?w=300,thumbnail=true)
+    ```xml
+    <servers>
+      ....
+      <server>
+        <id>nuxeo-studio</id>
+        <username>your_studio_username</username>
+        <password>your_studio_password</password>
+      </server>
+      ...
+    </servers>
+    ```
 
-### **Using Unit** Tests
+3. In the `pom.xml`, declare the Studio Maven repository:
+
+    ```xml
+    <repositories>
+      ...
+      <repository>
+        <id>nuxeo-studio</id>
+        <url>https://connect.nuxeo.com/nuxeo/site/studio/maven</url>
+        <releases>
+          <enabled>true</enabled>
+        </releases>
+        <snapshots>
+          <enabled>true</enabled>
+          <updatePolicy>always</updatePolicy>
+        </snapshots>
+      </repository>
+      ...
+    </repositories>
+    ```
+
+4. Declare the dependency of the Studio project you just tagged:
+
+    ```xml
+    <dependency>
+      <groupId>nuxeo-studio</groupId>
+      <artifactId>myproject</artifactId>
+      <version>0.0.1</version>
+    </dependency>
+    ```
+
+The `artifactId` is identical to the `MAVEN-ARTIFACT-ID` we referenced before. Use the `version` number from your latest release or tag.
+
+5.  Update the dependencies.
+
+    ```bash
+    mvn eclipse:eclipse
+    ```
+
+
+### Using Unit Tests
 
 1.  In Eclipse, click on the **Refresh** button on the Nuxeo Studio tab of the left menu (![]({{file name='NxIDE_refresh_button.png' space='idedoc' page='creating-your-first-nuxeo-project'}} ?w=16,h=17)).
 
@@ -789,44 +790,18 @@ In the **Nuxeo / Nuxeo Studio** menu,check your Nuxeo Studio project and press O
 
 Using unit tests is the recommended way to ensure a feature is working as expected. Unit tests are triggered automatically whenever you compile your project using Maven, and as such they help you in maintaining a high quality level.
 
+
 ### Testing Manually
-
-#### Creating a Deployment Profile
-
-At this stage we want to create a new default profile, called "My Projects" that includes the `contract-mgt-project`.
-
-1.  Go into the **Nuxeo Server** tab (on the bottom right).
-2.  Click on the button ![]({{file name='NxIDE_deploy_project_button.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}}) in the tab toolbar. The button tooltip is "Select projects to deploy on server".
-3.  Click on **Add**.
-    ![]({{file name='NxIDE_deployment_profile_conf.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=450,border=true)
-4.  Enter a name (in the right panel) for your deployment profile. Example: "My Projects&rdquo;.
-5.  In the left panel click on the newly created profile.
-6.  In the right panel, check the projects that will be deployed with this profile.
-7.  If you want the new profile to be the default deployment profile, check it.
-8.  Click on the **OK** button.
-9.  Here is what you should get:
-    ![]({{file name='NxIDE_deployment_profile.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=450,border=true)
-    Now every time you start the Nuxeo server or you click on the **Reload projects on server** button ![]({{file name='NxIDE_refresh_button.png' space='idedoc' page='creating-your-first-nuxeo-project'}} ?w=16,h=17) in the Nuxeo Server tab toolbar, the projects selected in the current profile will be (re)deployed on the server.
 
 #### Starting the Server
 
 To start the server:
 
-1.  Click on the **Run** button in the toolbar (![]({{file name='NxIDE_start_server_button.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}})).
-2.  Wait until the server starts.
-    ![]({{file name='NxIDE_start_server.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=400,border=true)
-3.  When done (i.e when the **Stop** button is enabled), open a browser and login using the 'Administrator/Administrator' account.
-
-    {{#> callout type='tip' }}
-
-    You can open the browser by clicking the **Browse** button (![]({{file name='NxIDE_browse_button.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}})).
-
-    {{/callout}}
-4.  Click on the **Reload projects on server** button in the **Nuxeo Server** tab (![]({{file name='NxIDE_refresh_button.png' space='idedoc' page='creating-your-first-nuxeo-project'}} ?w=16,h=17)).
-5.  In Nuxeo Platform, create a new contract with the following information:
+1.  Start your Nuxeo server. In Nuxeo Platform, update your Studio package from the Update Center.
+2.  Create a new Contract with the following information:
     *   Title: Maintenance Contract
     *   Contract Owner: Nuxeo
-    *   Starting Date: Choose today's dateYou should end up with something like this:
+    *   Starting Date: Choose today's date. You should end up with something like this:
     ![]({{file name='result.png'}} ?w=600,border=true)
 
 {{#> callout type='info' }}
