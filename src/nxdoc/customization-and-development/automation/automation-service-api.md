@@ -44,7 +44,6 @@ history:
         version: '1'
 
 ---
-<div class="row"><div class="column medium-8">
 
 On server side, [AutomationService](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/automation/AutomationService.html) can be used to:
 
@@ -53,10 +52,6 @@ On server side, [AutomationService](http://community.nuxeo.com/api/nuxeo/5.8/jav
 *   Run contributed operation
 
 This service provides chain(s)/operation(s) parameters setting and [OperationContext](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/automation/OperationContext.html) instantiation to inject Automation input(s).
-
-</div><div class="column medium-4">{{#> panel heading='In this section'}}
-
-{{/panel}}</div></div>
 
 ## Run contributed chain with chain/operations
 
