@@ -4,6 +4,8 @@ review:
     comment: ''
     date: '2016-10-19'
     status: ok
+labels:
+    - content-review-lts2016
 confluence:
     ajs-parent-page-id: '29460589'
     ajs-parent-page-title: Getting Started with the Nuxeo Platform

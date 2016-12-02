@@ -6,6 +6,8 @@ review:
     status: ok
 redirect: nxdoc/dbs
 redirect_source: DBS
+labels:
+    - content-review-lts2016
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
