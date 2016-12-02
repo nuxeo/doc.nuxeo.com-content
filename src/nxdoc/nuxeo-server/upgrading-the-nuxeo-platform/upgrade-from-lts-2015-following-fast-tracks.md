@@ -588,6 +588,14 @@ As mentioned above in the [Functional Tests](#functional-tests) section, if the 
 
 See [NXP-20939](https://jira.nuxeo.com/browse/NXP-20939) for details.
 
+#### Moved Code
+
+##### Select2 Operations
+
+The operations used by select2 widgets have been extracted from the nuxeo-platform-ui-select2 bundle to the nuxeo-automation-features one:
+ - [org.nuxeo.ecm.platform.ui.select2.automation.SuggestUserEntries](https://github.com/nuxeo/nuxeo/blob/7.10/nuxeo-features/nuxeo-platform-ui-select2/src/main/java/org/nuxeo/ecm/platform/ui/select2/automation/SuggestUserEntries.java) is now  [org.nuxeo.ecm.automation.core.operations.users.SuggestUserEntries](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/core/operations/users/SuggestUserEntries.java)
+ - [org.nuxeo.ecm.platform.ui.select2.automation.SuggestDirectoryEntries](https://github.com/nuxeo/nuxeo/blob/7.10/nuxeo-features/nuxeo-platform-ui-select2/src/main/java/org/nuxeo/ecm/platform/ui/select2/automation/SuggestDirectoryEntries.java) is now  [org.nuxeo.ecm.automation.core.operations.services.directory.SuggestDirectoryEntries](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/core/operations/services/directory/SuggestDirectoryEntries.java)
+
 {{> end_of_tabs }}
 
 * * *
