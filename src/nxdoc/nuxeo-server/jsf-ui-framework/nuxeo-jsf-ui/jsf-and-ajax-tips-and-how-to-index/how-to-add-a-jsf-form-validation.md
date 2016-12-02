@@ -13,6 +13,7 @@ details:
         tool: Code
         topics: 'Layout, JSF UI, Validation'
 labels:
+    - content-review-lts2016
     - validator
     - jsf
     - howto

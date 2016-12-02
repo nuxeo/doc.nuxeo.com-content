@@ -11,6 +11,7 @@ details:
         tool: Code editor
         topics: 'Theme, JSF UI'
 labels:
+    - content-review-lts2016
     - error-page
     - theme
     - howto

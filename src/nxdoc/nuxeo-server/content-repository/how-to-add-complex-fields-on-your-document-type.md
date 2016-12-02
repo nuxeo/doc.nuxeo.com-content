@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: 'Document type, Schema'
 labels:
+    - content-review-lts2016
     - schema
     - howto
     - document-type

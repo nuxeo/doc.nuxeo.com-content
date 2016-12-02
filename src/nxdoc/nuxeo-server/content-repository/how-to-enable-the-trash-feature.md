@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: 'Document type, Life cycle'
 labels:
+    - content-review-lts2016
     - document-type
     - delete
     - life-cycle

@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: Permissions
 labels:
+    - content-review-lts2016
     - howto
     - access-right
     - studio

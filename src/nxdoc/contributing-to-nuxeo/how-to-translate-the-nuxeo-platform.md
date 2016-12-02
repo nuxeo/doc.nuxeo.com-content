@@ -11,6 +11,7 @@ details:
         tool: Crowdin
         topics: 'Labels, Localization, Translation'
 labels:
+    - content-review-lts2016
     - i10n
     - internationalization
     - translation

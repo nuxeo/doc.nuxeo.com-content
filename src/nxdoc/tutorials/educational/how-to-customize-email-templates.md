@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: Alerts
 labels:
+    - content-review-lts2016
     - howto
     - link-update
     - mail-template

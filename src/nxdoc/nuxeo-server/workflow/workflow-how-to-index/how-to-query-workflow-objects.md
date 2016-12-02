@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: 'Workflow, NXQL, Query'
 labels:
+    - content-review-lts2016
     - query
     - persistence
     - nxql

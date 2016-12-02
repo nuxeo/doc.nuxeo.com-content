@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: 'Content View, Virtual Navigation, Vocabulary'
 labels:
+    - content-review-lts2016
     - virtual-navigation
     - howto
     - content-view

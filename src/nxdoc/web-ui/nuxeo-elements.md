@@ -6,6 +6,7 @@ review:
     status: ok
 toc: true
 labels:
+    - content-review-lts2016
     - nuxeo-elements-component
     - nuxeo-elements
 confluence:

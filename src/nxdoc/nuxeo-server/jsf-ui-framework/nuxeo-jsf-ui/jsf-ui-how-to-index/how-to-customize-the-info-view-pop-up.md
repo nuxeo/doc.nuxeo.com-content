@@ -13,6 +13,7 @@ details:
         tool: Code editor
         topics: 'Info-view, JSF UI'
 labels:
+    - content-review-lts2016
     - howto
     - search-tab-component
 toc: true

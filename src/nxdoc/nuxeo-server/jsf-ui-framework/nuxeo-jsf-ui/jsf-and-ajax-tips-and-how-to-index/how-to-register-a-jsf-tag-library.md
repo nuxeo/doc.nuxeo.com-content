@@ -11,6 +11,7 @@ details:
         tool: Code
         topics: JSF
 labels:
+    - content-review-lts2016
     - howto
     - jsf
     - seam-jsf-component

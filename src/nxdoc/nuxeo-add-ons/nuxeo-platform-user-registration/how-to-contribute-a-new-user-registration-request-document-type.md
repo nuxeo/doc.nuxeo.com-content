@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: User registration
 labels:
+    - content-review-lts2016
     - howto
     - user-registration
     - user-registration-component

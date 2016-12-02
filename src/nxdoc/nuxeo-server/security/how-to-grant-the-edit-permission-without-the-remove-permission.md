@@ -14,6 +14,7 @@ details:
         tool: XML Extension
         topics: Permissions
 labels:
+    - content-review-lts2016
     - howto
     - link-update
     - permission

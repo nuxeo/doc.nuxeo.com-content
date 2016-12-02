@@ -13,6 +13,7 @@ details:
         tool: 'Studio, XML extensions'
         topics: Content View
 labels:
+    - content-review-lts2016
     - navigation-tree
     - howto
     - content-view

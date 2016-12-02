@@ -14,6 +14,7 @@ details:
         tool: Studio
         topics: Layout
 labels:
+    - content-review-lts2016
     - howto
     - layout-widgets-component
     - layout

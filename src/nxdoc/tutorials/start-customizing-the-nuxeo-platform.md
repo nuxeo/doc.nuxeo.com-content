@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - home
 version_override:
     'LTS 2015': 710/nxdoc/quick-start-dev-guide

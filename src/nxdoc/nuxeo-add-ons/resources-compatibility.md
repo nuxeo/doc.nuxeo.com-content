@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - resources-compatibility
 confluence:
     ajs-parent-page-id: '16089349'

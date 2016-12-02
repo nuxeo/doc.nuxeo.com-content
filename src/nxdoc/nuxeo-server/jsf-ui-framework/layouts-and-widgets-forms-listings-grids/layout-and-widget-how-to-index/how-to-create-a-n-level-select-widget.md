@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: 'Layout, Widget'
 labels:
+    - content-review-lts2016
     - widget
     - layout
     - howto

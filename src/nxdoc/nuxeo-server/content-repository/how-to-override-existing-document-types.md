@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: 'Document type, Override'
 labels:
+    - content-review-lts2016
     - howto
     - document-type
     - excerpt

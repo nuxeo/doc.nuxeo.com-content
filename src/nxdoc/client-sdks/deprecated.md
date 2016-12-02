@@ -5,6 +5,7 @@ review:
     date: '2016-10-25'
     status: ok
 labels:
+    - content-review-lts2016
     - client
     - deprecated
 toc: true

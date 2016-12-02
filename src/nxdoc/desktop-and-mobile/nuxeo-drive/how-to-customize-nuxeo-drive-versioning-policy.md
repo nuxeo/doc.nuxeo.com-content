@@ -13,6 +13,7 @@ details:
         tool: XML Extention
         topics: 'Nuxeo Drive, Versioning'
 labels:
+    - content-review-lts2016
     - link-update
     - howto
     - nuxeo-drive

@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: 'Bulk edit, JSF UI'
 labels:
+    - content-review-lts2016
     - howto
     - layout
 toc: true

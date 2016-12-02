@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: 'Workflow, Automation, Task'
 labels:
+    - content-review-lts2016
     - howto
     - automation
     - create-task-operation

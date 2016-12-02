@@ -12,6 +12,7 @@ details:
         tool: Studio
         topics: 'Content view, Elasticsearch, Query'
 labels:
+    - content-review-lts2016
     - elasticsearch
     - content-view
     - howto

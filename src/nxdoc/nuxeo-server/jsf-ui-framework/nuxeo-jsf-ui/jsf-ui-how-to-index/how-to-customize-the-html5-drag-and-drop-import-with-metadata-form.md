@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: 'Drag and Drop, Layout'
 labels:
+    - content-review-lts2016
     - howto
 confluence:
     ajs-parent-page-id: '20517820'

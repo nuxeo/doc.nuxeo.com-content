@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: 'Workflow, Widget'
 labels:
+    - content-review-lts2016
     - widget
     - howto
     - workflow

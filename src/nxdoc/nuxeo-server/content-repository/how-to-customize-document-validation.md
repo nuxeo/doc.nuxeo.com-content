@@ -13,6 +13,7 @@ details:
         tool: Code Editor
         topics: 'Document Type, Validation'
 labels:
+    - content-review-lts2016
     - howto
     - schema-component
 toc: true

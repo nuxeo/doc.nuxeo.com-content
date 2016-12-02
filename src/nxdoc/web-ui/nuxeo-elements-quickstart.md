@@ -11,6 +11,7 @@ details:
         tool: Dev environment
         topics: 'Nuxeo Elements, REST API'
 labels:
+    - content-review-lts2016
     - nuxeo-elements
     - howto
     - nuxeo-elements-component

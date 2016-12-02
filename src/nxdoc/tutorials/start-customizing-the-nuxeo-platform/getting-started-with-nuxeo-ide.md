@@ -11,6 +11,7 @@ details:
         tool: 'Nuxeo IDE, Nuxeo Studio'
         topics: 'Automation, Layout'
 labels:
+    - content-review-lts2016
     - howto
     - ide
 toc: true

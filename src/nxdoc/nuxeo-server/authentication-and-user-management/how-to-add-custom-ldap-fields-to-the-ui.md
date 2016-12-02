@@ -13,6 +13,7 @@ details:
         tool: XML extension
         topics: 'Authentication, LDAP'
 labels:
+    - content-review-lts2016
     - ldap
     - howto
     - authentation

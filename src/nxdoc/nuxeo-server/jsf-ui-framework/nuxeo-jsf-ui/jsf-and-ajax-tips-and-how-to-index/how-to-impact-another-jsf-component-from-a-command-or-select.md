@@ -11,6 +11,7 @@ details:
         tool: Nuxeo IDE
         topics: 'Layout, JSF UI'
 labels:
+    - content-review-lts2016
     - howto
     - seam-jsf-component
     - jsf

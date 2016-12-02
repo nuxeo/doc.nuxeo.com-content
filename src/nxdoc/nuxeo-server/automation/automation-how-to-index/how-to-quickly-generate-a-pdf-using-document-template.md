@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: 'Automation, Conversion, Document template'
 labels:
+    - content-review-lts2016
     - howto
     - automation
     - conversion

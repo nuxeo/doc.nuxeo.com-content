@@ -11,6 +11,7 @@ details:
         tool: Code
         topics: Bundle
 labels:
+    - content-review-lts2016
     - dev-guide
     - manifest
     - bundle

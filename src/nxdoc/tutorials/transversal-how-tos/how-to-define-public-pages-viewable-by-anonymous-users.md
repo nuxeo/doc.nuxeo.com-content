@@ -11,6 +11,7 @@ details:
         tool: Code
         topics: Access rights
 labels:
+    - content-review-lts2016
     - anonymous
     - howto
     - excerpt

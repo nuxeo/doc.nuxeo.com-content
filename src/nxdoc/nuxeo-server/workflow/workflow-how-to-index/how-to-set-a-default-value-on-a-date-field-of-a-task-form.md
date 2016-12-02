@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: Workflow
 labels:
+    - content-review-lts2016
     - workflow
     - howto
     - excerpt
