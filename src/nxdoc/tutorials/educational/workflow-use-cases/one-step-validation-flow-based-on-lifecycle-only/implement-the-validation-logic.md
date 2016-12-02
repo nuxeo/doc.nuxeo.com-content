@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - tuto-automation
 confluence:
     ajs-parent-page-id: '3345551'

@@ -11,6 +11,7 @@ details:
         tool: Code
         topics: 'JSF, JavaScript'
 labels:
+    - content-review-lts2016
     - jsf
     - javascript
     - howto

@@ -14,6 +14,7 @@ details:
         tool: Studio
         topics: 'Document type, Nuxeo CSV'
 labels:
+    - content-review-lts2016
     - nuxeo-csv
     - howto
     - csv-importer-component

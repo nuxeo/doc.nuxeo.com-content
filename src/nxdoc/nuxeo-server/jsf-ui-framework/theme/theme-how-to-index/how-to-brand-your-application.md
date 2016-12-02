@@ -5,6 +5,8 @@ review:
     date: '2015-12-01'
     status: ok
 redirect: studio/branding-configuration
+labels:
+    - content-review-lts2016
 confluence:
     ajs-parent-page-id: '19235625'
     ajs-parent-page-title: Theme How-To Index

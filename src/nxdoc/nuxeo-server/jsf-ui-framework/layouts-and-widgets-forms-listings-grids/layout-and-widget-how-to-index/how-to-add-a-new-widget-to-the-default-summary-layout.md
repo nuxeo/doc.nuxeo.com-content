@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: 'Layout, JSF UI'
 labels:
+    - content-review-lts2016
     - summary-layout
     - incremental-layout
     - howto

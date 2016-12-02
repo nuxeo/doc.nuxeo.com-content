@@ -13,6 +13,7 @@ details:
         tool: Code
         topics: 'Plug-ins, TinyMCE, JSF UI'
 labels:
+    - content-review-lts2016
     - howto
     - tinymce
     - tinymce-component

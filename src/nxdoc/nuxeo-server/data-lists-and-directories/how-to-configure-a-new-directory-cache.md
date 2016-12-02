@@ -13,6 +13,7 @@ details:
         tool: XML Extension
         topics: 'Directory, Vocabulary'
 labels:
+    - content-review-lts2016
     - howto
     - directory-component
 confluence:

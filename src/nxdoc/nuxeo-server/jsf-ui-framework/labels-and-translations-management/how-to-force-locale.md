@@ -11,6 +11,7 @@ details:
         tool: XML extensions
         topics: Localization
 labels:
+    - content-review-lts2016
     - localization
     - howto
     - i18n

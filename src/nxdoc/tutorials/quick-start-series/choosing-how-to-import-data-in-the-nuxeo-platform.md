@@ -5,6 +5,7 @@ review:
     date: '2016-11-02'
     status: ok
 labels:
+    - content-review-lts2016
     - import
 toc: true
 confluence:

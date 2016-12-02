@@ -11,6 +11,7 @@ details:
         tool: Nuxeo Studio
         topics: 'Document type, Style'
 labels:
+    - content-review-lts2016
     - howto
     - studio
 toc: true

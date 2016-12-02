@@ -12,6 +12,7 @@ details:
         tool: Studio
         topics: 'Document type, Automation, Conversion'
 labels:
+    - content-review-lts2016
     - howto
     - conversion
     - pdf

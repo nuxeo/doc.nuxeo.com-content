@@ -13,6 +13,7 @@ details:
         tool: ''
         topics: 'Server configuration, URL'
 labels:
+    - content-review-lts2016
     - howto
 confluence:
     ajs-parent-page-id: '31032113'

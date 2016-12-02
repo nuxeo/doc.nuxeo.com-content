@@ -13,6 +13,7 @@ details:
         tool: Code editor
         topics: 'Theme, Style'
 labels:
+    - content-review-lts2016
     - theme
     - style
     - howto

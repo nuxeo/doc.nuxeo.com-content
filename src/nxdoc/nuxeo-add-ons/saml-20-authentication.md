@@ -5,6 +5,7 @@ review:
     date: '2016-11-21'
     status: ok
 labels:
+    - content-review-lts2016
     - saml-component
     - migration-sample
 toc: true

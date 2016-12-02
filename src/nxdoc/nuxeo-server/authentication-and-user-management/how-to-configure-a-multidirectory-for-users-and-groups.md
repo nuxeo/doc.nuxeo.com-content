@@ -12,6 +12,7 @@ details:
         tool: XML configuration
         topics: 'LDAP, Multidirectory'
 labels:
+    - content-review-lts2016
     - ldap
     - howto
     - directory-component

@@ -12,6 +12,7 @@ details:
         tool: Code editor
         topics: 'Filter, User action, JSF UI'
 labels:
+    - content-review-lts2016
     - howto
     - action
     - filter

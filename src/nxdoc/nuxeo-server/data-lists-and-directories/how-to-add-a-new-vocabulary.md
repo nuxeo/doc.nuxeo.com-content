@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: Vocabulary
 labels:
+    - content-review-lts2016
     - vocabulary
     - howto
     - studio

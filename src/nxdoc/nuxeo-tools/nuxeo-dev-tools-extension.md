@@ -6,6 +6,8 @@ review:
     date: '2016-10-17'
     status: ok
     comment: ''
+labels:
+    - content-review-lts2016
 
 ---
 {{! excerpt}}

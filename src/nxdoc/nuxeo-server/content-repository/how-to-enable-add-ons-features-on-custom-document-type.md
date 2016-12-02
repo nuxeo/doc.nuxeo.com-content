@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: Document type
 labels:
+    - content-review-lts2016
     - howto
     - document-type
     - excerpt

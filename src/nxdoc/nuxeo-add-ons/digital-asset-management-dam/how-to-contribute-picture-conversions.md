@@ -11,6 +11,7 @@ details:
         tool: XML Extension
         topics: 'Conversion, DAM'
 labels:
+    - content-review-lts2016
     - howto
     - conversion
     - picture

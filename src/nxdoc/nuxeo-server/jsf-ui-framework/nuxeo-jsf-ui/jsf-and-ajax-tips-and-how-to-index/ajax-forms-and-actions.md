@@ -11,6 +11,7 @@ details:
         tool: Code
         topics: 'JSF, Ajax'
 labels:
+    - content-review-lts2016
     - ajax
     - a4j
     - ajax4jsf

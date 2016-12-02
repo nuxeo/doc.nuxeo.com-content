@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: 'Automation, Content view'
 labels:
+    - content-review-lts2016
     - howto
     - content-view
     - automation

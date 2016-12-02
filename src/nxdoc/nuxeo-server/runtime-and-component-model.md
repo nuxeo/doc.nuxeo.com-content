@@ -11,6 +11,7 @@ details:
             bundles, components and extension points relate to each other to let
             you create a fully customized application.
 labels:
+    - content-review-lts2016
     - extension-point
     - link-update
     - bundle

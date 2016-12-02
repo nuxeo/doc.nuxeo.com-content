@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: 'Layout, Nuxeo Drive'
 labels:
+    - content-review-lts2016
     - howto
     - nuxeo-drive
     - layout

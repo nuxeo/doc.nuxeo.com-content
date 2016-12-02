@@ -13,6 +13,7 @@ details:
         tool: 'XML extension, Code'
         topics: 'Conversion, DAM'
 labels:
+    - content-review-lts2016
     - howto
     - dam
     - conversion

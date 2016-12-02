@@ -5,6 +5,8 @@ review:
     date: '2015-12-01'
     status: ok
 toc: true
+labels:
+    - content-review-lts2016
 confluence:
     ajs-parent-page-id: '31033323'
     ajs-parent-page-title: Desktop and Mobile

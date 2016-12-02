@@ -11,6 +11,7 @@ details:
         tool: XML Extension
         topics: 'Web UI, JSF UI'
 labels:
+    - content-review-lts2016
     - howto
 confluence:
     ajs-parent-page-id: '20517820'

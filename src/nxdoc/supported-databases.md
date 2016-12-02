@@ -6,6 +6,8 @@ review:
     status: ok
 redirect: compatibility-matrix
 redirect_source: Compatibility Matrix
+labels:
+    - content-review-lts2016
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''

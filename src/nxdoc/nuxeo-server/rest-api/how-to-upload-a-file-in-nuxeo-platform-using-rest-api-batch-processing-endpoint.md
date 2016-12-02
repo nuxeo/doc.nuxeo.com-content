@@ -15,6 +15,7 @@ details:
         tool: Code
         topics: 'Import, REST API'
 labels:
+    - content-review-lts2016
     - import
     - rest-api
     - howto

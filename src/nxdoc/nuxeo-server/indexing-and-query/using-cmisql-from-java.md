@@ -13,6 +13,7 @@ details:
         tool: Code
         topics: 'CMIS, Query'
 labels:
+    - content-review-lts2016
     - howto
     - query
     - cmis

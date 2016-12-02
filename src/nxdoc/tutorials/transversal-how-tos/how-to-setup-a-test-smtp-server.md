@@ -11,6 +11,7 @@ details:
         tool: Code
         topics: Alerts
 labels:
+    - content-review-lts2016
     - howto
     - alerts
 confluence:

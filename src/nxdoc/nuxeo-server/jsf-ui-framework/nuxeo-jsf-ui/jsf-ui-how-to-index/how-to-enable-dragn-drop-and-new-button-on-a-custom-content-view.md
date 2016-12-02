@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: 'Content view, Tab, JSF UI, UI'
 labels:
+    - content-review-lts2016
     - howto
     - content-view
 toc: true

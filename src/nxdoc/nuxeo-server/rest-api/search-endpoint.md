@@ -14,6 +14,7 @@ details:
         tool: Code
         topics: 'Query, REST API'
 labels:
+    - content-review-lts2016
     - howto
     - elasticsearch
     - search

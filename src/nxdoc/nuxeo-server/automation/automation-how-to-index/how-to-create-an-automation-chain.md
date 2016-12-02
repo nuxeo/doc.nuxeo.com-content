@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: 'Automation, Event handler, User action'
 labels:
+    - content-review-lts2016
     - howto
     - automation
     - user-action

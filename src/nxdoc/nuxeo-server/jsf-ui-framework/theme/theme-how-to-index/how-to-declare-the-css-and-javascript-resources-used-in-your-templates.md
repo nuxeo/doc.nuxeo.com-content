@@ -13,6 +13,7 @@ details:
         tool: Code editor
         topics: Theme
 labels:
+    - content-review-lts2016
     - css
     - javascript
     - template

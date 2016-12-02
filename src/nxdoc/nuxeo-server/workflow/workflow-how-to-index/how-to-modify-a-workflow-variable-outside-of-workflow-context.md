@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: 'Workflow, Event, Listener'
 labels:
+    - content-review-lts2016
     - workflow
     - event
     - listener

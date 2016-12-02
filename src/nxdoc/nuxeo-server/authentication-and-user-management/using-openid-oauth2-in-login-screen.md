@@ -5,6 +5,7 @@ review:
     date: '2016-11-28'
     status: ok
 labels:
+    - content-review-lts2016
     - openid
     - oauth
     - openid-component

@@ -13,6 +13,7 @@ details:
         tool: 'Studio, Code'
         topics: JSF UI
 labels:
+    - content-review-lts2016
     - howto
     - dashboard
     - actions-filters-component

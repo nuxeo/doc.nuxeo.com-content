@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: 'Workflow, Transition'
 labels:
+    - content-review-lts2016
     - transition
     - workflow
     - howto

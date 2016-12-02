@@ -6,6 +6,7 @@ review:
     status: ok
 toc: true
 labels:
+    - content-review-lts2016
     - nuxeo-elements-component
 confluence:
     ajs-parent-page-id: '26316892'

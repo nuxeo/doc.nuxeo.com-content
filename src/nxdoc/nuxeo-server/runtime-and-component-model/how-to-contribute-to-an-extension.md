@@ -13,6 +13,7 @@ details:
         tool: 'Nuxeo IDE, Studio'
         topics: Extension point
 labels:
+    - content-review-lts2016
     - xml-extension
     - extension-point
     - studio

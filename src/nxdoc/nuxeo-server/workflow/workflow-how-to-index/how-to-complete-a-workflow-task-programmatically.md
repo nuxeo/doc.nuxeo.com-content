@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: 'Workflow, Task'
 labels:
+    - content-review-lts2016
     - workflow
     - link-update
     - howto

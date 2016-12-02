@@ -11,6 +11,7 @@ details:
         tool: Code
         topics: 'JSF, Ajax, jQuery'
 labels:
+    - content-review-lts2016
     - jquery
     - double-click
     - howto

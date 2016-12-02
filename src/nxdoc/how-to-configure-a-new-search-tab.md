@@ -6,6 +6,8 @@ review:
     status: ok
 redirect: how-to-configure-a-new-default-search-form-in-the-search-tab
 redirect_source: How to Configure a New Default Search Form in the Search Tab
+labels:
+    - content-review-lts2016
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''

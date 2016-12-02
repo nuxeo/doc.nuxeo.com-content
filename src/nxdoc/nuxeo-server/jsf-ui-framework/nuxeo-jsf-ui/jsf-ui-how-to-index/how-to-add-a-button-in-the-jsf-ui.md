@@ -15,6 +15,7 @@ details:
         tool: 'Studio, XML extension'
         topics: 'Automation, Extension, Tab, User action, JSF UI'
 labels:
+    - content-review-lts2016
     - howto
     - automation
     - user-action

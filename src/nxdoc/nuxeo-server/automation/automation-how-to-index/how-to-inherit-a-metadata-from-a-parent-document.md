@@ -16,6 +16,7 @@ details:
         tool: Studio
         topics: 'Automation, Event handler'
 labels:
+    - content-review-lts2016
     - howto
     - automation
     - studio

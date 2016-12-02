@@ -13,6 +13,7 @@ details:
         tool: Code
         topics: 'Query, REST API'
 labels:
+    - content-review-lts2016
     - endpoint
     - howto
     - page-provider

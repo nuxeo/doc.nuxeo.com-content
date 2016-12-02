@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: 'Workflow, Dashboard'
 labels:
+    - content-review-lts2016
     - task
     - dashboard
     - workflow

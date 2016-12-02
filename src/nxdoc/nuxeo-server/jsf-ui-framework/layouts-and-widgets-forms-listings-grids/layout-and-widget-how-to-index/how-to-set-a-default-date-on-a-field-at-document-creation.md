@@ -13,6 +13,7 @@ details:
         tool: 'Studio, Nuxeo IDE'
         topics: 'Layout, Event'
 labels:
+    - content-review-lts2016
     - event
     - handler
     - listener

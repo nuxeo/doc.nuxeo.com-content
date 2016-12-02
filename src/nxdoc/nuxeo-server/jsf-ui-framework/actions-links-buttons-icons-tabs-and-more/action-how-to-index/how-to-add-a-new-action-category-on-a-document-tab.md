@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: 'Document type, Tab, User action, Widget'
 labels:
+    - content-review-lts2016
     - howto
     - layout
     - action

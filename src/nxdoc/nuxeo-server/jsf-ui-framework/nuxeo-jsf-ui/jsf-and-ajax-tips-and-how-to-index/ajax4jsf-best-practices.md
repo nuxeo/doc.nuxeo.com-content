@@ -13,6 +13,7 @@ details:
         tool: Code
         topics: 'JSF, Ajax'
 labels:
+    - content-review-lts2016
     - ajax4jsf
     - todo
     - a4j
