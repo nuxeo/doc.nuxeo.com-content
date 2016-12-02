@@ -3,7 +3,7 @@ title: Nuxeo Dev Tools Extension
 description: The Nuxeo Dev Tools extension places some of the more commonly performed actions in the Nuxeo Platform at the administrator's fingertips in a convenient browser popup window.
 
 review:
-    date: '2016-10-17'
+    date: '2016-12-02'
     status: ok
     comment: ''
 labels:
@@ -16,7 +16,7 @@ The Nuxeo Dev Tools browser extension places some of the more commonly performed
 
 {{! /excerpt}}
 
-![Nuxeo Dev Tools extension]({{file name='nuxeo-dev-tools-extension.png'}})
+![Nuxeo Dev Tools extension]({{file name='nuxeo-dev-tools-extension.png'}} ?w=800,border=true)
 
 ## Installation
 
@@ -49,10 +49,10 @@ Features include:
 * Connect to API Playground
 * Toggle Automation Call Tracing
 * Useful Links menu
-* Document Search with JSON export (search with path, GUID or file name)
-    ![Searching documents from the Nuxeo Dev Tools extension]({{file name='nuxeo-dev-tools-extension-search.png'}})
-* One-click JSON export of document in current active tab
-    ![JSON Export of a document using the Nuxeo Dev Tools extension]({{file name='nuxeo-dev-tools-extension-json-export.png'}})
+* Document Search with JSON export (search with path, GUID or file name)<br /><br />
+    ![Searching documents from the Nuxeo Dev Tools extension]({{file name='nuxeo-dev-tools-extension-search.png'}} ?w=700,border=true)<br /><br />
+* One-click JSON export of document in current active tab<br /><br />
+    ![JSON Export of a document using the Nuxeo Dev Tools extension]({{file name='nuxeo-dev-tools-extension-json-export.png'}} ?w=700,border=true)
 
 
 ## Limitations
