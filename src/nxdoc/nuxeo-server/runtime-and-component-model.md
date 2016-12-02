@@ -4,12 +4,10 @@ review:
     comment: ''
     date: '2015-12-01'
     status: ok
-details:
-    '':
-        excerpt: >-
-            This page describes how the Nuxeo Platform is modular, and how
-            bundles, components and extension points relate to each other to let
-            you create a fully customized application.
+excerpt: >-
+    This page describes how the Nuxeo Platform is modular, and how
+    bundles, components and extension points relate to each other to let
+    you create a fully customized application.
 labels:
     - content-review-lts2016
     - extension-point
