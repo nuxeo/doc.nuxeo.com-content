@@ -424,7 +424,7 @@ Parmi les champs additionnels se trouve le choix des composants sur lesquels por
 
 Ce champ est principalement utilis&eacute; &agrave; des fins statistiques, pour conna&icirc;tre les composants qui ont besoin du plus d'attention pour les prochains d&eacute;veloppements.
 
-## {{> anchor 'field-additional-participant-group'}} <label for="customfield_10140">Additional Participant groups</label>
+## {{> anchor 'field-additional-participant-group'}} Additional Participant groups
 
 Ce champ permet de partager un ticket avec un groupe d'utilisateurs. Cette fonctionnalit&eacute; est principalement utilis&eacute;e pour les clients disposant de plusieurs comptes.
 
