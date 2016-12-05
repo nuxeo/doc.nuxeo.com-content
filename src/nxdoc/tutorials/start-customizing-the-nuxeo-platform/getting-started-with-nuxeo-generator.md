@@ -20,12 +20,12 @@ confluence:
     ajs-parent-page-title: Start Customizing the Nuxeo Platform
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Getting+Started+with+Nuxeo+Generator
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Getting+Started+with+Nuxeo+Generator'
+    canonical: Getting+Started+with+Nuxeo+IDE
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Getting+Started+with+Nuxeo+IDE'
     page_id: '20518158'
     shortlink: DhU5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/DhU5AQ'
-    source_link: /display/NXDOC/Getting+Started+with+Nuxeo+Generator
+    source_link: /display/NXDOC/Getting+Started+with+Nuxeo+IDE
 tree_item_index: 200
 history:
     -
@@ -415,16 +415,16 @@ history:
         version: '1'
 
 ---
-Here we want to add some server side Java logic that will update the contract's renegotiation date. In our exemple it will simply take the contract's start date and add three months to it, but you can think of integrating any custom logic in your Java class, including a connection to an external webservice or an ERP.
+Here we want to add some server side Java logic that will update the contract's renegotiation date. In our example it will simply take the contract's start date and add three months to it, but you can think of integrating any custom logic in your Java class, including a connection to an external webservice or an ERP.
 
 ## Prerequisites
 
-*   A Contract document type created at the [previous step]({{page page='getting-started-with-nuxeo-studio'}})
-*   [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars)
-*   The latest stable [NodeJS](https://nodejs.org) version should be installed on your machine
-*   Java 8 with JDK
-*   A Nuxeo SDK: [Nuxeo Platform 8.3 SDK](http://cdn.nuxeo.com/nuxeo-8.3/nuxeo-cap-8.3-tomcat-sdk.zip)
-*   npm 2.12.0+
+* A Contract document type created at the [previous step]({{page page='getting-started-with-nuxeo-studio'}})
+* [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars)
+* The latest stable [NodeJS](https://nodejs.org) version should be installed on your machine
+* Java 8 with JDK
+* npm 2.12.0+
+* Maven 3.3+ (see the Installing Maven section of page [Maven Usage]({{page version='' space='corg' page='maven-usage'}}))
 
 
 ## Step 1 - Install Nuxeo Generator
@@ -456,14 +456,14 @@ From a command line:
 1.  Create an empty folder to store your project.
 
     ```bash
-    mkdir contract-mgt-project
-    cd contract-mgt-project
+    $ mkdir contract-mgt-project
+    $ cd contract-mgt-project
     ```
 
 2.  Generate the project structure.
 
     ```bash
-    yo nuxeo
+    $ yo nuxeo
     ```
 
 3.  Fill in the prompted parent project creation ("Multi module"):
@@ -493,14 +493,14 @@ From a command line:
 5.  Generate Eclipse configuration files.
 
     ```bash
-    mvn install
+    $ mvn install
 
     # The following parameters (downloadSources, downloadJavadocs and useProjectReferences) are optional
     # For details, see Maven Eclipse Plugin documentation: https://maven.apache.org/plugins/maven-eclipse-plugin/eclipse-mojo.html
-    mvn eclipse:clean eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true -Declipse.useProjectReferences=true
+    $ mvn eclipse:clean eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true -Declipse.useProjectReferences=true
 
     # Linux and OS X users should run the following script to make Eclipse use different build directories than Maven:
-    curl -o- https://raw.githubusercontent.com/nuxeo/nuxeo/master/fixeclipse|bash
+    $ curl -o- https://raw.githubusercontent.com/nuxeo/nuxeo/master/fixeclipse|bash
     # A cross-platform script is also available for Windows users:
     # curl -o- https://raw.githubusercontent.com/nuxeo/nuxeo/master/scripts/fixeclipse.py|python
     ```
@@ -513,10 +513,10 @@ From a command line:
 
 #### Code Your Operation
 
-1.  Generate an operation code template:
+1.  In a terminal, generate an operation code template:
 
     ```bash
-    yo nuxeo operation
+    $ yo nuxeo operation
     ```
 
 2.  You are prompted for a few details:
@@ -530,10 +530,10 @@ From a command line:
 3.  Update the dependencies:
 
     ```bash
-    mvn eclipse:eclipse
+    $ mvn eclipse:eclipse
     ```
 
-4.  In Eclipse, right-click on the project and press refresh (F5).
+4.  In Eclipse, right-click on the project and click Refresh (F5).
     You get something like this for the operation, in `src/main/java`:
 
     ```java
@@ -685,13 +685,36 @@ If you try running the test (in Eclipse, right-click on your project and choose 
 
 #### Send the Operation to Studio
 
-1.  Build a jar file (without running the tests):
+1.  Build a JAR file (without running the tests):
 
     ```bash
-    mvn -DskipTests package
+    $ mvn -DskipTests package
     ```
 
-2.  Deploy the jar in your Nuxeo server by copying it to **$NuxeoServer/nxserver/bundles**, then restart your server. You should now see the **Contract Updater** operation under the Document category in Automation, which means we can now finish our Automation Chain.
+2.  Deploy the JAR in your Nuxeo server by copying it to **$NuxeoServer/nxserver/bundles**, then restart your server.
+
+3. Start your server and go to the local automation documentation at http://NuxeoServer:8080/nuxeo/site/automation/doc (http://localhost:8080/nuxeo/site/automation/doc typically).
+
+4. In the Document category click **Contract Updater**, then click on the **JSON definition** link and copy the operation definition.
+
+5. In Nuxeo Studio go to **Settings**&nbsp;> **Registries**&nbsp;> **Automation Operations** and paste the operation definition in an operation definition `"operations": []` and save.
+
+    ```
+    { "operations": [
+     {
+      "id" : "Document.ContractUpdater",
+      "label" : "Contract Updater",
+      "category" : "Document",
+      "requires" : null,
+      "description" : "On a contract, sets the reminder date to three months after its start date.",
+      "url" : "Document.ContractUpdater",
+      "signature" : [ "document", "document", "documents", "documents" ],
+      "params" : [ ]
+     }
+    ] }
+    ```
+
+The operation is now available in Automation Chain editor, in the Document category.
 
 
 ## Step 3 - Create Your Chain in Nuxeo Studio
@@ -701,7 +724,7 @@ If you try running the test (in Eclipse, right-click on your project and choose 
 1.  In the Studio menu **Automation** > **Automation Chains**, click on **New.**
 2.  Call your chain `ContractUpdater`.
 3.  Keep the **Fetch > Context Document(s)** operation and add your own operation, available in **Document > ContractUpdater.**
-    **![]({{file name='contractUpdater_chain.png'}} ?w=600,border=true)**
+    ![]({{file name='contractUpdater_chain.png'}} ?w=600,border=true)
 4.  Click on **Save**.
 
 **Create an Event Handler**
@@ -726,9 +749,9 @@ The code can either be tested through unit tests or manually. You need to bind t
 
 ### Bind the Studio Project
 
-1.  Under **Source Control** > **Branch Management**, tag or release the most recent commit on your project. This will generate a version of your project that can be accessed by Maven.
+1.  In Nuxeo Studio, under **Source Control** > **Branch Management**, release the most recent commit on your project. This will generate a version of your project that can be accessed by Maven.
 
-2.  Add the following entry to your `~/.m2/settings.xml` file. This configures your Maven client to use authentication when accessing the Studio Maven repository.
+2.  In your file system, add the following entry to your `~/.m2/settings.xml` file. This configures your Maven client to use authentication when accessing the Studio Maven repository.
 
     ```xml
     <servers>
@@ -740,11 +763,6 @@ The code can either be tested through unit tests or manually. You need to bind t
       </server>
       ...
     </servers>
-    ```
-
-3. In the `pom.xml`, declare the Studio Maven repository:
-
-    ```xml
     <repositories>
       ...
       <repository>
@@ -762,7 +780,7 @@ The code can either be tested through unit tests or manually. You need to bind t
     </repositories>
     ```
 
-4. Declare the dependency of the Studio project you just tagged:
+4. In Eclipse edit the `pom.xml` file to declare the dependency of the Studio project you just tagged:
 
     ```xml
     <dependency>
@@ -777,15 +795,14 @@ The `artifactId` is identical to the `MAVEN-ARTIFACT-ID` we referenced before. U
 5.  Update the dependencies.
 
     ```bash
-    mvn eclipse:eclipse
+    $ mvn eclipse:eclipse
     ```
 
 
 ### Using Unit Tests
 
-1.  In Eclipse, click on the **Refresh** button on the Nuxeo Studio tab of the left menu (![]({{file name='NxIDE_refresh_button.png' space='idedoc' page='creating-your-first-nuxeo-project'}} ?w=16,h=17)).
-
-2.  Go back to the Project Explorer tab, right-click on your project, and choose **Run As, JUnit Test**.
+1. In Eclipse right-click on the project and click Refresh (F5).
+2. Right-click on your unit test class and choose **Run As, JUnit Test**.
     The tests should now pass.
 
 Using unit tests is the recommended way to ensure a feature is working as expected. Unit tests are triggered automatically whenever you compile your project using Maven, and as such they help you in maintaining a high quality level.
