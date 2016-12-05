@@ -167,15 +167,15 @@ To use your new category on a custom tab:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-*   [How to Add a Button in the JSF UI]({{page page='how-to-add-a-button-in-the-jsf-ui'}})
-*   [How to Make the New Button Appear on a Custom Folderish Document]({{page page='how-to-make-the-new-button-appear-on-a-custom-folderish-document'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Add a Button in the JSF UI]({{page page='how-to-add-a-button-in-the-jsf-ui'}})
+- [How to Make the New Button Appear on a Custom Folderish Document]({{page page='how-to-make-the-new-button-appear-on-a-custom-folderish-document'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Custom Action Types]({{page page='custom-action-types'}})
-*   [Standard Action Types]({{page page='standard-action-types'}})
-*   [Tabs in Nuxeo Studio]({{page space='studio' page='tabs'}})
-*   [User actions categories]({{page space='studio' page='user-actions-categories'}})
+- [Custom Action Types]({{page page='custom-action-types'}})
+- [Standard Action Types]({{page page='standard-action-types'}})
+- [Tabs in Nuxeo Studio]({{page space='studio' page='tabs'}})
+- [User actions categories]({{page space='studio' page='user-actions-categories'}})
 
 {{/panel}}</div></div>
