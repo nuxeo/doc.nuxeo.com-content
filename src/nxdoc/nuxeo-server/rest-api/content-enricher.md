@@ -2,10 +2,10 @@
 title: Content Enricher
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - link-update
     - rest-api
     - enricher
@@ -1128,6 +1128,7 @@ Additional enrichers are:
 *   permissions: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BasePermissionsJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BasePermissionsJsonEnricher.html)
 *   children: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/ChildrenJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/ChildrenJsonEnricher.html)
 *   permanent link (documentURL): [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/url/io/DocumentUrlJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/url/io/DocumentUrlJsonEnricher.html)
+*   subtypes: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/SubtypesJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/SubtypesJsonEnricher.html)
 
 ## Contributing Your Own Content Enricher
 
