@@ -3,7 +3,7 @@ title: How to Override the Login Page
 review:
     comment: ''
     date: '2015-12-01'
-    status: ok
+    status: not-ok
 details:
     howto:
         excerpt: Learn how to override the login page.
