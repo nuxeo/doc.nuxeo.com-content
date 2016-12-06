@@ -5,7 +5,7 @@ review:
     date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - clustering
     - quartz
     - load-balancer
