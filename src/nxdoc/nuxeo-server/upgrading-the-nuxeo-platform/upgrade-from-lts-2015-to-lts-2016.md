@@ -267,6 +267,9 @@ Force Automation properties value to be trimmed (default:`false`)
 
 {{{multiexcerpt 'upgrade-8.10-deprecated-apis' page='Upgrade from LTS 2015 following Fast Tracks'}}}
 
+### Select2 Operations Moved
+
+{{{multiexcerpt 'upgrade-8.10-select2-operations-moved' page='Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ### Nuxeo and iframe
 
