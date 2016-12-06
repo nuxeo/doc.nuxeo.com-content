@@ -2,10 +2,10 @@
 title: Nuxeo Core Import / Export API
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - import
     - export
     - core-io-component
@@ -127,15 +127,11 @@ The import / export service is providing an API to export a set of documents fro
 
 {{! /excerpt}}
 
-&nbsp;
-
-Export and import mechanism is extensible so that you can easily create your custom format for exported data. The default format provided by the Nuxeo Platform is described below.
-
-The import / export module is part of the `nuxeo-importer-core`&nbsp;bundle and it is located under the `org.nuxeo.ecm.platform.importer`&nbsp;package.
+The import and export mechanism is extensible so that you can easily create your custom format for exported data. The default format provided by the Nuxeo Platform is described below.
 
 ## Export Format
 
-A document will be exported as a directory using&nbsp;the document node name as a name and containing a `document.xml` file which holds the document metadata and properties as defined by document schemas. Document blobs, if any, are by default exported as separate files inside the document directory. There is also an option to export inlined blobs as Base64 encoded data inside the `document.xml`.
+A document will be exported as a directory using the document node name for directory name and containing a `document.xml` file which holds the document metadata and properties as defined by document schemas. Document blobs, if any, are by default exported as separate files inside the document directory. There is also an option to export inlined blobs as Base64 encoded data inside the `document.xml`.
 
 When exporting trees, document children are put as subdirectories inside the document parent directory.
 
@@ -146,16 +142,13 @@ A document tree will be exported as directory tree. Here is an example of an exp
 <pre>+ workspace1
   + document.xml
   + relations.xml
-
   + doc1
     + document.xml
     + relations.xml
-
   + doc2
     + document.xml
     + relations.xml
     + file1.blob
-
   + doc3
     + document.xml</pre>
 
@@ -170,6 +163,11 @@ Here is an XML that corresponds to a document containing a blob. The blob is exp
     <path>/default-domain/workspaces/ws/test</path>
     <lifecycle-state>project</lifecycle-state>
     <lifecycle-policy>default</lifecycle-policy>
+    <facet>Versionable</facet>
+    <facet>Publishable</facet>
+    <facet>Commentable</facet>
+    <facet>HasRelatedText</facet>
+    <facet>Downloadable</facet>
     <access-control>
       <acl name="inherited">
         <entry principal="administrators" permission="Everything" grant="true"/>
@@ -179,15 +177,12 @@ Here is an XML that corresponds to a document containing a blob. The blob is exp
       </acl>
     </access-control>
   </system>
-  <schema xmlns="http://www.nuxeo.org/ecm/schemas/files/" name="files">
-    <files/>
-  </schema>
   <schema xmlns:dc="http://www.nuxeo.org/ecm/schemas/dublincore/" name="dublincore">
     <dc:valid/>
     <dc:issued/>
     <dc:coverage></dc:coverage>
     <dc:title>test</dc:title>
-    <dc:modified>Fri Sep 21 20:49:26 CEST 2007</dc:modified>
+    <dc:modified>Fri Sep 21 20:49:26 CEST 2016</dc:modified>
     <dc:creator>Administrator</dc:creator>
     <dc:subjects/>
     <dc:expired/>
@@ -196,28 +191,31 @@ Here is an XML that corresponds to a document containing a blob. The blob is exp
     <dc:contributors>
       <item>Administrator</item>
     </dc:contributors>
-    <dc:created>Fri Sep 21 20:48:53 CEST 2007</dc:created>
+    <dc:created>Fri Sep 21 20:48:53 CEST 2016</dc:created>
     <dc:source></dc:source>
     <dc:description/>
     <dc:format></dc:format>
   </schema>
-  <schema xmlns="http://www.nuxeo.org/ecm/schemas/file/" name="file">
-    <content>
-      <encoding></encoding>
-      <mime-type>application/octet-stream</mime-type>
+  <schema xmlns:file="http://www.nuxeo.org/ecm/schemas/file/" name="file">
+    <file:filename>error.txt</file:filename>
+    <file:content>
+      <filename>error.txt</filename>
+      <mime-type>text/plain</mime-type>
+      <encoding>UTF-8</encoding>
+      <digest>0ef7a41854fff8eecb4e8fb961628dce</digest>
       <data>cd1f161f.blob</data>
-    </content>
-    <filename>error.txt</filename>
+    </file:content>
   </schema>
-  <schema xmlns="http://project.nuxeo.com/geide/schemas/uid/" name="uid">
-    <minor_version>0</minor_version>
-    <uid/>
-    <major_version>1</major_version>
+  <schema xmlns:files="http://www.nuxeo.org/ecm/schemas/files/" name="files">
+    <files:files/>
   </schema>
-  <schema xmlns="http://www.nuxeo.org/ecm/schemas/common/" name="common">
-    <icon-expanded/>
-    <icon/>
-    <size/>
+  <schema xmlns:uid="http://project.nuxeo.com/geide/schemas/uid/" name="uid">
+    <uid:major_version>1</uid:major_version>
+    <uid:minor_version>0</uid:minor_version>
+  </schema>
+  <schema xmlns:common="http://www.nuxeo.org/ecm/schemas/common/" name="common">
+    <common:icon>/icons/text.gif></common:icon>
+    <common:size>71444></common:size>
   </schema>
 </document> 
 ```
@@ -229,17 +227,18 @@ For each schema defined by the document type, there is a schema entry which cont
 Here is how the same blob will be serialized when inlining blobs (an option of the repository reader):
 
 ```html/xml
-<schema xmlns="http://www.nuxeo.org/ecm/schemas/file/" name="file">
-    <content>
-      <encoding></encoding>
-      <mime-type>application/octet-stream</mime-type>
+<schema xmlns:file="http://www.nuxeo.org/ecm/schemas/file/" name="file">
+    <file:content>
+      <filename>error.txt</filename>
+      <mime-type>text/plain</mime-type>
+      <encoding>UTF-8</encoding>
+      <digest>0ef7a41854fff8eecb4e8fb961628dce</digest>
       <data>
        b3JnLmpib3NzLnJlbW90aW5nLkNhbm5vdENvbm5lY3RFeGNlcHRpb246IENhbiBub3QgZ2V0IGNv
        bm5lY3Rpb24gdG8gc2VydmVyLiAgUHJvYmxlbSBlc3RhYmxpc2hpbmcgc29ja2V0IGNvbm5lY3Rp
        [...]
        </data>
-    </content>
-    <filename>error.txt</filename>
+    </file:content>
   </schema> 
 ```
 
