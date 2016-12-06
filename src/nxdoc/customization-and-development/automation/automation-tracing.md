@@ -173,11 +173,11 @@ You can also activate the traces (and download them for each chain) from the dyn
 Please follow guidelines to activate it:
 
 1.  Install the VisualVM MBean plugin
-    ![]({{file name='screenshot_2013-08-29_15:16:23.png'}} ?w=500)
+    ![]({{file name='screenshot_2013-08-29_15-16-23.png'}} ?w=500)
 2.  Run VisualVM and connect it to the Nuxeo server.
-    ![]({{file name='screenshot_2013-08-29_15:41:25.png'}} ?w=500)
+    ![]({{file name='screenshot_2013-08-29_15-41-25.png'}} ?w=500)
 3.  Look for the MBean org.automation.trace.TracerFactory to access to several services.
-    ![]({{file name='screenshot_2013-08-29_15:22:59.png'}} ?w=500)
+    ![]({{file name='screenshot_2013-08-29_15-22-59.png'}} ?w=500)
 
     *   '`clearTraces`' to clean up traces collected during execution.
     *   '`toggleRecording`' to enable/disable automation trace mode.
