@@ -490,25 +490,33 @@ From a command line:
 
     Now that the project is generated, it can be used in **any IDE**.
 
-5.  Generate Eclipse configuration files.
+5. Using IntelliJ IDEA
 
-    ```bash
-    $ mvn install
+    1. Select **File** / **Open...**
+    2. Browse to your project root folder (`contract-mgt-project`), then the `pom.xml` file and click **Open**.
+    3. Choose **Open as Project**
 
-    # The following parameters (downloadSources, downloadJavadocs and useProjectReferences) are optional
-    # For details, see Maven Eclipse Plugin documentation: https://maven.apache.org/plugins/maven-eclipse-plugin/eclipse-mojo.html
-    $ mvn eclipse:clean eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true -Declipse.useProjectReferences=true
+6. Using Eclipse
 
-    # Linux and OS X users should run the following script to make Eclipse use different build directories than Maven:
-    $ curl -o- https://raw.githubusercontent.com/nuxeo/nuxeo/master/fixeclipse|bash
-    # A cross-platform script is also available for Windows users:
-    # curl -o- https://raw.githubusercontent.com/nuxeo/nuxeo/master/scripts/fixeclipse.py|python
-    ```
+    1.  Generate Eclipse configuration files.
 
-6.  Import the project in Eclipse:
-    1.  Select **File** / **Import** / **General** / **Existing Projects into Workspace**.
-    2.  Browse to your project root folder (`contract-mgt-project`), then click **Finish**.
-        ![]({{file name='eclipse_import_project.png'}} ?w=400)
+        ```bash
+        $ mvn install
+
+        # The following parameters (downloadSources, downloadJavadocs and useProjectReferences) are optional
+        # For details, see Maven Eclipse Plugin documentation: https://maven.apache.org/plugins/maven-eclipse-plugin/eclipse-mojo.html
+        $ mvn eclipse:clean eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true -Declipse.useProjectReferences=true
+
+        # Linux and OS X users should run the following script to make Eclipse use different build directories than Maven:
+        $ curl -o- https://raw.githubusercontent.com/nuxeo/nuxeo/master/fixeclipse|bash
+        # A cross-platform script is also available for Windows users:
+        # curl -o- https://raw.githubusercontent.com/nuxeo/nuxeo/master/scripts/fixeclipse.py|python
+        ```
+
+    2.  Import the project in Eclipse:
+        1.  Select **File** / **Import** / **General** / **Existing Projects into Workspace**.
+        2.  Browse to your project root folder (`contract-mgt-project`), then click **Finish**.
+            ![]({{file name='eclipse_import_project.png'}} ?w=400)
 
 
 #### Code Your Operation
@@ -529,12 +537,21 @@ From a command line:
 
 3.  Update the dependencies:
 
-    ```bash
-    $ mvn eclipse:eclipse
-    ```
+    1. If you are using IntelliJ IDEA:
 
-4.  In Eclipse, right-click on the project and click Refresh (F5).
-    You get something like this for the operation, in `src/main/java`:
+        In IntelliJ IDEA, click on **Import Changes** in the Maven's popup.
+
+    2. If you are using Eclipse:
+
+        In a terminal:
+
+        ```bash
+        $ mvn eclipse:eclipse
+        ```
+
+        In Eclipse, then right-click on the project and click Refresh (F5).
+
+4. You get something like this for the operation, in `src/main/java`:
 
     ```java
     package com.bigcorp.contractmgt;
@@ -617,7 +634,15 @@ From a command line:
 
 A unit test has been created in `src/test/java`. You will need it to pass in order to compile and deploy your project.
 
-1.  Replace it with the following code:
+1. Create a fake component to help to fake Studio. In `src/test/fakestudio-component.xml`, fill in with:
+    ```xml
+    <component name="com.nuxeo.studio.fake">
+      <alias>org.nuxeo.ecm.directory.sql.storage</alias>
+      <alias>org.nuxeo.runtime.started</alias>
+    </component>
+    ```
+
+2.  Replace it with the following code:
 
     ```java
     package com.bigcorp.contractmgt;
@@ -648,9 +673,10 @@ A unit test has been created in `src/test/java`. You will need it to pass in ord
 
     // Be sure to replace studio.extensions.MAVEN-ARTIFACT-ID
     // with your Studio project's symbolic name.
-    // You can find it here:
+    // You can find it in Studio:
     // Settings / Application Information / Maven Artifact id field
     @Deploy({"com.bigcorp.contractmgt.contract-mgt-project-core", "studio.extensions.MAVEN-ARTIFACT-ID"})
+    @LocalDeploy({ "com.bigcorp.contractmgt.contract-mgt-project-core:fakestudio-component.xml" })
     public class TestContractUpdater {
           @Inject
           protected CoreSession session;
@@ -678,20 +704,20 @@ A unit test has been created in `src/test/java`. You will need it to pass in ord
     }
     ```
 
-2.  Replace the `MAVEN-ARTIFACT-ID` in `studio.extensions.MAVEN-ARTIFACT-ID` with your Studio project's symbolic name. To get the Maven artifact ID, go to **Settings** > **Application Information** and use the value found in the **Maven Artifact id** field.
+3.  Replace the `MAVEN-ARTIFACT-ID` in `studio.extensions.MAVEN-ARTIFACT-ID` with your Studio project's symbolic name. To get the Maven artifact ID, in Studio, go to **Settings** > **Application Information** and use the value found in the **Maven Artifact id** field.
 
-If you try running the test (in Eclipse, right-click on your project and choose **Run As, JUnit Test**), you will notice that the test fails because our Studio project is missing a few things. We need to add them to make the test pass.
+If you try running the test (in Eclipse, right-click on your project and choose **Run As, JUnit Test**, or **Run TestContractUpdater** in IntelliJ IDEA), you will notice that the test fails because our Studio project is missing a few things. We need to add them to make the test pass.
 
 
 #### Send the Operation to Studio
 
-1.  Build a JAR file (without running the tests):
+1. Build a JAR file (without running the tests):
 
     ```bash
     $ mvn -DskipTests package
     ```
 
-2.  Deploy the JAR in your Nuxeo server by copying it to **$NuxeoServer/nxserver/bundles**, then restart your server.
+2. Deploy the JAR in your Nuxeo server by copying it to **$NuxeoServer/nxserver/bundles**, then restart your server.
 
 3. Start your server and go to the local automation documentation at http://NuxeoServer:8080/nuxeo/site/automation/doc (http://localhost:8080/nuxeo/site/automation/doc typically).
 
@@ -763,46 +789,43 @@ The code can either be tested through unit tests or manually. You need to bind t
       </server>
       ...
     </servers>
-    <repositories>
-      ...
-      <repository>
-        <id>nuxeo-studio</id>
-        <url>https://connect.nuxeo.com/nuxeo/site/studio/maven</url>
-        <releases>
-          <enabled>true</enabled>
-        </releases>
-        <snapshots>
-          <enabled>true</enabled>
-          <updatePolicy>always</updatePolicy>
-        </snapshots>
-      </repository>
-      ...
-    </repositories>
     ```
 
 4. In Eclipse edit the `pom.xml` file to declare the dependency of the Studio project you just tagged:
 
     ```xml
-    <dependency>
-      <groupId>nuxeo-studio</groupId>
-      <artifactId>myproject</artifactId>
-      <version>0.0.1</version>
-    </dependency>
+    <dependencies>
+      ...
+      <dependency>
+        <groupId>nuxeo-studio</groupId>
+        <artifactId>myproject</artifactId>
+        <version>0.0.1</version>
+      </dependency>
+      ...
+    </dependencies>
     ```
 
 The `artifactId` is identical to the `MAVEN-ARTIFACT-ID` we referenced before. Use the `version` number from your latest release or tag.
 
-5.  Update the dependencies.
+5.  Update the dependencies:
 
-    ```bash
-    $ mvn eclipse:eclipse
-    ```
+    1. If you are using IntelliJ IDEA:
 
+        In IntelliJ IDEA, click on **Import Changes** in the Maven's popup.
+
+    2. If you are using Eclipse:
+
+        In a terminal:
+
+        ```bash
+        $ mvn eclipse:eclipse
+        ```
+
+        In Eclipse, then right-click on the project and click Refresh (F5).
 
 ### Using Unit Tests
 
-1. In Eclipse right-click on the project and click Refresh (F5).
-2. Right-click on your unit test class and choose **Run As, JUnit Test**.
+1. Right-click on your unit test class and choose **Run As, JUnit Test** in Eclipse, or **Run TestContractUpdater** in IntelliJ IDEA.
     The tests should now pass.
 
 Using unit tests is the recommended way to ensure a feature is working as expected. Unit tests are triggered automatically whenever you compile your project using Maven, and as such they help you in maintaining a high quality level.
