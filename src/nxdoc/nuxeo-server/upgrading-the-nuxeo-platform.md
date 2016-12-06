@@ -523,15 +523,16 @@ Since the Platform evolves, you will also need to upgrade your custom code:
 
 ## Detailed Upgrade by Version
 
-### To Latest 8.x Fast Track from LTS 2015
+### To LTS 2016 from LTS 2015
 
-See [Upgrade from LTS 2015 to 8.3]({{page page='upgrade-from-lts-2015-to-83'}}) to upgrade directly to the latest Fast Track version or [Upgrade from LTS 2015 following Fast Tracks]({{page page='upgrade-from-lts-2015-following-fast-tracks'}}) to upgrade to 8.1, then to 8.2, etc.
+See [Upgrade from LTS 2015 to LTS 2016]({{page page='upgrade-from-lts-2015-to-lts-2016'}}) to upgrade directly to the LTS 2016 version or [Upgrade from LTS 2015 following Fast Tracks]({{page page='upgrade-from-lts-2015-following-fast-tracks'}}) to upgrade from a Fast Track version to LTS 2016.
 
 Release notes:
 
-*   [8.1 release notes](http://nuxeo.github.io/releasenotes/8.1/)
-*   [8.2 release notes](http://nuxeo.github.io/releasenotes/8.2/)
-*   [8.3 release notes](http://nuxeo.github.io/releasenotes/8.3/)
+* [8.1 release notes](http://nuxeo.github.io/releasenotes/8.1/)
+* [8.2 release notes](http://nuxeo.github.io/releasenotes/8.2/)
+* [8.3 release notes](http://nuxeo.github.io/releasenotes/8.3/)
+* [LTS 2016 release notes](http://nuxeo.github.io/releasenotes/8.10/)
 
 ### To LTS 2015 from LTS 6.0 or FT 7.x
 
