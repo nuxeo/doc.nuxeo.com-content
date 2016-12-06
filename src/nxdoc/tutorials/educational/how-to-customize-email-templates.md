@@ -2,7 +2,7 @@
 title: How to Customize Email Templates
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: Studio
         topics: Alerts
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - link-update
     - mail-template
@@ -164,14 +164,18 @@ Default templates for mail notifications can be overridden. Just follow those st
 
 ## Making the Document Links in Notification Emails Point to the Web UI
 
-On Nuxeo 8.10, in case both `nuxeo-jsf-ui` and `nuxeo-web-ui` packages are installed, the document links in notification emails point to the JSF UI.
-If you want to change this behavior to make them point to the Web UI you need to add the following XML contribution:
+On Nuxeo LTS 2016, in case both `nuxeo-jsf-ui` and `nuxeo-web-ui` packages are installed, the document links in notification emails point to the JSF UI.
+If you want to change this behavior to make them point to the Web UI you need to add the following [XML contribution]({{page page='how-to-contribute-to-an-extension'}}):
 
 ```xml
-<extension target="org.nuxeo.ecm.platform.url.service.DocumentViewCodecService" point="codecs">
-  <documentViewCodec name="notificationDocId" enabled="true" prefix="doc"
-      class="org.nuxeo.web.ui.url.codec.WebNotificationDocumentIdCodec" priority="1000" />
-</extension>
+<component name="org.nuxeo.ecm.platform.url.service.DocumentViewCodecService.codecs.notificationDocId.webui">
+<!-- If you contribute this extension in Nuxeo Studio, start copying from the line below. The component tag is not needed. -->
+  <extension target="org.nuxeo.ecm.platform.url.service.DocumentViewCodecService" point="codecs">
+    <documentViewCodec name="notificationDocId" enabled="true" prefix="doc"
+        class="org.nuxeo.web.ui.url.codec.WebNotificationDocumentIdCodec" priority="1000" />
+  </extension>
+<!-- If you contribute this extension in Nuxeo Studio, stop copying from here. The component tag is not needed. -->
+</component>
 ```
 
 Note that the default `priority` value for the JSF UI contribution is 100 and that the highest priority wins.
