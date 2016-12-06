@@ -2,10 +2,10 @@
 title: Documents Display Configuration
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - layout
     - content-view
     - web-ui-component
@@ -91,7 +91,7 @@ The views on documents, the forms to create or edit them, how lists of documents
 
 ## UI Document Types
 
-After the structural document type, a UI registration for our document type must be done for the type to be visible in the Nuxeo DM interface (or in other applications based on Nuxeo Platform). This is done through a contribution to the&nbsp;**types**&nbsp;extension point of the&nbsp;[`org.nuxeo.ecm.platform.types.TypeService`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.core.schema.TypeService)&nbsp;component (which is a different component than for the structural types, despite also ending in&nbsp;`TypeService`).
+After the structural document type, a UI registration for our document type must be done for the type to be visible in the Nuxeo DM interface (or in other applications based on Nuxeo Platform). This is done through a contribution to the&nbsp;**types**&nbsp;extension point of the&nbsp;[`org.nuxeo.ecm.platform.types.TypeService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.schema.TypeService)&nbsp;component (which is a different component than for the structural types, despite also ending in&nbsp;`TypeService`).
 
 For example, in&nbsp;`OSGI-INF/ui-types-contrib.xml`&nbsp;we will define:
 
@@ -143,7 +143,7 @@ Other categories can freely be defined.
 
 Example:
 
-```
+```xml
 <type id="Sample">
   <label>Sample document</label>
   <description>Sample document to do such and such</description>
@@ -171,7 +171,7 @@ Proper defaults are used when these are not specified, so no need to add them to
 
 Example:
 
-```
+```xml
 <type id="Sample">
   ...
   <default-view>view_documents</default-view>
@@ -201,7 +201,7 @@ The&nbsp;**layout**&nbsp;names refer to layouts defined on another extension poi
 
 Example:
 
-```
+```xml
 <type id="Sample">
   ...
   <layouts mode="any">
@@ -224,7 +224,7 @@ This can also be defined for a pre-existing type, to add new allowed subtypes. P
 
 For example, we can specify that the Sample type can be created in a Folder and a Workspace. Note that we define two new&nbsp;`<type>`&nbsp;sections here, we don't add this information in the&nbsp;`<type id="Sample">`&nbsp;section.
 
-```
+```xml
 <type id="Folder">
   <subtypes>
     <type>Sample</type>
@@ -244,7 +244,7 @@ The hidden cases are stored in a list, so if a check is needed for a hidden case
 
 Example:
 
-```
+```xml
 <type id="Workspace">
   <subtypes>
     <type>Workspace</type>

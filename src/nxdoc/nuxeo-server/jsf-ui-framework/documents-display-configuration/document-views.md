@@ -2,10 +2,10 @@
 title: Document Views
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - view_action_list
     - document-tab
     - web-ui-component
