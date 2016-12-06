@@ -156,7 +156,7 @@ history:
 ---
 {{! multiexcerpt name='install-windows'}}
 
-To install the application using the Windows installer (.exe), double-click on the .exe installer you downloaded and follow the instructions displayed.
+To install the application using the [Windows installer (.exe)](http://community.nuxeo.com/static/releases/nuxeo-5.8/nuxeo-5.8-setup.exe), double-click on the .exe installer you downloaded and follow the instructions displayed.
 
 {{#> callout type='note' }}
 
