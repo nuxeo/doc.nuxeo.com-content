@@ -356,6 +356,9 @@ ProxyPass /nuxeo balancer://sticky-balancer stickysession=JSESSIONID|jsessionid 
 
 ```
 
+To enable automatic unhealthy instance eviction on your balancer, you may require an health check.
+The following ensures Nuxeo runtime is initialized and up: `HTTP:200:/nuxeo/running_status?info=reload`.
+
 ### Troubleshooting Session Affinity Problems
 
 To test that the load balancer forwards the HTTP requests of a given session to the same node:
