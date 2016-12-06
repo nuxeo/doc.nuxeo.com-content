@@ -3,7 +3,7 @@ title: Installing and Setting Up Related Software
 review:
     comment: 'Mac OS and Windows installations need to be updated'
     date: '2016-12-06'
-    status: requires-update
+    status: requiresUpdates
 labels:
     - lts2016-ok
     - installation
