@@ -2,14 +2,13 @@
 title: Installing and Setting Up Related Software
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
     - content-review-lts2016
     - installation
     - requirements
     - third-party-software
-    - last-review-20141126
     - multiexcerpt-include
     - multiexcerpt
 toc: true
@@ -550,18 +549,28 @@ On a naked default Nuxeo Platform, you need the following software:
     *   LibreOffice (version >= 5): converts office file into PDF
     *   pdftohtml: converts converted PDF into HTML preview
 *   For thumbnail generation: ImageMagick and Ghostscript for most file formats. UFRaw for RAW files.
+*   For processing WordPerfect documents: libwpd
+
+If you installed the Nuxeo DAM addon, you will need these additional requirements:
+
 *   For metadata extraction: Exiftool
 *   For picture preview and tilling: ImageMagick (already required for thumbnails)
-*   For video conversion and storyboarding: FFmpeg (Nuxeo DAM add-on)
-*   For processing WordPerfect documents: libwpd
+*   For video conversion and storyboarding: FFmpeg
+*   For subtitles extraction from videos: CCExtractor
 
 Thumbnails and previews are created when documents are imported into Nuxeo, not on the fly when browsing documents. So in order to check if the third party software work properly on your Nuxeo instance, you must import new documents.
 
 ## Linux
 
-Under Debian or Ubuntu, all of this can be installed by the following command:
+Under Debian or Ubuntu, most of these can be installed by the following command:
 
 <pre>sudo apt-get install openjdk-8-jdk imagemagick ufraw poppler-utils libreoffice ffmpeg libwpd-tools ghostscript exiftool</pre>
+
+{{#> callout type='warning' }}
+
+Installing the ffmpeg package from your distribution's repository may not provide you with support for all video formats. Please refer to the [additional formats support for FFmpeg](#additional-formats-support-for-ffmpeg) section for more information.
+
+{{/callout}}
 
 ### LibreOffice Configuration
 
@@ -573,6 +582,23 @@ The minimum version required is LibreOffice 5. The soffice program must be added
 
 {{{multiexcerpt 'ooo-libreoffice-configuration' page='Installing and Setting up Related Software'}}}
 
+### CCExtractor Installation
+
+Installing [CCExtractor](http://ccextractor.org) on a GNU/Linux distribution requires to compile it from [https://github.com/CCExtractor/ccextractor](source). The recommended way to do it is to use our <span style="color: rgb(34,34,34);">"in-docker-build":&nbsp;</span>[https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ccextractor](https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ccextractor).
+
+To generate a package (by default for the latest Ubuntu LTS):
+
+1.  Issue the following commands:
+
+    ```
+    sudo apt-get update
+    sudo apt-get install docker
+    cd /tmp
+    git clone https://github.com/nuxeo/nuxeo-tools-docker.git
+    cd nuxeo-tools-docker/ccextractor
+    sudo ./build-package.sh
+    ```
+
 ### Controlling Threads Used by ImageMagick
 
 By default ImageMagick is multi threaded and will use all the available CPUs. This creates burst of CPU usage, especially when thumbnail is generated concurrently.
@@ -583,7 +609,9 @@ Hopefully you can control the number of threads used by ImageMagick either by:
 
 *   adding an environment variable `export MAGICK_THREAD_LIMIT=1` in the nuxeo user `.bash_profile`.
 
-### libfaac Support
+### Additional Formats Support for FFmpeg
+
+Some video formats may not be supported when installing the ffmpeg package from your distribution's repository. You may encounter issues similar to these:
 
 {{#> panel type='code' heading='Common issue with libfaac encoder'}}
 
@@ -593,23 +621,29 @@ Unknown encoder 'libfaac'
 
 {{/panel}}
 
-Ubuntu does not supply FFmpeg with libfaac support. So you must compile FFmpeg from sources with `--enable-libfaac` option.
+{{#> panel type='code' heading='Missing format error seen in the server.log file'}}
 
-Either follow the instructions from [the FFmpeg Compilation Guide for Ubuntu](http://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu) adding the `--enable-libfaac` and `--enable-nonfree` compile options.
+```
+ERROR [AbstractWork] Exception during work: VideoConversionWork(e8cd9e57-c3ff-41b5-8f85-741c013417bf, /videoAutomaticConversions:27369901578782.273532597, Progress(?%, ?/0), Transcoding)
+org.nuxeo.ecm.core.convert.api.ConversionException: Error while converting via CommandLineService
+    at org.nuxeo.ecm.platform.convert.plugins.CommandLineBasedConverter.execOnBlob(CommandLineBasedConverter.java:166)
+    at org.nuxeo.ecm.platform.convert.plugins.CommandLineBasedConverter.convert(CommandLineBasedConverter.java:93)
+    at org.nuxeo.ecm.core.convert.service.ConversionServiceImpl.convert(ConversionServiceImpl.java:246)
+```
 
-Or run [the Nuxeo script for compiling FFmpeg](https://github.com/nuxeo/ffmpeg-nuxeo). **You should build the ffmpeg executable on a separate machine than your Nuxeo Platform server machine, and then install the result on the machine where you set up Nuxeo Platform.&nbsp;**
+{{/panel}}
 
-&nbsp;
+Ubuntu for instance does not supply FFmpeg with libfaac (AAC format) support. So you must compile FFmpeg from sources with `--enable-libfaac` option.
 
-{{#> callout type='warning' }}
+The recommended way to do it is to use our <span style="color: rgb(34,34,34);">"in-docker-build":&nbsp;</span>[https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg](https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg).
 
-Running the ffmpeg build script on the same machine than where you installed the Nuxeo Platform would result in uninstalling existing nuxeo already installed with the Debian package along with its data.
+Other options are:
 
-{{/callout}}
+- Following the instructions from [the FFmpeg Compilation Guide for Ubuntu](http://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu) adding the `--enable-libfaac` and `--enable-nonfree` compile options.
 
-You can do it manually as follow, but the recommended way is to use ou<span style="color: rgb(34,34,34);">r "in-docker-build":&nbsp;</span>[https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg](https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg).
+- Or running [the Nuxeo script for compiling FFmpeg](https://github.com/nuxeo/ffmpeg-nuxeo) manually. **In this case, you should build the ffmpeg executable on a separate machine than your Nuxeo Platform server machine, and then install the result on the machine where you set up Nuxeo Platform.**
 
-For a &nbsp;manual build:
+For a manual build:
 
 1.  Install the [multiverse package repositories](https://help.ubuntu.com/community/Repositories/CommandLine) (required for the script to work).
 2.  Issue the following commands:
@@ -622,6 +656,10 @@ For a &nbsp;manual build:
     cd ffmpeg-nuxeo
     sudo ./build-all.sh true
     ```
+
+{{#> callout type='warning' }}
+Running the ffmpeg build script on the same machine than where you installed the Nuxeo Platform would result in uninstalling existing nuxeo already installed with the Debian package along with its data.
+{{/callout}}
 
 ## OS X
 
