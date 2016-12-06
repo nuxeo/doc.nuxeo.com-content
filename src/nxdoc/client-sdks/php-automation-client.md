@@ -2,14 +2,13 @@
 title: PHP Automation Client
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
     - content-review-lts2016
     - php
     - client
     - php-client-component
-    - excerpt
 toc: true
 confluence:
     ajs-parent-page-id: '16091040'
@@ -113,107 +112,129 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}
+The Nuxeo Automation PHP Client is a PHP client library for Nuxeo Automation API.
 
-A PHP automation client is made [available on GitHub](https://github.com/nuxeo/nuxeo-automation-php-client). You can use it and ask for commit rights on the project if you want to improve it or fix a bug. The project contains the [library](https://github.com/nuxeo/nuxeo-automation-php-client/tree/master/NuxeoAutomationClient) and some [sample use cases](https://github.com/nuxeo/nuxeo-automation-php-client/tree/master/tests).
+[Github Website](https://github.com/nuxeo/nuxeo-automation-php-client)
 
-{{! /excerpt}}
+## Path to the PHP Client (v1.5)
 
-## Queries / Chains
+Version 1.5.0 introduces a new fluent API:
 
-In this examples we are using the PHP automation client to demonstrate how to invoke remote operations.
-The following example is executing a simple query against a remote server: `SELECT * FROM Document`. The server will return a JSON document listing all selected documents.
-
-&nbsp;
+version < 1.5.0
 
 ```php
-$client = new NuxeoPhpAutomationClient('http://localhost:8080/nuxeo/site/automation');
-
-$session = $client->getSession('Administrator','Administrator');
-
-$answer = $session->newRequest("Document.Query")->set('params', 'query', "SELECT * FROM Document" )->sendRequest();
-
+$client = new \Nuxeo\Automation\Client\NuxeoPhpAutomationClient('http://localhost:8080/nuxeo/site/automation');
+$session = $client->getSession('Administrator', 'Administrator');
+$answer = $session->newRequest("Document.Query")->set('params', 'query', "SELECT * FROM Document)->setSchema($propertiesSchema)->sendRequest();
 $documentsArray = $answer->getDocumentList();
-$value = sizeof($documentsArray);
-echo '
-<table>';
-echo '
-<tr>
-<TH>uid</TH>
-<TH>Path</TH>
-
-<TH>Type</TH>
-<TH>State</TH>
-<TH>Title</TH>
-<TH>Download as PDF</TH>';
-for ($test = 0; $test < $value; $test ++){
-    echo '
-<tr>';
-    echo '
-<td> ' . current($documentsArray)->getUid()  . '</td>';
-    echo '
-<td> ' . current($documentsArray)->getPath()  . '</td>';
-    echo '
-<td> ' . current($documentsArray)->getType()  . '</td>';
-    echo '
-<td> ' . current($documentsArray)->getState()  . '</td>';
-    echo '
-<td> ' . current($documentsArray)->getTitle()  . '</td>';
-    echo '
-<td><form id="test" action="../tests/B5bis.php" method="post" >';
-    echo '<input type="hidden" name="data" value="'.
-    current($documentsArray)->getPath(). '"/>';
-    echo '<input type="submit" value="download"/>';
-    echo '</form></td></tr>';
-    next($documentsArray);
-}
-echo '</table>';
-
 ```
 
-The class `NuxeoPhpAutomationClient`&nbsp;allows you to open a session with the getSession (return a session instance). Then, from the session, you can create a new request by using the same named function. The set function is used to configure your automation request, giving the chain or operation to call as well as the loading params, context, and input parts. At last, you send the request with the sendRequest function.
-
-You can see here how to use the getters in order to retrieve information from the Document object, built from the request answer.
-
-## Using Blobs
-
-### Attach Blob
-
-In order to attach a blob, we have to send a Multipart Request to Nuxeo. The first part of the request will contain the body of the request (params, context ...) and the second part will contain the blob (as an input).
+version >= 1.5.0
 
 ```php
-$client = new NuxeoPhpAutomationClient('http://localhost:8080/nuxeo/site/automation');
-
-$session = $client->getSession('Administrator','Administrator');
-
-$answer = $session->newRequest("Blob.Attach")->set('params', 'document', $path)
-->loadBlob($blob, $blobtype)
-->sendRequest();
-
+$client = new \Nuxeo\Client\Api\NuxeoClient('http://localhost:8080/nuxeo', 'Administrator', 'Administrator');
+$documents = $client->schemas("*")->automation('Document.Query')->param('query', 'SELECT * FROM Document')->execute(Documents::className);
 ```
 
-That will attach the blob to an existing file. In order to send a blob, you use the `loadBlob()` function. If a blob is loaded using this function, the `sendRequet()` function will automatically create a multipart request. If you load many blobs without noticing a precise localization in params, the blobs will be send as an attachment of the file (not as a content).
+This new API is the first step to the incoming full-featured PHP Client.
 
-### Get a Blob
+{{#> callout type='note' }}
 
-In order to get a blog, you have to read the content of the 'tempfile' after using the appropriate headers.
+Until this new version, the old API will still be available. Thus you can upgrade the library to the 1.5 (transition) version and access the new API and features without breaking your application.
+
+{{/callout}}
+
+## Getting Started
+
+### Library import
+
+**Manual install**
+
+* [Nuxeo Automation PHP Client 1.1.0](https://github.com/nuxeo/nuxeo-automation-php-client/archive/1.1.0.tar.gz).
+* [Nuxeo Automation PHP Client 1.5.0-rc1](https://github.com/nuxeo/nuxeo-automation-php-client/archive/1.5.0-rc1.tar.gz).
+
+**Import Nuxeo Automation PHP Client with:**
+
+Composer:
+
+```
+  "require": {
+    "nuxeo/nuxeo-automation-php-client": "~1.5.0"
+  }
+```
+
+### Usage
+
+{{#> callout type='note' }}
+
+The following documentation and samples applies for the 1.5 and newer versions. Calls to the Automation API for previous versions of the client will require adjustments.
+
+{{/callout}}
+
+
+#### Creating a Client
+
+For a given `url`:
 
 ```php
-$client = new NuxeoPhpAutomationClient('http://localhost:8080/nuxeo/site/automation');
-
-$session = $client->GetSession('Administrator','Administrator');
-
-$answer = $session->NewRequest("Blob.Get")->Set('input', 'doc:' . $path)->SendRequest();
-
-if (!isset($answer) OR $answer == false)
-    echo '$answer is not set';
-else{
-    header('Content-Description: File Transfer');
-    header('Content-Type: application/octet-stream');
-    header('Content-Disposition: attachment; filename='.$filename.'.pdf');
-    readfile('tempstream');
-}
-
+$url = 'http://localhost:8080/nuxeo';
 ```
 
-This will download the blob placed in `file:content` of the Nuxeo file designed by `$path`.
+And given credentials:
+
+```php
+use Nuxeo\Client\Api\NuxeoClient;
+
+$client = new NuxeoClient($url, 'Administrator', 'Administrator');
+```
+
+```php
+// For defining all schemas
+$client = $client->schemas("*");
+```
+
+#### APIs
+
+##### Automation API
+
+To use the Automation API, `Nuxeo\Client\Api\NuxeoClient#automation()` is the entry point for all calls:
+
+```php
+use Nuxeo\Client\Api\Objects\Document;
+
+// Fetch the root document
+$result = $client->automation('Repository.GetDocument')->param("value", "/")->execute(Document::className);
+```
+
+```php
+use Nuxeo\Client\Api\Objects\Documents;
+
+// Execute query
+$operation = $client->automation('Repository.Query')->param('query', 'SELECT * FROM Document');
+$result = $operation->execute(Documents::className);
+```
+
+```php
+use Nuxeo\Client\Api\Objects\Blob;
+use Nuxeo\Client\Api\Objects\Blobs;
+
+// To upload|download blob(s)
+
+$fileBlob = Blob::fromFile('/local/file.txt', 'text/plain');
+$blob = $client->automation('Blob.AttachOnDocument')->param('document', '/folder/file')->input($fileBlob)->execute(Blob::className);
+
+$inputBlobs = new Blobs();
+$inputBlobs->add('/local/file1.txt', 'text/plain');
+$inputBlobs->add('/local/file2.txt', 'text/plain');
+$blobs = $client->automation('Blob.AttachOnDocument')->param('xpath', 'files:files')->param('document', '/folder/file')->input($inputBlobs)->execute(Blobs::className);
+
+$resultBlob = $client->automation('Document.GetBlob')->input('folder/file')->execute(Blob::className);
+```
+
+#### Errors/Exceptions
+
+The main exception type is `Nuxeo\Client\Internals\Spi\NuxeoClientException` and contains:
+
+- The HTTP error status code (666 for internal errors)
+
+- An info message
