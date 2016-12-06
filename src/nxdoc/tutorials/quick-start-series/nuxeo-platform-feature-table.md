@@ -219,7 +219,10 @@ history:
         version: '1'
 
 ---
+This page list the features available on the Nuxeo Platform, either directly in the default distribution (Nuxeo Server) or using addons. It provides links to the relevant documentation and indicates if the features are available without any UI (through the REST API), in [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui) or in [Nuxeo Web UI]({{page page='web-ui'}}).
+
 ## Document Types
+
 {{! table-filter removed }}
 <div class="table-scroll">
 <table class="hover">
@@ -364,7 +367,7 @@ history:
 <td colspan="1">Default distribution</td>
 <td>&#10003;</td>
 <td>&#10003;</td>
-<td></td>
+<td>&#10003;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
@@ -412,6 +415,7 @@ history:
 </div>
 
 ## Document Creation
+
 <div class="table-scroll">
 <table class="hover">
 <tbody>
@@ -450,7 +454,7 @@ history:
 <tr>
 <td colspan="1">Form</td>
 <td colspan="1">Default distribution</td>
-<td></td>
+<td>N/A</td>
 <td>&#10003;</td>
 <td>&#10003;</td>
 <td colspan="1">[Document creation user documentation]({{page space='userdoc' page='creating-content'}})</td>
@@ -458,7 +462,7 @@ history:
 <tr>
 <td colspan="1">HTML 5 Drag & Drop</td>
 <td colspan="1">Default distribution</td>
-<td></td>
+<td>N/A</td>
 <td>&#10003;</td>
 <td>&#10003;</td>
 <td colspan="1">
@@ -479,6 +483,7 @@ history:
 </div>
 
 ## Document Modification
+
 <div class="table-scroll">
 <table class="hover">
 <tbody>
@@ -508,7 +513,7 @@ Default distribution<br/>
 [Nuxeo Spreadsheet](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet)
 </td>
 <td>&#10003;</td>
-<td>&#10003;</td>
+<td>&#10003;<br/>&#10003;</td>
 <td></td>
 <td colspan="1">
 [Document modification user documentation]({{page space='userdoc' page='editing-content'}})<br/>
@@ -575,7 +580,7 @@ Default distribution<br/>
 [Nuxeo Diff Picture](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures)
 </td>
 <td></td>
-<td>&#10003;</td>
+<td>&#10003;<br/>&#10003;</td>
 <td></td>
 <td colspan="1">
 [Developer documentation]({{page page='nuxeo-diff'}})<br/>
