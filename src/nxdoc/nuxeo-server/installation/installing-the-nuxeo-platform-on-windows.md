@@ -2,10 +2,10 @@
 title: Installing the Nuxeo Platform on Windows
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - install-windows
     - last-review-20141126
     - multiexcerpt
@@ -224,9 +224,9 @@ history:
 ---
 You can install the Nuxeo Platform on Windows using one of several methods:
 
-*   the Windows installer (.exe),
-*   the ZIP archive (.zip),
-*   the Virtual Machine Image (.ovf, .vmdk, .vmx).
+*   the [Windows installer (.exe)](http://community.nuxeo.com/static/releases/nuxeo-8.10/nuxeo-8.10-setup.exe),
+*   the [ZIP archive (.zip)](http://community.nuxeo.com/static/releases/nuxeo-8.10/nuxeo-server-8.10-tomcat.zip),
+*   the [Virtual Machine Image (.ovf, .vmdk, .vmx)](http://community.nuxeo.com/static/releases/nuxeo-8.10/nuxeo-8.10-vm.zip).
 
 ## Checking Requirements
 
