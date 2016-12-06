@@ -6,7 +6,7 @@ review:
     status: ok
 toc: true
 labels:
-    - content-review-lts2016
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '3343538'
     ajs-parent-page-title: Upgrading the Nuxeo Platform
