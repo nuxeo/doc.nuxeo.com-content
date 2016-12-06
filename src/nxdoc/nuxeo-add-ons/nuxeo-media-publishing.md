@@ -2,10 +2,10 @@
 title: Nuxeo Media Publishing
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - media-publishing-component
     - excerpt
 toc: true
@@ -163,12 +163,13 @@ After the package is installed, two new OAuth2 service providers are added to Nu
 
 2.  Create a new project.
 3.  Enable YouTube API:&nbsp;In**&nbsp;APIs & auth**&nbsp;**>**&nbsp;**APIs**, click on&nbsp;**YouTube Data API**&nbsp;and then on the&nbsp;**Enable API**&nbsp;button.
-4.  Edit your consent screen: In&nbsp;**APIs & auth > Consent Screen**, fill the product name (the name of your application). Optionally, you may fill the other fields.&nbsp;
-5.  Create a new OAuth Client ID:**In APIs & auth > Credentials**, click on&nbsp;**Create a new Client ID**.
-    a.  Choose **Web Application.**
-    b.  For **Authorized JavaScript origins** set the URL of your server. Ex [http://localhost:8080/](http://localhost:8080/)
-    c.  For **Authorized redirect URIs** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/YouTube/callback](http://localhost:8080/nuxeo/site/oauth2/googledrive/callback).
+4.  Create a new OAuth Client ID: In **Credentials**, click on&nbsp;**Create Credentials**.
+    a.  Choose **OAuth Client ID.**
+    b.  Choose **Web Application.**
+    c.  For **Authorized JavaScript origins** set the URL of your server. Ex [http://localhost:8080/](http://localhost:8080/)
+    d.  For **Authorized redirect URIs** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/YouTube/callback](http://localhost:8080/nuxeo/site/oauth2/googledrive/callback).
         The console redirects you to a page where you can see the Client ID and Client Secret values. You will need them in the next steps.
+5.  Edit your consent screen: In&nbsp;**Credentials > OAuth Consent Screen**, fill the product name (the name of your application). Optionally, you may fill the other fields.&nbsp;
 
 **Step 2: Configuring the Nuxeo Platform**
 
@@ -261,7 +262,7 @@ Your service implementation must implement the&nbsp;`MediaPublishingProvider` in
 #### Step 2: Contribute an OAuth provider
 
 1.  Nested in the component tag of your XML contribution file, add a `require` tag the `OAuth2ServiceProviderRegistry`.
-2.  Then, use the extension point [`providers`](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.oauth2.providers.OAuth2ServiceProviderRegistry--providers) of the `OAuth2ServiceProviderRegistry` service to register the OAuth provider.
+2.  Then, use the extension point [`providers`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.oauth2.providers.OAuth2ServiceProviderRegistry--providers) of the `OAuth2ServiceProviderRegistry` service to register the OAuth provider.
 
     ```xml
     <component name="org.nuxeo.ecm.media.publishing.MyOAuthServiceProvider">
