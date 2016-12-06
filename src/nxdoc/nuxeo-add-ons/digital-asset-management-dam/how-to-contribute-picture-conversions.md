@@ -2,7 +2,7 @@
 title: How to Contribute Picture Conversions
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: XML Extension
         topics: 'Conversion, DAM'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - conversion
     - picture
@@ -30,129 +30,129 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/4Bs5AQ'
     source_link: /display/NXDOC/How+to+Contribute+Picture+Conversions
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-22 13:08'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-15 13:14'
         message: Add links to the explorer
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-09 14:50'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-08 17:01'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-08 17:00'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-08 16:56'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-08 16:56'
         message: ''
         version: '18'
-    - 
+    -
         author: Thomas Roger
         date: '2015-01-08 13:41'
         message: ''
         version: '17'
-    - 
+    -
         author: Thomas Roger
         date: '2015-01-08 13:39'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-16 18:15'
         message: 'Format steps, add related pages'
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-03 15:59'
         message: ''
         version: '14'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 19:49'
         message: ''
         version: '13'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 19:03'
         message: ''
         version: '12'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 16:18'
         message: ''
         version: '11'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 16:14'
         message: ''
         version: '10'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 15:30'
         message: ''
         version: '9'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 15:24'
         message: ''
         version: '8'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 12:09'
         message: ''
         version: '7'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 11:17'
         message: ''
         version: '6'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-01 10:47'
         message: ''
         version: '5'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-28 19:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-28 19:02'
         message: ''
         version: '3'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-28 18:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-28 18:24'
         message: ''
         version: '1'
 
 ---
-Picture conversions are used to fill the picture views (stored in the `picture:views`&nbsp;field of a document having the&nbsp;`Picture` facet). The default ones are: Thumbnail, Small, Medium, OriginalJpeg.
+Picture conversions are used to fill the picture views (stored in the `picture:views`&nbsp;field of a document having the&nbsp;`Picture` facet). The default ones are: Thumbnail, Small, Medium, FullHD, OriginalJpeg.
 
 Picture conversions are simple XML contributions done on the&nbsp;[`pictureConversions`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.picture.ImagingComponent--pictureConversions) extension point of the&nbsp;[`org.nuxeo.ecm.platform.picture.ImagingComponent`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.picture.ImagingComponent) component.
 
@@ -314,7 +314,7 @@ Picture conversions (not marked as&nbsp;`default`) can be filtered so that you c
 
 {{#> callout type='note' }}
 
-In the execution context of the filters you can use on a picture conversion, you only have access to the detached **document**. There is no `principal`, `currentUser` or `coreSession`. You cannot access to the Seam beans as the conversion is done in a worker.
+In the execution context of the filters you can use on a picture conversion, you only have access to the detached **document**. There is no `principal`, `currentUser` or `coreSession`. You cannot access the Seam beans as the conversion is done in a worker.
 
 {{/callout}}
 
