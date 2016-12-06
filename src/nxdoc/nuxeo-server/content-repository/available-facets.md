@@ -2,10 +2,10 @@
 title: Available Facets
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - facet
     - core-component
 toc: true
@@ -209,25 +209,15 @@ history:
         version: '1'
 
 ---
-Facets are markers on document types that instruct Nuxeo (and any part of the system that cares about them) to behave differently, or that are automatically set on some document instances. The following facets are currently in use by Nuxeo, but others could be defined by code using Nuxeo.
-
-## Asset
-
-Marker facet to be set on types which you want to see in the DAM compat view.
+Facets are markers on document types that instruct the Nuxeo platform (and any part of the system that cares about them) to behave differently, or that are automatically set on some document instances. The following facets are currently in use by Nuxeo, but others can be defined.
 
 ## Audio
 
-This facet should be set on any type which you want to store a audio. It comes with the&nbsp;`file`,&nbsp;and&nbsp;`audio`&nbsp;schemas.
+This facet should be set on any type in which you want to store audio. It comes with the `file` and `audio` schemas.
 
 ## BigFolder
 
-This facet should be set on types that are to be considered as "big folders", for which the list of children is not displayed in the navigation tree, contrary to the "Folderish" facet.
-
-## BrowseViaSearch
-
-## DamSearch
-
-Marker facet to be set on types used as search document types for DAM compat search content views. Documents with this facet will be listed as DAM saved searches.
+This facet should be set on types that are to be considered as "big folders", for which the list of children is not displayed in the navigation tree, as opposed to the `Folderish` facet.
 
 ## Downloadable
 
@@ -243,9 +233,7 @@ This should be set on types that are to be considered as "folders", and therefor
 
 This facet can be added dynamically to a document to store arbitrary related text that will be used in the fulltext index for the document. In this way, you can find the document with a fulltext search on more that just what's stored in the document.
 
-This is used for instance to add the Annotations fulltext to the document, or in the [Semantic Entities plugin]({{page space='dmdoc54' page='semantic-entities'}}). We'd like to do it for comments as well but it's not done yet.
-
-It can be used by third-parties to add further text.
+It is used for instance to add the Annotations' fulltext to the document. It can be used by third-parties to add further text.
 
 Of course this requires that the fulltext index includes the `relatedtext` schema. This is the default, but if you redefine the default index it's important to know.
 
@@ -257,17 +245,21 @@ Marker facet to be set on types which you want to generate Storyboard, types on 
 
 Marker facet to be set on types which you want to generate a video preview (screenshot), and on which you already added the [Video facet](#video).
 
+## HiddenInCreation
+
+This should be set on types which you don't want to see in the documentation creation menus or screens. You can still create these types programmatically.
+
 ## HiddenInNavigation
 
 This should be set on types which you don't want to see in regular listings of documents and folders.
 
 ## Immutable
 
-This is automatically set by the system on document instances which correspond to immutable objects (archived versions and proxies).
+This is automatically set by the system on document instances which correspond to immutable objects (archived versions and proxies to archived versions).
 
 ## MultiViewPicture
 
-Marker facet to be set on types which handle a list of picture views. Deprecated since 7.1, the&nbsp;`Picture` facet is now sufficient to mark types handling picture views.
+Marker facet to be set on types which handle a list of picture views. Deprecated since 7.1, the `Picture` facet is now sufficient to mark types handling picture views.
 
 ## NotFulltextIndexable
 
@@ -275,11 +267,11 @@ The document won't be full-text indexed.
 
 ## Orderable
 
-This should be set on folderish types for which maintaining the order of children is important. (CoreSession.orderBefore can be used only on documents contained in orderable folders.)
+This should be set on `Folderish` types for which maintaining the order of children is important. (`CoreSession#orderBefore` can be used only on documents contained in `Orderable` folders.)
 
 ## Picture
 
-This facet should be set on any type which you want to store a picture. It comes with the `file` and&nbsp;`picture`&nbsp;schemas.
+This facet should be set on any type in which you want to store a picture. It comes with the `file` and `picture` schemas.
 
 ## Publishable
 
@@ -287,7 +279,7 @@ This should be set on document types for which you want to have publishing.
 
 ## SystemDocument
 
-The document type corresponds to a system document, not a user-visible document. It is often hidden in navigation as well, but not always, as some system documents (like workflow route models) may need to be visible to administrators or selected users.
+The document type corresponds to a system document, not a user-visible document. It is often `HiddenInNavigation` as well, but not always, as some system documents (like workflow route models) may need to be visible to administrators or selected users.
 
 ## Versionable
 
@@ -295,7 +287,7 @@ This should be set on document types for which you want to have versioning.
 
 ## Video
 
-This facet should be set on any type which you want to store a video. It comes with the `file`, `video` and&nbsp;`picture`&nbsp;schemas.
+This facet should be set on any type in which you want to store a video. It comes with the `file`, `video` and `picture` schemas.
 
 ## Task
 
