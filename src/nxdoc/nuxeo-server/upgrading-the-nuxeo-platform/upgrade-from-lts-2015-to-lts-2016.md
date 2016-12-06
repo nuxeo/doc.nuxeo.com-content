@@ -2,7 +2,7 @@
 title: Upgrade from LTS 2015 to LTS 2016
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 toc: true
 labels:
