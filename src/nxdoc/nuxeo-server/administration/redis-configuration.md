@@ -2,10 +2,10 @@
 title: Redis Configuration
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - redis
     - clustering
     - multiexcerpt-include
@@ -121,18 +121,20 @@ history:
         date: '2013-11-14 16:50'
         message: ''
         version: '1'
-
+	
 ---
 Nuxeo instances should be configured with a Redis server (in addition to the regular SQL database) in the following cases:
 
 1.  When it's important that asynchronous jobs not yet executed be kept across server restarts.
 2.  In cluster mode to allow:
     *   Execution of some asynchronous jobs on dedicated nodes (for instance image conversion or fulltext extraction).
-    *   A distributed [Transient Store](/x/AQalAQ), required for&nbsp;[Batch Upload](/x/OYLZ)&nbsp;and&nbsp;[Asynchronous Conversion Works](/x/PYMlAQ#Conversion-AsynchronousConversions).
-    *   Relying on the `RedisCache`&nbsp;as a distributed implementation of the [Nuxeo Drive]({{page space='userdoc' page='nuxeo-drive'}}) synchronization roots cache.
-    *   Efficient repository low level cache invalidations ([VCS row cache invalidation]({{page space='NXDOC' page='Nuxeo and+Redis#NuxeoandRedis-VCSRowCacheInvalidation'}}))
+    *   A distributed [Transient Store]({{page page='transient-store'}}), required for&nbsp;[Batch Upload]({{page page='blob-upload-for-batch-processing'}})&nbsp;and&nbsp;[Asynchronous Conversion Works]({{page page='conversion'}}#-anchor-java-api-async-conversions-asynchronous-conversions).
+    *   Relying on the `RedisCache`&nbsp;as a distributed implementation of the [Nuxeo Drive]({{page page='nuxeo-drive'}}) synchronization roots cache.
+    *   [Cluster cache invalidations]({{page page='nuxeo-and-redis'}}#clustering-invalidation)
 
 For a robust production instance, the first point is always necessary, which means that Redis should always be used.
+
+Visit [the Nuxeo and Redis page]({{page page='nuxeo-and-redis'}}) for more information.
 
 ## Configuring Redis
 
@@ -167,6 +169,7 @@ nuxeo.redis.database=0
 nuxeo.redis.timeout=2000
 nuxeo.redis.maxTotal=16
 nuxeo.redis.maxIdle=8
+nuxeo.work.queuing=redis
 ```
 
 The `nuxeo.redis.port` is self-explanatory, 6379 is the value for a default Redis installation.
@@ -175,17 +178,20 @@ The `nuxeo.redis.prefix` is the prefix used for all Nuxeo keys stored and read i
 
 The `nuxeo.redis.password`, `nuxeo.redis.database` and `nuxeo.redis.timeout` are standard Redis parameters, although rarely used.
 
-When `nuxeo.redis.enabled=true` then the following is automatically activated as well:
-
-```
-nuxeo.work.queuing=redis
-```
-
-(As of Nuxeo Platform 5.8, work queuing is the only use of Redis in the standard Nuxeo modules, so it makes sense to activate both together.)
-
 `nuxeo.redis.maxTotal` sets the maximum size of the Redis connections pool (available since 8.2).
 
 `nuxeo.redis.maxIdle` sets the maximum number of Redis idle connections in the pool (available since since 8.2).
+
+When `nuxeo.redis.enabled=true` then the following is automatically activated as well: `repository.clustering.invalidation=redis`.
+(As of Nuxeo Platform 5.8, work queuing is the only use of Redis in the standard Nuxeo modules, so it makes sense to activate both together.)
+
+To activate the Redis [cluster invalidation]({{page page='nuxeo-and-redis'}}#clustering-invalidation) in cluster mode you need to add:
+
+```
+repository.clustering.invalidation=redis
+```
+
+
 
 ## High Availability
 
