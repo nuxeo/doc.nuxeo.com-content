@@ -2,8 +2,10 @@
 title: Nuxeo Mobile
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
+labels:
+        - lts2016-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31033323'
@@ -149,7 +151,7 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}The Nuxeo mobile application lets you access content stored in Nuxeo Platform servers on your phone. It provides a seamless experience on essential features such as searching, browsing and managing favorite documents. Available for iOS.{{! /excerpt}}
+{{! excerpt}}The Nuxeo mobile application lets you access content stored in Nuxeo Platform servers on your phone. It provides a seamless experience on essential features such as searching, browsing and managing favorite documents. Available for iOS and Android.{{! /excerpt}}
 
 &nbsp;
 
@@ -159,13 +161,21 @@ history:
 
 The Nuxeo mobile application is available for iPhones SE, 5/5c/5s, 6/6+, 7/7+&nbsp;with a minimum version of iOS 8 required.
 
+### Android Requirements
+
+The minimum required version of Android 4.4.
+
 ### Nuxeo Platform Requirements
 
-The Nuxeo mobile application is compliant with Nuxeo Platform 8.3 and Nuxeo LTS 2015 with hotfix 12\. See the [Limitations](#limitations) section for previous hotfixes of Nuxeo Platform LTS 2015.
+The Nuxeo mobile application is compliant with Nuxeo Platform 8.3, Nuxeo LTS 2015 with hotfix 12 and Nuxeo LTS 2016.
+
+See the [Limitations](#limitations) section for previous hotfixes of Nuxeo Platform LTS 2015.
 
 ## Installation
 
-The Nuxeo iOS application can be installed from the [Apple Store](https://itunes.apple.com/app/apple-store/id1103802613?mt=8).&nbsp;
+The Nuxeo **iOS** application can be installed from the [Apple Store](https://itunes.apple.com/app/apple-store/id1103802613?mt=8).
+
+The Nuxeo **Android** application can be installed from [Google Play](https://play.google.com/store/apps/details?id=com.nuxeomobile).
 
 ## Functional Overview
 
@@ -175,13 +185,14 @@ The Nuxeo application allows you to authenticate against a Nuxeo server, browse 
 
 ### Authenticating
 
-Once the application is installed and opened, indicate the Nuxeo server you want to connect to by filling the HTTP information. For example `http://myserver.nuxeo.com/nuxeo`.As soon as the server is detected, the login page is displayed. Depending on your server configuration, it is the default one or your customized login page providing authentication through CAS, OpenID or another authentication system.
+Once the application is installed and opened, indicate the Nuxeo server you want to connect to by filling the HTTP information. For example `http://myserver.nuxeo.com/nuxeo`. As soon as the server is detected, the login page is displayed. Depending on your server configuration, it is the default one or your customized login page providing authentication through CAS, OpenID or another authentication system.
 
-![]({{file name='MobileServerConnection.PNG'}} ?w=200,h=355,border=true)&nbsp; &nbsp;&nbsp;![]({{file name='MobileLoginPage.jpg'}} ?w=200,h=355,border=true)
+![]({{file name='MobileServerConnection.PNG'}} ?w=200,h=355,border=true)![]({{file name='MobileLoginPage.jpg'}} ?w=200,h=355,border=true)
+
 
 ### Browsing Content
 
-The **Browse** menu enables you to browse your documents. The thumbnail of the document is displayed whenever it's available, just like on the regular web user interface (see the [Limitations](#limitations) section). Otherwise an icon is displayed. Tap to enter the workspace or see the document.Actions on documents are available by **sliding**:
+The **Browse** menu enables you to browse your documents. The thumbnail of the document is displayed whenever it's available, just like on the regular web user interface (see the [Limitations](#limitations) section). Otherwise an icon is displayed. Tap to enter the workspace or see the document. Actions on documents are available by **sliding**:
 
 *   Share&nbsp;
 *   Add to/Remove from favorites (see below for details)
@@ -194,6 +205,7 @@ For any non folderish document, such as notes and files typically, some informat
 *   The document thumbnail if available or the preview of&nbsp;content for notes
 *   The filename and size of the attached file if any
 *   The creation date, creator username, version, state and list of contributors
+
 
 If the PDF preview is available, tap the thumbnail zone to preview it. If the document is a text document with several pages, you can navigate through it.
 
