@@ -2,12 +2,11 @@
 title: Nuxeo Groups and Rights Audit
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - nuxeo-groups-rights-audit
-    - last-review-20150226
     - excerpt-include
 toc: true
 confluence:
@@ -56,7 +55,7 @@ history:
 
 The Nuxeo Groups and Rights Audit package requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin Center]({{page page='installing-a-new-package-on-your-instance'}}).
 
-After it has been installed, administrators have a new export option available, called "Permission audit export".
+After it has been installed, administrators have a new document action option available, called "Permission Audit Export".
 
 ![]({{file name='groups-rights-audit-export-link.png' space='userdoc' page='nuxeo-groups-and-rights-audit'}} ?w=200,border=true,thumbnail=true)
 
