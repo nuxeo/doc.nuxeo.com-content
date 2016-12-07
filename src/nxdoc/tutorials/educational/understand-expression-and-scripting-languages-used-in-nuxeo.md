@@ -465,6 +465,12 @@ ${workflowDocuments[0].property}`
 </table>
 </div>
 
+{{! multiexcerpt name='el-language-jsf'}}
+{{#> callout type='note' heading='About EL language'}}
+EL language relates to the JSF UI. If you intend on using it, please make sure you installed the `nuxeo-jsf-ui` package in Nuxeo Platform and that you selected it in your application dependencies screen in Nuxeo Studio.
+{{/callout}}
+{{! /multiexcerpt}}
+
 {{#> callout type='note' heading='Variable name and context'}}
 The same object may be given a different variable name depending on language or context, as shown in bold in the previous table.
 
@@ -472,6 +478,8 @@ Be careful if you intend to copy / paste an expression taken from a different co
 {{/callout}}
 
 ## How Can I Use SEAM Components in EL Expression Language?
+
+{{{multiexcerpt 'el-language-jsf'}}}
 
 1.  First of all, you need to find the right SEAM component. To do so, go to the [Nuxeo Platform explorer](http://explorer.nuxeo.org), choose your distribution and browse the SEAM components available.
     They are given explicit names so you can find what you are looking for more easily (eg : `clipboardActions`, `navigationContext`).
@@ -487,6 +495,8 @@ Be careful if you intend to copy / paste an expression taken from a different co
 ## How Can I Make Sure that the SEAM Component or Other Variable Will be Available in my Context and Also Check What Value Will be Returned by an EL or MVEL Expression?
 
 ### EL Language
+
+{{{multiexcerpt 'el-language-jsf'}}}
 
 If your EL expression is meant to be evaluated into a UI screen a simple way to check is to create a XHTML file containing it.
 
@@ -577,6 +587,8 @@ Please note that:
 
 [Filters]({{page page='actions-links-buttons-icons-tabs-and-more'}}) use the EL expression language. You have access to all Seam components and should refer to [explorer.nuxeo.org](http://explorer.nuxeo.org) to get an exhaustive list depending on your platform version. See also information in the category 7: it is actually the same context.
 
+{{{multiexcerpt 'el-language-jsf'}}}
+
 ### [![]({{file name='ELDependingOnComponent-7.png'}})](#schema-which-el) Widgets, XHTML and Content Views
 
 In widgets, layout, content views and in XHTML templates, you can use the EL expression language. You have access to all Seam components (see upper how to access them) and should refer to [explorer.nuxeo.org](http://explorer.nuxeo.org) to get an exhaustive list depending on your platform version. Here are a few interesting possibilities you could use to get started:
@@ -612,6 +624,8 @@ In widgets, layout, content views and in XHTML templates, you can use the EL exp
     -  The NXQL filter in this example uses the `STARTSWITH` operator, with the `path` property: `. . . AND ecm:path STARTSWITH ?`
     -  The parameter will the be:
     `#{documentManager.getParentDocument(currentDocument.parentRef).path}`
+
+{{{multiexcerpt 'el-language-jsf'}}}
 
 ## Tips and Tricks
 
