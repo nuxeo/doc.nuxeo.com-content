@@ -4,11 +4,9 @@ review:
     comment: ''
     date: '2016-12-07'
     status: ok
-labels:
-        - lts2016-ok
 toc: true
 labels:
-    - content-review-lts2016
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '31033323'
     ajs-parent-page-title: Desktop and Mobile
