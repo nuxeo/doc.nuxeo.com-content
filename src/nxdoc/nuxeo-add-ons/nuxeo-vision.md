@@ -2,10 +2,10 @@
 title: Nuxeo Vision
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - link-update
     - multiexcerpt-include
 toc: true
@@ -186,7 +186,7 @@ The default behavior can also be completely disabled with the following contribu
 
 ```xml
 <extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
-	<listener name="visionPictureConversionChangedListener" class="org.nuxeo.vision.core.listener.PictureConversionChangedListener" enabled="false></listener>
+	<listener name="visionPictureConversionChangedListener" class="org.nuxeo.vision.core.listener.PictureConversionChangedListener" enabled="false"></listener>
 	<listener name="visionVideoChangedListener" class="org.nuxeo.vision.core.listener.VideoStoryboardChangedListener" enabled="false"></listener>
 </extension>
 ```
@@ -232,7 +232,7 @@ function run(input, params) {
 
 ## Google Vision API Limitations
 
-The API has some [known and documented limitations](https://cloud.google.com/vision/docs/image-best-practices) you should be aware of. For example (as of May 2016):
+The API has some known and documented [best practices](https://cloud.google.com/vision/docs/best-practices) and [limitations](https://cloud.google.com/vision/limits) you should be aware of. For example (as of December 2016):
 
 *   There is limitation to the size of the image you send to the API: "Image files sent to the Google Cloud Vision API should not exceed 4 MB".&nbsp;There also is a limitation when you send a list of images (max. 8MB). This is an important information to handle before requesting data. And this is why, if you look at the original chain, it actually takes the &ldquo;Medium&rdquo; conversion, which is a JPEG we can assume is always smaller than 4MB. You also should read the limitations in terms of maximum number of images/second, etc.
 *   Not all image formats are handled. TIFF for example is not handled.
