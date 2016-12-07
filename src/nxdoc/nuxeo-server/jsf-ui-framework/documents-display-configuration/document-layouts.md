@@ -114,7 +114,7 @@ It is possible to merge layouts when redefining the document type, adding a prop
 
 ```
 
-Since 5.8, the property named&nbsp;`display` set on the layout configuration is enough to handle a two columns rendering, it can be set to value `table_2_columns` for this purpose.
+The property named&nbsp;`display` set on the layout configuration is enough to handle a two columns rendering, it can be set to value `table_2_columns` for this purpose.
 
 ## {{> anchor 'display'}}Document Layouts Display
 
