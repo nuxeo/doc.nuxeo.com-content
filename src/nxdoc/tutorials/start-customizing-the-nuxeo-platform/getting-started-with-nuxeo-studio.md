@@ -2,7 +2,7 @@
 title: Getting Started with Nuxeo Studio
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 details:
     howto:
@@ -14,6 +14,7 @@ labels:
     - content-review-lts2016
     - howto
     - studio
+    - lts2016-ok
 toc: true
 confluence:
     ajs-parent-page-id: '14256538'

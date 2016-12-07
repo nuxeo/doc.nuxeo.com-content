@@ -2,7 +2,7 @@
 title: Getting Started with Nuxeo Generator
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2015-12-06'
     status: ok
 details:
     howto:
@@ -14,6 +14,7 @@ labels:
     - content-review-lts2016
     - howto
     - generator
+    - lts2016-ok
 toc: true
 confluence:
     ajs-parent-page-id: '14256538'
@@ -420,11 +421,12 @@ Here we want to add some server side Java logic that will update the contract's 
 ## Prerequisites
 
 * A Contract document type created at the [previous step]({{page page='getting-started-with-nuxeo-studio'}})
-* [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars)
-* The latest stable [NodeJS](https://nodejs.org) version should be installed on your machine
+* An IDE that integrates with Maven.
+    We provide instructions for [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars) or IntelliJ IDEA
 * Java 8 with JDK
-* npm 2.12.0+
 * Maven 3.3+ (see the Installing Maven section of page [Maven Usage]({{page version='' space='corg' page='maven-usage'}}))
+* The latest stable [NodeJS](https://nodejs.org) version should be installed on your machine
+* npm 2.12.0+
 
 
 ## Step 1 - Install Nuxeo Generator
@@ -432,7 +434,7 @@ Here we want to add some server side Java logic that will update the contract's 
 From a command line prompt, type:
 
 ```bash
-npm install -g yo generator-nuxeo
+$ npm install -g yo generator-nuxeo
 ```
 
 The Nuxeo Generator lets you easily scaffold common Nuxeo components like empty projects, Packages, Automation Operations, Services... This saves you time writing boilerplate code to focus on your code instead of the structure.
@@ -490,34 +492,37 @@ From a command line:
 
     Now that the project is generated, it can be used in **any IDE**.
 
-5. Using IntelliJ IDEA
+5. Import your Nuxeo project into your IDE.
 
-    1. Select **File** / **Open...**
-    2. Browse to your project root folder (`contract-mgt-project`), then the `pom.xml` file and click **Open**.
-    3. Choose **Open as Project**
+    * Using IntelliJ IDEA
 
-6. Using Eclipse
+        1. Select **File** / **Open...**.
 
-    1.  Generate Eclipse configuration files.
+        2. Browse to your project root folder (`contract-mgt-project`), then the `pom.xml` file and click **Open**.
 
-        ```bash
-        $ mvn install
+        3. Choose **Open as Project**.
 
-        # The following parameters (downloadSources, downloadJavadocs and useProjectReferences) are optional
-        # For details, see Maven Eclipse Plugin documentation: https://maven.apache.org/plugins/maven-eclipse-plugin/eclipse-mojo.html
-        $ mvn eclipse:clean eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true -Declipse.useProjectReferences=true
+    * Using Eclipse
 
-        # Linux and OS X users should run the following script to make Eclipse use different build directories than Maven:
-        $ curl -o- https://raw.githubusercontent.com/nuxeo/nuxeo/master/fixeclipse|bash
-        # A cross-platform script is also available for Windows users:
-        # curl -o- https://raw.githubusercontent.com/nuxeo/nuxeo/master/scripts/fixeclipse.py|python
-        ```
+        1.  Generate Eclipse configuration files.
 
-    2.  Import the project in Eclipse:
-        1.  Select **File** / **Import** / **General** / **Existing Projects into Workspace**.
-        2.  Browse to your project root folder (`contract-mgt-project`), then click **Finish**.
+            ```bash
+            $ mvn install
+
+            # The following parameters (downloadSources, downloadJavadocs and useProjectReferences) are optional
+            # For details, see Maven Eclipse Plugin documentation: https://maven.apache.org/plugins/maven-eclipse-plugin/eclipse-mojo.html
+            $ mvn eclipse:clean eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true -Declipse.useProjectReferences=true
+
+            # Linux and OS X users should run the following script to make Eclipse use different build directories than Maven:
+            $ curl -o- https://raw.githubusercontent.com/nuxeo/nuxeo/master/fixeclipse|bash
+            # A cross-platform script is also available for Windows users:
+            # curl -o- https://raw.githubusercontent.com/nuxeo/nuxeo/master/scripts/fixeclipse.py|python
+            ```
+
+        2.  In Eclipses select **File** / **Import** / **General** / **Existing Projects into Workspace**.
+
+        3.  Browse to your project root folder (`contract-mgt-project`), then click **Finish**.
             ![]({{file name='eclipse_import_project.png'}} ?w=400)
-
 
 #### Code Your Operation
 
@@ -537,19 +542,17 @@ From a command line:
 
 3.  Update the dependencies:
 
-    1. If you are using IntelliJ IDEA:
-
+    * IntelliJ IDEA
         In IntelliJ IDEA, click on **Import Changes** in the Maven's popup.
 
-    2. If you are using Eclipse:
-
-        In a terminal:
+    * Eclipse
+        1. In a terminal:
 
         ```bash
         $ mvn eclipse:eclipse
         ```
 
-        In Eclipse, then right-click on the project and click Refresh (F5).
+        2. In Eclipse, then right-click on the project and click Refresh (F5).
 
 4. You get something like this for the operation, in `src/main/java`:
 
@@ -634,7 +637,7 @@ From a command line:
 
 A unit test has been created in `src/test/java`. You will need it to pass in order to compile and deploy your project.
 
-1. Create a fake component to help to fake Studio. In `src/test/fakestudio-component.xml`, fill in with:
+1. Create a fake component to help faking Studio, called `fakestudio-component.xml`. Fill it in with:
     ```xml
     <component name="com.nuxeo.studio.fake">
       <alias>org.nuxeo.ecm.directory.sql.storage</alias>
@@ -704,7 +707,9 @@ A unit test has been created in `src/test/java`. You will need it to pass in ord
     }
     ```
 
-3.  Replace the `MAVEN-ARTIFACT-ID` in `studio.extensions.MAVEN-ARTIFACT-ID` with your Studio project's symbolic name. To get the Maven artifact ID, in Studio, go to **Settings** > **Application Information** and use the value found in the **Maven Artifact id** field.
+3.  Replace the `MAVEN-ARTIFACT-ID` in `studio.extensions.MAVEN-ARTIFACT-ID` with your Studio project's symbolic name.
+
+    To get the Maven artifact ID, in Studio, go to **Settings** > **Application Information** and use the value found in the **Maven Artifact id** field.
 
 If you try running the test (in Eclipse, right-click on your project and choose **Run As, JUnit Test**, or **Run TestContractUpdater** in IntelliJ IDEA), you will notice that the test fails because our Studio project is missing a few things. We need to add them to make the test pass.
 
@@ -748,9 +753,13 @@ The operation is now available in Automation Chain editor, in the Document categ
 **Create an Automation Chain**
 
 1.  In the Studio menu **Automation** > **Automation Chains**, click on **New.**
+
 2.  Call your chain `ContractUpdater`.
+
 3.  Keep the **Fetch > Context Document(s)** operation and add your own operation, available in **Document > ContractUpdater.**
+
     ![]({{file name='contractUpdater_chain.png'}} ?w=600,border=true)
+
 4.  Click on **Save**.
 
 **Create an Event Handler**
@@ -758,11 +767,15 @@ The operation is now available in Automation Chain editor, in the Document categ
 Now create an Event Handler in order to call your operation when a contract is created.
 
 1.  In the Studio menu **Automation** > **Event Handlers**, click on **New**.
+
 2.  Call the event handler `SetReminderDate`.
+
 3.  Fill in the creation wizard:
+
     *   **Events**: Select **About to create**.
     *   **Current document has one of the types**: Select your document type **Contract**.
     *   **Event Handler Execution**: Choose your automation chain `ContractUpdater`.
+
 4.  Click on **Save**.
 
 Now you can try it on your server either by running the unit tests or by testing manually.
@@ -791,7 +804,7 @@ The code can either be tested through unit tests or manually. You need to bind t
     </servers>
     ```
 
-4. In Eclipse edit the `pom.xml` file to declare the dependency of the Studio project you just tagged:
+3. In your IDE edit the `pom.xml` file to declare the dependency of the Studio project you just tagged:
 
     ```xml
     <dependencies>
@@ -805,23 +818,23 @@ The code can either be tested through unit tests or manually. You need to bind t
     </dependencies>
     ```
 
-The `artifactId` is identical to the `MAVEN-ARTIFACT-ID` we referenced before. Use the `version` number from your latest release or tag.
+    The `artifactId` is identical to the `MAVEN-ARTIFACT-ID` we referenced before. Use the `version` number from your latest release or tag.
 
-5.  Update the dependencies:
+4.  Update the dependencies:
 
-    1. If you are using IntelliJ IDEA:
+    * IntelliJ IDEA
 
         In IntelliJ IDEA, click on **Import Changes** in the Maven's popup.
 
-    2. If you are using Eclipse:
+    * Eclipse
 
-        In a terminal:
+        1. In a terminal:
 
         ```bash
         $ mvn eclipse:eclipse
         ```
 
-        In Eclipse, then right-click on the project and click Refresh (F5).
+        2. In Eclipse, then right-click on the project and click Refresh (F5).
 
 ### Using Unit Tests
 
@@ -838,6 +851,7 @@ Using unit tests is the recommended way to ensure a feature is working as expect
 To start the server:
 
 1.  Start your Nuxeo server. In Nuxeo Platform, update your Studio package from the Update Center.
+
 2.  Create a new Contract with the following information:
     *   Title: Maintenance Contract
     *   Contract Owner: Nuxeo
@@ -853,5 +867,3 @@ That's it! You are ready to develop on the Nuxeo Platform.
 ## What to do Next
 
 You should learn to [package and deploy your application](https://university.nuxeo.io/nuxeo/university/#!/course/nuxeo-platform-developer-basics/package-deploy-application) in a Nuxeo Platform instance.
-
-&nbsp;
