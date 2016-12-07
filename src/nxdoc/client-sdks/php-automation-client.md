@@ -150,7 +150,7 @@ Until this new version, the old API will still be available. Thus you can upgrad
 
 **Manual install**
 
-* [Nuxeo Automation PHP Client 1.1.0](https://github.com/nuxeo/nuxeo-automation-php-client/archive/1.1.0.tar.gz).
+* [Nuxeo Automation PHP Client 1.1.1](https://github.com/nuxeo/nuxeo-automation-php-client/archive/1.1.1.tar.gz).
 * [Nuxeo Automation PHP Client 1.5.0-rc1](https://github.com/nuxeo/nuxeo-automation-php-client/archive/1.5.0-rc1.tar.gz).
 
 **Import Nuxeo Automation PHP Client with:**
