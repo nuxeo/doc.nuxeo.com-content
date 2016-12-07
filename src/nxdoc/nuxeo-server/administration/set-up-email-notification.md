@@ -2,10 +2,10 @@
 title: Set Up Email Notification
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
@@ -62,6 +62,8 @@ The default Nuxeo Platform email configuration is filled in with neutral values 
     {{/callout}}
 3.  Click the button **Save**.
     As indicated on top of the page, you need to restart your server so the new configuration is taken into account.
+    
+{{#> callout type='info'}}Properties and values can also be entered directly in your `nuxeo.conf` file. Please refer to the table below for the keys to add or fill in.{{/callout}}
 
 **Email information configuration**
 
@@ -75,7 +77,7 @@ Description
 
 </th></tr><tr><td colspan="1">
 
-Email notifications subject prefix
+Email notifications subject prefix<br/>
 `nuxeo.notification.eMailSubjectPrefix`
 
 </td><td colspan="1">
@@ -95,7 +97,7 @@ Default value is "pop3". You may need to change it to "IMAP".
 
 </td></tr><tr><td colspan="1">
 
-Mail transport protocol
+Mail transport protocol<br/>
 `mail.transport.protocol`
 
 </td><td colspan="1">
@@ -163,7 +165,7 @@ Mail server host name for outgoing mails. Default value is "localhost". You need
 
 </td></tr><tr><td colspan="1">
 
-Port Number for Transport
+Port Number for Transport<br/>
 `mail.transport.port`
 
 </td><td colspan="1">
@@ -173,7 +175,7 @@ Default value is 25.
 
 </td></tr><tr><td colspan="1">
 
-Use Authentication for Transport
+Use Authentication for Transport<br/>
 `mail.transport.auth`
 
 </td><td colspan="1">
@@ -191,7 +193,7 @@ Email address that will displayed as the sender's address.
 
 </td></tr><tr><td colspan="1">
 
-Transport Connection using TLS
+Transport Connection using TLS<br/>
 `mail.transport.usetls`
 
 </td><td colspan="1">
