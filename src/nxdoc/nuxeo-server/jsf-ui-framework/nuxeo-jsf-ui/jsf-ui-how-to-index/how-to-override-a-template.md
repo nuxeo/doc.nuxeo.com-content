@@ -119,7 +119,7 @@ For more information about the bundle deployment, do not hesitate to read the pa
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [Getting Started with Nuxeo IDE]({{page page='getting-started-with-nuxeo-ide'}})
+- [Getting Started with Nuxeo Generator]({{page page='getting-started-with-nuxeo-generator'}})
 - [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}})
 - [How-To Index]({{page page='how-to-index'}})
 
