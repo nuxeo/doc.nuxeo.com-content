@@ -282,22 +282,60 @@ Installing Nuxeo Platform is done in a few steps:
 4.  Run the [Configuration Wizard]({{page page='configuration-wizard'}}) (not in the case of a standard static war).
 
 ## Hardware and Software Requirements
+The following table lists current requirements for running Nuxeo Platform. This list is a living one! If you have some constraints that do not fit this grid, do not hesitate to contact the Nuxeo team for evaluating feasability of running Nuxeo on any other environment, may it be a different JVM, Database, Application server or OS.
 
-This section presents information about the running environment for a Nuxeo server. Listing all required software, giving a recommended configuration and listing some others, known as operational, this sections aims at helping you to validate or define your production environment. However the list is not exhaustive and needs to be completed with the users' experience.
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr><th colspan="1">Hardware Requirements</th>
+<td colspan="1">Minimum requirement to start a Nuxeo server: 2 CPU, 2 Giga RAM, 300 Mb of disk-space. </td>
+<td colspan="1">Note: a production-ready set up for Nuxeo Platform may require several serve and different hardware sizing, depending on your SLA and planned usage. Contact Nuxeo for more information.</td>
+</tr>
 
-### Requirements
+<tr><th colspan="1">OS</th>
+<td colspan="1"><ul><li>Linux</li><li> Mac OS</li><li>Windows</li></ul></td>
+<td colspan="1">Note: the only limitation on the OS nature and version is the ability to install the correct version of the required JDK, see after. It means that while it is commonly reported to run on recent versions of Ubuntu, RHEL, Debian, CentOS, it can also run on any Linux distribution where it is possible to install the required JDK. You may have to adapt the provided startup shell scripts.</td>
 
-The Nuxeo Platform can run on Linux, Mac OS X and Windows operating systems.
+<tr><th colspan="1">Java</th>
+<td colspan="1">JDK 1.8.0_91 (Oracle's JDK or OpenJDK) and greater.</td>
+<td colspan="1">See following documentation: <ul><li>[Checking your Java Version]({{page page='installation#java-check'}})</li> <li>[How to Install Java]({{page page='installation#java-install'}})</li></td>
+</tr>
+<tr><th colspan="1">Application Server</th>
+<td colspan="1"> <ul><li>Tomcat 7.0.69</li><li>JBoss WildFly 8.1.0</li></ul></td>
+<td colspan="1">Nuxeo is shipped with an embedded Tomcat server but can also be packed as a static WAR that can be deployed additional targets, such as JBoss Wildfly. See [Run as A Static War]({{page page='deploying-as-a-standard-static-war'}})</td>
+<tr><th colspan="1">Database</th>
+<td colspan="1"><ul><li>MongoDB (2.8, 3.0, 3.2)</li><li> PostgreSQL (9.3, 9.4, 9.5, 9.6)</li><li>Oracle (11g, 12g)</li><li>SQL Server</li><li>MySQL (5.6,5.7)</li><li>MariaDB </li><li>MarkLogic (8.0)</li></ul></td>
+<td colspan="1">More information on [Database Configuration section]({{page page='database-configuration'}}). <br>Note that Nuxeo Server is shipped embedding H2, which means you don't need to set up a database before starting Nuxeo Platform. One of those database is required for a production set up or for more serious evaluation like performance testing.<br>
+Nuxeo Platform is also compatible with the cloud versions of those databases: Amazon RDS, Azure, MongoDB Atlas</td>
+</tr>
+<tr><th colspan="1">Authentication and User Management/th>
+<td colspan="1">Nuxeo Platform provides its own user and groups directories  and authentication solution. It is also compatible with multiple cloud and enteprise solutions:
+<ul>
+<li>LDAP servers (Open LDAP protocole)</li>
+<li>Active Directory</li>
+<li>SAML Providers(todo:list knwon to wok providers)</li>
+<li>OpenId</li>
+<li>Kerberos</li>
+<li>CAS</li>
 
-{{! multiexcerpt name='requirements-intro'}}
+</<ul></td>
+<td colspan="1">See [Authentication and User Management section]({{page page='authentication-and-user-management'}}).</td>
+</tr>
+<tr><th colspan="1">Optional Third Parties</th>
+<td colspan="1">Some third parties may be required depending on the conversions capabilities you want to benefit from. The following list is not exhaustive:  <ul><li>LibreOffice</li>
+<li>ImageMagick</li>
+<li>FFMPEG</li>
+<li>Docker</li>
+<li>pdftohtml</li>
+<li>Ghostscript</li>
+<li>Exiftools</li>
+<li>...</li>
+</ul></td>
 
-The only requirement is to run Java. Below are the Nuxeo-Java compatibilities:
+<td colspan="1">More information on [installing third parties]({{page page='installing-and-setting-up-related-software'}}).</td>
+</tr>
+</tbody></table></div>
 
-{{{multiexcerpt 'java_requirement' page='Compatibility Matrix'}}}
-
-{{! /multiexcerpt}}
-
-We currently support Oracle's JDK and OpenJDK. Don't hesitate to contact us if you need us to support a JDK from another vendor.
 
 #### Checking Your Java Version&nbsp;{{> anchor 'java-check'}}
 
@@ -325,7 +363,7 @@ We currently support Oracle's JDK and OpenJDK. Don't hesitate to contact us if y
 
 {{! /multiexcerpt}}
 
-#### Installing Java
+#### Installing Java {{> anchor 'java-install'}}
 
 ##### For Linux Users
 
@@ -357,46 +395,6 @@ Java packages and instructions for installation are available from the Oracle we
 
 {{! /multiexcerpt}}
 
-### Recommendations
-
-#### Hardware Configuration
-
-{{! multiexcerpt name='hardware-configuration'}}
-
-The Nuxeo Platform is designed to be scalable and can thus to be deployed on many servers. It can be installed on only one server for a start, and can also easily be installed on many servers.
-The numbers below are given as an idea, sizing obviously depends on your usage of the platform.
-
-*   RAM: 2&nbsp;GB is the minimum requirement for using Nuxeo 4 to 8 is advised, per Nuxeo node.
-*   CPU: 4 CPU per Nuxeo node at least.
-*   Storage (disk) space: the minimum Nuxeo installation, along with the needed server and libs, takes something between 200&nbsp;MB and 280&nbsp;MB on a filesystem. Then, the final size will of course depend on the amount of data that will be stored in Nuxeo. A safe bet (until we provide better numbers) is to consider data space ratio of 1.5 to 2.
-
-{{! /multiexcerpt}}
-
-#### Embedded Database:H2
-
-The distribution comes with a default persistence configuration that is lightweight and easy to use, but it is not made for poduction usage:
-
-{{! multiexcerpt name='default-configuration'}}
-
-*   H2 for SQL Data (directories, relations ...),
-*   Filesystem persistence with&nbsp;[VCS]({{page space='glos' page='vcs'}}) for the Document repository.
-
-{{! /multiexcerpt}}
-You should adapt that configuration as soon as you want to use your application for real life use cases.
-
-#### For Optimal Performances
-
-{{! multiexcerpt name='optimal-configuration'}}
-
-*   Linux 64&nbsp;bits,
-*   PostgreSQL 9.6, Use PostgreSQL for document repository and all other services.
-*   Have plenty of RAM (>= 8&nbsp;GB).
-
-{{! /multiexcerpt}}
-
-### Known Working Configurations
-
-This section presents information about the running environment for a Nuxeo server. Listing all required software, giving a recommended configuration and listing some others, known as operational, this sections aims at helping you to validate or define your production environment. However the list is not exhaustive and needs to be completed with the users' experience.
 
 #### Browser Support
 
@@ -421,29 +419,3 @@ Nuxeo applications can be used with the browsers below.
 
     *   For development: Windows 7, Windows 8, Windows 10
     *   For deployment:&nbsp;Windows Server 2008,&nbsp;Windows&nbsp;Server 2012
-
-<div>**Note about Linux distributions**</div>
-
-<div>Debian and Ubuntu are the reference Linux distributions we run the tests against and we build the packages for. However any recent Linux distribution should be usable as long as:</div>
-
-<div>
-
-*   A JDK 8 is available
-*   You can adapt the provided Linux scripts
-*   You can install the third party dependencies (see&nbsp;[Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}})).
-
-</div>
-
-#### JVM
-
-Oracle JDK 8, 64 bits recommended especially on Windows environment.
-
-#### Storage Backends
-
-Different backends may be set as well for Nuxeo Core repository as for all other Nuxeo services that persist data. Please see the&nbsp;[list of supported databases]({{page page='supported-databases'}})&nbsp;for each version of Nuxeo.
-
-#### LDAP
-
-*   OpenLDAP
-*   OpenDS
-*   Microsoft Active Directory
