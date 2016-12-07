@@ -140,6 +140,13 @@ For instance, copy [http://www.restfulwebservices.net/wcf/WeatherForecastService
         <wsdlDirectory>src/main/resources/wsdls</wsdlDirectory>
         <sourceDestDir>${project.build.directory}/generated-sources/wsimport</sourceDestDir>
       </configuration>
+      <!-- Might be needed with JAXP 1.5, if XSD are behind HTTP only
+      <configuration>
+        <vmArgs>
+          <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+        </vmArgs>
+      </configuration>
+      -->
     </execution>
   </executions>
 </plugin>
