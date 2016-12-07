@@ -154,7 +154,6 @@ After the package is installed, two new OAuth2 service providers are added to Nu
 
 ![]({{file name='oauth2-providers.png'}} ?w=600,border=true)
 
-
 ### YouTube Configuration
 
 **Step 1: Preparing your application accounts on the Google Developers Console**
@@ -162,21 +161,32 @@ After the package is installed, two new OAuth2 service providers are added to Nu
 1.  Go to [https://console.developers.google.com/project](https://console.developers.google.com/project).
 
 2.  Create a new project.
-3.  Enable YouTube API:&nbsp;In**&nbsp;APIs & auth**&nbsp;**>**&nbsp;**APIs**, click on&nbsp;**YouTube Data API**&nbsp;and then on the&nbsp;**Enable API**&nbsp;button.
-4.  Create a new OAuth Client ID: In **Credentials**, click on&nbsp;**Create Credentials**.
+3.  
+Enable YouTube API: In **APIs & auth**&nbsp;>**APIs**, click on **YouTube Data API** and then on the **Enable API** button.
+4.  Create a new OAuth Client ID: In **Credentials**, click on **Create Credentials**.
+
     a.  Choose **OAuth Client ID.**
+
     b.  Choose **Web Application.**
+
     c.  For **Authorized JavaScript origins** set the URL of your server. Ex [http://localhost:8080/](http://localhost:8080/)
+
     d.  For **Authorized redirect URIs** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/YouTube/callback](http://localhost:8080/nuxeo/site/oauth2/googledrive/callback).
-        The console redirects you to a page where you can see the Client ID and Client Secret values. You will need them in the next steps.
-5.  Edit your consent screen: In&nbsp;**Credentials > OAuth Consent Screen**, fill the product name (the name of your application). Optionally, you may fill the other fields.&nbsp;
+
+    The console redirects you to a page where you can see the Client ID and Client Secret values. You will need them in the next steps.
+
+5.  Edit your consent screen: In **Credentials > OAuth Consent Screen**, fill the product name (the name of your application). Optionally, you may fill the other fields.
 
 **Step 2: Configuring the Nuxeo Platform**
 
 1.  In the **Admin** tab, go to **Cloud Services >** **Service providers**.
+
 2.  In the **OAuth2 Service providers** section, update the service whose name is &ldquo;YouTube&rdquo; by clicking on the **Modify** button.
+
 3.  Set the Client ID and Client Secret values with the one you got on the previous step.
+
 4.  Make sure the **Enabled** box is checked.
+
 5.  Save.
 
 ### Wistia Configuration
@@ -187,19 +197,28 @@ OAuth2 is not yet available for all Wistia accounts. Until it is, [contact Wisti
 
 **Step 1: Preparing your Wistia OAuth application**
 
-1.  Go to [Wistia website](http://wistia.com/) > **Account** > **Settings** > **OAuth applications**.
+1.  Go to [Wistia website](http://wistia.com/)&nbsp;> **Account**&nbsp;> **Settings**&nbsp;> **OAuth applications**.
+
 2.  Create a new application.
+
 3.  Fill in the required fields.
-    1.  For **Callback URL** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/Wistia/callback](http://localhost:8080/nuxeo/site/oauth2/googledrive/callback).
-    2.  Set permissions to **all:all.**
+
+    a.  For **Callback URL** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/Wistia/callback](http://localhost:8080/nuxeo/site/oauth2/googledrive/callback).
+
+    b.  Set permissions to **all:all.**
+
 4.  Open the details of the application to get the Client ID and Client Secret values. You will need them in the next steps.
 
 **Step 2: Configuring the Nuxeo Platform**
 
 1.  In the **Admin** tab, go to **Cloud Services >** **Service providers**.
+
 2.  In the **OAuth2 Service providers** section, update the service whose name is &ldquo;Wistia&rdquo; by clicking on the **Modify** button.
+
 3.  Set the Client ID and Client Secret values with the one you got on the previous step.
+
 4.  Make sure the **Enabled** box is checked.
+
 5.  Save.
 
 ### How to Add Publishing Accounts
@@ -257,7 +276,7 @@ Nested in the component tag of your XML contribution file, set the implementatio
 </component>
 ```
 
-Your service implementation must implement the&nbsp;`MediaPublishingProvider` interface or extend any other class that implements this interface.
+Your service implementation must implement the `MediaPublishingProvider` interface or extend any other class that implements this interface.
 
 #### Step 2: Contribute an OAuth provider
 
@@ -281,9 +300,9 @@ Your service implementation must implement the&nbsp;`MediaPublishingProvider` in
     </component>
     ```
 
-**Note:** The `name` field of your OAuth provider must match the `id` of your media publishing service defined in Step 1\. The `description` field is used as a label in the UI.
+**Note:** The `name` field of your OAuth provider must match the `id` of your media publishing service defined in Step 1. The `description` field is used as a label in the UI.
 
-#### Step 3: Contribute options widgets&nbsp;(optional)
+#### Step 3: Contribute options widgets (optional)
 
 By default, when publishing a video, the only required field to fill in is the publishing account. However, since different services allow different metadata (e.g. privacy status of a video, channels, projects, tags) it is possible to contribute more options widgets to the publishing panel in the UI.
 
