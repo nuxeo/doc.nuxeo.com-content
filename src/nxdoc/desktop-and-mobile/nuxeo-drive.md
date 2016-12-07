@@ -1001,8 +1001,6 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 
 #### Installing Nuxeo Drive on Mac OS X
 
-Nuxeo Drive is known to work on OS X starting from the version 10.8 (Mountain Lion).
-
 **To install Nuxeo Drive on your Mac OS X computer:**
 
 1.  Download the installer (.dmg file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](http://community.nuxeo.com/static/drive/latest/nuxeo-drive.dmg).
@@ -1013,8 +1011,6 @@ Nuxeo Drive is known to work on OS X starting from the version 10.8 (Mountain Li
     A Nuxeo Drive folder will be created by the system at the root of your local home folder (`/Users/USER/`). This is the place where synchronized documents will be stored on your computer.
 
 #### Installing Nuxeo Drive on Windows
-
-Nuxeo Drive is known to work on Windows 7 and 8, 32b and 64b.
 
 **To install Nuxeo Drive on your Windows computer:**
 
