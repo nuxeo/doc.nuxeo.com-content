@@ -3,6 +3,7 @@ title: Content Enricher
 review:
     comment: ''
     date: '2017-01-17'
+    date: '2016-12-07'
     status: ok
 labels:
     - lts2016-ok
@@ -325,27 +326,27 @@ For example, it is some times useful to get the children of a document while req
 Content enrichers can be called by sending the proper header(s) in your request. The header you need to call depends on the entity-type being enriched by the enricher. Hence, enrichers enriching documents can be called using the header:
 
 ```
-X-NXenrichers.document: enricherName
+enrichers.document: enricherName
 ```
 
 If you want to call an enricher enriching a user for instance, you would do it through a slightly different header:
 
 ```
-X-NXenrichers.user: enricherName
+enrichers.user: enricherName
 ```
 
 Several enrichers can be called in a single request by specifying a comma separated list in the header, or by sending several headers:
 
 ```
-X-NXenrichers.document: enricher1,enricher2,enricher3
+enrichers.document: enricher1,enricher2,enricher3
 ```
 
 is equivalent to sending:
 
 ```
-X-NXenrichers.document: enricher1
-X-NXenrichers.document: enricher2
-X-NXenrichers.document: enricher3
+enrichers.document: enricher1
+enrichers.document: enricher2
+enrichers.document: enricher3
 ```
 
 and combination would work.
@@ -361,149 +362,121 @@ http://localhost:8080/nuxeo/site/api/v1/path/default-domain/workspaces?enrichers
 
 ### Thumbnail
 
-When specifying&nbsp;`X-NXenrichers.document: thumbnail`, the JSON payload of the document REST calls response that contains the related attached file thumbnail of the document:
-&nbsp;
+When specifying `enrichers.document: thumbnail`, the JSON payload of the document REST calls response that contains the related attached file thumbnail of the document:
+
 
 {{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
 http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
- Request Method:
- GET
- Request Headersview source
+ Request Method: GET
+ Request Headers
  ...
- Content-type:
- application/json+nxentity
- X-NXenrichers.document:
- thumbnail
- X-NXproperties:
- dublincore
+ Content-type: application/json+nxentity
+ enrichers.document: thumbnail
+ properties: dublincore
 ```
 
 {{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
-    "entity-type": "document",
-    "repository": "default",
-    "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
-    "path": "/default-domain/workspaces/Marketing/photo.jpg",
-    "type": "Picture",
-    "state": "project",
-    "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
-    "isCheckedOut": true,
-    "changeToken": "1426696491000",
-    "title": "photo.jpg",
-    "lastModified": "2015-03-18T16:34:51.00Z",
-    "properties":
-    {
-        "dc:description": "",
-        ...
-    },
-    "facets":
-    [
-        "Versionable",
-        ...
-    ],
-    "contextParameters":
-    {
-        "thumbnail":
-        {
-            "url": "http://localhost:8080/nuxeo/nxthumb/default/4246ca87-c076-4bf4-b62b-0bab9dd21102/thumb:thumbnail/Small_photo.jpg"
-        }
+  "entity-type": "document",
+  "repository": "default",
+  "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
+  "path": "/default-domain/workspaces/Marketing/photo.jpg",
+  "type": "Picture",
+  "state": "project",
+  "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
+  "isCheckedOut": true,
+  "changeToken": "1426696491000",
+  "title": "photo.jpg",
+  "lastModified": "2015-03-18T16:34:51.00Z",
+  "properties": {
+    "dc:description": "",
+    ...
+  },
+  "facets": [
+    "Versionable",
+    ...
+  ],
+  "contextParameters": {
+    "thumbnail": {
+      "url": "http://localhost:8080/nuxeo/api/v1/4246ca87-c076-4bf4-b62b-0bab9dd21102/@rendition/thumbnail"
     }
+  }
 }
 ```
 
 {{/panel}}
 
-More details about the thumbnail enricher:&nbsp;[http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html)
+More details about the thumbnail enricher: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html)
 
 ### ACLs
 
-When specifying&nbsp;`X-NXenrichers.document: acls`, the JSON payload of the document REST calls response that contains all related ACLs of the document:
+When specifying `enrichers.document: acls`, the JSON payload of the document REST calls response that contains all related ACLs of the document:
 
 {{#> panel type='code' heading='Call Example'}}
 
 ```
-Request URL:
-http://localhost:8080/nuxeo/api/v1/id/036f99ec-a500-4a1e-9d89-e8eb656a0ff7
-Request Method:
-GET
+Request URL: http://localhost:8080/nuxeo/api/v1/id/036f99ec-a500-4a1e-9d89-e8eb656a0ff7
+Request Method: GET
 Request Headers
 ...
-Content-type:
-application/json+nxentity
-X-NXenrichers.document:
-acls
-X-NXproperties:
-dublincore
+Content-type: application/json+nxentity
+enrichers.document: acls
+properties: dublincore
 ```
 
 {{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
-    "entity-type": "document",
-    "repository": "default",
-    "uid": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
-    "path": "/default-domain/workspaces/Marketing",
-    "type": "Workspace",
-    "state": "project",
-    "parentRef": "02d7b1d5-791a-4939-ae6e-aaa75c05bd2c",
-    "isCheckedOut": true,
-    "changeToken": "1426695969000",
-    "title": "Marketing",
-    "lastModified": "2015-03-18T16:26:09.00Z",
-    "properties":
-    {
-        "dc:description": “”,
-        ...
-    },
-    "facets":
-    [
-        "Folderish",
-        ...
-    ],
-    "contextParameters":
-    {
-        "acls":
-        [
-            {
-                "name": "local",
-                "aces":
-                [
-                    {
-                        "username": "jsmith",
-                        "permission": "ReadWrite",
-                        "granted": true
-                    }
-                ]
-            },
-            {
-                "name": "inherited",
-                "aces":
-                [
-                    {
-                        "username": "jdoe",
-                        "permission": "Everything",
-                        "granted": true
-                    },
-                    {
-                        "username": "Administrator",
-                        "permission": "Everything",
-                        "granted": true
-                    },
-                    {
-                        "username": "members",
-                        "permission": "Read",
-                        "granted": true
-                    }
-                ]
-            }
-        ]
-    }
+  "entity-type": "document",
+  "repository": "default",
+  "uid": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
+  "path": "/default-domain/workspaces/Marketing",
+  "type": "Workspace",
+  "state": "project",
+  "parentRef": "02d7b1d5-791a-4939-ae6e-aaa75c05bd2c",
+  "isCheckedOut": true,
+  "changeToken": "1426695969000",
+  "title": "Marketing",
+  "lastModified": "2015-03-18T16:26:09.00Z",
+  "properties": {
+    "dc:description": “”,
+    ...
+  },
+  "facets": [
+    "Folderish",
+    ...
+  ],
+  "contextParameters": {
+    "acls": [{
+      "name": "local",
+      "aces": [{
+        "username": "jsmith",
+        "permission": "ReadWrite",
+        "granted": true
+      }]
+    }, {
+      "name": "inherited",
+      "aces": [{
+        "username": "jdoe",
+        "permission": "Everything",
+        "granted": true
+      }, {
+        "username": "Administrator",
+        "permission": "Everything",
+        "granted": true
+      }, {
+        "username": "members",
+        "permission": "Read",
+        "granted": true
+      }]
+    }]
+  }
 }
 ```
 
@@ -513,58 +486,50 @@ More details about the acls enricher: [http://community.nuxeo.com/api/nuxeo/late
 
 ### Preview
 
-When specifying&nbsp;`X-NXenrichers.document: preview`, the JSON payload of the document REST calls response that contains the related attached file preview of the document:
-&nbsp;
+When specifying `enrichers.document: preview`, the JSON payload of the document REST calls response that contains the related attached file preview of the document:
+
 
 {{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
 http://localhost:18090/api/v1/repo/test/path/folder_1/photo.jpg
- Request Method:
- GET
- Request Headersview source
+ Request Method: GET
+ Request Headers
  ...
- Content-type:
- application/json+nxentity
- X-NXenrichers.document:
- preview
- X-NXproperties:
- dublincore
+ Content-type: application/json+nxentity
+ enrichers.document: preview
+ properties: dublincore
 ```
 
 {{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
-    "entity-type": "document",
-    "repository": "default",
-    "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
-    "path": "/default-domain/workspaces/Marketing/photo.jpg",
-    "type": "Picture",
-    "state": "project",
-    "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
-    "isCheckedOut": true,
-    "changeToken": "1426696491000",
-    "title": “photo.jpg",
-    "lastModified": "2015-03-18T16:34:51.00Z",
-    "properties":
-    {
-        "dc:description": “”,
-        ...
-    },
-    "facets":
-    [
-        "Versionable",
-        ...
-    ],
-    "contextParameters":
-    {
-        "preview":
-        {
-            "url": "http://localhost:8080/nuxeo/restAPI/preview/default/4246ca87-c076-4bf4-b62b-0bab9dd21102/default/"
-        }
+  "entity-type": "document",
+  "repository": "default",
+  "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
+  "path": "/default-domain/workspaces/Marketing/photo.jpg",
+  "type": "Picture",
+  "state": "project",
+  "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
+  "isCheckedOut": true,
+  "changeToken": "1426696491000",
+  "title": “photo.jpg ",
+  "lastModified": "2015-03-18T16:34:51.00Z",
+  "properties": {
+    "dc:description": “”,
+    ...
+  },
+  "facets": [
+    "Versionable",
+    ...
+  ],
+  "contextParameters": {
+    "preview": {
+      "url": "http://localhost:8080/nuxeo/restAPI/preview/default/4246ca87-c076-4bf4-b62b-0bab9dd21102/default/"
     }
+  }
 }
 ```
 
@@ -579,84 +544,70 @@ More details about the preview enricher: [http://community.nuxeo.com/api/nuxeo/l
 ```
 Request URL:
 http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
- Request Method:
- GET
- Request Headersview source
+ Request Method: GET
+ Request Headers
  ...
- Content-type:
- application/json+nxentity
- X-NXenrichers.document:
- breadcrumb
- X-NXproperties:
- dublincore
+ Content-type: application/json+nxentity
+ enrichers.document: breadcrumb
+ properties: dublincore
 ```
 
 {{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
-    "entity-type": "document",
-    "repository": "default",
-    "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
-    "path": "/default-domain/workspaces/Marketing/IMG_20141004_132816.jpg",
-    "type": "Picture",
-    "state": "project",
-    "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
-    "isCheckedOut": true,
-    "changeToken": "1426696491000",
-    "title": "IMG_20141004_132816.jpg",
-    "lastModified": "2015-03-18T16:34:51.00Z",
-    "properties":
-    {
-        "dc:description": "",
-       ...
-    },
-    "facets":
-    [
-        "Versionable",
-        ...
-    ],
-    "contextParameters":
-    {
-        "breadcrumb":
-        {
-            "entity-type": "documents",
-            "entries":
-            [
-                {
-                    "entity-type": "document",
-                    "repository": "default",
-                    "uid": "42bbc2f6-13bd-4eb1-8c35-07342358f5f8",
-                    "path": "/default-domain",
-                    "type": "Domain",
-                    "state": "project",
-                    "parentRef": "22288b40-7879-4665-b01e-b9bacb132506",
-                    "isCheckedOut": true,
-                    "changeToken": "1426694633000",
-                    "title": "Default domain",
-                    "lastModified": "2015-03-18T16:03:53.00Z",
-                    "facets":
-                    [
-                        "Folderish",
-                        …
-                    ]
-                },
-                {
-                    "entity-type": "document",
-                    ...
-                },
-                {
-                    "entity-type": "document",
-                    ...
-                },
-                {
-                    "entity-type": "document",
-                    ...
-                    ]
-                }
-            ]
-        }
-    }
+  "entity-type": "document",
+  "repository": "default",
+  "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
+  "path": "/default-domain/workspaces/Marketing/IMG_20141004_132816.jpg",
+  "type": "Picture",
+  "state": "project",
+  "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
+  "isCheckedOut": true,
+  "changeToken": "1426696491000",
+  "title": "IMG_20141004_132816.jpg",
+  "lastModified": "2015-03-18T16:34:51.00Z",
+  "properties": {
+    "dc:description": "",
+    ...
+  },
+  "facets": [
+    "Versionable",
+    ...
+  ],
+  "contextParameters": {
+    "breadcrumb": {
+      "entity-type": "documents",
+      "entries": [{
+          "entity-type": "document",
+          "repository": "default",
+          "uid": "42bbc2f6-13bd-4eb1-8c35-07342358f5f8",
+          "path": "/default-domain",
+          "type": "Domain",
+          "state": "project",
+          "parentRef": "22288b40-7879-4665-b01e-b9bacb132506",
+          "isCheckedOut": true,
+          "changeToken": "1426694633000",
+          "title": "Default domain",
+          "lastModified": "2015-03-18T16:03:53.00Z",
+          "facets": [
+            "Folderish",
+            ...
+          ]
+        }, {
+          "entity-type": "document",
+          ...
+        }, {
+          "entity-type": "document",
+          ...
+        }, {
+          "entity-type": "document",
+          ...
+        ]
+      }
+    ]
+  }
+}
 }
 ```
 
@@ -664,471 +615,406 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 
 More details about the breadcrumb enricher: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BreadcrumbJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BreadcrumbJsonEnricher.html)
 
-### Favorites &nbsp;
+### Favorites
 
-When specifying&nbsp;`X-NXenrichers.document: favorites`, the JSON payload of the document REST calls response that contains a boolean flag telling whether the document belongs to the current user's Favorites:&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;
+When specifying `enrichers.document: favorites`, the JSON payload of the document REST calls response that contains a boolean flag telling whether the document belongs to the current user's Favorites:
 
 {{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
 http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
- Request Method:
- GET
- Request Headersview source
+ Request Method: GET
+ Request Headers
  ...
- Content-type:
- application/json+nxentity
- X-NXenrichers.document:
- favorites
- X-NXproperties:
- dublincore
+ Content-type: application/json+nxentity
+ enrichers.document: favorites
+ properties: dublincore
 ```
 
 {{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
-    "entity-type": "document",
-    "repository": "default",
-    "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
-    "path": "/default-domain/workspaces/Marketing/photo.jpg",
-    "type": "Picture",
-    "state": "project",
-    "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
-    "isCheckedOut": true,
-    "changeToken": "1426696491000",
-    "title": "photo.jpg",
-    "lastModified": "2015-03-18T16:34:51.00Z",
-    "properties":
-    {
-        "dc:description": "",
-        ...
-    },
-    "facets":
-    [
-        "Versionable",
-        ...
-    ],
-    "contextParameters":
-    {
-        "favorites": {
-            "isFavorite": true
-        }
+  "entity-type": "document",
+  "repository": "default",
+  "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
+  "path": "/default-domain/workspaces/Marketing/photo.jpg",
+  "type": "Picture",
+  "state": "project",
+  "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
+  "isCheckedOut": true,
+  "changeToken": "1426696491000",
+  "title": "photo.jpg",
+  "lastModified": "2015-03-18T16:34:51.00Z",
+  "properties": {
+    "dc:description": "",
+    ...
+  },
+  "facets": [
+    "Versionable",
+    ...
+  ],
+  "contextParameters": {
+    "favorites": {
+      "isFavorite": true
     }
+  }
 }
 ```
 
 {{/panel}}
 
-&nbsp;
+### Collections
 
-### Collections &nbsp;
-
-When specifying&nbsp;`X-NXenrichers.document: collections`, the JSON payload of the document REST calls response that contains the collections the document belongs to:&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;
+When specifying `enrichers.document: collections`, the JSON payload of the document REST calls response that contains the collections the document belongs to:
 
 {{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
 http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
- Request Method:
- GET
- Request Headersview source
+ Request Method: GET
+ Request Headers
  ...
- Content-type:
- application/json+nxentity
- X-NXenrichers.document:
- collections
- X-NXproperties:
- dublincore
+ Content-type: application/json+nxentity
+ enrichers.document: collections
+ properties: dublincore
 ```
 
 {{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
-    "entity-type": "document",
-    "repository": "default",
-    "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
-    "path": "/default-domain/workspaces/Marketing/photo.jpg",
-    "type": "Picture",
-    "state": "project",
-    "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
-    "isCheckedOut": true,
-    "changeToken": "1426696491000",
-    "title": "photo.jpg",
-    "lastModified": "2015-03-18T16:34:51.00Z",
-    "properties":
-    {
-        "dc:description": "",
-        ...
-    },
-    "facets":
-    [
+  "entity-type": "document",
+  "repository": "default",
+  "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
+  "path": "/default-domain/workspaces/Marketing/photo.jpg",
+  "type": "Picture",
+  "state": "project",
+  "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
+  "isCheckedOut": true,
+  "changeToken": "1426696491000",
+  "title": "photo.jpg",
+  "lastModified": "2015-03-18T16:34:51.00Z",
+  "properties": {
+    "dc:description": "",
+    ...
+  },
+  "facets": [
+    "Versionable",
+    ...
+  ],
+  "contextParameters": {
+    "collections": [{
+      "changeToken": "1464771452017",
+      "entity-type": "document",
+      "facets": [
         "Versionable",
-        ...
-    ],
-    "contextParameters":
-    {
-        "collections": [
-            {
-                "changeToken": "1464771452017",
-                "entity-type": "document",
-                "facets": [
-                    "Versionable",
-                    "Collection",
-                    "NotCollectionMember"
-                ],
-                "isCheckedOut": true,
-                "lastModified": "2016-06-01T08:57:32.01Z",
-                "parentRef": "8e62af0a-a74c-4bd1-96a4-66034834bf3b",
-                "path": "/default-domain/UserWorkspaces/Administrator/Collections/Fox Icons",
-                "repository": "default",
-                "state": "project",
-                "title": "Fox Icons",
-                "type": "Collection",
-                "uid": "50110ba5-b129-40b2-9880-3d9783710404"
-            }
-        ]
-    }
+        "Collection",
+        "NotCollectionMember"
+      ],
+      "isCheckedOut": true,
+      "lastModified": "2016-06-01T08:57:32.01Z",
+      "parentRef": "8e62af0a-a74c-4bd1-96a4-66034834bf3b",
+      "path": "/default-domain/UserWorkspaces/Administrator/Collections/Fox Icons",
+      "repository": "default",
+      "state": "project",
+      "title": "Fox Icons",
+      "type": "Collection",
+      "uid": "50110ba5-b129-40b2-9880-3d9783710404"
+    }]
+  }
 }
 ```
 
 {{/panel}}
 
-### Tags &nbsp;
+### Tags
 
-Since 8.3\. When specifying&nbsp;`X-NXenrichers.document: tags`, the JSON payload of the document REST calls response that contains the tags of the documents:&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;
+Since 8.3. When specifying `enrichers.document: tags`, the JSON payload of the document REST calls response that contains the tags of the documents:
+
 
 {{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
 http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
- Request Method:
- GET
- Request Headersview source
+ Request Method: GET
+ Request Headers
  ...
- Content-type:
- application/json+nxentity
- X-NXenrichers.document:
- tags
- X-NXproperties:
- dublincore
+ Content-type: application/json+nxentity
+ enrichers.document: tags
+ properties: dublincore
 ```
 
 {{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
-    "entity-type": "document",
-    "repository": "default",
-    "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
-    "path": "/default-domain/workspaces/Marketing/photo.jpg",
-    "type": "Picture",
-    "state": "project",
-    "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
-    "isCheckedOut": true,
-    "changeToken": "1426696491000",
-    "title": "photo.jpg",
-    "lastModified": "2015-03-18T16:34:51.00Z",
-    "properties":
-    {
-        "dc:description": "",
-        ...
-    },
-    "facets":
-    [
-        "Versionable",
-        ...
-    ],
-    "contextParameters": {
-        "tags": [
-            {
-                "label": "My Tag",
-                "weight": 0
-            }
-        ]
-    },
+  "entity-type": "document",
+  "repository": "default",
+  "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
+  "path": "/default-domain/workspaces/Marketing/photo.jpg",
+  "type": "Picture",
+  "state": "project",
+  "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
+  "isCheckedOut": true,
+  "changeToken": "1426696491000",
+  "title": "photo.jpg",
+  "lastModified": "2015-03-18T16:34:51.00Z",
+  "properties": {
+    "dc:description": "",
+    ...
+  },
+  "facets": [
+    "Versionable",
+    ...
+  ],
+  "contextParameters": {
+    "tags": [{
+      "label": "My Tag",
+      "weight": 0
+    }]
+  },
 }
 ```
 
 {{/panel}}
 
-&nbsp;
+### Running Workflows
 
-### Running Workflows &nbsp;
+When specifying `enrichers.document: runningWorkflows`, the JSON payload of the document REST calls response that contains the workflow instances running on the document:
 
-When specifying&nbsp;`X-NXenrichers.document: runningWorkflows`, the JSON payload of the document REST calls response that contains the workflow instances running on the document:&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;
 
 {{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
 http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
- Request Method:
- GET
- Request Headersview source
+ Request Method: GET
+ Request Headers
  ...
- Content-type:
- application/json+nxentity
- X-NXenrichers.document:
- runningWorkflows
- X-NXproperties:
- dublincore
+ Content-type: application/json+nxentity
+ enrichers.document: runningWorkflows
+ properties: dublincore
 ```
 
 {{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
-    "entity-type": "document",
-    "repository": "default",
-    "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
-    "path": "/default-domain/workspaces/Marketing/photo.jpg",
-    "type": "Picture",
-    "state": "project",
-    "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
-    "isCheckedOut": true,
-    "changeToken": "1426696491000",
-    "title": "photo.jpg",
-    "lastModified": "2015-03-18T16:34:51.00Z",
-    "properties":
-    {
-        "dc:description": "",
-        ...
-    },
-    "facets":
-    [
-        "Versionable",
-        ...
-    ],
-    "contextParameters":
-    {
-        "runningWorkflows": [
-            {
-                "attachedDocumentIds": [
-                    {
-                        "id": "4246ca87-c076-4bf4-b62b-0bab9dd21102"
-                    }
-                ],
-                "entity-type": "workflow",
-                "graphResource": "http://localhost:8080/nuxeo/api/v1/workflow/75dfb9e0-65dd-4150-9d66-ade0597e27c2/graph",
-                "id": "75dfb9e0-65dd-4150-9d66-ade0597e27c2",
-                "initiator": "Administrator",
-                "name": "ParallelDocumentReview.27323664461439033",
-                "state": "running",
-                "title": "wf.parallelDocumentReview.ParallelDocumentReview",
-                "variables": {
-                    "end_date": "2016-05-27T22:00:00.00Z",
-                    "initiatorComment": null,
-                    "participants": [],
-                    "review_result": "
-<div>\n  </div>\n
-<table class=\"dataTableNoBorder smallTable\">\n</table>",
-                    "review_result_file": {
-                        "data": "http://localhost:8080/nuxeo/nxfile/default/75dfb9e0-65dd-4150-9d66-ade0597e27c2/var_ParallelDocumentReview:review_result_file/output.ftl",
-                        "digest": "f5bd3d4fc1431be93631ecc3862a4ddc",
-                        "digestAlgorithm": "MD5",
-                        "encoding": null,
-                        "length": "68",
-                        "mime-type": "text/xml",
-                        "name": "output.ftl"
-                    },
-                    "validationOrReview": null
-                },
-                "workflowModelName": "ParallelDocumentReview"
-            }
-        ]
-    }
+  "entity-type": "document",
+  "repository": "default",
+  "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
+  "path": "/default-domain/workspaces/Marketing/photo.jpg",
+  "type": "Picture",
+  "state": "project",
+  "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
+  "isCheckedOut": true,
+  "changeToken": "1426696491000",
+  "title": "photo.jpg",
+  "lastModified": "2015-03-18T16:34:51.00Z",
+  "properties": {
+    "dc:description": "",
+    ...
+  },
+  "facets": [
+    "Versionable",
+    ...
+  ],
+  "contextParameters": {
+    "runningWorkflows": [{
+      "attachedDocumentIds": [{
+        "id": "4246ca87-c076-4bf4-b62b-0bab9dd21102"
+      }],
+      "entity-type": "workflow",
+      "graphResource": "http://localhost:8080/nuxeo/api/v1/workflow/75dfb9e0-65dd-4150-9d66-ade0597e27c2/graph",
+      "id": "75dfb9e0-65dd-4150-9d66-ade0597e27c2",
+      "initiator": "Administrator",
+      "name": "ParallelDocumentReview.27323664461439033",
+      "state": "running",
+      "title": "wf.parallelDocumentReview.ParallelDocumentReview",
+      "variables": {
+        "end_date": "2016-05-27T22:00:00.00Z",
+        "initiatorComment": null,
+        "participants": [],
+        "review_result": "",
+        "review_result_file": {
+          "data": "http://localhost:8080/nuxeo/nxfile/default/75dfb9e0-65dd-4150-9d66-ade0597e27c2/var_ParallelDocumentReview:review_result_file/output.ftl",
+          "digest": "f5bd3d4fc1431be93631ecc3862a4ddc",
+          "digestAlgorithm": "MD5",
+          "encoding": null,
+          "length": "68",
+          "mime-type": "text/xml",
+          "name": "output.ftl"
+        },
+        "validationOrReview": null
+      },
+      "workflowModelName": "ParallelDocumentReview"
+    }]
+  }
 }
 ```
 
 {{/panel}}
 
-&nbsp;
+### Runnable Workflows
 
-### Runnable Workflows &nbsp;
+When specifying `enrichers.document: runnableWorkflows`, the JSON payload of the document REST calls response that contains the workflow models that can be launched on the document:
 
-When specifying&nbsp;`X-NXenrichers.document: runnableWorkflows`, the JSON payload of the document REST calls response that contains the workflow models that can be launched on the document:&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;
 
 {{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
 http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
- Request Method:
- GET
- Request Headersview source
+ Request Method: GET
+ Request Headers
  ...
- Content-type:
- application/json+nxentity
- X-NXenrichers.document:
- runnableWorkflows
- X-NXproperties:
- dublincore
+ Content-type: application/json+nxentity
+ enrichers.document: runnableWorkflows
+ properties: dublincore
 ```
 
 {{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
-    "entity-type": "document",
-    "repository": "default",
-    "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
-    "path": "/default-domain/workspaces/Marketing/photo.jpg",
-    "type": "Picture",
-    "state": "project",
-    "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
-    "isCheckedOut": true,
-    "changeToken": "1426696491000",
-    "title": "photo.jpg",
-    "lastModified": "2015-03-18T16:34:51.00Z",
-    "properties":
-    {
-        "dc:description": "",
-        ...
-    },
-    "facets":
-    [
-        "Versionable",
-        ...
-    ],
-    "contextParameters":
-    {
-        "runnableWorkflows": [
-            {
-                "attachedDocumentIds": [],
-                "entity-type": "workflow",
-                "graphResource": "http://localhost:8080/nuxeo/api/v1/workflowModel/SerialDocumentReview/graph",
-                "id": "0b0a21b7-284c-4f69-99e6-c334f2c69077",
-                "initiator": null,
-                "name": "SerialDocumentReview",
-                "state": "validated",
-                "title": "wf.serialDocumentReview.SerialDocumentReview",
-                "variables": {
-                    "index": 0,
-                    "initiatorComment": null,
-                    "participants": [],
-                    "validationOrReview": "validation"
-                },
-                "workflowModelName": "SerialDocumentReview"
-            }
-        ]
-    }
+  "entity-type": "document",
+  "repository": "default",
+  "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
+  "path": "/default-domain/workspaces/Marketing/photo.jpg",
+  "type": "Picture",
+  "state": "project",
+  "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
+  "isCheckedOut": true,
+  "changeToken": "1426696491000",
+  "title": "photo.jpg",
+  "lastModified": "2015-03-18T16:34:51.00Z",
+  "properties": {
+    "dc:description": "",
+    ...
+  },
+  "facets": [
+    "Versionable",
+    ...
+  ],
+  "contextParameters": {
+    "runnableWorkflows": [{
+      "attachedDocumentIds": [],
+      "entity-type": "workflow",
+      "graphResource": "http://localhost:8080/nuxeo/api/v1/workflowModel/SerialDocumentReview/graph",
+      "id": "0b0a21b7-284c-4f69-99e6-c334f2c69077",
+      "initiator": null,
+      "name": "SerialDocumentReview",
+      "state": "validated",
+      "title": "wf.serialDocumentReview.SerialDocumentReview",
+      "variables": {
+        "index": 0,
+        "initiatorComment": null,
+        "participants": [],
+        "validationOrReview": "validation"
+      },
+      "workflowModelName": "SerialDocumentReview"
+    }]
+  }
 }
 ```
 
 {{/panel}}
 
-&nbsp;
+### Pending Tasks
 
-### Pending Tasks &nbsp;
+When specifying `enrichers.document: pendingTasks`, the JSON payload of the document REST calls response that contains the pending tasks on the document:
 
-When specifying&nbsp;`X-NXenrichers.document: pendingTasks`, the JSON payload of the document REST calls response that contains the pending tasks on the document:&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;
 
 {{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
 http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
- Request Method:
- GET
- Request Headersview source
+ Request Method: GET
+ Request Headers
  ...
- Content-type:
- application/json+nxentity
- X-NXenrichers.document:
- pendingTasks
- X-NXproperties:
- dublincore
+ Content-type: application/json+nxentity
+ enrichers.document: pendingTasks
+ properties: dublincore
 ```
 
 {{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
-    "entity-type": "document",
-    "repository": "default",
-    "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
-    "path": "/default-domain/workspaces/Marketing/photo.jpg",
-    "type": "Picture",
-    "state": "project",
-    "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
-    "isCheckedOut": true,
-    "changeToken": "1426696491000",
-    "title": "photo.jpg",
-    "lastModified": "2015-03-18T16:34:51.00Z",
-    "properties":
-    {
-        "dc:description": "",
+  "entity-type": "document",
+  "repository": "default",
+  "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
+  "path": "/default-domain/workspaces/Marketing/photo.jpg",
+  "type": "Picture",
+  "state": "project",
+  "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
+  "isCheckedOut": true,
+  "changeToken": "1426696491000",
+  "title": "photo.jpg",
+  "lastModified": "2015-03-18T16:34:51.00Z",
+  "properties": {
+    "dc:description": "",
+    ...
+  },
+  "facets": [
+    "Versionable",
+    ...
+  ],
+  "contextParameters": {
+    "pendingTasks": [{
+      "actors": [{
+        "id": "Administrator"
+      }],
+      "comments": [],
+      "created": "2016-05-28T22:00:00.12Z",
+      "directive": "wf.parallelDocumentReview.consolidate.directive",
+      "dueDate": "2016-06-02T22:00:00.12Z",
+      "entity-type": "task",
+      "id": "18b6767a-990e-4d7d-870c-ba20494fe3b6",
+      "name": "wf.parallelDocumentReview.consolidate.title",
+      "nodeName": "Task2169",
+      "state": "opened",
+      "targetDocumentIds": [{
+        "id": "d6b4be3e-e1e9-454b-812d-c156d1c2e96a"
+      }],
+      "taskInfo": {
         ...
-    },
-    "facets":
-    [
-        "Versionable",
-        ...
-    ],
-    "contextParameters":
-    {
-        "pendingTasks": [
-            {
-                "actors": [
-                    {
-                        "id": "Administrator"
-                    }
-                ],
-                "comments": [],
-                "created": "2016-05-28T22:00:00.12Z",
-                "directive": "wf.parallelDocumentReview.consolidate.directive",
-                "dueDate": "2016-06-02T22:00:00.12Z",
-                "entity-type": "task",
-                "id": "18b6767a-990e-4d7d-870c-ba20494fe3b6",
-                "name": "wf.parallelDocumentReview.consolidate.title",
-                "nodeName": "Task2169",
-                "state": "opened",
-                "targetDocumentIds": [
-                    {
-                        "id": "d6b4be3e-e1e9-454b-812d-c156d1c2e96a"
-                    }
-                ],
-                "taskInfo": {
-                    ...
-                },
-                "variables": {
-                    "assignees": [],
-                    "comment": null,
-                    "review_result": "
-<div>\n  </div>\n
-<table class=\"dataTableNoBorder smallTable\">\n</table>"
-                },
-                "workflowInstanceId": "75dfb9e0-65dd-4150-9d66-ade0597e27c2",
-                "workflowModelName": "ParallelDocumentReview"
-            }
-        ]
-    }
+      },
+      "variables": {
+        "assignees": [],
+        "comment": null,
+        "review_result": ""
+      },
+      "workflowInstanceId": "75dfb9e0-65dd-4150-9d66-ade0597e27c2",
+      "workflowModelName": "ParallelDocumentReview"
+    }]
+  }
 }
 ```
 
 {{/panel}}
-
-&nbsp;
 
 ### Other Enrichers
 
 Additional enrichers are:
 
-*   permissions: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BasePermissionsJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BasePermissionsJsonEnricher.html)
-*   children: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/ChildrenJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/ChildrenJsonEnricher.html)
-*   permanent link (documentURL): [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/url/io/DocumentUrlJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/url/io/DocumentUrlJsonEnricher.html)
-*   subtypes: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/SubtypesJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/SubtypesJsonEnricher.html)
+* [audit](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/restapi/server/jaxrs/enrichers/AuditJsonEnricher.html)
+* [children](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/ChildrenJsonEnricher.html)
+* [collections](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/collections/core/io/CollectionsJsonEnricher.html)
+* [favorites](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/collections/core/io/FavoritesJsonEnricher.html)
+* [hasFolderishChild](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/HasFolderishChildJsonEnricher.html)
+* [documentURL](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/url/io/DocumentUrlJsonEnricher.html)
+* [permissions](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BasePermissionsJsonEnricher.html)
+* [subscribedNotifications](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ec/notification/io/NotificationsJsonEnricher.html)
+* [subtypes](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/SubtypesJsonEnricher.html)
+* [tags](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/tag/io/TagsJsonEnricher.html)
+* [userprofile](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/user/center/profile/rest/UserProfileEnricher.html)
+* [userVisiblePermissions](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/UserVisiblePermissionsJsonEnricher.html)
 
 ## Contributing Your Own Content Enricher
 
@@ -1173,8 +1059,8 @@ import org.nuxeo.ecm.core.api.DocumentModel;
 @Setup(mode = SINGLETON, priority = REFERENCE)
 public class ParentDocEnricher extends AbstractJsonEnricher<DocumentModel> { // You could also enrich a user or anything else
 
-	// The enricher will be called using X-NXenrichers.document: name (name being parentDoc here)
-	// If you were enriching a user, you would call it using X-NXenrichers.user: name (X-NXenrichers.entity-type)
+	// The enricher will be called using enrichers.document: name (name being parentDoc here)
+	// If you were enriching a user, you would call it using enrichers.user: name (enrichers.entity-type)
 	public static final String NAME = "parentDoc";
 
     public ParentDocEnricher() {
@@ -1211,7 +1097,7 @@ public class ParentDocEnricher extends AbstractJsonEnricher<DocumentModel> { // 
 
 ### Specific Object Content Enricher
 
-Here is a sample to get you started with a content enricher for the object&nbsp;<span style="line-height: 21.58px;">org</span>.nuxeo.ecm.platform.audit.api.LogEntry:
+Here is a sample to get you started with a content enricher for the object `org.nuxeo.ecm.platform.audit.api.LogEntry`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1290,50 +1176,39 @@ public class LogEntryEnricher extends AbstractJsonEnricher<LogEntry> {
 
 Don't forget to set the proper header to use this enricher:
 
-<pre><span style="color: rgb(106,135,89);">X-NXenrichers.logEntry = sfLogEntry</span></pre>
+`enrichers.logEntry = sfLogEntry`
 
 {{/callout}}
-
-&nbsp;
-
-&nbsp;
 
 {{#> panel type='code' heading='JSON Response Example'}}
 
 ```
 {
-    "entity-type": "document",
-    "repository": "default",
-    "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
-    "path": "/default-domain/workspaces/Marketing/photo.jpg",
-    "type": "Picture",
-    "state": "project",
-    "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
-    "isCheckedOut": true,
-    "changeToken": "1426696491000",
-    "title": "photo.jpg",
-    "lastModified": "2015-03-18T16:34:51.00Z",
-    "properties":
-    {
-        "dc:description": "",
-        ...
-    },
-    "facets":
-    [
-        "Versionable",
-        ...
-    ],
-    "contextParameters":
-    {
-        "favorites": {
-            "isFavorite": true
-        }
+  "entity-type": "document",
+  "repository": "default",
+  "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
+  "path": "/default-domain/workspaces/Marketing/photo.jpg",
+  "type": "Picture",
+  "state": "project",
+  "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
+  "isCheckedOut": true,
+  "changeToken": "1426696491000",
+  "title": "photo.jpg",
+  "lastModified": "2015-03-18T16:34:51.00Z",
+  "properties": {
+    "dc:description": "",
+    ...
+  },
+  "facets": [
+    "Versionable",
+    ...
+  ],
+  "contextParameters": {
+    "favorites": {
+      "isFavorite": true
     }
+  }
 }
 ```
 
 {{/panel}}
-
-&nbsp;
-
-<span style="color: rgb(255,255,255);font-family: Ubuntu , sans-serif;font-size: 15.0px;font-weight: bold;line-height: normal;orphans: 2;white-space: pre;widows: 2;background-color: rgb(16,16,16);">tags</span>
