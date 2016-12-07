@@ -2,10 +2,11 @@
 title: Nuxeo File System Exporter
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
     - multiexcerpt-include
+    - lts2016-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -85,7 +86,7 @@ The installation of the plugin will add a new operation in "Services" called "Ex
 
 In the user interface, users will now see an new action button that will enable them to export the structure with the following parameters defined in Studio:
 
-*   Root Path = `default-domain`
+*   Root Path = `/default-domain/`
 *   File System target = `/tmp`
 
 ![]({{file name='Screen Shot 2015-11-18 at 14.27.50.png'}} ?w=650,border=true)
