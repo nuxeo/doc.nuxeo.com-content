@@ -2,7 +2,7 @@
 title: How to Add Custom LDAP Fields to the UI
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: XML extension
         topics: 'Authentication, LDAP'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - ldap
     - howto
     - authentation
