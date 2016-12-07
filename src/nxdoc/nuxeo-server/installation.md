@@ -267,7 +267,7 @@ The Nuxeo Platform comes in different packages and can be installed on any opera
 
 ## General Installation Process
 
-Installing Nuxeo Platform is done in a few steps:
+Installing the Nuxeo Platform is done in a few steps:
 
 1.  Have a look at our Hardware and Software Requirements in the section below, as well as our [supported databases]({{page page='supported-databases'}}) and [application servers]({{page page='supported-application-servers'}}). You may also want to read our page regarding [required storage space]({{page page='how-to-estimate-volume-usage'}}).
 2.  [Install and Set up related required software]({{page page='installing-and-setting-up-related-software'}}) (unless you deploy on Amazon where the image already includes it).
@@ -282,14 +282,14 @@ Installing Nuxeo Platform is done in a few steps:
 4.  Run the [Configuration Wizard]({{page page='configuration-wizard'}}) (not in the case of a standard static war).
 
 ## Hardware and Software Requirements
-The following table lists current requirements for running Nuxeo Platform. This list is a living one! If you have some constraints that do not fit this grid, do not hesitate to contact the Nuxeo team for evaluating feasability of running Nuxeo on any other environment, may it be a different JVM, Database, Application server or OS.
+The following table lists current requirements for running the Nuxeo Platform. This list is a living one! If you have some constraints that do not fit this grid, do not hesitate to contact the Nuxeo team for evaluating feasibility of running Nuxeo on any other environment, may it be a different JVM, Database, Application server or OS.
 
 <div class="table-scroll">
 <table class="hover">
 <tbody>
 <tr><th colspan="1">Hardware Requirements</th>
 <td colspan="1">Minimum requirement to start a Nuxeo server: 2 CPU, 2 Giga RAM, 300 Mb of disk-space. </td>
-<td colspan="1">Note: a production-ready set up for Nuxeo Platform may require several serve and different hardware sizing, depending on your SLA and planned usage. Contact Nuxeo for more information.</td>
+<td colspan="1">Note: a production-ready set up for the Nuxeo Platform may require several servers and different hardware sizing, depending on your SLA and planned usage. Contact Nuxeo for more information and getting help on sizing your production architecture.</td>
 </tr>
 
 <tr><th colspan="1">OS</th>
@@ -304,21 +304,22 @@ The following table lists current requirements for running Nuxeo Platform. This 
 <td colspan="1"> <ul><li>Tomcat 7.0.69</li><li>JBoss WildFly 8.1.0</li></ul></td>
 <td colspan="1">Nuxeo is shipped with an embedded Tomcat server but can also be packed as a static WAR that can be deployed additional targets, such as JBoss Wildfly. See [Run as A Static War]({{page page='deploying-as-a-standard-static-war'}})</td>
 <tr><th colspan="1">Database</th>
-<td colspan="1"><ul><li>MongoDB (2.8, 3.0, 3.2)</li><li> PostgreSQL (9.3, 9.4, 9.5, 9.6)</li><li>Oracle (11g, 12g)</li><li>SQL Server</li><li>MySQL (5.6,5.7)</li><li>MariaDB </li><li>MarkLogic (8.0)</li></ul></td>
-<td colspan="1">More information on [Database Configuration section]({{page page='database-configuration'}}). <br>Note that Nuxeo Server is shipped embedding H2, which means you don't need to set up a database before starting Nuxeo Platform. One of those database is required for a production set up or for more serious evaluation like performance testing.<br>
-Nuxeo Platform is also compatible with the cloud versions of those databases: Amazon RDS, Azure, MongoDB Atlas</td>
+<td colspan="1"><ul><li>MongoDB (3.2)</li><li> PostgreSQL (9.5)</li><li>Oracle (12g)</li><li>SQL Server 2008</li><li>MySQL (5.5)</li><li>MariaDB 10 </li><li>MarkLogic 8.0</li></ul></td>
+<td colspan="1">*The Nuxeo Platform is likely to work with greater versions of related databases. Do not hesitate to inform the Nuxeo support of your attempts with different versions.*<br>
+More information on [Database Configuration section]({{page page='database-configuration'}}).  <br>Note that Nuxeo Server is shipped embedding H2 database, for quick evaluation purpose. One of the listed databases is required for a production set up or for more serious evaluation like performance testing.<br>
+The Nuxeo Platform is also compatible with the cloud versions of those databases: Amazon RDS, Azure, MongoDB Atlas</td>
 </tr>
-<tr><th colspan="1">Authentication and User Management/th>
-<td colspan="1">Nuxeo Platform provides its own user and groups directories  and authentication solution. It is also compatible with multiple cloud and enteprise solutions:
+<tr><th colspan="1">Authentication and User Management</th>
+<td colspan="1">The Nuxeo Platform provides its own users and groups directories  and authentication solution. It is also compatible with multiple cloud and enterprise solutions:
 <ul>
 <li>LDAP servers (Open LDAP protocole)</li>
 <li>Active Directory</li>
-<li>SAML Providers(todo:list knwon to wok providers)</li>
+<li>SAML Providers(todo:list known to wok providers)</li>
 <li>OpenId</li>
 <li>Kerberos</li>
 <li>CAS</li>
 
-</<ul></td>
+</ul></td>
 <td colspan="1">See [Authentication and User Management section]({{page page='authentication-and-user-management'}}).</td>
 </tr>
 <tr><th colspan="1">Optional Third Parties</th>
@@ -333,6 +334,13 @@ Nuxeo Platform is also compatible with the cloud versions of those databases: Am
 </ul></td>
 
 <td colspan="1">More information on [installing third parties]({{page page='installing-and-setting-up-related-software'}}).</td>
+</tr>
+<tr><th colspan="1">Clide Side Requirements</th>
+<td colspan="1">The Nuxeo Platform comes with several applications that are used by business users and that have their own requirements: <ul><li>[JSF UI]({{page version='' page='jsf-ui-requirements'}})</li>
+<li>[Web UI]({{page version='' space='nxdoc' page='webui-requirements'}})</li>
+<li>Nuxeo Drive</li>
+</ul></td>
+<td colspan="1"></td>
 </tr>
 </tbody></table></div>
 
@@ -394,28 +402,3 @@ Java packages and instructions for installation are available from the Oracle we
 2.  Run the downloaded .exe file and follow the instructions displayed.
 
 {{! /multiexcerpt}}
-
-
-#### Browser Support
-
-Nuxeo applications can be used with the browsers below.
-
-{{{multiexcerpt 'supported-browsers' page='Compatibility Matrix'}}}
-
-#### OS
-
-*   Linux
-    *   <span class="im">Debian 7.0 Wheezy, 8.0&nbsp;Jessie</span>
-    *   <span class="im">Ubuntu Precise Pangolin 12.04, Trusty Tahr 14.04 and the latest Ubuntu Fast Track</span>
-    *   Red Hat Linux RHEL 7
-    *   CentOS 7
-*   Mac OS
-
-    *   Mac OS X Mountain Lion (10.8)
-    *   Mac OS Mavericks (10.9)
-    *   Mac OS Yosemite (10.10)
-    *   Mac OS El Capitan (10.11)
-*   Microsoft Windows
-
-    *   For development: Windows 7, Windows 8, Windows 10
-    *   For deployment:&nbsp;Windows Server 2008,&nbsp;Windows&nbsp;Server 2012
