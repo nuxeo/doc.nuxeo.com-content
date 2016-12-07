@@ -4,6 +4,7 @@ review:
     comment: 'Since Nuxeo IO is no longer relevant, the Nuxeo Cloud Instance and links ending by `nuxeo.io` sould be reviewed. See [NXDOC-982](https://jira.nuxeo.com/browse/NXDOC-982)'
     date: '2016-12-06'
     status: not-ok
+redirect: nxdoc/getting-started-with-the-nuxeo-platform
 labels:
     - content-review-lts2016
     - multiexcerpt-include
@@ -20,6 +21,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/dY3ZAQ'
     source_link: /display/NXDOC/Learning+REST+API
 tree_item_index: 800
+hidden: true
 history:
     -
         author: Solen Guitter
