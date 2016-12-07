@@ -2,10 +2,10 @@
 title: Installing the Nuxeo Platform on Mac OS
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2015-12-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - installation
     - multiexcerpt-include
 toc: true
@@ -208,6 +208,12 @@ brew install nuxeo
 </div>
 
 <div>The nuxeo.conf file will be in located in &nbsp;`/usr/local/etc/nuxeo.conf`. You can now start your server&nbsp;with&nbsp;[nuxeoctl]({{page page='nuxeoctl-and-control-panel-usage'}})&nbsp;as it is added in your PATH.</div>
+
+## Installing the Nuxeo Platform Using Docker
+
+If you are familiar with docker, you can also get the Nuxeo Docker image, you can find more information on [Docker hub](https://hub.docker.com/_/nuxeo/).
+
+You can also have a look to [Setting up your Nuxeo]({{page page='setting-up-your-nuxeo-environment'}}) page which explain more about usage of Nuxeo Docker image.
 
 ## Installing a Nuxeo Virtual Machine Image
 
