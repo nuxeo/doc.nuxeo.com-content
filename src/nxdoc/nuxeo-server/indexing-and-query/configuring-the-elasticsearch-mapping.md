@@ -2,10 +2,10 @@
 title: Configuring the Elasticsearch Mapping
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - elasticsearch
     - full-text
     - elasticsearch-component
@@ -192,9 +192,18 @@ This documentation page talks about the many aspects you can tune for improving 
 
 {{! /excerpt}}
 
-Here are some examples of common changes of the Elasticsearch mapping.
+Nuxeo comes with a default mapping that can work with custom fields of your schemas, but in a limited way. To leverage the search capabilities of Elasticsearch you need to define your own mapping, for instance in the following cases:
 
-All examples below should be done in a [custom template that redefines the Elasticsearch mapping]({{page page='elasticsearch-setup#changingelasticsearchmapping'}}). This way the mapping reference stay on the Nuxeo configuration side. If you update the mapping directly on the Elasticsearch side your changes will be lost when Nuxeo is performing a full repository reindexing.
+*   use of a non English or a custom analyzer
+*   use a specific NXQL operators on a custom field: `ILIKE`, `ecm:fulltext.custom`, `STARTSWITH`
+*   exclude field from the full-text search
+*   sort on a custom field that may not exist
+
+To do this you need to create your own [custom template that redefines the Elasticsearch mapping]({{page page='elasticsearch-setup#changingelasticsearchmapping'}}). This way the mapping reference stay on the Nuxeo configuration side and you should not update the mapping directly on the Elasticsearch side.
+
+Nuxeo updates the mapping on Elasticsearch only when:
+*  the Elasticsearch index does not exist
+*  a full repository reindexing is performed
 
 ## Customizing the Language
 
