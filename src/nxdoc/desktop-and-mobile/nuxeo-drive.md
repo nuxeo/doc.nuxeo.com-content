@@ -9,6 +9,7 @@ labels:
     - nuxeo-drive
     - last-review-20150901
     - nuxeo-drive-component
+    - lts2016-ok
 tabbed_page: true
 toc: true
 confluence:
@@ -968,6 +969,16 @@ To revoke an authentication token:
 
 # Installation & Configuration
 
+## Requirements
+To be able to synchronize folders on your computer, you need to install the Nuxeo Drive client on your computer.
+We provide **OS-specific** installers for **Mac OS X** and **Windows**, available from the Nuxeo Drive tab of the Home.
+A Linux installer will come shortly.
+
+### Known Working Configurations for OS
+*   Windows:  Windows 7 and 8, 32b and 64b
+*   Mac OS: starting from the version 10.8 (Mountain Lion)
+
+
 ## Installation
 
 ### Installing Nuxeo Drive Addon
@@ -985,8 +996,6 @@ After Nuxeo Drive has been installed on the server, a Nuxeo Drive tab in the use
 For the installation of the Nuxeo Drive package on the server, please see the [Installation and Administration Guide]({{page space='admindoc' page='installation-and-administration'}}).
 
 {{/callout}}
-
-To be able to synchronize folders on your computer, you need to install the Nuxeo Drive client on your computer. We provide OS-specific installer for Mac OS X and Windows, available from the Nuxeo Drive tab of the Home. A Linux installer will come shortly.
 
 If you try to synchronize a folder and you haven't installed the Nuxeo Drive client yet or haven't provided your credentials to the Nuxeo Drive client, you are automatically directed to the Nuxeo Drive home tab to install it.
 
