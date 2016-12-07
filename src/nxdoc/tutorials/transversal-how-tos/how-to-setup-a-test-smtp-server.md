@@ -2,7 +2,7 @@
 title: How to setup a test SMTP server
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Code
         topics: Alerts
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - alerts
 confluence:
@@ -54,7 +54,7 @@ history:
         version: '1'
 
 ---
-For testing purpose, for instance with notifications, you often need to setup an SMTP server. There is an easy way to setup a local smtp server by using this project :&nbsp;[http://nilhcem.github.com/FakeSMTP/](http://nilhcem.github.com/FakeSMTP/). It binds a dummy SMTP server that listens on whichever port you want (that also mean that those mails won't be really sent) and on which you can setup Nuxeo to send outgoing mails : when the server sends a mail, it shows up into the list of received EMails.
+For testing purpose, for instance with notifications, you often need to setup an SMTP server. There is an easy way to setup a local smtp server by using this project :&nbsp;[http://nilhcem.github.io/FakeSMTP/](http://nilhcem.github.io/FakeSMTP/). It binds a dummy SMTP server that listens on whichever port you want (that also mean that those mails won't be really sent) and on which you can setup Nuxeo to send outgoing mails : when the server sends a mail, it shows up into the list of received EMails.
 
 To get this up and running, you only need to adjust your $NUXEO_HOME/bin/nuxeo.conf file to reflect this setup.
 
@@ -66,7 +66,7 @@ To get this up and running, you only need to adjust your $NUXEO_HOME/bin/nuxeo.c
 # Mail settings (for notifications)
 #nuxeo.notification.eMailSubjectPrefix="[Nuxeo]"
 mail.transport.host=localhost
-mail.transport.port=25000   # Adjust with FakeSMTP configuration
+mail.transport.port=25000   # Adjust with FakeSMTP configuration. Avoid port 25 that is generally used by other applications.
 #mail.transport.auth=
 #mail.transport.user=
 #mail.transport.password=
@@ -79,7 +79,7 @@ mail.transport.port=25000   # Adjust with FakeSMTP configuration
 
 &nbsp;
 
-You can download a precompile version of FakeSMTP here :&nbsp;[]({{file name='fakeSMTP.jar'}}) <span style="font-size: 10.0pt;line-height: 13.0pt;">. To launch the software, just launch the command :</span>
+To start the software, just launch the command :</span>
 
 ```
 java -jar fakeSMTP.jar
