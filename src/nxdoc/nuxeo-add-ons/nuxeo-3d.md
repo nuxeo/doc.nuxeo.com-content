@@ -2,10 +2,10 @@
 title: Nuxeo 3D
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - 3d
     - threed
 toc: true
@@ -105,7 +105,7 @@ The Nuxeo 3D addon of the Nuxeo Platform provides support for 3D file types.
 
 {{{multiexcerpt 'mp-installation-easy' page='Generic Multi-Excerpts'}}}
 
-However some features depend on external software for conversion, such as Docker. See the page&nbsp;[Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}}).
+However this addon depends on external software - Docker - for conversion and rendering. See the page&nbsp;[Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}}).
 
 After the Nuxeo 3D addon is&nbsp;installed, the new 3D document type is available.
 
@@ -132,13 +132,13 @@ Attachments work as 3D format assets like textures. A standalone ZIP file with t
 
 Replacing the main file or the attachments of a 3D document also triggers the processing routine, so that the render views and transmission formats can be updated.
 
-![]({{file name='full.png'}} ?w=600,h=516,border=true)
+![]({{file name='full.png'}} ?w=600,border=true)
 
 #### 3D Preview
 
 The 3D preview allows a complete visualization of the 3D document in real-time through a WebGL rendering. The available manipulation controls include rotating, panning and zooming on the 3D model.
 
-![]({{file name='preview.png'}} ?w=600,h=443,border=true)
+![]({{file name='preview.png'}} ?w=600,border=true)
 
 #### Render Views
 
