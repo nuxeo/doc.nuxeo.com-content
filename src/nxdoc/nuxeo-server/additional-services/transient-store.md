@@ -89,7 +89,7 @@ A Transient Store allows you to store temporary blobs and associated parameters 
 It is typically used by:
 
 *   The [Batch Upload API]({{page page='blob-upload-for-batch-processing'}}) to temporarily store a batch of uploaded blobs until they are attached to a document.
-*   The `ConversionService` to store the `BlobHolder` resulting from an [Asynchronous Conversion Work]({{page page='conversion#rest-api-async-conversions'}}).
+*   The `ConversionService` to store the `BlobHolder` resulting from an [Asynchronous Conversion Work]({{page page='conversion'}}#rest-api-async-conversions).
 
 The [TransientStore](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/transientstore/api/TransientStore.html) API is based on the following methods:
 
@@ -176,7 +176,7 @@ The transient blob storage directory used by the two default implementations of 
 
 {{#> callout type='warning' heading='Clustering Configuration'}}
 
-In a cluster environment the transient blob storage directory must be shared by all the Nuxeo instances, see the [related documentation]({{page space='ADMINDOC' page='Nuxeo Clustering+Configuration#NuxeoClusteringConfiguration-TransientStore'}}).
+In a cluster environment the transient blob storage directory must be shared by all the Nuxeo instances, see the [related documentation]({{page page='Nuxeo Clustering+Configuration'}}#transient-store).
 
 {{/callout}}
 
@@ -219,7 +219,7 @@ A `Work` allowing to store a result in a transient store.
 
 It relies on the `transientStoreWorkCache` transient store, also not registered with a fallback on the `default` transient store.
 
-For example, the [Asynchronous Conversions]({{page page='conversion#java-api-async-conversions'}}) rely on such instances of `TransientStoreWork` via the `ConversionWork` class.
+For example, the [Asynchronous Conversions]({{page page='conversion'}}#asynchronous-conversions) rely on such instances of `TransientStoreWork` via the `ConversionWork` class.
 
 {{! Don't put anything here. }}
 
