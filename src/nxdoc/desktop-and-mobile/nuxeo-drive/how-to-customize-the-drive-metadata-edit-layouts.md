@@ -2,7 +2,7 @@
 title: How to Customize the Drive Metadata Edit Layouts
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: Studio
         topics: 'Layout, Nuxeo Drive'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - nuxeo-drive
     - layout

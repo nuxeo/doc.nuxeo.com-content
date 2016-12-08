@@ -2,10 +2,10 @@
 title: How to Manually Initialize or Deploy a Nuxeo Drive Instance
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - nuxeo-drive
     - nuxeo-drive-component
     - multiexcerpt
