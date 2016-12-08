@@ -2,9 +2,10 @@
 title: Document Content Views
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
+    - lts2016-ok
     - document-content-view
     - web-ui-component
     - excerpt

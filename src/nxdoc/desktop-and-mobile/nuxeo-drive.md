@@ -2,13 +2,13 @@
 title: Nuxeo Drive
 review:
     comment: ''
-    date: '2015-12-07'
+    date: '2016-12-07'
     status: ok
 labels:
+    - lts2016-ok
     - link-update
     - nuxeo-drive
     - nuxeo-drive-component
-    - lts2016-ok
 tabbed_page: true
 toc: true
 confluence:

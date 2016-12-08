@@ -2,10 +2,12 @@
 title: Start Customizing the Nuxeo Platform
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
+    - content-review-lts2016
     - home
+    - lts2016-ok
 version_override:
     'LTS 2015': 710/nxdoc/quick-start-dev-guide
     '6.0': 60/nxdoc/quick-start-dev-guide
@@ -52,9 +54,9 @@ history:
 ---
 Welcome to the Nuxeo Developer Quick Start Guide!
 
-This guide will show you how to start a Nuxeo project with a simple example using our tools, Nuxeo Studio and Nuxeo IDE. When people want to customize the Nuxeo Platform they usually start by doing the configuration and implementing the business model in Nuxeo Studio. Then they might use a Java development environment to implement new features server side. This Java development can be done with any Java editor, and there are some Nuxeo specific plugins to work with Eclipse, Intellij IDEA and Codenvy in the cloud. We chose Nuxeo IDE, the Eclipse plugin in this Quick Start Guide. It will guide you through the different steps of the process.
+This guide will show you how to start a Nuxeo project with a simple example using our tools, Nuxeo Studio and Nuxeo Generator. When people want to customize the Nuxeo Platform they usually start by doing the configuration and implementing the business model in Nuxeo Studio. Then they might use a Java development environment to implement new features server side. This Java development can be done with any Java editor, and there are some Nuxeo specific plugins to work with Eclipse, Intellij IDEA and Codenvy in the cloud. We chose Nuxeo Generator, a Yeoman Generator for Nuxeo Platform, in this Quick Start Guide. It will guide you through the different steps of the process.
 
 *   Starting your project in Nuxeo Studio by changing the logo and creating a Contract document type on your brand new Nuxeo Platform instance
-*   Creating a new operation in Nuxeo IDE to calculate the contract renegociation date and leveraging it in Nuxeo Studio
+*   Creating a new operation using Nuxeo Generator to calculate the contract renegociation date and leveraging it in Nuxeo Studio
 
-The purpose of this guide is not to provide an overview of all the features of Nuxeo Studio or Nuxeo IDE but to show you how to use these two tools to make your own Nuxeo project so that you are quickly operational. However, you can take a look at the&nbsp;[Studio documentation]({{page space='studio'}})&nbsp;or&nbsp;[IDE documentation]({{page space='idedoc'}}) at any time if you want more information about a feature of those environments.
+The purpose of this guide is not to provide an overview of all the features of Nuxeo Studio or Nuxeo Generator but to show you how to use these two tools to make your own Nuxeo project so that you are quickly operational. However, you can take a look at the [Studio documentation]({{page space='studio'}}) or [Nuxeo Generator documentation](https://www.npmjs.com/package/generator-nuxeo) at any time if you want more information about a feature of those environments.

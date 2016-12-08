@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - url
     - blob-storage
     - blob-manager-component
@@ -106,8 +107,8 @@ Here are some examples:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Documentation About URLs'}}
 
-*   [Default URL Patterns]({{page page='default-url-patterns'}})
-*   [URLs for Files]({{page page='urls-for-files'}})
+- [Default URL Patterns]({{page page='default-url-patterns'}})
+- [URLs for Files]({{page page='urls-for-files'}})
 
 {{/panel}}</div><div class="column medium-6">
 

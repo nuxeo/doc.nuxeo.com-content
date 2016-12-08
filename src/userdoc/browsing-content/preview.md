@@ -5,7 +5,6 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
-    - annotations
     - preview
     - multiexcerpt
 confluence:

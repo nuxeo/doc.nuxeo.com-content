@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: Document type
 labels:
+    - content-review-lts2016
     - howto
     - document-type
     - excerpt
@@ -133,18 +134,17 @@ To know how to apply features provided by the Nuxeo Marketplace add-ons on your 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-*   [undefined]()&nbsp;
-*   [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) &nbsp;
-*   [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}}) &nbsp;
-*   [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) &nbsp;
+- [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}}) &nbsp;
+- [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Collections]({{page space='userdoc' page='collections'}})
-*   [Documents Type]({{page page='content-repository'}})
-*   [Nuxeo CVS in User Documentation]({{page page='nuxeo-csv'}})
-*   [Nuxeo Marketplace](http://marketplace.nuxeo.com/)
-*   [Nuxeo Quota]({{page page='nuxeo-quota'}})
+- [Collections]({{page space='userdoc' page='collections'}})
+- [Documents Type]({{page page='content-repository'}})
+- [Nuxeo CVS in User Documentation]({{page page='nuxeo-csv'}})
+- [Nuxeo Marketplace](http://marketplace.nuxeo.com/)
+- [Nuxeo Quota]({{page page='nuxeo-quota'}})
 
 {{/panel}}</div></div>

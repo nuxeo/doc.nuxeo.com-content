@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - elasticsearch
     - full-text
     - elasticsearch-component
@@ -436,9 +437,9 @@ You can now configure hints in Nuxeo Studio using the common operator when query
 
 {{#> panel heading='Other Elasticsearch Documentation'}}
 
-*   [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
-*   [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
-*   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+- [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
+- [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+- [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 
 {{/panel}}</div><div class="column medium-6">
 
@@ -446,8 +447,8 @@ You can now configure hints in Nuxeo Studio using the common operator when query
 
 {{#> panel heading='Other Related Documentation '}}
 
-*   [Full-Text Queries]({{page page='full-text-queries'}})
-*   [Indexing and Query]({{page page='indexing-and-query'}})
-*   [Indexing and Querying How-To Index]({{page page='indexing-and-querying-how-to-index'}})
+- [Full-Text Queries]({{page page='full-text-queries'}})
+- [Indexing and Query]({{page page='indexing-and-query'}})
+- [Indexing and Querying How-To Index]({{page page='indexing-and-querying-how-to-index'}})
 
 {{/panel}}</div></div>

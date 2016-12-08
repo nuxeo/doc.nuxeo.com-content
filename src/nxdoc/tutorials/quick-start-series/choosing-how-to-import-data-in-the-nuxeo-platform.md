@@ -2,9 +2,10 @@
 title: Choosing How to Import Data in the Nuxeo Platform
 review:
     comment: ''
-    date: '2016-11-02'
+    date: '2016-12-07'
     status: ok
 labels:
+    - lts2016-ok
     - import
 toc: true
 confluence:
@@ -120,7 +121,7 @@ The Nuxeo Platform provides tools and APIs to import content:
 * Handling security, lifecycle and other system properties if necessary.
 
 Those tools natively handle several formats to specify document properties:
- * XLM (one XML file per document or one for all documents)
+ * XML (one XML file per document or one for all documents)
  * CSV (one line per document)
  * Properties file (one property file per file to import for instance, or per folder)
 

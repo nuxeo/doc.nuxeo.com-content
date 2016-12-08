@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - deployment
     - clustering
     - architecture
@@ -242,30 +243,30 @@ In this section, the different deployment possibilities are described.
 
 Thanks to Nuxeo Runtime and to the bundle system, the Nuxeo Platform deployment can be adapted to your needs:
 
-*   Deploy only the bundles you really need
-*   Deploy on multiple servers if needed
-*   Deploy on multiple infrastructures: Tomcat, Pojo, unit tests
+- Deploy only the bundles you really need
+- Deploy on multiple servers if needed
+- Deploy on multiple infrastructures: Tomcat, Pojo, unit tests
 
 ## Simple Deployment
 
 For a simple deployment you have to:
 
-*   Define the target Nuxeo distribution (in most of the cases Nuxeo CAP + some extra plugins)
-*   Define the target deployment platform:
-    *   Prepackaged Tomcat Server (including Nuxeo + Transaction manager + JCA + Pooling)
-    *   Static WAR (see [Understanding Bundles Deployment]({{page page='understanding-bundles-deployment'}}))
-    *   Embedded mode (mainly for unit tests, but also used for some client side deployment)
+- Define the target Nuxeo distribution (in most of the cases Nuxeo CAP + some extra plugins)
+- Define the target deployment platform:
+    - Prepackaged Tomcat Server (including Nuxeo + Transaction manager + JCA + Pooling)
+    - Static WAR (see [Understanding Bundles Deployment]({{page page='understanding-bundles-deployment'}}))
+    - Embedded mode (mainly for unit tests, but also used for some client side deployment)
 
 The default Tomcat packaging is actually not a bare Tomcat. The Tomcat that is shipped with Nuxeo contains:
 
-*   A JTA Transaction Manager
-*   A JCA pool manager
+- A JTA Transaction Manager
+- A JCA pool manager
 
 In most of the case, the Nuxeo server is behind a reverse proxy that is used to provide:
 
-*   HTTPS/SSL encryption
-*   HTTP caching
-*   URL rewritting
+- HTTPS/SSL encryption
+- HTTP caching
+- URL rewritting
 
 ![]({{file name='reverse.png'}} ?w=500,h=349,border=true)
 
@@ -281,25 +282,25 @@ This means you can define _"where you want to manage your data"_ and because the
 
 You can configure&nbsp;
 
-*   Where you store the Document meta-data and hierarchy
-    *   SQL Database (PostgresSQL, Oracle, MSSQL, MySQL, Amazon RDS)
-    *   MongoDB
-*   Where you store the binary streams (the files you attach to documents)
-    *   Simple FileSystem
-    *   SQL Database
-    *   S3, Azure
-    *   Leveraging Content Delivery Networks for caching content securely all around the globe.
+- Where you store the Document meta-data and hierarchy
+    - SQL Database (PostgresSQL, Oracle, MSSQL, MySQL, Amazon RDS)
+    - MongoDB
+- Where you store the binary streams (the files you attach to documents)
+    - Simple FileSystem
+    - SQL Database
+    - S3, Azure
+    - Leveraging Content Delivery Networks for caching content securely all around the globe.
 
 <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">![]({{file name='VCS1.png'}} ?w=200,thumbnail=true)</td><td colspan="1">![]({{file name='VCS2.png'}} ?w=200,thumbnail=true)</td><td colspan="1">![]({{file name='DBS.png'}} ?w=200,h=317)</td></tr><tr><td colspan="1">**_PosgreSQL + FileSystem_**</td><td colspan="1">_**Oracle + S3**_</td><td colspan="1">_**MongoDB + S3**_</td></tr></tbody></table></div>
 
 &nbsp;
 
-### <span style="color: rgb(0,0,0);">Indexes</span>
+### Indexes
 
 You can also select where you store the indexes (including the full-text)
 
-*   *   SQL Database
-    *   Elasticsearch
+- SQL Database
+- Elasticsearch
 
 ![]({{file name='ES-Single.png'}} ?w=300,h=213,border=true)
 
@@ -309,15 +310,15 @@ Since 6.0, the default configuration uses Elasticsearch.
 
 In the same logic, you can choose:
 
-*   Where you store the caches and the transient data
+- Where you store the caches and the transient data
 
-    *   In Memory (per instance basis)
-    *   Redis (shared memory)
-*   Where you store&nbsp;[Users and Groups]({{page page='data-lists-and-directories'}})
-    *   SQL Database
-    *   LDAP
-    *   Mix of both
-    *   External system
+    - In Memory (per instance basis)
+    - Redis (shared memory)
+- Where you store&nbsp;[Users and Groups]({{page page='data-lists-and-directories'}})
+    - SQL Database
+    - LDAP
+    - Mix of both
+    - External system
 
 ## Scalability and High Availability
 
@@ -335,20 +336,20 @@ Depending on the UI framework used for presentation layer, the network load bala
 
 Typically:
 
-*   JSF Backoffice UI is stateful,
-*   WebEngine and HTML/JS based UI are mainly stateless.
+- JSF Backoffice UI is stateful,
+- WebEngine and HTML/JS based UI are mainly stateless.
 
 Anyway, even with JSF:
 
-*   Authentication can be transparent if you use a SSO system,
-*   The Nuxeo Platform knows how to restore a JSF view from a URL (most Nuxeo JSF views are bound to REST URLs).
+- Authentication can be transparent if you use a SSO system,
+- The Nuxeo Platform knows how to restore a JSF view from a URL (most Nuxeo JSF views are bound to REST URLs).
 
 When running in Cluster mode, the usage of Redis is strongly recommended since it allows to:
 
-*   Share caches between the nodes&nbsp;
-    *   Making the caches more efficient
-    *   Avoiding invalidation issues
-*   Share the [Work]({{page page='work-and-workmanager'}}) queues (all the asynchronous jobs that have been scheduled)
+- Share caches between the nodes&nbsp;
+    - Making the caches more efficient
+    - Avoiding invalidation issues
+- Share the [Work]({{page page='work-and-workmanager'}}) queues (all the asynchronous jobs that have been scheduled)
 
 ![]({{file name='Cluster-Redis.png'}} ?w=500,h=317,border=true)
 
@@ -356,20 +357,27 @@ In this architecture the Database server is still a Single Point of Failure.
 
 To correct that, you have several options:
 
-*   Use Nuxeo Clustering + Database replication as described below
-*   Use Nuxeo Clustering + a Clusterized database (like Oracle RAC)
-*   Use Nuxeo Clustering + a distributed/failsafe Database like MongoDB
+- Use Nuxeo Clustering + Database replication as described below
+- Use Nuxeo Clustering + a Clusterized database (like Oracle RAC)
+- Use Nuxeo Clustering + a distributed/failsafe Database like MongoDB
 
 {{#> callout type='tip' }}
-
 For more information, please see the page [Setting up a HA Configuration Using the Nuxeo Platform and PostgreSQL]({{page page='setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql'}}).
-
 {{/callout}}
 
-### Scaling out Processing&nbsp;
+### Scaling out Processing
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">&nbsp;</th></tr><tr><td colspan="1">![]({{file name='cluster.png'}} ?w=500)</td><td colspan="1">Nuxeo Cluster system by itself allows to scale out processing:
-you can add new Nuxeo nodes as the number of requests increase.</td></tr></tbody></table></div>
+<div class="table-scroll"><table class="hover">
+<tbody>
+<tr>
+<td colspan="1">
+![]({{file name='cluster.png'}} ?w=500)</td>
+<td colspan="1">Nuxeo Cluster system by itself allows to scale out processing:
+you can add new Nuxeo nodes as the number of requests increase.</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Dedicated Processing Nodes
 
@@ -380,8 +388,6 @@ This can be used to have some nodes of the Cluster dedicated to some heavy proce
 ![]({{file name='dedicated.png'}} ?w=500,h=289,border=true)
 
 Having such a demarcation between nodes is also a good way to be sure that async processing won't slow down Interactive processing.
-
-<div>
 
 ### Scaling out the Storage
 
@@ -397,19 +403,19 @@ When correctly configured, most databases can handle a heavy load of Store and R
 
 So, a first solution to Scale out the Storage Layer is to split the work between:
 
-*   The DataBase&nbsp;
-    *   Focus on Store & Retrieve operation
-    *   Small technical queries
-*   Elasticsearch index
-    *   Handle complex search used to build the screens
-    *   Can also be used to retrieve the document that is fully stored in the index.
+- The DataBase&nbsp;
+    - Focus on Store & Retrieve operation
+    - Small technical queries
+- Elasticsearch index
+    - Handle complex search used to build the screens
+    - Can also be used to retrieve the document that is fully stored in the index.
 
 At the Nuxeo level, directing a query to the Repository Database or to Elasticsearch is just a matter of configuration: code and query remain the same.
 
 This approach allows to leverage Elasticsearch capability:
 
-*   Very fast query engine
-*   Capability to scale out easily
+- Very fast query engine
+- Capability to scale out easily
 
 ![]({{file name='Cluster-ES.png'}} ?w=500,h=284,border=true)
 
@@ -417,8 +423,8 @@ This approach allows to leverage Elasticsearch capability:
 
 Unlike Nuxeo Nodes, the Database server nodes can not be simply added to handle more load:
 
-*   Multi-masters SQL DB architecture (like Oracle RAC) work but don't really provide scale out, only HA.
-*   Leveraging replicated ReadOnly SQL DB nodes is complex in terms of transaction management
+- Multi-masters SQL DB architecture (like Oracle RAC) work but don't really provide scale out, only HA.
+- Leveraging replicated ReadOnly SQL DB nodes is complex in terms of transaction management
 
 However, the Nuxeo Platform does provide a way to scale out the data: using several repositories.
 The idea is that a single Nuxeo application can be bound to several repositories, each repository being a DB instance and a BlobStore.&nbsp;So, if one application is connected to two repositories, the data will be partitioned between two couples (ex: (DB+FS) + (DB+S3) ).
@@ -429,25 +435,25 @@ Typical use cases for data partitioning include:
 
 **Selecting your storage type according to the needs**
 
-*   Partitioning&nbsp;between Live and Archive documents:
-    *   Archive&nbsp;
+- Partitioning&nbsp;between Live and Archive documents:
+    - Archive&nbsp;
 
-        *   Storage: slower but massive cheap storage that can scale
-        *   Indexes: add indexes on the database to make search faster (few Write)
-    *   Live
-        *   Storage: fast storage to make work faster, lower volume
-        *   Indexes: fast database with few index to maximize write speed
-*   Partitioning between read-only and read-write repositories
+        - Storage: slower but massive cheap storage that can scale
+        - Indexes: add indexes on the database to make search faster (few Write)
+    - Live
+        - Storage: fast storage to make work faster, lower volume
+        - Indexes: fast database with few index to maximize write speed
+- Partitioning between read-only and read-write repositories
 
-    *   Have a read-write repository
-    *   Have a read-only replicated repository
+    - Have a read-write repository
+    - Have a read-only replicated repository
 
 **Selecting the storage according to the isolation policy**
 
-*   Data for "clientX" goes in "repositoryX"
-*   Partitioning between types of documents or document status:
-    *   Published documents in a public repository
-    *   Working documents in a restricted repository
+- Data for "clientX" goes in "repositoryX"
+- Partitioning between types of documents or document status:
+    - Published documents in a public repository
+    - Working documents in a restricted repository
 
 This data partitioning is visible to user, but thanks to Elasticsearch we can provide a unified Index&nbsp;
 
@@ -459,8 +465,6 @@ This type of sharing has recently been tested during a performance benchmark usi
 
 #### Leveraging NoSQL and Distributed Storage
 
-</div>
-
 One the key advantages of NoSQL Storage like MongoDB is that they allow to scale out by simply adding nodes to the cluster and propose natively sharding on the nodes.
 
 ## Cloud & PaaS and Deployment Automation
@@ -471,30 +475,30 @@ To be able to run efficiently on the Cloud, you need to be able to use as much a
 
 Nuxeo Platform, makes it easy since:
 
-*   We are standard based
-*   The pluggable component model (Extension Point) allows to easily change backend implementation when needed
+- We are standard based
+- The pluggable component model (Extension Point) allows to easily change backend implementation when needed
 
 That's why leveraging AWS infrastructure was almost a natural fit for Nuxeo:
 
-*   Meta-Data Store: Oracle RDS or PostgreSQL RDS
-    *   Native plug (nothing specific to AWS)
-*   Binary Store: S3 Binary Store
-    *   Our BinaryManager is pluggable and we use it to leverage the S3 Storage capabilities
-*   Cache: ElasticCache / Redis
-    *   Our cache infrastructure is pluggable to support Redis
-    *   Our distributed Job queuing was already Redis based
+- Meta-Data Store: Oracle RDS or PostgreSQL RDS
+    - Native plug (nothing specific to AWS)
+- Binary Store: S3 Binary Store
+    - Our BinaryManager is pluggable and we use it to leverage the S3 Storage capabilities
+- Cache: ElasticCache / Redis
+    - Our cache infrastructure is pluggable to support Redis
+    - Our distributed Job queuing was already Redis based
 
 The same idea is true for all the Cloud Specific services like provisioning and monitoring.
 
 We try to provide everything so that the deployment in the target IaaS is easy and painless:&nbsp;
 
-*   Nuxeo is packaged as Debian packages (this is one of the available packaging)
+- Nuxeo is packaged as Debian packages (this is one of the available packaging)
 
-    *   We can easily setup Nuxeo on top of AMI
-    *   We&nbsp;can&nbsp;use&nbsp;CloudFormation
-*   Nuxeo exposes its metrics via JMX
-    *   CloudWatch can monitor Nuxeo
-    *   We&nbsp;can&nbsp;use&nbsp;AutoScaling
+    - We can easily setup Nuxeo on top of AMI
+    - We&nbsp;can&nbsp;use&nbsp;CloudFormation
+- Nuxeo exposes its metrics via JMX
+    - CloudWatch can monitor Nuxeo
+    - We&nbsp;can&nbsp;use&nbsp;AutoScaling
 
 <div><span class="text plain"><span class="meta paragraph text">![]({{file name='aws.png'}} ?w=500,h=320,border=true)
 </span></span></div>
@@ -505,13 +509,13 @@ Cloud infrastructure pricing is a complex task: you just need to take a look at 
 
 However, there are great optimizations opportunities:
 
-*   Reserved instance are significantly cheaper if you can commit in long term
-*   Sport instances can be a great solution if you can cope with their transient nature
+- Reserved instance are significantly cheaper if you can commit in long term
+- Sport instances can be a great solution if you can cope with their transient nature
 
 Being able to leverage these opportunities implies to distribute the applications parts across enough VM so that:
 
-*   You can use all the resources available
-*   You can loose VMs without breaking the system
+- You can use all the resources available
+- You can loose VMs without breaking the system
 
 At Nuxeo, we use Docker to multiplex several Nuxeo Applications on top of a set of AWS VMs running CoreOS.
 
@@ -527,8 +531,8 @@ If you want to provide a Disaster Recovery Plan, you need to host two separated 
 
 The first step is to deploy two Nuxeo infrastructures on two hosting sites. These infrastructure can be mono-VM, cluster or multi-VM. The key point is to provide a way for each hosting site to have the same vision of the data:
 
-*   SQL data stored in the SQL database server,
-*   Filesystem data.
+- SQL data stored in the SQL database server,
+- Filesystem data.
 
 Because Nuxeo storage VCS+Filesystem is safe, you can use a replication system between the two sites. Basically, you can use the replication/standby solution provided by the database server you choose. This replication tool just has to be transactional.
 
@@ -538,8 +542,8 @@ Because the blobs are referenced by their digest in the database, you don't have
 
 This kind of DRP solution has been successfully tested in production environment using:
 
-*   PosgreSQL stand-by solution (WAL shipping),
-*   RSync for the file system.
+- PosgreSQL stand-by solution (WAL shipping),
+- RSync for the file system.
 
 ![]({{file name='HA.jpg'}} ?w=500,border=true)
 
@@ -553,9 +557,9 @@ The Warm standby DB nodes are not used by Nuxeo active nodes.
 
 The Nuxeo Platform being flexible, you can use several add-ons together to achieve a complex architecture:
 
-*   Use&nbsp;`nuxeo-platform-sync` to create a read-only copy of a remote repository;
-*   Use remote plublisher to push information between two distant Nuxeo instances;
-*   Use multi-repository support to segregate Local vs Central data.
+- Use&nbsp;`nuxeo-platform-sync` to create a read-only copy of a remote repository;
+- Use remote plublisher to push information between two distant Nuxeo instances;
+- Use multi-repository support to segregate Local vs Central data.
 
 ![]({{file name='distant.png'}} ?w=500,h=417,border=true)
 

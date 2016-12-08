@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: Content View
 labels:
+    - content-review-lts2016
     - content-view
     - howto
     - studio

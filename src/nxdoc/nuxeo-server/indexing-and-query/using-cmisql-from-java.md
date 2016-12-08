@@ -2,7 +2,7 @@
 title: Using CMISQL from Java
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 details:
     howto:
@@ -13,6 +13,7 @@ details:
         tool: Code
         topics: 'CMIS, Query'
 labels:
+    - lts2016-ok
     - howto
     - query
     - cmis
@@ -28,7 +29,7 @@ confluence:
     shortlink: qQQz
     shortlink_source: 'https://doc.nuxeo.com/x/qQQz'
     source_link: /display/NXDOC/Using+CMISQL+from+Java
-tree_item_index: 1400 
+tree_item_index: 1400
 history:
     -
         author: Florent Guillaume
@@ -229,17 +230,21 @@ history:
         version: '1'
 
 ---
-CMISQL is the CMIS Query Language.&nbsp;It's possible to make CMISQL queries from Java code inside a Nuxeo bundle, much in the same way that you may used to make NXQL queries.
+CMISQL is the CMIS Query Language. It's possible to make CMISQL queries from Java code inside a Nuxeo bundle, much in the same way that you may used to make NXQL queries.
 
-You can find out more about the CMIS support in Nuxeo Platform on the&nbsp;[CMIS Page]({{page page='cmis'}}). You can find more information on the CMISQL syntax in the&nbsp;[CMIS specification](http://docs.oasis-open.org/cmis/CMIS/v1.1/cs01/CMIS-v1.1-cs01.html#x1-10500014).
+You can find out more about the CMIS support in Nuxeo Platform on the [CMIS Page]({{page page='cmis'}}). You can find more information on the CMISQL syntax in the [CMIS specification](http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html#x1-10500014).
 
-Note that in Nuxeo CMISQL, JOINs are not enabled by default. They are only available if you set the&nbsp;`nuxeo.conf`&nbsp;property&nbsp;`org.nuxeo.cmis.joins=true`, and you are using the VCS storage backend. CMISQL JOINs are not supported with the DBS storage (MongoDB), because the underlying storage cannot do relational queries.
+{{#> callout type='note' heading='JOINs'}}
+
+In Nuxeo CMISQL, JOINs are not enabled by default. They are only available if you set the `nuxeo.conf` property `org.nuxeo.cmis.joins=true`, and you are using the VCS storage backend. CMISQL JOINs are not supported with the DBS storage backend (MongoDB), because the underlying storage cannot do relational queries.
+
+{{/callout}}
 
 The following is a simple example of code making a query:
 
 {{#> callout type='note' heading='Constructing the CallContext'}}
 
-When constructing the&nbsp;`CallContext`, you should pass the&nbsp;`ServletContext`,&nbsp;`HttpServletRequest`&nbsp;and&nbsp;`HttpServletResponse`&nbsp;if available from your context. These are important for rendition URLs for instance.
+When constructing the `CallContext`, you should pass the `ServletContext`, `HttpServletRequest` and `HttpServletResponse` if available from your context. These are important for rendition URLs for instance.
 
 {{/callout}}{{#> panel type='code' heading='Making a CMISQL Query'}}
 
@@ -254,7 +259,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.chemistry.opencmis.commons.enums.CmisVersion;
 import org.apache.chemistry.opencmis.commons.server.CallContext;
 import org.apache.chemistry.opencmis.server.impl.CallContextImpl;
-import org.apache.chemistry.opencmis.server.shared.ThresholdOutputStreamFactory;
+import org.apache.chemistry.opencmis.server.shared.TempStoreOutputStreamFactory;
 import org.nuxeo.ecm.core.api.CoreSession;
 import org.nuxeo.ecm.core.api.IterableQueryResult;
 import org.nuxeo.ecm.core.opencmis.bindings.NuxeoCmisServiceFactory;
@@ -269,7 +274,7 @@ public class CMISQuery {
         ServletContext servletContext = null; // pass this if available
         HttpServletRequest request = null; // pass this if available
         HttpServletResponse response = null; // pass this if available
-        ThresholdOutputStreamFactory streamFactory = ThresholdOutputStreamFactory.newInstance(
+        TempStoreOutputStreamFactory streamFactory = TempStoreOutputStreamFactory.newInstance(
                 null, THRESHOLD, -1, false);
         CallContextImpl callContext = new CallContextImpl(
                 CallContext.BINDING_LOCAL, CmisVersion.CMIS_1_1,
@@ -281,19 +286,17 @@ public class CMISQuery {
 
     public void query(CoreSession session) {
         NuxeoCmisService cmisService = new NuxeoCmisService(session);
-        cmisService.setCallContext(getCallContext(session)); // pass also servlet info if available
         try {
+            cmisService.setCallContext(getCallContext(session)); // pass also servlet info if available
             // example CMISQL query
             String query = "SELECT cmis:objectId, dc:title FROM cmis:document WHERE dc:title LIKE 'foo%'";
             boolean searchAllVersions = true;
-            IterableQueryResult result = cmisService.queryAndFetch(query, searchAllVersions);
-            try {
+            // use try-with-resources when calling cmisService.queryAndFetch for automatic closing
+            try (IterableQueryResult result = cmisService.queryAndFetch(query, searchAllVersions)) {
                 for (Map<String, Serializable> row : result) {
                     // do something with the result
                     System.out.println(row.get("dc:title"));
                 }
-            } finally { // you MUST always close result in a finally block
-                result.close();
             }
         } finally { // you MUST always close cmisService in a finally block
             cmisService.close();
@@ -303,9 +306,5 @@ public class CMISQuery {
 ```
 
 {{/panel}}
-
-&nbsp;
-
-&nbsp;
 
 &nbsp;

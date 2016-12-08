@@ -11,6 +11,7 @@ details:
         tool: Code editor
         topics: JSF UI
 labels:
+    - content-review-lts2016
     - automation
     - howto
     - seam-jsf-component

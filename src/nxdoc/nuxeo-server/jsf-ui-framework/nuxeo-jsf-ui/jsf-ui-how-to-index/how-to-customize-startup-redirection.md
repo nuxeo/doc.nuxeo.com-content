@@ -13,6 +13,7 @@ details:
         tool: Code editor
         topics: JSF UI
 labels:
+    - content-review-lts2016
     - howto
     - jsf
     - seam-jsf-component

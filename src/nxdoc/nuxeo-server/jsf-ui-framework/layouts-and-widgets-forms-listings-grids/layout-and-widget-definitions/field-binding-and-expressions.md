@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - el
     - layout
     - widget
@@ -261,9 +262,9 @@ There are some inconsistencies between variables exposed in layout/widget defini
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
-*   [How to Add a New Widget to the Default Summary Layout]({{page page='how-to-add-a-new-widget-to-the-default-summary-layout'}})
-*   [Standard Widget Types]({{page page='standard-widget-types'}})
-*   [Custom Layout and Widget Templates]({{page page='custom-layout-and-widget-templates'}})
+- [How to Add a New Widget to the Default Summary Layout]({{page page='how-to-add-a-new-widget-to-the-default-summary-layout'}})
+- [Standard Widget Types]({{page page='standard-widget-types'}})
+- [Custom Layout and Widget Templates]({{page page='custom-layout-and-widget-templates'}})
 
 {{/panel}}</div><div class="column medium-6">
 

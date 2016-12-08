@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - multiexcerpt
     - multiexcerpt-include
 toc: true
@@ -293,8 +294,6 @@ The Nuxeo Platform can run on Linux, Mac OS X and Windows operating systems.
 The only requirement is to run Java. Below are the Nuxeo-Java compatibilities:
 
 {{{multiexcerpt 'java_requirement' page='Compatibility Matrix'}}}
-
-&nbsp;You need a **Java Development Kit (JDK)** to develop on the platform, but a JRE is enough to just run it.
 
 {{! /multiexcerpt}}
 

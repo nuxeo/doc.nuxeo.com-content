@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: 'Automation, Document template'
 labels:
+    - content-review-lts2016
     - mvel
     - freemarker
     - scripting

@@ -14,6 +14,7 @@ details:
         tool: 'XML extension, Nuxeo IDE, Studio'
         topics: 'Layout, Versioning, JSF UI, Widget'
 labels:
+    - content-review-lts2016
     - versioning
     - widget
     - layout

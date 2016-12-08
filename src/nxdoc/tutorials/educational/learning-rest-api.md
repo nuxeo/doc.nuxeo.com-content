@@ -1,10 +1,12 @@
 ---
-title: Learning REST API
+title: Learning the REST API
 review:
-    comment: ''
-    date: '2015-12-01'
-    status: ok
+    comment: 'Since Nuxeo IO is no longer relevant, the Nuxeo Cloud Instance and links ending by `nuxeo.io` sould be reviewed. See [NXDOC-982](https://jira.nuxeo.com/browse/NXDOC-982)'
+    date: '2016-12-06'
+    status: not-ok
+redirect: nxdoc/getting-started-with-the-nuxeo-platform
 labels:
+    - content-review-lts2016
     - multiexcerpt-include
 toc: true
 confluence:
@@ -19,6 +21,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/dY3ZAQ'
     source_link: /display/NXDOC/Learning+REST+API
 tree_item_index: 800
+hidden: true
 history:
     -
         author: Solen Guitter
@@ -101,7 +104,7 @@ history:
 
 {{! multiexcerpt name='REST_API_tuto '}}
 
-This is a training on using REST API.
+This is a training on using the REST API.
 
 ## Prerequisites
 
@@ -115,45 +118,45 @@ This training is based on **Nuxeo Platform LTS 2015**.
 
 Before doing this training, you need the following:
 
-*   **Browser**
+*   **Browser**:
     Google Chrome / Chromium browser with the [Postman extension](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop), or Firefox web browser with the [RESTED extension](https://addons.mozilla.org/en-US/firefox/addon/rested/)[](https://addons.mozilla.org/en-us/firefox/addon/restclient/)
-*   **Nuxeo Cloud instance**
+*   **Nuxeo Cloud instance**:
     You need access to a Nuxeo Cloud instance. If you don't, you should sign up for a [Nuxeo Online Services 30 days free trial](http://www.nuxeo.com/downloads/#online-trial).
-*   **Nuxeo Studio project**
+*   **Nuxeo Studio project**:
     You need a Nuxeo Studio project. Again, this is all part of the Nuxeo Online Services trial.
-*   ****REST API Training application template****
+*   **REST API Training application template**:
     In Nuxeo Studio, import the REST API Training application template from the **Customization** > **External Templates** menu.
-*   **cURL** (optional)
+*   **cURL** (optional):
     Available natively for Mac OS and Linux users, Windows users can [install it](https://curl.haxx.se/download.html#Win64). It is useful to check your CORS configuration.
 
 ### Required Knowledge
 
 The following knowledge is needed to follow this course:
 
-*   **Nuxeo Platform
-    **Understanding [Nuxeo Platform document concept](https://university.nuxeo.io/nuxeo/university/#%21/course/using-nuxeo-platform/understanding-document-concept) is mandatory. Having a grasp about the [main Nuxeo Platform functionalities](https://university.nuxeo.io/nuxeo/university/#%21/course/using-nuxeo-platform) is highly recommended.
-*   **Nuxeo Studio
-    **Knowledge of the [main Nuxeo Studio functionalities](https://university.nuxeo.io/nuxeo/university/#%21/course/getting-started-nuxeo-studio) is necessary, because you will call custom features created in Studio during this course.
-*   **JavaScript
-    **JavaScript programming skills are required, as we will be using the Nuxeo JavaScript client to practice.
-*   **(Optional) Java**
+*   **Nuxeo Platform**:
+    Understanding the [Nuxeo Platform's document concept](https://university.nuxeo.io/nuxeo/university/#!/course/using-nuxeo-platform/understanding-document-concept) is mandatory. Having a grasp about the [main Nuxeo Platform functionalities](https://university.nuxeo.io/nuxeo/university/#!/course/using-nuxeo-platform) is highly recommended.
+*   **Nuxeo Studio**:
+    Knowledge of the [main Nuxeo Studio functionalities](https://university.nuxeo.io/nuxeo/university/#!/course/getting-started-nuxeo-studio) is necessary, because you will call custom features created in Studio during this course.
+*   **JavaScript**:
+    JavaScript programming skills are required, as we will be using the [Nuxeo JavaScript client](https://doc.nuxeo.com/nxdoc/javascript-client/) to practice.
+*   **Java (optional)**:
     Java programming skill are needed if you want to cover the bonus section of this training, to extend the REST API.
 
 ### Useful REST API Resources
 
 Information about the REST API usage can be found in various places. The most important ones are the following:
 
-*   **API Playground**
-    Available at [nuxeo.github.io/api-playground](http://nuxeo.github.io/api-playground/) or available as a [Nuxeo package]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}). It allows you to connect to a live Nuxeo Platform repository and discover / try the existing endpoints.
-*   **Local Instance REST API Documentation**
-    Available in your Nuxeo Platform instance at `api/v1/doc`. Assuming a Nuxeo Platform instance is running on your machine, the URL would be [http://localhost:8080/nuxeo/api/v1/doc](/nuxeo.github.io/api-playground).&nbsp; If you don't have a local instance, you can try it at [https://nightly.nuxeo.com/nuxeo/api/v1/doc](https://nightly.nuxeo.com/nuxeo/api/v1/doc) [.](https://nightly.nuxeo.com/api/v1/doc) The default login / password is Administrator / Administrator.
+*   **API Playground**:
+    Available at [nuxeo.github.io/api-playground](http://nuxeo.github.io/api-playground/) or available as a [Nuxeo package]({{page page='installing-a-new-package-on-your-instance'}}). It allows you to connect to a live Nuxeo Platform repository and discover / try the existing endpoints.
+*   **Local Instance REST API Documentation**:
+    Available in your Nuxeo Platform instance at `api/v1/doc`. Assuming a Nuxeo Platform instance is running on your machine, the URL would be [http://localhost:8080/nuxeo/api/v1/doc](/nuxeo.github.io/api-playground) If you don't have a local instance, you can try it at [https://nightly.nuxeo.com/nuxeo/api/v1/doc](https://nightly.nuxeo.com/nuxeo/api/v1/doc) [.](https://nightly.nuxeo.com/api/v1/doc) The default login / password is Administrator / Administrator.
     It provides an automatically generated documentation with the available endpoints and what they expect. Use it to get an idea of what you need to send in a request body.
-*   **REST API Documentation**
-    Available at [REST API]({{page space='nxdoc710' page='rest-api'}}) in our documentation center. It provides detailed technical documentation on the concepts. features and clients for the REST API.
-*   **JS Client Documentation**
-    Available at [nuxeo.github.io/nuxeo-js-client/1.0.0/](http://nuxeo.github.io/nuxeo-js-client/1.0.0/). It provides explanations about the available objects and methods in the Nuxeo JS client, that we will use during this training.
-*   **REST API Video Course**
-    Available at the Nuxeo University [REST API course](https://university.nuxeo.io/nuxeo/university/#%21/course/working-with-nuxeo-platform-rest-api). It can help getting you started quickly with the REST API's main concepts, and gives the relevant links to go further.
+*   **REST API Documentation**:
+    Available at [REST API]({{page page='rest-api'}}) in our documentation center. It provides detailed technical documentation on the concepts, features and clients for the REST API.
+*   **JS Client Documentation**:
+    Available at [nuxeo.github.io/nuxeo-js-client/1.2.1/](http://nuxeo.github.io/nuxeo-js-client/1.2.1/). It provides explanations about the available objects and methods in the Nuxeo JS client, that we will use during this training.
+*   **REST API Video Course**:
+    Available at the Nuxeo University [REST API course](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api). It can help getting you started quickly with the REST API's main concepts, and gives the relevant links to go further.
 
 ## Prepare Your Environment
 
@@ -170,22 +173,22 @@ Information about the REST API usage can be found in various places. The most im
 1.  Log in your nuxeo.io manager at [https://manager.nuxeo.io](https://manager.nuxeo.io).
 2.  Select your instance from the central zone of the screen, then stop your instance if it is running.
 3.  Edit your instance and make sure it is associated to your Nuxeo Studio project. In this example the associated Studio project is "REST API Training", but yours will be named differently of course.
-    ![]({{file name='instance-studio-project.png' space='nxdoc710' page='learning-rest-api'}} ?w=300,h=200,border=true)
+    ![]({{file name='instance-studio-project.png' page='learning-rest-api'}} ?w=300,h=200,border=true)
 4.  Start your instance.
 5.  Once started, access it. URL can be seen in the manager, in this example it is [`https://my-instance-name.nuxeo.io`](https://my-instance-name.nuxeo.io) . Make sure to use yours.
-    ![]({{file name='instance-url.png' space='nxdoc710' page='learning-rest-api'}} ?w=300,h=200,border=true)
+    ![]({{file name='instance-url.png' page='learning-rest-api'}} ?w=300,h=200,border=true)
 6.  Log in. Default credentials are Administrator / Administrator.
-7.  Install the [Nuxeo API Playground]({{page space='nxdoc710' page='use-nuxeo-api-playground-to-discover-the-api'}}) Nuxeo package from the **Update Center** > **Marketplace Packages** tab.
+7.  Install the [Nuxeo API Playground]({{page page='use-nuxeo-api-playground-to-discover-the-api'}}) Nuxeo package from the **Update Center** > **Marketplace Packages** tab.
     Note that the instance has to be restarted for the installation to complete. The restart can be achieved as following:
-    ![]({{file name='restart-instance.png' space='nxdoc710' page='learning-rest-api'}} ?w=500,h=508,border=true)
+    ![]({{file name='restart-instance.png' page='learning-rest-api'}} ?w=500,h=508,border=true)
 8.  [Deploy your Nuxeo Studio configuration](https://university.nuxeo.io/nuxeo/university/#%21/course/getting-started-nuxeo-studio/deploying-nuxeo-studio-configuration).
-    ![]({{file name='deploy-configuration.png' space='nxdoc710' page='learning-rest-api'}} ?w=500)
+    ![]({{file name='deploy-configuration.png' page='learning-rest-api'}} ?w=500)
 
 ## REST API Principles
 
 {{> wistia_video id='258cvm9i4j'}}
 
-_Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#%21/course/working-with-nuxeo-platform-rest-api)" on [Nuxeo University](https://university.nuxeo.io)_
+_Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" on [Nuxeo University](https://university.nuxeo.io)_
 
 ### Practice - REST API Principles
 
@@ -201,11 +204,11 @@ _Extract from the course "[Working with the REST API](https://university.nuxeo.i
 
 1.  Log in your Nuxeo Cloud instance ( [`https://your-instance-name.nuxeo.io`](https://your-instance-name.nuxeo.io) ).
     Note: your instance URL can be seen in the nuxeo.io manager.
-    ![]({{file name='instance-url.png' space='nxdoc710' page='learning-rest-api'}} ?w=300,h=200,border=true)
+    ![]({{file name='instance-url.png' page='learning-rest-api'}} ?w=300,h=200,border=true)
 2.  Go to `default-domain/workspaces`:
     1.  Create a Contract Portfolio named "EMEA".
     2.  Create a Contract named "Beyond Space Travel Agency".
-    3.  [Export the Contract]({{page space='userdoc710' page='exporting-documents'}}) using the **XML export** option.
+    3.  [Export the Contract]({{page space='userdoc' page='exporting-documents'}}) using the **XML export** option.
 
 **Retrieve the Contract using the REST API**
 
@@ -234,8 +237,6 @@ Setting up a CORS configuration is necessary to allow requests from other domain
 *   What kind of calls do I want to allow?
 
 A CORS configuration can be done from Studio by adding an XML extension.
-
-{{{multiexcerpt 'CORS-contrib' page='NXDOC710:Cross-Origin Resource Sharing (CORS)'}}}
 
 Notice that **only GET, POST, HEAD, OPTIONS methods are allowed by default**. You need to explicitly set the supported methods in your configuration to allow PUT and DELETE calls.
 
@@ -277,9 +278,9 @@ In Nuxeo Studio:
 In your Nuxeo Cloud instance:
 
 1.  Deploy the Nuxeo Studio configuration.
-    ![]({{file name='deploy-configuration.png' space='nxdoc710' page='learning-rest-api'}} ?w=500,h=197,border=true)
+    ![]({{file name='deploy-configuration.png' page='learning-rest-api'}} ?w=500,h=197,border=true)
 2.  Restart the instance.
-    ![]({{file name='restart-instance.png' space='nxdoc710' page='learning-rest-api'}} ?w=500,h=508,border=true)
+    ![]({{file name='restart-instance.png' page='learning-rest-api'}} ?w=500,h=508,border=true)
 3.  Open a terminal and launch the following commands to test your configuration:
 
     ```bash
@@ -453,7 +454,7 @@ Complete the following exercise.
 
 **To go further**
 
-[Authentication and User Management]({{page space='nxdoc710' page='authentication-and-user-management'}}) documentation
+[Authentication and User Management]({{page page='authentication-and-user-management'}}) documentation
 
 ## Manipulating Documents
 
@@ -549,11 +550,11 @@ Assuming that we have:
 The `depth` header allow you to control the aggregation depth:
 
 *   [`depth:root`](http://depthroot) will retrieve objects attached to the current object (default)
-    ![]({{file name='marshalling-depth-root.png' space='nxdoc710' page='learning-rest-api'}} ?w=300,h=275,border=true)
+    ![]({{file name='marshalling-depth-root.png' page='learning-rest-api'}} ?w=300,h=275,border=true)
 *   [`depth:children`](http://depthchildren) will retrieve the objects referenced by the current object and one level deeper.
-    ![]({{file name='marshalling-depth-children.png' space='nxdoc710' page='learning-rest-api'}} ?w=300,h=205,border=true)
+    ![]({{file name='marshalling-depth-children.png' page='learning-rest-api'}} ?w=300,h=205,border=true)
 *   [`depth:max`](http://depthmax) will retrieve objects referenced by the current object, and objects referenced up to two levels deeper.
-    ![]({{file name='marshalling-depth-max.png' space='nxdoc710' page='learning-rest-api'}} ?w=300,thumbnail=true)
+    ![]({{file name='marshalling-depth-max.png' page='learning-rest-api'}} ?w=300,thumbnail=true)
 
 On top of the `depth` header, you can use:
 
@@ -577,12 +578,12 @@ On top of the `depth` header, you can use:
 
 **Notes about the JS client methods:**
 
-*   More information about the entity types can be found in the [REST API Entity Types]({{page space='nxdoc710' page='rest-api-entity-types'}}) documentation page.
+*   More information about the entity types can be found in the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation page.
 
 *   The entity type you have to fill is the one of the first object you are retrieving. For instance:
-    ![]({{file name='document-entity.png' space='nxdoc710' page='learning-rest-api'}} ?w=300,h=172,border=true)
+    ![]({{file name='document-entity.png' page='learning-rest-api'}} ?w=300,h=172,border=true)
 *   When calling a document, use the `document` entity in the `fetchProperty` method, no matter what kind of entity types further referenced objects may have.
-    ![]({{file name='user-entity.png' space='nxdoc710' page='learning-rest-api'}} ?w=300,h=136,border=true)
+    ![]({{file name='user-entity.png' page='learning-rest-api'}} ?w=300,h=136,border=true)
 *   When calling a user, use the `user` entity in the `fetchProperty` method, no matter what kind of entity types further referenced objects may have.
 
 {{#> callout type='info' heading='What You Should Remember'}}
@@ -619,15 +620,15 @@ Using resolvers is a combination of:
 
 ##### Learn More
 
-[JSON Marshalling]({{page space='nxdoc710' page='json-marshalling'}}) documentation
+[JSON Marshalling]({{page page='json-marshalling'}}) documentation
 
 #### Enrichers
 
 {{> wistia_video id='ykaualv73f'}}
 
-_Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#%21/course/working-with-nuxeo-platform-rest-api)" on [Nuxeo University](https://university.nuxeo.io)_
+_Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" on [Nuxeo University](https://university.nuxeo.io)_
 
-Adding enrichers when fetching a document is done by setting the `X-NXenrichers.document` header, `document` being here the entity type that will be enriched. If you were calling a user, you would use a the `X-NXenrichers.user` header instead, and so on. As for resolvers, what matters here is the entity type of the first object you have been calling. Entity types are listed in the [REST API Entity Types]({{page space='nxdoc710' page='rest-api-entity-types'}}) documentation.
+Adding enrichers when fetching a document is done by setting the `X-NXenrichers.document` header, `document` being here the entity type that will be enriched. If you were calling a user, you would use a the `X-NXenrichers.user` header instead, and so on. As for resolvers, what matters here is the entity type of the first object you have been calling. Entity types are listed in the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation.
 
 Enrichers are provided in the response into the `contextParameters` object.
 
@@ -662,14 +663,14 @@ Use the appropriate enrichers.
 
 **What you need to do**
 
-1.  In your Nuxeo Cloud instance, attach the following file to your existing contract: []({{file name='beyond-space-travel-agencies-contract.odt' space='nxdoc710' page='learning-rest-api'}}).
+1.  In your Nuxeo Cloud instance, attach the following file to your existing contract: []({{file name='beyond-space-travel-agencies-contract.odt' page='learning-rest-api'}}).
 2.  Complete the following exercise.
 
 <iframe width="100%" height="300" src="//jsfiddle.net/nuxeo/c39thusw/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 **To go further**
 
-[REST API entity types]({{page space='nxdoc710' page='rest-api-entity-types'}}) documentation.
+[REST API entity types]({{page page='rest-api-entity-types'}}) documentation.
 
 #### Adapters
 
@@ -720,7 +721,7 @@ nuxeo.request('/path/default-domain/@acl')
 
 **Your goals**
 
-Use the appropriate adapter to retrieve your contract's audit log. You can use the [Web Adapters for the REST API]({{page space='nxdoc710' page='web-adapters-for-the-rest-api'}}) documentation to check which adapter to call.
+Use the appropriate adapter to retrieve your contract's audit log. You can use the [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}}) documentation to check which adapter to call.
 
 **What you need to do**
 
@@ -730,13 +731,13 @@ Complete the following exercise.
 
 **To go further**
 
-[Web Adapters for the REST API]({{page space='nxdoc710' page='web-adapters-for-the-rest-api'}}) documentation.
+[Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}}) documentation.
 
 ### Creation
 
 Creating a document is done using the JS client `nuxeo.repository().create("parentRef", document)...` method. The `parentRef` is the id or path under which your document should be created.
 
-A [`Document`](http://nuxeo.github.io/nuxeo-js-client/1.0.0/Document.html) can't be instantiated directly, so you need to create the object manually. Refer to the [REST API Entity Types]({{page space='nxdoc710' page='rest-api-entity-types'}}) documentation to see what you need to send.
+A [`Document`](http://nuxeo.github.io/nuxeo-js-client/1.0.0/Document.html) can't be instantiated directly, so you need to create the object manually. Refer to the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation to see what you need to send.
 
 {{{multiexcerpt 'restapi-doc-entity-post' page='REST API Entity Types'}}}
 
@@ -745,7 +746,7 @@ A [`Document`](http://nuxeo.github.io/nuxeo-js-client/1.0.0/Document.html) can't
 *   Creating a document is done using the JS client `nuxeo.repository().create("parentRef", document)...` method, where:
     *   `parentRef` is the document id or path under which the document should be created.
     *   `document` is the document object that will be used to create your actual document.
-*   Use the [REST API Entity Types]({{page space='nxdoc710' page='rest-api-entity-types'}}) documentation to see what a document object should look like.
+*   Use the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation to see what a document object should look like.
 *   The created document will be returned; check the response to get the document's id, name and path.
 
 {{/callout}}
@@ -793,7 +794,7 @@ Accepted values for the header are `MAJOR` (creates a version and increments the
 {{#> callout type='info' heading='What You Should Remember'}}
 
 *   Updating a document is done using the JS client `nuxeo.repository().update(document)...` method, where `document` is the document object that will be used to create your actual document.
-*   Use the [REST API Entity Types]({{page space='nxdoc710' page='rest-api-entity-types'}}) documentation or the previous sample to see what a document object should look like.
+*   Use the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation or the previous sample to see what a document object should look like.
 *   By default no version is created. You can use the `X-Versioning-Option` header to create a version. Value: `MAJOR` for a major version number increment, `MINOR` for a minor version number increment.
 
 {{/callout}}
@@ -814,7 +815,7 @@ Complete the following exercise.
 
 {{> wistia_video id='qokay4hw1i'}}
 
-_Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#%21/course/working-with-nuxeo-platform-rest-api)" on [Nuxeo University](https://university.nuxeo.io)_
+_Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" on [Nuxeo University](https://university.nuxeo.io)_
 
 File upload in the REST API is done through the batch upload endpoint in order to upload files outside of the context of a transaction. This means that you can upload files as big as you want without risking a timeout.
 
@@ -932,7 +933,7 @@ SELECT * FROM Document
 
 {{/panel}}
 
-See also the [NXQL]({{page space='nxdoc710' page='nxql'}}) documentation to get a glimpse of all possibilities offered.
+See also the [NXQL]({{page page='nxql'}}) documentation to get a glimpse of all possibilities offered.
 
 ### Call Page Providers
 
@@ -990,11 +991,11 @@ You are querying the database when launching an arbitrary NXQL query. When creat
 
 **How Can I Take Advantage of the Whole Elasticsearch Features?**
 
-Nuxeo provides a [passthrough API for Elasticsearch]({{page space='nxdoc710' page='elasticsearch-passthrough'}}) that lets you benefit from the Elasticsearch API while handling security. When using it, queries are written using the Elasticsearch API, but they are actually sent to the Nuxeo Platform that reworks them. We won't cover this aspect during this training since you should rather head to the [Elasticsearch documentation](https://www.elastic.co/guide).
+Nuxeo provides a [passthrough API for Elasticsearch]({{page page='elasticsearch-passthrough'}}) that lets you benefit from the Elasticsearch API while handling security. When using it, queries are written using the Elasticsearch API, but they are actually sent to the Nuxeo Platform that reworks them. We won't cover this aspect during this training since you should rather head to the [Elasticsearch documentation](https://www.elastic.co/guide).
 
 ## Executing Business Logic through Automation
 
-Automation operations, [chains]({{page space='nxdoc710' page='how-to-create-an-automation-chain'}}) and [scripts]({{page space='nxdoc710' page='automation-scripting'}}) can all be called with the JS client.
+Automation operations, [chains]({{page page='how-to-create-an-automation-chain'}}) and [scripts]({{page page='automation-scripting'}}) can all be called with the JS client.
 
 **When Should You Use Automation**
 
@@ -1402,6 +1403,6 @@ Declare your content enricher.
 
 ### Call the Content Enricher
 
-Now that the enricher is created, you need to [package and deploy your application](https://university.nuxeo.io/nuxeo/university/#%21/course/nuxeo-platform-developer-basics/package-deploy-application), then you can [call it](#restapitraining-enrichers)! Your enricher name is the one you put inside the `NAME` variable.
+Now that the enricher is created, you need to [package and deploy your application](https://university.nuxeo.io/nuxeo/university/#!/course/nuxeo-platform-developer-basics/package-deploy-application), then you can [call it](#enrichers)! Your enricher name is the one you put inside the `NAME` variable.
 
 {{! /multiexcerpt}}

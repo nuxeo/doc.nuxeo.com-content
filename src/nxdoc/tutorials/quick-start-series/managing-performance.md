@@ -2,9 +2,10 @@
 title: Managing Performance
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
+    - lts2016-ok
     - performance
 toc: true
 confluence:
@@ -301,9 +302,9 @@ If your benchmarks show that you use 100% of the CPU, this is usually a good sig
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Tracking the Performance of the Nuxeo Platform]({{page page='tracking-the-performance-of-the-nuxeo-platform'}})
-*   [Performance Recommendations]({{page page='performance-recommendations'}})
-*   [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
+- [Tracking the Performance of the Nuxeo Platform]({{page page='tracking-the-performance-of-the-nuxeo-platform'}})
+- [Performance Recommendations]({{page page='performance-recommendations'}})
+- [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
 
 {{/panel}}</div><div class="column medium-6">
 

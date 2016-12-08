@@ -2,7 +2,7 @@
 title: How to Customize the Drive Metadata Edit Layouts
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 details:
     howto:
@@ -13,9 +13,11 @@ details:
         tool: Studio
         topics: 'Layout, Nuxeo Drive'
 labels:
+    - lts2016-ok
     - howto
     - nuxeo-drive
     - layout
+    - nuxeo-drive-component
 confluence:
     ajs-parent-page-id: '14257229'
     ajs-parent-page-title: Nuxeo Drive
@@ -117,14 +119,13 @@ To do so:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Customize Nuxeo Drive Versioning Policy]({{page page='how-to-customize-nuxeo-drive-versioning-policy'}})
-*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Customize Nuxeo Drive Versioning Policy]({{page page='how-to-customize-nuxeo-drive-versioning-policy'}})
+- [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Nuxeo Drive Documentation'}}
 
-*   [Nuxeo Drive user documentation]({{page space='userdoc' page='nuxeo-drive'}})
-*   [Nuxeo Drive developer documentation
-    ]({{page page='nuxeo-drive'}})
+- [Nuxeo Drive user documentation]({{page space='userdoc' page='nuxeo-drive'}})
+- [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
 
 {{/panel}}</div></div>

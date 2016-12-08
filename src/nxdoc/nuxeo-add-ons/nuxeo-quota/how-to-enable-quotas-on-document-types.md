@@ -13,6 +13,7 @@ details:
         tool: Nuxeo Studio
         topics: 'Document type, Nuxeo Quota, Statistics'
 labels:
+    - content-review-lts2016
     - quota
     - howto
     - quotas-component

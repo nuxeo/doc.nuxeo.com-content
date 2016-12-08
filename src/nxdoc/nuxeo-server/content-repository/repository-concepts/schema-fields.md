@@ -2,9 +2,10 @@
 title: Schema Fields
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
+    - lts2016-ok
     - schema-component
     - excerpt
 toc: true
@@ -108,9 +109,9 @@ db.default.update(
 
 {{#> panel heading='Related Documentation'}}
 
-*   [Schemas in Nuxeo Studio]({{page space='studio' page='schemas'}})
-*   [Repository Concepts]({{page page='repository-concepts'}})
-*   [Document Type How-To Index]({{page page='document-type-how-to-index'}})
+- [Schemas in Nuxeo Studio]({{page space='studio' page='schemas'}})
+- [Repository Concepts]({{page page='repository-concepts'}})
+- [Document Type How-To Index]({{page page='document-type-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">
 

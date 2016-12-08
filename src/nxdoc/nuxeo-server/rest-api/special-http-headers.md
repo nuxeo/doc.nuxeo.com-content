@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - http
     - rest-api
     - rest-api-component
@@ -259,8 +260,8 @@ More details about the control of the depth here: [Aggregating Marshallers and A
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [JSON Marshalling]({{page page='json-marshalling'}})
-*   [Ngnix bug]({{page space='ADMINDOC' page='HTTP and+HTTPS+Reverse-Proxy+Configuration#HTTPandHTTPSReverse-ProxyConfiguration-Ngnixissue'}})
+- [JSON Marshalling]({{page page='json-marshalling'}})
+- [Ngnix bug]({{page space='ADMINDOC' page='HTTP and+HTTPS+Reverse-Proxy+Configuration#HTTPandHTTPSReverse-ProxyConfiguration-Ngnixissue'}})
 
 {{/panel}}</div><div class="column medium-6">
 

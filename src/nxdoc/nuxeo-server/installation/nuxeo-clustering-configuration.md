@@ -2,9 +2,10 @@
 title: Nuxeo Clustering Configuration
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
+    - lts2016-ok
     - clustering
     - quartz
     - load-balancer
@@ -290,6 +291,15 @@ In cluster mode the schedule contributions (deployed from plugins or configurati
 
 {{/callout}}
 
+Any instance using a clustered Quartz configuration tries to get a lock on the next scheduled job execution. Those locks are managed and shared through the database.
+The time must be synchronized on all instances. You should use NTP for that.
+
+While performing a rolling upgrade on Nuxeo servers, the lock may be swapped between the instances. In which case, you may encounter a warning on startup:
+```
+This scheduler instance (host-nuxeo.example.com1478524375548) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+```
+This message is not a problem if the NTP configuration is fine.
+
 ## About Session Affinity
 
 We advise to use a session affinity mechanism: when a user is connected to a node, they should always be redirected to that node.
@@ -354,6 +364,9 @@ ProxyPass /nuxeo balancer://sticky-balancer stickysession=JSESSIONID|jsessionid 
 </Proxy>
 
 ```
+
+To enable automatic unhealthy instance eviction on your balancer, you may require an health check.
+The following ensures Nuxeo runtime is initialized and up: `HTTP:200:/nuxeo/running_status?info=reload`.
 
 ### Troubleshooting Session Affinity Problems
 

@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: 'Automation, Content view'
 labels:
+    - content-review-lts2016
     - howto
     - content-view
     - automation
@@ -343,16 +344,16 @@ The chain will look like that:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-*   [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
-*   [Fetch a Document by Its ID or Path]({{page space='NXDOC' page='Fetch a+Document+by+Its+ID+or+Path'}})
-*   [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
+- [Fetch a Document by Its ID or Path]({{page space='NXDOC' page='Fetch a+Document+by+Its+ID+or+Path'}})
+- [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Automation screen in Nuxeo Studio]({{page space='studio' page='automation'}})
-*   [Content Automation Concepts]({{page page='content-automation-concepts'}})
-*   [Content views in Nuxeo Studio]({{page space='studio' page='content-view-query-and-form-tab'}})
-*   [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}})
+- [Automation screen in Nuxeo Studio]({{page space='studio' page='automation'}})
+- [Content Automation Concepts]({{page page='content-automation-concepts'}})
+- [Content views in Nuxeo Studio]({{page space='studio' page='content-view-query-and-form-tab'}})
+- [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}})
 
 {{/panel}}</div></div>

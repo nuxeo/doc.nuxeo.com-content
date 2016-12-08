@@ -1,7 +1,7 @@
 {
-  "name": "Nuxeo-documentation-platform-spaces",
-  "description": "doc.nuxeo.com Platform Spaces",
-  "license": "UNLICENSED",
+  "name": "Nuxeo-documentation-content",
+  "description": "doc.nuxeo.com Content",
+  "license": "CC",
   "private": true,
   "version": "0.0.1",
   "author": {
@@ -13,7 +13,7 @@
     "co": "^4.6.0",
     "lodash.defaultsdeep": "^4.6.0",
     "node-yaml-config": "0.0.4",
-    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v5.2.2"
+    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v5.2.4"
   },
   "devDependencies": {
     "browser-sync": "^2.12.8",
@@ -31,19 +31,20 @@
     "start": "npm run metalsmith",
     "poststart": "npm run copy_assets && npm run verify",
     "predev": "npm install",
-    "dev": "npm run browser_sync & NODE_ENV=development nodemon --exec 'npm start && npm run copy_module_assets && browser-sync reload'",
+    "dev": "npm run server & NODE_ENV=development nodemon --exec 'npm start && npm run copy_module_assets && browser-sync reload'",
     "copy_assets": "mkdir -p ./site/assets/`./node_modules/nuxeo-docs-builder/bin/version-path` && cp -r ./assets/* ./site/assets/`./node_modules/nuxeo-docs-builder/bin/version-path`",
     "copy_module_assets": "cp -r ./node_modules/nuxeo-docs-builder/assets/* ./site/assets/",
     "metalsmith": "node .",
-    "browser_sync": "browser-sync start --server site --browser=$npm_package_config_browser",
+    "server": "browser-sync start --server site --browser=$npm_package_config_browser",
+    "server_reload": "browser-sync reload",
     "yaml_lint": "js-yaml -t > /dev/null"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:nuxeo/doc.nuxeo.com-platform-spaces.git"
+    "url": "git@github.com:nuxeo/doc.nuxeo.com-content.git"
   },
   "bugs": {
-    "url": "git@github.com:nuxeo/doc.nuxeo.com-platform-spaces.git/issues"
+    "url": "git@github.com:nuxeo/doc.nuxeo.com-content.git/issues"
   },
   "homepage": "http://doc.nuxeo.com"
 }

@@ -2,7 +2,7 @@
 title: How to Contribute a New "User Registration Request" Document Type
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 details:
     howto:
@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: User registration
 labels:
+    - lts2016-ok
     - howto
     - user-registration
     - user-registration-component

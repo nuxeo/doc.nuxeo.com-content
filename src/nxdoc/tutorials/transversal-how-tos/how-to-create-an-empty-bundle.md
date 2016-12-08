@@ -11,6 +11,7 @@ details:
         tool: Code
         topics: Bundle
 labels:
+    - content-review-lts2016
     - dev-guide
     - manifest
     - bundle
@@ -554,7 +555,7 @@ At the end, you need to get a folder structure as shown below.
 
 <pre>bareproject
 |
-`-- src
+-- src
     |-- main
     |   |-- java
     |   |   `-- org
@@ -870,11 +871,11 @@ As said in the beginning of this recipe, if you have unexpected errors or Nuxeo 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How-To Index ]({{page page='how-to-index'}})
+- [How-To Index ]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Component Model ]({{page page='runtime-and-component-model'}})
-*   [Writing a Bundle Manifest ]({{page page='writing-a-bundle-manifest'}})
+- [Component Model ]({{page page='runtime-and-component-model'}})
+- [Writing a Bundle Manifest ]({{page page='writing-a-bundle-manifest'}})
 
 {{/panel}}</div></div>

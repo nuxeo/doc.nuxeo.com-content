@@ -2,9 +2,10 @@
 title: Upgrade from LTS 2015 following Fast Tracks
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
+    - lts2016-ok
     - multiexcerpt
 tabbed_page: true
 toc: true
@@ -213,7 +214,7 @@ history:
 
 {{! multiexcerpt name='upgrade-8.1-api-Environment.getHome'}}
 
-Calls to `Environment.getHome()` might need to be replaced with `Environment.getRuntimeHome()` or `Environment.getServerHome()` to ensure that you are using the correct home path in your code. See [NXP-18667](https://jira.nuxeo.com/browse/NXP-18667).
+- Calls to `Environment.getHome()` might need to be replaced with `Environment.getRuntimeHome()` or `Environment.getServerHome()` to ensure that you are using the correct home path in your code. See [NXP-18667](https://jira.nuxeo.com/browse/NXP-18667).
 
 {{! /multiexcerpt}}
 
@@ -247,7 +248,7 @@ We removed `multi_tenant_user.xsd` and `multi_tenant_group.xsd` schemas. The `te
 
 ## Complementary Information
 
-* [Upgrade notes for 8.1](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.1%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+* [Upgrade notes for 8.1](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.1%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 * [Release notes for 8.1](http://nuxeo.github.io/releasenotes/8.1/)
 
 # From 8.1 to 8.2
@@ -299,7 +300,7 @@ Annotations were removed from Nuxeo Platform 8.2.
 
 {{! /multiexcerpt}}
 
-### SF Performance Optimization Changes
+### JSF Performance Optimization Changes
 
 {{! multiexcerpt name='JSF-optimizations'}}
 
@@ -327,9 +328,9 @@ Reference JIRA issue: [NXP-17690](https://jira.nuxeo.com/browse/NXP-17690)
 
 {{! /multiexcerpt}}
 
-### Complementary Information
+### Complementary Information&nbsp;
 
-* [Upgrade notes for 8.2](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.2%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+* [Upgrade notes for 8.2](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.2%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 * [Release notes for 8.2](http://nuxeo.github.io/releasenotes/8.2/)
 
 # From 8.2 to 8.3
@@ -342,13 +343,13 @@ Reference JIRA issue: [NXP-17690](https://jira.nuxeo.com/browse/NXP-17690)
 
 The Nuxeo Platform distribution has been refactored to separate server-side features and the user interface. As a consequence the user interface is now available in a Nuxeo Package called [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui). This package should be installed on the new base distribution of the platform, called Nuxeo Server. Using Nuxeo Server with the Nuxeo JSF UI is the equivalent of the previous CAP distribution.
 
+{{! /multiexcerpt}}
+
 ```bash
 $ nuxeoctl mp-install nuxeo-jsf-ui
 ```
 
-{{! /multiexcerpt}}
-
-## Code Changes
+## Code Changes&nbsp;
 
 ### Nuxeo and iframe
 
@@ -376,14 +377,11 @@ See [NXP-19629](https://jira.nuxeo.com/browse/NXP-19629) for details.
 
 {{! multiexcerpt name='upgrade-8.3-api-coreSession_methods'}}
 
-The following methods are deprecated in order to introduce same methods with a `var args` argument `CopyOption`.
-
-* `CoreSession#copy(DocumentRef, DocumentRef, String)`
-* `CoreSession#copy(List<DocumentRef>, DocumentRef)`
-* `CoreSession#copyProxyAsDocument(DocumentRef, DocumentRef, String)`
-* `CoreSession#copyProxyAsDocument(List<DocumentRef>, DocumentRef)`
-
-See [NXP-19740](https://jira.nuxeo.com/browse/NXP-19740) for details.
+- The following methods are deprecated in order to introduce same methods with a `var args` argument `CopyOption`. See [NXP-19740](https://jira.nuxeo.com/browse/NXP-19740) for details.
+    * `CoreSession#copy(DocumentRef, DocumentRef, String)`
+    * `CoreSession#copy(List<DocumentRef>, DocumentRef)`
+    * `CoreSession#copyProxyAsDocument(DocumentRef, DocumentRef, String)`
+    * `CoreSession#copyProxyAsDocument(List<DocumentRef>, DocumentRef)`
 
 {{! /multiexcerpt}}
 
@@ -433,7 +431,7 @@ See [NXP-19441](https://jira.nuxeo.com/browse/NXP-19441) for details.
 
 {{! multiexcerpt name='upgrade-8.3-NuxeoPackages-webMobile'}}
 
-`nuxeo-web-mobile` has been deprecated in order to let some place to the new standalone [Nuxeo Application](https://itunes.apple.com/en/app/nuxeo/id1103802613?ls=1&mt=8), available on iOS.
+`nuxeo-web-mobile` has been deprecated in order to let some place to the new standalone [Nuxeo Application](https://itunes.apple.com/en/app/nuxeo/id1103802613?ls=1&mt=8), available on iOS and Android.
 
 {{! /multiexcerpt}}
 
@@ -441,18 +439,94 @@ See [NXP-19441](https://jira.nuxeo.com/browse/NXP-19441) for details.
 
 {{! multiexcerpt name='upgrade-8.3-NuxeoPackages-jsfui'}}
 
-The [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui) package lets you install the old Nuxeo UI based on JSF technologies.
+The [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui) package lets you install theNXP-19740 Nuxeo UI based on JSF technologies.
 
 {{! /multiexcerpt}}
 
-## Complementary Information
+## Complementary Information&nbsp;
 
-* [Upgrade notes for 8.3](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+* [Upgrade notes for 8.3](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 * [Release notes for 8.3](http://nuxeo.github.io/releasenotes/8.3/)
 
 # From 8.3 to LTS 2016
 
-## Installation & Configuration
+## Code Changes&nbsp;&nbsp;
+
+## Deprecated APIs
+
+{{! multiexcerpt name='upgrade-8.10-deprecated-apis'}}
+
+- Extension point `request-configuration` of `org.nuxeo.ecm.webengine.WebEngineComponent` is now obsolete: a transaction will always be started when calling a WebEngine endpoint. [NXP-20045](https://jira.nuxeo.com/browse/NXP-20045)
+
+- `NuxeoAuthenticationFilter#DEFAULT_START_PAGE` has been removed, use `LoginScreenHelper.getStartupPagePath()` instead. See [NXP-19992](https://jira.nuxeo.com/browse/NXP-19992) for details.
+
+- Compatibility `AssetLibrary` document type has been removed. You must update your database to change the type from `AssetLibrary` to `Domain`. See [NXP-20943](https://jira.nuxeo.com/browse/NXP-20943) for details.
+    ```sql
+    # PostgreSQL Update Query
+    UPDATE hierarchy SET primarytype = 'Domain' WHERE primarytype = 'AssetLibrary';
+    ```
+
+- `Framework.getService(CoreSession.class)` has been removed. You must use `Framework.getService(CoreSessionService.class).createCoreSession(repositoryName, principal)` instead. See [NXP-20083](https://jira.nuxeo.com/browse/NXP-20083) for details.
+
+- All DataModel and DocumentPart public APIs have been deprecated, and reserved for internal use:
+    ```
+    Deprecated:
+    - DataModel
+    - DataModelMap
+    - DocumentModel.getDataModelsCollection
+    - DocumentModel.getDataModels
+    - DocumentModel.getDataModel
+
+    Deprecated:
+    - DocumentPart
+    - DocumentModel.getPart(schema)
+    - DocumentModel.getParts()
+    New methods:
+    - DocumentModel.getPropertyObject(schema, name)
+    - DocumentModel.getPropertyObjects(schema)
+    ```
+{{! /multiexcerpt}}
+
+## Installation and Configuration&nbsp;
+
+{{! multiexcerpt name='upgrade-8.10-installation-requirements'}}
+
+### Requirements
+
+#### Java
+JDK 1.8.0_112 is required.
+
+#### OpenOffice
+OpenOffice is no longer supported.
+
+#### LibreOffice
+LibreOffice minimum version required is 5.x and the `soffice` program must be added to the `PATH` environment variable.
+
+#### ccextractor
+Nuxeo DAM now requires ccextractor for video closed captions extraction.
+
+{{! /multiexcerpt}}
+
+### Parameters to Update
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Parameter</th>
+<th colspan="1">Modification</th>
+<th colspan="1">Reference</th>
+</tr>
+<tr>
+<td colspan="1">`elastcisearch.reindex.onStartup`</td>
+<td colspan="1">**Moved** to `elasticsearch.reindex.onStartup`</td>
+<td colspan="1">[NXP-20867](https://jira.nuxeo.com/browse/NXP-20867)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+{{! multiexcerpt name='upgrade-8.10-installation-elasticsearch-upgrade'}}
 
 ### Elasticsearch Upgrade
 
@@ -476,7 +550,148 @@ As dots (`.`) are not longer accepted in a property name, we replaced properties
 In order to fetch all documents, we recommend you to use the scroll API instead (`ElasticSearchComponent.scroll(NxQueryBuilder, long)`).
 All queries made with a `-1` as limit will fail unless you update the `index.max_result_window` setting on ES cluster (highly unrecommended).
 
-See [NXP-19194](https://jira.nuxeo.com/browse/NXP-19194).
+See [NXP-19194](https://jira.nuxeo.com/browse/NXP-19194) for details.
+
+{{! /multiexcerpt}}
+
+## Distribution Changes&nbsp;
+
+### Nuxeo Server as the Base Distribution and CAP Removal
+
+As stated in the *From 8.2 to 8.3 > UI Dedicated Package* section, the new base distribution is Nuxeo Server, and Nuxeo CAP has been removed.
+Thus the following changes in [nuxeo-distribution](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution):
+
+{{! multiexcerpt name='upgrade-8.10-distributionChanges'}}
+#### Renamed Maven Modules
+
+- `nuxeo-distribution-server` => `nuxeo-nxr-server`
+- `nuxeo-distribution-jsf-ui` => `nuxeo-nxr-jsf-ui`
+- `nuxeo-distribution-tests` => `nuxeo-test-dependencies`
+- `nuxeo-distribution-tomcat-wizard-tests` => `nuxeo-wizard-tests`
+- `nuxeo-distribution-cap-cmis-tests` => `nuxeo-server-cmis-tests`
+- `nuxeo-distribution-cap-funkload-tests` => `nuxeo-jsf-ui-funkload-tests`
+- `nuxeo-distribution-cap-gatling-tests` => `nuxeo-jsf-ui-gatling-tests`
+- `nuxeo-distribution-cap-webdriver-tests` => `nuxeo-jsf-ui-webdriver-tests`
+- `nuxeo-distribution-tomcat` => `nuxeo-server-tomcat`, no more `-nuxeo-cap`
+classifier
+
+#### Functional Tests
+
+The default distribution tested in functional tests is now a simple
+`nuxeo-server-tomcat` without the `nuxeo-jsf-ui` package installed.
+
+[tools-nuxeo-ftest](https://github.com/nuxeo/tools-nuxeo-ftest)
+has been updated for this purpose, see [NXBT-1351](https://jira.nuxeo.com/browse/NXBT-1351).
+
+Consequently, if you need to run functional tests against a distribution including the `nuxeo-jsf-ui` package, you need to specify it explicitly in the `itests.xml` file:
+
+```xml
+<property name="mp.install" value="file:${out.dir}/nuxeo-marketplace-jsf-ui-${maven.project.version}.zip" />
+...
+<target name="XXX">
+  <copy todir="${out.dir}">
+    <artifact:file key="org.nuxeo.ecm.distribution:nuxeo-marketplace-jsf-ui::zip" />
+  </copy>
+</target>
+```
+
+Having the following dependency in the `pom.xml`:
+
+```xml
+<dependency>
+  <groupId>org.nuxeo.ecm.distribution</groupId>
+  <artifactId>nuxeo-marketplace-jsf-ui</artifactId>
+  <type>zip</type>
+  <scope>provided</scope>
+</dependency>
+```
+
+See [NXP-19790](https://jira.nuxeo.com/browse/NXP-19790) for details.
+
+### Impact on Nuxeo Packages
+
+#### Target Platform
+
+The default target platform is now the `server` distribution, so the `package.xml` file of a Nuxeo package must contain:
+
+```xml
+<platforms>
+  <platform>server-@DISTRIB_VERSION@</platform>
+  <platform>server-@DISTRIB_VERSION@-*</platform>
+</platforms>
+```
+
+#### Dependency on nuxeo-jsf-ui
+
+If a Nuxeo package depends on the `nuxeo-jsf-ui` package at runtime then it needs to be added as a dependency in `package.xml`:
+
+```xml
+<dependencies>
+  <package>nuxeo-jsf-ui</package>
+</dependencies>
+```
+
+#### Optional Dependencies
+
+If a Nuxeo package can be installed on a `server` distribution with or without the `nuxeo-jsf-ui` package, the `package.xml` file must contain an optional dependency instead:
+
+```xml
+<optional-dependencies>
+  <package>nuxeo-jsf-ui</package>
+</optional-dependencies>
+```
+
+In this case the package assembly needs to handle the split of the
+bundles and libs into the `bundles`/`bundles-jsf-ui`/`bundles-web-ui` and `lib`/`lib-jsf-ui`/`lib-web-ui` directories of the package. See for example [marketplace-dam](https://github.com/nuxeo/marketplace-dam/blob/master/marketplace/src/main/assemble/assembly.xml), [marketplace-drive](https://github.com/nuxeo/marketplace-drive/blob/master/marketplace/src/main/assemble/assembly.xml), [marketplace-quota](https://github.com/nuxeo/marketplace-quota/blob/master/marketplace/src/main/assemble/assembly.xml).
+
+Same thing about the `nuxeo-web-ui` package.
+
+#### Package Functional Tests
+
+As mentioned above in the [Functional Tests](#functional-tests) section, if the functional tests of a Nuxeo package need to be run against a distribution including the `nuxeo-jsf-ui` package, it needs to be specified explicitly in the `itests.xml` file.
+
+See [NXP-20939](https://jira.nuxeo.com/browse/NXP-20939) for details.
+{{! /multiexcerpt}}
+
+#### Moved Code
+
+##### Select2 Operations
+
+{{! multiexcerpt name='upgrade-8.10-select2-operations-moved'}}
+
+The operations used by select2 widgets have been extracted from the nuxeo-platform-ui-select2 bundle to the nuxeo-automation-features one:
+ - [org.nuxeo.ecm.platform.ui.select2.automation.SuggestUserEntries](https://github.com/nuxeo/nuxeo/blob/7.10/nuxeo-features/nuxeo-platform-ui-select2/src/main/java/org/nuxeo/ecm/platform/ui/select2/automation/SuggestUserEntries.java) is now  [org.nuxeo.ecm.automation.core.operations.users.SuggestUserEntries](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/core/operations/users/SuggestUserEntries.java)
+ - [org.nuxeo.ecm.platform.ui.select2.automation.SuggestDirectoryEntries](https://github.com/nuxeo/nuxeo/blob/7.10/nuxeo-features/nuxeo-platform-ui-select2/src/main/java/org/nuxeo/ecm/platform/ui/select2/automation/SuggestDirectoryEntries.java) is now  [org.nuxeo.ecm.automation.core.operations.services.directory.SuggestDirectoryEntries](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/core/operations/services/directory/SuggestDirectoryEntries.java)
+
+ {{! /multiexcerpt}}
+
+## Nuxeo Packages
+
+### Packages Updates
+
+#### Nuxeo Digital Signature
+
+{{! multiexcerpt name='upgrade-8.10-NuxeoPackages-digital-signature'}}
+
+Only administrators can use `signPDF` and `signPDFDocument` Operations. Otherwise an `OperationException` is thrown. See [NXP-15990](https://jira.nuxeo.com/browse/NXP-15990) for details.
+
+{{! /multiexcerpt}}
+
+### Deprecated Addons
+
+{{! multiexcerpt name='upgrade-8.10-NuxeoPackages-deprecated'}}
+The following addons are deprecated with the release of Nuxeo Platform LTS 2016:
+- Nuxeo Review Workflows Dashboards
+- Smart Search
+- Nuxeo Virtual Navigation
+- Nuxeo Forum
+
+{{! /multiexcerpt}}
+
+## Complementary Information&nbsp;
+
+* [Upgrade notes for LTS 2016](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.10%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+* [Release notes for LTS 2016](http://nuxeo.github.io/releasenotes/8.10/)
 
 {{> end_of_tabs }}
 
@@ -486,7 +701,7 @@ See [NXP-19194](https://jira.nuxeo.com/browse/NXP-19194).
 <div class="column medium-6">
 {{#> panel heading='Related Documentation'}}
 
-- [Upgrade from LTS 2015 to 8.3]({{page page='upgrade-from-lts-2015-to-83'}})
+- [Upgrade from LTS 2015 to LTS 2016]({{page page='upgrade-from-lts-2015-to-lts-2016'}})
 - [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}})
 
 {{/panel}}

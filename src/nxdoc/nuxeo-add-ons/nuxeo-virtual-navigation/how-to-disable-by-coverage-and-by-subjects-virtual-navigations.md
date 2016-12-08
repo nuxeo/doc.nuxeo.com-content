@@ -13,6 +13,7 @@ details:
         tool: 'Studio, XML extensions'
         topics: 'Content View, Virtual Navigation'
 labels:
+    - content-review-lts2016
     - virtual-navigation
     - howto
     - content-view

@@ -13,6 +13,7 @@ details:
         tool: XML Extension
         topics: 'Directory, Vocabulary'
 labels:
+    - content-review-lts2016
     - howto
     - directory-component
 confluence:
@@ -126,12 +127,12 @@ To set up a new cache for your directory, wether for your vocabularies, users or
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Data Lists and Directories]({{page page='data-lists-and-directories'}})
-*   [Directory and UI]({{page page='directory-and-ui'}})
+- [Data Lists and Directories]({{page page='data-lists-and-directories'}})
+- [Directory and UI]({{page page='directory-and-ui'}})
 
 {{/panel}}</div></div>

@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - elasticsearch
     - elasticsearch-component
     - todo
@@ -211,10 +212,10 @@ The&nbsp;[RoutingAuditRequestFilter](https://github.com/nuxeo/nuxeo-platform-doc
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Workflow Audit Log]({{page page='workflow-audit-log'}})
-*   [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
-*   [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
-*   [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
+- [Workflow Audit Log]({{page page='workflow-audit-log'}})
+- [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+- [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
+- [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
 
 {{/panel}}</div><div class="column medium-6">
 

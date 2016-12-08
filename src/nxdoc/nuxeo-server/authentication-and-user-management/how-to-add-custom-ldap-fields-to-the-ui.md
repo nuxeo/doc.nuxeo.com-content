@@ -2,7 +2,7 @@
 title: How to Add Custom LDAP Fields to the UI
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 details:
     howto:
@@ -13,6 +13,7 @@ details:
         tool: XML extension
         topics: 'Authentication, LDAP'
 labels:
+    - lts2016-ok
     - ldap
     - howto
     - authentation
@@ -236,10 +237,10 @@ To add a custom LDAP fields to the User interface you have to:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
 
-*   [Using a LDAP Directory]({{page page='using-a-ldap-directory'}})
-*   [How to Configure a Multidirectory for Users and Groups]({{page page='how-to-configure-a-multidirectory-for-users-and-groups'}})
-*   [Authentication and User Management]({{page page='authentication-and-user-management'}})
-*   [Data Lists and Directories]({{page page='data-lists-and-directories'}})
+- [Using a LDAP Directory]({{page page='using-a-ldap-directory'}})
+- [How to Configure a Multidirectory for Users and Groups]({{page page='how-to-configure-a-multidirectory-for-users-and-groups'}})
+- [Authentication and User Management]({{page page='authentication-and-user-management'}})
+- [Data Lists and Directories]({{page page='data-lists-and-directories'}})
 
 {{/panel}}</div><div class="column medium-6">
 

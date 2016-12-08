@@ -2,9 +2,10 @@
 title: Conversion
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
+    - lts2016-ok
     - conversion
     - convert-component
 toc: true
@@ -287,7 +288,7 @@ boolean
 
 </td><td colspan="1">
 
-`true` to schedule an asynchronous conversion, `false` other wise. Default to `false`.
+`true` to schedule an asynchronous conversion, `false` otherwise. Default to `false`.
 
 </td></tr></tbody></table></div>
 
@@ -305,29 +306,30 @@ This POST returns a HTTP code 202 with the following data:
 {
   "entity-type": "conversionScheduled",
   "conversionId": "id",
-  "pollingURL": "http://localhost:8080/nuxeo/api/v1/conversion/id/poll"
+  "pollingURL": "http://localhost:8080/nuxeo/api/v1/conversion/id/poll",
+  "resultURL": "http://localhost:8080/nuxeo/api/v1/conversion/id/result"
 }
 ```
 
-The&nbsp;`pollingURL` is used to get the status of a scheduled conversion, it's part of the new&nbsp;`conversion` endpoint.
+The `pollingURL` is used to get the status of a scheduled conversion, it's part of the new `conversion` endpoint.
+The `resultURL` is used to get the result of the conversion, it's part of the new `conversion` endpoint.
 
 ```
 GET http://localhost:8080/nuxeo/api/v1/conversion/id/poll
 ```
 
-For a conversion not yet completed, it returns a HTTP code 200 with the following data:
+It returns a HTTP code 200 with the following data:
 
 ```js
 {
   "entity-type": "conversionStatus",
   "conversionId": "id",
-  "status": "running" // scheduled, completed
+  "status": "running", // scheduled, completed,
+  "resultURL": "http://localhost:8080/nuxeo/api/v1/conversion/id/result"
 }
 ```
 
-For a conversion completed, it returns a HTTP code 303 with the result URL in the&nbsp;`Location` header.
-
-To retrieve a conversion result:
+To retrieve a conversion result, use the provided `resultURL`:
 
 ```
 GET http://localhost:8080/nuxeo/api/v1/conversion/id/result

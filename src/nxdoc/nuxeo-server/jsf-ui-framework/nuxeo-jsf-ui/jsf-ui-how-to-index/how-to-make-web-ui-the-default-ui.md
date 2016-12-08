@@ -2,7 +2,7 @@
 title: How to Make Web UI the Default UI
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 details:
     howto:
@@ -11,6 +11,7 @@ details:
         tool: XML Extension
         topics: 'Web UI, JSF UI'
 labels:
+    - lts2016-ok
     - howto
 confluence:
     ajs-parent-page-id: '20517820'

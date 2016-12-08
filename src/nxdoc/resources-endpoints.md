@@ -6,6 +6,8 @@ review:
     status: ok
 redirect: rest-api
 redirect_source: REST API
+labels:
+    - content-review-lts2016
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''

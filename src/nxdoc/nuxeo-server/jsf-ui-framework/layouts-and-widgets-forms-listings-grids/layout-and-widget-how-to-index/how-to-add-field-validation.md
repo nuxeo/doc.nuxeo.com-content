@@ -13,6 +13,7 @@ details:
         tool: 'Studio, Nuxeo IDE'
         topics: 'Layout, JSF, Validation'
 labels:
+    - content-review-lts2016
     - validation
     - jsf
     - howto

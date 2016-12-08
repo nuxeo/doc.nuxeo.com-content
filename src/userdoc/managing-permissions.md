@@ -297,7 +297,7 @@ history:
 ---
 {{! multiexcerpt name='permissions'}}
 
-A permission is a rule to grant access to a user or set of users to a Nuxeo document.&nbsp;User has a view in the dashboard where he can see the documents on which a permission is set. Managing permissions means granting or denying access permissions in a document or folder.
+A permission is a rule to grant access to a user or set of users to a Nuxeo document. User has a view in the dashboard where he can see the documents on which a permission is set. Managing permissions means granting or denying access permissions in a document or folder.
 
 Some permissions are granted automatically, for example when you create a workflow and grant access to a user on a document for the entire workflow or a particular task.
 
@@ -394,11 +394,11 @@ Submit documents for publishing
 
 ### Granting Permissions to the Application Users and Groups
 
-To&nbsp;add a permission, at the root of a workspace, a folder or a document, click on the&nbsp;**Permission**&nbsp;tab >&nbsp;**New Permission** and fill in the popup form.
+To add a permission, at the root of a workspace, a folder or a document, click on the **Permission** tab  **New Permission** and fill in the popup form.
 
 ![]({{file name='add_permission_popup.png'}} ?w=650,h=368,border=true)
 
-The new permission is displayed in the&nbsp;_Permissions defined locally_&nbsp;part of the screen.
+The new permission is displayed in the _Permissions defined locally_ part of the screen.
 
 ### Granting Permissions to External Users (Instant Share)
 
@@ -411,19 +411,19 @@ In the _Permissions Assigned to External Users_ part of the screen, click **New*
 **Notes:**
 
 *   You can only grant a temporary access to external users.
-*   External users are not created a user account on the application. They do not have login / password credentials. They can only use the link that is sent to them to access the application.&nbsp;
+*   External users are not created a user account on the application. They do not have login / password credentials. They can only use the link that is sent to them to access the application.
 *   External users have access to the content that was shared with them (either documents or workspaces and their content) and the Search tab.
 *   External users do not benefit from the following features: A personal workspace and the Home tab and its features (dashboard, alerts, users / groups search, etc.).
 
 ### Editing Permissions
 
-To&nbsp;edit a permission&nbsp;click on&nbsp;![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}})&nbsp;next to it, from there you can modify the permission and/or the date frame.
+To edit a permission click on ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) next to it, from there you can modify the permission and/or the date frame.
 
 ### Deleting Permissions
 
-To&nbsp;delete a permission&nbsp;click on&nbsp;![]({{file name='delete_2.png' page='icons-index'}} ?w=16,thumbnail=true) next to the permission you want to delete, click&nbsp;**Ok**&nbsp;on the confirmation popup.&nbsp;
+To delete a permission click on ![]({{file name='delete_2.png' page='icons-index'}}) next to the permission you want to delete, click **Ok** on the confirmation popup.
 
-![]({{file name='delete_permission_popup.png'}} ?w=350,border=true)&nbsp;
+![]({{file name='delete_permission_popup.png'}} ?w=350,border=true)
 
 ## Auditing and Purging Permissions
 
@@ -452,18 +452,27 @@ You can search permissions on the following criteria:
 
 ### Purging Permissions
 
-The **Purge** tab will&nbsp;enable admins to delete&nbsp;**all**&nbsp;the permissions granted to a user or on a section of the repository.
+The **Purge** tab will enable admins to delete **all** the permissions granted to a user or on a section of the repository.
 
-To&nbsp;**purge the permission**&nbsp;of a user: go to&nbsp;**Admin**&nbsp;>&nbsp;**Permissions**&nbsp;> &nbsp;**Purge**&nbsp;tab, search the user you want and click on&nbsp;**Search**. The available permissions are displayed, click on&nbsp;**Purge**&nbsp;to confirm. &nbsp;All the permissions for this user are removed.
+To **purge the permission** of a user: go to **Admin**&nbsp;> **Permissions**&nbsp;>  **Purge** tab, search the user you want and click on&nbsp;**Search**. The available permissions are displayed, click on **Purge** to confirm. All the permissions for this user are removed.
 ![]({{file name='permissions_purge.png'}} ?w=600,border=true)
 
-{{! /multiexcerpt}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Want to add your own access rights?'}}
+{{! /multiexcerpt}}
 
-*   [Add a new Permission in the UI]({{page space='studio' page='add-a-new-permission-in-the-ui'}})
-*   [How to Grant the Edit Permission without the Remove Permission]({{page space='nxdoc' page='how-to-grant-the-edit-permission-without-the-remove-permission'}})
+* * *
 
-{{/panel}}</div><div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Want to add your own access rights?'}}
+
+- [Add a new Permission in the UI]({{page space='studio' page='add-a-new-permission-in-the-ui'}})
+- [How to Grant the Edit Permission without the Remove Permission]({{page space='nxdoc' page='how-to-grant-the-edit-permission-without-the-remove-permission'}})
+
+{{/panel}}
+</div>
+<div class="column medium-6">
 
 &nbsp;
 
-</div></div>
+</div>
+</div>

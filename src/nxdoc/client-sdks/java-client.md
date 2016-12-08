@@ -1,10 +1,12 @@
 ---
-title: Java/Android Client
+title: Java Client
 review:
     comment: ''
     date: '2015-12-01'
     status: ok
 toc: true
+labels:
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '16091040'
     ajs-parent-page-title: Client SDKs
@@ -86,30 +88,32 @@ Maven:
 <dependency>
   <groupId>org.nuxeo.java.client</groupId>
   <artifactId>nuxeo-java-client</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>2.2</version>
 </dependency>
 ```
 
 Gradle:
 
 ```
-compile 'org.nuxeo.java.client:nuxeo-java-client:0.1-SNAPSHOT'
+compile 'org.nuxeo.java.client:nuxeo-java-client:2.2'
 ```
 
 Ivy:
 
 ```
-<dependency org="org.nuxeo.java.client" name="nuxeo-java-client" rev="0.1-SNAPSHOT" />
+<dependency org="org.nuxeo.java.client" name="nuxeo-java-client" rev="2.2" />
 
 ```
 
 SBT:
 
 ```
-libraryDependencies += "org.nuxeo.java.client" % "nuxeo-java-client" % "0.1-SNAPSHOT"
+libraryDependencies += "org.nuxeo.java.client" % "nuxeo-java-client" % "2.2"
 ```
 
-###Usage
+For latest version of Nuxo Java Client, please see its [repository](https://github.com/nuxeo/nuxeo-java-client).
+
+### Usage
 
 **Creating a client**
 
@@ -434,8 +438,6 @@ When no response is needed (204 No Content Status for example), use `retrofit2.C
 **Custom Endpoints**
 
 **Marshalling**
-
-
 
 **Cache**
 

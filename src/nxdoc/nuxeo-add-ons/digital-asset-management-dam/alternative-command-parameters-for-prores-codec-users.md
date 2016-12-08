@@ -2,9 +2,10 @@
 title: Alternative Command Parameters for ProRes Codec Users
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
+    - lts2016-ok
     - convert-component
     - excerpt
 confluence:
@@ -20,22 +21,22 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/4JCRAQ'
     source_link: /display/NXDOC/Alternative+Command+Parameters+for+ProRes+Codec+Users
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-19 08:59'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 14:14'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 14:14'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2015-10-02 09:42'
         message: ''

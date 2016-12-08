@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - link-update
     - url
     - community-links
@@ -275,10 +276,10 @@ public static String fileUrl(String patternName, DocumentModel doc,
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in this documentation'}}
 
-*   [Default URL Patterns]({{page page='default-url-patterns'}})
-*   [URLs for Files]({{page page='urls-for-files'}})
-*   [Downloading Files]({{page page='downloading-files'}})
-*   [REST API]({{page page='rest-api'}})
+- [Default URL Patterns]({{page page='default-url-patterns'}})
+- [URLs for Files]({{page page='urls-for-files'}})
+- [Downloading Files]({{page page='downloading-files'}})
+- [REST API]({{page page='rest-api'}})
 
 {{/panel}}</div><div class="column medium-6">
 

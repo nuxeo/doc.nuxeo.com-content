@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: 'Document type, Schema'
 labels:
+    - content-review-lts2016
     - schema
     - howto
     - document-type
@@ -162,17 +163,16 @@ Let's see how this metadata is defined.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-*   [undefined]()
-*   [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}})
-*   [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}})
+- [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Documents in Nuxeo Studio]({{page space='studio' page='documents'}})
-*   [Content Repository]({{page page='content-repository'}})
-*   [Available Facets]({{page page='available-facets'}})
-*   [Life cycle]({{page space='studio' page='life-cycle'}})
-*   [Schemas]({{page space='studio' page='schemas'}})
+- [Documents in Nuxeo Studio]({{page space='studio' page='documents'}})
+- [Content Repository]({{page page='content-repository'}})
+- [Available Facets]({{page page='available-facets'}})
+- [Life cycle]({{page space='studio' page='life-cycle'}})
+- [Schemas]({{page space='studio' page='schemas'}})
 
 {{/panel}}</div></div>

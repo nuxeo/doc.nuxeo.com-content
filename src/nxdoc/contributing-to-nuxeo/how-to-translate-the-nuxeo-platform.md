@@ -11,6 +11,7 @@ details:
         tool: Crowdin
         topics: 'Labels, Localization, Translation'
 labels:
+    - content-review-lts2016
     - i10n
     - internationalization
     - translation
@@ -559,9 +560,9 @@ The job at [https://qapriv.nuxeo.org/jenkins/job/trigger-sync-nuxeo-crowdin/](ht
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
-*   [Localization and Translation How-To Index]({{page page='localization-and-translation-how-to-index'}})
-*   [How to Upload Labels Translations in Nuxeo Studio (i18n)]({{page page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}})
-*   [How to Force Locale]({{page page='how-to-force-locale'}})
+- [Localization and Translation How-To Index]({{page page='localization-and-translation-how-to-index'}})
+- [How to Upload Labels Translations in Nuxeo Studio (i18n)]({{page page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}})
+- [How to Force Locale]({{page page='how-to-force-locale'}})
 
 &nbsp;
 

@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - elasticsearch
     - aggregate
     - page-provider
@@ -356,10 +357,10 @@ The use of `extendedBoundsMin` and `extendedBoundsMax` is strongly recommended. 
 
 {{#> panel heading='Related Documentation'}}
 
-*   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
-*   [Page Providers]({{page page='page-providers'}})
-*   [Custom Page Providers]({{page page='custom-page-providers'}})
-*   [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
+- [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+- [Page Providers]({{page page='page-providers'}})
+- [Custom Page Providers]({{page page='custom-page-providers'}})
+- [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
 
 {{/panel}}</div><div class="column medium-6">
 

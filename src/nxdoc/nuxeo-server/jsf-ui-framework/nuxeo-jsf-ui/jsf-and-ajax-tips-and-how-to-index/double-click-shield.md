@@ -11,6 +11,7 @@ details:
         tool: Code
         topics: 'JSF, Ajax, jQuery'
 labels:
+    - content-review-lts2016
     - jquery
     - double-click
     - howto
@@ -136,7 +137,7 @@ Through a custom JSF Form Renderer, we add the dedicated CSS style class&nbsp; `
 
 You can see the shield in action when a "Request in progress" message is displayed at the top right corner of the window:
 
-![]({{file name='Screenshot from 2013-10-31 15:21:18.png'}} ?w=650,border=true)
+![]({{file name='Screenshot from 2013-10-31 15-21-18.png'}} ?w=650,border=true)
 
 ## Limitations
 
@@ -197,17 +198,17 @@ You can disable the shield for the whole Nuxeo application by adding the followi
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [JSF and Javascript ]({{page page='jsf-and-javascript'}})
-*   [Ajax4jsf Best Practices]({{page page='ajax4jsf-best-practices'}})
-*   [Ajax Forms and Actions]({{page page='ajax-forms-and-actions'}})
-*   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [JSF and Javascript ]({{page page='jsf-and-javascript'}})
+- [Ajax4jsf Best Practices]({{page page='ajax4jsf-best-practices'}})
+- [Ajax Forms and Actions]({{page page='ajax-forms-and-actions'}})
+- [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [JavaScript Client]({{page page='javascript-client'}})
-*   [JSF UI Framework]({{page page='jsf-ui-framework'}})
-*   [Nuxeo JSF UI]({{page page='nuxeo-jsf-ui'}})
-*   [JSF UI Limitations]({{page page='jsf-ui-limitations'}})&nbsp;
+- [JavaScript Client]({{page page='javascript-client'}})
+- [JSF UI Framework]({{page page='jsf-ui-framework'}})
+- [Nuxeo JSF UI]({{page page='nuxeo-jsf-ui'}})
+- [JSF UI Limitations]({{page page='jsf-ui-limitations'}})
 
 {{/panel}}</div></div>

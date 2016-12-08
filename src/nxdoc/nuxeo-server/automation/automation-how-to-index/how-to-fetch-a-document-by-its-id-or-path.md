@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: Automation
 labels:
+    - content-review-lts2016
     - howto
     - automation
     - studio
@@ -133,8 +134,8 @@ Anyway, if you want to access a document by its path or its ID, just drop this `
 
 </div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Automation screen in Nuxeo Studio]({{page space='studio' page='automation'}})
-*   [Content Automation Concepts]({{page page='content-automation-concepts'}})
-*   [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}})
+- [Automation screen in Nuxeo Studio]({{page space='studio' page='automation'}})
+- [Content Automation Concepts]({{page page='content-automation-concepts'}})
+- [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}})
 
 {{/panel}}</div></div>

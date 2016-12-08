@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - page-provider
     - query-pageprovider-component
     - excerpt
@@ -370,8 +371,8 @@ SELECT * FROM Document WHERE dc:created > TIMESTAMP '2015-04-04 00:00:00.000'
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Page provider related topics'}}
 
-*   [Custom Page Providers]({{page page='custom-page-providers'}})
-*   [Page Provider Aggregates]({{page page='page-provider-aggregates'}})
+- [Custom Page Providers]({{page page='custom-page-providers'}})
+- [Page Provider Aggregates]({{page page='page-provider-aggregates'}})
 
 {{/panel}}</div><div class="column medium-6">
 

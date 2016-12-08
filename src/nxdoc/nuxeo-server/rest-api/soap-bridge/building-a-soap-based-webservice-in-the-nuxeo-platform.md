@@ -2,9 +2,10 @@
 title: Building a SOAP-Based WebService in the Nuxeo Platform
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
+    - lts2016-ok
     - soap
     - soap-component
 toc: true
@@ -126,8 +127,6 @@ history:
 ---
 Let's take the example of a simple Nuxeo WebService that exposes a method to create a document in the default repository. The user credentials are passed to the method to log in and open a core session.
 
-The code samples used for this example can be found [on GitHub](https://github.com/nuxeo/nuxeo-samples/tree/master/nuxeo-sample-webservice/nuxeo-sample-webservice-server).
-
 ## WebService Interface
 
 First you have to define the interface of your WebService, answering the question: "Which methods do I want to expose?"
@@ -230,59 +229,6 @@ Here are the steps to do that in a Nuxeo way:
 2.  Deploy your `cxf.xml` file in `nuxeo.war/WEB-INF/classes`, using the `deployment-fragment.xml`.
     And the file will be taken into account.
 
-## About Code Factorization
-
-If you take a closer look at the `NuxeoSampleWSImpl#createDocument` method, you can see that most of the code is not "business"-related and could be factorized.
-Indeed, each time one makes a remote call to a Nuxeo WebService method, the following pattern must be applied:
-
-*   log in using the provided credentials,
-*   start a transaction,
-*   open a core session,
-*   do the job,
-*   manage transaction rollback if an exception occurs when doing the job,
-*   close the core session,
-*   commit or rollback the transaction,
-*   log out.
-
-Which can be implemented as so:
-
-```
-// Login
-LoginContext loginContext = Framework.login(username, password);
-
-// Start transaction
-TransactionHelper.startTransaction();
-
-CoreSession session = null;
-try {
-    // Open a core session
-    session = openSession();
-
-    // Do the job: create a doc with the given params
-    DocumentModel doc = session.createDocumentModel(parentPath, name,
-        type);
-    doc = session.createDocument(doc);
-    session.save();
-
-    return new DocumentDescriptor(doc);
-
-} catch (ClientException ce) {
-    // Set transaction for rollback if an exception occurs
-    TransactionHelper.setTransactionRollbackOnly();
-    throw ce;
-} finally {
-    // Close the core session
-    if (session != null) {
-        closeSession(session);
-    }
-    // Commit or rollback transaction
-    TransactionHelper.commitOrRollbackTransaction();
-    // Logout
-    loginContext.logout();
-}
-
-```
-
-A way to solve this issue could be to define an abstract class holding this pattern in a generic method, which would call an abstract method responsible for the "business" part of the code, in the same way as for `UnrestrictedSessionRunner`.
+## How to Create a Client
 
 You can learn how to build a client-side SOAP based WebService in the Nuxeo Platform on the page [Building a SOAP-Based WebService Client in Nuxeo]({{page page='building-a-soap-based-webservice-client-in-nuxeo'}}).

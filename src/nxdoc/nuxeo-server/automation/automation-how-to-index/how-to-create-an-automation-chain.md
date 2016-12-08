@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: 'Automation, Event handler, User action'
 labels:
+    - content-review-lts2016
     - howto
     - automation
     - user-action
@@ -294,15 +295,15 @@ Binding the automation chain to a button, an action or an event handler is done 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{! multiexcerpt name='popular-how-tos'}}{{#> panel heading='Popular How-Tos'}}
 
-*   [How to Export Data Using Document Template and Automation]({{page page='how-to-export-data-using-document-template-and-automation'}})
-*   [How to Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Export Data Using Document Template and Automation]({{page page='how-to-export-data-using-document-template-and-automation'}})
+- [How to Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}{{! /multiexcerpt}}</div><div class="column medium-6">{{! multiexcerpt name='related-documentation'}}{{#> panel heading='Related Documentation'}}
 
-*   [Automation screen in Nuxeo Studio]({{page space='studio' page='automation'}})
-*   [Content Automation Concepts]({{page page='content-automation-concepts'}})
-*   [Event Handlers screens in Nuxeo Studio]({{page space='studio' page='event-handlers'}})
-*   [User Actions screens in Nuxeo Studio]({{page space='studio' page='user-actions'}})
+- [Automation screen in Nuxeo Studio]({{page space='studio' page='automation'}})
+- [Content Automation Concepts]({{page page='content-automation-concepts'}})
+- [Event Handlers screens in Nuxeo Studio]({{page space='studio' page='event-handlers'}})
+- [User Actions screens in Nuxeo Studio]({{page space='studio' page='user-actions'}})
 
 {{/panel}}{{! /multiexcerpt}}</div></div>
