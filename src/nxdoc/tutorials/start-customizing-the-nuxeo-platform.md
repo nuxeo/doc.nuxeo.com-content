@@ -53,7 +53,7 @@ history:
 ---
 Welcome to the Nuxeo Developer Quick Start Guide!
 
-This guide will show you how to start a Nuxeo project with a simple example using our tools, Nuxeo Studio and Nuxeo Generator. When people want to customize the Nuxeo Platform they usually start by doing the configuration and implementing the business model in Nuxeo Studio. Then they might use a Java development environment to implement new features server side. This Java development can be done with any Java editor, and there are some Nuxeo specific plugins to work with Eclipse, Intellij IDEA and Codenvy in the cloud. We chose Nuxeo Generator, a Yeoman Generator for Nuxeo Platform, in this Quick Start Guide. It will guide you through the different steps of the process.
+This guide will show you how to start a Nuxeo project with a simple example using our tools, Nuxeo Studio and Nuxeo Generator. When people want to customize the Nuxeo Platform they usually start by doing the configuration and implementing the business model in Nuxeo Studio. Then they might use a Java development environment to implement new features server side. This Java development can be done with any Java editor. We will be using the Nuxeo Generator, a Yeoman Generator for Nuxeo Platform, in this Quick Start Guide. It will guide you through the different steps of the process.
 
 *   Starting your project in Nuxeo Studio by changing the logo and creating a Contract document type on your brand new Nuxeo Platform instance
 *   Creating a new operation using Nuxeo Generator to calculate the contract renegociation date and leverage it in Nuxeo Studio
