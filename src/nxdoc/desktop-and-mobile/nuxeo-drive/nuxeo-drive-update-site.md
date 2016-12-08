@@ -145,11 +145,11 @@ This means that:
 
     ```
     {"nuxeoDriveMinVersion": "1.3.0414"}
-    ```
+    ```
 
 ### Symbolic Links to Packages
 
-Symbolic links to both packages (MSI and DMG) of the latest Nuxeo Drive version available for a given version of the Nuxeo Platform, for instance in [http://community.nuxeo.com/static/drive/latest/5.9.4/](http://community.nuxeo.com/static/drive/latest/5.9.4/). This is used for the first download of Nuxeo Drive from the Nuxeo Drive tab of the user's Home on the Nuxeo Platform UI. The download links are generated server-side following this pattern: `<update_site_URL>/latest/<Nuxeo_distribution_version>/nuxeo-drive.<extension>`, for instance [http://community.nuxeo.com/static/drive/latest/5.9.4/nuxeo-drive.msi](http://community.nuxeo.com/static/drive/latest/5.9.4/nuxeo-drive.msi).
+Symbolic links to both packages (MSI and DMG) of the latest Nuxeo Drive version available for a given version of the Nuxeo Platform, for instance in [http://community.nuxeo.com/static/drive/latest/](http://community.nuxeo.com/static/drive/latest/). This is used for the first download of Nuxeo Drive from the Nuxeo Drive tab of the user's Home on the Nuxeo Platform UI. The download links are generated server-side following this pattern: `<update_site_URL>/latest/<Nuxeo_distribution_version>/nuxeo-drive.<extension>`, for instance `http://community.nuxeo.com/static/drive/latest/5.9.4/nuxeo-drive.msi.
 
 {{! /multiexcerpt}}
 
@@ -161,10 +161,10 @@ Symbolic links to both packages (MSI and DMG) of the latest Nuxeo Drive version 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about Nuxeo Drive'}}
 
-*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
-*   [How to Customize Nuxeo Drive Versioning Policy]({{page page='how-to-customize-nuxeo-drive-versioning-policy'}})
-*   [Nuxeo Drive user documentation]({{page space='userdoc' page='nuxeo-drive'}})
-*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+- [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+- [How to Customize Nuxeo Drive Versioning Policy]({{page page='how-to-customize-nuxeo-drive-versioning-policy'}})
+- [Nuxeo Drive user documentation]({{page space='userdoc' page='nuxeo-drive'}})
+- [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
 
 {{/panel}}</div><div class="column medium-6">
 
