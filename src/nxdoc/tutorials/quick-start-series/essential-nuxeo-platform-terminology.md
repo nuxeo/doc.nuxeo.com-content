@@ -128,7 +128,7 @@ The virtual navigation is an alternative way of browsing folders, through docume
 
 ## Life Cycles and Workflows
 
-## Life Cycle
+### Life Cycle
 
 {{{multiexcerpt 'glossary-lifecycle' page='GLOS:Lifecycle'}}}
 
