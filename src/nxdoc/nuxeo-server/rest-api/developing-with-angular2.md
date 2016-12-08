@@ -2,10 +2,10 @@
 title: Developing with Angular2
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - rest-api
     - javascript
     - angular2
@@ -169,7 +169,7 @@ history:
         version: '1'
 
 ---
-[Angular](https://angular.io/) by Google is the successor of the such used [AngularJS](https://angularjs.org/). It has also been built to bring front-end developers all the tools they may need to turn a website into a modern web application across all platforms. [Angular](https://angular.io/) is a great all-in-one framework that provides many features. This answers your front-end and mobile needs. But your application also needs a serious back end that will allow you to build your application quickly and concentrate on features without reinventing the wheel. This is what the Nuxeo Platform will provide you with. When users browse your web application, it will actually call the Nuxeo Platform through its [REST API](https://doc.nuxeo.com/x/QYLQ) in order to handle and retrieve content.
+[Angular](https://angular.io/) by Google is the successor of the much used [AngularJS](https://angularjs.org/). It was also built to bring front-end developers all the tools they may need to turn a website into a modern web application across all platforms. [Angular](https://angular.io/) is a great all-in-one framework that provides many features. This answers your front-end and mobile needs. But your application also needs a serious back end that will allow you to build your application quickly and concentrate on features without reinventing the wheel. This is what the Nuxeo Platform will provide you with. When users browse your web application, it will actually call the Nuxeo Platform through its [REST API]({{page version='' space='nxdoc' page='rest-api'}}) in order to handle and retrieve content.
 
 {{! excerpt}}
 
@@ -182,7 +182,7 @@ The `angular` generator brings some tools that can help you:
 - Full [webpack](https://webpack.github.io/) build module
 - A proxy between the webpack dev server and a running Nuxeo
 - [TypeScript](https://www.typescriptlang.org/) based stack
-- [Nuxeo JS Client](github.com/nuxeo/nuxeo-js-client) included
+- [Nuxeo JS Client](https://github.com/nuxeo/nuxeo-js-client) included
 - All test and integration tooling
 - Build command to package application as Nuxeo bundle.
 
@@ -193,56 +193,56 @@ The whole tooling suite is based on [AngularClass](https://github.com/AngularCla
 This section will help you getting started with an Angular project. This will be covered in three steps:
 
 - Installing prerequisites
-- Using Nuxeo's generator
+- Using Nuxeo Generator
 - Building a Nuxeo Package that can be deployed on a Nuxeo Platform instance
 
 ### Step 1 - Installing Prerequisites
 
-In order to get a clean installation, we will make use of Yeoman's angular generator. So let's install it along with its prerequisites:
+In order to get a clean installation, we will make use of Yeoman's Angular generator. So let's install it along with its prerequisites:
 
-1. Install Git.
-2. Install node.js and ensure NPM is installed.
-3. In a terminal, use npm to install the generator:
+1. Install [Git](https://git-scm.com/).
+2. Install [node.js](https://nodejs.org/) and ensure [NPM](https://www.npmjs.com/) is installed.
+3. In a terminal, use NPM to install the generator:
 
-  ```
-  npm install -g yo generator-nuxeo
+  ```bash
+  $ npm install -g yo generator-nuxeo
   ```
 
 ### Step 2 - Bootstrap Nuxeo Bundle and Package
 
-1. Create a new folder
+1. Create a new folder.
 
-  ```
-  mkdir my-app && cd $_
+  ```bash
+  $ mkdir my-app && cd $_
   ```
 
-2. Call [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) to generate Angular and a Package modules
+2. Call Nuxeo Generator to generate Angular and a Package modules.
 
-  ```
-  yo nuxeo angular2 package
+  ```bash
+  $ yo nuxeo angular2 package
   ```
 
   You'll be prompted to several Maven or Name informations, then an `npm install` command will be executed automatically to install dependencies.
 
-  To start the builtin server to view your application:
+3. To start the builtin server to view your application:
 
+  ```bash
+  $ npm run start
   ```
-  npm run start
-  ```
 
-  Navigate to <http://0.0.0.0:3000/>.
+4. Navigate to <http://0.0.0.0:3000/>.
 
-### Step 3 - Let's code:
+### Step 3 - Let's code
 
-- `mypapp-web`: contains Angular application module
-- `mypapp-web/config`: contains all configuration files if you need to tweak some stuff
-- `myapp-web/src/main/app`: contains base web directory
-- `myapp-web/src/main/app/app`: contains application base directory
-- `myapp-package`: contains [Nuxeo Package](https://doc.nuxeo.com/x/ZQKlAQ) module
+- `mypapp-web`: Contains Angular application module
+- `mypapp-web/config`: Contains all configuration files if you need to tweak some stuff
+- `myapp-web/src/main/app`: Contains base web directory
+- `myapp-web/src/main/app/app`: Contains application base directory
+- `myapp-package`: Contains [Nuxeo Package]({{page version='' space='glos' page='nuxeo-package'}}) module
 
   Started from here, you can now build your own [Angular Component](https://angular.io/docs/ts/latest/guide/architecture.html#!#components) in the `myapp-web/src/main/app/app/` folder, your own [Angular Directives](https://angular.io/docs/ts/latest/guide/architecture.html#!#directives), you own [Angular Services](https://angular.io/docs/ts/latest/guide/architecture.html#!#services) and whatever you want.
 
-  [Nuxeo JS Client](github.com/nuxeo/nuxeo-js-client) is available as a Service inside your Application. View how you can handle it in `myapp-web/src/main/app/app/search/search.component.ts`:
+  [Nuxeo JS Client](https://github.com/nuxeo/nuxeo-js-client) is available as a Service inside your Application. View how you can handle it in `myapp-web/src/main/app/app/search/search.component.ts`:
 
   ```
   import { NuxeoService } from '../nuxeo.service';
@@ -269,8 +269,8 @@ In order to get a clean installation, we will make use of Yeoman's angular gener
 
 All commands are accessible using the `npm run` base command. For instance, if you'd like to execute the `start` command:
 
-```
-npm run start
+```bash
+$ npm run start
 ```
 
 Take a deeper look at the `package.json` file to get them all; here is a list of commons ones:
@@ -288,32 +288,33 @@ Take a deeper look at the `package.json` file to get them all; here is a list of
 
 There are two possible ways to deploy your application:
 
-1. **Embedded mode**: having your Angular application into your Nuxeo Platform instance.
-  ![Angular Embedded Application]({{file space='SPACE' page='name-of-the-page' name='Nuxeo%20and%20AngularJS%20-%20Embedded%20Web%20Application%20-%20New%20Page.png'}})
+1. **Embedded mode**: Having your Angular application into your Nuxeo Platform instance.
 
-  This setup is particularly interesting when using a [Nuxeo Cloud](https://www.nuxeo.com/products/nuxeo-cloud/) instance. No setup, no administration needed, and full scalability. By configuring your Nuxeo Platform instance, people will be redirected to your custom interface and the overall setup is transparent. This solution is used by us for projects such as [Nuxeo University](university.nuxeo.io).
+  ![Angular Embedded Application]({{file name='Nuxeo and AngularJS - Embedded Web Application - New Page.png'}})
+
+  This setup is particularly interesting when using a [Nuxeo Cloud](https://www.nuxeo.com/products/nuxeo-cloud/) instance. No setup, no administration needed, and full scalability. By configuring your Nuxeo Platform instance, people will be redirected to your custom interface and the overall setup is transparent. This solution is used by us for projects such as [Nuxeo University](https://university.nuxeo.io).
 
   To do that, if you bootstrapped your project with the `package` generator, simply go to the root of your project then:
 
-  ```
-  cd <root_project>
-  mvn package
+  ```bash
+  $ cd <root_project>
+  $ mvn package
   ```
 
   Your package is built under `myapp-package/target/myapp-package.zip`, and contains your Angular application.
 
   Otherwise, If you prefer to handle the Nuxeo Bundle by yourself, go to the root of your Angular module then:
 
-  ```
-  cd myapp-web
-  mvn package
+  ```bash
+  $ cd myapp-web
+  $ mvn package
   ```
 
-  You Nuxeo Bundle under `myapp-web/target/myapp-web-1.0-SNAPSHOT.jar` contains your Angular applicataion and can be deployed in `NUXEO_SERVER/nxserver/bundles` directly.
+  Your Nuxeo Bundle under `myapp-web/target/myapp-web-1.0-SNAPSHOT.jar` contains your Angular application and can be deployed in `NUXEO_SERVER/nxserver/bundles` directly.
 
 2. **Isolated mode**: keep your Angular web application separated from your Nuxeo Platform instance.
 
-  ![Angular External Application]({{file space='SPACE' page='name-of-the-page' name='Nuxeo%20and%20AngularJS%20-%20External%20Application%20-%20New%20Page.png'}})
+  ![Angular External Application]({{file name='Nuxeo%20and%20AngularJS%20-%20External%20Application%20-%20New%20Page.png'}})
 
   By doing so, you can put your web application where you want it to be; this can be on a totally separate server if need be.
 
@@ -322,8 +323,6 @@ There are two possible ways to deploy your application:
 We are always eager to receive feedback on our projects. Please report bugs, wishes or anything related to the nuxeo-angular-sample project at [answers.nuxeo.com](https://answers.nuxeo.com)
 
 {{/callout}}
-
-&nbsp;
 
 * * *
 
