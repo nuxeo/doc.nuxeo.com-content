@@ -52,4 +52,7 @@ exec("git branch | grep ^\\* | grep -oE '[a-zA-Z0-9_-]+$'", {encoding: 'utf8'})
         error(err);
         throw err;
     });
+})
+.catch((err) => {
+    error('Could not get current branch: %s', err);
 });
