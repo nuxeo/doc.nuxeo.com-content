@@ -2,7 +2,7 @@
 title: How to Customize Nuxeo Drive Versioning Policy
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: XML Extention
         topics: 'Nuxeo Drive, Versioning'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - link-update
     - howto
     - nuxeo-drive
