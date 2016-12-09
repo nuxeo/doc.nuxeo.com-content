@@ -2,7 +2,7 @@
 title: How to Automatically Convert a Document to PDF
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-09'
     status: ok
 details:
     howto:
@@ -173,26 +173,33 @@ This how to requires knowledge about:
 
 ## Document Preparation
 
-The document needs a metadata to hold the PDF blob created during the conversion. So, on the document definition, we first need to add a field to the schema. This new metadata has to be of Blob type.
+The document needs a metadata to hold the PDF blob created during the conversion.
 
-Here is an example where the new metadata is "pdffile". It can be accessed by "myDocumentSchema:pdffile" if the schema name of my document type is "myDocumentSchema".
+* Either We use the default File document type. In that case, the metadata that holds the blob is `file:content`.
+* Or we can define our own custom metadata to store the blob. So we first need to add a field to the schema in the document definition. This new metadata has to be of Blob type. Here is an example where the new metadata is "pdffile". It can be accessed by "myDocumentSchema:pdffile" if the schema name of my document type is "myDocumentSchema".
 
 ![]({{file name='schema_pdffile.png'}} ?w=600,border=true)
 
 ## Automation Chain
 
-The "convert to pdf" operation accepts either blob, bloblists or document as inputs. If the input is a document, the file to convert must be in the `file:content` metadata (the usual place for it). The operation produces a blob (the PDF file) and does not return the input document so we will have to store the document somehow before the conversion so that we can recall it after to attach the PDF file to it. The solution is to use Push & Pop operation to put the input document in a heap and get it back.
+The "Blob To PDF" operation accepts either blob, bloblists or document as inputs. If the input is a document, the file to convert must be in the `file:content` metadata (the usual place for it). The operation produces a blob (the PDF file) and does not return the input document so we will have to store the document somehow before the conversion so that we can recall it after to attach the PDF file to it. The solution is to use Push & Pop operation to put the input document in a heap and get it back (or to use a context variable).
 
 For the same reasons, we also do not want to lose the PDF file produced by the conversion during the recall of the input document, so we will save it as a Context variable.
 
 The automation chain to configure is finally:
 
-*   Fetch > Context Document
-*   Push & Pop > Push Document
-*   Conversion > Convert To pdf
-*   Execution Context > Set Context Variable From Input (`name:pdfblob`)
-*   Push & Pop > Pop Document
-*   Document > Set File (`file: @{Context["pdfblob"]}; save: checked; xpath: myDocumentSchema:pdffile`)
+```
+- Context.FetchDocument
+- Context.PushDocument
+- Blob.ToPDF
+- Context.SetInputAsVar:
+    name: pdfblob
+- Context.PopDocument
+- Document.SetBlob:
+    file: "myDocumentSchema:pdffile"
+    save: "true"
+    xpath: "@{Context[\"pdfblob\"}"
+```
 
 * * *
 
