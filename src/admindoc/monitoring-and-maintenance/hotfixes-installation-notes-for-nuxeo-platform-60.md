@@ -360,6 +360,27 @@ The parameter `--accept=true` automatically replies `yes` to any prompt, which m
 
 You can also download and install hotfixes from the **Update Center** in the **Admin** tab.The installation of hotfixes requires the server to be restarted to complete the installation: follow the manual installation and configuration steps required by the installed hotfixes before you restart your server.
 
+## Hotfix 33
+
+### Package Cleanup
+
+If you have downloaded revision 1.0.0 or 1.0.1 of HF33 package, you need to manually remove it to be able to install the latest revision (i.e. 1.0.2):
+
+```
+./nuxeoctl mp-remove nuxeo-6.0-HF33-1.0.0 --nodeps
+./nuxeoctl mp-remove nuxeo-6.0-HF33-1.0.1 --nodeps
+```
+
+## Hotfix 32
+
+### Package Cleanup
+
+If you have downloaded the revision 1.0.0 of HF32 package, you need to manually remove it to be able to install the latest revision (i.e. 1.0.1):
+
+```
+./nuxeoctl mp-remove nuxeo-6.0-HF32-1.0.0 --nodeps
+```
+
 ## Hotfix 31
 
 ### Datasource Configuration
