@@ -375,7 +375,7 @@ If you have downloaded revision 1.0.0 or 1.0.1 of HF33 package, you need to manu
 
 ### Package Cleanup
 
-If you have downloaded the revision 1.0.0 of HF32 package, you need to manually remove it to be able to install the latest revision (i.e. 1.0.1):
+If you have downloaded revision 1.0.0 of HF32 package, you need to manually remove it to be able to install the latest revision (i.e. 1.0.1):
 
 ```
 ./nuxeoctl mp-remove nuxeo-6.0-HF32-1.0.0 --nodeps
