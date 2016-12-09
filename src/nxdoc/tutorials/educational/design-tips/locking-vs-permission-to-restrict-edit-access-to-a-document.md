@@ -86,7 +86,7 @@ We will see a few tips to choose between the two.
 
 ## Locking the Document
 
-The locking feature is exposed in the user interface through a lock icon in the action bar of non-folderish documents. It restricts the edit&nbsp;permission to the user who locked the document. The document stays visible for other users. A lock can be removed by the owner of the document or by someone having the manage permission.
+The locking feature is exposed in the user interface through a lock icon in the action bar of non-folderish documents. It restricts the edit permission to the user who locked the document. The document stays visible for other users. A lock can be removed by the owner of the document or by someone having the manage permission.
 
 ### Pros
 
@@ -95,17 +95,17 @@ The locking feature is exposed in the user interface through a lock icon in the 
 
 ### Cons
 
-*   Very limited use case: you can use it only if you want to restrict Edit&nbsp;access to one user.
+*   Very limited use case: you can use it only if you want to restrict Edit access to one user.
 *   By default, only available on non-folderish documents.
 
 ### Related Automation Operations
 
 In Studio, you can lock a document or a list of documents using the Document > Document.Lock operation and unlock the document(s) by using the Document > Document.Unlock operation.
 
-There respective descriptions are available in the explorer at:
+There respective descriptions are available in the Explorer at:
 
-*   [https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.Lock](https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.Lock)
-*   [https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.Unlock](https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.Unlock)
+*   [Document.Lock](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.Lock)
+*   [Document.Unlock](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.Unlock)
 
 ## Permissions
 
@@ -115,7 +115,7 @@ To understand how they work, you can refer to the [ACLs]({{page page='acls'}}) p
 
 ### Pros
 
-*   Much more powerful than the lock feature. You can inherit permissions, choose exactly the needed permissions (not only Edit&nbsp;as with locking) for several users or groups of users on the same document. You can have some who can Read, others who can Edit... You can even apply custom permissions if needed.
+*   Much more powerful than the lock feature. You can inherit permissions, choose exactly the needed permissions (not only Edit as with locking) for several users or groups of users on the same document. You can have some who can Read, others who can Edit... You can even apply custom permissions if needed.
 *   Available on every document by default.
 
 ### Cons
@@ -127,35 +127,30 @@ To understand how they work, you can refer to the [ACLs]({{page page='acls'}}) p
 
 In Studio, a whole set of operations allow you to you handle permissions on your documents. All of them accept either a single document or a list of documents:
 
-- Document > Document.AddPermission
-<br />Recommended operation to add a permission, since it provides all the available parameters including the start and end dates.
+- Document > Document.AddPermission<br />
+Recommended operation to add a permission, since it provides all the available parameters including the start and end dates.<br/>
+See [Document.AddPermission](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.AddPermission) on the Explorer
 
-- Document > Document.AddACE
-<br />Allows to add a permission too. This operation is kept for backwards compatibility reasons. You should use the Document.AddPermission operation instead when possible.
+- Document > Document.AddACE<br />
+Allows to add a permission too. This operation is kept for backwards compatibility reasons. You should use the Document.AddPermission operation instead when possible.<br/>
+See [Document.AddACE](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.AddACE) on the Explorer
 
-- Document > Document.BlockPermissionInheritance
-<br />As the name suggests, blocks permission inheritance on a given ACL.
+- Document > Document.BlockPermissionInheritance<br />
+As the name suggests, blocks permission inheritance on a given ACL.<br/>
+See [Document.BlockPermissionInheritance](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.BlockPermissionInheritance) on the Explorer
 
-- Document > Document.UnblockPermissionInheritance
-<br />Unblocks permission inheritance on a given ACL.
+- Document > Document.UnblockPermissionInheritance<br />
+Unblocks permission inheritance on a given ACL.<br/>
+See [Document.UnblockPermissionInheritance](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.UnblockPermissionInheritance) on the Explorer
 
-- Document > Document.RemoveACL
-<br />Remove completely all entries in a given ACL.
+- Document > Document.RemoveACL<br />
+Remove completely all entries in a given ACL.<br/>
+See [Document.RemoveACL](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.RemoveACL) on the Explorer
 
-- Document > Document.ReplacePermission
-<br />Replace a permission with another for a given user.
+- Document > Document.ReplacePermission<br />
+Replace a permission with another for a given user.<br/>
+See [Document.ReplacePermission](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.ReplacePermission) on the Explorer
 
-Their respective descriptions can be found in the explorer at:
-
-*   [https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.AddPermission](https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.AddPermission)
-*   [https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.AddACE](https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.AddACE)
-*   [https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.BlockPermissionInheritance](https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.BlockPermissionInheritance)
-*   [https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.UnblockPermissionInheritance](https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.UnblockPermissionInheritance)
-*   [https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.RemoveACL](https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.RemoveACL)
-*   [https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.ReplacePermission](https://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.ReplacePermission)
-
-## Which one to choose?
+## Which One to Choose?
 
 If your use case is to restrict the modifications to only one user temporarily to make sure there is no interference on the document, then locking is probably the easiest way. For all other cases, it is too limited and then using permissions through the UI or through the Automation API is the best solution.
-
-&nbsp;
