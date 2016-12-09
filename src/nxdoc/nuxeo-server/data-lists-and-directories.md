@@ -2,10 +2,10 @@
 title: Data Lists and Directories
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-09'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - ldap
     - sql
     - directory
@@ -109,7 +109,7 @@ history:
         version: '1'
 
 ---
-In the Nuxeo Platform, a **directory** is used to provide a abstraction on all referential data that can be manipulated inside the application. These data are (mostly) table-like data that lives outside of the VCS document storage database:
+In the Nuxeo Platform, a **directory** is used to provide an abstraction on all referential data that can be manipulated inside the application. These data are (mostly) table-like data that live outside of the VCS document storage database:
 
 *   Users,
 *   Groups of users,
@@ -117,7 +117,7 @@ In the Nuxeo Platform, a **directory** is used to provide a abstraction on all r
 *   Roles,
 *   ...
 
-A directory is typically a connection to an external data source that is also access by other processes than the Nuxeo Platform itself (therefore allowing shared management and usage).
+A directory is typically a connection to an external data source that is also accessed by other processes than the Nuxeo Platform itself (therefore allowing shared management and usage).
 
 A **vocabulary** is a specialized **directory** with only a few important columns that are used by the Nuxeo Platform to display things like menus and selection lists.
 
@@ -133,9 +133,9 @@ Directories comes with several implementations:
 *   Custom directory relying on Directory Connector to map a remote service
 *   Multi-directory that allow to combine several directories into a single one.
 
-One of the idea behind the Directory concept is to be able to provide standard UI building blocs on top of data coming from various sources.
+One of the ideas behind the Directory concept is to be able to provide standard UI building blocks on top of data coming from various sources.
 
-Typically, as long as your data or service is mapped through a Directory model :
+Typically, as long as your data or services are mapped through a Directory model :
 
 *   you can access it with a standard API
 *   you can use standard widgets to reference or search an entry or a list of entries
@@ -167,18 +167,18 @@ The generic properties for all directories are:
 *   `autoincrementIdField`: Whether the `idField` is automatically incremented. (Default is `false`.)
 *   `readOnly`: If the directory should be read-only. (Default is `false`.)
 *   `substringMatchType`: How a non-exact match is done; possible values are `subany`, `subinitial` or `subfinal`; this is used in most UI searches. (Default is `subinitial`.)
-*   `table`: The table in which the data is stored. (SQL only, defaults to the directory name.)
+*   `table`: The table in which the data are stored. (SQL only, defaults to the directory name.)
 
-The following control how data is initially loaded into the directory:
+The following control how data are initially loaded into the directory:
 
-*   `dataFile`: CSV file from which data is read to populate the directory, depending on the other following properties.
+*   `dataFile`: CSV file from which data are read to populate the directory, depending on the other following properties.
 *   `dataFileCharacterSeparator`: The character used to separate entries in the `dataFile`. (Defaults to `,`)
 *   `createTablePolicy`: Indicates how the `dataFile` will be used to populate the directory. Three values are allowed: `never` if the `dataFile` is never used (the default), `on_missing_columns` if the `dataFile` is used to create missing columns (when the directory is created or each time a new column is added, due to a schema change), `always` if the `dataFile` is used to create the directory at each restart of the Nuxeo Platform.
 
 The following control how entries are cached:
 
-*   `cacheTimeout`: The timeout (in seconds) after which an entry is evicted from the cache. The default is 0, which means never time out. (SQL only)
-*   `cacheMaxSize`: The maximum number of entries in the cache. The default is 0, which means to not use caching. (SQL only)
+*   `cacheTimeout`: The timeout (in seconds) after which an entry is evicted from the cache. The default is 0, which means never time out. (SQL only). It is deprecated since LTS 2015 and should be replace by the usage of cacheEntryName and cacheEntryWithoutReferencesName where max size and TTL (equivalent to timeout) can be configured.
+*   `cacheMaxSize`: The maximum number of entries in the cache. The default is 0, which means to not use caching. (SQL only) Also deprecated since LTS 2015.
 *   `cacheEntryName`: The name of the cache (from the CacheService) containing full entries. (SQL/LDAP only)
 *   `cacheEntryWithoutReferencesName`: The name of the cache (from the CacheService) containing entries without references. (SQL/LDAP only)
 *   `negativeCaching`: Whether to cache negative cache hits (the default is `false`). (SQL/LDAP only)
