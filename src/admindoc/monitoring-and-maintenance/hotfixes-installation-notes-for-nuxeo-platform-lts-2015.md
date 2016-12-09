@@ -21,8 +21,7 @@ confluence:
 tree_item_index: 1300
 version_override:
     'FT': '/nxdoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015'
-    '6.0': 60/admindoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015
-    '5.8': 58/admindoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015
+    '6.0': 60/admindoc/hotfixes-installation-notes-for-nuxeo-platform-60
 history:
     -
         author: Manon Lumeau
