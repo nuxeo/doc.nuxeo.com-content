@@ -2,7 +2,7 @@
 title: Getting Started with Nuxeo Studio
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2016-12-07'
     status: ok
 details:
     howto:
@@ -11,7 +11,6 @@ details:
         tool: Nuxeo Studio
         topics: 'Document type, Style'
 labels:
-    - content-review-lts2016
     - howto
     - studio
     - lts2016-ok
@@ -166,13 +165,13 @@ This page explains how to start customizing the Nuxeo Platform using Nuxeo Studi
 *   Get a Nuxeo Studio project using Nuxeo Online Services
 *   Get a running Nuxeo Platform instance
 *   Change the logo of your Nuxeo Platform instance
-*   Create a new Contract document type in Studio
+*   Create a new Contract document type in Nuxeo Studio
 
 Nuxeo Studio is a Nuxeo tool provided as part of the Nuxeo Online Services subscription offer. If you are a Nuxeo customer, you should already have a username/password to connect and access to your Studio project. Otherwise, we provide a 30-day trial offer so you can discover Nuxeo Studio and its configuration capabilities.
 
 ## Step 1 - Get a Nuxeo Platform Instance
 
-The Nuxeo Platform is available in different packages. Here let's use the ZIP archive.
+The Nuxeo Platform is available in different packages. Here we will use the ZIP archive.
 
 Installing the Nuxeo Platform using the [.zip package](http://www.nuxeo.com/downloads/) installs the Nuxeo Platform only. External dependencies must be [installed separately]({{page page='installing-and-setting-up-related-software'}}).
 
@@ -180,7 +179,7 @@ Installing the Nuxeo Platform using the [.zip package](http://www.nuxeo.com/down
 
 1. Unzip the .zip archive using your favorite tool.
 
-2. Click on the Start Nuxeo.command to start the server.
+2. Double click on the `Start Nuxeo.command` file (or the `Start Nuxeo.bat` file for Windows users) to start the server.
 
 3. In a browser, go to [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
 
@@ -199,13 +198,13 @@ Installing the Nuxeo Platform using the [.zip package](http://www.nuxeo.com/down
 7. Click on **Start** at the final step.
 
     Your application is ready to use.
-    You now need to activate development mode so as to enjoy the hot reload of your Nuxeo Studio configuration.
+    Now, you need to activate development mode so as to enjoy the hot reload of your Nuxeo Studio configuration.
 
 **To activate development mode:**
 
 1.  When the application is started, log in with the Administrator / Administrator credentials.
 
-2.  Click on **Admin Center**&nbsp;> **Update Center**.
+2.  Click on **Admin Center** > **Update Center**.
 
     The Nuxeo Studio tab is displayed.
 
@@ -215,13 +214,13 @@ Installing the Nuxeo Platform using the [.zip package](http://www.nuxeo.com/down
 
     The Nuxeo Platform instance restarts. You can then enjoy your Nuxeo Studio configuration without restarting your server.
 
-Once your project registered on Online Services, you can start customizing your Nuxeo Application. The first customizations occur in Nuxeo Studio, where you can easily create new [document types]({{page space='studio' page='documents'}}), [content views]({{page space='studio' page='content-views'}}), etc. Here, we will change the logo and then create a document type "Contract".
+Once your project registered on Online Services, you can start customizing your Nuxeo Application. The first customizations occurs in Nuxeo Studio, where you can easily create new [document types]({{page space='studio' page='documents'}}), [content views]({{page space='studio' page='content-views'}}), etc. Here, we will change the logo and then create a document type named "Contract".
 
-You can now access Nuxeo Studio from Online Services by clicking on this link: [connect.nuxeo.com/nuxeo/](http://connect.nuxeo.com/nuxeo/).
+You can now access Nuxeo Studio from Online Services by clicking on this link: [connect.nuxeo.com/nuxeo/](https://connect.nuxeo.com/nuxeo/).
 
 ## Step 2 - Edit the Logo
 
-Goal is to change the logo displayed in the banner of the Nuxeo Platform application. You must preliminary have a logo in PNG or JPG.
+Goal is to change the logo displayed in the banner of the Nuxeo Platform application. You must preliminary have a logo in the PNG or JPG format.
 
 ### Studio Customization
 
@@ -239,7 +238,7 @@ Goal is to change the logo displayed in the banner of the Nuxeo Platform applica
 
     2.  Click on the **Select Resource** button of the "Logo image" field.
 
-        A "Select Resource" window pops up. It shows a list of images imported with the DM template.
+        A "Select Resource" window pops up. It shows a list of images available by default, imported with the "Default Nuxeo Platform Configuration" template.
 
     3.  Click on **Choose File** and select an image from your desktop.
 
@@ -257,7 +256,7 @@ Goal is to change the logo displayed in the banner of the Nuxeo Platform applica
 
 2.  Connect as Administrator with Administrator password.
 
-3.  Click on **Admin Center**&nbsp;> **Update Center**&nbsp;> **Nuxeo Studio**.
+3.  Click on **Admin Center** > **Update Center** > **Nuxeo Studio**.
 
 4.  Click on the **Update** button.
 
@@ -265,7 +264,7 @@ Goal is to change the logo displayed in the banner of the Nuxeo Platform applica
 
 ## {{> anchor 'contract-doc-type'}}Step 3 - Create a Contract Document Type
 
-Here we want to create a document type "Contract" that will hold specific metadata related to the notion of contract: contract owner, starting date, policy.
+Here we want to create a document type named "Contract" that will hold specific metadata related to the notion of contract: contract owner, starting date, policy.
 
 ### Studio Customization
 
@@ -315,7 +314,7 @@ Here we want to create a document type "Contract" that will hold specific metada
 
 2.  Connect as Administrator with Administrator password.
 
-3.  Click on **Admin Center**&nbsp;> **Update Center**&nbsp;> **Nuxeo Studio**.
+3.  Click on **Admin Center** > **Update Center** > **Nuxeo Studio**.
 
 4.  Click on the **Update** button.
 
@@ -326,6 +325,6 @@ Here we want to create a document type "Contract" that will hold specific metada
 
 You are now ready to use Nuxeo Studio! You can:
 
-*   Go to the next step of this quick start, so as to discover [how you can contribute new Java development to the server]({{page page='getting-started-with-nuxeo-generator'}}).
+*   Go to the next step of this quick start, so as to discover how you can [contribute new features using Java code]({{page page='getting-started-with-nuxeo-generator'}}) to the server.
 *   Go deeper with learning more of Nuxeo Studio and Nuxeo Platform, by following a [complete tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}}).
 {{/callout}}
