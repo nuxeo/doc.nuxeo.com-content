@@ -188,7 +188,7 @@ You can find more information on [how versioning works]({{page space='userdoc' p
 
 {{/callout}}
 
-Users can also see [statistics](#consultingstatistics) on how space is used.
+Users can also see [statistics](#consulting-statistics) on how space is used.
 
 When a user tries to create or edit a document such that the maximum size of the workspace would be exceeded, a message is displayed indicating that they need to free some space.
 
