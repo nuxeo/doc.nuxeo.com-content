@@ -107,6 +107,24 @@ The Nuxeo 3D addon of the Nuxeo Platform provides support for 3D file types.
 
 However this addon depends on external software - Docker - for conversion and rendering. See the page&nbsp;[Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}}).
 
+### Docker usage
+
+Nuxeo 3D addon requires Docker to perform content conversion and rendering.
+Using Docker makes the installation process simpler, freeing from installing and configuring specific versions of several third party software.
+It relies on two Docker images that are available on [Nuxeo's Docker Hub account](https://hub.docker.com/u/nuxeo/):
+
+* [Blender image](https://hub.docker.com/r/nuxeo/blender/) - This image installs the correct version of Blender with the needed plug-ins on it.
+[Blender](https://www.blender.org/) is a free and open source 3D content suite. In this addon, it is used to convert several 3D formats to a Collada - has a intermediate format - to be later processed.
+It is also used to render canonical views that can be defined. These renderings are generated with [Cycles Render Engine](https://www.blender.org/manual/render/cycles/). It allows for a ray-tracing rendering which produces high quality results. In order to convert Blender materials to Cycles materials, a plug-in is activated and setup.
+3D content support is, therefore, limited to Blender support which is best-in-class on open source landscape.
+
+* [Collada2glTF](https://hub.docker.com/r/nuxeo/collada2gltf/) - This image installs v1.0-draft2 of [Collada2glTF](https://github.com/KhronosGroup/COLLADA2GLTF/wiki).
+Collada2glTF is the official converter from Collada format to glTF - transmission format - developed by the Khronos Group to allow a broad adoption of glTF 3D format.
+It converts from the intermediate format to the final transmission format made available with level of detail on the content's view.
+
+To install Docker, please refer to [Get Docker](https://www.docker.com/products/overview) on Docker's official site.
+To check if Docker is properly installed, run `docker -v` anywhere on the command line console. As result, Docker version and build information should be shown.
+
 After the Nuxeo 3D addon is&nbsp;installed, the new 3D document type is available.
 
 ![]({{file name='Screen Shot 2016-10-07 at 16.17.44.png'}} ?w=600)
