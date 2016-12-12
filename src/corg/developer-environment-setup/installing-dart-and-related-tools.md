@@ -73,7 +73,7 @@ Using Homebrew
 
 ```bash
 brew tap dart-lang/dart
-brew install dart dartium
+brew install dart --with-dartium
 ```
 
 ### Eclipse
