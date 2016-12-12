@@ -558,7 +558,7 @@ To enable additional users on your application, go to **Settings** > **Developme
 4.  Paste the Dropbox App key in **ClientID**.
 5.  Paste the Dropbox App secret in **Client Secret**.
 6.  Make sure the **Enabled** box is checked.
-7.  Now go to the **HOME** tab and click **Cloud Services** tab and click the **Connect to Dropbox** button or just create a new Dropbox document.
+7.  Now go to the **HOME** tab, click on the **Cloud Services** tab and click on the **Connect to Dropbox** button or just create a new Dropbox document.
 
 ## Live Connect For Box
 
@@ -616,12 +616,12 @@ On the document creation form, a Box button enables you to browse your Box conte
 
 1.  Install the package Nuxeo Live Connect if it is not already installed.
 2.  In the& **ADMIN** tab, go to **Cloud Services** > **Service providers**.
-3.  In the **OAuth2 Service providers** section click on the **Modify** button of the **box** service provider.
+3.  In the **OAuth2 Service providers** section, click on the **Modify** button of the **box** service provider.
 4.  Paste the Box client_id in **ClientID**.
 5.  Paste the Box client_secret in **Client Secret**.
 6.  Make sure the **Enabled** box is checked.
 7.  Save.
-8.  Now go to the **HOME** tab and click **Cloud Services** tab and click the **Connect to Box** button or just create a new Box document.
+8.  Now go to the **HOME** tab, click on the **Cloud Services** tab and click on **Connect to Box** button or just create a new Box document.
 
 ## Live Connect For OneDrive
 
@@ -665,10 +665,10 @@ On the document creation form, a OneDrive button enables you to browse your OneD
 
 1.  Go to [https://account.live.com/developers/applications/index](https://account.live.com/developers/applications/index).
 2.  Click on **Add an app**.
-3.  Enter the name of your new application and click on **Create**.
-4.  Copy the Application ID.
-5.  Application Secrets: Click on **Generate New Password** and copy it.
-6.  On Platforms, Click on **Add Platform** and then select **Web**. In Redirect URIs set the following URL, adapting the hostname and port to your case: http://nuxeo-server:8080/nuxeo/site/oauth2/onedrive/callback.
+3.  Enter the name of your new application and click on **Create application**.
+4.  Copy the **Application ID**.
+5.  **Application Secrets**: Click on **Generate New Password** and copy it.
+6.  On **Platforms**, click on **Add Platform** and then select **Web**. In **Redirect URIs** set the following URL, adapting the hostname and port to your case: `http://nuxeo-server:8080/nuxeo/site/oauth2/onedrive/callback`.
 7.  Click on **Save**.
 
 &nbsp;
@@ -677,7 +677,7 @@ On the document creation form, a OneDrive button enables you to browse your OneD
 
 1.  Install the package Nuxeo Live Connect if it is not already installed.
 2.  In the **ADMIN** tab, go to **Cloud Services** > **Service providers**.
-3.  In the **OAuth2 Service providers** section click on the **Modify** button of the **onedrive** service provider.
+3.  In the **OAuth2 Service providers** section, click on the **Modify** button of the **onedrive** service provider.
 4.  Paste the OneDrive client_id in **ClientID**.
 5.  Paste the OneDrive client_secret in **Client Secret**.
     {{#> callout type='info' }}
@@ -687,22 +687,24 @@ On the document creation form, a OneDrive button enables you to browse your OneD
     {{/callout}}
 6.  Make sure the **Enabled** box is checked.
 7.  Save.
-8.  Now go to the **HOME** tab and click **Cloud Services** tab and click the **Connect to OneDrive** button or just create a new OneDrive document.
+8.  Now go to the **HOME** tab, click on the **Cloud Services** tab and click on the **Connect to OneDrive** button or just create a new OneDrive document.
 
 ### Setting Up Live Connect for OneDrive for Business
 
-**Step 1: Preparing your application accounts for OneDrive for Business**
+**Step 1: Preparing your application account for OneDrive for Business**
 
 For OneDrive for Business follow steps [here](https://dev.onedrive.com/app-registration.htm#register-your-app-for-onedrive-for-business):
-  - 1. Get an account from your Office 365 subscription: `(username@tenant.onmicrosoft.com)` where username is your username and tenant corresponds to your new domain `http://{tenant}.sharepoint.com`.
-  - 2. You will need to subscribe to Microsoft Azure Directory offer.
+  - 1. Get an account from your Office 365 subscription: `username@tenant.onmicrosoft.com` where **username** is your username and **tenant** corresponds to your new domain `http://{tenant}.sharepoint.com`.
+  - 2. You will need to subscribe to a Microsoft Azure Directory offer.
   - 3. Register your app with Azure Active Directory
 
   {{#> callout type='info' }}
-  While registering your app, at the 'Add properties' step, please follow this example to fill in the pop-up, adapt the hostname and port to your case:
+  While registering your app, at the **Add properties** step, please follow this example to fill in the pop-up and adapt the hostname and port to your case:
     - SIGN-ON URL: `http://nuxeo-server:8080/nuxeo/site/oauth2/onedrive/callback`
     - APP ID URI: `http://nuxeo-server:8080/nuxeo/site/oauth2/onedrive`
-  While setting your application `delegated permissions`, you need to check `Read user profiles`, `Read and write user files` and `Read and write items in all site collections` boxes for an Office 365 SharePoint Online application.
+  &nbsp;
+
+  While setting your application **delegated permissions**, you need to check `Read user profiles`, `Read and write user files` and `Read and write items in all site collections` boxes for an Office 365 SharePoint Online application.
   {{/callout}}
 
 &nbsp;
@@ -714,11 +716,11 @@ For OneDrive for Business follow steps [here](https://dev.onedrive.com/app-regis
 3.  In the **OAuth2 Service providers** section click on the **Modify** button of the **onedrive** service provider.
 4.  Paste the OneDrive client_id in **ClientID**.
 5.  Paste the OneDrive client_secret in **Client Secret**.
-6.  Replace Authorization Server URL by [https://login.microsoftonline.com/common/oauth2/authorize?response_type=code](https://login.microsoftonline.com/common/oauth2/authorize?response_type=code)
-7.  Replace Token Server URL by adapting the tenant (`nuxeofr` in the sample URL provided bellow) in **resource** parameter to your case: [https://login.microsoftonline.com/common/oauth2/token?resource=https%3A%2F%2Fnuxeofr-my.sharepoint.com%2F](https://login.microsoftonline.com/common/oauth2/token?resource=https%3A%2F%2Fnuxeofr-my.sharepoint.com%2F)
+6.  Replace Authorization Server URL by `https://login.microsoftonline.com/common/oauth2/authorize?response_type=code`
+7.  Replace Token Server URL by adapting the tenant (`nuxeofr` in the URL provided bellow) in **resource** parameter to your case: `https://login.microsoftonline.com/common/oauth2/token?resource=https%3A%2F%2Fnuxeofr-my.sharepoint.com%2F`
 8.  Make sure the **Enabled** box is checked.
 9.  Save.
-10.  Now go to the **HOME** tab and click **Cloud Services** tab and click the **Connect to OneDrive** button or just create a new OneDrive document.
+10.  Now go to the **HOME** tab, click on the **Cloud Services** tab and click on the **Connect to OneDrive** button or just create a new OneDrive document.
 
 ## Advanced Live Connect Configuration
 
