@@ -2,7 +2,7 @@
 title: Nuxeo Live Connect
 review:
     comment: ''
-    date: '2016-12-012'
+    date: '2016-12-12'
     status: ok
 labels:
     - lts2016-ok
