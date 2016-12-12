@@ -507,6 +507,25 @@ Nuxeo DAM now requires ccextractor for video closed captions extraction.
 
 {{! /multiexcerpt}}
 
+### New Parameters
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Parameter</th>
+<th colspan="1">Description</th>
+<th colspan="1">Reference</th>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.picture.migration.enabled`</td>
+<td colspan="1">When set to `false` allows to disable the picture migration that is run on startup and that can be slow on big volume.</td>
+<td colspan="1">[NXP-19812](https://jira.nuxeo.com/browse/NXP-19812)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
 ### Parameters to Update
 
 <div class="table-scroll">

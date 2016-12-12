@@ -2250,10 +2250,16 @@ Example: https://my.nuxeo.com/</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">`nuxeo.directory.type`</td
+<td colspan="1">`nuxeo.directory.type`</td>
 <td colspan="1">`default`</td>
 <td colspan="1">Type of directory, used for LDAP or multi-directory configuration. Possible values are `default`, `ldap`, `multi`.</td>
 <td colspan="1">Since 6.0</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.picture.migration.enabled`</td>
+<td colspan="1">`true`</td>
+<td colspan="1">When set to `false` allows to disable the picture migration that is run on startup and that can be slow on big volume.</td>
+<td colspan="1">Since 8.10</td>
 </tr>
 </tbody>
 </table>

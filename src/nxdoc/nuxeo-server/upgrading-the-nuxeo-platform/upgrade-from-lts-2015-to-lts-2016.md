@@ -197,19 +197,32 @@ Thus the following changes in [nuxeo-distribution](https://github.com/nuxeo/nuxe
 
 ### New Parameters
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Description</th><th colspan="1">Reference</th></tr><tr><td colspan="1">
-
+<div class="table-scroll"><table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Parameter</th>
+<th colspan="1">Description</th>
+<th colspan="1">Reference</th>
+</tr>
+<tr>
+<td colspan="1">
 `nuxeo.automation.properties.value.trim`
-
-</td><td colspan="1">
-
+</td>
+<td colspan="1">
 Force Automation properties value to be trimmed (default:`false`)
-
-</td><td colspan="1">
-
+</td>
+<td colspan="1">
 [NXP-19170](https://jira.nuxeo.com/browse/NXP-19170)
-
-</td></tr></tbody></table></div>
+</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.picture.migration.enabled`</td>
+<td colspan="1">When set to `false` allows to disable the picture migration that is run on startup and that can be slow on big volume.</td>
+<td colspan="1">[NXP-19812](https://jira.nuxeo.com/browse/NXP-19812)</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Parameters to Update
 
