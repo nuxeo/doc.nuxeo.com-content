@@ -2,10 +2,10 @@
 title: Nuxeo Quota
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - quota
     - marketplace-package
     - quotas-component
@@ -178,28 +178,28 @@ After you installed Nuxeo Quota, a new tab **Quota / Statistics** is available i
 
 The Quota package allows to define a maximum size on spaces and to display the number of items (workspaces, folders, documents) in a folderish document on the navigation tree.
 
-Administrators are responsible for managing quotas on a global scale. Non-administrator users can manage the size limits of domains and workspaces on which they have Manage everything permission. All users are displayed the size of the document they are on (workspaces, folder, file, note, etc...) and the&nbsp;maximum size allowed (quota)&nbsp; if one has been defined. On a folderish document, such as a workspace, the used space includes the size of all the documents displayed in the Content tab and their versions and the size of the deleted documents (i.e. in the Trash tab of the workspace). On a document of type File for example, the used space is the sum of the size of the current document version (possibly a modified version) and the size of the archived versions of the document.
+Administrators are responsible for managing quotas on a global scale. Non-administrator users can manage the size limits of domains and workspaces on which they have Manage everything permission. All users are displayed the size of the document they are on (workspaces, folder, file, note, etc.) and the maximum size allowed (quota) if one has been defined. On a folderish document, such as a workspace, the used space includes the size of all the documents displayed in the Content tab and their versions and the size of the deleted documents (i.e. in the Trash tab of the workspace). On a document of type File for example, the used space is the sum of the size of the current document version (possibly a modified version) and the size of the archived versions of the document.
 
 {{#> callout type='tip' heading='Used space when the document has only one version'}}
 
 When you edit a document and save it as a new version (i.e. increment the document's version), the newly archived version is displayed until the document is modified. When the document is modified, you are displayed an unarchived modified version of the document, whose version number is based on the last archived version suffixed with a + sign. As a consequence, when the document only has one archived version, typically when its first version is created, the used space is the size of the newly archived version. As soon as the document is modified, the used space of the document is the sum of the archived version and the modified unarchived version.
 
-<span style="font-size: 10.0pt;line-height: 13.0pt;">More information on</span> [how versioning works]({{page space='userdoc' page='editing-content#versioning-overview'}}).
+You can find more information on [how versioning works]({{page space='userdoc' page='editing-content#versioning-overview'}}).
 
 {{/callout}}
 
-Users can also see [statistics](#consultingstatistics) on how space is used.
+Users can also see [statistics](#consulting-statistics) on how space is used.
 
-When users try to create or edit a document and the maximum size of the workspace is / will be reached, they are displayed a message indicating that they need to free some space.
+When a user tries to create or edit a document such that the maximum size of the workspace would be exceeded, a message is displayed indicating that they need to free some space.
 
 ### Statistics
 
 Statistics are available to show users:
 
-*   the list of documents and their size,
-*   the total size of live documents (i.e. documents visible in the Content tab of workspaces, sections, folders, etc),
-*   the total size of deleted documents that are still in trash,
-*   the total size of the archived versions for a document.
+*   The list of documents and their size.
+*   The total size of live documents (_i.e._, documents visible in the Content tab of workspaces, sections, folders, etc).
+*   The total size of deleted documents that are still in the trash.
+*   The total size of the archived versions for a document.
 
 Statistics help users to understand where space is used. They provide answers to the following questions: does the trash need to be emptied, are there a lot of big archived versions, what are biggest documents?
 
@@ -207,39 +207,29 @@ Statistics help users to understand where space is used. They provide answers to
 
 Administrators can perform several actions regarding quotas from the Admin tab:
 
-*   compute initial statistics to calculate the amount of space used by each item in the application,
-*   run a job to count the existing documents in the application (prior to this addon being installed). This will display the number of children of each item of the navigation tree,
-*   enable or disable the maximum size limitation on personal workspaces.
+*   Compute initial statistics to calculate the amount of space used by each item in the application.
+*   Run a job to count the existing documents in the application (prior to this addon being installed). This will display the number of children of each item of the navigation tree.
+*   Enable or disable the maximum size limitation on personal workspaces.
 
-### Computing Initial Statistic
+### Computing Initial Statistics
 
-Once the package is installed,&nbsp;administrators need to compute initial statistics so that the size of all the documents is calculated.
+When the Quota package is installed on a Nuxeo instance that already has some content, administrators need to manually initiate a document scan to know the number and size of all documents. Until they do, the system will ignore existing documents, taking only documents created or edited after the package was installed into account in the navigation tree and displaying inaccurate values.
 
 **To compute initial statistics:**
 
 1.  In the Admin tab, click on the **Quota / Statistics** tab.
 2.  Click on the **Compute initial statistics** tab.
     ![]({{file name='quota-admin-center-initial-stats.png'}} ?w=600,border=true)
-3.  Click on the **Run** button of the **Quota updater** counter.
+3.  Click on the **Run** button of the **Quota Updater** row.
     The size of all elements in the application is calculated and statistics are updated accordingly.
+4.  Click on the **Run** button of the **Document Count** row.
+    The values in the navigation tree are updated.
 
 {{#> callout type='tip' }}
 
-This initial computation won't prevent users from defining a maximum size allowed ( quota ) on workspaces, but values may be wrong until initial statistics are actually computed.
+This initial computation won't prevent users from defining a maximum size allowed (quota) on workspaces, but values may be wrong until initial statistics are actually computed.
 
 {{/callout}}
-
-### Initiating Document Count
-
-When the Quota package is installed on a Nuxeo instance that already has some content, administrators need to initiate the document count. Until they do, the system will ignore existing documents, taking only documents created or edited after the package was installed into account in the navigation tree and displaying inaccurate values.
-
-**To initiate the document count:**
-
-1.  In the Admin tab, click on the&nbsp;**Quota / Statistics**&nbsp;tab.
-2.  Click on the&nbsp;**Compute initial statistics**&nbsp;tab.
-    ![]({{file name='quota-admin-center-initial-stats.png'}} ?w=600,border=true)
-3.  Click on the&nbsp;**Run**&nbsp;button of the&nbsp;**Document Count**&nbsp;counter.
-    The values in the navigation tree are updated.
 
 ### Managing Personal Workspace Quotas
 
@@ -247,7 +237,7 @@ By default, there is no quota set on personal workspaces. Administrators can ena
 
 **To enable and define the maximum size of personal workspaces:**
 
-1.  In the Admin tab, click on the **Quota / Statistics**&nbsp;tab.
+1.  In the Admin tab, click on the **Quota / Statistics** tab.
 2.  Click on the **User workspaces** tab.
     ![]({{file name='quota-admin-center-user-workspace.png'}} ?w=600,border=true)
 3.  If the size limit hasn't been enabled on personal workspaces yet, click the button radio **Yes** (default value is **No**).
@@ -274,7 +264,7 @@ Users can see the [statistics](#statistics) of a workspace or a domain as soon a
 
         {{#> callout type='info' }}
 
-        Only documents larger than 1&nbsp;KByte are displayed.
+        Only documents larger than 1 KByte are displayed.
 
         {{/callout}}
 2.  If needed, filter the list of documents:
@@ -306,12 +296,12 @@ Only users with Manage everything permission can define the maximum size of a sp
         If the parent has no size limit, the maximum size displayed on the slider is the maximum size of the first parent having a quota defined.
 
         {{/callout}}
-    *   the smallest possible maximum size is 99.61&nbsp;KByte by default, on all spaces.
+    *   the smallest possible maximum size is 99.61 KByte by default, on all spaces.
 4.  Click on the **Save** button.
 
-    {{#> callout type='info' heading='You are displayed a message indicating that you need to set a smaller size?'}}
+    {{#> callout type='info' heading='A message indicates that you need to set a smaller size?'}}
 
-    This means other children of the parent imposing the maximum size to be set&nbsp; already have taken some of the available max size on their quotas. You need to choose a smaller value.
+    This means other children of the parent imposing the maximum size to be set already have taken some of the available max size on their quotas. You need to choose a smaller value.
 
     {{/callout}}
 
@@ -323,16 +313,13 @@ Here is how the maximum size is calculated. When you select a maximum size on a 
 
 1.  The system checks the maximum size set on the parent of your workspace.
 
-    *   If no maximum size has been set on the parent, the system goes up the tree until it finds a parent with a defined maximum size (aka "The parent").
+    *   If no maximum size has been set on the parent, the system goes up the tree until it finds a parent with a defined maximum size (a.k.a. "The parent").
 2.  The system computes the sum of the maximum sizes set on the children of the parent.
 
     *   If a child doesn't have a maximum size set, the system checks its children and makes the sum of their maximum sizes to calculate the parent's.
         This is repeated for all workspaces without maximum size, until the system can calculate a maximum size for each child of "The parent".
 3.  The system checks that the size you want to set on your workspace is not bigger than the difference between the parent's limit size and the sum of its children's.
 
-&nbsp;
-
-&nbsp;
 
 * * *
 
