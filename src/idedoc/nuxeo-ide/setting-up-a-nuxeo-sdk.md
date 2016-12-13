@@ -309,8 +309,8 @@ Do not use a Nuxeo SDK as a production server.
 
 To install a Nuxeo distribution you can:
 
-*   download a Nuxeo SDK and [install it](#installing-a-downloaded-distribution):&nbsp;
-    *   [Nuxeo Platform 8.3 (Fast Track) SDK](http://cdn.nuxeo.com/nuxeo-8.3/nuxeo-cap-8.3-tomcat-sdk.zip)
+*   download a Nuxeo SDK and [install it](#installing-a-downloaded-distribution):
+    *   [Nuxeo Platform 8.10 (LTS 2016) SDK](http://cdn.nuxeo.com/nuxeo-8.10/nuxeo-server-8.10-tomcat-sdk.zip)
     *   [Nuxeo Platform 7.10 (LTS 2015) SDK](http://cdn.nuxeo.com/nuxeo-7.10/nuxeo-cap-7.10-tomcat-sdk.zip)
     *   [Nuxeo Platform 6.0 SDK](http://cdn.nuxeo.com/nuxeo-6.0/nuxeo-cap-6.0-HF20-tomcat-sdk.zip)
     *   [Nuxeo Platform 5.8 SDK](http://cdn.nuxeo.com/nuxeo-5.8/nuxeo-cap-5.8-tomcat-sdk.zip)
