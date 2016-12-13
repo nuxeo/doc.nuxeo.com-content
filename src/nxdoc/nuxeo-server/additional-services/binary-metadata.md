@@ -2,9 +2,10 @@
 title: Binary Metadata
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
+    - lts2016-ok
     - link-update
     - binary-metadata
     - binary-metadata-component
@@ -346,7 +347,7 @@ This part is only needed if you plan to use your metadata mapping with the stand
 
 {{/callout}}
 
-Metadata rules are defined through an XML contribution on the&nbsp;`metadataRules` extension point:
+Metadata rules are defined through an XML contribution on the&nbsp;[`metadataRules`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.binary.metadata--metadataRules) extension point:
 
 ```xml
  <!-- Define which mappings will be called by the listener, and under which conditions -->
@@ -377,15 +378,15 @@ Metadata rules are defined through an XML contribution on the&nbsp;`metadataRule
   </extension>
 ```
 
-[Filters contribution](/x/D4UPAQ) documentation.
+[Filters contribution]({{page page='filters-and-access-controls'}}) documentation.
 
 ## Default Operations
 
-*   **Document.TriggerMetadataMapping**: To trigger a contributed metadataMapping based on its name on a document
-*   **Binary.WriteMetadataFromDocument**: To write metadata to a Blob (xpath parameter, or BlobHolder if empty) from a document (input) given a custom metadata mapping defined in a Properties parameter (xpath=metadataName), using a named processor (exifTool for instance).
-*   **Binary.WriteMetadataFromContext**: To write metadata to a Blob (input) from a custom metadata mapping defined in a Properties parameter (metadataName=value), using a named processor (exifTool for instance).
-*   **Context.ReadMetadataFromBinary**: To read metadata from a Blob (input) given a custom list of metadata defined (or optional, to get all metadata in result of ExifTool) in a StringList parameter (metadataName1, metadataName2, ...), using a named processor (exifTool for instance), and put the result (a Map) in the Context.
-*   **Binary.ReadMetadata**: To return Map of all binary properties in input.
+*   **Document.SetMetadataFromBlob**: To write metadata to a Document from a binary according to a contributed metadata mapping.
+*   **Blob.SetMetadataFromDocument**: To write metadata to a Blob (xpath parameter, or BlobHolder if empty) from a document (input) given a custom metadata mapping defined in a Properties parameter (xpath=metadataName), using a named processor (exifTool for instance).
+*   **Blob.SetMetadataFromContext**: To write metadata to a Blob from Context using a named processor (exifTool for instance) and given metadata, and return the updated Blob.
+*   **Context.SetMetadataFromBlob**: To read metadata from a Blob (input) given a custom list of metadata defined (or optional, to get all metadata in result of ExifTool) in a StringList parameter (metadataName1, metadataName2, ...), using a named processor (exifTool for instance), and put the result (a Map) in the Context.
+*   **Blob.ReadMetadata**: To return Map of all binary properties in input.
 
 ## Contributing a New Processor
 
@@ -411,9 +412,9 @@ If you need to add a new processor:
       </extension>
     ```
 
-2.  Extend [`org.nuxeo.binary.metadata.api.BinaryMetadataProcessor`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/binary/metadata/api/BinaryMetadataProcessor.html) and implement the following methods:
+2.  Extend [`org.nuxeo.binary.metadata.api.BinaryMetadataProcessor`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/binary/metadata/api/BinaryMetadataProcessor.html) and implement the following methods:
 
-    ```
+    ```java
     /**
          * Write given metadata into given blob. Since 7.3 ignorePrefix is added.
          *
@@ -422,7 +423,7 @@ If you need to add a new processor:
     	 * @param ignorePrefix
     	 * @return the updated blob, or {@code null} if there was an error (since 7.4)
          */
-        public Blob writeMetadata(Blob blob, Map<String, String> metadata, boolean ignorePrefix);
+        public Blob writeMetadata(Blob blob, Map<String, Object> metadata, boolean ignorePrefix);
         /**
          * Read from a given blob given metadata map. Since 7.3 ignorePrefix is added.
          *
@@ -442,7 +443,7 @@ If you need to add a new processor:
         public Map<String, Object> readMetadata(Blob blob, boolean ignorePrefix);
     ```
 
-    Here is the [ExifTool example](https://raw.githubusercontent.com/nuxeo/nuxeo-binary-metadata/master/src/main/java/org/nuxeo/binary/metadata/internals/ExifToolProcessor.java) `org.nuxeo.binary.metadata.internals.ExifToolProcessor` and the [command line documentation](/x/joNdAQ) to execute third command lines from the Nuxeo Platform.
+    Here is the [ExifTool example](https://raw.githubusercontent.com/nuxeo/nuxeo-binary-metadata/master/src/main/java/org/nuxeo/binary/metadata/internals/ExifToolProcessor.java) `org.nuxeo.binary.metadata.internals.ExifToolProcessor` and the [command line documentation]({{page page='how-to-contribute-a-command-line-converter'}}) to execute third command lines from the Nuxeo Platform.
 
 ## ExifTool Extraction Example
 
@@ -483,7 +484,7 @@ To activate it, the following variable in nuxeo.conf must be set:
 binary.metadata.monitor.enable=true
 ```
 
-Or log4j level to TRACE for [`org.nuxeo.binary.metadata.internals.BinaryMetadataComponent`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/binary/metadata/internals/BinaryMetadataComponent.html) must be set.
+Or log4j level to TRACE for [`org.nuxeo.binary.metadata.internals.BinaryMetadataComponent`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/binary/metadata/internals/BinaryMetadataComponent.html) must be set.
 
 This feature gives the ability to get time execution informations through JMX: `org.nuxeo.StopWatch`.
 

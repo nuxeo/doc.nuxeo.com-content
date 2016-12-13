@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - endpoint
     - rest-api
     - rest-api-component
@@ -271,7 +272,7 @@ The `path` endpoint does not requires paramets besides the `docPath` and `repoId
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [REST API Entity Types]({{page page='rest-api-entity-types'}})
-*   [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}})
+- [REST API Entity Types]({{page page='rest-api-entity-types'}})
+- [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}})
 
 {{/panel}}</div><div class="column medium-6"></div></div>

@@ -2,9 +2,10 @@
 title: Publisher
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
+    - lts2016-ok
     - publishing
     - link-update
     - proxies
@@ -105,41 +106,38 @@ There are three ways to publish a document:
 
 *   on local sections, i.e. the sections created in your Nuxeo DM instance,
 *   on remote sections, i.e. the sections of a remote Nuxeo server,
-*   on the file system.
+*   on the filesystem.
 
-Publication is configured using the `PublisherService`.
+Publication is configured using the Publisher Service.
 
-### About the `PublisherService`
+### About the Publisher Service
 
-When using the `PublisherService`, you only need to care about three interfaces:
+The `PublisherService` deals with three interfaces:
 
-*   **`PublishedDocument`**: represents the published document. It can be created from a DocumentModel, a proxy or a file on the file system.
-*   **`PublicationNode`**: represents a Node where you can publish a DocumentModel. It can be another DocumentModel (mainly Folder / Section) or a directory on the file system.
-*   **`PublicationTree`**: the tree which is used to publish / unpublish documents, to approve / reject publication, list the already published documents in a PublicationNode, ... See the [javadoc of the PublicationTree](http://community.nuxeo.com/api/nuxeo/7.1/javadoc/org/nuxeo/ecm/platform/publisher/api/PublicationTree.html).
+*   `PublishedDocument`: represents the published document. It can be created from a `DocumentModel`, a proxy or a file on the filesystem.
+*   `PublicationNode`: represents a Node where you can publish a `DocumentModel`. It can be another `DocumentModel` (mainly Folder / Section) or a directory on the filesystem.
+*   `PublicationTree`: the tree which is used to publish / unpublish documents, to approve / reject publication, list the already published documents in a `PublicationNode`, etc. See the [Javadoc of the PublicationTree](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/publisher/api/PublicationTree.html).
 
 {{! /excerpt}}
 
-&nbsp;
+The `PublisherService` mainly works with three concepts:
 
-The PublisherService mainly works with three concepts:
-
-*   **`factory`**: the class which is used to actually create the published document. It also manages the approval / rejection workflow on published documents.
-*   **`tree`**: a `PublicationTree` instance associated to a name: for instance, we have a `SectionPublicationTree` which will publish in Sections, a `LocalFSTree` to publish on the file system, ...
-*   **`tree instance`**: an actual publication tree where we define the factory to use, the underlying tree to use, its name / title, and some parameters we will see later.
+*   **factory**: the class which is used to actually create the published document. It also manages the approval / rejection workflow on published documents.
+*   **tree**: a `PublicationTree` instance associated to a name; for instance there is a `SectionPublicationTree` which will publish in Sections, a `LocalFSTree` to publish on the filesystem, etc.
+*   **tree instance**: an actual publication tree where one defines the factory to use, the underlying tree to use, its name / title, and some parameters described below.
 
 ### Configuring Local Sections Publishing
 
-Publishing in local sections was the only way to publish on versions < 5.3GA. From Nuxeo DM 5.3GA, it is the default way to publish documents.
+Publishing in local Sections is the default way to publish documents.
 
-Here is the default contribution you can find in Nuxeo `publisher-jbpm-contrib.xml` in `nuxeo-platform-publisher-jbpm`. This contribution overrides the one in `publisher-contrib.xml` located in the `nuxeo-platform-publisher-core` project:
+Here is the default contribution you can find in [rendition-publisher-contrib.xml](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.rendition.publisher) located in the `nuxeo-platform-rendition-publisher` project:
 
-```
+```xml
 <extension target="org.nuxeo.ecm.platform.publisher.impl.service.PublisherServiceImpl"
-  point="treeInstance">
-
-  <publicationTreeConfig name="DefaultSectionsTree" tree="RootSectionsCoreTree"
-    factory="CoreProxyWithWorkflow" localSectionTree="true"
-    title="label.publication.tree.local.sections">
+    point="treeInstance">
+  <publicationTreeConfig name="DefaultSectionsTree" tree="RenditionPublicationCoreTree"
+      factory="RenditionPublication" localSectionTree="true"
+      title="label.publication.tree.local.sections">
     <parameters>
       <!-- <parameter name="RootPath">/default-domain/sections</parameter> -->
       <parameter name="RelativeRootPath">/sections</parameter>
@@ -148,21 +146,20 @@ Here is the default contribution you can find in Nuxeo `publisher-jbpm-contrib.x
       <parameter name="iconCollapsed">/icons/folder.gif</parameter>
     </parameters>
   </publicationTreeConfig>
-
 </extension>
 
 ```
 
-In this contribution, we define an instance using the `RootSectionsCoreTree` tree and the `CoreProxyWithWorkflow` factory. We give it a name, a title and configure it to be a `localSectionTree` (which means we will publish the documents in the Sections of the Nuxeo application the documents are created in).
+In this contribution, we define an instance using the `RenditionPublicationCoreTree` tree and the `RenditionPublication` factory. We give it a name, a title and configure it to be a `localSectionTree` (which means we will publish the documents in the Sections of the Nuxeo application the documents are created in).
 
 The available parameters are:
 
-*   `RootPath`: it's used when you want to define the root publication node of your `PublicationTree`. You can't use both `RootPath` AND `RelativeRoothPath` parameters.
+*   `RootPath`: used when you want to define the root publication node of your `PublicationTree`. You can't use both `RootPath` and `RelativeRoothPath` parameters.
 *   `RelativeRootPath`: used when you just want to define a relative path (without specifying the domain path). A `PublicationTree` instance will be created automatically for each domain, appending the `RelativeRootPath` value to each domain.
     For instance, let's assume we have two domains, domain-1 and domain-2, and the `RelativeRootPath` is set to "/sections".
     Then, two `PublicationTree` instances will be created: the first one with a `RootPath` set to "/domain-1/sections", and the second one with a `RootPath` set to "/domain-2/sections",
     In the UI, when publishing, you can chose the `PublicationTree` you want. The list of trees will automatically be updated when creating and deleting domains.
-*   `iconExpanded` and `iconCollapsed`: specify which icons to use when displaying the `PublicationTree` on the user interface.
+*   `iconExpanded` and `iconCollapsed`: specify which icons to use when displaying the `PublicationTree` in the user interface.
 
 ### Configuring Remote Sections Publishing
 
@@ -170,72 +167,49 @@ To make the remote publication work, both the Nuxeo server instance and Nuxeo cl
 
 **Server Configuration**
 
-You should create a new configuration file, `publisher-server-config.xml` for instance, in the `nxserver/config` folder of your Nuxeo acting as a server (ie the Nuxeo application on which the documents will be published). Best way is to create a custom template with your configurarion, see&nbsp;[Configuration Templates]({{page page='configuration-templates'}}).
+You should create a new configuration file, `publisher-server-config.xml` for instance, in the `nxserver/config` folder of your Nuxeo acting as a server (_i.e._, the Nuxeo application on which the documents will be published). The best way is to create a custom template with your configuration, see [Configuration Templates]({{page page='configuration-templates'}}).
 
 Here is a sample configuration:
 
-```
-<?xml version="1.0"?>
-<component name="org.nuxeo.ecm.platform.publisher.contrib.server">
-
+```xml
   <extension target="org.nuxeo.ecm.platform.publisher.impl.service.PublisherServiceImpl"
-    point="treeInstance">
-
-    <publicationTreeConfig name="ServerRemoteTree" tree="CoreTreeWithExternalDocs" factory="RemoteDocModel" >
+      point="treeInstance">
+    <publicationTreeConfig name="ServerRemoteTree" tree="CoreTreeWithExternalDocs"
+        factory="RemoteDocModel" >
       <parameters>
         <parameter name="RootPath">/default-domain/sections</parameter>
       </parameters>
     </publicationTreeConfig>
-
   </extension>
-
-</component>
-
 ```
 
 The available parameters are:
 
-*   `RootPath`: its value must be the path to the document which is the root of your `PublicationTree`. Here, it will be the document `/default-domain/sections`, the default Sections root in Nuxeo.
-    This parameter can be modified to suit your needs.
-
-    {{#> callout type='note' }}
-
-    Don't forget to put the whole path to the document.
-
-    {{/callout}}
+*   `RootPath`: its value must be the path to the document which is the root of your `PublicationTree`. In the above example it will be the document `/default-domain/sections`, the default Sections root in Nuxeo.
+    This parameter can be modified to suit your needs; don't forget to include the whole path to the document.
 
 **Client Configuration**
 
-You should create a new configuration file, `publisher-client-config.xml` for instance, in the `nxserver/config` folder of your Nuxeo acting as a client (ie the Nuxeo application from which documents are published).&nbsp;&nbsp;Best way is to create a custom template with your configurarion, see&nbsp;[Configuration Templates]({{page page='configuration-templates'}}).
+You should create a new configuration file, `publisher-client-config.xml` for instance, in the `nxserver/config` folder of your Nuxeo acting as a client (_i.e._, the Nuxeo application from which documents are published). The best way is to create a custom template with your configuration, see [Configuration Templates]({{page page='configuration-templates'}}).
 
 Here is a sample configuration:
 
-```
-<?xml version="1.0"?>
-<component name="org.nuxeo.ecm.platform.publisher.contrib.client">
-
+```xml
   <extension target="org.nuxeo.ecm.platform.publisher.impl.service.PublisherServiceImpl"
-    point="treeInstance">
-
+      point="treeInstance">
     <publicationTreeConfig name="ClientRemoteTree" tree="ClientForRemoteTree"
-      factory="ClientProxyFactory">
+        factory="ClientProxyFactory">
       <parameters>
         <parameter name="title">label.publication.tree.remote.sections</parameter>
         <parameter name="userName">Administrator</parameter>
         <parameter name="password">Administrator</parameter>
-        <parameter name="baseURL">
-          http://myserver:8080/nuxeo/site/remotepublisher/
-        </parameter>
+        <parameter name="baseURL">http://myserver:8080/nuxeo/site/remotepublisher/</parameter>
         <parameter name="targetTree">ServerRemoteTree</parameter>
         <parameter name="originalServer">localserver</parameter>
         <parameter name="enableSnapshot">true</parameter>
       </parameters>
     </publicationTreeConfig>
-
   </extension>
-
-</component>
-
 ```
 
 The available parameters:
@@ -245,19 +219,18 @@ The available parameters:
 *   `baseURL`: the URL used by the PublisherService on the client side to communicate with the server Nuxeo application.
 *   `originalServer`: identifies the Nuxeo application used as client.
 
-### Configuring File System Publishing
+### Configuring Filesystem Publishing
 
-To publish on the file system, you just need to define a new `TreeInstance` using the `LocalFSTree` and the `RootPath` of your tree.
+To publish on the filesystem, you just need to define a new `TreeInstance` using the `LocalFSTree` and the `RootPath` of your tree.
 
 Here is a sample configuration:
 
-```
+```xml
 <extension  target="org.nuxeo.ecm.platform.publisher.impl.service.PublisherServiceImpl"
-  point="treeInstance">
-
+    point="treeInstance">
   <publicationTreeConfig name="FSTree" tree="LocalFSTree"
-    factory="LocalFile" localSectionTree="false"
-    title="label.publication.tree.fileSystem">
+      factory="LocalFile" localSectionTree="false"
+      title="label.publication.tree.fileSystem">
     <parameters>
       <parameter name="RootPath">/opt/publishing-folder</parameter>
       <parameter name="enableSnapshot">true</parameter>
@@ -265,14 +238,13 @@ Here is a sample configuration:
       <parameter name="iconCollapsed">/icons/folder.gif</parameter>
     </parameters>
   </publicationTreeConfig>
-
 </extension>
 
 ```
 
 The available parameters are:
 
-*   `RootPath`: the root folder on the file system to be used as the root of the publication tree.
+*   `RootPath`: the root folder on the filesystem to be used as the root of the publication tree.
 *   `iconExpanded` and `iconCollapsed`: specify which icons to use when displaying the `PublicationTree` on the user interface.
 *   `enableSnapshot`: defines if a new version of the document is created when the document is published.
 

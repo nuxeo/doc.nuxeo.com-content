@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - automation
     - javascript
     - link-update
@@ -388,7 +389,62 @@ Fn.getEmail("Administrator")
 
 [Helper contributions]({{page page='automation-helpers'}}) are available to create custom functions to use directly in Automation Scripting and [MVEL]({{page page='use-of-mvel-in-automation-chains'}}).
 
-### <span style="line-height: 1.5;">Logging - Debugging</span>
+### Dates Comparison
+
+```
+function run(input, params) {
+
+ // nowDate, javascript instantiated date should be ISO stringified as follow
+ var nowDate = new Date().toISOString();
+
+ // releaseDate, document property should be formatted and stringified as follow
+ var releaseDate = Fn.calendar(input['ncf:releaseDate']).format("yyyy-MM-dd");
+
+ // Then all comparaisons can be made
+ var compare = (nowDate > releaseDate);
+ if (compare) {
+   WebUI.AddInfoMessage(
+     input, {
+       'message': 'Now less than release date'
+     }
+   );
+ }
+ else {
+   WebUI.AddInfoMessage(
+     input, {
+       'message': 'Now greater than release date'
+     }
+   );
+ }
+}
+```
+
+### JVM Nashorn Debugging
+
+The Nashorn Engine provides a simple way to remotely debug Automation Scripts via the JVM for having a view on JavaScript variables status:
+
+- Add the `debugger;` reserved method of Nashorn inside of your script where the debug session will begin.
+- Run the Nuxeo server in debug JVM mode.
+- Add a breakpoint directly inside the method `jdk.nashorn.internal.runtime.ScriptRuntime#DEBUGGER`.
+- The IDE will break on this method once the script is executed.
+- Actioning a step out during this debug session will show the current scope script variables view.
+
+Example:
+
+```
+function run(input, params) {
+	var nowDate = new Date().toISOString();
+	debugger;
+	WebUI.AddInfoMessage(
+	 input, {
+	   /*required:true - type: string*/
+	   'message': nowDate
+	 }
+	);
+}
+```
+
+### JavaScript Logging
 
 When printing values as follow, the output is redirected to the console:
 
@@ -412,7 +468,7 @@ To get the value of a Context Variable you should use the following syntax:
 ctx.get('var')
 ```
 
-### <span style="color: rgb(0,0,0);">Activating Metrics</span>
+### Activating Metrics
 
 Metrics have been added to Automation Scripting services to monitor Nashorn performances with the Nuxeo Platform.
 

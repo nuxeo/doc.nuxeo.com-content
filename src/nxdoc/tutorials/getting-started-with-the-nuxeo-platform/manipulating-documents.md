@@ -5,6 +5,8 @@ review:
     date: '2016-10-19'
     status: ok
 toc: true
+labels:
+    - content-review-lts2016
 confluence:
     ajs-parent-page-id: '29460589'
     ajs-parent-page-title: Getting Started with the Nuxeo Platform
@@ -215,7 +217,7 @@ Learn how to manipulate documents (creation, update, state change, deletion...) 
 
 {{! /excerpt}}
 
-The steps below leverage the document types brought by the addon Getting started with the Nuxeo Platform:
+The steps below leverage the document types included in the addon Getting started with the Nuxeo Platform:
 
 {{{multiexcerpt 'studio_configuration_desc' page='Setting up Your Nuxeo Environment'}}}
 
@@ -231,7 +233,7 @@ Create a new contract in Nuxeo Platform.
 
 **Procedure**
 
-1.  Using your favorite text editor or IDE, create a file called `createContract.js` with the following content:
+1.  Create a file called `createContract.js` with the following content:
 
     ```js
     #!/usr/bin/env node
@@ -286,12 +288,12 @@ Create a new contract in Nuxeo Platform.
     repository
       .create(whereToCreatePortfolio, portfolioToCreate)
       .then(portfolio => {
-        console.log('Portfolio has been created as following:');
+        console.log('Portfolio has been created as follows:');
         console.log(portfolio);
         return repository.create(portfolio.path, contractToCreate);
       })
       .then(contract => {
-        console.log('Contract has been created as following:');
+        console.log('Contract has been created as follows:');
         console.log(contract);
       })
       .catch(error => {
@@ -319,7 +321,7 @@ Create a new contract in Nuxeo Platform.
 
 Documents can be fetched using their id or path.
 
-1.  Using your favorite text editor or IDE, create a file called `fetchContract.js` with the following content.
+1.  Create a file called `fetchContract.js` with the following content.
 
     ```js
     #!/usr/bin/env node
@@ -375,9 +377,9 @@ Documents can be fetched using their id or path.
 
 ## Updating a Document
 
-We will now update the contract we created previously to add some custom clauses.
+We will now update the contract to add some custom clauses.
 
-1.  Using your favorite text editor or IDE, create a file called `updateContract.js` with the following content.
+1.  Create a file called `updateContract.js` with the following content.
 
     ```js
     #!/usr/bin/env node
@@ -413,7 +415,7 @@ We will now update the contract we created previously to add some custom clauses
             return contract.save();
         })
         .then(function(contract) {
-            console.log('Contract has been updated. Custom clauses are now as following:');
+            console.log('Contract has been updated. Custom clauses are now as follows:');
             console.log(contract.properties['bccontract:customClauses']);
         })
         .catch(function(error) {
@@ -441,9 +443,9 @@ We will now update the contract we created previously to add some custom clauses
 
 This time we will switch the document to the `deleted` state, then in a second phase restore it to the state it was previously in (`draft` in this case). This can be used to manage a trash feature, by listing all documents not in the `deleted` state when launching queries, or only the ones in this state when looking at the trash.
 
-**Make the document go to the deleted state**
+**Change document state to 'deleted'**
 
-1.  Using your favorite text editor or IDE, create a file called `trashContract.js` with the following content.
+1.  Create a file called `trashContract.js` with the following content.
 
     ```js
     #!/usr/bin/env node
@@ -462,7 +464,7 @@ This time we will switch the document to the `deleted` state, then in a second p
             return contract.followTransition('delete');
         })
         .then(function(contract) {
-            console.log('Contract state has been changed. Contract is now as following:');
+            console.log('Contract state has been changed. Contract is now as follows:');
             console.log(contract);
         })
         .catch(function(error) {
@@ -477,11 +479,11 @@ This time we will switch the document to the `deleted` state, then in a second p
     $ node trashContract.js
     ```
 
-**Make the document go back to the draft state**
+**Restore document state to 'draft'**
 
 Restore the contract to its previous (`draft`) state.
 
-1.  Using your favorite text editor or IDE, create a file called `restoreContract.js` with the following content.
+1.  Create a file called `restoreContract.js` with the following content.
 
     ```js
     #!/usr/bin/env node
@@ -500,7 +502,7 @@ Restore the contract to its previous (`draft`) state.
             return contract.followTransition('undelete');
         })
         .then(function(contract) {
-            console.log('Contract state has been changed. Contract is now as following:');
+            console.log('Contract state has been changed. Contract is now as follows:');
             console.log(contract);
         })
         .catch(function(error) {
@@ -529,12 +531,12 @@ Restore the contract to its previous (`draft`) state.
 
 Find a contract that needs to be deleted: it expired before 2016 and has a limitation clause in its content.
 
-1.  Using your favorite text editor or IDE, create a file called `query.js` to launch a query to retrieve all documents:
+1.  Create a file called `query.js` which launches a query for all documents:
 
     *   of the `BCContract` type
     *   except archived versions and documents that are in the trash
     *   that contain the keyword "limitation"
-    *   and having expired before the end of 2015.
+    *   having expired before the end of 2015.
 
     ```js
     #!/usr/bin/env node
@@ -586,7 +588,7 @@ Find a contract that needs to be deleted: it expired before 2016 and has a limit
 
 The contract to delete has been identified as being the `2015 Annual Conference` belonging to the `Bon Appétit Caterer` portfolio. Delete it.
 
-1.  Using your favorite text editor or IDE, create a file called `deleteContract.js` with the following content.
+1.  Create a file called `deleteContract.js` with the following content.
 
     ```js
     #!/usr/bin/env node
@@ -618,7 +620,7 @@ The contract to delete has been identified as being the `2015 Annual Conference`
     $ node deleteContract.js
     ```
 
-**Note**: This method does not include a "trash" behavior. The document is immediately erased. You should use the delete state and transitions to get documents to be moved to a trash before being permanently deleted.
+**Note**: This method does not include a "trash" behavior. The document is permanently erased. You should use the delete state and transitions to get documents to be moved to a trash before being permanently deleted.
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">&larr;&nbsp;[Setting up Your JavaScript Environment]({{page page='setting-up-your-javascript-environment'}})</div>

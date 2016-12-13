@@ -2,9 +2,10 @@
 title: Field Constraints and Validation
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
+    - lts2016-ok
     - link-update
     - schema-component
 toc: true
@@ -1012,7 +1013,7 @@ document.setPropertyValue("schema:favorite", reference);
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Customize Document Validation]({{page page='how-to-customize-document-validation'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Customize Document Validation]({{page page='how-to-customize-document-validation'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6"></div></div>

@@ -2,9 +2,10 @@
 title: Building a SOAP-Based WebService Client in Nuxeo
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
+    - lts2016-ok
     - soap
     - soap-component
 toc: true
@@ -139,6 +140,13 @@ For instance, copy [http://www.restfulwebservices.net/wcf/WeatherForecastService
         <wsdlDirectory>src/main/resources/wsdls</wsdlDirectory>
         <sourceDestDir>${project.build.directory}/generated-sources/wsimport</sourceDestDir>
       </configuration>
+      <!-- Might be needed with JAXP 1.5, if XSD are behind HTTP only
+      <configuration>
+        <vmArgs>
+          <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+        </vmArgs>
+      </configuration>
+      -->
     </execution>
   </executions>
 </plugin>
@@ -154,13 +162,18 @@ The `jaxws:wsimport` goal is automatically executed within the life cycle phase 
 Often a WSDL file needs to import one or more XSD schemas, using the `<xsd:import>` directive.
 
 Let's take this example:
-`<xsd:import` `**schemaLocation="http://www.restfulwebservices.net/wcf/WeatherForecastService.svc?xsd=xsd0"**` `namespace="http://www.restfulwebservices.net/ServiceContracts/2008/01"/>`
+
+```
+<xsd:import schemaLocation="http://www.restfulwebservices.net/wcf/WeatherForecastService.svc?xsd=xsd0" namespace="http://www.restfulwebservices.net/ServiceContracts/2008/01"/>
+```
 
 If your WSDL file is accessed locally, you also have to download all the XSD schemas referenced by the WSDL and use a relative path for the `schemaLocation` attribute of the `<xsd:import>` directives prior to building your project.
 
 Assuming that the XSD schema `WeatherForecastService.xsd` has been downloaded in `src/main/resources/wsdls/xsdschemas`, this is what you get:
-`<xsd:import` `**schemaLocation="xsdschemas/WeatherForecastService.xsd"**` `namespace="http://www.restfulwebservices.net/ServiceContracts/2008/01"/>`.
 
+```
+<xsd:import schemaLocation="xsdschemas/WeatherForecastService.xsd" namespace="http://www.restfulwebservices.net/ServiceContracts/2008/01"/>
+```
 {{/callout}}
 
 Documentation about `wsimport` is available here: [http://jax-ws-commons.java.net/jaxws-maven-plugin/wsimport-mojo.html](http://jax-ws-commons.java.net/jaxws-maven-plugin/wsimport-mojo.html).

@@ -13,6 +13,7 @@ details:
         tool: Code
         topics: 'Query, REST API'
 labels:
+    - content-review-lts2016
     - endpoint
     - howto
     - page-provider
@@ -864,12 +865,13 @@ http://localhost:8080/api/v1/query/aggregates_1
 
 {{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
-*   [REST API Entity Types]({{page page='rest-api-entity-types'}})
-*   [Page Providers]({{page page='page-providers'}})
-*   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
-
-{{/panel}}</div><div class="column medium-6">
+- [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
+- [REST API Entity Types]({{page page='rest-api-entity-types'}})
+- [Page Providers]({{page page='page-providers'}})
+- [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+{{/panel}}
+</div>
+<div class="column medium-6">
 
 &nbsp;
 

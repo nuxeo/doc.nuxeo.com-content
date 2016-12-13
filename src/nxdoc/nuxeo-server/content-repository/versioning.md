@@ -2,9 +2,10 @@
 title: Versioning
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
+    - lts2016-ok
     - link-update
     - versioning
     - core-component
@@ -174,6 +175,6 @@ The version number is changed by a Check In operation; either the minor version 
 
 ## Plugging In a New VersioningService Implementation
 
-For advanced uses, it's possible to plug in a new [`VersioningService`](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/core/versioning/VersioningService.html) implementation to define what happens at creation, save, check in and check out time. See the [Javadoc](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/core/versioning/VersioningService.html) and the [versioningService extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--versioningService) documentation for more about this.
+For advanced uses, it's possible to plug in a new `VersioningService` implementation to define what happens at creation, save, check in and check out time. See the [VersioningService Javadoc](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/versioning/VersioningService.html) and the [versioningService extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--versioningService) documentation for more about this.
 
 &nbsp;

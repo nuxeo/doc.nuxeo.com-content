@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - link-update
     - rest-api
     - webengine
@@ -612,9 +613,9 @@ Here is an example :
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [WebEngine (JAX-RS)]({{page page='webengine-jax-rs'}})
-*   [REST API]({{page page='rest-api'}})
-*   [Content Enricher]({{page page='content-enricher'}})
+- [WebEngine (JAX-RS)]({{page page='webengine-jax-rs'}})
+- [REST API]({{page page='rest-api'}})
+- [Content Enricher]({{page page='content-enricher'}})
 
 {{/panel}}</div><div class="column medium-6">
 

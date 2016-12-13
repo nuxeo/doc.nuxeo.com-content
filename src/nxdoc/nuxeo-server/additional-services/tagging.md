@@ -2,9 +2,10 @@
 title: Tagging
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
+    - lts2016-ok
     - tags
     - tagging-component
 toc: true
@@ -113,7 +114,7 @@ history:
         version: '1'
 
 ---
-The tags are either categorizing the content of the document (labels like "document management", "ECM", "complex Web application", etc. can be thought as tags for Nuxeo), or they reflect the user feeling ("great", "user friendly", "versatile", etc.).
+The tags are either categorizing the content of the document (labels like "document management", "ECM", "complex Web application", etc., can be thought as tags for Nuxeo), or they reflect the user feeling ("great", "user friendly", "versatile", etc.).
 
 {{! excerpt}}
 
@@ -131,15 +132,15 @@ A tag holds a label that does not contain any space ("documentmanagement", "weba
 
 The following document types are defined by the tag service.
 
-A&nbsp;Tag&nbsp;is a document type representing the tag itself (but not its association to specific documents). It contains the usual&nbsp;`dublincore`&nbsp;schema, and in addition has a specific&nbsp;tag&nbsp;schema containing a&nbsp;`tag:label`&nbsp;string field.
+A `Tag` is a document type representing the tag itself (but not its association to specific documents). It contains the usual `dublincore` schema, and in addition has a specific `tag` schema containing a `tag:label` string field.
 
-A&nbsp;Tagging&nbsp;is a relation type representing the action of tagging a given document with a tag. (A relation type is a document type extending the default Relation document type; it works like a normal document type except that it's not found by NXQL queries on&nbsp;Document). The important fields of a Tagging document are&nbsp;`relation:source`&nbsp;which is the document id,&nbsp;`relation:target`&nbsp;which is the tag id, and&nbsp;`dc:creator`&nbsp;which is the user doing the tagging action.
+A `Tagging` is a relation type representing the action of tagging a given document with a tag. (A relation type is a document type extending the default `Relation` document type; it works like a normal document type except that it's not found by NXQL queries on `Document`). The important fields of a `Tagging` document are `relation:source` which is the document id, `relation:target` which is the tag id, and `dc:creator` which is the user doing the tagging action.
 
-Both Tag and Tagging documents managed by the tag service are&nbsp;_unfiled_, which means that they don't have a parent folder. They are therefore not visible in the normal tree of documents, only queries can find them. In addition they don't have any ACLs set on them, which means that only a superuser (and the tag service internal code) can access them.
+Both `Tag` and `Tagging` documents managed by the tag service are _unfiled_, which means that they don't have a parent folder. They are therefore not visible in the normal tree of documents; only queries can find them. In addition they don't have any ACLs set on them, which means that only a superuser (and the tag service internal code) can access them.
 
 ## Tag Service Features
 
-The tag service is accessed through the&nbsp; [`org.nuxeo.ecm.platform.tag.TagService`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/tag/TagService.html) &nbsp;interface.
+The tag service is accessed through the  [`TagService`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/tag/TagService.html)  interface.
 
 The tag service allows you to:
 
@@ -160,11 +161,11 @@ When restoring a version, the tags on the live document are also restored from t
 
 Tags can be added and removed independently on live documents, versions and proxies: a tag added on a live document won't be added on all its versions, but only on the versions that will be created after. The same behavior is applied for proxies.
 
-The logic for the above is in the&nbsp; [`org.nuxeo.ecm.platform.tag.TaggedVersionListener`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/tag/TagService.html) &nbsp;listener.
+The logic for the above is in the  [`TaggedVersionListener`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/tag/TaggedVersionListener.html) listener.
 
 ### Disabling Tags on Versions and Proxies
 
-To disable the duplication of tags on versions and proxies, the&nbsp; [`org.nuxeo.ecm.platform.tag.TaggedVersionListener`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/tag/TaggedVersionListener.html) &nbsp;listener may be disabled with the following contribution:
+To disable the duplication of tags on versions and proxies, the `TaggedVersionListener` may be disabled with the following contribution:
 
 ```xml
 <require>org.nuxeo.ecm.platform.tag.service.listener</require>
@@ -174,8 +175,6 @@ To disable the duplication of tags on versions and proxies, the&nbsp; [`org.nuxe
 ```
 
 * * *
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 

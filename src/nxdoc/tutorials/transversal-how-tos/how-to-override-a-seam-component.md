@@ -11,6 +11,7 @@ details:
         tool: 'Nuxeo IDE, code'
         topics: Seam JSF Webapp
 labels:
+    - content-review-lts2016
     - seam
     - howto
     - seam-jsf-component

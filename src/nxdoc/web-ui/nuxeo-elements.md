@@ -5,6 +5,10 @@ review:
     date: '2015-12-01'
     status: ok
 toc: true
+labels:
+    - content-review-lts2016
+    - nuxeo-elements-component
+    - nuxeo-elements
 confluence:
     ajs-parent-page-id: '26316892'
     ajs-parent-page-title: Web UI
@@ -107,13 +111,14 @@ Allows configuring the connection to a Nuxeo server.
 </td>
 <td colspan="1">
 
-```xml
+<pre><code class="xml">```
 <nuxeo-connection
   url="http://demo.nuxeo.com/nuxeo"
   username="Administrator"
   password="Administrator">
 </nuxeo-connection>
 ```
+</code></pre>
 
 </td>
 </tr>
@@ -131,11 +136,12 @@ Exposes methods (get, post, put, delete) of a Nuxeo REST API resource at a given
 </td>
 <td colspan="1">
 
-```xml
+<pre><code class="xml">```
 <nuxeo-resource
   path="/path/default-domain">
 </nuxeo-resource>
 ```
+</code></pre>
 
 </td>
 </tr>
@@ -153,11 +159,12 @@ Extends `nuxeo-resource` to target Document resources by path or by uid.
 </td>
 <td colspan="1">
 
-```xml
+<pre><code class="xml">```
 <nuxeo-document
   doc-path="/default-domain">
 </nuxeo-document>
 ```
+</code></pre>
 
 </td>
 </tr>
@@ -175,12 +182,13 @@ Allows calling an operation on a Nuxeo server.
 </td>
 <td colspan="1">
 
-```xml
+<pre><code class="xml">```
 <nuxeo-operation
   op="Document.Query"
   params="{'query': 'select from Document'}">
 </nuxeo-operation>
 ```
+</code></pre>
 
 </td>
 </tr>
@@ -198,19 +206,23 @@ Wraps a `Repository.PageProvider` operation to provide paginated results for a g
 </td>
 <td colspan="1">
 
-```xml
+<pre><code class="xml">```
 <nuxeo-page-provider
-  query="select from Document" 
-  page-size="5"
-  sort="dc:modified">
+query="select from Document" 
+page-size="5"
+sort="dc:modified">
 </nuxeo-page-provider>
 ```
+</code></pre>
+
 
 </td>
 </tr>
 </tbody>
 </table>
 </div>
+
+
 
 **Note:** Most data elements support an `auto` attribute which, when set, automatically calls the GET method whenever the element properties change.
 

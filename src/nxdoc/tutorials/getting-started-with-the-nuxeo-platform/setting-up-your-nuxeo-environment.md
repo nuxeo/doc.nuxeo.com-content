@@ -5,6 +5,8 @@ review:
     date: '2016-11-10'
     status: ok
 toc: true
+labels:
+    - content-review-lts2016
 confluence:
     ajs-parent-page-id: '29460589'
     ajs-parent-page-title: Getting Started with the Nuxeo Platform
@@ -292,15 +294,13 @@ history:
 ---
 {{! excerpt}}
 
-This how-to is the first step of the tutorial Getting Started with the Nuxeo Platform, that allows to explore the Nuxeo Platform through its REST API. It provides instructions to install and run a Nuxeo Platform instance using Docker, Homebrew or the ZIP package.
+This how-to is the first step of the tutorial Getting Started with the Nuxeo Platform, allowing you to explore the Nuxeo Platform through its REST API. It provides instructions for installing and running a Nuxeo Platform instance using Docker, Homebrew or the ZIP package.
 
 {{! /excerpt}}
 
 ## Universal ZIP Package
 
 OS: Linux, Mac OS, Windows
-
-### Prerequisites
 
 Contrarily to the Brew installation or Docker image, the universal ZIP package comes without the related software needed for this tutorial. Please [install and set up related software]({{page page='installing-and-setting-up-related-software'}}) before going to the next step.
 
@@ -327,9 +327,9 @@ Contrarily to the Brew installation or Docker image, the universal ZIP package c
 
 ### Setting up Environment
 
-You now have a Nuxeo Platform instance ready to run. At this step, you need to install some addons, in particular the addon Getting started with the Nuxeo Platform.
+You now have a Nuxeo Platform instance ready to run. In this step, you need to install some addons, in particular the addon Getting started with the Nuxeo Platform.
 
-The addon Getting started with the Nuxeo Platform will add some business logic and documents to your Nuxeo Platform instance, that we will leverage all through this tutorial.
+The addon Getting started with the Nuxeo Platform will add some business logic and documents to your Nuxeo Platform instance which we will leverage throughout this tutorial.
 
 To install a Nuxeo Package:
 
@@ -353,7 +353,7 @@ To install a Nuxeo Package:
     $ .\nuxeoctl.bat mp-list
     ```
 
-    You get the list of local addons, whose status is downloaded.
+    You get a list of the local addons that have been downloaded.
 
 3.  Install the addons required for this tutorial.
 
@@ -375,7 +375,7 @@ To install a Nuxeo Package:
     Do you want to continue (yes/no)? [yes]
     ```
 
-5.  Check the Nuxeo addons were correctly installed.
+5.  Check that the Nuxeo addons were correctly installed.
 
     ```
     # Linux and Mac OS
@@ -395,7 +395,7 @@ To install a Nuxeo Package:
      addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.1.0)
     ```
 
-    The installed addons now have the status started.
+    The installed addons now have the status 'started'.
 
 6.  Start the server.
 
@@ -407,7 +407,7 @@ To install a Nuxeo Package:
     $ .\nuxeoctl.bat console
     ```
 
-    Your server is now running. You benefit from the following features brought by the addon Getting started with the Nuxeo Platform.
+    Your server is now running with the addon Getting started with the Nuxeo Platform.
 
 The addon brings the following document types:
 {{! multiexcerpt name='studio_configuration_desc'}}

@@ -2,12 +2,12 @@
 title: Nuxeo Drive
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
+    - lts2016-ok
     - link-update
     - nuxeo-drive
-    - last-review-20150901
     - nuxeo-drive-component
 tabbed_page: true
 toc: true
@@ -759,7 +759,32 @@ Please note that the main purpose of Nuxeo Drive is to allow synchronization bet
 
 Here are the different statuses of Nuxeo Drive:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Icon</th><th colspan="1">Status</th></tr><tr><td colspan="1">![]({{file name='drive_offline.png' space='userdoc' page='nuxeo-drive'}})</td><td colspan="1">Synchronization is disabled (offline mode or suspended synchronization).</td></tr><tr><td colspan="1">![]({{file name='drive_online.png' space='userdoc' page='nuxeo-drive'}})</td><td colspan="1">Nuxeo Drive has successfully synchronized.</td></tr><tr><td colspan="1">![]({{file name='drive_transferring.png' space='userdoc' page='nuxeo-drive'}})</td><td colspan="1">Nuxeo Drive is synchronizing with the Nuxeo Platform.</td></tr><tr><td colspan="1">![]({{file name='nuxeo_drive_systray_icon_stopping.png' space='userdoc' page='nuxeo-drive'}})</td><td colspan="1">Your credentials are incorrect.</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Icon</th>
+<th colspan="1">Status</th>
+</tr>
+<tr>
+<td colspan="1">![]({{file name='drive_offline.png' space='userdoc' page='nuxeo-drive'}})</td>
+<td colspan="1">Synchronization is disabled (offline mode or suspended synchronization).</td>
+</tr>
+<tr>
+<td colspan="1">![]({{file name='drive_online.png' space='userdoc' page='nuxeo-drive'}})</td>
+<td colspan="1">Nuxeo Drive has successfully synchronized.</td>
+</tr>
+<tr>
+<td colspan="1">![]({{file name='drive_transferring.png' space='userdoc' page='nuxeo-drive'}})</td>
+<td colspan="1">Nuxeo Drive is synchronizing with the Nuxeo Platform.</td>
+</tr>
+<tr>
+<td colspan="1">![]({{file name='nuxeo_drive_systray_icon_stopping.png' space='userdoc' page='nuxeo-drive'}})</td>
+<td colspan="1">Your credentials are incorrect.</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### {{> anchor 'access-local-drive-folder'}}Accessing the Nuxeo Drive Folder
 
@@ -787,12 +812,13 @@ In the rest of this documentation, we'll call them all "folder".
 
 ### Synchronizing a Folder
 
-Starting from Nuxeo Platform 6.0, you can synchronize spaces on which you have [at least Read permissions]({{page space='userdoc' page='nuxeo-platform-concepts'}}). For older versions of the Nuxeo Platform, you need at least Edit permissions to be able to synchronize a space.
+Starting from Nuxeo Platform 6.0, you can synchronize spaces on which you have [at least Read permissions]({{page version='' space='userdoc' page='managing-permissions'}}). For older versions of the Nuxeo Platform, you need at least Edit permissions to be able to synchronize a space.
 
 To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive_unsynced.png' space='userdoc' page='nuxeo-drive'}}).
 The icon becomes green. Documents inside the synchronized space have an icon ![]({{file name='drive_synced_under_root.png' space='userdoc' page='nuxeo-drive'}}) and a Drive local edit icon ![]({{file name='drive_edit.png' space='userdoc' page='nuxeo-drive'}}).
 
 ![]({{file name='drive-synchronise-icon.png'}} ?w=650,border=true)
+
 The folder and all its content is now available in your local Nuxeo Drive folder. You can now create, edit, delete documents from your computer. If you only have Read permissions, documents are in read-only mode.
 
 On your Home Nuxeo Drive tab, the space is displayed in the "Synchronization root" section. This is where you can see all the spaces you have synchronized with Nuxeo Drive.
@@ -818,7 +844,7 @@ If a synchronized folder holds big document or a large amount of documents, sync
 
 ### Unsynchronizing a Folder
 
-There are to ways to desynchronize a folder.
+There are two ways to desynchronize a folder.
 
 *   From the server, when you desynchronize a folder all its content is desynchronized from all the devices where you use Drive.
 *   From the client, when you desynchronize a folder you can do it in detail and choose to locally deactivate synchronization of different folders for the current device.
@@ -827,13 +853,13 @@ There are to ways to desynchronize a folder.
 
 By default, once you have synchronized a folder all its content (files and folders) are synchronized. But you can deactivate synchronization locally on some folders. This feature enables you to manage the storage space dedicated to the synchronization, which is especially useful if you use a device with a low-storage capacity.
 
-Clicking on the **Select sync folders** button in the [Settings window](#drive-settings-windo) shows the **Nuxeo Drive Filters** windows from which you can unselect folders to unsynchronize. Unselected folders remain displayed to you can easily reselect and synchronize them back. They are still marked as synchronized on your web UI.
+Clicking on the **Select sync folders** button in the [Settings window](#open-drive-settings) shows the **Nuxeo Drive Filters** windows from which you can unselect folders to unsynchronize. Unselected folders remain displayed to you can easily reselect and synchronize them back. They are still marked as synchronized on your web UI.
 
 #### Unsynchronizing Folders (Server)
 
 Unsynchronizing a folder is only possible from the Nuxeo Platform web interface. You can only unsynchronize the whole synchronized space, i.e. from the synchronization root ![]({{file name='drive_synced.png' space='userdoc' page='nuxeo-drive'}}): it is not possible to unsynchronize a child ![]({{file name='drive_synced_under_root.png' space='userdoc' page='nuxeo-drive'}}). Clicking on the icon ![]({{file name='drive_synced_under_root.png' space='userdoc' page='nuxeo-drive'}}) brings you back on the space from which the synchronization is done.
 
-To unsynchronize a space, in the Nuxeo Platform interface, click on the icon ![]({{file name='drive_synced.png' space='userdoc' page='nuxeo-drive'}}) .
+To unsynchronize a space, in the Nuxeo Platform interface, click on the icon ![]({{file name='drive_synced.png' space='userdoc' page='nuxeo-drive'}}).
 The icon becomes gray, indicating that the space is no longer synchronized. The folder and its content is no longer available from your Nuxeo Drive folder and from the Home **Nuxeo Drive** tab.
 
 ## Managing Documents
@@ -885,7 +911,7 @@ Clicking on the conflict message shows you the details and how to resolve the co
 
 ### Online Editing with Direct Edit
 
-Direct Edit enables you to edit any of your document&rsquo;s content from their Summary tab even if they are not synchronized. To be able to use correctly Direct Edit you need the Drive addon on your server and you must turn on Drive on your computer. This saves you the fastidious steps of opening your document, modify it and reimport it on your platform.
+Direct Edit enables you to edit any of your document's content from their Summary tab even if they are not synchronized. To be able to use correctly Direct Edit you need the Drive addon on your server and you must turn on Drive on your computer. This saves you the fastidious steps of opening your document, modify it and reimport it on your platform.
 
 To edit a document locally from the web interface:
 
@@ -962,11 +988,19 @@ To revoke an authentication token:
 3.  In the window that pops up, click on **OK** to confirm.
     The Nuxeo Drive client cannot communicate with the Nuxeo Platform and switches to offline. When you click on the Drive icon, it says "Update credentials (required)".
 
-&nbsp;
-
 {{! /multiexcerpt}}
 
 # Installation & Configuration
+
+## Requirements
+To be able to synchronize folders on your computer, you need to install the Nuxeo Drive client on your computer.
+We provide OS-specific installers for Mac OS X and Windows, available from the Nuxeo Drive tab of the Home.
+A Linux installer will come shortly.
+
+### Known Working Configurations for OS
+*   Windows:  Windows 7 and 8, 32b and 64b
+*   Mac OS: starting from the version 10.8 (Mountain Lion)
+
 
 ## Installation
 
@@ -980,21 +1014,9 @@ After Nuxeo Drive has been installed on the server, a Nuxeo Drive tab in the use
 
 ### Installing Nuxeo Drive on Your Computer
 
-{{#> callout type='tip' }}
-
-For the installation of the Nuxeo Drive package on the server, please see the [Installation and Administration Guide]({{page space='admindoc' page='installation-and-administration'}}).
-
-{{/callout}}
-
-To be able to synchronize folders on your computer, you need to install the Nuxeo Drive client on your computer. We provide OS-specific installer for Mac OS X and Windows, available from the Nuxeo Drive tab of the Home. A Linux installer will come shortly.
-
 If you try to synchronize a folder and you haven't installed the Nuxeo Drive client yet or haven't provided your credentials to the Nuxeo Drive client, you are automatically directed to the Nuxeo Drive home tab to install it.
 
 #### Installing Nuxeo Drive on Mac OS X
-
-Nuxeo Drive is known to work on OS X starting from the version 10.8 (Mountain Lion).
-
-**To install Nuxeo Drive on your Mac OS X computer:**
 
 1.  Download the installer (.dmg file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](http://community.nuxeo.com/static/drive/latest/nuxeo-drive.dmg).
 2.  Run the installer: drag and drop the Nuxeo Drive icon in the Applications directory.
@@ -1005,17 +1027,13 @@ Nuxeo Drive is known to work on OS X starting from the version 10.8 (Mountain Li
 
 #### Installing Nuxeo Drive on Windows
 
-Nuxeo Drive is known to work on Windows 7 and 8, 32b and 64b.
-
-**To install Nuxeo Drive on your Windows computer:**
-
 1.  Download the Windows installer (.msi file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](http://community.nuxeo.com/static/drive/latest/nuxeo-drive.msi).
 2.  Run the installer: indicate where Nuxeo Drive should be installed (typically `C:\Program Files (x86)`) and click **Next** until the installation process is done.
     Nuxeo Drive is now installed on your computer.
 
     {{#> callout type='tip' }}
 
-    If you have any problem due to a previous installlation of Nuxeo Drive you can try using this [Microsoft tool](https://support.microsoft.com/fr-fr/mats/program_install_and_uninstall) to uninstall it properly.
+    If you have any problem due to a previous installation of Nuxeo Drive you can try using this [Microsoft tool](https://support.microsoft.com/fr-fr/mats/program_install_and_uninstall) to uninstall it properly.
 
     {{/callout}}
 3.  You now need to [start Nuxeo Drive](#starting-nuxeo-drive) to use it.
@@ -1155,7 +1173,7 @@ When you add a new account you need to provide the following information:
 *   **Name**: Give a name to the Nuxeo Drive account you are setting.
     This is helpful when you use Nuxeo Drive with several applications.
 *   **Folder**: Select where you want your Nuxeo Drive folder to be created.
-*   **URL**: Type the URL of your Nuxeo application, with the `/nuxeo` suffix ( `<span class="nolink">[http://www.mynuxeoapp.com/nuxeo](http://www.mynuxeoapp.com/nuxeo)</span>`for instance).
+*   **URL**: Type the URL of your Nuxeo application, with the `/nuxeo` suffix ( `http://www.mynuxeoapp.com/nuxeo`for instance).
 *   **Username**: Type your username to the Nuxeo Platform application.
 *   **Password**: Type your password to the Nuxeo Platform application.
 
@@ -1191,16 +1209,123 @@ Nuxeo Drive has different parameters that you can set up through:
 *   A config.ini file inside the Drive binary folder or the Drive personal folder (.nuxeo-drive)
 *   or with a registry key inside `HKEY_LOCAL_MACHINE\Software\Nuxeo\Drive` (registry since Nuxeo Drive 2.1.331)
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default Value</th><th colspan="1">Description</th></tr><tr><td colspan="1">`ndrive-home`</td><td colspan="1">`%USER_HOME%/.nuxeo-drive`</td><td colspan="1">Define the personal folder.</td></tr><tr><td colspan="1">`log-level-file`</td><td colspan="1">&nbsp;</td><td colspan="1">Define level for file log. Can be TRACE, DEBUG, INFO, WARNING, ERROR.
-This can also be set up from the Settings window.</td></tr><tr><td colspan="1">`log-level-console`</td><td colspan="1">INFO</td><td colspan="1">Define level for console log. Can be TRACE, DEBUG, INFO, WARNING, ERROR.</td></tr><tr><td colspan="1">`log-filename`</td><td colspan="1">&nbsp;</td><td colspan="1">The name of the log file.</td></tr><tr><td colspan="1">`locale`</td><td colspan="1">&nbsp;</td><td colspan="1">Set up the language if not already defined.
-This can also be set up by the user from the Settings window.</td></tr><tr><td colspan="1">`force-locale`</td><td colspan="1">&nbsp;</td><td colspan="1">Force the reset to the language.</td></tr><tr><td colspan="1">`update-site-url`</td><td colspan="1">[http://community.nuxeo.com/static/drive/](http://community.nuxeo.com/static/drive/)</td><td colspan="1">Configure custom update website.
-See [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}}) for more details.</td></tr><tr><td colspan="1">`beta-update-site-url`</td><td colspan="1">[http://community.nuxeo.com/static/drive-tests/](http://community.nuxeo.com/static/drive-tests/)</td><td colspan="1">Configure custom beta update website.</td></tr><tr><td colspan="1">`debug`</td><td colspan="1">false</td><td colspan="1">Activate the debug window, and debug mode.</td></tr><tr><td colspan="1">`nofscheck`</td><td colspan="1">0</td><td colspan="1">Disable the standard check for binding, to allow installation on network filesystem.</td></tr><tr><td colspan="1">`proxy-server`</td><td colspan="1">None</td><td colspan="1">Define proxy server.
-This can also be set up by the user from the Settings window.</td></tr><tr><td colspan="1">`proxy-type`</td><td colspan="1">None</td><td colspan="1">Define proxy type.
-This can also be set up by the user from the Settings window.</td></tr><tr><td colspan="1">`proxy-exceptions`</td><td colspan="1">None</td><td colspan="1">Define URLs exception for the proxy.</td></tr><tr><td colspan="1">`consider-ssl-errors`</td><td colspan="1">false</td><td colspan="1">Define if SSL errors should be ignored.</td></tr><tr><td colspan="1">`delay`</td><td colspan="1">30</td><td colspan="1">Define the delay before each remote check.</td></tr><tr><td colspan="1">`handshake-timeout`</td><td colspan="1">60</td><td colspan="1">Define the handshake timeout.</td></tr><tr><td colspan="1">`timeout`</td><td colspan="1">20</td><td colspan="1">Define the socket timeout.</td></tr><tr><td colspan="1">`update-check-delay`</td><td colspan="1">3600</td><td colspan="1">Define the auto-update check delay. 0 means disabled.</td></tr><tr><td colspan="1">`max-errors`</td><td colspan="1">3</td><td colspan="1">Define the maximum number of retries before considering the file as in error.</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Parameter</th>
+<th colspan="1">Default Value</th>
+<th colspan="1">Description</th>
+</tr>
+<tr>
+<td colspan="1">`ndrive-home`</td>
+<td colspan="1">`%USER_HOME%/.nuxeo-drive`</td>
+<td colspan="1">Define the personal folder.</td>
+</tr>
+<tr>
+<td colspan="1">`log-level-file`</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">Define level for file log. Can be TRACE, DEBUG, INFO, WARNING, ERROR.
+This can also be set up from the Settings window.</td>
+</tr>
+<tr>
+<td colspan="1">`log-level-console`</td>
+<td colspan="1">INFO</td>
+<td colspan="1">Define level for console log. Can be TRACE, DEBUG, INFO, WARNING, ERROR.</td>
+</tr>
+<tr>
+<td colspan="1">`log-filename`</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">The name of the log file.</td>
+</tr>
+<tr>
+<td colspan="1">`locale`</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">Set up the language if not already defined.
+This can also be set up by the user from the Settings window.</td>
+</tr>
+<tr>
+<td colspan="1">`force-locale`</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">Force the reset to the language.</td>
+</tr>
+<tr>
+<td colspan="1">`update-site-url`</td>
+<td colspan="1">[http://community.nuxeo.com/static/drive/](http://community.nuxeo.com/static/drive/)</td>
+<td colspan="1">Configure custom update website.
+See [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}}) for more details.</td>
+</tr>
+<tr>
+<td colspan="1">`beta-update-site-url`</td>
+<td colspan="1">[http://community.nuxeo.com/static/drive-tests/](http://community.nuxeo.com/static/drive-tests/)</td>
+<td colspan="1">Configure custom beta update website.</td>
+</tr>
+<tr>
+<td colspan="1">`debug`</td>
+<td colspan="1">false</td>
+<td colspan="1">Activate the debug window, and debug mode.</td>
+</tr>
+<tr>
+<td colspan="1">`nofscheck`</td>
+<td colspan="1">0</td>
+<td colspan="1">Disable the standard check for binding, to allow installation on network filesystem.</td>
+</tr>
+<tr>
+<td colspan="1">`proxy-server`</td>
+<td colspan="1">None</td>
+<td colspan="1">Define proxy server.
+This can also be set up by the user from the Settings window.</td>
+</tr>
+<tr>
+<td colspan="1">`proxy-type`</td>
+<td colspan="1">None</td>
+<td colspan="1">Define proxy type.
+This can also be set up by the user from the Settings window.</td>
+</tr>
+<tr>
+<td colspan="1">`proxy-exceptions`</td>
+<td colspan="1">None</td>
+<td colspan="1">Define URLs exception for the proxy.</td>
+</tr>
+<tr>
+<td colspan="1">`consider-ssl-errors`</td>
+<td colspan="1">false</td>
+<td colspan="1">Define if SSL errors should be ignored.</td>
+</tr>
+<tr>
+<td colspan="1">`delay`</td>
+<td colspan="1">30</td>
+<td colspan="1">Define the delay before each remote check.</td>
+</tr>
+<tr>
+<td colspan="1">`handshake-timeout`</td>
+<td colspan="1">60</td>
+<td colspan="1">Define the handshake timeout.</td>
+</tr>
+<tr>
+<td colspan="1">`timeout`</td>
+<td colspan="1">20</td>
+<td colspan="1">Define the socket timeout.</td>
+</tr>
+<tr>
+<td colspan="1">`update-check-delay`</td>
+<td colspan="1">3600</td>
+<td colspan="1">Define the auto-update check delay. 0 means disabled.</td>
+</tr>
+<tr>
+<td colspan="1">`max-errors`</td>
+<td colspan="1">3</td>
+<td colspan="1">Define the maximum number of retries before considering the file as in error.</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 When use as command line argument you need to prefix with long argument modifier `--`.
 
-{{! /multiexcerpt}}{{! multiexcerpt name='drive-config-audit-logs'}}
+{{! /multiexcerpt}}
+
+{{! multiexcerpt name='drive-config-audit-logs'}}
 
 ### Nuxeo Drive and Audit Logs
 
@@ -1210,9 +1335,11 @@ Since Nuxeo Platform 7.3 we chose to use Elasticsearch as a default back end for
 
 That's why we strongly recommend to keep this default configuration.
 
-Please read the related sections: [Triggering SQL to Elasticsearch Audit Logs Migration]({{page page='elasticsearch-setup#triggeringsqltoelasticsearchauditlogsmigration'}}) and [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup#disablingelasticsearchforauditlogs'}}).
+Please read the related sections: [Triggering SQL to Elasticsearch Audit Logs Migration]({{page page='elasticsearch-setup'}}#triggeringsqltoelasticsearchauditlogsmigration) and [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#disablingelasticsearchforauditlogs).
 
-{{! /multiexcerpt}}{{! multiexcerpt name='drive-config-uninstall'}}
+{{! /multiexcerpt}}
+
+{{! multiexcerpt name='drive-config-uninstall'}}
 
 ## {{> anchor 'nuxeodrive-system-configure-uninstall'}}Uninstalling Nuxeo Drive
 
@@ -1288,16 +1415,12 @@ To uninstall Nuxeo Drive:
     ```
     sudo pip uninstall nuxeo-drive
     ```
-
 {{#> callout type='warning' }}
 At this point you have uninstalled the Nuxeo Drive program and its configuration. If you want to get rid of the synchronized data you also need to delete the Nuxeo Drive folder like you delete any regular Linux folder.
 {{/callout}}
 
 {{! /multiexcerpt}}
 
-&nbsp;
-
-&nbsp;
 
 # Customization
 
@@ -1305,86 +1428,82 @@ You can override classes to implement your own Nuxeo Drive following the [develo
 
 # Core Implementation
 
-## Client-Side Architecture schema
+Here is a schema showing the client-side architecture:
 
 ![]({{file name='drive-client-side-architecture.png'}} ?w=650,border=true)
 
-### CommandLine
+## CommandLine
 
 Handle the basic commandline arguments, create the Manager, and depending on the argument create a ConsoleApplication or Application.
 
-### Manager
+## Manager
 
-Handle all the generic behavior of Nuxeo Drive: auto-updates, bind of an engine, declaration of differents engine types, tracker.
+Handle all the generic behavior of Nuxeo Drive: auto-updates, bind of an engine, declaration of different engine types, tracker.
 
-### Engine
+## Engine
 
 Handle one server synchronization, can be extend to customize the behavior, it creates all the synchronization structure: QueueManager, LocalWatcher, RemoteWatcher, DAO.
 
-### DAO
+## DAO
 
 Abstraction for accessing the SQLite database, each Engine has its own DAO and so database
 
-### LocalWatcher
+## LocalWatcher
 
 Handle the local scan on startup and then the FS events, updating the States stored in DAO, and if needed queueing the State to be processed
 
-### RemoteWatcher
+## RemoteWatcher
 
 Handle the remote scan for the first synchronization and then the incremental polling from the server
 
-### QueueManager
+## QueueManager
 
 Handle the different types of Processor to process any remote or local modification
 
-### RemoteFileProcessor
+## RemoteFileProcessor
 
 Specialized thread in uploading document
 
-### RemoteFolderProcessor
+## RemoteFolderProcessor
 
 Specialized thread in create remote folder
 
-### LocalFileProcessor
+## LocalFileProcessor
 
 Specialized thread in download document
 
-### LocalFolderProcessor
+## LocalFolderProcessor
 
 Specialized thread in create local folder
 
-### AdditionalProcessor
+## AdditionalProcessor
 
 If the queue is big, some additional Processor will be launch by the QueueManager to either download or upload document
 
-### AppUpdater
+## AppUpdater
 
 Handle the auto-update polling and the update download process
 
-### Tracker
+## Tracker
 
 Use for Analytics, anonymous report of usage
 
-### ConsoleApplication
+## ConsoleApplication
 
 Console behavior implementation
 
-### Application
+## Application
 
 OperatingSystem GUI handles the creation of windows, systray and message
 
-### Translator
+## Translator
 
 Load labels translation and offer the translation service as static method
 
-### WebDialog
+## WebDialog
 
 Base of all Nuxeo Drive window, it is basically a WebKit view with a Drive JavaScript object mapped by the JavaScript API
 
 QT is heavily used in the new client. Here is a diagram of the signals/slots connections:
 
 {{> end_of_tabs }}
-
-&nbsp;
-
-* * *

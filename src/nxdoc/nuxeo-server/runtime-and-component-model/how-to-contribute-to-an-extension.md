@@ -2,7 +2,7 @@
 title: How to Contribute to an Extension
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-08'
     status: ok
 details:
     howto:
@@ -13,11 +13,11 @@ details:
         tool: 'Nuxeo IDE, Studio'
         topics: Extension point
 labels:
+    - lts2016-ok
     - xml-extension
     - extension-point
     - studio
     - howto
-    - nuxeo-ide
     - runtimecomponent
 toc: true
 confluence:
@@ -162,16 +162,16 @@ history:
 ---
 ## {{> anchor 'finding-extension-point'}}Finding the Extension Point Where to Contribute
 
-Whatever the tools you're using (Nuxeo Studio or Nuxeo IDE), your first step is to find the open door configuration where you want to contribute. We call these open doors **Extension points**.
-Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listExtensionPoints).
+Whatever the tools you're using ([Nuxeo Studio](https://www.nuxeo.com/products/studio/) or [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo)), your first step is to find the open door configuration where you want to contribute. We call these open doors **Extension points**.
+Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/).
 
-1.  Click on the **Explore** button of the given version you work with.
-2.  In the **Browse by category** panel, click on **Bundle groups > Components > Extension points**.
-3.  In the **Extension Point** column, click on the extension point you're interested in.
+1.  Click on `Extension points`.
+2.  Filter what you want using the combobox.
+3.  Click on the extension point you're interested in.
     The documentation of this extension point is displayed.
     ![]({{file name='Nuxeo-explorer.png'}} ?w=600,border=true)
-4.  Then, if you click on any link in the **Contributions** section, you will see all the default contributions implemented into your Nuxeo instance.
-    There are [hundreds of configuration possibilities](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listExtensionPoints).
+3.  Then, if you click on any link in the **Contributions** section, you will see all the default contributions implemented into your Nuxeo instance.
+    There are [hundreds of configuration possibilities](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/listExtensionPoints).
 
 ## {{> anchor 'xml-extension-studio'}}Contributing Using Nuxeo Studio
 
@@ -186,7 +186,7 @@ Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](htt
 
 **Notes**
 
-*   Pay attention to always start with an `<extension>` element or a `<require>` element followed by an `<extension>` element. There is a minimal check done so as to avoid you contribute non correct XML. The `<require>` mechanism can be used to make sure you deploy after another contribution that is deployed by some built-in plug-ins for instance. You need to reference the component name in the `require` content.
+*   Pay attention to always start with an `<extension>` element, or a `<require>` element followed by an `<extension>` element. There is a minimal check done so as to avoid you contribute non correct XML. The `<require>` mechanism can be used to make sure you deploy after another contribution that is deployed by some built-in plugins for instance. You need to reference the component name in the `require` content.
 *   You can contribute several extension points in the same XML Extensions feature. This is useful to group extensions that are contributed for the same high level functional goal.
     Thus, you can have:
 
@@ -218,30 +218,30 @@ Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](htt
 
     etc.
 
-## Contributing Using Nuxeo IDE
+## Contributing Using Nuxeo Generator
 
-Contributing to an extension using Nuxeo requires more steps that using Nuxeo Studio.
+Contributing to an extension using Nuxeo Generator requires more steps that using Nuxeo Studio.
 
-Here we assume that you have installed Nuxeo IDE and follow the [Getting Started guide]({{page page='getting-started-with-nuxeo-ide'}}).
+Here we assume that you have installed [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) and follow the [Getting Started guide]({{page page='getting-started-with-nuxeo-generator'}}).
 
-### Creating Your XML Extension in Nuxeo IDE
+### Creating Your XML Extension in Nuxeo Generator
 
 Once you have found the extension point you want to contribute to:
 
 1.  Create a file `myproject-servicewhereIcontribute-contribution.xml` into the directory `src/main/resources/OSGI-INF/` of your project.
 2.  Declare an empty component into this file, like that:
-    ```
+    ```xml
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
 
     </component>
     ```
     {{#> callout type='note' heading='Naming your component'}}
-    *   In Nuxeo, we follow this naming way `org.mycompany.myproject.extension.point.where.we.contribute.contribution`.
+    *   In Nuxeo, we follow this naming convention `org.mycompany.myproject.extension.point.where.we.contribute.contribution`.
         You can follow your way but be careful to avoid conflicts.
     *   You must give a **unique name** for your component. If the name of your package is not unique it will **not be deployed**.{{/callout}}
 3.  Add your contribution that express the configuration you want in the component XML fragment. You get something like:
-    ```
+    ```xml
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
 
@@ -265,13 +265,13 @@ In the previous section you have created your configuration. You must now declar
     Bundle-ClassPath: .
     Bundle-Version: 5.5
     Bundle-Name: jalon-dm-bundle
-    Nuxeo-Component: OSGI-INF/extensions/me.jalon.dm.bundle.importer.FileS
-    &nbsp;ystemFetcher.xml,OSGI-INF/extensions/com.mycomapny.test.FillIDDocumen
-    &nbsp;t.xml,OSGI-INF/extensions/com.mycomapny.test.asda.xml
+    Nuxeo-Component: OSGI-INF/extensions/me.jalon.dm.bundle.importer.FileSystemFetcher.xml,
+    &nbsp;OSGI-INF/extensions/com.mycomapny.test.FillIDDocument.xml,
+    &nbsp;OSGI-INF/extensions/com.mycomapny.test.asda.xml
     Bundle-ManifestVersion: 2
     Bundle-SymbolicName: jalon-dm-bundle
     Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-
+    &nbsp;
     ```
     ```
     Manifest-Version: 1.0
@@ -280,11 +280,11 @@ In the previous section you have created your configuration. You must now declar
 
     ```
 
-2.  If the `Nuxeo-Component` already exists with another component declaration, separate them by commas.
+2.  If the `Nuxeo-Component` entry already exists with another component declaration, separate them by commas.
 
 {{{multiexcerpt 'manifest-format-warning' page='How to create an empty bundle'}}}
 
-## <span style="color: rgb(0,0,0);">Overriding the Nuxeo Default Configuration</span>
+## Overriding the Nuxeo Default Configuration
 
 Most of the time you will want to override an existing Nuxeo Component. Each extension point has its own logic (even if most of the time you will just have to contribute the same item with the same name). So look into the extension point definition to see how to override an existing configuration.
 
@@ -297,7 +297,7 @@ Components deployment is linear, so if you want to override an existing configur
 3.  Copy the name of the component (value after **In component**).
 4.  Paste it in your component into a `<require>` item.
     You will have something like that:
-    ```
+    ```xml
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
        <require>name.of.the.component.you.want.to.override</require>
@@ -308,5 +308,4 @@ Components deployment is linear, so if you want to override an existing configur
             ...
        </extension>
     </component>
-
     ```

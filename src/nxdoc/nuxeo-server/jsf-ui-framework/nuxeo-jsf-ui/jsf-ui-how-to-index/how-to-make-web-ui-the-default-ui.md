@@ -1,16 +1,17 @@
 ---
-title: How to Make JSF UI the Default UI
+title: How to Make Web UI the Default UI
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 details:
     howto:
-        excerpt: Learn how to make JSF UI the default UI instead of the new Web UI.
+        excerpt: Learn how to make the new Web UI the default UI instead of the JSF UI.
         level: Beginner
         tool: XML Extension
         topics: 'Web UI, JSF UI'
 labels:
+    - lts2016-ok
     - howto
 confluence:
     ajs-parent-page-id: '20517820'

@@ -6,6 +6,8 @@ review:
     status: ok
 redirect: how-to-contribute-to-an-extension
 redirect_source: How to Contribute to an Extension
+labels:
+    - content-review-lts2016
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''

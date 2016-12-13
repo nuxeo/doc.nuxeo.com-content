@@ -2,9 +2,10 @@
 title: Document Layouts
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
+    - lts2016-ok
     - layout
     - web-ui-component
     - excerpt
@@ -113,14 +114,13 @@ It is possible to merge layouts when redefining the document type, adding a prop
 
 ```
 
-Since 5.8, the property named&nbsp;`display` set on the layout configuration is enough to handle a two columns rendering, it can be set to value `table_2_columns` for this purpose.
+The property named&nbsp;`display` set on the layout configuration is enough to handle a two columns rendering, it can be set to value `table_2_columns` for this purpose.
 
 ## {{> anchor 'display'}}Document Layouts Display
 
-The [documentLayout tag](http://community.nuxeo.com/api/nuxeo/5.8/tlddoc/nxl/documentLayout.html) can be used to display the layouts of a document:
+The [documentLayout tag](http://community.nuxeo.com/api/nuxeo/latest/tlddoc/nxl/documentLayout.html) can be used to display the layouts of a document:
 
 ```xml
-
 <div xmlns="http://www.w3.org/1999/xhtml"
     xmlns:nxl="http://nuxeo.org/nxforms/layout">
   <nxl:documentLayout mode="view" value="#{currentDocument}" />
@@ -142,7 +142,7 @@ It is possible to make a distinction between the layouts defined in a given mode
 
 It is also possible to define a fallback mode on documents, for instance when retrieving layouts for document mode `driveEdit`, if no layout is resolved, it can fallback to layouts defined for document mode `edit`:
 
-```
+```xml
 <nxl:documentLayout
   documentMode="edit"
   documentModeFallback="driveEdit"

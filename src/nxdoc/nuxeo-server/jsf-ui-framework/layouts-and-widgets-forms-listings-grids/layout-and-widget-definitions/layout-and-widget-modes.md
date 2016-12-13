@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - layout
     - widget
     - layout-widgets-component
@@ -149,11 +150,11 @@ See [Field Binding and Expressions]({{page page='field-binding-and-expressions'}
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
-*   [Layout Definitions]({{page page='layout-definitions'}})
-*   [Widget Definitions]({{page page='widget-definitions'}})
+- [Layout Definitions]({{page page='layout-definitions'}})
+- [Widget Definitions]({{page page='widget-definitions'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in Studio documentation'}}
 
-*   [Form Layouts]({{page space='studio' page='form-layouts'}})
+- [Form Layouts]({{page space='studio' page='form-layouts'}})
 
 {{/panel}}</div></div>

@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: Workflow
 labels:
+    - content-review-lts2016
     - workflow
     - howto
     - excerpt
@@ -81,18 +82,16 @@ Fill in the following parameters:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [undefined]()&nbsp;
-*   [How to Modify a Workflow Variable outside of Workflow Context]({{page page='how-to-modify-a-workflow-variable-outside-of-workflow-context'}})
-*   [undefined]()&nbsp;
-*   [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})&nbsp;
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Modify a Workflow Variable outside of Workflow Context]({{page page='how-to-modify-a-workflow-variable-outside-of-workflow-context'}})
+- [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Workflow in Nuxeo Studio]({{page space='studio' page='workflow'}})
-*   [Full-Text Queries]({{page page='full-text-queries'}})
-*   [NXQL]({{page page='nxql'}})
-*   [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
-*   [Workflow]({{page page='workflow'}})
+- [Workflow in Nuxeo Studio]({{page space='studio' page='workflow'}})
+- [Full-Text Queries]({{page page='full-text-queries'}})
+- [NXQL]({{page page='nxql'}})
+- [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
+- [Workflow]({{page page='workflow'}})
 
 {{/panel}}</div></div>

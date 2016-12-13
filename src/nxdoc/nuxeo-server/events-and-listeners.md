@@ -2,9 +2,10 @@
 title: Events and Listeners
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
+    - lts2016-ok
     - event
     - listener
     - core-component
@@ -198,8 +199,6 @@ Several event listeners exist by default in the nuxeo platform, for instance:
 
 *   `DocUIDGeneratorListener`: it listens to document creation events and adds an identifier to the document if an UID pattern has been defined for this document type.
 
-*   DocVersioningListener: it listens to document versioning change events and changes the document version numbers accordingly.
-
 ## Registering an Event Listener
 
 {{#> callout type='tip' }}
@@ -211,29 +210,28 @@ Check our [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) to bo
 Event listeners can be registered using extension points. Here are example event listeners registrations from the Nuxeo Platform:
 
 ```
-<component name="DublinCoreStorageService">
   <extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
     <listener name="dclistener" async="false" postCommit="false" priority="120"
-      class="org.nuxeo.ecm.platform.dublincore.listener.DublinCoreListener">
+        class="org.nuxeo.ecm.platform.dublincore.listener.DublinCoreListener">
+      <event>documentCreated</event>
+      <event>beforeDocumentModification</event>
+      <event>documentPublished</event>
+      <event>lifecycle_transition_event</event>
+      <event>documentCreatedByCopy</event>
     </listener>
   </extension>
-</component>
-
 ```
 
 ```
-<component name="org.nuxeo.ecm.platform.annotations.repository.listener">
   <extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
     <listener name="annotationsVersionEventListener" async="true" postCommit="true"
         class="org.nuxeo.ecm.platform.annotations.repository.service.VersionEventListener">
-      <event>documentCreated</event>
+      <event>documentCheckedIn</event>
       <event>documentRemoved</event>
       <event>versionRemoved</event>
       <event>documentRestored</event>
     </listener>
   </extension>
-</component>
-
 ```
 
 When defining an event listener, you should specify:
@@ -242,8 +240,8 @@ When defining an event listener, you should specify:
 *   whether the listener is synchronous or asynchronous (default is synchronous),
 *   whether the listener runs post-commit or not (default is false),
 *   an optional priority among similar listeners,
-*   the implementation class, that must implement `org.nuxeo.ecm.core.event.EventListener`,
-*   an optional list of event ids for which this listener must be called.
+*   the implementation class, that must implement `org.nuxeo.ecm.core.event.EventListener` for synchronous inline listeners or `org.nuxeo.ecm.core.event.PostCommitEventListener` for others (post-commit or asynchronous listeners),
+*   an optional list of event ids for which this listener must be called (it is strongly recommended to explicitly list the relevant events, for performance reasons).
 
 There are several kinds of listeners:
 
@@ -263,7 +261,7 @@ import org.nuxeo.ecm.core.event.impl.DocumentEventContext;
 
 public class BookEventListener implements EventListener {
 
-    public void handleEvent(Event event) throws ClientException {
+    public void handleEvent(Event event) {
         EventContext ctx = event.getContext();
         if (!(ctx instanceof DocumentEventContext)) {
             return;
@@ -278,11 +276,10 @@ public class BookEventListener implements EventListener {
         }
     }
 
-    public void process(DocumentModel doc) throws ClientException {
+    public void process(DocumentModel doc) {
         ...
     }
 }
-
 ```
 
 Note that if a listener expects to modify the document upon save or creation, it must use events _emptyDocumentModelCreated_ or _beforeDocumentModification_, and **not** save the document, as these events are themselves fired during the document save process.
@@ -294,25 +291,11 @@ If a listener expects to observe a document after it has been saved to do things
 It is not as common as having new listeners, but sometimes it's useful to send new events. To do this you have to create an event bundle containing the event, then send it to the event producer service:
 
 ```
-EventProducer eventProducer;
-try {
-    eventProducer = Framework.getService(EventProducer.class);
-} catch (Exception e) {
-    log.error("Cannot get EventProducer", e);
-    return;
-}
-
+EventProducer eventProducer eventProducer = Framework.getService(EventProducer.class);
 DocumentEventContext ctx = new DocumentEventContext(session, session.getPrincipal(), doc);
 ctx.setProperty("myprop", "something");
-
 Event event = ctx.newEvent("myeventid");
-try {
-    eventProducer.fireEvent(event);
-} catch (ClientException e) {
-    log.error("Cannot fire event", e);
-    return;
-}
-
+eventProducer.fireEvent(event);
 ```
 
 You can also have events be sent automatically at regular intervals using the [Scheduling Periodic Events]({{page page='scheduling-periodic-events'}}), see that section for mor
@@ -326,7 +309,7 @@ You can use the document context map for this.
 
 ```
 ...
-   DocumentEventContext ctx = (DocumentEventContext)event.getContext();
+   DocumentEventContext ctx = (DocumentEventContext) event.getContext();
    DocumentModel doc = ctx.getSourceDocument();
    ScopedMap data = doc.getContextData();
    data.putScopedValue(MY_ERROR_KEY, "some info");
@@ -334,14 +317,14 @@ You can use the document context map for this.
 
 ```
 
-Another thing is to insure that the current transaction will be roll-backed. Marking the event as rollback
-makes the event service throwing a runtime exception when returning from the listener.
+Another thing is to ensure that the current transaction will be rolled back. Marking the event as rollback
+makes the event service throw a runtime exception when returning from the listener.
 
 ```
 ...
   TransactionHelper.setTransactionRollbackOnly();
   event.markRollBack();
-  throw new ClientException("rollbacking");
+  throw new NuxeoException("rolling back");
 ...
 
 ```
@@ -352,13 +335,13 @@ Then the error handling in the UI layer can be managed like this
 ...
   DocumentModel doc = ...;
   try {
-     // doc related operations
-  } catch (Exception e) {
-     Serializable info = doc.getContextData(MY_ERROR_KEY);
-     if (info == null) {
-       throw e;
-     }
-     // handle code
+      // doc related operations
+  } catch (NuxeoException e) {
+      Serializable info = doc.getContextData(MY_ERROR_KEY);
+      if (info == null) {
+          throw e;
+      }
+      // handle code
   }
 ...
 
@@ -366,21 +349,17 @@ Then the error handling in the UI layer can be managed like this
 
 ## Asynchronous vs Synchronous Listeners
 
-Asynchronous listeners will run in a separated thread (actually in the Workmanager using a processing queue since 5.6): this means the main transaction, the one that raised the event, won't be blocked by the listener processing.
+Asynchronous listeners will run as Work instances in a separated WorkManager thread. This means the main transaction, the one that raised the event, won't be blocked by the listener processing.
 
-So, if the processing done by the listener may be long, this is a good candidate for async processing.
+Therefore if the processing done by the listener may be long, this is a good candidate for asynchronous processing.
 
-However, there are some impacts in moving a sync listener to an async one:
+However, there are some impacts in moving a synchronous listener to an asynchronous one:
 
 *   the listener signature needs to change
-
-    *   <span style="font-size: 10.0pt;line-height: 13.0pt;">rather than receiving a single event, it will receive an EventBundle that contains all events inside the transaction</span>
-*   <span style="font-size: 10.0pt;line-height: 13.0pt;">because the listener runs in a separated transaction it can not rollback the source transaction (it is too late anyway)</span>
-*   <span style="font-size: 10.0pt;line-height: 13.0pt;">the listener code needs to be aware that it may have to deal with new cases</span>
-
-    *   <span style="font-size: 10.0pt;line-height: 13.0pt;">typically, the listener may receive an event about a document that has since then been deleted</span>
-
-However, it is easy to have a single listener class that exposes both interfaces and can be use both synchronously and asynchronously.
+    *   rather than receiving a single event, it will receive an EventBundle that contains all events inside the transaction
+*   because the listener runs in a separated transaction it can not rollback the source transaction (it is too late anyway)
+*   the listener code needs to be aware that it may have to deal with new cases
+    *   typically, the listener may receive an event about a document that has since then been deleted
 
 ## Forwarding Events to an External Event Bus
 
@@ -388,14 +367,12 @@ The beginning of an integration with [RabbitMQ](https://www.rabbitmq.com/) is av
 
 ## Performances and Monitoring&nbsp;
 
-Using listeners, especially synchronous one may impact the global performance of the system.
+Using listeners, especially synchronous ones, may impact the global performance. Typically, having synchronous listeners that do long processing will reduce the scalability of the system.
 
-Typically, having synchronous listeners that do long processing will reduce the scalability of the system.
+In that kind of situation, using an asynchronous listener is the recommended approach:
 
-In that kind of case, using asynchronous listener is the recommended approach:
-
-*   the interactive transaction is no longer tied to listener execution
-*   Workmanager allows to configure how many async listeners can run in concurrency
+*   The interactive transaction is no longer tied to listener execution.
+*   The `WorkManager` allows to configure how many asynchronous listeners can run in concurrency.
 
 To monitor execution of the listeners, you can use the Admin Center / Monitoring / Nuxeo Event Bus to
 
@@ -404,9 +381,9 @@ To monitor execution of the listeners, you can use the Admin Center / Monitoring
 
 ![]({{file name='AdminCenter-Nuxeo-Event-Bus.png'}} ?w=600,border=true)
 
-For diagnostic and testing purpose, you can use the [EventAdminService](http://explorer.nuxeo.org/nuxeo/site/distribution/cap-8.3/viewService/org.nuxeo.ecm.core.event.EventServiceAdmin) to <span style="font-size: 10.0pt;line-height: 13.0pt;">activate / deactivate listeners one by one.</span>
+For diagnostic and testing purpose, you can use the [EventAdminService](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.core.event.EventServiceAdmin) to activate / deactivate listeners one by one.
 
-<span style="font-size: 10.0pt;line-height: 13.0pt;">The EventServiceAdmin is accessible:</span>
+The `EventServiceAdmin` is accessible:
 
 *   via Java API
 *   [via JMX]({{page space='admindoc' page='supervision'}})
@@ -417,12 +394,12 @@ For diagnostic and testing purpose, you can use the [EventAdminService](http://e
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-tos'}}
 
-*   [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
-*   [Event and Listener How To Index]({{page page='event-and-listener-how-to-index'}})
+- [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
+- [Event and Listener How To Index]({{page page='event-and-listener-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [Common Events]({{page page='common-events'}})
-*   [Scheduling Periodic Events]({{page page='scheduling-periodic-events'}})
+- [Common Events]({{page page='common-events'}})
+- [Scheduling Periodic Events]({{page page='scheduling-periodic-events'}})
 
 {{/panel}}</div></div>

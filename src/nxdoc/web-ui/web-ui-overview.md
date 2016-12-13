@@ -5,6 +5,9 @@ review:
     date: '2015-12-01'
     status: ok
 toc: true
+labels:
+    - content-review-lts2016
+    - nuxeo-elements-component
 confluence:
     ajs-parent-page-id: '26316892'
     ajs-parent-page-title: Web UI
@@ -126,6 +129,18 @@ history:
 
 ---
 The Nuxeo Web UI is a user interface designed in Web Component (HTML) / Polymer framework. It allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full screen suggester. [Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) is a first class choice for projects where visual and workflows are important requirements. Let's discover what are the functional evolutions present on this new interface.
+
+## Requirements
+
+{{! multiexcerpt name='webui-requirements'}}
+Nuxeo Web UI and Nuxeo Web UI Elements framework make use of the recent W3C standard "Web Components" and Google Polymer 1.0 framework. The Google Polymer framework comes with "polyfills for web components", i.e. a library that extends the support of web components standard to more browsers.
+Supported browsers for Nuxeo Web UI and Nuxeo Web UI Elements are:
+ - Firefox
+ - Chrome
+ - Edge
+ 
+It should also be possible to build applications that support IE11, Safari, Safari Mobile with Nuxeo Web UI Elements.
+{{! /multiexcerpt}}
 
 ## Functional Overview
 

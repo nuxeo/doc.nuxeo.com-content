@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: 'Drag and Drop, Layout'
 labels:
+    - content-review-lts2016
     - howto
 confluence:
     ajs-parent-page-id: '20517820'
@@ -123,14 +124,14 @@ It is currently not possible to use tags, collections and complex types on this 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
-*   [How to Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})
-*   [JSF UI How-To Index]({{page page='jsf-ui-how-to-index'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
+- [How to Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})
+- [JSF UI How-To Index]({{page page='jsf-ui-how-to-index'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Drag and Drop Service for Content Capture (HTML5-Based)]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
-*   [Creating Content]({{page space='userdoc' page='creating-content'}})
+- [Drag and Drop Service for Content Capture (HTML5-Based)]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
+- [Creating Content]({{page space='userdoc' page='creating-content'}})
 
 {{/panel}}</div></div>

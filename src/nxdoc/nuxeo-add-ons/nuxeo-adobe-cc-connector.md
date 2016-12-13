@@ -2,9 +2,13 @@
 title: Nuxeo Adobe CC Connector
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
+    labels:
+      - lts2016-ok
 toc: true
+labels:
+    - content-review-lts2016
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons
@@ -153,12 +157,12 @@ Each displayed asset comes with a **card view** containing:
 
 *   The thumbnail of the asset
 *   Customized information: filename, format and modification date.
-*   For Photoshop so far: a green checkbox added when the document is already placed on the current project
+*   For Photoshop so far: a green checkbox added when the document is already placed on the current project.
 
 You can **search** for assets, using one of the following options:
 
-*   &nbsp;On document title: only documents with the keyword in their title are returned.
-*   On folder title: Search results show all the assets located in folders whose title matches the keyword.
+*   On document title: only documents with the keyword in their title are returned.
+*   On folder title: search results show all the assets located in folders whose title matches the keyword.
 
 ![]({{file name='NuxeoCCConnector_search.png'}} ?w=600,h=506,border=true)
 
@@ -167,8 +171,8 @@ You can **search** for assets, using one of the following options:
 When selecting an asset, you are redirected to the asset view, that shows the following information:&nbsp;
 
 *   The asset thumbnail
-*   The asset filename with a link: It enables the user to directly open the asset on the Nuxeo instance
-*   The same customized fields as on the document listing view: Format and modification date
+*   The asset filename with a link: it enables the user to directly open the asset on the Nuxeo instance
+*   The same customized fields as on the document listing view: format and modification date
 
 ![]({{file name='NuxeoCCConnector_assetView.png'}} ?w=400,border=true)
 
@@ -176,8 +180,9 @@ When selecting an asset, you are redirected to the asset view, that shows the fo
 
 Depending on the Adobe application some actions are available on the asset view:
 
-*   On **Photoshop**: "Open", "Update" or "Delete" pictures/PSD projects
-*   On **InDesign** and **Illustrator**: "Place" pictures.&nbsp;
+*   On **Photoshop**: "Open", "Place", "Update" or "Delete" pictures/PSD projects
+*   On **InDesign** and **Illustrator**: "Place" pictures.
+
 
 Updated documents in the Nuxeo instance or in an Adobe application will be replicated everywhere. A red icon indicates that synchronization to the server has to be done.
 

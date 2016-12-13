@@ -2,11 +2,11 @@
 title: Nuxeo Groups and Rights Audit
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
+    - lts2016-ok
     - nuxeo-groups-rights-audit
-    - last-review-20150226
     - excerpt-include
 toc: true
 confluence:
@@ -55,7 +55,7 @@ history:
 
 The Nuxeo Groups and Rights Audit package requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin Center]({{page page='installing-a-new-package-on-your-instance'}}).
 
-After it has been installed, administrators have a new export option available, called "Permission audit export".
+After it has been installed, administrators have a new document action option available, called "Permission Audit Export".
 
 ![]({{file name='groups-rights-audit-export-link.png' space='userdoc' page='nuxeo-groups-and-rights-audit'}} ?w=200,border=true,thumbnail=true)
 
@@ -63,7 +63,7 @@ After it has been installed, administrators have a new export option available, 
 
 ### Setting Up e-Mail Sending
 
-The Nuxeo Groups and Rights Audit addon sends email to the administrator who requested the audit. So your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='setup-best-practices#setup-mail'}}).
+The Nuxeo Groups and Rights Audit addon sends email to the administrator who requested the audit. So your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='set-up-email-notification'}}).
 
 ### Setting Up a Higher Timeout
 
@@ -75,9 +75,9 @@ The default timeout to process the export of rights is 1200 seconds (20 minutes)
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Nuxeo Groups and Rights Audit user documentation]({{page space='userdoc' page='nuxeo-groups-and-rights-audit'}})
-*   [Setup Best Practices]({{page page='setup-best-practices'}})
-*   [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
+- [Nuxeo Groups and Rights Audit user documentation]({{page space='userdoc' page='nuxeo-groups-and-rights-audit'}})
+- [Setup Best Practices]({{page page='setup-best-practices'}})
+- [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
 
 {{/panel}}</div><div class="column medium-6">
 

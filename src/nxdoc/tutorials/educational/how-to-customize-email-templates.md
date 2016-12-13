@@ -13,6 +13,7 @@ details:
         tool: Studio
         topics: Alerts
 labels:
+    - content-review-lts2016
     - howto
     - link-update
     - mail-template
@@ -161,13 +162,30 @@ Default templates for mail notifications can be overridden. Just follow those st
 
 &nbsp;
 
+## Making the Document Links in Notification Emails Point to the Web UI
+
+On Nuxeo 8.10, in case both `nuxeo-jsf-ui` and `nuxeo-web-ui` packages are installed, the document links in notification emails point to the JSF UI.
+If you want to change this behavior to make them point to the Web UI you need to add the following XML contribution:
+
+```xml
+<extension target="org.nuxeo.ecm.platform.url.service.DocumentViewCodecService" point="codecs">
+  <documentViewCodec name="notificationDocId" enabled="true" prefix="doc"
+      class="org.nuxeo.web.ui.url.codec.WebNotificationDocumentIdCodec" priority="1000" />
+</extension>
+```
+
+Note that the default `priority` value for the JSF UI contribution is 100 and that the highest priority wins.
+
+See [NXP-20929](https://jira.nuxeo.com/browse/NXP-20929) for details.
+
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   How to setup a test SMTP server
-*   [One step validation flow based on lifecycle only]({{page page='one-step-validation-flow-based-on-lifecycle-only'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to setup a test SMTP server]({{page page='how-to-setup-a-test-smtp-server'}})
+- [One step validation flow based on lifecycle only]({{page page='one-step-validation-flow-based-on-lifecycle-only'}})
+- [How to Make Web UI the Default UI]({{page page='how-to-make-web-ui-the-default-ui'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 

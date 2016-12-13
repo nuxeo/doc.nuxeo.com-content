@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - layouts
     - widgets
     - layout-widgets-component
@@ -325,18 +326,15 @@ history:
         version: '1'
 
 ---
-<div class="row"><div class="column medium-8">{{! excerpt}}
 
+{{! excerpt}}
 Layouts and widgets have been originally designed to display forms, and have been improved to handle listings as well as summary pages. These configuration elements are used to generate page fragments from XML configurations contributed to [Nuxeo Runtime extension points]({{page page='runtime-and-component-model'}}).
-
 {{! /excerpt}}
 
 In this chapter we will see how to define layouts and associated widgets, and use them in XHTML pages.
 
 {{#> callout type='info' }}
-
 Layouts and Widgets can be configured using Studio: Check out the [Form Layouts]({{page space='studio' page='form-layouts'}}) documentation.
-
 {{/callout}}
 
 ## Key Concepts
@@ -379,9 +377,7 @@ The following pages explain how to work with layouts and widgets.
 *   [Layout and Widget Display]({{page space='NXDOC' page='Layout and+Widget+Display'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Layouts can be displayed thanks to a series a JSF tags that will query the web layout service to get the layout definition and build it for a given mode.</span>
 *   [Generic Layout Usage]({{page space='NXDOC' page='Generic Layout+Usage'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Layouts can be used with other kind of objects than documents.</span>
 *   [Layout & Widget How-To Index](/pages/viewpage.action?pageId=19235623)
+{{/panel}}
 
-{{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
-
-[Check out the Layout Showcase demo.](http://showcase.nuxeo.com/layout)
-
-{{/panel}}</div></div>
+<div class="column medium-4">
+</div>

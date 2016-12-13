@@ -269,7 +269,7 @@ history:
 ---
 {{! excerpt}}
 
-By default, documents can be created in workspaces, templates and folders only. There are several ways to create documents in the Nuxeo Platform, either from the UI using forms, using [drag and drop import](#content-creation-dandd) from your desktop, or [creating them directly from MS Office or OpenOffice]({{page page='nuxeo-drive#creating-documents'}}). This section presents the differents means that are available to you, either by default or using addons.
+By default, documents can be created in workspaces, templates and folders only. There are several ways to create documents in the Nuxeo Platform, either from the UI using forms, using [drag and drop import](#importing-documents-using-drag-and-drop) from your desktop, or [creating them directly from MS Office or OpenOffice]({{page page='nuxeo-drive#creating-documents'}}). This section presents the differents means that are available to you, either by default or using addons.
 
 {{! /excerpt}}
 
@@ -365,9 +365,11 @@ Picture (.jpg, .png, etc)
 
 Picture
 
-</td></tr></tbody></table></div>{{! /multiexcerpt}}
+</td></tr></tbody></table></div>
 
-### {{> anchor 'content-creation-dandd'}}Importing Documents Using Drag and Drop
+{{! /multiexcerpt}}
+
+### Importing Documents Using Drag and Drop
 
 Drag and drop is based on the HTML 5 standard and is available on all browsers that support the HTML 5 Drag and drop, without extension. Basically, this includes all browsers supported by the Nuxeo Platform:
 

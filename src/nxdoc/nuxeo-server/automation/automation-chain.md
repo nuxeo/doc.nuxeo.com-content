@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - automation
     - automation-component
     - excerpt
@@ -245,12 +246,12 @@ In Automation you can add aliases for each chain:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in other documentation'}}
 
-*   [Operations Index]({{page page='operations-index'}})
-*   [Automation How-To Index]({{page page='automation-how-to-index'}})
+- [Operations Index]({{page page='operations-index'}})
+- [Automation How-To Index]({{page page='automation-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Automation chains in Nuxeo Studio'}}
 
-*   [Automation]({{page space='studio' page='automation'}})
-*   [Automation Scripting]({{page space='studio' page='automation-scripting'}})
+- [Automation]({{page space='studio' page='automation'}})
+- [Automation Scripting]({{page space='studio' page='automation-scripting'}})
 
 {{/panel}}</div></div>

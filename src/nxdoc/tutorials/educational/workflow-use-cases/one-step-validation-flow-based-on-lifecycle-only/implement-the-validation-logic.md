@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - tuto-automation
 confluence:
     ajs-parent-page-id: '3345551'
@@ -132,16 +133,16 @@ The validation automation chain will be used by the users with validationWorkflo
 In this step, we will just create this chain, not adding anything to call it, neither a user action nor an event handler. Actually, the chain will be called if the user "accepts" the document's approval.
 
 {{#> panel heading='To implement the validation chain:'}}
-
 1.  [Create the automation chain]({{page space='studio' page='use-content-automation'}}) whose operations and parameters are given below. Don't bind it to any button or event handler, just create the chain.
-
-![]({{file name='Image 7.png'}} ?border=true,thumbnail=true)
-
 {{/panel}}
 
 **Validation chain parameters**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">
 
 N&deg;
 
@@ -199,7 +200,7 @@ Document > Update property
 
 </td><td colspan="1">
 
-value: `@{CurrentDate.days(7).date()`}
+value: `@{CurrentDate.days(7).date()}`
 
 </td><td colspan="1">
 
@@ -228,18 +229,20 @@ category: `automation`
 Like the validation chain, the refusal automation chain will be used by the users with validationWorkflow_validation permission, but to reject the document.
 
 {{#> panel heading='To implement the reject chain:'}}
-
 1.  [Create the automation chain]({{page space='studio' page='use-content-automation'}}) whose operations and parameters are given below. Don't bind it to any button or event handler, just create the chain.
-
 {{/panel}}
 
 **Reject chain parameters**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">
 
 N&deg;
-
-</th><th colspan="1">
+</th>
+<th colspan="1">
 
 Operation
 

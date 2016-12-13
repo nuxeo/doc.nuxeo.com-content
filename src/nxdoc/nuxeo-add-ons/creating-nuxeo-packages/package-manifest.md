@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - packaging-component
     - todo
 confluence:
@@ -303,7 +304,10 @@ If you really want to make a package depending on a hotfix package:
 ### Optional Dependencies
 
 Some packages may use the conditional bundle install in their install.xml (TODO: add link to conditional bundle installation documentation https://jira.nuxeo.com/browse/NXP-19789).
-When a package is being installed together with one of the packages referenced in his install.xml, those must be installed in the right order to avoid incomplete installation.
+When a package is being installed together with one of the packages referenced in his install.xml, those must be installed in the right order to avoid incomplete installation. Similarly, if a package is installed before one of the packages referenced in his install.xml, it must be reinstalled when one of the referenced package is installed.
+
 This is the purpose of the optional dependencies. An optional dependency will never be required, but will always be installed before its dependant package.
 
-In the above example, if you try to install `nuxeo-automation` along with `nuxeo-jsf-ui`, `nuxeo-jsf-ui` will be installed first. But you still can have `nuxeo-automation` installed without having `nuxeo-jsf-ui` installed.
+In the above example, if you try to install `nuxeo-automation` along with `nuxeo-jsf-ui`, `nuxeo-jsf-ui` will be installed first. If you install `nuxeo-automation` alone first, then you install `nuxeo-jsf-ui`, `nuxeo-automation` will be reinstalled when you install `nuxeo-jsf-ui`. 
+
+In any case, you still can have `nuxeo-automation` installed without having `nuxeo-jsf-ui` installed.

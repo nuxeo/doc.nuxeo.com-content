@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - widget
     - layout-widgets-component
     - excerpt
@@ -378,8 +379,8 @@ Here is a sample configuration:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
-*   [Standard Widget Types]({{page page='standard-widget-types'}})
-*   [Custom Widget Types]({{page page='custom-widget-types'}})
+- [Standard Widget Types]({{page page='standard-widget-types'}})
+- [Custom Widget Types]({{page page='custom-widget-types'}})
 
 {{/panel}}</div><div class="column medium-6">
 

@@ -2,7 +2,7 @@
 title: Digital Asset Management with the Nuxeo Platform
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
     - multiexcerpt
@@ -57,8 +57,8 @@ history:
 {{! multiexcerpt name='Functional_overview'}}
 
 The Nuxeo DAM document types are fully integrated in the Nuxeo Platform and are available alongside the other document types. They can be created the same ways as the platform default document types, they get the same metadata, the same workflows, etc.
-
-### Pictures
+### JSF UI
+#### Pictures
 
 Pictures are specific files. To take into account the specificities of pictures, their Summary tab shows additional pieces of information, such as:
 
@@ -74,51 +74,24 @@ When pictures are created, the EXIF metadata of the pictures are automatically e
 
 You can report to the page [Supported File Formats]({{page space='nxdoc' page='supported-file-formats'}}) to see which file formats are supported as pictures.
 
-#### Browsing Pictures
+##### Browsing Pictures
 
 Nuxeo DAM add the possibility to view pictures in a slideshow mode from the thumbnail mode of a workspace or search results. To view the pictures in a slideshow mode, click on the icon ![]({{file name='slideshow_enabled.png' page='icons-index'}}) from the thumbnail mode. You can then switch from one picture to the next or the previous using the right and left keys of you keyboard. You automatically go the next page picture when you're at the last picture of the current page.
 
 If no picture is available on the current page, it shows the icon ![]({{file name='slideshow_disabled.png' page='icons-index'}}).
 
-{{! multiexcerpt name='annotating-pictures'}}
-
-#### Annotating Pictures
-
-{{! multiexcerpt name='picture-annotation-definition'}}
-
-Annotations are post-it notes that users can add on the picture to comment it or to comment a specific part of the picture.
-
-{{! /multiexcerpt}} {{#> callout type='note' }}
-
-{{{multiexcerpt 'upgrade-8.2-remove-annotations' page='NXDOC:Upgrade from LTS 2015 following Fast Tracks'}}}
-
-{{/callout}}
-
-**To add an annotation on a picture:**
-
-1.  To access to the image view, click on the icon&nbsp;![]({{file name='preview.png' page='icons-index'}})&nbsp;in the&nbsp;**More**&nbsp;menu.
-    A pop up opens.
-2.  Draw a frame on the part of the picture you want to annotate.
-3.  Type your annotation and click on&nbsp;**Submit**.
-    ![]({{file name='DAM-annotation.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
-    You can see your annotation when the mouse is over the zone you selected, and, in the margin, the list of annotations, and for each, the author, date and time of annotation and the text.
-    ![]({{file name='DAM-annotation-rollover.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
-
-{{! /multiexcerpt}}
-
-#### Picture Views
+##### Picture Views
 
 When you import a&nbsp;document having the `Picture` facet on your platform, additional formats are available on it.&nbsp;The default ones are:
 
 *   Thumbnail: the picture is converted to JPG and resized to 100px height or width.
 *   Small: the picture is converted to JPG and resized to&nbsp;280 px&nbsp;height or width.&nbsp;
 *   Medium: the picture is converted to JPG and resized to 550 px height or width.
+*   FullHD: the picture is converted to JPG and resized to 1920 px height or width.
 *   OriginalJpeg: the picture is converted to JPG but the original size is kept. This export is done even if the original picture was a JPG file.
 
 {{#> callout type='tip' }}
-
 The original and medium pictures can be the same size when you download them if the original is smaller or equal to medium size.
-
 {{/callout}}
 
 To download the picture view that you want, click on&nbsp;![]({{file name='download.png' space='userdoc58' page='icons-index'}})&nbsp;in front of it.
@@ -135,7 +108,7 @@ A user interface is added in the Admin tab so that it is possible to re-compute 
 
 ![]({{file name='Admin Picture Conversions.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=650,border=true)
 
-### Video
+#### Video
 
 Video is a document types dedicated to the management of videos files. It provides the following specific features: A player to view the video from the application, a storyboard to navigate in the video and alternative video formats.
 
@@ -143,11 +116,11 @@ Video documents can be [created]({{page page='creating-content'}}) and [edited](
 
 ![]({{file name='video_document_type.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
 
-#### Viewing Videos
+##### Viewing Videos
 
 Video documents can be viewed from their **Summary** tab where a video player is available. You can also navigate in the video using the Storyboard that is generated at import time.
 
-#### Converting Videos
+##### Converting Videos
 
 It is possible to convert the video to various formats from the user interface:
 
@@ -157,7 +130,7 @@ It is possible to convert the video to various formats from the user interface:
 
 To convert the video, from the **Summary** tab click on the **Convert** button corresponding to the format you want.
 
-#### Exporting Videos
+##### Exporting Videos
 
 When your export a video asset, you get a folder with several files available:
 
@@ -170,7 +143,7 @@ When your export a video asset, you get a folder with several files available:
 
 A video is exported like any other document. See the page [Exporting Documents]({{page page='exporting-documents'}}).
 
-### Audio
+#### Audio
 
 Audio is a document types dedicated to audio files management. It provides a player from the document **Summary** tab to listen to it from the application.
 
@@ -179,6 +152,75 @@ Audio documents can be [created]({{page page='creating-content'}}) and [edited](
 See the page [Supported File Formats]({{page space='nxdoc' page='supported-file-formats'}}) for supported audio files.
 
 ![]({{file name='audio_document_type.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
+
+### Web UI
+
+#### Pictures
+
+Pictures are specific files. To take into account the specificities of pictures, additional information are available such as:
+- Rotate actions
+- Dimensions
+- Format
+- ...
+
+![]({{file name='picsMetadata-webui.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
+
+Pictures can be created and edited in workspaces and folders like any other document type. You can also classify and organize them in collections.
+
+![]({{file name='Additionnal Picture Views Download-webui.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=300,border=true)
+
+When you import a document having the Picture facet on your platform, additional formats are available on it. The default ones are:
+* Thumbnail: the picture is converted to JPG and resized to 100px height or width.
+* Small: the picture is converted to JPG and resized to 280 px height or width.
+* Medium: the picture is converted to JPG and resized to 550 px height or width.
+* FullHD: the picture is converted to JPG and resized to 1920 px height or width.
+* OriginalJpeg: the picture is converted to JPG but the original size is kept. This export is done even if the original picture was a JPG file.
+{{#> callout type='tip' }}
+The original and medium pictures can be the same size when you download them if the original is smaller or equal to medium size.
+{{/callout}}
+
+To download the format that you want, click on&nbsp;![]({{file name='download.png' space='userdoc' page='icons-index'}})&nbsp;in front of it.
+
+#### Videos
+
+Video is a document types dedicated to the management of videos files and can be created or edited like any other files.
+
+![]({{file name='video_document_type-webui.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
+
+##### Viewing Videos
+
+Video documents can be viewed from their **View** tab where a video player is available.
+
+##### Converting Videos
+
+It is possible to convert the video to various formats from the Web UI user interface:
+- WebM
+- MP4
+
+To convert the video, click on&nbsp;![]({{file name='download.png' space='userdoc' page='icons-index'}})&nbsp;corresponding to the format you want.
+
+#### Browsing Assets
+
+Once DAM installed and assets documents created, a new search type is displayed in the left menu, the `Assets` search. This search will let you search by assets metadata, such as:
+- Type
+- Format
+- Width
+- Height
+- Etc.
+
+&nbsp;
+The Assets search leverages Elasticsearch to provide a quicker and more efficient search. The search form uses Elasticsearch aggregates for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.
+
+![]({{file name='assets-search.png' space='userdoc' page='digital-asset-management-with-the-nuxeo-platform'}} ?w=600,border=true)
+
+The Assets search form offers several search criteria, that you can associate to define your search and find documents. Search results use the thumbnail view by default. Clicking on a document thumbnail will lead you directly to the document.
+
+**To search documents using detailed criteria:**
+
+* Click on the `Assets` tab.
+* Fill in the form with your criteria and/or select the search criteria corresponding to your needs.
+<br/>
+  The search results will be automatically updated according to the criteria selected.
 
 {{! /multiexcerpt}}
 

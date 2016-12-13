@@ -2,9 +2,10 @@
 title: Server Start and Stop
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-08'
     status: ok
 labels:
+    - content-review-lts2016
     - multiexcerpt
 toc: true
 confluence:
@@ -335,7 +336,7 @@ Nuxeo applications are started using scripts.
 
 {{! multiexcerpt name='infos_windows'}} {{#> callout type='info' }}
 
-On Windows 7, you need to run the `nuxeoctl.bat` and `Start Nuxeo.bat` commands as an administrator if you haven't installed your Nuxeo application at the root of `C:\` (for instance in `C:\Program Files`). To run them as an administrator, right-click on the command and click on "Run as administrator".
+On Windows 7 (and higher versions), you need to run the `nuxeoctl.bat` and `Start Nuxeo.bat` commands as an administrator if you haven't installed your Nuxeo application at the root of `C:\` (for instance in `C:\Program Files`). To run them as an administrator, right-click on the command and click on "Run as administrator".
 
 {{/callout}}
 

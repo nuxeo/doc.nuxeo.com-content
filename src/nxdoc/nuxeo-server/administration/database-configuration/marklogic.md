@@ -2,9 +2,10 @@
 title: MarkLogic
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
+    - lts2016-ok
     - link-update
 toc: true
 confluence:
@@ -179,26 +180,66 @@ nuxeo.templates=default,marklogic
 
 In order to properly work, MarkLogic needs a range element index for each elements you want to compare using `<`, `<=`, `>=` or `>` in a NXQL query.
 
+We also use range index in order to query some elements. To leverage on range indexes, we need to use a different kind of MarkLogic function during NXQL -> MarkLogic query conversion.
+In order to enable this behavior, you need to add the Nuxeo element in repository configuration.
+You need to use `range-element-index` to declare a Nuxeo element to be queried with the range index behavior. The element name in repository configuration are the Nuxeo ones, for example we declare `ecm:uuid` in the repository configuration and we create `ecm__id` in MarkLogic. Below the default configuration of repository:
+
+```xml
+<extension target="org.nuxeo.ecm.core.storage.marklogic.MarkLogicRepositoryService" point="repository">
+  <repository name="test" label="MarkLogic Repository">
+    ...
+    <range-element-indexes>
+      <range-element-index type="string">ecm:uuid</range-element-index>
+      <range-element-index type="string">ecm:parentId</range-element-index>
+      <range-element-index type="string">ecm:ancestorId</range-element-index>
+      <range-element-index type="string">ecm:versionVersionableId</range-element-index>
+      <range-element-index type="string">ecm:proxyTargetId</range-element-index>
+      <range-element-index type="string">ecm:proxyVersionableId</range-element-index>
+      <range-element-index type="string">ecm:__read_acl</range-element-index> <!-- Technical element -->
+      <range-element-index type="string">ecm:name</range-element-index>
+      <range-element-index type="string">ecm:primaryType</range-element-index>
+      <range-element-index type="string">ecm:currentLifeCycleState</range-element-index>
+      <range-element-index type="dateTime">dc:modified</range-element-index>
+      <range-element-index type="string">rend:renditionName</range-element-index>
+      <range-element-index type="string">collectionMember:collectionIds</range-element-index>
+    </range-element-indexes>
+    ...
+  </repository>
+</extension>
+```
+
 Here's a list of basic Nuxeo elements needing a range element index:
 
-| Element | Scalar Type |
-| ------- | ----------- |
-| created | dateTime |
-| replaced | dateTime |
-| version-id | unsignedLong |
-| begin | dateTime |
-| end | dateTime |
-| dc\_\_created | dateTime |
-| dc\_\_modified | dateTime |
-| length | long |
-| rend\_\_modificationDate | dateTime |
-| rend\_\_sourceModificationDate | dateTime |
+| Nuxeo Element | MarkLogic Element | Scalar Type |
+| ------------- | ----------------- | ----------- |
+| ecm:uuid | ecm\_\_id | string |
+| ecm:parentId | ecm\_\_parentId | string |
+| ecm:ancestorId | ecm\_\_ancestorIds\_\_item | string |
+| ecm:versionVersionableId | ecm\_\_versionSeriesId | string |
+| ecm:proxyTargetId | ecm\_\_proxyTargetId | string |
+| ecm:proxyVersionableId | ecm\_\_proxyVersionSeriesId | string |
+| ecm:__read_acl | ecm\_\_racl | string |
+| ecm:name | ecm\_\_name | string |
+| ecm:primaryType | ecm\_\_primaryType | string |
+| ecm:currentLifeCycleState | ecm\_\_lifeCycleState | string |
+| rend:renditionName | rend\_\_renditionName | string |
+| collectionMember:collectionIds | collectionMember\_\_collectionIds\_\_item | string |
+| created | created | dateTime |
+| replaced | replaced | dateTime |
+| version-id | version-id | long |
+| begin | begin | dateTime |
+| end | end | dateTime |
+| dc:created | dc\_\_created | dateTime |
+| dc:modified | dc\_\_modified | dateTime |
+| length | length | long |
+| rend:modificationDate | rend\_\_modificationDate | dateTime |
+| rend:sourceModificationDate | rend\_\_sourceModificationDate | dateTime |
 
-In order to create these indexes, go to your MarkLogic server configuration, under your database you'll find `Element Range Indexes`. In this section you can create an range element index for each elements with the correct scalar type. Leave `namespace uri` empty, set `range value positions` to false, and `invalid values` to ignore.
+In order to create these indexes, go to your MarkLogic server configuration, under your database you'll find `Element Range Indexes`. In this section you can create a range element index for each elements with the correct scalar type. Leave `namespace uri` empty, set `range value positions` to false, and `invalid values` to ignore.
 
 ## Storage Restrictions
 
-Due to the nature of the MarkLogic storage, we use a transaction model equivalent to READ UNCOMMITTED, which means that a transaction may read data written but not yet committed by another transaction.
+Due to the nature of DBS, we use a transaction model equivalent to READ UNCOMMITTED, which means that a transaction may read data written but not yet committed by another transaction.
 
 Full-text configuration is disabled, you should use Elasticsearch with a suitable full-text configuration.
 
@@ -207,48 +248,9 @@ Full-text configuration is disabled, you should use Elasticsearch with a suitabl
 The following features are planned for a later Nuxeo version but are not implemented currently:
 
 - tags aren't supported ([NXP-17670](https://jira.nuxeo.com/browse/NXP-17670))
-- features on search, [see list](https://jira.nuxeo.com/browse/NXP-19942?jql=%22Epic%20Link%22%20%3D%20%22NXP-19214%22%20and%20status%20%3D%20%22open%22)
-
-## For Nuxeo 8.3
-
-### HTTP Server Installation
-
-By default Nuxeo stores its information in the database `nuxeo`.
-
-You need to create a new HTTP App Server linked to the `nuxeo` database, as described [in the MarkLogic documentation](https://docs.marklogic.com/guide/admin/http). Main installation information is:
-
-*   Set `/` value in root input.
-*   Choose a server name and a port (for example 8010).
-*   Select the `nuxeo` database in the database input.
-
-*   Although you can use the admin user you created during MarkLogic server installation, it's better to create a new user to use with Nuxeo, as described [here](https://docs.marklogic.com/guide/admin/security).
-
-### Configuration
-
-Once you installed the Nuxeo MarkLogic addon , set up the access to the MarkLogic server in [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}}). The following properties are available:
-
-*   `nuxeo.marklogic.host`: The MarkLogic server, defaults to `localhost`
-*   `nuxeo.marklogic.port`: The MarkLogic HTTP App Server port, defaults to `8000`
-*   `nuxeo.marklogic.user`: The MarkLogic user to login to App Server, defaults to `nuxeo`
-*   `nuxeo.marklogic.password`: The user password, defaults to `password`
-
-The package installation added the `marklogic` template to your existing list of templates (`nuxeo.templates`) in `nuxeo.conf`.
-
-You **must keep** the template corresponding to your SQL database in `nuxeo.templates`, because the SQL database may still be used for other things (directories, audit, etc.). For instance you could have:
-
-```
-nuxeo.templates=postgresql,marklogic
-```
-
-or
-
-```
-nuxeo.templates=default,marklogic
-```
-
-&nbsp;
-
-&nbsp;
+- querying n-th element of a list is not supported ([NXP-21187](https://jira.nuxeo.com/browse/NXP-21187))
+- NOT NXQL constraints such as `item/*` can return false positive ([NXP-21184](https://jira.nuxeo.com/browse/NXP-21184))
+- Range index querying is not supported on a date element
 
 * * *
 

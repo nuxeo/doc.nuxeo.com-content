@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - postgresql
     - database
     - multiexcerpt-include
@@ -579,7 +580,7 @@ Nuxeo supports the following PostgreSQL versions:
 
 {{{multiexcerpt '7.x-postgreSQL-supported' page='Compatibility Matrix'}}}
 
-We always recommend that you use the latest stable version, which is PostgreSQL 9.4 at the time of this writing.
+We always recommend that you use the latest stable version, which is PostgreSQL 9.6 at the time of this writing.
 
 The database needs to be configured to work properly with Nuxeo. Some settings **must** be changed in order for Nuxeo to work. Other settings _should_ be changed in order for Nuxeo to have good performance.
 

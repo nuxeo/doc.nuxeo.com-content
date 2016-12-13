@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - ldap
     - sql
     - directory
@@ -148,56 +149,151 @@ Typically, as long as your data or service is mapped through a Directory model :
 
 {{{multiexcerpt 'vocabularies-content' page='USERDOC:Managing Vocabularies'}}}
 
+## Generic Directory and Directory Templates
+
+All directories share a common set of properties that can be defined directly inside a specific directory, or through a templating mechanism.
+
+A few directory properties control how the directory is used with respect to other directories. These properties are specified as XML attributes of the main `<directory>` element:
+
+*   `name`: The name of the directory, used for overloading and in application code.
+*   `remove`: If `true` then the previous definition for this directory, if any, is forgotten.
+*   `template`: If `true` then this directory cannot be used by itself, it is just a template.
+*   `extends`: The name of a template directory from which the properties are merged.
+
+The generic properties for all directories are:
+
+*   `schema`: The schema describing the columns in the directory.
+*   `idField`: The primary key in the table, used for retrieving entries by id.
+*   `autoincrementIdField`: Whether the `idField` is automatically incremented. (Default is `false`.)
+*   `readOnly`: If the directory should be read-only. (Default is `false`.)
+*   `substringMatchType`: How a non-exact match is done; possible values are `subany`, `subinitial` or `subfinal`; this is used in most UI searches. (Default is `subinitial`.)
+*   `table`: The table in which the data is stored. (SQL only, defaults to the directory name.)
+
+The following control how data is initially loaded into the directory:
+
+*   `dataFile`: CSV file from which data is read to populate the directory, depending on the other following properties.
+*   `dataFileCharacterSeparator`: The character used to separate entries in the `dataFile`. (Defaults to `,`)
+*   `createTablePolicy`: Indicates how the `dataFile` will be used to populate the directory. Three values are allowed: `never` if the `dataFile` is never used (the default), `on_missing_columns` if the `dataFile` is used to create missing columns (when the directory is created or each time a new column is added, due to a schema change), `always` if the `dataFile` is used to create the directory at each restart of the Nuxeo Platform.
+
+The following control how entries are cached:
+
+*   `cacheTimeout`: The timeout (in seconds) after which an entry is evicted from the cache. The default is 0, which means never time out. (SQL only)
+*   `cacheMaxSize`: The maximum number of entries in the cache. The default is 0, which means to not use caching. (SQL only)
+*   `cacheEntryName`: The name of the cache (from the CacheService) containing full entries. (SQL/LDAP only)
+*   `cacheEntryWithoutReferencesName`: The name of the cache (from the CacheService) containing entries without references. (SQL/LDAP only)
+*   `negativeCaching`: Whether to cache negative cache hits (the default is `false`). (SQL/LDAP only)
+
+The following are used if the directory is a hierarchical vocabulary:
+
+*   `parentDirectory`: The parent directory to use in the UI.
+*   `deleteConstraint`: Adds constraint(s) preventing the deletion of an entry from a parent directory if it is referenced in a child directory. Example (in the `continent` directory):
+    ```
+    <deleteConstraint class="org.nuxeo.ecm.directory.HierarchicalDirectoryDeleteConstraint">
+      <property name="targetDirectory">country</property>
+      <property name="targetDirectoryField">parent</property>
+    </deleteConstraint>
+    ```
+
+The following are used only if the directory is used for authentication:
+
+*   `password`: Field from the table which contain the passwords.
+*   `passwordHashAlgorithm`: The hash algorithm to use to store new passwords. Allowed values are `SSHA` and `SMD5`. The default (nothing specified) is to store passwords in clear.
+
+The following control directory visibility and access:
+
+*   `type`: A directory of type `system` will not be listed in the directory REST endpoint. Example:
+    ```
+    <types>
+      <type>system</type>
+    </types>
+    ```
+*   `permission`: Defines, for each of the `Read` and `Write` permissions, which users or groups are allowed access to the directory. Example:
+    ```
+    <permissions>
+      <permission name="Read">
+        <group>mygroup</group>
+        <group>mygroup2</group>
+        <user>Administrator</user>
+      </permission>
+     </permissions>
+     ```
+     To disallow any access (except for the system), use the group `__Nobody__`:
+    ```
+    <permissions>
+      <permission name="Read">
+        <group>__Nobody__</group>
+      </permission>
+    </permissions>
+    ```
+
+Example template directory (SQL for this example, see below for the SQL-specific properties):
+
+```
+<extension target="org.nuxeo.ecm.directory.sql.SQLDirectoryFactory"
+    point="directories">
+  <directory name="template-directory" template="true">
+    <cacheTimeout>3600</cacheTimeout>
+    <cacheMaxSize>1000</cacheMaxSize>
+    <dataSource>java:/nxsqldirectory</dataSource>
+    <autoincrementIdField>false</autoincrementIdField>
+    <createTablePolicy>on_missing_columns</createTablePolicy>
+  </directory>
+</extension>
+```
+
+Example template extending this base template:
+
+```
+<extension target="org.nuxeo.ecm.directory.GenericDirectory"
+    point="directories">
+  <directory name="template-vocabulary" template="true" extends="template-directory">
+    <schema>vocabulary</schema>
+    <idField>id</idField>
+  </directory>
+</extension>
+```
+
+Example directory using the above templates:
+
+```
+<extension target="org.nuxeo.ecm.directory.GenericDirectory"
+    point="directories">
+  <directory name="language" extends="template-vocabulary">
+    <dataFile>directories/language.csv</dataFile>
+  </directory>
+</extension>
+```
+
 ## SQL Directories
 
 SQL directories read and store their information in a SQL database. They are defined through the [`directories`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.directory.sql.SQLDirectoryFactory--directories) extension point of the [`org.nuxeo.ecm.directory.sql.SQLDirectoryFactory`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.directory.sql.SQLDirectoryFactory) component.
 
-The **directory** element must contain a number of important sub-elements:
+The following properties are specific to SQL directories:
 
-*   `name`: The name of the directory, used for overloading and in application code;
-*   `schema`: The schema describing the columns in the directory;
 *   `dataSource`: The JDBC datasource defining the database in which the data is stored;
-*   `table`: The SQL table in which the data is stored;
-*   `idField`: The primary key in the table, used for retrieving entries by id;
-*   `autoincrementIdField`: Whether the `idField` is automatically incremented. This value is most of the time at false, because the identifier is a string;
 *   `querySizeLimit`: The maximum number of results that the queries on this directory should return. If there are more results than this, an exception will be raised;
-*   `dataFile`: File from which data is read to populate the table, depending on the following element;
-*   `createTablePolicy`: Indicates how the `dataFile` will be used to populate the table. Three values are allowed: **never** if the `dataFile` is never used (the default), **on_missing_columns** if the `dataFile` is used to create missing columns (when the table is created or each time a new column is added, due to a schema change), **always** if the `dataFile` is used to create the table as each restart of the application server;
-*   `cacheTimeout`: The timeout (in seconds) after which an entry is not kept in the cache anymore. The default is 0 which means never time out;
-*   `cacheMaxSize`: The maximum number of entries in the cache. The default is 0 and means to not use entries caching at all;
-*   `readOnly`: If the directory should be read-only;
-*   `substringMatchType`: How a non-exact match is done, possible values are `subany`, `subinitial` or `subfinal`; this is used in most UI searches.
 
-The following is used by the UI if the directory is a hierarchical vocabulary:
+Example:
 
-*   `parentDirectory`: The parent directory to use.
-
-The following are used only if the directory is used for authentication:
-
-*   `password`: Field from the table which contain the passwords;
-*   `passwordHashAlgorithm`: The hash algorithm to use to store new passwords. Allowed values are `SSHA` and `SMD5`. The default (nothing specified) is to store passwords in clear.
-    Example:
-
-    ```
-    <?xml version="1.0"?>
-    <component name="com.example.project.directories.sql">
-      <extension target="org.nuxeo.ecm.directory.sql.SQLDirectoryFactory"
-          point="directories">
-        <directory name="continent">
-          <schema>vocabulary</schema>
-          <dataSource>java:/nxsqldirectory</dataSource>
-          <cacheTimeout>3600</cacheTimeout>
-          <cacheMaxSize>1000</cacheMaxSize>
-
-    <table>continent</table>
-          <idField>id</idField>
-          <autoincrementIdField>false</autoincrementIdField>
-          <dataFile>directories/continent.csv</dataFile>
-          <createTablePolicy>on_missing_columns</createTablePolicy>
-        </directory>
-      </extension>
-    </component>
-    ```
+```
+<?xml version="1.0"?>
+<component name="com.example.project.directories.sql">
+  <extension target="org.nuxeo.ecm.directory.sql.SQLDirectoryFactory"
+      point="directories">
+    <directory name="continent">
+      <schema>vocabulary</schema>
+      <dataSource>java:/nxsqldirectory</dataSource>
+      <cacheTimeout>3600</cacheTimeout>
+      <cacheMaxSize>1000</cacheMaxSize>
+      <table>continent</table>
+      <idField>id</idField>
+      <autoincrementIdField>false</autoincrementIdField>
+      <dataFile>directories/continent.csv</dataFile>
+      <createTablePolicy>on_missing_columns</createTablePolicy>
+    </directory>
+  </extension>
+</component>
+```
 
 ## LDAP Directories
 
@@ -233,57 +329,58 @@ Optional parameters are:
 
     ```
 
-Once you have declared the server, you can define new LDAP **directories**. The sub-elements of the **directory** element are:
+Once you have declared the server, you can define new LDAP **directories**. The sub-elements of the **directory** element are, in addition to the generic ones already defined above:
 
-*   `name`, `schema`, `idField` and `passwordField`: same as for SQL directories;
-*   `searchBaseDn`: Entry point into the server's LDAP tree structure; searches are only made below this root node;
-*   `searchClass`: Restricts the type of entries to return as result;
-*   `searchFilter`: Additional LDAP filter to restrict the search results;
-*   `searchScope`: The scope of the search. It can take two values:`onelevel` to search only under the current node, or `subtree` to search in the whole subtree;
-*   `substringMatchType`: Defines how the query is built using wildcard characters. Three different values can be provided:
+*   `searchBaseDn`: Base DN under which searches are done.
+*   `searchClass`: Restricts the type of entries to return as result.
+*   `searchFilter`: Additional LDAP filter to restrict the search results. Note that if you wish to include a `&` you'll have to escape it as `&amp;` as this is an XML file.
+*   `searchScope`: The scope of the search. Either `onelevel` to search only under the current node, or `subtree` to search in the whole subtree. (Default is `onelevel`.)
+*   `creationBaseDn`: Base DN under which new entries are created.
+*   `creationClass`: Which classes are used to define new entries in the LDAP server. (Multiple elements can be specified.)
 
-    *   `subany`: wildcards are added around the string to match (as *foo*);
-    *   `subinitial`: wildcard is added before the string (*bar);
-    *   `subfinal`: wildcard is added after the string (baz*). This is the default behavior;
-*   `readOnly`: Boolean value. When set to false, this parameter allows to create new entries or modify existing ones in the LDAP server;
-*   `cacheTimeout`: Cache timeout in seconds;
-*   `cacheMaxSize`: Maximum number of cached entries before global invalidation;
-*   `creationBaseDn`: Entry point in the server's LDAP tree structure where new entries will be created. Useless to provide if the `readOnly` attribute is set to true;
-*   `creationClass`: Use as many tag as needed to specify which classes are used to define new people entries in the LDAP server.
-    Example:
+Example:
 
-    ```
-    <?xml version="1.0"?>
-    <component name="com.example.project.directories.ldap.dir">
-      <extension target="org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory"
-          point="directories">
-        <directory name="userDirectory">
-          <server>default</server>
-          <schema>user</schema>
-          <idField>username</idField>
-          <passwordField>password</passwordField>
+```
+<?xml version="1.0"?>
+<component name="com.example.project.directories.ldap.dir">
 
-          <searchBaseDn>ou=people,dc=example,dc=com</searchBaseDn>
-          <searchClass>person</searchClass>
-          <searchFilter>(&amp;(sn=foo*)(myCustomAttribute=somevalue))</searchFilter>
-          <searchScope>onelevel</searchScope>
-          <substringMatchType>subany</substringMatchType>
+  <extension target="org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory"
+      point="servers"
+    <server name="default">
+      <ldapUrl>ldap://localhost:389</ldapUrl>
+      <bindDn>cn=nuxeo5,ou=applications,dc=example,dc=com</bindDn>
+      <bindPassword>changeme</bindPassword>
+    </server>
+  </extension>
 
-          <readOnly>false</readOnly>
+  <extension target="org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory"
+      point="directories">
+    <directory name="userDirectory">
+      <server>default</server>
 
-          <cacheTimeout>3600</cacheTimeout>
-          <cacheMaxSize>1000</cacheMaxSize>
+      <schema>user</schema>
+      <idField>username</idField>
+      <passwordField>password</passwordField>
+      <substringMatchType>subany</substringMatchType>
+      <readOnly>false</readOnly>
+      <cacheTimeout>3600</cacheTimeout>
+      <cacheMaxSize>1000</cacheMaxSize>
 
-          <creationBaseDn>ou=people,dc=example,dc=com</creationBaseDn>
-          <creationClass>top</creationClass>
-          <creationClass>person</creationClass>
-          <creationClass>organizationalPerson</creationClass>
-          <creationClass>inetOrgPerson</creationClass>
-        </directory>
-      </extension>
-    </component>
+      <searchBaseDn>ou=people,dc=example,dc=com</searchBaseDn>
+      <searchClass>person</searchClass>
+      <searchFilter>(&amp;(sn=foo*)(myCustomAttribute=somevalue))</searchFilter>
+      <searchScope>onelevel</searchScope>
 
-    ```
+      <creationBaseDn>ou=people,dc=example,dc=com</creationBaseDn>
+      <creationClass>top</creationClass>
+      <creationClass>person</creationClass>
+      <creationClass>organizationalPerson</creationClass>
+      <creationClass>inetOrgPerson</creationClass>
+    </directory>
+  </extension>
+</component>
+
+```
 
 ## Multi-directories
 

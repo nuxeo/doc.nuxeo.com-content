@@ -11,6 +11,7 @@ details:
         tool: Code
         topics: REST API
 labels:
+    - content-review-lts2016
     - howto
     - rest-api
     - nuxeo-playground
@@ -466,10 +467,10 @@ If your Nuxeo server and the API Playground are not in the same domain, you need
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Special HTTP Headers]({{page page='special-http-headers'}})
-*   [Automation]({{page page='automation'}})
-*   [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
-*   [REST API]({{page page='rest-api'}})
+- [Special HTTP Headers]({{page page='special-http-headers'}})
+- [Automation]({{page page='automation'}})
+- [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
+- [REST API]({{page page='rest-api'}})
 
 {{/panel}}</div><div class="column medium-6">
 

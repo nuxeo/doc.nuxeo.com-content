@@ -2,9 +2,10 @@
 title: Elasticsearch Setup
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
+    - lts2016-ok
     - elasticsearch
     - elasticsearch-component
 toc: true

@@ -2,9 +2,10 @@
 title: Nuxeo and Redis
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
+    - lts2016-ok
     - redis
     - rediscomponent
 toc: true
@@ -163,15 +164,15 @@ By default Lock managed on documents are stored inside the repository backend.Wh
 
 `nuxeo-core-redis` provides a Redis-based implementation of the locking system that is resilient as the database implementation, but easier to scale.
 
-## VCS Row Cache Invalidation
+## Clustering invalidation
 
-Managing VCS row cache invalidations with Redis instead of using the database ({{jira server='Nuxeo Issue Tracker' key='NXP-14923'}}) can improve performance on concurrent writes and provides synchronous invalidations.
+### VCS Row Cache Invalidation
 
-To do so you need to add this option in the&nbsp;`nuxeo.conf`
+Managing VCS row cache invalidations with [Redis instead of using the database](https://jira.nuxeo.com/browse/NXP-14923) can improve performance on concurrent writes and provides synchronous invalidations.
 
-```
-repository.clustering.invalidation=redis
-```
+### DBS Cache Invalidation
+
+Since Nuxeo 8.10 the DBS layer (used by MongoDB or Marklogic backends) [has a cache](https://jira.nuxeo.com/browse/NXP-20640) its invalidation in cluster mode requires Redis.
 
 ## Transient Store
 

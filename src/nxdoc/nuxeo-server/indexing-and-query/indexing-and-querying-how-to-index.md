@@ -4,6 +4,8 @@ review:
     comment: ''
     date: '2015-12-01'
     status: ok
+labels:
+    - content-review-lts2016
 confluence:
     ajs-parent-page-id: '4687860'
     ajs-parent-page-title: Indexing and Query

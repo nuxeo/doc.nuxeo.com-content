@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - lts2016-ok
     - mobile
     - android
     - client
@@ -19,7 +20,7 @@ confluence:
     shortlink: 3Ir1
     shortlink_source: 'https://doc.nuxeo.com/x/3Ir1'
     source_link: /display/NXDOC/Android+Client
-tree_item_index: 900
+tree_item_index: 550
 history:
     -
         author: Alain Escaffre
@@ -28,4 +29,6 @@ history:
         version: '1'
 
 ---
-You can browse the [Android Connector section]({{page page='nuxeo-android-connector'}}) for more information.
+You can use the [Nuxeo Java Client]({{page page='java-client'}}) to build Android application.
+
+(DEPRECATED) You can browse the [Android Connector section]({{page page='nuxeo-android-connector'}}) for more information.

@@ -2,9 +2,11 @@
 title: Nuxeo Diff Pictures
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 toc: true
+labels:
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons
@@ -60,7 +62,7 @@ history:
         version: '1'
 
 ---
-The diff capabilities of the Nuxeo Platform now includes picture comparison thanks to&nbsp;[Nuxeo Diff Pictures](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures).&nbsp;This addon displays a dialog where the user can spot the differences between two pictures. The compared pictures can be of different formats (JPEG, PNG, ...) or dimensions,&nbsp;leveraging ImageMagick capabilities in this area. When the two pictures have the same format and the same dimensions, the user can also set-up a "Fuzzy" comparison parameter (to remove noise when comparing JPEGs for example), and to choose the colors used for to highlight the differences.
+The diff capabilities of the Nuxeo Platform now include picture comparison thanks to&nbsp;[Nuxeo Diff Pictures](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures).&nbsp;This addon displays a dialog where the user can spot the differences between two pictures. The compared pictures can be of different formats (JPEG, PNG, ...) or dimensions,&nbsp;leveraging ImageMagick capabilities in this area. When the two pictures have the same format and the same dimensions, the user can also set-up a "Fuzzy" comparison parameter (to remove noise when comparing JPEGs for example), and to choose the colors used for to highlight the differences.
 
 When you compare two documents or versions of a document, the elements below are compared:
 
@@ -99,8 +101,8 @@ If you want to visualize the content changes, click on the icon&nbsp;![]({{file 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Nuxeo Diff]({{page space='userdoc' page='nuxeo-diff'}})
-*   [Traceability]({{page space='userdoc' page='traceability'}})
+- [Nuxeo Diff]({{page space='userdoc' page='nuxeo-diff'}})
+- [Traceability]({{page space='userdoc' page='traceability'}})
 
 {{/panel}}</div><div class="column medium-6">
 

@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - excerpt
     - multiexcerpt-include
 confluence:
@@ -324,19 +325,6 @@ Public
 
 </td></tr><tr><td colspan="1">
 
-Nuxeo Box API  
-`nuxeo-box-api`
-
-</td><td colspan="1">
-
-Public
-
-</td><td colspan="1">&nbsp;</td><td colspan="1">
-
-[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-box-api?version=1.3.2)
-
-</td></tr><tr><td colspan="1">
-
 Nuxeo Connect Report Tools  
 `nuxeo-connect-tools-report`
 
@@ -519,22 +507,6 @@ Public
 </td><td colspan="1">
 
 [Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce?version=1.1.2)
-
-</td></tr><tr><td colspan="1">
-
-Nuxeo Forum
-
-</td><td colspan="1">
-
-Public
-
-</td><td colspan="1">
-
-[Documentation]({{page space='userdoc' page='forums'}})
-
-</td><td colspan="1">
-
-Deprecated for LTS 2016
 
 </td></tr><tr><td colspan="1">
 
@@ -792,24 +764,8 @@ Registered access
 
 [Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/resources-compat?version=1.4.2)
 
-</td></tr><tr><td colspan="1">
-
-Nuxeo Review Workflows Dashboards  
-`nuxeo-review-workflows-dashboards`
-
-</td><td colspan="1">
-
-Public
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-review-workflows-dashboards?version=1.1.2)
-
-</td></tr><tr><td colspan="1">
+</td></tr>
+<tr><td colspan="1">
 
 Nuxeo Sample  
 `nuxeo-sample`
@@ -878,23 +834,6 @@ Public
 
 </td></tr><tr><td colspan="1">
 
-Nuxeo Virtual Navigation  
-`nuxeo-virtualnavigation`
-
-</td><td colspan="1">
-
-Public
-
-</td><td colspan="1">
-
-[Documentation]({{page page='nuxeo-virtual-navigation'}})
-
-</td><td colspan="1">
-
-[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation?version=1.2.2)
-
-</td></tr><tr><td colspan="1">
-
 Nuxeo Vision  
 `nuxeo-vision`
 
@@ -912,24 +851,6 @@ Registered access
 
 </td></tr><tr><td colspan="1">
 
-Nuxeo Web Mobile  
-`nuxeo-web-mobile`
-
-</td><td colspan="1">
-
-Public
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-mobile?version=1.8.2)
-Deprecated.
-
-</td></tr><tr><td colspan="1">
-
 Nuxeo Web UI  
 `nuxeo-web-ui`
 
@@ -939,7 +860,7 @@ Public
 
 </td><td colspan="1">
 
-&nbsp;
+[Documentation]({{page version='' space='nxdoc' page='web-ui'}})
 
 </td><td colspan="1">
 
@@ -1045,24 +966,6 @@ Public
 
 </td></tr><tr><td colspan="1">
 
-Smart Search  
-`nuxeo-platform-smart-search`
-
-</td><td colspan="1">
-
-Public
-
-</td><td colspan="1">
-
-[Developer documentation]({{page page='smart-search'}})  
-[User documentation]({{page space='userdoc' page='smart-search'}})
-
-</td><td colspan="1">
-
-[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-smart-search?version=1.8.3)
-
-</td></tr><tr><td colspan="1">
-
 Template Rendering Addon  
 `nuxeo-template-rendering`
 
@@ -1098,5 +1001,95 @@ Public
 </td></tr></tbody></table></div>
 
 Use: "In progress for x.y.z (JC)", "Ready for x.y.z" or "Released for x.y.z" or any other relevant comment.
+
+Below is the list of Nuxeo Packages released as deprecated since the previous LTS version, Nuxeo Platform LTS 2015.
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Package name</th>
+<th colspan="1">Public / Registered access</th>
+<th colspan="1">Documentation</th>
+<th colspan="1">Comments</th>
+</tr>
+<tr>
+<td colspan="1">
+Nuxeo Box API<br/>
+`nuxeo-box-api`
+</td>
+<td colspan="1">Public</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-box-api?version=1.3.4)<br/>
+Deprecated since LTS 2016 (8.10)
+</td>
+</tr>
+<tr>
+<td colspan="1">Nuxeo Forum<br/>
+`nuxeo-forum`
+</td>
+<td colspan="1">Public</td>
+<td colspan="1">
+[Documentation]({{page space='userdoc' page='forums'}})
+</td>
+<td colspan="1">
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-forum?version=1.0.0)<br/>
+Deprecated since LTS 2016 (8.10)
+</td>
+</tr>
+<tr>
+<td colspan="1">Nuxeo Review Workflows Dashboards<br/>
+`nuxeo-review-workflows-dashboards`
+</td>
+<td colspan="1">Public</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-review-workflows-dashboards?version=1.1.3)<br/>
+Deprecated since LTS 2016 (8.10)
+</td>
+</tr>
+<tr>
+<td colspan="1">Nuxeo Virtual Navigation<br/>
+`nuxeo-virtualnavigation`
+</td>
+<td colspan="1">Public</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-virtual-navigation'}})
+</td>
+<td colspan="1">
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation?version=1.2.4)<br/>
+Deprecated since LTS 2016 (8.10).
+</td>
+</tr>
+<tr>
+<td colspan="1">
+Nuxeo Web Mobile<br/>
+`nuxeo-web-mobile`
+</td>
+<td colspan="1">Public</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">
+[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-mobile?version=1.8.2)<br/>
+Deprecated since 8.3.
+</td>
+</tr>
+<tr>
+<td colspan="1">Smart Search<br/>
+`nuxeo-platform-smart-search`
+</td>
+<td colspan="1">Public</td>
+<td colspan="1">
+[Developer documentation]({{page page='smart-search'}})<br/>
+[User documentation]({{page space='userdoc' page='smart-search'}})
+</td>
+<td colspan="1">
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-smart-search?version=1.8.4)<br/>
+Deprecated since LTS 2016 (8.10).
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 {{! /multiexcerpt}}

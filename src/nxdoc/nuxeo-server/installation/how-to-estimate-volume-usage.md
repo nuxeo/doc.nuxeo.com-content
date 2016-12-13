@@ -13,6 +13,7 @@ details:
         tool: ''
         topics: Database
 labels:
+    - content-review-lts2016
     - database
     - howto
     - excerpt

@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - nuxeo-jenkins-report
 toc: true
 confluence:
@@ -74,7 +75,7 @@ After you installed the package, a new document type is available for creation i
 
 ## Configuration
 
-Since this addon enables users to send the report from the Nuxeo Platform, your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='setup-best-practices#setup-mail'}}).
+Since this addon enables users to send the report from the Nuxeo Platform, your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='set-up-email-notification'}}).
 
 &nbsp;
 
@@ -82,8 +83,8 @@ Since this addon enables users to send the report from the Nuxeo Platform, your 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Jenkins duty]({{page space='corg' page='jenkins-duty'}})
-*   [Nuxeo Jenkins Report user documentation]({{page space='userdoc' page='nuxeo-jenkins-report'}})
+- [Jenkins duty]({{page space='corg' page='jenkins-duty'}})
+- [Nuxeo Jenkins Report user documentation]({{page space='userdoc' page='nuxeo-jenkins-report'}})
 
 {{/panel}}</div><div class="column medium-6">
 

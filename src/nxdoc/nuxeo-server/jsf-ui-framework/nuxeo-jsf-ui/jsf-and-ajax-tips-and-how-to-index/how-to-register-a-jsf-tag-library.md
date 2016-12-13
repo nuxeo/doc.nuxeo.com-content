@@ -11,6 +11,7 @@ details:
         tool: Code
         topics: JSF
 labels:
+    - content-review-lts2016
     - howto
     - jsf
     - seam-jsf-component
@@ -168,17 +169,17 @@ As a reminder, the tag library documentation file, `mylibrary.tld`, is usually p
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [JSF and Javascript ]({{page page='jsf-and-javascript'}})
-*   [Ajax4jsf Best Practices]({{page page='ajax4jsf-best-practices'}})
-*   [Ajax Forms and Actions]({{page page='ajax-forms-and-actions'}})
-*   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [JSF and Javascript ]({{page page='jsf-and-javascript'}})
+- [Ajax4jsf Best Practices]({{page page='ajax4jsf-best-practices'}})
+- [Ajax Forms and Actions]({{page page='ajax-forms-and-actions'}})
+- [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [JavaScript Client]({{page page='javascript-client'}})
-*   [JSF UI Framework]({{page page='jsf-ui-framework'}})
-*   [Nuxeo JSF UI]({{page page='nuxeo-jsf-ui'}})
-*   [JSF UI Limitations]({{page page='jsf-ui-limitations'}})&nbsp;
+- [JavaScript Client]({{page page='javascript-client'}})
+- [JSF UI Framework]({{page page='jsf-ui-framework'}})
+- [Nuxeo JSF UI]({{page page='nuxeo-jsf-ui'}})
+- [JSF UI Limitations]({{page page='jsf-ui-limitations'}})&nbsp;
 
 {{/panel}}</div></div>

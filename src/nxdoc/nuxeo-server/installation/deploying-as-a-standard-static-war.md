@@ -13,6 +13,7 @@ details:
         tool: Terminal
         topics: 'Distribution, Static WAR'
 labels:
+    - content-review-lts2016
     - war
     - static-war
     - howto

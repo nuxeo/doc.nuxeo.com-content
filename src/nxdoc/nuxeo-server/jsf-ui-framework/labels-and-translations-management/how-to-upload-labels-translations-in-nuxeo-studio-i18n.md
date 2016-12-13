@@ -11,6 +11,7 @@ details:
         tool: Studio
         topics: 'Labels, Localization, Translation'
 labels:
+    - content-review-lts2016
     - i18n
     - labels
     - translation

@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - multiexcerpt
 toc: true
 confluence:
@@ -147,6 +148,7 @@ The Nuxeo Platform supports the following databases.
 9.3<br />
 9.4<br />
 9.5 (Since 8.3)
+9.6 (Since 8.10)
 {{! /multiexcerpt}}</td>
 <td colspan="1">9.3<br />
 9.4</td>

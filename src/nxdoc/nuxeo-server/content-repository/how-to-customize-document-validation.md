@@ -2,7 +2,7 @@
 title: How to Customize Document Validation
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 details:
     howto:
@@ -13,6 +13,7 @@ details:
         tool: Code Editor
         topics: 'Document Type, Validation'
 labels:
+    - lts2016-ok
     - howto
     - schema-component
 toc: true
@@ -234,11 +235,11 @@ Let's suppose you want to make reference to `Product` objects provided by a `Pro
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Field Constraints and Validation]({{page page='field-constraints-and-validation'}})
+- [Field Constraints and Validation]({{page page='field-constraints-and-validation'}})
 
 {{/panel}}</div></div>

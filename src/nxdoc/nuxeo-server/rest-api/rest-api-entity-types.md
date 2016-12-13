@@ -5,6 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
+    - content-review-lts2016
     - rest-api
     - blogs
     - endpoint
@@ -663,9 +664,9 @@ In the example below, we'll use the task we got from the GET request above whose
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in developer documentation'}}
 
-*   [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
-*   [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}})
-*   [JSON Marshalling]({{page page='json-marshalling'}})
+- [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
+- [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}})
+- [JSON Marshalling]({{page page='json-marshalling'}})
 
 {{/panel}}</div><div class="column medium-6">
 

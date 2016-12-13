@@ -2,9 +2,10 @@
 title: CMIS
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
+    - lts2016-ok
     - cmis
     - soap
     - blogs
@@ -440,9 +441,9 @@ The following documentation uses `http://localhost:8080/nuxeo` as the URL of the
 
 You can access the different services from the following URLs:
 
-*   Browser Binding root URL:&nbsp;`<span class="nolink">http://localhost:8080/nuxeo/json/cmis</span>`
-*   AtomPub service document: `<span class="nolink">http://localhost:8080/nuxeo/atom/cmis</span>`
-*   SOAP WSDL for the repository service: `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/RepositoryService?wsdl</span>`
+*   Browser Binding root URL: `http://localhost:8080/nuxeo/json/cmis`
+*   AtomPub service document: `http://localhost:8080/nuxeo/atom/cmis`
+*   SOAP WSDL for the repository service: `http://localhost:8080/nuxeo/webservices/cmis/RepositoryService?wsdl`
 
 ### JSON
 
@@ -467,7 +468,7 @@ This will give you the description of the default repository:
    "default" : {
       "cmisVersionSupported" : "1.1",
       "productName" : "Nuxeo OpenCMIS Connector",
-      "productVersion" : "7.10",
+      "productVersion" : "8.10",
       "vendorName" : "Nuxeo",
       "repositoryName" : "Nuxeo Repository default",
       "repositoryDescription" : "Nuxeo Repository default",
@@ -476,8 +477,7 @@ This will give you the description of the default repository:
       "repositoryId" : "default",
       "rootFolderId" : "fe7944e0-3d44-4abc-90d4-64e0e07c63c7",
       "rootFolderUrl" : "http://localhost:8080/nuxeo/json/cmis/default/root",
-      "latestChangeLogToken" : "1415109467897",
-
+      "latestChangeLogToken" : "42",
       "capabilities" : {
          "capabilityChanges" : "objectidsonly",
          "capabilityVersionSpecificFiling" : false,
@@ -584,7 +584,7 @@ You should probably pipe this through `tidy` if you want a readable output:
 *   In order to fetch custom metadata, you must restrict the selection to document types that contain the metadata. For example, if you have a metadata "custom" in a document type "mytype", then your query would be something like:
 
     ```
-    curl -u Administrator:Administrator "http://localhost:8080/nuxeo/atom/cmis/default/query?q=SELECT+cmis:objectId,+mytype:custom+FROM+mytype+&searchAllVersions=true"
+    curl -u Administrator:Administrator "http://localhost:8080/nuxeo/atom/cmis/default/query?q=SELECT+cmis:objectId,+mytype:custom+FROM+mytype&searchAllVersions=true"
     ```
 
 ### SOAP
@@ -629,7 +629,7 @@ Here is a working example of a SOAP message to the DiscoveryService:
 
 ### CMIS Clients
 
-Several free clients for CMIS 1.1 are available. The most complete isthe [CMIS Workbench](http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html), part of OpenCMIS.
+Several free clients for CMIS 1.1 are available. The most complete is the [CMIS Workbench](http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html), part of OpenCMIS.
 
 Developers can use the [Chemistry libraries](http://chemistry.apache.org/) to produce their own client (Java, Python, PHP, .NET). Documentation and sample for using OpenCMIS libraries can be found on the [OpenCMIS developer wiki](http://chemistry.apache.org/java/developing/index.html) with also [example code](http://chemistry.apache.org/java/examples/index.html) and [how-to guides](http://chemistry.apache.org/java/how-to/index.html).
 
@@ -641,8 +641,39 @@ To create, delete or modify documents, folders and relations just use the regula
 
 The Nuxeo OpenCMIS connector implements the following capabilities from the specification:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="3">**Navigation Capabilities**</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Get descendants supported</td><td colspan="1">_Yes_</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Get folder tree supported</td><td colspan="1">_Yes_</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Order By supported</td><td colspan="1">_Custom_</td></tr><tr><td colspan="3">**Object Capabilities**</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Content stream updates</td><td colspan="1">_PWC only_</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Changes</td><td colspan="1">_Object IDs only_</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Renditions</td><td colspan="1">_Read_</td></tr><tr><td colspan="3">**Filing Capabilities**</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Multifiling supported</td><td colspan="1">_No_</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Unfiling supported</td><td colspan="1">_No_</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Version-specific filing supported</td><td colspan="1">_No_</td></tr><tr><td colspan="3">**Versioning Capabilities**</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">PWC updatable</td><td colspan="1">_Yes_</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">PWC searchable</td><td colspan="1">_Yes_</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">All versions searchable</td><td colspan="1">_Yes_</td></tr><tr><td colspan="3">**Query Capabilities**</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Query</td><td colspan="1">_Both combined_</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Joins</td><td colspan="1">_None_
-(_Inner and outer_ if `org.nuxeo.cmis.joins=true` or before Nuxeo 6.0)</td></tr><tr><td colspan="3">**Type Capabilities**</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Create property types</td><td colspan="1">_No_</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">New type settable attributes</td><td colspan="1">_None_</td></tr><tr><td colspan="3">**ACL Capabilities**</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">ACLs</td><td colspan="1">_Manage_ (since Nuxeo 6.0)</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">ACLs propagation</td><td colspan="1">_Propagate_ (since Nuxeo 6.0)</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Supported permissions</td><td colspan="1">_Repository_ (since Nuxeo 6.0)</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr><td colspan="3">**Navigation Capabilities**</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">Get descendants supported</td><td colspan="1">_Yes_</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">Get folder tree supported</td><td colspan="1">_Yes_</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">Order By supported</td><td colspan="1">_Custom_</td></tr>
+<tr><td colspan="3">**Object Capabilities**</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">Content stream updates</td><td colspan="1">_PWC only_</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">Changes</td><td colspan="1">_Object IDs only_</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">Renditions</td><td colspan="1">_Read_</td></tr>
+<tr><td colspan="3">**Filing Capabilities**</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">Multifiling supported</td><td colspan="1">_No_</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">Unfiling supported</td><td colspan="1">_No_</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">Version-specific filing supported</td><td colspan="1">_No_</td></tr>
+<tr><td colspan="3">**Versioning Capabilities**</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">PWC updatable</td><td colspan="1">_Yes_</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">PWC searchable</td><td colspan="1">_Yes_</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">All versions searchable</td><td colspan="1">_Yes_</td></tr>
+<tr><td colspan="3">**Query Capabilities**</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">Query</td><td colspan="1">_Both combined_</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">Joins</td><td colspan="1">_None_<br>(_Inner and outer_ if `org.nuxeo.cmis.joins=true`)</td></tr>
+<tr><td colspan="3">**Type Capabilities**</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">Create property types</td><td colspan="1">_No_</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">New type settable attributes</td><td colspan="1">_None_</td></tr>
+<tr><td colspan="3">**ACL Capabilities**</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">ACLs</td><td colspan="1">_Manage_</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">ACLs propagation</td><td colspan="1">_Propagate_</td></tr>
+<tr><td colspan="1">&nbsp;</td><td colspan="1">Supported permissions</td><td colspan="1">_Repository_ </td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ## Model Mapping {{> anchor 'mapping'}}
 
@@ -661,23 +692,22 @@ This mapping may change to be more comprehensive in future Nuxeo Platform versio
 
 In addition to the system properties defined in the CMIS specification under the `cmis:` prefix, the Nuxeo Platform adds some additional properties under the `nuxeo:` prefix:
 
-*   `nuxeo:isVersion`: To distinguish between archived (read-only revision) and live documents (that can be edited);
-*   `nuxeo:lifecycleState`: To access the life cycle state of a document. By default only document in non `deleted` state will be returned in CMISQL queries unless and explicit `nuxeo:lifecycleState` predicate is specified in the `WHERE` clause of the query;
-*   `nuxeo:secondaryObjectTypeIds`: Makes it possible to access the facets of a document. Those facets can be static (as defined in the type definitions) or dynamic (each document instance can have declared facets);
+*   `nuxeo:isVersion`: To distinguish between archived (read-only revision) and live documents (that can be edited).
+*   `nuxeo:lifecycleState`: To access the life cycle state of a document. By default only document in non `deleted` state will be returned in CMISQL queries unless and explicit `nuxeo:lifecycleState` predicate is specified in the `WHERE` clause of the query.
+*   `nuxeo:secondaryObjectTypeIds`: Makes it possible to access the facets of a document. Those facets can be static (as defined in the type definitions) or dynamic (each document instance can have declared facets).
 *   `nuxeo:contentStreamDigest`: The low level, MD5 or SHA1 digest of blobs stored in the repository. The algorithm used to compute the digest is dependent on the configuration of the `BinaryManager` component of the Nuxeo repository.
-
 *   `nuxeo:isCheckedIn`: For live documents, distinguishes between the checked-in and checked-out state.
 *   `nuxeo:parentId`: Like `cmis:parentId` but also available on Document objects (which is possible because the Nuxeo Platform does not have direct multi-filing).
 *   `nuxeo:pathSegment`: The last path segment of the document (`ecm:name` in NXQL).
-*   `nuxeo:pos`: The position of an object in its containing folder, if that folder is ordered, or null otherwise (since Nuxeo 6.0).
+*   `nuxeo:pos`: The position of an object in its containing folder, if that folder is ordered, or `null` otherwise.
 
-All these properties can be used as regular CMIS properties and in a CMISQL query (in a `SELECT`,&nbsp;`WHERE` or `ORDER BY` clause where relevant), except for&nbsp;`nuxeo:contentStreamDigest`&nbsp;which can only be read in query results or by introspecting the properties of the&nbsp;`ObjectData`&nbsp;representation of a document.
+All these properties can be used as regular CMIS properties and in a CMISQL query (in a `SELECT`, `WHERE` or `ORDER BY` clause where relevant), except for `nuxeo:contentStreamDigest` which can only be read in query results or by introspecting the properties of the `ObjectData` representation of a document.
 
 ## Resources
 
 ### Use Case Video
 
-Watch this 15 min video presenting a case processing application leveraging CMIS.
+Watch this 15 min video presenting a case-processing application leveraging CMIS.
 
 {{> wistia_video id='rzvybdq540'}}
 

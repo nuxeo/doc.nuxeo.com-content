@@ -5,6 +5,8 @@ review:
     date: '2016-10-19'
     status: ok
 toc: true
+labels:
+    - content-review-lts2016
 confluence:
     ajs-parent-page-id: '29460589'
     ajs-parent-page-title: Getting Started with the Nuxeo Platform
@@ -139,12 +141,12 @@ The goal is to allow `Read and Write` access to the `sales` group members on the
 
 **Prerequisites**
 
-*   {{! multiexcerpt name='prerequisite_addon'}}Having installed the addon Getting started with the Nuxeo Platform. See [Setting up Your Nuxeo Environment]({{page page='setting-up-your-nuxeo-environment'}}).{{! /multiexcerpt}}
-*   {{! multiexcerpt name='prerequisite_users'}}Having created users on your Nuxeo instance. See [Setting up Your JavaScript Environment]({{page page='setting-up-your-javascript-environment'}}).{{! /multiexcerpt}}
+*   {{! multiexcerpt name='prerequisite_addon'}}Install the addon Getting started with the Nuxeo Platform. See [Setting up Your Nuxeo Environment]({{page page='setting-up-your-nuxeo-environment'}}).{{! /multiexcerpt}}
+*   {{! multiexcerpt name='prerequisite_users'}}Create users on your Nuxeo instance. See [Setting up Your JavaScript Environment]({{page page='setting-up-your-javascript-environment'}}).{{! /multiexcerpt}}
 
 **Procedure**
 
-1.  Using your favorite text editor or IDE, create a file called `grantReadWriteToSales.js` with the following content
+1.  Create a file called `grantReadWriteToSales.js` with the following content.
 
     ```js
     const Nuxeo = require('nuxeo');
@@ -189,11 +191,11 @@ Verify the permissions that have been set on the document.
 
 **Prerequisites**
 
-*   Step Assigning Permissions above
+*   Assigning Permissions step (above)
 
 **Procedure**
 
-1.  Using your favorite text editor or IDE, create a file called `checkPermissions.js` with the following content.
+1.  Create a file called `checkPermissions.js` with the following content.
 
     ```js
     const Nuxeo = require('nuxeo');
@@ -242,14 +244,14 @@ Verify the permissions that have been set on the document.
 
 **Goal**
 
-A file download security policy has been defined in the addon Nuxeo xxx. It allows file download only to users that are members of the `managers` group. We will check it by trying to download a contract:
+A file download security policy has been defined in the addon Getting started with the Nuxeo Platform. It only allows users that are members of the `managers` group to download files. We will check it by trying to download a contract:
 
 1.  Using Alicia's account. Alicia has Read and Write permissions on the contract but is not a manager.
-2.  Using Sarah's account. Sarah has Read and Write permissions and is a manager as well.
+2.  Using Sarah's account. Sarah has Read and Write permissions and is a manager.
 
 **Procedure**
 
-1.  Using your favorite text editor or IDE, create a file called `checkFileDownloadPolicy.js` to check the policy against a contract named `To the Moon and Back` in the `Beyond Space Travel Agency` portfolio.
+1.  Create a file called `checkFileDownloadPolicy.js` to check the policy against a contract named `To the Moon and Back` in the `Beyond Space Travel Agency` portfolio.
 
     ```js
     const Nuxeo = require('nuxeo');

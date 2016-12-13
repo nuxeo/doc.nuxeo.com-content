@@ -2,9 +2,10 @@
 title: DBS
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
+    - lts2016-ok
     - mongodb
     - mongodb-component
     - excerpt
@@ -89,8 +90,6 @@ history:
 DBS (Document-Based Storage) allows storage of Nuxeo documents inside a document-oriented store, like MongoDB or MarkLogic.
 
 {{! /excerpt}}
-
-&nbsp;
 
 ## Basic Storage
 
@@ -203,7 +202,7 @@ When configured for use with MarkLogic, each Nuxeo document is stored as a singl
     <ecm__racl__item xsi:type="xs:string">members</ecm__racl__item>
   </ecm__racl>
   <ecm__fulltextSimple xsi:type="xs:string">img folder green png administrator administrator records administrator records</ecm__fulltextSimple>
-  <ecm__fulltextBinary xsi:type="xs:string>toto</ecm__fulltextBinary>
+  <ecm__fulltextBinary xsi:type="xs:string">toto</ecm__fulltextBinary>
   <icon xsi:type="xs:string">/img/folder_green.png</icon>
   <dc__title xsi:type="xs:string">Records</dc__title>
   <dc__description xsi:type="xs:string"></dc__description>
@@ -237,15 +236,15 @@ When configured for use with MarkLogic, each Nuxeo document is stored as a singl
 
 For user-defined schemas (and regular Nuxeo schemas, like dublincore), properties are stored as you would expect in JSON (or XML for MarkLogic):
 
-*   Regular properties directly (like `dc:title`&nbsp;or `dc__title`).
-*   List properties as lists (like `dc:contributors`&nbsp;or&nbsp;`dc__contributors`).
-*   Complex properties as JSON/XML sub-document (like `my:attachedFile`&nbsp;or`dc__contributors`).
-*   Lists of complex properties as lists of JSON/XML sub-documents (like&nbsp;`my:attachedFile.vignettes`&nbsp;or `my__attachedFile/my__attachedFile__item/vignettes`).
-*   Binaries as a JSON sub-document containing a digest value or a Blob Provider key (like `content.data`&nbsp;or `content/data`) and other metadata (`content.mime-type`, etc.).
+*   Regular properties directly (like `dc:title` or `dc__title`).
+*   List properties as lists (like `dc:contributors` or `dc__contributors`).
+*   Complex properties as JSON/XML sub-document (like `my:attachedFile` or`dc__contributors`).
+*   Lists of complex properties as lists of JSON/XML sub-documents (like `my:attachedFile.vignettes` or `my__attachedFile/my__attachedFile__item/vignettes`).
+*   Binaries as a JSON sub-document containing a digest value or a Blob Provider key (like `content.data` or `content/data`) and other metadata (`content.mime-type`, etc.).
 
 ### System Properties
 
-A number of expected system properties are also present: `ecm:id`, `ecm:parentId`, `ecm:name`, `ecm:pos`,&nbsp;`ecm:primaryType`, `ecm:majorVersion`, etc. You'll find a full list as constants in the [`DBSDocument`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-core/nuxeo-core-storage-dbs/src/main/java/org/nuxeo/ecm/core/storage/dbs/DBSDocument.java#L82) class.
+A number of expected system properties are also present: `ecm:id`, `ecm:parentId`, `ecm:name`, `ecm:pos`, `ecm:primaryType`, `ecm:majorVersion`, etc. You'll find a full list as constants in the [`DBSDocument`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-core/nuxeo-core-storage-dbs/src/main/java/org/nuxeo/ecm/core/storage/dbs/DBSDocument.java#L82) class.
 
 The `ecm:acp` complex property represents the ACP defined on the document.
 
@@ -272,15 +271,13 @@ Due to the nature of the MongoDB storage, we use a transaction model equivalent 
 
 As MarkLogic relies on DBS, we are currently using the same transactional behavior.
 
-Full-text configuration is fixed to a default useful for evaluation (all textual fields and blobs are indexed), but a production instance should use Elasticsearch with a suitable full-text&nbsp;configuration.
+Full-text configuration is fixed to a default useful for evaluation (all textual fields and blobs are indexed), but a production instance should use Elasticsearch with a suitable full-text configuration.
 
 ### Not Yet Implemented
 
-The following features are planned but are not yet implemented as of Nuxeo Platform 7.10:
+The following features are planned but are not yet implemented as of Nuxeo Platform 8.10:
 
 *   tags aren't supported ([NXP-17670](https://jira.nuxeo.com/browse/NXP-17670)).
-
-&nbsp;
 
 * * *
 
@@ -290,13 +287,11 @@ The following features are planned but are not yet implemented as of Nuxeo Platf
 
 {{#> panel heading='Related Documentation'}}
 
-*   [MongoDB]({{page page='mongodb'}})
-*   [MarkLogic]({{page page='marklogic'}})
+- [MongoDB]({{page page='mongodb'}})
+- [MarkLogic]({{page page='marklogic'}})
 
 {{/panel}}</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
-
-&nbsp;
 
 </div></div>

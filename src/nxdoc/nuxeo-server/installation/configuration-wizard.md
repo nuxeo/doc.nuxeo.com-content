@@ -2,9 +2,11 @@
 title: Configuration Wizard
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 toc: true
+labels:
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '3866685'
     ajs-parent-page-title: Installation
@@ -48,7 +50,7 @@ The Nuxeo Platform provides you with easy access to the configuration of your Nu
 
 ## Startup Wizard&nbsp;{{> anchor 'wizard'}}
 
-The first time you start the Nuxeo Platform and go the URL [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo), a Startup Wizard will guide you to the main configuration steps and enable you to choose which add-ons you want to enable on the Platform. For each step, a default setting is proposed that enables you to test the application. You can change this default configuration to adapt it to specific environments.
+The first time you start the Nuxeo Platform and go the URL [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo), a Startup Wizard will guide you to the main configuration steps and enable you to choose which addons you want to enable on the Platform. For each step, a default setting is proposed that enables you to test the application. You can change this default configuration to adapt it to specific environments.
 
 The settings defined during the initial setup can be changed afterward [using the Admin tab](#setup-admincenter) or by [editing Nuxeo's configuration file]({{page page='configuration-parameters-index-nuxeoconf'}}) manually. Addons can also be added or removed afterwards from the Admin tab.
 
@@ -83,7 +85,7 @@ Possible databases are:
 
 ![]({{file name='Startup_wizard.png'}} ?w=550,border=true)
 
-### {{> anchor 'ldap-settings'}}Users & Groups
+### Users & Groups {{> anchor 'ldap-settings'}}
 
 By default users and groups are stored in the embedded database. You can however set up the platform from the beginning to use your own users and groups directory.
 
@@ -95,31 +97,31 @@ Nuxeo applications include email alert features. By default, no SMTP configurati
 
 ![]({{file name='Wizard_smtp_settings.png'}} ?w=550,border=true)
 
-### Connect Settings {{> anchor 'connect-settings'}}
+### Nuxeo Online Services Settings {{> anchor 'connect-settings'}}
 
-From this step, you can subscribe to a free 30 days trial offer of Nuxeo Online Services which gives you the possibility to evaluate and fully leverage the [Marketplace catalog](http://marketplace.nuxeo.com) and [Nuxeo Studio](http://www.nuxeo.com/products/studio/), the online Nuxeo customization environment. If you subscribe to the trial offer of Nuxeo Online Services, you will be sent an email confirming your subscription and your credentials and giving you the links to access the [Nuxeo Connect Portal]({{page space='connect' page='nuxeo-online-services-documentation'}}) and [Studio]({{page space='studio'}}).
+From this step, you can subscribe to a free 30 days trial offer of Nuxeo Online Services which gives you the possibility to evaluate and fully leverage the [Marketplace catalog](http://marketplace.nuxeo.com) and [Nuxeo Studio](http://www.nuxeo.com/products/studio/), the online Nuxeo customization environment. If you subscribe to the trial offer of Nuxeo Online Services, you will be sent an email confirming your subscription and your credentials and giving you the links to access the [Nuxeo Online Services Portal]({{page space='connect' page='nuxeo-online-services-documentation'}}) and [Nuxeo Studio]({{page space='studio'}}).
 
 ![]({{file name='Wizard_connect.png'}} ?w=550,border=true)
 
 {{#> callout type='tip' }}
 
-If you already have a Nuxeo Online Services account, you can register your Nuxeo instance from this step to directly be able to apply your Nuxeo Studio customizations and the installation of Nuxeo Packages in your instance.
+If you already have a Nuxeo Online Services account, you can register your Nuxeo instance from this step to directly be able to apply your Nuxeo Studio customizations and the installation of Nuxeo Addons in your instance.
 
 {{/callout}}
 
 ### Module Installation {{> anchor 'module-installation'}}
 
-Select the additional features you want to install on the Platform. You can also just keep the naked Content Application Platform.
+Select the additional features you want to install on the Platform. You can also just keep the naked Nuxeo Server.
 
 {{#> callout type='tip' }}
 
-You can install or uninstall modules afterwards from the [Admin tab]({{page page='admin-tab-overview'}}).
+You can install or uninstall addons afterwards from the [Admin tab]({{page page='admin-tab-overview'}}).
 
 {{/callout}}
 
 ![]({{file name='Wizard_module_selection.png'}} ?w=550,border=true)
 
-And if needed, download the module packages. Packages may be already included in the Platform.
+And if needed, download the addons packages. Packages most probably are already included in the Platform.
 
 ![]({{file name='Wizard_module_download.png'}} ?w=550,border=true)
 
@@ -129,11 +131,11 @@ A final Summary step provides you with a screen on which you can see all the con
 
 ![]({{file name='Wizard_summary.png'}} ?w=550,border=true)
 
-To validate your configuration, click on the **Start** button. The server will automatically restart and your configuration will be applied. Once the server is restarted, you are displayed the login page. Log in to your application the **Administrator** user name and the **Administrator** password.
+To validate your configuration, click on the **Start** button. The server will automatically restart and your configuration will be applied.
+
+Once the server is restarted, you are displayed the login page. Log in to your application the **Administrator** user name and the **Administrator** password.
 
 ![]({{file name='Wizard_restart.png'}} ?w=550,border=true)
-
-&nbsp;
 
 * * *
 

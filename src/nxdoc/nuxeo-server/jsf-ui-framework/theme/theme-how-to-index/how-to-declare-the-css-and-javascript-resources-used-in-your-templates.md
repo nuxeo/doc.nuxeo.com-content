@@ -2,7 +2,7 @@
 title: How to Declare the CSS and JavaScript Resources Used in Your Templates
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 details:
     howto:
@@ -13,13 +13,13 @@ details:
         tool: Code editor
         topics: Theme
 labels:
+    - lts2016-ok
     - css
     - javascript
     - template
     - howto
     - theme
     - link-update
-    - last-review-20150805
     - themes-component
     - excerpt
 confluence:
@@ -284,15 +284,15 @@ It also inserts additional templating zones to include additional resources, her
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [Theme Documentation]({{page page='theme'}})
-*   [How to Customize the Login Page]({{page page='how-to-customize-the-login-page'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [Theme Documentation]({{page page='theme'}})
+- [How to Customize the Login Page]({{page page='how-to-customize-the-login-page'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Branding in Studio Documentation]({{page space='studio' page='branding'}})
-*   [Extension Points]({{page page='runtime-and-component-model'}})
-*   [JSF UI Framework]({{page page='jsf-ui-framework'}})
-*   [Online UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)
+- [Branding in Studio Documentation]({{page space='studio' page='branding'}})
+- [Extension Points]({{page page='runtime-and-component-model'}})
+- [JSF UI Framework]({{page page='jsf-ui-framework'}})
+- [Online UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)
 
 {{/panel}}</div></div>
