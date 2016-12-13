@@ -34,6 +34,57 @@ history:
         version: '1'
 
 ---
+
+## Nuxeo Elements
+
+- Introduction to Elements
+- why they exist and the purpose
+
+## ClientJS / Rest API
+
+- Link to Doc page and relevance for Elements
+- Important aspects of ClientJS and Rest API regarding Elements
+-- specific things like enrinchers
+
+## Developing tools
+
+- Important tools (used by the team) for dev custom apps (TODO: list them here)
+
+## Repositories
+
+- General information and link to catalog
+
+### Nuxeo Elements
+
+- General information and link to repo (also demo/docs)
+
+### Nuxeo UI Elements
+
+- General information and link to repo (also demo/docs)
+
+### Nuxeo Data Visualization
+
+- (if still relevant)
+
+## Tutorial: Simple Browsing Custom App
+
+- Introduction and link to tutorial page
+
+## Quality Assurance
+
+- Introduction to topic
+- Sub sections should be links to pages (TODO: change layout)
+
+### Formatting and Linting
+
+### Test Strategies
+
+### Performance Strategies
+
+
+
+--- OLD: refator ---
+
 The Nuxeo Web UI Framework allows users to build business applications while keeping the UI simple and pluggable. It relies on Java Server Faces (JSF) and Facelets to provide a [declarative component based UI Framework]({{page page='jsf-ui-framework'}}).
 
 **Nuxeo Elements** is an ongoing work to build upon the same goals of simplicity and pluggability and leverage emerging Web standards to take our component-based UI framework to the client with DOM as the "framework" and HTML as its familiar declarative syntax.

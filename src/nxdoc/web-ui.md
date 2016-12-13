@@ -98,14 +98,14 @@ history:
 
 <div class="row"><div class="column medium-4">{{#> panel type='primary'}}
 
-[Web UI Overview]({{page page='web-ui-overview'}})
+[Overview]({{page page='web-ui-overview'}})
 
 {{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
 
-[ Nuxeo Elements]({{page page='nuxeo-elements'}})
+[Nuxeo Elements]({{page page='nuxeo-elements'}})
 
 {{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
 
-[Data Visualization]({{page page='data-visualization'}})
+[Customization]({{page page='web-ui-customization'}})
 
 {{/panel}}</div></div>

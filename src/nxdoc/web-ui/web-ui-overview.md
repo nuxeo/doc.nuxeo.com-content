@@ -128,6 +128,7 @@ history:
         version: '1'
 
 ---
+
 The Nuxeo Web UI is a user interface designed in Web Component (HTML) / Polymer framework. It allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full screen suggester. [Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) is a first class choice for projects where visual and workflows are important requirements. Let's discover what are the functional evolutions present on this new interface.
 
 ## Requirements
@@ -138,7 +139,7 @@ Supported browsers for Nuxeo Web UI and Nuxeo Web UI Elements are:
  - Firefox
  - Chrome
  - Edge
- 
+
 It should also be possible to build applications that support IE11, Safari, Safari Mobile with Nuxeo Web UI Elements.
 {{! /multiexcerpt}}
 
@@ -227,7 +228,20 @@ Nuxeo Elements are built with Polymer which is a library for creating custom ele
 
 Our Web UI is built itself with Polymer too. Goals were to not only ensure the simplicity and composability we aimed for but also to be as framework independent as possible so developers can use our elements to build their own UIs with whatever framework they see fit.
 
+### Web Components
+
+- introduction
+- why ?
+- w3c
+
+### Polymer
+
+- Small introduction
+- Link to page
+
 ### Components
+
+- only webui elements
 
 Everything in the web UI is built as a custom element with `<nuxeo-app>` as top level component. This application element acts as application data store / mediator storing context data as properties which are then forwarded through the hierarchy thanks to data binding. To learn more about data binding and its relation to the mediator pattern you can read the&nbsp;[article](http://www.nuxeo.com/blog/polymer-questions-to-bind-or-not-to-bind/) on our "[Polymer](http://www.nuxeo.com/blog/tag/polymer/)" series.
 
