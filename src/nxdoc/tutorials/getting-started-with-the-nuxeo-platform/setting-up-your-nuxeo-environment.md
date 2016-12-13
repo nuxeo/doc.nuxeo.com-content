@@ -307,7 +307,7 @@ OS: Linux, Mac OS, Windows
 2.  Download and start the Nuxeo Platform:
 
     ```bash
-    $ docker run --name mynuxeo -d -p 8080:8080 nuxeo/nuxeo:discover-ft
+    $ docker run --name mynuxeo -d -p 8080:8080 nuxeo/nuxeo:discover-lts
     ```
 
 3.  Register your Nuxeo instance on Nuxeo Online Services:
