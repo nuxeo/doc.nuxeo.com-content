@@ -296,214 +296,13 @@ This how-to is the first step of the tutorial Getting Started with the Nuxeo Pla
 
 {{! /excerpt}}
 
-## Docker
-
-OS: Linux, Mac OS, Windows
-
-### Installation
-
-1.  Install Docker: Follow the [Docker Installation documentation](https://docs.docker.com/engine/installation/).
-
-2.  Download and start the Nuxeo Platform:
-
-    ```bash
-    $ docker run --name mynuxeo -d -p 8080:8080 nuxeo/nuxeo:discover-lts
-    ```
-
-3.  Register your Nuxeo instance on Nuxeo Online Services:
-
-    ```
-    # You don't have a Nuxeo Online Service account
-    $ docker exec -ti mynuxeo bin/nuxeoctl register-trial
-    # OR
-    # You already have a Nuxeo Online Service account
-    $ docker exec -ti mynuxeo bin/nuxeoctl register
-    ```
-
-    And follow the instructions displayed.
-
-### Setting up Environment
-
-You now have a Nuxeo Platform instance ready to run. At this step, you need to install some addons, in particular the addon Getting started with the Nuxeo Platform.
-
-The addon Getting started with the Nuxeo Platform will add some business logic and documents to your Nuxeo Platform instance, that we will leverage all through this tutorial.
-
-1.  Stop the server.
-
-    ```
-    $ docker exec mynuxeo bin/nuxeoctl stop
-    ```
-
-2.  Initialize local Nuxeo addons.
-
-    ```
-    $ docker exec mynuxeo bin/nuxeoctl mp-init
-    ```
-
-3.  Get the list of local Nuxeo addons.
-
-    ```
-    $ docker exec mynuxeo bin/nuxeoctl mp-list
-    ```
-
-    You get the list of local addons, whose status is downloaded.
-
-4.  Install the addons required for this tutorial.
-
-    ```
-    $ docker exec -ti mynuxeo bin/nuxeoctl mp-install nuxeo-dam nuxeo-jsf-ui nuxeo-platform-getting-started
-    ```
-
-5.  Validate the dependency resolution step.
-
-    ```
-    Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.2.3/nuxeo-jsf-ui-8.10.0/nuxeo-platform-getting-started-1.1.0
-      Packages to download (3):      nuxeo-jsf-ui:8.10.0, nuxeo-dam:6.2.3, nuxeo-platform-getting-started:1.1.0
-
-    Do you want to continue (yes/no)? [yes]
-    ```
-
-6.  Check the Nuxeo addons were correctly installed.
-
-    ```
-    $ docker exec mynuxeo bin/nuxeoctl mp-list
-    [...]
-    Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.2.3)
-     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-8.10.0)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.1.0)
-    ```
-
-    The installed addons now have the status started.
-
-7.  Start the server:
-
-    ```bash
-    $ docker exec mynuxeo bin/nuxeoctl start  
-    [...]
-    Server started with process ID 973.
-
-    ```
-
-    Your server is now running. You benefit from the following features brought by the addon Getting started with the Nuxeo Platform.
-
-The addon brings the following document types:
-{{! multiexcerpt name='studio_configuration_desc'}}
-* The portfolio document type (`BCPortfolio`) holds the contracts of a customer. Its holds properties about the customer: the company name, industry and size, and the customer&rsquo;s juridical contact information.
-* The contract document type (`BCContract`) have several properties: an owner (an application user), some dates (signature, start, expiration dates), a type, an amount. It inherits customer information from its portfolio.
-* Some vocabularies are used to populate the portfolio and contract metadata (`companySize`, `contractType` and `industry`)
-* Contracts have a specific life cycle, so they can evolve though the states `draft`, `approval`, `running`, `renegociation`, `void`, `deleted` and `restored`
-* Some business logic through automation chains and event handlers make contracts inherit properties from its portfolio, and evolve following its life cycle{{! /multiexcerpt}}
-
-{{#> callout type='info' heading='Learn more'}}
-
-*   [Docker documentation](https://docs.docker.com/)
-*   [Nuxeo Docker repository](https://hub.docker.com/_/nuxeo/)
-*   [Our Installation documentation]({{page page='installation'}})
-
-{{/callout}}
-
-## Homebrew
-
-OS: Mac OS
-
-### Installation
-
-1.  Install Homebrew: Follow [their documentation](http://brew.sh/).
-2.  Install the Nuxeo Platform:
-
-    ```bash
-    $ brew install nuxeo
-    ```
-
-3.  Register your Nuxeo instance on Nuxeo Online Services:
-
-    ```
-    # You don't have a Nuxeo Online Service account
-    $ nuxeoctl register-trial
-    # You already have a Nuxeo Online Service account
-    $ nuxeoctl register
-    ```
-
-    And follow the instructions displayed.
-
-### Setting up Environment
-
-You now have a Nuxeo Platform instance ready to run. At this step, you need to install some addons, in particular the addon Getting started with the Nuxeo Platform.
-
-The addon Getting started with the Nuxeo Platform will add some business logic and documents to your Nuxeo Platform instance, that we will leverage all through this tutorial.
-
-To install a Nuxeo Package:
-
-1.  Initialize local Nuxeo addons.
-
-    ```
-    $ nuxeoctl mp-init
-    ```
-
-2.  Get the list of local Nuxeo addons.
-
-    ```
-    $ nuxeoctl mp-list
-    ```
-
-    You get the list of local addons, whose status is downloaded.
-
-3.  Install the addons required for this tutorial.
-
-    ```
-    $ nuxeoctl mp-install nuxeo-dam nuxeo-jsf-ui nuxeo-platform-getting-started
-    ```
-
-4.  Validate the dependency resolution step.
-
-    ```
-    Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.2.3/nuxeo-jsf-ui-8.10.0/nuxeo-platform-getting-started-1.1.0
-      Packages to download (3):      nuxeo-jsf-ui:8.10.0, nuxeo-dam:6.2.3, nuxeo-platform-getting-started:1.1.0
-
-    Do you want to continue (yes/no)? [yes]
-    ```
-
-5.  Check the Nuxeo addons were correctly installed.
-
-    ```
-    $ nuxeoctl mp-list
-    [...]
-    Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.2.3)
-     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-8.10.0)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.1.0)
-    ```
-
-    The installed addons now have the status started.
-
-6.  Start the server
-
-    ```
-    $ nuxeoctl console
-    ```
-
-    Your server is now running. You benefit from the following features brought by the addon Getting started with the Nuxeo Platform.
-
-The addon brings the following document types:
-{{{multiexcerpt 'studio_configuration_desc' page='Setting up Your Nuxeo Environment'}}}
-
-{{#> callout type='info' heading='Learn more'}}
-
-*   [Our Installation documentation]({{page page='installation'}})
-*   [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
-
-{{/callout}}
-
 ## Universal ZIP Package
 
 OS: Linux, Mac OS, Windows
 
 ### Prerequisites
 
-Contrarily to the brew installation or docker image, the universal zip package comes without the related software needed for this tutorial. Please [install and set up related software]({{page page='installing-and-setting-up-related-software'}}) before going to the next step.
+Contrarily to the Brew installation or Docker image, the universal ZIP package comes without the related software needed for this tutorial. Please [install and set up related software]({{page page='installing-and-setting-up-related-software'}}) before going to the next step.
 
 ### Installation
 
@@ -611,7 +410,12 @@ To install a Nuxeo Package:
     Your server is now running. You benefit from the following features brought by the addon Getting started with the Nuxeo Platform.
 
 The addon brings the following document types:
-{{{multiexcerpt 'studio_configuration_desc' page='Setting up Your Nuxeo Environment'}}}
+{{! multiexcerpt name='studio_configuration_desc'}}
+* The portfolio document type (`BCPortfolio`) holds the contracts of a customer. Its holds properties about the customer: the company name, industry and size, and the customer&rsquo;s juridical contact information.
+* The contract document type (`BCContract`) have several properties: an owner (an application user), some dates (signature, start, expiration dates), a type, an amount. It inherits customer information from its portfolio.
+* Some vocabularies are used to populate the portfolio and contract metadata (`companySize`, `contractType` and `industry`)
+* Contracts have a specific life cycle, so they can evolve though the states `draft`, `approval`, `running`, `renegociation`, `void`, `deleted` and `restored`
+* Some business logic through automation chains and event handlers make contracts inherit properties from its portfolio, and evolve following its life cycle{{! /multiexcerpt}}
 
 {{#> callout type='info' heading='Learn more'}}
 
@@ -619,6 +423,18 @@ The addon brings the following document types:
 *   [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
 
 {{/callout}}
+
+## Docker
+
+OS: Linux, Mac OS, Windows
+
+The Docker image is currently pending validation at Docker. It will be available very shortly.
+
+## Homebrew
+
+OS: Mac OS
+
+The Nuxeo Homebrew formula is currently pending validation at Homebrew. It will be available very shortly.
 
 &nbsp;
 
