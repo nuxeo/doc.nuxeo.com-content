@@ -2,7 +2,7 @@
 title: How to create an empty bundle
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-08'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Code
         topics: Bundle
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - dev-guide
     - manifest
     - bundle
@@ -369,7 +369,7 @@ This is the very first recipe of this cookbook and it will be the basis for the 
 
 {{! multiexcerpt name='recipe-tip'}} {{#> callout type='tip' heading='General Remarks'}}
 
-*   <span style="line-height: 21.58px;">This recipe is not specific to a system or an IDE. You will have to adapt it to your needs. The sole obligation is to use Maven available in a console and [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) installed. But, even this part, with experience, could be fitted to your IDE habits if you have any.</span>
+*   This recipe is not specific to a system or an IDE. You will have to adapt it to your needs. The sole obligation is to use Maven available in a console and [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) installed. But, even this part, with experience, could be fitted to your IDE habits if you have any.
 *   For any remark about this recipe or about this cookbook, don't hesitate to leave us a comment on this page.
 
 {{/callout}}{{! /multiexcerpt}}
@@ -382,7 +382,7 @@ This recipe is composed of the major steps below:
 *   [Step 2: Created Files Description](#created-files-description)
 *   [Step 3: Install and check the deployment of your Bundle](#install-and-check-the-deployment-of-your-bundle)
 
-## What you need
+## What You Need
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
@@ -434,7 +434,7 @@ Nuxeo Server distribution
 
 </td></tr></tbody></table></div>
 
-## Create the basic project skeleton
+## Create the Basic Project Skeleton
 
 To create a basic folder structure, we use the [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo). There is no required location to create your project.
 To create your project structure, follow the steps below.
@@ -461,7 +461,7 @@ To create your project structure, follow the steps below.
      info You can start editing code or you can continue with calling another generator (yo nuxeo <generator>..)
     ```
 
-## Complete the folder structure
+## Complete the Folder Structure
 
 After you completed the project creation, you get this folder structure:
 
@@ -548,9 +548,9 @@ After you completed the project creation, you get this folder structure:
     ```
 
 
-### The `deployment-fragment.xml` file
+### The `deployment-fragment.xml` File
 
-In order to deploy your Nuxeo add-on project in the Nuxeo server, you need a new file called `deployment-fragment.xml` in the `cookbook/src/main/resources/OSGI-INF` folder. This file tells the deployment mechanism which files must be copied and where. This file is not mandatory, but it is needed to have your bundle displayed in the log at start up.
+In order to deploy your Nuxeo addon project in the Nuxeo server, you need a new file called `deployment-fragment.xml` in the `cookbook/src/main/resources/OSGI-INF` folder. This file tells the deployment mechanism which files must be copied and where. This file is not mandatory, but it is needed to have your bundle displayed in the log at start up.
 
 For now, the content of the file `deployment-fragment.xml` should be:
 
@@ -569,9 +569,9 @@ The content of this file will be completed in a coming recipe.
 **Remark:**
 
 *   If you want your bundle deployed after all other bundles/contributions, you can add a <require>all</require>
-*   the deployment-fragment.xml file is not required if you have no dependency information to transmit to the runtime or pre-deployment actions to execute.
+*   The deployment-fragment.xml file is not required if you have no dependency information to transmit to the runtime or pre-deployment actions to execute.
 
-### The `MANIFEST.MF` file
+### The `MANIFEST.MF` File
 
 As Nuxeo add-ons are OSGi modules, you have a `MANIFEST.MF` file in the `/src/main/resources/META-INF` folder.&nbsp;
 
@@ -588,8 +588,8 @@ Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.nuxeo.cookbook.cookbook-core;singleton=true
 ```
 
-Some of the values above are mandatory, some should be changed to adapt to your needs.
-The following properties are more the less "constants" and their values must be always the same:
+Some of the values above are mandatory, some should be changed to be adapted to your needs.
+The following properties are more the less "constants" and their values must always be the same:
 
 ```
 Manifest-Version: 1.0
@@ -651,7 +651,7 @@ Here is a sample of such a file:
 To make the log more or less verbose, just change the first value of the priority value.
 In this example, the level is "INFO". If you want more details, downgrade it to "DEBUG". You will have more entries displayed in the console about Nuxeo classes involved in the running tests.
 
-## Install and check the deployment of your bundle
+## Install and Check the Deployment of Your Bundle
 
 {{! multiexcerpt name='bundle-deployment-steps'}}
 
