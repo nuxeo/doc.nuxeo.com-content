@@ -1,8 +1,8 @@
 ---
-title: Nuxeo Elements
+title: Nuxeo Webcomponents
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-13'
     status: ok
 toc: true
 labels:
@@ -14,30 +14,26 @@ confluence:
     ajs-parent-page-title: Web UI
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Elements
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Elements'
-    page_id: '31687557'
-    shortlink: hYPjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/hYPjAQ'
-    source_link: /display/NXDOC/Nuxeo+Elements
+    canonical: Nuxeo+Webcomponents
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Webcomponents'
+    page_id: '316875510'
+    shortlink: hYPjACo
+    shortlink_source: 'https://doc.nuxeo.com/x/hYPjACo'
+    source_link: /display/NXDOC/Nuxeo+Webcomponents
 tree_item_index: 300
 history:
     -
-        author: Manon Lumeau
-        date: '2016-07-25 14:05'
+        author: Tiago Cardoso
+        date: '2016-12-13 14:05'
         message: ''
-        version: '2'
+        version: '1'
     -
-        author: Manon Lumeau
-        date: '2016-07-25 14:03'
+        author: Vladimir Pasquier
+        date: '2016-12-13 14:03'
         message: ''
         version: '1'
 
 ---
-The Nuxeo Web UI Framework allows users to build business applications while keeping the UI simple and pluggable. It relies on Java Server Faces (JSF) and Facelets to provide a [declarative component based UI Framework]({{page page='jsf-ui-framework'}}).
-
-**Nuxeo Elements** is an ongoing work to build upon the same goals of simplicity and pluggability and leverage emerging Web standards to take our component-based UI framework to the client with DOM as the "framework" and HTML as its familiar declarative syntax.
-
 ## Technology
 
 As a platform provider, we strive to build isolated and reusable components that are simple to use and can serve as building blocks for custom business application. Thankfully we are not alone and this need has driven the W3C Web Applications Working Group to work on a specification for a component model for the Web: **Web Components**.
@@ -66,165 +62,6 @@ The **Polymer library** provides a simple declarative syntax to define **custom 
 *   Data binding
 
 There are a number of elements built with Polymer that you can use to build your own applications and while these elements depend on the Polymer library, you are free to use them without using Polymer directly.
-
-## Nuxeo Elements
-
-GitHub project: [https://github.com/nuxeo/nuxeo-elements](https://github.com/nuxeo/nuxeo-elements)
-
-Online reference documentation: [http://nuxeo.github.io/nuxeo-elements](http://nuxeo.github.io/nuxeo-elements)
-
-### Data Elements
-
-Polymer pushes for a very declarative approach to building web applications with a "Everything is an element" philosophy. This includes both visual and non-visual/data elements, so even non UI elements can take advantage of data binding in a declarative way making for a very concise and clean code.
-
-Our set of Nuxeo elements was built with this same philosophy in mind and promotes a clear separation between data and UI elements thus allowing users to use any of the existing UI elements while still relying on our data elements to "bind" these to Nuxeo.
-
-In order to connect these elements to data in a Nuxeo instance we need to setup a connection, which, like everything else in Polymer, is an element called **nuxeo-connection**. Usage is as simple as:
-
-```xml
-<nuxeo-connection url="http://demo.nuxeo.com/nuxeo" username="Administrator" password="Administrator">
-```
-
-This elements uses a "conceptual singleton" (MonoState Pattern) so once it's configured on our application with the proper attributes all the other elements just need to use `<nuxeo-connection/>` to retrieve this "shared" instance. Since this is a singleton we ensure there's only one Nuxeo client shared by all the instances of our element.
-
-As mentioned before, in Polymer, non visual elements are the standard way to expose remote services. So we built a set of custom Nuxeo data elements to interact with Nuxeo's APIs:
-
-<div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-<th colspan="1">Tag</th>
-<th colspan="1">Description</th>
-<th colspan="1">Example</th>
-</tr>
-<tr>
-<td colspan="1">
-
-nuxeo-connection
-
-</td>
-
-<td colspan="1">
-
-Allows configuring the connection to a Nuxeo server.
-
-</td>
-<td colspan="1">
-
-<pre><code class="xml">```
-<nuxeo-connection
-  url="http://demo.nuxeo.com/nuxeo"
-  username="Administrator"
-  password="Administrator">
-</nuxeo-connection>
-```
-</code></pre>
-
-</td>
-</tr>
-
-<tr>
-<td colspan="1">
-
-nuxeo-resource
-
-</td>
-<td colspan="1">
-
-Exposes methods (get, post, put, delete) of a Nuxeo REST API resource at a given path.
-
-</td>
-<td colspan="1">
-
-<pre><code class="xml">```
-<nuxeo-resource
-  path="/path/default-domain">
-</nuxeo-resource>
-```
-</code></pre>
-
-</td>
-</tr>
-
-<tr>
-<td colspan="1">
-
-nuxeo-document
-
-</td>
-<td colspan="1">
-
-Extends `nuxeo-resource` to target Document resources by path or by uid.
-
-</td>
-<td colspan="1">
-
-<pre><code class="xml">```
-<nuxeo-document
-  doc-path="/default-domain">
-</nuxeo-document>
-```
-</code></pre>
-
-</td>
-</tr>
-
-<tr>
-<td colspan="1">
-
-nuxeo-operation
-
-</td>
-<td colspan="1">
-
-Allows calling an operation on a Nuxeo server.
-
-</td>
-<td colspan="1">
-
-<pre><code class="xml">```
-<nuxeo-operation
-  op="Document.Query"
-  params="{'query': 'select from Document'}">
-</nuxeo-operation>
-```
-</code></pre>
-
-</td>
-</tr>
-
-<tr>
-<td colspan="1">
-
-nuxeo-page-provider
-
-</td>
-<td colspan="1">
-
-Wraps a `Repository.PageProvider` operation to provide paginated results for a given query.
-
-</td>
-<td colspan="1">
-
-<pre><code class="xml">```
-<nuxeo-page-provider
-query="select from Document" 
-page-size="5"
-sort="dc:modified">
-</nuxeo-page-provider>
-```
-</code></pre>
-
-
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-
-
-**Note:** Most data elements support an `auto` attribute which, when set, automatically calls the GET method whenever the element properties change.
 
 ### Web Components vs JSF
 
