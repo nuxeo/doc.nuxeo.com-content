@@ -135,7 +135,7 @@ Directories comes with several implementations:
 
 One of the ideas behind the Directory concept is to be able to provide standard UI building blocks on top of data coming from various sources.
 
-Typically, as long as your data or services are mapped through a Directory model :
+Typically, as long as your data or services are mapped through a Directory model:
 
 *   you can access it with a standard API
 *   you can use standard widgets to reference or search an entry or a list of entries
@@ -177,8 +177,14 @@ The following control how data are initially loaded into the directory:
 
 The following control how entries are cached:
 
-*   `cacheTimeout`: The timeout (in seconds) after which an entry is evicted from the cache. The default is 0, which means never time out. (SQL only). It is deprecated since LTS 2015 and should be replace by the usage of cacheEntryName and cacheEntryWithoutReferencesName where max size and TTL (equivalent to timeout) can be configured.
-*   `cacheMaxSize`: The maximum number of entries in the cache. The default is 0, which means to not use caching. (SQL only) Also deprecated since LTS 2015.
+*   `cacheTimeout`: The timeout (in seconds) after which an entry is evicted from the cache. The default is 0, which means never time out. (SQL only).
+    {{#> callout type='note' }}
+    It is deprecated since LTS 2015 and should be replace by the usage of `cacheEntryName` and `cacheEntryWithoutReferencesName` where max size and TTL (equivalent to timeout) can be configured.
+    {{/callout}}
+*   `cacheMaxSize`: The maximum number of entries in the cache. The default is 0, which means to not use caching. (SQL only)
+    {{#> callout type='note' }}
+    Also deprecated since LTS 2015.
+    {{/callout}}
 *   `cacheEntryName`: The name of the cache (from the CacheService) containing full entries. (SQL/LDAP only)
 *   `cacheEntryWithoutReferencesName`: The name of the cache (from the CacheService) containing entries without references. (SQL/LDAP only)
 *   `negativeCaching`: Whether to cache negative cache hits (the default is `false`). (SQL/LDAP only)
