@@ -27,3 +27,7 @@ tree_item_index: 100
 
 - Other relevant resources
 -- Polycast: https://www.youtube.com/playlist?list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN
+
+## Best Practices
+
+## Pitfalls and Limitations

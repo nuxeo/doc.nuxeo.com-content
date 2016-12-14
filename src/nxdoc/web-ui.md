@@ -98,7 +98,7 @@ history:
 
 <div class="row"><div class="column medium-4">{{#> panel type='primary'}}
 
-[Overview]({{page page='web-ui-overview'}})
+[Overview]({{page page='overview'}})
 
 {{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
 
@@ -106,6 +106,6 @@ history:
 
 {{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
 
-[Customization]({{page page='web-ui-customization'}})
+[Customization]({{page page='customization'}})
 
 {{/panel}}</div></div>

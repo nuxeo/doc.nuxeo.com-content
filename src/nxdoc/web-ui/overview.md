@@ -1,5 +1,5 @@
 ---
-title: Web UI Overview
+title: Overview
 review:
     comment: ''
     date: '2015-12-01'
@@ -228,18 +228,44 @@ Nuxeo Elements are built with Polymer which is a library for creating custom ele
 
 Our Web UI is built itself with Polymer too. Goals were to not only ensure the simplicity and composability we aimed for but also to be as framework independent as possible so developers can use our elements to build their own UIs with whatever framework they see fit.
 
+## Technology
+
+As a platform provider, we strive to build isolated and reusable components that are simple to use and can serve as building blocks for custom business application. Thankfully we are not alone and this need has driven the W3C Web Applications Working Group to work on a specification for a component model for the Web: **Web Components**.
+
 ### Web Components
 
 - introduction
 - why ?
 - w3c
 
+[Web Components](http://www.w3.org/TR/components-intro/) are a collection of standards which ultimately allow developers to create their own custom HTML elements. Among those standards are:
+
+* **Custom Elements**: These custom elements can use custom tag names, attributes and events and can also expose a custom script API. Developers can even extend native HTML elements as well as other custom elements. Custom elements allow you to bring new semantics to the Web, extending the existing HTML vocabulary and promoting more meaningful structured markup and content.
+* **Templates**: The content of the custom elements can be defined by templates &ndash; chunks of markup that can be attached and activated on demand. If you have used Mustache or Handlebars you should be pretty familiar with the concept of templates.
+* **Shadow DOM**: Proper isolation is also a cornerstone of Web Components thanks to a new specification called Shadow DOM. It allows encapsulation and well defined boundaries within the DOM. Any HTML, CSS or JavaScript inside your custom element can be protected from the parent document allowing for more reliable composition of your user interface components.
+* **Imports**: Web Components specify the packaging and loading of your custom elements as well, thanks to Imports which provide a convention for bundling your HTML, CSS and JS into a single deliverable: Polymer.
+
 ### Polymer
+
+[Polymer](https://www.polymer-project.org/) presents itself as a new type of library for the web built on top of Web Components and designed to make it easier and faster for developers to create great, reusable components for the modern web. Its goal is to help you build your own custom elements:
+
+![]({{file name='webcomponents_stack.png' space='nxdoc710' page='nuxeo-elements'}} ?w=350,h=226,border=true)
+
+The **Polymer library** provides a simple declarative syntax to define **custom elements** and help you build powerful, reusable elements with less code while also including special features like:
+
+*   Element registration
+*   Lifecycle callbacks
+*   Property observation
+*   Local DOM template
+*   Data binding
+
+There are a number of elements built with Polymer that you can use to build your own applications and while these elements depend on the Polymer library, you are free to use them without using Polymer directly.
 
 [Polymer Guide]({{page page='polymer-guide'}})
 
 - Small introduction
 - Link to page
+
 
 ### Components
 
@@ -266,7 +292,7 @@ The main area is reserved for displaying the current page's content. Our router 
 
 {{#> panel heading='Related Documentation'}}
 - [Nuxeo Elements]({{page page='nuxeo-elements'}})
-- [Data Visualization]({{page page='data-visualization'}})
+
 {{/panel}}
 
 </div>

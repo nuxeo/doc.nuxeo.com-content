@@ -28,6 +28,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/yJCRAQ'
     source_link: /display/NXDOC/Nuxeo+Elements+Quickstart
 tree_item_index: 200
+hidden: true
 history:
     -
         author: Solen Guitter

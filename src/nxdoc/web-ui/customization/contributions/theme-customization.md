@@ -1,15 +1,15 @@
 ---
-title: Document Slots
+title: Theme Customization
 review:
     comment: ''
     date: '2015-12-01'
     status: ok
 toc: true
 labels:
-tree_item_index: 100
+tree_item_index: 600
 
 ---
-## Document Slots
+## Theme Customization
 
 - Introduction to contribution
 - Reference to all types of contributions and specificities

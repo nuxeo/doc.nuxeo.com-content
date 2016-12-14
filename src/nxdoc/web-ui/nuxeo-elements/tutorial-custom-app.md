@@ -14,5 +14,6 @@ tree_item_index: 100
 - introduction to custom app (intent and feature scope)
 - development environment (tools, polymer SK and CLI)
 - Nuxeo Generator usage
-- development steps
+- development steps (simple app with repo browser and upload)
 - build app (vulcanizations, etc..)
+- nuxeo-elements-quickstart.md (it can be a good starting point)

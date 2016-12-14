@@ -1,19 +1,19 @@
 ---
-title: Tutorial Custom App
+title: Quality Assurance
 review:
     comment: ''
     date: '2015-12-01'
     status: ok
 toc: true
 labels:
-tree_item_index: 100
+tree_item_index: 200
 
 ---
 ## Quality Assurance
 
 - Intro to topic
 
-### Formatting and Linting
+## Formatting and Linting
 
 - ESLint
 -- ES5 : default / recommended setting
@@ -25,7 +25,7 @@ tree_item_index: 100
 -- More: http://eslint.org/docs/user-guide/integrations
 
 
-### Test Strategies
+## Test Strategies
 
 Web Component tests
 Polymer’s web-component-tester
@@ -52,7 +52,7 @@ Nuxeo code examples:
 https://github.com/nuxeo/plugin-nuxeo-web-ui/tree/master/nuxeo-web-ui-ftest/webdriver
 
 
-### Performance Strategies
+## Performance Strategies
 
 #### Schemas - enrinchers
 
