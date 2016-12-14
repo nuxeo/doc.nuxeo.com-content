@@ -236,6 +236,8 @@ Our Web UI is built itself with Polymer too. Goals were to not only ensure the s
 
 ### Polymer
 
+[Polymer Guide]({{page page='polymer-guide'}})
+
 - Small introduction
 - Link to page
 
