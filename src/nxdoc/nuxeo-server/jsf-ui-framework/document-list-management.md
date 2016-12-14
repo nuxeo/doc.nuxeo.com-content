@@ -21,7 +21,7 @@ confluence:
     shortlink: SIgPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/SIgPAQ'
     source_link: /display/NXDOC/Document+List+Management
-tree_item_index: 700
+tree_item_index: 1100
 history:
     -
         author: Anahide Tchertchian

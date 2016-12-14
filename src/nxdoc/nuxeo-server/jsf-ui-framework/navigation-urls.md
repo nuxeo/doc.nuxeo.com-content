@@ -24,7 +24,7 @@ confluence:
     shortlink: hwFu
     shortlink_source: 'https://doc.nuxeo.com/x/hwFu'
     source_link: /display/NXDOC/Navigation+URLs
-tree_item_index: 800
+tree_item_index: 1200
 history:
     -
         author: Anahide Tchertchian
