@@ -195,6 +195,7 @@ history:
 
 ---
 {{! multiexcerpt name='functional-overview'}}
+{{! multiexcerpt name='functional-introduction'}}
 {{! excerpt}}
 
 Collections are a folder-like document in which you can classify existing documents. Documents are not actually copied or moved into the collection, which only holds a link to the document in its original location.
@@ -211,8 +212,11 @@ Click on the collection title to go on the collection and see the list of the do
 Click on a document to consult it. You are moved out of the collection to be displayed the document inside its original location.
 
 ![]({{file name='collections-summary-widget.png'}} ?w=650,border=true)
+{{! /multiexcerpt}}
+
 
 ## Collecting Documents
+{{! multiexcerpt name='collecting'}}
 
 You can classify any type of document in a collection. You just need to have Read access to the document to be able to collect it. Collecting a document doesn't give you more permissions on the document: your permissions are the one defined on the original parent of the document.
 
@@ -238,9 +242,9 @@ The Collection list shows all the collection you have access to, even collection
 {{/callout}}
 
 The list of collections the document is available from is displayed on its **Summary** tab.![]({{file name='collections-summary-widget.png'}} ?w=650,border=true)
-
+{{! /multiexcerpt}}
 ## Creating Collections
-
+{{! multiexcerpt name='creating'}}
 Collections can be created in workspaces and folders.
 
 There are two ways to create a collection:
@@ -249,9 +253,9 @@ There are two ways to create a collection:
     ![]({{file name='available-documents-workspace.png' page='creating-content'}} ?w=500,border=true)
 *   Directly from the "Add to collection" popup: collections about to be created are displayed with the icon ![]({{file name='add_document.gif' page='icons-index'}}), while existing collections have the icon ![]({{file name='add_to_collection.png' page='icons-index'}}). The collection is created&nbsp; in your personal workspaces, in a **My Collections** folder.
     ![]({{file name='collection-creation-from-form-1.png'}} ?w=350,border=true)
-
+{{! /multiexcerpt}}
 ## Sharing a Collection
-
+{{! multiexcerpt name='sharing'}}
 Sharing a collection means [giving permissions]({{page page='managing-permissions'}}) to users on the collection. Collections created in the default domain in a shared workspace or folder are automatically shared to all the workspace or folder's users, following the [rights inheritance principle]({{page page='managing-permissions#rights-inheritance'}}).
 
 Collections created in your personal workspace are private by default. You need to grant permissions to it if you want to share it. Granting permissions to a collection makes the collection available to users from their Home. The list of documents displayed inside the collection depends on the permissions of the user on each of the documents.
@@ -262,15 +266,15 @@ Beside the generic permissions, collection have a specific right, called "can co
 *   Enable users to add documents to the collection: By giving the permission "Can collect", you enable users to add documents to the collection and remove them;
 *   Give edit access: By giving the Edit permission, you enable users to add documents to the collection, remove them and to edit the collection;
 *   Make them manager for the collection: By giving them Manage everything permission, you enable users to manage the content of the collection and who can access it.
-
+{{! /multiexcerpt}}
 ## Removing Documents from a Collection
-
+{{! multiexcerpt name='removing'}}
 To remove a document from a collection, either click on the <span class="s1">icon&nbsp;![]({{file name='delete.png' page='icons-index'}}) of the collection</span> from the **Summary** tab of the document, or select the document in the collection the checkboxes and click <span class="s1">on the **Remove from collection** button.</span>
 
 In both ways the document is immediately removed from the collection.
-
+{{! /multiexcerpt}}
 ## Favorites
-
+{{! multiexcerpt name='favorites'}}
 Favorites is a particular collection that enables you to bookmark documents. The list of documents bookmarked as favorites is&nbsp;available:
 
 *   From your personal workspace in the **Favorites** collection
@@ -281,7 +285,7 @@ Favorites is a particular collection that enables you to bookmark documents. The
 Bookmarking documents in your favorites can be done like when you add documents to a collection (see previous sections) and selecting the Favorites collection, or using the icon ![]({{file name='pin.png' page='icons-index'}}) from the document itself.
 
 &nbsp;
-
+{{! /multiexcerpt}}
 {{! /multiexcerpt}}
 
 * * *
