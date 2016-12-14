@@ -77,6 +77,14 @@ history:
         version: '1'
 
 ---
+
+
+{{#> callout type='warning' }}
+
+The Nuxeo Automation Client is deprecated for LTS 2016 and has been replaced by the new [Nuxeo Java Client](http://nuxeo.github.io/nuxeo-java-client/) which can be used in the Android environment.
+
+{{/callout}}
+
 In the Android Connector, the Automation Client is associated to a context that references required dependencies :
 
 *   server configuration and credentials
