@@ -21,7 +21,7 @@ confluence:
     shortlink: EYAO
     shortlink_source: 'https://doc.nuxeo.com/x/EYAO'
     source_link: /pages/viewpage.action?pageId=950289
-tree_item_index: 600
+tree_item_index: 1000
 history:
     -
         author: Solen Guitter
