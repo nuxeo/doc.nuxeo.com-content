@@ -249,7 +249,7 @@ As a platform provider, we strive to build isolated and reusable components that
 
 [Polymer](https://www.polymer-project.org/) presents itself as a new type of library for the web built on top of Web Components and designed to make it easier and faster for developers to create great, reusable components for the modern web. Its goal is to help you build your own custom elements:
 
-![]({{file name='webcomponents_stack.png' space='nxdoc710' page='nuxeo-elements'}} ?w=350,h=226,border=true)
+![]({{file name='webcomponents_stack.png' page='nuxeo-elements'}} ?w=350,h=226,border=true)
 
 The **Polymer library** provides a simple declarative syntax to define **custom elements** and help you build powerful, reusable elements with less code while also including special features like:
 
