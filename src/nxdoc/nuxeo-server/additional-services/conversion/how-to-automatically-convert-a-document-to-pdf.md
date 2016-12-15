@@ -13,7 +13,7 @@ details:
         tool: Studio
         topics: 'Document type, Automation, Conversion'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - conversion
     - excerpt
@@ -173,10 +173,10 @@ This how to requires knowledge about:
 
 ## Document Preparation
 
-The document needs a metadata to hold the PDF blob created during the conversion.
+The document needs a metadata to hold the PDF blob created during the conversion, two options are available:
 
-* Either We use the default File document type. In that case, the metadata that holds the blob is `file:content`.
-* Or we can define our own custom metadata to store the blob. So we first need to add a field to the schema in the document definition. This new metadata has to be of Blob type. Here is an example where the new metadata is "pdffile". It can be accessed by "myDocumentSchema:pdffile" if the schema name of my document type is "myDocumentSchema".
+* Use the default File document type, in that case, the metadata that holds the blob is `file:content`.
+* Define your own custom metadata to store the blob. To do so, you first need to add a field to the schema in the document definition. This new metadata has to be a Blob type. Here is an example where the new metadata is "pdffile". It can be accessed by "myDocumentSchema:pdffile" if the schema name of my document type is "myDocumentSchema".
 
 ![]({{file name='schema_pdffile.png'}} ?w=600,border=true)
 
