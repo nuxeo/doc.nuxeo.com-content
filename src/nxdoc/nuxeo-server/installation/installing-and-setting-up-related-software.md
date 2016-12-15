@@ -2,10 +2,10 @@
 title: Installing and Setting Up Related Software
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-15'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - installation
     - requirements
     - third-party-software
@@ -597,9 +597,7 @@ Ubuntu does not supply FFmpeg with libfaac support. So you must compile FFmpeg f
 
 Either follow the instructions from [the FFmpeg Compilation Guide for Ubuntu](http://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu) adding the `--enable-libfaac` and `--enable-nonfree` compile options.
 
-Or run [the Nuxeo script for compiling FFmpeg](https://github.com/nuxeo/ffmpeg-nuxeo). **You should build the ffmpeg executable on a separate machine than your Nuxeo Platform server machine, and then install the result on the machine where you set up Nuxeo Platform.&nbsp;**
-
-&nbsp;
+Or run [the Nuxeo script for compiling FFmpeg](https://github.com/nuxeo/ffmpeg-nuxeo). **You should build the ffmpeg executable on a separate machine than your Nuxeo Platform server machine, and then install the result on the machine where you set up Nuxeo Platform.**
 
 {{#> callout type='warning' }}
 
@@ -607,14 +605,12 @@ Running the ffmpeg build script on the same machine than where you installed the
 
 {{/callout}}
 
-You can do it manually as follow, but the recommended way is to use ou<span style="color: rgb(34,34,34);">r "in-docker-build":&nbsp;</span>[https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg](https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg).
+You can do it manually as follow, but the recommended way is to use ou<span style="color: rgb(34,34,34);">r "in-docker-build": </span>[https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg](https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg).
 
-For a &nbsp;manual build:
+For a manual build:
 
 1.  Install the [multiverse package repositories](https://help.ubuntu.com/community/Repositories/CommandLine) (required for the script to work).
 2.  Issue the following commands:
-
-    &nbsp;
 
     ```
     cd /tmp
@@ -625,7 +621,7 @@ For a &nbsp;manual build:
 
 ## OS X
 
-The OS X installation instructions provided use&nbsp;[Homebrew](http://mxcl.github.com/homebrew/).
+The OS X installation instructions provided use [Homebrew](http://mxcl.github.com/homebrew/).
 
 ### LibreOffice and pdftohtml for Office and PDF Preview
 
@@ -681,7 +677,7 @@ Ghostscript is used in association with ImageMagick to generate the thumbnails o
 
 {{! /multiexcerpt}}
 
-*   Using Homebrew:&nbsp;
+*   Using Homebrew:
 
     ```
     brew install ghostscript
@@ -721,7 +717,7 @@ FFmpeg is required by the Nuxeo DAM add-on. It is used to create the storyboard 
 
 {{! /multiexcerpt}}
 
-*   Using Homebrew:&nbsp;
+*   Using Homebrew:
 
     ```
     brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype \
@@ -732,7 +728,7 @@ FFmpeg is required by the Nuxeo DAM add-on. It is used to create the storyboard 
     --with-theora --with-tools --with-x265 --with-faac
     ```
 
-    This install most libraries. You can of course remove the libraries that are needed for the video files you will be managing. Use&nbsp;`brew info ffmpeg` for details about each library available.
+    This install most libraries. You can of course remove the libraries that are needed for the video files you will be managing. Use `brew info ffmpeg` for details about each library available.
 
 ### UFRaw
 
@@ -756,15 +752,11 @@ libwpd used to process WordPerfect documents.
 
 {{! /multiexcerpt}}
 
-&nbsp;
-
 Using Homebrew:
 
 ```
 brew install libwpd
 ```
-
-&nbsp;
 
 ### ExifTool
 
@@ -774,7 +766,7 @@ ExifTool is required by the Nuxeo Binary Metadata add-on. It is used to extract 
 
 {{! /multiexcerpt}}
 
-*   Using Homebrew:&nbsp;
+*   Using Homebrew:
 
     ```
     brew install exiftool
@@ -808,8 +800,7 @@ If not already present on the system, you will have the option to automatically 
 #### pdftohtml
 
 1.  Install the poppler binary (available from [this blogpost](http://blog.alivate.com.au/poppler-windows/)).
-2.  Add a system variable `POPPLER_INSTALL_DIRECTORY` that points to the folder where you extracted poppler files (`C:\Program Files (x86)\Poppler` for example).
-3.  Edit the `PATH` system variable and add `;%POPPLER_INSTALL_DIRECTORY%\bin`.
+2.  Add to the `PATH` system variable the path to the bin folder inside Poppler's installation directory (e.g. `C:\Program Files (x86)\Poppler\bin`).
 
     {{#> callout type='info' }} Old pdftohtml binaries are available from [http://sourceforge.net/projects/pdftohtml/files/](http://sourceforge.net/projects/pdftohtml/files/%7Chttp://sourceforge.net/projects/pdftohtml/files/), but they are obsolete. It is recommended to use poppler. {{/callout}}
 
@@ -824,16 +815,20 @@ If not already present on the system, you will have the option to automatically 
 {{{multiexcerpt 'ghostscript-intro' page='Installing and Setting up Related Software'}}}
 
 1.  Use the installer available from the [Ghostscript download page](http://www.ghostscript.com/download/gsdnld.html).
-2.  Edit the `PATH` system variable and add `;%GHOSTSCRIPT_INSTALL_DIRECTORY%\bin` (`C:\Program Files\gs\gs9.10\bin` for example).
+2.  Add to the `PATH` system variable the path to the bin folder inside Ghostscript's installation directory (e.g. `C:\Program Files\gs\gs9.20\bin`).
 
 ### ImageMagick
 
 {{{multiexcerpt 'imagemagick-intro' page='Installing and Setting up Related Software'}}}
 
-1.  Download the ImageMagick installer from**&nbsp;** [http://www.imagemagick.org/](http://www.imagemagick.org/)
+1.  Download the ImageMagick installer from  [http://www.imagemagick.org/](http://www.imagemagick.org/)
 2.  Run the installer and make sure you check the option to add ImageMagick to the `PATH`.
 
-    &nbsp;
+    {{#> callout type='warning' }}
+
+    In case of conflict with Windows' convert.exe, make sure that ImageMagick is added to `PATH` before `%SystemRoot%\system32`.
+
+    {{/callout}}
 
     {{#> callout type='warning' }}
 
@@ -842,30 +837,28 @@ If not already present on the system, you will have the option to automatically 
     Hopefully you can control the number of threads used by ImageMagick either by:
 
     *   editing `IMAGEMAGIK_DIRECTORY/policy.xml` on Windows, and setting `<policy domain="resource" name="thread" value="1"/>`.
-    *   adding an environment variable `MAGICK_THREAD_LIMIT`&nbsp; with value set to 1.{{/callout}}
+    *   adding an environment variable `MAGICK_THREAD_LIMIT` with value set to 1.{{/callout}}
 
 ### FFmpeg
 
 {{{multiexcerpt 'ffmpeg-intro' page='Installing and Setting up Related Software'}}}
 
 1.  Download FFmpeg from [http://ffmpeg.zeranoe.com/builds/](http://ffmpeg.zeranoe.com/builds/).
-2.  Extract the FFmpeg archive into a new folder named `C:\ffmpeg` for instance.
+2.  Extract the FFmpeg archive into a new folder, named `C:\Program Files\FFmpegg` for instance.
 
     {{#> callout type='tip' }}
 
     The archives provided by this website should be decompressed with: [7-Zip](http://www.7-zip.org/)
 
     {{/callout}}
-3.  Add the FFmpeg environment variable:
-    1.  Right click on the "My Computer" icon and click on **Properties**.
 
-    2.  On the **Advanced** tab, edit the `PATH` system variable and add `;C:\ffmpeg\bin` .
+3.  Add to the `PATH` system variable the path to the bin folder inside FFmpegg's directory (e.g. `C:\Program Files\FFmpegg\bin`). This can be done by:
 
-        {{#> callout type='note' }}
+    1.  Open File Explorer, right-click "This PC" and click on **Properties**.
 
-        Don't forget the semicolon at the end of existing values.
+    2.  On the System pane select **Advanced system settings**.
 
-        {{/callout}}
+    3.  On the **Advanced** tab, click **Environment Variables...** and edit the `PATH` system variable and add `C:\Program Files\FFmpegg\bin`.
 
         ![]({{file name='DAM-Ffmpeg-variable.png'}} ?w=250,h=291,border=true)
 
@@ -873,8 +866,8 @@ If not already present on the system, you will have the option to automatically 
 
 {{{multiexcerpt 'ufraw-intro' page='Installing and Setting up Related Software'}}}
 
-1.  Download UFRaw from [http://ufraw.sourceforge.net/Install.html#MS](http://ufraw.sourceforge.net/Install.html#MS).
-2.  Edit the `PATH` system variable and add `;%UFRAW_INSTALL_DIRECTORY%\bin` (`C:\Program Files (x86)\UFRaw\bin` for example).
+1.  Download and install UFRaw from [http://ufraw.sourceforge.net/Install.html#MS](http://ufraw.sourceforge.net/Install.html#MS).
+2.  Add to the `PATH` system variable the path to the bin folder inside UFRaw's installation directory (e.g. `C:\Program Files (x86)\UFRaw\bin`).
 
 ### Exiftool
 
@@ -883,7 +876,5 @@ Here are some quick installation steps to install Exiftool. Full installation st
 **To install Exiftool:**
 
 1.  Download the [standalone distribution](http://www.sno.phy.queensu.ca/~phil/exiftool/index.html).
-2.  Unzip the distribution.
-3.  Rename the .exe into exiftool.exe and move it to the `C:\WINDOWS` directory (or any other directory in your `PATH`).
-
-&nbsp;
+2.  Unzip the distribution to a folder, named `C:\Program Files (x86)\exiftool` for example, and add it to the `PATH` environment variable.
+3.  Rename the extracted .exe into exiftool.exe
