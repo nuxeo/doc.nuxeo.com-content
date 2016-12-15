@@ -1,5 +1,5 @@
 ---
-title: Using a LDAP Directory
+title: LDAP and Active Directory
 review:
     comment: ''
     date: '2015-12-01'
@@ -24,7 +24,7 @@ confluence:
     shortlink: TwFV
     shortlink_source: 'https://doc.nuxeo.com/x/TwFV'
     source_link: /display/NXDOC/Using+a+LDAP+Directory
-tree_item_index: 200
+tree_item_index: 130
 history:
     -
         author: Damien Metzler
@@ -230,15 +230,44 @@ Of course you can have a specific custom config where:
 
 But for the most common use case, all you want to do is map the default `userDirectory` to your LDAP Server. Since groups are used in Nuxeo to associate permissions with content, fetching groups from LDAP is usually not very efficient: LDAP groups are usually not designed for that.
 
-{{#> callout type='tip' }}
 
-<div class="message-content">
+## Installation
+The Users & Groups step of the [startup wizard]({{page page='configuration-wizard'}}) enables you to set up your LDAP, SQL or multidirectory configuration: Select the kind of "directory" you want (SQL, LDAP, Multi-directory), and fill in the required information.
 
-The wizard enables you to easily setup your LDAP configuration.
+![]({{file name='nuxeo-wizard-user-and-groups.png'}} ?w=400,border=true)
 
-</div>
+![]({{file name='wizard-users-groups.png'}} ?w=600,border=true)
 
-{{/callout}}
+The wizard will actually generate a contribution to the `userManager` extension point and some contributions for declaring users and groups directories, and it will copy them in the `nxserver/config` folder (ex: `default-ldap-users-directory-bundle.xml`).
+
+You can find a [full example of contribution to the userManager](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.usermanager.UserService--userManager) extension point on the explorer. Here is a review of the specific useful parts.
+
+Users are defined on the `users` element:
+
+```xml
+<userManager>
+    <users>
+        <directory>somedirectory</directory> ...
+```
+
+The value `somedirectory` is the name of a contributed directory (see [LDAP]({{page page='data-lists-and-directories#ldapdirectories'}}) and [ SQL users]({{page page='data-lists-and-directories#sqldirectories'}}) contributions, as well as [multidirectory]({{page page='data-lists-and-directories#multi-directories'}})).
+
+Groups are defined on the `groups` element (also referencing already contributed directory).
+
+```xml
+ <groups>
+    <directory>somegroupdir</directory>
+    <membersField>members</membersField>
+    <subGroupsField>subgroups</subGroupsField>
+    <parentGroupsField>parentgroup</parentGroupsField>
+    <listingMode>search_only</listingMode>
+</groups>
+```
+## Default Users and Groups Configuration
+
+By default, the platform's administrator is the principal "Administrator". On the same [contribution to the UserManager extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.usermanager.UserService--userManager) you can define which principal from the remote identity provider will be the administrator of the application, instead of Administrator. That way you can assign a "real" user. This is done using the `defaultAdministratorId` element.
+
+You can also choose a group from your company's directory instead of using the default "administrators" group, to determine the users who will benefit from all the rights in the platform. This is done using the `administratorsGroup` element.
 
 ## Simple Configuration Example
 
