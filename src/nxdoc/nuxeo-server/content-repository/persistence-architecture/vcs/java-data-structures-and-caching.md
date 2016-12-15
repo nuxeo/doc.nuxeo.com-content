@@ -87,8 +87,8 @@ Both Row and Selection caches expose metrics so it is possible to get the cache 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-*   [VCS]({{page page='vcs'}})
-*   [Performance Recommendations]({{page page='performance-recommendations'}})
+- [VCS]({{page page='vcs'}})
+- [Performance Recommendations]({{page page='performance-recommendations'}})
 
 {{/panel}}</div><div class="column medium-6">
 
