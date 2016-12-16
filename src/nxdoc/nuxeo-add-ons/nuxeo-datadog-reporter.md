@@ -6,7 +6,6 @@ review:
     status: ok
 labels:
     - lts2016-ok
-    - last-review-20161213
     - excerpt
     - multiexcerpt-include
 confluence:
