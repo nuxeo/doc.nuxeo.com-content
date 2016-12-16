@@ -79,9 +79,9 @@ To create a new permission in Nuxeo:
 
 1.  Unfold the **Roles and Permissions** menu entry and click on **Permissions**.
 2.  Click on the **New** button.
-3.  On the window that pops up give your new permission an ID and click on the **Next** button.
+3.  On the window that pops up give your new permission a Feature ID and click on the **OK** button.
 4.  Select where the permission should be displayed in the drop down menu and click on **Add**.
-    ![]({{file name='screenshot_2011-06-01_16.02.36.png'}} ?w=650,border=true)
+    ![]({{file name='create-new-permission.png'}} ?w=650,border=true)
 5.  When you have chosen all the places where the permission should be displayed, click **Save** to save your modifications.
 
 {{#> callout type='tip' }}
