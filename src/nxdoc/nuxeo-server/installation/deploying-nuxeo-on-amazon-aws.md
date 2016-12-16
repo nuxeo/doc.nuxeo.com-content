@@ -28,11 +28,6 @@ version_override:
     '5.8': 58/admindoc/deploying-nuxeo-on-amazon-aws
 history:
     -
-        author: Roberto Barbosa
-        date: '2016-12-14 16:40'
-        message: ''
-        version: '14'
-    -
         author: Manon Lumeau
         date: '2016-03-23 16:40'
         message: ''
@@ -125,14 +120,16 @@ Deploying the Nuxeo template on Amazon AWS installs:
 1.  Sign in to your CloudFormation management console.
 2.  Choose the region you want your stack to be deployed in.
     ![]({{file name='SelectRegion.png'}} ?border=true)
-3.  Start the new stack creation by clicking the "Create New Stack" button.
-    ![]({{file name='CreateNewStack.png'}} ?border=true)
-4.  On the first page of the Wizard on "Select Template", chose "Specify an Amazon S3 template URL", and put:[
-    https://nuxeo.s3.amazonaws.com/templates/Nuxeo.template](https://nuxeo.s3.amazonaws.com/templates/Nuxeo.template) (for the latest LTS)
-    [https://nuxeo.s3.amazonaws.com/templates/NuxeoFT.template](https://nuxeo.s3.amazonaws.com/templates/NuxeoFT.template) (for the latest FastTrack).
+3.  Start the new stack creation by clicking the **Create New Stack** button.
+    ![]({{file name='CreateNewStack.png'}} ?w=150 ?border=true)
+4.  On the first page of the Wizard on **Select Template**, choose **Specify an Amazon S3 template URL**, and put:
+    - `https://nuxeo.s3.amazonaws.com/templates/Nuxeo.template` (for the latest LTS)
+    - `https://nuxeo.s3.amazonaws.com/templates/NuxeoFT.template` (for the latest FastTrack).
     ![]({{file name='StackScreen1.png'}} ?w=500,border=true)
-    Note: in some regions, AWS will tell you that is not a S3 URL, in that case just download the file locally and use the "Upload a template" option. Press "Next" button to proceed.
-5.  On next page for "Specify Details" type the stack name for your instance. For "Instance Type" put the type of amazon instance you want.
+    {{#> callout type='note' }}
+    In some regions, AWS will tell you that is not a S3 URL, in that case just download the file locally and use the "Upload a template" option. Press "Next" button to proceed.
+    {{/callout}}
+5.  On next page for **Specify Details** type the stack name for your instance. For **Instance Type** put the type of amazon instance you want.
     You can find a list of instance types at [http://aws.amazon.com/ec2/instance-types/](http://aws.amazon.com/ec2/instance-types/). The default (c3.large) is suitable for small to medium size installations.
     If you choose a different instance type, check its &ldquo;Model&rdquo; on the instance types page and use that for the "InstanceType" field.
     Put also in a previously created and existing keypair name (KeyName). This key must exist or the stack creation will fail.
@@ -147,17 +144,13 @@ Deploying the Nuxeo template on Amazon AWS installs:
     ![]({{file name='CreateComplete.png'}} ?border=true)
 
     {{#> callout type='tip' }}
-
-    Click on the &ldquo;Refresh&rdquo; button on the top right corner of the page now and then as it doesn't auto-refresh.
-
+    Click on the **Refresh** button on the top right corner of the page now and then as it doesn't auto-refresh.
     {{/callout}}
 8.  Select the line that shows your new CloudFormation stack, then the **Outputs** tab at the bottom.
     It shows the URL at which you can reach your brand new Nuxeo Platform.
 
     {{#> callout type='info' }}
-
     Note that it can take a few more minutes for the Nuxeo Platform to be active on that URL as there can still be some installation tasks running at this point.
-
     {{/callout}}
 
 The template can be used for testing and production purposes. As for every production setup, you will want to check that the configuration suits your needs and tune it as needed: [HTTPS setup]({{page page='http-and-https-reverse-proxy-configuration'}}), disk size, ...
