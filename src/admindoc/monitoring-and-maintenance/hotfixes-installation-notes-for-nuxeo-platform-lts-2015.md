@@ -188,6 +188,16 @@ The parameter `--accept=true` automatically replies `yes` to any prompt, which m
 
 You can also download and install hotfixes from the **Update Center** in the **Admin** tab.The installation of hotfixes requires the server to be restarted to complete the installation: follow the manual installation and configuration steps required by the installed hotfixes before you restart your server.
 
+## Hotfix 18
+
+### Package Cleanup
+
+If you have downloaded revision 1.0.0 of HF18 package, you need to manually remove it to be able to install the latest revision (i.e. 1.0.1):
+
+```
+./nuxeoctl mp-remove nuxeo-7.10-HF18-1.0.0 --nodeps
+```
+
 ## Hotfix 13
 
 ### Package Cleanup
