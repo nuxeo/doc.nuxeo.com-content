@@ -24,6 +24,58 @@ tree_item_index: 200
 -- Sublime Text 3: https://github.com/roadhump/SublimeLinter-eslint
 -- More: http://eslint.org/docs/user-guide/integrations
 
+## Performance Strategies
+
+Nuxeo elements are the best means to build a custom UI application on the top of Nuxeo server but several points have to be taken into account to make the UI experience faster and to reduce performance server cost:
+
+### Response payloads
+
+There are two ways to filter data from the server in order to avoid unecessary quantity information in response: filter the schemas and using enrichers.
+
+##### Schemas
+
+When building views, listings and pages in general you need to determine which document information you want to display for your users.
+
+For instance a listing could only needs the {{dublincore}} schemas of the documents and their summary links. The metadata displayed in each row would be:
+
+- `dc:title`
+- `dc:description`
+- `dc:created` date
+- and the navigation link to their summary
+
+A document can contain several schemas with a dozen of metadata so the JSON payload in response could be unecessary too big. Building a listing of several documents can make slow the client side navigation and use too much network bandwith: we need to filter schemas.
+
+[Special header](https://doc.nuxeo.com/nxdoc/special-http-headers/#x-nxproperties) is reserved for this purpose and can be used easily with the Nuxeo resource elements: `nuxeo-resource` and `nuxeo-operation`.
+
+Example:
+
+```
+<nuxeo-resource auto
+    path="Document.Query"
+    on-response="{{handleResponse}}"
+    schemas="dublincore"></nuxeo-resource>
+
+```
+
+This will fetch document definitions with only their `dublincore` metadata.
+
+But we still need a permanent URL of the document for the navigation from this listing. To get it, let's call an enricher.
+
+##### Enrichers
+
+The Nuxeo [enrichers](https://doc.nuxeo.com/nxdoc/content-enricher/) are means to get additional computed documents information by simply setting a [special header](https://doc.nuxeo.com/nxdoc/special-http-headers/#x-nxenrichers-document). And if you cannot fullfil your need with the Nuxeo default ones you can build easily your own.
+
+To get the permanent URL of a document for instance with the Nuxeo resource elements (`nuxeo-resource` and `nuxeo-operation`), set the `enrichers` property:
+
+```
+<nuxeo-resource auto
+    path="Document.Query"
+    on-response="{{handleResponse}}"
+    schemas="dublincore"
+    enrichers="permanentURL"></nuxeo-resource>
+```
+
+You will have at last all the informations needed for your listing with a small amount of information in your response payload.
 
 ## Test Strategies
 
