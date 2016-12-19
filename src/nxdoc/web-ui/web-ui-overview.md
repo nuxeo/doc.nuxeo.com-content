@@ -129,12 +129,12 @@ history:
 
 ---
 
-The Nuxeo Web UI is a user interface designed in Web Component (HTML) / Polymer framework. It allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full screen suggester. [Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) is a first class choice for projects where visual and workflows are important requirements. Let's discover what are the functional evolutions present on this new interface.
+Nuxeo Web UI is a modern web application built with Web Components and [Polymer](https://www.polymer-project.org/) as a framework. It leverages the web as a platform and allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full screen suggester and several other features built to provide a rich user experience. [Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) is a first class choice for projects where visuals and workflows are important requirements. Let's discover what are the functional evolutions present on this new interface.
 
 ## Requirements
 
 {{! multiexcerpt name='webui-requirements'}}
-Nuxeo Web UI and Nuxeo Web UI Elements framework make use of the recent W3C standard "Web Components" and Google Polymer 1.0 framework. The Google Polymer framework comes with "polyfills for web components", i.e. a library that extends the support of web components standard to more browsers.
+Nuxeo Web UI and Nuxeo Web UI Elements framework make use of the recent W3C standard "Web Components" and Google Polymer 1.0 framework. The Google Polymer framework comes with "polyfills for web components", a library that extends the support of web components standard to more browsers.
 Supported browsers for Nuxeo Web UI and Nuxeo Web UI Elements are:
  - Firefox
  - Chrome
@@ -145,7 +145,7 @@ It should also be possible to build applications that support IE11, Safari, Safa
 
 ## Functional Overview
 
-Three important parts are visible on every single pages:
+Nuxeo Web UI is a responsive application with three main layout regions:
 
 ![]({{file name='web_ui.png'}} ?w=650,border=true)
 
@@ -153,10 +153,9 @@ Three important parts are visible on every single pages:
 
 ![]({{file name='header_toolbar.png'}} ?w=650,border=true)
 
-1.  **Default Domain**: The title of the selected view
-2.  **Sub-Views**: The sub-views available on the selected view
-3.  **Actions**: The possible actions according to the selected view
-4.  **Quick search**: Search by keywords or users
+1.  **Domain**: The title of the selected page / document.
+2.  **Sub-Views**: The sub-views available.
+3.  **Quick search**: Search by keywords or users.
 
 ### Side Menu&nbsp;
 
@@ -166,11 +165,11 @@ The menu displays different tabs. Clicking on one of them will open a side panel
 
 This new pattern allows to start browsing without changing the context of work.
 
-<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">![]({{file name='dashboard_home.png'}} ?w=48,thumbnail=true)</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">![]({{file name='dashboard_home.png'}})</td><td colspan="1">
 
 **Dashboard:** Displays the dashboard
 
-</td></tr><tr><td colspan="1">![]({{file name='browse.png'}} ?w=48,thumbnail=true)</td><td colspan="1">
+</td></tr><tr><td colspan="1">![]({{file name='browse.png'}})</td><td colspan="1">
 
 **Browse:** Shows the navigation tree to let you browse your content
 
@@ -182,9 +181,9 @@ This new pattern allows to start browsing without changing the context of work.
 
 **Search Filters:** Search content using full text and metadata
 
-</td></tr><tr><td colspan="1">![]({{file name='assets.png'}})</td><td colspan="1">
+</td></tr><tr><td colspan="1">![]({{file name='expired.png'}})</td><td colspan="1">
 
-**Assets Search:** Search for multimedia documents using full text and metadata
+**Expired Queue:** Queue displaying expired documents
 
 </td></tr><tr><td colspan="1">![]({{file name='tasks.png'}})</td><td colspan="1">
 
@@ -210,44 +209,54 @@ This new pattern allows to start browsing without changing the context of work.
 
 **User Settings:** Displays a **Drive** tab to manage the synchronization roots and a **Themes** tab to manage branding.
 
+</td></tr><tr><td colspan="1">![]({{file name='administration.png'}})</td><td colspan="1">
+
+**Administration:** Displays the **Administration** tab.
+
 </td></tr></tbody></table></div>
 
 ### Main View
 
-The last part of the UI is the main view that depends of what has been selected on the side menu. The main view will usually show lists of documents or a document and its details.&nbsp; Lists of documents are presented in a table that proposes different functionalities like the infinite scroll instead of pagination, faceted filters in the header, easy columns selection with persistence of user's choice and a great visibility of selected elements.
+The last part of the UI is the main view that depends on what has been selected on the side menu. The main view will usually show lists of documents or a document and its details.
+Lists of documents are presented in a table that proposes different functionalities like the infinite scroll instead of pagination, faceted filters in the header, easy columns selection with persistence of user's choice and a great visibility of selected elements.
 
-A create button ![]({{file name='create_button.png'}} ?w=25,thumbnail=true) is also displayed on the main view to let you create or import documents in your application.
+At the top of the main view toolbars are displayed according to the content being displayed:
+
+**Document Actions**: Displays actions available for the current document
+
+![]({{file name='document_toolbar.png'}} ?w=650,border=true)
+
+**Results Actions**: Displays actions available for the current result listing
+
+![]({{file name='results_toolbar.png'}} ?w=77,border=true)
+
+A create button ![]({{file name='create_button.png'}} ?w=25,thumbnail=true) is also permanently displayed at the bottom right corner of the main view the to let you create or import documents anywhere in the application.
 
 ## Technical Overview
 
-Nuxeo Web UI has been built with simplicity and composability in mind. Nuxeo is a content application platform and our goal is to provide tools and components for you to build your own application hence the shift from a highly configurable and pluggable UI to a more modular and composable one.
+Nuxeo Web UI has been built with simplicity and composability in mind. Nuxeo is a content application platform and our goal is to provide tools and components for you to build your own application. With Nuxeo Web UI we wanted to review our approach, make it simpler so anyway familiar with web development couple easily customize it or even just take is as an example of what can be achieved and build their own.
+hence the shift from a highly configurable and pluggable UI to a more modular and composable one.
 
-With the introduction of Web Components browsers now offer a well defined component model that is performant, provided out of the box and has a familiar API. By leveraging DOM as the framework and extending HTML with our own custom tags we can empower web developers to use the tools and frameworks they are already familiar with to build rich web applications. This led to the creation of&nbsp;[Nuxeo Elements]({{page page='nuxeo-elements'}}), a set of custom elements provided by us that not only allowed us to build our UI but are also made available to developers so they too can build their own custom UIs.&nbsp;
-
-Nuxeo Elements are built with Polymer which is a library for creating custom elements. Although it wasn't initially envisioned as an application framework its simplicity and familiarity resulted in developers adopting it to build full applications. These applications are modular by nature since everything is an element and these elements themselves are reusable and interoperable since they rely on the native&nbsp;component model. Concepts and features provided by other application frameworks are generally provided by the DOM and Polymer adds some "sugar" where things are lacking.
-
-Our Web UI is built itself with Polymer too. Goals were to not only ensure the simplicity and composability we aimed for but also to be as framework independent as possible so developers can use our elements to build their own UIs with whatever framework they see fit.
-
-## Technology
-
-As a platform provider, we strive to build isolated and reusable components that are simple to use and can serve as building blocks for custom business application. Thankfully we are not alone and this need has driven the W3C Web Applications Working Group to work on a specification for a component model for the Web: **Web Components**.
+With the introduction of **Web Components** browsers now offer a well defined component model that is performant, provided out of the box and has a familiar API. By leveraging DOM as the framework and extending HTML with our own custom tags we can empower web developers to use the tools and frameworks they are already familiar with to build rich web applications.
 
 ### Web Components
-
-- introduction
-- why ?
-- w3c
 
 [Web Components](http://www.w3.org/TR/components-intro/) are a collection of standards which ultimately allow developers to create their own custom HTML elements. Among those standards are:
 
 * **Custom Elements**: These custom elements can use custom tag names, attributes and events and can also expose a custom script API. Developers can even extend native HTML elements as well as other custom elements. Custom elements allow you to bring new semantics to the Web, extending the existing HTML vocabulary and promoting more meaningful structured markup and content.
-* **Templates**: The content of the custom elements can be defined by templates &ndash; chunks of markup that can be attached and activated on demand. If you have used Mustache or Handlebars you should be pretty familiar with the concept of templates.
+* **Templates**: The content of the custom elements can be defined by templates - chunks of markup that can be attached and activated on demand. If you have used Mustache or Handlebars you should be pretty familiar with the concept of templates.
 * **Shadow DOM**: Proper isolation is also a cornerstone of Web Components thanks to a new specification called Shadow DOM. It allows encapsulation and well defined boundaries within the DOM. Any HTML, CSS or JavaScript inside your custom element can be protected from the parent document allowing for more reliable composition of your user interface components.
 * **Imports**: Web Components specify the packaging and loading of your custom elements as well, thanks to Imports which provide a convention for bundling your HTML, CSS and JS into a single deliverable: Polymer.
 
+Web Components allow us to finally create reusable custom elements which can interoperate seamlessly with the built-in HTML elements and can be leveraged transparently, regardless of the application framework adopted.
+
+Having a standard component model enables us to really take advantage of the browser as a platform to build rich web applications and keeps our code cleaner and less expensive to maintain.
+
 ### Polymer
 
-[Polymer](https://www.polymer-project.org/) presents itself as a new type of library for the web built on top of Web Components and designed to make it easier and faster for developers to create great, reusable components for the modern web. Its goal is to help you build your own custom elements:
+[Polymer](https://www.polymer-project.org/) presents itself as a new type of library for the web built on top of Web Components and designed to make it easier and faster for developers to create great, reusable components for the modern web.
+
+Polymer just removes some boilerplate and adds bit of sugar over the standard Web Components APIs. Its goal is to make it easier to develop web components by providing a simpler API which also by building on top of existing polyfills which fill in the gaps where browsers' are lacking:
 
 ![]({{file name='webcomponents_stack.png' page='nuxeo-elements'}} ?w=350,h=226,border=true)
 
@@ -261,15 +270,19 @@ The **Polymer library** provides a simple declarative syntax to define **custom 
 
 There are a number of elements built with Polymer that you can use to build your own applications and while these elements depend on the Polymer library, you are free to use them without using Polymer directly.
 
-[Polymer Guide]({{page page='polymer-guide'}})
+To learn more about Polymer and how you can start building your elements you can check out our [Polymer Guide]({{page page='polymer-guide'}}).
 
-- Small introduction
-- Link to page
+It is important to keep in mind that Polymer is but a means to an end, it's there to make the job of building custom elements simpler, it is not a commitment in terms of application framework, web components are a standard and interoperability with other frameworks that build on web native technologies should be ensured.
 
+This promise of interoperability and the ease of use of components built with the Polymer library led us to the creation of our own Nuxeo elements, a set of custom elements provided by us that not only allowed us to build our UI but also made available to developers so they too can build their own custom UIs.
 
-### Components
+### Nuxeo Elements
 
-- only webui elements
+[Nuxeo Elements]({{page page='nuxeo-elements'}}) are built with Polymer which even if not initially envisioned as an application framework was quickly adopted as such due to its simplicity and familiarity. Applications built with Polymer are modular by nature since everything is an element and these elements themselves are reusable and interoperable since they rely on the native component model. Concepts and features provided by other application frameworks are generally provided by the DOM and Polymer adds some "sugar" where things are lacking.
+
+Our Web UI is built itself with Polymer too. Goals were to not only ensure the simplicity and composability we aimed for but also to be as framework independent as possible so developers can use our elements to build their own UIs with whatever framework they see fit.
+
+### Web UI elements
 
 Everything in the web UI is built as a custom element with `<nuxeo-app>` as top level component. This application element acts as application data store / mediator storing context data as properties which are then forwarded through the hierarchy thanks to data binding. To learn more about data binding and its relation to the mediator pattern you can read the&nbsp;[article](http://www.nuxeo.com/blog/polymer-questions-to-bind-or-not-to-bind/) on our "[Polymer](http://www.nuxeo.com/blog/tag/polymer/)" series.
 
