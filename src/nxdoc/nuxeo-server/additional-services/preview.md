@@ -140,7 +140,7 @@ REST API, using the blob and preview adapters as follows:
 
     ```
 
-    An example could be [`http://localhost:8080/nuxeo/restAPI/preview/default/cf5d81c5-e880-4f8a-9520-bf63e670260e/file:content/`](http://localhost:8080/nuxeo/restAPI/preview/default/cf5d81c5-e880-4f8a-9520-bf63e670260e/file:content/).
+    An example could be [`http://localhost:8080/nuxeo/site/api/v1/repo/default/id/23d871d2-052a-4f58-8f90-4b07c5a074ea/@blob/file:content/@preview/image`](http://localhost:8080/nuxeo/site/api/v1/repo/default/id/23d871d2-052a-4f58-8f90-4b07c5a074ea/@blob/file:content/@preview/image).
 
     It gets the HTLM preview by getting the `HtmlPreviewAdapter` from the documentModel.
 
