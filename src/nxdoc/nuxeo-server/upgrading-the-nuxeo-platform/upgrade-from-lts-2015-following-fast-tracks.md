@@ -596,7 +596,9 @@ classifier
 
 Since the CAP distribution has been removed, you also need to replace `nuxeo-distribution-cap` by `nuxeo-nxr-server`.
 
-**These changes in the Maven artifact names must be applied to any pom.xml or assembly.xml file.**
+{{#> callout type='info' }}
+These changes in the Maven artifact names must be applied to any `pom.xml` or `assembly.xml` file.
+{{/callout}}
 
 #### Functional Tests
 
@@ -635,7 +637,7 @@ See [NXP-19790](https://jira.nuxeo.com/browse/NXP-19790) and [NXP-20938](https:/
 
 #### Maven Artifacts
 
-The changes in the [Maven artifact names](#renamed-maven-modules) mentioned above must be applied to any pom.xml or assembly.xml file in a Nuxeo package:
+The changes in the [Maven artifact names](#renamed-maven-modules) mentioned above must be applied to any `pom.xml` or `assembly.xml` file in a Nuxeo package:
 
 - `nuxeo-distribution-cap` => `nuxeo-nxr-server`
 - `nuxeo-distribution-server` => `nuxeo-nxr-server`
