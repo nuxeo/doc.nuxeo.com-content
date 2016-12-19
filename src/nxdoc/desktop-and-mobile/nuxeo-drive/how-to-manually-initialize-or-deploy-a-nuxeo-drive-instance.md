@@ -23,7 +23,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/KIkZAQ'
     source_link: >-
         /display/NXDOC/How+to+Manually+Initialize+or+Deploy+a+Nuxeo+Drive+Instance
-tree_item_index: 300
+tree_item_index: 600
 history:
     -
         author: Rémi Cattiau
