@@ -1,9 +1,9 @@
 ---
 title: Audit
 review:
-    comment: ''
-    date: '2015-12-01'
-    status: ok
+    comment: 'Needs to be reviewed since the Audit service is relying on Elasticsearch since Nuxeo LTS 2015, yet the SQL implementation is still available. See [NXDOC-702](https://jira.nuxeo.com/browse/NXDOC-702).'
+    date: '2016-12-12'
+    status: not-ok
 labels:
     - content-review-lts2016
     - audit
