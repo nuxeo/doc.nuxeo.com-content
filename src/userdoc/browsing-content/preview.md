@@ -209,7 +209,6 @@ history:
 
 ---
 {{! multiexcerpt name='preview_functional_overview'}}
-
 The preview enables you to see an insight of your document.
 
 The PDF files preview leverages [pdf.js by Mozzilla](https://mozilla.github.io/pdf.js/). Other file types preview leverages the [Nuxeo Platform preview module]({{page space='nxdoc' page='preview'}}).
@@ -226,7 +225,7 @@ Several means to preview documents are available.
 *   You can also preview a document along with its main metadata on the [Info-View pop-up]({{page space='nxdoc' page='how-to-customize-the-info-view-pop-up'}}), accessible from any thumbnail listing.
     ![]({{file name='info_view_preview.png' space='userdoc' page='preview'}} ?w=600,border=true)
 
-## Supported Formats and Requirements
+### Supported Formats and Requirements
 
 The table below shows for which file formats the preview is available. The installation of [third-party software]({{page space='nxdoc' page='installing-and-setting-up-related-software'}}) is required for some formats of the list below.
 
