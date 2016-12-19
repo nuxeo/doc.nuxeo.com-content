@@ -93,6 +93,7 @@ _actionContext: function() {
 The `DOCUMENT_ACTIONS` has therefore the following:
 
 **Slot Model Properties**
+
 | Property    | Description                        |
 |:------------|:-----------------------------------|
 | `document`  | The current document.              |
@@ -109,6 +110,7 @@ The **DOCUMENT_VIEWS_PAGES** slot must define the pages introduced by the **DOCU
 Example coming soon.
 
 **Slot Model Properties**
+
 | Property   | Description           |
 |:-----------|:----------------------|
 | `document` | The current document. |
@@ -120,6 +122,7 @@ This slot is available on current document that has attached blobs. Default acti
 ![]({{file name='BLOB_ACTIONS.png'}} ?w=400,border=true)
 
 **Slot Model Properties**
+
 | Property   | Description                                                                                                                        |
 |:-----------|:-----------------------------------------------------------------------------------------------------------------------------------|
 | `document` | The current document.                                                                                                              |
@@ -133,6 +136,7 @@ This slot is displayed when selecting one ore more children documents of a Folde
 ![]({{file name='BROWSE_ACTIONS.png'}} ?w=400,border=true)
 
 **Slot Model Properties**
+
 | Property        | Description                            |
 |:----------------|:---------------------------------------|
 | `document`      | The current document.                  |
@@ -159,6 +163,7 @@ The [Nuxeo DAM](https://github.com/nuxeo/nuxeo-dam/blob/8.10/nuxeo-dam-web-ui/sr
 ```
 
 **Slot Model Properties**
+
 | Property      | Description           |
 |:--------------|:----------------------|
 | `document`    | The current document. |
@@ -171,6 +176,7 @@ This ADMINISTRATION_MENU slot allows to add additional Administration sub menus.
 ![]({{file name='ADMINISTRATION_MENU.png'}} ?w=400,border=true)
 
 **Slot Model Properties**
+
 | Property      | Description           |
 |:--------------|:----------------------|
 | `document`    | The current document. |
@@ -183,6 +189,7 @@ This USER_MENU slot allows to add additional User sub menus.
 ![]({{file name='USER_MENU.png'}} ?w=400,border=true)
 
 **Slot Model Properties**
+
 | Property      | Description           |
 |:--------------|:----------------------|
 | `document`    | The current document. |
@@ -193,6 +200,7 @@ This USER_MENU slot allows to add additional User sub menus.
 Documentation coming soon.
 
 **Slot Model Properties**
+
 | Property      | Description           |
 |:--------------|:----------------------|
 | `document`    | The current document. |
@@ -207,6 +215,7 @@ This slot provides actions displayed when hovering the bottom right Floating Act
 ![]({{file name='DOCUMENT_CREATE_ACTIONS.png'}} ?w=400,border=true)
 
 **Slot Model Properties**
+
 | Property      | Description                                                              |
 |:--------------|:-------------------------------------------------------------------------|
 | `hostVisible` | Boolean which is true if the FAB is hovered.                             |
@@ -220,6 +229,7 @@ This slot is for instance used the [Nuxeo Live Connect]({{page version='' space=
 ![]({{file name='FILE_UPLOAD_ACTIONS.png'}} ?w=400,border=true)
 
 **Slot Model Properties**
+
 | Property | Description |
 |:---------|:------------|
 
@@ -232,6 +242,7 @@ The screen displayed to browse Search result and Collection content are very sim
 ![]({{file name='SEARCH_ACTIONS.png'}} ?w=400,border=true)
 
 **Slot Model Properties**
+
 | Property        | Description                                                                                                                                     |
 |:----------------|:------------------------------------------------------------------------------------------------------------------------------------------------|
 | `items`         | Array of displayed result items returned by the search, selected or not. (Note: more results could be loaded if you keep scrolling for results) |
@@ -242,6 +253,7 @@ The screen displayed to browse Search result and Collection content are very sim
 ![]({{file name='COLLECTION_ACTIONS.png'}} ?w=400,border=true)
 
 **Slot Model Properties**
+
 | Property        | Description                                                                                                                    |
 |:----------------|:-------------------------------------------------------------------------------------------------------------------------------|
 | `items`         | Array of displayed collection members, selected or not. (Note: more members could be loaded if you keep scrolling for results) |
@@ -256,5 +268,6 @@ The **DOCUMENT_VIEWS_ITEMS** slot allows to define the available items in the an
 ![]({{file name='ANALYTICS_ITEMS.png'}} ?w=400,border=true)
 
 **Slot Model Properties**
+
 | Property | Description |
 |:---------|:------------|
