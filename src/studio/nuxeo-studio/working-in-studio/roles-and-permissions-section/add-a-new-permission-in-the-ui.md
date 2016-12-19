@@ -83,12 +83,9 @@ To create a new permission in Nuxeo:
 4.  Select where the permission should be displayed in the drop down menu and click on **Add**.
     ![]({{file name='create-new-permission.png'}} ?w=650,border=true)
 5.  When you have chosen all the places where the permission should be displayed, click **Save** to save your modifications.
+6. Don't forget to translate the permission label [using an I18N translation file]({{page space='nxdoc' page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}}) if needed.
 
-{{#> callout type='tip' }}
-
-Don't forget to translate the permission label [using an I18N translation file]({{page space='nxdoc' page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}}).
-
-{{/callout}} {{#> callout type='info' }}
+{{#> callout type='info' }}
 
 After you updated your Nuxeo application with Studio customizations, you must restart your server so the new permission is displayed.
 
