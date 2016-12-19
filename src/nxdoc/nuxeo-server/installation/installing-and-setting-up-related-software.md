@@ -2,14 +2,13 @@
 title: Installing and Setting Up Related Software
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-15'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - installation
     - requirements
     - third-party-software
-    - last-review-20141126
     - multiexcerpt-include
     - multiexcerpt
 toc: true
@@ -550,28 +549,80 @@ On a naked default Nuxeo Platform, you need the following software:
     *   LibreOffice (version >= 5): converts office file into PDF
     *   pdftohtml: converts converted PDF into HTML preview
 *   For thumbnail generation: ImageMagick and Ghostscript for most file formats. UFRaw for RAW files.
+*   For processing WordPerfect documents: libwpd
+
+If you installed the Nuxeo DAM addon, you will need these additional requirements:
+
 *   For metadata extraction: Exiftool
 *   For picture preview and tilling: ImageMagick (already required for thumbnails)
-*   For video conversion and storyboarding: FFmpeg (Nuxeo DAM add-on)
-*   For processing WordPerfect documents: libwpd
+*   For video conversion and storyboarding: FFmpeg
+*   For subtitles extraction from videos: CCExtractor
 
 Thumbnails and previews are created when documents are imported into Nuxeo, not on the fly when browsing documents. So in order to check if the third party software work properly on your Nuxeo instance, you must import new documents.
 
 ## Linux
 
-Under Debian or Ubuntu, all of this can be installed by the following command:
+Under Debian or Ubuntu, most of these can be installed by the following command:
 
-<pre>sudo apt-get install openjdk-8-jdk imagemagick ufraw poppler-utils libreoffice ffmpeg libwpd-tools ghostscript exiftool</pre>
+```bash
+$ sudo apt-get install openjdk-8-jdk imagemagick ufraw poppler-utils libreoffice ffmpeg libwpd-tools ghostscript exiftool
+```
+
+{{#> callout type='warning' }}
+
+Installing the ffmpeg package from your distribution's repository may not provide you with support for all video formats. Please refer to the [additional formats support for FFmpeg](#additional-formats-support-for-ffmpeg) section for more information.
+
+{{/callout}}
 
 ### LibreOffice Configuration
 
 {{! multiexcerpt name='libreoffice-5'}}
-{{#> callout type='note'}}
+**Minimum required version**
+
 The minimum version required is LibreOffice 5. The soffice program must be added to the PATH environment variable.
-{{/callout}}
 {{! /multiexcerpt}}
 
-{{{multiexcerpt 'ooo-libreoffice-configuration' page='Installing and Setting up Related Software'}}}
+{{! multiexcerpt name='ooo-libreoffice-configuration'}}
+
+**Installation location and Path configuration**
+
+For preview to work, the server must start LibreOffice. The Nuxeo Platform looks for LibreOffice at different locations on the system. See [PlatformUtils.java definition](https://github.com/nuxeo/jodconverter/blob/3.0-NX/jodconverter-core/src/main/java/org/artofsolving/jodconverter/util/PlatformUtils.java) for searched locations.
+
+If LibreOffice isn't available at one of these locations, you need to add the `soffice` program to your path: Edit the `Path` system variable and add `;OFFICE_INSTALL_DIRECTORY\program.`
+
+{{#> callout type='tip' }}
+If not using default install path, you may have to add the path to the executable in your `nuxeo.conf`:
+
+```
+jod.office.home=/path/to/libreoffice
+```
+
+{{/callout}}
+
+**Non-latin languages configuration**
+
+If you'll be working with non-latin languages:
+
+1.  Start LibreOffice manually.
+2.  Install the additional fonts you may need for non-default languages.
+{{! /multiexcerpt}}
+
+### CCExtractor Installation
+
+Installing [CCExtractor](http://ccextractor.org) on a GNU/Linux distribution requires to compile it from [https://github.com/CCExtractor/ccextractor](source). The recommended way to do it is to use our "in-docker-build": [https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ccextractor](https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ccextractor).
+
+To generate a package (by default for the latest Ubuntu LTS):
+
+1.  Issue the following commands:
+
+    ```bash
+    $ sudo apt-get update
+    $ sudo apt-get install docker
+    $ cd /tmp
+    $ git clone https://github.com/nuxeo/nuxeo-tools-docker.git
+    $ cd nuxeo-tools-docker/ccextractor
+    $ sudo ./build-package.sh
+    ```
 
 ### Controlling Threads Used by ImageMagick
 
@@ -583,7 +634,9 @@ Hopefully you can control the number of threads used by ImageMagick either by:
 
 *   adding an environment variable `export MAGICK_THREAD_LIMIT=1` in the nuxeo user `.bash_profile`.
 
-### libfaac Support
+### Additional Formats Support for FFmpeg
+
+Some video formats may not be supported when installing the ffmpeg package from your distribution's repository. You may encounter issues similar to these:
 
 {{#> panel type='code' heading='Common issue with libfaac encoder'}}
 
@@ -593,43 +646,47 @@ Unknown encoder 'libfaac'
 
 {{/panel}}
 
-Ubuntu does not supply FFmpeg with libfaac support. So you must compile FFmpeg from sources with `--enable-libfaac` option.
+{{#> panel type='code' heading='Missing format error seen in the server.log file'}}
 
-Either follow the instructions from [the FFmpeg Compilation Guide for Ubuntu](http://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu) adding the `--enable-libfaac` and `--enable-nonfree` compile options.
+```
+ERROR [AbstractWork] Exception during work: VideoConversionWork(e8cd9e57-c3ff-41b5-8f85-741c013417bf, /videoAutomaticConversions:27369901578782.273532597, Progress(?%, ?/0), Transcoding)
+org.nuxeo.ecm.core.convert.api.ConversionException: Error while converting via CommandLineService
+    at org.nuxeo.ecm.platform.convert.plugins.CommandLineBasedConverter.execOnBlob(CommandLineBasedConverter.java:166)
+    at org.nuxeo.ecm.platform.convert.plugins.CommandLineBasedConverter.convert(CommandLineBasedConverter.java:93)
+    at org.nuxeo.ecm.core.convert.service.ConversionServiceImpl.convert(ConversionServiceImpl.java:246)
+```
 
-Or run [the Nuxeo script for compiling FFmpeg](https://github.com/nuxeo/ffmpeg-nuxeo). **You should build the ffmpeg executable on a separate machine than your Nuxeo Platform server machine, and then install the result on the machine where you set up Nuxeo Platform.&nbsp;**
+{{/panel}}
 
-&nbsp;
+Ubuntu for instance does not supply FFmpeg with libfaac (AAC format) support. So you must compile FFmpeg from sources with `--enable-libfaac` option.
+Or run [the Nuxeo script for compiling FFmpeg](https://github.com/nuxeo/ffmpeg-nuxeo). **You should build the ffmpeg executable on a separate machine than your Nuxeo Platform server machine, and then install the result on the machine where you set up Nuxeo Platform.**
+You can do it manually as follow, but the recommended way is to use our "in-docker-build": [https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg](https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg).
 
-{{#> callout type='warning' }}
+Other options are:
 
-Running the ffmpeg build script on the same machine than where you installed the Nuxeo Platform would result in uninstalling existing nuxeo already installed with the Debian package along with its data.
+- Following the instructions from [the FFmpeg Compilation Guide for Ubuntu](http://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu) adding the `--enable-libfaac` and `--enable-nonfree` compile options.
 
-{{/callout}}
-
-You can do it manually as follow, but the recommended way is to use ou<span style="color: rgb(34,34,34);">r "in-docker-build":&nbsp;</span>[https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg](https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg).
-
-For a &nbsp;manual build:
+For a manual build:
 
 1.  Install the [multiverse package repositories](https://help.ubuntu.com/community/Repositories/CommandLine) (required for the script to work).
 2.  Issue the following commands:
 
-    &nbsp;
+    ```bash
+    $ cd /tmp
+    $ git clone https://github.com/nuxeo/ffmpeg-nuxeo
+    $ cd ffmpeg-nuxeo
+    $ sudo ./build-all.sh true
+    ```
 
-    ```
-    cd /tmp
-    git clone https://github.com/nuxeo/ffmpeg-nuxeo
-    cd ffmpeg-nuxeo
-    sudo ./build-all.sh true
-    ```
+{{#> callout type='warning' }}
+Running the ffmpeg build script on the same machine than where you installed the Nuxeo Platform would result in uninstalling existing nuxeo already installed with the Debian package along with its data.
+{{/callout}}
 
 ## OS X
 
-The OS X installation instructions provided use&nbsp;[Homebrew](http://mxcl.github.com/homebrew/).
+The OS X installation instructions provided use [Homebrew](http://mxcl.github.com/homebrew/).
 
 ### LibreOffice and pdftohtml for Office and PDF Preview
-
-{{{multiexcerpt 'libreoffice-5' page='installing-and-setting-up-related-software'}}}
 
 {{! multiexcerpt name='ooo-pdftohaml-intro'}}
 
@@ -637,41 +694,27 @@ Installing LibreOffice and pdftohtml on the server is only required if you need 
 
 {{! /multiexcerpt}}
 
-#### pdftohtml
-
-To install pdfttohtml using Homebrew:
-
-```
-brew install poppler
-```
-
 #### LibreOffice
 
 {{! multiexcerpt name='ooo-libreoffice-installation'}}
 
-LibreOffice are used for preview on office documents in association to pdftohtml.
+LibreOffice is used for preview on office documents in association with pdftohtml.
 
-Download and install them from:
+{{{multiexcerpt 'libreoffice-5' page='installing-and-setting-up-related-software'}}}
 
-*   LibreOffice: [http://www.libreoffice.org/](http://www.libreoffice.org/)
+Download and install LibreOffice from [http://www.libreoffice.org/](http://www.libreoffice.org/).
 
+{{! /multiexcerpt}}
 
-{{! /multiexcerpt}}{{! multiexcerpt name='ooo-libreoffice-configuration'}}
+{{{multiexcerpt 'ooo-libreoffice-configuration' page='Installing and Setting up Related Software'}}}
 
-If you'll be working with non-latin languages:
+#### pdftohtml
 
-1.  Start LibreOffice manually.
-2.  Install the additional fonts you may need for non-default languages.
+To install pdftohtml using Homebrew:
 
-For preview to work, the Nuxeo Platform should start LibreOffice. You can see the places the Nuxeo Platform looks for LibreOffice in the [PlatformUtils.java definition](https://github.com/nuxeo/jodconverter/blob/3.0-NX/jodconverter-core/src/main/java/org/artofsolving/jodconverter/util/PlatformUtils.java).
-
-If you haven't installed them at a traditional location, you may need to add the soffice program to your path: Edit the `Path` system variable and add `;OFFICE_INSTALL_DIRECTORY\program.`
-
-{{#> callout type='tip' }}
-
-If not using default install path, you may have to add the path to the executable in your `nuxeo.conf`: `jod.office.home=/path/to/libreoffice.`
-
-{{/callout}}{{! /multiexcerpt}}
+```bash
+$ brew install poppler
+```
 
 ### Ghostscript
 
@@ -681,10 +724,10 @@ Ghostscript is used in association with ImageMagick to generate the thumbnails o
 
 {{! /multiexcerpt}}
 
-*   Using Homebrew:&nbsp;
+*   Using Homebrew:
 
-    ```
-    brew install ghostscript
+    ```bash
+    $ brew install ghostscript
     ```
 
 ### ImageMagick
@@ -697,8 +740,8 @@ ImageMagick is used in association with Ghostscript to generate the document thu
 
 *   Using Homebrew:
 
-    ```
-    brew install imagemagick
+    ```bash
+    $ brew install imagemagick
     ```
 
 {{#> callout type='warning' }}
@@ -721,10 +764,10 @@ FFmpeg is required by the Nuxeo DAM add-on. It is used to create the storyboard 
 
 {{! /multiexcerpt}}
 
-*   Using Homebrew:&nbsp;
+*   Using Homebrew:
 
-    ```
-    brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype \
+    ```bash
+    $ brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype \
     --with-frei0r --with-libass --with-libbluray --with-libcaca \
     --with-libquvi --with-libvidstab --with-libvo-aacenc --with-libvorbis \
     --with-libvpx --with-opencore-amr --with-openjpeg --with-openssl \
@@ -732,7 +775,7 @@ FFmpeg is required by the Nuxeo DAM add-on. It is used to create the storyboard 
     --with-theora --with-tools --with-x265 --with-faac
     ```
 
-    This install most libraries. You can of course remove the libraries that are needed for the video files you will be managing. Use&nbsp;`brew info ffmpeg` for details about each library available.
+    This install most libraries. You can of course remove the libraries that are needed for the video files you will be managing. Use `brew info ffmpeg` for details about each library available.
 
 ### UFRaw
 
@@ -744,8 +787,8 @@ UFRaw is used in association with ImageMagick and Ghostscript to generate RAW do
 
 *   Using Homebrew:
 
-    ```
-    brew install ufraw  
+    ```bash
+    $ brew install ufraw  
     ```
 
 ### libwpd
@@ -756,15 +799,11 @@ libwpd used to process WordPerfect documents.
 
 {{! /multiexcerpt}}
 
-&nbsp;
-
 Using Homebrew:
 
+```bash
+$ brew install libwpd
 ```
-brew install libwpd
-```
-
-&nbsp;
 
 ### ExifTool
 
@@ -774,10 +813,10 @@ ExifTool is required by the Nuxeo Binary Metadata add-on. It is used to extract 
 
 {{! /multiexcerpt}}
 
-*   Using Homebrew:&nbsp;
+*   Using Homebrew:
 
-    ```
-    brew install exiftool
+    ```bash
+    $ brew install exiftool
     ```
 
 ## Windows
@@ -801,17 +840,8 @@ If not already present on the system, you will have the option to automatically 
 2.  If you don't see ImageMagick in the result (it must be the first ot the list, or the only one), then you must add the path to ImageMagick to the `PATH` System variable.
 
 ### LibreOffice and pdftohtml
-{{{multiexcerpt 'libreoffice-5'}}}
 
 {{{multiexcerpt 'ooo-pdftohaml-intro' page='Installing and Setting up Related Software'}}}
-
-#### pdftohtml
-
-1.  Install the poppler binary (available from [this blogpost](http://blog.alivate.com.au/poppler-windows/)).
-2.  Add a system variable `POPPLER_INSTALL_DIRECTORY` that points to the folder where you extracted poppler files (`C:\Program Files (x86)\Poppler` for example).
-3.  Edit the `PATH` system variable and add `;%POPPLER_INSTALL_DIRECTORY%\bin`.
-
-    {{#> callout type='info' }} Old pdftohtml binaries are available from [http://sourceforge.net/projects/pdftohtml/files/](http://sourceforge.net/projects/pdftohtml/files/%7Chttp://sourceforge.net/projects/pdftohtml/files/), but they are obsolete. It is recommended to use poppler. {{/callout}}
 
 #### LibreOffice
 
@@ -819,21 +849,32 @@ If not already present on the system, you will have the option to automatically 
 
 {{{multiexcerpt 'ooo-libreoffice-configuration' page='Installing and Setting up Related Software'}}}
 
+#### pdftohtml
+
+1.  Install the poppler binary (available from [this blogpost](http://blog.alivate.com.au/poppler-windows/)).
+2.  Add to the `PATH` system variable the path to the bin folder inside Poppler's installation directory (e.g. `C:\Program Files (x86)\Poppler\bin`).
+
+    {{#> callout type='info' }} Old pdftohtml binaries are available from [http://sourceforge.net/projects/pdftohtml/files/](http://sourceforge.net/projects/pdftohtml/files/%7Chttp://sourceforge.net/projects/pdftohtml/files/), but they are obsolete. It is recommended to use poppler. {{/callout}}
+
 ### Ghostscript
 
 {{{multiexcerpt 'ghostscript-intro' page='Installing and Setting up Related Software'}}}
 
 1.  Use the installer available from the [Ghostscript download page](http://www.ghostscript.com/download/gsdnld.html).
-2.  Edit the `PATH` system variable and add `;%GHOSTSCRIPT_INSTALL_DIRECTORY%\bin` (`C:\Program Files\gs\gs9.10\bin` for example).
+2.  Add to the `PATH` system variable the path to the bin folder inside Ghostscript's installation directory (e.g. `C:\Program Files\gs\gs9.20\bin`).
 
 ### ImageMagick
 
 {{{multiexcerpt 'imagemagick-intro' page='Installing and Setting up Related Software'}}}
 
-1.  Download the ImageMagick installer from**&nbsp;** [http://www.imagemagick.org/](http://www.imagemagick.org/)
+1.  Download the ImageMagick installer from  [http://www.imagemagick.org/](http://www.imagemagick.org/)
 2.  Run the installer and make sure you check the option to add ImageMagick to the `PATH`.
 
-    &nbsp;
+    {{#> callout type='warning' }}
+
+    In case of conflict with Windows' convert.exe, make sure that ImageMagick is added to `PATH` before `%SystemRoot%\system32`.
+
+    {{/callout}}
 
     {{#> callout type='warning' }}
 
@@ -842,30 +883,28 @@ If not already present on the system, you will have the option to automatically 
     Hopefully you can control the number of threads used by ImageMagick either by:
 
     *   editing `IMAGEMAGIK_DIRECTORY/policy.xml` on Windows, and setting `<policy domain="resource" name="thread" value="1"/>`.
-    *   adding an environment variable `MAGICK_THREAD_LIMIT`&nbsp; with value set to 1.{{/callout}}
+    *   adding an environment variable `MAGICK_THREAD_LIMIT` with value set to 1.{{/callout}}
 
 ### FFmpeg
 
 {{{multiexcerpt 'ffmpeg-intro' page='Installing and Setting up Related Software'}}}
 
 1.  Download FFmpeg from [http://ffmpeg.zeranoe.com/builds/](http://ffmpeg.zeranoe.com/builds/).
-2.  Extract the FFmpeg archive into a new folder named `C:\ffmpeg` for instance.
+2.  Extract the FFmpeg archive into a new folder, named `C:\Program Files\FFmpegg` for instance.
 
     {{#> callout type='tip' }}
 
     The archives provided by this website should be decompressed with: [7-Zip](http://www.7-zip.org/)
 
     {{/callout}}
-3.  Add the FFmpeg environment variable:
-    1.  Right click on the "My Computer" icon and click on **Properties**.
 
-    2.  On the **Advanced** tab, edit the `PATH` system variable and add `;C:\ffmpeg\bin` .
+3.  Add to the `PATH` system variable the path to the bin folder inside FFmpegg's directory (e.g. `C:\Program Files\FFmpegg\bin`). This can be done by:
 
-        {{#> callout type='note' }}
+    1.  Open File Explorer, right-click "This PC" and click on **Properties**.
 
-        Don't forget the semicolon at the end of existing values.
+    2.  On the System pane select **Advanced system settings**.
 
-        {{/callout}}
+    3.  On the **Advanced** tab, click **Environment Variables...** and edit the `PATH` system variable and add `C:\Program Files\FFmpegg\bin`.
 
         ![]({{file name='DAM-Ffmpeg-variable.png'}} ?w=250,h=291,border=true)
 
@@ -873,8 +912,8 @@ If not already present on the system, you will have the option to automatically 
 
 {{{multiexcerpt 'ufraw-intro' page='Installing and Setting up Related Software'}}}
 
-1.  Download UFRaw from [http://ufraw.sourceforge.net/Install.html#MS](http://ufraw.sourceforge.net/Install.html#MS).
-2.  Edit the `PATH` system variable and add `;%UFRAW_INSTALL_DIRECTORY%\bin` (`C:\Program Files (x86)\UFRaw\bin` for example).
+1.  Download and install UFRaw from [http://ufraw.sourceforge.net/Install.html#MS](http://ufraw.sourceforge.net/Install.html#MS).
+2.  Add to the `PATH` system variable the path to the bin folder inside UFRaw's installation directory (e.g. `C:\Program Files (x86)\UFRaw\bin`).
 
 ### Exiftool
 
@@ -883,7 +922,5 @@ Here are some quick installation steps to install Exiftool. Full installation st
 **To install Exiftool:**
 
 1.  Download the [standalone distribution](http://www.sno.phy.queensu.ca/~phil/exiftool/index.html).
-2.  Unzip the distribution.
-3.  Rename the .exe into exiftool.exe and move it to the `C:\WINDOWS` directory (or any other directory in your `PATH`).
-
-&nbsp;
+2.  Unzip the distribution to a folder, named `C:\Program Files (x86)\exiftool` for example, and add it to the `PATH` environment variable.
+3.  Rename the extracted .exe into exiftool.exe

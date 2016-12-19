@@ -127,7 +127,7 @@ To check if Docker is properly installed, run `docker -v` anywhere on the comman
 
 After the Nuxeo 3D addon is&nbsp;installed, the new 3D document type is available.
 
-![]({{file name='Screen Shot 2016-10-07 at 16.17.44.png'}} ?w=600)
+![]({{file name='available-doc-types.png'}} ?w=600)
 
 The supported 3D file formats are:
 

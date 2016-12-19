@@ -2,10 +2,10 @@
 title: Internal VCS Model
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - vcs
     - vcs-component
 toc: true
@@ -96,7 +96,7 @@ history:
 ---
 {{! excerpt}}
 
-The Nuxeo model is mapped internally to a model based on a hierarchy of nodes and properties. This model is similar to the basic JCR (JSR-170) data model.
+The Nuxeo model of folders, documents and properties (sometimes complex ones) is mapped internally to a simpler model based on a hierarchy of nodes and simple properties.
 
 {{! /excerpt}}
 
@@ -110,8 +110,8 @@ The parent-child information for nodes is stored in the `hierarchy` table.
 
 The normal children of a document are mapped to child nodes of the document node. If a document contains complex types, they are also mapped to child nodes of the document mode. There are therefore two kinds of children: child documents and complex types. They have to be quickly distinguished in order to:
 
-*   Find all child documents and only them,
-*   Find all complex properties of a document and only them,
+*   Find all child documents and only them.
+*   Find all complex properties of a document and only them.
 *   Resolve name collisions.
 
 To distinguish the two, the hierarchy table has a column holding a `isproperty` flag to decide if it's a complex property or not.
@@ -128,9 +128,9 @@ A node is the set of fragments corresponding to the schemas of that node.
 
 See the [VCS Tables]({{page page='vcs-tables'}}) page for more details.
 
-## Fields Mapping
+## Properties Mapping
 
-Nuxeo fields are mapped to properties or to child nodes:
+Nuxeo properties are mapped to properties or to child nodes:
 
 *   A simple type (scalar or array of scalars) is mapped to a property (simple or collection) of the document node,
 *   A complex type is mapped to a child node of the document node. There are two kinds of complex types to consider:
@@ -139,9 +139,7 @@ Nuxeo fields are mapped to properties or to child nodes:
 
 ## Security
 
-Security information is stored as an ACL which is a collection of simple ACEs holding basic rights information. This collection is stored in a dedicated table in a similar way to lists of scalars, except that the value is split over several column to represent the rich ACE values.
-
-&nbsp;
+Security information is stored as an ACL (Access Control List) which is a collection of simple ACEs (Access Control Entries) holding basic rights information. This collection is stored in a dedicated table in a similar way to lists of scalars, except that the value is split over several column to represent the rich ACE values.
 
 * * *
 
@@ -152,7 +150,5 @@ Security information is stored as an ACL which is a collection of simple ACEs ho
 - [Security]({{page page='security'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

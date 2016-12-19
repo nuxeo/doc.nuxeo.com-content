@@ -669,6 +669,7 @@ A unit test has been created in `src/test/java`. You will need it to pass in ord
     import org.nuxeo.runtime.test.runner.Deploy;
     import org.nuxeo.runtime.test.runner.Features;
     import org.nuxeo.runtime.test.runner.FeaturesRunner;
+    import org.nuxeo.runtime.test.runner.LocalDeploy;
 
     @RunWith(FeaturesRunner.class)
     @Features(AutomationFeature.class)

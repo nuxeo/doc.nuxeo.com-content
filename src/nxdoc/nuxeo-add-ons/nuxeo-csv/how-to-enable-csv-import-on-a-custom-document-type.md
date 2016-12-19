@@ -2,7 +2,7 @@
 title: How to Enable CSV Import on a Custom Document Type
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-08'
     status: ok
 details:
     howto:
@@ -14,7 +14,7 @@ details:
         tool: Studio
         topics: 'Document type, Nuxeo CSV'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - nuxeo-csv
     - howto
     - csv-importer-component
@@ -147,13 +147,13 @@ If you installed the Nuxeo CSV add-on from the Nuxeo Marketplace, you'll probabl
     </extension>
     ```
 
-5.  In the XML extension, put as many&nbsp;`<type>` tags as documents types on which CSV import should be enabled.
+5.  In the XML extension, put as many `<type>` tags as documents types on which CSV import should be enabled.
 6.  Click on **Save**.
     After you update your Nuxeo Platform instance, your document type(s) will have the **Import a CSV file** button.
 
 {{#> callout type='tip' }}
 
-If you don't want to use Studio and prefer using your IDE, you can just [add a contribution]({{page page='contributing-to-an-extension-using-nuxeo-ide'}}) with the XML above.
+If you don't want to use Studio and prefer using your IDE, you can just [add a contribution]({{page page='how-to-contribute-to-an-extension'}}) with the XML above.
 
 {{/callout}}
 
@@ -163,9 +163,9 @@ If you don't want to use Studio and prefer using your IDE, you can just [add a c
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Nuxeo CSV]({{page page='nuxeo-csv'}})
-*   [Marketplace Add-Ons]({{page page='marketplace-add-ons'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [Nuxeo CSV]({{page page='nuxeo-csv'}})
+- [Marketplace Add-Ons]({{page page='marketplace-add-ons'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">
 

@@ -2,10 +2,10 @@
 title: Installing the Nuxeo Platform as a Windows Service
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-15'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - install-windows
     - windows-service
     - install-service
@@ -240,9 +240,8 @@ history:
         version: '1'
 
 ---
-Installing Nuxeo as a Windows service is independent of Nuxeo.&nbsp;Multiple solutions are available, here are some of them, given without any warranty.
+Installing Nuxeo as a Windows service is independent of Nuxeo Multiple solutions are available, here are some of them, given without any warranty.
 
-&nbsp;
 
 {{#> callout type='tip' }}
 
@@ -265,9 +264,9 @@ The database used by the Nuxeo Platform has to be installed as a service and sta
 
 [NSSM](https://nssm.cc/) is a Windows service helper that makes it much more easy to launch any type of application as a service. What is more, it also handles failure, by relaunching applications whenever they exit prematurely. Here are the instructions to install Nuxeo as a Windows service using NSSM:
 
-1.  Download NSSM from [the official website](https://nssm.cc/download) or install it via [Chocolatey](https://chocolatey.org/), by typing:&nbsp;`choco install nssm`
+1.  Download NSSM from [the official website](https://nssm.cc/download) or install it via [Chocolatey](https://chocolatey.org/), by typing: `choco install nssm`
 2.  If NSSM was installed via Chocolatey, skip this step. Otherwise, add NSSM's location to PATH.
-3.  Install Nuxeo as a service, by running on an elevated console or powershell:&nbsp;`nssm install &ldquo;<absolute-path-to-nuxeoctl.bat>&rdquo; --gui false console`
+3.  Install Nuxeo as a service, by running on an elevated console or powershell: `nssm install Nuxeo "<absolute-path-to-nuxeoctl.bat>" --gui false console`
 
 From now on, Nuxeo will start as a service whenever Windows starts. The `console` parameter allows the process to stay alive after the server starts, thus preventing NSSM from restarting it.
 
@@ -285,7 +284,7 @@ When using this solution it is important that Nuxeo installation path contains n
 
 #### Installing Nuxeo as a Windows Service Using YAJSW
 
-1.  [Download YAJSW](http://sourceforge.net/projects/yajsw/files/) and unzip the archive.
+1.  [Download the latest stable version of YAJSW](http://sourceforge.net/projects/yajsw/files/) and unzip the archive.
 2.  Set the system environment variable `NUXEO_CONF` to the location of your `nuxeo.conf` file, something like `%NUXEO_HOME%\bin\nuxeo.conf`.
 3.  Start the Nuxeo Platform from the command line:
 
@@ -327,7 +326,7 @@ When using this solution it is important that Nuxeo installation path contains n
     nuxeoctl.bat --gui=false stop
     ```
 
-8.  Open the&nbsp;`wrapper.conf` file and make sure the&nbsp;`wrapper.console.title` entry does not contain a colon (":") or the&nbsp;`runConsole.bat` execution will fail. In that case, remove the colon or set another title.
+8.  Open the `wrapper.conf` file and make sure the `wrapper.console.title` entry does not contain a colon (":") or the `runConsole.bat` execution will fail. In that case, remove the colon or set another title.
 9.  Execute your wrapped application as a console application:
 
     ```
@@ -350,7 +349,7 @@ When using this solution it is important that Nuxeo installation path contains n
         wrapper.control = APPLICATION 
         ```
 
-    2.  If set, remove or comment the following&nbsp;`wrapper.on_exit` parameters:
+    2.  If set, remove or comment the following `wrapper.on_exit` parameters:
 
         ```
         #wrapper.on_exit.0=SHUTDOWN
@@ -511,10 +510,6 @@ They were licensed under LGPL and so redistributable but there are not fully sat
 
 {{/callout}}
 
-### Tomcat Service Install/Uninstall Script
-
-Using the Tomcat distribution of Nuxeo, you will find a `service.bat` script in the `bin` directory that could be adapted to install Nuxeo as a Windows service.
-
 ### JavaServiceWrapper by Tanuki
 
 Tanuki's library provides [multiple methods for integrating a software as a service on various OS](http://wrapper.tanukisoftware.com/doc/english/integrate.html), the easier is to use the WrapperSimpleApp helper class to launch the application: see [the example of JBoss installed as a Windows service](http://wrapper.tanukisoftware.com/doc/english/integrate-simple-win.html).
@@ -537,7 +532,11 @@ wrapper.exe -r %NUXEO_HOME%\wrapper\wrapper.conf
 
 This solution is known to work well but is sadly not redistributable for us because of its GPL/Commercial license.
 
-### .NET InstallUtil
+### Tomcat Service Install/Uninstall Script (deprecated)
+
+Previous versions of the Tomcat distribution of Nuxeo came with a `service.bat` script in the `bin` directory that could be adapted to install Nuxeo as a Windows service.
+
+### .NET InstallUtil (deprecated)
 
 .NET framework provides an `InstallUtil.exe` tool for installing/uninstalling services.
 
@@ -559,8 +558,6 @@ There are some disadvantages such as failures in case of multiple frameworks ins
 {{/callout}}
 
 You may want to have a look at [http://msdn2.microsoft.com/en-US/library/system.configuration.install.managedinstallerclass.aspx](http://msdn2.microsoft.com/en-US/library/system.configuration.install.managedinstallerclass.aspx) for managing that programmatically.
-
-&nbsp;
 
 * * *
 

@@ -2,10 +2,10 @@
 title: Java Data Structures and Caching
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - vcs
     - cache
     - vcs-component
@@ -58,10 +58,10 @@ This page described low-level implementation details of the VCS backend.
 
 Here is a list of Java objects that hold data:
 
-*   **Row:**&nbsp;holds a single database row using a map (or a list of value for a multi-valued properties).
-*   **Fragment:**&nbsp;a Row with a state, the original data are kept to pinpoint dirty fields that will need to be synchronized with the database at the next save. There are two kind of fragments: `SimpleFragment` to hold single database row and `CollectionFragment` to hold multi-valued fields. Fragment and Rows manipulates non-typed data (Serializable).
+*   **Row**: holds a single database row using a map (or a list of value for a multi-valued properties).
+*   **Fragment**: a Row with a state, the original data are kept to pinpoint dirty fields that will need to be synchronized with the database at the next save. There are two kind of fragments: SimpleFragment to hold single database row and CollectionFragment to hold multi-valued fields. Fragments and Rows manipulates non-typed data (Serializable).
 *   **Node**: holds a map of fragments (one per table, roughly equivalent to one per schema) and it gives access to typed properties.
-*   **Selection:**&nbsp;holds a list of IDs for a node. It is equivalent to a cached subset of a query for the children, versions or proxies of a document.
+*   **Selection**: holds a list of IDs for a node. It is equivalent to a cached subset of a query for the children, versions or proxies of a document.
 *   **Document**: the low-level document (SQLDocumentLive), holding a Node and implementing the Session SPI.
 *   **DocumentModel**: the high level document representation, synchronized with the Document at getDocument/saveDocument time, and has knowledge about rights, proxies, versions.
 
@@ -77,21 +77,19 @@ After a commit the session sends cache invalidation to other sessions (or to oth
 
 The default cache implementation uses a cache per session. The cache is done with Java SoftReference map. This means that cache values can be garbage collected on memory pressure. The cache size depends on the size of the JVM heap and on the memory pressure.
 
-The cache implementation is pluggable so it is possible to try other strategies like having an common cache shared by all sessions. Another available implementation based on Ehcache is the&nbsp;UnifiedCachingMapper.
+The cache implementation is pluggable so it is possible to try other strategies like having an common cache shared by all sessions. Another available implementation based on Ehcache is the UnifiedCachingMapper.
 
 The Selection (list of children, proxies or versions) are also cached using SoftReference at the session level.
 
 Both Row and Selection caches expose metrics so it is possible to get the cache hit ratio.
 
-&nbsp;
+* * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-*   [VCS]({{page page='vcs'}})
-*   [Performance Recommendations]({{page page='performance-recommendations'}})
+- [VCS]({{page page='vcs'}})
+- [Performance Recommendations]({{page page='performance-recommendations'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

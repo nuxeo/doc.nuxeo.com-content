@@ -2,11 +2,10 @@
 title: Nuxeo Datadog Reporter
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-13'
     status: ok
 labels:
-    - content-review-lts2016
-    - last-review-20150708
+    - lts2016-ok
     - excerpt
     - multiexcerpt-include
 confluence:

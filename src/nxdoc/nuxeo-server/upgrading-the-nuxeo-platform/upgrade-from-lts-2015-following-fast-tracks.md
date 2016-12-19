@@ -593,7 +593,13 @@ Thus the following changes in [nuxeo-distribution](https://github.com/nuxeo/nuxe
 - `nuxeo-distribution-tomcat` => `nuxeo-server-tomcat`, no more `-nuxeo-cap`
 classifier
 
-** Functional Tests **
+Since the CAP distribution has been removed, you also need to replace `nuxeo-distribution-cap` by `nuxeo-nxr-server`.
+
+{{#> callout type='info' }}
+These changes in the Maven artifact names must be applied to any `pom.xml` or `assembly.xml` file.
+{{/callout}}
+
+#### Functional Tests
 
 The default distribution tested in functional tests is now a simple
 `nuxeo-server-tomcat` without the `nuxeo-jsf-ui` package installed.
@@ -624,11 +630,19 @@ Having the following dependency in the `pom.xml`:
 </dependency>
 ```
 
-See [NXP-19790](https://jira.nuxeo.com/browse/NXP-19790) for details.
+See [NXP-19790](https://jira.nuxeo.com/browse/NXP-19790) and [NXP-20938](https://jira.nuxeo.com/browse/NXP-20938) for details.
 
 #### Impact on Nuxeo Packages
 
-** Target Platform **
+#### Maven Artifacts
+
+The changes in the [Maven artifact names](#renamed-maven-modules) mentioned above must be applied to any `pom.xml` or `assembly.xml` file in a Nuxeo package:
+
+- `nuxeo-distribution-cap` => `nuxeo-nxr-server`
+- `nuxeo-distribution-server` => `nuxeo-nxr-server`
+- `nuxeo-distribution-jsf-ui` => `nuxeo-nxr-jsf-ui`
+
+#### Target Platform
 
 The default target platform is now the `server` distribution, so the `package.xml` file of a Nuxeo package must contain:
 

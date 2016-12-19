@@ -2,10 +2,10 @@
 title: .NET Client
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-12'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - dotnet
     - csharp
     - client
@@ -184,20 +184,15 @@ Nuxeo .NET Client is a cross-platform client library developed in C# for the Nux
 
 {{! /excerpt}}
 
-It targets two platforms:
-
-*   **net45**: The traditional .NET framework 4.5, which covers Desktop and ASP .NET apps, among others
-*   **dnxcore50**: For ASP .NET 5 apps using the open-source and multi-platform .NET Core framework
-
-Nuxeo .NET Client can be used in desktop apps running on Microsoft Windows but also in web applications developed with ASP .NET, running on Windows, Linux and OS X.
+Nuxeo .NET Client targets two platforms: `net45` and `dotnetcoreapp1.0`. This allows it to be used to develop apps for not only Windows but also Linux and Mac OS.
 
 ## Installation
 
 Nuxeo .NET Client can easily be installed from [NuGet](https://www.nuget.org/packages/NuxeoClient/). Here is how.
 
-### Developing with Visual Studio (2013 or Newer)
+### Developing with Visual Studio (2015 or Newer)
 
-Open the Package Manager Console and type:
+You need [.NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) installed in order to build .NET Client. In Visual Studio, open the Package Manager Console and type:
 
 ```
 Install-Package NuxeoClient –Pre
@@ -205,11 +200,9 @@ Install-Package NuxeoClient –Pre
 
 ### Developing for .NET Core, without Visual Studio
 
-Pre-Requistes
+You will need to have .NET Core available in your system in order to run the client. Installation instructions are available for [Linux](https://www.microsoft.com/net/core#linuxredhat), [macOS](https://www.microsoft.com/net/core#macos) and [Windows](https://www.microsoft.com/net/core#windowscmd).
 
-You will need to have .NET Core available in your system in order to run the client. Installation instructions are available for [Linux](http://dotnet.readthedocs.org/en/latest/getting-started/installing-core-linux.html), [OS X](https://docs.asp.net/en/latest/getting-started/installing-on-mac.html) and [Windows](http://dotnet.readthedocs.org/en/latest/getting-started/installing-core-windows.html).
-
-1.  Add the &ldquo;NuxeoClient&rdquo; dependency to your project.json file, which should look something like this:
+1.  Add the "NuxeoClient" dependency to your *project.json* file, which should look something like this:
 
     ```js
     {
@@ -225,7 +218,7 @@ You will need to have .NET Core available in your system in order to run the cli
 2.  Run the following command on your favorite shell to download all dependencies:
 
     ```
-    dnu restore
+    dotnet restore
     ```
 
 ## Initialization
@@ -251,7 +244,7 @@ You will need to have .NET Core available in your system in order to run the cli
     Client client = new Client();
     ```
 
-    NuxeoClient exposes the following methods to specify the default schemas to be used when retrieving documents from the server&nbsp;(sets the `X-NXDocumentProperties` header):
+    NuxeoClient exposes the following methods to specify the default schemas to be used when retrieving documents from the server (sets the `X-NXDocumentProperties` header):
 
     *   `client.AddDefaultSchema(string schema)`
     *   `client.SetDefaultSchemas(string[] schemas)`
@@ -260,7 +253,7 @@ You will need to have .NET Core available in your system in order to run the cli
 
 ## API Calls
 
-Nuxeo .NET Client exposes methods to perform requests to the Automation and REST API, via `client.Operation(string id)` and `client.Request(RequestType type,&nbsp;string endpoint)`.
+Nuxeo .NET Client exposes methods to perform requests to the Automation and REST API, via `client.Operation(string id)` and `client.Request(RequestType type, string endpoint)`.
 
 ### Automation API
 
@@ -270,9 +263,9 @@ The `Operation` object exposes several methods to parameterize calls to the Auto
 *   **operation.SetContext(string property, JToken value)**: Sets the operation context. The value can also be passed as a string.
 *   **operation.SetParameter(string property, JToken value)**: Sets a parameter for the operation. The value can also be passed as a string.
 *   **operation.AddHeader(string name, string value)**: Adds a header to be used in the operation request.
-*   **operation.AddSchema(string schema)** and **operation.SetSchemas(string[] schemas)**: Defines the schemas to be used in the operation request&nbsp;(overrides the `X-NXDocumentProperties` header).
+*   **operation.AddSchema(string schema)** and **operation.SetSchemas(string[] schemas)**: Defines the schemas to be used in the operation request (overrides the `X-NXDocumentProperties` header).
 *   **operation.SetTimeout(int timeout)**: Specifies the timeout for the operation.
-*   **operation.SetRepository(string repository)**: Sets the repository to be used in the request&nbsp;(sets the `X-NXRepository` header).
+*   **operation.SetRepository(string repository)**: Sets the repository to be used in the request (sets the `X-NXRepository` header).
 *   **operation.Execute()**: launches a `Task` that executes the operation, which can be awaited within an async method.
 
 #### Operation Examples
@@ -301,14 +294,14 @@ Documents documents = (Documents) await client.Operation("Document.GetChildren")
 
 RESTful requests are made via the `client.Request` method, which has the following arguments:
 
-*   RequestType **type**: the HTTP method type, which can be `RequestType.GET`,&nbsp;`RequestType.POST`,&nbsp;`RequestType.PUT` or&nbsp;`RequestType.DELETE`.
+*   RequestType **type**: the HTTP method type, which can be `RequestType.GET`, `RequestType.POST`, `RequestType.PUT` or `RequestType.DELETE`.
 *   string **endpoint**: The URL to the endpoint to which the request will be made.
 *   QueryParams **parameters** (defaults to null): The query parameters of the URL.
 *   JToken **data** (defaults to null): The data to be sent in the request. A string can be used, which will be autoboxed to `JToken`.
 *   Dictionary<string, string> **additionalHeaders** (defaults to null): The headers to be used in the request.
 *   string **contentType** (defaults to `ContentType.JSON`): The content type of the request.
 
-Requests made via this method are issued inside a `Task`, which can be awaited inside an async method.&nbsp;However, Nuxeo .NET Client provides a handful of wrappers to hide direct calls to `client.Request`&nbsp;and set headers, which makes code easier to read and write. Examples of these wrappers are `Document` and `Batch`.
+Requests made via this method are issued inside a `Task`, which can be awaited inside an async method. However, Nuxeo .NET Client provides a handful of wrappers to hide direct calls to `client.Request` and set headers, which makes code easier to read and write. Examples of these wrappers are `Document` and `Batch`.
 
 #### Document CRUD via REST API
 
@@ -316,9 +309,9 @@ The `Document` wrapper provides several methods to perform operations over docum
 
 *   **document.Get()**: Fetches the document.
 *   **document.Post**: Creates a child document. Receives an `Entity` or `JToken` object.
-*   **document.Put**: Updates the document.&nbsp;Receives an `Entity` or `JToken` object.
+*   **document.Put**: Updates the document. Receives an `Entity` or `JToken` object.
 *   **document.Delete()**: Deletes the document.
-*   **SetAdapter(Adapter adapter)**:&nbsp;Sets a document adapter.
+*   **SetAdapter(Adapter adapter)**: Sets a document adapter.
 *   **SetContentEnrichers(string[] enrichers)**: Sets the document enrichers to be used in the next request.
 
 Similarly to `Operation`, the `Document` wrapper also provides methods to define headers, schemas, the repository and the timeout.
@@ -353,7 +346,7 @@ Similarly to `Operation`, the `Document` wrapper also provides methods to define
     });
     ```
 
-*   Getting the folder's child documents, using the&nbsp;`@children` adapter
+*   Getting the folder's child documents, using the `@children` adapter
 
     ```c#
     Documents children = (Documents)await folder.SetAdapter(new ChildrenAdapter())
@@ -380,7 +373,7 @@ The `Batch` wrapper provides methods to upload files, perform operation on batch
 *   **batch.Upload(UploadJob job)**: Uploads a file.
 *   **batch.UploadChunk(UploadJob job)**: Uploads a chunk of a file.
 *   **batch.Drop()**: Drops the current batch.
-*   **batch.Info()**: Gets information about a batch.&nbsp;
+*   **batch.Info()**: Gets information about a batch.
 *   **batch.Info(int fileIndex)**: Gets information about a specific file that was uploaded to this batch.
 
 Nuxeo .NET Client provides an `Uploader` that exposes convenient methods to upload files, such as:
@@ -388,10 +381,10 @@ Nuxeo .NET Client provides an `Uploader` that exposes convenient methods to uplo
 *   **uploader.SetChunked(bool isChunkedUpload)**: Specifies whether files will be uploaded in chunks or not.
 *   **uploader.SetChunkSize(int size)**: The size of the chunks.
 
-*   **uploader.SetNumConcurrentUploads(int num)**: The number of files that can be uploaded in parallel.&nbsp;
-*   **uploader.AddFile(string file)** and&nbsp;**AddFiles(string[] files)**: Adds files to the upload queue.
+*   **uploader.SetNumConcurrentUploads(int num)**: The number of files that can be uploaded in parallel.
+*   **uploader.AddFile(string file)** and **AddFiles(string[] files)**: Adds files to the upload queue.
 *   **uploader.UploadFiles()**: Uploads files in the queue.
-*   **uploader.Operation(string operationId)**:&nbsp;Creates a new&nbsp;`Operation` to be executed over the current batch.
+*   **uploader.Operation(string operationId)**: Creates a new `Operation` to be executed over the current batch.
 
 Now, imagine that you want to upload files to the server and import them as children of folder, the folder created above.
 
@@ -425,30 +418,27 @@ Now, imagine that you want to upload files to the server and import them as chil
 
 Nuxeo .NET Client's source code is available on [GitHub](https://github.com/nuxeo/nuxeo-dotnet-client), along with more usage examples and [documentation](http://nuxeo.github.io/nuxeo-dotnet-client/).
 
-In order to build Nuxeo .NET Client, you must have installed the .NET Core DNX SDK, version 1.0.0-beta8, or .NET 4.5 on a Windows setup.
-
 ### Developing for .NET 4.5
 
 1.  Install the [.NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653).
-2.  Build and run NuxeoClient_net45.sln in Visual Studio (2013 or newer).
+2.  Build and run NuxeoClient_net45.sln in Visual Studio (2015 or newer).
 
 ### Developing for .NET Core
 
-1.  Install .NET Core in your system. Installation instructions are available for&nbsp;[Linux](http://dotnet.readthedocs.org/en/latest/getting-started/installing-core-linux.html),&nbsp;[Mac OS](https://docs.asp.net/en/latest/getting-started/installing-on-mac.html) and&nbsp;[Windows](http://dotnet.readthedocs.org/en/latest/getting-started/installing-core-windows.html).
+1.  Install .NET Core in your system. Installation instructions are available for
+[Linux](https://www.microsoft.com/net/core#linuxredhat), [macOS](https://www.microsoft.com/net/core#macos) and [Windows](https://www.microsoft.com/net/core#windowscmd).
 2.  Add the following feeds to NuGet config file:
     *   [https://www.myget.org/F/aspnetvnext/](https://www.myget.org/F/aspnetvnext/)
     *   [https://www.nuget.org/api/v2/](https://www.nuget.org/api/v2/)
 3.  Build the solution with:
 
 ```
-dnu build
+dotnet build
 ```
 
 ## Sample - NuxeoDotNetBrowser
 
 The Nuxeo .NET Client is already being used by a sample application named [NuxeoDotNetBrowser](https://github.com/nuxeo/nuxeo-dotnet-browser). It provides the basic functionality to browse documents in a Nuxeo server, perform CRUD operations and start workflows.
-
-&nbsp;
 
 * * *
 
