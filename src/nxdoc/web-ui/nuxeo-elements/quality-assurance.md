@@ -26,35 +26,39 @@ tree_item_index: 200
 
 ## Performance Strategies
 
-Nuxeo elements are the best means to build a custom UI application on the top of Nuxeo server but several points have to be taken into account to make the UI experience faster and to reduce performance server cost:
+Nuxeo elements are the best means to build a custom UI application on the top of Nuxeo server and here are the guidelines to make the UI experience faster and to reduce server performance cost:
 
 ### Response payloads
 
-There are two ways to filter data from the server in order to avoid unecessary quantity information in response: filter the schemas and using enrichers.
+There are two ways to filter data from the server in order to avoid unecessary quantity information in response:
+
+- filtering by **schemas**
+- using [**enrichers**](https://doc.nuxeo.com/nxdoc/content-enricher/)
 
 ##### Schemas
 
 When building views, listings and pages in general you need to determine which document information you want to display for your users.
 
-For instance a listing could only needs the {{dublincore}} schemas of the documents and their summary links. The metadata displayed in each row would be:
+For instance a listing could only needs the `dublincore` schema of the documents and their summary links. The metadata displayed in each row would be:
 
 - `dc:title`
 - `dc:description`
 - `dc:created` date
 - and the navigation link to their summary
 
-A document can contain several schemas with a dozen of metadata so the JSON payload in response could be unecessary too big. Building a listing of several documents can make slow the client side navigation and use too much network bandwith: we need to filter schemas.
+A document can contain several schemas with a dozen of metadata so the JSON payload in response could be unecessary too big. Building a listing of several documents can make the client side navigation slower: we need to filter schemas.
 
 [Special header](https://doc.nuxeo.com/nxdoc/special-http-headers/#x-nxproperties) is reserved for this purpose and can be used easily with the Nuxeo resource elements: `nuxeo-resource` and `nuxeo-operation`.
 
 Example:
 
 ```
-<nuxeo-resource auto
-    path="Document.Query"
-    on-response="{{handleResponse}}"
-    schemas="dublincore"></nuxeo-resource>
-
+<nuxeo-operation auto
+    op="Document.Query"
+    params="{'query': 'select from Document'}"
+    schemas="dublincore"
+    on-response="{{handleResponse}}">
+    </nuxeo-operation>
 ```
 
 This will fetch document definitions with only their `dublincore` metadata.
@@ -68,14 +72,32 @@ The Nuxeo [enrichers](https://doc.nuxeo.com/nxdoc/content-enricher/) are means t
 To get the permanent URL of a document for instance with the Nuxeo resource elements (`nuxeo-resource` and `nuxeo-operation`), set the `enrichers` property:
 
 ```
-<nuxeo-resource auto
-    path="Document.Query"
-    on-response="{{handleResponse}}"
+<nuxeo-operation auto
+    op="Document.Query"
+    params="{'query': 'select from Document'}"
     schemas="dublincore"
-    enrichers="permanentURL"></nuxeo-resource>
+    on-response="{{handleResponse}}"
+    enrichers="documentURL">
+    </nuxeo-operation>
 ```
 
-You will have at last all the informations needed for your listing with a small amount of information in your response payload.
+You will have finally all the informations needed for your listing with a small amount of information in your response payload.
+
+### Search
+
+##### Elasticsearch
+
+With Nuxeo platform, you have two ways to fetch data from the server for building listings and searching:
+
+- Via 'direct' queries
+- Via [`pageproviders`](https://doc.nuxeo.com/nxdoc/page-providers/)
+
+Depending on your environment, you will perform searches with Nuxeo Server on top of your **database** (Mysql/MariaDB, Postgresql, MongoDB, Oracle...) or on top of your [**elasticsearch**](https://doc.nuxeo.com/710/admindoc/elasticsearch-setup/) **(recommended)**.
+
+For using elasticsearch (ES), use `pageproviders` which [can be activated for ES](https://doc.nuxeo.com/710/nxdoc/how-to-make-a-page-provider-or-content-view-query-elasticsearch-index/) via the `nuxeo.conf` file and the following Nuxeo elements with related properties:
+
+- [`nuxeo-page-provider`](http://nuxeo.github.io/nuxeo-elements/components/nuxeo-elements/#nuxeo-page-provider) with the property `provider` set
+- [`nuxeo-operation`](http://nuxeo.github.io/nuxeo-elements/components/nuxeo-elements/#nuxeo-operation) with the operation [`Repository.PageProvider`](http://explorer.nuxeo.com/nuxeo/site/distribution/cap-8.3/viewOperation/Repository.Query)
 
 ## Test Strategies
 
@@ -330,8 +352,24 @@ Please refer to this [developer guide](http://nightwatchjs.org/guide) to see how
 
 Here is [an example](https://github.com/nuxeo/nuxeo-marketplace-sample/edit/master/ftest/nightwatchjs) of a Nuxeo package to run with Maven and npm nightwatchjs tests.
 
-## Performance Strategies
+## Security Strategies
 
-### Schemas - enrinchers
+### Search: GET method URL
 
-### Browser Cache
+With Nuxeo platform, you have two ways to fetch data from the server for building listings and searching:
+
+- Via 'direct' queries
+- Via [`pageproviders`](https://doc.nuxeo.com/nxdoc/page-providers/)
+
+If your network environment (proxies, firewalls) doesn't allow queries inside URL for `GET` Method for security purpose, you have to avoid the `nuxeo-resource` usage with the endpoint `query` if you want to execute a search via 'direct' queries:
+
+See this GET Method URL example:
+
+```
+https://NUXEO_SERVER/nuxeo/api/v1/query?currentPageIndex=0&pageSize=10&query=SELECT%20%2A%20FROM%20Document%20where%20ecm%3AprimaryType%20in%20%28%27UserProfile%27%29%20%20
+```
+
+**We recommend you**:
+
+- to use page providers in general (see above in `Performance Strategies > Search`)
+- to use [`Repository.Query`](http://explorer.nuxeo.com/nuxeo/site/distribution/cap-8.3/viewOperation/Repository.Query) operation with [`nuxeo-operation`](http://nuxeo.github.io/nuxeo-elements/components/nuxeo-elements/#nuxeo-operation) element if you still want to search via 'direct' queries.
