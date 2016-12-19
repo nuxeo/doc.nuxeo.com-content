@@ -2,7 +2,7 @@
 title: How to Quickly Generate a PDF Using Document Template
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: Studio
         topics: 'Automation, Conversion, Document template'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - automation
     - conversion
