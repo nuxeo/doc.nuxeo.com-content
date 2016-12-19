@@ -26,7 +26,21 @@ tree_item_index: 200
 
 ## Performance Strategies
 
-Nuxeo elements are the best means to build a custom UI application on the top of Nuxeo server and here are the guidelines to make the UI experience faster and to reduce server performance cost:
+Nuxeo elements are the best means to build a custom UI application on the top of Nuxeo server and below are the guidelines to make the UI experience faster and to reduce server performance cost.
+
+### Polymer
+
+##### Vulcanizing the Polymer elements
+
+[`Vulcanize`](https://www.polymer-project.org/1.0/docs/tools/optimize-for-production) is a build tool that lets you concatenate a set of elements and their HTML imported dependencies into a single file. It will reduce network requests for a performant app experience. You can check out [this video](https://www.youtube.com/watch?v=EUZWE8EZ0IU) for a complete bootstrap.
+
+##### Custom Polymer Elements - Anti-Patterns
+
+When building a custom element, developers can achieve great things with Polymer by encapsulating logics that can be re-used multiple times. But be careful on how you build them:
+
+- Optimize data loading by passing data between elements:
+
+Try to use an element only once then pass the result through/between all elements to avoid unecessary calls.
 
 ### Response payloads
 
