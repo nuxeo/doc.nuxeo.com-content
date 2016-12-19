@@ -564,7 +564,9 @@ Thumbnails and previews are created when documents are imported into Nuxeo, not 
 
 Under Debian or Ubuntu, most of these can be installed by the following command:
 
-<pre>sudo apt-get install openjdk-8-jdk imagemagick ufraw poppler-utils libreoffice ffmpeg libwpd-tools ghostscript exiftool</pre>
+```bash
+$ sudo apt-get install openjdk-8-jdk imagemagick ufraw poppler-utils libreoffice ffmpeg libwpd-tools ghostscript exiftool
+```
 
 {{#> callout type='warning' }}
 
@@ -575,28 +577,51 @@ Installing the ffmpeg package from your distribution's repository may not provid
 ### LibreOffice Configuration
 
 {{! multiexcerpt name='libreoffice-5'}}
-{{#> callout type='note'}}
+**Minimum required version**
+
 The minimum version required is LibreOffice 5. The soffice program must be added to the PATH environment variable.
-{{/callout}}
 {{! /multiexcerpt}}
 
-{{{multiexcerpt 'ooo-libreoffice-configuration' page='Installing and Setting up Related Software'}}}
+{{! multiexcerpt name='ooo-libreoffice-configuration'}}
+
+**Installation location and Path configuration**
+
+For preview to work, the server must start LibreOffice. The Nuxeo Platform looks for LibreOffice at different locations on the system. See [PlatformUtils.java definition](https://github.com/nuxeo/jodconverter/blob/3.0-NX/jodconverter-core/src/main/java/org/artofsolving/jodconverter/util/PlatformUtils.java) for searched locations.
+
+If LibreOffice isn't available at one of these locations, you need to add the `soffice` program to your path: Edit the `Path` system variable and add `;OFFICE_INSTALL_DIRECTORY\program.`
+
+{{#> callout type='tip' }}
+If not using default install path, you may have to add the path to the executable in your `nuxeo.conf`:
+
+```
+jod.office.home=/path/to/libreoffice
+```
+
+{{/callout}}
+
+**Non-latin languages configuration**
+
+If you'll be working with non-latin languages:
+
+1.  Start LibreOffice manually.
+2.  Install the additional fonts you may need for non-default languages.
+{{! /multiexcerpt}}
 
 ### CCExtractor Installation
 
-Installing [CCExtractor](http://ccextractor.org) on a GNU/Linux distribution requires to compile it from [https://github.com/CCExtractor/ccextractor](source). The recommended way to do it is to use our <span style="color: rgb(34,34,34);">"in-docker-build":&nbsp;</span>[https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ccextractor](https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ccextractor).
+Installing [CCExtractor](http://ccextractor.org) on a GNU/Linux distribution requires to compile it from [https://github.com/CCExtractor/ccextractor](source). The recommended way to do it is to use our "in-docker-build": [https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ccextractor](https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ccextractor).
 
 To generate a package (by default for the latest Ubuntu LTS):
 
 1.  Issue the following commands:
 
-    ```
-    sudo apt-get update
-    sudo apt-get install docker
-    cd /tmp
-    git clone https://github.com/nuxeo/nuxeo-tools-docker.git
-    cd nuxeo-tools-docker/ccextractor
-    sudo ./build-package.sh
+    ```bash
+    $ sudo apt-get update
+    $ sudo apt-get install docker
+    $ cd /tmp
+    $ git clone https://github.com/nuxeo/nuxeo-tools-docker.git
+    $ cd nuxeo-tools-docker/ccextractor
+    $ sudo ./build-package.sh
     ```
 
 ### Controlling Threads Used by ImageMagick
@@ -646,11 +671,11 @@ For a manual build:
 1.  Install the [multiverse package repositories](https://help.ubuntu.com/community/Repositories/CommandLine) (required for the script to work).
 2.  Issue the following commands:
 
-    ```
-    cd /tmp
-    git clone https://github.com/nuxeo/ffmpeg-nuxeo
-    cd ffmpeg-nuxeo
-    sudo ./build-all.sh true
+    ```bash
+    $ cd /tmp
+    $ git clone https://github.com/nuxeo/ffmpeg-nuxeo
+    $ cd ffmpeg-nuxeo
+    $ sudo ./build-all.sh true
     ```
 
 {{#> callout type='warning' }}
@@ -663,49 +688,33 @@ The OS X installation instructions provided use [Homebrew](http://mxcl.github.co
 
 ### LibreOffice and pdftohtml for Office and PDF Preview
 
-{{{multiexcerpt 'libreoffice-5' page='installing-and-setting-up-related-software'}}}
-
 {{! multiexcerpt name='ooo-pdftohaml-intro'}}
 
 Installing LibreOffice and pdftohtml on the server is only required if you need to use preview on PDF and office documents. pdftohtml is used for previewing PDF files. It is included in poppler.
 
 {{! /multiexcerpt}}
 
-#### pdftohtml
-
-To install pdfttohtml using Homebrew:
-
-```
-brew install poppler
-```
-
 #### LibreOffice
 
 {{! multiexcerpt name='ooo-libreoffice-installation'}}
 
-LibreOffice are used for preview on office documents in association to pdftohtml.
+LibreOffice is used for preview on office documents in association with pdftohtml.
 
-Download and install them from:
+{{{multiexcerpt 'libreoffice-5' page='installing-and-setting-up-related-software'}}}
 
-*   LibreOffice: [http://www.libreoffice.org/](http://www.libreoffice.org/)
+Download and install LibreOffice from [http://www.libreoffice.org/](http://www.libreoffice.org/).
 
+{{! /multiexcerpt}}
 
-{{! /multiexcerpt}}{{! multiexcerpt name='ooo-libreoffice-configuration'}}
+{{{multiexcerpt 'ooo-libreoffice-configuration' page='Installing and Setting up Related Software'}}}
 
-If you'll be working with non-latin languages:
+#### pdftohtml
 
-1.  Start LibreOffice manually.
-2.  Install the additional fonts you may need for non-default languages.
+To install pdftohtml using Homebrew:
 
-For preview to work, the Nuxeo Platform should start LibreOffice. You can see the places the Nuxeo Platform looks for LibreOffice in the [PlatformUtils.java definition](https://github.com/nuxeo/jodconverter/blob/3.0-NX/jodconverter-core/src/main/java/org/artofsolving/jodconverter/util/PlatformUtils.java).
-
-If you haven't installed them at a traditional location, you may need to add the soffice program to your path: Edit the `Path` system variable and add `;OFFICE_INSTALL_DIRECTORY\program.`
-
-{{#> callout type='tip' }}
-
-If not using default install path, you may have to add the path to the executable in your `nuxeo.conf`: `jod.office.home=/path/to/libreoffice.`
-
-{{/callout}}{{! /multiexcerpt}}
+```bash
+$ brew install poppler
+```
 
 ### Ghostscript
 
@@ -717,8 +726,8 @@ Ghostscript is used in association with ImageMagick to generate the thumbnails o
 
 *   Using Homebrew:
 
-    ```
-    brew install ghostscript
+    ```bash
+    $ brew install ghostscript
     ```
 
 ### ImageMagick
@@ -731,8 +740,8 @@ ImageMagick is used in association with Ghostscript to generate the document thu
 
 *   Using Homebrew:
 
-    ```
-    brew install imagemagick
+    ```bash
+    $ brew install imagemagick
     ```
 
 {{#> callout type='warning' }}
@@ -757,8 +766,8 @@ FFmpeg is required by the Nuxeo DAM add-on. It is used to create the storyboard 
 
 *   Using Homebrew:
 
-    ```
-    brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype \
+    ```bash
+    $ brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype \
     --with-frei0r --with-libass --with-libbluray --with-libcaca \
     --with-libquvi --with-libvidstab --with-libvo-aacenc --with-libvorbis \
     --with-libvpx --with-opencore-amr --with-openjpeg --with-openssl \
@@ -778,8 +787,8 @@ UFRaw is used in association with ImageMagick and Ghostscript to generate RAW do
 
 *   Using Homebrew:
 
-    ```
-    brew install ufraw  
+    ```bash
+    $ brew install ufraw  
     ```
 
 ### libwpd
@@ -792,8 +801,8 @@ libwpd used to process WordPerfect documents.
 
 Using Homebrew:
 
-```
-brew install libwpd
+```bash
+$ brew install libwpd
 ```
 
 ### ExifTool
@@ -806,8 +815,8 @@ ExifTool is required by the Nuxeo Binary Metadata add-on. It is used to extract 
 
 *   Using Homebrew:
 
-    ```
-    brew install exiftool
+    ```bash
+    $ brew install exiftool
     ```
 
 ## Windows
@@ -831,9 +840,14 @@ If not already present on the system, you will have the option to automatically 
 2.  If you don't see ImageMagick in the result (it must be the first ot the list, or the only one), then you must add the path to ImageMagick to the `PATH` System variable.
 
 ### LibreOffice and pdftohtml
-{{{multiexcerpt 'libreoffice-5'}}}
 
 {{{multiexcerpt 'ooo-pdftohaml-intro' page='Installing and Setting up Related Software'}}}
+
+#### LibreOffice
+
+{{{multiexcerpt 'ooo-libreoffice-installation' page='Installing and Setting up Related Software'}}}
+
+{{{multiexcerpt 'ooo-libreoffice-configuration' page='Installing and Setting up Related Software'}}}
 
 #### pdftohtml
 
@@ -841,12 +855,6 @@ If not already present on the system, you will have the option to automatically 
 2.  Add to the `PATH` system variable the path to the bin folder inside Poppler's installation directory (e.g. `C:\Program Files (x86)\Poppler\bin`).
 
     {{#> callout type='info' }} Old pdftohtml binaries are available from [http://sourceforge.net/projects/pdftohtml/files/](http://sourceforge.net/projects/pdftohtml/files/%7Chttp://sourceforge.net/projects/pdftohtml/files/), but they are obsolete. It is recommended to use poppler. {{/callout}}
-
-#### LibreOffice
-
-{{{multiexcerpt 'ooo-libreoffice-installation' page='Installing and Setting up Related Software'}}}
-
-{{{multiexcerpt 'ooo-libreoffice-configuration' page='Installing and Setting up Related Software'}}}
 
 ### Ghostscript
 
