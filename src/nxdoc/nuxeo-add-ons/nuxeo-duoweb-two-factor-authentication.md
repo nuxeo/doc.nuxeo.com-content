@@ -79,7 +79,7 @@ The two factors authentication is executing the following steps:
 3.  Confirm identity authorization with your mobile phone.
     ![]({{file name='img2.png'}} ?w=400,border=true)
 
-## Login Plugin Configuration:
+## Login Plugin Configuration
 
 You must [subscribe](https://signup.duosecurity.com/) to DuoWeb services and follow [DuoWeb documentation](https://www.duosecurity.com/docs/duoweb) to create all DuoWeb Keys.
 
