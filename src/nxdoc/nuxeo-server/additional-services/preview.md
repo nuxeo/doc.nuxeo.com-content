@@ -129,20 +129,13 @@ You may want to check the following how-tos for customization:
 
 When previewing a document, the logic executed goes through several layers (from end result to the most core part):
 
-*   **Preview popup** in JSF UI and Web UI: Adds a Preview popup that displays the preview inside an iframe, querying the Restlet preview URL for the current document.
-*   **A preview Restlet**, that is in charge of handling caching logic when delivering the HTML preview for a given document. To achieve this we can user our
-
-REST API, using the blob and preview adapters as follows:
-
-
-    ```
-    http://{server}:{port}/nuxeo/site/api/v1/repo/{repo_id}/id/{document_id}/@blob/{previewfield}/@preview/{format}
-
-    ```
-
-    An example could be [`http://localhost:8080/nuxeo/site/api/v1/repo/default/id/23d871d2-052a-4f58-8f90-4b07c5a074ea/@blob/file:content/@preview/image`](http://localhost:8080/nuxeo/site/api/v1/repo/default/id/23d871d2-052a-4f58-8f90-4b07c5a074ea/@blob/file:content/@preview/image).
-
-    It gets the HTLM preview by getting the `HtmlPreviewAdapter` from the documentModel.
+- **Preview popup** in JSF UI and Web UI: Adds a Preview popup that displays the preview inside an iframe, querying the Restlet preview URL for the current document.
+- **A preview Restlet**, that is in charge of handling caching logic when delivering the HTML preview for a given document. To achieve this we can user our REST API, using the blob and preview adapters as follows:
+  ```
+  http://{server}:{port}/nuxeo/site/api/v1/repo/{repo_id}/id/{document_id}/@blob/{previewfield}/@preview/{format}
+  ```
+  An example could be `http://localhost:8080/nuxeo/site/api/v1/repo/default/id/23d871d2-052a-4f58-8f90-4b07c5a074ea/@blob/file:content/@preview/image`.
+  It gets the HTLM preview by getting the `HtmlPreviewAdapter` from the documentModel.
 
 - **The [HtmlPreviewAdapter](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.preview.adapters--adapters)** is a standard Nuxeo Platform adapter, that is fetched using `doc.getAdapter(HtmlPreviewAdapter.class)`. This adapter is a way to get access to the service below.
 
