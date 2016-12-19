@@ -78,3 +78,55 @@ The two factors authentication is executing the following steps:
     ![]({{file name='img.png'}} ?w=500)
 3.  Confirm identity authorization with your mobile phone.
     ![]({{file name='img2.png'}} ?w=400,border=true)
+
+## Login Plugin Configuration
+
+You must [subscribe](https://signup.duosecurity.com/) to DuoWeb services and follow [DuoWeb documentation](https://www.duosecurity.com/docs/duoweb) to create all DuoWeb Keys.
+
+After installing the plugin, make sure before starting to include your DuoWeb Keys (provided by DuoWeb) in the following configuration file `NUXEO_HOME/templates/duoweb-authentication/config/duo-authentication-config.xml`:
+
+```
+<component name="org.nuxeo.duo.factors.login.contrib">
+
+<require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
+
+<documentation>
+  This authentication plugin processes DuoWeb Two Factors Authentication
+</documentation>
+
+<extension
+        target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
+        point="authenticators">
+  <authenticationPlugin name="DUO_TWO_FACTORS_AUTH"
+                        enabled="true"
+                        class="org.nuxeo.duo.factors.DuoFactorsAuthenticator">
+    <loginModulePlugin>Trusting_LM</loginModulePlugin>
+    <parameters>
+      <parameter name="IKEY">YOUR_INTEGRATION_KEY</parameter>
+      <parameter name="SKEY">YOUR_SECRET_KEY</parameter>
+      <parameter name="AKEY">YOUR_APPLICATION_KEY</parameter>
+      <parameter name="HOST">YOUR_API_HOSTNAME</parameter>
+    </parameters>
+  </authenticationPlugin>
+</extension>
+
+<extension
+        target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
+        point="chain">
+  <authenticationChain>
+    <plugins>
+      <plugin>DUO_TWO_FACTORS_AUTH</plugin>
+    </plugins>
+  </authenticationChain>
+</extension>
+
+<extension point="openUrl" target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService">
+  <openUrl name="duoFactorsPattern">
+    <grantPattern>/nuxeo/duofactors.jsp</grantPattern>
+  </openUrl>
+</extension>
+
+</component>
+```
+
+The `YOUR_APPLICATION_KEY` can be generated as followed in [DuoWeb documentation](https://www.duosecurity.com/docs/duoweb#1.-generate-an-akey)
