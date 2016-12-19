@@ -240,8 +240,8 @@ To preview files in the formats AI, EPS, PSD and TIFF, the created document must
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
-*   [How to Customize the Info-View Pop-Up]({{page space='nxdoc' page='how-to-customize-the-info-view-pop-up'}})
-*   [Installing and Setting Up Related Software]({{page space='nxdoc' page='installing-and-setting-up-related-software'}})
+- [How to Customize the Info-View Pop-Up]({{page space='nxdoc' page='how-to-customize-the-info-view-pop-up'}})
+- [Installing and Setting Up Related Software]({{page space='nxdoc' page='installing-and-setting-up-related-software'}})
 
 {{/panel}}</div><div class="column medium-6">
 
