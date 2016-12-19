@@ -16,25 +16,122 @@ tree_item_index: 350
 
 ## What are nuxeo slots?
 
-Nuxeo slots are mechanisms to extend part of the nuxeo Web UI.
+Nuxeo slots are mechanisms to extend part of the nuxeo Web UI. A couple of `nuxeo-slots` are hardcoded in the web-ui source code in order to insert your own html elements and therefore extend the Web UI to meet your specific needs.
 
-TODO
+The concept is simple. Let's assume we introduced somewhere in the Web UI the following slot:
 
-## Web UI default slots
+```xml
+<nuxeo-slot slot="MY_SLOT_NAME" model="[[mySlotModel]]"></nuxeo-slot>
+```
+then you can easily define your own content with:
+
+```xml
+<nuxeo-slot-content name="defaultMY_SLOT_NAME" slot="MY_SLOT_NAME">
+  <template>
+      <my-element my-element-property=[[aPropertyFromTheSlotModel]]></my-element>
+  </template>
+</nuxeo-slot-content>
+```
+and this content will be inserted in the dom right before where the `nuxeo-slot` is located.
+
+Moreover, you can see that `my-element` has its `my-element-property` bound to `aPropertyFromTheSlotModel` which is made available by the `nuxeo-slot` model. Indeed, the `[[mySlotModel]]` is an object which has a `aPropertyFromTheSlotModel` property.
+
+For a better understanding, please refer to the [DOCUMENT_ACTIONS](#document_actions) and where we concretely detail how additional document actions are added by the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon.
+
+## Web UI slots
 
 Here are the `nuxeo-slots` available in the Nuxeo Web UI.
 
+### Document Browsing slots
+
+The following slots allows to extend available pages and actions when browsing a given document. They are located in [nuxeo-browser.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html).
+
+#### DOCUMENT_ACTIONS{{> anchor 'document_actions'}}
+
+This slot defines the available top right actions to be performed on the current document such as *Add to collection*, *Share*, *Export*, etc.
+
+![]({{file name='DOCUMENT_ACTIONS.png'}} ?w=400,border=true)
+
+A typical use case for extending the Web UI is you'd like to add new document actions. Let's have a look on how it is done by the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon which adds a new action to synchronize a document with local file system.
+
+First, the DOCUMENT_ACTIONS `nuxeo-slot` is defined in the [nuxeo-browser.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html#L181) element like this:
+```xml
+<div class="document-actions">
+  <nuxeo-slot slot="DOCUMENT_ACTIONS" model="[[actionContext]]"></nuxeo-slot>
+</div>
+```
+and the web UI defines the default slot content in [nuxeo-document-actions.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-document-actions/nuxeo-document-actions.html#L31)
+```xml
+<nuxeo-slot-content name="defaultDocumentActions" slot="DOCUMENT_ACTIONS">
+  <template>
+    <nuxeo-add-to-collection-button document="[[document]]"></nuxeo-add-to-collection-button>
+    <nuxeo-favorites-toggle-button document="[[document]]"></nuxeo-favorites-toggle-button>
+    <nuxeo-share-button document="[[document]]"></nuxeo-share-button>
+    <nuxeo-notifications-toggle-button document="[[document]]"></nuxeo-notifications-toggle-button>
+    <nuxeo-clipboard-toggle-button document="[[document]]" clipboard="[[clipboard]]"></nuxeo-clipboard-toggle-button>
+    <nuxeo-lock-toggle-button document="[[document]]"></nuxeo-lock-toggle-button>
+    <nuxeo-preview-button document="[[document]]"></nuxeo-preview-button>
+    <nuxeo-export-button document="[[document]]"></nuxeo-export-button>
+    <nuxeo-download-button document="[[document]]"></nuxeo-download-button>
+  </template>
+</nuxeo-slot-content>
+```
+Now, the Nuxeo Drive addon is able to add its own actions there too with [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html#L8):
+```xml
+<nuxeo-slot-content name="driveSyncToggleButton" slot="DOCUMENT_ACTIONS">
+  <template>
+    <nuxeo-drive-sync-toggle-button document="[[document]]"></nuxeo-drive-sync-toggle-button>
+  </template>
+</nuxeo-slot-content>
+```
+Next, in the above snippet, how the bound `document` property is resolved? The answer is found in [nuxeo-browser.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html#L129) which defines the model of the `DOCUMENT_ACTIONS` slot through the computed `actionContext` property defined [here](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html#L258):
+```xml
+_actionContext: function() {
+  return {document: this.document, clipboard: this.clipboard};
+},
+```
+
+#### DOCUMENT_VIEWS_ITEMS and DOCUMENT_VIEWS_PAGES
+
+The **DOCUMENT_VIEWS_ITEMS** slot allows to define the available items to navigate on current document views such as *View*, *Permissions* and *History*.
+
+![]({{file name='DOCUMENT_VIEWS_ITEMS.png'}} ?w=400,border=true)
+
+The **DOCUMENT_VIEWS_PAGES** slot must define the pages introduced by the **DOCUMENT_VIEWS_ITEMS** slot. Each new item of **DOCUMENT_VIEWS_ITEMS** slot triggers a navigation to a page defined in this slot.
+
+Example coming soon.
+
+#### BLOB_ACTIONS
+
+This slot is available on current document that has attached blobs. Default actions are *Preview*, *Delete* and *Open with Nuxeo Drive* (when the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon is installed).
+
+![]({{file name='BLOB_ACTIONS.png'}} ?w=400,border=true)
+
+#### BROWSE_ACTIONS{{> anchor 'browse_actions'}}
+
+This slot is displayed when selecting one ore more children documents of a Folderish current document. It provides bulked actions on the selection such as *Add to collection*, *Delete selected items*, etc.
+
+![]({{file name='BROWSE_ACTIONS.png'}} ?w=400,border=true)
+
 ### Main Application Menu slots
 
-The Web UI browsing is articulated around a left drawer menu allowing to navigate to documents, searches, application administration, etc. The following slots shows how to extend this menu.
-
-#### PAGES and DRAWER_PAGES
+The Web UI revolves around a left drawer menu allowing to navigate to documents, searches, application administration, etc. The following slots shows how to extend this menu.
 
 #### SEARCH_MENU_BUTTONS
 
 This slot allows to define additional searches accessible from the left menu.
 
 ![]({{file name='SEARCH_MENU_BUTTONS.png'}} ?w=400,border=true)
+
+The [Nuxeo DAM](https://github.com/nuxeo/nuxeo-dam/blob/8.10/nuxeo-dam-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-dam/nuxeo-dam.html) addon defines its own `Asset Search` with the following:
+```xml
+<nuxeo-slot-content name="damSearchMenuButtons" slot="SEARCH_MENU_BUTTONS">
+  <template>
+    <nuxeo-menu-icon id="assetsSearchButton" name="assetsSearch" route="search:assets" icon="icons:perm-media" label="dam.assets.heading">
+    </nuxeo-menu-icon>
+  </template>
+</nuxeo-slot-content>
+```
 
 #### ADMINISTRATION_MENU and ADMINISTRATION_PAGES
 
@@ -48,36 +145,27 @@ This USER_MENU slot allows to add additional User sub menus.
 
 ![]({{file name='USER_MENU.png'}} ?w=400,border=true)
 
-### Document Browsing slots
+#### PAGES and DRAWER_PAGES
 
-The following slots allows to extend available pages and actions when browsing a given document. They are located in [nuxeo-browser.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html).
+Documentation coming soon.
 
-#### DOCUMENT_VIEWS_ITEMS and DOCUMENT_VIEWS_PAGES
+### Document creation
 
-The **DOCUMENT_VIEWS_ITEMS** slot allows to define the available items to navigate on current document views such as *View*, *Permissions* and *History*.
+#### DOCUMENT_CREATE_ACTIONS
 
-![]({{file name='DOCUMENT_VIEWS_ITEMS.png'}} ?w=400,border=true)
+This slot provides actions displayed when hovering the bottom right Floating Action Button to create new documents. By default, it inserts [nuxeo-document-create-shortcuts.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-document-create-actions/nuxeo-document-create-shortcuts.html) which shows shortcuts to latest created document types wizard.
 
+![]({{file name='DOCUMENT_CREATE_ACTIONS.png'}} ?w=400,border=true)
 
-The **DOCUMENT_VIEWS_PAGES** slot must define the pages introduced by the **DOCUMENT_VIEWS_ITEMS** slot. Each new item of **DOCUMENT_VIEWS_ITEMS** slot triggers a navigation to a page defined in this slot.
+#### FILE_UPLOAD_ACTIONS
 
-TODO: give example
+This slot is for instance used the [Nuxeo Live Connect]({{page version='' space='nxdoc' page='nuxeo-liveconnect'}}) addon which inserts additional import wizard to upload Files to cloud services.
 
-#### DOCUMENT_ACTIONS
-
-This slot allows to define the available top right actions to be performed on the current document such as *Ass to collection*, *Share*, *Export*, etc.
-
-![]({{file name='DOCUMENT_ACTIONS.png'}} ?w=400,border=true)
-
-#### BROWSE_ACTIONS{{> anchor 'BROWSE_ACTIONS'}}
-
-This slot is displayed when selecting one ore more children documents of a Folderish current document. It provides bulked actions on the selection such as *Add to collection*, *Delete selected items*, etc.
-
-![]({{file name='BROWSE_ACTIONS.png'}} ?w=400,border=true)
+![]({{file name='FILE_UPLOAD_ACTIONS.png'}} ?w=400,border=true)
 
 ### Search and Collection browsing slots
 
-The screen displayed to browse Search result and Collection content are very similar. When selecting items in the search results or the collection content, some bulk actions are displayed in a top menu bar (like [BROWSE_ACTIONS](#browse_actions-anchor-browse_actions-)). These actions can be extended with the following slots.
+The screen displayed to browse Search result and Collection content are very similar. When selecting items in the search results or the collection content, some bulk actions are displayed in a top menu bar (like [BROWSE_ACTIONS](#browse_actions)). These actions can be extended with the following slots.
 
 #### SEARCH_ACTIONS
 
