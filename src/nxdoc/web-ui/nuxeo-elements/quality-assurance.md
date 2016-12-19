@@ -2,7 +2,7 @@
 title: Quality Assurance
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 toc: true
 labels:
@@ -79,21 +79,215 @@ You will have at last all the informations needed for your listing with a small 
 
 ## Test Strategies
 
-Web Component tests
-Polymer’s web-component-tester
-Used by Polymer’s dev team
-https://github.com/Polymer/web-component-tester
-For mock responses: http://sinonjs.org/
-Nuxeo code examples: https://github.com/nuxeo/nuxeo-ui-elements/tree/master/test
+Testing your custom elements is paramount if you want to have reliable and easy
+to maintain components. The Polymer team already provides the
+[Web Component Tester](https://github.com/Polymer/web-component-tester)
+(hereafter referred to as **WCT**), a handy library that allows you to **unit test**
+your elements. This is the library we use to individually test our custom components.
+However, testing how your custom elements work together and whether they actually
+play the role they are supposed to becomes crucial as your application grows. And
+that's what **functional and integration testing** are for! In the Web UI, we use
+[Cucumber](https://cucumber.io/) and [WebdriverIO](http://webdriver.io/) to do
+Behavior-Driven Testing (or **BDD** for short), and test the UI as whole. Alternative
+solutions, such as [NighwatchJS](http://nightwatchjs.org/), have proven to be
+valuable tools in testing applications that use web components, while following
+both **BDD** and more Test-driven approaches to development (**TDD**).
 
-Integration & BDD Tests
-Webdriver
-http://webdriver.io/
-Use Chimp.js https://chimp.readme.io/
+In what fallows we describe how the aforementioned tools can be used to develop
+unit and integration tests for your custom elements.
 
-Cucumber for BDD (behavior-driven development)
-https://cucumber.io/
-Still poor coverage due to UX evolution
+### Web Component Tester
+
+[WCT](https://github.com/Polymer/web-component-tester) is Polymer's
+approach to test custom elements. This library relies on several frameworks to
+provide a flexible test environment for your components, which include
+[Mocha](http://mochajs.org/) as the test framework, [Chai](http://chaijs.com/)
+to do the assertions, [Sinon](http://sinonjs.org/) to mock server responses, and
+[WD](http://admc.io/wd/) to provide an interface to communicate with the web
+browser. WCT is best used from the [Polymer CLI](https://www.polymer-project.org/1.0/docs/tools/polymer-cli).
+We recommend reading Polymer's Documentation on [WCT](https://www.polymer-project.org/1.0/docs/tools/tests)
+and watching Polycasts [#36](https://www.youtube.com/watch?v=YBNBr9ECXLo) and
+[#37](https://www.youtube.com/watch?v=_9qARcdCAn4) for a better understanding on
+how to setup and run your tests, and before proceeding into the next section.
+
+#### Quick Guide
+
+All the elements to be tested or to support testing directly should be declared as
+a `test-fixture`. Imagine we want to unit test the `nuxeo-collections` element.
+We must declare the test fixture as follows:
+
+```html
+<test-fixture id="collections">
+  <template>
+    <nuxeo-collections visible></nuxeo-collections>
+  </template>
+</test-fixture>
+```
+
+Most of our custom elements need to communicate with an instance of Nuxeo server,
+and that is true for `nuxeo-collections` as well. We must then declare a `nuxeo-connection`
+as a test-fixture beforehand, so that the Nuxeo JavaScript Client is properly
+initialized and `nuxeo-collections` can issue requests to the server:
+
+```html
+<test-fixture id="nx">
+  <template>
+    <nuxeo-connection url="/dummy"></nuxeo-connection>
+  </template>
+</test-fixture>
+```
+
+When defining your main test suite, you must setup a fake server using `sinon`, which
+will provide fake responses to your element's requests, and also initialize the
+`nuxeo-connection` element by logging in:
+
+```JavaScript
+setup(function() {
+  server = sinon.fakeServer.create();
+  server.autoRespond = true;
+  // login
+  var nx = fixture('nx');
+  return login(server, nx);
+});
+```
+
+{{#> callout type='tip' heading='Test Helpers'}}
+Here, the `login` method is part of our [test helpers](https://github.com/nuxeo/nuxeo-elements/blob/master/test/test-helpers.js),
+which also includes several other support methods. Feel free to import them on
+your own test suites.
+{{/callout}}
+
+Oftentimes you'll want to perform more than one bundle of tests inside the same
+test file. In this case you can define *inner* test suites, i.e., test suites
+inside you're main test suite. Inside these you should setup the responses that the
+fake server should issue to your custom elements.
+
+So, imagine we want to test how our collections element behaves when there are
+collections to display. We can create a dedicated suite and setup a fake response
+with only a single entry:
+
+```JavaScript
+setup(function() {
+  server.respondWith(
+    'GET',
+    '/dummy/api/v1/query/user_collections?currentPageIndex=0&pageSize=40&sortBy=dc%3Amodified&sortOrder=desc&searchTerm=%25&user=%24currentUser',
+    [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify(
+        {
+          "entity-type": "documents",
+          "entries": [{
+            "entity-type":"document",
+             "uid":"1",
+             "type":"Collection",
+             "title":"My Collection"
+           }]
+        }
+      )
+    ]
+  );
+});
+```
+
+{{#> callout type='note' heading='Sinon Documentation'}}
+For more information about how to setup fake responses, please check the official
+[Sinon Documentation](http://sinonjs.org/docs/)
+{{/callout}}
+
+We now want to create a test case that verifies that our element actually displays
+the collection and that its DOM reflects this. We can do it by adding a test inside
+our test suite:
+
+```JavaScript
+test('it should display collections', function() {
+    var element = fixture('collections'), collections;
+    var table = Polymer.dom(element.root).querySelector('nuxeo-data-list');
+    // let's wait for the nuxeo-page-loaded event to be fired once before testing
+    // only then will we have the data from the server
+    return waitForEvent(table, 'nuxeo-page-loaded', 1).then(function() {
+      collections = Polymer.dom(table.root).querySelectorAll('.collection-box');
+      expect(collections.length).to.be.equal(1); // there should be only one item
+      expect(collections[0].querySelector('.collection-name').textContent).to.be.equal('My Collection'); // and its collection name should be "My Collection"
+    });
+  });
+});
+```
+
+{{#> callout type='tip' heading='Test Helpers'}}
+Again, the `waitForEvent` method is part of our [test helpers](https://github.com/nuxeo/nuxeo-elements/blob/master/test/test-helpers.js).
+This method waits for an event to be fired an specific amount of times before
+returning a promise. Similarly, you can use `waitChanged` to wait for a particular
+property to change on an element, provided that it's set to `notify: true`. Please,
+check the Polymer documentation on [data-binding](https://www.polymer-project.org/1.0/docs/devguide/data-binding)
+for more information on this subject.
+{{/callout}}
+
+{{#> callout type='note' heading='Chai API'}}
+For more information about how perform test asserts, please check the official
+[Chai documentation](http://chaijs.com/api/), which provides both BDD and TDD
+oriented APIs.
+{{/callout}}
+
+You can then run your tests using `polymer test` or run them interactively via
+`polymer serve`. Check the Polymer documentation on
+[WCT](https://www.polymer-project.org/1.0/docs/tools/tests) for more on this subject.
+
+For more examples on testing custom elements, please check our repositories:
+- [nuxeo-elements](https://github.com/nuxeo/nuxeo-elements/tree/master/test)
+- [nuxeo-dataviz-elements](https://github.com/nuxeo/nuxeo-dataviz-elements/tree/master/test)
+- [nuxeo-ui-elements](https://github.com/nuxeo/nuxeo-ui-elements/tree/master/test)
+- [nuxeo-web-ui](https://github.com/nuxeo/nuxeo-web-ui/tree/master/test)
+
+### Cucumber
+
+Our integration testing is done using [Cucumber.js](https://github.com/cucumber/cucumber-js)
+and [WebdriverIO](http://webdriver.io/). While the latter servers the purpose of
+providing a means to interact with the browser and run tests on it, similar to
+what is done in WCT, the former provides a way to run automated tests written in
+plain language. There are two key concepts of Cucumber tests: **features** and **step
+definitions**.
+
+Features are implementation-independent, defined in *.feature* files,
+and they contain executable specifications written in a language called *Gherkin*.
+They specify scenarios where each line represents an **step** written in natural
+language, usually starting with **Given**, **When** and **Then**.
+
+```
+Background:
+    Given I login as "Administrator"
+
+Scenario: Admin center
+    When I click the "administration" button
+    Then I can see the administration menu
+```
+
+Step definitions bridge the gap between features and the system being tested. They
+translate plain text into interactions with the system. Step definitions are
+platform-dependent, and they use a regular expression the match the steps defined
+in the feature files, and implement the code required to execute the step.
+
+```JavaScript
+this.Given('I am "$username"', (username) => this.username = username);
+
+this.When('I click the "$button" button', (button) => this.ui.drawer.open(button));
+
+this.Then('I can see the administration menu', () => this.ui.drawer.administration.isVisible().should.be.true);
+```
+
+Cucumber allows for BDD using human-readable specifications. The advantages are
+twofold: first, it allows specifications to be implemented by developers, but written
+in natural language by someone else, such as QA or business analyst; second, it makes
+error identification simpler for developers and non-developers alike, by showing
+clearly in plain language what steps failed. Please
+check [Cucumber](https://cucumber.io/docs/reference) and
+[Cucumber.js](https://github.com/cucumber/cucumber-js) documentation for more details.
+
+If you're looking for examples of Cucumber tests, check our [Web UI's plugin repository](https://github.com/nuxeo/plugin-nuxeo-web-ui/tree/master/nuxeo-web-ui-ftest/webdriver/test).
+These rely on [Chimp.js](http://chimp.readme.io), a test automation framework that
+brings together Cucumber.js, WebdriverIO and Chai. See
+[Chimp's documentation page](https://chimp.readme.io/docs/tutorial) and
+[this tutorial](https://chimp.readme.io/docs/tutorial) for more details.
 
 ### NighwatchJS
 
