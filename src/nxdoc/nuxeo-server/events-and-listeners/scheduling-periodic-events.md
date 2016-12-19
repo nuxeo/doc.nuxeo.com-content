@@ -2,10 +2,10 @@
 title: Scheduling Periodic Events
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - cron
     - event
     - scheduler
@@ -120,25 +120,19 @@ The [Scheduler Service](http://explorer.nuxeo.org/nuxeo/site/distribution/curren
 
 ## Scheduler Contribution
 
-To schedule an event, you contribute a `<schedule>` to the `schedule` extension point of the&nbsp;`org.nuxeo.ecm.core.scheduler.SchedulerService` component.
-
-{{#> callout type='note' heading='Component name'}}
-
-Before Nuxeo 5.6, the component name was `org.nuxeo.ecm.platform.scheduler.core.service.SchedulerRegistryService`.
-
-{{/callout}}
+To schedule an event, you contribute a `<schedule>` to the [schedule](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.scheduler.SchedulerService--schedule) extension point of the [SchedulerService](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.core.scheduler.SchedulerService) component.
 
 A schedule is defined by:
 
-*   **id**: an identifier,
-*   **username**: the user under which the event should be executed,
-*   **event**: the identifier of the event to execute,
-*   **eventCategory**: the event category to use,
+*   **id**: an identifier.
+*   **username**: the user under which the event should be executed.
+*   **event**: the identifier of the event to execute.
+*   **eventCategory**: the event category to use.
 *   **cronExpression**: an expression to specify the schedule.
 
 The **id** is used for informational purposes and programmatic unregistration.
 
-If the **username** is missing, the event is executed as a system user, otherwise as that user. No password is needed: the login is done internally and does not need password.
+If the **username** is missing, the event is executed as a system user, otherwise as that user. No password is needed: the login is done internally.
 
 The **event** specifies the event to execute. See [the section about Events and Listeners]({{page page='events-and-listeners'}}) for more.
 
@@ -154,7 +148,6 @@ Here is an example contribution:
   <extension target="org.nuxeo.ecm.core.scheduler.SchedulerService"
       point="schedule">
     <schedule id="monthly_stuff">
-      <username>Administrator</username>
       <eventId>doStuff</eventId>
       <eventCategory>default</eventCategory>
       <!-- Every first of the month at 3am -->
@@ -167,67 +160,34 @@ Here is an example contribution:
 
 ## Cron Expression
 
-A Scheduler cron expression is similar to a [Unix cron expression](http://en.wikipedia.org/wiki/Cron), except that it has an additional _seconds_ field that isn't needed in Unix which doesn't need this kind of precision.
+A Scheduler cron expression is similar to a [Unix cron expression](http://en.wikipedia.org/wiki/Cron), except that it has an additional _seconds_ field (that isn't needed in Unix which doesn't need this kind of precision).
 
 The expression is a sequence of 6 or 7 fields. Each field can hold a number or a wildcard, or in complex cases a sequence of numbers or an additional increment specification. The fields and their allowed values are:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-
-seconds
-
-</th><th colspan="1">
-
-minutes
-
-</th><th colspan="1">
-
-hours
-
-</th><th colspan="1">
-
-day of month
-
-</th><th colspan="1">
-
-month
-
-</th><th colspan="1">
-
-day of week
-
-</th><th colspan="1">
-
-year
-
-</th></tr><tr><td colspan="1">
-
-0-59
-
-</td><td colspan="1">
-
-0-59
-
-</td><td colspan="1">
-
-0-23
-
-</td><td colspan="1">
-
-1-31
-
-</td><td colspan="1">
-
-1-12
-
-</td><td colspan="1">
-
-1-7 or SUN-SAT
-
-</td><td colspan="1">
-
-optional
-
-</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">seconds</th>
+<th colspan="1">minutes</th>
+<th colspan="1">hours</th>
+<th colspan="1">day of month</th>
+<th colspan="1">month</th>
+<th colspan="1">day of week</th>
+<th colspan="1">year</th>
+</tr>
+<tr>
+<td colspan="1">0-59</td>
+<td colspan="1">0-59</td>
+<td colspan="1">0-23</td>
+<td colspan="1">1-31</td>
+<td colspan="1">1-12</td>
+<td colspan="1">1-7 or SUN-SAT</td>
+<td colspan="1">optional</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 A star (`*`) can be used to mean "all values". A question mark (`?`) can be used to mean "no specific value" and is allowed for one (but not both) of the **day of month** and **day of week** fields.
 
@@ -239,7 +199,7 @@ Several values can be specified by separating them with commas, for instance `0,
 
 Repetitions can be specified using a slash followed by an increment, for instance `0/15` means start at 0 and repeat every 15\. This example means the same as the one above.
 
-There's actually more but rarely used functionality; the Scheduler's full cron expression syntax is described in detail in the [Quartz CronExpression Javadoc](http://www.quartz-scheduler.org/api/1.8.5/org/quartz/CronExpression.html) and in [the CronTrigger Tutorial](http://www.quartz-scheduler.org/documentation/quartz-1.x/tutorials/crontrigger).
+There's actually more but rarely used functionality; the Scheduler's full cron expression syntax is described in detail in the [Quartz CronExpression Javadoc](http://www.quartz-scheduler.org/api/2.2.1/org/quartz/CronExpression.html) and in [the CronTrigger Tutorial](http://www.quartz-scheduler.org/documentation/quartz-2.x/tutorials/crontrigger.html).
 
 ### Cron Expression Examples
 
@@ -278,12 +238,8 @@ At 3:15a, every 5 days every month, starting on the first day of the month:
 
 ```
 
-&nbsp;
-
 ## Automation
 
-When using Scheduler to trigger [Automation Chains]({{page space='nxdoc58' page='content-automation'}}) through [Event Listener]({{page page='events-and-listeners'}}) and [Event Handler]({{page space='studio' page='event-handlers'}}), the Core Session cannot be retrieved and cannot be set within the Operation Context&nbsp;_(Core Session is not found)_.
+When using the Scheduler Service to trigger [Automation Chains]({{page page='content-automation-concepts'}}) through [Event Listener]({{page page='events-and-listeners'}}) and [Event Handler]({{page space='studio' page='event-handlers'}}), the Core Session cannot be retrieved and cannot be set within the Operation Context _(Core Session is not found)_.
 
-If the need is to execute operations needing an operation context session, the first operation of the chain should be [LoginAs Operation](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Auth.LoginAs):
-
-It will create a new authenticated session and set the Automation context session accordingly.
+If the need is to execute operations needing an operation context session, the first operation of the chain should be [LoginAs Operation](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Auth.LoginAs). It will create a new authenticated session and set the Automation context session accordingly.

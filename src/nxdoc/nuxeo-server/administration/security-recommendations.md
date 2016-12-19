@@ -2,11 +2,11 @@
 title: Security Recommendations
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 toc: true
 labels:
-    - content-review-lts2016
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration

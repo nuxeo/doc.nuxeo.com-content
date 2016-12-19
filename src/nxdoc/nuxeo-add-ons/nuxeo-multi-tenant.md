@@ -49,18 +49,12 @@ history:
 
 The Nuxeo Multi-tenant package requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin Center]({{page page='installing-a-new-package-on-your-instance'}}).
 
-After you installed it, a tab **Tenant isolation** is available in the Admin Center.
-
-![]({{file name='multi-tenant-admin-center-tab.png'}} ?w=650,h=225,border=true)
-
-&nbsp;
+After you installed it, a tab **Tenant isolation** is available in the Admin Center where you can enable or disable the tenant isolation.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 *   [Nuxeo Multi-tenant user documentation]({{page space='userdoc' page='nuxeo-multi-tenant'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

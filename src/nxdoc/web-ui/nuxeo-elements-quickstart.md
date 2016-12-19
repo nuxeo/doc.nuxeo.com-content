@@ -207,7 +207,7 @@ Let's build a very simple application showcasing usage of the `nuxeo-connection`
 
     **Note:&nbsp;**the README.md includes detailed information about the generated application so it's a good starting point to understand its structure.
 
-    ![]({{file name='image2016-9-15 11:9:56.png'}} ?w=600,border=true)
+    ![]({{file name='image2016-9-15 11-9-56.png'}} ?w=600,border=true)
 
     The produced application includes some sample elements and showcases Google's Material Design through the use of Paper Elements.
 

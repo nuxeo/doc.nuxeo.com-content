@@ -2,9 +2,10 @@
 title: Preview
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-12'
     status: ok
 labels:
+    - lts2016-ok
     - preview
     - multiexcerpt
 confluence:
@@ -235,19 +236,13 @@ To preview files in the formats AI, EPS, PSD and TIFF, the created document must
 
 {{/callout}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">File format</th><th colspan="1">Preview supported</th></tr><tr><td colspan="1">.ai</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.doc</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.docx</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.eps</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.html</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.jpg</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.odp</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.ods</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.odt</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.pdf</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.png</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.ppt</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.pptx</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.psd</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.tiff</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.xls</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.xlsx</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.xml</td><td colspan="1">Yes</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
-*   [How to Customize the Info-View Pop-Up]({{page space='nxdoc' page='how-to-customize-the-info-view-pop-up'}})
-*   [Installing and Setting Up Related Software]({{page space='nxdoc' page='installing-and-setting-up-related-software'}})
+- [How to Customize the Info-View Pop-Up]({{page space='nxdoc' page='how-to-customize-the-info-view-pop-up'}})
+- [Installing and Setting Up Related Software]({{page space='nxdoc' page='installing-and-setting-up-related-software'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-&nbsp;
 
 </div></div>

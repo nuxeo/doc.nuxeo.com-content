@@ -302,7 +302,7 @@ history:
 ---
 {{#> callout type='info' }}
 
-This page gives all the information necessary for implementing an operation and is a must read for getting a good comprehension of the framework. You should also have a look at [some of our tutorials]({{page page='getting-started-with-nuxeo-ide'}}) that show how to use [Nuxeo IDE]({{page space='idedoc' page='index'}}) to create new operations easily and quickly, using the provided wizard.
+This page gives all the information necessary for implementing an operation and is a must read for getting a good comprehension of the framework. You should also have a look at [some of our tutorials]({{page page='getting-started-with-nuxeo-generator'}}) that show how to use the Nuxeo Generator to create new operations easily and quickly, using the provided wizard.
 
 You can also use the Codenvy factory that we have setup and that offers you [a ready-to-build sample operation](https://codenvy.com/f?id=0djlg2kc332ipv5u), with its unitary test. Just click on **Project** > **Build & Publish** so as to get a JAR of your operation. You can deploy your first operation "SampleOperation" into Nuxeo server in Codenvy by clicking on the green arrow on panel left top.
 

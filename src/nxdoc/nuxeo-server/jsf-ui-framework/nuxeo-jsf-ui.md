@@ -187,6 +187,14 @@ history:
 The Nuxeo Platform provides a web framework to build business applications for thin clients. This framework is based on the standard JEE view technology: Java Server Faces (JSF).
 
 {{! /excerpt}}
+## Requirements 
+
+JSF UI is supported on the following browsers:
+- Chrome - latest version
+- Firefox - latest version
+- Edge - latest version
+- Internet Explorer 11
+- Safari 9+
 
 ## Nuxeo JSF Technical Stack
 

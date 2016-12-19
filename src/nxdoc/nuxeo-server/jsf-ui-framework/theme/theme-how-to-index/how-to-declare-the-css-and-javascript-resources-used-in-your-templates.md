@@ -2,7 +2,7 @@
 title: How to Declare the CSS and JavaScript Resources Used in Your Templates
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 details:
     howto:
@@ -13,14 +13,13 @@ details:
         tool: Code editor
         topics: Theme
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - css
     - javascript
     - template
     - howto
     - theme
     - link-update
-    - last-review-20150805
     - themes-component
     - excerpt
 confluence:

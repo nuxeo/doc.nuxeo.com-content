@@ -2,10 +2,10 @@
 title: Nuxeo 3D
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - 3d
     - threed
 toc: true
@@ -105,11 +105,29 @@ The Nuxeo 3D addon of the Nuxeo Platform provides support for 3D file types.
 
 {{{multiexcerpt 'mp-installation-easy' page='Generic Multi-Excerpts'}}}
 
-However some features depend on external software for conversion, such as Docker. See the page&nbsp;[Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}}).
+However this addon depends on external software - Docker - for conversion and rendering. See the page&nbsp;[Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}}).
+
+### Docker usage
+
+Nuxeo 3D addon requires Docker to perform content conversion and rendering.
+Using Docker makes the installation process simpler, freeing from installing and configuring specific versions of several third party software.
+It relies on two Docker images that are available on [Nuxeo's Docker Hub account](https://hub.docker.com/u/nuxeo/):
+
+* [Blender image](https://hub.docker.com/r/nuxeo/blender/) - This image installs the correct version of Blender with the needed plug-ins on it.
+[Blender](https://www.blender.org/) is a free and open source 3D content suite. In this addon, it is used to convert several 3D formats to a Collada - has a intermediate format - to be later processed.
+It is also used to render canonical views that can be defined. These renderings are generated with [Cycles Render Engine](https://www.blender.org/manual/render/cycles/). It allows for a ray-tracing rendering which produces high quality results. In order to convert Blender materials to Cycles materials, a plug-in is activated and setup.
+3D content support is, therefore, limited to Blender support which is best-in-class on open source landscape.
+
+* [Collada2glTF](https://hub.docker.com/r/nuxeo/collada2gltf/) - This image installs v1.0-draft2 of [Collada2glTF](https://github.com/KhronosGroup/COLLADA2GLTF/wiki).
+Collada2glTF is the official converter from Collada format to glTF - transmission format - developed by the Khronos Group to allow a broad adoption of glTF 3D format.
+It converts from the intermediate format to the final transmission format made available with level of detail on the content's view.
+
+To install Docker, please refer to [Get Docker](https://www.docker.com/products/overview) on Docker's official site.
+To check if Docker is properly installed, run `docker -v` anywhere on the command line console. As result, Docker version and build information should be shown.
 
 After the Nuxeo 3D addon is&nbsp;installed, the new 3D document type is available.
 
-![]({{file name='Screen Shot 2016-10-07 at 16.17.44.png'}} ?w=600)
+![]({{file name='available-doc-types.png'}} ?w=600)
 
 The supported 3D file formats are:
 
@@ -132,13 +150,13 @@ Attachments work as 3D format assets like textures. A standalone ZIP file with t
 
 Replacing the main file or the attachments of a 3D document also triggers the processing routine, so that the render views and transmission formats can be updated.
 
-![]({{file name='full.png'}} ?w=600,h=516,border=true)
+![]({{file name='full.png'}} ?w=600,border=true)
 
 #### 3D Preview
 
 The 3D preview allows a complete visualization of the 3D document in real-time through a WebGL rendering. The available manipulation controls include rotating, panning and zooming on the 3D model.
 
-![]({{file name='preview.png'}} ?w=600,h=443,border=true)
+![]({{file name='preview.png'}} ?w=600,border=true)
 
 #### Render Views
 

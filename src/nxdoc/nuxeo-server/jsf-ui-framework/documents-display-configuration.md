@@ -2,10 +2,10 @@
 title: Documents Display Configuration
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - layout
     - content-view
     - web-ui-component
@@ -87,15 +87,13 @@ The views on documents, the forms to create or edit them, how lists of documents
 
 {{! /excerpt}}
 
-&nbsp;
-
 ## UI Document Types
 
-After the structural document type, a UI registration for our document type must be done for the type to be visible in the Nuxeo DM interface (or in other applications based on Nuxeo Platform). This is done through a contribution to the&nbsp;**types**&nbsp;extension point of the&nbsp;[`org.nuxeo.ecm.platform.types.TypeService`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.core.schema.TypeService)&nbsp;component (which is a different component than for the structural types, despite also ending in&nbsp;`TypeService`).
+After the structural document type, a UI registration for our document type must be done for the type to be visible in the Nuxeo DM interface (or in other applications based on Nuxeo Platform). This is done through a contribution to the **types** extension point of the [`org.nuxeo.ecm.platform.types.TypeService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.schema.TypeService) component (which is a different component than for the structural types, despite also ending in `TypeService`).
 
-For example, in&nbsp;`OSGI-INF/ui-types-contrib.xml`&nbsp;we will define:
+For example, in `OSGI-INF/ui-types-contrib.xml` we will define:
 
-```
+```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.project.sample.ecm.types">
   <extension target="org.nuxeo.ecm.platform.types.TypeService" point="types">
@@ -113,7 +111,7 @@ For example, in&nbsp;`OSGI-INF/ui-types-contrib.xml`&nbsp;we will define:
 
 ```
 
-The extension must be added to&nbsp;`META-INF/MANIFEST.MF`&nbsp;so that it will be taken into account by the deployment mechanism:
+The extension must be added to `META-INF/MANIFEST.MF` so that it will be taken into account by the deployment mechanism:
 
 ```
 Nuxeo-Component: OSGI-INF/types-contrib.xml,
@@ -125,7 +123,7 @@ The type element will contain all the information for this type, described below
 
 ### General Information
 
-The&nbsp;**label**,&nbsp;**description**,&nbsp;**icon**,&nbsp;**bigIcon**&nbsp;and&nbsp;**category**&nbsp;are used by the user interface, for instance in the creation page when a list of possible types is displayed.
+The **label**, **description**, **icon**, **bigIcon** and **category** are used by the user interface, for instance in the creation page when a list of possible types is displayed.
 
 *   **label**: a short name for the type.
 *   **description**: a longer description of the type.
@@ -143,7 +141,7 @@ Other categories can freely be defined.
 
 Example:
 
-```
+```xml
 <type id="Sample">
   <label>Sample document</label>
   <description>Sample document to do such and such</description>
@@ -157,7 +155,7 @@ Example:
 
 ### Facelet Views
 
-The&nbsp;**default-view**&nbsp;tag specifies the name of the facelet to use to display this document. This corresponds to a file that lives in the webapp, by default&nbsp;`view_documents.xhtml`&nbsp;which is a standard view defined in the base Nuxeo Platform bundle. This standard view takes care of displaying available tabs and the document body according to the currently selected type.
+The **default-view** tag specifies the name of the facelet to use to display this document. This corresponds to a file that lives in the webapp, by default `view_documents.xhtml` which is a standard view defined in the base Nuxeo Platform bundle. This standard view takes care of displaying available tabs and the document body according to the currently selected type.
 
 {{#> callout type='note' }}
 
@@ -165,13 +163,13 @@ Changing it is not advised unless extremely nonstandard rendering is needed.
 
 {{/callout}}
 
-The&nbsp;**create-view**&nbsp;and&nbsp;**edit-view**&nbsp;tags can point to a specific creation or edit facelets.
+The **create-view** and **edit-view** tags can point to a specific creation or edit facelets.
 
 Proper defaults are used when these are not specified, so no need to add them to your type.
 
 Example:
 
-```
+```xml
 <type id="Sample">
   ...
   <default-view>view_documents</default-view>
@@ -188,20 +186,20 @@ A layout is a series of widgets, which makes the association between the field o
 
 #### Layouts Configuration
 
-The&nbsp;**layouts**&nbsp;section (with a final&nbsp;**s**) defines the layouts for the document type for a given mode.
+The **layouts** section (with a final **s**) defines the layouts for the document type for a given mode.
 
 Defaults mode are:
 
-*   **create**&nbsp;for creation,
-*   **edit**&nbsp;for edition,
-*   **view**&nbsp;for view,
-*   **any**&nbsp;for layouts that will be merged in all the other modes.
+*   **create** for creation,
+*   **edit** for edition,
+*   **view** for view,
+*   **any** for layouts that will be merged in all the other modes.
 
-The&nbsp;**layout**&nbsp;names refer to layouts defined on another extension point. Please see the&nbsp;[layouts section]({{page page='layouts-and-widgets-forms-listings-grids'}})&nbsp;for more information.
+The **layout** names refer to layouts defined on another extension point. Please see the [layouts section]({{page page='layouts-and-widgets-forms-listings-grids'}}) for more information.
 
 Example:
 
-```
+```xml
 <type id="Sample">
   ...
   <layouts mode="any">
@@ -215,16 +213,16 @@ Example:
 
 ### Containment Rules
 
-The&nbsp;**subtypes**&nbsp;section defines a list of&nbsp;**type**&nbsp;elements for the document types that can be created as children objects of other document types. When defining a type, you can specify:
+The **subtypes** section defines a list of **type** elements for the document types that can be created as children objects of other document types. When defining a type, you can specify:
 
 *   what child document types can be create in it,
 *   in what parent document types it can be created.
 
 This can also be defined for a pre-existing type, to add new allowed subtypes. Please make sure you require the components defining the pre-existing type to ensure a good merge of contributions.
 
-For example, we can specify that the Sample type can be created in a Folder and a Workspace. Note that we define two new&nbsp;`<type>`&nbsp;sections here, we don't add this information in the&nbsp;`<type id="Sample">`&nbsp;section.
+For example, we can specify that the Sample type can be created in a Folder and a Workspace. Note that we define two new `<type>` sections here, we don't add this information in the `<type id="Sample">` section.
 
-```
+```xml
 <type id="Folder">
   <subtypes>
     <type>Sample</type>
@@ -238,13 +236,13 @@ For example, we can specify that the Sample type can be created in a Folder and 
 
 ```
 
-It is also possible to define that some types will not be allowed as children in some cases (creation, copy/paste). To do that, a&nbsp;**hidden**&nbsp;attribute for the&nbsp;**type**&nbsp;element can be used.
+It is also possible to define that some types will not be allowed as children in some cases (creation, copy/paste). To do that, a **hidden** attribute for the **type** element can be used.
 
 The hidden cases are stored in a list, so if a check is needed for a hidden case, then the hidden cases list ought to be verified to check it contains that particular case.
 
 Example:
 
-```
+```xml
 <type id="Workspace">
   <subtypes>
     <type>Workspace</type>
@@ -258,9 +256,9 @@ Example:
 
 ### Summary
 
-The final&nbsp;`OSGI-INF/ui-types-contrib.xml`&nbsp;looks like:
+The final `OSGI-INF/ui-types-contrib.xml` looks like:
 
-```
+```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.project.sample.ecm.types">
 

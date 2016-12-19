@@ -2,7 +2,7 @@
 title: Digital Asset Management with the Nuxeo Platform
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
     - multiexcerpt
@@ -87,6 +87,7 @@ When you import a&nbsp;document having the `Picture` facet on your platform, add
 *   Thumbnail: the picture is converted to JPG and resized to 100px height or width.
 *   Small: the picture is converted to JPG and resized to&nbsp;280 px&nbsp;height or width.&nbsp;
 *   Medium: the picture is converted to JPG and resized to 550 px height or width.
+*   FullHD: the picture is converted to JPG and resized to 1920 px height or width.
 *   OriginalJpeg: the picture is converted to JPG but the original size is kept. This export is done even if the original picture was a JPG file.
 
 {{#> callout type='tip' }}
@@ -172,6 +173,7 @@ When you import a document having the Picture facet on your platform, additional
 * Thumbnail: the picture is converted to JPG and resized to 100px height or width.
 * Small: the picture is converted to JPG and resized to 280 px height or width.
 * Medium: the picture is converted to JPG and resized to 550 px height or width.
+* FullHD: the picture is converted to JPG and resized to 1920 px height or width.
 * OriginalJpeg: the picture is converted to JPG but the original size is kept. This export is done even if the original picture was a JPG file.
 {{#> callout type='tip' }}
 The original and medium pictures can be the same size when you download them if the original is smaller or equal to medium size.

@@ -2,10 +2,10 @@
 title: How to Manually Initialize or Deploy a Nuxeo Drive Instance
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - nuxeo-drive
     - nuxeo-drive-component
     - multiexcerpt
@@ -253,9 +253,9 @@ To set up the MSI variables:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about Nuxeo Drive'}}
 
-*   [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}})
-*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
-*   [Nuxeo Drive user documentation]({{page space='userdoc' page='nuxeo-drive'}})
+- [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}})
+- [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+- [Nuxeo Drive user documentation]({{page space='userdoc' page='nuxeo-drive'}})
 
 {{/panel}}</div><div class="column medium-6">
 

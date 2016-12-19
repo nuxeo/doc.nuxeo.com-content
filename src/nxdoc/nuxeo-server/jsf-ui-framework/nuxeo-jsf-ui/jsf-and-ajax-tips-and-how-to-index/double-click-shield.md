@@ -137,7 +137,7 @@ Through a custom JSF Form Renderer, we add the dedicated CSS style class&nbsp; `
 
 You can see the shield in action when a "Request in progress" message is displayed at the top right corner of the window:
 
-![]({{file name='Screenshot from 2013-10-31 15:21:18.png'}} ?w=650,border=true)
+![]({{file name='Screenshot from 2013-10-31 15-21-18.png'}} ?w=650,border=true)
 
 ## Limitations
 

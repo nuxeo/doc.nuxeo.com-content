@@ -2,10 +2,10 @@
 title: Nuxeo Platform User Registration
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - user-registration
     - user-registration-component
 toc: true
@@ -175,7 +175,7 @@ To invite a user:
 
 **Invitation form details**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Email</td><td colspan="1">The email address to which the invitation will be sent.</td></tr><tr><td colspan="1">User name</td><td colspan="1">The username the invited user will use to log in.</td></tr><tr><td colspan="1">First name</td><td colspan="1">The invited user's first name.</td></tr><tr><td colspan="1">Last name</td><td colspan="1">The invited user's last name.</td></tr><tr><td colspan="1">Permission</td><td colspan="1">The access right you want to give the invited user on the space.</td></tr><tr><td colspan="1">Comment</td><td colspan="1">A comment for the invited user to explain why he's invited, for instance. This comment will be in the invitation email.</td></tr><tr><td colspan="1">Send me a copy</td><td colspan="1">Your email address will be in the Cc recipients of the invitation email.</td></tr></tbody></table></div>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Email</td><td colspan="1">The email address to which the invitation will be sent.</td></tr><tr><td colspan="1">User name</td><td colspan="1">The username the invited user will use to log in.</td></tr><tr><td colspan="1">First name</td><td colspan="1">The invited user's first name.</td></tr><tr><td colspan="1">Last name</td><td colspan="1">The invited user's last name.</td></tr><tr><td colspan="1">Permission</td><td colspan="1">The access right you want to give the invited user on the space.</td></tr><tr><td colspan="1">Time Frame</td><td colspan="1">Period during which the access right given to the user will be valid.</td></tr><tr><td colspan="1">Groups</td><td colspan="1">The group(s) in which the user will be a member.</td></tr><tr><td colspan="1">Comment</td><td colspan="1">A comment for the invited user to explain why he's invited, for instance. This comment will be in the invitation email.</td></tr><tr><td colspan="1">Send me a copy</td><td colspan="1">Your email address will be in the Cc recipients of the invitation email.</td></tr></tbody></table></div>
 
 #### Inviting Several Users
 
@@ -201,9 +201,9 @@ When users invite external people to access the Platform, a new user account is 
 Invitations can have different statuses:
 
 *   Created: A local manager invited a user; administrator now have to approve or reject the invitation and the required user account creation.
-*   Accepted: An administrator has approved the invitation; the needed user account is created and an invitation email is sent to the user.
+*   Approved: An administrator has approved the invitation; the needed user account is created and an invitation email is sent to the user.
 *   Rejected: An administrator has refused the invitation and the creation of the required new user account.
-*   Validated: The invited user has confirmed he received the invitation by clicking on the validation link in the invitation email.
+*   Accepted: The invited user has confirmed he received the invitation by clicking on the validation link in the invitation email.
 
 #### Accepting an Invitation
 
@@ -217,9 +217,9 @@ To accept an invitation:
 
     *   Click on **Revive**.
         It will resend a new mail to the user to remember him he has been invited.
-    *   Delete the invitation.
+    *   Click on **Delete**.
         It will cancel the creation of the account if the user has not already enter his password.
-    *   Click on Validate.
+    *   Click on **Validate**.
         It will finalize the invitation process.![]({{file name='accepted-user-registration.png'}} ?w=600,border=true)
 
 #### <span style="color: rgb(0,0,0);">Rejecting an Invitation</span>

@@ -2,7 +2,7 @@
 title: How to Contribute a New Video Conversion
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: 'XML extension, Code'
         topics: 'Conversion, DAM'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - dam
     - conversion
@@ -34,37 +34,37 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/pRA5AQ'
     source_link: /display/NXDOC/How+to+Contribute+a+New+Video+Conversion
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-09-08 13:03'
         message: ''
         version: '7'
-    - 
+    -
         author: Thomas Roger
         date: '2015-10-13 09:28'
         message: ''
         version: '6'
-    - 
+    -
         author: Thomas Roger
         date: '2015-10-13 09:25'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:20'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-21 12:10'
         message: 'Fix typos and formatting, categorize howto'
         version: '3'
-    - 
+    -
         author: Thomas Roger
         date: '2014-10-21 11:59'
         message: ''
         version: '2'
-    - 
+    -
         author: Thomas Roger
         date: '2014-10-21 11:58'
         message: ''
@@ -177,7 +177,7 @@ The video conversion contribution depends on an already defined converter. The s
 **Parameters**:
 
 *   `converter`: the already defined converter to use when running this video conversion
-*   `height`: the max height of the video. The width and height of the new video will be computed and passed through the command, where we reference `#{width}`&nbsp;and `#{height}`.
+*   `height`: the max height of the video. The width and height of the new video will be computed and passed through the command, where we reference `#{width}` and `#{height}`.
 
 ## Running the Video Conversion Manually
 

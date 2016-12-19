@@ -2,7 +2,7 @@
 title: How to Customize Document Validation
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: Code Editor
         topics: 'Document Type, Validation'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - schema-component
 toc: true

@@ -1,7 +1,7 @@
 {
-  "name": "Nuxeo-documentation-platform-spaces",
-  "description": "doc.nuxeo.com Platform Spaces",
-  "license": "UNLICENSED",
+  "name": "Nuxeo-documentation-content",
+  "description": "doc.nuxeo.com Content",
+  "license": "CC",
   "private": true,
   "version": "0.0.1",
   "author": {
@@ -40,10 +40,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:nuxeo/doc.nuxeo.com-platform-spaces.git"
+    "url": "git@github.com:nuxeo/doc.nuxeo.com-content.git"
   },
   "bugs": {
-    "url": "git@github.com:nuxeo/doc.nuxeo.com-platform-spaces.git/issues"
+    "url": "git@github.com:nuxeo/doc.nuxeo.com-content.git/issues"
   },
   "homepage": "http://doc.nuxeo.com"
 }

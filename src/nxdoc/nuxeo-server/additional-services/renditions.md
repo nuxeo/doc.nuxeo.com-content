@@ -2,10 +2,10 @@
 title: Renditions
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - link-update
     - renditions-component
     - rendition
@@ -89,11 +89,11 @@ Renditions are alternative representations of a document, or its content such as
 
 ## Rendition Contributions
 
-Renditions are declared on a document through rendition definition contributions. They are done on the&nbsp; [`org.nuxeo.ecm.platform.rendition.service.RenditionService`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.rendition.service.RenditionService) .
+Renditions are declared on a document through rendition definition contributions. They are done on the  [`org.nuxeo.ecm.platform.rendition.service.RenditionService`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.rendition.service.RenditionService) .
 
 ### Rendition Definitions
 
-A rendition definition can be contributed through the&nbsp; [`renditionDefinitions`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.rendition.service.RenditionService--renditionDefinitions) extension point.
+A rendition definition can be contributed through the  [`renditionDefinitions`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.rendition.service.RenditionService--renditionDefinitions) extension point.
 
 {{#> panel type='code' heading='Sample contribution for a PDF rendition'}}
 
@@ -115,9 +115,9 @@ A rendition definition can be contributed through the&nbsp; [`renditionDefinitio
 
 {{/panel}}
 
-By default, the rendition is computed through an automation chain, specified in the&nbsp;`operationChain` element. The rendition isn't stored permanently unless the code requesting it explicitly asks for it to be stored, but since Nuxeo 7.10 the default can be changed by using the&nbsp;`storeByDefault` element.
+By default, the rendition is computed through an automation chain, specified in the `operationChain` element. The rendition isn't stored permanently unless the code requesting it explicitly asks for it to be stored, but since Nuxeo 7.10 the default can be changed by using the `storeByDefault` element.
 
-When using an automation chain to compute the rendition, note that the **document** and the **main Blob** are pushed on the operation context. For instance, the&nbsp;`blobToPDF` chain uses the `Context.PopBlob` operation as the first operation to retrieve the Blob&nbsp;to convert, see its contribution:
+When using an automation chain to compute the rendition, note that the **document** and the **main Blob** are pushed on the operation context. For instance, the `blobToPDF` chain uses the `Context.PopBlob` operation as the first operation to retrieve the Blob to convert, see its contribution:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
@@ -129,18 +129,18 @@ When using an automation chain to compute the rendition, note that the **documen
 </extension>
 ```
 
-A rendition definition can also use a specific class (instead of the default&nbsp;`DefaultAutomationRenditionProvider`) to compute the rendition, through the **class** attribute on the&nbsp;`renditionDefinition` contribution. The class must implement the&nbsp;`RenditionProvider` interface.
+A rendition definition can also use a specific class (instead of the default `DefaultAutomationRenditionProvider`) to compute the rendition, through the **class** attribute on the `renditionDefinition` contribution. The class must implement the `RenditionProvider` interface.
 
 ### Rendition Definition Providers
 
-Rendition definitions can also be contributed through a&nbsp;`RenditionDefinitionProvider` on the&nbsp;`renditionDefinitionProviders` extension point. Using a&nbsp;`RenditionDefinitionProvider` allows to dynamically generate&nbsp;`RenditionDefinition`, especially useful when the renditions depends on the content of a document.
+Rendition definitions can also be contributed through a `RenditionDefinitionProvider` on the `renditionDefinitionProviders` extension point. Using a `RenditionDefinitionProvider` allows to dynamically generate `RenditionDefinition`, especially useful when the renditions depends on the content of a document.
 
 We have some examples in the Nuxeo Platform, such as:
 
 *   `PictureRenditionDefinitionProvider` for picture conversions
 *   `VideoRenditionDefinitionProvider` for transcoded videos
 
-Here is the contribution for the&nbsp;`PictureRenditionDefinitionProvider`:
+Here is the contribution for the `PictureRenditionDefinitionProvider`:
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.rendition.service.RenditionService"
@@ -154,22 +154,22 @@ Here is the contribution for the&nbsp;`PictureRenditionDefinitionProvider`:
 </extension>
 ```
 
-&nbsp;
+
 
 ### Filtering Rendition Definitions and Rendition Definition Providers
 
-Since 7.2, both contributions can be filtered through standard filters we already use in the Nuxeo Platform. The&nbsp;`currentDocument` referenced in the filter is the document on which the rendition definition is checked.
+Since 7.2, both contributions can be filtered through standard filters we already use in the Nuxeo Platform. The `currentDocument` referenced in the filter is the document on which the rendition definition is checked.
 
-&nbsp;
+
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
+- [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
 
 {{/panel}}</div><div class="column medium-6">
 
-&nbsp;
+
 
 </div></div>

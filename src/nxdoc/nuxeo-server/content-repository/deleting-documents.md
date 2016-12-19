@@ -2,10 +2,10 @@
 title: Deleting Documents
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - delete
     - life-cycle
     - core-component
@@ -107,11 +107,11 @@ Putting a document in the trash is done by changing is life cycle state to&nbsp;
 
 When the trash is purged, all its documents are permanently deleted.
 
-Besides the standard user interface, a document is put in the trash when using WebDAV, Nuxeo Drive, or using the [TrashService.trashDocuments](http://community.nuxeo.com/api/nuxeo/release-5.8/javadoc/org/nuxeo/ecm/core/trash/TrashService.html#trashDocuments(java.util.List)) API.
+Besides the standard user interface, a document is put in the trash when using WebDAV, Nuxeo Drive, or using the [TrashService.trashDocuments](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/trash/TrashService.html#trashDocuments-java.util.List-) API.
 
 ### Permanently Deleting the Document
 
-A permanent delete is done by most Nuxeo APIs, typically [CoreSession.removeDocument](http://community.nuxeo.com/api/nuxeo/release-5.8/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#removeDocument%28org.nuxeo.ecm.core.api.DocumentRef%29)&nbsp;or the higher-level APIs that use it like the CMIS bindings or the Automation [Document.Delete](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Delete) operation.
+A permanent delete is done by most Nuxeo APIs, typically [CoreSession.removeDocument](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#removeDocument-org.nuxeo.ecm.core.api.DocumentRef-)&nbsp;or the higher-level APIs that use it like the CMIS bindings or the Automation [Document.Delete](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Delete) operation.
 
 **Soft-Delete**
 
@@ -120,6 +120,8 @@ If soft-delete is enabled (this is not the case by default), then the document i
 A scheduled periodic process will then hard-delete the documents marked as deleted at a later time, for asynchronous cleanup in fixed-sized batches.
 
 {{#> callout type='info' heading='Using Soft-Delete'}}
+
+Soft-delete is available for VCS only.
 
 Soft-delete can be enabled to relieve the database of expected heavy loads if many documents are deleted at the same time.
 
@@ -133,7 +135,7 @@ Please consult [NXP-11335](https://jira.nuxeo.com/browse/NXP-11335) for more det
 
 **Hard-Delete**
 
-If soft-delete is not enabled, or when the periodic cleanup process for soft-delete happens, the document's data is actually physically deleted from the database by using `DELETE` statements (hard-delete).
+If soft-delete is not enabled, or when the periodic cleanup process for soft-delete happens, the document's data is actually physically deleted from the database by using `DELETE` SQL statements (or equivalent calls for non-VCS storages).
 
 &nbsp;
 

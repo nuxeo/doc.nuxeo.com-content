@@ -1,10 +1,8 @@
 ---
-title: >-
-    How to Upload a File in Nuxeo Platform Using REST API Batch Processing
-    Endpoint
+title: How to Upload a File in Nuxeo Using the REST API
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-13'
     status: ok
 details:
     howto:
@@ -15,7 +13,7 @@ details:
         tool: Code
         topics: 'Import, REST API'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - import
     - rest-api
     - howto
@@ -131,18 +129,16 @@ history:
 
 Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" at [Nuxeo University](https://university.nuxeo.io)
 
-&nbsp;
-
 {{! excerpt}}
 
-The Platform provides facilities for&nbsp;[uploading binaries under a given "batch id"]({{page page='blob-upload-for-batch-processing'}})&nbsp;on the server, and then to reference that batch id when posting a document resource, or for fetching it from a custom automation chain. For instance if you need to create a file with some binary content, first you have to upload the file into the BatchManager. It's a place on the system where you can upload temporary files to bind them later.
+The Platform provides facilities for [uploading binaries under a given "batch id"]({{page page='blob-upload-for-batch-processing'}}) on the server and then reference that batch id when posting a document resource, or for fetching it from a custom Automation chain. For instance if you need to create a file with some binary content, first you have to upload the file into the `BatchManager`. It's a place on the system where you can upload temporary files to bind them later.
 
 {{! /excerpt}}
 
 There are two ways to upload a file:
 
 1.  [In one go](#uploadingafileinonego): the full content of the file is transferred to the server as a binary stream in a single HTTP request. Such an upload is not resumable: in case of interruption you will need to start all over again.
-2.  [In chunks](#uploadingafileinchunks): the file content is transferred to the server as several binary streams in separate HTTP requests. Such an upload is resumable: in case of&nbsp;interruption you will only need to upload the remaining chunks.
+2.  [In chunks](#uploadingafileinchunks): the file content is transferred to the server as several binary streams in separate HTTP requests. Such an upload is resumable: in case of interruption you will only need to upload the remaining chunks.
 
 Before uploading any file or chunk you need to [initialize an upload batch](#batchinitialization).
 
@@ -241,7 +237,7 @@ Or with curl:
 curl -u Administrator:Administrator -H "X-Upload-Type:chunked" -H "X-Upload-Chunk-Index:<i>" -H "X-Upload-Chunk-Count:5" -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -H "X-File-Size:115090" -F file=@<chunk_i> http://<host>:<port>/nuxeo/api/v1/upload/<myBatchId>/0
 ```
 
-Response:&nbsp;there are 3 cases here.
+Response: there are 3 cases here.
 
 1.  The chunk has been uploaded but the file is incomplete, meaning some chunks are missing.
 
@@ -250,7 +246,7 @@ Response:&nbsp;there are 3 cases here.
     {"batchId": myBatchId, "fileIdx": "0", "uploadType": "chunked", "uploadedSize": chunkSize, "uploadedChunkIds": [0, 1, 2], "chunkCount": 5}
     ```
 
-    => Repeat the step [Uploading Chunk i out of 5](#uploadingchunkioutof5)&nbsp;with `X-Upload-Chunk-Index`&nbsp;= index of the next chunk to upload, the easiest being `<i + 1>`.
+    => Repeat the step [Uploading Chunk i out of 5](#uploadingchunkioutof5) with `X-Upload-Chunk-Index` = index of the next chunk to upload, the easiest being `<i + 1>`.
     At this point a request to [know the chunk completion](#resumeaninterruptedupload) and determine the next chunk to upload can be made.
 
 2.  The chunk has been uploaded and the file is now complete, meaning this was the last chunk to upload.
@@ -262,11 +258,11 @@ Response:&nbsp;there are 3 cases here.
 
     => **End of upload**.
 
-3.  The request is interrupted or you recieve HTTP 503 Service Unavailable or any other 5xx response from the server, go to the [Resume an Interrupted Upload](#resumeaninterruptedupload)&nbsp;step.
+3.  The request is interrupted or you recieve HTTP 503 Service Unavailable or any other 5xx response from the server, go to the [Resume an Interrupted Upload](#resumeaninterruptedupload) step.
 
 ### {{> anchor 'resumeaninterruptedupload'}}Resume an Interrupted Upload
 
-Note the importance here of having saved the batch id: it can be seen&nbsp;as a _resumable upload session id_.
+Note the importance here of having saved the batch id: it can be seen as a _resumable upload session id_.
 
 ```
 GET /api/upload/<myBatchId>/0
@@ -278,7 +274,7 @@ Or with curl:
 curl -u Administrator:Administrator -G http://<host>:<port>/nuxeo/api/v1/upload/<myBatchId>/0
 ```
 
-Response:&nbsp;again there are 3 cases here.
+Response: again there are 3 cases here.
 
 1.  The file is incomplete.
 
@@ -287,7 +283,7 @@ Response:&nbsp;again there are 3 cases here.
     {"name": myFile.doc, "size": 115090, "uploadType": "chunked", "uploadedChunkIds": [0, 1, 2], "chunkCount": 5}
     ```
 
-    => Repeat the step&nbsp;[Uploading Chunk i out of 5](#uploadingchunkioutof5)&nbsp;with&nbsp;`X-Upload-Chunk-Index`&nbsp;= index of the next chunk to upload, in this case 3.
+    => Repeat the step [Uploading Chunk i out of 5](#uploadingchunkioutof5) with `X-Upload-Chunk-Index` = index of the next chunk to upload, in this case 3.
 
 2.  The file is now complete, meaning all chunks have been uploaded.
     This could happen if the connection broke after all bytes were uploaded but before the client received a response from the server.
@@ -299,7 +295,7 @@ Response:&nbsp;again there are 3 cases here.
 
     => **End of upload**.
 
-3.  The request is interrupted or you recieve HTTP 503 Service Unavailable or any other 5xx response from the server,&nbsp;go to the&nbsp;[Resume an Interrupted Upload](#resumeaninterruptedupload)&nbsp;step.
+3.  The request is interrupted or you recieve HTTP 503 Service Unavailable or any other 5xx response from the server, go to the [Resume an Interrupted Upload](#resumeaninterruptedupload) step.
 
 ### Best Practices
 
@@ -307,7 +303,7 @@ You should follow the [Best Practices](https://developers.google.com/drive/web/m
 
 ## Creating a Document from an Uploaded File
 
-You can create a document of type File and attach to it a file uploaded to a given batch by using the specific syntax on the&nbsp;[`file:content`](http://filecontent)&nbsp;property.
+You can create a document of type File and attach to it a file uploaded to a given batch by using the specific syntax on the [`file:content`](http://filecontent) property.
 
 **That fact that the file has been uploaded in one go or in chunks has no incidence here.**
 
@@ -341,13 +337,13 @@ GET /api/v1/path/default-domain/workspaces/myworkspace/myNewDoc/@blob/file:conte
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='REST API how-tos'}}
 
-*   [Use Nuxeo API Playground to Discover the API]({{page page='use-nuxeo-api-playground-to-discover-the-api'}})
-*   [Search Endpoint]({{page page='search-endpoint'}})
-*   [REST API How-To Index]({{page page='rest-api-how-to-index'}})
+- [Use Nuxeo API Playground to Discover the API]({{page page='use-nuxeo-api-playground-to-discover-the-api'}})
+- [Search Endpoint]({{page page='search-endpoint'}})
+- [REST API How-To Index]({{page page='rest-api-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Import how-tos'}}
 
-*   [How to Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
-*   [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
+- [How to Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
+- [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
 
 {{/panel}}</div></div>

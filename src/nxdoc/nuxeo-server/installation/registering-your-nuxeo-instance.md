@@ -216,7 +216,7 @@ For more information about the `nuxeoctl` script, read [nuxeoctl and Control Pan
 
 ### Creating your Nuxeo Online Services Account {{> anchor 'connect-account-creation'}}
 
-If you already have an account for Nuxeo Online Services, either because you are a Nuxeo customer, or because you created a trial account, you can continue to the [Registering Online](#online-registration) step. If not, follow those steps to get credentials to Online Services.
+If you already have an account for Nuxeo Online Services, either because you are a Nuxeo customer, or because you created a trial account, you can continue to the [Registering Online]({{page page='registering-your-nuxeo-instance'}}#registering-online-through-the-admin-tab) step. If not, follow those steps to get credentials to Online Services.
 
 To subscribe to a Nuxeo Online Services trial:
 
@@ -225,7 +225,7 @@ To subscribe to a Nuxeo Online Services trial:
 3.  Confirm registration by clicking on the link sent to the email address in the previous step.
     You can now use the [Nuxeo Platform online](https://www.nuxeo.com/downloads/#online-trial) or [download it](http://www.nuxeo.com/downloads/) if you want to use it on premises.
 
-### Registering Online Through the Admin Tab {{> anchor 'online-registration'}}
+### Registering Online through the Admin Tab {{> anchor 'online-registration'}}
 
 1.  Start your Nuxeo instance and connect as an administrator (Administrator/Administrator by default).
 2.  Click on the **Admin** tab.
