@@ -5,7 +5,7 @@ review:
     date: '2015-12-01'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - salesforce-component
     - link-update
     - excerpt
