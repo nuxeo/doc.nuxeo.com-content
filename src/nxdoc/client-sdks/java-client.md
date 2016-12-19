@@ -2,7 +2,7 @@
 title: Java Client
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 toc: true
 labels:
