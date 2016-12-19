@@ -1,12 +1,12 @@
 ---
-title: Nuxeo Connect Report Tools
+title: Nuxeo Connect Report Tools Web
 review:
     comment: ''
     date: '2016-12-09'
     status: ok
 toc: true
 labels:
-    - content-review-lts2016
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons
@@ -47,10 +47,7 @@ history:
         version: '1'
 
 ---
-Nuxeo Connect Report Tools is a set of Nuxeo addons that enable you to gather information that can be useful to understand the environment in which a bug or a problem can be reproduced. Two Nuxeo Packages are available:
-
-*   [Nuxeo Connect Report Tools](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report), that provide a new [`nuxeoctl`]({{page page='nuxeoctl-and-control-panel-usage'}}) command
-*   [Nuxeo Connect Report Tools Web](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report-web) that provides a graphical interface to use the `nuxeoctl` command
+[Nuxeo Connect Report Tools Web](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report-web) is a Nuxeo addon that provides a graphical interface to use the [nuxeoctl command]({{page version='' space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}) `connect-report`. This command is available by default in the Nuxeo Platform and enables you to gather information that can be useful to understand the environment in which a bug or a problem can be reproduced.
 
 ## Installation
 
@@ -58,7 +55,7 @@ Nuxeo Connect Report Tools is a set of Nuxeo addons that enable you to gather in
 
 ## Functional Overview
 
-Nuxeo Connect Report Tools packages gather information about your Nuxeo Platform server in a JSON file, so that you can easily forward this information to the Nuxeo support team.
+The `nuxeoctl connect-report` command and the Nuxeo Command Report Tools Web user interface gather information about your Nuxeo Platform server in a JSON file, so that you can easily forward this information to the Nuxeo support team.
 
 The concatenated information include:
 
@@ -68,16 +65,4 @@ The concatenated information include:
 *   Information about your server configuration (templates, etc.)
 *   The list of contributions deployed on your server
 
-**Getting a Report Using nuxeoctl**
-
-In a terminal run:
-
-```
-$ nuxeoctl connect-report
-```
-
-The report JSON file is generated. The location of the report is indicated in the terminal.
-
-**Getting a Report Using the User Interface**
-
-As an administrator, go to&nbsp;`http://NUXEO_SERVER/nuxeo/site/connect-tools/` and follow the instructions displayed.
+As an administrator, go to `http://NUXEO_SERVER/nuxeo/site/connect-tools/` and follow the instructions displayed.
