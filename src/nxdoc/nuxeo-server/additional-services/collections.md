@@ -172,7 +172,7 @@ history:
 
 ## Installation & Configuration
 
-<span style="color: rgb(51,51,51);">The collection module has no specific installation step as it is already included in the default Nuxeo Platform distribution.</span>
+The collection module has no specific installation step as it is already included in the default Nuxeo Platform distribution.
 
 ## Customization
 
@@ -229,7 +229,7 @@ The collection reference is available in the event context map. For example, wit
 
 ### Synchronizing a Collection with Nuxeo Drive
 
-To do so you need to add the following XML contribution with[either Nuxeo Studio or a custom bundle]({{page page='how-to-contribute-to-an-extension'}}):
+To do so you need to add the following XML contribution with [either Nuxeo Studio or a custom bundle]({{page page='how-to-contribute-to-an-extension'}}):
 
 ```xml
 <component name="org.nuxeo.drive.actions.collections">
@@ -260,8 +260,6 @@ Yet you can always unsynchronize the collection from the Nuxeo Drive tab in the 
 
 &nbsp;
 
-&nbsp;
-
 ## Core Implementation
 
 A collection holds the list of references of the documents it contains. Conversely, a document holds the list of references of the collections it belongs to.
@@ -282,9 +280,9 @@ Finally, when copying a collection, an asynchronous work will also duplicate its
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
 
-*   [Collections user documentation]({{page space='userdoc' page='collections'}})
-*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
-*   [Nuxeo Drive user documentation]({{page space='userdoc' page='nuxeo-drive'}})
-*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+- [Collections user documentation]({{page space='userdoc' page='collections'}})
+- [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+- [Nuxeo Drive user documentation]({{page space='userdoc' page='nuxeo-drive'}})
+- [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
 
 {{/panel}}</div><div class="column medium-6"></div></div>
