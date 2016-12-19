@@ -90,6 +90,13 @@ _actionContext: function() {
   return {document: this.document, clipboard: this.clipboard};
 },
 ```
+The `DOCUMENT_ACTIONS` has therefore the following:
+
+**Slot Model Properties**
+| Property    | Description                        |
+|:------------|:-----------------------------------|
+| `document`  | The current document.              |
+| `clipboard` | The application clipboard content. |
 
 #### DOCUMENT_VIEWS_ITEMS and DOCUMENT_VIEWS_PAGES
 
@@ -101,17 +108,35 @@ The **DOCUMENT_VIEWS_PAGES** slot must define the pages introduced by the **DOCU
 
 Example coming soon.
 
+**Slot Model Properties**
+| Property   | Description           |
+|:-----------|:----------------------|
+| `document` | The current document. |
+
 #### BLOB_ACTIONS
 
 This slot is available on current document that has attached blobs. Default actions are *Preview*, *Delete* and *Open with Nuxeo Drive* (when the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon is installed).
 
 ![]({{file name='BLOB_ACTIONS.png'}} ?w=400,border=true)
 
+**Slot Model Properties**
+| Property   | Description                                                                                                                        |
+|:-----------|:-----------------------------------------------------------------------------------------------------------------------------------|
+| `document` | The current document.                                                                                                              |
+| `blob`     | The blob description (i.e. `{name: "nuxeo_fact sheet_0.1.png", mime-type: "image/png", encoding: null, digestAlgorithm: "MD5",…}`) |
+| `xpath`    | The blob property xpath                                                                                                            |
+
 #### BROWSE_ACTIONS{{> anchor 'browse_actions'}}
 
 This slot is displayed when selecting one ore more children documents of a Folderish current document. It provides bulked actions on the selection such as *Add to collection*, *Delete selected items*, etc.
 
 ![]({{file name='BROWSE_ACTIONS.png'}} ?w=400,border=true)
+
+**Slot Model Properties**
+| Property        | Description                            |
+|:----------------|:---------------------------------------|
+| `document`      | The current document.                  |
+| `selectedItems` | An array of selected content document. |
 
 ### Main Application Menu slots
 
@@ -133,11 +158,23 @@ The [Nuxeo DAM](https://github.com/nuxeo/nuxeo-dam/blob/8.10/nuxeo-dam-web-ui/sr
 </nuxeo-slot-content>
 ```
 
+**Slot Model Properties**
+| Property      | Description           |
+|:--------------|:----------------------|
+| `document`    | The current document. |
+| `currentUser` | The current user.     |
+
 #### ADMINISTRATION_MENU and ADMINISTRATION_PAGES
 
 This ADMINISTRATION_MENU slot allows to add additional Administration sub menus.
 
 ![]({{file name='ADMINISTRATION_MENU.png'}} ?w=400,border=true)
+
+**Slot Model Properties**
+| Property      | Description           |
+|:--------------|:----------------------|
+| `document`    | The current document. |
+| `currentUser` | The current user.     |
 
 #### USER_MENU
 
@@ -145,9 +182,21 @@ This USER_MENU slot allows to add additional User sub menus.
 
 ![]({{file name='USER_MENU.png'}} ?w=400,border=true)
 
+**Slot Model Properties**
+| Property      | Description           |
+|:--------------|:----------------------|
+| `document`    | The current document. |
+| `currentUser` | The current user.     |
+
 #### PAGES and DRAWER_PAGES
 
 Documentation coming soon.
+
+**Slot Model Properties**
+| Property      | Description           |
+|:--------------|:----------------------|
+| `document`    | The current document. |
+| `currentUser` | The current user.     |
 
 ### Document creation
 
@@ -157,11 +206,22 @@ This slot provides actions displayed when hovering the bottom right Floating Act
 
 ![]({{file name='DOCUMENT_CREATE_ACTIONS.png'}} ?w=400,border=true)
 
+**Slot Model Properties**
+| Property      | Description                                                              |
+|:--------------|:-------------------------------------------------------------------------|
+| `hostVisible` | Boolean which is true if the FAB is hovered.                             |
+| `subtypes`    | Array of the document types that can be created in the current location. |
+
+
 #### FILE_UPLOAD_ACTIONS
 
 This slot is for instance used the [Nuxeo Live Connect]({{page version='' space='nxdoc' page='nuxeo-liveconnect'}}) addon which inserts additional import wizard to upload Files to cloud services.
 
 ![]({{file name='FILE_UPLOAD_ACTIONS.png'}} ?w=400,border=true)
+
+**Slot Model Properties**
+| Property | Description |
+|:---------|:------------|
 
 ### Search and Collection browsing slots
 
@@ -171,9 +231,21 @@ The screen displayed to browse Search result and Collection content are very sim
 
 ![]({{file name='SEARCH_ACTIONS.png'}} ?w=400,border=true)
 
+**Slot Model Properties**
+| Property        | Description                                                                                                                                     |
+|:----------------|:------------------------------------------------------------------------------------------------------------------------------------------------|
+| `items`         | Array of displayed result items returned by the search, selected or not. (Note: more results could be loaded if you keep scrolling for results) |
+| `selectedItems` | Array of selected results.                                                                                                                      |
+
 #### COLLECTION_ACTIONS
 
 ![]({{file name='COLLECTION_ACTIONS.png'}} ?w=400,border=true)
+
+**Slot Model Properties**
+| Property        | Description                                                                                                                    |
+|:----------------|:-------------------------------------------------------------------------------------------------------------------------------|
+| `items`         | Array of displayed collection members, selected or not. (Note: more members could be loaded if you keep scrolling for results) |
+| `selectedItems` | Array of selected collection members.                                                                                          |
 
 ### Other slots
 
@@ -182,3 +254,7 @@ The screen displayed to browse Search result and Collection content are very sim
 The **DOCUMENT_VIEWS_ITEMS** slot allows to define the available items in the analytics dashboard (accessible from the Admin menu) such as  *Document distribution*, *Repository content*, *Workflow*, etc.
 
 ![]({{file name='ANALYTICS_ITEMS.png'}} ?w=400,border=true)
+
+**Slot Model Properties**
+| Property | Description |
+|:---------|:------------|
