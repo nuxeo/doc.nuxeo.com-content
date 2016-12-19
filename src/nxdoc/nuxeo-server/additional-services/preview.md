@@ -2,10 +2,10 @@
 title: Preview
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-12'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - preview
     - link-update
     - preview-component
@@ -129,11 +129,14 @@ You may want to check the following how-tos for customization:
 
 When previewing a document, the logic executed goes through several layers (from end result to the most core part):
 
-*   **Preview popup** in the JSF UI: Adds a Preview popup that displays the preview inside an iframe, querying the Restlet preview URL for the current document.
-*   **A preview Restlet**, that is in charge of handling caching logic when delivering the HTML preview for a given document. The Restlet URL follows the pattern below:
+*   **Preview popup** in JSF UI and Web UI: Adds a Preview popup that displays the preview inside an iframe, querying the Restlet preview URL for the current document.
+*   **A preview Restlet**, that is in charge of handling caching logic when delivering the HTML preview for a given document. To achieve this we can user our
+
+REST API, using the blob and preview adapters as follows:
+
 
     ```
-    http://{server}:{port}/nuxeo/restAPI/preview/{server_name}/{document_uuid}/{previewfield}/
+    http://{server}:{port}/nuxeo/site/api/v1/repo/{repo_id}/id/{document_id}/@blob/{previewfield}/@preview/{format}
 
     ```
 
@@ -144,6 +147,7 @@ When previewing a document, the logic executed goes through several layers (from
 - **The [HtmlPreviewAdapter](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.preview.adapters--adapters)** is a standard Nuxeo Platform adapter, that is fetched using `doc.getAdapter(HtmlPreviewAdapter.class)`. This adapter is a way to get access to the service below.
 
 - **The [PreviewAdapterManagerComponent](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.preview.adapter.PreviewAdapterManagerComponent)** and its `getAdapter(DocumentModel doc)` method that returns, depending on the document type of "doc" and the contributions that have been made to [extension "AdapterFactory"](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.preview.adapter.PreviewAdapterManagerComponent--AdapterFactory) of this component, an object whose type implements the interface.
+
 
 ### HtmlPreviewAdapter Details
 
@@ -156,7 +160,7 @@ The [HtmlPreviewAdapter](https://fisheye.nuxeo.com/browse/nuxeo/nuxeo-features/n
 
 ```
 
-When no custom factory has been contributed for the given document type, the above mentioned service returns a `ConverterBasedHtmlPreviewAdapter` instance. This instance leverages the BlobHolder of the document to get the preview blob. If the document has no BlobHolder, it takes takes [`file:content`](http://filecontent) or [`files:files`](http://filesfiles).  It uses the `MimeTypePreviewer` (see below) if the MIME type matches. If there is no MIME type match, the converter service is used to get a [any2html](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.convert.preview.plugins--converter) conversion chain. (You can override/extend the MIME types that can benefit from this chain).
+When no custom factory has been contributed for the given document type, the above mentioned service returns a `ConverterBasedHtmlPreviewAdapter` instance. This instance leverages the BlobHolder of the document to get the preview blob. If the document has no BlobHolder, it takes takes [`file:content`](http://filecontent) or [`files:files`](http://filesfiles). It uses the `MimeTypePreviewer` (see below) if the MIME type matches. If there is no MIME type match, the converter service is used to get a [any2html](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.convert.preview.plugins--converter) conversion chain. (You can override/extend the MIME types that can benefit from this chain).
 
 Some other adapters are contributed by default in the Platform, for pictures and notes. Contributing another adapter is of course possible. For instance, if you want to "merge" all the PDFs there are in  the [`file:content`](http://filecontent) and [`files:files`](http://filesfiles) properties of a custom "Report" type (or any other property) and preview all the content in one block. This custom logic could be written in such an adapter. Or, if you want to generate the preview of a CAD (AutoCAD) document and need to get some linked files before doing your generation, this is where you would do it.
 
@@ -182,15 +186,11 @@ MimeTypePreviewer mtPreviewer = Framework.getService(PreviewAdapterManager.class
 
 * * *
 
-&nbsp;
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
 
 - [Installing and Setting Up Related Software]({{page space='ADMINDOC' page='Installing and+Setting+Up+Related+Software'}})
 - [How to Customize the Info-View Pop-Up]({{page space='NXDOC' page='How to+Customize+the+Info-View+Pop-Up'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

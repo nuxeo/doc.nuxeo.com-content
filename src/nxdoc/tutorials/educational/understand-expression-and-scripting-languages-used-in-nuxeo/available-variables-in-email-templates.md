@@ -2,10 +2,10 @@
 title: Available Variables in Email Templates
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - variable
     - email
 toc: true
@@ -133,22 +133,27 @@ In your email templates, you have access to different variables depending if you
 
 Variables that can be used to set up an email in an automation chain.
 
-*   `${Document}` **-** The context document. This is the document on which some action was done and the [send mail operation](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Mail) was triggered. See [Use of MVEL in Automation chains (document wrapper)]({{page page='use-of-mvel-in-automation-chains'}}) for details.
+*   `${Document}` **-** The context document. This is the document on which some action was done and the [send mail operation](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Mail) was triggered. See [Use of MVEL in Automation chains (document wrapper)]({{page page='use-of-mvel-in-automation-chains'}}#-anchor-doc-wrapper-document-wrapper) for details.
 *   `${docUrl}` - The document URL.
 *   `${viewId}` **-** The view of the document which will be displayed by the document URL.
 *   `${subject}` - The mail subject.
 *   `${to}` - The mail recipients.
 *   `${from}` - The mail sender.
-*   `${CurrentDate}` - The current date. See [Use of MVEL in Automation chains (date wrapper)]({{page page='use-of-mvel-in-automation-chains'}}) for details.
+*   `${CurrentDate}` - The current date. See [Use of MVEL in Automation chains (date wrapper)]({{page page='use-of-mvel-in-automation-chains'}}#-anchor-date-wrapper-date-wrapper) for details.
+*   `${Fn}`- A collection of useful functions. See [Use of MVEL in Automation chains (fn object)]({{page page='use-of-mvel-in-automation-chains'}}#-anchor-fn-object-functions) for details.
+*   `${Env}` - A hashmap containing Nuxeo environment variables. Example: `Env["org.nuxeo.ecm.product.name"]`.
 *   `${CurrentUser}` - The current user.
 
     {{#> callout type='note' }}
 
-    `${CurrentUser}` is not correctly working for now in FTL templates.
+    `${CurrentUser}` is not correctly working for now in FTL templates. However, if your email template is sent in the context of an automation chain or script, it is possible to use a workaround by defining its value in a context variable:
+    1. Use the Context.SetVar operation in your chain with the following parameters:
+    <br/>name: currentUserId
+    <br/>value: @{CurrentUser.name}
+    1. Then use it in your email template:
+    <br />User ${Context['currentUserId']} sent you this email.
 
     {{/callout}}
-*   `${Fn}`- A collection of useful functions. See [Use of MVEL in Automation chains (fn object)]({{page page='use-of-mvel-in-automation-chains'}}) for details.
-*   `${Env}` - A hashmap containing Nuxeo environment variables. Example: `Env["org.nuxeo.ecm.product.name"]`.
 
 ## Workflow Task Notification Context
 
@@ -185,7 +190,7 @@ Variables that can be used when a notification is set up from a workflow node's 
 - [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
 - [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
 - [How to Customize Email Templates]({{page page='how-to-customize-email-templates'}})
-- [Alerts]({{page space='userdoc' page='collaborative-features#alerts'}})
+- [Alerts]({{page space='userdoc' page='collaborative-features'}}#alerts)
 
 {{/panel}}</div><div class="column medium-6">
 

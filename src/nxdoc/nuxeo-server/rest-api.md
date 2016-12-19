@@ -2,10 +2,10 @@
 title: REST API
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - url
     - rest-api
     - last-review-20150422
@@ -572,7 +572,9 @@ Multiple resources are exposed:
 *   <span class="java plain">**Searches**: Since 8.3, you can perform searches by query or page provider, store these searches and reproduce them later.
     `/nuxeo/site/api/v1/search/lang` or `/nuxeo/site/api/v1/search/pp` or `/nuxeo/site/api/v1/search/saved`
     Check the [Search Endpoint]({{page page='search-endpoint'}}) page for more information.</span>
-
+*   **OAuth2**: You can retrieve authentication data from a OAuth2 provider via `/nuxeo/api/v1/oauth2/provider/{providerId}`,
+    or get a new access token from `/nuxeo/api/v1/oauth2/provider/{providerId}/token`.
+    Please check [OAuth2 Endpoint]({{page page='oauth2-endpoint'}}) for more details.
 *   **Queries**: You can search by query, or by referencing a page provider contributed server-side.
     `<span class="java plain">nuxeo/site/api/v1/query?query={query}</span>` or `<span class="java plain">/nuxeo/site/api/v1/query/{page_provider_name}?queryParams={params_values}</span>`
     <span class="java plain">See the page [Query Endpoint]({{page page='query-endpoint'}}). (deprecated since 8.3 and replaced by the Search endpoint)</span>
