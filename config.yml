@@ -14,6 +14,9 @@ default:
             -
                 label: FT
             -
+                label: LTS 2016
+                url_path: '810'
+            -
                 label: LTS 2015
                 url_path: '710'
             -
