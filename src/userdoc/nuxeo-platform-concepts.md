@@ -453,7 +453,7 @@ history:
 ---
 {{! multiexcerpt name='functional-overview'}}
 
-Nuxeo Platform Web UI is the Back office view on the content repository. There are three main spaces in Nuxeo Platform:
+Nuxeo Platform JSF UI is the Back office view on the content repository. There are three main spaces in Nuxeo Platform:
 
 *   The **Home** tab provides a set of dashboards
 *   The **Browse** tab enables to navigate in the repository
