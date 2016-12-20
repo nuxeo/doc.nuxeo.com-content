@@ -19,8 +19,7 @@ To install this authentication plugin:
 
 1.  Download the [nuxeo-platform-login-portal-sso plugin](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;quick~nuxeo-platform-login-portal-sso).
 2.  Put it in `$TOMCAT_HOME/nxserver/bundles` or `$JBOSS_HOME/server/default/deploy/nuxeo.ear/bundles` and restart the server.
-3.  Put the plugin into the authentication chain.
-    {{{multiexcerpt 'authentication_chain_contribution' page='Authentication and User Management'}}}
+3.  Put the plugin into the authentication chain.{{{multiexcerpt 'authentication_chain_contribution' page='Authentication and User Management'}}}
     Use `PORTAL_AUTH`.
 4.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) with the following content:
 
