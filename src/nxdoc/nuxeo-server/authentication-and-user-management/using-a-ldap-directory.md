@@ -231,7 +231,7 @@ Of course you can have a specific custom config where:
 But for the most common use case, all you want to do is map the default `userDirectory` to your LDAP Server. Since groups are used in Nuxeo to associate permissions with content, fetching groups from LDAP is usually not very efficient: LDAP groups are usually not designed for that.
 
 
-## Installation
+## Configuration
 The Users & Groups step of the [startup wizard]({{page page='configuration-wizard'}}) enables you to set up your LDAP, SQL or multidirectory configuration: Select the kind of "directory" you want (SQL, LDAP, Multi-directory), and fill in the required information.
 
 ![]({{file name='nuxeo-wizard-user-and-groups.png'}} ?w=400,border=true)
@@ -276,7 +276,7 @@ You can also choose a group from your company's directory instead of using the d
 *   `server/default/deploy/nuxeo.ear/config/` in JBoss,
 *   `nxserver/config/` in Tomcat.
 
-3.  Then copy this content (make sure it's valid XML, sometimes what you think is a space character is actually a non-breaking space (`U+00A0`) which is invalid in XML):
+2.  Then copy this content (make sure it's valid XML, sometimes what you think is a space character is actually a non-breaking space (`U+00A0`) which is invalid in XML):
 
     ```
     <?xml version="1.0"?>
@@ -408,28 +408,28 @@ You can also choose a group from your company's directory instead of using the d
 
     ```
 
-4.  Then you should edit this file:
+3.  Then you should edit this file:
 
-1.  Set the correct server:
+4.  Set the correct server:
 
     *   `<ldapUrl>`
     *   `<bindDn>` and `<bindPassword>`
-2.  Set the correct LDAP config:
+5.  Set the correct LDAP config:
 
     *   `<searchBaseDN>`
     *   `<searchClass>`
     *   `<fieldMapping>`
-3.  If you want Nuxeo to be able to create users in the LDAP directory:
+6.  If you want Nuxeo to be able to create users in the LDAP directory:
 
 *   make sure the user you use to access LDAP has write access,
 *   define the `<creationBaseDn>` and associated parameters.
 
-5.  Define the default mapping:
+7.  Define the default mapping:
 
 *   since the _Administrator_ user won't exists anymore, you should assign at least one user to be administrator using `<defaultAdministratorId>`,
 *   you can also choose to make all users members of the default "members" group using `<defaultGroup>`.
 
-6.  Restart the Nuxeo server, and you should now be able to authenticate against LDAP.
+8.  Restart the Nuxeo server, and you should now be able to authenticate against LDAP.
 
 {{#> callout type='note' }}
 

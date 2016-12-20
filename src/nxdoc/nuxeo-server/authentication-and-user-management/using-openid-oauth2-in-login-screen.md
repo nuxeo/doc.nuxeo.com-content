@@ -1,5 +1,5 @@
 ---
-title: OpenID / OAuth2
+title: Using OpenID / OAuth2 in Login Screen
 review:
     comment: ''
     date: '2016-11-28'

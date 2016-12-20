@@ -159,16 +159,16 @@ By default user gets authenticated&nbsp;on the Nuxeo Platform by filling usernam
 
 The login page is not the only way to authenticate a user against the Nuxeo Platform. Some other protocols can be used, sometimes requiring to install an additional module (See related pages):
 
-*   Basic authentication (built-in)
+*   Basic authentication (built-in), see [dedicated page]({{page page='using-basic-http'}})
 *   Token (Nuxeo Platform proprietary) (built-in)
-*   oAuth (built-in)
-*   SAML2 (addon)
-*   2 Steps (with SMS for instance) (Addon)
+*   oAuth2 (built-in), see [dedicated page]({{page page='using-oauth2'}})
+*   SAML2 (Addon), see [dedicated page]({{page page='using-saml2'}})
+*   2 Steps (with SMS for instance) (Addon), see [dedicated page]({{page page='nuxeo-duoweb-two-factor-authentication'}})
 *   Trusted (for instance requests coming from that particular IP address do not need to validate authentication) (built-in)
-*   Open ID (addon)
-*   Kerberos (built-in)
-*   CAS (built-in)
-*   NTLM (built-in)
+*   Open ID (Addon), see [dedicated page]({{page page='using-openid-oauth2-in-login-screen'}})
+*   Kerberos (built-in), see [dedicated page]({{page page='using-kerberos'}})
+*   CAS / CAS2 (built-in), see [dedicated page]({{page page='using-cas2-authentication'}})
+*   NTLM (built-in), see [dedicated page]({{page page='NTLM-and-IE-Challenge-Response'}})
 *   Redirecting to a remote identity management solution then having the user fall back authenticated to the Nuxeo Platform (SSO servers, Open Id, Portals, ...) (built-in or plugin, depending on the case)
 
 Thanks to the pluggability of the authentication layer (see the Implementation section), it is easy to write a custom authentication protocol when necessary.
@@ -177,13 +177,13 @@ Thanks to the pluggability of the authentication layer (see the Implementation s
 
 Default configuration checks identity against a Java implementation inside the Nuxeo Platform. By configuration and addition of some modules, and following the above list of supported protocols, the Nuxeo Platform can be integrated with various identity providers:
 
-*   LDAP server
+*   LDAP server, see
 *   Active Directory server
 *   Open ID compatible web platforms: Google, Twitter, Facebook, GitHub, ...
 *   SAML compatible identity Management solutions, on premise or SAAS, such as One Login, ClearTrust, ...
-*   Kerberos compatible identity providers
-*   Shibboleth Servers (Federated identity management)
-*   SSO Servers (ex: CAS Server, Site Minder)
+*   Kerberos compatible identity providers, see [dedicated page]({{page page='using-sso-portals'}})
+*   Shibboleth Servers (Federated identity management), see [dedicated page]({{page page='shibboleth-authentication'}})
+*   SSO Servers (ex: CAS Server, Site Minder), see [dedicated page]({{page page='using-sso-portals'}})
 
 ### Unauthenticated Access
 
@@ -252,9 +252,8 @@ You may want to use other authentication protocols and / or identity providers t
 
 **In any case**, you have to configure the "authentication chain".
 
-{{! multiexcerpt name='authentication_chain_contribution'}}[Contribute an XML extension]({{page page='how-to-contribute-to-an-extension'}}) from the following content.
-
-Adapt the `authenticationChain` element content with the list of plugins you want to use.
+{{! multiexcerpt name='authentication_chain_contribution'}}
+[Contribute an XML extension]({{page page='how-to-contribute-to-an-extension'}}) from the following content. Adapt the `authenticationChain` element content with the list of plugins you want to use.
   ```xml
   <extension
     target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
@@ -286,4 +285,16 @@ You can customize the login page using[ Nuxeo Studio ]({{page space='studio' pag
 You can build a custom directory that will wrap your webservice.
 
 You can use [this sample](https://github.com/tiry/nuxeo-directory-connector) as a starting point.
-{{> end_of_tabs }}
+<div class="row" data-equalizer data-equalize-on="medium">
+
+<div class="column medium-6">
+
+{{#> panel heading='Related Documentation'}}
+- [Form-Based Authentication]({{page page='using-basic-http'}})
+- [Basic HTTP Authentication]({{page page='using-form-based'}})
+- [LDAP and Active Directory]({{page page='using-a-ldap-directory'}})
+{{/panel}}
+
+</div>
+
+</div>
