@@ -285,7 +285,7 @@ history:
         version: '1'
 
 ---
-The bulk edit screen offers a form that allows to edit several documents at the same time.&nbsp;This is implemented using the&nbsp;[BulkEditService](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.webapp.bulkedit.BulkEditService)&nbsp;component.&nbsp;You can customize it with Studio by creating a form layout named&nbsp;`bulkEdit`. The "Edit" layout will be used on the bulk edit popup. The default bulk edit layout can be found on [GitHub](https://github.com/nuxeo/nuxeo/blob/release-6.0/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/layouts-contrib.xml) or in the [Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/6.0/viewContribution/org.nuxeo.ecm.platform.forms.layouts.webapp--layouts).&nbsp;
+The bulk edit screen offers a form that allows to edit several documents at the same time. This is implemented using the [BulkEditService](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.webapp.bulkedit.BulkEditService) component. You can customize it with Studio by creating a form layout named `bulkEdit`. The "Edit" layout will be used on the bulk edit popup. The default bulk edit layout can be found on [GitHub](https://github.com/nuxeo/nuxeo/blob/release-6.0/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/layouts-contrib.xml) or in the [Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/6.0/viewContribution/org.nuxeo.ecm.platform.forms.layouts.webapp--layouts).
 
 ![]({{file name='default_bulk_edit.png'}} ?w=350,border=true)
 
@@ -301,7 +301,7 @@ The bulk edit screen offers a form that allows to edit several documents at the 
     {{/callout}}
 3.  Go to the **Edit Layout** tab.
 4.  Drag and drop the widgets you need.
-5.  In the Advanced Configuration part, join the `layout_bulkedit_template.xhtml` which is in the folder&nbsp;`$NUXEO/nxserver/nuxeo.war/layouts`.
+5.  In the Advanced Configuration part, attach the `layout_bulkedit_template.xhtml` which is in the folder&nbsp;`$NUXEO/nxserver/nuxeo.war/layouts`.
 
     {{#> callout type='info' }}
 
@@ -316,11 +316,13 @@ The bulk edit screen offers a form that allows to edit several documents at the 
 
 1.  Go to your Nuxeo Platform instance.
 2.  Connect as Administrator with Administrator password.
-3.  Click on&nbsp;**Admin Center**&nbsp;>&nbsp;**Update Center**&nbsp;>&nbsp;**Nuxeo Studio**.
-4.  Click on the&nbsp;**Update**&nbsp;button.
-5.  Go in a workspace and edit your documents.
+3.  Click on **Admin Center** > **Update Center** > **Nuxeo Studio**.
+4.  Click on the **Update** button.
+5.  Go to a workspace and edit your documents.
 
 ![]({{file name='custom_bulk_edit_2.png'}} ?w=350,h=236,border=true)
+
+{{! multiexcerpt name='bulk-edit-form-specific-cases'}}
 
 ## Specific Cases
 
@@ -328,13 +330,13 @@ When you want to create a bulk edit form with the possibility to edit the collec
 
 **Tags**
 
-When you configure a widget to select tags, the field that needs to be referenced is&nbsp;`contextData['request/bulk_tags']`
+When you configure a widget to select tags, the field that needs to be referenced is `contextData['request/bulk_tags']`
 
 1.  Drag and drop a generic widget from the right to the grid.
 2.  Fill in the creation form.
     ![]({{file name='tags_widget_editor.png'}} ?w=350,border=true)
 3.  In the Edit Properties, select **Yes** for the **Can Select New Tag** field.
-4.  Click on **Save** and deploy your changes on your instance.
+4.  Click on **Save** and deploy your changes on your instance.<br/><br/>
 
 **Collections**
 
@@ -345,25 +347,55 @@ When configuring a widget to select collections, the field that needs to be refe
     ![]({{file name='collections_widget_editor.png'}} ?w=350,border=true)
 3.  Fill in the Edit properties:
 
-    <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
-
-    <div class="gwt-HTML form-label" title="Editor for property 'pageProviderName'">Document page provider name</div>
-
-    </td><td colspan="1">`default_document_suggestion`</td></tr><tr><td colspan="1">Selection Formatter</td><td colspan="1">`formatSelectedCollection`</td></tr><tr><td colspan="1"><span style="color: rgb(67,67,67);">Suggestion Formatter</span></td><td colspan="1">`formatSuggestedCollection`</td></tr></tbody></table></div>
+    <div class="table-scroll">
+      <table class="hover">
+        <tbody>
+          <tr>
+            <td colspan="1">
+              <div class="gwt-HTML form-label" title="Editor for property 'pageProviderName'">Document page provider name</div>
+            </td>
+            <td colspan="1">`default_document_suggestion`</td>
+          </tr>
+          <tr>
+            <td colspan="1">Selection Formatter</td>
+            <td colspan="1">`formatSelectedCollection`</td>
+          </tr>
+          <tr>
+            <td colspan="1">Suggestion Formatter</td>
+            <td colspan="1">`formatSuggestedCollection`</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 4.  In the Custom properties part fill in the following fields:
 
-    <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">restoreSeamCtx</td><td colspan="1">false</td></tr><tr><td colspan="1">operationId</td><td colspan="1">Collection.Suggestion</td></tr></tbody></table></div>
-5.  Click on&nbsp;**Save**&nbsp;and deploy your changes on your instance.
+    <div class="table-scroll">
+      <table class="hover">
+        <tbody>
+          <tr>
+            <td colspan="1">restoreSeamCtx</td>
+            <td colspan="1">false</td>
+          </tr>
+          <tr>
+            <td colspan="1">operationId</td>
+            <td colspan="1">Collection.Suggestion</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+5.  Click on **Save** and deploy your changes on your instance.<br/><br/>
 
 You should end up with something like this:
+
+{{! /multiexcerpt}}
 
 ![]({{file name='custom_bulk_edit.png'}} ?w=350,border=true)
 
 ## Customizing the Bulk Edit Versioning Policy
 
-When users edit several documents at the same time using the bulk edit form, a new version of the documents is saved before applying the modifications. The default versioning policy consists in creating a minor version.
+When users edit several documents at the same time using the bulk edit form, a new version of the documents is saved before applying the modifications. The default versioning policy is to create a minor version.
 
-This versioning policy can be configured through the&nbsp;[versioning](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.webapp.bulkedit.BulkEditService--versioning)&nbsp;extension point:
+This versioning policy can be configured through the [versioning](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.webapp.bulkedit.BulkEditService--versioning) extension point:
 
 ```xml
 <extension target="org.nuxeo.ecm.webapp.bulkedit.BulkEditService"
