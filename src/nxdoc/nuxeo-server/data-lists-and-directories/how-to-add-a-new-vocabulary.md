@@ -237,7 +237,7 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' heading='No cache for Studio created vocabularies'}}
+{{#> callout type='info' heading='No cache for Studio-created vocabularies'}}
 
 Please be aware there is no cache enabled by default when creating a new vocabulary in Studio (see [NXS-2504](https://jira.nuxeo.com/browse/NXS-2504)).
 
@@ -245,7 +245,7 @@ In order to set up a cache, follow the steps described in [How to Configure a Ne
 
 {{/callout}}{{! excerpt}}
 
-Studio enables you to declare new vocabularies that will be used in the different document layouts to fill in metadata or in virtual navigations.
+Studio allows you to declare new vocabularies that can be used in the different document layouts to fill in metadata or in virtual navigations.
 
 {{! /excerpt}}
 
@@ -253,7 +253,7 @@ A vocabulary is a list of labels that are used in the application to populate th
 
 {{! multiexcerpt name='3-types-vocabulary'}}
 
-There are 3 types of vocabulary:
+There are 3 types of vocabularies:
 
 *   Simple vocabulary: one-level vocabulary,
 *   Hierarchical vocabulary: multi-level vocabulary.
@@ -269,17 +269,17 @@ There are 3 types of vocabulary:
 
 <span style="color: rgb(0,0,0);font-size: 20.0px;line-height: 1.5;">Creating a New Vocabulary</span>
 
-1.  Click on the&nbsp;**Vocabularies**&nbsp;item of the Studio menu.
+1.  Click on the **Vocabularies** item of the Studio menu.
 
     {{#> callout type='info' }}
 
     For an exhaustive presentation of the vocabulary configuration, see the [Vocabularies]({{page space='studio' page='vocabularies'}}) page.
 
     {{/callout}}
-2.  Click on the&nbsp;**New**&nbsp;button.
+2.  Click on the **New** button.
 3.  Fill in the ID and vocabulary type and click on the **Next** button.
     ![]({{file name='STUDIO-vocabulary-type-selection.png'}} ?w=350,border=true)
-4.  Fill in the values like you want.
+4.  Fill in the values as desired.
     ![]({{file name='STUDIO-vocabulary-form.png'}} ?w=450,h=114,border=true)
 
     {{#> callout type='tip' }}
