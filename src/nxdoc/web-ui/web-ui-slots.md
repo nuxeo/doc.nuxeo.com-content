@@ -180,6 +180,7 @@ The [Nuxeo DAM](https://github.com/nuxeo/nuxeo-dam/blob/8.10/nuxeo-dam-web-ui/sr
   </template>
 </nuxeo-slot-content>
 ```
+See this [documentation]({{page version='' space='nxdoc' page='web-ui-search'}}) for further information to create your own search for the Web UI.
 
 **Slot Model Properties**
 
@@ -203,9 +204,33 @@ This ADMINISTRATION_MENU slot allows to add additional Administration sub menus.
 
 ##### USER_MENU{{> anchor 'user_menu'}}
 
-This USER_MENU slot allows to add additional User sub menus.
+This USER_MENU slot allows to add additional User sub menu items.
 
 ![]({{file name='USER_MENU.png'}} ?w=400,border=true)
+
+On the above screenshot, you can see there's a Nuxeo Drive User menu item which is not part of the default Web UI. Indeed, it is extended by the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon which contributes the `USER_MENU` slot with [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html#L24):
+
+```xml
+<nuxeo-slot-content name="drivePageLink" slot="USER_MENU">
+  <template>
+    <nuxeo-menu-item route="page:drive" label="app.user.drive"></nuxeo-menu-item>
+  </template>
+</nuxeo-slot-content>
+```
+Note the:
+```properties
+route="page:drive"
+```
+thanks to this property, the action of clicking this menu items will navigate to a page named `drive`. This page is actually also contributed to the Web UI with the [PAGES](#drawer_pages) slot extension also from [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html#L31):
+
+```xml
+<nuxeo-slot-content name="drivePage" slot="PAGES">
+  <template>
+    <nuxeo-drive-page class="flex" name="drive"></nuxeo-drive-page>
+  </template>
+</nuxeo-slot-content>
+```
+which will be inserted in [nuxeo-app.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L338).
 
 **Slot Model Properties**
 
@@ -216,7 +241,7 @@ This USER_MENU slot allows to add additional User sub menus.
 
 ##### DRAWER_PAGES and PAGES {{> anchor 'drawer_pages'}}
 
-Documentation coming soon.
+The `DRAWER_PAGES` allows to add new items to the main left drawer menu (see below screenshot) and works exactly the same than the [USER_MENU](#user_menu) one.
 
 ![]({{file name='DRAWER_PAGES.png'}} ?w=400,border=true)
 
