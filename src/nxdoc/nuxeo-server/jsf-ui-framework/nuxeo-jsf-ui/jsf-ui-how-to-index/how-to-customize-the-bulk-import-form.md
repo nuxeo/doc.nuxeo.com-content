@@ -196,7 +196,7 @@ history:
         version: '1'
 
 ---
-The bulk import screen offers a form that allows to edit several documents at the same time.&nbsp;You can customize it with Studio by creating a form layout named&nbsp;`bulkImport`. The "Create" layout will be used on the bulk import popup.
+The bulk import screen has a form that allows you to edit several documents at the same time. You can customize it with Studio by creating a form layout named `bulkImport`. The "Create" layout will be used on the bulk import popup.
 
 ![]({{file name='default_bulk_import.png' space='userdoc' page='creating-content'}} ?w=500,border=true)
 
@@ -221,56 +221,23 @@ Note that the Where and Files fields are obviously not customizable and will alw
 
 1.  Go to your Nuxeo Platform instance.
 2.  Connect as Administrator with Administrator password.
-3.  Click on&nbsp;**Admin Center**&nbsp;>&nbsp;**Update Center**&nbsp;>&nbsp;**Nuxeo Studio**.
-4.  Click on the&nbsp;**Update**&nbsp;button.
-5.  Go in a workspace and edit your documents.
+3.  Click on **Admin Center** > **Update Center** > **Nuxeo Studio**.
+4.  Click on the **Update** button.
+5.  Go in a workspace and import your documents.
 
 ![]({{file name='contract_bulk_import.png'}} ?w=450)
 
-## Specific Cases
-
-When you want to create a bulk edit form with the possibility to edit the collections and the tags, you need a particular configuration.
-
-**Tags**
-
-When you configure a widget to select tags, the field that needs to be referenced is&nbsp;`contextData['request/bulk_tags']`
-
-1.  Drag and drop a generic widget from the right to the grid,
-2.  Fill in the creation form,&nbsp;
-    ![]({{file name='tags_widget_editor.png' page='how-to-customize-the-bulk-edit-form'}} ?w=350,h=328,border=true)
-3.  In the Edit Properties, select **Yes** for the **Can Select New Tag** field,
-4.  Click on **Save** and deploy your changes on your instance.
-
-**Collections**
-
-When configuring a widget to select collections, the field that needs to be referenced is `contextData['request/bulk_collections']`.
-
-1.  Drag and drop a generic widget from the right to the grid,
-2.  Fill in the creation form,&nbsp;
-    ![]({{file name='collections_widget_editor.png' page='how-to-customize-the-bulk-edit-form'}} ?w=350,border=true)
-3.  Fill in the Edit Properties:
-
-    <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
-
-    <div class="gwt-HTML form-label" title="Editor for property 'pageProviderName'">Document page provider name</div>
-
-    </td><td colspan="1">`default_document_suggestion`</td></tr><tr><td colspan="1">Selection Formatter</td><td colspan="1">`formatSelectedCollection`</td></tr><tr><td colspan="1"><span style="color: rgb(67,67,67);">Suggestion Formatter</span></td><td colspan="1">`formatSuggestedCollection`</td></tr></tbody></table></div>
-4.  In the Custom properties part fill in the following fields:
-
-    <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">restoreSeamCtx</td><td colspan="1">false</td></tr><tr><td colspan="1">operationId</td><td colspan="1">Collection.Suggestion</td></tr></tbody></table></div>
-5.  Click on&nbsp;**Save**&nbsp;and deploy your changes on your instance.
-
-You should end up with something like this:
+{{{multiexcerpt 'bulk-edit-form-specific-cases' page='how-to-customize-the-bulk-edit-form'}}}
 
 ![]({{file name='form_layout.png'}} ?w=450)
 
 ## Adding New Import Options
 
-The bulk import popup can display more than one import layout. When more than one is contributed, you can select which one you want to use to import the uploaded documents through the "Import Options" field.&nbsp;
+The bulk import popup can display more than one import layout. When more than one is contributed, you can select which one you want to use to import the uploaded documents through the "Import Options" field.
 
-An import option is contributed through an action in the&nbsp;IMPORT_DOCUMENTS&nbsp;category.&nbsp;
-The action must reference the&nbsp;chainId&nbsp;and the&nbsp;layout&nbsp;to use for this import option.&nbsp;
-The action label is used in the "Import Options" select.&nbsp;
+An import option is contributed through an action in the `IMPORT_DOCUMENTS` category.
+The action must reference the `chainId` and the `layout` to use for this import option.
+The action label is used in the "Import Options" select.
 
 The contribution of the default bulk import is:
 
@@ -290,13 +257,13 @@ The contribution of the default bulk import is:
 </extension>
 ```
 
-The layout displayed will be&nbsp;`bulkImport@create`&nbsp;and documents will be imported through the&nbsp;`FileManager.ImportWithMetaDataInSeam`&nbsp;chain.&nbsp;
+The layout displayed will be `bulkImport@create` and documents will be imported through the `FileManager.ImportWithMetaDataInSeam` chain.
 
 To add a new one, you can just add a new action referencing your own layout (or the default one) and your own chain id (or the default one).
 
-In this example we create an import option that puts the status of your document&nbsp;&ldquo;obsolete&rdquo; if you&nbsp;type in the term "legacy" in the source metadata.
+In this example we create an import option that changes the status of your document to "obsolete" if you type in the term "legacy" in the source metadata.
 
-1.  In Studio, create this automation chain,
+1.  In Studio, create this automation chain.
 
     ```xml
     - FileManager.Import:
@@ -309,7 +276,7 @@ In this example we create an import option that puts the status of your document
     - Seam.Refresh
     ```
 
-2.  You can now create an xml extension to add an import option that call our chain,
+2.  You can now create an xml extension to add an import option that calls our chain.
 
     ```xml
     <extension target="org.nuxeo.ecm.platform.actions.ActionService"
@@ -326,14 +293,13 @@ In this example we create an import option that puts the status of your document
     </extension>
     ```
 
-3.  Click on&nbsp;**Save**.
-    You can now deploy your changes on your platform.&nbsp;
+3.  Click on **Save**. You can now deploy the changes on your platform.
 
 ![]({{file name='my_custom_import.png'}} ?w=450,border=true)
 
 ## Disabling the Default Import Option
 
-If you want to disable the default import option (after having contributed a new one for instance), you can do it with the following contribution:
+If you want to disable the default import option (after having contributed a new one, for example), you can do it with the following contribution:
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.actions.ActionService"
@@ -345,13 +311,13 @@ If you want to disable the default import option (after having contributed a new
 
 ![]({{file name='custom_import.png'}} ?w=450,h=303,border=true)
 
-After deploying your changes, you can only see your custom import option when you click on **Import**.&nbsp;
+After deploying your changes, you can only see your custom import option when you click on **Import**.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [JSF and Ajax Tips and How-To Index]({{page page='jsf-and-ajax-tips-and-how-to-index'}})
-*   [Layout and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [JSF and Ajax Tips and How-To Index]({{page page='jsf-and-ajax-tips-and-how-to-index'}})
+- [Layout and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">
 
