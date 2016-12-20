@@ -77,7 +77,7 @@ history:
         version: '1'
 
 ---
-HTML5 drag and drop enables users to [import documents in a folder]({{page space='userdoc' page='creating-content#content-creation-dandd'}}) and fill their metadata at the same time.
+HTML5 Drag and Drop enables users to [import documents in a folder]({{page space='userdoc' page='creating-content#content-creation-dandd'}}) and fill in their metadata at the same time.
 
 ![]({{file name='smartDnD_metadata.png' space='userdoc' page='creating-content'}} ?w=650,h=289,border=true)
 
@@ -114,9 +114,9 @@ Follow the steps to below to customize the import form.
 7.  [Deploy your changes]({{page space='studio' page='deploying-your-project-in-dev-mode'}}) and drag and drop documents to display the smart import with metadata form..
     ![]({{file name='dndEdit_result.png'}} ?w=600,border=true)
 
-**Notes about Drag and drop form**
+**Notes about the Drag and Drop form**
 
-It is currently not possible to use tags, collections and complex types on this form.
+It is currently not possible to use tags, collections or complex types on this form.
 
 * * *
 
