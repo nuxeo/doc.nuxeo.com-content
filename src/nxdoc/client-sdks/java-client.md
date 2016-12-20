@@ -706,7 +706,7 @@ Several usages:
 - POJOS and Annotations.
 - Custom JSON generators and parsers.
 
-**Caching Interceptors**
+### Caching interceptors
 
 #### Goals
 
@@ -726,7 +726,7 @@ All caches should be accessible via a generated cache key defined by the request
 
 ##### How many?
 
-3 caches should be implemented:
+5 caches should be implemented:
 
 - **Raw Response Store** : The server response is simply stored on the device so that it can be reused in case the server is unreachable OR to avoid too many frequent calls.
 - **Document Response Store**: Store the unmarshalled response objects (here Documents) and updates.
