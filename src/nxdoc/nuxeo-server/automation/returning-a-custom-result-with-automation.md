@@ -113,7 +113,7 @@ Below is an example, based on the results returned by the method `QueryAndFetch`
 
 *   Registering this operation
 
-    ```html/xml
+    ```xml
     <?xml version="1.0"?>
     <component name="org.nuxeo.support.operations">
 
@@ -122,7 +122,6 @@ Below is an example, based on the results returned by the method `QueryAndFetch`
         <operation class="org.nuxeo.support.QueryAndFetch" />
       </extension>
     </component>
-
     ```
 
 *   Sample code to use the result from the operation
@@ -135,5 +134,4 @@ Below is an example, based on the results returned by the method `QueryAndFetch`
     String json = FileUtils.read(response.getStream());
     JSONArray array = JSONArray.fromObject(json);
     System.out.println("Objects received : " + array.size());
-
     ```

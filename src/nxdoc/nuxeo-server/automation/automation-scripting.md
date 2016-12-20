@@ -389,7 +389,7 @@ Fn.getEmail("Administrator")
 
 ### Dates Comparison
 
-```
+```js
 function run(input, params) {
 
  // nowDate, javascript instantiated date should be ISO stringified as follow
@@ -429,7 +429,7 @@ The Nashorn Engine provides a simple way to remotely debug Automation Scripts vi
 
 Example:
 
-```
+```js
 function run(input, params) {
 	var nowDate = new Date().toISOString();
 	debugger;
@@ -446,13 +446,13 @@ function run(input, params) {
 
 When printing values as follow, the output is redirected to the console:
 
-```
+```js
 print("value")
 ```
 
 But you can also use the helper "Console" to write logs within `NUXEO_HOME/log/server.log`:
 
-```
+```js
 Console.info("Informations");
 Console.warn("Warnings");
 Console.error("Errors");
@@ -462,7 +462,7 @@ Console.error("Errors");
 
 To get the value of a Context Variable you should use the following syntax:
 
-```
+```js
 ctx.get('var')
 ```
 
@@ -484,7 +484,7 @@ This feature gives the ability to get time execution information through `JMX: o
 
 All Java imports are forbidden by default into the Nuxeo Platform. This example cannot be applied anymore.
 
-```
+```js
 var file = Java.type("java.io.File");
 print(file);
 ```
@@ -636,7 +636,7 @@ Automation scripting operations can be used as common Automation operations:
     {{/panel}}
 *   Using it directly from the [Automation Service]({{page page='calling-automation-from-java'}}):
 
-    ```
+    ```java
     OperationContext ctx = new OperationContext(session);
     Map<String, Object> params = new HashMap<>();
 

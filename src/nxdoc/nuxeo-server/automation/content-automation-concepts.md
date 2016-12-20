@@ -642,7 +642,7 @@ Let the following chains be:
 
 {{#> panel type='code' heading='chain2'}}
 
-```
+```js
 - Document > Update Property {"xpath":"dc:title", "value":"hello world"}
 - Document > Update Property {"xpath":"dc:source", "value":"hello source"}
 
@@ -716,7 +716,7 @@ Some operations have a list of objects as a signature: document, documents or bl
 
 {{#> panel type='code' heading='chain8 - Native Loop'}}
 
-```
+```js
 - Fetch > Query {"query":"SELECT * FROM File"} // Doing a query that will return multiple documents.
 - Document > Update Property {"xpath":"dc:description", "value":"Showing native looping"} // The update property will be executed as many time as there are documents returned by the previous query, before going to the next operation.
 - Document > Lock {"owner":"Administrator"}// Each of the documents returned by the previous operation will be locked.
@@ -724,7 +724,7 @@ Some operations have a list of objects as a signature: document, documents or bl
 
 {{/panel}}
 
-An algorithm equivalent to the chain above would be something like :
+An algorithm equivalent to the chain above would be something like:
 
 ```
 //Note: The following code doesn't match any valid syntax, it is here to illustrate the algorithm logic behind the automation chain "chain8".
@@ -749,7 +749,7 @@ An example use case would be if you want for all the documents resulting from a 
 
 {{#> panel type='code' heading='chain9 - Copy of the Property, for a given Document'}}
 
-```
+```js
 - Fetch > Context Document(s)
 - Execution Context > Set Context Variable {"name":"sourceValue","value":"@{Document['dc:source']}"}
 - Document > Update Property {"xpath":"dc:description", "value":"@{Context['sourceValue']"}
@@ -758,14 +758,14 @@ An example use case would be if you want for all the documents resulting from a 
 
 {{/panel}}{{#> panel type='code' heading='chain10'}}
 
-```
+```js
 - Fetch > Query {"query":"SELECT * FROM File"} // Doing a query that will return multiple documents.
 - Execution Flow > Run Document Chain {"id": "chain8"}
 ```
 
 {{/panel}}
 
-An algorithm equivalent to executing chain9 would be:
+An algorithm equivalent to executing chain would be:
 
 ```
 //Note: The following code doesn't match any valid syntax, it is here to illustrate the algorithm logic behind the automation chain "chain10".

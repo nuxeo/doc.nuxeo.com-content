@@ -148,7 +148,7 @@ Chain contribution is done via the [Nuxeo extension point mechanism]({{page page
 
 Here is an example of a chain extension:
 
-```html/xml
+```xml
   <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="chains">
     <chain id="downloadAllChain">
       <param type="string" name="chainParameterName">chainParameterValue</param>
@@ -193,7 +193,7 @@ It is possible to create "composite operations": Adding chains into a chain.
 
 Here is an example of how to contribute this kind of automation chain:
 
-```html/xml
+```xml
 <extension point="chains"
     target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
     <chain id="contributedchain">
@@ -224,7 +224,7 @@ The `contributedchainleaf` chain is contributed with its operations and is inclu
 
 In Automation you can add aliases for each chain:
 
-```html/xml
+```xml
   <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="chains">
     <chain id="doc_create_chain_alias">
       <aliases>

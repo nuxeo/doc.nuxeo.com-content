@@ -75,15 +75,15 @@ For a more advanced rendition service, you may be interested in having a look at
 
 ## FreeMarker Templating Language (ftl)
 
-*   `**${Document}**` - the context document. This is the document on which the rendering is done in the case the rendering is done on a single document. When the input is a list of document then this variable is undefined.
+*   **`${Document}`** - the context document. This is the document on which the rendering is done in the case the rendering is done on a single document. When the input is a list of document then this variable is undefined.
 *   **`${This}`** - the rendering input. Will be a document in the case of a single document or a list of documents in th case of multiple documents.
 *   **`${Session}`** - the current core session.
-*   `**${Context}**` - the context.
+*   **`${Context}`** - the context.
 *   **`${CurrentDate}`** - the current date. See [Use of MVEL in Automation chains (date wrapper)]({{page page='use-of-mvel-in-automation-chains'}}) for details.
 *   **`${Fn}`** - a collection of useful functions. See [Use of MVEL in Automation chains (fn object)]({{page page='use-of-mvel-in-automation-chains'}}) for details.
-*   `**${Env}**` - a hashmap containing Nuxeo environment variables. Example: `Env["org.nuxeo.ecm.product.name"]`.
-*   `**${CurrentUser}**` - the current user.
-    Note that `**${CurrentUser}**` is not correctly working for now in ftl templates - but only in mvel templates.
+*   **`${Env}`** - a hashmap containing Nuxeo environment variables. Example: `Env["org.nuxeo.ecm.product.name"]`.
+*   **`${CurrentUser}`** - the current user.
+    Note that **`${CurrentUser}`** is not correctly working for now in FTL templates - but only in MVEL templates.
 
 By using the FreeMarker templating engine, you also gain access to its whole functionalities. For example, using a document list could be done as following:
 

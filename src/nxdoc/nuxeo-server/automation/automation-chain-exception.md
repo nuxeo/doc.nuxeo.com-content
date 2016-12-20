@@ -138,7 +138,7 @@ Automation exception chain can be added to be executed when an error occurs duri
 
 After contributing your custom chains, you can declare your exception chains:
 
-```html/xml
+```xml
 <extension point="chainException"
              target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
 
@@ -163,7 +163,7 @@ After contributing your custom chains, you can declare your exception chains:
 
 Here is the contribution to deploy filters that can be added to decide which chain is going to be executed:
 
-```html/xml
+```xml
 <extension point="automationFilter"
              target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
 
@@ -178,7 +178,7 @@ These filters are strictly written in MVEL template or expression starting by '`
 
 Exception is cached into the operation context and can be used into filters:
 
-```html/xml
+```xml
 <extension point="automationFilter"
              target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
 

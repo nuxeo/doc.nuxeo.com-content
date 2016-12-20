@@ -76,7 +76,7 @@ I have to create an ExceptionTest extending the RestOperationException:
 
 {{#> panel type='code' heading='ExceptionTest.java'}}
 
-```
+```java
 /*
  * (C) Copyright 2014 Nuxeo SA (http://nuxeo.com/) and contributors.
  *
@@ -122,7 +122,7 @@ Given a custom operation HttpStatusOperationTest:
 
 {{#> panel type='code' heading='HttpStatusOperationTest.java'}}
 
-```
+```java
 /*
  * (C) Copyright 2014 Nuxeo SA (http://nuxeo.com/) and contributors.
  *
@@ -207,7 +207,7 @@ Given a custom operation HttpStatusOperationTest:
 
 {{#> panel type='code' heading='HttpStatusOperationTest.java'}}
 
-```
+```java
 /*
  * (C) Copyright 2014 Nuxeo SA (http://nuxeo.com/) and contributors.
  *

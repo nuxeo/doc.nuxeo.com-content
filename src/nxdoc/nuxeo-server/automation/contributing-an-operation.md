@@ -617,7 +617,7 @@ public class ParamNameWithAliasOperation {
 
 And operation parameter aliases as:
 
-```
+```java
 import org.nuxeo.ecm.automation.core.annotations.Operation;
 import org.nuxeo.ecm.automation.core.annotations.OperationMethod;
 import org.nuxeo.ecm.automation.core.annotations.Param;
