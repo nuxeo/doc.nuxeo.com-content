@@ -2,10 +2,10 @@
 title: Automation Helpers
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - automation
     - automation-component
     - excerpt
@@ -121,11 +121,11 @@ Two helpers are set by default into Nuxeo Platform: "**Fn**" and "**HTTP**".
 *   **HTTP**:
     Functions of **HTTP** helper can be used to make remote REST Calls.
 
-### **HTTP** Examples
+### HTTP Examples
 
 {{#> panel type='code' heading='GET REST Call from Nuxeo to another Nuxeo repository'}}
 
-```
+```java
 import org.nuxeo.ecm.core.api.Blob;
 import org.nuxeo.ecm.core.api.CoreSession;
 import org.nuxeo.ecm.automation.AutomationService;
@@ -148,7 +148,7 @@ String result = ((Blob) ctx.get("result")).getString();
 
 {{/panel}}{{#> panel type='code' heading='POST REST Call from Nuxeo to another Nuxeo repository'}}
 
-```
+```java
 import org.nuxeo.ecm.core.api.Blob;
 import org.nuxeo.ecm.core.api.CoreSession;
 import org.nuxeo.ecm.automation.AutomationService;

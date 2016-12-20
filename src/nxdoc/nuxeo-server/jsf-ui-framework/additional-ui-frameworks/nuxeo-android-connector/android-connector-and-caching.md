@@ -2,10 +2,10 @@
 title: Android Connector and Caching
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - android-connector-component
 toc: true
 confluence:
@@ -77,7 +77,7 @@ history:
 
 ## ResponseCache
 
-Automation responses can be cached.&nbsp;This basically means that the JSON response sent by the Nuxeo server is stored on the local filesystem and is associated with a DB record that maintains metadata.
+Automation responses can be cached. This basically means that the JSON response sent by the Nuxeo server is stored on the local filesystem and is associated with a DB record that maintains metadata.
 The extra metadata in the SQL DB are used to be able to match a response with the corresponding request. The DB also contains the informations to be able to reconstruct the request, so that the cache can be refreshed.
 
 Compared to the "standard Automation Client API", when calling an operation you can specify expected caching behavior.
@@ -98,11 +98,11 @@ Compared to the "standard Automation Client API", when calling an operation you 
 
 ## TransientState
 
-This cache stores document deltaset (changes done in the document).&nbsp;This includes newly created documents that do only exist in local.
+This cache stores document deltaset (changes done in the document). This includes newly created documents that do only exist in local.
 
 The TransientState manager is mainly updated via events (`AndroidTransientStateManager` is a `BroadcastReceiver`).
 
-This design helps making the TransientState management as transparent as possible.&nbsp;When a Document is created or update in local, a event is sent : TransientStateManager stores the delta.&nbsp;When the create/update operation has been processed by the server a new event will be fired and the TransientStateManager will delete the local storage.
+This design helps making the TransientState management as transparent as possible. When a Document is created or update in local, a event is sent : TransientStateManager stores the delta. When the create/update operation has been processed by the server a new event will be fired and the TransientStateManager will delete the local storage.
 
 To reflect the synchronization status, the Document has a `getStatusFlag()` that returns an Enum:
 
@@ -115,12 +115,12 @@ To reflect the synchronization status, the Document has a `getStatusFlag()` that
 
 ## Deferred Updates
 
-This caches keeps track of the Create/Update/Delete operations that are pending and should be sent to the server when network is accessible.&nbsp;Each cached operation is indirectly linked to a set of TransientState.&nbsp;In addition, pending Request can have dependencies:
+This caches keeps track of the Create/Update/Delete operations that are pending and should be sent to the server when network is accessible. Each cached operation is indirectly linked to a set of TransientState. In addition, pending Request can have dependencies:
 
 *   dependencies between update requests,
 *   dependencies with pending Uploads.
 
-Deferred Updates system is exposed via `DeferredUpdateManager` service interface.&nbsp;This service can be used to send an update request:
+Deferred Updates system is exposed via `DeferredUpdateManager` service interface. This service can be used to send an update request:
 
 ```
 String execDeferredUpdate(OperationRequest request, AsyncCallback<Object> cb, OperationType opType, boolean executeNow);

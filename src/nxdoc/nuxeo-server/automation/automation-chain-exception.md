@@ -2,10 +2,10 @@
 title: Automation Chain Exception
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - automation
     - exception
     - debug
@@ -134,13 +134,11 @@ Content Automation provides means to debug and handle exception during the Autom
 
 {{! /excerpt}}
 
-&nbsp;
-
 Automation exception chain can be added to be executed when an error occurs during an Automation execution.
 
 After contributing your custom chains, you can declare your exception chains:
 
-```html/xml
+```xml
 <extension point="chainException"
              target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
 
@@ -165,7 +163,7 @@ After contributing your custom chains, you can declare your exception chains:
 
 Here is the contribution to deploy filters that can be added to decide which chain is going to be executed:
 
-```html/xml
+```xml
 <extension point="automationFilter"
              target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
 
@@ -180,7 +178,7 @@ These filters are strictly written in MVEL template or expression starting by '`
 
 Exception is cached into the operation context and can be used into filters:
 
-```html/xml
+```xml
 <extension point="automationFilter"
              target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
 
