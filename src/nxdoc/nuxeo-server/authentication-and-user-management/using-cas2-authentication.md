@@ -1,5 +1,5 @@
 ---
-title: CAS2 / CAS
+title: CAS2 Authentication
 review:
     comment: ''
     date: '2015-12-01'
@@ -187,9 +187,8 @@ To install the CAS2 authentication plugin:
 
 1.  Make sure there is a CAS server already setup and running.
 2.  Install the [CAS2 Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication).
-3.  Put CAS2 plugin into the authentication chain.
-    {{{multiexcerpt 'authentication_chain_contribution' page='Authentication and User Management'}}}
-    Use `CAS2_AUTH`.
+3.  Put CAS2 plugin into the authentication chain.{{{multiexcerpt 'authentication_chain_contribution' page='Authentication and User Management'}}}
+  Use `CAS2_AUTH`.
 4.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) called `CAS2-config.xml` with the following content:
 
     ```

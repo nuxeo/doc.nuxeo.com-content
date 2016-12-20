@@ -19,7 +19,7 @@ confluence:
     shortlink: YRE5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/YRE5AQ'
     source_link: /display/NXDOC/Nuxeo+DuoWeb+Two-Factor+Authentication
-tree_item_index: 1600
+tree_item_index: 210
 history:
     -
         author: Solen Guitter
@@ -59,7 +59,6 @@ history:
 
 ---
 {{! excerpt}}
-
 The Nuxeo addon nuxeo-duoweb-authentication is an integration of [DuoWeb](http://www.duosecurity.com) access in Nuxeo login plugin and provides two-factor authentication through the Nuxeo login page.
 
 This plugin is available for Nuxeo Platform 5.8 and above.

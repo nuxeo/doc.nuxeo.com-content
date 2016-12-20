@@ -1,5 +1,5 @@
 ---
-title: Basic HTTP
+title: Basic HTTP Authentication
 review:
     comment: ''
     date: '2016-12-14'
