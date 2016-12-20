@@ -40,13 +40,32 @@ For a better understanding, please refer to the [DOCUMENT_ACTIONS](#document_act
 
 ## Web UI slots
 
+### Summary
 Here are the `nuxeo-slots` available in the Nuxeo Web UI.
 
-### Document Browsing slots
+| Slot name                                                                                       | Extension purpose                               | Where                                                               |
+|:------------------------------------------------------------------------------------------------|:------------------------------------------------|:--------------------------------------------------------------------|
+| [DOCUMENT_ACTIONS](#document_actions)                                                           | Additional Current document actions             | ![]({{file name='DOCUMENT_ACTIONS.png'}} ?w=100,border=true)        |
+| [DOCUMENT_VIEWS_ITEMS](#document_view_items) <br/> [DOCUMENT_VIEWS_PAGES](#document_view_items) | Additional Current document views               | ![]({{file name='DOCUMENT_VIEWS_ITEMS.png'}} ?w=100,border=true)    |
+| [BLOB_ACTIONS](#blob_actions)                                                                   | Additional Current document blobs actions       | ![]({{file name='BLOB_ACTIONS.png'}} ?w=100,border=true)            |
+| [BROWSE_ACTIONS](#browse_actions)                                                               | Additional Current browse selection actions     | ![]({{file name='BROWSE_ACTIONS.png'}} ?w=100,border=true)          |
+| [SEARCH_MENU_BUTTONS](#search_menu_buttons)                                                     | Additional Search                               | ![]({{file name='SEARCH_MENU_BUTTONS.png'}} ?w=100,border=true)     |
+| [ADMINISTRATION_MENU](#administration_menu) <br/> [ADMINISTRATION_PAGES](#administration_menu)  | Additional Administration menu                  | ![]({{file name='ADMINISTRATION_MENU.png'}} ?w=100,border=true)     |
+| [USER_MENU](#user_menu)                                                                         | Additional User menu                            | ![]({{file name='USER_MENU.png'}} ?w=100,border=true)               |
+| [DRAWER_PAGES](#drawer_pages) <br/> [PAGES](#drawer_pages)                                      | Additional main menu items                      | ![]({{file name='DRAWER_PAGES.png'}} ?w=100,border=true)            |
+| [DOCUMENT_CREATE_ACTIONS](#document_create_actions)                                             | Additional document creation actions            | ![]({{file name='DOCUMENT_CREATE_ACTIONS.png'}} ?w=100,border=true) |
+| [FILE_UPLOAD_ACTIONS](#file_upload_actions)                                                     | Additional document import wizards              | ![]({{file name='FILE_UPLOAD_ACTIONS.png'}} ?w=100,border=true)     |
+| [SEARCH_ACTIONS](#search_actions)                                                               | Additional search results selection actions     | ![]({{file name='SEARCH_ACTIONS.png'}} ?w=100,border=true)          |
+| [COLLECTION_ACTIONS](#collection_actions)                                                       | Additional collection members selection actions | ![]({{file name='COLLECTION_ACTIONS.png'}} ?w=100,border=true)      |
+| [ANALYTICS_ITEMS](#analytics_pages) <br/> [ANALYTICS_PAGES](#analytics_pages)                   | Additional analytics pages                      | ![]({{file name='ANALYTICS_ITEMS.png'}} ?w=100,border=true)         |
+
+### Details
+
+#### Document Browsing slots
 
 The following slots allows to extend available pages and actions when browsing a given document. They are located in [nuxeo-browser.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html).
 
-#### DOCUMENT_ACTIONS{{> anchor 'document_actions'}}
+##### DOCUMENT_ACTIONS{{> anchor 'document_actions'}}
 
 This slot defines the available top right actions to be performed on the current document such as *Add to collection*, *Share*, *Export*, etc.
 
@@ -99,7 +118,7 @@ The `DOCUMENT_ACTIONS` has therefore the following:
 | `document`  | The current document.              |
 | `clipboard` | The application clipboard content. |
 
-#### DOCUMENT_VIEWS_ITEMS and DOCUMENT_VIEWS_PAGES
+##### DOCUMENT_VIEWS_ITEMS and DOCUMENT_VIEWS_PAGES{{> anchor 'document_view_items'}}
 
 The **DOCUMENT_VIEWS_ITEMS** slot allows to define the available items to navigate on current document views such as *View*, *Permissions* and *History*.
 
@@ -115,7 +134,7 @@ Example coming soon.
 |:-----------|:----------------------|
 | `document` | The current document. |
 
-#### BLOB_ACTIONS
+##### BLOB_ACTIONS{{> anchor 'blob_actions'}}
 
 This slot is available on current document that has attached blobs. Default actions are *Preview*, *Delete* and *Open with Nuxeo Drive* (when the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon is installed).
 
@@ -129,7 +148,7 @@ This slot is available on current document that has attached blobs. Default acti
 | `blob`     | The blob description (i.e. `{name: "nuxeo_fact sheet_0.1.png", mime-type: "image/png", encoding: null, digestAlgorithm: "MD5",…}`) |
 | `xpath`    | The blob property xpath                                                                                                            |
 
-#### BROWSE_ACTIONS{{> anchor 'browse_actions'}}
+##### BROWSE_ACTIONS{{> anchor 'browse_actions'}}
 
 This slot is displayed when selecting one or more children documents of a Folderish current document. It provides bulked actions on the selection such as *Add to collection*, *Delete selected items*, etc.
 
@@ -142,11 +161,11 @@ This slot is displayed when selecting one or more children documents of a Folder
 | `document`      | The current document.                   |
 | `selectedItems` | An array of selected content documents. |
 
-### Main Application Menu slots
+#### Main Application Menu slots
 
 The Web UI revolves around a left drawer menu allowing to navigate to documents, searches, application administration, collections, etc. The following slots shows how to extend this menu.
 
-#### SEARCH_MENU_BUTTONS
+##### SEARCH_MENU_BUTTONS{{> anchor 'search_menu_buttons'}}
 
 This slot allows to define additional searches accessible from the left menu.
 
@@ -169,7 +188,7 @@ The [Nuxeo DAM](https://github.com/nuxeo/nuxeo-dam/blob/8.10/nuxeo-dam-web-ui/sr
 | `document`    | The current document. |
 | `currentUser` | The current user.     |
 
-#### ADMINISTRATION_MENU and ADMINISTRATION_PAGES
+##### ADMINISTRATION_MENU and ADMINISTRATION_PAGES{{> anchor 'administration_menu'}}
 
 This ADMINISTRATION_MENU slot allows to add additional Administration sub menus.
 
@@ -182,7 +201,7 @@ This ADMINISTRATION_MENU slot allows to add additional Administration sub menus.
 | `document`    | The current document. |
 | `currentUser` | The current user.     |
 
-#### USER_MENU
+##### USER_MENU{{> anchor 'user_menu'}}
 
 This USER_MENU slot allows to add additional User sub menus.
 
@@ -195,9 +214,11 @@ This USER_MENU slot allows to add additional User sub menus.
 | `document`    | The current document. |
 | `currentUser` | The current user.     |
 
-#### PAGES and DRAWER_PAGES
+##### DRAWER_PAGES and PAGES {{> anchor 'drawer_pages'}}
 
 Documentation coming soon.
+
+![]({{file name='DRAWER_PAGES.png'}} ?w=400,border=true)
 
 **Slot Model Properties**
 
@@ -206,9 +227,9 @@ Documentation coming soon.
 | `document`    | The current document. |
 | `currentUser` | The current user.     |
 
-### Document creation
+#### Document creation
 
-#### DOCUMENT_CREATE_ACTIONS
+##### DOCUMENT_CREATE_ACTIONS{{> anchor 'document_create_actions'}}
 
 This slot provides actions displayed when hovering the bottom right Floating Action Button to create new documents. By default, it inserts [nuxeo-document-create-shortcuts.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-document-create-actions/nuxeo-document-create-shortcuts.html) which shows shortcuts to latest created document types wizard.
 
@@ -222,7 +243,7 @@ This slot provides actions displayed when hovering the bottom right Floating Act
 | `subtypes`    | Array of the document types that can be created in the current location. |
 
 
-#### FILE_UPLOAD_ACTIONS
+##### FILE_UPLOAD_ACTIONS{{> anchor 'file_upload_actions'}}
 
 This slot is for instance used in the [Nuxeo Live Connect]({{page version='' space='nxdoc' page='nuxeo-liveconnect'}}) addon which inserts additional import wizard to upload Files to cloud services.
 
@@ -233,11 +254,11 @@ This slot is for instance used in the [Nuxeo Live Connect]({{page version='' spa
 | Property | Description |
 |:---------|:------------|
 
-### Search and Collection browsing slots
+#### Search and Collection browsing slots
 
 The screen to browse Search results and Collection contents are very similar. When selecting items in the search results or the collection contents, some bulk actions are displayed in a top menu bar (like [BROWSE_ACTIONS](#browse_actions)). These actions can be extended with the following slots.
 
-#### SEARCH_ACTIONS
+##### SEARCH_ACTIONS{{> anchor 'search_actions'}}
 
 ![]({{file name='SEARCH_ACTIONS.png'}} ?w=400,border=true)
 
@@ -248,7 +269,7 @@ The screen to browse Search results and Collection contents are very similar. Wh
 | `items`         | Array of displayed result items returned by the search, selected or not. (Note: more results could be loaded if you keep scrolling for results) |
 | `selectedItems` | Array of selected results.                                                                                                                      |
 
-#### COLLECTION_ACTIONS
+##### COLLECTION_ACTIONS{{> anchor 'collection_actions'}}
 
 ![]({{file name='COLLECTION_ACTIONS.png'}} ?w=400,border=true)
 
@@ -259,11 +280,11 @@ The screen to browse Search results and Collection contents are very similar. Wh
 | `items`         | Array of displayed collection members, selected or not. (Note: more members could be loaded if you keep scrolling for results) |
 | `selectedItems` | Array of selected collection members.                                                                                          |
 
-### Other slots
+#### Other slots
 
-#### ANALYTICS_ITEMS and ANALYTICS_PAGES
+##### ANALYTICS_ITEMS and ANALYTICS_PAGES {{> anchor 'analytics_pages'}}
 
-The **DOCUMENT_VIEWS_ITEMS** slot allows to define the available items in the analytics dashboard (accessible from the Admin menu) such as  *Document distribution*, *Repository content*, *Workflow*, etc.
+The **ANALYTICS_ITEMS** slot allows to define the available items in the analytics dashboard (accessible from the Admin menu) such as  *Document distribution*, *Repository content*, *Workflow*, etc.
 
 ![]({{file name='ANALYTICS_ITEMS.png'}} ?w=400,border=true)
 
