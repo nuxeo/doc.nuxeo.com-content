@@ -1,5 +1,5 @@
 ---
-title: Using CAS2 Authentication
+title: CAS2 Authentication
 review:
     comment: ''
     date: '2015-12-01'
@@ -23,7 +23,7 @@ confluence:
     shortlink: popH
     shortlink_source: 'https://doc.nuxeo.com/x/popH'
     source_link: /display/NXDOC/Using+CAS2+Authentication
-tree_item_index: 600
+tree_item_index: 195
 history:
     -
         author: Frantz Fischer
@@ -177,6 +177,50 @@ history:
         version: '1'
 
 ---
+This plugin implements a client for CAS SSO system (Central Authentication System).
+
+## Installation
+
+It can be configured to use a CAS proxy. It has been tested and reported to work with CAS V2\. It's easy to test this plugin by installing the JA-SIG Central Authentication Service Open Source CAS server.
+
+To install the CAS2 authentication plugin:
+
+1.  Make sure there is a CAS server already setup and running.
+2.  Install the [CAS2 Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication).
+3.  Put CAS2 plugin into the authentication chain.{{{multiexcerpt 'authentication_chain_contribution' page='Authentication and User Management'}}}
+  Use `CAS2_AUTH`.
+4.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) called `CAS2-config.xml` with the following content:
+
+    ```
+    <component name="org.nuxeo.ecm.platform.authenticator.cas2.sso.config">
+
+      <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
+      <require>org.nuxeo.ecm.platform.login.Cas2SSO</require>
+
+      <!-- Configure you CAS server parameters -->
+      <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="authenticators">
+        <authenticationPlugin name="CAS2_AUTH">
+          <loginModulePlugin>Trusting_LM</loginModulePlugin>
+          <parameters>
+            <parameter name="ticketKey">ticket</parameter>
+            <parameter name="appURL">http://127.0.0.1:8080/nuxeo/nxstartup.faces</parameter>
+            <parameter name="serviceLoginURL">http://127.0.0.1:8080/cas/login</parameter>
+            <parameter name="serviceValidateURL">http://127.0.0.1:8080/cas/serviceValidate</parameter>
+            <parameter name="serviceKey">service</parameter>
+            <parameter name="logoutURL">http://127.0.0.1:8080/cas/logout</parameter>
+          </parameters>
+        </authenticationPlugin>
+      </extension>
+    </component>
+
+    ```
+
+5.  Adapt the content of the `loginModulePlugin` section.
+6.  Save.
+
+
+## Overview
+
 A typical CAS use case would be the portal. In this n-tiers architecture, the identity is to be shared between the components.
 
 The following diagram depicts the interactions between a client, a portal, a CAS server and Nuxeo for establishing the authentication context.

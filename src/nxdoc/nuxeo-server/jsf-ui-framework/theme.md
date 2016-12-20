@@ -22,7 +22,7 @@ confluence:
     shortlink: N4AO
     shortlink_source: 'https://doc.nuxeo.com/x/N4AO'
     source_link: /display/NXDOC/Theme
-tree_item_index: 200
+tree_item_index: 600
 history:
     -
         author: Manon Lumeau

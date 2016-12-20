@@ -22,7 +22,7 @@ confluence:
     shortlink: mwg7
     shortlink_source: 'https://doc.nuxeo.com/x/mwg7'
     source_link: /display/NXDOC/Shibboleth+Authentication
-tree_item_index: 3300
+tree_item_index: 190
 history:
     -
         author: Solen Guitter

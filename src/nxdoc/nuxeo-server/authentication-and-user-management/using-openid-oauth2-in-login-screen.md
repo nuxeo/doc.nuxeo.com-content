@@ -22,7 +22,7 @@ confluence:
     shortlink: 1BM5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/1BM5AQ'
     source_link: /pages/viewpage.action?pageId=20517844
-tree_item_index: 500
+tree_item_index: 170
 history:
     -
         author: Manon Lumeau

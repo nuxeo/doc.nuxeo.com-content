@@ -19,7 +19,7 @@ confluence:
     shortlink: zRU5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/zRU5AQ'
     source_link: /display/NXDOC/Kerberos+Authentication
-tree_item_index: 700
+tree_item_index: 195
 history:
     -
         author: Manon Lumeau

@@ -1,5 +1,5 @@
 ---
-title: Using OAuth2
+title: OAuth2
 review:
     comment: ''
     date: '2015-12-01'
@@ -20,7 +20,7 @@ confluence:
     shortlink: 1IcZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/1IcZAQ'
     source_link: /display/NXDOC/Using+OAuth2
-tree_item_index: 100
+tree_item_index: 160
 history:
     -
         author: Manon Lumeau
@@ -73,11 +73,21 @@ RFC describes two endpoints:
 *   an Authorization endpoint used by the client to obtain authorization from the resource owner via user-agent redirection,
 *   a Token endpoint used by the client to exchange an authorization grant for an access token, typically with client authentication.
 
+## Installation
+
+OAuth 2 is natively supported by the Nuxeo Platform, which means there is no bundle to install and no XML extensions required to enable it. An HTTP filter handles authentication in priority compared to the filter that handles the contributed authentication chain illustrated at the beginning of this section.
+
 ## Client Registration
 
-Nuxeo allows you to register client, to specify an arbitrary name, a clientId and a clientSecret. To register your own, go to the **Admin** tab, **OAuth** and **Consumers** tab.
+Nuxeo allows you to register client, to specify an arbitrary name, a clientId and a clientSecret. To register your own:
 
-![]({{file name='OAuth2-clients-form.png'}} ?w=650,border=true)
+1. Go to the Nuxeo Platform web application, then browse **Admin Center > Cloud Services > Consumers** tab.
+2. Provide a name, a ClientId, and a ClientSecret and save.
+    OAuth endpoints are ready to be used.
+
+![]({{file name='OAuth2-ConsumerToken.png'}} ?w=500,h=266,border=true)
+
+You can find more details on the implementation of the endpoints and expected parameters for [OAuth 2]({{page page='using-oauth2'}}).
 
 ## Authorization Endpoint
 

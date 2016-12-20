@@ -19,7 +19,7 @@ confluence:
     shortlink: PoAO
     shortlink_source: 'https://doc.nuxeo.com/x/PoAO'
     source_link: /display/NXDOC/Additional+UI+Frameworks
-tree_item_index: 1000
+tree_item_index: 1400
 history:
     -
         author: Manon Lumeau
