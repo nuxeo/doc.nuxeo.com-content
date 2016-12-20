@@ -104,13 +104,13 @@ history:
 ---
 {{! excerpt}}
 
-In your project, you might have some automation chains that all look the same, with the same structure, meaning the same operations in the same order, and the only difference is that the parameters values sent to the composing operations are not the same. This usually means you can factorize your implementation using parameterized chains.
+You might have some automation chains in your project that all have a similar structure, meaning the same operations in the same order, the only difference being that the parameter values sent to the composing operations are different. Usually in this case, you can factorize your implementation using parameterized chains.
 
 {{! /excerpt}}
 
-Let's take an example: You want to change the lifecycle of a document, and log at the same time the company of the user who changed the document lifecycle state in the audit. Genuinely, if you want a chain that validates a document, you would write the following chain:
+Let's take an example: You want to change the lifecycle of a document, while logging the company of the user who changed the document lifecycle state in the audit. If you want a chain that validates a document, you would write the following chain:
 
-```
+```yaml
 - Context.FetchDocument
 - Document.SetLifeCycle:
     value: approve
@@ -126,7 +126,7 @@ If you want to do it for each lifecycle changes (making it obsolete, or draft, .
 
 1.  Create a chain called "ChangeCaseStatus".
 
-    ```
+    ```yaml
     params:
     - transitionName:
         type: string
@@ -151,7 +151,7 @@ If you want to do it for each lifecycle changes (making it obsolete, or draft, .
     {{/callout}}
 2.  Create a second chain that references the first chain with a `Run Chain` operation, using the `parameters` field. This second chain is used to approve document.
 
-    ```
+   ```yaml
     - Context.RunOperation:
         id: ChangeCaseStatus
         isolate: 'false'
