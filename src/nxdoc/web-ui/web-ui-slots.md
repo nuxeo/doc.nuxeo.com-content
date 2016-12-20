@@ -76,7 +76,7 @@ and the web UI defines the default slot content in [nuxeo-document-actions.html]
   </template>
 </nuxeo-slot-content>
 ```
-Now, the Nuxeo Drive addon is able to add its own actions there too with [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html#L8):
+Now, the Nuxeo Drive addon is able to add its own actions there with [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html#L8):
 ```xml
 <nuxeo-slot-content name="driveSyncToggleButton" slot="DOCUMENT_ACTIONS">
   <template>
@@ -84,8 +84,8 @@ Now, the Nuxeo Drive addon is able to add its own actions there too with [nuxeo-
   </template>
 </nuxeo-slot-content>
 ```
-Next, in the above snippet, how the bound `document` property is resolved? The answer is found in [nuxeo-browser.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html#L129) which defines the model of the `DOCUMENT_ACTIONS` slot through the computed `actionContext` property defined [here](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html#L258):
-```xml
+Next, in the above snippet, how is the bound `document` property resolved? The answer is found in [nuxeo-browser.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html#L129) which defines the model of the `DOCUMENT_ACTIONS` slot through the computed `actionContext` property defined [here](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html#L258):
+```javascript
 _actionContext: function() {
   return {document: this.document, clipboard: this.clipboard};
 },
@@ -131,20 +131,20 @@ This slot is available on current document that has attached blobs. Default acti
 
 #### BROWSE_ACTIONS{{> anchor 'browse_actions'}}
 
-This slot is displayed when selecting one ore more children documents of a Folderish current document. It provides bulked actions on the selection such as *Add to collection*, *Delete selected items*, etc.
+This slot is displayed when selecting one or more children documents of a Folderish current document. It provides bulked actions on the selection such as *Add to collection*, *Delete selected items*, etc.
 
 ![]({{file name='BROWSE_ACTIONS.png'}} ?w=400,border=true)
 
 **Slot Model Properties**
 
-| Property        | Description                            |
-|:----------------|:---------------------------------------|
-| `document`      | The current document.                  |
-| `selectedItems` | An array of selected content document. |
+| Property        | Description                             |
+|:----------------|:----------------------------------------|
+| `document`      | The current document.                   |
+| `selectedItems` | An array of selected content documents. |
 
 ### Main Application Menu slots
 
-The Web UI revolves around a left drawer menu allowing to navigate to documents, searches, application administration, etc. The following slots shows how to extend this menu.
+The Web UI revolves around a left drawer menu allowing to navigate to documents, searches, application administration, collections, etc. The following slots shows how to extend this menu.
 
 #### SEARCH_MENU_BUTTONS
 
@@ -224,7 +224,7 @@ This slot provides actions displayed when hovering the bottom right Floating Act
 
 #### FILE_UPLOAD_ACTIONS
 
-This slot is for instance used the [Nuxeo Live Connect]({{page version='' space='nxdoc' page='nuxeo-liveconnect'}}) addon which inserts additional import wizard to upload Files to cloud services.
+This slot is for instance used in the [Nuxeo Live Connect]({{page version='' space='nxdoc' page='nuxeo-liveconnect'}}) addon which inserts additional import wizard to upload Files to cloud services.
 
 ![]({{file name='FILE_UPLOAD_ACTIONS.png'}} ?w=400,border=true)
 
@@ -235,7 +235,7 @@ This slot is for instance used the [Nuxeo Live Connect]({{page version='' space=
 
 ### Search and Collection browsing slots
 
-The screen displayed to browse Search result and Collection content are very similar. When selecting items in the search results or the collection content, some bulk actions are displayed in a top menu bar (like [BROWSE_ACTIONS](#browse_actions)). These actions can be extended with the following slots.
+The screen to browse Search results and Collection contents are very similar. When selecting items in the search results or the collection contents, some bulk actions are displayed in a top menu bar (like [BROWSE_ACTIONS](#browse_actions)). These actions can be extended with the following slots.
 
 #### SEARCH_ACTIONS
 
