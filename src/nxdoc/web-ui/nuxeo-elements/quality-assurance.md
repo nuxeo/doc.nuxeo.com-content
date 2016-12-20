@@ -15,14 +15,31 @@ tree_item_index: 200
 
 ## Formatting and Linting
 
-- ESLint
--- ES5 : default / recommended setting
--- ES2016: Airbnb default https://www.npmjs.com/package/eslint-config-airbnb
-- Plugin for IDEs
--- Atom: https://atom.io/packages/linter-eslint
--- Intellij Idea: https://plugins.jetbrains.com/plugin/7494
--- Sublime Text 3: https://github.com/roadhump/SublimeLinter-eslint
--- More: http://eslint.org/docs/user-guide/integrations
+A *linter* is a code quality tool that scans your code and flags bugs, unoptimized
+code and other suspicious constructs. *Linting* is important because it keeps the
+code clean and enforces a predefined set of rules good practices. Because JavaScript
+is a loosely-typed language, it is very easy to introduce bugs in the code.
+Therefore, a JavaScript linter becomes a crucial tool to help developers identify
+problems in the code without having to execute it. Our linter of choice is [ESLint](http://eslint.org/),
+and you can find a sample config file, the one we use for Nuxeo Web UI,
+[here](https://github.com/nuxeo/nuxeo-web-ui/blob/master/.eslintrc.json).
+You can find a quick guide on how to run and setup ESLint on their
+[online documentation](http://eslint.org/docs/user-guide/getting-started).
+
+You can use a ESLint in two fashions: a) run it via command line (e.g. `eslint file.js`),
+or b) use it on an IDE or text editor and let it run as you type. The latter case
+is usually more convenient. There is ESLint support for several of the most
+popular IDEs, such as:
+- [Atom](https://atom.io/packages/linter-eslint)
+- [Intellij Idea](http://plugins.jetbrains.com/plugin/7494)
+- [Sublime Text 3](https://github.com/roadhump/SublimeLinter-eslint)
+- [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [and others](http://eslint.org/docs/user-guide/integrations)
+
+Stepping up a notch, Polymer IDE provides linting, autocomplete and a lot
+of more features to support development with Polymer. You can install it for
+[Atom](https://atom.io/packages/polymer-ide) and
+[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=polymer.polymer-ide).
 
 ## Performance Strategies
 
