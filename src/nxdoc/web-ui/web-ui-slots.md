@@ -103,7 +103,7 @@ Now, the Nuxeo Drive addon is able to add its own actions there with [nuxeo-driv
   </template>
 </nuxeo-slot-content>
 ```
-Next, in the above snippet, how is the bound `document` property resolved? The answer is found in [nuxeo-browser.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html#L129) which defines the model of the `DOCUMENT_ACTIONS` slot through the computed `actionContext` property defined [here](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html#L258):
+Next, in the above snippet, how is the bound `document` property resolved? The answer is found in [nuxeo-browser.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html#L258) which defines the model of the `DOCUMENT_ACTIONS` slot through the computed `actionContext` property defined [here](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html#L258):
 ```javascript
 _actionContext: function() {
   return {document: this.document, clipboard: this.clipboard};
