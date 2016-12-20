@@ -263,7 +263,7 @@ You also need to set some custom HTTP headers:
 {"batchId": batchId, "fileIdx": fileIdx, "uploadType": "normal", "uploadedSize": xxx}
 ```
 
-<span style="color: rgb(0,0,0);">The value of the&nbsp; `uploadType` field is&nbsp;`normal` by default, it can be&nbsp; `chunked` if the file was [uploaded by chunks](#uploadingafilebychunks).&nbsp;</span>
+<span style="color: rgb(0,0,0);">The value of the&nbsp; `uploadType` field is&nbsp;`normal` by default, it can be&nbsp; `chunked` if the file was [uploaded by chunks](#uploading-a-file-by-chunks).&nbsp;</span>
 
 {{#> callout type='info' heading='About the file storage implementation'}}
 
@@ -321,7 +321,7 @@ DELETE /api/v1/upload/{batchId}/{fileId}
 
 Returns a 204 NO CONTENT and removes the file from the batch.
 
-## {{> anchor 'uploadingafilebychunks'}}Uploading a File by Chunks
+## Uploading a File by Chunks
 
 [Resumable upload]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint#uploadingafileinchunks'}}) became a requirement otherwise uploading large files over a broken connection could take days.
 

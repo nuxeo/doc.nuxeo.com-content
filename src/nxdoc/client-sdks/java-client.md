@@ -74,7 +74,7 @@ history:
 ---
 The Nuxeo Java Client is a Java client library (can be used for Android) for the Nuxeo Automation and REST API.
 
-[Github Documentation Website](http://nuxeo.github.io/nuxeo-java-client/)
+[GitHub Documentation Website](http://nuxeo.github.io/nuxeo-java-client/)
 
 ## Getting Started
 
@@ -129,7 +129,7 @@ Ivy:
 SBT:
 
 ```
-libraryDependencies += "org.nuxeo.client" % "nuxeo-java-client" % "2.4-SNAPSHOT" 
+libraryDependencies += "org.nuxeo.client" % "nuxeo-java-client" % "2.4-SNAPSHOT"
 ```
 
 ### Sub-Modules Organization
@@ -148,7 +148,7 @@ For a given `url`:
 String url = "http://localhost:8080/nuxeo";
 ```
 
-And given credentials (by default using the Basic Auth) :
+And given credentials (by default using the Basic Auth):
 
 ```java
 import org.nuxeo.client.api.NuxeoClient;
@@ -183,14 +183,14 @@ nuxeoClient = nuxeoClient.enableDefaultCache();
 nuxeoClient = nuxeoClient.logout();
 ```
 
-####APIs
+#### APIs
 
-General rule: 
+General rule:
 
-- When using `fetch` methods, `NuxeoClient` is making remote calls. 
+- When using `fetch` methods, `NuxeoClient` is making remote calls.
 - When using `get` methods, objects are retrieved from memory.
 
-####Automation API
+#### Automation API
 
 To use the Automation API, `org.nuxeo.client.api.NuxeoClient#automation()` is the entry point for all calls:
 
@@ -222,7 +222,7 @@ Blobs inputBlobs = new Blobs();
 inputBlobs.add(io.File file1);
 inputBlobs.add(io.File file2);
 Blobs blobs = nuxeoClient.automation().newRequest("Blob.AttachOnDocument").param("xpath", "files:files").param("document", "/folder/file").input(inputBlobs).execute();
-        
+
 Blob resultBlob = nuxeoClient.automation().input("folder/file").execute("Document.GetBlob");
 ```
 
@@ -331,7 +331,7 @@ nuxeoClient.repository().fetchDocumentRoot(new Callback<Document>() {
         });
 ```
 
-####Permissions
+#### Permissions
 
 To manage permission, please look inside package `org.nuxeo.client.api.objects.acl` to handle ACP, ACL and ACE:
 
@@ -365,7 +365,7 @@ folder.removePermission("user0");
 folder.removePermission(idACE, "user0", "local");
 ```
 
-####Batch Upload
+#### Batch Upload
 
 Batch uploads are executed through the `org.nuxeo.client.api.objects.upload.BatchUpload`.
 
@@ -389,7 +389,7 @@ file = FileUtils.getResourceFileFromContext("blob.json");
 batchUpload.upload(file.getName(), file.length(), "json", batchUpload.getBatchId(), "2", file);
 List<BatchFile> batchFiles = batchUpload.fetchBatchFiles();
 ```
-Batch upload can be executed in a [chunk mode](https://doc.nuxeo.com/display/NXDOC/Blob+Upload+for+Batch+Processing?src=search#BlobUploadforBatchProcessing-UploadingaFilebyChunksUploadingaFilebyChunks).
+Batch upload can be executed in a [chunk mode]({{page page='blob-upload-for-batch-processing'}}#uploading-a-file-by-chunks).
 
 ```java
 // Upload file chunks
@@ -424,7 +424,7 @@ Operation operation = nuxeoClient.automation("Blob.AttachOnDocument").param("doc
 Blob blob = batchUpload.execute(operation);
 ```
 
-####Directories
+#### Directories
 
 ```java
 import org.nuxeo.client.api.objects.directory.Directory;
@@ -432,7 +432,7 @@ import org.nuxeo.client.api.objects.directory.Directory;
 Directory directory = nuxeoClient.getDirectoryManager().fetchDirectory("continent");
 ```
 
-####Users/Groups
+#### Users/Groups
 
 ```java
 import org.nuxeo.client.api.objects.user.CurrentUser;
@@ -591,7 +591,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Custom {
 
 	protected String path;
-	
+
 	@JsonIgnore
 	protected transient String other;
     ...
@@ -644,14 +644,14 @@ The main exception manager for the `nuxeo-java-client` is `org.nuxeo.client.inte
 
 - An info message
 
-- The remote exception with stack trace (depending on the [exception mode](https://doc.nuxeo.com/x/JQI5AQ) activated on Nuxeo server side
+- The remote exception with stack trace (depending on the [exception mode]({{page page='web-exceptions-errors'}}) activated on Nuxeo server side
 
 
 ## Testing
 
 The Testing suite or TCK can be found in this project [`nuxeo-java-client-test`](https://github.com/nuxeo/nuxeo-java-client/tree/master/nuxeo-java-client-test).
 
-# History
+## History
 
 The initial `nuxeo-automation-client` is now old:
 
@@ -661,7 +661,7 @@ The initial `nuxeo-automation-client` is now old:
 
 The `nuxeo-automation-client` was then forked to build a Android version with some caching.
 
-## Constraints
+### Constraints
 
 **JVM & Android**
 
@@ -672,11 +672,11 @@ The `nuxeo-java-client` must works on both a standard JVM and Android Dalvik VM.
 Library must work on older Java versions.
 The goal is to be able to use `nuxeo-java-client` from application running in Java 6 or Java 7.
 
-**Light dependencies** 
+**Light Dependencies**
 
 The library should be easy to embed so we want to have as few dependencies as possible.
 
-**Cache compliant**
+**Cache Compliant**
 
 If needed, for example on Android, we should be able to easily add caching logic.
 
@@ -686,7 +686,7 @@ We do not need to implement all the caching features that were inside the Androi
 
 Client should be able to retrieve the remote Exception easily and access to the trace feature would be ideal.
 
-## Design Principles
+### Design Principles
 
 **JS like**
 
@@ -728,12 +728,11 @@ All caches should be accessible via a generated cache key defined by the request
 
 5 caches should be implemented:
 
-- **Raw Response Store** : The server response is simply stored on the device so that it can be reused in case the server is unreachable OR to avoid too many frequent calls.
+- **Raw Response Store**: The server response is simply stored on the device so that it can be reused in case the server is unreachable OR to avoid too many frequent calls.
 - **Document Response Store**: Store the unmarshalled response objects (here Documents) and updates.
 - **Document Transient Store** bound with deferred calls queue: keeping changes of document.
 - **Deferred Calls Queue**: The Create Update Delete operation will be stored locally and replayed when the server is available. Requests pure calls.
-
-- Actions/Events
+- **Actions/Events**
 
 [Scenarii](https://docs.google.com/a/nuxeo.com/spreadsheets/d/1rlzMyLk_LD4OvdbJ37DBZjD5LiH4i7sb4V2YAYjINcc/edit?usp=sharing)
 
@@ -749,7 +748,7 @@ All caches should be accessible via a generated cache key defined by the request
 
 ##### Synchronisation
 
-- Should we apply those [rules](https://doc.nuxeo.com/display/NXDOC/Android+Connector+and+Caching#AndroidConnectorandCaching-TransientState)?
+- Should we apply those [rules](https://doc.nuxeo.com/nxdoc/android-connector-and-caching/#transientstate)?
 - Should we use ETag And/Or If-Modified-Since with HEAD method?
 
 ##### Potential Stores
@@ -768,4 +767,4 @@ Depending on client:
 
 **Error & Logging**
 
-The `NuxeoClientException` within `nuxeo-java-client` is consuming the default and the extended rest exception response by the server. Here the [documentation](https://doc.nuxeo.com/x/JQI5AQ)
+The `NuxeoClientException` within `nuxeo-java-client` is consuming the default and the extended rest exception response by the server. Here the [documentation]({{page page='web-exceptions-errors'}})
