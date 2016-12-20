@@ -286,6 +286,4 @@ add&nbsp;`collectionType="java.util.ArrayList"` to the jsf tag causing the error
 - [JavaScript Client]({{page page='javascript-client'}})
 - [JSF UI Framework]({{page page='jsf-ui-framework'}})
 - [Nuxeo JSF UI]({{page page='nuxeo-jsf-ui'}})
-- [JSF UI Limitations]({{page page='jsf-ui-limitations'}})&nbsp;
-
 {{/panel}}</div></div>

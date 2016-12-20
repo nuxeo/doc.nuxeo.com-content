@@ -197,6 +197,4 @@ TODO: there are better ways to handle this in JSF2
 *   [JavaScript Client]({{page page='javascript-client'}})
 *   [JSF UI Framework]({{page page='jsf-ui-framework'}})
 *   [Nuxeo JSF UI]({{page page='nuxeo-jsf-ui'}})
-*   [JSF UI Limitations]({{page page='jsf-ui-limitations'}})&nbsp;
-
 {{/panel}}</div></div>

@@ -600,7 +600,6 @@ Sample example on 3 levels with widget property `directoryName` filled with the 
 *   [JSF UI Framework]({{page page='jsf-ui-framework'}})
 *   [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
 *   [Layout and Widgets]({{page page='layouts-and-widgets-forms-listings-grids'}})
-*   [JSF UI Limitations]({{page page='jsf-ui-limitations'}})
 *   [Widget Definitions]({{page page='widget-definitions'}})
 
 {{/panel}}</div></div>

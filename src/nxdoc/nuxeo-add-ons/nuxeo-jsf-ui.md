@@ -197,5 +197,12 @@ There is no additional configuration step required to start using the addon. Cus
 
 {{{multiexcerpt 'clipboard-worklist-overview' page='USERDOC:Editing Content'}}}
 
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-{{> end_of_tabs }}
+- [JSF UI Framework Overview]({{page page='jsf-ui-framework-overview'}})</span>
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>
