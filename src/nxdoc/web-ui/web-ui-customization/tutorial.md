@@ -10,10 +10,14 @@ tree_item_index: 300
 
 ---
 
-- intro
+# Tutorial: Simple Customization
 
 ## Installation and development environment
 
 ## Steps
 
 ## Packaging and deployment
+
+## Integrate Custom Elements
+
+- info on integrating new custom elements on available catalog
