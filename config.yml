@@ -1,6 +1,7 @@
 default:
     site:
-        review_period: '13 months'
+        review_period: '6 months'
+        review_release_date: 2016-12-20
         spaces:
             -
                 space_path: nxdoc
@@ -14,6 +15,9 @@ default:
         versions:
             -
                 label: FT
+            -
+                label: LTS 2016
+                url_path: '810'
                 is_current_version: true
             -
                 label: LTS 2015
