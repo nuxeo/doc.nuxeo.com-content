@@ -1,5 +1,5 @@
 ---
-title: How to Enable Drag'n Drop and New Button on a Custom Content View
+title: How to Enable Drag and Drop and New Button on a Custom Content View
 review:
     comment: ''
     date: '2015-12-01'
@@ -65,7 +65,7 @@ history:
 You should follow this how-to if you want to either:
 
 *   Replace the default Content tab of a folderish document type
-*   Or add a new tab from which users should be able to create children documents.
+*   Or add a new tab from which users should be able to create children documents.<br/><br/>
 
 To do so, you basically need to create a new tab with some specific properties.
 
@@ -76,39 +76,41 @@ Before you follow the steps below, you should already have configured the items 
 *   A [document type]({{page page='how-to-define-a-document-type'}}) with the following properties:
     *   Folderish facet
     *   Accepts children document types (File or extending file)
-*   A [content view]({{page page='how-to-define-a-new-content-view'}}), obviously.
+*   A [custom content view]({{page page='how-to-define-a-new-content-view'}}), obviously.
 
 ## Setting up Your Custom Tab
 
-To set a content view with Drag&Drop and the **New** button:
+To set a content view with Drag and Drop and the **New** button:
 
 1.  In Studio, go to **Listings & Views** > **Tabs**.
-2.  Click the **New** button and enter a name for the Feature ID:&nbsp;`ContentViewWithDnDandNewButton`. And click **Next** to validate.
+2.  Click the **New** button and enter a name for the Feature ID: `ContentViewWithDnDandNewButton`. And click **Next** to validate.
 3.  Set a value for **Order** if you don't want the new tab to be displayed as the first tab.
-4.  Drag the widget **Drop zone** from Featured widgets > Built-in widgets and drop it in the first cell of the tab grid.
-5.  In the Widget Layout Editor that pops up, set the properties as follow:
+4.  Drag the widget **Drop zone** from **Featured widgets** > **Built-in widgets** and drop it in the first cell of the tab grid.
+5.  In the **Widget Layout Editor** that pops up, set the properties as follows:
 
     *   **Hide label**: checked
     *   **Add surrounding form**: unchecked
-    *   **Custom configuration properties**: `dropContext`: `ContentView`
+    *   **Custom configuration properties**: `dropContext`: `ContentView`<br/><br/>
+
 6.  Click on **Save**.
-7.  Click on the icon&nbsp;![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}) of the Drop zone widget.
-8.  In the first line, drop a **Generic widget** from More widgets > Advanced widgets.
-9.  In the Widget Layout Editor, set the properties as follow:
+7.  Click on the icon ![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}) of the Drop zone widget.
+8.  In the first line, drop a **Generic widget** from **More widgets** > **Advanced widgets**.
+9.  In the Widget Layout Editor, set the properties as follows:
 
     *   **Hide label**: checked
     *   **Widget type**: documentActionsWithForms
     *   **Category**: Folder Toolbar
     *   **Actions Display**: Buttons
-    *   **Overall display**: Horizontal bloc
+    *   **Overall display**: Horizontal bloc<br/><br/>
 10.  Click on **Save**.
-11.  In the second line, drop a **Content View** widget from Featured widgets > Tab widgets.
-12.  In the Widget Layout Editor, set the properties as follow:
+11.  In the second line, drop a **Content View** widget from **Featured widgets** > **Tab widgets**.
+12.  In the Widget Layout Editor, set the properties as follows:
 
-    *   **Content View name**: Select the content view you want to display.
+    *   **Content View name**: Select the content view you want to display.<br/><br/>
+
 13.  Click on **Save**.
-14.  Cick on **Go back to previous page** to go back on the tab definition screen.
-15.  Go to your tab's **Activation** tab and set the conditions (permissions, document types, etc) to make the new tab visible. Save.
+14.  Click on **Go back to previous page** to go back on the tab definition screen.
+15.  Go to your tab's **Activation** tab and set the conditions (permissions, document types, etc) to make the new tab visible. Save.<br/><br/>
 
 Now you just need to [hot-reload your Studio project]({{page space='studio' page='deploying-your-project-in-dev-mode'}}). And a new tab will be visible for the selected document types.
 
