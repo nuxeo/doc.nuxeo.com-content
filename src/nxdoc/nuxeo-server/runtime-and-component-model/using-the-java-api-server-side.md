@@ -2,10 +2,10 @@
 title: Using the Java API Server-Side
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - runtimecomponent
 toc: true
 confluence:
@@ -94,7 +94,7 @@ From within a Nuxeo Runtime aware context, you can access a service locally (in 
 RelationManager rm = Framework.getService(RelationManager.class)
 ```
 
-You can find the list of existing services on the [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/current/listServices). You will also need to understand main Java classes, using the [javadoc](http://community.nuxeo.com/api/nuxeo/).
+You can find the list of existing services on the [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/current/listServices). You will also need to understand main Java classes, using the [javadoc](http://community.nuxeo.com/api/nuxeo/latest/javadoc/).
 
 {{#> callout type='warning' }}
 

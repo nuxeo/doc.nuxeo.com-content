@@ -21,7 +21,7 @@ confluence:
     shortlink: _QQuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/_QQuAQ'
     source_link: /display/NXDOC/Nuxeo+Drive+Update+Site
-tree_item_index: 400
+tree_item_index: 300
 history:
     -
         author: Manon Lumeau

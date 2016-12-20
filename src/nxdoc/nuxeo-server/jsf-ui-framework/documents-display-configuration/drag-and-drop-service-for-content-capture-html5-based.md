@@ -2,10 +2,10 @@
 title: Drag and Drop Service for Content Capture (HTML5-Based)
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-13'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - drag-and-drop
     - import
     - automation
@@ -178,8 +178,6 @@ history:
 ---
 Drag and Drop from the Desktop to Nuxeo HTML UI has been available for a long time using a browser plugin.
 
-&nbsp;
-
 {{! excerpt}}
 
 You can use the native HTML5 Drag and Drop features on recent browsers (Firefox 3.6+, Google Chrome 9+, Safari 5+). This new Drag and Drop import model is pluggable so you can adapt the import behavior to your custom needs.
@@ -221,7 +219,7 @@ In the default mode the file you drop will be automatically uploaded and importe
 By using the advanced mode you can have more control over the import process:
 
 *   you can do several file imports but still keep all files part of the same batch,
-*   you can select the automation chain&nbsp;that will be executed.
+*   you can select the Automation chain that will be executed.
 
 To trigger the extended mode, just maintain the drag over the DropZone for more than 2.5 seconds: the drop zone will be highlighted in green indicating you are now in extended mode.
 
@@ -239,21 +237,19 @@ You can very simply define a new DropZone in your pages; you simply need to add 
 
 {{#> panel type='code' heading='Drop zone declaration'}}
 
-```
-
+```html
 <div id="myDropZone" class="dropzone" context="myDropZone"> ... </div>
-
 ```
 
 {{/panel}}
 
 ### Associating Automation Chains
 
-Each dropzone context is associated with a set of content automation operations or automation chains. This association is configured via the action service:
+Each dropzone context is associated with a set of content Automation operations or Automation chains. This association is configured via the action service:
 
 {{#> panel type='code' heading='Binding an operation chain to a drop zone'}}
 
-```
+```xml
 <action id="Chain.FileManager.ImportInSeam"
         link="" order="10" label="label.smart.import"
         help="desc.smart.import.file">
@@ -270,100 +266,90 @@ Each dropzone context is associated with a set of content automation operations 
 
 Where:
 
-*   the operation or automation chain is configured through the action properties (since 5.7.1). The `chainId&nbsp;`property is used to configure the automation chain to execute. If not present, the `operationId` property is tried.
-    For backward compatibility, if both properties are not present, we fallback using the action `id` to get the automation chain or operation to execute&nbsp;(for automation chains, append `chain.` as a prefix for id).
+*   the operation or Automation chain is configured through the action properties (since 5.7.1). The `chainId `property is used to configure the Automation chain to execute. If not present, the `operationId` property is tried.
+    For backward compatibility, if both properties are not present, we fallback using the action `id` to get the Automation chain or operation to execute (for Automation chains, append `chain.` as a prefix for id).
 *   `category` represents the dropzone context;
-*   `filter` / `filter-id` are the filter used to define if operation should be available in a given context;
-*   `link` points to a page that can be used to collect parameters for the automation chain.
+*   `filter` / `filter-id` are the filters used to define if the operation should be available in a given context;
+*   `link` points to a page that can be used to collect parameters for the Automation chain.
 
 The operation or chain that will be called for the import will receive:
 
 *   as input: a BlobList representing the files that have been uploaded;
-*   as context: the current page context.
+*   as context: the current page context, typically:
 
-    ```
-    typically : { currentDocument : '#{currentDocument.id}',
-    currentDomain : '#{currentDomain.id}',
-    currentWorkspace : '#{currentWorkspace.id}',
-    conversationId : '#{org.jboss.seam.core.manager.currentConversationId}',
-    lang : '#{localeSelector.localeString}',
-    repository : '#{currentDocument.repositoryName}'};
-
-    ```
+```json
+{
+  "currentDocument": "#{currentDocument.id}",
+  "currentDomain": "#{currentDomain.id}",
+  "currentWorkspace": "#{currentWorkspace.id}",
+  "conversationId": "#{org.jboss.seam.core.manager.currentConversationId}",
+  "lang": "#{localeSelector.localeString}",
+  "repository": "#{currentDocument.repositoryName}"
+}
+```
 
 *   as parameters: what has been collected by the form if any.
 
-The output of the chains does not really matter.
+The output of the chain does not really matter.
 
-At some point, inside your automation chain you may need to access Seam Context. For that, new operations were introduced:
+At some point, inside your Automation chain you may need to access the Seam context. For that, new operations were introduced:
 
-*   [`Seam.RunOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/RunOperation) : that can run an operation or a chain in the Seam context.
-    For example, if you want to get available actions via the "Actions.GET" operation, but want to leverage Seam context for actions filters:
+* [`Seam.RunOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/RunOperation): runs an operation or a chain in the Seam context. For example, if you want to get available actions via the `Actions.GET` operation, but want to leverage the Seam context for actions filters:
 
-    {{#> panel type='code' heading='Running an operation in Seam Context'}}
+{{#> panel type='code' heading='Running an operation in the Seam context'}}
+```
+<chain id="SeamActions.GET">
+  <operation id="Seam.RunOperation">
+    <param type="string" name="id">Actions.GET</param>
+  </operation>
+</chain>
+```
+{{/panel}}
 
-    ```
-    <chain id="SeamActions.GET">
-      <operation id="Seam.RunOperation">
-        <param type="string" name="id">Actions.GET</param>
-      </operation>
-    </chain>
+*   [`Seam.InitContext`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/WebUI.InitSeamContext) / [`Seam.DestroyContext`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/WebUI.DestroySeamContext): initializes / destroys the Seam context:
 
-    ```
-
-    {{/panel}}
-*   [`Seam.InitContext`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/WebUI.InitSeamContext) / [`Seam.DestroyContext`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/WebUI.DestroySeamContext) : that can be used to initialize / destroy seam context:
-
-    {{#> panel type='code' heading='Manual Seam context management'}}
-
-    ```
-    <chain id="ImportClipboard">
-      <operation id="Seam.InitContext" />
-      <operation id="UserWorkspace.CreateDocumentFromBlob" />
-      <operation id="Document.Save"/>
-      <operation id="Seam.AddToClipboard"/>
-      <operation id="Seam.DestroyContext" />
-    </chain>
-
-    ```
-
-    {{/panel}}
+{{#> panel type='code' heading='Manual Seam context management'}}
+```
+<chain id="ImportClipboard">
+  <operation id="Seam.InitContext" />
+  <operation id="UserWorkspace.CreateDocumentFromBlob" />
+  <operation id="Document.Save"/>
+  <operation id="Seam.AddToClipboard"/>
+  <operation id="Seam.DestroyContext" />
+</chain>
+```
+{{/panel}}
 
 ### Parameters Management
 
-In some cases, you may want user to provide some parameters via a form associated to the import operation he wants to run. For that, you can use the `link` attribute of the action used to bind your automation chain to a dropzone. This URL will be used to display your form within an iframe inside the default import UI.
+In some cases, you may want user to provide some parameters via a form associated to the import operation you want to run. For that, you can use the `link` attribute of the action used to bind your Automation chain to a dropzone. This URL will be used to display your form within an iframe inside the default import UI.
 
 In order to send the collected parameters to the import wizard, you should call a JavaScript function inside the parent frame:
 
 {{#> panel type='code' heading='Calling back the import wizard'}}
-
 ```
 window.parent.dndFormFunctionCB(collectedData);
-
 ```
-
 {{/panel}}
 
-where `collectedData` is a JavaScript object that will then be sent (via JSON) as parameter of the operation call.
+where `collectedData` is a JavaScript object that will then be sent (via JSON) as a parameter of the operation call.
 
-In the default JSF WebApp you can have a look at `DndFormActionBean` and `dndFormCollector.xhtml`.
-
-&nbsp;
+In the default JSF web app you can have a look at `DndFormActionBean` and `dndFormCollector.xhtml`.
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Pages in This Documentation'}}
 
-*   [How to Customize the HTML5 Drag and Drop Import with Metadata Form]({{page page='how-to-customize-the-html5-drag-and-drop-import-with-metadata-form'}})
-*   [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
-*   [How to Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
-*   [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
-*   [Nuxeo Bulk Document Importer]({{page page='nuxeo-bulk-document-importer'}})
+- [How to Customize the HTML5 Drag and Drop Import with Metadata Form]({{page page='how-to-customize-the-html5-drag-and-drop-import-with-metadata-form'}})
+- [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
+- [How to Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
+- [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
+- [Nuxeo Bulk Document Importer]({{page page='nuxeo-bulk-document-importer'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='More about drag and drop in the user documentation'}}
 
-*   [Creating Content]({{page space='userdoc' page='creating-content'}})
-*   [Publishing Content]({{page space='userdoc' page='publishing-content'}})
-*   [Editing Content]({{page space='userdoc' page='editing-content'}})
+- [Creating Content]({{page space='userdoc' page='creating-content'}})
+- [Publishing Content]({{page space='userdoc' page='publishing-content'}})
+- [Editing Content]({{page space='userdoc' page='editing-content'}})
 
 {{/panel}}</div></div>

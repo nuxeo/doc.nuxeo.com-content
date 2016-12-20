@@ -2,10 +2,10 @@
 title: Registering your Nuxeo Instance
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - admin-center
     - update-center
 toc: true
@@ -178,13 +178,13 @@ history:
         version: '1'
 
 ---
-Registering your Nuxeo application with [Nuxeo Online Services](http://www.nuxeo.com/products/online-services/) will give you access to the Update Center, so that you can easily install patches and bug fixes, install addons from the [Nuxeo Marketplace](http://marketplace.nuxeo.com/), or update your application with your Nuxeo Studio customization, all that directly from the Nuxeo Platform.
+Registering your Nuxeo application with [Nuxeo Online Services]({{page space='studio' page='index'}}) will give you access to the Update Center, so that you can easily install patches and bug fixes, install addons from the [Nuxeo Marketplace](http://marketplace.nuxeo.com/), or update your application with your Nuxeo Studio customization, all that directly from the Nuxeo Platform.
 
 The registration process only copies a file on your file system. This enables the Nuxeo Online Services portal to identify the instance among all the registered instances. You can register multiple instances.
 
 ## How to Register
 
-To be able to register, you need to have an [Online Services account](#connect-account-creation).
+To be able to register, you need to have a [Nuxeo Online Services account](#connect-account-creation).
 
 Registration can be done during the installation steps using the configuration wizard or at any time later, through the **Admin** tab or using the&nbsp;[`nuxeoctl` script]({{page page='nuxeoctl-and-control-panel-usage'}}).
 
@@ -194,36 +194,36 @@ For development instances on which you may need to remove your data, you may nee
 
 ### Registering Using nuxeoctl
 
-Registration using&nbsp;`nuxeoctl` requires an Internet connection.
+Registration using `nuxeoctl` requires an Internet connection.
 
-Since 8.3, the&nbsp;`nuxeoctl` script allows you to register your instance using an existing Nuxeo Online Services or to subscribe to a trial as you register your instance.
+Since 8.3, the `nuxeoctl` script allows you to register your instance using an existing Nuxeo Online Services or to subscribe to a trial as you register your instance.
 
 ```
 //Linux and Mac OS
 // You don't have a Nuxeo Online Service account
 $ ./$NUXEO_HOME/bin/nuxeoctl register-trial
-// You already have a Nuxeo Online Service account
+// OR you already have a Nuxeo Online Service account
 $ nuxeoctl register
 
 // Windows
 // You don't have a Nuxeo Online Service account
 $ .\$NUXEO_HOME\bin\nuxeoctl.bat register-trial
-// You already have a Nuxeo Online Service account
+// OR you already have a Nuxeo Online Service account
 $ .\$NUXEO_HOME\bin\nuxeoctl.bat register
 ```
 
-For more information about the&nbsp;`nuxeoctl` script, read [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}}).
+For more information about the `nuxeoctl` script, read [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}}).
 
 ### Creating your Nuxeo Online Services Account {{> anchor 'connect-account-creation'}}
 
-If you already have an account for Nuxeo Online Services, either because you are a Nuxeo customer, or because you created a trial account, you can continue to the [undefined](#registering-online) step. If not, follow those steps to get credentials to Online Services.
+If you already have an account for Nuxeo Online Services, either because you are a Nuxeo customer, or because you created a trial account, you can continue to the [Registering Online]({{page page='registering-your-nuxeo-instance'}}#registering-online-through-the-admin-tab) step. If not, follow those steps to get credentials to Online Services.
 
 To subscribe to a Nuxeo Online Services trial:
 
-1.  Go to the [Nuxeo Platform trial registration form](https://connect.nuxeo.com/register/#/).
+1.  Go to the [Nuxeo Online Services trial registration form](https://connect.nuxeo.com/register/#/).
 2.  Fill in the form. Provide a valid email address or else registration will not be completed.
 3.  Confirm registration by clicking on the link sent to the email address in the previous step.
-    You can now use the [Nuxeo Platform online](/www.nuxeo.com/downloads#online-trial) or [download it](http://www.nuxeo.com/downloads/) if you want to use it on premises.
+    You can now use the [Nuxeo Platform online](https://www.nuxeo.com/downloads/#online-trial) or [download it](http://www.nuxeo.com/downloads/) if you want to use it on premises.
 
 ### Registering Online through the Admin Tab {{> anchor 'online-registration'}}
 
@@ -233,7 +233,7 @@ To subscribe to a Nuxeo Online Services trial:
     A Nuxeo Connect login window pops up.
 4.  Authenticate to Nuxeo Online Services portal by giving your credentials.
 5.  Select the project to associate with your instance.
-    The pop-up closes. Your instance is now registered. You can now browse the various tabs of the Update Center area, and set up addons from the [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace) (see the page [Installing a New Package on Your Instance]({{page page='installing-a-new-package-on-your-instance'}})).
+    The pop-up closes. Your instance is now registered. You can now browse the various tabs of the Update Center area, and install addons from the [Nuxeo Marketplace](https://marketplace.nuxeo.com) (see the page [Installing a New Package on Your Instance]({{page page='installing-a-new-package-on-your-instance'}})).
 
 ### Registering Offline {{> anchor 'offline-registration'}}
 
@@ -252,7 +252,7 @@ Offline registration can be used when the server does not connect to the Interne
 2.  From an Internet-connected computer:
 
     1.  Go to the [Nuxeo Online Services portal](https://connect.nuxeo.com).
-    2.  Click on the application for which you want to register your Nuxeo Platform.
+    2.  Click on the application title for which you want to register your Nuxeo Platform.
         ![]({{file name='Nuxeo-Connect-my-applications.png'}} ?w=350)
     3.  Put your mouse over the icon&nbsp;![]({{file name='tools.png'}}) and click **Add a new instance**.
         ![]({{file name='AdminCenter-offline-registration-2.png'}} ?w=450,border=true)

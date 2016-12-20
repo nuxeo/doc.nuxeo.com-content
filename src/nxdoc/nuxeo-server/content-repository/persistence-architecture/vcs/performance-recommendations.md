@@ -2,10 +2,10 @@
 title: Performance Recommendations
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - vcs
     - performance
     - vcs-component
@@ -100,20 +100,18 @@ history:
 
 ---
 
-- Check that common properties are set as prefetched (see [org.nuxeo.ecm.core.schema.TypeService--configuration](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration)&nbsp;and&nbsp;[org.nuxeo.ecm.core.schema.TypeService--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype)).
+Here is a non-exhaustive list of recommendations to get better performance from your VCS configuration:
 
+- Check that common properties are set as prefetched (see [org.nuxeo.ecm.core.schema.TypeService--configuration](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration) and [org.nuxeo.ecm.core.schema.TypeService--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype)).
 - If you don't want to match proxies in your query, add a `AND ecm:isProxy = 0` clause.
-
-- If you don't use proxies at all, deactivate them at the repository level by adding inside the `<repository>` tag the following:
-
-    ```
+- If you don't use proxies at all, deactivate them at the repository level by adding inside the `<repository>` element the following:
+    ```xml
     <proxies enabled="false"/>
     ```
-
-- If you are doing NXQL query that involve custom schema you may need to add custom index to make the request efficient. You can trace the slow NXQL queries using [NXP-14845](https://jira.nuxeo.com/browse/NXP-14845).
-- Use groups to manage ACL. Adding a user to a group is free, but adding a user in an ACL at the root level has a cost because optimized read ACLs need to be recomputed.
-- When using Nuxeo in cluster mode, consider using [Redis VCS row cache invalidation](https://doc.nuxeo.com/nxdoc/nuxeo-and-redis/#vcs-row-cache-invalidation).
-- Consider disabling the OS swapping (`sudo swapoff -a`) or try to lower the swapiness (`vm`.swappiness=1)
+- If you are doing a NXQL query that involves custom schemas you may need to add custom indexes to make the request efficient. You can trace the slow NXQL queries using [NXP-14845](https://jira.nuxeo.com/browse/NXP-14845).
+- Use groups to manage ACLs. Adding a user to a group is free, but adding a user in an ACL at the document root level has a cost because optimized read ACLs need to be recomputed for all documents under the root.
+- When using Nuxeo in cluster mode, consider using [Redis VCS row cache invalidation]({{page page='nuxeo-and-redis'}}#vcs-row-cache-invalidation).
+- Consider disabling the OS swapping (`sudo swapoff -a`) or try to lower the swapiness (`vm.swappiness=1`).
 - Check the network latency between the application and the database.
 - [Configure ImageMagick]({{page page='installing-and-setting-up-related-software'}}) to use a single thread.
 - [Monitor]({{page page='metrics-and-monitoring'}}) everything, JVM, GC, VCS cache hit ratio, database, system.
@@ -128,9 +126,5 @@ history:
 - [Monitoring Slow NXQL Queries]({{page page='monitoring-slow-nxql-queries'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-&nbsp;
 
 </div></div>

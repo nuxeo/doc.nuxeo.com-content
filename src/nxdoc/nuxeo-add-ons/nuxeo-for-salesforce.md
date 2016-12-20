@@ -2,10 +2,10 @@
 title: Nuxeo for Salesforce
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - salesforce-component
     - link-update
     - excerpt
@@ -254,7 +254,13 @@ See [GitHub Readme](https://github.com/nuxeo/nuxeo-salesforce) for the Dev proje
 
 In your Salesforce account, you can setup the Nuxeo for Salesforce plugin through the Salesforce Marketplace (In progress).
 
-You can also set it up directly from your Salesforce dashboard.&nbsp;<span style="line-height: 21.58px;">Note that these instructions assume you are using "Salesforce Classic",&nbsp;</span>not <span style="line-height: 21.58px;">the "Lightning Experience". You can adapt them for the Lightning Experience, or disable it via &nbsp;</span> **Setup Home** >&nbsp;**Lightning Experience**. Scroll to the bottom to disable it
+You can also set it up directly from your Salesforce dashboard. Note that these instructions assume you are using "Salesforce Classic", not the "Lightning Experience".
+
+{{#> callout type='note' }}
+
+Although the Canvas app can be displayed within this new environment, it will still be unstable ("Lightning Experience" is in a beta state on Salesforce side). You can activate the Lightning Experience or disable it via  **Setup Home** > **Lightning Experience**. Scroll to the bottom to disable it.
+
+{{/callout}}
 
 1.  Go in your Salesforce dashboard.
 2.  Go on&nbsp;**Setup**&nbsp;(top right).

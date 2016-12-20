@@ -4,10 +4,10 @@ title: >-
     Platform?
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-13'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - import
     - howto
     - document-type
@@ -25,77 +25,77 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/IYwZAQ'
     source_link: /pages/viewpage.action?pageId=18451489
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-09-08 09:42'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 15:37'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-07 15:12'
         message: link update
         version: '13'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-13 10:42'
         message: ''
         version: '12'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-13 10:41'
         message: ''
         version: '11'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-13 10:37'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-21 10:48'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 11:42'
         message: add links
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 11:41'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 11:29'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-21 18:15'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-21 17:40'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Martins
         date: '2014-03-21 17:21'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Martins
         date: '2014-03-21 17:21'
         message: Add related links
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2014-03-21 17:20'
         message: ''
@@ -108,11 +108,11 @@ In this how-to, [importing a file]({{page space='userdoc' page='creating-content
 
 {{! /excerpt}}
 
-The mechanism to create a Nuxeo document with an import is tight to the extension point [plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--plugins) from the FileManager service.
+The mechanism to create a Nuxeo document with an import is tight to the [plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--plugins) extension point from the `FileManager` service.
 
-According to the mimetype of the file you try to import, a specific plugin will be called. And most of the time, it's the `DefaultFileImporter`plugin that will be used.
+According to the MIME type of the file you try to import, a specific plugin will be called. And most of the time, it's the `DefaultFileImporter` plugin that will be used.
 
-So, to create a document of your own type that, you have to set the&nbsp;`docType` attribute when overwriting the default contribution:
+So, to create a document of your own type, you have to set the `docType` attribute when overwriting the default contribution:
 
 ```xml
 <require>org.nuxeo.ecm.platform.filemanager.service.FileManagerService.Plugins</require>
@@ -122,20 +122,14 @@ So, to create a document of your own type that, you have to set the&nbsp;`docTyp
 </extension>
 ```
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in developer documentation'}}
 
-*   [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
-*   [Nuxeo CSV]({{page page='nuxeo-csv'}})
-*   [Drag and Drop Service for Content Capture (HTML5-Based)]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
+- [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
+- [Nuxeo CSV]({{page page='nuxeo-csv'}})
+- [Drag and Drop Service for Content Capture (HTML5-Based)]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-&nbsp;
 
 </div></div>

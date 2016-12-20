@@ -2,14 +2,14 @@
 title: Runtime and Component Model
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 excerpt: >-
     This page describes how the Nuxeo Platform is modular, and how
     bundles, components and extension points relate to each other to let
     you create a fully customized application.
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - extension-point
     - link-update
     - bundle
@@ -336,7 +336,7 @@ This page describes how the Nuxeo Platform is modular, and how bundles, componen
 
 ## The Goal: Easy Customization and Integration
 
-One of the main goals of Nuxeo Platform is to provide an easy and clean way to customize the platform for your application needs. That way:
+One of the main goals of the Nuxeo Platform is to provide an easy and clean way to customize the platform for your application needs. That way:
 
 *   No need to hack the system to make it run
 *   Your custom code will be based on maintained extension points and interfaces and will be able to be easily upgraded
@@ -344,7 +344,7 @@ One of the main goals of Nuxeo Platform is to provide an easy and clean way to c
 For that, Nuxeo Platform provides the following patterns:
 
 *   [Bundle](#bundles): A bundle is a "plug-in". It is most of the time a ".jar" file with a specific structure that aims at deploying a new set of features on the Nuxeo server. Thanks to this "bundle" notion, developers can deliver their new features in a standalone JAR that the platform will know how to start. As a result, your customization is also delivered as a plug-in, like the 10s of plug-ins that are part of the Nuxeo ecosystem, and that you can find on [GitHub](https://github.com/nuxeo) or the [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/product/all).
-*   [Components and services](#compo): A component is a software object declared via XML (and that may reference a Java class) that is used to expose some services in the framework. Thanks to this architecture, it is possible to expose a new service anywhere in the Java code executed in the platform. Services are auto-documented: you can see the list on [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listServices).
+*   [Components and services](#components): A component is a software object declared via XML (and that may reference a Java class) that is used to expose some services in the framework. Thanks to this architecture, it is possible to expose a new service anywhere in the Java code executed in the platform. Services are auto-documented: you can see the list on [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listServices).
 *   [Extensions](#extensions): An extension is a mechanism leveraged by the services to let platform users inject customization in the core of the implementation. It is a pattern used frequently on products such as Mozilla, Chrome, or Eclipse. Thanks to this architecture, it is possible to go very deep in product customization only with XML or using our [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) visual environment, without any coding. You can see the list of all extension points in [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listExtensionPoints). Contributions to extensions are delivered in a custom bundle.
 
 Implementing your own _bundle_, your will be able to contribute to existing _extensions_ so as to customize things. For instance, you can:
@@ -432,7 +432,7 @@ There are two major differences between the default Nuxeo Runtime launcher and a
 
 ### {{> anchor 'components'}}Components and Services
 
-<span style="color: rgb(50,51,51);">A&nbsp;**component**&nbsp;is a piece of software defined by a&nbsp;**bundle**&nbsp;used as an entry point by other components that want to contribute some extensions or to ask for some service interface. A component is an abstract concept - it is not necessarily backed by a Java class and is usually made from several classes and XML configuration.</span>
+A **component** is a piece of software defined by a **bundle** used as an entry point by other components that want to contribute some extensions or to ask for some service interface. A component is an abstract concept - it is not necessarily backed by a Java class and is usually made from several classes and XML configuration.
 
 The XML components are XML files, usually placed in the `OSGI-INF` directory, that are used to declare configuration to Nuxeo Runtime.
 
@@ -580,7 +580,7 @@ The Nuxeo Platform uses extension points extensively, to let you extend and conf
 ### Nuxeo Runtime
 
 All the bundles included in a Nuxeo Application are part of different plug-ins (from the core plug-ins to the high level ones). A minimal application is represented by a single plugin - the framework itself (which is itself packaged as a bundle).&nbsp;
-This is what we are naming&nbsp;**Nuxeo Runtime**. Of course launching the Nuxeo Runtime without any plug-in installed is useless - except a welcome message in the console nothing happens.&nbsp; But, starting from&nbsp;**Nuxeo Runtime**&nbsp;you can build a complete application by installing different plug-ins (depending on the type of your application you may end up with tens of bundles).
+This is what we are naming **Nuxeo Runtime**. Of course launching the Nuxeo Runtime without any plug-in installed is useless - except a welcome message in the console nothing happens.&nbsp; But, starting from **Nuxeo Runtime** you can build a complete application by installing different plug-ins (depending on the type of your application you may end up with tens of bundles).
 
 A basic Nuxeo Application is composed at least of two layers of plug-ins: the Runtime layer and the core one.
 
