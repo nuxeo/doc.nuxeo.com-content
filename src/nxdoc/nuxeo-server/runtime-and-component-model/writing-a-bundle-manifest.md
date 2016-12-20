@@ -2,10 +2,10 @@
 title: Writing a Bundle Manifest
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - runtimecomponent
     - excerpt
 confluence:
@@ -182,7 +182,8 @@ history:
 
 This page gives some rules for writing a bundle's manifest.
 
-{{! /excerpt}} {{#> callout type='info' }}
+{{! /excerpt}} 
+{{#> callout type='info' }}
 
 Check our [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) to bootstrap your Bundle.
 
