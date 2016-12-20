@@ -63,21 +63,15 @@ When returning lists of documents, the DocumentProvider does not provide a simpl
 It returns a `LazyDocumentsList` type that provides additional features :
 
 *   list will be automatically fetched asynchronously page by page as needed
-
 *   the list will be cached locally to be available offline
-
 *   you can add documents to the list (even in offline mode)
-
 *   you can edit documents to the list (even in offline mode)
-
 *   list definition can be dynamically saved so that you can restore it later
 
 The `DocumentProvider` can be accessed like any service :
 
 ```
-
 DocumentProvider docProvider = getNuxeoSession().getAdapter(DocumentProvider.class);
-
 ```
 
 DocumentProvider gives access to named list of documents. These lists implement the `LazyDocumentsList` interface and if they support create/update operation they also implement `LazyUpdatableDocumentsList`.
@@ -85,7 +79,6 @@ DocumentProvider gives access to named list of documents. These lists implement 
 You can define your own `LazyDocumentsList` and register them to the `DocumentProvider` :
 
 ```
-
 // register a query
 String query = "select * from Document where ecm:mixinType != \"HiddenInNavigation\" AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != \"deleted\" order by dc:modified DESC";
 docProvider.registerNamedProvider(getNuxeoSession(),"Simple select", query , 10, false, false, null);
@@ -103,29 +96,25 @@ String query2 = "SELECT * FROM Document WHERE dc:contributors = ?";
 LazyUpdatableDocumentsList docList = new LazyUpdatableDocumentsListImpl(getNuxeoSession(), query2, new String[]{"Administrator"}, null, null, 10);
 docList.setName("My Documents");
 docProvider.registerNamedProvider(docList, false);
-
 ```
 
 When registering a new provider, you can ask for it to be persisted in the local db. The list definition will be saved to the db and the content will be cached.
 This allows the end used to define custom lists of documents that will benefit from cache and offline support.
 
-When you need to access one of the named lists you can simply ask the `DocumentProvider` :
+When you need to access one of the named lists you can simply ask the `DocumentProvider`:
 
 ```
-
 LazyUpdatableDocumentsList documentsList = docProvider.getDocumentsList(providerName, getNuxeoSession());
-
 ```
 
 The Nuxeo Connector provides and Android `ListAdapter` so that you can directly bind the document lists to an Android `ListView`.
 (this part will be explained in more details in the next section).
 
-## Create and Update operations on `LazyDocumentsList`
+## Create and Update operations on LazyDocumentsList
 
-You can add or edit documents :
+You can add or edit documents:
 
 ```
-
 // add a document
 Document newDocument = ...
 documentsList.createDocument(newDocument);
@@ -134,7 +123,6 @@ documentsList.createDocument(newDocument);
 Document doc2Update = documentsList.getDocument(idx);
 doc2Update.set("dc:title", "Modified!");
 documentsList.updateDocument(Update);
-
 ```
 
 The actual implementation on the server side of the create/update operations will depend on your business logic.
@@ -209,7 +197,6 @@ distribute to next actor of the workflow
 The default implementation create the document with a path that can be configured and does a simple update of the document.
 
 ```
-
 protected OperationRequest buildUpdateOperation(Session session, Document updatedDocument) {
 	OperationRequest updateOperation = session.newRequest(DocumentService.UpdateDocument).setInput(updatedDocument);
 	updateOperation.set("properties", updatedDocument.getDirtyPropertiesAsPropertiesString());
@@ -232,7 +219,6 @@ protected OperationRequest buildCreateOperation(Session session, Document newDoc
 	markDependencies(createOperation, newDocument);
 	return createOperation;
 }
-
 ```
 
-You can use your own operation definitions by inehit from `AbstractLazyUpdatebleDocumentsList` and simple implement the 2 methods `buildUpdateOperation` and `buildCreateOperation`.
+You can use your own operation definitions by inheriting from `AbstractLazyUpdatebleDocumentsList` and simply implementing the 2 methods `buildUpdateOperation` and `buildCreateOperation`.

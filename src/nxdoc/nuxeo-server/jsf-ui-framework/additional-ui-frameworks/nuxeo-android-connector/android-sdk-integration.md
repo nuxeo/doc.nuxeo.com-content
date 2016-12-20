@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - android-connector-component
+    - todo
 confluence:
     ajs-parent-page-id: '8684332'
     ajs-parent-page-title: Nuxeo Android Connector
@@ -66,7 +67,6 @@ The idea is that the SDK should it's features via standard Android concepts and 
 It allows to bind an Android `ListView` to a `LazyDocumentsList`.
 
 ```
-
 // get the document list
 LazyDocumentsList documentsList = getDocumentList(data);
 
@@ -83,7 +83,6 @@ DocumentsListAdapter adapter = new DocumentsListAdapter(this, documentsList, R.l
 
 // bind to the ListView
 listView.setAdapter(adapter);
-
 ```
 
 Starting from there you can use your Nuxeo doculent list like any simple list.
@@ -96,7 +95,7 @@ If scrolling goes faster than fetching from the server, a waiting item will be d
 Nuxeo's SDK try to expose as much as possible of the content via the Android `ContentProvider` system.
 
 The provider authority is `nuxeo` and depending on the requested `URI` content, the call will be directed to a nuxeo service.
-Basically :
+Basically:
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
@@ -195,16 +194,14 @@ This ContentProvider allows :
     *   Interprocess marshaling is handled by the ContentProvider system
     *   you don't need to depend on Nuxeo API
 
-## Event system
+## Event System
 
-Android built-in event system is used by the SDK to notify for :
+Android built-in event system is used by the SDK to notify for:
 
 *   Network status changes: when the Nuxeo server becomes reachable or when offline mode is required
+*   Configuration changes: when the settings of the NuxeoAutomationClient have been changed
+*   Document events: A notification is sent for Create/Update/Delete operations on `LazyDocumentsLists` (with 3 states Local, Server, Failed)
 
-*   Configuration changes : when the settings of the NuxeoAutomationClient have been changed
-
-*   Document events : A notification is sent for Create/Update/Delete operations on `LazyDocumentsLists` (with 3 states Local, Server, Failed)
-
-## Service binding
+## Service Binding
 
 TBD

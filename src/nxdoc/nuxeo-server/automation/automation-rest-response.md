@@ -66,8 +66,6 @@ When calling Automation operations through REST calls, you may want to throw cus
 
 {{! /excerpt}}
 
-&nbsp;
-
 ## Rest Custom Exception in Automation Operation and HTTP Code Error Setting
 
 In order to throw custom exception and http status code, you have to create a custom Exception extending `org.nuxeo.ecm.automation.server.jaxrs.RestOperationException`. You will be able to set the HTTP status code which will be return into the rest call response.

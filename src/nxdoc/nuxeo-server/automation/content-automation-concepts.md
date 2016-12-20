@@ -465,7 +465,7 @@ history:
 ---
 {{! multiexcerpt name='AutomationIntroduction'}}
 
-**Content Automation** is a Nuxeo service that exposes common actions you do on a Nuxeo application as atomic operations. You can then assemble them to create complex business rules and logic, without writing any Java code. In other words, Content Automation provides a high level API over Nuxeo services &mdash; an API made of operations that can be assembled in more complex automation chains.&nbsp;These operations and chains can be called [locally in Java]({{page page='calling-automation-from-java'}}), or remotely as being exposed via the [REST API]({{page page='command-endpoint'}}). Examples of business logic that you can implement with Automation are:
+**Content Automation** is a Nuxeo service that exposes common actions you do on a Nuxeo application as atomic operations. You can then assemble them to create complex business rules and logic, without writing any Java code. In other words, Content Automation provides a high level API over Nuxeo services &mdash; an API made of operations that can be assembled in more complex automation chains. These operations and chains can be called [locally in Java]({{page page='calling-automation-from-java'}}), or remotely as being exposed via the [REST API]({{page page='command-endpoint'}}). Examples of business logic that you can implement with Automation are:
 
 *   My documents should have a topic field;
 *   Documents should be moved to another department when they are validated;

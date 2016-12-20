@@ -121,7 +121,7 @@ Two helpers are set by default into Nuxeo Platform: "**Fn**" and "**HTTP**".
 *   **HTTP**:
     Functions of **HTTP** helper can be used to make remote REST Calls.
 
-### **HTTP** Examples
+### HTTP Examples
 
 {{#> panel type='code' heading='GET REST Call from Nuxeo to another Nuxeo repository'}}
 

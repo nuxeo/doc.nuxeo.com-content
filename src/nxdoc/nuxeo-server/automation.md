@@ -62,10 +62,8 @@ history:
 ---
 {{! excerpt}}
 
-This page briefly presents what the Automation module is about. You can read the [full conceptual explanation]({{page page='content-automation-concepts'}})&nbsp;for a complete understanding.
+This page briefly presents what the Automation module is about. You can read the [full conceptual explanation]({{page page='content-automation-concepts'}}) for a complete understanding.
 
 {{! /excerpt}}
 
 {{{multiexcerpt 'AutomationIntroduction' page='Content Automation Concepts'}}}
-
-&nbsp;

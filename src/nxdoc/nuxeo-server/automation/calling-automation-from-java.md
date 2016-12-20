@@ -191,5 +191,3 @@ Map<String,Object> params = new HashMap<String,Object>();
 params.put("message","messageValue");
 service.run(ctx, "o1", params);
 ```
-
-&nbsp;

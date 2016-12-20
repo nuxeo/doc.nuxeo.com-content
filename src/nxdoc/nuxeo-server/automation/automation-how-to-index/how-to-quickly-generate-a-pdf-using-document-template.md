@@ -130,7 +130,7 @@ history:
 
 {{#> callout type='info' }}
 
-You may want to use [Nuxeo Platform Template Rendering add-on]({{page page='template-rendering-addon'}}) for this use case. That module will allow a much better control on the look&feel of your generated PDF, using MS Word or Open Office templating.
+You may want to use [Nuxeo Platform Template Rendering addon]({{page page='template-rendering-addon'}}) for this use case. That module will allow a much better control on the look&feel of your generated PDF, using MS Word or Open Office templating.
 
 {{/callout}}{{! excerpt}}
 
@@ -168,8 +168,6 @@ You may want to use [Nuxeo Platform Template Rendering add-on]({{page page='temp
     - Blob.ToPDF
     - Seam.DownloadFile
     ```
-
-&nbsp;
 
 * * *
 

@@ -47,7 +47,6 @@ This implies to bind Nuxeo widgets to Android native Widgets.
 The current SDK version provides support for basic fields (Text, TextArea, Date, File, SelectOne, SelectMany).
 
 ```
-
 // get a ScrollView that will contains the Form generated from the Nuxeo Layout
 layoutContainer = (ScrollView) findViewById(R.id.layoutContainer);
 
@@ -56,30 +55,25 @@ NuxeoLayoutService nls = getNuxeoSession().getAdapter(NuxeoLayoutService.class);
 
 // get the layout definition for the current document.
 NuxeoLayout layout = nls.getLayout(this, getCurrentDocument(), layoutContainer, getMode());
-
 ```
 
 `LayoutMode` argument can be create/edit/view.
 
-When you wan to change back the modifications to the document :
+When you wan to change back the modifications to the document:
 
 ```
-
 Document doc = getCurrentDocument();
 layout.applyChanges(doc);
-
 ```
 
 Because some widgets can start new `Activity`, the activity responsible to handle the display of the form will need to implment some additional callback.
 
 ```
-
 @Override
 protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 	layout.onActivityResult(requestCode, resultCode, data);
 	super.onActivityResult(requestCode, resultCode, data);
 }
-
 ```
 
 See sample code and base classes for more details.

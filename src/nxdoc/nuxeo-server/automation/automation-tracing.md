@@ -75,11 +75,11 @@ history:
 {{! excerpt}}
 {{! multiexcerpt name='unknown'}}
 
-&nbsp;Automation chains and operations calls information is collected during their execution by the Automation Trace feature.
+Automation chains and operations calls information is collected during their execution by the Automation Trace feature.
 
 {{! /multiexcerpt}}{{! /excerpt}}
 
-This Automation trace mode can be enabled through the&nbsp;[nuxeo.conf file]({{page page='configuration-parameters-index-nuxeoconf'}})&nbsp;properties:
+This Automation trace mode can be enabled through the [nuxeo.conf file]({{page page='configuration-parameters-index-nuxeoconf'}}) properties:
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Property</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace-default' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace-description' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td></tr><tr><td colspan="1">
 
@@ -122,15 +122,13 @@ Parameters  | Name: message, Value: Message INFO
 Context Variables | Key: ChainParameters, Value: {}
 ```
 
-&nbsp;
-
-*   '`chainA`' is executed, produces a document model and runs two operations:&nbsp; [`Context.FetchDocument`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.FetchDocument) &nbsp;and&nbsp; [`Seam.AddInfoMessage`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Seam.AddInfoMessage) .
+*   '`chainA`' is executed, produces a document model and runs two operations:  [`Context.FetchDocument`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.FetchDocument) and  [`Seam.AddInfoMessage`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Seam.AddInfoMessage) .
 *   These two operations display the following information during their executions:
 
-    *   &nbsp;Input Type, Output Type,
-    *   &nbsp;The Input (here the 'default-domain' document),
-    *   &nbsp;Parameters defined into each operation with their values,
-    *   &nbsp;Context Variables (injected during execution).
+    *   Input Type, Output Type,
+    *   The Input (here the 'default-domain' document),
+    *   Parameters defined into each operation with their values,
+    *   Context Variables (injected during execution).
 
 ##### Examples: Composite Chains
 
@@ -191,14 +189,12 @@ Parameters  | Name: message, Value: test
 Context Variables | Key: ChainParameters, Value: {} | Key: Seam.AddInfoMessage, Value: Message INFO
 ```
 
-&nbsp;
-
-*   '`chainA`' is executed, produces a document model and runs three operations:&nbsp;[Context.FetchDocument](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.FetchDocument),&nbsp;[Context.RunOperation](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.RunOperation)&nbsp;and&nbsp;[Seam.AddInfoMessage](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Seam.AddInfoMessage).
-*   The&nbsp;`Context.RunOperation`&nbsp;runs a second subchain '`chainB`':
+*   '`chainA`' is executed, produces a document model and runs three operations: [Context.FetchDocument](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.FetchDocument), [Context.RunOperation](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.RunOperation) and [Seam.AddInfoMessage](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Seam.AddInfoMessage).
+*   The `Context.RunOperation` runs a second subchain '`chainB`':
 
     *   These chain has parent ID attribute to '`chainA`';
-    *   It contains two operations:&nbsp;`Context.FetchDocument`&nbsp;and&nbsp;`Seam.AddInfoMessage`;
-    *   At subchain ending, third&nbsp;`Seam.AddInfoMessage`&nbsp;operation contained into '`chainB`' is executed.
+    *   It contains two operations: `Context.FetchDocument` and `Seam.AddInfoMessage`;
+    *   At subchain ending, third `Seam.AddInfoMessage` operation contained into '`chainB`' is executed.
 
 ##### JMX Automation Trace Activation
 

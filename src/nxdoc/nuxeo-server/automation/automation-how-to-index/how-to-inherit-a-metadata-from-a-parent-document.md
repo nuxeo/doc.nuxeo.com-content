@@ -187,7 +187,7 @@ In this how-to, we will implement an event handler, that will listen to the crea
 
 {{! /excerpt}} {{#> callout type='info' }}
 
-To maintain inheritance, you need to use the event "Document Updated" and select the children document you want to update. This approach would work with a few documents below your parent documents only. For a larger number of documents, you should&nbsp; consider a lower level approach.
+To maintain inheritance, you need to use the event "Document Updated" and select the children document you want to update. This approach would work with a few documents below your parent documents only. For a larger number of documents, you should consider a lower level approach.
 
 {{/callout}}
 
@@ -225,8 +225,6 @@ To complete this how-to, you need the elements below to be already configured in
     save: "true"
     value: "@{sourceValue}"
 ```
-
-&nbsp;
 
 * * *
 

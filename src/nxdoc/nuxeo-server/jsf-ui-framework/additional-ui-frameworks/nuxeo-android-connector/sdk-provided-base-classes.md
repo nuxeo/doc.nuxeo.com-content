@@ -1,5 +1,5 @@
 ---
-title: SDK provided base classes
+title: SDK Provided Base Classes
 review:
     comment: ''
     date: '2016-12-19'

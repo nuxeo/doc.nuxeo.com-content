@@ -622,19 +622,19 @@ Some others can be used when building an NXQL query to express dates relatively 
 
 The Functions object is providing a set of useful functions. This object is named _Fn_ and provide the following functions:
 
-*   `Fn.getNextId(String key)` : gets a unique value for the given key. Each time this function is called using the same key a different string will be returned.
+*   `Fn.getNextId(String key)`: gets a unique value for the given key. Each time this function is called using the same key a different string will be returned.
 
-*   `Fn.getVocabularyLabel(String vocabularyName, String key)` : gets a value from the named vocabulary that is associated with the given key.
+*   `Fn.getVocabularyLabel(String vocabularyName, String key)`: gets a value from the named vocabulary that is associated with the given key.
 
-*   `Fn.getPrincipal(String userName)` : gets a Nuxeo principal object for the given username string.
+*   `Fn.getPrincipal(String userName)`: gets a Nuxeo principal object for the given username string.
 
-*   `Fn.getEmail(String userName)` : gets the e-mail of the given username.
+*   `Fn.getEmail(String userName)`: gets the e-mail of the given username.
 
-*   `Fn.getEmails(List<String> userNames)` : gets a list of e-mails for the given user name list.
+*   `Fn.getEmails(List<String> userNames)`: gets a list of e-mails for the given user name list.
 
-*   `Fn.getPrincipalEmails(List<NuxeoPrincipal> principals)` : the same as above but the input object is a list of Nuxeo principals.
-*   `Fn.concatenateIntoList(List<T> list, Object... values)`&nbsp;: adds the values to the list. If a value is itself an array or a collection, each of its members are added to the list. The list is returned.
-*   `Fn.concatenateValuesAsNewList(Object... values)`&nbsp;: like&nbsp;`concatenateIntoList` but using a newly-created list.
+*   `Fn.getPrincipalEmails(List<NuxeoPrincipal> principals)`: the same as above but the input object is a list of Nuxeo principals.
+*   `Fn.concatenateIntoList(List<T> list, Object... values)`: adds the values to the list. If a value is itself an array or a collection, each of its members are added to the list. The list is returned.
+*   `Fn.concatenateValuesAsNewList(Object... values)`: like `concatenateIntoList` but using a newly-created list.
 *   `Fn.htmlEscape(String string)` : gets an escaped version of the string suitable for HTML inclusion.
 *   `Fn.nxqlEscape(String string)` : gets an escaped version of the string suitable for NXQL inclusion inside single quotes (since Nuxeo 7.10).
 
@@ -1142,13 +1142,9 @@ Here you must use the name of the document type (not the label).
 
 ## Referencing Automation Chain Parameters
 
-<pre>&nbsp;</pre>
-
 ```
 @{ChainParameters['parameterName']}
 ```
-
-&nbsp;
 
 ## More Advanced Scripts
 

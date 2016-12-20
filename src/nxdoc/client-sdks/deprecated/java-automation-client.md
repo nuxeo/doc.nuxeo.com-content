@@ -423,19 +423,17 @@ history:
 ---
 {{#> callout type='warning' }}
 
-Java Automation Client will be deprecated for Nuxeo LTS 2016\. Please use [Nuxeo Java Client](http://nuxeo.github.io/nuxeo-java-client/).
+Java Automation Client has been deprecated for Nuxeo LTS 2016\. Please use [Nuxeo Java Client](http://nuxeo.github.io/nuxeo-java-client/).
 
-{{/callout}}{{! excerpt}}
+{{/callout}}
+
+{{! excerpt}}
 
 Nuxeo provides a high level client implementation for Java programmers: Nuxeo Automation Client API simplifies your task since it handles all the protocol level details.
 
 {{! /excerpt}}
 
-&nbsp;
-
 ## Dependencies
-
-&nbsp;
 
 {{#> callout type='note' }}
 
@@ -445,8 +443,6 @@ Nuxeo provides a high level client implementation for Java programmers: Nuxeo Au
 {{/callout}}
 
 To use the Java Automation client you need to put a dependency on the following Maven artifact:
-
-&nbsp;
 
 ```xml
 <dependency>
@@ -483,7 +479,7 @@ The client library depends on:
 
 ## Automation Client API
 
-Let's take an example and execute the "`SELECT * FROM Document"` query against a remote Automation server:
+Let's take an example and execute the `SELECT * FROM Document` query against a remote Automation server:
 
 ```
 import org.nuxeo.ecm.automation.client.jaxrs.impl.HttpAutomationClient;
@@ -555,7 +551,7 @@ You can see the code above has three distinctive parts:
 
     Make sure to not open a session each time you call an operation, otherwise you will have performances issues.
 
-    We recommend to open the session&nbsp;once before calling any operation, like during application startup or when the user needs to authenticate. Then you may close it when the user logout or during application shutdown.
+    We recommend to open the session once before calling any operation, like during application startup or when the user needs to authenticate. Then you may close it when the user logout or during application shutdown.
 
     {{/callout}}
 
@@ -577,7 +573,7 @@ Using a session you can now invoke remote operations.
 
     ```
 
-    You can see in the example that you have to specify only the `query` argument. If you have more arguments, call the `set` method&nbsp;in turn for each of these arguments. If you need to specify execution context parameters you can use `request.setContextProperty` method. On the same principle, if you need to specify custom HTTP headers you can use the `request.setHeader` method.
+    You can see in the example that you have to specify only the `query` argument. If you have more arguments, call the `set` method in turn for each of these arguments. If you need to specify execution context parameters you can use `request.setContextProperty` method. On the same principle, if you need to specify custom HTTP headers you can use the `request.setHeader` method.
 
 3.  After having filled all the required request information you can execute the request by calling the execute method.
 
@@ -934,7 +930,7 @@ session.newRequest(UpdateDocument.ID).setInput(document).set("properties",docume
 
 ## {{> anchor 'managing-business-objects'}}Managing Business Objects
 
-Since 5.7.2, managing business objects (Plain Old Java Object client side for mapping the [Nuxeo Document Model Adapter](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters) ([Documentation]({{page page='repository-concepts#documentmodel-adapter'}})) server side) is now available.
+It is possible to manage business objects (Plain Old Java Object client side for mapping the [Nuxeo Document Model Adapter](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters) ([Documentation]({{page page='repository-concepts#documentmodel-adapter'}})) server side).
 
 Why manage business object? To manipulate business object to avoid _Nuxeo Document_ manipulation on client side:
 
@@ -1071,12 +1067,12 @@ Let's see an example.
 
     So now we have on client side a POJO `BusinessBean` and on server side a Document Model Adapter `BusinessBeanAdapter`.
 
-    We are going to use&nbsp;two operations for creating/updating process:
+    We are going to use two operations for creating/updating process:
 
     *   [`Business.BusinessCreateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Business.BusinessCreateOperation)
     *   [`Business.BusinessUpdateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Business.BusinessUpdateOperation)
     {{#> callout type='info' }}
-    Since 5.7.2, you can see [the Automation Client Service Adapter section](#automation-client-service-adapter) to know how Business operations are wrapped into `BusinessService` adapter and how to use it.
+    See [the Automation Client Service Adapter section](#automation-client-service-adapter) to know how Business operations are wrapped into `BusinessService` adapter and how to use it.
     {{/callout}}
 
 3.  Let's see how to map them directly using these operations:
@@ -1151,7 +1147,7 @@ documentService.update(myDocument);
 myDocument = documentService.getDocument(folder, "*");
 ```
 
-##### BusinessService Usage (since 5.7.2)
+##### BusinessService Usage
 
 Here is an example of using `BusinessService` API (this example is the same previous one with [Business Objects](#managing-business-objects) but this time using `BusinessService`):
 
@@ -1175,7 +1171,7 @@ file = (BusinessBean) businessService.update(file);
 
 ##### Contributing a New Custom Service Adapter
 
-You can contribute your own adapter service&nbsp;by Java to encapsulate your own business logic.
+You can contribute your own adapter service by Java to encapsulate your own business logic.
 
 To achieve this registration, you have to provide an adapter service factory that is going to instantiate your adapter. You can find an example of factory for the [`DocumentService`](http://community.nuxeo.com/api/nuxeo/7.1/javadoc/org/nuxeo/ecm/automation/client/adapters/DocumentService.html) class: [`DocumentServiceFactory`](http://community.nuxeo.com/api/nuxeo/7.1/javadoc/org/nuxeo/ecm/automation/client/adapters/DocumentServiceFactory.html) ([source code on GitHub](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-client/src/main/java/org/nuxeo/ecm/automation/client/adapters/DocumentServiceFactory.java)).
 
@@ -1193,7 +1189,7 @@ MyService myService = session.getAdapter(MyService.class);
 
 ## Automation Client in OSGi Environment
 
-Since 5.7.1, Nuxeo Automation Client is OSGi compliant.
+Nuxeo Automation Client is OSGi compliant.
 
 ##### Example to Get Automation Client in an OSGi Environment
 

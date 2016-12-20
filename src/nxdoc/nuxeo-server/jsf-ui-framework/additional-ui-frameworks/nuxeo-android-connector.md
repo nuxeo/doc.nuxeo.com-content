@@ -148,6 +148,4 @@ This connector includes :
 
 ## Getting the Connector and the Source Code
 
-Source code for Nuxeo Android Connector is available in [Nuxeo's GitHub](https://github.com/nuxeo/nuxeo-android) .
-
-## Sample Application
+Source code for Nuxeo Android Connector is available in [Nuxeo's GitHub](https://github.com/nuxeo/nuxeo-android).

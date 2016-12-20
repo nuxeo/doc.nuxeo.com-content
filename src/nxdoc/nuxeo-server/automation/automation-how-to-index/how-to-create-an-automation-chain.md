@@ -217,7 +217,7 @@ history:
 ---
 {{! excerpt}}
 
-This how-to explains the different steps to create and configure an automation chain.
+This how-to explains the different steps to create and configure an automation chain using Nuxeo Studio.
 
 {{! /excerpt}}
 
@@ -236,7 +236,7 @@ This is done in two steps:
     ![]({{file name='NXS-automation-create.png'}} ?w=350,border=true)
     The automation chain editor is displayed.
     The **Fetch > Context Document(s)** is automatically added as the first operation of the chain.
-4.  If needed, remove the **Fetch > Context Document(s)**and replace it with another Fetch operation. The Fetch operation role is to feed the chain with some document input, whether it is one document or a list of documents. There are various ways to fetch:
+4.  If needed, remove the **Fetch > Context Document(s)** and replace it with another Fetch operation. The Fetch operation role is to feed the chain with some document input, whether it is one document or a list of documents. There are various ways to fetch:
     *   **Context document** will bring either the UI Current document, or the document attached to the event (depending on what you binded your operation chain, see later).
     *   **Fetch Query** will bring back the result of the query as a documents list.
     *   **Get Document** allows to fetch document by path.
@@ -288,8 +288,6 @@ Binding the automation chain to a button, an action or an event handler is done 
 4.  Choose the automation chain to which you want the event handler to be binded.
     ![]({{file name='NXS-event-handler-edition-form-3.png'}} ?w=350,border=true)
 5.  Click on the **Save** button.
-
-&nbsp;
 
 * * *
 

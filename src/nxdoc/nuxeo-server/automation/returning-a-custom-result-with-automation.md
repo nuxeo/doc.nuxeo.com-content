@@ -53,7 +53,7 @@ As automatic marshalling is not implemented into Automation server and client, o
 
 Below is an example, based on the results returned by the method `QueryAndFetch`.
 
-*   Operation code&nbsp;
+*   Operation code
 
     ```java
     package org.nuxeo.support;

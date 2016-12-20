@@ -300,15 +300,14 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' }}
 
 This page gives all the information necessary for implementing an operation and is a must read for getting a good comprehension of the framework. You should also have a look at [some of our tutorials]({{page page='getting-started-with-nuxeo-generator'}}) that show how to use the Nuxeo Generator to create new operations easily and quickly, using the provided wizard.
 
 You can also use the Codenvy factory that we have setup and that offers you [a ready-to-build sample operation](https://codenvy.com/f?id=0djlg2kc332ipv5u), with its unitary test. Just click on **Project** > **Build & Publish** so as to get a JAR of your operation. You can deploy your first operation "SampleOperation" into Nuxeo server in Codenvy by clicking on the green arrow on panel left top.
 
-{{/callout}} {{#> callout type='tip' }}
+{{#> callout type='tip' }}
 
-Check our [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) to bootstrap your&nbsp;Operation
+Check our [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) to bootstrap your Operation
 
 {{/callout}} <div style="float:right"><script type="text/javascript" style="Advanced" src="https://codenvy.com/f?id=0djlg2kc332ipv5u"></script></div>
 
@@ -320,11 +319,11 @@ In order to implement an operation you need to create a Java class annotated wit
 
 {{! /excerpt}}
 
-You can have multiple _executable_ methods - one method for each type of input/output objects supported by an operation.&nbsp;The right method will be selected at runtime depending on the type of the input object (and of the type of the required input of the next operation when in an operation chain).
+You can have multiple _executable_ methods - one method for each type of input/output objects supported by an operation. The right method will be selected at runtime depending on the type of the input object (and of the type of the required input of the next operation when in an operation chain).
 
 So, an operation method will be selected if the method argument matches the current input object and the return type matches the input required by the next operation if in an operation chain.
 
-The `@OperationMethod` annotation is also providing an optional priority attribute that can be used to specify which method is preferred over the other matching methods. This situation (having multiple method that matches an execution) can happen because the input and output types are not strictly matched. For example if the input of a method is a DocumentModel object and the input of another method is a DocumentRef object then both methods have the same input signature for the automation framework because DocumentModel and DocumentRef are objects of the same kind - they represent a Nuxeo Document. When you need to treat different Java objects as the same type of input (or output) you must create a type adapter (see the interface&nbsp;`org.nuxeo.ecm.automation.TypeAdapter`) that knows how to convert a given object to another type. Without type adapters treating different Java objects as the same type of object is not possible.
+The `@OperationMethod` annotation is also providing an optional priority attribute that can be used to specify which method is preferred over the other matching methods. This situation (having multiple method that matches an execution) can happen because the input and output types are not strictly matched. For example if the input of a method is a DocumentModel object and the input of another method is a DocumentRef object then both methods have the same input signature for the automation framework because DocumentModel and DocumentRef are objects of the same kind - they represent a Nuxeo Document. When you need to treat different Java objects as the same type of input (or output) you must create a type adapter (see the interface `org.nuxeo.ecm.automation.TypeAdapter`) that knows how to convert a given object to another type. Without type adapters treating different Java objects as the same type of object is not possible.
 
 Also operations can provide parametrizable variables so that when a user defined an operation chain, they can define values that will be injected in the operation parameters. To declare parameters you must use the `@Param` annotation.
 
@@ -343,7 +342,7 @@ To register your operation you should create a Nuxeo XML extension to the [`oper
 
 ```
 
-where `org.nuxeo.example.TestOperation` is the class name of your operation (the one annotated with `@Operation).`
+where `org.nuxeo.example.TestOperation` is the class name of your operation (the one annotated with `@Operation)`.
 
 Let's look at the following operation class to see how annotations were used:
 
@@ -415,11 +414,11 @@ public class CreateDocument {
 
 ```
 
-You can see how `@Context`&nbsp;is used to inject the current CoreSession instance into the session member. It is recommended to use this technique to acquire a CoreSession instead of creating a new session. This way you reuse the same CoreSession used by all the other operations in the chain. You don't need to worry about closing the session &mdash; the automation service will close the session for you when needed.
+You can see how `@Context` is used to inject the current CoreSession instance into the session member. It is recommended to use this technique to acquire a CoreSession instead of creating a new session. This way you reuse the same CoreSession used by all the other operations in the chain. You don't need to worry about closing the session &mdash; the automation service will close the session for you when needed.
 
 You can use `@Context` also to inject any Nuxeo Service or the instance of the `OperationContext` object that represents the current execution context and that holds the execution state &mdash; like the last input, the context parameters, the core session, the current principal etc.
 
-The attributes of the `@Operation`&nbsp;annotation are required by operation chain creation tools like the one in [Nuxeo Studio]({{page space='studio' page='automation'}}) to be able to generate the list of existing operations and some additional operation information - like its name, a short description on how the operation is working etc. For a complete description of these attributes look into the annotation Javadoc.
+The attributes of the `@Operation` annotation are required by operation chain creation tools like the one in [Nuxeo Studio]({{page space='studio' page='automation'}}) to be able to generate the list of existing operations and some additional operation information - like its name, a short description on how the operation is working etc. For a complete description of these attributes look into the annotation Javadoc.
 
 You can see the operation above provides three operation methods with different signatures:
 
@@ -436,7 +435,7 @@ The initial input of an operation (or operation chain) execution is provided by 
 *   A JAX-RS resource which executes operations in response to REST calls,
 *   A special listener fired by the workflow service to execute an operation chain.
 
-Each of these execution contexts are providing the initial input for the chain (or operation) to be executed. For example the core event listener will use as the initial input the document that is the source of the event. The action bean executor will use the document currently opened in the User Interface.&nbsp;
+Each of these execution contexts are providing the initial input for the chain (or operation) to be executed. For example the core event listener will use as the initial input the document that is the source of the event. The action bean executor will use the document currently opened in the User Interface.
 
 If no input exists then **null** will be used as the input. In that case the first operation in the chain must be a **void** operation.
 If you need you can create your own operation executor. Just look into the existing code for examples (e.g. `org.nuxeo.ecm.automation.jsf.OperationActionBean`).
@@ -483,50 +482,50 @@ This means you can use for almost all field types string values since a string a
 
 Here is a list of the most used parameter types and the string representation for each of these types (the string representation is important since you should use it when defining operation chains through Nuxeo XML extensions):
 
-*   **document**. Java type: `org.nuxeo.ecm.core.api.DocumentModel`
-    Known adapters: From string, from DocumentRef
+*   **document**. Java type: `org.nuxeo.ecm.core.api.DocumentModel` <br/>
+    Known adapters: From string, from DocumentRef<br/>
     String representation: The document UID or the document absolute path. Example: "96bfb9cb-a13d-48a2-9bbd-9341fcf24801", "/default-domain/workspaces/myws" etc.
 
-*   **documents**. Java type: `org.nuxeo.ecm.core.api.DocumentModelList`
-    Known adapters: From DocumentRefList, from DocumentModel, from DocumentRef
+*   **documents**. Java type: `org.nuxeo.ecm.core.api.DocumentModelList`<br/>
+    Known adapters: From DocumentRefList, from DocumentModel, from DocumentRef<br/>
     No String representation exists. Cannot be used as a parameter value in an XML chain descriptor. You should use EL expressions instead.
 
-*   **blob**. Java type: `org.nuxeo.ecm.core.api.Blob`
+*   **blob**. Java type: `org.nuxeo.ecm.core.api.Blob`<br/>
     No String representation exists. Cannot be used as a parameter value in an XML chain descriptor. You should use EL expressions instead.
 
-*   **blobs**. Java type: `org.nuxeo.ecm.automation.core.util.BlobList`
+*   **blobs**. Java type: `org.nuxeo.ecm.automation.core.util.BlobList`<br/>
     No String representation exists. Cannot be used as a parameter value in an XML chain descriptor. You should use EL expressions instead.
 
-*   **properties**. Java type: `org.nuxeo.ecm.automation.core.util.Properties`
-    Known adapters: From string.
+*   **properties**. Java type: `org.nuxeo.ecm.automation.core.util.Properties`<br/>
+    Known adapters: From string.<br/>
     String representation: A list of key value pairs in Java properties file format.
 
-*   **resource**. Java type: `java.net.URL`
+*   **resource**. Java type: `java.net.URL`<br/>
     Known adapters: From string.
 
-*   **script**. Java type: `org.nuxeo.ecm.automation.core.scripting.Expression`
-    String representation: Use the "expr:" prefix before your EL expression.
-    Example: "`expr: Document.title`"
+*   **script**. Java type: `org.nuxeo.ecm.automation.core.scripting.Expression`<br/>
+    String representation: Use the "expr:" prefix before your EL expression.<br/>
+    Example: "`expr: Document.title`"<br/>
     For the complete list of scripting objects and functions see [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}}).
 
-*   **date**. Java type: `java.util.Date`.
-    Known type adapters: From string and from `java.util.Calendar`
+*   **date**. Java type: `java.util.Date`.<br/>
+    Known type adapters: From string and from `java.util.Calendar`<br/>
     String representation: W3C date format.
 
-*   **integer**. Java type: `java.lang.Long` or the long primitive type.
+*   **integer**. Java type: `java.lang.Long` or the long primitive type.<br/>
     Natural string representation.
 
-*   **float**. Java type: `java.lang.Double` or the double primitive type.
+*   **float**. Java type: `java.lang.Double` or the double primitive type.<br/>
     Natural string representation.
 
-*   **boolean**. Java type: `java.lang.Boolean` or the boolean primitive type.
+*   **boolean**. Java type: `java.lang.Boolean` or the boolean primitive type.<br/>
     Natural string representation.
 
-*   **string**. Java type: `java.lang.String`
+*   **string**. Java type: `java.lang.String`<br/>
     Already a string.
 
-*   **stringlist**. Java Type: `org.nuxeo.ecm.automation.core.util.StringList`
-    Known adapters: From string
+*   **stringlist**. Java Type: `org.nuxeo.ecm.automation.core.util.StringList`<br/>
+    Known adapters: From string<br/>
     String representation: Comma separated list of strings. Example: "foo, bar"
 
 Of course, when defining the parameter values that will be injected into an operation you can either specify static values (as hard coded strings) or an EL expression to compute the actual values at runtime.
@@ -535,7 +534,7 @@ Of course, when defining the parameter values that will be injected into an oper
 
 Sometimes operations may not require any input. In that case the operation should use a method with no parameters. Such methods will match any input - thus it is not indicated to use two void methods in the same operation - since you cannot know which method will be selected for execution.
 
-For example, the&nbsp;_Log_&nbsp;operation does not requires an input, since it is only writing in the log:
+For example, the _Log_ operation does not requires an input, since it is only writing in the log:
 
 ```java
 import org.apache.commons.logging.Log;

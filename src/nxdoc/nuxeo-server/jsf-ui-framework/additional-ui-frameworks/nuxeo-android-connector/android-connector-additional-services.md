@@ -60,34 +60,29 @@ history:
 ---
 In addition of the Automation Client, Android Connector exposes several services :
 
-## Built in services
+## Built-in Services
 
-### `TransientStateManager`
-
+**`TransientStateManager`**
 Manages local storage of locally modified Documents.
 
-### `DeferredUpdateManager`
-
+**`DeferredUpdateManager`**
 Manages storage of updates operations until the network becomes available again.
 
-### `ResponseCacheManager`
-
+**`ResponseCacheManager`**
 Manage Storage of server responses.
 
-### `FileDownloader`
-
+**`FileDownloader`**
 This service is also very tied to the caching system.
 It manages download in a ThreadPool and caches the result on the Filesystem.
 
-### `FileUploader`
-
+**`FileUploader`**
 This service works side by side with the `DeferredUpdateManager`.
 
 For Document create/update operations, the Blobs are not directly sent inside the Create/Update request.
 Basically, the Blobs are uploaded via the `FileUploader` service and the Create/Update operation will contain a reference to the upload batch.
 In order for this to work correctly the DeferredUpdate will have a dependency on the required uploads.
 
-### `NuxeoLayoutService`
+**`NuxeoLayoutService`**
 
 ## Accessing the services
 
@@ -95,7 +90,6 @@ Services are accessible via simple getters on the `NuxeoContext` and `AndroidAut
 You can also use the adapter system on the Session object to have direct access to all the services.
 
 ```
-
 FileUploader uploader = getNuxeoSession().getAdapter(FileUploader.class);
 
 FileDownloader downloader = getNuxeoSession().getAdapter(FileDownloader.class);
@@ -111,5 +105,4 @@ NuxeoLayoutService nuxeoLayoutService = getNuxeoSession().getAdapter(NuxeoLayout
 DocumentMessageService documentMessageService = getNuxeoSession().getAdapter(DocumentMessageService.class);
 
 DocumentProvider documentProvider = getNuxeoSession().getAdapter(DocumentProvider.class);
-
 ```

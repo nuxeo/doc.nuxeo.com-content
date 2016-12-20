@@ -210,9 +210,7 @@ history:
 ---
 {{> wistia_video id='nygm75sevd'}}
 
-Extract from the course "[Applying Business Logic](https://university.nuxeo.io/nuxeo/university/#!/course/applying-business-logic)" at&nbsp;[Nuxeo University](https://university.nuxeo.io/)
-
-&nbsp;
+Extract from the course "[Applying Business Logic](https://university.nuxeo.io/nuxeo/university/#!/course/applying-business-logic)" at [Nuxeo University](https://university.nuxeo.io/)
 
 {{! excerpt}}
 
@@ -250,7 +248,7 @@ Nuxeo Automation Scripting allows you to write JavaScript code to use Automation
     ```
 
 *   Passing parameters and variables through the operation context and input.
-*   Using operations/chains as JavaScript functions within this&nbsp;`run()` function
+*   Using operations/chains as JavaScript functions within this `run()` function
 
     ```js
     // For instance, the operation to display JSF messages
@@ -277,6 +275,7 @@ Nuxeo Automation Scripting allows you to write JavaScript code to use Automation
               'value': "renamed"
         });
       }
+    }
     ```
 
 *   Operation Context can be used to read or write variables through `ctx` JavaScript object:
@@ -308,7 +307,7 @@ If one of your Automation chain or operation contains dashes (`-`) in their name
 **Example:**
 
 *   Automation chain id: `my-chain-with-dashes`
-*   Automation scripting usage:&nbsp;
+*   Automation scripting usage:
 
     ```js
     var document = my_chain_with_dashes(input, {.......});
@@ -340,13 +339,14 @@ To bind an Automation JavaScript to an action:
 
 #### Automation Chain Binding
 
-*   Automation Scripting scripts can be executed within an Automation Chain, by using the operation `Execution Flow > Run Chain`.&nbsp;The ID must be formatted as `javascript.script_name`.
-    &nbsp;![]({{file name='automation_scripting_chain_binding.png'}} ?w=500,border=true)
-*   Automation Scripting custom scripts can be used as well directly in Automation Chains from the category **Scripting** as follow: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![]({{file name='Screenshot 2015-05-25 18.16.50.png'}} ?w=500,h=166,border=true)
+*   Automation Scripting scripts can be executed within an Automation Chain, by using the operation `Execution Flow > Run Chain`. The ID must be formatted as `javascript.script_name`.
+    ![]({{file name='automation_scripting_chain_binding.png'}} ?w=500,border=true)
+*   Automation Scripting custom scripts can be used as well directly in Automation Chains from the category **Scripting** as follow:
+    ![]({{file name='Screenshot 2015-05-25 18.16.50.png'}} ?w=500,h=166,border=true)
 
 ### Entering Data in a Complex Multi-Valued Field
 
-To enter data in a complex multi-valued field, use `Document.Update` and pass a JSON array of objects in `properties`. For instance, a complex field `teamMembers` has two sub-fields&nbsp;`firstName` and&nbsp;`lastName`.
+To enter data in a complex multi-valued field, use `Document.Update` and pass a JSON array of objects in `properties`. For instance, a complex field `teamMembers` has two sub-fields `firstName` and `lastName`.
 
 **To enter data when the field is empty:**
 
@@ -373,11 +373,9 @@ input = Document.Update(input, {
 });
 ```
 
-&nbsp;
-
 ### REST Call
 
-Automation scripts can be called like any operation or chain using the Automation&nbsp;HTTP bridge. See&nbsp;[cURL sample]({{page page='using-curl'}}).
+Automation scripts can be called like any operation or chain using the Automation HTTP bridge. See [cURL sample]({{page page='using-curl'}}).
 
 ### Using Helpers
 
@@ -472,19 +470,19 @@ ctx.get('var')
 
 Metrics have been added to Automation Scripting services to monitor Nashorn performances with the Nuxeo Platform.
 
-To activate the metrics, set the following variable in&nbsp;`nuxeo.conf`:
+To activate the metrics, set the following variable in `nuxeo.conf`:
 
 ```
 automation.scripting.monitor.enable= true
 ```
 
-Or set the Log4J level to TRACE for&nbsp; [`org.nuxeo.automation.scripting.internals.AutomationScriptingComponent`](http://community.nuxeo.com/api/nuxeo/release-7.2/javadoc/org/nuxeo/automation/scripting/internals/AutomationScriptingComponent.html) .
+Or set the Log4J level to TRACE for  [`org.nuxeo.automation.scripting.internals.AutomationScriptingComponent`](http://community.nuxeo.com/api/nuxeo/release-7.2/javadoc/org/nuxeo/automation/scripting/internals/AutomationScriptingComponent.html) .
 
 This feature gives the ability to get time execution information through `JMX: org.nuxeo.StopWatch`.
 
 ## Restrictions
 
-All Java imports are forbidden by default into the Nuxeo Platform.&nbsp;This example cannot be applied anymore.
+All Java imports are forbidden by default into the Nuxeo Platform. This example cannot be applied anymore.
 
 ```
 var file = Java.type("java.io.File");
@@ -647,10 +645,6 @@ Automation scripting operations can be used as common Automation operations:
     Object result = automationService.run(ctx, "Scripting.HelloWorld", params);
     assertEquals("Hello John", result.toString());
     ```
-
-&nbsp;
-
-&nbsp;
 
 * * *
 

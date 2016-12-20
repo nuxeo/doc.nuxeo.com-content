@@ -88,35 +88,29 @@ The Nuxeo Automation Client is deprecated for LTS 2016 and has been replaced by 
 In the Android Connector, the Automation Client is associated to a context that references required dependencies :
 
 *   server configuration and credentials
-
 *   network status information
-
 *   Android Context (required for Filesystem and SQL Db access)
 
 You can access this `NuxeoContext` by using :
 
 ```
-
   NuxeoContext.get(Context context)
-
 ```
 
-context being the Android Application Context.
+`context` being the Android Application Context.
 
 If you use the base class `SimpleNuxeoApplication` for your application, you can directly call `getNuxeoContext()` on the application.
 
-The main advantages of using the `SimpleNuxeoApplication` base class is that :
+The main advantages of using the `SimpleNuxeoApplication` base class is that:
 
 *   access to NuxeoContext is simpler
-
 *   the lifecycle of NuxeoContext will be bound to your application (instead of being a static singleton)
 
-NB : you should use one method to access the `NuxeoContext`, but you should not mix them ...
+NB: You should use one method to access the `NuxeoContext`, but you should not mix them.
 
-Once you have the `NuxeoContext` you can directly access to the settings and the Automation Session :
+Once you have the `NuxeoContext` you can directly access to the settings and the Automation Session:
 
 ```
-
   ctx.getServerConfig().setLogin("jdoe");
   ctx.getServerConfig().setPassword("secret");
   ctx.getServerConfig().setServerBaseUrl("http://10.0.2.2:8080/nuxeo/");
@@ -124,7 +118,6 @@ Once you have the `NuxeoContext` you can directly access to the settings and the
   if (ctx.getNetworkStatus().isNuxeoServerReachable()) {
     Document doc = (Document) ctx.getSession().newRequest("Document.Fetch").set("value", docRef).execute();
   }
-
 ```
 
 Outside of this direct association between the Context and the Automation Client Session, the [standard documentation for Nuxeo Automation Client]({{page page='java-automation-client'}}) does apply to the Automation Client embedded in Android Connector.

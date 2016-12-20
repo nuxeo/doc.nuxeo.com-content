@@ -138,8 +138,7 @@ The class [`org.nuxeo.ecm.platform.shibboleth.computedgroups.ShibbolethGroupComp
 
 ### Nuxeo Package Installation
 
-The Shibboleth authentication module could be installed through the Marketplace with the [Shibboleth Authentication package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication).
-See&nbsp;the&nbsp;page [Installing a New Package on Your Instance]({{page page='installing-a-new-package-on-your-instance'}}).
+The Shibboleth authentication module is available [as a packaged Nuxeo Addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication) on the Nuxeo marketplace. It can be installed with [nuxeoctl command line]({{page page='installing-a-new-package-on-your-instance'}}) or [from the Update Center]({{page page='installing-a-new-package-on-your-instance'}}).
 
 After you installed the package, a new **Shib Goups** tab is available in the **Admin** > **Users & Groups** tab.
 
@@ -147,12 +146,13 @@ After you installed the package, a new **Shib Goups** tab is available in the **
 
 ### Manual Installation
 
-1.  &nbsp;[Download the built nuxeo-platform-login-shibboleth.jar](https://maven.nuxeo.org/nexus/service/local/artifact/maven/redirect?r=public-releases&g=org.nuxeo.ecm.platform&a=nuxeo-platform-login-shibboleth&v=6.0&e=jar).
+1.  [Download the built nuxeo-platform-login-shibboleth.jar](https://maven.nuxeo.org/nexus/service/local/artifact/maven/redirect?r=public-releases&g=org.nuxeo.ecm.platform&a=nuxeo-platform-login-shibboleth&v=6.0&e=jar).
 2.  Deploy it into your Tomcat or JBoss instance, in the `bundles` directory.
 3.  Add a new file named `shibboleth-config.xml` in the `config/` directory of your server. This file defines the login and logout URLs, the mapping between the user metadata and the headers names.
     *   `$NUXEO/nxserver/config` for a Tomcat distribution
-    *   `$NUXEO/server/default/deploy/nuxeo.ear/config` for a JBoss distribution{{#> panel type='code' heading='shibboleth-config.xml'}}
+    *   `$NUXEO/server/default/deploy/nuxeo.ear/config` for a JBoss distribution
 
+    {{#> panel type='code' heading='shibboleth-config.xml'}}
     ```html/xml
     <?xml version="1.0"?>
     <component name="org.nuxeo.ecm.platform.login.shibboleth.config">
@@ -172,9 +172,7 @@ After you installed the package, a new **Shib Goups** tab is available in the **
         </config>
       </extension>
     </component>
-
     ```
-
     {{/panel}}
 
 ## Configuration

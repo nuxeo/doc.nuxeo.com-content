@@ -134,8 +134,6 @@ Content Automation provides means to debug and handle exception during the Autom
 
 {{! /excerpt}}
 
-&nbsp;
-
 Automation exception chain can be added to be executed when an error occurs during an Automation execution.
 
 After contributing your custom chains, you can declare your exception chains:
