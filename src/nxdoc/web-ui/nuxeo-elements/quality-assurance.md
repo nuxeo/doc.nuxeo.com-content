@@ -45,6 +45,37 @@ of more features to support development with Polymer. You can install it for
 
 Nuxeo elements are the best means to build a custom UI application on the top of Nuxeo server and below are the guidelines to make the UI experience faster and to reduce server performance cost.
 
+### Browser Cache
+
+By default, the Nuxeo server deactivates the browser cache by setting the response header `Cache-Control` to `no-cache`.
+
+In order to activate it, you can create a file `cache-browser-config.xml` in the `NUXEO_HOME/nxserver/config` folder and set the recommended following content:
+
+```
+<component name="org.nuxeo.browser.cache.settings">
+  <require>org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService.defaultContrib</require>
+  <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService"
+             point="responseHeaders">
+    <header name="X-UA-Compatible">IE=10; IE=11</header>
+    <header name="Cache-Control">private, max-age=3600, must-revalidate</header>
+    <header name="X-Content-Type-Options">nosniff</header>
+    <header name="X-XSS-Protection">1; mode=block</header>
+    <header name="X-Frame-Options">${nuxeo.frame.options:=SAMEORIGIN}</header>
+    <!-- this is a permissive Content-Security-Policy, which should be overridden for more security -->
+    <header name="Content-Security-Policy">default-src *; script-src 'unsafe-inline' 'unsafe-eval' data: *; style-src 'unsafe-inline' *; font-src data: *
+    </header>
+  </extension>
+
+</component>
+```
+
+- The cache will be `private` (you cannot cache the resources on a intermediate proxy like for instance a `CDN`)
+- The `ETag` check will be activated
+- The `max-age` cache time is set to 1 hour (within the hour the browser won't request a validation to the server of the blobs like images, thumbnails
+- Once the cache expires, the browser will request to the server a re-validation of the blobs if they have been updated
+
+[Here a schema](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/images/http-cache-decision-tree.png) which summarises browser caching strategies.
+
 ### Polymer
 
 ##### Vulcanizing the Polymer elements
