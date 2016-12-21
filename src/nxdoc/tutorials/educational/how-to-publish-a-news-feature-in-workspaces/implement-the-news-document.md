@@ -113,11 +113,11 @@ In this section, we will:
 
 *   Create the News document type,
 *   Create the content template with News Folder,
-*   Add a button dedicated to news creation.
+*   Add a button dedicated to News creation.
 
 {{#> callout type='info' }}
 
-For this section, it is recommended to take a look at the how-tos for a step-by-step approach:
+For this section, it is recommended to take a look at the following guides for a step-by-step approach:
 
 *   [How to define a document type]({{page page='how-to-define-a-document-type'}})
 *   [Use Content Automation]({{page page='how-to-define-a-new-content-view'}})
@@ -126,31 +126,32 @@ For this section, it is recommended to take a look at the how-tos for a step-by-
 
 ## Create the News Document Type
 
-1.  Create a new document type called `News` that extends the "Document" type.
+1.  Create a new document type called `News`.
 
     {{#> callout type='tip' }}
 
     A document type must have a container. However if you do not want your document type to be displayed in the available document list window, you can select Document type as the container.
 
     {{/callout}}
-2.  On the **Schema** tab:
-    *   Add the `files` schema (necessary so that pictures that are uploaded with HTML widget are stored).
-    *   Add a field `body` of type `String`.
-3.  Create the layouts of the document:
-    *   Creation form metadata: `dc:title` as text widget, `news:body` as HTML widget.
-    *   Edit form metadata: import Creation layout (it is the same).
-    *   View form metadata: import Creation layout and add `dc:valid` as DateTime widget on a third row.
+2.  On the **Definition** tab, ensure that the our News document extends the **Document** type.    
+3.  On the **Schema** tab:
+    *   Add the `files` schema (necessary so that pictures that are uploaded with a HTML widget are stored).
+    *   Under **Add a custom schema** a field `body` of type `String`.
+4.  Create the layouts of the document:
+    *   **Creation layout** metadata: `dc:title` as text widget, `news:body` as a HTML text widget.
+    *   **Edit layout** metadata: import Creation layout (it is the same).
+    *   **View layout** metadata: import Creation layout and add `dc:valid` as DateTime widget on a third row.
 
-The `News`&nbsp;document type is now created. However, there is no way to access the creation form for now.
+The `News` document type is now created. However, there is no way to access the creation form for now.
 
 ## Create the Structure Template for News Folder to Be Available Automatically
 
 1.  Create a new Structure Template:
-    *   ID: Workspace
-    *   Target Document Type: Workspace
+    *   **ID**: Workspace
+    *   **Target Document Type**: Workspace
 2.  Add a new built-in type: Folder
-    *   Node Name: NewsFolder
-    *   Title: News Folder
+    *   **Node Name**: NewsFolder
+    *   **Title**: News Folder
 
 ![]({{file name='structuretemplate_workspace.png'}} ?w=650,border=true)
 
@@ -161,66 +162,23 @@ Now, every time a workspace is created, a folder called "News Folder" will autom
 Here are the steps to create the button to create news from a Workspace into the News Folder:
 
 1.  Create a new User Action. Its properties:
-    *   ID: `CreateNewsButton`
-    *   Label: Create news
-    *   Category: Folder toolbar
+    *   **ID**: `CreateNewsButton`
+    *   **Label**: Create news
+    *   **Category**: Folder toolbar
 2.  Activation conditions:
-    *   User has permission : `<span style="font-family: monospace;"><span style="font-size: 14.0px;line-height: 12.6px;background-color: rgb(248,248,248);">Edit</span></span>`
-    *   Current document has type : `Workspace`
-3.  Create new operation chain `CreateNewsChain`:
+    *   **User has permission**: `Edit`
+    *   **Current document has type**: `Workspace`
+3.  Create new operation chain `CreateNewsChain`:<br/><br/>
 
-    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+```yaml
+- Repository.GetDocument:
+    value: ./NewsFolder
+- WebUI.NavigateTo
+- WebUI.ShowCreateForm:
+    type: News
+```
+Now when you click on the **Create News** button, a News document will be created for the Workspace and stored directly in the News folder.
 
-    Step
-
-    </th><th colspan="1">
-
-    Operation
-
-    </th><th colspan="1">
-
-    Parameter
-
-    </th></tr><tr><td colspan="1">
-
-    1
-
-    </td><td colspan="1">
-
-    Fetch > Document
-
-    </td><td colspan="1">
-
-    Value: `./NewsFolder`
-
-    </td></tr><tr><td colspan="1">
-
-    2
-
-    </td><td colspan="1">
-
-    User Interface > Navigate to Document
-
-    </td><td colspan="1">
-
-    &nbsp;
-
-    </td></tr><tr><td colspan="1">
-
-    3
-
-    </td><td colspan="1">
-
-    User Interface > Show Create Document Page
-
-    </td><td colspan="1">
-
-    Value: `News`
-
-    </td></tr></tbody></table></div>
-
-    You should end up with something like this:
-    ![]({{file name='CreateNewsChain.png'}} ?w=600,border=true)
 
 * * *
 
