@@ -23,7 +23,7 @@ confluence:
     shortlink: FQ4z
     shortlink_source: 'https://doc.nuxeo.com/x/FQ4z'
     source_link: /display/NXDOC/Content+Views
-tree_item_index: 400
+tree_item_index: 800
 history:
     -
         author: Solen Guitter
