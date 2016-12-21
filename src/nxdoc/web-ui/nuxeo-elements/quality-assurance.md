@@ -49,6 +49,8 @@ Nuxeo elements are the best means to build a custom UI application on the top of
 
 By default, the Nuxeo server deactivates the browser cache by setting the response header `Cache-Control` to `no-cache`.
 
+So each resource are not considered "fresh" permanently except for the returned blobs (like images, thumbnails, binaries in general): the browser will request for those blobs a re-validation to the server via `ETags` each time it refreshes.
+
 In order to activate it, you can create a file `cache-browser-config.xml` in the `NUXEO_HOME/nxserver/config` folder and set the recommended following content:
 
 ```
@@ -70,8 +72,7 @@ In order to activate it, you can create a file `cache-browser-config.xml` in the
 ```
 
 - The cache will be `private` (you cannot cache the resources on a intermediate proxy like for instance a `CDN`)
-- The `ETag` check will be activated
-- The `max-age` cache time is set to 1 hour (within the hour the browser won't request a validation to the server of the blobs like images, thumbnails
+- The `max-age` cache time is set to 1 hour (within the hour, the browser won't request a validation to the server of the blobs like thumbnails)
 - Once the cache expires, the browser will request to the server a re-validation of the blobs if they have been updated
 
 [Here a schema](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/images/http-cache-decision-tree.png) which summarises browser caching strategies.
