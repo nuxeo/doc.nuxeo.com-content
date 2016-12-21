@@ -761,16 +761,24 @@ This tool is a read-only standalone tool, it requires both access to the databas
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Elasticsearch Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Other Elasticsearch Documentation'}}
 
-*   [Configuring the Elasticsearch Mapping]({{page space='nxdoc710' page='configuring-the-elasticsearch-mapping'}})
-*   [Elasticsearch Indexing Logic]({{page space='nxdoc710' page='elasticsearch-indexing-logic'}})
-*   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page space='nxdoc710' page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+- [Configuring the Elasticsearch Mapping]({{page space='nxdoc710' page='configuring-the-elasticsearch-mapping'}})
+- [Elasticsearch Indexing Logic]({{page space='nxdoc710' page='elasticsearch-indexing-logic'}})
+- [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page space='nxdoc710' page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation '}}
+{{/panel}}
+</div>
 
-*   [Full-Text Queries]({{page space='nxdoc710' page='full-text-queries'}})
-*   [Indexing and Query]({{page space='nxdoc710' page='indexing-and-query'}})
-*   [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
+<div class="column medium-6">
+{{#> panel heading='Other Related Documentation '}}
 
-{{/panel}}</div></div>
+- [Full-Text Queries]({{page space='nxdoc710' page='full-text-queries'}})
+- [Indexing and Query]({{page space='nxdoc710' page='indexing-and-query'}})
+- [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
+
+{{/panel}}
+</div>
+</div>
