@@ -124,22 +124,27 @@ history:
         version: '1'
 
 ---
-The Nuxeo Platform relies on standard i18n principles for translating texts in the user interface. You need to upload a `.properties` file, suffixed with a four letter locale code depending on the language you target. Studio enables to upload properties files that will be deployed with the customization plugin. It can be useful:
+The Nuxeo Platform relies on standard i18n principles for translating text in the user interface. You need to upload a `.properties` file, suffixed with a four-letter locale code depending on the language you target. Studio allows you to upload `.properties` files to be deployed with the customization plugin. It's useful:
 
 *   To translate new labels that appear in the plugin, such as form's fields name, lifecycle transition names, document type names, new vocabularies' labels, etc
-*   To override existing labels definitions (when you want to change existing translations).
+*   To override existing labels definitions (when you want to change existing translations).<br/><br/>
 
-There is no naming rules for i18n keys: you can use the key format that is most convenient for you and use it directly in the `.properties` file.
+There are no naming rules for i18n keys: you can use the key format that is most convenient for you and use it directly in the `.properties` file.
 
-**To upload english translations for your plugin:**
+**To upload English translations for your plugin:**
 
-1.  Prepare a properties file named `messages_en_US.properties` with keys and label values like this one. For instance, if you have a document type called "ProfessionalServiceProposal", you can put add the following line in the file:
-    `ProfessionalServiceProposal = Professional service proposal`
-    Example :
-    ![]({{file name='screenshot_2011-06-01_14.56.45.png'}} ?w=441,h=414)
+1.  Prepare a properties file named `messages_en_US.properties` with keys and label values like this one. For instance, if you have a document type called "ProfessionalServiceProposal", you can add the following line:<br/><br/>
+    `ProfessionalServiceProposal = Professional service proposal`<br/><br/>
+    to a file like this:<br/>
+```properties
+label.security.permission.validation.workflow.validation = Validation
+label.security.permission.validation.document.validated = Document Validated
+label.security.permission.validation.validation.rejected = Document Rejected
+```
+
 2.  Go to **Resources** and upload the file in the **i18n files** section.
     ![]({{file name='studio-resource-editor-empty.png'}} ?w=650,border=true)
-3.  You can do it again with other languages, adding other files: `messages_fr_FR.properties` (French), `messages_es_ES.properties` (Spanish), `messages_ar_SA.properties` (Arabic), ... (take a look at [How to Translate Nuxeo]({{page space='nxdoc58' page='how-to-translate-the-nuxeo-platform'}}) for a list of all the codes available)
+3.  Repeat as needed with other languages, adding other files: `messages_fr_FR.properties` (French), `messages_es_ES.properties` (Spanish), `messages_ar_SA.properties` (Arabic), ... (take a look at [How to Translate Nuxeo]({{page space='nxdoc58' page='how-to-translate-the-nuxeo-platform'}}) for a list of all the codes available)
 4.  [Update your Nuxeo instance with your Studio customizations]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).
 
     &nbsp;
