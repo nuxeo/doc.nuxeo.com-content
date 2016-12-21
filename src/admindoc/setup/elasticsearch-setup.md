@@ -751,6 +751,17 @@ curl -XGET 'localhost:9200/nuxeo/doc/_search?search_type=count&pretty' -d'{
 
 &nbsp;
 
+The above query shows only the first 10 results. One can set the result size by adding the size option:
+
+```bash
+# view indexed tokens for dc:title.fulltext of document 3d50118c-7472-4e99-9cc9-321deb4fe053
+curl -XGET 'localhost:9200/nuxeo/doc/_search?search_type=count&pretty' -d'{
+ "query" : {"ids" : { "values" : ["3d50118c-7472-4e99-9cc9-321deb4fe053"] }},
+ "aggs": {"my_aggs": {"terms": {"field": "dc:title.fulltext", "order" : { "_count" : "desc" }, "size": 1000}}}}}'
+```
+
+&nbsp;
+
 ### Comparing the Elasticsearch Index with the Database Content
 
 You can use the [esync tool](https://github.com/nuxeo/esync) to compare both content and pinpoint discrepancies.
