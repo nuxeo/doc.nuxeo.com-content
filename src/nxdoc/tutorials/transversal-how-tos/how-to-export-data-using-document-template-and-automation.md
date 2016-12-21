@@ -179,9 +179,7 @@ history:
 
 ---
 {{#> panel type='primary'}}
-
 [Check out the blog post Export Data with Content Automation.](http://blogs.nuxeo.com/development/2014/03/export-data-content-automation/)
-
 {{/panel}}
 
 Document Templates are pattern files used to produce any type of text-based document with dynamic content. Used in combination with [automation chains]({{page page='content-automation-concepts'}}), document templates can be used to generate files such as CSV files, MS Word or OpenOffice file, PDF files, XML files, HTML, etc.
@@ -206,50 +204,34 @@ data_A2, data_B2, data_C2
 
 This will produce a table like this:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-
-column_name1
-
-</th><th colspan="1">
-
-column_name2
-
-</th><th colspan="1">
-
-column_name3
-
-</th></tr><tr><td colspan="1">
-
-data_A1
-
-</td><td colspan="1">
-
-data_B1
-
-</td><td colspan="1">
-
-data_C1
-
-</td></tr><tr><td colspan="1">
-
-data_A2
-
-</td><td colspan="1">
-
-data_B2
-
-</td><td colspan="1">
-
-data_C2
-
-</td></tr></tbody></table></div>
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th colspan="1">column_name1</th>
+        <th colspan="1">column_name2</th>
+        <th colspan="1">column_name3</th>
+      </tr>
+      <tr>
+        <td colspan="1">data_A1</td>
+        <td colspan="1">data_B1</td>
+        <td colspan="1">data_C1</td>
+      </tr>
+      <tr>
+        <td colspan="1">data_A2</td>
+        <td colspan="1">data_B2</td>
+        <td colspan="1">data_C2</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 **To create the template:**
 
 1.  Go to **Templates** -> **Document Templates**.
 2.  Click on the **New** button to create a new document template.
 3.  Give your new template the ID "CSVExport" and click on the **Next** button.
-    Now we are ready to fill the template as we want.
+    Now we are ready to fill in the template.
 4.  The first line of the template will represent the column of the generated CSV file. Since those column names never change, type them as we want them to appear in the final document:
 
     ```
@@ -282,7 +264,7 @@ data_C2
 *   Double quotes between elements are optional (CSV format).&nbsp;
 *   If you are going to use the template in order to create an HTML file, you can put HTML tags in the template.
 *   The only thing that differs from Nuxeo usual syntax is FreeMarker's `<list>` element.
-*   Within a document template, whether you use FreeMarker or MVEL, you can use the same variables, functions and XPath expressions that are used in [automation chains]({{page page='content-automation-concepts'}}). As document templates and automation chains frequently work together, each context variable set in the automation chain can be used in the template.
+*   Within a document template, whether you use FreeMarker or MVEL, you can use the same variables, functions and XPath expressions that are used in [automation chains]({{page page='content-automation-concepts'}}). As document templates and automation chains frequently work together, each context variable set in the automation chain can be used in the template.<br/><br/>
 
 **Other FreeMarker Examples**
 
@@ -304,7 +286,7 @@ data_C2
 
 ## Step 2: Using the Document Template
 
-We are going to [create an automation chain]({{page page='how-to-create-an-automation-chain#create-a-content-automation-chain'}}) to query on the Nuxeo repository and render the query result as a template-based CSV file.
+We are going to [create an automation chain]({{page page='how-to-create-an-automation-chain#create-a-content-automation-chain'}}) to query the Nuxeo repository and render the query result as a template-based CSV file.
 
 The chain should look like this:
 
@@ -324,7 +306,7 @@ The chain should look like this:
 **Notes**
 
 *   In this example, we query all the documents in the repository. You can define the query to filter the content repository and display only the documents that meet the query conditions. See the page [NXQL]({{page page='nxql'}}) for more information about Nuxeo SQL-like query language.
-*   To download a file in an HTML format instead of CSV, use the `.html` extension in the filename and choose `text/xml` as the mimetype.
+*   To download a file in an HTML format instead of CSV, use the `.html` extension in the filename and choose `text/xml` as the mimetype.<br/><br>
 
 ## Step 3: Creating the Button to Generate the CSV File
 
@@ -332,26 +314,20 @@ The only step left is to [create a button]({{page page='how-to-create-an-automat
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-*   [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
-*   [How to Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
-*   [How to Quickly Generate a PDF Using Document Template]({{page page='how-to-quickly-generate-a-pdf-using-document-template'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
+- [How to Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
+- [How to Quickly Generate a PDF Using Document Template]({{page page='how-to-quickly-generate-a-pdf-using-document-template'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
-*   [Document Templates and Automation Rendering Service]({{page page='document-templates-and-automation-rendering-service'}})
-*   [NXQL]({{page page='nxql'}})
-*   [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
+- [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
+- [Document Templates and Automation Rendering Service]({{page page='document-templates-and-automation-rendering-service'}})
+- [NXQL]({{page page='nxql'}})
+- [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
 
 {{/panel}}</div></div>
