@@ -446,28 +446,42 @@ To test the full-text analyzer:
 curl -XGET 'localhost:9200/nuxeo/_analyze?analyzer=fulltext&pretty=true' -d 'This is a text for testing, file_name/1-foos-BAR.jpg'
 ```
 
+### Viewing Indexed Terms for Document Field
+
+This can be done using a customized Luke tool and looking at the Lucene index level, or you can use the aggregates and retrieve the first 1000 tokens:
+
+```bash
+# view indexed tokens for dc:title.fulltext of document 3d50118c-7472-4e99-9cc9-321deb4fe053
+curl -XGET 'localhost:9200/nuxeo/doc/_search?search_type=count&pretty' -d'{
+ "query" : {"ids" : { "values" : ["3d50118c-7472-4e99-9cc9-321deb4fe053"] }},
+ "aggs": {"my_aggs": {"terms": {"field": "dc:title.fulltext", "order" : { "_count" : "desc" }, "size": 1000}}}}}}'
+```
+
 ### Comparing the Elasticsearch Index with the Database Content
 
 You can use the [esync tool](https://github.com/nuxeo/esync) to compare both content and pinpoint discrepancies.
 
 This tool is a read-only standalone tool, it requires both access to the database and Elasticsearch (using transport client on port 9300).
 
-&nbsp;
-
-&nbsp;
-
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Elasticsearch Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Other Elasticsearch Documentation'}}
 
-*   [Configuring the Elasticsearch Mapping]({{page space='nxdoc60' page='configuring-the-elasticsearch-mapping'}})
-*   [Elasticsearch Indexing Logic]({{page space='nxdoc60' page='elasticsearch-indexing-logic'}})
-*   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page space='nxdoc60' page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+- [Configuring the Elasticsearch Mapping]({{page space='nxdoc60' page='configuring-the-elasticsearch-mapping'}})
+- [Elasticsearch Indexing Logic]({{page space='nxdoc60' page='elasticsearch-indexing-logic'}})
+- [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page space='nxdoc60' page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation '}}
+{{/panel}}
+</div>
+<div class="column medium-6">
+{{#> panel heading='Other Related Documentation '}}
 
-*   [Full-Text Queries]({{page space='nxdoc60' page='full-text-queries'}})
-*   [Indexing and Query]({{page space='nxdoc60' page='indexing-and-query'}})
-*   [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
+- [Full-Text Queries]({{page space='nxdoc60' page='full-text-queries'}})
+- [Indexing and Query]({{page space='nxdoc60' page='indexing-and-query'}})
+- [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
 
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>
