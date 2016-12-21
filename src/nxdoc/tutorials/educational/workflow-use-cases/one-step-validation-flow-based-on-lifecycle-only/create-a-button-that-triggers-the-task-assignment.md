@@ -174,26 +174,25 @@ history:
         version: '1'
 
 ---
-Now that we have a new permission that can be used in workspaces, we will leverage it for our validation logic: we will create a button that will assign a task to people having the "spellingValidation" permission.
-Only administrators of the workspace can modify the access rights. This means that it is the workspace administrator who decides of the assignments rules, which is more restrictive than the default behavior in Nuxeo DM (the user chooses himself all the participants).
+We have a new permission that can be used in workspaces, we will leverage it for our validation logic: we will create a button that will assign a task to people having the "Workflow_validation" permission.
+Only administrators of the workspace can modify the access rights. This means that it is the workspace administrator who decides of the assignments rules.
 
 To make this happen, we will leverage the `Create Task` operation.
 
 **To add the "request" button:**
 
-1.  Right-click on the **User actions** item of Studio tree, and click **New Action Feature**.
+1.  In Studio, create a new **User Action**
 2.  Fill in :
     *   the ID of your new action: `ValidationDemandButton`,
     *   its label: `Request for validation`,
-    *   [the area where you want the button to be displayed]({{page page='actions-display'}}): `Contextual Tools`.
-3.  Click the button **OK**.
-4.  In the "Action Activation" part of the action definition form, enable the button:
-    *   only for documents of type `File`,
-    *   and for users who have at least the `<span style="font-family: monospace;"><span style="font-size: 14.0px;line-height: 12.6px;background-color: rgb(248,248,248);">Edit</span></span>`&nbsp;permission.
-5.  Click on the `create` link at the bottom of the page, to create the corresponding automation chain.
-6.  Give it a name, for instance `RequestForValidationChain`.
-7.  Compose this automation chain, see below for the detail. Note the `Services > Create task` operation, whose goal is to assign the task, and to record what operation chain will be called when the task will be validated (and the one call if rejected too).
-8.  Save your chain.
+    *   the area where you want the button to be displayed: `Contextual Tools`. More information [here]({{page page='actions-display'}}): .
+    * In the "Action Activation" part of the action definition form, enable the button:
+      - only for documents of type `File`,
+      - and for users who have at least the "Edit" permission.
+    * In the "Action Execution" part, click on the `create` link to create the corresponding automation chain.
+3.  Give it a name, for instance `RequestForValidationChain`.
+4.  Compose this automation chain, see below for the detail. Note the `Services > Task Create` operation, whose goal is to assign the task, and to record what operation chain will be called when the task will be validated (and the one call if rejected too).
+5.  Save your chain.
 
 {{#> callout type='tip' }}
 
@@ -283,7 +282,7 @@ Fetch > Context Document
 
 </td><td colspan="1">
 
-Users Interface > Add Info Message
+User Interface > Add Info Message
 
 </td><td colspan="1">
 
@@ -319,11 +318,11 @@ message: The workflow has been Started
 
 </td><td colspan="1">
 
-Users and Groups > Get Users and Groups
+Users and Groups > Get Users and Groups With Permission on Doc
 
 </td><td colspan="1">
 
-permission: validationWorkflow_validation
+permission: Workflow_validation
 
 </td><td colspan="1">
 
@@ -355,7 +354,7 @@ Prefix Identifier: True
 
 </td><td colspan="1">
 
-Users and Groups > Get Principal Emails
+Users and Groups > Get Emails With Permission on Doc
 
 </td><td colspan="1">
 
@@ -391,7 +390,7 @@ variable name: groupEmails
 
 </td><td colspan="1">
 
-Execution Context > Set Context Variable
+Execution Context > Set Var
 
 </td><td colspan="1">
 
@@ -427,7 +426,7 @@ value: @{CurrentUser.LastName}
 
 </td><td colspan="1">
 
-Execution Context > Set Context Variable
+Execution Context > Set Var
 
 </td><td colspan="1">
 
@@ -499,7 +498,7 @@ name: Administrator
 
 </td><td colspan="1">
 
-Services > Create task
+Services > Task Create
 
 </td><td colspan="1">
 
@@ -507,7 +506,7 @@ Task name: `Validation: @{Document.name`}
 
 </td><td colspan="1">
 
-Due date: `@{CurrentDate.days(7).date()`}
+Due date: `@{CurrentDate.days(7).date`}
 
 </td><td colspan="1">
 

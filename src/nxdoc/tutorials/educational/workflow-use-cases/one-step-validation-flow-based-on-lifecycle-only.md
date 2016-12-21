@@ -124,7 +124,7 @@ This tutorial refers to the use of the lifecycle functionality only. If you are 
 
 {{/callout}}
 
-Nuxeo DM provides out of the box validation workflows that can do the job in many cases. Using the default user interface features, you, as the process launcher, select some participants and then start the workflow. Yet, it happens sometimes that you don't want to let to people the choice of who the participants will be, i.e. who the validator(s) will be. To implement that case in a nice way, you can use Nuxeo Studio.
+Nuxeo Platform provides out of the box validation workflows that can do the job in many cases. Using the default user interface features, you, as the process launcher, select some participants and then start the workflow. Yet, it happens sometimes that you don't want to let to people the choice of who the participants will be, i.e. who the validator(s) will be. To implement that case in a nice way, you can use Nuxeo Studio.
 
 {{! excerpt}}
 
@@ -134,11 +134,15 @@ In this tutorial we will implement a chained workflow, that enables to validate 
 
 Technically, in this tutorial, you will learn how to:
 
-*   Declare a new permission (using an XML extension)
 *   Declare a new button
 *   Bind that button to a chain that assigns a validation task
 *   Create the validation logic
-*   Define what happens in case the document is rejected.
+*   Define what happens in case the document is approved.
+
+
+Before starting the tutorial, you need to set up a new permission "Workflow_validation" which will be associated to Document Type "Workspaces".
+You can find related documentation on how to do it with Studio, see the page [Add a new permission in the UI]({{page version='' space='studio' page='add-a-new-permission-in-the-ui'}}).
+
 
 Start the tutorial:
 

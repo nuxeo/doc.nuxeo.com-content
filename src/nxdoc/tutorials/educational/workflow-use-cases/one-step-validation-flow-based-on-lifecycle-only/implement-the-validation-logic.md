@@ -126,17 +126,20 @@ The validation logic defines what happens when the user approves the document, a
 
 The validation automation chain will be used by the users with validationWorkflow_validation permission, to approve the document. It will:
 
-*   change the lifecycle state of the document,
-*   update the validation date property on the document,
-*   log a "Spelling review achieved" on the document audit trail.
+*   Change the lifecycle state of the document,
+*   Update the validation date property on the document,
+*   Log a "Document_Validated" on the document audit trail.
 
 In this step, we will just create this chain, not adding anything to call it, neither a user action nor an event handler. Actually, the chain will be called if the user "accepts" the document's approval.
 
 {{#> panel heading='To implement the validation chain:'}}
-1.  [Create the automation chain]({{page space='studio' page='use-content-automation'}}) whose operations and parameters are given below. Don't bind it to any button or event handler, just create the chain.
+[Create the automation chain]({{page space='studio' page='use-content-automation'}}) whose operations and parameters are given below. Don't bind it to any button or event handler, just create the chain.
 {{/panel}}
 
-**Validation chain parameters**
+**Automation chain ID**
+ID will be "validationWorkflow_validate".
+
+**Automation chain parameters**
 
 <div class="table-scroll">
 <table class="hover">
@@ -180,7 +183,7 @@ _
 
 </td><td colspan="1">
 
-Document > Follow lifecycle transition
+Document > Follow Lifecycle transition
 
 </td><td colspan="1">
 
@@ -196,11 +199,11 @@ _
 
 </td><td colspan="1">
 
-Document > Update property
+Document > Set property
 
 </td><td colspan="1">
 
-value: `@{CurrentDate.days(7).date()}`
+value: `@{CurrentDate.days(7).date}`
 
 </td><td colspan="1">
 
@@ -212,7 +215,7 @@ xpath: `dc:valid`
 
 </td><td colspan="1">
 
-Services > Log Event In Audit
+Services > Audit Log Event
 
 </td><td colspan="1">
 
@@ -226,13 +229,16 @@ category: `automation`
 
 ## Reject chain
 
-Like the validation chain, the refusal automation chain will be used by the users with validationWorkflow_validation permission, but to reject the document.
+Like the validation chain, the refusal automation chain will be used by the users with validationWorkflow_validation permission, but to reject the document. In addition, it will log a "Validation_rejected" on the document audit trail.
 
 {{#> panel heading='To implement the reject chain:'}}
-1.  [Create the automation chain]({{page space='studio' page='use-content-automation'}}) whose operations and parameters are given below. Don't bind it to any button or event handler, just create the chain.
+[Create the automation chain]({{page space='studio' page='use-content-automation'}}) whose operations and parameters are given below. Don't bind it to any button or event handler, just create the chain.
 {{/panel}}
 
-**Reject chain parameters**
+**Automation chain ID**
+ID will be "validationWorkflow_rejected".
+
+**Automation chain parameters**
 
 <div class="table-scroll">
 <table class="hover">
@@ -276,7 +282,7 @@ _
 
 </td><td colspan="1">
 
-Services > Log Event In Audit
+Services > Audit Log Event
 
 </td><td colspan="1">
 
