@@ -740,7 +740,7 @@ curl -XGET 'localhost:9200/nuxeo/_analyze?field=ecm:path.children&pretty' -d 'wo
 
 ### Viewing Indexed Terms for Document Field
 
-This can be done using a customized Luke tool and looking at the Lucene index level, or you can use the aggregates:
+This can be done using a customized Luke tool and looking at the Lucene index level, or you can use the aggregates and retrieve the first 1000 tokens:
 
 ```bash
 # view indexed tokens for dc:title.fulltext of document 3d50118c-7472-4e99-9cc9-321deb4fe053
@@ -750,8 +750,6 @@ curl -XGET 'localhost:9200/nuxeo/doc/_search?search_type=count&pretty' -d'{
 ```
 
 &nbsp;
-
-The above query shows only the first 1000 tokens. (One can set the result size by adding the size option)
 
 ### Comparing the Elasticsearch Index with the Database Content
 
