@@ -2,7 +2,7 @@
 title: JDBC Datasource
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-22'
     status: ok
 labels:
     - lts2016-ok
