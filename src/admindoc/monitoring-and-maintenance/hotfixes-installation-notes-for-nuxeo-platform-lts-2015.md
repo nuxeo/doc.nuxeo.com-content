@@ -190,9 +190,9 @@ You can also download and install hotfixes from the **Update Center** in the **A
 
 ## Hotfix 19
 
-### ElasticSearch Configuration
+### Elasticsearch Configuration
 
-Following backport of [NXP-19283](https://jira.nuxeo.com/browse/NXP-19283), optimistic concurrency control is now enabled by default. Should you want to disable it you would have to edit the ElasticSearch template and add the following to the **elasticSearchRemote** or **elasticSearchLocal** tags.
+Following backport of [NXP-19283](https://jira.nuxeo.com/browse/NXP-19283), optimistic concurrency control is now enabled by default. Should you want to disable it you would have to edit the Elasticsearch template and add the following to the `elasticSearchRemote` or `elasticSearchLocal` tags.
 
 ```
 useExternalVersion="false"
