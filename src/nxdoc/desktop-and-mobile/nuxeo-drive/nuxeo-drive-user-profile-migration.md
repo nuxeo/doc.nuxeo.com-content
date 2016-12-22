@@ -1,0 +1,16 @@
+---
+title: Nuxeo Drive User Profile Migration
+review:
+    comment: ''
+    date: '2016-12-20'
+    status: ok
+labels:
+    - nuxeo-drive-component
+toc: true
+tree_item_index: 350
+---
+If you need to move your synchronisation roots from Nuxeo Drive to another computer, we suggest you to just initiate an empty Nuxeo Drive on the new computer.
+
+Another possibility is to use a [Microsoft Migration Tool](https://technet.microsoft.com/en-us/library/cc974331).
+
+We do not recommend to copy those files to USB keys to transfer as it will not migrate all the datas correctly.
