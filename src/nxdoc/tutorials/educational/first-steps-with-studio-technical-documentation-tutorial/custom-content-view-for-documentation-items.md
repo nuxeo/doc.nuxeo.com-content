@@ -311,7 +311,7 @@ In Nuxeo, listings of documents are called Content Views. To show specific infor
 
 ### Defining the Query
 
-We want the documentation container to display the list of its children. So we will keep the default query filter but add a query parameter to get every documents whose parent is the current document.
+We want the documentation container to display the list of its children. So we will keep the default query filter but add a query parameter to get every document whose parent is the current document.
 
 1.  Edit the query filter to add a parameter `ecm:parentId= ?`. You should get the filter below:
 
@@ -375,7 +375,7 @@ We also want to be able to filter the documents inside our folder.
 ### Testing Your Changes
 
 1.  [Deploy]({{page space='studio' page='deploying-your-project-in-dev-mode'}}) your changes on your Nuxeo Platform.
-2.  &nbsp;Go on the documentation folder created sooner and enjoy the result: If you deploy the filter, you will see that you can filter documents by Nature.
+2.  &nbsp;Go to the documentation folder created earlier and enjoy the results: If you deploy the filter, you will see that you can filter documents by Nature.
     ![]({{file name='contentviewDeployed.png'}} ?w=600,border=true)
 
 {{#> callout type='tip' heading='Congratulations'}}
@@ -392,7 +392,7 @@ To sum up what we saw:
     *   A filter that can be used in the user interface
     *   A result tab to display the returned documents
 
-It is now time to add custom behaviors, such as the locking policy we decided initially.
+It is now time to add custom behaviors, such as the locking policy on which we initially decided.
 
 {{/callout}}
 
@@ -403,8 +403,6 @@ It is now time to add custom behaviors, such as the locking policy we decided in
 [<< Documentation Item Implementation]({{page page='implementing-documentation-items'}})&nbsp;
 
 </div><div class="column medium-4">
-
-**[undefined]()**
 
 </div><div class="column medium-4">
 
