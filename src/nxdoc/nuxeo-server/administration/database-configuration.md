@@ -157,7 +157,7 @@ This takes two steps:
 1.  Configure the database:
     *   [PostgreSQL ]({{page page='postgresql'}})
     *   [Oracle ]({{page page='oracle'}})
-    *   [MS SQL Server ]({{page page='microsoft-sql-server'}})
+    *   [Microsoft SQL Server ]({{page page='microsoft-sql-server'}})
     *   [MySQL]({{page page='mysql'}})
     *   [MongoDB]({{page page='mongodb'}})
     *   [MarkLogic]({{page page='marklogic'}})
