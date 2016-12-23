@@ -1,5 +1,5 @@
 ---
-title: Web UI slots
+title: Slots
 review:
     comment: ''
     date: '2016-12-16'
@@ -11,7 +11,8 @@ labels:
     - extension
     - nuxeo-slot
     - nuxeo-slot-content
-tree_item_index: 350
+tree_item_index: 200
+
 ---
 
 ## What are nuxeo slots?
