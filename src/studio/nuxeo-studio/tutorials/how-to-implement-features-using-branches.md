@@ -314,13 +314,13 @@ In our scenario, the search screen is put in production while the development of
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Studio Documentation'}}
 
-*   [Commit Preferences]({{page page='commit-preferences'}})
-*   [Branch Management]({{page page='branch-management'}})
-*   [Working in Studio]({{page page='working-in-studio'}})
+- [Commit Preferences]({{page page='commit-preferences'}})
+- [Branch Management]({{page page='branch-management'}})
+- [Working in Studio]({{page page='working-in-studio'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Collaborate on a Studio Project]({{page page='how-to-collaborate-on-a-studio-project'}})
-*   [How to Work with Maintenance Branches]({{page page='how-to-work-with-maintenance-branches'}})
+- [How to Collaborate on a Studio Project]({{page page='how-to-collaborate-on-a-studio-project'}})
+- [How to Work with Maintenance Branches]({{page page='how-to-work-with-maintenance-branches'}})
 
 {{/panel}}</div></div>
