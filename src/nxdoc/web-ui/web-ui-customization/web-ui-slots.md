@@ -44,6 +44,12 @@ For a better understanding, please refer to the [DOCUMENT_ACTIONS](#document_act
 ### Summary
 Here are the `nuxeo-slots` available in the Nuxeo Web UI.
 
+{{#> callout type='warning' }}
+
+The name and the location of the following slots are temporary and are subjects to changes for the of Web UI final version.
+
+{{/callout}}
+
 | Slot name                                                                                       | Extension purpose                               | Where                                                               |
 |:------------------------------------------------------------------------------------------------|:------------------------------------------------|:--------------------------------------------------------------------|
 | [DOCUMENT_ACTIONS](#document_actions)                                                           | Additional Current document actions             | ![]({{file name='DOCUMENT_ACTIONS.png'}} ?w=100,border=true)        |

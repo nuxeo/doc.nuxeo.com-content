@@ -124,3 +124,9 @@ As just explained, to create a search, you just need to deploy a new `nuxeo-{sea
 | `provider`     | the name of the page provider defined server side to be used                                              | [default_search](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/search/nuxeo-default-search.html#L147) page provider               |
 | `schemas`      | a comma separated value list of schema names to be fetched when loading documents retrieved by the search | [schemas](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/search/nuxeo-default-search.html#L167) needed for default search          |
 | `displayQueue` | boolean property. If true, then the queue will be displayed by default instead of serach filters          | [expired_search](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/search/nuxeo-expired-search.html#L119) displays a queue by default |
+
+{{#> callout type='info' }}
+
+LIMITATION: it is not possible to customize the screen showing search results in the main container yet.
+
+{{/callout}}
