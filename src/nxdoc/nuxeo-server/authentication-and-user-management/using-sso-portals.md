@@ -23,7 +23,7 @@ To install this authentication plugin:
     Use `PORTAL_AUTH`.
 4.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) with the following content:
 
-    ```
+    ```xml
     <component name="org.nuxeo.ecm.platform.authenticator.portal.sso.config">
 
       <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
@@ -77,13 +77,13 @@ To do all the calls to Nuxeo yourself, you have to decide which HTTP requests to
 *   `NX_TS`: the timestamp, in milliseconds since epoch, when you're generating the request.
 *   `NX_RD`: a few some random characters.
 *   `NX_USER`: the user as whom you want to authenticate.
-*   `NX_TOKEN`: a token proving authentication generated using the algorithm&nbsp;`BASE64_MD5(timestamp + ":" + random + ":" + secret + ":" + user)`
+*   `NX_TOKEN`: a token proving authentication generated using the algorithm `BASE64_MD5(timestamp + ":" + random + ":" + secret + ":" + user)`
 
-The token contains the secret but in a hashed form which cannot be reversed by an eavesdropper to generate new requests. The timestamp is used to avoid replay attacks (the delta with the real time on the server cannot be more than the&nbsp;`maxAge` specified on the server). The random characters are used to avoid pre-computed dictionary attacks.
+The token contains the secret but in a hashed form which cannot be reversed by an eavesdropper to generate new requests. The timestamp is used to avoid replay attacks (the delta with the real time on the server cannot be more than the `maxAge` specified on the server). The random characters are used to avoid pre-computed dictionary attacks.
 
 The following Java code can be used:
 
-```
+```java
 import java.security.MessageDigest;
 import javax.xml.bind.DatatypeConverter;
 
@@ -97,4 +97,23 @@ public String makeToken(String timestamp, String random, String secret,
 }
 ```
 
-As a validation of your code, check that&nbsp;`makeToken("1324572561000", "qwertyuiop", "secret", "bob")`&nbsp;returns&nbsp;`8y4yXfms/iKge/OtG6d2zg==`.
+As a validation of your code, check that `makeToken("1324572561000", "qwertyuiop", "secret", "bob")` returns `8y4yXfms/iKge/OtG6d2zg==`.
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+
+{{#> panel heading='Related Documentation'}}
+
+- [Authentication and User Management]({{page version='' space='nxdoc' page='authentication-and-user-management'}})
+- [Generic SSO Authentication]({{page version='' space='nxdoc' page='using-generic-sso-authentication'}})
+
+{{/panel}}
+</div>
+<div class="column medium-6">
+
+&nbsp;
+
+</div>
+</div>

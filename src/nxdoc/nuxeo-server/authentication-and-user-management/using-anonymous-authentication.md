@@ -14,7 +14,7 @@ To activate anonymous authentication:
 1. Add the plugin to the authentication chain.{{{multiexcerpt 'authentication_chain_contribution' page='Authentication and User Management'}}}
   Use `ANONYMOUS_AUTH`.
 2. Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) called `anonymous-auth-config.xml` with the following content:
-    ```
+    ```xml
     <?xml version="1.0"?>
     <component name="org.nuxeo.ecm.platform.login.anonymous.config">
 
@@ -36,3 +36,22 @@ To activate anonymous authentication:
 
 3. Adapt the `anonymousUser` id and properties.
 4. Save.
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+
+{{#> panel heading='Related Documentation'}}
+
+- [CAS2 Authentication]({{page version='' space='nxdoc' page='using-cas2-authentication'}})
+- [How to Define Public Pages (Viewable by Anonymous Users)]({{page version='' space='nxdoc' page='how-to-define-public-pages-viewable-by-anonymous-users'}})
+
+{{/panel}}
+</div>
+<div class="column medium-6">
+
+&nbsp;
+
+</div>
+</div>

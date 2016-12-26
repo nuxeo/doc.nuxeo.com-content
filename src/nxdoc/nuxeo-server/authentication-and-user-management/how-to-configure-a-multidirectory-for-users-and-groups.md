@@ -89,7 +89,7 @@ history:
         version: '1'
 
 ---
-This page provides a <span class="b2" style="color: rgb(36,36,36);">t</span><span class="b3" style="color: rgb(24,24,24);">urn</span><span class="b4" style="color: rgb(12,12,12);">key</span>&nbsp;solution to configure a multidirectory which responds to the following needs:
+This page provides a turnkey solution to configure a multidirectory which responds to the following needs:
 
 *   Local and LDAP users,
 *   Local and LDAP groups,
@@ -100,9 +100,9 @@ This page provides a <span class="b2" style="color: rgb(36,36,36);">t</span><spa
 
 This configuration is ready to use, so it is based on a public LDAP server whose main properties are:
 
-*   URL:&nbsp;`ldap://ldap.testathon.net:389/`
+*   URL: `ldap://ldap.testathon.net:389/`
 *   Bind user and password: stuart / stuart
-*   Search base DNs for users and groups are entries of&nbsp;`DC=testathon,DC=net`
+*   Search base DNs for users and groups are entries of `DC=testathon,DC=net`
 
 Moreover a virtual administrator is added to let you log in even if the LDAP configuration is not perfectly working. It lets you browse the users and groups from **Admin Center** > **Users & Groups**.
 
@@ -319,11 +319,7 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
 
 {{/panel}}
 
-&nbsp;
-
 * * *
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other LDAP related pages'}}
 

@@ -1,5 +1,5 @@
 ---
-title: How to add New Fields to The User Profile or Group Profile
+title: How to Add New Fields to the User Profile or Group Profile
 review:
     comment: ''
     date: '2015-12-01'
@@ -39,13 +39,9 @@ Users and groups profile are defined by schemas. The default user schema is:
 </xs:schema>
 ```
 
-&nbsp;
-
 It is displayed in the Nuxeo Platform like this:
 
 ![]({{file name='user_profile.png' space='userdoc' page='nuxeo-platform-concepts'}} ?w=600,border=true)
-
-&nbsp;
 
 If you want to add more fields than the default ones on the user profile, you can simply override the definition of the schema `user` (in a Studio project or in an XML component in `nxserver/config`).
 
@@ -95,3 +91,27 @@ That can be contributed with the following extension:
   <schema name="group" src="directoryschema/group.xsd"/>
 </extension>
 ```
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+
+{{#> panel heading='Related How-tos'}}
+
+- [How to Add Custom LDAP Fields to the UI]({{page version='' space='nxdoc' page='how-to-add-custom-ldap-fields-to-the-ui'}})
+- [How to Configure a Multidirectory for Users and Groups]({{page version='' space='nxdoc' page='how-to-configure-a-multidirectory-for-users-and-groups'}})
+- [How-to Index]({{page version='' space='nxdoc' page='how-to-index'}})
+
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+
+{{#> panel heading='Related Documentation'}}
+- [Authentication and User Management]({{page version='' space='nxdoc' page='authentication-and-user-management'}})
+- [Managing Users and Groups]({{page version='' space='userdoc' page='managing-users-and-groups'}})
+{{/panel}}
+
+</div>
+</div>

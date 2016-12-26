@@ -191,7 +191,7 @@ To install the CAS2 authentication plugin:
   Use `CAS2_AUTH`.
 4.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) called `CAS2-config.xml` with the following content:
 
-    ```
+    ```xml
     <component name="org.nuxeo.ecm.platform.authenticator.cas2.sso.config">
 
       <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
@@ -350,7 +350,7 @@ The Nuxeo HTTP session id is retrieved from the portal session context and invok
 
 CAS2 and anonymous authenticators have flows that can interfere with each others, creating some side effects like bad redirections.
 
-To avoid that, the CAS2 plugin provides a replacement for the default Anonymous authenticator : basically this is a _"CAS aware Anonymous authenticator"_. You can see a sample configuration available in:&nbsp;[https://github.com/nuxeo/nuxeo-platform-login/blob/master/nuxeo-platform-login-cas2/Sample/CAS2-Anonymous-bundle.xml](https://github.com/nuxeo/nuxeo-platform-login/blob/master/nuxeo-platform-login-cas2/Sample/CAS2-Anonymous-bundle.xml).
+To avoid that, the CAS2 plugin provides a replacement for the default Anonymous authenticator : basically this is a _"CAS aware Anonymous authenticator"_. You can see a sample configuration available in: [https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/login/nuxeo-platform-login-cas2/Sample/CAS2-Anonymous-bundle.xml](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/login/nuxeo-platform-login-cas2/Sample/CAS2-Anonymous-bundle.xml).
 
 But, basically, wanting to put together both CAS2 and Anonymous authentication means you have two types of users that will access Nuxeo. So, an alternate approach is to define two separated authentication chains, one for each type of user:
 
@@ -361,25 +361,23 @@ In most of the case, each type of user will have access via a separated virtual 
 
 *   At reverse proxy level you add a header for tagging the type of request;
     ex: Anonymous requests will have the header `X-anonymous-access` set to "on";
-*   At nuxeo level you configure the chains depending on the header;
+*   At Nuxeo level you configure the chains depending on the header;
     *   Default / main chain is the one using CAS2;
-    *   You define specific chain for requests having the ``X-anonymous-access`.
+    *   You define specific chain for requests having the `X-anonymous-access`.
 
-{{#> panel type='code' heading='Sample Xml contribution'}}
+{{#> panel type='code' heading='Sample XML contribution'}}
 
 ```xml
 <specificAuthenticationChain name="anonymous-access">
-        <headers>
-            <header name="X-anonymous-access">on</header>
-        </headers>
-        <allowedPlugins>
-            <plugin>ANONYMOUS_AUTH</plugin>
-        </allowedPlugins>
-    </specificAuthenticationChain>
+    <headers>
+        <header name="X-anonymous-access">on</header>
+    </headers>
+    <allowedPlugins>
+        <plugin>ANONYMOUS_AUTH</plugin>
+    </allowedPlugins>
+</specificAuthenticationChain>
 ```
 
 {{/panel}}
 
-You can see&nbsp;[specificChains](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--specificChains) extension point for more info.
-
-&nbsp;
+You can see [specificChains](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--specificChains) extension point for more info.

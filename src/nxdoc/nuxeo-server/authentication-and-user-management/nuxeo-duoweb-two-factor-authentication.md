@@ -59,7 +59,7 @@ history:
 
 ---
 {{! excerpt}}
-The Nuxeo addon nuxeo-duoweb-authentication is an integration of [DuoWeb](http://www.duosecurity.com) access in Nuxeo login plugin and provides two-factor authentication through the Nuxeo login page.
+The [Nuxeo addon nuxeo-duoweb-authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-duoweb-authentication) is an integration of [DuoWeb](http://www.duosecurity.com) access in Nuxeo login plugin and provides two-factor authentication through the Nuxeo login page.
 
 This plugin is available for Nuxeo Platform 5.8 and above.
 
@@ -84,7 +84,7 @@ You must [subscribe](https://signup.duosecurity.com/) to DuoWeb services and fol
 
 After installing the plugin, make sure before starting to include your DuoWeb Keys (provided by DuoWeb) in the following configuration file `NUXEO_HOME/templates/duoweb-authentication/config/duo-authentication-config.xml`:
 
-```
+```xml
 <component name="org.nuxeo.duo.factors.login.contrib">
 
 <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
@@ -129,3 +129,25 @@ After installing the plugin, make sure before starting to include your DuoWeb Ke
 ```
 
 The `YOUR_APPLICATION_KEY` can be generated as followed in [DuoWeb documentation](https://www.duosecurity.com/docs/duoweb#1.-generate-an-akey)
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+
+{{#> panel heading='Related Documentation'}}
+
+- [Authentication and User Management]({{page version='' space='nxdoc' page='authentication-and-user-management'}})
+- [Authentication Chain Principles]({{page page='authentication-chain-principles'}})
+
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel heading='Related How-tos'}}
+- [How to Customize the Login Page]({{page version='' space='nxdoc' page='how-to-customize-the-login-page'}})
+- [How to Contribute to an Extension]({{page version='' space='nxdoc' page='how-to-contribute-to-an-extension'}})
+{{/panel}}
+
+</div>
+</div>

@@ -1,5 +1,5 @@
 ---
-title: Generic SSO
+title: Generic SSO Authentication
 review:
     comment: ''
     date: '2016-12-14'
@@ -18,7 +18,7 @@ To install and configure this plugin:
   Use `PROXY_AUTH`.
 4.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) with the following content:
 
-    ```
+    ```xml
      <component name="org.nuxeo.ecm.platform.authenticator.mod.sso.config">
 
       <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
@@ -37,8 +37,27 @@ To install and configure this plugin:
     </component>
     ```
 
-    **Notes:** Your XML extension's name must end with&nbsp;`-config.xml`.
+    **Notes:** Your XML extension's name must end with `-config.xml`.
 
 5.  Adapt the content of the `loginModulePlugin` section.
     **Note:** The `ssoNeverRedirect` parameter should be set to true if the PROXY_AUTH is used with REST calls, where you don't want to redirect the response.
 6.  Save.
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+
+{{#> panel heading='Related Documentation'}}
+
+- [SSO with Portals]({{page version='' space='nxdoc' page='using-sso-portals'}})
+- [Authentication Chain Principles]({{page page='authentication-chain-principles'}})
+
+{{/panel}}
+</div>
+<div class="column medium-6">
+
+&nbsp;
+
+</div>
+</div>
