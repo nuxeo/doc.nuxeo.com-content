@@ -2,10 +2,10 @@
 title: WebEngine (JAX-RS)
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - webengine
     - webengine-component
 toc: true
@@ -396,12 +396,6 @@ Nuxeo-WebModule: org.nuxeo.example.MyWebApp
 ```
 
 Build your application JAR and put it into your Nuxeo bundles directory. After starting the server you will have a new web page available at [http://localhost:8080/nuxeo/site/mysite](http://localhost:8080/nuxeo/site/mysite).
-
-{{#> callout type='note' }}
-
-Under the Jetty core server distribution (which is a development distribution), the URL of your application will be [http://localhost:8080/mysite](http://localhost:8080/mysite)
-
-{{/callout}}
 
 ### Automatic Discovery of JAX-RS Resources at Runtime
 

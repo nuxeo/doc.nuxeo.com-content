@@ -2,10 +2,10 @@
 title: Kerberos Authentication
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - kerberos-authentication-component
 toc: true
 confluence:
@@ -209,7 +209,7 @@ If you use the Admin Center, you will have to restart the server **twice** due t
 
 #### Configuring Java
 
-To enable Kerberos, you need to use a login configuration implementation. You have two ways of doing this. Either change the default Java configuration or use JAVA_OPTS. Take a look at [JAAS](http://docs.oracle.com/javase/6/docs/technotes/guides/security/jaas/JAASRefGuide.html#AppendixA) documentation for more details.
+To enable Kerberos, you need to use a login configuration implementation. You have two ways of doing this. Either change the default Java configuration or use JAVA_OPTS. Take a look at [JAAS](http://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html#AppendixA) documentation for more details.
 
 ##### Changing the default JRE configuration
 
@@ -219,7 +219,7 @@ To enable Kerberos, you need to use a login configuration implementation. You ha
        #login.config.url.1=file:${user.home}/.java.login.config
     ```
 
-2.  Set this to a regular file, e.g. `/opt/nuxeo/java.login.config.`
+2.  Set this to a regular file, e.g. `/opt/nuxeo/java.login.config`.
 
 ##### Giving a Custom Login File as Java Argument
 
@@ -237,7 +237,7 @@ JAVA_OPTS=$JAVA_OPTS -Djava.security.auth.login.config==./java.login.config
 
 #### Configuring JAAS
 
-If you have installed the Nuxeo Package, this file is already available at `$NUXEO_HOME/java.login.config.`
+If you have installed the Nuxeo Package, this file is already available at `$NUXEO_HOME/java.login.config`.
 
 Open the `java.login.config` file you've setup and add the following configuration:
 

@@ -2,10 +2,10 @@
 title: OAuth2
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - oauth
     - oauth-component
 toc: true
@@ -94,7 +94,7 @@ You can find more details on the implementation of the endpoints and expected pa
 ### Requesting an Authorization Code
 
 ```
-GET https://<nuxeoserver>/oauth2/authorization
+GET https://<nuxeoserver>/nuxeo/oauth2/authorization
 ```
 
 **Query parameters:**
@@ -164,17 +164,17 @@ string
 </div>
 
 {{#> callout type='note' }}
-
 User authentication is handled by accessing to `https://<nuxeoserver>/nuxeo/oauth2Grant.jsp` which is behind the default [`NuxeoAuthenticationFilter`]({{page page='authentication-and-user-management#pluggable-web-authentication-filter'}}). That lets you customize the way you want your users to identify themselves.
 
 {{/callout}}
+
 
 ## Token Endpoint
 
 ### Requesting an Access Token
 
 ```
-GET https://<nuxeoserver>/oauth2/token
+GET https://<nuxeoserver>/nuxeo/oauth2/token
 ```
 
 **Query parameters:**
@@ -263,7 +263,7 @@ Pragma: no-cache
 ### Refreshing an Access Token
 
 ```
- GET https://<nuxeoserver>/oauth2/token
+ GET https://<nuxeoserver>/nuxeo/oauth2/token
 ```
 
 **Query parameters:**
@@ -344,7 +344,7 @@ Pragma: no-cache
 Once you have a valid access token, you have to pass it in each requests as an Authorization header. Like below using curl:
 
 ```
-curl -H "Authorization: Bearer gsQwO6X4zdOOegaR1EZEpRNJ2LK6J8d6" http://<nuxeoserver>/nuxeo/nxdoc/default/d3db3184-c444-40a4-b838-dfde41ba06a4/view_documents
+curl -H "Authorization: Bearer gsQwO6X4zdOOegaR1EZEpRNJ2LK6J8d6" http://<nuxeoserver>/nuxeo/api/v1/path/default-domain/workspaces
 ```
 
 * * *

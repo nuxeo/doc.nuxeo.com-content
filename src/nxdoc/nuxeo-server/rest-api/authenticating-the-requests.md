@@ -2,10 +2,10 @@
 title: Authenticating the Requests
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API

@@ -1,13 +1,15 @@
 ---
 title: WebEngine Tutorials
 review:
-    comment: ''
-    date: '2015-12-01'
-    status: ok
+    comment: 'Installation of samples is broken and has to be reviewed NXDOC-1022.'
+    date: '2016-12-20'
+    status: requiresUpdates
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - webengine
     - webengine-component
+    - nxDocTeam
+    - nxProduct
 confluence:
     ajs-parent-page-id: '950281'
     ajs-parent-page-title: WebEngine (JAX-RS)

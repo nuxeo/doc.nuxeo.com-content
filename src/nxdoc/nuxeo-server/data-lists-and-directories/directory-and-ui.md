@@ -2,10 +2,10 @@
 title: Directory and UI
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - vocabulary
     - directory
     - directory-component
@@ -61,11 +61,13 @@ This means that you can use Widgets and Layouts system to manage directories ent
 
 ## Directory Management UI
 
-The default Nuxeo UI includes management screens for the directories.
+Both JSF and Web UI includes management screens for the directories.
 
 For simplicity reasons, the entry inside the Admin Center is called "Vocabularies", but actually it can manage any kind of Directories (i.e. not only the directories using the vocabulary schema).
 
-To make this easily usable, the platform includes a DirectoryUIManager that uses an &nbsp;[directories extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.directory.ui.DirectoryUIManager--directories) to allow to contribute what directories should be available in the management UI and what layouts should be used.
+In the JSF UI, to make this easily usable, the platform includes a DirectoryUIManager that uses an &nbsp;[directories extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.directory.ui.DirectoryUIManager--directories) to allow to contribute what directories should be available in the JSF management UI and what layouts should be used.
+
+In the Web UI, all the directories that are not of type `system` are included by default in the management UI.
 
 ## Suggest Widgets
 
