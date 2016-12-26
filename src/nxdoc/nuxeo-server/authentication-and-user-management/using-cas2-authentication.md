@@ -2,10 +2,10 @@
 title: CAS2 Authentication
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - cas2
     - authentication
     - link-update
@@ -314,13 +314,13 @@ If the ticket is valid, the CAS server sends the following response:
 
 ```xml
 <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
-.<cas:authenticationSuccess>
-..<cas:user>slacoin</cas>
-..<cas:proxyGrantingTicket>PGTIOU-34-jJZH23r2wbKUqbc3dLFt-cas</cas:proxyGrantingTicket>
-..<cas:proxies>
-...<cas:proxy>http://127.0.0.1:9090/ticket/accept</cas:proxy>
-..</cas:proxies>
-.</cas:authenticationSuccess>
+ <cas:authenticationSuccess>
+  <cas:user>slacoin</cas>
+  <cas:proxyGrantingTicket>PGTIOU-34-jJZH23r2wbKUqbc3dLFt-cas</cas:proxyGrantingTicket>
+  <cas:proxies>
+   <cas:proxy>http://127.0.0.1:9090/ticket/accept</cas:proxy>
+  </cas:proxies>
+ </cas:authenticationSuccess>
 </cas>
 
 ```

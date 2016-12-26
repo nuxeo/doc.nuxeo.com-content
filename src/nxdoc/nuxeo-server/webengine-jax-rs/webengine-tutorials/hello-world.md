@@ -2,10 +2,10 @@
 title: Hello World
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - webengine
     - webengine-component
@@ -59,11 +59,11 @@ history:
         version: '1'
 
 ---
-## JAX-RS resources
+## JAX-RS Resources
 
-##### Sample1.groovy
+{{#> panel type='code' heading='Sample1.groovy'}}
 
-```
+```java
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import org.nuxeo.ecm.core.rest.*;
@@ -113,3 +113,4 @@ public class Sample1 extends ModuleRoot {
 }
 
 ```
+{{/panel}}
