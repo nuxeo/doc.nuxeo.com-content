@@ -56,21 +56,22 @@ history:
 ---
 The module defined here extends the module defined in [Tutorial 4]({{page page='working-with-documents'}}).
 
-## Module definition
+## Module Definition
 
-##### MANIFEST.MF
+{{#> panel type='code' heading='MANIFEST.MF'}}
 
 ```
 ...
 Nuxeo-WebModule: org.nuxeo.ecm.webengine.app.WebEngineModule;name=sample5;extends=sample4
 
 ```
+{{/panel}}
 
-## JAX-RS resources
+## JAX-RS Resources
 
-##### Samples5.java
+{{#> panel type='code' heading='Samples5.java'}}
 
-```
+```java
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import org.nuxeo.ecm.core.rest.*;
@@ -139,10 +140,11 @@ public class Sample5 extends Sample4 {
 }
 
 ```
+{{/panel}}
 
-## Object views
+## Object Views
 
-h5 skin/views/sample5/index.ftl
+{{#> panel type='code' heading='skin/views/sample5/index.ftl'}}
 
 ```
 <#-- we are reusing the base template from the base module -->
@@ -156,10 +158,10 @@ Browse <a href="${This.path}/repository">repository</a>
 </@block>
 
 </@extends>
-
 ```
+{{/panel}}
 
-##### skin/views/Document/index.ftl
+{{#> panel type='code' heading='skin/views/Document/index.ftl'}}
 
 ```
 <#-- we reuse base.ftl from base module -->
@@ -202,10 +204,10 @@ Browse <a href="${This.path}/repository">repository</a>
 
 </@block>
 </@extends>
-
 ```
+{{/panel}}
 
-##### skin/views/Document/info.ftl
+{{#> panel type='code' heading='skin/views/Document/info.ftl'}}
 
 ```
 <@extends src="base.ftl">
@@ -248,3 +250,4 @@ Example: /my/doc/@views/info
 </@extends>
 
 ```
+{{/panel}}

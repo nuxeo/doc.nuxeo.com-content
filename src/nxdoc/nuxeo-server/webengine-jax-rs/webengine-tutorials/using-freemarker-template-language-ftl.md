@@ -54,13 +54,12 @@ history:
         version: '1'
 
 ---
-## Module definition
 
-##### <span style="color: rgb(0,0,0);">JAX-RS resources</span>
+## JAX-RS Resources
 
-##### Sample2.java
+{{#> panel type='code' heading='Sample2.java'}}
 
-```
+```java
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import org.nuxeo.ecm.webengine.model.impl.*;
@@ -184,12 +183,13 @@ public class Sample2 extends ModuleRoot {
 }
 
 ```
+{{/panel}}
 
-## Object views
+## Object Views
 
-##### skin/base.ftl
+{{#> panel type='code' heading='skin/base.ftl'}}
 
-```
+```html
 <!-- Base template that defines the site layout -->
 <html>
   <head>
@@ -218,8 +218,9 @@ public class Sample2 extends ModuleRoot {
 </html>
 
 ```
+{{/panel}}
 
-##### skin/index1.ftl
+{{#> panel type='code' heading='skin/index1.ftl'}}
 
 ```
 <@extends src="base.ftl">
@@ -240,8 +241,9 @@ public class Sample2 extends ModuleRoot {
 </@extends>
 
 ```
+{{/panel}}
 
-##### skin/index2.ftl
+{{#> panel type='code' heading='skin/index2.ftl'}}
 
 ```
 <@extends src="base.ftl">
@@ -250,5 +252,5 @@ public class Sample2 extends ModuleRoot {
     This is the <i>index2</i> skin.
   </@block>
 </@extends>
-
 ```
+{{/panel}}

@@ -64,11 +64,11 @@ history:
         version: '1'
 
 ---
-## JAX-RS resources
+## JAX-RS Resources
 
-##### Sample3.java
+{{#> panel type='code' heading='Sample3.java'}}
 
-```
+```java
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import org.nuxeo.ecm.webengine.model.impl.*;
@@ -231,10 +231,11 @@ public class Sample3 extends ModuleRoot {
 }
 
 ```
+{{/panel}}
 
-##### users/UserManager.java
+{{#> panel type='code' heading='users/UserManager.java'}}
 
-```
+```java
 package users;
 
 import javax.ws.rs.*;
@@ -288,10 +289,11 @@ public class UserManager extends DefaultObject {
 }
 
 ```
+{{/panel}}
 
-##### users/User.java
+{{#> panel type='code' heading='users/User.java'}}
 
-```
+```java
 package users;
 
 import javax.ws.rs.*;
@@ -358,10 +360,11 @@ public class User extends DefaultObject {
 }
 
 ```
+{{/panel}}
 
-##### users/UserBuddies.java
+{{#> panel type='code' heading='users/UserBuddies.java'}}
 
-```
+```java
 package users;
 
 import javax.ws.rs.*;
@@ -393,12 +396,13 @@ public class UserBuddies extends DefaultAdapter {
 }
 
 ```
+{{/panel}}
 
-## Object views
+## Object Views
 
-##### skin/views/sample3/index.ftl
+{{#> panel type='code' heading='skin/views/sample3/index.ftl'}}
 
-```
+```html
 <html>
   <head>
     <title>Sample3</title>
@@ -412,10 +416,11 @@ public class UserBuddies extends DefaultAdapter {
 </html>
 
 ```
+{{/panel}}
 
-##### skin/views/UserManager/index.ftl
+{{#> panel type='code' heading='skin/views/UserManager/index.ftl'}}
 
-```
+```html
 <html>
   <head>
     <title>Sample3</title>
@@ -430,10 +435,12 @@ public class UserBuddies extends DefaultAdapter {
 </html>
 
 ```
+{{/panel}}
 
-##### skin/views/User/index.ftl
 
-```
+{{#> panel type='code' heading='skin/views/User/index.ftl'}}
+
+```html
 <html>
   <head>
     <title>Sample3</title>
@@ -446,10 +453,11 @@ public class UserBuddies extends DefaultAdapter {
 </html>
 
 ```
+{{/panel}}
 
-##### skin/views/UserBuddies/index.ftl
+{{#> panel type='code' heading='skin/views/UserBuddies/index.ftl'}}
 
-```
+```html
 <html>
   <head>
     <title>Sample3 - Adapter example</title>
@@ -472,3 +480,4 @@ public class UserBuddies extends DefaultAdapter {
 </html>
 
 ```
+{{/panel}}

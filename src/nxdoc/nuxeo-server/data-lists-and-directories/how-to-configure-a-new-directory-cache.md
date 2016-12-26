@@ -119,9 +119,7 @@ To set up a new cache for your directory, wether for your vocabularies, users or
     </extension>
     ```
 
-    The example above is about a SQL directory. You should adapt the&nbsp;`target` to the type of directory you're using.
-
-&nbsp;
+    The example above is about a SQL directory. You should adapt the `target` to the type of directory you're using.
 
 * * *
 

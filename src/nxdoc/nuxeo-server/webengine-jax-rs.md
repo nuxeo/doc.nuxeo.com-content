@@ -316,7 +316,7 @@ history:
 ---
 Nuxeo WebEngine is a web framework for [JAX-RS](http://jcp.org/en/jsr/detail?id=311) applications based on a Nuxeo document repository. It provides a template mechanism to facilitate the dynamic generation of web views for JAX-RS resources.
 
-Templating is based on the [Freemarker](http://freemarker.sourceforge.net/) template engine.
+Templating is based on the [FreeMarker](http://freemarker.sourceforge.net/) template engine.
 
 Besides templating support, WebEngine provides an easy way to integrate native JAX-RS application on top of the Nuxeo platform - it provides all the glue and logic to deploy JAX-RS application on a Nuxeo server.
 
@@ -329,8 +329,6 @@ This tutorial assumes you are already familiarized with JAX-RS. If not, please r
 This page presents the WebEngine concepts. For more details about using these concepts, see the [WebEngine Tutorials]({{page page='webengine-tutorials'}}). You can download the tutorials sources from []({{file name='examples.zip' page='webengine-tutorials'}}).
 
 {{/callout}}
-
-&nbsp;
 
 ## Quick Checklist
 
@@ -360,7 +358,7 @@ Now you simply put your JAR in Nuxeo bundles directory (e.g. <span style="font-f
 
 Let's define a JAX-RS application as follows:
 
-```
+```java
 public class MyWebApp extends Application {
     @Override
     public Set<Class<?>> getClasses() {
@@ -374,7 +372,7 @@ public class MyWebApp extends Application {
 
 where the `MyWebAppRoot` class is the entry point of the application and is implemented as follows:
 
-```
+```java
 @Path("mysite")
 public class MyWebAppRoot {
     @GET
@@ -417,7 +415,7 @@ Nuxeo-WebModule: org.nuxeo.ecm.webengine.jaxrs.scan.DynamicApplicationFactory;pa
 
 {{#> callout type='info' }}
 
-The JAX-RS container used by Nuxeo is [Jersey](https://jersey.dev.java.net/).
+The JAX-RS container used by Nuxeo is [Jersey](https://jersey.java.net/).
 
 {{/callout}}
 
@@ -439,7 +437,7 @@ When declaring in that way a WebEngine module all the Web engine types and JAX-R
 
 {{/callout}} {{#> callout type='info' }}
 
-A WebEngine Application is a regular JAX-RS application plus an object model to help creating Nuxeo web front ends using Freemarker as the templating system.
+A WebEngine Application is a regular JAX-RS application plus an object model to help creating Nuxeo web front ends using FreeMarker as the templating system.
 
 {{/callout}}
 
@@ -451,7 +449,7 @@ Nuxeo-WebModule: org.nuxeo.ecm.webengine.app.WebEngineModule;host=MyHost
 
 and bind the servlet to this host in the deployment-fragment.xml file:
 
-```
+```xml
 <extension target="web#SERVLET">
   <servlet>
     <servlet-name>My Application Servlet</servlet-name>
@@ -478,7 +476,7 @@ Example: this will make it possible, for instance, to use a distinct exception m
 
 To define a WebEngine Application you should override the `org.nuxeo.ecm.webengine.app.WebEngineModule` class and declare any web types you are providing:
 
-```
+```java
 public class AdminApp extends WebEngineModule {
 
     @Override
@@ -507,7 +505,7 @@ You can see there are some additional attributes in the manifets header: 'name' 
 
 If you want to customize how your module is listed in that module index you can define 'shortcuts' in the module.xml file. Like this:
 
-```
+```xml
 <?xml version="1.0"?>
 <module>
   <shortcuts>
@@ -531,7 +529,7 @@ Note that the module.xml file is optional. You can use it if you want to make so
 To define a WebEngine Application root resource you should override the
 `org.nuxeo.ecm.webengine.model.impl.ModuleRoot` class:
 
-```
+```java
 @WebObject(type = "Admin", administrator = Access.GRANT)
 @Produces("text/html;charset=UTF-8")
 @Path("/admin")
@@ -557,11 +555,11 @@ JAX-RS is a very good solution to build REST applications and even Web Sites. Th
 
 This is where **WebEngine** is helping by providing Web Views for your JAX-RS resources.
 
-I will first explain how you can do templating (using Freemarker) for a regular JAX-RS resource. Then I will enter deeper into the WebEngine templating model.
+I will first explain how you can do templating (using FreeMarker) for a regular JAX-RS resource. Then I will enter deeper into the WebEngine templating model.
 
 ## JAX-RS Resource Templating
 
-To create a Freemarker template for your JAX-RS resource you need to put the template file (a Freemarker template like `index.ftl`) in your bundle so the template could be located using the Java class loader at runtime.
+To create a FreeMarker template for your JAX-RS resource you need to put the template file (a FreeMarker template like `index.ftl`) in your bundle so the template could be located using the Java class loader at runtime.
 
 ### Example
 
@@ -574,7 +572,7 @@ Hello ${Context.principal.name}!
 
 And then modify the `MyWebAppRoot` class as following:
 
-```
+```java
 public class MyWebAppRoot {
     @GET
     public Object doGet() {
@@ -614,7 +612,7 @@ You notice that when using pure JAX-RS objects you only have the following built
 
 You can add your custom variables to the template context as follows:
 
-```
+```java
 public class MyWebAppRoot {
     @GET
     public Object doGet() {
@@ -651,7 +649,7 @@ A module is a bundle (i.e. JAR file) that contains JAX-RS resources and web reso
 
 To define a module you need to create a `module.xml` file and put it in the root of your JAR. Here is the minimal content of a `module.xml` file:
 
-```
+```xml
 <module name="Admin" root-type="Admin" path="/admin" />
 
 ```
@@ -668,7 +666,7 @@ A WebEngine module is made from web resources and web objects. Resources are usu
 
 To be able to bind views to your JAX-RS resources you must declare them as WebEngine objects. This is done by using the annotation: `@WebObject` and extending the `org.nuxeo.ecm.webengine.model.impl.DefaultObject` class. Example:
 
-```
+```java
 @WebObject(type = "User")
 @Produces("text/html;charset=UTF-8")
 public class User extends DefaultObject {
@@ -679,14 +677,14 @@ public class User extends DefaultObject {
     }
 
     ...
-
+}
 ```
 
 In the previous example we defined a WebObject of type `User`. You notice the object is a JAX-RS resource and extends the `DefaultObject` base class. The `@WebObject` annotation is used to declare the JAX-RS resource as a WebObject.
 
 There is a special WebObject - the entry point of a module. To define a module entry point you need to create a WebObject that extends the `org.nuxeo.ecm.webengine.model.impl.ModuleRoot.ModuleRoot` class. Example:
 
-```
+```java
 @WebObject(type = "Admin", administrator=Access.GRANT)
 @Produces("text/html;charset=UTF-8")
 public class Main extends ModuleRoot {
@@ -710,7 +708,7 @@ As we've seen above when a module is loaded the entry point class is located usi
 
 In the example above we can see that WebObjects methods annotated with `@GET`, `@POST` etc. are used to return the response to the client. The right method is selected depending on the HTTP method that were used to make the request. `@GET` methods are used to serve GET requests, `@POST` methods are used to serve POST requests, etc. So the method:
 
-```
+```java
 @GET
     public Object doGet() {
         return getView("index").arg("user", principal);
@@ -724,7 +722,7 @@ We will see in next section how view templates are located on the file system.
 
 The method:
 
-```
+```java
 @Path("users")
     public Object getUserManagement() {
         return newObject("UserManager");
@@ -740,7 +738,7 @@ A WebAdapter is a special kind of Web Object that can be used to extend other We
 
 To declare an adapter use the `@WebAdapter` annotation and extend the `DefaultAdapter` class:
 
-```
+```java
 @WebAdapter(name = "audits", type = "AuditService", targetType = "Document")
 public class AuditService extends DefaultAdapter {
 ...
@@ -762,7 +760,7 @@ Methods that are annotated with both `@Path` and one of the HTTP method annotati
 
 For example, let's say the following object matches the `/nuxeo/site/users` path:
 
-```
+```java
 @WebObject(type = "Users")
 @Produces("text/html;charset=UTF-8")
 public class Users extends DefaultObject {
@@ -778,6 +776,7 @@ public class Users extends DefaultObject {
         return getView("user").arg("user", username);
     }
     ...
+}
 
 ```
 
@@ -789,7 +788,7 @@ You can also use a `@Path` annotation to redirect calls to another JAX-RS resour
 
 Example:
 
-```
+```java
 @WebObject(type = "Users")
 @Produces("text/html;charset=UTF-8")
 public class Users extends DefaultObject {
@@ -799,7 +798,7 @@ public class Users extends DefaultObject {
         return new User(username);
     }
     ...
-
+}
 ```
 
 You can see in the example above the if the request matches a path like `/nuxeo/site/users/{name`} then the `Users` resource will dispatch the call to another JAX-RS resource (i.e. `User` object) that will be used to handle the response to the user (or to dispatch further the handling to other JAX-RS resources).
@@ -808,7 +807,7 @@ You can see in the example above the if the request matches a path like `/nuxeo/
 
 To dispatch the call to another WebObject instance you must use the `newObject(String type)` method to instantiate the WebObject by specifying its type as the argument. Example:
 
-```
+```java
 @Path("users")
     public Object getUserManagement() {
         return newObject("UserManager");
@@ -852,7 +851,7 @@ Every module must have a `module.xml` descriptor in its root. This file is used 
 
 *   The `/skin/resources` directories contains all client resources. Here you should put any image, style sheet or script you want to use on the client. The content of this directory is directly visible in your web server under the path: {`base_path}/module_name/skin` (see **Static Resources**).
 
-*   The `/skin/views` directory should be used to store object views. An object view is usually a Freemarker template file that will be rendered in the request context and served when necessarily by the web object.
+*   The `/skin/views` directory should be used to store object views. An object view is usually a FreeMarker template file that will be rendered in the request context and served when necessarily by the web object.
 
 *   The `/META-INF`} directory is usually storing the `MANIFEST.MF` and other configuration or generated files that are internally used by the server.
 
@@ -870,7 +869,7 @@ Look into an existing WebEngine module like admin, base or wiki for examples on 
 
 We saw in the examples above that WebObjects can return views as a response to the client. Views are in fact template files bound to the object. To return a view from a WebObject you should do something like:
 
-```
+```java
 @GET
     public Object doGet() {
         return getView("my_view");
@@ -882,7 +881,7 @@ where `my_view` is the view name. To bind a view to an object, you should put th
 
 Example: Suppose we have an web object of type `MyObject`. To define a view named `myview` for this object, you should pit the view template file into `/skin/views/MyObject/myview.ftl`. Doing this you can now use send the view to the client using a method like:
 
-```
+```java
 @WebObject(type = "MyObject")
 @Produces("text/html;charset=UTF-8")
 public class MyObject extends DefaultObject {
@@ -898,9 +897,9 @@ If a view file is not found inside the module directory then all super types are
 
 ### Extending Web Objects
 
-You can extend an existing Web Object with your own object by defining the `superType} attribute in the \{{@WebObject` annotation. Example:
+You can extend an existing Web Object with your own object by defining the `superType` attribute in the `@WebObject` annotation. Example:
 
-```
+```java
 @WebObject(type = "JSONDocument", superType = "Document")
 
 ```
@@ -911,7 +910,7 @@ When extending an object you inherit all object views.
 
 When defining a new module you can extend existing modules by using the `extends` attribute in your module.xml file:
 
-```
+```xml
 <module name="Admin" root-type="Admin" path="/admin" extends="base" />
 
 ```
@@ -942,7 +941,7 @@ To refer to this type of resources you **must always** use relative paths to the
 
 Let's suppose we have a module entry point as follows:
 
-```
+```java
 @WebObject(type = "Admin", administrator=Access.GRANT)
 @Produces("text/html;charset=UTF-8")
 public class Main extends ModuleRoot {
@@ -956,7 +955,7 @@ public class Main extends ModuleRoot {
 
 Suppose the object is bound to the `nuxeo/site/admin` path, and the `index.ftl` view is referencing an image located in the module directory in `skin/resources/images/myimage.jpg`. Then the image should be referenced using the following path:
 
-```
+```xml
 <img src="skin/images/myimage.jpg" />
 
 ```
@@ -969,7 +968,7 @@ So all static resources in a Web module are accessible under the `/module_path/s
 
 By default WebEngine modules are listed in the WebEngine home page (i.e. `/nuxeo/site`). If you don't want to include your module in that list you can use the `headless` attribute in your `module.xml` file:
 
-```
+```xml
 <module name="my_module" root-type="TheRoot" path="/my_module" extends="base" headless="true" />
 
 ```

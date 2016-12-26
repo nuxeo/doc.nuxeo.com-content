@@ -59,11 +59,11 @@ history:
         version: '1'
 
 ---
-## JAX-RS resources
+## JAX-RS Resources
 
-##### Sample1.groovy
+{{#> panel type='code' heading='Sample1.groovy'}}
 
-```
+```java
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import org.nuxeo.ecm.core.rest.*;
@@ -113,3 +113,4 @@ public class Sample1 extends ModuleRoot {
 }
 
 ```
+{{/panel}}

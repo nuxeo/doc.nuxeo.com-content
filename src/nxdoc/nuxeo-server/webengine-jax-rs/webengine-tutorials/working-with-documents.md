@@ -49,11 +49,11 @@ history:
         version: '1'
 
 ---
-## JAX-RS resources
+## JAX-RS Resources
 
-##### Sample4.java
+{{#> panel type='code' heading='Sample4.java'}}
 
-```
+```java
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import org.nuxeo.ecm.core.rest.*;
@@ -144,12 +144,13 @@ public class Sample4 extends ModuleRoot {
 }
 
 ```
+{{/panel}}
 
-## Object views
+## Object Views
 
-##### skin/base.ftl
+{{#> panel type='code' heading='skin/base.ftl'}}
 
-```
+```html
 <!-- base template -->
 <html>
   <head>
@@ -161,8 +162,9 @@ public class Sample4 extends ModuleRoot {
 </html>
 
 ```
+{{/panel}}
 
-##### skin/views/sample4/index.ftl
+{{#> panel type='code' heading='skin/views/sample4/index.ftl'}}
 
 ```
 <@extends src="base.ftl">
@@ -175,8 +177,9 @@ Browse <a href="${This.path}/repository">repository</a>
 </@extends>
 
 ```
+{{/panel}}
 
-##### skin/views/Document/index.ftl
+{{#> panel type='code' heading='skin/views/Document/index.ftl'}}
 
 ```
 <@extends src="base.ftl">
@@ -239,10 +242,11 @@ Browse <a href="${This.path}/repository">repository</a>
 </@extends>
 
 ```
+{{/panel}}
 
 ## Templates
 
-##### skin/error/error_401.ftl
+{{#> panel type='code' heading='skin/error/error_401.ftl'}}
 
 ```
 <@extends src="base.ftl">
@@ -265,8 +269,9 @@ You don't have privileges to access this page
 </@extends>
 
 ```
+{{/panel}}
 
-##### skin/error/error_404.ftl
+{{#> panel type='code' heading='skin/error/error_404.ftl'}}
 
 ```
 <@extends src="base.ftl">
@@ -282,8 +287,9 @@ The page you requested doesn't exists
 </@extends>
 
 ```
+{{/panel}}
 
-##### skin/error/login.ftl
+{{#> panel type='code' heading='skin/error/login.ftl'}}
 
 ```
 <!-- Login Form -->
@@ -322,3 +328,4 @@ The page you requested doesn't exists
 </form>
 
 ```
+{{/panel}}

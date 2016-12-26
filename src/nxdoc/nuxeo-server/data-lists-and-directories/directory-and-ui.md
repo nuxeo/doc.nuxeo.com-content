@@ -40,9 +40,7 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
-Inside Nuxeo Platform, Directories are used to provide a common abstraction on a set of record&nbsp;
+Inside Nuxeo Platform, Directories are used to provide a common abstraction on a set of record
 
 *   that can be stored in different manner
     *   SQL, LDAP, Repository, External Service
@@ -61,22 +59,16 @@ This means that you can use Widgets and Layouts system to manage directories ent
 
 ## Directory Management UI
 
-Both JSF and Web UI includes management screens for the directories.
+Both Nuxeo JSF UI and Nuxeo Web UI include management screens for the directories.
 
 For simplicity reasons, the entry inside the Admin Center is called "Vocabularies", but actually it can manage any kind of Directories (i.e. not only the directories using the vocabulary schema).
 
-In the JSF UI, to make this easily usable, the platform includes a DirectoryUIManager that uses an &nbsp;[directories extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.directory.ui.DirectoryUIManager--directories) to allow to contribute what directories should be available in the JSF management UI and what layouts should be used.
+In the Nuxeo JSF UI, to make this easily usable, the platform includes a DirectoryUIManager that uses a [directories extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.directory.ui.DirectoryUIManager--directories) to allow to contribute what directories should be available in the JSF management UI and what layouts should be used.
 
-In the Web UI, all the directories that are not of type `system` are included by default in the management UI.
+In Nuxeo Web UI, all the directories that are not of type `system` are included by default in the management UI.
 
 ## Suggest Widgets
 
 Directories can be used as a source of data for Suggest Widgets.
 
-See&nbsp;[Suggestion Widget Types]({{page space='nxdoc58' page='suggestion-widget-types'}}) page for more details.
-
-&nbsp;
-
-&nbsp;
-
-* * *
+See [Suggestion Widget Types]({{page page='suggestion-widget-types'}}) page for more details.
