@@ -433,16 +433,17 @@ Public
 </tr>
 <tr>
 <td colspan="1">
-Nuxeo Edge Cache
+Nuxeo Edge Cache<br/>
+`nuxeo-edge-cache`
 </td>
 <td colspan="1">
-Registered
+Registered access
 </td>
 <td colspan="1">
-&nbsp;
+[Documentation]({{page page='nuxeo-edge-cache-server'}})
 </td>
 <td colspan="1">
-&nbsp;
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-edge-cache?version=1.0)
 </td>
 </tr>
 <tr>
