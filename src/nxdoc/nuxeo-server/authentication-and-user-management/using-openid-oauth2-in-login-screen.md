@@ -5,11 +5,12 @@ review:
     date: '2016-11-28'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - openid
     - oauth
     - openid-component
     - excerpt
+    - link-update
 toc: true
 confluence:
     ajs-parent-page-id: '16089115'
@@ -22,7 +23,7 @@ confluence:
     shortlink: 1BM5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/1BM5AQ'
     source_link: /pages/viewpage.action?pageId=20517844
-tree_item_index: 500
+tree_item_index: 170
 history:
     -
         author: Manon Lumeau
@@ -163,7 +164,7 @@ Each identity provider has its own way to handle user identity in his `UserInfo`
 
 You just have to extend the `org.nuxeo.ecm.platform.oauth2.openid.auth.OpenIDUserInfo` class with the expected fields. Do not forget to set it in your provider contribution.
 
-You can take a look to our implementation like [`org.nuxeo.ecm.platform.oauth2.openid.auth.google.GoogleUserInfo`](https://github.com/nuxeo/nuxeo-platform-login/blob/master/nuxeo-platform-login-openid/src/main/java/org/nuxeo/ecm/platform/oauth2/openid/auth/google/GoogleUserInfo.java) or [`org.nuxeo.ecm.platform.oauth2.openid.auth.DefaultOpenIDUserInfo`](https://github.com/nuxeo/nuxeo-platform-login/blob/master/nuxeo-platform-login-openid/src/main/java/org/nuxeo/ecm/platform/oauth2/openid/auth/DefaultOpenIDUserInfo.java) .
+You can take a look to our implementation like [`org.nuxeo.ecm.platform.oauth2.openid.auth.google.GoogleUserInfo`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/login/nuxeo-platform-login-openid/src/main/java/org/nuxeo/ecm/platform/oauth2/openid/auth/google/GoogleUserInfo.java) or [`org.nuxeo.ecm.platform.oauth2.openid.auth.DefaultOpenIDUserInfo`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/login/nuxeo-platform-login-openid/src/main/java/org/nuxeo/ecm/platform/oauth2/openid/auth/DefaultOpenIDUserInfo.java) .
 
 ### Username Resolution
 
@@ -182,14 +183,18 @@ You have the possibility to change some behaviors by adding the following parame
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
 
 {{#> panel heading='Other OAuth / OPenID Related Documentation'}}
 
 - [Using OAuth2]({{page page='using-oauth2'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
+<div class="column medium-6">
 
 &nbsp;
 
-</div></div>
+</div>
+</div>

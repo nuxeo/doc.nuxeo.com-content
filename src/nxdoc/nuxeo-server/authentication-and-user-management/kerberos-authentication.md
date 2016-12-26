@@ -19,7 +19,7 @@ confluence:
     shortlink: zRU5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/zRU5AQ'
     source_link: /display/NXDOC/Kerberos+Authentication
-tree_item_index: 700
+tree_item_index: 195
 history:
     -
         author: Manon Lumeau
@@ -99,7 +99,7 @@ Before you install and configure Kerberos on your Nuxeo Platform, you need to se
 
 1.  Configure Kerberos for your server and client. For example in a Debian-based Linux server install `krb5-kdc` and `krb5-admin-server`, and setup a realm (with krb5_newrealm).
 2.  Create a service principal and set its service principal name to `HTTP/@REALM`.
-3.  Export the service principal keytab In MIT&nbsp;Kerberos. Using kadmin, type the following commands (servername is the name of the Nuxeo Platform server):
+3.  Export the service principal keytab In MIT Kerberos. Using kadmin, type the following commands (servername is the name of the Nuxeo Platform server):
 
     ```
     add_principal HTTP/servername (type in a password)
@@ -124,7 +124,7 @@ Before you install and configure Kerberos on your Nuxeo Platform, you need to se
 
     {{#> callout type='note' heading='Service principal name format'}}
 
-    The service principal _has_&nbsp;to correspond to the server's canonical name in DNS.
+    The service principal _has_ to correspond to the server's canonical name in DNS.
 
     {{/callout}}
 
@@ -158,7 +158,7 @@ Before you install and configure Kerberos on your Nuxeo Platform, you need to se
 
     {{/callout}}
 
-    The&nbsp;`krb5.conf` should minimally contain:
+    The `krb5.conf` should minimally contain:
 
     ```
      [libdefaults]
@@ -197,13 +197,19 @@ Before you install and configure Kerberos on your Nuxeo Platform, you need to se
 
 ### Using the Nuxeo Package
 
-See the package's [Nuxeo Kerberos addon]() page.
+1. Add the following options in your nuxeo.conf:
+    * `kerberos.principal=_your kerberos principal_`
+    * `kerberos.keytab=_/path/to/your/kerberos.keytab_`
+
+    **Note**: You must have configured the Kerberos setup in nuxeo.conf before installing the package. Otherwise package installation will fail.
+2. Install the Nuxeo Kerberos addon. {{{multiexcerpt 'MP-installation-easy' page='generic-multi-excerpts'}}}<br/>
+If you use the Admin Center, you will have to restart the server **twice** due to [NXP-15592](https://jira.nuxeo.com/browse/NXP-15592).
 
 ### Manually
 
 #### Configuring Java
 
-To enable Kerberos, you need to use a login configuration implementation. You have two ways of doing this. Either change the default Java configuration or use JAVA_OPTS. Take a look at&nbsp;[JAAS](http://docs.oracle.com/javase/6/docs/technotes/guides/security/jaas/JAASRefGuide.html#AppendixA) documentation for more details.
+To enable Kerberos, you need to use a login configuration implementation. You have two ways of doing this. Either change the default Java configuration or use JAVA_OPTS. Take a look at [JAAS](http://docs.oracle.com/javase/6/docs/technotes/guides/security/jaas/JAASRefGuide.html#AppendixA) documentation for more details.
 
 ##### Changing the default JRE configuration
 
@@ -217,7 +223,7 @@ To enable Kerberos, you need to use a login configuration implementation. You ha
 
 ##### Giving a Custom Login File as Java Argument
 
-In&nbsp;`nuxeo.conf`, add the following line:
+In `nuxeo.conf`, add the following line:
 
 ```
 JAVA_OPTS=$JAVA_OPTS -Djava.security.auth.login.config=./java.login.config
@@ -259,7 +265,7 @@ The login configuration MUST be called Nuxeo with an uppercase N.
 
 2.  Create a `$NUXEO_HOME/nxserver/config/kerberos-config.xml` with the following content:
 
-    ```html/xml
+    ```xml
     <?xml version="1.0"?>
      <component name="Kerberos-config">
       <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
@@ -292,11 +298,11 @@ The login configuration MUST be called Nuxeo with an uppercase N.
 On Windows:
 
 *   If the client is IE or Chrome, no further configuration should be necessary. Just ensure your Nuxeo server is in the Local intranet or Trusted sites security zone.
-*   If the client is Firefox, go to [about:config](http://aboutconfig), search for `network.negotiate-auth.trusted-uris` and set it to your full server URL.
+*   If the client is Firefox, go to [about:config](about:config), search for `network.negotiate-auth.trusted-uris` and set it to your full server URL.
 
 On Linux, if the client is Firefox:
 
-1.  Go to [about:config](http://aboutconfig).
+1.  Go to [about:config](about:config).
 2.  Search for `network.negotiate-auth.trusted-uris` and set it to your full server URL.
 3.  Configure `krb5.conf` as above.
 4.  Get a Kerberos ticket with `kinit`.
@@ -342,23 +348,6 @@ More troubleshooting tips on the [Oracle documentation](http://docs.oracle.com/j
 ## Upgrade Notes
 
 If you are upgrading from a version of the package lower than 1.3.0 (i.e. from Nuxeo 5.x), remove the `-Djava.security.auth.login.config=xxx` option from your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}): it is now automatically added by the package.
-
-## Configuration
-
-Add the following options in your nuxeo.conf:
-
-*   `kerberos.principal=_your kerberos principal_`
-*   `kerberos.keytab=_/path/to/your/kerberos.keytab_`
-
-## Installation
-
-**Note**: You must have configured the Kerberos setup in nuxeo.conf before installing the package. Otherwise package installation will fail.
-
-{{{multiexcerpt 'MP-installation-easy' page='NXDOC:Digital Asset Management (DAM)'}}}
-
-If you use the Admin Center, you will have to restart the server **twice**&nbsp;due to&nbsp;[NXP-15592](https://jira.nuxeo.com/browse/NXP-15592).
-
-&nbsp;
 
 * * *
 
