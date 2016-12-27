@@ -315,7 +315,7 @@ history:
         version: '1'
 
 ---
-For the general upgrade process, see the&nbsp;[How to Upgrade Nuxeo]({{page page='upgrading-the-nuxeo-platform'}})&nbsp;page.
+For the general upgrade process, see the [How to Upgrade Nuxeo]({{page page='upgrading-the-nuxeo-platform'}}) page.
 
 {{! multiexcerpt name='from-6.0-to-7.10'}}
 
@@ -476,6 +476,19 @@ Example: [https://my.nuxeo.com/](https://my.nuxeo.com/)</td></tr><tr><td colspan
 See [Configuring Nuxeo to Access the Cluster]({{page space='NXDOC' page='Elasticsearch Setup#ElasticsearchSetup-ConfiguringNuxeoToAccessTheClusterConfiguringNuxeotoAccesstheCluster'}})
 
 </td></tr></tbody></table></div>
+
+## Data Migration
+
+You must update the size of the column `DATA` in table `CONTENT`, which has changed in Nuxeo Platform LTS 2015, from 40 to 250. For instance for PostgreSQL:
+- In Nuxeo Platform 6.0:
+```sql
+data character varying(40)
+```
+
+- In Nuxeo Platform LTS 2015:
+```sql
+data character varying(250)
+```
 
 ## Code Migration
 
