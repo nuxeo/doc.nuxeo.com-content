@@ -2,7 +2,7 @@
 title: Installing and Setting Up Related Software
 review:
     comment: ''
-    date: '2016-12-15'
+    date: '2016-12-27'
     status: ok
 labels:
     - lts2016-ok
@@ -682,9 +682,9 @@ For a manual build:
 Running the ffmpeg build script on the same machine than where you installed the Nuxeo Platform would result in uninstalling existing nuxeo already installed with the Debian package along with its data.
 {{/callout}}
 
-## OS X
+## macOS (and OS X)
 
-The OS X installation instructions provided use [Homebrew](http://mxcl.github.com/homebrew/).
+The macOS installation instructions provided use [Homebrew](http://mxcl.github.com/homebrew/).
 
 ### LibreOffice and pdftohtml for Office and PDF Preview
 
@@ -807,7 +807,7 @@ $ brew install libwpd
 
 ### ExifTool
 
-{{! multiexcerpt name='ffmpeg-intro'}}
+{{! multiexcerpt name='exiftool-intro'}}
 
 ExifTool is required by the Nuxeo Binary Metadata add-on. It is used to extract and override binaries metadata.
 
@@ -817,6 +817,20 @@ ExifTool is required by the Nuxeo Binary Metadata add-on. It is used to extract 
 
     ```bash
     $ brew install exiftool
+    ```
+
+### CCExtractor
+
+{{! multiexcerpt name='ccextractor-intro'}}
+
+CCExtractor is used to extract subtitles from videos.
+
+{{! /multiexcerpt}}
+
+*   Using Homebrew:
+
+    ```bash
+    $ brew install ccextractor
     ```
 
 ## Windows
@@ -924,3 +938,11 @@ Here are some quick installation steps to install Exiftool. Full installation st
 1.  Download the [standalone distribution](http://www.sno.phy.queensu.ca/~phil/exiftool/index.html).
 2.  Unzip the distribution to a folder, named `C:\Program Files (x86)\exiftool` for example, and add it to the `PATH` environment variable.
 3.  Rename the extracted .exe into exiftool.exe
+
+### CCExtractor
+
+{{{multiexcerpt 'ccextractor-intro' page='Installing and Setting up Related Software'}}}
+
+1.  Download the [windows binaries](http://www.ccextractor.org/doku.php?id=public:general:downloads).
+2.  Unzip the contents to a folder, for example `C:\Program Files (x86)\CCExtractor` and add it to the the `PATH` system variable.
+3.  Rename `ccextractorwin.exe` to `ccextractor.exe`.
