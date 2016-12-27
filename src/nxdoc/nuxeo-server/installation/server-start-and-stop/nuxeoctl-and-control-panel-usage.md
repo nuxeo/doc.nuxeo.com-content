@@ -297,7 +297,7 @@ Issue `nuxeoctl help` to print this information.
 
 {{#> callout type='tip' }}
 
-See [the Environment variables page]({{page page='setup-best-practices'}}#defineenvironmentvariables) for setting Nuxeo Home and Configuration paths.
+See [the Environment variables page]({{page page='setup-best-practices'}}#define-environment-variables) for setting Nuxeo Home and Configuration paths.
 
 {{/callout}}
 
