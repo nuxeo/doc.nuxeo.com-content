@@ -132,9 +132,9 @@ history:
 To let you understand what event handlers are we can do a parallel with:
 
 *   Triggers in a database,
-*   Events on event-based programming patterns like in VBA, JavaScript, ...&nbsp;
+*   Events on event-based programming patterns like in VBA, JavaScript, ...
 
-You'll read more about event handlers in the&nbsp;[developer documentation]({{page space='nxdoc' page='events-and-listeners'}}).
+You'll read more about event handlers in the [developer documentation]({{page space='nxdoc' page='events-and-listeners'}}).
 
 ## Creating an Event Handler
 
@@ -144,7 +144,7 @@ You'll read more about event handlers in the&nbsp;[developer documentation]({{pa
 
 </div>
 
-*   **Feature ID**: The&nbsp;id of the document type. Will be used as the technical Id at generation.&nbsp;
+*   **Feature ID**: The id of the document type. Will be used as the technical Id at generation.
 
 ## Editing an Event Handler
 
@@ -153,17 +153,15 @@ You'll read more about event handlers in the&nbsp;[developer documentation]({{pa
 ### Event Handler Definition
 
 *   **Events**: Select a list of events for which the automation chain referenced later will be processed. If you don't find the event you are looking for, you can add a new one [using the registries.]({{page page='registries'}})
-*   **Is Asynchroneous:&nbsp;**&nbsp;The automation chain bound to the event will be processed asynchroneously, outside the transaction. More details on the&nbsp;[developer documentation]({{page space='nxdoc' page='events-and-listeners'}}).This is an advanced option, most of the time you won't check this option.
+*   **Is Asynchroneous**: The automation chain bound to the event will be processed asynchroneously, outside the transaction. More details on the [developer documentation]({{page space='nxdoc' page='events-and-listeners'}}).This is an advanced option, most of the time you won't check this option.
 
 ### Event Handler Enablement
 
-See the&nbsp;[Filtering Options Reference Page]({{page page='filtering-options-reference-page'}}).
+See the [Filtering Options Reference Page]({{page page='filtering-options-reference-page'}}).
 
 ### Event Handler Execution
 
 *   **Selecting an existing operation**: the selected automation chain will be executed for the events selected in the Event Handler definition section
-
-&nbsp;
 
 * * *
 
@@ -172,11 +170,9 @@ See the&nbsp;[Filtering Options Reference Page]({{page page='filtering-options-r
 *   [Events and Listeners]({{page space='nxdoc' page='events-and-listeners'}})
 *   [Common Events]({{page space='nxdoc' page='common-events'}})
 *   [Scheduling Periodic Events]({{page space='nxdoc' page='scheduling-periodic-events'}})
-*   [How to Inherit a Metadata from a Parent Document]({{page space='nxdoc' page='how-to-inherit-a-metadata-from-a-parent-document'}})
+*   [How to Inherit a Metadata from a Parent Document]({{page space='nxdoc' page='how-to-inherit-metadata-from-a-parent-document'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 &nbsp;
 

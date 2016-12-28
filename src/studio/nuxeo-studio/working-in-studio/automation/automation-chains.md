@@ -119,13 +119,13 @@ history:
 ---
 ## Concept
 
-Concepts about Automation are introduced in the&nbsp;[developer documentation]({{page space='nxdoc' page='content-automation-concepts'}}). You should read them before starting using this feature.
+Concepts about Automation are introduced in the [developer documentation]({{page space='nxdoc' page='content-automation-concepts'}}). You should read them before starting using this feature.
 
 The Studio Automation Chain editor allows you to build the chains of operations and fill the necessary operation parameters.
 
 ## Chain Editor
 
-&nbsp;![]({{file name='AutomationChainEdition.png'}} ?w=650,border=true)&nbsp;
+![]({{file name='AutomationChainEdition.png'}} ?w=650,border=true)
 
 ### Principle
 
@@ -137,7 +137,7 @@ To edit a chain, you just need to select a category on the first column, then an
 
 On each operation:
 
-*   **![]({{file name='help-icon.png' page='studio-icons-index'}}):&nbsp;** Find here a first documentation of the operation: what are the expected input and output, and a small description of the operation's role. From there you can access the online help (see next).
+*   ![]({{file name='help-icon.png' page='studio-icons-index'}}): Find here a first documentation of the operation: what are the expected input and output, and a small description of the operation's role. From there you can access the online help (see next).
 *   **See Online Help**: This link opens an online documentation page specific to the operation. You will most of the time find additional examples of how to use a specific operation.
 *   **Edit**: Switches the operation to edit mode for editing the values of your operation.
 *   ![]({{file name='new_script.gif' page='studio-icons-index'}}): Opens a popup with helpers for Automation EL syntax. See the page [Use of MVEL in Automation Chains]({{page space='nxdoc' page='use-of-mvel-in-automation-chains'}}).
@@ -149,16 +149,16 @@ On each operation:
 
 On this screen you can add new parameters. This can be useful when you want to [write re-usable chains]({{page space='nxdoc' page='how-to-write-reusable-automation-chains'}}).
 
-*   **Add parameter:** Adds a placeholder for a new parameter, for which &nbsp;you need to specify the name (used for referencing it after that in the chain, using&nbsp;`ChainParameters['parameterName']`).
+*   **Add parameter:** Adds a placeholder for a new parameter, for which you need to specify the name (used for referencing it after that in the chain, using `ChainParameters['parameterName']`).
 *   **Type**: For now always set to string, this may change in the future.
 
 ## Switch Editor
 
 ![]({{file name='AutomationChainSwitchEditor.png'}} ?w=650,h=181,border=true)
 
-The Studio Automation Chain integrates a new editor called YAML editor which&nbsp;enables you to edit your chain in plain text. You can click on the button **Switch editor** to activate this feature. You can switch back to the visual editor whenever you want.
+The Studio Automation Chain integrates a new editor called YAML editor which enables you to edit your chain in plain text. You can click on the button **Switch editor** to activate this feature. You can switch back to the visual editor whenever you want.
 
-For more information on&nbsp;the Studio Automation Chains, see [all the operations available](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.9.4/listOperations).&nbsp;
+For more information on the Studio Automation Chains, see [all the operations available](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.9.4/listOperations).
 
 * * *
 
@@ -166,13 +166,11 @@ For more information on&nbsp;the Studio Automation Chains, see [all the operatio
 
 *   [How to Create an Automation Chain]({{page space='nxdoc' page='how-to-create-an-automation-chain'}})
 *   [How to Write Reusable Automation Chains]({{page space='nxdoc' page='how-to-write-reusable-automation-chains'}})
-*   [How to Inherit a Metadata from a Parent Document]({{page space='nxdoc' page='how-to-inherit-a-metadata-from-a-parent-document'}})
+*   [How to Inherit a Metadata from a Parent Document]({{page space='nxdoc' page='how-to-inherit-metadata-from-a-parent-document'}})
 *   [Debugging Automation Chains]({{page space='nxdoc' page='debugging-automation-chains'}})
 *   [Calling Automation from Java]({{page space='nxdoc' page='calling-automation-from-java'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 &nbsp;
 

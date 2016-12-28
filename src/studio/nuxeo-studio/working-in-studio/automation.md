@@ -81,7 +81,7 @@ history:
 ---
 Before starting your own content automation chains, we advise you to take a look at the concepts and tutorial parts to understand [what Nuxeo Content Automation chains are]({{page space='nxdoc' page='content-automation-concepts'}}) and find sample use cases like:
 
-*   [A metadata inheritance chain]({{page space='nxdoc' page='how-to-inherit-a-metadata-from-a-parent-document'}})
+*   [A metadata inheritance chain]({{page space='nxdoc' page='how-to-inherit-metadata-from-a-parent-document'}})
 *   [A task assignment chain]({{page page='add-a-new-permission-in-the-ui'}})
 
 Subpages of this section are:
