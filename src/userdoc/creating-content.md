@@ -390,7 +390,7 @@ You can also drop files in your [worklist]({{page page='editing-content#clipboar
 
 You can drag and drop one or more files of any type in Nuxeo.
 
-_![]({{file name='HTML5-DnD.png'}} ?w=650,border=true)_
+![]({{file name='HTML5-DnD.png'}} ?w=650,border=true)
 
 #### Import with Metadata
 
@@ -439,13 +439,11 @@ Read the [Nuxeo Bulk Document Importer documentation]({{page space='nxdoc' page=
 
 {{! multiexcerpt name='automated-metadata-extraction-excerpt'}}
 
-The Nuxeo Platform enables to extract information from the uploaded files attached to a document and&nbsp;automatically fill in the document metadata at creation time. This enables you to leverage metadata existing outside the Nuxeo Platform to automatically categorize documents, preventing users from editing document to report these metadata. Automated metadata extraction is activated by default on [Nuxeo DAM]({{page page='digital-asset-management-with-the-nuxeo-platform'}}): The IPTC legend, copyright and source are used to automatically fill in the description, rights and source metadata of pictures.
+The Nuxeo Platform enables to extract information from the uploaded files attached to a document and automatically fill in the document metadata at creation time. This enables you to leverage metadata existing outside the Nuxeo Platform to automatically categorize documents, preventing users from editing document to report these metadata. Automated metadata extraction is activated by default on [Nuxeo DAM]({{page page='digital-asset-management-with-the-nuxeo-platform'}}): The IPTC legend, copyright and source are used to automatically fill in the description, rights and source metadata of pictures.
 
 {{! /multiexcerpt}}
 
 Read the [Binary Metadata]({{page space='nxdoc' page='binary-metadata'}}) documentation for more information.
-
-&nbsp;
 
 * * *
 
@@ -457,6 +455,6 @@ Read the [Binary Metadata]({{page space='nxdoc' page='binary-metadata'}}) docume
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 *   [How to Customize the Bulk Import Form]({{page space='nxdoc' page='how-to-customize-the-bulk-import-form'}})
-*   [How to Enable Drag'n Drop and New Button on a Custom Content View]({{page space='nxdoc' page='how-to-enable-dragn-drop-and-new-button-on-a-custom-content-view'}})&nbsp;
+*   [How to Enable Drag'n Drop and New Button on a Custom Content View]({{page space='nxdoc' page='how-to-enable-drag-and-drop-and-new-button-on-a-custom-content-view'}})
 
 {{/panel}}</div></div>

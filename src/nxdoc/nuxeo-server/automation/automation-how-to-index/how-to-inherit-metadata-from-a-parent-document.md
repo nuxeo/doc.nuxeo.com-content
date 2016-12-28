@@ -1,5 +1,5 @@
 ---
-title: How to Inherit a Metadata from a Parent Document
+title: How to Inherit Metadata from a Parent Document
 review:
     comment: ''
     date: '2016-12-19'
@@ -7,7 +7,7 @@ review:
 details:
     howto:
         excerpt: >-
-            In this how-to, we will implement an event handler, that will listen
+            In this how-to, we will implement an event handler that will listen
             to the creation of documents. When the created document matches some
             predefined criteria, the listener will execute a content automation
             chain. The chain will copy the "source" metadata value from the
@@ -179,11 +179,11 @@ history:
         version: '1'
 
 ---
-There are cases where you want a document to inherit some metadata values from its parent. In general, the goal is to benefit from the context of creation of a document to infer some metadata values. For instance, you can set a `projet_id` metadata on your document type and on the workspace (or any type of container). Then your document type can inherit the project id value from its parent workspace. This is also useful when most of your documents are captured via Nuxeo Drive. Since Drive doesn't enable to set metadata values, you can only infer them from parent containers.
+There are cases where you want a document to inherit some metadata values from its parent. In general, the goal is to benefit from the creation context of a document to infer some metadata values. For example, you can set a `project_id` metadata on your document type and on the workspace (or any type of container). Then your document type can inherit the project id value from its parent workspace. This is also useful when most of your documents are captured via Nuxeo Drive. Since Drive doesn't allow the setting of metadata values, you can only infer them from parent containers.
 
 {{! excerpt}}
 
-In this how-to, we will implement an event handler, that will listen to the creation of documents. When the created document matches some predefined criteria, the listener will execute a content automation chain. The chain will copy the Dublincore "source" metadata value from the workspace to the created document.
+In this how-to, we will implement an event handler that will listen to the creation of documents. If the created document matches some predefined criteria, the listener will execute a content automation chain. The chain will copy the Dublincore "source" metadata value from the workspace to the created document.
 
 {{! /excerpt}} {{#> callout type='info' }}
 
@@ -195,13 +195,13 @@ To maintain inheritance, you need to use the event "Document Updated" and select
 
 To complete this how-to, you need the elements below to be already configured in your Nuxeo Studio project.
 
-*   A document type called [`DocumentationItem`](/x/Ng7F).
+*   A document type called [`DocumentationItem`]({{page page='implementing-documentation-items'}}).
 
 ## Creating the Event Handler
 
 **To implement the metadata inheritance listener:**
 
-1.  Create a new **Event Handlers** (see [how to bind an automation chain to an event handler]({{page page='how-to-create-an-automation-chain#automation-chain-binding-event-handler'}})).
+1.  Create a new **Event Handler** (see [how to bind an automation chain to an event handler]({{page page='how-to-create-an-automation-chain#automation-chain-binding-event-handler'}})).
 2.  Fill in the filtering information below:
     *   Events: Document created
     *   Current document has one of the types: `DocumentationItem`
@@ -213,13 +213,13 @@ To complete this how-to, you need the elements below to be already configured in
 
 ```
 - Context.FetchDocument
-- Document.Push
+- Context.PushDocument
 - Document.GetParent:
     type: Workspace
 - Context.SetVar:
     name: sourceValue
     value: "@{Document[\"dc:source\"]}"
-- Document.Pop
+- Context.PopDocument
 - Document.SetProperty:
     xpath: "dc:source"
     save: "true"

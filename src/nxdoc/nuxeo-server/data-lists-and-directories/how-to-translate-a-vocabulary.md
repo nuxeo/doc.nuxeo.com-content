@@ -2,7 +2,7 @@
 title: How to Translate a Vocabulary
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Studio
         topics: Vocabulary
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - vocabulary
     - howto
     - excerpt
@@ -92,31 +92,15 @@ history:
 ---
 {{! excerpt}}
 
-Nuxeo Studio enables you to translate the vocabulary values of your application.
+Nuxeo Studio allows you to translate the vocabulary values of your application.
 
 {{! /excerpt}}
 
-By default, vocabularies are not translated. This means that if your application is available in several languages, the vocabulary's values will only be displayed in the language in which you create them in the steps above. If you filled in English values, you'll be displayed English values in the lists even if the Nuxeo Platform UI is in French or any other language. However, you can make them available in several languages.
-
-In order to translate a vocabulary, you must:
-
-1.  Put the labels translation in a "message_LANGUAGE.properties" file as explained on the page [Uploading Labels Translations in Studio (i18n)](/pages/viewpage.action?pageId=3867532) and upload the properties file in the **Resources** menu of Studio.
-2.  Go on the layout on which the vocabulary should be used.
-3.  Assign the vocabulary to a document field (see the&nbsp;[Define a Document Type]({{page space='NXDOC' page='Define a+Document+Type'}})&nbsp;how-to).
-4.  On the widget's edition form, select **Yes** for Localize.
-    ![]({{file name='STUDIO-layout-widget.png'}} ?w=350,h=349,border=true)
-
-    {{#> callout type='tip' }}
-
-    Tick **Translated** if you want to translate the label and the Help label of the field.
-
-    {{/callout}}
-5.  Save your modifications on the widget and on the layout.
-    The labels displayed in the widget are now taken from the properties file. You now have different labels depending on the language the Nuxeo Platform UI is displayed in.
+{{#> panel type='primary'}}
+Check out our [blog on the subject](https://www.nuxeo.com/blog/how-many-languages-can-you-fit-in-the-nuxeo-platform/) for more details!
+{{/panel}}
 
 * * *
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Howtos'}}
 
@@ -125,8 +109,6 @@ In order to translate a vocabulary, you must:
 - [How to Translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxeo-platform'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 &nbsp;
 

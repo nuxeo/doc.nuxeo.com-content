@@ -2,7 +2,7 @@
 title: How to Customize the HTML5 Drag and Drop Import with Metadata Form
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: Studio
         topics: 'Drag and Drop, Layout'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
 confluence:
     ajs-parent-page-id: '20517820'
@@ -77,7 +77,7 @@ history:
         version: '1'
 
 ---
-HTML5 drag and drop enables users to [import documents in a folder]({{page space='userdoc' page='creating-content#content-creation-dandd'}}) and fill their metadata at the same time.
+HTML5 Drag and Drop enables users to [import documents in a folder]({{page space='userdoc' page='creating-content#content-creation-dandd'}}) and fill in their metadata at the same time.
 
 ![]({{file name='smartDnD_metadata.png' space='userdoc' page='creating-content'}} ?w=650,h=289,border=true)
 
@@ -99,7 +99,7 @@ Follow the steps to below to customize the import form.
 
     ```
 
-2.  In the&nbsp;`link=` element, change&nbsp;`yourschemas` for your schema prefixes.
+2.  In the& `link=` element, change `yourschemas` for your schema prefixes.
 
     {{#> callout type='info' }}
 
@@ -107,20 +107,18 @@ Follow the steps to below to customize the import form.
 
     {{/callout}}
 3.  Go to **Listings & Views** > **Form Layouts** and click on **New**.
-4.  Name your layout&nbsp;`dndEdit`.
+4.  Name your layout `dndEdit`.
 5.  Drag and drop the widgets you need in the **Creation Layout** tab.
 6.  Click on **Save**.
     ![]({{file name='dndEdit_layout.png'}} ?w=600,border=true)
-7.  [Deploy your changes]({{page space='studio' page='deploying-your-project-in-dev-mode'}}) and drag and drop documents to display the smart import with metadata form..
+7.  [Deploy your changes]({{page space='studio' page='deploying-your-project-in-dev-mode'}}) and drag and drop documents to display the smart import with metadata form.
     ![]({{file name='dndEdit_result.png'}} ?w=600,border=true)
 
-**Notes about Drag and drop form**
+**Notes about the Drag and Drop form**
 
-It is currently not possible to use tags, collections and complex types on this form.
+It is currently not possible to use tags, collections or complex types on this form.
 
 * * *
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
