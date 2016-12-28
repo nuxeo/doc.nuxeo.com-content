@@ -8,7 +8,6 @@ labels:
 toc: true
 tree_item_index: 200
 ---
-# Core Implementation
 
 Here is a schema showing the client-side architecture:
 
