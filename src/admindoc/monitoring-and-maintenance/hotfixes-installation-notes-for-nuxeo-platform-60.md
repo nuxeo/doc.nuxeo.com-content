@@ -360,6 +360,16 @@ The parameter `--accept=true` automatically replies `yes` to any prompt, which m
 
 You can also download and install hotfixes from the **Update Center** in the **Admin** tab.The installation of hotfixes requires the server to be restarted to complete the installation: follow the manual installation and configuration steps required by the installed hotfixes before you restart your server.
 
+## Hotfix 34
+
+### Elasticsearch Configuration
+
+Following backport of [NXP-19283](https://jira.nuxeo.com/browse/NXP-19283), optimistic concurrency control is now enabled by default. Should you want to disable it you would have to edit the Elasticsearch template and add the following to the `elasticSearchRemote` or `elasticSearchLocal` tags.
+
+```
+useExternalVersion="false"
+```
+
 ## Hotfix 33
 
 ### Package Cleanup
