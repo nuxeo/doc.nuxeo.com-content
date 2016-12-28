@@ -2,7 +2,7 @@
 title: How to Customize the Default Content and Trash Listings
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: Studio
         topics: Content View
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - content-view
     - howto
     - studio
@@ -29,7 +29,7 @@ confluence:
     shortlink: hIMlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/hIMlAQ'
     source_link: /display/NXDOC/How+to+Customize+the+Default+Content+and+Trash+Listings
-tree_item_index: 100
+tree_item_index: 200
 history:
     -
         author: Manon Lumeau
@@ -92,4 +92,4 @@ You can create new views that will display the results of a query you have custo
 3.  Select the content view you want to use for:
     *   the "Main content", i.e. the **Content** tab of your document type.
     *   the "Trash content", i.e. the **Trash** tab of your document type.
-4.  Click on **Save** .
+4.  Click on **Save**.

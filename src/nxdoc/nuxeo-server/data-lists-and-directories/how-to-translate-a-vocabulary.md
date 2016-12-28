@@ -2,7 +2,7 @@
 title: How to Translate a Vocabulary
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Studio
         topics: Vocabulary
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - vocabulary
     - howto
     - excerpt
@@ -102,8 +102,6 @@ Check out our [blog on the subject](https://www.nuxeo.com/blog/how-many-language
 
 * * *
 
-&nbsp;
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Howtos'}}
 
 - [How to Add a New Vocabulary]({{page page='how-to-add-a-new-vocabulary'}})
@@ -111,8 +109,6 @@ Check out our [blog on the subject](https://www.nuxeo.com/blog/how-many-language
 - [How to Translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxeo-platform'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 &nbsp;
 

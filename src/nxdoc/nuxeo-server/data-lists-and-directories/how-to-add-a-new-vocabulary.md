@@ -2,7 +2,7 @@
 title: How to Add a New Vocabulary
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Studio
         topics: Vocabulary
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - vocabulary
     - howto
     - studio
@@ -267,7 +267,7 @@ There are 3 types of vocabularies:
 
 {{! /multiexcerpt}}
 
-<span style="color: rgb(0,0,0);font-size: 20.0px;line-height: 1.5;">Creating a New Vocabulary</span>
+## Creating a New Vocabulary
 
 1.  Click on the **Vocabularies** item of the Studio menu.
 
@@ -289,8 +289,6 @@ There are 3 types of vocabularies:
     {{/callout}}
 5.  Click on the **Save** button.
     You can now use the vocabulary on [layouts]({{page page='layout-and-widget-how-to-index'}}) to populate drop-down lists. After you deploy your customization on your Nuxeo Platform, the vocabulary is [available in the Admin Center]({{page space='userdoc' page='managing-vocabularies'}}) so power users and administrators can easily add new entries to the vocabulary.
-
-&nbsp;
 
 * * *
 

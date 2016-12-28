@@ -2,7 +2,7 @@
 title: How to Customize the Bulk Import Form
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Studio
         topics: 'Bulk import, JSF UI'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - layout
 toc: true
@@ -228,8 +228,7 @@ Note that the Where and Files fields are obviously not customizable and will alw
 ![]({{file name='contract_bulk_import.png'}} ?w=450)
 
 {{{multiexcerpt 'bulk-edit-form-specific-cases' page='how-to-customize-the-bulk-edit-form'}}}
-
-![]({{file name='form_layout.png'}} ?w=450)
+    ![]({{file name='form_layout.png'}} ?w=450)
 
 ## Adding New Import Options
 
@@ -294,8 +293,7 @@ In this example we create an import option that changes the status of your docum
     ```
 
 3.  Click on **Save**. You can now deploy the changes on your platform.
-
-![]({{file name='my_custom_import.png'}} ?w=450,border=true)
+    ![]({{file name='my_custom_import.png'}} ?w=450,border=true)
 
 ## Disabling the Default Import Option
 
@@ -313,14 +311,22 @@ If you want to disable the default import option (after having contributed a new
 
 After deploying your changes, you can only see your custom import option when you click on **Import**.
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
 - [JSF and Ajax Tips and How-To Index]({{page page='jsf-and-ajax-tips-and-how-to-index'}})
 - [Layout and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
 - [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
+
+<div class="column medium-6">
 
 &nbsp;
 
-</div></div>
+</div>
+</div>

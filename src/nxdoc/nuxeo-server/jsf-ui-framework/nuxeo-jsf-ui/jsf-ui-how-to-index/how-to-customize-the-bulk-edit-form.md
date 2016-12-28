@@ -2,7 +2,7 @@
 title: How to Customize the Bulk Edit Form
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Studio
         topics: 'Bulk edit, JSF UI'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - layout
 toc: true
@@ -285,7 +285,7 @@ history:
         version: '1'
 
 ---
-The bulk edit screen offers a form that allows to edit several documents at the same time. This is implemented using the [BulkEditService](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.webapp.bulkedit.BulkEditService) component. You can customize it with Studio by creating a form layout named `bulkEdit`. The "Edit" layout will be used on the bulk edit popup. The default bulk edit layout can be found on [GitHub](https://github.com/nuxeo/nuxeo/blob/release-6.0/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/layouts-contrib.xml) or in the [Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/6.0/viewContribution/org.nuxeo.ecm.platform.forms.layouts.webapp--layouts).
+The bulk edit screen offers a form that allows to edit several documents at the same time. This is implemented using the [BulkEditService](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.webapp.bulkedit.BulkEditService) component. You can customize it with Studio by creating a form layout named `bulkEdit`. The "Edit" layout will be used on the bulk edit popup. The default bulk edit layout can be found on [GitHub](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/layouts-contrib.xml) or in the [Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.forms.layouts.webapp--layouts).
 
 ![]({{file name='default_bulk_edit.png'}} ?w=350,border=true)
 
@@ -301,11 +301,11 @@ The bulk edit screen offers a form that allows to edit several documents at the 
     {{/callout}}
 3.  Go to the **Edit Layout** tab.
 4.  Drag and drop the widgets you need.
-5.  In the Advanced Configuration part, attach the `layout_bulkedit_template.xhtml` which is in the folder&nbsp;`$NUXEO/nxserver/nuxeo.war/layouts`.
+5.  In the Advanced Configuration part, attach the `layout_bulkedit_template.xhtml` which is in the folder `$NUXEO/nxserver/nuxeo.war/layouts`.
 
     {{#> callout type='info' }}
 
-    See the GitHub documentation about the [layout bulk edit template](https://github.com/nuxeo/nuxeo-jsf/blob/release-6.0/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/layouts/layout_bulkedit_template.xhtml).
+    See the GitHub documentation about the [layout bulk edit template](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/layouts/layout_bulkedit_template.xhtml).
 
     {{/callout}}
 6.  Click on **Save**.
@@ -351,9 +351,7 @@ When configuring a widget to select collections, the field that needs to be refe
       <table class="hover">
         <tbody>
           <tr>
-            <td colspan="1">
-              <div class="gwt-HTML form-label" title="Editor for property 'pageProviderName'">Document page provider name</div>
-            </td>
+            <td colspan="1">Document page provider name</td>
             <td colspan="1">`default_document_suggestion`</td>
           </tr>
           <tr>
@@ -383,13 +381,11 @@ When configuring a widget to select collections, the field that needs to be refe
         </tbody>
       </table>
     </div>
-5.  Click on **Save** and deploy your changes on your instance.<br/><br/>
+5.  Click on **Save** and deploy your changes on your instance.
 
-You should end up with something like this:
-
+    You should end up with something like this:
 {{! /multiexcerpt}}
-
-![]({{file name='custom_bulk_edit.png'}} ?w=350,border=true)
+    ![]({{file name='custom_bulk_edit.png'}} ?w=350,border=true)
 
 ## Customizing the Bulk Edit Versioning Policy
 

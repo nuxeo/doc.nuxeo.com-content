@@ -2,7 +2,7 @@
 title: How to Export Data Using Document Template and Automation
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: Studio
         topics: 'Automation, Document template'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - mvel
     - freemarker
     - scripting
@@ -196,11 +196,12 @@ You can choose between two languages to create a document template: [MVEL](http:
 
 In this example we want to create a CSV file that displays a list of documents with some metadata. CSV is a quite simple format that is often used to present tabular data.
 
-<pre>column_name1, column_name2, column_name3
+```
+column_name1, column_name2, column_name3
 data_A1, data_B1, data_C1
 data_A2, data_B2, data_C2
 ..., ..., ...
-</pre>
+```
 
 This will produce a table like this:
 
@@ -261,10 +262,10 @@ This will produce a table like this:
 
 **Notes**
 
-*   Double quotes between elements are optional (CSV format).&nbsp;
+*   Double quotes between elements are optional (CSV format).
 *   If you are going to use the template in order to create an HTML file, you can put HTML tags in the template.
 *   The only thing that differs from Nuxeo usual syntax is FreeMarker's `<list>` element.
-*   Within a document template, whether you use FreeMarker or MVEL, you can use the same variables, functions and XPath expressions that are used in [automation chains]({{page page='content-automation-concepts'}}). As document templates and automation chains frequently work together, each context variable set in the automation chain can be used in the template.<br/><br/>
+*   Within a document template, whether you use FreeMarker or MVEL, you can use the same variables, functions and XPath expressions that are used in [automation chains]({{page page='content-automation-concepts'}}). As document templates and automation chains frequently work together, each context variable set in the automation chain can be used in the template.
 
 **Other FreeMarker Examples**
 
@@ -275,7 +276,7 @@ This will produce a table like this:
 
     ```
 
-*   The element `dc:subjects`&nbsp;is a list, so it has to be listed as one using the script.
+*   The element `dc:subjects` is a list, so it has to be listed as one using the script.
 
     ```
     <#list doc["dc:subjects"] as subject>
@@ -306,13 +307,11 @@ The chain should look like this:
 **Notes**
 
 *   In this example, we query all the documents in the repository. You can define the query to filter the content repository and display only the documents that meet the query conditions. See the page [NXQL]({{page page='nxql'}}) for more information about Nuxeo SQL-like query language.
-*   To download a file in an HTML format instead of CSV, use the `.html` extension in the filename and choose `text/xml` as the mimetype.<br/><br>
+*   To download a file in an HTML format instead of CSV, use the `.html` extension in the filename and choose `text/xml` as the mimetype.
 
 ## Step 3: Creating the Button to Generate the CSV File
 
 The only step left is to [create a button]({{page page='how-to-create-an-automation-chain#binding-to-a-buttonaction'}}) (**User Action** -> **New Action Feature**) that will trigger this operation chain.
-
-&nbsp;
 
 * * *
 

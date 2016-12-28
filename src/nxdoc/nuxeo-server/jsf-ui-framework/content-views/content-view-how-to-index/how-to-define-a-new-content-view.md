@@ -2,7 +2,7 @@
 title: How to Define a New Content View
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Studio
         topics: Content View
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - content-view
     - howto
     - studio
@@ -27,7 +27,7 @@ confluence:
     shortlink: 3o1H
     shortlink_source: 'https://doc.nuxeo.com/x/3o1H'
     source_link: /display/NXDOC/How+to+Define+a+New+Content+View
-tree_item_index: 200
+tree_item_index: 100
 history:
     -
         author: Manon Lumeau
@@ -394,12 +394,13 @@ Designing a new content view takes three steps:
 
 ## {{> anchor 'set-query-filter'}}Set Your Query Filter
 
-You can define the query that will be executed to filter the content repository and display only the documents relevant in the current repository. The query uses&nbsp;[NXQL, the Nuxeo Query Language]({{page page='nxql'}}), an SQL-like query language.
+You can define the query that will be executed to filter the content repository and display only the documents relevant in the current repository. The query uses [NXQL, the Nuxeo Query Language]({{page page='nxql'}}), an SQL-like query language.
 
 When configuring a content view in Studio, a default query filter is already filled in. You can complete it with more conditions (or totally modify it if you know what you're doing). This default query filter is:
 
-<pre>ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted'
-</pre>
+```sql
+ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted'
+```
 
 This filter:
 
@@ -409,13 +410,14 @@ This filter:
 
 You can add as many filter criteria as you need. If the criterion is fixed, such as a specific lifecycle state or author, you just need to add your filter criterion at the end of the default query filter. For example, you could add a criterion saying that you want to exclude documents created by Administrator from the results:
 
-<pre>ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND dc:creator != 'Administrator'
-</pre>
+```sql
+ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND dc:creator != 'Administrator'
+```
 
 If the criterion is not a fixed value but depends on the context of the document, you should put "?" as a value and add a query parameter. For example, if you want to display only the document created by the current user:
 
-1.  add `dc:creator = ?` (or `dc:creator IN (?)` with multivalued parameters) in the query filter,
-2.  add a query parameter with value: `#{currentUser.name`}
+1.  Add `dc:creator = ?` (or `dc:creator IN (?)` with multivalued parameters) in the query filter.
+2.  Add a query parameter with value: `#{currentUser.name}`.
 
 {{#> callout type='tip' }}
 
@@ -423,7 +425,7 @@ When your query filter has several "?" parameters, you must add the query parame
 
 ![]({{file name='STUDIO-query-filter.png'}} ?w=600,border=true)
 
-{{/callout}} {{#> callout type='tip' }}
+{{/callout}}
 
 Note for those already familiar with Nuxeo product customization: the syntax used in these parameters is the same EL syntax used in XHTML files. You have access to the SEAM context.
 Other sample expressions:
@@ -433,8 +435,6 @@ Other sample expressions:
 *   `#{empty currentDocument.getProperty("dublincore","subjects") ? '%' : currentDocument.getProperty( ("dublincore","subjects" )}` for multivalued properties
 *   `#{empty currentDocument.collection.documentIds ? '%' : currentDocument.collection.documentIds}` to get the content of a collection. In this case the Query filter should be something like ... `AND ecm:uuid IN (?)`
 
-{{/callout}}
-
 More information on NXQL and examples are available on the [NXQL dedicated page]({{page page='nxql'}}).
 
 ## {{> anchor 'define-filter-form'}}Define the Filter Form
@@ -442,25 +442,23 @@ More information on NXQL and examples are available on the [NXQL dedicated page]
 You can set a filter form that can be used:
 
 *   to [define a search filter]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}}), that will be displayed in the Search tab of your application,
-*   to filter the content of the folder.<br/><br/>
+*   to filter the content of the folder.
 
 **To design the filter form:**
 
 1.  Check the **Document Content** box if you want to create a filter form displayed on top of content table.
 
     {{! multiexcerpt name='filter_form_creation'}}
-    *  Set the number of columns and rows using the **Add column**, **Add row** or **Set Table Size** buttons.
-    *  Drag and drop the widget corresponding to the criterion you want to display from the widget list into an empty table cell. ![]({{file name='STUDIO_drop_search_field.png'}} ?w=550,border=true)
+    1.  Set the number of columns and rows using the **Add column**, **Add row** or **Set Table Size** buttons.
+    2.  Drag and drop the widget corresponding to the criterion you want to display from the widget list into an empty table cell. ![]({{file name='STUDIO_drop_search_field.png'}} ?w=550,border=true)
         The widget is added in the content cell.
-    *  Click on the icon ![]({{file name='STUDIO_edit_icon.png'}}) to edit the widget and edit the search field's label, search operator, sort criterion, etc.
+    3.  Click on the icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) to edit the widget and edit the search field's label, search operator, sort criterion, etc.
         ![]({{file name='STUDIO_widget_search_operator_edition.png'}} ?w=350,border=true)
-    *  When done editing, click on the *Save* button.
-    *  Repeat these steps until your form is complete.{{! /multiexcerpt}}
+    4.  When done editing, click on the *Save* button.
+    5.  Repeat these steps until your form is complete.{{! /multiexcerpt}}
 2.  Click on the **Save** button to save your changes.
 
-&nbsp;
-
-{{> anchor 'configure-result-layout'}}<span style="color: rgb(0,0,0);font-size: 20.0px;line-height: 1.5;">Configure the Result Layout</span>
+## {{> anchor 'configure-result-layout'}}Configure the Result Layout
 
 Search results and content listings are presented in a table. You can configure the columns as well as the information on the documents that will be displayed in your content view.
 
@@ -475,8 +473,8 @@ Search results and content listings are presented in a table. You can configure 
     *  Drag and drop the widget corresponding to the information you want to display from the widget list into an empty table cell.
         The widget is added in the content cell. It is also automatically added in the title cell.
         ![]({{file name='STUDIO-tableConfiguration.png'}} ?w=650,h=164,border=true)
-    *  Edit the title widget by clicking on the icon ![]({{file name='STUDIO_edit_icon.png'}}) in the first row. You will also have to enter the sort criterion that will be used for that column.
-    *  Edit the widget information itself by clicking on the icon ![]({{file name='STUDIO_edit_icon.png'}}) on the second row.
+    *  Edit the title widget by clicking on the icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) in the first row. You will also have to enter the sort criterion that will be used for that column.
+    *  Edit the widget information itself by clicking on the icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) on the second row.
     *  Repeat for each widget you want to drop.
 
         {{#> callout type='tip' }}
@@ -488,7 +486,7 @@ Search results and content listings are presented in a table. You can configure 
         If you are editing the advanced search results layout, repeat these steps for the additional results columns that users are able to select.
 
         {{/callout}}
-4.  When you have configured your default columns and the additional columns, click **Save**.<br/><br/>
+4.  When you have configured your default columns and the additional columns, click **Save**.
 
 **Results parameters**
 
@@ -504,25 +502,25 @@ The first part of the result configuration form is dedicated to setting up some 
       <tr>
         <td colspan="1">Title</td>
         <td colspan="1">
-          <span style="color: rgb(39,39,68);">The title that is displayed on the page or when exporting the content view results.</span>
+         The title that is displayed on the page or when exporting the content view results.
         </td>
       </tr>
       <tr>
         <td colspan="1">Translate title</td>
         <td colspan="1">
-          <span style="color: rgb(39,39,68);">Check this if the title is a message that needs to be translated.</span>
+          Check this if the title is a message that needs to be translated.
         </td>
       </tr>
       <tr>
         <td colspan="1">Empty sentence</td>
         <td colspan="1">
-          <span style="color: rgb(39,39,68);">The sentence displayed when there are no results.</span>
+          The sentence displayed when there are no results.
         </td>
       </tr>
       <tr>
         <td colspan="1">Translate empty sentence</td>
         <td colspan="1">
-          <span style="color: rgb(39,39,68);">Check this if the sentence displayed when there are no results is a message that needs to be translated.</span>
+          Check this if the sentence displayed when there are no results is a message that needs to be translated.
         </td>
       </tr>
       <tr>
@@ -556,17 +554,25 @@ The first part of the result configuration form is dedicated to setting up some 
 
 There are several ways of using the content view you configured in your Nuxeo Platform application:
 
-*   In the&nbsp;[search tab]({{page space='userdoc' page='searching-the-nuxeo-platform'}})&nbsp;feature, &nbsp;so as to add a new filter set. You just need to click on the **Search content view** checkbox, in the&nbsp;**Flag**&nbsp;section of the Query & form tab of your content view in Studio.
-*   In any&nbsp;[custom tab]({{page space='studio' page='tabs'}}), using the Content View widget.<br/><br/>
+*   In the [search tab]({{page space='userdoc' page='searching-the-nuxeo-platform'}}) feature,  so as to add a new filter set. You just need to click on the **Search content view** checkbox, in the **Flag** section of the Query & form tab of your content view in Studio.
+*   In any [custom tab]({{page space='studio' page='tabs'}}), using the Content View widget.
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-tos'}}
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related How-tos'}}
 
 - [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
 - [Configure a Domain Specific Advanced Search]({{page space='nxdoc58' page='configure-a-domain-specific-advanced-search'}})
 - [How to Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
 - [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
 - [Content Views ]({{page page='content-views'}})
 - [Content Views in Studio Documentation]({{page space='studio' page='content-views'}})
@@ -574,4 +580,6 @@ There are several ways of using the content view you configured in your Nuxeo Pl
 - [Documents Display Configuration]({{page page='documents-display-configuration'}})
 - [Default Search]({{page space='userdoc' page='default-search'}})
 
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>

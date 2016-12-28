@@ -124,7 +124,7 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}The&nbsp; [EasyShare package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare) is an add-on for the Nuxeo platform which enables sharing files from the repository with external users not requiring a login.{{! /excerpt}}
+{{! excerpt}}The [EasyShare package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare) is an addon for the Nuxeo platform which enables sharing files from the repository with external users not requiring a login.{{! /excerpt}}
 
 It allows you to create EasyShare folders in which you can either create documents or make them available from the folder for public sharing. Anyone having the public URL to the EasyShare folder can then download its content without having to log in to the Nuxeo Platform.
 
@@ -137,42 +137,42 @@ The EasyShare plugin is not part of the supported list of Nuxeo Packages. It's b
 ## Creating an EasyShare Folder
 
 1.  Navigate to a Workspace and click on the **New** button, then click on EasyShare Folder in the pop-up.
-2.  Fill in the Folder's creation form and click on the **Create** button.<br /><br />
+2.  Fill in the Folder's creation form and click on the **Create** button.
 
-**EasyShare Folder creation parameters**
+    **EasyShare Folder creation parameters**
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <th colspan="1">Field</th>
-        <th colspan="1">Description</th>
-      </tr>
-      <tr>
-        <td colspan="1">Title</td>
-        <td colspan="1">It will be visible to your recipients in the EasyShare folder public view.</td>
-      </tr>
-      <tr>
-        <td colspan="1">Expiration Date</td>
-        <td colspan="1">Determines until which day the EasyShare folder in the&nbsp; will be available. After this date, the folder will still exist in Nuxeo but will show as expired when attempting external access.</td>
-      </tr>
-      <tr>
-        <td colspan="1"><span class="widgetLabel tipsyShow tipsyGravityNW  ">Active notification</span></td>
-        <td colspan="1">If this option is checked, a notification is sent to the contact email when a document is downloaded from the EasyShare folder.</td>
-      </tr>
-      <tr>
-        <td colspan="1">Share Comment</td>
-        <td colspan="1">The message displayed on the EasyShare folder public view.</td>
-      </tr>
-      <tr>
-        <td colspan="1">Contact Email</td>
-        <td colspan="1">The email address to which an email will be sent each time a document is downloaded. People who can access the EasyShare folder can also use it to contact someone from the organization.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    <div class="table-scroll">
+      <table class="hover">
+        <tbody>
+          <tr>
+            <th colspan="1">Field</th>
+            <th colspan="1">Description</th>
+          </tr>
+          <tr>
+            <td colspan="1">Title</td>
+            <td colspan="1">It will be visible to your recipients in the EasyShare folder public view.</td>
+          </tr>
+          <tr>
+            <td colspan="1">Expiration Date</td>
+            <td colspan="1">Determines until which day the EasyShare folder in the will be available. After this date, the folder will still exist in Nuxeo but will show as expired when attempting external access.</td>
+          </tr>
+          <tr>
+            <td colspan="1"><span class="widgetLabel tipsyShow tipsyGravityNW  ">Active notification</span></td>
+            <td colspan="1">If this option is checked, a notification is sent to the contact email when a document is downloaded from the EasyShare folder.</td>
+          </tr>
+          <tr>
+            <td colspan="1">Share Comment</td>
+            <td colspan="1">The message displayed on the EasyShare folder public view.</td>
+          </tr>
+          <tr>
+            <td colspan="1">Contact Email</td>
+            <td colspan="1">The email address to which an email will be sent each time a document is downloaded. People who can access the EasyShare folder can also use it to contact someone from the organization.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-The EasyShare folder is created. You can now create new documents in it or share existing documents in it.
+    The EasyShare folder is created. You can now create new documents in it or share existing documents in it.
 
 
 ## Adding Documents to an EasyShare Folder
@@ -188,31 +188,34 @@ Depending on the modules you have enabled on your Nuxeo Platform, you can create
 
 ## Sharing an EasyShare Folder
 
-You can share your EasyShare folder by sending the&nbsp;**Public URL** available from the icon **![]({{file name='share.png' page='icons-index'}})**. Anyone with the URL can access the EasyShare folder and download the documents that are in it.
+You can share your EasyShare folder by sending the **Public URL** available from the icon **![]({{file name='share.png' page='icons-index'}})**. Anyone with the URL can access the EasyShare folder and download the documents that are in it.
 
-An email alert is sent to the Contact email of the folder each time a file is downloaded.&nbsp;
+An email alert is sent to the Contact email of the folder each time a file is downloaded.
 
 ## Accessing an EasyShare Folder
 
-By clicking on the link to the EasyShare Folder, you access&nbsp;a particular EasyShare folder without having to login to the Nuxeo Platform.
+By clicking on the link to the EasyShare Folder, you access a particular EasyShare folder without having to login to the Nuxeo Platform.
 
 ![]({{file name='EasyShare_public_view.png'}} ?w=650,border=true)
 
 ## Future Improvements
 
-If you want more information about the future evolutions and improvements, see [this JIRA filter](https://jira.nuxeo.com/issues/?jql=project%20%3D%20NXP%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Easy%20Share%22).&nbsp;
+If you want more information about the future evolutions and improvements, see [this JIRA filter](https://jira.nuxeo.com/issues/?jql=project%20%3D%20NXP%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Easy%20Share%22).
 
 * * *
 
-&nbsp;
-
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
 - [EasyShare admin documentation]({{page space='nxdoc' page='easyshare'}})
 - [Collections]({{page page='collections'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
+<div class="column medium-6">
 
 &nbsp;
 
-</div></div>
+</div>
+</div>

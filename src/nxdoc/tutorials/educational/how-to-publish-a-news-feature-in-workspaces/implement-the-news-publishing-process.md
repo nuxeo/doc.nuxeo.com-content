@@ -2,10 +2,10 @@
 title: Implement the News "Publishing" Process
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - tuto-automation
     - tuto-permission
     - tuto-user-action
@@ -87,8 +87,8 @@ history:
 ---
 In this section, we will:
 
-*   Create the `NewsManagement` permission that will be given to user we want to be able to publish news,
-*   Create a "Publish news" button that will be available in the folder to enable bulk publishing.
+*   Create the `NewsManagement` permission that will be given to user we want to be able to publish news
+*   Create a "Publish news" button that will be available in the folder to enable bulk publishing
 
 {{#> callout type='info' }}
 
@@ -102,30 +102,23 @@ For this section, it is recommended to take a look at the[ Use Content Automatio
 2.  Give the new permission the ID `NewsManagement`.
 3.  In the drop down list, select "Workspace" and click the **Add** button.
     ![]({{file name='NewsManagement_permissions.png'}} ?w=600,border=true)
-
-The new permission will now be available in the list of permissions on Workspace.
+    The new permission will now be available in the list of permissions on Workspace.
 
 ## Create the "Publish News" Button
 
 1.  Create a new User Action called "PublishNewsButton". Its properties are:
     *   **Current user has permission**: `NewsManagement`
     *   **Current document has type**: `Folder`
-2.  Create the operation chain `PublishNewsChain`:<br/><br/>
-
-```yaml
-- Seam.GetSelectedDocuments
-- Document.Filter:
-    class: Any
-    lifecycle: project
-- Document.FollowLifecycleTransition:
-    value: approve
-- Document.Update:
-    properties:
-      dc:valid: '@{CurrentDate.format("yyyy-MM-dd''T''HH:mm:ss.SSSZ")}'
-    save: 'true'
-```
-
-
-* * *
-
-&nbsp;
+2.  Create the operation chain `PublishNewsChain`:
+    ```yaml
+    - Seam.GetSelectedDocuments
+    - Document.Filter:
+        class: Any
+        lifecycle: project
+    - Document.FollowLifecycleTransition:
+        value: approve
+    - Document.Update:
+        properties:
+          dc:valid: '@{CurrentDate.format("yyyy-MM-dd''T''HH:mm:ss.SSSZ")}'
+        save: 'true'
+    ```

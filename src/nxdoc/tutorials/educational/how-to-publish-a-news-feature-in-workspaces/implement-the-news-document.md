@@ -2,10 +2,10 @@
 title: Implement the News Document
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - tuto-document-type
     - tuto-user-action
 toc: true
@@ -142,7 +142,7 @@ For this section, it is recommended to take a look at the following guides for a
     *   **Edit layout** metadata: import Creation layout (it is the same).
     *   **View layout** metadata: import Creation layout and add `dc:valid` as DateTime widget on a third row.
 
-The `News` document type is now created. However, there is no way to access the creation form for now.
+    The `News` document type is now created. However, there is no way to access the creation form for now.
 
 ## Create the Structure Template for News Folder to Be Available Automatically
 
@@ -152,10 +152,9 @@ The `News` document type is now created. However, there is no way to access the 
 2.  Add a new built-in type: Folder
     *   **Node Name**: NewsFolder
     *   **Title**: News Folder
+    ![]({{file name='structuretemplate_workspace.png'}} ?w=650,border=true)
 
-![]({{file name='structuretemplate_workspace.png'}} ?w=650,border=true)
-
-Now, every time a workspace is created, a folder called "News Folder" will automatically be created in it by the system.
+    Now, every time a workspace is created, a folder called "News Folder" will automatically be created in it by the system.
 
 ## Add the News Creation Button
 
@@ -168,18 +167,12 @@ Here are the steps to create the button to create news from a Workspace into the
 2.  Activation conditions:
     *   **User has permission**: `Edit`
     *   **Current document has type**: `Workspace`
-3.  Create new operation chain `CreateNewsChain`:<br/><br/>
-
-```yaml
-- Repository.GetDocument:
-    value: ./NewsFolder
-- WebUI.NavigateTo
-- WebUI.ShowCreateForm:
-    type: News
-```
-Now when you click on the **Create News** button, a News document will be created for the Workspace and stored directly in the News folder.
-
-
-* * *
-
-&nbsp;
+3.  Create new operation chain `CreateNewsChain`:
+    ```yaml
+    - Repository.GetDocument:
+        value: ./NewsFolder
+    - WebUI.NavigateTo
+    - WebUI.ShowCreateForm:
+        type: News
+    ```
+    Now when you click on the **Create News** button, a News document will be created for the Workspace and stored directly in the News folder.
