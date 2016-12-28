@@ -2,7 +2,7 @@
 title: Tutorial Custom App
 review:
     comment: ''
-    date: '2016-12-27'
+    date: '2016-12-28'
     status: ok
 toc: true
 labels:
@@ -187,7 +187,8 @@ Let's plug this application to the Nuxeo instance and change the hardcoded users
 
     This adds `nuxeo-elements` as a dependency in `bower.json` and dowloads the latest release from our GitHub [repository](https://github.com/nuxeo/nuxeo-elements) into `bower_components`.
 
-2.  Import the nuxeo elements we need, in this case `nuxeo-connection` and `nuxeo-document`, into `doc-reader`:
+2.  Import the nuxeo elements we need, in this case [nuxeo-connection](https://elements.nuxeo.com/elements/nuxeo-connection)
+    and [nuxeo-document](https://elements.nuxeo.com/elements/nuxeo-document), into `doc-reader`:
 
     {{#> panel type='code' heading='src/my-doc-reader.html'}}
     ```xml
@@ -223,8 +224,8 @@ file, that you should copy to `NUXEO_HOME/nxserver/config`:
 ```
 
 We can then add a `nuxeo-document` to our template, which is a data element responsible for retrieving documents from a
-Nuxeo instance, either by `path` or `id`. This document relies on two endpoints: `/api/v1/path` and `/api/v1/id`. For now,
-let's just retrieve `/default-domain`:
+Nuxeo instance, either by `path` or `id`. This document relies on [two REST API endpoints]({{page page='rest-api'}}/#resources-endpoints):
+`/api/v1/path` and `/api/v1/id`. For now, let's just retrieve `/default-domain`:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```xml
@@ -260,7 +261,7 @@ Your application should now look something like this:
 We now want to display the children of our current document. The most efficient way of doing it is by using a `Page Provider`,
 which enables paginated queries. **Nuxeo Elements** provide one such data element which mediates the usage of page providers.
 
-Let's import the `nuxeo-page-provider` in our element:
+Let's import the [nuxeo-page-provider](https://elements.nuxeo.com/elements/nuxeo-page-provider) in our element:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```xml
@@ -321,8 +322,8 @@ Let's install Nuxeo UI Elements through Bower:
 $ bower install --save nuxeo/nuxeo-ui-elements
 ```
 
-And now we must import the `nuxeo-path-suggestion` element, which is a ui element that allows the user to pick a valid
-document path and also features autocompletion:
+And now we must import the [nuxeo-path-suggestion](https://elements.nuxeo.com/elements/nuxeo-path-suggestion) element,
+which is a ui element that allows the user to pick a valid document path and also features autocompletion:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```xml
@@ -373,7 +374,7 @@ Our element is now interactive a much more useful:
 There are two elements that are perfect for listing document: `nuxeo-data-list` and `nuxeo-data-table`. We will now use
 `nuxeo-data-table` to display our document's children along with their respective icons and last modified date.
 
-Let's start by importing `nuxeo-data-table` into our element:
+Let's start by importing [nuxeo-data-table](https://elements.nuxeo.com/elements/nuxeo-data-table) into our element:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```xml
@@ -437,7 +438,8 @@ Your app should look like this now:
 Our awesome app is now able to browse any folder and list its children. What would make it even more awesome would be
 to be able to upload files to the current folder. And, thanks to our UI elements, this is quite easy to achieve.
 
-Let's start by importing `nuxeo-file` into our element, which is a widget for uploading files:
+Let's start by importing [nuxeo-file](https://elements.nuxeo.com/elements/nuxeo-file) into our element, which is a widget
+for uploading files:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```xml
@@ -455,8 +457,8 @@ We can now add it to our element's template, double-bound to a property named `b
 {{/panel}}
 
 By clicking the widget and picking a file or dropping a file into it, the respective blob will automatically be uploaded
-into a batch in the server, and an object representing this file will be held by the `blob` property. For the sake of simplicity, we
-want to automatically import this file into the server as soon as it is uploaded. Therefore, we must declare `blob` in
+into a batch in the server, and an object representing this file will be held by the `blob` property. For the sake of simplicity,
+we want to automatically import this file into the server as soon as it is uploaded. Therefore, we must declare `blob` in
 our elements prototype with an observer that will take care of importing the file:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
