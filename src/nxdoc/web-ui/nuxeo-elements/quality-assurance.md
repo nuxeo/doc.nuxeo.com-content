@@ -21,8 +21,8 @@ code clean and enforces a predefined set of rules good practices. Because JavaSc
 is a loosely-typed language, it is very easy to introduce bugs in the code.
 Therefore, a JavaScript linter becomes a crucial tool to help developers identify
 problems in the code without having to execute it. Our linter of choice is [ESLint](http://eslint.org/),
-and you can find a sample config file, the one we use for Nuxeo Web UI,
-[here](https://github.com/nuxeo/nuxeo-web-ui/blob/master/.eslintrc.json).
+and you can use our Nuxeo Web UI [config file](https://github.com/nuxeo/nuxeo-web-ui/blob/master/.eslintrc.json) as a sample.
+
 You can find a quick guide on how to run and setup ESLint on their
 [online documentation](http://eslint.org/docs/user-guide/getting-started).
 
@@ -75,7 +75,7 @@ In order to activate it, you can create a file `cache-browser-config.xml` in the
 - The `max-age` cache time is set to 1 hour (within the hour, the browser won't request a validation to the server of the blobs like thumbnails)
 - Once the cache expires, the browser will request to the server a re-validation of the blobs if they have been updated
 
-[Here a schema](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/images/http-cache-decision-tree.png) which summarises browser caching strategies.
+Here is [a schema](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/images/http-cache-decision-tree.png) which summarises browser caching strategies.
 
 ### Polymer
 
@@ -178,7 +178,7 @@ solutions, such as [NighwatchJS](http://nightwatchjs.org/), have proven to be
 valuable tools in testing applications that use web components, while following
 both **BDD** and more Test-driven approaches to development (**TDD**).
 
-In what fallows we describe how the aforementioned tools can be used to develop
+In what follows we describe how the aforementioned tools can be used to develop
 unit and integration tests for your custom elements.
 
 ### Web Component Tester
@@ -244,7 +244,7 @@ your own test suites.
 
 Oftentimes you'll want to perform more than one bundle of tests inside the same
 test file. In this case you can define *inner* test suites, i.e., test suites
-inside you're main test suite. Inside these you should setup the responses that the
+inside your main test suite. Inside these you should setup the responses that the
 fake server should issue to your custom elements.
 
 So, imagine we want to test how our collections element behaves when there are
@@ -327,7 +327,7 @@ For more examples on testing custom elements, please check our repositories:
 ### Cucumber
 
 Our integration testing is done using [Cucumber.js](https://github.com/cucumber/cucumber-js)
-and [WebdriverIO](http://webdriver.io/). While the latter servers the purpose of
+and [WebdriverIO](http://webdriver.io/). While the latter serves the purpose of
 providing a means to interact with the browser and run tests on it, similar to
 what is done in WCT, the former provides a way to run automated tests written in
 plain language. There are two key concepts of Cucumber tests: **features** and **step
@@ -394,13 +394,13 @@ The test runner expects a configuration file to be passed, using by default a `n
 
 In order to factorize your tests, the Page Object API has been introduced in Nightwatchjs and allows developers to create different page descriptors with the related selectors for re-using them easily in the IT tests.
 
-[More information here](https://github.com/nightwatchjs/nightwatch/wiki/Page-Object-API)
+[For more information](https://github.com/nightwatchjs/nightwatch/wiki/Page-Object-API)
 
 #### The Command Queue
 
 When Nightwatch runs a test, it processes its commands in a list known as the command queue. This list manages the asynchronous execution of the commands defined in that test.
 
-[More information here](https://github.com/nightwatchjs/nightwatch/wiki/Understanding-the-Command-Queue)
+[For more information](https://github.com/nightwatchjs/nightwatch/wiki/Understanding-the-Command-Queue)
 
 #### API
 
@@ -413,7 +413,7 @@ Please refer to this [developer guide](http://nightwatchjs.org/guide) to see how
 
 #### Nuxeo Maven Package Example
 
-Here is [an example](https://github.com/nuxeo/nuxeo-marketplace-sample/edit/master/ftest/nightwatchjs) of a Nuxeo package to run with Maven and npm nightwatchjs tests.
+[An example](https://github.com/nuxeo/nuxeo-marketplace-sample/edit/master/ftest/nightwatchjs) of a Nuxeo package to run with Maven and npm nightwatchjs tests.
 
 ## Security Strategies
 
