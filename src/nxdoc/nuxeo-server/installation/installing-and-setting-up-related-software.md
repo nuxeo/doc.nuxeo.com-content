@@ -570,7 +570,7 @@ $ sudo apt-get install openjdk-8-jdk imagemagick ufraw poppler-utils libreoffice
 
 {{#> callout type='warning' }}
 
-Installing the ffmpeg package from your distribution's repository may not provide you with support for all video formats. Please refer to the [additional formats support for FFmpeg](#additional-formats-support-for-ffmpeg) section for more information.
+Installing the FFmpeg package from your distribution's repository may not provide you with support for all video formats. Refer to the [additional formats support for FFmpeg](#additional-formats-support-for-ffmpeg) section for more information.
 
 {{/callout}}
 
@@ -583,12 +583,11 @@ The minimum version required is LibreOffice 5. The soffice program must be added
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='ooo-libreoffice-configuration'}}
-
 **Installation location and Path configuration**
 
 For preview to work, the server must start LibreOffice. The Nuxeo Platform looks for LibreOffice at different locations on the system. See [PlatformUtils.java definition](https://github.com/nuxeo/jodconverter/blob/3.0-NX/jodconverter-core/src/main/java/org/artofsolving/jodconverter/util/PlatformUtils.java) for searched locations.
 
-If LibreOffice isn't available at one of these locations, you need to add the `soffice` program to your path: Edit the `Path` system variable and add `;OFFICE_INSTALL_DIRECTORY\program.`
+If LibreOffice isn't available at one of these locations, you need to add the `soffice` program to your path: Edit the `Path` system variable and add `;OFFICE_INSTALL_DIRECTORY\program`.
 
 {{#> callout type='tip' }}
 If not using default install path, you may have to add the path to the executable in your `nuxeo.conf`:
@@ -607,36 +606,20 @@ If you'll be working with non-latin languages:
 2.  Install the additional fonts you may need for non-default languages.
 {{! /multiexcerpt}}
 
-### CCExtractor Installation
-
-Installing [CCExtractor](http://ccextractor.org) on a GNU/Linux distribution requires to compile it from [https://github.com/CCExtractor/ccextractor](source). The recommended way to do it is to use our "in-docker-build": [https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ccextractor](https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ccextractor).
-
-To generate a package (by default for the latest Ubuntu LTS):
-
-1.  Issue the following commands:
-
-    ```bash
-    $ sudo apt-get update
-    $ sudo apt-get install docker
-    $ cd /tmp
-    $ git clone https://github.com/nuxeo/nuxeo-tools-docker.git
-    $ cd nuxeo-tools-docker/ccextractor
-    $ sudo ./build-package.sh
-    ```
-
 ### Controlling Threads Used by ImageMagick
 
+{{! multiexcerpt name='imagemagick-multi-threads'}}
 By default ImageMagick is multi threaded and will use all the available CPUs. This creates burst of CPU usage, especially when thumbnail is generated concurrently.
 
 Hopefully you can control the number of threads used by ImageMagick either by:
 
 *   Editing `/etc/ImageMagick/policy.xml` and setting `<policy domain="resource" name="thread" value="1"/>`.
-
 *   adding an environment variable `export MAGICK_THREAD_LIMIT=1` in the nuxeo user `.bash_profile`.
+{{! /multiexcerpt}}
 
 ### Additional Formats Support for FFmpeg
 
-Some video formats may not be supported when installing the ffmpeg package from your distribution's repository. You may encounter issues similar to these:
+Some video formats may not be supported when installing the FFmpeg package from your distribution's repository. You may encounter issues similar to these:
 
 {{#> panel type='code' heading='Common issue with libfaac encoder'}}
 
@@ -659,7 +642,7 @@ org.nuxeo.ecm.core.convert.api.ConversionException: Error while converting via C
 {{/panel}}
 
 Ubuntu for instance does not supply FFmpeg with libfaac (AAC format) support. So you must compile FFmpeg from sources with `--enable-libfaac` option.
-Or run [the Nuxeo script for compiling FFmpeg](https://github.com/nuxeo/ffmpeg-nuxeo). **You should build the ffmpeg executable on a separate machine than your Nuxeo Platform server machine, and then install the result on the machine where you set up Nuxeo Platform.**
+Or run [the Nuxeo script for compiling FFmpeg](https://github.com/nuxeo/ffmpeg-nuxeo). **You should build the FFmpeg executable on a separate machine than your Nuxeo Platform server machine, and then install the result on the machine where you set up Nuxeo Platform.**
 You can do it manually as follow, but the recommended way is to use our "in-docker-build": [https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg](https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg).
 
 Other options are:
@@ -679,16 +662,33 @@ For a manual build:
     ```
 
 {{#> callout type='warning' }}
-Running the ffmpeg build script on the same machine than where you installed the Nuxeo Platform would result in uninstalling existing nuxeo already installed with the Debian package along with its data.
+Running the FFMmpeg build script on the same machine than where you installed the Nuxeo Platform would result in uninstalling existing Nuxeo already installed with the Debian package along with its data.
 {{/callout}}
 
-## macOS (and OS X)
+### CCExtractor Installation
+
+{{{multiexcerpt 'ccextractor-intro' page='installing-and-setting-up-related-software'}}}
+
+Installing [CCExtractor](http://ccextractor.org) on a GNU/Linux distribution requires to compile it from [source](https://github.com/CCExtractor/ccextractor). The recommended way to do it is to use our "in-docker-build": [https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ccextractor](https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ccextractor).
+
+To generate a package (by default for the latest Ubuntu LTS) issue the following commands:
+
+```bash
+$ sudo apt-get update
+$ sudo apt-get install docker
+$ cd /tmp
+$ git clone https://github.com/nuxeo/nuxeo-tools-docker.git
+$ cd nuxeo-tools-docker/ccextractor
+$ sudo ./build-package.sh
+```
+
+## macOS and OS X
 
 The macOS installation instructions provided use [Homebrew](http://mxcl.github.com/homebrew/).
 
 ### LibreOffice and pdftohtml for Office and PDF Preview
 
-{{! multiexcerpt name='ooo-pdftohaml-intro'}}
+{{! multiexcerpt name='ooo-pdftohtml-intro'}}
 
 Installing LibreOffice and pdftohtml on the server is only required if you need to use preview on PDF and office documents. pdftohtml is used for previewing PDF files. It is included in poppler.
 
@@ -716,20 +716,6 @@ To install pdftohtml using Homebrew:
 $ brew install poppler
 ```
 
-### Ghostscript
-
-{{! multiexcerpt name='ghostscript-intro'}}
-
-Ghostscript is used in association with ImageMagick to generate the thumbnails of documents.
-
-{{! /multiexcerpt}}
-
-*   Using Homebrew:
-
-    ```bash
-    $ brew install ghostscript
-    ```
-
 ### ImageMagick
 
 {{! multiexcerpt name='imagemagick-intro'}}
@@ -738,44 +724,47 @@ ImageMagick is used in association with Ghostscript to generate the document thu
 
 {{! /multiexcerpt}}
 
-*   Using Homebrew:
+To install ImageMagick using Homebrew:
 
-    ```bash
-    $ brew install imagemagick
-    ```
+```bash
+$ brew install imagemagick
+```
 
-{{#> callout type='warning' }}
+{{! multiexcerpt imagemagick-multi-threads' page='installing-and-setting-up-related-software'}}
 
-By default ImageMagick is multi threaded and will use all the available CPUs. This creates burst of CPU usage, especially when thumbnail is generated concurrently.
+### Ghostscript
 
-Hopefully you can control the number of threads used by ImageMagick either by:
+{{! multiexcerpt name='ghostscript-intro'}}
 
-*   Editing `/etc/ImageMagick/policy.xml` and setting `<policy domain="resource" name="thread" value="1"/`.
+Ghostscript is used in association with ImageMagick to generate the thumbnails of documents.
 
-*   Adding an environment variable: add `export MAGICK_THREAD_LIMIT=1` in the nuxeo user `.bash_profile`.
+{{! /multiexcerpt}}
 
-{{/callout}}
+To install Ghostscript using Homebrew:
+
+```bash
+$ brew install ghostscript
+```
 
 ### FFmpeg
 
 {{! multiexcerpt name='ffmpeg-intro'}}
 
-FFmpeg is required by the Nuxeo DAM add-on. It is used to create the storyboard of videos and convert them to additional formats.
+FFmpeg is required by the Nuxeo DAM addon. It is used to create the storyboard of videos and convert them to additional formats.
 
 {{! /multiexcerpt}}
 
-*   Using Homebrew:
+To install FFmpeg using Homebrew:
+```bash
+$ brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype \
+--with-frei0r --with-libass --with-libbluray --with-libcaca \
+--with-libquvi --with-libvidstab --with-libvo-aacenc --with-libvorbis \
+--with-libvpx --with-opencore-amr --with-openjpeg --with-openssl \
+--with-opus --with-rtmpdump --with-schroedinger --with-speex \
+--with-theora --with-tools --with-x265 --with-faac
+```
 
-    ```bash
-    $ brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype \
-    --with-frei0r --with-libass --with-libbluray --with-libcaca \
-    --with-libquvi --with-libvidstab --with-libvo-aacenc --with-libvorbis \
-    --with-libvpx --with-opencore-amr --with-openjpeg --with-openssl \
-    --with-opus --with-rtmpdump --with-schroedinger --with-speex \
-    --with-theora --with-tools --with-x265 --with-faac
-    ```
-
-    This install most libraries. You can of course remove the libraries that are needed for the video files you will be managing. Use `brew info ffmpeg` for details about each library available.
+This install most libraries. You can of course remove the libraries that are needed for the video files you will be managing. Use `brew info ffmpeg` for details about each library available.
 
 ### UFRaw
 
@@ -785,11 +774,11 @@ UFRaw is used in association with ImageMagick and Ghostscript to generate RAW do
 
 {{! /multiexcerpt}}
 
-*   Using Homebrew:
+To install UFRaw using Homebrew:
 
-    ```bash
-    $ brew install ufraw  
-    ```
+```bash
+$ brew install ufraw  
+```
 
 ### libwpd
 
@@ -799,7 +788,7 @@ libwpd used to process WordPerfect documents.
 
 {{! /multiexcerpt}}
 
-Using Homebrew:
+To install libwpd using Homebrew:
 
 ```bash
 $ brew install libwpd
@@ -813,11 +802,11 @@ ExifTool is required by the Nuxeo Binary Metadata add-on. It is used to extract 
 
 {{! /multiexcerpt}}
 
-*   Using Homebrew:
+To install ExifTool using Homebrew:
 
-    ```bash
-    $ brew install exiftool
-    ```
+```bash
+$ brew install exiftool
+```
 
 ### CCExtractor
 
@@ -827,11 +816,11 @@ CCExtractor is used to extract subtitles from videos.
 
 {{! /multiexcerpt}}
 
-*   Using Homebrew:
+To install CCExtractor using Homebrew:
 
-    ```bash
-    $ brew install ccextractor
-    ```
+```bash
+$ brew install ccextractor
+```
 
 ## Windows
 
@@ -841,21 +830,22 @@ The following software are already included when using the .exe installer:
 *   ImageMagick
 *   pdftohtml
 *   ghostscript
-*   Exiftool (since 7.2).
+*   Exiftool.
 
 The installer does not install them globally in Windows: they are available from the `3rdparty` folder of the server tree and added to the `PATH` by the nuxeoctl.bat script.
 
 If not already present on the system, you will have the option to automatically install LibreOffice and PostgreSQL.
 
-**Warning about ImageMagick**: Some versions of Windows come with a System utility command named `convert` whose name conflicts with the ImageMagick's command of the same name. After installing Nuxeo, you can check if there will be a conflict:
+{{> anchor 'imagemagick-convert-conflict'}}**Warning about ImageMagick**: Some versions of Windows come with a System utility command named `convert` whose name conflicts with the ImageMagick's command of the same name. After installing Nuxeo, you can check if there will be a conflict:
 
 1.  Open a terminal and use the `where convert` command.
     The output will tell you which command is in the `PATH`.
-2.  If you don't see ImageMagick in the result (it must be the first ot the list, or the only one), then you must add the path to ImageMagick to the `PATH` System variable.
+2.  If you don't see ImageMagick in the result (it must be the first of the list, or the only one), then you must copy the path to ImageMagick and add it to the `PATH` System variable.
+{{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
 
 ### LibreOffice and pdftohtml
 
-{{{multiexcerpt 'ooo-pdftohaml-intro' page='Installing and Setting up Related Software'}}}
+{{{multiexcerpt 'ooo-pdftohtml-intro' page='Installing and Setting up Related Software'}}}
 
 #### LibreOffice
 
@@ -866,45 +856,44 @@ If not already present on the system, you will have the option to automatically 
 #### pdftohtml
 
 1.  Install the poppler binary (available from [this blogpost](http://blog.alivate.com.au/poppler-windows/)).
-2.  Add to the `PATH` system variable the path to the bin folder inside Poppler's installation directory (e.g. `C:\Program Files (x86)\Poppler\bin`).
-
     {{#> callout type='info' }} Old pdftohtml binaries are available from [http://sourceforge.net/projects/pdftohtml/files/](http://sourceforge.net/projects/pdftohtml/files/%7Chttp://sourceforge.net/projects/pdftohtml/files/), but they are obsolete. It is recommended to use poppler. {{/callout}}
+2.  Copy the path to the `bin` folder inside Poppler's installation directory (e.g. `C:\Program Files (x86)\Poppler\bin`) and add it to the `PATH` system variable.
+{{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
+
+### ImageMagick {{> anchor 'windows-imagemagick'}}
+
+{{{multiexcerpt 'imagemagick-intro' page='Installing and Setting up Related Software'}}}
+
+#### Installing ImageMagick
+
+ImageMagick is installed by the Nuxeo Platform Windows installer (.exe), but here are the steps to install it manually in case you used the .ZIP distribution.
+
+1.  Download the ImageMagick installer from [http://www.imagemagick.org/](http://www.imagemagick.org/).
+2.  Run the installer and make sure you check the option to add ImageMagick to the `PATH`.
+
+    {{#> callout type='warning' }}
+    Some versions of Windows come with a System utility command named `convert` whose name conflicts with the ImageMagick's command of the same name
+    See the [ImageMagick Note above](#imagemagick-convert-conflict).
+    {{/callout}}
+
+#### Controlling ImageMagick Multi-Threads
+
+{{{multiexcerpt 'imagemagick-multi-threads' page='installing-and-setting-up-related-software'}}}
 
 ### Ghostscript
 
 {{{multiexcerpt 'ghostscript-intro' page='Installing and Setting up Related Software'}}}
 
 1.  Use the installer available from the [Ghostscript download page](http://www.ghostscript.com/download/gsdnld.html).
-2.  Add to the `PATH` system variable the path to the bin folder inside Ghostscript's installation directory (e.g. `C:\Program Files\gs\gs9.20\bin`).
-
-### ImageMagick
-
-{{{multiexcerpt 'imagemagick-intro' page='Installing and Setting up Related Software'}}}
-
-1.  Download the ImageMagick installer from  [http://www.imagemagick.org/](http://www.imagemagick.org/)
-2.  Run the installer and make sure you check the option to add ImageMagick to the `PATH`.
-
-    {{#> callout type='warning' }}
-
-    In case of conflict with Windows' convert.exe, make sure that ImageMagick is added to `PATH` before `%SystemRoot%\system32`.
-
-    {{/callout}}
-
-    {{#> callout type='warning' }}
-
-    By default ImageMagick is multi threaded and will use all the available CPUs. This creates burst of CPU usage, especially when thumbnail is generated concurrently.
-
-    Hopefully you can control the number of threads used by ImageMagick either by:
-
-    *   editing `IMAGEMAGIK_DIRECTORY/policy.xml` on Windows, and setting `<policy domain="resource" name="thread" value="1"/>`.
-    *   adding an environment variable `MAGICK_THREAD_LIMIT` with value set to 1.{{/callout}}
+2.  Copy the path to the bin folder inside Ghostscript's installation directory (e.g. `C:\Program Files\gs\gs9.20\bin`) and add it to the `PATH` system variable.
+{{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
 
 ### FFmpeg
 
 {{{multiexcerpt 'ffmpeg-intro' page='Installing and Setting up Related Software'}}}
 
 1.  Download FFmpeg from [http://ffmpeg.zeranoe.com/builds/](http://ffmpeg.zeranoe.com/builds/).
-2.  Extract the FFmpeg archive into a new folder, named `C:\Program Files\FFmpegg` for instance.
+2.  Extract the FFmpeg archive into a new folder, named `C:\Program Files\FFmpeg` for instance.
 
     {{#> callout type='tip' }}
 
@@ -912,14 +901,14 @@ If not already present on the system, you will have the option to automatically 
 
     {{/callout}}
 
-3.  Add to the `PATH` system variable the path to the bin folder inside FFmpegg's directory (e.g. `C:\Program Files\FFmpegg\bin`). This can be done by:
-
-    1.  Open File Explorer, right-click "This PC" and click on **Properties**.
+3.  Copy the path to the bin folder inside FFmpeg's directory (e.g. `C:\Program Files\FFmpeg\bin`) and add it to the `PATH` system variable. This can be done by:
+{{! multiexcerpt name='windows-add-to-path'}}
+    1.  Open File Explorer, right-click on "This PC" and click on **Properties**.
 
     2.  On the System pane select **Advanced system settings**.
 
-    3.  On the **Advanced** tab, click **Environment Variables...** and edit the `PATH` system variable and add `C:\Program Files\FFmpegg\bin`.
-
+    3.  On the **Advanced** tab, click **Environment Variables...** and edit the `PATH` system variable to add the path you copied (use a `;` to separate values).
+{{! /multiexcerpt}}
         ![]({{file name='DAM-Ffmpeg-variable.png'}} ?w=250,h=291,border=true)
 
 ### UFRaw
@@ -927,22 +916,26 @@ If not already present on the system, you will have the option to automatically 
 {{{multiexcerpt 'ufraw-intro' page='Installing and Setting up Related Software'}}}
 
 1.  Download and install UFRaw from [http://ufraw.sourceforge.net/Install.html#MS](http://ufraw.sourceforge.net/Install.html#MS).
-2.  Add to the `PATH` system variable the path to the bin folder inside UFRaw's installation directory (e.g. `C:\Program Files (x86)\UFRaw\bin`).
+2.  Copy the path to the bin folder inside UFRaw's installation directory (e.g. `C:\Program Files (x86)\UFRaw\bin`) and add it to the `PATH` system variable.
+{{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
 
 ### Exiftool
 
 Here are some quick installation steps to install Exiftool. Full installation steps are available at [http://www.sno.phy.queensu.ca/~phil/exiftool/install.html](http://www.sno.phy.queensu.ca/~phil/exiftool/install.html).
 
-**To install Exiftool:**
+To install Exiftool:
 
 1.  Download the [standalone distribution](http://www.sno.phy.queensu.ca/~phil/exiftool/index.html).
-2.  Unzip the distribution to a folder, named `C:\Program Files (x86)\exiftool` for example, and add it to the `PATH` environment variable.
-3.  Rename the extracted .exe into exiftool.exe
+2.  Unzip the distribution to a folder, named `C:\Program Files (x86)\exiftool` for example.
+3. Copy the path to the `exiftool` folder and add it to the `PATH` environment variable.
+{{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
+4.  Rename the extracted .exe into `exiftool.exe`.
 
 ### CCExtractor
 
 {{{multiexcerpt 'ccextractor-intro' page='Installing and Setting up Related Software'}}}
 
 1.  Download the [windows binaries](http://www.ccextractor.org/doku.php?id=public:general:downloads).
-2.  Unzip the contents to a folder, for example `C:\Program Files (x86)\CCExtractor` and add it to the the `PATH` system variable.
+2.  Unzip the contents to a folder, for example `C:\Program Files (x86)\CCExtractor`. Copy the path to it and add it to the the `PATH` system variable.
+{{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
 3.  Rename `ccextractorwin.exe` to `ccextractor.exe`.
