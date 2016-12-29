@@ -2,7 +2,7 @@
 title: How to Enable the Trash Feature
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: Studio
         topics: 'Document type, Life cycle'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - document-type
     - delete
     - life-cycle
@@ -159,11 +159,11 @@ history:
         version: '1'
 
 ---
-The Nuxeo Platform has a trash feature: deleted document are actually not deleted but moved "in the trash", before being really deleted. See [more information about this feature]({{page space='userdoc' page='deleting-content'}}) in the user guide.
+The Nuxeo Platform has a trash feature: deleted documents are not actually deleted but moved to the "trash" before being permanently deleted. See [more information about this feature]({{page space='userdoc' page='deleting-content'}}) in the user guide.
 
 {{! excerpt}}
 
-To enable the trash on your document type, you need either to assign him the default life cycle (which is the case if you don't configure it) or, if you created a custom life cycle, to provide `delete` transitions to the `deleted` state, from each other state. Moreover, in order to be able to restore documents, you must provide a `undelete` transition from the `deleted` state to another state in the lifecycle.
+To enable the trash feature on your document type, you either need to assign the default life cycle (which should be the case if you haven't configured it) or, if you've created a custom life cycle, to provide `delete` transitions to the `deleted` state from each other state. Moreover, in order to be able to restore documents, you must provide an `undelete` transition from the `deleted` state to another state in the lifecycle.
 
 {{! /excerpt}}
 

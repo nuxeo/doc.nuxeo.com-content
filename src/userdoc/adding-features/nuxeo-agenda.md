@@ -2,7 +2,7 @@
 title: Nuxeo Agenda
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-02'
     status: ok
 labels:
     - nuxeo-agenda
@@ -99,15 +99,40 @@ In the Agenda gadget, events can be created from the list view only.
 2.  Fill in the event creation form.
     ![]({{file name='agenda-creation-form-gadget.png'}} ?w=300,border=true)
 3.  Click on the **Create** button.
-    The event is displayed in the list of the Incoming events.
+        The event is displayed in the list of the Incoming events.  
 
 **Events properties**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Title</td><td colspan="1">Name of the event</td></tr><tr><td colspan="1">Description</td><td colspan="1">What the event is about</td></tr><tr><td colspan="1">Start date</td><td colspan="1">
-
-Date and time at which the event starts
-
-</td></tr><tr><td colspan="1">End date</td><td colspan="1">Date and time at which the event ends</td></tr><tr><td colspan="1">Place</td><td colspan="1">Where the event takes place</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Field</th>
+<th colspan="1">Description</th>
+</tr>
+<tr>
+<td colspan="1">Title</td>
+<td colspan="1">Name of the event</td>
+</tr>
+<tr>
+<td colspan="1">Description</td>
+<td colspan="1">What the event is about</td>
+</tr>
+<tr>
+<td colspan="1">Start date</td>
+<td colspan="1">Date and time at which the event starts</td>
+</tr>
+<tr>
+<td colspan="1">End date</td>
+<td colspan="1">Date and time at which the event ends</td>
+</tr>
+<tr>
+<td colspan="1">Place</td>
+<td colspan="1">Where the event takes place</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Editing an Event
 
@@ -118,7 +143,7 @@ Events can be modified from the **Edit** tab. Unlike other documents, they don't
 1.  Click on the **Edit** tab of the event.
 2.  Modify the event's properties you want.
 3.  Click on **Save**.
-    The modifications are immediately available in the **Agenda** gadget. A new version of the event is automatically created by the system.
+        The modifications are immediately available in the **Agenda** gadget. A new version of the event is automatically created by the system.
 
 ### Browsing Events
 

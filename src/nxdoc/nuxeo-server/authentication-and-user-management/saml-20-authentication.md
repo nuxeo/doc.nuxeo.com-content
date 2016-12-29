@@ -20,7 +20,7 @@ confluence:
     shortlink: QIVkAQ
     shortlink_source: 'https://doc.nuxeo.com/x/QIVkAQ'
     source_link: /display/NXDOC/SAML+2.0+Authentication
-tree_item_index: 3100
+tree_item_index: 150
 history:
     -
         author: Manon Lumeau

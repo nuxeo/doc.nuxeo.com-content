@@ -22,7 +22,7 @@ confluence:
     shortlink: mwg7
     shortlink_source: 'https://doc.nuxeo.com/x/mwg7'
     source_link: /display/NXDOC/Shibboleth+Authentication
-tree_item_index: 3300
+tree_item_index: 190
 history:
     -
         author: Solen Guitter
@@ -128,7 +128,7 @@ For details, see [https://spaces.internet2.edu/display/SHIB2/FlowsAndConfig](htt
 
 The SHIB_AUTH plug-in is implemented by the class `org.nuxeo.ecm.platform.shibboleth.auth.ShibbolethAuthenticationPlugin`. It authenticates the user based on HTTP headers received from the SP. It also creates (or updates) an entry in the userDirectory for this user.
 
-As the Shibboleth attributes values are passed by HTTP headers, the service [`org.nuxeo.ecm.platform.shibboleth.service.ShibbolethAuthenticationService`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewService/org.nuxeo.ecm.platform.shibboleth.service.ShibbolethAuthenticationService) has been added to configure the mapping between the user metadata and the headers names.
+As the Shibboleth attributes values are passed by HTTP headers, the service [`org.nuxeo.ecm.platform.shibboleth.service.ShibbolethAuthenticationService`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202016-8.10/viewService/org.nuxeo.ecm.platform.shibboleth.service.ShibbolethAuthenticationService) has been added to configure the mapping between the user metadata and the headers names.
 
 ShibbGroups are virtual groups based on an EL expression with Shibboleth attributes. A new user management tab is added to create and edit them. The definitions are stored in the `shibbGroup` directory.
 
@@ -138,7 +138,7 @@ The class [`org.nuxeo.ecm.platform.shibboleth.computedgroups.ShibbolethGroupComp
 
 ### Nuxeo Package Installation
 
-The Shibboleth authentication module is available [as a packaged Nuxeo Addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication) on the Nuxeo marketplace. It can be installed with [nuxeoctl command line]({{page page='installing-a-new-package-on-your-instance'}}) or [from the Update Center]({{page page='installing-a-new-package-on-your-instance'}}).
+The Shibboleth authentication module is available [as a packaged Nuxeo Addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication) on the Nuxeo marketplace. It can be installed with [nuxeoctl command line]({{page page='installing-a-new-package-on-your-instance'}}#installing-a-package-using-the-nuxeoctl-script) or [from the Update Center]({{page page='installing-a-new-package-on-your-instance'}}#installing-a-package-from-the-admin-tab).
 
 After you installed the package, a new **Shib Goups** tab is available in the **Admin** > **Users & Groups** tab.
 
@@ -146,15 +146,16 @@ After you installed the package, a new **Shib Goups** tab is available in the **
 
 ### Manual Installation
 
-1.  [Download the built nuxeo-platform-login-shibboleth.jar](https://maven.nuxeo.org/nexus/service/local/artifact/maven/redirect?r=public-releases&g=org.nuxeo.ecm.platform&a=nuxeo-platform-login-shibboleth&v=6.0&e=jar).
+1.  [Download the built nuxeo-platform-login-shibboleth.jar](https://maven.nuxeo.org/nexus/service/local/artifact/maven/redirect?r=public-releases&g=org.nuxeo.ecm.platform&a=nuxeo-platform-login-shibboleth&v=8.10&e=jar).
 2.  Deploy it into your Tomcat or JBoss instance, in the `bundles` directory.
 3.  Add a new file named `shibboleth-config.xml` in the `config/` directory of your server. This file defines the login and logout URLs, the mapping between the user metadata and the headers names.
     *   `$NUXEO/nxserver/config` for a Tomcat distribution
     *   `$NUXEO/server/default/deploy/nuxeo.ear/config` for a JBoss distribution
 
-    {{#> panel type='code' heading='shibboleth-config.xml'}}
-    ```html/xml
-    <?xml version="1.0"?>
+{{#> panel type='code' heading='shibboleth-config.xml'}}
+
+```xml
+<?xml version="1.0"?>
     <component name="org.nuxeo.ecm.platform.login.shibboleth.config">
     <extension
         target="org.nuxeo.ecm.platform.shibboleth.service.ShibbolethAuthenticationService"
@@ -170,10 +171,11 @@ After you installed the package, a new **Shib Goups** tab is available in the **
           <fieldMapping header="uid">username</fieldMapping>
           <fieldMapping header="mail">email</fieldMapping>
         </config>
-      </extension>
-    </component>
-    ```
-    {{/panel}}
+    </extension>
+</component>
+```
+
+{{/panel}}
 
 ## Configuration
 
@@ -185,7 +187,7 @@ To override the default authentication chain in the Nuxeo Platform, add a new fi
 
 {{#> panel type='code' heading='authentication-chain-config.xml'}}
 
-```html/xml
+```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.platform.your.authentication.chain.config">
   <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
@@ -203,7 +205,6 @@ To override the default authentication chain in the Nuxeo Platform, add a new fi
     </authenticationChain>
   </extension>
 </component>
-
 ```
 
 {{/panel}}
@@ -220,7 +221,7 @@ To activate it, add a new file named `login-anonymous-config.xml` in the `config
 
 {{#> panel type='code' heading='login-anonymous-config.xml'}}
 
-```html/xml
+```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.platform.your.anonymous.user.config">
   <extension target="org.nuxeo.ecm.platform.usermanager.UserService"
@@ -235,7 +236,6 @@ To activate it, add a new file named `login-anonymous-config.xml` in the `config
     </userManager>
   </extension>
 </component>
-
 ```
 
 {{/panel}}
@@ -244,7 +244,7 @@ To activate it, add a new file named `login-anonymous-config.xml` in the `config
 
 Here is a sample configuration file containing everything you need to set up the Shibboleth authentication module:
 
-```html/xml
+```xml
 <component name="sample.shibboleth.config">
 
   <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
@@ -292,9 +292,8 @@ Here is a sample configuration file containing everything you need to set up the
   </extension>
 
 </component>
-
 ```
 
 ## Source Code
 
-The source code of the Shibboleth authentication module can be found as part of the [`nuxeo-platform-login` add-on on GitHub](https://github.com/nuxeo/nuxeo-platform-login).
+The source code of the Shibboleth authentication module can be found as part of the [`nuxeo-platform-login` add-on on GitHub](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/).

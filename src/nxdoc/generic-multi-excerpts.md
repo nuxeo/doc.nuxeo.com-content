@@ -93,9 +93,7 @@ This addon is deprecated since Nuxeo Platform LTS 2016.
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='MP-installation-easy'}}
-
 This addon requires no specific installation steps. It can be installed like any other package with [nuxeoctl command line]({{page page='installing-a-new-package-on-your-instance'}}#installing-a-package-using-the-nuxeoctl-script) or [from the Update Center]({{page page='installing-a-new-package-on-your-instance'}}#installing-a-package-from-the-admin-tab).
-
 {{! /multiexcerpt}}
 
 &nbsp;

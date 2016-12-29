@@ -2,7 +2,7 @@
 title: EasyShare
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-02'
     status: ok
 labels:
     - easyshare
@@ -124,75 +124,98 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}The&nbsp; [EasyShare package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare) is an add-on for the Nuxeo platform to enable sharing files from the repository with external users not requiring a login.{{! /excerpt}}
+{{! excerpt}}The [EasyShare package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare) is an addon for the Nuxeo platform which enables sharing files from the repository with external users not requiring a login.{{! /excerpt}}
 
-It enables you to create Easy Share folders in which you can either create document or make them available from the folder for public sharing. Anyone having the public URL to the Easy Share folder can then download its content without having to log in to the Nuxeo Platform.
+It allows you to create EasyShare folders in which you can either create documents or make them available from the folder for public sharing. Anyone having the public URL to the EasyShare folder can then download its content without having to log in to the Nuxeo Platform.
 
 {{#> callout type='info' }}
 
-The EasyShare plugin is not part of the supported list of Nuxeo Packages. It's been developed for internal use and has been made public for the interest of the Nuxeo community. The reason why it is not supported as is, is that it's highly probable that we add the "share via link" feature to the Collection module. Yet you can safely use it for your own sharing use cases.
+The EasyShare plugin is not part of the supported list of Nuxeo Packages. It's been developed for internal use and has been made public for the interest of the Nuxeo community.
 
 {{/callout}}
 
-## Creating an Easy Share Folder
+## Creating an EasyShare Folder
 
-{{{multiexcerpt 'create-document' page='USERDOC:Creating Content'}}}
+1.  Navigate to a Workspace and click on the **New** button, then click on EasyShare Folder in the pop-up.
+2.  Fill in the Folder's creation form and click on the **Create** button.
 
-The Easy Share folder is created. You can now create new documents in it or share existing documents in it.
+    **EasyShare Folder creation parameters**
 
-**Easy Share Folder creation parameters**
+    <div class="table-scroll">
+      <table class="hover">
+        <tbody>
+          <tr>
+            <th colspan="1">Field</th>
+            <th colspan="1">Description</th>
+          </tr>
+          <tr>
+            <td colspan="1">Title</td>
+            <td colspan="1">It will be visible to your recipients in the EasyShare folder public view.</td>
+          </tr>
+          <tr>
+            <td colspan="1">Expiration Date</td>
+            <td colspan="1">Determines until which day the EasyShare folder in the will be available. After this date, the folder will still exist in Nuxeo but will show as expired when attempting external access.</td>
+          </tr>
+          <tr>
+            <td colspan="1"><span class="widgetLabel tipsyShow tipsyGravityNW  ">Active notification</span></td>
+            <td colspan="1">If this option is checked, a notification is sent to the contact email when a document is downloaded from the EasyShare folder.</td>
+          </tr>
+          <tr>
+            <td colspan="1">Share Comment</td>
+            <td colspan="1">The message displayed on the EasyShare folder public view.</td>
+          </tr>
+          <tr>
+            <td colspan="1">Contact Email</td>
+            <td colspan="1">The email address to which an email will be sent each time a document is downloaded. People who can access the EasyShare folder can also use it to contact someone from the organization.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Title</td><td colspan="1">It will be visible to your recipients in the Easy Share folder public view.</td></tr><tr><td colspan="1">Expiration Date</td><td colspan="1">Determines until which day the Easy Share folder in the&nbsp; will be available.
-After this date, the folder will still exist in Nuxeo but will show as expired when attempting external access.</td></tr><tr><td colspan="1"><span class="widgetLabel tipsyShow tipsyGravityNW  ">Active notification</span></td><td colspan="1">If this option is checked, a notification is sent to the contact email when a document is downloaded from the Easy Share folder.</td></tr><tr><td colspan="1">Share Comment</td><td colspan="1">The message displayed on the Easy Share folder public view.</td></tr><tr><td colspan="1">
+    The EasyShare folder is created. You can now create new documents in it or share existing documents in it.
 
-Contact Email
 
-</td><td colspan="1">
+## Adding Documents to an EasyShare Folder
 
-The email address to which an email will be sent each time a document is downloaded.
+The EasyShare folder is a specific type of [collection]({{page page='collections'}}). To add documents to an EasyShare folder, follow the same steps as if you were adding a document to a collection, by clicking the icon ![]({{file name='add_to_collection.png' page='icons-index'}}) on the document or the EasyShare folder or by clicking the **Add to Collection** button from the workspace Content tab.
 
-People who can access the Easy Share folder can also use it to contact someone from the organization.
+Depending on the modules you have enabled on your Nuxeo Platform, you can create the following documents in an EasyShare folder:
 
-</td></tr></tbody></table></div>
+*   Files
+*   Pictures
+*   Audio
+*   Videos
 
-## Adding Documents to an Easy Share Folder
+## Sharing an EasyShare Folder
 
-The Easy Share folder is a specific type of [collection]({{page page='collections'}}). To add documents to an Easy Share folder, follow the same steps as if to add a document to a collection, by clicking the icon ![]({{file name='add_to_collection.png' page='icons-index'}}) on the document or the Easy Share folder or by clicking the **Add to Collection** button from the workspace Content tab.
+You can share your EasyShare folder by sending the **Public URL** available from the icon **![]({{file name='share.png' page='icons-index'}})**. Anyone with the URL can access the EasyShare folder and download the documents that are in it.
 
-Depending on the modules you have enabled on your Nuxeo Platform, you can create the following documents in an Easy Share folder:
+An email alert is sent to the Contact email of the folder each time a file is downloaded.
 
-*   Files,
-*   Pictures,
-*   Audio,
-*   Videos.
+## Accessing an EasyShare Folder
 
-## Sharing an Easy Share Folder
-
-You can share your Easy Share folder by sending the&nbsp;**Public URL** available from theicon **![]({{file name='share.png' page='icons-index'}})**. Anyone with the URL can access the Easy Share folder and download the documents that are in it.
-
-An email alert is sent to the Contact email of the folder each time a file is downloaded.&nbsp;
-
-## Accessing an Easy Share Folder
-
-By clicking on the link to the Easy Share Folder, you access&nbsp;a particular Easy Share folder without having to login to the Nuxeo Platform.
+By clicking on the link to the EasyShare Folder, you access a particular EasyShare folder without having to login to the Nuxeo Platform.
 
 ![]({{file name='EasyShare_public_view.png'}} ?w=650,border=true)
 
 ## Future Improvements
 
-If you want more information about the future evolutions and improvements, see [this JIRA filter](https://jira.nuxeo.com/issues/?jql=project%20%3D%20NXP%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Easy%20Share%22).&nbsp;
+If you want more information about the future evolutions and improvements, see [this JIRA filter](https://jira.nuxeo.com/issues/?jql=project%20%3D%20NXP%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Easy%20Share%22).
 
 * * *
 
-&nbsp;
-
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
 - [EasyShare admin documentation]({{page space='nxdoc' page='easyshare'}})
 - [Collections]({{page page='collections'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
+<div class="column medium-6">
 
 &nbsp;
 
-</div></div>
+</div>
+</div>
