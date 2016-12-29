@@ -111,7 +111,7 @@ Nuxeo SDK for Android is based on Nuxeo Content Automation. Basically, the Andro
 Using Automation brings several advantages :
 
 *   API calls is simple and very extensible
-    (you can contribute new operations or chains via Nuxeo Studio or Nuxeo IDE)
+    (you can contribute new operations or chains via Nuxeo Studio or Nuxeo Generator)
 
 *   Calls are efficient and easily cachable (REST + JSON Marshaling)
 

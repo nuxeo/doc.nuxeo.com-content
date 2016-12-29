@@ -9,9 +9,9 @@ details:
         excerpt: >-
             Learn how to customize the versioning and comment widget using XML
             extensions. These examples can be contributed in Nuxeo Studio
-            (Advanced Settings > XML Extensions) or in Nuxeo IDE.
+            (Advanced Settings > XML Extensions) or with the Nuxeo Generator.
         level: Intermediate
-        tool: 'XML extension, Nuxeo IDE, Studio'
+        tool: 'XML extension, Nuxeo Generator, Studio'
         topics: 'Layout, Versioning, JSF UI, Widget'
 labels:
     - content-review-lts2016
@@ -152,7 +152,7 @@ history:
 ---
 {{! excerpt}}
 
-On documents edit form, a **Comment** textarea is displayed, and this text is visible in the **History** tab. When the document is versionable, versioning options are also displayed. This page provides some examples to customize this behavior using XML extensions. These examples can be contributed [in Nuxeo Studio]({{page page='how-to-contribute-to-an-extension'}}) (Advanced Settings > XML Extensions) or [in Nuxeo IDE]({{page page='contributing-to-an-extension-using-nuxeo-ide'}}).
+On documents edit form, a **Comment** textarea is displayed, and this text is visible in the **History** tab. When the document is versionable, versioning options are also displayed. This page provides some examples to customize this behavior using XML extensions. These examples can be contributed [in Nuxeo Studio]({{page page='how-to-contribute-to-an-extension'}}) (Advanced Settings > XML Extensions) or [with the Nuxeo Generator]({{page page='how-to-contribute-to-an-extension'}}).
 
 {{! /excerpt}}
 

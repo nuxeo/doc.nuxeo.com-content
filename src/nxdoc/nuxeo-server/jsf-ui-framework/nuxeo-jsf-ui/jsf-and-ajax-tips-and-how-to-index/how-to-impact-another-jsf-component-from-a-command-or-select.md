@@ -110,8 +110,6 @@ When designing a screen or form, you may want to render a part of the page when 
 
 {{! /excerpt}}
 
-&nbsp;
-
 This page describes how to do so without having to define a Seam component, keeping the contextual information. This is better for reuse of templates (like in widgets) within the same page, as you do not have to define a new Seam component for every context variable on the page.
 
 The context variable is kept by a [nxu:valueHolder](http://community.nuxeo.com/api/nuxeo/7.1/tlddoc/nxu/valueHolder.html) tag, which also exposes the corresponding value in the context.
@@ -187,7 +185,7 @@ When I select an element in a drop down list, another element should be displaye
 
 #### Available Helper
 
-The Seam Component [selectionActions](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewSeamComponent/seam:selectionActions) has a method named&nbsp;`setValueFromComponent` that will retrieve attributes named&nbsp;`sourceComponentId` and `targetComponentId` from its originating tag. It will lookup the corresponding source component in the tree, retrieve its current value, and set this value to the corresponding target component.
+The Seam Component [selectionActions](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewSeamComponent/seam:selectionActions) has a method named `setValueFromComponent` that will retrieve attributes named `sourceComponentId` and `targetComponentId` from its originating tag. It will lookup the corresponding source component in the tree, retrieve its current value, and set this value to the corresponding target component.
 
 #### Sample Template Excerpt
 
@@ -241,17 +239,15 @@ This is an excerpt of the [widget template displaying additional information abo
 </nxu:valueHolder>
 ```
 
-&nbsp;
-
 ### Second Use Case
 
 In a form, when i check some checkbox, additional input fields are shown.
 
 #### Available Helper
 
-The Seam Component [selectionActions](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewSeamComponent/seam:selectionActions) has a method named&nbsp;`setValueFromComponent` that will retrieve attributes named&nbsp;`sourceComponentId` and `targetComponentId` from its originating tag. It will lookup the corresponding source component in the tree, retrieve its current value, and set this value to the corresponding target component.
+The Seam Component [selectionActions](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewSeamComponent/seam:selectionActions) has a method named `setValueFromComponent` that will retrieve attributes named `sourceComponentId` and `targetComponentId` from its originating tag. It will lookup the corresponding source component in the tree, retrieve its current value, and set this value to the corresponding target component.
 
-Also, additional input fields to show are declared as standard sub-widgets to a widget of type&nbsp;`template` which is displaying the checkbox and holding the re-render logics.
+Also, additional input fields to show are declared as standard sub-widgets to a widget of type `template` which is displaying the checkbox and holding the re-render logics.
 
 #### Sample Widget Template
 
@@ -288,7 +284,7 @@ Also, additional input fields to show are declared as standard sub-widgets to a 
 
 To use this template:
 
-*   define a widget of type&nbsp;`template` and if you're in Studio, use an advanced&nbsp;`Generic Widget` to control fields definitions
+*   define a widget of type `template` and if you're in Studio, use an advanced `Generic Widget` to control fields definitions
 *   add two fields for this widget: the first field should be empty, so that subwidgets are still bound to the same document (as first field mapping will be taken into account when building the subwidgets field binding), and second field should match the property holding the boolean value &ndash; note that persisting this value is useful for edition, so that persisted value can be taken into account when displaying the form again.
 
 Here is a sample contribution:
@@ -367,9 +363,3 @@ Refined version of this template when using it inside the bulk edit form (to mak
 
 </ui:fragment>
 ```
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
