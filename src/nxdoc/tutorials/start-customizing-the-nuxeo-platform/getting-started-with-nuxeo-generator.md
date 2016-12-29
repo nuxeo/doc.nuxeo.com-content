@@ -791,47 +791,47 @@ The code can either be tested through unit tests or manually. You need to bind t
 
 1.  In Nuxeo Studio, under **Source Control** > **Branch Management**, release the most recent commit on your project. This will generate a version of your project that can be accessed by Maven.
 
-2.  It is strongly recommended that you encrypt your studio password:
+2.  It is strongly recommended that you encrypt your Studio password:
 
-  - First create a master password:
+    1. Create a master password:
 
-    ```bash
-    mvn --encrypt-master-password
-    ```
+        ```bash
+        mvn --encrypt-master-password
+        ```
 
-    The command will prompt you for your master password and produce an encrypted version, something like this:
+        The command will prompt you for your master password and produce an encrypted version, something like this:
 
-    ```bash
-    {jSMOWnoPFgsHVpMvz5VrIt5kRbzGpI8u+9EF1iFQyJQ=}
-    ```
+        ```bash
+        {jSMOWnoPFgsHVpMvz5VrIt5kRbzGpI8u+9EF1iFQyJQ=}
+        ```
 
-  - Store this password in `~/.m2/settings-security.xml` like this:
+    2. Store this password in `~/.m2/settings-security.xml` like this:
 
-    ```xml
-    <settingsSecurity>
-      <master>{jSMOWnoPFgsHVpMvz5VrIt5kRbzGpI8u+9EF1iFQyJQ=}</master>
-    </settingsSecurity>
-    ```
+        ```xml
+        <settingsSecurity>
+          <master>{jSMOWnoPFgsHVpMvz5VrIt5kRbzGpI8u+9EF1iFQyJQ=}</master>
+        </settingsSecurity>
+        ```
 
-  - Then encrypt your server password:
+    3. Encrypt your server password:
 
-    ```bash
-    mvn --encrypt-password
-    ```
+        ```bash
+        mvn --encrypt-password
+        ```
 
-    Enter your studio password at the prompt, and store the encrypted password in your `~/.m2/settings.xml` file as follows. This configures your Maven client to use authentication when accessing the Studio Maven repository.
+    4. Enter your studio password at the prompt, and store the encrypted password in your `~/.m2/settings.xml` file as follows. This configures your Maven client to use authentication when accessing the Studio Maven repository.
 
-    ```xml
-    <servers>
-      ....
-      <server>
-        <id>nuxeo-studio</id>
-        <username>your_studio_username</username>
-        <password>your_encrypted_studio_password</password>
-      </server>
-      ...
-    </servers>
-    ```
+        ```xml
+        <servers>
+          ....
+          <server>
+            <id>nuxeo-studio</id>
+            <username>your_studio_username</username>
+            <password>your_encrypted_studio_password</password>
+          </server>
+          ...
+        </servers>
+        ```
 
 3. In your IDE edit the `pom.xml` file to declare the dependency of the Studio project you just tagged:
 
