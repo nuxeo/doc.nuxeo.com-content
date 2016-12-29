@@ -141,13 +141,14 @@ history:
         version: '1'
 
 ---
+![]({{file name='node-general-tab.png'}} ?w=500,h=354,border=true)
+
 *   **Title**: The title of the task, displayed in tasks lists in the user interface as well as directly on top of the task form, where user processes the task. Supports i18n.
 *   **NodeId**: The node id is useful when you want to configure queues of tasks. This is currently limited to advanced users.
-*   **Exclusive Node**: If checked, transitions can be ordered and only the first transition for which conditions are true will be followed. If not checked and if several transitions are true, then they will all be followed corresponding to a fork in the workflow. (available from 5.7.2)
 *   **Directive**: The directive is displayed on top of the submission form when the user processes the tasks. Supports i18n.
 *   **Due date expression**: This is where you express what should the due date be on the task that is created by this node. It is usually set relatively to the current date (the time when the task is created), but it can also be expressed leveraging the date at which the workflow was started.
 *   **Assignees**: You can add&nbsp; static assignees here, either users or groups, one per input field (click on "**Add**" to add more than one). You need to prefix users by "`user:`" like `user:jack` and groups by "`group:`" like `group:validators`.
-*   **Compute additional assignees**: You can set a scripted expression ([MVEL syntax]({{page space='nxdoc' page='understand-expression-and-scripting-languages-used-in-nuxeo'}}))&nbsp;here so as to determine where to lookup the assignees of the task. You have access to some useful variables in the context, like the `NodeVariables` and `WorkflowVariables` (see [Variables Available in the Automation Context]({{page space='nxdoc' page='variables-available-in-the-automation-context'}}) for more information). A frequent pattern is to set a node variable from the input chain of the node and reference it here.
+*   **Assignees expression**: To Compute additional assignees, you can set a scripted expression ([MVEL syntax]({{page space='nxdoc' page='understand-expression-and-scripting-languages-used-in-nuxeo'}}))&nbsp;here so as to determine where to lookup the assignees of the task. You have access to some useful variables in the context, like the `NodeVariables` and `WorkflowVariables` (see [Variables Available in the Automation Context]({{page space='nxdoc' page='variables-available-in-the-automation-context'}}) for more information). A frequent pattern is to set a node variable from the input chain of the node and reference it here.
 *   <span style="color: rgb(67,67,67);">**Create one task per assignee**: If checked, there will be as many tasks created as there are assignees. This property is displayed only for the multi-task node.</span>
 *   <span style="color: rgb(67,67,67);">**Allow task reassignment**: If set to true, the Reassign user action will be displayed on the task resolution screen and assignee will be able to reassign the task to someone else.</span>
 *   <span style="color: rgb(67,67,67);">**Grand permission to task assignee**: Specifies the permission that will be assigned to each of the assignees on the bound document(s).</span>

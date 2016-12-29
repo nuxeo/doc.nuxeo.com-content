@@ -1,5 +1,5 @@
 ---
-title: Availability Tab
+title: Activation Tab
 review:
     comment: ''
     date: ''
@@ -69,5 +69,10 @@ history:
         version: '1'
 
 ---
-![]({{file name='workflow-availability-tab.png'}} ?w=500,h=280,border=true)
-This screen controls when the workflow is displayed in the drop down list that allows to start a workflow on a document. The availability is evaluated against multiple conditions. See the [Filtering Options Reference Page]({{page page='filtering-options-reference-page'}}) for details about them.
+![]({{file name='workflow-activation-tab.png'}} ?w=500,h=280,border=true)
+This screen controls when the workflow is displayed in the drop down list that allows to start a workflow on a document. The availability is evaluated against multiple conditions:
+* User permissions
+* Document type
+* ...
+
+See the [Filtering Options Reference Page]({{page page='filtering-options-reference-page'}}) for details about them.

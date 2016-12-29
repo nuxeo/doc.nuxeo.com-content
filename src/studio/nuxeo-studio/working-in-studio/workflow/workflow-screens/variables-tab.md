@@ -71,7 +71,7 @@ history:
 ---
 ![]({{file name='workflow-variables-tab.png'}} ?w=500,h=184,border=true)
 
-Variables at workflow level can be used to store information that can be accessed at any time during the workflow. Those variables will store data that come from user forms or that are computed by automation chains, using from their the `WorkflowVariables[]` object.
+Variables at workflow level can be used to store information that can be accessed at any time during the workflow, when editing a node properties for example. Those variables will store data that come from user forms or that are computed by automation chains, using from their the `WorkflowVariables[]` object.
 
 {{! multiexcerpt name='studio-variable-tab'}}
 

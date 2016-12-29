@@ -15,7 +15,7 @@ confluence:
     shortlink: 8AGw
     shortlink_source: 'https://doc.nuxeo.com/x/8AGw'
     source_link: /display/Studio/Node+Variables+Tab
-tree_item_index: 400
+tree_item_index: 200
 history:
     -
         author: Solen Guitter
@@ -50,6 +50,9 @@ history:
 
 ---
 ![]({{file name='node-variables-tab.png'}} ?w=500,h=216,border=true)
-Node variables are useful for instance for capturing data from the user through the node form, and then do something with that data in the output automation chain. You can edit those variables the same way you would edit a schema.
+
+**Workflow variables**: you can select the workflow variables that you will need on this node.
+
+**Node variables** are useful for instance for capturing data from the user through the node form, and then do something with that data in the output automation chain. You can edit those variables the same way you would edit a schema.
 
 {{{multiexcerpt 'studio-variable-tab' page='Variables tab'}}}
