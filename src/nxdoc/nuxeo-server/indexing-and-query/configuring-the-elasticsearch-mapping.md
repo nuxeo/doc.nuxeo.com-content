@@ -289,7 +289,7 @@ Note that if you:
 
 *   don't perform non fulltext search on this field
 *   don't use this field with a `IS NULL` or `IS NOT NULL`operation
-*   don't sort on this field
+*   don't sort on this field 
 
 Then you can disable the default index on the field by adding after the second
 ```
