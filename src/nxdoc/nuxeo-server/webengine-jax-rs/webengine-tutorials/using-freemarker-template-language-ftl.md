@@ -23,6 +23,11 @@ confluence:
 tree_item_index: 200
 history:
     -
+        author: Mincong Huang
+        date: '2016-12-30 21:00'
+        message: format code
+        version: '7'
+    -
         author: Damien Metzler
         date: '2015-10-20 14:06'
         message: ''
@@ -196,22 +201,21 @@ public class Sample2 extends ModuleRoot {
     <title><@block name="title"/></title>
   </head>
   <body>
-
-<table width="100%" border="1">
-
-<tr>
-
-<td><@block name="header">Header</@block></td>
+    <table width="100%" border="1">
+      <tr>
+        <td>
+          <@block name="header">Header</@block>
+        </td>
       </tr>
-
-<tr>
-
-<td><@block name="content">Content</@block></td>
+      <tr>
+        <td>
+          <@block name="content">Content</@block>
+        </td>
       </tr>
-
-<tr>
-
-<td><@block name="footer">Footer</@block></td>
+      <tr>
+        <td>
+          <@block name="footer">Footer</@block>
+        </td>
       </tr>
     </table>
   </body>
