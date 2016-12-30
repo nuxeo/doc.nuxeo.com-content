@@ -23,11 +23,6 @@ confluence:
 tree_item_index: 200
 history:
     -
-        author: Mincong Huang
-        date: '2016-12-30 21:00'
-        message: format code
-        version: '7'
-    -
         author: Damien Metzler
         date: '2015-10-20 14:06'
         message: ''
