@@ -16,7 +16,7 @@ tree_item_index: 300
 
 ## Overriding existing Nuxeo Web UI search
 
-Nuxeo Web UI comes with the *Default Search* the *Expired Search* both plugged on a server side page providers [default_search](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-search/nuxeo-search-core/src/main/resources/OSGI-INF/search-pageprovider-contrib.xml#L6) and [expired_search](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-search/nuxeo-search-core/src/main/resources/OSGI-INF/search-pageprovider-contrib.xml#L150) by default.
+Nuxeo Web UI comes with the *Default Search* and *Expired Search* both plugged on a server side page providers [default_search](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-search/nuxeo-search-core/src/main/resources/OSGI-INF/search-pageprovider-contrib.xml#L6) and [expired_search](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-search/nuxeo-search-core/src/main/resources/OSGI-INF/search-pageprovider-contrib.xml#L150) by default.
 
 | Default search                                             | Expired search                                             |
 |:-----------------------------------------------------------|:-----------------------------------------------------------|
