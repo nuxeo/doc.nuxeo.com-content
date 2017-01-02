@@ -746,9 +746,8 @@ All caches should be accessible via a generated cache key defined by the request
 - then check the document response store
 - then check the server response
 
-##### Synchronisation
+##### Synchronization
 
-- Should we apply those [rules](https://doc.nuxeo.com/nxdoc/android-connector-and-caching/#transientstate)?
 - Should we use ETag And/Or If-Modified-Since with HEAD method?
 
 ##### Potential Stores

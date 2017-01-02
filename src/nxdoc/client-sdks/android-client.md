@@ -29,6 +29,4 @@ history:
         version: '1'
 
 ---
-You can use the [Nuxeo Java Client]({{page page='java-client'}}) to build Android application.
-
-(DEPRECATED) You can browse the [Android Connector section]({{page page='nuxeo-android-connector'}}) for more information.
+You can use the native [Android application]({{page page='nuxeo-mobile'}}) or the [Nuxeo Java Client]({{page page='java-client'}}) to build a custom Android application.

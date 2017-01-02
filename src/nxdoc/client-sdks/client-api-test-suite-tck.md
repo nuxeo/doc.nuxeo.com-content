@@ -1313,7 +1313,6 @@ The client side code depends on the following underlying technologies:
 *   NUnit tests for .Net client,
 *   HTML/JS for JavaScript client,
 *   Python script for Python client,
-*   JUnit for both Android clients (the nuxeo-android-connector and the deprecated nuxeo-automation-thin-client),
 *   ? for PHP client,
 *   ? for Dart client.
 
