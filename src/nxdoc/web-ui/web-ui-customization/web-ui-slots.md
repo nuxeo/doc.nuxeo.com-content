@@ -46,7 +46,7 @@ Here are the `nuxeo-slots` available in the Nuxeo Web UI.
 
 {{#> callout type='warning' }}
 
-The name and the location of the following slots are temporary and subjects to changes for the of Web UI final version.
+The name and the location of the following slots are temporary and subjects to changes until the release of the final version.
 
 {{/callout}}
 
