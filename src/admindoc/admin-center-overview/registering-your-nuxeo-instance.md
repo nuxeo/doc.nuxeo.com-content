@@ -20,100 +20,98 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/FIAAAQ'
     source_link: /display/ADMINDOC58/Registering+your+Nuxeo+Instance
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-08 12:03'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-31 15:22'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-10 18:22'
         message: Updated offline registration steps and screenshots
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-16 16:52'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-14 12:00'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-11 14:33'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-11 14:32'
         message: Updated offline registration steps with latest Connect UI
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-07 18:04'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-07 18:04'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-14 09:48'
         message: Migrated to Confluence 4.0
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-14 09:48'
         message: Updated links
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-04-20 18:14'
         message: ''
         version: '7'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-01-20 10:02'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-15 10:13'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-08 18:08'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-05 16:57'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-05 16:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-05 16:44'
         message: ''
         version: '1'
 
 ---
-<div class="row"><div class="column medium-8">
-
 Registering your Nuxeo application with [Nuxeo Connect](http://www.nuxeo.com/products/online-services/) will give you access to a wide range of services, such as:
 
 *   the Update Center, so that you can easily install patches and bug fixes,
@@ -195,5 +193,3 @@ Offline registration can be used when the server doesn't connect to the Internet
     ![]({{file name='AdminCenter-offline-registration-3.png'}} ?w=450,border=true)
     Your instance is registered again and the registration summary is displayed.
     ![]({{file name='AdminCenter-registration-status.png'}} ?w=450,border=true)
-
-</div><div class="column medium-4">{{#> panel heading='On this page'}} {{/panel}}</div></div>

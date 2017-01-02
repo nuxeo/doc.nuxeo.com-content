@@ -21,99 +21,99 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/EoAAAQ'
     source_link: /display/ADMINDOC58/Installing+a+New+Package+on+Your+Instance
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-11 14:19'
         message: ix images
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-11 14:14'
         message: 'Merge install and uninstall package   '
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-26 15:47'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-26 15:21'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-16 16:58'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-19 15:33'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-19 15:02'
         message: Added offline installation steps
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-14 12:09'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-14 12:00'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-14 12:00'
         message: Updated steps
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-07 18:04'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-07 17:22'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-07 17:22'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-07 17:22'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-07 17:22'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-07 15:08'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-15 12:07'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-05 16:52'
         message: ''
         version: '1'
 
 ---
-<div class="row"><div class="column medium-8">
+
 
 Packages can be installed directly [from the Admin Center](#installing-a-package-from-the-admin-center) or [from the Marketplace](#installing-a-package-from-the-market). Packages can be addons bringing new features, hotfixes providing corrections and small improvements. Some Nuxeo Packages are totally public, not requiring a Connect account to install them. Others can only be installed on instances [registered on Nuxeo Connect]({{page page='registering-your-nuxeo-instance'}}).
 
@@ -128,9 +128,9 @@ The Admin Center includes a section called **Update Center** from which you can 
     The list of available packages, including hotfixes and addons, is displayed. By default, only packages compatible with your version of the Nuxeo Platform are listed.
 3.  Optionally, filter the list of packages:
 
-    *   uncheck the&nbsp;**Show only packages compatible with my distribution** box of you want to see all available packages;
-    *   select a type of package in the drop down list if you want to narrow the list to a package type (addon, hotfix);
-    *   check the **Show only new packages** box if you want to hide local packages (i.e. installed and downloaded packages) from the list.
+    - uncheck the&nbsp;**Show only packages compatible with my distribution** box of you want to see all available packages;
+    - select a type of package in the drop down list if you want to narrow the list to a package type (addon, hotfix);
+    - check the **Show only new packages** box if you want to hide local packages (i.e. installed and downloaded packages) from the list.
         ![]({{file name='packages-from-marketplace-tab-filtered.png'}} ?w=650,border=true)
 4.  Click on the **Download** link of the package you want to install.
     A download in progress page is displayed while the package is being downloaded.
@@ -274,7 +274,3 @@ Uninstalling a package can be done from the Admin Center only.
     {{/callout}}
 
 &nbsp;
-
-</div><div class="column medium-4">{{#> panel heading='In this section'}}
-
-{{/panel}}</div></div>
