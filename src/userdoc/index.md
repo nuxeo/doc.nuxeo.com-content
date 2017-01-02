@@ -2,7 +2,7 @@
 title: Nuxeo Platform User Documentation
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-01-02'
     status: ok
 labels:
     - multiexcerpt-include
