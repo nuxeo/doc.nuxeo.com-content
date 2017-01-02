@@ -171,10 +171,10 @@ Workflows can be adapted to any types of use cases like purchase requests, case 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
-*   [Serial Document Workflow]({{page page='serial-document-workflow'}})
-*   [Parallel Document Workflow]({{page page='parallel-document-workflow'}})
-*   [Delegating a Task]({{page page='delegating-a-task'}})
-*   [Reassigning a Task]({{page page='reassigning-a-task'}})
+-   [Serial Document Workflow]({{page page='serial-document-workflow'}})
+-   [Parallel Document Workflow]({{page page='parallel-document-workflow'}})
+-   [Delegating a Task]({{page page='delegating-a-task'}})
+-   [Reassigning a Task]({{page page='reassigning-a-task'}})
 
 {{/panel}}</div><div class="column medium-6">
 
