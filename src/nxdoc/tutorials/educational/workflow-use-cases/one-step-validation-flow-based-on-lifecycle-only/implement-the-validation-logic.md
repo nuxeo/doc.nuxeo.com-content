@@ -1,11 +1,11 @@
 ---
-title: Implement the validation logic
+title: Implement the Validation Logic
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-21'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - tuto-automation
 confluence:
     ajs-parent-page-id: '3345551'
@@ -117,173 +117,61 @@ history:
         version: '1'
 
 ---
-The validation logic defines what happens when the user approves the document, and what happens when he rejects it. To do that, we will create 2 automation chains:
+The validation logic defines what happens when the user approves the document, and what happens when he rejects it. To do that, we will create two automation chains:
 
-*   The validation automation chain,
-*   The reject automation chain.
+*   The validation automation chain
+*   The reject automation chain
 
-## Validation chain creation
+## Validation Chain Creation
 
 The validation automation chain will be used by the users with validationWorkflow_validation permission, to approve the document. It will:
 
-*   change the lifecycle state of the document,
-*   update the validation date property on the document,
-*   log a "Spelling review achieved" on the document audit trail.
+*   Change the lifecycle state of the document
+*   Update the validation date property on the document
+*   Log a "Document_Validated" event on the document audit trail
 
 In this step, we will just create this chain, not adding anything to call it, neither a user action nor an event handler. Actually, the chain will be called if the user "accepts" the document's approval.
 
-{{#> panel heading='To implement the validation chain:'}}
-1.  [Create the automation chain]({{page space='studio' page='use-content-automation'}}) whose operations and parameters are given below. Don't bind it to any button or event handler, just create the chain.
-{{/panel}}
+To implement the validation chain, [create the automation chain]({{page space='studio' page='use-content-automation'}}) whose operations and parameters are given below. Don't bind it to any button or event handler, just create the chain.
 
-**Validation chain parameters**
+**Automation chain ID**
 
-<div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-<th colspan="1">
+ID will be `validationWorkflow_validate`.
 
-N&deg;
+**Automation chain parameters**
 
-</th><th colspan="1">
+```
+- Context.FetchDocument
+- Document.FollowLifecycleTransition:
+    value: approve
+- Document.SetProperty:
+    xpath: "dc:valid"
+    save: "true"
+    value: "@{CurrentDate.days(7).date}"
+- Audit.LogEvent:
+    event: Document_Validated
+    category: Automation
+```
+## Reject Chain Creation
 
-Operation
+Like the validation chain, the refusal automation chain will be used by the users with Workflow_validation permission, but to reject the document. In addition, it will log a "Validation_rejected" on the document audit trail.
 
-</th><th colspan="1">
+To implement the reject chain, [create the automation chain]({{page space='studio' page='use-content-automation'}}) whose operations and parameters are given below. Don't bind it to any button or event handler, just create the chain.
 
-Parameter 1
+**Automation chain ID**
 
-</th><th colspan="1">
+ID will be `validationWorkflow_rejected`.
 
-parameter 2
+**Automation chain parameters**
 
-</th></tr><tr><td colspan="1">
+```
+- Context.FetchDocument
+- Audit.LogEvent:
+    event: Validation_rejected
+    category: Automation
+```
 
-1
-
-</td><td colspan="1">
-
-Fetch > Context Document
-
-</td><td colspan="1">
-
-_
-
-</td><td colspan="1">
-
-_
-
-</td></tr><tr><td colspan="1">
-
-2
-
-</td><td colspan="1">
-
-Document > Follow lifecycle transition
-
-</td><td colspan="1">
-
-value: `approve`
-
-</td><td colspan="1">
-
-_
-
-</td></tr><tr><td colspan="1">
-
-4
-
-</td><td colspan="1">
-
-Document > Update property
-
-</td><td colspan="1">
-
-value: `@{CurrentDate.days(7).date()}`
-
-</td><td colspan="1">
-
-xpath: `dc:valid`
-
-</td></tr><tr><td colspan="1">
-
-5
-
-</td><td colspan="1">
-
-Services > Log Event In Audit
-
-</td><td colspan="1">
-
-event: `Document_Validated`
-
-</td><td colspan="1">
-
-category: `automation`
-
-</td></tr></tbody></table></div>
-
-## Reject chain
-
-Like the validation chain, the refusal automation chain will be used by the users with validationWorkflow_validation permission, but to reject the document.
-
-{{#> panel heading='To implement the reject chain:'}}
-1.  [Create the automation chain]({{page space='studio' page='use-content-automation'}}) whose operations and parameters are given below. Don't bind it to any button or event handler, just create the chain.
-{{/panel}}
-
-**Reject chain parameters**
-
-<div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-<th colspan="1">
-
-N&deg;
-</th>
-<th colspan="1">
-
-Operation
-
-</th><th colspan="1">
-
-Parameter 1
-
-</th><th colspan="1">
-
-parameter 2
-
-</th></tr><tr><td colspan="1">
-
-1
-
-</td><td colspan="1">
-
-Fetch > Context Document
-
-</td><td colspan="1">
-
-_
-
-</td><td colspan="1">
-
-_
-
-</td></tr><tr><td colspan="1">
-
-2
-
-</td><td colspan="1">
-
-Services > Log Event In Audit
-
-</td><td colspan="1">
-
-event: `Validation_rejected`
-
-</td><td colspan="1">
-
-category: `automation`
-
-</td></tr></tbody></table></div>
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">&larr;&nbsp;[Functional Tour]({{page version='' space='nxdoc' page='functional-tour'}})</div>
+<div class="column medium-6" style="text-align:right">[Create a Task Assignment Alert]({{page version='' space='nxdoc' page='create-a-task-assignment-alert'}})&nbsp;&rarr;</div>
+</div>

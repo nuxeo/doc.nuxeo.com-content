@@ -1,12 +1,11 @@
 ---
-title: Create a task assignment alert
+title: Create a Task Assignment Alert
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-21'
     status: ok
 labels:
-    - content-review-lts2016
-    - studio-20
+    - lts2016-ok
     - tuto-automation
     - tuto-template
 confluence:
@@ -124,102 +123,46 @@ history:
         version: '1'
 
 ---
-Here, we want to create the template of the email that will be sent to the users with "Document Validation" permission to notify them that they have a document to review. This template will be used in the operation chain used to assign the validation task to users, using the "Send E-Mail" operation (see next step: [Create a button that triggers the task assignment]({{page space='studio' page='create-a-button-that-triggers-the-task-assignment'}})).
+Here, we want to create the template of the email that will be sent to the users with "Document Validation" permission to notify them that they have a document to review. This template will be used in the operation chain used to assign the validation task to users, using the "Send E-Mail" operation (see next step: [Create a button that triggers the task assignment]({{page space='nxdoc' page='create-a-button-that-triggers-the-task-assignment'}})).
 
 Create the mail template as described on the how-to [How to Customize Email Templates]({{page page='how-to-customize-email-templates'}}), with the parameters below.
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+- ID: `validationWorkflow_mail`
+- Content:
+    ```
+    Hello,<br />
+     <br />
+     The user ${Context['UserFirstName']} ${Context['UserLastName']} needs your approval for the following document :<br />
+     <br />
+     Title : ${Document['dc:title']}<br />
+     <br />
+     Description : ${Document['dc:description']}<br />
+     <br />
+     Creation date : ${Document['dc:created']}<br />
+     <br />
+     Link to the document : <a href="${docUrl}">${Document['dc:title']}</a><br />
+    ```
 
-Field
-
-</th><th colspan="1">
-
-Content
-
-</th></tr><tr><td colspan="1">
-
-ID
-
-</td><td colspan="1">
-
-`validationWorkflow_mail`
-
-</td></tr><tr><td colspan="1">
-
-Content
-
-</td><td colspan="1">
+The context variables `UserFirstName` and `UserLastName` are here to pass into a mail template the values of `CurrentUser.FirstName` and `CurrentUser.LastName`. To load these variables, you just need to put into the chain the blocks Execution Context > Set Context Variable.
 
 ```
-Hello,<br />
- <br />
- The user ${Context['UserFirstName']} ${Context['UserLastName']} needs your approval for the following document :<br />
- <br />
- Title : ${Document['dc:title']}<br />
- <br />
- Description : ${Document['dc:description']}<br />
- <br />
- Creation date : ${Document['dc:created']}<br />
- <br />
- Link to the document : <a href="${docUrl}">${Document['dc:title']}</a><br />\
+- Context.SetVar:
+    name: UserFirstName
+    value: "@{CurrentUser.FirstName}"
+- Context.SetVar:
+    name: UserLastName
+    value: " @{CurrentUser.LastName}"
 ```
 
-</td></tr></tbody></table></div>
-
-The context Variables UserFirstName and UserLastName are here to pass into a mail template the values of CurrentUser.FirstName and CurrentUser.LastName. To load these variables, you just need to put into the chain the blocks &laquo; Execution Context > Set Context Variable &raquo;.
-
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-
-N&deg;
-
-</th><th colspan="1">
-
-Operation
-
-</th><th colspan="1">
-
-Parameter 1
-
-</th><th colspan="1">
-
-parameter 2
-
-</th></tr><tr><td colspan="1">
-
-1
-
-</td><td colspan="1">
-
-Execution Context > Set Context Variable
-
-</td><td colspan="1">
-
-name: UserLastName
-
-</td><td colspan="1">
-
-value: `@{CurrentUser.LastName}`
-
-</td></tr><tr><td colspan="1">
-
-2
-
-</td><td colspan="1">
-
-Execution Context > Set Context Variable
-
-</td><td colspan="1">
-
-name: UserFirstName
-
-</td><td colspan="1">
-
-value: `@{CurrentUser.FirstName}`
-
-</td></tr></tbody></table></div>{{#> callout type='tip' }}
+{{#> callout type='tip' }}
 
 Sending an email to a group of users
 
-You can use the block &laquo; Users & Groups > Get Principal Emails &raquo; in order to load the list of users sharing the same permission (field permission) into the variable chosen into the variable name field.
+You can use the block Users & Groups > Get Principal Emails in order to load the list of users sharing the same permission (field permission) into the variable chosen into the variable name field.
 
 {{/callout}}
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">&larr;&nbsp;[Implement the Validation Logic]({{page version='' space='nxdoc' page='implement-the-validation-logic'}})</div>
+<div class="column medium-6" style="text-align:right">[Create a Button That Triggers the Task Assignment]({{page version='' space='nxdoc' page='create-a-button-that-triggers-the-task-assignment'}})&nbsp;&rarr;</div>
+</div>
