@@ -2,7 +2,7 @@
 title: Workflows
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-01-02'
     status: ok
 labels:
     - workflow
@@ -135,7 +135,7 @@ To submit a task, read the following documentation for [serial workflow]({{page
 
 ## Delegating a Task
 
-When you know you might not be able to perform a task, you can delegate it to another user or group of users. Delegating means that they can do the task at your place, but you are not unassigned the task. As soon as you or a delegatee reviews the document, the task is closed for you and all the delegatees. On the contrary, if you do the task before the delegatees, the task is considered done for everyone.
+When you know you might not be able to perform a task, you can delegate it to another user or group of users. Delegating means that they can do the task at your place, but you are not unassigned the task. As soon as you or a delegate reviews the document, the task is closed for you and all the delegatees. On the contrary, if you do the task before the delegatees, the task is considered done for everyone.
 
 For more information about delegation, see [this page]({{page page='delegating-a-task'}}).
 
@@ -171,10 +171,10 @@ Workflows can be adapted to any types of use cases like purchase requests, case 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
-*   [Serial Document Workflow]({{page page='serial-document-workflow'}})
-*   [Parallel Document Workflow]({{page page='parallel-document-workflow'}})
-*   [Delegating a Task]({{page page='delegating-a-task'}})
-*   [Reassigning a Task]({{page page='reassigning-a-task'}})
+- [Serial Document Workflow]({{page page='serial-document-workflow'}})
+- [Parallel Document Workflow]({{page page='parallel-document-workflow'}})
+- [Delegating a Task]({{page page='delegating-a-task'}})
+- [Reassigning a Task]({{page page='reassigning-a-task'}})
 
 {{/panel}}</div><div class="column medium-6">
 
