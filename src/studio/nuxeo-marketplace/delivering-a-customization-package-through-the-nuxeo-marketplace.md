@@ -112,7 +112,7 @@ The Nuxeo Marketplace also provides a private channel to distribute packages to 
 
 The purpose of the private channel is to enable Nuxeo Platform users who do some customization on the Platform to easily distribute their customization. Here are some examples of how this private channel can be helpful.
 
-For instance, if you do some customization using Nuxeo Studio and some Java customization using Nuxeo IDE, you can create your Nuxeo Package and let other people (ex: sysadmin) easily install the whole customization through the Admin Center using a single package, instead of installing the Nuxeo Studio customization and the Nuxeo IDE customization. Worth to mention the benefits of using a Nuxeo Package such as target platform validation, various checks, rollback, dependencies or conflicts between packages, ...
+For instance, if you do some customization using Nuxeo Studio and some Java customization using the Nuxeo Generator, you can create your Nuxeo Package and let other people (ex: sysadmin) easily install the whole customization through the Admin Center using a single package, instead of installing the Nuxeo Studio customization and the Nuxeo Generator customization. Worth to mention the benefits of using a Nuxeo Package such as target platform validation, various checks, rollback, dependencies or conflicts between packages, ...
 
 As an other example, if you created your own application on top of the Nuxeo Platform and distribute to your own clients (that may do Studio customization themselves), you can use this private channel to provide hot fixes of your base application.
 
@@ -197,21 +197,18 @@ curl -i -u login:password "https://connect.nuxeo.com/nuxeo/site/marketplace/list
 
 with:
 
-*   `CLIENT_ID` = Comma-separated client IDs.
-*   `PROJECT_ID` = Comma-separated project IDs and/or names. The parameter can also include comma-separated client IDs prefixed with "`client:"`.
-*   `OWNER_ID` = A unique client ID.
+*   `CLIENT_ID`: Comma-separated client IDs.
+*   `PROJECT_ID`: Comma-separated project IDs and/or names. The parameter can also include comma-separated client IDs prefixed with `client:`.
+*   `OWNER_ID`: A unique client ID.
 
 * * *
 
-&nbsp;
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More documentation about the Marketplace'}}
 
-*   [Creating Nuxeo Packages]({{page space='nxdoc' page='creating-nuxeo-packages'}})
+- [Creating Nuxeo Packages]({{page space='nxdoc' page='creating-nuxeo-packages'}})
 
 {{/panel}}</div><div class="column medium-6">
 
-&nbsp;
 
 &nbsp;
 
