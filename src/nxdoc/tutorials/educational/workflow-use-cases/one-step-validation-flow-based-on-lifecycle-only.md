@@ -1,11 +1,11 @@
 ---
-title: One step validation flow based on lifecycle only
+title: One Step Validation Flow Based on Lifecycle Only
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-21'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - excerpt
 confluence:
     ajs-parent-page-id: '19235786'
@@ -139,10 +139,11 @@ Technically, in this tutorial, you will learn how to:
 *   Create the validation logic
 *   Define what happens in case the document is approved.
 
+{{#> callout type='info' heading='Prerequisites' }}
 
-Before starting the tutorial, you need to set up a new permission "Workflow_validation" which will be associated to Document Type "Workspaces".
+Before starting the tutorial, you need to set up a new permission `Workflow_validation` which will be associated to Document Type "Workspaces".
 You can find related documentation on how to do it with Studio, see the page [Add a new permission in the UI]({{page version='' space='studio' page='add-a-new-permission-in-the-ui'}}).
-
+{{/callout}}
 
 Start the tutorial:
 
