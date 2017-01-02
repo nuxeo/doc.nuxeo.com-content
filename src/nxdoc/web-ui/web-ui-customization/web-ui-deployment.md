@@ -80,7 +80,7 @@ Explanations about the Web UI structure:
   * {mode} is the layout mode i.e. *Create*, *View* , *Edit*, *Import*, etc.
   See the [document type]({{page page='document-types'}}) documentation for further details.
 - the `i18n` directory provides internationalization files to translate Web UI labels (See the [managing translation]({{page page='managing-translation'}}) documentation).
-- the `workflow` directory providers the layout elements to complete workflow tasks.  See the [workflow tasks]({{page page='workflow-tasks'}}) documentation for further details.
+- the `workflow` directory providers the layout elements to complete workflow tasks.  See the [workflow tasks]({{page page='web-uiworkflow-tasks'}}) documentation for further details.
 
 ## How to deploy additional Web UI resources{{> anchor 'deploy_or_override'}}
 
