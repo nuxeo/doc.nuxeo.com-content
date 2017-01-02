@@ -133,8 +133,6 @@ The **DOCUMENT_VIEWS_ITEMS** slot allows to define the available items to naviga
 
 The **DOCUMENT_VIEWS_PAGES** slot must define the pages introduced by the **DOCUMENT_VIEWS_ITEMS** slot. Each new item of **DOCUMENT_VIEWS_ITEMS** slot triggers a navigation to a page defined in this slot.
 
-Example coming soon.
-
 **Slot Model Properties**
 
 | Property   | Description           |
