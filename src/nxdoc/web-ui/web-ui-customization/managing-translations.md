@@ -2,24 +2,124 @@
 title: Managing Translations
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-02'
     status: ok
 toc: true
 labels:
+    - lts2016-ok
+    - nuxeo-web-ui
+    - customization
+    - i18n
+    - labels
 tree_item_index: 700
 
 ---
-## Managing Translations
 
-- Introduction to contribution
-- Reference to all types of contributions and specificities
+Nuxeo Web UI supports element internationalization. Every element that displays text to the user must extend the [I18nBehavior](https://github.com/nuxeo/nuxeo-ui-elements/blob/master/nuxeo-i18n-behavior.html), which provides the `i18n`
+method to dynamically load labels according to the current locale.
 
-### Studio
+```xml
+<span>[[i18n('label.app.usersAndGroups')]]</span>
+```
 
-- Perform contribution with Studio
-- Example with screenshots
+The `I18nBehavior` relies on a locale resolver, which is an object responsible for fetching translation resources (i.e., files),
+and a global translation function, which takes a key and translates it according to the currently selected language, based
+on the loaded internationalization resources. Both can be overridden.
 
-### Code
+The [default locale resolver](https://github.com/nuxeo/nuxeo-ui-elements/blob/master/nuxeo-i18n.js) (`XHRLocaleResolver`)
+loads translation files stored in the `i18n` folder, which has one english reference file, named `messages.json`, and
+several other files, one for each of the translations, following the pattern `messages-{language}.json`. The default
+translation function converts label ids into messages, and it defaults to english if no language is specified in the
+`window.nuxeo.I18n.language` global variable.
 
-- Perform contribution with code
-- Example with snippet
+{{#> callout type='warning' }}
+For now, the Web UI uses the same language as the web browser, but this behavior might differ in the final version.
+{{/callout}}
+
+## Contributing Labels
+
+Labels can be contributed to the Web UI by adding or overriding the JSON messages files in the `i18n` folder. The JSON
+objects therein possess key-value pairs, where each key is a unique id for the label and the value is the translated
+message itself. Keys usually begin with the name of the element where the label is used in (excluding the "nuxeo-" prefix),
+followed by a **dot** (.). This measure makes it easier to identify where a given key is used and prevents duplicates.
+As an example, take the following three labels which are used in the `nuxeo-activity` element:
+
+{{#> panel type='code' heading='nuxeo-web-ui/i18n/messages.json'}}
+```json
+{
+  "activity.addedToCollection": "added to collection",
+  "activity.auditLogRoute":"requested audit",
+  "activity.documentCheckedIn": "created a version",
+  ...
+}
+```
+{{/panel}}
+
+{{#> callout type='note' }}
+Nuxeo Web UI relies on Nuxeo UI Elements, which has its own localization. However, labels from Nuxeo UI Elements can
+be overridden in Nuxeo Web UI's message files.
+{{/callout}}
+
+## Contributing Locale Resolvers
+
+A locale resolver is an object that knows how to load internationalization resources. This provides for a modular and
+configurable approach to loading translations, allowing custom resolvers to be specified for different types
+configurations. For an example of how to contribute a resolver, here's the default one used by the Web UI, which loads
+JSON objects via asynchronous XHR from a given folder (i.e. `msgFolder`):
+
+```JavaScript
+function XHRLocaleResolver(msgFolder) {
+  return function() {
+    return new Promise(function(resolve,reject) {
+      var language = window.nuxeo.I18n.language || 'en';
+      var url = msgFolder +  '/messages.' + language + '.json';
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', url, true);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          window.nuxeo.I18n[language] = JSON.parse(this.response); // cache this locale.
+          resolve(this.response);
+        }
+      };
+      xhr.onerror = function() {
+        console.error("Failed to load " + url);
+        reject(this.statusText);
+      };
+      xhr.send();
+    });
+  }
+}
+```
+
+After setting up the resolver, you must reload to current locale for your changes to take effect. This can be done as
+follows:
+
+```JavaScript
+window.nuxeo.I18n.localeResolver = new XHRLocaleResolver(msgFolder);
+window.nuxeo.I18n.loadLocale();
+```
+
+## Overriding the Translation Function
+
+The translation function can also be overridden to fit different needs, by redefining `window.nuxeo.I18n.translate`.
+Here's an example:
+
+```JavaScript
+window.nuxeo.I18n.translate = function (key) {
+  var language = window.nuxeo.I18n.language || 'en';
+  var value = (window.nuxeo.I18n[language] && window.nuxeo.I18n[language][key]) || key;
+  var params = Array.prototype.slice.call(arguments, 1);
+  for (var i = 0; i < params.length; i++) {
+    value = value.replace('{' + i + '}', params[i]);
+  }
+  return value;
+};
+```
+
+{{#> callout type='note'}}
+Customizations on locale resolvers and the translation function can be made from within an custom element or a standalone script.
+{{/callout}}
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Blog Posts'}}
+- [Decoupled Global Localization with Polymer](https://www.nuxeo.com/blog/decoupled-global-localization-with-polymer/)
+{{/panel}}</div></div>
