@@ -256,7 +256,9 @@ X
 
 </td></tr><tr><td colspan="1">
 
-RAW (see [`ImageMagick supported formats`](https://www.imagemagick.org/script/formats.php))
+RAW
+</br>
+(see [ImageMagick supported formats](https://www.imagemagick.org/script/formats.php))
 
 </td><td colspan="1">
 
