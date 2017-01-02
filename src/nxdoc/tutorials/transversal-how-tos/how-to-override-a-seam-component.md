@@ -131,9 +131,8 @@ In this example, we overrode the [startupHelper](https://github.com/nuxeo/nuxeo-
 <div class="column medium-6">
 {{#> panel heading='Related Documentation'}}
 
-- [Nuxeo JSF UI]({{page page='nuxeo-jsf-ui'}})
 - [JSF UI Limitations]({{page page='jsf-ui-limitations'}})
-
+- [JSF UI Framework]({{page page='jsf-ui-framework'}})
 {{/panel}}
 </div>
 </div>

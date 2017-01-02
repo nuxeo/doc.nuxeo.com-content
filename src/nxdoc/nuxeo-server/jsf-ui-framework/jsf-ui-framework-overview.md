@@ -345,7 +345,7 @@ However, if you think the custom UI is the way to go, we'll be happy to help you
 This chapter presents the limitations to the Seam/JSF web application.
 {{! /excerpt}}
 
-* **Back and Next Buttons Paradigm and JSF in the Nuxeo Platform**
+### Back and Next Buttons Paradigm and JSF in the Nuxeo Platform
 
 Nuxeo Platform navigation is based solely on the JSF library.
 
@@ -357,14 +357,12 @@ Those unwanted displays are hard to fix: it could be done by pushing "by hand" s
 
 So if you're massively using POST action, the solution is to train the users to never activate/use the Back and the Next buttons when using the Nuxeo Platform.
 
-* **[Default Widget Types Known Limitations]({{page page='default-widget-types-known-limitations'}})**
+### [Default Widget Types Known Limitations]({{page page='default-widget-types-known-limitations'}})
     {{{excerpt 'Default Widget Types Known Limitations'}}}
 
+***
 
-## Pages Index
-
-*   [JSF Page Layout System Overview]({{page space='NXDOC' page='JSF Page+Layout+System+Overview'}})
-*   [Web UI Limitations]({{page space='NXDOC' page='Web UI+Limitations'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This chapter presents the limitations to the Seam/JSF web application.</span>
-*   [Web UI How-To Index]({{page space='NXDOC' page='Web UI+How-To+Index'}})
-*   [Upgrade to JSF2]({{page space='NXDOC' page='Upgrade to+JSF2'}})&nbsp;&mdash;&nbsp;<span class="smalltext">The Nuxeo Platform has been upgraded to JSF 2 for the 6.0 version. This page provides tools and notes to help you migrate your custom Nuxeo projects to this version.</span>
-*   [JSF and Ajax Tips and How-To Index]({{page space='NXDOC' page='JSF and+Ajax+Tips+and+How-To+Index'}})
+{{#> panel heading='Related Documentation'}}
+- [JSF Page Layout System Overview]({{page space='NXDOC' page='JSF Page+Layout+System+Overview'}})
+- [JSF and Ajax Tips and How-To Index]({{page space='NXDOC' page='JSF and+Ajax+Tips+and+How-To+Index'}})
+{{/panel}}
