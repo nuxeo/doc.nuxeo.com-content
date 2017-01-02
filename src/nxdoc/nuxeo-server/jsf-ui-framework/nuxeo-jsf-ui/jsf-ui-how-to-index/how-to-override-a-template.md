@@ -56,7 +56,7 @@ history:
         version: '1'
 
 ---
-The purpose of this how-to is to learn how to override a default Nuxeo template. It considers that you are able to create a new bundle and the required files. Otherwise please refer to the page [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}}) or use Nuxeo IDE.
+The purpose of this how-to is to learn how to override a default Nuxeo template. It considers that you are able to create a new bundle and the required files. Otherwise please refer to the page [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}}) or use the Nuxeo Generator.
 
 {{#> callout type='note' }}
 
@@ -70,7 +70,7 @@ Look for the name of the template you want to override and its path on the serve
 
 # Step 2: Creating the File in the Bundle
 
-In your bundle, create a new XHTML file with the exact same name and in the same folder structure as the original one. In usual Nuxeo bundles, the XHTML&nbsp;files are located under `resources/web/nuxeo.war/`.
+In your bundle, create a new XHTML file with the exact same name and in the same folder structure as the original one. In usual Nuxeo bundles, the XHTML files are located under `resources/web/nuxeo.war/`.
 
 For this example, we will override the `nuxeo_footer_template.xhtml` template. It is located in the folder ``${nuxeo_server}`/nxserver/nuxeo.war/incl/`.
 
@@ -104,29 +104,32 @@ In the Nuxeo Platform, the WAR file is generated each time you start the server 
 
 {{/panel}}
 
-&nbsp;
-
 *   `org.nuxeo.ecm.webapp.ui` is actually the symbolic name of the bundle we would like to override. You can find this information in the `MANIFEST.MF` file of the bundle.
-*   The `<require>` tag makes sure thatyour bundle will be deployed after the default one.&nbsp;This tag is also used in the contributions to the extension services to be sure that they will be deployed after the bundles listed in the `require` tags.
+*   The `<require>` tag makes sure thatyour bundle will be deployed after the default one. This tag is also used in the contributions to the extension services to be sure that they will be deployed after the bundles listed in the `require` tags.
 
 *   The `<install>` section describes what should be installed.
 
 For more information about the bundle deployment, do not hesitate to read the page [Understanding Bundles Deployment]({{page page='understanding-bundles-deployment'}}).
 
-&nbsp;
-
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related How-Tos'}}
 
 - [Getting Started with Nuxeo Generator]({{page page='getting-started-with-nuxeo-generator'}})
 - [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}})
 - [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
+{{/panel}}
+</div>
+<div class="column medium-6">
+{{#> panel heading='Related How-Tos'}}
 
 - [Runtime and Component Model]({{page page='runtime-and-component-model'}})
 - [Understanding Bundles Deployment]({{page page='understanding-bundles-deployment'}})
 - [Writing a Bundle Manifest]({{page page='writing-a-bundle-manifest'}})
 
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>

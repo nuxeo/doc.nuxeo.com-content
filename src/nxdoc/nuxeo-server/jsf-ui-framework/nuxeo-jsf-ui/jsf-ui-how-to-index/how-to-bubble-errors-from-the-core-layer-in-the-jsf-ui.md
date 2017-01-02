@@ -114,7 +114,7 @@ history:
         version: '1'
 
 ---
-The Nuxeo Platform proposes an easy model for implementing custom logic through the [Event Listener system]({{page page='events-and-listeners'}}). Sometimes, you want to "bubble" in the UI up to the user errors that happens in that lower layer. This page explains how this can be done by using the&nbsp;RecoverableClientException mechanism, throughout an example that executes a chain in the listener which can easily be configured using Studio. In the end, this provides a nice pattern for implementing&nbsp;integrity checks based on automation.
+The Nuxeo Platform proposes an easy model for implementing custom logic through the [Event Listener system]({{page page='events-and-listeners'}}). Sometimes, you want to "bubble" in the UI up to the user errors that happens in that lower layer. This page explains how this can be done by using the RecoverableClientException mechanism, throughout an example that executes a chain in the listener which can easily be configured using Studio. In the end, this provides a nice pattern for implementing integrity checks based on automation.
 
 {{#> callout type='note' }}
 
@@ -123,8 +123,6 @@ Make sure that none of the listeners running before your custom listener modify 
 {{/callout}}
 
 #### Example
-
-For custom codes, don't hesitate to use Nuxeo IDE.
 
 1.  Create a custom listener (e.g. listening to About To Create event). This listener is going to trigger your Automation chain.
 
@@ -217,7 +215,7 @@ For custom codes, don't hesitate to use Nuxeo IDE.
 
     ```
 
-3.  Check one last validation rule and throw a CustomBubbleException&nbsp;in case of one validation at least has failed.
+3.  Check one last validation rule and throw a CustomBubbleException in case of one validation at least has failed.
 
     ```java
     package org.nuxeo.sample;
@@ -278,20 +276,22 @@ For custom codes, don't hesitate to use Nuxeo IDE.
     Here is the result after trying to create a document: The end user sees error message displaying all collected invalidations:
     ![]({{file name='Screenshot 2014-04-28 15.42.55.png'}} ?w=300,h=127,border=true)
 
-&nbsp;
-
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related pages in current documentation'}}
 
 *   [JSF UI How-To Index]({{page page='jsf-ui-how-to-index'}})
 *   [Uploading Custom Operations in Nuxeo Studio]({{page space='idedoc' page='uploading-custom-operations-in-nuxeo-studio'}})
 *   [Contributing an Operation]({{page page='contributing-an-operation'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
+<div class="column medium-6">
+
 
 &nbsp;
 
-&nbsp;
-
-</div></div>
+</div>
+</div>

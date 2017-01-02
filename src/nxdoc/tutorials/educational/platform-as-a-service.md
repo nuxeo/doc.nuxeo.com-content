@@ -76,8 +76,6 @@ This document explains how the Nuxeo Platform can be used to provide an applicat
 
 {{! /excerpt}}
 
-&nbsp;
-
 ## Target Use Cases
 
 ### SaaS Deployment
@@ -132,12 +130,12 @@ All the use cases above have in common that:
 The Nuxeo Platform provides the tools for achieving that:
 
 *   A component model and packaging model so that you can have three cleanly separated layers
-    *   The&nbsp;components provided by the Nuxeo Platform that handle all the infrastructure issue
-    *   The&nbsp;components you want to build for your custom application
+    *   The components provided by the Nuxeo Platform that handle all the infrastructure issue
+    *   The components you want to build for your custom application
     *   The components each project / client may want to build
 *   Tools to make configuration and extension building easy
     *   Nuxeo Studio: to manage all your business configuration
-    *   Nuxeo IDE / Nuxeo Codenvy: to build extensions
+    *  Nuxeo Generator: to build extensions
 *   A packaging model and deployment system
 
 ![](https://s3.amazonaws.com/media-p.slid.es/uploads/thierrydelprat/images/703090/devpipe.png)
@@ -319,15 +317,9 @@ However, when looking in more details, each region should have access to two rep
 *   A corporate repository, shared across all regions
 *   A local repository, specific to one region
 
-The Nuxeo Platform and nuxeo.io provides the required&nbsp;infrastructure:
+The Nuxeo Platform and nuxeo.io provides the required infrastructure:
 
 *   Platform as a Service
 *   Multi-repositories support
 
 ![](https://www.lucidchart.com/publicSegments/view/54511437-a558-457c-a92e-551e0a0090b1/image.png)
-
-&nbsp;
-
-&nbsp;
-
-* * *
