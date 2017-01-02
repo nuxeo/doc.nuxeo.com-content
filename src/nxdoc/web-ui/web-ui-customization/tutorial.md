@@ -17,7 +17,8 @@ tree_item_index: 400
 
 In this tutorial we'll guide you through customizing Nuxeo Web UI and deploying your customization. We're going to
 address to different customization approaches: by **overriding dynamic layouts** and via **slots**. In the former case
-we'll edit a view layout for a popular document type, whereas in the latter we're going to contribute a new [Document Action](http://localhost:3001/nxdoc/web-ui-slots/#document_actions).
+we'll edit a view layout for a popular document type, whereas in the latter we're going to contribute a new
+[Document Action]({{page page='web-ui-slots'}}/#document_actions).
 
 ## Setup
 
@@ -36,7 +37,7 @@ Let's start by installing Nuxeo Generator and scaffolding a new bundle:
 ```bash
 $ npm install -g yo generator-nuxeo
 $ mkdir -p nuxeo-customization-sample && cd $_
-$ yo nuxeo polymer
+$ yo nuxeo
 ```
 
 The generator will now ask a few questions for which the default values will suffice. We'll assume that the parent id
@@ -248,6 +249,6 @@ Nuxeo-Component: OSGI-INF/sample-webresources-contrib.xml
 And we're good to go! You just need to build and deploy your bundle and we'll now have a new action to display the facets
 of any document.
 
-![]({{file name='my_document_action.png'}} ?border=true)
+![]({{file name='my_document_action.png'}} ?w=200,border=true)
 
-![]({{file name='my_document_action_popup.png'}} ?border=true)
+![]({{file name='my_document_action_popup.png'}} ?w=150,border=true)
