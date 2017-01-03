@@ -2,10 +2,10 @@
 title: Content Views
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-03'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - link-update
     - content-view
     - document-content-view
@@ -475,6 +475,12 @@ The Nuxeo Content View framework makes it possible to define such an object, by 
       </pattern>
       <parameter>#{currentDocument.id}</parameter>
       <sort column="dc:title" ascending="true" />
+      <quickFilters>
+        <quickFilter name="myQuickFilter">
+            <clause>dc:title IN ('Title 1', 'Title 2')</clause>
+            <sort column="dc:creator" ascending="true" />
+        </quickFilter>
+      </quickFilters>
       <pageSize>20</pageSize>
     </coreQueryPageProvider>
 
@@ -525,6 +531,12 @@ The main difference between `properties` and `parameters` is that properties wil
 ###### sort elements
 
 The&nbsp;`sort` element defines the default sort, that can be changed later through the interface. There can be any number of&nbsp;`sort` elements. The `sortInfosBinding` element can also be defined: it can resolve an EL expression in case the sort infos are held by a third party instance (document, Seam component...) and will be used instead of the default sort information if not null or empty. The EL expression can either resolve to a list of `org.nuxeo.ecm.core.api.SortInfo` instances, or a list of map items using keys `sortColumn` (with a String value) and `sortAscending` (with a boolean value).
+
+###### quickFilter elements
+
+Since version 8.10, the&nbsp;`quickFilter` element enables to refine the results obtained by a search. There can be any number of&nbsp;`quickFilter` elements. Each quick filter is composed of a&nbsp;`clause` element which enables to extend the query, and additional&nbsp;`sort` elements.  
+The quick filters appears in the interface as buttons where each action on a button enables or disables its associated quick filter. 
+In the previous example, activating "myQuickFilter" will display the children of the current document with the titles "Title1" or "Title2". The search results will be ordered by creator.
 
 ###### pageSize elements
 
@@ -870,16 +882,16 @@ If several content views are filled in the same category, both will be displayed
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
-*   [How to Configure a New Default Search Form in the Search Tab]({{page page='how-to-configure-a-new-default-search-form-in-the-search-tab'}})
-*   [How to Display Non-Folderish Documents (Files, Note, ...) in the Left Tree]({{page page='how-to-display-non-folderish-documents-files-note-in-the-left-tree'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
+- [How to Configure a New Default Search Form in the Search Tab]({{page page='how-to-configure-a-new-default-search-form-in-the-search-tab'}})
+- [How to Display Non-Folderish Documents (Files, Note, ...) in the Left Tree]({{page page='how-to-display-non-folderish-documents-files-note-in-the-left-tree'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [Document Content Views]({{page page='document-content-views'}})
-*   [Content Views Display]({{page page='content-views-display'}})
-*   [Page Providers]({{page page='page-providers'}})
-*   [Content Views in Nuxeo Studio]({{page space='studio' page='content-views'}})
+- [Document Content Views]({{page page='document-content-views'}})
+- [Content Views Display]({{page page='content-views-display'}})
+- [Page Providers]({{page page='page-providers'}})
+- [Content Views in Nuxeo Studio]({{page space='studio' page='content-views'}})
 
 {{/panel}}</div></div>
