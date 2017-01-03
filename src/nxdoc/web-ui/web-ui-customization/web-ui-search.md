@@ -113,7 +113,7 @@ defines the icons to be displayed in the left drawer menu.
 ```properties
 label="dam.assets.heading"
 ```
-is the key label to be retrieved from [i18n]({{[age page='managing-translation']}}) resources to be used as tooltip in the left drawer menu.
+is the key label to be retrieved from [i18n]({{page page='managing-translations'}}) resources to be used as tooltip in the left drawer menu.
 
 ### Meaningful properties when defining your own search
 
