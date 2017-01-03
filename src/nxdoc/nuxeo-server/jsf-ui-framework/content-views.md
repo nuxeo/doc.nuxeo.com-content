@@ -882,16 +882,16 @@ If several content views are filled in the same category, both will be displayed
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
-*   [How to Configure a New Default Search Form in the Search Tab]({{page page='how-to-configure-a-new-default-search-form-in-the-search-tab'}})
-*   [How to Display Non-Folderish Documents (Files, Note, ...) in the Left Tree]({{page page='how-to-display-non-folderish-documents-files-note-in-the-left-tree'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
+- [How to Configure a New Default Search Form in the Search Tab]({{page page='how-to-configure-a-new-default-search-form-in-the-search-tab'}})
+- [How to Display Non-Folderish Documents (Files, Note, ...) in the Left Tree]({{page page='how-to-display-non-folderish-documents-files-note-in-the-left-tree'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [Document Content Views]({{page page='document-content-views'}})
-*   [Content Views Display]({{page page='content-views-display'}})
-*   [Page Providers]({{page page='page-providers'}})
-*   [Content Views in Nuxeo Studio]({{page space='studio' page='content-views'}})
+- [Document Content Views]({{page page='document-content-views'}})
+- [Content Views Display]({{page page='content-views-display'}})
+- [Page Providers]({{page page='page-providers'}})
+- [Content Views in Nuxeo Studio]({{page space='studio' page='content-views'}})
 
 {{/panel}}</div></div>
