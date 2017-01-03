@@ -475,6 +475,12 @@ The Nuxeo Content View framework makes it possible to define such an object, by 
       </pattern>
       <parameter>#{currentDocument.id}</parameter>
       <sort column="dc:title" ascending="true" />
+      <quickFilters>
+        <quickFilter name="myQuickFilter">
+            <clause>dc:title IN ('Title 1', 'Title 2')</clause>
+            <sort column="dc:creator" ascending="true" />
+        </quickFilter>
+      </quickFilters>
       <pageSize>20</pageSize>
     </coreQueryPageProvider>
 
@@ -525,6 +531,11 @@ The main difference between `properties` and `parameters` is that properties wil
 ###### sort elements
 
 The&nbsp;`sort` element defines the default sort, that can be changed later through the interface. There can be any number of&nbsp;`sort` elements. The `sortInfosBinding` element can also be defined: it can resolve an EL expression in case the sort infos are held by a third party instance (document, Seam component...) and will be used instead of the default sort information if not null or empty. The EL expression can either resolve to a list of `org.nuxeo.ecm.core.api.SortInfo` instances, or a list of map items using keys `sortColumn` (with a String value) and `sortAscending` (with a boolean value).
+
+###### quickFilter elements
+
+Since version 8.10, the&nbsp;`quickFilter` element enables to refine the results obtained by a search. There can be any number of&nbsp;`quickFilter` elements. Each quick filter is composed of a&nbsp;`clause` element which enables to extend the query, and additional&nbsp;`sort` elements.  
+The quick filters appears in the interface as buttons where each action on a button enables or disables its associated quick filter. 
 
 ###### pageSize elements
 
