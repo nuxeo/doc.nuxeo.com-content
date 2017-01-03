@@ -20,6 +20,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/boPjAQ'
     source_link: /display/NXDOC/Web+UI+Overview
 tree_item_index: 100
+hidden: true
 history:
     -
         author: Solen Guitter
