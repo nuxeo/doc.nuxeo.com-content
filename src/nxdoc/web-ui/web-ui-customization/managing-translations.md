@@ -2,7 +2,7 @@
 title: Managing Translations
 review:
     comment: ''
-    date: '2017-01-02'
+    date: '2017-01-03'
     status: ok
 toc: true
 labels:
@@ -11,6 +11,7 @@ labels:
     - customization
     - i18n
     - labels
+    - localization
 tree_item_index: 700
 
 ---
@@ -28,9 +29,10 @@ on the loaded internationalization resources. Both can be overridden.
 
 The [default locale resolver](https://github.com/nuxeo/nuxeo-ui-elements/blob/master/nuxeo-i18n.js) (`XHRLocaleResolver`)
 loads translation files stored in the `i18n` folder, which has one english reference file, named `messages.json`, and
-several other files, one for each of the translations, following the pattern `messages-{language}.json`. The default
-translation function converts label ids into messages, and it defaults to english if no language is specified in the
-`window.nuxeo.I18n.language` global variable.
+several other files, one for each of the translations, following the pattern `messages-{language}.json`. Here, `language`
+is currently retrieved from the browser with the expression `navigator.language || navigator.userLanguage` and stored in the
+`window.nuxeo.I18n.language` global variable. The default translation function converts label ids into messages, and it
+defaults to english if no language is specified.
 
 {{#> callout type='warning' }}
 For now, the Web UI uses the same language as the web browser, but this behavior might differ in the final version.
