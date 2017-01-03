@@ -23,7 +23,7 @@ Nuxeo Web UI comes with the *Default Search* and *Expired Search* both plugged o
 | ![]({{file name='DEFAULT_SEARCH.png'}} ?w=400,border=true) | ![]({{file name='EXPIRED_SEARCH.png'}} ?w=400,border=true) |
 
 Within the Web UI, a search is composed of 2 main parts:
- - the search form displayed the left hand side dawer panel.
+ - the search form displayed the left hand side drawer panel.
  - the search result panel displayed in the right hand side main content.
 
  ![]({{file name='SEARCH_COMPOSITION.png'}} ?w=600,border=true)
