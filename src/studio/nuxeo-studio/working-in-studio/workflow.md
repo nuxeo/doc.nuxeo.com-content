@@ -97,7 +97,7 @@ You should first read the [Workflow pages of the Customization and Development s
 - [Workflow creation form]({{page page='workflow-creation-form'}})
 - [Definition tab]({{page page='definition-tab'}})
 - [Variables tab]({{page page='variables-tab'}})
-- [Availability tab]({{page page='activation-tab'}})
+- [Activation tab]({{page page='activation-tab'}})
 - [Graph tab]({{page page='graph-tab'}})
 {{/panel}}
 </div>
