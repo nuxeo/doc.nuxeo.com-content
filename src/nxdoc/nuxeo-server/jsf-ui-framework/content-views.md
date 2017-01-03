@@ -2,10 +2,10 @@
 title: Content Views
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-03'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - link-update
     - content-view
     - document-content-view
@@ -536,6 +536,7 @@ The&nbsp;`sort` element defines the default sort, that can be changed later thro
 
 Since version 8.10, the&nbsp;`quickFilter` element enables to refine the results obtained by a search. There can be any number of&nbsp;`quickFilter` elements. Each quick filter is composed of a&nbsp;`clause` element which enables to extend the query, and additional&nbsp;`sort` elements.  
 The quick filters appears in the interface as buttons where each action on a button enables or disables its associated quick filter. 
+In the previous example, activating "myQuickFilter" will display the children of the current document with the titles "Title1" or "Title2". The search results will be ordered by creator.
 
 ###### pageSize elements
 
