@@ -253,6 +253,20 @@ Web Components allow us to finally create reusable custom elements which can int
 
 Having a standard component model enables us to really take advantage of the browser as a platform to build rich web applications and keeps our code cleaner and less expensive to maintain.
 
+#### Web Components vs JSF
+
+**Similarities**
+
+* **Reusability**: Custom elements are like JSF components: they hold their logic, their model, they can be based on custom templates and they provide data-binding. They authorize you to build advanced components with reusability in mind, which is a key point when you are building a platform.
+* **Modularity**: Close to native HTML chunks, Custom Elements are compatible with templating and composition design, which is absolutely necessary for building an extensible and modular application
+* **Decoupling**: Another aspect of Seam/JSF that helped us a lot with was the decoupling supported by the event/observer pattern, which allowed us to deploy new SEAM components without having to strictly reference them in other components. We can use custom events to have a similar approach with Custom Elements.
+* **Databinding**: Web Components frameworks such as Polymer have added a notion very similar to the JSF EL for having advanced data-binding in attribute values, with easy references to scripts variables and methods, a bit like the way Seam component methods can be referenced from the JSF EL. This makes it very easy to wire Web Components together and provide an easy to understand pattern for implementing what you need.
+
+**Web Components Advantages**
+
+* **Client-Side versus Server-Side**: Web Components is a client side technology, while JSF happens server side. Aside from all the stateless/stateful design comparison that clearly goes in favor of stateless design, the necessity of having a complete tree representation of your page server-side added a lot of complexity in the JSF cycle and its framework apprehension.
+* **Agnosticism**: JSF is a standard limited to the Java World while Web Components are a W3C specification.
+
 ### Polymer
 
 [Polymer](https://www.polymer-project.org/) presents itself as a new type of library for the web built on top of Web Components and designed to make it easier and faster for developers to create great, reusable components for the modern web.
