@@ -12,8 +12,7 @@ tree_item_index: 100
 ## Requirements
 To be able to synchronize folders on your computer, you need to install the Nuxeo Drive client on your computer.
 We provide OS-specific installers for Mac OS X and Windows, available from the Nuxeo Drive tab of the Home.
-A Linux installer will come shortly.
-For Linux, the Python package must support PyQt.Webkit.
+For Linux, an installer will come shortly and you need a PyQt4 with WebKit support.
 
 ### Known Working Configurations for OS
 *   Windows:  Windows 7 and 8, 32b and 64b
