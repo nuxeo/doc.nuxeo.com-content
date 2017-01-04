@@ -2,7 +2,7 @@
 title: Document Resources Endpoints
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-04'
     status: ok
 labels:
     - content-review-lts2016
@@ -21,7 +21,7 @@ confluence:
     shortlink: hYEPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/hYEPAQ'
     source_link: /display/NXDOC/Document+Resources+Endpoints
-tree_item_index: 500
+tree_item_index: 100
 history:
     -
         author: Kevin Leturc

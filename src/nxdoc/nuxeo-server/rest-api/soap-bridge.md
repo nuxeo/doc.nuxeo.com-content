@@ -20,7 +20,7 @@ confluence:
     shortlink: GIAO
     shortlink_source: 'https://doc.nuxeo.com/x/GIAO'
     source_link: /display/NXDOC/SOAP+Bridge
-tree_item_index: 1500
+tree_item_index: 2000
 history:
     -
         author: Arnaud Kervern

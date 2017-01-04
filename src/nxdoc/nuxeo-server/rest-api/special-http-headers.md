@@ -2,7 +2,7 @@
 title: Special HTTP Headers
 review:
     comment: ''
-    date: '2017-12-06'
+    date: '2017-01-04'
     status: ok
 labels:
     - lts2016-ok
@@ -22,7 +22,7 @@ confluence:
     shortlink: mwM5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/mwM5AQ'
     source_link: /display/NXDOC/Special+HTTP+Headers
-tree_item_index: 200
+tree_item_index: 300
 history:
     -
         author: Thierry Martins

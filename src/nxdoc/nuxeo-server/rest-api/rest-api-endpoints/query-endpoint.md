@@ -1,8 +1,8 @@
 ---
-title: Query Endpoint
+title: Query Endpoint (Deprecated)
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-04'
     status: ok
 details:
     howto:
@@ -33,7 +33,7 @@ confluence:
     shortlink: qAc5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/qAc5AQ'
     source_link: /display/NXDOC/Query+Endpoint
-tree_item_index: 700
+tree_item_index: 800
 history:
     -
         author: Gabriel Barata
@@ -246,9 +246,9 @@ history:
 
 The query endpoint allows REST clients to query the Nuxeo repository.
 
-{{#> callout type='info' }}
+{{#> callout type='warning' }}
 
-Since 8.3 this endpoint is deprecated in favor of the [Search Endpoint]({{page page='search-endpoint'}}).
+Since 8.3 this endpoint has been deprecated in favor of the [Search Endpoint]({{page page='search-endpoint'}}).
 
 {{/callout}}
 

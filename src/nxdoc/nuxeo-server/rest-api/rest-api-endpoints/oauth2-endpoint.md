@@ -3,7 +3,7 @@ title: OAuth2 Endpoint
 description: A REST endpoint to retrieve oauth2 provider data.
 review:
     comment: ''
-    date: '2015-12-06'
+    date: '2017-01-04'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - endpoint
     - oauth2
 toc: true
-tree_item_index: 600
+tree_item_index: 500
 
 ---
 The OAuth2 endpoint allows REST clients to retrieve information about OAuth2 providers. It is available since 8.4.

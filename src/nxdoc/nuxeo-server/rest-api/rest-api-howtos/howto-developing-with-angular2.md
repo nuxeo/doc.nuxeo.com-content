@@ -1,8 +1,8 @@
 ---
-title: Developing with Angular2
+title: "HOWTO: Developing with Angular2"
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-01-04'
     status: ok
 labels:
     - lts2016-ok
@@ -25,7 +25,7 @@ confluence:
     shortlink: 0gKIAQ
     shortlink_source: 'https://doc.nuxeo.com/x/0gKIAQ'
     source_link: /display/NXDOC/Developing+with+AngularJS
-tree_item_index: 1700
+tree_item_index: 300
 history:
     -
         author: Solen Guitter

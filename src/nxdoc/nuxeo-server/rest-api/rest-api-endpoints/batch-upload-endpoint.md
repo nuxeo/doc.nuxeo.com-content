@@ -1,8 +1,8 @@
 ---
-title: Blob Upload for Batch Processing
+title: Batch Upload Endpoint
 review:
     comment: ''
-    date: '2016-12-12'
+    date: '2017-01-04'
     status: ok
 labels:
     - lts2016-ok
@@ -25,7 +25,7 @@ confluence:
     shortlink: OYLZ
     shortlink_source: 'https://doc.nuxeo.com/x/OYLZ'
     source_link: /display/NXDOC/Blob+Upload+for+Batch+Processing
-tree_item_index: 1200
+tree_item_index: 400
 history:
     -
         author: Gabriel Barata
@@ -152,7 +152,7 @@ history:
         date: '2013-07-03 15:19'
         message: >-
             Reported changes from 5.6 documentation on Content-Type and
-            Content-Length headers and fileIdx parameter.  
+            Content-Length headers and fileIdx parameter.
         version: '8'
     -
         author: Solen Guitter

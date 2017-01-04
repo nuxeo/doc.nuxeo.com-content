@@ -2,7 +2,7 @@
 title: Search Endpoint
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-04'
     status: ok
 details:
     howto:
@@ -35,7 +35,7 @@ confluence:
     shortlink: j4fjAQ
     shortlink_source: 'https://doc.nuxeo.com/x/j4fjAQ'
     source_link: /display/NXDOC/Search+Endpoint
-tree_item_index: 600
+tree_item_index: 200
 history:
     -
         author: Gabriel Barata

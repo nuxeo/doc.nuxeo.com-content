@@ -1,8 +1,8 @@
 ---
-title: Use Nuxeo API Playground to Discover the API
+title: "HOWTO: Nuxeo API Playground"
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-04'
     status: ok
 details:
     howto:
@@ -33,7 +33,7 @@ confluence:
     shortlink: 9QUuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/9QUuAQ'
     source_link: /display/NXDOC/Use+Nuxeo+API+Playground+to+Discover+the+API
-tree_item_index: 1600
+tree_item_index: 100
 history:
     -
         author: Solen Guitter

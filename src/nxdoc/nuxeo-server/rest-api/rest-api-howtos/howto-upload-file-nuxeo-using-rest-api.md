@@ -1,8 +1,8 @@
 ---
-title: How to Upload a File in Nuxeo Using the REST API
+title: "HOWTO: Upload a File in Nuxeo Using REST API"
 review:
     comment: ''
-    date: '2016-12-13'
+    date: '2017-01-04'
     status: ok
 details:
     howto:
@@ -36,7 +36,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/7QUuAQ'
     source_link: >-
         /display/NXDOC/How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
-tree_item_index: 1800
+tree_item_index: 200
 history:
     -
         author: Solen Guitter
@@ -309,10 +309,10 @@ You can create a document of type File and attach to it a file uploaded to a giv
 
 ```text
 POST /api/v1/path/default-domain/workspaces/myworkspace
-{  
+{
   "entity-type": "document",
   "name":"myNewDoc",
-  "type": "File",  
+  "type": "File",
   "properties" : {
     "dc:title":"My new doc",
     "file:content": {
