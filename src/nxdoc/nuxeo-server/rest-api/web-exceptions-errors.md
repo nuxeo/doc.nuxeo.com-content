@@ -2,7 +2,7 @@
 title: Web Exceptions - Errors
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-04'
     status: ok
 labels:
     - content-review-lts2016
@@ -21,7 +21,7 @@ confluence:
     shortlink: JQI5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/JQI5AQ'
     source_link: /display/NXDOC/Web+Exceptions+-+Errors
-tree_item_index: 1400
+tree_item_index: 500
 history:
     -
         author: Solen Guitter

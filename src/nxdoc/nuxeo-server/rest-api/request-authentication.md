@@ -1,8 +1,8 @@
 ---
-title: Authenticating the Requests
+title: Request Authentication
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-01-04'
     status: ok
 labels:
     - lts2016-ok
@@ -17,7 +17,7 @@ confluence:
     shortlink: 3YcZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/3YcZAQ'
     source_link: /display/NXDOC/Authenticating+the+Requests
-tree_item_index: 100
+tree_item_index: 700
 history:
     -
         author: Solen Guitter

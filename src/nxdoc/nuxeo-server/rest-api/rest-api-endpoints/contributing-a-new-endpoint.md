@@ -2,7 +2,7 @@
 title: Contributing a New Endpoint
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-04'
     status: ok
 labels:
     - content-review-lts2016
@@ -20,7 +20,7 @@ confluence:
     shortlink: noT1
     shortlink_source: 'https://doc.nuxeo.com/x/noT1'
     source_link: /display/NXDOC/Contributing+a+New+Endpoint
-tree_item_index: 400
+tree_item_index: 700
 history:
     -
         author: Solen Guitter

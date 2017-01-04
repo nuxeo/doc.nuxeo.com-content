@@ -1,8 +1,8 @@
 ---
-title: REST API How-To Index
+title: REST API HOWTOs
 review:
     comment: ''
-    date: '2016-12-23'
+    date: '2017-01-04'
     status: ok
 labels:
     - lts2016-ok

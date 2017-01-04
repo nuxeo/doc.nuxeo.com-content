@@ -1,8 +1,12 @@
 ---
-title: Blob Upload for Batch Processing
+title: Batch Upload Endpoint
 review:
     comment: ''
+<<<<<<< HEAD:src/nxdoc/nuxeo-server/rest-api/blob-upload-for-batch-processing.md
     date: '2017-01-17'
+=======
+    date: '2017-01-04'
+>>>>>>> NXDOC-1049: Reorder REST API pages:src/nxdoc/nuxeo-server/rest-api/rest-api-endpoints/batch-upload-endpoint.md
     status: ok
 labels:
     - lts2016-ok
@@ -25,7 +29,7 @@ confluence:
     shortlink: OYLZ
     shortlink_source: 'https://doc.nuxeo.com/x/OYLZ'
     source_link: /display/NXDOC/Blob+Upload+for+Batch+Processing
-tree_item_index: 1200
+tree_item_index: 400
 history:
     -
         author: Gabriel Barata
@@ -152,7 +156,7 @@ history:
         date: '2013-07-03 15:19'
         message: >-
             Reported changes from 5.6 documentation on Content-Type and
-            Content-Length headers and fileIdx parameter.  
+            Content-Length headers and fileIdx parameter.
         version: '8'
     -
         author: Solen Guitter

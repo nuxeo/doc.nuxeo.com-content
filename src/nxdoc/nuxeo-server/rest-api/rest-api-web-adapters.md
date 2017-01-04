@@ -1,5 +1,5 @@
 ---
-title: Web Adapters for the REST API
+title: REST API Web Adapters
 review:
     comment: ''
     date: '2016-12-07'
@@ -22,7 +22,7 @@ confluence:
     shortlink: 5AUuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/5AUuAQ'
     source_link: /display/NXDOC/Web+Adapters+for+the+REST+API
-tree_item_index: 800
+tree_item_index: 600
 history:
     -
         author: Solen Guitter

@@ -2,7 +2,7 @@
 title: Cross-Origin Resource Sharing (CORS)
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-04'
     status: ok
 labels:
     - content-review-lts2016
@@ -21,7 +21,7 @@ confluence:
     shortlink: vIvZ
     shortlink_source: 'https://doc.nuxeo.com/x/vIvZ'
     source_link: /pages/viewpage.action?pageId=14257084
-tree_item_index: 1300
+tree_item_index: 800
 history:
     -
         author: Frantz Fischer

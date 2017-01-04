@@ -24,7 +24,7 @@ confluence:
     shortlink: mwAz
     shortlink_source: 'https://doc.nuxeo.com/x/mwAz'
     source_link: /display/NXDOC/Command+Endpoint
-tree_item_index: 1000
+tree_item_index: 600
 history:
     -
         author: Solen Guitter

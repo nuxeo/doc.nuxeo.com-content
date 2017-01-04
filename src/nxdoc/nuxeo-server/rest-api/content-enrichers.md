@@ -1,9 +1,8 @@
 ---
-title: Content Enricher
+title: Content Enrichers
 review:
     comment: ''
     date: '2017-01-17'
-    date: '2016-12-07'
     status: ok
 labels:
     - lts2016-ok
@@ -24,7 +23,7 @@ confluence:
     shortlink: 5wUuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/5wUuAQ'
     source_link: /display/NXDOC/Content+Enricher
-tree_item_index: 900
+tree_item_index: 400
 history:
     -
         author: Arnaud Kervern
