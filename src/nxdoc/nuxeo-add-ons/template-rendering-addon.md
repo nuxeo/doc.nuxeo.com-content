@@ -232,11 +232,11 @@ To create a template file:
 
 {{> anchor 'variables'}}Here are a few examples of the most common variables:
 
-*   `${doc.title`}: gets the title of the Nuxeo document
-*   `${doc['dc:description']`}: gets the content of the Description field of the Nuxeo document
-*   `${doc['dc:modified']`}: gets the last modification date of the Nuxeo document. You can define how the date should be formatted by adding `?date` to display only the date, or `?time` to display only the time. By default, the modification date displays both the date and the time.
-*   `${doc.versionLabel`}: displays the version number
-*   `${auditEntries.eventId`}: displays the events listed in the document's history. `${auditEntries.eventDate`} displays the date at which the events took place, `${auditEntries.principalName`} the name of the user who did the action, `${auditEntries.comment`} the comment typed by the user.
+*   `${doc.title}`: gets the title of the Nuxeo document
+*   `${doc['dc:description']}`: gets the content of the Description field of the Nuxeo document
+*   `${doc['dc:modified']}`: gets the last modification date of the Nuxeo document. You can define how the date should be formatted by adding `?date` to display only the date, or `?time` to display only the time. By default, the modification date displays both the date and the time.
+*   `${doc.versionLabel}`: displays the version number
+*   `${auditEntries.eventId}`: displays the events listed in the document's history. `${auditEntries.eventDate}` displays the date at which the events took place, `${auditEntries.principalName}` the name of the user who did the action, `${auditEntries.comment}` the comment typed by the user.
 
 {{#> callout type='tip' heading='More resources to help users create the template file'}}
 
