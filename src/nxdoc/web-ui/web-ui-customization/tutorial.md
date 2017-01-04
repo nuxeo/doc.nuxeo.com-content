@@ -44,7 +44,7 @@ The generator will now ask a few questions for which the default values will suf
 is `nuxeo-customization-sample`, the project id is `nuxeo-customization-sample-core` and the project version is
 `1.0-SNAPSHOT`, and that the following folder hierarchy was generated:
 
-```
+```text
 nuxeo-customization-sample
 ├── nuxeo-customization-sample-core
 │   ├── pom.xml
@@ -63,7 +63,7 @@ referred to as just the **resources** folder.
 
 ### Building and Deploying
 
-We must now create the folder in our bundle under which our customized Web UI content will be placed: `resurces/OSGI-INF/web/nuxeo.war/ui/`.
+We must now create the folder in our bundle under which our customized Web UI content will be placed: `resources/web/nuxeo.war/ui/`.
 In order to instruct this content to be copied when the server is run, we must add a new `deployment-fragment.xml` file
 to `resources/OSGI-INF`:
 
