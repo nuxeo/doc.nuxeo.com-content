@@ -537,26 +537,27 @@ If no `<fieldType>`, `<field>` or `<excludeField>` are present, then all string 
 
 ## Optimizations
 
-```xml
-<pathOptimizations enabled="false"/>
-```
+*   **pathOptimizations enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), it is possible to disable the path-based optimizations by using **false**. The default is **true**, _i.e._ path optimizations enabled.
+    ```xml
+    <pathOptimizations enabled="false"/>
+    ```
 
-*   **pathOptimizations** **enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), it is possible to disable the path-based optimizations by using **false**. The default is **true**, _i.e._, path optimizations enabled.
+*   **aclOptimization *enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), you can disable the read ACL optimizations by using **false**. The default is **true**, _i.e._ ACL optimizations enabled.
+    ```xml
+    <aclOptimizations enabled="false"/>
+    ```
 
-```xml
-<aclOptimizations enabled="false"/>
-```
+*   **aclOptimizations readAclMaxSize**: can be set to define the size of the largest ACL for a document; this may be useful if you have mostly assigned permissions to a lot of users instead of using groups (do not set this attribute if you disable ACL optimizations).
 
-*   **aclOptimizations** **enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), you can disable the read ACL optimizations by using **false**. The default is **true**, _i.e._, ACL optimizations enabled.
-*   **aclOptimizations** **readAclMaxSize**: can be set to define the size of the largest ACL for a document; this may be useful if you have mostly assigned permissions to a lot of users instead of using groups (do not set this attribute if you disable ACL optimizations).
+*   In case the user/group names in your directories contains the separator character used in the Read ACL cache, you can change this value using the attribute `usersSeparator`. The default depends on the database, it may be `,` (for H2 and PostgreSQL) or `|` (for Oracle and SQL Server).
+    ```xml
+    <usersSeparator key="," />
+    ```
 
-```xml
-<usersSeparator key="," />
-```
-
-*   in case the user/group names in your directories contains the separator character used in the Read ACL cache, you can change this value using the attribute `usersSeparator`. The default depends on the database, it may be `,` (for H2 and PostgreSQL) or `|` (for Oracle and SQL Server).
-*   if you change this value on an existing database, you will need to rebuild the ACL cache with the SQL command:
-    `SELECT nx_rebuild_read_acls();`
+*   If you change this value on an existing database, you will need to rebuild the ACL cache with the SQL command:
+    ```sql
+    SELECT nx_rebuild_read_acls();
+    ```
 
 ## Database Creation Option
 

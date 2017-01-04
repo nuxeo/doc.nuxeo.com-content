@@ -199,7 +199,7 @@ To enable clustering, you must have at least two nodes with:
 *   A [Redis server]({{page page='redis-configuration'}})
 *   A load-balancer with sticky sessions
 
-The shared filesystem is usually an NFS mount. You **must not**&nbsp;share the whole Nuxeo installation tree (see below).
+The shared filesystem is usually an NFS mount. You **must not** share the whole Nuxeo installation tree (see below).
 
 The load balancer **must** use sticky sessions if the clustering delay is not 0\. Having a non-0 clustering delay is recommended for performance reasons. See below for more.
 
@@ -209,7 +209,7 @@ The complete Nuxeo instance hierarchy **must not** be shared between all instanc
 
 ### Binaries
 
-The `repository.binary.store` (`nxserver/data/binaries`&nbsp;by default) directory **must** be shared by all Nuxeo instances in order for VCS to function correctly.
+The `repository.binary.store` (`nxserver/data/binaries` by default) directory **must** be shared by all Nuxeo instances in order for VCS to function correctly.
 
 ### Temporary Directory
 
@@ -219,9 +219,9 @@ However, in order for various no-copy optimizations to be effective, the tempora
 
 ### Transient Store
 
-The caching directory used by any&nbsp;[Transient Store](/x/AQalAQ) accessed by multiple Nuxeo instances&nbsp;**must be** shared by all instances. This caching directory&nbsp;is located in `nxserver/data/transientstores/<transientstore_name>`.
+The caching directory used by any [Transient Store]({{page version='' space='nxdoc' page='transient-store'}}) accessed by multiple Nuxeo instances **must be** shared by all instances. This caching directory is located in `nxserver/data/transientstores/<transientstore_name>`.
 
-By default there is only one&nbsp;Transient Store contribution named `default`:
+By default there is only one Transient Store contribution named `default`:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent"
@@ -232,7 +232,7 @@ By default there is only one&nbsp;Transient Store contribution named `default`:
 </extension>
 ```
 
-Therefore you need to create in the `nxserver/data/transientstores` directory&nbsp;a symbolic link named `default` pointing to a shared directory, and do the same for any other `TransientStore` you might have contributed if it is intended to be shared by multiple instances of the cluster.
+Therefore you need to create in the `nxserver/data/transientstores` directory a symbolic link named `default` pointing to a shared directory, and do the same for any other `TransientStore` you might have contributed if it is intended to be shared by multiple instances of the cluster.
 
 ## VCS Cluster Configuration
 
@@ -275,15 +275,15 @@ nuxeo-db=# select * from cluster_nodes;
 
 ## Quartz Scheduler Cluster Configuration
 
-<span class="s1">A clustered Nuxeo environment should be configured to use Quartz scheduling. The Quartz scheduling component allows nodes to coordinate scheduled tasks between themselves - a single task will be routed to a single node for execution on that one node.&nbsp;</span>This ensures that scheduled events, like periodic cleanups or periodic imports, are executed only on one node and not on all nodes at the same time.
+A clustered Nuxeo environment should be configured to use Quartz scheduling. The Quartz scheduling component allows nodes to coordinate scheduled tasks between themselves - a single task will be routed to a single node for execution on that one node. This ensures that scheduled events, like periodic cleanups or periodic imports, are executed only on one node and not on all nodes at the same time.
 
-Standard configuration is available from Nuxeo templates for Tomcat for PostgreSQL, Oracle and SQL Server.&nbsp;
+Standard configuration is available from Nuxeo templates for Tomcat for PostgreSQL, Oracle and SQL Server.
 
-<span class="s1">In most cases, each node in the cluster should be configured to include this template.</span>
+In most cases, each node in the cluster should be configured to include this template.</span>
 
 1.  Populate the database with the tables needed by Quartz (names `QRTZ_*`).
     The DDL scripts come from the standard Quartz distribution and are available in the Nuxeo templates in `$NUXEO_HOME/templates/_<database>_-quartz-cluster/bin/create-quartz-tables.sql`.
-2.  Enable the Quartz-specific cluster templates by adding the template `_<database>_-quartz-cluster`.&nbsp;<span class="s1" style="line-height: 21.58px;">In most cases you will include this template on each node in the cluster.</span>
+2.  Enable the Quartz-specific cluster templates by adding the template `_<database>_-quartz-cluster`. In most cases you will include this template on each node in the cluster.
 
 {{#> callout type='note' }}
 
@@ -355,7 +355,7 @@ If you use a stateless load balancer such as Apache modules such as `mod_jk` and
     This will instruct the Nuxeo preprocessing phase to correctly fill the `jvmRoute` attribute of the `Engine` element in the generated `server.xml`.
 2.  Configure you stateless balancer to follow these routes, for instance here is the relevant configuration fragment when using `mod_proxy_balancer`:
 
-```html/xml
+```xml
 ProxyPass /nuxeo balancer://sticky-balancer stickysession=JSESSIONID|jsessionid  nofailover=On
 
 <Proxy balancer://sticky-balancer>
@@ -376,14 +376,14 @@ To test that the load balancer forwards the HTTP requests of a given session to 
 
     *   On the first node:
 
-        ```html/xml
+        ```xml
         <html><body>Node 1</body></html>
 
         ```
 
     *   and on the second node:
 
-        ```html/xml
+        ```xml
         <html><body>Node 2</body></html>
 
         ```
@@ -392,17 +392,17 @@ To test that the load balancer forwards the HTTP requests of a given session to 
 
 * * *
 
-&nbsp;
-
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
 - [VCS]({{page page='vcs'}})
 - [Redis Configuration]({{page page='redis-configuration'}})
 - [Setting up a HA Configuration Using the Nuxeo Platform and PostgreSQL]({{page page='setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql'}})
 - [HTTP and HTTPS Reverse-Proxy Configuration]({{page page='http-and-https-reverse-proxy-configuration'}})
 
-{{/panel}}</div><div class="column medium-6">
-
-&nbsp;
+{{/panel}}
+</div>
+<div class="column medium-6">
 
 </div></div>
