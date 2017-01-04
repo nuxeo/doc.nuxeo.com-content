@@ -188,6 +188,25 @@ The parameter `--accept=true` automatically replies `yes` to any prompt, which m
 
 You can also download and install hotfixes from the **Update Center** in the **Admin** tab.The installation of hotfixes requires the server to be restarted to complete the installation: follow the manual installation and configuration steps required by the installed hotfixes before you restart your server.
 
+## Hotfix 20
+
+### Rebuilding READ ACL Cache
+
+In case you previously [disabled the ACL optimization]({{page version='' space='admindoc' page='vcs-configuration'}}#optimizations), and even if you reactivated it, you need to manually rebuild the READ ACL cache. [NXP-20862](https://jira.nuxeo.com/browse/NXP-20862) addresses this issue but cannot fix existing inconsistencies in the database.
+
+Run the following SQL query directly against your database:
+* PostgreSQL
+```sql
+SELECT nx_rebuild_read_acls();
+```
+* Oracle
+```sql
+CALL nx_rebuild_read_acls;
+```
+* SQL Server
+```sql
+EXEC nx_rebuild_read_acls;
+```
 ## Hotfix 19
 
 ### Elasticsearch Configuration

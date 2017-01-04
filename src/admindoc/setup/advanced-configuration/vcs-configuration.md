@@ -305,7 +305,7 @@ In a standard Nuxeo this file is generated from a template, and many elements or
 
 This file is for illustration and contains many more options than are necessary by default.
 
-```html/xml
+```xml
 <?xml version="1.0"?>
 <component name="default-repository-config">
   <extension target="org.nuxeo.ecm.core.storage.sql.RepositoryService" point="repository">
@@ -354,32 +354,31 @@ This file is for illustration and contains many more options than are necessary 
     </repository>
   </extension>
 </component>
-
 ```
 
 ## Pooling Options
 
-```html/xml
+```xml
 <pool minPoolSize="0" maxPoolSize="20"
   blockingTimeoutMillis="100" idleTimeoutMinutes="10" />
 
 ```
 
-*   **minPoolSize**: the minimum pool size (default is **0**) (see `nuxeo.vcs.min-pool-size` in `nuxeo.conf`).
-*   **maxPoolSize**: the maximum pool size, above which connections will be refused (default is **20**) (see `nuxeo.vcs.max-pool-size` in `nuxeo.conf`).
+*   **minPoolSize**: the minimum pool size (default is **0**). See `nuxeo.vcs.min-pool-size` in `nuxeo.conf`.
+*   **maxPoolSize**: the maximum pool size, above which connections will be refused (default is **20**).See `nuxeo.vcs.max-pool-size` in `nuxeo.conf`.
 *   **blockingTimeoutMillis**: the maximum time (in milliseconds) the pool will wait for a new connection to be available before deciding that it cannot answer a connection request (pool saturated).
 *   **idleTimeoutMinutes**: the time (in minutes) after which an unused pool connection will be destroyed.
 
-<span style="color: rgb(0,0,0);font-size: 20.0px;">Clustering Options</span>
+## Clustering Options
 
-```html/xml
+```xml
 <clustering id="12345" enabled="true" delay="1000" />
 
 ```
 
 *   **id**: the cluster node id, which must be unique among all cluster nodes connected to the same database.
-*   **enabled**: use **true** to activate Nuxeo clustering (default is **false**, i.e., no clustering) (see `repository.clustering.enabled` in `nuxeo.conf`).
-*   **delay**: a configurable delay in milliseconds between two checks at the start of each transaction, to know if there are any remote invalidations (see `repository.clustering.delay` in `nuxeo.conf`).
+*   **enabled**: use **true** to activate Nuxeo clustering (default is **false**, i.e., no clustering). See `repository.clustering.enabled` in `nuxeo.conf`.
+*   **delay**: a configurable delay in milliseconds between two checks at the start of each transaction, to know if there are any remote invalidations. See `repository.clustering.delay` in `nuxeo.conf`.
 
 ## Column Types
 
@@ -495,8 +494,8 @@ If you set both included and excluded types, only the included types configurati
 *   **analyzer**: a full-text analyzer, the content of this attribute depends on the backend used:
     *   H2: a Lucene analyzer, for instance `org.apache.lucene.analysis.fr.FrenchAnalyzer`. The default is an English analyzer.
     *   PostgreSQL: a Text Search configuration, for instance `french`. The default is **english**. See [http://www.postgresql.org/docs/8.3/static/textsearch-configuration.html](http://www.postgresql.org/docs/8.3/static/textsearch-configuration.html)
-    *   Oracle: an Oracle PARAMETERS for full-text, as defined by [http://download.oracle.com/docs/cd/B19306_01/text.102/b14218/cdatadic.htm](http://download.oracle.com/docs/cd/B19306_01/text.102/b14218/cdatadic.htm) (see NXP-4035 for details).
-    *   Microsoft SQL Server: a full-text LANGUAGE, for instance `english`, as defined in [http://msdn.microsoft.com/en-us/library/ms187787(v=SQL.90).aspx](http://msdn.microsoft.com/en-us/library/ms187787(v=SQL.90).aspx). The default is **english**.
+    *   Oracle: an Oracle PARAMETERS for full-text, as defined by [http://download.oracle.com/docs/cd/B19306_01/text.102/b14218/cdatadic.htm](http://download.oracle.com/docs/cd/B19306_01/text.102/b14218/cdatadic.htm) (see [NXP-4035](https://jira.nuxeo.com/browse/NXP-4035) for details).
+    *   Microsoft SQL Server: a full-text LANGUAGE, for instance `english`, as defined in [http://msdn.microsoft.com/en-us/library/ms187787(v=SQL.90).aspx](https://msdn.microsoft.com/en-us/library/ms187787(v=SQL.90).aspx). The default is **english**.
     *   other backends don't have configurable full-text analyzers.
 *   **catalog**: a full-text catalog, the content of this attribute depends on the backend used:
     *   Microsoft SQL Server: a full-text CATALOG, the default is **nuxeo**.
@@ -506,7 +505,7 @@ Full-text indexes are queried in NXQL through the `ecm:fulltext` pseudo-field. A
 
 If no `<index>` elements are present, then a **default** index with all string and blob fields is used.
 
-```html/xml
+```xml
 <fulltext ...>
   <index name="title" analyzer="..." catalog="...">
     <field>dc:title</field>
@@ -534,45 +533,48 @@ If no `<fieldType>`, `<field>` or `<excludeField>` is present, then all string a
 
 ## Optimizations
 
-```html/xml
-<pathOptimizations enabled="false"/>
+*   **pathOptimizations enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), it is possible to disable the path-based optimizations by using **false** (the default is **true**, i.e., path optimizations enabled).
 
-```
+    ```xml
+    <pathOptimizations enabled="false"/>
 
-*   **pathOptimizations** **enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), it is possible to disable the path-based optimizations by using **false** (the default is **true**, i.e., path optimizations enabled).
+    ```
 
-```html/xml
-<aclOptimizations enabled="false"/>
+*   **aclOptimizations enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), you can disable the read ACL optimizations by using **false** (the default is **true**, i.e., ACL optimizations enabled).
+    ```xml
+    <aclOptimizations enabled="false"/>
 
-```
+    ```
 
-*   **aclOptimizations** **enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), you can disable the read ACL optimizations by using **false** (the default is **true**, i.e., ACL optimizations enabled).
-*   You can set the property readAclMaxSize to define the size of the larger ACL for a document: this may be useful if you have mainly affected permissions to a lot of users, instead of using groups (do not set this attribute if you disable ACL optimizations).
+*   You can set the property `readAclMaxSize` to define the size of the larger ACL for a document: this may be useful if you have mainly affected permissions to a lot of users, instead of using groups (do not set this attribute if you disable ACL optimizations).
 
-```html/xml
-<usersSeparator key="," />
+*   In case the user/group names in your directories contains the separator character used in the Read ACL cache(comma by default), you can change this value using the attribute `usersSeparator`.
 
-```
+    ```xml
+    <usersSeparator key="," />
 
-*   in case the user/group names in your directories contains the separator character used in the Read ACL cache(comma by default), you can change this value using the attribute `usersSeparator`
-*   if you change this value on an existing database, you will need to rebuild the ACL cache with the SQL command:
-    **SELECT nx_rebuild_read_acls();**
+    ```
+
+*   If you change this value on an existing database, you will need to rebuild the ACL cache with the SQL command:
+    ```sql
+    SELECT nx_rebuild_read_acls();
+    ```
 
 ## Database Creation Option
 
-```html/xml
+```xml
 
 <ddlMode>execute</ddlMode>
 
 ```
 
-The `<ddlMode>` specifies how the DDL (Data Definition Language)&nbsp;for repository initialization should be executed at startup. DDL includes:
+The `<ddlMode>` specifies how the DDL (Data Definition Language) for repository initialization should be executed at startup. DDL includes:
 
 *   `CREATE TABLE`, `CREATE INDEX`, `ALTER TABLE ADD CONSTRAINT` for a new schema or complex property,
 *   `ALTER TABLE ADD column` for a new property in a schema,
 *   `CREATE FUNCTION`, `CREATE PROCEDURE`, `CREATE TRIGGER` for VCS internal stored procedures and migration steps.
 
-Depending on the chosen mode, the DDL to be executed may not be executed at all and instead dumped to the file `log/ddl-vcs-default.sql`. The possible values&nbsp;are:
+Depending on the chosen mode, the DDL to be executed may not be executed at all and instead dumped to the file `log/ddl-vcs-default.sql`. The possible values are:
 
 *   **ignore**: no DDL detected or executed.
 *   **compat**: compatibility mode with previous version, always executes DDL that recreates stored procedures (and does not attempt to detect existing ones).
@@ -583,15 +585,15 @@ Depending on the chosen mode, the DDL to be executed may not be executed at all 
 
 For Nuxeo 6.0-HF24+ and Nuxeo 7.10-HF01+ the default is **compat**. For Nuxeo 8.1 the default is **execute**.
 
-See [NXP-17396](https://jira.nuxeo.com/browse/NXP-17396)&nbsp;for details about `<ddlMode>` implementation.
+See [NXP-17396](https://jira.nuxeo.com/browse/NXP-17396) for details about `<ddlMode>` implementation.
 
-```
+```xml
 <noDDL>true</noDDL> <!-- deprecated -->
 ```
 
-For compatibility with previous Nuxeo versions, if no `<ddlMode>` element is specified, then `<noDDL>`&nbsp;is checked. The value **true** is mapped to a ddlMode of&nbsp;**ignore**, and the value **false** mapped to the default ddlMode.
+For compatibility with previous Nuxeo versions, if no `<ddlMode>` element is specified, then `<noDDL>` is checked. The value **true** is mapped to a ddlMode of **ignore**, and the value **false** mapped to the default ddlMode.
 
-```html/xml
+```xml
 <sqlInitFile>myconf.sql.txt</sqlInitFile>
 ```
 
@@ -607,8 +609,8 @@ A statement may be preceded by one or more **tag** lines, which are lines starti
 
 *   `#CATEGORY:` defines the category for all future statements, until a new category is defined. See below for the use of categories.
 *   `#TEST:` specifies that the following statement returns a certain number of rows, and if that number of rows is 0 then the variable `emptyResult` will be set to true, otherwise it will be set to false.
-*   `#SET_IF_EMPTY: variable`&nbsp;or `#SET_IF_NOT_EMPTY: variable` will set the specified variable to true if the following statement returns an empty (or not empty) set of rows. If the condition is not met, the variable is not changed.
-*   `#IF: condition`&nbsp;conditions execution of the single following statement on the value of the condition. &nbsp;A condition can be `variable` or `! variable`&nbsp;for negation. Several `#IF:` tags may be used in a row (in different lines), and they are effectively ANDed together.
+*   `#SET_IF_EMPTY: variable` or `#SET_IF_NOT_EMPTY: variable` will set the specified variable to true if the following statement returns an empty (or not empty) set of rows. If the condition is not met, the variable is not changed.
+*   `#IF: condition` conditions execution of the single following statement on the value of the condition.  A condition can be `variable` or `! variable` for negation. Several `#IF:` tags may be used in a row (in different lines), and they are effectively ANDed together.
 *   `#IF: condition OR: othercondition OR: anothercondition` allows to OR several conditions.
 *   `#PROC: somename` specifies that the following SQL is a `CREATE FUNCTION`, `CREATE PROCEDURE` or `CREATE TRIGGER` for the given name, and that an attempt to detect whether it is already present to avoid re-creation should be done. This is used when DDL is dumped through ddlMode.
 
@@ -643,7 +645,7 @@ A few pseudo-SQL statements can be used to provide addition logging actions:
 *   `LOG.DEBUG message`: logs the message at DEBUG level in the standard logger,
 *   `LOG.INFO message`: logs the message at INFO level in the standard logger,
 *   `LOG.ERROR message`: logs the message at ERROR level in the standard logger,
-*   `LOG.FATAL message`: logs the message at ERROR level in the standard logger and throws an exception that will stop database intialization and make it unusable by Nuxeo.
+*   `LOG.FATAL message`: logs the message at ERROR level in the standard logger and throws an exception that will stop database initialization and make it unusable by Nuxeo.
 
 To initialize the database, the statements of the following categories are executed in this order:
 
@@ -657,5 +659,3 @@ The following categories are executed in special circumstances:
 
 *   `addClusterNode`: when creating a cluster node,
 *   `removeClusterNode`: when shutting down a cluster node.
-
-&nbsp;
