@@ -1631,7 +1631,8 @@ smtp</td>
 <tr>
 <td colspan="1">`nuxeo.url`</td>
 <td colspan="1">http://localhost:8080/nuxeo</td>
-<td colspan="1">Application URL (without final slash), should be the public URL of your server (i.e.: [http://www.yourdomain.com/](http://www.yourdomain.com/)....)</td>
+<td colspan="1">Application URL (without final slash), should be the public URL of your server (i.e.: [http://www.yourdomain.com/](http://www.yourdomain.com/)....)<br />
+It is also used for emails sent out and to detect images in HTML documents when converting to PDF.</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
