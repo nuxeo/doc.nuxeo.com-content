@@ -77,7 +77,7 @@ To Install Nuxeo Drive on your Linux computer:
 
 2. **Python 2.7 or higher**
 
-    Nuxeo Drive uses some packages, which are only compatible from python **version 2.7 on**. If this excludes using the standard python installation of certain OS distributions, you may still install python 2.7 (or higher) [manually from the download pages]( https://www.python.org/downloads/)on your system. However, this may break other tools in your environment, who need to be consistent with the default python packages. Using [Anaconda](http://continuum.io/downloads) to switch between different python installs/environments may help in this case.
+    Nuxeo Drive uses some packages, which are only compatible from python **version 2.7**. If this excludes using the standard python installation of certain OS distributions, you may still install python 2.7 (or higher) [manually from the download pages]( https://www.python.org/downloads/) on your system. However, this may break other tools in your environment, who need to be consistent with the default python packages. Using [Anaconda](http://continuum.io/downloads) to switch between different python installs/environments may help in this case.
 
 3. **pip**
 
