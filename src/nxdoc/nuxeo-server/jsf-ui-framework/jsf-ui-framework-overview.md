@@ -1,50 +1,56 @@
 ---
-title: JSF Page Layout System Overview
+title: JSF UI Framework Overview
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-14'
     status: ok
-labels:
-    - content-review-lts2016
-    - jsf
-    - seam-jsf-component
-    - nxdoc-741
+tree_item_index: 50
 toc: true
-confluence:
-    ajs-parent-page-id: '950313'
-    ajs-parent-page-title: Nuxeo JSF UI
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: JSF+Page+Layout+System+Overview
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/JSF+Page+Layout+System+Overview'
-    page_id: '23367560'
-    shortlink: iI9kAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/iI9kAQ'
-    source_link: /display/NXDOC/JSF+Page+Layout+System+Overview
-tree_item_index: 100
-history:
-    -
-        author: Solen Guitter
-        date: '2015-04-20 16:02'
-        message: ''
-        version: '4'
-    -
-        author: Solen Guitter
-        date: '2015-04-20 16:01'
-        message: ''
-        version: '3'
-    -
-        author: Thierry Delprat
-        date: '2015-03-18 16:04'
-        message: ''
-        version: '2'
-    -
-        author: Thierry Delprat
-        date: '2015-03-18 16:02'
-        message: ''
-        version: '1'
-
 ---
+The Nuxeo Platform provides a web framework to build business applications for thin clients. This framework is based on the standard JEE view technology: Java Server Faces (JSF).
+
+## Nuxeo JSF Technical Stack
+
+Nuxeo JSF framework integrates several technologies in order to make the development of web applications fast and efficient.
+
+The Nuxeo JSF stack includes:
+
+*   Mojarra JSF (2.2.6) as MVC and UI component model, including, as of JSF 2 specifications, facelets as rendering engine and templating system,
+*   RichFaces (4.5.0) for high level UI components, including the a4j library for Ajax behaviors support
+*   JBoss Seam (2.3.1) as Web Framework
+
+Inside the Nuxeo Platform, Seam Framework is used only for the JSF (client) layer.
+
+The usage of Seam has several benefits:
+
+*   usage of JSF is simpler,
+*   powerful context management,
+*   dependency injection and Nuxeo Service lookup via injection,
+*   Nuxeo Web Component are easily overridable,
+*   decoupling of Web Components (that can communicate via Seam event bus).
+
+The Nuxeo JSF framework also comes with additional concepts and tools:
+
+*   [Action service]({{page page='actions-links-buttons-icons-tabs-and-more'}}) is used to make buttons, tabs and views configurable.
+*   [Layout]({{page page='layouts-and-widgets-forms-listings-grids'}}) and [Content View]({{page page='content-views'}}) allow to define how you want to see documents and listings.
+*   [URL Service]({{page page='navigation-urls'}}): the Nuxeo Platform provides REST URLs for all pages so that you can bookmark pages or send via email a link to a specific view on a specific document.
+*   [Nuxeo Tag Libraries]({{page page='how-to-register-a-jsf-tag-library'}}): extend existing tags and provides new Document Oriented tags.
+*   [Theme engine]({{page page='theme'}}).
+
+## Nuxeo JSF Approach
+
+We built Nuxeo JSF framework with two main ideas in mind:
+
+*   Make the UI simple,
+*   Make the UI pluggable.
+
+For the first point, we choose to have an "File Explorer" like navigation. So you have tools (tree, breadcrumb, search, tags) to navigate in a document repository and when on a document you can see several views on this document (Summary, Relations, Workflows, Rights, History ...).
+
+We also choose to make the UI very pluggable, because each project needs to have a slightly different UI. In order to achieve that, each page/view is in fact made of several fragments that are assembled based on the context. This means you can easily add, remove or change a button, a link, a tab or a HTML/JSF block. You don't need to change or override the Nuxeo Platform code for that, neither do you need to change the default Nuxeo Platform templates. The assembly of the fragments is governed by "Actions", so you can change the filters and conditions for each fragment. Of course each project also needs to define it's own views on Document, for that we use the Layout and Content View system.
+
+All this means that you can start from a standard Nuxeo Platform, and with simple configuration have a custom UI.
+
+## JSF Page Layout System Overview
 A Nuxeo Platform page is made up of several layers:
 
 - Nuxeo Theme (aka NXTheme)
@@ -61,7 +67,7 @@ A Nuxeo Platform page is made up of several layers:
 
 Here is a very quick walk-through of the main principles with some examples and links to code or documentation.
 
-## Nuxeo Theme
+### Nuxeo Theme
 
 The Nuxeo Theme is a page layout engine that also handles resources management. See the page [Theme]({{page page='theme'}})&nbsp;for a general introduction. A part of the theme definition can be configured via Nuxeo Studio (the CSS and Flavor part).
 
@@ -74,7 +80,7 @@ As any other Nuxeo component, the&nbsp;[Theme system](http://explorer.nuxeo.com/
 
 Let's see how Document Management and Digital Asset Management pages as examples.
 
-### Document Management Pages
+#### Document Management Pages
 
 The Document Management pages are using a Theme page layout defined&nbsp;[in the document.xml definition](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/themes/document-management.xml).
 
@@ -109,14 +115,14 @@ The XPath indicates what part of the page layout will be used to display the tre
 <fragment perspectives="default,multiple_domains" type="generic fragment"/>
 ```
 
-### Digital Asset Management Pages
+#### Digital Asset Management Pages
 
 For Nuxeo DAM (and the current search view), the theme only defines the headers and footer. The actual content of the main slot will be handled by the application layer.
 
 - [nuxeo-dam theme](https://github.com/nuxeo/nuxeo-dam/blob/master/nuxeo-dam-theme/src/main/resources/themes/nuxeo-dam.xml) only defines a `nxMainContainer` that will be structured via layouts.
 - There is no specific view (structure of the `nxMainContainer` will be done via XHTML).
 
-## XHTML/Facelets
+### XHTML/Facelets
 
 The XHTML Facelet templates are rendered through the Theme Engine. The XHTML calls the theme engine via the NXTheme composition page:
 ```xml
@@ -136,7 +142,7 @@ The XHTML Facelet templates are rendered through the Theme Engine. The XHTML cal
 </nxthemes:composition>
 ```
 
-### Document Management Example
+#### Document Management Example
 
 See the [sample DM view_documents.xhtml](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/view_documents.xhtml).
 
@@ -157,7 +163,7 @@ The main content of the page is actually defined via facelet templating (i.e. us
   <nxl:widget name="documentTabs" mode="view" value="#{currentDocument}" />
 ```
 
-### Digital Asset Management Example
+#### Digital Asset Management Example
 
 See the [sample DAM asset.xhtml](https://github.com/nuxeo/nuxeo-dam/blob/master/nuxeo-dam-jsf/src/main/resources/web/nuxeo.war/dam/asset.xhtml).
 
@@ -167,7 +173,7 @@ Content is defined by a `GridLayout`:
 <nxl:layout value="#{currentDocument}" name="gridDamSingleAssetLayout" mode="view" />
 ```
 
-## Layout / Widgets / Actions
+### Layout / Widgets / Actions
 
 This is the very core of the Nuxeo application level model: that's the part that is defined inside Nuxeo Studio.
 
@@ -180,7 +186,7 @@ You can also use the&nbsp;[Layout Showcase site](http://showcase.nuxeo.com/nuxeo
 
 Let's continue with the previous example pages for DM and DAM.
 
-### Digital Asset Management Pages
+#### Digital Asset Management Pages
 
 For DAM, the main layout is [dam-layouts-contrib.xml](https://github.com/nuxeo/nuxeo-dam/blob/master/nuxeo-dam-jsf/src/main/resources/OSGI-INF/dam-layouts-contrib.xml), it defines:
 
@@ -224,7 +230,7 @@ Using that principle, the&nbsp;`damSingleAssetPanelLeft`&nbsp;will display all w
 ...
 ```
 
-### Document Management Pages
+#### Document Management Pages
 
 For Document Management pages, a similar system is used to contribute the part of screens.
 
@@ -258,7 +264,7 @@ Each of these tab is associated with a XHTML, that itself will also use layouts 
 
 However, looking at the&nbsp;[type to layout configuration](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/OSGI-INF/ecm-types-contrib.xml)&nbsp;you can see that each document type can be associated with different layout and that there are several categories of layout.
 
-## Seam and Navigation
+### Seam and Navigation
 
 So far we have defined view level components. These views will need to get some data from the Nuxeo service and have some UI specific controllers.
 
@@ -294,9 +300,9 @@ However, sometimes, there is an actual JSF level navigation that relies on stand
 
 In addition, the Nuxeo Platform provides a system to manage REST URL that combine JSF navigation and Actions: see the page [Navigation URLs]({{page page='navigation-urls'}})&nbsp;for more details.
 
-## About Possible Approaches
+### About Possible Approaches
 
-### Pure Studio
+#### Pure Studio
 
 Nuxeo Studio provides a high level configuration UI to configure Actions, Layouts, Widgets, etc. It hides a lot of the complexity of the underlying model, as well as some details.
 
@@ -306,7 +312,7 @@ For now, Nuxeo Studio allows you to customize pretty much everything that is ins
 In the context of 7.x, we are working on replacing all the low level model by layouts only.
 {{/callout}}
 
-### Custom Web Templates
+#### Custom Web Templates
 
 As the rest of the framework, the JSF web framework is extensible:
 
@@ -334,16 +340,29 @@ However, if you think the custom UI is the way to go, we'll be happy to help you
 
 &nbsp;
 
-* * *
+## JSF UI Limitations
+{{! excerpt}}
+This chapter presents the limitations to the Seam/JSF web application.
+{{! /excerpt}}
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
-- [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
-- [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
-- [Layouts and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
-- [Theme]({{page page='theme'}})
-- [JSF UI How-To Index]({{page page='jsf-ui-how-to-index'}})
-{{/panel}}</div><div class="column medium-6">
+### Back and Next Buttons Paradigm and JSF in the Nuxeo Platform
 
-&nbsp;
+Nuxeo Platform navigation is based solely on the JSF library.
 
-</div></div>
+{{! excerpt}}
+Although the&nbsp; JSF library is not designed to take advantage of the Back and Next buttons of the browser, these buttons work in most cases when called on GET actions, but some inconsistent display could happen if used after a user action modifying data. However, those cache-related display inconsistency aren't harmful in anyway for the system.
+{{! /excerpt}}
+
+Those unwanted displays are hard to fix: it could be done by pushing "by hand" some history info into a queue whenever the Nuxeo Platform does a navigation, and try to return to that when an application-based back button is pressed. But this would be quite complex and browser dependent.
+
+So if you're massively using POST action, the solution is to train the users to never activate/use the Back and the Next buttons when using the Nuxeo Platform.
+
+### [Default Widget Types Known Limitations]({{page page='default-widget-types-known-limitations'}})
+    {{{excerpt 'Default Widget Types Known Limitations'}}}
+
+***
+
+{{#> panel heading='Related Documentation'}}
+- [JSF Page Layout System Overview]({{page space='NXDOC' page='JSF Page+Layout+System+Overview'}})
+- [JSF and Ajax Tips and How-To Index]({{page space='NXDOC' page='JSF and+Ajax+Tips+and+How-To+Index'}})
+{{/panel}}

@@ -177,7 +177,6 @@ And that's it! Note that the previous parameter will set today's date, but you m
 *   [JSF UI Framework]({{page page='jsf-ui-framework'}})
 *   [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
 *   [Layout and Widgets]({{page page='layouts-and-widgets-forms-listings-grids'}})
-*   [JSF UI Limitations]({{page page='jsf-ui-limitations'}})
 *   [Widget Definitions]({{page page='widget-definitions'}})
 
 {{/panel}}</div></div>

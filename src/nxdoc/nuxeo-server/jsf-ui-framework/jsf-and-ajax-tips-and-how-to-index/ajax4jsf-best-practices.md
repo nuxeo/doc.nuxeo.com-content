@@ -182,7 +182,6 @@ There seems to be bugs remaining with this method: it works most of the time but
 
 - [JavaScript Client]({{page page='javascript-client'}})
 - [JSF UI Framework]({{page page='jsf-ui-framework'}})
-- [Nuxeo JSF UI]({{page page='nuxeo-jsf-ui'}})
-- [JSF UI Limitations]({{page page='jsf-ui-limitations'}})&nbsp;
+- [Nuxeo JSF UI]({{page page='nuxeo-jsf-ui'}})&nbsp;
 
 {{/panel}}</div></div>
