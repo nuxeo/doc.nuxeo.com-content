@@ -96,7 +96,7 @@ history:
 Nuxeo Web UI is a standard base web application for Nuxeo Server that connects via HTTP and displays all the features of the platform to the users. Customizable, scalable and built upon a framework of Web components, it allows the Nuxeo Platform developers to build their own front-application using these components. The [Nuxeo Web UI addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui?version=0.8.0) is available in beta version on our marketplace.
 ![]({{file name='web_ui_with_side_panel.png'}} ?w=650,border=true)
 
-It is a modern web application built with Web Components and [Polymer](https://www.polymer-project.org/) as a framework. It leverages the web as a platform and allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full screen suggester and several other features built to provide a rich user experience. Here are the most important topics on getting started with Web UI, customizing it and building new web apps using Nuxeo Elements:
+It leverages the web as a platform and allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full screen suggester and several other features built to provide a rich user experience. Here are the most important topics on getting started with Web UI, customizing it and building new web apps using Nuxeo Elements:
 
 <div class="row"><div class="column medium-4">{{#> panel type='primary'}}
 
@@ -140,7 +140,7 @@ Nuxeo Web UI is a responsive application with three main layout regions:
 
 ### Side Menu&nbsp;
 
-The menu displays different tabs. Clicking on one of them will open a side panel with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area. We will see the description of the main area on the last part of this documentation.
+The menu displays different tabs. Clicking on one of them will open a side panel with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area. We will see the description of the main area on the last part of this section.
 
 ![]({{file name='web_ui_with_side_panel.png'}} ?w=650,border=true)
 
@@ -215,8 +215,8 @@ A create button ![]({{file name='create_button.png'}} ?w=25,thumbnail=true) is a
 
 ## Technical Overview
 
-Nuxeo Web UI has been built with simplicity and composability in mind. Nuxeo is a content application platform and our goal is to provide tools and components for you to build your own application. With Nuxeo Web UI we wanted to review our approach, make it simpler so anyway familiar with web development couple easily customize it or even just take is as an example of what can be achieved and build their own.
-hence the shift from a highly configurable and pluggable UI to a more modular and composable one.
+Nuxeo Web UI has been built with simplicity and composability in mind. Nuxeo is a content application platform and our goal is to provide tools and components for you to build your own application. With Nuxeo Web UI we wanted to review our approach, make it simpler so anyone familiar with web development couple easily customize it or even just take is as an example of what can be achieved and build their own.
+Hence the shift from a highly configurable and pluggable UI to a more modular and composable one.
 
 With the introduction of **Web Components** browsers now offer a well defined component model that is performant, provided out of the box and has a familiar API. By leveraging DOM as the framework and extending HTML with our own custom tags we can empower web developers to use the tools and frameworks they are already familiar with to build rich web applications.
 

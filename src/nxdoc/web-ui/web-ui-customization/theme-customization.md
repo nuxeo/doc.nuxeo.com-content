@@ -109,6 +109,6 @@ Finally you just need to contribute the preview image (that appears in the `Them
 {{#> callout type='warning'}}
 
 Note that we are making some improvements in themes and styling in general.
-The process to make contributions related to themes customization are subject to change until the release of the Web UI final version.
+The process to make contributions related to themes customization are subject to change until the release of a later Web UI version.
 
 {{/callout}}
