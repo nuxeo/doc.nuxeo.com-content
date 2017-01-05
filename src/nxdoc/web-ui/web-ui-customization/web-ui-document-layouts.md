@@ -10,7 +10,7 @@ labels:
     - nuxeo-web-ui
     - extension
     - layouts
-tree_item_index: 300
+tree_item_index: 200
 
 ---
 Layouts are used to display a document's metadata in different use cases, it is basically a group of widgets and specifies how these widgets are assembled and displayed.

@@ -10,7 +10,7 @@ labels:
     - nuxeo-web-ui
     - extension
     - dashboard
-tree_item_index: 70
+tree_item_index: 500
 
 ---
 ## Dashboard

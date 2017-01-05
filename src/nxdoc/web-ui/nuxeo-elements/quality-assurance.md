@@ -6,7 +6,14 @@ review:
     status: ok
 toc: true
 labels:
-tree_item_index: 200
+    - lts2016-ok
+    - nuxeo-elements
+    - quality-assurance
+    - testing
+    - linting
+    - performance
+    - security
+tree_item_index: 100
 
 ---
 ## Quality Assurance

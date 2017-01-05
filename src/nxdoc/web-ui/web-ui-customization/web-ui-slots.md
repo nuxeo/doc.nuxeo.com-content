@@ -11,7 +11,7 @@ labels:
     - extension
     - nuxeo-slot
     - nuxeo-slot-content
-tree_item_index: 200
+tree_item_index: 600
 
 ---
 

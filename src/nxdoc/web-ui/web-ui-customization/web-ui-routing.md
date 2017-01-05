@@ -10,7 +10,7 @@ labels:
     - nuxeo-web-ui
     - extension
     - routing
-tree_item_index: 60
+tree_item_index: 800
 
 ---
 ## Web UI routing mechanism

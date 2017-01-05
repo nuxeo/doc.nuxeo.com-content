@@ -11,7 +11,7 @@ labels:
     - extension
     - marketplace
     - deployment
-tree_item_index: 50
+tree_item_index: 700
 
 ---
 

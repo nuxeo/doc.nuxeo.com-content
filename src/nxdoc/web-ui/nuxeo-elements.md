@@ -87,4 +87,4 @@ These are:
 
 Nuxeo Elements' development is supported by several tools and strategies, to keep quality, performance and security in check.
 Please see the [Quality Assurance page]({{page page='quality-assurance'}}) for more information on this subject, and
-also our [Custom App Tutorial]({{page page='tutorial-custom-app'}}) for a quick introduction to development with Nuxeo Elements.
+also our [Custom App Tutorial]({{page page='nuxeo-elements-tutorial'}}) for a quick introduction to development with Nuxeo Elements.
