@@ -207,6 +207,7 @@ CALL nx_rebuild_read_acls;
 ```sql
 EXEC nx_rebuild_read_acls;
 ```
+
 ## Hotfix 19
 
 ### Elasticsearch Configuration
