@@ -70,7 +70,7 @@ history:
 ---
 {{{multiexcerpt 'DBS-definition' page='GLOS:DBS'}}}
 
-The Nuxeo Platform supports the following MarkLogic versions:
+The Nuxeo Platform supports the following MarkLogic version:
 
 {{{multiexcerpt 'MarkLogic-supported' page='Compatibility Matrix'}}}
 

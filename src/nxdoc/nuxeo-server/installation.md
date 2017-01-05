@@ -288,42 +288,44 @@ The following table lists current requirements for running the Nuxeo Platform. T
 <table class="hover">
 <tbody>
 <tr><th colspan="1">Hardware Requirements</th>
-<td colspan="1">Minimum requirement to start a Nuxeo server: 2 CPU, 2 Giga RAM, 300 Mb of disk-space. </td>
-<td colspan="1">Note: a production-ready set up for the Nuxeo Platform may require several servers and different hardware sizing, depending on your SLA and planned usage. Contact Nuxeo for more information and getting help on sizing your production architecture.</td>
+<td colspan="1">Minimum requirement to start a Nuxeo server: 2 CPU, 2&nbsp;Gb RAM, 300&nbsp;Mb of disk-space. </td>
+<td colspan="1">Note: a production-ready setup for the Nuxeo Platform may require several servers and different hardware sizing, depending on your SLA and planned usage. Contact Nuxeo for more information and getting help on sizing your production architecture.</td>
 </tr>
 
 <tr><th colspan="1">OS</th>
 <td colspan="1"><ul><li>Linux</li><li> macOS</li><li>Windows</li></ul></td>
-<td colspan="1">Note: the only limitation on the OS nature and version is the ability to install the correct version of the required JDK, see after. It means that while it is commonly reported to run on recent versions of Ubuntu, RHEL, Debian, CentOS, it can also run on any Linux distribution where it is possible to install the required JDK. You may have to adapt the provided startup shell scripts.</td>
+<td colspan="1">Note: the only limitation on the OS nature and version is the ability to install the correct version of the required JDK (see below)r. It means that while it is commonly reported to run on recent versions of Ubuntu, RHEL, Debian, CentOS, it can also run on any Linux distribution where it is possible to install the required JDK. You may have to adapt the provided startup shell scripts.</td>
 
 <tr><th colspan="1">Java</th>
-<td colspan="1">JDK 1.8.0_112 (Oracle's JDK or OpenJDK) and greater.</td>
+<td colspan="1">{{{multiexcerpt 'java_requirement' page='Compatibility Matrix'}}}</td>
 <td colspan="1">See following documentation: <ul><li>[Checking your Java Version]({{page page='installation#java-check'}})</li> <li>[How to Install Java]({{page page='installation#java-install'}})</li></td>
 </tr>
+
 <tr><th colspan="1">Application Server</th>
-<td colspan="1"> <ul><li>Tomcat 7.0.69</li><li>JBoss WildFly 8.1.0</li></ul></td>
-<td colspan="1">Nuxeo is shipped with an embedded Tomcat server but can also be packed as a static WAR that can be deployed additional targets, such as JBoss Wildfly. See [Run as A Static War]({{page page='deploying-as-a-standard-static-war'}})</td>
-<tr><th colspan="1">Database</th>
-<td colspan="1"><ul><li>MongoDB (3.2)</li><li> PostgreSQL (9.5)</li><li>Oracle (12g)</li><li>SQL Server 2008</li><li>MySQL (5.5)</li><li>MariaDB 10 </li><li>MarkLogic 8.0</li></ul></td>
-<td colspan="1">The Nuxeo Platform is likely to work with greater versions of related databases. Do not hesitate to inform the Nuxeo support of your attempts with different versions.<br>
-More information on [Database Configuration section]({{page page='database-configuration'}}).  <br>Note that Nuxeo Server is shipped embedding H2 database, for quick evaluation purpose. One of the listed databases is required for a production set up or for more serious evaluation like performance testing.<br>
-The Nuxeo Platform is also compatible with the cloud versions of those databases: Amazon RDS, Azure, MongoDB Atlas</td>
+<td colspan="1">{{{multiexcerpt 'supported-app-servers-versions' page='Compatibility Matrix'}}}</td>
+<td colspan="1">{{{multiexcerpt 'supported-app-servers-static-war' page='Compatibility Matrix'}}}</td>
 </tr>
+
+<tr><th colspan="1">Database</th>
+<td colspan="1">{{{multiexcerpt 'all-supported-databases' page='Compatibility Matrix'}}}</td>
+<td colspan="1">{{{multiexcerpt 'supported-databases-notes' page='Compatibility Matrix'}}}</td>
+</tr>
+
 <tr><th colspan="1">Authentication and User Management</th>
-<td colspan="1">The Nuxeo Platform provides its own users and groups directories  and authentication solution. It is also compatible with multiple cloud and enterprise solutions:
+<td colspan="1">The Nuxeo Platform provides its own users and groups directories and authentication solution. It is also compatible with multiple cloud and enterprise solutions:
 <ul>
-<li>LDAP servers (Open LDAP protocole)</li>
+<li>LDAP protocol (Open LDAP)</li>
 <li>Active Directory</li>
 <li>SAML Providers</li>
 <li>OpenId</li>
 <li>Kerberos</li>
 <li>CAS</li>
-
 </ul></td>
 <td colspan="1">See [Authentication and User Management section]({{page page='authentication-and-user-management'}}).</td>
 </tr>
-<tr><th colspan="1">Optional Third Parties</th>
-<td colspan="1">Some third parties may be required depending on the conversions capabilities you want to benefit from. The following list is not exhaustive:  <ul><li>LibreOffice</li>
+
+<tr><th colspan="1">Optional Third-Party Software</th>
+<td colspan="1">Some third party software may be required depending on the conversions capabilities you want to benefit from. The following list is not exhaustive:  <ul><li>LibreOffice</li>
 <li>ImageMagick</li>
 <li>FFmpeg</li>
 <li>Docker</li>
@@ -332,10 +334,10 @@ The Nuxeo Platform is also compatible with the cloud versions of those databases
 <li>Exiftools</li>
 <li>...</li>
 </ul></td>
-
-<td colspan="1">More information on [installing third parties]({{page page='installing-and-setting-up-related-software'}}).</td>
+<td colspan="1">More information on [installing third-party software]({{page page='installing-and-setting-up-related-software'}}).</td>
 </tr>
-<tr><th colspan="1">Clide Side Requirements</th>
+
+<tr><th colspan="1">Client-Side Requirements</th>
 <td colspan="1">The Nuxeo Platform comes with several applications that are used by business users and that have their own requirements: <ul><li>[JSF UI]({{page page='nuxeo-jsf-ui'}})</li>
 <li>[Web UI]({{page page='web-ui-overview'}})</li>
 <li>[Nuxeo Drive]({{page page='nuxeo-drive'}})</li>
@@ -345,11 +347,11 @@ The Nuxeo Platform is also compatible with the cloud versions of those databases
 </tbody></table></div>
 
 
-#### Checking Your Java Version&nbsp;{{> anchor 'java-check'}}
+## Checking Your Java Version {{> anchor 'java-check'}}
 
 {{! multiexcerpt name='check-java-version'}}
 
-&nbsp;**To check that you have the right version of Java:**
+**To check that you have the right version of Java:**
 
 1.  Open a terminal:
 
@@ -371,17 +373,17 @@ The Nuxeo Platform is also compatible with the cloud versions of those databases
 
 {{! /multiexcerpt}}
 
-#### Installing Java {{> anchor 'java-install'}}
+## Installing Java {{> anchor 'java-install'}}
 
-##### For Linux Users
+### For Linux Users
 
 {{! multiexcerpt name='java-install-linux'}}
 
-For Ubuntu, no Java 8 package is yet available. You can still download&nbsp;[Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle website.
+For Ubuntu, no Java 8 package is yet available. You can still download [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle website.
 
 {{! /multiexcerpt}}
 
-##### For OS X Users
+### For OS X Users
 
 {{! multiexcerpt name='java-install-macos'}}
 
@@ -392,11 +394,11 @@ Java packages and instructions for installation are available from the Oracle we
 
 {{! /multiexcerpt}}
 
-##### For Windows Users
+### For Windows Users
 
 {{! multiexcerpt name='java-install-windows'}}
 
-**&nbsp;If the required version of Java is not installed on your computer:**
+**If the required version of Java is not installed on your computer:**
 
 1.  Download it from the Oracle website ([Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)) and choose the appropriate platform for your hardware and Windows version.
 2.  Run the downloaded .exe file and follow the instructions displayed.

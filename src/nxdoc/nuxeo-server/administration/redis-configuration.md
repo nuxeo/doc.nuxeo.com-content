@@ -121,15 +121,15 @@ history:
         date: '2013-11-14 16:50'
         message: ''
         version: '1'
-	
+
 ---
 Nuxeo instances should be configured with a Redis server (in addition to the regular SQL database) in the following cases:
 
 1.  When it's important that asynchronous jobs not yet executed be kept across server restarts.
 2.  In cluster mode to allow:
     *   Execution of some asynchronous jobs on dedicated nodes (for instance image conversion or fulltext extraction).
-    *   A distributed [Transient Store]({{page page='transient-store'}}), required for&nbsp;[Batch Upload]({{page page='blob-upload-for-batch-processing'}})&nbsp;and&nbsp;[Asynchronous Conversion Works]({{page page='conversion'}}#-anchor-java-api-async-conversions-asynchronous-conversions).
-    *   Relying on the `RedisCache`&nbsp;as a distributed implementation of the [Nuxeo Drive]({{page page='nuxeo-drive'}}) synchronization roots cache.
+    *   A distributed [Transient Store]({{page page='transient-store'}}), required for [Batch Upload]({{page page='blob-upload-for-batch-processing'}}) and [Asynchronous Conversion Works]({{page page='conversion'}}#-anchor-java-api-async-conversions-asynchronous-conversions).
+    *   Relying on the `RedisCache` as a distributed implementation of the [Nuxeo Drive]({{page page='nuxeo-drive'}}) synchronization roots cache.
     *   [Cluster cache invalidations]({{page page='nuxeo-and-redis'}}#clustering-invalidation)
 
 For a robust production instance, the first point is always necessary, which means that Redis should always be used.
@@ -144,9 +144,9 @@ The Nuxeo Platform supports the following Redis versions:
 
 The following Redis configuration points should be checked:
 
-*   The server memory should be enough to hold the Redis database (the size depends on the usage: transient store, cache, the&nbsp;backlog of asynchronous jobs).
+*   The server memory should be enough to hold the Redis database (the size depends on the usage: transient store, cache, the backlog of asynchronous jobs).
 *   [Redis persistence](http://redis.io/topics/persistence) should be configured appropriately for the level of service required. In particular the RDB files should be used as backups and periodically saved offsite.
-*   [Redis master-slave replication](http://redis.io/topics/replication)&nbsp;should be set up, for robustness (fast disaster recovery). Note that Nuxeo Platform 5.8 does not yet know how to use the slaves for read-only operation.
+*   [Redis master-slave replication](http://redis.io/topics/replication) should be set up, for robustness (fast disaster recovery). Note that Nuxeo Platform 5.8 does not yet know how to use the slaves for read-only operation.
 
 ## Configuring Nuxeo for Redis
 
@@ -174,7 +174,7 @@ nuxeo.work.queuing=redis
 
 The `nuxeo.redis.port` is self-explanatory, 6379 is the value for a default Redis installation.
 
-The `nuxeo.redis.prefix` is the prefix used for all Nuxeo keys stored and read in Redis. This allows you to use a single Redis server between several Nuxeo cluster installations by having a different prefix for each cluster, but this is not really recommended. All keys used for Work queue management have `work:` added after this prefix. Those related to caching use&nbsp;`cache:` after this prefix. For locking, `lock:` followed by the repository name is used.
+The `nuxeo.redis.prefix` is the prefix used for all Nuxeo keys stored and read in Redis. This allows you to use a single Redis server between several Nuxeo cluster installations by having a different prefix for each cluster, but this is not really recommended. All keys used for Work queue management have `work:` added after this prefix. Those related to caching use `cache:` after this prefix. For locking, `lock:` followed by the repository name is used.
 
 The `nuxeo.redis.password`, `nuxeo.redis.database` and `nuxeo.redis.timeout` are standard Redis parameters, although rarely used.
 
@@ -205,5 +205,3 @@ nuxeo.redis.ha.port=26379
 ```
 
 Nuxeo will ask sentinel hosts in the declaring order at port 26379 for the server mymaster.
-
-&nbsp;
