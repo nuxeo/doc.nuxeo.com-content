@@ -440,7 +440,7 @@ Nuxeo Edge Cache<br/>
 Registered access
 </td>
 <td colspan="1">
-[Documentation]({{page page='nuxeo-edge-cache-server'}})
+[Documentation]({{page page='nuxeo-edge-cache'}})
 </td>
 <td colspan="1">
 [Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-edge-cache?version=1.0)
