@@ -114,11 +114,9 @@ history:
         version: '1'
 
 ---
-The Nuxeo Platform supports the following MySQL versions:
+The Nuxeo Platform supports the following MySQL version:
 
-{{{multiexcerpt 'FT-mySQL-supported' page='Compatibility Matrix'}}}
-
-We always recommend that you use the latest stable version.
+{{{multiexcerpt 'MySQL-supported' page='Compatibility Matrix'}}}
 
 ## Configuration
 
@@ -136,11 +134,11 @@ GRANT SELECT ON `mysql`.`proc` TO 'nuxeo'@'%' 
 
 Because MySQL by default likes to drop connections after a short idle time, if you don't use a datasource pool configuration that always checks for valid connections Nuxeo Platform may unexpectedly use a closed connection and this can cause various errors.
 
-Therefore we strongly suggest that you configure MySQL to never drop idle connections, by using a huge value for&nbsp;[wait_timeout](http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_wait_timeout).
+Therefore we strongly suggest that you configure MySQL to never drop idle connections, by using a huge value for [wait_timeout](http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_wait_timeout).
 
 ## Recent versions
 
-MySQL 5.6 and MySQL 5.7 compatibility needs an update in the ROW_FORMAT used for the tables that my have large row sizes (see&nbsp;[this](http://dev.mysql.com/doc/refman/5.6/en/innodb-row-format-dynamic.html)&nbsp;for more). This is not yet automatically done by Nuxeo.
+MySQL 5.6 and MySQL 5.7 compatibility needs an update in the ROW_FORMAT used for the tables that my have large row sizes (see [this](http://dev.mysql.com/doc/refman/5.6/en/innodb-row-format-dynamic.html) for more). This is not yet automatically done by Nuxeo.
 
 ## Limitations
 
@@ -153,7 +151,7 @@ If you choose MySQL for your Nuxeo project, you should know that in the past, we
 *   Prior to MySQL 5.6, configuration of fulltext features required external plugins to change things like stop words or stemming rules ([reference](http://dev.mysql.com/doc/refman/5.5/en/fulltext-stopwords.html)). Since MySQL 5.6 this is not a problem anymore ([reference](http://dev.mysql.com/doc/refman/5.6/en/fulltext-stopwords.html)).
 *   It is not possible to get proper relevance ranking for boolean full-text results, or to normalize the relevance between 0 and 1\. This can lead to imprecise fulltext results.
 *   MySQL has a 64 KB row size limit, which means that it is not possible to put more than a few long `VARCHAR()` columns in a table or a schema. This means any custom schemas created for Nuxeo have to be carefully defined to not contain too many string fields.
-    **Note:** MySQL is not alone in having row size limitations, and it is possible to use a&nbsp;`TEXT`/`CLOB`&nbsp;column to work around the size limit by specifying the field as&nbsp;`<field type="largetext">`; see&nbsp;[NXP-3993](http://jira.nuxeo.com/browse/NXP-3993).)
+    **Note:** MySQL is not alone in having row size limitations, and it is possible to use a `TEXT`/`CLOB` column to work around the size limit by specifying the field as `<field type="largetext">`; see [NXP-3993](http://jira.nuxeo.com/browse/NXP-3993).)
 *   In MySQL, equality tests for strings are case-insensitive. This means that some custom application queries may confuse uppercase and lowercase.
 
 ### Limitations That Impact Performance
@@ -165,10 +163,8 @@ If you choose MySQL for your Nuxeo project, you should know that in the past, we
 
 ### Other Limitations
 
-*   MySQL loses connections unexpectedly, which requires configuring&nbsp;`;autoReconnect=true`&nbsp;as a workaround, which could cause transaction problems. (It's better to configure MySQL with an near-infinite&nbsp;[wait_timeout](http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_wait_timeout)).
-*   Prior to MySQL 5.6, full-text support was not transactional as full-text required MyISAM tables ([reference](http://dev.mysql.com/doc/refman/5.5/en/fulltext-search.html)). Since MySQL 5.6 this is not a problem anymore, as InnoDB tables can be used ([reference](http://dev.mysql.com/doc/refman/5.6/en/fulltext-search.html)). See the InnoDB Full-text Search in MySQL 5.6 articles:&nbsp;[part 1](http://www.mysqlperformanceblog.com/2013/02/26/myisam-vs-innodb-full-text-search-in-mysql-5-6-part-1/),&nbsp;[part 2](http://www.mysqlperformanceblog.com/2013/03/04/innodb-full-text-search-in-mysql-5-6-part-2-the-queries/),&nbsp;[part 3](http://www.mysqlperformanceblog.com/2013/07/31/innodb-full-text-search-in-mysql-5-6-part-3/).
-
-&nbsp;
+*   MySQL loses connections unexpectedly, which requires configuring `;autoReconnect=true` as a workaround, which could cause transaction problems. (It's better to configure MySQL with an near-infinite [wait_timeout](http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_wait_timeout)).
+*   Prior to MySQL 5.6, full-text support was not transactional as full-text required MyISAM tables ([reference](http://dev.mysql.com/doc/refman/5.5/en/fulltext-search.html)). Since MySQL 5.6 this is not a problem anymore, as InnoDB tables can be used ([reference](http://dev.mysql.com/doc/refman/5.6/en/fulltext-search.html)). See the InnoDB Full-text Search in MySQL 5.6 articles: [part 1](http://www.mysqlperformanceblog.com/2013/02/26/myisam-vs-innodb-full-text-search-in-mysql-5-6-part-1/), [part 2](http://www.mysqlperformanceblog.com/2013/03/04/innodb-full-text-search-in-mysql-5-6-part-2-the-queries/), [part 3](http://www.mysqlperformanceblog.com/2013/07/31/innodb-full-text-search-in-mysql-5-6-part-3/).
 
 * * *
 

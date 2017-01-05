@@ -576,11 +576,10 @@ history:
         version: '1'
 
 ---
-Nuxeo supports the following PostgreSQL versions:
+Nuxeo supports the following PostgreSQL version:
 
-{{{multiexcerpt '7.x-postgreSQL-supported' page='Compatibility Matrix'}}}
+{{{multiexcerpt 'PostgreSQL-supported' page='Compatibility Matrix'}}}
 
-We always recommend that you use the latest stable version, which is PostgreSQL 9.6 at the time of this writing.
 
 The database needs to be configured to work properly with Nuxeo. Some settings **must** be changed in order for Nuxeo to work. Other settings _should_ be changed in order for Nuxeo to have good performance.
 
@@ -594,7 +593,7 @@ Most settings have to be changed in the `postgresql.conf` file. Some SQL command
 
 You shouldn't need to change this, because two-phase commit (XA) isn't used in basic configurations.
 
-However, if you&nbsp;use XA datasources (see the&nbsp;[JDBC Datasource Configuration documentation]({{page page='jdbc-datasource'}}) for more on this), you will need to update&nbsp;the default&nbsp;`max_prepared_transactions` settings. You can use the same value as `max_connections`.
+However, if you use XA datasources (see the [JDBC Datasource Configuration documentation]({{page page='jdbc-datasource'}}) for more on this), you will need to update the default `max_prepared_transactions` settings. You can use the same value as `max_connections`.
 
 ```
 max_prepared_transactions = 100
@@ -662,9 +661,9 @@ Note that using the `UTF8` encoding for your database is important.
 
 {{/callout}}
 
-### Edit the PostgreSQL configuration file to change how the&nbsp;`nuxeo`&nbsp;user authenticates to the database
+### Edit the PostgreSQL configuration file to change how the `nuxeo` user authenticates to the database
 
-Edit the file `pg_hba.conf`, make sure that the&nbsp;`nuxeo` user (or&nbsp;`all` users, if the&nbsp;`nuxeo` user is not individually listed), have an authentication `METHOD` of&nbsp;`md5`, rather than `ident`. Otherwise you will have some `FATAL: Ident authentication failed for user "nuxeo"`&nbsp;errors in the logs.
+Edit the file `pg_hba.conf`, make sure that the `nuxeo` user (or `all` users, if the `nuxeo` user is not individually listed), have an authentication `METHOD` of `md5`, rather than `ident`. Otherwise you will have some `FATAL: Ident authentication failed for user "nuxeo"` errors in the logs.
 
 ```
 # TYPE  DATABASE    USER        CIDR-ADDRESS          METHOD
@@ -674,8 +673,6 @@ local   all         all                               md5
 # IPv4 local connections:
 host    all         all         127.0.0.1/32          md5
 ```
-
-&nbsp;
 
 ## Performance Tuning
 
@@ -703,14 +700,14 @@ Then restart the PostgreSQL.
 
 If there is no enough shared memory you will have an explicit error message and you should try with a bigger `kernel.shmmax` value.
 
-Once PostgreSQL starts properly with the chosen&nbsp;`kernel.shmmax`&nbsp;value, it should be registered in the `/etc/sysctl.conf` file by adding the following line.
+Once PostgreSQL starts properly with the chosen `kernel.shmmax` value, it should be registered in the `/etc/sysctl.conf` file by adding the following line.
 
 ```
 kernel.shmmax = <SHMMAX_VALUE>
 
 ```
 
-Using `effective_cache_size`&nbsp;PostgreSQL is informed of how much memory the system will use for disk caching. This is used as a hint when executing queries, note that this memory _is not allocated_ by PostgreSQL itself.
+Using `effective_cache_size` PostgreSQL is informed of how much memory the system will use for disk caching. This is used as a hint when executing queries, note that this memory _is not allocated_ by PostgreSQL itself.
 
 To set `effective_cache_size` value, you need to run your application once and check how much memory is used by system cache. This can be done using the free command and using the `free` value for `-/+ buffers/cache`. Then you can set this value in the configuration:
 
@@ -956,8 +953,6 @@ If you have a database configuration problem and you want to fill a JIRA ticket,
 
 *   Attach the output file located in `/tmp/pgconf.txt` into the JIRA ticket. An example of such a result file is [here]({{file name='pgconf.txt'}}), so that you can check that yours has the correct format.
 *   If you are monitoring the slowest queries (See monitoring section) you can zip and attach the `postgresql` log file to the JIRA ticket.
-
-&nbsp;
 
 * * *
 

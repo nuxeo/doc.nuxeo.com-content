@@ -304,9 +304,9 @@ history:
         version: '1'
 
 ---
-The Nuxeo Platform supports the following versions of Oracle:
+The Nuxeo Platform supports the following version of Oracle:
 
-{{{multiexcerpt '7.x-oracle-supported' page='Compatibility Matrix'}}}
+{{{multiexcerpt 'Oracle-supported' page='Compatibility Matrix'}}}
 
 ## Oracle Text (Full-Text)
 
@@ -323,7 +323,7 @@ In addition, if you want to configure specific lexers or word lists then check [
 
 ## DB_BLOCK_SIZE Configuration
 
-The Nuxeo Platform requires the configuration of&nbsp;`DB_BLOCK_SIZE`, the size of Oracle database blocks. Whereas typical values are&nbsp;`4096`&nbsp;and&nbsp;`8192` bytes, you need to set it to&nbsp;**8192** to make the Nuxeo Platform properly work. Use this query to get the current value set in your Oracle database:
+The Nuxeo Platform requires the configuration of `DB_BLOCK_SIZE`, the size of Oracle database blocks. Whereas typical values are `4096` and `8192` bytes, you need to set it to **8192** to make the Nuxeo Platform properly work. Use this query to get the current value set in your Oracle database:
 
 ```sql
 SELECT value FROM v$parameter WHERE name = 'db_block_size';
@@ -337,7 +337,7 @@ java.sql.SQLException: Error executing: CREATE INDEX DC_CONTRIBUTORS_ITEM_IDX ON
 
 ## Grant on DBMS_CRYPTO
 
-In order for optimizations to be working&nbsp;in Nuxeo when using Oracle, hashing functions are needed and you need to grant `DBMS_CRYPTO` execution:
+In order for optimizations to be working in Nuxeo when using Oracle, hashing functions are needed and you need to grant `DBMS_CRYPTO` execution:
 
 ```
 GRANT EXECUTE ON SYS.DBMS_CRYPTO TO nuxeo;
@@ -446,7 +446,7 @@ If you need to change the character set of you database, please check [http://do
 If for some reason you must use an unsupported character set that is not in the list: `AL32UTF8`, `UTF8`, `US7ASCII`, `WE8DEC`, `WE8ISO8859P1`, `WE8MSWIN1252`, then you will need an additional `orai18n.jar` JAR in your Java class path.
 
 1.  Download `orai18n.jar` at [http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/htdocs/jdbc_10201.html](http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/htdocs/jdbc_10201.html).
-2.  Add it in the class path for your Nuxeo server. For instance, in JBoss, you just put the jar in `$JBOSS/server/default/lib`. (The file `orai18n.jar` replaces the `nls_charset*.*` files in the Oracle 9i and older releases.) However this may or may not work depending on your Oracle version, installation specifics and other factors, and the only supported solution by the Nuxeo Platform is to use the&nbsp; `AL32UTF8` charset.
+2.  Add it in the class path for your Nuxeo server. For instance, in JBoss, you just put the jar in `$JBOSS/server/default/lib`. (The file `orai18n.jar` replaces the `nls_charset*.*` files in the Oracle 9i and older releases.) However this may or may not work depending on your Oracle version, installation specifics and other factors, and the only supported solution by the Nuxeo Platform is to use the  `AL32UTF8` charset.
 
 {{#> callout type='info' heading='Technical explanation'}}
 
@@ -465,9 +465,9 @@ Starting with 11g R2, Oracle does not allocate space for a table until the first
 
 The Nuxeo Platform needs the Oracle JDBC driver to establish a connection to the database.
 
-The driver can be downloaded from the [Oracle JDBC driver downloads site](http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html).&nbsp;We recommend the latest version for 11.2.0.* : `ojdbc6.jar` for JDK 8\. It is compliant with Oracle 11g.
+The driver can be downloaded from the [Oracle JDBC driver downloads site](http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html). We recommend the latest version for 11.2.0.* : `ojdbc6.jar` for JDK 8\. It is compliant with Oracle 11g.
 
-The driver must be in the `$NUXEO_HOME/lib` directory.&nbsp;If you are using the `oracle` template (`nuxeo.templates=oracle` in `nuxeo.conf`), just put the driver in the `$NUXEO_HOME/templates/oracle/lib` directory.
+The driver must be in the `$NUXEO_HOME/lib` directory. If you are using the `oracle` template (`nuxeo.templates=oracle` in `nuxeo.conf`), just put the driver in the `$NUXEO_HOME/templates/oracle/lib` directory.
 
 ## Limitations
 
@@ -496,8 +496,6 @@ wget --no-check-certificate https://gist.github.com/bdelbosc/7766893/raw/dump-nu
 sqlplus nuxeo/nuxeo@NUXEO @dump-nuxeo-oracle-conf.sql</pre>
 
 and attach the output file located in `/tmp/oraconf.txt` into the JIRA ticket.
-
-&nbsp;
 
 * * *
 
