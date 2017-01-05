@@ -2,10 +2,10 @@
 title: EasyShare
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-05'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - easyshare
     - excerpt-include
 confluence:
@@ -60,9 +60,9 @@ history:
 ---
 {{{excerpt 'USERDOC:EasyShare'}}}
 
-The EasyShare package&nbsp;requires no specific installation steps. It can be installed like any other package&nbsp;[from the Marketplace or from the Admin Center]({{page space='ADMINDOC' page='Installing a+New+Package+on+Your+Instance'}}).
+The EasyShare package requires no specific installation steps. It can be installed like any other package&nbsp;[from the Marketplace or from the Admin Center]({{page space='ADMINDOC' page='Installing a+New+Package+on+Your+Instance'}}).
 
-After the package is installed, a new collaborative space is available, called Easy Share folder.
+After the package is installed, a new collaborative space is available, called EasyShare folder.
 
 ![]({{file name='EasyShare-folder.png'}} ?w=650,h=301,border=true)
 
