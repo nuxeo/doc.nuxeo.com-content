@@ -6,7 +6,12 @@ review:
     status: ok
 toc: true
 labels:
-tree_item_index: 600
+    - lts2016-ok
+    - nuxeo-web-ui
+    - extension
+    - themes
+    - appearance
+tree_item_index: 900
 
 ---
 ## Themes

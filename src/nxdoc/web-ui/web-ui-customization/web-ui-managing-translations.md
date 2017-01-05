@@ -12,7 +12,7 @@ labels:
     - i18n
     - labels
     - localization
-tree_item_index: 700
+tree_item_index: 1000
 
 ---
 

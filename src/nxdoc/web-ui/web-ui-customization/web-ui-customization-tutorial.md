@@ -11,7 +11,7 @@ labels:
     - nuxeo-web-ui
     - customization
     - polymer
-tree_item_index: 400
+tree_item_index: 1100
 
 ---
 
