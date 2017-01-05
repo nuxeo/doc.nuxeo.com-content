@@ -28,14 +28,16 @@ Nuxeo Edge Cache does not require any configuration on the Nuxeo server after it
 
 ### Agent Installation and Configuration
 
-1. Download and install the relevant agent for your system:
-    - Windows: MSI installer
-    - OS X: DMG installer
-    - OS independent: Docker image
+1. Download and install the relevant agent for your system. They are available from the [Marketplace Edge Cache page](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-edge-cache).
 2. Launch the Edge Cache agent and set it up.
     - Windows: follow the instructions displayed.
-    - OS X: follow the instructions displayed.
-    - Docker image: use the command line (see the [Command Line section below](#command-line)).
+    - Linux: Use the command line (see the [Command Line section below](#command-line)) to set up the Docker image.
+
+**Supported OS**
+
+- Debian 8.0 Jessie
+- Ubuntu Xenial Xerus 16.04
+- Windows Server 2016
 
 #### Command Line {{> anchor 'command-line'}}
 
