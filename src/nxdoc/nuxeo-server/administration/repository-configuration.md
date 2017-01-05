@@ -542,7 +542,7 @@ If no `<fieldType>`, `<field>` or `<excludeField>` are present, then all string 
     <pathOptimizations enabled="false"/>
     ```
 
-*   **aclOptimization *enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), you can disable the read ACL optimizations by using **false**. The default is **true**, _i.e._ ACL optimizations enabled.
+*   **aclOptimization enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), you can disable the read ACL optimizations by using **false**. The default is **true**, _i.e._ ACL optimizations enabled.
     ```xml
     <aclOptimizations enabled="false"/>
     ```
