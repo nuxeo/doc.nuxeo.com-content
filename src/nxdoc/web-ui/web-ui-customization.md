@@ -28,7 +28,7 @@ The simplest customization mechanism is based on the ability to override and/or 
 To override an existing element we just need to override its HTML file thus causing this new declaration to be loaded instead, similar to overriding XHTML templates in our JSF UI.
 Since our UI's resources are loaded from `/nuxeo.war/ui` developers can simply package their own version of the resources to override in their custom bundle and rely on our deployment fragment processing to unpack them.
 
-This simple customization mechanism is however normally reserved to either layout elements like [document layouts]({{page page='web-ui-document-layouts'}}) (view, edit, create, etc...), which are not incremental and meant to be produced and managed through Studio to ensure maintainability, or to known application areas with an expected high degree of customization like the home [dashboard]({{page page='dashboard'}}).
+This simple customization mechanism is however normally reserved to either layout elements like [document layouts]({{page page='web-ui-document-layouts'}}) (view, edit, create, etc...), which are not incremental and meant to be produced and managed through Studio to ensure maintainability, or to known application areas with an expected high degree of customization like the home [dashboard]({{page page='web-ui-dashboard'}}).
 
 ### Slots
 

@@ -42,4 +42,4 @@ In the case of Nuxeo Web UI we leverage on demand dynamic imports not only to la
 - [Document Layouts]({{page page='web-ui-document-layouts'}}).
 - [Search Forms]({{page page='web-ui-search'}}).
 - [Workflow Tasks Layouts]({{page page='web-ui-workflow-tasks'}}).
-- [Dashboard]({{page page='dashboard'}}).
+- [Dashboard]({{page page='web-ui-dashboard'}}).

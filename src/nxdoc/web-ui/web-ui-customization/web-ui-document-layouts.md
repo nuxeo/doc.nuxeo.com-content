@@ -31,7 +31,7 @@ Each of these regions is defined by a generic layout container element which wil
 
 These specific document layout elements are loaded by convention from a `/nuxeo.war/ui/document/<doctype>` folder and the element naming convention adopted is `nuxeo-<doctype>-<mode>-layout.html` where `mode` describes the use case and matches the layout name (i.e. *create*, *view* , *edit*, *import*, etc):
 
-```
+```text
 /ui
   └──── document
     ├─── <doctype>
@@ -43,11 +43,11 @@ The following table lists layout elements used by Nuxeo Web UI:
 
 | Element                      | Layout                             |                                                                  |
 |:-----------------------------|:-----------------------------------|:-----------------------------------------------------------------|
-| 1. nuxeo-document-view       | nuxeo-<doctype>-view-layout        | ![]({{file name='document_page_1.png'}} ?w=100,border=true)      |
-| 2. nuxeo-document-metadata   | nuxeo-<doctype>-metadata-layout    | ![]({{file name='document_page_1.png'}} ?w=100,border=true)      |
-| 3. nuxeo-document-edit       | nuxeo-<doctype>-edit-layout        | ![]({{file name='document_page_2.png'}} ?w=100,border=true)      |
-| 4. nuxeo-document-create     | nuxeo-<doctype>-create-layout      | ![]({{file name='document_create.png'}} ?w=100,border=true)      |
-| 5. nuxeo-document-import     | nuxeo-<doctype>-import-layout      | ![]({{file name='document_import.png'}} ?w=100,border=true)      |
+| 1. nuxeo-document-view       | nuxeo-{doctype}-view-layout        | ![]({{file name='document_page_1.png'}} ?w=100,border=true)      |
+| 2. nuxeo-document-metadata   | nuxeo-{doctype}-metadata-layout    | ![]({{file name='document_page_1.png'}} ?w=100,border=true)      |
+| 3. nuxeo-document-edit       | nuxeo-{doctype}-edit-layout        | ![]({{file name='document_page_2.png'}} ?w=100,border=true)      |
+| 4. nuxeo-document-create     | nuxeo-{doctype}-create-layout      | ![]({{file name='document_create.png'}} ?w=100,border=true)      |
+| 5. nuxeo-document-import     | nuxeo-{doctype}-import-layout      | ![]({{file name='document_import.png'}} ?w=100,border=true)      |
 
 {{#> callout type='warning' }}
 
