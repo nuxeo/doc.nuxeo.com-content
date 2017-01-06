@@ -134,9 +134,9 @@ Nuxeo instances should be configured with a Redis server (in addition to the reg
 1.  When it's important that asynchronous jobs not yet executed be kept across server restarts.
 2.  In cluster mode to allow:
     *   Execution of some asynchronous jobs on dedicated nodes (for instance image conversion or full-text extraction).
-    *   A distributed [Transient Store](/x/AQalAQ), required for&nbsp;[Batch Upload](/x/OYLZ)&nbsp;and&nbsp;[Asynchronous Conversion Works](/x/PYMlAQ#Conversion-AsynchronousConversions).
-    *   Relying on the `RedisCache`&nbsp;as a distributed implementation of the [Nuxeo Drive]({{page space='userdoc' page='nuxeo-drive'}}) synchronization roots cache.
-    *   Efficient repository low level cache invalidations ([VCS row cache invalidation]({{page space='NXDOC' page='Nuxeo and+Redis#NuxeoandRedis-VCSRowCacheInvalidation'}}))
+    *   A distributed [Transient Store]({{page version='710' space='nxdoc' page='transient-store'}}), required for [Batch Upload]({{page space='nxdoc' page='blob-upload-for-batch-processing'}}) and [Asynchronous Conversion Works]({{page pace='NXDOC' page='Nuxeo and+Redis'}}#conversion-asynchronous-conversions).
+    *   Relying on the `RedisCache` as a distributed implementation of the [Nuxeo Drive]({{page space='userdoc' page='nuxeo-drive'}}) synchronization roots cache.
+    *   Efficient repository low level cache invalidations ([VCS row cache invalidation]({{page space='NXDOC' page='Nuxeo and+Redis'}}#VCS-row-cache-invalidation))
 
 For a robust production instance, the first point is always necessary, which means that Redis should always be used.
 
@@ -149,7 +149,7 @@ The following Redis configuration points should be checked:
 *   The `maxmemory-policy`should be set to `noeviction`which is the default setting of Redis
 *   The server memory should be enough to hold the Redis database (the size depends on the usage: transient store, cache, the backlog of asynchronous jobs ...).
 *   [Redis persistence](http://redis.io/topics/persistence) should be configured appropriately for the level of service required. In particular the RDB files should be used as backups and periodically saved offsite.
-*   [Redis master-slave replication](http://redis.io/topics/replication)&nbsp;should be set up, for robustness (fast disaster recovery). Note that Nuxeo Platform does not yet know how to use the slaves for read-only operation.
+*   [Redis master-slave replication](http://redis.io/topics/replication) should be set up, for robustness (fast disaster recovery). Note that Nuxeo Platform does not yet know how to use the slaves for read-only operation.
 
 ## Configuring Nuxeo for Redis
 
@@ -176,7 +176,7 @@ nuxeo.redis.maxIdle=8
 
 The `nuxeo.redis.port` is self-explanatory, 6379 is the value for a default Redis installation.
 
-The `nuxeo.redis.prefix` is the prefix used for all Nuxeo keys stored and read in Redis. This allows you to use a single Redis server between several Nuxeo cluster installations by having a different prefix for each cluster, but this is not really recommended. All keys used for Work queue management have `work:` added after this prefix. Those related to caching use&nbsp;`cache:` after this prefix. For locking, `lock:` followed by the repository name is used.
+The `nuxeo.redis.prefix` is the prefix used for all Nuxeo keys stored and read in Redis. This allows you to use a single Redis server between several Nuxeo cluster installations by having a different prefix for each cluster, but this is not really recommended. All keys used for Work queue management have `work:` added after this prefix. Those related to caching use `cache:` after this prefix. For locking, `lock:` followed by the repository name is used.
 
 The `nuxeo.redis.password`, `nuxeo.redis.database` and `nuxeo.redis.timeout` are standard Redis parameters, although rarely used.
 
@@ -213,4 +213,4 @@ The Redis data are transient but should not be flushed while Nuxeo is running, i
 *   When performing testing and killing abruptly Nuxeo process.
 *   After a crash when some inconsistencies are visible in the work manager, like worker being marked as running forever.
 
-Once the Nuxeo instance or cluster is stopped you can drop the Redis data using the&nbsp;`redis-cli`&nbsp;command line and send a&nbsp;`flushdb` commmand, Nuxeo is using the&nbsp;`db 0` per default.
+Once the Nuxeo instance or cluster is stopped you can drop the Redis data using the `redis-cli` command line and send a `flushdb` commmand, Nuxeo is using the `db 0` per default.
