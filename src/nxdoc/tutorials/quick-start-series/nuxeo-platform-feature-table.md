@@ -615,8 +615,7 @@ Default distribution<br/>
 <td>&#10003;</td>
 <td>&#10003;</td>
 <td colspan="1">
-[Developer documentation]({{page page='nuxeo-drive'}})<br/>
-[User documentation]({{page space='userdoc' page='nuxeo-drive'}})
+[Documentation]({{page page='nuxeo-drive'}})<br/>
 </td>
 </tr>
 <tr>
@@ -625,7 +624,7 @@ Default distribution<br/>
 <td></td>
 <td>&#10003;</td>
 <td></td>
-<td colspan="1">[User documentation]({{page space='userdoc' page='nuxeo-drive'}})</td>
+<td colspan="1">[Documentation]({{page page='nuxeo-drive'}})</td>
 </tr>
 <tr>
 <td colspan="1">Offline synchronization</td>
@@ -633,7 +632,7 @@ Default distribution<br/>
 <td></td>
 <td>&#10003;</td>
 <td>&#10003;</td>
-<td colspan="1">[User documentation]({{page space='userdoc' page='nuxeo-drive'}})</td>
+<td colspan="1">[Documentation]({{page page='nuxeo-drive'}})</td>
 </tr>
 <tr>
 <td colspan="1">&nbsp;</td>

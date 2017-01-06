@@ -409,8 +409,7 @@ Nuxeo Drive<br/>
 Public
 </td>
 <td colspan="1">
-[Developer documentation]({{page page='nuxeo-drive'}})<br/>
-[User documentation]({{page space='userdoc' page='nuxeo-drive'}})
+[Documentation]({{page page='nuxeo-drive'}})<br/>
 </td>
 <td colspan="1">
 [Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive?version=1.6.3)
