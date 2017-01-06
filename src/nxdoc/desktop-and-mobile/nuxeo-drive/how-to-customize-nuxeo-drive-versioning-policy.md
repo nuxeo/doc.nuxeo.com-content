@@ -83,7 +83,7 @@ history:
 
 ## How to Configure the Versioning Delay or Version Increment
 
-You can configure two parameters of Nuxeo Drive versioning policy thanks to the extension point&nbsp;[fileSystemItemFactory](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.drive.adapters--fileSystemItemFactory): the last edit delay until a new version is created and which version increment will occur (minor or major).
+You can configure two parameters of Nuxeo Drive versioning policy thanks to the extension point [fileSystemItemFactory](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.drive.adapters--fileSystemItemFactory): the last edit delay until a new version is created and which version increment will occur (minor or major).
 
 For example, to create a major version if the document is modified 30 minutes after the last change, use this contribution:
 
@@ -107,8 +107,8 @@ For example, to create a major version if the document is modified 30 minutes af
 
 If you need to make more changes on the versioning mechanism in Nuxeo Drive:
 
-1.  Write your own implementation of&nbsp;[VersioningFileSystemItemFactory](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/drive/service/VersioningFileSystemItemFactory.html)&nbsp;interface, and in particular write the expected behavior in the&nbsp;[needsVersioning](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/drive/service/VersioningFileSystemItemFactory.html#needsVersioning%28org.nuxeo.ecm.core.api.DocumentModel%29)&nbsp;method.
-2.  Contribute to the&nbsp;`fileSystemItemFactory`&nbsp;extension point to use your new class:
+1.  Write your own implementation of [VersioningFileSystemItemFactory](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/drive/service/VersioningFileSystemItemFactory.html) interface, and in particular write the expected behavior in the [needsVersioning](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/drive/service/VersioningFileSystemItemFactory.html#needsVersioning%28org.nuxeo.ecm.core.api.DocumentModel%29) method.
+2.  Contribute to the `fileSystemItemFactory` extension point to use your new class:
 
 ```xml
   <extension target="org.nuxeo.drive.service.FileSystemItemAdapterService"
@@ -125,9 +125,8 @@ If you need to make more changes on the versioning mechanism in Nuxeo Drive:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-- [Nuxeo Drive user documentation]({{page space='userdoc' page='nuxeo-drive'}})
 - [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
-- [Nuxeo Drive FAQ]({{page space='userdoc' page='nuxeo-drive-faq'}})
+- [Nuxeo Drive FAQ]({{page version='' space='nxdoc' page='nuxeo-drive-faq'}})
 - [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
 
 {{/panel}}</div><div class="column medium-6">
