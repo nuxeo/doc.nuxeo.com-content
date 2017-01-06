@@ -129,15 +129,28 @@ The following is a sample definition of what an `edit` layout element for a `MyD
 When contributing document types, there are a couple of two more contributions that have to be made in order for them to
 be properly displayed in the document creation wizard: add a custom icon and a custom label for each type.
 
-{{#> callout type='note' }}
-For more information about customizing Web UI, please check the [Customization Tutorial]({{page page='web-ui-customization-tutorial'}}).
-{{/callout}}
-
 The icon must be contributed to `/nuxeo.war/ui/images`, named after the format `{doctype}.svg`. Labels must be added to
-the message files under the format `label.document.type.{doctype}`. In both cases, `doctype` must be lower case.
+the message files under the format `label.document.type.{doctype}`. In both cases, `doctype` must be the lower case doctype **id**.
 
 {{#> callout type='note' }}
 For more information about contributing labels, please check the page [Managing Translations]({{page page='web-ui-managing-translations'}}).
+{{/callout}}
+
+You can prevent a doctype from being created via document creation wizard by adding to it the `HiddenInCreation` facet.
+
+Doctypes can also be prevented from being imported even if they can be created, through the `window.nuxeo.importBlacklist`
+array, which holds all the doctypes that **cannot** be created. You can simply add or override this array to fit your needs.
+One could prevent the `Workspace`, `Folder`, `OrderedFolder` and `Collection` doctypes from being imported on the Web UI
+by deploying the following as a WebResource:
+
+```
+window.nuxeo.importBlacklist = [
+ 'Workspace', 'Folder', 'OrderedFolder', 'Collection'
+];
+```
+
+{{#> callout type='note' }}
+For more information about customizing and deployig Web UI, please check the [Customization Tutorial]({{page page='web-ui-customization-tutorial'}}).
 {{/callout}}
 
 {{#> callout type='warning' }}
