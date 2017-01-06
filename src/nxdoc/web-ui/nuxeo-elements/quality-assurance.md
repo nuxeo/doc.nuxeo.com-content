@@ -16,9 +16,8 @@ labels:
 tree_item_index: 100
 
 ---
-## Quality Assurance
-
-- Intro to topic
+When developing web applications with Nuxeo Elements there are several strategies and tools that can provide means for code quality, performance and security.
+Using our experience, here we share some best practices and our views on these different quality assurance topics.
 
 ## Formatting and Linting
 
