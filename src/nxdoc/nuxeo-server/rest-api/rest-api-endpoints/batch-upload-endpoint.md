@@ -1,12 +1,8 @@
 ---
-title: Batch Upload Endpoint
+title: Batch Upload Resource Endpoint
 review:
     comment: ''
-<<<<<<< HEAD:src/nxdoc/nuxeo-server/rest-api/blob-upload-for-batch-processing.md
     date: '2017-01-17'
-=======
-    date: '2017-01-04'
->>>>>>> NXDOC-1049: Reorder REST API pages:src/nxdoc/nuxeo-server/rest-api/rest-api-endpoints/batch-upload-endpoint.md
     status: ok
 labels:
     - lts2016-ok
@@ -195,26 +191,18 @@ history:
         version: '1'
 
 ---
-{{> wistia_video id='qokay4hw1i'}}
-
-Extract from the course "[Working with the REST API](https://university.nuxeo.com/store/155916-rest-api)" on [Nuxeo University](https://university.nuxeo.com)
-
-## Motivations
 
 {{! excerpt}}
 
-The default way Automation deals with Blobs is to use the standard HTTP MultiPart Encoding.
+By default, Automation uses standard HTTP MultiPart Encoding to deal with Blobs.
 
-This strategy can not fit when:
+This doesn't fit in the following situations:
 
 {{! /excerpt}}
 
-*   Your client does not natively support multipart encoding;
-    Ex: JavaScript (without using a Form).
-*   You have several files to send, but prefer to send them as separated chunks;
-    Ex: You have an HTTP proxy that will limit POST size.
-*   You want to upload files as soon as possible and then run the operation when everything has been uploaded on the server;
-    Ex: You upload pictures you select from a mobile device.
+*   Your client does not natively support multipart encoding (JavaScript without using a Form)
+*   You have several files to send, but prefer to send them as separated chunks (You have an HTTP proxy that will limit POST size)
+*   You want to upload files as soon as possible and then run the operation when everything has been uploaded on the server (You upload pictures you select from a mobile device)
 
 ## Uploading Files
 
@@ -227,7 +215,7 @@ The old API using `/site/automation/batch/upload` is deprecated but kept for bac
 
 ### Batch Initialization
 
-Before uploading any file you need to initialize a batch, even if there is only one file to upload.
+Before uploading any file, you need to initialize a batch, even if there is only one file to upload.
 
 ```
 POST /api/v1/upload/
@@ -235,44 +223,71 @@ POST /api/v1/upload/
 
 This request returns a 201 *CREATED* status code with the following JSON data:
 
-```json
+```javascript
 {"batchId": batchId}
 ```
 
-**This handshake phase is mandatory to acquire a server-side generated batch id to be used in subsequent requests as part of the REST resource path.**
+**This handshake phase is mandatory to acquire a server-side generated batch ID to be used in subsequent requests as part of the REST resource path.**
 
-The batch id can be seens as an upload session id, especially for a [resumable upload]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}}#-anchor-uploadingafileinchunks-uploading-a-file-in-chunks-resumable-).
+The batch ID can be seen as an upload session id, especially for a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}}#-anchor-uploadingafileinchunks-uploading-a-file-in-chunks-resumable-).
 
 ### Uploading a File
 
-You can do a simple POST with the payload containing your file, yet we also support multipart encoded upload.
+You can do a simple POST with the payload containing your file, but a multipart encoded upload is also supported.
 
 ```
 POST /api/v1/upload/{batchId}/{fileIdx}
 ```
 
-The `batchId` is the batch identifier, you need to use the one returned by the batch initialization request, otherwise you will get a 404 *Not Found* status code.
+The `batchId` is the batch identifier. You need to use the one returned by the batch initialization request, otherwise you will get a 404 *Not Found* status code.
 
-The `fileIdx`  is the index of the file inside the batch, it is here to later reference the file by its index and also to keep track of the client side ordering, because the order the server receives the files may not be the same.
+The `fileIdx` is the index of the file inside the batch. The file can be referenced later with this index and it keeps track of the client-side ordering, since the order in which the server receives the files may not be the same.
 
 The batch identifier should be common to all the files you want to upload and attach to the same batch.
 
 You also need to set some custom HTTP headers:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Header name</th><th colspan="1">Description</th></tr><tr><td colspan="1">`X-File-Name`</td><td colspan="1">Name of the file</td></tr><tr><td colspan="1">`X-File-Type`</td><td colspan="1">Mime type of the file</td></tr><tr><td colspan="1">`Content-Type`</td><td colspan="1">Should be set to `"application/octet-stream"`</td></tr><tr><td colspan="1">`Content-Length`</td><td colspan="1">Size of the file in bytes, required if your HTTP client doesn't add this header, typically the Nuxeo [JavaScript Client]({{page page='javascript-client'}})</td></tr></tbody></table></div>
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th colspan="1">Header name</th>
+        <th colspan="1">Description</th>
+      </tr>
+      <tr>
+        <td colspan="1">`X-File-Name`</td>
+        <td colspan="1">Name of the file</td>
+      </tr>
+      <tr>
+        <td colspan="1">`X-File-Type`</td>
+        <td colspan="1">Mime type of the file</td>
+      </tr>
+      <tr>
+        <td colspan="1">`Content-Type`</td>
+        <td colspan="1">Should be set to `"application/octet-stream"`</td>
+      </tr>
+      <tr>
+        <td colspan="1">`Content-Length`</td>
+        <td colspan="1">
+          Size of the file in bytes, required if your HTTP client doesn't add this header, typically the Nuxeo [JavaScript Client]({{page page='javascript-client'}})
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Returns a 201 *CREATED* status code with the following JSON data:
 
-```json
+```javascript
 {"batchId": batchId, "fileIdx": fileIdx, "uploadType": "normal", "uploadedSize": xxx}
 ```
 
-The value of the `uploadType` field is `normal` by default, it can be `chunked` if the file was [uploaded by chunks](#uploading-a-file-by-chunks).
+The value of the `uploadType` field is `normal` by default, it can be `chunked` if the file was [uploaded in chunks](#uploading-a-file-by-chunks).
 
 
 {{#> callout type='info' heading='About the file storage implementation'}}
 
-The files uploaded to the batch are stored on a temporary disk space until the batch is executed or dropped.
+The files uploaded to the batch are stored on temporary disk space until the batch is executed or dropped.
 
 For this purpose the batch upload relies on the default [Transient Store]({{page page='transient-store'}}) that stores the uploaded files inside `${nuxeo.data.dir}/transientstores/default`).
 
@@ -284,11 +299,11 @@ For this purpose the batch upload relies on the default [Transient Store]({{page
 GET /api/v1/upload/{batchId}
 ```
 
-Returns a 200 *OK* status code if the batch contains at least one file and a 204  *No Content*  status code if the batch doesn't contain any file.
+Returns a 200 *OK* status code if the batch contains at least one file and a 204 *No Content* status code if the batch doesn't contain any file.
 
 JSON response data:
 
-```json
+```javascript
 [{"name": file1, "size": yyy, "uploadType": "normal"}, {"name": file2, "size": zzz, "uploadType": "normal"}]
 ```
 
@@ -302,7 +317,7 @@ Returns a 200 *OK* status code if the batch contains a file with the given index
 
 JSON response data:
 
-```json
+```javascript
 {"name": xxx, "size": yyy, "uploadType": "normal"}
 ```
 
@@ -314,11 +329,11 @@ DELETE /api/v1/upload/{batchId}
 
 Returns a 204 *No Content* status code with the following JSON data:
 
-```json
+```javascript
 {"batchId": batchId, "dropped": "true"}
 ```
 
-By default, executing a batch will automatically remove it. You can prevent this behavior by executing it with the header `X-Batch-No-Drop` set to **"true"**. In such a case, you have to take care of dropping the batch manually after you are done with it.
+By default, executing a batch will automatically remove it. You can prevent this behavior by executing it with the header `X-Batch-No-Drop` set to `true`. In such a case, you have to take care of dropping the batch manually after you're done with it.
 
 ### Deleting a File from a Batch
 
@@ -328,15 +343,15 @@ DELETE /api/v1/upload/{batchId}/{fileId}
 
 Returns a 204 *No Content* and removes the file from the batch.
 
-## Uploading a File by Chunks
+## Uploading a File in Chunks
 
-[Resumable upload]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}}#-anchor-uploadingafileinchunks-uploading-a-file-in-chunks-resumable-) became a requirement otherwise uploading large files over a broken connection could take days.
+Using a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}}#-anchor-uploadingafileinchunks-uploading-a-file-in-chunks-resumable-) is useful otherwise uploading large files over a broken connection could take days.
 
-Using chunking is a good idea since:
+Chunking is a good idea because:
 
-*   It allows to manage upload resume with enough granularity (*restart with chunk x*).
+*   It allows you to manage upload resumption with enough granularity (*restart with chunk x*).
 *   It allows multiplexing (*upload on multiple TCP streams*)
-*   It allows to overcome the limitations of some reverse proxies (*limits the risk of having a POST considered as too big*).
+*   It allows you to overcome the limitations of some reverse proxies (*limits the risk of having a POST considered as too big*).
 
 ### Uploading a Chunk
 
@@ -350,7 +365,50 @@ The `batchId` and `fileIdx` serve the same purpose as for uploading a whole file
 
 You need to set the same HTTP headers as for a whole file, adding some extra ones:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Header name</th><th colspan="1">Description</th></tr><tr><td colspan="1">`X-Upload-Type`</td><td colspan="1">`"chunked"`</td></tr><tr><td colspan="1">`X-Upload-Chunk-Index`</td><td colspan="1">Index of the chunk</td></tr><tr><td colspan="1">`X-Upload-Chunk-Count`</td><td colspan="1">Total chunk count</td></tr><tr><td colspan="1">`X-File-Name`</td><td colspan="1">Name of the file</td></tr><tr><td colspan="1">`X-File-Size`</td><td colspan="1">Size of the file in bytes</td></tr><tr><td colspan="1">`X-File-Type`</td><td colspan="1">Mime type of the file</td></tr><tr><td colspan="1">`Content-Type`</td><td colspan="1">Should be set to `"application/octet-stream"`</td></tr><tr><td colspan="1">`Content-Length`</td><td colspan="1">Size of the chunk in bytes, required if your HTTP client doesn't add this header, typically the Nuxeo [JavaScript Client]({{page page='javascript-client'}})</td></tr></tbody></table></div>
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th colspan="1">Header name</th>
+        <th colspan="1">Description</th>
+      </tr>
+      <tr>
+        <td colspan="1">`X-Upload-Type`</td>
+        <td colspan="1">`"chunked"`</td>
+      </tr>
+      <tr>
+        <td colspan="1">`X-Upload-Chunk-Index`</td>
+        <td colspan="1">Index of the chunk</td>
+      </tr>
+      <tr>
+        <td colspan="1">`X-Upload-Chunk-Count`</td>
+        <td colspan="1">Total chunk count</td>
+      </tr>
+      <tr>
+        <td colspan="1">`X-File-Name`</td>
+        <td colspan="1">Name of the file</td>
+      </tr>
+      <tr>
+        <td colspan="1">`X-File-Size`</td>
+        <td colspan="1">Size of the file in bytes</td>
+      </tr>
+      <tr>
+        <td colspan="1">`X-File-Type`</td>
+        <td colspan="1">Mime type of the file</td>
+      </tr>
+      <tr>
+        <td colspan="1">`Content-Type`</td>
+        <td colspan="1">Should be set to `"application/octet-stream"`</td>
+      </tr>
+      <tr>
+        <td colspan="1">`Content-Length`</td>
+        <td colspan="1">
+          Size of the chunk in bytes, required if your HTTP client doesn't add this header, typically the Nuxeo [JavaScript Client]({{page page='javascript-client'}})
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 `X-Upload-Chunk-Index` must be the number of the chunk in the ordered list of chunks, starting from 0.
 
@@ -362,13 +420,13 @@ For instance if the file is made of 5 chunks you will send 5 requests with the f
 
 Optionally depending on the HTTP client you are using you might need to add the `Content-Length` header to specify the size of the chunk in bytes.
 
-As for a file uploaded in one go, the chunks attached to the batch are stored on a temporary disk storage until the batch is executed or dropped.
+For a file uploaded in one go, the chunks attached to the batch are stored on temporary disk storage until the batch is executed or dropped.
 
 Returns a 201 *CREATED* status code for a complete chunked file and a 308 *Resume Incomplete* status code for an incomplete chunked file.
 
 JSON response data:
 
-```json
+```javascript
 {"batchId": batchId, "fileIdx": fileIdx, "uploadType": "chunked", "uploadedSize": xxx, "uploadedChunkIds": [0, 1, 2], "chunkCount": 5}
 ```
 
@@ -386,7 +444,7 @@ If the batch doesn't contain any file with the given index, returns a 404 *Not F
 
 JSON response data:
 
-```json
+```javascript
 {"name": xxx, "size": yyy, "uploadType": "chunked", "uploadedChunkIds": [0, 1, 2, 4], "chunkCount": 5}
 ```
 
@@ -404,7 +462,7 @@ Accept: application/json+nxentity, */*
 Content-Type: application/json+nxrequest; charset=UTF-8
 ```
 
-```json
+```javascript
 {"params": {"operationParam": "value", ...}, "context": {...}}
 ```
 
@@ -414,12 +472,12 @@ Optionally you can use the `fileIdx` path parameter to specify the index of the 
 POST /api/v1/upload/{batchId}/{fileIdx}/execute/{operationId}
 ```
 
-This way of calling an Automation operation is actually used in the default UI to manage Drag&Drop:
+This way of calling an Automation operation is actually used in the default UI to manage Drag & Drop:
 
 1.  Files are progressively uploaded to the server:
-
     *   You can drop several sets of files,
     *   There is a maximum number of concurrent uploads.
+
 2.  When upload is finished you can select the operation or chain to execute.
 
 More info about [Drag & Drop configuration]({{page page='drag-and-drop-service-for-content-capture-html5-based'}}).
@@ -446,7 +504,7 @@ batchUpload.execute(operation);
 
 You can reference a Blob by its batch id and file index in the JSON document you're sending to the REST API.
 
-```json
+```javascript
 {
   "entity-type": "document",
   "properties": {
@@ -464,3 +522,8 @@ Sample code using the Java client:
 Document doc = nuxeoClient.repository().fetchDocumentByPath("/my/document/path");
 doc.setPropertyValue("file:content", batchUpload.getBatchBlob());
 ```
+
+## Learn More
+
+*   Follow the course [Importing Files with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/importing-files-rest-api) at [Nuxeo University](https://university.nuxeo.io).
+*   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='use-nuxeo-api-playground-to-discover-the-api'}}) to configure your local instance).
