@@ -57,7 +57,7 @@ history:
         version: '1'
 
 ---
-It is possible to add attachments to&nbsp;[Files]({{page page='document-types'}}) and [Notes]({{page page='document-types'}}) using the **Files** tab. This tab is available to users with at least Edit permission. There is no limit to the number of attachments.
+It is possible to add attachments to [Files]({{page page='document-types'}}) and [Notes]({{page page='document-types'}}) using the **Files** tab. This tab is available to users with at least Edit permission. There is no limit to the number of attachments.
 
 **To add attachments to your document:**
 
@@ -83,4 +83,4 @@ It is possible to add attachments to&nbsp;[Files]({{page page='document-types'}}
 
 **How to enable the Files tab on custom document types?**
 
-To enable the Files tab on your own document types, make sure it holds the schema&nbsp;`files`.
+To enable the Files tab on your own document types, make sure it holds the schema `files`.

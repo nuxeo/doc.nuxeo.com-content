@@ -412,7 +412,7 @@ It is possible to do a drag and drop import of documents with an additional step
 
 ## Creating Content Using Nuxeo Drive
 
-{{{excerpt 'USERDOC:Nuxeo Drive'}}}
+{{{excerpt 'NXDOC:Nuxeo Drive'}}}
 
 You can very easily import document by moving them from a desktop folder to a Nuxeo Drive folder, or creating office files directly in a Nuxeo Drive folder. Read the [Nuxeo Drive documentation]({{page page='nuxeo-drive'}}) for more information.
 

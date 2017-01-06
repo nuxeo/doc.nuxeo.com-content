@@ -32,37 +32,37 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/wYGyAQ'
     source_link: /display/NXDOC710/How+to+Customize+Nuxeo+Drive+Versioning+Policy
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-21 15:57'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-04 16:44'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-09 08:53'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-14 09:57'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-09 08:43'
         message: fix link
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-09 08:42'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-06 16:32'
         message: ''
@@ -71,11 +71,11 @@ history:
 ---
 {{! multiexcerpt name='drive_versioning_policy'}}
 
-{{{multiexcerpt 'drive-versioning' page='USERDOC:Nuxeo Drive'}}}
+{{{multiexcerpt 'drive-versioning' page='NXDOC:Nuxeo Drive'}}}
 
 ## How to Configure the Versioning Delay or Version Increment
 
-You can configure two parameters of Nuxeo Drive versioning policy thanks to the extension point&nbsp;[`fileSystemItemFactory`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.drive.adapters--fileSystemItemFactory): the last edit delay until a new version is created and which version increment will occur (minor or major).
+You can configure two parameters of Nuxeo Drive versioning policy thanks to the extension point [`fileSystemItemFactory`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewContribution/org.nuxeo.drive.adapters--fileSystemItemFactory): the last edit delay until a new version is created and which version increment will occur (minor or major).
 
 For example, to create a major version if the document is modified 30 minutes after the last change, use this contribution:
 
@@ -99,10 +99,10 @@ For example, to create a major version if the document is modified 30 minutes af
 
 If you need to make more changes on the versioning mechanism in Nuxeo Drive:
 
-1.  Write your own implementation of&nbsp;[`VersioningFileSystemItemFactory`](http://community.nuxeo.com/api/nuxeo/release-7.10/javadoc/org/nuxeo/drive/service/VersioningFileSystemItemFactory.html)&nbsp;interface, and in particular write the expected behavior in the&nbsp;[`needsVersioning`](http://community.nuxeo.com/api/nuxeo/release-7.10/javadoc/org/nuxeo/drive/service/VersioningFileSystemItemFactory.html#needsVersioning%28org.nuxeo.ecm.core.api.DocumentModel%29)&nbsp;method.
-2.  Contribute to the&nbsp;`fileSystemItemFactory`&nbsp;extension point to use your new class:
+1.  Write your own implementation of [`VersioningFileSystemItemFactory`](http://community.nuxeo.com/api/nuxeo/release-7.10/javadoc/org/nuxeo/drive/service/VersioningFileSystemItemFactory.html) interface, and in particular write the expected behavior in the [`needsVersioning`](http://community.nuxeo.com/api/nuxeo/release-7.10/javadoc/org/nuxeo/drive/service/VersioningFileSystemItemFactory.html#needsVersioning%28org.nuxeo.ecm.core.api.DocumentModel%29) method.
+2.  Contribute to the `fileSystemItemFactory` extension point to use your new class:
 
-```
+```xml
   <extension target="org.nuxeo.drive.service.FileSystemItemAdapterService"
     point="fileSystemItemFactory">
 
@@ -117,10 +117,10 @@ If you need to make more changes on the versioning mechanism in Nuxeo Drive:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Nuxeo Drive user documentation]({{page space='userdoc710' page='nuxeo-drive'}})
-*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
-*   [Nuxeo Drive FAQ]({{page space='userdoc710' page='nuxeo-drive-faq'}})
-*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+- [Nuxeo Drive user documentation]({{page space='userdoc710' page='nuxeo-drive'}})
+- [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+- [Nuxeo Drive FAQ]({{page space='userdoc710' page='nuxeo-drive-faq'}})
+- [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
 
 {{/panel}}</div><div class="column medium-6">
 
