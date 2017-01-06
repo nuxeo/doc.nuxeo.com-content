@@ -437,7 +437,7 @@ Nuxeo Edge Cache<br/>
 `nuxeo-edge-cache`
 </td>
 <td colspan="1">
-Registered access
+Public
 </td>
 <td colspan="1">
 [Documentation]({{page page='nuxeo-edge-cache'}})
