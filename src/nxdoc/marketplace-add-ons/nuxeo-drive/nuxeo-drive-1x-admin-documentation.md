@@ -21,32 +21,32 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/IAGIAQ'
     source_link: /display/NXDOC60/Nuxeo+Drive+1.x+Admin+Documentation
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-21 16:59'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-21 16:14'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-21 16:13'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-13 10:03'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-09 08:40'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-09 08:37'
         message: ''
@@ -199,16 +199,16 @@ $ python
     **Manual proxy configuration**
 
     ```sql
-    INSERT INTO device_config (device_id, proxy_config, proxy_type, 
-    proxy_server, proxy_port, proxy_authenticated, auto_update) VALUES 
-    ('1bd6686882c111e391a6c8f733c9742b', 'Manual', 'http', '10.218.9.82', 
+    INSERT INTO device_config (device_id, proxy_config, proxy_type,
+    proxy_server, proxy_port, proxy_authenticated, auto_update) VALUES
+    ('1bd6686882c111e391a6c8f733c9742b', 'Manual', 'http', '10.218.9.82',
     '80', 0, 0);
     ```
 
     **System proxy configuration**
 
     ```sql
-    INSERT INTO device_config (device_id, proxy_config, proxy_authenticated, auto_update) VALUES 
+    INSERT INTO device_config (device_id, proxy_config, proxy_authenticated, auto_update) VALUES
     ('1bd6686882c111e391a6c8f733c9742b', 'System', 0, 0);
     ```
 
@@ -253,17 +253,12 @@ The Settings popup should appear waiting for the user's credentials only.
 
 {{! /multiexcerpt}}
 
-&nbsp;
-
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about Nuxeo Drive'}}
 
-*   [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}})
-
-*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
-*   [Nuxeo Drive user documentation]({{page space='userdoc60' page='nuxeo-drive'}})
+- [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}})
+- [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+- [Nuxeo Drive user documentation]({{page space='userdoc60' page='nuxeo-drive'}})
 
 {{/panel}}</div><div class="column medium-6"></div></div>

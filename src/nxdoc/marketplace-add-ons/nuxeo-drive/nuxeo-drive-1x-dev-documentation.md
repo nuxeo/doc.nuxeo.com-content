@@ -20,27 +20,27 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/KgGIAQ'
     source_link: /display/NXDOC60/Nuxeo+Drive+1.x+Dev+Documentation
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-21 17:01'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-21 16:14'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 14:51'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-09 09:51'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-09 08:45'
         message: ''
@@ -582,9 +582,8 @@ You can take a look at:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
-*   [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}})
-*   [Nuxeo Drive user documentation
-    ]({{page space='userdoc60' page='nuxeo-drive'}})
+- [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+- [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}})
+- [Nuxeo Drive user documentation]({{page space='userdoc60' page='nuxeo-drive'}})
 
 {{/panel}}</div><div class="column medium-6"></div></div>
