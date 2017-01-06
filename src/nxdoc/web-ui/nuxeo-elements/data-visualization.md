@@ -22,7 +22,8 @@ confluence:
     shortlink: WZCRAQ
     shortlink_source: 'https://doc.nuxeo.com/x/WZCRAQ'
     source_link: /display/NXDOC/Data+Visualization
-tree_item_index: 400
+tree_item_index: 300
+hidden: true
 history:
     -
         author: Bertrand Chauvin
