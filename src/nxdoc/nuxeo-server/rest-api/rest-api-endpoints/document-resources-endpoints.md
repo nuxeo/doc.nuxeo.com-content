@@ -2,10 +2,10 @@
 title: Document Resources Endpoints
 review:
     comment: ''
-    date: '2017-01-04'
+    date: '2017-01-06'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - endpoint
     - rest-api
     - rest-api-component
@@ -90,91 +90,125 @@ history:
         version: '1'
 
 ---
-We provide some sample usages of the REST API. You can also have a try of the REST API on the [Nuxeo Platform API Playground](http://nuxeo.github.io/api-playground/#/).
+Here are some examples of the ID and Path Endpoints.
 
 ## id Endpoint
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Path</th><th colspan="1">Endpoint</th></tr><tr><td colspan="1">
-
-GET
-
-`/api/v1/id/{idOfTheDoc}`
-
-</td><td colspan="1">
-
-Finds a document by its id
-
-</td></tr><tr><td colspan="1">
-
-PUT
-
-`/api/v1/id/{idOfTheDoc}`
-
-</td><td colspan="1">
-
-Updates a document by its id
-
-</td></tr><tr><td colspan="1">
-
-POST
-
-`/api/v1/id/{idOfTheDoc}`
-
-</td><td colspan="1">
-
-Updates a document by its id
-
-</td></tr><tr><td colspan="1">
-
-DELETE
-
-`/api/v1/id/{idOfTheDoc}`
-
-</td><td colspan="1">Deletes a document by its id</td></tr><tr><td colspan="1">
-
-GET
-
-`/api/v1/repo/{repoId}/id/{docId}`
-
-</td><td colspan="1">Find a document by its id in a specific repository</td></tr><tr><td colspan="1">
-
-PUT
-
-`/api/v1/repo/{repoId}/id/{docId}`
-
-</td><td colspan="1">Updates a document by its id in a specific repository</td></tr><tr><td colspan="1">
-
-POST
-
-`/api/v1/repo/{repoId}/id/{docId}`
-
-</td><td colspan="1">Updates a document by its id in a specific repository</td></tr><tr><td colspan="1">
-
-DELETE
-
-`/api/v1/repo/{repoId}/id/{docId}`
-
-</td><td colspan="1">Deletes a document by its id in a specific repository</td></tr></tbody></table></div>
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th colspan="1">Path</th>
+        <th colspan="1">Endpoint</th>
+      </tr>
+      <tr>
+        <td colspan="1">GET `/api/v1/id/{idOfTheDoc}`</td>
+        <td colspan="1">Finds a document by its id</td>
+      </tr>
+      <tr>
+        <td colspan="1">PUT `/api/v1/id/{idOfTheDoc}`</td>
+        <td colspan="1">Updates a document by its id</td>
+      </tr>
+      <tr>
+        <td colspan="1">POST `/api/v1/id/{idOfTheDoc}`</td>
+        <td colspan="1">Updates a document by its id</td>
+      </tr>
+      <tr>
+        <td colspan="1">DELETE `/api/v1/id/{idOfTheDoc}`</td>
+        <td colspan="1">Deletes a document by its id</td>
+      </tr>
+      <tr>
+        <td colspan="1">GET `/api/v1/repo/{repoId}/id/{docId}`</td>
+        <td colspan="1">Find a document by its id in a specific repository</td>
+      </tr>
+      <tr>
+        <td colspan="1">PUT `/api/v1/repo/{repoId}/id/{docId}`</td>
+        <td colspan="1">Updates a document by its id in a specific repository</td>
+      </tr>
+      <tr>
+        <td colspan="1">POST `/api/v1/repo/{repoId}/id/{docId}`</td>
+        <td colspan="1">Updates a document by its id in a specific repository</td>
+      </tr>
+      <tr>
+        <td colspan="1">DELETE `/api/v1/repo/{repoId}/id/{docId}`</td>
+        <td colspan="1">Deletes a document by its id in a specific repository</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Properties
 
-Beside the `docId` and `repoId` parameters, the `id` endpoint accepts the definition of a `document` object. See the page [REST API Entity Types]({{page page='rest-api-entity-types'}}) and the examples below.
+In addition to the `docId` and `repoId` parameters, the `id` endpoint accepts the definition of a `document` object. See the page [REST API Entity Types]({{page page='rest-api-entity-types'}}) and the examples below.
+
+
+## Path Endpoint
+
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th colspan="1">Path</th>
+        <th colspan="1">Endpoint</th>
+      </tr>
+      <tr>
+        <td colspan="1">GET `/api/v1/path/{`docPath`}`</td>
+        <td colspan="1">Finds a document by its path</td>
+      </tr>
+      <tr>
+        <td colspan="1">PUT `/api/v1/path/{`docPath`}`</td>
+        <td colspan="1">Updates a document by its path</td>
+      </tr>
+      <tr>
+        <td colspan="1">DELETE `/api/v1/path/{docPath}`</td>
+        <td colspan="1">Deletes a document by its path</td>
+      </tr>
+      <tr>
+        <td colspan="1">POST `/api/v1/path/{`docPath`}`</td>
+        <td colspan="1">Creates a document by its parent path</td>
+      </tr>
+      <tr>
+        <td colspan="1">GET `/api/v1/repo/{repoId}/path/{docPath}`</td>
+        <td colspan="1">Finds a document in a specific repository by its path</td>
+      </tr>
+      <tr>
+        <td colspan="1">PUT `/api/v1/repo/{repoId}/path/{docPath}`</td>
+        <td colspan="1">Updates a document in a specific repository by its path</td>
+      </tr>
+      <tr>
+        <td colspan="1">DELETE `/api/v1/repo/{repoId}/path/{docPath}`</td>
+        <td colspan="1">Deletes a document in a specific repository by its path</td>
+      </tr>
+      <tr>
+        <td colspan="1">POST `/api/v1/repo/{repoId}/path/{docPath}`</td>
+        <td colspan="1">Creates a document in a specific repository by its parent path</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Properties
+
+The `path` endpoint only takes the `docPath` and `repoId` parameters. It can however be leveraged with web adapters such as `@children`, `@search`, `@bo`. See [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}}) for more detailed information.
+
+
+## Examples
 
 ### Updating a Document
 
-To update a document you have to <span class="s1">PUT</span> on the document resource, and pass a reduced version of the [entity type content]({{page page='rest-api-entity-types#document'}}) as the data. You can also pass the full set of data, but it is not mandatory.
+To update a document, use PUT on the document resource and pass a reduced version of the [entity type content]({{page page='rest-api-entity-types#document'}}) as data. You could pass the full set of data but it's not mandatory.
 
 {{#> panel type='code' heading='PUT Request'}}
 
 ```
-    PUT /nuxeo/site/api/v1/id/{idOfTheDoc}
+    PUT /nuxeo/api/v1/id/{idOfTheDoc}
     {
         "entity-type": "document",
         "repository": "default",
         "uid": "37b1502b-26ff-430f-9f20-4bd0d803191e",
         "properties": {
             "dc:title": "The new title",
-            "dc:description": "Updated via a so cool and simple REST API",
+            "dc:description": "Updated via a very cool and easy REST API",
             "common:icon": "/icons/file.gif",
             "common:icon-expanded": null,
             "common:size": null
@@ -186,17 +220,17 @@ To update a document you have to <span class="s1">PUT</span> on the document res
 
 ### Creating a Document
 
-To create a new document under the current resource, you have to send a <span class="s1">POST</span> request with the following data:
+To create a new document under the current resource, send a POST request with the following data:
 
 ```
-POST /nuxeo/site/api/v1/id/{idOfParentDoc}
+POST /nuxeo/api/v1/id/{idOfParentDoc}
 {
     "entity-type": "document",
     "name":"newDoc",
     "type": "File",
     "properties": {
         "dc:title": "The new document",
-        "dc:description": "Created via a so cool and simple REST API",
+        "dc:description": "Created via a very cool and easy REST API",
         "common:icon": "/icons/file.gif",
         "common:icon-expanded": null,
         "common:size": null
@@ -204,69 +238,18 @@ POST /nuxeo/site/api/v1/id/{idOfParentDoc}
 }
 ```
 
-In this case, the id of the document is the parent document's id, and the `name` property in the entity stands for the name of the newly created document. You don&rsquo;t have to specify a UID since the session will create one for you. It will be returned in the response.
+In this case, the ID of the document is the parent document's ID, and the `name` property in the entity stands for the name of the newly created document. You don&rsquo;t need to specify a UID since the session will create one for you. It will be returned in the response.
 
 ### Deleting a Document
 
 ```
-DELETE /nuxeo/site/api/v1/id/{idOfTheDoc}
+DELETE /nuxeo/api/v1/id/{idOfTheDoc}
 ```
 
-## Path Endpoint
+## Learn More
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Path</th><th colspan="1">Endpoint</th></tr><tr><td colspan="1">
-
-GET
-
-`/api/v1/path/{`docPath`}`
-
-</td><td colspan="1">Finds a document by its path</td></tr><tr><td colspan="1">
-
-PUT
-
-`/api/v1/path/{`docPath`}`
-
-</td><td colspan="1">Updates a document by its path</td></tr><tr><td colspan="1">
-
-DELETE
-
-`/api/v1/path/{docPath}`
-
-</td><td colspan="1">Deletes a document by its path</td></tr><tr><td colspan="1">
-
-POST
-
-`/api/v1/path/{`docPath`}`
-
-</td><td colspan="1">Creates a document by its parent path</td></tr><tr><td colspan="1">
-
-GET
-
-`/api/v1/repo/{repoId}/path/{docPath}`
-
-</td><td colspan="1">Finds a document in a specific repository by its path</td></tr><tr><td colspan="1">
-
-PUT
-
-`/api/v1/repo/{repoId}/path/{docPath}`
-
-</td><td colspan="1">Updates a document in a specific repository by its path</td></tr><tr><td colspan="1">
-
-DELETE
-
-`/api/v1/repo/{repoId}/path/{docPath}`
-
-</td><td colspan="1">Deletes a document in a specific repository by its path</td></tr><tr><td colspan="1">
-
-POST
-
-`/api/v1/repo/{repoId}/path/{docPath}`
-
-</td><td colspan="1">Creates a document in a specific repository by its parent path</td></tr></tbody></table></div>
-
-### Properties
-
-The `path` endpoint does not requires paramets besides the `docPath` and `repoId` parameters. It can however leverage web adapters such as `@children`, `@search`, `@bo`. See the examples on the page [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}}).
+*   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='use-nuxeo-api-playground-to-discover-the-api'}}) to configure your local instance).
+*   Checkout the Nuxeo REST API explorer of your instance at `https://NUXEO_SERVER/nuxeo/api/v1/doc`.
 
 * * *
 
