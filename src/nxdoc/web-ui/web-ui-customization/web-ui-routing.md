@@ -2,7 +2,7 @@
 title: Routing
 review:
     comment: ''
-    date: '2016-12-23'
+    date: '2017-01-09'
     status: ok
 toc: true
 labels:
@@ -13,7 +13,7 @@ labels:
 tree_item_index: 800
 
 ---
-## Web UI routing mechanism
+## Web UI Routing Mechanism
 
 The [nuxeo-app.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L34) is the very top element of the Web UI.
 
@@ -51,7 +51,7 @@ page('/browse' + e.detail.doc.path);
 ```
 defined by [routing.html](https://github.com/nuxeo/nuxeo-web-ui/blob/master/elements/routing.html#L54). It will navigate to the `/browse` part of the Web UI and therefore display the [nuxeo-browser](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L445) element in the main [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L428) which shows the clicked document.
 
-## Routing behavior
+## Routing Behavior
 
 The [Nuxeo.RoutingBehavior](https://github.com/nuxeo/nuxeo-ui-elements/blob/0.8/nuxeo-routing-behavior.html) is a behavior which provides convenient methods such as [urlFor](https://github.com/nuxeo/nuxeo-ui-elements/blob/0.8/nuxeo-routing-behavior.html#L37) to insert inner links in the Web UI.
 
