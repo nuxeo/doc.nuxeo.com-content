@@ -99,7 +99,7 @@ In the Agenda gadget, events can be created from the list view only.
 2.  Fill in the event creation form.
     ![]({{file name='agenda-creation-form-gadget.png'}} ?w=300,border=true)
 3.  Click on the **Create** button.
-        The event is displayed in the list of the Incoming events.  
+        The event is displayed in the list of the Incoming events.
 
 **Events properties**
 

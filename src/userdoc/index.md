@@ -189,26 +189,31 @@ history:
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
 
-### Document Management
+### JSF UI
 
-This module provides core and advanced document management features.
 
-- [Nuxeo Platform Concepts]({{page page='nuxeo-platform-concepts'}})
-- [Browsing Content]({{page page='browsing-content'}})
-
+<div align="right">[Discover >>]({{page space='userdoc' page='jsf-ui'}})</div>
 {{/panel}}
 </div>
 
+<<<<<<< a47d89e7359fda6e093e32e928ffee7a0011cd90
+{{/panel}}
+</div>
+
+=======
+>>>>>>> Update User doc with Web UI
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
 
-### Nuxeo DAM
+### Web UI
 
-It provides browsing and edition features adapted to multimedia content.
 
-- [Digital Asset Management with the Nuxeo Platform]({{page page='digital-asset-management-with-the-nuxeo-platform'}})
-- [How to Contribute Picture Conversions]({{page space='nxdoc' page='how-to-contribute-picture-conversions'}})
+<div align="right">[Discover >>]({{page page='web-ui'}})</div>
+{{/panel}}
+</div>
+</div>
 
+<<<<<<< a47d89e7359fda6e093e32e928ffee7a0011cd90
 {{/panel}}
 </div>
 </div>
@@ -240,3 +245,7 @@ You can download and install optional product plugins from the Nuxeo Marketplace
 {{/panel}}
 </div>
 </div>
+=======
+
+{{{multiexcerpt 'License' page='NXDOC:index'}}}
+>>>>>>> Update User doc with Web UI

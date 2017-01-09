@@ -9,6 +9,7 @@ labels:
     - home
     - search
 toc: true
+hidden: true
 confluence:
     ajs-parent-page-id: '11043048'
     ajs-parent-page-title: Nuxeo Platform User Documentation
