@@ -85,7 +85,7 @@ Here is [a schema](https://developers.google.com/web/fundamentals/performance/op
 
 ### Polymer
 
-##### Vulcanizing the Polymer elements
+##### Vulcanizing the Polymer Elements
 
 [`Vulcanize`](https://www.polymer-project.org/1.0/docs/tools/optimize-for-production) is a build tool that lets you concatenate a set of elements and their HTML imported dependencies into a single file. It will reduce network requests for a performant app experience. You can check out [this video](https://www.youtube.com/watch?v=EUZWE8EZ0IU) for a complete bootstrap.
 
@@ -97,7 +97,7 @@ When building a custom element, developers can achieve great things with Polymer
 
 Try to use an element only once then pass the result through/between all elements to avoid unecessary calls.
 
-### Response payloads
+### Response Payloads
 
 There are two ways to filter data from the server in order to avoid unecessary quantity information in response:
 
