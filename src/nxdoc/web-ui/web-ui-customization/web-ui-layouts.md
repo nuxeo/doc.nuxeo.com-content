@@ -2,7 +2,7 @@
 title: Layout elements
 review:
     comment: ''
-    date: '2016-12-26'
+    date: '2017-01-09'
     status: ok
 toc: true
 labels:
@@ -23,7 +23,7 @@ When building Nuxeo Web UI it was our goal to follow the same principles and lev
 
 Nuxeo Web UI was designed with composition in mind, built with some application specific custom elements alongside Nuxeo UI Elements. It was built not only to showcase how easy it is to build a full custom UI but also to provide a highly customizable default UI right out of the box by allowing developers to override and/or introduce their own custom elements.
 
-## Dynamic imports
+## Dynamic Imports
 
 The ability to load custom elements dynamically provides a simple customization mechanism where elements are loaded from known conventional paths on demand. While this approach isn't appropriate for producing incremental layouts it is simple and effective for use cases such as document layouts, where the underlying HTML can be managed by tools like our `View Designer`, or where we expect a high degree of customization like in the home [dashboard]({{page page='dashboard'}}).
 
