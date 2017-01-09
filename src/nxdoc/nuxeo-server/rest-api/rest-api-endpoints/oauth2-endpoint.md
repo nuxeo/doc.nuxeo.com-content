@@ -1,9 +1,9 @@
 ---
-title: OAuth2 Endpoint
+title: OAuth2 Resource Endpoint
 description: A REST endpoint to retrieve oauth2 provider data.
 review:
     comment: ''
-    date: '2017-01-04'
+    date: '2017-01-09'
     status: ok
 labels:
     - lts2016-ok
@@ -16,23 +16,51 @@ tree_item_index: 500
 ---
 The OAuth2 endpoint allows REST clients to retrieve information about OAuth2 providers. It is available since 8.4.
 
-For a given provider and user, the OAuth2 endpoint providess access to:
+For a given provider and user, the OAuth2 endpoint provides access to:
 - authentication data
 - a valid access token
 
-# Retrieving authentication data
+## Retrieving authentication data
 
 Authentication data for a particular OAuth2 provider can be retrieved from `/nuxeo/api/v1/oauth2/provider/{providerId}`,
 including the following details:
 
-- **serviceName**: the id of the provider
-- **isAvailable**: *true* if the provider is enabled and both the client id and client secret were defined; *false* otherwise
-- **clientId**: the client id
-- **authorizationURL**: the url used to display the consent Screen
-- **userId**: the user id
-- **isAuthorized**: *true* if the server has an access token stored for the current user; *false* otherwise
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th colspan="1">Key</th>
+        <th colspan="1">Description</th>
+      </tr>
+      <tr>
+        <td colspan="1">`serviceName`</td>
+        <td colspan="1">provider ID</td>
+      </tr>
+      <tr>
+        <td colspan="1">`isAvailable`</td>
+        <td colspan="1">`true` if provider is enabled and both client ID and client secret are defined; `false` otherwise</td>
+      </tr>
+      <tr>
+        <td colspan="1">`clientId`</td>
+        <td colspan="1">client ID</td>
+      </tr>
+      <tr>
+        <td colspan="1">`authorizationURL`</td>
+        <td colspan="1">URL used to display the consent screen</td>
+      </tr>
+      <tr>
+        <td colspan="1">`userId`</td>
+        <td colspan="1">user ID</td>
+      </tr>
+      <tr>
+        <td colspan="1">`isAuthorized`</td>
+        <td colspan="1">`true` if server has access token stored for current user; `false` otherwise</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-## Example:
+### Example
 
 {{#> panel type='code' heading='Request'}}
 
@@ -48,17 +76,16 @@ including the following details:
   "clientId": "123....apps.googleusercontent.com",
   "authorizationURL": "https://accounts.google.com/o/oauth2/auth?client_id=...",
   "serviceName": "googledrive",
-  "userId": "jhondoe@something.com"
+  "userId": "johndoe@something.com"
 }
 ```
 {{/panel}}
 
-# Getting an access token
+## Getting an access token
 
-A valid access token for the current user can be retrieved via `/nuxeo/api/v1/oauth2/provider/{providerId}/token`. If the token currently stored by the nuxeo server is already expired, a new one will be requested
-from the service provider.
+A valid access token for the current user can be retrieved via `/nuxeo/api/v1/oauth2/provider/{providerId}/token`. If the token currently stored by the Nuxeo server is already expired, a new one will be requested from the service provider.
 
-## Example:
+### Example
 
 {{#> panel type='code' heading='Request'}}
 
