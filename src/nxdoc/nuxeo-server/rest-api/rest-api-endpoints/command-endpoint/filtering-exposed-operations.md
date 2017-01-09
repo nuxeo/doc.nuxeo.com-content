@@ -2,7 +2,7 @@
 title: Filtering Exposed Operations
 review:
     comment: ''
-    date: '2017-01-05'
+    date: '2017-01-09'
     status: ok
 labels:
     - lts2016-ok
@@ -116,9 +116,9 @@ history:
         version: '1'
 
 ---
-Almost all the registered operations and chains are automatically exposed through a REST interface to be invoked from remote clients. The UI-specific operations are not exposed through REST since they require a web user interface to work.
+Almost all registered operations and automation chains are exposed through a REST interface to be invoked by remote clients. The UI-specific operations are not exposed through REST since they require a web user interface to work.
 
-For security reasons, you may want to prevent some operations from being accessed remotely. Or you may want to allow only certain users to be able to invoke them.
+For security reasons, you may want to prevent some operations from being accessed remotely, or only allow certain users to be able to invoke them.
 
 {{! excerpt}}
 
@@ -126,7 +126,7 @@ The REST operation filters provide an [extension point]({{page page='runtime-and
 
 {{! /excerpt}}
 
-Here is an example on how to write such an extension:
+Here is an example of such an extension point:
 
 ```html/xml
 <extension target="org.nuxeo.ecm.automation.server.AutomationServer" point="bindings">
@@ -140,20 +140,59 @@ Here is an example on how to write such an extension:
 
 ```
 
-The above code is contributing two REST bindings - one for the atomic operation [`Document.Delete`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Delete) which is completely disabled (by using the `disable` parameter) and the second one is defining a security rule for the automation chain named `audit`.&nbsp;You can notice the usage of the `chain` attribute which must be set to true every time a binding refers to an automation chain and not to an atomic operation.
+The above code is contributing two REST bindings - one for the atomic operation [`Document.Delete`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Delete) which is completely disabled (by using the `disabled` parameter) and the second one is defining a security rule for the automation chain named `audit`.
+
+The `chain` attribute must be set to `true` every time a binding refers to an automation chain and not to an atomic operation.
 
 The second binding installs a guard that allows only requests made by an `administrator` user or by users from the `member` group **AND** the request should be made over a secured channel like HTTPS.
 
-Here is the complete of attributes and elements you can use in the extension:
+Here is the complete list of attributes and elements you can use in the extension:
 
-*   `**name**` : The operation or automation chain name that should be protected.
-*   `**chain**` : "true" if the name refers to an automation chain, "false" otherwise (the default is "false").
-*   `**disabled**` : Whether or not to completely disable the operation from REST access. The default is "false". If you put this flag on "true" then all the other security rules will be ignored.
-*   `**administrator**` : Possible values are "true" or "false". The default is "false". If set to "true" the operation is allowed if the user is an administrator.
-*   `**groups**` : A comma separated list of groups that the user should be member of. If both `administrator` and `groups` are specified the user must be either from a group or an administrator.
-*   `**secure**` : "true" or "false". Default is "false". If "true" the request must be done through a secured channel like HTTPS. If this guard is used the connection **must** be secured, so that even if the groups guard is matched the operation is not accessible if the connection is not secured.
-
-&nbsp;
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th>Attribute / Element</th>
+        <th>Description</th>
+        <th>Default Value</th>
+      </tr>
+      <tr>
+        <td>`name`</td>
+        <td>The name of the operation or automation chain that should be protected.</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>`chain`</td>
+        <td>`true` if the name refers to an automation chain, `false` otherwise</td>
+        <td>`false`</td>
+      </tr>
+      <tr>
+        <td>`disabled`</td>
+        <td>
+          Whether or not to completely disable the operation from REST access. If set to `true` then all the other security rules will be ignored.
+        </td>
+        <td>`false`</td>
+      </tr>
+      <tr>
+        <td>`administrator`</td>
+        <td>If set to `true` the operation is allowed if the user is an administrator.</td>
+        <td>`false`</td>
+      </tr>
+      <tr>
+        <td>`groups`</td>
+        <td>
+          A comma separated list of groups of which the user should be member. If both `administrator` and `groups` are specified the user must be either from a group or an administrator.
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>`secure`</td>
+        <td>If `true` the request **must** be done through a secured channel like HTTPS. Even if the user is in the specifiec grou the operation is not accessible if the connection is not secured.</td>
+        <td>`false`</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
