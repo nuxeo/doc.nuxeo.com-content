@@ -2,7 +2,7 @@
 title: Customization Tutorial
 review:
     comment: ''
-    date: '2016-12-28'
+    date: '2017-01-09'
     status: ok
 toc: true
 labels:
