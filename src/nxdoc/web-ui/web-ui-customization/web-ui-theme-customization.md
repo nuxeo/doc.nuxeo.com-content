@@ -2,7 +2,7 @@
 title: Theme Customization
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-09'
     status: ok
 toc: true
 labels:
@@ -42,7 +42,7 @@ Besides the background images `/images/themes/{name}.png` you can also add any i
 {{/callout}}
 
 
-### How to customize a theme
+### How to Customize a Theme
 
 This example provides an walk-through on how to override `light` theme in Web UI.
 
