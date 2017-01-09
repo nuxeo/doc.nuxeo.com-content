@@ -2,13 +2,14 @@
 title: Web UI
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-09'
     status: ok
 labels:
     - lts2016-ok
     - web-ui-customization
     - nuxeo-elements
     - polymer-guide
+toc: true
 confluence:
     ajs-parent-page-id: '950332'
     ajs-parent-page-title: Developer Documentation Center
