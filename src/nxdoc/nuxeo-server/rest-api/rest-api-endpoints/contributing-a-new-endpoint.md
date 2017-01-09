@@ -2,10 +2,10 @@
 title: Contributing a New Endpoint
 review:
     comment: ''
-    date: '2017-01-04'
+    date: '2017-01-09'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - endpoint
     - rest-api
     - rest-api-component
@@ -59,9 +59,9 @@ history:
         version: '1'
 
 ---
-It is possible to contribute a new endpoint to the API creating new [web objects]({{page page='web-object-model'}}).
+It is possible to contribute a new endpoint to the API by creating new [web objects]({{page page='web-object-model'}}).
 
-Thanks to WebEngine and its pluggability, we provided a way to add other root endpoints that benefit from the same infrastructure. It&rsquo;s just a matter of providing a web object in another bundle, like the following one.
+Thanks to WebEngine and its pluggability, we've provided a way to add other root endpoints that benefit from the same infrastructure. It&rsquo;s just a matter of providing a web object in another bundle, like the following:
 
 ```
 @WebObject(type="productRoot")
@@ -79,7 +79,6 @@ public class ProductRoot {
     }
 
 }
-
 ```
 
 This will expose two new APIs:
@@ -88,4 +87,4 @@ This will expose two new APIs:
 
 *   <pre>GET /nuxeo/api/v1/product/{productId}</pre>
 
-Since Document Adapters are used as return types, the API will automatically benefit from the integrated adapter serializations (readers and writers). That means that it is very easy to build your own API, and that you inherit all the other pluggability mechanisms.
+Since Document Adapters are used as return types, the API will automatically benefit from the integrated adapter serializations (readers and writers). That means that it&rsquo;s very easy to build your own API and you inherit all the other pluggability mechanisms.
