@@ -2,7 +2,7 @@
 title: Quality Assurance
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-01-09'
     status: ok
 toc: true
 labels:
@@ -163,7 +163,7 @@ With Nuxeo platform, you have two ways to fetch data from the server for buildin
 
 Depending on your environment, you will perform searches with Nuxeo Server on top of your **database** (Mysql/MariaDB, Postgresql, MongoDB, Oracle...) or on top of your [**elasticsearch**](https://doc.nuxeo.com/710/admindoc/elasticsearch-setup/) **(recommended)**.
 
-For using elasticsearch (ES), use `pageproviders` which [can be activated for ES](https://doc.nuxeo.com/710/nxdoc/how-to-make-a-page-provider-or-content-view-query-elasticsearch-index/) via the `nuxeo.conf` file and the following Nuxeo elements with related properties:
+For using Elasticsearch (ES), use `pageproviders` which [can be activated for ES](https://doc.nuxeo.com/710/nxdoc/how-to-make-a-page-provider-or-content-view-query-elasticsearch-index/) via the `nuxeo.conf` file and the following Nuxeo elements with related properties:
 
 - [`nuxeo-page-provider`](http://nuxeo.github.io/nuxeo-elements/components/nuxeo-elements/#nuxeo-page-provider) with the property `provider` set
 - [`nuxeo-operation`](http://nuxeo.github.io/nuxeo-elements/components/nuxeo-elements/#nuxeo-operation) with the operation [`Repository.PageProvider`](http://explorer.nuxeo.com/nuxeo/site/distribution/cap-8.3/viewOperation/Repository.Query)
