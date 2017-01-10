@@ -220,14 +220,14 @@ There are two types of Nuxeo templates: the "Template" will have an attached fil
 
 The template file is the file that will be used to generate the rendering of the Nuxeo document and will be completed automatically with the defined Nuxeo properties. This template file can be:
 
-*   an office document (.docx, .odt, .xls, .xlsx, .ods formats are supported for now),
+*   an office document (.docx, .odt, .xls, .ods formats are supported for now),
 *   an HTML file,
 *   a XML file.
 
 To create a template file:
 
 1.  Create a regular office, HTML or XML file with your favorite tool.
-2.  In the document, put variables in `Input Fields` where you want to use information from Nuxeo (see below). You may want to use [XDocReport](https://github.com/opensagres/xdocreport) for .docx or .odt formats, [JXLS](http://jxls.sourceforge.net/) for .xls / .xlsx and .ods formats (see links below).
+2.  In the document, put variables in `Input Fields` where you want to use information from Nuxeo (see below). You may want to use [XDocReport](https://github.com/opensagres/xdocreport) for .docx or .odt formats, [JXLS](http://jxls.sourceforge.net/) for .xls and .ods formats (see links below).
 3.  When the template is ready, [create the template document in Nuxeo](#creating-the-template-document) and attach the template to it.
 
 {{> anchor 'variables'}}Here are a few examples of the most common variables:
@@ -357,7 +357,7 @@ Template processor
 
 Select how are the template file fields processed to use Nuxeo data. Automatic should work for most file formats.
 XDocReport is specifically targeted at docx and odt formats.
-JXLS is specifically targeted at spreadsheet file formats: xls, xlsx and ods.
+JXLS is specifically targeted at spreadsheet file formats: xls and ods.
 
 </td></tr><tr><td colspan="1">
 
