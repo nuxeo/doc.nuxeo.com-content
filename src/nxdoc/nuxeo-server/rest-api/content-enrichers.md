@@ -306,29 +306,111 @@ history:
         version: '1'
 
 ---
-{{#> callout type='tip' }}
-
-Check our [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) to bootstrap your Content Enricher.
-
-{{/callout}}{{> wistia_video id='ykaualv73f'}}
-
-Extract from the course "[Working with the REST API](https://university.nuxeo.com/store/155916-rest-api)" on [Nuxeo University](https://university.nuxeo.com)
 
 ## Pluggable Context
 
-It is sometimes useful to optimize the number of requests you send to the server. For that reason we provide a mechanism for requesting more information on the answer, simply by specifying the context you want in the request header.
+Sometimes it's useful to optimize the number of requests you send to the server. For this reason, we provide a mechanism for requesting more information on the response, simply by specifying the context you require in the request header.
 
-For example, it is some times useful to get the children of a document while requesting that document. Or its parents. Or its open related workflow tasks. The Nuxeo Platform provides you with several content enrichers out of the box for the most common use cases, and you can contribute your own if needed.
+For example, sometimes you need to get the children, parents or workflow tasks of a document while requesting that document. The Nuxeo Platform provides you with several content enrichers out of the box for the most common use cases, and you can contribute your own if needed.
+
+## Default Content Enrichers
+
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th>Enricher</th>
+        <th>Included in Response:</th>
+      </tr>
+      <tr>
+        <td>`thumbnail`</td>
+        <td>Related attached file thumbnail of the current document</td>
+      </tr>
+      <tr>
+        <td>`preview`</td>
+        <td>Related attached file preview of the current document</td>
+      </tr>
+      <tr>
+        <td>`documentURL`</td>
+        <td>Document's URL</td>
+      </tr>
+      <tr>
+        <td>`breadcrumb`</td>
+        <td>Document breadcrumb (list of all parent documents)</td>
+      </tr>
+      <tr>
+        <td>`subtypes`</td>
+        <td>Array of document types that can be created under the current document</td>
+      </tr>
+      <tr>
+        <td>`children`</td>
+        <td>List of all children documents</td>
+      </tr>
+      <tr>
+        <td>`hasFolderishChild`</td>
+        <td>Boolean flag indicating whether or not current document has folderish child document</td>
+      </tr>
+      <tr>
+        <td>`favorites`</td>
+        <td>Boolean flag indicating whether or not current document belongs to user's Favorites</td>
+      </tr>
+      <tr>
+        <td>`collections`</td>
+        <td>The collections to which the current document belongs</td>
+      </tr>
+      <tr>
+        <td>`tags`</td>
+        <td>The tags on the current document</td>
+      </tr>
+      <tr>
+        <td>`runningWorkflows`</td>
+        <td>Workflow instances running on the current document</td>
+      </tr>
+      <tr>
+        <td>`runnableWorkflows`</td>
+        <td>Workflow models that can be launched on the current document</td>
+      </tr>
+      <tr>
+        <td>`pendingTasks`</td>
+        <td>Pending tasks on the current document</td>
+      </tr>
+      <tr>
+        <td>`acls`</td>
+        <td>All related ACLs of the current document</td>
+      </tr>
+      <tr>
+        <td>`permissions`</td>
+        <td>Current user's persmissions on the current document</td>
+      </tr>
+      <tr>
+        <td>`userVisiblePermissions`</td>
+        <td>List of permissions available on current document</td>
+      </tr>
+      <tr>
+        <td>`audit`</td>
+        <td>Latest log entries related to the current document</td>
+      </tr>
+      <tr>
+        <td>`subscribedNotifications`</td>
+        <td>Current user's subscribed notifications for the current document</td>
+      </tr>
+      <tr>
+        <td>`userprofile`</td>
+        <td>DOB, phone number and avatar of current user</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## How To Call a Content Enricher
 
-Content enrichers can be called by sending the proper header(s) in your request. The header you need to call depends on the entity-type being enriched by the enricher. Hence, enrichers enriching documents can be called using the header:
+Content enrichers can be called by sending the proper header(s) in your request. The header you need to call depends on the entity-type being affected by the enricher. Enrichers on documents can be called using the header:
 
 ```
 enrichers.document: enricherName
 ```
 
-If you want to call an enricher enriching a user for instance, you would do it through a slightly different header:
+If you want to call an enricher on a user, you would do it through a slightly different header:
 
 ```
 enrichers.user: enricherName
@@ -348,27 +430,22 @@ enrichers.document: enricher2
 enrichers.document: enricher3
 ```
 
-and combination would work.
-
 The enrichers can be called the same way by passing GET parameters.
 
 ```
-http://localhost:8080/nuxeo/site/api/v1/path/default-domain/workspaces?enrichers.document=enricher1,enricher2
-http://localhost:8080/nuxeo/site/api/v1/path/default-domain/workspaces?enrichers.document=enricher1&enrichers.document=enricher2
+http://NUXEO_SERVER/nuxeo/api/v1/path/default-domain/workspaces?enrichers.document=enricher1,enricher2
+http://NUXEO_SERVER/nuxeo/api/v1/path/default-domain/workspaces?enrichers.document=enricher1&enrichers.document=enricher2
 ```
 
-## Default Content Enrichers
+## Examples
 
 ### Thumbnail
-
-When specifying `enrichers.document: thumbnail`, the JSON payload of the document REST calls response that contains the related attached file thumbnail of the document:
-
 
 {{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
-http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
+http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
@@ -402,7 +479,7 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
   ],
   "contextParameters": {
     "thumbnail": {
-      "url": "http://localhost:8080/nuxeo/api/v1/4246ca87-c076-4bf4-b62b-0bab9dd21102/@rendition/thumbnail"
+      "url": "http://NUXEO_SERVER/nuxeo/api/v1/4246ca87-c076-4bf4-b62b-0bab9dd21102/@rendition/thumbnail"
     }
   }
 }
@@ -414,12 +491,10 @@ More details about the thumbnail enricher: [http://community.nuxeo.com/api/nuxeo
 
 ### ACLs
 
-When specifying `enrichers.document: acls`, the JSON payload of the document REST calls response that contains all related ACLs of the document:
-
 {{#> panel type='code' heading='Call Example'}}
 
 ```
-Request URL: http://localhost:8080/nuxeo/api/v1/id/036f99ec-a500-4a1e-9d89-e8eb656a0ff7
+Request URL: http://NUXEO_SERVER/nuxeo/api/v1/id/036f99ec-a500-4a1e-9d89-e8eb656a0ff7
 Request Method: GET
 Request Headers
 ...
@@ -481,12 +556,9 @@ properties: dublincore
 
 {{/panel}}
 
-More details about the acls enricher: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/permissions/ACLJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/permissions/ACLJsonEnricher.html)
+More details about the ACLs enricher: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/permissions/ACLJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/permissions/ACLJsonEnricher.html)
 
 ### Preview
-
-When specifying `enrichers.document: preview`, the JSON payload of the document REST calls response that contains the related attached file preview of the document:
-
 
 {{#> panel type='code' heading='Call Example'}}
 
@@ -526,7 +598,7 @@ http://localhost:18090/api/v1/repo/test/path/folder_1/photo.jpg
   ],
   "contextParameters": {
     "preview": {
-      "url": "http://localhost:8080/nuxeo/restAPI/preview/default/4246ca87-c076-4bf4-b62b-0bab9dd21102/default/"
+      "url": "http://NUXEO_SERVER/nuxeo/restAPI/preview/default/4246ca87-c076-4bf4-b62b-0bab9dd21102/default/"
     }
   }
 }
@@ -542,7 +614,7 @@ More details about the preview enricher: [http://community.nuxeo.com/api/nuxeo/l
 
 ```
 Request URL:
-http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
+http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
@@ -616,13 +688,11 @@ More details about the breadcrumb enricher: [http://community.nuxeo.com/api/nuxe
 
 ### Favorites
 
-When specifying `enrichers.document: favorites`, the JSON payload of the document REST calls response that contains a boolean flag telling whether the document belongs to the current user's Favorites:
-
 {{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
-http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
+http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
@@ -666,13 +736,11 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 
 ### Collections
 
-When specifying `enrichers.document: collections`, the JSON payload of the document REST calls response that contains the collections the document belongs to:
-
 {{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
-http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
+http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
@@ -729,16 +797,13 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 
 {{/panel}}
 
-### Tags
-
-Since 8.3. When specifying `enrichers.document: tags`, the JSON payload of the document REST calls response that contains the tags of the documents:
-
+### Tags&nbsp;
 
 {{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
-http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
+http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
@@ -783,14 +848,11 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 
 ### Running Workflows
 
-When specifying `enrichers.document: runningWorkflows`, the JSON payload of the document REST calls response that contains the workflow instances running on the document:
-
-
 {{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
-http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
+http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
@@ -828,7 +890,7 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
         "id": "4246ca87-c076-4bf4-b62b-0bab9dd21102"
       }],
       "entity-type": "workflow",
-      "graphResource": "http://localhost:8080/nuxeo/api/v1/workflow/75dfb9e0-65dd-4150-9d66-ade0597e27c2/graph",
+      "graphResource": "http://NUXEO_SERVER/nuxeo/api/v1/workflow/75dfb9e0-65dd-4150-9d66-ade0597e27c2/graph",
       "id": "75dfb9e0-65dd-4150-9d66-ade0597e27c2",
       "initiator": "Administrator",
       "name": "ParallelDocumentReview.27323664461439033",
@@ -840,7 +902,7 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
         "participants": [],
         "review_result": "",
         "review_result_file": {
-          "data": "http://localhost:8080/nuxeo/nxfile/default/75dfb9e0-65dd-4150-9d66-ade0597e27c2/var_ParallelDocumentReview:review_result_file/output.ftl",
+          "data": "http://NUXEO_SERVER/nuxeo/nxfile/default/75dfb9e0-65dd-4150-9d66-ade0597e27c2/var_ParallelDocumentReview:review_result_file/output.ftl",
           "digest": "f5bd3d4fc1431be93631ecc3862a4ddc",
           "digestAlgorithm": "MD5",
           "encoding": null,
@@ -860,14 +922,11 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 
 ### Runnable Workflows
 
-When specifying `enrichers.document: runnableWorkflows`, the JSON payload of the document REST calls response that contains the workflow models that can be launched on the document:
-
-
 {{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
-http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
+http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
@@ -903,7 +962,7 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
     "runnableWorkflows": [{
       "attachedDocumentIds": [],
       "entity-type": "workflow",
-      "graphResource": "http://localhost:8080/nuxeo/api/v1/workflowModel/SerialDocumentReview/graph",
+      "graphResource": "http://NUXEO_SERVER/nuxeo/api/v1/workflowModel/SerialDocumentReview/graph",
       "id": "0b0a21b7-284c-4f69-99e6-c334f2c69077",
       "initiator": null,
       "name": "SerialDocumentReview",
@@ -925,14 +984,11 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 
 ### Pending Tasks
 
-When specifying `enrichers.document: pendingTasks`, the JSON payload of the document REST calls response that contains the pending tasks on the document:
-
-
 {{#> panel type='code' heading='Call Example'}}
 
 ```
 Request URL:
-http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
+http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
@@ -998,30 +1054,13 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 
 {{/panel}}
 
-### Other Enrichers
-
-Additional enrichers are:
-
-* [audit](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/restapi/server/jaxrs/enrichers/AuditJsonEnricher.html)
-* [children](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/ChildrenJsonEnricher.html)
-* [collections](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/collections/core/io/CollectionsJsonEnricher.html)
-* [favorites](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/collections/core/io/FavoritesJsonEnricher.html)
-* [hasFolderishChild](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/HasFolderishChildJsonEnricher.html)
-* [documentURL](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/url/io/DocumentUrlJsonEnricher.html)
-* [permissions](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BasePermissionsJsonEnricher.html)
-* [subscribedNotifications](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ec/notification/io/NotificationsJsonEnricher.html)
-* [subtypes](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/SubtypesJsonEnricher.html)
-* [tags](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/tag/io/TagsJsonEnricher.html)
-* [userprofile](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/user/center/profile/rest/UserProfileEnricher.html)
-* [userVisiblePermissions](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/UserVisiblePermissionsJsonEnricher.html)
-
 ## Contributing Your Own Content Enricher
 
-Adding a content enricher is done by providing a Java class and a XML contribution. You can enrich a Nuxeo Document Model or any kind of specific object returned.
+You can add your own content enricher by providing a Java class and a XML contribution. You can enrich a Nuxeo Document Model or any kind of specific object returned.
 
 ### Document Model Content Enricher
 
-Here is a sample to get you started, that provides a document's parent id, title and description.
+Here is a sample to get you started. It provides a document's parent ID, title and description.
 
 {{! multiexcerpt name='enricher-contrib'}}
 
@@ -1052,24 +1091,23 @@ import org.codehaus.jackson.node.ObjectNode;
 import org.nuxeo.ecm.core.api.CoreSession;
 import org.nuxeo.ecm.core.api.DocumentModel;
 
-// The class will be instanciated as a singleton
-// Priority defines which marshaller will be used in case of conflict. Priority is an integer.
-// The higher the number, the more priority you get: 10 > 1 for instance.
-@Setup(mode = SINGLETON, priority = REFERENCE)
-public class ParentDocEnricher extends AbstractJsonEnricher<DocumentModel> { // You could also enrich a user or anything else
+// The class is instantiated as a singleton
+// Priority defines which marshaller is used in case of conflict. Priority is an integer.
+// The higher the number, the higher the priority: 10 > 1 for instance.
 
-	// The enricher will be called using enrichers.document: name (name being parentDoc here)
-	// If you were enriching a user, you would call it using enrichers.user: name (enrichers.entity-type)
+@Setup(mode = SINGLETON, priority = REFERENCE)
+public class ParentDocEnricher extends AbstractJsonEnricher<DocumentModel> {
+
+// The enricher is called using enrichers.document: parentDoc
 	public static final String NAME = "parentDoc";
 
     public ParentDocEnricher() {
         super(NAME);
     }
 
-	// Method that will be called when the enricher is asked for
+// Method that is called when the enricher is called
     @Override
     public void write(JsonGenerator jg, DocumentModel doc) throws IOException {
-      // We use the Jackson library to generate Json
       ObjectNode parentDocJsonObject = addParentDocAsJson(doc);
       jg.writeFieldName(NAME);
       jg.writeObject(parentDocJsonObject);
@@ -1078,7 +1116,7 @@ public class ParentDocEnricher extends AbstractJsonEnricher<DocumentModel> { // 
     private ObjectNode addParentDocAsJson(DocumentModel doc) {
       ObjectMapper o = new ObjectMapper();
 
-      // First create the parent document's Json object content
+      // First create the parent document's JSON object content
       CoreSession session = doc.getCoreSession();
       DocumentModel parentDoc = session.getDocument(doc.getParentRef());
 
@@ -1096,7 +1134,7 @@ public class ParentDocEnricher extends AbstractJsonEnricher<DocumentModel> { // 
 
 ### Specific Object Content Enricher
 
-Here is a sample to get you started with a content enricher for the object `org.nuxeo.ecm.platform.audit.api.LogEntry`:
+An example with a content enricher for the object `org.nuxeo.ecm.platform.audit.api.LogEntry`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1211,3 +1249,10 @@ Don't forget to set the proper header to use this enricher:
 ```
 
 {{/panel}}
+
+## Learn More
+
+*   Watch the video [Using Content Enrichers](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/using-content-enrichers) as part of the [REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api) course at [Nuxeo University](https://university.nuxeo.io).
+*   Use [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) to bootstrap your Content Enricher.
+*   Test these content enrichers on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='use-nuxeo-api-playground-to-discover-the-api'}}) to configure your local instance).
+*   Checkout the Nuxeo REST API explorer of your instance at `https://NUXEO_SERVER/nuxeo/api/v1/doc`.
