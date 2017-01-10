@@ -2,7 +2,7 @@
 title: Special HTTP Headers
 review:
     comment: ''
-    date: '2017-01-04'
+    date: '2017-01-10'
     status: ok
 labels:
     - lts2016-ok
@@ -103,164 +103,83 @@ history:
         version: '1'
 
 ---
-Here are HTTP headers that you can use to have more control with REST API Calls.
+In order to have more control over REST API Calls, you can use the following special Nuxeo HTTP headers.
 
-## X-NXVoidOperation
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th class="small-2">HTTP Header</th>
+        <th>Default Value</th>
+        <th>Description</th>
+        <th class="small-5">Example</th>
+      </tr>
+      <tr>
+        <td>**X-NXVoidOperation**</td>
+        <td>*false*</td>
+        <td>Force server to return no content (like a void operation).</td>
+        <td>`X-NXVoidOperation: true`  *Can be useful when dealing with blobs to avoid having the blob output sent back to the client.*</td>
+      </tr>
+      <tr>
+        <td>**Nuxeo-Transaction-Timeout**</td>
+        <td>*30*</td>
+        <td>Specify the duration of the transaction timeout (seconds)</td>
+        <td>`Nuxeo-Transaction-Timeout: 300` *(Sets timeout for 5 minutes for longer transactions)*</td>
+      </tr>
+      <tr>
+        <td>**properties**</td>
+        <td>`*`</td>
+        <td>Filter properties so the returned document contains only data from the specified schemas</td>
+        <td>`properties: dublincore, file` *(*`*`&nbsp;*Returns data from all schemas)*</td>
+      </tr>
+      <tr>
+        <td>**Repository**</td>
+        <td>*default*</td>
+        <td>Specify the repository name if it has been changed or if you have multiple repositories</td>
+        <td>`Repository: myCustomRepositoryName`</td>
+      </tr>
+      <tr>
+        <td>**enrichers.document**</td>
+        <td></td>
+        <td>Request further information in the response. See [(Content Enrichers)]({{page page='content-enricher'}}) for more details.</td>
+        <td>`enrichers.document: "thumbnail"` *(Returns related thumbnail of the document)*</td>
+      </tr>
+      <tr>
+        <td>**X-Versioning-Option**</td>
+        <td>*NONE*</td>
+        <td>Increment minor or major version and returns versioned document</td>
+        <td>`X-Versioning-Option: MAJOR`</td>
+      </tr>
+      <tr>
+        <td>**fetch.document**</td>
+        <td></td>
+        <td>Load additional parts of an object with entity-type `document`</td>
+        <td>
+          `fetch.document: value1, value2,...` See [Document JSON and Extended Fields]({{page page='json-marshalling#document-json-extended-fields'}}) for more details on accepted values.
+        </td>
+      </tr>
+      <tr>
+        <td>**depth**</td>
+        <td>*children*</td>
+        <td>Control aggregation depth</td>
+        <td>
+          `depth: children`
+          Accepted values: `root`, `children`, `max`. See [Aggregating Marshallers and Avoiding Infinite Loops]({{page page='json-marshalling#aggregating-marshallers-infinite-loops'}}) for more details.
+        </td>
+      </tr>
+      <tr>
+        <td>**nx_es_sync**</td>
+        <td>*false*</td>
+        <td>Force ElasticSearch synchronous indexing during a REST call</td>
+        <td>`nx_es_sync: true`</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-Possible values: "true" or "false". If not specified the default is "false"
+## Learn More
 
-This header can be used to force the server to assume that the executed operation has no content to return (a void operation). This can be very useful when dealing with blobs to avoid having the blob output sent back to the client.
-
-For example, if you want to set a blob content on a document using the `Blob.Attach` operation, after the operation execution the blob you sent to the server is sent back to the client (because the operation is returning the original blob). This behavior is useful when creating operation chains but when calling such an operation from remote it will use more network traffic than necessary.
-
-To avoid this, use the header: `X-NXVoidOperation: true`
-
-Example:
-
-```
-POST /nuxeo/site/automation/Blob.Attach HTTP/1.1
-Accept: application/json+nxentity, */*
-Content-Type: multipart/related;
-    boundary="----=_Part_0_130438955.1274713628403"; type="application/json+nxrequest"; start="request"
-Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
-X-NXVoidOperation: true
-Host: localhost:8080
-
-```
-
-```
-------=_Part_0_130438955.1274713628403
-Content-Type: application/json+nxrequest; charset=UTF-8
-Content-Transfer-Encoding: 8bit
-Content-ID: request
-Content-Length: 75
-
-{"params": {"document":"/default-domain/workspaces/myws/file"}, "context":{}}
-
-------=_Part_0_130438955.1274713628403
-Content-Type: image/jpeg
-Content-Transfer-Encoding: binary
-Content-Disposition: attachment; filename=test.jpg
-Content-ID: input
-
-[binary data comes here]
-
-------=_Part_0_130438955.1274713628403--
-
-```
-
-## Nuxeo-Transaction-Timeout
-
-This header can be used when you want to control the transaction duration. As an example, if you want to inject a large blob in the repository, the default transaction timeout may be not enough. You can specify a 5 minutes timeout for the chain you're executing:
-
-```
-Nuxeo-Transaction-Timeout: 300
-```
-
-## properties
-
-{{#> callout type='info' }}
-
-Available since 7.2 to replace `X-NXDocumentProperties`.
-
-{{/callout}}
-
-This header can be used whenever a Document will be returned by the server. The header forces the server to fill up the returned document with data from schemas that matches the `properties` filter. So, `properties` is a filter of schemas. If you don't use the header, all properties of the document are returned.
-
-To have more properties in the returned document, you can specify a list of document schema names:
-
-```
-properties: dublincore, file
-```
-
-or to have all the document content, you can use the `*` character as the filter value or you can simply skip the header definition:
-
-```
-properties: *
-```
-
-## Repository
-
-This header can be used when you need to access a specific repository. The default value is "default", as it's the default repository name in the Nuxeo Platform. This is handy if you have changed the default name or if you have multiple repositories.
-
-```
-Repository: myCustomRepositoryName
-```
-
-## enrichers.document
-
-{{#> callout type='info' }}
-
-Available since 7.2 to replace `X-NXContext-Category`.
-
-{{/callout}}
-
-It is sometimes useful to optimize the number of requests you send to the server. For that reason we provide a mechanism for requesting more information on the answer, simply by specifying the context you want in the request header. For instance, when specifying `enrichers.document = "thumbnail"`, the JSON payload of the document REST calls response contains the related attached file thumbnail of the document. You can add several content enrichers into the header separated by comma. [(Content Enrichers listing)]({{page page='content-enricher'}})
-
-```
-enrichers.document: "thumbnail"
-```
-
-## X-Versioning-Option
-
-This header can be used when you need to increment the minor or major version and return the versioned document. (Since 5.9.5) By default, no version checkin is done and 'live' (snapshot) document is returned. This is handy if you have to update the document while incrementing the version for instance.
-
-Accepted values are MAJOR, MINOR or NONE.
-
-```
-X-Versioning-Option: MAJOR
-```
-
-## fetch.document
-
-This header can be used to load additional parts of an object whose entity-type is `document`.
-
-```
-fetch.document: value1,value2,...
-```
-
-Value could be:
-
-*   `versionLabel`: Loads the versioning information
-*   `lock` : Loads the lock owner and the lock date
-*   `properties`: Loads every properties associated with a resolver and having a marshaller registered
-*   Any field name (`dc:creator`, `dc:subjects`): Loads the given field if it's associated with a resolver and the related entity has a marshaller registered.
-    For example, `dc:creator` would be loaded because it references a user and a user marshaller is provided by the Nuxeo Platform.
-    Built-in fetchable properties are `dc:creator`, `dc:contributors`, `dc:lastContributor`, `dc:subjects`, `dc:coverage`, `dc:nature`.
-
-{{#> callout type='info' }}
-
-More details about properties you can fetch here: [Document JSON and Extended Fields]({{page page='json-marshalling#document-json-extended-fields'}})
-
-{{/callout}}
-
-## depth
-
-This header can be used to control the aggregation depth.
-
-Accepted values are:
-
-*   `root`: Loads only the root element, does not load any enricher or fetched properties.
-*   `children`:  Loads the root document and one level of enricher or fetched properties.
-*   `max`: Load the root, one level of enricher and fetched properties. And for each loaded children, loads one level of enricher or fetched properties.
-
-```
-depth: children
-```
-
-{{#> callout type='info' }}
-
-More details about the control of the depth here: [Aggregating Marshallers and Avoiding Infinite Loops]({{page page='json-marshalling#aggregating-marshallers-infinite-loops'}})
-
-{{/callout}}
-
-## nx_es_sync
-
-This header can be used to force elasticsearch synchronous indexing during a rest call.
-
-```
-nx_es_sync: true
-```
+*   Test these headers on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='use-nuxeo-api-playground-to-discover-the-api'}}) to configure your local instance).
 
 * * *
 
