@@ -99,64 +99,82 @@ history:
         version: '1'
 
 ---
-The Nuxeo 3D addon of the Nuxeo Platform provides support for 3D file types.
+[Nuxeo Platform 3D](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-3d) provides support for 3D file types.
 
-## Installation
+## Installation and Configuration
 
 {{{multiexcerpt 'mp-installation-easy' page='Generic Multi-Excerpts'}}}
 
-However this addon depends on external software - Docker - for conversion and rendering. See the page&nbsp;[Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}}).
+However this addon depends on external software - [Docker](https://www.docker.com/) - for conversion and rendering.
 
-### Docker usage
-
-Nuxeo 3D addon requires Docker to perform content conversion and rendering.
-Using Docker makes the installation process simpler, freeing from installing and configuring specific versions of several third party software.
-It relies on two Docker images that are available on [Nuxeo's Docker Hub account](https://hub.docker.com/u/nuxeo/):
-
-* [Blender image](https://hub.docker.com/r/nuxeo/blender/) - This image installs the correct version of Blender with the needed plug-ins on it.
-[Blender](https://www.blender.org/) is a free and open source 3D content suite. In this addon, it is used to convert several 3D formats to a Collada - has a intermediate format - to be later processed.
-It is also used to render canonical views that can be defined. These renderings are generated with [Cycles Render Engine](https://www.blender.org/manual/render/cycles/). It allows for a ray-tracing rendering which produces high quality results. In order to convert Blender materials to Cycles materials, a plug-in is activated and setup.
-3D content support is, therefore, limited to Blender support which is best-in-class on open source landscape.
-
-* [Collada2glTF](https://hub.docker.com/r/nuxeo/collada2gltf/) - This image installs v1.0-draft2 of [Collada2glTF](https://github.com/KhronosGroup/COLLADA2GLTF/wiki).
-Collada2glTF is the official converter from Collada format to glTF - transmission format - developed by the Khronos Group to allow a broad adoption of glTF 3D format.
-It converts from the intermediate format to the final transmission format made available with level of detail on the content's view.
-
-To install Docker, please refer to [Get Docker](https://www.docker.com/products/overview) on Docker's official site.
-To check if Docker is properly installed, run `docker -v` anywhere on the command line console. As result, Docker version and build information should be shown.
-
-After the Nuxeo 3D addon is&nbsp;installed, the new 3D document type is available.
+After the Nuxeo 3D addon is installed, the new 3D document type is available.
 
 ![]({{file name='available-doc-types.png'}} ?w=600)
 
-The supported 3D file formats are:
+### Docker usage
 
-*   Collada (.dae)
-*   3D Studio (.3ds)
-*   FBX (.fbx)
-*   Stanford (.ply)
-*   Wavefront (.obj)
-*   X3D Extensible 3D (.x3d)
-*   Stl (.stl)
+Nuxeo Platform 3D requires Docker to perform content conversion and rendering. Using Docker makes the installation process simpler, freeing from installing and configuring specific versions of several third party software.
+
+To install Docker:
+1. Follow the instructions at [Get Docker](https://www.docker.com/products/overview) on Docker's official site.
+
+    To check if Docker is properly installed, run `docker -v` anywhere on the command line console. As result, Docker version and build information should be shown.
+2. In Docker settings, make sure that Docker can access the repository where the Nuxeo server is installed. If that's not the case, add it to the repositories.
+
+Nuxeo Platform 3D relies on two Docker images that are available on [Nuxeo's Docker Hub account](https://hub.docker.com/u/nuxeo/). The Nuxeo server will trigger the download and installation of these two images, so you don't need to set them up in Docker.
+
+The required Docker images are:
+
+* [Blender image](https://hub.docker.com/r/nuxeo/blender/) - This image installs the correct version of Blender with the needed plugins on it.
+
+    [Blender](https://www.blender.org/) is a free and open source 3D content suite. In Nuxeo Platform 3D, it is used to convert several 3D formats to a Collada - as an intermediate format - to be later processed.
+    It is also used to render canonical views that can be defined. These renderings are generated with [Cycles Render Engine](https://www.blender.org/manual/render/cycles/). It allows for a ray-tracing rendering which produces high quality results. In order to convert Blender materials to Cycles materials, a plugin is activated and set up.
+    3D content support is therefore limited to Blender support which is best-in-class on the open source landscape.
+
+* [Collada2glTF](https://hub.docker.com/r/nuxeo/collada2gltf/) - This image installs v1.0-draft2 of [Collada2glTF](https://github.com/KhronosGroup/COLLADA2GLTF/wiki).
+
+    Collada2glTF is the official converter from Collada format to glTF - transmission format - developed by the Khronos Group to allow a broad adoption of glTF 3D format.
+    It converts from the intermediate format to the final transmission format made available with level of detail on the content's view.
 
 ## Functional Overview
 
-The 3D document type is fully integrated in the Nuxeo Platform and is available alongside the other document types. It can be created the same way as the platform default document types, getting the same metadata, the same workflows, etc.
+The 3D document type is fully integrated in the Nuxeo Platform and is available alongside the other document types. It can be created the same way as the platform default document types, getting the same metadata and collaborative features (see details below).
 
-3D documents can be [created]({{page space='userdoc' page='creating-content'}}) and [edited]({{page space='userdoc' page='editing-content'}}) in workspaces and folders like any other document type. You can also classify and organize them in [collections]({{page page='collections'}}).
+The supported 3D file formats are:
 
-When a main 3D model file is assigned to a 3D document, a processing routine is initiated to extract metadata from the model, create 2D renditions and build the model's transmission formats. When this processing is completed, the 3D document view should show a 3D preview of the document, the configured render views, the 'transmission formats' details and the files that make up the content of the 3D document.
-Attachments work as 3D format assets like textures. A standalone ZIP file with the 3D document can also be uploaded, allowing a directory structure inside the ZIP.&nbsp;
+-  Collada (.dae)
+- 3D Studio (.3ds)
+- FBX (.fbx)
+-  Stanford (.ply)
+- Wavefront (.obj)
+- X3D Extensible 3D (.x3d)
+- Stl (.stl)
 
-Replacing the main file or the attachments of a 3D document also triggers the processing routine, so that the render views and transmission formats can be updated.
+A 3D document is typically composed of a 3D main file and attachments for the 3D assets, such as textures.
+When a main 3D model file is assigned to a 3D document, a processing routine is initiated to extract metadata from the model, create 2D renditions (render views) and build the model's transmission formats. When this processing is completed, the 3D document view shows a 3D preview of the document, the configured render views, the 'transmission formats' details and the files that make up the content of the 3D document. Replacing the main file or the attachments of a 3D document also triggers the processing routine, so that the render views and transmission formats can be updated.
+
+To create a 3D document, you can either attach the 3D file as main content of the document and then attach the textures files in the **Files** tab (see the page [Attachments]({{page version='' space='userdoc' page='attachments'}})), or you can directly attach a standalone ZIP file as main content of the 3D document, that holds all the 3D resources for the document. This second way to proceed allows a directory structure inside the ZIP.
+
+Available features on 3D document type:
+- [Edit metadata]({{page version='' space='userdoc' page='editing-content'}}#edit-metadata-form)
+- [Versioning of document]({{page version='' space='userdoc' page='editing-content'}}#versioning-overview)
+- [Tagging]({{page version='' space='userdoc' page='tags'}})
+- [Add to collections]({{page version='' space='userdoc' page='collections'}})
+- [Relations]({{page version='' space='userdoc' page='editing-content'}}#relations)
+- [Publishing]({{page version='' space='userdoc' page='publishing-content'}})
+
+Features not available on 3D document type:
+- Default workflows
 
 ![]({{file name='full.png'}} ?w=600,border=true)
 
 #### 3D Preview
 
-The 3D preview allows a complete visualization of the 3D document in real-time through a WebGL rendering. The available manipulation controls include rotating, panning and zooming on the 3D model.
+The 3D preview allows a complete visualization of the 3D document in real-time: you can rotate, pan and zoom on the 3D model.
 
 ![]({{file name='preview.png'}} ?w=600,border=true)
+
+Preview is done through a WebGL rendering.
 
 #### Render Views
 
@@ -181,22 +199,22 @@ Each transmission format can be loaded and viewed directly on the 3D Preview and
 
 ## Technical Overview
 
-#### Schema
+### Schema
 
 *   `transmissionFormats`: Fast loading format created from the original model. These can configured to represent lower levels of detail of the original model. Stored as glTF files.
 *   `renderViews`: renditions of the model (2D renderings).
 *   `info`: Geometric properties and metadata of the 3D model.
 
-#### Facets
+### Facets
 
-*   `ThreeD`: The facet to put on document types that should be considered as 3D. This facet comes with the following schemas:&nbsp;
+*   `ThreeD`: The facet to put on document types that should be considered as 3D. This facet comes with the following schemas:
     *   `file`: Main model file.
     *   `files`: Resources that are referenced by the main model file (i.e. textures, materials, etc.).
-    *   `threed`:&nbsp;Metadata, transmission formats and renditions of the 3D model.
+    *   `threed`: Metadata, transmission formats and renditions of the 3D model.
 
-#### Document Type
+### Document Type
 
-*   `ThreeD`: default type in Nuxeo that handle 3D model files. It comes with the&nbsp;`ThreeD`, `Commentable`, &nbsp;`Versionable`&nbsp;and&nbsp;`Publishable`&nbsp;facets.
+*   `ThreeD`: default type in Nuxeo that handle 3D model files. It comes with the `ThreeD`, `Commentable`,  `Versionable` and `Publishable` facets.
 
 #### Listeners
 
@@ -205,21 +223,21 @@ Each transmission format can be loaded and viewed directly on the 3D Preview and
 
 #### File Manager Plugin
 
-The plugin&nbsp;`ThreeDPlugin`&nbsp;is contributed to the [File Manager]({{page page='file-manager'}}) to create&nbsp;`ThreeD`&nbsp;documents when the imported file mime type matches one of the following:
+The plugin `ThreeDPlugin` is contributed to the [File Manager]({{page page='file-manager'}}) to create `ThreeD` documents when the imported file mime type matches one of the following:
 
-*   `model/vnd.collada+xml`&nbsp;(Collada)
-*   `application/x-3ds`&nbsp;(3D Studio)
-*   `application/octet-stream`&nbsp;(FBX)
-*   `text/x-c`&nbsp;(Stanford)
-*   `text/wavefront-obj`&nbsp;(Wavefront)
-*   `model/x3d+xml`&nbsp;(X3D Extensible 3D)
-*   `application/sla`&nbsp;(STL)
-*   `model/gltf+json`&nbsp;(glTF)
-*   `application/zip`&nbsp;(Zip Archive)
+*   `model/vnd.collada+xml` (Collada)
+*   `application/x-3ds` (3D Studio)
+*   `application/octet-stream` (FBX)
+*   `text/x-c` (Stanford)
+*   `text/wavefront-obj` (Wavefront)
+*   `model/x3d+xml` (X3D Extensible 3D)
+*   `application/sla` (STL)
+*   `model/gltf+json` (glTF)
+*   `application/zip` (Zip Archive)
 
 #### Exposed Extension Points
 
-The&nbsp;`ThreeDService`&nbsp;exposes three extension points:
+The `ThreeDService` exposes three extension points:
 
 *   `renderViews`: Configurations of the available render views. It uses Spherical Coordinate System for camera position.
 
@@ -252,7 +270,20 @@ The&nbsp;`ThreeDService`&nbsp;exposes three extension points:
         maxTex="1280x720" enabled="true" rendition="true" renditionVisible="true"/>
     </extension>
     ```
-
-{{! Don't put anything here. }}
-
 * * *
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
+
+- [DAM documentation]({{page version='' space='nxdoc' page='digital-asset-management-dam'}})
+
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+
+&nbsp;
+
+</div>
+</div>
