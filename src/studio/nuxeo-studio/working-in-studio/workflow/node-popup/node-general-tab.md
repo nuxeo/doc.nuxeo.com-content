@@ -149,9 +149,9 @@ history:
 *   **Due date expression**: This is where you express what should the due date be on the task that is created by this node. It is usually set relatively to the current date (the time when the task is created), but it can also be expressed leveraging the date at which the workflow was started.
 *   **Assignees**: You can add&nbsp; static assignees here, either users or groups, one per input field (click on "**Add**" to add more than one). You need to prefix users by "`user:`" like `user:jack` and groups by "`group:`" like `group:validators`.
 *   **Assignees expression**: To Compute additional assignees, you can set a scripted expression ([MVEL syntax]({{page space='nxdoc' page='understand-expression-and-scripting-languages-used-in-nuxeo'}}))&nbsp;here so as to determine where to lookup the assignees of the task. You have access to some useful variables in the context, like the `NodeVariables` and `WorkflowVariables` (see [Variables Available in the Automation Context]({{page space='nxdoc' page='variables-available-in-the-automation-context'}}) for more information). A frequent pattern is to set a node variable from the input chain of the node and reference it here.
-*   <span style="color: rgb(67,67,67);">**Create one task per assignee**: If checked, there will be as many tasks created as there are assignees. This property is displayed only for the multi-task node.</span>
-*   <span style="color: rgb(67,67,67);">**Allow task reassignment**: If set to true, the Reassign user action will be displayed on the task resolution screen and assignee will be able to reassign the task to someone else.</span>
-*   <span style="color: rgb(67,67,67);">**Grand permission to task assignee**: Specifies the permission that will be assigned to each of the assignees on the bound document(s).</span>
+*   **Create one task per assignee**: If checked, there will be as many tasks created as there are assignees. This property is displayed only for the multi-task node.
+*   **Allow task reassignment**: If set to true, the Reassign user action will be displayed on the task resolution screen and assignee will be able to reassign the task to someone else.
+*   **Grand permission to task assignee**: Specifies the permission that will be assigned to each of the assignees on the bound document(s).
 *   **Mail notification**: Specifies the mail template that is going to be used to generate the mail to be sent to the task assignee. If for some reasons you want to send the email to some other users, you can do it from the input chain or output chain of the node, using the `Send E-Mail` operation.
 *   **Task Document type**: This is only for advanced users. It is useful to change the type of the task that is created, so as to [be able to do some tasks queues]({{page space='nxdoc' page='how-to-set-up-a-tasks-dashboard'}}) that display additional metadata coming directly from the document.
 *   **Input operation chain**: The automation chain you specify here will be executed when the workflow engine enters the node. If the node is of type Task, that means it's executed right before the task is created. The list of documents bound to the workflow instance will be the input of the chain. If there is one document, it will still be a list, with one element only.
@@ -171,6 +171,6 @@ Execution Context > Restore input document from a script
 script: This[0]
 ```
 
-<span style="color: rgb(34,34,34);font-size: 10.0pt;line-height: 13.0pt;">Then, for the rest of the chain, you will have only one document in input transiting from one operation to the other.</span>
+Then, for the rest of the chain, you will have only one document in input transiting from one operation to the other.
 
 {{/callout}}
