@@ -119,7 +119,7 @@ Deploying the Nuxeo template on Amazon AWS installs:
 
 1.  Sign in to your CloudFormation management console.
 2.  Choose the region you want your stack to be deployed in.
-    ![]({{file name='SelectRegion.png'}} ?border=true)
+    ![]({{file name='SelectRegion.png'}} ?w=150 ?border=true)
 3.  Start the new stack creation by clicking the **Create New Stack** button.
     ![]({{file name='CreateNewStack.png'}} ?w=150 ?border=true)
 4.  On the first page of the Wizard on **Select Template**, choose **Specify an Amazon S3 template URL**, and put:
