@@ -22,142 +22,142 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/vYGyAQ'
     source_link: /display/NXDOC710/Template+Rendering+Addon
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 10:01'
         message: ''
         version: '28'
-    - 
+    -
         author: Vincent Dutat
         date: '2016-07-26 17:48'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-30 08:24'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-10 13:23'
         message: Adding borders on pictures
         version: '25'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-12-09 10:32'
         message: mention old doctypes are read only
         version: '24'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-12-09 09:42'
         message: Mention template rendering samples and its content
         version: '23'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-12-08 18:24'
         message: ''
         version: '22'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-12-08 18:08'
         message: ''
         version: '21'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-12-08 16:49'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-10 08:42'
         message: ''
         version: '19'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-06 10:03'
         message: Added details about JXLS
         version: '18'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-06 09:44'
         message: Upate xdocreport links
         version: '17'
-    - 
+    -
         author: Thierry Martins
         date: '2015-11-05 15:40'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-27 13:20'
         message: ''
         version: '15'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-07-15 12:33'
         message: Added explanations on options
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-15 17:44'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-15 17:42'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-15 17:39'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-15 17:34'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-15 17:31'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-20 09:59'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-22 18:18'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-11 14:12'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-17 09:37'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-17 09:37'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-04 23:41'
         message: Added related content
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-04 23:38'
         message: Added screenshots
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-04 23:20'
         message: ''
@@ -395,7 +395,7 @@ There are several ways to associate a template to a document.
 ##### Creating a document based on a template
 
 To create a new document based on a template, users need to [use the **New document** button]({{page space='userdoc710' page='creating-content#creating-a-document-using-the-new-document-button'}}). If a template is available for the selected document type, an additional option is then available for the **Content** field, allowing users to select which template to use.
-![]({{file name='select_template.png'}} ?w=500,h=122,border=true)&nbsp;
+![]({{file name='select_template.png'}} ?w=500,h=122,border=true)
 When the document is created, the template is used as content. An additional **Associated templates** tab is available.
 
 Users can then:
@@ -419,7 +419,7 @@ It is possible to associate a document with a template after the document's crea
     2.  Click on the link **Add a template**.
     3.  Select the new template to associate with the document and click on the button **Bind template**.
         The Summary tab is displayed. The added template is displayed in the **Associated templates** section of the **Summary** tab.
-        ![]({{file name='associated_template.png'}} ?w=250,h=138,border=true)&nbsp;
+        ![]({{file name='associated_template.png'}} ?w=250,h=138,border=true)
         It is also displayed in the **Associated template** tab.
         ![]({{file name='associated_template_tab.png'}} ?w=450,h=221,border=true)
 
@@ -507,7 +507,7 @@ The associated document can be any Document type and the Freemarker template wil
 
 The URL to access the document with the template applied is the following :
 
-http://**nuxeo_server_url**/nxtemplate/**path_to_the_document**@**template_name**
+`http://**nuxeo_server_url**/nxtemplate/**path_to_the_document**@**template_name**`
 
 ex :
 
@@ -521,7 +521,7 @@ or for a published document :
 
 **The Template**
 
-The template can be a corporate template with logo, table of content, picture and content in MS Word or OpenOffice format. The template contains simple merge fields (like in Office templating), but also a&nbsp;_content_&nbsp;field.
+The template can be a corporate template with logo, table of content, picture and content in MS Word or OpenOffice format. The template contains simple merge fields (like in Office templating), but also a _content_ field.
 
 **The associated Document**
 
