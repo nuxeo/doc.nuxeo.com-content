@@ -193,7 +193,10 @@ To tag a document, go on the&nbsp;**Summary**&nbsp;tab of the document and click
 
 &nbsp;![]({{file name='tags-add.png'}} ?w=350,border=true)
 
-To remove a tag from a document, click on the icon&nbsp;![]({{file name='delete.png' page='icons-index'}}).&nbsp;The tag is immediately removed. You need to be the user who added the tag on the document or have at least&nbsp;_Edit_&nbsp;permission on the document to be able to remove a tag from a document.
+To remove a tag from a document, click on the icon&nbsp;![]({{file name='delete.png' page='icons-index'}}).&nbsp;The tag is immediately removed.
+{{#> callout type='note' heading='Behavior changed from LTS 2015'}}
+You need to be the user who added the tag on the document or have at least&nbsp;_Edit_&nbsp;permission on the document to be able to remove a tag from a document.
+{{/callout}}
 
 ### Tags, Versions and Publication
 
