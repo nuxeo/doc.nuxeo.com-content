@@ -75,38 +75,49 @@ history:
 {{! excerpt}}
 
 This chapter presents the different ways to customize what is displayed on the default application.
+{{! /excerpt}}
 
-{{! /excerpt}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 ### Main UI Elements
 
 The UI of the Nuxeo platform is composed of different core elements that you can customize to define your own views, tabs, forms and looks.
 
-*   [Layouts and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
-*   [Content Views]({{page page='content-views'}})
-*   [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
-*   [Theme]({{page page='theme'}})
+- [Layouts and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
+- [Content Views]({{page page='content-views'}})
+- [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
+- [Theme]({{page page='theme'}})
+{{/panel}}
+</div>
 
-{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 ### How-Tos
 
 We provide you with thematic how-tos to show you examples of customization and help you adapt the Nuxeo Platform to your needs.
 
-*   [Web UI How-To Index]({{page page='web-ui-how-to-index'}})
-*   [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
-*   [Content View How-To Index]({{page page='content-view-how-to-index'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [Web UI How-To Index]({{page page='web-ui-how-to-index'}})
+- [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
+- [Content View How-To Index]({{page page='content-view-how-to-index'}})
+- [How-To Index]({{page page='how-to-index'}})
+{{/panel}}
+</div>
+</div>
 
-{{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 ### Additional Web UI Elements
 
 Find out about more UI related features.
 
-*   [JSF and Ajax Tips]({{page page='jsf-and-ajax-tips-and-how-to-index'}})
-*   [Navigation URLs]({{page page='navigation-urls'}})
-*   [Labels and Translations Management]({{page page='labels-and-translations-management'}})
-*   [Documents Display Configuration]({{page page='documents-display-configuration'}})
-
-{{/panel}}</div><div class="column medium-6"></div></div>
+- [JSF and Ajax Tips]({{page page='jsf-and-ajax-tips-and-how-to-index'}})
+- [Navigation URLs]({{page page='navigation-urls'}})
+- [Labels and Translations Management]({{page page='labels-and-translations-management'}})
+- [Documents Display Configuration]({{page page='documents-display-configuration'}})
+{{/panel}}
+</div>
+<div class="column medium-6">
+</div>
+</div>
