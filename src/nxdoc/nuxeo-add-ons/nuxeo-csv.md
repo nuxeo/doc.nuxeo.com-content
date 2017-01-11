@@ -320,7 +320,7 @@ You can use the attached file&nbsp;[]({{file name='docs_ok.csv'}})&nbsp;to bette
 
 {{#> callout type='note'}}
 Dates inside a complex type use W3C format and not MM/dd/yyyy as for simple type dates.
-More information on the [W3C documentation](https://www.w3.org/TR/NOTE-datetime)
+More information on the [W3C documentation](https://www.w3.org/TR/NOTE-datetime).
 {{/callout}}
 
 ### Setting Life Cycle State When Creating Documents
