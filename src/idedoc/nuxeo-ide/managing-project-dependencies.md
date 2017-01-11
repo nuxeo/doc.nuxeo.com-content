@@ -165,6 +165,8 @@ history:
         version: '1'
 
 ---
+{{multiexcerpt 'ide-replaced-by-generator-info' page='nuxeo-ide'}}
+
 All the dependencies of your projects are managed using Nuxeo IDE.
 
 ## Nuxeo SDK Classpath
@@ -204,14 +206,18 @@ You **must** fill the user library metadata (the Maven GAV information) otherwis
 
 ## {{> anchor 'sync-poms'}}Synchronizing POMs
 
-As you develop your customizations, you add new dependencies. All the dependencies are listed in the `pom.xml`&nbsp;file. Usually, you need to update your `pom.xml` manually and might forget a dependency, which will make your project build fail.
+As you develop your customizations, you add new dependencies. All the dependencies are listed in the `pom.xml` file. Usually, you need to update your `pom.xml` manually and might forget a dependency, which will make your project build fail.
 
 Nuxeo IDE provides a way to update your `pom.xml` file with the new dependencies. Before deploying your project, you can synchronize your project's `pom.xml` file. Then, Nuxeo IDE scans your project with all undeclared dependencies and adds them to the POM.
 
 **To synchronize your project's POM:**
 
-**{{{multiexcerpt 'POM-synchronization' page='Preparing your project for building'}}}
-**
+1. Right-click on the `pom.xml` file file then click on **Nuxeo**&nbsp;> **Synchronize POM**.
+2. You will be prompted to select the artifacts you want to add to the `pom.xml` file.
+    The missing artifacts are discovered by the Nuxeo IDE by scanning the sources of your project, and finding any class that you reference and that is not yet in the POM.
+    ![]({{file name='NxIDE_pom_dependencies.png'}} ?w=450,border=true)
+3. Click **Finish**.
+    Then look again at the pom.xml file. Now you have your dependency there.
 
 ## Attaching Sources for Project Dependencies
 

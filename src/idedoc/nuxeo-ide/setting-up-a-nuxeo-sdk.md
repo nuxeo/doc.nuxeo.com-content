@@ -293,6 +293,8 @@ history:
         version: '1'
 
 ---
+{{multiexcerpt 'ide-replaced-by-generator-info' page='nuxeo-ide'}}
+
 Before starting to create your first project you must configure a Nuxeo SDK.
 
 {{! multiexcerpt name='SDK-definition'}}
@@ -313,12 +315,11 @@ To install a Nuxeo distribution you can:
     *   [Nuxeo Platform 8.10 (LTS 2016) SDK](http://cdn.nuxeo.com/nuxeo-8.10/nuxeo-server-8.10-tomcat-sdk.zip)
     *   [Nuxeo Platform 7.10 (LTS 2015) SDK](http://cdn.nuxeo.com/nuxeo-7.10/nuxeo-cap-7.10-tomcat-sdk.zip)
     *   [Nuxeo Platform 6.0 SDK](http://cdn.nuxeo.com/nuxeo-6.0/nuxeo-cap-6.0-HF20-tomcat-sdk.zip)
-    *   [Nuxeo Platform 5.8 SDK](http://cdn.nuxeo.com/nuxeo-5.8/nuxeo-cap-5.8-tomcat-sdk.zip)
 *   [checkout the Nuxeo Platform source code]({{page space='corg' page='getting-the-nuxeo-source-code'}}) and [build a Tomcat distribution from the Nuxeo Platform trunk]({{page space='corg' page='compiling-nuxeo-from-sources'}}) (you must activate the `sdk` Maven profile: `mvn package -Ptomcat,sdk`).
 
 It is far simpler to download the SDK, and there is generally no need to build your own distribution. The Nuxeo Platform is designed to be customized _without_ changing the SDK.
 
-### Installing a downloaded distribution
+### Installing a Downloaded Distribution
 
 {{! multiexcerpt name='SDK-install-downloaded-distribution'}}
 
@@ -331,7 +332,7 @@ It is far simpler to download the SDK, and there is generally no need to build y
 
 {{! /multiexcerpt}}
 
-## Using multiple Nuxeo SDKs
+## Using Multiple Nuxeo SDKs
 
 You can install multiple Nuxeo SDKs (with different flavors and versions). But you cannot use them in parallel in the same workspace.
 Only one Nuxeo SDK can be used in an Eclipse workspace at a time: the one that you check in the SDK preferences view.

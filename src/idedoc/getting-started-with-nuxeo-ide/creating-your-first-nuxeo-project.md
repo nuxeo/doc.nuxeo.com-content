@@ -4,7 +4,7 @@ review:
     comment: ''
     date: ''
     status: ok
-redirect: nxdocgetting-started-with-nuxeo-ide
+redirect: nxdoc/getting-started-with-nuxeo-generator/
 redirect_source: 'NXDOC:Getting Started with Nuxeo IDE'
 confluence:
     ajs-parent-page-id: '8684138'

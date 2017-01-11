@@ -39,15 +39,17 @@ history:
         version: '1'
 
 ---
-<div class="row"><div class="column medium-8">
+{{! multiexcerpt name='ide-replaced-by-generator-info'}}
+{{#> callout type='info'}}
+Nuxeo IDE is being replaced by the [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) and won’t be maintained any longer. You can take a look at the page [Start customizing the Nuxeo Platform]({{page version='' space='nxdoc' page='start-customizing-the-nuxeo-platform'}}) to discover how to use the Nuxeo Generator.
+{{/callout}}
+{{! /multiexcerpt}}
 
 We developed an Eclipse IDE to make it easy to extend the Nuxeo Platform using Eclipse.
 
-</div><div class="column medium-4">{{#> panel type='primary'}}
-
-[Getting Started with Nuxeo IDE]({{page space='nxdoc' page='getting-started-with-nuxeo-ide'}})
-
-{{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 
 ### [Running your Projects on the Server]({{page page='running-your-projects-on-the-server'}})
 
@@ -58,7 +60,10 @@ Installing Nuxeo IDE adds a new perspective to Eclipse, called Nuxeo, which enab
 3.  [Lauching the Server]({{page page='running-your-projects-on-the-server#launchingserver'}})
 4.  [Remote debugging]({{page page='running-your-projects-on-the-server#remotedebugging'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+{{/panel}}
+</div>
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 
 ### [Working with Studio Projects]({{page page='working-with-studio-projects'}})
 
@@ -67,6 +72,8 @@ Installing Nuxeo IDE adds a new perspective to Eclipse, called Nuxeo, which enab
 - [Deploying a Project with Studio Dependencies]({{page page='deploying-a-project-with-studio-dependencies'}})
 - [Settings Eclipse Development Templates]({{page page='settings-eclipse-development-templates'}})
 
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>
 
 {{{multiexcerpt 'license' page='NXDOC:Developer Documentation Center'}}}

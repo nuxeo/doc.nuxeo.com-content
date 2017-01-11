@@ -44,11 +44,10 @@ history:
         version: '1'
 
 ---
-## Nuxeo IDE cannot deploy. It just waits and waits!
+{{multiexcerpt 'ide-replaced-by-generator-info' page='nuxeo-ide'}}
 
-<div class="item-right">
+**Nuxeo IDE cannot deploy. It just waits and waits.**
 
-<div class="answer-body">
 
 Nuxeo IDE is generating a dedicated template for running the SDK. Did you started the SDK by hand ? If yes, you should activate that template by setting in your environment the following variable
 
@@ -62,14 +61,8 @@ Can you check also that the profile is correctly activated ? In your SDK, the fi
 <Loader className="org.nuxeo.runtime.tomcat.NuxeoWebappLoader" loaderClass="org.nuxeo.runtime.tomcat.dev.NuxeoDevWebappClassLoader" />
 ```
 
-<pre>In all cases, if you run Nuxeo by hand -> "./nuxeoctl(.bat) console" you should see much more information to debug it.</pre>
+In all cases, if you run Nuxeo by hand -> "./nuxeoctl(.bat) console" you should see much more information to debug it.
 
-&nbsp;
+**My server is started with Nuxeo IDE and my Seam components / XHTML views are not deployed.**
 
-## My server is started with Nuxeo IDE and my Seam components / XHTML views are not deployed.
-
-Just refresh once with the "Reload projects on server" button.</div>
-
-</div>
-
-&nbsp;
+Just refresh once with the "Reload projects on server" button.

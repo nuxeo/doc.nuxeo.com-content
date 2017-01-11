@@ -81,13 +81,15 @@ history:
         version: '1'
 
 ---
+{{multiexcerpt 'ide-replaced-by-generator-info' page='nuxeo-ide'}}
+
 The Nuxeo perspective is the proposed layout to work on Nuxeo projects. It extends the default Java perspective by adding some specific Nuxeo IDE views like:
 
 ## Nuxeo Server
 
 {{! multiexcerpt name='IDE-nuxeo-server-tab'}}
 
-Let's start by looking at the Nuxeo Server tab ![]({{file name='server.gif'}}). It gives you the ability to start ![]({{file name='start.gif'}}), stop ![]({{file name='stop.gif'}}), start in debug mode ![]({{file name='debug.gif'}}). As you can see when starting Nuxeo, the tab starts displaying the server log. There are two associated buttons to Lock&nbsp;![]({{file name='lock_co.gif'}}) the scrolling and to Clear&nbsp;![]({{file name='clear.gif'}}) the console. Once you see the "Server started" line in the logs, you can click on the Open Nuxeo In Web Browser ![]({{file name='oprest.gif'}})&nbsp;button.&nbsp;We'll talk about the other two (hot reload ![]({{file name='refresh.gif'}})&nbsp;and deployment profile ![]({{file name='deploy.gif'}})) later.
+Let's start by looking at the Nuxeo Server tab ![]({{file name='server.gif'}}). It gives you the ability to start ![]({{file name='start.gif'}}), stop ![]({{file name='stop.gif'}}), start in debug mode ![]({{file name='debug.gif'}}). As you can see when starting Nuxeo, the tab starts displaying the server log. There are two associated buttons to Lock ![]({{file name='lock_co.gif'}}) the scrolling and to Clear ![]({{file name='clear.gif'}}) the console. Once you see the "Server started" line in the logs, you can click on the Open Nuxeo In Web Browser ![]({{file name='oprest.gif'}}) button. We'll talk about the other two (hot reload ![]({{file name='refresh.gif'}}) and deployment profile ![]({{file name='deploy.gif'}})) later.
 
 {{! /multiexcerpt}}
 
@@ -95,7 +97,7 @@ Let's start by looking at the Nuxeo Server tab ![]({{file name='server.gif'}}). 
 
 {{! multiexcerpt name='IDE-nuxeo-components-tab'}}
 
-The Components tab&nbsp;![]({{file name='nx.gif'}}) gives you an overview of the different Components available in the SDK. What's a component you might ask? It's an XML file declaring a Service, an Extension Point (XP) or a contribution to an XP. This is what makes Nuxeo easily extensible. Basically a Service will provide some business logic that can be modified or extend using XPs. The service knows how to handle and register contribution to XP. Here's an example. In Nuxeo there is a service that handles Document Type. It knows how to handle several XPs. One of them is used to register new Document Type for Nuxeo. You can find out more on our component model in our [documentation]({{page space='nxdoc56' page='component-model-overview'}}).
+The Components tab ![]({{file name='nx.gif'}}) gives you an overview of the different Components available in the SDK. What's a component you might ask? It's an XML file declaring a Service, an Extension Point (XP) or a contribution to an XP. This is what makes Nuxeo easily extensible. Basically a Service will provide some business logic that can be modified or extend using XPs. The service knows how to handle and register contribution to XP. Here's an example. In Nuxeo there is a service that handles Document Type. It knows how to handle several XPs. One of them is used to register new Document Type for Nuxeo. You can find out more on our component model in our [documentation]({{page space='nxdoc' page='runtime-and-component-model'}}).
 
 {{! /multiexcerpt}}
 
@@ -103,7 +105,7 @@ The Components tab&nbsp;![]({{file name='nx.gif'}}) gives you an overview of the
 
 {{! multiexcerpt name='IDE-nuxeo-studio-tab'}}
 
-The Studio tab&nbsp;![]({{file name='studio_project.gif'}}) lists the different Studio project you have access to. You can browse their content to see what configuration has been added to the project. Click on a feature and you'll be sent directly to the corresponding Studio tab. Notice the two icons on the upper right corner. One is used to refresh the list&nbsp;![]({{file name='refresh.gif'}})&nbsp;and the other&nbsp;![]({{file name='export.gif'}})&nbsp;is used to export the operations you develop in the IDE into your Studio project.
+The Studio tab ![]({{file name='studio_project.gif'}}) lists the different Studio project you have access to. You can browse their content to see what configuration has been added to the project. Click on a feature and you'll be sent directly to the corresponding Studio tab. Notice the two icons on the upper right corner. One is used to refresh the list ![]({{file name='refresh.gif'}}) and the other ![]({{file name='export.gif'}}) is used to export the operations you develop in the IDE into your Studio project.
 
 {{! /multiexcerpt}}
 

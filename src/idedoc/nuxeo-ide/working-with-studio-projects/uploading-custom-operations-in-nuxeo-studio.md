@@ -69,6 +69,8 @@ history:
         version: '1'
 
 ---
+{{multiexcerpt 'ide-replaced-by-generator-info' page='nuxeo-ide'}}
+
 {{! excerpt}}
 
 Nuxeo IDE enables you to code new features, that can be complementary to your Studio customizations. Typically, you can use Nuxeo IDE to develop new Automation operations, that want to leverage in the Nuxeo Studio automation chain builder. Just like you can [browse your Nuxeo Studio project]({{page page='browsing-a-studio-project-content'}}) from Nuxeo IDE, you can also use your operation in Nuxeo Studio.
@@ -88,5 +90,3 @@ Nuxeo IDE enables you to code new features, that can be complementary to your St
     ![]({{file name='NxIDE_operation_export_2.png'}} ?w=450,border=true)
     You can now log in to Nuxeo Studio and use your operations in automation chains.
     ![]({{file name='NxIDE_operation_export_result.png'}} ?w=650,border=true)
-
-&nbsp;

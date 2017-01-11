@@ -124,6 +124,8 @@ history:
         version: '1'
 
 ---
+{{multiexcerpt 'ide-replaced-by-generator-info' page='nuxeo-ide'}}
+
 {{! excerpt}}
 
 The whole purpose of enabling to work with Nuxeo Studio is to be able to use elements configured in Studio from Nuxeo IDE, and to benefit from Eclipse key features such as code completion. As you may have several projects (both in Nuxeo Studio and in Nuxeo IDE), you need to indicate which Studio project the Nuxeo IDE project should be bound to.
@@ -159,5 +161,3 @@ So, anywhere you want to use a document property XPath in your code you can use 
 You can also create Document adapters for your Studio document types.
 
 ![]({{file name='NxIDE_document_adapter_wizard.png'}} ?w=450,border=true)
-
-&nbsp;

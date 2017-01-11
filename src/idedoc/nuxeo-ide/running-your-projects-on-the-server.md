@@ -147,6 +147,8 @@ history:
         version: '1'
 
 ---
+{{multiexcerpt 'ide-replaced-by-generator-info' page='nuxeo-ide'}}
+
 Installing Nuxeo IDE adds a new perspective to Eclipse, called Nuxeo. This perspective is composed of three views:
 
 *   [the Studio view]({{page page='browsing-a-studio-project-content'}}),

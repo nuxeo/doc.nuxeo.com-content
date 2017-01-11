@@ -84,6 +84,8 @@ history:
         version: '1'
 
 ---
+{{multiexcerpt 'ide-replaced-by-generator-info' page='nuxeo-ide'}}
+
 {{! excerpt}}
 
 To enable Nuxeo IDE to leverage your Nuxeo Studio customization, you need to configure your Nuxeo Online Services account so Nuxeo IDE can connect to Studio.
@@ -92,12 +94,12 @@ To enable Nuxeo IDE to leverage your Nuxeo Studio customization, you need to con
 
 **To configure a Nuxeo Online Services account:**
 
-1.  Open Eclipse preferences and go to&nbsp;**Nuxeo**&nbsp;>&nbsp;**Nuxeo Connect**.
+1.  Open Eclipse preferences and go to **Nuxeo**&nbsp;> **Nuxeo Connect**.
     The Host name is already filled in with Nuxeo Connect address.
-2.  Type your Connect login and password and click on the&nbsp;**Connect**&nbsp;button.
+2.  Type your Connect login and password and click on the **Connect** button.
     The lists of Studio projects associated to your account is displayed.
     ![]({{file name='NxIDE_pref_connect_account.png'}} ?w=550,border=true)
-3.  Click on&nbsp;**OK**.
+3.  Click on **OK**.
     The Preferences window closes.
     You can now go to the Studio view to browse your Studio customizations.
 

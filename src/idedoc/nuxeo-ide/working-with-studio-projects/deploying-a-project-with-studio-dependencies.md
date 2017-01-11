@@ -79,6 +79,8 @@ history:
         version: '1'
 
 ---
+{{multiexcerpt 'ide-replaced-by-generator-info' page='nuxeo-ide'}}
+
 {{! excerpt}}
 
 For now, when deploying your projects on the server (using the a deployment profile) the Studio projects are not automatically deployed. In order to deploy both your Nuxeo IDE projects and their Studio project dependencies, your need to:

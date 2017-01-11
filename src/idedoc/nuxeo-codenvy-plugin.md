@@ -102,8 +102,6 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
 ## Generic Factory
 
 Codenvy generic factory is a way to generate a custom Codenvy IDE instance for specific project with:
@@ -127,7 +125,3 @@ Nuxeo Codenvy project wizard is in progress. It will provide:
 *   A panel to register/connect to Nuxeo Connect
 *   A client app boostrap to consume Nuxeo IO instance API
 *   A server Nuxeo bundle to deploy on Nuxeo IO instance
-
-&nbsp;
-
-* * *

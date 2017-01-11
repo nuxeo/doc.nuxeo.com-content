@@ -54,6 +54,8 @@ history:
         version: '1'
 
 ---
+{{multiexcerpt 'ide-replaced-by-generator-info' page='nuxeo-ide'}}
+
 {{! excerpt}}
 
 The Studio view enables you to browse the list of your Studio customizations. You can see all the document types, schemas, content views, automation chains, etc, that you have configured in Nuxeo Studio.
@@ -63,8 +65,6 @@ The Studio view enables you to browse the list of your Studio customizations. Yo
 Double-clicking on any of these customizations opens Nuxeo Studio in a browser. It is not possible to edit Studio customizations from Nuxeo IDE.
 
 ![]({{file name='NxIDE_studio_view.png'}} ?w=650,border=true)
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 

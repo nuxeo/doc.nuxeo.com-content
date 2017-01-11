@@ -87,6 +87,8 @@ history:
         version: '1'
 
 ---
+{{multiexcerpt 'ide-replaced-by-generator-info' page='nuxeo-ide'}}
+
 {{! excerpt}}
 Nuxeo IDE enables you to create Nuxeo Packages for your Nuxeo project. A Nuxeo Package is the easiest way to distribute a plugin, as it contains all the bundles, libraries and runtime properties that would be required to make your new plugin work, all in one single ZIP file.
 {{! /excerpt}}
@@ -97,7 +99,7 @@ The whole Nuxeo Package structure and metadata are detailed on the page [Creatin
 
 {{#> callout type='warning' }}
 Please note that this functionality may not be fully compliant on Nuxeo IDE versions 1.2.1 to 1.2.3 included when using a Nuxeo Platform 5.8 SDK. For users using this configuration, an upgrade to Nuxeo IDE 1.2.4 is recommended.
-A workaround can also be found in the following JIRA ticket : [Allow marketplace package generation with Nuxeo Platform 5.8 / Maven 3](https://jira.nuxeo.com/browse/NXIDE-336)
+A workaround can also be found in the following JIRA ticket: [Allow marketplace package generation with Nuxeo Platform 5.8 / Maven 3](https://jira.nuxeo.com/browse/NXIDE-336)
 {{/callout}}
 
 **To create your Nuxeo Package in Nuxeo IDE:**

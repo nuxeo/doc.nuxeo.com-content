@@ -39,10 +39,12 @@ history:
         version: '1'
 
 ---
+{{multiexcerpt 'ide-replaced-by-generator-info' page='nuxeo-ide'}}
+
 In general of if you want to contribute to the Nuxeo Platform as a contributor, Nuxeo IDE provides the ability to set up all code templates inside your Eclipse.
 
 1.  Go to the Eclipse Preferences.
-2.  Select **Nuxeo** > **Contributors** option and click on **Settings Nuxeo Contributors settings**.&nbsp;
+2.  Select **Nuxeo** > **Contributors** option and click on **Settings Nuxeo Contributors settings**.
     ![]({{file name='Preferences _011.png'}} ?w=500,h=449,border=true)
 
     The Following files are installed to override your current Eclipse configuration:
