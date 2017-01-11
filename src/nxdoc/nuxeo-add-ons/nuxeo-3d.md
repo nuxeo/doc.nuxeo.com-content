@@ -142,10 +142,10 @@ The 3D document type is fully integrated in the Nuxeo Platform and is available 
 
 The supported 3D file formats are:
 
--  Collada (.dae)
+- Collada (.dae)
 - 3D Studio (.3ds)
 - FBX (.fbx)
--  Stanford (.ply)
+- Stanford (.ply)
 - Wavefront (.obj)
 - X3D Extensible 3D (.x3d)
 - Stl (.stl)
@@ -202,7 +202,7 @@ Each transmission format can be loaded and viewed directly on the 3D Preview and
 ### Schema
 
 *   `transmissionFormats`: Fast loading format created from the original model. These can configured to represent lower levels of detail of the original model. Stored as glTF files.
-*   `renderViews`: renditions of the model (2D renderings).
+*   `renderViews`: Renditions of the model (2D renderings).
 *   `info`: Geometric properties and metadata of the 3D model.
 
 ### Facets
@@ -214,7 +214,7 @@ Each transmission format can be loaded and viewed directly on the 3D Preview and
 
 ### Document Type
 
-*   `ThreeD`: default type in Nuxeo that handle 3D model files. It comes with the `ThreeD`, `Commentable`,  `Versionable` and `Publishable` facets.
+*   `ThreeD`: Default type in Nuxeo that handles 3D model files. It comes with the `ThreeD`, `Commentable`,  `Versionable` and `Publishable` facets.
 
 #### Listeners
 
