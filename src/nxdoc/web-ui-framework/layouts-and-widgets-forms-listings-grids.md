@@ -324,18 +324,15 @@ history:
         version: '1'
 
 ---
-<div class="row"><div class="column medium-8">{{! excerpt}}
 
+{{! excerpt}}
 Layouts and widgets have been originally designed to display forms, and have been improved to handle listings as well as summary pages. These configuration elements are used to generate page fragments from XML configurations contributed to [Nuxeo Runtime extension points]({{page page='runtime-and-component-model'}}).
-
 {{! /excerpt}}
 
 In this chapter we will see how to define layouts and associated widgets, and use them in XHTML pages.
 
 {{#> callout type='info' }}
-
 Layouts and Widgets can be configured using Studio: Check out the [Form Layouts]({{page space='studio' page='form-layouts'}}) documentation.
-
 {{/callout}}
 
 ## Key Concepts
@@ -367,20 +364,14 @@ A widget definition includes the mention of its type. Widget types make the asso
 * * *
 
 {{#> panel heading='Table of Content'}}
-
 The following pages explain how to work with layouts and widgets.
 
-*   [Layout and Widget Definitions]({{page space='NXDOC710' page='Layout and+Widget+Definitions'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Custom layouts and widgets can be contributed to the web layout service, using its extension points.</span>
-*   [Standard Layout Types]({{page space='NXDOC710' page='Standard Layout+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Some layout types have been extracted to ease up defining layouts.</span>
-*   [Standard Widget Types]({{page space='NXDOC710' page='Standard Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types has been defined for the most generic uses cases.</span>
-*   [Custom Layout and Widget Templates]({{page space='NXDOC710' page='Custom Layout+and+Widget+Templates'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Some templating features have been made available to make it easier to control the layouts and widgets rendering.</span>
-*   [Custom Widget Types]({{page space='NXDOC710' page='Custom Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Custom widget types can be added to the standard list thanks to another extension point on the web layout service.</span>
-*   [Layout and Widget Display]({{page space='NXDOC710' page='Layout and+Widget+Display'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Layouts can be displayed thanks to a series a JSF tags that will query the web layout service to get the layout definition and build it for a given mode.</span>
-*   [Generic Layout Usage]({{page space='NXDOC710' page='Generic Layout+Usage'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Layouts can be used with other kind of objects than documents.</span>
-*   [Layout & Widget How-To Index](/pages/viewpage.action?pageId=28475571)
-
-{{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
-
-[Check out the Layout Showcase demo.](http://showcase.nuxeo.com/layout)
-
-{{/panel}}</div></div>
+- [Layout and Widget Definitions]({{page space='NXDOC710' page='Layout and+Widget+Definitions'}}) Custom layouts and widgets can be contributed to the web layout service, using its extension points.
+- [Standard Layout Types]({{page space='NXDOC710' page='Standard Layout+Types'}}) Some layout types have been extracted to ease up defining layouts.
+- [Standard Widget Types]({{page space='NXDOC710' page='Standard Widget+Types'}})A series of widget types has been defined for the most generic uses cases.
+- [Custom Layout and Widget Templates]({{page space='NXDOC710' page='Custom Layout+and+Widget+Templates'}}) Some templating features have been made available to make it easier to control the layouts and widgets rendering.
+- [Custom Widget Types]({{page space='NXDOC710' page='Custom Widget+Types'}}) Custom widget types can be added to the standard list thanks to another extension point on the web layout service.
+- [Layout and Widget Display]({{page space='NXDOC710' page='Layout and+Widget+Display'}}) Layouts can be displayed thanks to a series a JSF tags that will query the web layout service to get the layout definition and build it for a given mode.
+- [Generic Layout Usage]({{page space='NXDOC710' page='Generic Layout+Usage'}}) Layouts can be used with other kind of objects than documents.
+- [Layout & Widget How-To Index](/pages/viewpage.action?pageId=28475571)
+{{/panel}}
