@@ -2,7 +2,7 @@
 title: REST API Web Adapters
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-01-11'
     status: ok
 labels:
     - lts2016-ok
@@ -120,135 +120,288 @@ history:
 ---
 ## Adapters and REST Resources
 
-WebEngine, the JAX-RS Server used to serve the REST API, has the concept of [WebAdapter]({{page page='webengine-jax-rs'}}) for DocumentModel. Logically the REST API leverages this concept to expose adapters on top of the Document REST end point.
+WebEngine, the JAX-RS Server used to serve the REST API, offers [WebAdapters]({{page page='webengine-jax-rs'}}) for the Document Model. The REST API leverages this concept to expose adapters on top of the Document REST endpoint.
 
-An adapter is a URL segment that starts with `@` and that transforms the input resource so as to return another resource. The idea is to have a URL pointing to a Document and use the adapter to convert the Document into something else before the result is returned. The general syntax is:
+A WebAdapter is a URL segment starting with `@` which transforms the input resource so as to return another resource. The idea is to have a URL pointing to a Document and use the adapter to convert the Document into something else before the result is returned. The general syntax is:
 
 ```
-/nuxeo/api/v1/id/{docId}/@adapter/parameters
+/nuxeo/api/v1/id/{docId}/@adapter/{parameters}
 
-/nuxeo/api/v1/path/{documentPath}/@adapter/parameters
+/nuxeo/api/v1/path/{documentPath}/@adapter/{parameters}
 ```
 
 {{#> callout type='note' }}
 
-The notion of Adapter precedes the concept of [Content Enricher]({{page page='content-enricher'}}). In some cases, some of the adapters presented here could be replaced by Content Enrichers.
+The notion of adapter precedes the concept of [Content Enricher]({{page page='content-enricher'}}). Some of the adapters presented here could be replaced by Content Enrichers.
 
 {{/callout}}
 
 ## Simple Document Adapters
 
-Several default adapters are provided by default.
+Default adapters provided by default.
 
-`acl`
+<table class="hover">
+  <tr>
+    <td class="small-2">**@acl**</td>
+    <td>Returns the ACLs of the target Document</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /nuxeo/api/v1/id/{docId}/@acl
+      ```
+    </td>
+  </tr>
+</table>
 
-* **Usage**: Returns the ACLs of the target Document.
-* **Sample URL**:
+<table class="hover">
+  <tr>
+    <td class="small-2">**@audit**</td>
+    <td>Returns audit trail records corresponding to the target Document</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /nuxeo/api/v1/id/{docId}/@audit
+      ```
+    </td>
+  </tr>
+</table>
 
-    ```
-    /nuxeo/api/v1/id/{docId}/@acl
-    ```
+<table class="hover">
+  <tr>
+    <td class="small-2">**@blob**</td>
+    <td>Returns the Blob corresponding to the Document attribute matching the XPath parameter</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /nuxeo/api/v1/id/{docId}/@blob/{xpath}
+      ```
+    </td>
+  </tr>
+</table>
 
-`audit`
+<table class="hover">
+  <tr>
+    <td class="small-2">**@children**</td>
+    <td>
+      Returns children of the target Document<br />
+      *Query parameters (optional) are by default:*<br />
+      `page`:`0`<br />
+      `pageSize`:`50`<br />
+      `maxResult`:`nolimit`
+    </td>
+  </tr>
+    <td></td>
+    <td>
+      ```
+      /nuxeo/api/v1/id/{docId}/@children
+      ```
+    </td>
+  </tr>
+</table>
 
-* **Usage**: Returns audit trails records corresponding to the target Document.
-* **Sample URL**:
+<table class="hover">
+  <tr>
+    <td class="small-2">**@convert**</td>
+    <td>
+      Returns the conversion of a blob<br />
+      *Query parameters (must use one):*<br />
+      `converter`<br />
+      `type`<br />
+      `format`
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /nuxeo/api/v1/id/{docId}/@convert?format=pdf
+      ```
+    </td>
+  </tr>
+</table>
 
-    ```
-    /nuxeo/api/v1/id/{docId}/@audit
-    ```
+<table class="hover">
+  <tr>
+    <td class="small-2">**@pp**</td>
+    <td>
+      Returns the result of the query corresponding to the named PageProvider. The target Document is used to provide the parameters of the PageProvider (*SearchDocumentModel*).
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /nuxeo/api/v1/id/{docId}/@pp/{pageProviderName}
+      ```
+    </td>
+  </tr>
+</table>
 
-`blob`
+<table class="hover">
+  <tr>
+    <td class="small-2">**@rendition**</td>
+    <td>Returns the renditions of a blob</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /nuxeo/api/v1/id/{docId}/@rendition/{renditionName}
+      ```
+    </td>
+  </tr>
+</table>
 
-* **Usage**: Returns the Blob corresponding to the Document attribute matching the XPath parameter.
-* **Sample URL**:
+<table class="hover">
+  <tr>
+    <td class="small-2">**@search**</td>
+    <td>
+      Returns paged results of the query (full-text or NXQL)<br />
+      *Query parameters (optional) are by default:*<br />
+      `orderBy`:`dc:title`<br />
+      `page`:`0`<br />
+      `pageSize`:`50`<br />
+      `maxResult`:`nolimit`
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /nuxeo/site/api/v1/path/{docId}/@search?fullText=nuxeo&orderBy=dc:title
 
-    ```
-    /nuxeo/api/v1/id/{docId}/@blob/{xpath}
-    ```
+       /nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?query=SELECT * FROM File
+      ```
+    </td>
+  </tr>
+</table>
 
-`children`
+<table class="hover">
+  <tr>
+    <td class="small-2">**@task**</td>
+    <td>Returns the task instance you have permission to see</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /nuxeo/api/v1/id/{docId}/@task
+      ```
+    </td>
+  </tr>
+</table>
 
-* **Usage**: Returns children of the target Document.
-    Query parameters are not mandatory and are by default:
-    * `page`: 0
-    * `pageSize`: 50
-    * `maxResult`: nolimit
+<table class="hover">
+  <tr>
+    <td class="small-2">**@workflow**</td>
+    <td>Returns workflow instances launched by current user</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /nuxeo/api/v1/id/{docId}/@workflow
+      ```
+    </td>
+  </tr>
+</table>
 
-* **Sample URL**:
+## Group Adapters
 
-    ```
-    /nuxeo/api/v1/id/{docId}/@children
-    ```
+Default adapters provided by default.
 
-`convert`
+<table class="hover">
+  <tr>
+    <td class="small-2">**@users**</td>
+    <td>Returns the member users of a group</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /nuxeo/api/v1/group/{groupId}/@users
+      ```
+    </td>
+  </tr>
+</table>
 
-* **Usage**: Returns the conversion of a blob.
-    Query parameters, you must use one of them:
-    * `converter`
-    * `type`
-    * `format`
-* **Sample URL**:
+<table class="hover">
+  <tr>
+    <td class="small-2">**@groups**</td>
+    <td>Returns the member groups of a group</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /nuxeo/api/v1/group/{groupId}/@groups
+      ```
+    </td>
+  </tr>
+</table>
 
-    ```
-    /nuxeo/api/v1/id/{docId}/@convert?format=pdf
-    ```
+## Custom Adapters
 
-`pp`
+You can contribute new WebAdapters using WebEngine.
 
-* **Usage**: Returns the result of the query corresponding to the named PageProvider.
-    The target Document is used to provide the parameters of the PageProvider (i.e. SearchDocumentModel).
-* **Sample URL**:
+Alternatively, use the `@bo` WebAdapter to leverage standard Nuxeo DocumentModelAdapters which you can define with the [adapter extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters).
 
-    ```
-    /nuxeo/api/v1/id/{docId}/@pp/{pageProviderName}
-    ```
+<table class="hover">
+  <tr>
+    <td class="small-2">**@bo**</td>
+    <td>Specify the custom adapter you wish to use</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /nuxeo/api/v1/id/{docId}/@bo/{documentAdapterName}
+      ```
+    </td>
+  </tr>
+</table>
 
-`rendition`
+Or use the `@op` adapter to access operations.
 
-* **Usage**: Returns the renditions of a blob.
-* **Sample URL**:
+<table class="hover">
+  <tr>
+    <td class="small-2">**@op**</td>
+    <td>Pipe document as input for an operation or automation chain</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /nuxeo/api/v1/id/{docId}/@op/{OperationName}
+      /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
+      ```
+    </td>
+  </tr>
+</table>
 
-    ```
-    /nuxeo/api/v1/id/{docId}/@rendition/{renditionName}
-    ```
+## Piping
 
-`search`
+Adapters can be chained: the result of one adapter becomes the input of the next one.
 
-* **Usage**: Returns paged results of the query.
-    Query can be a full-text query or a NXQL query.
-    Query parameters are not mandatory and are by default:
-    * `orderBy`: [dc:title](http://dctitle/)
-    * `page`: 0
-    * `pageSize`: 50
-    * `maxResult`: nolimit
-* **Sample URL**:
+Here is an example :
 
-    ```
-    /nuxeo/site/api/v1/path/{docId}/@search?fullText=nuxeo&orderBy=dc:title
+{{#> panel type='code' heading='Sample URL'}}
 
-    /nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?query=SELECT * FROM File
-    ```
+```
+/nuxeo/api/v1/id/{docId}/@blob/file:content/@op/Blob.ToPDF
+```
 
-`task`
+{{/panel}}
 
-* **Usage**: Returns task instance you have permission to see.
-* **Sample URL**:
+## Examples
 
-    ```
-    /nuxeo/api/v1/id/{docId}/@task
-    ```
-
-`workflow`
-
-* **Usage**: Returns workflow instances launched by current user.
-* **Sample URL**:
-
-    ```
-    /nuxeo/api/v1/id/{docId}/@workflow
-    ```
-
-### Getting the Children of a Given Document - @children
+### Getting the Children of a Given Document - `@children`
 
 {{! multiexcerpt name='restapi-adapters-children'}}{{#> panel type='code' heading='Example'}}
 
@@ -298,7 +451,7 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@children?currentPageIndex=0&pagesize
 
 {{/panel}}
 
-### Searching Documents - @search
+### Searching Documents - `@search`
 
 **Full-Text Search**
 
@@ -453,37 +606,7 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?query=SELECT * FROM File
 
 {{/panel}}
 
-## Group Adapters
 
-Several default adapters are provided by default.
-
-`users`
-
-* **Usage**: Returns the member users of a group.
-* **Sample URL**:
-
-    ```
-    /nuxeo/api/v1/group/{groupId}/@users
-    ```
-
-`groups`
-
-* **Usage**: Returns the member groups of a group.
-* **Sample URL**:
-
-    ```
-    /nuxeo/api/v1/group/{groupId}/@groups
-    ```
-
-## Custom Adapters
-
-You can of course contribute new WebAdapters using WebEngine.
-
-An other alternative is to use the `@bo` WebAdapter to leverage standard Nuxeo DocumentModelAdapters that can be defined using the [adapter extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters).
-
-```
-/nuxeo/api/v1/id/{docId}/@bo/{documentAdapterName}
-```
 
 ### Getting a Business Object
 
@@ -509,7 +632,7 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
 
 ### Updating a Business Object
 
-To update a business object, you just have to send a `PUT` request one the business object resource with its content data like this:
+To update a business object, send a `PUT` request on the business object resource with its content data:
 
 {{#> panel type='code' heading='PUT Request Body'}}
 
@@ -530,7 +653,7 @@ PUT /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
 
 ### Creating a Business Object
 
-And then to create a business object, you have to issue a `POST` on the object resource plus the name of the newly created document, like this:
+To create a business object, issue a `POST` on the object resource with the name of the newly created document:
 
 {{#> panel type='code' heading='POST Request Body'}}
 
@@ -549,19 +672,11 @@ POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter/{newName}
 
 {{/panel}}
 
-## Bridging Operations and Automation Chains
+### Bridging Operations and Automation Chains
 
 {{! multiexcerpt name='restapi-adapters-op'}}
 
-The `@op` adapter can be used to pipe the identified Document as input of an operation.
-
-{{#> panel type='code' heading='Sample URL'}}
-
-```
-/nuxeo/api/v1/id/{docId}/@op/{OperationName}
-```
-
-{{/panel}}{{#> panel type='code' heading='Sample POST Request Body'}}
+{{#> panel type='code' heading='Sample POST Request Body'}}
 
 ```
 POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/{myOperation}
@@ -576,15 +691,7 @@ POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/{myOperation}
 
 The response will depend on the result of the automation chain.
 
-You can also use it to run a chain by prefixing the chain name by `Chain.` , for instance:
-
-{{#> panel type='code' heading='Sample URL'}}
-
-```
-/nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
-```
-
-{{/panel}}{{#> panel type='code' heading='Sample POST Request Body on a Document'}}
+{{#> panel type='code' heading='Sample POST Request Body on a Document'}}
 
 ```
 POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
@@ -608,23 +715,9 @@ POST /nuxeo/site/api/v1/path/{pathOfTheFolder}/@children/@op/Chain.myChain
 
 {{/panel}}
 
-Pay attention to the fact that document list adapters are paged. That means that the chain will run on all document of the current page.
+Pay attention to the fact that document list adapters are paged. That means that the chain will run on all documents of the current page.
 
 {{! /multiexcerpt}}
-
-## Piping
-
-Adapters can be chained: the result of one adapter becomes the input of the next one.
-
-Here is an example :
-
-{{#> panel type='code' heading='Sample URL'}}
-
-```
-/nuxeo/api/v1/id/{docId}/@blob/file:content/@op/Blob.ToPDF
-```
-
-{{/panel}}
 
 * * *
 
