@@ -284,6 +284,11 @@ Complex properties (mono and multi-valued) need to be JSON formatted like (see t
 
 You can use the attached file&nbsp;[]({{file name='docs_ok.csv' space='nxdoc' page='nuxeo-csv'}})&nbsp;to better understand the syntax.
 
+{{#> callout type='note'}}
+Dates inside a complex type use W3C format and not MM/dd/yyyy as for simple type dates. 
+More information on the [W3C documentation](https://www.w3.org/TR/NOTE-datetime).
+{{/callout}}
+
 ### Setting Life Cycle State When Creating Documents
 
 It is possible to set the life cycle state when the document is created through Nuxeo CSV, using the&nbsp;`ecm:currentLifeCycleState`&nbsp;property. This property is ignored when updating documents.
@@ -299,13 +304,13 @@ Note that the event raised by this CSV import is a **creation event**, not an im
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})
+- [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Import Documentation'}}
 
-*   [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
-*   [Nuxeo Bulk Document Importer]({{page page='nuxeo-bulk-document-importer'}})
-*   [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
-*   [How to Upload a File in Nuxeo Platform Using REST API Batch Processing Endpoint]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}})
+- [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
+- [Nuxeo Bulk Document Importer]({{page page='nuxeo-bulk-document-importer'}})
+- [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
+- [How to Upload a File in Nuxeo Platform Using REST API Batch Processing Endpoint]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}})
 
 {{/panel}}</div></div>
