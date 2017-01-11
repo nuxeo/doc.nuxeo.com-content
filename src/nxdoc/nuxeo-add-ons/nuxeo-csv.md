@@ -318,8 +318,10 @@ Complex properties (mono and multi-valued) need to be JSON formatted like (see t
 
 You can use the attached file&nbsp;[]({{file name='docs_ok.csv'}})&nbsp;to better understand the syntax.
 
-Please note dates inside a complex type use W3C format and not MM/dd/yyyy as for simple type dates.
-This can be seen [here][https://www.w3.org/TR/NOTE-datetime]
+{{#> callout type='note'}}
+Dates inside a complex type use W3C format and not MM/dd/yyyy as for simple type dates.
+More information on the [W3C documentation](https://www.w3.org/TR/NOTE-datetime)
+{{/callout}}
 
 ### Setting Life Cycle State When Creating Documents
 
