@@ -2,10 +2,10 @@
 title: Nuxeo Platform Feature Table
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-11'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '19235677'
     ajs-parent-page-title: Quick Start Series
@@ -261,7 +261,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
 <td></td>
 <td>&#10003;</td>
-<td>&#10003;</td>
+<td></td>
 <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
 </tr>
 <tr>
@@ -304,7 +304,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
 <td></td>
 <td>&#10003;</td>
-<td>&#10003;</td>
+<td></td>
 <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
 </tr>
 <tr>
@@ -337,7 +337,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
 <td></td>
 <td>&#10003;</td>
-<td>&#10003;</td>
+<td></td>
 <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
 </tr>
 <tr>
@@ -353,7 +353,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
 <td></td>
 <td>&#10003;</td>
-<td>&#10003;</td>
+<td></td>
 <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
 </tr>
 <tr>
@@ -446,9 +446,9 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <tr>
 <td colspan="1">Cloud files creation</td>
 <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
-<td>?</td>
+<td></td>
 <td>&#10003;</td>
-<td>&#10003;</td>
+<td></td>
 <td colspan="1">Box, Dropbox, Google Drive, Microsoft OneDrive<br/>
 [Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})
 </td>
@@ -541,9 +541,9 @@ Default distribution<br/>
 <td colspan="1">[Copying and Moving Documents]({{page space='userdoc' page='editing-content'}})</td>
 </tr>
 <tr>
-<td colspan="1">Form</td>
+<td colspan="1">Edit Form</td>
 <td colspan="1">Default distribution</td>
-<td></td>
+<td>N/A</td>
 <td>&#10003;</td>
 <td>&#10003;</td>
 <td colspan="1">&nbsp;</td>
@@ -551,7 +551,7 @@ Default distribution<br/>
 <tr>
 <td colspan="1">Lock /Unlock</td>
 <td colspan="1">Default distribution</td>
-<td></td>
+<td>&#10003;</td>
 <td>&#10003;</td>
 <td>&#10003;</td>
 <td colspan="1">&nbsp;</td>
@@ -611,7 +611,7 @@ Default distribution<br/>
 <tr>
 <td colspan="1">Edit in native application from web application</td>
 <td colspan="1">[Nuxeo Drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive)</td>
-<td></td>
+<td>N/A</td>
 <td>&#10003;</td>
 <td>&#10003;</td>
 <td colspan="1">
@@ -637,9 +637,9 @@ Default distribution<br/>
 <tr>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">WebDav</td>
-<td>?</td>
 <td>&#10003;</td>
-<td>?</td>
+<td>&#10003;</td>
+<td>&#10003;</td>
 <td colspan="1">
 [User documentation]({{page space='userdoc' page='working-with-webdav'}})<br/>
 [Developer documentation]({{page page='webdav'}})
@@ -666,8 +666,8 @@ Default distribution<br/>
 </tr>
 <tr>
 <td colspan="1">Approval workflow</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
+<td colspan="1">Nuxeo JSF UI</td>
+<td></td>
 <td>&#10003;</td>
 <td></td>
 <td colspan="1">
@@ -678,8 +678,8 @@ Default distribution<br/>
 </tr>
 <tr>
 <td colspan="1">Parallel workflow</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
+<td colspan="1">Nuxeo JSF UI</td>
+<td></td>
 <td>&#10003;</td>
 <td></td>
 <td colspan="1">
@@ -709,6 +709,12 @@ Default distribution<br/>
 <td colspan="1"><br/>
 {{multiexcerpt 'DeprecatedAddon_8.10' page='generic-multi-excerpts'}}</td>
 </tr>
+<tr>
+<td colspan="1">Task dashboard</td>
+<td colspan="1"></td>
+<td>N/A</td>
+<td>&#10003;</td>
+<td>&#10003;</td>
 </tbody>
 </table>
 </div>
@@ -816,6 +822,106 @@ Default distribution<br/>
 {{multiexcerpt 'DeprecatedAddon_8.10' page='generic-multi-excerpts'}}
 </td>
 </tr>
+<tr>
+<td colspan="1">Quick access to tasks</td>
+<td colspan="1">[Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui)<br/>
+[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
+<td></td>
+<td>&#10003;</td>
+<td>&#10003;</td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1">Quick access to recently viewed documents</td>
+<td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
+<td></td>
+<td></td>
+<td>&#10003;</td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1">Quick access to expired documents</td>
+<td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
+<td></td>
+<td></td>
+<td>&#10003;</td>
+<td colspan="1"></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+## Query / Search
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th rowspan="2">Feature</th>
+<th rowspan="2">Comes with</th>
+<th colspan="3">UI possibilities</th>
+<th rowspan="2">Comment</th>
+</tr>
+<tr>
+<th>No UI</th>
+<th>JSF UI</th>
+<th>Web UI</th>
+</tr>
+<tr>
+<td colspan="1">Advanced search</td>
+<td colspan="1">&nbsp;</td>
+<td>&#10003;</td>
+<td>&#10003;</td>
+<td>&#10003;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">Elasticsearch</td>
+<td colspan="1">Default distribution</td>
+<td>&#10003;</td>
+<td>&#10003;</td>
+<td>&#10003;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">Faceted search</td>
+<td colspan="1">Default distribution</td>
+<td></td>
+<td>&#10003;</td>
+<td>&#10003;</td>
+<td colspan="1">The Search tab default form (Elasticsearch) replaced the old Faceted search package.</td>
+</tr>
+<tr>
+<td colspan="1">Full-text search</td>
+<td colspan="1">Default distribution</td>
+<td>&#10003;</td>
+<td>&#10003;</td>
+<td>&#10003;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">Asset-dedicated search</td>
+<td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
+<td></td>
+<td></td>
+<td>&#10003;</td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1">Quick search</td>
+<td colspan="1">Default distribution</td>
+<td>N/A</td>
+<td>&#10003;</td>
+<td>&#10003;</td>
+<td colspan="1">Comes with suggestion and Elasticsearch by default.</td>
+</tr>
+<tr>
+<td colspan="1">Quick search with suggestion</td>
+<td colspan="1">Default distribution</td>
+<td>N/A</td>
+<td>&#10003;</td>
+<td>&#10003;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -857,7 +963,7 @@ Default distribution<br/>
 <tr>
 <td colspan="1">User invitations</td>
 <td colspan="1">Default distribution</td>
-<td>?</td>
+<td></td>
 <td>&#10003;</td>
 <td>&#10003;</td>
 <td colspan="1">Also available as an independent Nuxeo Package</td>
@@ -900,10 +1006,45 @@ Default distribution<br/>
 <tr>
 <td colspan="1">Share with external users</td>
 <td colspan="1">Default distribution</td>
-<td>?</td>
+<td>&#10003;</td>
 <td>&#10003;</td>
 <td>&#10003;</td>
 <td colspan="1">[Permissions user documentation]({{page space='userdoc' page='managing-permissions'}})</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+## Audit
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th rowspan="2">Feature</th>
+<th rowspan="2">Comes with</th>
+<th colspan="3">UI possibilities</th>
+<th rowspan="2">Comment</th>
+</tr>
+<tr>
+<th>No UI</th>
+<th>JSF UI</th>
+<th>Web UI</th>
+</tr>
+<tr>
+<td colspan="1">History</td>
+<td colspan="1">Default distribution</td>
+<td>&#10003;</td>
+<td>&#10003;</td>
+<td>&#10003;</td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1">Activity feed</td>
+<td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
+<td></td>
+<td></td>
+<td>&#10003;</td>
+<td colspan="1"></td>
 </tr>
 </tbody>
 </table>
@@ -1113,7 +1254,7 @@ Default distribution<br/>
 <tr>
 <td colspan="1">User profile</td>
 <td colspan="1">Default distribution</td>
-<td>?</td>
+<td>&#10003;</td>
 <td>&#10003;</td>
 <td>&#10003;</td>
 <td colspan="1">&nbsp;</td>
@@ -1122,72 +1263,6 @@ Default distribution<br/>
 </table>
 </div>
 
-## Query / Search
-<div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
-</tr>
-<tr>
-<th>No UI</th>
-<th>JSF UI</th>
-<th>Web UI</th>
-</tr>
-<tr>
-<td colspan="1">Advanced search</td>
-<td colspan="1">&nbsp;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="1">Elasticsearch</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="1">Faceted search</td>
-<td colspan="1">Default distribution</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">The Search tab default form (Elasticsearch) replaced the old Faceted search package.</td>
-</tr>
-<tr>
-<td colspan="1">Full text search</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="1">Quick search</td>
-<td colspan="1">Default distribution</td>
-<td>N/A</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">Comes with suggestion and Elasticsearch by default.</td>
-</tr>
-<tr>
-<td colspan="1">Quick search with suggestion</td>
-<td colspan="1">Default distribution</td>
-<td>N/A</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-</tbody>
-</table>
-</div>
 
 ## Authentication
 <div class="table-scroll">
@@ -1209,7 +1284,7 @@ Default distribution<br/>
 <td colspan="1">[CAS2 Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication)</td>
 <td>&#10003;</td>
 <td>&#10003;</td>
-<td>?</td>
+<td>&#10003;</td>
 <td colspan="1">[CAS2 Authentication documentation]({{page page='using-cas2-authentication'}})</td>
 </tr>
 <tr>
@@ -1217,7 +1292,7 @@ Default distribution<br/>
 <td colspan="1">[Kerberos Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/kerberos-authentication)</td>
 <td>&#10003;</td>
 <td>&#10003;</td>
-<td>?</td>
+<td>&#10003;</td>
 <td colspan="1">[Kerberos Authentication documentation]({{page page='kerberos-authentication'}})</td>
 </tr>
 <tr>
@@ -1233,7 +1308,7 @@ Default distribution<br/>
 <td colspan="1">[SAML 2.0 Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication)</td>
 <td>&#10003;</td>
 <td>&#10003;</td>
-<td>?</td>
+<td>&#10003;</td>
 <td colspan="1">[SAML 2.0 Authentication documentation]({{page page='saml-20-authentication'}})</td>
 </tr>
 <tr>
@@ -1244,7 +1319,7 @@ Default distribution<br/>
 </td>
 <td>&#10003;</td>
 <td>&#10003;</td>
-<td>?</td>
+<td>&#10003;</td>
 <td colspan="1">
 [Shibboleth Authentication admin documentation]({{page page='shibboleth-authentication'}})<br/>
 [Shibboleth Invitation Addon documentation]({{page page='nuxeo-shibboleth-invitation'}})
@@ -1272,7 +1347,7 @@ Default distribution<br/>
 <tr>
 <td colspan="1">Monitoring</td>
 <td colspan="1">Default distribution, [Nuxeo Datadog reporter](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-datadog-reporter)</td>
-<td>?</td>
+<td></td>
 <td>&#10003;</td>
 <td></td>
 <td colspan="1">Some monitoring features are available by default in the Admin tab of the Nuxeo Platform. You can complete these features by using addons, such as Nuxeo Datadog reporter.<br/>
