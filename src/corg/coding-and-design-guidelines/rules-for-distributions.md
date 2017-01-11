@@ -231,6 +231,8 @@ Since Nuxeo 5.4.3, Nuxeo IDE can use a distribution as a SDK provided the follow
 *   Optionally, there may be a "`sdk/tests`" directory at root of the distribution containing the test artifacts.
 *   Optionally, there may be a "`sdk/sources`" directory at root of the distribution containing the sources artifacts. Source artifacts will be downloaded for released distributions only.
 
+{{multiexcerpt 'ide-replaced-by-generator-info' space='idedoc' page='nuxeo-ide'}}
+
 Here are code snippets for assemblies (require nuxeo-distribution-tools 1.10.2 or, since Nuxeo 5.9.2, ant-assembly-maven-plugin2.0); new lines start with "+":
 
 {{#> panel type='code' heading='Generate artifacts-coreserver.properties and test-artifacts-coreserver.properties files in nuxeo-distribution-coreserver'}}

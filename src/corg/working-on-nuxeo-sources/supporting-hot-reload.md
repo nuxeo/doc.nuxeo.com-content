@@ -106,7 +106,7 @@ Hot reload involves a lot of layers, each one handling different kinds of caches
 
 Sometimes hot reload needs to be very smooth, when installing Studio packages from the Admin Center for instance. In these cases, the whole application does not need to be reloaded, and the current user view needs to keep its context (authentication, current page, current document, etc...)
 
-In other cases, when working with the Nuxeo IDE for instance, the application needs to be reloaded completely to take into account changes in Java code, and the current context cannot always be restored to its previous state.
+In other cases the application needs to be reloaded completely to take into account changes in Java code, and the current context cannot always be restored to its previous state.
 
 ## Setting up the Dev Mode
 
@@ -284,7 +284,7 @@ Check out Seam components named [seamReloadContext](https://github.com/nuxeo/nux
 
 On Nuxeo Platform 5.8, WebEngine class hot reloading is not supported. However, you can force cache flush and reset the WebEngine modules from the URL `http://yournuxeosite:8080/nuxeo/site/admin/engine/reload.` However it doesn't flush the already loaded classes.
 
-Using Nuxeo IDE enables you to benefit from hot reload for both&nbsp;WebEngine resources and classes.
+Using [Nuxeo IDE]({{page version='' space='idedoc' page='nuxeo-ide'}}) enables you to benefit from hot reload for both WebEngine resources and classes.
 
 ## Hot reloading Seam Components
 
@@ -296,7 +296,7 @@ To activate Seam Hot reload you need to:
     Since 5.6, setting the property "org.nuxeo.seam.debug" to value "true", in the `bin/nuxeo.conf` file is equivalent.
 2.  Install the suitable seam debug library for your version of Nuxeo into the `nxserver/bundles/` folder. The JAR is named "nuxeo-platform-seam-debug-5.5.jar" for version 5.5\. You can use our [Maven repository](https://maven.nuxeo.org/nexus/index.html#nexus-search;gav~~jboss-seam-debug~~~) for selecting and downloading the JAR. This will place the JBoss Seam library into folder `nxserver/nuxeo.war/WEB-INF/lib` at startup and activate Seam debug features on the application.
 
-If you're using the Nuxeo IDE, these settings are not needed because they're installed by default, and the debug JAR is included in the SDK.
+If you're using Nuxeo IDE, these settings are not needed because they're installed by default, and the debug JAR is included in the SDK.
 
 ### Selecting the Seam Components That Can Be Hot Reloaded
 

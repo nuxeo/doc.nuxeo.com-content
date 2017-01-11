@@ -104,8 +104,6 @@ To use a datasource from a unit test, you need to set up the datasource from the
 
 The `nuxeo-runtime-datasource` bundle provides some framework for you to register datasource in JNDI through Nuxeo contributions instead of relying on a container like Tomcat to do it for you.
 
-&nbsp;
-
 ## Depending on Nuxeo-Runtime-Datasource and a Few Others
 
 In your POM, add dependencies to:
@@ -117,7 +115,7 @@ In your POM, add dependencies to:
 
 {{#> callout type='tip' }}
 
-Use Nuxeo IDE "Synchronize POM" feature to properly update your POM with all required dependencies, without relying on uncertain transitive dependency.
+Use [Nuxeo IDE "Synchronize POM" feature]({{page version='' space='idedoc' page='managing-project-dependencies'}}) to properly update your POM with all required dependencies, without relying on uncertain transitive dependency.
 
 {{/callout}}
 
@@ -125,7 +123,7 @@ Use Nuxeo IDE "Synchronize POM" feature to properly update your POM with all req
 
 You first need to define your datasource. For instance in the file `OSGI-INF/datasource-contrib.xml` add:
 
-```
+```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.project.sample.datasource.test">
   <extension target="org.nuxeo.runtime.datasource" point="datasources">
