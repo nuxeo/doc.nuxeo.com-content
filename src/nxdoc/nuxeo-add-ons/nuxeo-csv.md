@@ -318,6 +318,9 @@ Complex properties (mono and multi-valued) need to be JSON formatted like (see t
 
 You can use the attached file&nbsp;[]({{file name='docs_ok.csv'}})&nbsp;to better understand the syntax.
 
+Please note dates inside a complex type use W3C format and not MM/dd/yyyy as for simple type dates.
+This can be seen [here][https://www.w3.org/TR/NOTE-datetime]
+
 ### Setting Life Cycle State When Creating Documents
 
 It is possible to set the life cycle state when the document is created through Nuxeo CSV, using the&nbsp;`ecm:currentLifeCycleState`&nbsp;property. This property is ignored when updating documents.
