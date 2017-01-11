@@ -74,8 +74,7 @@ In order to make your bundle append additional label translations, you need to c
 │                   └── ui
 │                       ├── i18n
 │                       │   ├── messages-fr.json
-│                       │   ├── messages.json
-│                       │   └── messages-us.json
+│                       │   └── messages.json
 ```
 where the `deployment-fragment.xml` has to call the append directive:
 
@@ -100,8 +99,6 @@ where the `deployment-fragment.xml` has to call the append directive:
     <!-- append the translations -->
     <append from="${bundle.fileName}.tmp/web/nuxeo.war/ui/i18n/messages.json"
       to="nuxeo.war/ui/i18n/messages.json" />
-    <append from="${bundle.fileName}.tmp/web/nuxeo.war/ui/i18n/messages-eu.json"
-      to="nuxeo.war/ui/i18n/messages-eu.json" />
     <append from="${bundle.fileName}.tmp/web/nuxeo.war/ui/i18n/messages-fr.json"
       to="nuxeo.war/ui/i18n/messages-fr.json" />
 
