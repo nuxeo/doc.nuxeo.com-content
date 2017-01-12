@@ -373,9 +373,9 @@ Picture
 
 Drag and drop is based on the HTML 5 standard and is available on all browsers that support the HTML 5 Drag and drop, without extension. Basically, this includes all browsers supported by the Nuxeo Platform:
 
-{{{multiexcerpt 'supported-browsers' page='NXDOC:Compatibility Matrix'}}}
+{{{multiexcerpt 'supported-browsers' page='nxdoc/compatibility-matrix'}}}
 
-As stated above, HTML5 grad & drop is currently a limitation of the Edge browser.
+As stated above, HTML5 drag & drop is currently a limitation of the Edge browser.
 
 You can use drag and drop to easily import content into a workspace or just to create one document at a time. Two types of import are available:
 
