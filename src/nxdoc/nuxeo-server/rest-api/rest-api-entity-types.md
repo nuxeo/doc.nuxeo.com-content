@@ -665,7 +665,7 @@ In the example below, we'll use the task we got from the GET request above whose
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in developer documentation'}}
 
 - [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
-- [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}})
+- [REST API Web Adapters]({{page page='rest-api-web-adapters'}})
 - [JSON Marshalling]({{page page='json-marshalling'}})
 
 {{/panel}}</div><div class="column medium-6">

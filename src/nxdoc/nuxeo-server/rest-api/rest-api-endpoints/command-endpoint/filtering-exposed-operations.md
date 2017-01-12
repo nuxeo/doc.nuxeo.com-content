@@ -197,7 +197,7 @@ Here is the complete list of attributes and elements you can use in the extensio
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [REST API]({{page page='rest-api'}})
-- [Command Endpoint]({{page page='command-endpoint'}})
+- [Command Resource Endpoint]({{page page='command-endpoint'}})
 - [Operations Index]({{page page='operations-index'}})
 
 {{/panel}}</div><div class="column medium-6">

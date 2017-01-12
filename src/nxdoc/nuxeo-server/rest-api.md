@@ -554,8 +554,8 @@ Nuxeo provides a complete API accessible via HTTP/HTTPS. This API is the best wa
 The Nuxeo REST API offers several additional features compared to a standard REST API:
 
 *   the ability to pipe command calls on a resource
-*   the use of [Content enrichers]({{page page='content-enricher'}}) in request headers which allow you to request more information with the returned resources (for example, receiving all of a document's children in addition to the document itself)
-*   the use of [Web Adapters]({{page page='web-adapters-for-the-rest-api'}}) which transform the resources returned (for example, getting all the tasks of a document, or its related documents)
+*   the use of [Content enrichers]({{page page='content-enrichers'}}) in request headers which allow you to request more information with the returned resources (for example, receiving all of a document's children in addition to the document itself)
+*   the use of [Web Adapters]({{page page='rest-api-web-adapters'}}) which transform the resources returned (for example, getting all the tasks of a document, or its related documents)
 
 ## Learn more
 

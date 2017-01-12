@@ -282,7 +282,7 @@ Returns a 201 *CREATED* status code with the following JSON data:
 {"batchId": batchId, "fileIdx": fileIdx, "uploadType": "normal", "uploadedSize": xxx}
 ```
 
-The value of the `uploadType` field is `normal` by default, it can be `chunked` if the file was [uploaded in chunks](#uploading-a-file-by-chunks).
+The value of the `uploadType` field is `normal` by default, it can be `chunked` if the file was [uploaded in chunks](#uploading-a-file-in-chunks).
 
 
 {{#> callout type='info' heading='About the file storage implementation'}}
@@ -526,4 +526,4 @@ doc.setPropertyValue("file:content", batchUpload.getBatchBlob());
 ## Learn More
 
 *   Follow the course [Importing Files with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/importing-files-rest-api) at [Nuxeo University](https://university.nuxeo.io).
-*   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='use-nuxeo-api-playground-to-discover-the-api'}}) to configure your local instance).
+*   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
