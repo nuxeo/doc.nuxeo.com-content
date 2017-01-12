@@ -107,7 +107,7 @@ Usually the most critical points to handle are:
 
 For similar reasons, inside a large company you can easily have several projects that would benefit to share the same common ground. Typically if you have several Case Management projects for different departments or several DAM projects for different countries.
 
-Even if these are separated projects with potentially different life cycles, it can make sense to define a kind of "group wide" common ground:
+Even if these are separated projects with potentially different lifecycles, it can make sense to define a kind of "group wide" common ground:
 
 *   To avoid redoing the same customization several times
     *   Authentication and security requirements
@@ -222,7 +222,7 @@ With the container based approach all the problems of a single application with 
     *   At data level
     *   At runtime level
     *   At resource level
-*   Each project can have its own life cycle for upgrades
+*   Each project can have its own lifecycle for upgrades
 *   Project can be as custom as needed
 
 That's because we are convinced that this approach has much more value that "standard multi-tenants" that we started investing on the container based approach.

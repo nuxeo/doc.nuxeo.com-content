@@ -152,7 +152,7 @@ View online demo: [http://showcase.nuxeo.com/nuxeo/layoutDemo/listing_versionWid
 
 Id: `listing_lifecycle`
 
-This widget type displays the document life cycle state.
+This widget type displays the document lifecycle state.
 
 View online demo: [http://showcase.nuxeo.com/nuxeo/layoutDemo/listing_lifecycleWidget](http://showcase.nuxeo.com/nuxeo/layoutDemo/listing_lifecycleWidget)
 

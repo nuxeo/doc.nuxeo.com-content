@@ -105,7 +105,7 @@ Let's go through the important steps when implementing a case management project
 
 ## Defining Your Case Model
 
-1.  From Nuxeo Studio, design your data model and structure, using document type, schemas and content-template features. A case has a specific type, and specific substructure.&nbsp;
+1.  From Nuxeo Studio, design your data model and structure, using document type, schemas and content-template features. A case has a specific type, and specific substructure.
     ![]({{file name='case-default-structure.png'}} ?w=200,border=true,thumbnail=true)
 2.  Also define a default form for your case and the sub documents. At the beginning, just consider filling all the information at once. You will refine later the various forms and views you need depending on the role of the user.
     ![]({{file name='case-default-form.png'}} ?w=500,border=true)
@@ -113,9 +113,9 @@ Let's go through the important steps when implementing a case management project
     *   Store a foreign key on the case and display the information by doing live queries;
     *   Fetch the data at creation of your case, and provide a way to synchronize it all the way long.
 
-## Defining the Case Life Cycle
+## Defining the Case Lifecycle
 
-1.  Define a base life cycle for your case and implement it using the [life cycle editor in Studio]({{page space='studio' page='life-cycle'}}).
+1.  Define a base lifecycle for your case and implement it using the [lifecycle editor in Studio]({{page space='studio' page='life-cycle'}}).
     ![]({{file name='case-lifecycle.png'}} ?w=600,border=true)
 2.  List the roles of your case management project, make the analysis of who should work when on your case and on which data. Each main phase of your case processing may be the object of a dedicated workflow model design. Or a simple task. You must define how you want to orchestrate all of the phases:
     *   Either by a global workflow that may be call subworkflows
@@ -128,7 +128,7 @@ Now that you start having a pretty good idea of which user should fill which inf
 
 *   By spreading all your business data among different tabs for making them simpler, and by organizing the main case view in a nice way. You can use for this the forms and content views features, as well as the tab designer feature, in Studio.
     ![]({{file name='tabular-form.png'}} ?w=600,border=true) ![]({{file name='incident-valuation.png'}} ?w=600,border=true)
-*   By providing working queues, that help organize the case worker job. A working queue is a mechanism for displaying cases depending on some of their criteria (nature, life cycle, customer id, ...)
+*   By providing working queues, that help organize the case worker job. A working queue is a mechanism for displaying cases depending on some of their criteria (nature, lifecycle, customer id, ...)
     ![]({{file name='cases-queues.png'}} ?w=600,border=true)
 
 ## Adding Automation on Content Processing

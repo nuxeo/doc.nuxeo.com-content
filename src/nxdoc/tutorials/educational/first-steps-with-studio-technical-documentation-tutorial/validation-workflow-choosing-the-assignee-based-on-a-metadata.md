@@ -321,13 +321,13 @@ Of course, the responsible can change over time so you do not want to hardcode t
     {{/callout}}
 10.  Click on **OK**, save the node properties, save the workflow and redeploy your Studio project to your server.
 11.  On your server, as an Administrator, go to the **Admin Center** > **Users and Groups**, and create the three following users: Steve, Julie and Bill. Make sure you spell them exactly like you did in **natMapping** vocabulary.
-12.  Go to a&nbsp;**DocumentationItem** that has a nature and launch the workflow, it should be automatically assigned to the correct user.
+12.  Go to a **DocumentationItem** that has a nature and launch the workflow, it should be automatically assigned to the correct user.
 
 We now have a workflow that self assigns to the right user but it still does nothing in the end: our document is still not validated. This is the next step.
 
 ## Triggering Validation Logic with the Workflow
 
-We have seen in&nbsp;[Document Locking Right after Its Creation]({{page page='document-locking-right-after-its-creation'}}) that business logic in the Nuxeo Platform is created with Automation Chains that are then triggered through different means (event handlers, user actions, APIs...). The exact same logic applies to workflows. Automation Chains can be triggered at different moment of the workflow :&nbsp;
+We have seen in [Document Locking Right after Its Creation]({{page page='document-locking-right-after-its-creation'}}) that business logic in the Nuxeo Platform is created with Automation Chains that are then triggered through different means (event handlers, user actions, APIs...). The exact same logic applies to workflows. Automation Chains can be triggered at different moment of the workflow :
 
 *   When entering a node,
 *   When exiting a node,
@@ -348,43 +348,43 @@ So in the end, let's bind our validation logic to the **approve** transition.
     ![]({{file name='Validation-tuto_-_Workflow_Definition_-_tuto_Technical_Documentation.png'}} ?w=500,h=354,border=true)
 3.  Choose a name so that will know this is the validation chain of the validation workflow, something like `ValWf_ValidateDoc`.
     You are redirected to the Automation Chain Screen where you can select the operation you need.
-    In our case, we would like the document to be in a&nbsp;**valid&nbsp;**state. We have an operation that is called "Document > Follow Transition" that enables to change the state of the document depending of its life cycle. However, we did not set a specific life cycle for our document yet. So we should start with that.
+    In our case, we would like the document to be in a **valid** state. We have an operation that is called "Document > Follow Transition" that enables to change the state of the document depending of its lifecycle. However, we did not set a specific lifecycle for our document yet. So we should start with that.
 4.  Save your empty chain.
 
-#### Setting the Life Cycle
+#### Setting the Lifecycle
 
-{{#> callout type='info' heading='Document Life Cycle'}}
+{{#> callout type='info' heading='Document Lifecycle'}}
 
-In the Nuxeo Platform, all document types have a life cycle that enables to describe the state of the document. This not linked directly to the workflow. You can have workflows that does not change the state of the document, or you can also change the state of a document outside of a workflow. You change the state of the document by using the Automation operation called **FollowLifeCycleTransition** in the **Document** category.
+In the Nuxeo Platform, all document types have a lifecycle that enables to describe the state of the document. This not linked directly to the workflow. You can have workflows that does not change the state of the document, or you can also change the state of a document outside of a workflow. You change the state of the document by using the Automation operation called **FollowLifeCycleTransition** in the **Document** category.
 
-More information on life cycles in Studio at the page [Life cycle]({{page space='studio' page='life-cycle'}}).
+More information on lifecycles in Studio at the page [Life cycle]({{page space='studio' page='life-cycle'}}).
 
 {{/callout}}
 
 1.  Go to **Document Model** > **Life Cycles**.
 2.  Create a new one called `technicalDocLifeCycle`.
     ![]({{file name='Life_Cycle_-_tuto_Technical_Documentation.png'}} ?w=500,h=291,border=true)
-3.  A life cycle needs an Initial State. Create one by clicking on&nbsp;**Initial State** and then clicking somewhere in the graph.
+3.  A lifecycle needs an Initial State. Create one by clicking on **Initial State** and then clicking somewhere in the graph.
 
 4.  Go over the state and edit the state to name it `draft`.
 5.  Create two other normal states and call them `valid` and `obsolete` (we may not need this one for now).
 6.  Go over each state and link them to the others as shown on the following screen shot (you can move transitions by clicking on the dot on the middle).
     ![]({{file name='technicalDocLifeCycle_tuto_-_Life_Cycle_-_tuto_Technical_Documentation.png'}} ?w=500,h=349,border=true)
     The transition are named automatically by Studio using the following pattern: to_state.
-7.  Save the life cycle.
-8.  Go to the&nbsp;**DocumentationItem&nbsp;**document type, and select the newly created life cycle.
+7.  Save the lifecycle.
+8.  Go to the **DocumentationItem&** document type, and select the newly created lifecycle.
     ![]({{file name='DocumentationItemTuto_-_Document_Type_-_tuto_Technical_Documentation.png'}} ?w=500,h=257,border=true)
 
 #### Defining the Automation Chain
 
-1.  Now that the life cycle is defined, go back to the Automation chain&nbsp;**ValWf_ValidateDoc**.
+1.  Now that the lifecycle is defined, go back to the Automation chain **ValWf_ValidateDoc**.
 2.  Add the operation Documents > Follow Life Cycle transition.
-    The expected parameter is the name of the life cycle transition you want the document to follow: `to_valid`&nbsp;in our case.
+    The expected parameter is the name of the lifecycle transition you want the document to follow: `to_valid` in our case.
 3.  Add the operation Document > Snapshot version with the parameters:
     *   Increment: Major
     *   saveDocument: checked. It will create a new version of the document each time it is validated.In the end you should have:
     ![]({{file name='ValWf_ValidateDoc_tuto_-_Automation_Chain_-_tuto_Technical_Documentation.png'}} ?w=500,border=true)
-4.  Save the chain, deploy your project, create a new **DocumentationItem** with a nature metadata&nbsp;and enjoy your workflow.
+4.  Save the chain, deploy your project, create a new **DocumentationItem** with a nature metadata and enjoy your workflow.
 
 {{#> callout type='info' heading='unlock the document'}}
 
@@ -403,7 +403,3 @@ To sum up what we saw:
 {{/callout}}
 
 The next step is to add some steps to the workflow so that the validator can ask for more information.
-
-* * *
-
-&nbsp;

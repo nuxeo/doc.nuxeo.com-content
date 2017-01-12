@@ -342,7 +342,7 @@ The `user` column is separated from the `group` column because they semantically
 
 ### Miscellaneous Values
 
-The life cycle information (life cycle policy and life cycle state) is stored in a dedicated table.
+The lifecycle information (life ycle policy and lifecycle state) is stored in a dedicated table.
 
 Table **misc**:
 

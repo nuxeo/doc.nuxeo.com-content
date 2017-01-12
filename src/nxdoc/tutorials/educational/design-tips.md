@@ -53,7 +53,5 @@ Nuxeo Studio is a very powerful tool. The direct consequence is that there are v
 
 {{! /excerpt}}
 
-&nbsp;
-
-*   [Locking vs Permission to Restrict Edit Access to a Document]({{page space='NXDOC' page='Locking vs+Permission+to+Restrict+Edit+Access+to+a+Document'}})&nbsp;&mdash;&nbsp;<span class="smalltext">During the life of a document, on state changes, or during a workflow for instance, it is sometimes required that a document has restricted modification permissions. There are at least two ways of doing this in Nuxeo:</span>
-*   [Several Document Types vs One Document Type with a Nature Metadata]({{page space='NXDOC' page='Several Document+Types+vs+One+Document+Type+with+a+Nature+Metadata'}})&nbsp;&mdash;&nbsp;<span class="smalltext">In some cases, there is a need to manage different documents (procedure, instruction, notice, invoices...) but with very similar properties and life cycles.</span>
+*   [Locking vs Permission to Restrict Edit Access to a Document]({{page space='NXDOC' page='Locking vs+Permission+to+Restrict+Edit+Access+to+a+Document'}})&nbsp;&mdash; During the life of a document, on state changes, or during a workflow for instance, it is sometimes required that a document has restricted modification permissions. There are at least two ways of doing this in Nuxeo.
+*   [Several Document Types vs One Document Type with a Nature Metadata]({{page space='NXDOC' page='Several Document+Types+vs+One+Document+Type+with+a+Nature+Metadata'}})&nbsp;&mdash; In some cases, there is a need to manage different documents (procedure, instruction, notice, invoices...) but with very similar properties and lifecycles.

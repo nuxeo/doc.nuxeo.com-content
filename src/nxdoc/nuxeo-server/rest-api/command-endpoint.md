@@ -345,8 +345,6 @@ history:
 ---
 ## The Automation HTTP / REST Service
 
-&nbsp;
-
 {{! excerpt}}
 
 The Nuxeo Automation Server module provides a REST API to execute operations on a Nuxeo server.
@@ -356,8 +354,6 @@ The Nuxeo Automation Server module provides a REST API to execute operations on 
 To know more about Content Automation, you can read the [Automation documentation]({{page page='automation'}}) in other sections of this space. This section only deals with the REST exposition of operations and chains.
 
 {{/callout}}
-
-&nbsp;
 
 To use the Automation REST service you need to know the URL where the service is exposed, and the different formats used by the service to exchange information. All the other URLs that appear in the content exchanged between the client and server are relative paths to the Automation service URL.
 
@@ -448,7 +444,7 @@ You do not need to be logged in to be able to get the Automation service descrip
 
 The operations registry (loaded doing a GET on the Automation service URL) contains the entire information you need to execute operations.
 
-To execute an operation you should build an operation request descriptor and post it on the operation URL. When sending an operation request you must use the `application/json+nxrequest` content type (`application/json` since 5.9.5 is allowed as well). Also you need to authenticate your request&nbsp;(using basic authentication) since most of the operations are accessing the Nuxeo repository.
+To execute an operation you should build an operation request descriptor and post it on the operation URL. When sending an operation request you must use the `application/json+nxrequest` content type (`application/json` since 5.9.5 is allowed as well). Also you need to authenticate your request (using basic authentication) since most of the operations are accessing the Nuxeo repository.
 
 An operation request is a JSON document having the following format:
 
@@ -462,10 +458,10 @@ An operation request is a JSON document having the following format:
 All these three request parameters are optional and depend on the executed operation.
 
 *   If the operation has no input (a void operation) then the input parameter can be omitted.
-*   If the operation has no parameters then&nbsp;`params` can be omitted.
+*   If the operation has no parameters then `params` can be omitted.
 *   If the operation does not want to push some specific properties in the operation execution context then context can be omitted. In fact context parameters are useless for now but may be used in future.
 
-The&nbsp;`input` parameter is a string that acts as a reference to the real object to be used as the input. There are four types of supported inputs: void, document, document list, blob, blob list.
+The `input` parameter is a string that acts as a reference to the real object to be used as the input. There are four types of supported inputs: void, document, document list, blob, blob list.
 
 *   To specify a "void" input (i.e. no input) you should omit the `input` parameter.
 *   To specify a reference to a document you should use the document absolute path or document UID prefixed using the string "`doc:`".
@@ -549,7 +545,7 @@ Apart from these possible outputs, the operation can abort due to an exception.
 
 All these cases are represented using the following HTTP responses:
 
-*   `document` &nbsp;-> A JSON object describing the document is returned. The used Content-Type is `**application/json+nxentity**`
+*   `document` -> A JSON object describing the document is returned. The used Content-Type is `**application/json+nxentity**`
 *   `documents` -> a JSON object describing the document list is returned. The used Content-Type is `**application/json+nxentity**`
 *   `blob` -> The blob raw content is returned. The used Content-Type will be the same as the blob mime-type.
 *   `blobs` -> A Multipart/Mixed content is returned. Each part will be a blob from the list (order is preserved). Each part will use the right Content-Type as given by the blob mime-type.
@@ -571,7 +567,7 @@ These entries are always set on any document and are using the following keys:
 *   `uid`: The document UID;
 *   `path`: The document path (in the repository);
 *   `type`: The document type;
-*   `state`: The current life cycle state;
+*   `state`: The current lifecycle state;
 *   `title`: The document title;
 *   `lastModifed`: The last modified timestamp.
 
@@ -686,8 +682,6 @@ Example:
 
 ```
 
-&nbsp;
-
 ## Document Property Types
 
 Here you can find more details on the JSON document entity format.
@@ -738,7 +732,7 @@ Also, when using Multipart/Related requests you must always put the JSON encoded
 
 ### Request parameter types
 
-The operation parameters specified inside the&nbsp;`params` property of the request are all strings. Operation parameters are typed, so on the server side the operation will know how to decode parameters in real Java classes. The supported parameter types are: string, long (integer number), double (floating point number), date, properties, document, documents, EL expression, EL template.
+The operation parameters specified inside the `params` property of the request are all strings. Operation parameters are typed, so on the server side the operation will know how to decode parameters in real Java classes. The supported parameter types are: string, long (integer number), double (floating point number), date, properties, document, documents, EL expression, EL template.
 
 Here are some rules on how to encode operation parameters:
 
@@ -749,7 +743,7 @@ Here are some rules on how to encode operation parameters:
 *   `boolean`: "true" or "false".
 *   `document`: Use the document UID or the absolute document path.
 *   `documents`: Use a comma separated list of document references.
-*   EL expression: put the "`expr:`" string before your EL expression. (E.g.&nbsp;`expr: Document.path`).
+*   EL expression: put the "`expr:`" string before your EL expression. (E.g. `expr: Document.path`).
 *   EL template: put the "`expr:`" string before your template. (E.g. `expr: SELECT * FROM Document WHERE dc:title=@{my_var}`)
 
 Note that expressions also you specify relative paths (relative to the context document) using "`expr: ./my/doc`".

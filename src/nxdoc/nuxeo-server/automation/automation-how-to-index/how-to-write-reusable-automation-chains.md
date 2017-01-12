@@ -110,7 +110,7 @@ You might have some automation chains in your project that all have a similar st
 
 Let's take an example: You want to change the lifecycle of a document, while logging the company of the user who changed the document lifecycle state in the audit. If you want a chain that validates a document, you would write the following chain:
 
-```yaml
+```
 - Context.FetchDocument
 - Document.SetLifeCycle:
     value: approve
@@ -126,7 +126,7 @@ If you want to do it for each lifecycle changes (making it obsolete, or draft, .
 
 1.  Create a chain called "ChangeCaseStatus".
 
-    ```yaml
+    ```
     params:
     - transitionName:
         type: string
@@ -151,7 +151,7 @@ If you want to do it for each lifecycle changes (making it obsolete, or draft, .
     {{/callout}}
 2.  Create a second chain that references the first chain with a `Run Chain` operation, using the `parameters` field. This second chain is used to approve document.
 
-   ```yaml
+   ```
     - Context.RunOperation:
         id: ChangeCaseStatus
         isolate: 'false'
@@ -174,7 +174,7 @@ If you want to do it for each lifecycle changes (making it obsolete, or draft, .
 
 - [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
 - [Content Automation Concepts]({{page page='content-automation-concepts'}})
-- [Life cycle in Nuxeo Studio]({{page space='studio' page='life-cycle'}})
+- [Lifecycle in Nuxeo Studio]({{page space='studio' page='life-cycle'}})
 - [User Actions in Nuxeo Studio]({{page space='studio' page='user-actions'}})
 
 {{/panel}}</div></div>

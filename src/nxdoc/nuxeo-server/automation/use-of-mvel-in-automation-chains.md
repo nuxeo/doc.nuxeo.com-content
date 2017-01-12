@@ -508,7 +508,7 @@ When the script is evaluated, you can use both contextual objects and embedded f
 
     {{#> callout type='note' }}
 
-    Do not use "-" character in the variable name. Prefer the use of "_".
+    Do not use "-" character in the variable name. Prefer the use of `_`.
 
     {{/callout}}
 
@@ -547,7 +547,7 @@ The Document wrapper, used by the system for any document put in scripting conte
 
 *   `Document.type`: returns the Nuxeo EP Document type of the document (like "File", "Folder", ...);
 
-*   `Document.lifeCycle`: returns the current life cycle state of the document;
+*   `Document.lifeCycle`: returns the current lifecycle state of the document;
 
 *   `Document.name`: returns the name of the document (last part of the path);
 
@@ -563,7 +563,7 @@ Note that `currentDocument` is an alias for `Document`.
 
 The Date wrapper is useful to update documents' date properties and to build time-relative NXQL queries.
 
-*   `CurrentDate.date`: returns the date. It is the method to use to update a document date field, like "dc:valid", or whatever custom date field.
+*   `CurrentDate.date`: returns the date. It is the method to use to update a document date field, like `dc:valid`, or whatever custom date field.
 
 Some other methods are provided to display the current date as a string:
 

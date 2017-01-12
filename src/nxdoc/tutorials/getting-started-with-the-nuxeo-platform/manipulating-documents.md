@@ -521,11 +521,9 @@ Restore the contract to its previous (`draft`) state.
 {{#> callout type='info' heading='Learn more'}}
 
 *   [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
-*   [ Repository Concept Life Cycle ]({{page page='repository-concepts'}})
+*   [ Repository Concept Lifecycle ]({{page page='repository-concepts'}})
 
 {{/callout}}
-
-&nbsp;
 
 ## Querying for Documents
 
@@ -581,8 +579,6 @@ Find a contract that needs to be deleted: it expired before 2016 and has a limit
 *   [Indexing and Query]({{page page='indexing-and-query'}})
 
 {{/callout}}
-
-&nbsp;
 
 ## Deleting a Document
 
