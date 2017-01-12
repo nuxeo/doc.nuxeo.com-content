@@ -125,20 +125,17 @@ history:
         version: '1'
 
 ---
-{{> wistia_video id='qokay4hw1i'}}
-
-Extract from the course "[Working with the REST API](https://university.nuxeo.com/store/155916-rest-api)" at [Nuxeo University](https://university.nuxeo.com)
 
 {{! excerpt}}
 
-The Platform provides facilities for [uploading binaries under a given "batch id"]({{page page='blob-upload-for-batch-processing'}}) on the server and then reference that batch id when posting a document resource, or for fetching it from a custom Automation chain. For instance if you need to create a file with some binary content, first you have to upload the file into the `BatchManager`. It's a place on the system where you can upload temporary files to bind them later.
+The Nuxeo Platform allows you to [upload binaries under a given "batch ID"]({{page page='batch-upload-endpoint'}}) on the server and then reference the batch ID when posting a document resource, or for fetching it from a custom Automation chain. For instance if you need to create a file with some binary content, first you have to upload the file into the `BatchManager`. It's a place on the system where you can upload temporary files to bind them later.
 
 {{! /excerpt}}
 
 There are two ways to upload a file:
 
 1.  [In one go](#uploadingafileinonego): the full content of the file is transferred to the server as a binary stream in a single HTTP request. Such an upload is not resumable: in case of interruption you will need to start all over again.
-2.  [In chunks](#uploadingafileinchunks): the file content is transferred to the server as several binary streams in separate HTTP requests. Such an upload is resumable: in case of interruption you will only need to upload the remaining chunks.
+2.  [In chunks](#uploadingafileinchunks): the file content is transferred to the server as several binary streams in separate HTTP requests. This upload is resumable: in case of interruption you will only need to upload the remaining chunks.
 
 Before uploading any file or chunk you need to [initialize an upload batch](#batchinitialization).
 
@@ -161,7 +158,7 @@ Response:
 {"batchId": myBatchId}
 ```
 
-**You need to save this batch id as it willl be used in subsequent requests.**
+**Save this batch ID as it willl be used in subsequent requests.**
 
 ## {{> anchor 'uploadingafileinonego'}}Uploading a File in One Go (not Resumable)
 
@@ -205,18 +202,18 @@ Response:
 
 ## {{> anchor 'uploadingafileinchunks'}}Uploading a File in Chunks (Resumable)
 
-Such an upload allows:
+This upload allows you to:
 
-*   To have a simple resume process that does not require to be able to access a specific byte.
-*   To multiplex / parallelize the upload of the different chunks.
+*   Have a simple resume process that does not require starting the upload from the beginning to be able to access a specific byte.
+*   Upload of the different chunks in parallel.
 
-This is a standard approach, as very well described in the Google Drive API documentation about [Resumable Upload](https://developers.google.com/drive/web/manage-uploads#resumable).
+This is the standard approach, as described in the Google Drive API documentation, [Resumable Upload](https://developers.google.com/drive/web/manage-uploads#resumable).
 
-Here is an example of a resumable upload of a file cut up into 5 chunks.
+Here is an example of the resumable upload of a file cut up into 5 chunks.
 
-### {{> anchor 'uploadingchunkioutof5'}}Uploading Chunk i out of 5
+### {{> anchor 'uploadingchunkioutof5'}}Uploading Chunk `i` out of 5
 
-This step will be repeated 5 times, one for each chunk. Let's just start with &lt;i&gt; = 0.
+This step will be repeated 5 times, one for each chunk. Let's just start with `<i>` = 0.
 
 ```
 POST /api/v1/upload/<myBatchId>/0
@@ -246,8 +243,8 @@ Response: there are 3 cases here.
     {"batchId": myBatchId, "fileIdx": "0", "uploadType": "chunked", "uploadedSize": chunkSize, "uploadedChunkIds": [0, 1, 2], "chunkCount": 5}
     ```
 
-    => Repeat the step [Uploading Chunk i out of 5](#uploadingchunkioutof5) with `X-Upload-Chunk-Index` = index of the next chunk to upload, the easiest being `<i + 1>`.
-    At this point a request to [know the chunk completion](#resumeaninterruptedupload) and determine the next chunk to upload can be made.
+    => Repeat the step [Uploading Chunk `i` out of 5](#uploadingchunkioutof5) with `X-Upload-Chunk-Index` = index of the next chunk to upload, the easiest being `<i + 1>`.
+    At this point a request to [verify the chunk completion](#resumeaninterruptedupload) and determine the next chunk to upload can be made.
 
 2.  The chunk has been uploaded and the file is now complete, meaning this was the last chunk to upload.
 
@@ -262,7 +259,7 @@ Response: there are 3 cases here.
 
 ### {{> anchor 'resumeaninterruptedupload'}}Resume an Interrupted Upload
 
-Note the importance here of having saved the batch id: it can be seen as a _resumable upload session id_.
+Note the importance here of having saved the batch ID: it can be seen as a _resumable upload session ID_.
 
 ```
 GET /api/upload/<myBatchId>/0
@@ -283,7 +280,7 @@ Response: again there are 3 cases here.
     {"name": myFile.doc, "size": 115090, "uploadType": "chunked", "uploadedChunkIds": [0, 1, 2], "chunkCount": 5}
     ```
 
-    => Repeat the step [Uploading Chunk i out of 5](#uploadingchunkioutof5) with `X-Upload-Chunk-Index` = index of the next chunk to upload, in this case 3.
+    => Repeat the step [Uploading Chunk `i` out of 5](#uploadingchunkioutof5) with `X-Upload-Chunk-Index` = index of the next chunk to upload, in this case 3.
 
 2.  The file is now complete, meaning all chunks have been uploaded.
     This could happen if the connection broke after all bytes were uploaded but before the client received a response from the server.
@@ -305,7 +302,7 @@ You should follow the [Best Practices](https://developers.google.com/drive/web/m
 
 You can create a document of type File and attach to it a file uploaded to a given batch by using the specific syntax on the [`file:content`](http://filecontent) property.
 
-**That fact that the file has been uploaded in one go or in chunks has no incidence here.**
+**That fact that the file has been uploaded in one go or in chunks has no importance here.**
 
 ```text
 POST /api/v1/path/default-domain/workspaces/myworkspace
@@ -334,6 +331,11 @@ Finally you now can access the content of your file by pointing to the following
 ```text
 GET /api/v1/path/default-domain/workspaces/myworkspace/myNewDoc/@blob/file:content
 ```
+## Learn More
+
+*   Follow the course [Importing Files with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/importing-files-rest-api) at [Nuxeo University](https://university.nuxeo.io).
+
+&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='REST API how-tos'}}
 
