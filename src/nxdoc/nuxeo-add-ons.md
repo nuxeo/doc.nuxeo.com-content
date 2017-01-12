@@ -503,7 +503,7 @@ Registered access
 [Documentation]({{page page='nuxeo-adobe-cc-connector'}})
 </td>
 <td colspan="1">
-[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-indesign-connector-marketplace?version=1.1.1)
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace?version=1.2.4)
 </td>
 </tr>
 <tr>
