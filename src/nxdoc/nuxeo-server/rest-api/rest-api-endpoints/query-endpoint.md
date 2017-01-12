@@ -248,7 +248,7 @@ The query endpoint allows REST clients to query the Nuxeo repository.
 
 {{#> callout type='warning' }}
 
-Since 8.3 this endpoint has been deprecated in favor of the [Search Endpoint]({{page page='search-endpoint'}}).
+Since 8.3 this endpoint has been deprecated in favor of the [Search Resource Endpoint]({{page page='search-endpoints'}}).
 
 {{/callout}}
 

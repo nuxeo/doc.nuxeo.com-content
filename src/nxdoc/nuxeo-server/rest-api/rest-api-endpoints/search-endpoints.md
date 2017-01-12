@@ -1028,7 +1028,7 @@ GET /api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c/execute?pageSize=5
 
 ## Learn More
 
-*   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='use-nuxeo-api-playground-to-discover-the-api'}}) to configure your local instance).
+*   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
 *   Checkout the Nuxeo REST API explorer of your instance at `https://NUXEO_SERVER/nuxeo/api/v1/doc`.
 
 {{! Don't put anything here. }}

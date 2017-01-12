@@ -141,7 +141,7 @@ In order to have more control over REST API Calls, you can use the following spe
       <tr>
         <td>**enrichers.document**</td>
         <td></td>
-        <td>Request further information in the response. See [(Content Enrichers)]({{page page='content-enricher'}}) for more details.</td>
+        <td>Request further information in the response. See [(Content Enrichers)]({{page page='content-enrichers'}}) for more details.</td>
         <td>`enrichers.document: "thumbnail"` *(Returns related thumbnail of the document)*</td>
       </tr>
       <tr>
@@ -155,7 +155,7 @@ In order to have more control over REST API Calls, you can use the following spe
         <td></td>
         <td>Load additional parts of an object with entity-type `document`</td>
         <td>
-          `fetch.document: value1, value2,...` See [Document JSON and Extended Fields]({{page page='json-marshalling#document-json-extended-fields'}}) for more details on accepted values.
+          `fetch.document: value1, value2,...` See [Document JSON and Extended Fields]({{page page='document-json-extended-fields'}}) for more details on accepted values.
         </td>
       </tr>
       <tr>
@@ -164,7 +164,7 @@ In order to have more control over REST API Calls, you can use the following spe
         <td>Control aggregation depth</td>
         <td>
           `depth: children`
-          Accepted values: `root`, `children`, `max`. See [Aggregating Marshallers and Avoiding Infinite Loops]({{page page='json-marshalling#aggregating-marshallers-infinite-loops'}}) for more details.
+          Accepted values: `root`, `children`, `max`. See [Aggregating Marshallers and Avoiding Infinite Loops]({{page page='parameterizing-reusing-marshallers#aggregating-marshallers-infinite-loops'}}) for more details.
         </td>
       </tr>
       <tr>
@@ -179,7 +179,7 @@ In order to have more control over REST API Calls, you can use the following spe
 
 ## Learn More
 
-*   Test these headers on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='use-nuxeo-api-playground-to-discover-the-api'}}) to configure your local instance).
+*   Test these headers on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
 
 * * *
 

@@ -209,7 +209,7 @@ Below is an example of how to start a Parallel Review Workflow and complete it w
 
 ## Learn More
 
-*   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='use-nuxeo-api-playground-to-discover-the-api'}}) to configure your local instance).
+*   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
 *   Checkout the Nuxeo REST API explorer of your instance at `https://NUXEO_SERVER/nuxeo/api/v1/doc`.
 *   A client sample [nuxeo-travel-expenses](https://github.com/nuxeo/nuxeo-travel-expenses) (available on [GitHub](https://github.com/nuxeo/nuxeo-travel-expenses)) based on Web Components and [Polymer](https://www.polymer-project.org) demonstrates how to use the workflow REST API.
 
@@ -219,7 +219,7 @@ Below is an example of how to start a Parallel Review Workflow and complete it w
 <div class="column medium-6">
 {{#> panel heading='Related Documentation'}}
 - [Workflow documentation]({{page page='workflow'}})
-- [Web Adapters for the REST API]({{page version='' space='nxdoc' page='web-adapters-for-the-rest-api'}})
+- [REST API Web Adapters]({{page version='' space='nxdoc' page='rest-api-web-adapters'}})
 - [REST API Entity Types]({{page version='' space='nxdoc' page='rest-api-entity-types'}})
 {{/panel}}
 </div>

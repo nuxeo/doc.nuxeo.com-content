@@ -339,9 +339,9 @@ GET /api/v1/path/default-domain/workspaces/myworkspace/myNewDoc/@blob/file:conte
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='REST API how-tos'}}
 
-- [Use Nuxeo API Playground to Discover the API]({{page page='use-nuxeo-api-playground-to-discover-the-api'}})
-- [Search Endpoint]({{page page='search-endpoint'}})
-- [REST API How-To Index]({{page page='rest-api-how-to-index'}})
+- [HOWTO: Nuxeo API Playground]({{page page='howto-nuxeo-api-playground'}})
+- [Search Endpoints]({{page page='search-endpoints'}})
+- [REST API HOWTOs]({{page page='rest-api-howtos'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Import how-tos'}}
 

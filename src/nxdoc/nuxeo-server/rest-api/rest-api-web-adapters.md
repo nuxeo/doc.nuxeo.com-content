@@ -132,7 +132,7 @@ A WebAdapter is a URL segment starting with `@` which transforms the input resou
 
 {{#> callout type='note' }}
 
-The notion of adapter precedes the concept of [Content Enricher]({{page page='content-enricher'}}). Some of the adapters presented here could be replaced by Content Enrichers.
+The notion of adapter precedes the concept of [Content Enricher]({{page page='content-enrichers'}}). Some of the adapters presented here could be replaced by Content Enrichers.
 
 {{/callout}}
 
@@ -725,6 +725,6 @@ Pay attention to the fact that document list adapters are paged. That means that
 
 - [WebEngine (JAX-RS)]({{page page='webengine-jax-rs'}})
 - [REST API]({{page page='rest-api'}})
-- [Content Enricher]({{page page='content-enricher'}})
+- [Content Enricher]({{page page='content-enrichers'}})
 
 {{/panel}}</div></div>

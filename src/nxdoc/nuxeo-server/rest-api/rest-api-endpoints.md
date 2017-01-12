@@ -75,7 +75,7 @@ Perform CRUD operations on Nuxeo resources in REST style. The following resource
           `/nuxeo/api/v1/search/saved`
         </td>
         <td class="small-6">
-          Perform searches by query or page provider, store searches and reproduce them later. See [Search Endpoint]({{page page='search-endpoint'}}) for more information.
+          Perform searches by query or page provider, store searches and reproduce them later. See [Search Resource Endpoint]({{page page='search-endpoints'}}) for more information.
         </td>
       </tr>
       <tr>
@@ -85,7 +85,7 @@ Perform CRUD operations on Nuxeo resources in REST style. The following resource
           `/nuxeo/api/v1/oauth2/provider/{providerId}/token`
         </td>
         <td class="small-6">
-          Retrieve authentication data from OAuth2 provider or get a new access token. See [OAuth2 Endpoint]({{page page='oauth2-endpoint'}}) for more information.</td>
+          Retrieve authentication data from OAuth2 provider or get a new access token. See [OAuth2 Resource Endpoint]({{page page='oauth2-endpoint'}}) for more information.</td>
       </tr>
       <tr>
         <td class="small-3">**Workflows and Tasks**</td>
@@ -93,7 +93,7 @@ Perform CRUD operations on Nuxeo resources in REST style. The following resource
           `/nuxeo/api/v1/workflow/{workflowId}`
           `/nuxeo/api/v1/task/{taskId}`
         </td>
-        <td class="small-6">See [Workflow and Task Endpoints]({{page page='workflow-task-endpoints'}}) for more information.</td>
+        <td class="small-6">See [Workflow and Task Resources Endpoints]({{page page='workflow-task-endpoints'}}) for more information.</td>
       </tr>
       <tr>
         <td class="small-3">**Batch Upload**</td>
@@ -119,14 +119,14 @@ Perform CRUD operations on Nuxeo resources in REST style. The following resource
           `/nuxeo/api/v1/automation/{operationId}`
         </td>
         <td  class="small-6">
-          Call an operation or chain of operations deployed on the server. See [Command Endpoint]({{page page='command-endpoint'}}) for more information.
+          Call an operation or chain of operations deployed on the server. See [Command Resource Endpoint]({{page page='command-endpoint'}}) for more information.
         </td>
       </tr>
     </tbody>
   </table>
 </div>
 
-The [Command Endpoint]({{page page='command-endpoint'}}) calls a "command" (an operation or chain of operations) deployed on the server. This is the primary way of exposing the platform services remotely. [All operations](http://nuxeo.github.io/api-playground/#/commands) from the [Automation]({{page page='content-automation-concepts'}})&nbsp;module are exposed, offering more than 100 commands to remotely process resources.
+The [Command Resource Endpoint]({{page page='command-endpoint'}}) calls a "command" (an operation or chain of operations) deployed on the server. This is the primary way of exposing the platform services remotely. [All operations](http://nuxeo.github.io/api-playground/#/commands) from the [Automation]({{page page='content-automation-concepts'}})&nbsp;module are exposed, offering more than 100 commands to remotely process resources.
 
 The framework makes it easy to [add new custom Java operations]({{page page='contributing-an-operation'}}) to complete the API if you're missing a web-service. You can also [chain operations server-side using Nuxeo Studio]({{page page='how-to-create-an-automation-chain'}}), in order to expose a coarse-grained API that fits your business logic, without any development.
 

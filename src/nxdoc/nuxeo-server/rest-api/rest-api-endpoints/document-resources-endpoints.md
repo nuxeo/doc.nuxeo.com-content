@@ -189,7 +189,7 @@ In addition to the `docId` and `repoId` parameters, the `id` endpoint accepts th
 
 ### Properties
 
-The `path` endpoint only takes the `docPath` and `repoId` parameters. It can however be leveraged with web adapters such as `@children`, `@search`, `@bo`. See [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}}) for more detailed information.
+The `path` endpoint only takes the `docPath` and `repoId` parameters. It can however be leveraged with web adapters such as `@children`, `@search`, `@bo`. See [REST API Web Adapters]({{page page='rest-api-web-adapters'}}) for more detailed information.
 
 
 ## Examples
@@ -248,7 +248,7 @@ DELETE /nuxeo/api/v1/id/{idOfTheDoc}
 
 ## Learn More
 
-*   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='use-nuxeo-api-playground-to-discover-the-api'}}) to configure your local instance).
+*   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
 *   Checkout the Nuxeo REST API explorer of your instance at `https://NUXEO_SERVER/nuxeo/api/v1/doc`.
 
 * * *
@@ -256,6 +256,6 @@ DELETE /nuxeo/api/v1/id/{idOfTheDoc}
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [REST API Entity Types]({{page page='rest-api-entity-types'}})
-- [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}})
+- [REST API Web Adapters]({{page page='rest-api-web-adapters'}})
 
 {{/panel}}</div><div class="column medium-6"></div></div>
