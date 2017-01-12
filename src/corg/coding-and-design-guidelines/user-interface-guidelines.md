@@ -115,33 +115,113 @@ The neutral buttons should be located just before the primary button, as an alte
 
 The back buttons should be located on the left, separated from the other actions.
 
-## <span class="ph">Labels</span>
+## Labels
 
-### <span class="ph">Capitalization</span>
+### Capitalization
 
-<span class="ph">We consider there are two capitalization styles:</span>
+We consider there are two capitalization styles:
 
-*   <span class="ph">Title capitalization</span>
-    <span class="ph">Example: Labels Capitalization and Punctuation
-    </span><span class="ph">See [http://titlecapitalization.com/](http://titlecapitalization.com/) (Chicago Manual of Style option) when in doubt.</span>
-*   <span class="ph">Sentence capitalization</span>
-    <span class="ph">Example: To start the search, please type at least 0 character(s).</span>
+*   Title capitalization
+    Example: Labels Capitalization and Punctuation
+    See [http://titlecapitalization.com/](http://titlecapitalization.com/) (Chicago Manual of Style option) when in doubt.
+*   Sentence capitalization
+    Example: To start the search, please type at least 0 character(s).
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Element</th><th colspan="1">Capitalization Style</th><th colspan="1">Example</th></tr><tr><td colspan="1">Button & Actions</td><td colspan="1">Title</td><td colspan="1">Add to Collection
-Edit Status
-Save
-Clear List</td></tr><tr><td colspan="1">Browser window title</td><td colspan="1">Title</td><td colspan="1">Nuxeo Platform - Home</td></tr><tr><td colspan="1">Popup titles</td><td colspan="1">Title</td><td colspan="1">Add a Permission
-Add 1 Item to Collection</td></tr><tr><td colspan="1">Gadget titles</td><td colspan="1">Title</td><td colspan="1">Last Modified Documents</td></tr><tr><td colspan="1">Tab labels</td><td colspan="1">Title</td><td colspan="1">Permissions
-Summary
-Comments</td></tr><tr><td colspan="1">Field names (forms, layouts)</td><td colspan="1">Title</td><td colspan="1">Last Contributor
-Title
-Last Modified at</td></tr><tr><td colspan="1">Titles in layout</td><td colspan="1">Title</td><td colspan="1">Common Metadata</td></tr><tr><td colspan="1">Column headers</td><td colspan="1">Title</td><td colspan="1">Last Contributor
-Due Date
-First Name</td></tr><tr><td colspan="1">Feedback messages</td><td colspan="1">Sentence</td><td colspan="1">1 document copied.
-No user or group selected.</td></tr><tr><td colspan="1">Options (radio, checkbox, dropdown)</td><td colspan="1">Sentence (no final dot)</td><td colspan="1">Anonymous proxy
-Less than 100KB</td></tr><tr><td colspan="1">Placeholders</td><td colspan="1">Sentence (no final dot)</td><td colspan="1">Select a value</td></tr><tr><td colspan="1">Help messages</td><td colspan="1">Sentence</td><td colspan="1">This folder contains no document.
-The table below shows all the tasks for which you have been requested to perform an operation.</td></tr><tr><td colspan="1">Tooltips</td><td colspan="1">Sentence</td><td colspan="1">This field is used by virtual navigation.
-Current version of the document</td></tr><tr><td colspan="1">Popup messages</td><td colspan="1">Sentence</td><td colspan="1">Delete selected document(s)?</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Element</th>
+<th colspan="1">Capitalization Style</th>
+<th colspan="1">Example</th>
+</tr>
+<tr>
+<td colspan="1">Button & Actions</td>
+<td colspan="1">Title</td>
+<td colspan="1">Add to Collection<br/>
+Edit Status</br>
+Save<br/>
+Clear List</td>
+</tr>
+<tr>
+<td colspan="1">Browser window title</td>
+<td colspan="1">Title</td>
+<td colspan="1">Nuxeo Platform - Home</td>
+</tr>
+<tr>
+<td colspan="1">Popup titles</td>
+<td colspan="1">Title</td>
+<td colspan="1">Add a Permission<br/>
+Add 1 Item to Collection</td>
+</tr>
+<tr>
+<td colspan="1">Gadget titles</td>
+<td colspan="1">Title</td>
+<td colspan="1">Last Modified Documents</td>
+</tr>
+<tr>
+<td colspan="1">Tab labels</td>
+<td colspan="1">Title</td>
+<td colspan="1">Permissions<br/>
+Summary<br/>
+Comments</td>
+</tr>
+<tr>
+<td colspan="1">Field names (forms, layouts)</td>
+<td colspan="1">Title</td>
+<td colspan="1">Last Contributor<br/>
+Title<br/>
+Last Modified at</td>
+</tr>
+<tr>
+<td colspan="1">Titles in layout</td>
+<td colspan="1">Title</td>
+<td colspan="1">Common Metadata</td>
+</tr>
+<tr>
+<td colspan="1">Column headers</td>
+<td colspan="1">Title</td>
+<td colspan="1">Last Contributor<br/>
+Due Date<br/>
+First Name</td>
+</tr>
+<tr>
+<td colspan="1">Feedback messages</td>
+<td colspan="1">Sentence</td>
+<td colspan="1">1 document copied.<br/>
+No user or group selected.</td>
+</tr>
+<tr>
+<td colspan="1">Options (radio, checkbox, dropdown)</td>
+<td colspan="1">Sentence (no final dot)</td>
+<td colspan="1">Anonymous proxy<br/>
+Less than 100&nbsp;KB</td>
+</tr>
+<tr>
+<td colspan="1">Placeholders</td>
+<td colspan="1">Sentence (no final dot)</td>
+<td colspan="1">Select a value</td>
+</tr>
+<tr>
+<td colspan="1">Help messages</td>
+<td colspan="1">Sentence</td>
+<td colspan="1">This folder contains no document.<br/>
+The table below shows all the tasks for which you have been requested to perform an operation.</td>
+</tr>
+<tr>
+<td colspan="1">Tooltips</td>
+<td colspan="1">Sentence</td>
+<td colspan="1">This field is used by virtual navigation.<br/>
+Current version of the document</td>
+</tr>
+<tr>
+<td colspan="1">Popup messages</td>
+<td colspan="1">Sentence</td>
+<td colspan="1">Delete selected document(s)?</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Punctuation
 
@@ -153,5 +233,34 @@ Current version of the document</td></tr><tr><td colspan="1">Popup messages</td>
 
 ### Terminology and Spelling
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">OK</th><th colspan="1">Not OK</th></tr><tr><td colspan="1">addon</td><td colspan="1">add-on</td></tr><tr><td colspan="1">hotfix</td><td colspan="1">hot-fix, HotFix</td></tr><tr><td colspan="1">life cycle</td><td colspan="1">life-cycle
-lifecycle</td></tr><tr><td colspan="1">plugin</td><td colspan="1">plug-in</td></tr><tr><td colspan="1">username</td><td colspan="1">user name</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">OK</th>
+<th colspan="1">Not OK</th>
+</tr>
+<tr>
+<td colspan="1">addon</td>
+<td colspan="1">add-on</td>
+</tr>
+<tr>
+<td colspan="1">hotfix</td>
+<td colspan="1">hot-fix, HotFix</td>
+</tr>
+<tr>
+<td colspan="1">lifecycle</td>
+<td colspan="1">life cycle<br/>
+lifecycle</td>
+</tr>
+<tr>
+<td colspan="1">plugin</td>
+<td colspan="1">plug-in</td>
+</tr>
+<tr>
+<td colspan="1">username</td>
+<td colspan="1">user name</td>
+</tr>
+</tbody>
+</table>
+</div>

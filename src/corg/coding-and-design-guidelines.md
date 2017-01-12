@@ -64,14 +64,14 @@ history:
         version: '1'
 
 ---
-<span style="color: rgb(61,60,64);">Beside all the QA and CI tools providing code analysis and safety nets, the Nuxeo strategy about code quality relies on **continuous improvement**.</span>
-<span style="color: rgb(61,60,64);">It is not viable, nor wanted (for stability purpose), to update the whole code once or regularly regarding a specific subject.</span> <span style="color: rgb(61,60,64);">When editing a class, one must improve its quality in the mean time:</span>
+Beside all the QA and CI tools providing code analysis and safety nets, the Nuxeo strategy about code quality relies on **continuous improvement**.
+It is not viable, nor wanted (for stability purpose), to update the whole code once or regularly regarding a specific subject. When editing a class, one must improve its quality in the mean time:
 
 *   first, update the header and format the code,
-*   then, <span style="color: rgb(61,60,64);">cleanup the code (dead parts, unused imports, potential NPE, field overwrite, deprecated usage, synchronize POM...)</span>,
+*   then, clean up the code (dead parts, unused imports, potential NPE, field overwrite, deprecated usage, synchronize POM...),
 *   finally, do the work for which you opened that class.
 
-Keep in mind that quality <span style="color: rgb(61,60,64);">development rule: **don't increase the debt, reduce the debt**.</span>
+Keep in mind that quality development rule: **don't increase the debt, reduce the debt**.
 
 This chapter lists some rules that must be strictly followed when contributing to Nuxeo source code.
 
