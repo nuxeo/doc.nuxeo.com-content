@@ -256,7 +256,7 @@ And if you want all Nuxeo features, then you need [`org.nuxeo.ecm.platform:nuxeo
 
 ### Test Features
 
-To configure the way the tests are launched, the Nuxeo test framework is using the concept of test features. A test feature is a special class that is notified by the runner about the different life cycle events of the execution so that it may customize the way the test is setup or test methods are run. Test features are configurable through annotations. Each test feature is able to use its own defined annotations to configure the test. Also a feature may provide additional objects to be injected in tests using Guice.
+To configure the way the tests are launched, the Nuxeo test framework is using the concept of test features. A test feature is a special class that is notified by the runner about the different lifecycle events of the execution so that it may customize the way the test is setup or test methods are run. Test features are configurable through annotations. Each test feature is able to use its own defined annotations to configure the test. Also a feature may provide additional objects to be injected in tests using Guice.
 
 Here are some commonly used features:
 

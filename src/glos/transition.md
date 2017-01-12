@@ -16,46 +16,46 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/Eon1'
     source_link: /display/GLOS/Transition
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-23 16:46'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-15 07:12'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-14 23:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-13 07:58'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 12:35'
         message: ''
         version: '1'
 
 ---
-## Transition (Life cycle)
+## Transition (Lifecycle)
 
 {{! multiexcerpt name='transition-life-cycle'}}
 
-&nbsp;A transition is what enables a document to go from one state to another in a life cycle.
+A transition is what enables a document to go from one state to another in a lifecycle.
 
 {{! /multiexcerpt}}
 
-**Studio documentation about transitions in life cycle:**
+**Studio documentation about transitions in lifecycle:**
 
 *   [Life cycle]({{page space='studio' page='life-cycle'}})
 
-**Developer documentation about transitions in life cycle:**
+**Developer documentation about transitions in lifecycle:**
 
 *   [Repository Concepts]({{page space='nxdoc' page='repository-concepts'}})
 

@@ -151,14 +151,14 @@ This page proposes naming conventions for Studio customization items in order to
 
 In general, there are items that will be easily seen by end users (document types for instance) and under the hood features (automation chains for instance). For very exposed items, words should be separated by an underscore and begin with a capital letter (_Contract_Library_) and for others we will prefer compacity: capital letter for every words but no underscore between them (_SendToValidation_ for instance).
 
-As Studio projects can be mixed together or involve many functionalities (ex: contract management, holiday requests...), it is important that items coming from one project or another can be identified easily. The solution is to prefix every item. For example every item that is about contract_management will start with _CM-_ and _HR-_ will apply for holiday request: _CM-SendToValidation_. Prefixing does not apply to document types, and life cycles (Content Model section in Studio). This is particularly mandatory when you do a plugin that will become an [Application Template]({{page page='external-templates'}}) that can be imported into other projects.
+As Studio projects can be mixed together or involve many functionalities (ex: contract management, holiday requests...), it is important that items coming from one project or another can be identified easily. The solution is to prefix every item. For example every item that is about contract_management will start with _CM-_ and _HR-_ will apply for holiday request: _CM-SendToValidation_. Prefixing does not apply to document types, and lifecycles (Content Model section in Studio). This is particularly mandatory when you do a plugin that will become an [Application Template]({{page page='external-templates'}}) that can be imported into other projects.
 
 ## Content Model
 
 *   Document types - Document types are probably the main items and should be created first. Naming should start with a capital letter, and if it needs several words, these one should be separated with an underscore: _Contract_Library_.
 *   Schemas - Explicit name (the same as the document type if linked to one) with underscore separating words but all lower case: _contract_library_. You should use a prefix that is either the name or a shorter prefix like _dc_ for dublin_core.
-*   Life Cycle - Upper case for each first letter, underscore to separate them. Most of the time a life cycle is only for one document type, in that case, the life cycle should name after the doc type with Lifecycle at the end: _Contract_Lifecycle_.
-*   Life Cycle State - all lower case, words separated by underscore. Transitional states and stable states should be distinguished, for instance a document that requires to be corrected and then validated will have the states: _correction_ > _validation_ > _validated_
+*   Lifecycle - Upper case for each first letter, underscore to separate them. Most of the time a lifecycle is only for one document type, in that case, the lifecycle should name after the doc type with Lifecycle at the end: _Contract_Lifecycle_.
+*   Lifecycle State - all lower case, words separated by underscore. Transitional states and stable states should be distinguished, for instance a document that requires to be corrected and then validated will have the states: _correction_ > _validation_ > _validated_
 
 ## Search and Listings
 
@@ -178,7 +178,7 @@ Items in automation are clearly under the hood items so it would be explicitly n
 
 ### Workflow
 
-When automation chains are steps of a workflow, a good idea is to prefix them with a number so that they are displayed in the same order they will be triggered. Example with a workflow on the life cycle [Draft <--> Validation --> Validated ]:
+When automation chains are steps of a workflow, a good idea is to prefix them with a number so that they are displayed in the same order they will be triggered. Example with a workflow on the lifecycle [Draft <--> Validation --> Validated ]:
 
 *   _CM-01-UI-SendToValidation_
 *   _CM-02-UI-SendToValidated_

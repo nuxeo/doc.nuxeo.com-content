@@ -109,7 +109,7 @@ Escalation rules allow to execute an [automation chain]({{page space='nxdoc' pag
 
 {{#> callout type='note' heading='Escalation rules and node types'}}
 
-Please note that although this tab appears on every node, escalation rules only apply to nodes awaiting for a user action to be executed (corresponding to the suspended life cycle state).
+Please note that although this tab appears on every node, escalation rules only apply to nodes awaiting for a user action to be executed (corresponding to the suspended lifecycle state).
 
 {{/callout}}
 

@@ -196,7 +196,7 @@ Definition
 
 </td><td colspan="1">
 
-selected life cycle does not exist
+selected lifecycle does not exist
 
 </td><td colspan="1">
 
@@ -896,7 +896,7 @@ the validation is done only on static field values (expressions are ignored)
 
 </td><td colspan="1">
 
-A Document.SetLifeCycle operation reference an undefined life cycle transition
+A Document.SetLifeCycle operation reference an undefined lifecycle transition
 
 </td><td colspan="1">
 

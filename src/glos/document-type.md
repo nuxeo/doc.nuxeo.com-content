@@ -16,17 +16,17 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/OYUlAQ'
     source_link: /display/GLOS/Document+Type
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-23 14:34'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-15 07:30'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-13 07:49'
         message: ''
@@ -37,7 +37,7 @@ history:
 
 {{! multiexcerpt name='glossary-document-type'}}
 
-A document type is the set of properties that define a document. A document type is defined by the list of its schemas, its life cycle, the forms to present to the user or its versioning policy.
+A document type is the set of properties that define a document. A document type is defined by the list of its schemas, its lifecycle, the forms to present to the user or its versioning policy.
 
 {{! /multiexcerpt}}
 

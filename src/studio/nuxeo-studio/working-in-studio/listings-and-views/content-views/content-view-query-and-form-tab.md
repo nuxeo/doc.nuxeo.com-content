@@ -247,9 +247,9 @@ Starting from Nuxeo Platform 6.0, Elasticsearch is embedded in the platform. Che
 
 Defining the query lets you define the list of documents you want to show in your content view if no information is set by the Nuxeo user.
 
-The Nuxeo query system is based on our NXQL technology, which is very similar&nbsp;to SQL query expression. For those who know SQL, using NXQL will be very easy. For those who are not familiar with SQL, you can read [the NXQL dedicated documentation]({{page space='nxdoc' page='nxql'}}) and look at [ some NXQL examples ]({{page space='nxdoc' page='nxql#nxql-examples'}}).
+The Nuxeo query system is based on our NXQL technology, which is very similar to SQL query expression. For those who know SQL, using NXQL will be very easy. For those who are not familiar with SQL, you can read [the NXQL dedicated documentation]({{page space='nxdoc' page='nxql'}}) and look at [ some NXQL examples ]({{page space='nxdoc' page='nxql#nxql-examples'}}).
 
-You don't have to specify the `SELECT * FROM Document` part of the request that is automatically managed by the content view. If the **Query filter&nbsp;**field is empty, then there is no restriction. So it displays&nbsp;**all** documents, including:
+You don't have to specify the `SELECT * FROM Document` part of the request that is automatically managed by the content view. If the **Query filter** field is empty, then there is no restriction. So it displays **all** documents, including:
 
 *   Deleted documents,
 *   Versioned documents,
@@ -268,11 +268,11 @@ By default, Nuxeo Studio fills this field to filter out:
 
 You can change or remove these filter clauses if you wish.
 
-By default, this field is limited to static filtering (specific document type, specific date, specific life cycle state, etc.). If you want the content view filter to be based on the context of execution, you can set some "where" clauses to apply by default to the result list. See the next section.
+By default, this field is limited to static filtering (specific document type, specific date, specific lifecycle state, etc.). If you want the content view filter to be based on the context of execution, you can set some "where" clauses to apply by default to the result list. See the next section.
 
 ### Query Parameters Field
 
-The&nbsp;**Query Filter** field enables you to express the "where" clauses of your content view filter. The **query parameters**&nbsp;field lets you define a "where" clause based on the execution context. For instance:
+The **Query Filter** field enables you to express the "where" clauses of your content view filter. The **query parameters** field lets you define a "where" clause based on the execution context. For instance:
 
 *   The current date (for instance documents issued before today)
 *   The user that displays the content view (documents created by the current user or to which the current user has contributed)
@@ -280,24 +280,53 @@ The&nbsp;**Query Filter** field enables you to express the "where" clauses of yo
 
 To express a dynamic expression:
 
-1.  Write your where clause in the **Query Filter**&nbsp;field but with a question mark as the right value (for instance `ecm:parentId = ?`),
+1.  Write your where clause in the **Query Filter** field but with a question mark as the right value (for instance `ecm:parentId = ?`),
 2.  Define the dynamic value in the **query parameters** field.
 
 Here are some examples.
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Query filter</th><th colspan="1">Query parameter</th></tr><tr><td colspan="1">Keeping the documents created by the current user</td><td colspan="1">`dc:creator = ?`</td><td colspan="1">`#{currentUser.name}`</td></tr><tr><td colspan="1">Keeping the children documents of the currently displayed document</td><td colspan="1">`ecm:parentId = ?`</td><td colspan="1">`#{currentDocument.id}`</td></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover"><tbody>
+<tr>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">Query filter</th>
+<th colspan="1">Query parameter</th>
+</tr>
+<tr>
+<td colspan="1">Keeping the documents created by the current user</td><
+td colspan="1">`dc:creator = ?`</td>
+<td colspan="1">`#{currentUser.name}`</td><
+/tr>
+<tr>
+<td colspan="1">Keeping the children documents of the currently displayed document</td>
+<td colspan="1">`ecm:parentId = ?`</td>
+<td colspan="1">`#{currentDocument.id}`</td>
+</tr>
+<tr>
+<td colspan="1">
 
-Keeping the descendant of the currently displayed&nbsp;document
+Keeping the descendant of the currently displayed document
 
 Note that this request is less efficient than the previous one.
 
-</td><td colspan="1">`ecm:path&nbsp;STARTSWITH ?`</td><td colspan="1">`#{currentDocument.path}`</td></tr><tr><td colspan="1">Keeping documents issued before today</td><td colspan="1">`dc:issued < ?`</td><td colspan="1">`#{currentDate.toString()}`</td></tr></tbody></table></div>
+</td>
+<td colspan="1">`ecm:path&nbsp;STARTSWITH ?`</td>
+<td colspan="1">`#{currentDocument.path}`</td>
+</tr>
+<tr>
+<td colspan="1">Keeping documents issued before today</td>
+<td colspan="1">`dc:issued < ?`</td>
+<td colspan="1">`#{currentDate.toString()}`</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 When your query filter has several `?` parameters, you must add the query parameters in the same order as the criteria in the query filter.
 
 ![]({{file name='STUDIO-query-filter.png' space='nxdoc' page='how-to-define-a-new-content-view'}} ?w=600,border=true)
 
-More information on NXQL and examples are available on the&nbsp;[dedicated page in the developer documentation]({{page space='nxdoc' page='nxql#nxql-examples'}}).
+More information on NXQL and examples are available on the [dedicated page in the developer documentation]({{page space='nxdoc' page='nxql#nxql-examples'}}).
 
 {{! multiexcerpt name='query-parameter-EL-syntax-note'}}
 
@@ -318,7 +347,7 @@ The **Default Sort** field lets you express the default sorting applied to the r
 You can sort through:
 
 *   A field of the listed documents,
-*   A property of the listed documents (life cycle state, lock date, lock owner, etc.).
+*   A property of the listed documents (lifecycle state, lock date, lock owner, etc.).
 
 **To sort through a field:**
 

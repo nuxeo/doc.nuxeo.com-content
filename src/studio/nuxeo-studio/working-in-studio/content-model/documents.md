@@ -183,9 +183,9 @@ Read more about documents, properties and schemas in the [Essential Nuxeo Platfo
 
 ## Creating a Document Type
 
-To create a document type, click on button "**New**".&nbsp;
+To create a document type, click on button "**New**".
 
-&nbsp;&nbsp;![]({{file name='doc_type_creation.png' space='nxdoc' page='how-to-define-a-document-type'}} ?w=350,h=269,border=true)
+![]({{file name='doc_type_creation.png' space='nxdoc' page='how-to-define-a-document-type'}} ?w=350,h=269,border=true)
 
 *   **Feature ID**: The id of the document type. Will be used as the technical id at generation. Convention is to use a capital for the first letter.
 *   **Extend**: The document type that the type being created will extend. Local types are the ones created in your Studio project. Default types are the ones part of the Nuxeo distribution you use (Nuxeo DM 5.6, ...)
@@ -196,24 +196,24 @@ if you don't find the default type you are looking for, you can add it [using th
 
 {{/callout}}
 
-*   **Label**: You can put here&nbsp; a label or an i18n key.
-*   **Description:**&nbsp;The description of the document type. This description is here for information purposes.
+*   **Label**: You can put here a label or an i18n key.
+*   **Description**: The description of the document type. This description is here for information purposes.
 
 ## Definition Tab
 
 ![]({{file name='doc_definition_tab.png' space='nxdoc' page='how-to-define-a-document-type'}} ?w=650,border=true)
 
-*   **Extends**: See the&nbsp;[undefined](#creating-a-document-type)&nbsp;section of this page.
-*   **Label:&nbsp;**See the&nbsp;[undefined](#creating-a-document-type)&nbsp;section of this page.
-*   **Category**: The category defines in which column the document type appears on the "new Document" pop up in Nuxeo DM. If you don't want to use the default categories, you can add a new one&nbsp;[using the custom document category registry]({{page page='registries'}}).
+*   **Extends**: See the [undefined](#creating-a-document-type) section of this page.
+*   **Label**: See the [undefined](#creating-a-document-type) section of this page.
+*   **Category**: The category defines in which column the document type appears on the "new Document" pop up in Nuxeo DM. If you don't want to use the default categories, you can add a new one [using the custom document category registry]({{page page='registries'}}).
     ![]({{file name='available-documents-workspace.png' space='userdoc' page='creating-content'}} ?w=500,h=216,border=true)
-*   **Icon**: The icon that will be displayed in the default list view. Note that you can upload new icons on the&nbsp;[resources]({{page page='resources'}})&nbsp;section.
-*   **Large Icon**: The icon that will be displayed in the "Available document types" pop-up and the&nbsp;[Icon view]({{page space='userdoc58' page='changing-workspace-content-presentation'}}) (view available up to Nuxeo Platform 5.8). Note that you can upload new icons on the&nbsp;[resources]({{page page='resources'}})&nbsp;section.
+*   **Icon**: The icon that will be displayed in the default list view. Note that you can upload new icons on the [resources]({{page page='resources'}}) section.
+*   **Large Icon**: The icon that will be displayed in the "Available document types" pop-up and the [Icon view]({{page space='userdoc58' page='changing-workspace-content-presentation'}}) (view available up to Nuxeo Platform 5.8). Note that you can upload new icons on the& [resources]({{page page='resources'}}) section.
 *   **Default view**: The default JSF view. This is a technical attribute that you probably don't want to change (will be moved in an advanced section in the future).
-*   **Lifecycle**: the life cycle the document will follow. You can use a life cycle that&nbsp;[you defined]({{page page='life-cycle'}})&nbsp;in Studio.
-*   **Container types:&nbsp;**The document types selected here are the ones from which it will be possible to create the document type being designed.
+*   **Lifecycle**: the lifecycle the document will follow. You can use a lifecycle that [you defined]({{page page='life-cycle'}}) in Studio.
+*   **Container types**:The document types selected here are the ones from which it will be possible to create the document type being designed.
 *   **Accepted children types**: The document types selected here will be creatable just under the document type being designed. This attribute only appears for document types that have the "folderish" facet.
-*   **Document**&nbsp;**Facets**: Read the page [Available Facets]({{page space='nxdoc' page='available-facets'}})&nbsp;for better understanding of what facets are and which ones are available. If you don't find the facet you are looking for, you can add it&nbsp;[using the custom facet registry]({{page page='registries'}}).
+*   **Document Facets**: Read the page [Available Facets]({{page space='nxdoc' page='available-facets'}}) for better understanding of what facets are and which ones are available. If you don't find the facet you are looking for, you can add it [using the custom facet registry]({{page page='registries'}}).
 *   **Deployment mode**: This is particularly useful when you declare a document type that already exists in the default product from Studio, for instance "Folder", or "File". When the contribution generated by Studio is deployed on Nuxeo DM (for instance when you click on "Update" from Admin Center), either you want to delete the previous definition, and use only what was defined from Studio (_override_), or you just want to "complete" the definition from what you configured in Studio (_merge_). A concrete example is: by default, an icon is defined for the Folder document type. If you redefine the folder document type from Studio and don't configure the Icon and Big Icon attributes, then if you select "override" for Deployment mode, your folders won't have any icon, while if you select "merge", they will keep the icon that was originally defined.
 
 ## Schema Tab
@@ -223,19 +223,19 @@ This is where you can define a schema for your document type. It shows:
 *   The inherited schemas, i.e. schemas from the document type you are extending
 *   The **Add extra schema to this document type** form: Select schemas from other document types to be available for your custom document type.
 *   The **Add a custom schema** form: Define your own schema.
-    This is equivalent to defining the schema from the [Schema]({{page page='schemas'}})&nbsp;feature and assign it from the **Add extra schema** form. Read the [Schema]({{page page='schemas'}}) page for more information on how to define your schema.
+    This is equivalent to defining the schema from the [Schema]({{page page='schemas'}}) feature and assign it from the **Add extra schema** form. Read the [Schema]({{page page='schemas'}}) page for more information on how to define your schema.
 
 ![]({{file name='doc_type_schema_tab.png' space='nxdoc' page='how-to-define-a-document-type'}} ?w=600,h=413,border=true)
 
 ## Creation, Edition, View and Header Layout Tabs
 
-On those tabs, you can respectively configure the creation, edition, view and header layouts of the document type you are designing. They work like the&nbsp;[form layouts]({{page page='form-layouts'}})&nbsp;feature, thus you can follow the same instructions.
+On those tabs, you can respectively configure the creation, edition, view and header layouts of the document type you are designing. They work like the [form layouts]({{page page='form-layouts'}}) feature, thus you can follow the same instructions.
 
-However there are a few differences/additional features:&nbsp;
+However there are a few differences/additional features:
 
-*   The&nbsp;**Header layout**, which is not on the form layout feature is the part that is displayed on top of the tabs when viewing a document. By default, it displays the title and the description.
+*   The **Header layout**, which is not on the form layout feature is the part that is displayed on top of the tabs when viewing a document. By default, it displays the title and the description.
 *   You don't have to reference the layout anywhere, they will be bound automatically to the document type you are configuring.
-*   **External Layouts**: it is possible to "compose" the creation/edition/view/header layouts as being the aggregation of multiple layouts that are created from the&nbsp;[form layouts]({{page page='form-layouts'}})&nbsp;feature.
+*   **External Layouts**: it is possible to "compose" the creation/edition/view/header layouts as being the aggregation of multiple layouts that are created from the [form layouts]({{page page='form-layouts'}}) feature.
 
 ![]({{file name='creation_layout_form.png' space='nxdoc' page='how-to-define-a-document-type'}} ?w=600,border=true)
 
@@ -243,20 +243,20 @@ However there are a few differences/additional features:&nbsp;
 
 ![]({{file name='doc_type_tabs_tab.png' space='nxdoc' page='how-to-define-a-document-type'}} ?w=650,border=true)
 
-Documents in DM are displayed with a series of tabs to display all the actions that can be done on documents. By default, a new document type will hold all the tabs. From this view in Studio, you can disable some of them, for the document type you are configuring. This is a binary activation/inactivation. If you want to refine the tabs display rules, you can&nbsp;[contribute XML extensions to the action service](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--actions), so as to override existing contributions (for advanced users).
+Documents in DM are displayed with a series of tabs to display all the actions that can be done on documents. By default, a new document type will hold all the tabs. From this view in Studio, you can disable some of them, for the document type you are configuring. This is a binary activation/inactivation. If you want to refine the tabs display rules, you can [contribute XML extensions to the action service](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--actions), so as to override existing contributions (for advanced users).
 
 ## {{> anchor 'tabs-content-views'}}Tabs - Content Views
 
 ![]({{file name='doc_type_content_view.png'}} ?w=650,border=true)
 
-Content view tabs are tabs that display a list of documents in a table, that is the result of an&nbsp;[NXQL]({{page space='nxdoc' page='nxql'}})&nbsp;query (a content view). You configure the content view with the&nbsp;[content view feature]({{page page='content-views'}})&nbsp;and just reference it here.
+Content view tabs are tabs that display a list of documents in a table, that is the result of an [NXQL]({{page space='nxdoc' page='nxql'}}) query (a content view). You configure the content view with the [content view feature]({{page page='content-views'}}) and just reference it here.
 
 *   **Main content**: you can choose which content view is used for the document you are configuring. This appears only for document types that are folderish.
-*   **Trash content**&nbsp;**:&nbsp;**you can choose which content view is used for the document that are displayed in the trash. This appears only for document types that are folderish.
+*   **Trash content**: you can choose which content view is used for the document that are displayed in the trash. This appears only for document types that are folderish.
 *   **Additional tabs configuration**:
 
     *   **Label**: The name displayed for this new tab. Can be a translated key.
-    *   **Content views:**&nbsp;You can reference several content views that will be displayed one after the other.
+    *   **Content views**: You can reference several content views that will be displayed one after the other.
     *   **Order**: The place of the tab on the document . You can put numbers like 0, 5, 10, 40, 150, ...
     *   **Tab Activation**: (TODO: a specific page for this screen that appears in many places on Studio).
 
@@ -277,9 +277,5 @@ Adding a tab that displays a content view using this feature is easy and straigh
 - [How-To Index]({{page space='nxdoc' page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-&nbsp;
 
 </div></div>

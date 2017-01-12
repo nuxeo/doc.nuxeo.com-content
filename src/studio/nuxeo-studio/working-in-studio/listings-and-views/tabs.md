@@ -200,8 +200,6 @@ history:
 
 When you create new document types, you often need to have specific tabs on these document types that display information relevant to your users. A **Tabs** menu item enables you to create customized tabs on which you can define the elements you want to be displayed: widgets, layouts, content views, actions bars. You can also define the conditions that should be met to display the tab (on which document types the tab will be available, for which users, etc).
 
-&nbsp;
-
 {{#> callout type='info' }}
 
 The **Tabs** feature is available from Nuxeo Platform 5.6.
@@ -222,7 +220,7 @@ The **Tabs** feature is available from Nuxeo Platform 5.6.
 **The definition tab is used to set up what should be displayed on your tab.
 **
 
-*   **Label:&nbsp;**Name that will be displayed to the users.
+*   **Label**: Name that will be displayed to the users.
 *   **Category:** defaults to "document category". More categories can be added using XML extensions.
 *   **Order:** order in which the tabs will be displayed from left to right. The higher the number, the more you move the tab to the right side of the screen. Default tabs number start at 10, so you should add a 2 digits number at least in this field if you expect your custom tab to be placed after the default ones.
 *   **Add grid row:** This button helps in defining the grid structure you would like to obtain. Click on **Add Grid Row** and, in the pop up window, click on the row type that you want to add.
@@ -246,11 +244,11 @@ The enablement tab defines when the tab should be available.
     *   In the **Current user has one of the permissions** multi-select box, select the permissions the user must have to be displayed the tab;
     *   In the **Current document has one of the types** multi-select box, choose the documents types on which the tab will be displayed;
     *   In the **Current document has facet** drop-down list, select the [facet]({{page space='nxdoc' page='available-facets'}}) that the document must have for the tab to be displayed;
-    *   In the **Current document has life cycle** text box, type the life cycle state the document must be in for the tab to be displayed;
+    *   In the **Current document has life cycle** text box, type the lifecycle state the document must be in for the tab to be displayed;
     *   In the **Document path starts with** text box, type the path the document must be in for the tab to be displayed;
     *   In the **Current document is** drop-down list, select the kind of document must be for the tab to be displayed;
     *   In the **Current user is member of** text box, select the user group the user must be part of for the tab to be displayed;
-    *   Check the&nbsp;**Current user** **is** **administrator** checkbox if you wish to restrict this tab to administrators group members only;
+    *   Check the **Current user** **is** **administrator** checkbox if you wish to restrict this tab to administrators group members only;
     *   In the **Custom EL expression** text box, type an EL expression that should be evaluated for the tab to be displayed.Keep in mind that requirements are cumulative; the tab will be displayed only if all previous conditions defined are met. You may leave fields blank if you do not wish to apply some of the restrictions available.
 2.  Click on **Save** to save your modifications.
 
@@ -262,7 +260,7 @@ The Content view widget type is available from the menu on the right on the Defi
 
 **When should I use a content view widget ?**
 
-This widget type is usually combined with a tab in order to create specific content tabs, showing for example a substring of documents depending on their life cycle state. As you can add as many content view widgets as you like, you may achieve various display results that would not have been possible using a single NXQL query.
+This widget type is usually combined with a tab in order to create specific content tabs, showing for example a substring of documents depending on their lifecycle state. As you can add as many content view widgets as you like, you may achieve various display results that would not have been possible using a single NXQL query.
 
 ### Toggleable form widget type
 
@@ -296,7 +294,3 @@ The "Tabs" widget type is configured as is (it uses the "MyTab sub tab" category
 Sub tabs can be defined as standard tabs, but using the "MyTab sub tab" category:
 
 ![]({{file name='sub_tab_conf.png'}} ?w=450,border=true)
-
-* * *
-
-&nbsp;

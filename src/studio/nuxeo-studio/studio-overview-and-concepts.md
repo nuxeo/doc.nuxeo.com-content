@@ -129,7 +129,7 @@ Nuxeo Studio enables you to adapt the Nuxeo Platform and make it your own: Custo
 Using Nuxeo Studio you can:
 
 *   Brand your application
-*   Add new document types, with new metadata and life cycle
+*   Add new document types, with new metadata and lifecycle
 *   Create forms adapted to your specific document types
 *   Customize the screen listing documents (content views) to display relevant business information
 *   Define your own search forms

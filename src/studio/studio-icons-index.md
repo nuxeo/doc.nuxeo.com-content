@@ -221,21 +221,38 @@ Expression builder
 
 </td></tr><tr><td colspan="1">![]({{file name='copy.gif'}})</td><td colspan="1">Copy icon</td></tr><tr><td colspan="1">![]({{file name='help-icon.png'}})</td><td colspan="1">Help icon</td></tr><tr><td colspan="1">![]({{file name='icon_subwidgets_edit.png'}})</td><td colspan="1">Subwidget edit icon</td></tr><tr><td colspan="1">![]({{file name='edit_wiz.png'}})</td><td colspan="1">Studio Burger icon</td></tr></tbody></table></div>
 
-## Life cycle Icons
+## Lifecycle Icons
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Icon</th><th colspan="1">Description</th></tr><tr><td colspan="1">![]({{file name='i_state.png'}})</td><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Icon</th>
+<th colspan="1">Description</th>
+</tr>
+<tr>
+<td colspan="1">![]({{file name='i_state.png'}})</td>
+<td colspan="1">
 
 Initial state icon.
 
-Icon for the initial state of a life cycle.
+Icon for the initial state of a lifecycle.
 
-</td></tr><tr><td colspan="1">![]({{file name='state.png'}})</td><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">![]({{file name='state.png'}})</td>
+<td colspan="1">
 
 State icon.
 
-Icon used for any state of a life cycle, except the initial state.
+Icon used for any state of a lifecycle, except the initial state.
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ## Workflow Icons
 
