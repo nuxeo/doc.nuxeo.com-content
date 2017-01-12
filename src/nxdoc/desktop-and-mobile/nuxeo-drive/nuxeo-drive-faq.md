@@ -9,6 +9,9 @@ labels:
     - multiexcerpt
     - excerpt
 toc: true
+version_override:
+    'LTS 2015': 710/userdoc/nuxeo-drive-faq
+    '6.0': 60/userdoc/nuxeo-drive-faq
 confluence:
     ajs-parent-page-id: '13664723'
     ajs-parent-page-title: Nuxeo Drive
