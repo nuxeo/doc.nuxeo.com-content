@@ -950,12 +950,12 @@ GET /api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c
 
 &nbsp;
 
-In the above example the search has a search document model, containing its own properties. To display these, pass the desired schemas in the [X-NXproperties header]({{page page='special-http-headers'}}) when performing the request.
+In the above example the search has a search document model, containing its own properties. To display these, pass the desired schemas in the [properties header]({{page page='special-http-headers'}}) when performing the request.
 
 {{#> panel type='code' heading='Request'}}
 
 ```
-[HEADER] X-NXproperties: default_search
+[HEADER] properties: default_search
 GET /api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c
 ```
 

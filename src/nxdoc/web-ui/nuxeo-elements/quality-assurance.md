@@ -102,7 +102,7 @@ For instance a listing could only require the `dublincore` schema of the documen
 
 A document can contain several schemas with a dozen of metadata so the JSON payload in response could be unnecessarily too big. Building a listing of several documents can make the client side navigation slower: we need to filter schemas.
 
-[Special headers](https://doc.nuxeo.com/nxdoc/special-http-headers) are reserved for this purpose and can be used easily with the Nuxeo resource elements: `nuxeo-resource` and `nuxeo-operation`.
+[Special header]({{page version='' space='nxdoc' page='special-http-headers'}}) is reserved for this purpose and can be used easily with the Nuxeo resource elements: `nuxeo-resource` and `nuxeo-operation`.
 
 Example:
 

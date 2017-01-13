@@ -339,7 +339,7 @@ Documents can be fetched using their id or path.
     nuxeo.repository()
         // These headers allow us to retrieve the associated contract owner in the same call
         .header('depth', 'max')
-        .header('X-NXfetch.document', 'properties')
+        .header('fetch.document', 'properties')
         // We'll also retrieve the document hierarchy
         .enricher('document', 'breadcrumb')
         .fetch('/default-domain/workspaces/North America/awesome-tech/skynet-ai-maintenance')

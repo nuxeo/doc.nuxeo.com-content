@@ -474,8 +474,8 @@ nuxeo.repository().fetch("document id or path")...
 
 Similarly to what we saw previously, headers can be set to fine-tune your request. Various headers are available, depending on the situation. A few examples when fetching a document:
 
-1.  `X-NXproperties:schema1, schema2`: Retrieves only specific schemas
-2.  `X-NXproperties:*`: Retrieves all schemas
+1.  `properties:schema1, schema2`: Retrieves only specific schemas
+2.  `properties:*`: Retrieves all schemas
 
 More headers will be seen when they will be useful to us.
 
@@ -559,9 +559,9 @@ The `depth` header allow you to control the aggregation depth:
 On top of the `depth` header, you can use:
 
 *   A header:
-    `X-NXfetch.document` with the property ids storing the references, for each additional object to retrieve, e.g.: `"X-NXfetch.document":"mySchema:aProperty, myOtherSchema:yetAnotherProperty"`
+    `fetch.document` with the property ids storing the references, for each additional object to retrieve, e.g.: `"fetch.document":"mySchema:aProperty, myOtherSchema:yetAnotherProperty"`
 
-    Or `X-NXfetch.document:properties` instead to retrieve all objects at the same time.
+    Or `fetch.document:properties` instead to retrieve all objects at the same time.
 *   The corresponding JS client methods:
 
     ```javascript
@@ -628,7 +628,7 @@ Using resolvers is a combination of:
 
 _Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" on [Nuxeo University](https://university.nuxeo.io)_
 
-Adding enrichers when fetching a document is done by setting the `X-NXenrichers.document` header, `document` being here the entity type that will be enriched. If you were calling a user, you would use a the `X-NXenrichers.user` header instead, and so on. As for resolvers, what matters here is the entity type of the first object you have been calling. Entity types are listed in the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation.
+Adding enrichers when fetching a document is done by setting the `enrichers.document` header, `document` being here the entity type that will be enriched. If you were calling a user, you would use a the `X-NXenrichers.user` header instead, and so on. As for resolvers, what matters here is the entity type of the first object you have been calling. Entity types are listed in the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation.
 
 Enrichers are provided in the response into the `contextParameters` object.
 

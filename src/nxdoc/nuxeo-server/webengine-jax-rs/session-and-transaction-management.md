@@ -155,7 +155,7 @@ Note that the `UserSession` object is available only in the context of a WebEngi
 You can choose from the client side which will be the repository used to create a managed `CoreSession`. To do this you can either use an HTTP request header:
 
 ```
-X-NXRepository: myrepo
+Repository: myrepo
 ```
 
 or a request parameter:

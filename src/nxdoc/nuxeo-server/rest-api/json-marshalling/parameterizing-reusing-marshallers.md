@@ -128,7 +128,7 @@ Locale locale = ctx.getLocale();
 
 #### Delivering/Using a CoreSession to/in Marshallers
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">Retrieved from the WebContext, or from a document or created from a `nxrepository` parameter or created from a X-NXrepository header.</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">Retrieved from the WebContext, or from a document or created from a `nxrepository` parameter or created from a Repository header.</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
 
 ```
 CoreSession session = ...;
@@ -201,8 +201,8 @@ URL:
 
 HTTP Header:
 
-*   `X-NXproperties:*`
-*   `X-NXproperties:dublincore,file`
+*   `properties:*`
+*   `properties:dublincore,file`
 
 </td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
 
