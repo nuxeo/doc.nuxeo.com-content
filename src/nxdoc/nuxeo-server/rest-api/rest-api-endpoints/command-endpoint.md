@@ -355,13 +355,7 @@ To learn more about Content Automation, see the [Automation documentation]({{pag
 
 {{/callout}}
 
-<<<<<<< HEAD
-To use the Automation REST service you need to know the URL where the service is exposed, and the different formats used by the service to exchange information. All the other URLs that appear in the content exchanged between the client and server are relative paths to the Automation service URL.
-
-You can discover the Command Endpoint by playing live on the [Nuxeo Platform API Playground](http://nuxeo.github.io/api-playground/#/), in the Command section.
-=======
 To use the Automation REST service you need the URL where the service is exposed, and the different formats used by the service to exchange information. All other URLs that appear in content exchanged between the client and server are relative paths to the Automation service URL.
->>>>>>> NXDOC-1033: Clean up Command Endpoints page
 
 Operations context and parameters as well as response objects (documents) are formatted as JSON objects. To transport blobs, HTTP multipart requests should be used to attach blob binary data along with the JSON objects describing the operation request.
 
@@ -379,11 +373,7 @@ You do not need to be logged in to be able to get the Automation service descrip
 
 The operations registry (loaded by performing a GET on the Automation service URL) contains all the information you need to execute operations.
 
-<<<<<<< HEAD
-To execute an operation you should build an operation request descriptor and post it on the operation URL. When sending an operation request you must use the `application/json+nxrequest` content type (`application/json` since 5.9.5 is allowed as well). Also you need to authenticate your request (using basic authentication) since most of the operations are accessing the Nuxeo repository.
-=======
 To execute an operation, build an operation request descriptor and POST it on the operation URL. When sending an operation request you must use the `application/json+nxrequest` content type (`application/json` from 5.9.5 is allowed as well). You need to authenticate your request using basic authentication since most of the operations are accessing the Nuxeo repository.
->>>>>>> NXDOC-1033: Clean up Command Endpoints page
 
 An operation request is a JSON document with the following format:
 
@@ -394,21 +384,11 @@ An operation request is a JSON document with the following format:
 
 ```
 
-<<<<<<< HEAD
-All these three request parameters are optional and depend on the executed operation.
-
-*   If the operation has no input (a void operation) then the input parameter can be omitted.
-*   If the operation has no parameters then `params` can be omitted.
-*   If the operation does not want to push some specific properties in the operation execution context then context can be omitted. In fact context parameters are useless for now but may be used in future.
-
-The `input` parameter is a string that acts as a reference to the real object to be used as the input. There are four types of supported inputs: void, document, document list, blob, blob list.
-=======
 These three request parameters are optional and depend on the executed operation.
 
 *   If the operation has no input (a void operation), the `input` parameter can be omitted.
 *   If the operation has no parameters, `params` can be omitted.
 *   If the operation does not push specific properties to the operation execution context then context can be omitted.
->>>>>>> NXDOC-1033: Clean up Command Endpoints page
 
 The `input` parameter is a string that acts as a reference to the real object to be used as the input. There are four types of supported inputs: void, document, document list, blob, blob list.
 
@@ -456,45 +436,6 @@ All these encoding rules are the same as those used when defining operation chai
 
 ## Operation Execution Response
 
-<<<<<<< HEAD
-An operation can have one of the following output types:
-
-*   `document`: A repository document;
-*   `documents`: A list of documents;
-*   `blob`: A blob (binary content usually attached to a document);
-*   `blobs`: A list of blobs;
-*   `void`: The operation has no output (output is void).
-
-Apart from these possible outputs, the operation can abort due to an exception.
-
-All these cases are represented using the following HTTP responses:
-
-*   `document` -> A JSON object describing the document is returned. The used Content-Type is `**application/json+nxentity**`
-*   `documents` -> a JSON object describing the document list is returned. The used Content-Type is `**application/json+nxentity**`
-*   `blob` -> The blob raw content is returned. The used Content-Type will be the same as the blob mime-type.
-*   `blobs` -> A Multipart/Mixed content is returned. Each part will be a blob from the list (order is preserved). Each part will use the right Content-Type as given by the blob mime-type.
-*   `void` -> HTTP **204** is returned. No content and no Content-Type is returned.
-*   `exception` -> A status code > **400** is returned and the content will be the server exception encoded as a JSON object. The used Content-Type is `**application/json+nxentity**`.
-
-When an exception occurs, the server tries to return a meaningful status code. If no suitable status code is found, a generic 500 code (server error) is used.
-
-You noticed that each time when returned objects are encoded as JSON objects, the `**application/json+nxentity**` Content-Type will be used. We also saw that only document, documents and exception objects are encoded as JSON.
-
-Here we will discuss the JSON format used to encode these objects.
-
-### Document
-
-A JSON document entity contains the minimal required information about the document as top level entries.
-
-These entries are always set on any document and are using the following keys:
-
-*   `uid`: The document UID;
-*   `path`: The document path (in the repository);
-*   `type`: The document type;
-*   `state`: The current lifecycle state;
-*   `title`: The document title;
-*   `lastModifed`: The last modified timestamp.
-=======
 An operation can have one of the following outputs:
 
 <div class="table-scroll">
@@ -577,7 +518,6 @@ These entries are always set on any document and use the following keys:
     </tbody>
   </table>
 </div>
->>>>>>> NXDOC-1033: Clean up Command Endpoints page
 
 All the other document properties are contained within a "properties" map using the property XPath as the key for the top level entries.
 
@@ -738,26 +678,10 @@ Request for service description:
 ```
 GET http://NUXEO_SERVER/nuxeo/site/automation
 Accept: application/json+nxautomation
-
-<<<<<<< HEAD
-The operation parameters specified inside the `params` property of the request are all strings. Operation parameters are typed, so on the server side the operation will know how to decode parameters in real Java classes. The supported parameter types are: string, long (integer number), double (floating point number), date, properties, document, documents, EL expression, EL template.
-=======
 ```
->>>>>>> NXDOC-1033: Clean up Command Endpoints page
 
 Response:
 
-<<<<<<< HEAD
-*   `string`: Let it as is.
-*   `long`: Just use a string representation of the number (in Java `Long.toString()`).
-*   `double`: Just use a string representation of the number (in Java `Double.toString()`).
-*   `date`: Use the W3C format (UTC timezone preferred).
-*   `boolean`: "true" or "false".
-*   `document`: Use the document UID or the absolute document path.
-*   `documents`: Use a comma separated list of document references.
-*   EL expression: put the "`expr:`" string before your EL expression. (E.g. `expr: Document.path`).
-*   EL template: put the "`expr:`" string before your template. (E.g. `expr: SELECT * FROM Document WHERE dc:title=@{my_var}`)
-=======
 ```
 HTTP/1.1 200 OK
 Content-Type: application/json+nxautomation
@@ -800,7 +724,6 @@ Content-Type: application/json+nxautomation
     // a list of operation chains (definition is identical to regular operations)
   ]
 }
->>>>>>> NXDOC-1033: Clean up Command Endpoints page
 
 ```
 
