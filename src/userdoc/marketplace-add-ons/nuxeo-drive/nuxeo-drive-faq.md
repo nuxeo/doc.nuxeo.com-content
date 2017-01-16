@@ -8,7 +8,7 @@ labels:
     - nuxeo-drive
 toc: true
 version_override:
-    'FT': 'nxdoc/nuxeo-drive-faq'
+    'FT': '/nxdoc/nuxeo-drive-faq'
 confluence:
     ajs-parent-page-id: '21299536'
     ajs-parent-page-title: Nuxeo Drive
