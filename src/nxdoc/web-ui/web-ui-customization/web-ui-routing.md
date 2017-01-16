@@ -1,8 +1,8 @@
 ---
-title: Routing
+title: Web UI Routing
 review:
     comment: ''
-    date: '2017-01-09'
+    date: '2017-01-16'
     status: ok
 toc: true
 labels:
@@ -17,11 +17,11 @@ tree_item_index: 800
 
 The [nuxeo-app.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L34) is the very top element of the Web UI.
 
-Its main content is composed as follow:
+Its main content is composed of:
  - a [paper-drawer-panel](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L307) which has:
    - a [paper-menu](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L317) defining the left drawer menu buttons.
-   - a collapsible [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L336) defining the left menu content associated to each menu button.
- - a [paper-header-panel](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L426) defining the main content with an [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L428):
+   - collapsible [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L336) defining the left menu content associated to each menu button.
+ - a [paper-header-panel](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L426) defining the main content with [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L428):
 
 
 ```xml
@@ -42,7 +42,7 @@ Its main content is composed as follow:
 </iron-pages>
 ```
 
-On this [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L428), you can see the `selected` attributes bound to the [page](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L513) property. When this [page](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L513) property changes its value, the [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L428) will display the content element which has the same `name`.
+On [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L428), you can see the `selected` attributes bound to the [page](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L513) property. When this [page](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L513) property changes its value, the [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L428) will display the content element which has the same `name`.
 
 For instance, when clicking on a collection in the *Collection* left menu, it will call the [_navigateFromCollection](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-app/nuxeo-app.html#L695) method:
 

@@ -2,7 +2,7 @@
 title: Web UI
 review:
     comment: ''
-    date: '2017-01-09'
+    date: '2017-01-13'
     status: ok
 labels:
     - lts2016-ok
@@ -95,7 +95,7 @@ history:
         version: '1'
 
 ---
-Nuxeo Web UI is a standard base web application for Nuxeo Server that connects via HTTP and displays all the features of the platform to the users. Customizable, scalable and built upon a framework of Web components, it allows the Nuxeo Platform developers to build their own front-application using these components. The [Nuxeo Web UI addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui?version=0.8.0) is available in beta version on our marketplace.
+Nuxeo Web UI is a standard base web application for Nuxeo Server that connects via HTTP and displays all the features of the platform to the users. Customizable, scalable and built upon a framework of Web components, it allows Nuxeo Platform developers to build their own front-end application using these components. The [Nuxeo Web UI addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) is available in beta version on [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/).
 ![]({{file name='web_ui_with_side_panel.png'}} ?w=650,border=true)
 
 It leverages the web as a platform and allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full screen suggester and several other features built to provide a rich user experience. Here are the most important topics on getting started with Web UI, customizing it and building new web apps using Nuxeo Elements:
@@ -117,7 +117,8 @@ It leverages the web as a platform and allows enhanced productivity with direct 
 ## Requirements
 
 {{! multiexcerpt name='webui-requirements'}}
-Nuxeo Web UI and Nuxeo Web UI Elements framework make use of the recent W3C standard "Web Components" and Google Polymer 1.0 framework. The Google Polymer framework comes with "polyfills for web components", a library that extends the support of web components standard to more browsers.
+Nuxeo Web UI and Nuxeo Web UI Elements framework make use of the recent W3C standard Web Components and Google Polymer 1.0 framework. The Google Polymer framework comes with polyfills for Web Components, a library that extends the support of web components standard to more browsers.
+
 Supported browsers for Nuxeo Web UI and Nuxeo Web UI Elements are:
  - Firefox
  - Chrome
@@ -200,7 +201,7 @@ This new pattern allows to start browsing without changing the context of work.
 
 ### Main View
 
-The last part of the UI is the main view that depends on what has been selected on the side menu. The main view will usually show lists of documents or a document and its details.
+The main view display depends on what has been selected on the side menu. The main view will usually show lists of documents or a document and its details.
 Lists of documents are presented in a table that proposes different functionalities like the infinite scroll instead of pagination, faceted filters in the header, easy columns selection with persistence of user's choice and a great visibility of selected elements.
 
 At the top of the main view toolbars are displayed according to the content being displayed:
@@ -213,14 +214,14 @@ At the top of the main view toolbars are displayed according to the content bein
 
 ![]({{file name='results_toolbar.png'}} ?w=77,border=true)
 
-A create button ![]({{file name='create_button.png'}} ?w=25,thumbnail=true) is also permanently displayed at the bottom right corner of the main view the to let you create or import documents anywhere in the application.
+A create button ![]({{file name='create_button.png'}} ?w=25) is also permanently displayed in the bottom right corner of the main view the to let you create or import documents anywhere in the application.
 
 ## Technical Overview
 
 Nuxeo Web UI has been built with simplicity and composability in mind. Nuxeo is a content application platform and our goal is to provide tools and components for you to build your own application. With Nuxeo Web UI we wanted to review our approach, make it simpler so anyone familiar with web development couple easily customize it or even just take is as an example of what can be achieved and build their own.
 Hence the shift from a highly configurable and pluggable UI to a more modular and composable one.
 
-With the introduction of **Web Components** browsers now offer a well defined component model that is performant, provided out of the box and has a familiar API. By leveraging DOM as the framework and extending HTML with our own custom tags we can empower web developers to use the tools and frameworks they are already familiar with to build rich web applications.
+With the introduction of **Web Components**, browsers now offer a well-defined high performance component model out of the box and has a familiar API. By leveraging DOM as the framework and extending HTML with our own custom tags we can empower web developers to use the tools and frameworks they are already familiar with to build rich web applications.
 
 ### Web Components
 
@@ -269,9 +270,9 @@ There are a number of elements built with Polymer that you can use to build your
 
 To learn more about Polymer and how you can start building your elements you can check out our [Polymer Guide]({{page page='polymer-guide'}}).
 
-It is important to keep in mind that Polymer is but a means to an end, it's there to make the job of building custom elements simpler, it is not a commitment in terms of application framework, web components are a standard and interoperability with other frameworks that build on web native technologies should be ensured.
+It is important to keep in mind that Polymer is but a means to an end. It's there to make the job of building custom elements simpler, it is not a commitment in terms of application framework. Web Components are a standard and interoperability with other frameworks that build on web native technologies should be ensured.
 
-This promise of interoperability and the ease of use of components built with the Polymer library led us to the creation of our own Nuxeo elements, a set of custom elements provided by us that not only allowed us to build our UI but also made available to developers so they too can build their own custom UIs.
+This promise of interoperability and the ease of use of components built with the Polymer library led us to the creation of our own Nuxeo elements, a set of custom elements provided by us that allowed us to build our UI and which we've made available to developers so they too can build their own custom UIs.
 
 ### Nuxeo Elements
 

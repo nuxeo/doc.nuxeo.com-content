@@ -1,8 +1,8 @@
 ---
-title: Slots
+title: Web UI Slots
 review:
     comment: ''
-    date: '2016-12-16'
+    date: '2017-01-16'
     status: ok
 toc: true
 labels:
@@ -17,9 +17,9 @@ tree_item_index: 600
 
 ## What Are Nuxeo Slots?
 
-Nuxeo slots are mechanisms to extend part of the nuxeo Web UI. A couple of `nuxeo-slots` are hardcoded in the web-ui source code in order to insert your own html elements and therefore extend the Web UI to meet your specific needs.
+Nuxeo slots are mechanisms which extend part of the Nuxeo Web UI. A couple of `nuxeo-slots` are hardcoded in the web-ui source code in order to insert your own HTML elements and extend the Web UI to meet your specific needs.
 
-The concept is simple. Let's assume we introduced somewhere in the Web UI the following slot:
+The concept is simple. Let's assume we introduced the following slot somewhere in the Web UI:
 
 ```xml
 <nuxeo-slot slot="MY_SLOT_NAME" model="[[mySlotModel]]"></nuxeo-slot>
@@ -33,9 +33,9 @@ then you can easily define your own content with:
   </template>
 </nuxeo-slot-content>
 ```
-and this content will be inserted in the dom right before where the `nuxeo-slot` is located.
+and this content will be inserted in the DOM right before where the `nuxeo-slot` is located.
 
-Moreover, you can see that `my-element` has its `my-element-property` bound to `aPropertyFromTheSlotModel` which is made available by the `nuxeo-slot` model. Indeed, the `[[mySlotModel]]` is an object which has a `aPropertyFromTheSlotModel` property.
+You can see that `my-element` has its `my-element-property` bound to `aPropertyFromTheSlotModel` which is made available by the `nuxeo-slot` model. The `[[mySlotModel]]` is an object which has a `aPropertyFromTheSlotModel` property.
 
 For a better understanding, please refer to the [DOCUMENT_ACTIONS](#document_actions) and where we concretely detail how additional document actions are added by the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon.
 
@@ -46,7 +46,7 @@ Here are the `nuxeo-slots` available in the Nuxeo Web UI.
 
 {{#> callout type='warning' }}
 
-The name and the location of the following slots are temporary and subjects to changes until the release of the final version.
+The name and the location of the following slots are temporary and subject to change until the release of the final version.
 
 {{/callout}}
 
@@ -70,7 +70,7 @@ The name and the location of the following slots are temporary and subjects to c
 
 #### Document Browsing Slots
 
-The following slots allows to extend available pages and actions when browsing a given document. They are located in [nuxeo-browser.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html).
+The following slots allow you to extend available pages and actions when browsing a given document. They are located in [nuxeo-browser.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html).
 
 ##### DOCUMENT_ACTIONS{{> anchor 'document_actions'}}
 
@@ -78,7 +78,7 @@ This slot defines the available top right actions to be performed on the current
 
 ![]({{file name='DOCUMENT_ACTIONS.png'}} ?w=400,border=true)
 
-A typical use case for extending the Web UI is you'd like to add new document actions. Let's have a look on how it is done by the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon which adds a new action to synchronize a document with local file system.
+A typical use case for extending the Web UI is you'd like to add new document actions. Let's have a look on how it is done with the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon which adds a new action to synchronize a document with the local file system.
 
 First, the DOCUMENT_ACTIONS `nuxeo-slot` is defined in the [nuxeo-browser.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html#L181) element like this:
 ```xml
@@ -127,7 +127,7 @@ The `DOCUMENT_ACTIONS` has therefore the following:
 
 ##### DOCUMENT_VIEWS_ITEMS and DOCUMENT_VIEWS_PAGES{{> anchor 'document_view_items'}}
 
-The **DOCUMENT_VIEWS_ITEMS** slot allows to define the available items to navigate on current document views such as *View*, *Permissions* and *History*.
+The **DOCUMENT_VIEWS_ITEMS** slot allows you to define the available items to navigate the current document views such as *View*, *Permissions* and *History*.
 
 ![]({{file name='DOCUMENT_VIEWS_ITEMS.png'}} ?w=400,border=true)
 
@@ -141,7 +141,7 @@ The **DOCUMENT_VIEWS_PAGES** slot must define the pages introduced by the **DOCU
 
 ##### BLOB_ACTIONS{{> anchor 'blob_actions'}}
 
-This slot is available on current document that has attached blobs. Default actions are *Preview*, *Delete* and *Open with Nuxeo Drive* (when the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon is installed).
+This slot is available on a current document that has attached blobs. Default actions are *Preview*, *Delete* and *Open with Nuxeo Drive* (when the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon is installed).
 
 ![]({{file name='BLOB_ACTIONS.png'}} ?w=400,border=true)
 
@@ -168,11 +168,11 @@ This slot is displayed when selecting one or more children documents of a Folder
 
 #### Main Application Menu slots
 
-The Web UI revolves around a left drawer menu allowing to navigate to documents, searches, application administration, collections, etc. The following slots shows how to extend this menu.
+The Web UI revolves around a left drawer menu allowing to navigate to documents, searches, application administration, collections, etc. The following slots show how to extend this menu.
 
 ##### SEARCH_MENU_BUTTONS{{> anchor 'search_menu_buttons'}}
 
-This slot allows to define additional searches accessible from the left menu.
+This slot allows you to define additional searches accessible from the left menu.
 
 ![]({{file name='SEARCH_MENU_BUTTONS.png'}} ?w=400,border=true)
 
@@ -185,7 +185,7 @@ The [Nuxeo DAM](https://github.com/nuxeo/nuxeo-dam/blob/8.10/nuxeo-dam-web-ui/sr
   </template>
 </nuxeo-slot-content>
 ```
-See this [documentation]({{page version='' space='nxdoc' page='web-ui-search'}}) for further information to create your own search for the Web UI.
+See this [documentation]({{page version='' space='nxdoc' page='web-ui-search'}}) for further information on creating your own search for the Web UI.
 
 **Slot Model Properties**
 
@@ -196,7 +196,7 @@ See this [documentation]({{page version='' space='nxdoc' page='web-ui-search'}})
 
 ##### ADMINISTRATION_MENU and ADMINISTRATION_PAGES{{> anchor 'administration_menu'}}
 
-This ADMINISTRATION_MENU slot allows to add additional Administration sub menus.
+This ADMINISTRATION_MENU slot allows you to add additional Administration sub menus.
 
 ![]({{file name='ADMINISTRATION_MENU.png'}} ?w=400,border=true)
 
@@ -209,11 +209,11 @@ This ADMINISTRATION_MENU slot allows to add additional Administration sub menus.
 
 ##### USER_MENU{{> anchor 'user_menu'}}
 
-This USER_MENU slot allows to add additional User sub menu items.
+This USER_MENU slot allows you to add additional User sub menu items.
 
 ![]({{file name='USER_MENU.png'}} ?w=400,border=true)
 
-On the above screenshot, you can see there's a Nuxeo Drive User menu item which is not part of the default Web UI. Indeed, it is extended by the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon which contributes the `USER_MENU` slot with [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html#L24):
+On the above screenshot, you can see there's a Nuxeo Drive User menu item which is not part of the default Web UI. It is extended by the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon which contributes the `USER_MENU` slot with [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html#L24):
 
 ```xml
 <nuxeo-slot-content name="drivePageLink" slot="USER_MENU">
@@ -226,7 +226,7 @@ Note the:
 ```properties
 route="page:drive"
 ```
-thanks to this property, the action of clicking this menu items will navigate to a page named `drive`. This page is actually also contributed to the Web UI with the [PAGES](#drawer_pages) slot extension also from [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html#L31):
+Thanks to this property, clicking on this menu item will navigate to a page named `drive`. This page is also contributed to the Web UI with the [PAGES](#drawer_pages) slot extension also from [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html#L31):
 
 ```xml
 <nuxeo-slot-content name="drivePage" slot="PAGES">
@@ -246,7 +246,7 @@ which will be inserted in [nuxeo-app.html](https://github.com/nuxeo/nuxeo-web-ui
 
 ##### DRAWER_PAGES and PAGES {{> anchor 'drawer_pages'}}
 
-The `DRAWER_PAGES` allows to add new items to the main left drawer menu (see below screenshot) and works exactly the same than the [USER_MENU](#user_menu) one.
+The `DRAWER_PAGES` allows you to add new items to the main left drawer menu (see screenshot below) and works exactly the same as the [USER_MENU](#user_menu).
 
 ![]({{file name='DRAWER_PAGES.png'}} ?w=400,border=true)
 
@@ -261,7 +261,7 @@ The `DRAWER_PAGES` allows to add new items to the main left drawer menu (see bel
 
 ##### DOCUMENT_CREATE_ACTIONS{{> anchor 'document_create_actions'}}
 
-This slot provides actions displayed when hovering the bottom right Floating Action Button to create new documents. By default, it inserts [nuxeo-document-create-shortcuts.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-document-create-actions/nuxeo-document-create-shortcuts.html) which shows shortcuts to latest created document types wizard.
+This slot displays actions when hovering over the bottom right **Floating Action Button** to create new documents. By default, it inserts [nuxeo-document-create-shortcuts.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-document-create-actions/nuxeo-document-create-shortcuts.html) which shows shortcuts to the latest created document types wizard.
 
 ![]({{file name='DOCUMENT_CREATE_ACTIONS.png'}} ?w=400,border=true)
 
@@ -269,13 +269,13 @@ This slot provides actions displayed when hovering the bottom right Floating Act
 
 | Property      | Description                                                              |
 |:--------------|:-------------------------------------------------------------------------|
-| `hostVisible` | Boolean which is true if the FAB is hovered.                             |
+| `hostVisible` | Boolean which is true if hovering over the FAB.                             |
 | `subtypes`    | Array of the document types that can be created in the current location. |
 
 
 ##### FILE_UPLOAD_ACTIONS{{> anchor 'file_upload_actions'}}
 
-This slot is for instance used in the [Nuxeo Live Connect]({{page version='' space='nxdoc' page='nuxeo-liveconnect'}}) addon which inserts additional import wizard to upload Files to cloud services.
+This slot is used in the [Nuxeo Live Connect]({{page version='' space='nxdoc' page='nuxeo-liveconnect'}}) addon which inserts additional import wizards to upload Files to cloud services.
 
 ![]({{file name='FILE_UPLOAD_ACTIONS.png'}} ?w=400,border=true)
 

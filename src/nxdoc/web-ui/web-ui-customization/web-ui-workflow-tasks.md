@@ -1,8 +1,8 @@
 ---
-title: Workflow Tasks
+title: Web UI Workflow Tasks
 review:
     comment: ''
-    date: '2017-01-09'
+    date: '2017-01-16S'
     status: ok
 toc: true
 labels:
@@ -34,4 +34,4 @@ In the `$NUXEO_SERVER/nxserver/nuxeo.war/ui/` directory, you can see:
         └── nuxeo-task6d8-layout.html
 ```
 
-By convention a `$NUXEO_SERVER/nxserver/nuxeo.war/ui/workflow/{worfklowName}/nuxeo-{taskId}-layout.html` file defines the form layout of the task with task id `{taskId}` for the workflow `{worfklowName}`.
+By convention, a `$NUXEO_SERVER/nxserver/nuxeo.war/ui/workflow/{worfklowName}/nuxeo-{taskId}-layout.html` file defines the form layout of the task with task ID `{taskId}` for the workflow `{worfklowName}`.

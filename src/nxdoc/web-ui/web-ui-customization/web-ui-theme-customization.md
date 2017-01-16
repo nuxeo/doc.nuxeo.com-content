@@ -1,8 +1,8 @@
 ---
-title: Theme Customization
+title: Web UI Theme Customization
 review:
     comment: ''
-    date: '2017-01-09'
+    date: '2017-01-16'
     status: ok
 toc: true
 labels:
@@ -16,7 +16,7 @@ tree_item_index: 900
 ---
 ## Themes
 
-Nuxeo Web UI provides several themes to allow changing the look and feel of the UI. Currently they mostly provide colors schemes applied to UI elements and also a background image for some themes.
+Nuxeo Web UI provides several themes to change the look and feel of the UI. For the moment, they mostly provide color schemes applied to UI elements and a background image for some themes.
 
 The available themes are:
 - default
@@ -27,9 +27,9 @@ The available themes are:
 
 ### Customization
 
-In the current version it's not possible to contribute new themes, however the existing ones can be overriden with a contribution.
+In the current version it's not possible to contribute new themes, however the existing ones can be overridden with a contribution.
 
-To customize one of the provided themes you can simply deploy and override theme resources as described in [How to deploy additional Web UI resources]({{page page='web-ui-deployment#deploy_or_override'}})
+To customize one of the provided themes you can simply deploy and override theme resources as described in [How to deploy additional Web UI resources]({{page page='web-ui-deployment#deploy_or_override'}}).
 
 Taking `resources/web/nuxeo.war/ui/` as our base path, these are the available resources for each theme:
 
@@ -44,7 +44,7 @@ Besides the background images `/images/themes/{name}.png` you can also add any i
 
 ### How to Customize a Theme
 
-This example provides an walk-through on how to override `light` theme in Web UI.
+This example provides an walk-through on how to override the `light` theme in Web UI.
 
 {{#> panel type='code' heading='Without any customization the theme looks like this:'}}
 ![]({{file name='light-theme.png'}} ?w=800,border=true)
