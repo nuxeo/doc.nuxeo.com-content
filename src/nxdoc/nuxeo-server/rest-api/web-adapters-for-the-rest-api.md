@@ -2,10 +2,10 @@
 title: Web Adapters for the REST API
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - link-update
     - rest-api
     - webengine
@@ -118,11 +118,11 @@ history:
         version: '1'
 
 ---
-## Adapters and REST Resources&nbsp;
+## Adapters and REST Resources
 
-WebEngine, the JAX-RS Server used to serve the REST API, has the concept of [WebAdapter]({{page page='webengine-jax-rs'}})&nbsp;for DocumentModel. Logically the REST API leverages this concept to expose adapters on top of the Document REST end point.
+WebEngine, the JAX-RS Server used to serve the REST API, has the concept of [WebAdapter]({{page page='webengine-jax-rs'}}) for DocumentModel. Logically the REST API leverages this concept to expose adapters on top of the Document REST end point.
 
-An adapter is a URL segment that starts with&nbsp;`@` and that transforms the input resource so as to return another resource. The idea is to have a URL pointing to a Document and use the adapter to convert the Document into something else before the result is returned. The general syntax is:
+An adapter is a URL segment that starts with `@` and that transforms the input resource so as to return another resource. The idea is to have a URL pointing to a Document and use the adapter to convert the Document into something else before the result is returned. The general syntax is:
 
 ```
 /nuxeo/api/v1/id/{docId}/@adapter/parameters
@@ -142,8 +142,8 @@ Several default adapters are provided by default.
 
 `acl`
 
-*   **Usage**:&nbsp;Returns the ACLs of the target Document.
-*   **Sample URL**:&nbsp;
+* **Usage**: Returns the ACLs of the target Document.
+* **Sample URL**:
 
     ```
     /nuxeo/api/v1/id/{docId}/@acl
@@ -151,8 +151,8 @@ Several default adapters are provided by default.
 
 `audit`
 
-*   **Usage**:&nbsp;Returns audit trails records corresponding to the target Document.
-*   **Sample URL**:&nbsp;
+* **Usage**: Returns audit trails records corresponding to the target Document.
+* **Sample URL**:
 
     ```
     /nuxeo/api/v1/id/{docId}/@audit
@@ -160,8 +160,8 @@ Several default adapters are provided by default.
 
 `blob`
 
-*   **Usage**: Returns the Blob corresponding to the Document attribute matching the XPath parameter.
-*   **Sample URL**:
+* **Usage**: Returns the Blob corresponding to the Document attribute matching the XPath parameter.
+* **Sample URL**:
 
     ```
     /nuxeo/api/v1/id/{docId}/@blob/{xpath}
@@ -169,13 +169,13 @@ Several default adapters are provided by default.
 
 `children`
 
-*   **Usage**:&nbsp;Returns children of the target Document.&nbsp;
+* **Usage**: Returns children of the target Document.
     Query parameters are not mandatory and are by default:
-    *   `page`: 0
-    *   `pageSize`: 50
-    *   `maxResult`: nolimit
+    * `page`: 0
+    * `pageSize`: 50
+    * `maxResult`: nolimit
 
-*   **Sample URL**:
+* **Sample URL**:
 
     ```
     /nuxeo/api/v1/id/{docId}/@children
@@ -183,12 +183,12 @@ Several default adapters are provided by default.
 
 `convert`
 
-*   **Usage**:&nbsp;Returns the conversion of a blob.
+* **Usage**: Returns the conversion of a blob.
     Query parameters, you must use one of them:
-    *   `converter`
-    *   `type`
-    *   `format`
-*   **Sample URL**:
+    * `converter`
+    * `type`
+    * `format`
+* **Sample URL**:
 
     ```
     /nuxeo/api/v1/id/{docId}/@convert?format=pdf
@@ -196,9 +196,9 @@ Several default adapters are provided by default.
 
 `pp`
 
-*   **Usage**:&nbsp;Returns the result of the query corresponding to the named PageProvider.&nbsp;
+* **Usage**: Returns the result of the query corresponding to the named PageProvider.
     The target Document is used to provide the parameters of the PageProvider (i.e. SearchDocumentModel).
-*   **Sample URL**:&nbsp;
+* **Sample URL**:
 
     ```
     /nuxeo/api/v1/id/{docId}/@pp/{pageProviderName}
@@ -206,8 +206,8 @@ Several default adapters are provided by default.
 
 `rendition`
 
-*   **Usage**:&nbsp;Returns the renditions of a blob.
-*   **Sample URL**:
+* **Usage**: Returns the renditions of a blob.
+* **Sample URL**:
 
     ```
     /nuxeo/api/v1/id/{docId}/@rendition/{renditionName}
@@ -215,14 +215,14 @@ Several default adapters are provided by default.
 
 `search`
 
-*   **Usage**:&nbsp;Returns paged results of the query.&nbsp;
-    Query can be a full-text query or a NXQL query.&nbsp;
+* **Usage**: Returns paged results of the query.
+    Query can be a full-text query or a NXQL query.
     Query parameters are not mandatory and are by default:
-    *   `orderBy`:&nbsp;[dc:title](http://dctitle/)&nbsp;
-    *   `page`: 0&nbsp;
-    *   `pageSize`: 50&nbsp;&nbsp;
-    *   `maxResult`: nolimit
-*   **Sample URL**:
+    * `orderBy`: [dc:title](http://dctitle/)
+    * `page`: 0
+    * `pageSize`: 50
+    * `maxResult`: nolimit
+* **Sample URL**:
 
     ```
     /nuxeo/site/api/v1/path/{docId}/@search?fullText=nuxeo&orderBy=dc:title
@@ -232,8 +232,8 @@ Several default adapters are provided by default.
 
 `task`
 
-*   **Usage**:&nbsp;Returns task instance you have permission to see.
-*   **Sample URL**:
+* **Usage**: Returns task instance you have permission to see.
+* **Sample URL**:
 
     ```
     /nuxeo/api/v1/id/{docId}/@task
@@ -241,8 +241,8 @@ Several default adapters are provided by default.
 
 `workflow`
 
-*   **Usage**:&nbsp;Returns workflow instances launched by current user.
-*   **Sample URL**:&nbsp;
+* **Usage**: Returns workflow instances launched by current user.
+* **Sample URL**:
 
     ```
     /nuxeo/api/v1/id/{docId}/@workflow
@@ -258,34 +258,45 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@children?currentPageIndex=0&pagesize
 
 {{/panel}}{{! /multiexcerpt}}{{#> panel type='code' heading='Response'}}
 
-```
+```javascript
 {
-    "entity-type": "documents",
-    "isPaginable": true,
-    "totalSize": 3,
-    "pageIndex": 0,
-    "pageSize": 50,
-    "pageCount": 1,
-    "entries": [
-      {   
-        "entity-type": "document",
-        "repository": "default",
-        "uid": "afb373f1-08ed-4228-bfe8-9f93131f8c84",
-        "path": "/default-domain/sections",
-        "type": "SectionRoot",
-            ...
-        "contextParameters": {
-            "documentURL": "/nuxeo/site/api/v1/id/afb373f1-08ed-4228-bfe8-9f93131f8c84"
-        }            
-       },
-       ...
-    ]
+  "entity-type": "documents",
+  "isPaginable": true,
+  "resultsCount": 1,
+  "pageSize": 50,
+  "maxPageSize": 1000,
+  "currentPageSize": 1,
+  "currentPageIndex": 0,
+  "numberOfPages": 1,
+  "isPreviousPageAvailable": false,
+  "isNextPageAvailable": false,
+  "isLastPageAvailable": false,
+  "isSortable": true,
+  "hasError": false,
+  "errorMessage": null,
+  "totalSize": 1,
+  "pageIndex": 0,
+  "pageCount": 1,
+  "entries": [{
+    "entity-type": "document",
+    "repository": "default",
+    "uid": "0178eb31-b1ca-49af-86b0-ff59d671dc91",
+    "path": "/default-domain",
+    "type": "Domain",
+    "state": "project",
+    "parentRef": "6db16630-9e06-42ba-8ce2-e5a0f14e9ee7",
+    "isCheckedOut": true,
+    "isVersion": false,
+    "isProxy": false,
+    "changeToken": "1481174085000",
+    "title": "Domain",
+    "lastModified": "2016-12-08T05:14:45.00Z",
+    "facets": ["Folderish", "SuperSpace", "NotCollectionMember"]
+  }]
 }
 ```
 
 {{/panel}}
-
-In the response, for each document, you have a `documentURL` property that points to the API endpoint's id.
 
 ### Searching Documents - @search
 
@@ -297,78 +308,72 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?fullText=nuxeo&orderBy=dc:tit
 
 {{#> panel type='code' heading='Response Example'}}
 
-```
+```javascript
 {
-    "entity-type": "documents",
-    "isPaginable": true,
-    "resultsCount": 2,
-    "pageSize": 50,
-    "maxPageSize": 0,
-    "currentPageSize": 2,
-    "currentPageIndex": 0,
-    "numberOfPages": 1,
-    "isPreviousPageAvailable": false,
-    "isNextPageAvailable": false,
-    "isLastPageAvailable": false,
-    "isSortable": true,
-    "hasError": false,
-    "errorMessage": null,
-    "totalSize": 2,
-    "pageIndex": 0,
-    "pageCount": 1,
-    "entries":
-    [
-        {
-            "entity-type": "document",
-            "repository": "default",
-            "uid": "7808880b-9a2d-4f91-89d8-1bc49f6ba526",
-            "path": "/default-domain/templates/customerReferenceDOCX",
-            "type": "TemplateSource",
-            "state": "project",
-            "parentRef": "6ef6675e-4ec8-4484-88f6-62651c7311ad",
-            "isCheckedOut": true,
-            "changeToken": "1430295774263",
-            "title": "Customer reference using Word template",
-            "lastModified": "2015-04-29T08:22:54.26Z",
-            "facets":
-            [
-                "Versionable",
-                "Commentable",
-                "HasRelatedText",
-                "Thumbnail",
-                "Downloadable",
-                "Template"
-            ]
-        },
-        {
-            "entity-type": "document",
-            "repository": "default",
-            "uid": "fd63af66-07d4-4430-8b13-f17c25d2513a",
-            "path": "/default-domain/templates/interventionStatement",
-            "type": "TemplateSource",
-            "state": "project",
-            "parentRef": "6ef6675e-4ec8-4484-88f6-62651c7311ad",
-            "isCheckedOut": true,
-            "changeToken": "1430295774052",
-            "title": "Delivery Statement",
-            "lastModified": "2015-04-29T08:22:54.05Z",
-            "facets":
-            [
-                "Versionable",
-                "Commentable",
-                "HasRelatedText",
-                "Thumbnail",
-                "Downloadable",
-                "Template"
-            ]
-        }
+  "entity-type": "documents",
+  "isPaginable": true,
+  "resultsCount": 2,
+  "pageSize": 50,
+  "maxPageSize": 0,
+  "currentPageSize": 2,
+  "currentPageIndex": 0,
+  "numberOfPages": 1,
+  "isPreviousPageAvailable": false,
+  "isNextPageAvailable": false,
+  "isLastPageAvailable": false,
+  "isSortable": true,
+  "hasError": false,
+  "errorMessage": null,
+  "totalSize": 2,
+  "pageIndex": 0,
+  "pageCount": 1,
+  "entries": [{
+    "entity-type": "document",
+    "repository": "default",
+    "uid": "7808880b-9a2d-4f91-89d8-1bc49f6ba526",
+    "path": "/default-domain/templates/customerReferenceDOCX",
+    "type": "TemplateSource",
+    "state": "project",
+    "parentRef": "6ef6675e-4ec8-4484-88f6-62651c7311ad",
+    "isCheckedOut": true,
+    "changeToken": "1430295774263",
+    "title": "Customer reference using Word template",
+    "lastModified": "2015-04-29T08:22:54.26Z",
+    "facets": [
+      "Versionable",
+      "Commentable",
+      "HasRelatedText",
+      "Thumbnail",
+      "Downloadable",
+      "Template"
     ]
+  }, {
+    "entity-type": "document",
+    "repository": "default",
+    "uid": "fd63af66-07d4-4430-8b13-f17c25d2513a",
+    "path": "/default-domain/templates/interventionStatement",
+    "type": "TemplateSource",
+    "state": "project",
+    "parentRef": "6ef6675e-4ec8-4484-88f6-62651c7311ad",
+    "isCheckedOut": true,
+    "changeToken": "1430295774052",
+    "title": "Delivery Statement",
+    "lastModified": "2015-04-29T08:22:54.05Z",
+    "facets": [
+      "Versionable",
+      "Commentable",
+      "HasRelatedText",
+      "Thumbnail",
+      "Downloadable",
+      "Template"
+    ]
+  }]
 }
 ```
 
 {{/panel}}
 
-If the pointed resource is not a&nbsp;<span class="s1">Folder</span>, then the search is issued from the parent document.
+If the pointed resource is not a Folder, then the search is issued from the parent document.
 
 **NXQL Search**
 
@@ -382,85 +387,99 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?query=SELECT * FROM File
 
 {{/panel}}{{#> panel type='code' heading='Response Example'}}
 
-```
+```javascript
 {
-    "entity-type": "documents",
-    "isPaginable": true,
-    "resultsCount": 4,
-    "pageSize": 50,
-    "maxPageSize": 0,
-    "currentPageSize": 4,
-    "currentPageIndex": 0,
-    "numberOfPages": 1,
-    "isPreviousPageAvailable": false,
-    "isNextPageAvailable": false,
-    "isLastPageAvailable": false,
-    "isSortable": true,
-    "hasError": false,
-    "errorMessage": null,
-    "totalSize": 4,
-    "pageIndex": 0,
-    "pageCount": 1,
-    "entries":
-    [
-        {
-            "entity-type": "document",
-            "repository": "default",
-            "uid": "38723e10-80f8-477d-bb5e-6dcd9cf76f9f",
-            "path": "/default-domain/workspaces/templatesamples/intervention",
-            "type": "InterventionStatement",
-            "state": "project",
-            "parentRef": "a05f7f31-6727-48db-b8d9-a89023135867",
-            "isCheckedOut": true,
-            "changeToken": "1430295774082",
-            "title": "Sample Intervention Statement",
-            "lastModified": "2015-04-29T08:22:54.08Z",
-            "facets":
-            [
-                "Versionable",
-                "Publishable",
-                "Commentable",
-                "TemplateBased",
-                "HasRelatedText",
-                "Downloadable"
-            ]
-        },
-        {
-            "entity-type": "document",
-            "repository": "default",
-            "uid": "489819bd-f265-47a6-931a-236cd55f97ec",
-            "path": "/default-domain/workspaces/templatesamples/spec",
-            "type": "File",
-            "state": "project",
-            "parentRef": "a05f7f31-6727-48db-b8d9-a89023135867",
-            "isCheckedOut": true,
-            "changeToken": "1430295774195",
-            "title": "Spec",
-            "lastModified": "2015-04-29T08:22:54.19Z",
-            "facets":
-            [
-                "Versionable",
-                "Publishable",
-                "Commentable",
-                "TemplateBased",
-                "HasRelatedText",
-                "Thumbnail",
-                "Downloadable"
-            ]
-        }
+  "entity-type": "documents",
+  "isPaginable": true,
+  "resultsCount": 4,
+  "pageSize": 50,
+  "maxPageSize": 0,
+  "currentPageSize": 4,
+  "currentPageIndex": 0,
+  "numberOfPages": 1,
+  "isPreviousPageAvailable": false,
+  "isNextPageAvailable": false,
+  "isLastPageAvailable": false,
+  "isSortable": true,
+  "hasError": false,
+  "errorMessage": null,
+  "totalSize": 4,
+  "pageIndex": 0,
+  "pageCount": 1,
+  "entries": [{
+    "entity-type": "document",
+    "repository": "default",
+    "uid": "38723e10-80f8-477d-bb5e-6dcd9cf76f9f",
+    "path": "/default-domain/workspaces/templatesamples/intervention",
+    "type": "InterventionStatement",
+    "state": "project",
+    "parentRef": "a05f7f31-6727-48db-b8d9-a89023135867",
+    "isCheckedOut": true,
+    "changeToken": "1430295774082",
+    "title": "Sample Intervention Statement",
+    "lastModified": "2015-04-29T08:22:54.08Z",
+    "facets": [
+      "Versionable",
+      "Publishable",
+      "Commentable",
+      "TemplateBased",
+      "HasRelatedText",
+      "Downloadable"
     ]
+  }, {
+    "entity-type": "document",
+    "repository": "default",
+    "uid": "489819bd-f265-47a6-931a-236cd55f97ec",
+    "path": "/default-domain/workspaces/templatesamples/spec",
+    "type": "File",
+    "state": "project",
+    "parentRef": "a05f7f31-6727-48db-b8d9-a89023135867",
+    "isCheckedOut": true,
+    "changeToken": "1430295774195",
+    "title": "Spec",
+    "lastModified": "2015-04-29T08:22:54.19Z",
+    "facets": [
+      "Versionable",
+      "Publishable",
+      "Commentable",
+      "TemplateBased",
+      "HasRelatedText",
+      "Thumbnail",
+      "Downloadable"
+    ]
+  }]
 }
 ```
 
 {{/panel}}
 
-&nbsp;
+## Group Adapters
+
+Several default adapters are provided by default.
+
+`users`
+
+* **Usage**: Returns the member users of a group.
+* **Sample URL**:
+
+    ```
+    /nuxeo/api/v1/group/{groupId}/@users
+    ```
+
+`groups`
+
+* **Usage**: Returns the member groups of a group.
+* **Sample URL**:
+
+    ```
+    /nuxeo/api/v1/group/{groupId}/@groups
+    ```
 
 ## Custom Adapters
 
 You can of course contribute new WebAdapters using WebEngine.
 
-An other alternative is to use the `@bo` WebAdapter to leverage standard Nuxeo DocumentModelAdapters that can be defined using the [adapter extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters).
+An other alternative is to use the `@bo` WebAdapter to leverage standard Nuxeo DocumentModelAdapters that can be defined using the [adapter extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters).
 
 ```
 /nuxeo/api/v1/id/{docId}/@bo/{documentAdapterName}
@@ -476,13 +495,13 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
 
 {{/panel}}{{#> panel type='code' heading='Response'}}
 
-```
+```javascript
 {
-    entity-type: "BusinessBeanAdapter"
-    id: "37b1502b-26ff-430f-9f20-4bd0d803191e",
-    "type": "Domain",
-    "title":"Default domain"
-    "description:""
+  "entity-type": "BusinessBeanAdapter",
+  "id": "37b1502b-26ff-430f-9f20-4bd0d803191e",
+  "type": "Domain",
+  "title": "Default domain",
+  "description": ""
 }
 ```
 
@@ -490,20 +509,20 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
 
 ### Updating a Business Object
 
-To update a business object, you just have to send a PUT request one the business object resource with its content data like this:
+To update a business object, you just have to send a `PUT` request one the business object resource with its content data like this:
 
 {{#> panel type='code' heading='PUT Request Body'}}
 
 ```
 PUT /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
 {
-	"entity-type: "BusinessBeanAdapter"
-	"value": {
-		id: "37b1502b-26ff-430f-9f20-4bd0d803191e",
-	    "type": "Domain",
-	    "title":"Default domain"
-	    "description:"My new description"
-	 }
+  "entity-type": "BusinessBeanAdapter",
+  "value": {
+    "id": "37b1502b-26ff-430f-9f20-4bd0d803191e",
+    "type": "Domain",
+    "title": "Default domain",
+    "description": "My new description"
+  }
 }
 ```
 
@@ -511,20 +530,20 @@ PUT /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
 
 ### Creating a Business Object
 
-And then to create a business object, you have to issue a&nbsp; <span class="s1">POST</span> &nbsp;on the object resource plus the name of the newly created document, like this:
+And then to create a business object, you have to issue a `POST` on the object resource plus the name of the newly created document, like this:
 
 {{#> panel type='code' heading='POST Request Body'}}
 
 ```
 POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter/{newName}
 {
-	entity-type: "BusinessBeanAdapter",
-	value: {
-	  "type": "Note",
-	  "title":"A sample note",
-	  "description:"",
-	  "note":"The content of my note"
-	}
+  "entity-type": "BusinessBeanAdapter",
+  "value": {
+    "type": "Note",
+    "title": "A sample note",
+    "description": "",
+    "note": "The content of my note",
+  }
 }
 ```
 
@@ -547,8 +566,8 @@ The `@op` adapter can be used to pipe the identified Document as input of an ope
 ```
 POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/{myOperation}
 {
-  params: {
-    opParam: "value"  
+  "params": {
+    "opParam": "value"
   }
 }
 ```
@@ -557,7 +576,7 @@ POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/{myOperation}
 
 The response will depend on the result of the automation chain.
 
-You can also use it to run a chain by prefixing the chain name by `<span class="s1">Chain.</span>` , for instance:
+You can also use it to run a chain by prefixing the chain name by `Chain.` , for instance:
 
 {{#> panel type='code' heading='Sample URL'}}
 
@@ -570,8 +589,8 @@ You can also use it to run a chain by prefixing the chain name by `<span class="
 ```
 POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
 {
-  params: {
-    chainParam: "value"  
+  "params": {
+    "chainParam": "value"
   }
 }
 ```
@@ -581,8 +600,8 @@ POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
 ```
 POST /nuxeo/site/api/v1/path/{pathOfTheFolder}/@children/@op/Chain.myChain
 {
-  params: {
-	chainParam: "value"  
+  "params": {
+	"chainParam": "value"
   }
 }
 ```
@@ -607,8 +626,6 @@ Here is an example :
 
 {{/panel}}
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
@@ -617,8 +634,4 @@ Here is an example :
 - [REST API]({{page page='rest-api'}})
 - [Content Enricher]({{page page='content-enricher'}})
 
-{{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-</div></div>
+{{/panel}}</div></div>
