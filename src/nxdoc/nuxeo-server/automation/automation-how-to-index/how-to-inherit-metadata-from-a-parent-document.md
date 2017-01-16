@@ -23,6 +23,9 @@ labels:
     - event
     - excerpt
 toc: true
+version_override:
+    'LTS 2015': 710/nxdoc/how-to-inherit-a-metadata-from-a-parent-document
+    '6.0': 60/nxdoc/how-to-inherit-a-metadata-from-a-parent-document
 confluence:
     ajs-parent-page-id: '19235642'
     ajs-parent-page-title: Automation How-To Index
