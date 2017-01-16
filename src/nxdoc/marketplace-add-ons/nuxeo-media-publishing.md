@@ -1,8 +1,8 @@
 ---
 title: Nuxeo Media Publishing
 review:
-    comment: ''
-    date: ''
+    comment: 'uupdate youtube configuration'
+    date: '2017-01_16'
     status: ok
 labels:
     - lts2015-ok
@@ -20,92 +20,92 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/eoCyAQ'
     source_link: /display/NXDOC710/Nuxeo+Media+Publishing
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-16 10:02'
         message: ''
         version: '18'
-    - 
+    -
         author: Vincent Dutat
         date: '2016-02-10 18:29'
         message: ''
         version: '17'
-    - 
+    -
         author: Vincent Dutat
         date: '2016-02-10 18:20'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-15 12:42'
         message: ''
         version: '15'
-    - 
+    -
         author: Andre Justo
         date: '2015-10-13 11:51'
         message: ''
         version: '14'
-    - 
+    -
         author: Andre Justo
         date: '2015-10-13 10:49'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-06 12:27'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-06 12:23'
         message: add link
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-01 08:53'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-01 08:53'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-30 16:51'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-30 16:48'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-30 16:19'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-29 16:28'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-29 16:27'
         message: ''
         version: '4'
-    - 
+    -
         author: Andre Justo
         date: '2015-06-24 10:19'
         message: ''
         version: '3'
-    - 
+    -
         author: Andre Justo
         date: '2015-06-24 10:18'
         message: ''
         version: '2'
-    - 
+    -
         author: Andre Justo
         date: '2015-06-24 10:16'
         message: ''
@@ -161,16 +161,24 @@ Published videos can also be republished or unpublished from the external provid
 
 **Step 1: Preparing your application accounts on the Google Developers Console**
 
-1.  Go to&nbsp;[https://console.developers.google.com/project](https://console.developers.google.com/project).
+1.  Go to [https://console.developers.google.com/project](https://console.developers.google.com/project).
 
 2.  Create a new project.
-3.  Enable YouTube API:&nbsp;In**&nbsp;APIs & auth**&nbsp;**>**&nbsp;**APIs**, click on&nbsp;**YouTube Data API**&nbsp;and then on the&nbsp;**Enable API**&nbsp;button.
-4.  Edit your consent screen: In&nbsp;**APIs & auth > Consent Screen**, fill the product name (the name of your application). Optionally, you may fill the other fields.&nbsp;
-5.  Create a new OAuth Client ID:**In APIs & auth > Credentials**, click on&nbsp;**Create a new Client ID**.
-    1.  Choose&nbsp;**Web Application.**
-    2.  For&nbsp;**Authorized JavaScript origins**&nbsp;set the URL of your server. Ex [http://localhost:8080/](http://localhost:8080/)
-    3.  For&nbsp;**Authorized redirect URIs**&nbsp;set the following URL, adapting the hostname and port to your case:&nbsp;[http://localhost:8080/nuxeo/site/oauth2/YouTube/callback](http://localhost:8080/nuxeo/site/oauth2/googledrive/callback).
-        The console redirects you to a page where you can see the Client ID and Client Secret values. You will need them in the next steps.
+
+3.  Enable YouTube API: On the API Manager, click on **YouTube Data API** and then on the **Enable** button.
+
+4.  Create a new OAuth Client ID: In **Credentials**, click on **Create Credentials**.
+
+    a.  Choose **OAuth Client ID.**
+
+    b. If not already done, you will need to edit your consent screen: In **Credentials > OAuth Consent Screen**, fill the product name (the name of your application). Optionally, you may fill the other fields.
+
+    c.  Choose **Web Application.**
+
+    d.  For **Authorized JavaScript origins** set the URL of your server. Ex [http://localhost:8080](http://localhost:8080.)
+
+    e.  For **Authorized redirect URIs** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/YouTube/callback](http://localhost:8080/nuxeo/site/oauth2/googledrive/callback).
+
 
 **Step 2: Configuring the Nuxeo Platform**
 
@@ -254,7 +262,7 @@ Nested in the component tag of your XML contribution file, set the implementatio
 
   <extension target="org.nuxeo.ecm.media.publishing.MediaPublishingService"point="providers">
     <provider id="my-publishing-provider" 
-		enabled="true" 
+		enabled="true"
 		service="org.nuxeo.ecm.media.publishing.MyMediaPublishingProviderService"/>
   </extension>
 </component>
