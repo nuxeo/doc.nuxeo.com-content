@@ -23,8 +23,8 @@ confluence:
     source_link: /display/NXDOC710/Web+UI+Limitations
 tree_item_index: 200
 version_override:
-    'FT': '/nxdoc/jsf-ui-limitations'
-    '6.0': 60/admindoc/web-ui-limitations
+    'FT': '/nxdoc/jsf-ui-framework-overview'
+    '6.0': 60/nxdoc/web-ui-limitations
 history:
     -
         author: Anonymous
@@ -63,8 +63,6 @@ history:
 This chapter presents the limitations to the Seam/JSF web application.
 
 {{! /excerpt}}
-
-&nbsp;
 
 *   [Back and Next Buttons Paradigm and JSF in the Nuxeo Platform]({{page page='back-and-next-buttons-paradigm-and-jsf-in-the-nuxeo-platform'}})
     {{{excerpt 'Back and Next Buttons Paradigm and JSF in the Nuxeo Platform'}}}
