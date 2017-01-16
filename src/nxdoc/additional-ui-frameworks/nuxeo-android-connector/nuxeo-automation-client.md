@@ -16,6 +16,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/IoBVAQ'
     source_link: /display/NXDOC60/Nuxeo+Automation+client
 tree_item_index: 100
+version_override:
+    'FT': 'nxdoc/java-client'
 history:
     -
         author: Solen Guitter
@@ -82,7 +84,7 @@ In the Android Connector, the Automation Client is associated to a context that 
 
 *   Android Context (required for Filesystem and SQL Db access)
 
-You can access this `NuxeoContext` by using :
+You can access this `NuxeoContext` by using:
 
 ```
 

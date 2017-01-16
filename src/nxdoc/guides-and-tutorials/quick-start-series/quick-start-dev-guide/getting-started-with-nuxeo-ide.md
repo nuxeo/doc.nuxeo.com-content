@@ -5,6 +5,8 @@ review:
     date: ''
     status: ok
 toc: true
+version_override:
+    'FT': 'nxdoc/getting-started-with-nuxeo-generator'
 confluence:
     ajs-parent-page-id: '22380836'
     ajs-parent-page-title: Quick Start Dev Guide
@@ -142,7 +144,7 @@ Here we want to add some server side Java logic that will update the date of ren
 *   A document type Contract created at the [previous step]({{page page='getting-started-with-nuxeo-studio'}})
 *   [Eclipse](http://www.eclipse.org/downloads) 4.3 for JEE developers (Kepler)
 *   Java 7
-*   A Nuxeo SDK: [Nuxeo Platform 6.0 SDK](http://cdn.nuxeo.com/nuxeo-6.0/nuxeo-cap-6.0-HF20-tomcat-sdk.zip)&nbsp;(LTS).
+*   A Nuxeo SDK: [Nuxeo Platform 6.0 SDK](http://cdn.nuxeo.com/nuxeo-6.0/nuxeo-cap-6.0-HF20-tomcat-sdk.zip) (LTS).
 
 ## Step 1 - Download Nuxeo IDE
 
@@ -181,8 +183,8 @@ This procedure can only be used for **Nuxeo 6.0 and later** versions. **For Nuxe
 
 4.  If nothing appears, uncheck the **Group items by category** box.
 5.  Check both **Nuxeo IDE** and **Nuxeo Shell** and click **Next.**
-    **![]({{file name='NxIDE_install2.png'}} ?w=400,border=true)
-    **
+    ![]({{file name='NxIDE_install2.png'}} ?w=400,border=true)
+
 6.  Follow the wizard: accept license when prompted and click Next until the software is downloaded.
     ![]({{file name='NxIDE_install6.png'}} ?w=350,border=true)
 7.  Restart Eclipse when prompted.
