@@ -201,8 +201,7 @@ To convert the video, click on&nbsp;![]({{file name='download.png' space='userdo
 
 #### Browsing Assets
 
-{{! multiexcerpt name='assets-search'}}
-Once DAM installed and assets documents created, a new search type is displayed in the left menu, the **Assets** search. This search will let you search by assets metadata, such as:
+Once DAM installed and assets documents created, a new search type is displayed in the left menu, the `Assets` search. This search will let you search by assets metadata, such as:
 - Type
 - Format
 - Width
@@ -217,26 +216,16 @@ The Assets search form offers several search criteria, that you can associate to
 
 **To search documents using detailed criteria:**
 
-* Click on the **Assets** tab.
+* Click on the `Assets` tab.
 * Fill in the form with your criteria and/or select the search criteria corresponding to your needs.
 <br/>
   The search results will be automatically updated according to the criteria selected.
 
 {{! /multiexcerpt}}
 
-<<<<<<< abe29762c8cb68973e5cca687689e720fd72d107
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel heading='Related User Documentation'}}
-=======
-{{! /multiexcerpt}}
-
-{{! Don't put anything here. }}
-
-* * *
-
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related User Documentation'}}
->>>>>>> search page done
 
 - [Creating Content]({{page page='creating-content'}})
 - [Editing Content]({{page page='editing-content'}})
