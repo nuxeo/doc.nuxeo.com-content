@@ -1,8 +1,8 @@
 ---
 title: Nuxeo Media Publishing
 review:
-    comment: ''
-    date: '2016-12-06'
+    comment: 'update youtube configuration part'
+    date: '2017-01-16'
     status: ok
 labels:
     - lts2016-ok
@@ -161,21 +161,21 @@ After the package is installed, two new OAuth2 service providers are added to Nu
 1.  Go to [https://console.developers.google.com/project](https://console.developers.google.com/project).
 
 2.  Create a new project.
-3.  
-Enable YouTube API: In **APIs & auth**&nbsp;>**APIs**, click on **YouTube Data API** and then on the **Enable API** button.
+
+3.  Enable YouTube API: On the API Manager, click on **YouTube Data API** and then on the **Enable** button.
+
 4.  Create a new OAuth Client ID: In **Credentials**, click on **Create Credentials**.
 
     a.  Choose **OAuth Client ID.**
 
-    b.  Choose **Web Application.**
+    b. If not already done, you will need to edit your consent screen: In **Credentials > OAuth Consent Screen**, fill the product name (the name of your application). Optionally, you may fill the other fields.
 
-    c.  For **Authorized JavaScript origins** set the URL of your server. Ex [http://localhost:8080/](http://localhost:8080/)
+    c.  Choose **Web Application.**
 
-    d.  For **Authorized redirect URIs** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/YouTube/callback](http://localhost:8080/nuxeo/site/oauth2/googledrive/callback).
+    d.  For **Authorized JavaScript origins** set the URL of your server. Ex [http://localhost:8080](http://localhost:8080.)
 
-    The console redirects you to a page where you can see the Client ID and Client Secret values. You will need them in the next steps.
+    e.  For **Authorized redirect URIs** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/YouTube/callback](http://localhost:8080/nuxeo/site/oauth2/googledrive/callback).
 
-5.  Edit your consent screen: In **Credentials > OAuth Consent Screen**, fill the product name (the name of your application). Optionally, you may fill the other fields.
 
 **Step 2: Configuring the Nuxeo Platform**
 
