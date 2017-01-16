@@ -10,6 +10,8 @@ labels:
     - lts2015-not-ok
     - nxdoc-741
 toc: true
+version_override:
+    'FT': 'nxdoc/jsf-ui-framework-overview'
 confluence:
     ajs-parent-page-id: '28475530'
     ajs-parent-page-title: Web UI Framework Overview

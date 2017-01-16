@@ -22,8 +22,8 @@ confluence:
 tree_item_index: 1600
 version_override:
     'FT': '/nxdoc/jsf-ui-framework'
-    '6.0': 60/admindoc/web-ui-framework
-    '5.8': 58/admindoc/web-ui-framework
+    '6.0': /60/admindoc/web-ui-framework
+    '5.8': /58/admindoc/web-ui-framework
 history:
     -
         author: Anonymous
