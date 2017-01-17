@@ -2,10 +2,10 @@
 title: Upgrade from 5.1.6 with JCR + PostgreSQL to 5.2.0
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - multiexcerpt
 confluence:
     ajs-parent-page-id: '3343538'
@@ -145,7 +145,7 @@ history:
 
 This article will help you to migrate your data from Nuxeo 5.1.6 to Nuxeo 5.2 in the case you are using JackRabbit with PostgreSQL as backend.
 
-We assume that your Nuxeo 5.1.6 is installed in $JBOSS_516 directory and Nuxeo 5.2 in $JBOSS_52 and you have well configured your Nuxeo 5.2 to work with Jackrabbit/PSQL. Otherwise, let's see this [article]({{page space='kb' page='configure-nuxeo-52-with-jackrabbit-and-postgresql'}}).
+We assume that your Nuxeo 5.1.6 is installed in $JBOSS_516 directory and Nuxeo 5.2 in $JBOSS_52 and you have well configured your Nuxeo 5.2 to work with Jackrabbit/PSQL. 
 
 The steps to migrate are:
 
@@ -209,11 +209,11 @@ Just for information, below are the changes you can make manually to update your
 
 Two main problems occurs are present in the node type definitions from Nuxeo 5.1.6:
 
-*   the whole versioning features are not working : no document modification, no version increase, no reading of the previous versions, ...: this is due to the fact that [ecm:version](http://ecmversion) and [ecm:versionHistory](http://ecmversionHistory) are not mixin type any more. Manually you can change these nodes and chose isMixin="true" to isMixin="false"
+*   the whole versioning features are not working : no document modification, no version increase, no reading of the previous versions, ...: this is due to the fact that `ecm:version` and `ecm:versionHistory` are not mixin type any more. Manually you can change these nodes and chose isMixin="true" to isMixin="false"
 *   some document definitions have changed :
-    *   Workspace type has two new supertypes: [ecmst:publish_ergo](http://ecmstpublish_ergo) and [ecmst:webcontainer](http://ecmstwebcontainer)
-    *   Forum, Thread and post types use now "ecmdt:Document" as supertype instead of "[ecmnt:document](http://ecmntdocument)"
-    *   WikiPage and BlogPost types use "[ecmmix:versionable](http://ecmmixversionable)" as supertype instead of "[mix:versionable](http://mixversionable)"
+    *   Workspace type has two new supertypes: `ecmst:publish_ergo` and `ecmst:webcontainer`
+    *   Forum, Thread and post types use now `ecmdt:Document` as supertype instead of `ecmnt:document`
+    *   WikiPage and BlogPost types use `ecmmix:versionable` as supertype instead of `mix:versionable` 
 
 Editing the custom_nodetypes file is not easy because you have to format this file (tidy -xml ...) to edit it. So we recommend to replace the old custom_nodetypes.xml by the new one, generated from a fresh Nuxeo 5.2 installation.
 
