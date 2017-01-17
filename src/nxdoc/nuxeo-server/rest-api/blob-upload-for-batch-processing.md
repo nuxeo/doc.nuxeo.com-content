@@ -2,7 +2,7 @@
 title: Blob Upload for Batch Processing
 review:
     comment: ''
-    date: '2016-12-12'
+    date: '2017-01-17'
     status: ok
 labels:
     - lts2016-ok
@@ -193,7 +193,7 @@ history:
 ---
 {{> wistia_video id='qokay4hw1i'}}
 
-Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" on [Nuxeo University](https://university.nuxeo.io)
+Extract from the course "[Working with the REST API](https://university.nuxeo.com/store/155916-rest-api)" on [Nuxeo University](https://university.nuxeo.com)
 
 ## Motivations
 

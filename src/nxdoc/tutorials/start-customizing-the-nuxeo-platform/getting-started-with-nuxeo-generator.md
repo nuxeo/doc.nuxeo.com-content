@@ -2,7 +2,7 @@
 title: Getting Started with Nuxeo Generator
 review:
     comment: ''
-    date: '2015-12-28'
+    date: '2017-01-17'
     status: ok
 details:
     howto:
@@ -898,4 +898,4 @@ That's it! You are ready to develop on the Nuxeo Platform.
 
 ## What to do Next
 
-You should learn to [package and deploy your application](https://university.nuxeo.io/nuxeo/university/#!/course/nuxeo-platform-developer-basics/package-deploy-application) in a Nuxeo Platform instance.
+You should learn to [package and deploy your application](https://university.nuxeo.com/store/155918-nuxeo-platform-developer-basics) in a Nuxeo Platform instance.

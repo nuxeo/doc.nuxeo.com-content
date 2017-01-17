@@ -2,7 +2,7 @@
 title: Configuring the Elasticsearch Mapping
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-01-17'
     status: ok
 labels:
     - lts2016-ok
@@ -289,7 +289,7 @@ Note that if you:
 
 *   don't perform non fulltext search on this field
 *   don't use this field with a `IS NULL` or `IS NOT NULL`operation
-*   don't sort on this field 
+*   don't sort on this field
 
 Then you can disable the default index on the field by adding after the second
 ```
@@ -382,7 +382,7 @@ SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.ngram) ANALYZER(lowercase_ana
 ## Index the Main Attachment Content for Use with the Common Operator
 
 {{! multiexcerpt name='common-operator-main-attachment'}}{{> wistia_video id='nvdt4nzdq9'}}
-Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.io/nuxeo/university/#!/course/whats-new-in-nuxeo-platform-lts-2015) in [Nuxeo University](https://university.nuxeo.io)
+Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) in [Nuxeo University](https://university.nuxeo.com)
 
 Suppose you want to be able to search using the [common operator](https://www.elastic.co/guide/en/elasticsearch/reference/1.5/query-dsl-common-terms-query.html) on your documents' main attachment content. This Elasticsearch operator is interesting for two reasons:
 

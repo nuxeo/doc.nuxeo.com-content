@@ -2,7 +2,7 @@
 title: Tutorials
 review:
     comment: ''
-    date: '2016-01-03'
+    date: '2017-01-17'
     status: ok
 labels:
     - lts2016-ok
@@ -124,7 +124,7 @@ history:
 <div class="column">
 {{#> panel type='primary'}}
 
-[New to Nuxeo? Start Learning Nuxeo Platform with Nuxeo University Program!](https://university.nuxeo.io/)
+[New to Nuxeo? Start Learning Nuxeo Platform with Nuxeo University Program!](https://university.nuxeo.com)
 
 {{/panel}}
 </div>
@@ -152,4 +152,3 @@ history:
 {{/panel}}</div><div class="column medium-6">
 
 </div></div>
-

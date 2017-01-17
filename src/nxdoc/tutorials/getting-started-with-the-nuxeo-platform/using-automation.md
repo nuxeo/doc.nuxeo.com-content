@@ -2,7 +2,7 @@
 title: Using Automation
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-01-17'
     status: ok
 labels:
     - lts2016-ok
@@ -191,7 +191,7 @@ Automation chains allow you to optimize the number of calls needed to execute bu
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [Applying Business Logic](https://university.nuxeo.io/nuxeo/university/#!/course/applying-business-logic) course on Nuxeo University
+*   [Applying Business Logic](https://university.nuxeo.com/store/161508-applying-business-logic) course on Nuxeo University
 *   [Content Automation Documentation]({{page page='automation'}})
 
 {{/callout}}
