@@ -79,12 +79,10 @@ history:
 ---
 {{! excerpt}}
 
-Nuxeo uses several UI frameworks beside the [default JSF technology]({{page page='web-ui-framework-overview'}}).
+Nuxeo uses several UI frameworks beside the [default JSF technology]({{page page='jsf-ui-framework-overview'}}).
 
 {{! /excerpt}}
 
-&nbsp;
-
-*   [GWT Integration]({{page space='NXDOC710' page='GWT Integration'}})&nbsp;&mdash;&nbsp;<span class="smalltext">GWT is a web toolkit to build rich clients in Java programming language. The Java code is transcoded in JavaScript at build time so the build process generates a fully HTML+JavaScript application ready to be deployed on an HTTP server.</span>
-*   [Extending The Shell]({{page space='NXDOC710' page='Extending The+Shell'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This section is intended for developers who wants to provide new Shell commands, namespaces or Shell Features.</span>
-*   [Nuxeo Android Connector]({{page space='NXDOC710' page='Nuxeo Android+Connector'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Nuxeo Android Connector is a SDK to build Android Applications that communicate with a Nuxeo Server.</span>
+*   [GWT Integration]({{page space='NXDOC710' page='GWT Integration'}})&nbsp;&mdash; GWT is a web toolkit to build rich clients in Java programming language. The Java code is transcoded in JavaScript at build time so the build process generates a fully HTML+JavaScript application ready to be deployed on an HTTP server.
+*   [Extending The Shell]({{page space='NXDOC710' page='Extending The+Shell'}})&nbsp;&mdash; This section is intended for developers who wants to provide new Shell commands, namespaces or Shell Features.
+*   [Nuxeo Android Connector]({{page space='NXDOC710' page='Nuxeo Android+Connector'}})&nbsp;&mdash;Nuxeo Android Connector is a SDK to build Android Applications that communicate with a Nuxeo Server.

@@ -311,7 +311,7 @@ metrics.graphite.period=10
 
 ![]({{file name='graphite-reporting.png'}} ?w=500,h=398,border=true)
 
-###### Reporting&nbsp;Tomcat JMX Info
+###### Reporting Tomcat JMX Info
 
 ```
 metrics.tomcat.enabled=true
@@ -321,7 +321,7 @@ Note that period to report metrics are in second.
 
 ### Graphite Dashboard
 
-You can find an example of Graphite dashboard on GitHub:&nbsp;[https://github.com/nuxeo-archives/nuxeo-runtime/blob/master/nuxeo-runtime-metrics/graphite/dashboard.json](https://github.com/nuxeo-archives/nuxeo-runtime/blob/master/nuxeo-runtime-metrics/graphite/dashboard.json)
+You can find an example of Graphite dashboard on GitHub: [https://github.com/nuxeo-archives/nuxeo-runtime/blob/master/nuxeo-runtime-metrics/graphite/dashboard.json](https://github.com/nuxeo-archives/nuxeo-runtime/blob/master/nuxeo-runtime-metrics/graphite/dashboard.json)
 
 You will have to edit the dashboard to replace the hostname (here it is `octopussy`).
 
@@ -351,7 +351,7 @@ By default only three statuses are defined:
 
 Administrative Status can be configured and declared via the [`serviceDefinition` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--serviceDefinition).
 
-### Probes&nbsp;
+### Probes
 
 Probes can be used to run a test on the target deployed platform. Probes can be used to check that all part of the architecture are actually running for real:
 
@@ -377,11 +377,11 @@ You can use JVisualVM or similar tool to access Nuxeo JMX interface. See the sec
 
 Inside the Admin Center there are two sections that are related to monitoring: Activity and Monitoring.
 
-#### Activity&nbsp;
+#### Activity
 
 The Activity section provides access to:
 
-*   A Users sessions tab that displays counters for the web UI access:
+*   A Users sessions tab that displays counters for the UI access:
 
     {{! multiexcerpt name='users-sessions-tab-details'}}
     *   Total number of active HTTP sessions: The number of user active user session on the UI
@@ -401,7 +401,7 @@ The Monitoring sections provides access to:
 
 ### REST Access
 
-#### Counters&nbsp;
+#### Counters
 
 Counter are exposed via Automation API [Counters.GET](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewOperation/Counters.GET)
 
@@ -413,14 +413,12 @@ curl -H 'Content-Type:application/json+nxrequest' -X POST -d
 Administrator:Administrator http://localhost:8080/nuxeo/site/automation/Counters.GET
 ```
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Remote Monitoring Through a SSH Tunnel]({{page page='remote-monitoring-through-a-ssh-tunnel'}})
-*   [Transactions and Connections]({{page page='transactions-and-connections'}})
+- [Remote Monitoring Through a SSH Tunnel]({{page page='remote-monitoring-through-a-ssh-tunnel'}})
+- [Transactions and Connections]({{page page='transactions-and-connections'}})
 
 {{/panel}}</div><div class="column medium-6">
 

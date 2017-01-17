@@ -169,7 +169,7 @@ To enable clustering, you must have at least two nodes with:
 *   A [Redis server]({{page page='redis-configuration'}})
 *   A load-balancer with sticky sessions
 
-The shared filesystem is usually an NFS mount. You **must not**&nbsp;share the whole Nuxeo installation tree (see below).
+The shared filesystem is usually an NFS mount. You **must not** share the whole Nuxeo installation tree (see below).
 
 The load balancer **must** use sticky sessions if the clustering delay is not 0\. Having a non-0 clustering delay is recommended for performance reasons. See below for more.
 
@@ -179,7 +179,7 @@ The complete Nuxeo instance hierarchy **must not** be shared between all instanc
 
 ### Binaries
 
-The `repository.binary.store` (`nxserver/data/binaries`&nbsp;by default) directory **must** be shared by all Nuxeo instances in order for VCS to function correctly.
+The `repository.binary.store` (`nxserver/data/binaries` by default) directory **must** be shared by all Nuxeo instances in order for VCS to function correctly.
 
 ### Temporary Directory
 
@@ -189,9 +189,9 @@ However, in order for various no-copy optimizations to be effective, the tempora
 
 ### Transient Store
 
-The caching directory used by any&nbsp;[Transient Store](/x/AQalAQ) accessed by multiple Nuxeo instances&nbsp;**must be** shared by all instances. This caching directory&nbsp;is located in `nxserver/data/transientstores/<transientstore_name>`.
+The caching directory used by any [Transient Store](/x/AQalAQ) accessed by multiple Nuxeo instances **must be** shared by all instances. This caching directory is located in `nxserver/data/transientstores/<transientstore_name>`.
 
-By default there is only one&nbsp;Transient Store contribution named `default`:
+By default there is only one Transient Store contribution named `default`:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent"
@@ -202,7 +202,7 @@ By default there is only one&nbsp;Transient Store contribution named `default`:
 </extension>
 ```
 
-Therefore you need to create in the `nxserver/data/transientstores` directory&nbsp;a symbolic link named `default` pointing to a shared directory, and do the same for any other `TransientStore` you might have contributed if it is intended to be shared by multiple instances of the cluster.
+Therefore you need to create in the `nxserver/data/transientstores` directory a symbolic link named `default` pointing to a shared directory, and do the same for any other `TransientStore` you might have contributed if it is intended to be shared by multiple instances of the cluster.
 
 ## VCS Cluster Configuration
 
@@ -213,8 +213,7 @@ The cluster nodes must only share the `binaries` folder (configured with `reposi
 To set up clustering, please update the following parameters in [ `nuxeo.conf` ]({{page page='configuration-parameters-index-nuxeoconf'}}):
 
 *   `**repository.clustering.enabled**` must be `true` to enable clustering.
-*   `**repository.clustering.id**`: it is now highly <span style="color: rgb(51,51,51);">recommended</span> t<span style="color: rgb(51,51,51);">o set an explicit cluster node id. The id must be an <span style="color: rgb(51,51,51);">integer</span> for all databases, unless you are using Oracle which accepts a string. Please see&nbsp;[NXP-17180](https://jira.nuxeo.com/browse/NXP-17180) for more explanations.
-    </span>
+*   `**repository.clustering.id**`: it is now highly recommended to set an explicit cluster node id. The id must be an integer for all databases, unless you are using Oracle which accepts a string. Please see [NXP-17180](https://jira.nuxeo.com/browse/NXP-17180) for more explanations.
 *   **`repository.clustering.delay`** is expressed in milliseconds, and specifies a delay during which invalidations don't need to be processed. Using a non-0 value is an important optimization as otherwise every single transaction, even a read-only one, would have to hit the database to check invalidations between several nodes. However this means that one node may not see immediately the changes made on another node, which is a problem if you don't use sticky session on the load balancer.
 *   **`repository.binary.store`** must point to a shared storage unless you use an external binary store like S3\. Under Windows, the path value can be UNC formatted, for instance `\\servername\sharename`.
 *   `**nuxeo.db.validationQuery**` must contain a SELECT clause for validating connections in the pool according to your database type. For instance `SELECT 1` used on PostgreSQL or `SELECT 1 FROM dual` on Oracle.
@@ -290,7 +289,7 @@ If the session affinity can not be restored, for example because the target serv
 
 ### State Management and UI Rendering
 
-The Web UI can be stateful or stateless:
+The web UI can be stateful or stateless:
 
 *   Default back office is based on JSF that is stateful
 *   The Nuxeo Platform also provides Stateless UI like WebEngine/Freemarker and AngularJS.
@@ -349,13 +348,11 @@ To test that the load balancer forwards the HTTP requests of a given session to 
 
 * * *
 
-&nbsp;
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [VCS developer documentation]({{page space='nxdoc710' page='vcs'}})
-*   [Redis Configuration]({{page page='redis-configuration'}})
-*   [Setting up a HA Configuration Using the Nuxeo Platform and PostgreSQL]({{page page='setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql'}})
+- [VCS developer documentation]({{page space='nxdoc710' page='vcs'}})
+- [Redis Configuration]({{page page='redis-configuration'}})
+- [Setting up a HA Configuration Using the Nuxeo Platform and PostgreSQL]({{page page='setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql'}})
 
 {{/panel}}</div><div class="column medium-6">
 

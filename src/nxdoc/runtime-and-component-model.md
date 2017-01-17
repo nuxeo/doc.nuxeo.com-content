@@ -344,14 +344,14 @@ For that, Nuxeo Platform provides the following patterns:
 Implementing your own _bundle_, your will be able to contribute to existing _extensions_ so as to customize things. For instance, you can:
 
 *   Define custom schemas and Document types (supported by Nuxeo Studio),
-*   Define custom forms&nbsp;(supported by Nuxeo Studio),
+*   Define custom forms (supported by Nuxeo Studio),
 *   Define custom life cycles (supported by Nuxeo Studio),
 *   Enforce business policies:
-    *   Use content automation&nbsp;(supported by Nuxeo Studio),
+    *   Use content automation (supported by Nuxeo Studio),
     *   Write custom listener scripts,
-*   Customize the Web UI:
-    *   Make your own branding&nbsp;(supported by Nuxeo Studio),
-    *   Add buttons, tabs, links, views&nbsp;(supported by Nuxeo Studio),
+*   Customize the UI:
+    *   Make your own branding (supported by Nuxeo Studio),
+    *   Add buttons, tabs, links, views (supported by Nuxeo Studio),
     *   Build your own theme via the ThemeManager,
 *   Add workflows.
 
@@ -380,8 +380,6 @@ The manifest file is used to:
 *   Define an id for the bundle,
 *   Define the dependencies of the bundles (i.e.: other bundles that should be present for this bundle to run),
 *   List XML components that are part of the bundle.
-
-&nbsp;
 
 Here is an example of a MANIFEST file:
 
@@ -415,18 +413,18 @@ Nuxeo bundles are deployed on the Nuxeo server via the Nuxeo runtime that behave
 
 When an OSGi framework starts it will try to load all bundles installed in the system. When all dependencies of a bundle are resolved, the framework starts the bundle. Starting a bundle means invoking a bundle activator if any is declared in the manifest file.
 
-This way each bundle that registers an activator is notified that it was started - so the bundle activator can do any initialization code required for the bundle to be ready to work. In the same way when a bundle is removed the bundle activator will be notified to cleanup any held resources.&nbsp;OSGi frameworks provides listeners to notify all interested bundles on various framework events like starting a bundle, stopping another one, etc.
+This way each bundle that registers an activator is notified that it was started - so the bundle activator can do any initialization code required for the bundle to be ready to work. In the same way when a bundle is removed the bundle activator will be notified to cleanup any held resources. OSGi frameworks provides listeners to notify all interested bundles on various framework events like starting a bundle, stopping another one, etc.
 
-This mechanism provides a flexible way to build modular applications which are composed of components that need to take some actions when some resources are become available or are removed. This life cycle mechanism helps bundles react when changes are made in the application. Thus, an OSGi bundle is notified when all its dependencies were resolved and it can start providing services to other bundles.&nbsp;OSGi is also proposing a service model - so that bundles can export services to other bundles in the platform.
+This mechanism provides a flexible way to build modular applications which are composed of components that need to take some actions when some resources are become available or are removed. This life cycle mechanism helps bundles react when changes are made in the application. Thus, an OSGi bundle is notified when all its dependencies were resolved and it can start providing services to other bundles. OSGi is also proposing a service model - so that bundles can export services to other bundles in the platform.
 
 There are two major differences between the default Nuxeo Runtime launcher and an OSGi framework:
 
 *   Nuxeo is using single class loader for all bundles. It doesn't interpret OSGi dependencies in the manifest.
-*   Nuxeo services are not exposed as OSGi services.&nbsp;
+*   Nuxeo services are not exposed as OSGi services.
 
 ### {{> anchor 'components'}}Components and Services
 
-<span style="color: rgb(50,51,51);">A&nbsp;**component**&nbsp;is a piece of software defined by a&nbsp;**bundle**&nbsp;used as an entry point by other components that want to contribute some extensions or to ask for some service interface. A component is an abstract concept - it is not necessarily backed by a Java class and is usually made from several classes and XML configuration.</span>
+A **component** is a piece of software defined by a **bundle** used as an entry point by other components that want to contribute some extensions or to ask for some service interface. A component is an abstract concept - it is not necessarily backed by a Java class and is usually made from several classes and XML configuration.
 
 The XML components are XML files, usually placed in the `OSGI-INF` directory, that are used to declare configuration to Nuxeo Runtime.
 
@@ -446,7 +444,7 @@ Framework.getRuntime().getComponent(componentName)
 
 ```
 
-Usually, components are not used directly, they are used via a service interface. For that, the XML components can declare which service interfaces are provided by a given component. The component can directly implement the service interface or can delegate service interface implementation to an other class. Components must be accessed using the interfaces they provide and not through real implementation classes.&nbsp;Once declared the service will be available via a simple Nuxeo Runtime call:
+Usually, components are not used directly, they are used via a service interface. For that, the XML components can declare which service interfaces are provided by a given component. The component can directly implement the service interface or can delegate service interface implementation to an other class. Components must be accessed using the interfaces they provide and not through real implementation classes. Once declared the service will be available via a simple Nuxeo Runtime call:
 
 ```
 Framework.getService(ServiceInterface.class)
@@ -459,7 +457,7 @@ The list of existing services can be found on the [Nuxeo Platform Explorer](http
 
 {{/callout}}
 
-### {{> anchor 'extensions'}}&nbsp;Extension Points
+### {{> anchor 'extensions'}} Extension Points
 
 One of the corner stones of the Nuxeo Platform is to provide components and services that can easily be configured or extended. For that, we use the extension point system from Nuxeo Runtime that was inspired from Equinox (Eclipse platform).
 
@@ -575,8 +573,8 @@ The Nuxeo Platform uses extension points extensively, to let you extend and conf
 
 ### Nuxeo Runtime
 
-All the bundles included in a Nuxeo Application are part of different plug-ins (from the core plug-ins to the high level ones). A minimal application is represented by a single plugin - the framework itself (which is itself packaged as a bundle).&nbsp;
-This is what we are naming&nbsp;**Nuxeo Runtime**. Of course launching the Nuxeo Runtime without any plug-in installed is useless - except a welcome message in the console nothing happens.&nbsp; But, starting from&nbsp;**Nuxeo Runtime**&nbsp;you can build a complete application by installing different plug-ins (depending on the type of your application you may end up with tens of bundles).
+All the bundles included in a Nuxeo Application are part of different plug-ins (from the core plug-ins to the high level ones). A minimal application is represented by a single plugin - the framework itself (which is itself packaged as a bundle).
+This is what we are naming **Nuxeo Runtime**. Of course launching the Nuxeo Runtime without any plug-in installed is useless - except a welcome message in the console nothing happens.  But, starting from **Nuxeo Runtime** you can build a complete application by installing different plug-ins (depending on the type of your application you may end up with tens of bundles).
 
 A basic Nuxeo Application is composed at least of two layers of plug-ins: the Runtime layer and the core one.
 
@@ -600,7 +598,3 @@ All the bundles providing the different layers of the same feature are usually a
 This is basically a bundle group for a given feature.
 
 Now you may want to understand [how those packages are deployed on a Nuxeo server]({{page page='understanding-bundles-deployment'}}).
-
-&nbsp;
-
-&nbsp;

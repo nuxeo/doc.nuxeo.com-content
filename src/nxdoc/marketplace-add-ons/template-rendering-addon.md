@@ -190,7 +190,7 @@ This addon depends on Nuxeo Template Rendering. It includes:
         *   <span class="treeLink">nxtrPortfolio: a collection-based document type, used to reference</span> projects and generate case studies from the content it references.
         *   <span class="treeLink">nxtrProject: a file-based document type, used to generate financial reports about the project's health and case studies when referenced into a portfolio.</span>
         *   <span class="treeLink">nxtrSamplesContainer</span>: a workspace-based document type, that contains projects and portfolios.
-    *   Two file-based document types, provided as read only (you cannot create more using the Web UI by default) and used to demonstrate advanced raw examples:
+    *   Two file-based document types, provided as read only (you cannot create more using the UI by default) and used to demonstrate advanced raw examples:
         *   "Customer reference"
         *   "Statement reference"
 *   Templates with template attachments, leveraging the Template document type, in the "Templates" space,

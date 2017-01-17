@@ -181,7 +181,7 @@ The Nuxeo Platform's JSF interface is fully modular and very easy to customize:
 *   Business application,
 *   Document management back office.
 
-More information on the&nbsp;[Studio]({{page space='studio' page='nuxeo-online-services'}})&nbsp;space and on the "[Web UI Framework]({{page page='web-ui-framework'}})" section.
+More information on the [Studio]({{page space='studio' page='nuxeo-online-services'}}) space and on the "[JSF UI Framework]({{page page='jsf-ui-framework'}})" section.
 
 ## {{> anchor 'own-application'}}Front Apps
 
@@ -211,20 +211,18 @@ Nuxeo WebEngine enables web developers to easily create a customized web interfa
 *   Java scripting support
 
 **Typical use case:**
-Nuxeo WebEngine is designed to expose the Nuxeo Platform's managed content in a web experience. In many cases, the JSF interface is used for the back office management while Nuxeo WebEngine provides the front office interface. Furthermore, with the JAX-RS support, Nuxeo WebEngine allows rapid creation of REST applications on top of the Nuxeo Platform.&nbsp;
+Nuxeo WebEngine is designed to expose the Nuxeo Platform's managed content in a web experience. In many cases, the JSF interface is used for the back office management while Nuxeo WebEngine provides the front office interface. Furthermore, with the JAX-RS support, Nuxeo WebEngine allows rapid creation of REST applications on top of the Nuxeo Platform.
 
 {{#> callout type='info' heading='WebEngine is a light framework'}} Nuxeo WebEngine is a web-framework because it provides you with a way to structure how you implement the standard "MVC" pattern. But it is light because it doesn't provide any widgets library, any collection of ready to use templates, etc. Nuxeo aims at letting this framework as light as it is now and encourage users to leverage popular web framework when requiring many UI components. Actually, Nuxeo WebEngine is light enough to be easily used in parallel of those JavaScript framework. {{/callout}}
-
-&nbsp;
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Web UI Framework]({{page page='web-ui-framework'}})
-*   [Clients]({{page page='clients'}})
-*   [How-To Index]({{page page='how-to-index'}})
-*   [REST API]({{page page='rest-api'}})
+- [JSF UI Framework]({{page page='jsf-ui-framework'}})
+- [Clients]({{page page='clients'}})
+- [How-To Index]({{page page='how-to-index'}})
+- [REST API]({{page page='rest-api'}})
 
 {{/panel}}</div><div class="column medium-6">
 
