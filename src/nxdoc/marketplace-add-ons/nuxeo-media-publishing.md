@@ -123,8 +123,6 @@ This addon is designed to allow many implementations. Default implemented provid
 *   [Youtube](http://youtube.com)
 *   [Wistia](http://wistia.com)
 
-<div>
-
 ## Functional Overview
 
 Installing this addon enriches the Publish tab of a video document with a set of external providers to where videos can be published. When publishing a video, users must select a publishing account and each provider can require additional fields to be filled (e.g tags, privacy of the video).
@@ -145,17 +143,11 @@ Published videos can also be republished or unpublished from the external provid
 
 ## Installation and Configuration
 
-<div>This addon requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin tab]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}). However, it requires the installation of the&nbsp;[Digital Asset Management (DAM) addon]({{page page='digital-asset-management-dam'}}) which provides multimedia files (picture, audio and video).</div>
+This addon requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin tab]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}). However, it requires the installation of the [Digital Asset Management (DAM) addon]({{page page='digital-asset-management-dam'}}) which provides multimedia files (picture, audio and video).
 
-<div>After the package is installed, two new OAuth2 service providers are added to Nuxeo (Admin > Cloud Services > Service providers). These providers must be properly configured before users can use them to publish their videos.</div>
+After the package is installed, two new OAuth2 service providers are added to Nuxeo (Admin > Cloud Services > Service providers). These providers must be properly configured before users can use them to publish their videos.
 
-<div>
-
-<div>![]({{file name='oauth2-providers.png'}} ?w=600,border=true)</div>
-
-</div>
-
-</div>
+![]({{file name='oauth2-providers.png'}} ?w=600,border=true)
 
 ### YouTube Configuration
 
@@ -171,7 +163,7 @@ Published videos can also be republished or unpublished from the external provid
 
     a.  Choose **OAuth Client ID.**
 
-    b. If not already done, you will need to edit your consent screen: In **Credentials > OAuth Consent Screen**, fill the product name (the name of your application). Optionally, you may fill the other fields.
+    b. If not already done, you will need to edit your consent screen: In **Credentials**&nbsp;> **OAuth Consent Screen**, fill the product name (the name of your application). Optionally, you may fill the other fields.
 
     c.  Choose **Web Application.**
 
@@ -182,10 +174,10 @@ Published videos can also be republished or unpublished from the external provid
 
 **Step 2: Configuring the Nuxeo Platform**
 
-1.  In the **Admin** tab, go to&nbsp;**Cloud Services >**&nbsp;**Service providers**.
-2.  In the&nbsp;**OAuth2 Service providers**&nbsp;section, update the service whose name is &ldquo;YouTube&rdquo; by clicking on the&nbsp;**Modify**&nbsp;button.
+1.  In the **Admin** tab, go to **Cloud Services**&nbsp;> **Service providers**.
+2.  In the **OAuth2 Service providers** section, update the service whose name is &ldquo;YouTube&rdquo; by clicking on the **Modify** button.
 3.  Set the Client ID and Client Secret values with the one you got on the previous step.
-4.  Make sure the&nbsp;**Enabled**&nbsp;box is checked.
+4.  Make sure the **Enabled** box is checked.
 5.  Save.
 
 ### Wistia Configuration
@@ -201,16 +193,16 @@ OAuth2 is not yet available for all Wistia accounts. Until it is, [contact Wisti
 1.  Go to [Wistia website](http://wistia.com/) > **Account** > **Settings** > **OAuth applications**.
 2.  Create a new application.
 3.  Fill in the required fields.
-    1.  For&nbsp;**Callback URL**&nbsp;set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/Wistia/callback](http://localhost:8080/nuxeo/site/oauth2/googledrive/callback).
-    2.  Set permissions to&nbsp;**all:all.**
+    1.  For **Callback URL** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/Wistia/callback](http://localhost:8080/nuxeo/site/oauth2/googledrive/callback).
+    2.  Set permissions to **all:all.**
 4.  Open the details of the application to get the Client ID and Client Secret values. You will need them in the next steps.
 
 **Step 2: Configuring the Nuxeo Platform**
 
-1.  In the **Admin** tab, go to&nbsp;**Cloud Services >**&nbsp;**Service providers**.
-2.  In the&nbsp;**OAuth2 Service providers** section, update the service whose name is &ldquo;Wistia&rdquo; by clicking on the&nbsp;**Modify** button.
+1.  In the **Admin** tab, go to **Cloud Services**&nbsp;> **Service providers**.
+2.  In the **OAuth2 Service providers** section, update the service whose name is &ldquo;Wistia&rdquo; by clicking on the **Modify** button.
 3.  Set the Client ID and Client Secret values with the one you got on the previous step.
-4.  Make sure the&nbsp;**Enabled** box is checked.
+4.  Make sure the **Enabled** box is checked.
 5.  Save.
 
 ### How to Add Publishing Accounts
@@ -229,7 +221,7 @@ Nuxeo Media Publishing defines the following schema:
 
 ### Facets
 
-This addon defines the `PublishableMedia`&nbsp;facet. This facet is added to the `Video` document type and contains the `publishable_media` schema.
+This addon defines the `PublishableMedia` facet. This facet is added to the `Video` document type and contains the `publishable_media` schema.
 
 ### Extension Points
 
@@ -250,7 +242,7 @@ If you want to define other media publishing providers, you need to contribute a
 
 #### Step 1: Contribute a media publishing service
 
-Nested in the component tag of your XML contribution file, set the implementation class and use the extension point&nbsp;`providers` to register your media publishing service.
+Nested in the component tag of your XML contribution file, set the implementation class and use the extension point `providers` to register your media publishing service.
 
 ```xml
 <component name="org.nuxeo.ecm.media.publishing.MyMediaPublishingProviderService">
@@ -268,12 +260,12 @@ Nested in the component tag of your XML contribution file, set the implementatio
 </component>
 ```
 
-Your service implementation must implement the&nbsp;`MediaPublishingProvider` interface or extend any other class that implements this interface.
+Your service implementation must implement the `MediaPublishingProvider` interface or extend any other class that implements this interface.
 
 #### Step 2: Contribute an OAuth provider
 
-1.  Nested in the component tag of your XML contribution file, add a `require`&nbsp;tag the&nbsp;`OAuth2ServiceProviderRegistry`.
-2.  Then, use the extension point&nbsp; [`providers`](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.oauth2.providers.OAuth2ServiceProviderRegistry--providers) &nbsp;of the `OAuth2ServiceProviderRegistry`&nbsp;service to register the OAuth provider.
+1.  Nested in the component tag of your XML contribution file, add a `require` tag the `OAuth2ServiceProviderRegistry`.
+2.  Then, use the extension point [`providers`](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.oauth2.providers.OAuth2ServiceProviderRegistry--providers) of the `OAuth2ServiceProviderRegistry` service to register the OAuth provider.
 
     ```xml
     <component name="org.nuxeo.ecm.media.publishing.MyOAuthServiceProvider">
@@ -292,9 +284,9 @@ Your service implementation must implement the&nbsp;`MediaPublishingProvider` in
     </component>
     ```
 
-    **Note:** The&nbsp;`name` field of your OAuth provider must match the&nbsp;`id` of your media publishing service defined in Step 1\. The `description`&nbsp;field is used as a label in the UI.
+    **Note:** The `name` field of your OAuth provider must match the `id` of your media publishing service defined in Step 1\. The `description` field is used as a label in the UI.
 
-#### Step 3: Contribute options widgets&nbsp;(optional)
+#### Step 3: Contribute options widgets (optional)
 
 By default, when publishing a video, the only required field to fill in is the publishing account. However, since different services allow different metadata (e.g. privacy status of a video, channels, projects, tags) it is possible to contribute more options widgets to the publishing panel in the UI.
 
@@ -314,20 +306,16 @@ By default, when publishing a video, the only required field to fill in is the p
 </extension>
 ```
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Using OAuth2]({{page page='using-oauth2'}})
-*   [Using OpenID / OAuth2 in Login Screen]({{page page='using-openid-oauth2-in-login-screen'}})
-*   [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
-*   [Publisher]({{page page='publisher'}})
+- [Using OAuth2]({{page page='using-oauth2'}})
+- [Using OpenID / OAuth2 in Login Screen]({{page page='using-openid-oauth2-in-login-screen'}})
+- [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
+- [Publisher]({{page page='publisher'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 &nbsp;
 
