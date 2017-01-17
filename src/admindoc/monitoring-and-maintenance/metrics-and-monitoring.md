@@ -234,7 +234,7 @@ Here is a short list of Nuxeo metrics:
     *   create: Counter of document created
     *   delete: Counter of document deleted
     *   update: Counter of document updated
-*   [nuxeo.repositories.jdbc/nuxeo.connections](http://nuxeo.repositories.jdbc/nuxeo.connections)
+*   nuxeo.repositories.jdbc/nuxeo.connections
     *   count: VCS connection count
     *   idle: VCS idle connection count
 *   nuxeo.transactions.concurrents
@@ -293,7 +293,7 @@ By default only three statuses are defined:
 
 Administrative Status can be configured and declared via the [`serviceDefinition` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--serviceDefinition).
 
-### Probes&nbsp;
+### Probes
 
 Probes can be used to run a test on the target deployed platform. Probes can be used to check that all part of the architecture are actually running for real:
 
@@ -302,7 +302,7 @@ Probes can be used to run a test on the target deployed platform. Probes can be 
 *   check VCS access,
 *   ...
 
-Probes can be defined via the&nbsp; [`probes` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--probes).
+Probes can be defined via the [`probes` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--probes).
 
 By default four probes are defined:
 
@@ -319,7 +319,7 @@ You can use JVisualVM or similar tool to access Nuxeo JMX interface. See the sec
 
 Inside the Admin Center there are two sections that are related to monitoring: Activity and Monitoring
 
-#### {{> anchor 'admin-activity-tab'}}Activity&nbsp;
+#### {{> anchor 'admin-activity-tab'}}Activity
 
 The Activity section provides access to:
 
@@ -343,7 +343,7 @@ The Monitoring sections provides access to:
 
 ### REST Access
 
-#### Counters&nbsp;
+#### Counters
 
 Counter are exposed via Automation API [Counters.GET](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewOperation/Counters.GET)
 
@@ -359,14 +359,12 @@ curl -H 'Content-Type:application/json+nxrequest' -X POST -d
 Administrator:Administrator http://localhost:8080/nuxeo/site/automation/Counters.GET
 ```
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics'}}
 
-*   [Remote Monitoring Through a SSH Tunnel]({{page page='remote-monitoring-through-a-ssh-tunnel'}})
-*   [Transactions and Connections]({{page page='transactions-and-connections'}})
+- [Remote Monitoring Through a SSH Tunnel]({{page page='remote-monitoring-through-a-ssh-tunnel'}})
+- [Transactions and Connections]({{page page='transactions-and-connections'}})
 
 {{/panel}}</div><div class="column medium-6">
 

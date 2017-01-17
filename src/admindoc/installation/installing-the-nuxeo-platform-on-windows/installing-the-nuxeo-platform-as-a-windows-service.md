@@ -197,8 +197,6 @@ Installing Nuxeo as a Windows service is independent of Nuxeo. So, this is no lo
 
 Multiple solutions are available, here are some of them, given without any warranty.
 
-&nbsp;
-
 {{#> callout type='tip' }}
 
 Once a batch is installed as a service, it cannot be changed: you must first uninstall it, then edit and reinstall in order to change its content.
@@ -270,7 +268,7 @@ When using this solution it is important that Nuxeo installation path contains n
     nuxeoctl.bat --gui=false stop
     ```
 
-8.  Open the wrapper.conf file and make sure the&nbsp;`wrapper.console.title` entry does not contain a colon (":") or the runConsole.bat will fail. Just remove the colon or give another title.
+8.  Open the wrapper.conf file and make sure the `wrapper.console.title` entry does not contain a colon (":") or the runConsole.bat will fail. Just remove the colon or give another title.
 9.  Execute your wrapped application as console application by calling this command and check your application is accessible:
 
     ```
@@ -487,17 +485,14 @@ There are some disadvantages such as failures in case of multiple frameworks ins
 
 You may want to have a look at [http://msdn2.microsoft.com/en-US/library/system.configuration.install.managedinstallerclass.aspx](http://msdn2.microsoft.com/en-US/library/system.configuration.install.managedinstallerclass.aspx) for managing that programmatically.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Windows-Related Documentation'}}
 
-*   [Installing the Nuxeo Platform on Windows]({{page page='installing-the-nuxeo-platform-on-windows'}})
-*   [Running Multiple Server Instances in Windows]({{page page='running-multiple-server-instances-in-windows'}})
+- [Installing the Nuxeo Platform on Windows]({{page page='installing-the-nuxeo-platform-on-windows'}})
+- [Running Multiple Server Instances in Windows]({{page page='running-multiple-server-instances-in-windows'}})
 
 {{/panel}}</div><div class="column medium-6">
 
-&nbsp;
 
 </div></div>
