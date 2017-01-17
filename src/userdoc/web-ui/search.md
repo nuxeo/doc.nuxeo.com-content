@@ -5,7 +5,7 @@ review:
     date: '2017-01-04'
     status: ok
 toc: true
-description:
+description: Web UI user documentation about Search
 ---
 The Nuxeo Platform provides different to search your documents. A Search tab in the&nbsp;side menu and a quick search at the top of the page.
 
