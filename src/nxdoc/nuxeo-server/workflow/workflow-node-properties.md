@@ -2,10 +2,10 @@
 title: Workflow Node Properties
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-30'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - todo
     - node
     - workflow
@@ -108,6 +108,8 @@ Node variables are persisted on the node document. These are metadata stored on 
 
 At low level, there is only one type of node and the workflow engine behavior will change depending on the value of the properties of this node. In the [Nuxeo Studio designer]({{page space='studio' page='workflow'}}), you will find several kinds of node, that are actually just some sort of presets on top of the generic node. There are more than 40 parameters that can be configured on a node. They are all stored on the "route_node" schema of the "RouteNode" document.
 
+Workflow variables are also available on the node properties, in a schema named `var_$WorkflowModelName`.
+
 ### Identification
 
 `nodeId`: Id of the node, that is generated from Studio.
@@ -151,6 +153,7 @@ At low level, there is only one type of node and the workflow engine behavior wi
 </tr>
 <tr>
 <td colspan="1">`transitions`</td>
+<<<<<<< HEAD
 <td colspan="1">There must be at least one transition. Each transition has the following :</td>
 </tr>
 <tr>
@@ -160,6 +163,17 @@ At low level, there is only one type of node and the workflow engine behavior wi
 <tr>
 <td colspan="1">`transition:condition`</td>
 <td colspan="1">Workflow engine goes into that transition only if the condition is evaluated to `true`.</td>
+=======
+<td colspan="1">There must be at least one transition. Each transition has the following:</td>
+</tr>
+<tr>
+<td colspan="1">`transition:chain`</td>
+<td colspan="1">The chain to execute when going into a transition.</td>
+</tr>
+<tr>
+<td colspan="1">`transition:condition`</td><
+td colspan="1">Workflow engine goes into that transition only if the condition is evaluated to `true`.</td>
+>>>>>>> Update review info, fix formatting
 </tr>
 <tr>
 <td colspan="1">`transition:name`</td>
@@ -173,6 +187,7 @@ At low level, there is only one type of node and the workflow engine behavior wi
 <td colspan="1">`transition:label`</td>
 <td colspan="1">The displayed name of the transition.</td>
 </tr>
+<<<<<<< HEAD
 <tr>
 <td colspan="1">`inputChain`</td>
 <td colspan="1">The chain executed when the workflow engine starts running the node.</td>
@@ -196,7 +211,11 @@ At low level, there is only one type of node and the workflow engine behavior wi
 </tr>
 <tr>
 <td colspan="1">`startDate`</td>
+<<<<<<< HEAD
 <td colspan="1">Workflow engines stores here when it started running the node. If the node is run multiple times in a workflow ( in a loop for example), it stores the last date the workflow started running this node.</td>
+=======
+<td colspan="1">Workflow engines stores here when it started running the node. If the node is run multiple times in a workflow ( in a loop for example),it stores the last date the workflow started running this node.</td>
+>>>>>>> Update review info, fix formatting
 </tr>
 <tr>
 <td colspan="1">`endDate`</td>
@@ -216,7 +235,11 @@ At low level, there is only one type of node and the workflow engine behavior wi
 </tr>
 <tr>
 <td colspan="1">`tasksInfo`</td>
+<<<<<<< HEAD
 <td colspan="1">Holds information about all tasks created by a node. For every task: the lifecycle state (ended or not) , the user who ended the task, the comment if any and the id of the button the user clicked to complete the task (status).</td>
+=======
+<td colspan="1">Holds information about all tasks created by a node. For every task: the life cycle state (ended or not) , the user who ended the task, the comment if any and the id of the button the user clicked to complete the task (status).</td>
+>>>>>>> Update review info, fix formatting
 </tr>
 </tbody>
 </table>
@@ -241,7 +264,11 @@ At low level, there is only one type of node and the workflow engine behavior wi
 </tr>
 <tr>
 <td colspan="1">`taskDocType`</td>
+<<<<<<< HEAD
 <td colspan="1">The tasks created by the workflow engine (by calling the TaskService) are documents of type "TaskDoc". You can change this if you need custom metadata on the task document (to be displayed on the task dashboard for example). Your document type must have the facets "Task" and "RoutingTask" and the "task" lifecycle.</td>
+=======
+<td colspan="1">The tasks created by the workflow engine (by calling the TaskService) are documents of type "TaskDoc". You can change this if you need custom metadata on the task document ( to be displayed on the task dashboard for example). Your document type must have the facets "Task" and "RoutingTask" and the "task" lifecycle.</td>
+>>>>>>> Update review info, fix formatting
 </tr>
 <tr>
 <td colspan="1">`taskDescription`</td>
@@ -260,7 +287,12 @@ At low level, there is only one type of node and the workflow engine behavior wi
 <td colspan="1">The task dueDate will be dynamically computed from this MVEL expression.</td>
 </tr>
 <tr>
+<<<<<<< HEAD
 <td colspan="1">`taskAssignees`</td><td colspan="1">The assignees for the task. Users should be prefixed by "`user:`" and groups by "`group:`"</td>
+=======
+<td colspan="1">`taskAssignees`</td>
+<td colspan="1">The assignees for the task. Users should be prefixed by "`user:`" and groups by "`group:`"</td>
+>>>>>>> Update review info, fix formatting
 </tr>
 <tr>
 <td colspan="1">`taskAssigneesExpr`</td>
@@ -268,15 +300,25 @@ At low level, there is only one type of node and the workflow engine behavior wi
 </tr>
 <tr>
 <td colspan="1">`taskAssigneesPermission`</td>
+<<<<<<< HEAD
 <td colspan="1">Grant specific permission to the task assignees on the documents following the workflow (automatically removed by the workflow engine once the task is completed).</td>
+=======
+<td colspan="1">Grant specific permission to the task assignees on the documents following the workflow ( automatically removed by the workflow engine once the task is completed).</td>
+>>>>>>> Update review info, fix formatting
 </tr>
 <tr>
 <td colspan="1">`allowTaskReassignment`</td>
 <td colspan="1">When true, the reassign user action is displayed to the assignee.</td>
 </tr>
+<<<<<<< HEAD
 <tr><td colspan="1">`taskNotificationTemplate`</td>
 <td colspan="1">The template of the email that is sent to the assignee when she is assigned a task. If no template is selected, no notification is sent.
 **workflowTaskAssigned** is the default mail template.</td>
+=======
+<tr>
+<td colspan="1">`taskNotificationTemplate`</td>
+<td colspan="1">The template of the email that is sent to the assignee when she is assigned a task. If no template is selected, no notification is sent. **workflowTaskAssigned** is the default mail template.</td>
+>>>>>>> Update review info, fix formatting
 </tr>
 <tr>
 <td colspan="1">`taskLayout`</td>
@@ -309,16 +351,27 @@ At low level, there is only one type of node and the workflow engine behavior wi
 </tbody>
 </table>
 </div>
+<<<<<<< HEAD
 
 ### Escalation
 
 `escalationRules`
 
+=======
+
+### Escalation (`escalationRules`)
+
+>>>>>>> Update review info, fix formatting
 <div class="table-scroll">
 <table class="hover">
 <tbody>
 <tr>
+<<<<<<< HEAD
 <th colspan="1">Property</th><th colspan="1">Description</th>
+=======
+<th colspan="1">Property</th>
+<th colspan="1">Description</th>
+>>>>>>> Update review info, fix formatting
 </tr>
 <tr>
 <td colspan="1">`name`</td>
