@@ -2,7 +2,7 @@
 title: How to Make a Page Provider or Content View Query Elasticsearch Index
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 details:
     howto:
@@ -167,7 +167,7 @@ Elasticsearch indexing is "eventually consistent". This means that depending on 
 
 {{/callout}}{{> wistia_video id='c9lxp69a01'}}
 
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.io/nuxeo/university/#!/course/whats-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.io)
+Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.com)
 
 &nbsp;
 

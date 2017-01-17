@@ -2,7 +2,7 @@
 title: Using Workflows
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-01-17'
     status: ok
 toc: true
 labels:
@@ -223,7 +223,7 @@ Start a workflow on a contract, leveraging the contract validation workflow prov
 {{#> callout type='info' heading='Learn more'}}
 
 *   [Workflow developer documentation]({{page page='workflow'}})
-*   [Workflow Engine course on Nuxeo University](https://university.nuxeo.io/nuxeo/university/#!/course/nuxeo-platform-workflow-engine)
+*   [Workflow Engine course on Nuxeo University](https://university.nuxeo.com/store/155930-workflow-engine)
 
 {{/callout}}
 
@@ -318,7 +318,7 @@ When the workflow started, a verification was performed that determined no amoun
 {{#> callout type='info' heading='Learn more'}}
 
 *   [About Tasks]({{page page='about-tasks'}})
-*   [Assigning Workflow Tasks video from Nuxeo University](https://university.nuxeo.io/nuxeo/university/#!/course/nuxeo-platform-workflow-engine/assigning-workflow-tasks)
+*   [Assigning Workflow Tasks video from Nuxeo University](https://university.nuxeo.com/store/155930-workflow-engine)
 
 {{/callout}}
 
@@ -411,7 +411,7 @@ This time a task has been assigned to the `managers` group (represented by Sarah
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [Playing with Workflow Buttons and Transitions video from Nuxeo University](https://university.nuxeo.io/nuxeo/university/#!/course/nuxeo-platform-workflow-engine/playing-with-workflow-buttons-and-transitions)
+*   [Playing with Workflow Buttons and Transitions video from Nuxeo University](https://university.nuxeo.com/store/155930-workflow-engine)
 
 {{/callout}}
 

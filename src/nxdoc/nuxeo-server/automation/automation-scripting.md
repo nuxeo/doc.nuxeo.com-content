@@ -2,7 +2,7 @@
 title: Automation Scripting
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-01-17'
     status: ok
 labels:
     - lts2016-ok
@@ -210,7 +210,7 @@ history:
 ---
 {{> wistia_video id='nygm75sevd'}}
 
-Extract from the course "[Applying Business Logic](https://university.nuxeo.io/nuxeo/university/#!/course/applying-business-logic)" at [Nuxeo University](https://university.nuxeo.io/)
+Extract from the course "[Applying Business Logic](https://university.nuxeo.com/store/161508-applying-business-logic)" at [Nuxeo University](https://university.nuxeo.com)
 
 {{! excerpt}}
 

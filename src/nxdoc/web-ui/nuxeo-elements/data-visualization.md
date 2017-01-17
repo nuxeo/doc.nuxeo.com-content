@@ -2,7 +2,7 @@
 title: Data Visualization
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
     - content-review-lts2016
@@ -134,7 +134,7 @@ history:
 ---
 {{> wistia_video id='z3169a27fz'}}
 
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.io/nuxeo/university/#!/course/whats-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.io)
+Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.com)
 
 Data&nbsp;Visualization&nbsp;support in Nuxeo leverages Web Components and the Polymer framework in order to allow users to easily build their own custom dashboards, thus helping them understand how data is distributed in the repository as well as monitoring workflow activity.
 
@@ -144,7 +144,7 @@ A set of custom elements are available for bootstrapping custom graphical dashbo
 
 {{> wistia_video id='bixgszbq9h'}}
 
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.io/nuxeo/university/#!/course/whats-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.io)
+Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.com)
 
 ### Elasticsearch Passthrough
 
@@ -174,7 +174,7 @@ Like what has been done for our core Nuxeo Elements focus was on a clear separat
 
 {{> wistia_video id='xxqmh6slv6'}}
 
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.io/nuxeo/university/#!/course/whats-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.io)
+Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.com)
 
 The Workflow Data element (`nuxeo-workflow-data`) allows querying Nuxeo's&nbsp;[Workflow Audit Log]({{page page='workflow-audit-log'}})&nbsp;which,&nbsp;since Nuxeo 7.3, is stored by default as an Elasticsearch index.
 

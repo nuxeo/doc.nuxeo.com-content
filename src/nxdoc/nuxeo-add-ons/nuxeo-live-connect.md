@@ -2,7 +2,7 @@
 title: Nuxeo Live Connect
 review:
     comment: ''
-    date: '2016-12-12'
+    date: '2017-01-17'
     status: ok
 labels:
     - lts2016-ok
@@ -303,7 +303,7 @@ history:
 ---
 {{> wistia_video id='42en4rinfh'}}
 
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.io/nuxeo/university/#!/course/whats-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.io)
+Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.com)
 
 {{! excerpt}}
 
