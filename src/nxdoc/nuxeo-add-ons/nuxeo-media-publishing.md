@@ -168,7 +168,7 @@ After the package is installed, two new OAuth2 service providers are added to Nu
 
     a.  Choose **OAuth Client ID.**
 
-    b. If not already done, you will need to edit your consent screen: In **Credentials > OAuth Consent Screen**, fill the product name (the name of your application). Optionally, you may fill the other fields.
+    b. If not already done, you will need to edit your consent screen: In **Credentials**&nbsp;> **OAuth Consent Screen**, fill the product name (the name of your application). Optionally, you may fill the other fields.
 
     c.  Choose **Web Application.**
 
@@ -179,7 +179,7 @@ After the package is installed, two new OAuth2 service providers are added to Nu
 
 **Step 2: Configuring the Nuxeo Platform**
 
-1.  In the **Admin** tab, go to **Cloud Services >** **Service providers**.
+1.  In the **Admin** tab, go to **Cloud Services**&nbsp;> **Service providers**.
 
 2.  In the **OAuth2 Service providers** section, update the service whose name is &ldquo;YouTube&rdquo; by clicking on the **Modify** button.
 
@@ -211,7 +211,7 @@ OAuth2 is not yet available for all Wistia accounts. Until it is, [contact Wisti
 
 **Step 2: Configuring the Nuxeo Platform**
 
-1.  In the **Admin** tab, go to **Cloud Services >** **Service providers**.
+1.  In the **Admin** tab, go to **Cloud Services**&nbsp;> **Service providers**.
 
 2.  In the **OAuth2 Service providers** section, update the service whose name is &ldquo;Wistia&rdquo; by clicking on the **Modify** button.
 
