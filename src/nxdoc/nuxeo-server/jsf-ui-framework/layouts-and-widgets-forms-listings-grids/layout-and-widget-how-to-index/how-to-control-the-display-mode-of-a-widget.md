@@ -181,11 +181,9 @@ history:
 ---
 {{! excerpt}}
 
-It is a very frequent requirement to be able to control the display mode of a widget depending on some conditions such as the life cycle state of the document, or the groups a user belongs to. Nuxeo Studio enables you to leverage the power of the Nuxeo Layout service and to implement your requirements using an expression when you configure your widget.
+It is a very frequent requirement to be able to control the display mode of a widget depending on some conditions such as the lifecycle state of the document, or the groups a user belongs to. Nuxeo Studio enables you to leverage the power of the Nuxeo Layout service and to implement your requirements using an expression when you configure your widget.
 
 {{! /excerpt}}
-
-&nbsp;
 
 For instance, when you are editing a document layout, whether it is the creation, edition or view layout, if you edit the widgets you dropped on the layout, you will see the "Advanced mode configuration" section.
 
@@ -206,19 +204,26 @@ You can also see the [reference documentation on layouts]({{page page='layout-an
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related How-Tos'}}
 
-*   [undefined]()
-*   [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
-*   [Customize the Versioning and Comment Widget]({{page page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
-*   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
+- [Customize the Versioning and Comment Widget]({{page page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
+- [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
+- [How-To Index]({{page page='how-to-index'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+{{/panel}}
+</div>
 
-*   [JSF UI Framework]({{page page='jsf-ui-framework'}})
-*   [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
-*   [Layout and Widgets]({{page page='layouts-and-widgets-forms-listings-grids'}})
-*   [Widget Definitions]({{page page='widget-definitions'}})
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
-{{/panel}}</div></div>
+- [JSF UI Framework]({{page page='jsf-ui-framework'}})
+- [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
+- [Layout and Widgets]({{page page='layouts-and-widgets-forms-listings-grids'}})
+- [Widget Definitions]({{page page='widget-definitions'}})
+
+{{/panel}}
+</div>
+</div>

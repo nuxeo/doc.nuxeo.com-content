@@ -129,8 +129,7 @@ The following is a sample definition of what an `edit` layout element for a `MyD
 When contributing document types, there are a couple of two more contributions that have to be made in order for them to
 be properly displayed in the document creation wizard: add a custom icon and a custom label for each type.
 
-The icon must be contributed to `/nuxeo.war/ui/images`, named after the format `{doctype}.svg`. Labels must be added to
-the message files under the format `label.document.type.{doctype}`. In both cases, `doctype` must be the lower case doctype **id**.
+The icon must be contributed to `/nuxeo.war/ui/images/doctypes`, named after the format `{doctype}.svg`. Labels must be added to the message files under the format `label.document.type.{doctype}`. In both cases, `doctype` must be the lower case doctype **id**.
 
 {{#> callout type='note' }}
 For more information about contributing labels, please check the page [Managing Translations]({{page page='web-ui-managing-translations'}}).

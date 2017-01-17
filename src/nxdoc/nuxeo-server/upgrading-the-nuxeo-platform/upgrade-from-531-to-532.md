@@ -2,10 +2,10 @@
 title: Upgrade from 5.3.1 to 5.3.2
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - multiexcerpt
 confluence:
     ajs-parent-page-id: '3343538'
@@ -74,10 +74,6 @@ This means that resources are no longer embedded inside the EAR but handled in a
 
 This makes changing configurations easier (like switching from H2 to PostgreSQL) and will also allow for upgrades without having to redo all custom system configurations.
 
-The documentation has been updated accordingly:
-
-*   [Installation Guide]({{page space='nxdoc53' page='installation-and-administration-guide'}})
-*   [Description of the new configuration system]({{page space='nxdoc53' page='configuring-nuxeo-ep'}})
 
 ## **Data**
 

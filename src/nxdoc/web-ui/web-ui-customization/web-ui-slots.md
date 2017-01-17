@@ -15,7 +15,7 @@ tree_item_index: 600
 
 ---
 
-## What are nuxeo slots?
+## What Are Nuxeo Slots?
 
 Nuxeo slots are mechanisms to extend part of the nuxeo Web UI. A couple of `nuxeo-slots` are hardcoded in the web-ui source code in order to insert your own html elements and therefore extend the Web UI to meet your specific needs.
 
@@ -39,7 +39,7 @@ Moreover, you can see that `my-element` has its `my-element-property` bound to `
 
 For a better understanding, please refer to the [DOCUMENT_ACTIONS](#document_actions) and where we concretely detail how additional document actions are added by the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon.
 
-## Web UI slots
+## Web UI Slots
 
 ### Summary
 Here are the `nuxeo-slots` available in the Nuxeo Web UI.
@@ -68,7 +68,7 @@ The name and the location of the following slots are temporary and subjects to c
 
 ### Details
 
-#### Document Browsing slots
+#### Document Browsing Slots
 
 The following slots allows to extend available pages and actions when browsing a given document. They are located in [nuxeo-browser.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-browser/nuxeo-browser.html).
 
@@ -257,7 +257,7 @@ The `DRAWER_PAGES` allows to add new items to the main left drawer menu (see bel
 | `document`    | The current document. |
 | `currentUser` | The current user.     |
 
-#### Document creation
+#### Document Creation
 
 ##### DOCUMENT_CREATE_ACTIONS{{> anchor 'document_create_actions'}}
 
@@ -281,10 +281,9 @@ This slot is for instance used in the [Nuxeo Live Connect]({{page version='' spa
 
 **Slot Model Properties**
 
-| Property | Description |
-|:---------|:------------|
+There are no properties for this slot.
 
-#### Search and Collection browsing slots
+#### Search and Collection Browsing Slots
 
 The screen to browse Search results and Collection contents are very similar. When selecting items in the search results or the collection contents, some bulk actions are displayed in a top menu bar (like [BROWSE_ACTIONS](#browse_actions)). These actions can be extended with the following slots.
 
@@ -310,7 +309,7 @@ The screen to browse Search results and Collection contents are very similar. Wh
 | `items`         | Array of displayed collection members, selected or not. (Note: more members could be loaded if you keep scrolling for results) |
 | `selectedItems` | Array of selected collection members.                                                                                          |
 
-#### Other slots
+#### Other Slots
 
 ##### ANALYTICS_ITEMS and ANALYTICS_PAGES {{> anchor 'analytics_pages'}}
 
@@ -320,5 +319,4 @@ The **ANALYTICS_ITEMS** slot allows to define the available items in the analyti
 
 **Slot Model Properties**
 
-| Property | Description |
-|:---------|:------------|
+There are no properties for this slot.

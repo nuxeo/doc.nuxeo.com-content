@@ -266,7 +266,7 @@ Users actions are UI elements that the user will use to do an action in the appl
 
 ## Adding a Button in the JSF UI
 
-Let's add a new button to approve a document. This button should be displayed with the other icons in the top right corner of a document view. This is the user action category Contextual tools (see the page [Actions Display]({{page page='actions-display'}}) for all categories). When the clicks that icon, the document should change life cycle state to Approved and its version should be incremented and its description updated with "Hello World".
+Let's add a new button to approve a document. This button should be displayed with the other icons in the top right corner of a document view. This is the user action category Contextual tools (see the page [Actions Display]({{page page='actions-display'}}) for all categories). When the clicks that icon, the document should change lifecycle state to Approved and its version should be incremented and its description updated with "Hello World".
 
 **To add a new button in the Nuxeo Platform JSF UI:**
 
@@ -282,10 +282,10 @@ Let's add a new button to approve a document. This button should be displayed wi
 
     {{#> callout type='tip' }}
 
-    If you are not already familiar with&nbsp;User Actions and Automation Chains, you might want to take a look at the [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})&nbsp;how-to first.
+    If you are not already familiar with User Actions and Automation Chains, you might want to take a look at the [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}}) how-to first.
 
     {{/callout}}
-5.  Name the automation chain&nbsp;`custom_validation_chain`.
+5.  Name the automation chain `custom_validation_chain`.
 6.  Build the following chain and save.
 
     ```
@@ -335,8 +335,6 @@ If you want to filter the button you are adding to the form only for a specific 
 #{navigationContext.getChangeableDocument().getType().equals("myDocumentType")}
 ```
 
-&nbsp;
-
 ## Removing the Default Create or Edit Button
 
 You can [contribute an XML extension]({{page page='how-to-contribute-to-an-extension'}}) to remove the default button:
@@ -357,8 +355,6 @@ You can [contribute an XML extension]({{page page='how-to-contribute-to-an-exten
 </extension>
 ```
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
@@ -370,9 +366,6 @@ You can [contribute an XML extension]({{page page='how-to-contribute-to-an-exten
 
 {{/panel}}
 
-&nbsp;
-
-&nbsp;
 
 </div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 

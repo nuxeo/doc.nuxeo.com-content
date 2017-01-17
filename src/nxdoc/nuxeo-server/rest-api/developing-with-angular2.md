@@ -14,6 +14,8 @@ labels:
     - javascript-client-component
     - excerpt
 toc: true
+version_override:
+    'LTS 2015': 710/nxdoc/developing-with-angularjs
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API
@@ -332,8 +334,6 @@ We are always eager to receive feedback on our projects. Please report bugs, wis
 - [JavaScript Client]({{page page='javascript-client'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 &nbsp;
 

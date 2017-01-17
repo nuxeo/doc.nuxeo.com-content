@@ -203,7 +203,7 @@ The [Nuxeo CSV add-on](https://connect.nuxeo.com/nuxeo/site/marketplace/package/
 
 {{! /excerpt}} {{! multiexcerpt name='nuxeo_csv_functional_introduction'}}
 
-Installing this add-on adds a button "Import a CSV file" for all users that have at least the Edit permission on any document in which it is possible to import a file. By default, this means workspaces and folders. If you configured other documents types in which it is possible to import files, then the button "Import a CSV file" can also be available (see the page [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})).&nbsp;
+Installing this add-on adds a button "Import a CSV file" for all users that have at least the Edit permission on any document in which it is possible to import a file. By default, this means workspaces and folders. If you configured other documents types in which it is possible to import files, then the button "Import a CSV file" can also be available (see the page [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})).
 
 {{! /multiexcerpt}}
 
@@ -217,7 +217,7 @@ After the package is installed, users have a **Import a CSV file** button availa
 
 ## {{> anchor 'configuration'}}Configuration
 
-The Nuxeo CSV add-on enables users to create file documents and upload their main attachment at the same time. This requires to configure where the server will take the attachments. This is done adding the parameter&nbsp;`nuxeo.csv.blobs.folder` in the server [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) and giving it a value that is a local path to a folder that can be accessed by the server.
+The Nuxeo CSV add-on enables users to create file documents and upload their main attachment at the same time. This requires to configure where the server will take the attachments. This is done adding the parameter `nuxeo.csv.blobs.folder` in the server [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) and giving it a value that is a local path to a folder that can be accessed by the server.
 
 ## {{> anchor 'nuxeo-csv-import-file-definition'}}CSV File Definition
 
@@ -234,22 +234,26 @@ The CSV file used to import documents in the Nuxeo Platform must respect the fol
 
 Here is a simple example of the structure of a CSV file:
 
-<pre>"name","type","dc:title","dc:description"
-"my-file","File","My file","This is my file's description"</pre>
+```csv
+"name","type","dc:title","dc:description"
+"my-file","File","My file","This is my file's description"
+```
 
 In the example above:
 
 *   `name` is the id of the document (used in the URL)
-*   `type` is the id of document type (see the page&nbsp;[How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) for some default types properties)
-*   `dc:title` and&nbsp;`dc:description` are the title and description fields of the document from the Dublin Core (dc) schema. They follow the `schema:field` formatting.
+*   `type` is the id of document type (see the page [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) for some default types properties)
+*   `dc:title` and `dc:description` are the title and description fields of the document from the Dublin Core (dc) schema. They follow the `schema:field` formatting.
 
 To have new lines in a field value (like `dc:description`), just write them as in the following CSV file example:
 
-<pre>"name","type","dc:title","dc:description"
+```csv
+"name","type","dc:title","dc:description"
 "a-file","File","A File","description with
 some new
 lines"
-"another-file","File","Another File","description without new line"</pre>
+"another-file","File","Another File","description without new line"
+```
 
 {{#> callout type='note' }}
 
@@ -270,7 +274,7 @@ To import documents using Nuxeo CSV:
 4.  Browse and select your CSV file.
     ![]({{file name='CSV Importer beginning.png'}} ?w=550)
 5.  Optionally check the box **<span style="color: rgb(68,68,68);">Send me the import report by email</span>** if you want to receive an email when the import is done which shows how the import went. This is useful in case of imports that take a long time.
-6.  Optionally check the box&nbsp;**Enable document import mode** if you&nbsp;want to import documents while maintaining original UUID, creation date, modification date, author and contributors.
+6.  Optionally check the box **Enable document import mode** if you want to import documents while maintaining original UUID, creation date, modification date, author and contributors.
 7.  Click on the **Process** button.
     The import starts. You can either:
 
@@ -278,23 +282,25 @@ To import documents using Nuxeo CSV:
         When it is completed, a report of the import is displayed ;
         ![]({{file name='CSV Importer Imported.png'}} ?w=550,border=true)
     *   start a new import;
-    *   browse the application.If you checked the box **<span style="color: rgb(68,68,68);">Send me the import report by email</span>** , you receive an email once the import is completed.
+    *   browse the application.If you checked the box ** Send me the import report by email >** , you receive an email once the import is completed.
     ![]({{file name='CSVImporteremail.png'}} ?w=400,border=true)
 
 ### Importing a Document Tree Structure
 
-It is possible to import a hierarchy of documents using Nuxeo CSV. To do that, the&nbsp;`name` property is used to determine where the document should be created in the hierarchy of documents you are importing: its `name` is composed of the names of its parents separated by `/`, forming a path.
+It is possible to import a hierarchy of documents using Nuxeo CSV. To do that, the `name` property is used to determine where the document should be created in the hierarchy of documents you are importing: its `name` is composed of the names of its parents separated by `/`, forming a path.
 
 Since the importer creates the documents in the order they are listed in the CSV file, you have to be careful about the order in which you declare the documents to import so as to be sure to create the workspace or folder before the documents it will hold.
 
 Here is an example of a CSV import that creates documents at the root of the workspace from which the import is started and in a child folder:
 
-<pre>"name","type","dc:title","dc:description"
+```csv
+"name","type","dc:title","dc:description"
 "folder","Folder","Folder in the workspace","The description of the folder created by CSV import"
 "folder/doc-created-in-folder","File","Document created in a folder","The description of a file imported in a folder created by the import"
 "doc1","File","Document 0","A document created directly in the workspace in which the import is started"
 "doc2","File","Doc 1","A file document description, created at the same location as doc1"
-"doc3","Note","Doc 2","A note document, created at the same location as doc1 and doc2"</pre>
+"doc3","Note","Doc 2","A note document, created at the same location as doc1 and doc2"
+```
 
 You can use the attached file []({{file name='nuxeo-csv-import-sample1.csv'}}) to test Nuxeo CSV to import a tree structure.
 
@@ -302,44 +308,60 @@ You can use the attached file []({{file name='nuxeo-csv-import-sample1.csv'}}) t
 
 It is possible to create documents of type File and to upload their main attachment using Nuxeo CSV. This requires that your administrator [enabled it in the server configuration](#configuration) and to put the binary files in a folder that can be accessed by the server.
 
-On your CSV file, use the&nbsp;`file:content` property in the first line and the name of your file on the document definition line.
+On your CSV file, use the `file:content` property in the first line and the name of your file on the document definition line.
 
-<pre>"name","type","dc:title","dc:description","file:content"
-"my-file","File","My file with uploaded attachment","This is a file with its attachment, created using Nuxeo CSV","my-file.doc"</pre>
+```csv
+"name","type","dc:title","dc:description","file:content"
+"my-file","File","My file with uploaded attachment","This is a file with its attachment, created using Nuxeo CSV","my-file.doc"
+```
 
 You can use the attached zip sample []({{file name='Nuxeo-CSV-sample.zip'}}) to test the import of files.
 
 Complex properties (mono and multi-valued) need to be JSON formatted like (see the example below):
 
-<pre>"name","type","dc:description","dc:title","dc:contributors","dc:issued","note:note","complexTest:complexItem","complexTest:listItem"
+```csv
+"name","type","dc:description","dc:title","dc:contributors","dc:issued","note:note","complexTest:complexItem","complexTest:listItem"
 "myfile","File","a simple file","My File","contributor1|contributor2|contributor3","10/01/2010","","",""
 "mynote","Note","a simple note","My Note","bender|leela|fry","12/12/2012","note content","",""
-"mycomplexfile","ComplexFile","a complex file","My Complex File","joe","12/21/2013","","{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\    "}","[{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\"},{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString2\"}]"</pre>
+"mycomplexfile","ComplexFile","a complex file","My Complex File","joe","12/21/2013","","{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\    "}","[{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\"},{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString2\"}]"
+```
 
-You can use the attached file&nbsp;[]({{file name='docs_ok.csv'}})&nbsp;to better understand the syntax.
+You can use the attached file []({{file name='docs_ok.csv'}}) to better understand the syntax.
 
-### Setting Life Cycle State When Creating Documents
+{{#> callout type='note'}}
+Dates inside a complex type use W3C format and not MM/dd/yyyy as for simple type dates.
+More information on the [W3C documentation](https://www.w3.org/TR/NOTE-datetime).
+{{/callout}}
 
-It is possible to set the life cycle state when the document is created through Nuxeo CSV, using the&nbsp;`ecm:currentLifeCycleState`&nbsp;property. This property is ignored when updating documents.
+### Setting Lifecycle State When Creating Documents
 
-<pre>"name","type","dc:description","dc:title","ecm:currentLifeCycleState"
-"myfile","File","a simple file","My File","obsolete"</pre>
+It is possible to set the lifecycle state when the document is created through Nuxeo CSV, using the `ecm:currentLifeCycleState` property. This property is ignored when updating documents.
+
+```csv
+"name","type","dc:description","dc:title","ecm:currentLifeCycleState"
+"myfile","File","a simple file","My File","obsolete"
+```
 
 ### Events
 
 Note that the event raised by this CSV import is a **creation event**, not an import one. An import event means that for the Nuxeo Platform, a full and ready Nuxeo document is imported. Here based on some data, a new Nuxeo document is created.
 
-* * *
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+- [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})
 
-*   [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})
+{{/panel}}
+</div>
+<div class="column medium-6">
+{{#> panel heading='Other Import Documentation'}}
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Import Documentation'}}
+- [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
+- [Nuxeo Bulk Document Importer]({{page page='nuxeo-bulk-document-importer'}})
+- [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
+- [How to Upload a File in Nuxeo Platform Using REST API Batch Processing Endpoint]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}})
 
-*   [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
-*   [Nuxeo Bulk Document Importer]({{page page='nuxeo-bulk-document-importer'}})
-*   [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
-*   [How to Upload a File in Nuxeo Platform Using REST API Batch Processing Endpoint]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}})
-
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>

@@ -126,9 +126,9 @@ It represents the folders / sub-folders hierarchy that users browse in order to 
 
 The virtual navigation is an alternative way of browsing folders, through documents metadata. Vocabularies and taxonomy based document model are required to implement a virtual navigation.  
 
-## Life Cycles and Workflows
+## Lifecycles and Workflows
 
-### Life Cycle
+### Lifecycle
 
 {{{multiexcerpt 'glossary-lifecycle' page='GLOS:Lifecycle'}}}
 

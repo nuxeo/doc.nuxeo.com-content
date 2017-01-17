@@ -37,7 +37,7 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 
 1.  Download the installer (.dmg file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](http://community.nuxeo.com/static/drive/latest/nuxeo-drive.dmg).
 2.  Run the installer: drag and drop the Nuxeo Drive icon in the Applications directory.
-    ![]({{file name='Drive-dmg-installer.png' space='userdoc' page='nuxeo-drive'}} ?w=400,border=true)
+    ![]({{file name='Drive-dmg-installer.png' page='nuxeo-drive'}} ?w=400,border=true)
     Nuxeo Drive is now installed on your computer.
 3.  You now need to [start Nuxeo Drive](#starting-nuxeo-drive) on your computer.
     A Nuxeo Drive folder will be created by the system at the root of your local home folder (`/Users/USER/`). This is the place where synchronized documents will be stored on your computer.
@@ -208,14 +208,14 @@ Upgrading from Nuxeo Drive 1.3 to Nuxeo Drive 2 is transparent: Click on the ico
 
 **On Windows**
 
-1.  Right-click on the the icon ![]({{file name='drive_online.png' space='userdoc' page='nuxeo-drive'}}) in the systray.
-2.  Click on the icon ![]({{file name='drive-settings-icon.png' space='userdoc' page='nuxeo-drive'}}) and on the **Settings** menu item.
+1.  Right-click on the the icon ![]({{file name='drive_online.png' page='nuxeo-drive'}}) in the systray.
+2.  Click on the icon ![]({{file name='drive-settings-icon.png' page='nuxeo-drive'}}) and on the **Settings** menu item.
     The Settings window is displayed.
 
 **On Mac OS X / Linux**
 
-1.  Click on the the icon ![]({{file name='drive_online.png' space='userdoc' page='nuxeo-drive'}}) in the systray.
-2.  Click on the icon ![]({{file name='drive-settings-icon.png' space='userdoc' page='nuxeo-drive'}}) and on the **Settings** menu item.
+1.  Click on the the icon ![]({{file name='drive_online.png' page='nuxeo-drive'}}) in the systray.
+2.  Click on the icon ![]({{file name='drive-settings-icon.png' page='nuxeo-drive'}}) and on the **Settings** menu item.
     The Settings window is displayed.
 
 The Nuxeo Drive settings window shows four tabs that enable you to customize the behavior of your Nuxeo Drive:

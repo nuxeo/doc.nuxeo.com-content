@@ -15,6 +15,8 @@ labels:
     - howto
     - content-view
 toc: true
+version_override:
+    'LTS 2015': 710/nxdoc/how-to-enable-dragn-drop-and-new-button-on-a-custom-content-view
 confluence:
     ajs-parent-page-id: '20517820'
     ajs-parent-page-title: JSF UI How-To Index

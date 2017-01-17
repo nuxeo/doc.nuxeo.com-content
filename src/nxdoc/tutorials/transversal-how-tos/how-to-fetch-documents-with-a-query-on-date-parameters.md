@@ -307,7 +307,7 @@ In content views the way to fetch all documents for which the "recall date" is o
 
     {{#> callout type='tip' }}
 
-    You will probably want to add other criteria to you query filter. Adding `ecm:currentLifeCycleState` will only fetch documents in the appropriate life cycle state. Adding `ecm:path` will only fetch documents located at the specified folder.
+    You will probably want to add other criteria to you query filter. Adding `ecm:currentLifeCycleState` will only fetch documents in the appropriate lifecycle state. Adding `ecm:path` will only fetch documents located at the specified folder.
 
     {{/callout}}
 3.  Click on the **Results** tab and select the relevant information to display on the result table. For instance:
@@ -315,7 +315,7 @@ In content views the way to fetch all documents for which the "recall date" is o
     *   Title with link,
     *   Expiring date,
     *   Recall expiring date,
-    *   Life cycle state.You can then leverage this [new content view in a tab]({{page space='studio' page='documents#tabs-content-view'}}) on a custom folder document type for instance.
+    *   Lifecycle state.You can then leverage this [new content view in a tab]({{page space='studio' page='documents#tabs-content-view'}}) on a custom folder document type for instance.
     ![]({{file name='expiring-documents-content-view.png'}} ?w=600,border=true)
 
 ### Processing Expiring Documents Using an Automation Chain
@@ -337,8 +337,6 @@ The chain will look like that:
     value: delete
 - Seam.Refresh: {}
 ```
-
-&nbsp;
 
 * * *
 

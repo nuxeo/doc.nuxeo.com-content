@@ -608,11 +608,11 @@ To install a Nuxeo Package:
 
 The addon brings the following document types:
 {{! multiexcerpt name='studio_configuration_desc'}}
-* The portfolio document type (`BCPortfolio`) holds the contracts of a customer. Its holds properties about the customer: the company name, industry and size, and the customer&rsquo;s juridical contact information.
+* The portfolio document type (`BCPortfolio`) holds the contracts of a customer. Its holds properties about the customer: the company name, industry and size, and the customer's juridical contact information.
 * The contract document type (`BCContract`) have several properties: an owner (an application user), some dates (signature, start, expiration dates), a type, an amount. It inherits customer information from its portfolio.
 * Some vocabularies are used to populate the portfolio and contract metadata (`companySize`, `contractType` and `industry`)
-* Contracts have a specific life cycle, so they can evolve though the states `draft`, `approval`, `running`, `renegociation`, `void`, `deleted` and `restored`
-* Some business logic through automation chains and event handlers make contracts inherit properties from its portfolio, and evolve following its life cycle{{! /multiexcerpt}}
+* Contracts have a specific lifecycle, so they can evolve though the states `draft`, `approval`, `running`, `renegociation`, `void`, `deleted` and `restored`
+* Some business logic through automation chains and event handlers make contracts inherit properties from its portfolio, and evolve following its lifecycle{{! /multiexcerpt}}
 
 {{#> callout type='info' heading='Learn more'}}
 
@@ -620,8 +620,5 @@ The addon brings the following document types:
 *   [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
 
 {{/callout}}
-
-
-&nbsp;
 
 <div align="right">[Setting up Your JavaScript Environment]({{page page='setting-up-your-javascript-environment'}}) &rarr;</div>

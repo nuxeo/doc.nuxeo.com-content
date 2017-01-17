@@ -16,6 +16,9 @@ labels:
     - generator
     - lts2016-ok
 toc: true
+version_override:
+    'LTS 2015': 710/nxdoc/getting-started-with-nuxeo-ide
+    '6.0': 60/nxdoc/getting-started-with-nuxeo-ide
 confluence:
     ajs-parent-page-id: '14256538'
     ajs-parent-page-title: Start Customizing the Nuxeo Platform

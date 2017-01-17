@@ -2,7 +2,7 @@
 title: Deployment
 review:
     comment: ''
-    date: '2016-12-23'
+    date: '2017-01-09'
     status: ok
 toc: true
 labels:
@@ -82,7 +82,7 @@ Explanations about the Web UI structure:
 - the `i18n` directory provides internationalization files to translate Web UI labels (See the [managing translation]({{page page='managing-translation'}}) documentation).
 - the `workflow` directory providers the layout elements to complete workflow tasks.  See the [workflow tasks]({{page page='web-uiworkflow-tasks'}}) documentation for further details.
 
-## How to deploy additional Web UI resources{{> anchor 'deploy_or_override'}}
+## How to Deploy Additional Web UI Resources{{> anchor 'deploy_or_override'}}
 
 In order to extend the Web UI (outside Studio), you'll need to create your own marketplace which will deploy your own resources in `$NUXEO_SERVER/nxserver/nuxeo.war/ui`.
 
@@ -120,7 +120,7 @@ The requirement on `org.nuxeo.web.ui.resources` is important as it makes sure yo
 
 {{/callout}}
 
-Note that [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html) defines mostly slots contents (see the [Web UI slot documentation](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html)) but it also includes [import of new elements](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html#L15) used in declared slot contents and brought by the addon itself:
+Note that [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html) defines mostly slots contents (see the [Web UI slot documentation]({{page page='web-ui-slots'}}) but it also includes [import of new elements](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html#L15) used in declared slot contents and brought by the addon itself:
 
 ```
 <link rel="import" href="nuxeo-drive-edit-button.html">

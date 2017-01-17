@@ -294,15 +294,13 @@ When you are in the application and you want to create a new document, you need 
 
 ![]({{file name='DM-user-interface.png'}} ?w=650,h=292,border=true)
 
-&nbsp;
-
 {{! excerpt}}
 
 You can create as many [document types]({{page page='essential-nuxeo-platform-terminology#document-type'}}) as you want with Nuxeo Studio. This how-to explains the different steps to do so.
 
 {{! /excerpt}}
 
-Since content is at the center of customization, the definition of&nbsp; a new document type is related to many other features of the Nuxeo Platform. This how-to presents the basic steps to create a new document type and provides links to other related customizations with Nuxeo Studio, such as layout definition for instance.
+Since content is at the center of customization, the definition of a new document type is related to many other features of the Nuxeo Platform. This how-to presents the basic steps to create a new document type and provides links to other related customizations with Nuxeo Studio, such as layout definition for instance.
 
 **To create a new content type:**
 
@@ -324,9 +322,9 @@ Since content is at the center of customization, the definition of&nbsp; a new d
         {{/callout}}
 
         ![]({{file name='doc_type_creation.png'}} ?w=350,border=true)
-        Your document type is created. You now need to edit it to indicate all its characteristics: layouts, life cycle, schema, etc.
+        Your document type is created. You now need to edit it to indicate all its characteristics: layouts, lifecycle, schema, etc.
 
-3.  Fill in the&nbsp;[ **Definition** tab]({{page space='studio' page='documents'}}).
+3.  Fill in the [ **Definition** tab]({{page space='studio' page='documents'}}).
     ![]({{file name='doc_definition_tab.png'}} ?w=650,border=true)
 
     {{#> callout type='info' }}
@@ -335,12 +333,12 @@ Since content is at the center of customization, the definition of&nbsp; a new d
 
     {{/callout}} {{#> callout type='tip' }}
 
-    If the icons and life cycle resources for your document type don't already exist, you can create them from:
+    If the icons and lifecycle resources for your document type don't already exist, you can create them from:
 
     *   [ **Resources** Studio tree item]({{page space='studio' page='resources'}}) for icons;
-    *   **Content Model** > [ **Life Cycles** Studio tree item]({{page space='studio' page='life-cycle'}}) for life cycle.
+    *   **Content Model** > [**Life Cycles** Studio tree item]({{page space='studio' page='life-cycle'}}) for lifecycle.
         ![]({{file name='lifecycle.png'}} ?w=450,border=true){{/callout}}
-4.  Fill the specific metadata you want in the [ **Schema** tab]({{page space='studio' page='schemas'}}).
+4.  Fill the specific metadata you want in the [**Schema** tab]({{page space='studio' page='schemas'}}).
     1.  Give your schema a name and a prefix (which are the same as the document type name by default).
     2.  Add your metadata fields. The name and type of the metadata are the minimum required pieces of information required for a field.
         ![]({{file name='doc_type_schema_tab.png'}} ?w=650,border=true)
@@ -359,7 +357,7 @@ Since content is at the center of customization, the definition of&nbsp; a new d
         If the vocabularies you want to use in your layouts don't exist, you can [create them in the Studio tree item **Vocabularies** ]({{page page='how-to-add-a-new-vocabulary'}}).
 
         {{/callout}}
-7.  Click on&nbsp;**Save** to save your content type.
+7.  Click on **Save** to save your content type.
     After you deploy your customization on the your Nuxeo Platform instance, your new document type is displayed in the **Available document type** popup window.
 
 * * *
@@ -376,7 +374,7 @@ Since content is at the center of customization, the definition of&nbsp; a new d
 - [Documents in Nuxeo Studio]({{page space='studio' page='documents'}})
 - [Content Repository]({{page page='content-repository'}})
 - [Available Facets]({{page page='available-facets'}})
-- [Life cycle]({{page space='studio' page='life-cycle'}})
+- [Lifecycle]({{page space='studio' page='life-cycle'}})
 - [Schemas]({{page space='studio' page='schemas'}})
 
 {{/panel}}</div></div>

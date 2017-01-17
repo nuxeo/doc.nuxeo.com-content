@@ -2,10 +2,11 @@
 title: Polymer Guide
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-09'
     status: ok
 toc: true
 labels:
+    - lts2016-ok
 tree_item_index: 50
 ---
 
@@ -49,7 +50,7 @@ Once you become more familiar with Polymer we strongly recommend reading our [Po
  - [Reverse Routing in Polymer Apps](https://www.nuxeo.com/blog/reverse-routing-in-polymer-apps/)
  - [Pluggable Polymer Applications](https://www.nuxeo.com/blog/pluggable-polymer-applications/)
 
-## Other useful resources
+## Other Useful Resources
 
  - [Codelabs](https://codelabs.developers.google.com/polymer-summit)
  "Google codelabs provide guided, tutorial, hands-on coding experiences. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application."

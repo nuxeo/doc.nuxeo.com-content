@@ -2,10 +2,10 @@
 title: Upgrade from 5.3.1 with MySQL to 5.3.2
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - multiexcerpt
 confluence:
     ajs-parent-page-id: '3343538'

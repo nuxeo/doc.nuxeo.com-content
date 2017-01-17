@@ -57,6 +57,62 @@ As an example, take the following three labels which are used in the `nuxeo-acti
 ```
 {{/panel}}
 
+In order to make your bundle append additional label translations, you need to create the proper `messages` files as follow:
+
+```.
+├── pom.xml
+├── src
+│   └── main
+│       └── resources
+│           ├── META-INF
+│           │   └── MANIFEST.MF
+│           ├── OSGI-INF
+│           │   ├── deployment-fragment.xml
+│           │   ...
+│           └── web
+│               └── nuxeo.war
+│                   └── ui
+│                       ├── i18n
+│                       │   ├── messages-fr.json
+│                       │   └── messages.json
+```
+where the `deployment-fragment.xml` has to call the append directive:
+
+```xml
+<?xml version="1.0"?>
+<fragment version="1">
+
+  <require>org.nuxeo.web.ui</require>
+
+  <install>
+    <!-- unzip the war template -->
+    <unzip from="${bundle.fileName}" to="/" prefix="web">
+      <include>web/nuxeo.war/**</include>
+      <exclude>web/nuxeo.war/ui/i18n/**</exclude>
+    </unzip>
+
+    <!-- create a temporary folder -->
+    <delete path="${bundle.fileName}.tmp" />
+    <mkdir path="${bundle.fileName}.tmp" />
+    <unzip from="${bundle.fileName}" to="${bundle.fileName}.tmp" />
+
+    <!-- append the translations -->
+    <append from="${bundle.fileName}.tmp/web/nuxeo.war/ui/i18n/messages.json"
+      to="nuxeo.war/ui/i18n/messages.json" />
+    <append from="${bundle.fileName}.tmp/web/nuxeo.war/ui/i18n/messages-fr.json"
+      to="nuxeo.war/ui/i18n/messages-fr.json" />
+
+    <delete path="${bundle.fileName}.tmp" />
+
+  </install>
+
+</fragment>
+```
+
+{{#> callout type='tip' }}
+The `<require>org.nuxeo.web.ui</require>` is needed to make sure the default Web UI messages files are deployed first.
+{{/callout}}
+
 {{#> callout type='note' }}
 Nuxeo Web UI relies on Nuxeo UI Elements, which has its own localization. However, labels from Nuxeo UI Elements can
 be overridden in Nuxeo Web UI's message files.

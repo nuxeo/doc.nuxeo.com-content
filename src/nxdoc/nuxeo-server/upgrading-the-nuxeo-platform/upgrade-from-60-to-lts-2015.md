@@ -573,7 +573,7 @@ See the page [How to Customize the HTML5 Drag and Drop Import with Metadata Form
 
 {{! multiexcerpt name='lts2015-packaging-changes'}}
 
-&nbsp;The following Nuxeo Packages are no longer released:
+The following Nuxeo Packages are no longer released:
 
 *   Automated Document Categorization
 *   Nuxeo - BIRT Integration
@@ -590,11 +590,9 @@ See the page [How to Customize the HTML5 Drag and Drop Import with Metadata Form
 
 ### Live Edit
 
-Live Edit is no longer maintained. For office document offline editing, [Nuxeo Drive]({{page space='userdoc' page='nuxeo-drive'}}) provides a Direct Edit feature that enables users to edit files stored in the Nuxeo Platform using their native application.
+Live Edit is no longer maintained. For office document offline editing, [Nuxeo Drive]({{page page='nuxeo-drive'}}) provides a Direct Edit feature that enables users to edit files stored in the Nuxeo Platform using their native application.
 
 {{! /multiexcerpt}}
-
-&nbsp;
 
 ## 7.x Upgrade and Release Notes
 

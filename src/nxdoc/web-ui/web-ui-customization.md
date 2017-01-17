@@ -2,7 +2,7 @@
 title: Web UI Customization
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-01-09'
     status: ok
 toc: true
 labels:
@@ -23,7 +23,7 @@ With web components we finally had a way to write interoperable components so fo
 
 The goal however was still to make our default web UI pluggable and to also allow developers to make their own UIs pluggable. This pluggability not only ensures developers can easilly customize our UI with code or with Studio but it is also essential for addons to add their contributions to the UI.
 
-### Layout elements
+### Layout Elements
 
 The simplest customization mechanism is based on the ability to override and/or introduce custom elements which are then dynamically loaded from a known conventional path: [layout elements]({{page page='web-ui-layouts'}}).
 
