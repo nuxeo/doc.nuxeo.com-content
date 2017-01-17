@@ -2,10 +2,10 @@
 title: Validation Workflow Choosing the Assignee Based on a Metadata
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - multiexcerpt
 toc: true
 confluence:
@@ -170,8 +170,7 @@ All the concepts used in this tutorial will be explained. However, for more info
 
 {{/callout}}
 
-## <span style="color: rgb(0,0,0);">Creating the Workflow
-</span>
+## Creating the Workflow
 
 To create a new workflow, simply go to the workflow section of Studio, click **New** and choose a name.
 
@@ -209,19 +208,20 @@ When a workflow is triggered, the Nuxeo Workflow Engine will look for the Start 
 
 {{/callout}}
 
-For a start, we decided that our workflow should be as simple as possible so will just use an "Approve" task, which a simple task with one button and one transition. We will add more buttons and transitions later on if needed.
+For a start, we decided that our workflow should be as simple as possible so will just use an **Approve** task, which a simple task with one button and one transition. We will add more buttons and transitions later on if needed.
 
-1.  On the **Graph** tab, drag and drop a "Start" Node, a "End" Node and an "Approve" task from the left.
+1.  On the **Graph** tab, drag and drop an **Approve** task from the left (**Start** and **Stop** nodes are already there).
 2.  Link them by drag and dropping with your mouse the symbol of the output transition from a node to the next one as shown in the screen shot here under.![]({{file name='Screen_Shot_2014-05-06_at_16_14_38.png'}} ?w=500,border=true)
     Our workflow graph is now set up. The Start and Stop nodes are very simple so we do not need to do anything about them for now, but the Approve task should be configured.
 3.  To configure the Approve task, go over the task and click on the icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}).
     A Node properties window pops up and is divided into five tabs:
 
-*   **General**: Configure the main properties of the task like assignees, title, directive...
-*   **Variables:** Define local variables for this node.
-*   **Form:&nbsp;**Will be displayed to the user and enables interaction with her/him. Buttons are also configured here.
-*   **Transitions:&nbsp;**Define here all the possible ways to go out of the node and the conditions to follow one transition or another.
-*   **Escalation Rules:&nbsp;**Set up rules to be triggered if your task sleeps for too long for instance.
+*   **General**: Main properties of the task like assignees, title, directive...
+*   **Variables:** Local variables for this node.
+*   **Form:** Will be displayed to the user and enables interaction with her/him.
+*   **Resolution Actions:** To configure buttons on the task for the users.
+*   **Transitions:** To define all the possible ways to go out of the node and the conditions to follow one transition or another.
+*   **Escalation Rules:** To set up rules to be triggered if your task sleeps for too long for instance.
 
 {{#> callout type='info' heading='Node Screens'}}
 
@@ -236,17 +236,17 @@ You will find more information about Studio Node property screens at the page [N
 3.  Choose a directive that will be displayed in the workflow dashboard: "As you are responsible for this nature of document, you are responsible for the document validation."
 4.  Remove the&nbsp;**Due date expression** as we will not use it. But that would be very useful to [define an escalation rule]({{page page='workflow-escalation-rules-example'}}) for instance.
 5.  In **Assignees**, you can define static assignees (users or groups) for the task; click on **Add** and type `Administrator`.
-6.  In&nbsp;**Assignees exression**, you can make some computations to automatically designate the assignees. That will be useful later, but for now, empty the field.
-7.  You have access to others options (like **Mail Notification, Allow task&nbsp;****reassignment**) but we'll leave them empty for now.
+6.  In **Assignees expression**, you can make some computations to automatically designate the assignees. That will be useful later, but for now, empty the field.
+7.  You have access to others options (like **Mail Notification, Allow task reassignment**) but we'll leave them empty for now.
     ![]({{file name='Validation-tuto_-_Workflow_Definition_-_tuto_Technical_Documentation_1.png'}} ?w=500,h=357,border=true)
 
 #### Approve Task Variables Tab
 
-In the&nbsp;**Variables&nbsp;**tab, you can remove `Assignees` as we do not need it. We may need to add some other variables at some point, but we do not need it for now.
+In the **Variables** tab, you can remove `Assignees` as we do not need it. We may need to add some other variables at some point, but we do not need it for now.
 
 #### Approve Task Form Tab
 
-The&nbsp;**Form&nbsp;**tab enables to choose how to interact with the user. You can drag and drop fields here if variables are defined for the workflow or node.
+The **Form** tab enables to choose how to interact with the user. You can drag and drop fields here if variables are defined for the workflow or node.
 
 {{#> callout type='note' }}
 
@@ -254,7 +254,11 @@ You cannot access properties of the documents attached to the workflow directly 
 
 {{/callout}}
 
-We just want the user to approve the task for now so nothing is required in the form. But we can change the label of the button at the end of the page and type "Accept the document".
+We just want the user to approve the task for now so nothing is required in the form.
+
+#### Approve Task Resolution Actions Tab
+
+Just one `Approve` button is enough for now but we can change the label of the button and type "Accept the document".
 ![]({{file name='Validation-tuto_-_Workflow_Definition_-_tuto_Technical_Documentation_2.png'}} ?w=650,border=true)
 
 #### Approve Task Transitions Tab
@@ -270,7 +274,7 @@ We just want the user to approve the task for now so nothing is required in the 
 2.  We do not want escalation rules for now, so you can leave the corresponding tab for now.
 3.  Click on the **Save** button of the Node properties popup, and click on the **Save** button of the workflow.
 
-You now have a very simple workflow enabled on **DocumentationItems&nbsp;**that follows a simple path. You can deploy your Studio on your server and test you workflow. It should create a task for&nbsp;**Administrator** and do nothing after validating the task.
+You now have a very simple workflow enabled on **DocumentationItems** that follows a simple path. You can deploy your Studio on your server and test you workflow. It should create a task for&nbsp;**Administrator** and do nothing after validating the task.
 
 ## Computing Assignees Dynamically
 
@@ -372,15 +376,15 @@ More information on lifecycles in Studio at the page [Life cycle]({{page space='
     ![]({{file name='technicalDocLifeCycle_tuto_-_Life_Cycle_-_tuto_Technical_Documentation.png'}} ?w=500,h=349,border=true)
     The transition are named automatically by Studio using the following pattern: to_state.
 7.  Save the lifecycle.
-8.  Go to the **DocumentationItem&** document type, and select the newly created lifecycle.
+8.  Go to the **DocumentationItem** document type, and select the newly created lifecycle.
     ![]({{file name='DocumentationItemTuto_-_Document_Type_-_tuto_Technical_Documentation.png'}} ?w=500,h=257,border=true)
 
 #### Defining the Automation Chain
 
 1.  Now that the lifecycle is defined, go back to the Automation chain **ValWf_ValidateDoc**.
-2.  Add the operation Documents > Follow Life Cycle transition.
+2.  Add the operation Documents > Document.FollowLifeCycleTransition.
     The expected parameter is the name of the lifecycle transition you want the document to follow: `to_valid` in our case.
-3.  Add the operation Document > Snapshot version with the parameters:
+3.  Add the operation Document > Document.CreateVersion with the parameters:
     *   Increment: Major
     *   saveDocument: checked. It will create a new version of the document each time it is validated.In the end you should have:
     ![]({{file name='ValWf_ValidateDoc_tuto_-_Automation_Chain_-_tuto_Technical_Documentation.png'}} ?w=500,border=true)
@@ -388,7 +392,7 @@ More information on lifecycles in Studio at the page [Life cycle]({{page space='
 
 {{#> callout type='info' heading='unlock the document'}}
 
-If you followed the previous tutorial ([Document Locking Right after Its Creation]({{page page='document-locking-right-after-its-creation'}})), your document is locked after is creation. The assigned user of the workflow can validate the document but cannot modify it. You should probably create an automation chain that uses the operation Document > Unlock and trigger it at the beginning of the worfklow, for instance as the input chain of the validation task.
+If you followed the previous tutorial ([Document Locking Right after Its Creation]({{page page='document-locking-right-after-its-creation'}})), your document is locked after is creation. The assigned user of the workflow can validate the document but cannot modify it. You should probably create an automation chain that uses the operation Document > Document.Unlock and trigger it at the beginning of the workflow, for instance as the input chain of the validation task.
 
 {{/callout}} {{#> callout type='tip' heading='Congratulations'}}
 
