@@ -213,7 +213,7 @@ You can install the Nuxeo Platform on Windows using one of several methods:
 
 ## Checking Requirements
 
-&nbsp;{{{multiexcerpt 'requirements-intro' page='Hardware and Software Requirements'}}}
+{{{multiexcerpt 'requirements-intro' page='Hardware and Software Requirements'}}}
 
 Check out the [Hardware and Software Requirements]({{page page='hardware-and-software-requirements'}}) for detailed steps to check your Java version and install it.
 
@@ -231,14 +231,14 @@ To install the application using the Windows installer (.exe), double-click on t
 
 **Installation path**
 
-On Windows in general, and especially on Windows 7, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,... An installation in another folder could provoke restart issues at end of the [startup wizard steps]({{page page='setup'}}).
+On Windows in general, and especially on Windows 7, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance), because of rights issues, limitations on paths length, 32/64 bits conflicts,... An installation in another folder could provoke restart issues at end of the [startup wizard steps]({{page page='setup'}}).
 
 ![]({{file name='DM-Windows_installer.png'}} ?w=300)
 
 {{#> callout type='note' }}
 
 *   The Windows installer includes a full JDK installation. You will get an error while installing the **JavaFX** portion. The JavaFX platform is not used by Nuxeo, therefore, when the error appears, click **Close** and continue with the installation.
-*   When you launch the Nuxeo services for the first time, you will see an error window that says **pdftohtml.exe** **has stopped working**. To get the pdftohtml utility to work properly, install the **Visual C++ Redistributable for Visual Studio 2012&nbsp;**available on [Microsoft's website](http://www.microsoft.com/en-us/download/details.aspx?id=30679).
+*   When you launch the Nuxeo services for the first time, you will see an error window that says **pdftohtml.exe has stopped working**. To get the pdftohtml utility to work properly, install the **Visual C++ Redistributable for Visual Studio 2012** available on [Microsoft's website](http://www.microsoft.com/en-us/download/details.aspx?id=30679).
 *   If you are using PostgreSQL, please review the [PostgreSQL]({{page page='postgresql'}}) document and use the recommended configurations.
 
 {{/callout}}
@@ -264,7 +264,7 @@ Recommended: [7-Zip](http://www.7-zip.org/).
 
 **Installation path**
 
-On Windows in general, and especially on Windows 7, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,... An installation in another folder could provoke restart issues at end of the [startup wizard steps]({{page page='setup'}}).
+On Windows in general, and especially on Windows 7, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance), because of rights issues, limitations on paths length, 32/64 bits conflicts,... An installation in another folder could provoke restart issues at end of the [startup wizard steps]({{page page='setup'}}).
 
 **What's next?**
 You want to evaluate the application? You can now [start the server]({{page page='server-start-and-stop'}}).
@@ -303,7 +303,7 @@ The Nuxeo Platform is available as ready-to-use 64b virtual machine images from 
 
     {{#> callout type='info' heading='Shell root access'}}
 
-    The password for the&nbsp;`root` and&nbsp;`nuxeo` users are generated the first time you start the virtual machine and are displayed on the console.&nbsp;
+    The password for the `root` and `nuxeo` users are generated the first time you start the virtual machine and are displayed on the console.
 
     {{/callout}}
 
@@ -314,22 +314,18 @@ The Nuxeo Platform is available as ready-to-use 64b virtual machine images from 
 
 {{! /multiexcerpt}}
 
-&nbsp;
-
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Next Steps'}}
 
-*   [Setup]({{page page='setup'}})
-*   [Recommended Configurations]({{page page='recommended-configurations'}})
-*   [Server Start and Stop]({{page page='server-start-and-stop'}})
+- [Setup]({{page page='setup'}})
+- [Recommended Configurations]({{page page='recommended-configurations'}})
+- [Server Start and Stop]({{page page='server-start-and-stop'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
 
-*   [From the Web UI to Nuxeo Studio]({{page space='nxdoc710' page='from-the-web-ui-to-nuxeo-studio'}})
-*   [Essential Nuxeo Platform Terminology]({{page space='nxdoc710' page='essential-nuxeo-platform-terminology'}})
-*   [Quick Start Dev Guide]({{page space='nxdoc710' page='quick-start-dev-guide'}})
+- [From the JSF UI to Nuxeo Studio]({{page space='nxdoc710' page='from-the-jsf-ui-to-nuxeo-studio'}})
+- [Essential Nuxeo Platform Terminology]({{page space='nxdoc710' page='essential-nuxeo-platform-terminology'}})
+- [Quick Start Dev Guide]({{page space='nxdoc710' page='quick-start-dev-guide'}})
 
 {{/panel}}</div></div>

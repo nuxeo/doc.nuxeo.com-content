@@ -208,14 +208,14 @@ You want to do a complete installation, compatible for a production environment?
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Next Steps'}}
 
-*   [Setup]({{page page='setup'}})
-*   [Recommended Configurations]({{page page='recommended-configurations'}})
-*   [Server Start and Stop]({{page page='server-start-and-stop'}})
+- [Setup]({{page page='setup'}})
+- [Recommended Configurations]({{page page='recommended-configurations'}})
+- [Server Start and Stop]({{page page='server-start-and-stop'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
 
-*   [From the Web UI to Nuxeo Studio]({{page space='nxdoc710' page='from-the-web-ui-to-nuxeo-studio'}})
-*   [Essential Nuxeo Platform Terminology]({{page space='nxdoc710' page='essential-nuxeo-platform-terminology'}})
-*   [Quick Start Dev Guide]({{page space='nxdoc710' page='quick-start-dev-guide'}})
+- [From the JSF UI to Nuxeo Studio]({{page space='nxdoc710' page='from-the-jsf-ui-to-nuxeo-studio'}})
+- [Essential Nuxeo Platform Terminology]({{page space='nxdoc710' page='essential-nuxeo-platform-terminology'}})
+- [Quick Start Dev Guide]({{page space='nxdoc710' page='quick-start-dev-guide'}})
 
 {{/panel}}</div></div>

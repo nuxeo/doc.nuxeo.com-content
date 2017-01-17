@@ -242,7 +242,7 @@ Every user has a personal dashboard that displays information he finds relevant 
 
 The dashboard is composed of a set of boxes that display either a list of documents matching a criteria (all the workspaces the user can access, the last documents he modified, the last documents that have been published...), or possibly a piece of information either from the Platform or from external websites.
 
-To access your dashboard, click on the&nbsp;**Home**&nbsp;main tab. Your dashboard is the default tab of your Home.
+To access your dashboard, click on the **Home** main tab. Your dashboard is the default tab of your Home.
 ![]({{file name='CAP-dashboard.png'}} ?w=650,border=true)
 
 {{#> callout type='tip' }}
@@ -250,8 +250,6 @@ To access your dashboard, click on the&nbsp;**Home**&nbsp;main tab. Your dashboa
 If you want to customize your dashboard, follow this [how-to]({{page space='nxdoc710' page='how-to-customize-the-dashboard'}}).
 
 {{/callout}}
-
-&nbsp;
 
 ## Navigation Tree
 
@@ -269,7 +267,7 @@ It is possible to add another type of navigation tree based on metadata instead 
 
 ## Tags
 
-The Document Management module includes&nbsp;[tagging of documents]({{page page='tags'}}), which enables users to apply their own labels on documents. The tag cloud lists all tags on documents, with their size growing as the tag is applied on several documents.
+The Document Management module includes [tagging of documents]({{page page='tags'}}), which enables users to apply their own labels on documents. The tag cloud lists all tags on documents, with their size growing as the tag is applied on several documents.
 
 ![]({{file name='tag-cloud.png' space='userdoc60' page='browsing-content'}} ?w=350,border=true)
 
@@ -281,7 +279,7 @@ Users can change the way content is presented in the folderish repositories (wor
 
 **Changing the View Mode**
 
-Two views of the content lists are available&nbsp;on the top right corner of&nbsp; **Content** tab:
+Two views of the content lists are available on the top right corner of **Content** tab:
 
 *   list view (default view) ![]({{file name='DM-list-view-icon.png' page='icons-index'}}): this view displays title of the documents with a small icon (that depends on the type of document or main attachment type) and a set of metadata in a table;
     ![]({{file name='list-view.png'}} ?w=600,border=true)
@@ -298,7 +296,7 @@ Editing results column is possible from search results and the Content tab of fo
 
 {{/callout}}
 
-To change the information displayed in content lists, click on the icon&nbsp;![]({{file name='edit_columns.png' page='icons-index'}}).&nbsp;A pop-up is displayed: The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and&nbsp;reorder columns using the vertical arrows. Once it's done, click on&nbsp;**Save**.
+To change the information displayed in content lists, click on the icon ![]({{file name='edit_columns.png' page='icons-index'}}). A pop-up is displayed: The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and reorder columns using the vertical arrows. Once it's done, click on **Save**.
 
 ![]({{file name='results-columns-popup.png'}} ?w=350,border=true)
 
@@ -310,7 +308,7 @@ It enables you to create your own organization of the content without duplicatin
 
 ## Preview
 
-The [preview]({{page page='preview'}}) enables you to see an insight of your document. Nuxeo Platform offers different ways to preview your documents and supports multiple formats.&nbsp;
+The [preview]({{page page='preview'}}) enables you to see an insight of your document. Nuxeo Platform offers different ways to preview your documents and supports multiple formats.
 
 ## Browsing Tips
 
@@ -318,7 +316,7 @@ Here are some tips on how to leverage all the navigation means provided by the N
 
 **Going Back to a Previous Page**
 
-Due to&nbsp;[technical reasons]({{page space='nxdoc710' page='back-and-next-buttons-paradigm-and-jsf-in-the-nuxeo-platform'}}), it is recommended to NOT use the browser's Back and Next buttons to navigate in the Platform. There are several ways to go back to a previous page. For example, to go up one level in the platform structure, the easiest way is to click on the icon&nbsp;![]({{file name='UpFolder_icon.gif' page='icons-index'}})&nbsp;in the breadcrumbs.
+Due to [technical reasons]({{page space='nxdoc710' page='back-and-next-buttons-paradigm-and-jsf-in-the-nuxeo-platform'}}), it is recommended to NOT use the browser's Back and Next buttons to navigate in the Platform. There are several ways to go back to a previous page. For example, to go up one level in the platform structure, the easiest way is to click on the icon ![]({{file name='UpFolder_icon.gif' page='icons-index'}}) in the breadcrumbs.
 
 ![]({{file name='breadcrumbs.png'}} ?border=true)
 
@@ -337,19 +335,17 @@ Some actions or features are accessible using access keys: Press shift-h to see 
 
 ![]({{file name='akHelp.png'}} ?w=150,border=true,thumbnail=true)
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related User Documentation'}}
 
-*   [Tags]({{page page='tags'}})
-*   [Preview]({{page page='preview'}})
-*   [Collections]({{page page='collections'}})
+- [Tags]({{page page='tags'}})
+- [Preview]({{page page='preview'}})
+- [Collections]({{page page='collections'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [How to Customize the Dashboard]({{page space='nxdoc710' page='how-to-customize-the-dashboard'}})
-*   [Web UI How-To Index]({{page space='nxdoc710' page='web-ui-how-to-index'}})
+- [How to Customize the Dashboard]({{page space='nxdoc710' page='how-to-customize-the-dashboard'}})
+- [JSF UI How-To Index]({{page space='nxdoc710' page='jsf-ui-how-to-index'}})
 
 {{/panel}}</div></div>

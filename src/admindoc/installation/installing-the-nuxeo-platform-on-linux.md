@@ -330,7 +330,7 @@ You will need to know two things first:
 
 {{#> callout type='tip' }}
 
-For the examples below, let's say you are using Ubuntu 14.04 LTS ("trusty") and want to install the Nuxeo latest Fast Track release (from the "fasttracks" APT repository; for&nbsp;LTS you would replace "fasttracks" with "releases").
+For the examples below, let's say you are using Ubuntu 14.04 LTS ("trusty") and want to install the Nuxeo latest Fast Track release (from the "fasttracks" APT repository; for LTS you would replace "fasttracks" with "releases").
 
 {{/callout}}
 
@@ -353,7 +353,7 @@ This requires X11.
     *   the database (a preconfigured PostgreSQL database is suggested by default).
         The platform is installed as a service. It is automatically started and set to automatically start at boot.
 6.  Open a browser and type the URL <a>http://localhost:8080/nuxeo/.</a>
-    The [startup wizard]({{page space='nxdoc' page='configuration-wizard'}}) is displayed so you can setup your Nuxeo platform and select the module you want to install.&nbsp;
+    The [startup wizard]({{page space='nxdoc' page='configuration-wizard'}}) is displayed so you can setup your Nuxeo platform and select the module you want to install.
 
 {{! /multiexcerpt}}
 
@@ -378,9 +378,9 @@ This requires X11.
 
     If you don't have `add-apt-repository`, which is a non-standard command, issue the following commands:
 
-    `sudo echo "deb [http://apt.nuxeo.org/](http://apt.nuxeo.org/)&nbsp;$(lsb_release -cs) releases" > /etc/apt/sources.list.d/nuxeo.list`
+    `sudo echo "deb [http://apt.nuxeo.org/](http://apt.nuxeo.org/) $(lsb_release -cs) releases" > /etc/apt/sources.list.d/nuxeo.list`
 
-    `sudo echo "deb [http://apt.nuxeo.org/](http://apt.nuxeo.org/)&nbsp;$(lsb_release -cs) fasttracks" >> /etc/apt/sources.list.d/nuxeo.list`
+    `sudo echo "deb [http://apt.nuxeo.org/](http://apt.nuxeo.org/) $(lsb_release -cs) fasttracks" >> /etc/apt/sources.list.d/nuxeo.list`
 
     {{/callout}}
 3.  Update your APT cache.
@@ -413,25 +413,25 @@ This requires X11.
 
 Like any Java application you should prevent the JVM Heap to be swapped to disk, this will crush server performance. You have two options here:
 
-*   Disable the swap with&nbsp;`sudo swapoff -a`&nbsp;you&rsquo;ll need to edit your&nbsp;`/etc/fstab`to disable swap permanently. Note that before doing this you need to make sure that you have enough memory for all the processes that run on the server (Nuxeo JVM, converters, other custom process and the OS).
-*   Limit the swapiness of the OS using&nbsp;`sysctl`&nbsp;to set<span class="pln">&nbsp;vm</span><span class="pun">.</span><span class="pln">swappiness&nbsp;</span><span class="pun">=</span><span class="lit">1</span>
+*   Disable the swap with `sudo swapoff -a` you&rsquo;ll need to edit your `/etc/fstab`to disable swap permanently. Note that before doing this you need to make sure that you have enough memory for all the processes that run on the server (Nuxeo JVM, converters, other custom process and the OS).
+*   Limit the swapiness of the OS using `sysctl` to set `vm.swappiness = 1`
 
 ### Temporary folder
 
-While setting&nbsp;`nuxeo.tmp.dir`&nbsp;property in nuxeo.conf, we recommend not to use the system temporary folder&nbsp;`/tmp`&nbsp;because this one can be cleaned up by the operating system.&nbsp;This is in particular the case on Red Hat Enterprise Linux, where&nbsp;`systemd-tmpfiles`&nbsp;service is deleting old files from&nbsp;`/tmp`.
+While setting `nuxeo.tmp.dir` property in nuxeo.conf, we recommend not to use the system temporary folder `/tmp` because this one can be cleaned up by the operating system. This is in particular the case on Red Hat Enterprise Linux, where `systemd-tmpfiles` service is deleting old files from `/tmp`.
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Next Steps'}}
 
-*   [Setup]({{page page='setup'}})
-*   [Recommended Configurations]({{page page='recommended-configurations'}})
-*   [Server Start and Stop]({{page page='server-start-and-stop'}})
+- [Setup]({{page page='setup'}})
+- [Recommended Configurations]({{page page='recommended-configurations'}})
+- [Server Start and Stop]({{page page='server-start-and-stop'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
 
-*   [From the Web UI to Nuxeo Studio]({{page space='nxdoc710' page='from-the-web-ui-to-nuxeo-studio'}})
-*   [Essential Nuxeo Platform Terminology]({{page space='nxdoc710' page='essential-nuxeo-platform-terminology'}})
-*   [Quick Start Dev Guide]({{page space='nxdoc710' page='quick-start-dev-guide'}})
+- [From the JSF UI to Nuxeo Studio]({{page space='nxdoc710' page='from-the-jsf-ui-to-nuxeo-studio'}})
+- [Essential Nuxeo Platform Terminology]({{page space='nxdoc710' page='essential-nuxeo-platform-terminology'}})
+- [Quick Start Dev Guide]({{page space='nxdoc710' page='quick-start-dev-guide'}})
 
 {{/panel}}</div></div>

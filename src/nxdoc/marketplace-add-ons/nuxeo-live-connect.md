@@ -21,209 +21,209 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/aYCyAQ'
     source_link: /display/NXDOC710/Nuxeo+Live+Connect
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-30 15:53'
         message: 'emove One Drive section, available from FT 8.2 and not LTS 201'
         version: '41'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-14 10:18'
         message: Added OneDrive and Box
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-04 15:06'
         message: ''
         version: '39'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-02-12 10:00'
         message: Fix content
         version: '38'
-    - 
+    -
         author: Michaël Vachette
         date: '2015-12-11 17:28'
         message: ''
         version: '37'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-12-03 15:51'
         message: Add link to video course
         version: '36'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-18 11:11'
         message: formatting
         version: '35'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-18 11:10'
         message: formatting
         version: '34'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-18 11:10'
         message: Added video
         version: '33'
-    - 
+    -
         author: Arnaud Kervern
         date: '2015-10-27 16:21'
         message: ''
         version: '32'
-    - 
+    -
         author: Arnaud Kervern
         date: '2015-10-27 16:20'
         message: ''
         version: '31'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-10-05 15:23'
         message: cosmit
         version: '30'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-10-05 15:22'
         message: cosmit
         version: '29'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-10-05 15:22'
         message: follow google drive ui changes
         version: '28'
-    - 
+    -
         author: Joshua Fletcher
         date: '2015-09-17 22:48'
         message: Clarify field mapping.
         version: '27'
-    - 
+    -
         author: Joshua Fletcher
         date: '2015-09-17 22:45'
         message: >-
             Add missing step for Dropbox configuration, add note about SSL
             requirement.
         version: '26'
-    - 
+    -
         author: Nelson Silva
         date: '2015-08-24 10:28'
         message: ''
         version: '25'
-    - 
+    -
         author: Nelson Silva
         date: '2015-07-08 08:26'
         message: Added synchronization scheduler configuration notes
         version: '24'
-    - 
+    -
         author: Joshua Fletcher
         date: '2015-07-01 17:28'
         message: typos
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-01 08:11'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-07-01 08:11'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-30 14:53'
         message: ''
         version: '20'
-    - 
+    -
         author: Joshua Fletcher
         date: '2015-06-29 20:17'
         message: typo
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-29 14:53'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-24 14:34'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-24 14:14'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-24 13:21'
         message: Update feature table
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-24 13:15'
         message: Add functional overview for Google Drive
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-24 12:17'
         message: Add Dropbox set up steps
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-23 10:02'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-22 15:51'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 17:19'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 17:17'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 17:12'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 17:11'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 17:10'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 17:02'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 16:59'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 16:54'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 16:53'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-06-19 16:40'
         message: ''
@@ -234,13 +234,11 @@ history:
 
 Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.io/nuxeo/university/#!/course/whats-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.io)
 
-&nbsp;
-
 {{! excerpt}}
 
 Live Connect allows you to create a content application that handles cloud files (Dropbox, Google Drive, in the future One Drive, Box...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it. This allows the user to benefit from thumbnailing service, full text, conversions, etc.
 
-Live Connect for Google Drive also brings the "Cloud Edit" mode. Your application based on the Nuxeo Platform can provide the users with a direct link to the SaaS applications that you can use for editing Google Drive files (Google Docs, Office 365,&nbsp;Pixlr, etc.).
+Live Connect for Google Drive also brings the "Cloud Edit" mode. Your application based on the Nuxeo Platform can provide the users with a direct link to the SaaS applications that you can use for editing Google Drive files (Google Docs, Office 365, Pixlr, etc.).
 
 Live Connect is designed to allow many implementations. Default implementations are:
 
@@ -252,7 +250,7 @@ Live Connect is designed to allow many implementations. Default implementations 
 Live Connect provides a set of features described below.
 
 *   **File download**: File download is made by redirecting the user's browser to the native download URL of the considered backend.
-*   **Full-text indexation**: The text of the content is extracted and sent to the Elasticsearch index so as to be able to perform native Nuxeo Platform search using NXQL and standard search screens of the Web UI.
+*   **Full-text indexation**: The text of the content is extracted and sent to the Elasticsearch index so as to be able to perform native Nuxeo Platform search using NXQL and standard search screens of the JSF UI.
 *   **File conversion in PDF**, using the provider's conversion system: When a PDF conversion is asked for a Live Connect file, the user's browser is redirected to the provider's direct URL for getting the PDF version.
 *   **File preview**, using native provider's preview.
 *   **Thumbnail generation**, using provider's thumbnail.
@@ -357,13 +355,13 @@ Dropbox documents can be searched in the Nuxeo Platform like any other document:
 2.  Click on **App console**.
 3.  Click on the button **Create app**.
 4.  Select **Dropbox API**
-5.  Select**&nbsp;**the permission Type **Full Dropbox**
-    *   The **App folder&nbsp;**permission won't work due to limitations in Dropbox API
+5.  Select the permission Type **Full Dropbox**
+    *   The **App folder** permission won't work due to limitations in Dropbox API
 6.  Enter the name of your application.
 7.  Click on the button **Create app**.
 8.  From the **Settings** tab, copy the App key and App secret.
 9.  In the **OAuth 2** > **Redirect URIs** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/dropbox/callback](http://localhost:8080/nuxeo/site/oauth2/dropbox/callback).
-10.  In&nbsp;**Drop-ins domains** set the domain name of your site.
+10.  In **Drop-ins domains** set the domain name of your site.
 
 {{#> callout type='info' }}
 
@@ -375,14 +373,12 @@ To enable additional users on your application, go to **Settings** > **Developme
 
 {{/callout}}
 
-&nbsp;
-
 **Step 2: Configuring the Nuxeo Platform**
 
 1.  Install the package Nuxeo Live Connect if it is not already installed.
 2.  In the **ADMIN** tab, go to **Cloud Services** > **Service providers**.
-3.  In the **OAuth2 Service providers** section click on the **Modify**&nbsp;button of the 'dropbox' service provider.
-4.  Paste the Dropbox App key in&nbsp;**ClientID**.
+3.  In the **OAuth2 Service providers** section click on the **Modify** button of the 'dropbox' service provider.
+4.  Paste the Dropbox App key in **ClientID**.
 5.  Paste the Dropbox App secret in **Client Secret**.
 6.  Make sure the **Enabled** box is checked.
 7.  Now go to the **HOME** tab and click 'Cloud Services' tab and click the **Connect to Dropbox** button or just create a new Dropbox document.
@@ -412,13 +408,13 @@ Box documents can be searched in the Nuxeo Platform like any other document: the
 
 **Step 1: Preparing your application accounts on the Box App console**
 
-1.  Go to&nbsp;[https://app.box.com/developers/services](https://app.box.com/developers/services).
-2.  Click on&nbsp;**Create a Box Application**.
-3.  Enter the name of your application and select&nbsp;**Box Content**.
-4.  Click on&nbsp;**Configure your application**.
-5.  In&nbsp;**redirect_uri&nbsp;**set the following URL, adapting the hostname and port to your case:&nbsp;[https://localhost:8080/nuxeo/site/oauth2/box/callback](https://localhost:8080/nuxeo/site/oauth2/box/callback)&nbsp;.
+1.  Go to [https://app.box.com/developers/services](https://app.box.com/developers/services).
+2.  Click on **Create a Box Application**.
+3.  Enter the name of your application and select **Box Content**.
+4.  Click on **Configure your application**.
+5.  In **redirect_uri** set the following URL, adapting the hostname and port to your case: [https://localhost:8080/nuxeo/site/oauth2/box/callback](https://localhost:8080/nuxeo/site/oauth2/box/callback).
 6.  Copy the client_id and client_secret.
-7.  Click on button&nbsp;**Save Application**.
+7.  Click on button **Save Application**.
 
 {{#> callout type='info' }}
 
@@ -426,24 +422,22 @@ Please note that Box only allows http for localhost. For all other sites https m
 
 {{/callout}}
 
-&nbsp;
-
 **Step 2: Configuring the Nuxeo Platform**
 
 1.  Install the package Nuxeo Live Connect if it is not already installed.
-2.  In the&nbsp;**ADMIN**&nbsp;tab, go to&nbsp;**Cloud Services**&nbsp;>&nbsp;**Service providers**.
-3.  In the&nbsp;**OAuth2 Service providers**&nbsp;section click on the&nbsp;**Modify**&nbsp;button of the&nbsp;**box**&nbsp;service provider.
-4.  Paste the Box client_id in&nbsp;**ClientID**.
-5.  Paste the Box client_secret in&nbsp;**Client Secret**.
-6.  Make sure the&nbsp;**Enabled**&nbsp;box is checked.
+2.  In the **ADMIN** tab, go to **Cloud Services**&nbsp;> **Service providers**.
+3.  In the **OAuth2 Service providers** section click on the **Modify** button of the **box** service provider.
+4.  Paste the Box client_id in **ClientID**.
+5.  Paste the Box client_secret in **Client Secret**.
+6.  Make sure the **Enabled** box is checked.
 7.  Save.
-8.  Now go to the&nbsp;**HOME**&nbsp;tab and click&nbsp;**Cloud Services**&nbsp;tab and click the&nbsp;**Connect to Box**&nbsp;button or just create a new Box document.
+8.  Now go to the **HOME** tab and click **Cloud Services** tab and click the **Connect to Box** button or just create a new Box document.
 
 ## Advanced Live Connect Configuration
 
 ### Synchronization
 
-Since cloud files can be changed externally Nuxeo Live Connect relies on a scheduled synchronization process to ensure local metadata is kept up to date. Things like the document's title, thumbnail, full text for indexing, etc, are not updated in realtime since they rely on this regular synchronization&nbsp;job which is set to run every 5 minutes by default.
+Since cloud files can be changed externally Nuxeo Live Connect relies on a scheduled synchronization process to ensure local metadata is kept up to date. Things like the document's title, thumbnail, full text for indexing, etc, are not updated in realtime since they rely on this regular synchronization job which is set to run every 5 minutes by default.
 
 To change this interval users can override the default contribution:
 
@@ -462,15 +456,9 @@ To change this interval users can override the default contribution:
 </component>
 ```
 
-**Note:&nbsp;**Synchronization requires service calls that might be subject to quotas and/or limits. Please refer to each provider's documentation for further information. &nbsp;
+**Note:** Synchronization requires service calls that might be subject to quotas and/or limits. Please refer to each provider's documentation for further information.
 
 ## Known General Limitations
 
 *   **Nuxeo Drive** is not compatible with files that are stored on a Live Connect backend: files will be downloaded, but it won't be possible to update them.
 *   **Native versioning**: Only non-native Google Drive documents have revisions created on the Google Drive side.
-
-&nbsp;
-
-&nbsp;
-
-* * *

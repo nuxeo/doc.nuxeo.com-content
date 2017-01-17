@@ -106,7 +106,7 @@ This page provides guidance on how to optimize your application performance, as 
 
 ## Information Gathering
 
-Context is key &ndash; when gathering information about performance (whether you are setting your internal objectives or troubleshooting problems), it's important to&nbsp;clarify what you are trying to achieve and how you are going about it.
+Context is key &ndash; when gathering information about performance (whether you are setting your internal objectives or troubleshooting problems), it's important to clarify what you are trying to achieve and how you are going about it.
 
 In short, one must be able to quantify or measure performance issues, in order to be able to solve them.
 
@@ -115,7 +115,7 @@ In short, one must be able to quantify or measure performance issues, in order t
 What you are testing, and how you are testing it? Consider the following elements:
 
 *   Which of the Nuxeo entry points are you testing?
-    *   JSF UI (the default Web UI for Nuxeo),
+    *   JSF UI (the default UI for Nuxeo),
     *   Rest API,
     *   Java API,
     *   other.
@@ -190,7 +190,7 @@ There are three settings in Nuxeo that are directly related and that should be a
 *   Tomcat:
     *   HTTP connector:
 
-        *   Thread pool size (`maxThreads`&nbsp;in server.xml or common-base/conf/server.xml.nxftl).&nbsp;This is the number of concurrent in-bound HTTP requests that Tomcat will handle in parallel;
+        *   Thread pool size (`maxThreads` in server.xml or common-base/conf/server.xml.nxftl). This is the number of concurrent in-bound HTTP requests that Tomcat will handle in parallel;
         *   Waiting queue: This is the size of the in-bound HTTP requests that are accepted and held while waiting for a free thread.
     *   AJP connector.
 *   Nuxeo: DB connection pool
@@ -203,7 +203,7 @@ In general the rule-of-thumb is that for each running Tomcat HTTP thread:
 *   You will need one connection from VCS to access the repository;
 *   You may need one connection from the generic pool to access an other datasource.
 
-This means that for a typical configuration, you will have: `maxThreads&nbsp;= nuxeo.vcs.max-pool-size = nuxeo.db.max-pool-size`.
+This means that for a typical configuration, you will have: `maxThreads = nuxeo.vcs.max-pool-size = nuxeo.db.max-pool-size`.
 
 If you are using Nuxeo in cluster mode you must ensure that: `(nuxeo.vcs.max-pool-size + nuxeo.db.max-pool-size)*number_of_nodes <= Maximum concurrent connections and transactions for the DB server`
 
@@ -221,8 +221,7 @@ You may very well have at some point more requests than available threads: that'
 
 When the database connection pool size is too high, you can end up in a situation where the database cannot provide anymore connections or transactions. In this case you will start having JDBC errors coming from the pools saying that transaction or connection was refused by the server.
 
-**Pool Starvation
-**
+**Pool Starvation**
 
 When the HTTP thread pool size is too large in proportion to the database connection pool, you can end up in a situation where HTTP requests:
 
@@ -276,18 +275,16 @@ When running performance benchmarks, you may very well reach the maximum system 
 
 If your benchmarks show that you use 100% of the CPU, this is usually a good sign as CPU is typically the easiest resource to add more of, and can add more Nuxeo nodes in order to increase performance.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
-*   [Performance Recommendations]({{page page='performance-recommendations'}})
-*   [Tracking the Performance of the Nuxeo Platform]({{page page='tracking-the-performance-of-the-nuxeo-platform'}})
+- [Performance Recommendations]({{page page='performance-recommendations'}})
+- [Tracking the Performance of the Nuxeo Platform]({{page page='tracking-the-performance-of-the-nuxeo-platform'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
 
-*   [Metrics and Monitoring]({{page space='admindoc710' page='metrics-and-monitoring'}})
-*   [How to Estimate Disk, Database and Elasticsearch Usage]({{page space='admindoc710' page='how-to-estimate-disk-database-and-elasticsearch-usage'}})
+- [Metrics and Monitoring]({{page space='admindoc710' page='metrics-and-monitoring'}})
+- [How to Estimate Disk, Database and Elasticsearch Usage]({{page space='admindoc710' page='how-to-estimate-disk-database-and-elasticsearch-usage'}})
 
 {{/panel}}</div></div>

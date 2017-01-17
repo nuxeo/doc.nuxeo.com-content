@@ -82,7 +82,7 @@ You don't know how to get your project started? Here are some tips for you.
 Here are some resources to help you start your Nuxeo Platform application:
 
 - [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
-- [From the Web UI to Nuxeo Studio]({{page page='from-the-web-ui-to-nuxeo-studio'}})
+- [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
 - [First Steps With Studio: Technical Documentation Tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}})
 
 {{/panel}}</div></div>

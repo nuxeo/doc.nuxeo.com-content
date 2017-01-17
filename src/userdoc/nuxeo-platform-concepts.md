@@ -454,23 +454,23 @@ history:
 ---
 {{! multiexcerpt name='functional-overview'}}
 
-Nuxeo Platform Web UI is the Back office view on the content repository. There are three main spaces in Nuxeo Platform:
+Nuxeo Platform JSF UI is the Back office view on the content repository. There are three main spaces in Nuxeo Platform:
 
 *   The **Home** tab provides a set of dashboards
 *   The **Browse** tab enables to navigate in the repository
 *   The **Search** tab enables to query the repository
 
-The Nuxeo Platform gives you all the necessary tools to let&nbsp;you customize what is displayed on your platform.&nbsp;
+The Nuxeo Platform gives you all the necessary tools to let you customize what is displayed on your platform.
 
 ### Browse
 
 This is where the majority of user's activity within the Nuxeo Platform will occur since it's where users can work on documents and browse the application domains, workspace, sections, etc.
 
-#### Content Hierarchy&nbsp;
+#### Content Hierarchy
 
-You can create different types of documents to be able to display the content hierarchy that you need in your application. By default you can create workspaces, folders, collections, templates, etc., but you can also&nbsp;[create your own document types]({{page space='nxdoc710' page='how-to-define-a-document-type'}}).&nbsp;
+You can create different types of documents to be able to display the content hierarchy that you need in your application. By default you can create workspaces, folders, collections, templates, etc., but you can also [create your own document types]({{page space='nxdoc710' page='how-to-define-a-document-type'}}).
 
-The default navigation tree displayed on the left hand side of the pages is the folders navigation tree. It displays all the domain structure from the root. It enables you to easily access any space in the application structure.&nbsp;The navigation tree displays folderish documents, i.e. documents in which you can create other documents (workspaces, folders, etc.).
+The default navigation tree displayed on the left hand side of the pages is the folders navigation tree. It displays all the domain structure from the root. It enables you to easily access any space in the application structure. The navigation tree displays folderish documents, i.e. documents in which you can create other documents (workspaces, folders, etc.).
 
 {{#> callout type='tip' }}
 
@@ -480,13 +480,13 @@ It is possible to add another type of navigation tree based on metadata instead 
 
 #### Breadcrumb
 
-Breadcrumb enables you to navigate in the platform.&nbsp;For example, you can go up one level in the platform structure, by clicking on the&nbsp;![]({{file name='UpFolder_icon.gif' page='icons-index'}})&nbsp;icon&nbsp;in the breadcrumbs.&nbsp;Users can also click on the workspace's title in the breadcrumbs directly or in the navigation tree. They can go up several levels in the document's path in a single click that way.
+Breadcrumb enables you to navigate in the platform. For example, you can go up one level in the platform structure, by clicking on the ![]({{file name='UpFolder_icon.gif' page='icons-index'}}) icon in the breadcrumbs. Users can also click on the workspace's title in the breadcrumbs directly or in the navigation tree. They can go up several levels in the document's path in a single click that way.
 
 ![]({{file name='breadcrumbs.png' page='browsing-content'}} ?w=376,h=36,border=true)
 
 {{#> callout type='info' }}
 
-Due to [technical reasons]({{page space='NXDOC' page='Back and+Next+Buttons+Paradigm+and+JSF+in+the+Nuxeo+Platform'}}), it is recommended to NOT use the browser's Back and Next buttons to navigate in the Platform.&nbsp;
+Due to [technical reasons]({{page space='NXDOC' page='Back and+Next+Buttons+Paradigm+and+JSF+in+the+Nuxeo+Platform'}}), it is recommended to NOT use the browser's Back and Next buttons to navigate in the Platform.
 
 {{/callout}}
 
@@ -494,11 +494,11 @@ Due to [technical reasons]({{page space='NXDOC' page='Back and+Next+Buttons+Para
 
 A tab in the Nuxeo Platform is a view displayed on a document, controlled by a filter. Different tabs are displayed on each document type created in the content hierarchy, the basic ones are:
 
-*   **Summary**: this view lets you see the metadata of your document, start a workflow or more specific metadata like for pictures document.&nbsp;
-*   **Edit**: from this tab you can edit the metadata and the content of your document.&nbsp;
-*   **Files**: you can add additional files from this tab.&nbsp;
+*   **Summary**: this view lets you see the metadata of your document, start a workflow or more specific metadata like for pictures document.
+*   **Edit**: from this tab you can edit the metadata and the content of your document.
+*   **Files**: you can add additional files from this tab.
 *   **Publish**: this view lets you publish your document in another section of your platform.
-*   **Relations**: this tab lets you manage the relations around the document.&nbsp;
+*   **Relations**: this tab lets you manage the relations around the document.
 *   **History**: this tab lets you see the event log of the document concerned.
 
 On a same document users with different profiles will have access to different tabs. And so they will be presented different forms and buttons that correspond to their profile. Typically users with Read permission are not displayed the Edit tab.
@@ -546,10 +546,10 @@ The default search filter provides a faceted search, leveraging the [Elasticsear
 
 #### Result Layout
 
-Users can change the way content is presented in the result layout. They can also change the displayed information. At the top right and corner of the results pages, you have different options to display your content list.&nbsp;
+Users can change the way content is presented in the result layout. They can also change the displayed information. At the top right and corner of the results pages, you have different options to display your content list.
 
-*   **Thumbnail view**![]({{file name='DM-icon-view-icon.png' page='icons-index'}})&nbsp;: this view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
-*   **Edit Result Columns**![]({{file name='edit_columns.png' space='userdoc60' page='icons-index'}}): this button lets you&nbsp;change the information displayed in content lists.&nbsp;The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and&nbsp;reorder columns using the vertical arrows.&nbsp;
+*   **Thumbnail view**![]({{file name='DM-icon-view-icon.png' page='icons-index'}}): this view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
+*   **Edit Result Columns**![]({{file name='edit_columns.png' space='userdoc60' page='icons-index'}}): this button lets you change the information displayed in content lists. The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and reorder columns using the vertical arrows.
 
     {{#> callout type='info' }}
 
@@ -565,10 +565,10 @@ When you create new search forms, you can adapt the result layout to your own do
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Pages'}}
 
-*   [Document Types]({{page page='document-types'}})
-*   [Publishing Content]({{page page='publishing-content'}})
-*   [Managing Permissions]({{page page='managing-permissions'}})
-*   [Managing Users and Groups]({{page page='managing-users-and-groups'}})
+- [Document Types]({{page page='document-types'}})
+- [Publishing Content]({{page page='publishing-content'}})
+- [Managing Permissions]({{page page='managing-permissions'}})
+- [Managing Users and Groups]({{page page='managing-users-and-groups'}})
 
 {{/panel}}</div><div class="column medium-6">
 

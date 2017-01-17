@@ -233,8 +233,6 @@ Installing Nuxeo as a Windows service is independent of Nuxeo. So, this is no lo
 
 Multiple solutions are available, here are some of them, given without any warranty.
 
-&nbsp;
-
 {{#> callout type='tip' }}
 
 Once a batch is installed as a service, it cannot be changed: you must first uninstall it, then edit and reinstall in order to change its content.
@@ -256,9 +254,9 @@ The database used by the Nuxeo Platform has to be installed as a service and sta
 
 [NSSM](https://nssm.cc/) is a Windows service helper that makes it much more easy to launch any type of application as a service. What is more, it also handles failure, by relaunching applications whenever they exit prematurely. Here are the instructions to install Nuxeo as a Windows service using NSSM:
 
-1.  Download NSSM from [the official website](https://nssm.cc/download) or install it via [Chocolatey](https://chocolatey.org/), by typing:&nbsp;`choco install nssm`
+1.  Download NSSM from [the official website](https://nssm.cc/download) or install it via [Chocolatey](https://chocolatey.org/), by typing: `choco install nssm`
 2.  If NSSM was installed via Chocolatey, skip this step. Otherwise, add NSSM's location to PATH.
-3.  Install Nuxeo as a service, by running on an elevated console or powershell:&nbsp;`nssm install &ldquo;<absolute-path-to-nuxeoctl.bat>&rdquo; --gui false console`
+3.  Install Nuxeo as a service, by running on an elevated console or powershell: `nssm install "<absolute-path-to-nuxeoctl.bat>" --gui false console`
 
 From now on, Nuxeo will start as a service whenever Windows starts. The `console` parameter allows the process to stay alive after the server starts, thus preventing NSSM from restarting it.
 
@@ -318,7 +316,7 @@ When using this solution it is important that Nuxeo installation path contains n
     nuxeoctl.bat --gui=false stop
     ```
 
-8.  Open the&nbsp;`wrapper.conf` file and make sure the&nbsp;`wrapper.console.title` entry does not contain a colon (":") or the&nbsp;`runConsole.bat` execution will fail. In that case, remove the colon or set another title.
+8.  Open the `wrapper.conf` file and make sure the `wrapper.console.title` entry does not contain a colon (":") or the `runConsole.bat` execution will fail. In that case, remove the colon or set another title.
 9.  Execute your wrapped application as a console application:
 
     ```
@@ -341,7 +339,7 @@ When using this solution it is important that Nuxeo installation path contains n
         wrapper.control = APPLICATION 
         ```
 
-    2.  If set, remove or comment the following&nbsp;`wrapper.on_exit` parameters:
+    2.  If set, remove or comment the following `wrapper.on_exit` parameters:
 
         ```
         #wrapper.on_exit.0=SHUTDOWN
@@ -551,20 +549,18 @@ There are some disadvantages such as failures in case of multiple frameworks ins
 
 You may want to have a look at [http://msdn2.microsoft.com/en-US/library/system.configuration.install.managedinstallerclass.aspx](http://msdn2.microsoft.com/en-US/library/system.configuration.install.managedinstallerclass.aspx) for managing that programmatically.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Next Steps'}}
 
-*   [Setup]({{page page='setup'}})
-*   [Recommended Configurations]({{page page='recommended-configurations'}})
-*   [Server Start and Stop]({{page page='server-start-and-stop'}})
+- [Setup]({{page page='setup'}})
+- [Recommended Configurations]({{page page='recommended-configurations'}})
+- [Server Start and Stop]({{page page='server-start-and-stop'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
 
-*   [From the Web UI to Nuxeo Studio]({{page space='nxdoc710' page='from-the-web-ui-to-nuxeo-studio'}})
-*   [Essential Nuxeo Platform Terminology]({{page space='nxdoc710' page='essential-nuxeo-platform-terminology'}})
-*   [Quick Start Dev Guide]({{page space='nxdoc710' page='quick-start-dev-guide'}})
+- [From the JSF UI to Nuxeo Studio]({{page space='nxdoc710' page='from-the-jsf-ui-to-nuxeo-studio'}})
+- [Essential Nuxeo Platform Terminology]({{page space='nxdoc710' page='essential-nuxeo-platform-terminology'}})
+- [Quick Start Dev Guide]({{page space='nxdoc710' page='quick-start-dev-guide'}})
 
 {{/panel}}</div></div>

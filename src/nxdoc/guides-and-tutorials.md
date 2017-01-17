@@ -113,7 +113,7 @@ Welcome to the Nuxeo Developer Tutorials Section!
 {{#> panel type='secondary' match_height='true'}}
 ### Quick Start Series
 - [Quick Start Dev Guide]({{page page='quick-start-dev-guide'}})
-- [From the Web UI to Nuxeo Studio]({{page page='from-the-web-ui-to-nuxeo-studio'}})
+- [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
 - [First Steps With Studio: Technical Documentation Tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}})
 {{/panel}}
 </div>
@@ -145,5 +145,3 @@ Welcome to the Nuxeo Developer Tutorials Section!
 - [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
 - [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
 {{/panel}}</div></div>
-
-&nbsp;
