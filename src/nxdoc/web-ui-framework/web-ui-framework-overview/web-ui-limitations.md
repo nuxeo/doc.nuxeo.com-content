@@ -22,6 +22,7 @@ confluence:
 tree_item_index: 200
 version_override:
     'FT': '/nxdoc/jsf-ui-framework-overview'
+    'LTS 2015': 710/nxdoc/jsf-ui-limitations
 history:
     -
         author: Manon Lumeau

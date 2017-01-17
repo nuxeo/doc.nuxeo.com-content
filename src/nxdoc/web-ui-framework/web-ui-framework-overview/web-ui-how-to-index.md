@@ -18,6 +18,7 @@ confluence:
 tree_item_index: 300
 version_override:
     'FT': '/nxdoc/jsf-ui-how-to-index'
+    'LTS 2015': 710/nxdoc/jsf-ui-how-to-index
 history:
     -
         author: Manon Lumeau
