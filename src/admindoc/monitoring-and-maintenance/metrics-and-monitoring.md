@@ -233,7 +233,7 @@ Here is a short list of Nuxeo metrics:
     *   `create`: Counter of document created
     *   `delete`: Counter of document deleted
     *   `update`: Counter of document updated
-*   `nuxeo.repositories.jdbc/nuxeo.connections[](http://nuxeo.repositories.jdbc/nuxeo.connections)`
+*   `nuxeo.repositories.jdbc/nuxeo.connections`
     *   `count`: VCS connection count
     *   `idle`: VCS idle connection count
 *   `nuxeo.transactions.concurrents`

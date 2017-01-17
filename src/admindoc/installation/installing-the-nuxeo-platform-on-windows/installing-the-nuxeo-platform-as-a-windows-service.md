@@ -256,7 +256,7 @@ The database used by the Nuxeo Platform has to be installed as a service and sta
 
 1.  Download NSSM from [the official website](https://nssm.cc/download) or install it via [Chocolatey](https://chocolatey.org/), by typing: `choco install nssm`
 2.  If NSSM was installed via Chocolatey, skip this step. Otherwise, add NSSM's location to PATH.
-3.  Install Nuxeo as a service, by running on an elevated console or powershell: `nssm install &ldquo;<absolute-path-to-nuxeoctl.bat>&rdquo; --gui false console`
+3.  Install Nuxeo as a service, by running on an elevated console or powershell: `nssm install "<absolute-path-to-nuxeoctl.bat>" --gui false console`
 
 From now on, Nuxeo will start as a service whenever Windows starts. The `console` parameter allows the process to stay alive after the server starts, thus preventing NSSM from restarting it.
 

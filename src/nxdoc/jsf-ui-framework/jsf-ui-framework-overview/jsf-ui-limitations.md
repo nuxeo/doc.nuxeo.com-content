@@ -64,7 +64,6 @@ This chapter presents the limitations to the Seam/JSF web application.
 
 {{! /excerpt}}
 
-*   [Back and Next Buttons Paradigm and JSF in the Nuxeo Platform]({{page page='back-and-next-buttons-paradigm-and-jsf-in-the-nuxeo-platform'}})
-    {{{excerpt 'Back and Next Buttons Paradigm and JSF in the Nuxeo Platform'}}}
-*   [Default Widget Types Known Limitations]({{page page='default-widget-types-known-limitations'}})
-    {{{excerpt 'Default Widget Types Known Limitations'}}}
+*   [Back and Next Buttons Paradigm and JSF in the Nuxeo Platform]({{page page='back-and-next-buttons-paradigm-and-jsf-in-the-nuxeo-platform'}}) {{{excerpt 'Back and Next Buttons Paradigm and JSF in the Nuxeo Platform'}}}
+
+*   [Default Widget Types Known Limitations]({{page page='default-widget-types-known-limitations'}}) {{{excerpt 'Default Widget Types Known Limitations'}}}
