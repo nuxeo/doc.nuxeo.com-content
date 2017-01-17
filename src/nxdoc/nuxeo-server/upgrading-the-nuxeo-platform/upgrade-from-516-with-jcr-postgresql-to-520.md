@@ -149,20 +149,20 @@ We assume that your Nuxeo 5.1.6 is installed in $JBOSS_516 directory and Nuxeo 5
 
 The steps to migrate are:
 
-*   Start an empty nuxeo 5.2 configured in JCR
-    *   Customize a nuxeo 5.2 JCR with an **emtpy** database, created for the occasion.
-    *   Start nuxeo 5.2 and log in
-    *   shutdown nuxeo 5.2
-*   copy the file $JBOSS_52/server/default/data/NXRuntime/repos/default/repository/nodetypes/custom_nodetypes.xml and keep it in a temporary location
-*   keep either the directory $JBOSS_52/server/default/data/NXRuntime/repos/default/repository/namespaces/
-*   remove $JBOSS_52/server/default/data
-*   copy the data folder from $JBOSS_516/server/default/data to $JBOSS_52/server/default/data
-*   copy the custom_nodetypes.xml file you kept to $JBOSS_52/server/default/data/NXRuntime/repos/default/repository/nodetypes/
-*   change searchIndex class to org.nuxeo.ecm.core.repository.jcr.jackrabbit.SearchIndex in $JBOSS_52/server/default/data/NXRuntime/repos/default/workspaces/default/workspace.xml
-*   remove the $JBOSS_52/server/default/data/NXRuntime/repos/default/workspaces/default/index folder to force JackRabbit to rebuild the indexes
-*   update discrimator column in NXP_LOGS table to allow this value to be null
-    *   alter table NXP_LOGS alter discriminator DROP not null
-*   Here is the tricky part, customize the ns_idx.properties in the directory namespaces that you kept:
+- Start an empty nuxeo 5.2 configured in JCR
+    - Customize a nuxeo 5.2 JCR with an **emtpy** database, created for the occasion.
+    - Start nuxeo 5.2 and log in
+    - shutdown nuxeo 5.2
+- copy the file $JBOSS_52/server/default/data/NXRuntime/repos/default/repository/nodetypes/custom_nodetypes.xml and keep it in a temporary location
+- keep either the directory $JBOSS_52/server/default/data/NXRuntime/repos/default/repository/namespaces/
+- remove $JBOSS_52/server/default/data
+- copy the data folder from $JBOSS_516/server/default/data to $JBOSS_52/server/default/data
+- copy the custom_nodetypes.xml file you kept to $JBOSS_52/server/default/data/NXRuntime/repos/default/repository/nodetypes/
+- change searchIndex class to org.nuxeo.ecm.core.repository.jcr.jackrabbit.SearchIndex in $JBOSS_52/server/default/data/NXRuntime/repos/default/workspaces/default/workspace.xml
+- remove the $JBOSS_52/server/default/data/NXRuntime/repos/default/workspaces/default/index folder to force JackRabbit to rebuild the indexes
+- update discrimator column in NXP_LOGS table to allow this value to be null
+    - alter table NXP_LOGS alter discriminator DROP not null
+- Here is the tricky part, customize the ns_idx.properties in the directory namespaces that you kept:
 
 ```
 Compare the file $JBOSS_52/server/default/data/NXRuntime/repos/default/repository/namespaces/ns_idx.properties  with the one you kept from the namespaces directory.
@@ -201,19 +201,19 @@ http://project.nuxeo.org/schemas/webengine/site/blog/post=21
 
 ```
 
-*   remove the directory $JBOSS_52/server/default/data/NXRuntime/repos/default/repository/namespaces/
-*   copy your namespace directory (With the customized ns_idx.properties) in $JBOSS_52/server/default/data/NXRuntime/repos/default/repository/namespaces/
-*   finally adapt nuxeo 5.2 to use the 5.1.6 database.
+- remove the directory $JBOSS_52/server/default/data/NXRuntime/repos/default/repository/namespaces/
+- copy your namespace directory (With the customized ns_idx.properties) in $JBOSS_52/server/default/data/NXRuntime/repos/default/repository/namespaces/
+- finally adapt nuxeo 5.2 to use the 5.1.6 database.
 
 Just for information, below are the changes you can make manually to update your custom_nodetypes.xml
 
 Two main problems occurs are present in the node type definitions from Nuxeo 5.1.6:
 
-*   the whole versioning features are not working : no document modification, no version increase, no reading of the previous versions, ...: this is due to the fact that `ecm:version` and `ecm:versionHistory` are not mixin type any more. Manually you can change these nodes and chose isMixin="true" to isMixin="false"
-*   some document definitions have changed :
-    *   Workspace type has two new supertypes: `ecmst:publish_ergo` and `ecmst:webcontainer`
-    *   Forum, Thread and post types use now `ecmdt:Document` as supertype instead of `ecmnt:document`
-    *   WikiPage and BlogPost types use `ecmmix:versionable` as supertype instead of `mix:versionable` 
+- the whole versioning features are not working : no document modification, no version increase, no reading of the previous versions, ...: this is due to the fact that `ecm:version` and `ecm:versionHistory` are not mixin type any more. Manually you can change these nodes and chose isMixin="true" to isMixin="false"
+- some document definitions have changed :
+    - Workspace type has two new supertypes: `ecmst:publish_ergo` and `ecmst:webcontainer`
+    - Forum, Thread and post types use now `ecmdt:Document` as supertype instead of `ecmnt:document`
+    - WikiPage and BlogPost types use `ecmmix:versionable` as supertype instead of `mix:versionable` 
 
 Editing the custom_nodetypes file is not easy because you have to format this file (tidy -xml ...) to edit it. So we recommend to replace the old custom_nodetypes.xml by the new one, generated from a fresh Nuxeo 5.2 installation.
 
