@@ -29,8 +29,7 @@ confluence:
     source_link: /display/NXDOC/How+to+Bubble+Errors+from+the+Core+Layer+in+the+JSF+UI
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/admindoc/how-to-bubble-errors-from-the-core-layer-in-the-web-ui
-    '6.0': 60/admindoc/how-to-bubble-errors-from-the-core-layer-in-the-web-ui
+    '6.0': 60/nxdoc/how-to-bubble-errors-from-the-core-layer-in-the-web-ui
 history:
     -
         author: Solen Guitter

@@ -37,8 +37,7 @@ confluence:
     source_link: /display/NXDOC/How+to+Add+a+Button+in+the+JSF+UI
 tree_item_index: 1100
 version_override:
-    'LTS 2015': 710/admindoc/how-to-add-a-button-in-the-web-ui
-    '6.0': 60/admindoc/how-to-add-a-button-in-the-web-ui
+    '6.0': 60/nxdoc/how-to-add-a-button-in-the-web-ui
 history:
     -
         author: Solen Guitter

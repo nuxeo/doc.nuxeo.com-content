@@ -6,6 +6,8 @@ review:
     status: ok
 tree_item_index: 50
 toc: true
+version_override:
+    '6.0': 60/nxdoc/web-ui-framework-overview
 ---
 The Nuxeo Platform provides a web framework to build business applications for thin clients. This framework is based on the standard JEE view technology: Java Server Faces (JSF).
 

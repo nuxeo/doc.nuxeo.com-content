@@ -20,8 +20,7 @@ confluence:
     source_link: /display/NXDOC/JSF+UI+How-To+Index
 tree_item_index: 300
 version_override:
-    'LTS 2015': 710/admindoc/web-ui-how-to-index
-    '6.0': 60/admindoc/web-ui-how-to-index
+    '6.0': 60/nxdoc/web-ui-how-to-index
 history:
     -
         author: Manon Lumeau
