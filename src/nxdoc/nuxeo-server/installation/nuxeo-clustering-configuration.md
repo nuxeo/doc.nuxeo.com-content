@@ -282,8 +282,8 @@ Standard configuration is available from Nuxeo templates for Tomcat for PostgreS
 In most cases, each node in the cluster should be configured to include this template.</span>
 
 1.  Populate the database with the tables needed by Quartz (names `QRTZ_*`).
-    The DDL scripts come from the standard Quartz distribution and are available in the Nuxeo templates in `$NUXEO_HOME/templates/_<database>_-quartz-cluster/bin/create-quartz-tables.sql`.
-2.  Enable the Quartz-specific cluster templates by adding the template `_<database>_-quartz-cluster`. In most cases you will include this template on each node in the cluster.
+    The DDL scripts come from the standard Quartz distribution and are available in the Nuxeo templates in `$NUXEO_HOME/templates/<database>-quartz-cluster/bin/create-quartz-tables.sql`.
+2.  Enable the Quartz-specific cluster templates by adding the template `<database>-quartz-cluster`. In most cases you will include this template on each node in the cluster.
 
 {{#> callout type='note' }}
 
