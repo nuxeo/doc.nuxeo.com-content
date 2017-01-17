@@ -15,7 +15,7 @@ confluence:
     shortlink: 8gGw
     shortlink_source: 'https://doc.nuxeo.com/x/8gGw'
     source_link: /display/Studio/Node+form+tab
-tree_item_index: 200
+tree_item_index: 300
 history:
     -
         author: Solen Guitter
@@ -71,13 +71,6 @@ history:
 ---
 ![]({{file name='node-form-tab.png'}} ?w=500,h=354,border=true)
 
-Here you can configure a form that will be displayed to the user for task processing. You can specify which fields have to filled (captured data will be stored in workflow variables and node variables), and which buttons should be displayed.
+Here you can configure a form that will be displayed to the user for task processing. You can specify which fields have to filled: captured data will be stored in workflow variables and node variables.
 
 Layout edition [works as usual]({{page page='form-layouts'}}): you pickup the fields on the right. Here you have the choice between system properties, workflow variables and node variables.
-
-Buttons can be added easily. You need to specify:
-
-*   **Id**: This value is important as it will be stored in `NodeVariables"button"` and can be used for instance to express conditions for knowing which transition the workflow engine should use.
-*   **Label**: The label of the button, supports [i18n]({{page space='nxdoc' page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}}).
-*   **Filter**: A filter to hide or display the button on some conditions. Works only starting from 5.7.1\. In future release of Studio, there will be the usual screen to express a filter.
-*   **Generate the condition for transition**: This column, checked by default when you add a line, is a helper so that a transition corresponding to the button is automatically declared, with the correct condition, like: `NodeVariables"button"=='Reject'`. See the [Transitions]({{page page='node-transitions-tab'}}) page for more information.

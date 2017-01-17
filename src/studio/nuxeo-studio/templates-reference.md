@@ -44,8 +44,6 @@ You'll find here a page per application template, so as to provide you main info
 The available application template descriptions are:
 
 *   [Default configuration templates]({{page space='Studio' page='Default configuration+templates'}})
-*   [Configuration Management]({{page space='Studio' page='Configuration Management'}})
 *   [Contract management]({{page space='Studio' page='Contract management'}})
 *   [Custom Doc ID Generation]({{page space='Studio' page='Custom Doc+ID+Generation'}})
-*   [DAM Default - The template to help you customize Nuxeo DAM]({{page space='Studio' page='DAM Default+-+The+template+to+help+you+customize+Nuxeo+DAM'}})
 *   [Human resources - Vacation request workflow]({{page space='Studio' page='Human resources+-+Vacation+request+workflow'}})

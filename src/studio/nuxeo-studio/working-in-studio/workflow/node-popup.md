@@ -47,7 +47,8 @@ history:
 
 ---
 *   [Node General tab]({{page space='Studio' page='Node General+tab'}})
-*   [Node form tab]({{page space='Studio' page='Node form+tab'}})
+*   [Node Form tab]({{page space='Studio' page='Node form+tab'}})
 *   [Node Transitions Tab]({{page space='Studio' page='Node Transitions+Tab'}})
+*   [Node Resolution Actions Tab]({{page space='Studio' page='node-resolution-actions'}})
 *   [Node Variables Tab]({{page space='Studio' page='Node Variables+Tab'}})
 *   [Node Escalation Rules Tab]({{page space='Studio' page='Node Escalation+Rules+Tab'}})

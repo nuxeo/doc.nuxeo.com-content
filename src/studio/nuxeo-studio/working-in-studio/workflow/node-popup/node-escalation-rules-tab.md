@@ -19,7 +19,7 @@ confluence:
     shortlink: Ko3Z
     shortlink_source: 'https://doc.nuxeo.com/x/Ko3Z'
     source_link: /display/Studio/Node+Escalation+Rules+Tab
-tree_item_index: 500
+tree_item_index: 600
 history:
     -
         author: Alain Escaffre
