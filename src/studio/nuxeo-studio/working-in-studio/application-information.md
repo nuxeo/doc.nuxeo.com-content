@@ -29,37 +29,30 @@ history:
         version: '1'
 
 ---
-The Application Information page will let you define the way your Studio project is published.&nbsp;
+The Application Information page will let you define the way your Studio project is published.
 
 ![]({{file name='application_information.png'}} ?w=650,border=true)
-
-&nbsp;
 
 This page displays properties defined for the entire application without any consideration of branches. When a user changes one of these properties, it is defined for every branch and every user. The fields are:
 
 *   **Name**:The name of the project.
-*   **Description**: The description of the project&nbsp;
+*   **Description**: The description of the project
 *   **URL**: Read-only, displays the relative path of the project on the remote Git server.
 *   **Licence**: The project licence.
 *   **Maven Group**: Sets the project Maven group.
 *   **Maven Artifact id**: Read-only, the project id in the Maven GAV.
 *   **Maven GAV link**: The link to the project WebEngine page, access to the GAV for each release and the snapshot version.
 
-&nbsp;
-
-{{! Don't put anything here. }}
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Specific Upgrade Instructions]({{page page='specific-upgrade-instructions'}})
-*   [Update the Version of Your Target Platform]({{page page='update-the-version-of-your-target-platform'}})
+- [Specific Upgrade Instructions]({{page page='specific-upgrade-instructions'}})
+- [Update the Version of Your Target Platform]({{page page='update-the-version-of-your-target-platform'}})
 
 {{/panel}}</div><div class="column medium-6">
 
-&nbsp;
 
-&nbsp;
 
 </div></div>

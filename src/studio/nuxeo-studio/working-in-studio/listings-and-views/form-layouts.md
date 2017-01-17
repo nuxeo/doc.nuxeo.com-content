@@ -241,26 +241,26 @@ history:
 ---
 ## Concept
 
-The form layouts feature enables to design forms and data display screens that you can map to document properties.&nbsp;Read more about [layouts]({{page space='nxdoc' page='layouts-and-widgets-forms-listings-grids'}}). Forms configured on this feature can be referenced in various places:
+The form layouts feature enables to design forms and data display screens that you can map to document properties. Read more about [layouts]({{page space='nxdoc' page='layouts-and-widgets-forms-listings-grids'}}). Forms configured on this feature can be referenced in various places:
 
 *   On other layouts (the one you define directly on the document type)
-*   From a&nbsp;_layout&nbsp;_widget
-*   From a&nbsp;_toggleable form&nbsp;_widget
+*   From a _layout_ widget
+*   From a _toggleable form_ widget
 *   Directly in your own XHTML templates, if you are a Nuxeo Platform developer
 
 ## Form Layout Creation
 
-&nbsp;![]({{file name='create_form_layout.png'}} ?w=350,border=true)
+![]({{file name='create_form_layout.png'}} ?w=350,border=true)
 
 *   **Feature ID**: Technical id of the feature.
 
 ## {{> anchor 'creationlayouttab'}}Creation Layout Tab
 
-The Creation Layout is displayed just when the document is created in Nuxeo, after having clicked on the **New**&nbsp;button and selected the document type.
+The Creation Layout is displayed just when the document is created in Nuxeo, after having clicked on the **New** button and selected the document type.
 
 ![]({{file name='creation_layout_tab.png'}} ?w=600,border=true)
 
-The right part of the screen is called the "widgets palette". The middle is the "layout" (the data grid or form). You can pick up widgets on the right, drop them on the layout, and then edit the properties of the widget (they are documented inline).&nbsp;
+The right part of the screen is called the "widgets palette". The middle is the "layout" (the data grid or form). You can pick up widgets on the right, drop them on the layout, and then edit the properties of the widget (they are documented inline).
 
 ### The Layout
 
@@ -289,9 +289,9 @@ The right part of the screen is called the "widgets palette". The middle is the 
 
 **Advanced Configuration options**
 
-*   **Style class**: You can specify a class that will be applied to all the area surrounding the form. You can either use an existing class that you will find on the&nbsp;[style guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)&nbsp;or contribute your own class on the&nbsp;[Theme]({{page space='nxdoc' page='theme'}})&nbsp;feature.
+*   **Style class**: You can specify a class that will be applied to all the area surrounding the form. You can either use an existing class that you will find on the [style guide](http://showcase.nuxeo.com/nuxeo/styleGuide/) or contribute your own class on the [Theme]({{page space='nxdoc' page='theme'}}) feature.
 *   **Widget Display**: You can control whether you want the form label just on top of the input or on the left, or to remove the display of the labels.
-*   **Layout Template**: It is an advanced option, for Nuxeo Platform developers. The widgets are displayed using an XHTML template (JSF Facelets template). You can upload your own templates if you want to do some deeper changes on the way the data/the fields are displayed. We propose&nbsp;you to download the default one used so as not to start from zero.&nbsp;
+*   **Layout Template**: It is an advanced option, for Nuxeo Platform developers. The widgets are displayed using an XHTML template (JSF Facelets template). You can upload your own templates if you want to do some deeper changes on the way the data/the fields are displayed. We propose you to download the default one used so as not to start from zero.
 
     {{#> callout type='note' }}
 
@@ -310,30 +310,30 @@ The right part of the screen is called the "widgets palette". The middle is the 
 
     {{/callout}}
 *   **Built-in Widgets**: Built-in widgets are widgets where you don't have to configure neither the document property mapping, nor the widget-type.
-*   **Advanced Widgets**:&nbsp;
+*   **Advanced Widgets**:
 
-    *   **Container:**&nbsp;The container widget enables to add a visual wrapper around a set of widgets. If you drop a container widget, you will have several options for controlling whether the wrapper should be foldable, folded or not, should have a title, ... Then you will be able, inside the container, to edit a grid with the widgets you want to display.
+    *   **Container:** The container widget enables to add a visual wrapper around a set of widgets. If you drop a container widget, you will have several options for controlling whether the wrapper should be foldable, folded or not, should have a title, ... Then you will be able, inside the container, to edit a grid with the widgets you want to display.
         ![]({{file name='container_properties.png'}} ?w=350,h=316,border=true)
-    *   **Layout:&nbsp;**The layout widget can be used to reference a complete layout definition. All the widgets that were defined in the referenced layout will be displayed where you drop the widget.
-    *   **Template**: The template widget is the most permissive widget: you choose the property (or properties) to which you want to bind it, you choose the XHTML (JSF Facelet) you want to use, and you can value the properties that your template expect. Custom templates can be uploaded in the&nbsp;[resources]({{page page='resources'}})&nbsp;feature. For more information, you can refer to the&nbsp;[documentation about custom widget templates]({{page space='nxdoc' page='custom-layout-and-widget-templates#custom-widget-template'}}).
+    *   **Layout:** The layout widget can be used to reference a complete layout definition. All the widgets that were defined in the referenced layout will be displayed where you drop the widget.
+    *   **Template**: The template widget is the most permissive widget: you choose the property (or properties) to which you want to bind it, you choose the XHTML (JSF Facelet) you want to use, and you can value the properties that your template expect. Custom templates can be uploaded in the [resources]({{page page='resources'}}) feature. For more information, you can refer to the [documentation about custom widget templates]({{page space='nxdoc' page='custom-layout-and-widget-templates#custom-widget-template'}}).
 
 ### Configuring Widget Properties
 
-&nbsp;![]({{file name='doc_type_layout_widget_editor.png' space='nxdoc' page='how-to-define-a-document-type'}} ?w=350,border=true)
+![]({{file name='doc_type_layout_widget_editor.png' space='nxdoc' page='how-to-define-a-document-type'}} ?w=350,border=true)
 
 When you dropped a widget, you will be able to configure the properties of your widget, the field mapping, the widget type, as well as some custom properties if you want. Just let your mouse on the question mark icon to see what the property is about.
 
 There are a few important and generic things to know about this screen:
 
-*   **Advanced mode configuration**: Enables to display&nbsp;conditionally&nbsp;a field, and to decide whether the data is just displayed or can be edited. Conditions might be user properties, document properties or anything contextual. For more information about the display mode, see the page&nbsp;[How to Control the Display Mode of a Widget]({{page space='nxdoc' page='how-to-control-the-display-mode-of-a-widget'}}).
+*   **Advanced mode configuration**: Enables to display conditionally a field, and to decide whether the data is just displayed or can be edited. Conditions might be user properties, document properties or anything contextual. For more information about the display mode, see the page [How to Control the Display Mode of a Widget]({{page space='nxdoc' page='how-to-control-the-display-mode-of-a-widget'}}).
 *   **Edit properties vs view properties**: If you entered an advanced mode configuration expression, you will have both view and edit tabs for configuring widget properties. Indeed, it is usually not the same options that are to be configured.
 *   **Widget property override using custom properties**: You can use an EL to configure the built-in properties like "Required", etc., as long as the property you want to use is in context and the expression is valid. You just need to contribute the id of the property and the EL expression you want to use with brackets `#{}`.
 
 ### Configuring Widgets of a Complex Property
 
-If the property is complex, you will have to configure several widgets (as there are several sub properties). That's why there is one more icon on the widget representation in the grid:&nbsp;![]({{file name='complex_property_tab.png'}} ?w=88,h=31,border=true)
+If the property is complex, you will have to configure several widgets (as there are several sub properties). That's why there is one more icon on the widget representation in the grid: ![]({{file name='complex_property_tab.png'}} ?w=88,h=31,border=true)
 
-Clicking on the icon&nbsp;![]({{file name='icon_subwidgets_edit.png' page='studio-icons-index'}}), you will be displayed the following screen:
+Clicking on the icon ![]({{file name='icon_subwidgets_edit.png' page='studio-icons-index'}}), you will be displayed the following screen:
 
 ![]({{file name='edit_subwidget.png'}} ?w=650,h=230,border=true)
 
@@ -347,4 +347,4 @@ Currently, complex properties configuration using [schema]({{page page='schemas'
 
 ## Edition and View Tabs
 
-Once you configured the form for the creation view, you can do it for the the Edition and View (read-only) modes, following the same instructions than on the&nbsp;[Creation Layout tab](#creationlayouttab).
+Once you configured the form for the creation view, you can do it for the the Edition and View (read-only) modes, following the same instructions than on the [Creation Layout tab](#creationlayouttab).

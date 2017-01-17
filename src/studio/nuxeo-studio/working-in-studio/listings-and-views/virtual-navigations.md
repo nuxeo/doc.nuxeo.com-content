@@ -78,7 +78,7 @@ You need to select the Virtual Navigation target package in your [Application De
 *   **Additional query filter**: Indicate the basis of the query that will be applied automatically applied.
     {{{multiexcerpt 'studio-default-query-filter' page='Content View - Query and Form Tab'}}}
     See the page [Content View - Query and Form Tab]({{page page='content-view-query-and-form-tab'}}) for more details.
-*   **Default sort**:&nbsp;
+*   **Default sort**:
 *   **Vocabularies**: Select the vocabularies that should be used to display the property values in the tree.
 *   **Icon**: Select the icon to display in the virtual navigation tab.
 *   **Enabled**: Uncheck if you want to disable this navigation tree.

@@ -167,10 +167,10 @@ See the [Filtering Options Reference Page]({{page page='filtering-options-refere
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
 
-*   [Events and Listeners]({{page space='nxdoc' page='events-and-listeners'}})
-*   [Common Events]({{page space='nxdoc' page='common-events'}})
-*   [Scheduling Periodic Events]({{page space='nxdoc' page='scheduling-periodic-events'}})
-*   [How to Inherit a Metadata from a Parent Document]({{page space='nxdoc' page='how-to-inherit-metadata-from-a-parent-document'}})
+- [Events and Listeners]({{page space='nxdoc' page='events-and-listeners'}})
+- [Common Events]({{page space='nxdoc' page='common-events'}})
+- [Scheduling Periodic Events]({{page space='nxdoc' page='scheduling-periodic-events'}})
+- [How to Inherit a Metadata from a Parent Document]({{page space='nxdoc' page='how-to-inherit-metadata-from-a-parent-document'}})
 
 {{/panel}}</div><div class="column medium-6">
 

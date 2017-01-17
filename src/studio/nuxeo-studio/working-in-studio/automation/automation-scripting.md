@@ -84,24 +84,19 @@ The Scripting Editor tab enables you to add JavaScript code using auto-completio
 
 *   **Autocompletion**: For instance, start typing `Create` and select the operation `Collection.Create`.
     ![]({{file name='automation_scripting_autocompletion1.png'}} ?border=true)
+
     The operation function is added to the script.
     ![]({{file name='Screenshot 2015-05-25 18.10.51.png'}} ?w=500,h=408,border=true)
 
 *   **Disable Helper Comment**: The description of the operation is displayed as comments by default. Check the box Disable Helper Comments to stop adding descriptions with operations.
-
     ![]({{file name='automation_scripting_disable_helpers.png'}} ?w=350,border=true)
 
 *   **Input and Output types**: in order to use Automation scripting into Automation Chains, input and output types of the script can be defined. For Automation Chains scripting injection, please find custom scripts into **Scripting** category as follow:
+    ![]({{file name='Screenshot 2015-05-25 18.12.19.png'}} ?w=500,h=140,border=true)
+    ![]({{file name='Screenshot 2015-05-25 18.16.50.png'}} ?w=500,h=166,border=true)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![]({{file name='Screenshot 2015-05-25 18.12.19.png'}} ?w=500,h=140,border=true)
-
-&nbsp;
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![]({{file name='Screenshot 2015-05-25 18.16.50.png'}} ?w=500,h=166,border=true)
-
-*   **Javascript editor validator**: to help you debugging and writing javascript code, **Studio** Automation scripting editor displays potential code issues:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![]({{file name='Screenshot 2015-05-25 18.19.09.png'}} ?w=500,h=230,border=true)
+*   **Javascript editor validator**: to help you debugging and writing JavaScript code, **Studio** Automation scripting editor displays potential code issues:
+    ![]({{file name='Screenshot 2015-05-25 18.19.09.png'}} ?w=500,h=230,border=true)
 
 *   **Platform functions**: Platform function helpers are now available in Automation scripting and can be found under 'Fn' object:
     ![]({{file name='Screenshot 2015-05-25 20.36.53.png'}} ?w=300,h=227,border=true)
@@ -112,20 +107,14 @@ The **Parameters** tab to add custom parameters accessible through the `params` 
 
 ![]({{file name='automation_scripting_parameters_tab.png'}} ?w=600,border=true)
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
 
-*   [Automation in Nuxeo Studio]({{page page='automation'}})
-*   [Content Automation Concepts]({{page space='nxdoc' page='content-automation-concepts'}})
-*   [Automation Scripting developer documentation]({{page space='nxdoc' page='automation-scripting'}})
+- [Automation in Nuxeo Studio]({{page page='automation'}})
+- [Content Automation Concepts]({{page space='nxdoc' page='content-automation-concepts'}})
+- [Automation Scripting developer documentation]({{page space='nxdoc' page='automation-scripting'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-&nbsp;
 
 </div></div>

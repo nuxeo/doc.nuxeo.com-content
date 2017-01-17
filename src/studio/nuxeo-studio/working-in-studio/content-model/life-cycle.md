@@ -64,6 +64,6 @@ A lifecycle is a set of **states** and transitions that apply to a document. One
 <div class="column medium-6">
 {{#> panel heading='Related How-Tos'}}
 
-* [How to Enable the Trash Feature]({{page space='nxdoc' page='how-to-enable-the-trash-feature'}})
+- [How to Enable the Trash Feature]({{page space='nxdoc' page='how-to-enable-the-trash-feature'}})
 
 {{/panel}}</div></div>

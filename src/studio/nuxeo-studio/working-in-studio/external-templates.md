@@ -96,14 +96,18 @@ For each application template you're displayed some a set of information:
 
 For more information about application templates you can see the page [Using Application Templates]({{page page='using-application-templates'}}) and [the detailed documentation for each of them]({{page page='templates-reference'}}).
 
-&nbsp;
-
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
-*   [Using Application Templates]({{page page='using-application-templates'}})
-*   [Default configuration templates]({{page page='default-configuration-templates'}})
-*   [Templates reference]({{page page='templates-reference'}})
+- [Using Application Templates]({{page page='using-application-templates'}})
+- [Default configuration templates]({{page page='default-configuration-templates'}})
+- [Templates reference]({{page page='templates-reference'}})
 
-{{/panel}}</div><div class="column medium-6">null</div></div>
+{{/panel}}
+</div>
+<div class="column medium-6">
+</div>
+</div>

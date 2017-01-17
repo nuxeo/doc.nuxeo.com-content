@@ -209,10 +209,10 @@ Content view is the Nuxeo technology used to define a list of documents to displ
 A Content View is defined by three notions:
 
 *   [A query]({{page page='content-view-query-and-form-tab'}}): defines a request on the document repository to express the list of documents to display,
-*   [A form]({{page page='form-layouts'}}): lets the user express additional information about the request&nbsp;in&nbsp;your final application (ex: advanced search form, faceted form, post-filtering in content tab),
+*   [A form]({{page page='form-layouts'}}): lets the user express additional information about the request in your final application (ex: advanced search form, faceted form, post-filtering in content tab),
 *   [A display result]({{page page='content-view-results'}}): A description of how the listing result is displayed.
 
-Here is how these notions are visible&nbsp;in the Nuxeo Platform interface:
+Here is how these notions are visible in the Nuxeo Platform interface:
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Content tab Listing</th><th colspan="1">Search</th></tr><tr><td colspan="1">![]({{file name='Content View - Content.png'}} ?w=300,thumbnail=true)</td><td colspan="1">
 

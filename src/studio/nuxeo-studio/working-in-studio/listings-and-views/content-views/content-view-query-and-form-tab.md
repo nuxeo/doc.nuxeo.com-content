@@ -218,8 +218,6 @@ This page explains the Query & Form tab in the content view definition.
 
 {{! /excerpt}}
 
-&nbsp;
-
 This tab lets you define:
 
 *   [The usability of the content view in local configuration](#usability-in-local-configuration)
@@ -228,11 +226,11 @@ This tab lets you define:
 
 ## Default Filtering Definition
 
-This section explains the following elements of the&nbsp;Query & Form tab:
+This section explains the following elements of the Query & Form tab:
 
 ![]({{file name='Studio-content-view-query-definition.png' page='content-views'}} ?w=600,border=true)
 
-Here are&nbsp;the fields you can play with:
+Here are the fields you can play with:
 
 *   **Use Elasticsearch index**: Lets you use the Elasticsearch aggregates
 *   **Query filter**: Lets you [manage where clauses](#query-filter-field) (filtering expression) applied by default
@@ -260,7 +258,7 @@ You don't have to specify the `SELECT * FROM Document` part of the request that 
 
 By default, Nuxeo Studio fills this field to filter out:
 
-*   documents marked as hidden in navigation (`ecm:mixinType&nbsp;!= 'HiddenInNavigation'`)
+*   documents marked as hidden in navigation (`ecm:mixinType != 'HiddenInNavigation'`)
 *   documents that are not archived versions (`ecm:isCheckedInVersion = 0`)
 *   and documents that are deleted (`ecm:currentLifeCycleState != 'deleted'`)
 
@@ -288,7 +286,7 @@ Here are some examples.
 <div class="table-scroll">
 <table class="hover"><tbody>
 <tr>
-<th colspan="1">&nbsp;</th>
+<th colspan="1"> </th>
 <th colspan="1">Query filter</th>
 <th colspan="1">Query parameter</th>
 </tr>
@@ -310,7 +308,7 @@ Keeping the descendant of the currently displayed document
 Note that this request is less efficient than the previous one.
 
 </td>
-<td colspan="1">`ecm:path&nbsp;STARTSWITH ?`</td>
+<td colspan="1">`ecm:path STARTSWITH ?`</td>
 <td colspan="1">`#{currentDocument.path}`</td>
 </tr>
 <tr>

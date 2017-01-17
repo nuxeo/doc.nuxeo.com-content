@@ -95,8 +95,6 @@ User actions are meant to execute a predefined action or list of actions (namely
 
 ![]({{file name='creating-user-action-form.png'}} ?w=300,h=293,border=true)
 
-&nbsp;
-
 *   **`Feature ID`** : the unique id of the user action.
 *   `**Label**` : the name that will be displayed on screen.
 *   `**Category**` : defines where the action will be placed on screen. Note that certain categories only appear in specific screens; for instance the "Document creation form" category will only be visible on document creation.
@@ -114,23 +112,21 @@ User actions are meant to execute a predefined action or list of actions (namely
 
 ![]({{file name='action-enablement.png'}} ?w=350,border=true)
 
-See the&nbsp;[Filtering Options Reference Page]({{page page='filtering-options-reference-page'}}).
+See the [Filtering Options Reference Page]({{page page='filtering-options-reference-page'}}).
 
 ### Action Execution
 
 *   `**Select an existing operation**` : the selected automation chain will be executed when the user clicks on the action defined in the User Action definition section. The "Edit" button can be used in order to edit an existing automation chain, and the "Create" button to create a new automation chain that will be associated to this user action.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in Studio documentation'}}
 
-*   [User actions categories]({{page page='user-actions-categories'}})
+- [User actions categories]({{page page='user-actions-categories'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages'}}
 
-*   [Actions Overview]({{page space='nxdoc' page='actions-overview'}})
-*   [Action How-To Index]({{page space='nxdoc' page='action-how-to-index'}})
+- [Actions Overview]({{page space='nxdoc' page='actions-overview'}})
+- [Action How-To Index]({{page space='nxdoc' page='action-how-to-index'}})
 
 {{/panel}}</div></div>

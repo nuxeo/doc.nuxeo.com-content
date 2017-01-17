@@ -155,8 +155,6 @@ We suggest you to use name like **my_schema_name** (lowercase, word separated by
 
 {{/callout}}
 
-&nbsp;
-
 **Advanced configuration**
 
 *   **Mode:**
@@ -238,12 +236,12 @@ We suggest you to use name like **my_schema_name** (lowercase, word separated by
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Studio Documentation'}}
 
-*   [Documents]({{page page='documents'}})
-*   [Resources]({{page page='resources'}})
+- [Documents]({{page page='documents'}})
+- [Resources]({{page page='resources'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Add Complex Fields on Your Document Type]({{page space='nxdoc' page='how-to-add-complex-fields-on-your-document-type'}})
-*   [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
+- [How to Add Complex Fields on Your Document Type]({{page space='nxdoc' page='how-to-add-complex-fields-on-your-document-type'}})
+- [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
 
 {{/panel}}</div></div>

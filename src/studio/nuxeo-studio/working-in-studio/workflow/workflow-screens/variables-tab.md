@@ -75,7 +75,7 @@ Variables at workflow level can be used to store information that can be accesse
 
 {{! multiexcerpt name='studio-variable-tab'}}
 
-*   &nbsp;**Name** and **Prefix**: You don't have to modify this.
+*   **Name** and **Prefix**: You don't have to modify this.
 *   **Add variable**: Adds a new row on the variables table.
 *   **Delete variable**: Deletes selected variable. You can select only one variable at a time.
 *   Table columns:

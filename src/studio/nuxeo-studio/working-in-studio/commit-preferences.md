@@ -124,15 +124,15 @@ history:
         version: '1'
 
 ---
-The commit preferences page lets you define the way you want to work with your co-workers. Some screens and behaviors are conditionned by the save mode that you choose.&nbsp;
+The commit preferences page lets you define the way you want to work with your co-workers. Some screens and behaviors are conditionned by the save mode that you choose.
 
 ![]({{file name='sources-management.png' page='how-to-collaborate-on-a-studio-project'}} ?w=650,border=true)
 
-This page allows the user to define&nbsp;the commit policy that is applied when the user saves his changes:
+This page allows the user to define the commit policy that is applied when the user saves his changes:
 
-*   **Simple**: Your local changes are immediately committed and pushed to the common branch when you click on the **Save** button. You don't have any control on commits history. If other users have worked on the project, you are displayed the icon&nbsp;![]({{file name='pull.png' page='studio-icons-index'}} ?w=32,thumbnail=true) so you can get their modifications.
-    This mode is recommended for&nbsp;testing or single dev mode.
-*   **Intermediate**: Your local changes are saved as a work in progress and you need to manually make them available on the common branch by clicking the icon&nbsp;![]({{file name='commit.png' page='studio-icons-index'}}) and typing a commit message.
+*   **Simple**: Your local changes are immediately committed and pushed to the common branch when you click on the **Save** button. You don't have any control on commits history. If other users have worked on the project, you are displayed the icon ![]({{file name='pull.png' page='studio-icons-index'}} ?w=32,thumbnail=true) so you can get their modifications.
+    This mode is recommended for testing or single dev mode.
+*   **Intermediate**: Your local changes are saved as a work in progress and you need to manually make them available on the common branch by clicking the icon ![]({{file name='commit.png' page='studio-icons-index'}}) and typing a commit message.
     ![]({{file name='commit-and-push-popup.png'}} ?w=400,border=true)
     If no commit message is explicitly defined by the user, the default message is `Update <Feature type>/<Feature name>`.
     This mode is recommended for developers.
@@ -143,19 +143,17 @@ This page allows the user to define&nbsp;the commit policy that is applied when 
     If no commit message is explicitly defined by the user, the default message is `Update <Feature type>/<Feature name>`.
     This mode is recommended for developers already familiar with revision control concepts.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Working in Studio]({{page page='working-in-studio'}})
-*   [Branch Management]({{page page='branch-management'}})
+- [Working in Studio]({{page page='working-in-studio'}})
+- [Branch Management]({{page page='branch-management'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-to'}}
 
-*   [How to Collaborate on a Studio Project]({{page page='how-to-collaborate-on-a-studio-project'}})
-*   [How to Implement Features Using Branches]({{page page='how-to-implement-features-using-branches'}})
-*   [How to Work with Maintenance Branches]({{page page='how-to-work-with-maintenance-branches'}})
+- [How to Collaborate on a Studio Project]({{page page='how-to-collaborate-on-a-studio-project'}})
+- [How to Implement Features Using Branches]({{page page='how-to-implement-features-using-branches'}})
+- [How to Work with Maintenance Branches]({{page page='how-to-work-with-maintenance-branches'}})
 
 {{/panel}}</div></div>

@@ -394,15 +394,15 @@ There are 3 steps shown by 3 tabs to brand your application:
 
 ![]({{file name='branding_tabs.png'}} ?w=310,h=42)
 
-*   The&nbsp;[ **Main Pages**&nbsp;](#mainp)tab will let you manage the global rendering of your application,
-*   The&nbsp; **[Login Page](#login)&nbsp;**tab will let you manage the login page rendering,&nbsp;
-*   The&nbsp;[ **Custom CSS** ](#css)will let you define your CSS rules that will be applied on each page of Nuxeo.&nbsp;
+*   The [**Main Pages**](#mainp)tab will let you manage the global rendering of your application
+*   The [**Login Page**](#login) tab will let you manage the login page rendering
+*   The [**Custom CSS**](#css)will let you define your CSS rules that will be applied on each page of Nuxeo
 
 {{> anchor 'mainpages'}}
 
-## Main Pages Tab&nbsp;
+## Main Pages Tab
 
-The Main Pages tab is where you will specify the main elements that define a branding: the logo, the colors and the font used by the default view in Nuxeo.&nbsp;
+The Main Pages tab is where you will specify the main elements that define a branding: the logo, the colors and the font used by the default view in Nuxeo.
 
 ### Changing the Logo displayed on Header
 
@@ -411,8 +411,6 @@ The Main Pages tab is where you will specify the main elements that define a bra
 ### <span style="color: rgb(0,0,0);">Changing the Header and Footer</span>
 
 {{! multiexcerpt name='change-header-footer'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Before</th><th colspan="1">Studio Configuration</th><th colspan="1">After</th></tr><tr><td colspan="1">![]({{file name='default_header_footer.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='header_and_footer.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='custom_header_footer.png'}} ?w=300,border=true,thumbnail=true)</td></tr></tbody></table></div>{{! /multiexcerpt}}
-
-&nbsp;
 
 ### Additional Branding Elements
 
@@ -431,8 +429,6 @@ This tab will let you manage the customization of the login page view.
 
 {{! multiexcerpt name='login-page-tab'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="2">Basic Studio Configuration</th><th colspan="1">Steps</th></tr><tr><td colspan="2">![]({{file name='login_customization.png'}} ?w=450,border=true)</td><td colspan="1">
 
-&nbsp;
-
 1.  Select a background video or a background image. Be careful not to use an image too heavy to a quick display for the users.
 2.  Define the options for the video or the image, for example to mute the video or the position (in pixel or position) of the image, if you know that it will be large enough for the huge screen resolutions.
 3.  Or make the background cover all the screen (with CSS3 / recent browsers).
@@ -440,14 +436,12 @@ This tab will let you manage the customization of the login page view.
 
 That's it!
 
-&nbsp;
-
 </td></tr></tbody></table></div>
 
 Most of our customers apply the following strategies for their login page background image:
 
-*   A picture covering all the screen. This is the strategy chosen by Nuxeo.&nbsp;
-*   Or a logo with transparency as the background image, aligned on the top left (Horizontal alignment = top,&nbsp;Vertical alignment = left) + a&nbsp;background color.
+*   A picture covering all the screen. This is the strategy chosen by Nuxeo.
+*   Or a logo with transparency as the background image, aligned on the top left (Horizontal alignment = top, Vertical alignment = left) + a background color.
 
 With a web designer's help, you can have many other possibilities.
 
@@ -469,27 +463,23 @@ This option must be used carefully: don't use heavy patterns or things that will
 
 </td></tr></tbody></table></div>
 
-&nbsp;
-
-&nbsp;
-
 {{! /multiexcerpt}}
 
 {{> anchor 'css'}}
 
-## CSS Editor Tab&nbsp;
+## CSS Editor Tab
 
 The CSS Editor is dedicated to web designers who know CSS and its syntax. It's the place to declare your new CSS rules or override existing rules that will be used into the Nuxeo main tabs: Home, Document Management and Admin Center.
 
 {{#> callout type='info' }}
 
-Have a look at the&nbsp;[Nuxeo&nbsp;UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)&nbsp;to see all the existing CSS rules used by default in your platform, and understand more&nbsp;about readability, usability, layout design, and user experience.
+Have a look at the [Nuxeo UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/) to see all the existing CSS rules used by default in your platform, and understand more about readability, usability, layout design, and user experience.
 
 {{/callout}}
 
 ### Declaring a New CSS Class and Its Rules
 
-You can add style classes in your widgets in&nbsp;[forms]({{page page='form-layouts'}}),&nbsp;[content views]({{page page='content-views'}}), and&nbsp;[tab layout]({{page page='tabs'}})&nbsp;to&nbsp;manage the rendering of your elements.
+You can add style classes in your widgets in [forms]({{page page='form-layouts'}}), [content views]({{page page='content-views'}}), and [tab layout]({{page page='tabs'}}) to manage the rendering of your elements.
 
 Let's add a background color on a widget's container:
 
@@ -503,11 +493,7 @@ Let's add a background color on a widget's container:
 
 </td><td colspan="1">
 
-&nbsp;
-
 ![]({{file name='-blue_background_style.png'}} ?w=300,border=true,thumbnail=true)
-
-&nbsp;
 
 </td><td colspan="1">![]({{file name='blue_background_container.png'}} ?w=300,border=true,thumbnail=true)</td></tr><tr><td colspan="1">
 
@@ -515,15 +501,13 @@ Define a class in the widget editor.
 
 </td><td colspan="1">Declare your blue background in the CSS Editor.
 
-&nbsp;
-
 </td><td colspan="1">Enjoy your blue container.</td></tr></tbody></table></div>
 
 ### Overriding an Existing Rule
 
-You want to change an existing style to fit your needs? In addition to the&nbsp;[Nuxeo UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/)&nbsp;that explains the default set of CSS existing rules, you will need to use a browser's web inspector to understand what to override.
+You want to change an existing style to fit your needs? In addition to the [Nuxeo UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/) that explains the default set of CSS existing rules, you will need to use a browser's web inspector to understand what to override.
 
-&nbsp;Let's display the main title of pages in pink:
+Let's display the main title of pages in pink:
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">1\. Inspect the existing style</th><th colspan="1">2\. Declare your new rule</th><th colspan="1">3\. See the result</th></tr><tr><td colspan="1">![]({{file name='override_inspect.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='disable_branding.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='override_result.png'}} ?w=300,border=true,thumbnail=true)</td></tr><tr><td colspan="1">
 
@@ -539,27 +523,23 @@ That way, you're sure that your new style will be stronger than the original sty
 
 </td><td colspan="1">Your title is pink now. You can see that your new rule is displayed at the top of the default one, and the original black color value is striked, so not used anymore.</td></tr></tbody></table></div>
 
-&nbsp;
-
-## Specifying the Default Branding, Disabling a Theme Branding&nbsp;{{> anchor 'specify'}}
+## Specifying the Default Branding, Disabling a Theme Branding {{> anchor 'specify'}}
 
 ### Specifying a Default Branding
 
 ![]({{file name='set_default_disable_theme.png'}} ?w=450,border=true)
 
-Create a new branding implies that it will be the default branding used in your application. The checkbox displayed under the Common tab will be checked by default. If you created several brandings, be sure that only one of them is checked. Your branding will be used in your application everywhere except if a&nbsp;[local theme configuration]({{page space='userdoc58' page='applying-a-preset-look-to-a-space'}})&nbsp;is set.
+Create a new branding implies that it will be the default branding used in your application. The checkbox displayed under the Common tab will be checked by default. If you created several brandings, be sure that only one of them is checked. Your branding will be used in your application everywhere except if a [local theme configuration]({{page space='userdoc58' page='applying-a-preset-look-to-a-space'}}) is set.
 
 ### Disabling a Theme Branding
 
 ![]({{file name='disable_branding.png'}} ?w=450,border=true)
 
-If you don't want to use your branding during a test you can disable your default branding without deleting&nbsp;it.
+If you don't want to use your branding during a test you can disable your default branding without deleting it.
 
-Just tick the&nbsp;**Disable theme branding**&nbsp;option above the tabs. The tabs and their content will be displayed under a gray overlay.
+Just tick the **Disable theme branding** option above the tabs. The tabs and their content will be displayed under a gray overlay.
 
 * * *
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
@@ -569,11 +549,11 @@ Just tick the&nbsp;**Disable theme branding**&nbsp;option above the tabs. The ta
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-tos'}}
 
 - [Theme How-To Index]({{page space='NXDOC' page='Theme How-To+Index'}})
-- [How to Brand Your Application]({{page space='NXDOC' page='How to+Brand+Your+Application'}})&nbsp;
-- [How to Override the Login Page]({{page space='NXDOC' page='How to+Override+the+Login+Page'}})&nbsp;
-- [How to Customize the Login Page]({{page space='NXDOC' page='How to+Customize+the+Login+Page'}})&nbsp;
-- [How to Override a Default Style]({{page space='NXDOC' page='How to+Override+a+Default+Style'}})&nbsp;
-- [How to Customize the Error Pages]({{page space='NXDOC' page='How to+Customize+the+Error+Pages'}})&nbsp;
-- [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page space='NXDOC' page='How to+Declare+the+CSS+and+JavaScript+Resources+Used+in+Your+Templates'}})&nbsp;
+- [How to Brand Your Application]({{page space='NXDOC' page='How to+Brand+Your+Application'}})
+- [How to Override the Login Page]({{page space='NXDOC' page='How to+Override+the+Login+Page'}})
+- [How to Customize the Login Page]({{page space='NXDOC' page='How to+Customize+the+Login+Page'}})
+- [How to Override a Default Style]({{page space='NXDOC' page='How to+Override+a+Default+Style'}})
+- [How to Customize the Error Pages]({{page space='NXDOC' page='How to+Customize+the+Error+Pages'}})
+- [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page space='NXDOC' page='How to+Declare+the+CSS+and+JavaScript+Resources+Used+in+Your+Templates'}})
 
 {{/panel}}</div></div>
