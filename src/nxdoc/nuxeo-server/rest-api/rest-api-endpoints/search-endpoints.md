@@ -163,7 +163,10 @@ The Search resource endpoints allow REST clients to perform queries on the Nuxeo
 
 ## Endpoints
 
-The endpoints allows for the storage and execution of two particular types of search: by **query** and by **page provider**.
+There are three search endpoints:
+- page provider (`pp`)
+- query (`lang`) - not to be confused with the [deprecated query endpoint]({{page version='' space='nxdoc' page='query-endpoint'}})
+- saved search (`saved`)
 
 <div class="table-scroll">
   <table class="hover">
@@ -173,39 +176,39 @@ The endpoints allows for the storage and execution of two particular types of se
         <th class="small-5">Description</th>
       </tr>
       <tr>
-        <td class="small-7">GET `/search/lang/{_queryLanguage_}/execute`</td>
+        <td class="small-7">GET `/api/v1/search/lang/{queryLanguage}/execute`</td>
         <td class="small-5">Executes a query in a given query language. Default language is NXQL.</td>
       </tr>
       <tr>
-        <td class="small-7">GET `/search/pp/{_providerName_}/execute`</td>
+        <td class="small-7">GET `/api/v1/search/pp/{providerName}/execute`</td>
         <td class="small-5">Executes a search using a specific page provider.</td>
       </tr>
       <tr>
-        <td class="small-7">GET `/search/pp/{_providerName_}`</td>
+        <td class="small-7">GET `/api/v1/search/pp/{providerName}`</td>
         <td class="small-5">Gets the definition of a given page provider.</td>
       </tr>
       <tr>
-        <td class="small-7">GET `/search/saved`</td>
+        <td class="small-7">GET `/api/v1/search/saved`</td>
         <td class="small-5">Gets a list of saved searches.</td>
       </tr>
       <tr>
-        <td class="small-7">POST `/search/saved`</td>
+        <td class="small-7">POST `/api/v1/search/saved`</td>
         <td class="small-5">Saves a search.</td>
       </tr>
       <tr>
-        <td class="small-7">GET `/search/saved/{_searchId_}`</td>
+        <td class="small-7">GET `/api/v1/search/saved/{searchId}`</td>
         <td class="small-5">Retrieves a saved search.</td>
       </tr>
       <tr>
-        <td class="small-7">PUT `/search/saved/_{searchId}_`</td>
+        <td class="small-7">PUT `/api/v1/search/saved/{searchId}`</td>
         <td class="small-5">Updates a saved search.</td>
       </tr>
       <tr>
-        <td class="small-7">DELETE `/search/saved/{``_searchId_}`</td>
+        <td class="small-7">DELETE `/api/v1/search/saved/{searchId}`</td>
         <td class="small-5">Deletes a saved search.</td>
       </tr>
       <tr>
-        <td class="small-7">GET `/search/saved/{``_searchId_}/execute`</td>
+        <td class="small-7">GET `/api/v1/search/saved/{searchId}/execute`</td>
         <td class="small-5">Executes a saved search.</td>
       </tr>
     </tbody>
@@ -227,54 +230,54 @@ Searches can be parameterized with execution parameters which can be passed to a
       </tr>
       <tr>
         <td colspan="1">`query`</td>
-        <td colspan="1">**string**</td>
+        <td colspan="1">string</td>
         <td colspan="1">The query to perform</td>
         <td colspan="1">`SELECT * FROM Document`</td>
       </tr>
       <tr>
         <td colspan="1">`pageSize`</td>
-        <td colspan="1">**integer**</td>
+        <td colspan="1">integer</td>
         <td colspan="1">Number of entries per page</td>
-        <td colspan="1">0  *(no pagination)*&nbsp;The maximum is 1000 by default. See the [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}}) in order to customize it.</td>
+        <td colspan="1">0 *(no pagination)* The maximum is 1000 by default. See the [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}}) in order to customize it.</td>
       </tr>
       <tr>
         <td colspan="1">`currentPageIndex`</td>
-        <td colspan="1">**integer**</td>
+        <td colspan="1">integer</td>
         <td colspan="1">Selected page index</td>
         <td colspan="1">0</td>
       </tr>
       <tr>
         <td colspan="1">`maxResults`</td>
-        <td colspan="1">**integer**</td>
+        <td colspan="1">integer</td>
         <td colspan="1">Maximum entries</td>
         <td colspan="1">200</td>
       </tr>
       <tr>
         <td colspan="1">`sortBy`</td>
-        <td colspan="1">**string**</td>
+        <td colspan="1">string</td>
         <td colspan="1">Property sorting</td>
-        <td colspan="1">*Example:* `sortBy="dc:title,dc:description"`</td>
+        <td colspan="1">Example: `sortBy="dc:title,dc:description"`</td>
       </tr>
       <tr>
         <td colspan="1">`sortOrder`</td>
-        <td colspan="1">**string**</td>
+        <td colspan="1">string</td>
         <td colspan="1">Sort order</td>
-        <td colspan="1">*Examples:* `sortOrder="DESC"` or `sortOrder="ASC"`</td>
+        <td colspan="1">Examples: `sortOrder="DESC"` or `sortOrder="ASC"`</td>
       </tr>
       <tr>
         <td colspan="1">`queryParams`</td>
-        <td colspan="1">**string**</td>
+        <td colspan="1">string</td>
         <td colspan="1">Ordered parameters</td>
         <td colspan="1">
-          *Example:* For a query pattern like `Select * From Document where dc:title = ?`, the `queryParams` value should be "My Title". This is only useful when using a page provider, defined server-side.
+          Example: For a query pattern like `Select * From Document where dc:title = ?`, the `queryParams` value should be "My Title". This is only useful when using a page provider, defined server-side.
         </td>
       </tr>
       <tr>
         <td colspan="1">`parameter1`, `parameter2`...</td>
-        <td colspan="1">**string**</td>
+        <td colspan="1">string</td>
         <td colspan="1">Named parameters</td>
         <td colspan="1">
-          *Example:* For a query pattern like `Select * From Document where dc:title = :title1`, the `title1` parameter should be "My Title". Parameter names should be strictly different from property names (and other query parameters). This is only useful when using a page provider, defined server-side.
+          Example: For a query pattern like `Select * From Document where dc:title = :title1`, the `title1` parameter should be "My Title". Parameter names should be strictly different from property names (and other query parameters). This is only useful when using a page provider, defined server-side.
         </td>
       </tr>
     </tbody>
@@ -295,32 +298,32 @@ Saved searches are composed of the following properties:
       </tr>
       <tr>
         <td colspan="1">`queryParams`</td>
-        <td colspan="1">**string**</td>
+        <td colspan="1">string</td>
         <td colspan="1">Ordered query parameters</td>
       </tr>
       <tr>
         <td colspan="1">`namedParams`</td>
-        <td colspan="1">**object**</td>
+        <td colspan="1">object</td>
         <td colspan="1">Named parameters</td>
       </tr>
       <tr>
         <td colspan="1">`query`</td>
-        <td colspan="1">**string**</td>
+        <td colspan="1">string</td>
         <td colspan="1">Query to be executed, mutually exclusive with `providerName`</td>
       </tr>
       <tr>
         <td colspan="1">`queryLanguage`</td>
-        <td colspan="1">**string**</td>
+        <td colspan="1">string</td>
         <td colspan="1">Query language, mutually exclusive with `providerName` (default is NXQL)</td>
       </tr>
       <tr>
         <td colspan="1">`providerName`</td>
-        <td colspan="1">**string**</td>
+        <td colspan="1">string</td>
         <td colspan="1">Page provider to use in the search, mutually exclusive with `query` and `queryLanguage`</td>
       </tr>
       <tr>
         <td colspan="1">`contentViewData`</td>
-        <td colspan="1">**string**</td>
+        <td colspan="1">string</td>
         <td colspan="1">JSON object containing content view related data</td>
       </tr>
     </tbody>
@@ -341,7 +344,9 @@ https://NUXEO_SERVER/nuxeo/api/v1/search/lang/NXQL/execute?query=select * from D
 https://NUXEO_SERVER/nuxeo/api/v1/search/lang/NXQL/execute?query=select * from Document&pageSize=2&currentPageIndex=1
 ```
 
-{{/panel}}{{#> panel type='code' heading='Response'}}
+{{/panel}}
+
+{{#> panel type='code' heading='Response'}}
 
 ```javascript
 {
@@ -410,7 +415,7 @@ https://NUXEO_SERVER/nuxeo/api/v1/search/lang/NXQL/execute?query=select * from D
 
 #### Querying with Elasticsearch
 
-In order to perform NXQL queries on Elasticsearch repository through the `search` endpoint, the following configuration must be added to `$NUXEO_HOME/bin/nuxeo.conf`:
+In order to perform NXQL queries on Elasticsearch repository through the `search` endpoints, the following configuration must be added to `$NUXEO_HOME/bin/nuxeo.conf`:
 
 ```
 elasticsearch.override.pageproviders=default_search,REST_API_SEARCH_ADAPTER
@@ -544,7 +549,9 @@ Assuming a document type `NamedParamDoc` and the associated schema prefixed `np`
 /api/v1/search/pp/docs_by_title_complex/execute?np%3Atitle=mytitle&np%3AisCheckedIn=true
 ```
 
-{{/panel}}{{#> panel type='code' heading='Response'}}
+{{/panel}}
+
+{{#> panel type='code' heading='Response'}}
 
 ```javascript
 {
@@ -948,8 +955,6 @@ GET /api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c
 
 {{/panel}}
 
-&nbsp;
-
 In the above example the search has a search document model, containing its own properties. To display these, pass the desired schemas in the [properties header]({{page page='special-http-headers'}}) when performing the request.
 
 {{#> panel type='code' heading='Request'}}
@@ -1031,8 +1036,6 @@ GET /api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c/execute?pageSize=5
 *   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
 *   Checkout the Nuxeo REST API explorer of your instance at `https://NUXEO_SERVER/nuxeo/api/v1/doc`.
 
-{{! Don't put anything here. }}
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
@@ -1044,8 +1047,6 @@ GET /api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c/execute?pageSize=5
 
 {{/panel}}</div><div class="column medium-6">
 
-&nbsp;
 
-&nbsp;
 
 </div></div>

@@ -90,7 +90,7 @@ history:
         version: '1'
 
 ---
-Here are some examples of the ID and Path Endpoints.
+Here are some examples of the id and Path endpoints.
 
 ## id Endpoint
 
@@ -99,7 +99,7 @@ Here are some examples of the ID and Path Endpoints.
     <tbody>
       <tr>
         <th colspan="1">Path</th>
-        <th colspan="1">Endpoint</th>
+        <th colspan="1">Description</th>
       </tr>
       <tr>
         <td colspan="1">GET `/api/v1/id/{idOfTheDoc}`</td>
@@ -152,11 +152,11 @@ In addition to the `docId` and `repoId` parameters, the `id` endpoint accepts th
         <th colspan="1">Endpoint</th>
       </tr>
       <tr>
-        <td colspan="1">GET `/api/v1/path/{`docPath`}`</td>
+        <td colspan="1">GET `/api/v1/path/{docPath}`</td>
         <td colspan="1">Finds a document by its path</td>
       </tr>
       <tr>
-        <td colspan="1">PUT `/api/v1/path/{`docPath`}`</td>
+        <td colspan="1">PUT `/api/v1/path/{docPath}`</td>
         <td colspan="1">Updates a document by its path</td>
       </tr>
       <tr>
@@ -164,7 +164,7 @@ In addition to the `docId` and `repoId` parameters, the `id` endpoint accepts th
         <td colspan="1">Deletes a document by its path</td>
       </tr>
       <tr>
-        <td colspan="1">POST `/api/v1/path/{`docPath`}`</td>
+        <td colspan="1">POST `/api/v1/path/{docPath}`</td>
         <td colspan="1">Creates a document by its parent path</td>
       </tr>
       <tr>
@@ -194,6 +194,28 @@ The `path` endpoint only takes the `docPath` and `repoId` parameters. It can how
 
 ## Examples
 
+### Creating a Document
+
+To create a new document under the current resource, send a POST request with the following data:
+
+```
+POST /nuxeo/api/v1/id/{idOfParentDoc}
+{
+    "entity-type": "document",
+    "name":"newDoc",
+    "type": "File",
+    "properties": {
+        "dc:title": "The new document",
+        "dc:description": "Created via a very cool and easy REST API",
+        "common:icon": "/icons/file.gif",
+        "common:icon-expanded": null,
+        "common:size": null
+    }
+}
+```
+
+In this case, the ID of the document is the parent document's ID, and the `name` property in the entity stands for the name of the newly created document. You don't need to specify a UID since the session will create one for you. It will be returned in the response.
+
 ### Updating a Document
 
 To update a document, use PUT on the document resource and pass a reduced version of the [entity type content]({{page page='rest-api-entity-types#document'}}) as data. You could pass the full set of data but it's not mandatory.
@@ -217,28 +239,6 @@ To update a document, use PUT on the document resource and pass a reduced versio
 ```
 
 {{/panel}}
-
-### Creating a Document
-
-To create a new document under the current resource, send a POST request with the following data:
-
-```
-POST /nuxeo/api/v1/id/{idOfParentDoc}
-{
-    "entity-type": "document",
-    "name":"newDoc",
-    "type": "File",
-    "properties": {
-        "dc:title": "The new document",
-        "dc:description": "Created via a very cool and easy REST API",
-        "common:icon": "/icons/file.gif",
-        "common:icon-expanded": null,
-        "common:size": null
-    }
-}
-```
-
-In this case, the ID of the document is the parent document's ID, and the `name` property in the entity stands for the name of the newly created document. You don&rsquo;t need to specify a UID since the session will create one for you. It will be returned in the response.
 
 ### Deleting a Document
 

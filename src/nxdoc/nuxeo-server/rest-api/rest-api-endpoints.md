@@ -17,7 +17,7 @@ Nuxeo REST API provides many document-oriented endpoints, but also allows you to
 
 Here are the endpoints provided by Nuxeo:
 
-### **{{> anchor 'resources-endpoints'}}Resources Endpoints**
+## {{> anchor 'resources-endpoints'}}Resources Endpoints
 
 Perform CRUD operations on Nuxeo resources in REST style. The following resources are exposed:
 
@@ -59,19 +59,19 @@ Perform CRUD operations on Nuxeo resources in REST style. The following resource
       <tr>
         <td class="small-3">**Document Type, Schema and Facet definitions**</td>
         <td class="small-3">
-          `/nuxeo/api/v1/config/types/{type}`
-          `/nuxeo/api/v1/config/schemas/{schema}`
+          `/nuxeo/api/v1/config/types/{type}`<br/>
+          `/nuxeo/api/v1/config/schemas/{schema}`<br/>
           `/nuxeo/api/v1/config/facets/{facet}`
         </td>
         <td class="small-6">
-          Remote introspection of the repository structure, automated form generation, etc. See [here](https://jira.nuxeo.com/browse/NXP-14114) for more information.
+          Remote introspection of the repository structure, automated form generation, etc. See [ticket NXP-14114](https://jira.nuxeo.com/browse/NXP-14114) for more information.
         </td>
       </tr>
       <tr>
         <td class="small-3">**Searches**</td>
         <td class="small-3">
-          `/nuxeo/api/v1/search/lang`
-          `/nuxeo/api/v1/search/pp`
+          `/nuxeo/api/v1/search/lang`<br/>
+          `/nuxeo/api/v1/search/pp`<br/>
           `/nuxeo/api/v1/search/saved`
         </td>
         <td class="small-6">
@@ -81,7 +81,7 @@ Perform CRUD operations on Nuxeo resources in REST style. The following resource
       <tr>
         <td class="small-3">**OAuth2**</td>
         <td class="small-3">
-          `/nuxeo/api/v1/oauth2/provider/{providerId}`
+          `/nuxeo/api/v1/oauth2/provider/{providerId}`<br/>
           `/nuxeo/api/v1/oauth2/provider/{providerId}/token`
         </td>
         <td class="small-6">
@@ -90,7 +90,7 @@ Perform CRUD operations on Nuxeo resources in REST style. The following resource
       <tr>
         <td class="small-3">**Workflows and Tasks**</td>
         <td class="small-3">
-          `/nuxeo/api/v1/workflow/{workflowId}`
+          `/nuxeo/api/v1/workflow/{workflowId}`<br/>
           `/nuxeo/api/v1/task/{taskId}`
         </td>
         <td class="small-6">See [Workflow and Task Resources Endpoints]({{page page='workflow-task-endpoints'}}) for more information.</td>
@@ -108,7 +108,7 @@ Perform CRUD operations on Nuxeo resources in REST style. The following resource
   </table>
 </div>    
 
-### Command Endpoint
+## Command Endpoint
 
 <div class="table-scroll">
   <table class="hover">
@@ -126,10 +126,10 @@ Perform CRUD operations on Nuxeo resources in REST style. The following resource
   </table>
 </div>
 
-The [Command Resource Endpoint]({{page page='command-endpoint'}}) calls a "command" (an operation or chain of operations) deployed on the server. This is the primary way of exposing the platform services remotely. [All operations](http://nuxeo.github.io/api-playground/#/commands) from the [Automation]({{page page='content-automation-concepts'}})&nbsp;module are exposed, offering more than 100 commands to remotely process resources.
+The [Command Resource Endpoint]({{page page='command-endpoint'}}) calls a "command" (an operation or chain of operations) deployed on the server. This is the primary way of exposing the platform services remotely. [All operations](http://nuxeo.github.io/api-playground/#/commands) from the [Automation]({{page page='content-automation-concepts'}}) module are exposed, offering more than 100 commands to remotely process resources.
 
 The framework makes it easy to [add new custom Java operations]({{page page='contributing-an-operation'}}) to complete the API if you're missing a web-service. You can also [chain operations server-side using Nuxeo Studio]({{page page='how-to-create-an-automation-chain'}}), in order to expose a coarse-grained API that fits your business logic, without any development.
 
-### Customizing Nuxeo REST API
+## Customizing Nuxeo REST API
 
 Not completely satisfied with what's on offer? See how to [contribute your own endpoint]({{page page='contributing-a-new-endpoint'}})!
