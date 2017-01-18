@@ -2,7 +2,7 @@
 title: How to Configure a Search Filter With Facets and Other Aggregates
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Studio
         topics: 'Content View, Elasticsearch, Query, Widget'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - elasticsearch
     - content-view
     - howto
@@ -226,11 +226,11 @@ history:
         version: '1'
 
 ---
-Aggregation is a function where the data are grouped together according to certain criteria to form a single value of more significant meaning or measurement.&nbsp;Aggregates work as a data analytics tools by building analytic information over a set of documents. One of the most known aggregate is the Term Aggregate as known as facet.
+Aggregation is a function where the data are grouped together according to certain criteria to form a single value of more significant meaning or measurement. Aggregates work as a data analytics tools by building analytic information over a set of documents. One of the most known aggregate is the Term Aggregate as known as facet.
 
-Before you start using aggregates you may want to take a look to the document about the [different type of aggregates supported]({{page page='aggregate-widget-types'}}) and the [Page Provider]({{page page='page-provider-aggregates'}}).&nbsp;
+Before you start using aggregates you may want to take a look to the document about the [different type of aggregates supported]({{page page='aggregate-widget-types'}}) and the [Page Provider]({{page page='page-provider-aggregates'}}).
 
-Nuxeo Platform supports six different types of aggregates: Terms, Significant Terms, Range, Date Range, Histogram and Date Histogram. This how-to will help you to understand how to use them.&nbsp;
+Nuxeo Platform supports six different types of aggregates: Terms, Significant Terms, Range, Date Range, Histogram and Date Histogram. This how-to will help you to understand how to use them.
 
 {{#> callout type='info' }}
 
@@ -240,8 +240,8 @@ For more information about aggregates, see the [Elasticsearch Documentation abou
 
 This how-to aims at showing you how to use the different types of aggregates available in Nuxeo Platform with a Contract document type. This how-to will guide you through the different steps of this process:
 
-*   Create a contract document type&nbsp;
-*   Create a new search content view&nbsp;
+*   Create a contract document type
+*   Create a new search content view
 
 ![]({{file name='search_content_view.png'}} ?w=600,border=true)
 
@@ -249,18 +249,18 @@ This how-to aims at showing you how to use the different types of aggregates ava
 
 Before starting this how-to you will need to create the following elements in Studio:
 
-*   A Contract document type with 4 metadata: ContractNumber, OperationalHealthRating, RPMNumbers and SCDRelationshipHealthRating.&nbsp;![]({{file name='schema_contract.png'}} ?w=600,h=115,border=true)
+*   A Contract document type with 4 metadata: ContractNumber, OperationalHealthRating, RPMNumbers and SCDRelationshipHealthRating. ![]({{file name='schema_contract.png'}} ?w=600,h=115,border=true)
 
     {{#> callout type='info' }}
 
     See the how-to [How to Define a Document Type]({{page page='how-to-define-a-document-type'}}) for more detailed steps.
 
     {{/callout}}
-*   A simple vocabulary&nbsp;**Rating** assigned to the OperationalHealthRating and SCDRelationshipHealthRating elements**:** ![]({{file name='vocabulary_rating.png'}} ?w=450,border=true)
+*   A simple vocabulary **Rating** assigned to the OperationalHealthRating and SCDRelationshipHealthRating elements**:** ![]({{file name='vocabulary_rating.png'}} ?w=450,border=true)
 
     {{#> callout type='info' }}
 
-    For more details on vocabularies, see the&nbsp;[Directory and Vocabulary How-tos]({{page page='directory-and-vocabulary-how-to-index'}}).
+    For more details on vocabularies, see the [Directory and Vocabulary How-tos]({{page page='directory-and-vocabulary-how-to-index'}}).
 
     {{/callout}}
 
@@ -281,16 +281,16 @@ Now that you have created your content view, you can customize it by adding diff
 
 ![]({{file name='full_text_widget.png'}} ?w=258,h=64,border=true)
 
-This widget allows you to do a full-text search on a particular&nbsp;field of a document.
+This widget allows you to do a full-text search on a particular field of a document.
 
 1.  Drag and drop a Container widget from the right to the grid.
 2.  Edit the container:
 
     <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Container Contract Number</td></tr><tr><th colspan="1">Label</th><td colspan="1">Contract Number</td></tr><tr><th colspan="1">Handle Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Display</th><td colspan="1">Block (Label on top)</td></tr></tbody></table></div>
-3.  Click on&nbsp;![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}), drag and drop the Contract Number widget from the right to the grid and edit it:
+3.  Click on ![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}), drag and drop the Contract Number widget from the right to the grid and edit it:
 
     <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Contract Number</td></tr><tr><th colspan="1">Label</th><td colspan="1">Contract Number</td></tr><tr><th colspan="1">Hide Label</th><td colspan="1">Yes</td></tr></tbody></table></div>
-4.  Click on **Save**.&nbsp;
+4.  Click on **Save**.
 
 5.  Click on **Go back to previous page**.
 
@@ -298,12 +298,12 @@ This widget allows you to do a full-text search on a particular&nbsp;field of a 
 
 ![]({{file name='terms_aggregate.png'}} ?w=255,h=74,border=true)
 
-The Terms aggregate works with text properties like vocabularies, here we work with the vocabulary Rating created at the beginning.&nbsp;
+The Terms aggregate works with text properties like vocabularies, here we work with the vocabulary Rating created at the beginning.
 
 1.  Drag and drop a Container widget from the right to the grid.
 
     <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Container Operational Health Rating</td></tr><tr><th colspan="1">Label</th><td colspan="1">Operational Health Rating</td></tr><tr><th colspan="1">Handle Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Display</th><td colspan="1">Block (Label on top)</td></tr></tbody></table></div>
-2.  Click on&nbsp;![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}), drag and drop the Terms aggregate from the right to the grid.
+2.  Click on ![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}), drag and drop the Terms aggregate from the right to the grid.
 
 3.  Select **Contract** > **OperationalHealthRating** > **Ok**.
 
@@ -318,24 +318,24 @@ The Terms aggregate works with text properties like vocabularies, here we work w
 
 ![]({{file name='significant_terms_aggregate.png'}} ?w=245,h=49,border=true)
 
-This aggregate returns significant occurrences of terms in a set, not just the most used ones. A term is judged "significant"&nbsp;if there is a noticeable difference in the frequency in which a term appears in the subset and in the background.
+This aggregate returns significant occurrences of terms in a set, not just the most used ones. A term is judged "significant" if there is a noticeable difference in the frequency in which a term appears in the subset and in the background.
 
 1.  Drag and drop a Container widget from the right to the grid.
 2.  Edit the container:
 
     <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Container Significant Terms</td></tr><tr><th colspan="1">Label</th><td colspan="1">Significant Terms</td></tr><tr><th colspan="1">Handle Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Display</th><td colspan="1">Block (Label on top)</td></tr></tbody></table></div>
-3.  Click on&nbsp;![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}), drag and drop the Significant Terms aggregate from the right to the grid.
+3.  Click on ![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}), drag and drop the Significant Terms aggregate from the right to the grid.
 
 4.  Select **dublincore** > **Source** and click on **OK**.
 
 5.  Fill the Layout widget Editor:
 
     <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Significant Terms</td></tr><tr><th colspan="1">Label</th><td colspan="1">Significant Terms</td></tr><tr><th colspan="1">Hide Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Widget Type</th><td colspan="1">Checkbox</td></tr><tr><th colspan="1">Layout</th><td colspan="1">Page direction</td></tr></tbody></table></div>
-6.  Click on **Save.**&nbsp;
+6.  Click on **Save.**
 
 7.  Click on **Go back to previous page**.
 
-### Date Range Aggregate&nbsp;
+### Date Range Aggregate
 
 ![]({{file name='date_range_aggregate.png'}} ?w=251,h=84,border=true)
 
@@ -345,19 +345,19 @@ This aggregate is dedicated to date values. It allows you to see the documents c
 2.  Edit the container:
 
     <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Container Creation Date</td></tr><tr><th colspan="1">Label</th><td colspan="1">Creation Date</td></tr><tr><th colspan="1">Handle Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Display</th><td colspan="1">Block (Label on top)</td></tr></tbody></table></div>
-3.  Click on&nbsp;![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}), drag and drop the Date Range aggregate from the right to the grid.
+3.  Click on ![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}), drag and drop the Date Range aggregate from the right to the grid.
 
 4.  Select **dublincore** > **Created** and click on **OK**.
 
 5.  Fill the Layout widget Editor:
 
     <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Creation Date</td></tr><tr><th colspan="1">Label</th><td colspan="1">Creation Date</td></tr><tr><th colspan="1">Hide Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Date Ranges</th><td colspan="1">
-
-    *   Label: `Last year` From: `now-1y` To: `now-1M`
-    *   Label: `Last month` From: `now-1M` To: `now-7d`
-    *   Label: `Last week` From: `now-7d` To: `now-24H`
-    *   Label: `Last 24h` From: `now-24H` To: `now`
-
+    <ul>
+        <li>Label: `Last year` From: `now-1y` To: `now-1M`</li>
+        <li>Label: `Last month` From: `now-1M` To: `now-7d`</li>
+        <li>Label: `Last week` From: `now-7d` To: `now-24H`</li>
+        <li>Label: `Last 24h` From: `now-24H` To: `now`</li>
+    </ul>
     </td></tr><tr><th colspan="1">Widget Type</th><td colspan="1">Date Range Checkbox</td></tr><tr><th colspan="1">Layout</th><td colspan="1">Page direction</td></tr></tbody></table></div>
 6.  Click on **Save.**
 
@@ -373,15 +373,15 @@ This aggregate allows you to define a set of ranges and works as the date range 
 2.  Edit the container:
 
     <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">Container RPM Numbers</td></tr><tr><th colspan="1">Label</th><td colspan="1">RPM Numbers</td></tr><tr><th colspan="1">Handle Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Display</th><td colspan="1">Block (Label on top)</td></tr></tbody></table></div>
-3.  Click on&nbsp;![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}), drag and drop the Range aggregate from the right to the grid.
+3.  Click on ![]({{file name='edit_subwidgets.png' space='studio' page='studio-icons-index'}}), drag and drop the Range aggregate from the right to the grid.
 
 4.  Select **Contract** > **RPMNumbers** and click on **OK**.
 
 5.  Fill the Layout widget Editor:
 
-    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">RPM Numbers</td></tr><tr><th colspan="1">Label</th><td colspan="1">RPM Numbers</td></tr><tr><th colspan="1">Hide Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Ranges</th><td colspan="1">Label: `Less than 10` From: `0` To: `10`
-    Label: `Between 11 and 100` From: `11` To: `100`
-    Label: `More than 100` From: `101` To: `100,000`</td></tr><tr><th colspan="1">Widget Type</th><td colspan="1">Range Checkbox</td></tr><tr><th colspan="1">Layout</th><td colspan="1">Page direction</td></tr></tbody></table></div>
+    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Studio Label</th><td colspan="1">RPM Numbers</td></tr><tr><th colspan="1">Label</th><td colspan="1">RPM Numbers</td></tr><tr><th colspan="1">Hide Label</th><td colspan="1">Yes</td></tr><tr><th colspan="1">Ranges</th><td colspan="1"><ul><li>Label: `Less than 10` From: `0` To: `10`</li>
+    <li>Label: `Between 11 and 100` From: `11` To: `100`</li>
+    <li>Label: `More than 100` From: `101` To: `100,000`</li></ul></td></tr><tr><th colspan="1">Widget Type</th><td colspan="1">Range Checkbox</td></tr><tr><th colspan="1">Layout</th><td colspan="1">Page direction</td></tr></tbody></table></div>
 6.  Click on **Save**.
 
 7.  Click on **Go back to previous page**.
@@ -390,11 +390,9 @@ This aggregate allows you to define a set of ranges and works as the date range 
 
 1.  Go to your Nuxeo Platform instance,
 2.  Connect as Administrator with Administrator password,
-3.  Click on&nbsp;**Admin Center**&nbsp;>&nbsp;**Update Center**&nbsp;>&nbsp;**Nuxeo Studio,**
-4.  Click on the&nbsp;**Update**&nbsp;button,
+3.  Click on **Admin Center** > **Update Center** > **Nuxeo Studio,**
+4.  Click on the **Update** button,
 5.  Go in a workspace and create a new Contract.
-
-&nbsp;
 
 * * *
 
@@ -406,7 +404,5 @@ This aggregate allows you to define a set of ranges and works as the date range 
 - [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>
