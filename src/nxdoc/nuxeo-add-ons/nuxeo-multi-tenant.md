@@ -53,7 +53,7 @@ After you installed it, a tab **Tenant isolation** is available in the Admin Cen
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Nuxeo Multi-tenant user documentation]({{page space='userdoc' page='nuxeo-multi-tenant'}})
+- [Nuxeo Multi-tenant user documentation]({{page space='userdoc' page='nuxeo-multi-tenant'}})
 
 {{/panel}}</div><div class="column medium-6">
 

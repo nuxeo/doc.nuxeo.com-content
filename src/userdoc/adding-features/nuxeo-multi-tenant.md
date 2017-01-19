@@ -259,7 +259,7 @@ It takes two steps to make a user a tenant administrator.
 
 On a default installation of the Nuxeo Platform, permissions are configured so members have read access to the content. This behavior can be modified by changing the permissions.
 
-Users created by the tenant administrators automatically have "Read" access to the tenant. Indeed, they are automatically members of a virtual group that has "Read" right on the tenant.&nbsp;They don't need to be part of the default "members" group, being a member of the tenant is enough to access content.
+Users created by the tenant administrators automatically have "Read" access to the tenant. Indeed, they are automatically members of a virtual group that has "Read" right on the tenant. They don't need to be part of the default "members" group, being a member of the tenant is enough to access content.
 
 Tenant administrators can then [delegate permissions]({{page page='managing-permissions'}}) in the tenant, which will define what the user can do in the tenant.
 
@@ -269,21 +269,24 @@ The vocabularies I10subjects and I10coverage are isolated and don't display any 
 
 See the [Managing Vocabularies]({{page page='managing-vocabularies'}}) page.
 
-&nbsp;
-
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related user documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related user documentation'}}
 
-*   [Managing Users and Groups]({{page page='managing-users-and-groups'}})
-*   [Managing Permissions]({{page page='managing-permissions'}})
-*   [Managing Vocabularies]({{page page='managing-vocabularies'}})
-*   [Local Configuration]({{page page='local-configuration'}})
+- [Managing Users and Groups]({{page page='managing-users-and-groups'}})
+- [Managing Permissions]({{page page='managing-permissions'}})
+- [Managing Vocabularies]({{page page='managing-vocabularies'}})
+- [Local Configuration]({{page page='local-configuration'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
+
+<div class="column medium-6">
 
 &nbsp;
 
-&nbsp;
 
-</div></div>
+</div>
+</div>
