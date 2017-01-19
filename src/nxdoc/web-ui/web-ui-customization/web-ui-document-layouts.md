@@ -1,5 +1,5 @@
 ---
-title: Document Layouts
+title: Web UI Document Layouts
 review:
     comment: ''
     date: '2017-01-02'
@@ -13,21 +13,22 @@ labels:
 tree_item_index: 200
 
 ---
-Layouts are used to display a document's metadata in different use cases, it is basically a group of widgets and specifies how these widgets are assembled and displayed.
+Layouts are used to display a document's metadata in different use cases. It's basically a group of widgets and specifies how these widgets are assembled and displayed.
 
-A given document type can have multiple layouts: a `create` and `edit` layout to set its schema fields when creating or editing the document, a `view` layout to simply display field values and any other layouts according to the application(s) where these are used. In our previous metamodel driven UI these were known as `modes` and a single layout definition could be rendered in different modes.
-In Nuxeo Web UI these different layout / mode combinations have been materialized into individual elements meaning each layout element is bound to a given document type and built for a specific use case. This enables developers to leverage any custom elements they see fit when building their layouts with explicit binding between fields and elements properties - thus doing without the mode handling widget abstraction.
+A given document type can have multiple layouts: a `create` and `edit` layout to set its schema fields when creating or editing the document, a `view` layout to simply display field values and any other layouts according to the application(s) where these are used. In our previous metamodel driven UI, these were known as `modes` and a single layout definition could be rendered in different modes.
 
-By simply following a convention that maps a document type to a set of pre defined element names, according to the different use cases (modes), our application can dynamically load and instantiate the appropriate element for a given document.
+In Nuxeo Web UI, these different layout/mode combinations have been materialized into individual elements, meaning each layout element is bound to a given document type and built for a specific use case. This enables developers to leverage any custom elements they see fit when building their layouts with explicit binding between fields and elements properties - thus doing without the mode handling widget abstraction.
+
+By simply following a convention that maps a document type to a set of pre-defined element names, according to the different use cases (modes), our application can dynamically load and instantiate the appropriate element for a given document.
 
 Regions of the UI which require customizable document layouts rely on custom container elements to handle the loading and instantiation of the appropriate layout elements for the given use case, for instance the default document page has two customizable regions by default:
 
 ![]({{file name='document_page_1.png'}} ?w=400,border=true)
 
-1. the `view`layout which usually displays an inline preview of the document and
+1. the `view` layout which usually displays an inline preview of the document and
 2. the `metadata` layout which displays the document's metadata.
 
-Each of these regions is defined by a generic layout container element which will import and render the specific layout element for the given document type, in this case `nuxeo-document-view` will rely on `nuxeo-<doctype>-view-layout`and `nuxeo-document-metadata` will use `nuxeo-<doctype>-metadata-layout`, where `<doctype>` is the lower cased document type (i.e. *folder*, *note*, *picture*, etc.).
+Each of these regions is defined by a generic layout container element which will import and render the specific layout element for the given document type, in this case `nuxeo-document-view` will rely on `nuxeo-<doctype>-view-layout`and `nuxeo-document-metadata` will use `nuxeo-<doctype>-metadata-layout`, where `<doctype>` is the lower case document type (i.e. *folder*, *note*, *picture*, etc.).
 
 These specific document layout elements are loaded by convention from a `/nuxeo.war/ui/document/<doctype>` folder and the element naming convention adopted is `nuxeo-<doctype>-<mode>-layout.html` where `mode` describes the use case and matches the layout name (i.e. *create*, *view* , *edit*, *import*, etc):
 
@@ -51,11 +52,11 @@ The following table lists layout elements used by Nuxeo Web UI:
 
 {{#> callout type='warning' }}
 
-Nuxeo Web UI relies on the existence of these document layout elements so, for each registered document type, the application will attempt to load its specific layouts. Since there is no layout registry there is no fallback.
+Nuxeo Web UI relies on the existence of these document layout elements so, for each registered document type, the application will attempt to load its specific layouts. Since there is no layout registry, there is no fallback.
 
 {{/callout}}
 
-When instantiating and stamping these layout elements a `document` property will be set to the current document and the layout is expected to update accordingly. The importing and stamping of these elements, executed by container, is simply:
+When instantiating and stamping these layout elements, a `document` property will be set to the current document and the layout is expected to update accordingly. The importing and stamping of these elements, executed by container, is simply:
 
 ```
 this.importHref(this.resolveUrl(layout + '.html'), function() {
@@ -67,9 +68,9 @@ this.importHref(this.resolveUrl(layout + '.html'), function() {
   el.document = this.document;
 },
 ```
-By building these elements with Polymer developers can simply declare this `document` property and rely on native data binding support to bind document fields to the the template.
+By building these elements with Polymer, developers can simply declare this `document` property and rely on native data binding support to bind document fields to the the template.
 
-Since these document layouts are regular custom elements developers have no limitations whatsoever in terms of HTML template, CSS styling or JS logics and are free to leverage any third party libraries or elements when building their own.
+Since these document layouts are regular custom elements, developers have no limitations whatsoever in terms of HTML template, CSS styling or JS logics and are free to leverage any third party libraries or elements when building their own.
 
 {{#> callout type='warning' }}
 
@@ -112,7 +113,7 @@ The following is a sample definition of what an `edit` layout element for a `MyD
       properties: {
         /**
          * You can use either @schema or @doctype annotation in your model.
-         * Used to provide validation and auto completion of document properties.
+         * Use to provide validation and auto completion of document properties.
          * @doctype MyDoc
          */
         document: {
@@ -126,7 +127,7 @@ The following is a sample definition of what an `edit` layout element for a `MyD
 
 ## Customizing Document Creation
 
-When contributing document types, there are a couple of two more contributions that have to be made in order for them to
+When contributing document types, there are two more contributions that have to be made in order for them to
 be properly displayed in the document creation wizard: add a custom icon and a custom label for each type.
 
 The icon must be contributed to `/nuxeo.war/ui/images/doctypes`, named after the format `{doctype}.svg`. Labels must be added to the message files under the format `label.document.type.{doctype}`. In both cases, `doctype` must be the lower case doctype **id**.

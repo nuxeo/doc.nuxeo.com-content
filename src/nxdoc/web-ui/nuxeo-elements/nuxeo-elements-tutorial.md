@@ -1,8 +1,8 @@
 ---
-title: Tutorial Custom App
+title: Customize Your App with Nuxeo Elements
 review:
     comment: ''
-    date: '2016-12-28'
+    date: '2017-01-16'
     status: ok
 toc: true
 labels:
@@ -16,26 +16,23 @@ tree_item_index: 200
 
 ---
 
-In this tutorial we'll guide you through building a simple application base on the Polymer Starter Kit, which
-will be able to read documents from a Nuxeo instance. This tutorial will teach how to create a new element and gradually
+This tutorial shows you how to build a simple application base on the Polymer Starter Kit, which
+will be able to read documents from a Nuxeo instance.  You'll learn how to create a new element and gradually
 improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 
 ## Requirements
 
-*   **Node.js**
-    [Node.js](https://nodejs.org/) is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client-side development is built with Node.js and distributed with npm, the package manager for Node.js. Make sure you download and install your OS specific version first.
-*   **Bower**
-    [Bower](http://bower.io/) is currently **the tool** for managing web application dependencies. To install it just use:
+*   **[Node.js](https://nodejs.org/)** is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client-side development is built with Node.js and distributed with npm, the package manager for Node.js. Make sure you download and install your OS-specific version first.
+*   **[Bower](http://bower.io/)** is currently **the** tool for managing web application dependencies. To install it just use:
 
     ```bash
     $ npm install -g bower
     ```
 
-*   **Yeoman[
-    Yeoman](http://yeoman.io/)**  is an opinionated generator that helps kickstarting projects. Depending on your needs you have two possibilities to use it.
+*   **[Yeoman](http://yeoman.io/)**  is an opinionated generator that helps kickstart projects. Depending on your needs there are two ways to use it:
 
-    *   Use it under the hood with the [Polymer CLI](https://github.com/Polymer/polymer-cli) to scaffold your standalone application: your application is **hosted outside** the Nuxeo Server and uses it as a service
-    *   Use the [Nuxeo Generator](https://github.com/yeoman/generator-nuxeo) to scaffold your application **as a Nuxeo Bundle** and deploy it in a Nuxeo Server: your application is **hosted inside** theNuxeo Server, as a bundle, and uses it as a backend.
+    *   Under the hood with [Polymer CLI](https://github.com/Polymer/polymer-cli) to scaffold your standalone application. Your application is **hosted outside** the Nuxeo Server and uses it as a service
+    *   Use the [Nuxeo Generator](https://github.com/yeoman/generator-nuxeo) to scaffold your application **as a Nuxeo Bundle** and deploy it on a Nuxeo Server. Your application is **hosted inside** the Nuxeo Server as a bundle and uses it as a backend.
 
 ## Scaffolding
 
@@ -54,7 +51,7 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
     $ yo nuxeo polymer && npm install && bower install
     ```
 
-    The Nuxeo Generator (`generator-nuxeo`) will ask you several questions about what is the artifact name, etc.
+    The Nuxeo Generator (`generator-nuxeo`) will ask you several questions about the artifact name, etc.
 
 3.  Run gulp to run the application and see what has been generated.
 
@@ -73,7 +70,7 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 
     {{#> callout type='info' }}
 
-    Do not hesitate to take a look at the others templates available with the [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo), especially the `Package Generator` that helps you package your bundles as a [Nuxeo Package]({{page page='creating-nuxeo-packages'}}).
+    Do not hesitate to take a look at the others templates available with [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo), especially the `Package Generator` that helps you package your bundles as a [Nuxeo Package]({{page page='creating-nuxeo-packages'}}).
 
     {{/callout}}
 
@@ -101,9 +98,9 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 
     The produced application includes some sample elements and showcases Google's Material Design through the use of Paper Elements.
 
-Let's plug this application to the Nuxeo instance and change the hardcoded users list with some actual data.
+Let's plug this application into the Nuxeo instance and change the hardcoded users list with some actual data.
 
-## Creating a New Element
+## Create a New Element
 
 1.  Create a new element named `doc-reader` to hold our logic, under the `src` directory. For simplicity, we can base
     our element in one of those already provided by PSK:
@@ -156,7 +153,7 @@ Let's plug this application to the Nuxeo instance and change the hardcoded users
     ```
     {{/panel}}
 
-3.  Add our element to fragments under `polymer.json` so that our element can be lazy loaded:
+3.  Add our element to fragments under `polymer.json` so that our element can be loaded lazily:
 
     {{#> panel type='code' heading='polymer.json'}}
     ```json
@@ -177,7 +174,7 @@ Let's plug this application to the Nuxeo instance and change the hardcoded users
     [Polymer Documentation](https://www.polymer-project.org/1.0/toolbox/server#app-structure).
     {{/callout}}
 
-## Plugging in Nuxeo Elements
+## Plug in Nuxeo Elements
 
 1.  Install Nuxeo elements through Bower:
 
@@ -185,9 +182,9 @@ Let's plug this application to the Nuxeo instance and change the hardcoded users
     $ bower install --save nuxeo/nuxeo-elements
     ```
 
-    This adds `nuxeo-elements` as a dependency in `bower.json` and dowloads the latest release from our GitHub [repository](https://github.com/nuxeo/nuxeo-elements) into `bower_components`.
+    This adds `nuxeo-elements` as a dependency in `bower.json` and downloads the latest release from our GitHub [repository](https://github.com/nuxeo/nuxeo-elements) into `bower_components`.
 
-2.  Import the nuxeo elements we need, in this case [nuxeo-connection](https://elements.nuxeo.com/elements/nuxeo-connection)
+2.  Import the Nuxeo elements we need, in this case [nuxeo-connection](https://elements.nuxeo.com/elements/nuxeo-connection)
     and [nuxeo-document](https://elements.nuxeo.com/elements/nuxeo-document), into `doc-reader`:
 
     {{#> panel type='code' heading='src/my-doc-reader.html'}}
@@ -197,10 +194,12 @@ Let's plug this application to the Nuxeo instance and change the hardcoded users
     ```
     {{/panel}}
 
-## Retrieving a Document
+## Retrieve a Document
 
 With Nuxeo Elements imports in place and a brand new element at our disposal, we must add the logic to connect to Nuxeo and
-retrieve a document. Let's start by declaring a connection to Nuxeo. This connection will be shared by all Nuxeo data driven
+retrieve a document.
+
+Let's start by declaring a connection to Nuxeo. This connection will be shared by all Nuxeo data-driven
 elements so it should be one of the first elements you declare in your application, i.e. right at the start of the template:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
@@ -256,7 +255,7 @@ Your application should now look something like this:
 
 ![]({{file name='my-doc-reader1.png'}} ?w=600,border=true)
 
-## Retrieving Children
+## Retrieve Children
 
 We now want to display the children of our current document. The most efficient way of doing it is by using a `Page Provider`,
 which enables paginated queries. **Nuxeo Elements** provide one such data element which mediates the usage of page providers.
@@ -269,7 +268,7 @@ Let's import the [nuxeo-page-provider](https://elements.nuxeo.com/elements/nuxeo
 ```
 {{/panel}}
 
-We shall then declare in our template a `nuxeo-page-provider` element:
+We then declare in our template a `nuxeo-page-provider` element:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```xml
@@ -281,8 +280,8 @@ We shall then declare in our template a `nuxeo-page-provider` element:
 ```
 {{/panel}}
 
-Notice that the `params` attribute needs to be computed based on our `document`. Add to your element's prototype the
-following method:
+Notice that the `params` attribute needs to be computed based on our `document`. Add the
+following method to your element's prototype:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```JavaScript
@@ -311,10 +310,10 @@ Which will make your app look like this:
 
 ![]({{file name='my-doc-reader2.png'}} ?w=600,border=true)
 
-## Throwing in Some UI Elements
+## Add UI Elements
 
 Our element is now able to read document properties and children, but with a static document path, it's not very useful.
-We will now add a ui element that allows the user to pick a document path.
+We will now add a UI element that allows the user to pick a document path.
 
 Let's install Nuxeo UI Elements through Bower:
 
@@ -323,7 +322,7 @@ $ bower install --save nuxeo/nuxeo-ui-elements
 ```
 
 And now we must import the [nuxeo-path-suggestion](https://elements.nuxeo.com/elements/nuxeo-path-suggestion) element,
-which is a ui element that allows the user to pick a valid document path and also features autocompletion:
+which is a UI element that allows the user to pick a valid document path and also features auto-completion:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```xml
@@ -331,7 +330,7 @@ which is a ui element that allows the user to pick a valid document path and als
 ```
 {{/panel}}
 
-We must now change the `doc-path` property of our `nuxeo-document` element so that it is now bound to a new property
+We must now change the `doc-path` property of our `nuxeo-document` element so that it is bound to a new property
 named `targetPath`:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
@@ -354,7 +353,7 @@ properties: {
 ```
 {{/panel}}
 
-And finally, we must update the template to declare `nuxeo-path-suggestion` two-way-bound to `targetPath`:
+And finally, we must update the template to declare `nuxeo-path-suggestion` two-way bound to `targetPath`:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```xml
@@ -362,17 +361,15 @@ And finally, we must update the template to declare `nuxeo-path-suggestion` two-
 ```
 {{/panel}}
 
-From now on, as the user changes the path on the `nuxeo-path-suggestion` widget, the respective document will be retrieved
-along with its children automatically, which will update the interface.
+From now on, as the user changes the path on the `nuxeo-path-suggestion` widget, the respective document will automatically be retrieved along with its children, which will update the interface.
 
-Our element is now interactive a much more useful:
+Our element is now interactive and much more useful:
 
 ![]({{file name='my-doc-reader3.png'}} ?w=600,border=true)
 
-## Revamping Children Listing
+## Revamp Children Listing
 
-There are two elements that are perfect for listing document: `nuxeo-data-list` and `nuxeo-data-table`. We will now use
-`nuxeo-data-table` to display our document's children along with their respective icons and last modified date.
+There are two elements that are perfect for listing documents: `nuxeo-data-list` and `nuxeo-data-table`. We will now use `nuxeo-data-table` to display our document's children along with their respective icons and last modified date.
 
 Let's start by importing [nuxeo-data-table](https://elements.nuxeo.com/elements/nuxeo-data-table) into our element:
 
@@ -415,8 +412,8 @@ nuxeo-data-table {
 ```
 {{/panel}}
 
-Finally, we must add to our elements prototype a method to retrieve a document's thumbnail, which will be used by the
-table we just added to the template:
+Finally, we must add a method to our element's prototype to retrieve a document's thumbnail, which will be used by the
+table that we've just added to the template:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```JavaScript
@@ -433,10 +430,10 @@ Your app should look like this now:
 
 ![]({{file name='my-doc-reader4.png'}} ?w=600,border=true)
 
-## Uploading Files
+## Upload Files
 
 Our awesome app is now able to browse any folder and list its children. What would make it even more awesome would be
-to be able to upload files to the current folder. And, thanks to our UI elements, this is quite easy to achieve.
+to be able to upload files to the current folder. Thanks to our UI elements, this is easy to achieve.
 
 Let's start by importing [nuxeo-file](https://elements.nuxeo.com/elements/nuxeo-file) into our element, which is a widget
 for uploading files:
@@ -456,10 +453,7 @@ We can now add it to our element's template, double-bound to a property named `b
 ```
 {{/panel}}
 
-By clicking the widget and picking a file or dropping a file into it, the respective blob will automatically be uploaded
-into a batch in the server, and an object representing this file will be held by the `blob` property. For the sake of simplicity,
-we want to automatically import this file into the server as soon as it is uploaded. Therefore, we must declare `blob` in
-our elements prototype with an observer that will take care of importing the file:
+By clicking the widget and selecting a file or dropping a file into it, the respective blob will automatically be uploaded into a batch in the server, and an object representing this file will be held by the `blob` property. For the sake of simplicity, we want to automatically import this file into the server as soon as it is uploaded. Therefore, we must declare `blob` in our elements prototype with an observer that will take care of importing the file:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```JavaScript
@@ -474,10 +468,7 @@ properties: {
 ```
 {{/panel}}
 
-The `_blobChanged` method will be called whenever `blob` changes. We want it to execute the `FileManager.Import` operation
-on the batch in order to import the file as a document, using the Nuxeo Plataform's File Manager. As this happens, we must
-refetch the current document, which will trigger the page-provider to refetch the children as well, thus updating the
-interface. We must define the following observer in the element's prototype:
+The `_blobChanged` method will be called whenever the `blob` changes. We want it to execute the `FileManager.Import` operation on the batch in order to import the file as a document, using the Nuxeo Platform's File Manager. As this happens, we must fetch the current document again, which triggers the page-provider to fetch the children again as well, thus updating the interface. We must define the following observer in the element's prototype:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```JavaScript

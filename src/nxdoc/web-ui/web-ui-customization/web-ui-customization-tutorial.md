@@ -1,8 +1,8 @@
 ---
-title: Customization Tutorial
+title: Web UI Customization Tutorial
 review:
     comment: ''
-    date: '2017-01-09'
+    date: '2017-01-16'
     status: ok
 toc: true
 labels:
@@ -40,8 +40,8 @@ $ mkdir -p nuxeo-customization-sample && cd $_
 $ yo nuxeo
 ```
 
-The generator will now ask a few questions for which the default values will suffice. We'll assume that the parent id
-is `nuxeo-customization-sample`, the project id is `nuxeo-customization-sample-core` and the project version is
+The generator will then ask you a few questions (for which the default values will suffice). We'll assume that the parent ID
+is `nuxeo-customization-sample`, the project ID is `nuxeo-customization-sample-core` and the project version is
 `1.0-SNAPSHOT`, and that the following folder hierarchy was generated:
 
 ```text
@@ -84,7 +84,7 @@ to `resources/OSGI-INF`:
 ```
 {{/panel}}
 
-Our bundle can be build by simply running `mvn install`, and it can be deployed by copying the resulting jar file, in this
+Our bundle can be built simply by running `mvn install`, and it can be deployed by copying the resulting jar file, in this
 case `nuxeo-customization-sample-core/target/nuxeo-customization-sample-core-1.0-SNAPSHOT.jar`, to `$NUXEO_HOME/nxserver/bundles`.
 For more information about building and deploying bundles, please check the [documentation]({{page page='how-to-create-an-empty-bundle'}}/#install-and-check-the-deployment-of-your-bundle).
 
@@ -95,10 +95,7 @@ For example, one might want to change the layout to create a user or add layouts
 we're going to change the view layout for the `Picture` document type, so that it displays the number of available additional
 formats in the *properties* card.
 
-To override or contribute new layouts for a document type, we must add to the `document/{type}` folder a file with the
-name of the layout that needs to be created or overridden. In this case, we need to create the folder
-`resources/web/nuxeo.war/ui/document/picture` and take the original [nuxeo-picture-view-layout.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/document/picture/nuxeo-picture-view-layout.html)
-and add a new `div` element to hold the number of additional formats, which is the piece of information we wanted to add:
+To override or contribute new layouts for a document type, we must add a file with the name of the layout that needs to be created or overridden to the `document/{type}` folder. In this case, we need to create the folder `resources/web/nuxeo.war/ui/document/picture` and take the original [nuxeo-picture-view-layout.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/document/picture/nuxeo-picture-view-layout.html) and add a new `div` element to hold the number of additional formats, which is the piece of information we wanted to add:
 
 {{#> panel type='code' heading='resources/web/nuxeo.war/ui/document/picture/nuxeo-picture-view-layout.html'}}
 ```xml
@@ -121,21 +118,15 @@ along with the other picture properties.
 
 ## Contributing to a Nuxeo Slot{{> anchor 'contributing_to_a_nuxeo_slot'}}
 
-Nuxeo Slots are an important mechanism to extend Nuxeo Web UI. Here we're going to contribute a new action to the
-[DOCUMENT_ACTIONS]({{page page='web-ui-slots'}}/#document_actions) slot, which will be
-displayed whenever a users browses to a document.
+Nuxeo Slots are an important mechanism to extend Nuxeo Web UI. Here we're going to contribute a new action to the [DOCUMENT_ACTIONS]({{page page='web-ui-slots'}}/#document_actions) slot, which will be displayed whenever a user browses to a document.
 
 ![]({{file name='DOCUMENT_ACTIONS.png'}} ?w=600,border=true)
 
 {{#> callout type='note' heading='Nuxeo Slots'}}
-Please refer to the [Nuxeo Slots documentation]({{page page='web-ui-slots'}}) for information about slots and how to
-contribute to them.
+Please refer to the [Nuxeo Slots documentation]({{page page='web-ui-slots'}}) for information about slots and how to contribute to them.
 {{/callout}}
 
-Our action will consist of an element that receives a document and that is composed by a button which, when clicked,
-displays a popup with the list of facets of the document. So, let's start by creating a folder inside `resources/web/nuxeo.war/ui`
-(e.g. `resources/web/nuxeo.war/ui/sample/`) and add to it a new element named `my-document-action`, which will hold a button,
-a tooltip for that button, and a dialog:
+Our action will consist of an element that receives a document and that is composed of a button which, when clicked, displays a popup with the list of facets of the document. So, let's start by creating a folder inside `resources/web/nuxeo.war/ui` (e.g. `resources/web/nuxeo.war/ui/sample/`) and add a new element to it named `my-document-action`, which will hold a button, a tooltip for that button, and a dialog:
 
 {{#> panel type='code' heading='resources/web/nuxeo.war/ui/sample/my-document-action.html'}}
 ```xml

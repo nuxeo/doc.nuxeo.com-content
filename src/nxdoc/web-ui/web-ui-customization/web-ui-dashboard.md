@@ -1,8 +1,8 @@
 ---
-title: Dashboard
+title: Web UI Dashboard
 review:
     comment: ''
-    date: '2015-12-21'
+    date: '2017-01-16'
     status: ok
 toc: true
 labels:
@@ -13,18 +13,17 @@ labels:
 tree_item_index: 500
 
 ---
-## Dashboard
 
-The default Web UI dashboard is the default starting page of the application and is defined by [nuxeo-home.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-home.html).
+The Web UI dashboard is the default starting page of the application and is defined by [nuxeo-home.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-home.html).
 
 ![]({{file name='DASHBOARD.png'}} ?w=600,border=true)
 
-It is simply composed of 4 sections:
- - a table to browse recently edited documents
- - a listing to access pending tasks
- - a table to browse recently viewed documents
- - a table to browse favorites documents
+It is composed of four sections:
+ - A table to browse recently edited documents
+ - A list to access pending tasks
+ - A table to browse recently viewed documents
+ - A table to browse favorites documents
 
-### Overriding the dashboard
+## Overriding the Dashboard
 
-To use your own dashboard, you can simply deploy and override `nuxeo-home.html` in your own bundle like described in [this documentation]({{page page='web-ui-deployment#deploy_or_override'}}).
+To use your own dashboard, you can deploy and override `nuxeo-home.html` in your own bundle as described in [How to Deploy Additional Web UI Resources]({{page page='web-ui-deployment'}}#deploy_or_override).
