@@ -146,7 +146,7 @@ Below is an example of how to start a Parallel Review Workflow and complete it w
 1.  To start a parallel review on a given document, POST to the workflow endpoint or the workflow [adapter]({{page version='' space='nxdoc' page='rest-api-web-adapters'}}):
 
     ```
-    POST /api/v1/id/{documentId}/@workflow
+    POST http://NUXEO_SERVER/nuxeo/api/v1/id/{documentId}/@workflow
     {
         "entity-type":"workflow",
         "workflowModelName":"ParallelDocumentReview",
@@ -159,7 +159,7 @@ Below is an example of how to start a Parallel Review Workflow and complete it w
 2.  For each step, retrieve the respective task from the server, either via the `task` endpoint or `task` adapter.
 
     ```
-    GET /api/v1/id/{documentId}/@task?userId={userId}&workflowInstanceId={workflowId}&workflowModelName=ParallelDocumentReview
+    GET http://NUXEO_SERVER/nuxeo/api/v1/id/{documentId}/@task?userId={userId}&workflowInstanceId={workflowId}&workflowModelName=ParallelDocumentReview
     ```
 
     A task object is returned, with the respective `taskId`. In our case, the first step would return a Choose Participants task, where the user that started the workflow must choose the participants involved in the review. The task can than be completed with a PUT request to the `task` endpoint, the respective action being supplied at the end of the path.
@@ -167,7 +167,7 @@ Below is an example of how to start a Parallel Review Workflow and complete it w
 3.  To start the review, use the `start_review` action in the request.
 
     ```
-    PUT /api/v1/task/{taskId}/start_review
+    PUT http://NUXEO_SERVER/nuxeo/api/v1/task/{taskId}/start_review
     {
         "entity-type":"task",
         "id":"{taskId}",
@@ -186,7 +186,7 @@ Below is an example of how to start a Parallel Review Workflow and complete it w
 4.  The review could be approved via the following request:
 
     ```
-    PUT /api/v1/task/{taskId}/approve
+    PUT http://NUXEO_SERVER/nuxeo/api/v1/task/{taskId}/approve
     {
         "entity-type":"task",
         "id":"{tasId}",
@@ -199,7 +199,7 @@ Below is an example of how to start a Parallel Review Workflow and complete it w
 5.  Validating the review can be done as follows:
 
     ```
-    PUT /api/v1/task/{taskId}/validate
+    PUT http://NUXEO_SERVER/nuxeo/api/v1/task/{taskId}/validate
     {
         "entity-type":"task",
         "id":"{taskId}",
@@ -210,10 +210,10 @@ Below is an example of how to start a Parallel Review Workflow and complete it w
 ## Learn More
 
 *   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
-*   Checkout the Nuxeo REST API explorer of your instance at `https://NUXEO_SERVER/nuxeo/api/v1/doc`.
+*   Checkout the Nuxeo REST API explorer of your instance at `http://NUXEO_SERVER/nuxeo/api/v1/doc`.
 *   A client sample [nuxeo-travel-expenses](https://github.com/nuxeo/nuxeo-travel-expenses) (available on [GitHub](https://github.com/nuxeo/nuxeo-travel-expenses)) based on Web Components and [Polymer](https://www.polymer-project.org) demonstrates how to use the workflow REST API.
 
-&nbsp;
+* * *
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
@@ -224,8 +224,6 @@ Below is an example of how to start a Parallel Review Workflow and complete it w
 {{/panel}}
 </div>
 <div class="column medium-6">
-
-&nbsp;
 
 </div>
 </div>

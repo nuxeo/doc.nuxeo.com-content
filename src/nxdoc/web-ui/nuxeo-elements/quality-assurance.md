@@ -348,7 +348,7 @@ If your network environment (proxies, firewalls) doesn't allow queries inside UR
 See this GET Method URL example:
 
 ```
-https://NUXEO_SERVER/nuxeo/api/v1/query?currentPageIndex=0&pageSize=10&query=SELECT%20%2A%20FROM%20Document%20where%20ecm%3AprimaryType%20in%20%28%27UserProfile%27%29%20%20
+http://NUXEO_SERVER/nuxeo/api/v1/query?currentPageIndex=0&pageSize=10&query=SELECT%20%2A%20FROM%20Document%20where%20ecm%3AprimaryType%20in%20%28%27UserProfile%27%29%20%20
 ```
 
 **We recommend that you**:

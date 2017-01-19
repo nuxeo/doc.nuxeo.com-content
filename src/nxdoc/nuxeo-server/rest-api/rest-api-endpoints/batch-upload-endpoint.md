@@ -218,7 +218,7 @@ The old API using `/site/automation/batch/upload` is deprecated but kept for bac
 Before uploading any file, you need to initialize a batch, even if there is only one file to upload.
 
 ```
-POST /api/v1/upload/
+POST http://NUXEO_SERVER/nuxeo/api/v1/upload/
 ```
 
 This request returns a 201 *CREATED* status code with the following JSON data:
@@ -236,7 +236,7 @@ The batch ID can be seen as an upload session id, especially for a [resumable up
 You can do a simple POST with the payload containing your file, but a multipart encoded upload is also supported.
 
 ```
-POST /api/v1/upload/{batchId}/{fileIdx}
+POST http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileIdx}
 ```
 
 The `batchId` is the batch identifier. You need to use the one returned by the batch initialization request, otherwise you will get a 404 *Not Found* status code.
@@ -296,7 +296,7 @@ For this purpose the batch upload relies on the default [Transient Store]({{page
 ### Getting Information about the Batch Files
 
 ```
-GET /api/v1/upload/{batchId}
+GET http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}
 ```
 
 Returns a 200 *OK* status code if the batch contains at least one file and a 204 *No Content* status code if the batch doesn't contain any file.
@@ -310,7 +310,7 @@ JSON response data:
 ### Getting Information about a Specific Batch File
 
 ```
-GET /api/v1/upload/{batchId}/{fileIdx}
+GET http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileIdx}
 ```
 
 Returns a 200 *OK* status code if the batch contains a file with the given index and a 404 *Not Found* status code otherwise.
@@ -324,7 +324,7 @@ JSON response data:
 ### Dropping a Batch
 
 ```
-DELETE /api/v1/upload/{batchId}
+DELETE http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}
 ```
 
 Returns a 204 *No Content* status code with the following JSON data:
@@ -338,7 +338,7 @@ By default, executing a batch will automatically remove it. You can prevent this
 ### Deleting a File from a Batch
 
 ```
-DELETE /api/v1/upload/{batchId}/{fileId}
+DELETE http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileId}
 ```
 
 Returns a 204 *No Content* and removes the file from the batch.
@@ -358,7 +358,7 @@ Chunking is a good idea because:
 As for uploading a whole file, you can do a simple POST with the payload containing your chunk.
 
 ```
-POST /api/v1/upload/{batchId}/{fileIdx}
+POST http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileIdx}
 ```
 
 The `batchId` and `fileIdx` serve the same purpose as for uploading a whole file. They should be common to all the chunks you want to upload for a given file in the batch.
@@ -457,7 +457,7 @@ You can execute an Automation chain or an Automation operation using the blobs a
 To place the blobs as input, call a specific batch operation by passing the `operationId` and `batchId` path parameters:
 
 ```
-POST /api/v1/upload/{batchId}/execute/{operationId}
+POST http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/execute/{operationId}
 Accept: application/json+nxentity, */*
 Content-Type: application/json+nxrequest; charset=UTF-8
 ```
@@ -469,7 +469,7 @@ Content-Type: application/json+nxrequest; charset=UTF-8
 Optionally you can use the `fileIdx` path parameter to specify the index of the file inside the batch that you want to use as input of the chain or operation to execute.
 
 ```
-POST /api/v1/upload/{batchId}/{fileIdx}/execute/{operationId}
+POST http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileIdx}/execute/{operationId}
 ```
 
 This way of calling an Automation operation is actually used in the default UI to manage Drag & Drop:

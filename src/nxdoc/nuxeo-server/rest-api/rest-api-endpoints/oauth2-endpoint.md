@@ -20,7 +20,7 @@ For a given provider and user, the OAuth2 endpoint provides access to:
 - authentication data
 - a valid access token
 
-## Retrieving authentication data
+## Retrieving Authentication Data
 
 Authentication data for a particular OAuth2 provider can be retrieved from `/nuxeo/api/v1/oauth2/provider/{providerId}`,
 including the following details:
@@ -64,7 +64,7 @@ including the following details:
 
 {{#> panel type='code' heading='Request'}}
 
-`GET http://localhost:8080/nuxeo/api/v1/oauth2/provider/googledrive`
+`GET http://NUXEO_SERVER/nuxeo/api/v1/oauth2/provider/googledrive`
 
 {{/panel}}
 
@@ -81,7 +81,7 @@ including the following details:
 ```
 {{/panel}}
 
-## Getting an access token
+## Getting an Access Token
 
 A valid access token for the current user can be retrieved via `/nuxeo/api/v1/oauth2/provider/{providerId}/token`. If the token currently stored by the Nuxeo server is already expired, a new one will be requested from the service provider.
 
@@ -89,7 +89,7 @@ A valid access token for the current user can be retrieved via `/nuxeo/api/v1/oa
 
 {{#> panel type='code' heading='Request'}}
 
-`GET http://localhost:8080/nuxeo/api/v1/oauth2/provider/googledrive/token`
+`GET http://NUXEO_SERVER/nuxeo/api/v1/oauth2/provider/googledrive/token`
 
 {{/panel}}
 

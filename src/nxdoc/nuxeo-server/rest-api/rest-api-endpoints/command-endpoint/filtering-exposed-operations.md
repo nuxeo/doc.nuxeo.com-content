@@ -128,7 +128,7 @@ The REST operation filters provide an [extension point]({{page page='runtime-and
 
 Here is an example of such an extension point:
 
-```html/xml
+```xml
 <extension target="org.nuxeo.ecm.automation.server.AutomationServer" point="bindings">
   <binding name="Document.Delete" disabled="true"/>
   <binding name="audit" chain="true">
@@ -187,7 +187,7 @@ Here is the complete list of attributes and elements you can use in the extensio
       </tr>
       <tr>
         <td>`secure`</td>
-        <td>If `true` the request **must** be done through a secured channel like HTTPS. Even if the user is in the specifiec grou the operation is not accessible if the connection is not secured.</td>
+        <td>If `true` the request **must** be done through a secured channel like HTTPS. Even if the user is in the specific group the operation is not accessible if the connection is not secured.</td>
         <td>`false`</td>
       </tr>
     </tbody>

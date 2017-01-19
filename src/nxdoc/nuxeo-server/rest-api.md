@@ -539,7 +539,7 @@ history:
 
 Nuxeo REST API is available on Nuxeo Platform server. All endpoints follow the URL:
 
-`https://NUXEO_SERVER/nuxeo/api/v1/*`
+`http://NUXEO_SERVER/nuxeo/api/v1/*`
 
 This page explains the organization and scope of the existing endpoints and other additional mechanisms which extend the behavior of the API.
 

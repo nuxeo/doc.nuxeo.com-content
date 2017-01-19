@@ -339,9 +339,9 @@ These properties are particularly relevant for creating and updating saved searc
 {{#> panel type='code' heading='Requests'}}
 
 ```
-https://NUXEO_SERVER/nuxeo/api/v1/search/lang/NXQL/execute?query=select * from Document
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/lang/NXQL/execute?query=select * from Document
 
-https://NUXEO_SERVER/nuxeo/api/v1/search/lang/NXQL/execute?query=select * from Document&pageSize=2&currentPageIndex=1
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/lang/NXQL/execute?query=select * from Document&pageSize=2&currentPageIndex=1
 ```
 
 {{/panel}}
@@ -445,7 +445,7 @@ Here are different use cases for defining page providers and making it possible 
 {{#> panel type='code' heading='Example Request'}}
 
 ```
-/api/v1/search/pp/latest_docs/execute
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/pp/latest_docs/execute
 
 ```
 
@@ -468,7 +468,7 @@ Here are different use cases for defining page providers and making it possible 
 {{#> panel type='code' heading='Example'}}
 
 ```
-/api/v1/search/pp/tree_children/execute?queryParams=47dd6d8d-d8d0-4a09-9e3e-e30fc8877df1
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/pp/tree_children/execute?queryParams=47dd6d8d-d8d0-4a09-9e3e-e30fc8877df1
 
 ```
 
@@ -489,7 +489,7 @@ Here are different use cases for defining page providers and making it possible 
 {{#> panel type='code' heading='Example'}}
 
 ```
-/api/v1/search/pp/docs_by_title_and_desc/execute?title=mytitle&desc=mydesc
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/pp/docs_by_title_and_desc/execute?title=mytitle&desc=mydesc
 
 ```
 
@@ -512,9 +512,9 @@ Here are different use cases for defining page providers and making it possible 
 {{#> panel type='code' heading='Example'}}
 
 ```
-/api/v1/search/pp/docs_by_title_if_any/execute?title=mytitle
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/pp/docs_by_title_if_any/execute?title=mytitle
 
-/api/v1/search/pp/docs_by_title_if_any/execute
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/pp/docs_by_title_if_any/execute
 ```
 
 {{/panel}}
@@ -546,7 +546,7 @@ Assuming a document type `NamedParamDoc` and the associated schema prefixed `np`
 {{#> panel type='code' heading='Example'}}
 
 ```
-/api/v1/search/pp/docs_by_title_complex/execute?np%3Atitle=mytitle&np%3AisCheckedIn=true
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/pp/docs_by_title_complex/execute?np%3Atitle=mytitle&np%3AisCheckedIn=true
 ```
 
 {{/panel}}
@@ -637,7 +637,7 @@ Assuming a document type `NamedParamDoc` and the associated schema prefixed `np`
 {{/panel}}{{#> panel type='code' heading='Examples'}}
 
 ```
-/api/v1/search/pp/aggregates_1/execute
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/pp/aggregates_1/execute
 
 ```
 
@@ -804,7 +804,7 @@ Assuming a document type `NamedParamDoc` and the associated schema prefixed `np`
 {{#> panel type='code' heading='Request'}}
 
 ```
-POST /api/v1/search/saved
+POST http://NUXEO_SERVER/nuxeo/api/v1/search/saved
 {
   "entity-type": "savedSearch",
   "title": "search by query",
@@ -822,7 +822,7 @@ POST /api/v1/search/saved
 {{#> panel type='code' heading='Request'}}
 
 ```
-POST /api/v1/search/saved
+POST http://NUXEO_SERVER/nuxeo/api/v1/search/saved
 {
   "entity-type": "savedSearch",
   "title": "search by search document model",
@@ -844,7 +844,7 @@ Note that the properties of the search document model are passed in the `params`
 {{#> panel type='code' heading='Request'}}
 
 ```
-POST /api/v1/search/saved
+POST http://NUXEO_SERVER/nuxeo/api/v1/search/saved
 {
   "entity-type": "savedSearch",
   "title": "my search by page provider",
@@ -861,7 +861,7 @@ POST /api/v1/search/saved
 {{#> panel type='code' heading='Request'}}
 
 ```
-GET /api/v1/search/saved
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/saved
 ```
 
 {{/panel}}{{#> panel type='code' heading='Response'}}
@@ -929,7 +929,7 @@ GET /api/v1/search/saved
 {{#> panel type='code' heading='Request'}}
 
 ```
-GET /api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c
 ```
 
 {{/panel}}{{#> panel type='code' heading='Response'}}
@@ -961,7 +961,7 @@ In the above example the search has a search document model, containing its own 
 
 ```
 [HEADER] properties: default_search
-GET /api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c
 ```
 
 {{/panel}}{{#> panel type='code' heading='Response'}}
@@ -1016,7 +1016,7 @@ Executing a search with stored parameters:
 {{#> panel type='code' heading='Request'}}
 
 ```
-GET /api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c/execute
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c/execute
 ```
 
 {{/panel}}
@@ -1026,7 +1026,7 @@ Overriding a stored execution parameters, in this case `pageSize`:
 {{#> panel type='code' heading='Request'}}
 
 ```
-GET /api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c/execute?pageSize=5
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c/execute?pageSize=5
 ```
 
 {{/panel}}
@@ -1034,7 +1034,7 @@ GET /api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362643b6c/execute?pageSize=5
 ## Learn More
 
 *   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
-*   Checkout the Nuxeo REST API explorer of your instance at `https://NUXEO_SERVER/nuxeo/api/v1/doc`.
+*   Checkout the Nuxeo REST API explorer of your instance at `http://NUXEO_SERVER/nuxeo/api/v1/doc`.
 
 * * *
 

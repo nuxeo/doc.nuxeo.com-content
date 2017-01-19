@@ -397,14 +397,14 @@ The `input` parameter is a string that acts as a reference to the real object to
 
 *   To reference a **document**, use the document absolute path or document UID preceded by the string `doc:`. For example:
 
-    <nobr>`"doc:/default-domain/workspaces/myworkspace"`</nobr> or
-    <nobr>`"doc:96bfb9cb-a13d-48a2-9bbd-9341fcf24801"`</nobr>
+    <nobr>`doc:/default-domain/workspaces/myworkspace`</nobr> or
+    <nobr>`doc:96bfb9cb-a13d-48a2-9bbd-9341fcf24801`</nobr>
 
 
 *   To reference a **document list** use a comma-separated list of absolute document paths or UIDs preceded by the string `docs:`. For example:
 
-    <nobr>`"docs:/default-domain/workspaces/myworkspace,`</nobr>
-    <nobr>` 96bfb9cb-a13d-48a2-9bbd-9341fcf24801"`</nobr>
+    <nobr>`docs:/default-domain/workspaces/myworkspace,`</nobr>
+    <nobr>` 96bfb9cb-a13d-48a2-9bbd-9341fcf24801`</nobr>
 
 
 *   A **blob** cannot be referenced by a string locator as it is usually on the client file system or as raw binary data. You must therefore use a `multipart/related` request that encapsulates your JSON request as the root part as `application/json+nxrequest` content and the blob binary content in a related part.
@@ -427,10 +427,10 @@ Here are some rules on how to encode operation parameters:
 *   `boolean`: "true" or "false".
 *   `document`: Use the document UID or the absolute document path.
 *   `documents`: Use a comma separated list of document references.
-*   **EL expression**: put the "`expr:`" string before your EL expression. (`expr: Document.path`).
-*   **EL template**: put the "`expr:`" string before your template. (`expr: SELECT * FROM Document WHERE dc:title=@{my_var}`)
+*   **EL expression**: put the `expr:` string before your EL expression. (`expr: Document.path`).
+*   **EL template**: put the `expr:` string before your template. (`expr: SELECT * FROM Document WHERE dc:title=@{my_var}`)
 
-    Note that in EL expressions you must also specify relative paths (relative to the context document) using "`expr: ./my/doc`".
+    Note that in EL expressions you must also specify relative paths (relative to the context document) using `expr: ./my/doc`.
 
 All these encoding rules are the same as those used when defining operation chains in Nuxeo XML extensions.
 
@@ -454,12 +454,12 @@ An operation can have one of the following outputs:
       <tr>
         <td colspan="1">**document**</td>
         <td class="small-2">A repository document</td>
-        <td colspan="1">Returns a JSON object describing the document. Content-Type is `**application/json+nxentity**`</td>
+        <td colspan="1">Returns a JSON object describing the document. Content-Type is `application/json+nxentity`</td>
       </tr>
       <tr>
         <td colspan="1">**document list**</td>
         <td class="small-2">A list of documents</td>
-        <td colspan="1">Returns a JSON object describing the list of documents. Content-Type is `**application/json+nxentity**`</td>
+        <td colspan="1">Returns a JSON object describing the list of documents. Content-Type is `application/json+nxentity`</td>
       </tr>
       <tr>
         <td colspan="1">**blob**</td>
@@ -474,7 +474,7 @@ An operation can have one of the following outputs:
       <tr>
         <td colspan="1">**exception**</td>
         <td class="small-2"></td>
-        <td colspan="1">Returns HTTP **400**. The content is the server exception encoded as a JSON object. The used Content-Type is `**application/json+nxentity**`. When an exception occurs, the server tries to return a meaningful status code. If no suitable status code is found, a generic 500 code (server error) is used.</td>
+        <td colspan="1">Returns HTTP **400**. The content is the server exception encoded as a JSON object. The used Content-Type is `application/json+nxentity`. When an exception occurs, the server tries to return a meaningful status code. If no suitable status code is found, a generic 500 code (server error) is used.</td>
       </tr>
     </tbody>
   </table>
@@ -482,7 +482,7 @@ An operation can have one of the following outputs:
 
 ### Document
 
-Each time returned objects are encoded as JSON objects, the `**application/json+nxentity**` Content-Type is used. Only **document**, **documents** and **exception** objects are encoded as JSON.
+Each time returned objects are encoded as JSON objects, the `application/json+nxentity` Content-Type is used. Only **document**, **documents** and **exception** objects are encoded as JSON.
 
 A JSON **document** entity contains the minimum required information about the document as top level entries.
 
@@ -733,7 +733,7 @@ Each operation and chain signature is fully described in order to permit operati
 
 The `url` property of an operation or automation chain is the relative path to use to execute the operation. For the service URL `http://NUXEO_SERVER/nuxeo/site/automation` and the `Blob.Attach` operation with the `url` `Blob.Attach`, the complete URL for the operation would be: `http://NUXEO_SERVER/nuxeo/site/automation/Blob.Attach`.
 
-The `paths` property is used to specify various relative paths (relative to the automation service) of services exposed by the automation server. In the above example you can see that the `"login"` service is using the relative path `"login"`.
+The `paths` property is used to specify various relative paths (relative to the automation service) of services exposed by the automation server. In the above example you can see that the `login` service is using the relative path `login`.
 
 This service can be used to sign in and check if the username/password is valid. To use this service you should do a POST to the login URL (`http://NUXEO_SERVER/nuxeo/site/automation/login`) using basic authentication. If authentication fails you will receive a 401 HTTP response. Otherwise the 200 code is returned.
 
@@ -744,7 +744,7 @@ Note that `WWW-Authenticate` server response is not yet implemented so you need 
 ### Invoking A Simple Operation
 
 ```
-POST /nuxeo/site/automation/Document.Fetch HTTP/1.1
+POST http://NUXEO_SERVER/nuxeo/site/automation/Document.Fetch HTTP/1.1
 Accept: application/json+nxentity, */*
 Content-Type: application/json+nxrequest; charset=UTF-8
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
@@ -757,7 +757,7 @@ Host: localhost:8080
 Here is an example invoking the `Blob.Attach` operation on a document given by its path (`/default-domain/workspaces/myws/file` in our example).
 
 ```
-POST /nuxeo/site/automation/Blob.Attach HTTP/1.1
+POST http://NUXEO_SERVER/nuxeo/site/automation/Blob.Attach HTTP/1.1
 Accept: application/json+nxentity, */*
 Content-Type: multipart/related;
     boundary="----=_Part_0_130438955.1274713628403"; type="application/json+nxrequest"; start="request"
@@ -803,4 +803,4 @@ This operation will return the document content specified by the `value` paramet
 ## Learn More
 
 *   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
-*   Checkout the Nuxeo REST API explorer of your instance at `https://NUXEO_SERVER/nuxeo/api/v1/doc`.
+*   Checkout the Nuxeo REST API explorer of your instance at `http://NUXEO_SERVER/nuxeo/api/v1/doc`.
