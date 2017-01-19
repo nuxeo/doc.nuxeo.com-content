@@ -2,10 +2,10 @@
 title: Collections
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - collection
     - nuxeo-drive
     - collection-component
