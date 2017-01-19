@@ -217,19 +217,19 @@ The old API using `/site/automation/batch/upload` is deprecated but kept for bac
 
 Before uploading any file, you need to initialize a batch, even if there is only one file to upload.
 
+This handshake phase is mandatory to acquire a server-side generated batch ID to be used in subsequent requests as part of the REST resource path.
+
 ```
 POST http://NUXEO_SERVER/nuxeo/api/v1/upload/
 ```
 
-This request returns a 201 *CREATED* status code with the following JSON data:
+This request returns a 201 CREATED status code with the following JSON data:
 
 ```javascript
 {"batchId": batchId}
 ```
 
-**This handshake phase is mandatory to acquire a server-side generated batch ID to be used in subsequent requests as part of the REST resource path.**
-
-The batch ID can be seen as an upload session id, especially for a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}}#-anchor-uploadingafileinchunks-uploading-a-file-in-chunks-resumable-).
+The batch id can be seen as an upload session id, especially for a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}}#-anchor-uploadingafileinchunks-uploading-a-file-in-chunks-resumable-).
 
 ### Uploading a File
 
@@ -239,7 +239,7 @@ You can do a simple POST with the payload containing your file, but a multipart 
 POST http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileIdx}
 ```
 
-The `batchId` is the batch identifier. You need to use the one returned by the batch initialization request, otherwise you will get a 404 *Not Found* status code.
+The `batchId` is the batch identifier. You need to use the one returned by the batch initialization request, otherwise you will get a 404 Not Found status code.
 
 The `fileIdx` is the index of the file inside the batch. The file can be referenced later with this index and it keeps track of the client-side ordering, since the order in which the server receives the files may not be the same.
 
@@ -264,7 +264,7 @@ You also need to set some custom HTTP headers:
       </tr>
       <tr>
         <td colspan="1">`Content-Type`</td>
-        <td colspan="1">Should be set to `"application/octet-stream"`</td>
+        <td colspan="1">Should be set to `application/octet-stream`</td>
       </tr>
       <tr>
         <td colspan="1">`Content-Length`</td>
@@ -276,7 +276,7 @@ You also need to set some custom HTTP headers:
   </table>
 </div>
 
-Returns a 201 *CREATED* status code with the following JSON data:
+Returns a 201 CREATED status code with the following JSON data:
 
 ```javascript
 {"batchId": batchId, "fileIdx": fileIdx, "uploadType": "normal", "uploadedSize": xxx}
@@ -299,7 +299,7 @@ For this purpose the batch upload relies on the default [Transient Store]({{page
 GET http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}
 ```
 
-Returns a 200 *OK* status code if the batch contains at least one file and a 204 *No Content* status code if the batch doesn't contain any file.
+Returns a 200 OK status code if the batch contains at least one file and a 204 No Content status code if the batch doesn't contain any file.
 
 JSON response data:
 
@@ -313,7 +313,7 @@ JSON response data:
 GET http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileIdx}
 ```
 
-Returns a 200 *OK* status code if the batch contains a file with the given index and a 404 *Not Found* status code otherwise.
+Returns a 200 OK status code if the batch contains a file with the given index and a 404 Not Found status code otherwise.
 
 JSON response data:
 
@@ -327,7 +327,7 @@ JSON response data:
 DELETE http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}
 ```
 
-Returns a 204 *No Content* status code with the following JSON data:
+Returns a 204 No Content status code with the following JSON data:
 
 ```javascript
 {"batchId": batchId, "dropped": "true"}
@@ -341,7 +341,7 @@ By default, executing a batch will automatically remove it. You can prevent this
 DELETE http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileId}
 ```
 
-Returns a 204 *No Content* and removes the file from the batch.
+Returns a 204 No Content and removes the file from the batch.
 
 ## Uploading a File in Chunks
 
@@ -349,9 +349,9 @@ Using a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}
 
 Chunking is a good idea because:
 
-*   It allows you to manage upload resumption with enough granularity (*restart with chunk x*).
-*   It allows multiplexing (*upload on multiple TCP streams*)
-*   It allows you to overcome the limitations of some reverse proxies (*limits the risk of having a POST considered as too big*).
+*   It allows you to manage upload resumption with enough granularity (restart with chunk x).
+*   It allows multiplexing (upload on multiple TCP streams)
+*   It allows you to overcome the limitations of some reverse proxies (limits the risk of having a POST considered as too big).
 
 ### Uploading a Chunk
 
@@ -374,7 +374,7 @@ You need to set the same HTTP headers as for a whole file, adding some extra one
       </tr>
       <tr>
         <td colspan="1">`X-Upload-Type`</td>
-        <td colspan="1">`"chunked"`</td>
+        <td colspan="1">`chunked`</td>
       </tr>
       <tr>
         <td colspan="1">`X-Upload-Chunk-Index`</td>
@@ -398,7 +398,7 @@ You need to set the same HTTP headers as for a whole file, adding some extra one
       </tr>
       <tr>
         <td colspan="1">`Content-Type`</td>
-        <td colspan="1">Should be set to `"application/octet-stream"`</td>
+        <td colspan="1">Should be set to `application/octet-stream`</td>
       </tr>
       <tr>
         <td colspan="1">`Content-Length`</td>
@@ -422,7 +422,7 @@ Optionally depending on the HTTP client you are using you might need to add the 
 
 For a file uploaded in one go, the chunks attached to the batch are stored on temporary disk storage until the batch is executed or dropped.
 
-Returns a 201 *CREATED* status code for a complete chunked file and a 308 *Resume Incomplete* status code for an incomplete chunked file.
+Returns a 201 CREATED status code for a complete chunked file and a 308 Resume Incomplete status code for an incomplete chunked file.
 
 JSON response data:
 
@@ -433,14 +433,14 @@ JSON response data:
 ### Getting Information about a Chunked File
 
 ```
-GET /api/v1/upload/{batchId}/{fileIdx}
+GET http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileIdx}
 ```
 
-Returns a 200 *OK* status code for a complete chunked file and a 308 *Resume Incomplete* status code for an incomplete chunked file.
+Returns a 200 OK status code for a complete chunked file and a 308 Resume Incomplete status code for an incomplete chunked file.
 
 **It is this specific 308 _Resume Incomplete_ status code that lets you know that you either need to upload the missing chunks or to resume an interrupted file upload.**
 
-If the batch doesn't contain any file with the given index, returns a 404 *Not Found* status code.
+If the batch doesn't contain any file with the given index, returns a 404 Not Found status code.
 
 JSON response data:
 
