@@ -161,8 +161,8 @@ Disk usage by the Nuxeo Platform is stable and about 300&nbsp;MB.
 
 It is possible to spread the filesystem resources over multiple disks or partitions: binaries, Nuxeo data, cache data, temporary files. See the page [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}}) for their configuration.
 
-*   **Binaries:**&nbsp;By default, they are stored under a sub-directory of the `data` directory, without compression but with no duplication.
-*   **Cache files:**&nbsp;< 1&nbsp;GB (including cache of Nuxeo Packages and hotfixes).
+*   **Binaries:** By default, they are stored under a sub-directory of the `data` directory, without compression but with no duplication.
+*   **Cache files:** < 1&nbsp;GB (including cache of Nuxeo Packages and hotfixes).
 *   **Temporary files** (when uploading for instance): Reserve some space which depends on the maximum size of imported files.
     The temporary directory can be configured using `nuxeo.tmp.dir` for instance.
     Usually: 1&nbsp;GB + the maximum size of imported documents.
@@ -191,8 +191,6 @@ other will compress big fields (MongoDB will compress everything).
 ### Backup
 
 Based on the above estimations, you must reserve dedicated place(s) to store the backup locally or remotely. Depending on your infrastructure choices, you can use compression, streaming, hot backup, rsync...
-
-&nbsp;
 
 * * *
 
