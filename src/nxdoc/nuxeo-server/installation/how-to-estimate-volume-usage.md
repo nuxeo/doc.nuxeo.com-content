@@ -2,7 +2,7 @@
 title: How to Estimate Volume Usage
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-19'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: ''
         topics: Database
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - database
     - howto
     - excerpt
@@ -177,11 +177,15 @@ The database will store:
 *   Extracted text volume x2
 *   Metadata
 
+Note that the volume depends a lot of the backend, some database will not compress data
+other will compress big fields (MongoDB will compress everything).
+
 ### Elasticsearch
 
 *   About 30% of the extracted text volume.
 *   Size will vary according to the number of populated fields and full-text fields.
-    Note that the `_source` field that stores the JSON representation of a document is compressed.
+    Note that the `_source` field that stores the JSON representation of a document is lightly compressed.
+*   The audit index will grow over time depending on the activity.
 *   Each replica needs the same amount of disk space.
 
 ### Backup
