@@ -204,6 +204,68 @@ This doesn't fit in the following situations:
 *   You have several files to send, but prefer to send them as separated chunks (You have an HTTP proxy that will limit POST size)
 *   You want to upload files as soon as possible and then run the operation when everything has been uploaded on the server (You upload pictures you select from a mobile device)
 
+## Batch Upload Endpoint
+
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th>Path</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td colspan="2">**UPLOADING A FILE**</td>
+      </tr>
+      <tr>
+        <td>POST `/api/v1/upload/`</td>
+        <td>Initialize a batch</td>
+      </tr>
+      <tr>
+        <td>POST `/api/v1/upload/{batchId}/{fileIdx}`</td>
+        <td>Upload a file (see below for details on the [necessary headers]({{page page='batch-upload-endpoint#uploading-a-file'}}))</td>
+      </tr>
+      <tr>
+        <td>GET `/api/v1/upload/{batchId}`</td>
+        <td>Get information about a batch file</td>
+      </tr>
+      <tr>
+        <td>GET `/api/v1/upload/{batchId}/{fileIdx}`</td>
+        <td>Get information about a specific batch file</td>
+      </tr>
+      <tr>
+        <td>DELETE `/api/v1/upload/{batchId}`</td>
+        <td>Drop a batch</td>
+      </tr>
+      <tr>
+        <td>DELETE `/api/v1/upload/{batchId}/{fileId}`</td>
+        <td>Delete a file from a batch</td>
+      </tr>
+      <tr>
+        <td colspan="2">**UPLOADING A FILE IN CHUNKS**</td>
+      </tr>
+      <tr>
+        <td>POST `/api/v1/upload/{batchId}/{fileIdx}`</td>
+        <td>Upload a chunk (see below for details on the [necessary headers]({{page page='batch-upload-endpoint#uploading-a-chunk'}}))</td>
+      </tr>
+      <tr>
+        <td>GET `/api/v1/upload/{batchId}/{fileIdx}`</td>
+        <td>Get information about a chunked file</td>
+      </tr>
+      <tr>
+        <td colspan="2">**USING FILES FROM A BATCH**</td>
+      </tr>
+      <tr>
+        <td>POST `/api/v1/upload/{batchId}/execute/{operationId}`</td>
+        <td>Execute an Automation chain or operation using the blobs associated to a batch as input</td>
+      </tr>
+      <tr>
+        <td>POST `/api/v1/upload/{batchId}/{fileIdx}/execute/{operationId}`</td>
+        <td>Execute an Automation chain or operation using a specific file inside the batch as input</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ## Uploading Files
 
 {{#> callout type='info' }}
