@@ -2,7 +2,7 @@
 title: How to Estimate Volume Usage
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-19'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: ''
         topics: Database
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - database
     - howto
     - excerpt
@@ -161,8 +161,8 @@ Disk usage by the Nuxeo Platform is stable and about 300&nbsp;MB.
 
 It is possible to spread the filesystem resources over multiple disks or partitions: binaries, Nuxeo data, cache data, temporary files. See the page [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}}) for their configuration.
 
-*   **Binaries:**&nbsp;By default, they are stored under a sub-directory of the `data` directory, without compression but with no duplication.
-*   **Cache files:**&nbsp;< 1&nbsp;GB (including cache of Nuxeo Packages and hotfixes).
+*   **Binaries:** By default, they are stored under a sub-directory of the `data` directory, without compression but with no duplication.
+*   **Cache files:** < 1&nbsp;GB (including cache of Nuxeo Packages and hotfixes).
 *   **Temporary files** (when uploading for instance): Reserve some space which depends on the maximum size of imported files.
     The temporary directory can be configured using `nuxeo.tmp.dir` for instance.
     Usually: 1&nbsp;GB + the maximum size of imported documents.
@@ -177,18 +177,20 @@ The database will store:
 *   Extracted text volume x2
 *   Metadata
 
+Note that the volume depends a lot of the backend, some database will not compress data
+other will compress big fields (MongoDB will compress everything).
+
 ### Elasticsearch
 
 *   About 30% of the extracted text volume.
 *   Size will vary according to the number of populated fields and full-text fields.
-    Note that the `_source` field that stores the JSON representation of a document is compressed.
+    Note that the `_source` field that stores the JSON representation of a document is lightly compressed.
+*   The audit index will grow over time depending on the activity.
 *   Each replica needs the same amount of disk space.
 
 ### Backup
 
 Based on the above estimations, you must reserve dedicated place(s) to store the backup locally or remotely. Depending on your infrastructure choices, you can use compression, streaming, hot backup, rsync...
-
-&nbsp;
 
 * * *
 
