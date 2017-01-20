@@ -2,9 +2,10 @@
 title: Serial Document Workflow
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
+    - lts2016-ok
     - serial-workflow
     - excerpt
     - multiexcerpt-include

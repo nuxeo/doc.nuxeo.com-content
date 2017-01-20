@@ -2,10 +2,10 @@
 title: Workflow Naming Conventions
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - workflow
     - workflow-component
     - excerpt
@@ -110,7 +110,7 @@ We provide in this page a few rules for facilitating maintenance of your workflo
 
 *   The workflow name is the workflow definition name as it was configured in Studio. Only alphanumeric characters, '_' and '-' are allowed. Also follow this rule when building workflows without Studio.
     Ex: Purchase Order = por
-*   Start transition technical name and nodes not-translated labels with this prefix.&nbsp;Main reason is that the transition name and node labels are directly used for translations. Buttons id doesn't need to be prefixed. Buttons label translation key should be: _workflow_prefix.node_name.button_id_
+*   Start transition technical name and nodes not-translated labels with this prefix. Main reason is that the transition name and node labels are directly used for translations. Buttons id doesn't need to be prefixed. Buttons label translation key should be: _workflow_prefix.node_name.button_id_
 *   Use _node_name_.directive for the content of the directive ex: prl_choose_particiants.directive. This improves maintenability of the translation as you better now what it matches.
 *   In translations, use verbs for tasks (ex: "Choose Participants"), verbs for buttons (ex: "Reject") and nouns for transitions (ex: "Validation"). This will greatly improve readability of your graph, and facilitate the flow.
 
@@ -118,15 +118,15 @@ We provide in this page a few rules for facilitating maintenance of your workflo
 
 Consider having two kinds of automaton chains.
 
-*   Automation chains that are "entry point" automation chains, bound to input, output, transition or escalation.&nbsp;Name those with the following convention:
+*   Automation chains that are "entry point" automation chains, bound to input, output, transition or escalation. Name those with the following convention:
     *   input chain: project_prefix-workflow_prefix-node_name-input
     *   output chain: project_prefix-workflow_prefix-node_name-output
     *   transition chain: project_prefix-workflow_prefix-node_name-transition_name
     *   escalation rule chain: project_prefix-workflow_prefix-node_name-escalation_rule_name
-*   Automations chains that are target to do one thing: they are focused on an objective and do nothing else.&nbsp;Name those with the following convention
+*   Automations chains that are target to do one thing: they are focused on an objective and do nothing else. Name those with the following convention
     *   project_prefix-workflow_prefix-doThis (You can even remove the workflow prefix if you think of using it in many workflows).
 
-Usually you will reference the second kind of automation chains in the first one.&nbsp;That way, you will very easily add new features/ small implementation details to each node whenever you want, without having to refactor everything each time. (Note that in the future, we will want to be able to contribute several input, output, etc. &hellip; chains to avoid the first kind of operations chains.)
+Usually you will reference the second kind of automation chains in the first one. That way, you will very easily add new features/ small implementation details to each node whenever you want, without having to refactor everything each time. (Note that in the future, we will want to be able to contribute several input, output, etc. &hellip; chains to avoid the first kind of operations chains.)
 
 ## <span style="color: rgb(0,0,0);">Workflow and versioning
 </span>
@@ -137,4 +137,4 @@ A workflow instance is created by copy form the workflow model when you start a 
 
 {{/callout}}
 
-You can have some troubles if you change the behavior of a chain let's say the chain "wkf-validate-input" in such a way that the new behavior is not compatible with what expects the former graph definition. One way to handle the situation correctly is to have a suffix versioning on automation chain ids. _You duplicate the automaton chain and add the suffix _1 , _2,&nbsp;3 &nbsp;to the new name, to be able to easily do some maintenance on both chains if necessary. So for the new version of your graph with an impacting change, you would use "wkf-validate-input_01" and you will not delete&nbsp;wkf-validate-input as long as some old instances are using it_.
+You can have some troubles if you change the behavior of a chain let's say the chain "wkf-validate-input" in such a way that the new behavior is not compatible with what expects the former graph definition. One way to handle the situation correctly is to have a suffix versioning on automation chain ids. _You duplicate the automaton chain and add the suffix _1 , _2, 3  to the new name, to be able to easily do some maintenance on both chains if necessary. So for the new version of your graph with an impacting change, you would use "wkf-validate-input_01" and you will not delete wkf-validate-input as long as some old instances are using it_.

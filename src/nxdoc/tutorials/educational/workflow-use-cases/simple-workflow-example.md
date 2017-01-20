@@ -2,10 +2,10 @@
 title: Simple Workflow Example
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - excerpt
 toc: true
 confluence:
@@ -273,7 +273,7 @@ history:
         version: '1'
 
 ---
-## Use Case&nbsp;
+## Use Case
 
 {{! excerpt}}
 
@@ -283,14 +283,14 @@ Company C has decided to be more rigorous on proposals sent by the sales team. A
 
 The graph we want is like this:
 
-![](https://www.lucidchart.com/publicSegments/view/54edd493-2438-46d6-8c71-742e0a00c1d3/image.png ?w=500)
+![](https://www.lucidchart.com/publicSegments/view/54edd493-2438-46d6-8c71-742e0a00c1d3/image.png?w=500)
 
 ## Prerequisites
 
 The following operations have to be done in your Nuxeo Platform before following this tutorial:
 
 *   Create a user having for id "Jack".
-*   Give Jack read and edit&nbsp;access on the domain.
+*   Give Jack read and edit access on the domain.
 *   Create a user group having for id "Internal_Lawyers".
 *   Populate the "Internal_Lawyers" group with at least one user.
 *   Create the user that will launch the workflow.
@@ -337,11 +337,11 @@ It will already have some of the needed transitions and buttons pre-configured: 
 
 #### Configuring the Technical Validation Node
 
-1.  Hover on the&nbsp;**Accept/Reject** node you just dropped and click on the **Edit** icon&nbsp;![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}})&nbsp;that appears to open the node properties.
+1.  Hover on the **Accept/Reject** node you just dropped and click on the **Edit** icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) that appears to open the node properties.
     ![]({{file name='Simple_Workflow_005.png'}} ?w=150,border=true,thumbnail=true)
 2.  In the **General** tab, rename the title &ldquo;Accept/Reject&rdquo; by "Technical validation" and add `CurrentDate.days(5)` in front of the Due date expression.
     ![](https://www.lucidchart.com/publicSegments/view/54ee066d-64ac-4ce4-a5aa-1f4b0a004dd0/image.png ?w=450,border=true)
-3.  Add a statical assignee ("Jack"): Click on the "Add" link in front of the "Assignees" field. Add the "Assignees expression"&nbsp;`NodeVariables["assignees"]`.
+3.  Add a statical assignee ("Jack"): Click on the "Add" link in front of the "Assignees" field. Add the "Assignees expression" `NodeVariables["assignees"]`.
     We will leave aside the &ldquo;Grant permission to task assignees&rdquo; field blank.
     ![](https://www.lucidchart.com/publicSegments/view/54ee07be-a064-41cf-bae5-7b8c0a00c1d4/image.png ?w=450,h=318,border=true)
 4.  Click on the **Save** button of the popup.
@@ -355,7 +355,7 @@ This variable will be named &ldquo;hoo_comment&rdquo;.
 
 **To add the workflow variables:**
 
-1.  Click on the&nbsp;**Variables** tab of the workflow.
+1.  Click on the **Variables** tab of the workflow.
 2.  Add the head of operation's comment variable and name it `hoo_comment`. It is like editing a schema.
 3.  Add the juridical advisor's comment variable: `juridical_comment`.
 4.  Add the salesman's comment variable: `sales_comment`.
@@ -418,7 +418,7 @@ Drag the &ldquo;Approve&rdquo; node from the node template library and drop it o
 3.  Define the assignees.
     This time we would like to ask a member of the &ldquo;Internal_ Lawyers&rdquo; user group to comment instead of a specific person. Therefore, instead of adding a specific username, you may simply add an assignee and use the prefix &ldquo;group:&rdquo; to specify a user group. In this case, we will set the value to &ldquo;`group:Internal_Lawyers`&rdquo;.
 4.  Grant the appropriate rights.
-    The internal lawyers may not have the necessary rights to read and/or edit&nbsp;a sales proposal document. To avoid an exception to be thrown because of this, you need to grant them the appropriate rights on the document that needs juridical advice temporarily. This is what the &ldquo;Grant permission to task assignees&rdquo; field is used for. In this case, choose the &ldquo;Read & Edit&rdquo; permission to let them modify the document. Keep in mind that these rights will only be granted during the operations made on this node, and reverted to their previous state when following a transition to another node.
+    The internal lawyers may not have the necessary rights to read and/or edit a sales proposal document. To avoid an exception to be thrown because of this, you need to grant them the appropriate rights on the document that needs juridical advice temporarily. This is what the &ldquo;Grant permission to task assignees&rdquo; field is used for. In this case, choose the &ldquo;Read & Edit&rdquo; permission to let them modify the document. Keep in mind that these rights will only be granted during the operations made on this node, and reverted to their previous state when following a transition to another node.
 
     ![](https://www.lucidchart.com/publicSegments/view/54eeffd6-6178-4c1e-997e-28dc0a004b79/image.png ?w=450,h=316,border=true)
 
@@ -470,7 +470,7 @@ The &ldquo;Approve&rdquo; node will once again be the most appropriate. Pick it 
     2.  Click on the **Add task button** link.
     3.  We will use &ldquo;submit_updated_proposal&rdquo; as the task button's id and &ldquo;Submit updated proposal&rdquo; as label.
         ![](https://www.lucidchart.com/publicSegments/view/54ef1de1-3ec4-4911-86be-4e990a004b79/image.png ?w=450,h=313,border=true)
-    4.  Check the line corresponding to the &ldquo;approve&rdquo; task button and click on the&nbsp;**Delete** link to remove it.
+    4.  Check the line corresponding to the &ldquo;approve&rdquo; task button and click on the **Delete** link to remove it.
         ![](https://www.lucidchart.com/publicSegments/view/54ef1f66-c4cc-4052-84c9-790a0a00c10b/image.png ?w=450,border=true)
 
 #### Removing the &ldquo;approve&rdquo; transition
@@ -502,7 +502,7 @@ A document being accepted by the head of operations or the juridical services ha
 
 1.  Open the end node properties.
 2.  Check the existing chains / Launch a new chain creation.
-3.  In the&nbsp;**General** tab, the "Automation chains" section lets you make use of an existing automation chain, that you may even edit by using the corresponding link. Automation chains can be launched at different moments, depending of your needs. The input operation chain will be played when entering the node, the output chain when the node is being left. In this situation the chain needs to be played from the start, but is not existing yet though.
+3.  In the **General** tab, the "Automation chains" section lets you make use of an existing automation chain, that you may even edit by using the corresponding link. Automation chains can be launched at different moments, depending of your needs. The input operation chain will be played when entering the node, the output chain when the node is being left. In this situation the chain needs to be played from the start, but is not existing yet though.
 
     1.  Click on the **Create** link of the "Input operation chain".
         ![](https://www.lucidchart.com/publicSegments/view/54ef2b9f-f104-4cc9-8a63-34780a009cb4/image.png ?w=450,border=true)

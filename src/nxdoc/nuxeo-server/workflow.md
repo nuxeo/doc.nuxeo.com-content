@@ -2,10 +2,10 @@
 title: Workflow
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - workflow
     - workflow-component
 toc: true
@@ -196,7 +196,7 @@ history:
 ---
 ## Concept
 
-The Nuxeo workflow engine provides the usual features you would expect from a workflow engine and leverages the main modules of the platform: the repository, the Automation service, layouts for all the user interactions and process implementations. It provides high level features regarding task management such as filterable tasks lists, reminders, task reassignment, task delegation, task reminders.&nbsp;You need to understand correctly those concepts before playing with the workflow engine.
+The Nuxeo workflow engine provides the usual features you would expect from a workflow engine and leverages the main modules of the platform: the repository, the Automation service, layouts for all the user interactions and process implementations. It provides high level features regarding task management such as filterable tasks lists, reminders, task reassignment, task delegation, task reminders. You need to understand correctly those concepts before playing with the workflow engine.
 
 A workflow is conceptually defined using a graph. Workflow graphs are [configured from Nuxeo Studio]({{page space='Studio' page='Workflow'}}).
 
@@ -223,7 +223,7 @@ They are also available as an application template in Nuxeo Studio so as to enab
 
 ![]({{file name='Screenshot 2015-06-02 11.27.17.png'}} ?w=600,border=true)
 
-It is possible to import this package from your Studio project : Go to **Customization**&nbsp;> **External Templates**&nbsp;> **Default&nbsp;** **Nuxeo Platform Workflows Configuration** and click on **Import**.
+It is possible to import this package from your Studio project : Go to **Customization** > **External Templates** > **Default** **Nuxeo Platform Workflows Configuration** and click on **Import**.
 
 See the pages [Serial Document Workflow]({{page space='userdoc' page='serial-document-workflow'}}) and [Parallel Document Workflow]({{page space='userdoc' page='parallel-document-workflow'}}) for more details about showcased default workflows.
 

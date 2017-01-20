@@ -2,9 +2,10 @@
 title: Reassigning a Task
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
+    - lts2016-ok
     - reassign
     - multiexcerpt
 confluence:
@@ -91,7 +92,5 @@ To reassign a task from **the Home Workflow tab:**
 *   [Workflows]({{page page='workflows'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

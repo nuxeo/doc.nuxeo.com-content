@@ -2,7 +2,7 @@
 title: How to Query Workflow Objects
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Studio
         topics: 'Workflow, NXQL, Query'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - query
     - persistence
     - nxql
@@ -350,7 +350,7 @@ Select * from DocumentRoute where docri:participatingDocuments IN ('$docId') AND
 
 ### Querying Workflows Suspended at a given Step
 
-NXQL queries can reference any metadata. Using the [CoreSession#queryAndFetch](http://community.nuxeo.com/api/nuxeo/7.1/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#queryAndFetch%28java.lang.String,%20java.lang.String,%20java.lang.Object...%29) API we can look for workflows suspended on a given step. This will return in an [IterableQueryResult](http://community.nuxeo.com/api/nuxeo/7.1/javadoc/org/nuxeo/ecm/core/api/IterableQueryResult.html) the id of the document representing the workflow document.
+NXQL queries can reference any metadata. Using the [CoreSession#queryAndFetch](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#queryAndFetch%28java.lang.String,%20java.lang.String,%20java.lang.Object...%29) API we can look for workflows suspended on a given step. This will return in an [IterableQueryResult](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/core/api/IterableQueryResult.html) the id of the document representing the workflow document.
 
 ```sql
 Select ecm:parentId from RouteNode  where rnode:nodeId = 'Task5237' and ecm:currentLifeCycleState = 'suspended'

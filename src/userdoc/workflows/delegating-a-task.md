@@ -2,9 +2,10 @@
 title: Delegating a Task
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
+    - lts2016-ok
     - delegation
     - multiexcerpt-include
 confluence:
@@ -58,8 +59,8 @@ You can delegate a task from:
 
 **To delegate the task from the Home Workflow tab:**
 
-1.  Click on the&nbsp;**Process**&nbsp;button of the task to delegate.
-2.  Click on&nbsp;**Delegate task.**
+1.  Click on the **Process** button of the task to delegate.
+2.  Click on **Delegate task.**
     ![]({{file name='workflow-home-more-menu.png'}} ?w=650,border=true)
     The delegation form is displayed in a pop-up.
     ![]({{file name='delegation-form.png'}} ?w=450,border=true)
@@ -67,13 +68,13 @@ You can delegate a task from:
 4.  Click on the user or group you want to delegate the task to.
 5.  Optionally repeat these steps as many times as you want to delegate the task.
 6.  Optionally type a comment for the delegatees.
-7.  Click on the&nbsp;**Delegate**&nbsp;button.
-    You are displayed the&nbsp;**My tasks**&nbsp;tab of the&nbsp;**Workflow**&nbsp;tab.
+7.  Click on the **Delegate** button.
+    You are displayed the **My tasks** tab of the **Workflow** tab.
     If you click on the task **Process** button, you can see the list of delegatees displayed on the task.
 
 **To delegate a task from the document's Workflow tab:**
 
-1.  Click on the&nbsp;**Delegate task**&nbsp;button displayed in the top left corner of the task.
+1.  Click on the **Delegate task** button displayed in the top left corner of the task.
     ![]({{file name='workflow-doc-tab.png'}} ?w=450,border=true)
 2.  The delegation form is displayed in a pop-up.
     ![]({{file name='delegation-form.png'}} ?w=450,border=true)
@@ -81,5 +82,5 @@ You can delegate a task from:
 4.  Click on the user or group you want to delegate the task to.
 5.  Optionally repeat these steps as many times as you want to delegate the task.
 6.  Optionally type a comment for the delegatees.
-7.  Click on the&nbsp;**Delegate**&nbsp;button.
+7.  Click on the **Delegate** button.
     The Workflow tab of the document is displayed. The list of delegatees is displayed on the task.

@@ -2,9 +2,10 @@
 title: Abandoning a Workflow
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
+    - lts2016-ok
     - workflow
 confluence:
     ajs-parent-page-id: '2392410'

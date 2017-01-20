@@ -2,10 +2,10 @@
 title: Validation Workflow Choosing the Assignee Based on a Metadata
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - multiexcerpt
 toc: true
 confluence:
@@ -191,12 +191,12 @@ You will find more information about Studio Workflow screens at the page [Workfl
 
 {{/callout}}
 
-### Activation&nbsp;Tab
+### Activation Tab
 
 First let's define when the workflow should be available.
 
-1.  Go to the **Activation**&nbsp;tab.
-2.  Select our previously created custom type `DocumentationItem`&nbsp;in **<span style="color: rgb(67,67,67);">Current document has one of the types</span>**.
+1.  Go to the **Activation** tab.
+2.  Select our previously created custom type `DocumentationItem` in **<span style="color: rgb(67,67,67);">Current document has one of the types</span>**.
     This makes sure the workflow can not be started on other document types.
 
 ### Graph Tab
@@ -219,9 +219,9 @@ For a start, we decided that our workflow should be as simple as possible so wil
 
 *   **General**: Configure the main properties of the task like assignees, title, directive...
 *   **Variables:** Define local variables for this node.
-*   **Form:&nbsp;**Will be displayed to the user and enables interaction with her/him. Buttons are also configured here.
-*   **Transitions:&nbsp;**Define here all the possible ways to go out of the node and the conditions to follow one transition or another.
-*   **Escalation Rules:&nbsp;**Set up rules to be triggered if your task sleeps for too long for instance.
+*   **Form** Will be displayed to the user and enables interaction with her/him. Buttons are also configured here.
+*   **Transitions:** Define here all the possible ways to go out of the node and the conditions to follow one transition or another.
+*   **Escalation Rules:** Set up rules to be triggered if your task sleeps for too long for instance.
 
 {{#> callout type='info' heading='Node Screens'}}
 
@@ -231,22 +231,22 @@ You will find more information about Studio Node property screens at the page [N
 
 #### Approve Task General Tab
 
-1.  Go to the&nbsp;**General**&nbsp;tab.&nbsp;
+1.  Go to the **General** tab.
 2.  Choose a title for the task: "Technical Doc Validation".
 3.  Choose a directive that will be displayed in the workflow dashboard: "As you are responsible for this nature of document, you are responsible for the document validation."
-4.  Remove the&nbsp;**Due date expression** as we will not use it. But that would be very useful to [define an escalation rule]({{page page='workflow-escalation-rules-example'}}) for instance.
+4.  Remove the **Due date expression** as we will not use it. But that would be very useful to [define an escalation rule]({{page page='workflow-escalation-rules-example'}}) for instance.
 5.  In **Assignees**, you can define static assignees (users or groups) for the task; click on **Add** and type `Administrator`.
-6.  In&nbsp;**Assignees exression**, you can make some computations to automatically designate the assignees. That will be useful later, but for now, empty the field.
-7.  You have access to others options (like **Mail Notification, Allow task&nbsp;****reassignment**) but we'll leave them empty for now.
+6.  In **Assignees exression**, you can make some computations to automatically designate the assignees. That will be useful later, but for now, empty the field.
+7.  You have access to others options (like **Mail Notification, Allow task** **reassignment**) but we'll leave them empty for now.
     ![]({{file name='Validation-tuto_-_Workflow_Definition_-_tuto_Technical_Documentation_1.png'}} ?w=500,h=357,border=true)
 
 #### Approve Task Variables Tab
 
-In the&nbsp;**Variables&nbsp;**tab, you can remove `Assignees` as we do not need it. We may need to add some other variables at some point, but we do not need it for now.
+In the **Variables** tab, you can remove `Assignees` as we do not need it. We may need to add some other variables at some point, but we do not need it for now.
 
 #### Approve Task Form Tab
 
-The&nbsp;**Form&nbsp;**tab enables to choose how to interact with the user. You can drag and drop fields here if variables are defined for the workflow or node.
+The **Form** tab enables to choose how to interact with the user. You can drag and drop fields here if variables are defined for the workflow or node.
 
 {{#> callout type='note' }}
 
@@ -260,29 +260,29 @@ We just want the user to approve the task for now so nothing is required in the 
 #### Approve Task Transitions Tab
 
 1.  In the **Transitions** tab you will see that there is already the transition we need, so do not change anything.
-    You can notice that the condition for the&nbsp;**Approve&nbsp;**condition is&nbsp;`NodeVariables["button"] =="approve"`.&nbsp;
+    You can notice that the condition for the **Approve** condition is `NodeVariables["button"] =="approve"`.
 
     {{#> callout type='info' }}
 
-    This is because when a user clicks on a button, it puts the name of the button in a node variable called&nbsp;**Button**, so by using its value, the workflow engine can know what button was clicked on and compute what transition to follow. You can set more complex condition based transitions on other workflow variables for instance.
+    This is because when a user clicks on a button, it puts the name of the button in a node variable called **Button**, so by using its value, the workflow engine can know what button was clicked on and compute what transition to follow. You can set more complex condition based transitions on other workflow variables for instance.
 
     {{/callout}}
 2.  We do not want escalation rules for now, so you can leave the corresponding tab for now.
 3.  Click on the **Save** button of the Node properties popup, and click on the **Save** button of the workflow.
 
-You now have a very simple workflow enabled on **DocumentationItems&nbsp;**that follows a simple path. You can deploy your Studio on your server and test you workflow. It should create a task for&nbsp;**Administrator** and do nothing after validating the task.
+You now have a very simple workflow enabled on **DocumentationItems** that follows a simple path. You can deploy your Studio on your server and test you workflow. It should create a task for **Administrator** and do nothing after validating the task.
 
 ## Computing Assignees Dynamically
 
-If you followed the first part of the tutorial ([Implementing Documentation Items]({{page page='implementing-documentation-items'}})), you have a&nbsp;**DocumentationItem**&nbsp;that can have three possible natures. We want to have a different user responsible for each possible nature:
+If you followed the first part of the tutorial ([Implementing Documentation Items]({{page page='implementing-documentation-items'}})), you have a **DocumentationItem** that can have three possible natures. We want to have a different user responsible for each possible nature:
 
 *   Procedure (proc) -> Bill
 *   Notice (not) -> Julie
 *   Installation Instruction (inst) -> Steve
 
-Of course, the responsible can change over time so you do not want to hardcode the value in the workflow but make it possible for an administrator to change the mapping without restarting the system just for that. The use of a vocabulary to store both the nature key and its mapped responsible seems like a good solution. We will compute the Assignee of the task from this vocabulary and the value of the Nature stored on the&nbsp;**DocumentationItem**.
+Of course, the responsible can change over time so you do not want to hardcode the value in the workflow but make it possible for an administrator to change the mapping without restarting the system just for that. The use of a vocabulary to store both the nature key and its mapped responsible seems like a good solution. We will compute the Assignee of the task from this vocabulary and the value of the Nature stored on the **DocumentationItem**.
 
-1.  First create a Vocabulary called `natMapping`&nbsp;and populate it with the values explained above: a nature (the key not the label) and a user name (we will create them later).
+1.  First create a Vocabulary called `natMapping` and populate it with the values explained above: a nature (the key not the label) and a user name (we will create them later).
 
     You should get a vocabulary like this.
     ![]({{file name='natMappingTuto_-_Vocabulary_-_tuto_Technical_Documentation.png'}} ?w=600,h=169,border=true)
@@ -296,21 +296,21 @@ Of course, the responsible can change over time so you do not want to hardcode t
     {{/callout}}
 2.  Go back to the workflow graph, on the Approve task of the workflow and edit it.
 3.  In the **Assignees** field, remove the `Administrator` by clicking on the icon ![]({{file name='delete.gif' space='studio' page='studio-icons-index'}}).
-4.  Edit the field **Compute additional assignees** by clicking on the icon&nbsp;![]({{file name='new_script.gif' space='studio' page='studio-icons-index'}}) on the right.
+4.  Edit the field **Compute additional assignees** by clicking on the icon ![]({{file name='new_script.gif' space='studio' page='studio-icons-index'}}) on the right.
     ![]({{file name='assignees_expression_validation_tuto.png'}} ?w=500,border=true)
-    A window pops up in which you see a drop down list called&nbsp;**Browse Context**, in this list you have access to many variables you can use to compute information.
+    A window pops up in which you see a drop down list called **Browse Context**, in this list you have access to many variables you can use to compute information.
 
-5.  In the **Browse context** drop drown list, select **Fn** and then **getVocabularyLabel("voc","key")**&nbsp;and click on **Insert**.
+5.  In the **Browse context** drop drown list, select **Fn** and then **getVocabularyLabel("voc","key")** and click on **Insert**.
 6.  Replace `"voc"` by your vocabulary name: `"natMapping"` (you should keep the quotes as it is a String that is expected).
 7.  Remove `"key"` and leave the cursor here.
 
-8.  In&nbsp;**Browse Context**, select `Document` and then&nbsp;`["xpath"]` and click **Insert**.
+8.  In **Browse Context**, select `Document` and then `["xpath"]` and click **Insert**.
 
     This the way to access a document property.
 
 9.  You should replace `"xpath"` by your actual metadata which is `"qa:nature".`
 
-    Your final expression should be:&nbsp;`@{Fn.getVocabularyLabel("natMapping", Document["qa:nature"])}`.&nbsp;
+    Your final expression should be: `@{Fn.getVocabularyLabel("natMapping", Document["qa:nature"])}`.
 
     {{#> callout type='tip' heading='xpath'}}
 
