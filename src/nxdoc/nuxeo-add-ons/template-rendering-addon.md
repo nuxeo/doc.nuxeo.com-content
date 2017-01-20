@@ -2,10 +2,10 @@
 title: Template Rendering Addon
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-18'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - template-rendering
     - document-template
     - template-rendering-addon-component
@@ -303,7 +303,6 @@ Simple mode
 
 </th><th colspan="1">
 
-&nbsp;
 
 </th></tr><tr><td colspan="1">
 
@@ -323,7 +322,6 @@ Advanced mode
 
 </th><th colspan="1">
 
-&nbsp;
 
 </th></tr><tr><td colspan="1">
 
