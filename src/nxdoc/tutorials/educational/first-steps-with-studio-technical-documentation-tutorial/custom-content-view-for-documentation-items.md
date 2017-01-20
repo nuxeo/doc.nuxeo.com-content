@@ -406,6 +406,6 @@ It is now time to add custom behaviors, such as the locking policy on which we i
 
 </div><div class="column medium-4">
 
-[Document Locking Right after Its Creation >>]({{page page='document-locking-right-after-its-creation'}})
+[Document Locking Right After Its Creation >>]({{page page='document-locking-right-after-its-creation'}})
 
 </div></div>
