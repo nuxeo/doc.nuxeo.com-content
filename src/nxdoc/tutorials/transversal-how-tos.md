@@ -2,10 +2,10 @@
 title: Transversal How-Tos
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '7209076'
     ajs-parent-page-title: Tutorials
