@@ -2,10 +2,10 @@
 title: About Tasks
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - task
     - workflow
     - workflow-component
@@ -101,7 +101,7 @@ The resolution screen is made as a "[Tab]({{page space='studio' page='tabs'}})",
 
 ## TasksInfo
 
-When a task is closed, the workflow engine stores useful information on the node about the task: The name of the user who solved the task, his comment and the id of the button that was clicked. Information can be accessed in the automation context via the object "`NodeVariables["tasks"]`" that returns a [TasksInfoWrapper](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/platform/routing/core/api/TasksInfoWrapper.html) object that is a list of [TaskInfo](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/platform/routing/core/impl/GraphNode.TaskInfo.html). When a node creates multiple tasks, all the resolution information of each task can be found on the `NodeVariables["tasks"]` object.
+When a task is closed, the workflow engine stores useful information on the node about the task: The name of the user who solved the task, his comment and the id of the button that was clicked. Information can be accessed in the automation context via the object "`NodeVariables["tasks"]`" that returns a [TasksInfoWrapper](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/platform/routing/core/api/TasksInfoWrapper.html) object that is a list of [TaskInfo](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/platform/routing/core/impl/GraphNode.TaskInfo.html). When a node creates multiple tasks, all the resolution information of each task can be found on the `NodeVariables["tasks"]` object.
 
 ## Delegation
 

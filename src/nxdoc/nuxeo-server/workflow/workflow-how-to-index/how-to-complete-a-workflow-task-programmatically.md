@@ -2,7 +2,7 @@
 title: How to Complete a Workflow Task Programmatically
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Studio
         topics: 'Workflow, Task'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - workflow
     - link-update
     - howto
@@ -229,16 +229,16 @@ Basically, you have to call:
     void endTask(CoreSession session, Task task, Map<String, Object> data,  String status) throws ClientException;
 ```
 
-on the&nbsp;[DocumentRoutingService](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/routing/api/DocumentRoutingService.html) <span class="componentTitle">, where:</span>
+on the [DocumentRoutingService](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/platform/routing/api/DocumentRoutingService.html) <span class="componentTitle">, where:</span>
 
-*   <span class="componentTitle">task is the [Task](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/task/Task.html) to end;</span>
-*   <span class="componentTitle">data is a map of variables. If a variable called "comment" is contained in this map,&nbsp;its value will be logged by the audit service under the "workflowTaskCompleted" event.</span>
+*   <span class="componentTitle">task is the [Task](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/platform/task/Task.html) to end;</span>
+*   <span class="componentTitle">data is a map of variables. If a variable called "comment" is contained in this map, its value will be logged by the audit service under the "workflowTaskCompleted" event.</span>
     <span class="componentTitle">When a user submits the task form ([configured via Studio]({{page space='studio' page='node-form-tab'}})), this map contains all the variables in the form;</span>
     <span class="componentTitle"><span class="componentTitle">If you want to set an existing Workflow or a Node variable when completing the task you can add them into this map.</span></span>
 *   <span class="componentTitle">status is the id of the button the user would have clicked to submit the task form (if the outgoing transitions of the workflow node that created the task</span> have [conditions]({{page space='studio' page='node-form-tab'}}) depending on it).
     This id is the button id you specified when you configured the [task form]({{page space='studio' page='node-form-tab'}}) in Studio.
 
-In your graph, you have nodes and transitions between these nodes. When the workflow enters a node, if that node is of type Task (that means is not an automatic one, like Start and Stop for example), a task is created at that step. This task is persisted as a document model, that can be adapted to the <span class="componentTitle">[Task](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/platform/task/Task.html)</span> object. When a task is ended, the workflow is resumed. The task is holding information about the node and the workflow instance it was created from, so when the task is ended using the API above, the related workflow instance is resumed.
+In your graph, you have nodes and transitions between these nodes. When the workflow enters a node, if that node is of type Task (that means is not an automatic one, like Start and Stop for example), a task is created at that step. This task is persisted as a document model, that can be adapted to the <span class="componentTitle">[Task](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/platform/task/Task.html)</span> object. When a task is ended, the workflow is resumed. The task is holding information about the node and the workflow instance it was created from, so when the task is ended using the API above, the related workflow instance is resumed.
 
 To fetch all the open tasks assigned to a given user, on a document use:
 
@@ -262,8 +262,6 @@ where:
 For some detailed examples on how to use this API, you can check the JUnit tests in the [GraphRouteTest](https://github.com/nuxeo/nuxeo-platform-document-routing/blob/master/nuxeo-routing-core/src/test/java/org/nuxeo/ecm/platform/routing/test/GraphRouteTest.java).
 
 * * *
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
