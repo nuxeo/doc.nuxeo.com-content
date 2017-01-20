@@ -1,5 +1,5 @@
 ---
-title: Web UI - Manage Translations
+title: Web UI Translations Management
 review:
     comment: ''
     date: '2017-01-19'
