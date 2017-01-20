@@ -98,5 +98,5 @@ This how-to is divided in the following main steps:
 
 *   [Implementing Documentation Items]({{page space='NXDOC' page='Implementing Documentation+Items'}})
 *   [Custom Content View for Documentation Items]({{page space='NXDOC' page='Custom Content+View+for+Documentation+Items'}})
-*   [Document Locking Right after Its Creation]({{page space='NXDOC' page='Document Locking+Right+after+Its+Creation'}})
+*   [Document Locking Right After Its Creation]({{page space='NXDOC' page='Document Locking+Right+after+Its+Creation'}})
 *   [Validation Workflow Choosing the Assignee Based on a Metadata]({{page space='NXDOC' page='Validation Workflow+Choosing+the+Assignee+Based+on+a+Metadata'}})
