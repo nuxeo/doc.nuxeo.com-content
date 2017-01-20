@@ -177,8 +177,8 @@ The database will store:
 *   Extracted text volume x2
 *   Metadata
 
-Note that the volume depends a lot of the backend, some database will not compress data
-other will compress big fields (MongoDB will compress everything).
+Note that the volume depends a lot on the backend, some database will not compress data
+other will compress big fields and MongoDB will compress everything.
 
 ### Elasticsearch
 
