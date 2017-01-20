@@ -189,7 +189,7 @@ Below is an example of how to start a Parallel Review Workflow and complete it w
     PUT http://NUXEO_SERVER/nuxeo/api/v1/task/{taskId}/approve
     {
         "entity-type":"task",
-        "id":"{tasId}",
+        "id":"{taskId}",
         "comment":"{comment}"
     }
     ```
