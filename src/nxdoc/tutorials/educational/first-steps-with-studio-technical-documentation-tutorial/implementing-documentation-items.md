@@ -2,10 +2,10 @@
 title: Implementing Documentation Items
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - multiexcerpt
 toc: true
@@ -386,7 +386,7 @@ In this section we provide example names for items. You'll see different names i
 2.  Click on **New**.
 3.  Type the feature ID (i.e. the document type name in Studio): `documentationItem`.
 4.  In the **Extends** field, select **File**.
-    We need to have something holding a binary file with metadata, lifecycle, version and validation. This is very similar to the File document type.
+    We need to have something holding a binary file with metadata, lifecycle, version and validation. This is very similar to the File default document type.
 5.  Type a label for the end user in the Nuxeo Platform: `Technical documentation item`.
 6.  Click on **Next**.
     ![]({{file name='new_document_type_popup.png'}} ?w=500,h=353,border=true)
@@ -442,7 +442,7 @@ In the Nuxeo Platform metadata are always grouped by schemas. A schema is a set 
 *   `files` enables to hold other binaries (like attached files). This could be useful for the annexes of the `documentationItem` for instance.
 *   `dublincore` is a standard schema that holds descriptive information like title, creator...
 
-In the end we need two metadata: "nature" and "process". So let's create them in Studio.
+In the end we need two metadata: `nature` and `process`. So let's create them in Studio.
 
 ### Creating the Quality Schema
 
