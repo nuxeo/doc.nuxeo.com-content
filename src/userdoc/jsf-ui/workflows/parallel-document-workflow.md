@@ -71,7 +71,7 @@ history:
 
 ---
 {{! excerpt}}
-The default parallel workflow, called "Parallel document review", is an unordered workflow that enables to change the document's state after a consultation step. This means that participants can give their opinion on the document without having to wait for a previous participant to approve it.
+**The default parallel workflow**, called "Parallel document review", is an unordered workflow that enables to change the document's state after a consultation step. This means that participants can give their opinion on the document without having to wait for a previous participant to approve it.
 {{! /excerpt}}
 
 The workflow is composed of the steps below:

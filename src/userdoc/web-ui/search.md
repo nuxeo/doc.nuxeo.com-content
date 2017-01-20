@@ -12,7 +12,7 @@ The Nuxeo Platform provides different to search your documents. A Search tab in 
 ## Quick Search
 Quick search can be accessed from any site page. At any time, you can search a document by typing keywords in the search box located at the upper right corner of the page.
 
-SCREENSHOT
+![]({{file name='quick-search-web-ui.png'}} ?w=600,border=true)
 
 Typing keywords in the search field and pressing the "Enter" key triggers a full-text search. Full-text search follows the criteria below:
 - Based on stemming
@@ -25,7 +25,7 @@ Typing keywords in the search field and pressing the "Enter" key triggers a full
 
 1. Type your keywords in the quick search field.
     Matching documents are suggested as you type.
-    SCREENSHOT
+    ![]({{file name='simple_search_suggestion-web-ui.png'}} ?w=350,border=true)
 2. Click on the document's name to open it.
 
 </br>
@@ -42,6 +42,8 @@ The Search tab enables you to search a document using documents metadata. You ca
 
 The Search tab leverages Elasticsearch to provide a quicker and more efficient search. The search form uses Elasticsearch aggregates for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.
 
+![]({{file name='search-tab-web-ui.png'}} ?w=600,border=true)
+
 This search offers several search criteria, that you can associate to define your search and find documents. When you associate different criteria, the query is built following this principle:
 ```sql
 SELECT * FROM Document WHERE (criterion1 = value1 OR criterion1 = value2) AND (criterion2 = valueA OR criterion2 = valueB) AND criterion 3 = something
@@ -50,11 +52,8 @@ SELECT * FROM Document WHERE (criterion1 = value1 OR criterion1 = value2) AND (c
 
 **To search documents using the Search tab**
 
-1. Click on the **Search** tab.
+1. Click on the **Search** menu.
 2. Fill in the form with your criteria.
-  The results are automatically updated depending on the selected search criteria.
-
-SCREENSHOT
 
 {{#> callout type='note' }}
 
@@ -71,7 +70,7 @@ When you save a search, you save its criteria. This means that the results displ
 
 You can save as many searches you need: Click on the **Save as** button when you are satisfied with your query and results. Then give your search a title and confirm save.
 
-SCREENSHOT
+![]({{file name='save-search-popup-web-ui.png'}} ?w=350,border=true)
 
 Saved searches are available in the Search tab drop down list. To load a search, just click on it in the list, it is automatically executed.
 
@@ -81,7 +80,9 @@ Saved searches are available in the Search tab drop down list. To load a search,
 Saved searches are private by default. But you can share them by [giving permissions]({{page page='managing-permissions'}}) on them. Select the search that you want to share from the Search tab drop down list and click on the more icon (ICON) and then on **Share**. The permission pop-up will be displayed.
 
 **Delete a Search**
+
 You can manage and delete your saved search from the Search tab drop down list, select the search that you want to manage, click on the Delete button and confirm deletion. Select the search that you want to delete from the Search tab drop down list, click on the more icon (ICON) and then on **Delete** and confirm.
+
 
 ## Assets Tab
 
