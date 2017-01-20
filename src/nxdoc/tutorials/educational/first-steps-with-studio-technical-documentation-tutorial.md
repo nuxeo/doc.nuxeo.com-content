@@ -2,10 +2,10 @@
 title: 'First Steps With Studio: Technical Documentation Tutorial'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - tutorial
     - excerpt
 confluence:
@@ -77,7 +77,7 @@ history:
 ---
 {{! excerpt}}
 
-This tutorial offers a progressive and educative tour of what you can do to customize the Nuxeo Platform with Nuxeo Studio. It should be one of the first tutorials you do.
+This tutorial offers a progressive and educative tour of what you can do to customize the Nuxeo Platform with Nuxeo Studio. It could be one of the first tutorials you do.
 
 {{! /excerpt}}
 
@@ -92,11 +92,11 @@ Here are a few rules we want to follow:
 *   The document listing should display the useful metadata immediately.
 *   A workflow should be available to validate a document easily.
 *   A newly created documentation item should be editable only by its creator until the validation workflow is started.
-*   Publishing should automatic at the end of the validation workflow.
+*   Publishing should be automatic at the end of the validation workflow.
 
 This how-to is divided in the following main steps:
 
 *   [Implementing Documentation Items]({{page space='NXDOC' page='Implementing Documentation+Items'}})
 *   [Custom Content View for Documentation Items]({{page space='NXDOC' page='Custom Content+View+for+Documentation+Items'}})
-*   [Document Locking Right after Its Creation]({{page space='NXDOC' page='Document Locking+Right+after+Its+Creation'}})
+*   [Document Locking Right After Its Creation]({{page space='NXDOC' page='Document Locking+Right+after+Its+Creation'}})
 *   [Validation Workflow Choosing the Assignee Based on a Metadata]({{page space='NXDOC' page='Validation Workflow+Choosing+the+Assignee+Based+on+a+Metadata'}})

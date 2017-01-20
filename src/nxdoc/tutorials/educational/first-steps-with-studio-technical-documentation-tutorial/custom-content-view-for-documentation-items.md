@@ -2,7 +2,7 @@
 title: Custom Content View for Documentation Items
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-01-17'
     status: ok
 labels:
     - lts2016-ok
@@ -258,7 +258,7 @@ We could extend the Folder document type to inherit its folderish facet. But it 
 
 ### Making the Document Type Folderish
 
-1.  On the `TechnicalDocumentationContainer` **Definition** tab, choose the t**Collaboratives Spaces** Category.
+1.  On the `TechnicalDocumentationContainer` **Definition** tab, choose the **Collaboratives Spaces** Category.
 2.  Choose a nice [icon]({{page space='studio' page='resources'}}).
 3.  In **Facets**, select the **Document is folderish** facet.
     It automatically adds an **Accepted children type** section. No children are selected by default.
@@ -406,6 +406,6 @@ It is now time to add custom behaviors, such as the locking policy on which we i
 
 </div><div class="column medium-4">
 
-[Document Locking Right after Its Creation >>]({{page page='document-locking-right-after-its-creation'}})
+[Document Locking Right After Its Creation >>]({{page page='document-locking-right-after-its-creation'}})
 
 </div></div>
