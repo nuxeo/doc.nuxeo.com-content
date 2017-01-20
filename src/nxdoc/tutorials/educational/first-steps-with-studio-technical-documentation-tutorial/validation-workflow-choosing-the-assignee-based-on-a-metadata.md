@@ -195,7 +195,7 @@ You will find more information about Studio Workflow screens at the page [Workfl
 First let's define when the workflow should be available.
 
 1.  Go to the **Activation**&nbsp;tab.
-2.  Select our previously created custom type `DocumentationItem`&nbsp;in **<span style="color: rgb(67,67,67);">Current document has one of the types</span>**.
+2.  Select our previously created custom type `DocumentationItem`&nbsp;in **Current document has one of the types**.
     This makes sure the workflow can not be started on other document types.
 
 ### Graph Tab
