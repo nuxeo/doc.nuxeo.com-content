@@ -37,7 +37,7 @@ history:
 
 ---
 *   [Platform as a Service]({{page space='NXDOC' page='Platform as+a+Service'}})&nbsp;&mdash;&nbsp;This document explains how the Nuxeo Platform (and nuxeo.io) can be used to provide an application factory system that allows to instantiate on demand applications for a given configuration.
-*   [First Steps With Studio: Technical Documentation Tutorial]({{page space='NXDOC' page='First Steps+With+Studio%3A+Technical+Documentation+Tutorial'}})&nbsp;&mdash;&nbsp;This tutorial offers a progressive and educative tour of what you can do to customize the Nuxeo Platform with Nuxeo Studio. It should be one of the first tutorials you do.
+*   [First Steps With Studio: Technical Documentation Tutorial]({{page space='nxdoc' page='first-steps-with-studio-technical-documentation-tutorial'}})&nbsp;&mdash;&nbsp;This tutorial offers a progressive and educative tour of what you can do to customize the Nuxeo Platform with Nuxeo Studio. It should be one of the first tutorials you do.
 *   [Understand Expression and Scripting Languages Used in Nuxeo]({{page space='NXDOC' page='Understand Expression+and+Scripting+Languages+Used+in+Nuxeo'}})
 *   [Workflow Use Cases]({{page space='NXDOC' page='Workflow Use+Cases'}})
 *   [How to Publish a News Feature in Workspaces]({{page space='NXDOC' page='How to+Publish+a+News+Feature+in+Workspaces'}})&nbsp;&mdash;&nbsp; This how-to explains how to add a&nbsp;small "News" feature to your Nuxeo Platform for enabling News content publishing at workspace level, using only Nuxeo Studio.
