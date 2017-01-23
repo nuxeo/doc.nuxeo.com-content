@@ -458,8 +458,6 @@ To enable Batch upload set the runtime configuration property `allowClientGenera
 
 If your Nuxeo server and the API Playground are not in the same domain, you need to set up a CORS configuration. We provide a [sample configuration]({{file name='cors-config.xml'}}) file that works as long as you put it in the `NUXEO_HOME/nxserver/config` folder. Read the [CORS documentation]({{page page='cross-origin-resource-sharing-cors'}}) for more details.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}

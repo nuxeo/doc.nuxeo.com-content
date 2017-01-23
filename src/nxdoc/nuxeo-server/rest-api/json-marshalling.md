@@ -422,7 +422,7 @@ The marshalling service is set up for the REST API v1 and the Automation server.
 
 The JSON generation and parsing is based on [Jackson](https://github.com/FasterXML/jackson).
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-10">{{#> panel heading='Check out our detailed documentation on JSON Marshalling:'}}
+**Check out our detailed documentation on JSON Marshalling:**
 
 - [JSON Marshallers Provided by the Nuxeo Platform]({{page page='json-marshallers-provided-by-nuxeo'}})
 - [Enriching, Extending and Overriding Existing Marshallers]({{page page='enriching-extending-overriding-marshallers'}})
@@ -430,5 +430,3 @@ The JSON generation and parsing is based on [Jackson](https://github.com/FasterX
 - [Parameterizing and Reusing Marshallers]({{page page='parameterizing-reusing-marshallers'}})
 - [Document JSON and Extended Fields]({{page page='document-json-extended-fields'}})
 - [Testing JSON Data]({{page page='testing-json-data'}})
-
-{{/panel}}</div></div>

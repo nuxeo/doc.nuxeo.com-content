@@ -142,13 +142,13 @@ Before uploading any file or chunk you need to [initialize an upload batch](#bat
 ## {{> anchor 'batchinitialization'}}Batch Initialization
 
 ```
-POST /api/v1/upload/
+POST http://NUXEO_SERVER/nuxeo/api/v1/upload/
 ```
 
 Or with curl:
 
 ```
-curl -u Administrator:Administrator -X POST http://<host>:<port>/nuxeo/api/v1/upload
+curl -u Administrator:Administrator -X POST http://NUXEO_SERVER/nuxeo/api/v1/upload
 ```
 
 Response:
@@ -158,14 +158,14 @@ Response:
 {"batchId": myBatchId}
 ```
 
-**Save this batch ID as it willl be used in subsequent requests.**
+**Save this batch ID as it will be used in subsequent requests.**
 
 ## {{> anchor 'uploadingafileinonego'}}Uploading a File in One Go (not Resumable)
 
 ### File upload
 
 ```
-POST /api/v1/upload/<myBatchId>/0
+POST http://NUXEO_SERVER/nuxeo/api/v1/upload/<myBatchId>/0
 X-File-Name: myFile.doc
 X-File-Type: application/msword
 -----------------------
@@ -176,7 +176,7 @@ The content of the file
 Or with curl:
 
 ```
-curl -u Administrator:Administrator -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -F file=@myFile.doc http://<host>:<port>/nuxeo/api/v1/upload/<myBatchId>/0
+curl -u Administrator:Administrator -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -F file=@myFile.doc http://NUXEO_SERVER/nuxeo/api/v1/upload/<myBatchId>/0
 ```
 
 ### Batch File Verification
@@ -190,7 +190,7 @@ GET /api/v1/upload/<myBatchId>
 Or with curl:
 
 ```
-curl -u Administrator:Administrator -G http://<host>:<port>/nuxeo/api/v1/upload/<myBatchId>
+curl -u Administrator:Administrator -G http://NUXEO_SERVER/nuxeo/api/v1/upload/<myBatchId>
 ```
 
 Response:
@@ -231,7 +231,7 @@ The content of the chunk
 Or with curl:
 
 ```text
-curl -u Administrator:Administrator -H "X-Upload-Type:chunked" -H "X-Upload-Chunk-Index:<i>" -H "X-Upload-Chunk-Count:5" -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -H "X-File-Size:115090" -F file=@<chunk_i> http://<host>:<port>/nuxeo/api/v1/upload/<myBatchId>/0
+curl -u Administrator:Administrator -H "X-Upload-Type:chunked" -H "X-Upload-Chunk-Index:<i>" -H "X-Upload-Chunk-Count:5" -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -H "X-File-Size:115090" -F file=@<chunk_i> http://NUXEO_SERVER/nuxeo/api/v1/upload/<myBatchId>/0
 ```
 
 Response: there are 3 cases here.
@@ -268,7 +268,7 @@ GET /api/upload/<myBatchId>/0
 Or with curl:
 
 ```
-curl -u Administrator:Administrator -G http://<host>:<port>/nuxeo/api/v1/upload/<myBatchId>/0
+curl -u Administrator:Administrator -G http://NUXEO_SERVER/nuxeo/api/v1/upload/<myBatchId>/0
 ```
 
 Response: again there are 3 cases here.
@@ -292,7 +292,7 @@ Response: again there are 3 cases here.
 
     => **End of upload**.
 
-3.  The request is interrupted or you recieve HTTP 503 Service Unavailable or any other 5xx response from the server, go to the [Resume an Interrupted Upload](#resumeaninterruptedupload) step.
+3.  The request is interrupted or you receive HTTP 503 Service Unavailable or any other 5xx response from the server, go to the [Resume an Interrupted Upload](#resumeaninterruptedupload) step.
 
 ### Best Practices
 
@@ -323,7 +323,7 @@ POST /api/v1/path/default-domain/workspaces/myworkspace
 Or with curl:
 
 ```text
-curl -X POST -H 'Content-Type: application/json' -u Administrator:Administrator -d '{"entity-type": "document", "name": "myNewDoc", "type": "File", "properties": {"dc:title": "My new doc", "file:content": {"upload-batch": "<myBatchId>", "upload-fileId": "0"}}}' http://<host>:<port>/nuxeo/api/v1/path/default-domain/workspaces/myworkspace
+curl -X POST -H 'Content-Type: application/json' -u Administrator:Administrator -d '{"entity-type": "document", "name": "myNewDoc", "type": "File", "properties": {"dc:title": "My new doc", "file:content": {"upload-batch": "<myBatchId>", "upload-fileId": "0"}}}' http://NUXEO_SERVER/nuxeo/api/v1/path/default-domain/workspaces/myworkspace
 ```
 
 Finally you now can access the content of your file by pointing to the following resource:
@@ -334,8 +334,6 @@ GET /api/v1/path/default-domain/workspaces/myworkspace/myNewDoc/@blob/file:conte
 ## Learn More
 
 *   Follow the course [Importing Files with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/importing-files-rest-api) at [Nuxeo University](https://university.nuxeo.io).
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='REST API how-tos'}}
 

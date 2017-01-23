@@ -393,18 +393,16 @@ These three request parameters are optional and depend on the executed operation
 The `input` parameter is a string that acts as a reference to the real object to be used as the input. There are four types of supported inputs: void, document, document list, blob, blob list.
 
 
-### Request input
+### Request Input
 
 *   To reference a **document**, use the document absolute path or document UID preceded by the string `doc:`. For example:
 
-    <nobr>`doc:/default-domain/workspaces/myworkspace`</nobr> or
-    <nobr>`doc:96bfb9cb-a13d-48a2-9bbd-9341fcf24801`</nobr>
+    `doc:/default-domain/workspaces/myworkspace` or `doc:96bfb9cb-a13d-48a2-9bbd-9341fcf24801`
 
 
 *   To reference a **document list** use a comma-separated list of absolute document paths or UIDs preceded by the string `docs:`. For example:
 
-    <nobr>`docs:/default-domain/workspaces/myworkspace,`</nobr>
-    <nobr>` 96bfb9cb-a13d-48a2-9bbd-9341fcf24801`</nobr>
+    `docs:/default-domain/workspaces/myworkspace, 96bfb9cb-a13d-48a2-9bbd-9341fcf24801`
 
 
 *   A **blob** cannot be referenced by a string locator as it is usually on the client file system or as raw binary data. You must therefore use a `multipart/related` request that encapsulates your JSON request as the root part as `application/json+nxrequest` content and the blob binary content in a related part.
@@ -414,7 +412,7 @@ The `input` parameter is a string that acts as a reference to the real object to
 
     The only limitation for both blobs and blob lists is that the request content part should be the first part in the multipart document. The order of the blob parts will be preserved and blobs will be processed in the same order. The expects assumes the request part to be the first part of the multipart document (Content-Ids are not used by the server to identify the request part).
 
-### Request parameter types
+### Request Parameter Types
 
 The operation parameters in the `params` property of the request are **strings**. Operation parameters are typed, so on the server side the operation will know how to decode parameters in real Java classes. The supported parameter types are: **string**, **long** (integer number), **double** (floating point number), **date**, **properties**, **document**, **documents**, **EL expression**, **EL template**.
 
@@ -427,8 +425,8 @@ Here are some rules on how to encode operation parameters:
 *   `boolean`: "true" or "false".
 *   `document`: Use the document UID or the absolute document path.
 *   `documents`: Use a comma separated list of document references.
-*   **EL expression**: put the `expr:` string before your EL expression. (`expr: Document.path`).
-*   **EL template**: put the `expr:` string before your template. (`expr: SELECT * FROM Document WHERE dc:title=@{my_var}`)
+*   **EL expression**: Put the `expr:` string before your EL expression. (`expr: Document.path`).
+*   **EL template**: Put the `expr:` string before your template. (`expr: SELECT * FROM Document WHERE dc:title=@{my_var}`)
 
     Note that in EL expressions you must also specify relative paths (relative to the context document) using `expr: ./my/doc`.
 
@@ -449,7 +447,7 @@ An operation can have one of the following outputs:
       <tr>
         <td colspan="1">**void**</td>
         <td class="small-2">The operation has no output</td>
-        <td colspan="1">Returns HTTP **204**. No content and no Content-Type is returned.</td>
+        <td colspan="1">Returns HTTP 204. No content and no Content-Type is returned.</td>
       </tr>
       <tr>
         <td colspan="1">**document**</td>
@@ -474,7 +472,7 @@ An operation can have one of the following outputs:
       <tr>
         <td colspan="1">**exception**</td>
         <td class="small-2"></td>
-        <td colspan="1">Returns HTTP **400**. The content is the server exception encoded as a JSON object. The used Content-Type is `application/json+nxentity`. When an exception occurs, the server tries to return a meaningful status code. If no suitable status code is found, a generic 500 code (server error) is used.</td>
+        <td colspan="1">Returns HTTP 400. The content is the server exception encoded as a JSON object. The used Content-Type is `application/json+nxentity`. When an exception occurs, the server tries to return a meaningful status code. If no suitable status code is found, a generic 500 code (server error) is used.</td>
       </tr>
     </tbody>
   </table>

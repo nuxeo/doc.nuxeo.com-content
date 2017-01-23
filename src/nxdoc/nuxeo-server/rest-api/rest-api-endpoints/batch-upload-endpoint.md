@@ -204,6 +204,13 @@ This doesn't fit in the following situations:
 *   You have several files to send, but prefer to send them as separated chunks (You have an HTTP proxy that will limit POST size)
 *   You want to upload files as soon as possible and then run the operation when everything has been uploaded on the server (You upload pictures you select from a mobile device)
 
+{{#> callout type='info' }}
+
+Since Nuxeo 7.4 the batch upload API has changed to be exposed as a REST resource endpoint.
+The old API using `/site/automation/batch/upload` is deprecated but kept for backward compatibility.
+
+{{/callout}}
+
 ## Batch Upload Endpoint
 
 <div class="table-scroll">
@@ -214,66 +221,59 @@ This doesn't fit in the following situations:
         <th>Description</th>
       </tr>
       <tr>
-        <td colspan="2">**UPLOADING A FILE**</td>
+        <th colspan="2">Uploading a File</th>
       </tr>
       <tr>
         <td>POST `/api/v1/upload/`</td>
-        <td>Initialize a batch</td>
+        <td>Initializes a batch</td>
       </tr>
       <tr>
         <td>POST `/api/v1/upload/{batchId}/{fileIdx}`</td>
-        <td>Upload a file (see below for details on the [necessary headers]({{page page='batch-upload-endpoint#uploading-a-file'}}))</td>
+        <td>Uploads a file (see below for details on the [necessary headers](#uploading-a-file))</td>
       </tr>
       <tr>
         <td>GET `/api/v1/upload/{batchId}`</td>
-        <td>Get information about a batch file</td>
+        <td>Gets information about a batch file</td>
       </tr>
       <tr>
         <td>GET `/api/v1/upload/{batchId}/{fileIdx}`</td>
-        <td>Get information about a specific batch file</td>
+        <td>Gets information about a specific batch file</td>
       </tr>
       <tr>
         <td>DELETE `/api/v1/upload/{batchId}`</td>
-        <td>Drop a batch</td>
+        <td>Drops a batch</td>
       </tr>
       <tr>
         <td>DELETE `/api/v1/upload/{batchId}/{fileId}`</td>
-        <td>Delete a file from a batch</td>
+        <td>Deletes a file from a batch</td>
       </tr>
       <tr>
-        <td colspan="2">**UPLOADING A FILE IN CHUNKS**</td>
+        <th colspan="2">Uploading a File in Chunks</th>
       </tr>
       <tr>
         <td>POST `/api/v1/upload/{batchId}/{fileIdx}`</td>
-        <td>Upload a chunk (see below for details on the [necessary headers]({{page page='batch-upload-endpoint#uploading-a-chunk'}}))</td>
+        <td>Uploads a chunk (see below for details on the [necessary headers](#uploading-a-chunk))</td>
       </tr>
       <tr>
         <td>GET `/api/v1/upload/{batchId}/{fileIdx}`</td>
-        <td>Get information about a chunked file</td>
+        <td>Gets information about a chunked file</td>
       </tr>
       <tr>
-        <td colspan="2">**USING FILES FROM A BATCH**</td>
+        <th colspan="2">Using File from a Batch</th>
       </tr>
       <tr>
         <td>POST `/api/v1/upload/{batchId}/execute/{operationId}`</td>
-        <td>Execute an Automation chain or operation using the blobs associated to a batch as input</td>
+        <td>Executes an Automation chain or operation using the blobs associated to a batch as input</td>
       </tr>
       <tr>
         <td>POST `/api/v1/upload/{batchId}/{fileIdx}/execute/{operationId}`</td>
-        <td>Execute an Automation chain or operation using a specific file inside the batch as input</td>
+        <td>Executes an Automation chain or operation using a specific file inside the batch as input</td>
       </tr>
     </tbody>
   </table>
 </div>
 
 ## Uploading Files
-
-{{#> callout type='info' }}
-
-Since Nuxeo 7.4 the batch upload API has changed to be exposed as a REST resource endpoint.
-The old API using `/site/automation/batch/upload` is deprecated but kept for backward compatibility.
-
-{{/callout}}
 
 ### Batch Initialization
 
@@ -293,7 +293,7 @@ This request returns a 201 CREATED status code with the following JSON data:
 
 The batch id can be seen as an upload session id, especially for a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}}#-anchor-uploadingafileinchunks-uploading-a-file-in-chunks-resumable-).
 
-### Uploading a File
+### Uploading a File {{> anchor 'uploading-a-file'}}
 
 You can do a simple POST with the payload containing your file, but a multipart encoded upload is also supported.
 
@@ -318,11 +318,11 @@ You also need to set some custom HTTP headers:
       </tr>
       <tr>
         <td colspan="1">`X-File-Name`</td>
-        <td colspan="1">Name of the file</td>
+        <td colspan="1">The name of the file</td>
       </tr>
       <tr>
         <td colspan="1">`X-File-Type`</td>
-        <td colspan="1">Mime type of the file</td>
+        <td colspan="1">The mime type of the file</td>
       </tr>
       <tr>
         <td colspan="1">`Content-Type`</td>
@@ -331,7 +331,7 @@ You also need to set some custom HTTP headers:
       <tr>
         <td colspan="1">`Content-Length`</td>
         <td colspan="1">
-          Size of the file in bytes, required if your HTTP client doesn't add this header, typically the Nuxeo [JavaScript Client]({{page page='javascript-client'}})
+          The size of the file in bytes, required if your HTTP client doesn't add this header, typically the Nuxeo [JavaScript Client]({{page page='javascript-client'}})
         </td>
       </tr>
     </tbody>
@@ -345,15 +345,6 @@ Returns a 201 CREATED status code with the following JSON data:
 ```
 
 The value of the `uploadType` field is `normal` by default, it can be `chunked` if the file was [uploaded in chunks](#uploading-a-file-in-chunks).
-
-
-{{#> callout type='info' heading='About the file storage implementation'}}
-
-The files uploaded to the batch are stored on temporary disk space until the batch is executed or dropped.
-
-For this purpose the batch upload relies on the default [Transient Store]({{page page='transient-store'}}) that stores the uploaded files inside `${nuxeo.data.dir}/transientstores/default`).
-
-{{/callout}}
 
 ### Getting Information about the Batch Files
 
@@ -415,7 +406,7 @@ Chunking is a good idea because:
 *   It allows multiplexing (upload on multiple TCP streams)
 *   It allows you to overcome the limitations of some reverse proxies (limits the risk of having a POST considered as too big).
 
-### Uploading a Chunk
+### Uploading a Chunk {{> anchor 'uploading-a-chunk'}}
 
 As for uploading a whole file, you can do a simple POST with the payload containing your chunk.
 
@@ -498,9 +489,7 @@ JSON response data:
 GET http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileIdx}
 ```
 
-Returns a 200 OK status code for a complete chunked file and a 308 Resume Incomplete status code for an incomplete chunked file.
-
-**It is this specific 308 _Resume Incomplete_ status code that lets you know that you either need to upload the missing chunks or to resume an interrupted file upload.**
+Returns a 200 OK status code for a complete chunked file and a 308 Resume Incomplete status code for an incomplete chunked file. It is this specific 308 Resume Incomplete status code that lets you know that you either need to upload the missing chunks or to resume an interrupted file upload.
 
 If the batch doesn't contain any file with the given index, returns a 404 Not Found status code.
 
@@ -589,3 +578,16 @@ doc.setPropertyValue("file:content", batchUpload.getBatchBlob());
 
 *   Follow the course [Importing Files with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/importing-files-rest-api) at [Nuxeo University](https://university.nuxeo.io).
 *   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
+
+- [Transient Store]({{page version='' space='nxdoc' page='transient-store'}})
+
+{{/panel}}
+</div>
+
+</div>

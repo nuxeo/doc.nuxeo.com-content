@@ -125,7 +125,7 @@ public class SomeJsonTest {
 
 `JsonAssert` provides the ability to get the json at any level.
 
-{{#> panel type='code' heading='Json to test'}}
+{{#> panel type='code' heading='JSON to test'}}
 
 ```js
 {
@@ -148,7 +148,7 @@ System.out.println( json.has("field1.field2").toString() );
 
 `JsonAssert` provides the ability to use JSON path.
 
-{{#> panel type='code' heading='Json to test'}}
+{{#> panel type='code' heading='JSON to test'}}
 
 ```js
 {
@@ -170,7 +170,7 @@ json.has("field1.field2[0].field3").isEquals("myDataShouldBeHere");
 
 `JsonAssert` provides the ability to test array values.
 
-{{#> panel type='code' heading='Json to test'}}
+{{#> panel type='code' heading='JSON to test'}}
 
 ```js
 {
@@ -188,7 +188,7 @@ json.has("field1").contains("A should be here", "B should be here", "C should be
 
 `JsonAssert` provides the ability to test the value of a field for multiple object in an array.
 
-{{#> panel type='code' heading='Json to test'}}
+{{#> panel type='code' heading='JSON to test'}}
 
 ```js
 {

@@ -1066,13 +1066,13 @@ Here is a sample to get you started. It provides a document's parent ID, title a
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<component name="org.nuxeo.sample.enrichers.parentDocEnricher">
-<!-- Start copying here if you declare the enricher in Nuxeo Studio -->
-<extension target="org.nuxeo.ecm.core.io.MarshallerRegistry" point="marshallers">
-  <register class="org.nuxeo.university.enrichers.ParentDocEnricher" enable="true" />
-</extension>
-<!-- Stop copying here if you declare the enricher in Nuxeo Studio -->
-</component>
+    <component name="org.nuxeo.sample.enrichers.parentDocEnricher">
+        <!-- Start copying here if you declare the enricher in Nuxeo Studio -->
+        <extension target="org.nuxeo.ecm.core.io.MarshallerRegistry" point="marshallers">
+            <register class="org.nuxeo.university.enrichers.ParentDocEnricher" enable="true" />
+        </extension>
+        <!-- Stop copying here if you declare the enricher in Nuxeo Studio -->
+    </component>
 ```
 
 {{! /multiexcerpt}}{{! multiexcerpt name='enricher-class'}}
@@ -1138,14 +1138,14 @@ An example with a content enricher for the object `org.nuxeo.ecm.platform.audit.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<component name="org.nuxeo.sample.enrichers.logEntryEnricher">
-<!-- Start copying here if you declare the enricher in Nuxeo Studio -->
-<extension target="org.nuxeo.ecm.core.io.MarshallerRegistry"
+    <component name="org.nuxeo.sample.enrichers.logEntryEnricher">
+        <!-- Start copying here if you declare the enricher in Nuxeo Studio -->
+        <extension target="org.nuxeo.ecm.core.io.MarshallerRegistry"
            point="marshallers">
-  <register class="org.nuxeo.sample.enrichers.LogEntryEnricher" enable="true" />
-</extension>
-<!-- Stop copying here if you declare the enricher in Nuxeo Studio -->
-</component>
+           <register class="org.nuxeo.sample.enrichers.LogEntryEnricher" enable="true" />
+        </extension>
+        <!-- Stop copying here if you declare the enricher in Nuxeo Studio -->
+    </component>
 ```
 
 ```java

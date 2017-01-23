@@ -122,32 +122,32 @@ Simple mode is activated by default. The extended mode can be configured through
       </tr>
       <tr>
         <td>`entity-type`</td>
-        <td>**string**</td>
+        <td>string</td>
         <td>'exception' (in the case of exceptions)</td>
       </tr>
       <tr>
         <td>`code`</td>
-        <td>**string**</td>
-        <td>The technical exception identity (java class)</td>
+        <td>string</td>
+        <td>The technical exception identity (Java class)</td>
       </tr>
       <tr>
         <td>`status`</td>
-        <td>**integer**</td>
+        <td>integer</td>
         <td>The HTTP status of the error response</td>
       </tr>
       <tr>
         <td>`message`</td>
-        <td>**string**</td>
+        <td>string</td>
         <td>A human-readable message about the error</td>
       </tr>
       <tr>
         <td>`stacktrace`</td>
-        <td>**string**</td>
+        <td>string</td>
         <td>The entire stack trace in one string</td>
       </tr>
       <tr>
         <td>`exception`</td>
-        <td>**JSON object**</td>
+        <td>JSON object</td>
         <td>The entire stack trace wrapped into a JSON Object</td>
       </tr>
     </tbody>

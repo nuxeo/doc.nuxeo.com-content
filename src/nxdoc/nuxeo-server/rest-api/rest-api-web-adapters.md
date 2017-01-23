@@ -125,9 +125,9 @@ WebEngine, the JAX-RS Server used to serve the REST API, offers [WebAdapters]({{
 A WebAdapter is a URL segment starting with `@` which transforms the input resource so as to return another resource. The idea is to have a URL pointing to a Document and use the adapter to convert the Document into something else before the result is returned. The general syntax is:
 
 ```
-/nuxeo/api/v1/id/{docId}/@adapter/{parameters}
+http://NUXEO_SERVER/nuxeo/api/v1/id/{docId}/@adapter/{parameters}
 
-/nuxeo/api/v1/path/{documentPath}/@adapter/{parameters}
+http://NUXEO_SERVER/nuxeo/api/v1/path/{documentPath}/@adapter/{parameters}
 ```
 
 {{#> callout type='note' }}
@@ -141,6 +141,10 @@ The notion of adapter precedes the concept of [Content Enricher]({{page page='co
 Default adapters provided by default.
 
 <table class="hover">
+<tr>
+    <th>Adapter</th>
+    <th>Usage and sample URL</th>
+</tr>
   <tr>
     <td class="small-2">**@acl**</td>
     <td>Returns the ACLs of the target Document</td>
@@ -149,7 +153,7 @@ Default adapters provided by default.
     <td></td>
     <td>
       ```
-      /nuxeo/api/v1/id/{docId}/@acl
+      /api/v1/id/{docId}/@acl
       ```
     </td>
   </tr>
@@ -164,7 +168,7 @@ Default adapters provided by default.
     <td></td>
     <td>
       ```
-      /nuxeo/api/v1/id/{docId}/@audit
+      /api/v1/id/{docId}/@audit
       ```
     </td>
   </tr>
@@ -179,7 +183,7 @@ Default adapters provided by default.
     <td></td>
     <td>
       ```
-      /nuxeo/api/v1/id/{docId}/@blob/{xpath}
+      /api/v1/id/{docId}/@blob/{xpath}
       ```
     </td>
   </tr>
@@ -190,16 +194,16 @@ Default adapters provided by default.
     <td class="small-2">**@children**</td>
     <td>
       Returns children of the target Document<br />
-      *Query parameters (optional) are by default:*<br />
-      `page`:`0`<br />
-      `pageSize`:`50`<br />
-      `maxResult`:`nolimit`
+      Query parameters (optional) are by default:<br />
+      `page:0`<br />
+      `pageSize:50`<br />
+      `maxResult:nolimit`
     </td>
   </tr>
     <td></td>
     <td>
       ```
-      /nuxeo/api/v1/id/{docId}/@children
+      /api/v1/id/{docId}/@children
       ```
     </td>
   </tr>
@@ -210,7 +214,7 @@ Default adapters provided by default.
     <td class="small-2">**@convert**</td>
     <td>
       Returns the conversion of a blob<br />
-      *Query parameters (must use one):*<br />
+      Query parameters (must use one):<br />
       `converter`<br />
       `type`<br />
       `format`
@@ -220,7 +224,7 @@ Default adapters provided by default.
     <td></td>
     <td>
       ```
-      /nuxeo/api/v1/id/{docId}/@convert?format=pdf
+      /api/v1/id/{docId}/@convert?format=pdf
       ```
     </td>
   </tr>
@@ -237,7 +241,7 @@ Default adapters provided by default.
     <td></td>
     <td>
       ```
-      /nuxeo/api/v1/id/{docId}/@pp/{pageProviderName}
+      /api/v1/id/{docId}/@pp/{pageProviderName}
       ```
     </td>
   </tr>
@@ -252,7 +256,7 @@ Default adapters provided by default.
     <td></td>
     <td>
       ```
-      /nuxeo/api/v1/id/{docId}/@rendition/{renditionName}
+      /api/v1/id/{docId}/@rendition/{renditionName}
       ```
     </td>
   </tr>
@@ -263,20 +267,20 @@ Default adapters provided by default.
     <td class="small-2">**@search**</td>
     <td>
       Returns paged results of the query (full-text or NXQL)<br />
-      *Query parameters (optional) are by default:*<br />
-      `orderBy`:`dc:title`<br />
-      `page`:`0`<br />
-      `pageSize`:`50`<br />
-      `maxResult`:`nolimit`
+      Query parameters (optional) are by default:<br />
+      `orderBy:dc:title`<br />
+      `page:0`<br />
+      `pageSize:50`<br />
+      `maxResult:nolimit`
     </td>
   </tr>
   <tr>
     <td></td>
     <td>
       ```
-      /nuxeo/site/api/v1/path/{docId}/@search?fullText=nuxeo&orderBy=dc:title
+       /api/v1/path/{docId}/@search?fullText=nuxeo&orderBy=dc:title
 
-       /nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?query=SELECT * FROM File
+       /api/v1/path/{pathOfTheDoc}/@search?query=SELECT * FROM File
       ```
     </td>
   </tr>
@@ -291,7 +295,7 @@ Default adapters provided by default.
     <td></td>
     <td>
       ```
-      /nuxeo/api/v1/id/{docId}/@task
+      /api/v1/id/{docId}/@task
       ```
     </td>
   </tr>
@@ -306,7 +310,7 @@ Default adapters provided by default.
     <td></td>
     <td>
       ```
-      /nuxeo/api/v1/id/{docId}/@workflow
+      /api/v1/id/{docId}/@workflow
       ```
     </td>
   </tr>
@@ -325,7 +329,7 @@ Default adapters provided by default.
     <td></td>
     <td>
       ```
-      /nuxeo/api/v1/group/{groupId}/@users
+      /api/v1/group/{groupId}/@users
       ```
     </td>
   </tr>
@@ -340,7 +344,7 @@ Default adapters provided by default.
     <td></td>
     <td>
       ```
-      /nuxeo/api/v1/group/{groupId}/@groups
+      /api/v1/group/{groupId}/@groups
       ```
     </td>
   </tr>
@@ -361,7 +365,7 @@ Alternatively, use the `@bo` WebAdapter to leverage standard Nuxeo DocumentModel
     <td></td>
     <td>
       ```
-      /nuxeo/api/v1/id/{docId}/@bo/{documentAdapterName}
+      /api/v1/id/{docId}/@bo/{documentAdapterName}
       ```
     </td>
   </tr>
@@ -378,8 +382,8 @@ Or use the `@op` adapter to access operations.
     <td></td>
     <td>
       ```
-      /nuxeo/api/v1/id/{docId}/@op/{OperationName}
-      /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
+      /api/v1/id/{docId}/@op/{OperationName}
+      /api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
       ```
     </td>
   </tr>
@@ -394,7 +398,7 @@ Here is an example :
 {{#> panel type='code' heading='Sample URL'}}
 
 ```
-/nuxeo/api/v1/id/{docId}/@blob/file:content/@op/Blob.ToPDF
+/api/v1/id/{docId}/@blob/file:content/@op/Blob.ToPDF
 ```
 
 {{/panel}}
@@ -406,7 +410,7 @@ Here is an example :
 {{! multiexcerpt name='restapi-adapters-children'}}{{#> panel type='code' heading='Example'}}
 
 ```
-GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@children?currentPageIndex=0&pagesize=20&maxResults=100
+GET http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheDoc}/@children?currentPageIndex=0&pagesize=20&maxResults=100
 ```
 
 {{/panel}}{{! /multiexcerpt}}{{#> panel type='code' heading='Response'}}
@@ -456,7 +460,7 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@children?currentPageIndex=0&pagesize
 **Full-Text Search**
 
 ```
-GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?fullText=nuxeo&orderBy=dc:title
+GET http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?fullText=nuxeo&orderBy=dc:title
 ```
 
 {{#> panel type='code' heading='Response Example'}}
@@ -535,7 +539,7 @@ You can also make some direct NXQL queries with this endpoint, like this:
 {{#> panel type='code' heading='GET Request Body'}}
 
 ```
-GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?query=SELECT * FROM File
+GET http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?query=SELECT * FROM File
 ```
 
 {{/panel}}{{#> panel type='code' heading='Response Example'}}
@@ -613,7 +617,7 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?query=SELECT * FROM File
 {{#> panel type='code' heading='GET Request Body'}}
 
 ```
-GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
+GET http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
 ```
 
 {{/panel}}{{#> panel type='code' heading='Response'}}
@@ -637,7 +641,7 @@ To update a business object, send a `PUT` request on the business object resourc
 {{#> panel type='code' heading='PUT Request Body'}}
 
 ```
-PUT /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
+PUT http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
 {
   "entity-type": "BusinessBeanAdapter",
   "value": {
@@ -658,7 +662,7 @@ To create a business object, issue a `POST` on the object resource with the name
 {{#> panel type='code' heading='POST Request Body'}}
 
 ```
-POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter/{newName}
+POST http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter/{newName}
 {
   "entity-type": "BusinessBeanAdapter",
   "value": {
@@ -679,7 +683,7 @@ POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter/{newName}
 {{#> panel type='code' heading='Sample POST Request Body'}}
 
 ```
-POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/{myOperation}
+POST http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/{myOperation}
 {
   "params": {
     "opParam": "value"
@@ -694,7 +698,7 @@ The response will depend on the result of the automation chain.
 {{#> panel type='code' heading='Sample POST Request Body on a Document'}}
 
 ```
-POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
+POST http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
 {
   "params": {
     "chainParam": "value"
@@ -705,7 +709,7 @@ POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
 {{/panel}}{{! multiexcerpt name='restapi-adapters-piping'}}{{#> panel type='code' heading='Sample POST Request Body on a List of Documents'}}
 
 ```
-POST /nuxeo/site/api/v1/path/{pathOfTheFolder}/@children/@op/Chain.myChain
+POST http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheFolder}/@children/@op/Chain.myChain
 {
   "params": {
 	"chainParam": "value"

@@ -10,7 +10,7 @@ labels:
     - rest-api
     - rest-api-component
     - nxdoc-730
-toc: true
+toc: false
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API
@@ -115,61 +115,67 @@ In order to have more control over REST API Calls, you can use the following spe
         <th class="small-5">Example</th>
       </tr>
       <tr>
-        <td>**X-NXVoidOperation**</td>
-        <td>*false*</td>
+        <td>`X-NXVoidOperation`</td>
+        <td>false</td>
         <td>Force server to return no content (like a void operation).</td>
-        <td>`X-NXVoidOperation: true`  *Can be useful when dealing with blobs to avoid having the blob output sent back to the client.*</td>
+        <td>`X-NXVoidOperation: true` <br/>
+        Can be useful when dealing with blobs to avoid having the blob output sent back to the client.</td>
       </tr>
       <tr>
-        <td>**Nuxeo-Transaction-Timeout**</td>
-        <td>*30*</td>
+        <td>`Nuxeo-Transaction-Timeout`</td>
+        <td>30</td>
         <td>Specify the duration of the transaction timeout (seconds)</td>
-        <td>`Nuxeo-Transaction-Timeout: 300` *(Sets timeout for 5 minutes for longer transactions)*</td>
+        <td>`Nuxeo-Transaction-Timeout: 300` <br/>
+        (Sets timeout for 5 minutes for longer transactions)</td>
       </tr>
       <tr>
-        <td>**properties**</td>
-        <td>`*`</td>
+        <td>`properties`</td>
+        <td> &#42; </td>
         <td>Filter properties so the returned document contains only data from the specified schemas</td>
-        <td>`properties: dublincore, file` *(*`*`&nbsp;*Returns data from all schemas)*</td>
+        <td>`properties: dublincore, file` <br/>
+        (`*` Returns data from all schemas)</td>
       </tr>
       <tr>
-        <td>**Repository**</td>
-        <td>*default*</td>
+        <td>`Repository`</td>
+        <td>default</td>
         <td>Specify the repository name if it has been changed or if you have multiple repositories</td>
         <td>`Repository: myCustomRepositoryName`</td>
       </tr>
       <tr>
-        <td>**enrichers.document**</td>
+        <td>`enrichers.document`</td>
         <td></td>
         <td>Request further information in the response. See [(Content Enrichers)]({{page page='content-enrichers'}}) for more details.</td>
-        <td>`enrichers.document: "thumbnail"` *(Returns related thumbnail of the document)*</td>
+        <td>`enrichers.document: "thumbnail"` <br/>
+        (Returns related thumbnail of the document)</td>
       </tr>
       <tr>
-        <td>**X-Versioning-Option**</td>
-        <td>*NONE*</td>
+        <td>`X-Versioning-Option`</td>
+        <td>NONE</td>
         <td>Increment minor or major version and returns versioned document</td>
         <td>`X-Versioning-Option: MAJOR`</td>
       </tr>
       <tr>
-        <td>**fetch.document**</td>
+        <td>`fetch.document`</td>
         <td></td>
         <td>Load additional parts of an object with entity-type `document`</td>
         <td>
-          `fetch.document: value1, value2,...` See [Document JSON and Extended Fields]({{page page='document-json-extended-fields'}}) for more details on accepted values.
+          `fetch.document: value1, value2,...` <br/>
+          See [Document JSON and Extended Fields]({{page page='document-json-extended-fields'}}) for more details on accepted values.
         </td>
       </tr>
       <tr>
-        <td>**depth**</td>
-        <td>*children*</td>
+        <td>`depth`</td>
+        <td>children</td>
         <td>Control aggregation depth</td>
         <td>
-          `depth: children`
-          Accepted values: `root`, `children`, `max`. See [Aggregating Marshallers and Avoiding Infinite Loops]({{page page='parameterizing-reusing-marshallers#aggregating-marshallers-infinite-loops'}}) for more details.
+          `depth: children` <br/>
+          Accepted values: `root`, `children`, `max`. <br/>
+          See [Aggregating Marshallers and Avoiding Infinite Loops]({{page page='parameterizing-reusing-marshallers#aggregating-marshallers-infinite-loops'}}) for more details.
         </td>
       </tr>
       <tr>
-        <td>**nx_es_sync**</td>
-        <td>*false*</td>
+        <td>`nx_es_sync`</td>
+        <td>false</td>
         <td>Force ElasticSearch synchronous indexing during a REST call</td>
         <td>`nx_es_sync: true`</td>
       </tr>
@@ -192,4 +198,3 @@ In order to have more control over REST API Calls, you can use the following spe
 {{/panel}}
   </div>
 </div>
-

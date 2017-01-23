@@ -150,7 +150,7 @@ history:
         version: '1'
 
 ---
-If you perform cross-domain requests from any JavaScript client to access WebEngine resources or [Automation APIs]({{page page='content-automation-concepts'}}), there's a chance that your browser will block it. Since version 5.7.2, CORS allows you to communicate with Nuxeo from another domain using `XMLHttpRequests`.
+If you perform cross-domain requests from any JavaScript client to access WebEngine resources or [Automation APIs]({{page page='content-automation-concepts'}}), there's a chance that your browser will block it. CORS allows you to communicate with Nuxeo from another domain using `XMLHttpRequests`.
 
 Nuxeo uses a filter to handle those cases. It's based on [Vladimir Dzhuvinov's universal CORS filter](http://software.dzhuvinov.com/cors-filter.html), and allows you to configure on which URLs cross-origin headers are needed. You'll be able to configure each URL independently.
 
@@ -194,7 +194,7 @@ Here is the list of all [optional] contribution attributes.
         <td>`supportedMethods`</td>
         <td>
           The list of the supported HTTP methods.<br />
-          `*` | *comma-separated list of HTTP methods*
+          `*` | comma-separated list of HTTP methods
         </td>
         <td>`GET, POST, HEAD, OPTIONS`</td>
       </tr>
@@ -202,7 +202,7 @@ Here is the list of all [optional] contribution attributes.
         <td>`supportedHeaders`</td>
         <td>
           The names of the supported author request headers.<br />
-        `*` | *comma-separated list of headers*
+        `*` | comma-separated list of headers
         </td>
         <td>`*`</td>
       </tr>
@@ -210,7 +210,7 @@ Here is the list of all [optional] contribution attributes.
         <td>`exposedHeaders`</td>
         <td>
           The list of  response headers other than simple response headers that the browser should expose to the author of the cross-domain request through the `XMLHttpRequest.getResponseHeader()` method.<br />
-          `*` | *comma-separated list of headers*
+          `*` | comma-separated list of headers
         </td>
         <td>`*`</td>
       </tr>
@@ -234,14 +234,14 @@ Here is the list of all [optional] contribution attributes.
   </table>
 </div>
 
-## Verifying that the contribution is taken into account
+## Verifying That the Contribution Is Taken into Account
 
 To debug your CORS configuration,  use a `cURL` request and look at the response. If you haven't blocked the OPTIONS method, you should test with the preflight request for an expected POST request:
 
 {{#> panel type='code' heading='Simulate preflight request'}}
 
 ```bash
-curl --verbose -H "Origin: http://www.nuxeo.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://localhost:8080/nuxeo/site/foobar/upload
+curl --verbose -H "Origin: http://www.nuxeo.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload
 ```
 
 {{/panel}}
@@ -262,7 +262,7 @@ With the default configuration, preflight's response looks like this:
 
 {{/panel}}
 
-The "Access-Control-Allow-&#42;" headers contain the expected values.
+The `Access-Control-Allow-*` headers contain the expected values.
 
 ## Examples
 
@@ -272,7 +272,7 @@ Here is an example of the simplest contribution, allowing cross-domain requests 
 
 {{#> panel type='code' heading='Simplest contribution'}}
 
-```html/xml
+```xml
 <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
     <corsConfig name="foobar" supportedMethods ="GET,POST,HEAD,OPTIONS,DELETE,PUT">
       <pattern>/nuxeo/.*</pattern>
@@ -286,17 +286,17 @@ A `fooly` complete contribution would look like:
 
 {{#> panel type='code' heading='Fooly contribution'}}
 
-```html/xml
-      <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
-        <corsConfig name="fooly" allowGenericHttpRequests="true"
-          allowOrigin="http://example.com http://example.com:8080"
-          allowSubdomains="true" supportedMethods="GET"
-          supportedHeaders="Content-Type, X-Requested-With"
-          exposedHeaders="X-Custom-1, X-Custom-2"
-          supportsCredentials="false" maxAge="3600">
-          <pattern>/fooly/site/.*</pattern>
-        </corsConfig>
-      </extension>
+```xml
+<extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
+    <corsConfig name="fooly" allowGenericHttpRequests="true"
+      allowOrigin="http://example.com http://example.com:8080"
+      allowSubdomains="true" supportedMethods="GET"
+      supportedHeaders="Content-Type, X-Requested-With"
+      exposedHeaders="X-Custom-1, X-Custom-2"
+      supportsCredentials="false" maxAge="3600">
+      <pattern>/fooly/site/.*</pattern>
+    </corsConfig>
+</extension>
 ```
 
 {{/panel}}
