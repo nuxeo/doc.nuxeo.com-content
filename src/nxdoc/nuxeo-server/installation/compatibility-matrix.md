@@ -178,5 +178,5 @@ More information on the page [Elasticsearch Setup]({{page page='elasticsearch-se
 {{! multiexcerpt name='supported-browsers'}}
 Depending on the user interface addon or applications you use, the browsers requirements can differ. See the relevant pages:
 - [Nuxeo JSF UI]({{page version='' space='nxdoc' page='nuxeo-jsf-ui'}})
-- [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui-overview'}})
+- [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}})
 {{! /multiexcerpt}}
