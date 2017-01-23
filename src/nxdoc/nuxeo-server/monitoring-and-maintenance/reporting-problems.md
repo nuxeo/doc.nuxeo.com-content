@@ -248,7 +248,7 @@ top -bcH -n1 -w512 > /tmp/top-thread.txt
 
 ## Oracle JVM Flight Recording
 
-If you use the Oracle JVM you can activate this option in the `nuxeo.conf`:
+If you're subscribing to an appropriate Oracle commercial license for your Oracle JVM, you can activate this option in the `nuxeo.conf`:
 
 ```
 JAVA_OPTS=$JAVA_OPTS -Dcom.sun.management.jmxremote.autodiscovery=true -Dcom.sun.management.jdp.name=Nuxeo -XX:+UnlockCommercialFeatures -XX:+FlightRecorder
