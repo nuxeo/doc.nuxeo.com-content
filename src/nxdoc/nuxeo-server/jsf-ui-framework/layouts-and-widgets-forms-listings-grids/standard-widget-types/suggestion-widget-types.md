@@ -288,8 +288,8 @@ By default, suggestion widgets assume the vocabulary labels are not localized. I
 
 ###### Properties File Translation
 
-<span style="color: rgb(61,61,61);">The translations are available is `message_xx.properties` files and the vocabulary only handles the label key. As of Nuxeo 5.8, labels will be translated if the widget is marked as translated in its configuration (but this should be tied to the "localize" property for better consistency so this will likely change in the future, see [NXP-13629](https://jira.nuxeo.com/browse/NXP-13629)):
-</span>
+The translations are available is `message_xx.properties` files and the vocabulary only handles the label key. As of Nuxeo 5.8, labels will be translated if the widget is marked as translated in its configuration (but this should be tied to the "localize" property for better consistency so this will likely change in the future, see [NXP-13629](https://jira.nuxeo.com/browse/NXP-13629)):
+
 
 ```xml
 <translated>true</translated>
@@ -335,7 +335,7 @@ Previously based on RichFaces suggestion box in Nuxeo Platform 5.6 and earlier v
 
 However, here are noticeable new properties:
 
-###### <span style="color: rgb(68,68,68);">groupRestriction</span>
+###### groupRestriction
 
 This property allows to specify a group id to restrict the suggested users.
 
@@ -413,7 +413,7 @@ The term entered in select2 will be passed to the specified operation under the 
 protected String searchTerm;
 ```
 
-<span style="color: rgb(51,51,51);">The specified operation must return an array of JSON objects which, to be interpreted by select2, must contains the following elements:</span>
+The specified operation must return an array of JSON objects which, to be interpreted by select2, must contains the following elements:
 
 *   `id`: the value or reference to be submitted (i.e. saved in the bound field). In case of a JSON serialization of a document, it is the document uid. However, you can modify which element of the JSON object must be submitted with the `idProperty` widget property.
 
