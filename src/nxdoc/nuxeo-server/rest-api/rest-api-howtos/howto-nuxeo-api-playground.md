@@ -21,6 +21,9 @@ labels:
     - multiexcerpt
     - multiexcerpt-include
 toc: true
+version_override:
+    'LTS 2015': 710/nxdoc/use-nuxeo-api-playground-to-discover-the-api
+    '6.0': 60/nxdoc/use-nuxeo-api-playground-to-discover-the-api
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API
@@ -331,7 +334,7 @@ The left side panel allows you to explore the [REST API endpoints]({{page page='
 
 ![]({{file name='playground_repository_PUT_tab.png'}} ?w=300,h=294,border=true)
 
-The default **GET** tab allows you to invoke [adapters]({{page page='web-adapters-for-the-rest-api'}}) on the current document as well as toggle [content enrichers]({{page page='content-enricher'}}). By default the `thumbnail` and `breadcrumb` enrichers are selected since they are used to build the header where this information is shown. Selecting an adapter displays a form where you can enter the parameters, if any.
+The default **GET** tab allows you to invoke [adapters]({{page page='rest-api-web-adapters'}}) on the current document as well as toggle [content enrichers]({{page page='content-enrichers'}}). By default the `thumbnail` and `breadcrumb` enrichers are selected since they are used to build the header where this information is shown. Selecting an adapter displays a form where you can enter the parameters, if any.
 ![]({{file name='playground_repository_GET_tab.png'}} ?w=400,border=true)
 
 ### Data Structure

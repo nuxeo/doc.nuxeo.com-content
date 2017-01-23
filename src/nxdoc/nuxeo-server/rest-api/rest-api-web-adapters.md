@@ -11,6 +11,9 @@ labels:
     - webengine
     - rest-api-component
 toc: true
+version_override:
+    'LTS 2015': 710/nxdoc/web-adapters-for-the-rest-api
+    '6.0': 60/nxdoc/web-adapters-for-the-rest-api/
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API

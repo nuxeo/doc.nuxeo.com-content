@@ -88,7 +88,7 @@ A Transient Store allows you to store temporary blobs and associated parameters 
 
 It is typically used by:
 
-*   The [Batch Upload API]({{page page='blob-upload-for-batch-processing'}}) to temporarily store a batch of uploaded blobs until they are attached to a document.
+*   The [Batch Upload API]({{page page='batch-upload-endpoint'}}) to temporarily store a batch of uploaded blobs until they are attached to a document.
 *   The `ConversionService` to store the `BlobHolder` resulting from an [Asynchronous Conversion Work]({{page page='conversion'}}#rest-api-async-conversions).
 
 The [TransientStore](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/transientstore/api/TransientStore.html) API is based on the following methods:

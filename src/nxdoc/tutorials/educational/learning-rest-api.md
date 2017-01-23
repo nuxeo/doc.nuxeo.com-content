@@ -178,7 +178,7 @@ Information about the REST API usage can be found in various places. The most im
 5.  Once started, access it. URL can be seen in the manager, in this example it is [`https://my-instance-name.nuxeo.io`](https://my-instance-name.nuxeo.io) . Make sure to use yours.
     ![]({{file name='instance-url.png' page='learning-rest-api'}} ?w=300,h=200,border=true)
 6.  Log in. Default credentials are Administrator / Administrator.
-7.  Install the [Nuxeo API Playground]({{page page='use-nuxeo-api-playground-to-discover-the-api'}}) Nuxeo package from the **Update Center** > **Marketplace Packages** tab.
+7.  Install the [Nuxeo API Playground]({{page page='howto-nuxeo-api-playground'}}) Nuxeo package from the **Update Center** > **Marketplace Packages** tab.
     Note that the instance has to be restarted for the installation to complete. The restart can be achieved as following:
     ![]({{file name='restart-instance.png' page='learning-rest-api'}} ?w=500,h=508,border=true)
 8.  [Deploy your Nuxeo Studio configuration](https://university.nuxeo.io/nuxeo/university/#%21/course/getting-started-nuxeo-studio/deploying-nuxeo-studio-configuration).
@@ -720,7 +720,7 @@ nuxeo.request('/path/default-domain/@acl')
 
 **Your goals**
 
-Use the appropriate adapter to retrieve your contract's audit log. You can use the [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}}) documentation to check which adapter to call.
+Use the appropriate adapter to retrieve your contract's audit log. You can use the [Web Adapters for the REST API]({{page page='rest-api-web-adapters'}}) documentation to check which adapter to call.
 
 **What you need to do**
 
@@ -730,7 +730,7 @@ Complete the following exercise.
 
 **To go further**
 
-[Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}}) documentation.
+[Web Adapters for the REST API]({{page page='rest-api-web-adapters'}}) documentation.
 
 ### Creation
 

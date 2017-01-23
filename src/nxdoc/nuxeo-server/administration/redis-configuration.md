@@ -128,7 +128,7 @@ Nuxeo instances should be configured with a Redis server (in addition to the reg
 1.  When it's important that asynchronous jobs not yet executed be kept across server restarts.
 2.  In cluster mode to allow:
     *   Execution of some asynchronous jobs on dedicated nodes (for instance image conversion or fulltext extraction).
-    *   A distributed [Transient Store]({{page page='transient-store'}}), required for [Batch Upload]({{page page='blob-upload-for-batch-processing'}}) and [Asynchronous Conversion Works]({{page page='conversion'}}#-anchor-java-api-async-conversions-asynchronous-conversions).
+    *   A distributed [Transient Store]({{page page='transient-store'}}), required for [Batch Upload]({{page page='batch-upload-endpoint'}}) and [Asynchronous Conversion Works]({{page page='conversion'}}#-anchor-java-api-async-conversions-asynchronous-conversions).
     *   Relying on the `RedisCache` as a distributed implementation of the [Nuxeo Drive]({{page page='nuxeo-drive'}}) synchronization roots cache.
     *   [Cluster cache invalidations]({{page page='nuxeo-and-redis'}}#clustering-invalidation)
 

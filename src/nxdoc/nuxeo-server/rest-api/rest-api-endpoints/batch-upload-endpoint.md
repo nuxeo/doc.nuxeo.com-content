@@ -14,6 +14,9 @@ labels:
     - university
     - excerpt
 toc: true
+version_override:
+    'LTS 2015': 710/nxdoc/blob-upload-for-batch-processing/
+    '6.0': 60/nxdoc/blob-upload-for-batch-processing/
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API
@@ -396,7 +399,7 @@ DELETE http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileId}
 
 Returns a 204 No Content and removes the file from the batch.
 
-## Uploading a File in Chunks
+## Uploading a File in Chunks {{> anchor 'uploading-a-file-in-chunks'}}
 
 Using a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}}#-anchor-uploadingafileinchunks-uploading-a-file-in-chunks-resumable-) is useful otherwise uploading large files over a broken connection could take days.
 

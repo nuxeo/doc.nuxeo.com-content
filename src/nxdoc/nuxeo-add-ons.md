@@ -288,7 +288,7 @@ Nuxeo API Playground<br/>
 Public
 </td>
 <td colspan="1">
-[Documentation]({{page page='use-nuxeo-api-playground-to-discover-the-api'}})
+[Documentation]({{page page='howto-nuxeo-api-playground'}})
 </td>
 <td colspan="1">
 [Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-api-playground?version=1.1.1)

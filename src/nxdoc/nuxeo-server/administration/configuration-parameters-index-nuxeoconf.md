@@ -1342,7 +1342,7 @@ false
 <td colspan="1">{{! multiexcerpt name='org.nuxeo.rest.stack.enable-description'}}
 Since Nuxeo 6.0, you can enable this mode if you'd like to display exception stacktraces in JSON response when error occurs after REST calls.
 
-See [Web Exceptions documentation]({{page page='web-exceptions-errors'}}) to get modes description and examples.
+See [Web Exceptions documentation]({{page page='error-handling'}}) to get modes description and examples.
 {{! /multiexcerpt}}</td>
 <td colspan="1">Since Nuxeo 6.0</td>
 </tr>

@@ -7,6 +7,9 @@ review:
 labels:
     - lts2016-ok
     - authentication
+version_override:
+    'LTS 2015': 710/nxdoc/authenticating-the-requests/
+    '6.0': 60/nxdoc/authenticating-the-requests/
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API

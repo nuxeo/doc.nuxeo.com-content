@@ -12,6 +12,9 @@ labels:
     - rest-api-component
     - university
 toc: true
+version_override:
+    'LTS 2015': 710/nxdoc/content-enricher
+    '6.0': 60/nxdoc/content-enricher
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API

@@ -122,7 +122,7 @@ This add-on allows you to edit data in your repository as if you were in a sprea
 
 ## Opening the Spreadsheet to Edit the List of Documents
 
-To visualise in a spreadsheet the content of a folder or of the result of a search, click on ![]({{file name='spreadsheet.png'}}).&nbsp;The spreadsheet editor opens and displays as many line as there are items in the result of the query. The columns that are displayed corresponds to the columns that were displayed on the content view. If you modify the list of columns in the content view&nbsp;clicking on the&nbsp; ![]({{file name='edit_columns.png' space='userdoc' page='icons-index'}})&nbsp;icon from the content view, this will be reflected on the spreadsheet when re-opening it. The spreadsheet module uses the layout introspection API&nbsp;to be able to list the columns displayed in the content view. A mapping is done for each Layout Widget so as to display an adapted cell editor, among Simple text, DirectoryValue suggest and calendar. See the limitations section for details of the mapping. Results are&nbsp;fetched page per page using the following page provider:
+To visualise in a spreadsheet the content of a folder or of the result of a search, click on ![]({{file name='spreadsheet.png'}}). The spreadsheet editor opens and displays as many line as there are items in the result of the query. The columns that are displayed corresponds to the columns that were displayed on the content view. If you modify the list of columns in the content view clicking on the ![]({{file name='edit_columns.png' space='userdoc' page='icons-index'}}) icon from the content view, this will be reflected on the spreadsheet when re-opening it. The spreadsheet module uses the layout introspection API to be able to list the columns displayed in the content view. A mapping is done for each Layout Widget so as to display an adapted cell editor, among Simple text, DirectoryValue suggest and calendar. See the limitations section for details of the mapping. Results are fetched page per page using the following page provider:
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.query.api.PageProviderService"
@@ -135,11 +135,11 @@ To visualise in a spreadsheet the content of a folder or of the result of a sear
 </extension>
 ```
 
-To modify a value just click on the cell so as to make the editor appears.&nbsp;Once a cell is modified it becomes blue.
+To modify a value just click on the cell so as to make the editor appears. Once a cell is modified it becomes blue.
 
-You can modify has many cells you want without saving, and click on **Save**&nbsp;when you want to save.
+You can modify has many cells you want without saving, and click on **Save** when you want to save.
 
-The **Autosave** button allows you to automatically save all the changes done on the spreadsheet.&nbsp;
+The **Autosave** button allows you to automatically save all the changes done on the spreadsheet.
 
 **Undo a Modification**
 
@@ -147,17 +147,17 @@ If you want to reverse a change on a cell, click right on the cell concerned and
 
 ## Standalone Mode
 
-A standalone mode is accessible through this URL:&nbsp;https:/nuxeo-platform-url/nuxeo/spreadsheet/, where you have to enter a NXQL query to fetch your documents. From this URL you can do all the same actions than on your Nuxeo Platform instance. &nbsp;
+A standalone mode is accessible through this URL: https:/nuxeo-platform-url/nuxeo/spreadsheet/, where you have to enter a NXQL query to fetch your documents. From this URL you can do all the same actions than on your Nuxeo Platform instance.  
 
 ![]({{file name='standalone_spreadsheet.png'}} ?w=650,border=true)
 
-**Note:** When opening the spreadsheet to edit a list of documents it relies on the content view definition to determine the layout and page provider to use. In standalone mode it relies on a custom&nbsp;`spreadsheet_listing_&nbsp;_`layout and on a `spreadsheet_query_&nbsp;_`page provider.
+**Note:** When opening the spreadsheet to edit a list of documents it relies on the content view definition to determine the layout and page provider to use. In standalone mode it relies on a custom `spreadsheet_listing` layout and on a `spreadsheet_query` page provider.
 
 ## Vocabularies
 
-To display translated labels for vocabularies the spreadsheet relies on content enrichers, thus&nbsp;optimizing the number of requests sent to the server.
+To display translated labels for vocabularies the spreadsheet relies on content enrichers, thus optimizing the number of requests sent to the server.
 
-By using a set of vocabulary [content enrichers]({{page page='content-enricher'}}) with a shared _vocabularies&nbsp;_category the spreadsheet is able to retrieve all the current labels for&nbsp;vocabulary&nbsp;backed properties&nbsp;by specifying&nbsp;`X-NXContext-Category = &ldquo;vocabularies&rdquo;`
+By using a set of vocabulary [content enrichers]({{page page='content-enrichers'}}) with a shared _vocabularies_ category the spreadsheet is able to retrieve all the current labels for vocabulary backed properties by specifying `X-NXContext-Category = &ldquo;vocabularies&rdquo;`
 
 To enable loading labels for a custom directory a new vocabulary content enricher must be configured, ex:
 
@@ -173,10 +173,10 @@ Note that the spreadsheet expects the enricher's name to match the directory nam
 
 ## Limitations
 
-*   <span style="line-height: 21.58px;">The system information in read-only like Modified, Version and State are in grey to disable users to modify them.&nbsp;</span>
-*   For more information about the Mapping between listing layouts widgets and the displayed cell types, see&nbsp;[https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/master/src/main/js/app/ui/widgets.js#L57](https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/master/src/main/js/app/ui/widgets.js#L57)
+*   The system information in read-only like Modified, Version and State are in grey to disable users to modify them.
+*   For more information about the Mapping between listing layouts widgets and the displayed cell types, see [https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/master/src/main/js/app/ui/widgets.js#L57](https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/master/src/main/js/app/ui/widgets.js#L57)
 
-The Nuxeo Spreadsheet add-on is done integrating&nbsp;[Handsontable](http://handsontable.com/).&nbsp;
+The Nuxeo Spreadsheet add-on is done integrating [Handsontable](http://handsontable.com/).
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
@@ -185,8 +185,5 @@ The Nuxeo Spreadsheet add-on is done integrating&nbsp;[Handsontable](http://hand
 
 {{/panel}}</div><div class="column medium-6">
 
-&nbsp;
-
-&nbsp;
 
 </div></div>

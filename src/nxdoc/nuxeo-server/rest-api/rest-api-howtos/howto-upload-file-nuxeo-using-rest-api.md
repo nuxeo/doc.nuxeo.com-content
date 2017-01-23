@@ -22,6 +22,9 @@ labels:
     - university
     - excerpt
 toc: true
+version_override:
+    'LTS 2015': 710/nxdoc/how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint
+    '6.0': 60/nxdoc/how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint/
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API
