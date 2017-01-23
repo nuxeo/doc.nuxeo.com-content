@@ -168,7 +168,7 @@ history:
 {{! /excerpt}}
 
 It is possible to have several domains on the default Nuxeo Platform without using Nuxeo Multi-tenant, but they all share the same [vocabularies definition]({{page page='managing-vocabularies'}}) and users. This means that when users [configure the access to a workspace]({{page page='managing-permissions'}}), for instance, and search for users, they can see all the users of the application. Nuxeo Multi-tenant modifies this behavior and enables domains to be completely isolated from each other, including their users and vocabulary values.
-The tenant structure is the same a the default domain on a default Nuxeo Platform application.
+The tenant structure is the same as the default domain on a default Nuxeo Platform application.
 
 ## Isolated Items
 
@@ -186,7 +186,7 @@ Once tenant isolation is activated (see below), the following items are isolated
 
 The multi-tenant addon adds the notion of global administrator and tenant administrator to the Nuxeo Platform.
 
-Global administrators technical administrators in charge of the configuration of the whole application through the Admin tab. The Administrator default user is a global administrator. For instance, they can install updates and new modules to the Platform, restart the server, configure the Platform so it can be accessible from other applications, etc.
+Global administrators are technical administrators in charge of the configuration of the whole application through the Admin tab. The Administrator default user is a global administrator. For instance, they can install updates and new modules to the Platform, restart the server, configure the Platform so it can be accessible from other applications, etc.
 
 Tenant administrators are functional administrators who have access to a "light" version of the Admin tab. They are the powerusers of the tenant. From there, they can create and edit users and group, and modify vocabularies. Their changes are applied to their tenant only, instead of the whole application.
 
@@ -252,14 +252,14 @@ It takes two steps to make a user a tenant administrator.
 4.  Click on **Save**.
     The user now has access to the tenant administration and to the **Users and groups** and **Vocabularies** tabs of the Admin main tab.
     ![]({{file name='multi-tenant-admin-center.png'}} ?w=450,border=true)
-    The user is automatically added in two virtual groups: a **powerusers** groups for functional administration and a tenant administrators group for administration features.
+    The user is automatically added in two virtual groups: a **powerusers** group for functional administration and a tenant administrators group for administration features.
     ![]({{file name='multi-tenant-user-groups.png'}} ?w=350,border=true)
 
 ## Giving Access to the Tenant
 
 On a default installation of the Nuxeo Platform, permissions are configured so members have read access to the content. This behavior can be modified by changing the permissions.
 
-Users created by the tenant administrators automatically have "Read" access to the tenant. Indeed, they are automatically members of a virtual group that has "Read" right on the tenant.&nbsp;They don't need to be part of the default "members" group, being a member of the tenant is enough to access content.
+Users created by the tenant administrators automatically have "Read" access to the tenant. Indeed, they are automatically members of a virtual group that has "Read" right on the tenant. They don't need to be part of the default "members" group, being a member of the tenant is enough to access content.
 
 Tenant administrators can then [delegate permissions]({{page page='managing-permissions'}}) in the tenant, which will define what the user can do in the tenant.
 
@@ -269,21 +269,24 @@ The vocabularies I10subjects and I10coverage are isolated and don't display any 
 
 See the [Managing Vocabularies]({{page page='managing-vocabularies'}}) page.
 
-&nbsp;
-
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related user documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related user documentation'}}
 
-*   [Managing Users and Groups]({{page page='managing-users-and-groups'}})
-*   [Managing Permissions]({{page page='managing-permissions'}})
-*   [Managing Vocabularies]({{page page='managing-vocabularies'}})
-*   [Local Configuration]({{page page='local-configuration'}})
+- [Managing Users and Groups]({{page page='managing-users-and-groups'}})
+- [Managing Permissions]({{page page='managing-permissions'}})
+- [Managing Vocabularies]({{page page='managing-vocabularies'}})
+- [Local Configuration]({{page page='local-configuration'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
+
+<div class="column medium-6">
 
 &nbsp;
 
-&nbsp;
 
-</div></div>
+</div>
+</div>

@@ -69,150 +69,52 @@ history:
 ---
 ## Java
 
-{{! multiexcerpt name='java_requirement'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">Nuxeo Platform
-FT 8.x</th><th colspan="1">Nuxeo Platform
-LTS 2015</th><th colspan="1">Nuxeo Platform
-6.0</th><th colspan="1">Nuxeo Platform
-5.8</th></tr><tr><td colspan="1">JDK</td><td colspan="1">1.8.0_91</td><td colspan="1">1.8.0_91</td><td colspan="1">1.7.0_80
-1.8.0_91</td><td colspan="1">1.7.0_80
-1.8.0_91 (since 5.8-HF06)</td></tr></tbody></table></div>
+Java Supported versions: {{! multiexcerpt name='java_requirement'}}JDK 1.8.0_112 (Oracle's JDK or OpenJDK) and greater{{! /multiexcerpt}}
 
-As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for a given major version, for instance the latest bugfix version of Java 8 was 8u91 (1.8.0_91) at the time of this writing.
+As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for a given major version, for instance the latest bugfix version of Java 8 was 8u112 (1.8.0_112) at the time of this writing.
 
 Java 7 has been declared EOL (End Of Life) by Oracle and should only be used if there is no other recourse. Java 9 EA (Early Access) is not yet supported.
-
-{{! /multiexcerpt}}
 
 More information on the page [Installation]({{page page='installation'}}).
 
 ## Databases
 
-{{! multiexcerpt name='supported-databases-details'}}
-
 The Nuxeo Platform supports the following databases.
-
-<div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr><th colspan="1">&nbsp;</th>
-<th colspan="1">Nuxeo Platform FT 8.x</th>
-<th colspan="1">Nuxeo Platform LTS 2015</th>
-<th colspan="1">Nuxeo Platform 6.0</th>
-<th colspan="1">Nuxeo Platform 5.8</th></tr>
-<tr><th colspan="1">MarkLogic</th>
-<td colspan="1">
-{{! multiexcerpt name='MarkLogic-supported'}}
-8.0
-{{! /multiexcerpt}}</td>
-<td colspan="1">-</td>
-<td colspan="1">-</td>
-<td colspan="1">-</td></tr>
-<tr><th colspan="1">MongoDB</th>
-<td colspan="1">
-{{! multiexcerpt name='FT-mongoDB-supported'}}
-2.8<br />
-3.0<br />
-3.2 (Since 8.2)
-{{! /multiexcerpt}}</td>
-<td colspan="1">2.8<br />
-3.0<br />
-3.2 (Since 7.10-HF07)</td>
-<td colspan="1">2.6</td>
-<td colspan="1">-</td></tr>
-<tr><th colspan="1">MySQL</th>
-<td colspan="1">
-{{! multiexcerpt name='FT-mySQL-supported'}}5.6<br />
-5.7{{! /multiexcerpt}}
-</td>
-<td colspan="1">5.6<br />
-5.7</td>
-<td colspan="1">5.6<br />
-5.7</td>
-<td colspan="1">5.1<br />
-5.5<br />
-5.5 (Amazon RDS)</td></tr>
-<tr><th colspan="1">Oracle</th>
-<td colspan="1">
-{{! multiexcerpt name='7.x-oracle-supported'}}11g<br />
-12c{{! /multiexcerpt}}</td>
-<td colspan="1">11g<br />
-12c</td>
-<td colspan="1">11g<br />
-12c</td>
-<td colspan="1">10<br />
-11<br />
-11 (Amazon RDS)</td></tr>
-<tr><th colspan="1">PostgreSQL</th>
-<td colspan="1">
-{{! multiexcerpt name='7.x-postgreSQL-supported'}}
-9.3<br />
-9.4<br />
-9.5 (Since 8.3)
-9.6 (Since 8.10)
-{{! /multiexcerpt}}</td>
-<td colspan="1">9.3<br />
-9.4</td>
-<td colspan="1">9.3<br />
-9.4</td>
-<td colspan="1">8.4<br />
-9.0<br />
-9.1<br />
-9.2<br />
-9.3</td></tr>
-<tr><th colspan="1">SQL Server</th>
-<td colspan="1">
-{{! multiexcerpt name='7.x-SQLserver-supported'}}2012<br />
-2012 (Azure)
-{{! /multiexcerpt}}</td>
-<td colspan="1">2012<br />
-2012 (Azure)</td>
-<td colspan="1">2012<br />
-2012 (Azure)</td>
-<td colspan="1">2008<br />
-2008r2<br />
-2012<br />
-2012 (Azure)</td></tr></tbody></table></div>
+{{! multiexcerpt name='all-supported-databases'}}
+<ul>
+<li>{{! multiexcerpt name='MariaDB-supported'}}MariaDB 10.1{{! /multiexcerpt}}</li>
+<li>{{! multiexcerpt name='MarkLogic-supported'}} MarkLogic 8.0 {{! /multiexcerpt}}</li>
+<li>{{! multiexcerpt name='MongoDB-supported'}}MongoDB 3.2{{! /multiexcerpt}}</li>
+<li>{{! multiexcerpt name='MySQL-supported'}}MySQL 5.7{{! /multiexcerpt}}</li>
+<li>{{! multiexcerpt name='Oracle-supported'}}Oracle 12g{{! /multiexcerpt}}</li>
+<li>{{! multiexcerpt name='PostgreSQL-supported'}}PostgreSQL 9.5{{! /multiexcerpt}}</li>
+<li>{{! multiexcerpt name='SQLserver-supported'}}SQL Server 2008{{! /multiexcerpt}}</li>
+</ul>
+{{! /multiexcerpt}}
 
 **Notes**
 
-* Only the latest service pack is supported for a given version. For the open source databases this means upgrading to the latest minor version. For Oracle this means the latest patchset. For SQL Server this means the latest service pack.
-* Older versions of the different databases may work but are not supported.
-
+{{! multiexcerpt name='supported-databases-notes'}}
+The Nuxeo Platform is likely to work with greater versions of related databases. Do not hesitate to inform the Nuxeo support of your attempts with different versions.
+More information on the page [Database Configuration]({{page version='' space='nxdoc' page='database-configuration'}}).<br/>
+Note that Nuxeo Server is shipped embedding H2 database, for quick evaluation purpose. One of the listed databases is required for a production set up or for more serious evaluation like performance testing.
 {{! /multiexcerpt}}
-
-More information about database configuration in the [Database Configuration]({{page page='database-configuration'}}) section.
 
 ## Application Servers
 
-{{! multiexcerpt name='supported-app-servers-details'}}
+The Nuxeo Platform can be based on [JBoss](http://www.jboss.org/jbossas/) or [Tomcat](http://tomcat.apache.org/). Supported versions are:
 
-The Nuxeo Platform can be based on [JBoss](http://www.jboss.org/jbossas/) or [Tomcat](http://tomcat.apache.org/). Here is a table showing which versions of these application servers are known to work with the Nuxeo Platform.
-
-<div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr><th colspan="1">&nbsp;</th>
-<th colspan="1">Nuxeo Platform FT 8.x</th>
-<th colspan="1">Nuxeo Platform LTS 2015</th>
-<th colspan="1">Nuxeo Platform 6.0</th>
-<th colspan="1">Nuxeo Platform 5.8</th></tr>
-<tr><th colspan="1">Apache Tomcat</th>
-<td colspan="1">7.0.64</td>
-<td colspan="1">7.0.64</td>
-<td colspan="1">7.0.56</td>
-<td colspan="1">7.0.42</td></tr>
-<tr><th colspan="1">JBoss / WildFly</th>
-<td colspan="1">WildFly 8.1.0</td>
-<td colspan="1">WildFly 8.1.0</td>
-<td colspan="1">WildFly 8.1.0</td>
-<td colspan="1">-</td></tr></tbody></table>
-</div>
-
-**Other Application Servers**
-
-The Nuxeo Platform can be delivered [via a standard static WAR ]({{page page='deploying-as-a-standard-static-war'}}) (as opposed to the dynamic building of the WAR at startup that happens in the usual distribution). This implies some work to adapt and validate the deployment of the Nuxeo Platform on an additional application/web server. If you have such a requirement, you can ask your usual Nuxeo contact.
-
+{{! multiexcerpt name='supported-app-servers-versions'}}
+<ul>
+<li>Tomcat 7.0.69</li>
+<li>JBoss WildFly 8.1.0</li>
+</ul>
 {{! /multiexcerpt}}
+
+{{! multiexcerpt name='supported-app-servers-static-war'}}
+Nuxeo is shipped with an embedded Tomcat server but can also be packed as a static WAR that can be deployed additional targets, such as JBoss Wildfly. See [Run as A Static War]({{page page='deploying-as-a-standard-static-war'}}).
+{{! /multiexcerpt}}
+
 
 ## Redis
 
@@ -220,19 +122,23 @@ The Nuxeo Platform can be delivered [via a standard static WAR ]({{page page='de
 <div class="table-scroll">
 <table class="hover">
 <tbody>
-<tr><th colspan="1">&nbsp;</th>
-<th colspan="1">Nuxeo Platform FT 8.x</th>
+<tr>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">Nuxeo Platform LTS 2016</th>
 <th colspan="1">Nuxeo Platform LTS 2015</th>
 <th colspan="1">Nuxeo Platform 6.0</th>
-<th colspan="1">Nuxeo Platform 5.8</th></tr>
-<tr><th colspan="1">Redis</th>
+</tr>
+<tr>
+<th colspan="1">Redis</th>
 <td colspan="1">2.8.x <br />
 3.0.x</td>
 <td colspan="1">2.8.x<br />
 3.0.x</td>
 <td colspan="1">2.8</td>
-<td colspan="1">2.6</td></tr>
-</tbody></table></div>
+</tr>
+</tbody>
+</table>
+</div>
 {{! /multiexcerpt}}
 
 More information on the pages [Nuxeo and Redis]({{page page='nuxeo-and-redis'}}) and [Redis Configuration]({{page page='redis-configuration'}}).
@@ -243,11 +149,12 @@ More information on the pages [Nuxeo and Redis]({{page page='nuxeo-and-redis'}})
 <div class="table-scroll">
 <table class="hover">
 <tbody>
-<tr><th colspan="1">&nbsp;</th>
-<th colspan="1">Nuxeo Platform FT 8.x</th>
+<tr>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">Nuxeo Platform LTS 2016</th>
 <th colspan="1">Nuxeo Platform LTS 2015</th>
 <th colspan="1">Nuxeo Platform 6.0</th>
-<th colspan="1">Nuxeo Platform 5.8</th></tr>
+</tr>
 <tr><th colspan="1">Elasticsearch</th>
 <td colspan="1">**From 8.1 to 8.3:**<br/>
 Library: 1.5.2<br />
@@ -259,8 +166,9 @@ Cluster: 2.3.x</td>
 Cluster: 1.5.2 to 1.7.x</td>
 <td colspan="1">Library: 1.1.2<br />
 Cluster: 1.1.2 to 1.7.x</td>
-<td colspan="1">Available as a Nuxeo Package starting from 5.8-HF16</td>
-</tr></tbody></table>
+</tr>
+</tbody>
+</table>
 </div>{{! /multiexcerpt}}
 
 More information on the page [Elasticsearch Setup]({{page page='elasticsearch-setup'}}).
@@ -268,38 +176,7 @@ More information on the page [Elasticsearch Setup]({{page page='elasticsearch-se
 ## Browsers
 
 {{! multiexcerpt name='supported-browsers'}}
-<div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr><th colspan="1">&nbsp;</th>
-<th colspan="1">Nuxeo Platform FT 8.x</th>
-<th colspan="1">Nuxeo Platform LTS 2015</th>
-<th colspan="1">Nuxeo Platform 6.0</th>
-<th colspan="1">Nuxeo Platform 5.8</th></tr>
-<tr><th colspan="1">Chrome</th>
-<td colspan="1">46 and greater</td>
-<td colspan="1">46 and greater</td>
-<td colspan="1">37 and greater</td>
-<td colspan="1">8 and greater</td></tr>
-<tr><th colspan="1">Edge</th>
-<td colspan="1">Subject to the browser's limitations such as [Drag and Drop support](https://connect.microsoft.com/IE/feedback/details/1544800/ms-edge-drop-files-from-explorer-to-browser-does-not-work-as-expected)</td>
-<td colspan="1">Subject to the browser's limitations such as [Drag and Drop support](https://connect.microsoft.com/IE/feedback/details/1544800/ms-edge-drop-files-from-explorer-to-browser-does-not-work-as-expected)</td>
-<td colspan="1">-</td>
-<td colspan="1">-</td></tr>
-<tr><th colspan="1">Firefox</th>
-<td colspan="1">38 ESR and greater</td>
-<td colspan="1">38 ESR and greater</td>
-<td colspan="1">31 ESR and greater</td>
-<td colspan="1">10 and greater</td></tr>
-<tr><th colspan="1">Internet Explorer</th>
-<td colspan="1">11</td>
-<td colspan="1">11</td>
-<td colspan="1">10 and greater</td>
-<td colspan="1">8 and greater with activeX enabled</td></tr>
-<tr><th colspan="1">Safari</th>
-<td colspan="1">9 and greater</td>
-<td colspan="1">9 and greater</td>
-<td colspan="1">6.2 and greater</td>
-<td colspan="1">4 and greater</td></tr>
-</tbody></table></div>
+Depending on the user interface addon or applications you use, the browsers requirements can differ. See the relevant pages:
+- [Nuxeo JSF UI]({{page version='' space='nxdoc' page='nuxeo-jsf-ui'}})
+- [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}})
 {{! /multiexcerpt}}

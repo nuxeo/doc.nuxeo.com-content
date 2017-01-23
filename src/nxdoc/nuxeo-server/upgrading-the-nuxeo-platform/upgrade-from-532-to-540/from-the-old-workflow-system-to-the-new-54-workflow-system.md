@@ -2,10 +2,10 @@
 title: From the old workflow system to the new 5.4 workflow system
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - multiexcerpt
 confluence:
     ajs-parent-page-id: '18449457'

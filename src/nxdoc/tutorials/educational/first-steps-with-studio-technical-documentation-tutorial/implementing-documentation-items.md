@@ -2,10 +2,10 @@
 title: Implementing Documentation Items
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - multiexcerpt
 toc: true
@@ -386,7 +386,7 @@ In this section we provide example names for items. You'll see different names i
 2.  Click on **New**.
 3.  Type the feature ID (i.e. the document type name in Studio): `documentationItem`.
 4.  In the **Extends** field, select **File**.
-    We need to have something holding a binary file with metadata, life cycle, version and validation. This is very similar to the File document type.
+    We need to have something holding a binary file with metadata, lifecycle, version and validation. This is very similar to the File default document type.
 5.  Type a label for the end user in the Nuxeo Platform: `Technical documentation item`.
 6.  Click on **Next**.
     ![]({{file name='new_document_type_popup.png'}} ?w=500,h=353,border=true)
@@ -399,7 +399,7 @@ In this section we provide example names for items. You'll see different names i
     You should see **Technical documentation item** in the Miscellaneous category.
     ![]({{file name='newAvailableDocType-2.png'}} ?w=550,border=true)
 
-The new document type is created, it is now time to customize it.&nbsp;
+The new document type is created, it is now time to customize it.
 
 ## Defining Properties and Facets
 
@@ -424,7 +424,7 @@ Let's define some properties of the `documentationItem`.
 
 ## Defining the Metadata
 
-To be able to describe and find the document, the following metadata should be available on the document:&nbsp;
+To be able to describe and find the document, the following metadata should be available on the document:
 
 *   The usual descriptive information (title, description, creation date, creator...)
 *   A nature: a simple and limited list of choices
@@ -442,7 +442,7 @@ In the Nuxeo Platform metadata are always grouped by schemas. A schema is a set 
 *   `files` enables to hold other binaries (like attached files). This could be useful for the annexes of the `documentationItem` for instance.
 *   `dublincore` is a standard schema that holds descriptive information like title, creator...
 
-In the end we need two metadata: "nature" and "process". So let's create them in Studio.
+In the end we need two metadata: `nature` and `process`. So let's create them in Studio.
 
 ### Creating the Quality Schema
 
@@ -462,8 +462,8 @@ In the end we need two metadata: "nature" and "process". So let's create them in
 2.  Select the **String** type.
     ![]({{file name='schema_field.png'}} ?w=600,border=true)
 
-3.  Add a new field and name it&nbsp;`nature`.
-4.  Select the&nbsp;**String**&nbsp;type.
+3.  Add a new field and name it `nature`.
+4.  Select the **String** type.
 5.  Click on **Save**.
     The schema now holds two metadata.
 
@@ -497,7 +497,7 @@ Metadata are displayed in [form layouts]({{page space='studio' page='form-layout
     The widget edition pop-up displays several options for the widget you just dropped.
 6.  Leave the default values for now, and click on **Save**.
 7.  Click on the **Add Row** button to add two new rows to the layout.
-8.  In the `quality`&nbsp;schema, drag and drop the `Nature` metadata on a row and save default values.
+8.  In the `quality` schema, drag and drop the `Nature` metadata on a row and save default values.
 9.  In the `file` schema, drag and drop the `content` metadata and save default values.
 10.  Click on **Save**.
     In the end you should have a creation layout looking like:
@@ -568,7 +568,7 @@ You created a document type that will hold all the information you need to manag
 
 To sum up, what we saw:
 
-*   &nbsp;A document type can have metadata of several types (String, Integer...).
+*   A document type can have metadata of several types (String, Integer...).
 *   Metadata are grouped in schemas. Of course, one document can have several schemas.
 *   The content model is different from the user interface. When you add a metadata to a document (through its schemas), you have to add the metadata in the layouts of the document.
 *   You can control how the metadata are filled in directly from the layouts of the document by changing the widget type.
@@ -577,18 +577,20 @@ To sum up, what we saw:
 
 The next step is to adapt where the documents are created and how they are displayed when browsing.
 
-* * *
 
-<div class="row"><div class="column medium-4">
+<div class="row">
+<div class="column medium-4">
 
 [<< Introduction]({{page page='first-steps-with-studio-technical-documentation-tutorial'}})
 
-</div><div class="column medium-4">
+</div>
+<div class="column medium-4">
 
-**[undefined]()**
 
-</div><div class="column medium-4">
+</div>
+<div class="column medium-4">
 
 [Custom Content View for Documentation Items >>]({{page page='custom-content-view-for-documentation-items'}})
 
-</div></div>
+</div>
+</div>

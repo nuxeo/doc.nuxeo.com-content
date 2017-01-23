@@ -171,7 +171,7 @@ history:
 ---
 {{! excerpt}}
 
-Due to the business flavor of&nbsp; most of the projects made with Nuxeo Platform it is not possible to draw a general approach that would be the good one in 100% cases. We try to give a few hints here, do not hesitate to leave comments on the page, so as to make it lively and so that we improve this page with the time.
+Due to the business flavor of most of the projects made with Nuxeo Platform it is not possible to draw a general approach that would be the good one in 100% cases. We try to give a few hints here, do not hesitate to leave comments on the page, so as to make it lively and so that we improve this page with the time.
 
 {{! /excerpt}}
 
@@ -250,13 +250,13 @@ The Nuxeo Platform and Nuxeo Studio provide great facilities for defining your d
 
 For that reason, we strongly advise you to keep only the strict minimum when starting your project. You have to be tough on stepping back and refusing all that looks like not vital. That's the best way to guarantee you'll go live quick, and quickly get the precious feedback from your users. And you won't frighten them with an over engineered system.
 
-For document types, do a different document type if you have different sets of metadata to handle, and different life cycle states.
+For document types, do a different document type if you have different sets of metadata to handle, and different lifecycle states.
 
 For metadata, we can split them among the following categories:
 
 *   **Search metadata**: The metadata that enable to search for the document in the repository. Focus on the taxonomies linked to the global business of your company/department and gather them in a common schema that you will use in the future when implementing other document management processes on your application. Don't focus too much on the specificities of the first process you choose to implement. You should not have more than two/three of those kind of metadata, usually edited via drop-down lists components.
-*   **Life cycle management metadata**: Those metadata help you control the life cycle of your document: when it was created, validated, by who, the nature of the document. This may have a direct impact on how the DMS (via rules and workflow engine) should process it, the review dates, etc.
-*   **Informational metadata**: This can be for instance all the authoring related metadata (who is the "real author" of the document, what are the constraints in the diffusion, &hellip;). As human nature is not metadata-filling friendly you need to be smart and try to leverage at best the context during the whole life cycle of your document so as to fill metadata automatically. For instance you can use attributes of users who work on it, attributes of parent folders where the document was elaborated, etc.
+*   **Lifecycle management metadata**: Those metadata help you control the lifecycle of your document: when it was created, validated, by who, the nature of the document. This may have a direct impact on how the DMS (via rules and workflow engine) should process it, the review dates, etc.
+*   **Informational metadata**: This can be for instance all the authoring related metadata (who is the "real author" of the document, what are the constraints in the diffusion, &hellip;). As human nature is not metadata-filling friendly you need to be smart and try to leverage at best the context during the whole lifecycle of your document so as to fill metadata automatically. For instance you can use attributes of users who work on it, attributes of parent folders where the document was elaborated, etc.
 
 Note that it is possible to extract some of the metadata automatically from a file using the [binary-metadata]({{page page='binary-metadata'}}) module.
 
@@ -287,7 +287,7 @@ You can go even deeper in tuning the search requests behavior, using Elasticsear
 
 ## Business Logic Implementation
 
-You have now defined and chosen the document management mandatory elements. To make the application your own, you now need to implement your own business logic to take into account your processes by adding buttons, workflows, transitions in the documents life cycle, etc. [Automation]({{page page='automation'}}) enables you to create complex business rules and logic from small operations and have them triggered by events and [user actions]({{page space='studio' page='user-actions-categories'}}), and workflows are built using a [visual graph]({{page space='studio' page='graph-tab'}}).
+You have now defined and chosen the document management mandatory elements. To make the application your own, you now need to implement your own business logic to take into account your processes by adding buttons, workflows, transitions in the documents lifecycle, etc. [Automation]({{page page='automation'}}) enables you to create complex business rules and logic from small operations and have them triggered by events and [user actions]({{page space='studio' page='user-actions-categories'}}), and workflows are built using a [visual graph]({{page space='studio' page='graph-tab'}}).
 
 {{#> callout type='info' heading='Related Documentation'}}
 
@@ -299,12 +299,12 @@ You have now defined and chosen the document management mandatory elements. To m
 
 ## Architecture and Sizing
 
-At some point in your project you need to decide about the architecture. Do you want to use a relational database (PostgreSQL, MySQL, etc.), a NoSQL dabase such as MongoDB, how are data persisted, do you need a cluster ?
+At some point in your project you need to decide about the architecture. Do you want to use a relational database (PostgreSQL, MySQL, etc.), a NoSQL database such as MongoDB, how are data persisted, do you need a cluster ?
 
 {{#> callout type='info' heading='Related Documentation'}}
 
-*   [Persistence Architecture]({{page page='persistence-architecture'}})
-*   [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
-*   [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+- [Persistence Architecture]({{page page='persistence-architecture'}})
+- [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
+- [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
 
 {{/callout}}

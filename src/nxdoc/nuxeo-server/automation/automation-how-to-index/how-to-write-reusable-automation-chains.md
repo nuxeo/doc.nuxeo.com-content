@@ -2,7 +2,7 @@
 title: How to Write Reusable Automation Chains
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Studio
         topics: Automation
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - automation
     - excerpt
@@ -104,11 +104,11 @@ history:
 ---
 {{! excerpt}}
 
-In your project, you might have some automation chains that all look the same, with the same structure, meaning the same operations in the same order, and the only difference is that the parameters values sent to the composing operations are not the same. This usually means you can factorize your implementation using parameterized chains.
+You might have some automation chains in your project that all have a similar structure, meaning the same operations in the same order, the only difference being that the parameter values sent to the composing operations are different. Usually in this case, you can factorize your implementation using parameterized chains.
 
 {{! /excerpt}}
 
-Let's take an example: You want to change the life cycle of a document, and log at the same time the company of the user who changed the document life cycle state in the audit. Genuinely, if you want a chain that validates a document, you would write the following chain:
+Let's take an example: You want to change the lifecycle of a document, while logging the company of the user who changed the document lifecycle state in the audit. If you want a chain that validates a document, you would write the following chain:
 
 ```
 - Context.FetchDocument
@@ -120,7 +120,7 @@ Let's take an example: You want to change the life cycle of a document, and log 
     comment: "@{CurrentUser.company}"
 ```
 
-If you want to do it for each life cycle changes (making it obsolete, or draft, ...), you would have to write several chains calling the `Document.SetLifeCycle` and `Audit.Log` operations.
+If you want to do it for each lifecycle changes (making it obsolete, or draft, ...), you would have to write several chains calling the `Document.SetLifeCycle` and `Audit.Log` operations.
 
 **Or your can use a parameterized chain:**
 
@@ -144,14 +144,14 @@ If you want to do it for each life cycle changes (making it obsolete, or draft, 
 
     {{#> callout type='info' }}
 
-    To declare the parameters of a chain, you can use the&nbsp;[Chain Parameters tab]({{page space='studio' page='automation-chains'}})&nbsp;of the Automation Chain feature in Nuxeo Studio. To reference a parameter's value inside the chain:
+    To declare the parameters of a chain, you can use the [Chain Parameters tab]({{page space='studio' page='automation-chains'}}) of the Automation Chain feature in Nuxeo Studio. To reference a parameter's value inside the chain:
 
     `@{ChainParameters['parameterName']}`
 
     {{/callout}}
 2.  Create a second chain that references the first chain with a `Run Chain` operation, using the `parameters` field. This second chain is used to approve document.
 
-    ```
+   ```
     - Context.RunOperation:
         id: ChangeCaseStatus
         isolate: 'false'
@@ -162,9 +162,7 @@ If you want to do it for each life cycle changes (making it obsolete, or draft, 
 
     You can then leverage this chain with a user action.
 
-3.  Repeat step 2 to create as many chains as you need to follow the different life cycle transitions.
-
-&nbsp;
+3.  Repeat step 2 to create as many chains as you need to follow the different lifecycle transitions.
 
 * * *
 
@@ -176,7 +174,7 @@ If you want to do it for each life cycle changes (making it obsolete, or draft, 
 
 - [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
 - [Content Automation Concepts]({{page page='content-automation-concepts'}})
-- [Life cycle in Nuxeo Studio]({{page space='studio' page='life-cycle'}})
+- [Lifecycle in Nuxeo Studio]({{page space='studio' page='life-cycle'}})
 - [User Actions in Nuxeo Studio]({{page space='studio' page='user-actions'}})
 
 {{/panel}}</div></div>

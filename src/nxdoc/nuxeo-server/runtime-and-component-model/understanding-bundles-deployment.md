@@ -2,10 +2,10 @@
 title: Understanding Bundles Deployment
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - deployment
     - nuxeoctl
     - runtimecomponent
@@ -437,8 +437,8 @@ In the static deployment model NuxeoCtl pack command is run to:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related sections in this documentation'}}
 
-*   [Deployment Options]({{page page='deployment-options'}})
-*   [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
+- [Deployment Options]({{page page='deployment-options'}})
+- [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
 
 {{/panel}}</div><div class="column medium-6">
 

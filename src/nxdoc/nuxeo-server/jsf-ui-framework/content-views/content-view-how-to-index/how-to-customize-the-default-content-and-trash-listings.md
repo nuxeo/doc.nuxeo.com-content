@@ -2,7 +2,7 @@
 title: How to Customize the Default Content and Trash Listings
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: Studio
         topics: Content View
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - content-view
     - howto
     - studio
@@ -29,7 +29,7 @@ confluence:
     shortlink: hIMlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/hIMlAQ'
     source_link: /display/NXDOC/How+to+Customize+the+Default+Content+and+Trash+Listings
-tree_item_index: 100
+tree_item_index: 200
 history:
     -
         author: Manon Lumeau
@@ -75,21 +75,21 @@ history:
 ---
 {{! excerpt}}
 
-<span style="color: rgb(50,51,51);">The content displayed in the&nbsp;</span> **Content** <span style="color: rgb(50,51,51);">&nbsp;tab of a folder, for instance, is the result of a query that says that we want to display all the documents that:</span>
+The content displayed in the **Content** tab of a folder is the result of a query that says that we want to display all the documents that:
 
-*   <span style="color: rgb(50,51,51);">are the direct children of the current folder;</span>
-*   <span style="color: rgb(50,51,51);">are not "deleted";</span>
-*   <span style="color: rgb(50,51,51);">are not hidden in navigation.</span>
+*   are the direct children of the current folder;
+*   are not "deleted";
+*   are not hidden in navigation.
 
 {{! /excerpt}}
 
-<span style="color: rgb(50,51,51);">You can create new views that will display the results of a query you have customized. This is done using Content views. And then, you can choose to use your content view in the&nbsp;</span> **Content** <span style="color: rgb(50,51,51);">&nbsp;or&nbsp;</span> **Trash** <span style="color: rgb(50,51,51);">&nbsp;tab of your document types.</span>
+You can create new views that will display the results of a query you have customized. This is done using Content views. Then you can choose to use your content view in the **Content** or **Trash** tab of your document types.
 
-<span style="color: rgb(50,51,51);">**To change the list of documents displayed in the Content and Trash tabs:**</span>
+**To change the list of documents displayed in the Content and Trash tabs:**
 
-1.  <span style="color: rgb(50,51,51);">Create a&nbsp;</span> <span style="color: rgb(0,99,198);">new Content View</span> <span style="color: rgb(50,51,51);">.</span>
-2.  <span style="color: rgb(50,51,51);">On the document type definition, click on the&nbsp;</span> **Tabs** <span style="color: rgb(50,51,51);">&nbsp;tab.</span>
-3.  <span style="color: rgb(50,51,51);">Select the content view you want to use for:</span>
-    *   <span style="color: rgb(50,51,51);">the "Main content", i.e. the&nbsp;</span> **Content** <span style="color: rgb(50,51,51);">&nbsp;tab of your document type.</span>
-    *   <span style="color: rgb(50,51,51);">the "Trash content", i.e. the&nbsp;</span> **Trash** <span style="color: rgb(50,51,51);">&nbsp;tab of your document type.</span>
-4.  <span style="color: rgb(50,51,51);">Click on&nbsp;</span> **Save** <span style="color: rgb(50,51,51);">.</span>
+1.  Create a [new Content View]({{page space='nxdoc' page='how-to-define-a-new-content-view'}}).
+2.  On the document type definition, click on the **Tabs** tab.
+3.  Select the content view you want to use for:
+    *   the "Main content", i.e. the **Content** tab of your document type.
+    *   the "Trash content", i.e. the **Trash** tab of your document type.
+4.  Click on **Save**.

@@ -22,7 +22,6 @@ confluence:
     source_link: /display/NXDOC/JSF+UI+Framework
 tree_item_index: 1700
 version_override:
-    'LTS 2015': 710/nxdoc/web-ui-framework
     '6.0': 60/nxdoc/web-ui-framework
     '5.8': 58/nxdoc/web-ui-framework
 history:

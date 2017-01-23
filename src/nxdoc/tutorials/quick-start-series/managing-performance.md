@@ -122,17 +122,17 @@ The Nuxeo Platform can be used for a very broad range of application, each with 
 
 Depending on your particular use cases and the throughput you expect, you will likely need to adapt the Nuxeo Platform configuration as well as the configuration of the underlying systems, in order to obtain the performance you seek.
 
-This page provides guidance on how to optimize your application performance, as well as how to troubleshoot performance-related issues through monitoring. &nbsp;This information will also come in very handy should you seek assistance through our Support Department.
+This page provides guidance on how to optimize your application performance, as well as how to troubleshoot performance-related issues through monitoring. This information will also come in very handy should you seek assistance through our Support Department.
 
 ## Information Gathering
 
-Context is key &ndash; when gathering information about performance (whether you are setting your internal objectives or troubleshooting problems), it's important to&nbsp;clarify what you are trying to achieve and how you are going about it.
+Context is key &ndash; when gathering information about performance (whether you are setting your internal objectives or troubleshooting problems), it's important to clarify what you are trying to achieve and how you are going about it.
 
 In short, one must be able to quantify or measure performance issues, in order to be able to solve them.
 
 ### Describe Your Test Scenario
 
-What you are testing, and how you are testing it? &nbsp;Consider the following elements:
+What you are testing, and how you are testing it?  Consider the following elements:
 
 *   Which of the Nuxeo entry points are you testing?
     *   JSF UI,
@@ -210,7 +210,7 @@ There are three settings in Nuxeo that are directly related and that should be a
 *   Tomcat:
     *   HTTP connector:
 
-        *   Thread pool size (`maxThreads`&nbsp;in server.xml or common-base/conf/server.xml.nxftl).&nbsp;This is the number of concurrent in-bound HTTP requests that Tomcat will handle in parallel;
+        *   Thread pool size (`maxThreads` in server.xml or common-base/conf/server.xml.nxftl). This is the number of concurrent in-bound HTTP requests that Tomcat will handle in parallel;
         *   Waiting queue: This is the size of the in-bound HTTP requests that are accepted and held while waiting for a free thread.
     *   AJP connector
 *   Nuxeo: DB connection pool
@@ -223,7 +223,7 @@ In general the rule-of-thumb is that for each running Tomcat HTTP thread:
 *   You will need one connection from VCS to access the repository;
 *   You may need one connection from the generic pool to access an other datasource.
 
-This means that for a typical configuration, you will have: `maxThreads&nbsp;= nuxeo.vcs.max-pool-size = nuxeo.db.max-pool-size`.
+This means that for a typical configuration, you will have: `maxThreads = nuxeo.vcs.max-pool-size = nuxeo.db.max-pool-size`.
 
 If you are using Nuxeo in cluster mode you must ensure that: `(nuxeo.vcs.max-pool-size + nuxeo.db.max-pool-size)*number_of_nodes <= Maximum concurrent connections and transactions for the DB server`.
 
@@ -295,8 +295,6 @@ When running performance benchmarks, you may very well reach the maximum system 
 *   Network latency and I/O.
 
 If your benchmarks show that you use 100% of the CPU, this is usually a good sign as CPU is typically the easiest resource to add more of, and can add more Nuxeo nodes in order to increase performance.
-
-&nbsp;
 
 * * *
 

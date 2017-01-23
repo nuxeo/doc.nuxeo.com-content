@@ -2,7 +2,7 @@
 title: Workflows
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-01-02'
     status: ok
 labels:
     - workflow
@@ -119,9 +119,9 @@ history:
         version: '1'
 
 ---
-All the documents evolve according to a defined life cycle. The default life cycle is composed of the following states: Project, Approved, Obsolete and Deleted. There are different ways to make documents evolve through this life cycle. One of the ways is to use a workflow.
+All the documents evolve according to a defined lifecycle. The default lifecycle is composed of the following states: Project, Approved, Obsolete and Deleted. There are different ways to make documents evolve through this lifecycle. One of the ways is to use a workflow.
 
-Users who are involved in workflows are alerted by email and can have a synthetic view of all their pending tasks on documents in their&nbsp;[dashboard]({{page space='USERDOC' page='Browsing Content#BrowsingContent-Dashboard'}}). The documents they have to review are listed there.
+Users who are involved in workflows are alerted by email and can have a synthetic view of all their pending tasks on documents in their [dashboard]({{page space='USERDOC' page='Browsing Content#BrowsingContent-Dashboard'}}). The documents they have to review are listed there.
 
 {{{multiexcerpt 'default-validation-workflows' page='NXDOC:Workflow'}}}
 
@@ -129,29 +129,29 @@ Other workflows can be [configured with Nuxeo Studio]({{page space='Studio' page
 
 ## Submitting a Task
 
-A task represents what a workflow instance expects from a user or a group of users. Usually they are expected to give some information through a form and click on a button (like Accept, Reject, Confirm, Notify, Transform, etc.). A task usually has one or several assignees, a title, a directive and an expected date of achievement.&nbsp;The task assignees can be specified directly in the task definition or can be dynamically computed.
+A task represents what a workflow instance expects from a user or a group of users. Usually they are expected to give some information through a form and click on a button (like Accept, Reject, Confirm, Notify, Transform, etc.). A task usually has one or several assignees, a title, a directive and an expected date of achievement. The task assignees can be specified directly in the task definition or can be dynamically computed.
 
-To submit a task, read the following documentation for [serial workflow]({{page page='serial-document-workflow'}}) or [parallel workflow]({{page page='parallel-document-workflow'}}). &nbsp;
+To submit a task, read the following documentation for [serial workflow]({{page page='serial-document-workflow'}}) or [parallel workflow]({{page page='parallel-document-workflow'}}).
 
 ## Delegating a Task
 
-When you know you might not be able to perform a task, you can delegate it to another user or group of users. Delegating means that they can do the task at your place, but you are not unassigned the task. As soon as you or a delegatee reviews the document, the task is closed for you and all the delegatees. On the contrary, if you do the task before the delegatees, the task is considered done for everyone.
+When you know you might not be able to perform a task, you can delegate it to another user or group of users. Delegating means that they can do the task at your place, but you are not unassigned the task. As soon as you or a delegate reviews the document, the task is closed for you and all the delegatees. On the contrary, if you do the task before the delegatees, the task is considered done for everyone.
 
 For more information about delegation, see [this page]({{page page='delegating-a-task'}}).
 
 ## Reassigning a Task
 
-If you feel that you should not be responsible for a task, you can reassign it. Reassigning a task means that you lose your rights on the task and on the document when you reassign your task on a document. The user you reassign the task to becomes responsible for the task and it is as if you never had to review the document.&nbsp;
+If you feel that you should not be responsible for a task, you can reassign it. Reassigning a task means that you lose your rights on the task and on the document when you reassign your task on a document. The user you reassign the task to becomes responsible for the task and it is as if you never had to review the document.
 
-For more information about reassignment, read [this page]({{page page='reassigning-a-task'}}).&nbsp;
+For more information about reassignment, read [this page]({{page page='reassigning-a-task'}}).
 
 ## Abandoning a Workflow
 
-Abandoning a workflow means canceling it. When you abandon a workflow, the life cycle state of the document does not change. The modifications made on the document during the workflow are kept.
+Abandoning a workflow means canceling it. When you abandon a workflow, the lifecycle state of the document does not change. The modifications made on the document during the workflow are kept.
 
-Abandoning the workflow can be done at any time. Only the workflow initiator and administrators can abandon a workflow.&nbsp;He can also decide to cancel the workflow when he gets an update request from the first reviewer. When the first reviewer&nbsp;[rejects the document]({{page space='USERDOC' page='Participating to+a+Serial+Workflow'}}), it goes back to the initiator, who should then either edit the document and resubmit it, or cancel the review.
+Abandoning the workflow can be done at any time. Only the workflow initiator and administrators can abandon a workflow. He can also decide to cancel the workflow when he gets an update request from the first reviewer. When the first reviewer [rejects the document]({{page space='USERDOC' page='Participating to+a+Serial+Workflow'}}), it goes back to the initiator, who should then either edit the document and resubmit it, or cancel the review.
 
-To **abandon a workflow**, click on the **Workflow** tab of the document and then click on **Abandon**.&nbsp;The workflow is immediately canceled.
+To **abandon a workflow**, click on the **Workflow** tab of the document and then click on **Abandon**. The workflow is immediately canceled.
 
 ## Notifications
 
@@ -159,25 +159,29 @@ Users who are involved in workflows are alerted by email and can have a syntheti
 
 ## Rights Modification on the Document
 
-You can modify the permissions of a particular user or group on a document during an entire workflow or a particular task. This will bypass the permissions set on the workspace.&nbsp;
+You can modify the permissions of a particular user or group on a document during an entire workflow or a particular task. This will bypass the permissions set on the workspace.
 
 ## Implementation
 
-Workflows can be adapted to any types of use cases like purchase requests, case management, invoices management. You can&nbsp;read the page&nbsp;[Simple Workflow Example]({{page space='NXDOC' page='Simple Workflow+Example'}}), and follow the creation of a workflow step by step with a specific use case.
+Workflows can be adapted to any types of use cases like purchase requests, case management, invoices management. You can read the page [Simple Workflow Example]({{page space='NXDOC' page='Simple Workflow+Example'}}), and follow the creation of a workflow step by step with a specific use case.
 
 * * *
 
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related pages'}}
+
+- [Serial Document Workflow]({{page page='serial-document-workflow'}})
+- [Parallel Document Workflow]({{page page='parallel-document-workflow'}})
+- [Delegating a Task]({{page page='delegating-a-task'}})
+- [Reassigning a Task]({{page page='reassigning-a-task'}})
+
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+
 &nbsp;
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
-
-*   [Serial Document Workflow]({{page page='serial-document-workflow'}})
-*   [Parallel Document Workflow]({{page page='parallel-document-workflow'}})
-*   [Delegating a Task]({{page page='delegating-a-task'}})
-*   [Reassigning a Task]({{page page='reassigning-a-task'}})
-
-{{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-</div></div>
+</div>
+</div>

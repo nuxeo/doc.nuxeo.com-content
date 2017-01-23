@@ -1,11 +1,11 @@
 ---
-title: Document Locking Right after Its Creation
+title: Document Locking Right After its Creation
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - lock
     - multiexcerpt
 toc: true
@@ -176,9 +176,9 @@ The newly created document is put in the context as well as the user who trigger
 
 Since we have everything required&nbsp; by the chain provided by default, our automation chain will be very simple.
 
-1.  Leave the default **Fetch** > **Context Document**.&nbsp;
+1.  Leave the default **Fetch** > **Context.FetchDocument**.&nbsp;
     It will create an input document (the newly created document) from the context for the next operation.
-2.  Add the operation **Document** > **Lock**.
+2.  Add the operation **Document** > **Document.Lock**.
 3.  Leave the owner parameter empty
     ![]({{file name='SimpleChain-3.png'}} ?w=500,h=260,border=true)
 4.  Click on **Save**.

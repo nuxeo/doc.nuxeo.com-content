@@ -455,7 +455,7 @@ The Browser Binding (JSON) endpoint is recommended, as it is faster and has more
 
 You can use a CMIS 1.1 Browser Binding (JSON) client and point it at `http://localhost:8080/nuxeo/json/cmis`.
 
-If you want to check the JSON returned using the command line, this can be done using&nbsp;`curl`&nbsp;or&nbsp;`wget`:
+If you want to check the JSON returned using the command line, this can be done using `curl` or `wget`:
 
 ```bash
 curl -u Administrator:Administrator http://localhost:8080/nuxeo/json/cmis | json_pp
@@ -680,9 +680,9 @@ The Nuxeo OpenCMIS connector implements the following capabilities from the spec
 The following describes how Nuxeo documents are mapped to CMIS objects and vice versa.
 
 *   Only Nuxeo documents including the "dublincore" schema are visible in CMIS.
-*   Complex properties are not visible in CMIS by default, as this notion does not exist in CMIS. However, if the server is configured to do so, they can be exposed as JSON-encoded strings (since Nuxeo 7.1, see&nbsp;[NXP-14474](https://jira.nuxeo.com/browse/NXP-14474)).
-*   Dynamic facets are visible as CMIS 1.1 secondary types (since Nuxeo 7.1, see&nbsp;[NXP-15070](https://jira.nuxeo.com/browse/NXP-15070)).
-*   Proxy documents are visible in CMIS in recent versions if the system property `org.nuxeo.cmis.proxies=true`&nbsp;(since Nuxeo 8.3 / Nuxeo 7.10-HF08 (default `false`), see&nbsp;[NXP-17313](https://jira.nuxeo.com/browse/NXP-17313)).
+*   Complex properties are not visible in CMIS by default, as this notion does not exist in CMIS. However, if the server is configured to do so, they can be exposed as JSON-encoded strings (since Nuxeo 7.1, see [NXP-14474](https://jira.nuxeo.com/browse/NXP-14474)).
+*   Dynamic facets are visible as CMIS 1.1 secondary types (since Nuxeo 7.1, see [NXP-15070](https://jira.nuxeo.com/browse/NXP-15070)).
+*   Proxy documents are visible in CMIS in recent versions if the system property `org.nuxeo.cmis.proxies=true` (since Nuxeo 8.3 / Nuxeo 7.10-HF08 (default `false`), see [NXP-17313](https://jira.nuxeo.com/browse/NXP-17313)).
 *   Secondary content streams are not visible as renditions. Only the Nuxeo thumbnail and renditions explicitly made available through the Nuxeo RenditionService are visible.
 *   Documents in the Nuxeo trash (those whose `nuxeo:lifecycleState` is `deleted`) are not visible in CMIS, unless an explicit query using the `nuxeo:lifecycleState` property is done.
 
@@ -693,7 +693,7 @@ This mapping may change to be more comprehensive in future Nuxeo Platform versio
 In addition to the system properties defined in the CMIS specification under the `cmis:` prefix, the Nuxeo Platform adds some additional properties under the `nuxeo:` prefix:
 
 *   `nuxeo:isVersion`: To distinguish between archived (read-only revision) and live documents (that can be edited).
-*   `nuxeo:lifecycleState`: To access the life cycle state of a document. By default only document in non `deleted` state will be returned in CMISQL queries unless and explicit `nuxeo:lifecycleState` predicate is specified in the `WHERE` clause of the query.
+*   `nuxeo:lifecycleState`: To access the lifecycle state of a document. By default only document in non `deleted` state will be returned in CMISQL queries unless and explicit `nuxeo:lifecycleState` predicate is specified in the `WHERE` clause of the query.
 *   `nuxeo:secondaryObjectTypeIds`: Makes it possible to access the facets of a document. Those facets can be static (as defined in the type definitions) or dynamic (each document instance can have declared facets).
 *   `nuxeo:contentStreamDigest`: The low level, MD5 or SHA1 digest of blobs stored in the repository. The algorithm used to compute the digest is dependent on the configuration of the `BinaryManager` component of the Nuxeo repository.
 *   `nuxeo:isCheckedIn`: For live documents, distinguishes between the checked-in and checked-out state.
@@ -730,5 +730,3 @@ Watch this 15 min video presenting a case-processing application leveraging CMIS
 *   [CMIS: A Tale of Versioning](http://www.nuxeo.com/blog/cmis-tale-versioning/)
 *   [Direct Document Capture in Nuxeo Using Ephesoft and CMIS](http://www.nuxeo.com/blog/direct-document-capture-nuxeo-using-ephesoft-cmis/)
 *   [Complex Types, Multiple Streams and Renditions in CMIS!](http://www.nuxeo.com/blog/complex-types-multiple-streams-renditions-cmis/)
-
-&nbsp;

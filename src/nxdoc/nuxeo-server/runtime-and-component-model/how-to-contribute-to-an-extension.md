@@ -7,10 +7,10 @@ review:
 details:
     howto:
         excerpt: >-
-            Lean how to create an XML extension in Nuxeo Studio and in Nuxeo IDE
-            and how to override a Nuxeo contribution.
+            Lean how to create an XML extension in Nuxeo Studio and with the Nuxeo
+            Generator and how to override a Nuxeo contribution.
         level: Intermediate
-        tool: 'Nuxeo IDE, Studio'
+        tool: 'Nuxeo Generator, Studio'
         topics: Extension point
 labels:
     - lts2016-ok

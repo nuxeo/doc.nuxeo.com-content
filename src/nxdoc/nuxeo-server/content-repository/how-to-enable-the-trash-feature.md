@@ -2,7 +2,7 @@
 title: How to Enable the Trash Feature
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: Studio
         topics: 'Document type, Life cycle'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - document-type
     - delete
     - life-cycle
@@ -159,11 +159,11 @@ history:
         version: '1'
 
 ---
-The Nuxeo Platform has a trash feature: deleted document are actually not deleted but moved "in the trash", before being really deleted. See [more information about this feature]({{page space='userdoc' page='deleting-content'}}) in the user guide.
+The Nuxeo Platform has a trash feature: deleted documents are not actually deleted but moved to the "trash" before being permanently deleted. See [more information about this feature]({{page space='userdoc' page='deleting-content'}}) in the user guide.
 
 {{! excerpt}}
 
-To enable the trash on your document type, you need either to assign him the default life cycle (which is the case if you don't configure it) or, if you created a custom life cycle, to provide `delete` transitions to the `deleted` state, from each other state. Moreover, in order to be able to restore documents, you must provide a `undelete` transition from the `deleted` state to another state in the lifecycle.
+To enable the trash feature on your document type, you either need to assign the default lifecycle (which should be the case if you haven't configured it) or, if you've created a custom lifecycle, to provide `delete` transitions to the `deleted` state from each other state. Moreover, in order to be able to restore documents, you must provide an `undelete` transition from the `deleted` state to another state in the lifecycle.
 
 {{! /excerpt}}
 
@@ -175,7 +175,7 @@ See the sample below:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-- [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) &nbsp;
+- [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}})
 - [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}})
 - [How-To Index]({{page page='how-to-index'}})
 
@@ -184,7 +184,7 @@ See the sample below:
 - [Documents in Nuxeo Studio]({{page space='studio' page='documents'}})
 - [Content Repository]({{page page='content-repository'}})
 - [Available Facets]({{page page='available-facets'}})
-- [Life cycle]({{page space='studio' page='life-cycle'}})
+- [Lifecycle]({{page space='studio' page='life-cycle'}})
 - [Schemas]({{page space='studio' page='schemas'}})
 
 {{/panel}}</div></div>

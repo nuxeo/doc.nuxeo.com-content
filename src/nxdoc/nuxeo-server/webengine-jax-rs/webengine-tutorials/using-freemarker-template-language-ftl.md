@@ -2,10 +2,10 @@
 title: Using FreeMarker Template Language (FTL)
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - webengine
     - webengine-component
@@ -54,13 +54,12 @@ history:
         version: '1'
 
 ---
-## Module definition
 
-##### <span style="color: rgb(0,0,0);">JAX-RS resources</span>
+## JAX-RS Resources
 
-##### Sample2.java
+{{#> panel type='code' heading='Sample2.java'}}
 
-```
+```java
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import org.nuxeo.ecm.webengine.model.impl.*;
@@ -184,42 +183,43 @@ public class Sample2 extends ModuleRoot {
 }
 
 ```
+{{/panel}}
 
-## Object views
+## Object Views
 
-##### skin/base.ftl
+{{#> panel type='code' heading='skin/base.ftl'}}
 
-```
+```html
 <!-- Base template that defines the site layout -->
 <html>
   <head>
     <title><@block name="title"/></title>
   </head>
   <body>
-
-<table width="100%" border="1">
-
-<tr>
-
-<td><@block name="header">Header</@block></td>
+    <table width="100%" border="1">
+      <tr>
+        <td>
+          <@block name="header">Header</@block>
+        </td>
       </tr>
-
-<tr>
-
-<td><@block name="content">Content</@block></td>
+      <tr>
+        <td>
+          <@block name="content">Content</@block>
+        </td>
       </tr>
-
-<tr>
-
-<td><@block name="footer">Footer</@block></td>
+      <tr>
+        <td>
+          <@block name="footer">Footer</@block>
+        </td>
       </tr>
     </table>
   </body>
 </html>
 
 ```
+{{/panel}}
 
-##### skin/index1.ftl
+{{#> panel type='code' heading='skin/index1.ftl'}}
 
 ```
 <@extends src="base.ftl">
@@ -240,8 +240,9 @@ public class Sample2 extends ModuleRoot {
 </@extends>
 
 ```
+{{/panel}}
 
-##### skin/index2.ftl
+{{#> panel type='code' heading='skin/index2.ftl'}}
 
 ```
 <@extends src="base.ftl">
@@ -250,5 +251,5 @@ public class Sample2 extends ModuleRoot {
     This is the <i>index2</i> skin.
   </@block>
 </@extends>
-
 ```
+{{/panel}}

@@ -2,8 +2,7 @@
 title: How to Create an Automation Chain
 review:
     comment: ''
-    date: '2015-12-01'
-    status: ok
+    date: '2016-12-19'
 details:
     howto:
         excerpt: >-
@@ -13,7 +12,7 @@ details:
         tool: Studio
         topics: 'Automation, Event handler, User action'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - automation
     - user-action
@@ -217,7 +216,7 @@ history:
 ---
 {{! excerpt}}
 
-This how-to explains the different steps to create and configure an automation chain.
+This guide explains how to create and configure an automation chain using Nuxeo Studio.
 
 {{! /excerpt}}
 
@@ -236,11 +235,11 @@ This is done in two steps:
     ![]({{file name='NXS-automation-create.png'}} ?w=350,border=true)
     The automation chain editor is displayed.
     The **Fetch > Context Document(s)** is automatically added as the first operation of the chain.
-4.  If needed, remove the **Fetch > Context Document(s)**and replace it with another Fetch operation. The Fetch operation role is to feed the chain with some document input, whether it is one document or a list of documents. There are various ways to fetch:
-    *   **Context document** will bring either the UI Current document, or the document attached to the event (depending on what you binded your operation chain, see later).
-    *   **Fetch Query** will bring back the result of the query as a documents list.
-    *   **Get Document** allows to fetch document by path.
-5.  Start to drag'n drop operations in the flow, respecting their input and output types. Leverage context and scripting capabilities to capture and reuse information all along the flow.
+4.  If needed, remove the **Fetch > Context Document(s)** and replace it with another Fetch operation. The Fetch operation feeds the chain with some document input, whether it is one document or a list of documents. There are various ways to fetch:
+    *   **Context document** will bring either the UI Current document, or the document attached to the event (depending on what you bound your operation chain, see later).
+    *   **Fetch Query** will bring back the result of the query as a document list.
+    *   **Get Document** fetches a document by its path.
+5.  Start to drag and drop operations in the flow, respecting their input and output types. Leverage context and scripting capabilities to capture and reuse information all along the flow.
     ![]({{file name='NXS_automation_add_operation.png'}} ?w=600,border=true)
 
     {{#> callout type='tip' }}
@@ -262,13 +261,13 @@ Binding the automation chain to a button, an action or an event handler is done 
 1.  Create a new user action from the Studio tree:
     1.  In the **Automation** menu entry, click on **User Actions**.
     2.  Click on the **New** button.
-    3.  On the pop up window displayed, give the action an ID, a name and select to which [category of actions]({{page page='actions-display'}}) it should be tied (contextual icons, folder bar buttons, clipboard actions, user links...) and click on **Next**.
+    3.  On the pop up window displayed, give the action an ID, a name and select to which [category of actions]({{page page='actions-display'}}) it should be tied (contextual icons, folder bar buttons, clipboard actions, user links...) then click on **Next**.
         ![]({{file name='NXS-action-creation-form.png'}} ?w=350,border=true)
         The action edition form is displayed.
 2.  Fill in all the required information : Label, icon, ...
-3.  In the **Action Activation** section, give the necessary filtering information, to target your action to the good context.
-    ![]({{file name='NXS-action-edition-1.png' space='nxdoc710' page='how-to-create-an-automation-chain'}} ?w=450,border=true)
-4.  In the **Action Execution** section, select the automation chain to which you want the action to be binded.
+3.  In the **Action Activation** section, give the necessary filtering information, to target your action to the right context.
+    ![]({{file name='NXS-action-edition-1.png'}} ?w=450,border=true)
+4.  In the **Action Execution** section, select the automation chain to which you want the action to be bound.
     ![]({{file name='NXS-action-edition-form-2.png'}} ?w=350,border=true)
 5.  Click on the **Save** button.
 
@@ -281,15 +280,13 @@ Binding the automation chain to a button, an action or an event handler is done 
     2.  Click on the **New** button.
     3.  On the pop up window displayed,, give the event handler an ID and click **Next**.
         ![]({{file name='NXS-event-handler-creation.png'}} ?w=350,border=true)
-2.  Choose to which events the event handler should be binded (documentCreated, documentUpdated...) and indicate whether the chain should be ran synchronously or asynchronously.
+2.  Choose to which events the event handler should be bound (documentCreated, documentUpdated...) and indicate whether the chain should be run synchronously or asynchronously.
     ![]({{file name='NXS-event-handler-edition-form-1.png'}} ?w=350,border=true)
-3.  In the **Event handler Activation** section, fill in the filtering information, to target your event handler to the good context.
+3.  In the **Event handler Activation** section, fill in the filtering information, to target your event handler to the right context.
     ![]({{file name='NXS-event-handler-edition-form-2.png'}} ?w=450,border=true)
-4.  Choose the automation chain to which you want the event handler to be binded.
+4.  Choose the automation chain to which you want the event handler to be bound.
     ![]({{file name='NXS-event-handler-edition-form-3.png'}} ?w=350,border=true)
 5.  Click on the **Save** button.
-
-&nbsp;
 
 * * *
 

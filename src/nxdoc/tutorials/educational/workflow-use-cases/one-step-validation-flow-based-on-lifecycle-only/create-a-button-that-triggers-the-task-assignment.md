@@ -1,11 +1,11 @@
 ---
-title: Create a button that triggers the task assignment
+title: Create a Button That Triggers the Task Assignment
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-21'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - tuto-automation
     - tuto-user-action
 confluence:
@@ -25,12 +25,12 @@ history:
     -
         author: Manon Lumeau
         date: '2016-04-28 12:36'
-        message: 'ix Studio menu label     '
+        message: 'ix Studio menu label'
         version: '30'
     -
         author: Manon Lumeau
         date: '2016-01-18 15:38'
-        message: 'replace "Write" by "Edit"  '
+        message: 'replace Write by Edit'
         version: '29'
     -
         author: Solen Guitter
@@ -174,439 +174,86 @@ history:
         version: '1'
 
 ---
-Now that we have a new permission that can be used in workspaces, we will leverage it for our validation logic: we will create a button that will assign a task to people having the "spellingValidation" permission.
-Only administrators of the workspace can modify the access rights. This means that it is the workspace administrator who decides of the assignments rules, which is more restrictive than the default behavior in Nuxeo DM (the user chooses himself all the participants).
+We have a new permission that can be used in workspaces, we will leverage it for our validation logic: we will create a button that will assign a task to people having the `Workflow_validation` permission.
+Only administrators of the workspace can modify the access rights. This means that it is the workspace administrator who decides of the assignments rules.
 
 To make this happen, we will leverage the `Create Task` operation.
 
 **To add the "request" button:**
 
-1.  Right-click on the **User actions** item of Studio tree, and click **New Action Feature**.
+1.  In Studio, create a new **User Action**.
 2.  Fill in :
-    *   the ID of your new action: `ValidationDemandButton`,
-    *   its label: `Request for validation`,
-    *   [the area where you want the button to be displayed]({{page page='actions-display'}}): `Contextual Tools`.
-3.  Click the button **OK**.
-4.  In the "Action Activation" part of the action definition form, enable the button:
-    *   only for documents of type `File`,
-    *   and for users who have at least the `<span style="font-family: monospace;"><span style="font-size: 14.0px;line-height: 12.6px;background-color: rgb(248,248,248);">Edit</span></span>`&nbsp;permission.
-5.  Click on the `create` link at the bottom of the page, to create the corresponding automation chain.
-6.  Give it a name, for instance `RequestForValidationChain`.
-7.  Compose this automation chain, see below for the detail. Note the `Services > Create task` operation, whose goal is to assign the task, and to record what operation chain will be called when the task will be validated (and the one call if rejected too).
-8.  Save your chain.
+    *   the ID of your new action: `ValidationDemandButton`
+    *   its label: `Request for validation`
+    *   the area where you want the button to be displayed: `Contextual Tools`. More information on the page [Actions Display]({{page page='actions-display'}}).
+    * In the "Action Activation" part of the action definition form, enable the button:
+      - only for documents of type `File`
+      - and for users who have at least the "Edit" permission
+    * In the "Action Execution" part, click on the `create` link to create the corresponding automation chain.
+3.  Give it a name, for instance `RequestForValidationChain`.
+4.  Compose this automation chain, see below for the detail. Note the `Services > Task Create` operation, whose goal is to assign the task, and to record what operation chain will be called when the task will be validated (and the one call if rejected too).
+5.  Save your chain.
 
 {{#> callout type='tip' }}
 
 How to have the UI options in the automation chains panel.
 
-First you have to define a user action, then, go to the bottom of the option page to the section &laquo; action execution &raquo; and click on the link Create. You will be redirected to the automation chains panel, but you will have the UI options available.
+First you have to define a user action, then, go to the bottom of the option page to the section action execution  and click on the link **Create**. You will be redirected to the automation chains panel, but you will have the UI options available.
 
 {{/callout}}
 
-**The** `**RequestForValidationChain**` **chain parameters**
-
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-
-N&deg;
-
-</th><th colspan="1">
-
-Operation
-
-</th><th colspan="1">
-
-Parameter 1
-
-</th><th colspan="1">
-
-parameter 2
-
-</th><th colspan="1">
-
-parameter 3
-
-</th><th colspan="1">
-
-parameter 4
-
-</th><th colspan="1">
-
-parameter 5
-
-</th><th colspan="1">
-
-parameter 6
-
-</th><th colspan="1">
-
-parameter 7
-
-</th></tr><tr><td colspan="1">
-
-1
-
-</td><td colspan="1">
-
-Fetch > Context Document
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-2
-
-</td><td colspan="1">
-
-Users Interface > Add Info Message
-
-</td><td colspan="1">
-
-message: The workflow has been Started
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-3
-
-</td><td colspan="1">
-
-Users and Groups > Get Users and Groups
-
-</td><td colspan="1">
-
-permission: validationWorkflow_validation
-
-</td><td colspan="1">
-
-variable name: assignees
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-Prefix Identifier: True
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-4
-
-</td><td colspan="1">
-
-Users and Groups > Get Principal Emails
-
-</td><td colspan="1">
-
-permission: validationWorkflow_validation
-
-</td><td colspan="1">
-
-variable name: groupEmails
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-5
-
-</td><td colspan="1">
-
-Execution Context > Set Context Variable
-
-</td><td colspan="1">
-
-name: UserLastName
-
-</td><td colspan="1">
-
-value: @{CurrentUser.LastName}
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-6
-
-</td><td colspan="1">
-
-Execution Context > Set Context Variable
-
-</td><td colspan="1">
-
-name: UserFirstName
-
-</td><td colspan="1">
-
-value: @{CurrentUser.FirstName}
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-7
-
-</td><td colspan="1">
-
-Users and Groups > Login As
-
-</td><td colspan="1">
-
-name: Administrator
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-8
-
-</td><td colspan="1">
-
-Services > Create task
-
-</td><td colspan="1">
-
-Task name: `Validation: @{Document.name`}
-
-</td><td colspan="1">
-
-Due date: `@{CurrentDate.days(7).date()`}
-
-</td><td colspan="1">
-
-Directive: `Enter a Directive`
-
-</td><td colspan="1">
-
-Comment: `Enter a comment`
-
-</td><td colspan="1">
-
-accept operation chain: `validationWorkflow_validate`
-
-</td><td colspan="1">
-
-reject operation chain: `validationWorkflow_rejected`
-
-</td><td colspan="1">
-
-variable name for actors prefixed ids: `assignees`
-
-</td></tr><tr><td colspan="1">
-
-9
-
-</td><td colspan="1">
-
-Users and Groups > Logout
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-10
-
-</td><td colspan="1">
-
-Notification > Send E-Mail
-
-</td><td colspan="1">
-
-from: `@{CurrentUser.email`}
-
-</td><td colspan="1">
-
-message: Click on the icon ![]({{file name='STUDIO-explore-icon.png'}}) to select your mail template `validationWorkflow_mail`.
-
-</td><td colspan="1">
-
-Subject: Document Validation: @{Document.name}
-
-</td><td colspan="1">
-
-To: `@{groupEmails})`}
-
-</td><td colspan="1">
-
-As HTML: checked
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-viewID: `view_documents`
-
-</td></tr></tbody></table></div>{{#> callout type='tip' }}
-
-In this sample, when the user validates, we call the validation chain and everything stops. We could also have decided to run another "Create Task" in that `ValidationChain`, so as to create the task for next step validation, and continue all along the life cycle of the document if necessary.
-
-{{/callout}} {{#> callout type='tip' }}
-
-If you want to allow the user to launch a workflow without leaving him the rights to approve or reject the task, you can login as an Administrator using the &laquo; Users & Groups > Login As &raquo; block just before the &laquo; Services > Create task &raquo; block. Like that, the task will be created as an administrator and the current used won&rsquo;t have the basics approve / reject rights on the task. Don&rsquo;t forget to logout after that.
-
-{{/callout}}
+**The chain parameters**
+
+```
+- Context.FetchDocument
+- WebUI.AddInfoMessage:
+    message: The workflow has been started.
+- Context.GetUsersGroupIdsWithPermissionOnDoc:
+    permission: Workflow_validation
+    variable name: assignees
+    ignore groups: "false"
+    prefix identifiers: "true"
+    resolve groups: "false"
+- Context.GetEmailsWithPermissionOnDoc:
+    permission: Workflow_validation
+    variable name: groupEmails
+    ignore groups: "false"
+- Context.SetVar:
+    name: UserLastName
+    value: " @{CurrentUser.LastName}"
+- Context.SetVar:
+    name: UserFirstName
+    value: "@{CurrentUser.FirstName}"
+- Auth.LoginAs:
+    name: Administrator
+- Task.Create:
+    task name: "Validation: @{Document.name}"
+    due date: "@{CurrentDate.days(7).date}"
+    directive: Enter a Directive
+    comment: Enter a comment
+    accept operation chain: validationWorkflow_validate
+    reject operation chain: validationWorkflow_rejected
+    variable name for actors prefixed ids: assignees
+    create one task per actor: "true"
+- Auth.Logout
+- Document.Mail:
+    from: "@{CurrentUser.email}"
+    message: "template:validationWorkflow_mail"
+    subject: "Document Validation: @{Document.name}"
+    to: "@{groupEmails}"
+    HTML: "true"
+    Strict User Resolution: "false"
+    rollbackOnError: "true"
+    viewId: view_documents
+```
+
+**Tips**
+
+- In this sample, when the user validates, we call the validation chain and everything stops. We could also have decided to run another "Create Task" in that `ValidationChain`, so as to create the task for next step validation, and continue all along the lifecycle of the document if necessary.
+
+- If you want to allow the user to launch a workflow without leaving him the rights to approve or reject the task, you can login as an Administrator using the Users & Groups > Login As block just before the Services > Create task block. Like that, the task will be created as an administrator and the current used won't have the basics approve / reject rights on the task. Don't forget to logout after that.
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">&larr;&nbsp;[Create a Task Assignment Alert]({{page version='' space='nxdoc' page='create-a-task-assignment-alert'}})</div>
+<div class="column medium-6" style="text-align:right">&nbsp;</div>
+</div>

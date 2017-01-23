@@ -2,10 +2,10 @@
 title: Database Configuration
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-23'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
@@ -157,7 +157,7 @@ This takes two steps:
 1.  Configure the database:
     *   [PostgreSQL ]({{page page='postgresql'}})
     *   [Oracle ]({{page page='oracle'}})
-    *   [MS SQL Server ]({{page page='microsoft-sql-server'}})
+    *   [Microsoft SQL Server ]({{page page='microsoft-sql-server'}})
     *   [MySQL]({{page page='mysql'}})
     *   [MongoDB]({{page page='mongodb'}})
     *   [MarkLogic]({{page page='marklogic'}})

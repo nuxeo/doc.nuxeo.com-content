@@ -127,7 +127,7 @@ Obviously it is better to point at a local (previously downloaded) WSDL file to 
 
 For instance, copy [http://www.restfulwebservices.net/wcf/WeatherForecastService.svc?wsdl](http://www.restfulwebservices.net/wcf/WeatherForecastService.svc?wsdl) to `src/main/resources/wsdls` in a Nuxeo project and use the following code in your `pom.xml`:
 
-```
+```xml
 <plugin>
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>jaxws-maven-plugin</artifactId>
@@ -155,7 +155,7 @@ For instance, copy [http://www.restfulwebservices.net/wcf/WeatherForecastService
 
 When you'll build the project, all WSDL files in `src/main/resources/wsdls` will be parsed and the associated Java source files generated in `${project.build.directory}/generated-sources/wsimport`.
 
-The `jaxws:wsimport` goal is automatically executed within the life cycle phase `generate-sources`, ie. before the `compile` phase. This way, running `mvn clean install` first generates the source files and then compiles them.
+The `jaxws:wsimport` goal is automatically executed within the lifecycle phase `generate-sources`, ie. before the `compile` phase. This way, running `mvn clean install` first generates the source files and then compiles them.
 
 {{#> callout type='note' heading='Be careful with XSD schema imports!'}}
 

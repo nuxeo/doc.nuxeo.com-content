@@ -98,7 +98,7 @@ history:
 ---
 Only the workflow initiator and administrators can abandon a workflow.
 
-Abandoning a workflow means canceling it. When you abandon a workflow, the life cycle state of the document does not change. The modifications made on the document during the workflow are kept.
+Abandoning a workflow means canceling it. When you abandon a workflow, the lifecycle state of the document does not change. The modifications made on the document during the workflow are kept.
 
 Abandoning the workflow can be done at any time. The workflow initiator can also decide to cancel the workflow when he gets an update request from the first reviewer. When the first reviewer [rejects the document]({{page page='serial-document-workflow'}}), it goes back to the initiator, who should then either edit the document and resubmit it, or cancel the review.
 
@@ -109,7 +109,7 @@ Abandoning the workflow can be done at any time. The workflow initiator can also
 2.  Click on the **Abandon** button.
     A confirmation window pops up.
 3.  Click on **OK** to confirm abandon.
-    The workflow is immediately canceled. The life cycle state of the document does not change and the modifications done during the workflow are still saved.
+    The workflow is immediately canceled. The lifecycle state of the document does not change and the modifications done during the workflow are still saved.
 
 **To cancel a workflow after an update request:**
 
@@ -117,20 +117,20 @@ Abandoning the workflow can be done at any time. The workflow initiator can also
     The Summary tab of the document is displayed. It shows a "Your tasks" section.
     ![]({{file name='workflow-back-to-intiator.png'}} ?w=350,border=true)
 2.  Click on the **Cancel the review** button.
-    The workflow is immediately stopped. The life cycle state of the document does not change and the possible modifications done during the workflow are still saved.
+    The workflow is immediately stopped. The lifecycle state of the document does not change and the possible modifications done during the workflow are still saved.
 
 * * *
 
-&nbsp;
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
-
-*   [Workflows user documentation]({{page page='workflows'}})
-*   [Case Management with the Nuxeo Platform]({{page page='case-management-with-the-nuxeo-platform'}})
+- [Workflows user documentation]({{page page='workflows'}})
+- [Case Management with the Nuxeo Platform]({{page page='case-management-with-the-nuxeo-platform'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Customizing the workflow'}}
 
-*   [Workflow in Nuxeo Studio]({{page space='studio' page='workflow'}})
-*   [Workflow developer documentation]({{page space='nxdoc' page='workflow'}})
+- [Workflow in Nuxeo Studio]({{page space='studio' page='workflow'}})
+- [Workflow developer documentation]({{page space='nxdoc' page='workflow'}})
 
 {{/panel}}</div></div>

@@ -314,7 +314,7 @@ The JS client uses promises, that look like this:
 
 {{#> panel type='code' heading='Promise Example'}}
 
-```js
+```javascript
 var nuxeo = new Nuxeo({...});
 
 nuxeo
@@ -352,7 +352,7 @@ Authenticating using the JS client is done by:
 
     {{#> panel type='code' heading='Sample'}}
 
-    ```js
+    ```javascript
     var nuxeo = new Nuxeo({
      baseUrl: 'http://localhost:8080/nuxeo',
      auth: {
@@ -391,7 +391,7 @@ Obviously, this is also slightly more complex, since it involves more steps:
 
     {{#> panel type='code' heading='Sample'}}
 
-    ```js
+    ```javascript
     var tmpNuxeoClient = new Nuxeo({
      baseUrl: 'http://localhost:8080/nuxeo',
      auth: {
@@ -407,7 +407,7 @@ Obviously, this is also slightly more complex, since it involves more steps:
 
     {{#> panel type='code' heading='Sample'}}
 
-    ```js
+    ```javascript
     // Needed parameters for the function to obtain a token:
     // application name (string, use whatever you see fit),
     // unique device id (string, you'll probably want to use the device's id on a phone or use a specific function to generate one),
@@ -426,7 +426,7 @@ Obviously, this is also slightly more complex, since it involves more steps:
 
     {{#> panel type='code' heading='Sample'}}
 
-    ```js
+    ```javascript
     var nuxeo = new Nuxeo({
      baseUrl: 'http://localhost:8080/nuxeo',
      auth: {
@@ -464,7 +464,7 @@ When using the Nuxeo JS client, fetching documents is done by using the [`Reposi
 
 {{#> panel type='code' heading='Fetching a Document'}}
 
-```js
+```javascript
 nuxeo.repository().fetch("document id or path")...
 ```
 
@@ -485,7 +485,7 @@ In the JS client, you can set headers:
 
     {{#> panel type='code' heading='Adding an Application-Wide Header'}}
 
-    ```js
+    ```javascript
     nuxeo.header("someHeader", "someValue");
     ```
 
@@ -497,7 +497,7 @@ In the JS client, you can set headers:
 
     {{#> panel type='code' heading='Adding a Request-Specific Header'}}
 
-    ```js
+    ```javascript
     var callOptions = {
       'headers': { 'headerName': 'headerValue', ... } 	// overrides all headers set for this call only
       'schemas': ['dublincore', 'common', ...] 			// overrides the schemas set in the Nuxeo object for this call only
@@ -564,7 +564,7 @@ On top of the `depth` header, you can use:
     Or `X-NXfetch.document:properties` instead to retrieve all objects at the same time.
 *   The corresponding JS client methods:
 
-    ```js
+    ```javascript
     nuxeo.someClass().fetchProperty('entity-type', 'myschema:myProperty')...
     // You can use it as many times as needed to add other properties
     // TODO: You need to replace someClass by the appropriate class!
@@ -634,7 +634,7 @@ Enrichers are provided in the response into the `contextParameters` object.
 
 The corresponding JS client methods:
 
-```js
+```javascript
 nuxeo.someClass().enricher('entity-type', 'enricherName')...
 // You can use it as many times as needed to add other enrichers
 // TODO: You need to replace someClass by the appropriate class!
@@ -695,7 +695,7 @@ Several adapters can be chained; in this case the result of the first adapter wi
 
 As adapters can virtually provide anything in the response, there is no specific class that can be used to call adapters in the JS client. Instead, you need to use the `Request` class and launch a call, passing the URL and the call method:
 
-```js
+```javascript
 // Sample to retrieve the ACLs of the default domain
 nuxeo.request('/path/default-domain/@acl')
   .get()
@@ -705,7 +705,6 @@ nuxeo.request('/path/default-domain/@acl')
   .catch(function(error){
     // Code to handle error thrown here
   });
-
 ```
 
 {{#> callout type='info' heading='What You Should Remember'}}
@@ -773,7 +772,7 @@ The `document` parameter is a document object containing:
 *   the document id (in a `uid` field)
 *   the properties to update (in a `properties` object)
 
-```js
+```javascript
 // Sample document object for an update call
 var documentToUpdate = {
   'entity-type': 'document',
@@ -831,7 +830,7 @@ The file can be attached to the document either during the document creation, or
 
 {{#> panel type='code' heading='File Upload Sample'}}
 
-```js
+```javascript
 // Create the blob wrapper
 // We assume you already obtained the file from a form and placed it into a selectedFile variable
 var nuxeoBlob = new Nuxeo.Blob({ 'content': selectedFile });
@@ -876,7 +875,7 @@ In the JS client, you can use the `delete` method contained in the [Repository](
 
 If you want to handle a trash mechanism, you should rather change the document state: `document.followTransition(transitionName)...` where `document` is a Document object and `transitionName` the name of the transition to follow.
 
-Using the default document life cycle:
+Using the default document lifecycle:
 
 1.  Follow the `delete` transition to put a document in the `deleted` state.
 2.  Follow the `undelete` transition to restore a document to the `project` state.
@@ -899,8 +898,7 @@ Use the JS client to:
 *   Put a document in the deleted state
 *   Delete permanently a document
 
-**What you need to do
-**
+**What you need to do**
 
 Complete the following exercises.
 
@@ -922,7 +920,7 @@ In that case, specify the NXQL query to be launched in the query property: `nuxe
 
 {{#> panel type='code' heading='Sample NXQL Query for a Fulltext Search'}}
 
-```
+```sql
 SELECT * FROM Document
 	WHERE ecm:mixinType != 'HiddenInNavigation'
 	AND ecm:isProxy = 0
@@ -944,7 +942,7 @@ In that case, you need to:
 1.  Specify the content view id as defined in Nuxeo Studio in the `pageProvider` property
 2.  Pass in the `queryParams` property an array containing the parameters, in the same order as they are defined in the content view.
 
-```js
+```javascript
 nuxeo.Repository().query({ 'pageProvider': 'pageProviderId', queryParams['parameter1', 'parameter2'...] })...
 ```
 
@@ -953,13 +951,11 @@ nuxeo.Repository().query({ 'pageProvider': 'pageProviderId', queryParams['parame
 *   To query the database, you can use `nuxeo.Repository().query({ 'query': myQuery })...` where `myQuery` is a variable containing the query to launch.
 *   If you want to query on the Elasticsearch index instead, you can create a page provider by defining a content view in Studio (only the query part is required), then call it using the JS client:
 
-    ```js
+    ```javascript
     nuxeo.Repository().query({ 'pageProvider': 'pageProviderId', queryParams['parameter1', 'parameter2'...] })...
     ```
 
 {{/callout}}
-
-&nbsp;
 
 #### Practice - Querying and Searching
 
@@ -1019,7 +1015,7 @@ Using the JS client's [`Operation`](https://nuxeo.github.io/nuxeo-js-client/1.0.
 
 {{#> panel type='code' heading='Call a Chain or Script'}}
 
-```js
+```javascript
 nuxeo.operation('MyChainOrScriptId')
   .input('a Document object or an id or a path here')
   .params({
@@ -1049,7 +1045,7 @@ Note that automation scripts are prefixed by `javascript.` So if your automation
 
     {{#> panel type='code' heading='Call a Chain or Script'}}
 
-    ```js
+    ```javascript
     nuxeo.operation('MyChainOrScriptId')
       .input('a Document object or an id or a path here')
       .params({
@@ -1084,7 +1080,7 @@ Note that automation scripts are prefixed by `javascript.` So if your automation
 
     {{#> accordian heading='Solution' closed='true'}}
 
-    ```js
+    ```javascript
     /******
     Adds a document to a specific collection in the user's workspace
     The collection is created if it doesn't exist
@@ -1201,7 +1197,7 @@ Once the document is fetched, use the `startWorkflow` method:
 
 {{#> panel type='code' heading='Starting a Workflow On a Document'}}
 
-```js
+```javascript
 document.startWorkflow('workflowId');
 ```
 
@@ -1213,7 +1209,7 @@ Before starting the workflow, you need to create an object containing the ids of
 
 {{#> panel type='code' heading='Workflow Options Object'}}
 
-```js
+```javascript
 var workflowOptions = {
       "attachedDocumentIds":
         ["docId1", "docId2", ...]
@@ -1224,7 +1220,7 @@ var workflowOptions = {
 
 Then pass this object when starting the workflow.
 
-```js
+```javascript
 nuxeo.workflows().start('workflowId', workflowOptions)...
 ```
 
@@ -1299,8 +1295,7 @@ Now this is your turn to build yours!
 
 Create a content enricher to obtain the contract's latest version.
 
-**What you need to do
-**
+**What you need to do**
 
 Copy the following Java class into your project and complete it:
 
@@ -1339,7 +1334,7 @@ public class LastVersionEnricher extends AbstractJsonEnricher<DocumentModel> {
 
 {{#> accordian heading='Solution' closed='true'}}
 
-```java
+```
 package org.nuxeo.sample;
 import static org.nuxeo.ecm.core.io.registry.reflect.Instantiations.SINGLETON;
 import static org.nuxeo.ecm.core.io.registry.reflect.Priorities.REFERENCE;
@@ -1385,7 +1380,6 @@ If you declare it in your Java project, make sure to reference it in the project
 ```text
 ...
 Nuxeo-Component:OSGI-INF/org.nuxeo.sample.enrichers.parentDocEnricher.xml,OSGI-INF/org.nuxeo.sample.another-contribution.xml,...
-
 ```
 
 {{/panel}}

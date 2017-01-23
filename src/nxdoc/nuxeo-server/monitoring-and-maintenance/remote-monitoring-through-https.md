@@ -2,10 +2,10 @@
 title: Remote Monitoring through HTTP/S
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - monitoring-component
     - excerpt
 toc: true
@@ -125,7 +125,7 @@ You must then add the DMK agent library `com.sun.jdmk:core`&nbsp; to the `JMX` c
 -Xbootclasspath/a:/../nuxeo/nxserver/lib/core-1.0-b02.jar
 ```
 
-In the Java Mission Control, create a connection using the URI `service:jmx:jdmk-http://hostname:6868`. You may retrieve that URI from the managed bean attribute `Address` .
+In the Java Mission Control, create a connection using the URI `service:jmx:jdmk-http://hostname:6868`. You may retrieve that URI from the managed bean attribute `Address`.
 
 {{! Don't put anything here. }}
 

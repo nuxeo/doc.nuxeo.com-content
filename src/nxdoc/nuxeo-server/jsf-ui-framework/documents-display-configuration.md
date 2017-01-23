@@ -22,7 +22,7 @@ confluence:
     shortlink: XwFc
     shortlink_source: 'https://doc.nuxeo.com/x/XwFc'
     source_link: /display/NXDOC/Documents+Display+Configuration
-tree_item_index: 500
+tree_item_index: 900
 history:
     -
         author: Solen Guitter

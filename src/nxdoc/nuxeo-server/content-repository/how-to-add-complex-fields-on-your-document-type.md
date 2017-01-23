@@ -172,7 +172,7 @@ Let's see how this metadata is defined.
 - [Documents in Nuxeo Studio]({{page space='studio' page='documents'}})
 - [Content Repository]({{page page='content-repository'}})
 - [Available Facets]({{page page='available-facets'}})
-- [Life cycle]({{page space='studio' page='life-cycle'}})
+- [Lifecycle]({{page space='studio' page='life-cycle'}})
 - [Schemas]({{page space='studio' page='schemas'}})
 
 {{/panel}}</div></div>

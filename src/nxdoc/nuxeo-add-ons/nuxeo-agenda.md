@@ -2,10 +2,10 @@
 title: Nuxeo Agenda
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-05'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - nuxeo-agenda
 toc: true
 confluence:
@@ -49,7 +49,7 @@ history:
 
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
-After the package is installed, a new document type is available from workspaces, called "Event" and users can add an Agenda gadget on their dashboard.
+After the package is installed, a new document type is available from workspaces, called "Event". Users can then add an Agenda gadget on their dashboard.
 
 ![]({{file name='nuxeo-agenda-document-type.png'}} ?w=650,h=340,border=true)
 

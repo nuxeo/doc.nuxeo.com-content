@@ -236,29 +236,29 @@ These metrics are exposed via JMX but can also be reported with CSV files or sen
 Here is a short list of Nuxeo metrics:
 
 *   `nuxeo.repositories.default.documents`
-    *   `create`&nbsp;Counter of document created
-    *   `delete`&nbsp;Counter of document deleted
-    *   `update`&nbsp;Counter of document updated
-*   `nuxeo.repositories.jdbc/nuxeo.connections[](http://nuxeo.repositories.jdbc/nuxeo.connections)`
-    *   `count`&nbsp;VCS connection count
-    *   `idle`&nbsp;VCS idle connection count
+    *   `create` Counter of document created
+    *   `delete` Counter of document deleted
+    *   `update` Counter of document updated
+*   `nuxeo.repositories.jdbc/nuxeo.connections`
+    *   `count` VCS connection count
+    *   `idle` VCS idle connection count
 *   `nuxeo.transactions.concurrents`
-    *   `count`&nbsp;Counter for concurrent transaction
-    *   `max`&nbsp;Maximum value of the previous counter
-*   `nuxeo.transactions.duration`&nbsp;Timer for transactions
-*   `nuxeo.transactions.rollbacks`&nbsp;Counter for transactions in failure
+    *   `count` Counter for concurrent transaction
+    *   `max` Maximum value of the previous counter
+*   `nuxeo.transactions.duration` Timer for transactions
+*   `nuxeo.transactions.rollbacks` Counter for transactions in failure
 *   `nuxeo.works.<WORKER_POOL>`:
-    *   `completed`&nbsp;Counter for completed jobs
-    *   `running`&nbsp;Counter of running jobs
-    *   `scheduled.count`&nbsp;Counter of job waiting to be processed
-    *   `scheduled.max`&nbsp;Maximum scheduled jobs
-    *   `total`&nbsp;Timer for the job duration
+    *   `completed` Counter for completed jobs
+    *   `running` Counter of running jobs
+    *   `scheduled.count` Counter of job waiting to be processed
+    *   `scheduled.max` Maximum scheduled jobs
+    *   `total` Timer for the job duration
 *   `nuxeo.elasticsearch.service`
-    *   `bulkIndex`&nbsp;Timer for bulk index operations
-    *   `index`&nbsp;Timer for index operations
-    *   `delete`&nbsp;Timer for deletion operations
-    *   `search`&nbsp;Timer on search operations
-    *   `fetch`&nbsp;Measure the time to retrieve documents
+    *   `bulkIndex` Timer for bulk index operations
+    *   `index` Timer for index operations
+    *   `delete` Timer for deletion operations
+    *   `search` Timer on search operations
+    *   `fetch` Measure the time to retrieve documents
 *   `nuxeo.ActionService`
     *   `ations` or `actions` (typo fixed for versions 7.10-HF13 and 8.4) Timer for actions retrieval given a category (including filters evaluation)
     *   `action` Timer for action retrieval given the action id (including filters evaluation)
@@ -270,12 +270,12 @@ See this [JMX monitoring]({{page page='reporting-problems'}}) page to get a list
 Note that metrics are prefixed depending on how they are exposed, for instance a counter like `nuxeo.repositories.default.documents.create` will be accessible:
 
 *   in graphite with the name`servers.myhostname.nuxeo.nuxeo.repositories.default.documents.create.count`
-*   in JMX with a mbean named:&nbsp; [`metrics:name=nuxeo.repositories.default.documents.create`](http://metricsname=nuxeo.repositories.default.documents.create)
+*   in JMX with a mbean named:  [`metrics:name=nuxeo.repositories.default.documents.create`](http://metricsname=nuxeo.repositories.default.documents.create)
 
 {{#> callout type='info' }}
 
-To have a complete monitoring you should also monitor the system, the database and the Elasticsearch cluster, a tool like&nbsp;[Diamond](https://github.com/BrightcoveOS/Diamond/wik/)&nbsp;can do this easily.
-The default prefix (`servers.${HOSTNAME}.nuxeo`) used by the Graphite reporter is compatible with Diamond but it can be changed by the setting `metrics.graphite.prefix`&nbsp;in`nuxeo.conf`.
+To have a complete monitoring you should also monitor the system, the database and the Elasticsearch cluster, a tool like [Diamond](https://github.com/BrightcoveOS/Diamond/wik/) can do this easily.
+The default prefix (`servers.${HOSTNAME}.nuxeo`) used by the Graphite reporter is compatible with Diamond but it can be changed by the setting `metrics.graphite.prefix` in`nuxeo.conf`.
 
 {{/callout}}
 
@@ -317,7 +317,7 @@ metrics.graphite.period=10
 
 ![]({{file name='graphite-reporting.png'}} ?w=500,h=398,border=true)
 
-###### Reporting&nbsp;Tomcat JMX Info
+###### Reporting Tomcat JMX Info
 
 ```
 metrics.tomcat.enabled=true
@@ -357,7 +357,7 @@ By default only three statuses are defined:
 
 Administrative Status can be configured and declared via the [`serviceDefinition` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--serviceDefinition).
 
-### Probes&nbsp;
+### Probes
 
 Probes can be used to run a test on the target deployed platform. Probes can be used to check that all part of the architecture are actually running for real:
 
@@ -366,7 +366,7 @@ Probes can be used to run a test on the target deployed platform. Probes can be 
 *   check VCS access,
 *   ...
 
-Probes can be defined via the[&nbsp;`probes` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--probes).
+Probes can be defined via the[ `probes` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--probes).
 
 By default four probes are defined:
 
@@ -383,7 +383,7 @@ You can use JVisualVM or similar tool to access Nuxeo JMX interface. See the sec
 
 Inside the Admin Center there are two sections that are related to monitoring: Activity and Monitoring.
 
-#### Activity&nbsp;
+#### Activity
 
 The Activity section provides access to:
 
@@ -396,8 +396,6 @@ The Activity section provides access to:
 *   A view on audit event logs
 *   The background jobs
 *   Repository analytics
-
-&nbsp;
 
 The Activity section provides access to:
 
@@ -415,7 +413,7 @@ The Monitoring sections provides access to:
 
 ### REST Access
 
-#### Counters&nbsp;
+#### Counters
 
 Counter are exposed via Automation API [Counters.GET](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Counters.GET)
 
@@ -426,8 +424,6 @@ curl -H 'Content-Type:application/json+nxrequest' -X POST -d
 '{"params":{"counterNames":"org.nuxeo.web.requests"}}' -u
 Administrator:Administrator http://localhost:8080/nuxeo/site/automation/Counters.GET
 ```
-
-&nbsp;
 
 * * *
 

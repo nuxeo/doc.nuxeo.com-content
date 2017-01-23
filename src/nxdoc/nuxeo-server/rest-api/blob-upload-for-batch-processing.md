@@ -2,7 +2,7 @@
 title: Blob Upload for Batch Processing
 review:
     comment: ''
-    date: '2016-12-12'
+    date: '2017-01-17'
     status: ok
 labels:
     - lts2016-ok
@@ -193,7 +193,7 @@ history:
 ---
 {{> wistia_video id='qokay4hw1i'}}
 
-Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" on [Nuxeo University](https://university.nuxeo.io)
+Extract from the course "[Working with the REST API](https://university.nuxeo.com/store/155916-rest-api)" on [Nuxeo University](https://university.nuxeo.com)
 
 ## Motivations
 
@@ -263,7 +263,8 @@ Returns a 201 *CREATED* status code with the following JSON data:
 {"batchId": batchId, "fileIdx": fileIdx, "uploadType": "normal", "uploadedSize": xxx}
 ```
 
-The value of the `uploadType` field is `normal` by default, it can be `chunked` if the file was [uploaded by chunks](#uploadingafilebychunks).
+The value of the `uploadType` field is `normal` by default, it can be `chunked` if the file was [uploaded by chunks](#uploading-a-file-by-chunks).
+
 
 {{#> callout type='info' heading='About the file storage implementation'}}
 
@@ -323,7 +324,7 @@ DELETE /api/v1/upload/{batchId}/{fileId}
 
 Returns a 204 *No Content* and removes the file from the batch.
 
-## {{> anchor 'uploadingafilebychunks'}}Uploading a File by Chunks
+## Uploading a File by Chunks
 
 [Resumable upload]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}}#-anchor-uploadingafileinchunks-uploading-a-file-in-chunks-resumable-) became a requirement otherwise uploading large files over a broken connection could take days.
 

@@ -92,11 +92,11 @@ Id: `summary_current_document_files`
 
 This widget type displays attached files to the current document. It also displays a drop zone for Drag & Drop features.
 
-## Life Cycle State and Version
+## Lifecycle State and Version
 
 Id: `summary_current_document_lc_and_version`
 
-This widget type displays the current document life cycle state and version.
+This widget type displays the current document lifecycle state and version.
 
 ## Publications
 
@@ -114,7 +114,7 @@ This widget type displays the current document incoming and outgoing relations.
 
 Id: `summary_current_document_states`
 
-This widget type displays the current document life cycle state and lock status.
+This widget type displays the current document lifecycle state and lock status.
 
 ## Tagging
 

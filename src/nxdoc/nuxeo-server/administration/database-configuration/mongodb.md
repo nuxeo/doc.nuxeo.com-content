@@ -226,9 +226,9 @@ history:
 
 An implementation is available for [MongoDB](http://www.nuxeo.com/mongodb/).
 
-Nuxeo supports the following MongoDB versions:
+Nuxeo supports the following MongoDB version:
 
-{{{multiexcerpt 'FT-mongoDB-supported' page='Compatibility Matrix'}}}
+{{{multiexcerpt 'MongoDB-supported' page='Compatibility Matrix'}}}
 
 ## Installation
 
@@ -310,7 +310,7 @@ It is possible to use MongoDB's [GridFS](https://docs.mongodb.org/manual/core/gr
 nuxeo.templates=postgresql,mongodb,gridfsbinaries
 ```
 
-When doing this, binaries will be stored in the `default.fs` GridFS bucket, which means that in native MongoDB the collections `default.fs.files` and `default.fs.chunks`&nbsp;will be used. See the [GridFS Reference](https://docs.mongodb.org/manual/reference/gridfs/) for more details about MongoDB's GridFS implementation.
+When doing this, binaries will be stored in the `default.fs` GridFS bucket, which means that in native MongoDB the collections `default.fs.files` and `default.fs.chunks` will be used. See the [GridFS Reference](https://docs.mongodb.org/manual/reference/gridfs/) for more details about MongoDB's GridFS implementation.
 
 
 * * *
@@ -320,8 +320,6 @@ When doing this, binaries will be stored in the `default.fs` GridFS bucket, whic
 - [DBS - MongoDB developer documentation]({{page page='dbs'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 &nbsp;
 

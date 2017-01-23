@@ -2,7 +2,7 @@
 title: How to Quickly Generate a PDF Using Document Template
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: Studio
         topics: 'Automation, Conversion, Document template'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - automation
     - conversion
@@ -130,7 +130,7 @@ history:
 
 {{#> callout type='info' }}
 
-You may want to use [Nuxeo Platform Template Rendering add-on]({{page page='template-rendering-addon'}}) for this use case. That module will allow a much better control on the look&feel of your generated PDF, using MS Word or Open Office templating.
+You may want to use [Nuxeo Platform Template Rendering addon]({{page page='template-rendering-addon'}}) for this use case. That module will allow a much better control on the look&feel of your generated PDF, using MS Word or Open Office templating.
 
 {{/callout}}{{! excerpt}}
 
@@ -168,8 +168,6 @@ You may want to use [Nuxeo Platform Template Rendering add-on]({{page page='temp
     - Blob.ToPDF
     - Seam.DownloadFile
     ```
-
-&nbsp;
 
 * * *
 

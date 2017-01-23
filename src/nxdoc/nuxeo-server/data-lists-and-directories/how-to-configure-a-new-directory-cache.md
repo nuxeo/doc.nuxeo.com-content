@@ -2,7 +2,7 @@
 title: How to Configure a New Directory Cache
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-26'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: XML Extension
         topics: 'Directory, Vocabulary'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - directory-component
 confluence:
@@ -119,9 +119,7 @@ To set up a new cache for your directory, wether for your vocabularies, users or
     </extension>
     ```
 
-    The example above is about a SQL directory. You should adapt the&nbsp;`target` to the type of directory you're using.
-
-&nbsp;
+    The example above is about a SQL directory. You should adapt the `target` to the type of directory you're using.
 
 * * *
 

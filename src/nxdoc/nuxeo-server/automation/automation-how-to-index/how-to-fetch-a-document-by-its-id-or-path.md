@@ -2,7 +2,7 @@
 title: How to Fetch a Document by Its ID or Path
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: Studio
         topics: Automation
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - automation
     - studio
@@ -113,17 +113,20 @@ history:
 ---
 {{! excerpt}}
 
-You can use the operation&nbsp;`Document.Fetch` when you want to fetch a given document by its ID, or by its path. Actually you won't probably have to use it frequently: most of the time you'll be working on the current document, or one of its children, or its parent, or on the result of a query.
+You can use the operation `Document.Fetch` when you want to fetch a given document by its ID, or by its path. Actually you won't probably have to use it frequently: most of the time you'll be working on the current document, or one of its children, or its parent, or on the result of a query.
 
 {{! /excerpt}}
 
 Anyway, if you want to access a document by its path or its ID, just drop this `Fetch > Document` operation in the [operation chain editor]({{page page='how-to-create-an-automation-chain'}}), and either put:
 
-*   A path, like `/default-domain/workspaces/my-workspace`;
+*   A path, like `/default-domain/workspaces/my-workspace`
+
     You will find the path of a document in its URL: It is the part of URL that starts with `/default-domain/...` (if you are in the default domain) and that finishes with the name of the document (most often its title without accents, space, ... and sometimes with some additional numbers).
-*   A computed path using a scripted instruction like `expr:/default-domain/sections+@{Document.path.substring("/default-domain/workspaces".length -1)}`.
+*   A computed path using a scripted instruction like `expr:/default-domain/sections+@{Document.path.substring("/default-domain/workspaces".length -1)}`
+
     This expression will give the path of a published document in the sections considering it has been published in the same place as in the workspaces.
-*   An ID like `76c69a54-0230-457a-b42c-e819d5ace862`.
+*   An ID like `76c69a54-0230-457a-b42c-e819d5ace862`
+
     You can get the ID of a document by clicking on the permanent link beside the title of a document in Nuxeo Platform.
 
 * * *

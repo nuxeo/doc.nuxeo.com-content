@@ -162,8 +162,8 @@ Variables that can be used when a notification is set up from a workflow node's 
 *   `${recipients}` - The email recipients. Provided as a usernames list. Example: `${recipients[0]}`.
 *   `${userUrl}` - The URL to access the profile of the user running the task. Note that this might not be the current user. See the [workflow engine FAQ]({{page page='workflow-engine-faq'}}) for details.
 *   `${docMainFileUrl}` - The URL of the document's main file (assuming the document contains one).
-*   `${docState}` - The document's current life cycle state.
-*   `${documentLifeCycle}` - The document's current life cycle state.
+*   `${docState}` - The document's current lifecycle state.
+*   `${documentLifeCycle}` - The document's current lifecycle state.
 *   `${docTitle}` - The document title.
 *   `${docUrl}` - The permanent link to the document.
 *   `${docId}` - The document id.
@@ -180,8 +180,6 @@ Variables that can be used when a notification is set up from a workflow node's 
 *   `${nodeStartTime}` - The time when the node was started, useful for example when computing a due date (Due date expression: `nodeStartTime.days(8)`). Sent as a `java.util.GregorianCalendar` object.
 *   `${nodeEndTime}` - The time when the node was ended. Sent as a `java.util.GregorianCalendar` object.
 *   `${nodeLastActor}` - The last actor on the node. Useful for instance to know who closed a task when the task was assigned to a group.
-
-&nbsp;
 
 * * *
 

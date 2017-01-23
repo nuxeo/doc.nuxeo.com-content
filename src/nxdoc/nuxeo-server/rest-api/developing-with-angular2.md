@@ -2,7 +2,7 @@
 title: Developing with Angular2
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-01-17'
     status: ok
 labels:
     - lts2016-ok
@@ -14,6 +14,8 @@ labels:
     - javascript-client-component
     - excerpt
 toc: true
+version_override:
+    'LTS 2015': 710/nxdoc/developing-with-angularjs
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API
@@ -292,7 +294,7 @@ There are two possible ways to deploy your application:
 
   ![Angular Embedded Application]({{file name='Nuxeo and AngularJS - Embedded Web Application - New Page.png'}})
 
-  This setup is particularly interesting when using a [Nuxeo Cloud](https://www.nuxeo.com/products/nuxeo-cloud/) instance. No setup, no administration needed, and full scalability. By configuring your Nuxeo Platform instance, people will be redirected to your custom interface and the overall setup is transparent. This solution is used by us for projects such as [Nuxeo University](https://university.nuxeo.io).
+  This setup is particularly interesting when using a [Nuxeo Cloud](https://www.nuxeo.com/products/nuxeo-cloud/) instance. No setup, no administration needed, and full scalability. By configuring your Nuxeo Platform instance, people will be redirected to your custom interface and the overall setup is transparent. This solution is used by us for projects such as [Nuxeo University](https://university.nuxeo.com).
 
   To do that, if you bootstrapped your project with the `package` generator, simply go to the root of your project then:
 
@@ -332,8 +334,6 @@ We are always eager to receive feedback on our projects. Please report bugs, wis
 - [JavaScript Client]({{page page='javascript-client'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 &nbsp;
 
