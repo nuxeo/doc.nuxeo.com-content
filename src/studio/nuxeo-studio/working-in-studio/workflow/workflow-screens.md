@@ -59,5 +59,5 @@ You will find here as many pages as you have screens on the Workflow feature. Se
 *   [Workflow creation form]({{page space='Studio' page='Workflow creation+form'}})
 *   [Definition tab]({{page space='Studio' page='Definition tab'}})
 *   [Variables tab]({{page space='Studio' page='Variables tab'}})
-*   [Availability tab]({{page space='Studio' page='Availability tab'}})
+*   [Activation tab]({{page space='Studio' page='activation-tab'}})
 *   [Graph tab]({{page space='Studio' page='Graph tab'}})
