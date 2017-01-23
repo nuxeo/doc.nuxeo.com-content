@@ -2,9 +2,10 @@
 title: Parallel Document Workflow
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
+    - lts2016-ok
     - parallel-workflow
     - excerpt
     - multiexcerpt-include

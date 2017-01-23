@@ -2,9 +2,10 @@
 title: Collections
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
+    - lts2016-ok
     - collection
     - excerpt
     - multiexcerpt
@@ -226,7 +227,7 @@ Documents can be collected:
     ![]({{file name='collection-creation-from-form-1.png'}} ?w=350,border=true)
 - By batch by selecting documents from their parent and clicking on the **Add to collection** button
     ![]({{file name='collection_form_batch.png'}} ?w=350,border=true)
-- From the collection itself by clicking the icon&nbsp;![]({{file name='add_to_collection.png' page='icons-index'}}) and searching the documents to collect
+- From the collection itself by clicking the icon ![]({{file name='add_to_collection.png' page='icons-index'}}) and searching the documents to collect
     ![]({{file name='add-to-collection-suggested-documents.png'}} ?w=350,border=true)
 
 In the first two cases you can select the collection by:
@@ -260,26 +261,26 @@ There are two ways to create a collection:
 {{! multiexcerpt name='sharing'}}
 Sharing a collection means [giving permissions]({{page page='managing-permissions'}}) to users on the collection. Collections created in the default domain in a shared workspace or folder are automatically shared to all the workspace or folder's users, following the [rights inheritance principle]({{page page='managing-permissions#rights-inheritance'}}).
 
-Collections created in your personal workspace are private by default. You need to grant permissions to it if you want to share it. Granting permissions to a collection makes the collection available to users from their Home. The list of documents displayed inside the collection depends on the permissions of the user on each of the documents.
+Collections created in your personal workspace are private by default. You must grant the needed permissions on the collection if you want to share it. Granting permissions to a collection makes the collection available to users from their Home. The list of documents displayed inside the collection depends on the permissions of the user on each of the documents.
 
 Beside the generic permissions, collection have a specific right, called "can collect". When you share a collection, you can choose to:
 
-- Give read access: By giving them Read permission, you enable users to see the collection in their Home and the documents inside it depending on their permissions on each document;
-- Enable users to add documents to the collection: By giving the permission "Can collect", you enable users to add documents to the collection and remove them;
-- Give edit access: By giving the Edit permission, you enable users to add documents to the collection, remove them and to edit the collection;
-- Make them manager for the collection: By giving them Manage everything permission, you enable users to manage the content of the collection and who can access it.
+- **Give read access**: By giving them Read permission, you enable users to see the collection in their Home and the documents inside it depending on their permissions on each document;
+- **Enable users to add documents to the collection**: By giving the permission "Can collect", you enable users to add documents to the collection and remove them;
+- **Give edit access**: By giving the Edit permission, you enable users to add documents to the collection, remove them and to edit the collection (i.e. title, description, etc.);
+- **Make them manager for the collection**: By giving them Manage everything permission, you enable users to manage the content of the collection and who can access it.
 {{! /multiexcerpt}}
 
 ## Removing Documents from a Collection
 {{! multiexcerpt name='removing'}}
-To remove a document from a collection, either click on the <span class="s1">icon&nbsp;![]({{file name='delete.png' page='icons-index'}}) of the collection</span> from the **Summary** tab of the document, or select the document in the collection the checkboxes and click <span class="s1">on the **Remove from collection** button.</span>
+To remove a document from a collection, either click on the <span class="s1">icon ![]({{file name='delete.png' page='icons-index'}}) of the collection</span> from the **Summary** tab of the document, or select the document in the collection the checkboxes and click <span class="s1">on the **Remove from collection** button.</span>
 
 In both ways the document is immediately removed from the collection.
 {{! /multiexcerpt}}
 
 ## Favorites
 {{! multiexcerpt name='favorites'}}
-Favorites is a particular collection that enables you to bookmark documents. The list of documents bookmarked as favorites is&nbsp;available:
+Favorites is a particular collection that enables you to bookmark documents. The list of documents bookmarked as favorites is available:
 
 - From your personal workspace in the **Favorites** collection
     ![]({{file name='Favorites-personal-workspace.png'}} ?w=600,border=true)
@@ -288,7 +289,6 @@ Favorites is a particular collection that enables you to bookmark documents. The
 
 Bookmarking documents in your favorites can be done like when you add documents to a collection (see previous sections) and selecting the Favorites collection, or using the icon ![]({{file name='pin.png' page='icons-index'}}) from the document itself.
 
-&nbsp;
 {{! /multiexcerpt}}
 {{! /multiexcerpt}}
 
@@ -299,7 +299,5 @@ Bookmarking documents in your favorites can be done like when you add documents 
 - [Collections developer documentation]({{page space='nxdoc' page='collections'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

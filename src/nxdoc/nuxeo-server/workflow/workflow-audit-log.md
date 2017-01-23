@@ -2,10 +2,10 @@
 title: Workflow Audit Log
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2020-01-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - workflow
     - audit
     - elasticsearch
@@ -151,13 +151,11 @@ history:
 
 The page details the information logged in the audit during a workflow completion.
 
-&nbsp;
-
 {{! /excerpt}}
 
 ## What Is Logged in the Audit
 
-Since 7.4, a new audit category called&nbsp;**Routing**&nbsp;has been added for the following workflow events:
+Since 7.4, a new audit category called **Routing** has been added for the following workflow events:
 
 *   `afterWorkflowStarted`
 *   `afterWorkflowFinish`
@@ -167,16 +165,16 @@ Since 7.4, a new audit category called&nbsp;**Routing**&nbsp;has been added for 
 *   `afterWorkflowTaskReassigned`
 *   `afterWorkflowTaskDelegated`
 
-For all these events, we log useful information regarding the workflow and/or node state in the&nbsp;[extended info]({{page page='audit#extendedinfo'}})&nbsp;of the audit entry. The table below summarizes which extended info is logged depending on the event.
+For all these events, we log useful information regarding the workflow and/or node state in the [extended info]({{page page='audit#extendedinfo'}}) of the audit entry. The table below summarizes which extended info is logged depending on the event.
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">modelName</th><th colspan="1">modelId</th><th colspan="1">workflowInitator</th><th colspan="1">taskActor</th><th colspan="1">workflowVariables</th><th colspan="1">nodeVariables</th><th colspan="1">action</th><th colspan="1">timeSinceWfStarted</th><th colspan="1">timeSinceTaskStarted</th></tr><tr><th colspan="1">afterWorkflow
-Finish</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td></tr><tr><th colspan="1">afterWorkflow
-Started &nbsp;</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td></tr><tr><th colspan="1">beforeWorkflow
-Canceled</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td></tr><tr><th colspan="1">afterWorkflow
-TaskCreated</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">&nbsp;</td></tr><tr><th colspan="1">afterWorkflow
-TaskEnded</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td></tr><tr><th colspan="1">afterWorkflow
-TaskReassigned</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">x</td></tr><tr><th colspan="1">afterWorkflow
-TaskDelegated</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">&nbsp;</td><td colspan="1">x</td><td colspan="1">x</td></tr></tbody></table></div>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1"></th><th colspan="1">modelName</th><th colspan="1">modelId</th><th colspan="1">workflowInitator</th><th colspan="1">taskActor</th><th colspan="1">workflowVariables</th><th colspan="1">nodeVariables</th><th colspan="1">action</th><th colspan="1">timeSinceWfStarted</th><th colspan="1">timeSinceTaskStarted</th></tr><tr><th colspan="1">afterWorkflow
+Finish</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1"></td><td colspan="1">x</td><td colspan="1"></td><td colspan="1"></td><td colspan="1">x</td><td colspan="1"></td></tr><tr><th colspan="1">afterWorkflow
+Started</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1"></td><td colspan="1">x</td><td colspan="1"></td><td colspan="1"></td><td colspan="1">x</td><td colspan="1"></td></tr><tr><th colspan="1">beforeWorkflow
+Canceled</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1"></td><td colspan="1">x</td><td colspan="1"></td><td colspan="1"></td><td colspan="1">x</td><td colspan="1"></td></tr><tr><th colspan="1">afterWorkflow
+TaskCreated</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1"></td><td colspan="1"></td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1"></td><td colspan="1">x</td><td colspan="1"></td></tr><tr><th colspan="1">afterWorkflow
+TaskEnded</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1"></td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td></tr><tr><th colspan="1">afterWorkflow
+TaskReassigned</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1"></td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1"></td><td colspan="1">x</td><td colspan="1">x</td></tr><tr><th colspan="1">afterWorkflow
+TaskDelegated</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1"></td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1"></td><td colspan="1">x</td><td colspan="1">x</td></tr></tbody></table></div>
 
 Where:
 
@@ -189,8 +187,6 @@ Where:
 *   `action` is the action (i.e. button) that has been clicked to complete a task.
 *   `timeSinceWfStarted` is the time in milliseconds elapsed since the workflow started.
 *   `timeSinceTaskStarted` is the time in milliseconds elapsed since the task started.
-
-&nbsp;
 
 {{#> callout type='info' }}
 

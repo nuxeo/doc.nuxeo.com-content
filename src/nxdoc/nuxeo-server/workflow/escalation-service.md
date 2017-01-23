@@ -2,10 +2,10 @@
 title: Escalation Service
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - workflow
     - workflow-component
     - excerpt
@@ -147,7 +147,7 @@ history:
 ---
 {{! excerpt}}
 
-The Nuxeo workflow engine comes with an escalation service useful for having some automated evolution in the workflow graph.&nbsp;
+The Nuxeo workflow engine comes with an escalation service useful for having some automated evolution in the workflow graph.
 
 {{! /excerpt}}
 
