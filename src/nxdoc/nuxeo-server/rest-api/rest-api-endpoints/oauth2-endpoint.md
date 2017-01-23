@@ -17,13 +17,15 @@ tree_item_index: 500
 The OAuth2 endpoint allows REST clients to retrieve information about OAuth2 providers. It is available since 8.4.
 
 For a given provider and user, the OAuth2 endpoint provides access to:
-- authentication data
-- a valid access token
+
+* Authentication data
+* A valid access token
 
 ## Retrieving Authentication Data
 
-Authentication data for a particular OAuth2 provider can be retrieved from `/nuxeo/api/v1/oauth2/provider/{providerId}`,
-including the following details:
+Authentication data for a particular OAuth2 provider can be retrieved from `/nuxeo/api/v1/oauth2/provider/{providerId}`, including the following details:
+
+**Query parameters:**
 
 <div class="table-scroll">
   <table class="hover">
@@ -34,7 +36,7 @@ including the following details:
       </tr>
       <tr>
         <td colspan="1">`serviceName`</td>
-        <td colspan="1">provider ID</td>
+        <td colspan="1">The provider ID</td>
       </tr>
       <tr>
         <td colspan="1">`isAvailable`</td>
@@ -42,15 +44,15 @@ including the following details:
       </tr>
       <tr>
         <td colspan="1">`clientId`</td>
-        <td colspan="1">client ID</td>
+        <td colspan="1">The client ID</td>
       </tr>
       <tr>
         <td colspan="1">`authorizationURL`</td>
-        <td colspan="1">URL used to display the consent screen</td>
+        <td colspan="1">The URL used to display the consent screen</td>
       </tr>
       <tr>
         <td colspan="1">`userId`</td>
-        <td colspan="1">user ID</td>
+        <td colspan="1">The user ID</td>
       </tr>
       <tr>
         <td colspan="1">`isAuthorized`</td>
@@ -64,7 +66,9 @@ including the following details:
 
 {{#> panel type='code' heading='Request'}}
 
-`GET http://NUXEO_SERVER/nuxeo/api/v1/oauth2/provider/googledrive`
+```
+GET https://NUXEO_SERVER/nuxeo/api/v1/oauth2/provider/googledrive
+```
 
 {{/panel}}
 
@@ -89,7 +93,9 @@ A valid access token for the current user can be retrieved via `/nuxeo/api/v1/oa
 
 {{#> panel type='code' heading='Request'}}
 
-`GET http://NUXEO_SERVER/nuxeo/api/v1/oauth2/provider/googledrive/token`
+```
+GET https://NUXEO_SERVER/nuxeo/api/v1/oauth2/provider/googledrive/token
+```
 
 {{/panel}}
 
@@ -101,11 +107,16 @@ A valid access token for the current user can be retrieved via `/nuxeo/api/v1/oa
 ```
 {{/panel}}
 
+
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
 - [REST API]({{page page='rest-api'}})
 - [Using OAuth2]({{page page='using-oauth2'}})
 
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>
