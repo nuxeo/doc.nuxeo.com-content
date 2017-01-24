@@ -2,7 +2,7 @@
 title: Simple Workflow Example
 review:
     comment: ''
-    date: '2017-01-20'
+    date: '2017-01-24'
     status: ok
 labels:
     - lts2016-ok
@@ -510,7 +510,7 @@ A document being accepted by the head of operations or the juridical services ha
 
 1.  Open the end node properties.
 2.  Check the existing chains / Launch a new chain creation.
-3.  In the **General** tab, the "Automation chains" section lets you make use of an existing automation chain, that you may even edit by using the corresponding link. Automation chains can be launched at different moments, depending of your needs. The input operation chain will be played when entering the node, the output chain when the node is being left. In this situation the chain needs to be played from the start, but is not existing yet though.
+3.  In the **General** tab, the "Automation chains" section lets you make use of an existing automation chain, that you may even edit by using the corresponding link. Automation chains can be launched at different moments, fdepending of your needs. The input operation chain will be played when entering the node, the output chain when the node is being left. In this situation the chain needs to be played from the start, but is not existing yet though.
 
     1.  Click on the **Create** link of the "Input operation chain".
         ![](https://www.lucidchart.com/publicSegments/view/54ef2b9f-f104-4cc9-8a63-34780a009cb4/image.png ?w=450,border=true)

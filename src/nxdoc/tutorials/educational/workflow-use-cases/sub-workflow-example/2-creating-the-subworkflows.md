@@ -2,7 +2,7 @@
 title: 2- Creating the Subworkflows
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-24'
     status: ok
 labels:
     - content-review-lts2016
@@ -166,7 +166,7 @@ We do not want anybody to launch this subworkflow directly, so we will set rules
     As this lifecycle state does not exist, this trick will ensure the workflow will never appear in the drop-down list.
 2.  Save your modifications.
     Look at the result below:
-  
+
     ![]({{file name='subtwolevels-variables-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=400,h=280,border=true)
 
 ### Graph Tab
