@@ -2,7 +2,7 @@
 title: Random tests
 review:
     comment: ''
-    date: ''
+    date: '2017-01-24'
     status: ok
 confluence:
     ajs-parent-page-id: '950316'
