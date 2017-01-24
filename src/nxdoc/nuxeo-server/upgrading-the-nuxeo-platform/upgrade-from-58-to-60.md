@@ -298,8 +298,8 @@ If your directories, wether for vocabularies, users or groups, were already usin
 ## 6\. If You Were Using the REST API in 5.8
 
 *   "Rest Contributors" have been renamed "Content Enrichers&rdquo;, and the extension points has been modified. See the&nbsp;[Content Enricher page]({{page space='nxdoc60' page='content-enricher'}}).
-*   The Nuxeo Platform now returns all the properties by default on the Rest API. if you want to limit the schemas you want to get client side, you should specify them explicitly using the&nbsp;`X-NXDocumentProperties`&nbsp;header.
-*   URL of the binary that is given in the &ldquo;data&rdquo; property of the JSON object has changed: see&nbsp;[https://jira.nuxeo.com/browse/NXP-13616](https://jira.nuxeo.com/browse/NXP-13616).
+*   The Nuxeo Platform now returns all the properties by default on the Rest API. if you want to limit the schemas you want to get client side, you should specify them explicitly using the `X-NXDocumentProperties` header.
+*   URL of the binary that is given in the &ldquo;data&rdquo; property of the JSON object has changed: see [https://jira.nuxeo.com/browse/NXP-13616](https://jira.nuxeo.com/browse/NXP-13616).
 
 ## Noteworthy
 
@@ -313,13 +313,13 @@ org.nuxeo.cmis.joins=true
 
 ### Multi-Tenant
 
-If you use multi-tenant, you should pay attention to&nbsp;[https://jira.nuxeo.com/browse/NXP-13724](https://jira.nuxeo.com/browse/NXP-13724)
+If you use multi-tenant, you should pay attention to [https://jira.nuxeo.com/browse/NXP-13724](https://jira.nuxeo.com/browse/NXP-13724)
 
 ### Virtual Navigation
 
 <div>
 
-The Multi-navigation view that came with Virtual Navigation (to add new tabs beside the tree) has been moved to CAP. See&nbsp;[https://jira.nuxeo.com/browse/NXP-15242](https://jira.nuxeo.com/browse/NXP-15242) for details.
+The Multi-navigation view that came with Virtual Navigation (to add new tabs beside the tree) has been moved to CAP. See [https://jira.nuxeo.com/browse/NXP-15242](https://jira.nuxeo.com/browse/NXP-15242) for details.
 
 ## Fast Track Versions Upgrade Notes
 
@@ -327,15 +327,15 @@ The Multi-navigation view that came with Virtual Navigation (to add new tabs bes
 
 The Fast Track per Fast Track upgrade notes path is still available below:
 
-*   <span class="external-link">5.8 -> 5.9.1: [JIRA](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.1%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)&nbsp;- [PDF]({{file name='UpgradeNotes-NuxeoPlatform5.9.1.pdf' space='admindoc60' page='upgrade-from-58-to-60'}})&nbsp;
+*   <span class="external-link">5.8 -> 5.9.1: [JIRA](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.1%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC) - [PDF]({{file name='UpgradeNotes-NuxeoPlatform5.9.1.pdf' space='admindoc60' page='upgrade-from-58-to-60'}})
     </span>
-*   <span class="external-link">5.9.1 -> 5.9.2: [JIRA](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.2%20%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)&nbsp;- [PDF]({{file name='UpgradeNotes-NuxeoPlatform5.9.2.pdf' space='admindoc60' page='upgrade-from-58-to-60'}})&nbsp;
+*   <span class="external-link">5.9.1 -> 5.9.2: [JIRA](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.2%20%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC) - [PDF]({{file name='UpgradeNotes-NuxeoPlatform5.9.2.pdf' space='admindoc60' page='upgrade-from-58-to-60'}})
     </span>
-*   <span class="external-link">5.9.2 -> 5.9.3: [JIRA](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.3%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)&nbsp;- [PDF]({{file name='UpgradeNotes-NuxeoPlatform5.9.3.pdf' space='admindoc60' page='upgrade-from-58-to-60'}})&nbsp;
+*   <span class="external-link">5.9.2 -> 5.9.3: [JIRA](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.3%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)&nbsp;- [PDF]({{file name='UpgradeNotes-NuxeoPlatform5.9.3.pdf' space='admindoc60' page='upgrade-from-58-to-60'}})
     </span>
-*   <span class="external-link">5.9.3 -> 5.9.4: [JIRA](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.4%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)&nbsp;- [PDF]({{file name='UpgradeNotes-NuxeoPlatform5.9.4.pdf' space='admindoc60' page='upgrade-from-58-to-60'}})&nbsp;
+*   <span class="external-link">5.9.3 -> 5.9.4: [JIRA](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.4%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)&nbsp;- [PDF]({{file name='UpgradeNotes-NuxeoPlatform5.9.4.pdf' space='admindoc60' page='upgrade-from-58-to-60'}})
     </span>
-*   5.9.4 -> 5.9.5: [JIRA](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.5%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)&nbsp;- [PDF]({{file name='UpgradeNotes-NuxeoPlatform5.9.5.pdf' space='admindoc60' page='upgrade-from-58-to-60'}})&nbsp;
+*   5.9.4 -> 5.9.5: [JIRA](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.5%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)&nbsp;- [PDF]({{file name='UpgradeNotes-NuxeoPlatform5.9.5.pdf' space='admindoc60' page='upgrade-from-58-to-60'}})
 *   5.9.5 -> 6.0: [JIRA](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%226.0%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 
 You may also want to have a look at the <span class="external-link">release notes</span>:

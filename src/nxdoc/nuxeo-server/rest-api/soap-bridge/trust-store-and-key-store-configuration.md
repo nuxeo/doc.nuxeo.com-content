@@ -89,7 +89,7 @@ Trust Store Path
 
 </td><td colspan="1">
 
-javax.net.ssl.trustStore
+`javax.net.ssl.trustStore`
 
 </td><td colspan="1">
 
@@ -101,7 +101,7 @@ Trust Store Type
 
 </td><td colspan="1">
 
-javax.net.ssl.keyStoreType
+`javax.net.ssl.keyStoreType`
 
 </td><td colspan="1">
 
@@ -113,7 +113,7 @@ Key Store Path
 
 </td><td colspan="1">
 
-javax.net.ssl.keyStore
+`javax.net.ssl.keyStore`
 
 </td><td colspan="1">
 
@@ -125,7 +125,7 @@ Key Store Password
 
 </td><td colspan="1">
 
-javax.net.ssl.keyStorePassword
+`javax.net.ssl.keyStorePassword`
 
 </td><td colspan="1">
 
@@ -150,14 +150,14 @@ So if you want to set them at start time, you can add the following parameter ei
     {{#> panel type='code' heading='MyClass.java'}}
 
     ```
-            System.setProperty(
-                    "javax.net.ssl.trustStore",
-                    "/the/path/to/your/trust/store.jks");
-            System.setProperty(
-                    "javax.net.ssl.keyStore",
-                    "/the/path/to/your/key/store.jks");
-            System.setProperty("javax.net.ssl.keyStorePassword", "myPassword");
-            ...etc...
+    System.setProperty(
+            "javax.net.ssl.trustStore",
+            "/the/path/to/your/trust/store.jks");
+    System.setProperty(
+            "javax.net.ssl.keyStore",
+            "/the/path/to/your/key/store.jks");
+    System.setProperty("javax.net.ssl.keyStorePassword", "myPassword");
+    ...etc...
 
     ```
 
@@ -170,13 +170,13 @@ So if you want to set them at start time, you can add the following parameter ei
 ## {{> anchor 'addingcertificatestodefaulttruststore'}}Adding Your Certificates into the Default Trust Store
 
 You will find the default trust store delivered with your JVM in:
-
-<pre>$JAVA_HOME/lib/security/cacerts</pre>
-
+```
+$JAVA_HOME/lib/security/cacerts
+```
 For instance in Mac OS, it is in:
-
-<pre>/System/Library/Frameworks/JavaVM.framework/Home/lib/security/cacerts
-</pre>
+```
+/System/Library/Frameworks/JavaVM.framework/Home/lib/security/cacerts
+```
 
 By default the password for this Trust Store is "changeit".
 
@@ -184,9 +184,9 @@ So to add your certificates to the default trust store:
 
 1.  Copy the default trust store.
 2.  Launch the following command line to add your certificate to the default trust store copy:
-
-    <pre>keytool -import -file /path/to/your/certificate.pem -alias NameYouWantToGiveOfYourCertificate -keystore /path/to/the/copy/of/the/default/truststore.jks -storepass changeit
-    </pre>
+    ```
+    keytool -import -file /path/to/your/certificate.pem -alias NameYouWantToGiveOfYourCertificate -keystore /path/to/the/copy/of/the/default/truststore.jks -storepass changeit
+    ```
 
 3.  Set the trust store copy as your either [statically](#statictruststore) or [dynamically](#dynamictruststore).
 4.  Restart your Nuxeo instance.

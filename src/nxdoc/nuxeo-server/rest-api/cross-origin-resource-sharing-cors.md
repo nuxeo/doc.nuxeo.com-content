@@ -2,10 +2,10 @@
 title: Cross-Origin Resource Sharing (CORS)
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-11'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - cors
     - rest-api
     - rest-api-component
@@ -21,7 +21,7 @@ confluence:
     shortlink: vIvZ
     shortlink_source: 'https://doc.nuxeo.com/x/vIvZ'
     source_link: /pages/viewpage.action?pageId=14257084
-tree_item_index: 1300
+tree_item_index: 800
 history:
     -
         author: Frantz Fischer
@@ -150,92 +150,103 @@ history:
         version: '1'
 
 ---
-If you do cross-domain requests from any JavaScript client to access WebEngine resources or [Automation APIs]({{page page='content-automation-concepts'}}), there's a chance that your browser forbids it. Since version 5.7.2, CORS allows you to communicate with Nuxeo from&nbsp;another domain using `XMLHttpRequests`.
+If you perform cross-domain requests from any JavaScript client to access WebEngine resources or [Automation APIs]({{page page='content-automation-concepts'}}), there's a chance that your browser will block it. CORS allows you to communicate with Nuxeo from another domain using `XMLHttpRequests`.
 
-Nuxeo uses a filter to handle those cases. It is based on&nbsp;[Vladimir Dzhuvinov's universal CORS filter](http://software.dzhuvinov.com/cors-filter.html), and allows you to configure on which URLs cross-origin&nbsp;headers are needed. You'll be able to configure each URL independently.
-
-{{! multiexcerpt name='CORS-contrib'}}
-
-Here is a the simplest contribution, to allow cross-domain request on the whole&nbsp;`foobar` site:
-
-{{#> panel type='code' heading='Simplest contribution'}}
-
-```html/xml
-<extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
-    <corsConfig name="foobar" supportedMethods ="GET,POST,HEAD,OPTIONS,DELETE,PUT">
-      <pattern>/nuxeo/.*</pattern>
-    </corsConfig>
-</extension>
-```
-
-{{/panel}}{{! /multiexcerpt}}
+Nuxeo uses a filter to handle those cases. It's based on [Vladimir Dzhuvinov's universal CORS filter](http://software.dzhuvinov.com/cors-filter.html), and allows you to configure on which URLs cross-origin headers are needed. You'll be able to configure each URL independently.
 
 ## Configuration
 
-Here is the list of all contribution attributes. There are all optional.
+Here is the list of all [optional] contribution attributes.
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Attribute name</th><th colspan="1">Description</th><th colspan="1">Default value</th><th colspan="1">Possible values ("|" separates possible values)</th></tr><tr><td colspan="1">`allowGenericHttpRequests`</td><td colspan="1">
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th>Attribute name</th>
+        <th>Description / Possible Values</th>
+        <th>Default value</th>
+      </tr>
+      <tr>
+        <td>`allowGenericHttpRequests`</td>
+        <td>
+          If false, only valid and accepted CORS requests are allowed (strict CORS filtering).<br />
+          `true` | `false`
+        </td>
+        <td>`true`</td>
+      </tr>
+      <tr>
+        <td>`allowOrigin`</td>
+        <td>
+          The whitespace-separated list of origins that the CORS filter must allow.<br />
+          `*` | `http://example.com http://example.com:8080`
+        </td>
+        <td>`*`</td>
+      </tr>
+      <tr>
+        <td>`allowSubdomains`</td>
+        <td>
+          If true, CORS filter will allow requests from any origin which is a sub-domain origin of the allowed origins.<br />
+          `true` | `false`
+        </td>
+        <td>`false`</td>
+      </tr>
+      <tr>
+        <td>`supportedMethods`</td>
+        <td>
+          The list of the supported HTTP methods.<br />
+          `*` | comma-separated list of HTTP methods
+        </td>
+        <td>`GET, POST, HEAD, OPTIONS`</td>
+      </tr>
+      <tr>
+        <td>`supportedHeaders`</td>
+        <td>
+          The names of the supported author request headers.<br />
+        `*` | comma-separated list of headers
+        </td>
+        <td>`*`</td>
+      </tr>
+      <tr>
+        <td>`exposedHeaders`</td>
+        <td>
+          The list of  response headers other than simple response headers that the browser should expose to the author of the cross-domain request through the `XMLHttpRequest.getResponseHeader()` method.<br />
+          `*` | comma-separated list of headers
+        </td>
+        <td>`*`</td>
+      </tr>
+      <tr>
+        <td>`supportsCredentials`</td>
+        <td>
+          Indicates whether user credentials, such as cookies, HTTP authentication or client-side certificates, are supported.<br />
+          `true` | `false`
+        </td>
+        <td>`true`</td>
+      </tr>
+      <tr>
+        <td>`maxAge`</td>
+        <td>
+          Indicates how long the results of a preflight request can be cached by the web browser, in seconds.<br />
+          `integer`
+        </td>
+        <td>`-1`</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-If false, only valid and accepted CORS requests that be allowed (strict CORS filtering).
+## Verifying That the Contribution Is Taken into Account
 
-</td><td colspan="1">`true`</td><td colspan="1">`true` | `false`</td></tr><tr><td colspan="1">`allowOrigin`</td><td colspan="1">
-
-The whitespace-separated list of origins that the CORS filter must allow.
-
-</td><td colspan="1">
-
-`*`
-
-</td><td colspan="1">`*&nbsp;| <span class="nolink"><span class="nolink">http://example.com</span>&nbsp;</span> <span class="nolink"><span class="nolink">http://example.com:8080</span></span>`</td></tr><tr><td colspan="1">`allowSubdomains`</td><td colspan="1">
-
-If true the CORS filter will allow requests from any origin which is a sub-domain origin of the allowed origins.
-
-</td><td colspan="1">`false`</td><td colspan="1">`true` | `false`</td></tr><tr><td colspan="1">`supportedMethods`</td><td colspan="1">The list of the supported HTTP methods.</td><td colspan="1">`<span style="color: rgb(61,61,61);">GET, POST, HEAD, OPTIONS</span>`</td><td colspan="1">"," separates list of HTTP methods</td></tr><tr><td colspan="1">`supportedHeaders`</td><td colspan="1">The names of the supported author request headers.</td><td colspan="1">`*`</td><td colspan="1">*&nbsp;| "," separates list of headers</td></tr><tr><td colspan="1">`exposedHeaders`</td><td colspan="1">
-
-The list of the response headers other than simple response headers that the browser should expose to the author of the cross-domain request through the `XMLHttpRequest.getResponseHeader()` method.
-
-</td><td colspan="1">`-`</td><td colspan="1">"," separates list of headers</td></tr><tr><td colspan="1">`supportsCredentials`</td><td colspan="1">
-
-Indicates whether user credentials, such as cookies, HTTP authentication or client-side certificates, are supported.
-
-</td><td colspan="1">`true`</td><td colspan="1">`true` | `false`</td></tr><tr><td colspan="1">`maxAge`</td><td colspan="1">
-
-Indicates how long the results of a preflight request can be cached by the web browser, in seconds.
-
-</td><td colspan="1">`-1`</td><td colspan="1">`integer`</td></tr></tbody></table></div>
-
-For instance, a `fooly` complete contribution could looks like:
-
-{{#> panel type='code' heading='Fooly contribution'}}
-
-```html/xml
-      <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
-        <corsConfig name="fooly" allowGenericHttpRequests="true"
-          allowOrigin="http://example.com http://example.com:8080"
-          allowSubdomains="true" supportedMethods="GET"
-          supportedHeaders="Content-Type, X-Requested-With"
-          exposedHeaders="X-Custom-1, X-Custom-2"
-          supportsCredentials="false" maxAge="3600">
-          <pattern>/fooly/site/.*</pattern>
-        </corsConfig>
-      </extension>
-```
-
-{{/panel}}
-
-## Making sure the contribution is taken into account
-
-To debug your CORS configuration, you might use `cURL`&nbsp;and look at the response. If you haven't blocked OPTIONS method, you should test with the preflight request for an expected POST request:
+To debug your CORS configuration,  use a `cURL` request and look at the response. If you haven't blocked the OPTIONS method, you should test with the preflight request for an expected POST request:
 
 {{#> panel type='code' heading='Simulate preflight request'}}
 
 ```bash
-curl --verbose -H "Origin: http://www.nuxeo.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://localhost:8080/nuxeo/site/foobar/upload
+curl --verbose -H "Origin: http://www.nuxeo.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload
 ```
 
 {{/panel}}
 
-With the default configuration, preflight's response must looks like:
+With the default configuration, preflight's response looks like this:
 
 {{#> panel type='code' heading='Default response'}}
 
@@ -251,4 +262,41 @@ With the default configuration, preflight's response must looks like:
 
 {{/panel}}
 
-With these "Access-Control-Allow-*" headers containing expected values.
+The `Access-Control-Allow-*` headers contain the expected values.
+
+## Examples
+
+{{! multiexcerpt name='CORS-contrib'}}
+
+Here is an example of the simplest contribution, allowing cross-domain requests on the whole `foobar` site:
+
+{{#> panel type='code' heading='Simplest contribution'}}
+
+```xml
+<extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
+    <corsConfig name="foobar" supportedMethods ="GET,POST,HEAD,OPTIONS,DELETE,PUT">
+      <pattern>/nuxeo/.*</pattern>
+    </corsConfig>
+</extension>
+```
+
+{{/panel}}{{! /multiexcerpt}}
+
+A `fooly` complete contribution would look like:
+
+{{#> panel type='code' heading='Fooly contribution'}}
+
+```xml
+<extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
+    <corsConfig name="fooly" allowGenericHttpRequests="true"
+      allowOrigin="http://example.com http://example.com:8080"
+      allowSubdomains="true" supportedMethods="GET"
+      supportedHeaders="Content-Type, X-Requested-With"
+      exposedHeaders="X-Custom-1, X-Custom-2"
+      supportsCredentials="false" maxAge="3600">
+      <pattern>/fooly/site/.*</pattern>
+    </corsConfig>
+</extension>
+```
+
+{{/panel}}

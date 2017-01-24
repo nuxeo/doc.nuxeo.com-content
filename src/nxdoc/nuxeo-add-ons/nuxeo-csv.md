@@ -360,7 +360,7 @@ Note that the event raised by this CSV import is a **creation event**, not an im
 - [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
 - [Nuxeo Bulk Document Importer]({{page page='nuxeo-bulk-document-importer'}})
 - [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
-- [How to Upload a File in Nuxeo Platform Using REST API Batch Processing Endpoint]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}})
+- [HOWTO: Upload a File in Nuxeo Using REST API]({{page page='howto-upload-file-nuxeo-using-rest-api'}})
 
 {{/panel}}
 </div>

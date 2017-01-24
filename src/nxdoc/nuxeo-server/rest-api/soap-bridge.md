@@ -20,7 +20,7 @@ confluence:
     shortlink: GIAO
     shortlink_source: 'https://doc.nuxeo.com/x/GIAO'
     source_link: /display/NXDOC/SOAP+Bridge
-tree_item_index: 1500
+tree_item_index: 2000
 history:
     -
         author: Arnaud Kervern
@@ -166,8 +166,6 @@ history:
 ---
 ## JAX-WS Bindings
 
-&nbsp;
-
 {{! excerpt}}
 
 The Nuxeo Platform includes a JAX-WS compliant implementation to expose SOAP based web services. Apache CXF is used.
@@ -182,11 +180,9 @@ As explained earlier in these pages, JAX-WS is not the preferred way to expose w
 
 If you want to access the SOAP web service:
 
-*   To list all the deployed endpoints:
-
-    *   `http://server:port/nuxeo/webservices/nuxeoremoting` to list all the deployed endpoints,
-*   To access NuxeoRemoting WSDL: `http://server:port/nuxeo/webservices/nuxeoremoting?wsdl,`
-*   To access NuxeoAudit WSDL: `http://server:port/nuxeo/webservices/nuxeoaudit?wsdl`.
+*   To list all the deployed endpoints: `http://NUXEO_SERVER/nuxeo/webservices/nuxeoremoting`
+*   To access NuxeoRemoting WSDL: `http://NUXEO_SERVER/nuxeo/webservices/nuxeoremoting?wsdl`
+*   To access NuxeoAudit WSDL: `http://NUXEO_SERVER/nuxeo/webservices/nuxeoaudit?wsdl`
 
 The point of SOAP web services is not to have a 1 to 1 mapping with the Java services interfaces. The goal is to provide a "coarse grained" high level API. So it's easy to build new SOAP based web services on top of Nuxeo:
 

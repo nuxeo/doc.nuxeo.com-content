@@ -1,8 +1,8 @@
 ---
-title: Query Endpoint
+title: Query Endpoint (Deprecated)
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-04'
     status: ok
 details:
     howto:
@@ -33,7 +33,7 @@ confluence:
     shortlink: qAc5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/qAc5AQ'
     source_link: /display/NXDOC/Query+Endpoint
-tree_item_index: 700
+tree_item_index: 800
 history:
     -
         author: Gabriel Barata
@@ -242,13 +242,12 @@ history:
         version: '1'
 
 ---
-&nbsp;
 
 The query endpoint allows REST clients to query the Nuxeo repository.
 
-{{#> callout type='info' }}
+{{#> callout type='warning' }}
 
-Since 8.3 this endpoint is deprecated in favor of the [Search Endpoint]({{page page='search-endpoint'}}).
+Since 8.3 this endpoint has been deprecated in favor of the [Search Resource Endpoint]({{page page='search-endpoints'}}).
 
 {{/callout}}
 
@@ -270,50 +269,71 @@ Read the following documentation to use the Query endpoint.
 
 ## Endpoint
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Path</th><th colspan="1">Endpoint</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Path</th>
+<th colspan="1">Endpoint</th>
+</tr>
+<tr>
+<td colspan="1">GET
 
-**GET
-**
+`/api/v1/query`
 
-`**/api/v1/query**`
+`/api/v1/query/NXQL`
 
-`**/api/v1/query/NXQL**`
+</td>
+<td colspan="1">Endpoint to perform queries on the repository in NXQL.</td>
+</tr>
+<tr>
+<td colspan="1">
 
-</td><td colspan="1">
+**GET**
 
-Endpoint to perform queries on the repository in NXQL.
+`/api/v1/query/{providerName}`
 
-</td></tr><tr><td colspan="1">
-
-**GET
-**
-
-`**/api/v1/query/{providerName}**`
-
-</td><td colspan="1">Endpoint to perform a query based on page provider registered on the application.</td></tr></tbody></table></div>
+</td>
+<td colspan="1">Endpoint to perform a query based on page provider registered on the application.</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ## Properties
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Key</th><th colspan="1">Value</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Key</th>
+<th colspan="1">Value</th>
+</tr>
+<tr>
+<td colspan="1">
 
-**query
-**
+**query**
 
 `string`
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 The query to perform.
 
 By default: `SELECT * FROM Document`
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 **pageSize**
 
 `integer`
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 The number of entries per page.
 
@@ -321,50 +341,65 @@ By default: 0 (0 means no pagination.)
 
 The maximum number of entries per page is 1000 by default. See [nuxeo.pageprovider.default-<span class="il">max</span>-<span class="il">page</span>-<span class="il">size</span> ]({{page page='configuration-parameters-index-nuxeoconf'}}) to customize it.
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 **currentPageIndex**
 
 `integer`
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 The selected page index.
 
 By default: 0
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 **maxResults**
 
 `integer`
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 The maximum entries.
 
 By default: 200
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
-**sortBy
-**
+**sortBy**
 
 `string`
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Property(ies) sorting.
 
 Example: `sortBy="dc:title,dc:description"`
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 **sortOrder**
 
 `string`
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Sort order.
 
@@ -372,26 +407,33 @@ Values: ASC or DESC
 
 Example: `sortOrder="DESC,ASC"`
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
-**queryParams
-**
+**queryParams**
 
 `string`
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Ordered parameters.
 
-Example: for a query pattern like&nbsp; `Select * From Document where dc:title = ?` , the queryParams value should be "my title", for instance.
+Example: for a query pattern like `Select * From Document where dc:title = ?`, the queryParams value should be "my title", for instance.
 
 Note this is only interesting when using a page provider, defined server side.
 
-</td></tr><tr><td colspan="1">**parameter1, parameter2...**
+</td>
+</tr>
+<tr>
+<td colspan="1">**parameter1, parameter2...**
 
 `string`
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Named parameters.
 
@@ -401,23 +443,27 @@ Parameter names should be strictly different from property names (and other quer
 
 Note this is only interesting when using a page provider, defined server side.
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ## Examples
 
 ### Query
 
-&nbsp;
-
 {{#> panel type='code' heading='Examples'}}
 
 ```
-http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document
+GET http://NUXEO_SERVER/nuxeo/api/v1/query?query=select * from Document
 
-http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document&pageSize=2&currentPageIndex=1
+GET http://NUXEO_SERVER/nuxeo/api/v1/query?query=select * from Document&pageSize=2&currentPageIndex=1
 ```
 
-{{/panel}}{{#> panel type='code' heading='Response'}}
+{{/panel}}
+
+{{#> panel type='code' heading='Response'}}
 
 ```
 {
@@ -486,7 +532,7 @@ http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document&pageS
 
 ### Query - Elasticsearch
 
-&nbsp;In order to perform NXQL queries on Elasticsearch repository through the&nbsp;`query` endpoint, the following configuration must be added in `$NUXEO_HOME/bin/nuxeo.conf`:
+In order to perform NXQL queries on Elasticsearch repository through the `query` endpoint, the following configuration must be added in `$NUXEO_HOME/bin/nuxeo.conf`:
 
 ```
 elasticsearch.override.pageproviders=default_search,REST_API_SEARCH_ADAPTER
@@ -516,7 +562,7 @@ Here are different use cases when defining page providers and making it possible
 {{#> panel type='code' heading='Example'}}
 
 ```
-http://localhost:8080/nuxeo/site/api/v1/query/latest_docs
+GET http://NUXEO_SERVER/nuxeo/api/v1/query/latest_docs
 
 ```
 
@@ -539,7 +585,7 @@ http://localhost:8080/nuxeo/site/api/v1/query/latest_docs
 {{#> panel type='code' heading='Example'}}
 
 ```
-http://localhost:8080/nuxeo/site/api/v1/query/tree_children?queryParams=47dd6d8d-d8d0-4a09-9e3e-e30fc8877df1
+GET http://NUXEO_SERVER/nuxeo/api/v1/query/tree_children?queryParams=47dd6d8d-d8d0-4a09-9e3e-e30fc8877df1
 
 ```
 
@@ -560,7 +606,7 @@ http://localhost:8080/nuxeo/site/api/v1/query/tree_children?queryParams=47dd6d8d
 {{#> panel type='code' heading='Example'}}
 
 ```
-http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_and_desc?title=mytitle&desc=mydesc
+GET http://NUXEO_SERVER/nuxeo/api/v1/query/docs_by_title_and_desc?title=mytitle&desc=mydesc
 
 ```
 
@@ -580,11 +626,11 @@ http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_and_desc?title=mytit
 </coreQueryPageProvider>
 ```
 
-{{#> panel type='code' heading='Example'}}
+{{#> panel type='code' heading='Examples'}}
 
 ```
-http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_if_any?title=mytitle
-http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_if_any
+GET http://NUXEO_SERVER/nuxeo/api/v1/query/docs_by_title_if_any?title=mytitle
+GET http://NUXEO_SERVER/nuxeo/api/v1/query/docs_by_title_if_any
 ```
 
 {{/panel}}
@@ -616,10 +662,12 @@ Assuming a document type NamedParamDoc, with associated schema with prefix `np`,
 {{#> panel type='code' heading='Example'}}
 
 ```
-http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_complex?np%3Atitle=mytitle&np%3AisCheckedIn=true
+GET http://NUXEO_SERVER/nuxeo/api/v1/query/docs_by_title_complex?np%3Atitle=mytitle&np%3AisCheckedIn=true
 ```
 
-{{/panel}}{{#> panel type='code' heading='Response'}}
+{{/panel}}
+
+{{#> panel type='code' heading='Response'}}
 
 ```
 {
@@ -705,11 +753,13 @@ http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_complex?np%3Atitle=m
 {{/panel}}{{#> panel type='code' heading='Examples'}}
 
 ```
-http://localhost:8080/api/v1/query/aggregates_1
+GET http://NUXEO_SERVER/nuxeo/api/v1/query/aggregates_1
 
 ```
 
-{{/panel}}{{#> panel type='code' heading='Response'}}
+{{/panel}}
+
+{{#> panel type='code' heading='Response'}}
 
 ```
 {
@@ -863,7 +913,11 @@ http://localhost:8080/api/v1/query/aggregates_1
 }
 ```
 
-{{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+{{/panel}}
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
 - [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
 - [REST API Entity Types]({{page page='rest-api-entity-types'}})
@@ -871,6 +925,7 @@ http://localhost:8080/api/v1/query/aggregates_1
 - [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 {{/panel}}
 </div>
+
 <div class="column medium-6">
 
 &nbsp;

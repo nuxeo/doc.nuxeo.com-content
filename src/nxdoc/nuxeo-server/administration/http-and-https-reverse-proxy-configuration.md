@@ -544,8 +544,8 @@ ignore_invalid_headers off
 
 Affected [headers]({{page page='special-http-headers'}}) in the Nuxeo Platform are:
 
-*   X-NXenrichers.document
-*   X-NXfetch.document
+*   enrichers.document
+*   fetch.document
 
 Otherwise, features like the Permissions tab will not work.
 

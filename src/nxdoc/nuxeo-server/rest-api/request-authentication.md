@@ -1,11 +1,15 @@
 ---
-title: Authenticating the Requests
+title: Request Authentication
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-01-11'
     status: ok
 labels:
     - lts2016-ok
+    - authentication
+version_override:
+    'LTS 2015': 710/nxdoc/authenticating-the-requests/
+    '6.0': 60/nxdoc/authenticating-the-requests/
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API
@@ -17,7 +21,7 @@ confluence:
     shortlink: 3YcZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/3YcZAQ'
     source_link: /display/NXDOC/Authenticating+the+Requests
-tree_item_index: 100
+tree_item_index: 700
 history:
     -
         author: Solen Guitter
@@ -66,6 +70,6 @@ history:
         version: '1'
 
 ---
-Authenticating the request will be dependent of the configured authentication chain. Default authentication mode for API calls is Basic authentication.
+Request authentication depends on the configured authentication chain. Default authentication mode for API calls is Basic Authentication.
 
-See [Authentication and User Management]({{page page='authentication-and-user-management'}}) for a comprehensive view of authentication possibilities with Nuxeo Platform. Also, you should pay attention that by default, the authentication chain used for API calls is [contributed via a specific endpoint](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--specificChains) (and even [another one](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.automation.server.auth.config--specificChains) for command calls specifically).
+See [Authentication and User Management]({{page page='authentication-and-user-management'}}) for a comprehensive view on authentication possibilities with Nuxeo Platform. You should note that by default, the authentication chain used for API calls is [contributed via a specific endpoint](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--specificChains) (and [one for command calls specifically](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.automation.server.auth.config--specificChains)).

@@ -389,7 +389,7 @@ file = FileUtils.getResourceFileFromContext("blob.json");
 batchUpload.upload(file.getName(), file.length(), "json", batchUpload.getBatchId(), "2", file);
 List<BatchFile> batchFiles = batchUpload.fetchBatchFiles();
 ```
-Batch upload can be executed in a [chunk mode]({{page page='blob-upload-for-batch-processing'}}#uploading-a-file-by-chunks).
+Batch upload can be executed in a [chunk mode]({{page page='batch-upload-endpoint'}}#uploading-a-file-in-chunks).
 
 ```java
 // Upload file chunks
@@ -644,7 +644,7 @@ The main exception manager for the `nuxeo-java-client` is `org.nuxeo.client.inte
 
 - An info message
 
-- The remote exception with stack trace (depending on the [exception mode]({{page page='web-exceptions-errors'}}) activated on Nuxeo server side
+- The remote exception with stack trace (depending on the [exception mode]({{page page='error-handling'}}) activated on Nuxeo server side
 
 
 ## Testing
@@ -766,4 +766,4 @@ Depending on client:
 
 **Error & Logging**
 
-The `NuxeoClientException` within `nuxeo-java-client` is consuming the default and the extended rest exception response by the server. Here the [documentation]({{page page='web-exceptions-errors'}})
+The `NuxeoClientException` within `nuxeo-java-client` is consuming the default and the extended rest exception response by the server. Here the [documentation]({{page page='error-handling'}})

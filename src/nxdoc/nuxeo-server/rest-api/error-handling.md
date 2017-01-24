@@ -1,15 +1,18 @@
 ---
-title: Web Exceptions - Errors
+title: Error Handling
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-10'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - exception
     - rest-api
     - rest-api-component
 toc: true
+version_override:
+    'LTS 2015': 710/nxdoc/web-exceptions-errors
+    '6.0': 60/nxdoc/web-exceptions-errors
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API
@@ -21,7 +24,7 @@ confluence:
     shortlink: JQI5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/JQI5AQ'
     source_link: /display/NXDOC/Web+Exceptions+-+Errors
-tree_item_index: 1400
+tree_item_index: 500
 history:
     -
         author: Solen Guitter
@@ -95,7 +98,7 @@ history:
         version: '1'
 
 ---
-The Nuxeo API communicates error exceptions through standard HTTP status codes paired with exception details.
+The Nuxeo API communicates error messages through standard HTTP status codes paired with exception details.
 
 You can find more details about standard HTTP status codes on:
 
@@ -112,43 +115,47 @@ Simple mode is activated by default. The extended mode can be configured through
 
 ## Properties
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Key</th><th colspan="1">Value</th></tr><tr><td colspan="1">
-
-`entity-type`
-
-string
-
-</td><td colspan="1">for exceptions is 'exception'</td></tr><tr><td colspan="1">
-
-`code`
-
-string
-
-</td><td colspan="1">The technical exception identity (java class)</td></tr><tr><td colspan="1">
-
-`status`
-
-integer
-
-</td><td colspan="1">The HTTP status of the error response</td></tr><tr><td colspan="1">
-
-`message`
-
-string
-
-</td><td colspan="1">A human readable message about the error</td></tr><tr><td colspan="1">
-
-`stacktrace` (extended version)
-
-string
-
-</td><td colspan="1">All stack trace in one simple string</td></tr><tr><td colspan="1">
-
-`exception` (extended version)
-
-json object
-
-</td><td colspan="1">All stack trace wrapped into JSON Object</td></tr></tbody></table></div>
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th>Key</th>
+        <th>Type</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>`entity-type`</td>
+        <td>string</td>
+        <td>'exception' (in the case of exceptions)</td>
+      </tr>
+      <tr>
+        <td>`code`</td>
+        <td>string</td>
+        <td>The technical exception identity (Java class)</td>
+      </tr>
+      <tr>
+        <td>`status`</td>
+        <td>integer</td>
+        <td>The HTTP status of the error response</td>
+      </tr>
+      <tr>
+        <td>`message`</td>
+        <td>string</td>
+        <td>A human-readable message about the error</td>
+      </tr>
+      <tr>
+        <td>`stacktrace`</td>
+        <td>string</td>
+        <td>The entire stack trace in one string</td>
+      </tr>
+      <tr>
+        <td>`exception`</td>
+        <td>JSON object</td>
+        <td>The entire stack trace wrapped into a JSON Object</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Exception Example
 
@@ -158,7 +165,7 @@ Here is an example of an exception when fetching a missing document.
 
 {{#> panel type='code' heading='JSON Response'}}
 
-```
+```json
 {
   "entity-type": "exception",
   "code": "org.nuxeo.ecm.webengine.model.exceptions.WebResourceNotFoundException",
@@ -171,13 +178,13 @@ Here is an example of an exception when fetching a missing document.
 
 ### Extended Mode
 
-```
+```json
 {
   "entity-type": "exception",
   "code": "org.nuxeo.ecm.webengine.model.exceptions.WebResourceNotFoundException",
   "status": 404,
   "message": "Failed to get document /wrongID",
-  "stacktrace": "org.nuxeo.ecm.webengine.WebException: Failed to get document /wrongID\n\tat org.nuxeo.ecm.webengine.WebException.newException(WebException.java[.........]
+  "stacktrace": "org.nuxeo.ecm.webengine.WebException: Failed to get document /wrongID\n\tat org.nuxeo.ecm.webengine.WebException.newException(WebException.java[.........]",
   "exception": {
     "className": "org.nuxeo.ecm.webengine.model.exceptions.WebResourceNotFoundException",
     "cause": {
@@ -187,12 +194,15 @@ Here is an example of an exception when fetching a missing document.
       "localizedMessage": "No such document: No such document: /wrongID",
       "stackTrace": [
       [.................................]
+      ]
+    }
+  }
 }
 ```
 
 {{#> callout type='note' }}
 
-The Automation Client requires to get the full stack trace by default. So compatibility has been kept and all automation client calls will activate the extended mode.
+The Automation Client requires the full stack trace by default. So compatibility has been kept and all automation client calls will activate the extended mode.
 
 All calls with accepted media type `application/json+nxentity` will activate stack trace display.
 
@@ -200,7 +210,7 @@ All calls with accepted media type `application/json+nxentity` will activate sta
 
 ### Mode Activation API
 
-For testing purpose, you have the possibility to activate the extended mode by adding this code snippet:
+For testing purposes, you can activate the extended mode by adding this code snippet:
 
 ```
 JsonFactoryManager jsonFactoryManager = Framework.getLocalService(JsonFactoryManager.class);
@@ -211,22 +221,22 @@ if (!jsonFactoryManager.isStackDisplay()) {
 
 To toggle the display mode (simple or extended) during runtime execution, you can:
 
-*   Use the Automation `JsonStack.ToggleDisplay` Operation (Administrator role only).
+*   Use the Automation `JsonStack.ToggleDisplay` Operation (Administrator role only)
     Example:
 
     {{#> panel type='code' heading='cURL Call'}}
 
-    ```
-    curl -H 'Content-Type:application/json+nxrequest' -X POST -d '{"params":{},"context":{}}' -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/automation/JsonStack.ToggleDisplay
+    ```bash
+    curl -H 'Content-Type:application/json+nxrequest' -X POST -d '{"params":{},"context":{}}' -u Administrator:Administrator http://NUXEO_SERVER:8080/nuxeo/api/v1/automation/JsonStack.ToggleDisplay
     ```
 
     {{/panel}}
-*   use the following endpoint URL into your browser (Administrator role only).
+*   Use the following endpoint URL in your browser (Administrator role only)
 
     {{#> panel type='code' heading='Type into your browser address'}}
 
-    ```
-    http://localhost:8080/nuxeo/site/automation/doc/toggleStackDisplay
+    ```bash
+    http://NUXEO_SERVER/nuxeo/site/automation/doc/toggleStackDisplay
     ```
 
     {{/panel}}

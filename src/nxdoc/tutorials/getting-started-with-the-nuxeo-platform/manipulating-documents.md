@@ -339,7 +339,7 @@ Documents can be fetched using their id or path.
     nuxeo.repository()
         // These headers allow us to retrieve the associated contract owner in the same call
         .header('depth', 'max')
-        .header('X-NXfetch.document', 'properties')
+        .header('fetch.document', 'properties')
         // We'll also retrieve the document hierarchy
         .enricher('document', 'breadcrumb')
         .fetch('/default-domain/workspaces/North America/awesome-tech/skynet-ai-maintenance')
@@ -363,13 +363,13 @@ Documents can be fetched using their id or path.
 **Notes**
 
 *   We obtained detailed information about the contract owner because we added some [headers]({{page page='special-http-headers'}}) to retrieve all the document's relations.
-*   The document hierarchy is provided in context parameters because we used a [content enricher]({{page page='content-enricher'}}). That's only one out of many.
+*   The document hierarchy is provided in context parameters because we used a [content enricher]({{page page='content-enrichers'}}). That's only one out of many.
 *   The contract inherited the company name and other customer related properties from its portfolio (in the `bccustomer` schema) thanks to some business logic brought by the addon Getting started with the Nuxeo Platform.
 
 {{#> callout type='info' heading='Learn more'}}
 
 *   [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
-*   [Content Enricher]({{page page='content-enricher'}})
+*   [Content Enricher]({{page page='content-enrichers'}})
 
 {{/callout}}
 

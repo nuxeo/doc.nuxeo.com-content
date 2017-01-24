@@ -102,7 +102,7 @@ For instance a listing could only require the `dublincore` schema of the documen
 
 A document can contain several schemas with a dozen of metadata so the JSON payload in response could be unnecessarily too big. Building a listing of several documents can make the client side navigation slower: we need to filter schemas.
 
-[Special headers](https://doc.nuxeo.com/nxdoc/special-http-headers) are reserved for this purpose and can be used easily with the Nuxeo resource elements: `nuxeo-resource` and `nuxeo-operation`.
+[Special header]({{page version='' space='nxdoc' page='special-http-headers'}}) is reserved for this purpose and can be used easily with the Nuxeo resource elements: `nuxeo-resource` and `nuxeo-operation`.
 
 Example:
 
@@ -348,7 +348,7 @@ If your network environment (proxies, firewalls) doesn't allow queries inside UR
 See this GET Method URL example:
 
 ```
-https://NUXEO_SERVER/nuxeo/api/v1/query?currentPageIndex=0&pageSize=10&query=SELECT%20%2A%20FROM%20Document%20where%20ecm%3AprimaryType%20in%20%28%27UserProfile%27%29%20%20
+http://NUXEO_SERVER/nuxeo/api/v1/query?currentPageIndex=0&pageSize=10&query=SELECT%20%2A%20FROM%20Document%20where%20ecm%3AprimaryType%20in%20%28%27UserProfile%27%29%20%20
 ```
 
 **We recommend that you**:

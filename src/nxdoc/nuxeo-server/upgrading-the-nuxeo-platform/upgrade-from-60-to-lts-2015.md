@@ -531,7 +531,7 @@ Example of properties which have been migrated to ConfigurationService:
 
 ### New Batch Upload API
 
-The [batch upload API]({{page page='blob-upload-for-batch-processing'}}) has changed to be exposed as a REST resource endpoint. The old API using `/site/automation/batch/upload` is deprecated but kept for backward compatibility.
+The [batch upload API]({{page page='batch-upload-endpoint'}}) has changed to be exposed as a REST resource endpoint. The old API using `/site/automation/batch/upload` is deprecated but kept for backward compatibility.
 
 {{#> callout type='note' }}
 

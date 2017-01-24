@@ -178,7 +178,7 @@ Information about the REST API usage can be found in various places. The most im
 5.  Once started, access it. URL can be seen in the manager, in this example it is [`https://my-instance-name.nuxeo.io`](https://my-instance-name.nuxeo.io) . Make sure to use yours.
     ![]({{file name='instance-url.png' page='learning-rest-api'}} ?w=300,h=200,border=true)
 6.  Log in. Default credentials are Administrator / Administrator.
-7.  Install the [Nuxeo API Playground]({{page page='use-nuxeo-api-playground-to-discover-the-api'}}) Nuxeo package from the **Update Center** > **Marketplace Packages** tab.
+7.  Install the [Nuxeo API Playground]({{page page='howto-nuxeo-api-playground'}}) Nuxeo package from the **Update Center** > **Marketplace Packages** tab.
     Note that the instance has to be restarted for the installation to complete. The restart can be achieved as following:
     ![]({{file name='restart-instance.png' page='learning-rest-api'}} ?w=500,h=508,border=true)
 8.  [Deploy your Nuxeo Studio configuration](https://university.nuxeo.io/nuxeo/university/#%21/course/getting-started-nuxeo-studio/deploying-nuxeo-studio-configuration).
@@ -474,8 +474,8 @@ nuxeo.repository().fetch("document id or path")...
 
 Similarly to what we saw previously, headers can be set to fine-tune your request. Various headers are available, depending on the situation. A few examples when fetching a document:
 
-1.  `X-NXproperties:schema1, schema2`: Retrieves only specific schemas
-2.  `X-NXproperties:*`: Retrieves all schemas
+1.  `properties:schema1, schema2`: Retrieves only specific schemas
+2.  `properties:*`: Retrieves all schemas
 
 More headers will be seen when they will be useful to us.
 
@@ -559,9 +559,9 @@ The `depth` header allow you to control the aggregation depth:
 On top of the `depth` header, you can use:
 
 *   A header:
-    `X-NXfetch.document` with the property ids storing the references, for each additional object to retrieve, e.g.: `"X-NXfetch.document":"mySchema:aProperty, myOtherSchema:yetAnotherProperty"`
+    `fetch.document` with the property ids storing the references, for each additional object to retrieve, e.g.: `"fetch.document":"mySchema:aProperty, myOtherSchema:yetAnotherProperty"`
 
-    Or `X-NXfetch.document:properties` instead to retrieve all objects at the same time.
+    Or `fetch.document:properties` instead to retrieve all objects at the same time.
 *   The corresponding JS client methods:
 
     ```javascript
@@ -628,7 +628,7 @@ Using resolvers is a combination of:
 
 _Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" on [Nuxeo University](https://university.nuxeo.io)_
 
-Adding enrichers when fetching a document is done by setting the `X-NXenrichers.document` header, `document` being here the entity type that will be enriched. If you were calling a user, you would use a the `X-NXenrichers.user` header instead, and so on. As for resolvers, what matters here is the entity type of the first object you have been calling. Entity types are listed in the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation.
+Adding enrichers when fetching a document is done by setting the `enrichers.document` header, `document` being here the entity type that will be enriched. If you were calling a user, you would use a the `X-NXenrichers.user` header instead, and so on. As for resolvers, what matters here is the entity type of the first object you have been calling. Entity types are listed in the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation.
 
 Enrichers are provided in the response into the `contextParameters` object.
 
@@ -720,7 +720,7 @@ nuxeo.request('/path/default-domain/@acl')
 
 **Your goals**
 
-Use the appropriate adapter to retrieve your contract's audit log. You can use the [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}}) documentation to check which adapter to call.
+Use the appropriate adapter to retrieve your contract's audit log. You can use the [Web Adapters for the REST API]({{page page='rest-api-web-adapters'}}) documentation to check which adapter to call.
 
 **What you need to do**
 
@@ -730,7 +730,7 @@ Complete the following exercise.
 
 **To go further**
 
-[Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}}) documentation.
+[Web Adapters for the REST API]({{page page='rest-api-web-adapters'}}) documentation.
 
 ### Creation
 
