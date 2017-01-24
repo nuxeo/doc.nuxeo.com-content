@@ -286,7 +286,7 @@ The SuperSpace facet is required for children documents to get default notificat
 
 </td></tr><tr><td colspan="1">WorkspaceRoot</td><td colspan="1">WorkspaceRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">SuperSpace</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>{{#> callout type='tip' }}
 
-You can also browse the [contributions to the Type extension](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype) for more document types or leave a comment on this page.
+You can also browse the [contributions to the Type extension](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype) for more document types.
 
 {{/callout}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
