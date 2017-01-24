@@ -320,7 +320,7 @@ A workflow must start with a node for which the "start node" property is checked
 To start the workflow graph:
 
 1.  Click on the **Graph** tab.
-2. You should already have the Start and Stop nodes added by default. If not,  drag and drop them on the graph.
+2. By default, Studio adds the Start and Stop nodes automatically. If not,  drag and drop the Start node on the graph.
     ![](https://www.lucidchart.com/publicSegments/view/54ede03e-bcb8-4715-a9f3-1f500a008a99/image.png ?w=250,border=true)
 
 ### Defining the Technical Validation Step
@@ -371,6 +371,7 @@ The form lets the user edit some of the workflow's variables (either at workflow
 1.  Go back to the &ldquo;Technical validation&rdquo; node.
 2. Click on the **Variables** tab.
    Add the hoo_comment to the right collumn.
+   ![]({{file name='Simple_Workflow_006_1.png'}} ?w=600,border=true)
 3.  Click on the **Form** tab.
     A form like the one to edit a document's layout is displayed.
 4.  Add a field for the comment of the user who validates: Drag the &ldquo;hoo_comment&rdquo; field from the workflow variables schema and drop it on the layout.
@@ -385,7 +386,9 @@ The buttons that are shown on the form are configured on the **Resolution Action
 1.  Click on **Add task button**.
 2.  Fill in the button id and label.
 3.  Let the box "Generate the condition for the transition" checked.
-    ![](https://www.lucidchart.com/publicSegments/view/54eef82b-1478-42e8-b424-216c0a00c10c/image.png ?w=450,h=316,border=true)
+ ![]({{file name='Simple_Workflow_008_1.png'}} ?w=450,h=316, border=true)
+
+ [comment]:#![](https://www.lucidchart.com/publicSegments/view/54eef82b-1478-42e8-b424-216c0a00c10c/image.png ?w=450,h=316,border=true)
 
 #### Check the Transitions
 
@@ -426,6 +429,7 @@ Drag the &ldquo;Approve&rdquo; node from the node template library and drop it o
 
 #### Configuring the form
 1. Click on the **Variables** tab and add the "juridical_comment" and "hoo_comment" variables to the right column.
+  ![]({{file name='Simple_Workflow_015_1.png'}} ?w=600,border=true)
 2.  Click on the **Form** tab.
 3.  Add the &ldquo;juridical_comment&rdquo; field the same way you did with the &ldquo;Technical validation&rdquo; node.
     ![](https://www.lucidchart.com/publicSegments/view/54ef017a-78e4-4804-9d18-7a9b0a00c10c/image.png ?w=450,border=true)
@@ -463,6 +467,8 @@ The &ldquo;Approve&rdquo; node will once again be the most appropriate. Pick it 
 
 #### Configuring the form
 1. Click on the **Variables** tab and add the "sales_comment" and "hoo_comment" variables to the right column.
+![]({{file name='Simple_Workflow_020_1.png'}} ?w=450,border=true,thumbnail=true)
+
 1.  Click on the **Form** tab.
 2.  Add the &ldquo;sales_comment&rdquo; field as well as the &ldquo;hoo_comment&rdquo; field, the latter still in read only mode.
     ![](https://www.lucidchart.com/publicSegments/view/54ef1cee-7b44-4fd9-81b1-04a30a00c10c/image.png ?w=450,border=true)
@@ -470,8 +476,8 @@ The &ldquo;Approve&rdquo; node will once again be the most appropriate. Pick it 
     Calling the task an approval task could lead to confusion for the salesman that wants to submit an updated proposal. Thus, we will rename it.
     1.  Click on the **Resolution Actions** tab.
     2.  Click on the **Add task button** link.
-    3.  We will use &ldquo;submit_updated_proposal&rdquo; as the task button's id and &ldquo;Submit updated proposal&rdquo; as label.
-        ![](https://www.lucidchart.com/publicSegments/view/54ef1de1-3ec4-4911-86be-4e990a004b79/image.png ?w=450,h=313,border=true)
+    3.  We will use &ldquo;submit_updated_proposal&rdquo; as the task button's id and &ldquo;Submit updated proposal&rdquo; as label.    
+    ![]({{file name='Simple_Workflow_022_1.png'}} ?w=450,border=true,thumbnail=true)
     4.  Check the line corresponding to the &ldquo;approve&rdquo; task button and click on the **Delete** link to remove it.
         ![](https://www.lucidchart.com/publicSegments/view/54ef1f66-c4cc-4052-84c9-790a0a00c10b/image.png ?w=450,border=true)
 
@@ -514,7 +520,7 @@ A document being accepted by the head of operations or the juridical services ha
         ![](https://www.lucidchart.com/publicSegments/view/54ef3114-5310-4bfc-9b94-27630a00c10c/image.png ?w=450,border=true)
 
     4.  Open it and set its value to "approve".
-        ![](https://www.lucidchart.com/publicSegments/view/54ef3122-bde4-45b8-a4be-0eb10a009cb5/image.png ?w=450,border=true)
+        ![]({{file name='Simple_Workflow_028_1.png'}} ?w=450,border=true)
 
     5.  Save the chain and go back to your workflow graph.
 
