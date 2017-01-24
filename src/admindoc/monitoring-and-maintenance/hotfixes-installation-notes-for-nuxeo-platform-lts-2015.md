@@ -20,7 +20,6 @@ confluence:
         /display/ADMINDOC710/Hotfixes+Installation+Notes+for+Nuxeo+Platform+LTS+2015
 tree_item_index: 1300
 version_override:
-    'FT': '/nxdoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015'
     '6.0': 60/admindoc/hotfixes-installation-notes-for-nuxeo-platform-60
 history:
     -
@@ -353,6 +352,27 @@ Two new default parameters has been added to `nuxeo.defaults`:
 ```
 nuxeo.vcs.optimizations.acl.enabled=true
 nuxeo.vcs.optimizations.path.enabled=true
+```
+
+### Preview on MacOS
+
+[NXP-17001](https://jira.nuxeo.com/browse/NXP-17001) has introduced a regression when Nuxeo Platform is run under MacOS. This is tracked by [NXP-18883](https://jira.nuxeo.com/browse/NXP-18883).
+
+Until this bug is fixed, you will need to use the following contribution as a workaround:
+
+```
+<require>org.nuxeo.ecm.platform.commandline.executor.service.testContrib.magic2</require>
+<extension target="org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent"
+    point="command">
+
+    <command name="pdftohtml" enabled="true">
+      <commandLine>pdftohtml</commandLine>
+      <parameterString> -c -enc UTF-8 -noframes #{inFilePath} #{outDirPath}/index.html</parameterString>
+      <winParameterString> -c -enc UTF-8 -noframes #{inFilePath} #{outDirPath}\index.html</winParameterString>
+      <installationDirective>You need to install pdftohtml</installationDirective>
+    </command>
+
+  </extension>
 ```
 
 {{! /multiexcerpt}}
