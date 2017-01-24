@@ -11,19 +11,7 @@ labels:
     - data-visualization-component
     - university
 toc: true
-confluence:
-    ajs-parent-page-id: '26316892'
-    ajs-parent-page-title: Web UI
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Data+Visualization
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Data+Visualization'
-    page_id: '26316889'
-    shortlink: WZCRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/WZCRAQ'
-    source_link: /display/NXDOC/Data+Visualization
 tree_item_index: 300
-hidden: true
 history:
     -
         author: Bertrand Chauvin
@@ -132,19 +120,12 @@ history:
         version: '1'
 
 ---
-{{> wistia_video id='z3169a27fz'}}
-
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.com)
 
 Data&nbsp;Visualization&nbsp;support in Nuxeo leverages Web Components and the Polymer framework in order to allow users to easily build their own custom dashboards, thus helping them understand how data is distributed in the repository as well as monitoring workflow activity.
 
 A set of custom elements are available for bootstrapping custom graphical dashboards.&nbsp;These elements are built using our Nuxeo Elements, in particular they rely on `nuxeo-connection` to configure the Nuxeo instance to use.
 
 ## Technical Overview
-
-{{> wistia_video id='bixgszbq9h'}}
-
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.com)
 
 ### Elasticsearch Passthrough
 
@@ -166,15 +147,10 @@ Non visual elements are the standard way to expose remote services while stickin
 
 Like what has been done for our core Nuxeo Elements focus was on a clear separation between data and the graphical elements to allow users to use existing UI elements for building their own custom dashboards.
 
-**GitHub project**:&nbsp;[https://github.com/nuxeo/nuxeo-dataviz-elements](https://github.com/nuxeo/nuxeo-dataviz-elements)
+You will find more information about the Nuxeo Dataviz Elements [on this page]({{page page='nuxeo-elements'}}#nuxeo-dataviz-elements).
 
-**Online reference documentation**:&nbsp;[http://nuxeo.github.io/nuxeo-dataviz-elements](http://nuxeo.github.io/nuxeo-dataviz-elements)
 
 ### Workflow Data
-
-{{> wistia_video id='xxqmh6slv6'}}
-
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.com)
 
 The Workflow Data element (`nuxeo-workflow-data`) allows querying Nuxeo's&nbsp;[Workflow Audit Log]({{page page='workflow-audit-log'}})&nbsp;which,&nbsp;since Nuxeo 7.3, is stored by default as an Elasticsearch index.
 
@@ -238,107 +214,6 @@ By building a custom element to help users query the Workflow Audit Log, we not 
 Data returned from Elasticsearch is also processed for simplification and consists of either a single scalar value, for non aggregate queries, or a nested list of `{key: key, value: value}` entries where value can itself be a similar list or single scalar value.
 
 **Note:** Before using this data for producing tables or charts it usually must undergo another transformation process which is specific to the charting and table elements used. For sample transformation helpers we recommend looking at existing dashboards which showcase integration with third-party libraries.
-
-## Building Custom Dashboards
-
-{{#> callout type='note' }}
-
-Before building your own custom dashboards please make sure you fulfill the requirements in the [Nuxeo Elements Quickstart]({{page page='nuxeo-elements-quickstart'}})&nbsp;page.
-
-{{/callout}}
-
-The quickest way to start building a dashboard is to use the Yeoman generator to scaffold our custom elements.
-
-1.  Generate a `nuxeo-sample` dashboard element:
-
-    ```bash
-    mkdir -p nuxeo-sample-dashboard && cd $_
-    yo polymer:seed nuxeo-sample-dashboard
-    ```
-
-    **Note:** It is a good practice to build dashboards as custom elements since you can then use them anywhere you see fit. But you can also build dashboards as full applications in which case the Yeoman polymer application generator should be used instead.
-
-2.  Once the&nbsp;`nuxeo-sample` element is generated you can install further client side dependencies. In this case you need the Nuxeo Data Visualization Elements and a charting library to produce charts for your dashboard:
-
-    ```bash
-    bower install --save nuxeo/nuxeo-dataviz-elements
-    bower install --save GoogleWebComponents/google-chart
-    ```
-
-3.  Yeoman scaffolded a sample custom element so you now need to replace this sample content with your own. In this example build a simple chart with the total number of Serial Review workflows started by each user:
-
-    {{#> panel type='code' heading='nuxeo-dataviz-sample.html'}}
-
-    ```xml
-    <dom-module id="nuxeo-dataviz-sample">
-      <template>
-
-        <!-- Retrieve our data and store it in 'initiators' -->
-        <nuxeo-workflow-data workflow="SerialDocumentReview"
-                            event="afterWorkflowStarted"
-                            grouped-by="workflowInitiator"
-                            start-date="[[startDate]]" end-date="[[endDate]]"
-                            data="\{{initiators}}">
-       </nuxeo-workflow-data>
-
-       <!-- Display a Pie Chart with out data -->
-       <google-chart type="pie"
-                     cols='[{"label": "User", "type": "string"},{"label": "Value", "type": "number"}]'
-                     rows="[[_rows(initiators)]]">
-       </google-chart>
-      </template>
-    </dom-module>
-    <script>
-      Polymer({
-        is: 'nuxeo-dataviz-sample',
-
-        // Expose startDate and endDate as properties
-        properties: {
-          startDate: String,
-          endDate: String
-        },
-
-        // Transform our data for usage with Google Charts
-        _rows: function(data) {
-          return data.map(function(e) { return [e.key, e.value]; });
-        }
-      });
-    </script>
-    ```
-
-    {{/panel}}
-
-    Each Polymer element usually includes a usage demo which you can edit to see and showcase your custom element in action:
-
-    {{#> panel type='code' heading='demo/index.html'}}
-
-    ```xml
-    <html>
-      <head>
-        ...
-        <link rel="import" href="../../nuxeo-elements/nuxeo-connection.html">
-        <link rel="import" href="../nuxeo-dataviz-sample.html">
-      </head>
-      <body unresolved>
-        <!-- Define a connection to our Nuxeo server -->
-        <nuxeo-connection url="http://localhost:8080/nuxeo" username="Administrator" password="Administrator"></nuxeo-connection>
-        <!-- Include our element and specify a start and end date -->
-        <nuxeo-dataviz-sample start-date="2015-09-01" end-date="2015-10-30"></nuxeo-dataviz-sample>
-      </body>
-    </html>
-    ```
-
-    {{/panel}}
-4.  To checkout your element we recommend using [Polyserve](https://github.com/PolymerLabs/polyserve), a&nbsp;simple web server for using bower components locally, which you can install with:
-
-    ```bash
-    npm install -g polyserve
-    polyserve -p 3000
-    ```
-
-    Once Polyserve is up and running we can finally see our custom element's demo at:&nbsp;[http://localhost:3000/components/nuxeo-dataviz-sample/demo/](http://localhost:3000/components/nuxeo-dataviz-sample/demo/)
-
-    ![]({{file name='dataviz_custom_element_demo.png'}} ?w=326,h=293,border=true)
 
 ## Sample Dashboards
 

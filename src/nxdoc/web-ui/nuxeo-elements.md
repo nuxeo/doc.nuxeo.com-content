@@ -79,7 +79,7 @@ These are:
   ```
   $ bower install --save nuxeo/nuxeo-ui-elements
   ```
-- [Nuxeo Dataviz Elements](https://elements.nuxeo.com/browse?package=nuxeo-dataviz-elements) ([github](https://github.com/nuxeo/nuxeo-dataviz-elements)):
+- {{> anchor 'nuxeo-dataviz-elements'}}[Nuxeo Dataviz Elements](https://elements.nuxeo.com/browse?package=nuxeo-dataviz-elements) ([github](https://github.com/nuxeo/nuxeo-dataviz-elements)):
   a library of data visualization elements targeted at building rich dashboards. It can be installed with bower:
   ```
   $ bower install --save nuxeo/nuxeo-dataviz-elements
