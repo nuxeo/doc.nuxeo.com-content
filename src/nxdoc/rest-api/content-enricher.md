@@ -12,6 +12,8 @@ labels:
     - link-update
     - university
 toc: true
+version_override:
+    'FT': 'nxdoc/content-enrichers'
 confluence:
     ajs-parent-page-id: '28475677'
     ajs-parent-page-title: REST API
@@ -297,8 +299,7 @@ http://localhost:8080/nuxeo/site/api/v1/path/default-domain/workspaces?enrichers
 
 ### Thumbnail
 
-When specifying&nbsp;`X-NXenrichers.document: thumbnail`, the JSON payload of the document REST calls response that contains the related attached file thumbnail of the document:
-&nbsp;
+When specifying `X-NXenrichers.document: thumbnail`, the JSON payload of the document REST calls response that contains the related attached file thumbnail of the document:
 
 {{#> panel type='code' heading='Call Example'}}
 
@@ -354,11 +355,11 @@ http://localhost:8080/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 
 {{/panel}}
 
-More details about the thumbnail enricher:&nbsp;[http://community.nuxeo.com/api/nuxeo/release-7.10/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/release-7.10/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html)
+More details about the thumbnail enricher: [http://community.nuxeo.com/api/nuxeo/release-7.10/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/release-7.10/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html)
 
 ### ACLs
 
-When specifying&nbsp;`X-NXenrichers.document: acls`, the JSON payload of the document REST calls response that contains all related ACLs of the document:
+When specifying `X-NXenrichers.document: acls`, the JSON payload of the document REST calls response that contains all related ACLs of the document:
 
 {{#> panel type='code' heading='Call Example'}}
 
@@ -449,8 +450,7 @@ More details about the acls enricher: [http://community.nuxeo.com/api/nuxeo/rele
 
 ### Preview
 
-When specifying&nbsp;`X-NXenrichers.document: preview`, the JSON payload of the document REST calls response that contains the related attached file preview of the document:
-&nbsp;
+When specifying `X-NXenrichers.document: preview`, the JSON payload of the document REST calls response that contains the related attached file preview of the document:
 
 {{#> panel type='code' heading='Call Example'}}
 
@@ -768,6 +768,8 @@ public class LogEntryEnricher extends AbstractJsonEnricher<LogEntry> {
 
 Don't forget to set the proper header to use this enricher:
 
-<pre><span style="color: rgb(106,135,89);">X-NXenrichers.logEntry = sfLogEntry</span></pre>
+```
+X-NXenrichers.logEntry = sfLogEntry
+```
 
 {{/callout}}

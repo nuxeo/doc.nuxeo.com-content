@@ -165,7 +165,7 @@ Available since 7.2 to replace `X-NXDocumentProperties`.
 
 {{/callout}}
 
-This header can be used whenever a Document will be returned by the server. The header forces the server to fill up the returned document with data from schemas that matches the `X-NXproperties` filter. So, `X-NXproperties` is a filter of schemas. If you don't use the header, all <span style="color: rgb(51,51,51);">properties of the document are returned.</span>
+This header can be used whenever a Document will be returned by the server. The header forces the server to fill up the returned document with data from schemas that matches the `X-NXproperties` filter. So, `X-NXproperties` is a filter of schemas. If you don't use the header, all properties of the document are returned.
 
 To have more properties in the returned document, you can specify a list of document schema names:
 
@@ -173,7 +173,7 @@ To have more properties in the returned document, you can specify a list of docu
 X-NXproperties: dublincore, file
 ```
 
-or to have all the document content, you can use the&nbsp;`*` character as the filter value or you can simply skip the header definition:
+or to have all the document content, you can use the `*` character as the filter value or you can simply skip the header definition:
 
 ```
 X-NXproperties: *
@@ -191,11 +191,11 @@ X-NXRepository: myCustomRepositoryName
 
 {{#> callout type='info' }}
 
-Available since 7.2 to replace&nbsp;`X-NXContext-Category`.
+Available since 7.2 to replace `X-NXContext-Category`.
 
 {{/callout}}
 
-It is sometimes useful to optimize the number of requests you send to the server. For that reason we provide a mechanism for requesting more information on the answer, simply by specifying the context you want in the request header. For instance, when specifying&nbsp;`X-NXenrichers.document = "thumbnail"`, the JSON payload of the document REST calls response contains the related attached file thumbnail of the document. You can add several content enrichers into the header separated by comma. [(Content Enrichers listing)]({{page page='content-enricher'}})
+It is sometimes useful to optimize the number of requests you send to the server. For that reason we provide a mechanism for requesting more information on the answer, simply by specifying the context you want in the request header. For instance, when specifying `X-NXenrichers.document = "thumbnail"`, the JSON payload of the document REST calls response contains the related attached file thumbnail of the document. You can add several content enrichers into the header separated by comma. [(Content Enrichers listing)]({{page page='content-enricher'}})
 
 ```
 X-NXenrichers.document: "thumbnail"
@@ -211,7 +211,7 @@ Accepted values are MAJOR, MINOR or NONE.
 X-Versioning-Option: MAJOR
 ```
 
-## &nbsp;X-NXfetch.document
+##  X-NXfetch.document
 
 This header can be used to load additional parts of an object whose entity-type is `document`.
 
@@ -241,7 +241,7 @@ This header can be used to control the aggregation depth.
 Accepted values are:
 
 *   `root`: Loads only the root element, does not load any enricher or fetched properties.
-*   `children`:&nbsp; Loads the root document and one level of enricher or fetched properties.
+*   `children`: Loads the root document and one level of enricher or fetched properties.
 *   `max`: Load the root, one level of enricher and fetched properties. And for each loaded children, loads one level of enricher or fetched properties.
 
 ```
@@ -256,19 +256,14 @@ More details about the control of the depth here: [Aggregating Marshallers and A
 
 * * *
 
-&nbsp;
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [JSON Marshalling]({{page page='json-marshalling'}})
-*   [Ngnix bug]({{page space='ADMINDOC' page='HTTP and+HTTPS+Reverse-Proxy+Configuration#HTTPandHTTPSReverse-ProxyConfiguration-Ngnixissue'}})
+- [JSON Marshalling]({{page page='json-marshalling'}})
+- [Ngnix bug]({{page space='ADMINDOC' page='HTTP and+HTTPS+Reverse-Proxy+Configuration#HTTPandHTTPSReverse-ProxyConfiguration-Ngnixissue'}})
 
 {{/panel}}</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
-&nbsp;
-
-&nbsp;
 
 </div></div>

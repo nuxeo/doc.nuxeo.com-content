@@ -405,7 +405,7 @@ history:
         version: '1'
 
 ---
-The Nuxeo Platform provides an&nbsp;extensible and&nbsp;customizable marshalling service:&nbsp;[MarshallerRegistry](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewService/org.nuxeo.ecm.core.io.registry.MarshallerRegistry) This service allows you to use built-ins but also to register your own marshallers. The marshalling service&nbsp;facilitates the configuration of the rendered JSON, the aggregation of a marshaller from another and the possibility to extend or override existing marshallers.
+The Nuxeo Platform provides an extensible and customizable marshalling service: [MarshallerRegistry](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewService/org.nuxeo.ecm.core.io.registry.MarshallerRegistry) This service allows you to use built-ins but also to register your own marshallers. The marshalling service facilitates the configuration of the rendered JSON, the aggregation of a marshaller from another and the possibility to extend or override existing marshallers.
 
 The marshalling service is set up for the REST API v1 and the Automation server. Therefore, it is possible to operate all rendering parameters for the corresponding provided services.
 
@@ -413,7 +413,7 @@ The JSON generation and parsing is based on [Jackson](https://github.com/FasterX
 
 ## Creating Your Own Marshaller
 
-The marshalling service allows you to create JSON-to-Java and Java-to-JSON marshallers.&nbsp;To create a marshaller, you have to write a Java class that manages the marshalling and registers it using a contribution.
+The marshalling service allows you to create JSON-to-Java and Java-to-JSON marshallers. To create a marshaller, you have to write a Java class that manages the marshalling and registers it using a contribution.
 
 Let's suppose we'd like to create marshallers for the following Java object:
 
@@ -433,7 +433,7 @@ Let's suppose we'd like to create marshallers for the following Java object:
 
 ### Creating a Java-to-JSON Marshaller
 
-A Java-to-JSON marshaller must implement the&nbsp;`org.nuxeo.ecm.core.io.registry.Writer<EntityType>` class. It must have a&nbsp;`@Setup` annotation to register it as a marshaller and a `@Supports` annotation to specify the supported mimetype (JSON in our example).&nbsp;The `Product` class is a POJO, we can either use Jackson POJO marshalling capabilities or create a custom JSON marshalling.
+A Java-to-JSON marshaller must implement the `org.nuxeo.ecm.core.io.registry.Writer<EntityType>` class. It must have a `@Setup` annotation to register it as a marshaller and a `@Supports` annotation to specify the supported mimetype (JSON in our example). The `Product` class is a POJO, we can either use Jackson POJO marshalling capabilities or create a custom JSON marshalling.
 
 {{#> panel type='code' heading='Jackson POJO'}}
 
@@ -446,7 +446,9 @@ public class ProductJsonWriter extends AbstractJsonWriter<Product> {
 }
 ```
 
-{{/panel}}{{#> panel type='code' heading='Custom JSON'}}
+{{/panel}}
+
+{{#> panel type='code' heading='Custom JSON'}}
 
 ```java
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
@@ -463,13 +465,13 @@ public class ProductJsonWriter extends AbstractJsonWriter<Product> {
 {{/panel}}
 
 *   The `@Setup` annotation is here to define our object as a marshaller.
-*   The `mode = Instanciations.SINGLETON`&nbsp;parameter defines that the marshaller must be instanciated once.
-*   The `priority = Priorities.REFERENCE`&nbsp;parameter defines it as the default one for the Product class.
-*   The&nbsp;`AbstractJsonWriter` super-class is the Java-to-JSON Marshaller's base class (it has the `@Supports("application/json")` annotation).&nbsp;It helps to write the marshaller and to reuse the existing JSON marshalling.
+*   The `mode = Instanciations.SINGLETON` parameter defines that the marshaller must be instanciated once.
+*   The `priority = Priorities.REFERENCE` parameter defines it as the default one for the Product class.
+*   The `AbstractJsonWriter` super-class is the Java-to-JSON Marshaller's base class (it has the `@Supports("application/json")` annotation). It helps to write the marshaller and to reuse the existing JSON marshalling.
 
 ### Creating a JSON-to-Java Marshaller
 
-A JSON-to-Java marshaller must implement the&nbsp;`org.nuxeo.ecm.core.io.registry.Reader<EntityType>` class. It must have a&nbsp;`@Setup` annotation to register it as a marshaller and a `@Supports` annotation to specify the supported mimetype (JSON in our example).&nbsp;The Product class is a POJO, we can either use Jackson POJO marshalling capabilities or create a custom JSON marshalling.
+A JSON-to-Java marshaller must implement the `org.nuxeo.ecm.core.io.registry.Reader<EntityType>` class. It must have a `@Setup` annotation to register it as a marshaller and a `@Supports` annotation to specify the supported mimetype (JSON in our example). The Product class is a POJO, we can either use Jackson POJO marshalling capabilities or create a custom JSON marshalling.
 
 {{#> panel type='code' heading='Jackson POJO'}}
 
@@ -482,7 +484,9 @@ public class ProductJsonReader extends AbstractJsonReader<Product> {
 }
 ```
 
-{{/panel}}{{#> panel type='code' heading='Custom JSON'}}
+{{/panel}}
+
+{{#> panel type='code' heading='Custom JSON'}}
 
 ```java
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
@@ -497,8 +501,6 @@ public class ProductJsonReader extends AbstractJsonReader<Product> {
 ```
 
 {{/panel}}
-
-&nbsp;
 
 *   The `@Setup` annotation is here to define our object as a marshaller.
 *   The `mode = Instanciations.SINGLETON` parameter defines that the marshaller must be instanciated once.
@@ -522,7 +524,9 @@ public class ProductListJsonWriter extends DefaultListJsonWriter<Product> {
 }
 ```
 
-{{/panel}}{{#> panel type='code' heading='JSON-to-Java'}}
+{{/panel}}
+
+{{#> panel type='code' heading='JSON-to-Java'}}
 
 ```
 @Setup(mode = Instantiations.SINGLETON, priority = Priorities.REFERENCE)
@@ -757,279 +761,431 @@ private static final String CTX_KEY = "_STORED_GENERATED_RENDERING_CONTEXT";
 
 #### Setting/Getting the Nuxeo Base URL
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">Retrieved from the HTTP call</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Web context usage</th>
+<td colspan="1">Retrieved from the HTTP call</td>
+</tr>
+<tr>
+<th colspan="1">Server side usage</th>
+<td colspan="1">
 
-```
+<pre>
 ctx = CtxBuilder.base("http://server/nuxeo").get();
-```
+</pre>
 
-</td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
+</td>
+</tr>
+<tr>
+<th colspan="1">Use from marshallers</th>
+<td colspan="1">
 
-```
+<pre>
 String url = ctx.getBaseUrl();
-```
+</pre>
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### Setting/Getting the Current Locale
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">Retrieved from the end-user's browser</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Web context usage</th>
+<td colspan="1">Retrieved from the end-user's browser</td>
+</tr>
+<tr>
+<th colspan="1">Server side usage</th>
+<td colspan="1">
 
-```
+<pre>
 ctx = CtxBuilder.locale(Locale.FRENCH).get();
-```
+</pre>
 
-</td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
+</td>
+</tr>
+<tr>
+<th colspan="1">Use from marshallers</th>
+<td colspan="1">
 
-```
+<pre>
 Locale locale = ctx.getLocale();
-```
+</pre>
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### Delivering/Using a CoreSession to/in Marshallers
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">Retrieved from the WebContext, or from a document or created from a `nxrepository` parameter or created from a X-NXrepository header.</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Web context usage</th>
+<td colspan="1">Retrieved from the WebContext, or from a document or created from a `nxrepository` parameter or created from a X-NXrepository header.</td>
+</tr>
+<tr>
+<th colspan="1">Server side usage</th>
+<td colspan="1">
 
-```
+<pre>
 CoreSession session = ...;
 ctx = CtxBuilder.session(session).get();
-```
+</pre>
 
-</td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
+</td>
+</tr>
+<tr>
+<th colspan="1">Use from marshallers</th>
+<td colspan="1">
 
 The try-resource statement ensure the session would be closed if it's necessary
 
-```
+<pre>
 try (SessionWrapper wrapper = ctx.getSession(document)) {CoreSession session = wrapper.getSession();
     }
-```
+</pre>
 
-```
+<pre>
 try (SessionWrapper wrapper = ctx.getSession(null)) {CoreSession session = wrapper.getSession();
     }
-```
+</pre>
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### Setting/Getting Any Parameter
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Web context usage</th>
+<td colspan="1">
 
 URL:
-
-*   `.../some-url?paramName=paramValue`
-
+<ul>
+<li>`.../some-url?paramName=paramValue`</li>
+</ul>
 HTTP Header:
+<ul>
+<li>`paramName:paramValue`</li>
+</ul>
 
-*   `paramName:paramValue`
+</td>
+</tr>
+<tr>
+<th colspan="1">Server side usage</th>
+<td colspan="1">
 
-</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
-
-```
+<pre>
 ctx = CtxBuilder.param("paramName", "paramValue").get();
-```
+</pre>
 
-```
+<pre>
 ctx.setParameterValues("paramName", "paramValue");
-```
+</pre>
 
-</td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
+</td>
+</tr>
+<tr>
+<th colspan="1">Use from marshallers</th>
+<td colspan="1">
 
-```
+<pre>
 Object o = ctx.getParameter("paramName");
-```
+</pre>
 
-```
+<pre>
 List<Object> list = ctx.getParameters("paramName");
-```
+</pre>
 
-```
+<pre>
 boolean b = ctx.getBooleanParameter("paramName");
-```
+</pre>
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### Loading Some Document Properties
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Web context usage</th>
+<td colspan="1">
 
 URL:
-
-*   `.../some-url?properties=*`
-*   `.../some-url?properties=dublincore,file`
-*   `.../some-url?properties=dublincore&properties=file`
+<ul>
+<li>`.../some-url?properties=*`</li>
+<li>`.../some-url?properties=dublincore,file`</li>
+<li>`.../some-url?properties=dublincore&properties=file`</li>
+</ul>
 
 HTTP Header:
+<ul>
+<li>`X-NXproperties:*`</li>
+<li>`X-NXproperties:dublincore,file`</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th colspan="1">Server side usage</th>
+<td colspan="1">
 
-*   `X-NXproperties:*`
-*   `X-NXproperties:dublincore,file`
-
-</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
-
-```
+<pre>
 ctx = CtxBuilder.properties("*").get();
-```
+</pre>
 
-```
+<pre>
 ctx = CtxBuilder.properties("dublincore", "file").get();
-```
+</pre>
 
-```
+<pre>
 ctx.setParameterValues("properties", "dublincore", "file");
-```
+</pre>
 
-</td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
+</td>
+</tr>
+<tr>
+<th colspan="1">Use from marshallers</th>
+<td colspan="1">
 
-```
+<pre>
 Set<String> properties = ctx.getProperties();
-```
+</pre>
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### Loading Additional Parts of an Object Whose entity-type Is 'objectType'
 
 The corresponding behavior depends on the marshaller.
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Web context usage</th>
+<td colspan="1">
 
 URL:
-
-*   `.../some-url?fetch.objectType=part1,part2`
-*   `.../some-url?fetch.objectType=part1&fetch.objectType=part2`
-
+<ul>
+<li>`.../some-url?fetch.objectType=part1,part2`</li>
+<li>`.../some-url?fetch.objectType=part1&fetch.objectType=part2`</li>
+</ul>
 HTTP Header:
+<ul>
+<li>`X-NXfetch.objectType:part1,part2`</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th colspan="1">Server side usage</th>
+<td colspan="1">**Only for documents**
 
-*   `X-NXfetch.objectType:part1,part2`
-
-</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">{{#> panel type='code' heading='Only for documents'}}
-
-```
+<pre>
 ctx = CtxBuilder.fetchInDoc("part1", "part2").get();
-```
+</pre>
 
-{{/panel}}
-
-```
+<pre>
 ctx = CtxBuilder.fetch("objectType", "part1", "part2").get();
-```
+</pre>
 
-```
+<pre>
 ctx.setParameterValues("fetch.objectType", "part1", "part2");
-```
+</pre>
 
-</td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
+</td>
+</tr>
+<tr>
+<th colspan="1">Use from marshallers</th>
+<td colspan="1">
 
-```
+<pre>
 Set<String> toLoad = ctx.getFetched("objectType");
-```
+</pre>
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### Enabling Enricher for an objectType
 
 The enricher will contribute to the object marshalling. The object marshaller must extend `ExtensibleEntityJsonWriter`. The given enricher name must match an existing enricher for this object type.
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Web context usage</th>
+<td colspan="1">
 
 URL:
-
-*   `.../some-url?enrichers.objectType=children,acl`
-*   `.../some-url?enrichers.objectType=children&enrichers.objectType=acl`
-
+<ul>
+<li>`.../some-url?enrichers.objectType=children,acl`</li>
+<li>`.../some-url?enrichers.objectType=children&enrichers.objectType=acl`</li>
+</ul>
 HTTP Header:
+<ul>
+<li>`X-NXenrichers.objectType:children,acl`</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th colspan="1">Server side usage</th>
+<td colspan="1">**Only for documents**
 
-*   `X-NXenrichers.objectType:children,acl`
-
-</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">{{#> panel type='code' heading='Only for documents'}}
-
-```
+<pre>
 ctx = CtxBuilder.enrichDoc("children", "acl").get();
-```
+</pre>
 
-{{/panel}}
-
-```
+<pre>
 ctx = CtxBuilder.enrich("objectType", "children", "acl").get();
-```
+</pre>
 
-```
+<pre>
 ctx.setParameterValues("enrichers.objectType", "children", "acl");
-```
+</pre>
 
-</td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
+</td>
+</tr>
+<tr>
+<th colspan="1">Use from marshallers</th>
+<td colspan="1">
 
-```
+<pre>
 Set<String> enricherToActivate = ctx.getEnrichers("objectType");
-```
+</pre>
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### Translating Some Part of an Object Which May Contains Some l10n Key
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Web context usage</th>
+<td colspan="1">
 
 URL:
-
-*   `.../some-url?translate.objectType=elementToTranslate`
-
+<ul>
+<li>`.../some-url?translate.objectType=elementToTranslate`</li>
+</ul>
 HTTP Header:
+<ul>
+<li>`X-NXtranslate.objectType:elementToTranslate`</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th colspan="1">Server side usage</th>
+<td colspan="1">
 
-*   `X-NXtranslate.objectType:elementToTranslate`
-
-</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
-
-```
+<pre>
 ctx = CtxBuilder.translate("objectType", "elementToTranslate").get();
-```
+</pre>
 
-```
+<pre>
 ctx.setParameterValues("translate.objectType", "elementToTranslate");
-```
+</pre>
 
-</td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
+</td>
+</tr>
+<tr>
+<th colspan="1">Use from marshallers</th>
+<td colspan="1">
 
-```
+<pre>
 Set<String> toTranslate = ctx.getTranslated("objectType");
-```
+</pre>
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### {{> anchor 'renderingcontext-api-depth-aggregation'}}Controlling the Aggregation Depth
 
 Available values are: root for no aggregation, children for 1 level, max for 2 levels. Default value is 'children'. See next chapter for more details
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Web context usage</th><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Web context usage</th>
+<td colspan="1">
 
 URL:
-
-*   `.../some-url?depth=children`
+<ul>
+<li>`.../some-url?depth=children`</li>
+</ul>
 
 HTTP Header:
+<ul>
+<li>`depth:children`</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th colspan="1">Server side usage</th>
+<td colspan="1">
 
-*   `depth:children`
-
-</td></tr><tr><th colspan="1">Server side usage</th><td colspan="1">
-
-```
+<pre>
 ctx = CtxBuilder.depth(DepthValues.children).get();
-```
+</pre>
 
-```
+<pre>
 ctx.setParameterValues("depth", "children");
-```
+</pre>
 
-</td></tr><tr><th colspan="1">Use from marshallers</th><td colspan="1">
+</td>
+</tr>
+<tr>
+<th colspan="1">Use from marshallers</th>
+<td colspan="1">
 
-```
+<pre>
 try (Closeable resource = ctx.wrap().controlDepth().open()) {
  // call another marshaller
 } catch (MaxDepthReachedException e) {
  // do not load properties
 }
-```
+</pre>
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### {{> anchor 'aggregating-marshallers-infinite-loops'}}Aggregating Marshallers and Avoiding Infinite Loops
 
@@ -1061,7 +1217,9 @@ public class CategoryJsonWriter extends AbstractJsonWriter<Category> {
 }
 ```
 
-{{/panel}}{{#> panel type='code' heading='Curl calls'}}
+{{/panel}}
+
+{{#> panel type='code' heading='Curl calls'}}
 
 ```bash
 $ curl -X GET 'http://localhost:8080/nuxeo/site/productApp/category/ref/12?fetch.category=products'
@@ -1093,7 +1251,9 @@ public class ProductJsonWriter extends AbstractJsonWriter<Product> {
 }
 ```
 
-{{/panel}}{{#> panel type='code' heading='Curl calls'}}
+{{/panel}}
+
+{{#> panel type='code' heading='Curl calls'}}
 
 ```bash
 $ curl -X GET 'http://localhost:8080/nuxeo/site/productApp/category/ref/12?fetch.product=categories'
@@ -1112,8 +1272,6 @@ $ curl -X GET 'http://localhost:8080/nuxeo/site/productApp/category/ref/12?fetch
 {{/panel}}
 
 ![]({{file name='Marshalling example loops - New Page 1.png'}} ?w=500,h=412,border=true)
-
-&nbsp;
 
 To manage this case, we could use a counter put in the context but this will not work in most case because the counter will manage the first "line" of marshaller and disable the others: that's due to the processing which follows a "Depth First Search".
 
@@ -1308,228 +1466,384 @@ Each existing marshaller class provides a well documented Javadoc. Please, read 
 
 #### **document**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Managed Java Type</th>
+<th colspan="1">Type</th>
+<th colspan="1">Java Class</th>
+<th colspan="1">Behavior</th>
+</tr>
+<tr>
+<td colspan="1">
 
 DocumentModel
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Java-to-JSON
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [DocumentModelJsonWriter](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/core/io/marshallers/json/document/DocumentModelJsonWriter.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Writes a document as JSON. It is enrichable and extendable.
-
-*   `properties=*`
-    Loads all document's properties
-*   `properties=dublincore,file`
-    Loads only `dublincore` and `file` schemas
-*   `fetch.document=properties`
-    Loads every properties associated with a resolver
-*   `fetch.document=versionLabel`
-    Loads the versioning information
-*   `fetch.document=lock`
-    Loads the lock owner and the lock date
-
-</td></tr><tr><td colspan="1">
+<ul>
+<li>`properties=*`<br/>
+    Loads all document's properties</li>
+<li>`properties=dublincore,file`<br/>
+    Loads only `dublincore` and `file` schemas</li>
+<li>`fetch.document=properties`<br/>
+    Loads every properties associated with a resolver</li>
+<li>`fetch.document=versionLabel`<br/>
+    Loads the versioning information</li>
+<li>`fetch.document=lock`<br/>
+    Loads the lock owner and the lock date</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 DocumentModel
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 JSON-to-Java
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [DocumentModelJsonReader](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/core/io/marshallers/json/document/DocumentModelJsonReader.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Reads a document from JSON. Supports either reference or JSON object for extended fields value.
 
-*   If an uid is specified, it will update the existing document with the given properties. The result is a DocumentModelImpl ready to save.
-*   Otherwise, you have to specify the name and the type of the document.
-*   The result is a SimpleDocumentModel.
-
-</td></tr></tbody></table></div>
+<ul>
+<li>If an uid is specified, it will update the existing document with the given properties. The result is a DocumentModelImpl ready to save.</li>
+<li>Otherwise, you have to specify the name and the type of the document.</li>
+<li>The result is a SimpleDocumentModel.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### **document / acls**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Managed Java Type</th>
+<th colspan="1">Type</th>
+<th colspan="1">Java Class</th>
+<th colspan="1">Behavior</th>
+</tr>
+<tr>
+<td colspan="1">
 
 DocumentModel
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Java-to-JSON Enricher
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [ACLJsonEnricher](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/permissions/ACLJsonEnricher.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Enriches a document. Adds document ACLs.
 
 Activated with `enrichers.document=acls.`
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### **document / permissions**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Managed Java Type</th>
+<th colspan="1">Type</th>
+<th colspan="1">Java Class</th>
+<th colspan="1">Behavior</th><
+/tr>
+<tr>
+<td colspan="1">
 
 DocumentModel
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Java-to-JSON Enricher
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [BasePermissionsJsonEnricher](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BasePermissionsJsonEnricher.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Enriches a document. Adds user's permission on the document.
 
 Activated with `enrichers.document=permissions`.
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### **document / breadcrumb**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java type</th><th colspan="1">Type</th><th colspan="1">Java class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Managed Java type</th>
+<th colspan="1">Type</th>
+<th colspan="1">Java class</th>
+<th colspan="1">Behavior</th>
+</tr>
+<tr>
+<td colspan="1">
 
 DocumentModel
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Java-to-JSON Enricher
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [BreadcrumbJsonEnricher](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BreadcrumbJsonEnricher.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Enriches a document. Add the parent's documents.
 
 Activated with `enrichers.document=breadcrumb`.
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### **document / children**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Managed Java Type</th>
+<th colspan="1">Type</th>
+<th colspan="1">Java Class</th>
+<th colspan="1">Behavior</th>
+</tr>
+<tr>
+<td colspan="1">
 
 DocumentModel
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Java-to-JSON Enricher
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [ChildrenJsonEnricher](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/ChildrenJsonEnricher.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Enriches a document. Adds the children documents.
 
 Activated with `enrichers.document=children`.
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### **document / contextualParameters**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Managed Java Type</th>
+<th colspan="1">Type</th>
+<th colspan="1">Java Class</th>
+<th colspan="1">Behavior</th>
+</tr>
+<tr>
+<td colspan="1">
 
 DocumentModel
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Java-to-JSON Enricher
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [ContextualParametersJsonEnricher](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/ContextualParametersJsonEnricher.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Enriches a document with free key/value pair. Only from the server side.
 
-```
+<pre>
 String name = "contextualParameters";
 Map<String, String> keyValues = ...;
 ctx.enrich(name).param(name, keyValues).get();
-```
+</pre>
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### **document / preview**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Managed Java Type</th>
+<th colspan="1">Type</th>
+<th colspan="1">Java Class</th>
+<th colspan="1">Behavior</th>
+</tr>
+<tr>
+<td colspan="1">
 
 DocumentModel
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Java-to-JSON Enricher
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [PreviewJsonEnricher](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/platform/preview/io/PreviewJsonEnricher.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Enriches a document. Adds the URL of its preview.
 
 Activated with `enrichers.document=preview`.
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### **document / thumbnail**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Managed Java Type</th>
+<th colspan="1">Type</th>
+<th colspan="1">Java Class</th>
+<th colspan="1">Behavior</th>
+</tr>
+<tr>
+<td colspan="1">
 
 DocumentModel
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Java-to-JSON Enricher
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [ThumbnailJsonEnricher](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Enriches a document. Adds the URL of its thumbnail.
 
 Activated with `enrichers.document=thumbnail`.
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### **documents**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Managed Java Type</th>
+<th colspan="1">Type</th>
+<th colspan="1">Java Class</th>
+<th colspan="1">Behavior</th>
+</tr>
+<tr>
+<td colspan="1">
 
 List<DocumentModel>
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Java-to-JSON
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [DocumentModelListJsonWriter](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/core/io/marshallers/json/document/DocumentModelListJsonWriter.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Writes a list of document as JSON.
 
@@ -1537,61 +1851,100 @@ Supports paginated lists and provides pagination information.
 
 Delegates the document's writing to the Nuxeo Platform.
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 List<DocumentModel>
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 JSON-to-Java
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [DocumentModelListJsonReader](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/core/io/marshallers/json/document/DocumentModelListJsonReader.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Reads a list of document from JSON.
 
 Delegates the document's reading to the Nuxeo Platform.
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### **acls**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Managed Java Type</th>
+<th colspan="1">Type</th>
+<th colspan="1">Java Class</th>
+<th colspan="1">Behavior</th>
+</tr>
+<tr>
+<td colspan="1">
 
 ACP
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Java-to-JSON
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [ACPJsonWriter](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/core/io/marshallers/json/document/ACPJsonWriter.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Writes a set of access right as JSON. It is enrichable and extendable
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### **docType**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover"><tbody>
+<tr>
+<th colspan="1">Managed Java Type</th>
+<th colspan="1">Type</th>
+<th colspan="1">Java Class</th>
+<th colspan="1">Behavior</th>
+</tr>
+<tr>
+<td colspan="1">
 
 DocumentType
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Java-to-JSON
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [DocumentTypeJsonWriter](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/core/io/marshallers/json/types/DocumentTypeJsonWriter.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Writes a document's type as JSON.
 
@@ -1599,23 +1952,40 @@ It is enrichable and extendable
 
 Delegates the writing of the type's schemas to the Nuxeo Platform.
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### **docTypes**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Managed Java Type</th><
+th colspan="1">Type</th>
+<th colspan="1">Java Class</th>
+<th colspan="1">Behavior</th>
+</tr>
+<tr>
+<td colspan="1">
 
 List<DocumentType>
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Java-to-JSON
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [DocumentTypeListJsonWriter](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/core/io/marshallers/json/types/DocumentTypeListJsonWriter.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Writes a list of document's types as JSON.
 
@@ -1623,23 +1993,40 @@ Supports paginated lists and provides pagination information.
 
 Delegates the type's writing to the Nuxeo Platform.
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### **facet**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Managed Java Type</th>
+<th colspan="1">Type</th>
+<th colspan="1">Java Class</th>
+<th colspan="1">Behavior</th>
+</tr>
+<tr>
+<td colspan="1">
 
 CompositeType
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Java-to-JSON
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [FacetJsonWriter](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/core/io/marshallers/json/types/FacetJsonWriter.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Writes a document's facet as JSON.
 
@@ -1647,7 +2034,11 @@ It is enrichable and extendable.
 
 Delegates the writing of the facet's schemas to the Nuxeo Platform.
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### **facets**
 
@@ -1861,8 +2252,6 @@ JSON-to-Java
 
 [NuxeoPrincipalListJsonReader](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoPrincipalListJsonReader.html)
 
-&nbsp;
-
 </td><td colspan="1">
 
 Reads a list of users from JSON.
@@ -1953,46 +2342,69 @@ Delegates the group's reading to the Nuxeo Platform.
 
 #### directoryEntry
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Managed Java Type</th><th colspan="1">Type</th><th colspan="1">Java Class</th><th colspan="1">Behavior</th></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Managed Java Type</th>
+<th colspan="1">Type</th>
+<th colspan="1">Java Class</th>
+<th colspan="1">Behavior</th>
+</tr>
+<tr>
+<td colspan="1">
 
 DirectoryEntry
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Java-to-JSON
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [DirectoryEntryJsonWriter](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/directory/io/DirectoryEntryJsonWriter.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
-Writes a directory entry as JSON. It is enrichable and extendable
-
-*   `fetch.directoryEntry=parent`
-    Loads the entry's `parent` field as the corresponding entry in the same directoryL
-    Useful for `dc:subjects` or `dc:coverage` values.
-*   `translate.directoryEntry=label`
-    Translates the label if it matches an existing l10n key.
-    Useful for `dc:nature` values.
-
-</td></tr><tr><td colspan="1">
+Writes a directory entry as JSON. It is enrichable and extendable.
+<ul>
+<li>`fetch.directoryEntry=parent`<br/>
+    Loads the entry's `parent` field as the corresponding entry in the same directoryL<br/>
+    Useful for `dc:subjects` or `dc:coverage` values.</li>
+<li>`translate.directoryEntry=label`<br/>
+    Translates the label if it matches an existing l10n key.<br/>
+    Useful for `dc:nature` values.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 DirectoryEntry
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 JSON-to-Java
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 [DirectoryEntryJsonReader](http://community.nuxeo.com/api/nuxeo/7.10/javadoc/org/nuxeo/ecm/directory/io/DirectoryEntryJsonReader.html)
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Reads a directory entry from JSON
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### **directoryEntries**
 
@@ -2102,7 +2514,9 @@ For example, a call to get the JSON of a document which creator is the user "joh
 $ curl -X GET 'http://localhost:8080/nuxeo/site/api/v1/path/to/my/document?properties=dublincore'
 ```
 
-{{/panel}}{{#> panel type='code' heading='Resulting JSON'}}
+{{/panel}}
+
+{{#> panel type='code' heading='Resulting JSON'}}
 
 ```js
 {  
@@ -2125,7 +2539,9 @@ If we tell the document marshaller to load the `dc:creator` referenced value, it
 $ curl -X GET 'http://localhost:8080/nuxeo/site/api/v1/path/to/my/document?properties=dublincore&fetch.document=dc:creator'
 ```
 
-{{/panel}}{{#> panel type='code' heading='Resulting JSON'}}
+{{/panel}}
+
+{{#> panel type='code' heading='Resulting JSON'}}
 
 ```js
 {  
@@ -2379,5 +2795,3 @@ json.childrenContains("field1.field2", "A is here", "B is here twice", "B is her
 ```
 
 `JsonAssert.childrenContains` can cross over multiple arrays and objects.
-
-&nbsp;

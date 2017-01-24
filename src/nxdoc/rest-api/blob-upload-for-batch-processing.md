@@ -13,6 +13,8 @@ labels:
     - automation
     - university
 toc: true
+version_override:
+    'FT': 'nxdoc/batch-upload-endpoint'
 confluence:
     ajs-parent-page-id: '28475677'
     ajs-parent-page-title: REST API
@@ -223,7 +225,7 @@ Before uploading any file you need to initialize a batch, even if there is only 
 POST /api/v1/upload/
 ```
 
-This request returns a 201&nbsp;_CREATED_ &nbsp;status code with the following JSON data:
+This request returns a 201 _CREATED_  status code with the following JSON data:
 
 ```
 {"batchId": batchId}
@@ -241,65 +243,65 @@ You can do a simple POST with the payload containing your file, yet we also supp
 POST /api/v1/upload/{batchId}/{fileIdx}
 ```
 
-The&nbsp;`batchId` is the batch identifier,&nbsp;you need to use the one returned by the batch initialization request, otherwise you will get a 404 _Not Found_ status code.
+The `batchId` is the batch identifier, you need to use the one returned by the batch initialization request, otherwise you will get a 404 _Not Found_ status code.
 
-The&nbsp;`fileIdx` &nbsp;is the index of the file inside the batch, it is here to later reference the file by its index and also to keep track of the client side ordering, because the order the server receives the files may not be the same.
+The `fileIdx` is the index of the file inside the batch, it is here to later reference the file by its index and also to keep track of the client side ordering, because the order the server receives the files may not be the same.
 
 The batch identifier should be common to all the files you want to upload and attach to the same batch.
 
 You also need to set some custom HTTP headers:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Header name</th><th colspan="1">Description</th></tr><tr><td colspan="1">`X-File-Name`</td><td colspan="1">Name of the file</td></tr><tr><td colspan="1">`X-File-Type`</td><td colspan="1">Mime type of the file</td></tr><tr><td colspan="1">`Content-Type`</td><td colspan="1">Should be set to `"application/octet-stream"`</td></tr><tr><td colspan="1">`Content-Length`</td><td colspan="1">Size of the file in bytes, required if your HTTP client doesn't add this header, typically the Nuxeo [JavaScript Client]({{page page='javascript-client'}})</td></tr></tbody></table></div>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Header name</th><th colspan="1">Description</th></tr><tr><td colspan="1">`X-File-Name`</td><td colspan="1">Name of the file</td></tr><tr><td colspan="1">`X-File-Type`</td><td colspan="1">Mime type of the file</td></tr><tr><td colspan="1">`Content-Type`</td><td colspan="1">Should be set to `application/octet-stream`</td></tr><tr><td colspan="1">`Content-Length`</td><td colspan="1">Size of the file in bytes, required if your HTTP client doesn't add this header, typically the Nuxeo [JavaScript Client]({{page page='javascript-client'}})</td></tr></tbody></table></div>
 
-<span style="line-height: 21.58px;">Returns a 201</span>&nbsp;_CREATED_ <span style="line-height: 21.58px;">status code with the following JSON data:</span>
+Returns a 201 _CREATED_ status code with the following JSON data:
 
 ```
 {"batchId": batchId, "fileIdx": fileIdx, "uploadType": "normal", "uploadedSize": xxx}
 ```
 
-<span style="color: rgb(0,0,0);">The value of the&nbsp; `uploadType` field is&nbsp;`normal` by default, it can be&nbsp; `chunked` if the file was [uploaded by chunks](#uploadingafilebychunks).&nbsp;</span>
+The value of the  `uploadType` field is `normal` by default, it can be `chunked` if the file was [uploaded by chunks](#uploadingafilebychunks).
 
 {{#> callout type='info' heading='About the file storage implementation'}}
 
-The files uploaded to the batch are stored on a temporary disk space&nbsp;until the batch is executed or dropped.
+The files uploaded to the batch are stored on a temporary disk space until the batch is executed or dropped.
 
-For this purpose the batch upload relies on the default [Transient Store](/x/AQalAQ) that stores the uploaded files inside&nbsp;`${nuxeo.data.dir}/transientstores/default`).
+For this purpose the batch upload relies on the default [Transient Store](/x/AQalAQ) that stores the uploaded files inside `${nuxeo.data.dir}/transientstores/default`).
 
 {{/callout}}
 
-<span style="color: rgb(0,0,0);font-size: 16.0px;line-height: 1.5625;">Getting Information about the Batch Files</span>
+### Getting Information about the Batch Files
 
 ```
 GET /api/v1/upload/{batchId}
 ```
 
-Returns a 200&nbsp;_OK_ status code if the batch contains at least one file and a 204&nbsp; _No Content_ &nbsp;status code if the batch doesn't contain any file.
+Returns a 200 _OK_ status code if the batch contains at least one file and a 204 _No Content_ status code if the batch doesn't contain any file.
 JSON response data:
 
 ```
 [{"name": file1, "size": yyy, "uploadType": "normal"}, {"name": file2, "size": zzz, "uploadType": "normal"}]
 ```
 
-### <span style="color: rgb(0,0,0);">Getting Information about a Specific Batch File</span>
+### Getting Information about a Specific Batch File
 
 ```
 GET /api/v1/upload/{batchId}/{fileIdx}
 ```
 
-Returns a 200&nbsp;_OK_&nbsp;status code if the batch contains a file with the given index and a 404&nbsp;_Not Found_&nbsp;status code otherwise.
+Returns a 200 _OK_ status code if the batch contains a file with the given index and a 404 _Not Found_ status code otherwise.
 JSON response data:
 
 ```
 {"name": xxx, "size": yyy, "uploadType": "normal"}
 ```
 
-### <span style="color: rgb(0,0,0);">Dropping a Batch</span>
+### Dropping a Batch
 
 ```
 DELETE /api/v1/upload/{batchId}
 ```
 
-Returns a 200&nbsp;_OK_ &nbsp;status code with the following JSON data:
+Returns a 200 _OK_  status code with the following JSON data:
 
 ```
 {"batchId": batchId, "dropped": "true"}
@@ -325,25 +327,25 @@ As for uploading a whole file, you can do a simple POST with the payload contain
 POST /api/v1/upload/{batchId}/{fileIdx}
 ```
 
-The&nbsp;`batchId`&nbsp;and&nbsp;`fileIdx` serve the same purpose as for uploading a whole file. They&nbsp;should be common to all the chunks you want to upload for a given file in the batch.
+The `batchId` and `fileIdx` serve the same purpose as for uploading a whole file. They should be common to all the chunks you want to upload for a given file in the batch.
 
 You need to set the same HTTP headers as for a whole file, adding some extra ones:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Header name</th><th colspan="1">Description</th></tr><tr><td colspan="1">`X-Upload-Type`</td><td colspan="1">`"chunked"`</td></tr><tr><td colspan="1">`X-Upload-Chunk-Index`</td><td colspan="1">Index of the chunk</td></tr><tr><td colspan="1">`X-Upload-Chunk-Count`</td><td colspan="1">Total chunk count</td></tr><tr><td colspan="1">`X-File-Name`</td><td colspan="1">Name of the file</td></tr><tr><td colspan="1">`X-File-Size`</td><td colspan="1">Size of the file in bytes</td></tr><tr><td colspan="1">`X-File-Type`</td><td colspan="1">Mime type of the file</td></tr><tr><td colspan="1">`Content-Type`</td><td colspan="1">Should be set to `"application/octet-stream"`</td></tr><tr><td colspan="1">`Content-Length`</td><td colspan="1">Size of the chunk in bytes, required if your HTTP client doesn't add this header, typically the Nuxeo [JavaScript Client]({{page page='javascript-client'}})</td></tr></tbody></table></div>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Header name</th><th colspan="1">Description</th></tr><tr><td colspan="1">`X-Upload-Type`</td><td colspan="1">`chunked`</td></tr><tr><td colspan="1">`X-Upload-Chunk-Index`</td><td colspan="1">Index of the chunk</td></tr><tr><td colspan="1">`X-Upload-Chunk-Count`</td><td colspan="1">Total chunk count</td></tr><tr><td colspan="1">`X-File-Name`</td><td colspan="1">Name of the file</td></tr><tr><td colspan="1">`X-File-Size`</td><td colspan="1">Size of the file in bytes</td></tr><tr><td colspan="1">`X-File-Type`</td><td colspan="1">Mime type of the file</td></tr><tr><td colspan="1">`Content-Type`</td><td colspan="1">Should be set to `application/octet-stream`</td></tr><tr><td colspan="1">`Content-Length`</td><td colspan="1">Size of the chunk in bytes, required if your HTTP client doesn't add this header, typically the Nuxeo [JavaScript Client]({{page page='javascript-client'}})</td></tr></tbody></table></div>
 
 `X-Upload-Chunk-Index` must be the number of the chunk in the ordered list of chunks, starting from 0.
 
-For instance if the file is made of 5 chunks you will send 5 requests with the following headers and `i`&nbsp;between 0 and 4:
+For instance if the file is made of 5 chunks you will send 5 requests with the following headers and `i` between 0 and 4:
 
 *   `X-Upload-Chunk-Index: i`
 
 *   `X-Upload-Chunk-Count: 5`
 
-Optionally depending on the HTTP client you are using you might need to add the&nbsp;`Content-Length`&nbsp;header to specify the size of the chunk in bytes.
+Optionally depending on the HTTP client you are using you might need to add the `Content-Length` header to specify the size of the chunk in bytes.
 
-As for a file uploaded in one go, the chunks attached to the batch are stored on a temporary disk storage&nbsp;until the batch is executed or dropped.
+As for a file uploaded in one go, the chunks attached to the batch are stored on a temporary disk storage until the batch is executed or dropped.
 
-Returns a 201&nbsp;_CREATED_&nbsp;status code for a complete chunked file&nbsp;and a 308 _Resume Incomplete_ status code for an incomplete chunked file.
+Returns a 201 _CREATED_ status code for a complete chunked file and a 308 _Resume Incomplete_ status code for an incomplete chunked file.
 
 JSON response data:
 
@@ -359,7 +361,7 @@ GET /api/v1/upload/{batchId}/{fileIdx}
 
 Returns a 200 _OK_ status code for a complete chunked file and a 308 _Resume Incomplete_ status code for an incomplete chunked file.
 
-**It is this specific 308&nbsp;_Resume Incomplete_&nbsp;status code that lets you know that you either need to upload the missing chunks or to resume an interrupted file upload.**
+**It is this specific 308 _Resume Incomplete_ status code that lets you know that you either need to upload the missing chunks or to resume an interrupted file upload.**
 
 If the batch doesn't contain any file with the given index, returns a 404 _Not Found_ status code.
 
@@ -375,7 +377,7 @@ JSON response data:
 
 You can execute an automation chain or an automation operation using the blobs associated to a batch as input.
 
-To place the blobs as input, call a specific batch operation by passing the `operationId` and `batchId`&nbsp;path parameters:
+To place the blobs as input, call a specific batch operation by passing the `operationId` and `batchId` path parameters:
 
 ```
 POST /api/v1/upload/{batchId}/execute/{operationId}
@@ -408,7 +410,7 @@ More info about [Drag & Drop configuration]({{page page='drag-and-drop-service-f
 
 An other option is to reference the file within the batch to create input parameters of an operation.
 
-For that you can add a parameter of type<span style="color: rgb(0,0,0);">&nbsp;`properties` that will <span style="color: rgb(0,0,0);">automatically</span> be resolved to the correct blob if the provided properties are the correct ones:</span>
+For that you can add a parameter of type `properties` that will automatically be resolved to the correct blob if the provided properties are the correct ones:
 
 ```
 type = blob
@@ -419,7 +421,7 @@ upload-batch = batchId-50b2ccb2-ce69-4fdc-b24e-b4ea8c155a05
 upload-fileId = myfile.pdf
 ```
 
-<span style="color: rgb(0,0,0);">When using Java automation client, this would look like:&nbsp;</span>
+When using Java automation client, this would look like:
 
 ```
 PropertyMap blobProp = new PropertyMap();
@@ -433,14 +435,6 @@ blobProp.set("upload-fileId", blobUploading.getFileName());
 ```
 
 ### Referencing a Blob from a JSON Document Resource
-
-<div class="module toggle-wrap">
-
-<div class="mod-content">
-
-<div class="field-ignore-highlight">
-
-<div class="user-content-block">
 
 You can use the `batchId` property for blob in the JSON document you're sending to the REST API.
 
@@ -470,16 +464,4 @@ You can use the `batchId` property for blob in the JSON document you're sending 
 }
 ```
 
-&nbsp;
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 ### Java API
-
-&nbsp;

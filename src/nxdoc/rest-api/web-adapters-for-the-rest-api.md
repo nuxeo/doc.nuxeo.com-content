@@ -11,6 +11,8 @@ labels:
     - link-update
     - webengine
 toc: true
+version_override:
+    'FT': 'nxdoc/rest-api-web-adapters'
 confluence:
     ajs-parent-page-id: '28475677'
     ajs-parent-page-title: REST API
@@ -135,9 +137,9 @@ history:
 ---
 ## Adapters and REST Resources&nbsp;
 
-WebEngine, the JAX-RS Server used to serve the REST API, has the concept of [WebAdapter]({{page page='webengine-jax-rs'}})&nbsp;for DocumentModel. Logically the REST API leverages this concept to expose adapters on top of the Document REST end point.
+WebEngine, the JAX-RS Server used to serve the REST API, has the concept of [WebAdapter]({{page page='webengine-jax-rs'}}) for DocumentModel. Logically the REST API leverages this concept to expose adapters on top of the Document REST end point.
 
-An adapter is a URL segment that starts with&nbsp;`@` and that transforms the input resource so as to return another resource. The idea is to have a URL pointing to a Document and use the adapter to convert the Document into something else before the result is returned. The general syntax is:
+An adapter is a URL segment that starts with `@` and that transforms the input resource so as to return another resource. The idea is to have a URL pointing to a Document and use the adapter to convert the Document into something else before the result is returned. The general syntax is:
 
 ```
 /nuxeo/api/v1/id/{docId}/@adapter/parameters
@@ -157,8 +159,8 @@ Several default adapters are provided by default.
 
 `acl`
 
-*   **Usage**:&nbsp;Returns the ACLs of the target Document.
-*   **Sample URL**:&nbsp;
+*   **Usage**: Returns the ACLs of the target Document.
+*   **Sample URL**:
 
     ```
     /nuxeo/api/v1/id/{docId}/@acl
@@ -166,8 +168,8 @@ Several default adapters are provided by default.
 
 `audit`
 
-*   **Usage**:&nbsp;Returns audit trails records corresponding to the target Document.
-*   **Sample URL**:&nbsp;
+*   **Usage**: Returns audit trails records corresponding to the target Document.
+*   **Sample URL**:
 
     ```
     /nuxeo/api/v1/id/{docId}/@audit
@@ -184,7 +186,7 @@ Several default adapters are provided by default.
 
 `children`
 
-*   **Usage**:&nbsp;Returns children of the target Document.&nbsp;
+*   **Usage**: Returns children of the target Document.
     Query parameters are not mandatory and are by default:
     *   `page`: 0
     *   `pageSize`: 50
@@ -198,7 +200,7 @@ Several default adapters are provided by default.
 
 `convert`
 
-*   **Usage**:&nbsp;Returns the conversion of a blob.
+*   **Usage**: Returns the conversion of a blob.
     Query parameters, you must use one of them:
     *   `converter`
     *   `type`
@@ -211,9 +213,9 @@ Several default adapters are provided by default.
 
 `pp`
 
-*   **Usage**:&nbsp;Returns the result of the query corresponding to the named PageProvider.&nbsp;
+*   **Usage**: Returns the result of the query corresponding to the named PageProvider.
     The target Document is used to provide the parameters of the PageProvider (i.e. SearchDocumentModel).
-*   **Sample URL**:&nbsp;
+*   **Sample URL**:
 
     ```
     /nuxeo/api/v1/id/{docId}/@pp/{pageProviderName}
@@ -221,7 +223,7 @@ Several default adapters are provided by default.
 
 `rendition`
 
-*   **Usage**:&nbsp;Returns the renditions of a blob.
+*   **Usage**: Returns the renditions of a blob.
 *   **Sample URL**:
 
     ```
@@ -230,12 +232,12 @@ Several default adapters are provided by default.
 
 `search`
 
-*   **Usage**:&nbsp;Returns paged results of the query.&nbsp;
-    Query can be a full-text query or a NXQL query.&nbsp;
+*   **Usage**: Returns paged results of the query.
+    Query can be a full-text query or a NXQL query.
     Query parameters are not mandatory and are by default:
-    *   `orderBy`:&nbsp;[dc:title](http://dctitle/)&nbsp;
-    *   `page`: 0&nbsp;
-    *   `pageSize`: 50&nbsp;&nbsp;
+    *   `orderBy`: [dc:title](http://dctitle/)
+    *   `page`: 0
+    *   `pageSize`: 50
     *   `maxResult`: nolimit
 *   **Sample URL**:
 
@@ -247,7 +249,7 @@ Several default adapters are provided by default.
 
 `task`
 
-*   **Usage**:&nbsp;Returns task instance you have permission to see.
+*   **Usage**: Returns task instance you have permission to see.
 *   **Sample URL**:
 
     ```
@@ -256,8 +258,8 @@ Several default adapters are provided by default.
 
 `workflow`
 
-*   **Usage**:&nbsp;Returns workflow instances launched by current user.
-*   **Sample URL**:&nbsp;
+*   **Usage**: Returns workflow instances launched by current user.
+*   **Sample URL**:
 
     ```
     /nuxeo/api/v1/id/{docId}/@workflow
@@ -383,7 +385,7 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?fullText=nuxeo&orderBy=dc:tit
 
 {{/panel}}
 
-If the pointed resource is not a&nbsp;<span class="s1">Folder</span>, then the search is issued from the parent document.
+If the pointed resource is not a Folder, then the search is issued from the parent document.
 
 **NXQL Search**
 
@@ -469,8 +471,6 @@ GET /nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?query=SELECT * FROM File
 
 {{/panel}}
 
-&nbsp;
-
 ## Custom Adapters
 
 You can of course contribute new WebAdapters using WebEngine.
@@ -526,7 +526,7 @@ PUT /nuxeo/site/api/v1/path/{pathOfTheDoc}/@bo/BusinessBeanAdapter
 
 ### Creating a Business Object
 
-And then to create a business object, you have to issue a&nbsp;<span class="s1">POST</span>&nbsp;on the object resource plus the name of the newly created document, like this:
+And then to create a business object, you have to issue a POST on the object resource plus the name of the newly created document, like this:
 
 {{#> panel type='code' heading='POST Request Body'}}
 
@@ -572,7 +572,7 @@ POST /nuxeo/site/api/v1/path/{pathOfTheDoc}/@op/{myOperation}
 
 The response will depend on the result of the automation chain.
 
-You can also use it to run a chain by prefixing the chain name by `<span class="s1">Chain.</span>` , for instance:
+You can also use it to run a chain by prefixing the chain name by ` Chain.` , for instance:
 
 {{#> panel type='code' heading='Sample URL'}}
 
@@ -622,17 +622,14 @@ Here is an example :
 
 {{/panel}}
 
-&nbsp;
-
-&nbsp;
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [WebEngine (JAX-RS)]({{page page='webengine-jax-rs'}})
-*   [REST API]({{page page='rest-api'}})
-*   [Content Enricher]({{page page='content-enricher'}})
+- [WebEngine (JAX-RS)]({{page page='webengine-jax-rs'}})
+- [REST API]({{page page='rest-api'}})
+- [Content Enricher]({{page page='content-enricher'}})
 
 {{/panel}}</div><div class="column medium-6">
 

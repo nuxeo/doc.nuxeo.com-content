@@ -14,7 +14,7 @@ labels:
     - rest-api
 toc: true
 version_override:
-    'FT': 'nxdoc/developing-with-angular2'
+    'FT': 'nxdoc/howto-develop-with-angular2'
 confluence:
     ajs-parent-page-id: '28475677'
     ajs-parent-page-title: REST API
@@ -172,8 +172,6 @@ history:
 ---
 [AngularJS](https://angularjs.org/) by Google has been built to offer front-end developers all the tools they may need to turn a website into a modern web application. AngularJS is a great JavaScript framework that provides many features (directives, routes, modules, etc.) to turn your HTML pages into dynamic views. This answers your front-end needs. But your application also needs a serious back end that will allow you to build your application quickly and concentrate on features without reinventing the wheel. This is what the Nuxeo Platform will provide you with. When users browse your web application, it will actually call the Nuxeo Platform through its [REST API]({{page page='rest-api'}}) in order to handle and retrieve content.
 
-&nbsp;
-
 {{! excerpt}}
 
 AngularJS has some specific needs that need to be taken care of. This motivated us to write a specific client, in order to get a clean implementation. A wrapper around the existing [Nuxeo JavaScript client](https://github.com/nuxeo/nuxeo-js-client) has therefore been developed. This is the [angular-nuxeo](https://github.com/nuxeo-sandbox/angular-nuxeo) project.
@@ -221,7 +219,7 @@ In order to get a clean installation, we will make use of [Yeoman's angular gene
     *   Would you like to use Sass (with Compass)? (Y/n) You decide
     *   Would you like to include Bootstrap? (Y/n) You decide
     *   Which modules would you like to include? You decide
-    *   Overwrite package.json? (Y/n) **Y**At that point, you get a ready to use AngularJS application. It is time to add the nuxeo module.
+    *   Overwrite package.json? (Y/n) **Y** At that point, you get a ready to use AngularJS application. It is time to add the nuxeo module.
 4.  Add the angular-nuxeo dependency by running the following:
 
     ```
@@ -309,19 +307,14 @@ We are always eager to receive feedback on our projects. Please report bugs, wis
 
 {{/callout}}
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [REST API]({{page page='rest-api'}})
-*   [JavaScript Client]({{page page='javascript-client'}})
+- [REST API]({{page page='rest-api'}})
+- [JavaScript Client]({{page page='javascript-client'}})
 
 {{/panel}}</div><div class="column medium-6">
 
-&nbsp;
-
-&nbsp;
 
 </div></div>

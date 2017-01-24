@@ -157,7 +157,7 @@ Beside the `docId` and `repoId` parameters, the `id` endpoint accepts the defini
 
 ### Updating a Document
 
-To update a document you have to <span class="s1">PUT</span> on the document resource, and pass a reduced version of the [entity type content]({{page page='rest-api-entity-types#document'}}) as the data. You can also pass the full set of data, but it is not mandatory.
+To update a document you have to PUT on the document resource, and pass a reduced version of the [entity type content]({{page page='rest-api-entity-types#document'}}) as the data. You can also pass the full set of data, but it is not mandatory.
 
 {{#> panel type='code' heading='PUT Request'}}
 
@@ -181,7 +181,7 @@ To update a document you have to <span class="s1">PUT</span> on the document res
 
 ### Creating a Document
 
-To create a new document under the current resource, you have to send a <span class="s1">POST</span> request with the following data:
+To create a new document under the current resource, you have to send a POST request with the following data:
 
 ```
 POST /nuxeo/site/api/v1/id/{idOfParentDoc}
@@ -199,7 +199,7 @@ POST /nuxeo/site/api/v1/id/{idOfParentDoc}
 }
 ```
 
-In this case, the id of the document is the parent document's id, and the `name` property in the entity stands for the name of the newly created document. You don&rsquo;t have to specify a UID since the session will create one for you. It will be returned in the response.
+In this case, the id of the document is the parent document's id, and the `name` property in the entity stands for the name of the newly created document. You don't have to specify a UID since the session will create one for you. It will be returned in the response.
 
 ### Deleting a Document
 
@@ -261,13 +261,13 @@ POST
 
 ### Properties
 
-The `path` endpoint does not requires paramets besides the `docPath` and `repoId` parameters. It can however leverage web adapters such as `@children`, `@search`, `@bo`. See the examples on the page [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}}).
+The `path` endpoint does not requires parameters besides the `docPath` and `repoId` parameters. It can however leverage web adapters such as `@children`, `@search`, `@bo`. See the examples on the page [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}}).
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [REST API Entity Types]({{page page='rest-api-entity-types'}})
-*   [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}})
+- [REST API Entity Types]({{page page='rest-api-entity-types'}})
+- [Web Adapters for the REST API]({{page page='web-adapters-for-the-rest-api'}})
 
 {{/panel}}</div><div class="column medium-6"></div></div>
