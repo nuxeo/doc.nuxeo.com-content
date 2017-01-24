@@ -142,11 +142,11 @@ history:
         version: '1'
 
 ---
-If you do cross-domain requests from any JavaScript client to access WebEngine resources or [Automation APIs]({{page page='content-automation-concepts'}}), there's a chance that your browser forbids it. Since version 5.7.2, CORS allows you to communicate with Nuxeo from&nbsp;another domain using `XMLHttpRequests`.
+If you do cross-domain requests from any JavaScript client to access WebEngine resources or [Automation APIs]({{page page='content-automation-concepts'}}), there's a chance that your browser forbids it. Since version 5.7.2, CORS allows you to communicate with Nuxeo from another domain using `XMLHttpRequests`.
 
-Nuxeo uses a filter to handle those cases. It is based on&nbsp;[Vladimir Dzhuvinov's universal CORS filter](http://software.dzhuvinov.com/cors-filter.html), and allows you to configure on which URLs cross-origin&nbsp;headers are needed. You'll be able to configure each URL independently.
+Nuxeo uses a filter to handle those cases. It is based on [Vladimir Dzhuvinov's universal CORS filter](http://software.dzhuvinov.com/cors-filter.html), and allows you to configure on which URLs cross-origin headers are needed. You'll be able to configure each URL independently.
 
-Here is a the simplest contribution, to allow cross-domain request on the whole&nbsp;`foobar` site:
+Here is a the simplest contribution, to allow cross-domain request on the whole `foobar` site:
 
 {{#> panel type='code' heading='Simplest contribution'}}
 
@@ -164,7 +164,7 @@ Here is a the simplest contribution, to allow cross-domain request on the whole&
 
 Here is the list of all contribution attributes. There are all optional.
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Attribute name</th><th colspan="1">Description</th><th colspan="1">Default value</th><th colspan="1"><span style="color: rgb(102,153,204);">Possible values</span> <span style="color: rgb(102,153,204);">(</span><span style="color: rgb(102,153,204);">"|"</span> <span style="color: rgb(102,153,204);">separates possible values)</span></th></tr><tr><td colspan="1">`allowGenericHttpRequests`</td><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Attribute name</th><th colspan="1">Description</th><th colspan="1">Default value</th><th colspan="1">Possible values ( "|" separates possible values)</th></tr><tr><td colspan="1">`allowGenericHttpRequests`</td><td colspan="1">
 
 If false, only valid and accepted CORS requests that be allowed (strict CORS filtering).
 
@@ -176,11 +176,11 @@ The whitespace-separated list of origins that the CORS filter must allow.
 
 `*`
 
-</td><td colspan="1">`*&nbsp;| <span class="nolink">http://example.com&nbsp;</span><span class="nolink">http://example.com:8080</span>`</td></tr><tr><td colspan="1">`allowSubdomains`</td><td colspan="1">
+</td><td colspan="1">`* | http://example.com http://example.com:8080`</td></tr><tr><td colspan="1">`allowSubdomains`</td><td colspan="1">
 
 If true the CORS filter will allow requests from any origin which is a sub-domain origin of the allowed origins.
 
-</td><td colspan="1">`false`</td><td colspan="1">`true` | `false`</td></tr><tr><td colspan="1">`supportedMethods`</td><td colspan="1">The list of the supported HTTP methods.</td><td colspan="1">`<span style="color: rgb(61,61,61);">GET, POST, HEAD, OPTIONS</span>`</td><td colspan="1">"," separates list of HTTP methods</td></tr><tr><td colspan="1">`supportedHeaders`</td><td colspan="1">The names of the supported author request headers.</td><td colspan="1">`*`</td><td colspan="1">*&nbsp;| "," separates list of headers</td></tr><tr><td colspan="1">`exposedHeaders`</td><td colspan="1">
+</td><td colspan="1">`false`</td><td colspan="1">`true` | `false`</td></tr><tr><td colspan="1">`supportedMethods`</td><td colspan="1">The list of the supported HTTP methods.</td><td colspan="1">`GET, POST, HEAD, OPTIONS`</td><td colspan="1">"," separates list of HTTP methods</td></tr><tr><td colspan="1">`supportedHeaders`</td><td colspan="1">The names of the supported author request headers.</td><td colspan="1">`*`</td><td colspan="1">* | "," separates list of headers</td></tr><tr><td colspan="1">`exposedHeaders`</td><td colspan="1">
 
 The list of the response headers other than simple response headers that the browser should expose to the author of the cross-domain request through the `XMLHttpRequest.getResponseHeader()` method.
 
@@ -215,7 +215,7 @@ For instance, a `fooly` complete contribution could looks like:
 
 ## Making sure the contribution is taken into account
 
-To debug your CORS configuration, you might use `cURL`&nbsp;and look at the response. If you haven't blocked OPTIONS method, you should test with the preflight request for an expected POST request:
+To debug your CORS configuration, you might use `cURL` and look at the response. If you haven't blocked OPTIONS method, you should test with the preflight request for an expected POST request:
 
 {{#> panel type='code' heading='Simulate preflight request'}}
 
@@ -242,5 +242,3 @@ With the default configuration, preflight's response must looks like:
 {{/panel}}
 
 With these "Access-Control-Allow-*" headers containing expected values.
-
-&nbsp;

@@ -84,7 +84,6 @@ history:
         version: '1'
 
 ---
-<div class="row"><div class="column medium-8">
 
 The Nuxeo API communicates error exceptions through [standard HTTP status codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) paired with exception details.
 
@@ -102,37 +101,37 @@ Simple mode is activated by default. The extended mode can be configured through
 
 **entity-type**
 
-<pre>string</pre>
+`string`
 
 </td><td colspan="1">for exceptions is 'exception'</td></tr><tr><td colspan="1">
 
 **code**
 
-<pre>string</pre>
+`string`
 
 </td><td colspan="1">The technical exception identity (java class)</td></tr><tr><td colspan="1">
 
 **status**
 
-<pre>integer</pre>
+`integer`
 
 </td><td colspan="1">The HTTP status of the error response</td></tr><tr><td colspan="1">
 
 **message**
 
-<pre>string</pre>
+`string`
 
 </td><td colspan="1">A human readable message about the error</td></tr><tr><td colspan="1">
 
 **stacktrace (extended version)**
 
-<pre>string</pre>
+`string`
 
 </td><td colspan="1">All stack trace in one simple string</td></tr><tr><td colspan="1">
 
 **exception (extended version)**
 
-<pre>json object</pre>
+`json object`
 
 </td><td colspan="1">All stack trace wrapped into JSON Object</td></tr></tbody></table></div>
 
@@ -215,6 +214,4 @@ Or you can use the following endpoint URL into your browser (Administrator role 
 http://localhost:8080/nuxeo/site/automation/doc/toggleStackDisplay
 ```
 
-{{/panel}}</div><div class="column medium-4">{{#> panel heading='On this page'}}
-
-{{/panel}}</div></div>
+{{/panel}}

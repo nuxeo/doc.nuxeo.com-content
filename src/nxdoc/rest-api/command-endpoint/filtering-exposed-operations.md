@@ -19,94 +19,94 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/WYBVAQ'
     source_link: /display/NXDOC60/Filtering+Exposed+Operations
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 15:43'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-25 14:50'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-23 13:48'
         message: ''
         version: '16'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-17 03:34'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-30 14:54'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-30 14:52'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-30 12:19'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 14:59'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 14:59'
         message: >-
             Added related topics and replaced "operation chain" with "automation
             chain"
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2011-05-02 17:53'
         message: Migrated to Confluence 4.0
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2011-05-02 17:53'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 15:19'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 15:18'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-06-29 11:54'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-06-28 08:42'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-25 17:40'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-24 16:47'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-06-24 16:47'
         message: ''
@@ -137,27 +137,29 @@ Here is an example on how to write such an extension:
 
 ```
 
-The above code is contributing two REST bindings - one for the atomic operation [`Document.Delete`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewOperation/Document.Delete) which is completely disabled (by using the `disable` parameter) and the second one is defining a security rule for the automation chain named `audit`.&nbsp;You can notice the usage of the `chain` attribute which must be set to true every time a binding refers to an automation chain and not to an atomic operation.
+The above code is contributing two REST bindings - one for the atomic operation [`Document.Delete`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewOperation/Document.Delete) which is completely disabled (by using the `disable` parameter) and the second one is defining a security rule for the automation chain named `audit`. You can notice the usage of the `chain` attribute which must be set to true every time a binding refers to an automation chain and not to an atomic operation.
 
 The second binding installs a guard that allows only requests made by an `administrator` user or by users from the `member` group **AND** the request should be made over a secured channel like HTTPS.
 
 Here is the complete of attributes and elements you can use in the extension:
 
-*   `**name**` : The operation or automation chain name that should be protected.
-*   `**chain**` : "true" if the name refers to an automation chain, "false" otherwise (the default is "false").
-*   `**disabled**` : Whether or not to completely disable the operation from REST access. The default is "false". If you put this flag on "true" then all the other security rules will be ignored.
-*   `**administrator**` : Possible values are "true" or "false". The default is "false". If set to "true" the operation is allowed if the user is an administrator.
-*   `**groups**` : A comma separated list of groups that the user should be member of. If both `administrator` and `groups` are specified the user must be either from a group or an administrator.
-*   `**secure**` : "true" or "false". Default is "false". If "true" the request must be done through a secured channel like HTTPS. If this guard is used the connection **must** be secured, so that even if the groups guard is matched the operation is not accessible if the connection is not secured.
+*   `name` : The operation or automation chain name that should be protected.
+*   `chain` : "true" if the name refers to an automation chain, "false" otherwise (the default is "false").
+*   `disabled` : Whether or not to completely disable the operation from REST access. The default is "false". If you put this flag on "true" then all the other security rules will be ignored.
+*   `administrator` : Possible values are "true" or "false". The default is "false". If set to "true" the operation is allowed if the user is an administrator.
+*   `groups` : A comma separated list of groups that the user should be member of. If both `administrator` and `groups` are specified the user must be either from a group or an administrator.
+*   `secure` : "true" or "false". Default is "false". If "true" the request must be done through a secured channel like HTTPS. If this guard is used the connection **must** be secured, so that even if the groups guard is matched the operation is not accessible if the connection is not secured.
 
-&nbsp;
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+- [REST API]({{page page='rest-api'}})
+- [Command Endpoint]({{page page='command-endpoint'}})
 
-*   [REST API]({{page page='rest-api'}})
-*   [Command Endpoint]({{page page='command-endpoint'}})
-
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
+<div class="column medium-6">
 
 &nbsp;
 

@@ -172,7 +172,7 @@ If you want to access the SOAP web service:
 
     *   `http://server:port/nuxeo/webservices/nuxeoremoting` to list all the deployed endpoints (when using SUN Metro),
     *   `http://server:port/jbossws/services` (when using JbossWS),
-*   To access NuxeoRemoting WSDL: `http://server:port/nuxeo/webservices/nuxeoremoting?wsdl,`
+*   To access NuxeoRemoting WSDL: `http://server:port/nuxeo/webservices/nuxeoremoting?wsdl`
 *   To access NuxeoAudit WSDL: `http://server:port/nuxeo/webservices/nuxeoaudit?wsdl`.
 
 The point of SOAP web services is not to have a 1 to 1 mapping with the Java services interfaces. The goal is to provide a "coarse grained" high level API. So it's easy to build new SOAP based web services on top of Nuxeo:

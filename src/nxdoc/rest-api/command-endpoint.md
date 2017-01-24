@@ -341,8 +341,6 @@ history:
 ---
 ## The Automation HTTP / REST Service
 
-&nbsp;
-
 {{! excerpt}}
 
 The Nuxeo Automation Server module provides a REST API to execute operations on a Nuxeo server.
@@ -352,8 +350,6 @@ The Nuxeo Automation Server module provides a REST API to execute operations on 
 To know more about Content Automation, you can read the [Automation documentation]({{page page='automation'}}) in other sections of this space. This section only deals with the REST exposition of operations and chains.
 
 {{/callout}}
-
-&nbsp;
 
 To use the Automation REST service you need to know the URL where the service is exposed, and the different formats used by the service to exchange information. All the other URLs that appear in the content exchanged between the client and server are relative paths to the Automation service URL.
 
@@ -426,11 +422,11 @@ You can see the automation service is returning the registry of operations and c
 
 Each operation and chain signature is fully described to be able to do operation validation on client side, for instance. Also some additional information that can be used in an UI is provided (operation label, full description, operation category etc.).
 
-The `url` property of an operation (or automation chain) is the relative path to use to execute the operation. For example if the service URL is `<span class="nolink">http://localhost:8080/nuxeo/site/automation</span>` and the `Blob.Attach` operation has the `url` `Blob.Attach` then the full URL to that operation will be: `<span class="nolink">http://localhost:8080/nuxeo/site/automation/Blob.Attach</span>`.
+The `url` property of an operation (or automation chain) is the relative path to use to execute the operation. For example if the service URL is `http://localhost:8080/nuxeo/site/automation` and the `Blob.Attach` operation has the `url` `Blob.Attach` then the full URL to that operation will be: `http://localhost:8080/nuxeo/site/automation/Blob.Attach`.
 
 The `paths` property is used to specify various relative paths (relative to the automation service) of services exposed by the automation server. In the above example you can see that the "login" service is using the relative path "login".
 
-This service can be used to sign-in and check if the username/password is valid. To use this service you should do a POST to the login URL (e.g. `<span class="nolink">http://localhost:8080/nuxeo/site/automation/login</span>`) using basic authentication. If authentication fails you will receive a 401 HTTP response. Otherwise the 200 code is returned.
+This service can be used to sign-in and check if the username/password is valid. To use this service you should do a POST to the login URL (e.g. `http://localhost:8080/nuxeo/site/automation/login`) using basic authentication. If authentication fails you will receive a 401 HTTP response. Otherwise the 200 code is returned.
 
 The login service can be used to do (and check) a user login. Note that `WWW-Authenticate` server response is not yet implemented so you need to send the basic authentication header in each call if you are not using cookies (in that case you only need once to authenticate - for example using the login service).
 
@@ -444,7 +440,7 @@ You do not need to be logged in to be able to get the Automation service descrip
 
 The operations registry (loaded doing a GET on the Automation service URL) contains the entire information you need to execute operations.
 
-To execute an operation you should build an operation request descriptor and post it on the operation URL. When sending an operation request you must use the `application/json+nxrequest` content type (`application/json` since 5.9.5 is allowed as well). Also you need to authenticate your request&nbsp;(using basic authentication) since most of the operations are accessing the Nuxeo repository.
+To execute an operation you should build an operation request descriptor and post it on the operation URL. When sending an operation request you must use the `application/json+nxrequest` content type (`application/json` since 5.9.5 is allowed as well). Also you need to authenticate your request (using basic authentication) since most of the operations are accessing the Nuxeo repository.
 
 An operation request is a JSON document having the following format:
 
@@ -458,16 +454,16 @@ An operation request is a JSON document having the following format:
 All these three request parameters are optional and depend on the executed operation.
 
 *   If the operation has no input (a void operation) then the input parameter can be omitted.
-*   If the operation has no parameters then&nbsp;`params` can be omitted.
+*   If the operation has no parameters then `params` can be omitted.
 *   If the operation does not want to push some specific properties in the operation execution context then context can be omitted. In fact context parameters are useless for now but may be used in future.
 
-The&nbsp;`input` parameter is a string that acts as a reference to the real object to be used as the input. There are four types of supported inputs: void, document, document list, blob, blob list.
+The `input` parameter is a string that acts as a reference to the real object to be used as the input. There are four types of supported inputs: void, document, document list, blob, blob list.
 
 *   To specify a "void" input (i.e. no input) you should omit the `input` parameter.
-*   To specify a reference to a document you should use the document absolute path or document UID prefixed using the string "`doc:`".
-    Example: "`doc:/default-domain/workspaces/myworkspace`" or "`doc:96bfb9cb-a13d-48a2-9bbd-9341fcf24801`"
-*   To specify a reference to a list of documents you should use a comma separated list of absolute document paths, or UID prefixed by the string "`docs:`".
-    Example: "`docs:/default-domain/workspaces/myworkspace, 96bfb9cb-a13d-48a2-9bbd-9341fcf24801`".
+*   To specify a reference to a document you should use the document absolute path or document UID prefixed using the string `doc:`.
+    Example: `doc:/default-domain/workspaces/myworkspace` or `doc:96bfb9cb-a13d-48a2-9bbd-9341fcf24801`
+*   To specify a reference to a list of documents you should use a comma separated list of absolute document paths, or UID prefixed by the string `docs:`.
+    Example: `docs:/default-domain/workspaces/myworkspace, 96bfb9cb-a13d-48a2-9bbd-9341fcf24801`.
 *   When using blobs (files) as input you cannot refer them using a string locator since the blob is usually a file on the client file system or raw binary data.
     For example, let say you want to execute the `Blob.Attach` operation that takes as input a blob and set it on the given document (the document is specified through 'params'). Because the file content you want to set is located on the client computer, you cannot use a string reference. In that case you MUST use a multipart/related request that encapsulate as the root part your JSON request as an `application/json+nxrequest` content and the blob binary content in a related part.
 *   In case you want a list of blobs as input then you simply add one additional content part for each blob in the list.
@@ -489,11 +485,11 @@ Host: localhost:8080
 
 ```
 
-This operation will return the document content specified by the "`value`" parameter.
+This operation will return the document content specified by the `value` parameter.
 
 ### Example 2 - Invoking An Operation Taking a Blob as Input
 
-Here is an example on invoking `Blob.Attach` operation on a document given by its path ("`/default-domain/workspaces/myws/file`" in our example).
+Here is an example on invoking `Blob.Attach` operation on a document given by its path (`/default-domain/workspaces/myws/file` in our example).
 
 ```
 POST /nuxeo/site/automation/Blob.Attach HTTP/1.1
@@ -545,16 +541,16 @@ Apart from these possible outputs, the operation can abort due to an exception.
 
 All these cases are represented using the following HTTP responses:
 
-*   `document` &nbsp;-> A JSON object describing the document is returned. The used Content-Type is `**application/json+nxentity**`
-*   `documents` -> a JSON object describing the document list is returned. The used Content-Type is `**application/json+nxentity**`
+*   `document` &nbsp;-> A JSON object describing the document is returned. The used Content-Type is `application/json+nxentity`
+*   `documents` -> a JSON object describing the document list is returned. The used Content-Type is `application/json+nxentity`
 *   `blob` -> The blob raw content is returned. The used Content-Type will be the same as the blob mime-type.
 *   `blobs` -> A Multipart/Mixed content is returned. Each part will be a blob from the list (order is preserved). Each part will use the right Content-Type as given by the blob mime-type.
 *   `void` -> HTTP **204** is returned. No content and no Content-Type is returned.
-*   `exception` -> A status code > **400** is returned and the content will be the server exception encoded as a JSON object. The used Content-Type is `**application/json+nxentity**`.
+*   `exception` -> A status code > **400** is returned and the content will be the server exception encoded as a JSON object. The used Content-Type is `application/json+nxentity`.
 
 When an exception occurs, the server tries to return a meaningful status code. If no suitable status code is found, a generic 500 code (server error) is used.
 
-You noticed that each time when returned objects are encoded as JSON objects, the `**application/json+nxentity**` Content-Type will be used. We also saw that only document, documents and exception objects are encoded as JSON.
+You noticed that each time when returned objects are encoded as JSON objects, the `application/json+nxentity` Content-Type will be used. We also saw that only document, documents and exception objects are encoded as JSON.
 
 Here we will discuss the JSON format used to encode these objects.
 
@@ -577,7 +573,7 @@ Complex properties are represented as embedded JSON objects and list properties 
 
 {{#> callout type='info' }}
 
-All `application/json+nxentity` JSON entities always contains a required top level property: "`entity-type`". This property is used to identify which type of object is described. There are three possible entity types:
+All `application/json+nxentity` JSON entities always contains a required top level property: `entity-type`. This property is used to identify which type of object is described. There are three possible entity types:
 
 *   `document`
 *   `documents`
@@ -632,7 +628,7 @@ Example of a JSON document entry:
 
 ```
 
-The top level properties "`title`" and "`lastModified`" have the same value as the corresponding embedded properties "`dc:title`" and "`dc:modified`".
+The top level properties `title` and `lastModified` have the same value as the corresponding embedded properties `dc:title` and `dc:modified`.
 
 {{#> callout type='info' }}
 
@@ -642,7 +638,7 @@ The blob data, instead of containing the raw data, contain a relative URL (relat
 
 ### Documents
 
-The documents JSON entity is a list of JSON document entities and have the entity type "`documents`". The documents in the list are containing only the required top level properties.
+The documents JSON entity is a list of JSON document entities and have the entity type `documents`. The documents in the list are containing only the required top level properties.
 
 Example:
 
@@ -667,7 +663,7 @@ Example:
 
 ### Exception
 
-JSON exception entities have a "`exception`" entity type and contain information about the exception, including the server stack trace.
+JSON exception entities have a `exception` entity type and contain information about the exception, including the server stack trace.
 
 Example:
 
@@ -681,8 +677,6 @@ Example:
 }
 
 ```
-
-&nbsp;
 
 ## Document Property Types
 
@@ -734,7 +728,7 @@ Also, when using Multipart/Related requests you must always put the JSON encoded
 
 ### Request parameter types
 
-The operation parameters specified inside the&nbsp;`params` property of the request are all strings. Operation parameters are typed, so on the server side the operation will know how to decode parameters in real Java classes. The supported parameter types are: string, long (integer number), double (floating point number), date, properties, document, documents, EL expression, EL template.
+The operation parameters specified inside the `params` property of the request are all strings. Operation parameters are typed, so on the server side the operation will know how to decode parameters in real Java classes. The supported parameter types are: string, long (integer number), double (floating point number), date, properties, document, documents, EL expression, EL template.
 
 Here are some rules on how to encode operation parameters:
 
@@ -745,10 +739,10 @@ Here are some rules on how to encode operation parameters:
 *   `boolean`: "true" or "false".
 *   `document`: Use the document UID or the absolute document path.
 *   `documents`: Use a comma separated list of document references.
-*   EL expression: put the "`expr:`" string before your EL expression. (E.g.&nbsp;`expr: Document.path`).
-*   EL template: put the "`expr:`" string before your template. (E.g. `expr: SELECT * FROM Document WHERE dc:title=@{my_var}`)
+*   EL expression: put the `expr:` string before your EL expression. (E.g. `expr: Document.path`).
+*   EL template: put the `expr:` string before your template. (E.g. `expr: SELECT * FROM Document WHERE dc:title=@{my_var}`)
 
-Note that expressions also you specify relative paths (relative to the context document) using "`expr: ./my/doc`".
+Note that expressions also you specify relative paths (relative to the context document) using `expr: ./my/doc`.
 
 In fact all these encoding rules are the same as the one you can use when defining operation chains in Nuxeo XML extensions.
 
