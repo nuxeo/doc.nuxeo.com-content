@@ -10,6 +10,8 @@ labels:
     - automation
     - todo
 toc: true
+version_override:
+    'FT': 'nxdoc/batch-upload-endpoint'
 confluence:
     ajs-parent-page-id: '22380745'
     ajs-parent-page-title: REST API
@@ -117,11 +119,11 @@ This strategy can not fit when:
 
 {{! /excerpt}}
 
-*   Your client does not natively support multipart encoding;&nbsp;
+*   Your client does not natively support multipart encoding;
     Ex: JavaScript (without using a Form), Android SDK 2.x.
-*   You have several files to send, but prefer to send them as separated chunk;&nbsp;
+*   You have several files to send, but prefer to send them as separated chunk;
     Ex: You have an HTTP proxy that will limit POST size.
-*   You want to upload files as soon as possible and then run the operation when everything has been uploaded on the server;&nbsp;
+*   You want to upload files as soon as possible and then run the operation when everything has been uploaded on the server;
     Ex: You upload pictures you select from a mobile device.
 
 ## Uploading Files
@@ -138,13 +140,13 @@ However, you will need to set some custom HTTP headers:
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Header name</th><th colspan="1">Description</th></tr><tr><td colspan="1">`X-Batch-Id`</td><td colspan="1">Batch identifier</td></tr><tr><td colspan="1">`X-File-Idx`</td><td colspan="1">Index of the file inside the batch</td></tr><tr><td colspan="1">`X-File-Name`</td><td colspan="1">Name of the file</td></tr><tr><td colspan="1">`X-File-Size`</td><td colspan="1">Size of the file in bytes</td></tr><tr><td colspan="1">`X-File-Type`</td><td colspan="1">Mime type of the file</td></tr><tr><td colspan="1">`Content-Type`</td><td colspan="1">Should be set to "`binary/octet-stream`"</td></tr></tbody></table></div>
 
-<span style="font-size: 10.0pt;line-height: 13.0pt;">Optionally depending on the HTTP client you are using you might need to add the Content-Length header to specify the size of the file in bytes.</span>
+Optionally depending on the HTTP client you are using you might need to add the Content-Length header to specify the size of the file in bytes.
 
-<span style="font-size: 10.0pt;line-height: 13.0pt;">The batch identifier should be common to all the files you want to upload and attach to the same batch.</span> This identifier should be client side generated:
+The batch identifier should be common to all the files you want to upload and attach to the same batch. This identifier should be client side generated:
 
 *   GUID,
-*   <span style="font-size: 10.0pt;line-height: 13.0pt;">Timestamp + random number,</span>
-*   <span style="font-size: 10.0pt;line-height: 13.0pt;">whatever that can be reasonably considered as unique.</span>
+*   Timestamp + random number,
+*   whatever that can be reasonably considered as unique.
 
 The `X-File-Idx` is here in case you later want to reference the file by its index and also to keep track of the client side ordering: because the order the server receives the files may not be the same.
 
@@ -156,7 +158,7 @@ To drop a batch you must use:
 GET /site/automation/batch/drop/{batchId}
 ```
 
-<span style="font-size: 10.0pt;line-height: 13.0pt;">Technically, a batch is automatically "started" when the first upload is received.</span>
+Technically, a batch is automatically "started" when the first upload is received.
 
 Executing a batch will automatically remove it.
 
@@ -181,7 +183,7 @@ X-NXDocumentProperties: *
 
 Optionally you can pass the `fileIdx` parameter to specify the index of the file inside the batch that you want to use as input of the chain or operation to execute.
 
-This way of calling automation operation &nbsp;is actually used in the default UI to manage Drag&Drop:
+This way of calling automation operation is actually used in the default UI to manage Drag&Drop:
 
 1.  Files are progressively uploaded to the server:
 
@@ -195,7 +197,7 @@ More info about [Drag & Drop configuration]({{page page='drag-and-drop-service-f
 
 An other option is to reference the file within the batch to create input parameters of an operation.
 
-For that you can add a parameter of type&nbsp;<span style="color: rgb(0,0,0);">`properties` that will <span style="color: rgb(0,0,0);">automatically</span> be resolved to the correct blob if the provided properties are the correct ones:</span>
+For that you can add a parameter of type `properties` that will automatically be resolved to the correct blob if the provided properties are the correct ones:
 
 ```
 type = blob
@@ -206,7 +208,7 @@ upload-batch = 989676879865765
 upload-fileId = myfile.pdf
 ```
 
-<span style="color: rgb(0,0,0);">When using Java automation client, this would look like:&nbsp;</span>
+When using Java automation client, this would look like:
 
 ```
 PropertyMap blobProp = new PropertyMap();
@@ -220,14 +222,6 @@ blobProp.set("upload-fileId", blobUploading.getFileName());
 ```
 
 ### Referencing a Blob from a JSON Document Resource
-
-<div class="module toggle-wrap">
-
-<div class="mod-content">
-
-<div class="field-ignore-highlight">
-
-<div class="user-content-block">
 
 You can use the `batchId` property for blob in the JSON document you're sending to the REST API.
 
@@ -257,16 +251,5 @@ You can use the `batchId` property for blob in the JSON document you're sending 
 }
 ```
 
-&nbsp;
-
-</div>
-
-</div>
-
-</div>
-
-</div>
 
 ### Java API
-
-&nbsp;

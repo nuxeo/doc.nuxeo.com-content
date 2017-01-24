@@ -7,6 +7,8 @@ review:
 labels:
     - exception
 toc: true
+version_override:
+    'FT': 'nxdoc/error-handling'
 confluence:
     ajs-parent-page-id: '22380745'
     ajs-parent-page-title: REST API
@@ -122,15 +124,13 @@ Simple mode is activated by default. The extended mode can be configured through
 
 </td><td colspan="1">A human readable message about the error</td></tr><tr><td colspan="1">
 
-**stacktrace (extended version)
-**
+**stacktrace (extended version)**
 
 <pre>string</pre>
 
 </td><td colspan="1">All stack trace in one simple string</td></tr><tr><td colspan="1">
 
-**exception (extended version)
-**
+**exception (extended version)**
 
 <pre>json object</pre>
 

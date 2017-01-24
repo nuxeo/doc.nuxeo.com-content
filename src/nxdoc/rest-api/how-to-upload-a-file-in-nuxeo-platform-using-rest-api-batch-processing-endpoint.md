@@ -18,6 +18,8 @@ labels:
     - howto
     - import
     - rest-api
+version_override:
+    'FT': 'nxdoc/howto-upload-file-nuxeo-using-rest-api'
 confluence:
     ajs-parent-page-id: '22380745'
     ajs-parent-page-title: REST API
@@ -73,13 +75,11 @@ history:
 ---
 {{! excerpt}}
 
-The Platform provides facilities for&nbsp;[uploading binaries under a given "batch id"]({{page page='blob-upload-for-batch-processing'}})&nbsp;on the server, and then to reference that batch id when posting a document resource, or for fetching it from a custom automation chain. For instance if you need to create a file with some binary content, first you have to upload the file into the batchManager. It's a place on the system where you can upload temporary files to bind them later.
+The Platform provides facilities for [uploading binaries under a given "batch id"]({{page page='blob-upload-for-batch-processing'}}) on the server, and then to reference that batch id when posting a document resource, or for fetching it from a custom automation chain. For instance if you need to create a file with some binary content, first you have to upload the file into the batchManager. It's a place on the system where you can upload temporary files to bind them later.
 
 {{! /excerpt}}
 
-&nbsp;
-
-1.  For that you have to generate yourself a&nbsp;`batchId`, which will identify the batch : let's say&nbsp;`mybatchid`.
+1.  For that you have to generate yourself a `batchId`, which will identify the batch : let's say `mybatchid`.
 
     ```text
     POST http://localhost:8080/nuxeo/api/v1/automation/batch/upload
@@ -103,7 +103,7 @@ The Platform provides facilities for&nbsp;[uploading binaries under a given "bat
     [{"name":"Sites.zip","size":115090}]
     ```
 
-3.  Next you have to create a document of type File and attach the Blob to it by using the specific syntax on the&nbsp;`file:content`&nbsp;property.
+3.  Next you have to create a document of type File and attach the Blob to it by using the specific syntax on the `file:content` property.
 
     ```text
     POST http://localhost:8080/nuxeo/api/v1/path/default-domain/workspaces/myworkspace
@@ -135,13 +135,13 @@ The Platform provides facilities for&nbsp;[uploading binaries under a given "bat
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='REST API how-tos'}}
 
-*   [Use Nuxeo API Playground to Discover the API]({{page page='use-nuxeo-api-playground-to-discover-the-api'}})
-*   [Query Endpoint]({{page page='query-endpoint'}})
-*   [REST API How-To Index]({{page page='rest-api-how-to-index'}})
+- [Use Nuxeo API Playground to Discover the API]({{page page='use-nuxeo-api-playground-to-discover-the-api'}})
+- [Query Endpoint]({{page page='query-endpoint'}})
+- [REST API How-To Index]({{page page='rest-api-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Import how-tos'}}
 
-*   [How to Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
-*   [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
+- [How to Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
+- [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
 
 {{/panel}}</div></div>

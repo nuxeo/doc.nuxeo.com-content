@@ -4,6 +4,8 @@ review:
     comment: ''
     date: ''
     status: ok
+version_override:
+    'FT': 'nxdoc/rest-api-web-adapters'
 confluence:
     ajs-parent-page-id: '22380806'
     ajs-parent-page-title: Resources Endpoints
@@ -24,7 +26,7 @@ history:
         version: '1'
 
 ---
-This API also has the concept of "adapter". An adapter is a URL segment that starts with "@" and that transforms the input resource so as to return another resource. For example, using&nbsp;`@blob`&nbsp;will return the file of a document (the one stored on the property given by the next URL segment), and chaining it to&nbsp;`@op`&nbsp;will call an operation (that takes a blob in input):
+This API also has the concept of "adapter". An adapter is a URL segment that starts with "@" and that transforms the input resource so as to return another resource. For example, using `@blob` will return the file of a document (the one stored on the property given by the next URL segment), and chaining it to `@op` will call an operation (that takes a blob in input):
 
 ```
 /nuxeo/api/v1/id/{docId}/@blob/file:content/@op/Blob.ToPDF

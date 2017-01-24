@@ -7,6 +7,8 @@ review:
 labels:
     - 5-9-5
 toc: true
+version_override:
+    'FT': 'nxdoc/content-enrichers'
 confluence:
     ajs-parent-page-id: '22380806'
     ajs-parent-page-title: Resources Endpoints
@@ -128,8 +130,7 @@ You can add several content enrichers into the header separated by comma
 
 ### Thumbnail
 
-When specifying&nbsp;`X-NXContext-Category = &ldquo;thumbnail&rdquo;`, the JSON payload of the document REST calls response contains the related attached file thumbnail of the document:
-&nbsp;
+When specifying `X-NXContext-Category = &ldquo;thumbnail&rdquo;`, the JSON payload of the document REST calls response contains the related attached file thumbnail of the document:
 
 {{#> panel type='code' heading='Call Example'}}
 
@@ -183,7 +184,7 @@ http://localhost:8080/nuxeo/api/v1/id/889cebf8-1704-45d5-99de-9f540d9b6655
 
 ### ACLs
 
-When specifying&nbsp;`X-NXContext-Category = &ldquo;acls&rdquo;`, the JSON payload of the document REST calls response contains all related ACLs of the document:
+When specifying `X-NXContext-Category = &ldquo;acls&rdquo;`, the JSON payload of the document REST calls response contains all related ACLs of the document:
 
 {{#> panel type='code' heading='Call Example'}}
 
@@ -251,8 +252,7 @@ dublincore
 
 ### Preview
 
-When specifying&nbsp;`X-NXContext-Category = &ldquo;preview&rdquo;`, the JSON payload of the document REST calls response contains the related attached file preview of the document:
-&nbsp;
+When specifying `X-NXContext-Category = &ldquo;preview&rdquo;`, the JSON payload of the document REST calls response contains the related attached file preview of the document:
 
 {{#> panel type='code' heading='Call Example'}}
 
@@ -320,14 +320,14 @@ These parameters are set during the content enricher's initialization and must b
 
 ### **Vocabulary**
 
-This enricher&nbsp;adds the labels for each value of a property referencing a vocabulary.
+This enricher adds the labels for each value of a property referencing a vocabulary.
 
 To enable it for a given property two parameters must be set in the contribution:
 
-*   **field:&nbsp;**the xpath of the property holding the values to process
-*   **directoryName:&nbsp;**the name of the directory to get the labels from
+*   **field:** the xpath of the property holding the values to process
+*   **directoryName:** the name of the directory to get the labels from
 
-For each vocabulary backed property an enricher must be set up. For example, to allow retrieving labels from the `l10nsubjects`&nbsp;directory:
+For each vocabulary backed property an enricher must be set up. For example, to allow retrieving labels from the `l10nsubjects` directory:
 
 ```xml
 <enricher name="l10nsubjects" class="org.nuxeo.ecm.automation.io.services.enricher.VocabularyEnricher">
@@ -337,7 +337,7 @@ For each vocabulary backed property an enricher must be set up. For example, to 
 </enricher> 
 ```
 
-Then, when specifying&nbsp; `X-NXContext-Category = &ldquo;vocabularies&rdquo;` , the JSON payload of the document REST calls response contains all the labels for each value of&nbsp;`dc:subjects`:
+Then, when specifying `X-NXContext-Category = &ldquo;vocabularies&rdquo;` , the JSON payload of the document REST calls response contains all the labels for each value of `dc:subjects`:
 
 {{#> panel type='code' heading='Json Response'}}
 
@@ -374,4 +374,4 @@ Then, when specifying&nbsp; `X-NXContext-Category = &ldquo;vocabularies&rdquo;` 
 
 {{/panel}}
 
-Note that the key used in&nbsp;`contextParameters` &nbsp;is the enricher's name and not the category. This allows using multiple vocabulary content enrichers with a single category.
+Note that the key used in `contextParameters` is the enricher's name and not the category. This allows using multiple vocabulary content enrichers with a single category.

@@ -16,6 +16,8 @@ labels:
     - rest-api
     - lts2015-not-ok
 toc: true
+version_override:
+    'FT': 'nxdoc/howto-nuxeo-api-playground'
 confluence:
     ajs-parent-page-id: '22380745'
     ajs-parent-page-title: REST API
@@ -178,8 +180,6 @@ We made an API Playground available that offers an interactive way to discover t
 
 {{! /excerpt}}
 
-&nbsp;
-
 ## Functional Overview
 
 Nuxeo API Playground can be used online at [http://nuxeo.github.io/api-playground/](http://nuxeo.github.io/api-playground/) or locally at [http://localhost:8080/nuxeo/playground](http://localhost:8080/nuxeo/playground.) after you install the Nuxeo Package on your server (see the [Installation and Configuration](#install-config) section).
@@ -297,8 +297,6 @@ Because the Nuxeo API Playground currently uses the old API, you need to some co
     ![]({{file name='playground_batch_upload_JSON_pasted.png'}} ?w=500,h=496,border=true)
 3.  Click on the **Run** button.
 
-&nbsp;
-
 ## {{> anchor 'install-config'}}Installation and Configuration
 
 ### Installing Nuxeo Playground
@@ -329,15 +327,13 @@ To enable Batch upload set the runtime configuration property `allowClientGenera
 
 If your Nuxeo server and the API Playground are not in the same domain, you need to set up a CORS configuration. We provide a [sample configuration]({{file name='cors-config.xml'}}) file that works as long as you put it in the `NUXEO_HOME/nxserver/config` folder. Read the [CORS documentation]({{page page='cross-origin-resource-sharing-cors'}}) for more details.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Special HTTP Headers]({{page page='special-http-headers'}})
-*   [Automation]({{page page='automation'}})
-*   [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
-*   [REST API]({{page page='rest-api'}})
+- [Special HTTP Headers]({{page page='special-http-headers'}})
+- [Automation]({{page page='automation'}})
+- [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
+- [REST API]({{page page='rest-api'}})
 
 {{/panel}}</div><div class="column medium-6"></div></div>

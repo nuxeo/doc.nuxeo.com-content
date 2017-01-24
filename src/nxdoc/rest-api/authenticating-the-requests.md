@@ -4,6 +4,8 @@ review:
     comment: ''
     date: ''
     status: ok
+version_override:
+    'FT': 'nxdoc/request-authentication'
 confluence:
     ajs-parent-page-id: '22380745'
     ajs-parent-page-title: REST API
@@ -49,9 +51,7 @@ We provide several ways of authenticating the requests.
 Available methods are:
 
 *   Basic
-*   Token based,&nbsp;[oAuth 2.0]({{page page='using-oauth2'}})
+*   Token based, [oAuth 2.0]({{page page='using-oauth2'}})
 *   [Token based](http://github.com/nuxeo/nuxeo-platform-login/tree/release-6.0/nuxeo-platform-login-token) (Nuxeo protocole)
 
 Note: This page should be completed
-
-&nbsp;
