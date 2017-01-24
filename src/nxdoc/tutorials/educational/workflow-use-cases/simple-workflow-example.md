@@ -299,17 +299,17 @@ The following operations have to be done in your Nuxeo Platform before following
 
 ### Creating the Workflow
 
-1.  In the Workflow category, click on **Workflow definitions**.
+1.  In the Workflow category, click on **Process definitions**.
 2.  Click on the **New** button.
 3.  Give the workflow an id ("`SalesProposalWorkflow`"), a label and a description.
     ![]({{file name='Simple_Workflow_000.png'}} ?w=450,border=true)
-4.  Click on the **Next** button.
+4.  Click on the **Ok** button.
 
 ### Defining the Workflow's Availability
 
-Workflows can be launched through a drop down list on the summary screen of every document. Into the &ldquo;Availability&rdquo; tab, you can decide for which type of document the workflow you do will be usable, for which group of users, etc.
+Workflows can be launched through a drop down list on the summary screen of every document. Into the &ldquo;Activation&rdquo; tab, you can decide for which type of document the workflow you do will be usable, for which group of users, etc.
 
-1.  From the workflow, click on the **Availability** tab.
+1.  From the workflow, click on the **Activation** tab.
 2.  In the "Current document has one of the types", select **File**.
     ![]({{file name='Simple_Workflow_002.png'}} ?w=450,h=407,border=true)
 
@@ -320,7 +320,7 @@ A workflow must start with a node for which the "start node" property is checked
 To start the workflow graph:
 
 1.  Click on the **Graph** tab.
-2.  Drag the Start node and drop it on the graph.
+2. You should already have the Start and Stop nodes added by default. If not,  drag and drop them on the graph.
     ![](https://www.lucidchart.com/publicSegments/view/54ede03e-bcb8-4715-a9f3-1f500a008a99/image.png ?w=250,border=true)
 
 ### Defining the Technical Validation Step
@@ -345,7 +345,7 @@ It will already have some of the needed transitions and buttons pre-configured: 
     We will leave aside the &ldquo;Grant permission to task assignees&rdquo; field blank.
     ![](https://www.lucidchart.com/publicSegments/view/54ee07be-a064-41cf-bae5-7b8c0a00c1d4/image.png ?w=450,h=318,border=true)
 4.  Click on the **Save** button of the popup.
-5.  Click on the **Save** button of the workflow feature on the upper right corner.
+5.  Click on the **Save** button of the workflow feature on the bottom left corner.
 
 ### Configuring the Workflow Variables
 
@@ -369,16 +369,18 @@ The form lets the user edit some of the workflow's variables (either at workflow
 #### Configuring the Form
 
 1.  Go back to the &ldquo;Technical validation&rdquo; node.
-2.  Click on the **Form** tab.
+2. Click on the **Variables** tab.
+   Add the hoo_comment to the right collumn.
+3.  Click on the **Form** tab.
     A form like the one to edit a document's layout is displayed.
-3.  Add a field for the comment of the user who validates: Drag the &ldquo;hoo_comment&rdquo; field from the workflow variables schema and drop it on the layout.
-4.  Edit the widget, the same way you edit the form of a document:
+4.  Add a field for the comment of the user who validates: Drag the &ldquo;hoo_comment&rdquo; field from the workflow variables schema and drop it on the layout.
+5.  Edit the widget, the same way you edit the form of a document:
     *   Change its title for "Head of operations comment".
     *   Select the widget type "Textarea".![](https://www.lucidchart.com/publicSegments/view/54eef75e-7264-45c6-a6ff-48240a004b79/image.png ?w=600,border=true)
 
 #### Setting up the tasks buttons
 
-Below the form are the buttons. Two are already available because of the template node you chose. You need to add a third one when the document requires juridical expertise.
+The buttons that are shown on the form are configured on the **Resolution Actions** tab. Two are already available because of the template node you chose. You need to add a third one when the document requires juridical expertise.
 
 1.  Click on **Add task button**.
 2.  Fill in the button id and label.
@@ -416,20 +418,20 @@ Drag the &ldquo;Approve&rdquo; node from the node template library and drop it o
 1.  Open the node properties.
 2.  Rename the node to &ldquo;Juridical advice&rdquo;.
 3.  Define the assignees.
-    This time we would like to ask a member of the &ldquo;Internal_ Lawyers&rdquo; user group to comment instead of a specific person. Therefore, instead of adding a specific username, you may simply add an assignee and use the prefix &ldquo;group:&rdquo; to specify a user group. In this case, we will set the value to &ldquo;`group:Internal_Lawyers`&rdquo;.
+    This time we would like to ask a member of the &ldquo;Internal_ Lawyers&rdquo; user group to comment instead of a specific person. Therefore, instead of adding a specific username, you may simply add an assignee and use the prefix &ldquo;group:&rdquo; to specify a user group. In this case, we will set the value to &ldquo;`group:Internal_Lawyers`&rdquo; and add the "Assignees expression" &ldquo;`NodeVariables["assignees"]`&rdquo;.
 4.  Grant the appropriate rights.
     The internal lawyers may not have the necessary rights to read and/or edit a sales proposal document. To avoid an exception to be thrown because of this, you need to grant them the appropriate rights on the document that needs juridical advice temporarily. This is what the &ldquo;Grant permission to task assignees&rdquo; field is used for. In this case, choose the &ldquo;Read & Edit&rdquo; permission to let them modify the document. Keep in mind that these rights will only be granted during the operations made on this node, and reverted to their previous state when following a transition to another node.
 
     ![](https://www.lucidchart.com/publicSegments/view/54eeffd6-6178-4c1e-997e-28dc0a004b79/image.png ?w=450,h=316,border=true)
 
 #### Configuring the form
-
-1.  Click on the **Form** tab.
-2.  Add the &ldquo;juridical_comment&rdquo; field the same way you did with the &ldquo;Technical validation&rdquo; node.
+1. Click on the **Variables** tab and add the "juridical_comment" and "hoo_comment" variables to the right column.
+2.  Click on the **Form** tab.
+3.  Add the &ldquo;juridical_comment&rdquo; field the same way you did with the &ldquo;Technical validation&rdquo; node.
     ![](https://www.lucidchart.com/publicSegments/view/54ef017a-78e4-4804-9d18-7a9b0a00c10c/image.png ?w=450,border=true)
-3.  Add the &ldquo;hoo_comment&rdquo; as well, but make sure to set it as read only.
+4.  Add the &ldquo;hoo_comment&rdquo; as well, but make sure to set it as read only.
     ![](https://www.lucidchart.com/publicSegments/view/54ef03a2-27f8-4a9a-8ae3-4c3d0a008a99/image.png ?w=450,border=true)
-4.  Click on **Save**.
+5.  Click on **Save**.
     ![](https://www.lucidchart.com/publicSegments/view/54ef1cee-7b44-4fd9-81b1-04a30a00c10c/image.png ?w=450,border=true)
 
 #### Connecting the nodes
@@ -460,13 +462,13 @@ The &ldquo;Approve&rdquo; node will once again be the most appropriate. Pick it 
     ![](https://www.lucidchart.com/publicSegments/view/54ef2737-eb94-4163-ab8a-38890a00c005/image.png ?w=450,border=true)
 
 #### Configuring the form
-
+1. Click on the **Variables** tab and add the "sales_comment" and "hoo_comment" variables to the right column.
 1.  Click on the **Form** tab.
 2.  Add the &ldquo;sales_comment&rdquo; field as well as the &ldquo;hoo_comment&rdquo; field, the latter still in read only mode.
     ![](https://www.lucidchart.com/publicSegments/view/54ef1cee-7b44-4fd9-81b1-04a30a00c10c/image.png ?w=450,border=true)
 3.  Rename the task.
     Calling the task an approval task could lead to confusion for the salesman that wants to submit an updated proposal. Thus, we will rename it.
-    1.  Scroll down to the bottom of the **Form** tab.
+    1.  Click on the **Resolution Actions** tab.
     2.  Click on the **Add task button** link.
     3.  We will use &ldquo;submit_updated_proposal&rdquo; as the task button's id and &ldquo;Submit updated proposal&rdquo; as label.
         ![](https://www.lucidchart.com/publicSegments/view/54ef1de1-3ec4-4911-86be-4e990a004b79/image.png ?w=450,h=313,border=true)

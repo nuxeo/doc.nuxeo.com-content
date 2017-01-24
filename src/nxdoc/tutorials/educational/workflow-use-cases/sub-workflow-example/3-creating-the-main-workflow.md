@@ -22,67 +22,67 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/t43Z'
     source_link: /display/NXDOC/3-+Creating+the+Main+Workflow
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-19 10:47'
         message: 'eplace "Write" by "Edit"     '
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 16:41'
         message: formatting
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 11:47'
         message: Fixed broken links
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-09 16:16'
         message: ''
         version: '10'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-08 11:38'
         message: ''
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-08 10:44'
         message: ''
         version: '8'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-08 10:35'
         message: ''
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:55'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:54'
         message: ''
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:53'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:53'
         message: ''
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:41'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:20'
         message: ''
@@ -101,15 +101,15 @@ We will create the main workflow that will call a subworkflow depending on the d
 
 ## Creating the Workflow
 
-1.  In Nuxeo Studio, go to **Workflow** > **Workflow definitions** and click on the **New** button.
+1.  In Nuxeo Studio, go to **Workflow** > **Process definitions** and click on the **New** button.
 2.  Fill in the fields:
 
     1.  **Feature ID**:&nbsp;`expenseValidation`
     2.  **Label**: Expense validation
     3.  **(Optional) Description**: Request your expense validation.
-3.  Click on the **Next** button.
+3.  Click on the **Ok** button.
 
-### Availability Tab
+### Activtion Tab
 
 This workflow will be a wrapper for the subworkflows. So contrarily to the previous ones we created, it should be visible to the users.
 
