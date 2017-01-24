@@ -2,10 +2,10 @@
 title: Workflow Use Cases
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-24'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '19235679'
     ajs-parent-page-title: Educational
@@ -34,4 +34,3 @@ history:
 *   [Simple Workflow Example]({{page space='NXDOC' page='Simple Workflow+Example'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Company C has decided to be more rigorous on proposals sent by the sales team. A workflow has to be set up so that each proposal is reviewed by the head of operations, this one being able to decide of an additional juridical control.</span>
 *   [Sub Workflow Example]({{page space='NXDOC' page='Sub Workflow+Example'}})&nbsp;&mdash;&nbsp;<span class="smalltext">The subworkflow functionality is the ability to call a workflow from another workflow (creating inception-like workflows), and to pass it variables along the way. The main workflow is suspended while the subworkflow runs, and resumes when the subworkflow ends.</span>
 *   [Workflow Escalation Rules Example]({{page space='NXDOC' page='Workflow Escalation+Rules+Example'}})&nbsp;&mdash;&nbsp;<span class="smalltext">The company OhMyDoc has decided to set up a validation workflow for its press releases, with due dates and automatic escalation to the next step of the workflow after a defined period.</span>
-*   [One step validation flow based on lifecycle only]({{page space='NXDOC' page='One step+validation+flow+based+on+lifecycle+only'}})&nbsp;&mdash;&nbsp;<span class="smalltext">In this tutorial we will implement a chained workflow, that enables to validate a document in one step. We will make sure to store a few important dates on the document and we will log important steps into the document's history. Also, we will make sure that during this workflow, people receive consistent email notifications.</span>
