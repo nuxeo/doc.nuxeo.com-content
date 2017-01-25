@@ -2,10 +2,10 @@
 title: nuxeoctl and Control Panel Usage
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-25'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - nuxeoctl
     - launcher
     - nuxeolauncher
