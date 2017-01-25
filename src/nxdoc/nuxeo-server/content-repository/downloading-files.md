@@ -78,30 +78,27 @@ This page describes the logic for building the correct URL to download a file st
 
 The structure of a download URL is made of:
 
-*   The server URL:&nbsp; `<span class="nolink">http://127.0.0.1:8080/nuxeo</span>`
-*   The download servlet:&nbsp;`nxfile`&nbsp;(note that `nxbigfile` is also accepted for compatibility with older versions)
-*   The repository name and document id:&nbsp;`default/776c8640-7f19-4cf3-b4ff-546ea1d3d496`
-*   An optional file designator, either using a blobholder index, or an explicit blob property name (`blobholder:0`, `blobholder:1`, `file:content`,&nbsp;`files:files/0/file`, etc.)
+*   The server URL: `http://127.0.0.1:8080/nuxeo`
+*   The download servlet: `nxfile` (note that `nxbigfile` is also accepted for compatibility with older versions)
+*   The repository name and document id: `default/776c8640-7f19-4cf3-b4ff-546ea1d3d496`
+*   An optional file designator, either using a blobholder index, or an explicit blob property name (`blobholder:0`, `blobholder:1`, `file:content`, `files:files/0/file`, etc.)
 *   An optional filename, to force the name under which you want the file to be downloaded
 *   An optional `?inline=true` parameter to force the download to be made with `Content-Disposition: inline`, which means that the content will be displayed in the browser (if possible) instead of being download.
 
 Here are some examples:
 
 *   The main file of the document:
-    `<span class="nolink">http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496</span>`
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496`
 *   The main file of the document with a different name:
-    `<span class="nolink">http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:0/mydocument.pdf</span>`
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:0/mydocument.pdf`
 *   An attached file of the document:
-    `<span class="nolink">http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:1</span>`
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:1`
 *   A file stored in the given property:
-    `<span class="nolink">http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/myschema:content</span>`
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/myschema:content`
 *   A file stored in the given complex property, downloaded with a specific filename:
-    `<span class="nolink">http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/files:files/0/file/myimage.png</span>
-    `
-*   The main file of the document inside the browser instead of being downloaded:&nbsp;
-    `<span class="nolink">http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496?inline=true</span>`
-
-&nbsp;
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/files:files/0/file/myimage.png`
+*   The main file of the document inside the browser instead of being downloaded:
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496?inline=true`
 
 * * *
 
