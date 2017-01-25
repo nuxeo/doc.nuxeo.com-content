@@ -5,7 +5,7 @@ review:
     date: '2017-01-24'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - workflow
     - subworkflow
     - sub-workflow
@@ -104,9 +104,9 @@ We will create the main workflow that will call a subworkflow depending on the d
 1.  In Nuxeo Studio, go to **Workflow** > **Process definitions** and click on the **New** button.
 2.  Fill in the fields:
 
-    1.  **Feature ID**:&nbsp;`expenseValidation`
-    2.  **Label**: Expense validation
-    3.  **(Optional) Description**: Request your expense validation.
+    - **Feature ID**:&nbsp;`expenseValidation`
+    - **Label**: Expense validation
+    - **(Optional) Description**: Request your expense validation.
 3.  Click on the **Ok** button.
 
 ### Activtion Tab
@@ -122,9 +122,9 @@ This workflow will be a wrapper for the subworkflows. So contrarily to the previ
 
 1.  Drag and drop the following nodes on your graph:
 
-    1.  A Start node.
-    2.  A Sub Workflow node.
-    3.  An end node (Stop).
+    - A Start node.
+    - A Sub Workflow node.
+    - An end node (Stop).
 2.  Link the start node's output transition to the subworkflow node.
 3.  Link the subworkflow's output transition to the end node.
 4.  Save your modifications.
