@@ -20,7 +20,6 @@ confluence:
         /display/ADMINDOC710/Hotfixes+Installation+Notes+for+Nuxeo+Platform+LTS+2015
 tree_item_index: 1300
 version_override:
-    'FT': '/nxdoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015'
     '6.0': 60/admindoc/hotfixes-installation-notes-for-nuxeo-platform-60
 history:
     -
@@ -283,7 +282,7 @@ If you're using the Automation Client library, you have to get the [latest versi
 
 ### Download URL in JSON Export
 
-[NXP-18239](https://jira.nuxeo.com/browse/NXP-18239) introduces a fix regarding the prefix of the property of the URL of blobs as found in JSON output when querying&nbsp; `nuxeo/api/v1/id/myDocumentId`. For example for a thumbnail it was ending with `/**thumbnail:thumb:thumbnail**/retrievedFile.png` now it has been fixed to `/**thumb:thumbnail**/retrievedFile.png`. You should upgrade your code if it was parsing that kind of URL.
+[NXP-18239](https://jira.nuxeo.com/browse/NXP-18239) introduces a fix regarding the prefix of the property of the URL of blobs as found in JSON output when querying `nuxeo/api/v1/id/myDocumentId`. For example for a thumbnail it was ending with `/**thumbnail:thumb:thumbnail**/retrievedFile.png` now it has been fixed to `/**thumb:thumbnail**/retrievedFile.png`. You should upgrade your code if it was parsing that kind of URL.
 
 ## Hotfix 07
 
@@ -355,6 +354,27 @@ nuxeo.vcs.optimizations.acl.enabled=true
 nuxeo.vcs.optimizations.path.enabled=true
 ```
 
+### Preview on MacOS
+
+[NXP-17001](https://jira.nuxeo.com/browse/NXP-17001) has introduced a regression when Nuxeo Platform is run under MacOS. This is tracked by [NXP-18883](https://jira.nuxeo.com/browse/NXP-18883).
+
+Until this bug is fixed, you will need to use the following contribution as a workaround:
+
+```
+<require>org.nuxeo.ecm.platform.commandline.executor.service.testContrib.magic2</require>
+<extension target="org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent"
+    point="command">
+
+    <command name="pdftohtml" enabled="true">
+      <commandLine>pdftohtml</commandLine>
+      <parameterString> -c -enc UTF-8 -noframes #{inFilePath} #{outDirPath}/index.html</parameterString>
+      <winParameterString> -c -enc UTF-8 -noframes #{inFilePath} #{outDirPath}\index.html</winParameterString>
+      <installationDirective>You need to install pdftohtml</installationDirective>
+    </command>
+
+</extension>
+```
+
 {{! /multiexcerpt}}
 
 &nbsp;
@@ -363,11 +383,11 @@ nuxeo.vcs.optimizations.path.enabled=true
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
-*   [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
+- [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
+- [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [List of hotfixes for Nuxeo Platform LTS 205](https://connect.nuxeo.com/nuxeo/site/marketplace/hotfixes/cap-7.10)
+- [List of hotfixes for Nuxeo Platform LTS 205](https://connect.nuxeo.com/nuxeo/site/marketplace/hotfixes/cap-7.10)
 
 {{/panel}}</div></div>
