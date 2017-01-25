@@ -164,3 +164,11 @@ docker.build('nuxeo-qaimage-php-client', 'docker/qa').inside {
     sh 'phpunit --bootstrap vendor/autoload.php tests/Nuxeo/Tests/Client/TestNuxeoClient.php'
 }
 ```
+
+## Various tips
+
+### Get git current branch
+
+```
+def branch = sh(script: 'rev=$(git rev-parse HEAD); git name-rev $rev | awk \'{ print $2}\'', returnStdout: true)
+```
