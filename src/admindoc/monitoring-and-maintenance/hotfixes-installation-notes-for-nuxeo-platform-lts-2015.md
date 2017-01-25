@@ -282,7 +282,7 @@ If you're using the Automation Client library, you have to get the [latest versi
 
 ### Download URL in JSON Export
 
-[NXP-18239](https://jira.nuxeo.com/browse/NXP-18239) introduces a fix regarding the prefix of the property of the URL of blobs as found in JSON output when querying&nbsp; `nuxeo/api/v1/id/myDocumentId`. For example for a thumbnail it was ending with `/**thumbnail:thumb:thumbnail**/retrievedFile.png` now it has been fixed to `/**thumb:thumbnail**/retrievedFile.png`. You should upgrade your code if it was parsing that kind of URL.
+[NXP-18239](https://jira.nuxeo.com/browse/NXP-18239) introduces a fix regarding the prefix of the property of the URL of blobs as found in JSON output when querying `nuxeo/api/v1/id/myDocumentId`. For example for a thumbnail it was ending with `/**thumbnail:thumb:thumbnail**/retrievedFile.png` now it has been fixed to `/**thumb:thumbnail**/retrievedFile.png`. You should upgrade your code if it was parsing that kind of URL.
 
 ## Hotfix 07
 
@@ -372,7 +372,7 @@ Until this bug is fixed, you will need to use the following contribution as a wo
       <installationDirective>You need to install pdftohtml</installationDirective>
     </command>
 
-  </extension>
+</extension>
 ```
 
 {{! /multiexcerpt}}
@@ -383,11 +383,11 @@ Until this bug is fixed, you will need to use the following contribution as a wo
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
-*   [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
+- [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
+- [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [List of hotfixes for Nuxeo Platform LTS 205](https://connect.nuxeo.com/nuxeo/site/marketplace/hotfixes/cap-7.10)
+- [List of hotfixes for Nuxeo Platform LTS 205](https://connect.nuxeo.com/nuxeo/site/marketplace/hotfixes/cap-7.10)
 
 {{/panel}}</div></div>
