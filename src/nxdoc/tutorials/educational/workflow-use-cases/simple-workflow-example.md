@@ -379,7 +379,7 @@ The form lets the user edit some of the workflow's variables (either at workflow
     *   Change its title for "Head of operations comment".
     *   Select the widget type "Textarea".![](https://www.lucidchart.com/publicSegments/view/54eef75e-7264-45c6-a6ff-48240a004b79/image.png ?w=600,border=true)
 
-#### Setting up the tasks buttons
+#### Setting up the Tasks Buttons
 
 The buttons that are shown on the form are configured on the **Resolution Actions** tab. Two are already available because of the template node you chose. You need to add a third one when the document requires juridical expertise.
 
@@ -388,7 +388,7 @@ The buttons that are shown on the form are configured on the **Resolution Action
 3.  Let the box "Generate the condition for the transition" checked.
  ![]({{file name='Simple_Workflow_008_1.png'}} ?w=450,h=316, border=true)
 
- [comment]:#![](https://www.lucidchart.com/publicSegments/view/54eef82b-1478-42e8-b424-216c0a00c10c/image.png ?w=450,h=316,border=true)
+ ![](https://www.lucidchart.com/publicSegments/view/54eef82b-1478-42e8-b424-216c0a00c10c/image.png ?w=450,h=316,border=true)
 
 #### Check the Transitions
 
@@ -399,24 +399,24 @@ Each button is automatically associated to a transition to define what should be
     ![](https://www.lucidchart.com/publicSegments/view/54eefb02-d68c-4938-8f9d-205e0a008a98/image.png ?w=450,border=true)
 2.  Click on **Save**.
 
-#### Connecting the nodes
+#### Connecting the Nodes
 
 1.  Go back to the graph.
 2.  Link the Start node to the Technical validation node, by pulling an arrow between the unique transition point of the Start node to the input point of the Technical validation node.
     Note that you have three transition points on the technical validation node, ready to be pulled to the next nodes.
     ![]({{file name='Simple_Workflow_012.png'}} ?w=200,border=true,thumbnail=true)
 
-### Defining the &ldquo;Juridical advice&rdquo; node
+### Defining the &ldquo;Juridical Advice&rdquo; Node
 
 Now that we have our &ldquo;Technical validation&rdquo; node set up, we need to create the nodes used for its possible transitions. First comes the &ldquo;Juridical advice&rdquo; node. As most operations have been described before, we will only comment this node&rsquo;s specificities.
 
-#### Adding the node
+#### Adding the Node
 
 Drag the &ldquo;Approve&rdquo; node from the node template library and drop it on the graph.
 
 ![](https://www.lucidchart.com/publicSegments/view/54eefcaf-64e8-42a2-ad51-6ed50a00c10c/image.png ?w=300,border=true)
 
-#### Configuring the &ldquo;Juridical advice&rdquo; node
+#### Configuring the &ldquo;Juridical Advice&rdquo; Node
 
 1.  Open the node properties.
 2.  Rename the node to &ldquo;Juridical advice&rdquo;.
@@ -427,7 +427,7 @@ Drag the &ldquo;Approve&rdquo; node from the node template library and drop it o
 
     ![](https://www.lucidchart.com/publicSegments/view/54eeffd6-6178-4c1e-997e-28dc0a004b79/image.png ?w=450,h=316,border=true)
 
-#### Configuring the form
+#### Configuring the Form
 1. Click on the **Variables** tab and add the "juridical_comment" and "hoo_comment" variables to the right column.
   ![]({{file name='Simple_Workflow_015_1.png'}} ?w=600,border=true)
 2.  Click on the **Form** tab.
@@ -438,22 +438,22 @@ Drag the &ldquo;Approve&rdquo; node from the node template library and drop it o
 5.  Click on **Save**.
     ![](https://www.lucidchart.com/publicSegments/view/54ef1cee-7b44-4fd9-81b1-04a30a00c10c/image.png ?w=450,border=true)
 
-#### Connecting the nodes
+#### Connecting the Nodes
 
 1.  Go back on the graph.
 2.  Search for the technical validation node&rsquo;s juridical advice requirement output point.
 3.  Pull an arrow from there to the juridical advice node&rsquo;s input point.
     ![]({{file name='Simple_Workflow_018.png'}} ?w=200,border=true,thumbnail=true)
 
-### Defining the &ldquo;Proposal update&rdquo; node
+### Defining the &ldquo;Proposal Update&rdquo; Node
 
 You will now take care of the &ldquo;Proposal update&rdquo; node, which will be used in case Jack refuses the proposal.
 
-#### Adding the node
+#### Adding the Node
 
 The &ldquo;Approve&rdquo; node will once again be the most appropriate. Pick it up and drop it on the graph.
 
-#### Configuring the &ldquo;Proposal update&rdquo; node
+#### Configuring the &ldquo;Proposal Update&rdquo; Node
 
 1.  Open the node properties.
 2.  Rename the node to &ldquo;Proposal update&rdquo;.
@@ -465,7 +465,7 @@ The &ldquo;Approve&rdquo; node will once again be the most appropriate. Pick it 
     Note that there are no specific rights to grant there as in this situation the document will be heading back to its creator.
     ![](https://www.lucidchart.com/publicSegments/view/54ef2737-eb94-4163-ab8a-38890a00c005/image.png ?w=450,border=true)
 
-#### Configuring the form
+#### Configuring the Form
 1. Click on the **Variables** tab and add the "sales_comment" and "hoo_comment" variables to the right column.
 ![]({{file name='Simple_Workflow_020_1.png'}} ?w=450,border=true,thumbnail=true)
 
@@ -481,7 +481,7 @@ The &ldquo;Approve&rdquo; node will once again be the most appropriate. Pick it 
     4.  Check the line corresponding to the &ldquo;approve&rdquo; task button and click on the **Delete** link to remove it.
         ![](https://www.lucidchart.com/publicSegments/view/54ef1f66-c4cc-4052-84c9-790a0a00c10b/image.png ?w=450,border=true)
 
-#### Removing the &ldquo;approve&rdquo; transition
+#### Removing the &ldquo;Approve&rdquo; Transition
 
 1.  Click on the **Transitions** tab.
     As you may see, deleting the task button in the previous step does not automatically remove the transition as well. We will do it manually then.
@@ -490,7 +490,7 @@ The &ldquo;Approve&rdquo; node will once again be the most appropriate. Pick it 
 3.  Confirm row deletion on the popup window.
 4.  Click on **Save**.
 
-#### Connecting the nodes
+#### Connecting the Nodes
 
 1.  Go back to the graph.
 2.  Search for the technical validation node&rsquo;s reject output point.
@@ -498,13 +498,13 @@ The &ldquo;Approve&rdquo; node will once again be the most appropriate. Pick it 
 4.  Make sure you connect the proposal update node&rsquo;s output point back to the technical validation node&rsquo;s input point too.
     ![]({{file name='Simple_Workflow_024.png'}} ?w=300,border=true,thumbnail=true)
 
-### Adding the end node
+### Adding the End Node
 
 This is almost finished. The last node needed is the end node. This node sets a possible ending to the workflow. In this situation only one end node will be used, but remember that you may use several end nodes if needed.
 
 Pickup the &ldquo;Stop&rdquo; node from the node template library and drop it on the graph.
 
-### Automating document's metadata update
+### Automating Document's Metadata Update
 
 A document being accepted by the head of operations or the juridical services has to see its metadata updated. This is something we can achieve through an automation chain. Let's see how we will manage this situation.
 
@@ -529,7 +529,7 @@ A document being accepted by the head of operations or the juridical services ha
         You will see that the input operation chain has been automatically filled in thanks to our previous operation.
         ![](https://www.lucidchart.com/publicSegments/view/54ef312f-26f0-40b7-b4d8-31d20a00c10c/image.png ?w=450,border=true)
 
-### Connecting the nodes
+### Connecting the Nodes
 
 1.  Link both the technical validation node&rsquo;s accept output point **and** the juridical advice&rsquo;s outpoint to the end node.
 2.  Save your work.
