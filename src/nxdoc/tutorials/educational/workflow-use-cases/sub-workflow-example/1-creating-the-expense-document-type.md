@@ -2,10 +2,10 @@
 title: 1- Creating the Expense Document Type
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-24'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - workflow
     - subworkflow
     - sub-workflow
@@ -23,72 +23,72 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/r43Z'
     source_link: /display/NXDOC/1-+Creating+the+Expense+Document+Type
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-27 16:06'
         message: 'ix Studio menu label    '
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-17 13:50'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-10 14:01'
         message: Update Schema tab step
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 16:39'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 16:38'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 16:37'
         message: formatting
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 11:43'
         message: Fixed broken links
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-09 16:10'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-09 14:59'
         message: Fixed formatting and typos
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-08 10:36'
         message: ''
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:51'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:46'
         message: ''
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:46'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:11'
         message: ''
@@ -147,7 +147,7 @@ On to the document type creation.
     *   **Feature ID**: Expense
     *   **Extends**: Choose "Nothing"
     *   **Label**: Expense
-3.  Click on the&nbsp;**Next**&nbsp;button.
+3.  Click on the&nbsp;**Ok**&nbsp;button.
 
 ## Defining the Document Type
 

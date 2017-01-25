@@ -2,10 +2,10 @@
 title: 2- Creating the Subworkflows
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-24'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - workflow
     - subworkflow
     - sub-workflow
@@ -139,12 +139,12 @@ Before starting this tutorial step, make sure you create in your Nuxeo Platform 
 
 In our case this workflow will be used if the expense is worth less than $100 and not belonging in the "misc" category, but it needs to be reusable in another context as well.
 
-1.  In Nuxeo Studio, go to **Workflow** > **Workflow definitions** and click on the **New** button.
+1.  In Nuxeo Studio, go to **Workflow** > **Process definitions** and click on the **New** button.
 2.  Fill in the fields:
 
-    1.  **Feature ID**: `subOneLevelValidation`
-    2.  **Label**: Generic one level validation workflow.
-3.  Click on the **Next** button.
+    - **Feature ID**: `subOneLevelValidation`
+    - **Label**: Generic one level validation workflow.
+3.  Click on the **Ok** button.
     The Definition tab of the workflow is displayed.
 
 ### Variables Tab
@@ -166,15 +166,16 @@ We do not want anybody to launch this subworkflow directly, so we will set rules
     As this lifecycle state does not exist, this trick will ensure the workflow will never appear in the drop-down list.
 2.  Save your modifications.
     Look at the result below:
-    ![]({{file name='subonelevel-node1-general-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=400,h=280,border=true)
+
+    ![]({{file name='subtwolevels-variables-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=400,h=280,border=true)
 
 ### Graph Tab
 
 1.  Drag and drop the following nodes on your graph:
 
-    1.  A Start node,
-    2.  An Accept/Reject node,
-    3.  An end node (Stop).
+    - A Start node,
+    - An Accept/Reject node,
+    - An end node (Stop).
 2.  Link the Start node's output to the Accept/Reject node.
 3.  Link the Accept/Reject node's output transitions to the end node.
     Your graph should look like this:
@@ -225,7 +226,7 @@ Set the following values:
 
 In our case this workflow will be used in the other possible situations, but it needs to be reusable in another context as well.
 
-1.  In Nuxeo Studio, go to **Workflow** > **Workflow definitions** and click on the **New** button.
+1.  In Nuxeo Studio, go to **Workflow** > **Process definitions** and click on the **New** button.
 2.  Fill in the fields:
 
     1.  **Feature ID**: `subTwoLevelsValidation`
