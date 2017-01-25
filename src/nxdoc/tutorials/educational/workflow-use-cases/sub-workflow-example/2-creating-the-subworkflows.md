@@ -5,7 +5,7 @@ review:
     date: '2017-01-24'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - workflow
     - subworkflow
     - sub-workflow
@@ -142,8 +142,8 @@ In our case this workflow will be used if the expense is worth less than $100 an
 1.  In Nuxeo Studio, go to **Workflow** > **Process definitions** and click on the **New** button.
 2.  Fill in the fields:
 
-    1.  **Feature ID**: `subOneLevelValidation`
-    2.  **Label**: Generic one level validation workflow.
+    - **Feature ID**: `subOneLevelValidation`
+    - **Label**: Generic one level validation workflow.
 3.  Click on the **Ok** button.
     The Definition tab of the workflow is displayed.
 
@@ -173,9 +173,9 @@ We do not want anybody to launch this subworkflow directly, so we will set rules
 
 1.  Drag and drop the following nodes on your graph:
 
-    1.  A Start node,
-    2.  An Accept/Reject node,
-    3.  An end node (Stop).
+    - A Start node,
+    - An Accept/Reject node,
+    - An end node (Stop).
 2.  Link the Start node's output to the Accept/Reject node.
 3.  Link the Accept/Reject node's output transitions to the end node.
     Your graph should look like this:
