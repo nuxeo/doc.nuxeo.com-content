@@ -11,7 +11,7 @@ details:
         tool: 'Nuxeo Generator, Nuxeo Studio'
         topics: 'Automation, Layout'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - generator
     - lts2016-ok
