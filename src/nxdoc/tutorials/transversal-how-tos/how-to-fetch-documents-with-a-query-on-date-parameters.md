@@ -14,6 +14,7 @@ details:
         topics: 'Automation, Content view'
 labels:
     - howto
+    - lts2016-ok
     - content-view
     - automation
     - studio
@@ -251,7 +252,7 @@ For more informations on the `add()` parameter, you can take a look on the [Cale
 
 #### Event Handler
 
-You can then [bind the automation chain to any event or action]({{page page='how-to-create-an-automation-chain#automation-chain-binding'}}) you want. For example, to fill in the "recall_expiring_date" when the document is created, create a new event handler with the following properties:
+You can then [bind the automation chain to any event or action]({{page space='studio' page='documents'}}#tabs-content-views) you want. For example, to fill in the "recall_expiring_date" when the document is created, create a new event handler with the following properties:
 
 *   **Events**: Document created
 *   **Current document has one of the types**: mydocumenttype
