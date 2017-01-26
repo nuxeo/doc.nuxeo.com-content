@@ -111,6 +111,8 @@ git poll: false, url: 'git@github.com:nuxeo/nuxeo.git'
 step([$class: 'JiraIssueUpdater', issueSelector: [$class: 'DefaultIssueSelector'], scm: scm])
 ```
 
+See https://github.com/jenkinsci/jira-plugin/blob/master/COMPATIBILITY.md#current-status
+
 ## Email Usage
 
 At the time of this writing, the Email-ext plugin is not compatible with pipelines.
