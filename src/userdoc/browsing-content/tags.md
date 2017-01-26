@@ -189,11 +189,11 @@ You can then use the tag cloud to find all documents that have the same tags.
 
 Documents can be tagged in workspaces and in sections. When a document is published, the tags applied in the workspaces are published with the document. Users can add a tag on a document as soon as they can access the document, i.e. as soon as they have reading permissions.
 
-To tag a document, go on the&nbsp;**Summary**&nbsp;tab of the document and click on&nbsp;![]({{file name='add.gif' space='studio' page='studio-icons-index'}})&nbsp;and type the label you want to add.&nbsp;Click on the suggested label to add an existing tag or on the tag in green&nbsp;to create and add a new one.&nbsp;The tag is immediately added on the document and available in the tag cloud.
+To tag a document, go on the **Summary** tab of the document and click on&nbsp;![]({{file name='add.gif' space='studio' page='studio-icons-index'}})&nbsp;and type the label you want to add. Click on the suggested label to add an existing tag or on the tag in green to create and add a new one.&nbsp;The tag is immediately added on the document and available in the tag cloud.
 
-&nbsp;![]({{file name='tags-add.png'}} ?w=350,border=true)
+![]({{file name='tags-add.png'}} ?w=350,border=true)
 
-To remove a tag from a document, click on the icon&nbsp;![]({{file name='delete.png' page='icons-index'}}).&nbsp;The tag is immediately removed.
+To remove a tag from a document, click on the icon&nbsp;![]({{file name='delete.png' page='icons-index'}}). The tag is immediately removed. {{#> callout type='note' heading='Behavior changed from LTS 2015'}} You need to be the user who added the tag on the document or have at least Edit permission on the document to be able to remove a tag from a document. {{/callout}}
 
 ### Tags, Versions and Publication
 
@@ -203,13 +203,11 @@ When you&nbsp;[publish a document]({{page page='publishing-content'}}), the tags
 
 {{! /multiexcerpt}}
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More documentation about tags'}}
 
-*   [Tags developer documentation]({{page space='nxdoc710' page='tagging'}})
+- [Tags developer documentation]({{page space='nxdoc710' page='tagging'}})
 
 {{/panel}}</div><div class="column medium-6">
 
