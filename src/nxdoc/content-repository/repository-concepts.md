@@ -337,13 +337,13 @@ Here is a simple example of a XSD schema used in Nuxeo Core (a subset of Dublin 
 
 ```
 
-A schema file has to be referenced by Nuxeo configuration to be found and used. The schema must be referenced in the&nbsp;**schema**&nbsp;extension point of the&nbsp;`[org.nuxeo.ecm.core.schema.TypeService](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewComponent/org.nuxeo.ecm.core.schema.TypeService)&nbsp;`&nbsp;component. A reference to a schema defines:
+A schema file has to be referenced by Nuxeo configuration to be found and used. The schema must be referenced in the **schema** extension point of the [`org.nuxeo.ecm.core.schema.TypeService`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewComponent/org.nuxeo.ecm.core.schema.TypeService) component. A reference to a schema defines:
 
 *   the schema name,
 *   the schema location (file),
 *   an optional (but recommended) schema prefix.
 
-For example, in the configuration file&nbsp;`OSGI-INF/types-contrib.xml`&nbsp;(the name is just a convention) you can define:
+For example, in the configuration file `OSGI-INF/types-contrib.xml` (the name is just a convention) you can define:
 
 ```
 <?xml version="1.0"?>
