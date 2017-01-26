@@ -252,7 +252,7 @@ For more informations on the `add()` parameter, you can take a look on the [Cale
 
 #### Event Handler
 
-You can then [bind the automation chain to any event or action]({{page space='studio' page='documents'}}#tabs-content-views) you want. For example, to fill in the "recall_expiring_date" when the document is created, create a new event handler with the following properties:
+You can then [bind the automation chain to any event or action]({{page page='how-to-create-an-automation-chain'}}#content-automation-chain-binding) you want. For example, to fill in the "recall_expiring_date" when the document is created, create a new event handler with the following properties:
 
 *   **Events**: Document created
 *   **Current document has one of the types**: mydocumenttype
@@ -329,7 +329,7 @@ In content views the way to fetch all documents for which the "recall date" is o
     *   Recall expiring date,
     *   Lifecycle state.
 
-You can then leverage this [new content view in a tab]({{page space='studio' page='documents#-anchor-tabs-content-views-tabs-content-views'}}) on a custom folder document type for instance.
+You can then leverage this [new content view in a tab]({{page space='studio' page='documents'}}#tabs-content-views) on a custom folder document type for instance.
     ![]({{file name='expiring-documents-content-view.png'}} ?w=600,border=true)
 
 ### Processing Expiring Documents Using an Automation Chain
