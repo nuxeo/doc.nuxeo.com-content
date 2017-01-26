@@ -5,7 +5,7 @@ review:
     date: '2017-01-26'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - workflow
     - escalation
     - excerpt
@@ -203,7 +203,7 @@ Let's define how the workflow's first step, the marketing manager's approval, wo
 ### General Tab
 
 1.  Select the **Accept/Reject** node you just added.
-2.  Hover your mouse over it and click on the edit icon ![]({{file name='NXS-edit-icon.png' space='studio' page='define-your-content-model'}}).
+2.  Hover your mouse over it and click on the edit icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}).
 3.  Fill in the necessary information:
 
     1.  Title: `marketing manager validation`.
@@ -301,18 +301,18 @@ We need two rules for this node: one that reminds Jane to review the document ev
 
         **From:**
         no-reply@ohmydoc.com
-
+        <br/>
         **Message:**
         This is a friendly automated reminder.
         Please remember that you should review the following press release:
         <a \href="${docUrl}">${Document['dc:title']}</a>
-
+        <br/>
         **Subject:**
         [Reminder] Please review `${Document['dc:title']}`
-
+        <br/>
         **To:**
         `@{Fn.getEmail("Jane")}`
-
+        <br/>
         **HTML:**
         `true`
 
@@ -374,7 +374,7 @@ Good! On to the node edition.
 
 ### General Tab
 
-1.  Hover your mouse over the node and click on the edit icon ![]({{file name='NXS-edit-icon.png' space='studio' page='define-your-content-model'}}).
+1.  Hover your mouse over the node and click on the edit icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}).
 2.  Fill in the necessary information:
 
     1.  Title: `general manager validation`.
