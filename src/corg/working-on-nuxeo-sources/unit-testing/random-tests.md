@@ -61,7 +61,7 @@ The parameter `issue` is required. Recommendation is to define a constant, espec
 The parameter `onFailure` is optional and defines the maximum times to repeat the test until success in case of failure (default 10).
 The parameter `onSuccess` is optional and defines the maximum times to repeat the test until failure in case of success (default 30).
 
-The system property `nuxeo.tests.random.mode` allows to customize the RandomBug execution mode. Possibles values are `BYPASS`, `STRICT` or `RELAX`:
+The system property `nuxeo.tests.random.mode` allows to customize the RandomBug execution mode. Possible values are `BYPASS`, `STRICT` or `RELAX`:
 
 *   `RELAX` (default mode)
     The random tests are expected to succeed (if needed, after repeat on failure). Goal is to keep random tests being ran but increase their chances of success. The `onFailure` value limits the number of repeat.
@@ -75,9 +75,9 @@ When to use that annotation?
 *   if you encounter a bug which appears chaotic or non-deterministic. Replaying it in off-line mode sometimes succeeds or fails.
 *   if you need to reproduce a bug supposed to be random.
 
-### Remarks, improvements and limitations
+### Remarks, Improvements and Limitations
 
-#### True random bugs only (Heisenbug or Mandelbug)
+#### True Random Bugs Only (Heisenbug or Mandelbug)
 
 That solution does not fit with conditional bugs (Bohrbug): bugs which are not really random but depend on the environment.
 Such tests must use the `org.nuxeo.runtime.test.runner.ConditionalIgnoreRule.Ignore` annotation to specify ignore conditions for which the test would fail <u>and that is acceptable (i.e. not a bug)</u>.
