@@ -1,11 +1,11 @@
 ---
 title: Audit
 review:
-    comment: 'Needs to be reviewed since the Audit service is relying on Elasticsearch since Nuxeo LTS 2015, yet the SQL implementation is still available. See [NXDOC-702](https://jira.nuxeo.com/browse/NXDOC-702).'
-    date: '2016-12-12'
-    status: not-ok
+    comment: ''
+    date: '2017-01-25'
+    status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - audit
     - audit-component
 toc: true
@@ -109,42 +109,47 @@ history:
         version: '1'
 
 ---
-The Audit Service is used for logging and retrieving audit data into a datastore. The service can be accessed directly via Java API for reading or writing audit entries but the main source for Audit entries is the Nuxeo event bus : the Audit service listen to all events that may occur on the platform (document creation, user logging in, workflow started ...) and according to configuration an Audit record will be created.
+The Audit Service is used for logging and retrieving audit data into a data store. The service can be accessed directly with the Java API for reading or writing audit entries but the main source for Audit entries is the Nuxeo event bus: the Audit Service listens to all events that may occur on the platform (document creation, user logging in, workflow started ...) and according to the configuration an Audit record will be created.
 
 ## Architecture
 
-Audit service is mainly a datastore service. It defines a data record structure that will be used for storing audit information.
+The Audit Service is mainly a data store service. It defines a data record structure that will be used for storing audit information.
 
-The datastore is built over a relational database backend. The data record structure is defined in Java by the LogEntry and ExtendedInfo java classes.
+The data record structure is defined in Java by the `LogEntry` and `ExtendedInfo` Java classes. The Audit Service receives events from the Event Service. Then the Audit Service filters and converts them into log entries. The `LogEntry` class is mainly obtained from a `DocumentEventContext`.
 
-They are mapped onto the datastore using JPA (Java Persistence API) annotations. Audit service receive events from the Event service. Then the Audit service is filtering and converting them into log entries. The LogEntry class is mainly obtained from the DocumentMessage event type.
+Nuxeo documents and events can have a lot of custom properties, so if you want to log some specific events or document properties, the [Extended Info](#extended-info-anchor-extendedinfo-) allows for a Key/Value type storage that will be associated to the main `LogEntry` record. These informations are extracted from the event message using and EL (Expression Language) expression and stored into a map.
 
-JPA data-mapping configuration is not very flexible whereas Nuxeo Documents and events can have a lot of custom properties.
+By default, since Nuxeo LTS 2015, the data store relies on the [Elasticsearch Back-end](#elasticsearch-back-end). To disable Elasticsearh for Audit logs and use the [Legacy SQL Back-end](#legacy-sql-back-end) please refer to the [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#-anchor-disablingelasticsearchforauditlogs-disabling-elasticsearch-for-audit-logs) section.
 
-So, if you want to log some specific event or document properties, the **extendedInfo** allows for a Key/Value type storage that will be associated to the main LogEntry record. These informations are extracted from the event message using EL (Expression Language) expression and stored into a map.
+### Elasticsearch Back-end
 
-There are three tables used by the Audit Service : NXP_LOGS, NXP_LOGS_EXTINFO and NXP_LOGS_MAPEXTINFOS. NXP_LOGS is the main table, it is used most of the time. The two others are used only when the **extendedInfo** extension point is defined.
+The audit entries are stored in the Elasticsearch index named by the `audit.elasticsearch.indexName` property in `nuxeo.conf`.
+
+{{#> callout type='warning' }}
+
+Make sure you read the [Backing Up and Restoring the Audit Elasticsearch Index]({{page page='backup-and-restore'}}#-anchor-backingupandrestoringtheauditelasticsearchindex-backing-up-and-restoring-the-audit-elasticsearch-index) section.
+
+{{/callout}}
+
+Fore more information about the global Elasticsearch setup, see [Elasticsearch Setup]({{page page='elasticsearch-setup'}}).
+
+### Legacy SQL Back-end
+
+If Elasticsearch is disabled for Audit logs, the data store is built over a relational database back-end.
+
+The `LogEntry` and `ExtendedInfo` Java classes are mapped onto the datastore using JPA (Java Persistence API) annotations.
+
+There are three tables used by the Audit Service: `NXP_LOGS`, `NXP_LOGS_EXTINFO` and `NXP_LOGS_MAPEXTINFOS`. `NXP_LOGS` is the main table, it is used most of the time. The two others are used only when the `extendedInfo` extension point is defined.
 
 ![]({{file name='diagram.png'}} ?w=600,border=true)
 
-## Querying the Audit datastorage
+## Querying the Audit Data Store
 
-The Service API is composed by three services :
+The Service API is composed of three services:
 
-*   AuditReader : service for reading data from the audit logs. More details [here](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.platform.audit.api.AuditReader).
-*   AuditLogger : service for adding data into the audit logs. More details [here](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.platform.audit.api.AuditLogger).
-*   AuditAdmin : service for administrating the Audit Service.
-
-You can use AuditReader to do simple queries using the JPA Query language, here an example of getting all the logs of the category 'MyExport' and ordered by the date of the event :
-
-```java
-StringBuffer query = new StringBuffer("from LogEntry log where ");
-query.append(" log.category='");
-query.append("MyExport");
-query.append("'  ORDER BY log.eventDate DESC");
-AuditReader reader = Framework.getService(AuditReader.class);
-List result = reader.nativeQuery(query.toString(), 1, 1);
-```
+* `AuditReader`: service for reading data from the audit logs. More details [here](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.platform.audit.api.AuditReader).
+* `AuditLogger`: service for adding data into the audit logs. More details [here](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.platform.audit.api.AuditLogger).
+* `AuditAdmin`: service for administrating the Audit Service.
 
 A set of methods allows the user to do common queries quiet easily like getting all the log entries for a document, getting a specific log by its id, etc.
 
@@ -165,53 +170,85 @@ filterMap.put("eventId", filter);
 List<LogEntry> logEntriesFiltered = reader.getLogEntriesFor(doc.getId(), filterMap, true);
 ```
 
-There are two PageProviders that could be used for querying the Audit datastorage :
+You can perform some simple queries using the Elasticsearch API, here is an example of getting all the logs of the category 'MyExport' ordered by the date of the event:
 
-*   AuditPageProvider : allows to generate simple queries against Audit entries
-*   DocumentHistoryReader : allows to compute history for a given document
+```java
+List<LogEntry> entries = new ArrayList<>();
+ElasticSearchAdmin esa = Framework.getService(ElasticSearchAdmin.class);
+SearchRequestBuilder builder = esa.getClient()
+                                  .prepareSearch(esa.getIndexNameForType(ElasticSearchConstants.ENTRY_TYPE))
+                                  .setTypes(ElasticSearchConstants.ENTRY_TYPE)
+                                  .setSearchType(SearchType.DFS_QUERY_THEN_FETCH);
+builder.setQuery(QueryBuilders.termQuery("category", "MyExport"));
+builder.addSort("eventDate", SortOrder.DESC);
+SearchResponse searchResponse = builder.execute().actionGet();
+for (SearchHit hit : searchResponse.getHits()) {
+    try {
+        entries.add(AuditEntryJSONReader.read(hit.getSourceAsString()));
+    } catch (IOException e) {
+        log.error("Error while reading Audit Entry from ES", e);
+    }
+}
+```
+
+When using the legacy SQL back-end, you can use `AuditReader` to do simple queries using the JPA Query language:
+
+```java
+StringBuffer query = new StringBuffer("from LogEntry log where ");
+query.append(" log.category='");
+query.append("MyExport");
+query.append("'  ORDER BY log.eventDate DESC");
+AuditReader reader = Framework.getService(AuditReader.class);
+List<LogEntry> result = (List<LogEntry>)reader.nativeQuery(query.toString(), 1, 1);
+```
+
+There are two PageProviders that can be used for querying the Audit data store:
+
+* `AuditPageProvider`: allows to generate simple queries against Audit entries.
+* `DocumentHistoryReader`: allows to compute history for a given document.
 
 [More details on the explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.audit.PageProviderservice.contrib--providers).
 
-A schema has been defined for basic audit search, its name is **basicauditsearch.xsd**. This schema is helpful for building a PageProvider feeding a ContentView with data from the audit datastorage. An object **BasicAuditSearch** could be used to define queries on the audit datastorage.
+A schema has been defined for basic Audit search: `basicauditsearch.xsd`. This schema is helpful for building a PageProvider feeding a ContentView with data from the Audit data store. An object `BasicAuditSearch` could be used to define queries on the audit data store.
 
 ## Extending the Audit Service
 
 There a few extension points used to contribute to the Audit Service :
 
-*   event
-*   extendedInfo
-*   adapter
-*   listener
+* `event`
+* `extendedInfo`
+* `adapter`
+* `listener`
 
-Two others extension points could be defined to configure the datastorage for Audit :
+Two others extension points can be used to configure the datastorage for Audit :
 
-*   hibernate
-*   queues
+* `queues`
+* `hibernate` **for the legacy SQL back-end only**
 
 ### Event
 
-Those default auditable events match Nuxeo core base events :
+Those default auditable events match the Nuxeo core base events:
 
-*   documentCreated
-*   documentCreatedByCopy
-*   documentDuplicated
-*   documentMoved
-*   documentRemoved
-*   documentModified
-*   documentLocked
-*   documentUnlocked
-*   documentSecurityUpdated
-*   lifecycle_transition_event
-*   loginSuccess
-*   loginFailed
-*   logout
-*   documentCheckedIn
-*   versionRemoved
-*   documentProxyPublished
-*   sectionContentPublished
-*   documentRestored
+* `documentCreated`
+* `documentCreatedByCopy`
+* `documentDuplicated`
+* `documentMoved`
+* `documentRemoved`
+* `documentModified`
+* `documentLocked`
+* `documentUnlocked`
+* `documentSecurityUpdated`
+* `lifecycle_transition_event`
+* `loginSuccess`
+* `loginFailed`
+* `logout`
+* `documentCheckedIn`
+* `versionRemoved`
+* `documentProxyPublished`
+* `sectionContentPublished`
+* `documentRestored`
 
-If you are sending new Nuxeo core events and want them audited, you have to extend the extension point **event**. Here is an example of a contribution to the extension point event :
+If you are sending new Nuxeo core events and want them to be audited, you have to extend the `event` extension point. Here is an example of a contribution to this extension point:
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.audit.service.NXAuditEventsService" point="event">
@@ -240,19 +277,17 @@ If you are sending new Nuxeo core events and want them audited, you have to exte
 
 ### Extended Info{{> anchor 'extendedinfo'}}
 
-This service is used to evaluate EL expression using document as context registering results into a Map indexed by names.
+This service is used to evaluate EL expressions using a document as context and registering results into a Map indexed by names.
 
-Just after converting received DocumentMessage instance into the corresponding LogEntry instance, Audit service allows you to extract information from the handling context and to store them.
+Just after converting a received `DocumentEventContext` instance into the corresponding `LogEntry` instance, the Audit Service allows you to extract information from the handling context and to store them.
 
-To do this, you have to define an EL expression and associate it with a key. You can access to the following variables :
+To do this, you have to define an EL expression and associate it with a key. You can access to the following variables:
 
-*   message : Document message describing the event
+* `message`: Document event context describing the event.
+* `source`: Document from which the event is from.
+* `principal`: Identity of the event owner.
 
-*   source : Document from which the event is from
-
-*   principal : Identity of the event owner
-
-If you want to contribute to the extended info of the service, you have to use the extension point **extendedInfo**. Here is an example of a contribution to the extension point :
+If you want to contribute to the extended info of the service, you have to use the `extendedInfo` extension point. Here is an example of a contribution to this extension point
 
 ```xml
 <extension point="extendedInfo" target="org.nuxeo.ecm.platform.audit.service.NXAuditEventsService">
@@ -262,7 +297,7 @@ If you want to contribute to the extended info of the service, you have to use t
 </extension>
 ```
 
-Since 7.4, you can also extend the audit info per event name:
+You can also extend the audit info per event name:
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.audit.service.NXAuditEventsService"
@@ -278,15 +313,15 @@ Since 7.4, you can also extend the audit info per event name:
 </extension>
 ```
 
-For instance, the above contribution will add _modelId, modelName, worklowInitiator, workflowVarriables_&nbsp;to the&nbsp;**extendedInfo** only for the _afterWorkflowStarted_ event**.**
+For instance, the above contribution will add `modelId`, `modelName`, `worklowInitiator`, `workflowVarriables` to the `extendedInfo` only for the `afterWorkflowStarted` event.
 
-When the extension point is contributed, the data are stored into the tables NXP_LOGS_EXTINFO and NXP_LOGS_MAPEXTINFOS.
+When the extension point is contributed, the data are stored into the `audit.elasticsearch.indexName` index for the Elastcisearch back-end and into the `NXP_LOGS_EXTINFO` and `NXP_LOGS_MAPEXTINFOS` tables for the legacy SQL back-end.
 
 [More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--extendedInfo)
 
 ### Adapter
 
-The contribution to the extension point **adapter** in component&nbsp;**org.nuxeo.ecm.platform.audit.service.NXAuditEventsService** allows to define the adapter that will be injected in EL context. Here is an example of a contribution to the extension point adapter.
+The contribution to the `adapter` extension point of the `org.nuxeo.ecm.platform.audit.service.NXAuditEventsService` component allows to define the adapter that will be injected in the EL context. Here is an example of a contribution to this extension point.
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.audit.service.NXAuditEventsService" point="adapter">
@@ -298,7 +333,7 @@ The contribution to the extension point **adapter** in component&nbsp;**org.nuxe
 
 ### Listener
 
-A PostCommit asynchronous listener is defined and pushed an Event Bundle, which is an ordered set of events raised during an user operation, into the Audit log. Here is an example of a contribution to the extension point **listener**.
+A post commit asynchronous listener is defined and an Event Bundle, which is an ordered set of events raised during a user operation, is pushed into the Audit log. Here is an example of a contribution to the `listener` extension point.
 
 ```xml
 <extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
@@ -309,26 +344,9 @@ A PostCommit asynchronous listener is defined and pushed an Event Bundle, which 
 
 [More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--listener)
 
-### Hibernate
-
-Audit used Hibernate as a JPA provider, the configuration is done in the extension point **hibernate**&nbsp;for the target **org.nuxeo.ecm.core.persistence.PersistenceComponent**. This extension point lets you override the default hibernate configuration.
-
-```xml
-<extension target="org.nuxeo.ecm.core.persistence.PersistenceComponent" point="hibernate">
-  <hibernateConfiguration name="nxaudit-logs">
-    <datasource>nxaudit-logs</datasource>
-    <properties>
-      <property name="hibernate.hbm2ddl.auto">update</property>
-    </properties>
-  </hibernateConfiguration>
-</extension>
-```
-
-[More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.persistence.PersistenceComponent--hibernate)
-
 ### Queues
 
-It is also possible to configure queues used by the Audit Service. Each queue is using a separate queue and a single thread for logging. The extension point used to define the queues' parameters is **queue** for the target&nbsp;**org.nuxeo.ecm.core.work.service**.
+It is also possible to configure queues used by the Audit Service. Each queue is using a separate queue and a single thread for logging. The extension point used to define the queues' parameters is `queue` for the `org.nuxeo.ecm.core.work.service` target.
 
 ```xml
 <extension target="org.nuxeo.ecm.core.work.service" point="queues">
@@ -344,6 +362,19 @@ It is also possible to configure queues used by the Audit Service. Each queue is
 
 [More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.work.service--queues)
 
-&nbsp;
+### Hibernate - Legacy SQL Back-end Only
 
-&nbsp;
+In the legacy SQL back-end, the Audit Service  uses Hibernate as a JPA provider. The configuration is done in the `hibernate` extension point for the `org.nuxeo.ecm.core.persistence.PersistenceComponent` target. This extension point lets you override the default Hibernate configuration.
+
+```xml
+<extension target="org.nuxeo.ecm.core.persistence.PersistenceComponent" point="hibernate">
+  <hibernateConfiguration name="nxaudit-logs">
+    <datasource>nxaudit-logs</datasource>
+    <properties>
+      <property name="hibernate.hbm2ddl.auto">update</property>
+    </properties>
+  </hibernateConfiguration>
+</extension>
+```
+
+[More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.persistence.PersistenceComponent--hibernate)
