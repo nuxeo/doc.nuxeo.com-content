@@ -662,28 +662,14 @@ history:
 
 ---
 {{> header_standard}}
-<script>
-(function() {
-    var cx = '{{site.cse_id}}';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-    '//cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-})();
-</script>
 <div class="row">
     <div id="home" class="column large-10 large-centered text-center">
         <div class="row">
             <div class="column">
                 <div id="search-area" class="text-left">
                     <div class="input-group">
-                        <span class="input-group-label">Search Documentation</span>
-                        <div id="search" class="column">
-                            <gcse:search></gcse:search>
-                        </div>
+                        <input id="search-input-full" class="input-group-field" type="search" placeholder="SEARCH DOCUMENTATION&hellip;">
+                        <span class="input-group-label"><i class="fa fa-search"></i></span>
                     </div>
                 </div>
             </div>
@@ -750,5 +736,18 @@ history:
         </div>
     </div>
 </div>
+
+{{! Algolia DocSearch }}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script type="text/javascript"> docsearch({
+apiKey: '482c0a65c92c01569f0d04bac01b5979',
+indexName: 'nuxeo',
+inputSelector: '#search-input-full',
+algoliaOptions: {
+    'filters': 'tags:ft OR tags:static'
+},
+debug: false // Set debug to true if you want to inspect the dropdown
+});
+</script>
 
 {{> footer_standard}}
