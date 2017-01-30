@@ -147,8 +147,8 @@ There are three tables used by the Audit Service: `NXP_LOGS`, `NXP_LOGS_EXTINFO`
 
 The Service API is composed of three services:
 
-* `AuditReader`: service for reading data from the audit logs. More details [here](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.platform.audit.api.AuditReader).
-* `AuditLogger`: service for adding data into the audit logs. More details [here](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.platform.audit.api.AuditLogger).
+* `AuditReader`: service for reading data from the audit logs. [More details](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.platform.audit.api.AuditReader).
+* `AuditLogger`: service for adding data into the audit logs. [More details](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.platform.audit.api.AuditLogger).
 * `AuditAdmin`: service for administrating the Audit Service.
 
 A set of methods allows the user to do common queries quiet easily like getting all the log entries for a document, getting a specific log by its id, etc.
@@ -207,23 +207,23 @@ There are two PageProviders that can be used for querying the Audit data store:
 * `AuditPageProvider`: allows to generate simple queries against Audit entries.
 * `DocumentHistoryReader`: allows to compute history for a given document.
 
-[More details on the explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.audit.PageProviderservice.contrib--providers).
+    [More details on the explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.audit.PageProviderservice.contrib--providers).
 
 A schema has been defined for basic Audit search: `basicauditsearch.xsd`. This schema is helpful for building a PageProvider feeding a ContentView with data from the Audit data store. An object `BasicAuditSearch` could be used to define queries on the audit data store.
 
 ## Extending the Audit Service
 
-There a few extension points used to contribute to the Audit Service :
+There a few extension points used to contribute to the Audit Service:
 
 * `event`
 * `extendedInfo`
 * `adapter`
 * `listener`
 
-Two others extension points can be used to configure the datastorage for Audit :
+Two others extension points can be used to configure the datastorage for Audit:
 
 * `queues`
-* `hibernate` **for the legacy SQL back-end only**
+* `hibernate` **&dash; for the legacy SQL back-end only**
 
 ### Event
 
