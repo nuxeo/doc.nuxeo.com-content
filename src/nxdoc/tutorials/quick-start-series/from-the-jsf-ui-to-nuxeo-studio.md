@@ -2,10 +2,10 @@
 title: From the JSF UI to Nuxeo Studio
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-27'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '19235677'
     ajs-parent-page-title: Quick Start Series
