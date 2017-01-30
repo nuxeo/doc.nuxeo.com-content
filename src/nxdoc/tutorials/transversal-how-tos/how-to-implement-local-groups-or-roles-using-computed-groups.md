@@ -2,7 +2,7 @@
 title: How to Implement Local Groups or Roles Using Computed Groups
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: Studio
         topics: Permissions
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - access-right
     - studio
@@ -148,7 +148,7 @@ In this how to, you will learn how to let managers of a workspace determine who 
 
 The Nuxeo security system gives you all the tools you need to define security from giving a simple right to a specific user on a document to defining complex use cases. You can basically play with ACLs, granting and denying permissions to users and groups. Groups in Nuxeo are defined by users part of the "powerusers" or "administrators" groups, in the [Admin Center]({{page space='userdoc' page='managing-users-and-groups'}}). But it is also possible to define another category of groups, whose content definition is not "manual": the computed groups.
 
-Computed groups let you define a list of groups to which users will be affected using Java code. There are multiple use cases where you will need this feature. Implementation will require Java development knowledge and if you are familiar with Nuxeo Core Development (CoreSession, DocumentModel, UnrestrictedRunner, ...), it's better.
+Computed groups let you define a list of groups to which users will be affected using Java code. There are multiple use cases where you will need this feature. Implementation will require Java development knowledge and if you are familiar with Nuxeo Core Development (CoreSession, DocumentModel, ...), it's better.
 
 Development environment requirements:
 
@@ -264,7 +264,7 @@ In the previous section we asked Nuxeo Runtime to register our new computer grou
 *   So we must first create a class in `src/main/java`, defined in the package `org.nuxeo.project.computed.group`and named `ValidatorsGroupComputer`.
 *   This class must implement the `GroupComputer` interface. The Nuxeo Platform delivers an abstraction of this class with main class implemented named `AbstractGroupComputer`. We suggest to extend this class.
 *   The main method to implement is the `getGroupsForUser` that returns the list of virtual groups to which the user belongs given as parameter.
-*   The difficulty is that when `getGroupsForUser` is called the user is not yet connected. So you must play with the Unrestricted Runner object.
+*   The difficulty is that when `getGroupsForUser` is called the user is not yet connected. So you must execute code as a privileged user.
 
 #### `ValidatorGroupComputer` Class Creation
 
@@ -338,55 +338,37 @@ If you refresh several times your project in the SDK server, you will see `myTes
 
 {{/callout}}
 
-Now, we need to replace this static result by a dynamic one that will be the list of `$idWorkspace_validator` where the user is referenced. But when the `getGroupsForUser`method is called, no Session on the Core Repository is available as the user is not yet connected. Here comes the `UnrestrictedRunner` object.
+Now, we need to replace this static result by a dynamic one that will be the list of `$idWorkspace_validator` where the user is referenced. But when the `getGroupsForUser`method is called, no Session on the Core Repository is available as the user is not yet connected. You will need to explicitly switch to a privileged user.
 
 Here you can find [the project ready to use]({{file name='test-computed-group-static.zip' space='nxdoc56' page='implementing-local-groups-or-roles-using-computed-groups'}}).
 
-#### UnrestrictedRunner Object
+#### CoreInstance.doPrivileged
 
-Extending the `UnrestrictedRunner` object helps you executing code with a session without security constraint, even if you don't have session available.
-
-How it works:
-
-1.  Define a constructor where you will initialize the parameters needed for your code unrestricted execution.
-2.  Implement a run method where a `CoreSession` will be available without restriction.
-3.  Execute the `runUnrestricted` method that will execute your run implementation without restriction.
+The `CoreInstance.doPrivileged` method helps you execute code with a session without security constraint, even if you don't have session available.
 
 Why do we need of this? Because in our example, we would like to fetch all workspaces where the user about to connect is referenced into the `wks:validators` field.
 
 In other words, we would like to make the following query `SELECT * FROM Workspace WHERE wks:validators = 'theUsername'`, to get the id of each workspace to create the dynamic virtual groups list. Here is the code result:
 
-{{#> panel type='code' heading='UnrestrictedRunner Example implementation: get Workspace Ids'}}
+{{#> panel type='code' heading='CoreInstance.doPrivileged Example implementation: get Workspace Ids'}}
 
 ```java
-    protected class GetWorkspaceIds extends UnrestrictedSessionRunner {
-
-        private static final String QUERY_GET_WORKSPACE_IDS = "SELECT ecm:uuid "
-                + "FROM WORKSPACE WHERE wks:validators = '%s'";
-
-        public IterableQueryResult ids = null;
-
-        private String username;
-
-        protected GetWorkspaceIds(String repositoryName, String username)
-                throws Exception {
-            super(repositoryName);
-            this.username = username;
-        }
-
-        @Override
-        public void run() throws ClientException {
-            String query = String.format(QUERY_GET_WORKSPACE_IDS, username);
-            ids = session.queryAndFetch(query, "NXQL");
+List<String> groupIds = new ArrayList<>();
+CoreInstance.doPrivileged(repositoryName, session -> {
+    try (IterableQueryResult results = session.queryAndFetch(query, "NXQL")) {
+        for (Map<String, Serializable> result : results) {
+            String groupId = (String) result.get("ecm:uuid");
+            groupIds.add(groupId);
         }
     }
+});
 ```
 
 {{/panel}}
 
 {{#> callout type='info' }}
 
-You can create this class as a public class, but we suggest to create it directly into the Computer Group.
+This code will be used in the Computer Group.
 
 {{/callout}}
 
@@ -407,74 +389,53 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.nuxeo.ecm.core.api.ClientException;
+
+import org.nuxeo.ecm.core.api.CoreInstance;
 import org.nuxeo.ecm.core.api.IterableQueryResult;
-import org.nuxeo.ecm.core.api.UnrestrictedSessionRunner;
 import org.nuxeo.ecm.core.api.repository.RepositoryManager;
-import org.nuxeo.ecm.platform.computedgroups.AbstractGroupComputer;
 import org.nuxeo.ecm.platform.usermanager.NuxeoPrincipalImpl;
 import org.nuxeo.runtime.api.Framework;
-/**
- * @since 5.7.2
- *
- */
+
 public class ValidatorsGroupComputer extends AbstractGroupComputer {
-    private static final Log log = LogFactory.getLog(ValidatorsGroupComputer.class);
+
+    private static final String QUERY_GET_WORKSPACE_IDS = "SELECT ecm:uuid "
+            + "FROM WORKSPACE WHERE wks:validators = '%s'";
+
     @Override
-    public List<String> getGroupsForUser(NuxeoPrincipalImpl nuxeoPrincipal)
-            throws Exception {
+    public List<String> getGroupsForUser(NuxeoPrincipalImpl nuxeoPrincipal) {
         String username = nuxeoPrincipal.getName();
-        GetWorkspaceIds runner = new GetWorkspaceIds(getRepository(), username);
-        runner.runUnrestricted();
+        String query = String.format(QUERY_GET_WORKSPACE_IDS, username);
+        String repositoryName = Framework.getService(RepositoryManager.class).getDefaultRepositoryName();
         List<String> groupIds = new ArrayList<String>();
-        String groupId = null;
-        for (Map<String, Serializable> id : runner.ids) {
-            groupId = ((String) id.get("ecm:uuid")) + "_validator";
-            log.debug("Virtual Group Id found: " + groupId);
-            groupIds.add(groupId);
-        }
+        CoreInstance.doPrivileged(repositoryName, session -> {
+            try (IterableQueryResult it = session.queryAndFetch(query, "NXQL")) {
+                for (Map<String, Serializable> map : it) {
+                    String groupId = (String) map.get("ecm:uuid");
+                    groupIds.add(groupId);
+                }
+            }
+        });
         return groupIds;
     }
     @Override
-    public List<String> getAllGroupIds() throws Exception {
+    public List<String> getAllGroupIds() {
         // TODO Auto-generated method stub
         return null;
     }
     @Override
-    public List<String> getGroupMembers(String groupName) throws Exception {
+    public List<String> getGroupMembers(String groupName) {
         // TODO Auto-generated method stub
         return null;
     }
     @Override
-    public List<String> getParentsGroupNames(String groupName) throws Exception {
+    public List<String> getParentsGroupNames(String groupName) {
         // TODO Auto-generated method stub
         return null;
     }
     @Override
-    public List<String> getSubGroupsNames(String groupName) throws Exception {
+    public List<String> getSubGroupsNames(String groupName) {
         // TODO Auto-generated method stub
         return null;
-    }
-    protected class GetWorkspaceIds extends UnrestrictedSessionRunner {
-        private static final String QUERY_GET_WORKSPACE_IDS = "SELECT ecm:uuid "
-                + "FROM WORKSPACE WHERE wks:validators = '%s'";
-        public IterableQueryResult ids = null;
-        private String username;
-        protected GetWorkspaceIds(String repositoryName, String username)
-                throws Exception {
-            super(repositoryName);
-            this.username = username;
-        }
-        @Override
-        public void run() throws ClientException {
-            String query = String.format(QUERY_GET_WORKSPACE_IDS, username);
-            ids = session.queryAndFetch(query, "NXQL");
-        }
-    }
-    private String getRepository() {
-        return Framework.getLocalService(RepositoryManager.class).getDefaultRepository().getName();
     }
 }
 ```

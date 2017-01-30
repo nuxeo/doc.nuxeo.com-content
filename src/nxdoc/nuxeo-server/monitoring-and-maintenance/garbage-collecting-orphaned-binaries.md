@@ -2,10 +2,10 @@
 title: Garbage-Collecting Orphaned Binaries
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - delete
 toc: true
 confluence:
@@ -78,22 +78,19 @@ The garbage collection is done by an explicit administration step:
 
 ## Programmatically - Using the Nuxeo Shell or Java Code
 
-##### https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/client/scripts/deleteOrphanBinaries.groovy
 ```java
+import org.nuxeo.ecm.core.blob.BlobManager;
 import org.nuxeo.ecm.core.storage.binary.BinaryManagerStatus;
-import org.nuxeo.ecm.core.storage.sql.management.SQLRepositoryStatus;
-import org.nuxeo.ecm.core.storage.sql.management.SQLRepositoryStatusMBean;
-SQLRepositoryStatusMBean status = new SQLRepositoryStatus();
-if (!status.isBinariesGCInProgress()) {
-    BinaryManagerStatus binaryManagerStatus = status.gcBinaries(true);
+
+BlobManager blobManager = Framework.getService(BlobManager.class);
+if (!blobManager.isBinariesGarbageCollectionInProgress()) {
+    BinaryManagerStatus binaryManagerStatus = blobManager.garbageCollectBinaries(true);
     println("Orphaned binaries garbage collecting result: " + binaryManagerStatus);
 } else {
     println("Orphaned binaries garbage collecting is already in progress.");
 }
+
 ```
-
-Since Nuxeo 7.2, the script file is available in&nbsp;`$NUXEO_HOME/client/scripts/deleteOrphanBinaries.groovy`.
-
 
 * * *
 

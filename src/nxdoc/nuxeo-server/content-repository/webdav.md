@@ -2,10 +2,10 @@
 title: WebDAV
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - webdav
     - webdav-component
     - multiexcerpt-include
@@ -96,7 +96,7 @@ history:
 
 ## Technical Overview
 
-Nuxeo supports the WebDAV (Web-based Distributed Authoring and Versioning_)_ protocol and thus enables you to create and edit Office documents stored in the Nuxeo Platform directly from you OS desktop, without having to go through your Nuxeo application in a browser.
+Nuxeo supports the WebDAV (Web-based Distributed Authoring and Versioning) protocol and thus enables you to create and edit Office documents stored in the Nuxeo Platform directly from you OS desktop, without having to go through your Nuxeo application in a browser.
 
 The documentation about installation and usage of WebDAV can be found [in the Nuxeo Platform User Guide]({{page space='userdoc' page='working-with-webdav'}}).
 

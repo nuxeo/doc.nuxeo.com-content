@@ -2,10 +2,10 @@
 title: Connecting Nuxeo to the Database
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - templates
     - database
     - multiexcerpt-include
@@ -339,7 +339,7 @@ This is the recommended configuration for production, based on PostgreSQL.
 
 The PostgreSQL driver is included in the Nuxeo applications by default. However, if needed you can download a more recent version from [http://jdbc.postgresql.org/download.html#current](http://jdbc.postgresql.org/download.html#current).
 
-The JAR (for instance `postgresql-9.2-1002.jdbc4.jar`) is located in `$NUXEO/lib/`.
+The JAR (for instance `postgresql-9.4-1212.jar`) is located in `$NUXEO/lib/`.
 
 {{#> callout type='tip' }}
 
@@ -356,8 +356,8 @@ See the page [PostgreSQL]({{page page='postgresql'}}) for more information on th
 
 The driver is not included in Nuxeo applications for legal reasons. To install it:
 
-1.  Download the appropriate JDBC driver from [http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html](http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html).
-2.  The JAR (ojdbc6.jar) must be placed in `$NUXEO/lib/`.
+1.  Download the appropriate JDBC driver from [http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html](http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html).
+2.  The JAR (`ojdbc7.jar`) must be placed in `$NUXEO/lib/`.
 
 See the page [Oracle]({{page space='admindoc' page='oracle'}}) for more information on the database configuration.
 
@@ -366,9 +366,9 @@ See the page [Oracle]({{page space='admindoc' page='oracle'}}) for more informat
 *   Repository backend: Microsoft SQL Server XA
 *   Services backend: Microsoft SQL Server XA
 
-The Open Source jTDS driver should be used and is already shipped with Nuxeo (the official Microsoft JDBC driver has problems).
+The Microsoft JDBC driver is already shipped with Nuxeo.
 
-The JAR (for instance `jtds-1.3.0.jar`) is located in `$NUXEO/lib/`.&nbsp;
+The JAR (for instance `sqljdbc-4.2.6420.jar`) is located in `$NUXEO/lib/`.
 
 See the page [Microsoft SQL Server]({{page page='microsoft-sql-server'}}) for more information on the database configuration.
 
