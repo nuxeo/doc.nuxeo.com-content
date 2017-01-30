@@ -92,8 +92,8 @@ The default serial workflow, called "Serial document review", is an ordered work
 
 The workflow is composed of the steps below:
 
-1.  A user decides to start a review on a document and wants several other users to participate one after the other. He executes a Serial document review.
-2.  He selects who will participate to the review and if the document should go the Approved lifecycle state at the end of the workflow. He can then start the workflow.
+1.  A user decides to start a review on a document and wants several other users to participate one after the other. They execute a Serial document review.
+2.  They select who will participate to the review and if the document should go the Approved lifecycle state at the end of the workflow. They can then start the workflow.
     The document is not locked during the workflow.
 3.  Participants gets the document one after the other to approve or reject it:
     - If the participant approves the document, the next participant gets a task to review the document.
@@ -110,8 +110,7 @@ You need to have editing or management permissions to start a workflow.
     The form to select the reviewers and start the workflow is displayed on the **Summary** tab. A **Show graph view** button is also available, that displays the workflow route in a pop-up window.
     A **Workflow** tab is now available on the document from which you can select the reviewers, [delegate your task]({{page page='delegating-a-task'}}), show the graph view but also see the current and previous tasks and [abandon the workflow]({{page page='abandoning-a-workflow'}}).
     ![]({{file name='workflow-choose-reviewers-task-workflow-tab.png'}} ?w=650,border=true)
-2.  In the **Participants on the review** field, type the name of a user or a group you want to add on the workflow and select it in the drop down list. Repeat these two steps to add all the participants to the review. Optionally, drag and drop the participants to change their order on the workflow, or the icon ![]({{file name='action-delete.png' page='icons-index'}}) to remove them.
-    {{{multiexcerpt 'tasks-assigned-to-group' page='Serial Document Workflow'}}}
+2.  In the **Participants on the review** field, type the name of a user or a group you want to add on the workflow and select it in the drop down list. Repeat these two steps to add all the participants to the review. Optionally, drag and drop the participants to change their order on the workflow, or the icon ![]({{file name='action-delete.png' page='icons-index'}}) to remove them. {{{multiexcerpt 'tasks-assigned-to-group' page='Serial Document Workflow'}}}
 3.  Select the type of review you want to do: **Simple review**: the document's state will not change; or the **Validation review**: when all the reviewers have approved the document, it goes to the **Approved** lifecycle state.
     ![]({{file name='workflow-review-type-selection.png'}} ?w=350,border=true)
 4.  Type a comment, indicating the purpose of the review for instance.
@@ -143,7 +142,7 @@ A task assigned to a group is displayed to all the members of the group. As soon
 {{/callout}}
 {{! /multiexcerpt}}
 
-### Approving or Rejecting a Document
+### {{> anchor 'approve-reject-document'}}Approving or Rejecting a Document
 
 Participants can approve the document when it's their turn, after the previous participant on the workflow has approved it. Participants automatically get Edit permission on the document for the time they have a task to perform on the document, if they had Read permission or no access to the document.
 

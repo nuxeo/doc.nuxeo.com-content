@@ -2,7 +2,7 @@
 title: Digital Asset Management with the Nuxeo Platform
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-01-30'
     status: ok
 labels:
     - multiexcerpt
@@ -57,6 +57,7 @@ history:
 {{! multiexcerpt name='Functional_overview'}}
 
 The Nuxeo DAM document types are fully integrated in the Nuxeo Platform and are available alongside the other document types. They can be created the same ways as the platform default document types, they get the same metadata, the same workflows, etc.
+
 ### JSF UI
 #### Pictures
 
@@ -82,25 +83,24 @@ If no picture is available on the current page, it shows the icon ![]({{file nam
 
 ##### Picture Views
 
-When you import a&nbsp;document having the `Picture` facet on your platform, additional formats are available on it.&nbsp;The default ones are:
+When you import a document having the `Picture` facet on your platform, additional formats are available on it. The default ones are:
 
-*   Thumbnail: the picture is converted to JPG and resized to 100px height or width.
-*   Small: the picture is converted to JPG and resized to&nbsp;280 px&nbsp;height or width.&nbsp;
-*   Medium: the picture is converted to JPG and resized to 550 px height or width.
-*   FullHD: the picture is converted to JPG and resized to 1920 px height or width.
+*   Thumbnail: the picture is converted to JPG and resized to 100&nbsp;px height or width.
+*   Small: the picture is converted to JPG and resized to 280&nbsp;px height or width.
+*   Medium: the picture is converted to JPG and resized to 550&nbsp;px height or width.
+*   FullHD: the picture is converted to JPG and resized to 1,920&nbsp;px height or width.
 *   OriginalJpeg: the picture is converted to JPG but the original size is kept. This export is done even if the original picture was a JPG file.
-
 {{#> callout type='tip' }}
 The original and medium pictures can be the same size when you download them if the original is smaller or equal to medium size.
 {{/callout}}
 
-To download the picture view that you want, click on&nbsp;![]({{file name='download.png' space='userdoc58' page='icons-index'}})&nbsp;in front of it.
+To download the picture view that you want, click on&nbsp;![]({{file name='download.png' space='userdoc' page='icons-index'}}) in front of it.
 
 ![]({{file name='Additionnal Picture Views Download.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
 
 {{#> callout type='info' }}
 
-To contribute new picture views, follow this [how-to]({{page space='nxdoc' page='how-to-contribute-picture-conversions'}}).
+To contribute new picture views, follow [How to Contribute Picture Conversions]({{page space='nxdoc' page='how-to-contribute-picture-conversions'}}).
 
 {{/callout}}
 
@@ -170,16 +170,16 @@ Pictures can be created and edited in workspaces and folders like any other docu
 ![]({{file name='Additionnal Picture Views Download-webui.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=300,border=true)
 
 When you import a document having the Picture facet on your platform, additional formats are available on it. The default ones are:
-* Thumbnail: the picture is converted to JPG and resized to 100px height or width.
-* Small: the picture is converted to JPG and resized to 280 px height or width.
-* Medium: the picture is converted to JPG and resized to 550 px height or width.
-* FullHD: the picture is converted to JPG and resized to 1920 px height or width.
+* Thumbnail: the picture is converted to JPG and resized to 100&nbsp;px height or width.
+* Small: the picture is converted to JPG and resized to 280&nbsp;px height or width.
+* Medium: the picture is converted to JPG and resized to 550&nbsp;px height or width.
+* FullHD: the picture is converted to JPG and resized to 1,920&nbsp;px height or width.
 * OriginalJpeg: the picture is converted to JPG but the original size is kept. This export is done even if the original picture was a JPG file.
-{{#> callout type='tip' }}
-The original and medium pictures can be the same size when you download them if the original is smaller or equal to medium size.
-{{/callout}}
+    {{#> callout type='tip' }}
+    The original and medium pictures can be the same size when you download them if the original is smaller or equal to medium size.
+    {{/callout}}
 
-To download the format that you want, click on&nbsp;![]({{file name='download.png' space='userdoc' page='icons-index'}})&nbsp;in front of it.
+To download the format that you want, click on&nbsp;![]({{file name='download.png' space='userdoc' page='icons-index'}}) in front of it.
 
 #### Videos
 
@@ -197,7 +197,7 @@ It is possible to convert the video to various formats from the Web UI user inte
 - WebM
 - MP4
 
-To convert the video, click on&nbsp;![]({{file name='download.png' space='userdoc' page='icons-index'}})&nbsp;corresponding to the format you want.
+To convert the video, click on&nbsp;![]({{file name='download.png' space='userdoc' page='icons-index'}}) corresponding to the format you want.
 
 #### Browsing Assets
 
@@ -208,10 +208,9 @@ Once DAM installed and assets documents created, a new search type is displayed 
 - Height
 - Etc.
 
-&nbsp;
 The Assets search leverages Elasticsearch to provide a quicker and more efficient search. The search form uses Elasticsearch aggregates for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.
 
-![]({{file name='assets-search.png' space='userdoc' page='digital-asset-management-with-the-nuxeo-platform'}} ?w=600,border=true)
+![]({{file name='assets-search.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
 
 The Assets search form offers several search criteria, that you can associate to define your search and find documents. Search results use the thumbnail view by default. Clicking on a document thumbnail will lead you directly to the document.
 
@@ -224,11 +223,9 @@ The Assets search form offers several search criteria, that you can associate to
 
 {{! /multiexcerpt}}
 
-{{! Don't put anything here. }}
-
-* * *
-
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related User Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related User Documentation'}}
 
 - [Creating Content]({{page page='creating-content'}})
 - [Editing Content]({{page page='editing-content'}})
@@ -236,14 +233,15 @@ The Assets search form offers several search criteria, that you can associate to
 
 {{/panel}}
 
-&nbsp;
+</div>
 
-&nbsp;
-
-</div><div class="column medium-6">{{#> panel heading='Other Related Documentation '}}
+<div class="column medium-6">
+{{#> panel heading='Other Related Documentation '}}
 
 - [DAM developer documentation]({{page space='nxdoc' page='digital-asset-management-dam'}})
 - [How to Contribute a New Video Conversion]({{page space='nxdoc' page='how-to-contribute-a-new-video-conversion'}})
 - [How to Contribute Picture Conversions]({{page space='nxdoc' page='how-to-contribute-picture-conversions'}})
 
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>

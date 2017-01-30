@@ -2,7 +2,7 @@
 title: Using Workspace Templates
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-26'
     status: ok
 labels:
     - templates
@@ -108,7 +108,8 @@ Templates are the easiest way to automate the creation of workspace tree structu
 
 **To create a template:**
 
-1.  Click on the left panel of Nuxeo DM on **Templates**.
+1.  Click on **Templates** in the navigation tree.
+
     ![]({{file name='templates-navigation-tree.png'}} ?border=true)
 2.  From there, you can create a new Template containing any type of document, and even files, with the tree structure you want.
 3.  Once a new Template has been created, you can create many workspaces from this template.

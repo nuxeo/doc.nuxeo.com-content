@@ -2,7 +2,7 @@
 title: Nuxeo Virtual Navigation
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
     - content-review-lts2016
@@ -60,23 +60,23 @@ history:
         version: '1'
 
 ---
+{{multiexcerpt 'DeprecatedAddon' space='nxdoc' page='generic-multi-excerpts'}}
+
 {{! excerpt}}
 
 A virtual navigation entry is a tab, just beside the browsing tree, that displays a hierarchical tree representing your vocabulary values. Clicking on one of the values will filter the repository content to display only documents having that value for one of its metadata (depending on the configured query). We call it "Virtual navigation", in opposition to the real filing position, in the folders tree.
 
-The Nuxeo Virtual Navigation add-on provides two navigation trees based on the Subjects and Coverage metadata instead of the folder structure.
+The Nuxeo Virtual Navigation addon provides two navigation trees based on the Subjects and Coverage metadata instead of the folder structure.
 
 {{! /excerpt}}
 
-&nbsp;
-
 ## Installation
 
-The Nuxeo Virtual Navigation add-on requires no specific installation steps. It can be installed like any other package [from the Update Center or from the Marketplace]({{page page='installing-a-new-package-on-your-instance'}}).
+The [Nuxeo Virtual Navigation addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation) requires no specific installation steps. It can be installed like any other package [from the Update Center or from the Marketplace]({{page page='installing-a-new-package-on-your-instance'}}).
 
 After it is installed, two new tabs are available in the Workspace tab left panel:
 
-![]({{file name='virtual_navigation.png'}} ?w=250,border=true,thumbnail=true)
+![]({{file name='virtual_navigation.png'}} ?w=250,border=true)
 
 ## Functional Overview
 
@@ -91,19 +91,23 @@ You can customize the virtual navigation default behavior:
 *   [How to Disable by Coverage and by Subjects Virtual Navigations]({{page page='how-to-disable-by-coverage-and-by-subjects-virtual-navigations'}})
 *   [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
 
-&nbsp;
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related How-Tos'}}
 
-* * *
+- [How to Disable by Coverage and by Subjects Virtual Navigations]({{page page='how-to-disable-by-coverage-and-by-subjects-virtual-navigations'}})
+- [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
+- [How-To Index]({{page page='how-to-index'}})
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
+{{/panel}}
+</div>
 
-*   [How to Disable by Coverage and by Subjects Virtual Navigations]({{page page='how-to-disable-by-coverage-and-by-subjects-virtual-navigations'}})
-*   [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
-*   [How-To Index]({{page page='how-to-index'}})
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+- [Virtual Navigations in Nuxeo Studio]({{page space='studio' page='virtual-navigations'}})
+- [Content Views developer documentation]({{page page='content-views'}})
 
-*   [Virtual Navigations in Nuxeo Studio]({{page space='studio' page='virtual-navigations'}})
-*   [Content Views developer documentation]({{page page='content-views'}})
-
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>

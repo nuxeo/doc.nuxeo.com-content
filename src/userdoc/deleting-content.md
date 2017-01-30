@@ -2,7 +2,7 @@
 title: Deleting Content
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-26'
     status: ok
 labels:
     - delete
@@ -162,7 +162,7 @@ Only users with "Edit" or "Manage everything" permissions can delete documents f
 
 To delete one or several documents, select them from the **Content** tab of the workspace, click on **Delete** and confirm. The documents are moved to the **Trash** tab of the workspace (available to users with management rights only) and do not appear in the workspace's content list anymore. Their lifecycle state is now "deleted".
 
-You can also delete documents using right-click on document from the **Content** tab of the workspace.
+You can also delete documents using right-click on the document's icon from the **Content** tab of the workspace.
 
 ![]({{file name='right-click-menu.png' space='userdoc' page='editing-content'}} ?w=350,border=true)
 
@@ -181,8 +181,6 @@ Users with "Manage everything" permissions can access the workspace's **Trash** 
     ![]({{file name='empty-trash.png' space='userdoc' page='deleting-content'}} ?w=500,h=179,border=true)
 
 {{! /multiexcerpt}}
-
-* * *
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">

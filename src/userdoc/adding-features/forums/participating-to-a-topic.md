@@ -2,7 +2,7 @@
 title: Participating to a Topic
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
     - topic
@@ -92,6 +92,8 @@ history:
         version: '1'
 
 ---
+{{multiexcerpt 'DeprecatedAddon' space='nxdoc' page='generic-multi-excerpts'}}
+
 To participate to a topic, you can add comments in it. The other users will be able to answer your comment.
 
 ## Adding a Comment to a Topic

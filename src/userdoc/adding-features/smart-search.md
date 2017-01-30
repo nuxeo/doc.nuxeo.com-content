@@ -2,7 +2,7 @@
 title: Smart Search
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
     - search
@@ -120,6 +120,8 @@ history:
         version: '1'
 
 ---
+{{multiexcerpt 'DeprecatedAddon' space='nxdoc' page='generic-multi-excerpts'}}
+
 {{! excerpt}}
 
 The [Smart Search package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-smart-search) is a query engine that adds a new search form in the application from which you can build your queries and save them in smart folders. It offers search criteria on content, dates, and metadata.
@@ -128,20 +130,21 @@ The [Smart Search package](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 
 ## Building a Smart Search{{> anchor 'build-query'}}
 
-<span style="color: rgb(0,0,0);">{{{multiexcerpt 'building-smart-search' page='NXDOC:Smart Search'}}}
-</span>
+{{{multiexcerpt 'building-smart-search' page='NXDOC:Smart Search'}}}
 
-## <span style="color: rgb(0,0,0);">Saving a Smart Search</span>
+## Saving a Smart Search
 
 {{{multiexcerpt 'saving-smart-search' page='NXDOC:Smart Search'}}}
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related sections'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related sections'}}
 
-*   [Smart search operators]({{page page='smart-search-operators'}})
-*   [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
+- [Smart search operators]({{page page='smart-search-operators'}})
+- [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
 
-*   [Smart Search developer documentation]({{page space='nxdoc' page='smart-search'}})
+- [Smart Search developer documentation]({{page space='nxdoc' page='smart-search'}})
 
 {{/panel}}</div></div>

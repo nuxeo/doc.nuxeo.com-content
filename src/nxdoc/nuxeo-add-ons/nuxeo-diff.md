@@ -75,4 +75,14 @@ history:
         version: '1'
 
 ---
+## Installation
+
+{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}
+
+## Functional Overview
+
+{{multiexcerpt 'nuxeo-diff-functional-overview' space='userdoc' page='nuxeo-diff'}}
+
+## Technical Overview
+
 {{{md (file_content url='https://raw.githubusercontent.com/nuxeo/nuxeo-diff/master/README.md')}}}
