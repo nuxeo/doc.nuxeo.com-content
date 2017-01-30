@@ -2,7 +2,7 @@
 title: Nuxeo Forum
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
     - forum
@@ -154,6 +154,8 @@ history:
         version: '1'
 
 ---
+{{multiexcerpt 'DeprecatedAddon' space='nxdoc' page='generic-multi-excerpts'}}
+
 {{! excerpt}}
 
 [Nuxeo Forum](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-forum) brings forums into the Nuxeo Platform. A forum is a discussion space in which users can talk together. A forum is organized around different topics, in which users can add comments. Topics and comments are displayed in threads.
