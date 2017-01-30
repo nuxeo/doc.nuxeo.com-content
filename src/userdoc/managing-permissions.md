@@ -2,7 +2,7 @@
 title: Managing Permissions
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-26'
     status: ok
 labels:
     - access-rights
@@ -303,92 +303,87 @@ Some permissions are granted automatically, for example when you create a workfl
 
 ## Permissions Overview
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-
-Permission
-
-</th><th colspan="1">
-
-Actions in Workspaces
-
-</th><th colspan="1">
-
-Actions in Sections
-
-</th></tr><tr><td colspan="1">
-
-Read
-
-</td><td colspan="1">
-
-Consult content
-Comment documents
-Tag documents
-Collect content
-Follow content
-
-</td><td colspan="1">
-
-Consult content
-Comment documents
-Tag documents
-Follow content
-
-</td></tr><tr><td colspan="1">
-
-Edit
-
-</td><td colspan="1">
-
-Create documents
-Edit documents
-Add / remove relations
-Start a workflow
-Delete documents
-+ Read actions
-
-</td><td colspan="1">
-
-Create sections
-Approve/reject pending publications
-Unpublish documents
-Delete sub-sections
-+ Read actions
-
-</td></tr><tr><td colspan="1">
-
-Manage everything
-
-</td><td colspan="1">
-
-Manage permissions
-Set alerts to other users
-Apply a preset look on documents
-Manage deleted documents
-Define publication targets
-+ Edit actions
-+ Read actions
-
-</td><td colspan="1">
-
-Manage permissions
-Set alerts to other users
-Apply a preset look on documents
-Manage deleted documents
-+ Edit actions
-+ Read actions
-
-</td></tr><tr><td colspan="1">
-
-Can ask for publishing
-
-</td><td colspan="1">&nbsp;</td><td colspan="1">
-
-Submit documents for publishing
-
-&nbsp;
-
-</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr><th colspan="1">Permission</th>
+<th colspan="1">Actions in Workspaces</th>
+<th colspan="1">Actions in Sections</th>
+</tr>
+<tr>
+<td colspan="1">Read</td>
+<td colspan="1">
+<ul>
+<li>Consult content</li>
+<li>Comment documents</li>
+<li>Tag documents</li>
+<li>Collect content</li>
+<li>Follow content</li>
+</ul>
+</td>
+<td colspan="1">
+<ul>
+<li>Consult content</li>
+<li>Comment documents</li>
+<li>Tag documents</li>
+<li>Follow content</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1">Edit</td>
+<td colspan="1">
+<ul>
+<li>Create documents</li>
+<li>Edit documents</li>
+<li>Add / remove relations</li>
+<li>Start a workflow</li>
+<li>Delete documents</li>
+<li>+ Read actions</li>
+</ul>
+</td>
+<td colspan="1">
+<ul>
+<li>Create sections</li>
+<li>Approve/reject pending publications</li>
+<li>Unpublish documents</li>
+<li>Delete sub-sections</li>
+<li>+ Read actions</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1">Manage everything</td>
+<td colspan="1">
+<ul>
+<li>Manage permissions</li>
+<li>Set alerts to other users</li>
+<li>Apply a preset look on documents</li>
+<li>Manage deleted documents</li>
+<li>Define publication targets</li>
+<li>+ Edit actions</li>
+<li>+ Read actions</li>
+</ul>
+</td>
+<td colspan="1">
+<ul>
+<li>Manage permissions</li>
+<li>Set alerts to other users</li>
+<li>Apply a preset look on documents</li>
+<li>Manage deleted documents</li>
+<li>+ Edit actions</li>
+<li>+ Read actions</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1">Can ask for publishing</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">Submit documents for publishing</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ## Managing Permissions on Content
 
@@ -398,13 +393,13 @@ To add a permission, at the root of a workspace, a folder or a document, click o
 
 ![]({{file name='add_permission_popup.png'}} ?w=650,h=368,border=true)
 
-The new permission is displayed in the _Permissions defined locally_ part of the screen.
+The new permission is displayed in the **Permissions defined locally** part of the screen.
 
 ### Granting Permissions to External Users (Instant Share)
 
 You can share documents and folders with people that don't usually have access to the application, using their email.
 
-In the _Permissions Assigned to External Users_ part of the screen, click **New** and fill in the popup form. The external person is sent an email notification that contains the link to the document or space. They can access the application only by clicking that link.
+In the **Permissions Assigned to External Users** part of the screen, click **New** and fill in the popup form. The external person is sent an email notification that contains the link to the document or space. They can access the application only by clicking that link.
 
 ![]({{file name='permissions_external_share_popup.png'}} ?w=300,thumbnail=true)
 
@@ -442,7 +437,6 @@ You can search permissions on the following criteria:
 *   **Right**: The permission to be searched for.
 *   **Time Frame**: The dates during which the permission is / was effective.
 *   **Status**: The status of the permission.
-
     *   Pending: The permissions is not yet active, the permission time range has not yet been reached.
     *   Effective: The permission is active.
     *   Archived: The permission is not active anymore, the permission time range is overdue.
@@ -454,12 +448,10 @@ You can search permissions on the following criteria:
 
 The **Purge** tab will enable admins to delete **all** the permissions granted to a user or on a section of the repository.
 
-To **purge the permission** of a user: go to **Admin**&nbsp;> **Permissions**&nbsp;>  **Purge** tab, search the user you want and click on&nbsp;**Search**. The available permissions are displayed, click on **Purge** to confirm. All the permissions for this user are removed.
+To **purge the permission** of a user: go to **Admin**&nbsp;> **Permissions**&nbsp;>  **Purge** tab, search the user you want and click on **Search**. The available permissions are displayed, click on **Purge** to confirm. All the permissions for this user are removed.
 ![]({{file name='permissions_purge.png'}} ?w=600,border=true)
 
 {{! /multiexcerpt}}
-
-* * *
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">

@@ -2,7 +2,7 @@
 title: Working with WebDAV
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-26'
     status: ok
 labels:
     - webdav
@@ -221,9 +221,9 @@ The Nuxeo Platform enables you to create and edit Office documents stored in the
 
 To support this, you don't need to install an extension or configure the Nuxeo Platform. You just need to add the Nuxeo Platform as a network drive. You will then be able to do the following actions on Nuxeo MS Office documents, from your OS desktop directly:
 
-*   create documents and folders,
-*   edit documents,
-*   move documents and folders.
+*   Create documents and folders
+*   Edit documents
+*   Move documents and folders
 
 {{#> callout type='info' heading='Nuxeo Drive'}}
 
@@ -261,7 +261,7 @@ The first time you do the mapping, make sure that you have already logged in to 
 
 #### Connecting to the Nuxeo Platform from Mac OS Finder
 
-1.  From the Finder open the **Connect to Server** popup
+1.  From the Finder open the **Connect to Server** popup.
 2.  Type the address of your Nuxeo application adding the **site/dav/** suffix, for instance "[http://localhost:8080/nuxeo/site/dav/](http://localhost:8080/nuxeo/site/dav/)".
 3.  A connect window opens.Type your login and your password and click on the **OK** button.
 
@@ -269,8 +269,8 @@ The first time you do the mapping, make sure that you have already logged in to 
 
 The plugin comes with a default configuration which supports only a few clients. On Linux, it supports:
 
-*   cadaver, which enables you to browse the content of the Nuxeo application in command line like you would do with a FTP server;
-*   davfs, which enables your to mount the Nuxeo Platform and see it as a file system directory.
+*   cadaver, which enables you to browse the content of the Nuxeo application in command line like you would do with a FTP server
+*   davfs, which enables your to mount the Nuxeo Platform and see it as a file system directory
 
 It is possible to [configure the application to work with other WebDAV clients]({{page space='nxdoc' page='webdav'}}).
 
@@ -278,35 +278,33 @@ It is possible to [configure the application to work with other WebDAV clients](
 
 After you added the Nuxeo application as an external drive, you can browse the content of the Nuxeo Platform from your OS. You can see:
 
-*   workspaces,
-*   folders,
-*   templates,
-*   files,
-*   notes,
-*   pictures.
+*   Workspaces
+*   Folders
+*   Templates
+*   Files
+*   Notes
+*   Pictures
 
-### Editing Documents {{> anchor 'dav-edit'}}
+### {{> anchor 'dav-edit'}}Editing Documents
 
 You can edit office documents available in your Nuxeo workspaces and folders from your OS, like any other local documents.
 The document is automatically locked in the Nuxeo Platform. When you save your modifications, they are saved in the Nuxeo Platform directly. When done, closing the document will unlock the document in the Nuxeo Platform.
 
-### Creating Content in the Nuxeo Platform{{> anchor 'dav-create'}}
+### {{> anchor 'dav-create'}}Creating Content in the Nuxeo Platform
 
 You can create folders and documents in the Nuxeo Platform from your desktop.
 To create documents in a Nuxeo folder or workspace, you can:
 
-*   drag and drop files from a local folder into the target Nuxeo folder,
-*   create the document in the native office application and save it in the Nuxeo folder.
+*   Drag and drop files from a local folder into the target Nuxeo folder,
+*   Create the document in the native office application and save it in the Nuxeo folder.
 
 You can then create, copy and move documents and folders in the Nuxeo Platform via the Windows Explorer or Mac Finder the same way you would do in a local folder.
 
 {{! /multiexcerpt}}
 
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [WebDAV developer documentation ]({{page space='nxdoc' page='webdav'}})
+- [WebDAV developer documentation ]({{page space='nxdoc' page='webdav'}})
 
 {{/panel}}</div><div class="column medium-6">
 

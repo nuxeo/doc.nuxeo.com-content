@@ -2,7 +2,7 @@
 title: User Home
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-25'
     status: ok
 labels:
     - home
@@ -221,7 +221,7 @@ history:
 ---
 Every user has a **Home** tab, that offers user-centric tabs.
 
-*   The [ dashboard ]({{page page='browsing-content#dashboard'}}) provides a quick access to content.
+*   The [dashboard]({{page page='browsing-content#dashboard'}}) provides a quick access to content.
     ![]({{file name='CAP-dashboard.png' page='nuxeo-platform-concepts'}} ?w=650,border=true)
 *   The **Profile** tab enables the user to edit his personal information and his password.
     ![]({{file name='user_profile.png' page='nuxeo-platform-concepts'}} ?w=650,border=true)
@@ -233,23 +233,25 @@ Every user has a **Home** tab, that offers user-centric tabs.
     ![]({{file name='Home-Alerts-tab.png' page='collaborative-features'}} ?w=650,border=true)
 *   The **Users & Groups** tab displays the directory.
     ![]({{file name='user_home_directories.png' page='nuxeo-platform-concepts'}} ?w=650,border=true)
-
 *   The **Searches** tab provides access to the saved faceted searches.
     ![]({{file name='home-searches-tab.png' page='saved-searches'}} ?w=650,border=true)
 *   The Authorized Applications tab lists the external applications that can access Nuxeo data.
 *   The Collections tab lists your [collections]({{page page='collections'}}).
     ![]({{file name='collection-home-tab.png' page='collections'}} ?w=650,border=true)
 
-* * *
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related pages in this documentation'}}
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
+- [Nuxeo Platform Concepts]({{page page='nuxeo-platform-concepts'}})
+- [Collections]({{page page='collections'}})
+- [Collaborative Features]({{page page='collaborative-features'}})
 
-*   [Nuxeo Platform Concepts]({{page page='nuxeo-platform-concepts'}})
-*   [Collections]({{page page='collections'}})
-*   [Collaborative Features]({{page page='collaborative-features'}})
-
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
+<div class="column medium-6">
 
 &nbsp;
 
-</div></div>
+</div>
+</div>

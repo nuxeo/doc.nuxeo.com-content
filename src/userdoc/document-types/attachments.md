@@ -2,7 +2,7 @@
 title: Attachments
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-26'
     status: ok
 labels:
     - attachment
@@ -56,7 +56,7 @@ history:
         version: '1'
 
 ---
-It is possible to add attachments to [Files]({{page page='document-types'}}) and [Notes]({{page page='document-types'}}) using the **Files** tab. This tab is available to users with at least Edit permission. There is no limit to the number of attachments.
+It is possible to add attachments to [Files]({{page page='document-types'}}#file) and [Notes]({{page page='document-types'}}#note) using the **Files** tab. This tab is available to users with at least Edit permission. There is no limit to the number of attachments.
 
 **To add attachments to your document:**
 

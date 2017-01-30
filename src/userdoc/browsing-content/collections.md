@@ -2,7 +2,7 @@
 title: Collections
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-01-26'
     status: ok
 labels:
     - lts2016-ok
@@ -291,8 +291,6 @@ Bookmarking documents in your favorites can be done like when you add documents 
 
 {{! /multiexcerpt}}
 {{! /multiexcerpt}}
-
-* * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 

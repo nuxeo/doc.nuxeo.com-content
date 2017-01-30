@@ -101,7 +101,7 @@ Only the workflow initiator and administrators can abandon a workflow.
 
 Abandoning a workflow means canceling it. When you abandon a workflow, the lifecycle state of the document does not change. The modifications made on the document during the workflow are kept.
 
-Abandoning the workflow can be done at any time. The workflow initiator can also decide to cancel the workflow when he gets an update request from the first reviewer. When the first reviewer [rejects the document]({{page page='serial-document-workflow'}}), it goes back to the initiator, who should then either edit the document and resubmit it, or cancel the review.
+Abandoning the workflow can be done at any time. The workflow initiator can also decide to cancel the workflow when he gets an update request from the first reviewer. When the first reviewer [rejects the document]({{page page='serial-document-workflow'}}#approve-reject-document), it goes back to the initiator, who should then either edit the document and resubmit it, or cancel the review.
 
 **To abandon a workflow:**
 
@@ -120,7 +120,6 @@ Abandoning the workflow can be done at any time. The workflow initiator can also
 2.  Click on the **Cancel the review** button.
     The workflow is immediately stopped. The lifecycle state of the document does not change and the possible modifications done during the workflow are still saved.
 
-* * *
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">

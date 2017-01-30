@@ -2,7 +2,7 @@
 title: Collaborative Features
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-26'
     status: ok
 labels:
     - alert
@@ -84,8 +84,6 @@ The Nuxeo Platform provides you with a set of features that ease collaborative w
 
 {{! /excerpt}}
 
-&nbsp;
-
 ## Lock - Unlock
 
 When you need to work on a document for some time, you don't want other users to edit it at the same time and disturb your own work. This is typically the case where you lock the document by clicking the icon ![]({{file name='lock.gif' page='icons-index'}}).
@@ -112,7 +110,7 @@ See the page [Nuxeo Diff]({{page page='nuxeo-diff'}}) for more details.
 
 ## {{> anchor 'comments'}}Comments
 
-Comments enable users to discuss about the document and its evolution. You can add comments on the documents, via the **Comments** tab.&nbsp;The last comments added on the document are displayed on the **Summary** tab of the document.
+Comments enable users to discuss about the document and its evolution. You can add comments on the documents, via the **Comments** tab. The last comments added on the document are displayed on the **Summary** tab of the document.
 
 ![]({{file name='comments-on-summary.png'}} ?w=650,h=405,border=true)
 
@@ -167,7 +165,7 @@ You cannot unfollow a document when your group was subscribed to alerts on it.
 
 {{/callout}}
 
-On your Home **Alerts** tab, you can see all the events you will be alerted of and the associated documents. From there you can unsubscribe from a specific event by clicking the&nbsp;corresponding **Unsubscribe** button. You won't receive email alerts regarding this event but you will still be notified about the other events.
+On your Home **Alerts** tab, you can see all the events you will be alerted of and the associated documents. From there you can unsubscribe from a specific event by clicking the corresponding **Unsubscribe** button. You won't receive email alerts regarding this event but you will still be notified about the other events.
 
 ![]({{file name='Home-Alerts-tab.png'}} ?w=600,border=true)
 
@@ -184,9 +182,3 @@ Users with Manage everything permission can see the documents the users follow. 
 4.  Click on the **Register** button.
     The modifications are displayed in the list of subscriptions.
     ![]({{file name='manage-subscriptions-user-subscribed.png'}} ?w=350,border=true)
-
-&nbsp;
-
-{{! Don't put anything here. }}
-
-* * *

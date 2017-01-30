@@ -345,7 +345,7 @@ However, if you think the custom UI is the way to go, we'll be happy to help you
 This chapter presents the limitations to the Seam/JSF web application.
 {{! /excerpt}}
 
-### Back and Next Buttons Paradigm and JSF in the Nuxeo Platform
+### {{> anchor 'back-next-paradigm'}} Back and Next Buttons Paradigm and JSF in the Nuxeo Platform 
 
 Nuxeo Platform navigation is based solely on the JSF library.
 
