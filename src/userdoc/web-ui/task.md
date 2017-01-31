@@ -7,6 +7,7 @@ review:
 labels:
     - workflow
 toc: true
+tree_item_index: 300
 description: Web UI User Documentation about Workflows
 ---
 All the documents evolve according to a defined life cycle. The default life cycle is composed of the following states: Project, Approved, Obsolete and Deleted. There are different ways to make documents evolve through this life cycle. One of the ways is to use a workflow.
