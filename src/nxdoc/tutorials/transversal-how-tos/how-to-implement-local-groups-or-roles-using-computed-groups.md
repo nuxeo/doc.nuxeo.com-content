@@ -154,7 +154,7 @@ Development environment requirements:
 
 - A [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) project (for the Workspace modification and User action definition),
 - A [Nuxeo SDK]({{page space='idedoc' page='setting-up-a-nuxeo-sdk'}}) instance ready for test,
-- [Nuxeo IDE]({{page space='idedoc' page='documentation-center-for-nuxeo-platform-ides'}}) (for bundle creation and computed group definition).
+- A Java IDE, like the [Nuxeo Generator]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-generator'}})(for bundle creation and computed group definition).
 
 Examples of uses cases for which you will need computed groups:
 
@@ -195,7 +195,7 @@ We can resume the Computed Group Service like that:
 
 ### Preparing the Project
 
-This part assumes you have [Nuxeo IDE]({{page space='idedoc'}}) configured with the Nuxeo SDK associated and Nuxeo Connect account referenced. Please look at the page [Getting Started with Nuxeo IDE]({{page page='getting-started-with-nuxeo-ide'}}) if you don't.
+This part assumes you have [Nuxeo Generator]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-generator'}}), a Nuxeo Server associated to a Nuxeo Connect account.
 
 1.  Create a new Nuxeo Plugin Project.
 2.  Add the following component:
@@ -322,10 +322,12 @@ In the previous section we asked Nuxeo Runtime to register our new computer grou
 
 As you can see in this example, the computer group statically returns `myTestGroup. Let's test your test environment:`
 
-1.  Start your SDK instance from the Nuxeo IDE interface.
-    See the page [Getting Started with Nuxeo IDE]({{page page='getting-started-with-nuxeo-ide'}}) for details.
-2.  Add your project into the deployment configuration.
-3.  Refresh the deployment server.
+1.  Bootstrap an empty project with [Nuxeo Generator]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-generator'}})
+2.  Make sure the project is correctly configured to be hot reloaded:
+```
+yo nuxeo:hotreload configure
+```
+3.  Hot reload your project.
 4.  Connect as Administrator into your Nuxeo instance.
 5.  Go to **Home** > **Profile**.
 6.  You must see a section virtual user into the main view with the `myTestGroup` referenced.
@@ -446,19 +448,17 @@ public class ValidatorsGroupComputer extends AbstractGroupComputer {
 
 As you can see in this example, the computer group statically returns `myTestGroup. Let's test your test environment:`.
 
-1.  Stop your server from the Nuxeo IDE interface (if you didn't do it).
-2.  Start it again from the Nuxeo IDE interface.
-3.  Add your project into the deployment configuration (if you removed it).
-4.  Refresh the deployment server.
+1.  Restart your server.
+3.  Hot reload your project.
 5.  Connect as Administrator into your Nuxeo instance.
 6.  Go to **Home** > **Profile**.
     You must see a section virtual user into the main view with no group referenced.
 
+
 **TEST 2**
 
-1.  Right-click on your Java project into the Nuxeo IDE.
-2.  Go to **Nuxeo** > **Nuxeo Studio**.
-3.  Check the Nuxeo Studio Project where you defined the Workspace with the workspace schema and validate.
+1.  Open [Nuxeo Studio](https://connect.nuxeo.com/nuxeo/site/studio/ide)
+2.  Check the Nuxeo Studio Project where you defined the Workspace with the workspace schema and validate.
 4.  Refresh.
 5.  Connect as Administrator into your Nuxeo instance.
 6.  Create a workspace and add Administrator as validator.
@@ -495,11 +495,7 @@ This part is a pure Studio demonstration, just a way of making sure our newly de
 
 **TEST**
 
-1.  Stop your server from the Nuxeo IDE interface (if you didn't do it).
-2.  Start it again from the Nuxeo IDE interface.
-3.  Refresh the Nuxeo Studio Panel in Nuxeo IDE interface.
-4.  Add your project into the deployment configuration (if you removed it).
-5.  Refresh the deployment server.
+1.  Deploy your project.
 6.  Connect as Administrator into your Nuxeo instance.
 7.  Create two users: user1 and user2.
 8.  Create a workspace and set user1 as validator.
