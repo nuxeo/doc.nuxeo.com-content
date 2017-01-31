@@ -215,10 +215,6 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
-&nbsp;
-
 Only users with management rights can manage the access rights of a space.
 
 {{! multiexcerpt name=''}}
@@ -255,7 +251,7 @@ There is no precedence of users rights over groups rights or the other way aroun
 1.  Click on the **Manage** tab of the space.
     The **Access Rights** sub-tab is displayed.
 2.  In the form, type the username of the user you want to grant rights to. To give access rights to a group, type the group's name.
-    The names of the users or groups corresponding to the typed characters are automatically displayed as you type.&nbsp;
+    The names of the users or groups corresponding to the typed characters are automatically displayed as you type.
     ![]({{file name='rights-form.png'}} ?w=350,border=true)
 3.  Click on the user you want to give access rights to.
 4.  Select the right to grant in the **Permission** drop down list.
@@ -318,7 +314,7 @@ If a user has inherited rights that you don't want him to have in the current sp
     The usernames corresponding to the typed characters are automatically displayed.
     ![]({{file name='deny-rights.png'}} ?w=450,border=true)
 3.  Click on the user you want to deny rights to.
-4.  Select **Deny** in the Action drop down list.&nbsp;
+4.  Select **Deny** in the Action drop down list.
 5.  Select the right to deny in the **Permission** drop down list.
 6.  Click on the **Add permission** button.
     The user is displayed in the **Local rights** form. The denied rights is displayed in the **Denied permissions** column.
@@ -326,16 +322,13 @@ If a user has inherited rights that you don't want him to have in the current sp
 7.  Save local rights modification by clicking on the **Save local rights** button.
     Local rights are saved and applied.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Want to add your own access rights?'}}
 
-*   [Add a new Permission in the UI]({{page space='studio' page='add-a-new-permission-in-the-ui'}})
+- [Add a new Permission in the UI]({{page space='studio' page='add-a-new-permission-in-the-ui'}})
 
 {{/panel}}</div><div class="column medium-6">
 
-&nbsp;
 
 </div></div>

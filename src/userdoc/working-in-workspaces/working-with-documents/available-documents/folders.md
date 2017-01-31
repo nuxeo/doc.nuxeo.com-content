@@ -155,10 +155,6 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
-&nbsp;
-
 In workspaces, you can create and manage your documents in folders. A folder works like a workspace, but the documents available for creation are limited.
 
 In a folder, you can create:
@@ -218,14 +214,14 @@ You can move one document at a time. If you select more than one document, the m
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related User Documentation'}}
 
-*   [Available Documents]({{page page='available-documents'}})
-*   [Creating Content]({{page page='creating-content'}})
-*   [Working Using Drag and Drop]({{page page='working-using-drag-and-drop'}})
+- [Available Documents]({{page page='available-documents'}})
+- [Creating Content]({{page page='creating-content'}})
+- [Working Using Drag and Drop]({{page page='working-using-drag-and-drop'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Customization Documentation'}}
 
-*   [How to Override Existing Document Types]({{page space='nxdoc60' page='how-to-override-existing-document-types'}})
-*   [How to Define a Document Type]({{page space='nxdoc60' page='how-to-define-a-document-type'}})
-*   [How-To Index]({{page space='nxdoc60' page='how-to-index'}})
+- [How to Override Existing Document Types]({{page space='nxdoc60' page='how-to-override-existing-document-types'}})
+- [How to Define a Document Type]({{page space='nxdoc60' page='how-to-define-a-document-type'}})
+- [How-To Index]({{page space='nxdoc60' page='how-to-index'}})
 
 {{/panel}}</div></div>

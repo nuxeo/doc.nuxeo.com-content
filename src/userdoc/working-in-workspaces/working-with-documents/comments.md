@@ -117,10 +117,6 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
-&nbsp;
-
 You can add comments on the documents, via the **Comments** tab. Comments enable users to discuss about the document and its evolution.
 
 The last comments added on the document are displayed on the **Summary** tab of the document.
@@ -179,18 +175,12 @@ Deleting a comment is a permanent action. You cannot restore deleted comments.
     ![]({{file name='comment-delete.png'}} ?w=650,border=true)
     The comment is immediately erased.
 
-&nbsp;
-
 * * *
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Commenting Assets]({{page page='commenting-assets'}})
+- [Commenting Assets]({{page page='commenting-assets'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

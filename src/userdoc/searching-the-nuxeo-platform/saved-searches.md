@@ -21,32 +21,32 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/9QBFAQ'
     source_link: /display/USERDOC60/Saved+Searches
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-20 14:42'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-20 11:20'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 18:01'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 18:00'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 17:59'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 17:53'
         message: ''
@@ -95,20 +95,18 @@ You can manage your saved searches from the Searches tab of your Home.
 4.  Confirm deletion.
     The search is not available anymore from the Search tab.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More in User Documentation'}}
 
-*   [Default Search]({{page page='default-search'}})
-*   [Quick Search]({{page page='quick-search'}})
-*   [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
+- [Default Search]({{page page='default-search'}})
+- [Quick Search]({{page page='quick-search'}})
+- [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Configuring and Customizing Search '}}
 
-*   [Indexing and Querying How-To Index]({{page space='nxdoc60' page='indexing-and-querying-how-to-index'}})
-*   [Full-Text Queries]({{page space='nxdoc60' page='full-text-queries'}})
-*   [Indexing and Query]({{page space='nxdoc60' page='indexing-and-query'}})
+- [Indexing and Querying How-To Index]({{page space='nxdoc60' page='indexing-and-querying-how-to-index'}})
+- [Full-Text Queries]({{page space='nxdoc60' page='full-text-queries'}})
+- [Indexing and Query]({{page space='nxdoc60' page='indexing-and-query'}})
 
 {{/panel}}</div></div>

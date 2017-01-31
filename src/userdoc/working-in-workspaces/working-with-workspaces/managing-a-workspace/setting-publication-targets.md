@@ -127,10 +127,6 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
-&nbsp;
-
 In order to guide users when they publish documents and make sure documents are published in the correct sections, you can define publication targets for the workspace's documents. Publishing targets are sections in which the documents from the workspace will be publishable. Users will then be able to publish documents only in the sections you have defined.
 
 By default, workspaces don't have any targets defined.
@@ -150,15 +146,11 @@ By default, workspaces don't have any targets defined.
 
 * * *
 
-&nbsp;
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Publishing Documents]({{page page='publishing-documents'}})
-*   [Publisher]({{page space='nxdoc60' page='publisher'}})
+- [Publishing Documents]({{page page='publishing-documents'}})
+- [Publisher]({{page space='nxdoc60' page='publisher'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

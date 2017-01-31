@@ -129,8 +129,6 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
 Alerts are emails automatically sent to users when an event occurs in a space. Users can follow the activity of a document or a space, which means that they will receive an alert when an event occurs on the document or space. Spaces' managers can subscribe users to alerts.
 
 When users follow a document or a space activity, they get an email when the events below happen:
@@ -202,30 +200,16 @@ Users with management rights can see the documents the users follow. They can al
     The modifications are displayed in the list of subscriptions.
     ![]({{file name='manage-subscriptions-user-subscribed.png'}} ?w=350,border=true)
 
-&nbsp;
 
 * * *
 
-&nbsp;
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
-
-&nbsp;
-
-&nbsp;
 
 {{#> panel heading='Customization'}}
 
-*   [How to Customize Email Templates]({{page space='nxdoc60' page='how-to-customize-email-templates'}})
+- [How to Customize Email Templates]({{page space='nxdoc60' page='how-to-customize-email-templates'}})
 
 {{/panel}}
-
-&nbsp;
-
-&nbsp;
-
 </div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

@@ -227,11 +227,11 @@ They can be added from the blog's back-office only.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-*   [Nuxeo Sites and Blogs]({{page page='nuxeo-sites-and-blogs'}})
-*   [Managing Access Rights]({{page page='managing-access-rights'}})
+- [Nuxeo Sites and Blogs]({{page page='nuxeo-sites-and-blogs'}})
+- [Managing Access Rights]({{page page='managing-access-rights'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Customization'}}
 
-*   [WebEngine (JAX-RS)]({{page space='nxdoc60' page='webengine-jax-rs'}})
+- [WebEngine (JAX-RS)]({{page space='nxdoc60' page='webengine-jax-rs'}})
 
 {{/panel}}</div></div>

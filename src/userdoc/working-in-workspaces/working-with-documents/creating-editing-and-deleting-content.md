@@ -40,8 +40,6 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
 {{! excerpt}}
 
 This section describes the core document management features that are the creation, editing and deletion of content.

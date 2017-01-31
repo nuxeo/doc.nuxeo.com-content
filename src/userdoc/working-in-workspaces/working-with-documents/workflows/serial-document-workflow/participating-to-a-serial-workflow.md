@@ -179,13 +179,13 @@ Participants can approve the document when it's their turn, after the previous p
 
 1.  In your **Home**, click on the **Workflow** tab.
     The list of tasks you have to do is displayed.
-2.  Optionally click on the icon&nbsp;![]({{file name='external.gif' page='icons-index'}})&nbsp;to open the document in a new tab, consult it and edit it.
-3.  From the **Workflow** tab, click on the&nbsp;**Process**&nbsp;button.
+2.  Optionally click on the icon ![]({{file name='external.gif' page='icons-index'}}) to open the document in a new tab, consult it and edit it.
+3.  From the **Workflow** tab, click on the **Process** button.
     The Validation task is displayed.
     ![]({{file name='Serial-workflow-task-process.png'}} ?w=650,border=true)
-4.  If you think that you won't be able to process the task,&nbsp;[delegate it]({{page space='USERDOC' page='Delegating a+Task'}}) or [reassign it]({{page page='reassigning-a-task'}}) to another user. If not switch to the next step.
+4.  If you think that you won't be able to process the task, [delegate it]({{page space='USERDOC' page='Delegating a+Task'}}) or [reassign it]({{page page='reassigning-a-task'}}) to another user. If not switch to the next step.
 5.  Optionally, type a comment to indicate what you did on the document before approving it.
-6.  Click on the **Validate**&nbsp;button.
+6.  Click on the **Validate** button.
     The task is not displayed anymore from the Workflow tab and the document. If you originally had read-only access to the document, you can't edit it anymore.
     The next participant can now review the document and approve or reject it.
 
@@ -195,13 +195,13 @@ Participants can reject the document when it's their turn, after the previous pa
 
 **To reject the document:**
 
-1.  In your&nbsp;**Home**, click on the&nbsp;**Workflow**&nbsp;tab.
+1.  In your **Home**, click on the **Workflow** tab.
     The list of tasks you have to do is displayed.
-2.  Optionally click on the icon&nbsp;![]({{file name='external.gif' page='icons-index'}})&nbsp;to open the document in a new tab, consult it and edit it.
-3.  From the&nbsp;**Workflow**&nbsp;tab, click on the&nbsp;**Process**&nbsp;button.
+2.  Optionally click on the icon ![]({{file name='external.gif' page='icons-index'}}) to open the document in a new tab, consult it and edit it.
+3.  From the **Workflow** tab, click on the **Process** button.
     The Validation task is displayed.
     ![]({{file name='Serial-workflow-task-process.png'}} ?w=650,border=true)
-4.  If you think that you won't be able to process the task,&nbsp;[delegate it]({{page space='USERDOC' page='Delegating a+Task'}}) or [reassign it]({{page page='reassigning-a-task'}}) to another user. If not switch to the next step.
+4.  If you think that you won't be able to process the task, [delegate it]({{page space='USERDOC' page='Delegating a+Task'}}) or [reassign it]({{page page='reassigning-a-task'}}) to another user. If not switch to the next step.
 5.  Optionally, type a comment to indicate why you reject the document.
 6.  Click on the **Reject** button.
     The task is not displayed anymore from the Workflow tab and the document. If you originally had read-only access to the document, you can't edit it anymore.
@@ -213,34 +213,23 @@ When the document is rejected by the first reviewer, the document is sent back t
 
 The workflow automatically ends when the last reviewer approves the document, and the document changes state if the initiator [chose to do a validation review]({{page page='starting-a-serial-workflow'}}).
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
-*   [Starting a Serial Workflow]({{page page='starting-a-serial-workflow'}})
-*   [Delegating a Task]({{page page='delegating-a-task'}})
-*   [Reassigning a Task]({{page page='reassigning-a-task'}})
-*   [Abandoning a Workflow]({{page page='abandoning-a-workflow'}})
-*   [Parallel Document Workflow]({{page page='parallel-document-workflow'}})
+- [Starting a Serial Workflow]({{page page='starting-a-serial-workflow'}})
+- [Delegating a Task]({{page page='delegating-a-task'}})
+- [Reassigning a Task]({{page page='reassigning-a-task'}})
+- [Abandoning a Workflow]({{page page='abandoning-a-workflow'}})
+- [Parallel Document Workflow]({{page page='parallel-document-workflow'}})
 
 {{/panel}}
-
-&nbsp;
-
-&nbsp;
 
 </div><div class="column medium-6">{{#> panel heading='Customizing the workflow'}}
 
-*   [Workflow How-To Index]({{page space='nxdoc60' page='workflow-how-to-index'}})
-*   [Workflow Studio documentation]({{page space='studio' page='workflow'}})
-*   [Workflow developer documentation overview]({{page space='nxdoc60' page='workflow'}})
+- [Workflow How-To Index]({{page space='nxdoc60' page='workflow-how-to-index'}})
+- [Workflow Studio documentation]({{page space='studio' page='workflow'}})
+- [Workflow developer documentation overview]({{page space='nxdoc60' page='workflow'}})
 
 {{/panel}}
-
-&nbsp;
-
-&nbsp;
-
 </div></div>

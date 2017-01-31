@@ -145,8 +145,6 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
 From the "Local configuration" sub-tab of the **Manage** tab, you can set preferences on what content can be created in the current space, how the lists of content should be presented, customized search features...
 
 The Nuxeo Platform uses different presentations for the lists of documents: they can have different layouts, display specific informations on the documents, have a different default number of documents on a page, enable some features on the documents, etc. These predefined presentations of lists of documents are called "Content views".
@@ -193,12 +191,12 @@ You can leverage this feature when you customize the Nuxeo Platform and create n
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-*   [Managing a Workspace]({{page page='managing-a-workspace'}})
-*   [Applying a Preset Look to a Space]({{page page='applying-a-preset-look-to-a-space'}})
+- [Managing a Workspace]({{page page='managing-a-workspace'}})
+- [Applying a Preset Look to a Space]({{page page='applying-a-preset-look-to-a-space'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related topics in other documentation'}}
 
-*   [How to Define a New Content View]({{page space='nxdoc60' page='how-to-define-a-new-content-view'}})
-*   [How to Customize the Default Content and Trash Listings]({{page space='nxdoc60' page='how-to-customize-the-default-content-and-trash-listings'}})
+- [How to Define a New Content View]({{page space='nxdoc60' page='how-to-define-a-new-content-view'}})
+- [How to Customize the Default Content and Trash Listings]({{page space='nxdoc60' page='how-to-customize-the-default-content-and-trash-listings'}})
 
 {{/panel}}</div></div>

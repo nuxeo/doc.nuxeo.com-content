@@ -20,114 +20,114 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/NwFFAQ'
     source_link: /display/USERDOC60/Nuxeo+Multi-tenant
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 14:53'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 11:53'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 11:53'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-23 11:53'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-04 23:45'
         message: >-
             Removed related topics from TOC and added precision about members
             group being optional
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-05 16:15'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-05 16:15'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-05 15:47'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-05 15:45'
         message: Added multi-tenancy activation section
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-05 15:22'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-19 16:41'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migrated to Confluence 4.0
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:38'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-18 17:06'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-18 16:54'
         message: Added global admin Vs tenant admin section
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-18 11:18'
         message: Added screenshots
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-15 17:42'
         message: Added information on access right management in the tenant
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-15 17:01'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-15 16:55'
         message: Added related content links
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-15 16:32'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-14 14:17'
         message: ''
@@ -220,7 +220,7 @@ It takes two steps to make a user a tenant administrator.
 
 On a default installation of the Nuxeo Platform, access rights are configured so members have read access to the content. This behavior can be modified by changing the access rights.
 
-Users created by the tenant administrators automatically have "Read" access to the tenant. Indeed, they are automatically members of a virtual group that has "Read" right on the tenant.&nbsp;They don't need to be part of the default "members" group, being a member of the tenant is enough to access content.
+Users created by the tenant administrators automatically have "Read" access to the tenant. Indeed, they are automatically members of a virtual group that has "Read" right on the tenant. They don't need to be part of the default "members" group, being a member of the tenant is enough to access content.
 
 Tenant administrators can then [delegate access rights]({{page page='managing-access-rights'}}) in the tenant, which will define what the user can do in the tenant.
 
@@ -231,18 +231,13 @@ See the [Managing Vocabularies]({{page page='managing-vocabularies'}}) page.
 
 * * *
 
-&nbsp;
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related user documentation'}}
 
-*   [Managing Users and Groups]({{page page='managing-users-and-groups'}})
-*   [Managing Access Rights]({{page page='managing-access-rights'}})
-*   [Managing Vocabularies]({{page page='managing-vocabularies'}})
+- [Managing Users and Groups]({{page page='managing-users-and-groups'}})
+- [Managing Access Rights]({{page page='managing-access-rights'}})
+- [Managing Vocabularies]({{page page='managing-vocabularies'}})
 
 {{/panel}}</div><div class="column medium-6">
 
-&nbsp;
-
-&nbsp;
 
 </div></div>

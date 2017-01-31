@@ -179,10 +179,6 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
-&nbsp;
-
 The Nuxeo Platform enables you to create, edit and share documents within the application.
 
 ## Available Documents

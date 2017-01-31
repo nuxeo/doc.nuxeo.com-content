@@ -142,17 +142,13 @@ You can also delete documents using right-click on document from the **Content**
 
 ![]({{file name='right-click-menu.png' page='editing-content'}} ?w=350,border=true)
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Managing Deleted Documents]({{page page='managing-deleted-documents'}})
-*   [How to Enable the Trash Feature]({{page space='nxdoc60' page='how-to-enable-the-trash-feature'}})
+- [Managing Deleted Documents]({{page page='managing-deleted-documents'}})
+- [How to Enable the Trash Feature]({{page space='nxdoc60' page='how-to-enable-the-trash-feature'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

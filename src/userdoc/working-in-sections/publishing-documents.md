@@ -20,156 +20,154 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/MQFFAQ'
     source_link: /display/USERDOC60/Publishing+Documents
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 15:19'
         message: ''
         version: '28'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-08-31 09:06'
         message: Removed reference to 5.7.1
         version: '27'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-08-31 09:04'
         message: Fixed necessary right for publishing
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-28 09:04'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-03 16:14'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-03 16:03'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-14 15:09'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-14 15:04'
         message: Added details on version increment upon publication
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-29 17:47'
         message: >-
             Made pending document visibility to different section users more
             explicit
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-29 15:52'
         message: >-
             Made minimul required rights to submit a document to publication
             more explicit
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:23'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-18 18:35'
         message: Added info about enabling relations duplication
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-18 18:09'
         message: >-
             Added description of the elements kept and not when a document is
             published
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-04 15:58'
         message: Added new republishing feature
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 17:24'
         message: Removed related topics from TOC
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-23 11:15'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-04 12:27'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-23 17:33'
         message: Migrated to Confluence 4.0
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-23 17:33'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:57'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 17:59'
         message: added related content
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 14:59'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-18 18:43'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-18 18:35'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-18 11:09'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-18 11:09'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-18 11:06'
         message: added screenshots
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-29 18:03'
         message: ''
         version: '1'
 
 ---
-&nbsp;
-
 When you want to publish a document, you need to submit it to publishing. When the document is submitted to publication, the section's managers can approve the publication submission, that is to say publish the document, or reject it. In that last case, the document is not available in the section. However, it is still available in the workspace. You can modify it and submit it again.
 
 When you publish a document, the following elements are kept from the workspace document:
@@ -303,13 +301,11 @@ Unpublishing a document deletes the document from the section, but it does not d
 2.  Click on the **Unpublish** button.
     The document is unpublished and does not appear in the section. The original document in the workspace is not deleted.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
-*   [Setting Publication Targets]({{page page='setting-publication-targets'}})
+- [Setting Publication Targets]({{page page='setting-publication-targets'}})
 
 {{/panel}}</div><div class="column medium-6">
 

@@ -137,11 +137,7 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
-&nbsp;
-
-The Nuxeo Platform allows the import of documents from your desktop using drag and drop.Drag and drop is based on the HTML 5 standard and is available on all browsers that support the HTML 5 Drag and drop, without extension.&nbsp;Basically, this includes Firefox 3.6+, Chrome10+, Safari 5+, IE 10+ (which means all the browsers&nbsp;supported by Nuxeo Platform 6.0).
+The Nuxeo Platform allows the import of documents from your desktop using drag and drop.Drag and drop is based on the HTML 5 standard and is available on all browsers that support the HTML 5 Drag and drop, without extension. Basically, this includes Firefox 3.6+, Chrome10+, Safari 5+, IE 10+ (which means all the browsers supported by Nuxeo Platform 6.0).
 
 It is also possible to move documents and publish them using drag and drop. Based on JavaScript these features are available on all JS-compatible browsers.
 
@@ -157,8 +153,8 @@ You can use Drag and Drop to easily import content into Nuxeo or just to create 
 To import content into Nuxeo, drag an item from your computer and drop it into a workspace. The document is then automatically created in the workspace and its title is the name of the original file, and no metadata is filled in. You can also drop files in your worklist. The document is then created in your personal workspace.
 You can drag and drop one or more files in Nuxeo.
 
-_![]({{file name='HTML5-DnD.png'}} ?w=650,border=true)
-_
+![]({{file name='HTML5-DnD.png'}} ?w=650,border=true)
+
 
 You can drop any file type in Nuxeo.
 
@@ -214,7 +210,9 @@ Picture (.jpg, .png, etc)
 
 Picture
 
-</td></tr></tbody></table></div>{{! /multiexcerpt}}
+</td></tr></tbody></table></div>
+
+{{! /multiexcerpt}}
 
 ### Import with Metadata
 
@@ -261,18 +259,16 @@ To publish a document using drag and drop:
     ![]({{file name='publish_D&D.png'}} ?w=500,h=290,border=true)
     The document is immediately published.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Creating Content]({{page page='creating-content'}})
-*   [Copying and Moving Documents]({{page page='copying-and-moving-documents'}})
-*   [Publishing Documents]({{page page='publishing-documents'}})
+- [Creating Content]({{page page='creating-content'}})
+- [Copying and Moving Documents]({{page page='copying-and-moving-documents'}})
+- [Publishing Documents]({{page page='publishing-documents'}})
 
 {{/panel}}</div><div class="column medium-6">
 
-&nbsp;
+
 
 </div></div>

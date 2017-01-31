@@ -173,16 +173,14 @@ When you delete a workspace, you also delete its content. This action moves the 
 3.  In the window that pops up, click on the **OK** button.
     The parent workspace **Content** tab is displayed: the deleted workspace is not displayed anymore.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Pages'}}
 
-*   [Managing a Workspace]({{page page='managing-a-workspace'}})
+- [Managing a Workspace]({{page page='managing-a-workspace'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Customization'}}
 
-*   [How to Override Existing Document Types]({{page space='nxdoc60' page='how-to-override-existing-document-types'}})
+- [How to Override Existing Document Types]({{page space='nxdoc60' page='how-to-override-existing-document-types'}})
 
 {{/panel}}</div></div>

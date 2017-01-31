@@ -108,8 +108,6 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
 If customized search forms have been contributed, it is possible to define which one to display from a space. This enables users to have search forms adapted to the documents and processes used in the space.
 
 It is possible to enable several search forms on a space. This allows users to have several forms and possibly predefined searches that they can edit.
@@ -133,21 +131,12 @@ To remove a search, move it back to the "Existing content view" list on the left
 
 {{/callout}}
 
-&nbsp;
-
-&nbsp;
-
 * * *
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
-*   [How to Configure a Search Filter With Facets and Other Aggregates]({{page space='nxdoc60' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
+- [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
+- [How to Configure a Search Filter With Facets and Other Aggregates]({{page space='nxdoc60' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
 </div></div>

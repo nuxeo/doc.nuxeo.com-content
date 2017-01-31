@@ -77,8 +77,6 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
 Relations are information that connect the application's documents with other documents or external resources. Documents are thus part of a coherent and organized structure.
 
 A summary of the document's relations is displayed in the **Summary** tab.
@@ -134,16 +132,12 @@ You can delete outgoing relations only.
 2.  Click on the **Delete** link corresponding to the relation.
     The relation is deleted and does not appear in the table anymore. It is also removed from the incoming relations of the target document.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [How to Add New Relation Types]({{page page='how-to-add-new-relation-types'}})
+- [How to Add New Relation Types]({{page page='how-to-add-new-relation-types'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

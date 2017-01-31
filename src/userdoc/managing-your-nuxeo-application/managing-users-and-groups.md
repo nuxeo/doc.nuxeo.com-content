@@ -290,7 +290,7 @@ Inviting a new user means creating a user account without setting its password, 
 
 1.  In the invitation email, click on the validation link.
     A browser page opens.
-    ![]({{file name='invitation-password-creation.png'}} ?w=300,border=true,thumbnail=true)
+    ![]({{file name='invitation-password-creation.png'}} ?w=300,border=true)
 2.  Define your password and click on the **Submit** button.
     Your user account is created. You are redirected to the login page of the Nuxeo Platform: you can now log in and use the Platform.
 
@@ -306,7 +306,7 @@ When you create a new user account immediately, you choose and set the user's pa
     The invitation form is displayed.
 3.  Check the box **Set password for immediate user creation**.
     The complete user creation form with the password creation form is displayed.
-4.  Fill in the user creation form.&nbsp;
+4.  Fill in the user creation form.
     Mandatory fields are indicated by a red asterisk.
 
 5.  Click on the **Save** button.
@@ -319,7 +319,7 @@ When you create a new user account immediately, you choose and set the user's pa
     {{/callout}}
 
     The user can immediately connect to the Nuxeo application using his or her username and password.
-    ![]({{file name='users-card-view.png'}} ?w=300,border=true,thumbnail=true)
+    ![]({{file name='users-card-view.png'}} ?w=300,border=true)
 
 ### Editing a User's Properties
 
@@ -348,7 +348,7 @@ Only administrators and power users can modify other users' password. However ev
 
 When you use an external directory for users management, the **Change password** tab is not displayed as you cannot edit your password.
 
-![]({{file name='users-card-password.png'}} ?w=300,border=true,thumbnail=true)
+![]({{file name='users-card-password.png'}} ?w=300,border=true)
 
 **To modify a user's password:**
 
@@ -381,7 +381,7 @@ Deleting a user is a permanent action.
 3.  Click on the **Delete** button.
     A window pops up.
 4.  Click on the **OK** button.
-    The user is deleted. He or she cannot log in to the Nuxeo application.&nbsp;
+    The user is deleted. He or she cannot log in to the Nuxeo application.
 
 ## Managing Groups
 
@@ -491,5 +491,3 @@ Only administrators and power users can delete groups.
 5.  Click on the **OK** button.
     The group search form is displayed.
 6.  The group is displayed and its members lose the group's access rights.
-
-&nbsp;

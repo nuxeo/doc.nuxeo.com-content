@@ -292,20 +292,13 @@ To create documents in a Nuxeo folder or workspace, you can:
 
 You can then create, copy and move documents and folders in the Nuxeo Platform via the Windows Explorer or Mac Finder the same way you would do in a local folder.
 
-<div>
-
 * * *
-
-</div>
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [WebDAV]({{page space='nxdoc60' page='webdav'}})
+- [WebDAV]({{page space='nxdoc60' page='webdav'}})
 
 {{/panel}}</div><div class="column medium-6">
 
-&nbsp;
-
-&nbsp;
 
 </div></div>

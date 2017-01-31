@@ -344,12 +344,14 @@ If beforehand moderation is applied to the website, then users with "moderate" r
 Users with "Write" permission can comment on pages. Comments are still submitted to moderation.
 Users with "Manage everything" permission are automatically moderators.
 
-{{/callout}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
+{{/callout}}
 
-*   [Nuxeo Sites and Blogs]({{page page='nuxeo-sites-and-blogs'}})
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
+
+- [Nuxeo Sites and Blogs]({{page page='nuxeo-sites-and-blogs'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Customization'}}
 
-*   [WebEngine (JAX-RS)]({{page space='nxdoc60' page='webengine-jax-rs'}})
+- [WebEngine (JAX-RS)]({{page space='nxdoc60' page='webengine-jax-rs'}})
 
 {{/panel}}</div></div>

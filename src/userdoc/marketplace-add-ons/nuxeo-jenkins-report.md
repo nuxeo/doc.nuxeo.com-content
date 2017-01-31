@@ -19,32 +19,32 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/QgFFAQ'
     source_link: /display/USERDOC60/Nuxeo+Jenkins+Report
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 14:47'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 11:47'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-20 14:42'
         message: Removed related topics from TOC
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 18:39'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-08-06 17:58'
         message: 'NXDOC-176: review jenkins report doc'
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 17:36'
         message: ''
@@ -181,17 +181,11 @@ To send the report:
     *   The number of unclaimed jobs,
     *   The Jenkins Duty Comment.![]({{file name='jenkins-report-email.png'}} ?w=650,h=377,border=true)
 
-&nbsp;
-
-&nbsp;
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Jenkins duty]({{page space='corg' page='jenkins-duty'}})
-*   [Nuxeo Jenkins Report dev documentation]({{page space='nxdoc60' page='nuxeo-jenkins-report'}})
+- [Jenkins duty]({{page space='corg' page='jenkins-duty'}})
+- [Nuxeo Jenkins Report dev documentation]({{page space='nxdoc60' page='nuxeo-jenkins-report'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

@@ -50,9 +50,9 @@ history:
 
 Workspaces are spaces dedicated to collaborative work and services to communicate with the other users.
 
-*   [Working with Workspaces]({{page page='working-with-workspaces'}})
-*   [Managing Workspaces]({{page page='managing-a-workspace'}})
-*   [Workspace Templates]({{page page='using-workspace-templates'}})
+- [Working with Workspaces]({{page page='working-with-workspaces'}})
+- [Managing Workspaces]({{page page='managing-a-workspace'}})
+- [Workspace Templates]({{page page='using-workspace-templates'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
@@ -60,9 +60,9 @@ Workspaces are spaces dedicated to collaborative work and services to communicat
 
 Workspace is the place where you will be able to create, share and edit documents within the application.
 
-*   [Available Documents]({{page page='available-documents'}})
-*   [Creating, editing, deleting]({{page page='creating-editing-and-deleting-content'}})
-*   [Workflows]({{page page='workflows'}})
+- [Available Documents]({{page page='available-documents'}})
+- [Creating, editing, deleting]({{page page='creating-editing-and-deleting-content'}})
+- [Workflows]({{page page='workflows'}})
 
 {{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
@@ -70,13 +70,11 @@ Workspace is the place where you will be able to create, share and edit document
 
 Discover some additional features that help you categorize and collaborate on documents.
 
-*   [Alerts]({{page page='alerts'}})
-*   [Comments]({{page page='comments'}})
-*   [Preview]({{page space='nxdoc60' page='preview'}})
-*   [Tags]({{page page='tags'}})
+- [Alerts]({{page page='alerts'}})
+- [Comments]({{page page='comments'}})
+- [Preview]({{page space='nxdoc60' page='preview'}})
+- [Tags]({{page page='tags'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

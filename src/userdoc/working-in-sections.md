@@ -92,10 +92,6 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
-&nbsp;
-
 When a document is finished and ready for distribution, you must publish it in a section. Sections are spaces dedicated to the distribution of documents to a wider audience.
 
 Sections are spaces that are managed like workspaces. Like for workspaces, there is no section that is automatically created by default, except for the sections root. You are free to organize your section the way it fits your needs or your project the best. The section tree is completely independent from workspaces. Their structure is not linked. Still, you can guide users as to where they should publish documents from a specific workspace using the [publication targets]({{page page='setting-publication-targets'}}).

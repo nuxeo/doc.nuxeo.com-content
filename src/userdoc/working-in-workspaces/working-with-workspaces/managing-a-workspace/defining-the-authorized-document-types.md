@@ -184,10 +184,6 @@ history:
         version: '1'
 
 ---
-<div>
-
-&nbsp;
-
 The local configuration enables users to set some document types preferences at the workspace or section level, from Nuxeo's interface. These preferences are inherited in the sub-spaces and all folderish documents (folders, ordered folders, etc).
 
 ## Defining What Document Types Can Be Created
@@ -195,8 +191,6 @@ The local configuration enables users to set some document types preferences at 
 Users with Manage right in a space can define what document types can be created in the current space by restricting the list of allowed document types proposed by default.
 
 **To define what document types can be created in a space:**
-
-</div>
 
 1.  On the current space, click on the **Manage** tab.
 2.  Click on the **Local configuration** sub-tab.
@@ -245,20 +239,16 @@ You can leverage this feature when you customize the Nuxeo Platform and create n
 
 {{/callout}}
 
-&nbsp;
-
 * * *
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-*   [Managing a Workspace]({{page page='managing-a-workspace'}})
-*   [Changing the Presentation of Document Lists]({{page page='changing-the-presentation-of-document-lists'}})
+- [Managing a Workspace]({{page page='managing-a-workspace'}})
+- [Changing the Presentation of Document Lists]({{page page='changing-the-presentation-of-document-lists'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pagess in other documentation'}}
 
-*   [How to Define a Document Type]({{page space='nxdoc60' page='how-to-define-a-document-type'}})
-*   [How to Override Existing Document Types]({{page space='nxdoc60' page='how-to-override-existing-document-types'}})
+- [How to Define a Document Type]({{page space='nxdoc60' page='how-to-define-a-document-type'}})
+- [How to Override Existing Document Types]({{page space='nxdoc60' page='how-to-override-existing-document-types'}})
 
 {{/panel}}</div></div>

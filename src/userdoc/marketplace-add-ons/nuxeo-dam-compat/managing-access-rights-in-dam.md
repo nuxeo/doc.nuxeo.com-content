@@ -214,7 +214,7 @@ Access to documents and the actions allowed are determined by access rights on t
 
 The DAM permissions are:
 
-{{!-- unmigrated-wiki-markup: {multi-excerpt-include:Digital Asset Management Concepts|name=DAM-access-rights|nopanel=true} --}}
+{{{multiexcerpt 'DAM-access-rights' page='nuxeo-dam-compat-concepts'}}}
 
 To manage access rights on a DAM folder, you can :
 

@@ -185,10 +185,10 @@ Documents can be tagged in workspaces and in sections. When a document is publis
     Tags already used are proposed from 3 letters typed.
 
     {{/callout}}
-2.  Click on&nbsp;![]({{file name='add.gif' space='studio' page='studio-icons-index'}})&nbsp;and type the label you want to add.
+2.  Click on&nbsp;![]({{file name='add.gif' space='studio' page='studio-icons-index'}}) and type the label you want to add.
     ![]({{file name='tags-add.png'}} ?w=350,border=true)
 
-3.  Click on the suggested label to add an existing tag or on the tag in green&nbsp;to create and add a new one.
+3.  Click on the suggested label to add an existing tag or on the tag in green to create and add a new one.
     The tag is immediately added on the document and available in the tag cloud.
 
 ## Removing Tags
@@ -198,16 +198,12 @@ You need to be the user who added the tag on the document or have at least _writ
 To remove a tag from a document, click on the icon ![]({{file name='delete.png' page='icons-index'}}).
 The tag is immediately removed.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More documentation about tags'}}
 
-*   [Tagging]({{page space='nxdoc60' page='tagging'}})
+- [Tagging]({{page space='nxdoc60' page='tagging'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

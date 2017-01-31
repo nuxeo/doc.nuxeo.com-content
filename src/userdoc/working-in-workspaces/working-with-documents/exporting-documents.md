@@ -149,12 +149,12 @@ Users can export documents on their computer. It is possible to export:
 
 Export options are available from:
 
-*   The Export button of documents and folders, available by clicking the icon ![]({{file name='export.png' space='userdoc58' page='icons-index'}})&nbsp;in the **More** menu
+*   The Export button of documents and folders, available by clicking the icon ![]({{file name='export.png' page='icons-index'}}) in the **More** menu
 *   The worklist
 
 ### PDF Export
 
-PDF export is available for documents and folders, from the Export options (icon ![]({{file name='export.png' space='userdoc58' page='icons-index'}})&nbsp;in the **More** menu). It consists in a PDF file that lists:
+PDF export is available for documents and folders, from the Export options (icon ![]({{file name='export.png' page='icons-index'}}) in the **More** menu). It consists in a PDF file that lists:
 
 *   For documents:
     *   The document files for documents (main content and attachments)
@@ -170,7 +170,7 @@ PDF export is available for documents and folders, from the Export options (icon
 
 ### XML Exports
 
-The **XML export** is&nbsp;a low level export available from the Export options of the document (icon ![]({{file name='export.png' space='userdoc58' page='icons-index'}})&nbsp;in the **More** menu). It consists in the XML definition of the document.
+The **XML export** is a low level export available from the Export options of the document (icon ![]({{file name='export.png' page='icons-index'}}) in the **More** menu). It consists in the XML definition of the document.
 
 The **ZIP XML Export** is available from the document. It consists in a zipped folder called export.zip that contains:
 
@@ -185,7 +185,7 @@ From the worklist, the **Export to XML** option provides you with an export.zip 
 
 Zip export of binaries is available from the document and from the worklist.
 
-From a document (icon ![]({{file name='export.png' space='userdoc58' page='icons-index'}})&nbsp;in the **More** menu), the **ZIP Binary Export** option consists in a clipboard.zip that holds:
+From a document (icon ![]({{file name='export.png' page='icons-index'}}) in the **More** menu), the **ZIP Binary Export** option consists in a clipboard.zip that holds:
 
 *   The main file of the document
 *   The attachments of the document
@@ -203,7 +203,7 @@ The **Export as ZIP** option of the worklist provides a clipboard.zip folder tha
 
 ### Excel Export
 
-From the folder export options (icon ![]({{file name='export.png' space='userdoc58' page='icons-index'}})&nbsp;in the **More** menu), the **Excel Export** provides a document_content.xls file that reproduces the table of the folder **Content** tab.
+From the folder export options (icon ![]({{file name='export.png' page='icons-index'}}) in the **More** menu), the **Excel Export** provides a document_content.xls file that reproduces the table of the folder **Content** tab.
 
 ## Exporting Attachments
 
@@ -223,20 +223,20 @@ You can export the attachments of several documents at the same time, using the 
 4.  In the worklist, click on the **Export as ZIP** link.
 5.  Save the "Clipboard.zip" folder.
     When you unzip it, you get the documents' attachments and an INDEX.txt file that summarizes the content of the export.
-    ![]({{file name='unzipped-zip-export.png' space='userdoc58' page='exporting-documents'}} ?w=650,border=true)
+    ![]({{file name='unzipped-zip-export.png' page='exporting-documents'}} ?w=650,border=true)
 
 ## Exporting the List of Documents in a Folder
 
 Just like it is possible to [export search results]({{page page='searching-the-nuxeo-platform'}}), it is possible to export the list of documents in a workspace, section or folder.
-You can use the Excel export which&nbsp;enables you to get the list of documents inside the folder in an Excel table.
+You can use the Excel export which enables you to get the list of documents inside the folder in an Excel table.
 
 **To export the list of documents of a space in an Excel file:**
-Click on the icon&nbsp;![]({{file name='xls_export.png' page='icons-index'}})&nbsp;displayed in the top right corner of the **Content** tab of the workspace, folder or section.
+Click on the icon ![]({{file name='xls_export.png' page='icons-index'}}) displayed in the top right corner of the **Content** tab of the workspace, folder or section.
 You are proposed to save a "document_content.xls" file, that displays the same information on the folder's documents as in the **Content** tab.
 
 ## Low-Level Exports
 
-XML export is a low level&nbsp;export that enables users to get a set of information on documents in an XML file. This export type is useful for debugging, and as such, is mainly intended to administrators. You can export:
+XML export is a low level export that enables users to get a set of information on documents in an XML file. This export type is useful for debugging, and as such, is mainly intended to administrators. You can export:
 
 *   a single document,
 *   a selection of documents,
@@ -251,19 +251,19 @@ The XML export of a document enables users to get a folder for the exported docu
 
 **To get the XML export of a document:**
 
-1.  From the document, click on the icon&nbsp;![]({{file name='export.png' page='icons-index'}})&nbsp;or, if the icon is not available on the action bar, on the **Export** button**&nbsp;**of the **More** menu in the action bar.
+1.  From the document, click on the icon ![]({{file name='export.png' page='icons-index'}}) or, if the icon is not available on the action bar, on the **Export** button of the **More** menu in the action bar.
     ![]({{file name='more-menu.png'}} ?w=250,border=true,thumbnail=true)
-2.  Click on ![]({{file name='zip_export.png' page='icons-index'}})&nbsp;**ZIP XML Export** on the pop-up window.
+2.  Click on ![]({{file name='zip_export.png' page='icons-index'}}) **ZIP XML Export** on the pop-up window.
     You are proposed to save a "export.zip" file on your computer.
 
     {{#> callout type='tip' }}
 
-    If you're only interested in the XML file of the document, click on&nbsp;![]({{file name='xml.png' page='icons-index'}}) **XML Export**. The XML file should open in a new tab or window (depending on your browser's preferences).
+    If you're only interested in the XML file of the document, click on ![]({{file name='xml.png' page='icons-index'}}) **XML Export**. The XML file should open in a new tab or window (depending on your browser's preferences).
 
     {{/callout}}
 3.  Save the "export.zip" file.
     When you unzip it, you get a folder named from the document, that contains a document.xml file and .blob for each attachment of the document.
-    ![]({{file name='unzipped-xml-export.png' space='userdoc58' page='exporting-documents'}} ?w=650,border=true)
+    ![]({{file name='unzipped-xml-export.png' page='exporting-documents'}} ?w=650,border=true)
 
 ### XML Export of a Document Selection
 
@@ -279,7 +279,7 @@ It is possible to do an XML export of several documents in a single export, usin
 4.  In the worklist, click on the **Export to XML** link.
 5.  Save the "export.zip" folder.
     When you unzip it, you get a folder structure that reproduces the Nuxeo Platform tree to the document.
-    ![]({{file name='unzipped-multiple-doc-xml-export.png' space='userdoc56' page='exporting-documents'}} ?w=650,border=true)
+    ![]({{file name='unzipped-multiple-doc-xml-export.png' page='exporting-documents'}} ?w=650,border=true)
 
 ### XML Export of a Folder
 
@@ -287,16 +287,16 @@ It is possible to export a whole workspace, section or folder in a zipped XML fo
 
 **To get the XML export of a folder:**
 
-1.  From the folder (or workspace or section), click on the icon&nbsp;![]({{file name='export.png' page='icons-index'}})&nbsp;or, if the icon is not available on the action bar, on the **Export&nbsp;**button of the **More** menu in the action bar.
+1.  From the folder (or workspace or section), click on the icon ![]({{file name='export.png' page='icons-index'}}) or, if the icon is not available on the action bar, on the **Export** button of the **More** menu in the action bar.
     ![]({{file name='more-menu.png'}} ?w=250,border=true,thumbnail=true)
-2.  Click on ![]({{file name='zip_tree_export.png' page='icons-index'}})&nbsp;**ZIP Tree XML Export** on the pop-up window.
+2.  Click on ![]({{file name='zip_tree_export.png' page='icons-index'}}) **ZIP Tree XML Export** on the pop-up window.
     You are proposed to save a "export.zip" file on your computer.
 
     {{#> callout type='tip' }}
 
-    If you're only interested in the XML definition of the folder, click on&nbsp;![]({{file name='xml.png' page='icons-index'}}) **XML Export**. The XML file should open in a new tab or window (depending on your browser's preferences).
+    If you're only interested in the XML definition of the folder, click on ![]({{file name='xml.png' page='icons-index'}}) **XML Export**. The XML file should open in a new tab or window (depending on your browser's preferences).
 
     {{/callout}}
 3.  Save the "export.zip" file.
     When you unzip it, you get a folder named from the document, that contains a document.xml file and .blob for each attachment of the document.
-    ![]({{file name='unzipped-folder-xml-export.png' space='userdoc58' page='exporting-documents'}} ?w=650)
+    ![]({{file name='unzipped-folder-xml-export.png' page='exporting-documents'}} ?w=650)

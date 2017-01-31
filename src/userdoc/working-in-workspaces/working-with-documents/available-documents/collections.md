@@ -181,7 +181,7 @@ Collections are a folder-like document in which you can classify existing docume
 
 It enables users to create their own organization of the content without duplicating content and having the size of the content growing uncontrollably.
 
-The list of collections available to a user is available from his Home, in the&nbsp;**Collections**&nbsp;tab.
+The list of collections available to a user is available from his Home, in the **Collections** tab.
 
 ![]({{file name='collection-home-tab.png'}} ?w=650,border=true)
 
@@ -194,8 +194,7 @@ Collections can be created in:
 
 They can be created like any other document, using the New button, but they can also be created directly from the Collect form.
 
-**To create a collection using the New button:
-**
+**To create a collection using the New button:**
 
 {{{multiexcerpt 'create-document' page='Creating Content'}}}
 
@@ -226,7 +225,9 @@ Documents can be collected individually or by batch.
 
     *   Browse the collections,
     *   Start typing the collection name and select it,
-    *   Type a new collection name to create it.{{#> callout type='tip' }}
+    *   Type a new collection name to create it.
+
+    {{#> callout type='tip' }}
 
     The Collection list shows all the collection you have access to, even collection in which you cannot collect documents. Collections you can add content to are highlighted in blue while collections you only have read access to are not highlighted when you browse the list.
 
@@ -237,8 +238,6 @@ Documents can be collected individually or by batch.
     ![]({{file name='collections-summary-widget.png'}} ?w=650,border=true)
 
     A new Collections item is displayed on the **Summary** of the document, showing the collection the document has been collected in.
-
-    &nbsp;
 
 ### Collecting Several Documents at the Same Time
 
@@ -255,11 +254,11 @@ Documents can be collected individually or by batch.
 
 ### Collecting Documents from a Collection
 
-1.  <span class="s1">From the Home **Collections** tab, click on the collection title to go on the collection.
-    The list of of documents classified in the collection is displayed.</span>
-    <span class="s1">![]({{file name='collection-content-tab.png'}} ?w=650,border=true)
-    </span>
-2.  Click on the icon&nbsp;![]({{file name='action_add.gif' page='icons-index'}})&nbsp;to add documents to the collection.
+1.  From the Home **Collections** tab, click on the collection title to go on the collection.
+    The list of of documents classified in the collection is displayed.
+    ![]({{file name='collection-content-tab.png'}} ?w=650,border=true)
+
+2.  Click on the icon ![]({{file name='action_add.gif' page='icons-index'}}) to add documents to the collection.
     The Add to collection form appears.
     ![]({{file name='add-to-collection-documents-form.png'}} ?w=350,border=true)
 3.  Start typing the name of the document that you want to add to this collection.
@@ -299,22 +298,19 @@ Beside the [generic access rights]({{page page='nuxeo-platform-concepts#rights'}
 *   Give write access: By giving the Write right, you enable users to add documents to the collection, remove them and to edit the collection;
 *   Make them manager for the collection: By giving them Manage everything right, you enable users to manage the content of the collection and who can access it.
 
-## Removing Documents from Collections&nbsp;
+## Removing Documents from Collections
 
 ### From the Collections Content Tab
 
-1.  <span class="s1">From the Home **Collections** tab, click on the collection title to go on the collection.</span>
+1.  From the Home **Collections** tab, click on the collection title to go on the collection.
     The list of the documents classified in the collection is displayed.
-2.  <span class="s1">Select the document(s) that you want to remove from the collection using the&nbsp;checkboxes on the documents list.</span>
-
-3.  <span class="s1">Click on **Remove from collection**.</span>
+2.  Select the document(s) that you want to remove from the collection using the checkboxes on the documents list.
+3.  Click on **Remove from collection**.
     The document is removed from the collection.
 
 ### From the Document Summary Tab
 
-1.  <span class="s1">Click on the document that you want to remove from your collection.</span>
+1.  Click on the document that you want to remove from your collection.
 
-2.  <span class="s1">On the right of the Summary tab, click on the icon&nbsp;![]({{file name='delete.png' page='icons-index'}}) of the collection that you want to remove it from.</span>
+2.  On the right of the Summary tab, click on the icon ![]({{file name='delete.png' page='icons-index'}}) of the collection that you want to remove it from.
     Your document is removed from the collection.
-
-&nbsp;

@@ -22,117 +22,117 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/3QBFAQ'
     source_link: /display/USERDOC60/Quick+Search
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-03 09:14'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-20 14:41'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-09 23:03'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-09 23:03'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-20 15:18'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-19 19:34'
         message: Fixed date search description
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-19 16:48'
         message: Added precision about keyword suggestion search
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-27 16:20'
         message: No Search button anymore in simple search
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-20 14:47'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-28 15:33'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-21 12:05'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-30 21:42'
         message: Updated screenshots for 5.8
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-17 18:12'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 16:17'
         message: Removed related topics from TOC
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:21'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:21'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:20'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:06'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 18:59'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 18:42'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 18:33'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 18:18'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 17:44'
         message: ''
@@ -152,16 +152,16 @@ Typing keywords in the search field and pressing the "Enter" key triggers a full
 **To search a document using quick search:**
 
 1.  Type your keywords in the quick search field.
-    Five matching documents are suggested as you type. See below for&nbsp;[details on suggestion search](#suggestion-search).
+    Five matching documents are suggested as you type. See below for [details on suggestion search](#suggestion-search).
     ![]({{file name='simple_search_suggestion.png'}} ?w=250,border=true,thumbnail=true)
 2.  If the searched document is not suggested, press the Enter key to display all matching documents.
     Search results are displayed in the Search tab. The Quick search is selected and filled in with your keywords.
-3.  Click on the document's name to open it.&nbsp;
+3.  Click on the document's name to open it.
     ![]({{file name='quick-search-results.png'}} ?w=600,border=true)
 
 ### Suggestion Search
 
-When you start typing words in the quick search field, in the top right corner of the page, you are displayed some results as you type. This is the suggestion search. You can type words or dates in this field.&nbsp;Results include three types of items:
+When you start typing words in the quick search field, in the top right corner of the page, you are displayed some results as you type. This is the suggestion search. You can type words or dates in this field. Results include three types of items:
 
 *   Documents (10),
 *   Users (5),
@@ -181,7 +181,7 @@ For instance:
 
     ![]({{file name='search-suggestion-SEC.png'}} ?w=250,border=true,thumbnail=true)
 
-    As you type, the list of suggested document is narrowed to match the typed characters. You end up with documents like&nbsp;"second workspace",&nbsp;"second news", "7 seconds news clip", "secondary newsletter".
+    As you type, the list of suggested document is narrowed to match the typed characters. You end up with documents like "second workspace", "second news", "7 seconds news clip", "secondary newsletter".
 
     ![]({{file name='search-suggestion-SECOND.png'}} ?w=250,border=true,thumbnail=true)
 
@@ -196,7 +196,7 @@ For instance:
     {{/accordian}}
 2.  Add a second word in the search field, for instance "news".
 
-    As you type, the system will suggest documents with title holding words whose stem is "second" and words starting with "news". From the list above, only the documents above are left:&nbsp;"second news", "7 seconds news clip".
+    As you type, the system will suggest documents with title holding words whose stem is "second" and words starting with "news". From the list above, only the documents above are left: "second news", "7 seconds news clip".
 
     "second workspace" doesn't match any more because it doesn't hold a word with "news", and "secondary newsletter" is not suggested anymore because the stem for "secondary" is "secondar" and not "second".
 
@@ -212,11 +212,11 @@ For instance:
 
     {{/accordian}}
 
-You can use the&nbsp;[operators](#operators)&nbsp;- and OR in the suggestion search.
+You can use the [operators]({{page version='60' space='userdoc' page='searching-the-nuxeo-platform'}}#operators)- and OR in the suggestion search.
 
 #### Search on Dates
 
-On the same principle, you can type a date in the quick search field. The system searches for documents that hold the numbers in their title.&nbsp;
+On the same principle, you can type a date in the quick search field. The system searches for documents that hold the numbers in their title.
 
 It also suggests several faceted searches:
 
@@ -234,20 +234,18 @@ You can also use the quick search box to search users and groups.If you type a u
 
 When the system finds a user, it suggests to show his information.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More in User Documentation'}}
 
-*   [Default Search]({{page page='default-search'}})
-*   [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
-*   [Saved Searches]({{page page='saved-searches'}})
+- [Default Search]({{page page='default-search'}})
+- [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
+- [Saved Searches]({{page page='saved-searches'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Configuring and Customizing Search '}}
 
-*   [Indexing and Querying How-To Index]({{page space='nxdoc60' page='indexing-and-querying-how-to-index'}})
-*   [Full-Text Queries]({{page space='nxdoc60' page='full-text-queries'}})
-*   [Indexing and Query]({{page space='nxdoc60' page='indexing-and-query'}})
+- [Indexing and Querying How-To Index]({{page space='nxdoc60' page='indexing-and-querying-how-to-index'}})
+- [Full-Text Queries]({{page space='nxdoc60' page='full-text-queries'}})
+- [Indexing and Query]({{page space='nxdoc60' page='indexing-and-query'}})
 
 {{/panel}}</div></div>

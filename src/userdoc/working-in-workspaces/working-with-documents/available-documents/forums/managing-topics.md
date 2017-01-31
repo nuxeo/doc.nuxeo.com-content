@@ -20,122 +20,122 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/CgFFAQ'
     source_link: /display/USERDOC60/Managing+Topics
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 14:10'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 14:42'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 14:40'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 14:32'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 14:31'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 14:24'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 14:23'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 14:23'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 14:22'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 14:21'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 14:20'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-26 18:03'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 00:52'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:17'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 17:11'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-18 17:01'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:33'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:33'
         message: Added related content
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:30'
         message: Added toc
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-09 09:48'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 14:47'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-01 11:24'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-10 18:43'
         message: fixed broken links
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-27 15:26'
         message: ''
@@ -227,5 +227,3 @@ When you delete a topic, it is definitively erased from the application.
     A confirmation window pops up.
 3.  Click on the **OK** button.
     The topic is moved to the forum's trash. Users can then [restore the topic]({{page page='managing-deleted-documents#restore-documents'}}) into the forum or [erase]({{page page='managing-deleted-documents#permanently-delete-documents'}}) the same way as a document in a workspace.
-
-&nbsp;

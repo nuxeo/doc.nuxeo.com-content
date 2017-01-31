@@ -138,7 +138,7 @@ history:
         version: '1'
 
 ---
-<span style="color: rgb(51,51,51);">The preview enables you to see an insight of your document.&nbsp;</span>
+The preview enables you to see an insight of your document.
 
 **<span style="color: rgb(51,51,51);">To preview a document:</span>**
 
@@ -159,21 +159,13 @@ The installation of [third-party software]({{page space='admindoc60' page='insta
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">File format</th><th colspan="1">Preview supported</th></tr><tr><td colspan="1">.doc</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.docx</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.html</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.jpg</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.odp</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.ods</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.odt</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.pdf</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.png</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.ppt</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.pptx</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.psd</td><td colspan="1">No</td></tr><tr><td colspan="1">.tiff</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.xls</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.xlsx</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.xml</td><td colspan="1">No</td></tr></tbody></table></div>
 
-&nbsp;
-
 * * *
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
-*   [How to Customize the Info-View Pop-Up]({{page space='nxdoc60' page='how-to-customize-the-info-view-pop-up'}})
-*   [Installing and Setting up Related Software]({{page space='admindoc60' page='installing-and-setting-up-related-software'}})
+- [How to Customize the Info-View Pop-Up]({{page space='nxdoc60' page='how-to-customize-the-info-view-pop-up'}})
+- [Installing and Setting up Related Software]({{page space='admindoc60' page='installing-and-setting-up-related-software'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-&nbsp;
 
 </div></div>

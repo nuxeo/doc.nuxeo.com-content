@@ -255,8 +255,6 @@ Administrators have two extra tabs:
 
 ![]({{file name='DAM-tabs-admins.png'}} ?w=650,border=true)
 
-&nbsp;
-
 Nuxeo DAM Compat benefits from its standards document management features, accessible from the **Document Management** tab.
 The Document Management tab gives access to two domains: the Default Domain and the Asset Library.
 
@@ -279,20 +277,33 @@ The user interface is divided in three parts, as shown below:
 
 The DAM access rights are:
 
-&nbsp;
+{{! multiexcerpt name='DAM-access-rights'}}
 
-&nbsp;
+<table>
+<tbody>
+<tr>
+<th>Right</th>
+<th>Actions in DAM</th>
+</tr>
+<tr>
+<td>Read</td>
+<td>Consult content <br/> Comment documents <br/> Annotate documents</td>
+</tr>
+<tr>
+<td>Write</td>
+<td>Import documents <br/> Edit documents <br/> + Read actions</td>
+</tr>
+<tr>
+<td>Everything</td>
+<td>Manage access rights <br/> + Write and Read actions</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Delete documents <br/>Tip: The Remove permission is most intended to be denied, so as to restrict the actions available to users with "Write" permission.</td>
+</tr>
+</tbody>
+</table>
 
-&nbsp;
-
-{{!-- unmigrated-wiki-markup: {multi-excerpt:name=DAM-access-rights} || Right || Actions in DAM \\ || | Read | Consult content \\ Comment documents \\ Annotate documents \\ | | Write | Import documents \\ Edit documents \\ + Read actions \\ | | Everything | Manage access rights \\ + Write and Read actions | | Remove | Delete documents \\ {tip}The Remove permission is most intended to be denied, so as to restrict the actions available to users with "Write" permission.{tip}| {multi-excerpt} --}}
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
+{{! /multiexcerpt}}
 
 The [management of access rights]({{page page='managing-access-rights'}}) to the DAM module takes place from the Asset Library's Document Management interface.

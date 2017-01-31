@@ -125,8 +125,6 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
 Local administrators, i.e. users with Manage right in the space, can easily apply a preset theme to a workspace, template or section. You can apply a theme to spaces only. For instance, you can change the theme of sections, so that they look different from workspaces, but you cannot change the look of a document.
 
 Two themes, also called flavors, are available by default: the Nuxeo theme and the Rainbow theme. Flavors are sets of colors that determine the look of the space. If you configured other flavors in Nuxeo Studio, they are available here as well.
@@ -148,15 +146,13 @@ The new space's theme is not applied to the sub-spaces, but it is applied to the
 
 * * *
 
-&nbsp;
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-*   [Changing the Presentation of Document Lists]({{page page='changing-the-presentation-of-document-lists'}})
-*   [Unicolor Flavors Set]({{page page='unicolor-flavors-set'}})
+- [Changing the Presentation of Document Lists]({{page page='changing-the-presentation-of-document-lists'}})
+- [Unicolor Flavors Set]({{page page='unicolor-flavors-set'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related topics in other documentation'}}
 
-*   [Branding in Nuxeo Studio]({{page space='studio' page='branding'}})
+- [Branding in Nuxeo Studio]({{page space='studio' page='branding'}})
 
 {{/panel}}</div></div>

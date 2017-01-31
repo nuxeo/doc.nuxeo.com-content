@@ -20,117 +20,117 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/-QBFAQ'
     source_link: /display/USERDOC60/Managing+Dashboards
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 13:10'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-18 13:48'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 18:05'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 00:58'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-28 18:42'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-28 18:24'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-28 17:25'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-26 22:08'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-04 23:41'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-04 23:25'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:53'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-03 18:11'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-16 15:37'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-26 16:01'
         message: Migrated to Confluence 4.0
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-26 16:01'
         message: Updated screenshots
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 11:22'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-23 10:00'
         message: Added toc
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-22 15:43'
         message: Added toc
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 15:40'
         message: added screenshots
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-27 22:59'
         message: added missing property descriptions
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-27 18:11'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-27 17:51'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-24 17:23'
         message: ''
@@ -157,8 +157,8 @@ The user default dashboard is used to generate the user's dashboard the first ti
 The Nuxeo Platform includes a dashboard that is proposed as the default user dashboard. You can edit this default user dashboard to make it adapted to your organization and users. Editing the default user dashboard works the same way users can edit their dashboard. You can:
 
 *   [Change the dashboard layout]({{page page='nuxeo-opensocial#changing-the-dashboard-layout'}})
-*   [Add or remove gadgets]({{page page='nuxeo-opensocial#adding-and-removing-widgets'}})&nbsp;
-*   [Edit widgets]({{page page='nuxeo-opensocial#editing-widgets'}})&nbsp;
+*   [Add or remove gadgets]({{page page='nuxeo-opensocial#adding-and-removing-widgets'}})
+*   [Edit widgets]({{page page='nuxeo-opensocial#editing-widgets'}})
 
 ![]({{file name='Admin-Center-dashboards.png' space='nxdoc60' page='nuxeo-opensocial'}} ?w=600,border=true)
 
@@ -275,18 +275,16 @@ When you delete an external gadget, it is **not** removed from the dashboard of 
 4.  Click on **OK** to confirm gadget deletion.
     The gadget is deleted and is not in the gadget list anymore. However it is still displayed on the dashboard of users who added it to their dashboard.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Dashboard Related Pages'}}
 
-*   [Nuxeo OpenSocial]({{page page='nuxeo-opensocial'}})
-*   [Social Workspaces Overview]({{page page='social-workspaces-overview'}})
+- [Nuxeo OpenSocial]({{page page='nuxeo-opensocial'}})
+- [Social Workspaces Overview]({{page page='social-workspaces-overview'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other OpenSocial Pages'}}
 
-*   [Nuxeo OpenSocial developer documentation]({{page space='nxdoc60' page='nuxeo-opensocial'}})
-*   [OpenSocial and the Nuxeo Platform]({{page space='nxdoc60' page='opensocial-and-the-nuxeo-platform'}})
+- [Nuxeo OpenSocial developer documentation]({{page space='nxdoc60' page='nuxeo-opensocial'}})
+- [OpenSocial and the Nuxeo Platform]({{page space='nxdoc60' page='opensocial-and-the-nuxeo-platform'}})
 
 {{/panel}}</div></div>

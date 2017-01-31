@@ -20,67 +20,67 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/CwFFAQ'
     source_link: /display/USERDOC60/Participating+to+a+Topic
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 14:10'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 15:42'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 15:41'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 15:40'
         message: ''
         version: '10'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-09-25 22:32'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 17:40'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:17'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:34'
         message: Migrated to Confluence 4.0
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:34'
         message: Added related content
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:31'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 14:50'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-01 11:24'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-27 14:59'
         message: ''
@@ -133,5 +133,3 @@ When a comment has been added, you can reply to it. The answer is inserted right
     *   If the topic is not moderated, the reply has the status "Published" and all the users with access rights to the forum can read it.
     *   If the topic is moderated, the reply has the status "Waiting for approval" and is not available in the topic. A moderator is notified that you added a reply and he or she needs to approve it so that the reply is available for all forum users.
         If you are the moderator of the topic, your reply is automatically published.
-
-&nbsp;

@@ -170,7 +170,7 @@ To start a workflow, you need to select the workflow type, reviewers and review 
         ![]({{file name='workflow-reviewer-selection.png'}} ?w=350,h=196,border=true)
     2.  Click on the user you want to add on the workflow.
     3.  Repeat these two steps to add all the participants to the review.
-    4.  Optionally, drag and drop the participants to change their order on the workflow, or the icon&nbsp;![]({{file name='action-delete.png' page='icons-index'}}) to remove them.{{{multiexcerpt 'tasks-assigned-to-group' page='Participating to a Serial Workflow'}}}
+    4.  Optionally, drag and drop the participants to change their order on the workflow, or the icon ![]({{file name='action-delete.png' page='icons-index'}}) to remove them.{{{multiexcerpt 'tasks-assigned-to-group' page='Participating to a Serial Workflow'}}}
 3.  Select the type of review you want to do:
     *   Simple review: the document's state will not change.
     *   Validation review: when all the reviewers have approved the document, it goes to the **Approved** life cycle state.
@@ -184,20 +184,18 @@ To start a workflow, you need to select the workflow type, reviewers and review 
 
 * * *
 
-&nbsp;
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation:'}}
 
-*   [Participating to a Serial Workflow]({{page page='participating-to-a-serial-workflow'}})
-*   [Delegating a Task]({{page page='delegating-a-task'}})
-*   [Reassigning a Task]({{page page='reassigning-a-task'}})
-*   [Abandoning a Workflow]({{page page='abandoning-a-workflow'}})
-*   [Parallel Document Workflow]({{page page='parallel-document-workflow'}})
+- [Participating to a Serial Workflow]({{page page='participating-to-a-serial-workflow'}})
+- [Delegating a Task]({{page page='delegating-a-task'}})
+- [Reassigning a Task]({{page page='reassigning-a-task'}})
+- [Abandoning a Workflow]({{page page='abandoning-a-workflow'}})
+- [Parallel Document Workflow]({{page page='parallel-document-workflow'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [Workflow How-To Index]({{page space='nxdoc60' page='workflow-how-to-index'}})
-*   [Workflow Studio documentation]({{page space='studio' page='workflow'}})
-*   [Workflow developer documentation overview]({{page space='nxdoc60' page='workflow-overview'}})
+- [Workflow How-To Index]({{page space='nxdoc60' page='workflow-how-to-index'}})
+- [Workflow Studio documentation]({{page space='studio' page='workflow'}})
+- [Workflow developer documentation overview]({{page space='nxdoc60' page='workflow-overview'}})
 
 {{/panel}}</div></div>

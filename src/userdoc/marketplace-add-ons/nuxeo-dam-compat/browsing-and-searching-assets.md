@@ -301,7 +301,7 @@ The search available is a full text search. Assets are indexed using their title
 ## Finding Assets Using Keywords
 
 Full text search uses stemming. The Stemming search option will return the assets containing words that have the same stem as the word you entered into the "Keywords" field.
-If you enter the world "Reading", you will find the assets containing in their text metadata "Read", "reads" etc. This is not the same thing as a search with a wildcard like "*".
+If you enter the world "Reading", you will find the assets containing in their text metadata "Read", "reads" etc. This is not the same thing as a search with a wildcard like `*`.
 
 {{#> callout type='info' }}
 
@@ -361,6 +361,7 @@ You can also refine your search using tags. For instance, you want to find urban
     Tags corresponding to what you are typing are suggested below the text field.
 2.  Click on the "urban" tag in the list.
     The tag is selected and displayed below the text field.
+
     ![]({{file name='dam-tag-search-urban-selected.png'}} ?border=true)
 3.  Click on the **Filter** button.
     The list of assets with the word "blue" and with the tag "urban" is displayed.
@@ -369,6 +370,7 @@ You can also refine your search using tags. For instance, you want to find urban
     Tags corresponding to what you are typing are suggested below the text field.
 5.  Click on the "nature" tag in the list.
     The tag is selected and displayed below the text field.
+
     ![]({{file name='dam-tag-search-urban-nature-selected.png'}} ?border=true)
 6.  Click on the **Filter** button.
     The list of asset with the word "blue" and that hold either the tag "urban" or "nature" are displayed.

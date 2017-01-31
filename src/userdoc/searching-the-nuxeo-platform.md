@@ -321,17 +321,17 @@ history:
 ---
 The Nuxeo Platform provides a Search tab that enables you to browse and search the content of the Nuxeo Platform. This tab gives access to different searches to query the content of the application.
 
-*   [Default search]({{page page='default-search'}}) enables you to search on keywords, metadata and additional criteria such as the location in the application.&nbsp;
+*   [Default search]({{page page='default-search'}}) enables you to search on keywords, metadata and additional criteria such as the location in the application.
 *   [Quick search]({{page page='quick-search'}}) is a full-text search. Quick search is available from the top right corner of the screen. It provides suggestions of search results as you type your keywords. Note that this type of search can generate a lot of noise if you search for very generic keywords.
 *   [NXQL search]({{page space='nxdoc60' page='nxql'}}) enables you to query the content of the platform using Nuxeo query language, giving you access to as many criteria as you need.
 
-Documents are indexed using their title, description, content (note field, attached files), and metadata. But these different search forms don't have the same behaviors and may not give you&nbsp;the same results. They can provide text fields in which you can type keywords, date fields in which you can select a date to define a period, lists from which you can select values. Text fields can be full-text search fields or exact match fields.
+Documents are indexed using their title, description, content (note field, attached files), and metadata. But these different search forms don't have the same behaviors and may not give you the same results. They can provide text fields in which you can type keywords, date fields in which you can select a date to define a period, lists from which you can select values. Text fields can be full-text search fields or exact match fields.
 
 ## General Principles
 
 ### Stemming
 
-Full-text search uses stemming. Stemming is a process that reduces words to their uninflected root, which is not necessarily a word. This means that full-text search&nbsp;will return documents containing words that have the same stem as the word you entered into the search field. For instance, if you type "arguing" in a full-text search field, search results will return documents with&nbsp;<span style="color: rgb(0,0,0);">"argue", "argued", "argues". In that case, the stem is "argu".&nbsp;<span style="color: rgb(0,0,0);">&nbsp;But "argument" and "arguments" reduce to the stem "argument".</span></span>
+Full-text search uses stemming. Stemming is a process that reduces words to their uninflected root, which is not necessarily a word. This means that full-text search will return documents containing words that have the same stem as the word you entered into the search field. For instance, if you type "arguing" in a full-text search field, search results will return documents with"argue", "argued", "argues". In that case, the stem is "argu". But "argument" and "arguments" reduce to the stem "argument".
 
 ### Operators and Wildcards
 
@@ -339,44 +339,47 @@ The application's search engine uses boolean operators and wildcards, to enable 
 
 *   Full-text search fields:
 
-*   AND: all the words separated by the operator must be in the found documents. This is the default operator of all full-text search fields, so you actually just need your keywords and the AND operator is implied.
-    Example: you are looking for documents about Nuxeo and marketing. Type _Nuxeo marketing_.
-*   -: The keyword after this symbol must not be in the found documents.
-    Example: you are looking for all the documents referring to the Nuxeo but not about meetings. Type _Nuxeo -meeting_.
+    *   AND: all the words separated by the operator must be in the found documents. This is the default operator of all full-text search fields, so you actually just need your keywords and the AND operator is implied.
+        Example: you are looking for documents about Nuxeo and marketing. Type _Nuxeo marketing_.
+    *   -: The keyword after this symbol must not be in the found documents.
+        Example: you are looking for all the documents referring to the Nuxeo but not about meetings. Type _Nuxeo -meeting_.
 
-    {{#> callout type='tip' }}
+        {{#> callout type='tip' }}
 
-    You need to keep the - stuck to the word to be excluded. If you put a space between the - and the word after it, the - is ignored.
+        You need to keep the - stuck to the word to be excluded. If you put a space between the - and the word after it, the - is ignored.
 
-    {{/callout}}
-*   OR: any of the word before "OR" or the word after it must be in the found documents.
-    Example: you are looking for documents that talk either about marketing or about sales. Type&nbsp;_marketing OR sales_.
+        {{/callout}}
+    *   OR: any of the word before "OR" or the word after it must be in the found documents.
+        Example: you are looking for documents that talk either about marketing or about sales. Type _marketing OR sales_.
 
-    {{#> callout type='tip' }}
+        {{#> callout type='tip' }}
 
-    The operator is capitalized in the example above to make it easier to see how the search is built, but it doesn't require to be capitalized. The same principle is applied in the rest of this page.
+        The operator is capitalized in the example above to make it easier to see how the search is built, but it doesn't require to be capitalized. The same principle is applied in the rest of this page.
 
-    {{/callout}}
-*   double quotes (""): the exact expression between quotes must be in the found documents.
-    Example: you are looking for documents that have the sentence "copyright Nuxeo". Type&nbsp;_"copyright Nuxeo"_.
+        {{/callout}}
+    *   double quotes (""): the exact expression between quotes must be in the found documents.
+        Example: you are looking for documents that have the sentence "copyright Nuxeo". Type _"copyright Nuxeo"_.
 
-    {{#> callout type='note' }}
+        {{#> callout type='note' }}
 
-    The behavior of the search on a sentence between quotes depends on the database that you are using. But in general, stemming is still applied on a sentence search.
+        The behavior of the search on a sentence between quotes depends on the database that you are using. But in general, stemming is still applied on a sentence search.
 
-    {{/callout}}
+        {{/callout}}
 
 *   Exact match fields:
 
     *   %: this symbol replaces zero or more characters. It works like the more commonly used * (asterisk).
-        Example: you are looking for documents having wiki- sites as a source (such as wikipedia, wikimapia, wiktionary, etc). Type&nbsp;_wik%_&nbsp;in the Source field of the advanced search form.
+        Example: you are looking for documents having wiki- sites as a source (such as wikipedia, wikimapia, wiktionary, etc). Type _wik%_ in the Source field of the advanced search form.
 
 ### Ignored Words and Characters
 
-To avoid noise in the search results, some words are ignored. Typically, words like "the" or "no" are not taken into account. This is configured at the database level. For PostgreSQL, you may want to take a look at the&nbsp;[Text Search Functions and Operators page](http://www.postgresql.org/docs/9.1/static/functions-textsearch.html)&nbsp;for more details on how search works on the database.
+To avoid noise in the search results, some words are ignored. Typically, words like "the" or "no" are not taken into account. This is configured at the database level. For PostgreSQL, you may want to take a look at the [Text Search Functions and Operators page](http://www.postgresql.org/docs/9.1/static/functions-textsearch.html) for more details on how search works on the database.
 
-Some characters, that can often be used as wildward, are configured to be ignored if they are used in the search forms :&nbsp;`!#$%&'()*+,./\\\\:-@{|}`^~`.
-You can configure escaped characters in the&nbsp;[nuxeo.conf file]({{page space='admindoc60' page='configuration-parameters-index-nuxeoconf'}})&nbsp;using the&nbsp;`org.nuxeo.query.builder.ignored.chars`&nbsp;parameter.
+Some characters, that can often be used as wildward, are configured to be ignored if they are used in the search forms :
+```
+!#$%&'()*+,./\\\\:-@{|}`^~
+```
+You can configure escaped characters in the [nuxeo.conf file]({{page space='admindoc60' page='configuration-parameters-index-nuxeoconf'}}) using the `org.nuxeo.query.builder.ignored.chars` parameter.
 
 ### Case-Sensitivity
 
@@ -384,20 +387,18 @@ Full-text search is case insensitive. You can search for "news", "News" or "NEWS
 
 On the other hand, exact match text fields are case-sensitive. You must type the word with exactly the same letter case as it is set on the documents to get a result: typing "copyright" in the Rights field of the advanced search form won't return documents with "Copyright" in their Rights field.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More in User Documentation'}}
 
-*   [Default Search]({{page page='default-search'}})
-*   [Quick Search]({{page page='quick-search'}})
-*   [Saved Searches]({{page page='saved-searches'}})
+- [Default Search]({{page page='default-search'}})
+- [Quick Search]({{page page='quick-search'}})
+- [Saved Searches]({{page page='saved-searches'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Configuring and Customizing Search '}}
 
-*   [Indexing and Querying How-To Index]({{page space='nxdoc60' page='indexing-and-querying-how-to-index'}})
-*   [Full-Text Queries]({{page space='nxdoc60' page='full-text-queries'}})
-*   [Database configuration]({{page space='admindoc60' page='database'}})
+- [Indexing and Querying How-To Index]({{page space='nxdoc60' page='indexing-and-querying-how-to-index'}})
+- [Full-Text Queries]({{page space='nxdoc60' page='full-text-queries'}})
+- [Database configuration]({{page space='admindoc60' page='database'}})
 
 {{/panel}}</div></div>

@@ -118,10 +118,6 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
-&nbsp;
-
 When they are deleted by users with "write" rights, documents are moved into the **Trash** tab of the parent folder (domain, workspace, folder, etc). Users with "manage everything" rights can still restore them or delete them permanently.
 
 ## Restoring Documents{{> anchor 'restore-documents'}}
@@ -162,16 +158,14 @@ Only users with management rights can manage the trash of a space and delete doc
     The documents are permanently erased from the application. It cannot be restored.
     The [relations]({{page page='relations'}}) to the deleted documents are deleted.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More in this documentation'}}
 
-*   [Deleting Content]({{page page='deleting-content'}})
+- [Deleting Content]({{page page='deleting-content'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Customization'}}
 
-*   [How to Enable the Trash Feature]({{page space='nxdoc60' page='how-to-enable-the-trash-feature'}})
+- [How to Enable the Trash Feature]({{page space='nxdoc60' page='how-to-enable-the-trash-feature'}})
 
 {{/panel}}</div></div>

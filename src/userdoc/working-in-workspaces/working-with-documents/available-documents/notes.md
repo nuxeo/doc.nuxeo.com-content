@@ -132,8 +132,6 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
 {{! excerpt}}
 
 The note is a document that consists in a text displayed in the **Summary** tab of the document. The note is usually created using the integrated rich editor, displayed in the note creation form. This editor enables layout modifications on the text.
@@ -202,19 +200,17 @@ You can also create a note by importing a .txt, a .html or a .xml file using [ *
 
 When the note is created, users can enhance it by adding [comments]({{page page='comments'}}), attached files on it, or just [editing it]({{page page='editing-content'}}).
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related User Documentation'}}
 
-*   [Creating Content]({{page page='creating-content'}})
-*   [Editing Content]({{page page='editing-content'}})
-*   [Working Using Drag and Drop]({{page page='working-using-drag-and-drop'}})
+- [Creating Content]({{page page='creating-content'}})
+- [Editing Content]({{page page='editing-content'}})
+- [Working Using Drag and Drop]({{page page='working-using-drag-and-drop'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Customization Documentation'}}
 
-*   [How to Override Existing Document Types]({{page space='nxdoc60' page='how-to-override-existing-document-types'}})
-*   [How to Define a Document Type]({{page space='nxdoc60' page='how-to-define-a-document-type'}})
+- [How to Override Existing Document Types]({{page space='nxdoc60' page='how-to-override-existing-document-types'}})
+- [How to Define a Document Type]({{page space='nxdoc60' page='how-to-define-a-document-type'}})
 
 {{/panel}}</div></div>

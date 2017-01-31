@@ -111,14 +111,29 @@ You can also have access [all the export options]({{page page='exporting-documen
 
 ### Exporting Pictures
 
-{{{multiexcerpt 'exporting-pictures' page='Digital Asset Management'}}}
+When you export pictures, you get a folder with four files:
 
+- Original image: original size and format of the imported picture
+- Original Jpeg image: the picture is converted to JPG but the original size is kept. This export is done even if the original picture was a JPG file;
+- Medium size image: the picture is converted to JPG and resized to 550 px height or width;
+- Thumbnail: the picture is converted to JPG and resized to 100px height or width.
+
+{{#> callout type='tip' }}
+
+The original and medium pictures can be the same size when you download them if the original is smaller or equal to medium size.
+
+{{/callout}}
 ### Exporting Videos
 
-{{{multiexcerpt 'exporting-videos' page='Digital Asset Management'}}}
+When your export a video asset, you get a folder with several files available:
+
+- The original video file,
+- One WEBM conversion,
+- One MP4 conversion,
+- One JPEG picture by storyboard chapter,
+- One JPG picture prefixed with "StaticPlayerView_video-screenshot-", which is the picture extracted from the video that is used for the player picture,
+- One JPG picture prefixed with "Thumbnail_video-screenshot-", which is the thumbnail used in folders proposing a thumbnail view (typically in the DAM view).
 
 ### Exporting Office Files
 
 When you export an office file (PDF, DOC, ODT, etc), you download the original file only.
-
-&nbsp;

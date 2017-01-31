@@ -593,19 +593,15 @@ Users must be in one of the groups "members" or "administrators" to be able to a
 
 You can [create]({{page page='managing-users-and-groups'}}) as many groups as needed.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Pages'}}
 
-*   [Working in Workspaces]({{page page='working-in-workspaces'}})
-*   [Working in Sections]({{page page='working-in-sections'}})
-*   [Managing Access Rights]({{page page='managing-access-rights'}})
-*   [Managing Users and Groups]({{page page='managing-users-and-groups'}})
+- [Working in Workspaces]({{page page='working-in-workspaces'}})
+- [Working in Sections]({{page page='working-in-sections'}})
+- [Managing Access Rights]({{page page='managing-access-rights'}})
+- [Managing Users and Groups]({{page page='managing-users-and-groups'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

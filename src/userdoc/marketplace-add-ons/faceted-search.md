@@ -21,147 +21,147 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/3wBFAQ'
     source_link: /display/USERDOC60/Faceted+Search
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 14:20'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-30 14:19'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 14:36'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 22:34'
         message: Add note about deprecation
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-29 23:51'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-29 23:39'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-21 18:58'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-06 11:16'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-24 10:48'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-27 17:31'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-20 14:50'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-20 14:50'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-29 15:57'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-15 14:01'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-05 17:09'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-30 22:49'
         message: Updated screenshots for 5.8
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-30 22:35'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-17 18:17'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 18:13'
         message: Removed related topics from TOC
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-24 22:38'
         message: Updated screenshots with 5.7.1 new UI
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:24'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:23'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:22'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:22'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:22'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:22'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:06'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 18:58'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 18:45'
         message: ''
@@ -280,18 +280,15 @@ Depending on the modules you use and possible customizations, there can be sever
 
 ![]({{file name='saved-search-edit-view.png'}} ?w=650,border=true)
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-*   [Smart Search]({{page page='smart-search'}})
-*   [Quick Search]({{page page='quick-search'}})
-*   [Advanced Search]({{page space='userdoc58' page='advanced-search'}})
+- [Smart Search]({{page page='smart-search'}})
+- [Quick Search]({{page page='quick-search'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in other documentations'}}
 
-*   [Faceted Search]({{page space='nxdoc60' page='faceted-search'}})
+- [Faceted Search]({{page space='nxdoc60' page='faceted-search'}})
 
 {{/panel}}</div></div>

@@ -20,134 +20,134 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/4QBFAQ'
     source_link: /display/USERDOC60/Default+Search
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 09:35'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-20 14:22'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-20 12:04'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 16:57'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 16:44'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-06 11:18'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-06 11:17'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-20 14:52'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-29 15:58'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 16:47'
         message: Added screenshots
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-30 22:48'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-17 18:18'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 16:39'
         message: Updated icons
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 16:14'
         message: Removed related topics from TOC
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:24'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:24'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:24'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:24'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:24'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:23'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:23'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:06'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 18:57'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 18:54'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 18:54'
         message: ''
         version: '1'
 
 ---
-The default search enables you to search a document using documents metadata. You can for instance select metadata of the searched document or the date of specific events such as publication, creation. You can also&nbsp;[customize what information is displayed in the search results](#customizing-search-results).
+The default search enables you to search a document using documents metadata. You can for instance select metadata of the searched document or the date of specific events such as publication, creation. You can also [customize what information is displayed in the search results](#customizing-search-results).
 
 The default search leverages Elasticsearch to provide a quicker and more efficient search. The search form uses [Elasticsearch aggregates]({{page space='nxdoc60' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}}) for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.
 
@@ -275,21 +275,19 @@ You can limit the search to a specific workspaces / section / folder by selectin
 
 </td></tr></tbody></table></div>
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More in User Documentation '}}
 
-*   [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
-*   [Browsing Content]({{page page='browsing-content'}})
-*   [Quick Search]({{page page='quick-search'}})
-*   [Saved Searches]({{page page='saved-searches'}})
+- [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
+- [Browsing Content]({{page page='browsing-content'}})
+- [Quick Search]({{page page='quick-search'}})
+- [Saved Searches]({{page page='saved-searches'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Want to know more?'}}
 
-*   [Indexing and Querying How-To Index]({{page space='nxdoc60' page='indexing-and-querying-how-to-index'}})
-*   [Indexing and Query]({{page space='nxdoc60' page='indexing-and-query'}})
-*   [Full-Text Queries]({{page space='nxdoc60' page='full-text-queries'}})
+- [Indexing and Querying How-To Index]({{page space='nxdoc60' page='indexing-and-querying-how-to-index'}})
+- [Indexing and Query]({{page space='nxdoc60' page='indexing-and-query'}})
+- [Full-Text Queries]({{page space='nxdoc60' page='full-text-queries'}})
 
 {{/panel}}</div></div>
