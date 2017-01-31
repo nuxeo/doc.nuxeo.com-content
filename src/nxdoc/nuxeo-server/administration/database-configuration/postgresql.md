@@ -748,7 +748,7 @@ Also to have an effective monitoring you should install the following extensions
     sudo apt-get install postgresql-contrib
     ```
 
-2.  Login to you database as postgres user and create the extensions.
+2.  Login to your database as postgres user and create the extensions.
 
     ```
     sudo su postgres -c'psql -U postgres -d nuxeo -c"CREATE EXTENSION pg_buffercache;"'
