@@ -153,7 +153,7 @@ history:
         version: '1'
 
 ---
-The default search enables you to search a document using documents metadata. You can for instance select metadata of the searched document or the date of specific events such as publication, creation. You can also&nbsp;[customize what information is displayed in the search results](#customizing-search-results).
+The default search enables you to search a document using documents metadata. You can for instance select metadata of the searched document or the date of specific events such as publication, creation. You can also [customize what information is displayed in the search results](#customizing-search-results).
 
 The default search leverages Elasticsearch to provide a quicker and more efficient search. The search form uses [Elasticsearch aggregates]({{page space='nxdoc710' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}}) for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.
 
@@ -170,7 +170,7 @@ SELECT * FROM Document WHERE (criterion1 = value1 OR criterion1 = value2) AND (c
 **To search documents using detailed criteria:**
 
 1.  Click on the **Search** tab.
-2.  Fill in the form with your criteria and if needed click on the **Filter** button.&nbsp;
+2.  Fill in the form with your criteria and if needed click on the **Filter** button. 
 
 **Notes about default search fields:**
 
@@ -182,15 +182,15 @@ SELECT * FROM Document WHERE (criterion1 = value1 OR criterion1 = value2) AND (c
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More in User Documentation '}}
 
-*   [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
-*   [Browsing Content]({{page page='browsing-content'}})
-*   [Quick Search]({{page page='quick-search'}})
-*   [Saved Searches]({{page page='saved-searches'}})
+- [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
+- [Browsing Content]({{page page='browsing-content'}})
+- [Quick Search]({{page page='quick-search'}})
+- [Saved Searches]({{page page='saved-searches'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Want to know more?'}}
 
-*   [Indexing and Querying How-To Index]({{page space='nxdoc710' page='indexing-and-querying-how-to-index'}})
-*   [Indexing and Query]({{page space='nxdoc710' page='indexing-and-query'}})
-*   [Full-Text Queries]({{page space='nxdoc710' page='full-text-queries'}})
+- [Indexing and Querying How-To Index]({{page space='nxdoc710' page='indexing-and-querying-how-to-index'}})
+- [Indexing and Query]({{page space='nxdoc710' page='indexing-and-query'}})
+- [Full-Text Queries]({{page space='nxdoc710' page='full-text-queries'}})
 
 {{/panel}}</div></div>

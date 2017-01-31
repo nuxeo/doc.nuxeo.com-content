@@ -154,7 +154,7 @@ To **abandon a workflow**, click on the **Workflow** tab of the document and the
 
 ## Notifications
 
-Users who are involved in workflows are alerted by email and can have a synthetic view of all the tasks they have to do on documents in their [dashboard]({{page space='USERDOC' page='Browsing Content#BrowsingContent-Dashboard'}}). The documents they have to review are listed there.
+Users who are involved in workflows are alerted by email and can have a synthetic view of all the tasks they have to do on documents in their [dashboard]({{page page='Browsing Content'}}#dashboard). The documents they have to review are listed there.
 
 ## Rights Modification on the Document
 
@@ -170,10 +170,10 @@ Workflows can be adapted to any types of use cases like purchase requests, case 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
-*   [Serial Document Workflow]({{page page='serial-document-workflow'}})
-*   [Parallel Document Workflow]({{page page='parallel-document-workflow'}})
-*   [Delegating a Task]({{page page='delegating-a-task'}})
-*   [Reassigning a Task]({{page page='reassigning-a-task'}})
+- [Serial Document Workflow]({{page page='serial-document-workflow'}})
+- [Parallel Document Workflow]({{page page='parallel-document-workflow'}})
+- [Delegating a Task]({{page page='delegating-a-task'}})
+- [Reassigning a Task]({{page page='reassigning-a-task'}})
 
 {{/panel}}</div><div class="column medium-6">
 

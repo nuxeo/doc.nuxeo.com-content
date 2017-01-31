@@ -29,27 +29,27 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/Po26AQ'
     source_link: /display/USERDOC710/How+to+Add+New+Relation+Types
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 12:41'
         message: 'ser doc reorganization: fix link to relation'
         version: '5'
-    - 
+    -
         author: Thierry Martins
         date: '2014-11-24 19:14'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 19:05'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 18:57'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 18:57'
         message: ''
@@ -72,18 +72,14 @@ The link between both vocabularies is done using the ID of the vocabulary entrie
     Your new relation type is immediately available.
     ![]({{file name='custom-relation-type.png'}} ?w=600,border=true)
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Editing Content]({{page page='editing-content'}})
-*   [Managing Vocabularies]({{page page='managing-vocabularies'}})
-*   [How-To Index]({{page space='nxdoc710' page='how-to-index'}})
+- [Editing Content]({{page page='editing-content'}})
+- [Managing Vocabularies]({{page page='managing-vocabularies'}})
+- [How-To Index]({{page space='nxdoc710' page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

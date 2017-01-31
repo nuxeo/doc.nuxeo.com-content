@@ -245,9 +245,9 @@ Every user has a **Home** tab, that offers user-centric tabs.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-*   [Nuxeo Platform Concepts]({{page page='nuxeo-platform-concepts'}})
-*   [Collections]({{page page='collections'}})
-*   [Collaborative Features]({{page page='collaborative-features'}})
+- [Nuxeo Platform Concepts]({{page page='nuxeo-platform-concepts'}})
+- [Collections]({{page page='collections'}})
+- [Collaborative Features]({{page page='collaborative-features'}})
 
 {{/panel}}</div><div class="column medium-6">
 

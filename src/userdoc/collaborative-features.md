@@ -192,9 +192,3 @@ Users with Manage everything permission can see the documents the users follow. 
 4.  Click on the **Register** button.
     The modifications are displayed in the list of subscriptions.
     ![]({{file name='manage-subscriptions-user-subscribed.png'}} ?w=350,border=true)
-
-&nbsp;
-
-{{! Don't put anything here. }}
-
-* * *

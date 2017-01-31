@@ -126,12 +126,12 @@ Abandoning the workflow can be done at any time. The workflow initiator can also
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Workflows user documentation]({{page page='workflows'}})
-*   [Case Management with the Nuxeo Platform]({{page page='case-management-with-the-nuxeo-platform'}})
+- [Workflows user documentation]({{page page='workflows'}})
+- [Case Management with the Nuxeo Platform]({{page page='case-management-with-the-nuxeo-platform'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Customizing the workflow'}}
 
-*   [Workflow in Nuxeo Studio]({{page space='studio' page='workflow'}})
-*   [Workflow developer documentation]({{page space='nxdoc710' page='workflow'}})
+- [Workflow in Nuxeo Studio]({{page space='studio' page='workflow'}})
+- [Workflow developer documentation]({{page space='nxdoc710' page='workflow'}})
 
 {{/panel}}</div></div>

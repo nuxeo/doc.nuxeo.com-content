@@ -276,7 +276,7 @@ You need to have "edit" or "manage everything" permissions to create documents.
 
 {{! multiexcerpt name='functional_overview'}}
 
-### Creating a Document Using the New Button {{> anchor 'new-button'}}
+### {{> anchor 'new-button'}}Creating a Document Using the New Button 
 
 Creating a document using the **New** button enables you to select the type of document you want to create among all Nuxeo Platform's document types.
 
@@ -293,7 +293,7 @@ Creating a document using the **New** button enables you to select the type of d
 
 The **Summary** tab of the document is displayed.
 
-### Creating Documents Using the Import Button {{> anchor 'import-button'}}
+### {{> anchor 'import-button'}}Creating Documents Using the Import Button
 
 You can use the **Import** button to create one or several documents in a faster way.
 
@@ -314,55 +314,38 @@ Depending on the uploaded file type, the system will create a note, a file or a 
 
 Here are some examples of most commonly used item types and their output in Nuxeo:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Item type</th>
+<th colspan="1">Document created in Nuxeo</th>
+</tr>
+<tr>
+<td colspan="1">Folder</td>
+<td colspan="1">Folder</td>
+</tr>
+<tr>
+<td colspan="1">Microsoft Office file</td>
+<td colspan="1">File</td>
+</tr>
+<tr>
+<td colspan="1">OpenOffice.file</td>
+<td colspan="1">File</td>
+</tr>
+<tr>
+<td colspan="1">.txt file</td>
+<td colspan="1">Note</td>
+</tr>
+<tr>
+<td colspan="1">Picture (.jpg, .png, etc)</td>
+<td colspan="1">Picture</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-Item type
-
-</th><th colspan="1">
-
-Document created in Nuxeo
-
-</th></tr><tr><td colspan="1">
-
-Folder
-
-</td><td colspan="1">
-
-Folder
-
-</td></tr><tr><td colspan="1">
-
-Microsoft Office file
-
-</td><td colspan="1">
-
-File
-
-</td></tr><tr><td colspan="1">
-
-OpenOffice.file
-
-</td><td colspan="1">
-
-File
-
-</td></tr><tr><td colspan="1">
-
-.txt file
-
-</td><td colspan="1">
-
-Note
-
-</td></tr><tr><td colspan="1">
-
-Picture (.jpg, .png, etc)
-
-</td><td colspan="1">
-
-Picture
-
-</td></tr></tbody></table></div>{{! /multiexcerpt}}
+{{! /multiexcerpt}}
 
 ### {{> anchor 'content-creation-dandd'}}Importing Documents Using Drag and Drop
 
@@ -385,7 +368,7 @@ You can also drop files in your [worklist]({{page page='editing-content#clipboar
 
 You can drag and drop one or more files of any type in Nuxeo.
 
-_![]({{file name='HTML5-DnD.png'}} ?w=650,border=true)_
+![]({{file name='HTML5-DnD.png'}} ?w=650,border=true)
 
 #### Import with Metadata
 
@@ -393,7 +376,7 @@ It is possible to do a drag and drop import of documents with an additional step
 
 **To import documents with metadata:**
 
-1.  Drag your file from your desktop to the workspace main area in the browser and wait for the drop aread to be highlighted in green to drop the file.
+1.  Drag your file from your desktop to the workspace main area in the browser and wait for the drop area to be highlighted in green to drop the file.
     The drop area is highlighted in blue.
     ![]({{file name='smartDnD_stay.png'}} ?w=600,border=true)
     The file is uploaded. When the upload is done, a popup with a **Continue** button is displayed.
@@ -434,24 +417,29 @@ Read the [Nuxeo Bulk Document Importer documentation]({{page space='nxdoc710' pa
 
 {{! multiexcerpt name='automated-metadata-extraction-excerpt'}}
 
-The Nuxeo Platform enables to extract information from the uploaded files attached to a document and&nbsp;automatically fill in the document metadata at creation time. This enables you to leverage metadata existing outside the Nuxeo Platform to automatically categorize documents, preventing users from editing document to report these metadata. Automated metadata extraction is activated by default on [Nuxeo DAM]({{page page='digital-asset-management-with-the-nuxeo-platform'}}): The IPTC legend, copyright and source are used to automatically fill in the description, rights and source metadata of pictures.
+The Nuxeo Platform enables to extract information from the uploaded files attached to a document and automatically fill in the document metadata at creation time. This enables you to leverage metadata existing outside the Nuxeo Platform to automatically categorize documents, preventing users from editing document to report these metadata. Automated metadata extraction is activated by default on [Nuxeo DAM]({{page page='digital-asset-management-with-the-nuxeo-platform'}}): The IPTC legend, copyright and source are used to automatically fill in the description, rights and source metadata of pictures.
 
 {{! /multiexcerpt}}
 
 Read the [Binary Metadata]({{page space='nxdoc710' page='binary-metadata'}}) documentation for more information.
 
-&nbsp;
-
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related pages'}}
 
-*   [Nuxeo Drive]({{page page='nuxeo-drive'}})
-*   [Nuxeo CSV]({{page space='nxdoc710' page='nuxeo-csv'}})
+- [Nuxeo Drive]({{page page='nuxeo-drive'}})
+- [Nuxeo CSV]({{page space='nxdoc710' page='nuxeo-csv'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
+{{/panel}}
+</div>
+<div class="column medium-6">
+{{#> panel heading='Related How-Tos'}}
 
-*   [How to Customize the Bulk Import Form]({{page space='nxdoc710' page='how-to-customize-the-bulk-import-form'}})
-*   [How to Enable Drag'n Drop and New Button on a Custom Content View]({{page space='nxdoc710' page='how-to-enable-dragn-drop-and-new-button-on-a-custom-content-view'}})&nbsp;
+- [How to Customize the Bulk Import Form]({{page space='nxdoc710' page='how-to-customize-the-bulk-import-form'}})
+- [How to Enable Drag'n Drop and New Button on a Custom Content View]({{page space='nxdoc710' page='how-to-enable-dragn-drop-and-new-button-on-a-custom-content-view'}})
 
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>

@@ -148,9 +148,9 @@ history:
 
 When a document is finished and ready for distribution, you must publish it in a section. Sections are spaces dedicated to the distribution of documents to a wider audience.
 
-Sections are spaces that are managed like workspaces, there is no section that is automatically created by default, except for the sections root. You are free to organize your section the way it fits your needs or your project the best. The section tree is completely independent from workspaces. Their structure is not linked. Still, you can guide users as to where they should publish documents from a specific workspace using the&nbsp;publication targets.
+Sections are spaces that are managed like workspaces, there is no section that is automatically created by default, except for the sections root. You are free to organize your section the way it fits your needs or your project the best. The section tree is completely independent from workspaces. Their structure is not linked. Still, you can guide users as to where they should publish documents from a specific workspace using the publication targets.
 
-As in workspaces, the access to sections is determined by&nbsp;permissions.
+As in workspaces, the access to sections is determined by permissions.
 
 The main difference with workspaces is the fact that documents can't be edited in sections. The only actions available on published documents are:
 
@@ -161,7 +161,7 @@ The main difference with workspaces is the fact that documents can't be edited i
 
 ### Publishing Documents
 
-Publishing a document means publishing the version of the document as it is at the time of publication. If you modify the document in the workspace once published, it is not modified in the section.&nbsp; If you want to modify a published document, you must modify it in the workspace and then publish the modified version of the document. The workspace document can be deleted without the published document to be affected: section readers will still be able to consult the published document, comment it, etc.
+Publishing a document means publishing the version of the document as it is at the time of publication. If you modify the document in the workspace once published, it is not modified in the section. If you want to modify a published document, you must modify it in the workspace and then publish the modified version of the document. The workspace document can be deleted without the published document to be affected: section readers will still be able to consult the published document, comment it, etc.
 
 When you want to publish a document, you need to submit it to publishing. When the document is submitted to publication, the section's managers can approve the publication submission, that is to say publish the document, or reject it. In that last case, the document is not available in the section. However, it is still available in the workspace. You can modify it and submit it again.
 
@@ -193,15 +193,15 @@ To submit a document to publication, you need the following permissions:
 
 You can submit a document in several sections. The publishing workflows in the different sections are independent. The document can be published in a section and rejected in another one. The list of the sections in which you can publish a document is defined by your permissions.
 
-To**&nbsp;submit a document to publishing,** fromthe&nbsp;**Publish**&nbsp;tab of the document in the workspace, select:
+To** submit a document to publishing, from the **Publish** tab of the document in the workspace, select:
 
 *   the domain you want to publish the document in
 *   the rendition that should be published, typically no rendition (same document format as in the workspace) or a PDF version of the document.
 
-Unfold the sections tree and click on the&nbsp;**Publish here**&nbsp;link corresponding to the section you want to publish the document in.
+Unfold the sections tree and click on the **Publish here** link corresponding to the section you want to publish the document in.
 
 The version number of the submitted document is indicated in the publication form.
-![]({{file name='publish-form-submitted.png'}} ?w=650,border=true)&nbsp;
+![]({{file name='publish-form-submitted.png'}} ?w=650,border=true)
 
 Alternatively you can drag the icon of the document to publish onto the target section in the navigation tree until the section is highlighted, and drop the document icon.
 
@@ -227,11 +227,11 @@ Users with edit and management permissions in the section can approve the publis
 
 When a document is submitted to publication in a section in which you have management permissions, it is displayed in your dashboard. You must then approve or reject the document.
 
-To**&nbsp;publish a document**, click on the&nbsp;**Home**&nbsp;main tab (the&nbsp;**Dashboard**&nbsp;tab is automatically selected. The pending documents are displayed in your tasks).&nbsp; Click on the pending document and go to the&nbsp;**Publishing**&nbsp;part at the bottom of the tab, with has a&nbsp;**Reject**&nbsp;and a&nbsp;**Publish**&nbsp;buttons.
+To** publish a document**, click on the **Home** main tab (the **Dashboard** tab is automatically selected. The pending documents are displayed in your tasks). Click on the pending document and go to the **Publishing** part at the bottom of the tab, with has a **Reject** and a **Publish** buttons.
 
 ![]({{file name='publish-approval-form.png'}} ?w=650,border=true)
 
-Only users with edit or management permissions can see the pending document in the section. You can type a comment or click on**&nbsp;Publish**&nbsp;directly. The document is now available to all the users who can access the section.
+Only users with edit or management permissions can see the pending document in the section. You can type a comment or click on **Publish** directly. The document is now available to all the users who can access the section.
 
 **Rejecting Document Publishing**
 
@@ -245,18 +245,18 @@ Only users with edit and management permissions can see the pending document in 
 
 {{/callout}}
 
-To**&nbsp;reject a document,&nbsp;**Click on the&nbsp;**Home**&nbsp;main tab and then on the&nbsp;pending document.&nbsp;The document opens in the section on its&nbsp;&nbsp;**Summary**&nbsp;tab. It has a&nbsp;**Publishing**&nbsp;part at the bottom of the tab, with a&nbsp;**Publishing**&nbsp;part that has a&nbsp;&nbsp;**Reject**&nbsp;and a&nbsp;**Publish**&nbsp;buttons.&nbsp;Type a comment explaining why you reject the document publication. This comment is mandatory to reject the document publishing.&nbsp;
+To **reject a document** click on the **Home** main tab and then on the pending document. The document opens in the section on its **Summary** tab. It has a **Publishing** part at the bottom of the tab, with a **Publishing** part that has a **Reject** and a **Publish** buttons. Type a comment explaining why you reject the document publication. This comment is mandatory to reject the document publishing.
 
 ![]({{file name='publish-reject-comment.png'}} ?w=650,border=true)
 
-Once it is done, click on the&nbsp;**Reject**&nbsp;button.&nbsp;The document is not published and is deleted from section content. You are redirected on the&nbsp;**Content**&nbsp;tab of the section.
+Once it is done, click on the **Reject** button. The document is not published and is deleted from section content. You are redirected on the **Content** tab of the section.
 In the workspace, the fact that publishing was rejected is logged in the History of the document.
 
 **Republishing Documents**
 
 Since version 5.7.1, users with Edit permissions can easily publish a new version of a document that has already been published. Republishing is available after the published document has been edited, with or without version increment.
 
-To**&nbsp;republish a document**, in the workspace, open the document to republish and click&nbsp;on the&nbsp;**Publish**&nbsp;tab.&nbsp;The list of sections in which the document is published is displayed and a Republish button is displayed next to the Unpublish button.&nbsp;Click on the&nbsp;**Republish**&nbsp;button corresponding to the section in which you want to publish a new version of the document.&nbsp;The latest version of the document is immediately available from the section. It replaced the previously published version in the section.
+To **republish a document**, in the workspace, open the document to republish and click on the **Publish** tab. The list of sections in which the document is published is displayed and a Republish button is displayed next to the Unpublish button. Click on the **Republish** button corresponding to the section in which you want to publish a new version of the document. The latest version of the document is immediately available from the section. It replaced the previously published version in the section.
 
 **Unpublishing Documents**
 
@@ -264,13 +264,13 @@ Only users with editing or management permissions can unpublish a document from 
 
 Unpublishing a document deletes the document from the section, but it does not delete the workspace document.
 
-To**&nbsp;unpublish a document from a section**, in the&nbsp;**Content**&nbsp;tab of the section, check the box in front of the document's name and click on the&nbsp;**Unpublish**&nbsp;button.&nbsp;The document is unpublished and does not appear in the section. The original document in the workspace is not deleted.
+To **unpublish a document from a section**, in the **Content** tab of the section, check the box in front of the document's name and click on the **Unpublish** button. The document is unpublished and does not appear in the section. The original document in the workspace is not deleted.
 
 ### Media Publishing
 
 {{{excerpt 'NXDOC:Nuxeo Media Publishing'}}}
 
-Read the page&nbsp;[Nuxeo Media Publishing]({{page space='nxdoc710' page='nuxeo-media-publishing'}})&nbsp;for more information about this addon.&nbsp;
+Read the page [Nuxeo Media Publishing]({{page space='nxdoc710' page='nuxeo-media-publishing'}}) for more information about this addon.
 
 ### Publication Targets
 
@@ -278,9 +278,9 @@ In order to guide users when they publish documents and make sure documents are 
 
 By default, workspaces don't have any targets defined.
 
-To**&nbsp;define the publication targets of a workspace,&nbsp;**click on the&nbsp;**Manage**&nbsp;> **Publication targets**, if no section has been defined yet, users can submit documents to publishing in any section (providing they have the permissions to publish). Unfold the sections tree and click on the&nbsp;**Add**&nbsp;link of the sections to which you want to restrict publishing from this workspace.&nbsp; The selected sections are displayed in a table below the tree. No&nbsp;**Add**&nbsp;link is available anymore for these sections.
+To **define the publication targets of a workspace** click on the **Manage**&nbsp;> **Publication targets**, if no section has been defined yet, users can submit documents to publishing in any section (providing they have the permissions to publish). Unfold the sections tree and click on the **Add** link of the sections to which you want to restrict publishing from this workspace. The selected sections are displayed in a table below the tree. No **Add** link is available anymore for these sections.
 
-When they click on the&nbsp;**Publish**&nbsp;tab of documents to publish a document, only the selected sections are available to publish the document. To&nbsp;**remove&nbsp;**&nbsp;**a section**&nbsp;from the workspace targets, click on&nbsp;![]({{file name='delete.png' space='userdoc58' page='icons-index'}})&nbsp;next to it.&nbsp;
+When they click on the **Publish** tab of documents to publish a document, only the selected sections are available to publish the document. To **remove a section** from the workspace targets, click on&nbsp;![]({{file name='delete.png' space='userdoc58' page='icons-index'}}) next to it.
 
 ![]({{file name='publicationTargets-added.png'}} ?w=500,border=true)
 
@@ -292,13 +292,9 @@ When they click on the&nbsp;**Publish**&nbsp;tab of documents to publish a docum
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
-*   [Nuxeo Platform Feature Table]({{page space='nxdoc710' page='nuxeo-platform-feature-table'}})
-*   [Nuxeo Media Publishing]({{page space='nxdoc710' page='nuxeo-media-publishing'}})
+- [Nuxeo Platform Feature Table]({{page space='nxdoc710' page='nuxeo-platform-feature-table'}})
+- [Nuxeo Media Publishing]({{page space='nxdoc710' page='nuxeo-media-publishing'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-&nbsp;
 
 </div></div>

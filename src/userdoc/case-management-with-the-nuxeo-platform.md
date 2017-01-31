@@ -67,12 +67,12 @@ It takes two steps:
 1.  Developers design the different workflows you need in [Studio]({{page space='studio'}}).
 2.  End users select the workflow they want to start and which users participate.
 
-On the Studio side, developers can define the different steps of the workflow, how to go from a step to another, the different branches of the workflow, the actions available to users, their tasks etc. Their can also choose what information the Workflow tab of document should present, and how.
+On the Studio side, developers can define the different steps of the workflow, how to go from a step to another, the different branches of the workflow, the actions available to users, their tasks etc. Their can also choose what information the Workflow tab of document should present, and how.<br/>
 **Documentation: [Workflows in Studio]({{page space='studio' page='workflow'}})**
 
 ![]({{file name='Workflow-in-studio.png'}} ?w=650,border=true)
 
-After the Studio customizations have been deployed, users can make the documents go through the workflows from their usual Nuxeo Platform environment. An example of workflow is available by default on the Nuxeo Platform
+After the Studio customizations have been deployed, users can make the documents go through the workflows from their usual Nuxeo Platform environment. An example of workflow is available by default on the Nuxeo Platform.<br/>
 **Documentation: [Default Nuxeo Platform Workflows]({{page page='workflows'}})**
 
 ![]({{file name='workflow-choose-reviewers-task-workflow-tab.png' page='serial-document-workflow'}} ?w=650)

@@ -158,16 +158,16 @@ Typing keywords in the search field and pressing the "Enter" key triggers a full
 **To search a document using quick search:**
 
 1.  Type your keywords in the quick search field.
-    Matching documents are suggested as you type. See below for&nbsp;[details on suggestion search](#suggestion-search).
+    Matching documents are suggested as you type. See below for [details on suggestion search](#suggestion-search).
     ![]({{file name='simple_search_suggestion.png'}} ?w=250,border=true,thumbnail=true)
 2.  If the searched document is not suggested, press the Enter key to display all matching documents.
     Search results are displayed in the **Search** tab. The Quick search is selected and filled in with your keywords.
-3.  Click on the document's name to open it.&nbsp;
+3.  Click on the document's name to open it.
     ![]({{file name='quick-search-results.png'}} ?w=600,border=true)
 
 ### Suggestion Search
 
-When you start typing words in the quick search field, in the top right corner of the page, you are displayed some results as you type. This is the suggestion search. You can type words or dates in this field.&nbsp;Results include three types of items:
+When you start typing words in the quick search field, in the top right corner of the page, you are displayed some results as you type. This is the suggestion search. You can type words or dates in this field. Results include three types of items:
 
 *   Documents (10)
 *   Users (5)
@@ -186,7 +186,7 @@ For instance:
 
     ![]({{file name='search-suggestion-SEC.png'}} ?w=250,border=true,thumbnail=true)
 
-    As you type, the list of suggested document is narrowed to match the typed characters. You end up with documents like&nbsp;"second workspace",&nbsp;"second news", "7 seconds news clip", "secondary newsletter".
+    As you type, the list of suggested document is narrowed to match the typed characters. You end up with documents like "second workspace", "second news", "7 seconds news clip", "secondary newsletter".
 
     ![]({{file name='search-suggestion-SECOND.png'}} ?w=250,border=true,thumbnail=true)
 
@@ -201,7 +201,7 @@ For instance:
     {{/accordian}}
 2.  Add a second word in the search field, for instance "news".
 
-    As you type, the system will suggest documents with title holding words whose stem is "second" and words starting with "news". From the list above, only the documents above are left:&nbsp;"second news", "7 seconds news clip".
+    As you type, the system will suggest documents with title holding words whose stem is "second" and words starting with "news". From the list above, only the documents above are left: "second news", "7 seconds news clip".
 
     "second workspace" doesn't match any more because it doesn't hold a word with "news", and "secondary newsletter" is not suggested anymore because the stem for "secondary" is "secondar" and not "second".
 
@@ -217,7 +217,7 @@ For instance:
 
     {{/accordian}}
 
-You can use the&nbsp;[operators](#operators)&nbsp;- and OR in the suggestion search.
+You can use the [operators]({{page version='710' space='userdoc' page='searching-the-nuxeo-platform'}}#operators) - and OR in the suggestion search.
 
 #### Search on Users and Groups
 
@@ -225,20 +225,18 @@ You can also use the quick search box to search users and groups.If you type a u
 
 When the system finds a user, it suggests to show his information.
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More in User Documentation'}}
 
-*   [Default Search]({{page page='default-search'}})
-*   [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
-*   [Saved Searches]({{page page='saved-searches'}})
+- [Default Search]({{page page='default-search'}})
+- [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
+- [Saved Searches]({{page page='saved-searches'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Configuring and Customizing Search '}}
 
-*   [Indexing and Querying How-To Index]({{page space='nxdoc710' page='indexing-and-querying-how-to-index'}})
-*   [Full-Text Queries]({{page space='nxdoc710' page='full-text-queries'}})
-*   [Indexing and Query]({{page space='nxdoc710' page='indexing-and-query'}})
+- [Indexing and Querying How-To Index]({{page space='nxdoc710' page='indexing-and-querying-how-to-index'}})
+- [Full-Text Queries]({{page space='nxdoc710' page='full-text-queries'}})
+- [Indexing and Query]({{page space='nxdoc710' page='indexing-and-query'}})
 
 {{/panel}}</div></div>

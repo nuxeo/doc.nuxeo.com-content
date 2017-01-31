@@ -180,15 +180,13 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
 {{! multiexcerpt name='functional_overview'}}
 
 The **History** tab of a document gives you access to the audit trail of the document and its versions, thus ensuring the traceability of documents.
 
 ## Audit Trail
 
-All the actions that are done on documents are registered in the document's audit trail&nbsp;available from **Event log** sub tab, with several information, such as the date and time, the user, the comment, etc.
+All the actions that are done on documents are registered in the document's audit trail available from **Event log** sub tab, with several information, such as the date and time, the user, the comment, etc.
 
 ![]({{file name='history-event-log.png'}} ?w=650,border=true)
 
@@ -208,8 +206,7 @@ Archived versions have few actions available: you can only [create relations]({{
 
 All users can consult the previous versions of a document.
 
-**Restoring versions
-**
+**Restoring versions**
 
 You need to have "version", "edit" or "manage everything" permissions to restore a previous version of a document. Restoring an archived version means making it the current version of the document. The modifications done since that old version are thus not taken into account anymore.
 
@@ -221,18 +218,15 @@ For instance, your document's version is currently 0.3\. When you click on the *
 
 {{! /multiexcerpt}}
 
-&nbsp;
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More about versioning and history in this documentation'}}
 
-*   [Editing Content]({{page page='editing-content'}})
-*   [Nuxeo Diff]({{page page='nuxeo-diff'}})
+- [Editing Content]({{page page='editing-content'}})
+- [Nuxeo Diff]({{page page='nuxeo-diff'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Developer documentation about versioning and history'}}
 
-*   [Versioning developer documentation]({{page space='nxdoc710' page='versioning'}})
-*   [How to Customize the Versioning and Comment Widget on Document Edit Form]({{page space='nxdoc710' page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
+- [Versioning developer documentation]({{page space='nxdoc710' page='versioning'}})
+- [How to Customize the Versioning and Comment Widget on Document Edit Form]({{page space='nxdoc710' page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
 
 {{/panel}}</div></div>

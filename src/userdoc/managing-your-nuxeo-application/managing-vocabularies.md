@@ -140,7 +140,7 @@ Administrators and power users can only modify or delete vocabularies. They cann
 
 All vocabularies editable from the user interface are listed in the vocabularies management interface.
 
-To consult a vocabulary or its entries click on the **Admin >** **Vocabularies** tab and select the vocabulary you want to consult in the drop down list.
+To consult a vocabulary or its entries click on the **Admin** > **Vocabularies** tab and select the vocabulary you want to consult in the drop down list.
 ![]({{file name='DM-vocabulary_selection.png'}} ?w=650,border=true)
 
 {{#> callout type='info' }}
@@ -238,15 +238,12 @@ To delete vocabulary entry, click on the **Delete** button of the entry to erase
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Admin Tab Overview]({{page space='admindoc710' page='admin-tab-overview'}})
-*   [How to Add a New Vocabulary]({{page space='nxdoc710' page='how-to-add-a-new-vocabulary'}})
-*   [How to Translate a Vocabulary]({{page space='nxdoc710' page='how-to-translate-a-vocabulary'}})
-*   [How to Add New Relation Types]({{page page='how-to-add-new-relation-types'}})
+- [Admin Tab Overview]({{page space='admindoc710' page='admin-tab-overview'}})
+- [How to Add a New Vocabulary]({{page space='nxdoc710' page='how-to-add-a-new-vocabulary'}})
+- [How to Translate a Vocabulary]({{page space='nxdoc710' page='how-to-translate-a-vocabulary'}})
+- [How to Add New Relation Types]({{page page='how-to-add-new-relation-types'}})
 
 {{/panel}}</div><div class="column medium-6">
 
-&nbsp;
-
-&nbsp;
 
 </div></div>
