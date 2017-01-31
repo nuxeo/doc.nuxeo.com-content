@@ -197,7 +197,7 @@ At the Core level, blobs are bound to documents via a property of type `BlobProp
 <xs:element name="test" type="nxs:content"/>
 ```
 
-Which corresponds in [Nuxeo Studio](http://www.nuxeo.com/products/studio/) to selecting "Blob" in the type.
+Which corresponds in [Nuxeo Studio]({{page version='' space='studio' page='nuxeo-studio'}}) to selecting "Blob" in the type.
 
 You can then use either the [`Document.SetBLob`](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.SetBlob) operation to set a blob on a given property or the `setPropertyValue(String xpath,`
 
@@ -256,7 +256,7 @@ The default implementation. Stores binaries using their MD5 (or other)&nbsp;hash
 
 </td><td colspan="1">
 
-[Configuration]({{page page='file-storage-configuration#configuringthedefaultblobprovider'}})
+[Configuration]({{page page='file-storage-configuration'}}#configuring-the-default-blobprovider)
 
 </td></tr><tr><td colspan="1">
 
@@ -292,7 +292,7 @@ Reads content stored on an external file system.
 
 </td><td colspan="1">
 
-[Configuration](#externalfilesystem)
+[Configuration]({{page page='file-storage'}}#external-file-system)
 
 </td></tr><tr><td colspan="1">
 
@@ -343,9 +343,9 @@ Stores Content on Azure Object Store
 
 </td><td colspan="1">
 
-*   [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage)
-*   [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/master/nuxeo-core-binarymanager-azure)
-*   [Configuration](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/blob/master/nuxeo-core-binarymanager-azure/README.md)
+- [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage)
+- [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/master/nuxeo-core-binarymanager-azure)
+- [Configuration](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/blob/master/nuxeo-core-binarymanager-azure/README.md)
 
 </td></tr><tr><td colspan="1">
 
@@ -365,9 +365,9 @@ Stores content on Azure object store read it through Azure CDN
 
 </td><td colspan="1">
 
-*   [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage)
-*   [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/master/nuxeo-core-binarymanager-azure)
-*   [Configuration](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/blob/master/nuxeo-core-binarymanager-azure/README.md)
+- [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage)
+- [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/master/nuxeo-core-binarymanager-azure)
+- [Configuration](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/blob/master/nuxeo-core-binarymanager-azure/README.md)
 
 </td></tr><tr><td colspan="1">
 
@@ -387,9 +387,9 @@ Stores content on Amazon S3
 
 </td><td colspan="1">
 
-*   [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage)
-*   [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/master/nuxeo-core-binarymanager-s3)
-*   [Configuration]({{page page='amazon-s3-online-storage'}})
+- [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage)
+- [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/master/nuxeo-core-binarymanager-s3)
+- [Configuration]({{page page='amazon-s3-online-storage'}})
 
 </td></tr><tr><td colspan="1">
 
@@ -429,8 +429,8 @@ Reads content from Google Drive
 
 </td><td colspan="1">
 
-*   [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
-*   [Sources](https://github.com/nuxeo/nuxeo-liveconnect/tree/master/nuxeo-liveconnect-google-drive)
+- [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
+- [Sources](https://github.com/nuxeo/nuxeo-liveconnect/tree/master/nuxeo-liveconnect-google-drive)
 
 </td></tr><tr><td colspan="1">
 
@@ -450,8 +450,8 @@ Reads content from Dropbox
 
 </td><td colspan="1">
 
-*   [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
-*   [Sources](https://github.com/nuxeo/nuxeo-liveconnect/tree/master/nuxeo-liveconnect-dropbox)
+- [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
+- [Sources](https://github.com/nuxeo/nuxeo-liveconnect/tree/master/nuxeo-liveconnect-dropbox)
 
 </td></tr><tr><td colspan="1">
 
@@ -470,11 +470,10 @@ GridFSBinaryManager
 Reads and writes content into MongoDB Binary Manager
 
 </td><td colspan="1">
-
-*   [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/mongodb-gridfs-storage)[](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs)
+- [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/mongodb-gridfs-storage)[](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs)
 [](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs)
-*   [](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs)[Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs)
-*   [Configuration](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs/blob/master/ReadMe.md)
+- [](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs)[Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs)
+- [Configuration](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs/blob/master/ReadMe.md)
 
 &nbsp;
 
