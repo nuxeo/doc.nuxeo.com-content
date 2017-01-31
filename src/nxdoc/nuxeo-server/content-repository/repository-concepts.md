@@ -2,10 +2,10 @@
 title: Repository Concepts
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - concepts
     - excerpt
 toc: true
@@ -269,8 +269,6 @@ history:
 This page summarizes all the main concepts about documents, access to documents and document storage.
 
 {{! /excerpt}}
-
-&nbsp;
 
 ## Document in Nuxeo
 
@@ -540,11 +538,13 @@ The second use cases for proxies is multi-filling.
 
 If a proxy can not hold metadata, it can hold security descriptors (ACP/ACL). So a user may be able to see one proxy and not an other.
 
-### <span style="font-size: 20.0px;font-weight: normal;line-height: 1.5;">Repository Storage: VCS</span>
+### Repository Storage: VCS and DBS
 
 The Nuxeo repository consists of several services.
 
-One of them is responsible for actually managing persistence of documents. This service is pluggable. The Nuxeo repository uses its own persistence back end: Nuxeo Visible Content Store (VCS)
+One of them is responsible for actually managing persistence of documents. This service is pluggable. The Nuxeo Platform repository uses its own persistence backends: VCS and DBS.
+
+#### VCS (Visible Content Store)
 
 Nuxeo VCS was designed to provide a clean SQL Mapping. This means that VCS does a normal mapping between XSD schemas and the SQL database:
 
@@ -558,18 +558,6 @@ Using such a mapping provides several advantages:
 *   You can use standard SQL based BI tools to do reporting,
 *   You can do low level SQL bulk inserts for data migration.
 
-Binary files are never stored in the database, they are stored via BinaryManager on the file system using their digest. Files are only deleted from the file system by a garbage collector script.
-
-This storage strategy as several advantages:
-
-*   Storing several times the same file in Nuxeo won't store it several time on disk,
-*   Binary storage can be easily snapshotted.
-
-VCS being now the default Nuxeo backend, it also provides some features that were not available when using the previous JCR backend:
-
-*   Tag service,
-*   Possibility to import a document with a fixed UUID (useful for application level synchronization).
-
 In addition, VCS provides a native cluster mode that does not rely on any external clustering system. This means you can have two (or more) Nuxeo servers sharing the same data: you only have to turn on Nuxeo VCS Cluster mode.
 
 Advantages of VCS:
@@ -581,9 +569,22 @@ Advantages of VCS:
 *   Supports low level SQL bulk imports,
 *   VCS scales well with big volumes of Documents.
 
-Drawbacks of VCS:
+You can read more about it on the [VCS Page]({{page page='vcs'}}).
 
-*   storage is not JCR compliant.
+#### DBS (Document-Based Storage)
+
+DBS allows storage of Nuxeo documents inside a document-oriented store, like MongoDB or MarkLogic.
+
+You can read more about it on the [DBS Page]({{page page='dbs'}}).
+
+#### Blob Providers
+
+Binary files are never stored in the database, they are stored via the Blob Manager and the configurable Blob Providers on the file system, or in an external blob storage backend, using their digest.
+
+This storage strategy as several advantages:
+
+*   Storing several times the same file in Nuxeo won't store it several time on disk,
+*   Binary storage can be easily snapshotted.
 
 ## Advanced Features
 

@@ -2,10 +2,10 @@
 title: PostgreSQL
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - postgresql
     - database
     - multiexcerpt-include
@@ -599,44 +599,6 @@ However, if you use XA datasources (see the [JDBC Datasource Configuration docum
 max_prepared_transactions = 100
 ```
 
-### Implicit Casts
-
-Jena (used for relations and comments) and jBPM (used for workflows) assume some implicit value casting in the SQL they generate.
-
-To make Nuxeo work with PostgreSQL >= 8.3, you must therefore execute the following commands in your PostgreSQL console when connected to the `template1` database, so that any database created afterward will come with the required CASTs (if your database is already created, execute the commands in your database as well):
-
-```
-CREATE FUNCTION pg_catalog.text(integer) RETURNS text STRICT IMMUTABLE LANGUAGE SQL AS 'SELECT textin(int4out($1));';
-CREATE CAST (integer AS text) WITH FUNCTION pg_catalog.text(integer) AS IMPLICIT;
-COMMENT ON FUNCTION pg_catalog.text(integer) IS 'convert integer to text';
-
-CREATE FUNCTION pg_catalog.text(bigint) RETURNS text STRICT IMMUTABLE LANGUAGE SQL AS 'SELECT textin(int8out($1));';
-CREATE CAST (bigint AS text) WITH FUNCTION pg_catalog.text(bigint) AS IMPLICIT;
-COMMENT ON FUNCTION pg_catalog.text(bigint) IS 'convert bigint to text';
-
-```
-
-{{#> callout type='warning' }}
-
-This change is mandatory for PostgreSQL >= 8.3 since casts have been simplified. If you don't change this option you will have `operator does not exist` exceptions.
-
-{{/callout}}
-
-Possible errors if you don't update the casts as described above are:
-
-```
-org.postgresql.util.PSQLException: ERROR: operator does not exist: integer = character varying
-
-org.postgresql.util.PSQLException: ERROR: operator does not exist: bigint = character varying
-
-com.hp.hpl.jena.db.RDFRDBException: Exception while checking db format - com.hp.hpl.jena.db.RDFRDBException: Internal SQL error in driver - org.postgresql.util.PSQLException: ERROR: current transaction is aborted, commands ignored until end of transaction block
-
-com.hp.hpl.jena.db.RDFRDBException: Internal SQL error in driver - org.postgresql.util.PSQLException: ERROR: current transaction is aborted, commands ignored until end of transaction block
-
-```
-
-For further details, please see [this URL](http://petereisentraut.blogspot.com/2008/03/readding-implicit-casts-in-postgresql.html). You might also be interested in [this migration helper](http://okbob.blogspot.com/2009/02/83-migration-helper.html).
-
 ### Create the Role and Database for Nuxeo
 
 For instance (please change the password and the `nuxeo.conf` file of your instance accordingly):
@@ -661,7 +623,7 @@ Note that using the `UTF8` encoding for your database is important.
 
 {{/callout}}
 
-### Edit the PostgreSQL configuration file to change how the `nuxeo` user authenticates to the database
+### Secure the Authentication Method
 
 Edit the file `pg_hba.conf`, make sure that the `nuxeo` user (or `all` users, if the `nuxeo` user is not individually listed), have an authentication `METHOD` of `md5`, rather than `ident`. Otherwise you will have some `FATAL: Ident authentication failed for user "nuxeo"` errors in the logs.
 
@@ -680,7 +642,7 @@ host    all         all         127.0.0.1/32          md5
 
 One of the most important thing for PostgreSQL is to have lots of shared buffers along with free memory that can be used by the system cache.
 
-Refer to the section "Adapt your configuration to your hardware" to get the correct value.
+Refer to the section [Adapt Your Configuration to Your Hardware](#adapt-your-configuration-to-your-hardware) to get the correct value.
 
 If you plan to use 1&nbsp;GB of shared buffers, update the following property in your `postgresql.conf` file:
 
@@ -689,14 +651,7 @@ shared_buffers = 1GB
 
 ```
 
-If you use PostgreSQL < 9.3 the shared memory must be available on the system side using `sysctl`, you need to enable a little bit more at the OS level, for instance try 1&nbsp;GB + 128&nbsp;MB:
-
-```
-sysctl kernel.shmmax=1207959552
-
-```
-
-Then restart the PostgreSQL.
+Then restart PostgreSQL.
 
 If there is no enough shared memory you will have an explicit error message and you should try with a bigger `kernel.shmmax` value.
 
@@ -754,7 +709,7 @@ The `random_page_cost` parameter influences this query planner's choice. The val
 
 ### Updating the Planner Statistics
 
-PostgreSQL computes statistics on table content in order to plan for the best performance when executing queries with joins and complex filters. The default configuration in PostgreSQL <= 8.3 is `default_statistics_target` set to the value 10 which can lead to not accurate enough estimates. In 8.4 this value is now set to 100 by default. We recommend a higher value like 500:
+PostgreSQL computes statistics on table content in order to plan for the best performance when executing queries with joins and complex filters. The default configuration is `default_statistics_target` set to the value 100 which can lead to not accurate enough estimates. We recommend a higher value like 500:
 
 ```
 default_statistics_target = 500
@@ -765,7 +720,7 @@ If the database is already populated you need to execute `ANALYZE` to update the
 
 ### Vacuuming
 
-The autovacuum is enabled by default since PostgreSQL 8.3.
+The autovacuum is enabled by default in PostgreSQL.
 
 Exceptionally, a full vacuum can be done at downtime to recover disk space, it should be followed with a `reindexdb` command.
 
@@ -793,7 +748,7 @@ Also to have an effective monitoring you should install the following extensions
     sudo apt-get install postgresql-contrib
     ```
 
-2.  Login to you database as postgres user and create the extensions (require PostgreSQL >= 9.1).
+2.  Login to your database as postgres user and create the extensions.
 
     ```
     sudo su postgres -c'psql -U postgres -d nuxeo -c"CREATE EXTENSION pg_buffercache;"'
@@ -804,7 +759,6 @@ Also to have an effective monitoring you should install the following extensions
 
     ```
     shared_preload_libraries = 'pg_stat_statements, auto_explain'
-    # custom_variable_classes = 'pg_stat_statements, auto_explain' # uncomment if you are on PostgreSQL 9.1
     pg_stat_statements.max = 10000
     pg_stat_statements.track = top
     auto_explain.log_min_duration = -1
@@ -831,9 +785,9 @@ Here are some values that can be used as a starting point for a dedicated server
 
 If you want accent-insensitive full-text search, you'll need to install the _unaccent_ contribution, create a new text search configuration, and specify its use in Nuxeo.
 
-_Unaccent_ is described here [http://www.postgresql.org/docs/9.0/static/unaccent.html](http://www.postgresql.org/docs/9.0/static/unaccent.html).
+_Unaccent_ is described here [https://www.postgresql.org/docs/current/static/unaccent.html](https://www.postgresql.org/docs/current/static/unaccent.html).
 
-Install it by running `unaccent.sql` script. For Ubuntu users, this file is located at `/usr/share/postgresql/9.0/contrib/unaccent.sql`.
+Install it by running `unaccent.sql` script. For Ubuntu users, this file is located at `/usr/share/postgresql/9.6/contrib/unaccent.sql`.
 
 Connect to your database and run the following instructions:
 
@@ -863,9 +817,6 @@ After the import you can update the full-text column like this:
 ALTER TABLE fulltext ENABLE TRIGGER nx_trig_ft_update;
 -- Let the trigger update the fulltext column
 UPDATE fulltext SET fulltext = ''::TSVECTOR WHERE length(fulltext) is NULL;
--- For Nuxeo up to 5.4
-CREATE INDEX fulltext_fulltext_idx ON fulltext USING gin (fulltext);
--- For Nuxeo >= 5.5
 CREATE INDEX fulltext_fulltext_title_idx ON fulltext USING gin (nx_to_tsvector(fulltext_title::character varying));
 CREATE INDEX fulltext_fulltext_description_idx ON fulltext USING gin (nx_to_tsvector(fulltext_description::character varying));
 CREATE INDEX fulltext_fulltext_idx ON fulltext USING gin (nx_to_tsvector(fulltext::character varying));
@@ -883,7 +834,7 @@ synchronous_commit = off
 
 {{#> callout type='warning' }}
 
-**Do not do this if there is already any data you care about in any database on your PostgreSQL cluster,** Please refer to the [PostgreSQL reference manual](http://www.postgresql.org/docs/8.3/interactive/runtime-config-wal.html).
+**Do not do this if there is already any data you care about in any database on your PostgreSQL cluster,** Please refer to the [PostgreSQL reference manual](https://www.postgresql.org/docs/current/static/runtime-config-wal.html).
 
 {{/callout}}
 
