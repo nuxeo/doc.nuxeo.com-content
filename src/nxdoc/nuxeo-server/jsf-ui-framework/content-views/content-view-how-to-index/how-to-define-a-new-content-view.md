@@ -543,7 +543,6 @@ The first part of the result configuration form is dedicated to setting up some 
         <td colspan="1">Enable additional actions</td>
         <td colspan="1">
           You can define new buttons or actions that will be displayed next to the default document list toolbar: Click **Create a new action** to define [a new user action (button, icon or link)]({{page page='actions-links-buttons-icons-tabs-and-more'}}) to be displayed below the list of documents.
-          See the tutorial [Create a button that triggers the task assignment]({{page page='create-a-button-that-triggers-the-task-assignment'}}) for an example of user action configuration.
         </td>
       </tr>
     </tbody>

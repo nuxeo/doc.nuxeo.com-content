@@ -140,7 +140,6 @@ This operation will assign a task to users or groups of users, which are defined
 *   the user name,
 *   the group name (the syntax for groups is `group:groupname`),
 *   a context variable referring to them. This context variable can typically be defined in the "Get Users and Groups" operation that must be in the same automation chain. That operation stores a variable with some users and groups given the rights they have on an input document.
-    See the [One step validation flow tutorial]({{page page='one-step-validation-flow-based-on-lifecycle-only'}}) for a complete sample.
 
 Once a user that is assigned the task accepts or rejects the task, the automation chain given in parameters of the `Create task` operation is executed.
 

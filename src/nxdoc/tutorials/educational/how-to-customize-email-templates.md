@@ -131,8 +131,6 @@ An email template defines the content of an email that is sent to users under pr
 
 ## Creating an Email Template
 
-You can see a use case of mail template in the how-to [One step validation flow based on lifecycle only]({{page page='one-step-validation-flow-based-on-lifecycle-only'}}).
-
 **To create a new mail template:**
 
 1.  Go to **Templates** -> **Mail Templates**.
@@ -187,7 +185,6 @@ See [NXP-20929](https://jira.nuxeo.com/browse/NXP-20929) for details.
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 - [How to setup a test SMTP server]({{page page='how-to-setup-a-test-smtp-server'}})
-- [One step validation flow based on lifecycle only]({{page page='one-step-validation-flow-based-on-lifecycle-only'}})
 - [How to Make Web UI the Default UI]({{page page='how-to-make-web-ui-the-default-ui'}})
 - [How-To Index]({{page page='how-to-index'}})
 
