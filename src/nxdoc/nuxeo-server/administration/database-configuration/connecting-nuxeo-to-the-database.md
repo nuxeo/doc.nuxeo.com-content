@@ -359,7 +359,7 @@ The driver is not included in Nuxeo applications for legal reasons. To install i
 1.  Download the appropriate JDBC driver from [http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html](http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html).
 2.  The JAR (`ojdbc7.jar`) must be placed in `$NUXEO/lib/`.
 
-See the page [Oracle]({{page space='admindoc' page='oracle'}}) for more information on the database configuration.
+See the page [Oracle]({{page page='oracle'}}) for more information on the database configuration.
 
 ### {{> anchor 'mssql'}}Microsoft SQL Server
 
