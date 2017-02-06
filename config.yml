@@ -9,9 +9,7 @@ default:
             -
                 space_path: userdoc
                 space_name: Nuxeo Platform User Documentation
-            -
-                space_path: admindoc
-                space_name: Nuxeo Installation and Administration
+
         versions:
             -
                 label: FT
