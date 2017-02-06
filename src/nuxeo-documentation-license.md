@@ -33,6 +33,6 @@ history:
         version: '1'
 
 ---
-Nuxeo documentation is provided under Nuxeo copyright and under&nbsp;Creative Common BY-SA license ([http://creativecommons.org/licenses/by-sa/2.0/](http://creativecommons.org/licenses/by-sa/2.0/)).
+Nuxeo documentation is provided under Nuxeo copyright and under Creative Common BY-SA license ([https://creativecommons.org/licenses/by-nc-sa/4.0/](https://creativecommons.org/licenses/by-nc-sa/4.0/)).
 
-This enables you to copy, adapt, distribute and transmit the work under the same license, mentioning the URL of the Nuxeo documentation license ([http://doc.nuxeo.com/x/GATF](http://doc.nuxeo.com/x/GATF)).
+This enables you to copy, adapt, distribute and transmit the work under the same license, mentioning the URL of the Nuxeo documentation license ([https://doc.nuxeo.com/nuxeo-documentation-license/](https://doc.nuxeo.com/nuxeo-documentation-license/)).
