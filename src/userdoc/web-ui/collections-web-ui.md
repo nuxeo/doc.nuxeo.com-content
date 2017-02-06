@@ -35,4 +35,22 @@ You can classify any type of document in a collection. You just need to have Rea
 
 Documents can be collected:
 
-- Individually by clicking on the icon ![]({{file name='add-to-collection-web-ui'}}) of the document
+- Individually by clicking on the icon ![]({{file name='add-to-collection-web-ui.png' page='icons-index' space='userdoc'}} ?w=16) of the document
+  SCREENSHOT POPUP COLLECTION
+- By batch by selecting documents from their parent and clicking on the Add to collection button.
+
+In the two cases you can select the collection by:
+- Browsing the collections in the list
+- Starting to type the collection name and select it
+- Typing a new collection name to create it.
+
+The list of collections the document is available from is displayed on its **View** tab
+SCREENSHOT
+
+## Creating Collections
+Collections can be created in workspaces and folders.
+
+There are two ways to create a collection:
+- Like any other document, using the **New** button: Just fill in the creation form and the collection is created in the current workspace / folder.
+    SCREENSHOT POPUP
+- Directly from the "Add to collection" popup: collections about to be created are displayed with the icon
