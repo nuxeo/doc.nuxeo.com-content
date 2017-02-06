@@ -355,7 +355,7 @@ getrel [options] [doc]
 ## lcstate
 
 **NAME**
-lcstate &ndash; Set or view the current life cycle state of a document
+lcstate &ndash; Set or view the current lifecycle state of a document
 
 **SYNTAX**
 
@@ -365,7 +365,7 @@ lcstate [options] [doc]
 
 **OPTIONS**
 
-*   -set - If specified The new life cycle state. If not specified then in write mode the local ACL is used and in view mode all ACLs are printed.
+*   -set - If specified The new lifecycle state. If not specified then in write mode the local ACL is used and in view mode all ACLs are printed.
 
 **ARGUMENTS**
 

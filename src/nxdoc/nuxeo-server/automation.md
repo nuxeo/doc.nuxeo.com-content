@@ -2,10 +2,10 @@
 title: Automation
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - automation
     - automation-component
     - excerpt
@@ -62,10 +62,8 @@ history:
 ---
 {{! excerpt}}
 
-This page briefly presents what the Automation module is about. You can read the [full conceptual explanation]({{page page='content-automation-concepts'}})&nbsp;for a complete understanding.
+This page briefly presents what the Automation module is about. You can read the [full conceptual explanation]({{page page='content-automation-concepts'}}) for a complete understanding.
 
 {{! /excerpt}}
 
 {{{multiexcerpt 'AutomationIntroduction' page='Content Automation Concepts'}}}
-
-&nbsp;

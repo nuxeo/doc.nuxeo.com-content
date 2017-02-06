@@ -116,6 +116,23 @@ history:
 
 For all document previews make sure you installed the [related softwares]({{page page='installing-and-setting-up-related-software'}}) corresponding to your document types.
 
+If you are running the Nuxeo Platform on MacOS, you will fall into the bug [NXP-18883](https://jira.nuxeo.com/browse/NXP-18883).
+Until it is fixed, you will need to use the following contribution as a workaround:
+```
+<require>org.nuxeo.ecm.platform.commandline.executor.service.testContrib.magic2</require>
+<extension target="org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent"
+    point="command">
+
+    <command name="pdftohtml" enabled="true">
+      <commandLine>pdftohtml</commandLine>
+      <parameterString> -c -enc UTF-8 -noframes #{inFilePath} #{outDirPath}/index.html</parameterString>
+      <winParameterString> -c -enc UTF-8 -noframes #{inFilePath} #{outDirPath}\index.html</winParameterString>
+      <installationDirective>You need to install pdftohtml</installationDirective>
+    </command>
+
+  </extension>
+```
+
 ## Customization
 
 You may want to check the following how-tos for customization:

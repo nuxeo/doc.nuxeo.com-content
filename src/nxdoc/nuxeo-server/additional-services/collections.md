@@ -2,10 +2,10 @@
 title: Collections
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - collection
     - nuxeo-drive
     - collection-component
@@ -247,7 +247,7 @@ To do so you need to add the following XML contribution with [either Nuxeo Studi
 
 {{#> callout type='warning' heading='Limitation'}}
 
-With this configuration you won't be able to unsynchronize a collection as usual using the ![]({{file name='drive_synced.png' space='userdoc' page='nuxeo-drive'}}) icon as this icon will stay grey: ![]({{file name='drive_unsynced.png' space='userdoc' page='nuxeo-drive'}}).
+With this configuration you won't be able to unsynchronize a collection as usual using the ![]({{file name='drive_synced.png' page='nuxeo-drive'}}) icon as this icon will stay grey: ![]({{file name='drive_unsynced.png' page='nuxeo-drive'}}).
 
 Yet you can always unsynchronize the collection from the Nuxeo Drive tab in the user Home.
 
@@ -256,9 +256,7 @@ Yet you can always unsynchronize the collection from the Nuxeo Drive tab in the 
 **Notes:**
 
 *   Files or folders created in the locally synchronized collection folder will not be added to the collection server-side. For now we have no mechanism to choose their path in the hierarchy.
-*   Please be aware that all the limitations applied to [online editing with Nuxeo Drive]({{page space='USERDOC' page='Nuxeo Drive#NuxeoDrive-OnlineEditing'}}) apply to synchronized collections.
-
-&nbsp;
+*   Please be aware that all the limitations applied to [online editing with Nuxeo Drive]({{page page='nuxeo-drive'}}#online-editing) apply to synchronized collections.
 
 ## Core Implementation
 
@@ -274,15 +272,12 @@ Finally, when copying a collection, an asynchronous work will also duplicate its
 
 {{> end_of_tabs }}
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
 
 - [Collections user documentation]({{page space='userdoc' page='collections'}})
-- [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
-- [Nuxeo Drive user documentation]({{page space='userdoc' page='nuxeo-drive'}})
+- [Nuxeo Drive documentation]({{page page='nuxeo-drive'}})
 - [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
 
 {{/panel}}</div><div class="column medium-6"></div></div>

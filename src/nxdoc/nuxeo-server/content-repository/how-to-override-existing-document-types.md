@@ -286,11 +286,11 @@ The SuperSpace facet is required for children documents to get default notificat
 
 </td></tr><tr><td colspan="1">WorkspaceRoot</td><td colspan="1">WorkspaceRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">SuperSpace</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>{{#> callout type='tip' }}
 
-You can also browse the [contributions to the Type extension](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype) for more document types or leave a comment on this page.
+You can also browse the [contributions to the Type extension](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype) for more document types.
 
 {{/callout}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-- [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}}) &nbsp;
+- [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}})
 - [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
 - [How-To Index]({{page page='how-to-index'}})
 
@@ -299,7 +299,7 @@ You can also browse the [contributions to the Type extension](http://explorer.nu
 - [Documents in Nuxeo Studio]({{page space='studio' page='documents'}})
 - [Content Repository]({{page page='content-repository'}})
 - [Available Facets]({{page page='available-facets'}})
-- [Life cycle]({{page space='studio' page='life-cycle'}})
+- [Lifecycle]({{page space='studio' page='life-cycle'}})
 - [Schemas]({{page space='studio' page='schemas'}})
 
 {{/panel}}</div></div>

@@ -2,7 +2,7 @@
 title: Managing Your Nuxeo Application
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 confluence:
     ajs-parent-page-id: '11043048'

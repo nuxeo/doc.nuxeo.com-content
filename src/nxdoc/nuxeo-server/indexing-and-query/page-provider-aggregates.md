@@ -2,10 +2,10 @@
 title: Page Provider Aggregates
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-18'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - elasticsearch
     - aggregate
     - page-provider
@@ -155,15 +155,13 @@ When using the Elasticsearch Page Provider, you can define aggregates that will 
 
 {{! /excerpt}}
 
-&nbsp;
-
 You can define a page provider that will query documents from Elasticsearch. The Nuxeo Platform takes advantage of the Elasticsearch aggregate module and you can define your own aggregates within a page provider definition. Please refer to [Elasticsearch documentation about aggregates](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-aggregations.html) for more information.
 
 As for now, the Nuxeo Platform focuses on bucket aggregation. In addition to accessing the documents returned by a page provider, you will be able to get and expose each bucket of the aggregates you have defined in this page provider. Quoting Elasticsearch documentation:
 
-> Each bucket is associated with a criterion (depending on the aggregation type) which determines whether or not a document in the current context "falls" into it. In other words, the buckets effectively define document sets. In addition to the buckets themselves, the `bucket` aggregations also compute and return the number of documents that "fell in" to each bucket.
+> Each bucket is associated with a criterion (depending on the aggregation type) which determines whether or not a document in the current context "falls" into it. In other words, the buckets effectively define document sets. In addition to the buckets themselves, the 'bucket' aggregations also compute and return the number of documents that "fell in" to each bucket.
 
-Nuxeo Platform&nbsp;[default search](https://github.com/nuxeo/nuxeo-features/blob/6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L7) leverages Elasticsearch aggregates on some default document properties.
+Nuxeo Platform [default search](https://github.com/nuxeo/nuxeo-features/blob/6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L7) leverages Elasticsearch aggregates on some default document properties.
 
 ![Nuxeo 6.0 default search]({{file name='aggregates.png'}} ?w=600 'Nuxeo 6.0 default search')
 
@@ -232,8 +230,8 @@ The type of such aggregate is `terms`. The parameter must be of type `string`.
 
 It has the following properties:
 
-*   `size` property is set to define how many term buckets should be returned out of the overall terms
-    **Note**: Set `size` to&nbsp;`0` to get all the buckets (mandatory when the terms aggregate is rendered as a select widget).
+*   `size` property is set to define how many term buckets should be returned out of the overall terms.
+    **Note**: Set `size` to `0` to get all the buckets (mandatory when the terms aggregate is rendered as a select widget).
 *   `minDocCount` property is set to only return buckets having more document than the defined value (default is 1)
 *   `order` property to order the buckets. Possible values are `count desc`, `count asc`, `term desc`, `term asc`.
 
@@ -318,8 +316,7 @@ The use of `extendedBoundsMin` and `extendedBoundsMax` is strongly recommended. 
 
 {{/callout}}
 
-##
-{{> anchor 'datehistogramagg'}}Date Histogram Aggregate
+## {{> anchor 'datehistogramagg'}}Date Histogram Aggregate
 
 Here is an example of Date Range aggregate on the `dc:created` document property.
 
@@ -347,7 +344,6 @@ The use of `extendedBoundsMin` and `extendedBoundsMax` is strongly recommended. 
 
 {{/callout}}
 
-&nbsp;
 
 * * *
 
@@ -365,7 +361,5 @@ The use of `extendedBoundsMin` and `extendedBoundsMax` is strongly recommended. 
 {{/panel}}</div><div class="column medium-6">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
-
-&nbsp;
 
 </div></div>

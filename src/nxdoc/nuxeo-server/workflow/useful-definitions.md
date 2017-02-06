@@ -2,10 +2,10 @@
 title: Useful Definitions
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - workflow
     - concept
     - workflow-component
@@ -144,7 +144,7 @@ The Automation module is used to express what the engine does when going through
 
 *   Node input: executed before entering a node (and if this node is of type task, before the task is created),
 *   Node output: executed just after having gone through a node,
-*   Transition chain: executed when the workflow engine goes through a transition&nbsp; condition one is evaluated to true.
+*   Transition chain: executed when the workflow engine goes through a transition condition one is evaluated to true.
 *   Escalation rule (available since 5.7.2): executed when the system is awaiting for a user to complete an action, depending on a condition. For example when the user has not completed the task before its due date.
 
 ### Queues

@@ -2,10 +2,10 @@
 title: Work and WorkManager
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - workmanager
     - cluster
     - node
@@ -84,13 +84,13 @@ The [WorkManager](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewS
 
 ## Work Instance
 
-The code to be executed asynchronously must be implemented in an&nbsp; [`AbstractWork`](http://community.nuxeo.com/api/nuxeo/release-8.2/javadoc/org/nuxeo/ecm/core/work/AbstractWork.html) subclass. In theory you could just implement&nbsp; [`Work`](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/ecm/core/work/api/Work.html) yourself but this is strongly discouraged, for forward-compatibility reasons.
+The code to be executed asynchronously must be implemented in an [`AbstractWork`](http://community.nuxeo.com/api/nuxeo/release-8.2/javadoc/org/nuxeo/ecm/core/work/AbstractWork.html) subclass. In theory you could just implement [`Work`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/work/api/Work.html) yourself but this is strongly discouraged, for forward-compatibility reasons.
 
 ### Work Construction
 
 Each Work instance must have a unique id describing the Work in its entirety. The id can either be random (just call the empty `AbstractWork()` constructor), or specified by the caller ( `AbstractWork(id)`).
 
-At construction time, the Work instance should also have its&nbsp; `setDocument()` method called to set the repository name and document(s) id(s) that this Work instance is going to be dealing with, and a flag specifying whether the work is actually about a whole subtree under the given document. This is important for monitoring and locking purposes.
+At construction time, the Work instance should also have its `setDocument()` method called to set the repository name and document(s) id(s) that this Work instance is going to be dealing with, and a flag specifying whether the work is actually about a whole subtree under the given document. This is important for monitoring and locking purposes.
 
 ### Work Implementation
 
@@ -199,7 +199,7 @@ The idea is that all the Nuxeo nodes can remain exactly identical to each other,
 Dedicating nodes to a given task is handled by two aspects:
 
 *   The load balancer: typically interactive processing nodes are used by the load balancer to handle end users requests.
-*   The WorkManager queues : some queues will be assigned to some&nbsp;background processing&nbsp;nodes so that only these dedicated nodes will consume the jobs in these queues.
+*   The WorkManager queues: some queues will be assigned to some background processing nodes so that only these dedicated nodes will consume the jobs in these queues.
 
 In a cluster environment, the Workmanager queues are handled by Redis so that the queues can effectively be shared across the cluster. This way, an interactive node (i.e. feed by the load balancer) can schedule an asynchronous job like a video conversion. This job will be assigned to a queue, waiting for one of the Nuxeo nodes to execute it.
 
@@ -226,7 +226,7 @@ Typically, the "interactive nodes" are configured to not consume this type of qu
 </extension>
 ```
 
-Then the "background processing nodes" are on the contrary, configured to consume these queues : so they will do the heavy processing that was scheduled by the interactive nodes.
+Then the "background processing nodes" are on the contrary, configured to consume these queues: so they will do the heavy processing that was scheduled by the interactive nodes.
 
 ```xml
 <extension point="queues" target="org.nuxeo.ecm.core.work.service">

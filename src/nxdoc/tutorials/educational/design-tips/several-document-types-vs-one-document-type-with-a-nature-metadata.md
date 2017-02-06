@@ -2,10 +2,10 @@
 title: Several Document Types vs One Document Type with a Nature Metadata
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-16'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - excerpt
 toc: true
 confluence:
@@ -62,7 +62,7 @@ history:
 ---
 {{! excerpt}}
 
-In some cases, there is a need to manage different documents (procedure, instruction, notice, invoices...) but with very similar properties and life cycles.
+In some cases, there is a need to manage different documents (procedure, instruction, notice, invoices...) but with very similar properties and lifecycles.
 
 One solution is to create a new document type in Studio for each "nature" of document to manage, another solution is to create one document type and then distinguish them with a metadata nature (bound to a vocabulary) for instance. There is no magical solution to choose between them, but a few criteria might help to solve the dilemma.
 
@@ -72,9 +72,7 @@ One solution is to create a new document type in Studio for each "nature" of doc
 
 As a base rule, one should try to keep the application as simple as possible and one document with a nature is very often simpler than 5 or more document types. So when possible, one document with a nature metadata is preferable than several document types. But the following questions will show when to go with several documents.
 
-&nbsp;
-
-*   Do the documents have the same life cycle and business rule?
+*   Do the documents have the same lifecycle and business rule?
 
 If the answer is no, then you will need to have different documents types.
 
@@ -82,9 +80,9 @@ If the answer is no, then you will need to have different documents types.
 
 If the metadata are different then several different document types is the solution (do you need that many different metadata though?).
 
-*   Do they have the same life cycle but a different validation workflow?
+*   Do they have the same lifecycle but a different validation workflow?
 
-If the documents have different workflows but same lifec ycles, then this not a good enough reason to create several document types, as it is possible to filter available workflows on document metadata.&nbsp;
+If the documents have different workflows but same lifecycles, then this not a good enough reason to create several document types, as it is possible to filter available workflows on document metadata.
 
 *   Is it required to have a strong separation between where the different natures of document can be created?
 
@@ -107,7 +105,7 @@ Let's say that the following nature of documents will be managed by Nuxeo:
 
 Invoices and contracts probably have similar informations (customer, amount...) and are both used by accountants. Archiving policies are probably similar too. This could be one document type. They are not validated in the exact same order? This is not a problem, they can have different workflows.
 
-Procedure and Installation instructions are both quality documentation. They are probably both created by a small group of people and then published. They share a metadata called processus and are validated the exact same way (creation > review > validation > publication). There is no difference except the nature, so this definitely should be one document type.
+Procedure and Installation instructions are both quality documentation. They are probably both created by a small group of people and then published. They share a metadata called `processus` and are validated the exact same way (creation > review > validation > publication). There is no difference except the nature, so this definitely should be one document type.
 
 And finally, consulting reports and object design are both project deliverable.
 
@@ -117,8 +115,8 @@ One might say that object design can have more metadata like the object material
 
 This very quick analyze gives in the end, only three documents types:
 
-*   Accounting documents with a nature metadata (invoice or contract), an amount metadata, a customer metadata, same life cycle, two different workflows (depending on the nature).
-*   Quality documentation with a nature metadata (procedure or installation instruction), a processus metadata and everything else identical.
+*   Accounting documents with a nature metadata (invoice or contract), an amount metadata, a customer metadata, same lifecycle, two different workflows (depending on the nature).
+*   Quality documentation with a nature metadata (procedure or installation instruction), a `processus` metadata and everything else identical.
 *   Project deliverable with a nature metadata (Consulting report or Object Design).
 
 ## Conclusion

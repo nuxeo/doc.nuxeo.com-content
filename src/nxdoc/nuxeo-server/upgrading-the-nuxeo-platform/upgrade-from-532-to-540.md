@@ -2,10 +2,10 @@
 title: Upgrade from 5.3.2 to 5.4.0
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - multiexcerpt
 toc: true
 confluence:
@@ -50,7 +50,7 @@ While Nuxeo EP 5.3.2 was based on the JBoss distribution, Nuxeo EP 5.4.0 is base
 
 ### JBoss 5
 
-If using the JBoss distribution, see [Upgrade to 5.4 and JBoss 5]({{page space='nxdoc54' page='upgrade-from-532-to-540-with-jboss-5'}}).
+If using the JBoss distribution, see [Upgrade to 5.4 and JBoss 5]({{page page='upgrade-from-532-to-540-with-jboss-5'}}).
 
 ## Data Migration
 
@@ -63,6 +63,6 @@ On JBoss, data used to be in `$NUXEO_HOME/server/default/data/NXRuntime/`, where
 
 ### Workflow
 
-The workflow implementation has changed, see [From the old workflow system to the new 5.4 workflow system]({{page space='nxdoc54' page='from-the-old-workflow-system-to-the-new-54-workflow-system'}}).
+The workflow implementation has changed, see [From the old workflow system to the new 5.4 workflow system]({{page page='from-the-old-workflow-system-to-the-new-54-workflow-system'}}).
 
 {{! /multiexcerpt}}

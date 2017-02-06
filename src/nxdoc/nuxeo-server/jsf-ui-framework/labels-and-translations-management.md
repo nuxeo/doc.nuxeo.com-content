@@ -21,7 +21,7 @@ confluence:
     shortlink: s4MlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/s4MlAQ'
     source_link: /display/NXDOC/Labels+and+Translations+Management
-tree_item_index: 900
+tree_item_index: 1300
 history:
     -
         author: Solen Guitter

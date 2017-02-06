@@ -2,10 +2,10 @@
 title: Upgrade from 5.1.2 to 5.1.3
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - multiexcerpt
 confluence:
     ajs-parent-page-id: '3343538'

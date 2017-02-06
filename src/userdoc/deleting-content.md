@@ -2,7 +2,7 @@
 title: Deleting Content
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-26'
     status: ok
 labels:
     - delete
@@ -160,9 +160,9 @@ history:
 
 Only users with "Edit" or "Manage everything" permissions can delete documents from a space.
 
-To delete one or several documents, select them from the&nbsp;**Content** tab&nbsp;of the workspace, click on&nbsp;**Delete**&nbsp;and confirm.&nbsp;The documents are moved to the&nbsp;**Trash**&nbsp;tab of the workspace (available to users with management rights only) and do not appear in the workspace's content list anymore. Their life cycle state is now "deleted".
+To delete one or several documents, select them from the **Content** tab of the workspace, click on **Delete** and confirm. The documents are moved to the **Trash** tab of the workspace (available to users with management rights only) and do not appear in the workspace's content list anymore. Their lifecycle state is now "deleted".
 
-You can also delete documents using right-click on document from the **Content** tab of the workspace.
+You can also delete documents using right-click on the document's icon from the **Content** tab of the workspace.
 
 ![]({{file name='right-click-menu.png' space='userdoc' page='editing-content'}} ?w=350,border=true)
 
@@ -171,27 +171,29 @@ You can also delete documents using right-click on document from the **Content**
 Users with "Manage everything" permissions can access the workspace's **Trash** and perform one of the following actions:
 
 *   Restore documents by selecting them and clicking the **Restore** button.
-    Documents are moved back to the **Content** tab of the workspace and available to users. They get the "project" life cycle state, even if their life cycle state before deletion was "approved".
+    Documents are moved back to the **Content** tab of the workspace and available to users. They get the "project" lifecycle state, even if their lifecycle state before deletion was "approved".
     ![]({{file name='trash-tab.png' space='userdoc' page='deleting-content'}} ?w=600,border=true)
 *   Erase documents by selecting them and clicking the **Permanent delete** button.
-    Documents are permanently erased from the application. They cannot be restored.&nbsp;The&nbsp;[relations]({{page space='userdoc' page='editing-content#relations'}})&nbsp;to the deleted documents are deleted.
+    Documents are permanently erased from the application. They cannot be restored. The [relations]({{page space='userdoc' page='editing-content#relations'}}) to the deleted documents are deleted.
     ![]({{file name='trash-tab.png' space='userdoc' page='deleting-content'}} ?w=600,border=true)
 *   Empty the trash by clicking the corresponding button.
-    All deleted documents are permanently erased from the application. They cannot be restored.&nbsp;The&nbsp;[relations]({{page space='userdoc' page='editing-content#relations'}})&nbsp;to the deleted documents are deleted.
+    All deleted documents are permanently erased from the application. They cannot be restored. The [relations]({{page space='userdoc' page='editing-content#relations'}}) to the deleted documents are deleted.
     ![]({{file name='empty-trash.png' space='userdoc' page='deleting-content'}} ?w=500,h=179,border=true)
 
 {{! /multiexcerpt}}
 
-* * *
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
+
+- [Deleting documents in developer documentation]({{page space='nxdoc' page='deleting-documents'}})
+
+{{/panel}}
+</div>
+
+<div class="column medium-6">
 
 &nbsp;
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
-
-*   [Deleting documents in developer documentation]({{page space='nxdoc' page='deleting-documents'}})
-
-{{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-</div></div>
+</div>
+</div>

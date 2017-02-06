@@ -2,7 +2,7 @@
 title: How to Set Up a Tasks Dashboard
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Studio
         topics: 'Workflow, Dashboard'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - task
     - dashboard
     - workflow
@@ -142,7 +142,7 @@ We provide some quick steps to follow using [Extension points]({{page page='how-
 
         *   either use the usual **Update Property** or **Update Properties** operations,
 
-        *   or the dedicated&nbsp;**Workflow** > **Apply Mapping on Input Task** operation, with the name of the mapping.&nbsp;A mapping can be contributed in the **Advanced settings** > **XML Extensions** feature:
+        *   or the dedicated **Workflow** > **Apply Mapping on Input Task** operation, with the name of the mapping. A mapping can be contributed in the **Advanced settings** > **XML Extensions** feature:
 
             ```xml
             <extension target="org.nuxeo.ecm.core.api.propertiesmapping.PropertiesMappingComponent"
@@ -220,14 +220,12 @@ We provide some quick steps to follow using [Extension points]({{page page='how-
     </extension>
     ```
 
-    * * *
-
-    &nbsp;
+* * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 - [How to Modify a Workflow Variable outside of Workflow Context]({{page page='how-to-modify-a-workflow-variable-outside-of-workflow-context'}})
-- [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})&nbsp;
+- [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

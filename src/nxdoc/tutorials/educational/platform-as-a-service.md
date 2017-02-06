@@ -76,8 +76,6 @@ This document explains how the Nuxeo Platform can be used to provide an applicat
 
 {{! /excerpt}}
 
-&nbsp;
-
 ## Target Use Cases
 
 ### SaaS Deployment
@@ -109,7 +107,7 @@ Usually the most critical points to handle are:
 
 For similar reasons, inside a large company you can easily have several projects that would benefit to share the same common ground. Typically if you have several Case Management projects for different departments or several DAM projects for different countries.
 
-Even if these are separated projects with potentially different life cycles, it can make sense to define a kind of "group wide" common ground:
+Even if these are separated projects with potentially different lifecycles, it can make sense to define a kind of "group wide" common ground:
 
 *   To avoid redoing the same customization several times
     *   Authentication and security requirements
@@ -132,12 +130,12 @@ All the use cases above have in common that:
 The Nuxeo Platform provides the tools for achieving that:
 
 *   A component model and packaging model so that you can have three cleanly separated layers
-    *   The&nbsp;components provided by the Nuxeo Platform that handle all the infrastructure issue
-    *   The&nbsp;components you want to build for your custom application
+    *   The components provided by the Nuxeo Platform that handle all the infrastructure issue
+    *   The components you want to build for your custom application
     *   The components each project / client may want to build
 *   Tools to make configuration and extension building easy
     *   Nuxeo Studio: to manage all your business configuration
-    *   Nuxeo IDE / Nuxeo Codenvy: to build extensions
+    *  Nuxeo Generator: to build extensions
 *   A packaging model and deployment system
 
 ![](https://s3.amazonaws.com/media-p.slid.es/uploads/thierrydelprat/images/703090/devpipe.png)
@@ -224,7 +222,7 @@ With the container based approach all the problems of a single application with 
     *   At data level
     *   At runtime level
     *   At resource level
-*   Each project can have its own life cycle for upgrades
+*   Each project can have its own lifecycle for upgrades
 *   Project can be as custom as needed
 
 That's because we are convinced that this approach has much more value that "standard multi-tenants" that we started investing on the container based approach.
@@ -319,15 +317,9 @@ However, when looking in more details, each region should have access to two rep
 *   A corporate repository, shared across all regions
 *   A local repository, specific to one region
 
-The Nuxeo Platform and nuxeo.io provides the required&nbsp;infrastructure:
+The Nuxeo Platform and nuxeo.io provides the required infrastructure:
 
 *   Platform as a Service
 *   Multi-repositories support
 
 ![](https://www.lucidchart.com/publicSegments/view/54511437-a558-457c-a92e-551e0a0090b1/image.png)
-
-&nbsp;
-
-&nbsp;
-
-* * *

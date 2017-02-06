@@ -2,7 +2,7 @@
 title: How to Make a Simple Task Assignment to One or Many Users
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Studio
         topics: 'Workflow, Automation, Task'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - automation
     - create-task-operation
@@ -131,7 +131,7 @@ history:
 ---
 {{! excerpt}}
 
-Sometimes you want to assign a task to one or many users, without requiring a dedicated process model. You can [create a button, link or icon and bind it to an automation chain]({{page page='how-to-create-an-automation-chain'}}), that will use the&nbsp;"Create task" operation, in the "Services" category.
+Sometimes you want to assign a task to one or many users, without requiring a dedicated process model. You can [create a button, link or icon and bind it to an automation chain]({{page page='how-to-create-an-automation-chain'}}), that will use the "Create task" operation, in the "Services" category.
 
 {{! /excerpt}}
 
@@ -140,13 +140,10 @@ This operation will assign a task to users or groups of users, which are defined
 *   the user name,
 *   the group name (the syntax for groups is `group:groupname`),
 *   a context variable referring to them. This context variable can typically be defined in the "Get Users and Groups" operation that must be in the same automation chain. That operation stores a variable with some users and groups given the rights they have on an input document.
-    See the [One step validation flow tutorial]({{page page='one-step-validation-flow-based-on-lifecycle-only'}}) for a complete sample.
 
 Once a user that is assigned the task accepts or rejects the task, the automation chain given in parameters of the `Create task` operation is executed.
 
 * * *
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 

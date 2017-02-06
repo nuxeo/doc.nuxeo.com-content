@@ -10,7 +10,6 @@ labels:
     - automation
     - shell-component
     - nxdoc-751
-toc: true
 confluence:
     ajs-parent-page-id: '4687648'
     ajs-parent-page-title: Nuxeo Shell Command Index
@@ -100,7 +99,7 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' heading='Namespace: *automation*'}}
+{{#> callout type='info' heading='Namespace: automation'}}
 
 Commands exposed by the Nuxeo Server through automation
 
@@ -892,7 +891,7 @@ Document.FetchByProperty [options]
 Document.Filter &ndash; Filter the input list of documents given a condition. The condition can be expressed using 4 parameters: types, facets, lifecycle and condition. If more than one parameter is specified an AND will be used to group conditions.
 The 'types' parameter can take a comma separated list of document type: File,Note.
 The 'facet' parameter can take a single facet name.
-The 'life cycle' parameter takes a name of a life cycle state the document should have.
+The 'life cycle' parameter takes a name of a lifecycle state the document should have.
 The 'condition' parameter can take any EL expression.
 Returns the list of documents that match the filter condition.
 
@@ -1367,7 +1366,7 @@ Document.SetACE [options] [the input document(s)]
 ## Document.SetLifeCycle
 
 **NAME**
-Document.SetLifeCycle &ndash; Follow the given transition on the input document life cycle state
+Document.SetLifeCycle &ndash; Follow the given transition on the input document lifecycle state
 
 **SYNTAX**
 

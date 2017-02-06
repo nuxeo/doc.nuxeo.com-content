@@ -141,7 +141,7 @@ The Nuxeo Platform Digital Signature addon allows you to:
 
 ### Principles
 
-*   Documents are signed to protect them from modification, especially at critical stages in their life cycle.
+*   Documents are signed to protect them from modification, especially at critical stages in their lifecycle.
 *   Document- and user-certification in the Nuxeo Platform follow principles of asymmetric cryptography, PKI & the X.509 standards.
 *   To sign a document, a user needs a personal certificate.
 *   Each user can create her own certificate.
@@ -212,7 +212,7 @@ When the Digital Signature addon is installed on your Nuxeo Platform, you get so
 
 *   Users have a new **Certificates** tab in their **Home**, from which they can [generate their certificate](#generate-your-certificate) to be able to sign documents.
     ![]({{file name='certificate_home_tab.png'}} ?w=600,border=true)
-*   Files documents have a new **Signature** tab, from which they can either see the signatures or [sign the document](#sign-a-document) if they have the permission&nbsp;to.
+*   Files documents have a new **Signature** tab, from which they can either see the signatures or [sign the document](#sign-a-document) if they have the permission to.
     ![]({{file name='signature_tab_without_signature.png'}} ?w=600,border=true)
 
 ### Top-Level View
@@ -298,11 +298,10 @@ To verify the signature of the PDF, you need to:
 *   [http://en.wikipedia.org/wiki/Digital_signature](http://en.wikipedia.org/wiki/Digital_signature)
 *   [http://www.nuxeo.com/blog/digital-signatures-within-nuxeo-document-management/](http://www.nuxeo.com/blog/digital-signatures-within-nuxeo-document-management/)
 
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Digital signature dev documentation]({{page space='nxdoc' page='digital-signature'}})
+- [Digital signature dev documentation]({{page space='nxdoc' page='digital-signature'}})
 
 {{/panel}}</div><div class="column medium-6">
 

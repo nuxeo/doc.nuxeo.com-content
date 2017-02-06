@@ -2,7 +2,7 @@
 title: How to Set a Default Value on a Date Field of a Task Form
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Studio
         topics: Workflow
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - workflow
     - howto
     - excerpt
@@ -63,8 +63,6 @@ history:
 ---
 Let's say we have a workflow variable in a workflow whose name is "due_date". In the first node of the workflow, a task asks the workflow initiator to fill-in the participants. He/She also has to set the due date, but a value is already suggested: The current date plus seven days.
 
-&nbsp;
-
 {{! excerpt}}
 
 To pre-set the due_date value, you can use an "input automation chain" on the node ("General" tab of the "Node Properties" dialog). In this automation chain, you use the "Workflow Context>Set Workflow Variable".
@@ -77,8 +75,6 @@ Fill in the following parameters:
 *   value: `@{CurrentDate.days(7).date}`
 
 * * *
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 

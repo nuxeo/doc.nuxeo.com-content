@@ -2,10 +2,10 @@
 title: Implementing Encryption
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - encryption
     - binary-manager
 toc: true
@@ -79,11 +79,11 @@ history:
 ---
 ## Binaries Encryption
 
-The content files stored by the Nuxeo Platform, also known as binaries, are stored using the `BinaryManager` abstraction, as described in the [Binary Store documentation]({{page page='file-storage'}}). There are several ways to configure encryption depending on your choice of&nbsp;`BinaryManager`.
+The content files stored by the Nuxeo Platform, also known as blobs or binaries, are stored using the Blob Provider abstraction, as described in the [File Storage]({{page page='file-storage'}}) page. There are several ways to configure encryption depending on your choice of Blob Provider.
 
 ## Filesystem AES Encryption
 
-Since Nuxeo Platform 6.0, it's possible to use a&nbsp;`BinaryManager`&nbsp;that encrypts files using AES. Two modes are possible:
+It's possible to use a Blob Provider that encrypts files using AES. Two modes are possible:
 
 *   A fixed AES key retrieved from a Java KeyStore
 *   An AES key derived from a human-readable password using the industry-standard PBKDF2 mechanism (in which case each encrypted file contains a different salt for security reasons).
@@ -102,7 +102,7 @@ And for PBKDF2 use:
 
 *   **password**: the password
 
-The binary manager and options can be set through [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}}):
+The Blob Provider and its options can be set through [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}}):
 
 ```
 nuxeo.core.binarymanager=org.nuxeo.ecm.core.blob.binary.AESBinaryManager
@@ -111,11 +111,13 @@ nuxeo.core.binarymanager_key=keyStoreType=JCEKS,keyStoreFile=/etc/keystore.jceks
 nuxeo.core.binarymanager_key=password=mypassword
 ```
 
-{{#> callout type='note' }}
+{{#> callout type='note' heading='Java Cryptographic Extension'}}
 
-By default Java ships with a Java Cryptographic Extension (JCE) module configured for 128-bit maximum key length, whereas the Nuxeo Platform needs at least 256-bit keys for adequate security of AES. The Nuxeo code attempts to work around these restrictions automatically to force the JCE to allow unlimited key length.
+By default Oracle Java ships with a Java Cryptographic Extension (JCE) module configured for 128-bit maximum key length, whereas the Nuxeo Platform needs at least 256-bit keys for adequate security of AES.
 
-If it cannot force it, you will get an exception `java.security.InvalidKeyException`: Illegal key size or default parameters when encrypting or decrypting a file. In that case, you must go to&nbsp;[Oracle Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)&nbsp;and download and install the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files for your JDK (see the README.txt file inside the downloaded ZIP for installation instructions).
+To overcome this limitation, you must install an optional downloadable component coming with the JDK. Go to [Oracle Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html) and download and install the **Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files** for your JDK (see the README.txt file inside the downloaded ZIP for installation instructions).
+
+If you do not do this, you will get an exception `java.security.InvalidKeyException: Illegal key size or default parameters` when encrypting or decrypting a file.
 
 {{/callout}}
 

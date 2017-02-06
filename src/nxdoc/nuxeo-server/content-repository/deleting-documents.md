@@ -103,7 +103,7 @@ Deleting a document involves several steps before the full document is actually 
 
 ### Putting the Document in the Trash
 
-Putting a document in the trash is done by changing is life cycle state to&nbsp;**deleted**, by following the&nbsp;**delete** transition of the document's life cycle. If no such life cycle exists for the document, then it won't be put in the trash at all but will be immediately permanently deleted using the steps below.
+Putting a document in the trash is done by changing is lifecycle state to **deleted**, by following the **delete** transition of the document's lifecycle. If no such lifecycle exists for the document, then it won't be put in the trash at all but will be immediately permanently deleted using the steps below.
 
 When the trash is purged, all its documents are permanently deleted.
 
@@ -111,7 +111,7 @@ Besides the standard user interface, a document is put in the trash when using W
 
 ### Permanently Deleting the Document
 
-A permanent delete is done by most Nuxeo APIs, typically [CoreSession.removeDocument](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#removeDocument-org.nuxeo.ecm.core.api.DocumentRef-)&nbsp;or the higher-level APIs that use it like the CMIS bindings or the Automation [Document.Delete](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Delete) operation.
+A permanent delete is done by most Nuxeo APIs, typically [CoreSession.removeDocument](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#removeDocument-org.nuxeo.ecm.core.api.DocumentRef-) or the higher-level APIs that use it like the CMIS bindings or the Automation [Document.Delete](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Delete) operation.
 
 **Soft-Delete**
 
@@ -137,7 +137,6 @@ Please consult [NXP-11335](https://jira.nuxeo.com/browse/NXP-11335) for more det
 
 If soft-delete is not enabled, or when the periodic cleanup process for soft-delete happens, the document's data is actually physically deleted from the database by using `DELETE` SQL statements (or equivalent calls for non-VCS storages).
 
-&nbsp;
 
 * * *
 

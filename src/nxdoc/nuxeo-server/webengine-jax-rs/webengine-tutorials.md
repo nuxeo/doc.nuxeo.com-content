@@ -1,13 +1,15 @@
 ---
 title: WebEngine Tutorials
 review:
-    comment: ''
-    date: '2015-12-01'
-    status: ok
+    comment: 'Installation of samples is broken and has to be reviewed NXDOC-1022.'
+    date: '2016-12-20'
+    status: requiresUpdates
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - webengine
     - webengine-component
+    - nxDocTeam
+    - nxProduct
 confluence:
     ajs-parent-page-id: '950281'
     ajs-parent-page-title: WebEngine (JAX-RS)
@@ -135,7 +137,7 @@ history:
 ---
 In this section we will go deeper into WebEngine model by proposing 5 samples on how to use common WebEngine concepts.
 
-To install the sample modules you need to download the [compiled JAR]({{file name='examples.zip'}}) and copy them to the&nbsp;`$NUXEO_HOME/nxserver/bundles` directory.
+To install the sample modules you need to download the [compiled JAR]({{file name='examples.zip'}}) and copy them to the `$NUXEO_HOME/nxserver/bundles` directory.
 
 To correctly understand the tutorials you need to look into all .java and .ftl files you find in the corresponding sample modules. Each sample is well documented in the corresponding classes using java docs.
 
@@ -145,7 +147,7 @@ You should download the binaries and sources (https://maven.nuxeo.org/nexus/inde
 
 This tutorial demonstrates how to handle requests. This is the simplest object. It requires only one java class which represents the Resource (the entry point).
 
-You can access the tutorial sample at:&nbsp; [http://localhost:8080/nuxeo/site/samples/hello](http://localhost:8080/nuxeo/site/samples/hello)
+You can access the tutorial sample at:  [http://localhost:8080/nuxeo/site/samples/hello](http://localhost:8080/nuxeo/site/samples/hello)
 
 ##### [Tutorial 2]({{page page='using-freemarker-template-language-ftl'}}) - Using Templates
 

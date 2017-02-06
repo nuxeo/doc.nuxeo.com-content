@@ -2,10 +2,10 @@
 title: Deployment Options
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - deployment
     - clustering
     - architecture
@@ -249,9 +249,12 @@ Thanks to Nuxeo Runtime and to the bundle system, the Nuxeo Platform deployment 
 
 ## Simple Deployment
 
-For a simple deployment you have to:
+For a simple deployment you have to define the target deployment platform:
 
-- Define the target Nuxeo distribution (in most of the cases Nuxeo CAP + some extra plugins)
+- Define the target Nuxeo distribution:
+    - Bare server
+    - JSF UI
+    - Web UI
 - Define the target deployment platform:
     - Prepackaged Tomcat Server (including Nuxeo + Transaction manager + JCA + Pooling)
     - Static WAR (see [Understanding Bundles Deployment]({{page page='understanding-bundles-deployment'}}))

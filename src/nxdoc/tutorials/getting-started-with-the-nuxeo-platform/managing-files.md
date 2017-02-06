@@ -2,11 +2,11 @@
 title: Managing Files
 review:
     comment: ''
-    date: '2016-10-19'
+    date: '2016-12-20'
     status: ok
 toc: true
 labels:
-    - content-review-lts2016
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '29460589'
     ajs-parent-page-title: Getting Started with the Nuxeo Platform
@@ -249,7 +249,7 @@ Upload a file to your Nuxeo Platform instance, create a contract and attach the 
 {{#> callout type='info' heading='Learn more'}}
 
 *   [File Download Security Policies]({{page page='file-download-security-policies'}})
-*   [How to Upload a File in Nuxeo Platform Using REST API Batch Processing Endpoint]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}})
+*   [HOWTO: Upload a File in Nuxeo Using REST API]({{page page='howto-upload-file-nuxeo-using-rest-api'}})
 
 {{/callout}}
 
@@ -396,8 +396,8 @@ The contract for Skynet AI maintenance you just created should contain other fil
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [File Download Security Policies]({{page page='file-download-security-policies'}})
-*   [How to Upload a File in Nuxeo Platform Using REST API Batch Processing Endpoint]({{page page='how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint'}})
+- [File Download Security Policies]({{page page='file-download-security-policies'}})
+- [HOWTO: Upload a File in Nuxeo Using REST API]({{page page='howto-upload-file-nuxeo-using-rest-api'}})
 
 {{/callout}}
 

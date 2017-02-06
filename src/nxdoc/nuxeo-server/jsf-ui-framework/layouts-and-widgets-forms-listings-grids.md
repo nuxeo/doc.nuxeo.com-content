@@ -22,7 +22,7 @@ confluence:
     shortlink: OoAO
     shortlink_source: 'https://doc.nuxeo.com/x/OoAO'
     source_link: /pages/viewpage.action?pageId=950330
-tree_item_index: 300
+tree_item_index: 700
 history:
     -
         author: Manon Lumeau

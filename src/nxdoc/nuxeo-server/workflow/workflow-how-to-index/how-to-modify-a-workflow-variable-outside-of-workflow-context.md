@@ -2,7 +2,7 @@
 title: How to Modify a Workflow Variable outside of Workflow Context
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Studio
         topics: 'Workflow, Event, Listener'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - workflow
     - event
     - listener
@@ -120,11 +120,11 @@ history:
         version: '1'
 
 ---
-A workflow (route instance) is stored in Nuxeo as a document of type "DocumentRoute". A node in the workflow is stored as a document of type "RouteNode".&nbsp;Both workflow and node variables are persisted on the workflow and node documents.
+A workflow (route instance) is stored in Nuxeo as a document of type "DocumentRoute". A node in the workflow is stored as a document of type "RouteNode". Both workflow and node variables are persisted on the workflow and node documents.
 
 {{! excerpt}}
 
-If you want to modify these variables outside of the workflow context (from a listener for example), you have to fetch the workflow instance document and you can use the available methods on their adapters,&nbsp;[GraphRoute](http://community.nuxeo.com/api/nuxeo/5.6/javadoc/org/nuxeo/ecm/platform/routing/core/impl/GraphRoute.html)&nbsp;and&nbsp;[GraphNode:](http://community.nuxeo.com/api/nuxeo/5.6/javadoc/org/nuxeo/ecm/platform/routing/core/impl/GraphNode.html)
+If you want to modify these variables outside of the workflow context (from a listener for example), you have to fetch the workflow instance document and you can use the available methods on their adapters, [GraphRoute](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/platform/routing/core/impl/GraphRoute.html) and [GraphNode:](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/platform/routing/core/impl/GraphNode.html)
 
 {{! /excerpt}}
 
@@ -133,7 +133,7 @@ void setVariables(Map<String, Serializable> map);
 Map<String, Serializable> getVariables();
 ```
 
-Eg.
+e.g.
 
 ```
 GraphRoute route = doc.getAdapter(GraphRoute.class);
@@ -141,7 +141,7 @@ GraphNode node = route.getNode(nodeId);
 ```
 
 You can either listen to events triggered on the document following the workflow, or on workflow events.
-In the first case, in the event handler you have the document following the workflow and you have to get the workflow instance document. Use the following method on the [DocumentRoutingService](http://community.nuxeo.com/api/nuxeo/5.6/javadoc/org/nuxeo/ecm/platform/routing/api/DocumentRoutingService.html) service:
+In the first case, in the event handler you have the document following the workflow and you have to get the workflow instance document. Use the following method on the [DocumentRoutingService](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/platform/routing/api/DocumentRoutingService.html) service:
 
 ```
 List<DocumentRoute> getDocumentRoutesForAttachedDocument(CoreSession session, String attachedDocId)
@@ -162,7 +162,7 @@ nodeId=Taska2e, documentRepositoryName=default, routeInstanceDocId=d05b14e4-8d60
 documentId=5b09103d-2fe1-40de-8737-a64b49425a6e}
 ```
 
-So if you want to set a workflow variable from a listener listening to&nbsp;`workflowTaskCompleted` event:
+So if you want to set a workflow variable from a listener listening to `workflowTaskCompleted` event:
 
 1.  Get the `taskInstance` from the `eventProperties` map.
 2.  Get the workflow document (using his id = "`routeInstanceDocId`") from the `taskVariables`.
@@ -170,8 +170,6 @@ So if you want to set a workflow variable from a listener listening to&nbsp;`wor
 4.  Use `setVariables` like in the first example.
 
 * * *
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 

@@ -12,7 +12,7 @@ tree_item_index: 100
 ## Requirements
 To be able to synchronize folders on your computer, you need to install the Nuxeo Drive client on your computer.
 We provide OS-specific installers for Mac OS X and Windows, available from the Nuxeo Drive tab of the Home.
-A Linux installer will come shortly.
+For Linux, you need a PyQt4 with WebKit support.
 
 ### Known Working Configurations for OS
 *   Windows:  Windows 7 and 8, 32b and 64b
@@ -37,7 +37,7 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 
 1.  Download the installer (.dmg file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](http://community.nuxeo.com/static/drive/latest/nuxeo-drive.dmg).
 2.  Run the installer: drag and drop the Nuxeo Drive icon in the Applications directory.
-    ![]({{file name='Drive-dmg-installer.png' space='userdoc' page='nuxeo-drive'}} ?w=400,border=true)
+    ![]({{file name='Drive-dmg-installer.png' page='nuxeo-drive'}} ?w=400,border=true)
     Nuxeo Drive is now installed on your computer.
 3.  You now need to [start Nuxeo Drive](#starting-nuxeo-drive) on your computer.
     A Nuxeo Drive folder will be created by the system at the root of your local home folder (`/Users/USER/`). This is the place where synchronized documents will be stored on your computer.
@@ -58,23 +58,77 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 
 #### Installing Nuxeo Drive on Ubuntu/Debian (and Other Linux Variants)
 
-The .deb package of the client is not yet available. In the mean time you can manually install the development version.
+The .deb package of the client is not yet available. In the mean time you can manually install the development version. Has been reported to work on: Ubuntu >= 12.04.
 
-**To Install Nuxeo Drive on your Linux computer:**
+To Install Nuxeo Drive on your Linux computer:
 
-1.  Follow the instructions listed in the [dedicated section of the GitHub README file](https://github.com/nuxeo/nuxeo-drive#ubuntudebian-and-other-linux-variants-client).
+**Requirements**
 
-    For now, the systray icon is not visible under Unity desktop. As a consequence, the configuration window only appears at the first launch.
+1.  **xattr**
 
-2.  If you want to change it, issue the following commands:
+    First note that Nuxeo Drive uses Extended file attributes through the [xattr](https://pypi.python.org/pypi/xattr/) Python wrapper.
+
+    On FreeBSD, and Mac OS X, xattrs are enabled in the default kernel.
+
+    On Linux, depending on the distribution, you may need a special mount option (user_xattr) to enable them for a given file system, e.g.:
+    ```
+    sudo mount -oremount,user_xattr /dev/sda3
+    ```
+
+2. **Python 2.7 or higher**
+
+    Nuxeo Drive uses some packages, which are only compatible from python **version 2.7**. If this excludes using the standard python installation of certain OS distributions, you may still install python 2.7 (or higher) [manually from the download pages]( https://www.python.org/downloads/) on your system. However, this may break other tools in your environment, who need to be consistent with the default python packages. Using [Anaconda](http://continuum.io/downloads) to switch between different python installs/environments may help in this case.
+
+3. **pip**
+
+  Make sure that the latest version of [pip](http://www.pip-installer.org/) is installed.
+  ```
+  sudo pip install -U pip
+  ```
+4. **cffi**
+
+    Make sure that the latest version of [cffi](https://pypi.python.org/pypi/cffi) is installed.
+    ```
+    sudo pip install -U cffi
+    ```
+
+**Installation**
+
+1. Then install the required system and Python packages and the Nuxeo Drive code itself.
+
+  Debian package manager:
+  ```
+  sudo apt-get install python-pip python-dev python-qt4 libffi-dev git
+  ```
+  Redhat package manager (RPM):
+  ```
+  sudo yum install python-pip python-devel PyQt4 libffi-devel git
+  ```
+
+  Then finally install the Nuxeo Drive requirements and Nuxeo Drive itself. These are common installation actions, not depending on the package manager (warning: define the version you want in the DRIVE_VERSION variable, ex: 2.1.113):
+  ```
+  DRIVE_VERSION=release-2.1.113
+  sudo pip install -U -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements.txt
+  sudo pip install -U -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/unix-requirements.txt
+  sudo pip install -U git+https://github.com/nuxeo/nuxeo-drive.git@$DRIVE_VERSION
+  ```
+  Waiting for [NXDRIVE-62](https://jira.nuxeo.com/browse/NXDRIVE-62) to be resolved you need to run these commands for Nuxeo Drive to work fine:
+  ```
+  # increase inotify file watch limit
+  ofile=/proc/sys/fs/inotify/max_user_instances
+  sudo sh -c "echo 8192 > $ofile"
+  cat $ofile
+  ```
+
+2. For now, the systray icon is not visible under Unity desktop. As a consequence, the configuration window only appears at the first launch. If you want to change it, issue the following commands:
 
     ```
     pkill ndrive
-    rm ~/.nuxeo-drive
+    rm -rf ~/.nuxeo-drive
     ndrive &
     ```
 
-3.  Now configure automatic start and protocol handler:
+4.  Now configure automatic start and protocol handler:
 
     ```
     # See $XDG_CONFIG_DIRS for a system wide install (vs user-specific)
@@ -154,14 +208,14 @@ Upgrading from Nuxeo Drive 1.3 to Nuxeo Drive 2 is transparent: Click on the ico
 
 **On Windows**
 
-1.  Right-click on the the icon ![]({{file name='drive_online.png' space='userdoc' page='nuxeo-drive'}}) in the systray.
-2.  Click on the icon ![]({{file name='drive-settings-icon.png' space='userdoc' page='nuxeo-drive'}}) and on the **Settings** menu item.
+1.  Right-click on the the icon ![]({{file name='drive_online.png' page='nuxeo-drive'}}) in the systray.
+2.  Click on the icon ![]({{file name='drive-settings-icon.png' page='nuxeo-drive'}}) and on the **Settings** menu item.
     The Settings window is displayed.
 
 **On Mac OS X / Linux**
 
-1.  Click on the the icon ![]({{file name='drive_online.png' space='userdoc' page='nuxeo-drive'}}) in the systray.
-2.  Click on the icon ![]({{file name='drive-settings-icon.png' space='userdoc' page='nuxeo-drive'}}) and on the **Settings** menu item.
+1.  Click on the the icon ![]({{file name='drive_online.png' page='nuxeo-drive'}}) in the systray.
+2.  Click on the icon ![]({{file name='drive-settings-icon.png' page='nuxeo-drive'}}) and on the **Settings** menu item.
     The Settings window is displayed.
 
 The Nuxeo Drive settings window shows four tabs that enable you to customize the behavior of your Nuxeo Drive:

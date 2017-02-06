@@ -2,10 +2,10 @@
 title: Repository Concepts
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - concepts
     - excerpt
 toc: true
@@ -270,8 +270,6 @@ This page summarizes all the main concepts about documents, access to documents 
 
 {{! /excerpt}}
 
-&nbsp;
-
 ## Document in Nuxeo
 
 ### Document vs File
@@ -344,13 +342,13 @@ Here is a simple example of a XSD schema used in Nuxeo Core (a subset of Dublin 
 
 ```
 
-A schema file has to be referenced by Nuxeo configuration to be found and used. The schema must be referenced in the&nbsp;**schema**&nbsp;extension point of the&nbsp;`[org.nuxeo.ecm.core.schema.TypeService](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.core.schema.TypeService)&nbsp;`&nbsp;component. A reference to a schema defines:
+A schema file has to be referenced by Nuxeo configuration to be found and used. The schema must be referenced in the **schema** extension point of the [`org.nuxeo.ecm.core.schema.TypeService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.schema.TypeService)component. A reference to a schema defines:
 
 *   the schema name,
 *   the schema location (file),
 *   an optional (but recommended) schema prefix.
 
-For example, in the configuration file&nbsp;`OSGI-INF/types-contrib.xml`&nbsp;(the name is just a convention) you can define:
+For example, in the configuration file `OSGI-INF/types-contrib.xml` (the name is just a convention) you can define:
 
 ```
 <?xml version="1.0"?>
@@ -378,21 +376,20 @@ Nuxeo-Component: OSGI-INF/types-contrib.xml
 
 You may need to override an existing schema defined by Nuxeo. As usual, this possible and you have to contribute a schema descriptor with same name. But you must also add an override parameter with value "true".
 
-For instance, you can add your own parameters into the user.xsd schema to add the extra information stored into your ldap and fetch them and store them into the principal instance (that represents every user).
+For instance, you can add your own parameters into the `user.xsd` schema to add the extra information stored into your ldap and fetch them and store them into the principal instance (that represents every user).
 The contribution will be something like:
 
 ```xml
 <component name="fr.mycompanyname.myproject.schema.contribution">
-  <!-- to be sure to deployed after the Nuxeo default contributions>
+  <!-- to be sure to deployed after the Nuxeo default contributions -->
   <require>org.nuxeo.ecm.directory.types</require>
   <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
     <schema name="group" src="directoryschema/group.xsd" override="true"/>
   </extension>
 </component>
-
 ```
 
-Focus your attention on the&nbsp;**override="true"**&nbsp;that is often missing
+Focus your attention on the **override="true"**& that is often missing.
 
 You will need to improve the UI to also display your extra-informations...
 
@@ -423,7 +420,7 @@ Default facets include:
 
 Here are some Document Types definition examples:
 
-```
+```xml
 <doctype name="File" extends="Document">
     <schema name="common"/>
     <schema name="file"/>
@@ -452,13 +449,13 @@ Here are some Document Types definition examples:
 
 At UI level, Document Types defined in the repository are mapped to high level document types that have additional attributes:
 
-*   Display name,
-*   Category,
-*   Icon,
-*   Visibility,
+*   Display name
+*   Category
+*   Icon
+*   Visibility
 *   ...
 
-```
+```xml
 <type id="Folder">
     <label>Folder</label>
     <icon>/icons/folder.gif</icon>
@@ -487,7 +484,7 @@ At UI level, Document Types defined in the repository are mapped to high level d
 </type>
 ```
 
-The&nbsp;**label**,&nbsp;**description**,&nbsp;**icon**,&nbsp;**bigIcon**&nbsp;and&nbsp;**category**&nbsp;are used by the user interface, for instance in the creation page when a list of possible types is displayed.
+The **label**, **description**, **icon**, **bigIcon** and **category** are used by the user interface, for instance in the creation page when a list of possible types is displayed.
 
 *   **label**: a short name for the type.
 *   **description**: a longer description of the type.
@@ -503,27 +500,27 @@ Standard categories used in the Nuxeo DM interface are:
 
 Other categories can freely be defined.
 
-### {{> anchor 'lifecycle'}}Life Cycle
+### {{> anchor 'lifecycle'}}Lifecycle
 
-Nuxeo Core includes a life cycle service.
+Nuxeo Core includes a lifecycle service.
 
-Each document type can be bound to a life cycle. The life cycle is responsible for defining:
+Each document type can be bound to a lifecycle. The lifecycle is responsible for defining:
 
 *   The possible states of the document (ex: draft, validated, obsolete, ...),
 *   The possible transitions between states (ex : validate, make obsolete, ...).
 
 ![]({{file name='Selection_005.png'}} ?w=650,border=true)
 
-Life cycle is not workflow, but:
+Lifecycle is not workflow, but:
 
-*   Workflows usually use the life cycle of the document as one of the state variable of the process,
-*   You can simulate simple review process using life cycle and listeners (very easy to do using [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) and Content Automation).
+*   Workflows usually use the lifecycle of the document as one of the state variable of the process
+*   You can simulate simple review process using lifecycle and listeners (very easy to do using [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) and Content Automation).
 
 ### Proxies
 
 The Nuxeo Repository includes the concept of Proxy.
 
-A proxy is very much like a symbolic link on an Unix-like OS:&nbsp;a proxy points to a document and will look like a document from the user point of view:
+A proxy is very much like a symbolic link on an Unix-like OS: a proxy points to a document and will look like a document from the user point of view:
 
 *   The proxy will have the same metadata as the target document,
 *   The proxy will hold the same files as the target documents (since file is a special kind of metadata).
@@ -532,7 +529,7 @@ A proxy can point to a live document or to a version (check in archived version)
 
 Proxies are used to be able to see the same document from several places without having to duplicate any data.
 
-The initial use case for proxies in the Nuxeo Platform is local publishing:&nbsp;when you are happy with a document (and possibly successfully completed a review workflow), you want to create a version for this document. This version will be the one validated and the live document stays in the workspace where you created it. Then you may want to give access to this valid document to several people.&nbsp;For that, you can publish the document into one or several sections: this means creating proxies pointing to the validated version.
+The initial use case for proxies in the Nuxeo Platform is local publishing: when you are happy with a document (and possibly successfully completed a review workflow), you want to create a version for this document. This version will be the one validated and the live document stays in the workspace where you created it. Then you may want to give access to this valid document to several people. For that, you can publish the document into one or several sections: this means creating proxies pointing to the validated version.
 Depending on their rights, people that cannot read the document from the workspace (because they can not access it) may be able to see it from one or several sections (that may even be public).
 
 ![]({{file name='Selection_006.png'}} ?w=650,border=true)
@@ -541,11 +538,13 @@ The second use cases for proxies is multi-filling.
 
 If a proxy can not hold metadata, it can hold security descriptors (ACP/ACL). So a user may be able to see one proxy and not an other.
 
-### <span style="font-size: 20.0px;font-weight: normal;line-height: 1.5;">Repository Storage: VCS</span>
+### Repository Storage: VCS and DBS
 
 The Nuxeo repository consists of several services.
 
-One of them is responsible for actually managing persistence of documents. This service is pluggable. The Nuxeo repository uses&nbsp; its own persistence back end: Nuxeo Visible Content Store (VCS)
+One of them is responsible for actually managing persistence of documents. This service is pluggable. The Nuxeo Platform repository uses its own persistence backends: VCS and DBS.
+
+#### VCS (Visible Content Store)
 
 Nuxeo VCS was designed to provide a clean SQL Mapping. This means that VCS does a normal mapping between XSD schemas and the SQL database:
 
@@ -559,18 +558,6 @@ Using such a mapping provides several advantages:
 *   You can use standard SQL based BI tools to do reporting,
 *   You can do low level SQL bulk inserts for data migration.
 
-Binary files are never stored in the database, they are stored via BinaryManager on the file system using their digest.&nbsp;Files are only deleted from the file system by a garbage collector script.
-
-This storage strategy as several advantages:
-
-*   Storing several times the same file in Nuxeo won't store it several time on disk,
-*   Binary storage can be easily snapshotted.
-
-VCS being now the default Nuxeo backend, it also provides some features that were not available when using the previous JCR backend:
-
-*   Tag service,
-*   Possibility to import a document with a fixed UUID (useful for application level synchronization).
-
 In addition, VCS provides a native cluster mode that does not rely on any external clustering system. This means you can have two (or more) Nuxeo servers sharing the same data: you only have to turn on Nuxeo VCS Cluster mode.
 
 Advantages of VCS:
@@ -582,9 +569,22 @@ Advantages of VCS:
 *   Supports low level SQL bulk imports,
 *   VCS scales well with big volumes of Documents.
 
-Drawbacks of VCS:
+You can read more about it on the [VCS Page]({{page page='vcs'}}).
 
-*   storage is not JCR compliant.
+#### DBS (Document-Based Storage)
+
+DBS allows storage of Nuxeo documents inside a document-oriented store, like MongoDB or MarkLogic.
+
+You can read more about it on the [DBS Page]({{page page='dbs'}}).
+
+#### Blob Providers
+
+Binary files are never stored in the database, they are stored via the Blob Manager and the configurable Blob Providers on the file system, or in an external blob storage backend, using their digest.
+
+This storage strategy as several advantages:
+
+*   Storing several times the same file in Nuxeo won't store it several time on disk,
+*   Binary storage can be easily snapshotted.
 
 ## Advanced Features
 
@@ -598,9 +598,9 @@ Because a Document can be big (lots of fields including several files), a Docume
 *   Big object to transfer on the network (in case of remoting),
 *   Big object to fetch from the storage backend.
 
-Furthermore, even when you have very complex documents, you don't need all these data on each screen: in most screens you just need a few properties (title, version, life cycle state, author, ...).
+Furthermore, even when you have very complex documents, you don't need all these data on each screen: in most screens you just need a few properties (title, version, lifecycle state, author, ...).
 
-In order to avoid these problems, the Nuxeo DocumentModel supports lazy-fetching:&nbsp;a DocumentModel is by default not fully loaded, only the field defined as prefetch are initially loaded.&nbsp;The DocumentModel is bound to the repository session that was used to read it and it will transparently fetch the missing data, block per block when needed.
+In order to avoid these problems, the Nuxeo DocumentModel supports lazy-fetching: a DocumentModel is by default not fully loaded, only the field defined as prefetch are initially loaded. The DocumentModel is bound to the repository session that was used to read it and it will transparently fetch the missing data, block per block when needed.
 
 You still have the possibility to disconnect a DocumentModel from the repository (all data will be fetched), but the default behavior is to have a lightweight Java object that will fetch additional data when needed.
 
@@ -633,7 +633,7 @@ For this, Nuxeo Core contains an _adapter_ system that lets you bind a custom Ja
 
 By default, The Nuxeo Platform provides some generic adapters:
 
-*   **BlobHolder**: Lets you read and write binary files stored in a document,
-*   **CommentableDocument**: Encapsulates comment service logic so that you can easily comment a document,
-*   **MultiViewPicture**: Provides an abstraction and easy API to manipulate a picture with multiple views,
+*   **BlobHolder**: Lets you read and write binary files stored in a document
+*   **CommentableDocument**: Encapsulates comment service logic so that you can easily comment a document
+*   **MultiViewPicture**: Provides an abstraction and easy API to manipulate a picture with multiple views
 *   ...

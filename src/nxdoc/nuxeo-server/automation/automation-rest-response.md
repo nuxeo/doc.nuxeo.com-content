@@ -2,10 +2,10 @@
 title: Automation REST Response
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - automation
     - automation-component
     - excerpt
@@ -66,8 +66,6 @@ When calling Automation operations through REST calls, you may want to throw cus
 
 {{! /excerpt}}
 
-&nbsp;
-
 ## Rest Custom Exception in Automation Operation and HTTP Code Error Setting
 
 In order to throw custom exception and http status code, you have to create a custom Exception extending `org.nuxeo.ecm.automation.server.jaxrs.RestOperationException`. You will be able to set the HTTP status code which will be return into the rest call response.
@@ -78,7 +76,7 @@ I have to create an ExceptionTest extending the RestOperationException:
 
 {{#> panel type='code' heading='ExceptionTest.java'}}
 
-```
+```java
 /*
  * (C) Copyright 2014 Nuxeo SA (http://nuxeo.com/) and contributors.
  *
@@ -124,7 +122,7 @@ Given a custom operation HttpStatusOperationTest:
 
 {{#> panel type='code' heading='HttpStatusOperationTest.java'}}
 
-```
+```java
 /*
  * (C) Copyright 2014 Nuxeo SA (http://nuxeo.com/) and contributors.
  *
@@ -209,7 +207,7 @@ Given a custom operation HttpStatusOperationTest:
 
 {{#> panel type='code' heading='HttpStatusOperationTest.java'}}
 
-```
+```java
 /*
  * (C) Copyright 2014 Nuxeo SA (http://nuxeo.com/) and contributors.
  *

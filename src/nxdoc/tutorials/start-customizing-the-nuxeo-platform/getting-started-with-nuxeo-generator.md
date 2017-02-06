@@ -2,7 +2,7 @@
 title: Getting Started with Nuxeo Generator
 review:
     comment: ''
-    date: '2015-12-06'
+    date: '2017-01-17'
     status: ok
 details:
     howto:
@@ -11,11 +11,14 @@ details:
         tool: 'Nuxeo Generator, Nuxeo Studio'
         topics: 'Automation, Layout'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - generator
     - lts2016-ok
 toc: true
+version_override:
+    'LTS 2015': 710/nxdoc/getting-started-with-nuxeo-ide
+    '6.0': 60/nxdoc/getting-started-with-nuxeo-ide
 confluence:
     ajs-parent-page-id: '14256538'
     ajs-parent-page-title: Start Customizing the Nuxeo Platform
@@ -791,19 +794,47 @@ The code can either be tested through unit tests or manually. You need to bind t
 
 1.  In Nuxeo Studio, under **Source Control** > **Branch Management**, release the most recent commit on your project. This will generate a version of your project that can be accessed by Maven.
 
-2.  In your file system, add the following entry to your `~/.m2/settings.xml` file. This configures your Maven client to use authentication when accessing the Studio Maven repository.
+2.  It is strongly recommended that you encrypt your Studio password:
 
-    ```xml
-    <servers>
-      ....
-      <server>
-        <id>nuxeo-studio</id>
-        <username>your_studio_username</username>
-        <password>your_studio_password</password>
-      </server>
-      ...
-    </servers>
-    ```
+    1. Create a master password:
+
+        ```bash
+        mvn --encrypt-master-password
+        ```
+
+        The command will prompt you for your master password and produce an encrypted version, something like this:
+
+        ```bash
+        {jSMOWnoPFgsHVpMvz5VrIt5kRbzGpI8u+9EF1iFQyJQ=}
+        ```
+
+    2. Store this password in `~/.m2/settings-security.xml` like this:
+
+        ```xml
+        <settingsSecurity>
+          <master>{jSMOWnoPFgsHVpMvz5VrIt5kRbzGpI8u+9EF1iFQyJQ=}</master>
+        </settingsSecurity>
+        ```
+
+    3. Encrypt your server password:
+
+        ```bash
+        mvn --encrypt-password
+        ```
+
+    4. Enter your studio password at the prompt, and store the encrypted password in your `~/.m2/settings.xml` file as follows. This configures your Maven client to use authentication when accessing the Studio Maven repository.
+
+        ```xml
+        <servers>
+          ....
+          <server>
+            <id>nuxeo-studio</id>
+            <username>your_studio_username</username>
+            <password>your_encrypted_studio_password</password>
+          </server>
+          ...
+        </servers>
+        ```
 
 3. In your IDE edit the `pom.xml` file to declare the dependency of the Studio project you just tagged:
 
@@ -867,4 +898,4 @@ That's it! You are ready to develop on the Nuxeo Platform.
 
 ## What to do Next
 
-You should learn to [package and deploy your application](https://university.nuxeo.io/nuxeo/university/#!/course/nuxeo-platform-developer-basics/package-deploy-application) in a Nuxeo Platform instance.
+You should learn to [package and deploy your application](https://university.nuxeo.com/store/155918-nuxeo-platform-developer-basics) in a Nuxeo Platform instance.

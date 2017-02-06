@@ -2,10 +2,10 @@
 title: Microsoft SQL Server
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - database
     - sqlserver
     - multiexcerpt-include
@@ -274,9 +274,9 @@ history:
         version: '1'
 
 ---
-Nuxeo supported the following versions of Microsoft SQL Server:
+Nuxeo supports the following version of Microsoft SQL Server:
 
-{{{multiexcerpt '7.x-SQLserver-supported' page='Compatibility Matrix'}}}
+{{{multiexcerpt 'SQLserver-supported' page='Compatibility Matrix'}}}
 
 ## System Database Collation
 
@@ -325,20 +325,13 @@ ALTER DATABASE nuxeo SET MULTI_USER
 
 ## Row Versioning-Based Transaction Isolation
 
-To prevent locking and deadlocking problems you need to [enable the row versioning-based isolation levels](http://technet.microsoft.com/en-us/library/ms175095.aspx). With row versioning readers do not block other readers or writers accessing the same data. Similarly, the writers do not block readers. However, writers will block each other. Before each statement Nuxeo add a `SET TRANSACTION ISOLATION LEVEL READ COMMITTED`&nbsp;so statement sees only data committed before the query began.
+To prevent locking and deadlocking problems you need to [enable the row versioning-based isolation levels](http://technet.microsoft.com/en-us/library/ms175095.aspx). With row versioning readers do not block other readers or writers accessing the same data. Similarly, the writers do not block readers. However, writers will block each other. Whenever a transaction is started, Nuxeo adds a `SET TRANSACTION ISOLATION LEVEL READ COMMITTED` so the transaction sees only data committed before the query began.
 
 To enable the row versioning submit the following SQL commands:
 
 ```
 ALTER DATABASE nuxeo SET ALLOW_SNAPSHOT_ISOLATION ON;
 ALTER DATABASE nuxeo SET READ_COMMITTED_SNAPSHOT ON;
-
-```
-
-Note that there must be no other open connection in the database until `ALTER DATABASE` is complete, otherwise the last command will hang. You can work around this (when executing the command from SQL Server Management Studio for instance) by adding `WITH ROLLBACK IMMEDIATE`:
-
-```
-ALTER DATABASE nuxeo SET READ_COMMITTED_SNAPSHOT ON WITH ROLLBACK IMMEDIATE;
 
 ```
 
@@ -349,11 +342,18 @@ Snapshot isolation transaction failed accessing database 'nuxeo' because snapsho
 
 ```
 
+Note that there must be no other open connection in the database until `ALTER DATABASE` is complete, otherwise the last command above will hang. You can work around this (when executing the command from SQL Server Management Studio for instance) by adding `WITH ROLLBACK IMMEDIATE`:
+
+```
+ALTER DATABASE nuxeo SET READ_COMMITTED_SNAPSHOT ON WITH ROLLBACK IMMEDIATE;
+
+```
+
 ## Recovery Model
 
-A recovery model is a database property that controls how transactions are logged, whether the transaction log requires (and allows) backing up, and what kinds of restore operations are available. Three recovery models exist: `simple`, `full`, and `bulk_logged`&nbsp;(see more details at&nbsp;[http://msdn.microsoft.com/en-us/library/ms189275.aspx](http://msdn.microsoft.com/en-us/library/ms189275.aspx)).
+A recovery model is a database property that controls how transactions are logged, whether the transaction log requires (and allows) backing up, and what kinds of restore operations are available. Three recovery models exist: `simple`, `full`, and `bulk_logged` (see more details at [http://msdn.microsoft.com/en-us/library/ms189275.aspx](http://msdn.microsoft.com/en-us/library/ms189275.aspx)).
 
-By default, recovery model is `full`, so you can get performance issues. You may want to change to the&nbsp;`simple` model if this is the case, but please consult your database administrator first.
+By default, recovery model is `full`, so you can get performance issues. You may want to change to the `simple` model if this is the case, but please consult your database administrator first.
 
 **Mode View:**
 
@@ -370,7 +370,8 @@ ALTER DATABASE nuxeo SET RECOVERY SIMPLE;
 
 ## Full-Text
 
-If you configure a full-text index in Nuxeo (which is the default), you will need to make sure that your SQL Server instance has full-text search configured (it's an optional component during installation). See [http://msdn.microsoft.com/en-us/library/ms142571.aspx](http://msdn.microsoft.com/en-us/library/ms142571.aspx) for details.
+If you've configured your Nuxeo Platform instance to index full-text using the SQL database (by disabling the default configuration which uses Elasticsearch),
+you will need to make sure that your SQL Server instance has full-text search configured (it's an optional component during installation). See [http://msdn.microsoft.com/en-us/library/ms142571.aspx](http://msdn.microsoft.com/en-us/library/ms142571.aspx) for details.
 
 Failing to do this will provoke errors like:
 
@@ -390,7 +391,7 @@ Full-Text Search is not enabled for the current database. Use sp_fulltext_databa
 
 {{/panel}}
 
-The French version of these messages, for reference:
+Here is the French version of these messages, for reference:
 
 {{#> panel type='code' heading='SQL Server Msg 7601'}}
 
@@ -496,13 +497,10 @@ Here are some limitations in the context of the Nuxeo Platform:
 *   Full-text indexing cannot be configured to be done synchronously with transaction commits.
 *   It does not support circular ON CASCADE DELETE constraints ([KB321843](http://support.microsoft.com/kb/321843)).
 
-&nbsp;
-
 * * *
 
 {{#> panel heading='Related pages'}}
 
-&nbsp;
-
 - [Connecting Nuxeo to the Database]({{page page='connecting-nuxeo-to-the-database'}})
-- [Examples of SQL Generated by VCS]({{page page='examples-of-sql-generated-by-vcs'}}){{/panel}}
+- [Examples of SQL Generated by VCS]({{page page='examples-of-sql-generated-by-vcs'}})
+{{/panel}}

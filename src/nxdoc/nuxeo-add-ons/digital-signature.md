@@ -102,7 +102,7 @@ The Nuxeo Platform Digital Signature add-on allows users to:
 
 ### Principles
 
-*   Documents are signed to protect them from modification, especially at critical stages in their life cycle.
+*   Documents are signed to protect them from modification, especially at critical stages in their lifecycle.
 *   Document- and user-certification in the Nuxeo Platform follow principles of asymmetric cryptography, PKI & the X.509 standards.
 *   To sign a document, a user needs a personal certificate.
 *   Each user can create her own certificate.

@@ -2,7 +2,7 @@
 title: How to Follow a Transition If User Is Member of a Group
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 details:
     howto:
@@ -13,7 +13,7 @@ details:
         tool: Studio
         topics: 'Workflow, Transition'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - transition
     - workflow
     - howto
@@ -82,7 +82,7 @@ In workflows, you may want to have several paths on the workflow depending on th
 
 {{! /excerpt}}
 
-The solution is to add the following test in the conditions of the transitions of a node:&nbsp;
+The solution is to add the following test in the conditions of the transitions of a node
 
 ```
 Fn.getPrincipal(workflowInitiator).isMemberOf("managers")
@@ -91,14 +91,13 @@ Fn.getPrincipal(workflowInitiator).isMemberOf("managers")
 
 This expression will be true if the workflowInitiator is a member of the managers group. Replace the group by the one you need and "workflowInitiator" by any other user you would need. If you need to filter on the current user, you can use `CurrentUser.originatingUser` as stated in the page [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}}).
 
-&nbsp;
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 - [How to Modify a Workflow Variable outside of Workflow Context]({{page page='how-to-modify-a-workflow-variable-outside-of-workflow-context'}})
-- [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})&nbsp;
+- [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

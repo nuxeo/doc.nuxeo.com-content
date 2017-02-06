@@ -2,7 +2,7 @@
 title: Nuxeo Diff
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
     - history
@@ -108,17 +108,20 @@ history:
         version: '1'
 
 ---
+{{! multiexcerpt name='nuxeo-diff-functional-overview'}}
 {{! excerpt}}
 
-Nuxeo Diff enables to compare two documents or two versions of a document to see the differences between documents or versions.
+[Nuxeo Diff](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff) enables to compare two documents or two versions of a document to see the differences between documents or versions.
 
-{{! /excerpt}}{{! multiexcerpt name='comparison-possibilities'}}
+{{! /excerpt}}
+
+{{! multiexcerpt name='comparison-possibilities'}}
 
 When you compare two documents or versions of a document, the elements below are compared:
 
-*   the metadata (title, coverage, modification date, etc),
-*   the content (note or main attachment depending on the document involved),
-*   the attached files.
+*   The metadata (title, coverage, modification date, etc)
+*   The content (note or main attachment depending on the document involved)
+*   The attached files
 
 The only requirements for Nuxeo Diff to compare files is that their content can be converted into TXT or HTML format, which is the case for PDF and office files using the default converters of the Nuxeo Platform.
 
@@ -126,7 +129,7 @@ The only requirements for Nuxeo Diff to compare files is that their content can 
 
 You can compare documents in any space of the Nuxeo Platform: workspaces, sections...
 
-## Comparing a document's versions
+### Comparing a Document's Versions
 
 **To compare two versions of a document:**
 
@@ -139,7 +142,7 @@ You can compare documents in any space of the Nuxeo Platform: workspaces, sectio
     A window pops up showing what's been added in green and what's been removed in red.
     ![]({{file name='Diff-content-detail.png'}} ?w=550,border=true)
 
-## Comparing documents
+### Comparing Documents
 
 It is also possible to compare two distinct documents.
 
@@ -161,17 +164,21 @@ It is also possible to compare two distinct documents.
 3.  If you want to visualize the content changes, click on the **Detail** link on the right.
     A window pops up showing what's been added in green and what's been removed in red.
 
+{{! /multiexcerpt}}
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related documentation'}}
+
+- [Nuxeo Diff developer documentation]({{page space='nxdoc' page='nuxeo-diff'}})
+- [Traceability]({{page page='traceability'}})
+
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+
 &nbsp;
 
-* * *
-
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
-
-*   [Nuxeo Diff developer documentation]({{page space='nxdoc' page='nuxeo-diff'}})
-*   [Traceability]({{page page='traceability'}})
-
-{{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-</div></div>
+</div>
+</div>

@@ -2,10 +2,10 @@
 title: Tutorials
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-17'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - home
 confluence:
     ajs-parent-page-id: '950332'
@@ -124,7 +124,7 @@ history:
 <div class="column">
 {{#> panel type='primary'}}
 
-[New to Nuxeo? Start Learning Nuxeo Platform with Nuxeo University Program!](https://university.nuxeo.io/)
+[New to Nuxeo? Start Learning Nuxeo Platform with Nuxeo University Program!](https://university.nuxeo.com)
 
 {{/panel}}
 </div>
@@ -152,4 +152,3 @@ history:
 {{/panel}}</div><div class="column medium-6">
 
 </div></div>
-

@@ -2,9 +2,10 @@
 title: Reassigning a Task
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
+    - lts2016-ok
     - reassign
     - multiexcerpt
 confluence:
@@ -83,15 +84,11 @@ To reassign a task from **the Home Workflow tab:**
 6.  Click on the **Reassign** button.
     The Workflow tab of the document is displayed: you have no task anymore.
 
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Delegating a Task]({{page page='delegating-a-task'}})
-*   [Workflows]({{page page='workflows'}})
+- [Delegating a Task]({{page page='delegating-a-task'}})
+- [Workflows]({{page page='workflows'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

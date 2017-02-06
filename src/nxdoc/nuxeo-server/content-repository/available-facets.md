@@ -291,7 +291,7 @@ This facet should be set on any type in which you want to store a video. It come
 
 ## Task
 
-This facet should be set on any type if you want to use it as the task document created by a workflow. Note that along with the facet, the document type must also have the life cycle "task".
+This facet should be set on any type if you want to use it as the task document created by a workflow. Note that along with the facet, the document type must also have the lifecycle "task".
 
 ## WebView
 

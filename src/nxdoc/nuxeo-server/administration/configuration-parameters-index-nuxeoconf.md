@@ -1342,7 +1342,7 @@ false
 <td colspan="1">{{! multiexcerpt name='org.nuxeo.rest.stack.enable-description'}}
 Since Nuxeo 6.0, you can enable this mode if you'd like to display exception stacktraces in JSON response when error occurs after REST calls.
 
-See [Web Exceptions documentation]({{page page='web-exceptions-errors'}}) to get modes description and examples.
+See [Web Exceptions documentation]({{page page='error-handling'}}) to get modes description and examples.
 {{! /multiexcerpt}}</td>
 <td colspan="1">Since Nuxeo 6.0</td>
 </tr>
@@ -1631,7 +1631,8 @@ smtp</td>
 <tr>
 <td colspan="1">`nuxeo.url`</td>
 <td colspan="1">http://localhost:8080/nuxeo</td>
-<td colspan="1">Application URL (without final slash), should be the public URL of your server (i.e.: [http://www.yourdomain.com/](http://www.yourdomain.com/)....)</td>
+<td colspan="1">Application URL (without final slash), should be the public URL of your server (i.e.: [http://www.yourdomain.com/](http://www.yourdomain.com/)....)<br />
+It is also used for emails sent out and to detect images in HTML documents when converting to PDF.</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>

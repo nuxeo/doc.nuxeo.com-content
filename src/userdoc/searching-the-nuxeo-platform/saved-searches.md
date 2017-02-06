@@ -2,7 +2,7 @@
 title: Saved Searches
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
     - search
@@ -96,20 +96,24 @@ Saved searches are private by default. But you can share them by [giving permiss
 
 You can manage your saved searches from the **Searches** tab of your Home. Saved searched are deleted like a regular document, by selecting it using the checkbox, clicking the **Delete** button and confirming deletion.
 
-&nbsp;
 
-* * *
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='More in User Documentation'}}
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More in User Documentation'}}
+- [Default Search]({{page page='default-search'}})
+- [Quick Search]({{page page='quick-search'}})
+- [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
 
-*   [Default Search]({{page page='default-search'}})
-*   [Quick Search]({{page page='quick-search'}})
-*   [Searching the Nuxeo Platform]({{page page='searching-the-nuxeo-platform'}})
+{{/panel}}
+</div>
+<div class="column medium-6">
+{{#> panel heading='Configuring and Customizing Search '}}
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Configuring and Customizing Search '}}
+- [Indexing and Querying How-To Index]({{page space='nxdoc' page='indexing-and-querying-how-to-index'}})
+- [Full-Text Queries]({{page space='nxdoc' page='full-text-queries'}})
+- [Indexing and Query]({{page space='nxdoc' page='indexing-and-query'}})
 
-*   [Indexing and Querying How-To Index]({{page space='nxdoc' page='indexing-and-querying-how-to-index'}})
-*   [Full-Text Queries]({{page space='nxdoc' page='full-text-queries'}})
-*   [Indexing and Query]({{page space='nxdoc' page='indexing-and-query'}})
-
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>

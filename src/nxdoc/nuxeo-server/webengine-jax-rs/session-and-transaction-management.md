@@ -2,10 +2,10 @@
 title: Session and Transaction Management
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - session
     - transaction
     - webengine
@@ -105,13 +105,13 @@ history:
 
 By default WebEngine will automatically start a transaction for any request to a JAX-RS application (or WebEngine module). The default locations of static resources are omitted (so that no transaction will be started when requesting a static resource). The static resources locations is `*/skin/*`&nbsp;&mdash; this will match any path that targets a resource inside a `skin` directory in a JAX-RS application.
 
-You may want to adapt the transaction timeout per-request. In that case, you should specify in the HTTP headers the timeout value in seconds using the header&nbsp;`Nuxeo-Transaction-Timeout`.
+You may want to adapt the transaction timeout per-request. In that case, you should specify in the HTTP headers the timeout value in seconds using the header `Nuxeo-Transaction-Timeout`.
 
 ## Session Management
 
-WebEngine provides a managed `CoreSession` to any JAX-RS resource that wants to connect to the repository.&nbsp;WebEngine will close the managed `CoreSession` when no more needed (at the end of the request) so you should not worry about leaks. This session can be used either in a JAX-RS resource method, or in JAX-RS a `MessageBodyReader` or `MessageBodyWriter`.
+WebEngine provides a managed `CoreSession` to any JAX-RS resource that wants to connect to the repository. WebEngine will close the managed `CoreSession` when no more needed (at the end of the request) so you should not worry about leaks. This session can be used either in a JAX-RS resource method, or in JAX-RS a `MessageBodyReader` or `MessageBodyWriter`.
 
-To get the managed `CoreSession` &nbsp;from a JAX-RS resource you can use the following code:
+To get the managed `CoreSession` from a JAX-RS resource you can use the following code:
 
 ```java
 UserSession.getCurrentSession(httpRequest);
@@ -125,7 +125,7 @@ If you don't have access to the current HTTP request object you can use this cod
 
 ```
 
-Then using the `UserSession` object you can get&nbsp;either the current `Principal` or a `CoreSession`:
+Then using the `UserSession` object you can get either the current `Principal` or a `CoreSession`:
 
 ```java
 UserSession userSession = WebEngine.getActiveContext().getUserSession();
@@ -135,14 +135,14 @@ CoreSession session2 = userSession.getCoreSession("myrepo");
 
 ```
 
-When calling the `getCoreSession()` method and no managed `CoreSession` was yet created for the target repository then a new `CoreSession`&nbsp;is created and returned. If a `CoreSession`&nbsp;already exists then it is returned.
+When calling the `getCoreSession()` method and no managed `CoreSession` was yet created for the target repository then a new `CoreSession` is created and returned. If a `CoreSession` already exists then it is returned.
 
 You can see that there are two flavors of `getCoreSession()` method:
 
 *   `getCoreSession()`
 *   `getCoreSession(String repositoryName)`
 
-The first one is returning a session for the default repository. The second one will return a session for the given repository.&nbsp;By default the `getCoreSession()` method will use the default repository as configured in Nuxeo server, but you can change the repository that will be used on a request basis. See next section for how to change the default repository used by this method.
+The first one is returning a session for the default repository. The second one will return a session for the given repository. By default the `getCoreSession()` method will use the default repository as configured in Nuxeo server, but you can change the repository that will be used on a request basis. See next section for how to change the default repository used by this method.
 
 {{#> callout type='note' }}
 
@@ -152,10 +152,10 @@ Note that the `UserSession` object is available only in the context of a WebEngi
 
 ## Selecting the Default Repository
 
-<pre>You can choose from the client side which will be the repository used to create a managed `CoreSession`.&nbsp;To do this you can either use an HTTP request header:</pre>
+You can choose from the client side which will be the repository used to create a managed `CoreSession`. To do this you can either use an HTTP request header:
 
 ```
-X-NXRepository: myrepo
+Repository: myrepo
 ```
 
 or a request parameter:
@@ -211,7 +211,7 @@ The recommended way to define rules is to use prefixes and not regular expressio
 
 ## Path Rule Matching
 
-All the contributed path matching rules will be ordered from the longest path to the shortest one in lexicographical order.&nbsp;Regular expression rules will be always put after the prefix based rules (i.e. prefix based rules are _stronger_).&nbsp;Then to find the best matching rule, the path rules are iterated until a match occurs.
+All the contributed path matching rules will be ordered from the longest path to the shortest one in lexicographical order. Regular expression rules will be always put after the prefix based rules (i.e. prefix based rules are _stronger_). Then to find the best matching rule, the path rules are iterated until a match occurs.
 
 Paths specified in a rule must begin with a `/` (if not, a `/` will be automatically added by WebEngine). These paths are matched against the `HttpServletRequest` path info (which will always begin with a `/`).
 
@@ -237,10 +237,10 @@ they will be ordered as follow:
 
 ```
 
-Therefore for the URL path `/a/b` the first match will be `/a,`&nbsp;and this rule will be used to define the transaction management for this resource.
+Therefore for the URL path `/a/b` the first match will be `/a,` and this rule will be used to define the transaction management for this resource.
 
 ## Using Custom Exception Mapper
 
 When using a custom exception mapper implementation, don't forget to add the transaction rollback flagging `TransactionHelper.setTransactionRollbackOnly();`.
 
-This flag is needed to tell to&nbsp;`org.nuxeo.ecm.platform.web.common.requestcontroller.filter.NuxeoRequestControllerFilter`, which does handle the TransactionManagement, to take care of the rollback.
+This flag is needed to tell to `org.nuxeo.ecm.platform.web.common.requestcontroller.filter.NuxeoRequestControllerFilter`, which does handle the TransactionManagement, to take care of the rollback.

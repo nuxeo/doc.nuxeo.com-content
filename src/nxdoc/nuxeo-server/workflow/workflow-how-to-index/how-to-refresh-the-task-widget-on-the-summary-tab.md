@@ -2,7 +2,7 @@
 title: How to Refresh the Task Widget on the Summary Tab
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Studio
         topics: 'Workflow, Widget'
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - widget
     - howto
     - workflow
@@ -72,20 +72,16 @@ history:
 ---
 {{! excerpt}}
 
-If you start workflow automatically using the&nbsp;[Workflow > StartWorkflow](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.StartWorkflow)&nbsp;operation and that your workflow's first node creates a task to the workflow initiator, you need to use in the input chain the&nbsp;**[User Interface > Raise Seam events](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Seam.RaiseEvents)**&nbsp;operation, with the value "<span style="color: rgb(34,34,34);">`**workflowNewProcessStarted**`" for the event name.</span>
+If you start workflow automatically using the [Workflow > StartWorkflow](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.StartWorkflow) operation and that your workflow's first node creates a task to the workflow initiator, you need to use in the input chain the **[User Interface > Raise Seam events](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Seam.RaiseEvents)** operation, with the value "<span style="color: rgb(34,34,34);">`**workflowNewProcessStarted**`" for the event name.</span>
 
 {{! /excerpt}}
 
-&nbsp;
-
 * * *
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 - [How to Modify a Workflow Variable outside of Workflow Context]({{page page='how-to-modify-a-workflow-variable-outside-of-workflow-context'}})
-- [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})&nbsp;
+- [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

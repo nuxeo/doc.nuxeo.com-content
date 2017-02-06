@@ -2,10 +2,10 @@
 title: Default WebEngine Applications
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - url
     - webengine-component
 confluence:
@@ -86,24 +86,24 @@ This page is a work in progress. See [NXDOC-229](https://jira.nuxeo.com/browse/N
 
 URLs exposed by WebEngine module are of the form `/nuxeo/site/*` (where * is a service offered by a WebEngine module):
 
-*   `/nuxeo/site`: root page listing the "available&nbsp;WebEngine applications"
-*   `/nuxeo/site/admin`: simple WebEngine UI to access administrative features
+*   `/nuxeo/site`: root page listing the "available WebEngine applications"
 *   `/nuxeo/site/automation`: base URL for Automation services, documentation is available at `/nuxeo/site/automation/doc`
-*   `/nuxeo/site/gadgets`: base URL for gadgets Rest requests
 *   `/nuxeo/site/dav`: WebDAV service
 *   `/nuxeo/site/connectClient`: URL to request Nuxeo Connect services (packages lists, registration ...)
-*   `/nuxeo/site/shell`: [Nuxeo Shell]({{page page='nuxeo-shell'}}) applet
 *   `/nuxeo/site/layout-manager`: [Layouts and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}}) services and documentation
-
-Depending on the addons you've installed, you could also expose these URLs:
-
-*   `/nuxeo/site/mobile`: URL for the mobile application
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related topics'}}
 
-*   [WebEngine (JAX-RS)]({{page page='webengine-jax-rs'}})
-*   [Navigation URLs]({{page page='navigation-urls'}})
+- [WebEngine (JAX-RS)]({{page page='webengine-jax-rs'}})
+- [Navigation URLs]({{page page='navigation-urls'}})
 
-{{/panel}}</div><div class="column medium-6"></div></div>
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+</div>
+</div>

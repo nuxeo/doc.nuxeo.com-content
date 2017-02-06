@@ -2,10 +2,10 @@
 title: Upgrade from 5.4.1 to 5.4.2 with Oracle
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - multiexcerpt
 confluence:
     ajs-parent-page-id: '3343538'

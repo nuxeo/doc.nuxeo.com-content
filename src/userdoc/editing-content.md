@@ -2,7 +2,7 @@
 title: Editing Content
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-26'
     status: ok
 labels:
     - editing
@@ -390,22 +390,22 @@ history:
 ---
 {{! excerpt}}
 
-Editing a document means modifying its content (i.e. the attached file of a [file]({{page space='userdoc' page='document-types'}}) document, the text of a [note]({{page space='userdoc' page='document-types'}}), etc.), or simply editing the title, description or any metadata of the document. You can edit documents individually using an edit form or apply modifications to several documents using the bulk edit form.
+Editing a document means modifying its content (i.e. the attached file of a [file]({{page space='userdoc' page='document-types'}}#file) document, the text of a [note]({{page space='userdoc' page='document-types'}}#note), etc.), or simply editing the title, description or any metadata of the document. You can edit documents individually using an edit form or apply modifications to several documents using the bulk edit form.
 
 {{! /excerpt}}
 
-## Content and Metadata Edit Form
+## {{> anchor 'edit-metadata-form'}} Content and Metadata Edit Form
 
 {{! multiexcerpt name='edit-document'}}
 
 To edit a document, you can:
 
-*   click on the **Edit** tab of the document
-*   right click on the document and click on **Modify**
+*   Click on the **Edit** tab of the document
+*   Right click on the document and click on **Modify**
 
 Both ways show you the document's **Edit** tab that displays a form to edit the content of the document and its metadata.
 
-In the **Edit** tab type your modifications and indicate if you want to update the document's version. Type a comment if you want to indicate why you modified the document (this comment is logged in the document's history and helps other users know what has been changed on the document). Once it's done, click on **Save**.
+In the **Edit** tab type your modifications and indicate if you want to update the [document's version](#versioning-overview). Type a comment if you want to indicate why you modified the document (this comment is logged in the document's history and helps other users know what has been changed on the document). Once it's done, click on **Save**.
 
 {{! /multiexcerpt}}
 
@@ -413,7 +413,7 @@ In the **Edit** tab type your modifications and indicate if you want to update t
 
 {{! multiexcerpt name='edit-form-custom-functional-overview'}}
 
-&nbsp;The Edit form can be customized to show your business metadata, using the [Edit layout]({{page space='studio' page='form-layouts'}}). You can define your Edit tab to show organized groups of metadata and make some fields editable [depending on a user property or document property]({{page space='nxdoc' page='how-to-control-the-display-mode-of-a-widget'}}).
+The Edit form can be customized to show your business metadata, using the [Edit layout]({{page space='studio' page='form-layouts'}}). You can define your Edit tab to show organized groups of metadata and make some fields editable [depending on a user property or document property]({{page space='nxdoc' page='how-to-control-the-display-mode-of-a-widget'}}).
 
 {{! /multiexcerpt}}
 
@@ -437,7 +437,7 @@ Subjects
 
 </td><td colspan="1">
 
-Topic(s) of the document.&nbsp;Values come from the I10nsubjects [vocabularies]({{page space='userdoc' page='managing-vocabularies'}}).
+Topic(s) of the document. Values come from the I10nsubjects [vocabularies]({{page space='userdoc' page='managing-vocabularies'}}).
 
 </td></tr><tr><td colspan="1">
 
@@ -542,13 +542,13 @@ To fill in or change the metadata of the document, just edit the document.
 
 ### Safe Edit
 
-The Nuxeo Platform includes a **safe edit** mechanism that prevents you from inadvertently&nbsp;leaving an edit form without saving. This mechanism consists in displaying a popup for you to confirm you really want to quit without saving when you edit a document and try to quit the edit form or close the browser's window without clicking on the Save button.
+The Nuxeo Platform includes a **safe edit** mechanism that prevents you from inadvertently leaving an edit form without saving. This mechanism consists in displaying a popup for you to confirm you really want to quit without saving when you edit a document and try to quit the edit form or close the browser's window without clicking on the Save button.
 
-![]({{file name='safe-edit-popup.png' space='userdoc60' page='editing-content'}} ?w=650)
+![]({{file name='safe-edit-popup.png'}} ?w=650)
 
 In browsers that allow it, a draft is automatically saved for recovery.
 
-![]({{file name='draft-recovery-message.png' space='userdoc58' page='editing-content'}} ?w=350,h=115,border=true)
+![]({{file name='draft-recovery-message.png'}} ?w=350,h=115,border=true)
 
 ## {{> anchor 'bulk-edit'}}Bulk Editing
 
@@ -558,7 +558,7 @@ It is possible to edit several documents at the same time. When you bulk edit do
 *   Search results, whatever the search you are using
 *   A virtual navigation list of documents
 
-To **edit several documents** at the same time, select the documents to edit using the checkboxes on the documents list and **click on Edit&nbsp;** at the bottom of the page.&nbsp;Fill in the relevant metadata and leave other values empty by default. Note that if you edit metadata for which the document(s) already had a value, the previous value will be replaced by the one you select on the bulk edit form. Once it's done, click on&nbsp;**Save**.
+To **edit several documents** at the same time, select the documents to edit using the checkboxes on the documents list and **click on Edit** at the bottom of the page. Fill in the relevant metadata and leave other values empty by default. Note that if you edit metadata for which the document(s) already had a value, the previous value will be replaced by the one you select on the bulk edit form. Once it's done, click on **Save**.
 
 {{#> callout type='tip' }}
 
@@ -566,25 +566,23 @@ It is possible to change the default bulk edit versioning policy. See the page [
 
 {{/callout}}
 
-You can also use, [Nuxeo Spreadsheet]({{page space='nxdoc' page='nuxeo-spreadsheet'}}) to edit several documents at the same time&nbsp;in your repository as if you were in a spreadsheet-like grid, like copy and paste by dragging the cell's value.
+You can also use, [Nuxeo Spreadsheet]({{page space='nxdoc' page='nuxeo-spreadsheet'}}) to edit several documents at the same time in your repository as if you were in a spreadsheet-like grid, like copy and paste by dragging the cell's value.
 
 ![]({{file name='spreadsheet-view.png' space='nxdoc' page='nuxeo-spreadsheet'}} ?w=600,border=true)
 
 {{#> callout type='info' heading='Document selected in other pages remain selected'}}
 
-When you navigate from page to page, you selection is not lost and you can bulk-edit documents that are not on the same page.
+When you navigate from page to page, your selection is not lost and you can bulk-edit documents that are not on the same page.
 
 **There is a drawback:** You must make sure to bulk-edit only the correct documents (i.e. there are no checked documents in other pages that, in fact, you don't want to edit.).
 
 {{/callout}}
 
-&nbsp;
-
 ## {{> anchor 'versioning-overview'}}Versioning Overview
 
 {{! multiexcerpt name='versioning'}}{{! multiexcerpt name='versioning-intro'}}
 
-When you edit a document, you can decide to save your modifications as a new version of the document. This enables you&nbsp;and other users to easily revert to a specific version of the document if needed, without having to edit the document. Versions are accessible from the **History** tab of the document.
+When you edit a document, you can decide to save your modifications as a new version of the document. This enables you and other users to easily revert to a specific version of the document if needed, without having to edit the document. Versions are accessible from the **History** tab of the document.
 
 {{! /multiexcerpt}}
 
@@ -592,9 +590,9 @@ You have several options regarding the versioning of your document.
 
 Every document holds a version number, which is a piece of information about the evolution of the document. A version number (V.v) is composed of a major version number (V) and a minor version number (v). When a document is created, its version number is 0.0\. Minor version increment are used for secondary changes. Major version increment is usually reserved to significant modifications.
 
-![]({{file name='version-update.png' space='userdoc58' page='editing-content'}} ?w=297,h=91,border=true)
+![]({{file name='version-update.png'}} ?w=297,h=91,border=true)
 
-Let's say that your current document version is 0.1:&nbsp;
+Let's say that your current document version is 0.1:
 
 *   You can save modifications without creating a new version of the document, as it is not yet ready. The 0.1 version of the document has been modified, so its version number becomes 0.1+ (the + indicates to other users that version 0.1 has been modified).
 
@@ -603,32 +601,32 @@ Let's say that your current document version is 0.1:&nbsp;
     If you haven't actually done any modification on the document when you click **Save**, the version remains 0.1, you are not added to the contributors of the document and the last modification time is not updated.
 
     {{/callout}}
-*   You can save the modifications in a new version of the document. The version number will then be 0.2 if you increment minor version or 1.0 if you save modifications in a major version. The newly created version is automatically archived in the&nbsp;**History**&nbsp;tab so it's not lost when users will edit it.
+*   You can save the modifications in a new version of the document. The version number will then be 0.2 if you increment minor version, or 1.0 if you save modifications in a major version. The newly created version is automatically archived in the **History** tab so it's not lost when users will edit it.
 
-    {{#> callout type='info' heading='Version number 0.0'}}
+{{#> callout type='info' heading='Version number 0.0'}}
 
-    When a document is created, its version number is 0.0\. This is considered as a draft of the document, which will need to be saved into a first version, either minor or major.
+When a document is created, its version number is 0.0. This is considered as a draft of the document, which will need to be saved into a first version, either minor or major.
 
-    Draft version 0.0 is not archived and the + behavior described above does not apply to 0.0 draft.
+Draft version 0.0 is not archived and the + behavior described above does not apply to 0.0 draft.
 
-    {{/callout}}
+{{/callout}}
 
 ### Nuxeo Drive Versioning Policy
 
-When you edit a document, either from your Nuxeo Drive folder or using the online editing, a&nbsp;[new version]({{page space='USERDOC' page='Editing Content'}})&nbsp;is automatically created on the Platform and the version number is updated:
+When you edit a document, either from your Nuxeo Drive folder or using the online editing, a [new version]({{page space='USERDOC' page='Editing Content'}}) is automatically created on the Platform and the version number is updated:
 
 *   If you are not the last contributor of the document
 *   Or if your last edit is more than an hour ago
 
 Then, if your document's version was 1.0 before modification for instance, it automatically becomes 1.1+ after you edited it from the Nuxeo Drive folder and the 1.1 is archived as it is created. Otherwise, a simple modification is done on the document and logged in the document's History.
 
-See the page&nbsp;[How to Customize Nuxeo Drive Versioning Policy]({{page space='NXDOC' page='How to+Customize+Nuxeo+Drive+Versioning+Policy'}})&nbsp;to change this behavior.
+See the page [How to Customize Nuxeo Drive Versioning Policy]({{page space='NXDOC' page='How to+Customize+Nuxeo+Drive+Versioning+Policy'}}) to change this behavior.
 
 ### Drag and Drop Versioning Policy
 
 When you drag and drop a document in a workspace its version is 0.0, like every new document created on your platform.
 
-The drag and drop versioning policy uses the minor version incrementation so, if you edit one these documents in local and reupload it with another drag and drop, the version number becomes 0.1+, then 0.2+, etc.&nbsp;
+The drag and drop versioning policy uses the minor version incrementation so, if you edit one these documents in local and reupload it with another drag and drop, the version number becomes 0.1+, then 0.2+, etc.
 
 {{! /multiexcerpt}}
 
@@ -644,15 +642,15 @@ Available relations are:
 *   requirement relation (requires, is required by),
 *   compliance relation (conforms to, has conform).
 
-A summary of the document's relations is displayed in the&nbsp;**Summary**&nbsp;tab.&nbsp;
+A summary of the document's relations is displayed in the **Summary** tab.
 ![]({{file name='relations-summary-tab.png' space='userdoc' page='editing-content'}} ?w=600,border=true)
-You can also see all the document's relations in the&nbsp;**Relations**&nbsp;tab of the document. In&nbsp;**Relations**&nbsp;tab, relations are sorted by outgoing and incoming relations. Outgoing relations are relations that were created from the current document. Incoming relations are relations which were created from another document and to the current document.
+You can also see all the document's relations in the **Relations** tab of the document. In **Relations** tab, relations are sorted by outgoing and incoming relations. Outgoing relations are relations that were created from the current document. Incoming relations are relations which were created from another document and to the current document.
 
 The objects of the relation are hyperlinks: Click on the object's name to consult it.
 
 ### Managing Relations
 
-You need to have editing or management permissions&nbsp;to add or delete relations on a document.
+You need to have editing or management permissions to add or delete relations on a document.
 
 You can create a relation from a document to:
 
@@ -662,19 +660,19 @@ You can create a relation from a document to:
 
 You can create relations between documents from different workspaces or domains.
 
-When you add a relation on a document, it creates what we call an "outgoing" relation. The document to which you added the relation automatically has an "incoming" relation.&nbsp;You can delete outgoing relations only.
+When you add a relation on a document, it creates what we call an "outgoing" relation. The document to which you added the relation automatically has an "incoming" relation. You can delete outgoing relations only.
 
 **To create a relation**:
 
-In the **Relations** tab of the document, click on **Add a new relation**&nbsp;link, fill in the relation creation form and click on&nbsp;**Add**.&nbsp;
+In the **Relations** tab of the document, click on **Add a new relation** link, fill in the relation creation form and click on **Add**.
 
-The relation is displayed as an outgoing relation, under the relation creation form.&nbsp;An incoming relation is automatically created in the target document's **Relations**&nbsp;tab, that directs to the source document of the relation and&nbsp;Relations are also displayed in the&nbsp;**Summary** tab of the document.
+The relation is displayed as an outgoing relation, under the relation creation form. An incoming relation is automatically created in the target document's **Relations** tab, that directs to the source document of the relation and Relations are also displayed in the **Summary** tab of the document.
 
 ![]({{file name='incoming-relations.png' space='userdoc' page='editing-content'}} ?w=600,border=true)
 
 **To delete a relation:**
 
-In the **Relations** tab of the document, click on the **Delete**&nbsp;link corresponding to the relation.&nbsp;The relation is deleted and does not appear in the table anymore. It is also removed from the incoming relations of the target document.
+In the **Relations** tab of the document, click on the **Delete** link corresponding to the relation. The relation is deleted and does not appear in the table anymore. It is also removed from the incoming relations of the target document.
 
 ![]({{file name='relations-outgoing.png' space='userdoc' page='editing-content'}} ?w=600,border=true)
 
@@ -686,7 +684,7 @@ If you want to go further, you can follow this [How to Add New Relation Types]({
 
 ## Copying and Moving Documents
 
-Copying and moving documents requires to have at least Read permission on the original document and Edit&nbsp;permission in the target workspace. Copy and move are possible in workspaces and workspaces templates. To copy a document in a section you need to&nbsp;[publish]({{page space='userdoc' page='publishing-content'}})&nbsp;it in the new section. To move it from a section to another, you need to&nbsp;[unpublish]({{page space='userdoc' page='publishing-content'}})&nbsp;it from the first section and&nbsp;[publish]({{page space='userdoc' page='publishing-content'}})&nbsp;it in the second one.
+Copying and moving documents requires to have at least Read permission on the original document and Edit permission in the target workspace. Copy and move are possible in workspaces and workspaces templates. To copy a document in a section you need to [publish]({{page space='userdoc' page='publishing-content'}}) it in the new section. To move it from a section to another, you need to [unpublish]({{page space='userdoc' page='publishing-content'}}) it from the first section and publish it in the second one.
 
 Copying and Moving are done using the clipboard and worklist, which are located in the left part of the screen, below the navigation tree.
 
@@ -700,9 +698,9 @@ What is the difference between the clipboard and the worklist?
 
 Both are used to select documents and apply actions on these documents. Possible actions are:
 
-*   [Editing Content]({{page space='userdoc' page='editing-content#copy'}})
-*   [move]({{page space='userdoc' page='editing-content#mov'}})
-*   [export]({{page space='userdoc' page='exporting-documents'}})
+*   [Copy]({{page space='userdoc' page='editing-content#copy'}})
+*   [Move]({{page space='userdoc' page='editing-content#move'}})
+*   [Export]({{page space='userdoc' page='exporting-documents'}})
 
 It is possible to add your own actions [in the clipboad or the worklist]({{page space='nxdoc' page='actions-display'}}).
 
@@ -722,17 +720,17 @@ There are two ways to copy documents:
 
 **From the Same Workspace**
 
-In the workspace **Content** tab, check the box(es) corresponding to the document(s) you want to copy and **click on Copy**&nbsp;button below the table.&nbsp;The selected documents are added to the clipboard, which is displayed instead of the worklist. You can now go&nbsp;to the workspace where you want to copy the document(s) and&nbsp;click on the&nbsp;**Paste**&nbsp;button in the&nbsp;**Content**&nbsp;tab or the&nbsp;**Paste in current folder**&nbsp;link in the clipboard.
+In the workspace **Content** tab, check the box(es) corresponding to the document(s) you want to copy and **click on Copy** button below the table. The selected documents are added to the clipboard, which is displayed instead of the worklist. You can now go to the workspace where you want to copy the document(s) and click on the **Paste** button in the **Content** tab or the **Paste in current folder** link in the clipboard.
 
 **From Different Workspaces**
 
-To do that, you need to add documents to your worklist instead of copying them.&nbsp;Go in a workspace,&nbsp;check the box(es) corresponding to the document(s) you want to copy and click on the&nbsp;**Add to worklist**&nbsp;button below the table.&nbsp;Repeat these steps as many times as you need. Once you have added&nbsp;all the documents you need to your worklist, go in the workspace where you want to paste the documents and&nbsp;**click on the**&nbsp;**Paste**&nbsp;button in the&nbsp;**Content**&nbsp;tab or the&nbsp;**Paste in current folder**&nbsp;link in the worklist.
+To do that, you need to add documents to your worklist instead of copying them. Go in a workspace, check the box(es) corresponding to the document(s) you want to copy and click on the **Add to worklist** button below the table. Repeat these steps as many times as you need. Once you have added all the documents you need to your worklist, go in the workspace where you want to paste the documents and click on the **Paste** button in the **Content** tab or the **Paste in current folder** link in the worklist.
 
 ### {{> anchor 'move'}}Moving Documents
 
 **From the Same Workspace**
 
-To move one or several documents from a single workspace at the same time, you can use either the clipboard or the worklist. Check the box(es) corresponding to the document(s) you want to move and click on the&nbsp;**Copy**&nbsp;button below the table.&nbsp;Go to the workspace where you want to move the document(s) and click on the**&nbsp;Move in current folder**&nbsp;link in the clipboard.
+To move one or several documents from a single workspace at the same time, you can use either the clipboard or the worklist. Check the box(es) corresponding to the document(s) you want to move and click on the **Copy** button below the table. Go to the workspace where you want to move the document(s) and click on the **Move in current folder** link in the clipboard.
 
 You can also move documents one by one by dragging their icon from the **Content** tab to the target workspace in the navigation tree.
 
@@ -740,24 +738,17 @@ You can also move documents one by one by dragging their icon from the **Content
 
 **From Several Workspaces**
 
-To move several documents from different workspaces at the same time,&nbsp;check the box(es) corresponding to the document(s) you want to move and click on the&nbsp;**Add to worklist**&nbsp;button below the table.&nbsp;Repeat these steps as many times as you need.&nbsp;Go to the workspace where you want to move the document(s) and click on the**&nbsp;Move in current folder**&nbsp;link in the worklist.&nbsp;
-
-&nbsp;
-
-* * *
+To move several documents from different workspaces at the same time, check the box(es) corresponding to the document(s) you want to move and click on the **Add to worklist** button below the table. Repeat these steps as many times as you need. Go to the workspace where you want to move the document(s) and click on the **Move in current folder** link in the worklist.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-*   [Document's History]({{page space='userdoc' page='traceability'}})
-*   [Managing Vocabularies]({{page space='userdoc' page='managing-vocabularies'}})
+- [Traceability]({{page space='userdoc' page='traceability'}})
+- [Managing Vocabularies]({{page space='userdoc' page='managing-vocabularies'}})
 
 {{/panel}}
 
-&nbsp;
-
-&nbsp;
-
-</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
+</div><div class="column medium-6">
+{{#> panel heading='Related HOWTOs'}}
 
 - [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
 - [How to Customize the Bulk Edit Form]({{page space='nxdoc' page='how-to-customize-the-bulk-edit-form'}})
@@ -766,8 +757,5 @@ To move several documents from different workspaces at the same time,&nbsp;check
 
 {{/panel}}
 
-&nbsp;
-
-&nbsp;
-
-</div></div>
+</div>
+</div>

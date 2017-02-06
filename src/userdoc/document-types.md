@@ -2,7 +2,7 @@
 title: Document Types
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-26'
     status: ok
 labels:
     - lifecyle
@@ -256,7 +256,7 @@ Workspaces management also includes setting [alerts]({{page page='collaborative-
 
 ### Folder
 
-In workspaces, you can create and manage your documents in folders. A folder works like a workspace, but the documents available for creation are limited. In a folder, you can create: Notes, Files, Collections and Sub-folders.
+In workspaces, you can create and manage your documents in folders. A folder works like a workspace, but the documents available for creation are limited. In a folder, you can create: notes, files, collections and sub-folders.
 
 {{! excerpt}}
 
@@ -268,16 +268,16 @@ There are two types of folders: regular folders and ordered folders. The differe
 
 Regular folders, called "Folders", have the same behavior as workspaces. In a regular folder, documents are sorted on the title by default. You can change the sort criterion by clicking on the content table columns title. You can thus sort them on their state, author, etc. In a folder, you can:
 
-*   [Create documents]({{page page='creating-content'}}) and do all the actions available on them (edit, approve, manage relations, etc),
-*   [Manage permissions]({{page page='managing-permissions'}}),
-*   [Subscribe to and manage alerts]({{page page='collaborative-features#alerts'}}),
-*   [Manage the folder's trash]({{page page='deleting-content'}}).
+*   [Create documents]({{page page='creating-content'}}) and do all the actions available on them (edit, approve, manage relations, etc.)
+*   [Manage permissions]({{page page='managing-permissions'}})
+*   [Subscribe to and manage alerts]({{page page='collaborative-features#alerts'}})
+*   [Manage the folder's trash]({{page page='deleting-content'}})
 
 Like in a workspace, you can use drag & drop to create content in a folder.
 
 **Ordered Folders**
 
-In an ordered folder, documents are manually sorted. So, the orders in which documents are listed in the folder doesn't depend on one of its properties (version, author, etc); you decide where it should be displayed in the list. When a document is created, it is added at the end of the list. It is not possible to sort documents automatically by clicking on the columns titles in an ordered folder.
+In an ordered folder, documents are manually sorted. So, the order in which documents are listed in the folder doesn't depend on one of its properties (version, author, etc); you decide where it should be displayed in the list. When a document is created, it is added at the end of the list. It is not possible to sort documents automatically by clicking on the columns titles in an ordered folder.
 
 An ordered folder has the same presentation as a regular folder, but it has some additional buttons below the content table:
 
@@ -314,7 +314,7 @@ To create a file, in the **Content** tab of the workspace, click on **New** butt
 
 {{#> callout type='tip' heading='Other ways to create a file'}}
 
-You can also create a file using the[ **Import** button]({{page page='creating-content#import-button'}}) or using [drag and drop]({{page page='creating-content'}}).
+You can also create a file using the[ **Import** button]({{page page='creating-content#import-button'}}) or using [drag and drop]({{page page='creating-content'}}#drag-and-drop).
 
 {{/callout}}
 
@@ -382,7 +382,7 @@ To create a note, in the **Content** tab of the workspace, click on the **New** 
 
 {{#> callout type='tip' heading='Other ways to create a note'}}
 
-You can also create a note by importing a .txt, a .html or a .xml file using [ **Import** button]({{page page='creating-content#import-button'}}) or [drag and drop]({{page page='creating-content'}}).
+You can also create a note by importing a .txt, a .html or a .xml file using [ **Import** button]({{page page='creating-content#import-button'}}) or [drag and drop]({{page page='creating-content'}}#drag-and-drop).
 
 {{/callout}}
 
@@ -398,13 +398,15 @@ For more information about attachment documents, read the page [Attachments]({{p
 
 {{! excerpt}}
 
-Collections are a folder-like document in which you can classify existing documents. Documents are not actually copied or moved into the collection, which only holds a link to the document in its original location.
+[Collections]({{page version='' space='userdoc' page='collections'}}) are a folder-like document in which you can classify existing documents. Documents are not actually copied or moved into the collection, which only holds a link to the document in its original location.
 
 {{! /excerpt}}
 
 It enables you to create your own organization of the content without duplicating content and having the size of the content growing uncontrollably.
 
-The list of collections available to you is available from your Home, in the **Collections** tab.![]({{file name='collection-home-tab.png' page='collections'}} ?w=650,border=true)
+The list of collections available to you is available from your Home, in the **Collections** tab.
+
+![]({{file name='collection-home-tab.png' page='collections'}} ?w=650,border=true)
 
 ### Section
 
@@ -414,8 +416,8 @@ When documents are finished and ready, they are published in **sections**. Tradi
 
 Templates are the easiest way to automate the creation of workspace tree structures. This is useful in many cases, for example when:
 
-* you have many workspaces to create and want them to follow a certain structure of Folders, Files, or any type of documents.
-* you want to keep a consistency among different workspaces that users will create. For example, you may want each team's workspace to have a mail folder, a "projects" workspace, etc.
+* You have many workspaces to create and want them to follow a certain structure of Folders, Files, or any type of documents.
+* You want to keep a consistency among different workspaces that users will create. For example, you may want each team's workspace to have a mail folder, a "projects" workspace, etc.
 
 To **create a template**, click on the left panel of Nuxeo Platform on **Templates**. Once a new Template has been created, you can create many workspaces from this template.
 
@@ -447,10 +449,10 @@ For more information about audio document, take a look to the [Digital Asset Man
 
 The evolution of a document, each time contributors edit it, constitutes its lifecycle. This lifecycle is composed of the following states:
 
-* **Project**: the document has been created and it can be modified;
-* **Approved**: the document has been approved and is considered as valid. Modifying it makes it back to project lifecycle state;
-* **Obsolete**: the document is not accurate anymore and, for instance, has been replaced by a new version;
-* **Deleted**: the document is moved into the workspace or folder trash.
+* **Project**: The document has been created and it can be modified
+* **Approved**: The document has been approved and is considered as valid. Modifying it makes it back to project lifecycle state
+* **Obsolete**: The document is not accurate anymore and, for instance, has been replaced by a new version
+* **Deleted**: The document is moved into the workspace or folder trash
 
 To change the lifecycle state of a document, you need to submit it to a [workflow]({{page page='workflows'}}).
 
@@ -460,14 +462,13 @@ When a document is folderish this means its a container in which you can create 
 
 It is possible to implement rules on containers to integrate the business logic of your application. In Nuxeo Studio when you select the folderish document facet, you have to choose which children are accepted in this document type. For example, in a folderish document type Library, if I have Edit permissions I can only create a children type Book in it.
 
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related User Documentation'}}
 
 - [Creating Content]({{page page='creating-content'}})
 - [Editing Content]({{page page='editing-content'}})
+- [Digital Asset Management]({{page page='digital-asset-management-with-the-nuxeo-platform'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related HOWTOs'}}
 
 - [How to Override Existing Document Types]({{page space='nxdoc' page='how-to-override-existing-document-types'}})
 - [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})

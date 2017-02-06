@@ -2,7 +2,7 @@
 title: Preview
 review:
     comment: ''
-    date: '2016-12-12'
+    date: '2017-01-26'
     status: ok
 labels:
     - lts2016-ok
@@ -233,9 +233,9 @@ The table below shows for which file formats the preview is available. The insta
 
 To preview files in the formats AI, EPS, PSD and TIFF, the created document must be a 'Picture' and not 'File' type.
 
-{{/callout}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">File format</th><th colspan="1">Preview supported</th></tr><tr><td colspan="1">.ai</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.doc</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.docx</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.eps</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.html</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.jpg</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.odp</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.ods</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.odt</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.pdf</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.png</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.ppt</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.pptx</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.psd</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.tiff</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.xls</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.xlsx</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.xml</td><td colspan="1">Yes</td></tr></tbody></table></div>{{! /multiexcerpt}}
+{{/callout}}
 
-* * *
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">File format</th><th colspan="1">Preview supported</th></tr><tr><td colspan="1">.ai</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.doc</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.docx</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.eps</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.html</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.jpg</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.odp</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.ods</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.odt</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.pdf</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.png</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.ppt</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.pptx</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.psd</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.tiff</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.xls</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.xlsx</td><td colspan="1">Yes</td></tr><tr><td colspan="1">.xml</td><td colspan="1">Yes</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 

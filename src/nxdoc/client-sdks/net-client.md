@@ -265,7 +265,7 @@ The `Operation` object exposes several methods to parameterize calls to the Auto
 *   **operation.AddHeader(string name, string value)**: Adds a header to be used in the operation request.
 *   **operation.AddSchema(string schema)** and **operation.SetSchemas(string[] schemas)**: Defines the schemas to be used in the operation request (overrides the `X-NXDocumentProperties` header).
 *   **operation.SetTimeout(int timeout)**: Specifies the timeout for the operation.
-*   **operation.SetRepository(string repository)**: Sets the repository to be used in the request (sets the `X-NXRepository` header).
+*   **operation.SetRepository(string repository)**: Sets the repository to be used in the request (sets the `Repository` header).
 *   **operation.Execute()**: launches a `Task` that executes the operation, which can be awaited within an async method.
 
 #### Operation Examples

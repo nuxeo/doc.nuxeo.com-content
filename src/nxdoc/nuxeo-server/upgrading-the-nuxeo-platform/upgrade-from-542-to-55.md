@@ -2,10 +2,10 @@
 title: Upgrade from 5.4.2 to 5.5
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - multiexcerpt
 toc: true
 confluence:
@@ -52,8 +52,6 @@ For the general upgrade process, see the [How to Upgrade Nuxeo]({{page page='upg
 {{! multiexcerpt name='5.4.2-to-5.5-upgrade-page'}}
 
 This chapter presents the detailed process to upgrade from Nuxeo 5.4.2 to Nuxeo 5.5\. Most of it is useful information you need to have to fully understand what has changed in this release.
-
-You can have a look at this interesting use case of a ["Mostly painless Nuxeo upgrade from 5.4.2 to 5.5 under Windows / PostgreSQL"](http://concena.com/blogged-down/-/blogs/upgrading-nuxeo-from-5-4-2-to-5-5-mostly-painless?_33_redirect=http%3A%2F%2Fconcena.com%2Fhome%3Bjsessionid%3D2F941F2940A2D9E227EAC0E2D76A16F3%3Fp_p_id%3D115%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2)!
 
 ## Installation & Configuration
 
@@ -216,8 +214,7 @@ Changes in Nuxeo Automation: there was a Java package renaming from `org.nuxeo.e
 Nuxeo Theme service has been extended so that you can now contribute page styles in a plain CSS stylesheet.
 The page layouts are still managed by the Theme engine using an XML description, but all CSS information is now externalized to CSS stylesheets that can manage flavors (pretty much as with LessCSS).
 
-*   [Theme documentation page]({{page space='nxdoc55' page='theme'}})
-*   [Migrating a custom theme]({{page space='nxdoc55' page='migrating-my-customized-theme'}})
+*   [Theme documentation page]({{page page='theme'}})
 
 ### Tasks
 

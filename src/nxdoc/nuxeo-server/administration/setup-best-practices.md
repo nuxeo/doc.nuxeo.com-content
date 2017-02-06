@@ -255,7 +255,7 @@ Linux recommended path: `/var/log/nuxeo/...`
 
 </td></tr></tbody></table></div>
 
-## Defining Environment Variables
+## Defining Environment Variables {{> anchor 'define-environment-variables'}}
 
 When the server starts, it guesses where the Nuxeo home directory and the Nuxeo configuration file (`nuxeo.conf`) are located. If it doesn't find it or if you want to force it to use a specific home directory and/or a specific configuration file, you can define their location as environment variables.
 

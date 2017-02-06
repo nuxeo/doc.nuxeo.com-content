@@ -2,10 +2,10 @@
 title: Variables Available in the Automation Context
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - scripting
     - automation
     - variable
@@ -141,10 +141,10 @@ In the chains run on nodes (Input chain, output chain, transition and escalation
 *   `CurrentUser.originatingUser`: All the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). This variable allows you to fetch the current user.
 *   `ChainParameters`: A hashmap, used like this: `ChainParameters['my_chain_parameter']`. Since 5.7.2, all chains are able to contain parameters as operation to be used from the automation context along their execution.
 *   `workflowInstanceId`: The id of the workflow instance.
-*   `NodeVariables["tasks"]`: Holds information about all tasks created by a node. Is a list of objects of type [TaskInfo](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/platform/routing/core/impl/GraphNode.TaskInfo.html). You can iterate on this list and fetch for every task: the life cycle state (ended or not), the user who ended the task, the comment if any, and the id of the button the user clicked to complete the task (status).
+*   `NodeVariables["tasks"]`: Holds information about all tasks created by a node. Is a list of objects of type [TaskInfo](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/platform/routing/core/impl/GraphNode.TaskInfo.html). You can iterate on this list and fetch for every task: the lifecycle state (ended or not), the user who ended the task, the comment if any, and the id of the button the user clicked to complete the task (status).
 
 {{#> callout type='info' }}
 
-You can use these variables&nbsp;on the node configuration form Studio: in automation chains, in the fields "Due Date expression" , "Compute additional assignees" and when setting up conditions on transitions or escalation rules .
+You can use these variables on the node configuration form Studio: in automation chains, in the fields "Due Date expression" , "Compute additional assignees" and when setting up conditions on transitions or escalation rules .
 
 {{/callout}}

@@ -406,6 +406,69 @@ The plug-in `VideoImporter` is contributed to the File Manager to create `Video`
 
 See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.video.filemanager.contrib--plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.video.filemanager.contrib--plugins).
 
+#### Conversion Operations
+
+More complex conversions can be performed using the video conversion operations:
+
+*   Add Watermark to Video
+*   Concatenate Video
+*   Slice Video
+*   Extract Video Closed Captions
+
+Be sure you have both `ffmpeg` and `ccextractor` installed, both of which are required by certain operations.
+
+Locate the operation you wish to use on the **Automation Documentation** page and copy its JSON definition to the **Automation Operations Registry** in Nuxeo Studio &nbsp;(**Settings > Registries > Automation Operations**)&nbsp;. The operation will then be exposed in Studio and can be implemented in an Automation Chain.
+
+##### Add a Photo Watermark to a Video
+
+To add a company logo to your videos, create a simple Automation Chain in Nuxeo Studio. From the Automation menu, select User Actions and create a new User Action. Add a button in the Contextual Tools category to trigger the Automation Chain. Under the Action Activation menu, select the permissions required to activate the User Action and add the Video document type to the activation conditions. Enter the name of your Automation Chain, and click Create.
+
+Then create your Automation Chain as follows:
+
+```
+- Context.FetchDocument
+- Context.SetInputAsVar:
+    name: theVideoToConvert
+- Repository.GetDocument:
+    value: /default-domain/workspaces/watermarks/NuxeoLogo
+- Context.SetInputAsVar:
+    name: watermark
+- Context.RestoreDocumentInput:
+    name: theVideoToConvert
+- Video.AddWatermark:
+    watermark: Context["watermark"]
+    x: '0'
+    y: '0'
+- WebUI.DownloadFile
+```
+
+When navigating on an existing Video document in Nuxeo, clicking the User Action button you created triggers the operation, taking the video as input and the watermark image as a parameter. By default the watermark will appear in the top left corner. This can be modified by attributing different values to the optional `x` and `y` parameters. The watermarked video is then automatically downloaded.
+
+##### Concatenate Videos
+
+To merge two or more videos together sequentially, a User Action can be added to the Document List Toolbar so that Video documents in the same folder can easily be selected and concatenated:
+
+```
+- Seam.GetSelectedDocuments
+- Video.Concat
+- WebUI.DownloadFile
+```
+
+The resulting video is then automatically downloaded. **The videos you wish to concatenate should all be of the same format.**
+
+
+##### Extract Video Subtitles
+
+Creating a separate transcript of a Video document is easily done if the video has subtitles. By adding a User Action on all Video documents that triggers the following automation chain, you can instantly download a simple text file of the video's subtitles.
+
+```
+- Context.FetchDocument
+- Video.ExtractClosedCaptions:
+    outFormat: ttxt
+- WebUI.DownloadFile
+```
+
+
 #### Exposed Extension Points
 
 The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.video.service.VideoService) exposed two extension points:

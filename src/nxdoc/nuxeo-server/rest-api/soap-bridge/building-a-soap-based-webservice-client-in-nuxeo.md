@@ -127,7 +127,7 @@ Obviously it is better to point at a local (previously downloaded) WSDL file to 
 
 For instance, copy [http://www.restfulwebservices.net/wcf/WeatherForecastService.svc?wsdl](http://www.restfulwebservices.net/wcf/WeatherForecastService.svc?wsdl) to `src/main/resources/wsdls` in a Nuxeo project and use the following code in your `pom.xml`:
 
-```
+```xml
 <plugin>
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>jaxws-maven-plugin</artifactId>
@@ -155,7 +155,7 @@ For instance, copy [http://www.restfulwebservices.net/wcf/WeatherForecastService
 
 When you'll build the project, all WSDL files in `src/main/resources/wsdls` will be parsed and the associated Java source files generated in `${project.build.directory}/generated-sources/wsimport`.
 
-The `jaxws:wsimport` goal is automatically executed within the life cycle phase `generate-sources`, ie. before the `compile` phase. This way, running `mvn clean install` first generates the source files and then compiles them.
+The `jaxws:wsimport` goal is automatically executed within the lifecycle phase `generate-sources`, i.e. before the `compile` phase. This way, running `mvn clean install` first generates the source files and then compiles them.
 
 {{#> callout type='note' heading='Be careful with XSD schema imports!'}}
 
@@ -194,13 +194,14 @@ IWeatherForecastService iwfs = wfs.getBasicHttpBindingIWeatherForecastService();
 
 The (slightly) tricky part here is to find the actual **WebService client** in the generated classes and the method it provides to get an instance of the **WebService client interface**.
 
-*   The actual **WebService client** is the class with the following annotation: @WebServiceClient(name = "WeatherForecastService",...
+*   The actual **WebService client** is the class with the following annotation: `@WebServiceClient(name = "WeatherForecastService",...`
+
     In our example: `WeatherForecastService`
     *   The URL is the one of the WSDL file.
     *   To build the `QName`, we use the `targetNamespace` and `name` attributes of the `<wsdl:definitions>` element in the WSDL file.
         In our example: `<wsdl:definitions name="WeatherForecastService" targetNamespace="http://www.restfulwebservices.net/ServiceContracts/2008/01"...`.
 
-*   The **WebService client interface** is the class with the following annotation: @WebService(name = "IWeatherForecastService",...
+*   The **WebService client interface** is the class with the following annotation: `@WebService(name = "IWeatherForecastService",...`
     In our example: `IWeatherForecastService`
 
 *   The `WeatherForecastService` class offers the method `getBasicHttpBindingIWeatherForecastService()` that returns an object of type `IWeatherForecastService`.

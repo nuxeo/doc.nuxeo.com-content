@@ -2,10 +2,10 @@
 title: Automation Chain
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-19'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - automation
     - automation-component
     - excerpt
@@ -137,7 +137,8 @@ You can use [Nuxeo Studio]({{page space='studio' page='automation'}}) for contri
 
 This page explains all the details of the necessary Platform contribution (that Studio produces) for an in-depth comprehension of the framework. Reading it is not necessary if you start with Automation.
 
-{{/callout}}{{! excerpt}}
+{{/callout}}
+{{! excerpt}}
 
 An automation chain is a pipe of parametrized atomic operations. The automation chain specifies the parametrization of each operation in the chain, not only the list of operations to execute. Thanks to this, when running an automation chain, you only specify the chain's name. The chain will be fetched from the registry and its operations will be executed one after the other, using the parametrization.
 
@@ -147,7 +148,7 @@ Chain contribution is done via the [Nuxeo extension point mechanism]({{page page
 
 Here is an example of a chain extension:
 
-```html/xml
+```xml
   <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="chains">
     <chain id="downloadAllChain">
       <param type="string" name="chainParameterName">chainParameterValue</param>
@@ -184,15 +185,15 @@ You can see that the chain is setting the order in which each operation must be 
 
 An atomic operation in a chain is uniquely identified by its ID. Each parameter should specify the name of the operation parameter to set (see `@Param` annotation in [Contributing an Operation]({{page page='contributing-an-operation'}})) and the type of the value to inject. The type is a hint to the chain compiler to correctly transform the string into an injectable Java object.
 
-Since 5.7.2, all chains can contain parameters to be used from the automation context (such as the `chainParameterName` which can be fetched from the automation sub-context `@{ChainParameters['chainParameterName ']}`).
+All chains can contain parameters to be used from the automation context (such as the `chainParameterName` which can be fetched from the automation sub-context `@{ChainParameters['chainParameterName ']}`).
 
 You can find the complete list of the supported types in [Contributing an Operation]({{page page='contributing-an-operation'}}).
 
-Since 5.7.2, it is possible to create "composite operations": Adding chains into a chain.
+It is possible to create "composite operations": Adding chains into a chain.
 
 Here is an example of how to contribute this kind of automation chain:
 
-```html/xml
+```xml
 <extension point="chains"
     target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
     <chain id="contributedchain">
@@ -221,11 +222,9 @@ Here is an example of how to contribute this kind of automation chain:
 
 The `contributedchainleaf` chain is contributed with its operations and is included as an operation into `contributedchain`. During the execution of this chain, a validation is running to check if all inputs/outputs of the different chains/operations in the stack are matching.
 
-&nbsp;
-
 In Automation you can add aliases for each chain:
 
-```html/xml
+```xml
   <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="chains">
     <chain id="doc_create_chain_alias">
       <aliases>
@@ -239,10 +238,6 @@ In Automation you can add aliases for each chain:
   </extension>
 
 ```
-
-&nbsp;
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in other documentation'}}
 

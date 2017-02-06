@@ -2,7 +2,7 @@
 title: Browsing Content
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-26'
     status: ok
 toc: true
 confluence:
@@ -234,59 +234,66 @@ To help you find accurate documents, the Nuxeo Platform features several differe
 
 ## Dashboard
 
-Every user has a personal dashboard that displays information he finds relevant and help him have a global view of the application's activity.
+Each user has a personal dashboard that displays information they find relevant and help them have a global view of the application's activity.
 
-The dashboard is composed of a set of boxes that display either a list of documents matching a criteria (all the workspaces the user can access, the last documents he modified, the last documents that have been published...), or possibly a piece of information either from the Platform or from external websites.
+{{! multiexcerpt name='dashboard-tab-overview'}}
+The dashboard is composed of a set of boxes that display either a list of documents matching a criteria (all the workspaces the user can access, the last documents they modified, the last documents that have been published...), or possibly a piece of information either from the Platform or from external websites.
+{{! /multiexcerpt}}
 
-To access your dashboard, click on the&nbsp;**Home**&nbsp;main tab. Your dashboard is the default tab of your Home.
+To access your dashboard, click on the **Home** main tab. Your dashboard is the default tab of your Home.
 ![]({{file name='CAP-dashboard.png'}} ?w=650,border=true)
 
+{{! multiexcerpt name='dashboard-customization-tip'}}
 {{#> callout type='tip' }}
 
-If you want to customize your dashboard, follow this [how-to]({{page space='nxdoc' page='how-to-customize-the-dashboard'}}).
+If you want to customize your dashboard, follow this [HOWTO]({{page space='nxdoc' page='how-to-customize-the-dashboard'}}).
 
 {{/callout}}
-
-&nbsp;
+{{! /multiexcerpt}}
 
 ## Navigation Tree
 
-The default navigation tree displayed on the left hand side of the pages is the folders navigation tree. It displays all the domain structure from the root. It enables you to easily access any space in the application structure.
+{{! multiexcerpt name='navigation-tree-overview'}}
+
+The default navigation tree displayed on the left hand side of the pages is the folders navigation tree. It displays all the domain structure from the root. It enables you to easily access any space in the application structure. The navigation tree displays folderish documents, i.e. documents in which you can create other documents (workspaces, folders, etc.).
+
+{{! /multiexcerpt}}
 
 ![]({{file name='navigation_tree.png'}} ?w=350,border=true)
 
-The navigation tree displays folderish documents, i.e. documents in which you can create other documents (workspaces, folders, etc.).
-
+{{! multiexcerpt name='virtual-navigation-tip'}}
 {{#> callout type='tip' }}
 
-It is possible to add another type of navigation tree based on metadata instead of folder structure by installing the [Nuxeo Virtual Navigation add-on]({{page space='nxdoc' page='nuxeo-virtual-navigation'}}).
+It is possible to add another type of navigation tree based on metadata instead of folder structure by installing the [Nuxeo Virtual Navigation addon]({{page space='nxdoc' page='nuxeo-virtual-navigation'}}).
 
 {{/callout}}
+{{! /multiexcerpt}}
+
 
 ## Tags
 
-The Document Management module includes&nbsp;[tagging of documents]({{page page='tags'}}), which enables users to apply their own labels on documents. The tag cloud lists all tags on documents, with their size growing as the tag is applied on several documents.
+The Document Management module includes [tagging of documents]({{page page='tags'}}), which enables users to apply their own labels on documents. The tag cloud lists all tags on documents, with their size growing as the tag is applied on several documents.
 
-![]({{file name='tag-cloud.png' version='60' space='userdoc' page='browsing-content'}} ?w=350,border=true)
+![]({{file name='tag-cloud.png' page='tags'}} ?border=true)
 
 To see all documents tagged with the same label, click on the tag in the tag cloud.
 
-## Browsing Lists of Documents
+## {{> anchor 'browsing-lists-documents'}}Browsing Lists of Documents
 
 Users can change the way content is presented in the folderish repositories (workspaces, folders, sections) and search results.They can also change the displayed information.
 
 **Changing the View Mode**
 
-Two views of the content lists are available&nbsp;on the top right corner of&nbsp; **Content** tab:
+Two views of the content lists are available on the top right corner of **Content** tab:
 
-*   list view (default view) ![]({{file name='DM-list-view-icon.png' page='icons-index'}}): this view displays title of the documents with a small icon (that depends on the type of document or main attachment type) and a set of metadata in a table;
+*   List view (default view) ![]({{file name='DM-list-view-icon.png' page='icons-index'}}): This view displays title of the documents with a small icon (that depends on the type of document or main attachment type) and a set of metadata in a table
     ![]({{file name='list-view.png'}} ?w=600,border=true)
-*   thumbnail view ![]({{file name='DM-icon-view-icon.png' page='icons-index'}}): this view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
+*   Thumbnail view ![]({{file name='DM-icon-view-icon.png' page='icons-index'}}): This view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
     ![]({{file name='thumbnail-view.png'}} ?w=600,border=true)
 
 **Changing Displayed Information**
 
-Lists of documents, whether in list view or thumbnail view, show some information about the documents, like their title, the last contributor, their life cycle state, etc. Users can change the information displayed, i.e. the columns for the list view or the information below the document thumbnail in thumbnail view.
+Lists of documents, whether in list view or thumbnail view, show some information about the documents, like their title, the last contributor, their lifecycle state, etc. Users can change the information displayed, i.e. the columns for the list view or the information below the document thumbnail in thumbnail view.
 
 {{#> callout type='info' }}
 
@@ -294,7 +301,7 @@ Editing results column is possible from search results and the Content tab of fo
 
 {{/callout}}
 
-To change the information displayed in content lists, click on the icon&nbsp;![]({{file name='edit_columns.png' page='icons-index'}}).&nbsp;A pop-up is displayed: The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and&nbsp;reorder columns using the vertical arrows. Once it's done, click on&nbsp;**Save**.
+To change the information displayed in content lists, click on the icon ![]({{file name='edit_columns.png' page='icons-index'}}). A pop-up is displayed: The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and reorder columns using the vertical arrows. Once it's done, click on **Save**.
 
 ![]({{file name='results-columns-popup.png'}} ?w=350,border=true)
 
@@ -306,7 +313,7 @@ It enables you to create your own organization of the content without duplicatin
 
 ## Preview
 
-The [preview]({{page page='preview'}}) enables you to see an insight of your document. Nuxeo Platform offers different ways to preview your documents and supports multiple formats.&nbsp;
+The [preview]({{page page='preview'}}) enables you to see an insight of your document. Nuxeo Platform offers different ways to preview your documents and supports multiple formats.
 
 ## Browsing Tips
 
@@ -314,7 +321,7 @@ Here are some tips on how to leverage all the navigation means provided by the N
 
 **Going Back to a Previous Page**
 
-Due to&nbsp;[technical reasons]({{page space='nxdoc' page='back-and-next-buttons-paradigm-and-jsf-in-the-nuxeo-platform'}}), it is recommended to NOT use the browser's Back and Next buttons to navigate in the Platform. There are several ways to go back to a previous page. For example, to go up one level in the platform structure, the easiest way is to click on the icon&nbsp;![]({{file name='UpFolder_icon.gif' page='icons-index'}})&nbsp;in the breadcrumbs.
+Due to [technical reasons]({{page space='nxdoc' page='back-and-next-buttons-paradigm-and-jsf-in-the-nuxeo-platform'}}), it is recommended to NOT use the browser's Back and Next buttons to navigate in the Platform. There are several ways to go back to a previous page. For example, to go up one level in the platform structure, the easiest way is to click the breadcrumbs.
 
 ![]({{file name='breadcrumbs.png'}} ?border=true)
 
@@ -333,19 +340,22 @@ Some actions or features are accessible using access keys: Press shift-h to see 
 
 ![]({{file name='akHelp.png'}} ?w=150,border=true,thumbnail=true)
 
-&nbsp;
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related User Documentation'}}
 
-* * *
+- [Tags]({{page page='tags'}})
+- [Preview]({{page page='preview'}})
+- [Collections]({{page page='collections'}})
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related User Documentation'}}
+{{/panel}}
+</div>
+<div class="column medium-6">
+{{#> panel heading='Other Related Documentation'}}
 
-*   [Tags]({{page page='tags'}})
-*   [Preview]({{page page='preview'}})
-*   [Collections]({{page page='collections'}})
+- [How to Customize the Dashboard]({{page space='nxdoc' page='how-to-customize-the-dashboard'}})
+- [JSF UI How-To Index]({{page space='nxdoc' page='jsf-ui-how-to-index'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
-
-*   [How to Customize the Dashboard]({{page space='nxdoc' page='how-to-customize-the-dashboard'}})
-*   [JSF UI How-To Index]({{page space='nxdoc' page='jsf-ui-how-to-index'}})
-
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>

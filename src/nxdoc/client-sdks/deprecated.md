@@ -2,10 +2,10 @@
 title: Deprecated
 review:
     comment: ''
-    date: '2016-10-25'
+    date: '2017-01-25'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - client
     - deprecated
 toc: true

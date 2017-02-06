@@ -2,10 +2,10 @@
 title: Educational
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
 confluence:
     ajs-parent-page-id: '7209076'
     ajs-parent-page-title: Tutorials
@@ -36,11 +36,11 @@ history:
         version: '1'
 
 ---
-*   [Platform as a Service]({{page space='NXDOC' page='Platform as+a+Service'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This document explains how the Nuxeo Platform (and nuxeo.io) can be used to provide an application factory system that allows to instantiate on demand applications for a given configuration.</span>
-*   [First Steps With Studio: Technical Documentation Tutorial]({{page space='NXDOC' page='First Steps+With+Studio%3A+Technical+Documentation+Tutorial'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This tutorial offers a progressive and educative tour of what you can do to customize the Nuxeo Platform with Nuxeo Studio. It should be one of the first tutorials you do.</span>
+*   [Platform as a Service]({{page space='NXDOC' page='Platform as+a+Service'}})&nbsp;&mdash;&nbsp;This document explains how the Nuxeo Platform (and nuxeo.io) can be used to provide an application factory system that allows to instantiate on demand applications for a given configuration.
+*   [First Steps With Studio: Technical Documentation Tutorial]({{page space='nxdoc' page='first-steps-with-studio-technical-documentation-tutorial'}})&nbsp;&mdash;&nbsp;This tutorial offers a progressive and educative tour of what you can do to customize the Nuxeo Platform with Nuxeo Studio. It should be one of the first tutorials you do.
 *   [Understand Expression and Scripting Languages Used in Nuxeo]({{page space='NXDOC' page='Understand Expression+and+Scripting+Languages+Used+in+Nuxeo'}})
 *   [Workflow Use Cases]({{page space='NXDOC' page='Workflow Use+Cases'}})
-*   [How to Publish a News Feature in Workspaces]({{page space='NXDOC' page='How to+Publish+a+News+Feature+in+Workspaces'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This how-to explains how to add a&nbsp;small "News" feature to your Nuxeo Platform for enabling News content publishing at workspace level, using only Nuxeo Studio.</span>
-*   [Design Tips]({{page space='NXDOC' page='Design Tips'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Nuxeo Studio is a very powerful tool. The direct consequence is that there are very often several solutions to one problematic. This section aims at providing tooltips to help you choosing the right solution depending on your needs.</span>
-*   [How to Customize Email Templates]({{page space='NXDOC' page='How to+Customize+Email+Templates'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Default templates for mail notifications can be overridden. Just follow those steps:</span>
-*   [Learning REST API]({{page space='NXDOC' page='Learning REST+API'}})
+*   [How to Publish a News Feature in Workspaces]({{page space='NXDOC' page='How to+Publish+a+News+Feature+in+Workspaces'}})&nbsp;&mdash;&nbsp; This how-to explains how to add a&nbsp;small "News" feature to your Nuxeo Platform for enabling News content publishing at workspace level, using only Nuxeo Studio.
+*   [Design Tips]({{page space='NXDOC' page='Design Tips'}})&nbsp;&mdash;&nbsp; Nuxeo Studio is a very powerful tool. The direct consequence is that there are very often several solutions to one problematic. This section aims at providing tooltips to help you choosing the right solution depending on your needs.
+*   [How to Customize Email Templates]({{page space='NXDOC' page='How to+Customize+Email+Templates'}})&nbsp;&mdash;&nbsp;Default templates for mail notifications can be overridden. 
+

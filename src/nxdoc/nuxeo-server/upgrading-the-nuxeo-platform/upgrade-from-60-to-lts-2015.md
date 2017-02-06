@@ -2,10 +2,10 @@
 title: Upgrade from 6.0 to LTS 2015
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-20'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - multiexcerpt
 toc: true
 confluence:
@@ -315,7 +315,7 @@ history:
         version: '1'
 
 ---
-For the general upgrade process, see the&nbsp;[How to Upgrade Nuxeo]({{page page='upgrading-the-nuxeo-platform'}})&nbsp;page.
+For the general upgrade process, see the [How to Upgrade Nuxeo]({{page page='upgrading-the-nuxeo-platform'}}) page.
 
 {{! multiexcerpt name='from-6.0-to-7.10'}}
 
@@ -477,6 +477,19 @@ See [Configuring Nuxeo to Access the Cluster]({{page space='NXDOC' page='Elastic
 
 </td></tr></tbody></table></div>
 
+## Data Migration
+
+You must update the size of the column `DATA` in table `CONTENT`, which has changed in Nuxeo Platform LTS 2015, from 40 to 250. For instance for PostgreSQL:
+- In Nuxeo Platform 6.0:
+```sql
+data character varying(40)
+```
+
+- In Nuxeo Platform LTS 2015:
+```sql
+data character varying(250)
+```
+
 ## Code Migration
 
 ### New Configuration Service
@@ -518,7 +531,7 @@ Example of properties which have been migrated to ConfigurationService:
 
 ### New Batch Upload API
 
-The [batch upload API]({{page page='blob-upload-for-batch-processing'}}) has changed to be exposed as a REST resource endpoint. The old API using `/site/automation/batch/upload` is deprecated but kept for backward compatibility.
+The [batch upload API]({{page page='batch-upload-endpoint'}}) has changed to be exposed as a REST resource endpoint. The old API using `/site/automation/batch/upload` is deprecated but kept for backward compatibility.
 
 {{#> callout type='note' }}
 
@@ -560,7 +573,7 @@ See the page [How to Customize the HTML5 Drag and Drop Import with Metadata Form
 
 {{! multiexcerpt name='lts2015-packaging-changes'}}
 
-&nbsp;The following Nuxeo Packages are no longer released:
+The following Nuxeo Packages are no longer released:
 
 *   Automated Document Categorization
 *   Nuxeo - BIRT Integration
@@ -577,11 +590,9 @@ See the page [How to Customize the HTML5 Drag and Drop Import with Metadata Form
 
 ### Live Edit
 
-Live Edit is no longer maintained. For office document offline editing, [Nuxeo Drive]({{page space='userdoc' page='nuxeo-drive'}}) provides a Direct Edit feature that enables users to edit files stored in the Nuxeo Platform using their native application.
+Live Edit is no longer maintained. For office document offline editing, [Nuxeo Drive]({{page page='nuxeo-drive'}}) provides a Direct Edit feature that enables users to edit files stored in the Nuxeo Platform using their native application.
 
 {{! /multiexcerpt}}
-
-&nbsp;
 
 ## 7.x Upgrade and Release Notes
 

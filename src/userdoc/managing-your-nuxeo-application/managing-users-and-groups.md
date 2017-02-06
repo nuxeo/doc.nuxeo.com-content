@@ -2,7 +2,7 @@
 title: Managing Users and Groups
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
     - user-management
@@ -242,7 +242,7 @@ history:
 ---
 {{! multiexcerpt name='functional-overview'}}
 
-Only administrators and power users&nbsp;can create, edit and delete users and groups.&nbsp;They can create new users and groups, modify their properties or delete them. It is also possible to connect the Platform to an external directory (LDAP directory for instance).&nbsp;Users can only consult users and groups directories.&nbsp;
+Only administrators and power users can create, edit and delete users and groups. They can create new users and groups, modify their properties or delete them. It is also possible to connect the Platform to an external directory (LDAP directory for instance). Users can only consult users and groups directories.
 
 {{#> callout type='info' }}
 
@@ -252,12 +252,12 @@ When you use an external directory for users and groups, the actions available o
 
 Users and groups management is available:
 
-*   from the&nbsp;**Admin Center**, in the&nbsp;**Users & groups**&nbsp;tab,
+*   from the **Admin Center**, in the **Users & groups** tab,
     ![]({{file name='AdminCenter-users-groups-tab.png' space='nxdoc' page='admin-tab-overview'}} ?w=650,h=172,border=true)
-*   from the&nbsp;**Home**&nbsp;tab, in the&nbsp;**Users & groups**&nbsp;tab.
+*   from the **Home** tab, in the **Users & groups** tab.
     ![]({{file name='home-user-tab.png'}} ?w=650,border=true)
 
-### Managing Users
+## Managing Users
 
 By default, the Nuxeo Platform has one user, called Administrator, who is the administrator. You must use it to create new users and delegate them permissions.
 
@@ -267,62 +267,97 @@ Users must be at least in "administrators" or "members" group, or one of their s
 
 {{/callout}}
 
-#### User's Parameters
+### User's Parameters
 
 The whole set of information about users consists of the items below:
 
-{{! multiexcerpt name='user-info'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Username</td><td colspan="1">
+{{! multiexcerpt name='user-info'}}
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Field</th>
+<th colspan="1">Description</th>
+</tr>
+<tr>
+<td colspan="1">Username</td>
+<td colspan="1">The name the user will use to log in.</td>
+</tr>
+<tr>
+<td colspan="1">First name</td>
+<td colspan="1">First name of the user</td>
+</tr>
+<tr>
+<td colspan="1">Last name</td>
+<td colspan="1">Last name of the user</td>
+</tr>
+<tr>
+<td colspan="1">Company</td>
+<td colspan="1">Company or organization of the user</td>
+</tr>
+<tr>
+<td colspan="1">Email</td>
+<td colspan="1">email of the user<br/>
+This address is used for [alerts]({{page page='collaborative-features#alerts'}}).</td>
+</tr>
+<tr>
+<td colspan="1">Password</td>
+<td colspan="1">User's password</td>
+</tr>
+<tr>
+<td colspan="1">Password (Verify)</td>
+<td colspan="1">User's password</td>
+</tr>
+<tr>
+<td colspan="1">Groups for this user</td>
+<td colspan="1">Groups of which the user is a member.<br/>
+User must be at least in 'administrators' or 'members' group, or one of their sub-groups.</td>
+</tr>
+<tr>
+<td colspan="1">Virtual groups for this user</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">Avatar</td>
+<td colspan="1">Image that represents the user in the application.</td>
+</tr>
+<tr>
+<td colspan="1">Birth date</td>
+<td colspan="1">User's birth date</td>
+</tr>
+<tr>
+<td colspan="1">Phone number</td>
+<td colspan="1">User's phone number</td>
+</tr>
+<tr>
+<td colspan="1">Gender</td>
+<td colspan="1">User's gender. Default value is Male.</td>
+</tr>
+</tbody>
+</table>
+</div>
+{{! /multiexcerpt}}
 
-The name the user will use to log in.
-
-</td></tr><tr><td colspan="1">First name</td><td colspan="1">
-
-First name of the user
-
-</td></tr><tr><td colspan="1">Last name</td><td colspan="1">
-
-Last name of the user
-
-</td></tr><tr><td colspan="1">Company</td><td colspan="1">
-
-Company or organization of the user
-
-</td></tr><tr><td colspan="1">
-
-Email
-
-</td><td colspan="1">
-
-email of the user
-
-This address is used for [alerts]({{page page='collaborative-features#alerts'}}).
-
-</td></tr><tr><td colspan="1">Password</td><td colspan="1">User's password</td></tr><tr><td colspan="1">Password (Verify)</td><td colspan="1">User's password</td></tr><tr><td colspan="1">Groups for this user</td><td colspan="1">
-
-Groups of which the user is a member.
-
-User must be at least in 'administrators' or 'members' group, or one of their sub-groups.
-
-</td></tr><tr><td colspan="1">Virtual groups for this user</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Avatar</td><td colspan="1">Image that represents the user in the application.</td></tr><tr><td colspan="1">Birth date</td><td colspan="1">User's birth date</td></tr><tr><td colspan="1">Phone number</td><td colspan="1">User's phone number</td></tr><tr><td colspan="1">Gender</td><td colspan="1">User's gender. Default value is Male.</td></tr></tbody></table></div>{{! /multiexcerpt}} {{#> callout type='tip' }}
+{{#> callout type='tip' }}
 
 The avatar, birth date, phone number and gender are personal information that can only be set by the user himself. They are not available from the Admin Center Users & Groups user interface.
 
 {{/callout}}
 
-#### **Inviting a New User**
+### Inviting a New User
 
 Inviting a new user means creating a user account without setting its password, and having the user validate the invitation.
 
-*   To invite a user, go to&nbsp;**Admin Center**&nbsp;>&nbsp;**Users & groups**.&nbsp;Click on the&nbsp;**Create a new user**&nbsp;button and fill in the user creation form and leave&nbsp;**Set user password**&nbsp;to&nbsp;**No.&nbsp;**
+*   To invite a user, go to **Admin Center**&nbsp;> **Users & groups**. Click on the **Create a new user** button and fill in the user creation form and leave **Set user password** to **No**.
     An invitation email is sent to the user at the email address you filled in. The user account is pending the user validation and the user account is not available in the user search results.
-*   To validate the invitation,&nbsp;click on the validation link in the invitation email.&nbsp;Define your password and click on the&nbsp;**Submit**&nbsp;button.
+*   To validate the invitation, click on the validation link in the invitation email. Define your password and click on the **Submit** button.
     You are redirected to the login page of the Nuxeo Platform: you can now log in and use the Platform.
 
-#### **Creating a New User Account**
+### Creating a New User Account
 
 When you create a new user account immediately, you choose and set the user's password.
 
-To create a user, go to&nbsp;**Admin Center**&nbsp;>&nbsp;**Users & groups**.&nbsp;Click on the&nbsp;**Create a new user**&nbsp;button and fill in the user creation form and check&nbsp;**Yes&nbsp;**to**&nbsp;**Set user password**.**
+To create a user, go to **Admin Center**&nbsp;> **Users & groups**. Click on the **Create a new user** button and fill in the user creation form and check **Yes** to **Set user password**.
 
 {{#> callout type='tip' }}
 
@@ -332,29 +367,27 @@ If you need to create several users check the box **Create another** next to the
 
 The user can immediately connect to the Nuxeo application using his or her username and password.
 
-#### Editing a User's Properties
+### Editing a User's Properties
 
-Only administrators and power users can modify other users' properties. But every user can modify his own properties from the&nbsp;**Profile**&nbsp;tab of his&nbsp;[Home]({{page page='user-home'}}).
+Only administrators and power users can modify other users' properties. But every user can modify his own properties from the **Profile** tab of his [Home]({{page page='user-home'}}).
 
 You cannot edit the username, as it is the ID of the user on the application.
 
-When you are using an external directory for users management, the&nbsp;**Edit**&nbsp;tab is not displayed as you cannot edit the users' properties (managed directly from the directory).
+When you are using an external directory for users management, the **Edit** tab is not displayed as you cannot edit the users' properties (managed directly from the directory).
 
-To modify a user's properties, go to&nbsp;**Admin Center**&nbsp;>&nbsp;**Users & groups**.&nbsp;Search a user and click on the user's name to open his or her card. Edit it by modifying the fields&nbsp;in the modification form.
+To modify a user's properties, go to **Admin Center**&nbsp;> **Users & groups**. Search a user and click on the user's name to open his or her card. Edit it by modifying the fields in the modification form.
 
-&nbsp;
+### {{> anchor 'edit-password'}}Changing a User's Password
 
-#### {{> anchor 'edit-password'}}Changing a User's Password
+Only administrators and power users can modify other users' password. However every user can modify his or her own password from his/her **Home**&nbsp;> **Profile** tab.
 
-Only administrators and power users can modify other users' password. However every user can modify his or her own password from his/her&nbsp;**Home**&nbsp;>&nbsp;**Profile**&nbsp;tab.
-
-When you use an external directory for users management, the&nbsp;**Change password**&nbsp;tab is not displayed as you cannot edit your password.
+When you use an external directory for users management, the **Change password** tab is not displayed as you cannot edit your password.
 
 ![]({{file name='users-card-password.png'}} ?w=300,border=true,thumbnail=true)
 
-To modify a user's password, go to&nbsp;the&nbsp;**Admin Center**&nbsp;>&nbsp;**Users & groups**&nbsp;and click on the&nbsp;**Change password**&nbsp;tab.
+To modify a user's password, go to the **Admin Center**&nbsp;> **Users & groups** and click on the **Change password** tab.
 
-#### Deleting a User
+### Deleting a User
 
 Only administrators and power users can delete users.
 
@@ -364,15 +397,13 @@ Deleting a user is a permanent action.
 
 {{/callout}}
 
-To delete a user, go to&nbsp;**Admin Center**&nbsp;>&nbsp;**Users & groups**.&nbsp;Search a user and click on the user's name to open his or her card. Click on&nbsp;**Delete**&nbsp;and confirm.
+To delete a user, go to **Admin Center**&nbsp;> **Users & groups**. Search a user and click on the user's name to open his or her card. Click on **Delete** and confirm.
 
-* * *
-
-### Managing Groups
+## Managing Groups
 
 Groups of users can be created and their properties modified directly in the Nuxeo Platform.
 
-To make permissions management easier, you can&nbsp;[create groups of users](). Instead of giving (or denying) permissions to single users and repeat the same operations several times, you can give several users the same permission in one single manipulation by using a group.
+To make permissions management easier, you can create groups of users. Instead of giving (or denying) permissions to single users and repeat the same operations several times, you can give several users the same permission in one single manipulation by using a group.
 
 Default groups are:
 
@@ -388,49 +419,42 @@ Users must be in one of the groups "members" or "administrators" to be able to a
 
 Groups can be composed of users and of sub-groups. Sub-group's members automatically become members of the parent group. Thus, they are granted all the permissions you give to the group. You can create as many groups as needed.
 
-#### Groups Parameters
+### Groups Parameters
 
-{{! multiexcerpt name='group-info'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">
+{{! multiexcerpt name='group-info'}}
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Field</th>
+<th colspan="1">Description</th>
+</tr>
+<tr>
+<td colspan="1">Group name</td>
+<td colspan="1">The ID of the group.The ID cannot be modified.</td>
+</tr>
+<tr>
+<td colspan="1">Group label</td>
+<td colspan="1">The name of the group displayed to users.</td>
+</tr>
+<tr>
+<td colspan="1">Group's members</td>
+<td colspan="1">Users that belong to the group.</td>
+</tr>
+<tr>
+<td colspan="1">Sub-groups</td>
+<td colspan="1">Groups that belong to the group.</td>
+</tr>
+</tbody>
+</table>
+</div>
+{{! /multiexcerpt}}
 
-Group name
-
-</td><td colspan="1">
-
-The ID of the group.
-
-The ID cannot be modified.
-
-</td></tr><tr><td colspan="1">
-
-Group label
-
-</td><td colspan="1">
-
-The name of the group displayed to users.
-
-</td></tr><tr><td colspan="1">
-
-Group's members
-
-</td><td colspan="1">
-
-Users that belong to the group.
-
-</td></tr><tr><td colspan="1">
-
-Sub-groups
-
-</td><td colspan="1">
-
-Groups that belong to the group.
-
-</td></tr></tbody></table></div>{{! /multiexcerpt}}
-
-#### Creating a Group
+### Creating a Group
 
 Only administrators and power users can create groups of users.
 
-To create a group of users, go to**&nbsp;Admin Center**&nbsp;>&nbsp;**Users & groups**&nbsp;>&nbsp;**Groups**. Create a new group and save.&nbsp;
+To create a group of users, go to **Admin Center**&nbsp;> **Users & groups**&nbsp;> **Groups**. Create a new group and save.
 
 {{#> callout type='tip' }}
 
@@ -438,9 +462,7 @@ If you need to create several groups, check the box **Create another** next to t
 
 {{/callout}}
 
-&nbsp;
-
-#### Editing a Group
+### Editing a Group
 
 Only administrators and power users can modify groups.
 
@@ -448,14 +470,12 @@ Modifying groups most often consists in adding or removing members of the group.
 
 ![]({{file name='groups-card-edit.png'}} ?w=350,border=true)
 
-To edit a group, go to**&nbsp;****Admin Center**&nbsp;>&nbsp;**Users & groups**&nbsp;>**&nbsp;Groups.&nbsp;**Search a group and click on its name to open its card.&nbsp;Click on the**&nbsp;Edit**&nbsp;tab, modify the group's members and click on the**&nbsp;Save**&nbsp;button.&nbsp;The users who are no longer members of the group are denied group's permissions. However they still have their individual permissions.
+To edit a group, go to **Admin Center**&nbsp;> **Users & groups**&nbsp;> **Groups**. Search a group and click on its name to open its card. Click on the **Edit** tab, modify the group's members and click on **Save** button. The users who are no longer members of the group are denied group's permissions. However they still have their individual permissions.
 
-&nbsp;
-
-#### Deleting a Group
+### Deleting a Group
 
 Only administrators and power users can delete groups.
 
-To delete a group, &nbsp;go to&nbsp;**Admin Center**&nbsp;>&nbsp;**Users & groups**&nbsp;>&nbsp;**Groups**.&nbsp;Search the group to delete and click on its name to open its card.&nbsp;Click on**&nbsp;Delete**&nbsp;and confirm.
+To delete a group, go to **Admin Center**&nbsp;> **Users & groups**&nbsp;> **Groups**. Search the group to delete and click on its name to open its card. Click on **Delete** and confirm.
 
 {{! /multiexcerpt}}

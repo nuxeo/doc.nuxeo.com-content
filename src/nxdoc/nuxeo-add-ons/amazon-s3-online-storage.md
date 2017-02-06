@@ -2,10 +2,10 @@
 title: Amazon S3 Online Storage
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-12-21'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - amazon-s3
     - binary-manager
     - multiexcerpt-include
@@ -134,6 +134,8 @@ You should be familiar with Amazon S3 and be in possession of your credentials.
 
 In order to configure the package, you will need to provide values for the configuration parameters that define your S3 credentials, bucket and encryption choices.
 
+For the case of a single repository, you can do the configuration using the `nuxeo.conf` properties described below. For more complex setups, you will need to use an XML extension point, see further down for details.
+
 ### Specifying Your Amazon S3 Parameters
 
 In `nuxeo.conf`, add the following lines:
@@ -258,11 +260,18 @@ nuxeo.s3storage.cacheminage=3600
 Since Nuxeo 7.4, you can configure downloads to be directly served to the user from S3 without going through Nuxeo. To do so, use:
 
 ```
-nuxeo.s3storage.downloadfroms3=true
-nuxeo.s3storage.downloadfroms3.expire=3600
+nuxeo.s3storage.directdownload=true
+nuxeo.s3storage.directdownload.expire=3600
 ```
 
 The expire time is expressed in seconds (the default is one hour) and determines how long the generated S3 URLs are valid. Having short-lived URLs is better for security, but too short an expiration time could be problematic if your server clock is not exactly in sync with the absolute official time use by S3.
+
+{{#> callout type='info' }}
+
+Before Nuxeo 7.10 the configuration was done using property `nuxeo.s3storage.downloadfroms3` instead of `nuxeo.s3storage.directdownload` (same with `expire`). This is still available for backward compatibility after Nuxeo 7.10 but will be removed in a future version, so the `nuxeo.s3storage.directdownload` version above should be preferred.
+
+{{/callout}}
+
 
 #### Connection Pool Options
 
@@ -338,6 +347,32 @@ Here is a sample AWS S3 Policy that you can use; make sure that you replace&nbsp
 }
 ```
 
-&nbsp;
+## Nuxeo Configuration Through Extension Point
 
-&nbsp;
+The above configuration uses `nuxeo.conf` properties prefixed with `nuxeo.s3storage`, which is useful for simple configurations. However if you plan on using several S3 blob managers, you must configure them using an XML extension point. The following is an example for the `default` blob manager:
+
+```xml
+<extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
+  <blobprovider name="default">
+    <class>org.nuxeo.ecm.core.storage.sql.S3BinaryManager</class>
+    <property name="awsid">your_AWS_ACCESS_KEY_ID</property>
+    <property name="awssecret">your_AWS_SECRET_ACCESS_KEY</property>
+    <property name="region">us-west-1</property>
+    <property name="bucket">your_s3_bucket_name</property>
+    <property name="bucket.prefix">myprefix/</property>
+    <property name="directdownload">true</property>
+    <property name="directdownload.expire">3600</property>
+    <property name="cachesize">100MB</property>
+    <property name="crypt.keystore.file">/my/keystore.jks</property>
+    <property name="crypt.keystore.password">password</property>
+    <property name="crypt.key.alias">mykey</property>
+    <property name="crypt.key.password">password</property>
+    <property name="connection.max">50</property>
+    <property name="connection.retry">3</property>
+    <property name="connection.timeout">50000</property>
+    <property name="socket.timeout">50000</property>
+  </blobprovider>
+</extension>
+```
+
+Note that this needs to override the default configuration present in the default Nuxeo template `default-repository-config.xml.nxftl`, which already defines the standard configuration for the `default` blob provider. You may need to `<require>default-repository-config</require>` in order for the override to be correctly taken into account.
