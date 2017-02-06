@@ -735,7 +735,7 @@ See [the `nuxeoctl` additional parameters](#nuxeoctl-addparam).
 
 ## Exit Code Values
 
-Exit code values are following the [Linux Standard Base Core Specification 4.1](http://refspecs.freestandards.org/LSB_4.1.0/LSB-Core-generic/LSB-Core-generic/iniscrptact.html).
+Exit code values are following the [Linux Standard Base Core Specification 4.1](http://refspecs.linuxfoundation.org/LSB_4.1.0/LSB-Core-generic/LSB-Core-generic/iniscrptact.html).
 
 If the status command was requested, `nuxeoctl` will return the following exit status codes:
 
