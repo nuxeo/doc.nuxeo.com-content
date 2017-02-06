@@ -32,7 +32,7 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 *   **[Yeoman](http://yeoman.io/)**  is an opinionated generator that helps kickstart projects. Depending on your needs there are two ways to use it:
 
     *   Under the hood with [Polymer CLI](https://github.com/Polymer/polymer-cli) to scaffold your standalone application. Your application is **hosted outside** the Nuxeo Server and uses it as a service
-    *   Use the [Nuxeo Generator](https://github.com/yeoman/generator-nuxeo) to scaffold your application **as a Nuxeo Bundle** and deploy it on a Nuxeo Server. Your application is **hosted inside** the Nuxeo Server as a bundle and uses it as a backend.
+    *   Use the [Nuxeo Generator](https://github.com/nuxeo/generator-nuxeo) to scaffold your application **as a Nuxeo Bundle** and deploy it on a Nuxeo Server. Your application is **hosted inside** the Nuxeo Server as a bundle and uses it as a backend.
 
 ## Scaffolding
 

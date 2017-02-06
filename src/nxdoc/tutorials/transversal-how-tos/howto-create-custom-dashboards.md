@@ -29,7 +29,7 @@ Before building your own custom dashboards please make sure you fulfill the requ
 
 {{/callout}}
 
-The quickest way to start building a dashboard is to use the [Yeoman generator](https://github.com/yeoman/generator-nuxeo) to scaffold our custom elements.
+The quickest way to start building a dashboard is to use the [Yeoman generator](https://github.com/nuxeo/generator-nuxeo) to scaffold our custom elements.
 
 1.  Generate a `nuxeo-sample` dashboard element:
 
