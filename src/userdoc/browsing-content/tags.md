@@ -2,7 +2,7 @@
 title: Tags
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-26'
     status: ok
 labels:
     - tag
@@ -180,39 +180,34 @@ history:
 ---
 {{! multiexcerpt name='functional-overview'}}
 
-Unlike subjects in the metadata of the document, you don't have to choose tags in a closed list. You are free to apply the tags that describe the document best. However, tags are proposed as you type them, to enable you to use the same tags as the other users and have a consistent tagging of documents.&nbsp;You can add as many tags on documents as you want.
+Unlike subjects in the metadata of the document, you don't have to choose tags in a closed list. You are free to apply the tags that describe the document best. However, tags are proposed as you type them, to enable you to use the same tags as the other users and have a consistent tagging of documents. You can add as many tags on documents as you want.
 
 ![]({{file name='tags-summary-tab.png'}} ?w=650,border=true)
 
 You can then use the tag cloud to find all documents that have the same tags.
-![]({{file name='tag-cloud.png' space='userdoc60' page='browsing-content'}} ?w=350,border=true)
+
+![]({{file name='tag-cloud.png'}} ?border=true)
 
 Documents can be tagged in workspaces and in sections. When a document is published, the tags applied in the workspaces are published with the document. Users can add a tag on a document as soon as they can access the document, i.e. as soon as they have reading permissions.
 
-To tag a document, go on the&nbsp;**Summary**&nbsp;tab of the document and click on&nbsp;![]({{file name='add.gif' space='studio' page='studio-icons-index'}})&nbsp;and type the label you want to add.&nbsp;Click on the suggested label to add an existing tag or on the tag in green&nbsp;to create and add a new one.&nbsp;The tag is immediately added on the document and available in the tag cloud.
+To tag a document, go on the **Summary** tab of the document and click on ![]({{file name='add.gif' space='studio' page='studio-icons-index'}}) and type the label you want to add. Click on the suggested label to add an existing tag or on the tag in green to create and add a new one. The tag is immediately added on the document and available in the tag cloud.
 
-&nbsp;![]({{file name='tags-add.png'}} ?w=350,border=true)
+![]({{file name='tags-add.png'}} ?w=350,border=true)
 
-To remove a tag from a document, click on the icon&nbsp;![]({{file name='delete.png' page='icons-index'}}).&nbsp;The tag is immediately removed.
-{{#> callout type='note' heading='Behavior changed from LTS 2015'}}
-You need to be the user who added the tag on the document or have at least&nbsp;_Edit_&nbsp;permission on the document to be able to remove a tag from a document.
-{{/callout}}
+To remove a tag from a document, you need to be the user who added the tag on the document or have at least Edit permission on the document. Click on the icon ![]({{file name='delete.png' page='icons-index'}}). The tag is immediately removed.
 
 ### Tags, Versions and Publication
 
-When you&nbsp;[save a document as a new version]({{page page='editing-content#versioning-verview'}}), the tags that user have put on the document are saved with the version. This means that the archived versions of a document and the document in its current version can have different tags. If you restore a previous version of the document, tags are restored with it and replace the tags from the replaced version.
+When you [save a document as a new version]({{page page='editing-content'}}#versioning-overview), the tags that user have put on the document are saved with the version. This means that the archived versions of a document and the document in its current version can have different tags. If you restore a previous version of the document, tags are restored with it and replace the tags from the replaced version.
 
-When you&nbsp;[publish a document]({{page page='publishing-content'}}), the tags are copied from the work document to the published document. You can then remove useless tags from either version of the document (work version or published version) without affecting the other one. In case of republication of the document, the tags from the last and previous version are merged so you don't loose any previous or preparatory categorization.
+When you [publish a document]({{page page='publishing-content'}}), the tags are copied from the work document to the published document. You can then remove useless tags from either version of the document (work version or published version) without affecting the other one. In case of republication of the document, the tags from the last and previous version are merged so you don't loose any previous or preparatory categorization.
 
 {{! /multiexcerpt}}
 
-&nbsp;
-
-* * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More documentation about tags'}}
 
-*   [Tags developer documentation]({{page space='nxdoc' page='tagging'}})
+- [Tags developer documentation]({{page space='nxdoc' page='tagging'}})
 
 {{/panel}}</div><div class="column medium-6">
 

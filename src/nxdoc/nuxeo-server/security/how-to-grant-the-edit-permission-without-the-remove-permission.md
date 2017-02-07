@@ -2,7 +2,7 @@
 title: How to Grant the Edit Permission without the Remove Permission
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 details:
     howto:
@@ -14,7 +14,7 @@ details:
         tool: XML Extension
         topics: Permissions
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - link-update
     - permission

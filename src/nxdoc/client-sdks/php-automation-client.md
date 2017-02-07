@@ -136,8 +136,6 @@ $client = new \Nuxeo\Client\Api\NuxeoClient('http://localhost:8080/nuxeo', 'Admi
 $documents = $client->schemas("*")->automation('Document.Query')->param('query', 'SELECT * FROM Document')->execute(Documents::className);
 ```
 
-This new API is the first step to the incoming full-featured PHP Client.
-
 {{#> callout type='note' }}
 
 Until this new version, the old API will still be available. Thus you can upgrade the library to the 1.5 (transition) version and access the new API and features without breaking your application.
@@ -151,7 +149,7 @@ Until this new version, the old API will still be available. Thus you can upgrad
 **Manual install**
 
 * [Nuxeo Automation PHP Client 1.1.1](https://github.com/nuxeo/nuxeo-automation-php-client/archive/1.1.1.tar.gz).
-* [Nuxeo Automation PHP Client 1.5.0-rc1](https://github.com/nuxeo/nuxeo-automation-php-client/archive/1.5.0-rc1.tar.gz).
+* [Nuxeo Automation PHP Client 1.5.0-rc3](https://github.com/nuxeo/nuxeo-automation-php-client/archive/1.5.0-rc3.tar.gz).
 
 **Import Nuxeo Automation PHP Client with:**
 
@@ -159,7 +157,7 @@ Composer:
 
 ```
   "require": {
-    "nuxeo/nuxeo-automation-php-client": "~1.5.0"
+    "nuxeo/nuxeo-automation-php-client": "1.5.0-rc3"
   }
 ```
 

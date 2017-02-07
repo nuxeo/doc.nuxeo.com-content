@@ -2,10 +2,10 @@
 title: Oracle
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - database
     - oracle
     - multiexcerpt-include
@@ -310,7 +310,8 @@ The Nuxeo Platform supports the following version of Oracle:
 
 ## Oracle Text (Full-Text)
 
-Oracle Text needs to be enabled in your database for full-text indexing, please consult your Oracle documentation.
+If you've configured your Nuxeo Platform instance to index full-text using the SQL database (by disabling the default configuration which uses Elasticsearch),
+Oracle Text needs to be enabled in your database, please consult your Oracle documentation.
 
 If you fail to install Oracle Text, you will get on startup the following error:
 
@@ -441,11 +442,11 @@ SELECT value FROM NLS_DATABASE_PARAMETERS WHERE parameter = 'NLS_CHARACTERSET';
 
 ```
 
-If you need to change the character set of you database, please check [http://download.oracle.com/docs/cd/B19306_01/server.102/b14225/ch11charsetmig.htm](http://download.oracle.com/docs/cd/B19306_01/server.102/b14225/ch11charsetmig.htm).
+If you need to change the character set of you database, please check [https://docs.oracle.com/database/121/NLSPG/ch11charsetmig.htm](https://docs.oracle.com/database/121/NLSPG/ch11charsetmig.htm).
 
 If for some reason you must use an unsupported character set that is not in the list: `AL32UTF8`, `UTF8`, `US7ASCII`, `WE8DEC`, `WE8ISO8859P1`, `WE8MSWIN1252`, then you will need an additional `orai18n.jar` JAR in your Java class path.
 
-1.  Download `orai18n.jar` at [http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/htdocs/jdbc_10201.html](http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/htdocs/jdbc_10201.html).
+1.  Download `orai18n.jar` at [http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html](http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html).
 2.  Add it in the class path for your Nuxeo server. For instance, in JBoss, you just put the jar in `$JBOSS/server/default/lib`. (The file `orai18n.jar` replaces the `nls_charset*.*` files in the Oracle 9i and older releases.) However this may or may not work depending on your Oracle version, installation specifics and other factors, and the only supported solution by the Nuxeo Platform is to use the  `AL32UTF8` charset.
 
 {{#> callout type='info' heading='Technical explanation'}}
@@ -465,7 +466,7 @@ Starting with 11g R2, Oracle does not allocate space for a table until the first
 
 The Nuxeo Platform needs the Oracle JDBC driver to establish a connection to the database.
 
-The driver can be downloaded from the [Oracle JDBC driver downloads site](http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html). We recommend the latest version for 11.2.0.* : `ojdbc6.jar` for JDK 8\. It is compliant with Oracle 11g.
+The driver can be downloaded from the [Oracle JDBC driver downloads site](http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html). We recommend the latest version for 12.1.0.2 : `ojdbc7.jar` for JDK 8.
 
 The driver must be in the `$NUXEO_HOME/lib` directory. If you are using the `oracle` template (`nuxeo.templates=oracle` in `nuxeo.conf`), just put the driver in the `$NUXEO_HOME/templates/oracle/lib` directory.
 

@@ -2,10 +2,10 @@
 title: Microsoft SQL Server
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - database
     - sqlserver
     - multiexcerpt-include
@@ -325,7 +325,7 @@ ALTER DATABASE nuxeo SET MULTI_USER
 
 ## Row Versioning-Based Transaction Isolation
 
-To prevent locking and deadlocking problems you need to [enable the row versioning-based isolation levels](http://technet.microsoft.com/en-us/library/ms175095.aspx). With row versioning readers do not block other readers or writers accessing the same data. Similarly, the writers do not block readers. However, writers will block each other. Before each statement Nuxeo add a `SET TRANSACTION ISOLATION LEVEL READ COMMITTED` so statement sees only data committed before the query began.
+To prevent locking and deadlocking problems you need to [enable the row versioning-based isolation levels](http://technet.microsoft.com/en-us/library/ms175095.aspx). With row versioning readers do not block other readers or writers accessing the same data. Similarly, the writers do not block readers. However, writers will block each other. Whenever a transaction is started, Nuxeo adds a `SET TRANSACTION ISOLATION LEVEL READ COMMITTED` so the transaction sees only data committed before the query began.
 
 To enable the row versioning submit the following SQL commands:
 
@@ -335,17 +335,17 @@ ALTER DATABASE nuxeo SET READ_COMMITTED_SNAPSHOT ON;
 
 ```
 
-Note that there must be no other open connection in the database until `ALTER DATABASE` is complete, otherwise the last command will hang. You can work around this (when executing the command from SQL Server Management Studio for instance) by adding `WITH ROLLBACK IMMEDIATE`:
-
-```
-ALTER DATABASE nuxeo SET READ_COMMITTED_SNAPSHOT ON WITH ROLLBACK IMMEDIATE;
-
-```
-
 If you don't execute the above commands, you will get the following error at Nuxeo startup:
 
 ```
 Snapshot isolation transaction failed accessing database 'nuxeo' because snapshot isolation is not allowed in this database. Use ALTER DATABASE to allow snapshot isolation.
+
+```
+
+Note that there must be no other open connection in the database until `ALTER DATABASE` is complete, otherwise the last command above will hang. You can work around this (when executing the command from SQL Server Management Studio for instance) by adding `WITH ROLLBACK IMMEDIATE`:
+
+```
+ALTER DATABASE nuxeo SET READ_COMMITTED_SNAPSHOT ON WITH ROLLBACK IMMEDIATE;
 
 ```
 
@@ -370,7 +370,8 @@ ALTER DATABASE nuxeo SET RECOVERY SIMPLE;
 
 ## Full-Text
 
-If you configure a full-text index in Nuxeo (which is the default), you will need to make sure that your SQL Server instance has full-text search configured (it's an optional component during installation). See [http://msdn.microsoft.com/en-us/library/ms142571.aspx](http://msdn.microsoft.com/en-us/library/ms142571.aspx) for details.
+If you've configured your Nuxeo Platform instance to index full-text using the SQL database (by disabling the default configuration which uses Elasticsearch),
+you will need to make sure that your SQL Server instance has full-text search configured (it's an optional component during installation). See [http://msdn.microsoft.com/en-us/library/ms142571.aspx](http://msdn.microsoft.com/en-us/library/ms142571.aspx) for details.
 
 Failing to do this will provoke errors like:
 
@@ -390,7 +391,7 @@ Full-Text Search is not enabled for the current database. Use sp_fulltext_databa
 
 {{/panel}}
 
-The French version of these messages, for reference:
+Here is the French version of these messages, for reference:
 
 {{#> panel type='code' heading='SQL Server Msg 7601'}}
 

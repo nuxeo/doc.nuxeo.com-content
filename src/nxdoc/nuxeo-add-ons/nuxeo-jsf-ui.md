@@ -158,14 +158,15 @@ history:
 
 ---
 ## Requirements
+Nuxeo JSF UI is supported on the following browsers:
 
-JSF UI is supported on the following browsers:
+{{! multiexcerpt name='jsf-ui-supported-browsers'}}
 - Chrome - latest version
 - Firefox - latest version
 - Edge - latest version
 - Internet Explorer 11
 - Safari 9+
-
+{{! /multiexcerpt}}
 
 ## Installation
 

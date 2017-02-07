@@ -11,7 +11,7 @@ details:
         tool: Code
         topics: REST API
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - rest-api
     - nuxeo-playground

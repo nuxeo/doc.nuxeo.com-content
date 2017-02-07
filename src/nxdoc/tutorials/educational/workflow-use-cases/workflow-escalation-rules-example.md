@@ -2,10 +2,10 @@
 title: Workflow Escalation Rules Example
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-26'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - workflow
     - escalation
     - excerpt
@@ -168,11 +168,11 @@ We will take advantage of the escalation rules functionality. Three escalation r
 
 ## Prerequisites
 
-Before starting this tutorial, make sure you create two users in your Nuxeo Platform Admin Center with the following usernames: Jane, and Eric.
+Before starting this tutorial, make sure you create two users in your Nuxeo Platform Admin Center with the following usernames: `Jane`, and `Eric`.
 
-You also need a section called "press releases", just below the Sections root.
+You also need a section called `press releases`, just below the Sections root (The Press Release section path should be `/default-domain/sections/press releases`).
 
-If you want to receive the emails, make sure you have [set up a test smtp server]({{page page='how-to-setup-a-test-smtp-server'}}).
+If you want to receive the emails, make sure you have [set up a test SMTP server]({{page page='how-to-setup-a-test-smtp-server'}}).
 
 ## Creating the Workflow
 
@@ -203,11 +203,11 @@ Let's define how the workflow's first step, the marketing manager's approval, wo
 ### General Tab
 
 1.  Select the **Accept/Reject** node you just added.
-2.  Hover your mouse over it and click on the edit icon ![]({{file name='NXS-edit-icon.png' space='studio' page='define-your-content-model'}}).
+2.  Hover your mouse over it and click on the edit icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}).
 3.  Fill in the necessary information:
 
     1.  Title: `marketing manager validation`.
-    2.  &nbsp;Directive: "Please review this document for publication".
+    2.  &nbsp;Directive: `Please review this document for publication`.
     3.  Due date expression: `CurrentDate.days(2)`.
     4.  Assignees: Use the "Add" button to add "Jane" (the marketing manager's username).
     5.  Grant permission to task assignee: "Write**"**, so Jane can possibly modify the document.Result should look like the image below:
@@ -231,7 +231,7 @@ In this tab we will create the automation chains corresponding to the button the
 1.  Go back to your workflow, in the **Graph** tab.
 2.  Link the Start node to the&nbsp;`marketing manager validation` node entry point.
 3.  Add an end node (Stop) on the graph.
-4.  Link the&nbsp;`marketing manager validation` node's "validate" and "reject" transitions to this end node.
+4.  Link the&nbsp;`marketing manager validation` node's `validate` and `reject` transitions to this end node.
 5.  Add another **Accept/Reject** node on the graph. This will soon become the general manager validation node. This is because we cannot simply transfer a task to someone else but need to create a new one.
 6.  Save your workflow.
     Your graph should now look like this:
@@ -258,7 +258,7 @@ In this case however, we need a transition but no button. How could the user cli
 3.  Name your transition. For example we may call it `escalate`.
     From now on, a third transition point is available on the marketing manager validation node.
 
-You may see that the condition for this transition defaults to true. Time for a little theory: every time a user completes a task by clicking on a button, the workflow engine will evaluate ALL transition conditions. ANY condition evaluated to true will be followed. Back to our example, this means that leaving the default value would end up in an escalation&nbsp;if the user clicks on a button, which is the exact contrary of what we want to achieve.
+You may see that the condition for this transition defaults to true. Time for a little theory: every time a user completes a task by clicking on a button, the workflow engine will evaluate **ALL** transition conditions. **ANY** condition evaluated to true will be followed. Back to our example, this means that leaving the default value would end up in an escalation&nbsp;if the user clicks on a button, which is the exact contrary of what we want to achieve.
 
 To avoid this situation, we need to activate the **exclusive node** option. **This option tells the node to follow only the first transition that has been evaluated to true**. Back to our example, what does that imply?
 
@@ -301,20 +301,20 @@ We need two rules for this node: one that reminds Jane to review the document ev
 
         **From:**
         no-reply@ohmydoc.com
-        **
-        Message:**
+        <br/>
+        **Message:**
         This is a friendly automated reminder.
         Please remember that you should review the following press release:
         <a \href="${docUrl}">${Document['dc:title']}</a>
-
+        <br/>
         **Subject:**
-        [Reminder] Please review ${Document['dc:title']}
-
+        [Reminder] Please review `${Document['dc:title']}`
+        <br/>
         **To:**
-        @{Fn.getEmail("Jane")}
-
+        `@{Fn.getEmail("Jane")}`
+        <br/>
         **HTML:**
-        true
+        `true`
 
         </td></tr></tbody></table></div>
 4.  Click on **Save**.
@@ -329,7 +329,7 @@ Now we'll go for the second one.
 3.  Fill in the fields:
 
     1.  **Id**:&nbsp;`pressReleaseReviewEscalation`
-    2.  **Condition**: Once again we will replace "true" with an [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
+    2.  **Condition**: Once again we will replace `true` with an [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
 
         <pre>@{CurrentDate.calendar.compareTo(Context["taskDueTime"])>0}</pre>
 
@@ -341,7 +341,7 @@ Now we'll go for the second one.
 
         <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Operation</th><th colspan="1">Parameters</th></tr><tr><td colspan="1">Fetch > Context document(s)</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Workflow context > Get open tasks</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Fetch > Document</td><td colspan="1">
 
-        **Value:** @{This.get(0).id}
+        **Value:** `@{This.get(0).id}`
 
         </td></tr><tr><td colspan="1">Workflow Context > Complete task</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>
 
@@ -374,7 +374,7 @@ Good! On to the node edition.
 
 ### General Tab
 
-1.  Hover your mouse over the node and click on the edit icon ![]({{file name='NXS-edit-icon.png' space='studio' page='define-your-content-model'}}).
+1.  Hover your mouse over the node and click on the edit icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}).
 2.  Fill in the necessary information:
 
     1.  Title: `general manager validation`.

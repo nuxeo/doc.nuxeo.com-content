@@ -2,7 +2,7 @@
 title: Managing Vocabularies
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
     - metadata
@@ -126,11 +126,11 @@ Only administrators and power users can consult and manage vocabularies.
 
 Vocabularies are the lists of labels used in the application, for instance in drop down lists. A vocabulary is composed of several entries, that are the options in the drop down lists. Some vocabularies are hierarchical, i.e. they have several levels. For instance, the **Subjects** metadata uses a two level vocabulary called `I10nsubjects`. First level is **Topic**. Second level is **Subtopic** and each entry is linked to a **Topic** entry.
 
-![]({{file name='hierarchical-vocabulary.png'}} ?w=250,border=true,thumbnail=true)
+![]({{file name='hierarchical-vocabulary.png'}} ?w=250,border=true)
 
 {{#> callout type='tip' }}
 
-Although the `I10nsubjects` vocabulary is used in most places to populate the Subject list (on edit forms and search forms for instance), the virtual navigations used the older "topic" and "subtopic" vocabularies. You need to use the same ID in all vocabularies to make the virtual navigations work.
+Although the `I10nsubjects` vocabulary is used in most places to populate the Subject list (on edit forms and search forms for instance), the [virtual navigations]({{page version='' space='nxdoc' page='nuxeo-virtual-navigation'}}) used the older "topic" and "subtopic" vocabularies. You need to use the same ID in all vocabularies to make the virtual navigations work.
 
 {{/callout}}
 
@@ -198,7 +198,7 @@ Order
 </td><td colspan="1">
 
 Indicates the rank of the entry in the vocabulary.
-Order is set at "10,000,000" by default.
+Order is set at `10,000,000` by default.
 
 </td></tr></tbody></table></div>
 
@@ -234,19 +234,22 @@ To delete vocabulary entry, click on the **Delete** button of the entry to erase
 
 {{! /multiexcerpt}}
 
-* * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
-*   [Admin Tab Overview]({{page space='nxdoc' page='admin-tab-overview'}})
-*   [How to Add a New Vocabulary]({{page space='nxdoc' page='how-to-add-a-new-vocabulary'}})
-*   [How to Translate a Vocabulary]({{page space='nxdoc' page='how-to-translate-a-vocabulary'}})
-*   [How to Add New Relation Types]({{page page='how-to-add-new-relation-types'}})
+- [Admin Tab Overview]({{page space='nxdoc' page='admin-tab-overview'}})
+- [How to Add a New Vocabulary]({{page space='nxdoc' page='how-to-add-a-new-vocabulary'}})
+- [How to Translate a Vocabulary]({{page space='nxdoc' page='how-to-translate-a-vocabulary'}})
+- [How to Add New Relation Types]({{page page='how-to-add-new-relation-types'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
+
+<div class="column medium-6">
 
 &nbsp;
 
-&nbsp;
-
-</div></div>
+</div>
+</div>

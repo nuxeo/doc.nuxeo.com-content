@@ -2,7 +2,7 @@
 title: How to Fetch Documents with a Query on Date Parameters
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-26'
     status: ok
 details:
     howto:
@@ -13,8 +13,8 @@ details:
         tool: Studio
         topics: 'Automation, Content view'
 labels:
-    - content-review-lts2016
     - howto
+    - lts2016-ok
     - content-view
     - automation
     - studio
@@ -199,26 +199,33 @@ This how-to requires knowledge about:
 *   [Event handlers]({{page space='studio' page='event-handlers'}}),
 *   [Content views]({{page page='how-to-define-a-new-content-view'}}).
 
+<br />
+Customization done in this how-to relates to the Nuxeo Platform's JSF UI. Before continuing: 
+
+*   Make sure to select JSF UI in Nuxeo Studio's [application dependencies]({{page space='studio' page='application-dependencies'}}) screen.
+*   [Install the nuxeo-jsf-ui package]({{page page='installing-a-new-package-on-your-instance'}}) in your Nuxeo Platform instance.
+
 {{/callout}}
 
-## Creating a Dedicated Metadata
+## Creating Dedicated Properties
 
-The first step is to add a date-type metadata to our document type. We will use this new metadata as a landmark for our future queries. Let's say we want to recall the expiring date 3 months before it happens.
+The first step is to add date-type properties to our document type. We will use these new properties as a landmark for our future queries. Let's say we want to recall the expiring date 3 months before it happens.
 
-To know more about how to define a&nbsp; document type and add metadata check out the page [How to Define a Document Type]({{page page='how-to-define-a-document-type'}}).
+To know more about how to define a document type and add properties check out the page [How to Define a Document Type]({{page page='how-to-define-a-document-type'}}).
 
 1.  Create a new document type called "mydocumenttype".
-2.  In the **Schema** tab of the document type, add two date-type metadata:
+2.  In the **Schema** tab of the document type, add two date-type properties:
     *   "expiring_date",
     *   "recall_expiring_date".![]({{file name='schema-date-medatata.png'}} ?w=600,border=true)
+3. In the **Creation Layout** and **Edit Layout** tabs, add the expiring_date property. Make sure that the expiring date is mandatory during creation.
 
-## Filling in the Metadata
+## Filling in the Properties
 
 It would be possible to let users fill the recall date manually. But it is more interesting to update it when the document is created or updated.
 
-### Filling in the Metadata When the Document Is Created
+### Filling in the Properties When the Document Is Created
 
-Let's create an automation chain that first copies and saves the "expiring_date" to the "recall_expiring_date" metadata. Then the chain withdraws three months to the "recall_expiring_date".
+Let's create an automation chain that first copies and saves the "expiring_date" to the "recall_expiring_date" property. Then the chain withdraws three months to the "recall_expiring_date".
 
 #### Automation Chain
 
@@ -231,31 +238,32 @@ Create the following automation chain:
     save: "true"
     value: "@{Document[\"mydocumenttype:expiring_date\"].clone()}"
 - Context.RunScript:
-    script: "Document[ 'mydocumenttype:recall_expiring_date'].add(2,-3);"
+    script: "Document['mydocumenttype:recall_expiring_date'].add(2,-3);"
 - Document.Save
 ```
 
 {{#> callout type='tip' }}
 
-For more informations on the `add()` parameter, you can take a look on the [Calendar Java Class documentation](http://download.oracle.com/javase/1.5.0/docs/api/java/util/Calendar.html).
+Save time by pressing the "switch editor" button in your automation chain, paste the YAML definition provided earlier, and switch again to see the result.
+
+For more informations on the `add()` parameter, you can take a look on the [Calendar Java Class documentation](http://docs.oracle.com/javase/8/docs/api/java/util/Calendar.html).
 
 {{/callout}}
 
 #### Event Handler
 
-You can then [bind the automation chain to any event or action]({{page page='how-to-create-an-automation-chain#content-automation-chain-binding'}}) you want. For example, to fill in the "recall_expiring_date" when the document is created,&nbsp; create a new event handler with the following properties:
+You can then [bind the automation chain to any event or action]({{page page='how-to-create-an-automation-chain'}}#content-automation-chain-binding) you want. For example, to fill in the "recall_expiring_date" when the document is created, create a new event handler with the following properties:
 
 *   **Events**: Document created
-    Make sure that the expiring date is mandatory at the creation.
 *   **Current document has one of the types**: mydocumenttype
 
-### Updating the Metadata Automatically When the Document Is Modified
+### Updating the Property Automatically When the Document Is Modified
 
-It is also possible to have the "recall_expiring_date" updated when a user modifies the document. The chain will be similar to the one used for creation of the document, but doesn't include any "save" step.
+It is also possible to have the "recall_expiring_date" updated when a user modifies the document. The chain will be similar to the one used for the creation of the document, but will not include any "save" step.
 
 {{#> callout type='note' }}
 
-A chain called upon the modification of a document should not include a save-related operation. A save operation calls document modification events and the chain would get into an infinite loop.
+A chain called upon the modification of a document should not include a save-related operation. A save operation calls document modification events and the chain would run into an infinite loop.
 
 {{/callout}}
 
@@ -270,7 +278,7 @@ Create the following automation chain:
     save: "false"
     value: "@{Document[\"mydocumenttype:expiring_date\"].clone()}"
 - Context.RunScript:
-    script: "Document[ 'mydocumenttype:recall_expiring_date'].add(2,-3);"
+    script: "Document['mydocumenttype:recall_expiring_date'].add(2,-3);"
 ```
 
 #### Event Handler
@@ -280,12 +288,12 @@ Create a new event handler with the following properties:
 *   **Events**: Before document modification
 *   **Current document has one of the types**: mydocumenttype
 
-## Using the Metadata in a Query
+## Using the Property in a Query
 
 The "recall_expiring_date" is most commonly useful in the two following cases:
 
 *   To display all documents expiring soon, using a content view;
-*   To make operations on the documents after a predefined period of time, using automation chains.
+*   To launch operations on the documents after a predefined period of time, using automation chains.
 
 ### Listing Expiring Documents Using a Content View
 
@@ -307,7 +315,11 @@ In content views the way to fetch all documents for which the "recall date" is o
 
     {{#> callout type='tip' }}
 
-    You will probably want to add other criteria to you query filter. Adding `ecm:currentLifeCycleState` will only fetch documents in the appropriate lifecycle state. Adding `ecm:path` will only fetch documents located at the specified folder.
+    You will probably want to add other criteria to you query filter: 
+    *   Adding `ecm:currentLifeCycleState` will only fetch documents in the appropriate lifecycle state. 
+    *   Adding `ecm:path` will only fetch documents located at the specified folder. 
+    
+    You may refer to the [NXQL]({{page page='nxql'}}) documentation for an exhaustive options list.
 
     {{/callout}}
 3.  Click on the **Results** tab and select the relevant information to display on the result table. For instance:
@@ -315,23 +327,25 @@ In content views the way to fetch all documents for which the "recall date" is o
     *   Title with link,
     *   Expiring date,
     *   Recall expiring date,
-    *   Lifecycle state.You can then leverage this [new content view in a tab]({{page space='studio' page='documents#tabs-content-view'}}) on a custom folder document type for instance.
+    *   Lifecycle state.
+
+You can then leverage this [new content view in a tab]({{page space='studio' page='documents'}}#tabs-content-views) on a custom folder document type for instance.
     ![]({{file name='expiring-documents-content-view.png'}} ?w=600,border=true)
 
 ### Processing Expiring Documents Using an Automation Chain
 
-If you want to make an operation on all the documents that expire soon, you will use an automation chain. This chain will start with the **Fetch > Query** operation It will produce a list of documents that operations accepting documents can use.
+If you want to make an operation on all the documents that expire soon, you will use an automation chain. This chain will start with the **Fetch > Document.Query** operation It will produce a list of documents that operations accepting documents can use.
 
-Let's take the example of an automation chain does the following step:
+Let's take the example of an automation chain doing the following steps:
 
-1.  It fetches all visible and deleted documents whose "recall expiring date" is outdated;
-2.  It deletes these documents ([moves them to trash]({{page page='how-to-enable-the-trash-feature'}})).
+1.  Fetching all visible documents whose "expiring date" is outdated;
+2.  Deleting these documents ([moving them to the trash]({{page page='how-to-enable-the-trash-feature'}})).
 
 The chain will look like that:
 
 ```
 - Document.Query:
-    query: "SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND mydocumenttype:recall_expiring_date<= DATE '@{CurrentDate.format(\"yyyy-MM-dd\")}'"
+    query: "SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND mydocumenttype:expiring_date <= DATE '@{CurrentDate.format(\"yyyy-MM-dd\")}'"
     language: NXQL
 - Document.SetLifeCycle:
     value: delete
@@ -343,7 +357,7 @@ The chain will look like that:
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
 - [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
-- [Fetch a Document by Its ID or Path]({{page space='NXDOC' page='Fetch a+Document+by+Its+ID+or+Path'}})
+- [Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
 - [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
 - [How-To Index]({{page page='how-to-index'}})
 

@@ -82,9 +82,9 @@ history:
         version: '1'
 
 ---
-{{! multiexcerpt name='DeprecatedAddon_7.4'}} {{#> callout type='note' }}
+{{! multiexcerpt name='DeprecatedAddon'}} {{#> callout type='note' }}
 
-This addon is deprecated since Nuxeo Platform 7.4.
+This addon is deprecated since Nuxeo Platform LTS 2016.
 
 {{/callout}}{{! /multiexcerpt}}
 

@@ -2,10 +2,10 @@
 title: MySQL
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-01-30'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - database
     - mysql
     - multiexcerpt-include
@@ -146,8 +146,7 @@ If you choose MySQL for your Nuxeo project, you should know that in the past, we
 
 ### Limitations That Impact Functionality
 
-*   MySQL did not have a datetime data type with a precision less than 1 second ([reference](http://dev.mysql.com/doc/refman/5.5/en/fractional-seconds.html)) until MySQL 5.6.4 ([reference](http://dev.mysql.com/doc/refman/5.6/en/fractional-seconds.html)). This means that events occurring in the same second cannot be properly ordered, which means that document versioning could be inaccurate if a document is changed more than once in a single second. Nuxeo will be updated to support this new feature in the future.
-*   MySQL does not have a data type corresponding to a datatime with a timezone.
+*   Prior to MySQL 5.6.4, MySQL did not have a datetime data type with a precision less than 1 second ([reference](http://dev.mysql.com/doc/refman/5.6/en/fractional-seconds.html)). Nuxeo now makes use of this high-resolution data type but this wasn't possible before.
 *   Prior to MySQL 5.6, configuration of fulltext features required external plugins to change things like stop words or stemming rules ([reference](http://dev.mysql.com/doc/refman/5.5/en/fulltext-stopwords.html)). Since MySQL 5.6 this is not a problem anymore ([reference](http://dev.mysql.com/doc/refman/5.6/en/fulltext-stopwords.html)).
 *   It is not possible to get proper relevance ranking for boolean full-text results, or to normalize the relevance between 0 and 1\. This can lead to imprecise fulltext results.
 *   MySQL has a 64 KB row size limit, which means that it is not possible to put more than a few long `VARCHAR()` columns in a table or a schema. This means any custom schemas created for Nuxeo have to be carefully defined to not contain too many string fields.
