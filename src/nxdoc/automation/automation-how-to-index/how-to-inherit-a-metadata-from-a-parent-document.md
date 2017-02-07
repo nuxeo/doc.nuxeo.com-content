@@ -24,6 +24,7 @@ labels:
 toc: true
 version_override:
     'FT': 'nxdoc/how-to-inherit-metadata-from-a-parent-document'
+    'LTS 2016': 810/nxdoc/how-to-inherit-metadata-from-a-parent-document
 confluence:
     ajs-parent-page-id: '28475566'
     ajs-parent-page-title: Automation How-To Index

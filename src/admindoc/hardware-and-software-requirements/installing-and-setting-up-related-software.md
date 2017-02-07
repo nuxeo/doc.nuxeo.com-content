@@ -26,6 +26,7 @@ confluence:
 tree_item_index: 100
 version_override:
     'FT': '/nxdoc/installing-and-setting-up-related-software'
+    'LTS 2016': 810/nxdoc/installing-and-setting-up-related-software
 history:
     -
         author: Solen Guitter

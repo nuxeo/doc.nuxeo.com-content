@@ -22,7 +22,8 @@ confluence:
     source_link: /display/ADMINDOC710/Filesystem+Commands
 tree_item_index: 200
 version_override:
-    'FT': /nxdoc/filesystem-commands
+    'FT': '/nxdoc/filesystem-commands'
+    'LTS 2016': 810/nxdoc/filesystem-commands
     '6.0': 60/admindoc/filesystem-commands
     '5.8': 58/admindoc/filesystem-commands
 history:

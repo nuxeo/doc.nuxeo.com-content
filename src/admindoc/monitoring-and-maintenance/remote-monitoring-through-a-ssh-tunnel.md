@@ -24,6 +24,7 @@ confluence:
 tree_item_index: 700
 version_override:
     'FT': '/nxdoc/remote-monitoring-through-a-ssh-tunnel'
+    'LTS 2016': 810/nxdoc/remote-monitoring-through-a-ssh-tunnel
     '6.0': 60/admindoc/remote-monitoring-through-a-ssh-tunnel
     '5.8': 58/admindoc/remote-monitoring-through-a-ssh-tunnel
 history:

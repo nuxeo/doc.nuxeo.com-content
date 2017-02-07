@@ -8,7 +8,8 @@ labels:
     - lts2015-ok
     - android-connector-component
 version_override:
-    'FT': 'nxdoc/java-client'
+    'FT': '/nxdoc/java-client'
+    'LTS 2016': 810/nxdoc/java-client
 confluence:
     ajs-parent-page-id: '28475544'
     ajs-parent-page-title: Nuxeo Android Connector

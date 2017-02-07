@@ -10,7 +10,8 @@ labels:
     - lts2015-ok
 toc: true
 version_override:
-    'FT': 'nxdoc/nuxeo-drive'
+    'FT': '/nxdoc/nuxeo-drive'
+    'LTS 2016': 810/nxdoc/nuxeo-drive
 confluence:
     ajs-parent-page-id: '29003017'
     ajs-parent-page-title: Adding Features

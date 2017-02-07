@@ -22,6 +22,7 @@ confluence:
 tree_item_index: 800
 version_override:
     'FT': '/nxdoc/transactions-and-connections'
+    'LTS 2016': 810/nxdoc/transactions-and-connections
     '6.0': 60/admindoc/transactions-and-connections
     '5.8': 58/admindoc/transactions-and-connections
 history:

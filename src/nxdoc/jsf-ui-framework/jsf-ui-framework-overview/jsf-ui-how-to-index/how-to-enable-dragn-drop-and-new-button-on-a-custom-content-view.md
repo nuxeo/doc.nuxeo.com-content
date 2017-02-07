@@ -16,7 +16,8 @@ labels:
     - howto
 toc: true
 version_override:
-    'FT': 'nxdoc/how-to-enable-drag-and-drop-and-new-button-on-a-custom-content-view'
+    'FT': '/nxdoc/how-to-enable-drag-and-drop-and-new-button-on-a-custom-content-view'
+    'LTS 2016': 810/nxdoc/how-to-enable-drag-and-drop-and-new-button-on-a-custom-content-view
 confluence:
     ajs-parent-page-id: '28475607'
     ajs-parent-page-title: Web UI How-To Index

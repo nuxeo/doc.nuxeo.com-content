@@ -19,7 +19,8 @@ confluence:
     source_link: /display/ADMINDOC710/Database
 tree_item_index: 500
 version_override:
-    'FT': /nxdoc/database-configuration
+    'FT': '/nxdoc/database-configuration'
+    'LTS 2016': 810//nxdoc/database-configuration
     '6.0': 60/admindoc/database
     '5.8': 58/admindoc/database
 history:

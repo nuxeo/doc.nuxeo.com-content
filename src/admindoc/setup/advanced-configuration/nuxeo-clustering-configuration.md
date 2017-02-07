@@ -26,7 +26,8 @@ confluence:
     source_link: /display/ADMINDOC710/Nuxeo+Clustering+Configuration
 tree_item_index: 700
 version_override:
-    'FT': /nxdoc/nuxeo-clustering-configuration
+    'FT': '/nxdoc/nuxeo-clustering-configuration'
+    'LTS 2016': 810/nxdoc/nuxeo-clustering-configuration
     '6.0': 60/admindoc/nuxeo-clustering-configuration
     '5.8': 58/admindoc/nuxeo-clustering-configuration
 history:

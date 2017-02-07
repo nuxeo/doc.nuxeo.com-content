@@ -24,7 +24,8 @@ confluence:
     source_link: /display/ADMINDOC710/Nuxeo+Automation+Commands
 tree_item_index: 400
 version_override:
-    'FT': /nxdoc/nuxeo-automation-commands
+    'FT': '/nxdoc/nuxeo-automation-commands'
+    'LTS 2016': 810/nxdoc/nuxeo-automation-commands
     '6.0': 60/admindoc/nuxeo-automation-commands
     '5.8': 58/admindoc/nuxeo-automation-commands
 history:

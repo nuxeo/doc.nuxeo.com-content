@@ -25,6 +25,7 @@ confluence:
 tree_item_index: 300
 version_override:
     'FT': '/nxdoc/configuration-wizard'
+    'LTS 2016': 810/nxdoc/configuration-wizard
     '6.0': 60/admindoc/setup
     '5.8': 58/admindoc/setup
 history:

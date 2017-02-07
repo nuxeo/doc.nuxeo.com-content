@@ -24,6 +24,7 @@ confluence:
 tree_item_index: 700
 version_override:
     'FT': '/nxdoc/nuxeo-shell'
+    'LTS 2016': 810/nxdoc/nuxeo-shell
     '6.0': 60/admindoc/nuxeo-shell
     '5.8': 58/admindoc/nuxeo-shell
 history:

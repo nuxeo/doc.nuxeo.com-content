@@ -23,6 +23,7 @@ confluence:
 tree_item_index: 100
 version_override:
     'FT': '/nxdoc/built-in-commands'
+    'LTS 2016': 810/nxdoc/built-in-commands
     '6.0': 60/admindoc/built-in-commands
     '5.8': 58/admindoc/built-in-commands
 history:

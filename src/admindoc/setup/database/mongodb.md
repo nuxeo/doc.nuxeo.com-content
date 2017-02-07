@@ -23,7 +23,8 @@ confluence:
     source_link: /display/ADMINDOC710/MongoDB
 tree_item_index: 500
 version_override:
-    'FT': /nxdoc/mongodb
+    'FT': '/nxdoc/mongodb'
+    'LTS 2016': 810/nxdoc/mongodb
 history:
     -
         author: Solen Guitter

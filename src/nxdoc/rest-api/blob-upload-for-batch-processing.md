@@ -14,7 +14,8 @@ labels:
     - university
 toc: true
 version_override:
-    'FT': 'nxdoc/batch-upload-endpoint'
+    'FT': '/nxdoc/batch-upload-endpoint'
+    'LTS 2016': 810/nxdoc/batch-upload-endpoint
 confluence:
     ajs-parent-page-id: '28475677'
     ajs-parent-page-title: REST API

@@ -29,7 +29,8 @@ confluence:
     source_link: /display/ADMINDOC710/HTTP+and+HTTPS+Reverse-Proxy+Configuration
 tree_item_index: 800
 version_override:
-    'FT': /nxdoc/http-and-https-reverse-proxy-configuration
+    'FT': '/nxdoc/http-and-https-reverse-proxy-configuration'
+    'LTS 2016': 810/nxdoc/http-and-https-reverse-proxy-configuration
     '6.0': 60/admindoc/http-and-https-reverse-proxy-configuration
     '5.8': 58/admindoc/http-and-https-reverse-proxy-configuration
 history:

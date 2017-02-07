@@ -10,6 +10,7 @@ labels:
 toc: true
 version_override:
     'FT': '/nxdoc/nuxeo-drive-faq'
+    'LTS 2016': 810/nxdoc/nuxeo-drive-faq
 confluence:
     ajs-parent-page-id: '29003064'
     ajs-parent-page-title: Nuxeo Drive

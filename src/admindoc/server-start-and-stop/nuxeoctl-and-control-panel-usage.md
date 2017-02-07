@@ -24,7 +24,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/uTalAQ'
     source_link: /display/ADMINDOC710/nuxeoctl+and+Control+Panel+Usage
 version_override:
-    'FT': /nxdoc/nuxeoctl-and-control-panel-usage
+    'FT': '/nxdoc/nuxeoctl-and-control-panel-usage'
+    'LTS 2016': 810/nxdoc/nuxeoctl-and-control-panel-usage
     '6.0': 60/admindoc/nuxeoctl-and-control-panel-usage
     '5.8': 58/admindoc/nuxeoctl-and-control-panel-usage
 history:

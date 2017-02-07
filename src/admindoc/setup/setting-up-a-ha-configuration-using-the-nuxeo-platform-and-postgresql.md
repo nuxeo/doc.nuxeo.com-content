@@ -28,7 +28,8 @@ confluence:
         https://doc.nuxeo.com/display/ADMINDOC710/Setting+up+a+HA+Configuration+Using+the+Nuxeo+Platform+and+PostgreSQL
 tree_item_index: 1100
 version_override:
-    'FT': /nxdoc/setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql
+    'FT': '/nxdoc/setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql'
+    'LTS 2016': 810/nxdoc/setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql
     '6.0': 60/admindoc/setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql
     '5.8': 58/admindoc/setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql
 history:

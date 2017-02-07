@@ -23,7 +23,8 @@ confluence:
     source_link: /display/ADMINDOC710/Blob+Storage+Configuration
 tree_item_index: 600
 version_override:
-    'FT': /nxdoc/file-storage-configuration
+    'FT': '/nxdoc/file-storage-configuration'
+    'LTS 2016': 810/nxdoc/file-storage-configuration
 history:
     -
         author: Alain Escaffre

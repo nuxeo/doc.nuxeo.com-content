@@ -23,7 +23,8 @@ confluence:
     source_link: /display/ADMINDOC710/Nuxeo+Server+Commands
 tree_item_index: 300
 version_override:
-    'FT': /nxdoc/nuxeo-server-commands
+    'FT': '/nxdoc/nuxeo-server-commands'
+    'LTS 2016': 810/nxdoc/nuxeo-server-commands
     '6.0': 60/admindoc/nuxeo-server-commands
     '5.8': 58/admindoc/nuxeo-server-commands
 history:

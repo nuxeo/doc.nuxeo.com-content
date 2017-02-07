@@ -24,6 +24,7 @@ confluence:
     source_link: /display/ADMINDOC710/Installing+the+Nuxeo+Platform+as+a+Windows+Service
 version_override:
     'FT': '/nxdoc/installing-the-nuxeo-platform-as-a-windows-service'
+    'LTS 2016': 810/nxdoc/installing-the-nuxeo-platform-as-a-windows-service
     '6.0': 60/admindoc/installing-the-nuxeo-platform-as-a-windows-service
     '5.8': 58/admindoc/installing-the-nuxeo-platform-as-a-windows-service
 history:

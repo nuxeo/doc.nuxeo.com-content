@@ -20,7 +20,8 @@ confluence:
     source_link: /display/ADMINDOC710/Upgrade+from+5.4.2+to+5.5
 tree_item_index: 500
 version_override:
-    'FT': /nxdoc/upgrade-from-542-to-55
+    'FT': '/nxdoc/upgrade-from-542-to-55'
+    'LTS 2016': 810/nxdoc/upgrade-from-542-to-55
     '6.0': 60/admindoc/upgrade-from-542-to-55
     '5.8': 58/admindoc/upgrade-from-542-to-55
 history:

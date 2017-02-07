@@ -20,6 +20,7 @@ confluence:
 tree_item_index: 200
 version_override:
     'FT': '/nxdoc/installation'
+    'LTS 2016': 810/nxdoc/installation
     '6.0': 60/admindoc/installation
     '5.8': 58/admindoc/installation
 history:

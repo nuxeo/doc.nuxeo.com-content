@@ -14,7 +14,8 @@ labels:
     - rest-api
 toc: true
 version_override:
-    'FT': 'nxdoc/howto-develop-with-angular2'
+    'FT': '/nxdoc/howto-develop-with-angular2'
+    'LTS 2016': 810/nxdoc/howto-develop-with-angular2
 confluence:
     ajs-parent-page-id: '28475677'
     ajs-parent-page-title: REST API

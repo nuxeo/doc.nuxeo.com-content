@@ -19,6 +19,7 @@ confluence:
     source_link: /display/NXDOC710/From+the+Web+UI+to+Nuxeo+Studio
 version_override:
     'FT': '/nxdoc/from-the-jsf-ui-to-nuxeo-studio'
+    'LTS 2016': 810/nxdoc/from-the-jsf-ui-to-nuxeo-studio
     '6.0': 60/nxdoc/from-the-web-ui-to-nuxeo-studio
 tree_item_index: 1000
 history:

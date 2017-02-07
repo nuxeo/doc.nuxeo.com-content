@@ -8,7 +8,8 @@ labels:
     - content-review-lts2015
 toc: true
 version_override:
-    'FT': 'nxdoc/web-ui'
+    'FT': '/nxdoc/web-ui'
+    'LTS 2016': 810/nxdoc/web-ui
 confluence:
     ajs-parent-page-id: '28475558'
     ajs-parent-page-title: Quick Start Series

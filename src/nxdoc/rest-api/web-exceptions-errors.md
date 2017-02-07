@@ -11,7 +11,8 @@ labels:
     - exception
 toc: true
 version_override:
-    'FT': 'nxdoc/error-handling'
+    'FT': '/nxdoc/error-handling'
+    'LTS 2016': 810/nxdoc/error-handling
 confluence:
     ajs-parent-page-id: '28475677'
     ajs-parent-page-title: REST API

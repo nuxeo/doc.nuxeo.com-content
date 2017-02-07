@@ -20,7 +20,8 @@ confluence:
     source_link: /display/ADMINDOC710/Upgrade+from+6.0+to+LTS+2015
 tree_item_index: 100
 version_override:
-    'FT': /nxdoc/upgrade-from-60-to-lts-2015
+    'FT': '/nxdoc/upgrade-from-60-to-lts-2015'
+    'LTS 2016': 810/nxdoc/upgrade-from-60-to-lts-2015
 history:
     -
         author: Solen Guitter

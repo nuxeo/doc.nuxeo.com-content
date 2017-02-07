@@ -24,7 +24,8 @@ labels:
     - university
 toc: true
 version_override:
-    'FT': 'nxdoc/howto-upload-file-nuxeo-using-rest-api'
+    'FT': '/nxdoc/howto-upload-file-nuxeo-using-rest-api'
+    'LTS 2016': 810/nxdoc/howto-upload-file-nuxeo-using-rest-api
 confluence:
     ajs-parent-page-id: '28475677'
     ajs-parent-page-title: REST API

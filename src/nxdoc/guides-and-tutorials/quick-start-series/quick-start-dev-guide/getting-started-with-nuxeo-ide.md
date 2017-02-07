@@ -16,7 +16,8 @@ labels:
     - howto
 toc: true
 version_override:
-    'FT': 'nxdoc/getting-started-with-nuxeo-generator'
+    'FT': '/nxdoc/getting-started-with-nuxeo-generator'
+    'LTS 2016': 810/nxdoc/getting-started-with-nuxeo-generator
 confluence:
     ajs-parent-page-id: '28475632'
     ajs-parent-page-title: Quick Start Dev Guide

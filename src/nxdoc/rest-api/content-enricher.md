@@ -13,7 +13,8 @@ labels:
     - university
 toc: true
 version_override:
-    'FT': 'nxdoc/content-enrichers'
+    'FT': '/nxdoc/content-enrichers'
+    'LTS 2016': 810/nxdoc/content-enrichers
 confluence:
     ajs-parent-page-id: '28475677'
     ajs-parent-page-title: REST API

@@ -23,6 +23,7 @@ confluence:
 tree_item_index: 1100
 version_override:
     'FT': '/nxdoc/garbage-collecting-orphaned-binaries'
+    'LTS 2016': 810/nxdoc/garbage-collecting-orphaned-binaries
     '6.0': 60/admindoc/garbage-collecting-orphaned-binaries
     '5.8': 58/admindoc/garbage-collecting-orphaned-binaries
 history:

@@ -23,6 +23,7 @@ confluence:
 tree_item_index: 200
 version_override:
     'FT': '/nxdoc/installing-the-nuxeo-platform-on-mac-os'
+    'LTS 2016': 810/nxdoc/installing-the-nuxeo-platform-on-mac-os
     '6.0': 60/admindoc/installing-the-nuxeo-platform-on-mac-os
     '5.8': 58/admindoc/installing-the-nuxeo-platform-on-mac-os
 history:

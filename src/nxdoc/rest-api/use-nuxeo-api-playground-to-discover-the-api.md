@@ -19,7 +19,8 @@ labels:
     - howto
 toc: true
 version_override:
-    'FT': 'nxdoc/howto-nuxeo-api-playground'
+    'FT': '/nxdoc/howto-nuxeo-api-playground'
+    'LTS 2016': 810/nxdoc/howto-nuxeo-api-playground
 confluence:
     ajs-parent-page-id: '28475677'
     ajs-parent-page-title: REST API

@@ -21,6 +21,7 @@ confluence:
 tree_item_index: 900
 version_override:
     'FT': '/nxdoc/counting-documents'
+    'LTS 2016': 810/nxdoc/counting-documents
     '6.0': 60/admindoc/counting-documents
     '5.8': 58/admindoc/counting-documents
 history:

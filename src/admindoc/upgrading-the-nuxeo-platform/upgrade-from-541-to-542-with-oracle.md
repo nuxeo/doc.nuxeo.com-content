@@ -20,7 +20,8 @@ confluence:
     source_link: /display/ADMINDOC710/Upgrade+from+5.4.1+to+5.4.2+with+Oracle
 tree_item_index: 600
 version_override:
-    'FT': /nxdoc/upgrade-from-541-to-542-with-oracle
+    'FT': '/nxdoc/upgrade-from-541-to-542-with-oracle'
+    'LTS 2016': 810/nxdoc/upgrade-from-541-to-542-with-oracle
     '6.0': 60/admindoc/upgrade-from-541-to-542-with-oracle
     '5.8': 58/admindoc/upgrade-from-541-to-542-with-oracle
 history:

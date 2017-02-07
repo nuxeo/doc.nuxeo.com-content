@@ -24,7 +24,8 @@ confluence:
     source_link: >-
         /display/ADMINDOC710/Query+Models+and+Result+Providers+Migration+to+Content+Views+and+Page+Providers
 version_override:
-    'FT': /nxdoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
+    'FT': '/nxdoc/query-models-and-result-providers-migration-to-content-views-and-page-providers'
+    'LTS 2016': 810/nxdoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
     '6.0': 60/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
     '5.8': 58/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
 history:

@@ -24,7 +24,8 @@ confluence:
     source_link: >-
         /display/ADMINDOC710/Internet+Information+Services+%28IIS%29+Configuration
 version_override:
-    'FT': /nxdoc/internet-information-services-iis
+    'FT': '/nxdoc/internet-information-services-iis'
+    'LTS 2016': 810/nxdoc/internet-information-services-iis
     '6.0': 60/admindoc/internet-information-services-iis
     '5.8': 58/admindoc/internet-information-services-iis
 history:

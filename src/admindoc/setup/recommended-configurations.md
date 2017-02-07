@@ -24,7 +24,8 @@ confluence:
     source_link: /display/ADMINDOC710/Recommended+Configurations
 tree_item_index: 100
 version_override:
-    'FT': /nxdoc/setup-best-practices
+    'FT': '/nxdoc/setup-best-practices'
+    'LTS 2016': 810/nxdoc/setup-best-practices
     '6.0': 60/admindoc/recommended-configurations
     '5.8': 58/admindoc/recommended-configurations
 history:

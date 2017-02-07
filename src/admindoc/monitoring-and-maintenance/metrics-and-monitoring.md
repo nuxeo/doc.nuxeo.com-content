@@ -24,6 +24,7 @@ confluence:
 tree_item_index: 100
 version_override:
     'FT': '/nxdoc/metrics-and-monitoring'
+    'LTS 2016': 810/nxdoc/metrics-and-monitoring
     '6.0': 60/admindoc/metrics-and-monitoring
     '5.8': 58/admindoc/metrics-and-monitoring
 history:

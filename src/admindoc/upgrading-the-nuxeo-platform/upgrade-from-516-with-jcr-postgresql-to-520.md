@@ -19,7 +19,8 @@ confluence:
     source_link: /pages/viewpage.action?pageId=27604640
 tree_item_index: 1100
 version_override:
-    'FT': /nxdoc/upgrade-from-516-with-jcr-postgresql-to-520
+    'FT': '/nxdoc/upgrade-from-516-with-jcr-postgresql-to-520'
+    'LTS 2016': 810/nxdoc/upgrade-from-516-with-jcr-postgresql-to-520
     '6.0': 60/admindoc/upgrade-from-516-with-jcr-postgresql-to-520
     '5.8': 58/admindoc/upgrade-from-516-with-jcr-postgresql-to-520
 history:

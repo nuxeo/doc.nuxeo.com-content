@@ -22,6 +22,7 @@ confluence:
 tree_item_index: 200
 version_override:
     'FT': '/nxdoc/backup-and-restore'
+    'LTS 2016': 810/nxdoc/backup-and-restore
     '6.0': 60/admindoc/backup-and-restore
     '5.8': 58/admindoc/backup-and-restore
 history:

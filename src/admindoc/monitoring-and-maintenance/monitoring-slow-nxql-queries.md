@@ -23,6 +23,7 @@ confluence:
 tree_item_index: 1000
 version_override:
     'FT': '/nxdoc/monitoring-slow-nxql-queries'
+    'LTS 2016': 810/nxdoc/monitoring-slow-nxql-queries
     '6.0': 60/admindoc/monitoring-slow-nxql-queries
     '5.8': 58/admindoc/monitoring-slow-nxql-queries
 history:

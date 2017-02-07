@@ -21,7 +21,8 @@ confluence:
     source_link: /display/ADMINDOC710/Redis+Configuration
 tree_item_index: 900
 version_override:
-    'FT': /nxdoc/redic-configuration
+    'FT': '/nxdoc/redis-configuration'
+    'LTS 2016': 810/nxdoc/redis-configuration
     '6.0': 60/admindoc/redis-configuration
     '5.8': 58/admindoc/redis-configuration
 history:

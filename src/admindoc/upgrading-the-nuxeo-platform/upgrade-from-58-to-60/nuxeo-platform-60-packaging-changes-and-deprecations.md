@@ -21,7 +21,8 @@ confluence:
     source_link: >-
         /display/ADMINDOC710/Nuxeo+Platform+6.0+Packaging+Changes+and+Deprecations
 version_override:
-    'FT': /nxdoc/nuxeo-platform-60-packaging-changes-and-deprecations
+    'FT': '/nxdoc/nuxeo-platform-60-packaging-changes-and-deprecations'
+    'LTS 2016': 810/nxdoc/nuxeo-platform-60-packaging-changes-and-deprecations
 history:
     -
         author: Manon Lumeau

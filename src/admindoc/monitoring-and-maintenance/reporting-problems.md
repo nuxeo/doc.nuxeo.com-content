@@ -21,6 +21,7 @@ confluence:
 tree_item_index: 1200
 version_override:
     'FT': '/nxdoc/reporting-problems'
+    'LTS 2016': 810/nxdoc/reporting-problems
     '6.0': 60/admindoc/reporting-problems
     '5.8': 58/admindoc/reporting-problems
 history:

@@ -23,6 +23,7 @@ confluence:
 tree_item_index: 400
 version_override:
     'FT': '/nxdoc/deploying-nuxeo-on-amazon-aws'
+    'LTS 2016': 810/nxdoc/deploying-nuxeo-on-amazon-aws
     '6.0': 60/admindoc/deploying-nuxeo-on-amazon-aws
     '5.8': 58/admindoc/deploying-nuxeo-on-amazon-aws
 history:
