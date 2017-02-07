@@ -18,6 +18,7 @@ confluence:
     shortlink: dABu
     shortlink_source: 'https://doc.nuxeo.com/x/dABu'
     source_link: /display/NXDOC/Tutorials
+section_parent: tutorial
 tree_item_index: 100
 version_override:
     'LTS 2015': 710/nxdoc/guides-and-tutorials

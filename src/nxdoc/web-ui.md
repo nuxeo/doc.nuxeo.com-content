@@ -21,6 +21,7 @@ confluence:
     shortlink: XJCRAQ
     shortlink_source: 'https://doc.nuxeo.com/x/XJCRAQ'
     source_link: /display/NXDOC/Web+UI
+section_parent: web-ui
 tree_item_index: 300
 history:
     -

@@ -17,6 +17,7 @@ confluence:
     shortlink: 4ofZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/4ofZAQ'
     source_link: /display/NXDOC/Nuxeo+Server
+section_parent: server
 tree_item_index: 200
 history:
     -
