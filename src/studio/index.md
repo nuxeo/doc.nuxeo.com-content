@@ -17,6 +17,7 @@ confluence:
     shortlink: EIAV
     shortlink_source: 'https://doc.nuxeo.com/x/EIAV'
     source_link: /display/Studio/Nuxeo+Online+Services
+section_parent: services
 history:
     -
         author: Alain Escaffre
