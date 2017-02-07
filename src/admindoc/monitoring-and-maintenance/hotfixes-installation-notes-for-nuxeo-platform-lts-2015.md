@@ -149,7 +149,9 @@ history:
         version: '1'
 
 ---
-{{! multiexcerpt name='main_content'}}{{! excerpt}}
+{{! multiexcerpt name='main_content'}}
+{{! multiexcerpt name='intro_hotfix'}}
+{{! excerpt}}
 
 The purpose of this page is to describe the additional actions that need to be done when installing the hotfixes on Nuxeo Platform and that cannot be done automatically. The page provides an exhaustive list of manipulations for the installation of Nuxeo Platform LTS 2015 hotfixes, but you need only to apply those relevant for your own instance.
 
@@ -186,6 +188,7 @@ The parameter `--accept=true` automatically replies `yes` to any prompt, which m
 ### Installing Hotfixes from the Update Center
 
 You can also download and install hotfixes from the **Update Center** in the **Admin** tab.The installation of hotfixes requires the server to be restarted to complete the installation: follow the manual installation and configuration steps required by the installed hotfixes before you restart your server.
+{{! /multiexcerpt}}
 
 ## Hotfix 20
 
