@@ -579,7 +579,7 @@ Public
 [Documentation]({{page page='nuxeo-media-publishing'}})
 </td>
 <td colspan="1">
-[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing?version=1.2.2)
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing?version=1.2.4)
 </td>
 </tr>
 <tr>
@@ -595,7 +595,7 @@ Registered access
 [User documentation]({{page space='userdoc' page='nuxeo-multi-tenant'}})
 </td>
 <td colspan="1">
-[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant?version=1.6.2)
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant?version=1.6.4)
 </td>
 </tr>
 <tr>
