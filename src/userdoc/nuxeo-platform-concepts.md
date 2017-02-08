@@ -465,7 +465,7 @@ The Nuxeo Platform gives you all the necessary tools to let you customize what i
 
 This is where the majority of user's activity within the Nuxeo Platform will occur since it's where users can work on documents and browse the application domains, workspace, sections, etc.
 
-#### Content Hierarchy
+#### {{> anchor 'available-spaces'}} Content Hierarchy 
 
 You can create different types of documents to be able to display the content hierarchy that you need in your application. By default you can create workspaces, folders, collections, templates, etc., but you can also [create your own document types]({{page space='nxdoc' page='how-to-define-a-document-type'}}).
 
