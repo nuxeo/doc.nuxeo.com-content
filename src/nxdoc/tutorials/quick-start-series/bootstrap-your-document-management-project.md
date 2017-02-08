@@ -5,7 +5,7 @@ review:
     date: '2016-02-01'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - bootstrap
 toc: true
 confluence:
@@ -197,7 +197,7 @@ Once you have your Nuxeo Platform instance running, spend one hour customizing t
 
 ## Hierarchy of the Repository
 
-Organize the hierarchy of the repository so that it seems like a good base for some use cases. Folderish documents such as workspaces and folders can hold metadata like any other document. You should start thinking about your folders typology and if there is a hierarchy frequent pattern, it can be [adressed with structure templates.]({{page space='studio' page='structure-templates'}}) By default you have domains that contain workspaces, wections, etc... this behavior can be completely redefined and is for most of the deployments.For exemple Nuxeo repository can be used with just a hierarchy of "Folder" document types, from the root of the repository.
+Organize the hierarchy of the repository so that it seems like a good base for some use cases. Folderish documents such as workspaces and folders can hold metadata like any other document. You should start thinking about your folders typology and if there is a hierarchy frequent pattern, it can be [adressed with structure templates.]({{page space='studio' page='structure-templates'}}) By default you have domains that contain workspaces, sections, etc... this behavior can be completely redefined and is for most of the deployments. For exemple Nuxeo repository can be used with just a hierarchy of "Folder" document types, from the root of the repository.
 
 At this stage, you don't need to be extensive, just the initial folders and how the hierarchy will be evolving in the normal use of the product.
 
