@@ -16,6 +16,7 @@ confluence:
     shortlink: 6ICo
     shortlink_source: 'https://doc.nuxeo.com/x/6ICo'
     source_link: /display/USERDOC/Nuxeo+Platform+User+Documentation
+section_parent: user-documentation
 history:
     -
         author: Solen Guitter
