@@ -2262,6 +2262,30 @@ Example: https://my.nuxeo.com/</td>
 <td colspan="1">When set to `false` allows to disable the picture migration that is run on startup and that can be slow on big volume.</td>
 <td colspan="1">Since 8.10</td>
 </tr>
+<tr>
+<td colspan="1">`nuxeo.dbs.cache.enabled`</td>
+<td colspan="1">`true`</td>
+<td colspan="1">Whether or not the cache is enabled</td>
+<td colspan="1">Since 8.10-HF01</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.dbs.cache.concurrencyLevel`</td>
+<td colspan="1">`10`</td>
+<td colspan="1">Guava cache parameter: Guides the allowed concurrency among update operations. Used as a hint for internal sizing. The table is internally partitioned to try to permit the indicated number of concurrent updates without contention. Because assignment of entries to these partitions is not necessarily uniform, the actual concurrency observed may vary. Ideally, you should choose a value to accommodate as many threads as will ever concurrently modify the table. Using a significantly higher value than you need can waste space and time, and a significantly lower value can lead to thread contention. But overestimates and underestimates within an order of magnitude do not usually have much noticeable impact. A value of one permits only one thread to modify the cache at a time, but since read operations and cache loading computations can proceed concurrently, this still yields higher concurrency than full synchronization.</td>
+<td colspan="1">Since 8.10-HF01</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.dbs.cache.maxSize`</td>
+<td colspan="1">`1000`</td>
+<td colspan="1">The maximum size of DBS cache</td>
+<td colspan="1">Since 8.10-HF01</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.dbs.cache.ttl`</td>
+<td colspan="1">`10`</td>
+<td colspan="1">The expire after write value in minutes</td>
+<td colspan="1">Since 8.10-HF01</td>
+</tr>
 </tbody>
 </table>
 </div>
