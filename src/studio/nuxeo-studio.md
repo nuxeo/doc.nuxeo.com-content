@@ -4,6 +4,7 @@ review:
     comment: ''
     date: ''
     status: ok
+is_overview: true
 confluence:
     ajs-parent-page-id: '1409040'
     ajs-parent-page-title: Nuxeo Online Services

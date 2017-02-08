@@ -6,6 +6,7 @@ review:
     status: ok
 labels:
     - content-review-6-0
+is_overview: true
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''

@@ -4,6 +4,7 @@ review:
     comment: ''
     date: ''
     status: ok
+is_overview: true
 confluence:
     ajs-parent-page-id: '8684133'
     ajs-parent-page-title: Documentation Center for Nuxeo Platform IDEs
