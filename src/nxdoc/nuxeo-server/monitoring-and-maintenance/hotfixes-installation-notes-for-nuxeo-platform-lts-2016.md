@@ -1,25 +1,13 @@
 ---
-title: Hotfixes Installation Notes for Nuxeo Platform LTS 2015
+title: Hotfixes Installation Notes for Nuxeo Platform LTS 2016
 review:
     comment: ''
-    date: '2017-01-05'
+    date: '2017-02-07'
     status: ok
 labels:
     - lts2016-ok
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '950318'
-    ajs-parent-page-title: Monitoring and Maintenance
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Hotfixes+Installation+Notes+for+Nuxeo+Platform+LTS+2015
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Hotfixes+Installation+Notes+for+Nuxeo+Platform+LTS+2015
-    page_id: '27592264'
-    shortlink: SAalAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/SAalAQ'
-    source_link: /display/NXDOC/Hotfixes+Installation+Notes+for+Nuxeo+Platform+LTS+2015
 tree_item_index: 1200
 version_override:
     'LTS 2015': 710/admindoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015
@@ -72,7 +60,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'main_content' page='ADMINDOC710:Hotfixes Installation Notes for Nuxeo Platform LTS 2015'}}}
+{{{multiexcerpt 'intro_hotfix' page='ADMINDOC710:Hotfixes Installation Notes for Nuxeo Platform LTS 2015'}}}
 
 &nbsp;
 
