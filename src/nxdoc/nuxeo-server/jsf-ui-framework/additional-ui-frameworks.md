@@ -80,12 +80,30 @@ history:
 ---
 {{! excerpt}}
 
-Nuxeo uses several UI frameworks beside the [default JSF technology]({{page page='nuxeo-jsf-ui'}}).
+Nuxeo uses several UI frameworks beside the [JSF technology]({{page page='nuxeo-jsf-ui'}}) and the [Web Components-based Web UI]({{page page='web-ui'}}).
 
 {{! /excerpt}}
 
-&nbsp;
+<div class="row" data-equalizer data-equalize-on="medium">
 
-*   [GWT Integration]({{page space='NXDOC' page='GWT Integration'}})&nbsp;&mdash;&nbsp;<span class="smalltext">GWT is a web toolkit to build rich clients in Java programming language. The Java code is transcoded in JavaScript at build time so the build process generates a fully HTML+JavaScript application ready to be deployed on an HTTP server.</span>
-*   [Extending The Shell]({{page space='NXDOC' page='Extending The+Shell'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This section is intended for developers who wants to provide new Shell commands, namespaces or Shell Features.</span>
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### GWT Integration
 
+GWT is a web toolkit to build rich clients in Java programming language. The Java code is transcoded in JavaScript at build time so the build process generates a fully HTML+JavaScript application ready to be deployed on an HTTP server.
+
+[Learn more &rarr;]({{page space='NXDOC' page='GWT Integration'}})
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Extending The Shell
+
+This section is intended for developers who wants to provide new Shell commands, namespaces or Shell Features.
+
+[Learn more &rarr;]({{page space='NXDOC' page='Extending The+Shell'}})
+{{/panel}}
+</div>
+
+</div>
