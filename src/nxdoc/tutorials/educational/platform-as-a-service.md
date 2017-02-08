@@ -5,7 +5,7 @@ review:
     date: '2016-02-01'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - deployment
     - architecture
     - excerpt
@@ -301,4 +301,4 @@ We realized that in some context / company, building the required development en
 Here again nuxeo.io provides a clean solution, we just need to have the underlying IaaS provider: either AWS, Vagrant or VMWare.
 
 ### SaaS Vendors
-nuxeo.io is the ideal architecture if you are to host a service implemented with Nuxeo Platform, from a time and cost perspectives, while keeping the possibility for each of your customers to benefit from the full customisation capabilities of Nuxeo Platform.
+nuxeo.io is the ideal architecture if you are to host a service implemented with Nuxeo Platform, from a time and cost perspectives, while keeping the possibility for each of your customers to benefit from the full customisation capabilities of the Nuxeo Platform.
