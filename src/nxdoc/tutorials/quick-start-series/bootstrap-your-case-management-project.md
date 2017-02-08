@@ -5,7 +5,7 @@ review:
     date: '2016-02-01'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - bootstrap
     - excerpt
 toc: true
