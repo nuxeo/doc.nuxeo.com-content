@@ -31,6 +31,7 @@ confluence:
 tree_item_index: 600
 version_override:
     'FT': '/nxdoc/how-to-estimate-volume-usage'
+    'LTS 2016': 810/nxdoc/how-to-estimate-volume-usage
     'LTS 2015': 710/admindoc/how-to-estimate-disk-database-and-elasticsearch-usage
 history:
     -

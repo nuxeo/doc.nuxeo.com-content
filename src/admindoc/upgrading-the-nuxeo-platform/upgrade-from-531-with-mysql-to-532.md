@@ -19,6 +19,7 @@ confluence:
 tree_item_index: 800
 version_override:
     'FT': '/nxdoc/upgrade-from-531-with-mysql-to-532'
+    'LTS 2016': 810/nxdoc/upgrade-from-531-with-mysql-to-532
 history:
     -
         author: Solen Guitter

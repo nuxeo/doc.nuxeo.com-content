@@ -21,6 +21,7 @@ confluence:
     source_link: /display/ADMINDOC60/Running+Multiple+Server+Instances+in+Windows
 version_override:
     'FT': '/nxdoc/running-multiple-server-instances-in-windows'
+    'LTS 2016': 810/nxdoc/running-multiple-server-instances-in-windows
     'LTS 2015': 710/admindoc/running-multiple-server-instances-in-windows
     '5.8': 58/admindoc/running-multiple-server-instances-in-windows
 history:

@@ -22,6 +22,7 @@ confluence:
 tree_item_index: 100
 version_override:
     'FT': '/nxdoc/postgresql'
+    'LTS 2016': 810/nxdoc/postgresql
     'LTS 2015': 710/admindoc/postgresql
     '5.8': 58/admindoc/configuring-postgresql
 history:

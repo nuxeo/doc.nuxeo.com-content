@@ -21,6 +21,7 @@ confluence:
 tree_item_index: 500
 version_override:
     'FT': '/nxdoc/python-client'
+    'LTS 2016': 810/nxdoc/python-client
 history:
     -
         author: Solen Guitter

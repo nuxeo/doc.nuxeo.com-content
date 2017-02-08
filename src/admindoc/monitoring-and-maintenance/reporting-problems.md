@@ -19,6 +19,7 @@ confluence:
 tree_item_index: 1200
 version_override:
     'FT': '/nxdoc/reporting-problems'
+    'LTS 2016': 810/nxdoc/reporting-problems
 history:
     -
         author: Benoit Delbosc

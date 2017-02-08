@@ -22,6 +22,7 @@ confluence:
 tree_item_index: 800
 version_override:
     'FT': '/nxdoc/admin-tab-overview'
+    'LTS 2016': 810/nxdoc/admin-tab-overview
 history:
     -
         author: Solen Guitter

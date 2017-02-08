@@ -25,6 +25,7 @@ confluence:
 tree_item_index: 100
 version_override:
     'FT': '/nxdoc/installing-and-setting-up-related-software'
+    'LTS 2016': 810/nxdoc/installing-and-setting-up-related-software
     'LTS 2015': 710/admindoc/installing-and-setting-up-related-software
     '5.8': 58/admindoc/installing-and-setting-up-related-software
 history:

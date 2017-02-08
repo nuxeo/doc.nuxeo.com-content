@@ -6,7 +6,8 @@ review:
     status: ok
 toc: true
 version_override:
-    'FT': 'nxdoc/jsf-ui-framework-overview'
+    'FT': '/nxdoc/jsf-ui-framework-overview'
+    'LTS 2016': 810/nxdoc/jsf-ui-framework-overview
 confluence:
     ajs-parent-page-id: '22380912'
     ajs-parent-page-title: Web UI Framework Overview

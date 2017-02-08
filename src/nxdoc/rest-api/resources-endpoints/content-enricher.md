@@ -8,7 +8,8 @@ labels:
     - 5-9-5
 toc: true
 version_override:
-    'FT': 'nxdoc/content-enrichers'
+    'FT': '/nxdoc/content-enrichers'
+    'LTS 2016': 810/nxdoc/content-enrichers
 confluence:
     ajs-parent-page-id: '22380806'
     ajs-parent-page-title: Resources Endpoints

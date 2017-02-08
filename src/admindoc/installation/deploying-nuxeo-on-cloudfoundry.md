@@ -22,6 +22,7 @@ confluence:
 tree_item_index: 500
 version_override:
     'FT': '/nxdoc/deploying-nuxeo-on-cloudfoundry'
+    'LTS 2016': 810/nxdoc/deploying-nuxeo-on-cloudfoundry
     'LTS 2015': 710/admindoc/deploying-nuxeo-on-cloudfoundry
     '5.8': 58/admindoc/deploying-nuxeo-on-cloudfoundry
 history:

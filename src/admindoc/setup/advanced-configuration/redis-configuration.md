@@ -21,6 +21,7 @@ confluence:
 tree_item_index: 1000
 version_override:
     'FT': '/nxdoc/redis-configuration'
+    'LTS 2016': 810/nxdoc/redis-configuration
 history:
     -
         author: Maxime Hilaire

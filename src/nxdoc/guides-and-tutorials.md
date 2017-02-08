@@ -18,6 +18,7 @@ confluence:
 tree_item_index: 200
 version_override:
     'FT': '/nxdoc/tutorials'
+    'LTS 2016': 810/nxdoc/tutorials
     'LTS 2015': 710/nxdoc/guides-and-tutorials
 history:
     -

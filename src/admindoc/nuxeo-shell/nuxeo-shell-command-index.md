@@ -20,6 +20,7 @@ confluence:
 tree_item_index: 100
 version_override:
     'FT': '/nxdoc/nuxeo-shell-command-index'
+    'LTS 2016': 810/nxdoc/nuxeo-shell-command-index
 history:
     -
         author: Florent Guillaume

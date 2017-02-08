@@ -22,6 +22,7 @@ confluence:
 tree_item_index: 600
 version_override:
     'FT': '/nxdoc/h2-limitations'
+    'LTS 2016': 810/nxdoc/h2-limitations
 history:
     -
         author: Solen Guitter

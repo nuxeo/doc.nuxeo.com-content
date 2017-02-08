@@ -17,7 +17,8 @@ confluence:
     source_link: /display/NXDOC60/Nuxeo+Automation+client
 tree_item_index: 100
 version_override:
-    'FT': 'nxdoc/java-client'
+    'FT': '/nxdoc/java-client'
+    'LTS 2016': 810/nxdoc/java-client
 history:
     -
         author: Solen Guitter

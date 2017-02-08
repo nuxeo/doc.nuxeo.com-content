@@ -21,6 +21,7 @@ confluence:
 tree_item_index: 700
 version_override:
     'FT': '/nxdoc/jdbc-datasource'
+    'LTS 2016': 810/nxdoc/jdbc-datasource
 history:
     -
         author: Solen Guitter

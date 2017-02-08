@@ -22,6 +22,7 @@ confluence:
 tree_item_index: 600
 version_override:
     'FT': '/nxdoc/remote-monitoring-through-a-ssh-tunnel'
+    'LTS 2016': 810/nxdoc/remote-monitoring-through-a-ssh-tunnel
 history:
     -
         author: Solen Guitter

@@ -23,6 +23,7 @@ confluence:
 tree_item_index: 500
 version_override:
     'FT': '/nxdoc/ports-usage-and-firewall-consideration'
+    'LTS 2016': 810/nxdoc/ports-usage-and-firewall-consideration
 history:
     -
         author: Solen Guitter

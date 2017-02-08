@@ -18,6 +18,7 @@ confluence:
     source_link: /display/ADMINDOC60/Upgrade+to+5.4+and+JBoss+5
 version_override:
     'FT': '/nxdoc/upgrade-to-54-and-jboss-5'
+    'LST 2016': 810/nxdoc/upgrade-to-54-and-jboss-5
 history:
     -
         author: Solen Guitter

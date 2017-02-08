@@ -21,6 +21,7 @@ confluence:
 tree_item_index: 700
 version_override:
     'FT': '/nxdoc/transactions-and-connections'
+    'LTS 2016': 810/nxdoc/transactions-and-connections
 history:
     -
         author: Solen Guitter

@@ -24,6 +24,7 @@ confluence:
 tree_item_index: 400
 version_override:
     'FT': '/nxdoc/logs-analysis'
+    'LTS 2016': 810/nxdoc/logs-analysis
 history:
     -
         author: Julien Carsique

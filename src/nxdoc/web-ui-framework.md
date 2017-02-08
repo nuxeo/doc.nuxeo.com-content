@@ -18,6 +18,7 @@ confluence:
 tree_item_index: 1600
 version_override:
     'FT': '/nxdoc/jsf-ui-framework'
+    'LTS 2016': 810/nxdoc/jsf-ui-framework
     'LTS 2015': 710/nxdoc/jsf-ui-framework
 history:
     -

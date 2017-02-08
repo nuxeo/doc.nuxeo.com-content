@@ -25,6 +25,7 @@ confluence:
 tree_item_index: 800
 version_override:
     'FT': '/nxdoc/nuxeo-clustering-configuration'
+    'LTS 2016': 810/nxdoc/nuxeo-clustering-configuration
 history:
     -
         author: Solen Guitter

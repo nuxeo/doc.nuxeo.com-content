@@ -24,6 +24,7 @@ confluence:
 tree_item_index: 100
 version_override:
     'FT': '/nxdoc/setup-best-practices'
+    'LTS 2016': 810/nxdoc/setup-best-practices
 history:
     -
         author: Anonymous

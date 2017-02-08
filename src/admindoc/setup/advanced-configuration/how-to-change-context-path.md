@@ -32,6 +32,7 @@ confluence:
 tree_item_index: 200
 version_override:
     'FT': '/nxdoc/how-to-change-context-path'
+    'LTS 2016': 810/nxdoc/how-to-change-context-path
 history:
     -
         author: Solen Guitter

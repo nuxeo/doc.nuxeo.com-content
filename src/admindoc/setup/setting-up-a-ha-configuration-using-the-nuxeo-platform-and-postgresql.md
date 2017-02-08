@@ -27,6 +27,7 @@ confluence:
 tree_item_index: 1000
 version_override:
     'FT': '/nxdoc/setting-up-a-ha-configuration-using-the-nuxeo-platform-postgresql'
+    'LTS 2016': 810/nxdoc/setting-up-a-ha-configuration-using-the-nuxeo-platform-postgresql
 history:
     -
         author: Solen Guitter

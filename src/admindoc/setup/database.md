@@ -18,6 +18,7 @@ confluence:
 tree_item_index: 500
 version_override:
     'FT': '/nxdoc/database-configuration'
+    'LTS 2016': 810/nxdoc/database-configuration
 history:
     -
         author: Solen Guitter

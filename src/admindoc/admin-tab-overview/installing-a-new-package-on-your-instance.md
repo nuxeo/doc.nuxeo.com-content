@@ -23,6 +23,7 @@ confluence:
 tree_item_index: 200
 version_override:
     'FT': '/nxdoc/installing-a-new-package-on-your-instance'
+    'LTS 2016': 810/nxdoc/installing-a-new-package-on-your-instance
 history:
     -
         author: Manon Lumeau

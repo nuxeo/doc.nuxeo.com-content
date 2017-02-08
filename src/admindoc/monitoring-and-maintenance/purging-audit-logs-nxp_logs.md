@@ -21,6 +21,7 @@ confluence:
 tree_item_index: 500
 version_override:
     'FT': '/nxdoc/purging-audit-logs-nxp_logs'
+    'LTS 2016': 810/nxdoc/purging-audit-logs-nxp_logs
 history:
     -
         author: Solen Guitter

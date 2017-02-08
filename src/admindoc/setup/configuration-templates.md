@@ -21,6 +21,7 @@ confluence:
 tree_item_index: 300
 version_override:
     'FT': '/nxdoc/configuration-templates'
+    'LTS 2016': 810/nxdoc/configuration-templates
 history:
     -
         author: Solen Guitter

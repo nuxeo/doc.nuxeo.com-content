@@ -5,7 +5,8 @@ review:
     date: ''
     status: ok
 version_override:
-    'FT': 'nxdoc/rest-api-web-adapters'
+    'FT': '/nxdoc/rest-api-web-adapters'
+    'LTS 2016': 810/nxdoc/rest-api-web-adapters
 confluence:
     ajs-parent-page-id: '22380806'
     ajs-parent-page-title: Resources Endpoints

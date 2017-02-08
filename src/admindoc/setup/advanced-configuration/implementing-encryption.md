@@ -21,6 +21,7 @@ confluence:
 tree_item_index: 600
 version_override:
     'FT': '/nxdoc/implementing-encryption'
+    'LTS 2016': 810/nxdoc/implementing-encryption
 history:
     -
         author: Solen Guitter

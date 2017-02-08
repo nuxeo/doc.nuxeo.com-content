@@ -21,7 +21,8 @@ confluence:
     source_link: /display/ADMINDOC60/Metrics+and+Monitoring
 tree_item_index: 100
 version_override:
-  'FT': 'nxdoc/metrics-and-monitoring'
+  'FT': '/nxdoc/metrics-and-monitoring'
+  'LTS 2016': 810/nxdoc/metrics-and-monitoring
 history:
     -
         author: Solen Guitter

@@ -24,6 +24,7 @@ confluence:
         /display/ADMINDOC60/Internet+Information+Services+%28IIS%29+Configuration
 version_override:
     'FT': '/nxdoc/internet-information-services-iis'
+    'LTS 2016': 810/nxdoc/internet-information-services-iis
 history:
     -
         author: Solen Guitter

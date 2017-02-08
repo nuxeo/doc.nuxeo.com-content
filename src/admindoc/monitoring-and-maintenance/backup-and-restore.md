@@ -20,6 +20,7 @@ confluence:
 tree_item_index: 200
 version_override:
     'FT': '/nxdoc/backup-and-restore'
+    'LTS 2016': 810/nxdoc/backup-and-restore
 history:
     -
         author: Florent Guillaume

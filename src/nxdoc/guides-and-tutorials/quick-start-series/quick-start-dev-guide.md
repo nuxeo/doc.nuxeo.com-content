@@ -5,7 +5,8 @@ review:
     date: ''
     status: ok
 version_override:
-    'FT': /nxdoc/start-customizing-the-nuxeo-platform
+    'FT': '/nxdoc/start-customizing-the-nuxeo-platform'
+    'LTS 2016': 810/nxdoc/start-customizing-the-nuxeo-platform
 confluence:
     ajs-parent-page-id: '22380617'
     ajs-parent-page-title: Quick Start Series

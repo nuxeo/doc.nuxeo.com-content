@@ -19,6 +19,7 @@ confluence:
 tree_item_index: 500
 version_override:
     'FT': '/nxdoc/upgrade-from-541-to-542-with-oracle'
+    'LTS 2016': 810/nxdoc/upgrade-from-541-to-542-with-oracle
 history:
     -
         author: Solen Guitter

@@ -18,6 +18,7 @@ confluence:
 tree_item_index: 800
 version_override:
     'FT': '/nxdoc/counting-documents'
+    'LTS 2016': 810/nxdoc/counting-documents
 history:
     -
         author: Solen Guitter

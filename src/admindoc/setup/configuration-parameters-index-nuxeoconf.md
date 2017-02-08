@@ -24,6 +24,7 @@ confluence:
 tree_item_index: 400
 version_override:
     'FT': '/nxdoc/configuration-parameters-index-nuxeoconf'
+    'LTS 2016': 810/nxdoc/configuration-parameters-index-nuxeoconf
 history:
     -
         author: Ronan Daniellou

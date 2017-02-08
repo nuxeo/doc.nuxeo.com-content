@@ -22,6 +22,7 @@ confluence:
 tree_item_index: 600
 version_override:
     'FT': '/nxdoc/authentication-and-user-management'
+    'LTS 2016': 810/nxdoc/authentication-and-user-management
 history:
     -
         author: Anonymous

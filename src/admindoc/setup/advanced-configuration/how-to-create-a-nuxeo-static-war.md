@@ -32,6 +32,7 @@ confluence:
 tree_item_index: 400
 version_override:
     'FT': '/nxdoc/how-to-create-a-nuxeo-static-war'
+    'LTS 2016': 810/nxdoc/how-to-create-a-nuxeo-static-war
     'LTS 2015': 710/admindoc/how-to-create-a-nuxeo-static-war
 history:
     -

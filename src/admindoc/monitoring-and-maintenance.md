@@ -22,6 +22,7 @@ confluence:
 tree_item_index: 500
 version_override:
     'FT': '/nxdoc/monitoring-and-maintenance'
+    'LTS 2016': 810/nxdoc/monitoring-and-maintenance
 history:
     -
         author: Solen Guitter

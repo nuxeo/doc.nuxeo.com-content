@@ -22,6 +22,7 @@ confluence:
 tree_item_index: 100
 version_override:
     'FT': '/nxdoc/registering-your-nuxeo-instance'
+    'LTS 2016': 810/nxdoc/registering-your-nuxeo-instance
 history:
     -
         author: Solen Guitter

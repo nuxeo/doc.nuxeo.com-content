@@ -20,6 +20,7 @@ confluence:
 tree_item_index: 300
 version_override:
     'FT': '/nxdoc/nuxeo-server-commands'
+    'LTS 2016': 810/nxdoc/nuxeo-server-commands
 history:
     -
         author: Solen Guitter

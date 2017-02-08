@@ -23,6 +23,7 @@ confluence:
         /display/ADMINDOC60/Query+Models+and+Result+Providers+Migration+to+Content+Views+and+Page+Providers
 version_override:
     'FT': '/nxdoc/query-models-and-result-providers-migration-to-content-views-and-page-providers'
+    'LTS 2016': 810/nxdoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
 history:
     -
         author: Solen Guitter

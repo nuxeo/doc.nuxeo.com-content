@@ -9,7 +9,8 @@ labels:
     - marketplace-package
 toc: true
 version_override:
-    'FT': 'nxdoc/nuxeo-drive'
+    'FT': '/nxdoc/nuxeo-drive'
+    'LTS 2016': 810/nxdoc/nuxeo-drive
 confluence:
     ajs-parent-page-id: '21299463'
     ajs-parent-page-title: Marketplace Add-Ons

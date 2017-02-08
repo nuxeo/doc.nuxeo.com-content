@@ -21,6 +21,7 @@ confluence:
 tree_item_index: 400
 version_override:
     'FT': '/nxdoc/nuxeo-automation-commands'
+    'LTS 2016': 810/nxdoc/nuxeo-automation-commands
 history:
     -
         author: Solen Guitter

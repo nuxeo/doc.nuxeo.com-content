@@ -18,6 +18,7 @@ confluence:
 tree_item_index: 700
 version_override:
     'FT': '/nxdoc/upgrade-from-531-to-532'
+    'LST 2016': 810/nxdoc/upgrade-from-531-to-532
 history:
     -
         author: Solen Guitter

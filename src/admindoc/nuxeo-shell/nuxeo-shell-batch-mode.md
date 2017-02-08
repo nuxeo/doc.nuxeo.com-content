@@ -21,6 +21,7 @@ confluence:
 tree_item_index: 200
 version_override:
     'FT': '/nxdoc/nuxeo-shell-batch-mode'
+    'LTS 2016': 810/nxdoc/nuxeo-shell-batch-mode
 history:
     -
         author: Solen Guitter

@@ -22,6 +22,7 @@ confluence:
 tree_item_index: 1100
 version_override:
     'FT': '/nxdoc/elasticsearch-setup'
+    'LTS 2016': 810/nxdoc/elasticsearch-setup
 history:
     -
         author: Alain Escaffre

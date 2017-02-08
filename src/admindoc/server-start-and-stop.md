@@ -19,6 +19,7 @@ confluence:
 tree_item_index: 400
 version_override:
     'FT': '/nxdoc/server-start-and-stop'
+    'LTS 2016': 810/nxdoc/server-start-and-stop
     'LTS 2015': 710/admindoc/server-start-and-stop
     '5.8': 58/admindoc/server-start-and-stop
 history:

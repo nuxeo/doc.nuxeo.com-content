@@ -22,6 +22,7 @@ confluence:
 tree_item_index: 1100
 version_override:
     'FT': '/nxdoc/garbage-collecting-orphaned-binaries'
+    'LTS 2016': 810/nxdoc/garbage-collecting-orphaned-binaries
 history:
     -
         author: Julien Carsique

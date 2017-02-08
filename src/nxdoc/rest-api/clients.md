@@ -18,6 +18,7 @@ confluence:
 tree_item_index: 800
 version_override:
     'FT': '/nxdoc/client-sdks'
+    'LTS 2016': 810/nxdoc/client-sdks
 history:
     -
         author: Manon Lumeau

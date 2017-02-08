@@ -19,7 +19,8 @@ labels:
     - import
     - rest-api
 version_override:
-    'FT': 'nxdoc/howto-upload-file-nuxeo-using-rest-api'
+    'FT': '/nxdoc/howto-upload-file-nuxeo-using-rest-api'
+    'LTS 2016': 810/nxdoc/howto-upload-file-nuxeo-using-rest-api
 confluence:
     ajs-parent-page-id: '22380745'
     ajs-parent-page-title: REST API

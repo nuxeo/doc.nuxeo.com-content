@@ -22,6 +22,7 @@ confluence:
     source_link: /display/ADMINDOC60/Sensitive+Configuration+Data+Encryption
 version_override:
     'FT': '/nxdoc/sensitive-configuration-data-encryption'
+    'LTS 2016': 810/nxdoc/sensitive-configuration-data-encryption
 history:
     -
         author: Solen Guitter

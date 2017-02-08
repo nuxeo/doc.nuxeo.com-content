@@ -21,6 +21,7 @@ confluence:
 tree_item_index: 100
 version_override:
     'FT': '/nxdoc/upgrade-from-58-to-60'
+    'LTS 2016': 810/nxdoc/upgrade-from-58-to-60
     'LTS 2015': 710/admindoc/upgrade-from-58-to-60
 history:
     -

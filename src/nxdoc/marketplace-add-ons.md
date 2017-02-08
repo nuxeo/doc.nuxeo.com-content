@@ -18,6 +18,7 @@ confluence:
 tree_item_index: 1900
 version_override:
     'FT': '/nxdoc/nuxeo-add-ons'
+    'LTS 2016': 810/nxdoc/nuxeo-add-ons
 history:
     -
         author: Manon Lumeau

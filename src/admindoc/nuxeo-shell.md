@@ -22,6 +22,7 @@ confluence:
 tree_item_index: 700
 version_override:
     'FT': '/nxdoc/nuxeo-shell'
+    'LTS 2016': 810/nxdoc/nuxeo-shell
 history:
     -
         author: Frantz Fischer

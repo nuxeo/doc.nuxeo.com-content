@@ -23,6 +23,7 @@ confluence:
     source_link: /display/ADMINDOC60/nuxeoctl+and+Control+Panel+Usage
 version_override:
     'FT': '/nxdoc/nuxeoctl-and-control-panel-usage'
+    'LTS 2016': 810/nxdoc/nuxeoctl-and-control-panel-usage
     'LTS 2015': 710/admindoc/nuxeoctl-and-control-panel-usage
     '5.8': 58/admindoc/nuxeoctl-and-control-panel-usage
 history:

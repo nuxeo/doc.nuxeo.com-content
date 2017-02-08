@@ -5,7 +5,8 @@ review:
     date: ''
     status: ok
 version_override:
-    'FT': 'nxdoc/request-authentication'
+    'FT': '/nxdoc/request-authentication'
+    'LTS 2016': 810/nxdoc/request-authentication
 confluence:
     ajs-parent-page-id: '22380745'
     ajs-parent-page-title: REST API
