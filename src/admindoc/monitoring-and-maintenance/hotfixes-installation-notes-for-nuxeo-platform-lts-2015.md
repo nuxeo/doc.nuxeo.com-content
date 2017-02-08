@@ -391,6 +391,6 @@ Until this bug is fixed, you will need to use the following contribution as a wo
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-- [List of hotfixes for Nuxeo Platform LTS 205](https://connect.nuxeo.com/nuxeo/site/marketplace/hotfixes/cap-7.10)
+- [List of hotfixes for Nuxeo Platform LTS 2015](https://connect.nuxeo.com/nuxeo/site/marketplace/hotfixes/cap-7.10)
 
 {{/panel}}</div></div>
