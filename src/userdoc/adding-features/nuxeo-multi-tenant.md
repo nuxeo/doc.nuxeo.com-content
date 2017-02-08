@@ -2,9 +2,10 @@
 title: Nuxeo Multi-Tenant
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-02-08'
     status: ok
 labels:
+    - lts2016-ok
     - marketplace-package
     - multi-tenant
     - excerpt
@@ -197,9 +198,9 @@ Multi-tenancy is not automatically available on your Nuxeo Platform after the [p
 To activate multi-tenancy:
 
 1.  In the Admin tab, click on the **Tenant isolation** tab.
-2.  Click on the **Enable** button.
-    Tenant isolation status goes to "enabled".
-    You can now [create new tenants](#create-new-t).
+2.  Click on the **Enable** button.<br/>
+    Tenant isolation status goes to "enabled".<br/>
+    You can now [create new tenants](#create-new-tenant).
 
 ## {{> anchor 'create-new-tenant'}}Creating a New Tenant
 
@@ -216,8 +217,8 @@ When a global administrator creates a new tenant, he needs to define some elemen
     *   Select which document types should be available or not in the tenant.
     *   Select the search forms that should be used in the tenant.
         ![]({{file name='multi-tenant-creation-form.png'}} ?w=550,border=true)
-3.  Click on **Create**.
-    The **Content** tab of the new tenant is displayed.
+3.  Click on **Create**.<br/>
+    The **Content** tab of the new tenant is displayed.<br/>
     The tenant is accessible by administrators only. You now need to define who the tenant administrator(s) is or are.
 
 ## Defining the Tenant Administrator
@@ -228,28 +229,27 @@ When the tenant is just created, the global administrator should define at least
 
 It takes two steps to make a user a tenant administrator.
 
-**Step 1: Edit the user's properties to associate him with a tenant:**
+**Step 1: Edit the user's properties to associate them with a tenant:**
 
 1.  Click on the **Admin** main tab, and then on the **Users & groups** tab.
     The members management interface opens on the user directory search form.
-2.  Search a user and click on the user's name to open his or her card.
+2.  Search a user and click on the user's name to open their card.
     The user's card is displayed.
 3.  Click on the **Edit** tab.
 4.  In the **Tenant ID** list, select the domain you want the user to be an administrator of.
     ![]({{file name='multi-tenant-user-card.png'}} ?w=350,border=true)
-5.  Click on the **Save** button.
-    The **View** tab is displayed with your modifications.
-    The user now has access to the tenant. You now need to declare him as an administrator of the tenant.
+5.  Click on the **Save** button.<br/>
+    The **View** tab is displayed with your modifications.<br/>
+    The user now has access to the tenant. You now need to declare them as an administrator of the tenant.
 
 **Step 2: Declare the user as a tenant administrator:**
 
 1.  On the domain root, click on the **Manage** tab.
-2.  In the first tab **Tenant isolation**, type the username, first name or last name of the user you want to be an administrator.
-    To make all the members of a group administrators, type the group's name.
-    The names of the users or groups corresponding to the typed characters are automatically displayed as you type.
+2.  In the first tab **Tenant isolation**, type the username, first name or last name of the user you want to be an administrator.<br/>
+    The names of the users corresponding to the typed characters are automatically displayed as you type.
     ![]({{file name='multi-tenant-admin-search.png'}} ?w=350,border=true)
 3.  Click on the user you want to give permissions to.
-4.  Click on **Save**.
+4.  Click on **Save**.<br/>
     The user now has access to the tenant administration and to the **Users and groups** and **Vocabularies** tabs of the Admin main tab.
     ![]({{file name='multi-tenant-admin-center.png'}} ?w=450,border=true)
     The user is automatically added in two virtual groups: a **powerusers** group for functional administration and a tenant administrators group for administration features.
@@ -269,8 +269,6 @@ The vocabularies I10subjects and I10coverage are isolated and don't display any 
 
 See the [Managing Vocabularies]({{page page='managing-vocabularies'}}) page.
 
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel heading='Related user documentation'}}
@@ -286,7 +284,6 @@ See the [Managing Vocabularies]({{page page='managing-vocabularies'}}) page.
 <div class="column medium-6">
 
 &nbsp;
-
 
 </div>
 </div>
