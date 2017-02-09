@@ -331,6 +331,7 @@ history:
         date: '2014-11-06 12:25'
         message: ''
         version: '1'
+previous_link: 710/nxdoc/getting-started-with-nuxeo-studio
 
 ---
 Here we want to add some server side Java logic that will update the contract's renegotiation date. In our exemple it will simply take the contract's start date and add three months to it, but you can think of integrating any custom logic in your Java class, including a connection to an external webservice or an ERP.
@@ -386,8 +387,7 @@ This procedure can only be used for **Nuxeo 6.0 and later** versions. **For Nuxe
 
 4.  If nothing appears, uncheck the **Group items by category** box.
 5.  Check both **Nuxeo IDE** and **Nuxeo Shell** and click **Next.**
-    **![]({{file name='NxIDE_install2.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=400,h=326,border=true)
-    **
+    ![]({{file name='NxIDE_install2.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=400,h=326,border=true)
 6.  Follow the wizard: accept license when prompted and click Next until the software is downloaded.
     ![]({{file name='NxIDE_install6.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=350,border=true)
 7.  Restart Eclipse when prompted.
@@ -649,7 +649,7 @@ A unit test comes along in `src/test/java`. You will need it to pass in order to
     }
     ```
 
-2.  Now replace `your.studio.project.symbolic.name`&nbsp;w<span style="line-height: 21.58px;">ith `studio.extensions.MAVEN-ARTIFACT-ID`. You can find your project's `MAVEN-ARTIFACT-ID` in **Settings** > **Application Information**.</span>
+2.  Now replace `your.studio.project.symbolic.name` with `studio.extensions.MAVEN-ARTIFACT-ID`. You can find your project's `MAVEN-ARTIFACT-ID` in **Settings** > **Application Information**.</span>
 
 If you try running the test (in Eclipse, right-click on your project and choose **Run As, JUnit Test**), you will notice that the test fails because we miss things in our Studio project. We need to add them to make the test pass; that's test driven development.
 
@@ -747,5 +747,3 @@ That's it! You are ready to develop on the Nuxeo Platform.
 ## What to do Next
 
 You should learn to [package and deploy your application](https://university.nuxeo.io/nuxeo/university/#!/course/nuxeo-platform-developer-basics/package-deploy-application) in a Nuxeo Platform instance.
-
-&nbsp;

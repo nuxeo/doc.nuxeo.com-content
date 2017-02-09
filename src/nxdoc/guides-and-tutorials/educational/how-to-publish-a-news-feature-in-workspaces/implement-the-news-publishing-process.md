@@ -83,6 +83,7 @@ history:
         date: '2011-01-27 00:27'
         message: ''
         version: '1'
+previous_link: 710/nxdoc/add-a-news-content-view-on-workspaces
 
 ---
 In this section, we will:
@@ -197,7 +198,3 @@ The new permission will now be available in the list of permissions on Workspace
 
     You should end up with something like this:
     ![]({{file name='PublishNewsChain.png'}} ?w=600,h=400,border=true)
-
-* * *
-
-&nbsp;

@@ -22,106 +22,108 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/RYCyAQ'
     source_link: /display/NXDOC710/2-+Creating+the+Subworkflows
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-24 13:37'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-24 13:29'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-24 10:02'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 16:41'
         message: TOC
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 11:46'
         message: Fixed broken links
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-09 16:10'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-09 16:10'
         message: Fixed formatting and typos
         version: '13'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-08 13:56'
         message: Fixed error
         version: '12'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-08 12:06'
         message: ''
         version: '11'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-08 11:14'
         message: ''
         version: '10'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-08 11:09'
         message: ''
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-08 11:00'
         message: ''
         version: '8'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-08 10:22'
         message: ''
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 19:50'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 19:48'
         message: ''
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:48'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:45'
         message: ''
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:45'
         message: ''
         version: '1'
+previous_link: 710/nxdoc/1-creating-the-expense-document-type
+next_link: 710/nxdoc/3-creating-the-main-workflow
 
 ---
 {{#> callout type='info' }}
 
-This document is part of the&nbsp;[Sub Workflow Example]({{page page='sub-workflow-example'}}) project series.
+This document is part of the [Sub Workflow Example]({{page page='sub-workflow-example'}}) project series.
 
 {{/callout}}
 
@@ -139,10 +141,10 @@ Before starting this tutorial step, make sure you create in your Nuxeo Platform 
 
 In our case this workflow will be used if the expense is worth less than $100 and not belonging in the "misc" category, but it needs to be reusable in another context as well.
 
-1.  In Nuxeo Studio, go to&nbsp;<span style="color: rgb(0,0,0);text-decoration: none;">Nuxeo Studio Rocks</span> > **Workflow definitions** and click on the **New** button.
+1.  In Nuxeo Studio, go to Nuxeo Studio&nbsp;> **Workflow definitions** and click on the **New** button.
 2.  Fill in the fields:
 
-    1.  **Feature ID**:&nbsp;`subOneLevelValidation`
+    1.  **Feature ID**: `subOneLevelValidation`
     2.  **Label**: Generic one level validation workflow.
 3.  Click on the **Next** button.
     The Definition tab of the workflow is displayed.
@@ -152,7 +154,7 @@ In our case this workflow will be used if the expense is worth less than $100 an
 We want to keep this workflow generic, remember? So what we will do is setup a workflow variable to define the assignees. The parent workflow will send us the variable content.
 
 1.  Add a variable named `level1Assignees`.
-2.  Choose the&nbsp;**String** type.
+2.  Choose the **String** type.
 3.  Check multi-valued (we may have several assignees).
 4.  Save your modifications.
     Look at the result below:
@@ -188,7 +190,7 @@ Set the following values:
 
 1.  **Title**: First level validation
 2.  **Directive**: Please review this document.
-3.  **<span style="color: rgb(67,67,67);">Assignees expression</span>**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):&nbsp;
+3.  **<span style="color: rgb(67,67,67);">Assignees expression</span>**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
     `@{WorkflowVariables["level1Assignees"]}`
     This calls the corresponding workflow variable that will be set in the parent workflow.
 4.  **Grant permission to task assignees:** Read (in our case we want to make sure the accountants will be able to view the document, not necessarily to modify it).
@@ -197,7 +199,7 @@ Set the following values:
 
 #### Transitions Tab
 
-1.  In the&nbsp;`validate` transition, click on the&nbsp;**Create** button to add a new automation chain.
+1.  In the `validate` transition, click on the **Create** button to add a new automation chain.
 2.  Name your chain `validateDoc`.
 3.  Set your chain as following:
 
@@ -211,7 +213,7 @@ In our case this workflow will be used in the other possible situations, but it 
 1.  In Nuxeo Studio, go to **Workflow** > **Workflow definitions** and click on the **New** button.
 2.  Fill in the fields:
 
-    1.  **Feature ID**:&nbsp;`subTwoLevelsValidation`
+    1.  **Feature ID**: `subTwoLevelsValidation`
     2.  **Label**: Two levels validation workflow
 3.  Click on the **Next** button.
 
@@ -284,9 +286,9 @@ Set the following values:
 
 #### Transitions Tab
 
-1.  In the&nbsp;`validate` transition, select the&nbsp;`validateDoc` chain.
+1.  In the `validate` transition, select the `validateDoc` chain.
     Look at the expected result:
     ![]({{file name='subtwolevels-node1-transitions-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,h=351,border=true)
 2.  Save your modifications in the node and on the graph.
 
-That's it! Our sub workflows are ready, now only remains the one workflow to rule them all, the [main workflow]({{page space='studio' page='3-creating-the-main-workflow'}}).
+That's it! Our sub workflows are ready, now only remains the one workflow to rule them all, the main workflow.

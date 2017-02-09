@@ -107,6 +107,7 @@ history:
         date: '2011-01-27 00:09'
         message: ''
         version: '1'
+next_link: 710/nxdoc/add-a-news-content-view-on-workspaces
 
 ---
 In this section, we will:
@@ -222,7 +223,3 @@ Here are the steps to create the button to create news from a Workspace into the
 
     You should end up with something like this:
     ![]({{file name='CreateNewsChain.png'}} ?w=600,border=true)
-
-* * *
-
-&nbsp;

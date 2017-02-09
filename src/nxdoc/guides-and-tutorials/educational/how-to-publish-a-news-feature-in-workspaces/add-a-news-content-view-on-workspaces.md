@@ -75,6 +75,8 @@ history:
         date: '2011-01-28 16:19'
         message: ''
         version: '1'
+previous_link: 710/nxdoc/implement-the-news-document
+next_link: 710/nxdoc/implement-the-news-publishing-process
 
 ---
 In the section, we will:
@@ -120,7 +122,3 @@ The view is done. Now we need to apply it to the Workspace document type. To do 
 3.  In **Tabs** > **Content Views** tab: add a new tab configuration called `News` that uses the `NewsTab` content view and has order 1.
     ![]({{file name='Tabs_ContentViews_Workspace.png'}} ?w=600,h=386,border=true)
 4.  Edit the layouts to remove the default Studio warning.
-
-* * *
-
-&nbsp;
