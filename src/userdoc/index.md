@@ -4,6 +4,7 @@ review:
     comment: ''
     date: '2017-01-25'
     status: ok
+is_overview: true
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''

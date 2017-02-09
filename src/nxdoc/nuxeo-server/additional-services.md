@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - home
+is_overview: true
 confluence:
     ajs-parent-page-id: '31033314'
     ajs-parent-page-title: Nuxeo Server
@@ -54,16 +55,50 @@ history:
 ---
 This section lists additional services and modules that are part of the default distribution of the Nuxeo Platform. You can also refer to the [additional packages section]({{page page='marketplace-add-ons'}}) for understanding how to integrate features offered by additional plugins.
 
-*   [Data Visualization]({{page space='NXDOC' page='data-visualization'}})
-*   [File Manager]({{page space='NXDOC' page='File Manager'}})&nbsp;&mdash;&nbsp;<span class="smalltext">The File Manager is used for creating documents from simple binaries.</span>
-*   [Nuxeo Core Import / Export API](/pages/viewpage.action?pageId=14257432)&nbsp;&mdash;&nbsp;<span class="smalltext">The import / export service is providing an API to export a set of documents from the repository in an XML format and then re-importing them back. The service can also be used to create in batch document trees from valid import archives or to provide a simple solution of creating and retrieving repository data. This could be used for example to expose repository data through REST or raw HTTP requests.</span>
-*   [Conversion]({{page space='NXDOC' page='Conversion'}})&nbsp;&mdash;&nbsp;<span class="smalltext">The Nuxeo Platform comes with a conversion service that can be used to manage conversion of blobs from one format to an other.</span>
-*   [Collections]({{page space='NXDOC' page='Collections'}})
-*   [Preview]({{page space='NXDOC' page='Preview'}})
-*   [Tagging]({{page space='NXDOC' page='Tagging'}})&nbsp;&mdash;&nbsp;<span class="smalltext">The tag service uses two important concepts: a tag object, and a tagging action. Both are represented as Nuxeo documents.</span>
-*   [Thumbnail]({{page space='NXDOC' page='Thumbnail'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Documents can have a thumbnail. A thumbnail is a reduced-size version of a picture used to help in recognizing and organizing documents. It will stand for any kind of document according to the type and/or facet.</span>
-*   [Publisher]({{page space='NXDOC' page='Publisher'}})&nbsp;&mdash;&nbsp;<span class="smalltext">There are three ways to publish a document:</span>
-*   [Binary Metadata]({{page space='NXDOC' page='Binary Metadata'}})
-*   [Renditions]({{page space='NXDOC' page='Renditions'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This page explains what renditions are, how to get them and how to contribute new ones.</span>
-*   [Work and WorkManager]({{page space='NXDOC' page='Work and+WorkManager'}})&nbsp;&mdash;&nbsp;<span class="smalltext">The WorkManager service allows you to run code later, asynchronously, in a separate thread and transaction.</span>
-*   [Transient Store]({{page space='NXDOC' page='Transient Store'}})&nbsp;&mdash;&nbsp;<span class="smalltext">The Transient Store allows to store temporary blobs and associated parameters on a Nuxeo instance but outside the repository, thus the "transient" aspect.</span>
+<div class="row" data-equalizer data-equalize-on="medium">
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Data Visualization
+
+Data Visualization brings a set of custom elements are available for bootstrapping custom graphical dashboards.
+
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page space='NXDOC' page='data-visualization'}})
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Thumbnail
+
+{{{excerpt space='nxdoc' page='thumbnail'}}}
+
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page space='NXDOC' page='Thumbnail'}})
+{{/panel}}
+</div>
+
+</div>
+
+<div class="row" data-equalizer data-equalize-on="medium">
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### WorkManager
+
+{{{excerpt space='nxdoc' page='work-and-workmanager'}}}
+
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='nxdoc' page='work-and-workmanager'}})
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### File Manager
+
+The File Manager is used to create documents from simple binaries. It is a traditional Nuxeo Platform service that offers some methods that help standardize what happens when a file is captured in the Platform.
+
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page space='NXDOC' page='File Manager'}})
+
+{{/panel}}
+</div>
+</div>

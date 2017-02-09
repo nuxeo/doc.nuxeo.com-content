@@ -6,6 +6,7 @@ review:
     status: ok
 labels:
     - lts2016-ok
+is_overview: true
 confluence:
     ajs-parent-page-id: '19235679'
     ajs-parent-page-title: Educational
@@ -31,6 +32,35 @@ history:
         version: '1'
 
 ---
-*   [Simple Workflow Example]({{page space='NXDOC' page='Simple Workflow+Example'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Company C has decided to be more rigorous on proposals sent by the sales team. A workflow has to be set up so that each proposal is reviewed by the head of operations, this one being able to decide of an additional juridical control.</span>
-*   [Sub Workflow Example]({{page space='NXDOC' page='Sub Workflow+Example'}})&nbsp;&mdash;&nbsp;<span class="smalltext">The subworkflow functionality is the ability to call a workflow from another workflow (creating inception-like workflows), and to pass it variables along the way. The main workflow is suspended while the subworkflow runs, and resumes when the subworkflow ends.</span>
-*   [Workflow Escalation Rules Example]({{page space='NXDOC' page='Workflow Escalation+Rules+Example'}})&nbsp;&mdash;&nbsp;<span class="smalltext">The company OhMyDoc has decided to set up a validation workflow for its press releases, with due dates and automatic escalation to the next step of the workflow after a defined period.</span>
+<div class="row" data-equalizer data-equalize-on="medium">
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Simple Workflow Example
+
+Company C has decided to be more rigorous on proposals sent by the sales team. A workflow has to be set up so that each proposal is reviewed by the head of operations, this one being able to decide of an additional juridical control.
+
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='810' space='nxdoc' page='simple-workflow-example'}})
+{{/panel}}
+
+{{#> panel type='secondary' match_height='true'}}
+### Sub Workflow Example
+
+The subworkflow functionality is the ability to call a workflow from another workflow (creating inception-like workflows), and to pass it variables along the way. The main workflow is suspended while the subworkflow runs, and resumes when the subworkflow ends.
+
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='810' space='nxdoc' page='sub-workflow-example'}})
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Workflow Escalation Rules Example
+
+The company OhMyDoc has decided to set up a validation workflow for its press releases, with due dates and automatic escalation to the next step of the workflow after a defined period.
+
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='810' space='nxdoc' page='workflow-escalation-rules-example'}})
+{{/panel}}
+
+</div>
+
+</div>

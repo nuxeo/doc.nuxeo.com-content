@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - home
     - multiexcerpt
+is_overview: true
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''

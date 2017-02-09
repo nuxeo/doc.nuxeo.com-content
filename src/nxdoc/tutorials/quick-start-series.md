@@ -8,6 +8,7 @@ labels:
     - content-review-lts2016
     - last-review-20150128
     - home
+is_overview: true
 confluence:
     ajs-parent-page-id: '7209076'
     ajs-parent-page-title: Tutorials
@@ -53,7 +54,9 @@ history:
         version: '1'
 
 ---
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 
 ### Getting Familiar with the Nuxeo Platform
 
@@ -62,7 +65,8 @@ Find out about the features and concepts of the Nuxeo Platform.
 - [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
 - [Nuxeo Platform Feature Table]({{page page='nuxeo-platform-feature-table'}})
 
-{{/panel}}{{#> panel type='secondary' match_height='true'}}
+{{/panel}}
+{{#> panel type='secondary' match_height='true'}}
 
 ### Choices
 
@@ -70,7 +74,10 @@ Any project requires to choose between several possible implementations. Here ar
 
 - [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+{{/panel}}
+</div>
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 
 ### Bootstrapping Your Project
 
@@ -79,7 +86,8 @@ You don't know how to get your project started? Here are some tips for you.
 - [Bootstrap Your Document Management Project]({{page page='bootstrap-your-document-management-project'}})
 - [Bootstrap Your Case Management Project]({{page page='bootstrap-your-case-management-project'}})
 
-{{/panel}}{{#> panel type='secondary' match_height='true'}}
+{{/panel}}
+{{#> panel type='secondary' match_height='true'}}
 
 ### Getting Started
 
@@ -89,4 +97,6 @@ Here are some resources to help you start your Nuxeo Platform application:
 - [Quick Start Dev Guide]({{page page='start-customizing-the-nuxeo-platform'}})
 - [First Steps With Studio: Technical Documentation Tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}})
 
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>

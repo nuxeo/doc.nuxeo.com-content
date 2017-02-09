@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - home
     - excerpt
+is_overview: true
 confluence:
     ajs-parent-page-id: '16089312'
     ajs-parent-page-title: JSF UI Framework
@@ -80,12 +81,28 @@ history:
 ---
 {{! excerpt}}
 
-Nuxeo uses several UI frameworks beside the [default JSF technology]({{page page='nuxeo-jsf-ui'}}).
+Nuxeo uses several UI frameworks beside the [JSF technology]({{page page='nuxeo-jsf-ui'}}) and the [Web Components-based Web UI]({{page page='web-ui'}}).
 
 {{! /excerpt}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### GWT Integration
 
-&nbsp;
+GWT is a web toolkit to build rich clients in Java programming language. The Java code is transcoded in JavaScript at build time so the build process generates a fully HTML+JavaScript application ready to be deployed on an HTTP server.
 
-*   [GWT Integration]({{page space='NXDOC' page='GWT Integration'}})&nbsp;&mdash;&nbsp;<span class="smalltext">GWT is a web toolkit to build rich clients in Java programming language. The Java code is transcoded in JavaScript at build time so the build process generates a fully HTML+JavaScript application ready to be deployed on an HTTP server.</span>
-*   [Extending The Shell]({{page space='NXDOC' page='Extending The+Shell'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This section is intended for developers who wants to provide new Shell commands, namespaces or Shell Features.</span>
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='810' space='nxdoc' page='gwt-integration'}})
+{{/panel}}
+</div>
 
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Extending The Shell
+
+This section is intended for developers who wants to provide new Shell commands, namespaces or Shell Features.
+
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='810' space='nxdoc' page='extending-the-shell'}})
+{{/panel}}
+</div>
+
+</div>
