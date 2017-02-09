@@ -4,6 +4,7 @@ review:
     comment: ''
     date: ''
     status: ok
+is_overview: true
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
@@ -200,7 +201,7 @@ history:
 ---
 <div class="row"><div class="column medium-8">{{#> panel type='primary'}}
 
-<span style="color: rgb(255,255,255);">Welcome in the Installation and Administration Documentation!</span>
+Welcome in the Installation and Administration Documentation!
 
 {{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
 

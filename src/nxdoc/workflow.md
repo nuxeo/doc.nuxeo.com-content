@@ -6,6 +6,7 @@ review:
     status: ok
 labels:
     - workflow
+is_overview: true
 confluence:
     ajs-parent-page-id: '22380898'
     ajs-parent-page-title: Developer Documentation Center

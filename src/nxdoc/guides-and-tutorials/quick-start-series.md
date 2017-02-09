@@ -6,6 +6,7 @@ review:
     status: ok
 labels:
     - last-review-20150212
+is_overview: true
 confluence:
     ajs-parent-page-id: '22380664'
     ajs-parent-page-title: Guides and Tutorials
