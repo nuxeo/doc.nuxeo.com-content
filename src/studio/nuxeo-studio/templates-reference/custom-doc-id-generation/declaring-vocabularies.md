@@ -94,11 +94,12 @@ history:
         date: '2010-09-06 18:23'
         message: ''
         version: '1'
-
+previous_link: /studio/adding-a-type-property-to-file-document-type
+next_link: /studio/configure-the-id-generation-using-functions
 ---
 {{! excerpt}}
 
-Now that the&nbsp;["File" document type has been overridden with our new file]({{page page='adding-a-type-property-to-file-document-type'}})&nbsp;that has&nbsp;`AdditionalInfo`&nbsp;schema, we need to create the vocabularies used to select the document type and generate the first part of the document's ID.
+Now that the ["File" document type has been overridden with our new file]({{page page='adding-a-type-property-to-file-document-type'}}) that has `AdditionalInfo` schema, we need to create the vocabularies used to select the document type and generate the first part of the document's ID.
 
 {{! /excerpt}}
 
@@ -196,4 +197,4 @@ See [how to add a new vocabulary]({{page space='nxdoc' page='how-to-add-a-new-vo
     {{/callout}}
 3.  Go and edit the widgets used for the Type and UID metadata to indicate the values should be taken in these vocabularies.
 
-Next, we need to [create and configure the automation chain that will generate the UID]({{page page='configure-the-id-generation-using-functions'}}).
+Next, we need to create and configure the automation chain that will generate the UID.

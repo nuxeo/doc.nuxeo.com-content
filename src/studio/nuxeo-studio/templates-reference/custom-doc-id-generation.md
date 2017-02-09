@@ -104,6 +104,7 @@ history:
         date: '2010-09-06 17:30'
         message: ''
         version: '1'
+next_link: /studio/adding-a-type-property-to-file-document-type
 
 ---
 It is very frequent that you need to generate incremental IDs with a business prefix that can depend on the context or the document being created. This tutorial shows a simple use case, where the ID is generated depending on the document type: if the document is an invoice, it starts with `INV-`, if it is a proposal, it starts with `PROP-`, if it is a salary sheet, it starts with `WAG-`...
