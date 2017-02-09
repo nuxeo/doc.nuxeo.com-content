@@ -109,20 +109,17 @@ We strongly recommend that you fill in your application detail and target enviro
 
 **To fill in or edit your application's details and target environment:**
 
-1.  In&nbsp;**My Application** page, there is a list of your available accounts and projects.
+1.  In **My Application** page, there is a list of your available accounts and projects.
     The information on your applications are displayed.
-2.  To edit application's detail, roll over the tool icon&nbsp; ![]({{file name='CONNECT-tool-icon.png'}})&nbsp;to display the contextual menu.
+2.  To edit application's detail, roll over the tool icon ![]({{file name='CONNECT-tool-icon.png'}}) to display the contextual menu.
     ![]({{file name='CONNECT-application-view.png'}} ?w=725)
-3.  Click on the edition link, with the edit icon ![]({{file name='CONNECT-edit-icon.png'}})&nbsp;.
+3.  Click on the edition link, with the edit icon ![]({{file name='CONNECT-edit-icon.png'}}).
 4.  Fill in or edit the information.
     ![]({{file name='CONNECT-application-edit.png'}} ?w=400,h=282,border=true)
 5.  Click on the **Update** button.
     Information is saved.
     ![]({{file name='CONNECT-application-edited.png'}} ?w=725)
 
-&nbsp;
-
-* * *
-
 **RELATED TOPICS**
+
 [Nuxeo Support issue Tracker: JIRA]({{page page='support-jira'}})

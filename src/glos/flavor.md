@@ -18,37 +18,37 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/qoEZAQ'
     source_link: /display/GLOS/Flavor
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 14:26'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-28 14:08'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-07 16:14'
         message: Formatting
         version: '5'
-    - 
+    -
         author: Lise Kemen
         date: '2014-01-07 14:00'
         message: ''
         version: '4'
-    - 
+    -
         author: Lise Kemen
         date: '2014-01-07 12:07'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-07 11:33'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-07 11:24'
         message: ''
@@ -63,15 +63,18 @@ A flavor is a set of variables which defines the branding of an application: the
 
 The flavors are used for the global application or in[ the Local Configuration of a space]({{page space='userdoc' page='local-configuration'}}) (workspaces or sections) to customize its main colors.
 
-* * *
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related developer documentation'}}
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related developer documentation'}}
+- [How to Brand Your Application]({{page space='nxdoc' page='how-to-brand-your-application'}})
+- [Theme]({{page space='nxdoc' page='theme'}})
 
-*   [How to Brand Your Application]({{page space='nxdoc' page='how-to-brand-your-application'}})
-*   [Theme]({{page space='nxdoc' page='theme'}})
-
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
+<div class="column medium-6">
 
 &nbsp;
 
-</div></div>
+</div>
+</div>

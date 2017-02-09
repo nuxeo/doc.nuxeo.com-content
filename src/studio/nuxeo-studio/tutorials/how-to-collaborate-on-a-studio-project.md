@@ -142,7 +142,7 @@ history:
         version: '1'
 
 ---
-This how-to explains how two users can work at the same time on a Studio Project. The two users will work on the&nbsp;`master`&nbsp;branch and in [Simple save mode]({{page page='commit-preferences'}}).&nbsp;
+This how-to explains how two users can work at the same time on a Studio Project. The two users will work on the `master` branch and in [Simple save mode]({{page page='commit-preferences'}}).
 
 ![]({{file name='simple_save_mode.png'}} ?w=250,border=true,thumbnail=true)
 
@@ -154,40 +154,34 @@ If you are not familiar with the revision control concept, you may want to have 
 
 ## Working Collaboratively
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
-
 ### First User
 
-The first user wants to change the branding on the&nbsp;`master`&nbsp;branch.&nbsp;
+The first user wants to change the branding on the `master` branch.
 
-1.  Go to&nbsp;**Branding&nbsp;**>&nbsp;**Login Screen**,
-2.  Modify the background image of your login screen and click on&nbsp;**Save**.
-    A message will appear at the top right and corner of your page saying that your changes are commited and pushed.&nbsp;
-
-</div><div class="column medium-6">
+1.  Go to **Branding**&nbsp;> **Login Screen**,
+2.  Modify the background image of your login screen and click on **Save**.
+    A message will appear at the top right and corner of your page saying that your changes are commited and pushed.
 
 ### Second User
 
-Lets say that the second user wants to create a new document type on the&nbsp;`master`&nbsp;branch.
+Lets say that the second user wants to create a new document type on the `master` branch.
 
-1.  Go to&nbsp;**Content Model&nbsp;**>&nbsp;**Document Types**,
-2.  [Create a new document type]({{page space='nxdoc' page='how-to-define-a-document-type'}}) and click on **Save.**&nbsp;&nbsp;
+1.  Go to **Content Model**&nbsp;> **Document Types**,
+2.  [Create a new document type]({{page space='nxdoc' page='how-to-define-a-document-type'}}) and click on **Save.**
 
-While you are doing your modifications, at the top right and corner of your application, the pull icon&nbsp;![]({{file name='pull.png' page='studio-icons-index'}} ?w=32,thumbnail=true)&nbsp;is displayed to let you get the modifications of the User1\. You don't have to pull directly, you can wait until you have done all the modifications that you want.&nbsp;
+While you are doing your modifications, at the top right and corner of your application, the pull icon&nbsp;![]({{file name='pull.png' page='studio-icons-index'}} ?w=32,thumbnail=true) is displayed to let you get the modifications of the User1\. You don't have to pull directly, you can wait until you have done all the modifications that you want.
 
 ![]({{file name='pull_popup.png'}} ?w=400,border=true)
 
-</div></div>
-
 ## Conflicts
 
-It may happens that the two users modify the same file, this generates a conflict. When it happens a pop-up window is displayed where you can select the version that you want to keep and complete the merge.&nbsp;
+It may happens that the two users modify the same file, this generates a conflict. When it happens a pop-up window is displayed where you can select the version that you want to keep and complete the merge.
 
 ![]({{file name='mergePopup.png' page='commit-push-and-pull'}} ?w=650,border=true)
 
-## Discover More&nbsp;
+## Discover More
 
-If you are familiar with the revision control concept, other save modes are available in the&nbsp;[Commit Preferences]({{page page='commit-preferences'}})&nbsp;page in Studio: Intermediate and Advanced. If you want to try them, don't hesitate to contact your sales representative to activate them.
+If you are familiar with the revision control concept, other save modes are available in the [Commit Preferences]({{page page='commit-preferences'}}) page in Studio: Intermediate and Advanced. If you want to try them, don't hesitate to contact your sales representative to activate them.
 
 ![]({{file name='sources-management.png'}} ?w=650,h=324,border=true)
 
@@ -197,19 +191,23 @@ Want to go further? Have a look at [How to Work with Maintenance Branches]({{pag
 
 {{/callout}}
 
-* * *
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Studio Documentation'}}
 
-&nbsp;
+- [Commit Preferences]({{page page='commit-preferences'}})
+- [Branch Management]({{page page='branch-management'}})
+- [Working in Studio]({{page page='working-in-studio'}})
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Studio Documentation'}}
+{{/panel}}
+</div>
 
-*   [Commit Preferences]({{page page='commit-preferences'}})
-*   [Branch Management]({{page page='branch-management'}})
-*   [Working in Studio]({{page page='working-in-studio'}})
+<div class="column medium-6">
+{{#> panel heading='Related How-Tos'}}
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
+- [How to Implement Features Using Branches]({{page page='how-to-implement-features-using-branches'}})
+- [How to Work with Maintenance Branches]({{page space='Studio' page='How to+Work+with+Maintenance+Branches'}})
 
-*   [How to Implement Features Using Branches]({{page page='how-to-implement-features-using-branches'}})
-*   [How to Work with Maintenance Branches]({{page space='Studio' page='How to+Work+with+Maintenance+Branches'}})
-
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>

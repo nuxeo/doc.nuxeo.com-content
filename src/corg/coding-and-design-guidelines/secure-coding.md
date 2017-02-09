@@ -143,7 +143,7 @@ public void extract(ZipInputStream in, ZipEntry entry, File base) {
 
 {{/panel}}
 
-### No XML&nbsp;External Entity&nbsp;Processing
+### No XML External Entity Processing
 
 [XML External Entity Processing](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing) (XXE) is a class of security issues due to invalid processing of external entities in user-supplied XML files, where the entities may access invalid external resources.
 
@@ -177,7 +177,7 @@ XMLReader xmlReader = saxParser.getXMLReader();
 
 {{/panel}}
 
-Note that, unrelated to security, the feature&nbsp;`http://xml.org/sax/features/validation`&nbsp;can also often be passed to improved the speed of the parsing.
+Note that, unrelated to security, the feature `http://xml.org/sax/features/validation` can also often be passed to improved the speed of the parsing.
 
 The following is not mentioned in the above OWASP page but must also be followed:
 
@@ -199,19 +199,15 @@ Transformer transformer = transformerFactory.newTransformer();
 
 SQL must never be generated "by hand". Always use JDBC PreparedStatement where all user-controlled input is passed as statement parameters. Or, better, use an additional abstraction layer like Nuxeo's NXQL or Hibernate's HQL.
 
-### No Breaking of Layering&nbsp;
+### No Breaking of Layering
 
 Nuxeo security relies on code using the proper layers. In Nuxeo, security happens at different levels, which must not be bypassed:
 
 *   Authentication is done at the Servlet layer through a pluggable authentication system. Any custom servlet must be configured to use the same servlet filters as the standard Nuxeo servlets.
 *   Authorization is done at the CoreSession layer through built-in checks of the security on the document for the currently authenticated user. This CoreSession layer must not be bypassed:
     *   The lower-level Session must not be accessed, or all access must be aware that security checks have to be done at a higher layer.
-    *   The UnrestrictedSessionRunner or changing to a system user through CoreInstance.openCoreSession&nbsp;must be used only when there is no security risk on the document(s) being accessed.
+    *   The UnrestrictedSessionRunner or changing to a system user through CoreInstance.openCoreSession must be used only when there is no security risk on the document(s) being accessed.
 
 ## HTML Code
 
-The&nbsp;[Cross Site Scripting]({{page page='cross-site-scripting'}}) page describes rules that must be followed when generating HTML&nbsp;to avoid XSS and CSRF security issues.
-
-{{! Don't put anything here. }}
-
-* * *
+The [Cross Site Scripting]({{page page='cross-site-scripting'}}) page describes rules that must be followed when generating HTML to avoid XSS and CSRF security issues.

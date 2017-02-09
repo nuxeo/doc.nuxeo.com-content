@@ -539,8 +539,6 @@ If you don't want to use your branding during a test you can disable your defaul
 
 Just tick the **Disable theme branding** option above the tabs. The tabs and their content will be displayed under a gray overlay.
 
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Theme]({{page space='NXDOC' page='Theme'}})

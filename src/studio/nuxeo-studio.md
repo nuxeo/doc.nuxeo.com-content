@@ -81,8 +81,6 @@ The goal of this section is to provide ready to use examples. They can be follow
 
 {{/panel}}</div></div>
 
-* * *
-
 ### An overview of Nuxeo Studio features in this screencast:
 
 {{> wistia_video id='me59a8g79l'}}

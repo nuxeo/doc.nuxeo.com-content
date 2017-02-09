@@ -143,8 +143,6 @@ This page allows the user to define the commit policy that is applied when the u
     If no commit message is explicitly defined by the user, the default message is `Update <Feature type>/<Feature name>`.
     This mode is recommended for developers already familiar with revision control concepts.
 
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Working in Studio]({{page page='working-in-studio'}})

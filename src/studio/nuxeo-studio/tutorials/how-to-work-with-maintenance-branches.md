@@ -147,9 +147,9 @@ The scenario for this how-to is the following:
 
 This how-to requires to have access to the advanced features of Nuxeo. Please contact your sales representative to activate them.
 
-To help following this how-to we provide you with some correction examples based on the a Contract document type as described in&nbsp;the [Getting Started with Nuxeo Studio]({{page space='nxdoc' page='getting-started-with-nuxeo-studio'}}) how-to. Of course you can do whatever modification on your project, the goal here being to give you guidelines to work with branches for the maintenance of your application. The required properties to complete this how-to using the Contract example are:
+To help following this how-to we provide you with some correction examples based on the a Contract document type as described in the [Getting Started with Nuxeo Studio]({{page space='nxdoc' page='getting-started-with-nuxeo-studio'}}) how-to. Of course you can do whatever modification on your project, the goal here being to give you guidelines to work with branches for the maintenance of your application. The required properties to complete this how-to using the Contract example are:
 
-*   In the Contract schema, a field&nbsp;`owner` that is a&nbsp;`string`
+*   In the Contract schema, a field `owner` that is a `string`
 *   Create, Edit and View layouts with at least the fields below:
     *   Title: leave as default
     *   Description: leave as default
@@ -159,7 +159,7 @@ To help following this how-to we provide you with some correction examples based
 
 1.  In Branch Management, click on **New Branch**.
 2.  Name your branch `maintenance_1.0` and save.
-3.  Click on the **Checkout**&nbsp;button to work on that new branch.
+3.  Click on the **Checkout** button to work on that new branch.
 
 ## Preparing and Testing Corrections
 
@@ -167,16 +167,16 @@ To help following this how-to we provide you with some correction examples based
 2.  Select the Widget type **Single user/group suggestion** and save.
 3.  Save your modifications on the document type.
 4.  Deploy the branch `maintenance_1.0` on your Nuxeo instance and validate the behavior of your correction.
-5.  If needed&nbsp;do some additional changes on the same principle as described in previous step.
+5.  If needed do some additional changes on the same principle as described in previous step.
 
 ## Releasing and Deploying Corrections
 
 When you are ready to deploy bug fixes, release your corrections set:
 
-1.  In **Branch Management**, click on the&nbsp;`maintenance_1.0` branch.
+1.  In **Branch Management**, click on the `maintenance_1.0` branch.
     The commit history of the branch is displayed.
 2.  Click on the **Release** button of the last approved commit.
-3.  Name the release&nbsp;`1.0.1` and click on the **OK** button.
+3.  Name the release `1.0.1` and click on the **OK** button.
     ![]({{file name='release_1.0.1.png'}} ?w=400,border=true)
 
 Now deploy the release of the `maintenance_1.0` branch on your production instance:
@@ -188,38 +188,34 @@ Now deploy the release of the `maintenance_1.0` branch on your production instan
 
 ## Reporting Corrections on master Branch
 
-The&nbsp;`master` branch is the main branch of the project. It will hold both evolutions and corrections. So you need to report the bug fixes done on the&nbsp;`maintenance_1.0` branch on&nbsp;`master`. Because the&nbsp;`master` branch is evolving with new features and improvements, the corrections done on&nbsp;`maintenance_1.0` may need to be adapted to be aligned on the latest developments. This is why you need to report manually bug fixes on the&nbsp;`master` branch.
+The `master` branch is the main branch of the project. It will hold both evolutions and corrections. So you need to report the bug fixes done on the `maintenance_1.0` branch on `master`. Because the `master` branch is evolving with new features and improvements, the corrections done on `maintenance_1.0` may need to be adapted to be aligned on the latest developments. This is why you need to report manually bug fixes on the `master` branch.
 
 ## Preparing and Deploying a Second Set of Bug Fixes
 
-Follow the same big steps as above to prepare and deploy a second set of corrections on the&nbsp;`maintenance_1.0` branch. For instance:
+Follow the same big steps as above to prepare and deploy a second set of corrections on the `maintenance_1.0` branch. For instance:
 
 1.  On the Edit layout of the Contract document type, add the Owner field: use a **Single user/group suggestion** widget instead of a text widget and check the Read-only box.
 2.  On the View layout click on **Import Layout** > **Edit layout** to get the same layout as the Edit one.
 3.  Test your modifications.
-4.  Release and deploy a version 1.0.2 of the&nbsp;`maintenance_1.0` branch.
-5.  Report your modifications on the&nbsp;`master` branch.
+4.  Release and deploy a version 1.0.2 of the `maintenance_1.0` branch.
+5.  Report your modifications on the `master` branch.
 
 ## Preparing New Features on the master Branch
 
-In parallel to the corrections, you can develop new features on the&nbsp;`master` branch. This branch will hold both evolutions and corrections. For instance:
+In parallel to the corrections, you can develop new features on the `master` branch. This branch will hold both evolutions and corrections. For instance:
 
-1.  Complete your developments on&nbsp;`master`.
-2.  Make sure you reported the latest bug fixes from&nbsp;`maintenance_1.0`.
-3.  Test the developments of&nbsp;`master`.
+1.  Complete your developments on `master`.
+2.  Make sure you reported the latest bug fixes from `maintenance_1.0`.
+3.  Test the developments of `master`.
 4.  Once you have approved your developments, release a version 1.1.0 of `master`.
 
 ## Working on Corrections for Version 1.1.0
 
 After you have released a new version of your project (here 1.1.0), you need to create a new maintenance branch to work on bug fixes for that version.
 
-1.  Create a new maintenance branch from&nbsp;`master`, called&nbsp;`maintenance_1.1`.
+1.  Create a new maintenance branch from `master`, called `maintenance_1.1`.
 2.  Proceed for corrections on the new maintenance branch the same way as for the first maintenance branch.
-3.  Depending on your maintenance policy you need to keep the branch&nbsp;`maintenance_1.0` or you can delete it.
-
-&nbsp;
-
-* * *
+3.  Depending on your maintenance policy you need to keep the branch `maintenance_1.0` or you can delete it.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Studio Documentation'}}
 

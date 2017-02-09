@@ -80,12 +80,6 @@ Quand vous avez valid&eacute; la r&eacute;ponse propos&eacute;e, le ticket ne do
 
 Vous pourrez toutefois demander un court compl&eacute;ment de r&eacute;ponse en commentaire, et ce sans rouvrir le ticket.
 
-&nbsp;
-
-* * *
-
-&nbsp;
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Pages connexes'}}
 
 *   [Comment remplir un ticket Jira]({{page space='connect' page='comment-remplir-un-ticket-jira'}})

@@ -61,8 +61,6 @@ Please report to the [Content Views]({{page page='content-views'}}) documentatio
 
 ![]({{file name='Studio_search_menu.png'}} ?w=600,border=true)
 
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 
 {{! Please update the label in the Content by Label macro below. }}

@@ -163,8 +163,6 @@ See the [Filtering Options Reference Page]({{page page='filtering-options-refere
 
 *   **Selecting an existing operation**: the selected automation chain will be executed for the events selected in the Event Handler definition section
 
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
 
 - [Events and Listeners]({{page space='nxdoc' page='events-and-listeners'}})

@@ -191,7 +191,7 @@ history:
         version: '1'
 
 ---
-Your Nuxeo Support contract includes the access to&nbsp;[our JIRA issue tracker platform](https://jira.nuxeo.com). JIRA is the place where you can ask the support team questions, report issues with your application by creating "tickets". It enables both you and us to centralize the exchanges on your project's issues and to keep the history of your project available to all the persons working on your project. You can use JIRA to ad&shy;dress the following aspects of Nuxeo:
+Your Nuxeo Support contract includes the access to [our JIRA issue tracker platform](https://jira.nuxeo.com). JIRA is the place where you can ask the support team questions, report issues with your application by creating "tickets". It enables both you and us to centralize the exchanges on your project's issues and to keep the history of your project available to all the persons working on your project. You can use JIRA to ad&shy;dress the following aspects of Nuxeo:
 
 *   use of the Nuxeo API(s)
 *   bug identification and correction
@@ -204,7 +204,7 @@ You can follow the evolution of your issues directly from the Online Services Po
 
 {{#> callout type='info' heading='Maintenance'}}
 
-The page [https://www.nuxeo.com/legal/supported-versions/](https://www.nuxeo.com/legal/supported-versions/) presents the maintenance policy of the different versions of Nuxeo software. It can be useful to plan the upgrades of the customer's applications.&nbsp;
+The page [https://www.nuxeo.com/legal/supported-versions/](https://www.nuxeo.com/legal/supported-versions/) presents the maintenance policy of the different versions of Nuxeo software. It can be useful to plan the upgrades of the customer's applications.
 
 {{/callout}}
 
@@ -230,17 +230,13 @@ Check out the page [How to Fill a JIRA Ticket]({{page page='how-to-fill-a-jira-t
 - Resolved
     &rarr;&nbsp;Nuxeo provides an answer considered as satisfactory. The customer must approve the answer by making the ticket go to the "Closed" status or reopen the issue and indicate what is not correct in the provided answer (ticket goes to "Reopened").
 - Closed
-    &rarr;&nbsp;The end of the request.&nbsp;
+    &rarr;&nbsp;The end of the request.
 
 {{#> callout type='tip' }}
 
 For more information, check out the [JIRA Tickets Workflow]({{page page='jira-tickets-workflow'}}) and the [Ticket Follow Up]({{page page='ticket-follow-up'}}) pages.
 
 {{/callout}}
-
-&nbsp;
-
-* * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 

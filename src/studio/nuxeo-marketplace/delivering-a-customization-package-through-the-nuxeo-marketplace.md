@@ -201,8 +201,6 @@ with:
 *   `PROJECT_ID`: Comma-separated project IDs and/or names. The parameter can also include comma-separated client IDs prefixed with `client:`.
 *   `OWNER_ID`: A unique client ID.
 
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More documentation about the Marketplace'}}
 
 - [Creating Nuxeo Packages]({{page space='nxdoc' page='creating-nuxeo-packages'}})

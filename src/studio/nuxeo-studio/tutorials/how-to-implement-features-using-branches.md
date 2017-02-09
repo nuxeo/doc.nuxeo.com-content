@@ -232,7 +232,7 @@ history:
         version: '1'
 
 ---
-The principal goal is to create feature branches that will enable developers to work on the same branch without impacting the&nbsp; `master`&nbsp;branch. They can work together or on their respective sides and merge their work when the features are done.&nbsp;
+The principal goal is to create feature branches that will enable developers to work on the same branch without impacting the `master` branch. They can work together or on their respective sides and merge their work when the features are done.
 
 ## Before You Start
 
@@ -243,14 +243,14 @@ A team of developers needs to put in production two new features for their appli
 1.  Evolution of the Search screen
 2.  A connector to fetch data from an ERP system and add them automatically on the contract document types inside the Nuxeo Platform
 
-These two features will be developed at the same time but the second one will take more time than the first one. They need to go on production at the end of the first feature without waiting for the second one.&nbsp;
+These two features will be developed at the same time but the second one will take more time than the first one. They need to go on production at the end of the first feature without waiting for the second one.
 
 The scenario for this how-to is the following:
 
 *   A first version of the Studio project has been approved and deployed in production.
 *   Two features are developed in two different features branches.
-*   Once the search screen is tested and approved, it is&nbsp;deployed in production.
-*   The connector is developed on the other feature branch.&nbsp;
+*   Once the search screen is tested and approved, it is deployed in production.
+*   The connector is developed on the other feature branch.
 *   After the connector is tested and approved, it is deployed in production.
 *   A second version of the Studio project is ready that includes the two brand new features.
 
@@ -262,55 +262,51 @@ This how-to requires to have access to the [advanced features of Nuxeo]({{page p
 
 We need to create two branches, one for each feature:
 
-1.  In the **Branch Management** menu, click on the&nbsp;**New Branch** button.
-2.  Name your branch&nbsp;`searchScreen` and save.
+1.  In the **Branch Management** menu, click on the **New Branch** button.
+2.  Name your branch `searchScreen` and save.
     Your new branch is displayed on the list.
 3.  Repeat the step 1 and name the second branch `ERPConnector` and save.
     ![]({{file name='branches.png'}} ?w=600,border=true)
 
 ## Preparing and Merging the Search Screen
 
-1.  In the **Branch Management** menu, click on the **Checkout** button of branch&nbsp;`searchScreen`
+1.  In the **Branch Management** menu, click on the **Checkout** button of branch `searchScreen`
     You are now working on the `searchScreen` branch.
-2.  Follow [this how-to]({{page space='nxdoc' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})&nbsp;to improve the search screen.&nbsp;
-3.  Test your developments: [Deploy the branch]({{page space='admindoc56' page='updating-your-instance-with-studio-configuration'}})&nbsp;`searchScreen`&nbsp;on your Nuxeo instance and validate the behavior of your feature.
+2.  Follow [this how-to]({{page space='nxdoc' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}}) to improve the search screen.
+3.  Test your developments: [Deploy the branch]({{page space='admindoc56' page='updating-your-instance-with-studio-configuration'}}) `searchScreen` on your Nuxeo instance and validate the behavior of your feature.
 
-Once your feature is validated, you can now merge it to your&nbsp;`master` branch:
+Once your feature is validated, you can now merge it to your `master` branch:
 
-1.  In&nbsp;**Branch Management**, go on the&nbsp;`master` branch by clicking its **Checkout** button.
+1.  In **Branch Management**, go on the `master` branch by clicking its **Checkout** button.
 2.  Click on the button ****Merge into my workspace**** of the branch `searchScreen`.
-3.  Deploy the&nbsp;`master` branch to test that the merge didn't break any existing feature.
+3.  Deploy the `master` branch to test that the merge didn't break any existing feature.
 
 ## Releasing and Deploying the Search Screen
 
-After you have approved the behavior of the&nbsp;`master` branch, you can release and deploy your feature:
+After you have approved the behavior of the `master` branch, you can release and deploy your feature:
 
 1.  In **Branch Management**, click on the `master` branch.
     The history of the branch commits is displayed.
-2.  Click on the&nbsp;**Release**&nbsp;button of the last approved commit.
-3.  Name the release&nbsp;`1.0.1`&nbsp;and click on the&nbsp;**OK**&nbsp;button.&nbsp;
+2.  Click on the **Release** button of the last approved commit.
+3.  Name the release `1.0.1` and click on the **OK** button.
 
 Now deploy the release of the `master` branch on your production instance:
 
-1.  In your Nuxeo instance, go to&nbsp;**Update Center**&nbsp;>&nbsp;**Nuxeo Studio**.
-    The release is displayed&nbsp;in the **Production mode**&nbsp;section.
+1.  In your Nuxeo instance, go to **Update Center**&nbsp;> **Nuxeo Studio**.
+    The release is displayed in the **Production mode** section.
     ![]({{file name='production_mode_1.0.1.png'}} ?w=600,border=true)
-2.  Install the release&nbsp;[like you would install a Nuxeo Package]({{page space='ADMINDOC' page='Installing a+New+Package+on+Your+Instance'}})&nbsp;and restart.
+2.  Install the release [like you would install a Nuxeo Package]({{page space='ADMINDOC' page='Installing a+New+Package+on+Your+Instance'}}) and restart.
 
 ## Developing the ERP Connector
 
 In our scenario, the search screen is put in production while the development of the connector is still in progress in its dedicated branch. The development of the connector follows the same steps as the search screen evolution.
 
-1.  Develop and configure all the features required by the connector in the&nbsp;`ERPConnector` branch.
+1.  Develop and configure all the features required by the connector in the `ERPConnector` branch.
 2.  Deploy the branch `ERPConnector` on your Nuxeo instance and validate the behavior of your feature.
-3.  Once it is validated merge it to the&nbsp; `master`&nbsp;branch.
+3.  Once it is validated merge it to the `master` branch.
 4.  Test the integration of the connector developments on `master`.
-5.  When the status of&nbsp;`master` is approved, release a version&nbsp;`1.0.2` of the branch and deploy it.
+5.  When the status of `master` is approved, release a version `1.0.2` of the branch and deploy it.
     Your project is now updated with two new features.
-
-* * *
-
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Studio Documentation'}}
 

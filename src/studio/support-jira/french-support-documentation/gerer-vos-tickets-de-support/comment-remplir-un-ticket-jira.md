@@ -442,8 +442,6 @@ Quelques conseils pour am&eacute;liorer la qualit&eacute; du ticket :
     * lien,
     * puces.
 
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel heading='Pages connexes'}}

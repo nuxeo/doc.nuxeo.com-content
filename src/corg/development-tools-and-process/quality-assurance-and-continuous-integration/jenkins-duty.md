@@ -135,7 +135,7 @@ Of course, every commit is validated and all developers must be aware of the CI 
 
 *   Monday: Jenkins report creation
 
-    1.  Browse&nbsp;[https://intranet.nuxeo.com/nuxeo/nxpath/default/default-domain/workspaces/team-r-d/QA/QA%20reports@view_documents](https://intranet.nuxeo.com/nuxeo/nxpath/default/default-domain/workspaces/team-r-d/QA/QA%20reports@view_documents).
+    1.  Browse [https://intranet.nuxeo.com/nuxeo/nxpath/default/default-domain/workspaces/team-r-d/QA/QA%20reports@view_documents](https://intranet.nuxeo.com/nuxeo/nxpath/default/default-domain/workspaces/team-r-d/QA/QA%20reports@view_documents).
     2.  Create a new Jenkins Report: previous number of failing and unclaimed jobs should already be filled.
     3.  Start analyzing problems: these "reference" failing builds will keep on being listed by your report after each update, and will be updated if you fill information about them on Jenkins.
 
@@ -159,8 +159,6 @@ Of course, every commit is validated and all developers must be aware of the CI 
 
 ### Goals by Priority
 
-<div>
-
 1.  Ideally, there's no more failing jobs.
 2.  All failing builds are claimed/described.
 3.  At least, the trend is negative.
@@ -172,8 +170,6 @@ The Jenkins duty helps a lot to involve developers into QA&CI:
 *   better understanding of the processes, constraints and advantages, focusing on build automation and generic code requirements, build reproducibility, comments and documentation, ...;
 *   turn-over generates empathy and awareness: experiencing others' bad practices increases the attention bought to his own code and usages;
 *   quickly, the spirit becomes "everyone is responsible of the whole software good quality" instead of "no one is responsible (neither aware) of its poor quality parts".
-
-</div>
 
 ## Jenkins Claims and JIRA Issues
 
@@ -243,19 +239,19 @@ Source code:
 
 Issue management: [https://jira.nuxeo.com/browse/NXBT/component/12309](https://jira.nuxeo.com/browse/NXBT/component/12309).
 
-&nbsp;
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
+
+- [Nuxeo Jenkins Report user documentation]({{page space='userdoc' page='nuxeo-jenkins-report'}})
+- [Nuxeo Jenkins Report admin documentation]({{page space='nxdoc' page='nuxeo-jenkins-report'}})
+
+{{/panel}}
+</div>
+
+<div class="column medium-6">
 
 &nbsp;
 
-* * *
-
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
-
-*   [Nuxeo Jenkins Report user documentation]({{page space='userdoc' page='nuxeo-jenkins-report'}})
-*   [Nuxeo Jenkins Report admin documentation]({{page space='nxdoc' page='nuxeo-jenkins-report'}})
-
-{{/panel}}</div><div class="column medium-6">
-
-&nbsp;
-
-</div></div>
+</div>
+</div>
