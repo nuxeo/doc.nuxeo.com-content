@@ -1,5 +1,5 @@
 ---
-title: Form Based Authentication
+title: Form-Based Authentication
 review:
     comment: ''
     date: '2017-02-09'
