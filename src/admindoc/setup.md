@@ -522,9 +522,9 @@ You can report to the [Configuration Parameters Index (nuxeo.conf)]({{page page=
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Admin Tab Overview]({{page page='admin-tab-overview'}})
-*   [Recommended Configurations]({{page page='recommended-configurations'}})
-*   [Configuration Examples]({{page page='configuration-examples'}})
+- [Admin Tab Overview]({{page page='admin-tab-overview'}})
+- [Recommended Configurations]({{page page='recommended-configurations'}})
+- [Configuration Examples]({{page page='configuration-examples'}})
 
 {{/panel}}</div><div class="column medium-6">
 
