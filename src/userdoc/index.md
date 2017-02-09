@@ -16,6 +16,7 @@ confluence:
     shortlink: BgFFAQ
     shortlink_source: 'https://doc.nuxeo.com/x/BgFFAQ'
     source_link: /display/USERDOC60/Nuxeo+Platform+User+Documentation
+section_parent: user-documentation
 history:
     -
         author: Manon Lumeau
