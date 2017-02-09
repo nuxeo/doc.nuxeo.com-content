@@ -19,6 +19,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/4ofZAQ'
     source_link: /display/NXDOC/Nuxeo+Server
 tree_item_index: 200
+section_parent: server
 history:
     -
         author: Manon Lumeau

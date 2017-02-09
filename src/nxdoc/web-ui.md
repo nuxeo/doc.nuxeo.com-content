@@ -22,6 +22,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/XJCRAQ'
     source_link: /display/NXDOC/Web+UI
 tree_item_index: 300
+section_parent: web-ui
 history:
     -
         author: Manon Lumeau

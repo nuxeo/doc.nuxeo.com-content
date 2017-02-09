@@ -18,6 +18,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/64fZAQ'
     source_link: /display/NXDOC/Desktop+and+Mobile
 tree_item_index: 400
+section_parent: desktop-mob
 history:
     -
         author: Antoine Taillefer

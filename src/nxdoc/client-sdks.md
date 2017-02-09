@@ -19,6 +19,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/oIf1'
     source_link: /display/NXDOC/Client+SDKs
 tree_item_index: 600
+section_parent: sdks
 version_override:
     'LTS 2015': 710/nxdoc/clients
     '6.0': 60/nxdoc/clients
