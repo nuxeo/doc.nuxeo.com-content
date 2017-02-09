@@ -8,6 +8,7 @@ labels:
     - home
     - content-review-lts2015
     - last-review-20150128
+is_overview: true
 confluence:
     ajs-parent-page-id: '28475804'
     ajs-parent-page-title: Guides and Tutorials
@@ -48,7 +49,9 @@ history:
         version: '1'
 
 ---
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 
 ### Getting Familiar with the Nuxeo Platform
 
@@ -57,7 +60,8 @@ Find out about the features and concepts of the Nuxeo Platform.
 - [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
 - [Nuxeo Platform Feature Table]({{page page='nuxeo-platform-feature-table'}})
 
-{{/panel}}{{#> panel type='secondary' match_height='true'}}
+{{/panel}}
+{{#> panel type='secondary' match_height='true'}}
 
 ### Choices
 
@@ -66,7 +70,10 @@ Any project requires to choose between several possible implementations. Here ar
 - [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
 - [Choosing How to Customize the UI]({{page page='choosing-how-to-customize-the-ui'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+{{/panel}}
+</div>
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 
 ### Bootstrapping Your Project
 
@@ -75,7 +82,8 @@ You don't know how to get your project started? Here are some tips for you.
 - [Bootstrap Your Document Management Project]({{page page='bootstrap-your-document-management-project'}})
 - [Bootstrap Your Case Management Project]({{page page='bootstrap-your-case-management-project'}})
 
-{{/panel}}{{#> panel type='secondary' match_height='true'}}
+{{/panel}}
+{{#> panel type='secondary' match_height='true'}}
 
 ### Getting Started
 
@@ -85,4 +93,6 @@ Here are some resources to help you start your Nuxeo Platform application:
 - [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
 - [First Steps With Studio: Technical Documentation Tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}})
 
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>

@@ -7,6 +7,7 @@ review:
 labels:
     - home
     - content-review-lts2015
+is_overview: true
 confluence:
     ajs-parent-page-id: '28475536'
     ajs-parent-page-title: Developer Documentation Center
@@ -83,6 +84,39 @@ Nuxeo uses several UI frameworks beside the [default JSF technology]({{page page
 
 {{! /excerpt}}
 
-*   [GWT Integration]({{page space='NXDOC710' page='GWT Integration'}})&nbsp;&mdash; GWT is a web toolkit to build rich clients in Java programming language. The Java code is transcoded in JavaScript at build time so the build process generates a fully HTML+JavaScript application ready to be deployed on an HTTP server.
-*   [Extending The Shell]({{page space='NXDOC710' page='Extending The+Shell'}})&nbsp;&mdash; This section is intended for developers who wants to provide new Shell commands, namespaces or Shell Features.
-*   [Nuxeo Android Connector]({{page space='NXDOC710' page='Nuxeo Android+Connector'}})&nbsp;&mdash;Nuxeo Android Connector is a SDK to build Android Applications that communicate with a Nuxeo Server.
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### GWT Integration
+
+GWT is a web toolkit to build rich clients in Java programming language. The Java code is transcoded in JavaScript at build time so the build process generates a fully HTML+JavaScript application ready to be deployed on an HTTP server.
+
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='nxdoc' page='gwt-integration'}})
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Extending The Shell
+
+This section is intended for developers who wants to provide new Shell commands, namespaces or Shell Features.
+
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='nxdoc' page='extending-the-shell'}})
+{{/panel}}
+</div>
+
+</div>
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+
+### Nuxeo Android Connector
+
+Nuxeo Android Connector is a SDK to build Android Applications that communicate with a Nuxeo Server.
+
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='nxdoc' page='nuxeo-android-connector'}})
+{{/panel}}
+</div>
+
+</div>

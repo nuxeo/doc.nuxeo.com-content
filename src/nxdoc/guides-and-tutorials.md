@@ -7,6 +7,7 @@ review:
 labels:
     - home
     - content-review-lts2015
+is_overview: true
 confluence:
     ajs-parent-page-id: '28475536'
     ajs-parent-page-title: Developer Documentation Center

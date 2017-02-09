@@ -76,7 +76,7 @@ history:
 ---
 {{! excerpt}}
 
-The File Manager is used for creating documents from simple binaries.
+The File Manager is used to create documents from simple binaries.
 
 {{! /excerpt}}
 

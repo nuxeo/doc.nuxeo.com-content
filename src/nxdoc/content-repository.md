@@ -7,6 +7,7 @@ review:
 labels:
     - home
     - content-review-lts2015
+is_overview: true
 confluence:
     ajs-parent-page-id: '28475536'
     ajs-parent-page-title: Developer Documentation Center
@@ -249,19 +250,52 @@ history:
         version: '1'
 
 ---
-*   [Repository Concepts]({{page space='NXDOC710' page='Repository Concepts'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This page summarizes all the main concepts about documents, access to documents and document storage.</span>
-*   [Persistence Architecture]({{page space='NXDOC710' page='Persistence Architecture'}})
-*   [Field Constraints and Validation]({{page space='NXDOC710' page='Field Constraints+and+Validation'}})
-*   [Versioning]({{page space='NXDOC710' page='Versioning'}})
-*   [Available Facets]({{page space='NXDOC710' page='Available Facets'}})
-*   [Downloading Files]({{page space='NXDOC710' page='Downloading Files'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This page describes the logic for building the correct URL to download a file stored on a Nuxeo Document.</span>
-*   [Deleting Documents]({{page space='NXDOC710' page='Deleting Documents'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Deleting a document involves several steps before the full document is actually deleted from the database and disk. These steps are described below.</span>
-*   [CMIS]({{page space='NXDOC710' page='CMIS'}})
-*   [WebDAV]({{page space='NXDOC710' page='WebDAV'}})
-*   [How to Define a Document Type]({{page space='NXDOC710' page='How to+Define+a+Document+Type'}})&nbsp;&mdash;&nbsp;<span class="smalltext">You can create as many document types as you want with Nuxeo Studio. This how-to explains the different steps to do so.</span>
-*   [How to Override Existing Document Types]({{page space='NXDOC710' page='How to+Override+Existing+Document+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Any built-in document type can be overridden: you just have to use the good ID, inherit the good type and add some necessary schemas and facets. We provide a table that should give you all necessary information.</span>
-*   [How to Add Complex Fields on Your Document Type]({{page space='NXDOC710' page='How to+Add+Complex+Fields+on+Your+Document+Type'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Nuxeo Studio enables you to create your own document types, with their associated metadata. Metadata can be simple text fields, dates, text areas, etc. They can also be more complex with several related informations. A typical example would be a "Sender" metadata, that would be composed of four pieces of information: The sender's last name, his/her first name, the company and the company's logo.</span>
-*   [How to Enable the Trash Feature]({{page space='NXDOC710' page='How to+Enable+the+Trash+Feature'}})&nbsp;&mdash;&nbsp;<span class="smalltext">To enable the trash on your document type, you need either to assign him the default life cycle (which is the case if you don't configure it) or, if you created a custom life cycle, to provide delete transitions to the deleted state, from each other state. Moreover, in order to be able to restore documents, you must provide a undelete transition from the deleted state to another state in the lifecycle.</span>
-*   [How to Enable Add-Ons Features on Custom Document Type]({{page space='NXDOC710' page='How to+Enable+Add-Ons+Features+on+Custom+Document+Type'}})&nbsp;&mdash;&nbsp;<span class="smalltext">To know how to apply features provided by the Nuxeo Marketplace add-ons on your document types and features defined in Studio, see the documentation of the add-ons.</span>
-*   [How to Customize Document Validation]({{page space='NXDOC710' page='How to+Customize+Document+Validation'}})
-*   [Document Type How-To Index]({{page space='NXDOC710' page='Document Type+How-To+Index'}})
+
+<div class="row" data-equalizer data-equalize-on="medium">
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Repository Concepts
+
+{{{excerpt space='nxdoc' page='repository-concepts'}}}
+
+[Lean more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='710' space='nxdoc' page='repository-concepts'}})
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Persistence Architecture
+
+The Nuxeo Platform repository stores documents, either using VCS or BDS implementation, and binaries, using the binary store. This persistence layer is configurable.
+
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='710' space='nxdoc' page='persistence-architecture'}})
+
+{{/panel}}
+</div>
+
+</div>
+
+<div class="row" data-equalizer data-equalize-on="medium">
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Versioning
+
+The Nuxeo Repository includes a configurable versioning system. Even the version storage service is pluggable so you can define your own storage for versions.
+
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='710' space='nxdoc' page='versioning'}})
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Tutorials
+
+Read our HOWTOs about document types and document properties customization.
+
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='document-type-how-to-index'}})
+{{/panel}}
+</div>
+
+</div>
