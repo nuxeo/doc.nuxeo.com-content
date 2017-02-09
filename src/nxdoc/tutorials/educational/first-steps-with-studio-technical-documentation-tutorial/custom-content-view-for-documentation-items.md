@@ -232,7 +232,8 @@ history:
         date: '2013-07-03 18:00'
         message: ''
         version: '1'
-
+previous_link: /nxdoc/implementing-documentation-items
+next_link: /nxdoc/document-locking-right-after-its-creation
 ---
 At the first step of this tutorial, we [created a new document type]({{page page='implementing-documentation-items'}}), called `documentationItem`.
 
@@ -395,17 +396,3 @@ To sum up what we saw:
 It is now time to add custom behaviors, such as the locking policy on which we initially decided.
 
 {{/callout}}
-
-* * *
-
-<div class="row"><div class="column medium-4">
-
-[<< Documentation Item Implementation]({{page page='implementing-documentation-items'}})
-
-</div><div class="column medium-4">
-
-</div><div class="column medium-4">
-
-[Document Locking Right After Its Creation >>]({{page page='document-locking-right-after-its-creation'}})
-
-</div></div>

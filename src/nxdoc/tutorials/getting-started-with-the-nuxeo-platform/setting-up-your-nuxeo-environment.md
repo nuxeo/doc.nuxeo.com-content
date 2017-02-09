@@ -290,7 +290,7 @@ history:
         date: '2016-02-17 16:22'
         message: ''
         version: '1'
-
+next_link: /nxdoc/setting-up-your-javascript-environment
 ---
 {{! excerpt}}
 
@@ -620,5 +620,3 @@ The addon brings the following document types:
 *   [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
 
 {{/callout}}
-
-<div align="right">[Setting up Your JavaScript Environment]({{page page='setting-up-your-javascript-environment'}}) &rarr;</div>

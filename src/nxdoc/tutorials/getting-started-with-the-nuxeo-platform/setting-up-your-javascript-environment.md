@@ -216,7 +216,8 @@ history:
         date: '2016-05-16 13:04'
         message: ''
         version: '1'
-
+previous_link: /nxdoc/setting-up-your-nuxeo-environment
+next_link: /nxdoc/manipulating-documents
 ---
 {{! excerpt}}
 
@@ -377,8 +378,3 @@ To create the users:
 *   [Authentication and User Management]({{page page='authentication-and-user-management'}})
 
 {{/callout}}
-
-<div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-6">&larr;&nbsp;[Setting up Your Nuxeo Environment]({{page page='setting-up-your-nuxeo-environment'}})</div>
-<div class="column medium-6" style="text-align:right">[Manipulating Documents]({{page page='manipulating-documents'}})&nbsp;&rarr;</div>
-</div>

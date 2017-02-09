@@ -145,7 +145,8 @@ history:
         date: '2016-08-04 08:21'
         message: ''
         version: '1'
-
+previous_link: /nxdoc/using-renditions
+next_link: /nxdoc/using-automation
 ---
 {{! excerpt}}
 
@@ -414,8 +415,3 @@ This time a task has been assigned to the `managers` group (represented by Sarah
 *   [Playing with Workflow Buttons and Transitions video from Nuxeo University](https://university.nuxeo.com/store/155930-workflow-engine)
 
 {{/callout}}
-
-<div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-6">&larr;&nbsp;[Using Renditions]({{page page='using-renditions'}})</div>
-<div class="column medium-6" style="text-align:right">[Using Automation]({{page page='using-automation'}})&nbsp;&rarr;</div>
-</div>

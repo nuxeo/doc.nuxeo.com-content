@@ -83,7 +83,7 @@ history:
         date: '2011-01-27 00:27'
         message: ''
         version: '1'
-
+previous_link: /nxdoc/add-a-news-content-view-on-workspaces
 ---
 In this section, we will:
 

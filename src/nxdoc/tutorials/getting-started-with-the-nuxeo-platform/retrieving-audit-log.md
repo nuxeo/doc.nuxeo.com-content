@@ -104,7 +104,8 @@ history:
         date: '2016-07-19 12:24'
         message: ''
         version: '1'
-
+previous_link: /nxdoc/managing-files
+next_link: /nxdoc/using-renditions
 ---
 **Goal**
 
@@ -159,8 +160,3 @@ Retrieve a document's audit log to gather its history. All actions made on a doc
 *   [Audit]({{page page='audit'}})
 
 {{/callout}}
-
-<div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-6">&larr;&nbsp;[Managing Files]({{page page='managing-files'}})</div>
-<div class="column medium-6" style="text-align:right">[Using Renditions]({{page page='using-renditions'}})&nbsp;&rarr;</div>
-</div>

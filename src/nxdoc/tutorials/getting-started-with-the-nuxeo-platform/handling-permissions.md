@@ -125,7 +125,8 @@ history:
         date: '2016-07-19 10:20'
         message: ''
         version: '1'
-
+previous_link: /nxdoc/manipulating-documents
+next_link: /nxdoc/managing-files
 ---
 {{! excerpt}}
 
@@ -313,8 +314,3 @@ A file download security policy has been defined in the addon Getting started wi
 *   [File Download Security Policies]({{page page='file-download-security-policies'}})
 
 {{/callout}}
-
-<div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-6">&larr;&nbsp;[Manipulating Documents]({{page page='manipulating-documents'}})</div>
-<div class="column medium-6" style="text-align:right">[Managing Files]({{page page='managing-files'}})&nbsp;&rarr;</div>
-</div>

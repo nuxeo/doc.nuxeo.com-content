@@ -117,7 +117,8 @@ history:
         date: '2013-08-07 18:45'
         message: ''
         version: '1'
-
+previous_link: /nxdoc/1-creating-the-expense-document-type
+next_link: /nxdoc/3-creating-the-main-workflow
 ---
 {{#> callout type='info' }}
 
@@ -307,4 +308,4 @@ Set the following values:
     ![]({{file name='subtwolevels-node1-transitions-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,h=351,border=true)
 2.  Save your modifications in the node and on the graph.
 
-That's it! Our sub workflows are ready, now only remains the one workflow to rule them all, the [main workflow]({{page space='studio' page='3-creating-the-main-workflow'}}).
+That's it! Our sub workflows are ready, now only remains the one workflow to rule them all, the main workflow.

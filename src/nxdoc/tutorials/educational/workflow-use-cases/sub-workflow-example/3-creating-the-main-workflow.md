@@ -87,11 +87,11 @@ history:
         date: '2013-08-07 18:20'
         message: ''
         version: '1'
-
+previous_link: /nxdoc/2-creating-the-subworkflows
 ---
 {{#> callout type='info' }}
 
-This document is part of the&nbsp;[Sub Workflow Example]({{page page='sub-workflow-example'}}) project series.
+This document is part of the [Sub Workflow Example]({{page page='sub-workflow-example'}}) project series.
 
 {{/callout}}
 
@@ -104,7 +104,7 @@ We will create the main workflow that will call a subworkflow depending on the d
 1.  In Nuxeo Studio, go to **Workflow** > **Process definitions** and click on the **New** button.
 2.  Fill in the fields:
 
-    - **Feature ID**:&nbsp;`expenseValidation`
+    - **Feature ID**: `expenseValidation`
     - **Label**: Expense validation
     - **(Optional) Description**: Request your expense validation.
 3.  Click on the **Ok** button.
@@ -114,7 +114,7 @@ We will create the main workflow that will call a subworkflow depending on the d
 This workflow will be a wrapper for the subworkflows. So contrarily to the previous ones we created, it should be visible to the users.
 
 1.  In the "Current user has one of the permissions" list, choose **Edit**.
-2.  In the "Current document has one of the types" list, choose&nbsp;**Expense**.
+2.  In the "Current document has one of the types" list, choose **Expense**.
 3.  In the "Current document has life cycle" field, type `project`. We wouldn't like to launch the workflow on validated expenses.
 4.  Save your modifications.
 
@@ -157,6 +157,4 @@ Set the following values:
 
 4.  Save your modifications in the node and on the graph.
 
-You are now all set! This tutorial is merely a basic example of what can be achieved with the sub workflow functionality; the rest is up to your imagination :smile:
-
-&nbsp;
+You are now all set! This tutorial is merely a basic example of what can be achieved with the sub workflow functionality; the rest is up to your imagination.

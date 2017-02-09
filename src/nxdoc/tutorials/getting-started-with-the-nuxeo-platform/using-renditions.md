@@ -145,7 +145,8 @@ history:
         date: '2016-08-02 15:58'
         message: ''
         version: '1'
-
+previous_link: /nxdoc/retrieving-audit-log
+next_link: /nxdoc/using-workflows
 ---
 {{! excerpt}}
 
@@ -358,8 +359,3 @@ The marketing department wants to use the companies' logos stored in the portfol
 *   [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
 
 {{/callout}}
-
-<div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-6">&larr;&nbsp;[Retrieving Audit Log]({{page page='retrieving-audit-log'}})</div>
-<div class="column medium-6" style="text-align:right">[Using Workflows]({{page page='using-workflows'}})&nbsp;&rarr;</div>
-</div>
