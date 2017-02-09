@@ -60,40 +60,47 @@ The solution is simple: `nuxeo.war` tree should not be at root of the JAR.
 
 Sample directory structure:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-
-<span style="color: rgb(0,0,0);">Before (Jboss 4.2)</span>
-
-</th><th colspan="1">
-
-<span style="color: rgb(0,0,0);">After (Jboss 5.1)</span>
-
-</th></tr><tr><td colspan="1">
-
-<span style="color: rgb(51,51,51);">.</span>
-<span style="color: rgb(51,51,51);">`-- src</span>
-<span style="color: rgb(51,51,51);">`-- main</span>
-<span style="color: rgb(51,51,51);">|-- java</span>
-<span style="color: rgb(51,51,51);">`-- resources</span>
-<span style="color: rgb(51,51,51);">|-- META-INF</span>
-<span style="color: rgb(51,51,51);">|-- nuxeo.war</span>
-<span style="color: rgb(51,51,51);">| `-- my_page.xhtml</span>
-<span style="color: rgb(51,51,51);">`-- OSGI-INF</span>
-
-</td><td colspan="1">
-
+<div class="table-scroll">
+    <table class="hover">
+        <thead>
+            <tr>
+                <th>Before (Jboss 4.2)</th>
+                <th>After (Jboss 5.1)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <pre>
 .
-`-- src
-`-- main
+\`-- src
+\`-- main
 |-- java
-`-- resources
+\`-- resources
+|-- META-INF
+|-- nuxeo.war
+| \`-- my_page.xhtml
+\`-- OSGI-INF
+                    </pre>
+                </td>
+                <td>
+                    <pre>
+.
+\`-- src
+\`-- main
+|-- java
+\`-- resources
 |-- META-INF
 |-- OSGI-INF
-<span style="color: rgb(255,0,0);">`-- web</span>
-`-- nuxeo.war
-`-- my_page.xhtml
-
-</td></tr></tbody></table></div>
+\`-- web
+\`-- nuxeo.war
+\`-- my_page.xhtml
+                    </pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 This implies a small change in the deployment-fragment:
 
