@@ -143,6 +143,8 @@ history:
         date: '2013-07-10 15:13'
         message: ''
         version: '1'
+previous_link: 810/nxdoc/custom-content-view-for-documentation-items
+next_link: 810/nxdoc/validation-workflow-choosing-the-assignee-based-on-a-metadata
 
 ---
 {{! multiexcerpt name='partOfTechDocTuto'}}
@@ -157,7 +159,7 @@ Although there are several options, we choose the locking one. We will create an
 
 1.  In Studio, go to **Automation** > **Event Handlers**.
 2.  Click on **New** to create a new event handler.
-3.  Give it the ID&nbsp;`AutoLockOnItemCreation` and click on **Next**.
+3.  Give it the ID `AutoLockOnItemCreation` and click on **Next**.
     Ignore the validation error for now: it is here because we have not yet defined what our event handler will trigger.
 4.  In the **Event Handler Definition** section, select the event "Document Created".
 5.  In the **Event Handler Activation** section, select the `DocumentationItem` document type.
@@ -165,7 +167,7 @@ Although there are several options, we choose the locking one. We will create an
 6.  In **Current Document is**, choose "Regular Document", to make sure it is only fired for usual documents. You do not want it when creating a proxy (used by the publishing system) for instance.
     ![]({{file name='EvenHandler.png'}} ?w=600,border=true)
 7.  In the Event Handler Execution section, click on **Create**.
-8.  Call the automation chain&nbsp;`AutoLockOnItemChain`.
+8.  Call the automation chain `AutoLockOnItemChain`.
     You are now displayed the automation chain definition screen, in **Automation** > **Automation Chains**.
 
 ## Defining the Automation Chain
@@ -174,9 +176,9 @@ The automation chain will leverage the operation that is called Document > Lock.
 
 The newly created document is put in the context as well as the user who triggered the automation chain. Because the the chain is triggered at the creation of the document, this user is obviously the creator.
 
-Since we have everything required&nbsp; by the chain provided by default, our automation chain will be very simple.
+Since we have everything required by the chain provided by default, our automation chain will be very simple.
 
-1.  Leave the default **Fetch** > **Context.FetchDocument**.&nbsp;
+1.  Leave the default **Fetch** > **Context.FetchDocument**.
     It will create an input document (the newly created document) from the context for the next operation.
 2.  Add the operation **Document** > **Document.Lock**.
 3.  Leave the owner parameter empty
@@ -204,23 +206,7 @@ To sum up what we saw:
 
 {{/callout}}
 
-* * *
-
-&nbsp;
-
-<div class="row"><div class="column medium-4">
-
-[<< Custom Content View for Documentation Items]({{page page='custom-content-view-for-documentation-items'}})
-
-</div><div class="column medium-4">
-
-**[undefined]()**
-
-</div><div class="column medium-4">
-
-[Validation Workflow Choosing the Assignee Based on a Metadata >>]({{page page='validation-workflow-choosing-the-assignee-based-on-a-metadata'}})
-
-</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Locking vs Permission to Restrict Edit Access to a Document]({{page page='locking-vs-permission-to-restrict-edit-access-to-a-document'}})
 - [Automation Chains in Studio]({{page space='studio' page='automation-chains'}})

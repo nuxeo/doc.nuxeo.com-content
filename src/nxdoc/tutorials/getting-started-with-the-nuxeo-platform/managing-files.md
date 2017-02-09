@@ -145,6 +145,8 @@ history:
         date: '2016-07-19 12:41'
         message: ''
         version: '1'
+previous_link: 810/nxdoc/handling-permissions
+next_link: 810/nxdoc/retrieving-audit-log
 
 ---
 {{! excerpt}}
@@ -400,8 +402,3 @@ The contract for Skynet AI maintenance you just created should contain other fil
 - [HOWTO: Upload a File in Nuxeo Using REST API]({{page page='howto-upload-file-nuxeo-using-rest-api'}})
 
 {{/callout}}
-
-<div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-6">&larr;&nbsp;[Handling Permissions]({{page page='handling-permissions'}})</div>
-<div class="column medium-6" style="text-align:right">[Retrieving Audit Log]({{page page='retrieving-audit-log'}})&nbsp;&rarr;</div>
-</div>

@@ -364,6 +364,7 @@ history:
         date: '2013-02-22 17:36'
         message: ''
         version: '1'
+next_link: 810/nxdoc/custom-content-view-for-documentation-items
 
 ---
 The goal is to manage all kinds of documents like procedures or notices. At this first step, we will create a new document type called `documentationItem`. This documentation item will be the main document type we will be using in our project. We will use the Nature metadata to differentiate the different kinds of documentation items. See the page [Several Document Types vs One Document Type with a Nature Metadata]({{page page='several-document-types-vs-one-document-type-with-a-nature-metadata'}}) for more information.
@@ -576,21 +577,3 @@ To sum up, what we saw:
 {{/callout}}
 
 The next step is to adapt where the documents are created and how they are displayed when browsing.
-
-
-<div class="row">
-<div class="column medium-4">
-
-[<< Introduction]({{page page='first-steps-with-studio-technical-documentation-tutorial'}})
-
-</div>
-<div class="column medium-4">
-
-
-</div>
-<div class="column medium-4">
-
-[Custom Content View for Documentation Items >>]({{page page='custom-content-view-for-documentation-items'}})
-
-</div>
-</div>
