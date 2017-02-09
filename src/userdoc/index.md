@@ -18,6 +18,7 @@ confluence:
     shortlink: B426AQ
     shortlink_source: 'https://doc.nuxeo.com/x/B426AQ'
     source_link: /display/USERDOC710/Nuxeo+Platform+User+Documentation
+section_parent: user-documentation
 history:
     -
         author: Solen Guitter

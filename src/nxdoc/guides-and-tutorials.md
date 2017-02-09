@@ -19,6 +19,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/nIGyAQ'
     source_link: /display/NXDOC710/Guides+and+Tutorials
 tree_item_index: 200
+section_parent: tutorials
 version_override:
     'FT': '/nxdoc/tutorials'
     'LTS 2016': 810/nxdoc/tutorials

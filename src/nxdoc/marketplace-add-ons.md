@@ -18,6 +18,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/hoGyAQ'
     source_link: /display/NXDOC710/Marketplace+Add-Ons
 tree_item_index: 2000
+section_parent: addons
 version_override:
      'FT': '/nxdoc/nuxeo-add-ons'
      'LTS 2016': 810/nxdoc/nuxeo-add-ons
