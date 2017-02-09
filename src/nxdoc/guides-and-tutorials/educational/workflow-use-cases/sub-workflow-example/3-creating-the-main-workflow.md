@@ -21,76 +21,77 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/eIFVAQ'
     source_link: /display/NXDOC60/3-+Creating+the+Main+Workflow
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-10 13:34'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 16:42'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 11:47'
         message: Fixed broken links
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-09 16:16'
         message: ''
         version: '10'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-08 11:38'
         message: ''
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-08 10:44'
         message: ''
         version: '8'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-08 10:35'
         message: ''
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:55'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:54'
         message: ''
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:53'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:53'
         message: ''
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:41'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-07 18:20'
         message: ''
         version: '1'
+previous_link: 60/nxdoc/2-creating-the-subworkflows
 
 ---
 {{#> callout type='info' }}
 
-This document is part of the&nbsp;[Sub Workflow Example]({{page page='sub-workflow-example'}}) project series.
+This document is part of the [Sub Workflow Example]({{page page='sub-workflow-example'}}) project series.
 
 {{/callout}}
 
@@ -103,7 +104,7 @@ We will create the main workflow that will call a subworkflow depending on the d
 1.  In Nuxeo Studio, go to **Workflow** > **Workflow definitions** and click on the **New** button.
 2.  Fill in the fields:
 
-    1.  **Feature ID**:&nbsp;`expenseValidation`
+    1.  **Feature ID**: `expenseValidation`
     2.  **Label**: Expense validation
     3.  **(Optional) Description**: Request your expense validation.
 3.  Click on the **Next** button.
@@ -112,8 +113,8 @@ We will create the main workflow that will call a subworkflow depending on the d
 
 This workflow will be a wrapper for the subworkflows. So contrarily to the previous ones we created, it should be visible to the users.
 
-1.  In the "Current user has one of the permissions" list, choose&nbsp;**Write**.
-2.  In the "Current document has one of the types" list, choose&nbsp;**Expense**.
+1.  In the "Current user has one of the permissions" list, choose **Write**.
+2.  In the "Current document has one of the types" list, choose **Expense**.
 3.  In the "Current document state is" field, type `project`. We wouldn't like to launch the workflow on validated expenses.
 4.  Save your modifications.
 
@@ -159,6 +160,4 @@ Set the following values:
 
 4.  Save your modifications in the node and on the graph.
 
-You are now all set! This tutorial is merely a basic example of what can be achieved with the sub workflow functionality; the rest is up to your imagination :smile:
-
-&nbsp;
+You are now all set! This tutorial is merely a basic example of what can be achieved with the sub workflow functionality; the rest is up to your imagination.

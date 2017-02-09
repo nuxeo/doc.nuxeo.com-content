@@ -181,24 +181,10 @@ history:
         date: '2013-07-03 18:00'
         message: ''
         version: '1'
+previous_link: 60/nxdoc/documentation-item-implementation
+next_link: 60/nxdoc/document-locking-right-after-its-creation
 
 ---
-<div class="row"><div class="column medium-4">
-
-[<< Documentation Item Implementation]({{page page='documentation-item-implementation'}})
-
-</div><div class="column medium-4">
-
-**[undefined]()**
-
-</div><div class="column medium-4">
-
-[Document Locking Right after Its Creation >>]({{page page='document-locking-right-after-its-creation'}})
-
-</div></div>
-
-&nbsp;
-
 At the first step of this tutorial, we created a new document type, called `documentationItem`.
 
 Now we decide that documentation items should be created in specific containers. This will enable us to add specific user actions, listing view and filters on this specific folder.
@@ -224,10 +210,9 @@ We could extend the Folder document type to inherit its folderish facet. But it 
 
 {{/callout}}<div class="row"><div class="column medium-8">
 
-**Making the document type folderish
-**
+**Making the document type folderish**
 
-1.  On the `TechnicalDocumentationContainer` Definition tab, choose the&nbsp;**Collaboratives Spaces** Category.
+1.  On the `TechnicalDocumentationContainer` Definition tab, choose the **Collaboratives Spaces** Category.
 2.  Choose a nice [icon]({{page space='studio' page='resources'}}).
 3.  In **Facets**, select the **Document is folderish** facet.
     It will automatically add an **Accepted children type** section. No children are selected by default.
@@ -247,14 +232,14 @@ We could extend the Folder document type to inherit its folderish facet. But it 
 For our container, we need very few metadata, a title and a description are enough.
 
 1.  Click on the Creation Layout tab.
-2.  Click on the icon&nbsp;![]({{file name='delete.gif' space='studio' page='studio-icons-index'}}) of the WARNING rowand confirm deletion.
+2.  Click on the icon ![]({{file name='delete.gif' space='studio' page='studio-icons-index'}}) of the WARNING rowand confirm deletion.
 3.  Repeat step 2 on the View and Edit layout tabs.
 4.  Click on **Save**.
 
 **Restricting where documentationItem documents can be created**
 
 1.  Go to the `documentationItem` Definition tab.
-2.  &nbsp;In the **Container Types**, remove Folder and Workspace and add `TechnicalDocumentationContainer`.
+2.  In the **Container Types**, remove Folder and Workspace and add `TechnicalDocumentationContainer`.
 3.  Click on **Save**.
     Documentation items can now be created in documentation containers only.
 
@@ -265,8 +250,6 @@ For our container, we need very few metadata, a title and a description are enou
 3.  In the container, create a new document.
     You only see a documentation item.
     ![]({{file name='tecDocContainer.png'}} ?w=500,h=244,border=true)
-
-&nbsp;
 
 </div><div class="column medium-4">{{#> panel type='primary'}} Read more:
 
@@ -308,7 +291,7 @@ We want the documentation container to display the list of its children. This is
 
 We also want to be able to filter the documents inside our folder.
 
-1.  &nbsp;In the Search layout part of the form, check&nbsp;**Display the form as a filter**.
+1.  In the Search layout part of the form, check **Display the form as a filter**.
 2.  Choose if it should be displayed in a pop-up or a folding form, it is up to you.
 3.  In the Search layout, drag and drop the "full text" built-in widget on the search layout so that we can filter by using the full text search.
 4.  Drag the Nature metadata from the `dublincore` schema and drop it to the layout.
@@ -316,7 +299,7 @@ We also want to be able to filter the documents inside our folder.
 5.  Edit the Nature widget
     1.  Select a Vocabulary widget type and choose the vocabulary ``qualNat``.
     2.  Keep the "=" operator.
-        ![]({{file name='natureVoc.png'}} ?w=400,border=true)&nbsp;
+        ![]({{file name='natureVoc.png'}} ?w=400,border=true)
 6.  Click on **Save**.
 
 **Defining the Results layout**
@@ -333,17 +316,17 @@ We also want to be able to filter the documents inside our folder.
 
         {{/callout}}
 3.  Add the **Nature** metadata:
-    1.  &nbsp;Drag and drop it from the schema `dublincore`.
-    2.  Edit the widget to select the **Vocabulary** widget type and the&nbsp;`qualNat` vocabulary.
+    1.  Drag and drop it from the schema `dublincore`.
+    2.  Edit the widget to select the **Vocabulary** widget type and the `qualNat` vocabulary.
 4.  Add the **Process** metadata:
-    1.  Drag and drop it from the schema&nbsp; `Quality`.
+    1.  Drag and drop it from the schema `Quality`.
     2.  Edit the widget to select the **Chained vocabulary** widget type and the `procQual` vocabulary.
 5.  Add the **Modified** from the schema `dublincore`.
 6.  Add two columns by clicking the **Add column** button.
 7.  Drag the following built-in widgets:
     *   **Lifecycle state**
     *   **Version**
-8.  Click on the icon&nbsp;![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) to edit the columns labels. For instance you don't want a label for the Icon and document type column.
+8.  Click on the icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) to edit the columns labels. For instance you don't want a label for the Icon and document type column.
     ![]({{file name='Screenshot_05_07_13_15_36.png'}} ?w=500,h=245,border=true)
 9.  Click on **Save**.
     We now have a new content view available but we need to use it with the `TechnicalDocumentationContainer`.
@@ -353,14 +336,14 @@ We also want to be able to filter the documents inside our folder.
 1.  In the Studio menu, click **Content model** > **Document Types** > **TechnicalDocumentationContainer**.
 2.  Click on the **Tabs** tab.
 3.  Click on the **Content Views** sub-tab
-4.  In the&nbsp;Main content field select the content view `TechnicalDocListing`.
+4.  In the Main content field select the content view `TechnicalDocListing`.
     ![]({{file name='DefaultContentViewContainer.png'}} ?w=500,h=238,border=true)
 5.  Click on **Save**.
 
 **Testing your changes**
 
 1.  [Deploy]({{page space='studio' page='deploying-your-project-in-dev-mode'}}) your changes on your Nuxeo Platform.
-2.  &nbsp;Go on the documentation folder created sooner and enjoy the result: If you deploy the filter, you will see that you can filter documents by Nature.
+2.  Go on the documentation folder created sooner and enjoy the result: If you deploy the filter, you will see that you can filter documents by Nature.
     ![]({{file name='contentviewDeployed-4.png'}} ?w=500,border=true)
 
 {{#> callout type='tip' heading='Congratulations'}}
@@ -383,16 +366,4 @@ It is now time to add custom behaviors, such as the locking policy we decided in
 
 *   [Content Views in Studio]({{page space='studio' page='content-views'}})
 
-{{/panel}}</div></div><div class="row"><div class="column medium-4">
-
-[<< Documentation Item Implementation]({{page page='documentation-item-implementation'}})&nbsp;
-
-</div><div class="column medium-4">
-
-**[undefined]()**
-
-</div><div class="column medium-4">
-
-[Document Locking Right after Its Creation >>]({{page page='document-locking-right-after-its-creation'}})
-
-</div></div>
+{{/panel}}</div></div>

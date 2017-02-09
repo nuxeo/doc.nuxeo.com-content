@@ -82,24 +82,25 @@ history:
         date: '2010-07-28 01:19'
         message: ''
         version: '1'
+next_link: 60/nxdoc/implement-the-validation-logic
 
 ---
 Here is the use case we want to implement:
 
 1.  The administrator creates a new workspace:
-    ![]({{file name='Image 20.png'}} ?border=true,thumbnail=true)
+    ![]({{file name='Image 20.png'}} ?border=true)
 2.  He assigns permissions "Write" and "Validation" to user Jack:
-    ![]({{file name='Image 10.png'}} ?border=true,thumbnail=true)
+    ![]({{file name='Image 10.png'}} ?border=true)
 3.  He creates a new document by drag'n drop, this document is in state "Project":
-    ![]({{file name='Image 11.png'}} ?border=true,thumbnail=true)
+    ![]({{file name='Image 11.png'}} ?border=true)
 4.  He clicks on "Request validation" link, on the top right part of the screen:
     ![]({{file name='screenshot_2011-06-01_15.42.26.png'}})
 5.  Jack logs in
 6.  He goes to his dashboard and sees he has a new task:
-    ![]({{file name='Image 14.png'}} ?border=true,thumbnail=true)
+    ![]({{file name='Image 14.png'}} ?border=true)
 7.  He clicks on it and falls on the summary tab, with, at the end, the detail of the task. If you have a look at assignees, it is actually all the users that have the permission "Validation" on the document:
-    ![]({{file name='Image 15.png'}} ?border=true,thumbnail=true)
+    ![]({{file name='Image 15.png'}} ?border=true)
 8.  He accepts the task, the state of the document goes to "Approved":
-    ![]({{file name='Image 16.png'}} ?border=true,thumbnail=true)
+    ![]({{file name='Image 16.png'}} ?border=true)
 9.  If he goes to the audit, he will see the event "Document Validated", as well as the history of the task creation, etc. ...
-    ![]({{file name='Image 17.png'}} ?border=true,thumbnail=true)
+    ![]({{file name='Image 17.png'}} ?border=true)

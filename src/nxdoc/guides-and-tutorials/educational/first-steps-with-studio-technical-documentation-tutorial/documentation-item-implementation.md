@@ -272,9 +272,9 @@ history:
         date: '2013-02-22 17:36'
         message: ''
         version: '1'
+next_link: 60/nxdoc/custom-content-view-for-documentation-items
 
 ---
-&nbsp;
 
 At this first step, we will create a new document type called `documentationItem`. This documentation item will be the main document type we will be using in our project.
 
@@ -309,7 +309,7 @@ As stated in the introduction of the project, the goal is to manage all kinds of
     You should see "Technical Document item" in the Miscellaneous category.
     ![]({{file name='newAvailableDocType-2.png'}} ?w=550,border=true)
 
-The new document type is created, it is now time to customize it.&nbsp;
+The new document type is created, it is now time to customize it.
 
 <div class="row"><div class="column medium-8">
 
@@ -337,9 +337,6 @@ The documentation item is now available in the correct category and it has some 
 
 {{/panel}}
 
-&nbsp;
-
-&nbsp;
 
 </div></div><div class="row"><div class="column medium-8">
 
@@ -347,7 +344,7 @@ The documentation item is now available in the correct category and it has some 
 
 ### Checking the Metadata and Schemas You Need
 
-To be able to describe and find the document, the following metadata should be available on the document:&nbsp;
+To be able to describe and find the document, the following metadata should be available on the document:
 
 *   A nature: a simple and limited list of choices
 *   A process: a two level list of choices. Since there can be many processes we will group them by category.
@@ -392,13 +389,13 @@ Now you add this new schema to the `DocumentationItem` document type:
 3.  Expend **Add extra schemas to this document type**.
 4.  In the left list select the `quality` schema.
 5.  Add it to the right list.
-    ![]({{file name='inheritSchema.png'}} ?w=500,h=128,border=true)&nbsp;
+    ![]({{file name='inheritSchema.png'}} ?w=500,h=128,border=true)
 6.  Click on **Save**.
     The schema is now available on the document type. So every metadata added to the schema will automatically be added to the document.
 
 ### Adding a Metadata to the Schema
 
-1.  In Studio, go to the&nbsp;`quality` schema.
+1.  In Studio, go to the `quality` schema.
 2.  Add a new field and name it `process`.
 3.  Select the **String** type.
 4.  A document is only related to one process, so we do not check **Multi-Valued**.
@@ -419,7 +416,7 @@ Metadata are displayed in form layouts. A form layout can be generic and reused 
 
 1.  Go on the `DocumentationItem` definition.
     Four layout tabs are available. Each layout corresponds to a way to access the document: creation, view, edition. You can then control what can be seen and modified. The header layout is what you see on the top of the document. We will leave it empty, and it will take the default layout that displays the title of the document.
-    &nbsp;![]({{file name='Screenshot_02_07_13_17_00.png'}} ?w=600,border=true)
+    ![]({{file name='Screenshot_02_07_13_17_00.png'}} ?w=600,border=true)
 2.  Click on the **Creation Layout** tab.
     You can see that the layout is already filled with a minimum set of metadata.
 3.  Click on the icon ![]({{file name='delete.gif' space='studio' page='studio-icons-index'}}) of the WARNING row and confirm deletion.
@@ -478,7 +475,7 @@ Now that you have the two vocabularies, you still have to bind them to the metad
 1.  Go back to the creation layout of `DocumentationItem`.
 2.  Edit the `Nature` metadata widget by clicking on the icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}).
 3.  In the Layout Widget Editor, select the widget type **Vocabulary**.
-4.  In the&nbsp; **Edit properties** part, select the vocabulary `qualNat`.
+4.  In the **Edit properties** part, select the vocabulary `qualNat`.
 5.  You can make the nature field required if you want to by selecting **Yes** in the **Required** drop down list.
     ![]({{file name='Screenshot_02_07_13_19_14.png'}} ?w=450,border=true)
 6.  Click on **Save**.
@@ -513,7 +510,7 @@ You created a document type that will hold all the information you need to manag
 
 To sum up, what we saw:
 
-*   &nbsp;A document type can have metadata of several types (String, Integer...).
+*   A document type can have metadata of several types (String, Integer...).
 *   Metadata are grouped in schemas. Of course, one document can have several schemas.
 *   The content model is different from the user interface. When you add a metadata to a document (through its schemas), you have to add the metadata in the layouts of the document.
 *   You can control how the metadata are filled in directly from the layouts of the document by changing the widget type.
@@ -524,22 +521,6 @@ The next step is to adapt where the documents are created and how they are displ
 
 </div><div class="column medium-4">{{#> panel type='primary'}} Read more:
 
-*   [Form Layouts in Studio]({{page space='studio' page='form-layouts'}})
+- [Form Layouts in Studio]({{page space='studio' page='form-layouts'}})
 
 {{/panel}}</div></div>
-
-&nbsp;
-
-<div class="row"><div class="column medium-4">
-
-[<< Introduction]({{page page='first-steps-with-studio-technical-documentation-tutorial'}})
-
-</div><div class="column medium-4">
-
-**[undefined]()**
-
-</div><div class="column medium-4">
-
-[Custom Content View for Documentation Items >>]({{page page='custom-content-view-for-documentation-items'}})
-
-</div></div>
