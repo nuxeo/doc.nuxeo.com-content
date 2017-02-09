@@ -8,17 +8,6 @@ redirect: page-providers
 redirect_source: Page Providers
 labels:
     - content-review-lts2016
-confluence:
-    ajs-parent-page-id: ''
-    ajs-parent-page-title: ''
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Custom+Page+Providers
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Custom+Page+Providers'
-    page_id: '5570788'
-    shortlink: 5ABV
-    shortlink_source: 'https://doc.nuxeo.com/x/5ABV'
-    source_link: /display/NXDOC/Custom+Page+Providers
 hidden: true
 history:
     -

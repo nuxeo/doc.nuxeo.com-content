@@ -16,17 +16,6 @@ labels:
     - content-review-lts2016
     - howto
 toc: true
-confluence:
-    ajs-parent-page-id: '20517820'
-    ajs-parent-page-title: JSF UI How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Debug+Slow+Page+Rendering
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Debug+Slow+Page+Rendering'
-    page_id: '31686883'
-    shortlink: 44DjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/44DjAQ'
-    source_link: /display/NXDOC/How+to+Debug+Slow+Page+Rendering
 tree_item_index: 1700
 history:
     -

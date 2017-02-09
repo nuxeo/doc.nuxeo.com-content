@@ -7,21 +7,9 @@ review:
 labels:
     - content-review-lts2016
     - install-linux
-confluence:
-    ajs-parent-page-id: '9274334'
-    ajs-parent-page-title: Installing the Nuxeo Platform on Linux
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Configuring+the+Nuxeo+Platform+as+a+Daemon+with+SysVinit
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Configuring+the+Nuxeo+Platform+as+a+Daemon+with+SysVinit
-    page_id: '4688436'
-    shortlink: NIpH
-    shortlink_source: 'https://doc.nuxeo.com/x/NIpH'
-    source_link: /display/NXDOC/Configuring+the+Nuxeo+Platform+as+a+Daemon+with+SysVinit
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-sysvinit
+    LTS 2015: 710/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-sysvinit
     '6.0': 60/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-sysvinit
     '5.8': 58/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-sysvinit
 history:
@@ -88,7 +76,7 @@ history:
     -
         author: Julien Carsique
         date: '2011-11-15 15:05'
-        message: changed "nuxeo" with "$NUXEO_USER"
+        message: 'changed "nuxeo" with "$NUXEO_USER"'
         version: '12'
     -
         author: Julien Carsique

@@ -7,17 +7,6 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '29460589'
-    ajs-parent-page-title: Getting Started with the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Manipulating+Documents
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Manipulating+Documents'
-    page_id: '31687130'
-    shortlink: 2oHjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/2oHjAQ'
-    source_link: /display/NXDOC/Manipulating+Documents
 tree_item_index: 300
 history:
     -
@@ -83,7 +72,7 @@ history:
     -
         author: Bertrand Chauvin
         date: '2016-09-16 13:42'
-        message: don't put dashes in tel for juridical contact
+        message: "don't put dashes in tel for juridical contact"
         version: '25'
     -
         author: Arnaud Kervern
@@ -118,9 +107,7 @@ history:
     -
         author: Bertrand Chauvin
         date: '2016-08-09 09:24'
-        message: >-
-            Remove amount in contract to be able to launch workflow properly
-            later
+        message: Remove amount in contract to be able to launch workflow properly later
         version: '18'
     -
         author: Bertrand Chauvin
@@ -160,14 +147,12 @@ history:
     -
         author: Bertrand Chauvin
         date: '2016-07-19 13:15'
-        message: >-
-            Use custom clauses (complex multivalued property) instead of
-            updating a simple property
+        message: Use custom clauses (complex multivalued property) instead of updating a simple property
         version: '10'
     -
         author: Bertrand Chauvin
         date: '2016-07-19 10:17'
-        message: Removed permissions mgt => going to a different page
+        message: 'Removed permissions mgt => going to a different page'
         version: '9'
     -
         author: Bertrand Chauvin

@@ -18,19 +18,6 @@ labels:
     - howto
     - workflow-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235619'
-    ajs-parent-page-title: Workflow How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Modify+a+Workflow+Variable+outside+of+Workflow+Context
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Modify+a+Workflow+Variable+outside+of+Workflow+Context
-    page_id: '12913725'
-    shortlink: PQzF
-    shortlink_source: 'https://doc.nuxeo.com/x/PQzF'
-    source_link: >-
-        /display/NXDOC/How+to+Modify+a+Workflow+Variable+outside+of+Workflow+Context
 tree_item_index: 200
 history:
     -

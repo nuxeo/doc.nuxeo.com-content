@@ -10,18 +10,6 @@ labels:
     - studio
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '19235679'
-    ajs-parent-page-title: Educational
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Publish+a+News+Feature+in+Workspaces
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Publish+a+News+Feature+in+Workspaces
-    page_id: '4689520'
-    shortlink: cI5H
-    shortlink_source: 'https://doc.nuxeo.com/x/cI5H'
-    source_link: /display/NXDOC/How+to+Publish+a+News+Feature+in+Workspaces
 tree_item_index: 500
 history:
     -

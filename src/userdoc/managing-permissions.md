@@ -8,17 +8,6 @@ labels:
     - access-rights
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Managing+Permissions
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Managing+Permissions'
-    page_id: '2392401'
-    shortlink: UYEk
-    shortlink_source: 'https://doc.nuxeo.com/x/UYEk'
-    source_link: /display/USERDOC/Managing+Permissions
 tree_item_index: 400
 history:
     -
@@ -144,9 +133,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-11-04 22:31'
-        message: >-
-            Denying access rights now disabled by default, but can be activated
-            through nuxeo.conf
+        message: 'Denying access rights now disabled by default, but can be activated through nuxeo.conf'
         version: '30'
     -
         author: Solen Guitter

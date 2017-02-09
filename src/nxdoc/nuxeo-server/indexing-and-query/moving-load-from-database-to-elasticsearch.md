@@ -10,18 +10,6 @@ labels:
     - query-pageprovider-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '4687860'
-    ajs-parent-page-title: Indexing and Query
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Moving+Load+from+Database+to+Elasticsearch
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Moving+Load+from+Database+to+Elasticsearch
-    page_id: '23366423'
-    shortlink: F4tkAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/F4tkAQ'
-    source_link: /display/NXDOC/Moving+Load+from+Database+to+Elasticsearch
 tree_item_index: 700
 history:
     -

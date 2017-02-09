@@ -1,5 +1,5 @@
 ---
-title: Runtime Instantiation & Execution Logic
+title: 'Runtime Instantiation & Execution Logic'
 review:
     comment: ''
     date: '2016-12-30'
@@ -10,17 +10,6 @@ labels:
     - workflow-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '12913723'
-    ajs-parent-page-title: Workflow
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=16091264
-    canonical_source: viewpage.action?pageId=16091264
-    page_id: '16091264'
-    shortlink: gIj1
-    shortlink_source: 'https://doc.nuxeo.com/x/gIj1'
-    source_link: /pages/viewpage.action?pageId=16091264
 tree_item_index: 300
 history:
     -

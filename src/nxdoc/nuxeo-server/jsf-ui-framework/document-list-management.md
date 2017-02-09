@@ -10,17 +10,6 @@ labels:
     - clipboard
     - seam-jsf-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '16089312'
-    ajs-parent-page-title: JSF UI Framework
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Document+List+Management
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Document+List+Management'
-    page_id: '17795144'
-    shortlink: SIgPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/SIgPAQ'
-    source_link: /display/NXDOC/Document+List+Management
 tree_item_index: 1100
 history:
     -

@@ -16,17 +16,6 @@ labels:
     - howto
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '19235681'
-    ajs-parent-page-title: Transversal How-Tos
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=3343531
-    canonical_source: viewpage.action?pageId=3343531
-    page_id: '3343531'
-    shortlink: qwQz
-    shortlink_source: 'https://doc.nuxeo.com/x/qwQz'
-    source_link: /pages/viewpage.action?pageId=3343531
 tree_item_index: 200
 history:
     -

@@ -7,17 +7,6 @@ review:
 labels:
     - lts2016-ok
     - workflow
-confluence:
-    ajs-parent-page-id: '2392410'
-    ajs-parent-page-title: Workflows
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Abandoning+a+Workflow
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Abandoning+a+Workflow'
-    page_id: '2392412'
-    shortlink: XIEk
-    shortlink_source: 'https://doc.nuxeo.com/x/XIEk'
-    source_link: /display/USERDOC/Abandoning+a+Workflow
 tree_item_index: 500
 history:
     -

@@ -6,10 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Use the extensibility features of the Select2 widget to make a
-            selector which can suggest values based on a different widget's
-            value
+        excerpt: "Use the extensibility features of the Select2 widget to make a selector which can suggest values based on a different widget's value"
         level: Intermediate
         tool: Studio
         topics: Layout
@@ -21,19 +18,6 @@ labels:
     - widget
     - select2
 toc: true
-confluence:
-    ajs-parent-page-id: '19235623'
-    ajs-parent-page-title: Layout & Widget How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Make+a+Selection+Based+on+the+Value+of+Another+Value+in+a+Layout
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Make+a+Selection+Based+on+the+Value+of+Another+Value+in+a+Layout
-    page_id: '24053897'
-    shortlink: iQhvAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/iQhvAQ'
-    source_link: >-
-        /display/NXDOC/How+to+Make+a+Selection+Based+on+the+Value+of+Another+Value+in+a+Layout
 tree_item_index: 800
 history:
     -

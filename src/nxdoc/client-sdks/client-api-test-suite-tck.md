@@ -12,17 +12,6 @@ labels:
     - rest-api-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '16091040'
-    ajs-parent-page-title: Client SDKs
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=14255551
-    canonical_source: viewpage.action?pageId=14255551
-    page_id: '14255551'
-    shortlink: v4XZ
-    shortlink_source: 'https://doc.nuxeo.com/x/v4XZ'
-    source_link: /pages/viewpage.action?pageId=14255551
 tree_item_index: 700
 history:
     -
@@ -133,7 +122,7 @@ history:
     -
         author: Florent Guillaume
         date: '2013-07-25 15:00'
-        message: JS -> JavaScript
+        message: 'JS -> JavaScript'
         version: '9'
     -
         author: Julien Carsique

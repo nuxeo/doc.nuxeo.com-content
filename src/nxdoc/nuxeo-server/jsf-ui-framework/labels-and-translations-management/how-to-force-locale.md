@@ -17,17 +17,6 @@ labels:
     - i18n
     - translations-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235763'
-    ajs-parent-page-title: Labels and Translations Management
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Force+Locale
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Force+Locale'
-    page_id: '3343563'
-    shortlink: ywQz
-    shortlink_source: 'https://doc.nuxeo.com/x/ywQz'
-    source_link: /display/NXDOC/How+to+Force+Locale
 tree_item_index: 100
 history:
     -

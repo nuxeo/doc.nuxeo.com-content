@@ -9,17 +9,6 @@ labels:
     - marketplace
     - packaging-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Creating+Nuxeo+Packages
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Creating+Nuxeo+Packages'
-    page_id: '3342859'
-    shortlink: CwIz
-    shortlink_source: 'https://doc.nuxeo.com/x/CwIz'
-    source_link: /display/NXDOC/Creating+Nuxeo+Packages
 tree_item_index: 200
 history:
     -
@@ -45,7 +34,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2016-01-15 10:13'
-        message: Typo 'you package' -> your
+        message: "Typo 'you package' -> your"
         version: '50'
     -
         author: Solen Guitter
@@ -170,9 +159,7 @@ history:
     -
         author: Julien Carsique
         date: '2011-08-16 19:02'
-        message: >-
-            NXP-6139 - add the templates folder as an env variable to the Update
-            Center installer framework
+        message: NXP-6139 - add the templates folder as an env variable to the Update Center installer framework
         version: '25'
     -
         author: whajeri

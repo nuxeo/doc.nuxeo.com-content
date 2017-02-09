@@ -11,17 +11,6 @@ labels:
     - template-rendering-addon-component
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Template+Rendering+Addon
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Template+Rendering+Addon'
-    page_id: '11044085'
-    shortlink: 9YSo
-    shortlink_source: 'https://doc.nuxeo.com/x/9YSo'
-    source_link: /display/NXDOC/Template+Rendering+Addon
 tree_item_index: 3500
 history:
     -

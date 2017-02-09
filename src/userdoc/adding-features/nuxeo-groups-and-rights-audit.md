@@ -9,17 +9,6 @@ labels:
     - export
     - last-review-20150226
     - excerpt
-confluence:
-    ajs-parent-page-id: '11043055'
-    ajs-parent-page-title: Adding Features
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Nuxeo+Groups+and+Rights+Audit
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Groups+and+Rights+Audit'
-    page_id: '14257398'
-    shortlink: 9ozZ
-    shortlink_source: 'https://doc.nuxeo.com/x/9ozZ'
-    source_link: /display/USERDOC/Nuxeo+Groups+and+Rights+Audit
 tree_item_index: 700
 history:
     -

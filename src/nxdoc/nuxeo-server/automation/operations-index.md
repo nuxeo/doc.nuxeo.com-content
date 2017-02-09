@@ -9,17 +9,6 @@ labels:
     - operation
     - automation-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '18451738'
-    ajs-parent-page-title: Automation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Operations+Index
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Operations+Index'
-    page_id: '3343086'
-    shortlink: 7gIz
-    shortlink_source: 'https://doc.nuxeo.com/x/7gIz'
-    source_link: /display/NXDOC/Operations+Index
 tree_item_index: 200
 history:
     -

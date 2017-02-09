@@ -13,17 +13,6 @@ labels:
     - directory-component
     - migration-sample
 toc: true
-confluence:
-    ajs-parent-page-id: '16089115'
-    ajs-parent-page-title: Authentication and User Management
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Using+a+LDAP+Directory
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Using+a+LDAP+Directory'
-    page_id: '5570895'
-    shortlink: TwFV
-    shortlink_source: 'https://doc.nuxeo.com/x/TwFV'
-    source_link: /display/NXDOC/Using+a+LDAP+Directory
 tree_item_index: 130
 history:
     -
@@ -179,7 +168,7 @@ history:
     -
         author: Thierry Martins
         date: '2011-09-08 17:42'
-        message: add config for DM >= 5.4.2
+        message: 'add config for DM >= 5.4.2'
         version: '8'
     -
         author: Julien Carsique

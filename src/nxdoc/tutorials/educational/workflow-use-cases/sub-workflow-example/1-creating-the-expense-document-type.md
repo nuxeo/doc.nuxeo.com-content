@@ -10,18 +10,6 @@ labels:
     - subworkflow
     - sub-workflow
 toc: true
-confluence:
-    ajs-parent-page-id: '14257562'
-    ajs-parent-page-title: Sub Workflow Example
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: 1-+Creating+the+Expense+Document+Type
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/1-+Creating+the+Expense+Document+Type
-    page_id: '14257583'
-    shortlink: r43Z
-    shortlink_source: 'https://doc.nuxeo.com/x/r43Z'
-    source_link: /display/NXDOC/1-+Creating+the+Expense+Document+Type
 history:
     -
         author: Manon Lumeau

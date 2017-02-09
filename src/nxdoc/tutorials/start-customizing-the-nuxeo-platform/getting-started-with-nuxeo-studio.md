@@ -15,17 +15,6 @@ labels:
     - studio
     - lts2016-ok
 toc: true
-confluence:
-    ajs-parent-page-id: '14256538'
-    ajs-parent-page-title: Start Customizing the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Getting+Started+with+Nuxeo+Studio
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Getting+Started+with+Nuxeo+Studio'
-    page_id: '20518152'
-    shortlink: CBU5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/CBU5AQ'
-    source_link: /display/NXDOC/Getting+Started+with+Nuxeo+Studio
 tree_item_index: 100
 history:
     -

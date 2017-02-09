@@ -11,17 +11,6 @@ labels:
     - community-links
     - thumbnail-service-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089319'
-    ajs-parent-page-title: Additional Services
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Thumbnail
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Thumbnail'
-    page_id: '14255024'
-    shortlink: sIPZ
-    shortlink_source: 'https://doc.nuxeo.com/x/sIPZ'
-    source_link: /display/NXDOC/Thumbnail
 tree_item_index: 700
 history:
     -

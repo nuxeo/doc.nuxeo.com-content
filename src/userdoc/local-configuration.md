@@ -7,17 +7,6 @@ review:
 labels:
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Local+Configuration
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Local+Configuration'
-    page_id: '26314969'
-    shortlink: 2YiRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/2YiRAQ'
-    source_link: /display/USERDOC/Local+Configuration
 tree_item_index: 1600
 history:
     -
@@ -33,7 +22,7 @@ history:
     -
         author: Manon Lumeau
         date: '2015-11-25 17:10'
-        message: replace "access rights" by "permissions"
+        message: 'replace "access rights" by "permissions"'
         version: '12'
     -
         author: Solen Guitter

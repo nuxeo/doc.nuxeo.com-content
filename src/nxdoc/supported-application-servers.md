@@ -8,17 +8,6 @@ redirect: compatibility-matrix
 redirect_source: Compatibility Matrix
 labels:
     - content-review-lts2016
-confluence:
-    ajs-parent-page-id: ''
-    ajs-parent-page-title: ''
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Supported+Application+Servers
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Supported+Application+Servers'
-    page_id: '9830825'
-    shortlink: qQGW
-    shortlink_source: 'https://doc.nuxeo.com/x/qQGW'
-    source_link: /display/NXDOC/Supported+Application+Servers
 hidden: true
 history:
     -

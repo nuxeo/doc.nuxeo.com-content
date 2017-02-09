@@ -1,7 +1,5 @@
 ---
-title: >-
-    Query Models and Result Providers Migration to Content Views and Page
-    Providers
+title: Query Models and Result Providers Migration to Content Views and Page Providers
 review:
     comment: ''
     date: '2015-12-01'
@@ -11,22 +9,8 @@ labels:
     - multiexcerpt
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '12288891'
-    ajs-parent-page-title: Upgrade from 5.6 to 5.8
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: >-
-        Query+Models+and+Result+Providers+Migration+to+Content+Views+and+Page+Providers
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Query+Models+and+Result+Providers+Migration+to+Content+Views+and+Page+Providers
-    page_id: '24052377'
-    shortlink: mQJvAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/mQJvAQ'
-    source_link: >-
-        /display/NXDOC/Query+Models+and+Result+Providers+Migration+to+Content+Views+and+Page+Providers
 version_override:
-    'LTS 2015': 710/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
+    LTS 2015: 710/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
     '6.0': 60/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
     '5.8': 58/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
 history:

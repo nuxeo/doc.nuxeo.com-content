@@ -13,17 +13,6 @@ details:
 labels:
     - lts2016-ok
     - howto
-confluence:
-    ajs-parent-page-id: '20517820'
-    ajs-parent-page-title: JSF UI How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Make+JSF+UI+the+Default+UI
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Make+JSF+UI+the+Default+UI'
-    page_id: '31689315'
-    shortlink: Y4rjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/Y4rjAQ'
-    source_link: /display/NXDOC/How+to+Make+JSF+UI+the+Default+UI
 tree_item_index: 1800
 history:
     -

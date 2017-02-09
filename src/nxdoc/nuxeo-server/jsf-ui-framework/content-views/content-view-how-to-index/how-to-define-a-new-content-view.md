@@ -16,17 +16,6 @@ labels:
     - howto
     - studio
 toc: true
-confluence:
-    ajs-parent-page-id: '19235663'
-    ajs-parent-page-title: Content View How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Define+a+New+Content+View
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Define+a+New+Content+View'
-    page_id: '4689374'
-    shortlink: 3o1H
-    shortlink_source: 'https://doc.nuxeo.com/x/3o1H'
-    source_link: /display/NXDOC/How+to+Define+a+New+Content+View
 tree_item_index: 100
 history:
     -

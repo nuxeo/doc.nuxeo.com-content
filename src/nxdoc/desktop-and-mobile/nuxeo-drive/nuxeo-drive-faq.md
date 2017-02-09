@@ -10,19 +10,8 @@ labels:
     - excerpt
 toc: true
 version_override:
-    'LTS 2015': 710/userdoc/nuxeo-drive-faq
+    LTS 2015: 710/userdoc/nuxeo-drive-faq
     '6.0': 60/userdoc/nuxeo-drive-faq
-confluence:
-    ajs-parent-page-id: '13664723'
-    ajs-parent-page-title: Nuxeo Drive
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Nuxeo+Drive+FAQ
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Drive+FAQ'
-    page_id: '23364863'
-    shortlink: '-4RkAQ'
-    shortlink_source: 'https://doc.nuxeo.com/x/-4RkAQ'
-    source_link: /display/USERDOC/Nuxeo+Drive+FAQ
 history:
     -
         author: Antoine Taillefer

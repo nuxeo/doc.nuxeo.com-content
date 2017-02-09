@@ -8,18 +8,6 @@ labels:
     - lts2016-ok
     - convert-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '3866704'
-    ajs-parent-page-title: Digital Asset Management (DAM)
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Alternative+Command+Parameters+for+ProRes+Codec+Users
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Alternative+Command+Parameters+for+ProRes+Codec+Users
-    page_id: '26317024'
-    shortlink: 4JCRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/4JCRAQ'
-    source_link: /display/NXDOC/Alternative+Command+Parameters+for+ProRes+Codec+Users
 history:
     -
         author: Solen Guitter

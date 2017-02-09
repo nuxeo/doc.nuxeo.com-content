@@ -11,18 +11,6 @@ labels:
     - workspace
     - tuto-content-view
 toc: true
-confluence:
-    ajs-parent-page-id: '4689520'
-    ajs-parent-page-title: How to Publish a News Feature in Workspaces
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Add+a+News+Content+View+on+Workspaces
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Add+a+News+Content+View+on+Workspaces
-    page_id: '5570738'
-    shortlink: sgBV
-    shortlink_source: 'https://doc.nuxeo.com/x/sgBV'
-    source_link: /display/NXDOC/Add+a+News+Content+View+on+Workspaces
 tree_item_index: 200
 history:
     -

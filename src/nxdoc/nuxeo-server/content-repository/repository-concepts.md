@@ -9,17 +9,6 @@ labels:
     - concepts
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Repository+Concepts
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Repository+Concepts'
-    page_id: '950302'
-    shortlink: HoAO
-    shortlink_source: 'https://doc.nuxeo.com/x/HoAO'
-    source_link: /display/NXDOC/Repository+Concepts
 tree_item_index: 100
 history:
     -
@@ -120,7 +109,7 @@ history:
     -
         author: Florent Guillaume
         date: '2011-09-13 23:15'
-        message: document repository -> content repository
+        message: 'document repository -> content repository'
         version: '29'
     -
         author: Florent Guillaume

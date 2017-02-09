@@ -7,20 +7,9 @@ review:
 labels:
     - lts2016-ok
     - multiexcerpt
-confluence:
-    ajs-parent-page-id: '3343538'
-    ajs-parent-page-title: Upgrading the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Upgrade+from+5.3.0+to+5.3.1
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Upgrade+from+5.3.0+to+5.3.1'
-    page_id: '3343543'
-    shortlink: twQz
-    shortlink_source: 'https://doc.nuxeo.com/x/twQz'
-    source_link: /display/NXDOC/Upgrade+from+5.3.0+to+5.3.1
 tree_item_index: 1200
 version_override:
-    'LTS 2015': 710/admindoc/upgrade-from-530-to-531
+    LTS 2015: 710/admindoc/upgrade-from-530-to-531
     '6.0': 60/admindoc/upgrade-from-530-to-531
     '5.8': 58/admindoc/upgrade-from-530-to-531
 history:

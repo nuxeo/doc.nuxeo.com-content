@@ -15,18 +15,6 @@ labels:
     - workflow
     - howto
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235619'
-    ajs-parent-page-title: Workflow How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Set+a+Default+Value+on+a+Date+Field+of+a+Task+Form
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Set+a+Default+Value+on+a+Date+Field+of+a+Task+Form
-    page_id: '12913517'
-    shortlink: bQvF
-    shortlink_source: 'https://doc.nuxeo.com/x/bQvF'
-    source_link: /display/NXDOC/How+to+Set+a+Default+Value+on+a+Date+Field+of+a+Task+Form
 tree_item_index: 700
 history:
     -

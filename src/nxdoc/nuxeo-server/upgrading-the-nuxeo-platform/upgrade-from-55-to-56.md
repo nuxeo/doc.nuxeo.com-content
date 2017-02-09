@@ -8,20 +8,9 @@ labels:
     - lts2016-ok
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3343538'
-    ajs-parent-page-title: Upgrading the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Upgrade+from+5.5+to+5.6
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Upgrade+from+5.5+to+5.6'
-    page_id: '11044306'
-    shortlink: 0oWo
-    shortlink_source: 'https://doc.nuxeo.com/x/0oWo'
-    source_link: /display/NXDOC/Upgrade+from+5.5+to+5.6
 tree_item_index: 600
 version_override:
-    'LTS 2015': 710/admindoc/upgrade-from-55-to-56
+    LTS 2015: 710/admindoc/upgrade-from-55-to-56
     '6.0': 60/admindoc/upgrade-from-55-to-56
     '5.8': 58/admindoc/upgrade-from-55-to-56
 history:

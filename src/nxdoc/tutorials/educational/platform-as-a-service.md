@@ -10,17 +10,6 @@ labels:
     - architecture
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '19235679'
-    ajs-parent-page-title: Educational
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Platform+as+a+Service
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Platform+as+a+Service'
-    page_id: '20519075'
-    shortlink: oxg5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/oxg5AQ'
-    source_link: /display/NXDOC/Platform+as+a+Service
 tree_item_index: 100
 history:
     -

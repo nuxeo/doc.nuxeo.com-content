@@ -9,21 +9,9 @@ labels:
     - install-windows
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3866685'
-    ajs-parent-page-title: Installation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Installing+the+Nuxeo+Platform+on+Windows
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Installing+the+Nuxeo+Platform+on+Windows
-    page_id: '9274329'
-    shortlink: 2YON
-    shortlink_source: 'https://doc.nuxeo.com/x/2YON'
-    source_link: /display/NXDOC/Installing+the+Nuxeo+Platform+on+Windows
 tree_item_index: 600
 version_override:
-    'LTS 2015': 710/admindoc/installing-the-nuxeo-platform-on-windows
+    LTS 2015: 710/admindoc/installing-the-nuxeo-platform-on-windows
     '6.0': 60/admindoc/installing-the-nuxeo-platform-on-windows
     '5.8': 58/admindoc/installing-the-nuxeo-platform-on-windows
 history:
@@ -135,9 +123,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-07-03 11:19'
-        message: >-
-            Changed recommended path installation from root of C:\ to root of
-            any disk
+        message: "Changed recommended path installation from root of C:\\ to root of any disk"
         version: '17'
     -
         author: Solen Guitter

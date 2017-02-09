@@ -12,17 +12,6 @@ labels:
     - automation-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '18451738'
-    ajs-parent-page-title: Automation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Use+of+MVEL+in+Automation+Chains
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Use+of+MVEL+in+Automation+Chains'
-    page_id: '1409169'
-    shortlink: kYAV
-    shortlink_source: 'https://doc.nuxeo.com/x/kYAV'
-    source_link: /display/NXDOC/Use+of+MVEL+in+Automation+Chains
 tree_item_index: 600
 history:
     -
@@ -143,7 +132,7 @@ history:
     -
         author: Bertrand Chauvin
         date: '2013-12-12 13:23'
-        message: Integrated Benjamin's example from the TMP page
+        message: "Integrated Benjamin's example from the TMP page"
         version: '67'
     -
         author: Solen Guitter

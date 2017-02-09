@@ -11,17 +11,6 @@ labels:
     - layout-widgets-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3868345'
-    ajs-parent-page-title: Standard Widget Types
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Advanced+Widget+Types
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Advanced+Widget+Types'
-    page_id: '17794542'
-    shortlink: 7oUPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/7oUPAQ'
-    source_link: /display/NXDOC/Advanced+Widget+Types
 tree_item_index: 900
 history:
     -

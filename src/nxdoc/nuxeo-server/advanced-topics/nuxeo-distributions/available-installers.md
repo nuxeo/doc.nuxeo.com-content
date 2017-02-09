@@ -7,59 +7,48 @@ review:
 labels:
     - content-review-lts2016
     - distributions-component
-confluence:
-    ajs-parent-page-id: '950286'
-    ajs-parent-page-title: Nuxeo Distributions
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Available+installers
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Available+installers'
-    page_id: '7209129'
-    shortlink: qQBu
-    shortlink_source: 'https://doc.nuxeo.com/x/qQBu'
-    source_link: /display/NXDOC/Available+installers
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-13 12:17'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-02-12 10:56'
         message: ''
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-13 12:58'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-04 15:30'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2013-09-16 18:46'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2011-05-02 17:27'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2011-05-02 17:27'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2011-05-02 17:26'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-21 18:08'
         message: ''

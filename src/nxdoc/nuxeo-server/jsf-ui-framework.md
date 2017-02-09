@@ -9,17 +9,6 @@ labels:
     - last-review-20150128
     - home
     - excerpt
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: JSF+UI+Framework
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/JSF+UI+Framework'
-    page_id: '16089312'
-    shortlink: 4ID1
-    shortlink_source: 'https://doc.nuxeo.com/x/4ID1'
-    source_link: /display/NXDOC/JSF+UI+Framework
 tree_item_index: 1700
 version_override:
     '6.0': 60/nxdoc/web-ui-framework

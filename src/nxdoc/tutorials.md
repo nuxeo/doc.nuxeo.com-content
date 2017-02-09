@@ -8,21 +8,10 @@ labels:
     - lts2016-ok
     - home
 is_overview: true
-confluence:
-    ajs-parent-page-id: '950332'
-    ajs-parent-page-title: Developer Documentation Center
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Tutorials
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Tutorials'
-    page_id: '7209076'
-    shortlink: dABu
-    shortlink_source: 'https://doc.nuxeo.com/x/dABu'
-    source_link: /display/NXDOC/Tutorials
 tree_item_index: 100
 section_parent: tutorials
 version_override:
-    'LTS 2015': 710/nxdoc/guides-and-tutorials
+    LTS 2015: 710/nxdoc/guides-and-tutorials
     '6.0': 60/nxdoc/guides-and-tutorials
     '5.8': 58/nxdoc/dev-cookbook
 history:

@@ -7,17 +7,6 @@ review:
 labels:
     - preferences
 toc: true
-confluence:
-    ajs-parent-page-id: '7536681'
-    ajs-parent-page-title: User Home
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: User+Preferences
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/User+Preferences'
-    page_id: '11043664'
-    shortlink: UIOo
-    shortlink_source: 'https://doc.nuxeo.com/x/UIOo'
-    source_link: /display/USERDOC/User+Preferences
 history:
     -
         author: Solen Guitter

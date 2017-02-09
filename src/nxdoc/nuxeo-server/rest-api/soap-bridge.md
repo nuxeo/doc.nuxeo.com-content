@@ -9,17 +9,6 @@ labels:
     - soap
     - soap-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: SOAP+Bridge
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/SOAP+Bridge'
-    page_id: '950296'
-    shortlink: GIAO
-    shortlink_source: 'https://doc.nuxeo.com/x/GIAO'
-    source_link: /display/NXDOC/SOAP+Bridge
 tree_item_index: 2000
 history:
     -

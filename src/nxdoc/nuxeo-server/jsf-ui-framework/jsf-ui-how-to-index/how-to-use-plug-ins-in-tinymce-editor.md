@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to customize TinyMCE by adding new plug-ins. We will use
-            the textcolor plug-in as an example.
+        excerpt: Learn how to customize TinyMCE by adding new plug-ins. We will use the textcolor plug-in as an example.
         level: Intermediate
         tool: Code
         topics: 'Plug-ins, TinyMCE, JSF UI'
@@ -18,18 +16,6 @@ labels:
     - tinymce
     - tinymce-component
 toc: true
-confluence:
-    ajs-parent-page-id: '20517820'
-    ajs-parent-page-title: JSF UI How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Use+Plug-Ins+in+TinyMCE+Editor
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Use+Plug-Ins+in+TinyMCE+Editor
-    page_id: '20519593'
-    shortlink: qRo5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/qRo5AQ'
-    source_link: /display/NXDOC/How+to+Use+Plug-Ins+in+TinyMCE+Editor
 tree_item_index: 1000
 history:
     -

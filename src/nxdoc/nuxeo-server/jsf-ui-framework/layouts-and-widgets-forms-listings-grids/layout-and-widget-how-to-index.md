@@ -1,5 +1,5 @@
 ---
-title: Layout & Widget How-To Index
+title: 'Layout & Widget How-To Index'
 review:
     comment: ''
     date: '2016-12-23'
@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - layout
     - index
-confluence:
-    ajs-parent-page-id: '950330'
-    ajs-parent-page-title: 'Layouts and Widgets (Forms, Listings, Grids)'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=19235623
-    canonical_source: viewpage.action?pageId=19235623
-    page_id: '19235623'
-    shortlink: J4MlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/J4MlAQ'
-    source_link: /pages/viewpage.action?pageId=19235623
 tree_item_index: 800
 history:
     -

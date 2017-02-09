@@ -9,18 +9,6 @@ labels:
     - todo
     - certificate
 toc: true
-confluence:
-    ajs-parent-page-id: '950296'
-    ajs-parent-page-title: SOAP Bridge
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Trust+Store+and+Key+Store+Configuration
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Trust+Store+and+Key+Store+Configuration
-    page_id: '11534854'
-    shortlink: BgKw
-    shortlink_source: 'https://doc.nuxeo.com/x/BgKw'
-    source_link: /display/NXDOC/Trust+Store+and+Key+Store+Configuration
 tree_item_index: 300
 history:
     -

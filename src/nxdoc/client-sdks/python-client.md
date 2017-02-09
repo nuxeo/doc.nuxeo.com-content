@@ -10,20 +10,9 @@ labels:
     - client
     - python-client-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16091040'
-    ajs-parent-page-title: Client SDKs
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Python+Client
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Python+Client'
-    page_id: '3866790'
-    shortlink: pgA7
-    shortlink_source: 'https://doc.nuxeo.com/x/pgA7'
-    source_link: /display/NXDOC/Python+Client
 tree_item_index: 300
 version_override:
-    'LTS 2015': 710/nxdoc/using-a-python-client
+    LTS 2015: 710/nxdoc/using-a-python-client
     '6.0': 60/nxdoc/using-a-python-client
     '5.8': 58/nxdoc/using-a-python-client
 history:

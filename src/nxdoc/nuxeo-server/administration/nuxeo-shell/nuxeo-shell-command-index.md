@@ -8,20 +8,9 @@ labels:
     - content-review-lts2016
     - shell
     - shell-component
-confluence:
-    ajs-parent-page-id: '4687635'
-    ajs-parent-page-title: Nuxeo Shell
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Shell+Command+Index
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Shell+Command+Index'
-    page_id: '4687648'
-    shortlink: IIdH
-    shortlink_source: 'https://doc.nuxeo.com/x/IIdH'
-    source_link: /display/NXDOC/Nuxeo+Shell+Command+Index
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/admindoc/nuxeo-shell-command-index
+    LTS 2015: 710/admindoc/nuxeo-shell-command-index
     '6.0': 60/admindoc/nuxeo-shell-command-index
     '5.8': 58/admindoc/nuxeo-shell-command-index
 history:

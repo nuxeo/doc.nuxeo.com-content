@@ -11,17 +11,6 @@ labels:
     - preview-component
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '16089319'
-    ajs-parent-page-title: Additional Services
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Preview
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Preview'
-    page_id: '19235899'
-    shortlink: O4QlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/O4QlAQ'
-    source_link: /display/NXDOC/Preview
 tree_item_index: 500
 history:
     -

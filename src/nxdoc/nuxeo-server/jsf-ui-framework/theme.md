@@ -11,17 +11,6 @@ labels:
     - themes-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '16089312'
-    ajs-parent-page-title: JSF UI Framework
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Theme
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Theme'
-    page_id: '950327'
-    shortlink: N4AO
-    shortlink_source: 'https://doc.nuxeo.com/x/N4AO'
-    source_link: /display/NXDOC/Theme
 tree_item_index: 600
 history:
     -
@@ -92,9 +81,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2015-08-12 16:31'
-        message: >-
-            NXP-11439: use "Nuxeo Platform-7.3" instead of "latest" in links to
-            explorer...
+        message: 'NXP-11439: use "Nuxeo Platform-7.3" instead of "latest" in links to explorer...'
         version: '58'
     -
         author: Anahide Tchertchian

@@ -11,17 +11,6 @@ labels:
     - web-ui-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '16089312'
-    ajs-parent-page-title: JSF UI Framework
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Documents+Display+Configuration
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Documents+Display+Configuration'
-    page_id: '6029663'
-    shortlink: XwFc
-    shortlink_source: 'https://doc.nuxeo.com/x/XwFc'
-    source_link: /display/NXDOC/Documents+Display+Configuration
 tree_item_index: 900
 history:
     -

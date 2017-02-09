@@ -10,17 +10,6 @@ labels:
     - excerpt
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '2392410'
-    ajs-parent-page-title: Workflows
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Parallel+Document+Workflow
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Parallel+Document+Workflow'
-    page_id: '16091766'
-    shortlink: dor1
-    shortlink_source: 'https://doc.nuxeo.com/x/dor1'
-    source_link: /display/USERDOC/Parallel+Document+Workflow
 tree_item_index: 200
 history:
     -

@@ -9,17 +9,6 @@ labels:
     - webengine
     - webengine-component
 toc: true
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=950281
-    canonical_source: viewpage.action?pageId=950281
-    page_id: '950281'
-    shortlink: CYAO
-    shortlink_source: 'https://doc.nuxeo.com/x/CYAO'
-    source_link: /pages/viewpage.action?pageId=950281
 tree_item_index: 1800
 history:
     -

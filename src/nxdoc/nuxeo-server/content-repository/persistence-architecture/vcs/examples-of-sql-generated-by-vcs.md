@@ -11,17 +11,6 @@ labels:
     - sql
     - vcs-component
 toc: true
-confluence:
-    ajs-parent-page-id: '3342350'
-    ajs-parent-page-title: VCS
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Examples+of++SQL+Generated+by+VCS
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Examples+of++SQL+Generated+by+VCS'
-    page_id: '12915239'
-    shortlink: JxLF
-    shortlink_source: 'https://doc.nuxeo.com/x/JxLF'
-    source_link: /display/NXDOC/Examples+of++SQL+Generated+by+VCS
 tree_item_index: 300
 history:
     -

@@ -10,17 +10,6 @@ labels:
     - versioning
     - core-component
 toc: true
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Versioning
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Versioning'
-    page_id: '4687872'
-    shortlink: AIhH
-    shortlink_source: 'https://doc.nuxeo.com/x/AIhH'
-    source_link: /display/NXDOC/Versioning
 tree_item_index: 400
 history:
     -

@@ -16,21 +16,9 @@ labels:
     - nxdoc-740
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: HTTP+and+HTTPS+Reverse-Proxy+Configuration
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/HTTP+and+HTTPS+Reverse-Proxy+Configuration
-    page_id: '6029592'
-    shortlink: GAFc
-    shortlink_source: 'https://doc.nuxeo.com/x/GAFc'
-    source_link: /display/NXDOC/HTTP+and+HTTPS+Reverse-Proxy+Configuration
 tree_item_index: 600
 version_override:
-    'LTS 2015': 710/admindoc/http-and-https-reverse-proxy-configuration
+    LTS 2015: 710/admindoc/http-and-https-reverse-proxy-configuration
     '6.0': 60/admindoc/http-and-https-reverse-proxy-configuration
     '5.8': 58/admindoc/http-and-https-reverse-proxy-configuration
 history:

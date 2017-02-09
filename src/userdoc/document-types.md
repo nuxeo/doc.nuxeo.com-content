@@ -9,17 +9,6 @@ labels:
     - multiexcerpt
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Document+Types
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Document+Types'
-    page_id: '2392395'
-    shortlink: S4Ek
-    shortlink_source: 'https://doc.nuxeo.com/x/S4Ek'
-    source_link: /display/USERDOC/Document+Types
 tree_item_index: 500
 history:
     -
@@ -80,9 +69,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-11-24 18:44'
-        message: >-
-            Removing pictures, picture books and mail folders (now in DAM and
-            IMAP connector add-ons)
+        message: 'Removing pictures, picture books and mail folders (now in DAM and IMAP connector add-ons)'
         version: '29'
     -
         author: Solen Guitter

@@ -7,20 +7,9 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '3866685'
-    ajs-parent-page-title: Installation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Configuration+Wizard
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Configuration+Wizard'
-    page_id: '31032126'
-    shortlink: PoPZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/PoPZAQ'
-    source_link: /display/NXDOC/Configuration+Wizard
 tree_item_index: 1000
 version_override:
-    'LTS 2015': 710/admindoc/setup
+    LTS 2015: 710/admindoc/setup
     '6.0': 60/admindoc/setup
     '5.8': 58/admindoc/setup
 history:

@@ -7,17 +7,6 @@ review:
 labels:
     - search
     - elasticsearch
-confluence:
-    ajs-parent-page-id: '2392416'
-    ajs-parent-page-title: Searching the Nuxeo Platform
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Default+Search
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Default+Search'
-    page_id: '14255361'
-    shortlink: AYXZ
-    shortlink_source: 'https://doc.nuxeo.com/x/AYXZ'
-    source_link: /display/USERDOC/Default+Search
 tree_item_index: 100
 history:
     -

@@ -17,18 +17,6 @@ labels:
     - howto
     - community-links
     - workflow-component
-confluence:
-    ajs-parent-page-id: '19235619'
-    ajs-parent-page-title: Workflow How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Complete+a+Workflow+Task+Programmatically
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Complete+a+Workflow+Task+Programmatically
-    page_id: '12915574'
-    shortlink: dhPF
-    shortlink_source: 'https://doc.nuxeo.com/x/dhPF'
-    source_link: /display/NXDOC/How+to+Complete+a+Workflow+Task+Programmatically
 tree_item_index: 300
 history:
     -

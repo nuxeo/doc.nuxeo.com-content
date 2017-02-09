@@ -12,17 +12,6 @@ labels:
     - permission
     - security-component
 toc: true
-confluence:
-    ajs-parent-page-id: '20515363'
-    ajs-parent-page-title: Security
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Security+System
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Security+System'
-    page_id: '17794153'
-    shortlink: aYQPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/aYQPAQ'
-    source_link: /display/NXDOC/Nuxeo+Security+System
 tree_item_index: 200
 history:
     -

@@ -9,20 +9,9 @@ labels:
     - h2
     - database
     - limitations
-confluence:
-    ajs-parent-page-id: '3342340'
-    ajs-parent-page-title: Database Configuration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: H2+Limitations
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/H2+Limitations'
-    page_id: '10387510'
-    shortlink: NoCe
-    shortlink_source: 'https://doc.nuxeo.com/x/NoCe'
-    source_link: /display/NXDOC/H2+Limitations
 tree_item_index: 800
 version_override:
-    'LTS 2015': 710/admindoc/h2-limitations
+    LTS 2015: 710/admindoc/h2-limitations
     '6.0': 60/admindoc/h2-limitations
 history:
     -

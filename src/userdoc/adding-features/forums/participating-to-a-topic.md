@@ -7,17 +7,6 @@ review:
 labels:
     - topic
 toc: true
-confluence:
-    ajs-parent-page-id: '2392376'
-    ajs-parent-page-title: Forums
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Participating+to+a+Topic
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Participating+to+a+Topic'
-    page_id: '2392377'
-    shortlink: OYEk
-    shortlink_source: 'https://doc.nuxeo.com/x/OYEk'
-    source_link: /display/USERDOC/Participating+to+a+Topic
 tree_item_index: 200
 history:
     -

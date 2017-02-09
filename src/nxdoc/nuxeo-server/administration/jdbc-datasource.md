@@ -8,20 +8,9 @@ labels:
     - lts2016-ok
     - datasource
 toc: true
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: JDBC+Datasource
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/JDBC+Datasource'
-    page_id: '950325'
-    shortlink: NYAO
-    shortlink_source: 'https://doc.nuxeo.com/x/NYAO'
-    source_link: /display/NXDOC/JDBC+Datasource
 tree_item_index: 1900
 version_override:
-    'LTS 2015': 710/admindoc/jdbc-datasource-configuration
+    LTS 2015: 710/admindoc/jdbc-datasource-configuration
     '6.0': 60/admindoc/jdbc-datasource-configuration
     '5.8': 58/admindoc/jdbc-datasource-configuration
 history:

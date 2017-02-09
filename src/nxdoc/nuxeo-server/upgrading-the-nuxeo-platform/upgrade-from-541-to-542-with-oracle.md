@@ -7,21 +7,9 @@ review:
 labels:
     - lts2016-ok
     - multiexcerpt
-confluence:
-    ajs-parent-page-id: '3343538'
-    ajs-parent-page-title: Upgrading the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Upgrade+from+5.4.1+to+5.4.2+with+Oracle
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Upgrade+from+5.4.1+to+5.4.2+with+Oracle
-    page_id: '14255766'
-    shortlink: lobZ
-    shortlink_source: 'https://doc.nuxeo.com/x/lobZ'
-    source_link: /display/NXDOC/Upgrade+from+5.4.1+to+5.4.2+with+Oracle
 tree_item_index: 800
 version_override:
-    'LTS 2015': 710/admindoc/upgrade-from-541-to-542-with-oracle
+    LTS 2015: 710/admindoc/upgrade-from-541-to-542-with-oracle
     '6.0': 60/admindoc/upgrade-from-541-to-542-with-oracle
     '5.8': 58/admindoc/upgrade-from-541-to-542-with-oracle
 history:

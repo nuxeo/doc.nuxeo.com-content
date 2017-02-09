@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to customize the dashboard by adding new entries or
-            completely override the default dashboard.
+        excerpt: Learn how to customize the dashboard by adding new entries or completely override the default dashboard.
         level: Advanced
         tool: 'Studio, Code'
         topics: JSF UI
@@ -18,17 +16,6 @@ labels:
     - dashboard
     - actions-filters-component
 toc: true
-confluence:
-    ajs-parent-page-id: '20517820'
-    ajs-parent-page-title: JSF UI How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Customize+the+Dashboard
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Customize+the+Dashboard'
-    page_id: '20518354'
-    shortlink: 0hU5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/0hU5AQ'
-    source_link: /display/NXDOC/How+to+Customize+the+Dashboard
 tree_item_index: 500
 history:
     -

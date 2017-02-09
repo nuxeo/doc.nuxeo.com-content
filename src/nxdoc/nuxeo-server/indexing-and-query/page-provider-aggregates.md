@@ -12,17 +12,6 @@ labels:
     - query-pageprovider-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '4687860'
-    ajs-parent-page-title: Indexing and Query
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Page+Provider+Aggregates
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Page+Provider+Aggregates'
-    page_id: '20518126'
-    shortlink: 7hQ5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/7hQ5AQ'
-    source_link: /display/NXDOC/Page+Provider+Aggregates
 tree_item_index: 400
 history:
     -
@@ -33,9 +22,7 @@ history:
     -
         author: Benoit Delbosc
         date: '2016-08-22 14:19'
-        message: >-
-            remove notion of  month and quarter because they are not real
-            interval
+        message: remove notion of  month and quarter because they are not real interval
         version: '23'
     -
         author: Solen Guitter

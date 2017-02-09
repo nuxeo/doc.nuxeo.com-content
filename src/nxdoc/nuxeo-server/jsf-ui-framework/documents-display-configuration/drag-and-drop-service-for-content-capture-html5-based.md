@@ -11,17 +11,6 @@ labels:
     - automation
     - file-upload-component
 toc: true
-confluence:
-    ajs-parent-page-id: '6029663'
-    ajs-parent-page-title: Documents Display Configuration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=7209476
-    canonical_source: viewpage.action?pageId=7209476
-    page_id: '7209476'
-    shortlink: BAJu
-    shortlink_source: 'https://doc.nuxeo.com/x/BAJu'
-    source_link: /pages/viewpage.action?pageId=7209476
 tree_item_index: 400
 history:
     -

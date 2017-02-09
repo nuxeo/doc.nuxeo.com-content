@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to make CMISQL queries from Java code inside a Nuxeo
-            bundle.
+        excerpt: Learn how to make CMISQL queries from Java code inside a Nuxeo bundle.
         level: Advanced
         tool: Code
         topics: 'CMIS, Query'
@@ -18,17 +16,6 @@ labels:
     - query
     - cmis
     - cmis-component
-confluence:
-    ajs-parent-page-id: '4687860'
-    ajs-parent-page-title: Indexing and Query
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Using+CMISQL+from+Java
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Using+CMISQL+from+Java'
-    page_id: '3343529'
-    shortlink: qQQz
-    shortlink_source: 'https://doc.nuxeo.com/x/qQQz'
-    source_link: /display/NXDOC/Using+CMISQL+from+Java
 tree_item_index: 1400
 history:
     -
@@ -134,9 +121,7 @@ history:
     -
         author: Alain Escaffre
         date: '2011-03-31 11:24'
-        message: >-
-            adding link to CMIS specifications for having more information on
-            CMISQL
+        message: adding link to CMIS specifications for having more information on CMISQL
         version: '19'
     -
         author: Stéfane Fermigier

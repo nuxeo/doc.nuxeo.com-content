@@ -12,17 +12,6 @@ labels:
     - multiexcerpt
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '20515468'
-    ajs-parent-page-title: Persistence Architecture
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: File+Storage
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/File+Storage'
-    page_id: '18450045'
-    shortlink: fYYZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/fYYZAQ'
-    source_link: /display/NXDOC/File+Storage
 tree_item_index: 100
 history:
     -

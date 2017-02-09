@@ -10,20 +10,9 @@ labels:
     - database
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '3342340'
-    ajs-parent-page-title: Database Configuration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Connecting+Nuxeo+to+the+Database
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Connecting+Nuxeo+to+the+Database'
-    page_id: '4688897'
-    shortlink: AYxH
-    shortlink_source: 'https://doc.nuxeo.com/x/AYxH'
-    source_link: /display/NXDOC/Connecting+Nuxeo+to+the+Database
 tree_item_index: 700
 version_override:
-    'LTS 2015': 710/admindoc/connecting-nuxeo-to-the-database
+    LTS 2015: 710/admindoc/connecting-nuxeo-to-the-database
     '6.0': 60/admindoc/connecting-nuxeo-to-the-database
     '5.8': 58/admindoc/connecting-nuxeo-to-the-database
 history:
@@ -205,9 +194,7 @@ history:
     -
         author: Wojciech Sulejman
         date: '2011-03-08 21:09'
-        message: >-
-            Provided database connection information using templates. Added
-            examples.
+        message: Provided database connection information using templates. Added examples.
         version: '12'
     -
         author: Wojciech Sulejman

@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '18449457'
-    ajs-parent-page-title: Upgrade from 5.3.2 to 5.4.0
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Upgrade+to+5.4+and+JBoss+5
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Upgrade+to+5.4+and+JBoss+5'
-    page_id: '14255774'
-    shortlink: nobZ
-    shortlink_source: 'https://doc.nuxeo.com/x/nobZ'
-    source_link: /display/NXDOC/Upgrade+to+5.4+and+JBoss+5
 tree_item_index: 200
 history:
     -

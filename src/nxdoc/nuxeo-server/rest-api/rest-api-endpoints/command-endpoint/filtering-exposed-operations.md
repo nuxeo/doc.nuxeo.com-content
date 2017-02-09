@@ -10,17 +10,6 @@ labels:
     - rest-api
     - automation-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '3342491'
-    ajs-parent-page-title: Command Endpoint
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Filtering+Exposed+Operations
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Filtering+Exposed+Operations'
-    page_id: '3342523'
-    shortlink: uwAz
-    shortlink_source: 'https://doc.nuxeo.com/x/uwAz'
-    source_link: /display/NXDOC/Filtering+Exposed+Operations
 history:
     -
         author: Solen Guitter
@@ -65,9 +54,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-07-17 14:59'
-        message: >-
-            Added related topics and replaced "operation chain" with "automation
-            chain"
+        message: 'Added related topics and replaced "operation chain" with "automation chain"'
         version: '10'
     -
         author: Stéfane Fermigier

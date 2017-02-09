@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to make it possible to process documents depending on a
-            date parameter.
+        excerpt: Learn how to make it possible to process documents depending on a date parameter.
         level: Intermediate
         tool: Studio
         topics: 'Automation, Content view'
@@ -20,18 +18,6 @@ labels:
     - studio
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '19235681'
-    ajs-parent-page-title: Transversal How-Tos
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Fetch+Documents+with+a+Query+on+Date+Parameters
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Fetch+Documents+with+a+Query+on+Date+Parameters
-    page_id: '8683535'
-    shortlink: D4CE
-    shortlink_source: 'https://doc.nuxeo.com/x/D4CE'
-    source_link: /display/NXDOC/How+to+Fetch+Documents+with+a+Query+on+Date+Parameters
 tree_item_index: 100
 history:
     -

@@ -13,17 +13,6 @@ labels:
     - automation-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Command+Endpoint
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Command+Endpoint'
-    page_id: '3342491'
-    shortlink: mwAz
-    shortlink_source: 'https://doc.nuxeo.com/x/mwAz'
-    source_link: /display/NXDOC/Command+Endpoint
 tree_item_index: 600
 history:
     -

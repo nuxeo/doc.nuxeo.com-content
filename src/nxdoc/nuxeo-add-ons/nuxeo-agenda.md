@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - nuxeo-agenda
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Agenda
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Agenda'
-    page_id: '17794689'
-    shortlink: gYYPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/gYYPAQ'
-    source_link: /display/NXDOC/Nuxeo+Agenda
 tree_item_index: 1000
 history:
     -

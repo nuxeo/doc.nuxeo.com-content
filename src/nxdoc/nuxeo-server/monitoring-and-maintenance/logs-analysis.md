@@ -11,20 +11,9 @@ labels:
     - error
     - log4j
 toc: true
-confluence:
-    ajs-parent-page-id: '950318'
-    ajs-parent-page-title: Monitoring and Maintenance
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Logs+Analysis
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Logs+Analysis'
-    page_id: '14254233'
-    shortlink: mYDZ
-    shortlink_source: 'https://doc.nuxeo.com/x/mYDZ'
-    source_link: /display/NXDOC/Logs+Analysis
 tree_item_index: 300
 version_override:
-    'LTS 2015': 710/admindoc/logs-analysis
+    LTS 2015: 710/admindoc/logs-analysis
     '6.0': 60/admindoc/logs-analysis
     '5.8': 58/admindoc/logs-analysis
 history:
@@ -86,9 +75,7 @@ history:
     -
         author: Julien Carsique
         date: '2013-08-06 14:21'
-        message: >-
-            Removed download instructions for tomcat-juli: there are already
-            installed in the server since 5.7.2
+        message: 'Removed download instructions for tomcat-juli: there are already installed in the server since 5.7.2'
         version: '9'
     -
         author: Julien Carsique

@@ -7,17 +7,6 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Diff+Pictures
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Diff+Pictures'
-    page_id: '26318218'
-    shortlink: ipWRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/ipWRAQ'
-    source_link: /display/NXDOC/Nuxeo+Diff+Pictures
 tree_item_index: 1500
 history:
     -

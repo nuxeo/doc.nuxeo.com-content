@@ -8,20 +8,9 @@ labels:
     - content-review-lts2016
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3866685'
-    ajs-parent-page-title: Installation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Compatibility+Matrix
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Compatibility+Matrix'
-    page_id: '31034423'
-    shortlink: N4zZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/N4zZAQ'
-    source_link: /display/NXDOC/Compatibility+Matrix
 tree_item_index: 200
 version_override:
-    'LTS 2015': 710/admindoc/supported-application-servers
+    LTS 2015: 710/admindoc/supported-application-servers
     '6.0': 60/admindoc/supported-application-servers
     '5.8': 58/admindoc/supported-application-servers
 history:

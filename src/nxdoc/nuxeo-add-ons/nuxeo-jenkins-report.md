@@ -8,17 +8,6 @@ labels:
     - content-review-lts2016
     - nuxeo-jenkins-report
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Jenkins+Report
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Jenkins+Report'
-    page_id: '14257462'
-    shortlink: No3Z
-    shortlink_source: 'https://doc.nuxeo.com/x/No3Z'
-    source_link: /display/NXDOC/Nuxeo+Jenkins+Report
 tree_item_index: 2000
 history:
     -

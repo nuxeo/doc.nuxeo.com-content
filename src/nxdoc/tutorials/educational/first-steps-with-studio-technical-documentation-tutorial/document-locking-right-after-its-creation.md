@@ -9,18 +9,6 @@ labels:
     - lock
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '19235783'
-    ajs-parent-page-title: 'First Steps With Studio: Technical Documentation Tutorial'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Document+Locking+Right+after+Its+Creation
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Document+Locking+Right+after+Its+Creation
-    page_id: '14256274'
-    shortlink: kojZ
-    shortlink_source: 'https://doc.nuxeo.com/x/kojZ'
-    source_link: /display/NXDOC/Document+Locking+Right+after+Its+Creation
 tree_item_index: 300
 history:
     -

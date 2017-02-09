@@ -9,17 +9,6 @@ labels:
     - conversion
     - convert-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089319'
-    ajs-parent-page-title: Additional Services
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Conversion
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Conversion'
-    page_id: '19235645'
-    shortlink: PYMlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/PYMlAQ'
-    source_link: /display/NXDOC/Conversion
 tree_item_index: 300
 history:
     -

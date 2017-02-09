@@ -10,17 +10,6 @@ labels:
     - escalation
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '19235786'
-    ajs-parent-page-title: Workflow Use Cases
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Workflow+Escalation+Rules+Example
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Workflow+Escalation+Rules+Example'
-    page_id: '14257473'
-    shortlink: QY3Z
-    shortlink_source: 'https://doc.nuxeo.com/x/QY3Z'
-    source_link: /display/NXDOC/Workflow+Escalation+Rules+Example
 tree_item_index: 300
 history:
     -

@@ -10,17 +10,6 @@ labels:
     - directory
     - directory-component
 toc: true
-confluence:
-    ajs-parent-page-id: '4688939'
-    ajs-parent-page-title: Data Lists and Directories
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Directory+and+UI
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Directory+and+UI'
-    page_id: '23367626'
-    shortlink: yo9kAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/yo9kAQ'
-    source_link: /display/NXDOC/Directory+and+UI
 tree_item_index: 400
 history:
     -

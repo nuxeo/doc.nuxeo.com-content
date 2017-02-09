@@ -11,17 +11,6 @@ labels:
     - link-update
     - shibboleth-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Shibboleth+Authentication
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Shibboleth+Authentication'
-    page_id: '3868827'
-    shortlink: mwg7
-    shortlink_source: 'https://doc.nuxeo.com/x/mwg7'
-    source_link: /display/NXDOC/Shibboleth+Authentication
 tree_item_index: 190
 history:
     -

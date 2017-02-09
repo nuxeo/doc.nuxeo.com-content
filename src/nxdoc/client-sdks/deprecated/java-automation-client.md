@@ -12,16 +12,6 @@ labels:
     - community-links
     - java-client-component
 toc: true
-confluence:
-    ajs-parent-page-title: Deprecated
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Java+Automation+Client
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Java+Automation+Client'
-    page_id: '3343039'
-    shortlink: vwIz
-    shortlink_source: 'https://doc.nuxeo.com/x/vwIz'
-    source_link: /display/NXDOC/Java+Automation+Client
 tree_item_index: 200
 history:
     -

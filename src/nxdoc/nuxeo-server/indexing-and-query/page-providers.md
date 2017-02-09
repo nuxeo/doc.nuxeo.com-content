@@ -10,17 +10,6 @@ labels:
     - query-pageprovider-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '4687860'
-    ajs-parent-page-title: Indexing and Query
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Page+Providers
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Page+Providers'
-    page_id: '7209246'
-    shortlink: HgFu
-    shortlink_source: 'https://doc.nuxeo.com/x/HgFu'
-    source_link: /display/NXDOC/Page+Providers
 tree_item_index: 300
 history:
     -

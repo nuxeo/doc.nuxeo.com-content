@@ -10,17 +10,6 @@ labels:
     - incremental-layout
     - layout-widgets-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '950289'
-    ajs-parent-page-title: 'Actions (Links, Buttons, Icons, Tabs and More)'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Incremental+Layouts+and+Actions
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Incremental+Layouts+and+Actions'
-    page_id: '17794803'
-    shortlink: 84YPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/84YPAQ'
-    source_link: /display/NXDOC/Incremental+Layouts+and+Actions
 tree_item_index: 600
 history:
     -

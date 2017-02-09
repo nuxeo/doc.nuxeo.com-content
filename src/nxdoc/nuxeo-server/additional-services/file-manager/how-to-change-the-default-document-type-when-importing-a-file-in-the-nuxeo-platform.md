@@ -1,7 +1,5 @@
 ---
-title: >-
-    How to Change the Default Document Type When Importing a File in the Nuxeo
-    Platform?
+title: How to Change the Default Document Type When Importing a File in the Nuxeo Platform?
 review:
     comment: ''
     date: '2016-12-13'
@@ -13,17 +11,6 @@ labels:
     - document-type
     - file-upload-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235627'
-    ajs-parent-page-title: File Manager
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=18451489
-    canonical_source: viewpage.action?pageId=18451489
-    page_id: '18451489'
-    shortlink: IYwZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/IYwZAQ'
-    source_link: /pages/viewpage.action?pageId=18451489
 history:
     -
         author: Manon Lumeau

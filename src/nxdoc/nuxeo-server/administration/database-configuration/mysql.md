@@ -10,20 +10,9 @@ labels:
     - mysql
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '3342340'
-    ajs-parent-page-title: Database Configuration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: MySQL
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/MySQL'
-    page_id: '19235917'
-    shortlink: TYQlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/TYQlAQ'
-    source_link: /display/NXDOC/MySQL
 tree_item_index: 400
 version_override:
-    'LTS 2015': 710/admindoc/mysql
+    LTS 2015: 710/admindoc/mysql
     '6.0': 60/admindoc/configuring-mysql
     '5.8': 58/admindoc/configuring-mysql
 history:

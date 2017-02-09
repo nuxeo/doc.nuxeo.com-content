@@ -13,19 +13,8 @@ labels:
     - university
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/content-enricher
+    LTS 2015: 710/nxdoc/content-enricher
     '6.0': 60/nxdoc/content-enricher
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Content+Enricher
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Content+Enricher'
-    page_id: '19793383'
-    shortlink: 5wUuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/5wUuAQ'
-    source_link: /display/NXDOC/Content+Enricher
 tree_item_index: 400
 history:
     -
@@ -201,9 +190,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-05-04 09:03'
-        message: >-
-            Add links to javadoc, and children and permission enrichers in
-            additional enrichers sections
+        message: 'Add links to javadoc, and children and permission enrichers in additional enrichers sections'
         version: '21'
     -
         author: Solen Guitter
@@ -213,9 +200,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-04-30 09:58'
-        message: >-
-            Replacing deprecated headers X-NXContext-Category and
-            X-NXDocumentProperties by X-NXenrichers.document and X-NXproperties
+        message: Replacing deprecated headers X-NXContext-Category and X-NXDocumentProperties by X-NXenrichers.document and X-NXproperties
         version: '19'
     -
         author: Solen Guitter

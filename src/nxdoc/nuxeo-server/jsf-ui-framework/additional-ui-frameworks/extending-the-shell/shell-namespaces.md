@@ -10,17 +10,6 @@ labels:
     - shell-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '4687725'
-    ajs-parent-page-title: Extending The Shell
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Shell+Namespaces
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Shell+Namespaces'
-    page_id: '4687774'
-    shortlink: nodH
-    shortlink_source: 'https://doc.nuxeo.com/x/nodH'
-    source_link: /display/NXDOC/Shell+Namespaces
 tree_item_index: 300
 history:
     -

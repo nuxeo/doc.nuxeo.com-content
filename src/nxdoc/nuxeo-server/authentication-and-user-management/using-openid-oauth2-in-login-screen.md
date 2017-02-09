@@ -12,17 +12,6 @@ labels:
     - excerpt
     - link-update
 toc: true
-confluence:
-    ajs-parent-page-id: '16089115'
-    ajs-parent-page-title: Authentication and User Management
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=20517844
-    canonical_source: viewpage.action?pageId=20517844
-    page_id: '20517844'
-    shortlink: 1BM5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/1BM5AQ'
-    source_link: /pages/viewpage.action?pageId=20517844
 tree_item_index: 170
 history:
     -

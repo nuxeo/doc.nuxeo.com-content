@@ -12,17 +12,6 @@ labels:
     - workflow-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '12913723'
-    ajs-parent-page-title: Workflow
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Workflow+Audit+Log
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Workflow+Audit+Log'
-    page_id: '26316725'
-    shortlink: tY_RAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/tY_RAQ'
-    source_link: /display/NXDOC/Workflow+Audit+Log
 tree_item_index: 1000
 history:
     -

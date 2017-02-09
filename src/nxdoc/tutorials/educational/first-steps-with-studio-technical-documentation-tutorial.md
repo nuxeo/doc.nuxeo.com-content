@@ -8,19 +8,6 @@ labels:
     - lts2016-ok
     - tutorial
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235679'
-    ajs-parent-page-title: Educational
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: First+Steps+With+Studio%3A+Technical+Documentation+Tutorial
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/First+Steps+With+Studio%3A+Technical+Documentation+Tutorial
-    page_id: '19235783'
-    shortlink: x4MlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/x4MlAQ'
-    source_link: >-
-        /display/NXDOC/First+Steps+With+Studio%3A+Technical+Documentation+Tutorial
 tree_item_index: 200
 history:
     -

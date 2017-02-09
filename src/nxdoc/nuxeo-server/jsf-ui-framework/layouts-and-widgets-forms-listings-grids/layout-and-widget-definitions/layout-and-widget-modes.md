@@ -10,17 +10,6 @@ labels:
     - widget
     - layout-widgets-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '3868333'
-    ajs-parent-page-title: Layout and Widget Definitions
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Layout+and+Widget+Modes
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Layout+and+Widget+Modes'
-    page_id: '17794409'
-    shortlink: aYUPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/aYUPAQ'
-    source_link: /display/NXDOC/Layout+and+Widget+Modes
 tree_item_index: 300
 history:
     -

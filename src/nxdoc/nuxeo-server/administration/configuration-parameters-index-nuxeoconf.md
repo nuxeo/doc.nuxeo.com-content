@@ -11,27 +11,16 @@ labels:
     - templates
     - launcher
     - multiexcerpt
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=3866689
-    canonical_source: viewpage.action?pageId=3866689
-    page_id: '3866689'
-    shortlink: QQA7
-    shortlink_source: 'https://doc.nuxeo.com/x/QQA7'
-    source_link: /pages/viewpage.action?pageId=3866689
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/admindoc/configuration-parameters-index-nuxeoconf
+    LTS 2015: 710/admindoc/configuration-parameters-index-nuxeoconf
     '6.0': 60/admindoc/configuration-parameters-index-nuxeoconf
     '5.8': 58/admindoc/configuration-parameters-index-nuxeoconf
 history:
     -
         author: Ronan Daniellou
         date: '2016-08-22 13:50'
-        message: eeps only FT value for "nuxeo.db.idle-timeout-minutes
+        message: 'eeps only FT value for "nuxeo.db.idle-timeout-minutes'
         version: '207'
     -
         author: Ronan Daniellou
@@ -41,12 +30,12 @@ history:
     -
         author: Ronan Daniellou
         date: '2016-08-22 13:28'
-        message: Adds "nuxeo.db.idle-timeout-minutes" property.
+        message: 'Adds "nuxeo.db.idle-timeout-minutes" property.'
         version: '205'
     -
         author: Ronan Daniellou
         date: '2016-08-17 08:17'
-        message: Adds "nuxeo.db.idle-timeout-minutes" property.
+        message: 'Adds "nuxeo.db.idle-timeout-minutes" property.'
         version: '204'
     -
         author: Florent Guillaume
@@ -166,9 +155,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-12-15 10:18'
-        message: >-
-            Add deprecation on opensocial.gadgets.host and
-            opensocial.gadgets.port
+        message: Add deprecation on opensocial.gadgets.host and opensocial.gadgets.port
         version: '180'
     -
         author: Solen Guitter
@@ -263,7 +250,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-07-03 08:16'
-        message: Added "since" column
+        message: 'Added "since" column'
         version: '161'
     -
         author: Solen Guitter
@@ -273,9 +260,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-07-02 13:11'
-        message: >-
-            NXP-16197: Update default value and description of
-            zip.entry.encoding
+        message: 'NXP-16197: Update default value and description of zip.entry.encoding'
         version: '159'
     -
         author: Antoine Taillefer
@@ -370,7 +355,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-09-22 10:20'
-        message: 5.9.6 -> 6.0
+        message: '5.9.6 -> 6.0'
         version: '140'
     -
         author: Thomas Roger
@@ -490,9 +475,7 @@ history:
     -
         author: Julien Carsique
         date: '2014-02-26 14:10'
-        message: >-
-            NXBT-727, NXBT-724, NXP-8024: add properties for proxy NTLM and
-            proxy PAC
+        message: 'NXBT-727, NXBT-724, NXP-8024: add properties for proxy NTLM and proxy PAC'
         version: '116'
     -
         author: Thierry Martins
@@ -627,9 +610,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-06-28 18:31'
-        message: >-
-            Added Since 5.7.2 mention on nuxeo.jsf.numberOfViewsInSession and
-            nuxeo.jsf.numberOfLogicalViews
+        message: Added Since 5.7.2 mention on nuxeo.jsf.numberOfViewsInSession and nuxeo.jsf.numberOfLogicalViews
         version: '89'
     -
         author: Anahide Tchertchian
@@ -644,16 +625,12 @@ history:
     -
         author: Anahide Tchertchian
         date: '2013-06-17 15:00'
-        message: >-
-            NXP-11129: change property name to
-            studio.snapshot.disablePkgValidation
+        message: 'NXP-11129: change property name to studio.snapshot.disablePkgValidation'
         version: '86'
     -
         author: Anahide Tchertchian
         date: '2013-06-16 16:45'
-        message: >-
-            NXP-11129: document property
-            org.nuxeo.ecm.platform.disableStudioSnapshotPackageValidation
+        message: 'NXP-11129: document property org.nuxeo.ecm.platform.disableStudioSnapshotPackageValidation'
         version: '85'
     -
         author: Solen Guitter
@@ -663,7 +640,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-01-04 12:03'
-        message: Added new 5.7 D&D parameters from 5.6 documentation
+        message: 'Added new 5.7 D&D parameters from 5.6 documentation'
         version: '83'
     -
         author: Anahide Tchertchian
@@ -768,7 +745,7 @@ history:
     -
         author: Mathieu Guillaume
         date: '2011-11-29 13:17'
-        message: Change title so the page is found when searching for "nuxeo.conf"
+        message: 'Change title so the page is found when searching for "nuxeo.conf"'
         version: '62'
     -
         author: Thierry Delprat
@@ -873,9 +850,7 @@ history:
     -
         author: Julien Carsique
         date: '2011-06-07 14:35'
-        message: >-
-            add warning about nuxeo.loopback.url when changing
-            nuxeo.bind.address
+        message: add warning about nuxeo.loopback.url when changing nuxeo.bind.address
         version: '41'
     -
         author: Thierry Martins

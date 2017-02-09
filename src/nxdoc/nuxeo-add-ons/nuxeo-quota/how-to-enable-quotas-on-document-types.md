@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to enable Nuxeo Quota features on document types other
-            than domains and workspaces.
+        excerpt: Learn how to enable Nuxeo Quota features on document types other than domains and workspaces.
         level: Beginner
         tool: Nuxeo Studio
         topics: 'Document type, Nuxeo Quota, Statistics'
@@ -17,18 +15,6 @@ labels:
     - quota
     - howto
     - quotas-component
-confluence:
-    ajs-parent-page-id: '11534351'
-    ajs-parent-page-title: Nuxeo Quota
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Enable+Quotas+on+Document+Types
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Enable+Quotas+on+Document+Types
-    page_id: '12914459'
-    shortlink: Gw-F
-    shortlink_source: 'https://doc.nuxeo.com/x/Gw-F'
-    source_link: /display/NXDOC/How+to+Enable+Quotas+on+Document+Types
 history:
     -
         author: Manon Lumeau

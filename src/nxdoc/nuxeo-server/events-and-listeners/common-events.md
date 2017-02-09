@@ -10,17 +10,6 @@ labels:
     - core-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '950283'
-    ajs-parent-page-title: Events and Listeners
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Common+Events
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Common+Events'
-    page_id: '16089442'
-    shortlink: YoH1
-    shortlink_source: 'https://doc.nuxeo.com/x/YoH1'
-    source_link: /display/NXDOC/Common+Events
 tree_item_index: 100
 history:
     -

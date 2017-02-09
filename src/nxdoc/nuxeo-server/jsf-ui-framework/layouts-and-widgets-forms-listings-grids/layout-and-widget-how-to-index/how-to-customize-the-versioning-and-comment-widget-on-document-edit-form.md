@@ -6,10 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to customize the versioning and comment widget using XML
-            extensions. These examples can be contributed in Nuxeo Studio
-            (Advanced Settings > XML Extensions) or with the Nuxeo Generator.
+        excerpt: 'Learn how to customize the versioning and comment widget using XML extensions. These examples can be contributed in Nuxeo Studio (Advanced Settings > XML Extensions) or with the Nuxeo Generator.'
         level: Intermediate
         tool: 'XML extension, Nuxeo Generator, Studio'
         topics: 'Layout, Versioning, JSF UI, Widget'
@@ -23,19 +20,6 @@ labels:
     - layout-widgets-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '19235623'
-    ajs-parent-page-title: Layout & Widget How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Customize+the+Versioning+and+Comment+Widget+on+Document+Edit+Form
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Customize+the+Versioning+and+Comment+Widget+on+Document+Edit+Form
-    page_id: '19793894'
-    shortlink: 5gcuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/5gcuAQ'
-    source_link: >-
-        /display/NXDOC/How+to+Customize+the+Versioning+and+Comment+Widget+on+Document+Edit+Form
 tree_item_index: 600
 history:
     -

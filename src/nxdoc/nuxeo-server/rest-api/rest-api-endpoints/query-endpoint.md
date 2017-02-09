@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            This how-to provides an example of how to use the REST API to query
-            the Nuxeo repository.
+        excerpt: This how-to provides an example of how to use the REST API to query the Nuxeo repository.
         level: Advanced
         tool: Code
         topics: 'Query, REST API'
@@ -22,17 +20,6 @@ labels:
     - query-pageprovider-component
     - link-update
 toc: true
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Query+Endpoint
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Query+Endpoint'
-    page_id: '20514728'
-    shortlink: qAc5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/qAc5AQ'
-    source_link: /display/NXDOC/Query+Endpoint
 tree_item_index: 800
 history:
     -

@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Leans how to customize the document validation error messages and
-            how to add new references validation on document types.
+        excerpt: Leans how to customize the document validation error messages and how to add new references validation on document types.
         level: Advanced
         tool: Code Editor
         topics: 'Document Type, Validation'
@@ -17,17 +15,6 @@ labels:
     - howto
     - schema-component
 toc: true
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Customize+Document+Validation
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Customize+Document+Validation'
-    page_id: '23364524'
-    shortlink: rINkAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/rINkAQ'
-    source_link: /display/NXDOC/How+to+Customize+Document+Validation
 tree_item_index: 1500
 history:
     -

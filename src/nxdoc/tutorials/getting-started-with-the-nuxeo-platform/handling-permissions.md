@@ -7,17 +7,6 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '29460589'
-    ajs-parent-page-title: Getting Started with the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Handling+Permissions
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Handling+Permissions'
-    page_id: '31687172'
-    shortlink: BILjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/BILjAQ'
-    source_link: /display/NXDOC/Handling+Permissions
 tree_item_index: 400
 history:
     -
@@ -48,7 +37,7 @@ history:
     -
         author: Bertrand Chauvin
         date: '2016-08-17 09:05'
-        message: occured => occurred
+        message: 'occured => occurred'
         version: '16'
     -
         author: Bertrand Chauvin

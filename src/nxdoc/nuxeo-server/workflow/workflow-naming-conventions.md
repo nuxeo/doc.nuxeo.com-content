@@ -10,17 +10,6 @@ labels:
     - workflow-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '12913723'
-    ajs-parent-page-title: Workflow
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Workflow+Naming+Conventions
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Workflow+Naming+Conventions'
-    page_id: '16091806'
-    shortlink: nor1
-    shortlink_source: 'https://doc.nuxeo.com/x/nor1'
-    source_link: /display/NXDOC/Workflow+Naming+Conventions
 tree_item_index: 1100
 history:
     -

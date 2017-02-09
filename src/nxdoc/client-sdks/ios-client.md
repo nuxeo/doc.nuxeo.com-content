@@ -11,17 +11,6 @@ labels:
     - mobile
     - ios-client-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16091040'
-    ajs-parent-page-title: Client SDKs
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: iOS+Client
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/iOS+Client'
-    page_id: '16091864'
-    shortlink: 2Ir1
-    shortlink_source: 'https://doc.nuxeo.com/x/2Ir1'
-    source_link: /display/NXDOC/iOS+Client
 tree_item_index: 500
 history:
     -

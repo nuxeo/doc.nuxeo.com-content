@@ -7,17 +7,6 @@ review:
 labels:
     - topic
 toc: true
-confluence:
-    ajs-parent-page-id: '2392376'
-    ajs-parent-page-title: Forums
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Managing+Topics
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Managing+Topics'
-    page_id: '2392378'
-    shortlink: OoEk
-    shortlink_source: 'https://doc.nuxeo.com/x/OoEk'
-    source_link: /display/USERDOC/Managing+Topics
 tree_item_index: 100
 history:
     -

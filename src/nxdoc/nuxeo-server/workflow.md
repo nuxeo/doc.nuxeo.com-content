@@ -9,17 +9,6 @@ labels:
     - workflow
     - workflow-component
 toc: true
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Workflow
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Workflow'
-    page_id: '12913723'
-    shortlink: OwzF
-    shortlink_source: 'https://doc.nuxeo.com/x/OwzF'
-    source_link: /display/NXDOC/Workflow
 tree_item_index: 1100
 history:
     -

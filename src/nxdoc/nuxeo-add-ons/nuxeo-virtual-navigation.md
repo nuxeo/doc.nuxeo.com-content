@@ -10,17 +10,6 @@ labels:
     - virtual-navigation-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Virtual+Navigation
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Virtual+Navigation'
-    page_id: '20517205'
-    shortlink: VRE5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/VRE5AQ'
-    source_link: /display/NXDOC/Nuxeo+Virtual+Navigation
 tree_item_index: 2800
 history:
     -

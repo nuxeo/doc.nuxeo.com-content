@@ -8,19 +8,6 @@ labels:
     - lts2016-ok
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '19235783'
-    ajs-parent-page-title: 'First Steps With Studio: Technical Documentation Tutorial'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Validation+Workflow+Choosing+the+Assignee+Based+on+a+Metadata
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Validation+Workflow+Choosing+the+Assignee+Based+on+a+Metadata
-    page_id: '14256622'
-    shortlink: 7onZ
-    shortlink_source: 'https://doc.nuxeo.com/x/7onZ'
-    source_link: >-
-        /display/NXDOC/Validation+Workflow+Choosing+the+Assignee+Based+on+a+Metadata
 tree_item_index: 400
 history:
     -

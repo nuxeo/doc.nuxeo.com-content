@@ -10,17 +10,6 @@ labels:
     - subworkflow
     - sub-workflow
 toc: true
-confluence:
-    ajs-parent-page-id: '14257562'
-    ajs-parent-page-title: Sub Workflow Example
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: 2-+Creating+the+Subworkflows
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/2-+Creating+the+Subworkflows'
-    page_id: '14257597'
-    shortlink: vY3Z
-    shortlink_source: 'https://doc.nuxeo.com/x/vY3Z'
-    source_link: /display/NXDOC/2-+Creating+the+Subworkflows
 history:
     -
         author: Manon Lumeau

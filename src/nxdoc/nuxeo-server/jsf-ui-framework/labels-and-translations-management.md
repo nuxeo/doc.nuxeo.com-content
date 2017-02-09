@@ -10,17 +10,6 @@ labels:
     - translations-component
     - nxdoc-697
     - excerpt
-confluence:
-    ajs-parent-page-id: '16089312'
-    ajs-parent-page-title: JSF UI Framework
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Labels+and+Translations+Management
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Labels+and+Translations+Management'
-    page_id: '19235763'
-    shortlink: s4MlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/s4MlAQ'
-    source_link: /display/NXDOC/Labels+and+Translations+Management
 tree_item_index: 1300
 history:
     -

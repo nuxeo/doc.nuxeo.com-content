@@ -10,17 +10,6 @@ labels:
     - automation-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '18451738'
-    ajs-parent-page-title: Automation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Calling+Automation+from+Java
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Calling+Automation+from+Java'
-    page_id: '16091683'
-    shortlink: I4r1
-    shortlink_source: 'https://doc.nuxeo.com/x/I4r1'
-    source_link: /display/NXDOC/Calling+Automation+from+Java
 tree_item_index: 700
 history:
     -

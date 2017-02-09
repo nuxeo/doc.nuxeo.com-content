@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - kerberos-authentication-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Kerberos+Authentication
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Kerberos+Authentication'
-    page_id: '20518349'
-    shortlink: zRU5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/zRU5AQ'
-    source_link: /display/NXDOC/Kerberos+Authentication
 tree_item_index: 195
 history:
     -

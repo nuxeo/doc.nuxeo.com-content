@@ -13,17 +13,6 @@ labels:
     - seam-jsf-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '16089312'
-    ajs-parent-page-title: JSF UI Framework
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Navigation+URLs
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Navigation+URLs'
-    page_id: '7209351'
-    shortlink: hwFu
-    shortlink_source: 'https://doc.nuxeo.com/x/hwFu'
-    source_link: /display/NXDOC/Navigation+URLs
 tree_item_index: 1200
 history:
     -

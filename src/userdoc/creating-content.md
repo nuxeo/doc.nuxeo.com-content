@@ -12,17 +12,6 @@ labels:
     - multiexcerpt-include
     - excerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Creating+Content
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Creating+Content'
-    page_id: '2392397'
-    shortlink: TYEk
-    shortlink_source: 'https://doc.nuxeo.com/x/TYEk'
-    source_link: /display/USERDOC/Creating+Content
 tree_item_index: 600
 history:
     -

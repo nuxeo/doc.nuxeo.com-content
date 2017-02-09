@@ -9,20 +9,9 @@ labels:
     - redis
     - clustering
     - multiexcerpt-include
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Redis+Configuration
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Redis+Configuration'
-    page_id: '17793513'
-    shortlink: 6YEPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/6YEPAQ'
-    source_link: /display/NXDOC/Redis+Configuration
 tree_item_index: 1100
 version_override:
-    'LTS 2015': 710/admindoc/redis-configuration
+    LTS 2015: 710/admindoc/redis-configuration
     '6.0': 60/admindoc/redis-configuration
     '5.8': 58/admindoc/redis-configuration
 history:

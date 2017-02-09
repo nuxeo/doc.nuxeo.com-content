@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn the best practices of Ajax4JSF to ensure correct rendering,
-            HTML and testing.
+        excerpt: 'Learn the best practices of Ajax4JSF to ensure correct rendering, HTML and testing.'
         level: Advanced
         tool: Code
         topics: 'JSF, Ajax'
@@ -22,17 +20,6 @@ labels:
     - seam-jsf-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '9830458'
-    ajs-parent-page-title: JSF and Ajax Tips and How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Ajax4jsf+Best+Practices
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Ajax4jsf+Best+Practices'
-    page_id: '4688639'
-    shortlink: '-4pH'
-    shortlink_source: 'https://doc.nuxeo.com/x/-4pH'
-    source_link: /display/NXDOC/Ajax4jsf+Best+Practices
 tree_item_index: 100
 history:
     -
@@ -73,9 +60,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2013-04-29 16:44'
-        message: >-
-            NXP-11472: add doc about attribute layout="block" on tag
-            a4j:outputPanel
+        message: 'NXP-11472: add doc about attribute layout="block" on tag a4j:outputPanel'
         version: '4'
     -
         author: Solen Guitter

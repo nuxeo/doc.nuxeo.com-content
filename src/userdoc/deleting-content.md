@@ -9,17 +9,6 @@ labels:
     - trash
     - last
     - multiexcerpt
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Deleting+Content
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Deleting+Content'
-    page_id: '2392394'
-    shortlink: SoEk
-    shortlink_source: 'https://doc.nuxeo.com/x/SoEk'
-    source_link: /display/USERDOC/Deleting+Content
 tree_item_index: 900
 history:
     -

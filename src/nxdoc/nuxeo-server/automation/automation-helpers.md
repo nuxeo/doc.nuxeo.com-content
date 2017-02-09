@@ -10,17 +10,6 @@ labels:
     - automation-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '18451738'
-    ajs-parent-page-title: Automation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Automation+Helpers
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Automation+Helpers'
-    page_id: '24674372'
-    shortlink: RIB4AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/RIB4AQ'
-    source_link: /display/NXDOC/Automation+Helpers
 tree_item_index: 1500
 history:
     -

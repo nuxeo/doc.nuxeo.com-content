@@ -9,20 +9,8 @@ labels:
     - excerpt
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '17794754'
-    ajs-parent-page-title: Upgrade from 5.8 to 6.0
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Platform+6.0+Packaging+Changes+and+Deprecations
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Nuxeo+Platform+6.0+Packaging+Changes+and+Deprecations
-    page_id: '20518793'
-    shortlink: iRc5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/iRc5AQ'
-    source_link: /display/NXDOC/Nuxeo+Platform+6.0+Packaging+Changes+and+Deprecations
 version_override:
-    'LTS 2015': 710/admindoc/nuxeo-platform-60-packaging-changes-and-deprecations
+    LTS 2015: 710/admindoc/nuxeo-platform-60-packaging-changes-and-deprecations
 history:
     -
         author: Solen Guitter

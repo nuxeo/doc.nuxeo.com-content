@@ -8,17 +8,6 @@ labels:
     - digital-signature
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '11043055'
-    ajs-parent-page-title: Adding Features
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Digital+Signature
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Digital+Signature'
-    page_id: '16091701'
-    shortlink: NYr1
-    shortlink_source: 'https://doc.nuxeo.com/x/NYr1'
-    source_link: /display/USERDOC/Digital+Signature
 tree_item_index: 100
 history:
     -

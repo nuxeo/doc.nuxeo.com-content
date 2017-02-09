@@ -7,17 +7,6 @@ review:
 labels:
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '11043055'
-    ajs-parent-page-title: Adding Features
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Nuxeo+IMAP+Connector
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+IMAP+Connector'
-    page_id: '2392392'
-    shortlink: SIEk
-    shortlink_source: 'https://doc.nuxeo.com/x/SIEk'
-    source_link: /display/USERDOC/Nuxeo+IMAP+Connector
 tree_item_index: 800
 history:
     -

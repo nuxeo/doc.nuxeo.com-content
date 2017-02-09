@@ -6,8 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            This how-to provides an example of how to use the workflow REST API.
+        excerpt: This how-to provides an example of how to use the workflow REST API.
         level: Advanced
         tool: Code
         topics: 'Worklow, REST API'

@@ -8,17 +8,6 @@ redirect: how-to-configure-a-new-default-search-form-in-the-search-tab
 redirect_source: How to Configure a New Default Search Form in the Search Tab
 labels:
     - content-review-lts2016
-confluence:
-    ajs-parent-page-id: ''
-    ajs-parent-page-title: ''
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Configure+a+New+Search+Tab
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Configure+a+New+Search+Tab'
-    page_id: '23366527'
-    shortlink: f4tkAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/f4tkAQ'
-    source_link: /display/NXDOC/How+to+Configure+a+New+Search+Tab
 hidden: true
 history:
     -

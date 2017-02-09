@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - runtimecomponent
     - excerpt
-confluence:
-    ajs-parent-page-id: '950284'
-    ajs-parent-page-title: Runtime and Component Model
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Writing+a+Bundle+Manifest
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Writing+a+Bundle+Manifest'
-    page_id: '4686402'
-    shortlink: QoJH
-    shortlink_source: 'https://doc.nuxeo.com/x/QoJH'
-    source_link: /display/NXDOC/Writing+a+Bundle+Manifest
 tree_item_index: 300
 history:
     -

@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            This how-to explains how to change Nuxeo Drive's default versioning
-            policy.
+        excerpt: "This how-to explains how to change Nuxeo Drive's default versioning policy."
         level: Intermediate
         tool: XML Extention
         topics: 'Nuxeo Drive, Versioning'
@@ -21,18 +19,6 @@ labels:
     - multiexcerpt-include
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '14257229'
-    ajs-parent-page-title: Nuxeo Drive
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Customize+Nuxeo+Drive+Versioning+Policy
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Customize+Nuxeo+Drive+Versioning+Policy
-    page_id: '23365773'
-    shortlink: jYhkAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/jYhkAQ'
-    source_link: /display/NXDOC/How+to+Customize+Nuxeo+Drive+Versioning+Policy
 tree_item_index: 400
 history:
     -

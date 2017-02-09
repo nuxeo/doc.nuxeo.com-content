@@ -22,17 +22,6 @@ labels:
     - workflow-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '19235619'
-    ajs-parent-page-title: Workflow How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Query+Workflow+Objects
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Query+Workflow+Objects'
-    page_id: '13664736'
-    shortlink: 4IHQ
-    shortlink_source: 'https://doc.nuxeo.com/x/4IHQ'
-    source_link: /display/NXDOC/How+to+Query+Workflow+Objects
 tree_item_index: 100
 history:
     -

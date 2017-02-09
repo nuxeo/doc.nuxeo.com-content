@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - workflow
     - index
-confluence:
-    ajs-parent-page-id: '12913723'
-    ajs-parent-page-title: Workflow
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Workflow+How-To+Index
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Workflow+How-To+Index'
-    page_id: '19235619'
-    shortlink: I4MlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/I4MlAQ'
-    source_link: /display/NXDOC/Workflow+How-To+Index
 tree_item_index: 1300
 history:
     -

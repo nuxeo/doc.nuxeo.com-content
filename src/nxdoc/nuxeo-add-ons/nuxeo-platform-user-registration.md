@@ -9,17 +9,6 @@ labels:
     - user-registration
     - user-registration-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Platform+User+Registration
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Platform+User+Registration'
-    page_id: '18450090'
-    shortlink: qoYZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/qoYZAQ'
-    source_link: /display/NXDOC/Nuxeo+Platform+User+Registration
 tree_item_index: 2400
 history:
     -

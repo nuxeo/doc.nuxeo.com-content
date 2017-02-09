@@ -12,25 +12,12 @@ labels:
     - excerpt-include
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Publishing+Content
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Publishing+Content'
-    page_id: '2392407'
-    shortlink: V4Ek
-    shortlink_source: 'https://doc.nuxeo.com/x/V4Ek'
-    source_link: /display/USERDOC/Publishing+Content
 tree_item_index: 1400
 history:
     -
         author: Solen Guitter
         date: '2016-05-18 13:21'
-        message: >-
-            pdate required rights in sections to be able to publish (Can ask for
-            publishing instead of Read
+        message: pdate required rights in sections to be able to publish (Can ask for publishing instead of Read
         version: '22'
     -
         author: Solen Guitter

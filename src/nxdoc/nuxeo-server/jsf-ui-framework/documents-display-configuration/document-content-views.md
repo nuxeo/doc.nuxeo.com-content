@@ -9,17 +9,6 @@ labels:
     - document-content-view
     - web-ui-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '6029663'
-    ajs-parent-page-title: Documents Display Configuration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Document+Content+Views
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Document+Content+Views'
-    page_id: '17794801'
-    shortlink: 8YYPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/8YYPAQ'
-    source_link: /display/NXDOC/Document+Content+Views
 tree_item_index: 300
 history:
     -

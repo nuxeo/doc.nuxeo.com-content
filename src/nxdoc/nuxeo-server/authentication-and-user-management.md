@@ -17,17 +17,6 @@ labels:
     - authentication-component
     - migration-sample
 toc: true
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Authentication+and+User+Management
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Authentication+and+User+Management'
-    page_id: '16089115'
-    shortlink: G4D1
-    shortlink_source: 'https://doc.nuxeo.com/x/G4D1'
-    source_link: /display/NXDOC/Authentication+and+User+Management
 tree_item_index: 800
 history:
     -
@@ -78,12 +67,12 @@ history:
     -
         author: Solen Guitter
         date: '2015-10-02 13:36'
-        message: Fix TOC style in Install & Config tab
+        message: 'Fix TOC style in Install & Config tab'
         version: '14'
     -
         author: Solen Guitter
         date: '2015-10-02 13:05'
-        message: Shorter titles in install&config tab
+        message: 'Shorter titles in install&config tab'
         version: '13'
     -
         author: Solen Guitter

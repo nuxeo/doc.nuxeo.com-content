@@ -6,17 +6,6 @@ review:
     status: ok
 labels:
     - content-review-lts2016
-confluence:
-    ajs-parent-page-id: '4687444'
-    ajs-parent-page-title: Contributing to Nuxeo
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=950314
-    canonical_source: viewpage.action?pageId=950314
-    page_id: '950314'
-    shortlink: KoAO
-    shortlink_source: 'https://doc.nuxeo.com/x/KoAO'
-    source_link: /pages/viewpage.action?pageId=950314
 tree_item_index: 100
 history:
     -

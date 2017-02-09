@@ -9,17 +9,6 @@ labels:
     - oauth
     - oauth-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089115'
-    ajs-parent-page-title: Authentication and User Management
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Using+OAuth2
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Using+OAuth2'
-    page_id: '18450388'
-    shortlink: 1IcZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/1IcZAQ'
-    source_link: /display/NXDOC/Using+OAuth2
 tree_item_index: 160
 history:
     -

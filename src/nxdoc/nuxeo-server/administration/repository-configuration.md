@@ -11,20 +11,9 @@ labels:
     - fulltext
     - vcs-component
 toc: true
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Repository+Configuration
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Repository+Configuration'
-    page_id: '3343495'
-    shortlink: hwQz
-    shortlink_source: 'https://doc.nuxeo.com/x/hwQz'
-    source_link: /display/NXDOC/Repository+Configuration
 tree_item_index: 1500
 version_override:
-    'LTS 2015': 710/admindoc/vcs-configuration
+    LTS 2015: 710/admindoc/vcs-configuration
     '6.0': 60/admindoc/vcs-configuration
     '5.8': 58/admindoc/vcs-configuration
 history:

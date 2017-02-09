@@ -6,10 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            This how-to provides some examples of how to use the REST API to
-            query the Nuxeo repository, as well as to save these queries and
-            later reproduce them.
+        excerpt: 'This how-to provides some examples of how to use the REST API to query the Nuxeo repository, as well as to save these queries and later reproduce them.'
         level: Advanced
         tool: Code
         topics: 'Query, REST API'
@@ -24,17 +21,6 @@ labels:
     - university
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Search+Endpoint
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Search+Endpoint'
-    page_id: '31688591'
-    shortlink: j4fjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/j4fjAQ'
-    source_link: /display/NXDOC/Search+Endpoint
 tree_item_index: 200
 history:
     -

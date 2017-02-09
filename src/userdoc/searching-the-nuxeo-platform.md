@@ -8,17 +8,6 @@ labels:
     - search
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Searching+the+Nuxeo+Platform
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Searching+the+Nuxeo+Platform'
-    page_id: '2392416'
-    shortlink: YIEk
-    shortlink_source: 'https://doc.nuxeo.com/x/YIEk'
-    source_link: /display/USERDOC/Searching+the+Nuxeo+Platform
 tree_item_index: 1100
 history:
     -
@@ -44,9 +33,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-11-18 17:53'
-        message: >-
-            Updated list of available searches and removed search results
-            export
+        message: Updated list of available searches and removed search results export
         version: '57'
     -
         author: Solen Guitter
@@ -106,9 +93,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-06-13 17:52'
-        message: >-
-            Added details on advanced search results, faceted search, suggestion
-            search, operators
+        message: 'Added details on advanced search results, faceted search, suggestion search, operators'
         version: '45'
     -
         author: Solen Guitter
@@ -273,9 +258,7 @@ history:
     -
         author: Solen Guitter
         date: '2011-05-20 12:15'
-        message: >-
-            added 5.4.2 new search features (export, advanced search results
-            filter)
+        message: 'added 5.4.2 new search features (export, advanced search results filter)'
         version: '12'
     -
         author: Solen Guitter

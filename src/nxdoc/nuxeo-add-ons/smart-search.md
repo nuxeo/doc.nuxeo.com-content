@@ -11,17 +11,6 @@ labels:
     - smart-search-component
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Smart+Search
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Smart+Search'
-    page_id: '3868365'
-    shortlink: zQY7
-    shortlink_source: 'https://doc.nuxeo.com/x/zQY7'
-    source_link: /display/NXDOC/Smart+Search
 tree_item_index: 3400
 history:
     -

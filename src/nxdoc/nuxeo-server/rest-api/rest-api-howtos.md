@@ -7,17 +7,6 @@ review:
 labels:
     - lts2016-ok
     - index
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: REST+API+How-To+Index
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/REST+API+How-To+Index'
-    page_id: '19793386'
-    shortlink: 6gUuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/6gUuAQ'
-    source_link: /display/NXDOC/REST+API+How-To+Index
 tree_item_index: 1900
 history:
     -

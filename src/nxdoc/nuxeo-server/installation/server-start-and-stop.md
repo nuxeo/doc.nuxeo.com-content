@@ -8,20 +8,9 @@ labels:
     - content-review-lts2016
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3866685'
-    ajs-parent-page-title: Installation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Server+Start+and+Stop
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Server+Start+and+Stop'
-    page_id: '6030087'
-    shortlink: BwNc
-    shortlink_source: 'https://doc.nuxeo.com/x/BwNc'
-    source_link: /display/NXDOC/Server+Start+and+Stop
 tree_item_index: 1100
 version_override:
-    'LTS 2015': 710/admindoc/server-start-and-stop
+    LTS 2015: 710/admindoc/server-start-and-stop
     '6.0': 60/admindoc/server-start-and-stop
     '5.8': 58/admindoc/server-start-and-stop
 history:

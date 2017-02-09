@@ -8,17 +8,6 @@ labels:
     - tag
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '2392400'
-    ajs-parent-page-title: Browsing Content
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Tags
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Tags'
-    page_id: '2392380'
-    shortlink: PIEk
-    shortlink_source: 'https://doc.nuxeo.com/x/PIEk'
-    source_link: /display/USERDOC/Tags
 tree_item_index: 200
 history:
     -

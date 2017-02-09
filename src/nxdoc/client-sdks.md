@@ -7,21 +7,10 @@ review:
 labels:
     - lts2016-ok
     - home
-confluence:
-    ajs-parent-page-id: '950332'
-    ajs-parent-page-title: Developer Documentation Center
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Client+SDKs
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Client+SDKs'
-    page_id: '16091040'
-    shortlink: oIf1
-    shortlink_source: 'https://doc.nuxeo.com/x/oIf1'
-    source_link: /display/NXDOC/Client+SDKs
 tree_item_index: 600
 section_parent: sdks
 version_override:
-    'LTS 2015': 710/nxdoc/clients
+    LTS 2015: 710/nxdoc/clients
     '6.0': 60/nxdoc/clients
     '5.8': 58/nxdoc/clients
 history:

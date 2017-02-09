@@ -9,17 +9,6 @@ labels:
     - excerpt
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '11043055'
-    ajs-parent-page-title: Adding Features
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: EasyShare
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/EasyShare'
-    page_id: '18451118'
-    shortlink: rooZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/rooZAQ'
-    source_link: /display/USERDOC/EasyShare
 tree_item_index: 200
 history:
     -

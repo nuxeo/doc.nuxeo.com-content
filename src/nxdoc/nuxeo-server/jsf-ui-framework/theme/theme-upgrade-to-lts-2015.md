@@ -11,17 +11,6 @@ labels:
     - migration
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '950327'
-    ajs-parent-page-title: Theme
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Theme+Upgrade+to+LTS+2015
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Theme+Upgrade+to+LTS+2015'
-    page_id: '26313654'
-    shortlink: toORAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/toORAQ'
-    source_link: /display/NXDOC/Theme+Upgrade+to+LTS+2015
 tree_item_index: 100
 history:
     -

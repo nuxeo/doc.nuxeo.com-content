@@ -9,17 +9,6 @@ labels:
     - facet
     - core-component
 toc: true
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Available+Facets
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Available+Facets'
-    page_id: '3343533'
-    shortlink: rQQz
-    shortlink_source: 'https://doc.nuxeo.com/x/rQQz'
-    source_link: /display/NXDOC/Available+Facets
 tree_item_index: 500
 history:
     -

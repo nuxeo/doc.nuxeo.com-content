@@ -9,20 +9,9 @@ labels:
     - elasticsearch
     - elasticsearch-component
 toc: true
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Elasticsearch+Setup
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Elasticsearch+Setup'
-    page_id: '20518480'
-    shortlink: UBY5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/UBY5AQ'
-    source_link: /display/NXDOC/Elasticsearch+Setup
 tree_item_index: 1000
 version_override:
-    'LTS 2015': 710/admindoc/elasticsearch-setup
+    LTS 2015: 710/admindoc/elasticsearch-setup
     '6.0': 60/admindoc/elasticsearch-setup
 history:
     -
@@ -38,7 +27,7 @@ history:
     -
         author: Manon Lumeau
         date: '2016-08-02 16:03'
-        message: remove <span>
+        message: 'remove <span>'
         version: '85'
     -
         author: Vincent Dutat
@@ -58,7 +47,7 @@ history:
     -
         author: Thierry Martins
         date: '2016-05-19 12:21'
-        message: Add size to 'indexed terms' query
+        message: "Add size to 'indexed terms' query"
         version: '81'
     -
         author: Solen Guitter
@@ -133,9 +122,7 @@ history:
     -
         author: Benoit Delbosc
         date: '2015-11-20 08:47'
-        message: >-
-            Better explanation on how to create a new template to override the
-            ES mapping
+        message: Better explanation on how to create a new template to override the ES mapping
         version: '66'
     -
         author: Manon Lumeau

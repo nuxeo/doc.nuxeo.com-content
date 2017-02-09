@@ -9,17 +9,6 @@ labels:
     - howto
     - webengine
     - webengine-component
-confluence:
-    ajs-parent-page-id: '3343141'
-    ajs-parent-page-title: WebEngine Tutorials
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Web+Object+Model
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Web+Object+Model'
-    page_id: '3343204'
-    shortlink: ZAMz
-    shortlink_source: 'https://doc.nuxeo.com/x/ZAMz'
-    source_link: /display/NXDOC/Web+Object+Model
 tree_item_index: 300
 history:
     -

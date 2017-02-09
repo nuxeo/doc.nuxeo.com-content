@@ -11,17 +11,6 @@ labels:
     - layout-widgets-component
     - excerpt
     - multiexcerpt
-confluence:
-    ajs-parent-page-id: '16089312'
-    ajs-parent-page-title: JSF UI Framework
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=950330
-    canonical_source: viewpage.action?pageId=950330
-    page_id: '950330'
-    shortlink: OoAO
-    shortlink_source: 'https://doc.nuxeo.com/x/OoAO'
-    source_link: /pages/viewpage.action?pageId=950330
 tree_item_index: 700
 history:
     -

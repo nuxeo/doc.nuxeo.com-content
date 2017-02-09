@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to display non-folderish documents in the left tree with
-            Nuxeo Studio.
+        excerpt: Learn how to display non-folderish documents in the left tree with Nuxeo Studio.
         level: Advanced
         tool: 'Studio, XML extensions'
         topics: Content View
@@ -19,20 +17,6 @@ labels:
     - content-view
     - page-provider-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235663'
-    ajs-parent-page-title: Content View How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: >-
-        How+to+Display+Non-Folderish+Documents+%28Files%2C+Note%2C+...%29+in+the+Left+Tree
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Display+Non-Folderish+Documents+%28Files%2C+Note%2C+...%29+in+the+Left+Tree
-    page_id: '12914311'
-    shortlink: hw7F
-    shortlink_source: 'https://doc.nuxeo.com/x/hw7F'
-    source_link: >-
-        /display/NXDOC/How+to+Display+Non-Folderish+Documents+%28Files%2C+Note%2C+...%29+in+the+Left+Tree
 tree_item_index: 300
 history:
     -

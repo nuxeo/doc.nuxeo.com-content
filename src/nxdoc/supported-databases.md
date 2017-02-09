@@ -8,17 +8,6 @@ redirect: compatibility-matrix
 redirect_source: Compatibility Matrix
 labels:
     - content-review-lts2016
-confluence:
-    ajs-parent-page-id: ''
-    ajs-parent-page-title: ''
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Supported+Databases
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Supported+Databases'
-    page_id: '12911133'
-    shortlink: HQLF
-    shortlink_source: 'https://doc.nuxeo.com/x/HQLF'
-    source_link: /display/NXDOC/Supported+Databases
 hidden: true
 history:
     -
@@ -34,7 +23,7 @@ history:
     -
         author: Benoit Delbosc
         date: '2016-04-25 07:24'
-        message: Add pg 9.5 support for Nuxeo >= 8.3
+        message: 'Add pg 9.5 support for Nuxeo >= 8.3'
         version: '22'
     -
         author: Solen Guitter

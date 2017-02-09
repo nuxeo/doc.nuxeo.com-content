@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to override a default style. Here's an how-to taking as
-            example the override of the "feedback message" styling.
+        excerpt: "Learn how to override a default style. Here's an how-to taking as example the override of the \"feedback message\" styling."
         level: Advanced
         tool: Code editor
         topics: 'Theme, Style'
@@ -19,17 +17,6 @@ labels:
     - howto
     - style-css-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235625'
-    ajs-parent-page-title: Theme How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Override+a+Default+Style
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Override+a+Default+Style'
-    page_id: '17794322'
-    shortlink: EoUPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/EoUPAQ'
-    source_link: /display/NXDOC/How+to+Override+a+Default+Style
 tree_item_index: 200
 history:
     -

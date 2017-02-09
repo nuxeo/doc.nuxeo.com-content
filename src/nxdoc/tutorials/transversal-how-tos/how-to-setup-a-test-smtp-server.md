@@ -14,17 +14,6 @@ labels:
     - lts2016-ok
     - howto
     - alerts
-confluence:
-    ajs-parent-page-id: '19235681'
-    ajs-parent-page-title: Transversal How-Tos
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+setup+a+test+SMTP+server
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+setup+a+test+SMTP+server'
-    page_id: '12914573'
-    shortlink: jQ-F
-    shortlink_source: 'https://doc.nuxeo.com/x/jQ-F'
-    source_link: /display/NXDOC/How+to+setup+a+test+SMTP+server
 tree_item_index: 300
 history:
     -

@@ -15,17 +15,6 @@ labels:
     - howto
     - layout
 toc: true
-confluence:
-    ajs-parent-page-id: '20517820'
-    ajs-parent-page-title: JSF UI How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Customize+the+Bulk+Edit+Form
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Customize+the+Bulk+Edit+Form'
-    page_id: '20517978'
-    shortlink: WhQ5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/WhQ5AQ'
-    source_link: /display/NXDOC/How+to+Customize+the+Bulk+Edit+Form
 tree_item_index: 1300
 history:
     -

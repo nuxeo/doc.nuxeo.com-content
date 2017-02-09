@@ -10,17 +10,6 @@ labels:
     - shell-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '4687725'
-    ajs-parent-page-title: Extending The Shell
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Shell+Features
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Shell+Features'
-    page_id: '4687702'
-    shortlink: VodH
-    shortlink_source: 'https://doc.nuxeo.com/x/VodH'
-    source_link: /display/NXDOC/Shell+Features
 tree_item_index: 100
 history:
     -

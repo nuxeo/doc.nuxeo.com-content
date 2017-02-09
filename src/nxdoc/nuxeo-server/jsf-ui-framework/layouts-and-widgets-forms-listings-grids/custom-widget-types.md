@@ -10,17 +10,6 @@ labels:
     - layout-widgets-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '950330'
-    ajs-parent-page-title: 'Layouts and Widgets (Forms, Listings, Grids)'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Custom+Widget+Types
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Custom+Widget+Types'
-    page_id: '3868347'
-    shortlink: uwY7
-    shortlink_source: 'https://doc.nuxeo.com/x/uwY7'
-    source_link: /display/NXDOC/Custom+Widget+Types
 tree_item_index: 500
 history:
     -

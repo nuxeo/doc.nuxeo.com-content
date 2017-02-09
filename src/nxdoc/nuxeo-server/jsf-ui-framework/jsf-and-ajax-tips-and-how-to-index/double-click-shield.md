@@ -6,7 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: Learn how to use the "Double Click Shield" feature.
+        excerpt: 'Learn how to use the "Double Click Shield" feature.'
         level: Advanced
         tool: Code
         topics: 'JSF, Ajax, jQuery'
@@ -20,17 +20,6 @@ labels:
     - seam-jsf-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '9830458'
-    ajs-parent-page-title: JSF and Ajax Tips and How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Double+Click+Shield
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Double+Click+Shield'
-    page_id: '16092264'
-    shortlink: aIz1
-    shortlink_source: 'https://doc.nuxeo.com/x/aIz1'
-    source_link: /display/NXDOC/Double+Click+Shield
 tree_item_index: 300
 history:
     -

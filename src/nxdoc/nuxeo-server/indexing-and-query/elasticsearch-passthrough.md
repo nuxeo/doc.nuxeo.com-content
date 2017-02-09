@@ -11,17 +11,6 @@ labels:
     - excerpt
     - link-update
 toc: true
-confluence:
-    ajs-parent-page-id: '4687860'
-    ajs-parent-page-title: Indexing and Query
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Elasticsearch+Passthrough
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Elasticsearch+Passthrough'
-    page_id: '26316773'
-    shortlink: 5Y_RAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/5Y_RAQ'
-    source_link: /display/NXDOC/Elasticsearch+Passthrough
 tree_item_index: 800
 history:
     -
@@ -52,9 +41,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-10-21 15:47'
-        message: >-
-            Fix request filters names and links in Contributing a Custom Index
-            View with a SearchRequestFilter
+        message: Fix request filters names and links in Contributing a Custom Index View with a SearchRequestFilter
         version: '9'
     -
         author: Solen Guitter

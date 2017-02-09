@@ -11,17 +11,6 @@ labels:
     - excerpt
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+for+Salesforce
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+for+Salesforce'
-    page_id: '26316748'
-    shortlink: zI_RAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/zI_RAQ'
-    source_link: /display/NXDOC/Nuxeo+for+Salesforce
 tree_item_index: 1800
 history:
     -
@@ -167,9 +156,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-11-30 09:43'
-        message: >-
-            NXDOC-658: Marketplace packages are now called Nuxeo Packages,
-            format
+        message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages, format'
         version: '12'
     -
         author: Vladimir Pasquier

@@ -10,22 +10,11 @@ labels:
     - shell-component
     - nxdoc-751
 toc: true
-confluence:
-    ajs-parent-page-id: '4687648'
-    ajs-parent-page-title: Nuxeo Shell Command Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Server+Commands
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Server+Commands'
-    page_id: '4687656'
-    shortlink: KIdH
-    shortlink_source: 'https://doc.nuxeo.com/x/KIdH'
-    source_link: /display/NXDOC/Nuxeo+Server+Commands
 tree_item_index: 300
 version_override:
-    'LTS 2015': 710/admindoc/nuxeo-server-commands
+    LTS 2015: 710/admindoc/nuxeo-server-commands
     '6.0': 60/admindoc/nuxeo-server-commands
-    '5.8': 58/admindoc/nuxeo-server-commands    
+    '5.8': 58/admindoc/nuxeo-server-commands
 history:
     -
         author: Solen Guitter

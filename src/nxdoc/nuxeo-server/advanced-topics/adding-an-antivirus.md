@@ -11,17 +11,6 @@ labels:
     - nxdoc-744
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '950333'
-    ajs-parent-page-title: Advanced topics
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Adding+an+Antivirus
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Adding+an+Antivirus'
-    page_id: '18448920'
-    shortlink: GIIZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/GIIZAQ'
-    source_link: /display/NXDOC/Adding+an+Antivirus
 tree_item_index: 200
 history:
     -

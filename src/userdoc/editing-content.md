@@ -16,17 +16,6 @@ labels:
     - excerpt
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Editing+Content
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Editing+Content'
-    page_id: '2392396'
-    shortlink: TIEk
-    shortlink_source: 'https://doc.nuxeo.com/x/TIEk'
-    source_link: /display/USERDOC/Editing+Content
 tree_item_index: 700
 history:
     -
@@ -122,9 +111,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-08-24 14:09'
-        message: >-
-            Add a section about Edit form customization, reorganize sections
-            order
+        message: 'Add a section about Edit form customization, reorganize sections order'
         version: '53'
     -
         author: Manon Lumeau
@@ -374,7 +361,7 @@ history:
     -
         author: Solen Guitter
         date: '2010-11-08 10:56'
-        message: added new "nature" metadata
+        message: 'added new "nature" metadata'
         version: '3'
     -
         author: Solen Guitter

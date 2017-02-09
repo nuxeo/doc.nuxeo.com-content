@@ -1,5 +1,5 @@
 ---
-title: How to Contribute a New "User Registration Request" Document Type
+title: 'How to Contribute a New "User Registration Request" Document Type'
 review:
     comment: ''
     date: '2016-12-06'
@@ -16,17 +16,6 @@ labels:
     - user-registration
     - user-registration-component
 toc: true
-confluence:
-    ajs-parent-page-id: '18450090'
-    ajs-parent-page-title: Nuxeo Platform User Registration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=22905593
-    canonical_source: viewpage.action?pageId=22905593
-    page_id: '22905593'
-    shortlink: _YJdAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/_YJdAQ'
-    source_link: /pages/viewpage.action?pageId=22905593
 history:
     -
         author: Solen Guitter

@@ -6,17 +6,6 @@ review:
     status: ok
 labels:
     - content-review-lts2016
-confluence:
-    ajs-parent-page-id: '3866685'
-    ajs-parent-page-title: Installation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Installation+Next+Steps
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Installation+Next+Steps'
-    page_id: '31687455'
-    shortlink: H4PjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/H4PjAQ'
-    source_link: /display/NXDOC/Installation+Next+Steps
 hidden: true
 history:
     -

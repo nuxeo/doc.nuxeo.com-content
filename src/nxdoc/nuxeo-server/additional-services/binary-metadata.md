@@ -11,17 +11,6 @@ labels:
     - binary-metadata-component
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '16089319'
-    ajs-parent-page-title: Additional Services
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Binary+Metadata
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Binary+Metadata'
-    page_id: '23364291'
-    shortlink: w4JkAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/w4JkAQ'
-    source_link: /display/NXDOC/Binary+Metadata
 tree_item_index: 900
 history:
     -

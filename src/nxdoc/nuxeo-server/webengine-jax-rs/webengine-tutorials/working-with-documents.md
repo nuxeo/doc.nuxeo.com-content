@@ -9,17 +9,6 @@ labels:
     - howto
     - webengine
     - webengine-component
-confluence:
-    ajs-parent-page-id: '3343141'
-    ajs-parent-page-title: WebEngine Tutorials
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Working+with+Documents
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Working+with+Documents'
-    page_id: '3343206'
-    shortlink: ZgMz
-    shortlink_source: 'https://doc.nuxeo.com/x/ZgMz'
-    source_link: /display/NXDOC/Working+with+Documents
 tree_item_index: 400
 history:
     -
