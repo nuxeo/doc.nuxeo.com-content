@@ -41,7 +41,7 @@ history:
 
 Company C has decided to be more rigorous on proposals sent by the sales team. A workflow has to be set up so that each proposal is reviewed by the head of operations, this one being able to decide of an additional juridical control.
 
-[Learn more &rarr;]({{page space='NXDOC' page='Simple Workflow+Example'}})
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='nxdoc' page='simple-workflow-example'}})
 {{/panel}}
 
 {{#> panel type='secondary' match_height='true'}}
@@ -49,7 +49,7 @@ Company C has decided to be more rigorous on proposals sent by the sales team. A
 
 The subworkflow functionality is the ability to call a workflow from another workflow (creating inception-like workflows), and to pass it variables along the way. The main workflow is suspended while the subworkflow runs, and resumes when the subworkflow ends.
 
-[Learn more &rarr;]({{page space='NXDOC' page='Sub Workflow+Example'}})
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='nxdoc' page='sub-workflow-example'}})
 {{/panel}}
 </div>
 
@@ -59,7 +59,7 @@ The subworkflow functionality is the ability to call a workflow from another wor
 
 The company OhMyDoc has decided to set up a validation workflow for its press releases, with due dates and automatic escalation to the next step of the workflow after a defined period.
 
-[Learn more &rarr;]({{page space='NXDOC' page='Workflow Escalation+Rules+Example'}})
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='nxdoc' page='workflow-escalation-rules-example'}})
 {{/panel}}
 
 </div>

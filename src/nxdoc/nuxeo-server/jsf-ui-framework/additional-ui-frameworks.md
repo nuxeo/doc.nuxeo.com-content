@@ -92,7 +92,7 @@ Nuxeo uses several UI frameworks beside the [JSF technology]({{page page='nuxeo-
 
 GWT is a web toolkit to build rich clients in Java programming language. The Java code is transcoded in JavaScript at build time so the build process generates a fully HTML+JavaScript application ready to be deployed on an HTTP server.
 
-[Learn more &rarr;]({{page space='NXDOC' page='GWT Integration'}})
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page space='NXDOC' page='GWT Integration'}})
 {{/panel}}
 </div>
 
@@ -102,7 +102,7 @@ GWT is a web toolkit to build rich clients in Java programming language. The Jav
 
 This section is intended for developers who wants to provide new Shell commands, namespaces or Shell Features.
 
-[Learn more &rarr;]({{page space='NXDOC' page='Extending The+Shell'}})
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page space='NXDOC' page='Extending The+Shell'}})
 {{/panel}}
 </div>
 

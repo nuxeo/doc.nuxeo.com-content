@@ -32,23 +32,26 @@ history:
         version: '1'
 
 ---
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 ### Nuxeo Drive
-
-</br>
-
 
 The Nuxeo Drive addon enables bidirectional synchronization of content between the local desktop and the Nuxeo content repository. It handles offline modification of files and deals with concurrent updates.
 
-<div align="right">[Discover >>]({{page page='nuxeo-drive'}})</div>
-{{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+[Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-drive'}})
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 ### Nuxeo Mobile
-
-</br>
-
 
 The Nuxeo mobile application lets you access content stored in Nuxeo Platform servers on your phone. It provides essential features such as searching, browsing and managing favorite documents.
 
-<div align="right">[Discover >>]({{page page='nuxeo-mobile'}})</div>
+[Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-mobile'}})
+{{/panel}}
+</div>
 
-{{/panel}}</div></div>
+</div>

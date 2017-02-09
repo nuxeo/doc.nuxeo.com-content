@@ -396,9 +396,9 @@ Numbers circled in orange specify available contexts. Have a look at the [availa
 
 Before giving you a list of examples to work with, it is important to understand that the variables you can use depend on two major conditions: the scripting language and the context you are in. We already mentioned which language to use in which Nuxeo Platform layer (refer to the [previous section](#what-expression-scripting-language-do-i-need-to-use)), so let's talk about the context within each layer.
 
-The user interface can send information to the core layer in order to execute operations, however, the opposite is not possible. &nbsp;Any operation done automatically by the platform without a user interaction first (eg&nbsp;: scheduled jobs) cannot take advantage of what you currently see on screen.&nbsp;<span style="font-size: 10.0pt;line-height: 13.0pt;">Let's say that you launch an operation manually, for example by clicking on a button. The information can be sent to the core layer. &nbsp;The information sent &nbsp;depends on the screen you are using. Even though the information from the UI is available to the core layer do not expect any information originating in the core to be available to the UI layer. For example: A workflow variable cannot be used outside of a workflow.</span>
+The user interface can send information to the core layer in order to execute operations, however, the opposite is not possible. Any operation done automatically by the platform without a user interaction first (eg: scheduled jobs) cannot take advantage of what you currently see on screen. Let's say that you launch an operation manually, for example by clicking on a button. The information can be sent to the core layer. The information sent depends on the screen you are using. Even though the information from the UI is available to the core layer do not expect any information originating in the core to be available to the UI layer. For example: A workflow variable cannot be used outside of a workflow.
 
-In order to determine more easily which of these variables will be usable in your context, you may ask yourself the following questions&nbsp;:
+In order to determine more easily which of these variables will be usable in your context, you may ask yourself the following questions:
 
 - Does a user need to be logged in to execute this operation?
 
@@ -410,7 +410,7 @@ In order to determine more easily which of these variables will be usable in you
     - No &rarr; Workflow variables can't be used.
     -  Yes &rarr; Workflow variables can be used.
 
-Please check the [availables variables depending on context](#available-variables-depending-on-context) section for&nbsp;more detailed information.
+Please check the [availables variables depending on context](#available-variables-depending-on-context) section for more detailed information.
 
 ## What are the Main Differences Between Expression/Scripting Languages?
 
@@ -609,12 +609,12 @@ In widgets, layout, content views and in XHTML templates, you can use the EL exp
         Ex: `#{currentDocument.dc.source}`
     -  the system properties : path, type (of the document), `currentLifeCycleState`, ... `currentDocument` is a "DocumentModel" class, see the [javadoc](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/DocumentModel.html) to check all you can access. One rule is simple: if it is a "getter" you can just type the name. For example: `getType()` --> `currentDocument.type` (first letter is lowercase)
 -  You can do some comparisons, when you need to return a boolean values.
-    &nbsp;
+
     Ex: `#{currentUser.isMemberOf('quality_managers') && (layoutValue.dc.nature=='procedure'||layoutValue.dc.nature=='decree')?'value1':'value2'}`
 -  You may need to use ".toString()" sometimes, depending on what object is returned.
     Ex: on the documentModel javadoc, you can see that "getPath()" method returns a Path object. So if you need the string of the path (for an NXQL query for instance) you need to use the _.toString() method._
 -  You also have access to some "functions" that were added by Nuxeo, you can see the list [on the Tag Library Documentation](http://community.nuxeo.com/api/nuxeo/latest/tlddoc/nxd/tld-summary.html) .
-    &nbsp;
+
     Ex: `#{nxd:hasPermission (currentDomain, 'Write')}` will return true only if the connected user has the edit permission on the current domain.
 -  The JSTL functions are available, for string manipulation for instance, see the [doc](http://docs.oracle.com/javaee/5/jstl/1.1/docs/tlddocs/fn/tld-summary.html).
 
