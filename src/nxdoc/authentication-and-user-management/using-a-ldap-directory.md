@@ -23,7 +23,7 @@ confluence:
     shortlink: eYGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/eYGyAQ'
     source_link: /display/NXDOC710/Using+a+LDAP+Directory
-tree_item_index: 200
+tree_item_index: 705
 history:
     -
         author: Damien Metzler
@@ -238,6 +238,13 @@ The wizard enables you to easily setup your LDAP configuration.
 </div>
 
 {{/callout}}
+
+
+## Default Users and Groups Configuration
+
+You can define on the same [contribution to UserManager](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.usermanager.UserService--userManager) which principal from the remote IdP will be the Administrator of the application. By default, it is the principal "Administrator". That way you can assign a "real" user.
+
+The same way, you can choose a group from your company's directory, instead of using "administrators", to determine all the users that will benefit from all the rights in the platform. Pay attention to the elements `defaultAdministratorId`, `administratorsGroup` and `defaultGroups`.
 
 ## Simple Configuration Example
 

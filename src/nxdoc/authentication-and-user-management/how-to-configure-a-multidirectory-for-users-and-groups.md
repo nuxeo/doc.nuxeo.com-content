@@ -29,7 +29,7 @@ confluence:
     shortlink: P4GyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/P4GyAQ'
     source_link: /display/NXDOC710/How+to+Configure+a+Multidirectory+for+Users+and+Groups
-tree_item_index: 400
+tree_item_index: 717
 history:
     -
         author: Solen Guitter

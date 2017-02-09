@@ -8,6 +8,7 @@ labels:
     - lts2015-ok
     - saml-component
 toc: true
+tree_item_index: 708
 confluence:
     ajs-parent-page-id: '28475782'
     ajs-parent-page-title: Marketplace Add-Ons
@@ -20,67 +21,67 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/koGyAQ'
     source_link: /display/NXDOC710/SAML+2.0+Authentication
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-30 14:59'
         message: 'ove how-to steps first, fix steps order, fix typos and forma'
         version: '13'
-    - 
+    -
         author: Damien Metzler
         date: '2016-03-01 08:42'
         message: ''
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-15 12:54'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-15 12:47'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-15 12:43'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-15 11:59'
         message: ''
         version: '8'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-06-19 13:07'
         message: ''
         version: '7'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-06-19 10:08'
         message: ''
         version: '6'
-    - 
+    -
         author: Nelson Silva
         date: '2015-05-18 11:44'
         message: ''
         version: '5'
-    - 
+    -
         author: Nelson Silva
         date: '2015-05-18 08:33'
         message: ''
         version: '4'
-    - 
+    -
         author: Nelson Silva
         date: '2015-05-15 15:08'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-22 09:13'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-01-21 14:08'
         message: ''
@@ -98,7 +99,7 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 3.  Contribute ([in a Studio project]({{page page='how-to-contribute-to-an-extension'}}), or in the nxserver/config folder) a new authentication plugin that makes use of the `org.nuxeo.ecm.platform.auth.saml.SAMLAuthenticationProvider`, with a reference to the XML Metadata for specific configuration. Ex:
 
     ```xml
-    <component name="org.nuxeo.ecm.platform.login.saml.auth"> 
+    <component name="org.nuxeo.ecm.platform.login.saml.auth">
     <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
      <require>org.nuxeo.ecm.platform.ui.web.auth.defaultConfig</require>
     <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
@@ -113,7 +114,7 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
                 </parameters>
             </authenticationPlugin>
         </extension>
-    </component> 
+    </component>
     ```
 
     You can find more example here: [https://github.com/nuxeo/nuxeo-platform-login/tree/release-7.10/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo-platform-login/tree/release-7.10/nuxeo-platform-login-saml2/sample).

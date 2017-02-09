@@ -9,7 +9,6 @@ labels:
     - collection
     - lts2015-ok
     - collection-component
-tabbed_page: true
 toc: true
 confluence:
     ajs-parent-page-id: '28475785'
@@ -153,17 +152,17 @@ history:
         version: '1'
 
 ---
-# Functional Overview
+## Functional Overview
 
 {{{multiexcerpt 'functional-overview' page='USERDOC:Collections'}}}
 
-# Installation & Configuration
+## Installation & Configuration
 
 The collection module has no specific installation step as it is already included in the default Nuxeo Platform distribution.
 
-# Customization
+## Customization
 
-## {{> anchor 'customization-tab'}}How to Implement a New Type of Collection
+### {{> anchor 'customization-tab'}}How to Implement a New Type of Collection
 
 If you'd like to <span style="color: rgb(51,51,51);">implement a new collection (for instance to have new metadata)</span> you can simply add the `Collection` facet to your specific document type. You'll therefore be able to use it as a regular collection.
 
@@ -189,7 +188,7 @@ If you'd like to <span style="color: rgb(51,51,51);">implement a new collection 
 
 &nbsp;
 
-## NotCollectionMember Facet
+### NotCollectionMember Facet
 
 All documents can be added to a collection except:
 
@@ -198,7 +197,7 @@ All documents can be added to a collection except:
 
 By default, documents of type `Collection`, `WorkspaceRoot`, `TemplateRoot`, `SectionRoot`, `Domain` and `Root` have the facet `NotCollectionMember`. Please see [collection-core-types-contrib.xml](https://github.com/nuxeo/nuxeo-features/blob/release-7.10/nuxeo-platform-collections/nuxeo-platform-collections-core/src/main/resources/OSGI-INF/collection-core-types-contrib.xml) for more details.
 
-## Plugging Business Rules to Collection Specific Events
+### Plugging Business Rules to Collection Specific Events
 
 Several [events]({{page page='events-and-listeners'}}) related to collections are available:
 
@@ -214,7 +213,7 @@ The collection reference is available in the event context map. For example, wit
     value: "@{Event.context.getProperty(\"collectionRef\").reference()}"
 ```
 
-## Synchronizing a Collection with Nuxeo Drive
+### Synchronizing a Collection with Nuxeo Drive
 
 To do so you need to add the following XML contribution with [ either Nuxeo Studio or a custom bundle]({{page page='how-to-contribute-to-an-extension'}}):
 
@@ -249,7 +248,7 @@ Yet you can always unsynchronize the collection from the Nuxeo Drive tab in the 
 
 &nbsp;
 
-# Core Implementation
+## Core Implementation
 
 A collection holds the list of references of the documents it contains. Conversely, a document holds the list of references of the collections it belongs to.
 
@@ -261,7 +260,6 @@ For instance, when deleting a collection, an asynchronous work will update the d
 
 Finally, when copying a collection, an asynchronous work will also duplicate its content.
 
-{{> end_of_tabs }}
 
 &nbsp;
 
@@ -269,9 +267,9 @@ Finally, when copying a collection, an asynchronous work will also duplicate its
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
 
-*   [Collections user documentation]({{page space='userdoc710' page='collections'}})
-*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
-*   [Nuxeo Drive user documentation]({{page space='userdoc710' page='nuxeo-drive'}})
-*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+- [Collections user documentation]({{page space='userdoc710' page='collections'}})
+- [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+- [Nuxeo Drive user documentation]({{page space='userdoc710' page='nuxeo-drive'}})
+- [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
 
 {{/panel}}</div><div class="column medium-6"></div></div>

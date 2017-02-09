@@ -30,7 +30,7 @@ confluence:
     shortlink: w4GyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/w4GyAQ'
     source_link: /display/NXDOC710/How+to+Add+Custom+LDAP+Fields+to+the+UI
-tree_item_index: 300
+tree_item_index: 715
 history:
     -
         author: Solen Guitter

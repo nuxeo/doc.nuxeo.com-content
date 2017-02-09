@@ -19,38 +19,39 @@ confluence:
     shortlink: GoGyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/GoGyAQ'
     source_link: /display/NXDOC710/Nuxeo+DuoWeb+Two-Factor+Authentication
+tree_item_index: 714
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-22 17:25'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 14:01'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 13:36'
         message: ''
         version: '5'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-10-27 12:07'
         message: ''
         version: '4'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-10-27 12:06'
         message: ''
         version: '3'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-10-27 12:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-10-27 11:57'
         message: ''

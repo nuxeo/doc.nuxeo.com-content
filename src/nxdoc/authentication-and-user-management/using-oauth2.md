@@ -9,6 +9,7 @@ labels:
     - oauth-component
     - oauth
 toc: true
+tree_item_index: 709
 confluence:
     ajs-parent-page-id: '28475727'
     ajs-parent-page-title: Authentication and User Management
@@ -20,7 +21,6 @@ confluence:
     shortlink: e4CyAQ
     shortlink_source: 'https://doc.nuxeo.com/x/e4CyAQ'
     source_link: /display/NXDOC710/Using+OAuth2
-tree_item_index: 100
 history:
     -
         author: Manon Lumeau
