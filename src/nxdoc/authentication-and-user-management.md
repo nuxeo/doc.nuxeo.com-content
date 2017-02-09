@@ -171,17 +171,17 @@ By default on the Nuxeo Platform, user gets authenticated by filling username / 
 
 The login page is not the only way to authenticate a user against the Nuxeo Platform, some other protocols can be used, sometimes requiring to install an additional module (See Installation and Configuration tab)
 
-*   basic authentication (built-in)
+*   [basic authentication]({{page page='using-basic-http-authentication'}}) (built-in)
 *   token (Nuxeo Platform proprietary) (built-in)
-*   oAuth (built-in)
-*   SAML (addon)
-*   2 Steps (with SMS for instance) (Addon)
+*   [OAuth2]({{page version='710' space='nxdoc' page='using-oauth2'}}) (built-in)
+*   [SAML]({{page version='710' space='nxdoc' page='saml-20-authentication'}}) (addon)
+*   [2 Steps]({{page version='710' space='nxdoc' page='nuxeo-duoweb-two-factor-authentication'}}) (with SMS for instance) (Addon)
 *   trusted (for instance requests coming from that particular IP adress do not need to validate authentication) (built-in)
-*   Open ID (addon)
-*   Kerberos (built-in)
-*   CAS (built-in)
-*   NTLM (built-in)
-*   redirecting to a remote identity management solution then having the user fall back authenticated to the Nuxeo Platform (SSO servers, Open Id, Portals, ...) (built-in or plugin, depending on the case)
+*   [Open ID]({{page version='710' space='nxdoc' page='using-openid-oauth2-in-login-screen'}}) (addon)
+*   [Kerberos]({{page version='710' space='nxdoc' page='kerberos-authentication'}}) (built-in)
+*   [CAS / CAS2]({{page version='710' space='nxdoc' page='using-cas2-authentication'}}) (built-in)
+*   [NTLM]({{page page='ntlm-and-ie-challenge-response'}}) (built-in)
+*   redirecting to a [remote identity management solution]({{page version='710' space='nxdoc' page='authentication-and-user-management'}}#compatible-idm-solutions) then having the user fall back authenticated to the Nuxeo Platform (SSO servers, Open Id, Portals, ...) (built-in or plugin, depending on the case)
 
 Thanks to the plugability of the authentication layer (see implementation section), it is easy to write a custom authentication protocol when necessary.
 
@@ -189,19 +189,21 @@ Thanks to the plugability of the authentication layer (see implementation sectio
 
 Default configuration checks identity against a Java implementation inside the Nuxeo Platform. By configuration and addition of some modules, and following the above list of supported protocols,the Nuxeo Platform can be integrated with various identity providers:
 
-*   LDAP server
-*   Active Directory server
-*   Open ID compatible web platforms: Google, Twitter, Facebook, GitHub, ...
-*   SAML compatible identitiy Management solutions, on premise or SAAS, such as One Login, ClearTrust, ..
-*   Kerberos compatible identitity providers
-*   Shibboleth Servers (Federated identity management)
-*   SSO Servers (ex: CAS Server, Site Minder)
+*   [LDAP server]({{page version='710' space='nxdoc' page='using-a-ldap-directory'}})
+*   [Active Directory server]({{page version='710' space='nxdoc' page='using-a-ldap-directory'}})
+*   [Open ID compatible web platforms]({{page version='710' space='nxdoc' page='using-openid-oauth2-in-login-screen'}}): Google, Twitter, Facebook, GitHub, ...
+*   [SAML compatible identitiy Management solutions]({{page version='710' space='nxdoc' page='saml-20-authentication'}}), on premise or SAAS, such as One Login, ClearTrust, ..
+*   [Kerberos compatible identitity providers]({{page version='710' space='nxdoc' page='kerberos-authentication'}})
+*   [Shibboleth Servers]({{page version='710' space='nxdoc' page='shibboleth-authentication'}}) (Federated identity management)
+*   [SSO Servers]({{page version='710' space='nxdoc' page='using-sso-portals'}}) (ex: CAS Server, Site Minder)
 
 ### Unauthenticated Access
 
 #### Anonymous user
 
 A configuration allows to have the user automatically logged in as a user called "anonymous", for which some specific permissions have been set. The name of that user is configurable, and allows to simulate an "unauthenticated" access to the Nuxeo Platform. The users having the Manage permission on a repository can reference that anonymous user as any other user and declare some folders and documents accessible to everybody.
+
+See the page [Anonymous Authentication]({{page version='710' space='nxdoc' page='using-anonymous-authentication'}}).
 
 #### Unauthenticated URLs
 
@@ -230,9 +232,8 @@ When users are dealt through directory abstraction (so 90% of the cases), the Nu
 *   User profile management by user itself
 *   Password management by user itself
 *   User and groups Search (for filling a metadata, assigning an ACL, selecting a specific user in a search filter,...)
-*   User Invitation: A Nuxeo addon adds to default Nuxeo Platform UI and services for inviting by email a future user that would not have yet an account in the platform
-
-{{{multiexcerpt 'functional-overview' page='USERDOC:Managing Users and Groups'}}}
+*   User Invitation: A Nuxeo addon adds to default Nuxeo Platform UI and services for inviting by email a future user that would not have yet an account in the platform.
+For more information, please see the documentation [Managing users and groups]({{page version='710' space='userdoc' page='managing-users-and-groups'}}).
 
 #### Virtual Users
 
@@ -242,14 +243,13 @@ It is also possible to declare a set of "virtual" users, that are defined in the
 
 A set of properties are stored by default for any user in the Nuxeo Platform:
 
-*   username
-*   first name
-*   last name
-*   company
-*   email.
+- username
+- first name
+- last name
+- company
+- email.
 
-Those properties can come from the IdM the Nuxeo Platform is integrated to. To extend the list of available fields for a user, see the customization section.
-
+Those properties can come from the IdM the Nuxeo Platform is integrated to. To extend the list of available fields for a user, see the page [How to add New Fields to The User Profile or Group Profile]({{page page='how-to-add-new-fields-to-the-user-profile-or-group-profile'}}).
 
 ## Authentication Schemes Use
 
@@ -280,10 +280,6 @@ The Nuxeo Platform will use the plugins in the order they are chained. First att
 
 Below we list all the available authentication plugins and instructions for installation or links to their documentation.
 
-&nbsp;
-
-{{! /multiexcerpt}}
-
 ## Customization
 
 ### Customizing the Login Page
@@ -296,15 +292,19 @@ You can build a custom directory that will wrap your webservice.
 
 You can use [this sample](https://github.com/tiry/nuxeo-directory-connector) as a starting point.
 
-&nbsp;
-
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation '}}
 
 - [Collections user documentation]({{page space='userdoc710' page='collections'}})
 - [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
 - [Nuxeo Drive user documentation]({{page space='userdoc710' page='nuxeo-drive'}})
 - [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
 
-{{/panel}}</div><div class="column medium-6"></div></div>
+{{/panel}}
+</div>
+<div class="column medium-6">
+</div>
+</div>
