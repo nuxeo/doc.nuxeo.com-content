@@ -550,10 +550,10 @@ The Nuxeo Platform being flexible, you can use several add-ons together to achie
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-*   [Understanding Bundles Deployment]({{page page='understanding-bundles-deployment'}})
-*   [Platform as a Service]({{page page='platform-as-a-service'}})
-*   [Nuxeo and Redis]({{page page='nuxeo-and-redis'}})
-*   [Nuxeo Clustering Configuration]({{page space='admindoc710' page='nuxeo-clustering-configuration'}})
+- [Understanding Bundles Deployment]({{page page='understanding-bundles-deployment'}})
+- [Platform as a Service]({{page page='platform-as-a-service'}})
+- [Nuxeo and Redis]({{page page='nuxeo-and-redis'}})
+- [Nuxeo Clustering Configuration]({{page space='admindoc710' page='nuxeo-clustering-configuration'}})
 
 {{/panel}}</div><div class="column medium-6">
 
