@@ -296,7 +296,7 @@ For example, a validation failure can occurs if a command is trying to upgrade a
 
 When validation failures occurs the installation is aborted - so nothing should be rollbacked since nothing was modified on the target platform. Of course even is the validation is successful the install process may fail. In that case an automatic rollback of all modification is done. Lets see now how the rollback is managed.
 
-## <span style="color: rgb(0,0,0);">**Command Rollback**</span>
+## Command Rollback
 
 Each command executed during an install is returning an opposite command if successful. The opposite command is designed to undo any modification done by the originating command. The originating command is&nbsp;responsible&nbsp;to return an exact opposite command. All built-ins commands are tested and are safe in generating the right rollback is needed to undo the command modifications. When you are contributing new commands you must ensure the rollback is done right.
 
@@ -349,7 +349,7 @@ Also, note that in the case that the `copy` command didn't overwrite any file th
 
 The `copy` command is more complex but there are commands that are a lot more simpler to implement. For example the opposite of the `reload-core` is itself. There are cases when a command doesn't have an opposite - in that case you should return `null` as the opposite command.
 
-## <span style="color: rgb(0,0,0);">**Implementing a Command**</span>
+## Implementing a Command
 
 The built-ins commands provided by the Nuxeo Platform may not cover all of the install use cases. In that case you must implement your own command.
 
@@ -439,7 +439,7 @@ To deploy your command you should put your class into the package (the command c
 
 ```
 
-## <span style="color: rgb(0,0,0);">**Built-in Commands**</span>
+## Built-in Commands
 
 This is a list of all commands provided by the Nuxeo Platform:
 
