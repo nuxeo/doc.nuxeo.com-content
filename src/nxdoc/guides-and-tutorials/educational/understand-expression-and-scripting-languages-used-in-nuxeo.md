@@ -382,10 +382,10 @@ Numbers circled in orange specify available contexts. Have a look at the [availa
 
 ## {{> anchor 'what-expression-scripting-language-do-i-need-to-use'}}What Expression/Scripting Language do I Need to Use?
 
-*   Operation chains use the [MVEL scripting language](https://github.com/mvel/mvel).
-*   Widget fields, the Enablement tabs and the workflow's Availability tab (aka filters) use the EL expression language.
-*   Email templates use the [Freemarker templating language](http://freemarker.org/).
-*   Document templates can either use the Freemarker or MVEL scripting languages depending on the rendering engine chosen.
+- Operation chains use the [MVEL scripting language](https://github.com/mvel/mvel).
+- Widget fields, the Enablement tabs and the workflow's Availability tab (aka filters) use the EL expression language.
+- Email templates use the [Freemarker templating language](http://freemarker.org/).
+- Document templates can either use the Freemarker or MVEL scripting languages depending on the rendering engine chosen.
 
 ## What Variables Can I Use?
 
@@ -395,22 +395,24 @@ The user interface can send information to the core layer in order to execute op
 
 In order to determine more easily which of these variables will be usable in your context, you may ask yourself the following questions&nbsp;:
 
-*   Does a user need to be logged in to execute this operation?
+- Does a user need to be logged in to execute this operation?
 
-    *   No &rarr; Only system variables, like today's date, will be available.
-    *   Yes &rarr; Which screen will the user be on when executing this operation?
+    - No &rarr; Only system variables, like today's date, will be available.
+    - Yes &rarr; Which screen will the user be on when executing this operation?
 
-        *   Depending on the answer, context variables may vary.
-*   Is a workflow launched on the document?
+        - Depending on the answer, context variables may vary.
+- Is a workflow launched on the document?
 
-    *   No &rarr; Workflow variables can't be used.
-    *   Yes &rarr; Workflow variables can be used.
+    - No &rarr; Workflow variables can't be used.
+    - Yes &rarr; Workflow variables can be used.
 
 Please check the [availables variables depending on context](#available-variables-depending-on-context) section for&nbsp;more detailed information.
 
 ## What are the Main Differences Between Expression/Scripting Languages?
 
-<div class="table-scroll"><table class="hover"><colgroup><col> <col> <col> <col></colgroup> <tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">EL</th><th colspan="1">MVEL</th><th colspan="1">FreeMarker</th></tr><tr><td colspan="1">Concept</td><td colspan="1">Advanced scripting language.</td><td colspan="1">Advanced scripting and templating language.</td><td colspan="1">Templating language. Used for email or document templates.</td></tr><tr><td colspan="1">Expression syntax</td><td colspan="1">`#{myExpression.property}`</td><td colspan="1">`@{myExpression.property}`</td><td colspan="1">`${myExpression.property}`</td></tr><tr><td colspan="1">Variables available</td><td colspan="1">Has access to the SEAM (user interface) components, providing many variables.</td><td colspan="1">Can use the variables provided by the UI layer.</td><td colspan="1">Depends on context: send mail operation, doc rendering operation or workflow email notification.</td></tr><tr><td colspan="1">Current document variable</td><td colspan="1">`#{**currentDocument**.property}`</td><td colspan="1">`@{**Document**.property}`</td><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<colgroup><col> <col> <col> <col></colgroup> <tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">EL</th><th colspan="1">MVEL</th><th colspan="1">FreeMarker</th></tr><tr><td colspan="1">Concept</td><td colspan="1">Advanced scripting language.</td><td colspan="1">Advanced scripting and templating language.</td><td colspan="1">Templating language. Used for email or document templates.</td></tr><tr><td colspan="1">Expression syntax</td><td colspan="1">`#{myExpression.property}`</td><td colspan="1">`@{myExpression.property}`</td><td colspan="1">`${myExpression.property}`</td></tr><tr><td colspan="1">Variables available</td><td colspan="1">Has access to the SEAM (user interface) components, providing many variables.</td><td colspan="1">Can use the variables provided by the UI layer.</td><td colspan="1">Depends on context: send mail operation, doc rendering operation or workflow email notification.</td></tr><tr><td colspan="1">Current document variable</td><td colspan="1">`#{**currentDocument**.property}`</td><td colspan="1">`@{**Document**.property}`</td><td colspan="1">
 
 Send mail / doc rendering:`
 ${**Document**.property}`
@@ -418,12 +420,16 @@ ${**Document**.property}`
 Workflow email notification:`
 ${**workflowDocuments[0]**.property}`
 
-</td></tr></tbody></table></div>{{#> callout type='note' heading='Variable name and context'}}
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
+{{#> callout type='note' heading='Variable name and context'}}
 The same object may be given a different variable name depending on language or context, as shown in bold in the previous table.
 
 Be careful if you intend to copy / paste an expression taken from a different context.
-
 {{/callout}}
 
 ## How Can I Use SEAM Components in EL Expression Language?
@@ -446,7 +452,7 @@ If your EL expression is meant to be evaluated into a UI screen a simple way to 
 
 ![]({{file name='testEL.xhtml - UsersbchauvinDocuments 2013-06-13 14-52-21.png'}} ?w=300,h=40,border=true)
 
-1.  Upload your file in Nuxeo Studio into the widget templates, using the **Resources**menu.
+1.  Upload your file in Nuxeo Studio into the widget templates, using the **Resources** menu.
 
     ![]({{file name='Nuxeo Studio 2013-06-13 14-57-29.png'}} ?w=450,border=true)
 
@@ -489,18 +495,18 @@ Please have a look at this page: [Use of MVEL in Automation Chains]({{page page=
 Event handlers call automation chains, therefore you should refer to the [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}}) documentation.
 Event handlers also give access to the `Event` object, which contains interesting properties:
 
-*   `Event.context.getProperty('**property**')` - contextual properties. You can replace "property" with:
+- `Event.context.getProperty('**property**')` - contextual properties. You can replace "property" with:
 
-    *   `transition` - the name of the transition followed by the document when a lifecyle change happens.
+    - `transition` - the name of the transition followed by the document when a lifecyle change happens.
         For example, `Event.context.getProperty('transition') == 'undelete'` will allow you to execute actions in case a document is restored from trash.
-    *   `category` - the event's category
-    *   `sessionId` - the session id
-    *   `repositoryName` - the repository name
-    *   `comment` - the comment sent by the event
-    *   `documentLifeCycle` - the document's current lifecycle state
-    *   `parentPath` - The path of the parent (Empty Document Created.
-    *   `destinationRef` - the path of the parent
-    *   `destinationName` - the name of the parent{{#> callout type='note' heading='Availability of These Properties'}}
+    - `category` - the event's category
+    - `sessionId` - the session id
+    - `repositoryName` - the repository name
+    - `comment` - the comment sent by the event
+    - `documentLifeCycle` - the document's current lifecycle state
+    - `parentPath` - The path of the parent (Empty Document Created.
+    - `destinationRef` - the path of the parent
+    - `destinationName` - the name of the parent{{#> callout type='note' heading='Availability of These Properties'}}
 
     Some of these properties are available only for some events.
 
@@ -511,7 +517,7 @@ Event handlers also give access to the `Event` object, which contains interestin
     A list of common events can be found on the [Common Events page]({{page page='common-events'}}).
 
     {{/callout}}
-*   `Event.getName()` - returns the event name
+- `Event.getName()` - returns the event name
 
 For example, if you have a document which can be undeleted, you could update a field in the In the MVEL expression of an Automation Chain called for the "Lifecycle transition event" event:
 
@@ -523,11 +529,11 @@ xpath: [`mydoc:was_undeleted`](http://mydocwas_undeleted)
 
 Please note that:
 
-*   In Nuxeo Studio, the event handlers "custom EL expression" field uses MVEL as well. However, you should not format your variables using brackets but directly state them in the field.
+- In Nuxeo Studio, the event handlers "custom EL expression" field uses MVEL as well. However, you should not format your variables using brackets but directly state them in the field.
 
-    *   `Document['[dc:title](http://dctitle)'] == "myTitle"` will work.
-    *   `@{Document['[dc:title](http://dctitle)'] == "myTitle"}` will **not** work and generate an error.
-*   A bug currently affects Nuxeo Studio in that regard: [NXS-955](https://jira.nuxeo.com/browse/NXS-955)
+    - `Document['[dc:title](http://dctitle)'] == "myTitle"` will work.
+    - `@{Document['[dc:title](http://dctitle)'] == "myTitle"}` will **not** work and generate an error.
+- A bug currently affects Nuxeo Studio in that regard: [NXS-955](https://jira.nuxeo.com/browse/NXS-955)
 
 ### [![]({{file name='ELDependingOnComponent-6.png'}})](#schema-which-el) Filters
 
@@ -537,34 +543,34 @@ Please note that:
 
 In widgets, layout, content views and in XHTML templates, you can use the EL expression language. You have access to all Seam components (see upper how to access them) and should refer to [explorer.nuxeo.org](http://explorer.nuxeo.org) to get an exhaustive list depending on your platform version. Here are a few interesting possibilities you could use to get started:
 
-*   Taken from the `NavigationContextBean`Seam component:
-    *   `**#{changeableDocument}**` - the document on screen when showing the creation form.
-    *   `**#{currentContentRoot}**` - the current content root, for instance could be the WorkspaceRoot or the SectionsRoot.
-    *   `**#{currentDocument}**` - the current document.
-    *   `**#{currentDomain}**` - the document's parent domain.
-    *   `**#{currentSuperSpace}**` - the document's closest parent having the _"SuperSpace"_ facet.
-    *   `**#{currentWorkspace}**` - the document's parent workspace.
-    *   `**#{documentManager}**` - the [CoreSession](http://community.nuxeo.com/api/nuxeo/5.7/javadoc/org/nuxeo/ecm/core/api/CoreSession.html) object (see example below)
-*   Some from the native SEAM context:
-    *   `#{currentUser}`
-    *   `#{currentDate}`
-*   When you are on a document, you can access various information:
-    *   the metadata using the following pattern : _myDocument.schema_prefix.property_name_
+- Taken from the `NavigationContextBean`Seam component:
+    - `**#{changeableDocument}**` - the document on screen when showing the creation form.
+    - `**#{currentContentRoot}**` - the current content root, for instance could be the WorkspaceRoot or the SectionsRoot.
+    - `**#{currentDocument}**` - the current document.
+    - `**#{currentDomain}**` - the document's parent domain.
+    - `**#{currentSuperSpace}**` - the document's closest parent having the _"SuperSpace"_ facet.
+    - `**#{currentWorkspace}**` - the document's parent workspace.
+    - `**#{documentManager}**` - the [CoreSession](http://community.nuxeo.com/api/nuxeo/5.7/javadoc/org/nuxeo/ecm/core/api/CoreSession.html) object (see example below)
+- Some from the native SEAM context:
+    - `#{currentUser}`
+    - `#{currentDate}`
+- When you are on a document, you can access various information:
+    - the metadata using the following pattern : _myDocument.schema_prefix.property_name_
         Ex: `#{currentDocument.dc.source}`
-    *   the system properties : path, type (of the document), `currentLifeCycleState`, ... `currentDocument` is a "DocumentModel" class, see the [javadoc](http://community.nuxeo.com/api/nuxeo/5.7/javadoc/org/nuxeo/ecm/core/api/DocumentModel.html) to check all you can access. One rule is simple: if it is a "getter" you can just type the name. For example: `getType()` --> `currentDocument.type` (first letter is lowercase)
-*   You can do some comparisons, when you need to return a boolean values.
+    - the system properties : path, type (of the document), `currentLifeCycleState`, ... `currentDocument` is a "DocumentModel" class, see the [javadoc](http://community.nuxeo.com/api/nuxeo/5.7/javadoc/org/nuxeo/ecm/core/api/DocumentModel.html) to check all you can access. One rule is simple: if it is a "getter" you can just type the name. For example: `getType()` --> `currentDocument.type` (first letter is lowercase)
+- You can do some comparisons, when you need to return a boolean values.
     Ex: `#{currentUser.isMemberOf('quality_managers') && (layoutValue.dc.nature=='procedure'||layoutValue.dc.nature=='decree')?'value1':'value2'}`
-*   You may need to use ".toString()" sometimes, depending on what object is returned.
+- You may need to use ".toString()" sometimes, depending on what object is returned.
     Ex: on the documentModel javadoc, you can see that "getPath()" method returns a Path object. So if you need the string of the path (for an NXQL query for instance) you need to use the _.toString() method._
-*   You also have access to some "functions" that were added by Nuxeo, you can see the list [on the Tag Library Documentation](http://community.nuxeo.com/api/nuxeo/5.7/tlddoc/nxd/tld-summary.html) .
+- You also have access to some "functions" that were added by Nuxeo, you can see the list [on the Tag Library Documentation](http://community.nuxeo.com/api/nuxeo/5.7/tlddoc/nxd/tld-summary.html) .
     ex: `#{[nxd:hasPermission](http://nxdhasPermission)(` `currentDomain, 'Write')}` will return true only if the connected user has the edit&nbsp;permission on the current domain.
-*   The JSTL functions are available, for string manipulation for instance, see the [doc](http://docs.oracle.com/javaee/5/jstl/1.1/docs/tlddocs/fn/tld-summary.html).
+- The JSTL functions are available, for string manipulation for instance, see the [doc](http://docs.oracle.com/javaee/5/jstl/1.1/docs/tlddocs/fn/tld-summary.html).
 
-*   Taken from the `ClipboardActionsBean`Seam component:
-    *   **`{#isCurrentWorkListEmpty()}`** - checks if the current worklist is empty.
-*   Using the **`documentManager`** object can be useful in some case. For example, in a content view of a folder when you want to display a list of documents that are in its parent:
-    *   The NXQL filter in this example uses the `STARTSWITH` operator, with the `path` property: `. . . AND [ecm:path](http://ecmpath) STARTSWITH ?`
-    *   The parameter will the be: `#{documentManager.getParentDocument(currentDocument.parentRef).path}`
+- Taken from the `ClipboardActionsBean`Seam component:
+    - **`{#isCurrentWorkListEmpty()}`** - checks if the current worklist is empty.
+- Using the **`documentManager`** object can be useful in some case. For example, in a content view of a folder when you want to display a list of documents that are in its parent:
+    - The NXQL filter in this example uses the `STARTSWITH` operator, with the `path` property: `. . . AND [ecm:path](http://ecmpath) STARTSWITH ?`
+    - The parameter will the be: `#{documentManager.getParentDocument(currentDocument.parentRef).path}`
 
 ## Tips and Tricks
 
@@ -594,11 +600,11 @@ To use a date field taken from a schema in your template, you need to cast it as
 
 EL expressions can be used to evaluate conditions. A few examples:
 
-*   Checking that the current document type is something specific (usually used in filters):
+- Checking that the current document type is something specific (usually used in filters):
     `#{currentDocument.type == 'MySpecificDoctype'}`
-*   Showing a different pattern based on a boolean condition (true or false):
+- Showing a different pattern based on a boolean condition (true or false):
     `#{currentDocument.type == 'MySpecificDoctype' ? "Yes it is" : "No it isn't"}`
-*   Checking that the worklist is not empty:
+- Checking that the worklist is not empty:
     `#{documentsListsManager.isWorkingListEmpty("CURRENT_SELECTION") == false}`
 
 </td></tr></tbody></table></div>
@@ -607,16 +613,16 @@ EL expressions can be used to evaluate conditions. A few examples:
 
 You may find more information in these related pages :
 
-*   MVEL:
+- MVEL:
 
-    *   [Using MVEL in your automation chains]({{page page='use-of-mvel-in-automation-chains'}})
-*   EL:
+    - [Using MVEL in your automation chains]({{page page='use-of-mvel-in-automation-chains'}})
+- EL:
 
-    *   [Field Binding and Expressions]({{page page='field-binding-and-expressions'}})
-    *   [How to Control the Display Mode of a Widget]({{page page='how-to-control-the-display-mode-of-a-widget'}})
-*   FreeMarker:
+    - [Field Binding and Expressions]({{page page='field-binding-and-expressions'}})
+    - [How to Control the Display Mode of a Widget]({{page page='how-to-control-the-display-mode-of-a-widget'}})
+- FreeMarker:
 
-    *   [FreeMarker manual](http://freemarker.sourceforge.net/docs/)
+    - [FreeMarker manual](http://freemarker.sourceforge.net/docs/)
 
 &nbsp;
 
@@ -624,14 +630,19 @@ You may find more information in these related pages :
 
 &nbsp;
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in Developer Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related topics in Developer Documentation'}}
 
-*   [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}})
-*   [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
-*   [Field Binding and Expressions]({{page page='field-binding-and-expressions'}})
+- [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}})
+- [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
+- [Field Binding and Expressions]({{page page='field-binding-and-expressions'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
+<div class="column medium-6">
 
 &nbsp;
 
-</div></div>
+</div>
+</div>
