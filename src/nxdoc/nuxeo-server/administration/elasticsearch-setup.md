@@ -2,7 +2,7 @@
 title: Elasticsearch Setup
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-02-09'
     status: ok
 labels:
     - lts2016-ok
@@ -560,6 +560,22 @@ Where:
 *   `seqgen.elasticsearch.indexName`&nbsp;is the name of the Elasticsearch index for the uid sequencer, extensively used for audit logs.
 
 You can find all the available options in the&nbsp;[nuxeo.defaults](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/nuxeo.defaults).
+
+#### Configuring access to the cluster through Elasticsearch Shield plugin
+
+With [Shield plugin for Elasticsearch](https://www.elastic.co/guide/en/shield/current/introduction.html), it is possible to configure authentication to access the cluster, and then prevent unauthorized access to it.
+
+The configuration is done by editing the&nbsp; `nuxeo.conf` &nbsp;file and set the following values:
+
+```
+elasticsearch.shield.enabled=true
+elasticsearch.shield.username=nuxeo
+elasticsearch.shield.password=nuxeo
+```
+To inform the Nuxeo Platform that authentication is needed on the cluster, the `elasticsearch.shield.enabled` property has to be set to `true` (authentication is disabled by default).
+
+The Nuxeo Platform has to be associated to a user who is authorized to access the Elasticsearch cluster.
+The credentials are provided with the `elasticsearch.shield.username` and `elasticsearch.shield.password` properties. 
 
 ## Disabling Elasticsearch
 
