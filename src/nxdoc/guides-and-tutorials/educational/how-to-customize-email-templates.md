@@ -165,12 +165,12 @@ Default templates for mail notifications can be overridden. Just follow those st
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   How to setup a test SMTP server
-*   [One step validation flow based on lifecycle only]({{page page='one-step-validation-flow-based-on-lifecycle-only'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to setup a test SMTP server]({{page page='how-to-setup-a-test-smtp-server'}})
+- [One step validation flow based on lifecycle only]({{page page='one-step-validation-flow-based-on-lifecycle-only'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [Available Variables in Email Templates]({{page page='available-variables-in-email-templates'}})
+- [Available Variables in Email Templates]({{page page='available-variables-in-email-templates'}})
 
 {{/panel}}</div></div>
