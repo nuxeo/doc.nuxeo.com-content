@@ -172,10 +172,10 @@ Variables that can be used when a notification is set up from a workflow node's 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
-*   [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
-*   [How to Customize Email Templates]({{page page='how-to-customize-email-templates'}})
-*   [Alerts]({{page space='userdoc710' page='collaborative-features#alerts'}})
+- [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
+- [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
+- [How to Customize Email Templates]({{page page='how-to-customize-email-templates'}})
+- [Alerts]({{page space='userdoc710' page='collaborative-features#alerts'}})
 
 {{/panel}}</div><div class="column medium-6">
 
