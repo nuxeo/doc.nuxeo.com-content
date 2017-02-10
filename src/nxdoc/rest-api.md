@@ -530,7 +530,7 @@ This page explains the high level organisation and scope of the existing endpoin
 
 Nuxeo provides a complete API accessible via HTTP/HTTPS. This API is&nbsp;the best way to integrate portals, workflow engines, ESBs, custom application written in JavaScript, Ruby, etc. remotely with the Nuxeo Platform repository. This API has the following endpoints.
 
-### **Resources Endpoints**
+### Resources Endpoints
 
 For doing CRUD on resources in a 100% REST style.
 Multiple resources are exposed:
