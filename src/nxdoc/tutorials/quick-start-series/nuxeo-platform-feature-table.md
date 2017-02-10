@@ -1,8 +1,8 @@
 ---
-title: Nuxeo Platform Feature Table
+title: UI Feature Comparison
 review:
     comment: ''
-    date: '2017-01-11'
+    date: '2017-02-10'
     status: ok
 labels:
     - lts2016-ok
@@ -236,7 +236,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -245,7 +245,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <td colspan="1">[Nuxeo Agenda](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>N/A</td>
 <td colspan="1">[Nuxeo Agenda user documentation]({{page space='userdoc' page='nuxeo-agenda'}})</td>
 </tr>
 <tr>
@@ -261,7 +261,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>&#10003;</td>
 <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
 </tr>
 <tr>
@@ -288,7 +288,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <td colspan="1">[Nuxeo IMAP connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>N/A</td>
 <td colspan="1">[Nuxeo IMAP Connector user documentation]({{page space='userdoc' page='nuxeo-imap-connector'}})</td>
 </tr>
 <tr>
@@ -296,7 +296,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <td colspan="1">[Nuxeo Agenda](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>N/A</td>
 <td colspan="1">[Nuxeo Agenda user documentation]({{page space='userdoc' page='nuxeo-agenda'}})</td>
 </tr>
 <tr>
@@ -304,7 +304,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>&#10003;</td>
 <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
 </tr>
 <tr>
@@ -328,7 +328,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <td colspan="1">[Nuxeo Forum](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-forum)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>N/A</td>
 <td colspan="1">[Forums user documentation]({{page space='userdoc' page='forums'}})<br/>
 {{multiexcerpt 'DeprecatedAddon_8.10' page='generic-multi-excerpts'}}</td>
 </tr>
@@ -337,7 +337,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>&#10003;</td>
 <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
 </tr>
 <tr>
@@ -353,7 +353,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>&#10003;</td>
 <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
 </tr>
 <tr>
@@ -401,7 +401,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <td colspan="1">Default distribution</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>&#10003;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
@@ -428,7 +428,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -448,7 +448,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>&#10003;</td>
 <td colspan="1">Box, Dropbox, Google Drive, Microsoft OneDrive<br/>
 [Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})
 </td>
@@ -496,7 +496,7 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -516,7 +516,7 @@ Default distribution<br/>
 </td>
 <td>&#10003;</td>
 <td>&#10003;<br/>&#10003;</td>
-<td></td>
+<td>V1.0</td>
 <td colspan="1">
 [Document modification user documentation]({{page space='userdoc' page='editing-content'}})<br/>
 [How to Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})
@@ -527,7 +527,7 @@ Default distribution<br/>
 <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>&#10003;</td>
 <td colspan="1">Box, Dropbox, Google Drive, Microsoft OneDrive<br/>
 [Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})
 </td>
@@ -583,7 +583,7 @@ Default distribution<br/>
 </td>
 <td></td>
 <td>&#10003;<br/>&#10003;</td>
-<td></td>
+<td>V2.0<br/>V2.0</td>
 <td colspan="1">
 [Developer documentation]({{page page='nuxeo-diff'}})<br/>
 [User documentation]({{page space='userdoc' page='nuxeo-diff'}})
@@ -604,7 +604,7 @@ Default distribution<br/>
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -623,7 +623,7 @@ Default distribution<br/>
 <td colspan="1">[Nuxeo Drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>&#10003;</td>
 <td colspan="1">[Documentation]({{page page='nuxeo-drive'}})</td>
 </tr>
 <tr>
@@ -660,7 +660,7 @@ Default distribution<br/>
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -669,7 +669,7 @@ Default distribution<br/>
 <td colspan="1">Nuxeo JSF UI</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>V1.0</td>
 <td colspan="1">
 [User documentation]({{page space='userdoc' page='workflows'}})<br/>
 [Developer documentation]({{page page='workflow'}})<br/>
@@ -681,11 +681,12 @@ Default distribution<br/>
 <td colspan="1">Nuxeo JSF UI</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>V1.0</td>
 <td colspan="1">
 [User documentation]({{page space='userdoc' page='workflows'}})<br/>
 [Developer documentation]({{page page='workflow'}})<br/>
-[Workflow How-To Index]({{page page='workflow-how-to-index'}})
+[Workflow How-To Index]({{page page='workflow-how-to-index'}})<br/>
+Approval and Parallel workflow may evolve.
 </td>
 </tr>
 <tr>
@@ -730,7 +731,7 @@ Default distribution<br/>
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -739,7 +740,7 @@ Default distribution<br/>
 <td colspan="1">Default distribution</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>N/A</td>
 <td colspan="1">
 [User documentation]({{page space='userdoc' page='publishing-content'}})<br/>
 [Developer documentation]({{page page='publisher'}})
@@ -750,7 +751,7 @@ Default distribution<br/>
 <td colspan="1">Default distribution</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>N/A</td>
 <td colspan="1">[Setting Publication Targets](/x/V4Ek)</td>
 </tr>
 <tr>
@@ -758,9 +759,10 @@ Default distribution<br/>
 <td colspan="1">[Nuxeo Media Publishing](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>N/A</td>
 <td colspan="1">Publication of videos to YouTube and Wistia.<br/>
-[Nuxeo Media Publishing documentation]({{page page='nuxeo-media-publishing'}})
+[Nuxeo Media Publishing documentation]({{page page='nuxeo-media-publishing'}})<br/>
+Still in consideration for Web UI
 </td>
 </tr>
 </tbody>
@@ -778,7 +780,7 @@ Default distribution<br/>
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -806,7 +808,7 @@ Default distribution<br/>
 <td colspan="1">Default distribution</td>
 <td>&#10003;</td>
 <td>&#10003;</td>
-<td></td>
+<td>V1.0</td>
 <td colspan="1">
 [Developer documentation]({{page page='tagging'}})<br/>
 [User documentation]({{page space='userdoc' page='tags'}})
@@ -817,7 +819,7 @@ Default distribution<br/>
 <td colspan="1">[Nuxeo Virtual Navigation](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>N/A</td>
 <td colspan="1">[Nuxeo Virtual Navigation developer documentation]({{page page='nuxeo-virtual-navigation'}})<br/>
 {{multiexcerpt 'DeprecatedAddon_8.10' page='generic-multi-excerpts'}}
 </td>
@@ -862,7 +864,7 @@ Default distribution<br/>
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -937,7 +939,7 @@ Default distribution<br/>
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -981,26 +983,27 @@ Default distribution<br/>
 <td colspan="1">Default distribution</td>
 <td>&#10003;</td>
 <td>&#10003;</td>
-<td></td>
-<td colspan="1">&nbsp;</td>
+<td>N/A</td>
+<td colspan="1">Still in consideration for Web UI</td>
 </tr>
 <tr>
 <td colspan="1">Permission purge</td>
 <td colspan="1">Default distribution</td>
 <td>&#10003;</td>
 <td>&#10003;</td>
-<td></td>
-<td colspan="1">&nbsp;</td>
+<td>N/A</td>
+<td colspan="1">Still in consideration for Web UI</td>
 </tr>
 <tr>
 <td colspan="1">Permission Audit</td>
 <td colspan="1">[Nuxeo Groups and Rights Audit](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>N/A</td>
 <td colspan="1">
 [Administration documentation]({{page page='nuxeo-groups-and-rights-audit'}})<br/>
-[User documentation]({{page space='userdoc' page='nuxeo-groups-and-rights-audit'}})
+[User documentation]({{page space='userdoc' page='nuxeo-groups-and-rights-audit'}})<br/>
+Still in consideration for Web UI
 </td>
 </tr>
 <tr>
@@ -1026,7 +1029,7 @@ Default distribution<br/>
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -1061,7 +1064,7 @@ Default distribution<br/>
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -1078,7 +1081,7 @@ Default distribution<br/>
 <td colspan="1">Default distribution</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>V2.0</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
@@ -1097,10 +1100,11 @@ Default distribution<br/>
 <td colspan="1">Default distribution</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>N/A</td>
 <td colspan="1">
 [ User documentation ]({{page space='userdoc' page='editing-content#relations'}})<br/>
-[How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})
+[How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})<br/>
+Still in consideration for Web UI
 </td>
 </tr>
 <tr>
@@ -1137,7 +1141,7 @@ Default distribution<br/>
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -1188,7 +1192,7 @@ Default distribution<br/>
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -1197,7 +1201,7 @@ Default distribution<br/>
 <td colspan="1">Default distribution</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>N/A</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
@@ -1205,7 +1209,7 @@ Default distribution<br/>
 <td colspan="1">Default distribution</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>N/A</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
@@ -1213,7 +1217,7 @@ Default distribution<br/>
 <td colspan="1">Default distribution</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>N/A</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
@@ -1221,7 +1225,7 @@ Default distribution<br/>
 <td colspan="1">[Faceted search](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-faceted-search)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>N/A</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
@@ -1247,7 +1251,7 @@ Default distribution<br/>
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -1275,7 +1279,7 @@ Default distribution<br/>
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -1340,7 +1344,7 @@ Default distribution<br/>
 <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>No UI</th>
+<th>API</th>
 <th>JSF UI</th>
 <th>Web UI</th>
 </tr>
@@ -1349,10 +1353,11 @@ Default distribution<br/>
 <td colspan="1">Default distribution, [Nuxeo Datadog reporter](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-datadog-reporter)</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>N/A</td>
 <td colspan="1">Some monitoring features are available by default in the Admin tab of the Nuxeo Platform. You can complete these features by using addons, such as Nuxeo Datadog reporter.<br/>
 [Metrics and Monitoring admin documentation]({{page page='metrics-and-monitoring'}})<br/>
-[Nuxeo Datadog Reporter documentation]({{page page='nuxeo-datadog-reporter'}})
+[Nuxeo Datadog Reporter documentation]({{page page='nuxeo-datadog-reporter'}})<br/>
+Still in consideration for Web UI
 </td>
 </tr>
 <tr>
@@ -1360,7 +1365,7 @@ Default distribution<br/>
 <td colspan="1">Default distribution</td>
 <td>&#10003;</td>
 <td>&#10003;</td>
-<td></td>
+<td>V2.0</td>
 <td colspan="1">`nuxeoctl` command for non UI apps. Admin tab for JSF UI.</td>
 </tr>
 <tr>
@@ -1368,7 +1373,7 @@ Default distribution<br/>
 <td colspan="1">Default distribution</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>V2.0</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
@@ -1392,7 +1397,7 @@ Default distribution<br/>
 <td colspan="1">Default distribution</td>
 <td></td>
 <td>&#10003;</td>
-<td></td>
+<td>V2.0</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
