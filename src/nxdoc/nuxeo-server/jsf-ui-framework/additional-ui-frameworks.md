@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - home
     - excerpt
+is_overview: true
 confluence:
     ajs-parent-page-id: '16089312'
     ajs-parent-page-title: JSF UI Framework

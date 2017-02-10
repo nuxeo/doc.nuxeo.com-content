@@ -9,6 +9,7 @@ labels:
     - last-review-20150128
     - home
     - excerpt
+is_overview: true
 confluence:
     ajs-parent-page-id: '31033314'
     ajs-parent-page-title: Nuxeo Server
