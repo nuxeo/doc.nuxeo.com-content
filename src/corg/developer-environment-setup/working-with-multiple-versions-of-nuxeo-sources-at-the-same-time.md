@@ -206,8 +206,6 @@ That behavior is configurable by changing the "receive.denyCurrentBranch" Git pr
 
 {{/callout}}
 
-&nbsp;
-
 For import into Eclipse, you have to use two different workspaces, one for each version.
 
 Remember ~/workspace-5.4/nuxeo-5.4 is a clone of your local ~/workspace/nuxeo/ which is a clone of public repositories:
@@ -227,8 +225,6 @@ $ git config --get remote.origin.url
 If you use m2eclipse plugin, it will rename the root nuxeo directory to nuxeo-ecm (the artifact name) so you have to create symbolic links pointing to two respective nuxeo and nuxeo-5.4 in each workspaces, to avoid issues or unwanted directories renaming.
 
 {{/callout}}
-
-&nbsp;
 
 ## Git Worktree
 
@@ -251,7 +247,7 @@ for dir in */.git; do (dir=$(dirname $dir); cd $dir ; git worktree add ~/workspa
 
 {{/panel}}
 
-You can now work indifferently from&nbsp;`~/workspace/nuxeo` or `~/workspace/nuxeo-6.0`, commit, push... They share the same Git index.
+You can now work indifferently from `~/workspace/nuxeo` or `~/workspace/nuxeo-6.0`, commit, push... They share the same Git index.
 
 {{#> callout type='info' }}
 
@@ -266,7 +262,3 @@ At time of writing, very few tools have been updated to work with the worktree f
 [clone.py](https://github.com/nuxeo/nuxeo/blob/master/clone.py) still works fine but it has yet no dedicated option to properly initialize the worktree directories.
 
 {{/callout}}
-
-&nbsp;
-
-&nbsp;

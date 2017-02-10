@@ -103,11 +103,6 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}
-
-{{! Put short text that explains the purpose of the page here. This excerpt can be displayed on parent pages in listings. }}
-
-{{! /excerpt}}
 
 ## Installing NodeJS
 

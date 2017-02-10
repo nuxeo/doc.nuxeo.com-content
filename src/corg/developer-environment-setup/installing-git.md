@@ -295,7 +295,7 @@ Please don't put accents and such in your username (as well in the commit messag
 
 ### SSH Key
 
-On the GitHub site, click&nbsp;**Account Settings** > Click **SSH Public Keys** > Click **Add another public key** and add your public key there.
+On the GitHub site, click **Account Settings**&nbsp;> Click **SSH Public Keys**&nbsp;> Click **Add another public key** and add your public key there.
 
 It will be used for authentication against any Git URL of the form "`git@github.com:nuxeo/...`".
 
@@ -337,7 +337,7 @@ These aliases are stored in the ~/.gitconfig file, you can also edit it manually
 Here are some aliases inspired from our Mercurial usage and from our current experience with Git:{{! multiexcerpt name='git-aliases'}}
 
 ```
-## Before Git 1.8.3 (May 24, 2013), remove the occurrences of `%C(auto)` or replace them with fixed colors such as&nbsp;`%Cgreen`, `%C(bold blue)`...
+## Before Git 1.8.3 (May 24, 2013), remove the occurrences of `%C(auto)` or replace them with fixed colors such as `%Cgreen`, `%C(bold blue)`...
 
 # Simple shortcuts
 `ls = "ls-tree --name-only"`
@@ -357,7 +357,7 @@ Here are some aliases inspired from our Mercurial usage and from our current exp
 `pullnor = pull --no-rebase`
 
 # Amend a changeset (less powerful but quicker and easier than the interactive rebase)
-&nbsp;`fix = "!_() { c=$(git rev-parse $1) && git commit --fixup $c && git -c core.editor=cat rebase -i --autosquash --keep-empty --autostash $c~; }; _"`
+ `fix = "!_() { c=$(git rev-parse $1) && git commit --fixup $c && git -c core.editor=cat rebase -i --autosquash --keep-empty --autostash $c~; }; _"`
 
 # Using ref to upstream branch available since Git 1.7 (@{upstream})
 # Incoming changes
@@ -387,7 +387,7 @@ Here are some aliases inspired from our Mercurial usage and from our current exp
 # LoC per user (GNU)
 `authorship = "!git ls-files -z|xargs -0 -n1 -E'\n' | git blame --date short -wCMcp -- | perl -pe 's/^.*?\\((.*?) +\\d{4}-\\d{2}-\\d{2} +\\d+\\).*/\\1/'| sort | uniq -c | sort -rn"`
 
-#&nbsp;See [https://gist.github.com/jcarsique/24f8dd46d176bb67253e](https://gist.github.com/jcarsique/24f8dd46d176bb67253e) for more aliases.
+# See [https://gist.github.com/jcarsique/24f8dd46d176bb67253e](https://gist.github.com/jcarsique/24f8dd46d176bb67253e) for more aliases.
 ```
 {{! /multiexcerpt}}
 
@@ -403,7 +403,7 @@ See [http://volnitsky.com/project/git-prompt/](http://volnitsky.com/project/git-
 
 Clone [https://github.com/git/git](https://github.com/git/git)
 
-Then add into your&nbsp;`~/.profile`,&nbsp;`~/.bashrc` or&nbsp;`~/.zshrc` the following:
+Then add into your `~/.profile`, `~/.bashrc` or `~/.zshrc` the following:
 
 ```
 # Git prompt
