@@ -1,10 +1,9 @@
 ---
-title: Learning the REST API
+title: Learning REST API
 review:
-    comment: 'Since Nuxeo IO is no longer relevant, the Nuxeo Cloud Instance and links ending by `nuxeo.io` sould be reviewed. See [NXDOC-982](https://jira.nuxeo.com/browse/NXDOC-982)'
-    date: '2016-12-06'
-    status: not-ok
-redirect: nxdoc/getting-started-with-the-nuxeo-platform
+    comment: ''
+    date: '2017-01-16'
+    status: ok
 labels:
     - content-review-lts2016
     - multiexcerpt-include
@@ -21,7 +20,6 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/dY3ZAQ'
     source_link: /display/NXDOC/Learning+REST+API
 tree_item_index: 800
-hidden: true
 history:
     -
         author: Solen Guitter
@@ -100,130 +98,261 @@ history:
         version: '1'
 
 ---
-&nbsp;
 
-{{! multiexcerpt name='REST_API_tuto '}}
+{{! multiexcerpt name='REST_API_tuto'}}
 
-This is a training on using the REST API.
+This tutorial teaches you how to use Nuxeo REST API.
 
 ## Prerequisites
 
-{{#> callout type='info' }}
-
-This training is based on **Nuxeo Platform LTS 2015**.
-
-{{/callout}}
-
 ### Technical Prerequisites
 
-Before doing this training, you need the following:
+Before following this tutorial, ensure that you have the following:
 
-*   **Browser**:
-    Google Chrome / Chromium browser with the [Postman extension](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop), or Firefox web browser with the [RESTED extension](https://addons.mozilla.org/en-US/firefox/addon/rested/)[](https://addons.mozilla.org/en-us/firefox/addon/restclient/)
-*   **Nuxeo Cloud instance**:
-    You need access to a Nuxeo Cloud instance. If you don't, you should sign up for a [Nuxeo Online Services 30 days free trial](http://www.nuxeo.com/downloads/#online-trial).
-*   **Nuxeo Studio project**:
-    You need a Nuxeo Studio project. Again, this is all part of the Nuxeo Online Services trial.
-*   **REST API Training application template**:
-    In Nuxeo Studio, import the REST API Training application template from the **Customization** > **External Templates** menu.
-*   **cURL** (optional):
-    Available natively for Mac OS and Linux users, Windows users can [install it](https://curl.haxx.se/download.html#Win64). It is useful to check your CORS configuration.
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**Browser**</td>
+        <td>
+          Google Chrome / Chromium browser with the [Postman extension](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop), or Firefox web browser with the [RESTED extension](https://addons.mozilla.org/en-US/firefox/addon/rested/)[](https://addons.mozilla.org/en-us/firefox/addon/restclient/)
+        </td>
+      </tr>
+      <tr>
+        <td>**Nuxeo Studio project**</td>
+        <td>
+          You need a Nuxeo Studio project. If you don't have a Nuxeo Online Services account, you should sign up for a [30-day free trial](http://www.nuxeo.com/downloads/#online-trial).
+        </td>
+      </tr>
+      <tr>
+        <td>**Node.js**</td>
+        <td>
+          In this tutorial we will be using Nuxeo JS Client in **node.js**. Click [here](https://doc.nuxeo.com/nxdoc/setting-up-your-javascript-environment/#setting-up-the-javascript-environment) for complete instructions on how to install both tools.
+        </td>
+      </tr>
+      <tr>
+        <td>**Nuxeo JS Client**</td>
+        <td>
+          We will be using Nuxeo JS Client to wrap our REST API calls. See above for instructions on how to install.
+        </td>
+      </tr>
+      <tr>
+        <td>**cURL**</td>
+        <td>
+          Available natively for Mac OS and Linux users, Windows users can [install it](https://curl.haxx.se/download.html#Win64). It may be useful to check your CORS configuration.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td colspan="2">*&ast;&ast;OPTIONAL&ast;&ast;*</td>
+      </tr>
+      <tr>
+        <td>**Nuxeo DAM**</td>
+        <td>
+          From Nuxeo Marketplace, install the Nuxeo DAM addon. This will provide you with three extra multimedia Document Types to use and test throughout the tutorial.
+        </td>
+      </tr>
+      <tr>
+        <td>**Nuxeo Showcase Content addon**</td>
+        <td>
+          From Nuxeo Marketplace, install the Nuxeo Showcase Content addon. This will provide you with a stock of various documents to manipulate during the tutorial.
+        </td>
+      </tr>
+      <tr>
+        <td>**Nuxeo Dev Tools browser extension**</td>
+        <td>
+          Available for [Chrome](https://chrome.google.com/webstore/detail/nuxeo-dev-tools/kncphbjdicjganncpalklkllihdidcmh?hl=en) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/nuxeo-dev-tools/), this handy little extension provides a number of [useful shortcuts](https://doc.nuxeo.com/nxdoc/nuxeo-dev-tools-extension/#features). Be sure to set up a [CORS configuration](https://doc.nuxeo.com/nxdoc/cross-origin-resource-sharing-cors/) to fully benefit from its features.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
 ### Required Knowledge
 
-The following knowledge is needed to follow this course:
+You should be familiar with the following:
 
-*   **Nuxeo Platform**:
-    Understanding the [Nuxeo Platform's document concept](https://university.nuxeo.io/nuxeo/university/#!/course/using-nuxeo-platform/understanding-document-concept) is mandatory. Having a grasp about the [main Nuxeo Platform functionalities](https://university.nuxeo.io/nuxeo/university/#!/course/using-nuxeo-platform) is highly recommended.
-*   **Nuxeo Studio**:
-    Knowledge of the [main Nuxeo Studio functionalities](https://university.nuxeo.io/nuxeo/university/#!/course/getting-started-nuxeo-studio) is necessary, because you will call custom features created in Studio during this course.
-*   **JavaScript**:
-    JavaScript programming skills are required, as we will be using the [Nuxeo JavaScript client](https://doc.nuxeo.com/nxdoc/javascript-client/) to practice.
-*   **Java (optional)**:
-    Java programming skill are needed if you want to cover the bonus section of this training, to extend the REST API.
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**Nuxeo Platform**</td>
+        <td>
+          Understanding the [Nuxeo Platform's document concept](https://university.nuxeo.io/nuxeo/university/#!/course/using-nuxeo-platform/understanding-document-concept) is essential. Getting a grasp of the [main Nuxeo Platform functionalities](https://university.nuxeo.io/nuxeo/university/#!/course/using-nuxeo-platform) is highly recommended.
+        </td>
+      </tr>
+      <tr>
+        <td>**Nuxeo Studio**</td>
+        <td>
+          Familiarity with the [main Nuxeo Studio functionalities](https://university.nuxeo.io/nuxeo/university/#!/course/getting-started-nuxeo-studio) is necessary, because you will call custom features created in Studio during this course.
+        </td>
+      </tr>
+      <tr>
+        <td>**JavaScript**</td>
+        <td>
+          JavaScript programming skills are required, as we will be using the [Nuxeo JavaScript client](https://doc.nuxeo.com/nxdoc/javascript-client/) to practice.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td colspan="2">*&ast;&ast;OPTIONAL&ast;&ast;*</td>
+      </tr>
+      <tr>
+        <td>**Java**</td>
+        <td>
+          Java programming skills are needed if you want to cover the bonus section of this tutorial, extending the REST API.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
 ### Useful REST API Resources
 
-Information about the REST API usage can be found in various places. The most important ones are the following:
+Information about Nuxeo REST API can be found in various places. Here are some of the most relevant tools at your disposal:
 
-*   **API Playground**:
-    Available at [nuxeo.github.io/api-playground](http://nuxeo.github.io/api-playground/) or available as a [Nuxeo package]({{page page='installing-a-new-package-on-your-instance'}}). It allows you to connect to a live Nuxeo Platform repository and discover / try the existing endpoints.
-*   **Local Instance REST API Documentation**:
-    Available in your Nuxeo Platform instance at `api/v1/doc`. Assuming a Nuxeo Platform instance is running on your machine, the URL would be [http://localhost:8080/nuxeo/api/v1/doc](/nuxeo.github.io/api-playground) If you don't have a local instance, you can try it at [https://nightly.nuxeo.com/nuxeo/api/v1/doc](https://nightly.nuxeo.com/nuxeo/api/v1/doc) [.](https://nightly.nuxeo.com/api/v1/doc) The default login / password is Administrator / Administrator.
-    It provides an automatically generated documentation with the available endpoints and what they expect. Use it to get an idea of what you need to send in a request body.
-*   **REST API Documentation**:
-    Available at [REST API]({{page page='rest-api'}}) in our documentation center. It provides detailed technical documentation on the concepts, features and clients for the REST API.
-*   **JS Client Documentation**:
-    Available at [nuxeo.github.io/nuxeo-js-client/1.2.1/](http://nuxeo.github.io/nuxeo-js-client/1.2.1/). It provides explanations about the available objects and methods in the Nuxeo JS client, that we will use during this training.
-*   **REST API Video Course**:
-    Available at the Nuxeo University [REST API course](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api). It can help getting you started quickly with the REST API's main concepts, and gives the relevant links to go further.
-
-## Prepare Your Environment
-
-### Nuxeo Studio
-
-1.  Log in your Nuxeo Studio project at [https://connect.nuxeo.com](https://connect.nuxeo.com).
-2.  Go into the **Settings** > **Application Dependencies** menu.
-3.  Set the target platform version to **Nuxeo Platform LTS 2015** and save.
-4.  Go into the **Customization** > **External Templates** menu.
-5.  Import the application template **Nuxeo Training: REST API**.
-
-### Nuxeo Cloud Instance
-
-1.  Log in your nuxeo.io manager at [https://manager.nuxeo.io](https://manager.nuxeo.io).
-2.  Select your instance from the central zone of the screen, then stop your instance if it is running.
-3.  Edit your instance and make sure it is associated to your Nuxeo Studio project. In this example the associated Studio project is "REST API Training", but yours will be named differently of course.
-    ![]({{file name='instance-studio-project.png' page='learning-rest-api'}} ?w=300,h=200,border=true)
-4.  Start your instance.
-5.  Once started, access it. URL can be seen in the manager, in this example it is [`https://my-instance-name.nuxeo.io`](https://my-instance-name.nuxeo.io) . Make sure to use yours.
-    ![]({{file name='instance-url.png' page='learning-rest-api'}} ?w=300,h=200,border=true)
-6.  Log in. Default credentials are Administrator / Administrator.
-7.  Install the [Nuxeo API Playground]({{page page='howto-nuxeo-api-playground'}}) Nuxeo package from the **Update Center** > **Marketplace Packages** tab.
-    Note that the instance has to be restarted for the installation to complete. The restart can be achieved as following:
-    ![]({{file name='restart-instance.png' page='learning-rest-api'}} ?w=500,h=508,border=true)
-8.  [Deploy your Nuxeo Studio configuration](https://university.nuxeo.io/nuxeo/university/#%21/course/getting-started-nuxeo-studio/deploying-nuxeo-studio-configuration).
-    ![]({{file name='deploy-configuration.png' page='learning-rest-api'}} ?w=500)
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**API Playground**</td>
+        <td>
+          Available at [nuxeo.github.io/api-playground](http://nuxeo.github.io/api-playground/). It allows you to connect to a live Nuxeo Platform repository and try out the existing endpoints.
+        </td>
+      </tr>
+      <tr>
+        <td>**REST API Documentation**</td>
+        <td>
+          Available at [REST API]({{page page='rest-api'}}) in our documentation center. It provides detailed technical documentation on the concepts, features and clients for Nuxeo REST API.
+        </td>
+      </tr>
+      <tr>
+        <td>**Local Instance REST API Documentation**</td>
+        <td>
+        Available in your Nuxeo Platform instance at `api/v1/doc`. Assuming a Nuxeo Platform instance is running on your machine, the URL would be `http://NUXEO_SERVER/nuxeo/api/v1/doc`. If you don't have a local instance, you can try it at [https://nightly.nuxeo.com/nuxeo/api/v1/doc](https://nightly.nuxeo.com/nuxeo/api/v1/doc). The default login / password is **Administrator** / **Administrator**. It provides an automatically generated documentation with the available endpoints and what they expect. Use it to get an idea of what you need to send in a request body.
+        </td>
+      </tr>
+      <tr>
+        <td>**JS Client Documentation**</td>
+        <td>
+          Available at [nuxeo.github.io/nuxeo-js-client/](http://nuxeo.github.io/nuxeo-js-client/). It provides explanations about the available objects and methods in Nuxeo JS client, which we will use during this tutorial.
+        </td>
+      </tr>
+      <tr>
+        <td>**REST API Video Course**</td>
+        <td>
+          Available at Nuxeo University [REST API course](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api). Sign up for a free account in order to access the videos. It can help get you started quickly with Nuxeo REST API's main concepts, and gives the relevant links to go further.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## REST API Principles
 
-{{> wistia_video id='258cvm9i4j'}}
+##### Practice - REST API Principles
 
-_Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" on [Nuxeo University](https://university.nuxeo.io)_
+**In this exercise you will...**
 
-### Practice - REST API Principles
+*   Create a Document from the UI.
+*   Retrieve it through the REST API using the API Playground in various manners.
+*   Use headers to change the response.
 
-**Your goals**
 
-1.  Create a Contract from the UI.
-2.  Retrieve it through the REST API using the API Playground in various manners.
-3.  Use headers to change the response.
+#### Create a Document using Nuxeo Platform UI
 
-**What you need to do**
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>Log into your Nuxeo instance.</td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>Go to `default-domain/workspaces`.</td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>Create a Workspace named "Rest API Tutorial".</td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>
+          Create a Document within the Workspace.<br />
+          *For the purposes of this tutorial, we've created a Picture document named "My Picture". These document types are available with the Nuxeo DAM addon.*
+        </td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>Export the Picture using the [**XML export** option in Nuxeo Platform]({{page space='userdoc' page='exporting-documents#xml-export-of-a-single-document'}}) or by clicking the **Export current document JSON** link in the **Nuxeo Dev Tools** extension.<br />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-**Use the Nuxeo Platform UI to create a contract**
+#### Retrieve the Document using the REST API
 
-1.  Log in your Nuxeo Cloud instance ( [`https://your-instance-name.nuxeo.io`](https://your-instance-name.nuxeo.io) ).
-    Note: your instance URL can be seen in the nuxeo.io manager.
-    ![]({{file name='instance-url.png' page='learning-rest-api'}} ?w=300,h=200,border=true)
-2.  Go to `default-domain/workspaces`:
-    1.  Create a Contract Portfolio named "EMEA".
-    2.  Create a Contract named "Beyond Space Travel Agency".
-    3.  [Export the Contract]({{page space='userdoc' page='exporting-documents'}}) using the **XML export** option.
-
-**Retrieve the Contract using the REST API**
-
-1.  Access your API Playground at `https://your-instance-name.nuxeo.io/nuxeo/playground` and use the API Playground to do the following steps.
-2.  Log in to your Nuxeo Cloud instance ( [`https://your-instance-name.nuxeo.io/nuxeo`](https://your-instance-name.nuxeo.io/nuxeo) ).
-3.  Fetch the contract:
-    1.  Using the Resources `Id` endpoint. Use the document id found in the XML export done previously for that.
-    2.  Using the Resources `Path` endpoint. Use the document path found in the XML export done previously for that.
-    3.  Using the Command endpoint, and the `Fetch > Document` operation.
-4.  Change the headers sent so that you only retrieve the `dublincore` and `bccontract` schemas.
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          Log into the [API Playground](http://nuxeo.github.io/api-playground/) using your Nuxeo Server URL, `http://NUXEO_SERVER/nuxeo` and your credentials or simply click the API Playground button in the **Nuxeo Dev Tools** extension.
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">**FETCH THE DOCUMENT**</td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>
+          In the **Resources Endpoints**, get the document using the document's `id` which can be found in the XML/JSON export obtained earlier.<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">GET /api/v1/id/{docId}</pre>
+        </td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>
+          Click on the **Settings** icon ![]({{file page='howto-nuxeo-api-playground' name='playground_settings_icon.png'}}) to change the `properties` header so that you only retrieve the `picture` schema.
+        </td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>
+          Get the document using the document's `path` (also in the XML/JSON export).<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">GET /api/v1/path/{docPath}</pre>
+        </td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>
+          In the **Command Endpoints**, get the document using the `Fetch > Document` operation and the `path` or `id` as a parameter.<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">POST /api/automation/Repository.GetDocument</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 {{#> callout type='info' heading='What\'s the Best Way to Retrieve a Document?'}}
 
-*   Using the `Resources` endpoint is preferable. The `Command` endpoint is better suited when you want to execute business logic.
-*   Using the `Id` endpoint is recommended over the `Path` endpoint when possible, as it brings a small performance improvement.
+*   Using the **Resources Endpoints** is preferable. The **Command Endpoints** are better suited when you want to execute business logic.
+*   Using the `id` endpoint is recommended over the `path` endpoint when possible as it improves performance.
 
 {{/callout}}
 
@@ -231,41 +360,76 @@ _Extract from the course "[Working with the REST API](https://university.nuxeo.i
 
 ### Concepts
 
-Setting up a CORS configuration is necessary to allow requests from other domains to be executed. That's a major need if your application is located on a distant server, and a security concern you need to think about. When dealing with your CORS configuration, you need to ask yourself the following questions:
+Setting up CORS configuration allows requests from other domains to be executed. This is essential if your application is located on a distant server, and a security concern that you should think about. When dealing with your CORS configuration, you need to ask yourself the following questions:
 
 *   Where will calls be allowed from?
 *   What kind of calls do I want to allow?
 
-A CORS configuration can be done from Studio by adding an XML extension.
+A CORS configuration can be made from Studio by adding an XML extension.
 
 Notice that **only GET, POST, HEAD, OPTIONS methods are allowed by default**. You need to explicitly set the supported methods in your configuration to allow PUT and DELETE calls.
 
 Refer to the [CORS documentation]({{page page='cross-origin-resource-sharing-cors'}}) for all applicable configuration options.
 
-### Practice - CORS Configuration
+##### Practice - CORS Configuration
 
-**Your goals**
+**In this exercise you will...**
 
-Set up a CORS configuration that will only allow specific domains to execute requests.
+*   Set up a CORS configuration that will only allow specific domains to execute requests.
 
-**What you need to do**
 
-In Nuxeo Studio:
-
-1.  Edit the XML extension&nbsp;`BCCORSConfig` providing a CORS configuration in Nuxeo Studio:
-    *   Only allow requests coming from [`https://jsfiddle.net`](https://jsfiddle.net) and [`https://jshell.net`](https://jshell.net) and their subdomains.
-    *   Make sure the following methods will be supported: `GET, PUT, POST, DELETE, HEAD, OPTIONS`.
-    *   Only allow requests on the following pattern: `/nuxeo/.*`.
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          In **Nuxeo Studio** under **Customization**, select **Advanced Settings** > **XML Extensions**
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>
+          Create an XML extension, `RestApiTutorial`, which:<br /><br />
+          - only allows requests from https://foobar.com and its subdomains<br />
+          - supports the following methods: `GET, PUT, POST, DELETE, HEAD, OPTIONS`<br />
+          - only allows requests on the following pattern: `/nuxeo/`<br /><br />
+          *If you already provided a CORS configuration when you installed the Nuxeo Dev Tools extension, you can either replace it or skip this part.*<br />
+        </td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>
+          In your Nuxeo instance, deploy the Nuxeo Studio configuration.<br />
+          **ADMIN** > **Update Center** > **Update**
+        </td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>
+          Restart the instance.<br />
+          **ADMIN** > **System Information** > **Restart Server**
+        </td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>
+          Open a terminal and launch the following commands to test your configuration, *replacing `NUXEO_SERVER` with your Nuxeo Server instance URL.*<br /><br />
+          This command should be **denied** by the CORS configuration.<br />
+          <pre style="min-width: 700px; max-width: 700px">curl --verbose -H "Origin: http://www.nuxeo.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload</pre>
+          This command should be **accepted** by the CORS configuration.
+          <pre style="min-width: 700px; max-width: 700px">curl --verbose -H "Origin: https://foobar.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 {{#> accordian heading='CORS Configuration - Solution' closed='true'}}
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
-  <corsConfig name="BigCorp"
-    allowGenericHttpRequests="true"
-    allowOrigin="https://jsfiddle.net https://jshell.net"
-    allowSubdomains="true"
-    supportedMethods="GET, PUT, POST, DELETE, HEAD, OPTIONS">
+  <corsConfig name="foobar" allowGenericHttpRequests="true"allowOrigin="https://foobar.com"allowSubdomains="true" supportedMethods="GET, PUT, POST, DELETE, HEAD, OPTIONS">
     <pattern>/nuxeo/.*</pattern>
   </corsConfig>
 </extension>
@@ -273,44 +437,23 @@ In Nuxeo Studio:
 
 {{/accordian}}
 
-&nbsp;
+## Client Overview
 
-In your Nuxeo Cloud instance:
-
-1.  Deploy the Nuxeo Studio configuration.
-    ![]({{file name='deploy-configuration.png' page='learning-rest-api'}} ?w=500,h=197,border=true)
-2.  Restart the instance.
-    ![]({{file name='restart-instance.png' page='learning-rest-api'}} ?w=500,h=508,border=true)
-3.  Open a terminal and launch the following commands to test your configuration:
-
-    ```bash
-    # Please replace https://your-instance-name.nuxeo.io by your real nuxeo.io instance URL.
-    # The following command should be denied by the CORS configuration.
-    # You should see: Cross-Origin Resource Sharing (CORS) Filter: CORS origin denied: http://www.nuxeo.com
-    curl --verbose -H "Origin: http://www.nuxeo.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS https://your-instance-name.nuxeo.io/nuxeo/site/foobar/upload
-    ```
-
-    ```bash
-    # Please replace https://your-instance-name.nuxeo.io by your real nuxeo.io instance URL.
-    # The following command should be accepted by the CORS configuration.
-    curl --verbose -H "Origin: https://jsfiddle.net" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS https://your-instance-name.nuxeo.io/nuxeo/site/foobar/upload
-    ```
-
-## JavaScript Client Overview
-
-Clients exist in various languages to help wrapping your calls to the Nuxeo REST API. Their goal is to handle the low-level plumbing and let you focus on high level functionalities, while integrating nicely in your favorite programming language / environment.
+There are several clients available to wrap your calls to Nuxeo REST API. Their goal is to handle the low-level plumbing and let you focus on high-level functionalities, all the while integrated in your favorite programming language / environment.
 
 Here is a list of the existing clients.
 
 {{{multiexcerpt 'rest-api-clients' page='Client SDKs'}}}
 
-During this training we will focus on using the JavaScript client. The JavaScript (JS) client is versatile enough to let you work in various contexts:
+### JavaScript Client
 
-*   In node.js
+During this tutorial we will focus on using the JavaScript (JS) client. Nuxeo JS client is versatile enough to let you work in various contexts:
+
+*   In **Node.js**
 *   In the browser by adding the library directly or through Bower
 *   In AngularJS applications
 
-The JS client uses promises, that look like this:
+The JS client uses promises, which look like this:
 
 {{#> panel type='code' heading='Promise Example'}}
 
@@ -322,7 +465,7 @@ nuxeo
   .someMethod(variable1, variable2)
   .then(function(callResult){
     // the call succeeded
-    // now you can do something with the result variable
+    // now you can do something with the resulting variable
   })
   .catch(function(error){
     // there was an error during the call
@@ -333,9 +476,7 @@ nuxeo
 
 {{/panel}}
 
-Latest release of the Nuxeo JavaScript Client can be found in the [Nuxeo JS client repository](https://github.com/nuxeo/nuxeo-js-client/releases). **You don't need to install it for this training**, all exercises will be provided in cloud based services.
-
-## Logging into the Nuxeo Platform
+## Logging into Nuxeo Platform
 
 Two authentication methods are supported by the JS client:
 
@@ -344,9 +485,9 @@ Two authentication methods are supported by the JS client:
 
 ### Basic Authentication
 
-Authenticating using the JS client is done by:
+Authenticating using Nuxeo JS client:
 
-1.  Instantiating a [`Nuxeo`](http://nuxeo.github.io/nuxeo-js-client/1.0.0/Nuxeo.html) class.
+1.  Instantiate a [`Nuxeo` class](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html).
 2.  Set a `baseURL` property, unless you connect to your localhost.
 3.  Add an `auth` object into it, passing it the authentication method, username and password.
 
@@ -354,7 +495,7 @@ Authenticating using the JS client is done by:
 
     ```javascript
     var nuxeo = new Nuxeo({
-     baseUrl: 'http://localhost:8080/nuxeo',
+     baseUrl: 'http://NUXEO_SERVER/nuxeo',
      auth: {
        method: 'basic',
        username: 'Administrator',
@@ -365,402 +506,450 @@ Authenticating using the JS client is done by:
 
     {{/panel}}
 
-#### Practice - Authentication Using the JS Client
+##### Practice - Basic Authentication Using Nuxeo JS Client
 
-**Your goals**
+**In this exercise you will...**
 
-Authenticate against your Nuxeo Cloud instance, using the JS client.
+*   Authenticate your Nuxeo local instance, using the JS client.
 
-**What you need to do**
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          Download <a href="{{file name='basicAuthentication.js'}}" download>basicAuthentication.js</a> or open in another tab to copy and paste.
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>Create a Nuxeo object in the `nuxeo` variable</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          **Referring to the [Nuxeo JS client documentation](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html), modify the code to:**
+        </td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>Authenticate against your Nuxeo local instance</td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>
+          Use the basic authentication method<br />
+          *If you haven't changed it, the default login/password is Administrator/Administrator*
+        </td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>
+          When your code is ready, test it by uncommenting the `assertResult()` method and running the code in a terminal:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node basicAuthentication.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-Complete the following exercise.
+{{#> accordian heading='Basic Authentication - Solution' closed='true'}}
 
-<iframe width="100%" height="300" src="//jsfiddle.net/Nuxeo/mkrx18wh/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+```javascript
+// Be sure to replace "NUXEO_SERVER" with your own Nuxeo Server URL.
 
-### Optional - Token Authentication
+const Nuxeo = require('nuxeo');
+var nuxeo = new Nuxeo({
+  baseURL: 'http://NUXEO_SERVER/nuxeo/',
+  auth: {
+    method: 'basic',
+    username: 'Administrator',
+    password: 'Administrator'
+  },
+});
 
-Token authentication using the JS client is much safer:
+assertResult();
 
-1.  A first call is performed using a `basic` authentication. If the login succeeds, the Nuxeo Platform creates a token (an access key) that can be used by the user to authenticate instead of sending its login and password.
-2.  Further calls make use of the token, which means the password is not sent anymore, and the token is sent instead.
-3.  If for any reason you want to prevent the user from logging in using this token, it can be revoked (destroyed) anytime from the Nuxeo Platform's interface. Once revoked, a token cannot be used anymore and a new one needs to be created instead. Even if the token was to be compromised, an attacker would not be able to guess the user's password from it, and the token can be revoked to prevent further access.
+function assertResult() {
+	if(!nuxeo) {
+    console.log("The nuxeo variable is not set. Please create the client object in the Nuxeo variable.");
+    return false;
+  }
 
-Obviously, this is also slightly more complex, since it involves more steps:
+  var isNuxeo = nuxeo.constructor === Nuxeo;
+  if(!isNuxeo) {
+  	console.log("The nuxeo variable is not a Nuxeo object. Please create the client object in the Nuxeo variable.");
+    return false;
+  }
 
-1.  Instantiating a Nuxeo client, using a `basic` authentication as you did in the previous exercise.
+  if(!nuxeo._auth || !nuxeo._auth.method) {
+    console.log("You need to provide an authentication method.");
+    return false;
+  }
 
-    {{#> panel type='code' heading='Sample'}}
+  if(!nuxeo._auth || nuxeo._auth.method != "basic") {
+    console.log("Incorrect authentication method.");
+    return false;
+  }
 
-    ```javascript
-    var tmpNuxeoClient = new Nuxeo({
-     baseUrl: 'http://localhost:8080/nuxeo',
-     auth: {
-       method: 'basic',
-       username: 'Administrator',
-       password: 'Administrator'
-     }
+  checkCredentials();
+}
+
+function checkCredentials() {
+  nuxeo.login().then(function(user) {
+    console.log("You are logged in. Congratulations, you\'ve successfully completed this exercise.");
+    console.log(user);
+  }).catch(function(error) {
+    console.log("You either supplied a wrong login/password, URL or CORS configuration.");
+    console.log("Authentication failed.");
+    throw error;
+  });
+}
+```
+
+{{/accordian}}
+
+
+### Token Authentication
+
+Token authentication using the JS client is much safer.
+
+A call is performed using `basic` authentication. If successful, Nuxeo Platform creates a token (access key) which is used in further calls to authenticate instead of sending credentials.
+
+If you need to prevent a user from logging in using this token, it can be destroyed any time from Nuxeo Platform's interface. **Once destroyed, it cannot be used again**.
+
+{{#> panel type='code' heading='Instantiate a Nuxeo client, using `basic` authentication'}}
+
+```javascript
+var tmpNuxeoClient = new Nuxeo({
+ baseUrl: 'http://NUXEO_SERVER/nuxeo',
+ auth: {
+   method: 'basic',
+   username: 'Administrator',
+   password: 'Administrator'
+ }
+});
+```
+{{/panel}}
+
+{{#> panel type='code' heading='Obtain a token'}}
+
+Each parameter is a `string` used to identify the token in Nuxeo Platform's interface.
+```javascript
+tmpNuxeoClient.requestAuthenticationToken(applicationName, uniqueDeviceId, deviceDescription, permission)
+  .then(...)
+  .catch(...)
+```
+{{/panel}}
+
+{{#> panel type='code' heading='Instantiate another Nuxeo client, this time using `token` authentication'}}
+```javascript
+var nuxeo = new Nuxeo({
+ baseUrl: 'http://NUXEO_SERVER/nuxeo',
+ auth: {
+   method: 'token',
+   token: tokenVariable
+ }
+});
+```
+{{/panel}}
+
+To revoke a token from Nuxeo Platform's interface, go to **HOME** > **Nuxeo Drive**. All available tokens should be listed under **Authentication Tokens**.
+
+For security purposes, you should avoid defining the first client using the `basic` authentication in the global scope, and place it in a function call instead. You will be able to see a sample in the exercise below.
+
+##### Practice - Token Authentication Using the JS Client
+
+**In this exercise you will...**
+
+*   Authenticate your Nuxeo local instance, using `token` authentication.
+
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          Download <a href="{{file name='tokenAuthentication.js'}}" download>tokenAuthentication.js</a> or open in another tab to copy and paste.
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>
+          Store your Nuxeo Server URL in the `baseURL` variable.
+        </td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>
+          Update `getClientWithTokenFor` method with your credentials.
+        </td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>
+          Create a Nuxeo client using basic authentication in the `tmpNuxeoClient` variable.
+        </td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>
+          Use `requestAuthenticationToken` method to obtain a token.
+        </td>
+      </tr>
+      <tr>
+        <td>**6**</td>
+        <td>
+          Create a Nuxeo client using token authentication.
+        </td>
+      </tr>
+      <tr>
+        <td>**7**</td>
+        <td>
+          When your code is ready, test it by uncommenting the `assertResult()` method and running the code in a terminal:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node tokenAuthentication.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{#> accordian heading='Token Authentication - Solution' closed='true'}}
+
+```javascript
+// Be sure to replace "NUXEO_SERVER" with your own Nuxeo Server URL.
+var baseURL = 'http://NUXEO_SERVER/nuxeo';
+
+const Nuxeo = require('nuxeo');
+var nuxeo;
+
+getClientWithTokenFor(baseURL, 'Administrator', 'Administrator');
+
+function getClientWithTokenFor(baseURL, username, password) {
+
+  var tmpNuxeoClient = new Nuxeo({
+    baseURL: baseURL,
+    auth: {
+      method: 'basic',
+      username: username,
+      password: password
+    }
+  });
+
+  var uniqueDeviceId = 'id' + (new Date()).getTime();
+  tmpNuxeoClient.requestAuthenticationToken('learning-rest-api', uniqueDeviceId, 'REST API exercise browser', 'rw')
+    .then(function(token) {
+      nuxeo = new Nuxeo({
+        baseURL: baseURL,
+        auth: {
+          method: 'token',
+          token: token
+        }
+      });
+
+      assertResult();
+    })
+    .catch(function(error) {
+      throw error;
     });
-    ```
+}
 
-    {{/panel}}
-2.  Use this instance to obtain a token:
+/************
+DO NOT EDIT BELOW THIS LINE
+************/
 
-    {{#> panel type='code' heading='Sample'}}
+function assertResult() {
+  if (!nuxeo) {
+    console.log("The nuxeo variable is not set. Please create the client object in the nuxeo variable.");
+    return false;
+  }
 
-    ```javascript
-    // Needed parameters for the function to obtain a token:
-    // application name (string, use whatever you see fit),
-    // unique device id (string, you'll probably want to use the device's id on a phone or use a specific function to generate one),
-    // device description (string, use whatever you like),
-    // permission (string, see notes below)
-    // Notes:
-    // The permission parameter is required but its content is not used currently,
-    // we recommend you to use the 'rw' value in the meantime
-    tmpNuxeoClient.requestAuthenticationToken(applicationName, uniqueDeviceId, deviceDescription, permission)
-      .then(...)
-      .catch(...)
-    ```
+  var isNuxeo = nuxeo.constructor === Nuxeo;
+  if (!isNuxeo) {
+    console.log("The nuxeo variable is not a Nuxeo object. Please create the client object in the Nuxeo variable.");
+    return false;
+  }
 
-    {{/panel}}
-3.  Instantiate another Nuxeo client, this time using a `token` authentication mechanism:
+  if (!nuxeo._auth || !nuxeo._auth.method) {
+    console.log("You must provide an authentication method.");
+    return false;
+  }
 
-    {{#> panel type='code' heading='Sample'}}
+  if (!nuxeo._auth || nuxeo._auth.method != "token") {
+    console.log("Incorrect authentication method.");
+    return false;
+  }
 
-    ```javascript
-    var nuxeo = new Nuxeo({
-     baseUrl: 'http://localhost:8080/nuxeo',
-     auth: {
-       method: 'token',
-       token: tokenVariable
-     }
-    });
-    ```
+  checkCredentials();
+}
 
-    {{/panel}}
+function checkCredentials() {
+  nuxeo.login().then(function(user) {
+    console.log("You are logged in. Congratulations, you\'ve successfully completed this exercise.");
+    console.log(user);
+  }).catch(function(error) {
+    console.log("You either supplied a wrong login/password, URL or CORS configuration.");
+    console.log("Authentication failed.");
+    throw error;
+  });
+}
 
-For security purpose, you should avoid defining the first client using the `basic` authentication in the global scope, and place it in a function call instead. You will be able to see a sample in the exercise below.
+```
 
-#### Practice - Token Authentication Using the JS Client
+{{/accordian}}
 
-**Your goals**
-
-Authenticate against your Nuxeo Cloud instance, using the `token` authentication mechanism.
-
-**What you need to do**
-
-Complete the following exercise.
-
-<iframe width="100%" height="300" src="//jsfiddle.net/nuxeo/0a8go893/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-**To go further**
+**Learn More**
 
 [Authentication and User Management]({{page page='authentication-and-user-management'}}) documentation
 
 ## Manipulating Documents
 
-### Fetch
+### Create
 
-When using the Nuxeo JS client, fetching documents is done by using the [`Repository`](http://nuxeo.github.io/nuxeo-js-client/1.0.0/Repository.html) class.
-
-{{#> panel type='code' heading='Fetching a Document'}}
-
+You can create a document using the JS client create method.
 ```javascript
-nuxeo.repository().fetch("document id or path")...
+nuxeo.repository().create({parentRef}, {document})...
 ```
+The `parentRef` is the ID or path under which your document should be created.
 
-{{/panel}}
-
-#### Headers
-
-Similarly to what we saw previously, headers can be set to fine-tune your request. Various headers are available, depending on the situation. A few examples when fetching a document:
-
-1.  `properties:schema1, schema2`: Retrieves only specific schemas
-2.  `properties:*`: Retrieves all schemas
-
-More headers will be seen when they will be useful to us.
-
-In the JS client, you can set headers:
-
-*   In the `Nuxeo` instance to make sure the headers will be sent for each call
-
-    {{#> panel type='code' heading='Adding an Application-Wide Header'}}
-
-    ```javascript
-    nuxeo.header("someHeader", "someValue");
-    ```
-
-    {{/panel}}
-
-    Note that some shortcut methods exist, for instance to define the schemas to retrieve. Look at the [`Nuxeo`](http://nuxeo.github.io/nuxeo-js-client/1.0.0/Nuxeo.html) class documentation for them.
-
-*   Only in a specific request to fine-tune a unique call.
-
-    {{#> panel type='code' heading='Adding a Request-Specific Header'}}
-
-    ```javascript
-    var callOptions = {
-      'headers': { 'headerName': 'headerValue', ... } 	// overrides all headers set for this call only
-      'schemas': ['dublincore', 'common', ...] 			// overrides the schemas set in the Nuxeo object for this call only
-    };
-    nuxeo.class().method(..., callOptions)
-    ```
-
-    {{/panel}}
-
-{{#> callout type='info' heading='What You Should Remember'}}
-
-Headers can be used to fine tune your queries:
-
-*   In all calls when used in the Nuxeo object
-*   In a specific call in you provide them in the call options
-
-Shortcut methods exist in the JS client to avoid having to remember the header names.
-
-{{/callout}}
-
-##### Practice - Using Headers
-
-**Your goals**
-
-Use the JS client to:
-
-1.  Fetch a document
-2.  Place an application wide header to fetch all document schemas
-
-**What you need to do**
-
-Complete the following exercise.
-
-<iframe width="100%" height="300" src="//jsfiddle.net/nuxeo/5szmz4nq/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-#### Resolvers
-
-Resolvers allow you to retrieve the object associated to the id stored in a property, all within the same call. It can be used with:
-
-*   Documents
-*   Users
-*   Vocabulary entries
-
-Assuming that we have:
-
-*   A `Contract` document referencing a `Company` document ID
-*   A `Company` document referencing a `country` vocabulary ID
-*   A `country` vocabulary
-
-The `depth` header allow you to control the aggregation depth:
-
-*   [`depth:root`](http://depthroot) will retrieve objects attached to the current object (default)
-    ![]({{file name='marshalling-depth-root.png' page='learning-rest-api'}} ?w=300,h=275,border=true)
-*   [`depth:children`](http://depthchildren) will retrieve the objects referenced by the current object and one level deeper.
-    ![]({{file name='marshalling-depth-children.png' page='learning-rest-api'}} ?w=300,h=205,border=true)
-*   [`depth:max`](http://depthmax) will retrieve objects referenced by the current object, and objects referenced up to two levels deeper.
-    ![]({{file name='marshalling-depth-max.png' page='learning-rest-api'}} ?w=300,thumbnail=true)
-
-On top of the `depth` header, you can use:
-
-*   A header:
-    `fetch.document` with the property ids storing the references, for each additional object to retrieve, e.g.: `"fetch.document":"mySchema:aProperty, myOtherSchema:yetAnotherProperty"`
-
-    Or `fetch.document:properties` instead to retrieve all objects at the same time.
-*   The corresponding JS client methods:
-
-    ```javascript
-    nuxeo.someClass().fetchProperty('entity-type', 'myschema:myProperty')...
-    // You can use it as many times as needed to add other properties
-    // TODO: You need to replace someClass by the appropriate class!
-
-    nuxeo.someClass().fetchProperties( // TODO: you need to replace someClass by the appropriate class!
-      // Declare all properties to fetch at once, overrides the previous definition
-      // i.e. that would replace the resolver(s) declared previously using the fetchProperty method
-      { 'entity-type', ['myschema:myProperty', 'anotherSchema:anotherProperty'] }
-    )...
-    ```
-
-**Notes about the JS client methods:**
-
-*   More information about the entity types can be found in the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation page.
-
-*   The entity type you have to fill is the one of the first object you are retrieving. For instance:
-    ![]({{file name='document-entity.png' page='learning-rest-api'}} ?w=300,h=172,border=true)
-*   When calling a document, use the `document` entity in the `fetchProperty` method, no matter what kind of entity types further referenced objects may have.
-    ![]({{file name='user-entity.png' page='learning-rest-api'}} ?w=300,h=136,border=true)
-*   When calling a user, use the `user` entity in the `fetchProperty` method, no matter what kind of entity types further referenced objects may have.
-
-{{#> callout type='info' heading='What You Should Remember'}}
-
-Using resolvers is a combination of:
-
-*   A `depth` header (with the root, children or max value)
-*   A list of objects to resolve, for which you need to specify an entity type and a XPath
-*   The entity type to use is always the one of the first object you are calling (`document` for a document, `directoryEntry` for a vocabulary entry, `user` for a user...)
-
-{{/callout}}
-
-##### Practice - Resolvers
-
-**Your goals**
-
-1.  Update your content model to be able to use resolvers.
-
-2.  Use the appropriate headers to fetch all your objects in a single call.
-
-**What you need to do**
-
-1.  In Nuxeo Studio:
-    1.  Add a `companyId` property into the `bccontract` schema.
-    2.  Make sure to use the `Document` property type to allow resolvers use on it.
-    3.  Update the `BCContractLayout` in the **Listing & Views** > **Form Layouts** menu to include it in all situations.
-2.  In your Nuxeo Cloud instance:
-    1.  Deploy your Studio configuration.
-    2.  Create a company.
-    3.  Reference the company in an existing contract.
-3.  Complete the following exercise
-
-<iframe width="100%" height="300" src="//jsfiddle.net/nuxeo/3brLoomy/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-##### Learn More
-
-[JSON Marshalling]({{page page='json-marshalling'}}) documentation
-
-#### Enrichers
-
-{{> wistia_video id='ykaualv73f'}}
-
-_Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" on [Nuxeo University](https://university.nuxeo.io)_
-
-Adding enrichers when fetching a document is done by setting the `enrichers.document` header, `document` being here the entity type that will be enriched. If you were calling a user, you would use a the `X-NXenrichers.user` header instead, and so on. As for resolvers, what matters here is the entity type of the first object you have been calling. Entity types are listed in the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation.
-
-Enrichers are provided in the response into the `contextParameters` object.
-
-The corresponding JS client methods:
-
-```javascript
-nuxeo.someClass().enricher('entity-type', 'enricherName')...
-// You can use it as many times as needed to add other enrichers
-// TODO: You need to replace someClass by the appropriate class!
-
-nuxeo.someClass().enrichers( // TODO: you need to replace someClass by the appropriate class!
-  // Declare all properties to fetch at once, overrides the previous definition
-  // i.e. that would replace the resolver(s) declared previously using the fetchProperty method
-  { 'entity-type', ['enricherName1', 'enricherName2'] }
-)...
-```
-
-{{#> callout type='info' heading='What You Should Remember'}}
-
-*   Enrichers allow to retrieve anything on top of the response.
-*   Many enrichers are provided by default, and you can also contribute your own.
-*   To call an enricher, you need to pass a header or use the appropriate JS client method. Specify either way the entity type you want to enrich and the enricher name.
-*   The entity type is the one of the first object you are calling (refer to the resolvers section for a larger overview).
-
-{{/callout}}
-
-##### Practice - Enrichers
-
-**Your goals**
-
-Use the appropriate enrichers.
-
-**What you need to do**
-
-1.  In your Nuxeo Cloud instance, attach the following file to your existing contract: []({{file name='beyond-space-travel-agencies-contract.odt' page='learning-rest-api'}}).
-2.  Complete the following exercise.
-
-<iframe width="100%" height="300" src="//jsfiddle.net/nuxeo/c39thusw/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-**To go further**
-
-[REST API entity types]({{page page='rest-api-entity-types'}}) documentation.
-
-#### Adapters
-
-Adapters allow to adapt the response before retrieving it.They were created before enrichers, and today you can use enrichers instead of most adapters.
-
-Calling an adapter is done by using a `/@adaptername` (where `adaptername` is the name of the adapter) in your call URL.
-
-There are some use cases where adapters come in handy. For instance:
-
-*   To retrieve a folderish document's children instead of the document itself
-    {{{multiexcerpt 'restapi-adapters-children' page='Web Adapters for the REST API'}}}
-*   To execute business logic and retrieve its output instead
-    {{{multiexcerpt 'restapi-adapters-op' page='Web Adapters for the REST API'}}}
-
-##### Piping
-
-Several adapters can be chained; in this case the result of the first adapter will become the input for the second, and so on.
-
-{{{multiexcerpt 'restapi-adapters-piping' page='Web Adapters for the REST API'}}}
-
-##### Using Adapters with the JS Client
-
-As adapters can virtually provide anything in the response, there is no specific class that can be used to call adapters in the JS client. Instead, you need to use the `Request` class and launch a call, passing the URL and the call method:
-
-```javascript
-// Sample to retrieve the ACLs of the default domain
-nuxeo.request('/path/default-domain/@acl')
-  .get()
-  .then(function(result){
-    // Code to do something with the result here
-  })
-  .catch(function(error){
-    // Code to handle error thrown here
-  });
-```
-
-{{#> callout type='info' heading='What You Should Remember'}}
-
-*   Adapters are the ancestors of enrichers; today using an enricher is preferable when possible.
-*   Adapters are called by adding a `/@adaptername` in the URL.
-*   Adapters can be chained, allowing more complex calls.
-*   Due to the unpredictable nature of calls made using adapters, the JS client does not offer specific methods to deal with them. You need to use the `request` class, passing the URL and call method.
-
-{{/callout}}
-
-##### Practice - Adapters
-
-**Your goals**
-
-Use the appropriate adapter to retrieve your contract's audit log. You can use the [Web Adapters for the REST API]({{page page='rest-api-web-adapters'}}) documentation to check which adapter to call.
-
-**What you need to do**
-
-Complete the following exercise.
-
-<iframe width="100%" height="300" src="//jsfiddle.net/nuxeo/cb1q1euv/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-**To go further**
-
-[Web Adapters for the REST API]({{page page='rest-api-web-adapters'}}) documentation.
-
-### Creation
-
-Creating a document is done using the JS client `nuxeo.repository().create("parentRef", document)...` method. The `parentRef` is the id or path under which your document should be created.
-
-A [`Document`](http://nuxeo.github.io/nuxeo-js-client/1.0.0/Document.html) can't be instantiated directly, so you need to create the object manually. Refer to the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation to see what you need to send.
+A [`Document`](https://nuxeo.github.io/nuxeo-js-client/latest/Document.html) can't be instantiated directly, so you need to create the object manually. Refer to the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation to see what you need to send.
 
 {{{multiexcerpt 'restapi-doc-entity-post' page='REST API Entity Types'}}}
 
-{{#> callout type='info' heading='What You Should Remember'}}
+##### Practice - Document Creation
 
-*   Creating a document is done using the JS client `nuxeo.repository().create("parentRef", document)...` method, where:
-    *   `parentRef` is the document id or path under which the document should be created.
-    *   `document` is the document object that will be used to create your actual document.
-*   Use the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation to see what a document object should look like.
-*   The created document will be returned; check the response to get the document's id, name and path.
+**In this exercise you will...**
 
-{{/callout}}
+*   Create a Workspace, Folder and Document using the JS client
 
-#### Practice - Document Creation
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          Download <a href="{{file name='createDocuments.js'}}" download>createDocuments.js</a> or open in another tab to copy and paste.
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>
+          Store your Nuxeo Server URL in the `baseURL` variable.
+        </td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>
+          Define the properties for the Workspace, Folder and Document you will create. (See [REST API Entity Types]({{page page='rest-api-entity-types'}}) for more information)
+        </td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>
+          Using the `nuxeo.repository().create({parentRef}, {document})...` method, create the **My Workspace** in "Workspaces".
+        </td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>
+          Create a Folder in **My Workspace**.
+        </td>
+      </tr>
+      <tr>
+        <td>**6**</td>
+        <td>
+          Create a Document (File, Note, etc) in the Folder.
+        </td>
+      </tr>
+      <tr>
+        <td>**7**</td>
+        <td>
+          When your code is ready, run it with the following command:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node createDocuments.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-**Your goals**
+{{#> accordian heading='Create Documents - Solution' closed='true'}}
 
-Create a Contract using the JS client.
+```javascript
 
-**What you need to do**
+const Nuxeo = require('nuxeo');
 
-Complete the following exercise.
+const nuxeo = new Nuxeo({
+  baseURL: 'http://NUXEO_SERVER/nuxeo',
+  auth: {
+    method: 'basic',
+    username: 'Administrator',
+    password: 'Administrator'
+  }
+});
 
-<iframe width="100%" height="300" src="//jsfiddle.net/nuxeo/bpw3d4tb/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+nuxeo.schemas("*");
+
+// Define Workspace properties
+const workspaceToCreate = {
+  'entity-type': 'document',
+  'type': 'Workspace',
+  'name': 'myWorkspace',
+  'properties': {
+    'dc:title': 'My Workspace'
+ }
+};
+
+// Define Folder properties
+const folderToCreate = {
+'entity-type': 'document',
+'type': 'Folder',
+'name': 'myFolder',
+'properties': {
+  'dc:title': 'My Folder'
+}
+};
+
+// Define Document properties
+const documentToCreate = {
+  'entity-type': 'document',
+  'type': 'File',
+  'name': 'myFile',
+  'properties': {
+    'dc:title': 'My File'
+ }
+}
+
+const whereToCreateWorkspace = '/default-domain/workspaces/';
+
+const repository = nuxeo.repository();
+
+// Create the Workspace, Folder and then Document
+repository
+  .create(whereToCreateWorkspace, workspaceToCreate)
+  .then(workspace => {
+    console.log('Workspace has been created:');
+    console.log(workspace);
+    console.log('\n');
+    return repository.create(workspace.path, folderToCreate);
+  })
+  .then(folder => {
+    console.log('Folder has been created:');
+    console.log(folder);
+    console.log('\n');
+    return repository.create(folder.path, documentToCreate);
+  })
+  .then(file => {
+    console.log('File has been created:');
+    console.log(file);
+    asserResult(file);
+  })
+  .catch(error => {
+    console.log('Apologies, an error occurred.');
+    console.log(error);
+  });
+
+```
+
+{{/accordian}}
 
 ### Update
 
@@ -769,7 +958,7 @@ Updating a document is done using the JS client `nuxeo.repository().update(docum
 The `document` parameter is a document object containing:
 
 *   the entity-type
-*   the document id (in a `uid` field)
+*   the document ID (in a `uid` field)
 *   the properties to update (in a `properties` object)
 
 ```javascript
@@ -784,96 +973,845 @@ var documentToUpdate = {
 };
 ```
 
-#### Creating a Version
+### Create a Version
 
 The `X-Versioning-Option` header can be used when you need to increment the minor or major version of the document. It **returns the versioned document**. Creating a version also means that you will be able to revert to that version later if needed. By default, no version is created when updating a document and the 'live' (snapshot) document is returned.
 
 Accepted values for the header are `MAJOR` (creates a version and increments the major version number), `MINOR` (creates a version and increments the minor version number) or `NONE` (no version is created, if another update is performed later you won't be able to revert the document to the specific state you left it in during the first update). There is no functional difference between a minor and major version.
 
-{{#> callout type='info' heading='What You Should Remember'}}
+##### Practice - Document Update
 
-*   Updating a document is done using the JS client `nuxeo.repository().update(document)...` method, where `document` is the document object that will be used to create your actual document.
-*   Use the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation or the previous sample to see what a document object should look like.
-*   By default no version is created. You can use the `X-Versioning-Option` header to create a version. Value: `MAJOR` for a major version number increment, `MINOR` for a minor version number increment.
+**In this exercise you will...**
+
+*   Use the JS client to update a contract while creating a major version.
+
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          Download <a href="{{file name='updateVersionDocument.js'}}" download>updateVersionDocument.js</a> or open in another tab to copy and paste.
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>
+          Store your Nuxeo Server URL in the `baseURL` variable.
+        </td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>
+          Update the Document you created in the previous exercise (with a new title, for example)
+        </td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>
+          Increment the Major version during the update.
+        </td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>
+          Uncomment the `assertResult(document)` method to test your results.
+        </td>
+      </tr>
+      <tr>
+        <td>**6**</td>
+        <td>
+          When your code is ready, run it with the following command:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node updateVersionDocument.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{#> accordian heading='Update and Version Documents - Solution' closed='true'}}
+
+```javascript
+
+const Nuxeo = require('nuxeo');
+
+var nuxeo = new Nuxeo({
+  baseURL: 'http://NUXEO_SERVER/nuxeo',
+  auth: {
+    method: 'basic',
+    username: 'Administrator',
+    password: 'Administrator'
+  }
+});
+
+nuxeo.schemas("*");
+
+var documentToUpdate = {
+  "entity-type": "document",
+  // Use the UID of the document you created in the previous exercise
+  "uid": "8a1b5856-630b-486c-89a8-fd82d1fbce9e",
+  "properties": {
+    "dc:title": "Updated File"
+  }
+};
+
+nuxeo.repository()
+	.header("X-Versioning-Option", "MAJOR")
+  .update(documentToUpdate)
+  .then(function(document) {
+    console.log("Document has been updated:");
+    console.log(document);
+    // Check your result
+    assertResult(document);
+  })
+  .catch(function(error) {
+    throw error;
+  });
+
+/************
+DO NOT EDIT BELOW THIS LINE
+************/
+
+function assertResult(document) {
+  if (document.isCheckedOut === true) {
+    console.log("You didn't create a version while updating your document. Check the headers you are sending.");
+    return false;
+  }
+
+  console.log("Congratulations, you have successfully completed this exercise");
+}
+
+```
+
+{{/accordian}}
+
+{{#> callout type='info' heading='Can\'t increase the version?'}}
+
+A version is only created when there are actual modifications sent because it checks to see if the properties have changed.
+
+If you launch the same call in the solution twice in a row, the first call will create a version, the second won't.
 
 {{/callout}}
 
-#### Practice - Document Update
+### Upload a File
 
-**Your goals**
+You can upload files with REST API outside the context of a transaction through the batch upload endpoint. This means that you can upload files as big as you want without risking a timeout.
 
-Use the JS client to update a contract while creating a major version.
-
-**What you need to do**
-
-Complete the following exercise.
-
-<iframe width="100%" height="300" src="//jsfiddle.net/nuxeo/h0p82q00/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-### File Upload
-
-{{> wistia_video id='qokay4hw1i'}}
-
-_Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" on [Nuxeo University](https://university.nuxeo.io)_
-
-File upload in the REST API is done through the batch upload endpoint in order to upload files outside of the context of a transaction. This means that you can upload files as big as you want without risking a timeout.
-
-#### Uploading a File Using the JS Client
-
-File upload with the JS client is done in three main steps:
+Uploading a File with the JS client:
 
 1.  Create a `Nuxeo.Blob` object containing the file.
 2.  Instantiate a batch.
 3.  Upload the file.
 
-The file can be attached to the document either during the document creation, or by updating it.
+**The file can be attached to the document either during document creation, or by updating it.**
 
 {{#> panel type='code' heading='File Upload Sample'}}
 
 ```javascript
-// Create the blob wrapper
-// We assume you already obtained the file from a form and placed it into a selectedFile variable
-var nuxeoBlob = new Nuxeo.Blob({ 'content': selectedFile });
+// Access the local file
+const filePath = '/local/path/to/myFile';
 
-// Start a new batch
-var batch = nuxeo.batchUpload();
+fs.stat(filePath, (err, stats) => {
 
-// Upload the file in the batch
-batch.upload(nuxeoBlob) // Note that we could also upload several blobs in the same batch using batch.upload(nuxeoBlob1, nuxeoBlob2, nuxeoBlob3...)
-  .then(function(res) {
-    // We can attach the file(s) to the document(s) now
+  // Create a blob from the filePath passed as variable
+  const blob = new Nuxeo.Blob({
+    'content': fs.createReadStream(filePath),
+    'name': path.basename(filePath),
+    'size': stats.size
+  });
+  const fileName = path.basename(filePath);
+
+  // Start a new batch and upload
+  var batch = nuxeo.batchUpload()
+    .upload(blob)
+    .then(function(res) {
+      // Can attach files to Document here...
+    })
+    .catch(function(error) {
+      throw error;
+    });
+});
+```
+
+{{/panel}}
+
+Check out the [Importing Files with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/importing-files-rest-api) video at [Nuxeo University](https://university.nuxeo.com/) for more information.
+
+##### Practice - File Upload
+
+**In this exercise you will...**
+
+*   Access a local file
+*   Use the JS client to upload the file and attach it to a document.
+
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          Download <a href="{{file name='uploadFile.js'}}" download>uploadFile.js</a> or open in another tab to copy and paste.
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>
+          Store your Nuxeo Server URL in the `baseURL` variable and modify the `filePath` and `whereToCreate` variables.
+        </td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>
+          Access the local file.
+        </td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>
+          Create a blob from the `filePath` passed as variable.
+        </td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>
+          Upload the file, create a Document and attach the file to it.
+        </td>
+      </tr>
+      <tr>
+        <td>**6**</td>
+        <td>
+          When your code is ready, run it with the following command:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node uploadFile.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{#> accordian heading='Upload a File - Solution' closed='true'}}
+
+```javascript
+
+const Nuxeo = require('nuxeo');
+
+// We require 'path' and 'fs' to access the local file system
+const path = require('path');
+const fs = require('fs');
+
+const nuxeo = new Nuxeo({
+  baseURL: 'http://NUXEO_SERVER/nuxeo',
+  auth: {
+    method: 'basic',
+    username: 'Administrator',
+    password: 'Administrator'
+  }
+});
+
+const filePath = '/local/path/to/myFile';
+
+const whereToCreate = '/path/to/myFolder';
+
+nuxeo.schemas("*");
+
+// Access the local file
+fs.stat(filePath, (err, stats) => {
+  if (err) {
+    console.log(`File not found. Please check the filePath variable (currently set to ${filePath}).`);
+    return;
+  }
+  if (!stats.isFile()) {
+    console.log(`${filePath} is not a file. Please check the filePath variable.`);
+    return;
+  }
+  // Create a blob from the filePath passed as variable
+  const blob = new Nuxeo.Blob({
+    'content': fs.createReadStream(filePath),
+    'name': path.basename(filePath),
+    'size': stats.size
+  });
+  const fileName = path.basename(filePath);
+
+  // Upload the file, create a Document and attach the file to it
+  nuxeo.batchUpload()
+    .upload(blob)
+    .then(uploadedFile => {
+      console.log('File is uploaded, we will now attach it to a document.');
+      const documentToCreate = {
+        'entity-type': 'document',
+        'type': 'File',
+        'name': 'MyFile',
+        'properties': {
+          'dc:title': fileName,
+          'file:content': uploadedFile.blob
+        }
+      };
+
+      return nuxeo.repository().create(whereToCreate, documentToCreate, { schemas: ['*'] });
+    })
+    .then(document => {
+      console.log('File has been created:');
+      console.log(document);
+    })
+    .catch(error => {
+       console.log(error);
+    });
+});
+
+```
+
+{{/accordian}}
+
+### Fetch
+
+You can fetch documents with Nuxeo JS Client using the [`Repository`](https://nuxeo.github.io/nuxeo-js-client/latest/Repository.html) class and the document path or ID.
+
+{{#> panel type='code' heading='Fetching a Document'}}
+
+```javascript
+nuxeo.repository().fetch(docId)
+```
+```javascript
+nuxeo.repository().fetch(docPath)
+```
+
+{{/panel}}
+
+#### Headers
+
+[Special HTTP Headers]({{page page='special-http-headers'}}) can be set to fine-tune your request. Here are a couple of examples for fetching a document:
+
+    `properties:schema1, schema2`: Retrieves only specific schemas
+    `properties:*`: Retrieves all schemas
+
+With JS client, you can set headers in the `Nuxeo` instance to ensure they are sent with each call, or in one specific request:
+
+{{#> panel type='code' heading='Adding an Application-Wide Header'}}
+```javascript
+nuxeo.header(someHeader, someValue);
+```
+{{/panel}}
+
+{{#> panel type='code' heading='Adding a Request-Specific Header'}}
+
+```javascript
+var callOptions = {
+  'headers': { headerName: headerValue, ... } 	// overrides all headers set for this call only
+  'schemas': ['dublincore', 'common', ...] 			// overrides the schemas set in the Nuxeo object for this call only
+};
+nuxeo.class().method(..., callOptions)
+```
+
+{{/panel}}
+
+##### Practice - Using Headers
+
+**In this exercise you will...**
+
+Use the JS client to:
+
+*   Fetch a document
+*   Place an application-wide header to fetch all document schemas
+
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          Download <a href="{{file name='headers.js'}}" download>headers.js</a> or open in another tab to copy and paste.
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          **Referring to the [Nuxeo JS client documentation](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html), modify the code to:**
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>Ensure that further calls return all schemas in the response</td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>Retrieve a document you previously created, using its path or ID</td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>
+          When your code is ready, run it with the following command:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node headers.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{#> accordian heading='Using Headers - Solution' closed='true'}}
+
+```javascript
+
+const Nuxeo = require('nuxeo');
+
+var nuxeo = new Nuxeo({
+  baseURL: 'http://NUXEO_SERVER/nuxeo',
+  auth: {
+    method: 'basic',
+    username: 'Administrator',
+    password: 'Administrator'
+  },
+});
+
+checkCredentials();
+
+nuxeo.header("properties","*");
+
+nuxeo.repository('default')
+  // Use the UID of the document you created in the previous exercise
+  .fetch('8a1b5856-630b-486c-89a8-fd82d1fbce9e') // you can also use the docPath here
+  .then(function(document) {
+    console.log(document);
   })
   .catch(function(error) {
     throw error;
   });
+
 ```
 
-{{/panel}} {{#> callout type='info' heading='What You Should Remember'}}
+{{/accordian}}
 
-*   Uploading files is done by creating `Nuxeo.Blob` objects, instantiating a batch, then uploading the files into the batch.
-*   Once the files are uploaded, you can attach them to your documents by creating new documents or updating existing documents.
+#### Resolvers
 
-{{/callout}}
+Resolvers allow you to retrieve the object associated with the ID stored in a property, all within the same call. It can be used with:
 
-#### Practice - File Upload
+*   Documents
+*   Users
+*   Vocabulary entries
 
-**Your goals**
+Assuming that we have:
 
-Use the JS client to upload a file and attach it to a contract.
+*   A `Contract` document referencing a `Company` document ID
+*   A `Company` document referencing a `country` vocabulary ID
+*   A `country` vocabulary
 
-**What you need to do**
+...the `depth` header allows you to control the aggregation depth:
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>`depth:root`<br />
+        Retrieves objects attached to the current object (default)</td>
+        <td>![]({{file name='marshalling-depth-root.png' page='learning-rest-api'}} ?w=300,h=275,border=true)</td>
+      </tr>
+      <tr>
+        <td>`depth:children`<br />
+        Retrieves the objects referenced by the current object and one level deeper</td>
+        <td>![]({{file name='marshalling-depth-children.png' page='learning-rest-api'}} ?w=300,h=205,border=true)</td>
+      </tr>
+      <tr>
+        <td>`depth:max`<br />
+        Retrieves objects referenced by the current object, and objects referenced up to two levels deeper</td>
+        <td>![]({{file name='marshalling-depth-max.png' page='learning-rest-api'}} ?w=300,h=275,border=true)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-Complete the following exercise.
+In addition to the `depth` header, you can use:
 
-<iframe width="100%" height="300" src="//jsfiddle.net/nuxeo/2a3gguf5/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+*   `fetch.document` with the property IDs storing the references, for each additional object to retrieve:
+    ```bash
+    "fetch.document":"{schema}:{property}, {schema}:{property}"
+    ```
+
+*   `fetch.document:properties`, to retrieve all objects at the same time.
+
+*   The corresponding JS client methods:
+    ```javascript
+    nuxeo.repository().fetchProperty('entity-type', '{schema}:{property}')...
+
+    nuxeo.repository().fetchProperties(
+      // Declare all properties to fetch at once, overrides the previous definition
+      { 'entity-type', ['{schema}:{property}', '{schema}:{property}'] }
+    )...
+    ```
+
+**Notes about the JS client methods:**
+
+*   More information about the entity types can be found in the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation page.
+
+*   The entity type you fill in is that of the first object you are retrieving.
+
+*   When calling a document, use the `document` entity in the `fetchProperty` method, no matter what kind of entity types further referenced objects may have.
+
+*   When calling a user, use the `user` entity in the `fetchProperty` method, no matter what kind of entity types further referenced objects may have.
+
+##### Practice - Resolvers
+
+**In this exercise you will...**
+
+*   Update your content model to be able to use resolvers.
+*   Use the appropriate headers to fetch all your objects in a single call.*
+
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          In Nuxeo Studio, create two different document types that each extend the File document type: `Company` and `Contract`.
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>
+          Under the **Schema** tab in the `Contract` document type, add a custom schema that includes the field `companyId` of type `Document`.
+        </td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>Under the **Creation Layout** tab in the `Contract` document type, add `companyId` to the form.</td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>Deploy your Studio project on your Nuxeo Platform instance or perform a Hot Reload from the **Dev Tool extension**.</td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>In Nuxeo Platform, create a company, **My Company**.</td>
+      </tr>
+      <tr>
+        <td>**6**</td>
+        <td>Create a contract, **My Contract**, attributing it to **My Company** during creation.</td>
+      </tr>
+      <tr>
+        <td>**7**</td>
+        <td>Download <a href="{{file name='usingResolvers.js'}}" download>usingResolvers.js</a> or open in another tab to copy and paste.</td>
+      </tr>
+      <tr>
+        <td>**8**</td>
+        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL and the `docId` with that of the contract you created.</td>
+      </tr>
+      <tr>
+        <td>**9**</td>
+        <td>Add the appropriate resolvers to return the `Company` object and `Contract` object in the same call.</td>
+      </tr>
+      <tr>
+        <td>**10**</td>
+        <td>
+          When your code is ready, run it with the following command:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node usingResolvers.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{#> accordian heading='Using Resolvers - Solution' closed='true'}}
+
+```javascript
+const Nuxeo = require('nuxeo');
+
+var nuxeo = new Nuxeo({
+  baseURL: 'http://NUXEO_SERVER/nuxeo',
+  auth: {
+    method: 'basic',
+    username: 'Administrator',
+    password: 'Administrator'
+  },
+});
+
+nuxeo.schemas("*");
+
+nuxeo.repository()
+// Retrieve the contract document and the company document in the same call
+	.header("depth", "children")
+  .header("fetch.document", "properties")
+// Replace with the contract document ID or path
+  .fetch('4b33906d-5753-44c7-a83b-bec35581cc9b')
+  .then(function(document) {
+    console.log("Document has been retrieved:");
+    console.log(document);
+// Call the following method to check your result
+    assertResult(document);
+  })
+  .catch(function(error) {
+    throw error;
+  });
+
+
+
+/************
+DO NOT EDIT BELOW THIS LINE
+************/
+
+function assertResult(document) {
+  if (document.type !== 'Contract') {
+    console.log("Retrieved document is not a 'Contract'.");
+    return false;
+  }
+
+  if (!document.get('contract:companyId').properties) {
+    console.log("Document not associated with a company.");
+    return false;
+  }
+
+  console.log('Congratulations, you\'ve successfully completed this exercise.');
+}
+```
+
+{{/accordian}}
+
+
+**Learn More**
+
+[JSON Marshalling]({{page page='json-marshalling'}}) documentation
+
+#### Enrichers
+
+Adding enrichers when fetching a document is done by setting the `enrichers.document` header, `document` being the entity type that will be enriched. If you were calling a user, you would use the `enrichers.user` header instead, and so on. As for resolvers, what matters here is the entity type of the first object you have been calling. Entity types are listed in the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation.
+
+Enrichers are provided in the response of the `contextParameters` object.
+
+The corresponding JS client methods:
+
+```javascript
+nuxeo.repository().enricher('entity-type', 'enricher')...
+
+nuxeo.repository().enrichers(
+  { 'entity-type', ['enricher1', 'enricher2'] }
+)...
+```
+
+##### Practice - Enrichers
+
+**In this exercise you will...**
+
+*   Use the appropriate enrichers.
+
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          Download <a href="{{file name='usingEnrichers.js'}}" download>usingEnrichers.js</a> or open in another tab to copy and paste.
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>Replace `NUXEO_SERVER` and the document UID.</td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>Use content enrichers to retrieve the document's ACLs and preview URL.</td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>
+          When your code is ready, run it with the following command:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node usingEnrichers.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{#> accordian heading='Using Resolvers - Solution' closed='true'}}
+
+```javascript
+
+const Nuxeo = require('nuxeo');
+
+var nuxeo = new Nuxeo({
+  // Replace with your Nuxeo Server URL
+  baseURL: 'http://NUXEO_SERVER/nuxeo',
+  auth: {
+    method: 'basic',
+    username: 'Administrator',
+    password: 'Administrator'
+  },
+});
+
+nuxeo.repository()
+  .enricher("document", "acls")
+  .enricher("document", "preview")
+  // Replace with UID or path of existing document
+  .fetch('8fa1ed7a-22f4-49cb-b185-58dd9d2beb4f')
+  .then(function(document) {
+    console.log("Document has been retrieved:");
+    console.log(document);
+    assertResult(document);
+  })
+  .catch(function(error) {
+    throw error;
+  });
+
+
+/************
+DO NOT EDIT BELOW THIS LINE
+************/
+
+function assertResult(document) {
+  if (!document.contextParameters.acls) {
+    console.log("You didn't obtain the document's acls.");
+    return false;
+  }
+
+  if (!document.contextParameters.preview) {
+    console.log("You didn't obtain the document's preview.");
+    return false;
+  }
+
+  console.log('Congratulations, you have successfully completed this exercise.');
+}
+
+```
+
+{{/accordian}}
+
+
+
+#### Adapters
+
+Adapters allow you to modify the response before retrieving it. They were created before enrichers, and now you can use enrichers instead of most adapters.
+
+Calling an adapter is done by using an `@{adaptername}` in your call URL.
+
+There are some use cases where adapters come in handy:
+
+*   Retrieving a folderish document's children instead of the document itself
+
+{{{multiexcerpt 'restapi-adapters-children' page='REST API Web Adapters'}}}
+
+*   Executing business logic and retrieve its output instead
+
+{{{multiexcerpt 'restapi-adapters-op' page='REST API Web Adapters'}}}
+
+##### Piping
+
+Several adapters can be chained; in this case the result of the first adapter will become the input for the second, and so on.
+
+{{{multiexcerpt 'restapi-adapters-piping' page='REST API Web Adapters'}}}
+
+##### Using Adapters with the JS Client
+
+As adapters can provide virtually anything in the response, there is no specific class that can be used to call adapters in the JS client. Instead, you need to use the `Request` class to launch a call, passing the URL and the call method:
+
+```javascript
+// Sample to retrieve the ACLs of the default domain
+nuxeo.request('/path/default-domain/@acl')
+  .get()
+  .then(function(result){
+    // Code to do something with the result here
+  })
+  .catch(function(error){
+    // Code to handle error thrown here
+  });
+```
+
+##### Practice - Adapters
+
+**In this exercise you will...**
+
+*   Use the appropriate adapter to retrieve your contract's audit log. You can use the [Web Adapters for the REST API]({{page page='rest-api-web-adapters'}}) documentation to check which adapter to call.
+
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          Download <a href="{{file name='usingAdapters.js'}}" download>usingAdapters.js</a> or open in another tab to copy and paste.
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL.</td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>Use an adapter to obtain the audit log of an existing document.</td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>Pass the result to the `assertResult` method to check your work.</td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>
+          When your code is ready, run it with the following command:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node usingAdapters.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{#> accordian heading='Using Adapters - Solution' closed='true'}}
+
+```javascript
+
+const Nuxeo = require('nuxeo');
+
+var nuxeo = new Nuxeo({
+  baseURL: 'http://NUXEO_SERVER/nuxeo',
+  auth: {
+    method: 'basic',
+    username: 'Administrator',
+    password: 'Administrator'
+  },
+});
+
+
+// Use adapters to obtain your contract's audit log (history)
+nuxeo
+// Replace with the contract document ID or use the path endpoint and document ID
+  .request('id/4b33906d-5753-44c7-a83b-bec35581cc9b/@audit')
+  .get()
+  .then(function(result) {
+    console.log("Result has been retrieved:");
+    console.log(result);
+// Call the following method to check your result
+    assertResult(result);
+  })
+  .catch(function(error) {
+    throw error;
+  });
+
+
+/************
+DO NOT EDIT BELOW THIS LINE
+************/
+
+function assertResult(result) {
+	if(!result['entity-type'] == "logEntries") {
+    console.log("Document audit log not found. Check the adapter in your request.");
+  }
+
+  console.log('Congratulations, you have successfully completed this exercise.');
+}
+
+```
+{{/accordian}}
+
+**Learn More**
+
+[Web Adapters for the REST API]({{page page='rest-api-web-adapters'}}) documentation.
 
 ### Delete and Trash Management
 
-Deleting permanently a document is done through a simple `DELETE` call.
+You can permanently delete a document with a simple `DELETE` call.
 
-In the JS client, you can use the `delete` method contained in the [Repository](http://nuxeo.github.io/nuxeo-js-client/1.0.0/Repository.html) object: `nuxeo.repository().delete(documentRef)...`, where `documentRef` is either a document id or a document path.
+In the JS client, you can use the `delete` method contained in the [Repository](https://nuxeo.github.io/nuxeo-js-client/latest/Repository.html) object:
+```javascript
+nuxeo.repository().delete(documentRef)...
+```
+where `documentRef` is either a document ID or a document path.
 
-If you want to handle a trash mechanism, you should rather change the document state: `document.followTransition(transitionName)...` where `document` is a Document object and `transitionName` the name of the transition to follow.
+If you want to handle a trash mechanism, you should change the document state:
+```javascript
+document.followTransition(transitionName)...
+```
+where `document` is a Document object and `transitionName` the name of the transition to follow.
 
 Using the default document lifecycle:
 
@@ -882,41 +1820,201 @@ Using the default document lifecycle:
 
 Then it is up to you to make sure your queries will not retrieve documents in the `deleted` state!
 
-{{#> callout type='info' heading='What You Should Remember'}}
+##### Practice - Document Deletion
 
-*   Deleting documents is done through `nuxeo.repository().delete(documentRef)...`, where `documentRef` is either a document id or a document path.
-*   If you want to handle a trash mechanism, you should change the document state instead and make sure to adapt your queries accordingly, using: `document.followTransition(transitionName)...` where `document` is a Document object and `transitionName` the name of the transition to follow.
-
-{{/callout}}
-
-#### Practice - Document Deletion
-
-**Your goals**
+**In this exercise you will...**
 
 Use the JS client to:
 
 *   Put a document in the deleted state
-*   Delete permanently a document
+*   Permanently delete a document
 
-**What you need to do**
+**Trash Management**
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          Download <a href="{{file name='trashManagement.js'}}" download>trashManagement.js</a> or open in another tab to copy and paste.
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL.</td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>Retrieve a document using its ID or path.</td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>Put the document in the "deleted" state.</td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>Pass the trashed document to the `assertResult` method.</td>
+      </tr>
+      <tr>
+        <td>**6**</td>
+        <td>
+          When your code is ready, run it with the following command:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node trashManagement.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-Complete the following exercises.
+{{#> accordian heading='Trash Management - Solution' closed='true'}}
 
-*   Trash Management
+```javascript
 
-<iframe width="100%" height="300" src="//jsfiddle.net/nuxeo/tp188ypq/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+const Nuxeo = require('nuxeo');
 
-*   Document Deletion
+var nuxeo = new Nuxeo({
+  baseURL: 'http://NUXEO_SERVER/nuxeo',
+  auth: {
+    method: 'basic',
+    username: 'Administrator',
+    password: 'Administrator'
+  },
+});
 
-<iframe width="100%" height="300" src="//jsfiddle.net/nuxeo/zkz9ac2n/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+nuxeo.schemas("*");
 
-## Querying - Searching
+nuxeo.repository()
+// Retrieve a document using its ID or path
+// (Replace with existing document UID or path)
+  .fetch('dde30fe7-1dec-47d2-8ee7-01faba5120ac')
+  .then(function(document) {
+    console.log("RETRIEVED DOCUMENT:");
+    console.log(document);
+// Put the document in the "deleted" state
+    document.followTransition('delete')
+    .then(function(trashedDocument) {
+      console.log("DOCUMENT TRASHED:");
+      console.log(trashedDocument);
+// Pass the trashed document to the assertResult method
+      assertResult(trashedDocument);
+    })
+    .catch(function(error) {
+      throw error;
+    });
+  });
 
-Using the JS client, the [`Repository`](https://nuxeo.github.io/nuxeo-js-client/1.0.0/Repository.html) 's `query` method can be used both to:
 
-### Launch Arbitrary NXQL Queries
 
-In that case, specify the NXQL query to be launched in the query property: `nuxeo.Repository().query({ 'query': myQuery })...` where `myQuery` is a variable containing the query to launch.
+/************
+DO NOT EDIT BELOW THIS LINE
+************/
+
+function assertResult(document) {
+  if (document.state !== 'deleted') {
+    console.log("The document is not in the deleted state.");
+    return false;
+  }
+
+  console.log('Congratulations, you have successfully completed this exercise.');
+}
+
+```
+
+{{/accordian}}
+
+**Document Deletion**
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          Download <a href="{{file name='documentDeletion.js'}}" download>documentDeletion.js</a> or open in another tab to copy and paste.
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>Replace `NUXEO_SERVER` and the document UID.</td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>Delete the document using its ID or path.</td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>Pass the result to the `assertResult` method.</td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>
+          When your code is ready, run it with the following command:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node documentDeletion.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{#> accordian heading='Document Deletion - Solution' closed='true'}}
+
+```javascript
+
+const Nuxeo = require('nuxeo');
+
+var nuxeo = new Nuxeo({
+  baseURL: 'http://NUXEO_SERVER/nuxeo',
+  auth: {
+    method: 'basic',
+    username: 'Administrator',
+    password: 'Administrator'
+  },
+});
+
+nuxeo.schemas("*");
+
+nuxeo.repository()
+// Replace with UID or path of existing document
+  .delete('66cb53a4-3515-4751-8f5b-960f39ceb7dd')
+  .then(function(result) {
+    assertResult(result);
+  })
+  .catch(function(error) {
+    throw error;
+  });
+
+
+
+/************
+DO NOT EDIT BELOW THIS LINE
+************/
+
+function assertResult(result) {
+  if (!result.status || result.status !== 204) {
+    console.log("The document still exists. Permanently delete the document to complete this exercise.");
+    return false;
+  }
+  console.log('Document deleted.');
+  console.log('Congratulations, you have successfully completed this exercise.');
+}
+
+```
+
+{{/accordian}}
+
+
+
+## Querying and Searching
+
+Using the JS client, the [`Repository`](https://nuxeo.github.io/nuxeo-js-client/latest/Repository.html)'s `query` method can be used to launch NXQL queries or call page providers.
+
+### Launch NXQL Queries
+
+Specify the NXQL query to be launched in the query property:
+
+```javascript
+nuxeo.Repository().query({ 'query': myQuery })...
+```
+where `myQuery` is a variable containing the query to launch.
 
 {{#> panel type='code' heading='Sample NXQL Query for a Fulltext Search'}}
 
@@ -931,93 +2029,305 @@ SELECT * FROM Document
 
 {{/panel}}
 
-See also the [NXQL]({{page page='nxql'}}) documentation to get a glimpse of all possibilities offered.
+See the [NXQL]({{page page='nxql'}}) documentation for other possibilities.
 
 ### Call Page Providers
 
 A page provider is the underlying query when creating a content view in Nuxeo Studio.
 
-In that case, you need to:
+To call page providers:
 
-1.  Specify the content view id as defined in Nuxeo Studio in the `pageProvider` property
-2.  Pass in the `queryParams` property an array containing the parameters, in the same order as they are defined in the content view.
+1.  Specify the content view ID, as defined in Nuxeo Studio in the `pageProvider` property
+2.  Pass an array containing the parameters in the `queryParams` property in the same order as they are defined in the content view.
 
 ```javascript
 nuxeo.Repository().query({ 'pageProvider': 'pageProviderId', queryParams['parameter1', 'parameter2'...] })...
 ```
 
-{{#> callout type='info' heading='What You Should Remember'}}
+##### Practice - Querying and Searching
 
-*   To query the database, you can use `nuxeo.Repository().query({ 'query': myQuery })...` where `myQuery` is a variable containing the query to launch.
-*   If you want to query on the Elasticsearch index instead, you can create a page provider by defining a content view in Studio (only the query part is required), then call it using the JS client:
-
-    ```javascript
-    nuxeo.Repository().query({ 'pageProvider': 'pageProviderId', queryParams['parameter1', 'parameter2'...] })...
-    ```
-
-{{/callout}}
-
-#### Practice - Querying and Searching
-
-**Your goals**
+**In this exercise you will...**
 
 Use the JS client to:
 
-1.  Call a content view defined in Studio.
-2.  Pass it some parameters.
-3.  Launch a full-text search.
+*   Call a content view defined in Studio.
+*   Pass it some parameters.
+*   Launch a full-text search.
 
-**What you need to do**
+**Calling Page Providers**
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          Download <a href="{{file name='callPageProvider.js'}}" download>callPageProvider.js</a> or open in another tab to copy and paste.
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL.</td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>Define query options, calling the `DefaultContentListingInNavigation` content view defined in Studio and passing it the UID of an existing parent document as a parameter. The query result should return the document's children as objects.</td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>Pass the result to the `assertResult` method.</td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>
+          When your code is ready, run it with the following command:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node callPageProvider.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-Complete the following exercises.
+{{#> accordian heading='Calling Page Providers - Solution' closed='true'}}
 
-*   Calling Page Providers
+```javascript
 
-<iframe width="100%" height="300" src="//jsfiddle.net/nuxeo/h4q6oyLu/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+const Nuxeo = require('nuxeo');
 
-*   Launching NXQL Queries
+var nuxeo = new Nuxeo({
+  // Replace with your Nuxeo Server URL
+  baseURL: 'http://NUXEO_SERVER/nuxeo',
+  auth: {
+    method: 'basic',
+    username: 'Administrator',
+    password: 'Administrator'
+  },
+});
 
-<iframe width="100%" height="300" src="//jsfiddle.net/nuxeo/y6pyfpc2/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+nuxeo.schemas("*");
+
+// Define query options
+var queryOpts = {
+  "pageProvider": "DefaultContentListingInNavigation",
+  // Replace with UID of existing parent document
+  "queryParams": ["11857bce-4a0f-4bc2-b679-4216b4bf216b"]
+};
+
+nuxeo
+  .repository()
+  .query(queryOpts)
+  .then(function(result) {
+    console.log("QUERY RESULTS:")
+    console.log(result);
+    // Pass the call result to the method below
+    assertResult(result);
+  })
+  .catch(function(error) {
+    throw error;
+  });
+
+
+/************
+DO NOT EDIT BELOW THIS LINE
+************/
+
+function assertResult(result) {
+  if (Array.isArray(result)) {
+    console.log("Please pass the query result to complete this exercise.");
+    return false;
+  }
+
+  if (Array.isArray(result)) {
+  	if(result.length > 0) {
+    	if(result[0]['entity-type'] !== 'document') {
+        console.log("You didn't retrieve any documents. Check the page provider and queryParams.");
+        return false;
+      }
+    }
+  }
+
+  console.log('Congratulations, you have successfully completed this exercise.');
+}
+
+```
+
+{{/accordian}}
+
+
+
+**Launching NXQL Queries**
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          Download <a href="{{file name='nxqlQuery.js'}}" download>nxqlQuery.js</a> or open in another tab to copy and paste.
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL.</td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>Define an NXQL query that will return all documents created TODAY. Exclude proxies, archived versions and deleted (trashed) documents.</td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>Add query to `queryOpts` and launch the query.</td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>Pass the result to the `assertResult` method.</td>
+      </tr>
+      <tr>
+        <td>**6**</td>
+        <td>
+          When your code is ready, run it with the following command:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node nxqlQuery.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{#> accordian heading='Launching NXQL Queries - Solution' closed='true'}}
+
+```javascript
+
+const Nuxeo = require('nuxeo');
+
+var nuxeo = new Nuxeo({
+  // Replace with your Nuxeo Server URL
+  baseURL: 'http://NUXEO_SERVER/nuxeo',
+  auth: {
+    method: 'basic',
+    username: 'Administrator',
+    password: 'Administrator'
+  },
+});
+
+nuxeo.schemas("*");
+
+// Define an NXQL query that will return all documents created TODAY
+var queryToLaunch = "SELECT * FROM Document	"
+// Change to today's date
+	+ " WHERE dc:created >= DATE '2017-02-09' "
+  + " AND ecm:isVersion = 0 "
+  + " AND ecm:isProxy = 0 "
+  + " AND ecm:currentLifeCycleState != 'deleted' ";
+
+// Add query to query options
+var queryOpts = {
+  "query": queryToLaunch
+};
+
+// Launch query
+nuxeo
+  .repository()
+  .query(queryOpts)
+  .then(function(result) {
+    console.log(result);
+    // Pass the call result to the method below
+    assertResult(result);
+  })
+  .catch(function(error) {
+    throw error;
+  });
+
+
+/************
+DO NOT EDIT BELOW THIS LINE
+************/
+
+function assertResult(result) {
+  if (typeof queryToLaunch === 'undefined') {
+    console.log("\"queryToLaunch\" is undefined.");
+    return false;
+  }
+
+  if (!queryToLaunch.includes('ecm:isVersion') &&
+      !queryToLaunch.includes('ecm:isCheckedInVersion')
+    ) {
+    console.log("Exclude archived versions from query.");
+    return false;
+  }
+
+  if (!queryToLaunch.includes('ecm:isProxy')) {
+    console.log("Exclude proxies from query.");
+    return false;
+  }
+
+  if (!queryToLaunch.includes('ecm:currentLifeCycleState') ||
+      !queryToLaunch.includes('deleted')
+    ) {
+    console.log("Exclude deleted documents from query.");
+    return false;
+  }
+
+  if (!Array.isArray(result.entries)) {
+  console.log();
+  console.log(result);
+    console.log("Please pass the query result to complete this exercise.");
+    return false;
+  }
+
+  if (Array.isArray(result.entries)) {
+    if (result.length > 0) {
+      if (result[0]['entity-type'] !== 'document') {
+        console.log("You didn't retrieve any documents. Check your NXQL query and syntax.");
+        return false;
+      }
+    }
+  }
+
+  console.log('Congratulations, you have successfully completed this exercise.');
+}
+
+```
+
+{{/accordian}}
 
 ### Notes about Elasticsearch and the Passthrough API
 
 **Where is the query launched?**
 
-You are querying the database when launching an arbitrary NXQL query. When creating a page provider you can decide to use either the database or the Elasticsearch index.
+By default, NXQL queries use the database, but you can change this to use the ElasticSearch index when creating a page provider.
 
-**How Can I Take Advantage of the Whole Elasticsearch Features?**
+**How Can I Take Advantage of all the Elasticsearch Features?**
 
-Nuxeo provides a [passthrough API for Elasticsearch]({{page page='elasticsearch-passthrough'}}) that lets you benefit from the Elasticsearch API while handling security. When using it, queries are written using the Elasticsearch API, but they are actually sent to the Nuxeo Platform that reworks them. We won't cover this aspect during this training since you should rather head to the [Elasticsearch documentation](https://www.elastic.co/guide).
+Nuxeo provides a [passthrough API for Elasticsearch]({{page page='elasticsearch-passthrough'}}) that lets you benefit from the Elasticsearch API while handling security. When using it, queries are written using the Elasticsearch API, but they are actually sent to Nuxeo Platform that reworks them. We won't cover this aspect during this tutorial but you can head to the [Elasticsearch documentation](https://www.elastic.co/guide) for more information.
 
 ## Executing Business Logic through Automation
 
-Automation operations, [chains]({{page page='how-to-create-an-automation-chain'}}) and [scripts]({{page page='automation-scripting'}}) can all be called with the JS client.
+Automation [operations]({{page page='contributing-an-operation'}}), [chains]({{page page='how-to-create-an-automation-chain'}}) and [scripts]({{page page='automation-scripting'}}) can all be called with the JS client.
 
-**When Should You Use Automation**
+**When You Should Use Automation**
 
-Whenever you want to execute some business logic and leverage the Nuxeo Platform functionalities.
+Whenever you want to execute some business logic and leverage Nuxeo Platform functionalities.
 
-**Why Should You Use Automation Chains or Scripts**
+**Why You Should Use Automation Chains or Scripts**
 
 Every call to the REST API is a single transaction:
 
 *   By using automation chains or scripts, you can execute several unitary operations in a single call.
-*   Automation chains and scripts are executed as a single transaction: Either the whole chain / script is executed and the transaction is committed, or it is rolled back entirely.
+*   Automation chains and scripts are executed as a single transaction: Either the whole chain or script is executed and the transaction is committed, or it is rolled back entirely.
 *   Therefore, you should use them **whenever you need to execute logic that would require several calls as a single transaction.**
 
-**How to Make Chain or Scripts Available through the REST API**
+**How to Make Chains or Scripts Available through the REST API**
 
-As soon as you create one of them in Nuxeo Studio and deploy your configuration in the Nuxeo Platform, the feature is available and can be called using the REST API. There is nothing special to do.
+As soon as you create one of them in Nuxeo Studio and deploy your configuration in Nuxeo Platform, the feature is available and can be called using the REST API. That's all!
 
-**How To Call Automation Operations - Chains - or Scripts**
+**How To Call Automation Operations, Chains, or Scripts**
 
-Using the JS client's [`Operation`](https://nuxeo.github.io/nuxeo-js-client/1.0.0/Operation.html) object.
+Using the JS client's [`Operation`](https://nuxeo.github.io/nuxeo-js-client/latest/Operation.html) object.
 
 {{#> panel type='code' heading='Call a Chain or Script'}}
 
 ```javascript
 nuxeo.operation('MyChainOrScriptId')
-  .input('a Document object or an id or a path here')
+// Input docId, path or Document object
+  .input('docId')
   .params({
     'parameterName': 'parameterValue'
   })
@@ -1035,149 +2345,234 @@ nuxeo.operation('MyChainOrScriptId')
 
 {{/panel}}
 
-Note that automation scripts are prefixed by `javascript.` So if your automation script is called `myScript` in Nuxeo Studio, you should call `javascript.myScript`.
+Note that automation scripts are prefixed by `javascript.` So if your automation script is called `myScript` in Nuxeo Studio, you should call `javascript.myScript`.  
 
-{{#> callout type='info' heading='What You Should Remember'}}
+##### Practice - Executing Business Logic
 
-*   You can execute automation operations, automation chains and automation scripts using the REST API.
-*   Any custom operation, chain or script you created is immediately available on the server, there is nothing special to do.
-*   The way to call them is similar, they all use the operation object:
+**In this exercise you will...**
 
-    {{#> panel type='code' heading='Call a Chain or Script'}}
+*   Create an automation script in Nuxeo Studio.
+*   Use the JS client to call the automation script on a contract.
 
-    ```javascript
-    nuxeo.operation('MyChainOrScriptId')
-      .input('a Document object or an id or a path here')
-      .params({
-        'parameterName': 'parameterValue'
-      })
-      .context({
-        'variableName': 'variableValue',
-      })
-      .execute()
-      .then(function(result) {
-    	// Do something with the result
-      })
-      .catch(function(error) {
-        throw error);
-      });
-    ```
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td>**1**</td>
+        <td>
+          Download <a href="{{file name='addToCollection.js'}}" download>addToCollection.js</a> or open in another tab to copy the code.
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>
+          In Nuxeo Studio, create a new automation script, `addToCollection` where you can paste the code.
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">*COMPLETE THE AUTOMATION SCRIPT:*</td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>Check if the `collectionName` context variable is set, otherwise set it.</td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>Retrieve the user's workspace and set as the `userWorkspace` variable.</td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>If the collection variable is null, create a collection with the context variable's `collectionName` value and place it in the `collection` variable. The collection should be created in the user workspace.</td>
+      </tr>
+      <tr>
+        <td>**6**</td>
+        <td>Add the document to the collection.</td>
+      </tr>
+      <tr>
+        <td>**7**</td>
+        <td>Save the `addToCollection` automation script.</td>
+      </tr>
+      <tr>
+        <td>**8**</td>
+        <td>Deploy your Studio project on your Nuxeo Platform instance or perform a Hot Reload from the **Dev Tool extension**.</td>
+      </tr>
+      <tr>
+        <td colspan="2">*COMPLETE THE NODE.JS SCRIPT:*</td>
+      </tr>
+      <tr>
+        <td>**9**</td>
+        <td>
+          Download <a href="{{file name='businessLogic.js'}}" download>businessLogic.js</a> or open in another tab to copy the code.
+        </td>
+      </tr>
+      <tr>
+        <td>**10**</td>
+        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL.</td>
+      </tr>
+      <tr>
+        <td>**11**</td>
+        <td>Retrieve an existing document using its ID or path.</td>
+      </tr>
+      <tr>
+        <td>**12**</td>
+        <td>Call the `addToCollection` automation script and pass the document as its input.</td>
+      </tr>
+      <tr>
+        <td>**13**</td>
+        <td>Add a `collectionName` as a context variable.</td>
+      </tr>
+      <tr>
+        <td>**14**</td>
+        <td>Pass the result to the `assertResult` method.</td>
+      </tr>
+      <tr>
+        <td>**15**</td>
+        <td>
+          When your code is ready, run it with the following command:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node businessLogic.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-    {{/panel}}
+{{#> accordian heading='addToCollection Automation Script - Solution' closed='true'}}
 
-{{/callout}}
+```javascript
 
-### Practice - Executing Business Logic
+function run(input, params) {
 
-**Your goals**
+// Check if the collectionName context variable is set, otherwise set it
+  if(!ctx.collectionName) {
+    ctx.collectionName = "My Collection";
+  }
 
-1.  Create an automation script in Nuxeo Studio.
-2.  Use the JS client to call the automation script on a contract.
+// Retrieve the user's workspace and set as the userWorkspace variable
+  var userWorkspace = User.GetUserWorkspace(
+    input, {
+  });
 
-**What you need to do**
-
-1.  In Nuxeo Studio, complete the `BCAddToCollection` automation script.
-
-    {{#> accordian heading='Solution' closed='true'}}
-
-    ```javascript
-    /******
-    Adds a document to a specific collection in the user's workspace
-    The collection is created if it doesn't exist
-
-    The collection name is to be passed using the collectionName context parameter
-    And can be accessed using ctx.collectionName in this automation script
-    ******/
-    function run(input, params) {
-
-      // TODO: If the collectionName context variable is not set,
-      // use "Contracts" as a default value
-      if(!ctx.collectionName) {
-        ctx.collectionName = "YOUPI";
+  var collection = getCollectionInUserWorkspace(input, ctx.collectionName);
+// If the collection variable is null, create a collection with the context variable's collectionName value and place it in the collection variable. The collection should be created in the user workspace.
+  if(!collection) {
+    collection = Collection.Create(
+      userWorkspace, {
+        'name': ctx.collectionName,
+        'description': ""
       }
+    );
+  }
 
-      // TODO: Retrieve the user's workspace
-      // and place the result in a userWorkspace variable
-      var userWorkspace = User.GetUserWorkspace(
-        input, {
-      });
-
-      var collection = getCollectionInUserWorkspace(input, ctx.collectionName);
-      // TODO: If the collection variable is null,
-      // create a collection with the context variable's collectionName value
-      // and place it in the collection variable.
-      //
-      // The collection needs to be created in the user workspace,
-      // so make sure to send it as the input for the operation
-      if(!collection) {
-        collection = Collection.Create(
-          userWorkspace, {
-            /*required:true - type: string*/
-            'name': ctx.collectionName,
-            /*required:false - type: string*/
-            'description': ""
-          }
-        );
-      }
-
-      // TODO: Add the document into the collection
-      // No need to check if the document is already contained in it
-      Document.AddToCollection(
-        input, {
-          /*required:true - type: document*/
-          'collection': collection
-        }
-      );
-      return input;
+// Add the document to the collection
+  Document.AddToCollection(
+    input, {
+      'collection': collection
     }
+  );
 
-    /******
-    DO NOT EDIT BELOW THIS LINE
-    ******/
+	return input;
+}
 
-    /****
-     Returns the collection or null if it doesn't exist
-    ****/  
-    function getCollectionInUserWorkspace(input, collectionName) {
-      var userWorkspace = User.GetUserWorkspace(
-        input, {
-        }
-      );
-      var userWorkspacePath = userWorkspace.path;
-      var queryResults = Repository.Query(
-        input, {
-          /*required:true - type: string*/
-          'query': "SELECT * FROM Collection WHERE dc:title = '"+ collectionName  +"' AND ecm:path STARTSWITH '"+ userWorkspacePath +"'",
-        }
-      );
-      if(queryResults.length === 0) {
-        return;
-      }
-      return queryResults[0];
+
+
+/******
+DO NOT EDIT BELOW THIS LINE
+******/
+
+// Return the collection (or null if it doesn't exist)
+function getCollectionInUserWorkspace(input, collectionName) {
+  var userWorkspace = User.GetUserWorkspace(
+    input, {
     }
-    ```
+  );
+  var userWorkspacePath = userWorkspace.path;
+  var queryResults = Repository.Query(
+    input, {
+      'query': "SELECT * FROM Collection WHERE dc:title = '"+ collectionName  +"' AND ecm:path STARTSWITH '"+ userWorkspacePath +"'",
+    }
+  );
+  if(queryResults.length === 0) {
+    return;
+  }
+  return queryResults[0];
+}
 
-    {{/accordian}}
-2.  In the Nuxeo Platform, deploy your Nuxeo Studio configuration.
-3.  Complete the following exercise.
+```
 
-<iframe width="100%" height="300" src="//jsfiddle.net/nuxeo/qhxna546/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+{{/accordian}}
+
+{{#> accordian heading='Executing Business Logic - Solution' closed='true'}}
+
+```javascript
+
+const Nuxeo = require('nuxeo');
+
+var nuxeo = new Nuxeo({
+  // Replace with your Nuxeo Server URL
+  baseURL: 'http://NUXEO_SERVER/nuxeo',
+  auth: {
+    method: 'basic',
+    username: 'Administrator',
+    password: 'Administrator'
+  },
+});
+
+nuxeo.schemas("*");
+
+nuxeo.repository()
+// Retrieve a document using its ID or path
+// (Replace with existing document UID or path)
+  .fetch('9e7b87b6-affe-44eb-ac05-9fe057e52ee3')
+// Call the automation script passing the document as input
+  .then(function(document) {
+    nuxeo.operation('javascript.addToCollection')
+    .input(document)
+    .context({
+// Add a collectionName as a context variable
+      'collectionName':'My Collection'
+    })
+    .execute()
+    .then(function(result) {
+// Pass the result to the collection below
+      assertResult(result);
+    })
+    .catch(function(error) {
+      throw error;
+    })
+  });
+
+/************
+DO NOT EDIT BELOW THIS LINE
+************/
+
+function assertResult(result) {
+  console.log(result);
+  if (result['entity-type'] === 'string') {
+    console.log("Pass the document variable as an input for your operation.");
+    return false;
+  }
+
+  if (!result.facets.includes("CollectionMember")) {
+    console.log("The document has not been added to a collection.");
+    return false;
+  }
+
+  console.log('Congratulations, you have successfully completed this exercise.');
+}
+
+```
+
+{{/accordian}}
 
 ### Restricting Automation Calls - Defining Security Measures
 
-Sometimes you might need to create automation operations or chains, that should not be allowed to be used by everybody. Nuxeo Studio allows you to apply restrictions on them.
+Sometimes you might need to create automation operations or chains that shouldn't be accessible to everybody. Nuxeo Studio allows you to apply restrictions to them.
 
-In the **Customization** menu, choose **Advanced Settings** > **Web Services Filtering** and create a new filter. You can then choose to restrict or disable some business logic related operations and chains.
+In the **Customization** menu, choose **Advanced Settings** > **Web Services Filtering** and create a new filter. You can then choose to restrict or disable operations and chains.
 
-{{#> callout type='info' heading='What You Should Remember'}}
+## Workflows
 
-In Nuxeo Studio, go into the **Customization** menu, choose **Advanced Settings** > **Web Services Filtering** and create a new filter to restrict or disable some business logic related operations and chains.
-
-{{/callout}}
-
-## Working with Workflows
-
-Workflows can be launched using the JS client's [`Workflows`](http://nuxeo.github.io/nuxeo-js-client/1.0.0/Workflows.html) class.
+Workflows can be launched using the JS client's [`Workflows`](https://nuxeo.github.io/nuxeo-js-client/latest/Workflows.html) class.
 
 A workflow can be started:
 
@@ -1187,7 +2582,7 @@ A workflow can be started:
 
 ### How to Start a Workflow
 
-With the JS client, you can use the `nuxeo.workflows().start('workflowId')` method. The workflow id to pass is the one defined in Nuxeo Studio. Doing so will start a workflow without attaching a document.
+With the JS client, you can use the `nuxeo.workflows().start('workflowId')` method. The workflow ID to pass is the one defined in Nuxeo Studio. Doing so will start a workflow without attaching a document.
 
 ### How to Attach Documents
 
@@ -1205,7 +2600,7 @@ document.startWorkflow('workflowId');
 
 #### Using the Workflow Class
 
-Before starting the workflow, you need to create an object containing the ids of the documents to attach.
+Before starting the workflow, you need to create an object containing the IDs of the documents to attach.
 
 {{#> panel type='code' heading='Workflow Options Object'}}
 
@@ -1218,7 +2613,7 @@ var workflowOptions = {
 
 {{/panel}}
 
-Then pass this object when starting the workflow.
+Then pass the object when starting the workflow.
 
 ```javascript
 nuxeo.workflows().start('workflowId', workflowOptions)...
@@ -1226,54 +2621,245 @@ nuxeo.workflows().start('workflowId', workflowOptions)...
 
 ### How to Complete a Task
 
-1.  When the workflow is started, you are given a [`Workflow`](http://nuxeo.github.io/nuxeo-js-client/1.0.0/Workflow.html) class instance in the response.
-2.  Using this object, retrieve the tasks it contains. You end up with an array containing [`Task`](http://nuxeo.github.io/nuxeo-js-client/1.0.0/Task.html) class instances.
-3.  Then, iterate over them.
-4.  You can fill the task form using the Task's variable method or during the complete method.
+1.  When a workflow is started, you are given a [`Workflow`](https://nuxeo.github.io/nuxeo-js-client/latest/Workflow.html) class instance in the response.
+2.  Using this object, retrieve the tasks it contains. You end up with an array containing [`Task`](https://nuxeo.github.io/nuxeo-js-client/latest/Task.html) class instances.
+3.  Iterate over the tasks.
+4.  You can fill in the task form using the Task's variable method or during the complete method.
 5.  Completing a task is done using the `complete(action, taskOptions)` method.
-    *   The `action` variable defines the button id the user clicks on.
+    *   The `action` variable defines the button ID the user clicks on.
     *   The task options can be used to fill the task form if you didn't do it through the variable method.
 
-{{#> callout type='info' heading='What You Should Remember'}}
+##### Practice - Workflows
 
-*   Workflows can be started with either no document attached, a single one or multiple documents.
-*   Use the workflow object to retrieve the tasks it contains.
-*   Use the Task object to:
-    *   Fill the task form using the `variable('variableToFill', 'value')` method.
-    *   Complete it with the `complete(action, taskOptions)` method where action is the button id the user is considered to have clicked on.
-
-{{/callout}}
-
-### Practice - Workflows
-
-**Your goals**
+**In this exercise you will...**
 
 Use the JS client to:
 
-1.  Launch a workflow
-2.  Complete a workflow task (filling the form and clicking on a button)
+*   Launch a workflow
+*   Complete a workflow task
 
-**What you need to do**
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td colspan="2">*CREATE AN AUTOMATION CHAIN*</td>
+      </tr>
+      <tr>
+        <td>**1**</td>
+        <td>
+          In Nuxeo Studio, [create a simple automation chain]({{page page='automation-chains'}}), `ValidateDocumentChain`, that modifies the lifecycle of a document to "approved" and adds a comment.<br /><br />({{page page='rest-api'}})
+          <pre style="min-width: 700px; max-width: 700px">- Context.FetchDocument
+- Document.FollowLifecycleTransition:
+    value: approve
+- Document.SetProperty:
+    xpath: dc:description
+    save: 'true'
+    value: WorkflowVariables["validationComment"]
+- Audit.LogEvent:
+    event: Document validated
+    category: RESTAPIWorkflowExercise
+    comment: "Validation comment: \n@{WorkflowVariables[\"validationComment\"]}"</pre>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">*CREATE A SIMPLE WORKFLOW*</td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>Create a [workflow]({{page page='simple-workflow-example'}}), `ValidateDocument`.</td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>Under the **Variables** tab, add the String field `validationComment`.</td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>Under the **Activation** tab, allow for Read & Edit permissions and the document type of your choice.</td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>
+          Under the **Graph** tab, add an **Accept/Reject** user task node, and click on the **Edit** icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) to edit the node properties.
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <img src="{{file name='workflow-graph.png'}}" alt="Workflow Graph" width="500">
+        </td>
+      </tr>
+      <tr>
+        <td>**6**</td>
+        <td>Under the **General** tab, add the `Context["workflowInitiator"]` assignees expression.</td>
+      </tr>
+      <tr>
+        <td>**7**</td>
+        <td>Under the **Variables** tab, add the `validationComment` variable.</td>
+      </tr>
+      <tr>
+        <td>**8**</td>
+        <td>Under the **Form** tab, add the **Validation Comment** widget from the `var_ValidateDocument` schema.</td>
+      </tr>
+      <tr>
+        <td>**9**</td>
+        <td>Under the **Transitions** tab, add the `ValidateDocumentChain` to the `validate` transition, then **Save**.</td>
+      </tr>
+      <tr>
+        <td>**10**</td>
+        <td>Add your transitions to the graph, then **Save** your workflow.</td>
+      </tr>
+      <tr>
+        <td colspan="2">*LAUNCH THE WORKFLOW USING JS CLIENT*</td>
+      </tr>
+      <tr>
+        <td>**11**</td>
+        <td>
+          Download <a href="{{file name='workflows.js'}}" download>workflows.js</a> or open in another tab to copy and paste.
+        </td>
+      </tr>
+      <tr>
+        <td>**12**</td>
+        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL.</td>
+      </tr>
+      <tr>
+        <td>**13**</td>
+        <td>Create an object containing the ID(s) of the document(s) to attach.</td>
+      </tr>
+      <tr>
+        <td>**14**</td>
+        <td>Start the workflow, passing in the object, then call `getWfTasks` method.</td>
+      </tr>
+      <tr>
+        <td>**15**</td>
+        <td>Retrieve the workflow tasks and call the `completeWfTasks` method.</td>
+      </tr>
+      <tr>
+        <td>**16**</td>
+        <td>Iterate through the tasks, presuming that the user adds a `validationComment` and clicks the validate button.</td>
+      </tr>
+      <tr>
+        <td>**17**</td>
+        <td>Call the `asserResult` method.</td>
+      </tr>
+      <tr>
+        <td>**18**</td>
+        <td>
+          When your code is ready, run it with the following command:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node workflows.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-Complete the following exercise.
+{{#> accordian heading='Launching Workflows - Solution' closed='true'}}
 
-<iframe width="100%" height="300" src="//jsfiddle.net/nuxeo/ns8n5ddx/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+```javascript
+
+const Nuxeo = require('nuxeo');
+
+var nuxeo = new Nuxeo({
+  // Replace with your Nuxeo Server URL
+  baseURL: 'http://NUXEO_SERVER/nuxeo',
+  auth: {
+    method: 'basic',
+    username: 'Administrator',
+    password: 'Administrator'
+  },
+});
+
+nuxeo.schemas("*");
+
+// Create an object containing the document ID(s)
+var workflowOptions = {
+    // Replace with existing document ID(s)
+  	"attachedDocumentIds":["907d1fb1-d0d1-4160-8533-4fc2f30b897d"]
+};
+
+// Start the workflow, passing in the object, then call getWfTasks method
+nuxeo.workflows()
+  .start('ValidateDocument', workflowOptions)
+  .then(getWfTasks)
+  .catch(function(error) {
+    throw error;
+  });
+
+function getWfTasks(workflow) {
+	console.log("Workflow:");
+  console.log(workflow);
+
+// Retrieve the workflow tasks, then call the completeWfTasks method
+	workflow
+  	.fetchTasks()
+    .then(completeWfTasks)
+    .catch(function(error) {
+    throw error;
+  });
+}
+
+function completeWfTasks(tasks) {
+	console.log("Tasks:");
+  console.log(tasks);
+
+// Iterate through the tasks, presuming that the user adds a validationComment  and clicks the validate button
+  var tasksNb = tasks.entries.length;
+	for (var i = 0; i < tasksNb; i++) {
+    tasks.entries[i]
+    	.variable("validationComment", "Looks great.")
+    	.complete("validate")
+      .then(assertResult)
+      .catch(function(error) {
+    	throw error;
+  	});
+  }
+}
+
+/************
+DO NOT EDIT BELOW THIS LINE
+************/
+
+
+function assertResult(result) {
+	console.log("Your result:");
+  console.log(result);
+  if (result['entity-type'] !== 'task') {
+    console.log("Pass the completed task to the assertResult method.");
+    return false;
+  }
+
+  if(result.targetDocumentIds.length <= 0) {
+    console.log("There is no document attached to your workflow.");
+    return false;
+  }
+
+  if(result.state !== "ended") {
+    console.log("The task you passed is not completed yet.");
+    return false;
+  }
+
+  if(!result.variables.validationComment
+  ||  result.variables.validationComment.trim().length <= 0
+  ) {
+    console.log("Fill in validationComment variable.");
+    return false;
+  }
+
+  console.log('Congratulations, you have successfully completed this exercise.');
+}
+
+```
+
+{{/accordian}}
+
 
 ## Bonus - Contributing Your Own Content Enricher
 
-We covered the basis of the Nuxeo REST API. There are some functionalities we left aside: [`Users`](https://nuxeo.github.io/nuxeo-js-client/1.0.0/Users.html) / [`Groups`](https://nuxeo.github.io/nuxeo-js-client/1.0.0/Groups.html) management, and [`Directories`](https://nuxeo.github.io/nuxeo-js-client/1.0.0/Directory.html) . Feel free to take a look at their corresponding classes.
+We've covered the basics of Nuxeo REST API. But there are some functionalities we left aside: [`Users`](https://nuxeo.github.io/nuxeo-js-client/latest/Users.html) / [`Groups`](https://nuxeo.github.io/nuxeo-js-client/latest/Groups.html) management, and [`Directories`](https://nuxeo.github.io/nuxeo-js-client/latest/Directory.html). Feel free to take a look at their corresponding classes.
 
-Now we will start extending the REST API by contributing a custom content enricher.
+For now we will extend the REST API by contributing a custom content enricher. In order to contribute a content enricher, you need to:
 
-### Our Goal
-
-One thing we didn't mention so far is that the `ContractPortfolio` document type that you imported in Nuxeo Studio extends the `OrderedFolder` document type. It means that contracts can be ordered manually in the Nuxeo Platform UI. Our goal will be to create a content enricher that we can call to retrieve the contracts order.
-
-We will do that in three phases:
-
-1.  Creating the content enricher
-2.  Declaring the content enricher
-3.  Calling the content enricher
+*   Creating the content enricher
+*   Declaring the content enricher
+*   Calling the content enricher
 
 ### Create the Content Enricher
 
@@ -1287,54 +2873,123 @@ A content enricher is a Java class that:
 
 Here is a commented sample below:
 
-{{{multiexcerpt 'enricher-class' page='Content Enricher'}}}
+{{{multiexcerpt 'enricher-class' page='Content Enrichers'}}}
 
-Now this is your turn to build yours!
+Now it's your turn!
 
-**Your goals**
+##### Practice - Contribute a Content Enrichers
+\*This exercise requires some familiarity with Java
 
-Create a content enricher to obtain the contract's latest version.
+**In this exercise you will...**
 
-**What you need to do**
+*   Create a content enricher to obtain the contract's latest version.
 
-Copy the following Java class into your project and complete it:
-
-```java
-package org.nuxeo.sample;
-import static org.nuxeo.ecm.core.io.registry.reflect.Instantiations.SINGLETON;
-import static org.nuxeo.ecm.core.io.registry.reflect.Priorities.REFERENCE;
-import java.io.IOException;
-import org.codehaus.jackson.JsonGenerator;
-import org.nuxeo.ecm.core.api.CoreSession;
-import org.nuxeo.ecm.core.api.DocumentModel;
-import org.nuxeo.ecm.core.io.marshallers.json.enrichers.AbstractJsonEnricher;
-import org.nuxeo.ecm.core.io.registry.reflect.Setup;
-
-@Setup(mode = SINGLETON, priority = REFERENCE)
-
-public class LastVersionEnricher extends AbstractJsonEnricher<DocumentModel> {
-    public static final String NAME = "lastVersion";
-    public SampleEnricher() {
-        super(NAME);
-    }
-    // Method that will be called when the enricher is asked for
-    @Override
-    public void write(JsonGenerator jg, DocumentModel doc) throws IOException {
-      // TODO: Retrieve the CoreSession from the DocumentModel object
-
-      // TODO: Retrieve the CoreSession from the DocumentModel object
-
-      // TODO: Use the JsonGenerator object to write a field with the enricher name
-
-      // TODO: Use the JsonGenerator object to write an object with the last document version
-
-    }
-}
-```
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td colspan="2">*CREATE THE CONTENT ENRICHER*</td>
+      </tr>
+      <tr>
+        <td>**1**</td>
+        <td>
+          Download <a href="{{file name='LastVersionEnricher.java'}}" download>LastVersionEnricher.java</a> or open in another tab to copy and add to your project.
+        </td>
+      </tr>
+      <tr>
+        <td>**2**</td>
+        <td>In the Java class, retrieve the `CoreSession` from the `DocumentModel` object.</td>
+      </tr>
+      <tr>
+        <td>**3**</td>
+        <td>Retrieve the last document version from the `CoreSession`.</td>
+      </tr>
+      <tr>
+        <td>**4**</td>
+        <td>Use the `JsonGenerator` object to write a field with the enricher name.</td>
+      </tr>
+      <tr>
+        <td>**5**</td>
+        <td>Use the `JsonGenerator` object to write an object with the last document version</td>
+      </tr>
+      <tr>
+        <td colspan="2">*DECLARE THE CONTENT ENRICHER*</td>
+      </tr>
+      <tr>
+        <td>**6**</td>
+        <td>
+          Declare the content enricher through Nuxeo Studio, or by adding an XML file in your Java project's `src/main/resources/OSGI-INF` folder. <a href="{{file name='sample.xml'}}" download>Here is a sample.</a>
+        </td>
+      </tr>
+      <tr>
+        <td>**7**</td>
+        <td>
+          If you declare it in your Java project, make sure to reference it in the project's `manifest.mf` file in the `src/main/resources/META-INF` folder, in the `Nuxeo-Component` list:<br /><br />
+          **Manifest.mf Extract**
+          <pre>... Nuxeo-Component:OSGI-INF/org.nuxeo.sample.enrichers.parentDocEnricher.xml,OSGI-INF/org.nuxeo.sample.another-contribution.xml, ...</pre>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">*CALL THE CONTENT ENRICHER*</td>
+      </tr>
+      <tr>
+        <td>**8**</td>
+        <td>[Package and deploy your application](https://university.nuxeo.io/nuxeo/university/#!/course/nuxeo-platform-developer-basics/package-deploy-application).</td>
+      </tr>
+      <tr>
+        <td>**9**</td>
+        <td>Under the **Transitions** tab, add the `ValidateDocumentChain` to the `validate` transition, then **Save**.</td>
+      </tr>
+      <tr>
+        <td>**10**</td>
+        <td>Add your transitions to the graph, then **Save** your workflow.</td>
+      </tr>
+      <tr>
+        <td colspan="2">*LAUNCH THE WORKFLOW USING JS CLIENT*</td>
+      </tr>
+        <td>**11**</td>
+        <td>
+          Download <a href="{{file name='workflows.js'}}" download>workflows.js</a> or open in another tab to copy and paste.
+        </td>
+      </tr>
+      <tr>
+        <td>**12**</td>
+        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL.</td>
+      </tr>
+      <tr>
+        <td>**13**</td>
+        <td>Create an object containing the ID(s) of the document(s) to attach.</td>
+      </tr>
+      <tr>
+        <td>**14**</td>
+        <td>Start the workflow, passing in the object, then call `getWfTasks` method.</td>
+      </tr>
+      <tr>
+        <td>**15**</td>
+        <td>Retrieve the workflow tasks and call the `completeWfTasks` method.</td>
+      </tr>
+      <tr>
+        <td>**16**</td>
+        <td>Iterate through the tasks, presuming that the user adds a `validationComment` and clicks the validate button.</td>
+      </tr>
+      <tr>
+        <td>**17**</td>
+        <td>Call the `asserResult` method.</td>
+      </tr>
+      <tr>
+        <td>**18**</td>
+        <td>
+          When your code is ready, run it with the following command:<br /><br />
+          <pre style="min-width: 700px; max-width: 700px">node workflows.js</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 {{#> accordian heading='Solution' closed='true'}}
 
-```
+```java
 package org.nuxeo.sample;
 import static org.nuxeo.ecm.core.io.registry.reflect.Instantiations.SINGLETON;
 import static org.nuxeo.ecm.core.io.registry.reflect.Priorities.REFERENCE;
@@ -1367,28 +3022,12 @@ public class LastVersionEnricher extends AbstractJsonEnricher<DocumentModel> {
 
 {{/accordian}}
 
-### Declare the Content Enricher
-
-Declaring a content enricher is done through an XML component. You can declare it through Nuxeo Studio, or by adding an XML file in your Java project's `src/main/resources/OSGI-INF` folder. Here is a sample:
-
-{{{multiexcerpt 'enricher-contrib' page='Content Enricher'}}}
-
-If you declare it in your Java project, make sure to reference it in the project's `manifest.mf` file in the `src/main/resources/META-INF` folder, into the `Nuxeo-Component` list:
-
-{{#> panel type='code' heading='Manifest.mf File Extract'}}
-
-```text
-...
-Nuxeo-Component:OSGI-INF/org.nuxeo.sample.enrichers.parentDocEnricher.xml,OSGI-INF/org.nuxeo.sample.another-contribution.xml,...
-```
-
-{{/panel}}
 
 Now you can declare yours!
 
-**Your goals**
+**In this exercise you will...**
 
-Declare your content enricher.
+*   Declare your content enricher.
 
 **What you need to do**
 
