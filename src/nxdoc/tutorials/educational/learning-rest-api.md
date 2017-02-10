@@ -1,7 +1,7 @@
 ---
 title: Learning REST API
 review:
-    comment: 'Separate pages'
+    comment: ''
     date: '2017-02-20'
     status: ok
 labels:
@@ -99,46 +99,32 @@ next_link: /nxdoc/learning-rest-api-prerequisites
 
 ---
 
-{{! multiexcerpt name='REST_API_tuto'}}
 
-This tutorial teaches you how to use Nuxeo REST API using Nuxeo JavaScript Client. The tutorial is organised as follows:
+This tutorial teaches you how to use Nuxeo REST API using Nuxeo JavaScript Client. The tutorial is organized as follows:
 
-1.  [Prerequisites]({{page page='learning-rest-api-prerequisites'}})
-
+1.  [Prerequisites]({{page page='learning-rest-api-prerequisites'}})<br/>
 Everything you need to succeed in this tutorial, and more.
 
-2.  [REST API Principles]({{page page='rest-api-principles'}})
-
+2.  [REST API Principles]({{page page='rest-api-principles'}})<br/>
 An introduction to REST API with some simple call examples.
 
-3.  [Define a CORS Configuration]({{page page='define-a-cors-configuration'}})
-
+3.  [Define a CORS Configuration]({{page page='define-a-cors-configuration'}})<br/>
 Modify and test your CORS configuration.
 
-4.  [JavaScript Client Example]({{page page='javascript-client-example'}})
-
-An introduction to Nuxeo JavaScript Client.
-
-5.  [Log into Nuxeo Platform]({{page page='log-into-nuxeo-platform'}})
-
+4.  [Log into Nuxeo Platform]({{page page='log-into-nuxeo-platform'}})<br/>
 Authenticate Nuxeo using the REST API.
 
-6.  [Manipulate Documents]({{page page='manipulate-documents'}})
-
+5.  [Manipulate Documents]({{page page='manipulate-documents'}})<br/>
 Create, Read, Edit and Delete Nuxeo documents.
 
-7.  [Query and Search]({{page page='query-and-search'}})
-
+6.  [Query and Search]({{page page='query-and-search'}})<br/>
 Perform searches and queries on your Nuxeo repository.
 
-8.  [Execute Business Logic Through Automation]({{page page='execute-business-logic-through-automation'}})
-
+7.  [Execute Business Logic Through Automation]({{page page='execute-business-logic-through-automation'}})<br/>
 Create and launch an automation script.
 
-9.  [Launch a Workflow]({{page page='launch-a-workflow'}})
-
+8.  [Launch a Workflow]({{page page='launch-a-workflow'}})<br/>
 Create and launch a workflow.
 
-10. [Bonus - Contribute Your Own Enricher]({{page page='bonus-contribute-your-own-enricher'}})
-
+9. [Bonus - Contribute Your Own Enricher]({{page page='bonus-contribute-your-own-enricher'}})<br/>
 Create and call your own enricher.
