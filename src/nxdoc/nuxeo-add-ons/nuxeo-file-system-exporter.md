@@ -9,17 +9,6 @@ labels:
     - multiexcerpt-include
     - lts2016-ok
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+File+System+Exporter
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+File+System+Exporter'
-    page_id: '27099585'
-    shortlink: wYGdAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/wYGdAQ'
-    source_link: /display/NXDOC/Nuxeo+File+System+Exporter
 tree_item_index: 1700
 history:
     -

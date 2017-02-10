@@ -10,17 +10,6 @@ labels:
     - link-update
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '16089319'
-    ajs-parent-page-title: Additional Services
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Transient+Store
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Transient+Store'
-    page_id: '27592193'
-    shortlink: AQalAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/AQalAQ'
-    source_link: /display/NXDOC/Transient+Store
 tree_item_index: 1200
 history:
     -

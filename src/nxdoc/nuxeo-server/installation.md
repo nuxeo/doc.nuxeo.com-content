@@ -9,20 +9,9 @@ labels:
     - multiexcerpt
     - multiexcerpt-include
 toc: false
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Installation
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Installation'
-    page_id: '3866685'
-    shortlink: PQA7
-    shortlink_source: 'https://doc.nuxeo.com/x/PQA7'
-    source_link: /display/NXDOC/Installation
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/admindoc/installation
+    LTS 2015: 710/admindoc/installation
     '6.0': 60/admindoc/installation
     '5.8': 58/admindoc/installation
 history:

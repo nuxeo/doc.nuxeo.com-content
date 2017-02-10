@@ -10,20 +10,9 @@ labels:
     - oracle
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '3342340'
-    ajs-parent-page-title: Database Configuration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Oracle
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Oracle'
-    page_id: '3867083'
-    shortlink: ywE7
-    shortlink_source: 'https://doc.nuxeo.com/x/ywE7'
-    source_link: /display/NXDOC/Oracle
 tree_item_index: 200
 version_override:
-    'LTS 2015': 710/admindoc/oracle
+    LTS 2015: 710/admindoc/oracle
     '6.0': 60/admindoc/configuring-oracle
     '5.8': 58/admindoc/configuring-oracle
 history:

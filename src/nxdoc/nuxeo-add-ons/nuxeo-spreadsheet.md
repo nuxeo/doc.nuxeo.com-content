@@ -10,17 +10,6 @@ labels:
     - spreadsheet-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Spreadsheet
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Spreadsheet'
-    page_id: '20518099'
-    shortlink: 0xQ5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/0xQ5AQ'
-    source_link: /display/NXDOC/Nuxeo+Spreadsheet
 tree_item_index: 2700
 history:
     -

@@ -15,17 +15,6 @@ labels:
     - howto
     - jsf
     - seam-jsf-component
-confluence:
-    ajs-parent-page-id: '9830458'
-    ajs-parent-page-title: JSF and Ajax Tips and How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Register+a+JSF+Tag+Library
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Register+a+JSF+Tag+Library'
-    page_id: '3343544'
-    shortlink: uAQz
-    shortlink_source: 'https://doc.nuxeo.com/x/uAQz'
-    source_link: /display/NXDOC/How+to+Register+a+JSF+Tag+Library
 tree_item_index: 600
 history:
     -

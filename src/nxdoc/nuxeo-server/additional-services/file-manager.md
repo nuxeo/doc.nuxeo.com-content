@@ -11,17 +11,6 @@ labels:
     - excerpt
     - link-update
 toc: true
-confluence:
-    ajs-parent-page-id: '16089319'
-    ajs-parent-page-title: Additional Services
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: File+Manager
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/File+Manager'
-    page_id: '19235627'
-    shortlink: K4MlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/K4MlAQ'
-    source_link: /display/NXDOC/File+Manager
 tree_item_index: 100
 history:
     -

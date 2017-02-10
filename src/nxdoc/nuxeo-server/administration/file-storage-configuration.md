@@ -11,20 +11,9 @@ labels:
     - blob-manager-component
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: File+Storage+Configuration
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/File+Storage+Configuration'
-    page_id: '25691018'
-    shortlink: igOIAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/igOIAQ'
-    source_link: /display/NXDOC/File+Storage+Configuration
 tree_item_index: 800
 version_override:
-    'LTS 2015': 710/admindoc/blob-storage-configuration
+    LTS 2015: 710/admindoc/blob-storage-configuration
 history:
     -
         author: Alain Escaffre
@@ -124,7 +113,7 @@ history:
     -
         author: Florent Guillaume
         date: '2015-06-23 13:01'
-        message: "link to DefaultBinaryManager\uFEFF page"
+        message: link to DefaultBinaryManager﻿ page
         version: '2'
     -
         author: Florent Guillaume

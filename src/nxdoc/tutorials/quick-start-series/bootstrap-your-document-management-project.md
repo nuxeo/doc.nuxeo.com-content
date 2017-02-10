@@ -8,18 +8,6 @@ labels:
     - content-review-lts2016
     - bootstrap
 toc: true
-confluence:
-    ajs-parent-page-id: '19235677'
-    ajs-parent-page-title: Quick Start Series
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Bootstrap+Your+Document+Management+Project
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Bootstrap+Your+Document+Management+Project
-    page_id: '14256955'
-    shortlink: O4vZ
-    shortlink_source: 'https://doc.nuxeo.com/x/O4vZ'
-    source_link: /display/NXDOC/Bootstrap+Your+Document+Management+Project
 tree_item_index: 100
 history:
     -
@@ -85,7 +73,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-07-10 09:38'
-        message: fixes double "you have" string
+        message: 'fixes double "you have" string'
         version: '17'
     -
         author: Solen Guitter

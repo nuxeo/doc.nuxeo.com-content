@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to activate the UI development mode to get details about
-            elements in the UI.
+        excerpt: Learn how to activate the UI development mode to get details about elements in the UI.
         level: Beginner
         tool: Code
         topics: JSF UI
@@ -16,17 +14,6 @@ labels:
     - content-review-lts2016
     - howto
     - seam-jsf-component
-confluence:
-    ajs-parent-page-id: '20517820'
-    ajs-parent-page-title: JSF UI How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Activate+UI+Development+Mode
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Activate+UI+Development+Mode'
-    page_id: '20518239'
-    shortlink: XxU5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/XxU5AQ'
-    source_link: /display/NXDOC/How+to+Activate+UI+Development+Mode
 tree_item_index: 800
 history:
     -
@@ -37,7 +24,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2015-12-08 11:17'
-        message: change level to "Beginner"
+        message: 'change level to "Beginner"'
         version: '4'
     -
         author: Manon Lumeau

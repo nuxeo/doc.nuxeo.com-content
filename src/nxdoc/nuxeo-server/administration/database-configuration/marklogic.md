@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - link-update
 toc: true
-confluence:
-    ajs-parent-page-id: '3342340'
-    ajs-parent-page-title: Database Configuration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: MarkLogic
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/MarkLogic'
-    page_id: '31687905'
-    shortlink: 4YTjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/4YTjAQ'
-    source_link: /display/NXDOC/MarkLogic
 tree_item_index: 600
 history:
     -

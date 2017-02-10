@@ -10,17 +10,6 @@ labels:
     - link-update
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '950332'
-    ajs-parent-page-title: Developer Documentation Center
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Contributing+to+Nuxeo
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Contributing+to+Nuxeo'
-    page_id: '4687444'
-    shortlink: VIZH
-    shortlink_source: 'https://doc.nuxeo.com/x/VIZH'
-    source_link: /display/NXDOC/Contributing+to+Nuxeo
 tree_item_index: 700
 history:
     -

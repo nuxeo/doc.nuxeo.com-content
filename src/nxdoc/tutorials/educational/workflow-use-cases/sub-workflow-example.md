@@ -10,17 +10,6 @@ labels:
     - subworkflow
     - sub-workflow
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235786'
-    ajs-parent-page-title: Workflow Use Cases
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Sub+Workflow+Example
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Sub+Workflow+Example'
-    page_id: '14257562'
-    shortlink: mo3Z
-    shortlink_source: 'https://doc.nuxeo.com/x/mo3Z'
-    source_link: /display/NXDOC/Sub+Workflow+Example
 tree_item_index: 200
 history:
     -

@@ -10,17 +10,6 @@ labels:
     - url-codec-component
     - blob-manager-component
     - multiexcerpt
-confluence:
-    ajs-parent-page-id: '7209351'
-    ajs-parent-page-title: Navigation URLs
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: URLs+for+Files
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/URLs+for+Files'
-    page_id: '3343546'
-    shortlink: ugQz
-    shortlink_source: 'https://doc.nuxeo.com/x/ugQz'
-    source_link: /display/NXDOC/URLs+for+Files
 tree_item_index: 200
 history:
     -

@@ -11,17 +11,6 @@ labels:
     - webengine
     - webengine-component
 toc: true
-confluence:
-    ajs-parent-page-id: '950281'
-    ajs-parent-page-title: WebEngine (JAX-RS)
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Session+and+Transaction+Management
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Session+and+Transaction+Management'
-    page_id: '4685871'
-    shortlink: L4BH
-    shortlink_source: 'https://doc.nuxeo.com/x/L4BH'
-    source_link: /display/NXDOC/Session+and+Transaction+Management
 tree_item_index: 200
 history:
     -

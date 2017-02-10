@@ -7,17 +7,6 @@ review:
 labels:
     - lts2016-ok
     - index
-confluence:
-    ajs-parent-page-id: '3345941'
-    ajs-parent-page-title: Content Views
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Content+View+How-To+Index
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Content+View+How-To+Index'
-    page_id: '19235663'
-    shortlink: T4MlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/T4MlAQ'
-    source_link: /display/NXDOC/Content+View+How-To+Index
 tree_item_index: 200
 history:
     -

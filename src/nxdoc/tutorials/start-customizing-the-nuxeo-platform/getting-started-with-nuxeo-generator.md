@@ -17,19 +17,8 @@ labels:
     - lts2016-ok
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/getting-started-with-nuxeo-ide
+    LTS 2015: 710/nxdoc/getting-started-with-nuxeo-ide
     '6.0': 60/nxdoc/getting-started-with-nuxeo-ide
-confluence:
-    ajs-parent-page-id: '14256538'
-    ajs-parent-page-title: Start Customizing the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Getting+Started+with+Nuxeo+IDE
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Getting+Started+with+Nuxeo+IDE'
-    page_id: '20518158'
-    shortlink: DhU5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/DhU5AQ'
-    source_link: /display/NXDOC/Getting+Started+with+Nuxeo+IDE
 tree_item_index: 200
 history:
     -

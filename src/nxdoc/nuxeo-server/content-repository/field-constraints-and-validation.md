@@ -9,17 +9,6 @@ labels:
     - link-update
     - schema-component
 toc: true
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Field+Constraints+and+Validation
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Field+Constraints+and+Validation'
-    page_id: '23363784'
-    shortlink: yIBkAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/yIBkAQ'
-    source_link: /display/NXDOC/Field+Constraints+and+Validation
 tree_item_index: 300
 history:
     -

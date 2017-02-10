@@ -7,18 +7,6 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '29460589'
-    ajs-parent-page-title: Getting Started with the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Setting+up+Your+JavaScript+Environment
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Setting+up+Your+JavaScript+Environment
-    page_id: '31034604'
-    shortlink: 7IzZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/7IzZAQ'
-    source_link: /display/NXDOC/Setting+up+Your+JavaScript+Environment
 tree_item_index: 200
 history:
     -
@@ -154,7 +142,7 @@ history:
     -
         author: Bertrand Chauvin
         date: '2016-07-18 15:03'
-        message: the Nuxeo Platform => Nuxeo Platform
+        message: 'the Nuxeo Platform => Nuxeo Platform'
         version: '13'
     -
         author: Bertrand Chauvin

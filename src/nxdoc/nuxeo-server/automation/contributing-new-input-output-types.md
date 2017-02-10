@@ -10,17 +10,6 @@ labels:
     - marshalling
     - automation-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '18451738'
-    ajs-parent-page-title: Automation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Contributing+New+Input-Output+Types
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Contributing+New+Input-Output+Types'
-    page_id: '18451679'
-    shortlink: 34wZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/34wZAQ'
-    source_link: /display/NXDOC/Contributing+New+Input-Output+Types
 tree_item_index: 1100
 history:
     -

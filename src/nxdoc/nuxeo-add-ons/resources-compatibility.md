@@ -7,17 +7,6 @@ review:
 labels:
     - content-review-lts2016
     - resources-compatibility
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Resources+Compatibility
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Resources+Compatibility'
-    page_id: '17793214'
-    shortlink: voAPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/voAPAQ'
-    source_link: /display/NXDOC/Resources+Compatibility
 tree_item_index: 3000
 history:
     -

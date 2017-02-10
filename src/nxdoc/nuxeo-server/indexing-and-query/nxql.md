@@ -10,17 +10,6 @@ labels:
     - query
     - query-pageprovider-component
 toc: true
-confluence:
-    ajs-parent-page-id: '4687860'
-    ajs-parent-page-title: Indexing and Query
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: NXQL
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/NXQL'
-    page_id: '4688824'
-    shortlink: uItH
-    shortlink_source: 'https://doc.nuxeo.com/x/uItH'
-    source_link: /display/NXDOC/NXQL
 tree_item_index: 100
 history:
     -
@@ -51,9 +40,7 @@ history:
     -
         author: Benoit Delbosc
         date: '2015-10-30 13:33'
-        message: >-
-            Since 7.10 the STARTSWITH for ES requires an explicit mapping and it
-            behaves like in VCS
+        message: Since 7.10 the STARTSWITH for ES requires an explicit mapping and it behaves like in VCS
         version: '81'
     -
         author: Bertrand Chauvin
@@ -78,9 +65,7 @@ history:
     -
         author: Michael J. Urbonas
         date: '2015-06-26 17:31'
-        message: >-
-            Added links to GeoQuery filters as listed in NXP-17127 JIRA ticket
-            along with a couple of GeoQuery code examples
+        message: Added links to GeoQuery filters as listed in NXP-17127 JIRA ticket along with a couple of GeoQuery code examples
         version: '76'
     -
         author: Harlan Brown
@@ -395,9 +380,7 @@ history:
     -
         author: Solen Guitter
         date: '2012-05-16 16:43'
-        message: >-
-            replaced interpreted backslash with \ so they are correctly
-            displayed
+        message: "replaced interpreted backslash with \\ so they are correctly displayed"
         version: '13'
     -
         author: Florent Guillaume

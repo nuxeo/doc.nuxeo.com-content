@@ -9,17 +9,6 @@ labels:
     - tags
     - tagging-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089319'
-    ajs-parent-page-title: Additional Services
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Tagging
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Tagging'
-    page_id: '4688925'
-    shortlink: HYxH
-    shortlink_source: 'https://doc.nuxeo.com/x/HYxH'
-    source_link: /display/NXDOC/Tagging
 tree_item_index: 600
 history:
     -

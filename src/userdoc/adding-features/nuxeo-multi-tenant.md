@@ -10,17 +10,6 @@ labels:
     - multi-tenant
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '11043055'
-    ajs-parent-page-title: Adding Features
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Nuxeo+Multi-Tenant
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Multi-Tenant'
-    page_id: '11043208'
-    shortlink: iIGo
-    shortlink_source: 'https://doc.nuxeo.com/x/iIGo'
-    source_link: /display/USERDOC/Nuxeo+Multi-Tenant
 tree_item_index: 1000
 history:
     -
@@ -71,9 +60,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-11-04 23:45'
-        message: >-
-            Removed related topics from TOC and added precision about members
-            group being optional
+        message: Removed related topics from TOC and added precision about members group being optional
         version: '18'
     -
         author: Solen Guitter

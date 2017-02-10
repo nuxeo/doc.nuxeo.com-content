@@ -7,22 +7,9 @@ review:
 labels:
     - lts2016-ok
     - multiexcerpt
-confluence:
-    ajs-parent-page-id: '18449457'
-    ajs-parent-page-title: Upgrade from 5.3.2 to 5.4.0
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: From+the+old+workflow+system+to+the+new+5.4+workflow+system
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/From+the+old+workflow+system+to+the+new+5.4+workflow+system
-    page_id: '14255842'
-    shortlink: 4obZ
-    shortlink_source: 'https://doc.nuxeo.com/x/4obZ'
-    source_link: >-
-        /display/NXDOC/From+the+old+workflow+system+to+the+new+5.4+workflow+system
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/admindoc/from-the-old-workflow-system-to-the-new-54-workflow-system
+    LTS 2015: 710/admindoc/from-the-old-workflow-system-to-the-new-54-workflow-system
     '6.0': 60/admindoc/from-the-old-workflow-system-to-the-new-54-workflow-system
     '5.8': 58/admindoc/from-the-old-workflow-system-to-the-new-54-workflow-system
 history:

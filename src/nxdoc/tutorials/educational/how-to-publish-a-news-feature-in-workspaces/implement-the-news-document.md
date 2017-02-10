@@ -9,17 +9,6 @@ labels:
     - tuto-document-type
     - tuto-user-action
 toc: true
-confluence:
-    ajs-parent-page-id: '4689520'
-    ajs-parent-page-title: How to Publish a News Feature in Workspaces
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Implement+the+News+Document
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Implement+the+News+Document'
-    page_id: '5570669'
-    shortlink: bQBV
-    shortlink_source: 'https://doc.nuxeo.com/x/bQBV'
-    source_link: /display/NXDOC/Implement+the+News+Document
 tree_item_index: 100
 history:
     -

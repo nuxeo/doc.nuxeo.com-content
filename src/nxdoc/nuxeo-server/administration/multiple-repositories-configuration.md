@@ -7,20 +7,9 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Multiple+Repositories+Configuration
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Multiple+Repositories+Configuration'
-    page_id: '24053303'
-    shortlink: NwZvAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/NwZvAQ'
-    source_link: /display/NXDOC/Multiple+Repositories+Configuration
 tree_item_index: 1200
 version_override:
-    'LTS 2015': 710/admindoc/multiple-repositories-configuration
+    LTS 2015: 710/admindoc/multiple-repositories-configuration
     '6.0': 60/admindoc/multiple-repositories-configuration
 history:
     -
@@ -31,7 +20,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2016-08-22 13:20'
-        message: Fixes "blockTimeoutMillis" -> "blockingTimeoutMillis"
+        message: 'Fixes "blockTimeoutMillis" -> "blockingTimeoutMillis"'
         version: '11'
     -
         author: Manon Lumeau

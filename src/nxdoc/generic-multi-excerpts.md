@@ -7,17 +7,6 @@ review:
 labels:
     - lts2016-ok
     - multiexcerpt
-confluence:
-    ajs-parent-page-id: ''
-    ajs-parent-page-title: ''
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Generic+Multi-Excerpts
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Generic+Multi-Excerpts'
-    page_id: '20520186'
-    shortlink: _hw5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/_hw5AQ'
-    source_link: /display/NXDOC/Generic+Multi-Excerpts
 hidden: true
 history:
     -

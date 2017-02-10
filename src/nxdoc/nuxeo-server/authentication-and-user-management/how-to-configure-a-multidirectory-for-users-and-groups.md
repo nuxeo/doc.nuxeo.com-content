@@ -6,8 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            This page provides a turnkey solution to configure a multidirectory.
+        excerpt: This page provides a turnkey solution to configure a multidirectory.
         level: Intermediate
         tool: XML configuration
         topics: 'LDAP, Multidirectory'
@@ -18,18 +17,6 @@ labels:
     - directory-component
     - migration-sample
     - excerpt
-confluence:
-    ajs-parent-page-id: '16089115'
-    ajs-parent-page-title: Authentication and User Management
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Configure+a+Multidirectory+for+Users+and+Groups
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Configure+a+Multidirectory+for+Users+and+Groups
-    page_id: '19793819'
-    shortlink: mwcuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/mwcuAQ'
-    source_link: /display/NXDOC/How+to+Configure+a+Multidirectory+for+Users+and+Groups
 tree_item_index: 500
 history:
     -

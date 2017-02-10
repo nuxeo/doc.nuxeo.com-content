@@ -9,17 +9,6 @@ labels:
     - link-update
     - home
     - excerpt
-confluence:
-    ajs-parent-page-id: '950330'
-    ajs-parent-page-title: 'Layouts and Widgets (Forms, Listings, Grids)'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Layout+and+Widget+Definitions
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Layout+and+Widget+Definitions'
-    page_id: '3868333'
-    shortlink: rQY7
-    shortlink_source: 'https://doc.nuxeo.com/x/rQY7'
-    source_link: /display/NXDOC/Layout+and+Widget+Definitions
 tree_item_index: 100
 history:
     -

@@ -15,18 +15,6 @@ labels:
     - howto
     - layout
 toc: true
-confluence:
-    ajs-parent-page-id: '20517820'
-    ajs-parent-page-title: JSF UI How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Customize+the+Bulk+Import+Form
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Customize+the+Bulk+Import+Form
-    page_id: '20517980'
-    shortlink: XBQ5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/XBQ5AQ'
-    source_link: /display/NXDOC/How+to+Customize+the+Bulk+Import+Form
 tree_item_index: 1200
 history:
     -

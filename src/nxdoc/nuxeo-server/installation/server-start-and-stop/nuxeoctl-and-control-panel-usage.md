@@ -11,19 +11,8 @@ labels:
     - nuxeolauncher
     - bootstrap-component
 toc: true
-confluence:
-    ajs-parent-page-id: '6030087'
-    ajs-parent-page-title: Server Start and Stop
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: nuxeoctl+and+Control+Panel+Usage
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/nuxeoctl+and+Control+Panel+Usage'
-    page_id: '6030103'
-    shortlink: FwNc
-    shortlink_source: 'https://doc.nuxeo.com/x/FwNc'
-    source_link: /display/NXDOC/nuxeoctl+and+Control+Panel+Usage
 version_override:
-    'LTS 2015': 710/admindoc/nuxeoctl-and-control-panel-usage
+    LTS 2015: 710/admindoc/nuxeoctl-and-control-panel-usage
     '6.0': 60/admindoc/nuxeoctl-and-control-panel-usage
     '5.8': 58/admindoc/nuxeoctl-and-control-panel-usage
 history:
@@ -185,12 +174,12 @@ history:
     -
         author: Julien Carsique
         date: '2012-06-01 17:20'
-        message: NXP-9408 - add 'dc' option
+        message: "NXP-9408 - add 'dc' option"
         version: '18'
     -
         author: Julien Carsique
         date: '2012-05-31 12:20'
-        message: NXP-9268 - new mp-* commands and options
+        message: 'NXP-9268 - new mp-* commands and options'
         version: '17'
     -
         author: Mathieu Guillaume

@@ -20,17 +20,6 @@ labels:
     - seam-jsf-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '9830458'
-    ajs-parent-page-title: JSF and Ajax Tips and How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Ajax+Forms+and+Actions
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Ajax+Forms+and+Actions'
-    page_id: '9830468'
-    shortlink: RACW
-    shortlink_source: 'https://doc.nuxeo.com/x/RACW'
-    source_link: /display/NXDOC/Ajax+Forms+and+Actions
 tree_item_index: 200
 history:
     -

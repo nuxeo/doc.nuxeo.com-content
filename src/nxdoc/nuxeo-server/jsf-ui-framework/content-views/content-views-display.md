@@ -10,17 +10,6 @@ labels:
     - content-views-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3345941'
-    ajs-parent-page-title: Content Views
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Content+Views+Display
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Content+Views+Display'
-    page_id: '20520058'
-    shortlink: ehw5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/ehw5AQ'
-    source_link: /display/NXDOC/Content+Views+Display
 tree_item_index: 100
 history:
     -
@@ -41,9 +30,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2014-12-05 19:11'
-        message: >-
-            NXDOC-222: finish doc about cv selection actions + mention bad
-            practice about template override
+        message: 'NXDOC-222: finish doc about cv selection actions + mention bad practice about template override'
         version: '10'
     -
         author: Anahide Tchertchian

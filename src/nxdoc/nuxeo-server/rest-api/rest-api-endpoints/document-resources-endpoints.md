@@ -10,17 +10,6 @@ labels:
     - rest-api
     - rest-api-component
 toc: true
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Document+Resources+Endpoints
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Document+Resources+Endpoints'
-    page_id: '17793413'
-    shortlink: hYEPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/hYEPAQ'
-    source_link: /display/NXDOC/Document+Resources+Endpoints
 tree_item_index: 100
 history:
     -

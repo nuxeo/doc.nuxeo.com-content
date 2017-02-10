@@ -9,17 +9,6 @@ labels:
     - worklist
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Exporting+Documents
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Exporting+Documents'
-    page_id: '9830819'
-    shortlink: owGW
-    shortlink_source: 'https://doc.nuxeo.com/x/owGW'
-    source_link: /display/USERDOC/Exporting+Documents
 tree_item_index: 1500
 history:
     -

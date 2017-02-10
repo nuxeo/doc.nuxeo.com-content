@@ -1,5 +1,5 @@
 ---
-title: Implement the News "Publishing" Process
+title: 'Implement the News "Publishing" Process'
 review:
     comment: ''
     date: '2016-12-19'
@@ -10,17 +10,6 @@ labels:
     - tuto-permission
     - tuto-user-action
 toc: true
-confluence:
-    ajs-parent-page-id: '4689520'
-    ajs-parent-page-title: How to Publish a News Feature in Workspaces
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=5570674
-    canonical_source: viewpage.action?pageId=5570674
-    page_id: '5570674'
-    shortlink: cgBV
-    shortlink_source: 'https://doc.nuxeo.com/x/cgBV'
-    source_link: /pages/viewpage.action?pageId=5570674
 tree_item_index: 300
 history:
     -

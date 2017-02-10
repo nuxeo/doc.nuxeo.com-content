@@ -9,17 +9,6 @@ labels:
     - 3d
     - threed
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+3D
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+3D'
-    page_id: '31690918'
-    shortlink: ppDjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/ppDjAQ'
-    source_link: /display/NXDOC/Nuxeo+3D
 tree_item_index: 3700
 history:
     -

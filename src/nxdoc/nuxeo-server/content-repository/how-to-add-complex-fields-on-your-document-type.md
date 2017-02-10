@@ -18,18 +18,6 @@ labels:
     - studio
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Add+Complex+Fields+on+Your+Document+Type
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Add+Complex+Fields+on+Your+Document+Type
-    page_id: '8684439'
-    shortlink: l4OE
-    shortlink_source: 'https://doc.nuxeo.com/x/l4OE'
-    source_link: /display/NXDOC/How+to+Add+Complex+Fields+on+Your+Document+Type
 tree_item_index: 1200
 history:
     -

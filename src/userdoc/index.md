@@ -5,17 +5,6 @@ review:
     date: '2017-01-25'
     status: ok
 is_overview: true
-confluence:
-    ajs-parent-page-id: ''
-    ajs-parent-page-title: ''
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Nuxeo+Platform+User+Documentation
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Platform+User+Documentation'
-    page_id: '11043048'
-    shortlink: 6ICo
-    shortlink_source: 'https://doc.nuxeo.com/x/6ICo'
-    source_link: /display/USERDOC/Nuxeo+Platform+User+Documentation
 section_parent: user-documentation
 history:
     -

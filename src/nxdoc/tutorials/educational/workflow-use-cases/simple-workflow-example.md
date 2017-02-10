@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '19235786'
-    ajs-parent-page-title: Workflow Use Cases
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Simple+Workflow+Example
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Simple+Workflow+Example'
-    page_id: '12915754'
-    shortlink: KhTF
-    shortlink_source: 'https://doc.nuxeo.com/x/KhTF'
-    source_link: /display/NXDOC/Simple+Workflow+Example
 tree_item_index: 100
 history:
     -

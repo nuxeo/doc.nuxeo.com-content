@@ -9,17 +9,6 @@ labels:
     - link-update
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Vision
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Vision'
-    page_id: '31031613'
-    shortlink: PYHZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/PYHZAQ'
-    source_link: /display/NXDOC/Nuxeo+Vision
 tree_item_index: 2900
 history:
     -

@@ -5,9 +5,7 @@ review:
     date: '2016-12-19'
 details:
     howto:
-        excerpt: >-
-            This how-to explains the different steps to create and configure an
-            automation chain using Nuxeo Studio.
+        excerpt: This how-to explains the different steps to create and configure an automation chain using Nuxeo Studio.
         level: Beginner
         tool: Studio
         topics: 'Automation, Event handler, User action'
@@ -19,17 +17,6 @@ labels:
     - event-handler
     - studio
 toc: true
-confluence:
-    ajs-parent-page-id: '19235642'
-    ajs-parent-page-title: Automation How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Create+an+Automation+Chain
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Create+an+Automation+Chain'
-    page_id: '1409188'
-    shortlink: pIAV
-    shortlink_source: 'https://doc.nuxeo.com/x/pIAV'
-    source_link: /display/NXDOC/How+to+Create+an+Automation+Chain
 tree_item_index: 100
 history:
     -

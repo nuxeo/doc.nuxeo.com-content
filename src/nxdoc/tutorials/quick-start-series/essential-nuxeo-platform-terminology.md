@@ -10,17 +10,6 @@ labels:
     - excerpt
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '19235677'
-    ajs-parent-page-title: Quick Start Series
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Essential+Nuxeo+Platform+Terminology
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Essential+Nuxeo+Platform+Terminology'
-    page_id: '19793736'
-    shortlink: SAcuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/SAcuAQ'
-    source_link: /display/NXDOC/Essential+Nuxeo+Platform+Terminology
 tree_item_index: 300
 history:
     -

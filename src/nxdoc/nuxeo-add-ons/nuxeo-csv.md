@@ -12,17 +12,6 @@ labels:
     - nuxeo-csv
     - csv-importer-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+CSV
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+CSV'
-    page_id: '14255163'
-    shortlink: O4TZ
-    shortlink_source: 'https://doc.nuxeo.com/x/O4TZ'
-    source_link: /display/NXDOC/Nuxeo+CSV
 tree_item_index: 1200
 history:
     -
@@ -93,7 +82,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-10-13 13:54'
-        message: Basic import now heading3 => appears in TOC
+        message: 'Basic import now heading3 => appears in TOC'
         version: '21'
     -
         author: Ronan Daniellou
@@ -103,12 +92,12 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-10-13 13:39'
-        message: 1st -> first
+        message: '1st -> first'
         version: '19'
     -
         author: Ronan Daniellou
         date: '2015-10-13 13:38'
-        message: 1st -> first
+        message: '1st -> first'
         version: '18'
     -
         author: Solen Guitter

@@ -9,17 +9,6 @@ labels:
     - suggestion-search
     - quick-search
 toc: true
-confluence:
-    ajs-parent-page-id: '2392416'
-    ajs-parent-page-title: Searching the Nuxeo Platform
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Quick+Search
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Quick+Search'
-    page_id: '14255346'
-    shortlink: 8oTZ
-    shortlink_source: 'https://doc.nuxeo.com/x/8oTZ'
-    source_link: /display/USERDOC/Quick+Search
 tree_item_index: 200
 history:
     -

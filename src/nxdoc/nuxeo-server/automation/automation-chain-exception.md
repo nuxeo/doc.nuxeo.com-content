@@ -13,17 +13,6 @@ labels:
     - mvel
     - automation-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '18451738'
-    ajs-parent-page-title: Automation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Automation+Chain+Exception
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Automation+Chain+Exception'
-    page_id: '14942231'
-    shortlink: FwDk
-    shortlink_source: 'https://doc.nuxeo.com/x/FwDk'
-    source_link: /display/NXDOC/Automation+Chain+Exception
 tree_item_index: 800
 history:
     -

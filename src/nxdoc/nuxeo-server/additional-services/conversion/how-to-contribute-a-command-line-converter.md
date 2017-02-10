@@ -16,18 +16,6 @@ labels:
     - conversion
     - convert-component
 toc: true
-confluence:
-    ajs-parent-page-id: '19235645'
-    ajs-parent-page-title: Conversion
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Contribute+a+Command+Line+Converter
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+a+Command+Line+Converter
-    page_id: '22905742'
-    shortlink: joNdAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/joNdAQ'
-    source_link: /display/NXDOC/How+to+Contribute+a+Command+Line+Converter
 tree_item_index: 200
 history:
     -

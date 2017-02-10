@@ -9,17 +9,6 @@ labels:
     - faq
     - workflow
     - workflow-component
-confluence:
-    ajs-parent-page-id: '12913723'
-    ajs-parent-page-title: Workflow
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Workflow+Engine+FAQ
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Workflow+Engine+FAQ'
-    page_id: '11534725'
-    shortlink: hQGw
-    shortlink_source: 'https://doc.nuxeo.com/x/hQGw'
-    source_link: /display/NXDOC/Workflow+Engine+FAQ
 tree_item_index: 1200
 history:
     -
@@ -40,7 +29,7 @@ history:
     -
         author: Solen Guitter
         date: '2016-08-17 12:22'
-        message: Remove "since 5.7.2"
+        message: 'Remove "since 5.7.2"'
         version: '27'
     -
         author: Thibaud Arguillere

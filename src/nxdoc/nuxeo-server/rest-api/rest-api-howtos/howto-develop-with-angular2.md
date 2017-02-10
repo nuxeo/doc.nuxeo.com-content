@@ -1,5 +1,5 @@
 ---
-title: "HOWTO: Develop with Angular2"
+title: 'HOWTO: Develop with Angular2'
 review:
     comment: ''
     date: '2017-01-17'
@@ -15,18 +15,7 @@ labels:
     - excerpt
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/developing-with-angularjs/
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Developing+with+AngularJS
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Developing+with+AngularJS'
-    page_id: '25690834'
-    shortlink: 0gKIAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/0gKIAQ'
-    source_link: /display/NXDOC/Developing+with+AngularJS
+    LTS 2015: 710/nxdoc/developing-with-angularjs/
 tree_item_index: 300
 history:
     -

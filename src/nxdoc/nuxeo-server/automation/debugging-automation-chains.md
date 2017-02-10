@@ -10,17 +10,6 @@ labels:
     - trace
     - automation-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '18451738'
-    ajs-parent-page-title: Automation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Debugging+Automation+Chains
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Debugging+Automation+Chains'
-    page_id: '17794011'
-    shortlink: 24MPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/24MPAQ'
-    source_link: /display/NXDOC/Debugging+Automation+Chains
 tree_item_index: 900
 history:
     -

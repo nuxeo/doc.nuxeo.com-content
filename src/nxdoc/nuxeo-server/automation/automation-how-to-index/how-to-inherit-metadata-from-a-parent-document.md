@@ -6,12 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            In this how-to, we will implement an event handler that will listen
-            to the creation of documents. When the created document matches some
-            predefined criteria, the listener will execute a content automation
-            chain. The chain will copy the "source" metadata value from the
-            workspace to the created document.
+        excerpt: 'In this how-to, we will implement an event handler that will listen to the creation of documents. When the created document matches some predefined criteria, the listener will execute a content automation chain. The chain will copy the "source" metadata value from the workspace to the created document.'
         level: Beginner
         tool: Studio
         topics: 'Automation, Event handler'
@@ -24,20 +19,8 @@ labels:
     - excerpt
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/how-to-inherit-a-metadata-from-a-parent-document
+    LTS 2015: 710/nxdoc/how-to-inherit-a-metadata-from-a-parent-document
     '6.0': 60/nxdoc/how-to-inherit-a-metadata-from-a-parent-document
-confluence:
-    ajs-parent-page-id: '19235642'
-    ajs-parent-page-title: Automation How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Inherit+a+Metadata+from+a+Parent+Document
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Inherit+a+Metadata+from+a+Parent+Document
-    page_id: '1409312'
-    shortlink: IIEV
-    shortlink_source: 'https://doc.nuxeo.com/x/IIEV'
-    source_link: /display/NXDOC/How+to+Inherit+a+Metadata+from+a+Parent+Document
 tree_item_index: 300
 history:
     -

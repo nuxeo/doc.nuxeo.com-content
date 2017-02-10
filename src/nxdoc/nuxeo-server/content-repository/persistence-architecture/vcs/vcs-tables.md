@@ -11,17 +11,6 @@ labels:
     - acl
     - vcs-component
 toc: true
-confluence:
-    ajs-parent-page-id: '3342350'
-    ajs-parent-page-title: VCS
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: VCS+Tables
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/VCS+Tables'
-    page_id: '12915231'
-    shortlink: HxLF
-    shortlink_source: 'https://doc.nuxeo.com/x/HxLF'
-    source_link: /display/NXDOC/VCS+Tables
 tree_item_index: 200
 history:
     -

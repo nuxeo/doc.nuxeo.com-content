@@ -9,18 +9,6 @@ labels:
     - bootstrap
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '19235677'
-    ajs-parent-page-title: Quick Start Series
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Bootstrap+Your+Case+Management+Project
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Bootstrap+Your+Case+Management+Project
-    page_id: '16091979'
-    shortlink: S4v1
-    shortlink_source: 'https://doc.nuxeo.com/x/S4v1'
-    source_link: /display/NXDOC/Bootstrap+Your+Case+Management+Project
 tree_item_index: 200
 history:
     -
@@ -41,7 +29,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-07-10 10:17'
-        message: Superfluous "we"
+        message: 'Superfluous "we"'
         version: '11'
     -
         author: Alain Escaffre

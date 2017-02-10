@@ -11,17 +11,6 @@ labels:
     - todo
     - packaging-component
 toc: true
-confluence:
-    ajs-parent-page-id: '3342859'
-    ajs-parent-page-title: Creating Nuxeo Packages
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Scripting+Commands
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Scripting+Commands'
-    page_id: '3342882'
-    shortlink: IgIz
-    shortlink_source: 'https://doc.nuxeo.com/x/IgIz'
-    source_link: /display/NXDOC/Scripting+Commands
 history:
     -
         author: Manon Lumeau
@@ -76,9 +65,7 @@ history:
     -
         author: Julien Carsique
         date: '2011-02-09 12:24'
-        message: >-
-            add info about module containing AbstractCommand to extend for
-            implementing new marketplace package commands
+        message: add info about module containing AbstractCommand to extend for implementing new marketplace package commands
         version: '25'
     -
         author: Julien Carsique

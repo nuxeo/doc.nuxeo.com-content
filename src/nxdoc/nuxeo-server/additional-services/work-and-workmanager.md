@@ -11,17 +11,6 @@ labels:
     - node
     - work-manager-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089319'
-    ajs-parent-page-title: Additional Services
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Work+and+WorkManager
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Work+and+WorkManager'
-    page_id: '17793529'
-    shortlink: _YEPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/_YEPAQ'
-    source_link: /display/NXDOC/Work+and+WorkManager
 tree_item_index: 1100
 history:
     -

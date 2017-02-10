@@ -8,18 +8,6 @@ labels:
     - lts2016-ok
     - tuto-content-view
 toc: true
-confluence:
-    ajs-parent-page-id: '19235783'
-    ajs-parent-page-title: 'First Steps With Studio: Technical Documentation Tutorial'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Custom+Content+View+for+Documentation+Items
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Custom+Content+View+for+Documentation+Items
-    page_id: '14255941'
-    shortlink: RYfZ
-    shortlink_source: 'https://doc.nuxeo.com/x/RYfZ'
-    source_link: /display/NXDOC/Custom+Content+View+for+Documentation+Items
 tree_item_index: 200
 history:
     -

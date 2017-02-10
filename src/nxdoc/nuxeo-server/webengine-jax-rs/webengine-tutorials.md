@@ -1,7 +1,7 @@
 ---
 title: WebEngine Tutorials
 review:
-    comment: 'Installation of samples is broken and has to be reviewed NXDOC-1022.'
+    comment: Installation of samples is broken and has to be reviewed NXDOC-1022.
     date: '2016-12-20'
     status: requiresUpdates
 labels:
@@ -10,17 +10,6 @@ labels:
     - webengine-component
     - nxDocTeam
     - nxProduct
-confluence:
-    ajs-parent-page-id: '950281'
-    ajs-parent-page-title: WebEngine (JAX-RS)
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: WebEngine+Tutorials
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/WebEngine+Tutorials'
-    page_id: '3343141'
-    shortlink: JQMz
-    shortlink_source: 'https://doc.nuxeo.com/x/JQMz'
-    source_link: /display/NXDOC/WebEngine+Tutorials
 tree_item_index: 300
 history:
     -

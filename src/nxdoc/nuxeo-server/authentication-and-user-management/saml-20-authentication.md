@@ -9,17 +9,6 @@ labels:
     - saml-component
     - migration-sample
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: SAML+2.0+Authentication
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/SAML+2.0+Authentication'
-    page_id: '23364928'
-    shortlink: QIVkAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/QIVkAQ'
-    source_link: /display/NXDOC/SAML+2.0+Authentication
 tree_item_index: 150
 history:
     -

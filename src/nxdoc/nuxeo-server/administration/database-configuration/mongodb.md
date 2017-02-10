@@ -10,20 +10,9 @@ labels:
     - mongodb
     - mongodb-component
 toc: true
-confluence:
-    ajs-parent-page-id: '3342340'
-    ajs-parent-page-title: Database Configuration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: MongoDB
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/MongoDB'
-    page_id: '19792328'
-    shortlink: yAEuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/yAEuAQ'
-    source_link: /display/NXDOC/MongoDB
 tree_item_index: 500
 version_override:
-    'LTS 2015': 710/admindoc/mongodb
+    LTS 2015: 710/admindoc/mongodb
 history:
     -
         author: Florent Guillaume

@@ -7,17 +7,6 @@ review:
 labels:
     - lts2016-ok
 is_overview: true
-confluence:
-    ajs-parent-page-id: '950332'
-    ajs-parent-page-title: Developer Documentation Center
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Desktop+and+Mobile
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Desktop+and+Mobile'
-    page_id: '31033323'
-    shortlink: 64fZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/64fZAQ'
-    source_link: /display/NXDOC/Desktop+and+Mobile
 tree_item_index: 400
 section_parent: desktop-mob
 history:

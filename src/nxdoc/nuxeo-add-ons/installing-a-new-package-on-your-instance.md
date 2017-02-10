@@ -12,21 +12,9 @@ labels:
     - multiexcerpt-include
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Installing+a+New+Package+on+Your+Instance
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Installing+a+New+Package+on+Your+Instance
-    page_id: '4686234'
-    shortlink: moFH
-    shortlink_source: 'https://doc.nuxeo.com/x/moFH'
-    source_link: /display/NXDOC/Installing+a+New+Package+on+Your+Instance
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/admindoc/installing-a-new-package-on-your-instance
+    LTS 2015: 710/admindoc/installing-a-new-package-on-your-instance
     '6.0': 60/admindoc/installing-a-new-package-on-your-instance
     '5.8': 58/admindoc/installing-a-new-package-on-your-instance
 history:

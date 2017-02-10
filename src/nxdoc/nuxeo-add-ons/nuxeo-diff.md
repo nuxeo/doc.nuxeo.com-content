@@ -10,17 +10,6 @@ labels:
     - link-update
     - diff-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Diff
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Diff'
-    page_id: '11043309'
-    shortlink: 7YGo
-    shortlink_source: 'https://doc.nuxeo.com/x/7YGo'
-    source_link: /display/NXDOC/Nuxeo+Diff
 tree_item_index: 1400
 history:
     -

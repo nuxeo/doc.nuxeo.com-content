@@ -11,17 +11,6 @@ labels:
     - core-io-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '16089319'
-    ajs-parent-page-title: Additional Services
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=14257432
-    canonical_source: viewpage.action?pageId=14257432
-    page_id: '14257432'
-    shortlink: GI3Z
-    shortlink_source: 'https://doc.nuxeo.com/x/GI3Z'
-    source_link: /pages/viewpage.action?pageId=14257432
 tree_item_index: 200
 history:
     -
@@ -32,7 +21,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-10-15 08:22'
-        message: form -> from
+        message: 'form -> from'
         version: '18'
     -
         author: Ronan Daniellou
@@ -57,7 +46,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-10-14 16:41'
-        message: Fixes "Export Format" anchor link
+        message: 'Fixes "Export Format" anchor link'
         version: '13'
     -
         author: Ronan Daniellou

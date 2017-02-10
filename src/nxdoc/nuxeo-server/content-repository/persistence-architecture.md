@@ -6,17 +6,6 @@ review:
     status: ok
 labels:
     - content-review-lts2016
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Persistence+Architecture
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Persistence+Architecture'
-    page_id: '20515468'
-    shortlink: jAo5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/jAo5AQ'
-    source_link: /display/NXDOC/Persistence+Architecture
 tree_item_index: 200
 history:
     -

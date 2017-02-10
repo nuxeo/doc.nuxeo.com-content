@@ -10,18 +10,6 @@ labels:
     - layout-widgets-component
     - limitations
     - excerpt
-confluence:
-    ajs-parent-page-id: '3868345'
-    ajs-parent-page-title: Standard Widget Types
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Default+Widget+Types+Known+Limitations
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Default+Widget+Types+Known+Limitations
-    page_id: '12915525'
-    shortlink: RRPF
-    shortlink_source: 'https://doc.nuxeo.com/x/RRPF'
-    source_link: /display/NXDOC/Default+Widget+Types+Known+Limitations
 tree_item_index: 100
 history:
     -

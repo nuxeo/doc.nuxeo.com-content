@@ -9,25 +9,14 @@ labels:
     - monitoring-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '950318'
-    ajs-parent-page-title: Monitoring and Maintenance
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=26317797
-    canonical_source: viewpage.action?pageId=26317797
-    page_id: '26317797'
-    shortlink: 5ZORAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/5ZORAQ'
-    source_link: /pages/viewpage.action?pageId=26317797
 tree_item_index: 500
 version_override:
-    'LTS 2015': 710/admindoc/remote-monitoring-through-https  
+    LTS 2015: 710/admindoc/remote-monitoring-through-https
 history:
     -
         author: Manon Lumeau
         date: '2016-08-02 16:29'
-        message: emove <span>
+        message: 'emove <span>'
         version: '13'
     -
         author: Solen Guitter

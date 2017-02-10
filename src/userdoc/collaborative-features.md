@@ -13,17 +13,6 @@ labels:
     - multiexcerpt-include
     - excerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Collaborative+Features
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Collaborative+Features'
-    page_id: '26314875'
-    shortlink: e4iRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/e4iRAQ'
-    source_link: /display/USERDOC/Collaborative+Features
 tree_item_index: 1000
 history:
     -

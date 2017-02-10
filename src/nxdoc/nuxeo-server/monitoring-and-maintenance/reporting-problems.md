@@ -7,20 +7,9 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '950318'
-    ajs-parent-page-title: Monitoring and Maintenance
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Reporting+Problems
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Reporting+Problems'
-    page_id: '23365631'
-    shortlink: '-4dkAQ'
-    shortlink_source: 'https://doc.nuxeo.com/x/-4dkAQ'
-    source_link: /display/NXDOC/Reporting+Problems
 tree_item_index: 1100
 version_override:
-    'LTS 2015': 710/admindoc/reporting-problems
+    LTS 2015: 710/admindoc/reporting-problems
     '6.0': 60/admindoc/reporting-problems
     '5.8': 58/admindoc/reporting-problems
 history:

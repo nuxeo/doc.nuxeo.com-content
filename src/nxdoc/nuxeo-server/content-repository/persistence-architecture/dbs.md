@@ -10,17 +10,6 @@ labels:
     - mongodb-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '20515468'
-    ajs-parent-page-title: Persistence Architecture
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: DBS
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/DBS'
-    page_id: '20517821'
-    shortlink: vRM5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/vRM5AQ'
-    source_link: /display/NXDOC/DBS
 tree_item_index: 300
 history:
     -

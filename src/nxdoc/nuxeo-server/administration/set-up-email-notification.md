@@ -6,20 +6,9 @@ review:
     status: ok
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Set+Up+Email+Notification
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Set+Up+Email+Notification'
-    page_id: '31687458'
-    shortlink: IoPjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/IoPjAQ'
-    source_link: /display/NXDOC/Set+Up+Email+Notification
 tree_item_index: 1400
 version_override:
-    'LTS 2015': 710/admindoc/recommended-configurations
+    LTS 2015: 710/admindoc/recommended-configurations
     '6.0': 60/admindoc/recommended-configurations
     '5.8': 58/admindoc/recommended-configurations
 history:

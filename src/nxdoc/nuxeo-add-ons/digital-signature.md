@@ -9,17 +9,6 @@ labels:
     - digital-signature
     - digital-signature-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Digital+Signature
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Digital+Signature'
-    page_id: '17793591'
-    shortlink: N4IPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/N4IPAQ'
-    source_link: /display/NXDOC/Digital+Signature
 tree_item_index: 500
 history:
     -

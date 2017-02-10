@@ -8,21 +8,10 @@ labels:
     - lts2016-ok
     - excerpt
     - multiexcerpt-include
-confluence:
-    ajs-parent-page-id: '950332'
-    ajs-parent-page-title: Developer Documentation Center
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Marketplace+Add-Ons
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Marketplace+Add-Ons'
-    page_id: '16089349'
-    shortlink: BYH1
-    shortlink_source: 'https://doc.nuxeo.com/x/BYH1'
-    source_link: /display/NXDOC/Marketplace+Add-Ons
 tree_item_index: 500
 section_parent: addons
 version_override:
-    'LTS 2015': 710/nxdoc/marketplace-add-ons
+    LTS 2015: 710/nxdoc/marketplace-add-ons
     '6.0': 60/nxdoc/marketplace-add-ons
 history:
     -

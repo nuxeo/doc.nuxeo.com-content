@@ -8,20 +8,9 @@ labels:
     - content-review-lts2016
     - backup
     - nxdoc-742
-confluence:
-    ajs-parent-page-id: '950318'
-    ajs-parent-page-title: Monitoring and Maintenance
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Backup+and+Restore
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Backup+and+Restore'
-    page_id: '950306'
-    shortlink: IoAO
-    shortlink_source: 'https://doc.nuxeo.com/x/IoAO'
-    source_link: /display/NXDOC/Backup+and+Restore
 tree_item_index: 200
 version_override:
-    'LTS 2015': 710/admindoc/backup-and-restore
+    LTS 2015: 710/admindoc/backup-and-restore
     '6.0': 60/admindoc/backup-and-restore
     '5.8': 58/admindoc/backup-and-restore
 history:

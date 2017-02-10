@@ -11,17 +11,6 @@ labels:
     - excerpt
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '4687860'
-    ajs-parent-page-title: Indexing and Query
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Elasticsearch+Hints+Cheat+Sheet
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Elasticsearch+Hints+Cheat+Sheet'
-    page_id: '26313934'
-    shortlink: zoSRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/zoSRAQ'
-    source_link: /display/NXDOC/Elasticsearch+Hints+Cheat+Sheet
 tree_item_index: 900
 history:
     -

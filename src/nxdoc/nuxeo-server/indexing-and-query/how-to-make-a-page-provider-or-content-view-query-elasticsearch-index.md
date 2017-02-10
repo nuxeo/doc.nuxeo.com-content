@@ -6,8 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to make a content view query Elasticsearch instead of the Core API.
+        excerpt: Learn how to make a content view query Elasticsearch instead of the Core API.
         level: Beginner
         tool: Studio
         topics: 'Content view, Elasticsearch, Query'
@@ -20,19 +19,6 @@ labels:
     - query-pageprovider-component
     - university
     - excerpt
-confluence:
-    ajs-parent-page-id: '4687860'
-    ajs-parent-page-title: Indexing and Query
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Make+a+Page+Provider+or+Content+View+Query+Elasticsearch+Index
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Make+a+Page+Provider+or+Content+View+Query+Elasticsearch+Index
-    page_id: '19235213'
-    shortlink: jYElAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/jYElAQ'
-    source_link: >-
-        /display/NXDOC/How+to+Make+a+Page+Provider+or+Content+View+Query+Elasticsearch+Index
 tree_item_index: 1500
 history:
     -

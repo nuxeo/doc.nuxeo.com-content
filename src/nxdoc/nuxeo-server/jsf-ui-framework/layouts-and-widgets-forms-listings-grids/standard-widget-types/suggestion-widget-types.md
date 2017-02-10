@@ -11,17 +11,6 @@ labels:
     - suggestion
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3868345'
-    ajs-parent-page-title: Standard Widget Types
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Suggestion+Widget+Types
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Suggestion+Widget+Types'
-    page_id: '18449452'
-    shortlink: LIQZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/LIQZAQ'
-    source_link: /display/NXDOC/Suggestion+Widget+Types
 tree_item_index: 700
 history:
     -

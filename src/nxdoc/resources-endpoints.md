@@ -8,17 +8,6 @@ redirect: rest-api
 redirect_source: REST API
 labels:
     - content-review-lts2016
-confluence:
-    ajs-parent-page-id: ''
-    ajs-parent-page-title: ''
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Resources+Endpoints
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Resources+Endpoints'
-    page_id: '14256984'
-    shortlink: WIvZ
-    shortlink_source: 'https://doc.nuxeo.com/x/WIvZ'
-    source_link: /display/NXDOC/Resources+Endpoints
 hidden: true
 history:
     -

@@ -10,17 +10,6 @@ labels:
     - marketplace-package
     - quotas-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Quota
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Quota'
-    page_id: '11534351'
-    shortlink: DwCw
-    shortlink_source: 'https://doc.nuxeo.com/x/DwCw'
-    source_link: /display/NXDOC/Nuxeo+Quota
 tree_item_index: 2500
 history:
     -

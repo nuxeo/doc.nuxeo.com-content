@@ -10,17 +10,6 @@ labels:
     - elasticsearch-component
     - university
 toc: true
-confluence:
-    ajs-parent-page-id: '4687860'
-    ajs-parent-page-title: Indexing and Query
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Elasticsearch+Indexing+Logic
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Elasticsearch+Indexing+Logic'
-    page_id: '19235209'
-    shortlink: iYElAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/iYElAQ'
-    source_link: /display/NXDOC/Elasticsearch+Indexing+Logic
 tree_item_index: 600
 history:
     -

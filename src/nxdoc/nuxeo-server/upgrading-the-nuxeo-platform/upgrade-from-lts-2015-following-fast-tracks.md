@@ -8,18 +8,6 @@ labels:
     - lts2016-ok
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3343538'
-    ajs-parent-page-title: Upgrading the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Upgrade+from+LTS+2015+following+Fast+Tracks
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Upgrade+from+LTS+2015+following+Fast+Tracks
-    page_id: '31032752'
-    shortlink: sIXZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/sIXZAQ'
-    source_link: /display/NXDOC/Upgrade+from+LTS+2015+following+Fast+Tracks
 tree_item_index: 200
 history:
     -

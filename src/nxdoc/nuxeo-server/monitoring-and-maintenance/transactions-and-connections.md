@@ -8,20 +8,9 @@ labels:
     - lts2016-ok
     - transaction
     - logs
-confluence:
-    ajs-parent-page-id: '950318'
-    ajs-parent-page-title: Monitoring and Maintenance
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Transactions+and+Connections
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Transactions+and+Connections'
-    page_id: '12288637'
-    shortlink: fYK7
-    shortlink_source: 'https://doc.nuxeo.com/x/fYK7'
-    source_link: /display/NXDOC/Transactions+and+Connections
 tree_item_index: 700
 version_override:
-    'LTS 2015': 710/admindoc/transactions-and-connections
+    LTS 2015: 710/admindoc/transactions-and-connections
     '6.0': 60/admindoc/transactions-and-connections
     '5.8': 58/admindoc/transactions-and-connections
 history:

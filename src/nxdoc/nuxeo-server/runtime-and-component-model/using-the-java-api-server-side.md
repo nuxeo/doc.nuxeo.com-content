@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - runtimecomponent
 toc: true
-confluence:
-    ajs-parent-page-id: '950284'
-    ajs-parent-page-title: Runtime and Component Model
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Using+the+Java+API+Server-Side
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Using+the+Java+API+Server-Side'
-    page_id: '16089809'
-    shortlink: 0YL1
-    shortlink_source: 'https://doc.nuxeo.com/x/0YL1'
-    source_link: /display/NXDOC/Using+the+Java+API+Server-Side
 tree_item_index: 400
 history:
     -

@@ -11,17 +11,6 @@ labels:
     - query
     - query-pageprovider-component
 toc: true
-confluence:
-    ajs-parent-page-id: '4687860'
-    ajs-parent-page-title: Indexing and Query
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Full-Text+Queries
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Full-Text+Queries'
-    page_id: '3868034'
-    shortlink: ggU7
-    shortlink_source: 'https://doc.nuxeo.com/x/ggU7'
-    source_link: /display/NXDOC/Full-Text+Queries
 tree_item_index: 200
 history:
     -

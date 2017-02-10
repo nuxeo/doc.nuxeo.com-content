@@ -7,17 +7,6 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '3343538'
-    ajs-parent-page-title: Upgrading the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Upgrade+from+LTS+2015+to+LTS+2016
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Upgrade+from+LTS+2015+to+LTS+2016'
-    page_id: '29459028'
-    shortlink: VILBAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/VILBAQ'
-    source_link: /display/NXDOC/Upgrade+from+LTS+2015+to+LTS+2016
 tree_item_index: 100
 history:
     -

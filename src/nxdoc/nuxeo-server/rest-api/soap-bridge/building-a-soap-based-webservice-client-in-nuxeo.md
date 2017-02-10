@@ -9,18 +9,6 @@ labels:
     - soap
     - soap-component
 toc: true
-confluence:
-    ajs-parent-page-id: '950296'
-    ajs-parent-page-title: SOAP Bridge
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Building+a+SOAP-Based+WebService+Client+in+Nuxeo
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Building+a+SOAP-Based+WebService+Client+in+Nuxeo
-    page_id: '9273634'
-    shortlink: IoGN
-    shortlink_source: 'https://doc.nuxeo.com/x/IoGN'
-    source_link: /display/NXDOC/Building+a+SOAP-Based+WebService+Client+in+Nuxeo
 tree_item_index: 100
 history:
     -

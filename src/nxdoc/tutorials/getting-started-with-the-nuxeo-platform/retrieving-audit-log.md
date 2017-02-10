@@ -6,17 +6,6 @@ review:
     status: ok
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '29460589'
-    ajs-parent-page-title: Getting Started with the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Retrieving+Audit+Log
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Retrieving+Audit+Log'
-    page_id: '31687180'
-    shortlink: DILjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/DILjAQ'
-    source_link: /display/NXDOC/Retrieving+Audit+Log
 tree_item_index: 600
 history:
     -

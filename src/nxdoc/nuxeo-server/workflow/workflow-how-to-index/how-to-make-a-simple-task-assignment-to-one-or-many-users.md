@@ -18,18 +18,6 @@ labels:
     - workflow
     - studio
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235619'
-    ajs-parent-page-title: Workflow How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Make+a+Simple+Task+Assignment+to+One+or+Many+Users
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Make+a+Simple+Task+Assignment+to+One+or+Many+Users
-    page_id: '3345546'
-    shortlink: igwz
-    shortlink_source: 'https://doc.nuxeo.com/x/igwz'
-    source_link: /display/NXDOC/How+to+Make+a+Simple+Task+Assignment+to+One+or+Many+Users
 tree_item_index: 900
 history:
     -

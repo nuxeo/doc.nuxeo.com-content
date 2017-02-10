@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - url
     - webengine-component
-confluence:
-    ajs-parent-page-id: '950281'
-    ajs-parent-page-title: WebEngine (JAX-RS)
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Default+WebEngine+Applications
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Default+WebEngine+Applications'
-    page_id: '17794312'
-    shortlink: CIUPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/CIUPAQ'
-    source_link: /display/NXDOC/Default+WebEngine+Applications
 tree_item_index: 100
 history:
     -

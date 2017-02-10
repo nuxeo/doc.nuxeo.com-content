@@ -9,20 +9,9 @@ labels:
     - logs
     - audit
     - nxdoc-743
-confluence:
-    ajs-parent-page-id: '950318'
-    ajs-parent-page-title: Monitoring and Maintenance
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=12913040
-    canonical_source: viewpage.action?pageId=12913040
-    page_id: '12913040'
-    shortlink: kAnF
-    shortlink_source: 'https://doc.nuxeo.com/x/kAnF'
-    source_link: /pages/viewpage.action?pageId=12913040
 tree_item_index: 400
 version_override:
-    'LTS 2015': 710/admindoc/purging-audit-logs-nxp_logs
+    LTS 2015: 710/admindoc/purging-audit-logs-nxp_logs
     '6.0': 60/admindoc/purging-audit-logs-nxp_logs
     '5.8': 58/admindoc/purging-audit-logs-nxp_logs
 history:

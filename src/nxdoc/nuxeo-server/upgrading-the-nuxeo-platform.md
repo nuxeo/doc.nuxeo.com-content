@@ -9,20 +9,9 @@ labels:
     - upgrade
     - last-review-20141126
 toc: true
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Upgrading+the+Nuxeo+Platform
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Upgrading+the+Nuxeo+Platform'
-    page_id: '3343538'
-    shortlink: sgQz
-    shortlink_source: 'https://doc.nuxeo.com/x/sgQz'
-    source_link: /display/NXDOC/Upgrading+the+Nuxeo+Platform
 tree_item_index: 400
 version_override:
-    'LTS 2015': 710/admindoc/upgrading-the-nuxeo-platform
+    LTS 2015: 710/admindoc/upgrading-the-nuxeo-platform
     '6.0': 60/admindoc/upgrading-the-nuxeo-platform
 history:
     -
@@ -53,9 +42,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-11-26 16:03'
-        message: >-
-            NXDOC-658: Marketplace packages are now called Nuxeo Packages, add
-            links to 7.10 release notes and upgrade notes
+        message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages, add links to 7.10 release notes and upgrade notes'
         version: '75'
     -
         author: Solen Guitter
@@ -70,9 +57,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-07-02 16:05'
-        message: >-
-            Removed mp-reset step in  Upgrading Your Nuxeo Marketplace Packages
-            section
+        message: Removed mp-reset step in  Upgrading Your Nuxeo Marketplace Packages section
         version: '72'
     -
         author: Manon Lumeau
@@ -132,9 +117,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-11-07 14:48'
-        message: >-
-            Page formatting, added links to the 5.8 release notes and 5.7.3
-            upgrade notes
+        message: 'Page formatting, added links to the 5.8 release notes and 5.7.3 upgrade notes'
         version: '60'
     -
         author: Solen Guitter

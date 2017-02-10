@@ -9,17 +9,6 @@ labels:
     - life-cycle
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Workflows
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Workflows'
-    page_id: '2392410'
-    shortlink: WoEk
-    shortlink_source: 'https://doc.nuxeo.com/x/WoEk'
-    source_link: /display/USERDOC/Workflows
 tree_item_index: 1200
 history:
     -

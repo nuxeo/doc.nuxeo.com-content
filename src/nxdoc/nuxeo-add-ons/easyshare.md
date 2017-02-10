@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - easyshare
     - excerpt-include
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: EasyShare
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/EasyShare'
-    page_id: '19792580'
-    shortlink: xAIuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/xAIuAQ'
-    source_link: /display/NXDOC/EasyShare
 tree_item_index: 600
 history:
     -

@@ -9,17 +9,6 @@ labels:
     - howto
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '19235783'
-    ajs-parent-page-title: 'First Steps With Studio: Technical Documentation Tutorial'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Implementing+Documentation+Items
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Implementing+Documentation+Items'
-    page_id: '12914230'
-    shortlink: Ng7F
-    shortlink_source: 'https://doc.nuxeo.com/x/Ng7F'
-    source_link: /display/NXDOC/Implementing+Documentation+Items
 tree_item_index: 100
 history:
     -
@@ -215,9 +204,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-10-07 18:31'
-        message: >-
-            Review steps and remove some explanations available from linked
-            pages
+        message: Review steps and remove some explanations available from linked pages
         version: '30'
     -
         author: Alain Escaffre

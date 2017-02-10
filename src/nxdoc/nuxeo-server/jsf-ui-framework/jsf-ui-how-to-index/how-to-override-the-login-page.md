@@ -17,17 +17,6 @@ labels:
     - theme
     - login-page-component
 toc: true
-confluence:
-    ajs-parent-page-id: '20517820'
-    ajs-parent-page-title: JSF UI How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Override+the+Login+Page
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Override+the+Login+Page'
-    page_id: '20517994'
-    shortlink: ahQ5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/ahQ5AQ'
-    source_link: /display/NXDOC/How+to+Override+the+Login+Page
 tree_item_index: 300
 history:
     -

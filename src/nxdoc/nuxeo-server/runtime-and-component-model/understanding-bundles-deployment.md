@@ -10,17 +10,6 @@ labels:
     - nuxeoctl
     - runtimecomponent
 toc: true
-confluence:
-    ajs-parent-page-id: '950284'
-    ajs-parent-page-title: Runtime and Component Model
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Understanding+Bundles+Deployment
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Understanding+Bundles+Deployment'
-    page_id: '11534735'
-    shortlink: jwGw
-    shortlink_source: 'https://doc.nuxeo.com/x/jwGw'
-    source_link: /display/NXDOC/Understanding+Bundles+Deployment
 tree_item_index: 100
 history:
     -

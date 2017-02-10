@@ -12,21 +12,9 @@ labels:
     - database
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Ports+Usage+and+Firewall+Considerations
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Ports+Usage+and+Firewall+Considerations
-    page_id: '12912526'
-    shortlink: jgfF
-    shortlink_source: 'https://doc.nuxeo.com/x/jgfF'
-    source_link: /display/NXDOC/Ports+Usage+and+Firewall+Considerations
 tree_item_index: 1700
 version_override:
-    'LTS 2015': 710/admindoc/firewall-consideration
+    LTS 2015: 710/admindoc/firewall-consideration
     '6.0': 60/admindoc/firewall-consideration
     '5.8': 58/admindoc/firewall-consideration
 history:

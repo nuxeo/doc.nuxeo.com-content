@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - theme
     - branding
-confluence:
-    ajs-parent-page-id: '950327'
-    ajs-parent-page-title: Theme
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Theme+How-To+Index
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Theme+How-To+Index'
-    page_id: '19235625'
-    shortlink: KYMlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/KYMlAQ'
-    source_link: /display/NXDOC/Theme+How-To+Index
 tree_item_index: 200
 history:
     -

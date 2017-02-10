@@ -11,23 +11,12 @@ labels:
     - rest-api-component
     - excerpt
     - multiexcerpt
-confluence:
-    ajs-parent-page-id: '16091040'
-    ajs-parent-page-title: Client SDKs
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Using+cURL
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Using+cURL'
-    page_id: '3343035'
-    shortlink: uwIz
-    shortlink_source: 'https://doc.nuxeo.com/x/uwIz'
-    source_link: /display/NXDOC/Using+cURL
 tree_item_index: 800
 history:
     -
         author: Benoit Delbosc
         date: '2016-10-07 12:55'
-        message: ix the Lock url by adding a missing "/
+        message: 'ix the Lock url by adding a missing "/'
         version: '17'
     -
         author: Laurent Doguin
@@ -62,7 +51,7 @@ history:
     -
         author: Bogdan Stefanescu
         date: '2011-06-23 18:31'
-        message: example is not working when using '*' - server side exception
+        message: "example is not working when using '*' - server side exception"
         version: '10'
     -
         author: Stéfane Fermigier

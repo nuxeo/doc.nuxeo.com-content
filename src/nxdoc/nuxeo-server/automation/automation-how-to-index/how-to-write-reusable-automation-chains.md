@@ -16,18 +16,6 @@ labels:
     - automation
     - excerpt
     - multiexcerpt-include
-confluence:
-    ajs-parent-page-id: '19235642'
-    ajs-parent-page-title: Automation How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Write+Reusable+Automation+Chains
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Write+Reusable+Automation+Chains
-    page_id: '19792322'
-    shortlink: wgEuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/wgEuAQ'
-    source_link: /display/NXDOC/How+to+Write+Reusable+Automation+Chains
 tree_item_index: 500
 history:
     -

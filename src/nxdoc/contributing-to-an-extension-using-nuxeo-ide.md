@@ -8,18 +8,6 @@ redirect: how-to-contribute-to-an-extension
 redirect_source: How to Contribute to an Extension
 labels:
     - content-review-lts2016
-confluence:
-    ajs-parent-page-id: ''
-    ajs-parent-page-title: ''
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Contributing+to+an+Extension+Using+Nuxeo+IDE
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Contributing+to+an+Extension+Using+Nuxeo+IDE
-    page_id: '9275422'
-    shortlink: HoiN
-    shortlink_source: 'https://doc.nuxeo.com/x/HoiN'
-    source_link: /display/NXDOC/Contributing+to+an+Extension+Using+Nuxeo+IDE
 hidden: true
 history:
     -

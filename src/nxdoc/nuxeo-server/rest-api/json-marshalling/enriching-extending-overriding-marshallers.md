@@ -1,5 +1,5 @@
 ---
-title: Enriching, Extending and Overriding Existing Marshallers
+title: 'Enriching, Extending and Overriding Existing Marshallers'
 review:
     comment: ''
     date: '2017-01-04'

@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to enable the trash feature on your document type using
-            Nuxeo Studio.
+        excerpt: Learn how to enable the trash feature on your document type using Nuxeo Studio.
         level: Beginner
         tool: Studio
         topics: 'Document type, Life cycle'
@@ -19,17 +17,6 @@ labels:
     - life-cycle
     - howto
     - excerpt
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Enable+the+Trash+Feature
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Enable+the+Trash+Feature'
-    page_id: '6030187'
-    shortlink: awNc
-    shortlink_source: 'https://doc.nuxeo.com/x/awNc'
-    source_link: /display/NXDOC/How+to+Enable+the+Trash+Feature
 tree_item_index: 1300
 history:
     -

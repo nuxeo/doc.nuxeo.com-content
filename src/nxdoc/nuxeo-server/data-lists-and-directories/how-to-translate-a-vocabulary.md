@@ -15,17 +15,6 @@ labels:
     - vocabulary
     - howto
     - excerpt
-confluence:
-    ajs-parent-page-id: '4688939'
-    ajs-parent-page-title: Data Lists and Directories
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Translate+a+Vocabulary
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Translate+a+Vocabulary'
-    page_id: '19793019'
-    shortlink: ewQuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/ewQuAQ'
-    source_link: /display/NXDOC/How+to+Translate+a+Vocabulary
 tree_item_index: 200
 history:
     -

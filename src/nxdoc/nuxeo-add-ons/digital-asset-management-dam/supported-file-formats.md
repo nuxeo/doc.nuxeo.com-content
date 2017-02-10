@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - dam-component
     - dam
-confluence:
-    ajs-parent-page-id: '3866704'
-    ajs-parent-page-title: Digital Asset Management (DAM)
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Supported+File+Formats
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Supported+File+Formats'
-    page_id: '3343319'
-    shortlink: 1wMz
-    shortlink_source: 'https://doc.nuxeo.com/x/1wMz'
-    source_link: /display/NXDOC/Supported+File+Formats
 history:
     -
         author: Solen Guitter
@@ -28,7 +17,7 @@ history:
     -
         author: Thibaud Arguillere
         date: '2014-10-24 20:25'
-        message: Tested .ai and .psd files => have thumbnails and previews ok
+        message: 'Tested .ai and .psd files => have thumbnails and previews ok'
         version: '21'
     -
         author: Solen Guitter

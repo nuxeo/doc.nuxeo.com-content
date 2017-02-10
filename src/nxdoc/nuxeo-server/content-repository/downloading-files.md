@@ -10,17 +10,6 @@ labels:
     - blob-storage
     - blob-manager-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Downloading+Files
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Downloading+Files'
-    page_id: '16091110'
-    shortlink: 5of1
-    shortlink_source: 'https://doc.nuxeo.com/x/5of1'
-    source_link: /display/NXDOC/Downloading+Files
 tree_item_index: 600
 history:
     -

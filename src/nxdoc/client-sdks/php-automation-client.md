@@ -10,17 +10,6 @@ labels:
     - client
     - php-client-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16091040'
-    ajs-parent-page-title: Client SDKs
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: PHP+Automation+Client
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/PHP+Automation+Client'
-    page_id: '7209503'
-    shortlink: HwJu
-    shortlink_source: 'https://doc.nuxeo.com/x/HwJu'
-    source_link: /display/NXDOC/PHP+Automation+Client
 tree_item_index: 600
 history:
     -
@@ -36,9 +25,7 @@ history:
     -
         author: Frédéric Vadon
         date: '2015-02-19 04:04'
-        message: >-
-            The name of the client changed because of
-            https://github.com/nuxeo/nuxeo-automation-php-client/commit/560874cfd9662b2b464045b19c6819e10a834600
+        message: 'The name of the client changed because of https://github.com/nuxeo/nuxeo-automation-php-client/commit/560874cfd9662b2b464045b19c6819e10a834600'
         version: '15'
     -
         author: Solen Guitter

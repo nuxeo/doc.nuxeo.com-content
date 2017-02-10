@@ -10,17 +10,6 @@ labels:
     - update-needed
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Scan+Documents+Importer
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Scan+Documents+Importer'
-    page_id: '18451825'
-    shortlink: cY0ZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/cY0ZAQ'
-    source_link: /display/NXDOC/Scan+Documents+Importer
 tree_item_index: 3200
 history:
     -

@@ -7,17 +7,6 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '29460589'
-    ajs-parent-page-title: Getting Started with the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Using+Workflows
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Using+Workflows'
-    page_id: '31687900'
-    shortlink: 3ITjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/3ITjAQ'
-    source_link: /display/NXDOC/Using+Workflows
 tree_item_index: 800
 history:
     -

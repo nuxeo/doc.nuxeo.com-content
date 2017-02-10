@@ -11,17 +11,6 @@ labels:
     - search-tab-component
     - nxdoc-450
     - link-update
-confluence:
-    ajs-parent-page-id: '4687860'
-    ajs-parent-page-title: Indexing and Query
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Quick+Search
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Quick+Search'
-    page_id: '17794521'
-    shortlink: 2YUPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/2YUPAQ'
-    source_link: /display/NXDOC/Quick+Search
 tree_item_index: 1100
 history:
     -

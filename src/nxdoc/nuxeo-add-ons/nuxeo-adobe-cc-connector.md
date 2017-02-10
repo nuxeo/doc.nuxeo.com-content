@@ -5,21 +5,10 @@ review:
     date: '2016-12-07'
     status: ok
     labels:
-      - lts2016-ok
+        - lts2016-ok
 toc: true
 labels:
     - content-review-lts2016
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Adobe+CC+Connector
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Adobe+CC+Connector'
-    page_id: '31686663'
-    shortlink: B4DjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/B4DjAQ'
-    source_link: /display/NXDOC/Nuxeo+Adobe+CC+Connector
 tree_item_index: 900
 history:
     -

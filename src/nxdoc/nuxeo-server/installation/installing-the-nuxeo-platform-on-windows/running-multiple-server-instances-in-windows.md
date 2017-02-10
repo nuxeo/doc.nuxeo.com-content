@@ -8,21 +8,9 @@ labels:
     - content-review-lts2016
     - install-windows
     - last-review-20141126
-confluence:
-    ajs-parent-page-id: '9274329'
-    ajs-parent-page-title: Installing the Nuxeo Platform on Windows
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Running+Multiple+Server+Instances+in+Windows
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Running+Multiple+Server+Instances+in+Windows
-    page_id: '5570969'
-    shortlink: mQFV
-    shortlink_source: 'https://doc.nuxeo.com/x/mQFV'
-    source_link: /display/NXDOC/Running+Multiple+Server+Instances+in+Windows
 tree_item_index: 200
 version_override:
-    'LTS 2015': 710/admindoc/running-multiple-server-instances-in-windows
+    LTS 2015: 710/admindoc/running-multiple-server-instances-in-windows
     '6.0': 60/admindoc/running-multiple-server-instances-in-windows
     '5.8': 58/admindoc/running-multiple-server-instances-in-windows
 history:
@@ -94,7 +82,7 @@ history:
     -
         author: Julien Carsique
         date: '2011-03-22 15:28'
-        message: Add information for Nuxeo >= 5.4.1
+        message: 'Add information for Nuxeo >= 5.4.1'
         version: '5'
     -
         author: Mathieu Guillaume

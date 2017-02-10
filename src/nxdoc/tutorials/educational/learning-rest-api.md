@@ -9,17 +9,6 @@ labels:
     - content-review-lts2016
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '19235679'
-    ajs-parent-page-title: Educational
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Learning+REST+API
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Learning+REST+API'
-    page_id: '31034741'
-    shortlink: dY3ZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/dY3ZAQ'
-    source_link: /display/NXDOC/Learning+REST+API
 tree_item_index: 800
 hidden: true
 history:

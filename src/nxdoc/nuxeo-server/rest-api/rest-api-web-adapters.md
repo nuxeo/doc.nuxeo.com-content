@@ -12,19 +12,8 @@ labels:
     - rest-api-component
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/web-adapters-for-the-rest-api
+    LTS 2015: 710/nxdoc/web-adapters-for-the-rest-api
     '6.0': 60/nxdoc/web-adapters-for-the-rest-api/
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Web+Adapters+for+the+REST+API
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Web+Adapters+for+the+REST+API'
-    page_id: '19793380'
-    shortlink: 5AUuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/5AUuAQ'
-    source_link: /display/NXDOC/Web+Adapters+for+the+REST+API
 tree_item_index: 600
 history:
     -
@@ -75,9 +64,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-04-22 14:27'
-        message: >-
-            Add convert, rendition and search web adapters and related
-            documentation
+        message: 'Add convert, rendition and search web adapters and related documentation'
         version: '9'
     -
         author: Solen Guitter

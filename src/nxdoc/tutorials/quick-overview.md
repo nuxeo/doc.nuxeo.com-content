@@ -10,17 +10,6 @@ labels:
     - architecture
     - overview
 toc: true
-confluence:
-    ajs-parent-page-id: '7209076'
-    ajs-parent-page-title: Tutorials
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Quick+Overview
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Quick+Overview'
-    page_id: '18451470'
-    shortlink: DowZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/DowZAQ'
-    source_link: /display/NXDOC/Quick+Overview
 tree_item_index: 300
 history:
     -

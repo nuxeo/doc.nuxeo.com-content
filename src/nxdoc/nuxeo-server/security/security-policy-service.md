@@ -13,17 +13,6 @@ labels:
     - security-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '20515363'
-    ajs-parent-page-title: Security
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Security+Policy+Service
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Security+Policy+Service'
-    page_id: '4688923'
-    shortlink: G4xH
-    shortlink_source: 'https://doc.nuxeo.com/x/G4xH'
-    source_link: /display/NXDOC/Security+Policy+Service
 tree_item_index: 300
 history:
     -

@@ -9,17 +9,6 @@ labels:
     - vcs
     - vcs-component
 toc: true
-confluence:
-    ajs-parent-page-id: '20515468'
-    ajs-parent-page-title: Persistence Architecture
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: VCS
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/VCS'
-    page_id: '3342350'
-    shortlink: DgAz
-    shortlink_source: 'https://doc.nuxeo.com/x/DgAz'
-    source_link: /display/NXDOC/VCS
 tree_item_index: 200
 history:
     -

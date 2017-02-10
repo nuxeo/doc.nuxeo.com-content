@@ -11,6 +11,7 @@ labels:
     - marshalling
 toc: true
 tree_item_index: 300
+
 ---
 
 The marshalling service allows you to create JSON-to-Java and Java-to-JSON marshallers.&nbsp;To create a marshaller, you have to write a Java class that manages the marshalling and registers it using a contribution.

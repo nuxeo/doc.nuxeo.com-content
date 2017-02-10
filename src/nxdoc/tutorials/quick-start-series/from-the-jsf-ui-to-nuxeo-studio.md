@@ -6,19 +6,8 @@ review:
     status: ok
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '19235677'
-    ajs-parent-page-title: Quick Start Series
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: From+the+JSF+UI+to+Nuxeo+Studio
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/From+the+JSF+UI+to+Nuxeo+Studio'
-    page_id: '6030164'
-    shortlink: VANc
-    shortlink_source: 'https://doc.nuxeo.com/x/VANc'
-    source_link: /display/NXDOC/From+the+JSF+UI+to+Nuxeo+Studio
 version_override:
-    '6.0': '60/nxdoc/from-the-web-ui-to-nuxeo-studio'
+    '6.0': 60/nxdoc/from-the-web-ui-to-nuxeo-studio
 tree_item_index: 1100
 history:
     -

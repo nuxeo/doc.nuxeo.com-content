@@ -11,20 +11,9 @@ labels:
     - logs
     - last-review-20141126
 toc: true
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Setup+Best+Practices
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Setup+Best+Practices'
-    page_id: '6030073'
-    shortlink: _QJc
-    shortlink_source: 'https://doc.nuxeo.com/x/_QJc'
-    source_link: /display/NXDOC/Setup+Best+Practices
 tree_item_index: 500
 version_override:
-    'LTS 2015': 710/admindoc/recommended-configurations
+    LTS 2015: 710/admindoc/recommended-configurations
     '6.0': 60/admindoc/recommended-configurations
     '5.8': 58/admindoc/recommended-configurations
 history:

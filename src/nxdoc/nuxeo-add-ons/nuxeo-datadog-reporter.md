@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - excerpt
     - multiexcerpt-include
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Datadog+Reporter
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Datadog+Reporter'
-    page_id: '26312787'
-    shortlink: U4CRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/U4CRAQ'
-    source_link: /display/NXDOC/Nuxeo+Datadog+Reporter
 tree_item_index: 1300
 history:
     -

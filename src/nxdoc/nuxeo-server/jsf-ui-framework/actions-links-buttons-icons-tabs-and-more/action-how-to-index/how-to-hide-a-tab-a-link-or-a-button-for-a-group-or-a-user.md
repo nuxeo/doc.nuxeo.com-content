@@ -6,8 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to hide an action for a group or a user.
+        excerpt: Learn how to hide an action for a group or a user.
         level: Advanced
         tool: Code editor
         topics: 'Filter, User action, JSF UI'
@@ -19,19 +18,6 @@ labels:
     - actions-filters-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '19235610'
-    ajs-parent-page-title: Action How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Hide+a+Tab%2C+a+Link+or+a+Button+for+a+Group+or+a+User
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Hide+a+Tab%2C+a+Link+or+a+Button+for+a+Group+or+a+User
-    page_id: '20518040'
-    shortlink: mBQ5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/mBQ5AQ'
-    source_link: >-
-        /display/NXDOC/How+to+Hide+a+Tab%2C+a+Link+or+a+Button+for+a+Group+or+a+User
 tree_item_index: 300
 history:
     -
@@ -97,7 +83,7 @@ history:
     -
         author: Gildas Lefevre
         date: '2014-11-06 17:22'
-        message: 'NXDOC-441: Add a link to the ''how to'' for activate the dev mode'
+        message: "NXDOC-441: Add a link to the 'how to' for activate the dev mode"
         version: '6'
     -
         author: Gildas Lefevre

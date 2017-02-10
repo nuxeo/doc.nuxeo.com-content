@@ -10,17 +10,6 @@ labels:
     - binary-manager
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Amazon+S3+Online+Storage
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Amazon+S3+Online+Storage'
-    page_id: '12912817'
-    shortlink: sQjF
-    shortlink_source: 'https://doc.nuxeo.com/x/sQjF'
-    source_link: /display/NXDOC/Amazon+S3+Online+Storage
 tree_item_index: 300
 history:
     -

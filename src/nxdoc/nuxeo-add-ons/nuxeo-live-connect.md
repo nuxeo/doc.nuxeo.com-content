@@ -9,17 +9,6 @@ labels:
     - live-connect-component
     - university
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Live+Connect
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Live+Connect'
-    page_id: '25690898'
-    shortlink: EgOIAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/EgOIAQ'
-    source_link: /display/NXDOC/Nuxeo+Live+Connect
 tree_item_index: 2100
 history:
     -
@@ -170,9 +159,7 @@ history:
     -
         author: Joshua Fletcher
         date: '2015-09-17 22:45'
-        message: >-
-            Add missing step for Dropbox configuration, add note about SSL
-            requirement.
+        message: 'Add missing step for Dropbox configuration, add note about SSL requirement.'
         version: '26'
     -
         author: Nelson Silva

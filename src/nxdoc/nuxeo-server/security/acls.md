@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - acl
     - security-component
-confluence:
-    ajs-parent-page-id: '20515363'
-    ajs-parent-page-title: Security
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: ACLs
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/ACLs'
-    page_id: '20515407'
-    shortlink: Two5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/Two5AQ'
-    source_link: /display/NXDOC/ACLs
 tree_item_index: 100
 history:
     -

@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - preview
     - multiexcerpt
-confluence:
-    ajs-parent-page-id: '2392400'
-    ajs-parent-page-title: Browsing Content
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Preview
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Preview'
-    page_id: '2392382'
-    shortlink: PoEk
-    shortlink_source: 'https://doc.nuxeo.com/x/PoEk'
-    source_link: /display/USERDOC/Preview
 tree_item_index: 300
 history:
     -

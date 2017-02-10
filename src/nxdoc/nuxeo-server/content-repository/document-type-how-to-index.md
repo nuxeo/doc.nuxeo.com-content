@@ -7,17 +7,6 @@ review:
 labels:
     - lts2016-ok
     - index
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Document+Type+How-To+Index
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Document+Type+How-To+Index'
-    page_id: '19235660'
-    shortlink: TIMlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/TIMlAQ'
-    source_link: /display/NXDOC/Document+Type+How-To+Index
 tree_item_index: 1600
 history:
     -

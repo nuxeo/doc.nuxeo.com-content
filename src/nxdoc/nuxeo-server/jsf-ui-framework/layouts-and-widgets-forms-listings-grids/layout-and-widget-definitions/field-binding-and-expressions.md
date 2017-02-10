@@ -14,17 +14,6 @@ labels:
     - nxdoc-158
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3868333'
-    ajs-parent-page-title: Layout and Widget Definitions
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Field+Binding+and+Expressions
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Field+Binding+and+Expressions'
-    page_id: '11043686'
-    shortlink: ZoOo
-    shortlink_source: 'https://doc.nuxeo.com/x/ZoOo'
-    source_link: /display/NXDOC/Field+Binding+and+Expressions
 tree_item_index: 400
 history:
     -

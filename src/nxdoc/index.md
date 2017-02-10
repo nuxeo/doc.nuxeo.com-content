@@ -9,17 +9,6 @@ labels:
     - home
     - multiexcerpt
 is_overview: true
-confluence:
-    ajs-parent-page-id: ''
-    ajs-parent-page-title: ''
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Developer+Documentation+Center
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Developer+Documentation+Center'
-    page_id: '950332'
-    shortlink: PIAO
-    shortlink_source: 'https://doc.nuxeo.com/x/PIAO'
-    source_link: /display/NXDOC/Developer+Documentation+Center
 history:
     -
         author: Solen Guitter

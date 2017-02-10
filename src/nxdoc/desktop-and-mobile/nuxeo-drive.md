@@ -10,17 +10,6 @@ labels:
     - nuxeo-drive
     - nuxeo-drive-component
 toc: true
-confluence:
-    ajs-parent-page-id: '31033323'
-    ajs-parent-page-title: Desktop and Mobile
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Drive
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Drive'
-    page_id: '14257229'
-    shortlink: TYzZ
-    shortlink_source: 'https://doc.nuxeo.com/x/TYzZ'
-    source_link: /display/NXDOC/Nuxeo+Drive
 history:
     -
         author: Solen Guitter
@@ -50,9 +39,7 @@ history:
     -
         author: Solen Guitter
         date: '2016-04-01 14:53'
-        message: >-
-            Add default value column, Remove section about beta update site set
-            up though nuxeo.conf
+        message: 'Add default value column, Remove section about beta update site set up though nuxeo.conf'
         version: '137'
     -
         author: Solen Guitter
@@ -257,7 +244,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-09-04 10:35'
-        message: Moved other"
+        message: 'Moved other"'
         version: '96'
     -
         author: Solen Guitter

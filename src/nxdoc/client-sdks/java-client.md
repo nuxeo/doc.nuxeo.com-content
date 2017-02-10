@@ -7,17 +7,6 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '16091040'
-    ajs-parent-page-title: Client SDKs
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=30474666
-    canonical_source: viewpage.action?pageId=30474666
-    page_id: '30474666'
-    shortlink: qgHRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/qgHRAQ'
-    source_link: /pages/viewpage.action?pageId=30474666
 tree_item_index: 200
 history:
     -

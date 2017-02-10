@@ -8,20 +8,9 @@ labels:
     - lts2016-ok
     - delete
 toc: true
-confluence:
-    ajs-parent-page-id: '950318'
-    ajs-parent-page-title: Monitoring and Maintenance
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Garbage-Collecting+Orphaned+Binaries
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Garbage-Collecting+Orphaned+Binaries'
-    page_id: '23365028'
-    shortlink: pIVkAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/pIVkAQ'
-    source_link: /display/NXDOC/Garbage-Collecting+Orphaned+Binaries
 tree_item_index: 1000
 version_override:
-    'LTS 2015': 710/admindoc/garbage-collecting-orphaned-binaries
+    LTS 2015: 710/admindoc/garbage-collecting-orphaned-binaries
     '6.0': 60/admindoc/garbage-collecting-orphaned-binaries
     '5.8': 58/admindoc/garbage-collecting-orphaned-binaries
 history:

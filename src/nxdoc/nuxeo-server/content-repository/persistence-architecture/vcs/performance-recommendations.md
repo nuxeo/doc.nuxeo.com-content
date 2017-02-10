@@ -9,17 +9,6 @@ labels:
     - vcs
     - performance
     - vcs-component
-confluence:
-    ajs-parent-page-id: '3342350'
-    ajs-parent-page-title: VCS
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Performance+Recommendations
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Performance+Recommendations'
-    page_id: '12915243'
-    shortlink: KxLF
-    shortlink_source: 'https://doc.nuxeo.com/x/KxLF'
-    source_link: /display/NXDOC/Performance+Recommendations
 tree_item_index: 500
 history:
     -

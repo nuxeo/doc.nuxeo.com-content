@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - performance
 toc: true
-confluence:
-    ajs-parent-page-id: '19235677'
-    ajs-parent-page-title: Quick Start Series
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Managing+Performance
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Managing+Performance'
-    page_id: '19235830'
-    shortlink: 9oMlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/9oMlAQ'
-    source_link: /display/NXDOC/Managing+Performance
 tree_item_index: 900
 history:
     -

@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - action
     - index
-confluence:
-    ajs-parent-page-id: '950289'
-    ajs-parent-page-title: 'Actions (Links, Buttons, Icons, Tabs and More)'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Action+How-To+Index
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Action+How-To+Index'
-    page_id: '19235610'
-    shortlink: GoMlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/GoMlAQ'
-    source_link: /display/NXDOC/Action+How-To+Index
 tree_item_index: 700
 history:
     -

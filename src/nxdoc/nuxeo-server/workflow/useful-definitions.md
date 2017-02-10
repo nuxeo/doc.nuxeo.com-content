@@ -12,17 +12,6 @@ labels:
     - excerpt
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '12913723'
-    ajs-parent-page-title: Workflow
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Useful+Definitions
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Useful+Definitions'
-    page_id: '12912668'
-    shortlink: HAjF
-    shortlink_source: 'https://doc.nuxeo.com/x/HAjF'
-    source_link: /display/NXDOC/Useful+Definitions
 tree_item_index: 100
 history:
     -

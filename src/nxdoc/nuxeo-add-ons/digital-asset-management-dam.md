@@ -13,17 +13,6 @@ labels:
     - annotation
     - dam-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=3866704
-    canonical_source: viewpage.action?pageId=3866704
-    page_id: '3866704'
-    shortlink: UAA7
-    shortlink_source: 'https://doc.nuxeo.com/x/UAA7'
-    source_link: /pages/viewpage.action?pageId=3866704
 tree_item_index: 400
 history:
     -
@@ -54,7 +43,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-10-12 14:25'
-        message: "Remove DAM compat link, add link to How to Contribute Picture Conversions\uFEFF "
+        message: 'Remove DAM compat link, add link to How to Contribute Picture Conversions﻿ '
         version: '48'
     -
         author: Solen Guitter
@@ -234,9 +223,7 @@ history:
     -
         author: Solen Guitter
         date: '2012-09-03 14:46'
-        message: >-
-            Replaced Mercurial with GitHub and moved page to the technical
-            documentation space
+        message: Replaced Mercurial with GitHub and moved page to the technical documentation space
         version: '12'
     -
         author: Solen Guitter

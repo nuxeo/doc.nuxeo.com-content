@@ -11,20 +11,9 @@ labels:
     - monitoring-component
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '950318'
-    ajs-parent-page-title: Monitoring and Maintenance
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Metrics+and+Monitoring
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Metrics+and+Monitoring'
-    page_id: '12914816'
-    shortlink: gBDF
-    shortlink_source: 'https://doc.nuxeo.com/x/gBDF'
-    source_link: /display/NXDOC/Metrics+and+Monitoring
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/admindoc/metrics-and-monitoring
+    LTS 2015: 710/admindoc/metrics-and-monitoring
     '6.0': 60/admindoc/metrics-and-monitoring
     '5.8': 58/admindoc/metrics-and-monitoring
 history:

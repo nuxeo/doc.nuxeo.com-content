@@ -10,17 +10,6 @@ labels:
     - automation-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '18451738'
-    ajs-parent-page-title: Automation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Automation+REST+Response
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Automation+REST+Response'
-    page_id: '22905334'
-    shortlink: 9oFdAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/9oFdAQ'
-    source_link: /display/NXDOC/Automation+REST+Response
 tree_item_index: 1400
 history:
     -

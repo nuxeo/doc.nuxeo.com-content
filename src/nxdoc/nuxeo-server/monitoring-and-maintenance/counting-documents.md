@@ -7,20 +7,9 @@ review:
 labels:
     - content-review-lts2016
     - dataviz-component
-confluence:
-    ajs-parent-page-id: '950318'
-    ajs-parent-page-title: Monitoring and Maintenance
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Counting+Documents
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Counting+Documents'
-    page_id: '16091882'
-    shortlink: 6or1
-    shortlink_source: 'https://doc.nuxeo.com/x/6or1'
-    source_link: /display/NXDOC/Counting+Documents
 tree_item_index: 800
 version_override:
-    'LTS 2015': 710/admindoc/counting-documents
+    LTS 2015: 710/admindoc/counting-documents
     '6.0': 60/admindoc/counting-documents
     '5.8': 58/admindoc/counting-documents
 history:

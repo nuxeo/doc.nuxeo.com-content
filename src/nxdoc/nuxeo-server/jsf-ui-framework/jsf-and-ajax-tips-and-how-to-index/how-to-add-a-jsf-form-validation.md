@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to add a JSF form validation to a JSF component to
-            validate a field.
+        excerpt: Learn how to add a JSF form validation to a JSF component to validate a field.
         level: Advanced
         tool: Code
         topics: 'Layout, JSF UI, Validation'
@@ -18,17 +16,6 @@ labels:
     - jsf
     - howto
     - seam-jsf-component
-confluence:
-    ajs-parent-page-id: '9830458'
-    ajs-parent-page-title: JSF and Ajax Tips and How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Add+a+JSF+Form+Validation
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Add+a+JSF+Form+Validation'
-    page_id: '3343526'
-    shortlink: pgQz
-    shortlink_source: 'https://doc.nuxeo.com/x/pgQz'
-    source_link: /display/NXDOC/How+to+Add+a+JSF+Form+Validation
 tree_item_index: 800
 history:
     -
@@ -59,7 +46,7 @@ history:
     -
         author: Vincent Dutat
         date: '2014-07-17 00:59'
-        message: link to "Cross validation with JSF"
+        message: 'link to "Cross validation with JSF"'
         version: '25'
     -
         author: Solen Guitter

@@ -6,10 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to override the default Edit permission so it does not
-            include Remove by default, and set a new ReadWriteAndRemove
-            permission.
+        excerpt: 'Learn how to override the default Edit permission so it does not include Remove by default, and set a new ReadWriteAndRemove permission.'
         level: Intermediate
         tool: XML Extension
         topics: Permissions
@@ -19,19 +16,6 @@ labels:
     - link-update
     - permission
 toc: true
-confluence:
-    ajs-parent-page-id: '20515363'
-    ajs-parent-page-title: Security
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Grant+the+Edit+Permission+without+the+Remove+Permission
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Grant+the+Edit+Permission+without+the+Remove+Permission
-    page_id: '24052147'
-    shortlink: swFvAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/swFvAQ'
-    source_link: >-
-        /display/NXDOC/How+to+Grant+the+Edit+Permission+without+the+Remove+Permission
 tree_item_index: 400
 history:
     -
@@ -62,7 +46,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2016-01-11 09:55'
-        message: Added a 'heading' for the procedure (prevents TOC being empty)
+        message: "Added a 'heading' for the procedure (prevents TOC being empty)"
         version: '5'
     -
         author: Ronan Daniellou

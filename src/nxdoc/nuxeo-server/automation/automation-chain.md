@@ -9,17 +9,6 @@ labels:
     - automation
     - automation-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '18451738'
-    ajs-parent-page-title: Automation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Automation+Chain
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Automation+Chain'
-    page_id: '3342577'
-    shortlink: 8QAz
-    shortlink_source: 'https://doc.nuxeo.com/x/8QAz'
-    source_link: /display/NXDOC/Automation+Chain
 tree_item_index: 300
 history:
     -
@@ -95,9 +84,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-07-17 12:03'
-        message: >-
-            Added link, formatting, replaced "operation chain" with "automation
-            chain"
+        message: 'Added link, formatting, replaced "operation chain" with "automation chain"'
         version: '7'
     -
         author: Vladimir Pasquier

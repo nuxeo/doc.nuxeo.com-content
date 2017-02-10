@@ -8,17 +8,6 @@ labels:
     - content-review-lts2016
     - license
     - excerpt
-confluence:
-    ajs-parent-page-id: '950332'
-    ajs-parent-page-title: Developer Documentation Center
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Licenses
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Licenses'
-    page_id: '12288640'
-    shortlink: gIK7
-    shortlink_source: 'https://doc.nuxeo.com/x/gIK7'
-    source_link: /display/NXDOC/Licenses
 tree_item_index: 800
 history:
     -

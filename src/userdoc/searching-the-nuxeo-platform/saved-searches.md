@@ -9,23 +9,12 @@ labels:
     - saved-search
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '2392416'
-    ajs-parent-page-title: Searching the Nuxeo Platform
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Saved+Searches
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Saved+Searches'
-    page_id: '20519012'
-    shortlink: ZBg5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/ZBg5AQ'
-    source_link: /display/USERDOC/Saved+Searches
 tree_item_index: 300
 history:
     -
         author: Manon Lumeau
         date: '2015-11-25 17:07'
-        message: eplace "access rights" by "permissions
+        message: 'eplace "access rights" by "permissions'
         version: '8'
     -
         author: Solen Guitter

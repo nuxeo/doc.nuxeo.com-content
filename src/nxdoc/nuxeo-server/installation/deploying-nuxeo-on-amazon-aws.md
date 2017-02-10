@@ -10,20 +10,9 @@ labels:
     - cloud-deployment
     - mg
 toc: true
-confluence:
-    ajs-parent-page-id: '3866685'
-    ajs-parent-page-title: Installation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Deploying+Nuxeo+on+Amazon+AWS
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Deploying+Nuxeo+on+Amazon+AWS'
-    page_id: '7536937'
-    shortlink: KQFz
-    shortlink_source: 'https://doc.nuxeo.com/x/KQFz'
-    source_link: /display/NXDOC/Deploying+Nuxeo+on+Amazon+AWS
 tree_item_index: 700
 version_override:
-    'LTS 2015': 710/admindoc/deploying-nuxeo-on-amazon-aws
+    LTS 2015: 710/admindoc/deploying-nuxeo-on-amazon-aws
     '6.0': 60/admindoc/deploying-nuxeo-on-amazon-aws
     '5.8': 58/admindoc/deploying-nuxeo-on-amazon-aws
 history:

@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to customize startup redirection so users are displayed
-            the default Nuxeo dashboard.
+        excerpt: Learn how to customize startup redirection so users are displayed the default Nuxeo dashboard.
         level: Advanced
         tool: Code editor
         topics: JSF UI
@@ -18,17 +16,6 @@ labels:
     - jsf
     - seam-jsf-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '20517820'
-    ajs-parent-page-title: JSF UI How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Customize+Startup+Redirection
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Customize+Startup+Redirection'
-    page_id: '20517973'
-    shortlink: VRQ5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/VRQ5AQ'
-    source_link: /display/NXDOC/How+to+Customize+Startup+Redirection
 tree_item_index: 400
 history:
     -

@@ -12,17 +12,6 @@ labels:
     - community-links
     - home
     - excerpt
-confluence:
-    ajs-parent-page-id: '950330'
-    ajs-parent-page-title: 'Layouts and Widgets (Forms, Listings, Grids)'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Standard+Widget+Types
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Standard+Widget+Types'
-    page_id: '3868345'
-    shortlink: uQY7
-    shortlink_source: 'https://doc.nuxeo.com/x/uQY7'
-    source_link: /display/NXDOC/Standard+Widget+Types
 tree_item_index: 300
 history:
     -

@@ -7,17 +7,6 @@ review:
 labels:
     - lts2016-ok
     - index
-confluence:
-    ajs-parent-page-id: '19235645'
-    ajs-parent-page-title: Conversion
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Conversion+How-To+Index
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Conversion+How-To+Index'
-    page_id: '19235654'
-    shortlink: RoMlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/RoMlAQ'
-    source_link: /display/NXDOC/Conversion+How-To+Index
 tree_item_index: 300
 history:
     -

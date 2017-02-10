@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to create new alert&nbsp;email or override existing alert
-            emails with Nuxeo Studio.
+        excerpt: 'Learn how to create new alert&nbsp;email or override existing alert emails with Nuxeo Studio.'
         level: Beginner
         tool: Studio
         topics: Alerts
@@ -22,17 +20,6 @@ labels:
     - studio
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '19235679'
-    ajs-parent-page-title: Educational
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Customize+Email+Templates
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Customize+Email+Templates'
-    page_id: '9274963'
-    shortlink: U4aN
-    shortlink_source: 'https://doc.nuxeo.com/x/U4aN'
-    source_link: /display/NXDOC/How+to+Customize+Email+Templates
 tree_item_index: 700
 history:
     -

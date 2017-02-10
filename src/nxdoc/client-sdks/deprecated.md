@@ -10,6 +10,7 @@ labels:
     - deprecated
 toc: true
 tree_item_index: 1000
+
 ---
 
 * [Java Automation Client]({{page space='NXDOC' page='Java Automation Client'}}):</br>

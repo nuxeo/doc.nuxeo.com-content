@@ -11,17 +11,6 @@ labels:
     - link-update
     - rest-api-component
 toc: true
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: JSON+Marshalling
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/JSON+Marshalling'
-    page_id: '23367748'
-    shortlink: RJBkAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/RJBkAQ'
-    source_link: /display/NXDOC/JSON+Marshalling
 tree_item_index: 900
 history:
     -
@@ -52,9 +41,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-09-15 16:05'
-        message: >-
-            Split table in section JSON Marshallers Provided by the Nuxeo
-            Platform
+        message: Split table in section JSON Marshallers Provided by the Nuxeo Platform
         version: '71'
     -
         author: Solen Guitter
@@ -84,9 +71,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-04-16 15:13'
-        message: >-
-            Add links to javadoc in table JSON Marshallers Provided by the Nuxeo
-            Platform
+        message: Add links to javadoc in table JSON Marshallers Provided by the Nuxeo Platform
         version: '65'
     -
         author: Solen Guitter

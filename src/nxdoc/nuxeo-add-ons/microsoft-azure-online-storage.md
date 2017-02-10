@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Microsoft+Azure+Online+Storage
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Microsoft+Azure+Online+Storage'
-    page_id: '27590744'
-    shortlink: WAClAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/WAClAQ'
-    source_link: /display/NXDOC/Microsoft+Azure+Online+Storage
 tree_item_index: 800
 history:
     -

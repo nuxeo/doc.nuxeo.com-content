@@ -9,17 +9,6 @@ labels:
     - jsf
     - howto
     - seam-jsf-component
-confluence:
-    ajs-parent-page-id: '9830458'
-    ajs-parent-page-title: JSF and Ajax Tips and How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Configuring+the+JSF+Number+of+Views
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Configuring+the+JSF+Number+of+Views'
-    page_id: '14255253'
-    shortlink: lYTZ
-    shortlink_source: 'https://doc.nuxeo.com/x/lYTZ'
-    source_link: /display/NXDOC/Configuring+the+JSF+Number+of+Views
 tree_item_index: 500
 history:
     -

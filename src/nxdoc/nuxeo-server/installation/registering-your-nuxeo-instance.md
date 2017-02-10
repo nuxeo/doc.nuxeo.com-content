@@ -9,20 +9,9 @@ labels:
     - admin-center
     - update-center
 toc: true
-confluence:
-    ajs-parent-page-id: '3866685'
-    ajs-parent-page-title: Installation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Registering+your+Nuxeo+Instance
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Registering+your+Nuxeo+Instance'
-    page_id: '4686231'
-    shortlink: l4FH
-    shortlink_source: 'https://doc.nuxeo.com/x/l4FH'
-    source_link: /display/NXDOC/Registering+your+Nuxeo+Instance
 tree_item_index: 1200
 version_override:
-    'LTS 2015': 710/admindoc/registering-your-nuxeo-instance
+    LTS 2015: 710/admindoc/registering-your-nuxeo-instance
     '6.0': 60/admindoc/registering-your-nuxeo-instance
     '5.8': 58/admindoc/registering-your-nuxeo-instance
 history:

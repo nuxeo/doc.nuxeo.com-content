@@ -7,17 +7,6 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '31033323'
-    ajs-parent-page-title: Desktop and Mobile
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Mobile
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Mobile'
-    page_id: '31035724'
-    shortlink: TJHZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/TJHZAQ'
-    source_link: /display/NXDOC/Nuxeo+Mobile
 history:
     -
         author: Solen Guitter

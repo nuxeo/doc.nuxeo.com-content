@@ -10,17 +10,6 @@ labels:
     - excerpt
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '2392400'
-    ajs-parent-page-title: Browsing Content
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Collections
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Collections'
-    page_id: '18451619'
-    shortlink: o4wZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/o4wZAQ'
-    source_link: /display/USERDOC/Collections
 tree_item_index: 100
 history:
     -

@@ -7,17 +7,6 @@ review:
 labels:
     - lts2016-ok
     - migration-sample
-confluence:
-    ajs-parent-page-id: '7209076'
-    ajs-parent-page-title: Tutorials
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How-To+Index
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How-To+Index'
-    page_id: '19793611'
-    shortlink: ywYuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/ywYuAQ'
-    source_link: /display/NXDOC/How-To+Index
 tree_item_index: 700
 history:
     -

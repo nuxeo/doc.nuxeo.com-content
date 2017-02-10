@@ -9,18 +9,6 @@ labels:
     - variable
     - email
 toc: true
-confluence:
-    ajs-parent-page-id: '14254895'
-    ajs-parent-page-title: Understand Expression and Scripting Languages Used in Nuxeo
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Available+Variables+in+Email+Templates
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Available+Variables+in+Email+Templates
-    page_id: '14256091'
-    shortlink: 24fZ
-    shortlink_source: 'https://doc.nuxeo.com/x/24fZ'
-    source_link: /display/NXDOC/Available+Variables+in+Email+Templates
 history:
     -
         author: Manon Lumeau
