@@ -47,13 +47,13 @@ history:
 ---
 {{! multiexcerpt name='5.3.1-to-5.3.2-upgrade-page'}}
 
-## **Code migration**
+## Code migration
 
 5.3.2 is fully backward compatible with 5.3.1 (no compat package is needed).
 
 So, you should have no issues with running your custom code against 5.3.2\. If you have any problems, you can contact Nuxeo Support.
 
-## **Packaging**
+## Packaging
 
 The packaging system is basically the same as the one used in 5.3.1.
 
@@ -64,7 +64,7 @@ This means that resources are no longer embedded inside the EAR but handled in a
 This makes changing configurations easier (like switching from H2 to PostgreSQL) and will also allow for upgrades without having to redo all custom system configurations.
 
 
-## **Data**
+## Data
 
 The only changes done between 5.3.1 and 5.3.2 are the way tags are stored.
 
@@ -74,7 +74,7 @@ Nevertheless, migration should be automatic and transparent.
 
 If you have any problems, you can contact Nuxeo Support.
 
-## **Configuration**
+## Configuration
 
 We have changed the way Nuxeo starts OpenOffice.
 
@@ -86,7 +86,3 @@ The new OOolauncher (that replaces OOodeamon) should:
 *   be easier to set up (removed the dependencies on JNI UNO libs).
 
 {{! /multiexcerpt}}
-
-&nbsp;
-
-&nbsp;

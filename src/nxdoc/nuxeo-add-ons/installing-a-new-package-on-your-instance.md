@@ -252,12 +252,12 @@ The Admin tab includes a section called **Update Center** from which you can eas
 
 **To install a package from the Admin tab:**
 
-1.  As an administrator (Administrator/Administrator by default),&nbsp;in the **Admin** tab, click on the **Update Center** left tab.
+1.  As an administrator (Administrator/Administrator by default), in the **Admin** tab, click on the **Update Center** left tab.
 2.  Click on the **Packages from Nuxeo Marketplace**.
     The list of available packages, including hotfixes and addons, is displayed. By default, only packages compatible with your version of the Nuxeo Platform are listed.
 3.  Optionally, filter the list of packages:
 
-    *   Uncheck the&nbsp;**Show only packages compatible with my distribution** box if you want to see all available packages;
+    *   Uncheck the **Show only packages compatible with my distribution** box if you want to see all available packages;
     *   Select a type of package in the drop down list if you want to narrow the list to a package type (addon, hotfix);
     *   Check the **Show only new packages** box if you want to hide already downloaded packages from the list.
         ![]({{file name='Admin-Center-updateCenter.png'}} ?w=650,h=287,border=true)
@@ -351,7 +351,7 @@ There are two ways to install a package from the Marketplace:
 It is possible to install packages available on the Nuxeo Marketplace even if your server is not connected to the Internet. This takes two steps:
 
 1.  Download the package from the Marketplace.
-2.  Upload the package from the Update Center or install it using the&nbsp;`nuxeoctl` script.
+2.  Upload the package from the Update Center or install it using the `nuxeoctl` script.
 
 ### Installing a Package Offline Using the nuxeoctl Script
 
@@ -442,21 +442,21 @@ Depending on the package you want to install, you may need to be logged in to th
     You're displayed a Restarting page as the server is restarting. The login page is displayed as soon as the server is available again.
     ![]({{file name='restarting-page.png'}} ?w=500,border=true)
 
-## **Uninstalling a Package**
+## Uninstalling a Package
 
-Uninstalling a package can be done from the Admin tab or from a terminal using the&nbsp;`nuxeoctl`&nbsp;script.
+Uninstalling a package can be done from the Admin tab or from a terminal using the `nuxeoctl` script.
 
-### **Uninstalling a Package from the Admin Tab**
+### Uninstalling a Package from the Admin Tab
 
-1.  In the&nbsp;**Admin**&nbsp;tab, go on the&nbsp;**Local packages**&nbsp;tab of the&nbsp;**Update Center**.
-    The list of packages that you have downloaded and possibly installed is displayed.&nbsp;
+1.  In the **Admin** tab, go on the **Local packages** tab of the **Update Center**.
+    The list of packages that you have downloaded and possibly installed is displayed.
     ![]({{file name='AdminCenter_local_packages.png'}} ?w=600,border=true)
-2.  Click on the&nbsp;**Uninstall**&nbsp;link of the package you want to uninstall from your application.
+2.  Click on the **Uninstall** link of the package you want to uninstall from your application.
     A confirmation message is displayed.
-3.  Click on the&nbsp;**Start**&nbsp;button to confirm you want to uninstall the package.
+3.  Click on the **Start** button to confirm you want to uninstall the package.
     ![]({{file name='AdminCenter-uninstall2.png'}} ?w=450,border=true)
-4.  When uninstallation is done, click on the&nbsp;**Finish**&nbsp;button.
-    ![]({{file name='AdminCenter-uninstall3.png'}} ?w=600,border=true)&nbsp;
+4.  When uninstallation is done, click on the **Finish** button.
+    ![]({{file name='AdminCenter-uninstall3.png'}} ?w=600,border=true)
     The list of packages is displayed. You need to restart the application for the uninstallation to be completed.
 
     {{#> callout type='tip' heading='Hot-reload'}}
@@ -467,13 +467,13 @@ Uninstalling a package can be done from the Admin tab or from a terminal using t
 
     ![]({{file name='AdminCenter-uninstall4.png'}} ?w=600,h=186,border=true)
 
-5.  Click on the&nbsp;**Restart server**&nbsp;button and confirm server restart.
-6.  When the server is restarted, log back in and go the&nbsp;**Local Packages**&nbsp;tab. The uninstalled package now has an&nbsp;**Install**&nbsp;link displayed.
+5.  Click on the **Restart server** button and confirm server restart.
+6.  When the server is restarted, log back in and go the **Local Packages** tab. The uninstalled package now has an **Install** link displayed.
     ![]({{file name='AdminCenter-uninstall5.png'}} ?w=600)
 
 ### Uninstalling a Package Using the nuxeoctl Script
 
-The instructions below provide the steps to follow to uninstall a package using the&nbsp;`nuxeoctl`&nbsp;script. For a overview of this script, please read the page&nbsp;[nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}}).
+The instructions below provide the steps to follow to uninstall a package using the `nuxeoctl` script. For a overview of this script, please read the page [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}}).
 
 1.  Stop your server.
 
@@ -532,8 +532,8 @@ The instructions below provide the steps to follow to uninstall a package using 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
-*   [Admin Tab Overview]({{page page='admin-tab-overview'}})
+- [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
+- [Admin Tab Overview]({{page page='admin-tab-overview'}})
 
 {{/panel}}</div><div class="column medium-6">
 

@@ -113,7 +113,7 @@ history:
 
 {{! excerpt}}
 
-This how-to explains how to add a&nbsp;small "News" feature to your Nuxeo Platform for enabling News content publishing at workspace level, using only Nuxeo Studio.
+This how-to explains how to add a small "News" feature to your Nuxeo Platform for enabling News content publishing at workspace level, using only Nuxeo Studio.
 
 {{! /excerpt}}
 
@@ -128,9 +128,9 @@ This how-to explains how to add a&nbsp;small "News" feature to your Nuxeo Platfo
 
 ### News document type
 
-It is composed of a title&nbsp;that can be edited using a HTML Widget. The HTML widget in Nuxeo applications has the ability to upload pictures for the rich content, providing the target type has the "files" schema: this one will be added to our `News` type.&nbsp;
+It is composed of a title that can be edited using a HTML Widget. The HTML widget in Nuxeo applications has the ability to upload pictures for the rich content, providing the target type has the "files" schema: this one will be added to our `News` type.
 
-When they are published, `News` must be sorted by their publishing date. Considering what "publishing" means here, the publishing date is the time when it was approved. We will store that information on the default Dublin Core field `dc:valid` , which accepts a date.&nbsp;
+When they are published, `News` must be sorted by their publishing date. Considering what "publishing" means here, the publishing date is the time when it was approved. We will store that information on the default Dublin Core field `dc:valid` , which accepts a date.
 
 **News tab**
 
@@ -142,23 +142,17 @@ ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState = 'approved' AND ecm:pr
 
 where `?` will be replaced by the dynamical expression `#{currentDocument.path}`.
 
-### **NewsManagement permission**
+### NewsManagement permission
 
 To implement the "NewsManagement" role, we will create a new permission called NewsManagement. It will be bound to the Workspace type, so that it is assignable only on workspaces. This NewsManagement permission will be used to "filter" the two buttons that will have to be created: the button to create the news, and the button to publish the content.
 
-The **Create News**&nbsp;button will be displayed on the Folder toolbar category of Workspace type, next to the **New** button. But we want the news to be created in a specific subfolder of the workspace, the "news" folder. To achieve this, we will be using the following operation combo set:
+The **Create News** button will be displayed on the Folder toolbar category of Workspace type, next to the **New** button. But we want the news to be created in a specific subfolder of the workspace, the "news" folder. To achieve this, we will be using the following operation combo set:
 
 1.  Fetch > Document `./news`: note the use of relative path, as we are on the workspace.
 2.  Navigate to document: that changes the current document to "news" folder.
 3.  Show Create Document page, with type `News`, that displays the content form.
 
-And to make sure that there is always a News folder inside the workspace, we will configure a "content-template", that says that each time a workspace is created, a folder called "News Folder" is created inside it.&nbsp;
+And to make sure that there is always a News folder inside the workspace, we will configure a "content-template", that says that each time a workspace is created, a folder called "News Folder" is created inside it.
 Also, as the news are created through this button, we don't want the News type to appear in the list of document types that are displayed when clicking on the **New** button in Nuxeo Platform.
 
-The **Publish News** button is quite simple, just operating a `follow transition`&nbsp;on the document and updating the&nbsp; `dc:valid` &nbsp;date with the current date.
-
-&nbsp;
-
-* * *
-
-&nbsp;
+The **Publish News** button is quite simple, just operating a `follow transition` on the document and updating the `dc:valid` date with the current date.

@@ -205,7 +205,7 @@ The emails imported in the email folder cannot be modified in the Nuxeo Platform
     ![]({{file name='DM-emailFolder-created.png'}} ?w=650,border=true)
     You can now fetch emails.
 
-### **Email folder parameters**
+### Email folder parameters
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
@@ -336,15 +336,15 @@ Password
 
 </td><td colspan="1">
 
-<div>Password of the email account from which the emails will be fetched.&nbsp;</div>
+<div>Password of the email account from which the emails will be fetched. </div>
 
 <div>
 
-&nbsp;
+
 
 {{#> callout type='note' }}
 
-If you have set the 2 steps Verification, you need to generate a dedicated password.&nbsp;
+If you have set the 2 steps Verification, you need to generate a dedicated password.
 
 {{/callout}}</div>
 
@@ -413,8 +413,6 @@ Limit of new fetched emails
 100
 
 </td></tr></tbody></table></div>
-
-&nbsp;
 
 ## Fetching Emails
 
