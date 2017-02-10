@@ -6,17 +6,6 @@ review:
     status: ok
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '18451738'
-    ajs-parent-page-title: Automation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Automation+How-To+Index
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Automation+How-To+Index'
-    page_id: '19235642'
-    shortlink: OoMlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/OoMlAQ'
-    source_link: /display/NXDOC/Automation+How-To+Index
 tree_item_index: 1600
 history:
     -

@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to get a PDF printable version of the data stored on your
-            document as properties using Nuxeo Studio.
+        excerpt: Learn how to get a PDF printable version of the data stored on your document as properties using Nuxeo Studio.
         level: Beginner
         tool: Studio
         topics: 'Automation, Conversion, Document template'
@@ -20,18 +18,6 @@ labels:
     - automation-component
     - excerpt
     - multiexcerpt-include
-confluence:
-    ajs-parent-page-id: '19235642'
-    ajs-parent-page-title: Automation How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Quickly+Generate+a+PDF+Using+Document+Template
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Quickly+Generate+a+PDF+Using+Document+Template
-    page_id: '5570635'
-    shortlink: SwBV
-    shortlink_source: 'https://doc.nuxeo.com/x/SwBV'
-    source_link: /display/NXDOC/How+to+Quickly+Generate+a+PDF+Using+Document+Template
 tree_item_index: 400
 history:
     -

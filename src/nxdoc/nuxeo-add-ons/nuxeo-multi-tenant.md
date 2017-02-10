@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - multi-tenant
     - excerpt-include
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Multi-Tenant
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Multi-Tenant'
-    page_id: '14257328'
-    shortlink: sIzZ
-    shortlink_source: 'https://doc.nuxeo.com/x/sIzZ'
-    source_link: /display/NXDOC/Nuxeo+Multi-Tenant
 tree_item_index: 2300
 history:
     -

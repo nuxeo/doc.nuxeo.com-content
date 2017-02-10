@@ -15,18 +15,6 @@ labels:
     - howto
     - document-type
     - excerpt
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Override+Existing+Document+Types
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Override+Existing+Document+Types
-    page_id: '6030167'
-    shortlink: VwNc
-    shortlink_source: 'https://doc.nuxeo.com/x/VwNc'
-    source_link: /display/NXDOC/How+to+Override+Existing+Document+Types
 tree_item_index: 1100
 history:
     -

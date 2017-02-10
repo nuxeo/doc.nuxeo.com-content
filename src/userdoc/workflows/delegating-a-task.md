@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - delegation
     - multiexcerpt-include
-confluence:
-    ajs-parent-page-id: '2392410'
-    ajs-parent-page-title: Workflows
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Delegating+a+Task
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Delegating+a+Task'
-    page_id: '16092383'
-    shortlink: 34z1
-    shortlink_source: 'https://doc.nuxeo.com/x/34z1'
-    source_link: /display/USERDOC/Delegating+a+Task
 tree_item_index: 300
 history:
     -

@@ -13,18 +13,6 @@ labels:
     - automation
     - automation-component
 toc: true
-confluence:
-    ajs-parent-page-id: '18451738'
-    ajs-parent-page-title: Automation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Document+Templates+and+Automation+Rendering+Service
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Document+Templates+and+Automation+Rendering+Service
-    page_id: '14256377'
-    shortlink: _YjZ
-    shortlink_source: 'https://doc.nuxeo.com/x/_YjZ'
-    source_link: /display/NXDOC/Document+Templates+and+Automation+Rendering+Service
 tree_item_index: 1300
 history:
     -

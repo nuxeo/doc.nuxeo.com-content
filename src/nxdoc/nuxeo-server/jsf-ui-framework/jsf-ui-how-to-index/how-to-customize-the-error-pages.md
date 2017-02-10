@@ -17,17 +17,6 @@ labels:
     - howto
     - seam-jsf-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '20517820'
-    ajs-parent-page-title: JSF UI How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Customize+the+Error+Pages
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Customize+the+Error+Pages'
-    page_id: '3343548'
-    shortlink: vAQz
-    shortlink_source: 'https://doc.nuxeo.com/x/vAQz'
-    source_link: /display/NXDOC/How+to+Customize+the+Error+Pages
 tree_item_index: 700
 history:
     -

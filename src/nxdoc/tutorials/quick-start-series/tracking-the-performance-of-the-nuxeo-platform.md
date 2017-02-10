@@ -11,18 +11,6 @@ labels:
     - performance
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '19235677'
-    ajs-parent-page-title: Quick Start Series
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Tracking+the+Performance+of+the+Nuxeo+Platform
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Tracking+the+Performance+of+the+Nuxeo+Platform
-    page_id: '2949304'
-    shortlink: uAAt
-    shortlink_source: 'https://doc.nuxeo.com/x/uAAt'
-    source_link: /display/NXDOC/Tracking+the+Performance+of+the+Nuxeo+Platform
 tree_item_index: 800
 history:
     -

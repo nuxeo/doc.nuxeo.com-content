@@ -7,17 +7,6 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '29460589'
-    ajs-parent-page-title: Getting Started with the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Managing+Files
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Managing+Files'
-    page_id: '31687183'
-    shortlink: D4LjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/D4LjAQ'
-    source_link: /display/NXDOC/Managing+Files
 tree_item_index: 500
 history:
     -

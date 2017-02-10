@@ -9,17 +9,6 @@ labels:
     - workflow
     - workflow-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '12913723'
-    ajs-parent-page-title: Workflow
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Workflow+Models+Packaging
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Workflow+Models+Packaging'
-    page_id: '16091256'
-    shortlink: eIj1
-    shortlink_source: 'https://doc.nuxeo.com/x/eIj1'
-    source_link: /display/NXDOC/Workflow+Models+Packaging
 tree_item_index: 200
 history:
     -

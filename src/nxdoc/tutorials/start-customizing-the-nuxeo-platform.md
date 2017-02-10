@@ -8,20 +8,9 @@ labels:
     - lts2016-ok
     - home
 version_override:
-    'LTS 2015': 710/nxdoc/quick-start-dev-guide
+    LTS 2015: 710/nxdoc/quick-start-dev-guide
     '6.0': 60/nxdoc/quick-start-dev-guide
     '5.8': 58/nxdoc/quick-start-dev-guide
-confluence:
-    ajs-parent-page-id: '7209076'
-    ajs-parent-page-title: Tutorials
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Quick+Start+Dev+Guide
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Quick+Start+Dev+Guide'
-    page_id: '14256538'
-    shortlink: monZ
-    shortlink_source: 'https://doc.nuxeo.com/x/monZ'
-    source_link: /display/NXDOC/Quick+Start+Dev+Guide
 tree_item_index: 200
 history:
     -

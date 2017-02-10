@@ -17,25 +17,12 @@ labels:
     - translation
     - howto
     - studio
-confluence:
-    ajs-parent-page-id: '19235763'
-    ajs-parent-page-title: Labels and Translations Management
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=3867532
-    canonical_source: viewpage.action?pageId=3867532
-    page_id: '3867532'
-    shortlink: jAM7
-    shortlink_source: 'https://doc.nuxeo.com/x/jAM7'
-    source_link: /pages/viewpage.action?pageId=3867532
 tree_item_index: 200
 history:
     -
         author: Anahide Tchertchian
         date: '2015-05-22 14:47'
-        message: >-
-            emove warn about server restart: message bundles hotreload does work
-            correctl
+        message: 'emove warn about server restart: message bundles hotreload does work correctl'
         version: '18'
     -
         author: Solen Guitter

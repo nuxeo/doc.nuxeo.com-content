@@ -7,17 +7,6 @@ review:
 redirect: studio/branding-configuration
 labels:
     - content-review-lts2016
-confluence:
-    ajs-parent-page-id: '19235625'
-    ajs-parent-page-title: Theme How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Brand+Your+Application
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Brand+Your+Application'
-    page_id: '1409190'
-    shortlink: poAV
-    shortlink_source: 'https://doc.nuxeo.com/x/poAV'
-    source_link: /display/NXDOC/How+to+Brand+Your+Application
 hidden: true
 history:
     -

@@ -1,7 +1,7 @@
 ---
 title: Nuxeo Media Publishing
 review:
-    comment: 'update youtube configuration part'
+    comment: update youtube configuration part
     date: '2017-01-16'
     status: ok
 labels:
@@ -9,18 +9,7 @@ labels:
     - media-publishing-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Media+Publishing
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Media+Publishing'
-    page_id: '25691068'
-    shortlink: vAOIAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/vAOIAQ'
-    source_link: /display/NXDOC/Nuxeo+Media+Publishing
-tree_item_index: 2200    
+tree_item_index: 2200
 history:
     -
         author: Manon Lumeau

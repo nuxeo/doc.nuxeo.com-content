@@ -6,6 +6,7 @@ review:
     status: ok
 toc: true
 tree_item_index: 50
+
 ---
 
 Nuxeo Authentication is based on the JAAS standard. Authentication infrastructure is based on two main components:

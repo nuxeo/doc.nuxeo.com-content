@@ -9,17 +9,6 @@ labels:
     - last-review-20150128
     - home
 is_overview: true
-confluence:
-    ajs-parent-page-id: '7209076'
-    ajs-parent-page-title: Tutorials
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Quick+Start+Series
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Quick+Start+Series'
-    page_id: '19235677'
-    shortlink: XYMlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/XYMlAQ'
-    source_link: /display/NXDOC/Quick+Start+Series
 tree_item_index: 400
 history:
     -

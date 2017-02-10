@@ -10,17 +10,6 @@ labels:
     - layout-widgets-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '950330'
-    ajs-parent-page-title: 'Layouts and Widgets (Forms, Listings, Grids)'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Standard+Layout+Types
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Standard+Layout+Types'
-    page_id: '22905201'
-    shortlink: cYFdAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/cYFdAQ'
-    source_link: /display/NXDOC/Standard+Layout+Types
 tree_item_index: 200
 history:
     -

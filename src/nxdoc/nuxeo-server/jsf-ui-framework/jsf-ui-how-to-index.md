@@ -7,17 +7,6 @@ review:
 labels:
     - lts2016-ok
     - index
-confluence:
-    ajs-parent-page-id: '950313'
-    ajs-parent-page-title: Nuxeo JSF UI
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: JSF+UI+How-To+Index
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/JSF+UI+How-To+Index'
-    page_id: '20517820'
-    shortlink: vBM5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/vBM5AQ'
-    source_link: /display/NXDOC/JSF+UI+How-To+Index
 tree_item_index: 300
 version_override:
     '6.0': 60/nxdoc/web-ui-how-to-index
@@ -35,12 +24,12 @@ history:
     -
         author: Solen Guitter
         date: '2016-09-05 10:09'
-        message: Rename page (Web UI -> JSF UI)
+        message: 'Rename page (Web UI -> JSF UI)'
         version: '7'
     -
         author: Solen Guitter
         date: '2016-09-05 10:09'
-        message: Update filter (Web UI -> JSF UI)
+        message: 'Update filter (Web UI -> JSF UI)'
         version: '6'
     -
         author: Manon Lumeau

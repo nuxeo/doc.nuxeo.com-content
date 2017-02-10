@@ -7,17 +7,6 @@ review:
 labels:
     - lts2016-ok
     - index
-confluence:
-    ajs-parent-page-id: '950283'
-    ajs-parent-page-title: Events and Listeners
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Event+and+Listener+How+To+Index
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Event+and+Listener+How+To+Index'
-    page_id: '20515087'
-    shortlink: Dwk5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/Dwk5AQ'
-    source_link: /display/NXDOC/Event+and+Listener+How+To+Index
 tree_item_index: 300
 history:
     -

@@ -11,17 +11,6 @@ labels:
     - security-component
     - university
 toc: true
-confluence:
-    ajs-parent-page-id: '20515363'
-    ajs-parent-page-title: Security
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: File+Download+Security+Policies
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/File+Download+Security+Policies'
-    page_id: '26316548'
-    shortlink: BI_RAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/BI_RAQ'
-    source_link: /display/NXDOC/File+Download+Security+Policies
 tree_item_index: 500
 history:
     -

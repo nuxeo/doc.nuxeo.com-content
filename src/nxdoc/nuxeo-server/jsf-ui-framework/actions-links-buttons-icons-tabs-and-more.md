@@ -10,17 +10,6 @@ labels:
     - action-category
     - home
     - excerpt
-confluence:
-    ajs-parent-page-id: '16089312'
-    ajs-parent-page-title: JSF UI Framework
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=950289
-    canonical_source: viewpage.action?pageId=950289
-    page_id: '950289'
-    shortlink: EYAO
-    shortlink_source: 'https://doc.nuxeo.com/x/EYAO'
-    source_link: /pages/viewpage.action?pageId=950289
 tree_item_index: 1000
 history:
     -
@@ -76,9 +65,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2013-12-16 19:01'
-        message: >-
-            remove content that was moved to subpages (but keep anchors) + add
-            wip warning
+        message: remove content that was moved to subpages (but keep anchors) + add wip warning
         version: '27'
     -
         author: Solen Guitter

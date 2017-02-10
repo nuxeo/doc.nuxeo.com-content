@@ -4,17 +4,6 @@ review:
     comment: ''
     date: '2017-01-30'
     status: ok
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Managing+Your+Nuxeo+Application
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Managing+Your+Nuxeo+Application'
-    page_id: '2392402'
-    shortlink: UoEk
-    shortlink_source: 'https://doc.nuxeo.com/x/UoEk'
-    source_link: /display/USERDOC/Managing+Your+Nuxeo+Application
 tree_item_index: 1700
 history:
     -

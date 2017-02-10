@@ -18,17 +18,6 @@ labels:
     - howto
     - studio
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235619'
-    ajs-parent-page-title: Workflow How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=12912851
-    canonical_source: viewpage.action?pageId=12912851
-    page_id: '12912851'
-    shortlink: 0wjF
-    shortlink_source: 'https://doc.nuxeo.com/x/0wjF'
-    source_link: /pages/viewpage.action?pageId=12912851
 tree_item_index: 600
 history:
     -

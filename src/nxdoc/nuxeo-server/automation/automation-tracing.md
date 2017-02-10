@@ -12,17 +12,6 @@ labels:
     - excerpt
     - multiexcerpt-include
     - multiexcerpt
-confluence:
-    ajs-parent-page-id: '18451738'
-    ajs-parent-page-title: Automation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Automation+Tracing
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Automation+Tracing'
-    page_id: '17794017'
-    shortlink: 4YMPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/4YMPAQ'
-    source_link: /display/NXDOC/Automation+Tracing
 tree_item_index: 1000
 history:
     -

@@ -13,17 +13,6 @@ labels:
     - netcore
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '16091040'
-    ajs-parent-page-title: Client SDKs
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: .NET+Client
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/.NET+Client'
-    page_id: '27591799'
-    shortlink: dwSlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/dwSlAQ'
-    source_link: /display/NXDOC/.NET+Client
 tree_item_index: 400
 history:
     -

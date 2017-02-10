@@ -11,17 +11,6 @@ labels:
     - core-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Events+and+Listeners
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Events+and+Listeners'
-    page_id: '950283'
-    shortlink: C4AO
-    shortlink_source: 'https://doc.nuxeo.com/x/C4AO'
-    source_link: /display/NXDOC/Events+and+Listeners
 tree_item_index: 1500
 history:
     -
@@ -52,12 +41,12 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-11-02 14:29'
-        message: tried -> tied
+        message: 'tried -> tied'
         version: '24'
     -
         author: Ronan Daniellou
         date: '2015-11-02 14:27'
-        message: code need -> needs
+        message: 'code need -> needs'
         version: '23'
     -
         author: Ronan Daniellou

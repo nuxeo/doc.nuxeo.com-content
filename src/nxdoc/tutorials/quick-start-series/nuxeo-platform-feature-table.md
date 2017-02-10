@@ -6,17 +6,6 @@ review:
     status: ok
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '19235677'
-    ajs-parent-page-title: Quick Start Series
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Platform+Feature+Table
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Platform+Feature+Table'
-    page_id: '20517889'
-    shortlink: ARQ5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/ARQ5AQ'
-    source_link: /display/NXDOC/Nuxeo+Platform+Feature+Table
 tree_item_index: 1000
 history:
     -

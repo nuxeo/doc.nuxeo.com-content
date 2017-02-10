@@ -10,21 +10,9 @@ labels:
     - windows-service
     - install-service
 toc: true
-confluence:
-    ajs-parent-page-id: '9274329'
-    ajs-parent-page-title: Installing the Nuxeo Platform on Windows
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Installing+the+Nuxeo+Platform+as+a+Windows+Service
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Installing+the+Nuxeo+Platform+as+a+Windows+Service
-    page_id: '6030057'
-    shortlink: 6QJc
-    shortlink_source: 'https://doc.nuxeo.com/x/6QJc'
-    source_link: /display/NXDOC/Installing+the+Nuxeo+Platform+as+a+Windows+Service
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/admindoc/installing-the-nuxeo-platform-as-a-windows-service
+    LTS 2015: 710/admindoc/installing-the-nuxeo-platform-as-a-windows-service
     '6.0': 60/admindoc/installing-the-nuxeo-platform-as-a-windows-service
     '5.8': 58/admindoc/installing-the-nuxeo-platform-as-a-windows-service
 history:
@@ -76,7 +64,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-11-26 11:07'
-        message: Nuxeo DM -> Nuxeo Platform
+        message: 'Nuxeo DM -> Nuxeo Platform'
         version: '33'
     -
         author: Solen Guitter
@@ -126,7 +114,7 @@ history:
     -
         author: Frédéric Vadon
         date: '2013-02-13 17:48'
-        message: nogui > --gui=false
+        message: 'nogui > --gui=false'
         version: '23'
     -
         author: Solen Guitter
@@ -141,7 +129,7 @@ history:
     -
         author: Mathieu Guillaume
         date: '2012-02-09 13:54'
-        message: svn -> hg + updates
+        message: 'svn -> hg + updates'
         version: '20'
     -
         author: Solen Guitter

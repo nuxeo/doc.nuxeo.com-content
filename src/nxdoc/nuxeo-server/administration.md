@@ -7,20 +7,9 @@ review:
 labels:
     - lts2016-ok
 is_overview: true
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Administration
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Administration'
-    page_id: '31032113'
-    shortlink: MYPZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/MYPZAQ'
-    source_link: /display/NXDOC/Administration
 tree_item_index: 200
 version_override:
-    'LTS 2015': 710/admindoc/setup
+    LTS 2015: 710/admindoc/setup
     '6.0': 60/admindoc/setup
     '5.8': 58/admindoc/setup
 history:

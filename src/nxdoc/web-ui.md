@@ -10,17 +10,6 @@ labels:
     - nuxeo-elements
     - polymer-guide
 toc: true
-confluence:
-    ajs-parent-page-id: '950332'
-    ajs-parent-page-title: Developer Documentation Center
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Web+UI
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Web+UI'
-    page_id: '26316892'
-    shortlink: XJCRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/XJCRAQ'
-    source_link: /display/NXDOC/Web+UI
 tree_item_index: 300
 section_parent: web-ui
 history:

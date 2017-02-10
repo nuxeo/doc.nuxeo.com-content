@@ -13,17 +13,6 @@ labels:
     - multiexcerpt
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '18451738'
-    ajs-parent-page-title: Automation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Content+Automation+Concepts
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Content+Automation+Concepts'
-    page_id: '3342489'
-    shortlink: mQAz
-    shortlink_source: 'https://doc.nuxeo.com/x/mQAz'
-    source_link: /display/NXDOC/Content+Automation+Concepts
 tree_item_index: 100
 history:
     -

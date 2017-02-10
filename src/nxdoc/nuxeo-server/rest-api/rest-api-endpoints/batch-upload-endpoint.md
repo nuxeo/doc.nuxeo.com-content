@@ -15,25 +15,14 @@ labels:
     - excerpt
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/blob-upload-for-batch-processing/
+    LTS 2015: 710/nxdoc/blob-upload-for-batch-processing/
     '6.0': 60/nxdoc/blob-upload-for-batch-processing/
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Blob+Upload+for+Batch+Processing
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Blob+Upload+for+Batch+Processing'
-    page_id: '14254649'
-    shortlink: OYLZ
-    shortlink_source: 'https://doc.nuxeo.com/x/OYLZ'
-    source_link: /display/NXDOC/Blob+Upload+for+Batch+Processing
 tree_item_index: 400
 history:
     -
         author: Gabriel Barata
         date: '2016-10-07 17:35'
-        message: hanged "Dropping a Batch" and added "Deleting a File from a Batch"
+        message: 'hanged "Dropping a Batch" and added "Deleting a File from a Batch"'
         version: '32'
     -
         author: Antoine Taillefer
@@ -153,9 +142,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-07-03 15:19'
-        message: >-
-            Reported changes from 5.6 documentation on Content-Type and
-            Content-Length headers and fileIdx parameter.
+        message: Reported changes from 5.6 documentation on Content-Type and Content-Length headers and fileIdx parameter.
         version: '8'
     -
         author: Solen Guitter

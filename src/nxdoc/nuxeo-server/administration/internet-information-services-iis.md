@@ -10,20 +10,9 @@ labels:
     - internet-information-services
     - proxy
 toc: true
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=14256353
-    canonical_source: viewpage.action?pageId=14256353
-    page_id: '14256353'
-    shortlink: 4YjZ
-    shortlink_source: 'https://doc.nuxeo.com/x/4YjZ'
-    source_link: /pages/viewpage.action?pageId=14256353
 tree_item_index: 700
 version_override:
-    'LTS 2015': 710/admindoc/internet-information-services-iis-configuration
+    LTS 2015: 710/admindoc/internet-information-services-iis-configuration
     '6.0': 60/admindoc/internet-information-services-iis-configuration
     '5.8': 58/admindoc/internet-information-services-iis-configuration
 history:
@@ -55,7 +44,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-03-25 11:20'
-        message: Added section "Preserving the Host Header"
+        message: 'Added section "Preserving the Host Header"'
         version: '4'
     -
         author: Solen Guitter

@@ -9,17 +9,6 @@ labels:
     - home
     - search
 toc: true
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Nuxeo+Platform+Concepts
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Platform+Concepts'
-    page_id: '2392418'
-    shortlink: YoEk
-    shortlink_source: 'https://doc.nuxeo.com/x/YoEk'
-    source_link: /display/USERDOC/Nuxeo+Platform+Concepts
 tree_item_index: 100
 history:
     -
@@ -105,9 +94,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-08-26 18:28'
-        message: >-
-            Add note about minimum rights to be able to use Document Management
-            tab.
+        message: Add note about minimum rights to be able to use Document Management tab.
         version: '69'
     -
         author: Thierry Martins
@@ -247,12 +234,12 @@ history:
     -
         author: Solen Guitter
         date: '2012-06-13 11:46'
-        message: Added "version" permission
+        message: 'Added "version" permission'
         version: '41'
     -
         author: Solen Guitter
         date: '2012-04-03 10:45'
-        message: Added "version" permission
+        message: 'Added "version" permission'
         version: '40'
     -
         author: Solen Guitter

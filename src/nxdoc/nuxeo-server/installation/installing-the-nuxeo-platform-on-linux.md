@@ -11,21 +11,9 @@ labels:
     - multiexcerpt-include
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3866685'
-    ajs-parent-page-title: Installation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Installing+the+Nuxeo+Platform+on+Linux
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Installing+the+Nuxeo+Platform+on+Linux
-    page_id: '9274334'
-    shortlink: 3oON
-    shortlink_source: 'https://doc.nuxeo.com/x/3oON'
-    source_link: /display/NXDOC/Installing+the+Nuxeo+Platform+on+Linux
 tree_item_index: 400
 version_override:
-    'LTS 2015': 710/admindoc/installing-the-nuxeo-platform-on-linux
+    LTS 2015: 710/admindoc/installing-the-nuxeo-platform-on-linux
     '6.0': 60/admindoc/installing-the-nuxeo-platform-on-linux
     '5.8': 58/admindoc/installing-the-nuxeo-platform-on-linux
 history:
@@ -212,7 +200,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-06-27 16:47'
-        message: Replaced last "releases" repository
+        message: 'Replaced last "releases" repository'
         version: '20'
     -
         author: Solen Guitter

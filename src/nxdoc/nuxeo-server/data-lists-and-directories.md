@@ -12,17 +12,6 @@ labels:
     - vocabulary
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Data+Lists+and+Directories
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Data+Lists+and+Directories'
-    page_id: '4688939'
-    shortlink: K4xH
-    shortlink_source: 'https://doc.nuxeo.com/x/K4xH'
-    source_link: /display/NXDOC/Data+Lists+and+Directories
 tree_item_index: 1400
 history:
     -
@@ -53,9 +42,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-09-19 11:11'
-        message: >-
-            Merging Data Lists and Directories and Directories and Vocabularies
-            pages
+        message: Merging Data Lists and Directories and Directories and Vocabularies pages
         version: '11'
     -
         author: Manon Lumeau

@@ -8,18 +8,6 @@ labels:
     - lts2016-ok
     - import
 toc: true
-confluence:
-    ajs-parent-page-id: '19235677'
-    ajs-parent-page-title: Quick Start Series
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Choosing+How+to+Import+Data+in+the+Nuxeo+Platform
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Choosing+How+to+Import+Data+in+the+Nuxeo+Platform
-    page_id: '17794912'
-    shortlink: YIcPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/YIcPAQ'
-    source_link: /display/NXDOC/Choosing+How+to+Import+Data+in+the+Nuxeo+Platform
 tree_item_index: 600
 history:
     -

@@ -10,20 +10,9 @@ labels:
     - sqlserver
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '3342340'
-    ajs-parent-page-title: Database Configuration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Microsoft+SQL+Server
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Microsoft+SQL+Server'
-    page_id: '3867154'
-    shortlink: EgI7
-    shortlink_source: 'https://doc.nuxeo.com/x/EgI7'
-    source_link: /display/NXDOC/Microsoft+SQL+Server
 tree_item_index: 300
 version_override:
-    'LTS 2015': 710/admindoc/microsoft-sql-server
+    LTS 2015: 710/admindoc/microsoft-sql-server
     '6.0': 60/admindoc/configuring-ms-sql-server
     '5.8': 58/admindoc/configuring-ms-sql-server
 history:

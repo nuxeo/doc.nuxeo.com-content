@@ -9,21 +9,9 @@ labels:
     - encryption
     - link-update
 toc: true
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Sensitive+Configuration+Data+Encryption
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Sensitive+Configuration+Data+Encryption
-    page_id: '26314721'
-    shortlink: 4YeRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/4YeRAQ'
-    source_link: /display/NXDOC/Sensitive+Configuration+Data+Encryption
 tree_item_index: 300
 version_override:
-    'LTS 2015': 710/admindoc/sensitive-configuration-data-encryption
+    LTS 2015: 710/admindoc/sensitive-configuration-data-encryption
     '6.0': 60/admindoc/sensitive-configuration-data-encryption
 history:
     -

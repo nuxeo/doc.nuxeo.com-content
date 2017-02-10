@@ -16,19 +16,6 @@ labels:
     - content-view
     - query
     - search-tab-component
-confluence:
-    ajs-parent-page-id: '4687860'
-    ajs-parent-page-title: Indexing and Query
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Configure+a+New+Default+Search+Form+in+the+Search+Tab
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Configure+a+New+Default+Search+Form+in+the+Search+Tab
-    page_id: '20517112'
-    shortlink: _BA5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/_BA5AQ'
-    source_link: >-
-        /display/NXDOC/How+to+Configure+a+New+Default+Search+Form+in+the+Search+Tab
 tree_item_index: 1300
 history:
     -

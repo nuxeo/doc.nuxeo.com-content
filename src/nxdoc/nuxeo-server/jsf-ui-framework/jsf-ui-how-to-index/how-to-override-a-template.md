@@ -16,17 +16,6 @@ labels:
     - template
     - seam-jsf-component
 toc: true
-confluence:
-    ajs-parent-page-id: '20517820'
-    ajs-parent-page-title: JSF UI How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Override+a+Template
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Override+a+Template'
-    page_id: '20518284'
-    shortlink: jBU5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/jBU5AQ'
-    source_link: /display/NXDOC/How+to+Override+a+Template
 tree_item_index: 900
 history:
     -

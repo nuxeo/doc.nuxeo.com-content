@@ -6,17 +6,6 @@ review:
     status: ok
 labels:
     - content-review-lts2016
-confluence:
-    ajs-parent-page-id: '4687444'
-    ajs-parent-page-title: Contributing to Nuxeo
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Submit+a+Bug+Report
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Submit+a+Bug+Report'
-    page_id: '17794676'
-    shortlink: dIYPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/dIYPAQ'
-    source_link: /display/NXDOC/How+to+Submit+a+Bug+Report
 tree_item_index: 300
 history:
     -

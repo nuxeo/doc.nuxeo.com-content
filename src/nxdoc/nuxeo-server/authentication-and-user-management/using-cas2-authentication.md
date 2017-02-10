@@ -12,17 +12,6 @@ labels:
     - anonymous
     - cas-authentication-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089115'
-    ajs-parent-page-title: Authentication and User Management
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Using+CAS2+Authentication
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Using+CAS2+Authentication'
-    page_id: '4688550'
-    shortlink: popH
-    shortlink_source: 'https://doc.nuxeo.com/x/popH'
-    source_link: /display/NXDOC/Using+CAS2+Authentication
 tree_item_index: 195
 history:
     -

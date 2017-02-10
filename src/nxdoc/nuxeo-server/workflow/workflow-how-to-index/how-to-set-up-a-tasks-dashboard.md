@@ -18,17 +18,6 @@ labels:
     - howto
     - workflow-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235619'
-    ajs-parent-page-title: Workflow How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Set+Up+a+Tasks+Dashboard
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Set+Up+a+Tasks+Dashboard'
-    page_id: '12914746'
-    shortlink: OhDF
-    shortlink_source: 'https://doc.nuxeo.com/x/OhDF'
-    source_link: /display/NXDOC/How+to+Set+Up+a+Tasks+Dashboard
 tree_item_index: 400
 history:
     -

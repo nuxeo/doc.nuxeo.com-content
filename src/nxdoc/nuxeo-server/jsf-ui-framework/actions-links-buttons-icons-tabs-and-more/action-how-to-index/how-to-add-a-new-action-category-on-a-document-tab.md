@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            This page explains how to create new actions categories to add links
-            or buttons on the custom tab of documents, using Nuxeo Studio.
+        excerpt: 'This page explains how to create new actions categories to add links or buttons on the custom tab of documents, using Nuxeo Studio.'
         level: Beginner
         tool: Studio
         topics: 'Document type, Tab, User action, Widget'
@@ -18,18 +16,6 @@ labels:
     - layout
     - action
     - studio
-confluence:
-    ajs-parent-page-id: '19235610'
-    ajs-parent-page-title: Action How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Add+a+New+Action+Category+on+a+Document+Tab
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Add+a+New+Action+Category+on+a+Document+Tab
-    page_id: '8192068'
-    shortlink: RAB9
-    shortlink_source: 'https://doc.nuxeo.com/x/RAB9'
-    source_link: /display/NXDOC/How+to+Add+a+New+Action+Category+on+a+Document+Tab
 tree_item_index: 200
 history:
     -

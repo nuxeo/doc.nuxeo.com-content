@@ -9,17 +9,6 @@ labels:
     - editing
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '2392396'
-    ajs-parent-page-title: Editing Content
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Working+with+WebDAV
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Working+with+WebDAV'
-    page_id: '2392398'
-    shortlink: ToEk
-    shortlink_source: 'https://doc.nuxeo.com/x/ToEk'
-    source_link: /display/USERDOC/Working+with+WebDAV
 history:
     -
         author: Florent Guillaume
@@ -134,9 +123,7 @@ history:
     -
         author: Solen Guitter
         date: '2011-11-30 12:04'
-        message: >-
-            Moved steps to add new clients in EP documentation and added related
-            content
+        message: Moved steps to add new clients in EP documentation and added related content
         version: '16'
     -
         author: Solen Guitter

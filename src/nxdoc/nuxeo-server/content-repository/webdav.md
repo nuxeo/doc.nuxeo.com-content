@@ -10,17 +10,6 @@ labels:
     - webdav-component
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: WebDAV
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/WebDAV'
-    page_id: '950300'
-    shortlink: HIAO
-    shortlink_source: 'https://doc.nuxeo.com/x/HIAO'
-    source_link: /display/NXDOC/WebDAV
 tree_item_index: 900
 history:
     -

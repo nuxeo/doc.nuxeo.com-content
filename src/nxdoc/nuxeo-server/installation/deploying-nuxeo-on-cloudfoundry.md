@@ -9,20 +9,9 @@ labels:
     - cloudfoundry
     - cloud-deployment
 toc: true
-confluence:
-    ajs-parent-page-id: '3866685'
-    ajs-parent-page-title: Installation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Deploying+Nuxeo+on+CloudFoundry
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Deploying+Nuxeo+on+CloudFoundry'
-    page_id: '12914965'
-    shortlink: FRHF
-    shortlink_source: 'https://doc.nuxeo.com/x/FRHF'
-    source_link: /display/NXDOC/Deploying+Nuxeo+on+CloudFoundry
 tree_item_index: 800
 version_override:
-    'LTS 2015': 710/admindoc/deploying-nuxeo-on-cloudfoundry
+    LTS 2015: 710/admindoc/deploying-nuxeo-on-cloudfoundry
     '6.0': 60/admindoc/deploying-nuxeo-on-cloudfoundry
     '5.8': 58/admindoc/deploying-nuxeo-on-cloudfoundry
 history:

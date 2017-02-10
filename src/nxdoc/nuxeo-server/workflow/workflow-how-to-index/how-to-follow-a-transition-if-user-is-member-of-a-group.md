@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to follow a transition if the user is member of a
-            particular group.
+        excerpt: Learn how to follow a transition if the user is member of a particular group.
         level: Advanced
         tool: Studio
         topics: 'Workflow, Transition'
@@ -20,18 +18,6 @@ labels:
     - studio
     - workflow-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235619'
-    ajs-parent-page-title: Workflow How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Follow+a+Transition+If+User+Is+Member+of+a+Group
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Follow+a+Transition+If+User+Is+Member+of+a+Group
-    page_id: '14257859'
-    shortlink: w47Z
-    shortlink_source: 'https://doc.nuxeo.com/x/w47Z'
-    source_link: /display/NXDOC/How+to+Follow+a+Transition+If+User+Is+Member+of+a+Group
 tree_item_index: 800
 history:
     -

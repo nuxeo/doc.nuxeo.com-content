@@ -11,23 +11,12 @@ labels:
     - multiexcerpt-include
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '2392410'
-    ajs-parent-page-title: Workflows
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Serial+Document+Workflow
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Serial+Document+Workflow'
-    page_id: '16091752'
-    shortlink: aIr1
-    shortlink_source: 'https://doc.nuxeo.com/x/aIr1'
-    source_link: /display/USERDOC/Serial+Document+Workflow
 tree_item_index: 100
 history:
     -
         author: Manon Lumeau
         date: '2015-11-25 17:03'
-        message: eplace "access rights" by "permissions
+        message: 'eplace "access rights" by "permissions'
         version: '12'
     -
         author: Manon Lumeau

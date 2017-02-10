@@ -8,19 +8,6 @@ labels:
     - lts2016-ok
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '12914194'
-    ajs-parent-page-title: Design Tips
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Several+Document+Types+vs+One+Document+Type+with+a+Nature+Metadata
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Several+Document+Types+vs+One+Document+Type+with+a+Nature+Metadata
-    page_id: '12914205'
-    shortlink: HQ7F
-    shortlink_source: 'https://doc.nuxeo.com/x/HQ7F'
-    source_link: >-
-        /display/NXDOC/Several+Document+Types+vs+One+Document+Type+with+a+Nature+Metadata
 tree_item_index: 200
 history:
     -

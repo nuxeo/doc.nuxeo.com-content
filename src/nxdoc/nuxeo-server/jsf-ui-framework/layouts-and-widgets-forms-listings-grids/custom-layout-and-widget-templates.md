@@ -11,17 +11,6 @@ labels:
     - layout-widgets-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '950330'
-    ajs-parent-page-title: 'Layouts and Widgets (Forms, Listings, Grids)'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Custom+Layout+and+Widget+Templates
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Custom+Layout+and+Widget+Templates'
-    page_id: '3868351'
-    shortlink: vwY7
-    shortlink_source: 'https://doc.nuxeo.com/x/vwY7'
-    source_link: /display/NXDOC/Custom+Layout+and+Widget+Templates
 tree_item_index: 400
 history:
     -
@@ -52,9 +41,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2014-12-08 17:55'
-        message: >-
-            NXDOC-286: remove the outdated and now useless complex widget type
-            example
+        message: 'NXDOC-286: remove the outdated and now useless complex widget type example'
         version: '19'
     -
         author: Anahide Tchertchian

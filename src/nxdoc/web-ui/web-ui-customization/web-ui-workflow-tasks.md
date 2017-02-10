@@ -2,7 +2,7 @@
 title: Web UI Workflow Tasks
 review:
     comment: ''
-    date: '2017-01-16S'
+    date: 2017-01-16S
     status: ok
 toc: true
 labels:

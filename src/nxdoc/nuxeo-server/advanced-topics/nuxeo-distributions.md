@@ -17,17 +17,6 @@ labels:
     - cap
     - nuxeo-distribution
     - excerpt
-confluence:
-    ajs-parent-page-id: '950333'
-    ajs-parent-page-title: Advanced topics
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Distributions
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Distributions'
-    page_id: '950286'
-    shortlink: DoAO
-    shortlink_source: 'https://doc.nuxeo.com/x/DoAO'
-    source_link: /display/NXDOC/Nuxeo+Distributions
 tree_item_index: 300
 history:
     -

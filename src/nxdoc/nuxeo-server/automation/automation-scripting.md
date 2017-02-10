@@ -13,17 +13,6 @@ labels:
     - automation-component
     - university
 toc: true
-confluence:
-    ajs-parent-page-id: '18451738'
-    ajs-parent-page-title: Automation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Automation+Scripting
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Automation+Scripting'
-    page_id: '24674349'
-    shortlink: LYB4AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/LYB4AQ'
-    source_link: /display/NXDOC/Automation+Scripting
 tree_item_index: 400
 history:
     -

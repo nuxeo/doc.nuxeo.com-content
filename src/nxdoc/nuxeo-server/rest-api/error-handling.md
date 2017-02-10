@@ -11,19 +11,8 @@ labels:
     - rest-api-component
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/web-exceptions-errors
+    LTS 2015: 710/nxdoc/web-exceptions-errors
     '6.0': 60/nxdoc/web-exceptions-errors
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Web+Exceptions+-+Errors
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Web+Exceptions+-+Errors'
-    page_id: '20513317'
-    shortlink: JQI5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/JQI5AQ'
-    source_link: /display/NXDOC/Web+Exceptions+-+Errors
 tree_item_index: 500
 history:
     -

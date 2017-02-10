@@ -9,6 +9,7 @@ labels:
     - lts2016-ok
 tree_item_index: 650
 section_parent: tools
+
 ---
 
 Nuxeo offers a series of tools to help you develop on the Nuxeo Platform and customize your Nuxeo instance.

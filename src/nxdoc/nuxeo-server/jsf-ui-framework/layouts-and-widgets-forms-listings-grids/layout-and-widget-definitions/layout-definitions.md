@@ -10,17 +10,6 @@ labels:
     - layout-widgets-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3868333'
-    ajs-parent-page-title: Layout and Widget Definitions
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Layout+Definitions
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Layout+Definitions'
-    page_id: '17794338'
-    shortlink: IoUPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/IoUPAQ'
-    source_link: /display/NXDOC/Layout+Definitions
 tree_item_index: 100
 history:
     -
@@ -91,9 +80,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2013-12-05 14:22'
-        message: >-
-            add info about grid layouts and other kinds of layouts (generic
-            usage)
+        message: add info about grid layouts and other kinds of layouts (generic usage)
         version: '3'
     -
         author: Anahide Tchertchian

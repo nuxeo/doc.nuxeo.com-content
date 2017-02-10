@@ -6,6 +6,7 @@ review:
     status: ok
 toc: true
 tree_item_index: 100
+
 ---
 This is a standard form-based authentication. The current implementation lets you configure the name of the Login and Password fields and the name of the page used to display the login page.
 

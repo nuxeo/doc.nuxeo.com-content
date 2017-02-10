@@ -9,20 +9,9 @@ labels:
     - templates
     - configuration
     - jc
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Configuration+Templates
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Configuration+Templates'
-    page_id: '8192208'
-    shortlink: 0AB9
-    shortlink_source: 'https://doc.nuxeo.com/x/0AB9'
-    source_link: /display/NXDOC/Configuration+Templates
 tree_item_index: 200
 version_override:
-    'LTS 2015': 710/admindoc/configuration-templates
+    LTS 2015: 710/admindoc/configuration-templates
     '6.0': 60/admindoc/configuration-templates
     '5.8': 58/admindoc/configuration-templates
 history:

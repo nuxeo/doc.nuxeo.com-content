@@ -1,14 +1,12 @@
 ---
-title: "HOWTO: Upload a File in Nuxeo Using REST API"
+title: 'HOWTO: Upload a File in Nuxeo Using REST API'
 review:
     comment: ''
     date: '2017-01-17'
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to import a file using the Batch processing endpoint of
-            the REST API.
+        excerpt: Learn how to import a file using the Batch processing endpoint of the REST API.
         level: Advanced
         tool: Code
         topics: 'Import, REST API'
@@ -23,22 +21,8 @@ labels:
     - excerpt
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint
+    LTS 2015: 710/nxdoc/how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint
     '6.0': 60/nxdoc/how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint/
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: >-
-        How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
-    page_id: '19793389'
-    shortlink: 7QUuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/7QUuAQ'
-    source_link: >-
-        /display/NXDOC/How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
 tree_item_index: 200
 history:
     -

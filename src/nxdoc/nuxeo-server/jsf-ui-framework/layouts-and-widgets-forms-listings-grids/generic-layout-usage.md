@@ -10,17 +10,6 @@ labels:
     - generic-layout
     - layout-widgets-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '950330'
-    ajs-parent-page-title: 'Layouts and Widgets (Forms, Listings, Grids)'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Generic+Layout+Usage
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Generic+Layout+Usage'
-    page_id: '3868349'
-    shortlink: vQY7
-    shortlink_source: 'https://doc.nuxeo.com/x/vQY7'
-    source_link: /display/NXDOC/Generic+Layout+Usage
 tree_item_index: 700
 history:
     -

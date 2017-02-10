@@ -9,20 +9,9 @@ labels:
     - shell
     - shell-component
 toc: true
-confluence:
-    ajs-parent-page-id: '4687648'
-    ajs-parent-page-title: Nuxeo Shell Command Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Filesystem+Commands
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Filesystem+Commands'
-    page_id: '4687654'
-    shortlink: JodH
-    shortlink_source: 'https://doc.nuxeo.com/x/JodH'
-    source_link: /display/NXDOC/Filesystem+Commands
 tree_item_index: 200
 version_override:
-    'LTS 2015': 710/admindoc/filesystem-commands
+    LTS 2015: 710/admindoc/filesystem-commands
     '6.0': 60/admindoc/filesystem-commands
     '5.8': 58/admindoc/filesystem-commands
 history:

@@ -9,17 +9,6 @@ labels:
     - gwt-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '950334'
-    ajs-parent-page-title: Additional UI Frameworks
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: GWT+Integration
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/GWT+Integration'
-    page_id: '950310'
-    shortlink: JoAO
-    shortlink_source: 'https://doc.nuxeo.com/x/JoAO'
-    source_link: /display/NXDOC/GWT+Integration
 tree_item_index: 100
 history:
     -

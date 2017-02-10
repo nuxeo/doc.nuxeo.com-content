@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to use the operation Document.Fetch to get a document by
-            its ID or its path.
+        excerpt: Learn how to use the operation Document.Fetch to get a document by its ID or its path.
         level: Intermediate
         tool: Studio
         topics: Automation
@@ -20,18 +18,6 @@ labels:
     - automation-component
     - excerpt
     - multiexcerpt-include
-confluence:
-    ajs-parent-page-id: '19235642'
-    ajs-parent-page-title: Automation How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Fetch+a+Document+by+Its+ID+or+Path
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Fetch+a+Document+by+Its+ID+or+Path
-    page_id: '3345634'
-    shortlink: 4gwz
-    shortlink_source: 'https://doc.nuxeo.com/x/4gwz'
-    source_link: /display/NXDOC/How+to+Fetch+a+Document+by+Its+ID+or+Path
 tree_item_index: 200
 history:
     -

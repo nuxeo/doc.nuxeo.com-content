@@ -7,17 +7,6 @@ review:
 labels:
     - lts2016-ok
 is_overview: true
-confluence:
-    ajs-parent-page-id: '19235679'
-    ajs-parent-page-title: Educational
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Workflow+Use+Cases
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Workflow+Use+Cases'
-    page_id: '19235786'
-    shortlink: yoMlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/yoMlAQ'
-    source_link: /display/NXDOC/Workflow+Use+Cases
 tree_item_index: 400
 history:
     -

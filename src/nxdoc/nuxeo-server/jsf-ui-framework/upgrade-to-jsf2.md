@@ -9,17 +9,6 @@ labels:
     - seam-jsf-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '950313'
-    ajs-parent-page-title: Nuxeo JSF UI
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Upgrade+to+JSF2
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Upgrade+to+JSF2'
-    page_id: '22904940'
-    shortlink: bIBdAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/bIBdAQ'
-    source_link: /display/NXDOC/Upgrade+to+JSF2
 tree_item_index: 400
 history:
     -

@@ -10,17 +10,6 @@ labels:
     - import
     - platform-importer-addon-component
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Bulk+Document+Importer
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Bulk+Document+Importer'
-    page_id: '3343565'
-    shortlink: zQQz
-    shortlink_source: 'https://doc.nuxeo.com/x/zQQz'
-    source_link: /display/NXDOC/Nuxeo+Bulk+Document+Importer
 tree_item_index: 1100
 history:
     -
@@ -121,9 +110,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-10-13 14:41'
-        message: >-
-            Moved section about 'Nuxeo replication' to same page 5.8 (version of
-            deprecation)
+        message: "Moved section about 'Nuxeo replication' to same page 5.8 (version of deprecation)"
         version: '32'
     -
         author: Ronan Daniellou

@@ -6,17 +6,6 @@ review:
     status: ok
 labels:
     - content-review-lts2016
-confluence:
-    ajs-parent-page-id: '950333'
-    ajs-parent-page-title: Advanced topics
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Integrating+with+JPA
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Integrating+with+JPA'
-    page_id: '4687326'
-    shortlink: 3oVH
-    shortlink_source: 'https://doc.nuxeo.com/x/3oVH'
-    source_link: /display/NXDOC/Integrating+with+JPA
 tree_item_index: 100
 history:
     -

@@ -19,19 +19,6 @@ labels:
     - query
     - aggregate-search-widget-component
 toc: true
-confluence:
-    ajs-parent-page-id: '4687860'
-    ajs-parent-page-title: Indexing and Query
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Configure+a+Search+Filter+With+Facets+and+Other+Aggregates
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Configure+a+Search+Filter+With+Facets+and+Other+Aggregates
-    page_id: '20517647'
-    shortlink: DxM5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/DxM5AQ'
-    source_link: >-
-        /display/NXDOC/How+to+Configure+a+Search+Filter+With+Facets+and+Other+Aggregates
 tree_item_index: 1600
 history:
     -

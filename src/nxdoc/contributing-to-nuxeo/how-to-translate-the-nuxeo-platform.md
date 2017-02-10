@@ -18,17 +18,6 @@ labels:
     - howto
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '4687444'
-    ajs-parent-page-title: Contributing to Nuxeo
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Translate+the+Nuxeo+Platform
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Translate+the+Nuxeo+Platform'
-    page_id: '3343476'
-    shortlink: dAQz
-    shortlink_source: 'https://doc.nuxeo.com/x/dAQz'
-    source_link: /display/NXDOC/How+to+Translate+the+Nuxeo+Platform
 tree_item_index: 200
 history:
     -
@@ -194,9 +183,7 @@ history:
     -
         author: Julien Carsique
         date: '2011-08-17 13:14'
-        message: >-
-            update translation documentation, add login page and contribution
-            informations
+        message: 'update translation documentation, add login page and contribution informations'
         version: '21'
     -
         author: Stéfane Fermigier

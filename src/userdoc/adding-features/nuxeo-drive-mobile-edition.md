@@ -8,17 +8,6 @@ labels:
     - nuxeo-drive-ios
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '11043055'
-    ajs-parent-page-title: Adding Features
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Nuxeo+Drive+Mobile+Edition
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Drive+Mobile+Edition'
-    page_id: '19235240'
-    shortlink: qIElAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/qIElAQ'
-    source_link: /display/USERDOC/Nuxeo+Drive+Mobile+Edition
 tree_item_index: 600
 history:
     -

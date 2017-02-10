@@ -7,17 +7,6 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '29460589'
-    ajs-parent-page-title: Getting Started with the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Using+Renditions
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Using+Renditions'
-    page_id: '31687836'
-    shortlink: nITjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/nITjAQ'
-    source_link: /display/NXDOC/Using+Renditions
 tree_item_index: 700
 history:
     -

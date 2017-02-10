@@ -10,17 +10,6 @@ labels:
     - nuxeo-elements
     - nuxeo-ui-elements
     - nuxeo-dataviz-elements
-confluence:
-    ajs-parent-page-id: '26316892'
-    ajs-parent-page-title: Web UI
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Elements
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Elements'
-    page_id: '31687557'
-    shortlink: hYPjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/hYPjAQ'
-    source_link: /display/NXDOC/Nuxeo+Elements
 tree_item_index: 200
 history:
     -

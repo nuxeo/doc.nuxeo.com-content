@@ -10,20 +10,9 @@ labels:
     - automation
     - shell-component
     - nxdoc-751
-confluence:
-    ajs-parent-page-id: '4687648'
-    ajs-parent-page-title: Nuxeo Shell Command Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Automation+Commands
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Automation+Commands'
-    page_id: '4687652'
-    shortlink: JIdH
-    shortlink_source: 'https://doc.nuxeo.com/x/JIdH'
-    source_link: /display/NXDOC/Nuxeo+Automation+Commands
 tree_item_index: 400
 version_override:
-    'LTS 2015': 710/admindoc/nuxeo-automation-commands
+    LTS 2015: 710/admindoc/nuxeo-automation-commands
     '6.0': 60/admindoc/nuxeo-automation-commands
     '5.8': 58/admindoc/nuxeo-automation-commands
 history:

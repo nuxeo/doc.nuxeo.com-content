@@ -13,17 +13,6 @@ labels:
     - javascript-client-component
     - link-update
 toc: true
-confluence:
-    ajs-parent-page-id: '16091040'
-    ajs-parent-page-title: Client SDKs
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: JavaScript+Client
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/JavaScript+Client'
-    page_id: '18451439'
-    shortlink: 74sZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/74sZAQ'
-    source_link: /display/NXDOC/JavaScript+Client
 tree_item_index: 100
 history:
     -

@@ -9,20 +9,9 @@ labels:
     - acl
     - security-component
 toc: true
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Read+ACLs
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Read+ACLs'
-    page_id: '17793928'
-    shortlink: iIMPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/iIMPAQ'
-    source_link: /display/NXDOC/Read+ACLs
 tree_item_index: 1800
 version_override:
-    'LTS 2015': 710/admindoc/read-acls
+    LTS 2015: 710/admindoc/read-acls
     '6.0': 60/admindoc/read-acls
     '5.8': 58/admindoc/read-acls
 history:

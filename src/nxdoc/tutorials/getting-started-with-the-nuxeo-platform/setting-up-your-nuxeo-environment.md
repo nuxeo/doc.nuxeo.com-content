@@ -7,17 +7,6 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '29460589'
-    ajs-parent-page-title: Getting Started with the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Setting+up+Your+Nuxeo+Environment
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Setting+up+Your+Nuxeo+Environment'
-    page_id: '29460628'
-    shortlink: lIjBAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/lIjBAQ'
-    source_link: /display/NXDOC/Setting+up+Your+Nuxeo+Environment
 tree_item_index: 100
 history:
     -
@@ -83,7 +72,7 @@ history:
     -
         author: Solen Guitter
         date: '2016-09-02 15:31'
-        message: naming nuxeo container at dl&start step
+        message: 'naming nuxeo container at dl&start step'
         version: '42'
     -
         author: Solen Guitter

@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - reassign
     - multiexcerpt
-confluence:
-    ajs-parent-page-id: '2392410'
-    ajs-parent-page-title: Workflows
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Reassigning+a+Task
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Reassigning+a+Task'
-    page_id: '18450389'
-    shortlink: 1YcZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/1YcZAQ'
-    source_link: /display/USERDOC/Reassigning+a+Task
 tree_item_index: 400
 history:
     -

@@ -9,17 +9,6 @@ labels:
     - nuxeo-groups-rights-audit
     - excerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Groups+and+Rights+Audit
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Groups+and+Rights+Audit'
-    page_id: '14257403'
-    shortlink: _4zZ
-    shortlink_source: 'https://doc.nuxeo.com/x/_4zZ'
-    source_link: /display/NXDOC/Nuxeo+Groups+and+Rights+Audit
 tree_item_index: 1900
 history:
     -

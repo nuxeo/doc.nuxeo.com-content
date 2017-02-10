@@ -11,17 +11,6 @@ labels:
     - layout-widgets-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3868345'
-    ajs-parent-page-title: Standard Widget Types
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Tab+Designer+Widget+Types
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Tab+Designer+Widget+Types'
-    page_id: '17794573'
-    shortlink: DYYPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/DYYPAQ'
-    source_link: /display/NXDOC/Tab+Designer+Widget+Types
 tree_item_index: 500
 history:
     -

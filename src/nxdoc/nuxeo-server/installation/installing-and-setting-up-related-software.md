@@ -12,21 +12,9 @@ labels:
     - multiexcerpt-include
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3866685'
-    ajs-parent-page-title: Installation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Installing+and+Setting+Up+Related+Software
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Installing+and+Setting+Up+Related+Software
-    page_id: '6030030'
-    shortlink: zgJc
-    shortlink_source: 'https://doc.nuxeo.com/x/zgJc'
-    source_link: /display/NXDOC/Installing+and+Setting+Up+Related+Software
 tree_item_index: 300
 version_override:
-    'LTS 2015': 710/admindoc/installing-and-setting-up-related-software
+    LTS 2015: 710/admindoc/installing-and-setting-up-related-software
     '6.0': 60/admindoc/installing-and-setting-up-related-software
     '5.8': 58/admindoc/installing-and-setting-up-related-software
 history:
@@ -258,9 +246,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-11-18 14:10'
-        message: >-
-            Added Windows installation and configuration information for
-            ImageMagick and UFRaw
+        message: Added Windows installation and configuration information for ImageMagick and UFRaw
         version: '56'
     -
         author: Solen Guitter
@@ -485,9 +471,7 @@ history:
     -
         author: Wojciech Sulejman
         date: '2011-07-15 17:12'
-        message: >-
-            Update from the OOoDaemonService to OOoManagerService config
-            starting with 5.4.0
+        message: Update from the OOoDaemonService to OOoManagerService config starting with 5.4.0
         version: '11'
     -
         author: Julien Carsique

@@ -18,17 +18,6 @@ labels:
     - todo
     - seam-jsf-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '9830458'
-    ajs-parent-page-title: JSF and Ajax Tips and How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: JSF+and+JavaScript
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/JSF+and+JavaScript'
-    page_id: '3343545'
-    shortlink: uQQz
-    shortlink_source: 'https://doc.nuxeo.com/x/uQQz'
-    source_link: /display/NXDOC/JSF+and+JavaScript
 tree_item_index: 400
 history:
     -

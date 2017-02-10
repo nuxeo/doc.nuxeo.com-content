@@ -7,21 +7,9 @@ review:
 labels:
     - content-review-lts2016
     - install-linux
-confluence:
-    ajs-parent-page-id: '9274334'
-    ajs-parent-page-title: Installing the Nuxeo Platform on Linux
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Configuring+the+Nuxeo+Platform+as+a+Daemon+with+Systemd
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Configuring+the+Nuxeo+Platform+as+a+Daemon+with+Systemd
-    page_id: '26313077'
-    shortlink: dYGRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/dYGRAQ'
-    source_link: /display/NXDOC/Configuring+the+Nuxeo+Platform+as+a+Daemon+with+Systemd
 tree_item_index: 200
 version_override:
-    'LTS 2015': 710/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-systemd
+    LTS 2015: 710/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-systemd
     '6.0': 60/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-systemd
     '5.8': 58/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-systemd
 history:

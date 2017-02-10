@@ -10,20 +10,9 @@ labels:
     - admin-center-component
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Admin+Tab+Overview
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Admin+Tab+Overview'
-    page_id: '4686229'
-    shortlink: lYFH
-    shortlink_source: 'https://doc.nuxeo.com/x/lYFH'
-    source_link: /display/NXDOC/Admin+Tab+Overview
 tree_item_index: 2000
 version_override:
-    'LTS 2015': 710/admindoc/admin-tab-overview
+    LTS 2015: 710/admindoc/admin-tab-overview
     '6.0': 60/admindoc/admin-tab-overview
 history:
     -
@@ -104,7 +93,7 @@ history:
     -
         author: Thomas Roger
         date: '2014-09-03 15:26'
-        message: Add "Logs" documentation to monitoring
+        message: 'Add "Logs" documentation to monitoring'
         version: '22'
     -
         author: Solen Guitter

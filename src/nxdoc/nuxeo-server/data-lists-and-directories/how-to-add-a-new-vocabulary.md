@@ -17,17 +17,6 @@ labels:
     - studio
     - excerpt
     - multiexcerpt
-confluence:
-    ajs-parent-page-id: '4688939'
-    ajs-parent-page-title: Data Lists and Directories
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Add+a+New+Vocabulary
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Add+a+New+Vocabulary'
-    page_id: '3867886'
-    shortlink: 7gQ7
-    shortlink_source: 'https://doc.nuxeo.com/x/7gQ7'
-    source_link: /display/NXDOC/How+to+Add+a+New+Vocabulary
 tree_item_index: 100
 history:
     -

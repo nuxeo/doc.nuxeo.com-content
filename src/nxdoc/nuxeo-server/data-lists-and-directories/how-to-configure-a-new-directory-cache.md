@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to define a new directory cache and use it in your
-            directoy.
+        excerpt: Learn how to define a new directory cache and use it in your directoy.
         level: Intermediate
         tool: XML Extension
         topics: 'Directory, Vocabulary'
@@ -16,18 +14,6 @@ labels:
     - lts2016-ok
     - howto
     - directory-component
-confluence:
-    ajs-parent-page-id: '4688939'
-    ajs-parent-page-title: Data Lists and Directories
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Configure+a+New+Directory+Cache
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Configure+a+New+Directory+Cache
-    page_id: '27592603'
-    shortlink: mwelAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/mwelAQ'
-    source_link: /display/NXDOC/How+to+Configure+a+New+Directory+Cache
 tree_item_index: 500
 history:
     -

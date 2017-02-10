@@ -10,17 +10,6 @@ labels:
     - layout-widgets-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3868333'
-    ajs-parent-page-title: Layout and Widget Definitions
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Widget+Definitions
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Widget+Definitions'
-    page_id: '17794340'
-    shortlink: JIUPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/JIUPAQ'
-    source_link: /display/NXDOC/Widget+Definitions
 tree_item_index: 200
 history:
     -

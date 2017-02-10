@@ -7,18 +7,6 @@ review:
 labels:
     - lts2016-ok
     - duo-web-authentication-addon
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+DuoWeb+Two-Factor+Authentication
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Nuxeo+DuoWeb+Two-Factor+Authentication
-    page_id: '20517217'
-    shortlink: YRE5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/YRE5AQ'
-    source_link: /display/NXDOC/Nuxeo+DuoWeb+Two-Factor+Authentication
 tree_item_index: 210
 history:
     -

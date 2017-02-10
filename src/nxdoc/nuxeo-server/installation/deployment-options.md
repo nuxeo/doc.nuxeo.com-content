@@ -10,17 +10,6 @@ labels:
     - clustering
     - architecture
 toc: true
-confluence:
-    ajs-parent-page-id: '3866685'
-    ajs-parent-page-title: Installation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Deployment+Options
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Deployment+Options'
-    page_id: '950298'
-    shortlink: GoAO
-    shortlink_source: 'https://doc.nuxeo.com/x/GoAO'
-    source_link: /display/NXDOC/Deployment+Options
 tree_item_index: 100
 history:
     -

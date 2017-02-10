@@ -6,17 +6,6 @@ review:
     status: ok
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '950313'
-    ajs-parent-page-title: Nuxeo JSF UI
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: JSF+and+Ajax+Tips+and+How-To+Index
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/JSF+and+Ajax+Tips+and+How-To+Index'
-    page_id: '9830458'
-    shortlink: OgCW
-    shortlink_source: 'https://doc.nuxeo.com/x/OgCW'
-    source_link: /display/NXDOC/JSF+and+Ajax+Tips+and+How-To+Index
 tree_item_index: 500
 history:
     -

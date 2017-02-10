@@ -8,17 +8,6 @@ labels:
     - lts2016-ok
     - home
 is_overview: true
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Additional+Services
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Additional+Services'
-    page_id: '16089319'
-    shortlink: 54D1
-    shortlink_source: 'https://doc.nuxeo.com/x/54D1'
-    source_link: /display/NXDOC/Additional+Services
 tree_item_index: 1900
 history:
     -

@@ -9,17 +9,6 @@ labels:
     - dashboard
     - profile
     - users-groups
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: User+Home
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/User+Home'
-    page_id: '7536681'
-    shortlink: KQBz
-    shortlink_source: 'https://doc.nuxeo.com/x/KQBz'
-    source_link: /display/USERDOC/User+Home
 tree_item_index: 200
 history:
     -

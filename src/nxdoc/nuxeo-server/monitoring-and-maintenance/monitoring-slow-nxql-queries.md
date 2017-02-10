@@ -9,20 +9,9 @@ labels:
     - nxql
     - monitoring
     - monitoring-component
-confluence:
-    ajs-parent-page-id: '950318'
-    ajs-parent-page-title: Monitoring and Maintenance
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Monitoring+Slow+NXQL+Queries
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Monitoring+Slow+NXQL+Queries'
-    page_id: '23364562'
-    shortlink: 0oNkAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/0oNkAQ'
-    source_link: /display/NXDOC/Monitoring+Slow+NXQL+Queries
 tree_item_index: 900
 version_override:
-    'LTS 2015': 710/admindoc/monitoring-slow-nxql-queries
+    LTS 2015: 710/admindoc/monitoring-slow-nxql-queries
     '6.0': 60/admindoc/monitoring-slow-nxql-queries
     '5.8': 58/admindoc/monitoring-slow-nxql-queries
 history:

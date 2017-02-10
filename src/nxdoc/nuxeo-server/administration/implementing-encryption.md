@@ -9,20 +9,9 @@ labels:
     - encryption
     - binary-manager
 toc: true
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Implementing+Encryption
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Implementing+Encryption'
-    page_id: '19235410'
-    shortlink: UoIlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/UoIlAQ'
-    source_link: /display/NXDOC/Implementing+Encryption
 tree_item_index: 1300
 version_override:
-    'LTS 2015': 710/admindoc/implementing-encryption
+    LTS 2015: 710/admindoc/implementing-encryption
     '6.0': 60/admindoc/implementing-encryption
 history:
     -

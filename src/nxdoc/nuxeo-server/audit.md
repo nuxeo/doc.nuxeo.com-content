@@ -9,17 +9,6 @@ labels:
     - audit
     - audit-component
 toc: true
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Audit
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Audit'
-    page_id: '19793490'
-    shortlink: UgYuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/UgYuAQ'
-    source_link: /display/NXDOC/Audit
 tree_item_index: 1300
 history:
     -

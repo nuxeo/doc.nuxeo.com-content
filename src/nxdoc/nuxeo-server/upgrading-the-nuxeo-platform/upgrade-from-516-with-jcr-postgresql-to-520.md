@@ -7,20 +7,9 @@ review:
 labels:
     - lts2016-ok
     - multiexcerpt
-confluence:
-    ajs-parent-page-id: '3343538'
-    ajs-parent-page-title: Upgrading the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=3343541
-    canonical_source: viewpage.action?pageId=3343541
-    page_id: '3343541'
-    shortlink: tQQz
-    shortlink_source: 'https://doc.nuxeo.com/x/tQQz'
-    source_link: /pages/viewpage.action?pageId=3343541
 tree_item_index: 1300
 version_override:
-    'LTS 2015': 710/admindoc/upgrade-from-516-with-jcr-postgresql-to-520
+    LTS 2015: 710/admindoc/upgrade-from-516-with-jcr-postgresql-to-520
     '6.0': 60/admindoc/upgrade-from-516-with-jcr-postgresql-to-520
     '5.8': 58/admindoc/upgrade-from-516-with-jcr-postgresql-to-520
 history:

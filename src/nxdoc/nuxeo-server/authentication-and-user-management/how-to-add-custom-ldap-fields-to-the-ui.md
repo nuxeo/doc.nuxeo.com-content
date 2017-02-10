@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to add a custom LDAP fields to the User interface using
-            XML extensions.
+        excerpt: Learn how to add a custom LDAP fields to the User interface using XML extensions.
         level: Advanced
         tool: XML extension
         topics: 'Authentication, LDAP'
@@ -20,18 +18,6 @@ labels:
     - user-profile-component
     - migration-sample
     - excerpt
-confluence:
-    ajs-parent-page-id: '16089115'
-    ajs-parent-page-title: Authentication and User Management
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Add+Custom+LDAP+Fields+to+the+UI
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Add+Custom+LDAP+Fields+to+the+UI
-    page_id: '4689428'
-    shortlink: FI5H
-    shortlink_source: 'https://doc.nuxeo.com/x/FI5H'
-    source_link: /display/NXDOC/How+to+Add+Custom+LDAP+Fields+to+the+UI
 tree_item_index: 300
 history:
     -

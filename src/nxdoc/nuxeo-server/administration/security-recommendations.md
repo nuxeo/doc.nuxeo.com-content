@@ -7,17 +7,6 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Security+Recommendations
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Security+Recommendations'
-    page_id: '31035311'
-    shortlink: r4-ZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/r4-ZAQ'
-    source_link: /display/NXDOC/Security+Recommendations
 tree_item_index: 400
 history:
     -

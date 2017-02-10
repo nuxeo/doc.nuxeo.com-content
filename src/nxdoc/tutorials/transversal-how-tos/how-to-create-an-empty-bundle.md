@@ -20,17 +20,6 @@ labels:
     - pom_xml
     - howto
 toc: true
-confluence:
-    ajs-parent-page-id: '19235681'
-    ajs-parent-page-title: Transversal How-Tos
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+create+an+empty+bundle
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+create+an+empty+bundle'
-    page_id: '7209107'
-    shortlink: kwBu
-    shortlink_source: 'https://doc.nuxeo.com/x/kwBu'
-    source_link: /display/NXDOC/How+to+create+an+empty+bundle
 tree_item_index: 600
 history:
     -
@@ -181,9 +170,7 @@ history:
     -
         author: Wojciech Sulejman
         date: '2011-07-19 15:54'
-        message: >-
-            changed from "bundles" to "plugins" which is the recommended
-            location for custom plugins
+        message: 'changed from "bundles" to "plugins" which is the recommended location for custom plugins'
         version: '35'
     -
         author: Solen Guitter

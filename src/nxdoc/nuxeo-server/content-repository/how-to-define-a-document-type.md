@@ -15,17 +15,6 @@ labels:
     - howto
     - document-type
     - studio
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Define+a+Document+Type
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Define+a+Document+Type'
-    page_id: '1409181'
-    shortlink: nYAV
-    shortlink_source: 'https://doc.nuxeo.com/x/nYAV'
-    source_link: /display/NXDOC/How+to+Define+a+Document+Type
 tree_item_index: 1000
 history:
     -

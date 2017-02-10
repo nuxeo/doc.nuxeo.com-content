@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to apply features provided by add-ons on your document
-            type.
+        excerpt: Learn how to apply features provided by add-ons on your document type.
         level: Intermediate
         tool: Studio
         topics: Document type
@@ -17,18 +15,6 @@ labels:
     - howto
     - document-type
     - excerpt
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Enable+Add-Ons+Features+on+Custom+Document+Type
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Enable+Add-Ons+Features+on+Custom+Document+Type
-    page_id: '17794748'
-    shortlink: vIYPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/vIYPAQ'
-    source_link: /display/NXDOC/How+to+Enable+Add-Ons+Features+on+Custom+Document+Type
 tree_item_index: 1400
 history:
     -

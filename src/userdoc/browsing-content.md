@@ -5,17 +5,6 @@ review:
     date: '2017-01-26'
     status: ok
 toc: true
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Browsing+Content
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Browsing+Content'
-    page_id: '2392400'
-    shortlink: UIEk
-    shortlink_source: 'https://doc.nuxeo.com/x/UIEk'
-    source_link: /display/USERDOC/Browsing+Content
 tree_item_index: 300
 history:
     -

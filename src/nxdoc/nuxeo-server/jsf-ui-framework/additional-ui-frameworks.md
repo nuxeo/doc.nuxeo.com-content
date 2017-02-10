@@ -9,17 +9,6 @@ labels:
     - home
     - excerpt
 is_overview: true
-confluence:
-    ajs-parent-page-id: '16089312'
-    ajs-parent-page-title: JSF UI Framework
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Additional+UI+Frameworks
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Additional+UI+Frameworks'
-    page_id: '950334'
-    shortlink: PoAO
-    shortlink_source: 'https://doc.nuxeo.com/x/PoAO'
-    source_link: /display/NXDOC/Additional+UI+Frameworks
 tree_item_index: 1400
 history:
     -

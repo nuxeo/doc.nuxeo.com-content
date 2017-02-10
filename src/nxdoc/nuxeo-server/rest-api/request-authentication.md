@@ -8,19 +8,8 @@ labels:
     - lts2016-ok
     - authentication
 version_override:
-    'LTS 2015': 710/nxdoc/authenticating-the-requests/
+    LTS 2015: 710/nxdoc/authenticating-the-requests/
     '6.0': 60/nxdoc/authenticating-the-requests/
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Authenticating+the+Requests
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Authenticating+the+Requests'
-    page_id: '18450397'
-    shortlink: 3YcZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/3YcZAQ'
-    source_link: /display/NXDOC/Authenticating+the+Requests
 tree_item_index: 700
 history:
     -

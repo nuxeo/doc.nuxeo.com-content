@@ -10,17 +10,6 @@ labels:
     - el
     - actions-filters-component
 toc: true
-confluence:
-    ajs-parent-page-id: '950289'
-    ajs-parent-page-title: 'Actions (Links, Buttons, Icons, Tabs and More)'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Filters+and+Access+Controls
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Filters+and+Access+Controls'
-    page_id: '17794319'
-    shortlink: D4UPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/D4UPAQ'
-    source_link: /display/NXDOC/Filters+and+Access+Controls
 tree_item_index: 400
 history:
     -

@@ -9,17 +9,6 @@ labels:
     - schema-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '950302'
-    ajs-parent-page-title: Repository Concepts
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Schema+Fields
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Schema+Fields'
-    page_id: '20517807'
-    shortlink: rxM5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/rxM5AQ'
-    source_link: /display/NXDOC/Schema+Fields
 history:
     -
         author: Solen Guitter

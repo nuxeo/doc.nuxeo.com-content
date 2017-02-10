@@ -4,10 +4,7 @@ review:
     comment: ''
     date: '2016-12-20'
     status: ok
-excerpt: >-
-    This page describes how the Nuxeo Platform is modular, and how
-    bundles, components and extension points relate to each other to let
-    you create a fully customized application.
+excerpt: 'This page describes how the Nuxeo Platform is modular, and how bundles, components and extension points relate to each other to let you create a fully customized application.'
 labels:
     - lts2016-ok
     - extension-point
@@ -17,17 +14,6 @@ labels:
     - runtimecomponent
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Runtime+and+Component+Model
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Runtime+and+Component+Model'
-    page_id: '950284'
-    shortlink: DIAO
-    shortlink_source: 'https://doc.nuxeo.com/x/DIAO'
-    source_link: /display/NXDOC/Runtime+and+Component+Model
 tree_item_index: 500
 history:
     -

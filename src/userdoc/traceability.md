@@ -10,17 +10,6 @@ labels:
     - versioning
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Traceability
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Traceability'
-    page_id: '2392375'
-    shortlink: N4Ek
-    shortlink_source: 'https://doc.nuxeo.com/x/N4Ek'
-    source_link: /display/USERDOC/Traceability
 tree_item_index: 800
 history:
     -

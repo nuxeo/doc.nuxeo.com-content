@@ -11,17 +11,6 @@ labels:
     - blogs
     - cmis-component
 toc: true
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: CMIS
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/CMIS'
-    page_id: '950308'
-    shortlink: JIAO
-    shortlink_source: 'https://doc.nuxeo.com/x/JIAO'
-    source_link: /display/NXDOC/CMIS
 tree_item_index: 800
 history:
     -
@@ -137,9 +126,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-12-26 09:58'
-        message: >-
-            Replace demo.nuxeo.com with online trial, update URLs and format
-            toc
+        message: 'Replace demo.nuxeo.com with online trial, update URLs and format toc'
         version: '58'
     -
         author: Florent Guillaume
@@ -254,7 +241,7 @@ history:
     -
         author: Florent Guillaume
         date: '2011-12-21 19:38'
-        message: hg -> github
+        message: 'hg -> github'
         version: '35'
     -
         author: Florent Guillaume
@@ -339,7 +326,7 @@ history:
     -
         author: Florent Guillaume
         date: '2011-03-17 17:01'
-        message: doesn't belong here
+        message: "doesn't belong here"
         version: '18'
     -
         author: Florent Guillaume

@@ -10,17 +10,6 @@ labels:
     - workflow-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '12913723'
-    ajs-parent-page-title: Workflow
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Escalation+Service
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Escalation+Service'
-    page_id: '16091822'
-    shortlink: ror1
-    shortlink_source: 'https://doc.nuxeo.com/x/ror1'
-    source_link: /display/NXDOC/Escalation+Service
 tree_item_index: 600
 history:
     -

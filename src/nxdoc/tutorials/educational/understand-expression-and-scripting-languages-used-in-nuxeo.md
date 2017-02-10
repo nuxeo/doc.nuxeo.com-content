@@ -11,19 +11,6 @@ labels:
     - freemarker
     - scripting
 toc: true
-confluence:
-    ajs-parent-page-id: '19235679'
-    ajs-parent-page-title: Educational
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Understand+Expression+and+Scripting+Languages+Used+in+Nuxeo
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Understand+Expression+and+Scripting+Languages+Used+in+Nuxeo
-    page_id: '14254895'
-    shortlink: L4PZ
-    shortlink_source: 'https://doc.nuxeo.com/x/L4PZ'
-    source_link: >-
-        /display/NXDOC/Understand+Expression+and+Scripting+Languages+Used+in+Nuxeo
 tree_item_index: 300
 history:
     -
@@ -264,9 +251,7 @@ history:
     -
         author: Bertrand Chauvin
         date: '2013-07-08 14:24'
-        message: >-
-            Started to add available variables depending on context (with
-            workflow context)
+        message: Started to add available variables depending on context (with workflow context)
         version: '22'
     -
         author: Karl Harris

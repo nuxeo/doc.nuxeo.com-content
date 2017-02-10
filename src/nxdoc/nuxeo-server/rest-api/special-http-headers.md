@@ -11,17 +11,6 @@ labels:
     - rest-api-component
     - nxdoc-730
 toc: false
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Special+HTTP+Headers
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Special+HTTP+Headers'
-    page_id: '20513691'
-    shortlink: mwM5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/mwM5AQ'
-    source_link: /display/NXDOC/Special+HTTP+Headers
 tree_item_index: 300
 history:
     -
@@ -77,9 +66,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-04-20 09:53'
-        message: >-
-            Add X-NXproperties and X-NXenrichers.document, replacing deprecated
-            X-NXDocumentProperties and X-NXContext-Category
+        message: 'Add X-NXproperties and X-NXenrichers.document, replacing deprecated X-NXDocumentProperties and X-NXContext-Category'
         version: '5'
     -
         author: Manon Lumeau

@@ -9,20 +9,9 @@ labels:
     - shell
     - shell-component
 toc: true
-confluence:
-    ajs-parent-page-id: '4687648'
-    ajs-parent-page-title: Nuxeo Shell Command Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Configuration+Commands
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Configuration+Commands'
-    page_id: '4689085'
-    shortlink: vYxH
-    shortlink_source: 'https://doc.nuxeo.com/x/vYxH'
-    source_link: /display/NXDOC/Configuration+Commands
 tree_item_index: 500
 version_override:
-    'LTS 2015': 710/admindoc/configuration-commands
+    LTS 2015: 710/admindoc/configuration-commands
     '6.0': 60/admindoc/configuration-commands
     '5.8': 58/admindoc/configuration-commands
 history:

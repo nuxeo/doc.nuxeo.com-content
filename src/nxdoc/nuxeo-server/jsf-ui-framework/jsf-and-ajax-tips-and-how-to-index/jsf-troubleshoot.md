@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Discover the troubleshooting issues that can be encountered with
-            JSF.
+        excerpt: Discover the troubleshooting issues that can be encountered with JSF.
         level: Advanced
         tool: Code
         topics: JSF
@@ -18,17 +16,6 @@ labels:
     - howto
     - seam-jsf-component
 toc: true
-confluence:
-    ajs-parent-page-id: '9830458'
-    ajs-parent-page-title: JSF and Ajax Tips and How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: JSF+troubleshoot
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/JSF+troubleshoot'
-    page_id: '3343547'
-    shortlink: uwQz
-    shortlink_source: 'https://doc.nuxeo.com/x/uwQz'
-    source_link: /display/NXDOC/JSF+troubleshoot
 tree_item_index: 700
 history:
     -

@@ -6,17 +6,6 @@ review:
     status: ok
 labels:
     - attachment
-confluence:
-    ajs-parent-page-id: '2392395'
-    ajs-parent-page-title: Document Types
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Attachments
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Attachments'
-    page_id: '23366442'
-    shortlink: KotkAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/KotkAQ'
-    source_link: /display/USERDOC/Attachments
 tree_item_index: 200
 history:
     -

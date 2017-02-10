@@ -5,6 +5,7 @@ review:
     date: '2017-01-18'
     status: ok
     comment: ''
+
 ---
 
 Since 8.10 we've added a cache on DBS repositories. At this moment, MongoDB and MarkLogic connectors use this cache by default.

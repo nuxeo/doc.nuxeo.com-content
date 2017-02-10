@@ -7,17 +7,6 @@ review:
 labels:
     - lts2016-ok
 is_overview: true
-confluence:
-    ajs-parent-page-id: '950332'
-    ajs-parent-page-title: Developer Documentation Center
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Server
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Server'
-    page_id: '31033314'
-    shortlink: 4ofZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/4ofZAQ'
-    source_link: /display/NXDOC/Nuxeo+Server
 tree_item_index: 200
 section_parent: server
 history:

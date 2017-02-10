@@ -9,17 +9,6 @@ labels:
     - vcs
     - cache
     - vcs-component
-confluence:
-    ajs-parent-page-id: '3342350'
-    ajs-parent-page-title: VCS
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Java+Data+Structures+and+Caching
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Java+Data+Structures+and+Caching'
-    page_id: '12915241'
-    shortlink: KRLF
-    shortlink_source: 'https://doc.nuxeo.com/x/KRLF'
-    source_link: /display/NXDOC/Java+Data+Structures+and+Caching
 tree_item_index: 400
 history:
     -

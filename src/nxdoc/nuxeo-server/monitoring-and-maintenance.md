@@ -10,20 +10,9 @@ labels:
     - datasource
     - monitoring-component
 toc: true
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Monitoring+and+Maintenance
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Monitoring+and+Maintenance'
-    page_id: '950318'
-    shortlink: LoAO
-    shortlink_source: 'https://doc.nuxeo.com/x/LoAO'
-    source_link: /display/NXDOC/Monitoring+and+Maintenance
 tree_item_index: 300
 version_override:
-    'LTS 2015': 710/admindoc/monitoring-and-maintenance
+    LTS 2015: 710/admindoc/monitoring-and-maintenance
     '6.0': 60/admindoc/monitoring-and-maintenance
     '5.8': 58/admindoc/monitoring-and-maintenance
 history:
@@ -110,7 +99,7 @@ history:
     -
         author: Mathieu Guillaume
         date: '2012-02-09 13:50'
-        message: svn -> hg
+        message: 'svn -> hg'
         version: '9'
     -
         author: Mathieu Guillaume

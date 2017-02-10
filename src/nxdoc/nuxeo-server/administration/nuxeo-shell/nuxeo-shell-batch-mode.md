@@ -10,17 +10,6 @@ labels:
     - shell-component
     - nxdoc-750
 toc: true
-confluence:
-    ajs-parent-page-id: '4687635'
-    ajs-parent-page-title: Nuxeo Shell
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Shell+Batch+Mode
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Shell+Batch+Mode'
-    page_id: '4687698'
-    shortlink: UodH
-    shortlink_source: 'https://doc.nuxeo.com/x/UodH'
-    source_link: /display/NXDOC/Nuxeo+Shell+Batch+Mode
 tree_item_index: 200
 history:
     -

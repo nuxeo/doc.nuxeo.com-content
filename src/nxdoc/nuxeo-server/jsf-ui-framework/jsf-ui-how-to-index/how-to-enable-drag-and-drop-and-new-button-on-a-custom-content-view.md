@@ -16,20 +16,7 @@ labels:
     - content-view
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/how-to-enable-dragn-drop-and-new-button-on-a-custom-content-view
-confluence:
-    ajs-parent-page-id: '20517820'
-    ajs-parent-page-title: JSF UI How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Enable+Drag%27n+Drop+and+New+Button+on+a+Custom+Content+View
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Enable+Drag%27n+Drop+and+New+Button+on+a+Custom+Content+View
-    page_id: '26313229'
-    shortlink: DYKRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/DYKRAQ'
-    source_link: >-
-        /display/NXDOC/How+to+Enable+Drag%27n+Drop+and+New+Button+on+a+Custom+Content+View
+    LTS 2015: 710/nxdoc/how-to-enable-dragn-drop-and-new-button-on-a-custom-content-view
 tree_item_index: 1600
 history:
     -

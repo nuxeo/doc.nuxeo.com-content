@@ -7,17 +7,6 @@ review:
 toc: true
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Connect+Report+Tools
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Connect+Report+Tools'
-    page_id: '31687410'
-    shortlink: 8oLjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/8oLjAQ'
-    source_link: /display/NXDOC/Nuxeo+Connect+Report+Tools
 tree_item_index: 3600
 history:
     -

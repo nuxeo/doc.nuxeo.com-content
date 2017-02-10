@@ -10,17 +10,6 @@ labels:
     - automation-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '18451738'
-    ajs-parent-page-title: Automation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Contributing+an+Operation
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Contributing+an+Operation'
-    page_id: '3342573'
-    shortlink: 7QAz
-    shortlink_source: 'https://doc.nuxeo.com/x/7QAz'
-    source_link: /display/NXDOC/Contributing+an+Operation
 tree_item_index: 500
 history:
     -

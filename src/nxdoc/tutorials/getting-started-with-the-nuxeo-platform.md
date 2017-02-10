@@ -6,18 +6,6 @@ review:
     status: ok
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '7209076'
-    ajs-parent-page-title: Tutorials
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Getting+Started+with+the+Nuxeo+Platform
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Getting+Started+with+the+Nuxeo+Platform
-    page_id: '29460589'
-    shortlink: bYjBAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/bYjBAQ'
-    source_link: /display/NXDOC/Getting+Started+with+the+Nuxeo+Platform
 tree_item_index: 100
 history:
     -

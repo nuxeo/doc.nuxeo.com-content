@@ -9,17 +9,6 @@ labels:
     - endpoint
     - rest-api
     - rest-api-component
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Contributing+a+New+Endpoint
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Contributing+a+New+Endpoint'
-    page_id: '16090270'
-    shortlink: noT1
-    shortlink_source: 'https://doc.nuxeo.com/x/noT1'
-    source_link: /display/NXDOC/Contributing+a+New+Endpoint
 tree_item_index: 700
 history:
     -

@@ -6,29 +6,16 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            The Nuxeo Platform offers the capability to change the context path,
-            i.e. /nuxeo in the URL of your application.
+        excerpt: 'The Nuxeo Platform offers the capability to change the context path, i.e. /nuxeo in the URL of your application.'
         level: Intermediate
         tool: ''
         topics: 'Server configuration, URL'
 labels:
     - content-review-lts2016
     - howto
-confluence:
-    ajs-parent-page-id: '31032113'
-    ajs-parent-page-title: Administration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Change+Context+Path
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Change+Context+Path'
-    page_id: '31687473'
-    shortlink: MYPjAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/MYPjAQ'
-    source_link: /display/NXDOC/How+to+Change+Context+Path
 tree_item_index: 2200
 version_override:
-    'LTS 2015': 710/admindoc/how-to-change-context-path
+    LTS 2015: 710/admindoc/how-to-change-context-path
     '6.0': 60/admindoc/how-to-change-context-path
 history:
     -

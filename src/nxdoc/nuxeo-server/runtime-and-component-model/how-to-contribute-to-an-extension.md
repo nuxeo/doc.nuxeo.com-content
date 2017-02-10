@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Lean how to create an XML extension in Nuxeo Studio and with the Nuxeo
-            Generator and how to override a Nuxeo contribution.
+        excerpt: Lean how to create an XML extension in Nuxeo Studio and with the Nuxeo Generator and how to override a Nuxeo contribution.
         level: Intermediate
         tool: 'Nuxeo Generator, Studio'
         topics: Extension point
@@ -20,17 +18,6 @@ labels:
     - howto
     - runtimecomponent
 toc: true
-confluence:
-    ajs-parent-page-id: '950284'
-    ajs-parent-page-title: Runtime and Component Model
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Contribute+to+an+Extension
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+to+an+Extension'
-    page_id: '12914315'
-    shortlink: iw7F
-    shortlink_source: 'https://doc.nuxeo.com/x/iw7F'
-    source_link: /display/NXDOC/How+to+Contribute+to+an+Extension
 tree_item_index: 200
 history:
     -
@@ -66,7 +53,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-09-28 15:38'
-        message: Deleted superfluous 'you'
+        message: "Deleted superfluous 'you'"
         version: '19'
     -
         author: Solen Guitter

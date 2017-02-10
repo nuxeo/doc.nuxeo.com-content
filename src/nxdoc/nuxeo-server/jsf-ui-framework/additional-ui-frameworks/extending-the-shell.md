@@ -9,17 +9,6 @@ labels:
     - shell
     - shell-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '950334'
-    ajs-parent-page-title: Additional UI Frameworks
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Extending+The+Shell
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Extending+The+Shell'
-    page_id: '4687725'
-    shortlink: bYdH
-    shortlink_source: 'https://doc.nuxeo.com/x/bYdH'
-    source_link: /display/NXDOC/Extending+The+Shell
 tree_item_index: 200
 history:
     -

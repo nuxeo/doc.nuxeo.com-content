@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to insert a new widget to the default Summary layout so
-            that's displayed on all document Summary pages.
+        excerpt: "Learn how to insert a new widget to the default Summary layout so that's displayed on all document Summary pages."
         level: Advanced
         tool: Studio
         topics: 'Layout, JSF UI'
@@ -20,18 +18,6 @@ labels:
     - layout
     - layout-widgets-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235623'
-    ajs-parent-page-title: Layout & Widget How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Add+a+New+Widget+to+the+Default+Summary+Layout
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Add+a+New+Widget+to+the+Default+Summary+Layout
-    page_id: '17794331'
-    shortlink: G4UPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/G4UPAQ'
-    source_link: /display/NXDOC/How+to+Add+a+New+Widget+to+the+Default+Summary+Layout
 tree_item_index: 500
 history:
     -

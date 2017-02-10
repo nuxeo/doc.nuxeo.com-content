@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to customize the info-view pop-up using an XML extension
-            or Nuxeo Studio.
+        excerpt: Learn how to customize the info-view pop-up using an XML extension or Nuxeo Studio.
         level: Advanced
         tool: Code editor
         topics: 'Info-view, JSF UI'
@@ -17,18 +15,6 @@ labels:
     - howto
     - search-tab-component
 toc: true
-confluence:
-    ajs-parent-page-id: '20517820'
-    ajs-parent-page-title: JSF UI How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Customize+the+Info-View+Pop-Up
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Customize+the+Info-View+Pop-Up
-    page_id: '20517617'
-    shortlink: 8RI5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/8RI5AQ'
-    source_link: /display/NXDOC/How+to+Customize+the+Info-View+Pop-Up
 tree_item_index: 600
 history:
     -

@@ -11,17 +11,6 @@ labels:
     - collection-component
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '16089319'
-    ajs-parent-page-title: Additional Services
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Collections
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Collections'
-    page_id: '19234842'
-    shortlink: GoAlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/GoAlAQ'
-    source_link: /display/NXDOC/Collections
 tree_item_index: 400
 history:
     -

@@ -11,17 +11,6 @@ labels:
     - actions-filters-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '950289'
-    ajs-parent-page-title: 'Actions (Links, Buttons, Icons, Tabs and More)'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Standard+Action+Types
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Standard+Action+Types'
-    page_id: '17794911'
-    shortlink: X4cPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/X4cPAQ'
-    source_link: /display/NXDOC/Standard+Action+Types
 tree_item_index: 200
 history:
     -

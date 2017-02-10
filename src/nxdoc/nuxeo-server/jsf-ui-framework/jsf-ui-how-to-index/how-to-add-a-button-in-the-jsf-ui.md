@@ -6,11 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to add new buttons at different locations in the JSF UI
-            using user actions and automation (in a document contextual tools or
-            on a document Edit form for instance).
-
+        excerpt: Learn how to add new buttons at different locations in the JSF UI using user actions and automation (in a document contextual tools or on a document Edit form for instance).
         level: Beginner
         tool: 'Studio, XML extension'
         topics: 'Automation, Extension, Tab, User action, JSF UI'
@@ -24,17 +20,6 @@ labels:
     - actions-filters-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '20517820'
-    ajs-parent-page-title: JSF UI How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Add+a+Button+in+the+JSF+UI
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Add+a+Button+in+the+JSF+UI'
-    page_id: '8192401'
-    shortlink: kQF9
-    shortlink_source: 'https://doc.nuxeo.com/x/kQF9'
-    source_link: /display/NXDOC/How+to+Add+a+Button+in+the+JSF+UI
 tree_item_index: 1100
 version_override:
     '6.0': 60/nxdoc/how-to-add-a-button-in-the-web-ui

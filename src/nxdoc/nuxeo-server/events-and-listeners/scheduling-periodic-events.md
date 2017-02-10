@@ -12,17 +12,6 @@ labels:
     - core-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '950283'
-    ajs-parent-page-title: Events and Listeners
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Scheduling+Periodic+Events
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Scheduling+Periodic+Events'
-    page_id: '4688820'
-    shortlink: tItH
-    shortlink_source: 'https://doc.nuxeo.com/x/tItH'
-    source_link: /display/NXDOC/Scheduling+Periodic+Events
 tree_item_index: 200
 history:
     -

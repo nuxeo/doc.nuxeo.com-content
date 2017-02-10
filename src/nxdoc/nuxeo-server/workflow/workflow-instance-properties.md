@@ -11,17 +11,6 @@ labels:
     - workflow-component
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '12913723'
-    ajs-parent-page-title: Workflow
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Workflow+Instance+Properties
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Workflow+Instance+Properties'
-    page_id: '16091289'
-    shortlink: mYj1
-    shortlink_source: 'https://doc.nuxeo.com/x/mYj1'
-    source_link: /display/NXDOC/Workflow+Instance+Properties
 tree_item_index: 400
 history:
     -

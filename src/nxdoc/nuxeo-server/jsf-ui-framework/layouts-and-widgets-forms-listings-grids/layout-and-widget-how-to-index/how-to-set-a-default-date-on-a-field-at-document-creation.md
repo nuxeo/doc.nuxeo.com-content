@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to set a default date on a field at document creation
-            using Nuxeo Studio's  event handlers  and  automation chains.
+        excerpt: "Learn how to set a default date on a field at document creation using Nuxeo Studio's  event handlers  and  automation chains."
         level: Advanced
         tool: 'Studio, Nuxeo Generator'
         topics: 'Layout, Event'
@@ -22,18 +20,6 @@ labels:
     - layout
     - layout-widgets-component
 toc: true
-confluence:
-    ajs-parent-page-id: '19235623'
-    ajs-parent-page-title: Layout & Widget How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Set+a+Default+Date+on+a+Field+at+Document+Creation
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Set+a+Default+Date+on+a+Field+at+Document+Creation
-    page_id: '14255680'
-    shortlink: QIbZ
-    shortlink_source: 'https://doc.nuxeo.com/x/QIbZ'
-    source_link: /display/NXDOC/How+to+Set+a+Default+Date+on+a+Field+at+Document+Creation
 tree_item_index: 200
 history:
     -

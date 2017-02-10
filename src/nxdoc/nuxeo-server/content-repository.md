@@ -8,17 +8,6 @@ labels:
     - content-review-lts2016
     - home
 is_overview: true
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Content+Repository
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Content+Repository'
-    page_id: '950287'
-    shortlink: D4AO
-    shortlink_source: 'https://doc.nuxeo.com/x/D4AO'
-    source_link: /display/NXDOC/Content+Repository
 tree_item_index: 600
 history:
     -
@@ -69,7 +58,7 @@ history:
     -
         author: Florent Guillaume
         date: '2014-08-19 18:36'
-        message: Nuxeo EP -> Platform
+        message: 'Nuxeo EP -> Platform'
         version: '36'
     -
         author: Solen Guitter
@@ -99,9 +88,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2013-05-01 13:14'
-        message: >-
-            better default sample + add require on pre-existing types
-            configuration + remove deprecated layouts configuration + format
+        message: better default sample + add require on pre-existing types configuration + remove deprecated layouts configuration + format
         version: '30'
     -
         author: Solen Guitter

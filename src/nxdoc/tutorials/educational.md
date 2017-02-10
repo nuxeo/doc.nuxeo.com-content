@@ -6,17 +6,6 @@ review:
     status: ok
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '7209076'
-    ajs-parent-page-title: Tutorials
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Educational
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Educational'
-    page_id: '19235679'
-    shortlink: X4MlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/X4MlAQ'
-    source_link: /display/NXDOC/Educational
 tree_item_index: 500
 history:
     -

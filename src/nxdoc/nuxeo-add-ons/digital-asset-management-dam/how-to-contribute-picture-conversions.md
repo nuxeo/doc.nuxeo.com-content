@@ -17,18 +17,6 @@ labels:
     - picture
     - convert-component
 toc: true
-confluence:
-    ajs-parent-page-id: '3866704'
-    ajs-parent-page-title: Digital Asset Management (DAM)
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Contribute+Picture+Conversions
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+Picture+Conversions
-    page_id: '20519904'
-    shortlink: 4Bs5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/4Bs5AQ'
-    source_link: /display/NXDOC/How+to+Contribute+Picture+Conversions
 history:
     -
         author: Manon Lumeau

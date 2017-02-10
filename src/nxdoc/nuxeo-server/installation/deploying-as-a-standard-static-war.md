@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            This page provides instructions to generate a static WAR
-            distribution and deploy it in a Tomcat or WildFly distribution.
+        excerpt: This page provides instructions to generate a static WAR distribution and deploy it in a Tomcat or WildFly distribution.
         level: Advanced
         tool: Terminal
         topics: 'Distribution, Static WAR'
@@ -18,17 +16,6 @@ labels:
     - static-war
     - howto
 toc: true
-confluence:
-    ajs-parent-page-id: '3866685'
-    ajs-parent-page-title: Installation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Deploying+as+a+Standard+Static+WAR
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Deploying+as+a+Standard+Static+WAR'
-    page_id: '9275166'
-    shortlink: HoeN
-    shortlink_source: 'https://doc.nuxeo.com/x/HoeN'
-    source_link: /display/NXDOC/Deploying+as+a+Standard+Static+WAR
 tree_item_index: 900
 history:
     -

@@ -16,17 +16,6 @@ labels:
     - howto
     - seam-jsf-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235681'
-    ajs-parent-page-title: Transversal How-Tos
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Override+a+Seam+Component
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Override+a+Seam+Component'
-    page_id: '19236447'
-    shortlink: X4YlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/X4YlAQ'
-    source_link: /display/NXDOC/How+to+Override+a+Seam+Component
 tree_item_index: 700
 history:
     -

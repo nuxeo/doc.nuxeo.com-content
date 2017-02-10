@@ -14,17 +14,6 @@ labels:
     - excerpt
     - multi-excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: REST+API
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/REST+API'
-    page_id: '13664833'
-    shortlink: QYLQ
-    shortlink_source: 'https://doc.nuxeo.com/x/QYLQ'
-    source_link: /display/NXDOC/REST+API
 tree_item_index: 1000
 history:
     -
@@ -75,7 +64,7 @@ history:
     -
         author: Bertrand Chauvin
         date: '2015-10-19 15:45'
-        message: localhost -> servername
+        message: 'localhost -> servername'
         version: '92'
     -
         author: Bertrand Chauvin

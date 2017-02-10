@@ -17,18 +17,6 @@ labels:
     - layout
     - layout-widgets-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235623'
-    ajs-parent-page-title: Layout & Widget How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Use+a+Generic+Widget+in+Layouts
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Use+a+Generic+Widget+in+Layouts
-    page_id: '9274315'
-    shortlink: y4ON
-    shortlink_source: 'https://doc.nuxeo.com/x/y4ON'
-    source_link: /display/NXDOC/How+to+Use+a+Generic+Widget+in+Layouts
 tree_item_index: 300
 history:
     -

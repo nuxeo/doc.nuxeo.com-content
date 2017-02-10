@@ -10,17 +10,6 @@ labels:
     - action
     - actions-filters-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '950289'
-    ajs-parent-page-title: 'Actions (Links, Buttons, Icons, Tabs and More)'
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Custom+Action+Types
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Custom+Action+Types'
-    page_id: '17795132'
-    shortlink: PIgPAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/PIgPAQ'
-    source_link: /display/NXDOC/Custom+Action+Types
 tree_item_index: 300
 history:
     -

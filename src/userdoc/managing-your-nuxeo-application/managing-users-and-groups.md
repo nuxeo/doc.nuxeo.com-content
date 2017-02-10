@@ -10,17 +10,6 @@ labels:
     - migration-sample
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '2392402'
-    ajs-parent-page-title: Managing Your Nuxeo Application
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Managing+Users+and+Groups
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Managing+Users+and+Groups'
-    page_id: '2392403'
-    shortlink: U4Ek
-    shortlink_source: 'https://doc.nuxeo.com/x/U4Ek'
-    source_link: /display/USERDOC/Managing+Users+and+Groups
 tree_item_index: 100
 history:
     -
@@ -36,7 +25,7 @@ history:
     -
         author: Manon Lumeau
         date: '2015-11-25 17:00'
-        message: replace "access rights" by "permissions"
+        message: 'replace "access rights" by "permissions"'
         version: '41'
     -
         author: Solen Guitter

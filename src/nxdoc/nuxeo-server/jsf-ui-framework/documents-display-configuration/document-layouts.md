@@ -9,17 +9,6 @@ labels:
     - layout
     - web-ui-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '6029663'
-    ajs-parent-page-title: Documents Display Configuration
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Document+Layouts
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Document+Layouts'
-    page_id: '3868341'
-    shortlink: tQY7
-    shortlink_source: 'https://doc.nuxeo.com/x/tQY7'
-    source_link: /display/NXDOC/Document+Layouts
 tree_item_index: 200
 history:
     -

@@ -9,17 +9,6 @@ labels:
     - redis
     - rediscomponent
 toc: true
-confluence:
-    ajs-parent-page-id: '3866685'
-    ajs-parent-page-title: Installation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+and+Redis
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+and+Redis'
-    page_id: '23367045'
-    shortlink: hY1kAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/hY1kAQ'
-    source_link: /display/NXDOC/Nuxeo+and+Redis
 tree_item_index: 1500
 history:
     -

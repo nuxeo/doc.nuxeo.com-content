@@ -7,17 +7,6 @@ review:
 labels:
     - lts2016-ok
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235679'
-    ajs-parent-page-title: Educational
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Design+Tips
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Design+Tips'
-    page_id: '12914194'
-    shortlink: Eg7F
-    shortlink_source: 'https://doc.nuxeo.com/x/Eg7F'
-    source_link: /display/NXDOC/Design+Tips
 tree_item_index: 600
 history:
     -

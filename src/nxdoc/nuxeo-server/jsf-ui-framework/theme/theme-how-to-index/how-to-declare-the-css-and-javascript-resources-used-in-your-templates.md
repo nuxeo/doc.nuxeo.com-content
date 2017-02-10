@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to declare and add the CSS and JavaScript ressources in
-            your templates.
+        excerpt: Learn how to declare and add the CSS and JavaScript ressources in your templates.
         level: Advanced
         tool: Code editor
         topics: Theme
@@ -22,19 +20,6 @@ labels:
     - link-update
     - themes-component
     - excerpt
-confluence:
-    ajs-parent-page-id: '19235625'
-    ajs-parent-page-title: Theme How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Declare+the+CSS+and+JavaScript+Resources+Used+in+Your+Templates
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Declare+the+CSS+and+JavaScript+Resources+Used+in+Your+Templates
-    page_id: '4689203'
-    shortlink: M41H
-    shortlink_source: 'https://doc.nuxeo.com/x/M41H'
-    source_link: >-
-        /display/NXDOC/How+to+Declare+the+CSS+and+JavaScript+Resources+Used+in+Your+Templates
 tree_item_index: 300
 history:
     -

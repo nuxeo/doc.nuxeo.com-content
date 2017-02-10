@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Get some guidelines to estimate the required size for disk and
-            database.
+        excerpt: Get some guidelines to estimate the required size for disk and database.
         level: Intermediate
         tool: ''
         topics: Database
@@ -18,20 +16,9 @@ labels:
     - howto
     - excerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3866685'
-    ajs-parent-page-title: Installation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Estimate+Volume+Usage
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Estimate+Volume+Usage'
-    page_id: '7536973'
-    shortlink: TQFz
-    shortlink_source: 'https://doc.nuxeo.com/x/TQFz'
-    source_link: /display/NXDOC/How+to+Estimate+Volume+Usage
 tree_item_index: 1400
 version_override:
-    'LTS 2015': 710/admindoc/how-to-estimate-disk-database-and-elasticsearch-usage
+    LTS 2015: 710/admindoc/how-to-estimate-disk-database-and-elasticsearch-usage
     '6.0': 60/admindoc/how-to-estimate-disk-database-and-elasticsearch-usage
     '5.8': 58/admindoc/how-to-estimate-disk-database-and-elasticsearch-usage
 history:

@@ -12,17 +12,6 @@ labels:
     - rest-api-component
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '13664833'
-    ajs-parent-page-title: REST API
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: REST+API+Entity+Types
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/REST+API+Entity+Types'
-    page_id: '19792382'
-    shortlink: '-gEuAQ'
-    shortlink_source: 'https://doc.nuxeo.com/x/-gEuAQ'
-    source_link: /display/NXDOC/REST+API+Entity+Types
 tree_item_index: 200
 history:
     -
@@ -33,9 +22,7 @@ history:
     -
         author: Bertrand Chauvin
         date: '2015-10-14 13:01'
-        message: >-
-            Added multivalued / complex / complex multivalued property
-            management syntax
+        message: Added multivalued / complex / complex multivalued property management syntax
         version: '33'
     -
         author: Alain Escaffre

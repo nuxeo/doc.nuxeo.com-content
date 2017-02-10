@@ -13,20 +13,9 @@ labels:
     - configuration
     - nxdoc-752
 toc: true
-confluence:
-    ajs-parent-page-id: '3866685'
-    ajs-parent-page-title: Installation
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Clustering+Configuration
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Clustering+Configuration'
-    page_id: '14254559'
-    shortlink: 34HZ
-    shortlink_source: 'https://doc.nuxeo.com/x/34HZ'
-    source_link: /display/NXDOC/Nuxeo+Clustering+Configuration
 tree_item_index: 1300
 version_override:
-    'LTS 2015': 710/admindoc/nuxeo-clustering-configuration
+    LTS 2015: 710/admindoc/nuxeo-clustering-configuration
     '6.0': 60/admindoc/nuxeo-clustering-configuration
     '5.8': 58/admindoc/nuxeo-clustering-configuration
 history:

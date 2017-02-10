@@ -10,17 +10,6 @@ labels:
     - nuxeo-drive-component
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '14257229'
-    ajs-parent-page-title: Nuxeo Drive
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Drive+Update+Site
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Drive+Update+Site'
-    page_id: '19793145'
-    shortlink: _QQuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/_QQuAQ'
-    source_link: /display/NXDOC/Nuxeo+Drive+Update+Site
 tree_item_index: 300
 history:
     -
@@ -31,9 +20,7 @@ history:
     -
         author: Solen Guitter
         date: '2016-04-01 15:02'
-        message: >-
-            Update section Using a Custom Update Site to use update-site-url
-            instead of org.nuxeo.drive.update.site.url
+        message: Update section Using a Custom Update Site to use update-site-url instead of org.nuxeo.drive.update.site.url
         version: '12'
     -
         author: Manon Lumeau

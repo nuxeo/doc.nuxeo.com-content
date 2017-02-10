@@ -6,17 +6,6 @@ review:
     status: ok
 labels:
     - templates
-confluence:
-    ajs-parent-page-id: '2392395'
-    ajs-parent-page-title: Document Types
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Using+Workspace+Templates
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Using+Workspace+Templates'
-    page_id: '4688692'
-    shortlink: NItH
-    shortlink_source: 'https://doc.nuxeo.com/x/NItH'
-    source_link: /display/USERDOC/Using+Workspace+Templates
 tree_item_index: 300
 history:
     -
@@ -27,7 +16,7 @@ history:
     -
         author: Manon Lumeau
         date: '2015-11-25 17:02'
-        message: replace "access rights" by "permissions"
+        message: 'replace "access rights" by "permissions"'
         version: '15'
     -
         author: Solen Guitter

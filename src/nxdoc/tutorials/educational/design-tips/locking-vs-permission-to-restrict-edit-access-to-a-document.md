@@ -11,19 +11,6 @@ labels:
     - permission
     - acl
 toc: true
-confluence:
-    ajs-parent-page-id: '12914194'
-    ajs-parent-page-title: Design Tips
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Locking+vs+Permission+to+Restrict+Edit+Access+to+a+Document
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Locking+vs+Permission+to+Restrict+Edit+Access+to+a+Document
-    page_id: '14256288'
-    shortlink: oIjZ
-    shortlink_source: 'https://doc.nuxeo.com/x/oIjZ'
-    source_link: >-
-        /display/NXDOC/Locking+vs+Permission+to+Restrict+Edit+Access+to+a+Document
 tree_item_index: 100
 history:
     -

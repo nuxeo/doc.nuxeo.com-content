@@ -6,17 +6,6 @@ review:
     status: ok
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Advanced+topics
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Advanced+topics'
-    page_id: '950333'
-    shortlink: PYAO
-    shortlink_source: 'https://doc.nuxeo.com/x/PYAO'
-    source_link: /display/NXDOC/Advanced+topics
 tree_item_index: 1600
 history:
     -

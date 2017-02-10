@@ -1,22 +1,11 @@
 ---
-title: Directory & Vocabulary How-To Index
+title: 'Directory & Vocabulary How-To Index'
 review:
     comment: ''
     date: '2016-12-23'
     status: ok
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '4688939'
-    ajs-parent-page-title: Data Lists and Directories
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: viewpage.action?pageId=19235667
-    canonical_source: viewpage.action?pageId=19235667
-    page_id: '19235667'
-    shortlink: U4MlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/U4MlAQ'
-    source_link: /pages/viewpage.action?pageId=19235667
 tree_item_index: 300
 history:
     -

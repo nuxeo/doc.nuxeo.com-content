@@ -6,17 +6,6 @@ review:
     status: ok
 labels:
     - lts2016-ok
-confluence:
-    ajs-parent-page-id: '7209076'
-    ajs-parent-page-title: Tutorials
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Transversal+How-Tos
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Transversal+How-Tos'
-    page_id: '19235681'
-    shortlink: YYMlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/YYMlAQ'
-    source_link: /display/NXDOC/Transversal+How-Tos
 tree_item_index: 600
 history:
     -

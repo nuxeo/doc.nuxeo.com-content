@@ -11,18 +11,6 @@ labels:
     - variable
     - workflow
     - workflow-component
-confluence:
-    ajs-parent-page-id: '12913723'
-    ajs-parent-page-title: Workflow
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Variables+Available+in+the+Automation+Context
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Variables+Available+in+the+Automation+Context
-    page_id: '11534609'
-    shortlink: EQGw
-    shortlink_source: 'https://doc.nuxeo.com/x/EQGw'
-    source_link: /display/NXDOC/Variables+Available+in+the+Automation+Context
 tree_item_index: 900
 history:
     -

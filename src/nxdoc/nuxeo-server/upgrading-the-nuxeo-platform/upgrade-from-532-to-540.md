@@ -8,20 +8,9 @@ labels:
     - lts2016-ok
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '3343538'
-    ajs-parent-page-title: Upgrading the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Upgrade+from+5.3.2+to+5.4.0
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Upgrade+from+5.3.2+to+5.4.0'
-    page_id: '18449457'
-    shortlink: MYQZAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/MYQZAQ'
-    source_link: /display/NXDOC/Upgrade+from+5.3.2+to+5.4.0
 tree_item_index: 900
 version_override:
-    'LTS 2015': 710/admindoc/upgrade-from-532-to-540
+    LTS 2015: 710/admindoc/upgrade-from-532-to-540
     '6.0': 60/admindoc/upgrade-from-532-to-540
     '5.8': 58/admindoc/upgrade-from-532-to-540
 history:

@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to let managers of a workspace determine who is part of
-            locally defined groups (local to the workspace).
+        excerpt: Learn how to let managers of a workspace determine who is part of locally defined groups (local to the workspace).
         level: Advanced
         tool: Studio
         topics: Permissions
@@ -18,19 +16,6 @@ labels:
     - access-right
     - studio
 toc: true
-confluence:
-    ajs-parent-page-id: '19235681'
-    ajs-parent-page-title: Transversal How-Tos
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Implement+Local+Groups+or+Roles+Using+Computed+Groups
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Implement+Local+Groups+or+Roles+Using+Computed+Groups
-    page_id: '14256023'
-    shortlink: l4fZ
-    shortlink_source: 'https://doc.nuxeo.com/x/l4fZ'
-    source_link: >-
-        /display/NXDOC/How+to+Implement+Local+Groups+or+Roles+Using+Computed+Groups
 tree_item_index: 400
 history:
     -

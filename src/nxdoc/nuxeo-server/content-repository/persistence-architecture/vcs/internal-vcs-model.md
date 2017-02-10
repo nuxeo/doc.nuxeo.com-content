@@ -9,17 +9,6 @@ labels:
     - vcs
     - vcs-component
 toc: true
-confluence:
-    ajs-parent-page-id: '3342350'
-    ajs-parent-page-title: VCS
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Internal+VCS+Model
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Internal+VCS+Model'
-    page_id: '12915227'
-    shortlink: GxLF
-    shortlink_source: 'https://doc.nuxeo.com/x/GxLF'
-    source_link: /display/NXDOC/Internal+VCS+Model
 tree_item_index: 100
 history:
     -

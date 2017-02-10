@@ -8,17 +8,6 @@ labels:
     - content-review-lts2016
     - query-pageprovider-component
 toc: true
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Indexing+and+Query
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Indexing+and+Query'
-    page_id: '4687860'
-    shortlink: 9IdH
-    shortlink_source: 'https://doc.nuxeo.com/x/9IdH'
-    source_link: /display/NXDOC/Indexing+and+Query
 tree_item_index: 700
 history:
     -

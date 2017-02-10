@@ -8,17 +8,6 @@ labels:
     - content-review-lts2016
     - packaging-component
     - todo
-confluence:
-    ajs-parent-page-id: '3342859'
-    ajs-parent-page-title: Creating Nuxeo Packages
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Package+Manifest
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Package+Manifest'
-    page_id: '3342878'
-    shortlink: HgIz
-    shortlink_source: 'https://doc.nuxeo.com/x/HgIz'
-    source_link: /display/NXDOC/Package+Manifest
 history:
     -
         author: Manon Lumeau

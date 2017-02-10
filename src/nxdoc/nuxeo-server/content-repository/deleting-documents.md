@@ -12,17 +12,6 @@ labels:
     - excerpt
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Deleting+Documents
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Deleting+Documents'
-    page_id: '19234991'
-    shortlink: r4AlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/r4AlAQ'
-    source_link: /display/NXDOC/Deleting+Documents
 tree_item_index: 700
 history:
     -
@@ -53,9 +42,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-01-23 13:58'
-        message: >-
-            Update related pages, move Garbage-Collecting Orphaned Binaries in
-            ADMINDOC, formatting
+        message: 'Update related pages, move Garbage-Collecting Orphaned Binaries in ADMINDOC, formatting'
         version: '7'
     -
         author: Julien Carsique

@@ -10,17 +10,6 @@ labels:
     - vocabulary
     - multiexcerpt
 toc: true
-confluence:
-    ajs-parent-page-id: '2392402'
-    ajs-parent-page-title: Managing Your Nuxeo Application
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Managing+Vocabularies
-    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Managing+Vocabularies'
-    page_id: '2392405'
-    shortlink: VYEk
-    shortlink_source: 'https://doc.nuxeo.com/x/VYEk'
-    source_link: /display/USERDOC/Managing+Vocabularies
 tree_item_index: 200
 history:
     -

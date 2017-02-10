@@ -8,18 +8,6 @@ labels:
     - multiexcerpt
     - multiexcerpt-include
 toc: true
-confluence:
-    ajs-parent-page-id: '11043048'
-    ajs-parent-page-title: Nuxeo Platform User Documentation
-    ajs-space-key: USERDOC
-    ajs-space-name: Nuxeo Platform User Documentation
-    canonical: Digital+Asset+Management+with+the+Nuxeo+Platform
-    canonical_source: >-
-        https://doc.nuxeo.com/display/USERDOC/Digital+Asset+Management+with+the+Nuxeo+Platform
-    page_id: '26312925'
-    shortlink: 3YCRAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/3YCRAQ'
-    source_link: /display/USERDOC/Digital+Asset+Management+with+the+Nuxeo+Platform
 tree_item_index: 1800
 history:
     -
