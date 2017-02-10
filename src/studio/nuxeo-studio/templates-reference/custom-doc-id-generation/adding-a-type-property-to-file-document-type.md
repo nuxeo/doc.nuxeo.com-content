@@ -163,6 +163,7 @@ history:
         date: '2010-09-06 18:20'
         message: ''
         version: '1'
+next_link: /studio/declaring-vocabularies
 
 ---
 In this tutorial, we need the "file" document type to specifically have two metadata:
@@ -237,4 +238,4 @@ To respect those two constraints, we will create a new document type that inheri
 
     {{/callout}}
 
-Now, we need to [create the vocabularies]({{page page='declaring-vocabularies'}}) used to populate the type list and to compose the ID.
+Now, we need to create the vocabularies used to populate the type list and to compose the ID.

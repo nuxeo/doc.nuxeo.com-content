@@ -254,8 +254,6 @@ When a release is performed, the next version can be updated. If you are in adva
 
 [Nuxeo Studio acts as a Maven repository ]({{page page='maven-integration'}})to provide a Studio project artifact for each of your branches.
 
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Commit Preferences]({{page page='commit-preferences'}})

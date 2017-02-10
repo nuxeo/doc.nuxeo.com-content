@@ -4,6 +4,7 @@ review:
     comment: ''
     date: ''
     status: ok
+is_overview: true
 confluence:
     ajs-parent-page-id: '19793788'
     ajs-parent-page-title: Nuxeo Studio
@@ -86,19 +87,51 @@ history:
 ---
 In this chapter we will explain each screen exposed by Nuxeo Studio. If you are blocked in your configuration process on a specific screen, here you go!
 
-*   [Resources]({{page space='Studio' page='Resources'}})
-*   [Branding]({{page space='Studio' page='Branding'}})
-*   [Content Model]({{page space='Studio' page='Content Model'}})
-*   [Workflow]({{page space='Studio' page='Workflow'}})
-*   [Listings & Views](https://doc.nuxeo.com/pages/viewpage.action?pageId=12911803)
-*   [Automation]({{page space='Studio' page='Automation'}})
-*   [Roles & Permissions Section](https://doc.nuxeo.com/pages/viewpage.action?pageId=12911810)
-*   [Vocabularies]({{page space='Studio' page='Vocabularies'}})
-*   [Advanced Settings]({{page space='Studio' page='Advanced Settings'}})
-*   [External Templates]({{page space='Studio' page='External Templates'}})
-*   [Branch Management]({{page space='Studio' page='Branch Management'}})
-*   [Releases & Tags](https://doc.nuxeo.com/pages/viewpage.action?pageId=31032031)
-*   [Commit Preferences]({{page space='Studio' page='Commit Preferences'}})
-*   [Application Information]({{page space='Studio' page='Application Information'}})
-*   [Application Dependencies]({{page space='Studio' page='Application Dependencies'}})
-*   [Registries]({{page space='Studio' page='Registries'}})
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Content Customization
+
+- [Documents]({{page version='' space='studio' page='documents'}})
+- [Schemas]({{page version='' space='studio' page='schemas'}})
+- [Lifecycle]({{page version='' space='studio' page='life-cycle'}})
+- [Listings & Views](https://doc.nuxeo.com/pages/viewpage.action?pageId=12911803)
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Business Processes Customization
+
+- [Workflow]({{page space='Studio' page='Workflow'}})
+- [Automation Chains]({{page space='Studio' page='automation-chains'}})
+- [User Actions]({{page version='' space='studio' page='user-actions'}})
+- [Automation Scripting]({{page version='' space='nxdoc' page='automation-scripting'}})
+
+{{/panel}}
+</div>
+</div>
+
+<div class="row" data-equalizer data-equalize-on="medium">
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Source Control
+
+- [Branch Management]({{page space='Studio' page='Branch Management'}})
+- [Releases & Tags](https://doc.nuxeo.com/pages/viewpage.action?pageId=31032031)
+- [Commit Preferences]({{page space='Studio' page='Commit Preferences'}})
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Settings
+
+- [Application Information]({{page space='Studio' page='Application Information'}})
+- [Application Dependencies]({{page space='Studio' page='Application Dependencies'}})
+- [Registries]({{page space='Studio' page='Registries'}})
+
+{{/panel}}
+</div>
+</div>

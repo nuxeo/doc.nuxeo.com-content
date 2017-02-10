@@ -43,9 +43,6 @@ This page displays properties defined for the entire application without any con
 *   **Maven Artifact id**: Read-only, the project id in the Maven GAV.
 *   **Maven GAV link**: The link to the project WebEngine page, access to the GAV for each release and the snapshot version.
 
-
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Specific Upgrade Instructions]({{page page='specific-upgrade-instructions'}})

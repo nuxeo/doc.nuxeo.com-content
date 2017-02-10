@@ -45,8 +45,6 @@ The method `ConfigurationGenerator.checkForDeprecatedParameters()` helps to mana
 
 ## Data
 
-&nbsp;
-
 ## Migration Scripts
 
 If a migration script is required, then:
@@ -61,9 +59,3 @@ In the script header, specify:
 *   The source if it's a third-party copy (modified or not)
 *   The related JIRA issue reference
 *   A short description and the script usage
-
-&nbsp;
-
-{{! Don't put anything here. }}
-
-* * *

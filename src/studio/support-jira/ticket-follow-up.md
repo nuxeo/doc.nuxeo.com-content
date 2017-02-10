@@ -58,32 +58,29 @@ history:
 ---
 In order to make it easy to know which tickets the customer must address, Nuxeo provides two dashboards.
 
-*   The first one is on the Nuxeo Connect homepage, accessible from the URL&nbsp;[https://connect.nuxeo.com/nuxeo/site/connect/dashboard](https://connect.nuxeo.com/nuxeo/site/connect/dashboard). This dashboard displays a "My Tasks" widget that lists all the tickets waiting for the customer's input. More information on what is expected from the customer is displayed on mouseover.
+*   The first one is on the Nuxeo Connect homepage, accessible from the URL [https://connect.nuxeo.com/nuxeo/site/connect/dashboard](https://connect.nuxeo.com/nuxeo/site/connect/dashboard). This dashboard displays a "My Tasks" widget that lists all the tickets waiting for the customer's input. More information on what is expected from the customer is displayed on mouseover.
 
     ![]({{file name='connect_dashboard.png'}} ?w=650,border=true)
 
     This widget is only displayed if the customer has pending tickets.
 
-*   The second dashboard is in JIRA at the URL&nbsp;[https://jira.nuxeo.com/secure/Dashboard.jspa](https://jira.nuxeo.com/secure/Dashboard.jspa). Nuxeo offers a customized dashboard, designed to make information related to created tickets more visible, especially regarding tickets that required some input from the customer which are displayed in the "My Support Tasks" gadget (red box).
+*   The second dashboard is in JIRA at the URL [https://jira.nuxeo.com/secure/Dashboard.jspa](https://jira.nuxeo.com/secure/Dashboard.jspa). Nuxeo offers a customized dashboard, designed to make information related to created tickets more visible, especially regarding tickets that required some input from the customer which are displayed in the "My Support Tasks" gadget (red box).
 
 **To set this customized dashboard as the default one:**
 
-1.  Click on&nbsp;**Tools**&nbsp;>&nbsp;**Find Dashboard.**
-2.  In the "Search" field, type "Support" and click on&nbsp;**Search**.&nbsp;
+1.  Click on **Tools**&nbsp;> **Find Dashboard.**
+2.  In the "Search" field, type "Support" and click on **Search**.
     The results is displayed below the search form.
 3.  Click on the star to make this dashboard the default one and click on the dashboard's name to display the customized dashboard.
     ![]({{file name='jira_dashboard.png'}} ?w=650,border=true)
     Ideally, the "My Support Tasks" gadget must be empty.
 
-&nbsp;
-
-* * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
-*   [How to Fill a JIRA Ticket]({{page space='connect' page='how-to-fill-a-jira-ticket'}})
-*   [JIRA Tickets Workflow]({{page space='connect' page='jira-tickets-workflow'}})
-*   [Support / JIRA]({{page space='connect' page='support-jira'}})
+- [How to Fill a JIRA Ticket]({{page space='connect' page='how-to-fill-a-jira-ticket'}})
+- [JIRA Tickets Workflow]({{page space='connect' page='jira-tickets-workflow'}})
+- [Support / JIRA]({{page space='connect' page='support-jira'}})
 
 {{/panel}}</div><div class="column medium-6">
 

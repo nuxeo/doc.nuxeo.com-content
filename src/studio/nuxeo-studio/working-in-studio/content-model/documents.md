@@ -266,8 +266,6 @@ Adding a tab that displays a content view using this feature is easy and straigh
 
 {{/callout}}
 
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 - [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})

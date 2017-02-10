@@ -171,9 +171,6 @@ This types has more parameters than the others, :
 *   **Move up** and **Move down**: Used to move the values (that are ordered).
 *   **Set tree depth:** Allows to set more than two degrees of values on a hierarchical vocabulary. Select2 widgets are directly compatible with any levels. If you want to have more than two levels with chain selects, you can read the [Create a n-level select widget how-to]({{page space='nxdoc' page='how-to-create-a-n-level-select-widget'}}).
 
-
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
 - [Managing Vocabularies]({{page space='userdoc' page='managing-vocabularies'}})

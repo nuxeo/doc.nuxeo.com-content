@@ -4,7 +4,6 @@ review:
     comment: ''
     date: ''
     status: ok
-toc: true
 confluence:
     ajs-parent-page-id: '4685848'
     ajs-parent-page-title: Coding and Design Guidelines
@@ -49,11 +48,3 @@ There are also situations where you should _not_ use them:
 
 *   Do _not_ use assertions for argument checking in public methods.
 *   Do _not_ use assertions to do any work that your application requires for correct operation.
-
-&nbsp;
-
-&nbsp;
-
-{{! Don't put anything here. }}
-
-* * *

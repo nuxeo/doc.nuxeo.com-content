@@ -61,8 +61,6 @@ The Application Dependencies page enables you to manage the requirements of your
 *   **Target Platform:** The target platform of the customization. For more information about target platform see the</span> [Upgrade Instructions]({{page page='specific-upgrade-instructions'}}) page.
 *   **Target Packages:** The list of additional packages that bring additional features to your application and need to be installed on your instance.
 
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Specific Upgrade Instructions]({{page page='specific-upgrade-instructions'}})

@@ -108,15 +108,11 @@ Pour plus d'informations, consultez les pages&nbsp;[Comment interagir avec un ti
 
 {{/callout}}</div></div>
 
-&nbsp;
-
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Pages connexes'}}
 
-*   [Comment remplir un ticket Jira]({{page page='comment-remplir-un-ticket-jira'}})
-*   [Comment interagir avec un ticket]({{page page='comment-interagir-avec-un-ticket'}})
-*   [Suivi des tickets client]({{page page='suivi-des-tickets-client'}})
+- [Comment remplir un ticket Jira]({{page page='comment-remplir-un-ticket-jira'}})
+- [Comment interagir avec un ticket]({{page page='comment-interagir-avec-un-ticket'}})
+- [Suivi des tickets client]({{page page='suivi-des-tickets-client'}})
 
 {{/panel}}</div><div class="column medium-6">
 

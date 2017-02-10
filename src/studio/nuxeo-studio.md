@@ -4,6 +4,7 @@ review:
     comment: ''
     date: ''
     status: ok
+is_overview: true
 confluence:
     ajs-parent-page-id: '1409040'
     ajs-parent-page-title: Nuxeo Online Services
@@ -79,8 +80,6 @@ The goal of this section is to provide ready to use examples. They can be follow
 - [From the JSF UI to Nuxeo Studio]({{page space='nxdoc' page='from-the-jsf-ui-to-nuxeo-studio'}})
 
 {{/panel}}</div></div>
-
-* * *
 
 ### An overview of Nuxeo Studio features in this screencast:
 

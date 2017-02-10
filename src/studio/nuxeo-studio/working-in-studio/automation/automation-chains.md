@@ -160,8 +160,6 @@ The Studio Automation Chain integrates a new editor called YAML editor which ena
 
 For more information on the Studio Automation Chains, see [all the operations available](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.9.4/listOperations).
 
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [How to Create an Automation Chain]({{page space='nxdoc' page='how-to-create-an-automation-chain'}})

@@ -72,7 +72,7 @@ This status indicates that the Support team needs more elements from you:
 *   if you answer only some of the questions or if you say you'll keep investigating on your side, the ticket must stay in the Feedback required status until all the elements needed to keep processing the ticket are provided;
 *   the questions asked by the Support team can point you to a solution: in that case, you must close the ticket with a comment.
 
-To summarize, do not click on the **Give Feedback**&nbsp;button until all the required elements have been provided.&nbsp;
+To summarize, do not click on the **Give Feedback**&nbsp;button until all the required elements have been provided.
 
 ## Resolved Status
 
@@ -85,17 +85,11 @@ When the answer has been approved by you, the ticket must not be used to ask new
 
 However, you can ask for a complementary answer in a comment, without reopening the ticket.
 
-&nbsp;
-
-* * *
-
-&nbsp;
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
-*   [Ticket Follow Up]({{page space='connect' page='ticket-follow-up'}})
-*   [How to Fill a JIRA Ticket]({{page space='connect' page='how-to-fill-a-jira-ticket'}})
-*   [Support / JIRA]({{page space='connect' page='support-jira'}})
+- [Ticket Follow Up]({{page space='connect' page='ticket-follow-up'}})
+- [How to Fill a JIRA Ticket]({{page space='connect' page='how-to-fill-a-jira-ticket'}})
+- [Support / JIRA]({{page space='connect' page='support-jira'}})
 
 {{/panel}}</div><div class="column medium-6">
 

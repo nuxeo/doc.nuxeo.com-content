@@ -232,8 +232,6 @@ We suggest you to use name like **my_schema_name** (lowercase, word separated by
 3.  Add as many fields as needed.
 4.  Save.
 
-* * *
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Studio Documentation'}}
 
 - [Documents]({{page page='documents'}})

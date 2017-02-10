@@ -121,7 +121,7 @@ history:
         date: '2010-09-06 18:24'
         message: ''
         version: '1'
-
+previous_link: /studio/declaring-vocabularies
 ---
 In the two previous steps, we have:
 
