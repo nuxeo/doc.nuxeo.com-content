@@ -179,7 +179,7 @@ Maven Parent POM file gives a lot of useful information. Take care to fill in yo
     <name>Nuxeo ECM Projects</name>
     <description>Nuxeo ECM Platform and related components</description>
     <organization>
-      <name>Nuxeo SA</name>
+      <name>Nuxeo</name>
       <url>http://www.nuxeo.com/</url>
     </organization>
 

@@ -440,7 +440,7 @@ Here is information you should inherit from the corporate POM:
 <url>http://www.nuxeo.com/en/products</url>
 
 <organization>
-  <name>Nuxeo SA</name>
+  <name>Nuxeo</name>
   <url>http://www.nuxeo.com</url>
 </organization>
 
