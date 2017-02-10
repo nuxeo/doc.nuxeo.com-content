@@ -132,9 +132,9 @@ Security information is stored as an ACL which is a collection of simple ACEs ho
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-*   [VCS]({{page page='vcs'}})
-*   [Performance Recommendations]({{page page='performance-recommendations'}})
-*   [Security]({{page page='security'}})
+- [VCS]({{page page='vcs'}})
+- [Performance Recommendations]({{page page='performance-recommendations'}})
+- [Security]({{page page='security'}})
 
 {{/panel}}</div><div class="column medium-6">
 
