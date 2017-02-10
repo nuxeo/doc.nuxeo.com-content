@@ -153,7 +153,7 @@ ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState = 'approved' AND ecm:pr
 
 where `?` will be replaced by the dynamical expression `#{currentDocument.path}`.
 
-### **NewsManagement permission**
+### NewsManagement permission
 
 To implement the "NewsManagement" role, we will create a new permission called NewsManagement. It will be bound to the Workspace type, so that it is assignable only on workspaces. This NewsManagement permission will be used to "filter" the two buttons that will have to be created: the button to create the news, and the button to publish the content.
 
