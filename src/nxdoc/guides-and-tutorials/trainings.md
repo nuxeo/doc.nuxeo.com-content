@@ -4,6 +4,7 @@ review:
     comment: ''
     date: ''
     status: ok
+is_overview: true
 confluence:
     ajs-parent-page-id: '28475804'
     ajs-parent-page-title: Guides and Tutorials
