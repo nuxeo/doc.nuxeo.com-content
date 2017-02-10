@@ -759,9 +759,9 @@ The bench procedure can be customized to validate customer installation:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Performance Recommendations]({{page page='performance-recommendations'}})
-*   [Metrics and Monitoring]({{page space='admindoc710' page='metrics-and-monitoring'}})
-*   [Managing Performance]({{page page='managing-performance'}})
+- [Performance Recommendations]({{page page='performance-recommendations'}})
+- [Metrics and Monitoring]({{page space='admindoc710' page='metrics-and-monitoring'}})
+- [Managing Performance]({{page page='managing-performance'}})
 
 {{/panel}}</div><div class="column medium-6">
 
