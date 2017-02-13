@@ -167,6 +167,7 @@ history:
         version: '1'
 
 ---
+{{! multiexcerpt name='7.10-to-8.10-upgrade-page'}}
 For the general upgrade process, see the page [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}}).
 
 {{! excerpt}}
@@ -351,3 +352,4 @@ Release notes:
 &nbsp;
 
 * * *
+{{! /multiexcerpt}}
