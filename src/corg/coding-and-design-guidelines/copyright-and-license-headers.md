@@ -1,5 +1,5 @@
 ---
-title: Copyright and license headers
+title: Copyright and License Headers
 review:
     comment: ''
     date: ''
