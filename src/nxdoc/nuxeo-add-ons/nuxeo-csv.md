@@ -255,6 +255,10 @@ lines"
 "another-file","File","Another File","description without new line"
 ```
 
+In the example above:
+
+- `name` must be a unique value. If a CSV file contains more than one line with the same `name` only a single document with that name will be imported.
+
 {{#> callout type='note' }}
 
 Nuxeo CSV does support complex properties but not blob definition.
