@@ -5,6 +5,9 @@ review:
     date: ''
     status: ok
 is_overview: true
+version_override:
+    'FT': '/nxdoc/nuxeo-server/'
+    'LTS 2016': 810/nxdoc/nuxeo-server/
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
