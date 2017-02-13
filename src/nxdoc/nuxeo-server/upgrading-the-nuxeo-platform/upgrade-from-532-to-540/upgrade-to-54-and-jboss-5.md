@@ -115,11 +115,11 @@ After (Jboss 5.1)
 </th></tr><tr><td colspan="1">
 
 ```
-<install>
- <unzip from="${bundle.fileName}" to="/" >
- <include>nuxeo.war/**</include>
- </unzip>
- </install>
+    <install>
+    <unzip from="${bundle.fileName}" to="/" >
+    <include>nuxeo.war/**</include>
+    </unzip>
+    </install>
 
 ```
 
@@ -193,22 +193,22 @@ Before (Jboss 4.2)
 After (Jboss 5)
 
 </th></tr><tr><td colspan="1">
-
+<pre>
 @Local(WSAuditLocal.class)
 @Stateless
 @Remote(WSAudit.class)
 @WebService(name = "WSAuditInterface", serviceName = "WSAuditService")
 @SOAPBinding(style = Style.DOCUMENT)
 public class WSAuditBean extends AbstractNuxeoWebService implements
-
+</pre>
 </td><td colspan="1">
-
+<pre>
 @Local(WSAuditLocal.class)
 @Remote(WSAudit.class)
 @WebService(name = "WSAuditInterface", serviceName = "WSAuditService")
 @SOAPBinding(style = Style.DOCUMENT)
 public class WSAuditBean extends AbstractNuxeoWebService implements
-
+</pre>
 </td></tr></tbody></table></div>
 
 #### SUN-JAX-WS vs JBossWS binding
@@ -241,11 +241,12 @@ SUN-JAX-WS binding
 `<url-pattern>/webservices/nuxeoaudit</url-pattern>`
 `</servlet-mapping>`
 `</extension>`
+
 NB: Yes, you declare you Bean as a servlet even if it does not implement the needed interface!
 
 </td><td colspan="1">
 
-`<!<span style="text-decoration: line-through;">- SUN JAXWS / Metro EndPoint Declaration -</span>>`
+<span style="text-decoration: line-through;">`<!SUN JAXWS / Metro EndPoint Declaration>`</span>
 `<extension target="jaxws#ENDPOINT">`
 `<endpoint name="nuxeoaudit"`
 `implementation="org.nuxeo.ecm.platform.audit.ws.WSAuditBean"`
@@ -360,35 +361,35 @@ If you override a template, check the directories. For instance, here are the `d
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
-<span style="color: rgb(0,0,0);">Before (Jboss 4.2)</span>
+Before (Jboss 4.2)
 
 </th><th colspan="1">
 
-<span style="color: rgb(0,0,0);">After (Jboss 5.1)</span>
+After (Jboss 5.1)
 
 </th></tr><tr><td colspan="1">
-
+<pre>
 .
 |-- config
 | |-- default-repository-config.xml
-| `-- sql.properties
+| \`-- sql.properties
 |-- datasources
 | |-- default-repository-ds.xml
-| `-- unified-nuxeo-ds.xml
-`-- nuxeo.defaults
-
+| \`-- unified-nuxeo-ds.xml
+\`-- nuxeo.defaults
+</pre>
 </td><td colspan="1">
-
+<pre>
 .
 |-- nuxeo-ds.xml
 |-- nuxeo.defaults
-`-- nuxeo.ear
+\`-- nuxeo.ear
 |-- META-INF
-| `-- default-repository-ds.xml
-`-- config
+| \`-- default-repository-ds.xml
+\`-- config
 |-- default-repository-config.xml
-`-- sql.properties
-
+\`-- sql.properties
+</pre>
 </td></tr></tbody></table></div>
 
 As defined in `nuxeo.defaults` ("`default.target=server/default/deploy`"), the target directory of this template is now `server/default/deploy` instead of `server/default/deploy/nuxeo.ear`.
@@ -405,10 +406,11 @@ Deprecated compliance artifacts with old resources were removed.
 
 `nuxeo-platform-ear` and `nuxeo-distribution-dm` now only contain:
 
+```
 nuxeo.ear/
 |-- bundles
 `-- lib
-
+```
 All resources files are generated from templates directories.
 
 Also, the default EAR archives contain in `lib/` all third-party libraries from the dependency tree (only duplicates are removed). The filtering of provided libraries is done when building the server distribution (JBoss, Tomcat, ...).
