@@ -238,7 +238,7 @@ Object o = ctx.getParameter("paramName");
 </pre>
 
 <pre>
-List<Object> list = ctx.getParameters("paramName");
+List&lt;Object&gt; list = ctx.getParameters("paramName");
 </pre>
 
 <pre>
@@ -297,7 +297,7 @@ ctx.setParameterValues("properties", "dublincore", "file");
 <td colspan="1">
 
 <pre>
-Set<String> properties = ctx.getProperties();
+Set&lt;String&gt; properties = ctx.getProperties();
 </pre>
 
 </td>
@@ -355,7 +355,7 @@ ctx.setParameterValues("fetch.objectType", "part1", "part2");
 <td colspan="1">
 
 <pre>
-Set<String> toLoad = ctx.getFetched("objectType");
+Set&lt;String&gt; toLoad = ctx.getFetched("objectType");
 </pre>
 
 </td>
@@ -411,7 +411,7 @@ ctx.setParameterValues("enrichers.objectType", "children", "acl");
 <td colspan="1">
 
 <pre>
-Set<String> enricherToActivate = ctx.getEnrichers("objectType");
+Set&lt;String&gt; enricherToActivate = ctx.getEnrichers("objectType");
 </pre>
 
 </td>
@@ -459,7 +459,7 @@ ctx.setParameterValues("translate.objectType", "elementToTranslate");
 <td colspan="1">
 
 <pre>
-Set<String> toTranslate = ctx.getTranslated("objectType");
+Set&lt;String&gt; toTranslate = ctx.getTranslated("objectType");
 </pre>
 
 </td>
