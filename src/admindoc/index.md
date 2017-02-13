@@ -202,15 +202,7 @@ history:
         version: '1'
 
 ---
-<div class="row"><div class="column medium-8">{{#> panel type='primary'}}
-
-Welcome in the Installation and Administration Documentation!
-
-{{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
-
-![]({{file name='pdf-16.png' space='alldoc' page='nuxeo-downloadable-documentation'}} ?w=16,h=16) [Download this documentation in PDF]({{file name='Nuxeo_Platform_6.0_administration_documentation.pdf' space='alldoc' page='nuxeo-downloadable-documentation'}})
-
-{{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### For testing purpose
 
