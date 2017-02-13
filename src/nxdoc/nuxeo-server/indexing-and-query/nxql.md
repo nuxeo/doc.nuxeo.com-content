@@ -534,17 +534,17 @@ An `<op>` can be:
 
 A `<literal>` can be:
 
-*   `<string>`: a string delimited by single quotes (`'`) or for Java compatibility double quotes (`"`). To use the string delimiter itself inside the string, it must be escaped by a backslash&nbsp;( `\ '` or `\"`) (this is contrary to the standard SQL syntax which would double the delimiter). The backslash itself is also escaped by a backslash ( `\ \` ). The special `\n`, `\r`&nbsp;and&nbsp;`\t` can also be used.
+*   `<string>`: a string delimited by single quotes (`'`) or for Java compatibility double quotes (`"`). To use the string delimiter itself inside the string, it must be escaped by a backslash ( `\ '` or `\"`) (this is contrary to the standard SQL syntax which would double the delimiter). The backslash itself is also escaped by a backslash ( `\ \` ). The special `\n`, `\r` and `\t` can also be used.
 *   `<integer>`: an integer with optional minus sign.
 *   `<float>`: a float.
 *   `TIMESTAMP <timestamp>`: a timestamp in ISO format _yyyy_ `-` _MM_ `-` _dd_ _hh_ `:` _mm_ `:` _ss_[`.` _sss_] (the space separator can be replaced by a `T`).
-*   `DATE` _<date>_: a date in ISO format&nbsp;_yyyy_ `-` _MM_ `-` _dd_, converted internally to a timestamp by adding `00:00:00` to it.
+*   `DATE` _<date>_: a date in ISO format _yyyy_ `-` _MM_ `-` _dd_, converted internally to a timestamp by adding `00:00:00` to it.
 
 A `<literal-list>` is a non empty comma-separated list of `<literal>`.
 
 An `<identifier>` is a property identifier. This can be only a simple property, a simple list property or a complex property element, maybe including wildcards for list indexes (see below).
 
-## <span style="color: rgb(0,0,0);font-size: 20.0px;">Operators</span>
+## Operators
 
 The semantics of a few specific operators is described below.
 
@@ -560,19 +560,19 @@ A Nuxeo property representing a list of simple values (like `dc:subjects`) can b
 SELECT * FROM Document WHERE dc:subjects = 'foo'
 ```
 
-Note that the above does&nbsp;**not** mean to find the documents where the list of subjects is exactly the list&nbsp;_[foo]_; NXQL (and indeed SQL) does not have enough expressivity for that (and it would be quite slow).
+Note that the above does **not** mean to find the documents where the list of subjects is exactly the list _[foo]_; NXQL (and indeed SQL) does not have enough expressivity for that (and it would be quite slow).
 
 The above example shows the `=` operator, and the same semantics apply for the operators `IN`, `LIKE` and `ILIKE`.
 
-When using **negative queries**, though, the semantics get a bit more complex. The following example will find the documents where&nbsp;**no** subject is _foo_:
+When using **negative queries**, though, the semantics get a bit more complex. The following example will find the documents where **no** subject is _foo_:
 
 ```sql
 SELECT * FROM Document WHERE dc:subjects <> 'foo'
 ```
 
-Note that the above **does&nbsp;not** mean to find the documents where there is at least one subject that is not _foo_.
+Note that the above **does not** mean to find the documents where there is at least one subject that is not _foo_.
 
-The above&nbsp;example shows the `<>`&nbsp;operator, and the same semantics apply for the other negative operators `NOT IN`, `NOT LIKE`&nbsp;and `NOT ILIKE`.
+The above example shows the `<>` operator, and the same semantics apply for the other negative operators `NOT IN`, `NOT LIKE` and `NOT ILIKE`.
 
 The complex property syntax (described in detail further down) can be used to match single list elements. The following two queries will do the same thing:
 
@@ -581,7 +581,7 @@ SELECT * FROM Document WHERE dc:subjects = 'foo'
 SELECT * FROM Document WHERE dc:subjects/* = 'foo'
 ```
 
-There is however an important difference in the mechanism with which these two requests are executed internally.&nbsp;The first syntax internally uses a SQL&nbsp;`EXISTS`&nbsp;and a subquery. The second one uses a SQL&nbsp;`JOIN`&nbsp;(with a SQL&nbsp;`DISTINCT`&nbsp;if&nbsp;`SELECT *`&nbsp;is used). The end result is usually the same unless you want to use&nbsp;`CoreSession.queryAndFetch`&nbsp;with no&nbsp;`DISTINCT`&nbsp;to get to the actual matching subjects, then only the second form is usable
+There is however an important difference in the mechanism with which these two requests are executed internally. The first syntax internally uses a SQL `EXISTS` and a subquery. The second one uses a SQL `JOIN` (with a SQL `DISTINCT` if `SELECT *` is used). The end result is usually the same unless you want to use `CoreSession.queryAndFetch` with no `DISTINCT` to get to the actual matching subjects, then only the second form is usable
 
 In the case where negative queries are used, however, the different execution mechanisms imply that the two syntaxes mean different things:
 
@@ -590,7 +590,7 @@ SELECT * FROM Document WHERE dc:subjects <> 'foo'
 SELECT * FROM Document WHERE dc:subjects/* <> 'foo'     -- not the same thing as above
 ```
 
-The first syntax, as already explained, will find the documents where&nbsp;**no**&nbsp;subject is&nbsp;_foo_.
+The first syntax, as already explained, will find the documents where **no** subject is _foo_.
 
 The second syntax will find the documents where there is **at least one** subject which **is not** _foo_.
 
@@ -600,7 +600,7 @@ To find documents whose list field is empty, you will use the `/*` syntax:
 SELECT * FROM Document WHERE dc:subjects/* IS NULL
 ```
 
-## Complex Properties{{> anchor 'reference'}}
+## {{> anchor 'reference'}} Complex Properties
 
 You can refer to complex properties in NXQL, after the `SELECT`, in the `WHERE` clause, and in the `ORDER BY` clause (cf [NXP-4464](https://jira.nuxeo.com/browse/NXP-4464)).
 
@@ -647,11 +647,11 @@ The following properties are not legal as document property names, but are allow
 
 **ecm:parentId**: the document parent id.
 
-**ecm:path**: the document path (`DocumentModel.getPathAsString()`). This is a synthetic value (computed from the `ecm:name`&nbsp;of the document's ancestors) and therefore cannot be used in all context. It cannot be used in the _<select-clause>_. In the _<where-clause>_ it may only be used with operators `=`, `<>`&nbsp;(or&nbsp;`!=`) and `STARTSWITH`.&nbsp;Using it in the&nbsp;_<order-by-clause>_ carries a large performance penalty when using `CoreSession.query`, and it cannot be used in the _<order-by-clause>_ when using `CoreSession.queryAndFetch`.&nbsp;See also **ecm:ancestorId**.
+**ecm:path**: the document path (`DocumentModel.getPathAsString()`). This is a synthetic value (computed from the `ecm:name` of the document's ancestors) and therefore cannot be used in all context. It cannot be used in the _<select-clause>_. In the _<where-clause>_ it may only be used with operators `=`, `<>` (or `!=`) and `STARTSWITH`. Using it in the _<order-by-clause>_ carries a large performance penalty when using `CoreSession.query`, and it cannot be used in the _<order-by-clause>_ when using `CoreSession.queryAndFetch`. See also **ecm:ancestorId**.
 
 **ecm:name**: the document name (`DocumentModel.getName()`).
 
-**ecm:pos**: the document position in its parent, this is `NULL` in non-ordered folders. This is mainly used in the&nbsp;_<order-by-clause>_.
+**ecm:pos**: the document position in its parent, this is `NULL` in non-ordered folders. This is mainly used in the _<order-by-clause>_.
 
 **ecm:primaryType**: the document type (`DocumentModel.getType()`).
 
@@ -659,7 +659,7 @@ The following properties are not legal as document property names, but are allow
 
 **ecm:currentLifeCycleState**: the document lifecycle state (`DocumentModel.getCurrentLifeCycleState()`).
 
-**ecm:isCheckedIn**:&nbsp;`1`&nbsp;if the document is checked in and&nbsp;`0`&nbsp;if not (the opposite of&nbsp;`DocumentModel.isCheckedOut()`). This can only be compared to&nbsp;`1`&nbsp;or&nbsp;`0`. (Since Nuxeo 5.7.3)
+**ecm:isCheckedIn**: `1` if the document is checked in and `0` if not (the opposite of `DocumentModel.isCheckedOut()`). This can only be compared to `1` or `0`. (Since Nuxeo 5.7.3)
 
 **ecm:isProxy**: `1` for proxies and `0` for non-proxies (`DocumentModel.isProxy()`). This can only be compared to `1` or `0`.
 
@@ -671,11 +671,11 @@ The following properties are not legal as document property names, but are allow
 
 **ecm:versionCreated**: the version creation time for versions, `NULL` if it's not a version. (Since Nuxeo 5.7.3)
 
-**ecm:versionVersionableId**:&nbsp;the id of the versionable document of a version (the versionable document is the one from which the version was created). (Since Nuxeo 5.7.3)
+**ecm:versionVersionableId**: the id of the versionable document of a version (the versionable document is the one from which the version was created). (Since Nuxeo 5.7.3)
 
 **ecm:isLatestVersion**: `1` if this is the latest version of a document, `0` if not. This can only be compared to `1` or `0`. (Since Nuxeo 5.7.3)
 
-**ecm:isLatestMajorVersion**: `1` if this is the latest major version of a document,&nbsp;`0`&nbsp;if not. This can only be compared to&nbsp;`1`&nbsp;or&nbsp;`0`. (Since Nuxeo 5.7.3)
+**ecm:isLatestMajorVersion**: `1` if this is the latest major version of a document, `0` if not. This can only be compared to `1` or `0`. (Since Nuxeo 5.7.3)
 
 **ecm:proxyTargetId**: the id of the target of a proxy (usually a version). Implies a search for proxies (`ecm:isProxy = 1`). (Since Nuxeo 5.7.1)
 
@@ -695,9 +695,9 @@ The following properties are not legal as document property names, but are allow
 
 **ecm:ancestorId**: the id of an ancestor of the document (parent, grand-parent, etc., up to the root). This is only useable in a `WHERE` clause with the syntax `ecm:ancestorId = 'some-doc-id'` or `ecm:ancestorId <> 'some-doc-id'`. It's an alternative to `ecm:path STARTSWITH '/some/doc/path'` if you know the id instead of the path. See also **ecm:path**. (Since Nuxeo 5.9.6)
 
-**ecm:acl**: a pseudo-list giving access to ACLs, which needs to be used with a suffix specifying which part of the ACL is accessed. Available are **ecm:acl/*/principal** (ACL principal), **ecm:acl/*/permission** (ACL permission), **ecm:acl/*/grant** (ACL grant/deny, a boolean), **ecm:acl/*/name** (ACL name), **ecm:acl/*/pos**&nbsp;(ACL position). If you want to refer several times to the same ACL but still have flexibility, use correlated wildcards like for lists:&nbsp;**ecm:acl/*1/principal**,&nbsp;**ecm:acl/*2/permission**, etc.&nbsp;See the examples below for more. Note that this is a query on the ACLs that were set on a specific folder or document, _NOT_&nbsp;on the resolved permissions according to the inheritance rules. (Since Nuxeo 6.0-HF06 or Nuxeo 7.2)
+**ecm:acl**: a pseudo-list giving access to ACLs, which needs to be used with a suffix specifying which part of the ACL is accessed. Available are **ecm:acl/*/principal** (ACL principal), **ecm:acl/*/permission** (ACL permission), **ecm:acl/*/grant** (ACL grant/deny, a boolean), **ecm:acl/*/name** (ACL name), **ecm:acl/*/pos** (ACL position). If you want to refer several times to the same ACL but still have flexibility, use correlated wildcards like for lists: **ecm:acl/*1/principal**, **ecm:acl/*2/permission**, etc. See the examples below for more. Note that this is a query on the ACLs that were set on a specific folder or document, _NOT_ on the resolved permissions according to the inheritance rules. (Since Nuxeo 6.0-HF06 or Nuxeo 7.2)
 
-## {{> anchor 'nxql-examples'}}Examples
+## {{> anchor 'nxql-examples'}} Examples
 
 ```sql
 SELECT * FROM Document
@@ -792,7 +792,7 @@ SELECT dc:subjects/*1 FROM Document WHERE dc:subjects/*1 LIKE 'abc%'
 
 ```
 
-Since Nuxeo 5.7.1 you can use&nbsp;`ecm:tag`:
+Since Nuxeo 5.7.1 you can use `ecm:tag`:
 
 ```sql
 SELECT * FROM Document WHERE ecm:tag = 'tag1'
@@ -804,7 +804,7 @@ SELECT ecm:tag/*1 FROM Document WHERE ecm:tag/*1 LIKE 'abc%' AND ecm:tag/*2 = 't
 SELECT ecm:tag FROM Document WHERE ecm:tag LIKE 'abc%' AND ecm:tag/* = 'tag1'  -- simpler version of above
 ```
 
-Since Nuxeo 5.7.1 you can also use&nbsp;`ecm:proxyTargetId`&nbsp;and&nbsp;`ecm:proxyVersionableId`:
+Since Nuxeo 5.7.1 you can also use `ecm:proxyTargetId` and `ecm:proxyVersionableId`:
 
 ```sql
 SELECT * FROM Document WHERE ecm:proxyTargetId = '62cc5f29-f33e-479e-b122-e3922396e601'
@@ -836,14 +836,14 @@ SELECT COUNT(ecm:uuid) FROM Document WHERE dc:title = 'foo'
 SELECT MIN(my:value), MAX(my:value) FROM Document WHERE dc:title = 'bar'
 ```
 
-Since Nuxeo 5.9.6 you can use `ecm:ancestorId =`&nbsp;with an id as an alternative to `ecm:path STARTSWITH`&nbsp;with a path:
+Since Nuxeo 5.9.6 you can use `ecm:ancestorId =` with an id as an alternative to `ecm:path STARTSWITH` with a path:
 
 ```sql
 SELECT * FROM Document WHERE ecm:ancestorId = 'c5904f77-299a-411e-8477-81d3102a81f9'
 SELECT * FROM Document WHERE ecm:ancestorId <> 'c5904f77-299a-411e-8477-81d3102a81f9'
 ```
 
-Since Nuxeo 6.0-HF06 or Nuxeo 7.2 you can use `ecm:acl`&nbsp;(usually with correlated wildcards):
+Since Nuxeo 6.0-HF06 or Nuxeo 7.2 you can use `ecm:acl` (usually with correlated wildcards):
 
 ```
 SELECT * FROM Document WHERE ecm:acl/*1/principal = 'bob'
@@ -851,7 +851,7 @@ SELECT * FROM Document WHERE ecm:acl/*1/principal = 'bob'
                          AND ecm:acl/*1/permission IN ('Browse', 'Read', 'ReadProperties', 'ReadWrite', 'ReadRemove', 'Everything')
 ```
 
-### <span style="color: rgb(0,0,0);font-size: 16.0px;line-height: 1.5625;">Fulltext Examples</span>
+### Fulltext Examples
 
 This uses standard SQL LIKE and usually has poor performance:
 
@@ -864,7 +864,7 @@ SELECT * FROM Document WHERE dc:subjects NOT LIKE '%oo%'
 
 ```
 
-This is a standard full-text query (see&nbsp;[Full-Text Queries]({{page page='full-text-queries'}})&nbsp;for more):
+This is a standard full-text query (see [Full-Text Queries]({{page page='full-text-queries'}}) for more):
 
 ```sql
 SELECT * FROM Document WHERE ecm:fulltext = 'foo'
@@ -891,7 +891,7 @@ SELECT * FROM Document WHERE ecm:fulltext = 'foo' ORDER BY ecm:fulltextScore DES
 SELECT ecm:uuid, ecm:fulltextScore FROM Document WHERE ecm:fulltext = 'foo'        -- with queryAndFetch
 ```
 
-## {{> anchor 'mongodblimitations'}}Notes about MongoDB
+## {{> anchor 'mongodblimitations'}} Notes about MongoDB
 
 The above describes the NXQL capabilities for a VCS repository, but if MongoDB is used a few limitations to the query model have to be taken into account.
 
@@ -899,15 +899,15 @@ The above describes the NXQL capabilities for a VCS repository, but if MongoDB i
 
 The following limitations apply:
 
-*   Predicates of the form `<predicate>` `<operator>` `<predicate>` are restricted to the form `<identifier>` `<operator>` `<literal>`.&nbsp;This means that for instance the following are **not** allowed in a NXQL query on a MongoDB repository:
+*   Predicates of the form `<predicate>` `<operator>` `<predicate>` are restricted to the form `<identifier>` `<operator>` `<literal>`. This means that for instance the following are **not** allowed in a NXQL query on a MongoDB repository:
     *   `... WHERE dc:modified = dc:issued` (not allowed, cannot use two properties in a predicate)
     *   `... WHERE 123 = tst:value` (not allowed, property must be on the left-hand side)
     *   `... WHERE tst:value = 1000*1000` (not allowed, right-hand side must be a literal, not an expression)
-*   Aggregates (`COUNT`, `AVERAGE`, `MAX`, `MIN`)&nbsp;are not supported.
+*   Aggregates (`COUNT`, `AVERAGE`, `MAX`, `MIN`) are not supported.
 *   `DISTINCT` is supported only for `ecm:uuid`.
-*   `ecm:tag` queries are not supported.&nbsp;
+*   `ecm:tag` queries are not supported.
 
-## {{> anchor 'elasticsearchlimitations'}}Notes about Elasticsearch
+## {{> anchor 'elasticsearchlimitations'}} Notes about Elasticsearch
 
 When an NXQL query is processed by an [Elasticsearch PageProvider]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}) or using the Nuxeo Elasticsearch search service, there are some limitations, specific configuration and more features available.
 
@@ -921,10 +921,10 @@ When an NXQL query is processed by an [Elasticsearch PageProvider]({{page page='
     files:files/*1/file/name LIKE '%.txt' AND files:files/*1/file/length = 0 dc:subjects/3 = 'foo'
     ```
 
-    Note that the match any&nbsp;`/*`&nbsp;is supported.
+    Note that the match any `/*` is supported.
 
 *   Canonical name for complex properties without prefix are not supported.
-    You need to write&nbsp;`file:content/name` and not just&nbsp;`content/name`. See&nbsp;[NXP-15426](https://jira.nuxeo.com/browse/NXP-15426)&nbsp;for more information.
+    You need to write `file:content/name` and not just `content/name`. See [NXP-15426](https://jira.nuxeo.com/browse/NXP-15426) for more information.
 *   When using `query`, `queryAndFetch` or `queryAndAggregate` the select clause is limited to scalar properties: There is no support of NXQL aggregate like: `DISTINCT`, `COUNT`, `AVERAGE`, `MAX`, `MIN`, or operators like: `+ - / *`.
 *   Custom securityPolicy expressible in NXQL is taken in account since [NXP-17371](https://jira.nuxeo.com/browse/NXP-17371), if the securityPolicy is not expressible in NXQL then total count or aggregates counts can be wrong.
 *   `ecm:acl` and `ecm:tag` queries are not supported.
@@ -935,9 +935,9 @@ When an NXQL query is processed by an [Elasticsearch PageProvider]({{page page='
 
 Without a proper mapping the following NXQL operators will not work by default:
 
-*   Full-text search: `ecm:fulltext.my:field = 'foo'`&nbsp;works only if there is a multi field `my:field.fulltext` defined in the mapping.
+*   Full-text search: `ecm:fulltext.my:field = 'foo'` works only if there is a multi field `my:field.fulltext` defined in the mapping.
 *   `ILIKE`: `my:field ILIKE 'Foo'` works only if there is a multi field `my:field.lowercase` defined in the mapping.
-*   ``STARTSWITH:&nbsp;` my:field STARTSWITH` '/foo/bar': works only if there is a multi field `my:field.children` defined with proper analyzer. Note that `ecm:path.children` is already defined in the default mapping..
+*   ``STARTSWITH: ` my:field STARTSWITH` '/foo/bar': works only if there is a multi field `my:field.children` defined with proper analyzer. Note that `ecm:path.children` is already defined in the default mapping..
 
 Visit the [mapping documentation]({{page page='configuring-the-elasticsearch-mapping'}}) for more information.
 
@@ -945,11 +945,9 @@ Visit the [mapping documentation]({{page page='configuring-the-elasticsearch-map
 
 The full-text search is not configured the same way:
 
-*   The&nbsp;`ecm:fulltext`&nbsp;matches the Elasticsearch&nbsp; `_all` &nbsp;field which is the concatenation of all fields. This is different from the NXQL&nbsp;`ecm:fulltext`&nbsp;which matches only some explicit fields. You can [adapt the mapping to exclude some fields]({{page page='elasticsearch-setup'}}).
-*   Custom full-text indexes are not supported.&nbsp;`ecm:fulltext_someindex`&nbsp;will match the&nbsp;`_all`&nbsp;field. It is possible to select a list of field using hints, see below.
-*   In addition to the NXQL full-text syntax, it is also possible to use the Elasticsearch&nbsp;[simple query string syntax](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-simple-query-string-query.html#_simple_query_string_syntax).
-
-&nbsp;
+*   The `ecm:fulltext` matches the Elasticsearch `_all` field which is the concatenation of all fields. This is different from the NXQL `ecm:fulltext` which matches only some explicit fields. You can [adapt the mapping to exclude some fields]({{page page='elasticsearch-setup'}}).
+*   Custom full-text indexes are not supported. `ecm:fulltext_someindex` will match the `_all` field. It is possible to select a list of field using hints, see below.
+*   In addition to the NXQL full-text syntax, it is also possible to use the Elasticsearch [simple query string syntax](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-simple-query-string-query.html#_simple_query_string_syntax).
 
 ### Elasticsearch NXQL Hints
 
@@ -1012,10 +1010,6 @@ SELECT * FROM Document WHERE /*+ES: OPERATOR(geo_hash_cell) */ osm:location IN (
 SELECT * FROM Document WHERE /*+ES: OPERATOR(geo_hash_cell) */ osm:location IN ('drm3btev3e86', '5')
 
 ```
-
-&nbsp;
-
-<pre>&nbsp;</pre>
 
 * * *
 
