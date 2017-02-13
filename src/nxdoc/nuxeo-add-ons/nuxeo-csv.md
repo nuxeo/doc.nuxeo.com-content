@@ -254,11 +254,10 @@ some new
 lines"
 "another-file","File","Another File","description without new line"
 ```
-{{#> callout type='note' }}
 
-`name` must be a unique value. If a CSV file contains more than one line with the same `name` only a single document with that name will be imported.
+In the example above:
 
-{{/callout}}
+- `name` must be a unique value. If a CSV file contains more than one line with the same `name` only a single document with that name will be imported.
 
 {{#> callout type='note' }}
 
