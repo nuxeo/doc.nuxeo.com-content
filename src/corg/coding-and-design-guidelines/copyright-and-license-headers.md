@@ -1,5 +1,5 @@
 ---
-title: Copyright and license headers
+title: Copyright and License Headers
 review:
     comment: ''
     date: ''
@@ -75,7 +75,7 @@ You can import them in [JAutodoc Eclipse plugin](http://jautodoc.sourceforge.net
 
 ```
 /*
- * (C) Copyright ${year} Nuxeo SA (http://nuxeo.com/) and others.
+ * (C) Copyright ${year} Nuxeo (http://nuxeo.com/) and others.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
