@@ -225,11 +225,11 @@ This is prefilled with your username.
 
 </td></tr><tr><td colspan="1">R&eacute;f&eacute;rence SFD</td><td colspan="1">If you have functional specifications, you can fill in their reference here for your own team's benefit.</td></tr><tr><td colspan="1">Tags</td><td colspan="1">Type labels that can help you categorise your tickets.</td></tr></tbody></table></div>
 
-## {{> anchor 'field-project'}}Project
+## Project
 
 All support tickets must be created in the Support Nuxeo Connect category. Should the ticket not be created in the correct project, it will not be seen by the Support team, which won't be able to answer your request.
 
-## {{> anchor 'field-issue-type'}}Issue Type
+## Issue Type
 
 This field indicates the type of incident described by the ticket. Possible ticket types are:
 
@@ -240,17 +240,17 @@ This field indicates the type of incident described by the ticket. Possible tick
 
 Identifying the type of issue is important because it determines what elements will be needed to describe the ticket (see the [Description section](#field-description)).
 
-## {{> anchor 'field-description'}}Description
+## Description
 
 The content of this field depends on the [type of the ticket](#field-issue-type) and is necessary to its process. You should then carefully fill this field in.
 
-### {{> anchor 'ticket-question'}}Question Ticket
+### Question Ticket
 
 You must describe precisely what information you're looking for or what you're trying to do, providing the context of the question so we can give an accurate answer.
 
 If the question is too complex or too dependent on the business context, the Support team can suggest a consulting service so Nuxeo can analyze the customer needs more precisely and provide a more complete answer.
 
-### {{> anchor 'ticket-bug'}}Bug Ticket
+### Bug Ticket
 
 First, you must check it is actually a bug from the Nuxeo Platform and not a problem, i.e. an incident linked to the customer's developments.
 To do so, check your scenario can be reproduced on a stock Nuxeo Platform, without the customer's plugins or Studio customizations.
@@ -265,7 +265,7 @@ In case of a bug, it is essential to provide the Support team with a way to repr
 
 Even if only one of these elements might be enough to identify the bug, the better the bug is described, the quicker and more efficiently the bug will be fixed.
 
-### {{> anchor 'ticket-problem'}}Problem Ticket
+### Problem Ticket
 
 This type is for incidents linked to the customer's developments. In that case, you must provide the elements needed in case of a bug and you should also:
 
@@ -279,15 +279,15 @@ If you work with Nuxeo Studio, you will probably keep working on your project as
 
 On a production environment, it is important to identify the date at which the incident occurred, to find the corresponding errors in the logs.
 
-### {{> anchor 'ticket-improvement'}}Improvement Ticket
+### Improvement Ticket
 
 This type is for behaviors that are not available by default on the Nuxeo Platform and that you would like to implement. It enables you to ask the Nuxeo team for advices or good practices to implement a new behavior. For this type of ticket, you just need to indicate the wanted behavior and possible constraints in the Description field.
 
-## {{> anchor 'field-affects-version'}}Affects Versions
+## Affects Versions
 
 You must indicate which version of Nuxeo you are using (6.0, 7.10, etc.), independently from the installed hotfixes (which will be indicated in the [ **Environment** field](#field-environment)).
 
-## {{> anchor 'field-severity'}}Severity
+## Severity
 
 Indicate the criticality of the issue, which also depends on the target environment (Production vs Staging/Development):
 
@@ -353,13 +353,13 @@ The severity depends only on the ticket criticality, as it is described above.
 
 The detailed information on the response and resolution time depending on the SLA (Service Level Agreement) are available on this page: [http://www.nuxeo.com/products/support/](http://www.nuxeo.com/products/support/).
 
-## {{> anchor 'field-nuxeo-connect-support'}}Nuxeo Connect Support
+## Nuxeo Connect Support
 
 That drop down list enables to link the JIRA ticket and the Connect contract. This enables the Support team to have a minimum set of information on the customer's application (Nuxeo Platform version, OS, database), and to have a quick overview of the environment in which Nuxeo is deployed.
 
 If your Nuxeo Connect account is associated to one contract, only this contract is available in the list. If you have several contracts, you should be careful to select the good one.
 
-## {{> anchor 'field-instance-type'}}Instance Type
+## Instance Type
 
 The fields enables the Support team to know about possible constraints linked to the type of instance. This may have an impact on the recommendations the Support team will give you.
 
@@ -369,7 +369,7 @@ The different types of instance are:
 * Testing/QA: the issue occurs on the testing environment, which may typically have a limited number of users.
 * Production: the issue occurs on the live environment. The Support team may provide a workaround solution first so as to unblock users quickly, before providing a long-term solution. They may also suggest a conference call to get some more detailed information more quickly.
 
-## {{> anchor 'field-environment'}}Environment
+## Environment
 
 In case of a bug or a problem, it is important to describe the application's environment.
 
@@ -396,13 +396,13 @@ It can also be interesting to precise the information below so the test server c
 * application server (Tomcat by default, JBoss),
 * installed hotfixes.
 
-## {{> anchor 'field-components'}}Component/s
+## Component/s
 
 Amongst the additional fields, you can indicate the components the tickets is about. You can select one or several components from the multiple choice list. If you don't know which components are relevant, you can leave this field empty and the Support team will update the ticket.
 
 This field is mainly used for statistic purposes, since it enables us to know which components require some developments.
 
-## {{> anchor 'field-additional-participant-group'}} <label for="customfield_10140">Additional Participant Groups</label>
+## Additional Participant Groups
 
 This field enables to share a ticket with a group of users. This is particularly useful for customers with several contacts.
 
