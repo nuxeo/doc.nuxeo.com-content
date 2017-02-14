@@ -4,10 +4,10 @@ title: >-
     Providers
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-02-14'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - multiexcerpt
     - excerpt
 toc: true
@@ -159,8 +159,6 @@ Old templates displaying paged lists of documents have been removed, the templat
 
 {{/panel}}
 
-&nbsp;
-
 Also, the old templates displaying listings of documents were not relying on layouts, so migration may include defining [ listing layouts ]({{page page='layout-definitions#listing-layout'}}) and widget templates when migrating to content views.
 
 ## Migration Use Cases
@@ -229,8 +227,6 @@ PageProvider<DocumentModel> pp = (PageProvider<DocumentModel>) ppService.getPage
         "MY_SEARCH", null, null, null, props, params);
 DocumentModelList list = pp.getCurrentPage();
 ```
-
-&nbsp;
 
 Here is a more complex migration involving a whereClause (the search pattern is generated according to predicates definitions, retrieving values on the search document model):
 
@@ -320,14 +316,4 @@ Nuxeo source code has been upgraded too, here are sample changes that can be hel
 *   Migration of the sample module, involving migration of a query model and result provider farm, especially commit [https://github.com/nuxeo/nuxeo-sample-project/commit/c8cb1a9dd7708ffc236780efc36db00032accf0e](https://github.com/nuxeo/nuxeo-sample-project/commit/c8cb1a9dd7708ffc236780efc36db00032accf0e) (see {{jira server='Nuxeo Issue Tracker' key='NXP-12623'}})
 *   Migration of the picture book listing view, involving a partial migration of XHTML templates to keep javascript custom code, see commits [https://github.com/nuxeo/nuxeo-features/commit/85cafc1883275f337bf214fb3a79addc5e8cf5aa](https://github.com/nuxeo/nuxeo-features/commit/85cafc1883275f337bf214fb3a79addc5e8cf5aa) and [https://github.com/nuxeo/nuxeo-features/commit/aa12896607d6acfe5dcd55cbc55652af789088bc](https://github.com/nuxeo/nuxeo-features/commit/aa12896607d6acfe5dcd55cbc55652af789088bc).
 
-&nbsp;
-
 {{! /multiexcerpt}}
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-* * *

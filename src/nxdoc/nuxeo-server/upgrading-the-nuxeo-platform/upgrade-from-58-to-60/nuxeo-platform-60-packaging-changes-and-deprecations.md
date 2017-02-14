@@ -2,10 +2,10 @@
 title: Nuxeo Platform 6.0 Packaging Changes and Deprecations
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-02-14'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - excerpt
     - multiexcerpt
 toc: true
@@ -120,8 +120,6 @@ The module Document Management doesn't exist anymore in Nuxeo Platform 6.0\. Som
 
 ### Faceted Search - Deprecated
 
-&nbsp;
-
 {{! multiexcerpt name='faceted-search-deprecation-text'}}
 
 Faceted search used to come with the DM package. For Nuxeo Platform 6.0 it is an independent addon and has been deprecated. From an end user point of view, the search experience provided by faceted search is now available by default in the Search tab.
@@ -145,8 +143,6 @@ Nuxeo Document Management provided a document type called Mail folder. This feat
 All the Nuxeo Document Management OpenSocial features (customizable dashboard, activity charts in the Admin tab) are now available in the Nuxeo OpenSocial addon. This addon is deprecated.
 
 ### Picture Document Type
-
-&nbsp;
 
 {{! multiexcerpt name='picture-packaging-changes-text'}}
 
@@ -178,13 +174,13 @@ Virtual navigation used to come with the DM package. It is now an [independent a
 
 {{! multiexcerpt name='nuxeo-dam-deprecation-text'}}
 
-For Nuxeo Platform 6.0, the DAM package has been simplified: it now holds the documents types Picture, Audio and Video. All the specific UI has been moved into the DAM compat addon (see the page&nbsp;[Nuxeo DAM Compat]({{page space='USERDOC' page='Nuxeo DAM+Compat'}}) for details).
+For Nuxeo Platform 6.0, the DAM package has been simplified: it now holds the documents types Picture, Audio and Video. All the specific UI has been moved into the DAM compat addon (see the page [Nuxeo DAM Compat]({{page space='USERDOC' page='Nuxeo DAM+Compat'}}) for details).
 
 {{! /multiexcerpt}}
 
-This means that the Nuxeo DAM addon doesn't provide a DAM dedicated tab anymore. The browsing and document information preview features are now available in the default distribution of the platform, in the Search tab. All the features related to media documents types features (conversion, player, etc.) are provided by the Nuxeo DAM addon.&nbsp;
+This means that the Nuxeo DAM addon doesn't provide a DAM dedicated tab anymore. The browsing and document information preview features are now available in the default distribution of the platform, in the Search tab. All the features related to media documents types features (conversion, player, etc.) are provided by the Nuxeo DAM addon.
 
-Customers who want to keep the former DAM user interface should use the Nuxeo DAM Compat addon. Nuxeo DAM Compat is a compatibility addon and is deprecated for Nuxeo Platform 6.0.&nbsp;
+Customers who want to keep the former DAM user interface should use the Nuxeo DAM Compat addon. Nuxeo DAM Compat is a compatibility addon and is deprecated for Nuxeo Platform 6.0.
 
 ## Nuxeo RSS Reader - Deprecated
 
@@ -206,8 +202,6 @@ Live Edit and the WSS integration are deprecated in Nuxeo Platform 6.0\. Nuxeo D
 
 {{! /multiexcerpt}}
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
@@ -216,15 +210,17 @@ Live Edit and the WSS integration are deprecated in Nuxeo Platform 6.0\. Nuxeo D
 
 {{#> panel heading='Related Documentation'}}
 
-*   [Upgrade from 5.8 to 6.0]({{page space='admindoc' page='upgrade-from-58-to-60'}})
-*   [Upgrade to JSF2]({{page space='admindoc' page='upgrade-to-jsf2'}})
-*   [Studio Specific Upgrade Instructions]({{page space='studio' page='specific-upgrade-instructions'}})
-*   [Nuxeo Platform Feature Table]({{page space='admindoc' page='nuxeo-platform-feature-table'}})
+- [Upgrade from 5.8 to 6.0]({{page page='upgrade-from-58-to-60'}})
+- [Upgrade to JSF2]({{page page='upgrade-to-jsf2'}})
+- [Studio Specific Upgrade Instructions]({{page space='studio' page='specific-upgrade-instructions'}})
+- [Nuxeo Platform Feature Table]({{page page='nuxeo-platform-feature-table'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
 
-{{! Please update the label and target spaces in the Content by Label macro below. }}
+<div class="column medium-6">
 
 &nbsp;
 
-</div></div>
+</div>
+</div>

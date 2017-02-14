@@ -222,16 +222,15 @@ Please follow [detailed upgrade notes]({{page space='admindoc58' page='query-mod
 
 ### Actions on Content View Actions of Ordered Folders
 
-Since [NXP-11845](https://jira.nuxeo.com/browse/NXP-11845), the default content view presenting ordering actions only presents actions with category&nbsp;`ORDERABLE_CURRENT_SELECTION_LIST` (labelled "Orderable Document List Toolbar" in Studio). It previously presented also actions available to non-orderable content views,&nbsp;`CURRENT_SELECTION_LIST` (labelled "Document List Toolbar" in Studio).
+Since [NXP-11845](https://jira.nuxeo.com/browse/NXP-11845), the default content view presenting ordering actions only presents actions with category `ORDERABLE_CURRENT_SELECTION_LIST` (labelled "Orderable Document List Toolbar" in Studio). It previously presented also actions available to non-orderable content views, `CURRENT_SELECTION_LIST` (labelled "Document List Toolbar" in Studio).
 
-When upgrading to 5.7.2 or higher, actions using this category will need to use the&nbsp;`ORDERABLE_CURRENT_SELECTION_LIST` to be available on the default content view `orderable_document_content`.
+When upgrading to 5.7.2 or higher, actions using this category will need to use the `ORDERABLE_CURRENT_SELECTION_LIST` to be available on the default content view `orderable_document_content`.
 
 ## {{> anchor '573-to-58'}}Upgrade from 5.7.x to 5.8
 
 Previous Fast Track upgrades notes:
 
 *   [5.7.1 upgrade notes](https://jira.nuxeo.com/issues/?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.7.1%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20ASC%2C%20key%20ASC)
-
 *   [5.7.2 upgrade notes](https://jira.nuxeo.com/issues/?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.7.2%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20ASC%2C%20key%20ASC)
 *   [5.7.3 upgrade notes](https://jira.nuxeo.com/issues/?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.7.3%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20ASC%2C%20key%20ASC)
 *   [5.8 upgrade notes](https://jira.nuxeo.com/issues/?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.8%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20ASC%2C%20key%20ASC)

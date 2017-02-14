@@ -150,8 +150,6 @@ history:
 
 Follow [Upgrade Nuxeo]({{page page='upgrading-the-nuxeo-platform'}}) and apply the following procedure __before__ starting Nuxeo.
 
-* * *
-
 While upgrading from 5.1.2 to 5.1.3, you may have to manage with a Blob format issue : that means to patch $JBOSS/server/default/data/NXRuntime/repos/default/repository/nodetypes/custom_nodetypes.xml
 Take this file, format it with tidy (tidy -wrap 999 -indent -xml) and apply this patch (manually as it can't guarantee any line numbers; add the lines beginning with a "+" if not already present):
 
@@ -175,8 +173,6 @@ Take this file, format it with tidy (tidy -wrap 999 -indent -xml) and apply this
 ```
 
 Then, you need to re-index your data. Using [nuxeo-shell](http://doc.nuxeo.org/5.1/nuxeo-book/reference/html/administration.html#nuxeo-shell) (versus web function in advanced search) is recommended.
-
-* * *
 
 Another solution (than patching custom_nodetypes.xml file) is to export then re-import data before and after the upgrade (using nuxeo-shell too); but this method will make you loose versioning information.
 

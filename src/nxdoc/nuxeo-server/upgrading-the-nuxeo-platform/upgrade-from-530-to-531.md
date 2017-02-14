@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - multiexcerpt
+toc: true
 confluence:
     ajs-parent-page-id: '3343538'
     ajs-parent-page-title: Upgrading the Nuxeo Platform
@@ -177,9 +178,7 @@ Nuxeo DM 5.3.1 is fully backward compatible with Nuxeo DM 5.3.0 GA, hence upgrad
 
 Follow these steps to upgrade.
 
-&nbsp;
-
-## 1\. Get the differences between a vanilla Nuxeo DM 5.3.0 and your custom Nuxeo
+## 1. Get the differences between a vanilla Nuxeo DM 5.3.0 and your custom Nuxeo
 
 If you have specific configuration, you'll need to know what files were changed, in order to apply them onto the default one. Here are the folders and files you have to watch:
 
@@ -190,16 +189,16 @@ If you have specific configuration, you'll need to know what files were changed,
 *   `$JBOSS/server/default/deploy/mail-service.xml` => configuration of the mail service
 *   `$JBOSS/server/default/deploy/nuxeo.ear/OSGI-INF/templates/web.xml`
 
-## 2\. Backup your data
+## 2. Backup your data
 
 *   Follow this [documentation]({{page page='backup-and-restore'}})
 
-## 3\. Apply the differences
+## 3. Apply the differences
 
 *   From the differences you got at step 1, apply them on the Nuxeo DM 5.3.1 you've downloaded
 *   Copy your specific plugins into `$JBOSS/server/default/deploy/nuxeo.ear/plugins/`
 
-## 4\. Restore data
+## 4. Restore data
 
 *   Copy the data folder (server/default/data) to Nuxeo DM 5.3.1
 

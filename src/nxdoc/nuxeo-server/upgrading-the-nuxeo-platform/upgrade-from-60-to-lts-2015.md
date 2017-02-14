@@ -350,10 +350,10 @@ Elasticsearch for audit logs is set as the default back-end for new install but 
     nuxeoctl config audit.elasticsearch.migration true
     ```
 
-    This launches a background job&nbsp;at server startup to migrate data from the&nbsp;`nxp_logs`,&nbsp;`nxp_logs_extinfo`&nbsp;and&nbsp;`nxp_logs_mapextinfo`&nbsp;tables of the SQL database to the&nbsp;`${audit.elasticsearch.indexName}`&nbsp;Elasticsearch index.
+    This launches a background job at server startup to migrate data from the `nxp_logs`, `nxp_logs_extinfo` and `nxp_logs_mapextinfo` tables of the SQL database to the `${audit.elasticsearch.indexName}` Elasticsearch index.
 
     **Note**: Migration uses batch processing. The number of log entries processed per batch can be configured by `audit.elasticsearch.migration.batchSize` property. Default value is 1000\.
-    As an example, we successfully tested migration of 22,000,000 log entries with an average speed of 1,500 entries / second using&nbsp;`audit.elasticsearch.migration.batchSize=10000`&nbsp;on a Linux virtual machine with two cores, 4 GB RAM, a local PostgreSQL instance and an embedded Elasticsearch instance.
+    As an example, we successfully tested migration of 22,000,000 log entries with an average speed of 1,500 entries / second using `audit.elasticsearch.migration.batchSize=10000` on a Linux virtual machine with two cores, 4 GB RAM, a local PostgreSQL instance and an embedded Elasticsearch instance.
 
 3.  Once the migration is done:
 

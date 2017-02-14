@@ -233,7 +233,7 @@ Force Automation properties value to be trimmed (default:`false`)
 
 </td><td colspan="1">
 
-**Moved**&nbsp;to&nbsp;`nuxeo.s3storage.bucket_prefix`
+**Moved** to `nuxeo.s3storage.bucket_prefix`
 
 </td><td colspan="1">
 
@@ -245,7 +245,7 @@ Force Automation properties value to be trimmed (default:`false`)
 
 </td><td colspan="1">
 
-**New default value**&nbsp;to&nbsp;`execute`&nbsp;(previously:&nbsp;`compat`)
+**New default value** to `execute` (previously: `compat`)
 
 </td><td colspan="1">
 
@@ -349,7 +349,4 @@ Release notes:
 *   [Release notes for 8.2](http://nuxeo.github.io/releasenotes/8.2/)
 *   [Release notes for 8.1](http://nuxeo.github.io/releasenotes/8.1/)
 
-&nbsp;
-
-* * *
 {{! /multiexcerpt}}
