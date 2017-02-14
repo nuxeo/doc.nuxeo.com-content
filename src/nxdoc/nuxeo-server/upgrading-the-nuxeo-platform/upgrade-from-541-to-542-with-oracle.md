@@ -35,24 +35,4 @@ history:
         version: '1'
 
 ---
-{{! multiexcerpt name='5.4.2-oracle-upgrade-page'}}
-
-If you were using Nuxeo DM 5.3.2 or later with Oracle and ACL optimizations enabled, you need to update an index before plugging your database to Nuxeo DM 5.4.2.
-
-```
-SELECT index_name FROM USER_INDEXES WHERE table_name LIKE 'READ_ACLS';
-
-```
-
-Get the index name, result of the previous query, which should look like "SYS_C00XXXX"
-
-Then run the following statement:
-
-```
-ALTER INDEX "SYS_C00XXXX" RENAME TO "ACLR_ACL_ID_IDX";
-
-```
-
-Now you can start Nuxeo DM 5.4.2 which will rename the table READ_ACLS to ACLR and the previous index will be ready to work with this new configuration.
-
-{{! /multiexcerpt}}
+{{{multiexcerpt '5.4.2-oracle-upgrade-page' page='/nxdoc/upgrade-from-541-to-542-with-oracle'}}

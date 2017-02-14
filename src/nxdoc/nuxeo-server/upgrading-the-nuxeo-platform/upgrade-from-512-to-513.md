@@ -135,38 +135,4 @@ history:
         version: '1'
 
 ---
-{{! multiexcerpt name='5.1.2-to-5.1.3-upgrade-page'}}
-
-Follow [Upgrade Nuxeo]({{page page='upgrading-the-nuxeo-platform'}}) and apply the following procedure __before__ starting Nuxeo.
-
-* * *
-
-While upgrading from 5.1.2 to 5.1.3, you may have to manage with a Blob format issue : that means to patch $JBOSS/server/default/data/NXRuntime/repos/default/repository/nodetypes/custom_nodetypes.xml
-Take this file, format it with tidy (tidy -wrap 999 -indent -xml) and apply this patch (manually as it can't guarantee any line numbers; add the lines beginning with a "+" if not already present):
-
-```
-+  <nodeType hasOrderableChildNodes="false" isMixin="true" name="ecmmix:content" primaryItemName="">
-+    <propertyDefinition autoCreated="false" mandatory="false" multiple="false" name="digest" onParentVersion="COPY" protected="false" requiredType="String" />
-+    <propertyDefinition autoCreated="false" mandatory="false" multiple="false" name="length" onParentVersion="COPY" protected="false" requiredType="Long" />
-+    <propertyDefinition autoCreated="false" mandatory="false" multiple="false" name="filename" onParentVersion="COPY" protected="false" requiredType="String" />
-+  </nodeType>
-   <nodeType hasOrderableChildNodes="false" isMixin="false" name="ecmft:content" primaryItemName="">
-     <supertypes>
-       <supertype>ecmnt:property</supertype>
-+      <supertype>ecmmix:content</supertype>
-+      <supertype>nt:resource</supertype>
-     </supertypes>
-    <propertyDefinition autoCreated="false" mandatory="false" multiple="false" name="mime-type" onParentVersion="COPY" protected="false" requiredType="String" />
-    <propertyDefinition autoCreated="false" mandatory="false" multiple="false" name="data" onParentVersion="COPY" protected="false" requiredType="Binary" />
-    <propertyDefinition autoCreated="false" mandatory="false" multiple="false" name="encoding" onParentVersion="COPY" protected="false" requiredType="String" />
-   </nodeType>
-
-```
-
-Then, you need to re-index your data. Using [nuxeo-shell](http://doc.nuxeo.org/5.1/nuxeo-book/reference/html/administration.html#nuxeo-shell) (versus web function in advanced search) is recommended.
-
-* * *
-
-Another solution (than patching custom_nodetypes.xml file) is to export then re-import data before and after the upgrade (using nuxeo-shell too); but this method will make you loose versioning information.
-
-{{! /multiexcerpt}}
+{{{multiexcerpt '5.1.2-to-5.1.3-upgrade-page' page='/nxdoc/upgrade-from-512-to-513'}}
