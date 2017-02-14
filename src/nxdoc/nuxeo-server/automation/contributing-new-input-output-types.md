@@ -45,7 +45,7 @@ The logic you need to provide is as follow:
 
 Server and client do not share classes, so you need to provide two marshalling implementation classes.
 
-Server side, you should provide a [codec](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.automation.server.AutomationServer--codecs). The implementation class is to be contributed to the automation server component using the `codecs` extension point.
+Server side, you should provide a [codec](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.automation.server.AutomationServer--codecs). The implementation class is to be contributed to the automation server component using the `codecs` extension point.
 
 ```xml
   <extension target="org.nuxeo.ecm.automation.server.AutomationServer"
@@ -54,10 +54,10 @@ Server side, you should provide a [codec](http://explorer.nuxeo.org/nuxeo/site/d
   </extension>
 ```
 
-[`MyObjectCodec`](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/MyObjectCodec.java) class should extend [`org.nuxeo.ecm.automation.server.jaxrs.io.ObjectCodec`](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-io/src/main/java/org/nuxeo/ecm/automation/io/services/codec/ObjectCodec.java). The most common codecs provided by default into the Nuxeo server are implemented into [`org.nuxeo.ecm.automation.server.jaxrs.io.ObjectCodecService`](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-io/src/main/java/org/nuxeo/ecm/automation/io/services/codec/ObjectCodecService.java).
+[`MyObjectCodec`](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-features/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/MyObjectCodec.java) class should extend [`org.nuxeo.ecm.automation.server.jaxrs.io.ObjectCodec`](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-features/nuxeo-automation/nuxeo-automation-io/src/main/java/org/nuxeo/ecm/automation/io/services/codec/ObjectCodec.java). The most common codecs provided by default into the Nuxeo server are implemented into [`org.nuxeo.ecm.automation.server.jaxrs.io.ObjectCodecService`](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-features/nuxeo-automation/nuxeo-automation-io/src/main/java/org/nuxeo/ecm/automation/io/services/codec/ObjectCodecService.java).
 
 Client side, you should implement the `org.nuxeo.ecm.automation.client.jaxrs.spi.JsonMarshaller<T>` interface. The implementation class is to be registered to the automation client marshalling framework by invoking the static method `org.nuxeo.ecm.automation.client.jaxrs.spi.AbstractAutomationClient#registerPojoMarshaller(Clazz marshaller)`.
 
-Here is an example of the [org.nuxeo.ecm.automation.client.jaxrs.spi.marshallers.BooleanMarshaller](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-client/src/main/java/org/nuxeo/ecm/automation/client/jaxrs/spi/marshallers/BooleanMarshaller.java).
+Here is an example of the [org.nuxeo.ecm.automation.client.jaxrs.spi.marshallers.BooleanMarshaller](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-features/nuxeo-automation/nuxeo-automation-client/src/main/java/org/nuxeo/ecm/automation/client/jaxrs/spi/marshallers/BooleanMarshaller.java).
 
 * * *

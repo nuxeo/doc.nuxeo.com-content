@@ -214,7 +214,7 @@ Example of `nxd:restDocumentLink` use:
 
 In this example, the tag will print a simple link, using the default pattern, and build the document view using given document model, using its default view.
 
-Please refer to the [tag library documentation](http://community.nuxeo.com/api/nuxeo/latest/tlddoc/nxd/restDocumentLink.html) for additional parameters: it's possible to set the tab, sub tab, and use a specific URL pattern.
+Please refer to the [tag library documentation](http://community.nuxeo.com/api/nuxeo/8.10/tlddoc/nxd/restDocumentLink.html) for additional parameters: it's possible to set the tab, sub tab, and use a specific URL pattern.
 
 Note that you can also use JSF functions to build the GET URL. This is what's done for file links: the function queries the URL policy service to build the URL.
 

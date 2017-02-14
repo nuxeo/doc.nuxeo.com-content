@@ -170,6 +170,6 @@ Sample usage:
     mvn clean package -pl :nuxeo-distribution-tomcat
     ```
 
-See the [nuxeo-distribution/README.md](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/README.md) file for a detailed description of the&nbsp;`nuxeo-distribution` module usage and outputs.
+See the [nuxeo-distribution/README.md](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-distribution/README.md) file for a detailed description of the&nbsp;`nuxeo-distribution` module usage and outputs.
 
 &nbsp;

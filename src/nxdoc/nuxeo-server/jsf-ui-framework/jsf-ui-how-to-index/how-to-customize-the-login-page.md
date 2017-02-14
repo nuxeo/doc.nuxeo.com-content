@@ -230,7 +230,7 @@ history:
         version: '1'
 
 ---
-The basic customization can be made by extending the service `org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService` for the point [`loginScreen`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--loginScreen).
+The basic customization can be made by extending the service `org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService` for the point [`loginScreen`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--loginScreen).
 
 This point allows you to configure the Login Screen : header, footer, styles, openid providers ... The variable `${org.nuxeo.ecm.contextPath}` can be used to avoid hardcoding the default application path (/nuxeo).
 

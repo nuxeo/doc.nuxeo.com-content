@@ -324,19 +324,19 @@ You can create a smart folder and then build the query that will be associated t
 The smart query is designed to work in conjunction with a [content view]({{page space='NXDOC' page='Content Views'}}).
 This content view search layout displays a selector to help building a query part, and a text area with the existing query parts already aggregated:
 
-The [SmartQuery](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/master/src/main/java/org/nuxeo/ecm/platform/smart/query/SmartQuery.java) interface is very simple: it can build a query (or query part) and can check if it is in a valid state.
+The [SmartQuery](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/8.10/src/main/java/org/nuxeo/ecm/platform/smart/query/SmartQuery.java) interface is very simple: it can build a query (or query part) and can check if it is in a valid state.
 
-The [IncrementalSmartQuery](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/master/src/main/java/org/nuxeo/ecm/platform/smart/query/IncrementalSmartQuery.java) abstract class holds additional methods for a good interaction with UI JSF components. It is able to store an existing query part, and has getters and setters for the description of a new element to add to the query.
+The [IncrementalSmartQuery](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/8.10/src/main/java/org/nuxeo/ecm/platform/smart/query/IncrementalSmartQuery.java) abstract class holds additional methods for a good interaction with UI JSF components. It is able to store an existing query part, and has getters and setters for the description of a new element to add to the query.
 
-The [IncrementalSmartNXQLQuery](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/master/src/main/java/org/nuxeo/ecm/platform/smart/query/jsf/IncrementalSmartNXQLQuery.java) class implements the `org.nuxeo.ecm.platform.smart.query.SmartQuery` interface and generates a query using the NXQL syntax.
+The [IncrementalSmartNXQLQuery](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/8.10/src/main/java/org/nuxeo/ecm/platform/smart/query/jsf/IncrementalSmartNXQLQuery.java) class implements the `org.nuxeo.ecm.platform.smart.query.SmartQuery` interface and generates a query using the NXQL syntax.
 
-The seam component named [smartNXQLQueryActions](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/master/src/main/java/org/nuxeo/ecm/platform/smart/query/jsf/SmartNXQLQueryActions.java) exposes an instance of it, given an existing query part, and is used to update it on Ajax calls.
+The seam component named [smartNXQLQueryActions](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/8.10/src/main/java/org/nuxeo/ecm/platform/smart/query/jsf/SmartNXQLQueryActions.java) exposes an instance of it, given an existing query part, and is used to update it on Ajax calls.
 
-The complete list of layouts used to generate this screen is available here: [smart-query-layouts-contrib.xml](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/master/src/main/resources/OSGI-INF/smart-query-layouts-contrib.xml).
+The complete list of layouts used to generate this screen is available here: [smart-query-layouts-contrib.xml](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/8.10/src/main/resources/OSGI-INF/smart-query-layouts-contrib.xml).
 
-The content view is configured to use the layout named `nxql_incremental_smart_query` as a search layout, and this content view is referenced both in the search form and search results templates: [smart-query-contentviews-contrib.xml](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/master/src/main/resources/OSGI-INF/smart-query-contentviews-contrib.xml).
+The content view is configured to use the layout named `nxql_incremental_smart_query` as a search layout, and this content view is referenced both in the search form and search results templates: [smart-query-contentviews-contrib.xml](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/8.10/src/main/resources/OSGI-INF/smart-query-contentviews-contrib.xml).
 
-The easiest way to customize available query conditions is to override the definition of the layout named `incremental_smart_query_selection`. This layout uses the template [incremental_smart_query_selection_layout_template.xhtml](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/master/src/main/resources/web/nuxeo.war/layouts/incremental_smart_query_selection_layout_template.xhtml) that accepts one property named "hideNotOperator". This property, if set to true, will hide the selection of the 'NOT' word that can be added in front of each criterion. If you do so, operators should include negative operators.
+The easiest way to customize available query conditions is to override the definition of the layout named `incremental_smart_query_selection`. This layout uses the template [incremental_smart_query_selection_layout_template.xhtml](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/8.10/src/main/resources/web/nuxeo.war/layouts/incremental_smart_query_selection_layout_template.xhtml) that accepts one property named "hideNotOperator". This property, if set to true, will hide the selection of the 'NOT' word that can be added in front of each criterion. If you do so, operators should include negative operators.
 
 Here is an explanation on how to define this layout widgets, that need to be of type "incremental_smart_query_condition" to ensure a good behaviour with other layouts.
 
@@ -442,7 +442,7 @@ As a more complex example, let's have a look at the widget used to add a conditi
 
 It is more complex as some subwidgets should not be shown depending on the chosen operator: when operator "BETWEEN" is selected, all of the three subwidgets should be displayed, whereas when other operators are selected, only the first subwidget should be shown. This is achieved by setting the widget mode according to the selected value.
 
-Let's have a close look at the condition: 
+Let's have a close look at the condition:
 ```
 #{(empty value.conditionalOperator or value.conditionalOperator=='BETWEEN' or value.conditionalOperator=='NOT BETWEEN')?'edit':'hidden'}
 ```
@@ -450,9 +450,9 @@ In this expression, `value` references the value manipulated by the widget (e.g.
 
 ### Smart Folder Configuration
 
-The smart folder creation and edition pages is very close to the smart search form. It reuses the same widget types, including some adjustments since the bound values are kept in its properties instead of a backing seam component. Its layout definition is here: [smart-folder-layouts-contrib.xml](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/master/src/main/resources/OSGI-INF/smart-folder-layouts-contrib.xml). It also includes the definition of a widget in charge of displaying the content view results.
+The smart folder creation and edition pages is very close to the smart search form. It reuses the same widget types, including some adjustments since the bound values are kept in its properties instead of a backing seam component. Its layout definition is here: [smart-folder-layouts-contrib.xml](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/8.10/src/main/resources/OSGI-INF/smart-folder-layouts-contrib.xml). It also includes the definition of a widget in charge of displaying the content view results.
 
-Note that it needs another content view to be defined (see [smart-folder-contentviews-contrib.xml](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/master/src/main/resources/OSGI-INF/smart-folder-contentviews-contrib.xml)) so that this content view uses the query, sort information, result columns and page size as set on the document properties (note the usage of tags parameter, sortInfosBinding, resultColumns and pageSizeBinding).
+Note that it needs another content view to be defined (see [smart-folder-contentviews-contrib.xml](https://github.com/nuxeo/nuxeo-platform-smart-search/blob/8.10/src/main/resources/OSGI-INF/smart-folder-contentviews-contrib.xml) so that this content view uses the query, sort information, result columns and page size as set on the document properties (note the usage of tags parameter, sortInfosBinding, resultColumns and pageSizeBinding).
 
 ![]({{file name='Smart-Search-results.png' space='userdoc' page='smart-search'}} ?w=650,border=true)
 

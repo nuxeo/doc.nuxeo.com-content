@@ -163,7 +163,7 @@ Here is a sample usage of the [`nxl:widgetType` tag](http://community.nuxeo.com/
 <nxl:widgetType name="text" mode="#{myMode}" value="#{myText}" required="true" />
 ```
 
-Please refer to the tag library documentation available at [http://community.nuxeo.com/api/nuxeo/latest/tlddoc/nxl/tld-summary.html](http://community.nuxeo.com/api/nuxeo/latest/tlddoc/nxl/tld-summary.html).
+Please refer to the tag library documentation available at [http://community.nuxeo.com/api/nuxeo/8.10/tlddoc/nxl/tld-summary.html](http://community.nuxeo.com/api/nuxeo/8.10/tlddoc/nxl/tld-summary.html).
 
 * * *
 

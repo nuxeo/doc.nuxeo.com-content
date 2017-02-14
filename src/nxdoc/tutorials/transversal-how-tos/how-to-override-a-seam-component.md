@@ -104,7 +104,7 @@ The main steps to override a Seam component are:
     }
     ```
 
-In this example, we overrode the [startupHelper](https://github.com/nuxeo/nuxeo-dm/blob/master/nuxeo-platform-webapp-core/src/main/java/org/nuxeo/ecm/webapp/helpers/StartupHelper.java) component to write our own version of the method `initServerAndFindStartupPage`.
+In this example, we overrode the [startupHelper](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-dm/nuxeo-platform-webapp-core/src/main/java/org/nuxeo/ecm/webapp/helpers/StartupHelper.java) component to write our own version of the method `initServerAndFindStartupPage`.
 
 * * *
 

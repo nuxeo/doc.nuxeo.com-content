@@ -21,4 +21,5 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'query-models-result-providers-upgrade' page='/nxdoc/query-models-and-result-providers-migration-to-content-views-and-page-providers'}}
+
+{{{multiexcerpt 'query-models-result-providers-upgrade' page='/nxdoc/query-models-and-result-providers-migration-to-content-views-and-page-providers'}}}

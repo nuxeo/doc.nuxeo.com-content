@@ -139,7 +139,7 @@ Default templates for mail notifications can be overridden. Just follow those st
 
 {{! /excerpt}}
 
-1.  Create a new **Templates** > **Mail** feature in Studio. Choose ID among the ones that are used in the default product, like `subscriptionsUpdated` for instance (see the [list of all alert templates](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.notification.service.NotificationContrib--templates)).
+1.  Create a new **Templates** > **Mail** feature in Studio. Choose ID among the ones that are used in the default product, like `subscriptionsUpdated` for instance (see the [list of all alert templates](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewContribution/org.nuxeo.ecm.platform.notification.service.NotificationContrib--templates)).
 2.  Fill in the content of the email that you want to be sent.
     ![]({{file name='studio_mailtemplate_content_2.png'}} ?w=600,border=true)
     If you want to copy from the default content of the template, you can have a look at it from [GitHub](https://github.com/nuxeo/nuxeo-features/tree/master/nuxeo-platform-notification/nuxeo-platform-notification-core/src/main/resources/templates).

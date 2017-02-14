@@ -95,7 +95,7 @@ In this how-to, [importing a file]({{page space='userdoc' page='creating-content
 
 {{! /excerpt}}
 
-The mechanism to create a Nuxeo document with an import is tight to the [plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--plugins) extension point from the `FileManager` service.
+The mechanism to create a Nuxeo document with an import is tight to the [plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--plugins) extension point from the `FileManager` service.
 
 According to the MIME type of the file you try to import, a specific plugin will be called. And most of the time, it's the `DefaultFileImporter` plugin that will be used.
 

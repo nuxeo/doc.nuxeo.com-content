@@ -107,10 +107,10 @@ Some widgets have limitations in some specific conditions of use. We maintain a 
 
 *   **File widget cannot be used in an Ajax form.**
 *   You might have some troubles using **chain select** widgets in Ajax forms or when using lists. This occurs in some very specific conditions, so you have to check if it is ok for your use case first. We plan to rewrite completely this widget to solve this issue.
-*   **Widgets using Rich Faces suggestion components do not work correctly in a list.&nbsp;**Limitation is at lower Rich Faces level, so there is no short term fix planned.
+*   **Widgets using Rich Faces suggestion components do not work correctly in a list** Limitation is at lower Rich Faces level, so there is no short term fix planned.
 *   Widgets displaying URLs to files/images may misbehave inside of lists. This is because the URL might need information about the complete property XPath, and this variable is not exposed in the context for now (see [NXP-10423](https://jira.nuxeo.com/browse/NXP-10423)). Some specific widget templates can be used to workaround this issue, and some of them are available by default:
-    *   [`/widgets/extended_subfile_widget.xhtml`](https://github.com/nuxeo/nuxeo-dm/blob/master/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/widgets/extended_subfile_widget.xhtml) Displays a link to a file with additional information (icon, PDF export) for a file within a list.
-    *   [`/widgets/image_subwidget_template.xhtml`](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/widgets/image_subwidget_template.xhtml) Displays an image when within a list (available only from 5.9.3, 5.8.0-HF09, 5.6.0-HF32.These widget templates are specific to this use case, and will not work as expected inside lists of lists, for instance, but custom widget templates can be defined for this behaviour, taking care of the following issues:
+    *   [`/widgets/extended_subfile_widget.xhtml`](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-dm/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/widgets/extended_subfile_widget.xhtml) Displays a link to a file with additional information (icon, PDF export) for a file within a list.
+    *   [`/widgets/image_subwidget_template.xhtml`](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/widgets/image_subwidget_template.xhtml) Displays an image when within a list (available only from 5.9.3, 5.8.0-HF09, 5.6.0-HF32.These widget templates are specific to this use case, and will not work as expected inside lists of lists, for instance, but custom widget templates can be defined for this behaviour, taking care of the following issues:
     *   The URL system may rely on a document to provide the RESTful link, hence the&nbsp;`layoutValue` variable is used for it: these widget templates will assume that the layout applies to a document
     *   The parent widgets field definitions, used to build the document property XPath, can be retrieved using variables `widget_0` for instance: this assumes that the widget at the first level of the layout holds the list property path.
     *   The widget template needs to know the file/image index, and is relying on variable `model.rowData` for it: this is only available within a widget of type `list`.
@@ -122,9 +122,9 @@ Some widgets have limitations in some specific conditions of use. We maintain a 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Widget Related Documentation'}}
 
-*   [Standard Widget Types]({{page page='standard-widget-types'}})
-*   [Custom Widget Types]({{page page='custom-widget-types'}})
-*   [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
+- [Standard Widget Types]({{page page='standard-widget-types'}})
+- [Custom Widget Types]({{page page='custom-widget-types'}})
+- [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">
 

@@ -221,9 +221,9 @@ Data returned from Elasticsearch is also processed for simplification and consis
 
 **GitHub project**:&nbsp;[https://github.com/nuxeo/nuxeo-review-workflows-dashboards](https://github.com/nuxeo/nuxeo-review-workflows-dashboards)
 
-**Serial Review Dashboard**:&nbsp;[https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/master/src/main/elements/nx-workflow-dashboard/nx-serial-workflow-dashboard.html](https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/master/src/main/elements/nx-workflow-dashboard/nx-serial-workflow-dashboard.html)
+**Serial Review Dashboard**:&nbsp;[https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/8.10/src/main/elements/nx-workflow-dashboard/nx-serial-workflow-dashboard.html](https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/8.10/src/main/elements/nx-workflow-dashboard/nx-serial-workflow-dashboard.html)
 
-**Parallel Review Dashboard**: [https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/master/src/main/elements/nx-workflow-dashboard/nx-parallel-workflow-dashboard.html](https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/master/src/main/elements/nx-workflow-dashboard/nx-parallel-workflow-dashboard.html) [&nbsp;](https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/master/src/main/elements/nx-workflow-dashboard/nx-parallel-workflow-dashboard.html)
+**Parallel Review Dashboard**: [https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/8.10/src/main/elements/nx-workflow-dashboard/nx-parallel-workflow-dashboard.html](https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/8.10/src/main/elements/nx-workflow-dashboard/nx-parallel-workflow-dashboard.html) [&nbsp;](https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/8.10/src/main/elements/nx-workflow-dashboard/nx-parallel-workflow-dashboard.html)
 
 ![]({{file name='review_workflows_dashboards.png'}} ?w=600)
 

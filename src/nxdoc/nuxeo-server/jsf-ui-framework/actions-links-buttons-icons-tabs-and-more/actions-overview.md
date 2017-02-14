@@ -136,11 +136,11 @@ The above action will be used to display the creation page for a Workspace docum
 
 *   `id`: the string identifying the action. In the example, the action id is&nbsp;`newWorkspace`. The same identifier can be reused to override (or merge) the original action configuration.
 *   `label`: the action name that will be used when displaying the link. In the example, the label is `command.create.workspace`. This label is a message that will always be translated at display (there is no boolean property stating if the action label should be translated like on widget definitions).
-*   `link`: the string representing the command the action will trigger. This string may have a different form and syntax depending on the action type. In the example, a JSF command link will be used, so it represents an action method expression. The Seam component called&nbsp; [`documentActions`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewSeamComponent/seam:documentActions) holds a method named `createDocument` that will perform the navigation to the creation page.
+*   `link`: the string representing the command the action will trigger. This string may have a different form and syntax depending on the action type. In the example, a JSF command link will be used, so it represents an action method expression. The Seam component called&nbsp; [`documentActions`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewSeamComponent/seam:documentActions) holds a method named `createDocument` that will perform the navigation to the creation page.
 *   `category`: a string useful to group actions that will be rendered in the same area of a page. An action can define several categories. Here, the only category defined is&nbsp;`SUBVIEW_UPPER_LIST`. It is designed to group all the actions that will be displayed on the right top corner of any page of the site. Some default categories are available at [Actions Display]({{page page='actions-display'}}).
 *   `type`: an optional typing of the action, so that actions needing different kinds of rendering can be mixed up in the same category (see chapter [Adapt templates to display an action]({{page page='actions-display'}})). When the type is not defined, a default type can be deduced from the action category (for compatibility), or else the type "link" is used.
 
-Other elements can be used to define an action. They are listed here but you can have a look at the main actions contribution files for more examples, like [`nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/actions-contrib.xml`](https://github.com/nuxeo/nuxeo-dm/blob/master/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/actions-contrib.xml) or [`nuxeo-platform-webapp-base/src/main/resources/OSGI-INF/actions-contrib.xml`](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-webapp-base/src/main/resources/OSGI-INF/actions-contrib.xml) .
+Other elements can be used to define an action. They are listed here but you can have a look at the main actions contribution files for more examples, like [`nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/actions-contrib.xml`](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/actions-contrib.xml) or [`nuxeo-platform-webapp-base/src/main/resources/OSGI-INF/actions-contrib.xml`](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/OSGI-INF/actions-contrib.xml) .
 
 *   `filter-ids`: the id of a filter that will be used to control the action visibility. An action can have several filters: it is visible if all of its filters grant the access (see chapter about [Filters and Access Controls]({{page page='filters-and-access-controls'}})).
 *   `filter`: a filter definition can be done directly within the action definition. It is a filter like others and can be referred by other actions. This way of defining filters is here for compatibility, defining filters on the filters extension points is recommended.
@@ -154,7 +154,7 @@ Other elements can be used to define an action. They are listed here but you can
 
 ## Redefining an Action
 
-The [`actions` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--actions) provides merging features: you can change an existing action definition in your custom extension point provided you use the same identifier. Properties holding single values (label, link for instance) will be replaced using the new value. Properties holding multiple values (categories, filters) will be merged with existing values. Properties will be merged if they hold the attribute `append="true"`.
+The [`actions` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/server-8.10/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--actions) provides merging features: you can change an existing action definition in your custom extension point provided you use the same identifier. Properties holding single values (label, link for instance) will be replaced using the new value. Properties holding multiple values (categories, filters) will be merged with existing values. Properties will be merged if they hold the attribute `append="true"`.
 
 Do not forget to add the original component name requirement to ensure proper override.
 
@@ -260,14 +260,14 @@ The FancyBox content is defined by "/incl/permalink_box.xhtml". Note that if the
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Add a Button in the JSF UI]({{page page='how-to-add-a-button-in-the-jsf-ui'}})
-*   [How to Add a New Action Category on a Document Tab]({{page page='how-to-add-a-new-action-category-on-a-document-tab'}})
-*   [How to Make the New Button Appear on a Custom Folderish Document]({{page page='how-to-make-the-new-button-appear-on-a-custom-folderish-document'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Add a Button in the JSF UI]({{page page='how-to-add-a-button-in-the-jsf-ui'}})
+- [How to Add a New Action Category on a Document Tab]({{page page='how-to-add-a-new-action-category-on-a-document-tab'}})
+- [How to Make the New Button Appear on a Custom Folderish Document]({{page page='how-to-make-the-new-button-appear-on-a-custom-folderish-document'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [Actions Display]({{page page='actions-display'}})
-*   [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
+- [Actions Display]({{page page='actions-display'}})
+- [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
 
 {{/panel}}</div></div>

@@ -176,7 +176,7 @@ We can resume the Computed Group Service like that:
 - You can register a class that implements a method that will be called just after each user connection.
 - The list of strings returned by your method will be considered as the list of virtual groups the user belongs to.
 
-{{#> callout type='info' }}You should first have a quick first look to the [Javadoc of the ComputedGroupService](https://github.com/nuxeo/nuxeo-services/blob/master/nuxeo-platform-usermanager-core/src/main/java/org/nuxeo/ecm/platform) and the [explorer.nuxeo.org documentation around this service](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewBundle/org.nuxeo.ecm.platform.usermanager) and get back to it after having played this tutorial! {{/callout}}
+{{#> callout type='info' }}You should first have a quick first look to the [Javadoc of the ComputedGroupService](https://github.com/nuxeo/nuxeo-services/blob/master/nuxeo-platform-usermanager-core/src/main/java/org/nuxeo/ecm/platform) and the [explorer.nuxeo.org documentation around this service](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewBundle/org.nuxeo.ecm.platform.usermanager) and get back to it after having played this tutorial! {{/callout}}
 
 ### Preparing the Project
 

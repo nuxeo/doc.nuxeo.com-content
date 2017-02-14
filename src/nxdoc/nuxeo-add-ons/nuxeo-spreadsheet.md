@@ -169,8 +169,8 @@ The Nuxeo Spreadsheet add-on is done integrating [Handsontable](http://handsonta
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Content View - Results]({{page space='studio' page='content-view-results'}})
-*   [Adding Features]({{page space='userdoc' page='adding-features'}})
+- [Content View - Results]({{page space='studio' page='content-view-results'}})
+- [Adding Features]({{page space='userdoc' page='adding-features'}})
 
 {{/panel}}</div><div class="column medium-6">
 

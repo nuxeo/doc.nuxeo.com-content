@@ -333,8 +333,8 @@ Stores Content on Azure Object Store
 </td><td colspan="1">
 
 - [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage)
-- [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/master/nuxeo-core-binarymanager-azure)
-- [Configuration](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/blob/master/nuxeo-core-binarymanager-azure/README.md)
+- [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/8.10/nuxeo-core-binarymanager-azure)
+- [Configuration](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/blob/8.10/nuxeo-core-binarymanager-azure/README.md)
 
 </td></tr><tr><td colspan="1">
 
@@ -355,8 +355,8 @@ Stores content on Azure object store read it through Azure CDN
 </td><td colspan="1">
 
 - [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage)
-- [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/master/nuxeo-core-binarymanager-azure)
-- [Configuration](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/blob/master/nuxeo-core-binarymanager-azure/README.md)
+- [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/8.10/nuxeo-core-binarymanager-azure)
+- [Configuration](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/blob/8.10/nuxeo-core-binarymanager-azure/README.md)
 
 </td></tr><tr><td colspan="1">
 
@@ -377,7 +377,7 @@ Stores content on Amazon S3
 </td><td colspan="1">
 
 - [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage)
-- [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/master/nuxeo-core-binarymanager-s3)
+- [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/8.10/nuxeo-core-binarymanager-s3)
 - [Configuration]({{page page='amazon-s3-online-storage'}})
 
 </td></tr><tr><td colspan="1">
@@ -398,7 +398,7 @@ Stores binaries using the Apache jclouds library into a wide range of possible b
 
 </td><td colspan="1">
 
-[Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/master/nuxeo-core-binarymanager-jclouds)
+[Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/8.10/nuxeo-core-binarymanager-jclouds)
 
 </td></tr><tr><td colspan="1">
 
@@ -419,7 +419,7 @@ Reads content from Google Drive
 </td><td colspan="1">
 
 - [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
-- [Sources](https://github.com/nuxeo/nuxeo-liveconnect/tree/master/nuxeo-liveconnect-google-drive)
+- [Sources](https://github.com/nuxeo/nuxeo-liveconnect/tree/master/nuxeo-liveconnect-google-drive-core)
 
 </td></tr><tr><td colspan="1">
 
@@ -440,7 +440,7 @@ Reads content from Dropbox
 </td><td colspan="1">
 
 - [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
-- [Sources](https://github.com/nuxeo/nuxeo-liveconnect/tree/master/nuxeo-liveconnect-dropbox)
+- [Sources](https://github.com/nuxeo/nuxeo-liveconnect/tree/master/nuxeo-liveconnect-dropbox-core)
 
 </td></tr><tr><td colspan="1">
 
@@ -478,7 +478,7 @@ This is doable thanks to the `BlobDispatcher` class.&nbsp;
 
 ![](https://lh4.googleusercontent.com/z-1wWw7slLbqkaNh0mTiW-7R7ofXPPfIVryLIQSCQqapbM79gctiuNcKauodRx-u9-VpNQShUqrivZ6aY4CuqEA-uRstFRn5XQBrCUnFkMgvx51jxa_1vfq6lO3wdJ2D9Er0rSWXrg ?w=500,border=true)
 
-The role of the blob dispatcher is to decide, based on a blob and its containing document, where the blob's binary is actually going to be stored. The Nuxeo Platform provides a default blob dispatcher ([`org.nuxeo.ecm.core.blob.DefaultBlobDispatcher`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/blob/DefaultBlobDispatcher.html)) that is easy to configure for most basic needs. But it can be replaced by a custom implementation if needed.
+The role of the blob dispatcher is to decide, based on a blob and its containing document, where the blob's binary is actually going to be stored. The Nuxeo Platform provides a default blob dispatcher ([`org.nuxeo.ecm.core.blob.DefaultBlobDispatcher`](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/core/blob/DefaultBlobDispatcher.html)) that is easy to configure for most basic needs. But it can be replaced by a custom implementation if needed.
 
 {{! multiexcerpt name='BlobDispatch'}}
 

@@ -58,7 +58,7 @@ history:
 ---
 {{! excerpt}}
 
-If you start workflow automatically using the [Workflow > StartWorkflow](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.StartWorkflow) operation and that your workflow's first node creates a task to the workflow initiator, you need to use in the input chain the **[User Interface > Raise Seam events](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Seam.RaiseEvents)** operation, with the value "<span style="color: rgb(34,34,34);">`**workflowNewProcessStarted**`" for the event name.</span>
+If you start workflow automatically using the [Workflow > StartWorkflow](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewOperation/Context.StartWorkflow) operation and that your workflow's first node creates a task to the workflow initiator, you need to use in the input chain the **[User Interface > Raise Seam events](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewOperation/Seam.RaiseEvents)** operation, with the value "<span style="color: rgb(34,34,34);">`**workflowNewProcessStarted**`" for the event name.</span>
 
 {{! /excerpt}}
 

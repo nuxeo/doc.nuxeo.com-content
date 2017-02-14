@@ -320,7 +320,7 @@ Apart from these annotations there is one more annotation provided by the automa
 
 When registering an automation chain, the chain will be checked to find a path from the first operation to the last one to be sure the chain can be executed at runtime. Finding a path means to identify at least one method in each operation that is matching the signature of the next operation. If such a path could not be found an error is thrown (at registration time). For more detail on registering an operation chains see [Automation Chain]({{page page='automation-chain'}}).
 
-To register your operation you should create a Nuxeo XML extension to the [`operations` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--operations). Example:
+To register your operation you should create a Nuxeo XML extension to the [`operations` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--operations). Example:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"

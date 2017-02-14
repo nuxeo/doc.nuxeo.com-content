@@ -137,10 +137,10 @@ See the matrix above for variables:
 
 | Module | Content | Permission | Path |
 | ------ | ------- | ---------- | ---- |
-| patch.xqy | [Here](https://github.com/nuxeo/nuxeo-core-storage-marklogic/blob/master/src/main/resources/patch.xqy) | `nuxeo-writer` | /ext/nuxeo/patch.xqy |
-| set-lock.xqy | [Here](https://github.com/nuxeo/nuxeo-core-storage-marklogic/blob/master/src/main/resources/set-lock.xqy) | `nuxeo-writer` | /ext/nuxeo/set-lock.xqy |
-| remove-lock.xqy | [Here](https://github.com/nuxeo/nuxeo-core-storage-marklogic/blob/master/src/main/resources/remove-lock.xqy) | `nuxeo-writer` | /ext/nuxeo/remove-lock.xqy |
-| extract.xqy | [Here](https://github.com/nuxeo/nuxeo-core-storage-marklogic/blob/master/src/main/resources/extract.xqy) | `nuxeo-reader` | /ext/nuxeo/extract.xqy |
+| patch.xqy | [Here](https://github.com/nuxeo/nuxeo-core-storage-marklogic/blob/8.10/src/main/resources/patch.xqy) | `nuxeo-writer` | /ext/nuxeo/patch.xqy |
+| set-lock.xqy | [Here](https://github.com/nuxeo/nuxeo-core-storage-marklogic/blob/8.10/src/main/resources/set-lock.xqy) | `nuxeo-writer` | /ext/nuxeo/set-lock.xqy |
+| remove-lock.xqy | [Here](https://github.com/nuxeo/nuxeo-core-storage-marklogic/blob/8.10/src/main/resources/remove-lock.xqy) | `nuxeo-writer` | /ext/nuxeo/remove-lock.xqy |
+| extract.xqy | [Here](https://github.com/nuxeo/nuxeo-core-storage-marklogic/blob/8.10/src/main/resources/extract.xqy) | `nuxeo-reader` | /ext/nuxeo/extract.xqy |
 
 ## Configuration
 

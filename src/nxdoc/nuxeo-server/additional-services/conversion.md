@@ -85,7 +85,7 @@ history:
 ---
 {{! excerpt}}
 
-The Nuxeo Platform comes with a [conversion service](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.core.convert.api.ConversionService) that can be used to manage conversion of blobs from one format to an other.
+The Nuxeo Platform comes with a [conversion service](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewService/org.nuxeo.ecm.core.convert.api.ConversionService) that can be used to manage conversion of blobs from one format to an other.
 
 {{! /excerpt}}
 
@@ -183,9 +183,9 @@ This call can throw `ConverterNotRegistred` if the target converter does not exi
 
 A few operations exist to do synchronous conversions:
 
-*   [Conversion > Convert to given mime-type](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Blob.Convert)
-*   [Conversion > Convert To PDF](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Blob.ToPDF)
-*   [Conversion > Run converter](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Blob.RunConverter)
+*   [Conversion > Convert to given mime-type](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewOperation/Blob.Convert)
+*   [Conversion > Convert To PDF](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewOperation/Blob.ToPDF)
+*   [Conversion > Run converter](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewOperation/Blob.RunConverter)
 
 ### REST API
 
@@ -373,7 +373,7 @@ To contribute a new converter, you have to contribute a class that implement the
 </extension>
 ```
 
-See list of [built-in contributions](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.convert.service.ConversionServiceImpl--converter).
+See list of [built-in contributions](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.core.convert.service.ConversionServiceImpl--converter).
 
 #### Chained Converters
 
@@ -432,11 +432,11 @@ The base class `org.nuxeo.ecm.platform.convert.plugins.CommandLineBasedConverter
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Automation]({{page page='automation'}})
-*   [How to Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
-*   [How to Contribute a Command Line Converter]({{page page='how-to-contribute-a-command-line-converter'}})
-*   [How to Automatically Convert a Document to PDF]({{page page='how-to-automatically-convert-a-document-to-pdf'}})
-*   [How to Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
+- [Automation]({{page page='automation'}})
+- [How to Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
+- [How to Contribute a Command Line Converter]({{page page='how-to-contribute-a-command-line-converter'}})
+- [How to Automatically Convert a Document to PDF]({{page page='how-to-automatically-convert-a-document-to-pdf'}})
+ [How to Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
 
 {{/panel}}</div><div class="column medium-6">
 

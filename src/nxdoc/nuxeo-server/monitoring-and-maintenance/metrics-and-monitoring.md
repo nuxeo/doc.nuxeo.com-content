@@ -316,7 +316,7 @@ Note that period to report metrics are in second.
 
 ### <span style="line-height: 1.5625;">Graphite Dashboard</span>
 
-You can find an example of Graphite dashboard on GitHub: [https://github.com/nuxeo/nuxeo-runtime/blob/master/nuxeo-runtime-metrics/graphite/dashboard.json](https://github.com/nuxeo/nuxeo-runtime/blob/master/nuxeo-runtime-metrics/graphite/dashboard.json).
+You can find an example of Graphite dashboard on GitHub: [https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-runtime/nuxeo-runtime-metrics/graphite/dashboard.json](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-runtime/nuxeo-runtime-metrics/graphite/dashboard.json).
 
 You will have to edit the dashboard to replace the hostname (here it is `octopussy`).
 
@@ -328,7 +328,7 @@ Here is an extract of what this dashboard looks like when monitoring a daily ben
 
 ## Monitoring
 
-The Nuxeo Platform also comes with a set of default probes and administrative statuses for monitoring, that are provided by the [component Nuxeo Core Management](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.core.management.CoreManagementComponent). Both can be seen and managed [from JMX](#enabling-jmx) and from [Admin Center]({{page page='admin-tab-overview'}}).
+The Nuxeo Platform also comes with a set of default probes and administrative statuses for monitoring, that are provided by the [component Nuxeo Core Management](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewComponent/org.nuxeo.ecm.core.management.CoreManagementComponent). Both can be seen and managed [from JMX](#enabling-jmx) and from [Admin Center]({{page page='admin-tab-overview'}}).
 
 ### Administrative Status
 
@@ -344,7 +344,7 @@ By default only three statuses are defined:
 *   `adminMessage`: message to be displayed to all users,
 *   `smtpService`: defines if SMTP gateway can be used.
 
-Administrative Status can be configured and declared via the [`serviceDefinition` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--serviceDefinition).
+Administrative Status can be configured and declared via the [`serviceDefinition` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--serviceDefinition).
 
 ### Probes
 
@@ -355,7 +355,7 @@ Probes can be used to run a test on the target deployed platform. Probes can be 
 *   check VCS access,
 *   ...
 
-Probes can be defined via the[ `probes` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--probes).
+Probes can be defined via the[ `probes` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--probes).
 
 By default four probes are defined:
 
@@ -404,7 +404,7 @@ The Monitoring sections provides access to:
 
 #### Counters
 
-Counter are exposed via Automation API [Counters.GET](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Counters.GET)
+Counter are exposed via Automation API [Counters.GET](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewOperation/Counters.GET)
 
 Sample CURL call:
 

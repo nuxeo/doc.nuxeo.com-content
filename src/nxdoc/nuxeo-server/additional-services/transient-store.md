@@ -120,7 +120,7 @@ The nested configuration elements are:
 *   `firstLevelTTL`: TTL in minutes of the first level cache.
 *   `secondLevelTTL`: TTL in minutes of the second level cache.
 
-Have a look at the [default transient store configuration](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common/config/transient-store-config.xml.nxftl), defined in a template:
+Have a look at the [default transient store configuration](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common/config/transient-store-config.xml.nxftl), defined in a template:
 
 {{#> panel type='code' heading='Default Transient Store Configuration'}}
 
@@ -171,7 +171,7 @@ In a cluster environment the transient blob storage directory must be shared by 
 
 ### Parameter Storage
 
-The `SimpleTransientStore` implementation relies on Nuxeo's [in-memory cache implementation](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-core/nuxeo-core-cache/src/main/java/org/nuxeo/ecm/core/cache/InMemoryCacheImpl.java) which uses Google's Guava cache. **It is not distributed and not persistent** so should not be used in a clustered setting.
+The `SimpleTransientStore` implementation relies on Nuxeo's [in-memory cache implementation](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-core/nuxeo-core-cache/src/main/java/org/nuxeo/ecm/core/cache/InMemoryCacheImpl.java) which uses Google's Guava cache. **It is not distributed and not persistent** so should not be used in a clustered setting.
 
 The `RedisTransientStore` relies on [Redis]({{page page='nuxeo-and-redis'}}). **It is distributed and persistent.**
 

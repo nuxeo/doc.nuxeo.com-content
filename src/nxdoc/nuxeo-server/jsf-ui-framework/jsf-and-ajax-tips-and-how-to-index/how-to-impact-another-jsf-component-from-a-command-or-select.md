@@ -114,7 +114,7 @@ When i click on a button, another element should be hidden (or shown).
 
 #### Available Helper
 
-The Seam Component [selectionActions](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewSeamComponent/seam:selectionActions) has a method named `setStaticValue` that will retrieve attributes named `selectedValue` and `targetComponentId` from its originating tag. It will lookup the corresponding component in the tree and set the value given by the `selectedValue` attribute (which can also be an EL expression).
+The Seam Component [selectionActions](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewSeamComponent/seam:selectionActions) has a method named `setStaticValue` that will retrieve attributes named `selectedValue` and `targetComponentId` from its originating tag. It will lookup the corresponding component in the tree and set the value given by the `selectedValue` attribute (which can also be an EL expression).
 
 #### Sample Template Excerpt
 
@@ -172,11 +172,11 @@ When I select an element in a drop down list, another element should be displaye
 
 #### Available Helper
 
-The Seam Component [selectionActions](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewSeamComponent/seam:selectionActions) has a method named `setValueFromComponent` that will retrieve attributes named `sourceComponentId` and `targetComponentId` from its originating tag. It will lookup the corresponding source component in the tree, retrieve its current value, and set this value to the corresponding target component.
+The Seam Component [selectionActions](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewSeamComponent/seam:selectionActions) has a method named `setValueFromComponent` that will retrieve attributes named `sourceComponentId` and `targetComponentId` from its originating tag. It will lookup the corresponding source component in the tree, retrieve its current value, and set this value to the corresponding target component.
 
 #### Sample Template Excerpt
 
-This is an excerpt of the [widget template displaying additional information about a selected flavor](https://github.com/nuxeo/nuxeo-features/blob/master/localconf/nuxeo-localconf-web/src/main/resources/web/nuxeo.war/widgets/select_flavor_widget_template.xhtml) in local configuration:
+This is an excerpt of the [widget template displaying additional information about a selected flavor](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-features/localconf/nuxeo-localconf-web/src/main/resources/web/nuxeo.war/widgets/select_flavor_widget_template.xhtml) in local configuration:
 
 ```xml
 <h:panelGroup>
@@ -232,7 +232,7 @@ In a form, when i check some checkbox, additional input fields are shown.
 
 #### Available Helper
 
-The Seam Component [selectionActions](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewSeamComponent/seam:selectionActions) has a method named `setValueFromComponent` that will retrieve attributes named `sourceComponentId` and `targetComponentId` from its originating tag. It will lookup the corresponding source component in the tree, retrieve its current value, and set this value to the corresponding target component.
+The Seam Component [selectionActions](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewSeamComponent/seam:selectionActions) has a method named `setValueFromComponent` that will retrieve attributes named `sourceComponentId` and `targetComponentId` from its originating tag. It will lookup the corresponding source component in the tree, retrieve its current value, and set this value to the corresponding target component.
 
 Also, additional input fields to show are declared as standard sub-widgets to a widget of type `template` which is displaying the checkbox and holding the re-render logics.
 

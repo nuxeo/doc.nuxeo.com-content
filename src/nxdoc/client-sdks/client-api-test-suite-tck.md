@@ -206,7 +206,7 @@ Only the first part is strictly necessary.
 
 ##### Java Implementation
 
-[GitHub Link for CRUD operations tests suite](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/RemoteAutomationClientTCK.java#L81-L127)
+[GitHub Link for CRUD operations tests suite](https://github.com/nuxeo/nuxeo/blob/release-8.10/nuxeo-distribution/nuxeo-server-tests/src/test/java/org/nuxeo/ftest/server/ITRemoteAutomationClientTCK.java)
 
 ##### JavaScript Implementation
 
@@ -598,7 +598,7 @@ Date: Thu, 25 Jul 2013 14:20:03 GMT
 
 ##### Java Implementation
 
-[GitHub Link for Pagination operations tests suite](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/RemoteAutomationClientTCK.java#L129-L175)
+[GitHub Link for Pagination operations tests suite](https://github.com/nuxeo/nuxeo/blob/release-8.10/nuxeo-distribution/nuxeo-server-tests/src/test/java/org/nuxeo/ftest/server/ITRemoteAutomationClientTCK.java#L149-L222)
 
 ##### HTTP Capture
 
@@ -704,7 +704,7 @@ Date: Thu, 25 Jul 2013 15:24:47 GMT
 
 ##### Java Implementation
 
-[GitHub link for Blob operations tests suite](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/RemoteAutomationClientTCK.java#L177-L247)
+[GitHub link for Blob operations tests suite](https://github.com/nuxeo/nuxeo/blob/release-8.10/nuxeo-distribution/nuxeo-server-tests/src/test/java/org/nuxeo/ftest/server/ITRemoteAutomationClientTCK.java#L229-L311)
 
 ##### HTTP Capture
 
@@ -868,7 +868,7 @@ Date: Thu, 25 Jul 2013 15:35:16 GMT
 
     *   testText.txt,
     *   testBlob.bin.
-2.  Call&nbsp;`FileManager.Import`&nbsp;via batch API:
+2.  Call `FileManager.Import` via batch API:
 
     *   set currentDocument to /
 3.  Verify that:
@@ -891,7 +891,7 @@ XXX Commented HTTP capture
 2.  Upload one blob via batch manager:
 
     1.  testText.txt.
-3.  Call&nbsp;`Document.Update`&nbsp;with two properties:
+3.  Call `Document.Update` with two properties:
 
     *   `dc:description`
     *   `file:content`: reference Blob 1 from batch.
@@ -919,7 +919,7 @@ XXX Commented Http capture
 ##### Scenario
 
 1.  Create a File on / (`Document.Create`).
-2.  Call&nbsp;`Document.Update`:
+2.  Call `Document.Update`:
 
     1.  `dc:description`,
     2.  `dc:subjects`,
@@ -933,7 +933,7 @@ XXX Commented Http capture
 
 ##### Java Implementation
 
-[GitHub link for Complex Properties operations tests suite](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/RemoteAutomationClientTCK.java#L249-L295)
+[GitHub link for Complex Properties operations tests suite](https://github.com/nuxeo/nuxeo/blob/release-8.10/nuxeo-distribution/nuxeo-server-tests/src/test/java/org/nuxeo/ftest/server/ITRemoteAutomationClientTCK.java#L313-L361)
 
 ##### HTTP Capture
 
@@ -1043,7 +1043,7 @@ Date: Thu, 25 Jul 2013 15:45:25 GMT
 
 1.  Create a Folder on / (`Document.Create`).
 2.  Create three Files children.
-3.  Call `Resultset.PageProvider` with "`select&nbsp;` `dc:title ,&nbsp; dc:desciption ,&nbsp; ecm:type &nbsp;from Document where&nbsp; ecm:parentId` `&nbsp;= ?`" with:
+3.  Call `Resultset.PageProvider` with "`select` `dc:title, dc:desciption, ecm:type from Document where  ecm:parentId` `= ?`" with:
 
     1.  `queryParams` = Folder uuid,
     2.  `pageSize` = 2,
@@ -1072,8 +1072,8 @@ XXX Commented HTTP capture
 
     *   two properties:
 
-        *   `name` ,
-        *   `parentPath` : reference the parent of the document to create,
+        *   `name`,
+        *   `parentPath`: reference the parent of the document to create,
     *   one input:
 
         *   the POJO itself.
@@ -1094,7 +1094,7 @@ XXX Commented HTTP capture
 
 ##### Java Implementation
 
-[GitHub link for Business Object operations tests suite](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/RemoteAutomationClientTCK.java#L297-L319)
+[GitHub link for Business Object operations tests suite](https://github.com/nuxeo/nuxeo/blob/release-8.10/nuxeo-distribution/nuxeo-server-tests/src/test/java/org/nuxeo/ftest/server/ITRemoteAutomationClientTCK.java#L316-L394)
 
 ##### HTTP Capture
 
@@ -1252,7 +1252,7 @@ Support for fetching layouts definition associated to documents.
 
 <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><th colspan="1">Java Client</th><th colspan="1">JavaScript Client</th><th colspan="1">Python Client</th><th colspan="1">PHP Client</th><th colspan="1">C# Client</th><th colspan="1">Android Client</th><th colspan="1">Dart Client</th></tr><tr><td colspan="1">Compatibility</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Base</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">Create and read docs</td><td colspan="1">{{#> callout type='tip' }}
 
-[testCRUDSuite](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/RemoteAutomationClientTCK.java#L81-L127)
+[testCRUDSuite](https://github.com/nuxeo/nuxeo/blob/release-8.10/nuxeo-distribution/nuxeo-server-tests/src/test/java/org/nuxeo/ftest/server/ITRemoteAutomationClientTCK.java#L56-L111)
 
 {{/callout}}</td><td colspan="1">{{#> callout type='tip' }}
 
@@ -1260,7 +1260,7 @@ Support for fetching layouts definition associated to documents.
 
 {{/callout}}</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">Pagination</td><td colspan="1">{{#> callout type='tip' }}
 
-[testPaginationSuite](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/RemoteAutomationClientTCK.java#L129-L175)
+  [testPaginationSuite](https://github.com/nuxeo/nuxeo/blob/release-8.10/nuxeo-distribution/nuxeo-server-tests/src/test/java/org/nuxeo/ftest/server/ITRemoteAutomationClientTCK.java#L104-L111)
 
 {{/callout}}</td><td colspan="1">{{#> callout type='tip' }}
 
@@ -1268,7 +1268,7 @@ Support for fetching layouts definition associated to documents.
 
 {{/callout}}</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Blobs</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">Direct Blob upload</td><td colspan="1">{{#> callout type='tip' }}
 
-[testBlobSuite](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/RemoteAutomationClientTCK.java#L177-L247)
+[testBlobSuite](https://github.com/nuxeo/nuxeo/blob/release-8.10/nuxeo-distribution/nuxeo-server-tests/src/test/java/org/nuxeo/ftest/server/ITRemoteAutomationClientTCK.java#L196-L266)
 
 {{/callout}}</td><td colspan="1">{{#> callout type='tip' }}
 
@@ -1284,11 +1284,11 @@ Support for fetching layouts definition associated to documents.
 
 {{/callout}}</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">Marshaling</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">Complex properties</td><td colspan="1">{{#> callout type='tip' }}
 
-[testComplexPropSuite](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/RemoteAutomationClientTCK.java#L249-L295)
+[testComplexPropSuite](https://github.com/nuxeo/nuxeo/blob/release-8.10/nuxeo-distribution/nuxeo-server-tests/src/test/java/org/nuxeo/ftest/server/ITRemoteAutomationClientTCK.java#L249-L295)
 
 {{/callout}}</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">Custom marshaling</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">Business Objects</td><td colspan="1">{{#> callout type='tip' }}
 
-[testBOSuite](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/RemoteAutomationClientTCK.java#L297-L319)
+[testBOSuite](https://github.com/nuxeo/nuxeo/blob/release-8.10/nuxeo-distribution/nuxeo-server-tests/src/test/java/org/nuxeo/ftest/server/ITRemoteAutomationClientTCK.java#L297-L319)
 
 {{/callout}}</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Convenience</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">Static checks</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">Working with documents</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">Background upload/download</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">Caching</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">Advanced Exception management</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">Advanced Authentication</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">Layout Management</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>
 

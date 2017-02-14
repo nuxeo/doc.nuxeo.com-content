@@ -65,7 +65,7 @@ Since 5.8, it is easy to add your own action type to handle its configuration an
 
 {{! /excerpt}}
 
-You can take example on the "link" [action type registration](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-actions-jsf/src/main/resources/OSGI-INF/action-widgettypes-contrib.xml) for this. It is actually relying on widget types definition, here is a minimal definition for a custom action type:
+You can take example on the "link" [action type registration](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-jsf/nuxeo-platform-actions-jsf/src/main/resources/OSGI-INF/action-widgettypes-contrib.xml) for this. It is actually relying on widget types definition, here is a minimal definition for a custom action type:
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.forms.layout.LayoutStore"
@@ -107,7 +107,7 @@ The action template at "/incl/action/my_link_action_template.xhtml" may need to 
 *   `tab_content`: used to define what should be displayed in the content of a tab for this action type.
 *   `after_view`: used to define what should be displayed after the main rendering (e.g the action button), because that's useful to include content after the main form displaying an action bar, for instance. This mode is currently useful when defining fancyboxes that include a form.
 
-[Default action templates](https://github.com/nuxeo/nuxeo-jsf/tree/master/nuxeo-platform-actions-jsf/src/main/resources/web/nuxeo.war/incl/action) can also be browsed for examples.
+[Default action templates](https://github.com/nuxeo/nuxeo/tree/8.10/nuxeo-jsf/nuxeo-platform-actions-jsf/src/main/resources/web/nuxeo.war/incl/action) can also be browsed for examples.
 
 &nbsp;
 
@@ -115,13 +115,13 @@ The action template at "/incl/action/my_link_action_template.xhtml" may need to 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-*   [Standard Action Types]({{page page='standard-action-types'}})
-*   [Actions Overview]({{page page='actions-overview'}})
-*   [Action How-To Index]({{page page='action-how-to-index'}})
+- [Standard Action Types]({{page page='standard-action-types'}})
+- [Actions Overview]({{page page='actions-overview'}})
+- [Action How-To Index]({{page page='action-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in Studio documentation'}}
 
-*   [User Actions]({{page space='studio' page='user-actions'}})
-*   [User actions categories]({{page space='studio' page='user-actions-categories'}})
+- [User Actions]({{page space='studio' page='user-actions'}})
+- [User actions categories]({{page space='studio' page='user-actions-categories'}})
 
 {{/panel}}</div></div>

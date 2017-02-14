@@ -107,7 +107,7 @@ The property named&nbsp;`display` set on the layout configuration is enough to h
 
 ## {{> anchor 'display'}}Document Layouts Display
 
-The [documentLayout tag](http://community.nuxeo.com/api/nuxeo/latest/tlddoc/nxl/documentLayout.html) can be used to display the layouts of a document:
+The [documentLayout tag](http://community.nuxeo.com/api/nuxeo/8.10/tlddoc/nxl/documentLayout.html) can be used to display the layouts of a document:
 
 ```xml
 <div xmlns="http://www.w3.org/1999/xhtml"

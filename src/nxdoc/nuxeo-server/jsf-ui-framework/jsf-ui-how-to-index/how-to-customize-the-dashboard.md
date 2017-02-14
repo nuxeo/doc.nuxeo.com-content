@@ -169,7 +169,7 @@ In this how-to, let's go deeper in the customization of the dashboard: let's rep
 
 ### Getting the Extension to Override
 
-The extension defining the link **Dashboard** and the content of the tab is [<span class="componentTitle">org.nuxeo.ecm.user.center.dashboard.jsf.actions</span>](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.user.center.dashboard.jsf.actions--actions):
+The extension defining the link **Dashboard** and the content of the tab is [<span class="componentTitle">org.nuxeo.ecm.user.center.dashboard.jsf.actions</span>](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewContribution/org.nuxeo.ecm.user.center.dashboard.jsf.actions--actions):
 
 ```xml
   <extension target="org.nuxeo.ecm.platform.actions.ActionService"

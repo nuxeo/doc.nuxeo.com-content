@@ -456,7 +456,7 @@ try {
 
 ## REST Exposition of Core IO Export
 
-CoreIO default XML exports as bound using Restlet framework that is [still available](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.restAPI.service.PluggableRestletService--restlets) even if this has been superseded via JAX-RS.
+CoreIO default XML exports as bound using Restlet framework that is [still available](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.restAPI.service.PluggableRestletService--restlets) even if this has been superseded via JAX-RS.
 
 *   Export a single document as XML:
     `http://{server}:{port}/nuxeo/restAPI/{repository}/{uuid}/export?format=XML`

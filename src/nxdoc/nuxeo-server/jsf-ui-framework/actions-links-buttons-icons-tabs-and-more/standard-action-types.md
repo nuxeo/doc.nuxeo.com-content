@@ -81,7 +81,7 @@ Note that fancybox actions cannot currently be used as form actions (e.g present
 
 When referencing a XHTML template via the&nbsp;`include` property, if this template holds a form, it should be using the variable `fancyboxFormId` as its form id for the fancybox to be reopened on validation errors.
 
-The bulk edit action can be taken as an example, see the [action "CURRENT_SELECTION_EDIT" registration](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.actions--actions) and [referenced template](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/incl/bulk_edit_box.xhtml).
+The bulk edit action can be taken as an example, see the [action "CURRENT_SELECTION_EDIT" registration](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewContribution/org.nuxeo.ecm.platform.actions--actions) and [referenced template](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/incl/bulk_edit_box.xhtml).
 
 View online reference: [http://showcase.nuxeo.com/nuxeo/layoutDemo/fancyboxAction](http://showcase.nuxeo.com/nuxeo/layoutDemo/fancyboxAction)
 
@@ -119,13 +119,13 @@ View online reference: [http://showcase.nuxeo.com/nuxeo/layoutDemo/templateActio
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-*   [Actions Overview]({{page page='actions-overview'}})
-*   [Custom Action Types]({{page page='custom-action-types'}})
-*   [How to Add a Button in the JSF UI]({{page page='how-to-add-a-button-in-the-jsf-ui'}})
+- [Actions Overview]({{page page='actions-overview'}})
+- [Custom Action Types]({{page page='custom-action-types'}})
+- [How to Add a Button in the JSF UI]({{page page='how-to-add-a-button-in-the-jsf-ui'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in Studio documentation'}}
 
-*   [User Actions]({{page space='studio' page='user-actions'}})
-*   [User actions categories]({{page space='studio' page='user-actions-categories'}})
+- [User Actions]({{page space='studio' page='user-actions'}})
+- [User actions categories]({{page space='studio' page='user-actions-categories'}})
 
 {{/panel}}</div></div>

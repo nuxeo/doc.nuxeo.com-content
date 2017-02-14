@@ -164,6 +164,6 @@ The version number is changed by a Check In operation; either the minor version 
 
 ## Plugging In a New VersioningService Implementation
 
-For advanced uses, it's possible to plug in a new `VersioningService` implementation to define what happens at creation, save, check in and check out time. See the [VersioningService Javadoc](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/versioning/VersioningService.html) and the [versioningService extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--versioningService) documentation for more about this.
+For advanced uses, it's possible to plug in a new `VersioningService` implementation to define what happens at creation, save, check in and check out time. See the [VersioningService Javadoc](http://community.nuxeo.com/api/nuxeo/Nuxeo%20Platform-8.10/javadoc/org/nuxeo/ecm/core/versioning/VersioningService.html) and the [versioningService extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--versioningService) documentation for more about this.
 
 &nbsp;

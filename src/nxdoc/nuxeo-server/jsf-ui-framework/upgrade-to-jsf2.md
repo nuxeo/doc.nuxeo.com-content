@@ -580,7 +580,7 @@ Sample fix for [NXP-15566](https://jira.nuxeo.com/browse/NXP-15566) for instance
 
 # Advanced Low Level Changes
 
-*   JSF2 expects ajaxified actions performed inside a multipart for to be done in a frame. This behaviour has been patched to get back the old behaviour, see [fixmultipartajax.js](https://github.com/nuxeo/nuxeo-dm/blob/master/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/scripts/fixmultipartajax.js).
+*   JSF2 expects ajaxified actions performed inside a multipart for to be done in a frame. This behaviour has been patched to get back the old behaviour, see [fixmultipartajax.js](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-jsf/nuxeo-platform-ui-web/src/main/resources/META-INF/resources/org.nuxeo.jsf/fixmultipartajax.js).
 *   Nuxeo is shipped with [OmniFaces' view state patch](http://showcase.omnifaces.org/scripts/FixViewState) for [JAVASERVERFACES_SPEC_PUBLIC-790](https://java.net/jira/browse/JAVASERVERFACES_SPEC_PUBLIC-790), see [fixviewstate.unminified.js](https://github.com/nuxeo/nuxeo-dm/blob/master/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/resources/js/fixviewstate.unminified.js).
 *   Nuxeo is using a specific [URL management]({{page page='navigation-urls'}}) system. JSF2 changes now require resources corresponding to the view id to exist (even if a specific treatment or a redirection are handled afterwards).
 *   The `document` variable, that used to be exposed by layout system as an alias to the `value` variable, is not exposed anymore.

@@ -136,8 +136,8 @@ There are three tables used by the Audit Service: `NXP_LOGS`, `NXP_LOGS_EXTINFO`
 
 The Service API is composed of three services:
 
-* `AuditReader`: service for reading data from the audit logs. [More details](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.platform.audit.api.AuditReader).
-* `AuditLogger`: service for adding data into the audit logs. [More details](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.platform.audit.api.AuditLogger).
+* `AuditReader`: service for reading data from the audit logs. [More details](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewService/org.nuxeo.ecm.platform.audit.api.AuditReader).
+* `AuditLogger`: service for adding data into the audit logs. [More details](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewService/org.nuxeo.ecm.platform.audit.api.AuditLogger).
 * `AuditAdmin`: service for administrating the Audit Service.
 
 A set of methods allows the user to do common queries quiet easily like getting all the log entries for a document, getting a specific log by its id, etc.
@@ -196,7 +196,7 @@ There are two PageProviders that can be used for querying the Audit data store:
 * `AuditPageProvider`: allows to generate simple queries against Audit entries.
 * `DocumentHistoryReader`: allows to compute history for a given document.
 
-    [More details on the explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.audit.PageProviderservice.contrib--providers).
+    [More details on the explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewContribution/org.nuxeo.ecm.platform.audit.PageProviderservice.contrib--providers).
 
 A schema has been defined for basic Audit search: `basicauditsearch.xsd`. This schema is helpful for building a PageProvider feeding a ContentView with data from the Audit data store. An object `BasicAuditSearch` could be used to define queries on the audit data store.
 
@@ -262,7 +262,7 @@ If you are sending new Nuxeo core events and want them to be audited, you have t
 </extension>
 ```
 
-[More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--event)
+[More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--event)
 
 ### Extended Info{{> anchor 'extendedinfo'}}
 
@@ -306,7 +306,7 @@ For instance, the above contribution will add `modelId`, `modelName`, `worklowIn
 
 When the extension point is contributed, the data are stored into the `audit.elasticsearch.indexName` index for the Elastcisearch back-end and into the `NXP_LOGS_EXTINFO` and `NXP_LOGS_MAPEXTINFOS` tables for the legacy SQL back-end.
 
-[More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--extendedInfo)
+[More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--extendedInfo)
 
 ### Adapter
 
@@ -318,7 +318,7 @@ The contribution to the `adapter` extension point of the `org.nuxeo.ecm.platform
 </extension>
 ```
 
-[More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--adapter)
+[More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--adapter)
 
 ### Listener
 
@@ -331,7 +331,7 @@ A post commit asynchronous listener is defined and an Event Bundle, which is an 
 </extension>
 ```
 
-[More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--listener)
+[More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewContribution/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--listener)
 
 ### Queues
 
@@ -349,7 +349,7 @@ It is also possible to configure queues used by the Audit Service. Each queue is
 </extension>
 ```
 
-[More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.work.service--queues)
+[More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.core.work.service--queues)
 
 ### Hibernate - Legacy SQL Back-end Only
 
@@ -366,4 +366,4 @@ In the legacy SQL back-end, the Audit Service  uses Hibernate as a JPA provider.
 </extension>
 ```
 
-[More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.persistence.PersistenceComponent--hibernate)
+[More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.core.persistence.PersistenceComponent--hibernate)

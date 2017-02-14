@@ -405,7 +405,7 @@ The&nbsp;`configuration` element is optional, but when defined it'll be used to 
 *   `fields`: this configuration is subject to change, but it is currently used to define what kind of widgets types are available for a given field type.
 *   `categories`: the list of categories for this widget type. This is a marker for display and it can also be used to facilitate exports. The default categories are "document", "summary", "listing" and "dev".
 *   `properties`: the layouts to use to display the available widget properties depending on the mode. This is a standard layout configuration, using the property name as field. Properties hidden in the mode "view_reference" will only be displayed on the reference table, and will not be displayed for configuration in Studio or preview in the Layout showcase.
-*   The widget type property `dev_template` can also be used to specify a custom template when displaying this widget type in [dev mode]({{page page='how-to-activate-ui-development-mode'}}). The default template for widget type is [widget_dev_template.xhtml](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-forms-layout-client/src/main/resources/web/nuxeo.war/widgets/dev/widget_dev_template.xhtml), a sample custom dev template is [action_widget_type_dev_template.xhtml](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-actions-jsf/src/main/resources/web/nuxeo.war/widgets/actions/dev/action_widget_type_dev_template.xhtml).
+*   The widget type property `dev_template` can also be used to specify a custom template when displaying this widget type in [dev mode]({{page page='how-to-activate-ui-development-mode'}}). The default template for widget type is [widget_dev_template.xhtml](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-jsf/nuxeo-platform-forms-layout-client/src/main/resources/web/nuxeo.war/widgets/dev/widget_dev_template.xhtml), a sample custom dev template is [action_widget_type_dev_template.xhtml](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-jsf/nuxeo-platform-actions-jsf/src/main/resources/web/nuxeo.war/widgets/actions/dev/action_widget_type_dev_template.xhtml).
 
 * * *
 
@@ -413,16 +413,16 @@ The&nbsp;`configuration` element is optional, but when defined it'll be used to 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
 
-*   [Standard Widget Types]({{page page='standard-widget-types'}})
-*   [Custom Layout and Widget Templates]({{page page='custom-layout-and-widget-templates'}})
-*   [Layout and Widget Modes]({{page page='layout-and-widget-modes'}})
+- [Standard Widget Types]({{page page='standard-widget-types'}})
+- [Custom Layout and Widget Templates]({{page page='custom-layout-and-widget-templates'}})
+- [Layout and Widget Modes]({{page page='layout-and-widget-modes'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-tos '}}
 
-*   [How to Control the Display Mode of a Widget]({{page page='how-to-control-the-display-mode-of-a-widget'}})
-*   [How to Use a Generic Widget in Layouts]({{page page='how-to-use-a-generic-widget-in-layouts'}})
-*   [How to Refresh the Task Widget on the Summary Tab]({{page page='how-to-refresh-the-task-widget-on-the-summary-tab'}})
-*   [How to Add a New Widget to the Default Summary Layout]({{page page='how-to-add-a-new-widget-to-the-default-summary-layout'}})
-*   [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
+- [How to Control the Display Mode of a Widget]({{page page='how-to-control-the-display-mode-of-a-widget'}})
+- [How to Use a Generic Widget in Layouts]({{page page='how-to-use-a-generic-widget-in-layouts'}})
+- [How to Refresh the Task Widget on the Summary Tab]({{page page='how-to-refresh-the-task-widget-on-the-summary-tab'}})
+- [How to Add a New Widget to the Default Summary Layout]({{page page='how-to-add-a-new-widget-to-the-default-summary-layout'}})
+- [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
 
 {{/panel}}</div></div>

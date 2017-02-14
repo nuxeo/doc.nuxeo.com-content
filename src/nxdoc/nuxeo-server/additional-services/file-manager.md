@@ -82,7 +82,7 @@ The File Manager service is a traditional Nuxeo Platform service that offers som
 
 ## Customising and Using the File Manager Service
 
-*   The File Manager service has a plugin architecture, so that it is possible to contribute different policies depending on the MIME type of the file and the context. The default Nuxeo Platform use cases of the File Manager can be customised reading the documentation of the [file manager service extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--plugins). There are also means of [controlling the versioning policy](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--versioning) of documents updated via this channel. Finally, there is a helper for [implementing binary unicity checks](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--unicity).
+*   The File Manager service has a plugin architecture, so that it is possible to contribute different policies depending on the MIME type of the file and the context. The default Nuxeo Platform use cases of the File Manager can be customised reading the documentation of the [file manager service extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--plugins). There are also means of [controlling the versioning policy](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--versioning) of documents updated via this channel. Finally, there is a helper for [implementing binary unicity checks](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--unicity).
 *   The File Manager can be called and used in your custom Java code with the standard service call pattern:
 
     ```
@@ -90,7 +90,7 @@ The File Manager service is a traditional Nuxeo Platform service that offers som
     DocumentModel createdDoc = fileManager.createDocumentFromBlob(coreSession, blob, path, true, fileName);
     ```
 
-*   And you can also use the [dedicated](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/FileManager.Import) Automation operation, which provides a way to create in one REST call a document from a binary, or to create easily a document from a blob in an Automation chain.
+*   And you can also use the [dedicated](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewOperation/FileManager.Import) Automation operation, which provides a way to create in one REST call a document from a binary, or to create easily a document from a blob in an Automation chain.
 
 ## Implementing Your Own Plugin
 
