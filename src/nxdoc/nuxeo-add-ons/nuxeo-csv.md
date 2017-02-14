@@ -188,7 +188,7 @@ history:
 ---
 {{! excerpt}}
 
-The [Nuxeo CSV add-on](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv) enables users to proceed to a bulk import of documents in the Nuxeo Platform using a CSV file. This add-on enables users to create documents with their metadata filled in, to import files with their main attachment or to create a tree structure.
+The [Nuxeo CSV addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv) enables users to proceed to a bulk import of documents in the Nuxeo Platform using a CSV file. This add-on enables users to create documents with their metadata filled in, to import files with their main attachment or to create a tree structure.
 
 {{! /excerpt}} {{! multiexcerpt name='nuxeo_csv_functional_introduction'}}
 
@@ -243,6 +243,10 @@ some new
 lines"
 "another-file","File","Another File","description without new line"
 ```
+
+In the example above:
+
+- `name` must be a unique value. If a CSV file contains more than one line with the same `name` only a single document with that name will be imported.
 
 {{#> callout type='note' }}
 
