@@ -179,6 +179,8 @@ history:
         version: '1'
 
 ---
+{{! multiexcerpt name='7.10-to-8.10-following-FT-upgrade-page'}}
+
 ## From LTS 2015 to 8.1
 
 ### Installation and Configuration
@@ -725,7 +727,7 @@ The following addons are deprecated with the release of Nuxeo Platform LTS 2016:
 * [Upgrade notes for LTS 2016](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%228.10%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 * [Release notes for LTS 2016](http://nuxeo.github.io/releasenotes/8.10/)
 
-{{> end_of_tabs }}
+{{! /multiexcerpt}}
 
 * * *
 
