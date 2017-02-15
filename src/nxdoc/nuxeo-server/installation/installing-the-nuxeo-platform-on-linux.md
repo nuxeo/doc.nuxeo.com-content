@@ -458,13 +458,13 @@ While setting `nuxeo.tmp.dir` property in nuxeo.conf, we recommend not to use th
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Next Steps'}}
 
-*   [Setup Best Practices]({{page page='setup-best-practices'}})
-*   [Server Start and Stop]({{page page='server-start-and-stop'}})
+- [Setup Best Practices]({{page page='setup-best-practices'}})
+- [Server Start and Stop]({{page page='server-start-and-stop'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
 
-*   [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
-*   [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
-*   [Quick Start Dev Guide]({{page page='start-customizing-the-nuxeo-platform'}})
+- [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
+- [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
+- [Quick Start Dev Guide]({{page page='start-customizing-the-nuxeo-platform'}})
 
 {{/panel}}</div></div>
