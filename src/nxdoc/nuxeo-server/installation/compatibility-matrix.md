@@ -111,7 +111,7 @@ The Nuxeo Platform can be based on [Tomcat](http://tomcat.apache.org/). Supporte
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='supported-app-servers-static-war'}}
-Nuxeo is shipped with an embedded Tomcat server but can also be packed as a static WAR that can be deployed additional targets, such as JBoss Wildfly. See [Run as A Static War]({{page page='deploying-as-a-standard-static-war'}}).
+Nuxeo is shipped with an embedded Tomcat server.
 {{! /multiexcerpt}}
 
 
