@@ -277,7 +277,7 @@ Public
 [User documentation]({{page space='userdoc' page='nuxeo-agenda'}})
 </td>
 <td colspan="1">
-[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda?version=1.4.1)
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda?version=1.4.2)
 </td>
 </tr>
 <tr>
@@ -322,7 +322,7 @@ Registered access
 [Documentation]({{page page='nuxeo-connect-report-tools'}})
 </td>
 <td colspan="1">
-[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report?version=0.0.0)
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report?version=0.0.1)
 </td>
 </tr>
 <tr>
