@@ -4,11 +4,9 @@ review:
     comment: ''
     date: '2016-12-07'
     status: ok
-    labels:
+labels:
       - lts2016-ok
 toc: true
-labels:
-    - content-review-lts2016
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons
@@ -127,6 +125,13 @@ history:
 ![]({{file name='NuxeoCCConnector.png'}} ?w=200,h=303,border=true,align=center)
 
 The [Nuxeo Adobe CC Connector addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace) enables designers to import assets into an InDesign, Photoshop or Illustrator document directly from the Nuxeo repository. Link to the repository is maintained so as to facilitate updates of the referenced assets.
+
+## Requirements
+### Nuxeo Platform Requirements
+The connector is compliant with Nuxeo LTS 2015 and Nuxeo LTS 2016.
+
+### Adobe CC Requirements
+The connector is compliant with CC 2015 and 2017.
 
 ## Installation
 
