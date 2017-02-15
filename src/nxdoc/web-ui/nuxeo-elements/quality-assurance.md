@@ -151,7 +151,7 @@ Depending on your environment, you perform searches with Nuxeo Server on top of 
 For Elasticsearch (ES), use `pageproviders` which [can be activated for ES](https://doc.nuxeo.com/710/nxdoc/how-to-make-a-page-provider-or-content-view-query-elasticsearch-index/) via the `nuxeo.conf` file and the following Nuxeo elements with related properties:
 
 - [`nuxeo-page-provider`](http://nuxeo.github.io/nuxeo-elements/components/nuxeo-elements/#nuxeo-page-provider) with the property `provider` set
-- [`nuxeo-operation`](http://nuxeo.github.io/nuxeo-elements/components/nuxeo-elements/#nuxeo-operation) with the operation [`Repository.PageProvider`](http://explorer.nuxeo.com/nuxeo/site/distribution/cap-8.3/viewOperation/Repository.Query)
+- [`nuxeo-operation`](http://nuxeo.github.io/nuxeo-elements/components/nuxeo-elements/#nuxeo-operation) with the operation [`Repository.PageProvider`](http://explorer.nuxeo.com/nuxeo/site/distribution/server-8.10/viewOperation/Repository.Query)
 
 ## Test Strategies
 
@@ -354,4 +354,4 @@ http://NUXEO_SERVER/nuxeo/api/v1/query?currentPageIndex=0&pageSize=10&query=SELE
 **We recommend that you**:
 
 - use page providers in general (see above in `Performance Strategies > Search`)
-- use [`Repository.Query`](http://explorer.nuxeo.com/nuxeo/site/distribution/cap-8.3/viewOperation/Repository.Query) operation with [`nuxeo-operation`](http://nuxeo.github.io/nuxeo-elements/components/nuxeo-elements/#nuxeo-operation) element if you still want to search via 'direct' queries.
+- use [`Repository.Query`](http://explorer.nuxeo.com/nuxeo/site/distribution/server-8.10/viewOperation/Repository.Query) operation with [`nuxeo-operation`](http://nuxeo.github.io/nuxeo-elements/components/nuxeo-elements/#nuxeo-operation) element if you still want to search via 'direct' queries.

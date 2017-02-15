@@ -285,4 +285,4 @@ Here is a sample configuration file containing everything you need to set up the
 
 ## Source Code
 
-The source code of the Shibboleth authentication module can be found as part of the [`nuxeo-platform-login` add-on on GitHub](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/).
+The source code of the Shibboleth authentication module can be found as part of the [`nuxeo-platform-login` add-on on GitHub](https://github.com/nuxeo/nuxeo/tree/8.10/nuxeo-services/login).

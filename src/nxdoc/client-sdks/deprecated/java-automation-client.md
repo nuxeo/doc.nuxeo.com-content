@@ -1087,7 +1087,7 @@ Let's see an example.
 
 ## GitHub Nuxeo Automation Tests
 
-Here is the complete code of the example. For more examples, see the unit tests in [`nuxeo-automation-test`](https://github.com/nuxeo/nuxeo-features/tree/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test) project.
+Here is the complete code of the example. For more examples, see the unit tests in [`nuxeo-automation-test`](https://github.com/nuxeo/nuxeo/tree/8.10/nuxeo-features/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test) project.
 
 ## {{> anchor 'automation-client-service-adapter'}}Automation Client Service Adapter
 

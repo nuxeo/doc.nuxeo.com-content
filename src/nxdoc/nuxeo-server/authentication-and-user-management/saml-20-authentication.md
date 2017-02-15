@@ -150,7 +150,7 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
     </component>
     ```
 
-    You can find more examples here: [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample).
+    You can find more examples here: [https://github.com/nuxeo/nuxeo/tree/8.10/nuxeo-services/login/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/8.10/nuxeo-services/login/nuxeo-platform-login-saml2/sample).
 
 1.  Configure the user attributes mapping for your identity provider's response. Either add a [XML contribution]({{page page='how-to-contribute-to-an-extension'}}) into your Studio project or in the previous XML component. This mapping configuration can be achieved by providing a JavaScript or Groovy script. A sample is provided below using JavaScript code.
 
@@ -237,9 +237,9 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 
 ## Sources
 
-Sources of the addon can can be found at [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/).
+Sources of the addon can can be found at [https://github.com/nuxeo/nuxeo/tree/8.10/nuxeo-services/login/nuxeo-platform-login-saml2](https://github.com/nuxeo/nuxeo/tree/8.10/nuxeo-services/login/nuxeo-platform-login-saml2).
 
-You need to build the JAR and follow the sample at [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2//sample).
+You need to build the JAR and follow the sample at [https://github.com/nuxeo/nuxeo/tree/8.10/nuxeo-services/login/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/8.10/nuxeo-services/login/nuxeo-platform-login-saml2/sample).
 
 ## {{> anchor 'saml20_presentation'}}Background on SAML 2.0
 

@@ -93,7 +93,7 @@ The platform allows to use the HTTP REST API provided by the Elasticsearch back 
 
 ## Principle
 
-Elasticsearch exposes a search API to request indexes with HTTP requests (see [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html)). Elasticsearch does not perform authentication or authorization. The purpose of the [Nuxeo Elasticsearch Passthrough](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only) is to expose a limited set of Read Only Elasticsearch HTTP REST API, taking in account the Nuxeo authentication and authorization.
+Elasticsearch exposes a search API to request indexes with HTTP requests (see [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html)). Elasticsearch does not perform authentication or authorization. The purpose of the [Nuxeo Elasticsearch Passthrough](https://github.com/nuxeo/nuxeo/tree/8.10/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only) is to expose a limited set of Read Only Elasticsearch HTTP REST API, taking in account the Nuxeo authentication and authorization.
 
 Concretely, HTTP requests are not sent to the Elasticsearch back end but addressed to the Nuxeo Platform which will rework the query to add a filter according to a Principal and forward them to the Elasticsearch cluster.
 

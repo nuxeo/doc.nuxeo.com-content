@@ -94,8 +94,8 @@ We list here all the useful available workflow APIs if you want to programmatica
 
 You can read the javadoc of the workflow engine main services:
 
-*   The [DocumentRouting Service](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/platform/routing/api/DocumentRoutingService.html)
-*   The [Task Service](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/platform/task/TaskService.html)
+*   The [DocumentRouting Service](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/platform/routing/api/DocumentRoutingService.html)
+*   The [Task Service](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/platform/task/TaskService.html)
 
 Note that most of the time provided Automation operations will do what you want to do and are easier to use.
 

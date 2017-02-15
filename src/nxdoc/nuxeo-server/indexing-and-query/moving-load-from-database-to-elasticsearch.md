@@ -103,12 +103,12 @@ ElasticSearchService ess = Framework.getLocalService(ElasticSearchService.class)
 DocumentModelList docs = ess.query(new NxQueryBuilder(session).nxql(nxql).limit(-1)); // do we need to load all documents ?
 ```
 
-The first difference is that using `session.query` all the documents are returned while using Elasticsearch there is a default limit of&nbsp;`10` documents. To get all the documents use a limit of `-1`. Think twice before using the `-1` limit: loading all the documents can affect performance especially if the query is dynamic and can match all the documents in the repository. Note that with a limit set to `0` you can get the total results size (using `docs.totalSize()`) without loading any documents.
+The first difference is that using `session.query` all the documents are returned while using Elasticsearch there is a default limit of `10` documents. To get all the documents use a limit of `-1`. Think twice before using the `-1` limit: loading all the documents can affect performance especially if the query is dynamic and can match all the documents in the repository. Note that with a limit set to `0` you can get the total results size (using `docs.totalSize()`) without loading any documents.
 
 Another difference is that documents that are searchable at time `**t**` may be different between database and Elasticsearch:
 
 *   When using the repository API, a document is searchable after a modification once there is a `session.save()` or after the transaction commit for others sessions.
-*   When using Elasticsearch a document is searchable after a modification only when:&nbsp; the transaction is committed AND asynchronous indexing job is done AND Elasticsearch index is refreshed, which happens every second by default.
+*   When using Elasticsearch a document is searchable after a modification only when: the transaction is committed AND asynchronous indexing job is done AND Elasticsearch index is refreshed, which happens every second by default.
 
 For instance migrating this code:
 
@@ -158,7 +158,7 @@ And you gain the limit/offset options.
 
 {{#> callout type='warning' }}
 
-For now the select clause support is limited to scalar properties. See the page [Elasticsearch limitations]({{page space='NXDOC' page='Elasticsearch Indexing+Logic#ElasticsearchIndexingLogic-SearchingandLimitations'}}) for more information.
+For now the select clause support is limited to scalar properties. See the page [Elasticsearch limitations]({{page version='810' space='nxdoc' page='elasticsearch-indexing-logic'}}#searching-and-limitations) for more information.
 
 {{/callout}}
 
@@ -201,9 +201,9 @@ docs = ess.query(new NxQueryBuilder(session).nxql(nxql).searchOnAllRepositories(
 
 ### Using the native Elasticsearch HTTP API
 
-The [nuxeo-elasticsearch-http-read-only](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/) addon exposes&nbsp;a limited set of Read Only Elasticsearch HTTP REST API, taking in account the Nuxeo authentication and authorization.
+The [nuxeo-elasticsearch-http-read-only](https://github.com/nuxeo/nuxeo/tree/8.10/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only) addon exposes a limited set of Read Only Elasticsearch HTTP REST API, taking in account the Nuxeo authentication and authorization.
 
-See the addon [README](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/) for more information.
+See the addon [README](https://github.com/nuxeo/nuxeo/tree/8.10/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only) for more information.
 
 &nbsp;
 

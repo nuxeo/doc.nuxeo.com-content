@@ -419,7 +419,7 @@ Reads content from Google Drive
 </td><td colspan="1">
 
 - [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
-- [Sources](https://github.com/nuxeo/nuxeo-liveconnect/tree/master/nuxeo-liveconnect-google-drive-core)
+- [Sources](https://github.com/nuxeo/nuxeo-liveconnect/tree/8.10/nuxeo-liveconnect-google-drive-core)
 
 </td></tr><tr><td colspan="1">
 
@@ -440,7 +440,7 @@ Reads content from Dropbox
 </td><td colspan="1">
 
 - [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
-- [Sources](https://github.com/nuxeo/nuxeo-liveconnect/tree/master/nuxeo-liveconnect-dropbox-core)
+- [Sources](https://github.com/nuxeo/nuxeo-liveconnect/tree/8.10/nuxeo-liveconnect-dropbox-core)
 
 </td></tr><tr><td colspan="1">
 
