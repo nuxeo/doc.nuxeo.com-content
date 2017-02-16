@@ -2,10 +2,10 @@
 title: Platform as a Service
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-02-01'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - deployment
     - architecture
     - excerpt
@@ -134,7 +134,7 @@ The Nuxeo Platform provides the tools for achieving that:
     *   The components you want to build for your custom application
     *   The components each project / client may want to build
 *   Tools to make configuration and extension building easy
-    *   Nuxeo Studio: to manage all your business configuration
+    *  Nuxeo Studio: to manage all your business configuration
     *  Nuxeo Generator: to build extensions
 *   A packaging model and deployment system
 
@@ -229,7 +229,7 @@ That's because we are convinced that this approach has much more value that "sta
 
 ### nuxeo.io: A Container Factory
 
-nuxeo.io is the result of the work we have been doing for on the platform as a service approach. It is an application factory relying on a container-based execution grid.
+nuxeo.io is the result of the work we have been doing for on the Platform as a Service  (PaaS) approach. It is an application factory relying on a container-based execution grid.
 
 Basically, `nuxeo.io` is an infrastructure that provides tools to automate the whole process:
 
@@ -252,6 +252,7 @@ This approach allows to optimize the run infrastructure, even when running on vi
 *   Multiple containers can be run on the same VM
 *   Containers can be passivated when not needed anymore
 *   Containers can be restarted very quickly when needed
+*   Orchestrator manages availability of the containers and ensures resilience.
 
 ![](https://www.lucidchart.com/publicSegments/view/545056a0-bc98-464d-9ff2-61b30a0090b1/image.png)
 
@@ -262,25 +263,16 @@ Because lightweight containers are cheaper to create or to shutdown, this 2-leve
 To manage this container factory `nuxeo.io` is based on several key components:
 
 *   Docker: as the lightweight container system
-*   CoreOS: as system host for running the Docker container
-    *   Fleet: as manager to distribute services across the cluster
-    *   etcd: as distributed registry
-*   Gogeta: as dynamic load balancer
-*   nuxeo.io manager: the Nuxeo-based application used to control the whole system
+*   Rancher: as the containers orchestation layer.
+*   etcd: as distributed registry
+*   XXX: as dynamic load balancer
+*   arken: the Nuxeo-based layer to control deployments of Nuxeo Applications in there
+*   nuxeo.io manager: a web ui to offer ability to start / stop instances from a user-friendly web interface.
 
 ![](https://www.lucidchart.com/publicSegments/view/5450599b-5a40-4a34-8243-49f40a005489/image.png)
 
-nuxeo.io can run on AWS leveraging RDS and S3 or on Vagrant / VMWare. The full technology stack can be available for on premises installation.
+nuxeo.io can run on AWS leveraging RDS and S3 or on Vagrant / VMWare. The full technology stack can be available for on premises installation, please contact Nuxeo if you are interested.
 
-### nuxeo.io, IDM and Other Services
-
-We are currently working on adding more services to nuxeo.io so that applications running on nuxeo.io can be even easier to deploy.
-
-One of the services we plan to introduce is Nuxeo IDM for having a central User management service. The idea is to allow to manage all the users from one central location and simply assign them to the different nuxeo.io based applications.
-
-We also plan to provide a service gateway so that nuxeo.io based applications can easily leverage Cloud based services like Push, Conversion.
-
-![](https://www.lucidchart.com/publicSegments/view/54510595-bd24-4a69-9151-71340a008ac6/image.png)
 
 ## Examples of nuxeo.io Usage
 
@@ -308,18 +300,5 @@ We realized that in some context / company, building the required development en
 
 Here again nuxeo.io provides a clean solution, we just need to have the underlying IaaS provider: either AWS, Vagrant or VMWare.
 
-### Subsidiaries / Regional Deployment
-
-Let's consider a use case where in a large international company each region must have its own "flavor" of the corporate DAM.
-
-However, when looking in more details, each region should have access to two repositories:
-
-*   A corporate repository, shared across all regions
-*   A local repository, specific to one region
-
-The Nuxeo Platform and nuxeo.io provides the required infrastructure:
-
-*   Platform as a Service
-*   Multi-repositories support
-
-![](https://www.lucidchart.com/publicSegments/view/54511437-a558-457c-a92e-551e0a0090b1/image.png)
+### SaaS Vendors
+nuxeo.io is the ideal architecture if you are to host a service implemented with Nuxeo Platform, from a time and cost perspectives, while keeping the possibility for each of your customers to benefit from the full customisation capabilities of the Nuxeo Platform.
