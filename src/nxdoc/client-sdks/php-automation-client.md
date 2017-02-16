@@ -177,6 +177,30 @@ For a given `url`:
 $url = 'http://localhost:8080/nuxeo';
 ```
 
+### Library import
+
+Download the latest stable release [Nuxeo Automation PHP Client 1.5.0](https://github.com/nuxeo/nuxeo-automation-php-client/archive/1.5.0.tar.gz).
+
+Composer:
+
+```
+  "require": {
+    "nuxeo/nuxeo-automation-php-client": "~1.5.0"
+  }
+```
+
+### Usage
+
+#### Creating a Client
+
+The following documentation and samples applies for the 1.5 and newer versions. Calls to the Automation API for previous versions of the client will require adjustments.
+
+For a given `url`:
+
+```php
+$url = 'http://localhost:8080/nuxeo';
+```
+
 And given credentials:
 
 ```php
@@ -185,9 +209,24 @@ use Nuxeo\Client\Api\NuxeoClient;
 $client = new NuxeoClient($url, 'Administrator', 'Administrator');
 ```
 
+Options:
+
 ```php
 // For defining all schemas
 $client = $client->schemas("*");
+```
+
+```php
+// For changing authentication method
+
+use Nuxeo\Client\Api\Auth\PortalSSOAuthentication;
+use Nuxeo\Client\Api\Auth\TokenAuthentication;
+
+// PortalSSOAuthentication with nuxeo-platform-login-portal-sso
+$client = $client->setAuthenticationMethod(new PortalSSOAuthentication($secret, $username));
+
+// TokenAuthentication
+$client = $client->setAuthenticationMethod(new TokenAuthentication($token));
 ```
 
 #### APIs
@@ -212,8 +251,8 @@ $result = $operation->execute(Documents::className);
 ```
 
 ```php
-use Nuxeo\Client\Api\Objects\Blob;
-use Nuxeo\Client\Api\Objects\Blobs;
+use Nuxeo\Client\Api\Objects\Blob\Blob;
+use Nuxeo\Client\Api\Objects\Blob\Blobs;
 
 // To upload|download blob(s)
 
