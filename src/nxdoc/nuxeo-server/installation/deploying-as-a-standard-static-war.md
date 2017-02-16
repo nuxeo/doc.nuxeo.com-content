@@ -6,7 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: This page provides instructions to generate a static WAR distribution and deploy it in a Tomcat or WildFly distribution.
+        excerpt: This page provides instructions to generate a static WAR distribution and deploy it in a Tomcat.
         level: Advanced
         tool: Terminal
         topics: 'Distribution, Static WAR'
@@ -229,8 +229,6 @@ Then, you can use the produced Nuxeo WAR in an environment where `custom.nuxeo.d
 
 {{/callout}}
 
-&nbsp;
-
 ## Creating a Nuxeo Static WAR Distribution
 
 Here is the way to create your own static WAR distribution:
@@ -296,23 +294,7 @@ The target database will be the one you defined in your source Nuxeo instance, a
 
 See [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}}) for more details about these config parameters of the Nuxeo Platform.
 
-If you need to change the values for these paths, setting System properties is not enough: you must add&nbsp;`context-param` entries in the Nuxeo `WEB-INF/web.xml` file (see [JavaDoc of NuxeoStarter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/deployment/NuxeoStarter.html) for more details).
-
-## Installing Nuxeo in the Target WildFly
-
-The&nbsp;`webapp/nuxeo` folder content should be installed in your deployment profile&nbsp; (i.e.: `standalone/deployment/nuxeo.war`). You should then augment the Nuxeo webapp libraries (i.e.: `WEB-INF/lib`) by the `lib/` and `endorsed/` folders content.
-
-The target database will be the one you defined in your source Nuxeo instance, and the default for the Nuxeo directories are:
-
-*   `nuxeo.config.dir`: `WEB-INF` directory,
-*   `nuxeo.runtime.home`: `$WILDFLY_HOME/nuxeo,`
-*   `nuxeo.data.dir`: `$`WILDFLY`_HOME/nuxeo/data,`
-*   `nuxeo.tmp.dir`: `$`WILDFLY`_HOME/nuxeo/tmp,`
-*   `nuxeo.web.dir`: `$`WILDFLY`_HOME/nuxeo/web` (for WebEngine modules).
-
-See [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}}) for more details about these config parameters of Nuxeo.
-
-If you need to change the values for these paths, setting System properties is not enough: you must add&nbsp;`context-param` entries in the Nuxeo `WEB-INF/web.xml` file (see [JavaDoc of NuxeoStarter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/deployment/NuxeoStarter.html) for more details).
+If you need to change the values for these paths, setting System properties is not enough: you must add `context-param` entries in the Nuxeo `WEB-INF/web.xml` file (see [JavaDoc of NuxeoStarter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/deployment/NuxeoStarter.html) for more details).
 
 ## Upgrading or Installing Hotfixes
 

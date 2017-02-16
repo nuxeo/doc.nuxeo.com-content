@@ -96,12 +96,11 @@ The Nuxeo Platform can be based on [JBoss](http://www.jboss.org/jbossas/) or [To
 {{! multiexcerpt name='supported-app-servers-versions'}}
 <ul>
 <li>Tomcat 7.0.69</li>
-<li>JBoss WildFly 8.1.0</li>
 </ul>
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='supported-app-servers-static-war'}}
-Nuxeo is shipped with an embedded Tomcat server but can also be packed as a static WAR that can be deployed additional targets, such as JBoss Wildfly. See [Run as A Static War]({{page page='deploying-as-a-standard-static-war'}}).
+Nuxeo is shipped with an embedded Tomcat server.
 {{! /multiexcerpt}}
 
 
