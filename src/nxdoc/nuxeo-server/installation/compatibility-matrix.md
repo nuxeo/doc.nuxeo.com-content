@@ -91,7 +91,7 @@ Note that Nuxeo Server is shipped embedding H2 database, for quick evaluation pu
 
 ## Application Servers
 
-The Nuxeo Platform can be based on [JBoss](http://www.jboss.org/jbossas/) or [Tomcat](http://tomcat.apache.org/). Supported versions are:
+The Nuxeo Platform can be based on [Tomcat](http://tomcat.apache.org/). Supported version is:
 
 {{! multiexcerpt name='supported-app-servers-versions'}}
 <ul>
