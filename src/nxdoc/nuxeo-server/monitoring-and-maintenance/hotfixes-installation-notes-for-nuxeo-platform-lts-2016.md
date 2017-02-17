@@ -79,7 +79,9 @@ The level of use needed  to stop an *unregistered instance with hotfixes* has be
 Nevertheless, it is recommended to register your test instances, especially if you wish to test features that require heavy usage (e.g. load testing or mass import).
 
 **How Often Do I Need to Register My Instance?** </br>
+{{#> callout type='warning' }}
 Registration tokens are valid until your current contract's expiration date. When renewing your Nuxeo Online Services subscription, you should register your instances again.
+{{/callout}}
 
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
