@@ -402,7 +402,7 @@ Amongst the additional fields, you can indicate the components the tickets is ab
 
 This field is mainly used for statistic purposes, since it enables us to know which components require some developments.
 
-## {{> anchor 'field-additional-participant-group'}} <label for="customfield_10140">Additional Participant Groups</label>
+## {{> anchor 'field-additional-participant-group'}} Additional Participant Groups
 
 This field enables to share a ticket with a group of users. This is particularly useful for customers with several contacts.
 
