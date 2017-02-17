@@ -96,7 +96,7 @@ nuxeo.dbs.cache.concurrencyLevel=10
 nuxeo.dbs.cache.ttl=10
 ```
 
-### Orphan Version Cleanup
+### Orphan Versions Cleanup
 
 [NXP-14187](https://jira.nuxeo.com/browse/NXP-14187) addresses the cleanup of orphan versions, left after a recursive delete (deletion of a folder). However this cleanup is disabled by default. To enable it, you have to add the following contribution:
 
