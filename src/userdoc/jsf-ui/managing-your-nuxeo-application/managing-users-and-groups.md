@@ -400,6 +400,7 @@ Deleting a user is a permanent action.
 To delete a user, go to **Admin Center**&nbsp;> **Users & groups**. Search a user and click on the user's name to open his or her card. Click on **Delete** and confirm.
 
 ## Managing Groups
+{{! multiexcerpt name='group-intro'}}
 
 Groups of users can be created and their properties modified directly in the Nuxeo Platform.
 
@@ -418,7 +419,7 @@ Users must be in one of the groups "members" or "administrators" to be able to a
 {{/callout}}
 
 Groups can be composed of users and of sub-groups. Sub-group's members automatically become members of the parent group. Thus, they are granted all the permissions you give to the group. You can create as many groups as needed.
-
+{{! /multiexcerpt}}
 ### Groups Parameters
 
 {{! multiexcerpt name='group-info'}}

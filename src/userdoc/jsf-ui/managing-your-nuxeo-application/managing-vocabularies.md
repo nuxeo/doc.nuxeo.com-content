@@ -151,6 +151,7 @@ By default, the labels of default vocabularies entries are the IDs of labels in 
 
 ## Vocabulary Entries Parameters
 
+{{! multiexcerpt name='vocabulary-entries-parameter'}}
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
@@ -201,6 +202,7 @@ Indicates the rank of the entry in the vocabulary.
 Order is set at `10,000,000` by default.
 
 </td></tr></tbody></table></div>
+{{! /multiexcerpt}}
 
 ## Editing Vocabularies
 
