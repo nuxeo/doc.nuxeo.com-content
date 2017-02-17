@@ -264,90 +264,44 @@ Information about Nuxeo REST API can be found in various places. Here are some o
 
 ##### Practice - REST API Principles
 
-**In this exercise you will...**
-
-*   Create a Document from the UI.
-*   Retrieve it through the REST API using the API Playground in various manners.
-*   Use headers to change the response.
-
-
 #### Create a Document using Nuxeo Platform UI
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>Log into your Nuxeo instance.</td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>Go to `default-domain/workspaces`.</td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>Create a Workspace named "Rest API Tutorial".</td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>
-          Create a Document within the Workspace.<br />
-          *For the purposes of this tutorial, we've created a Picture document named "My Picture". These document types are available with the Nuxeo DAM addon.*
-        </td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>Export the Picture using the [**XML export** option in Nuxeo Platform]({{page space='userdoc' page='exporting-documents#xml-export-of-a-single-document'}}) or by clicking the **Export current document JSON** link in the **Nuxeo Dev Tools** extension.<br />
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+1.  Log into your Nuxeo instance.
+
+2.  Go to `default-domain/workspaces`.
+
+3.  Create a Workspace named "Rest API Tutorial".
+
+4.  Create a Document within the Workspace.
+    *For the purposes of this tutorial, we've created a Picture document named "My Picture". These document types are available with the Nuxeo DAM addon.*
+
+5.  Export the Picture using the [**XML export** option in Nuxeo Platform]({{page space='userdoc' page='exporting-documents#xml-export-of-a-single-document'}}) or by clicking the ![]({{file name='export_json.png'}}) link in the **Nuxeo Dev Tools** extension.
 
 #### Retrieve the Document using the REST API
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          Log into the [API Playground](http://nuxeo.github.io/api-playground/) using your Nuxeo Server URL, `http://NUXEO_SERVER/nuxeo` and your credentials or simply click the API Playground button in the **Nuxeo Dev Tools** extension.
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">**FETCH THE DOCUMENT**</td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>
-          In the **Resources Endpoints**, get the document using the document's `id` which can be found in the XML/JSON export obtained earlier.<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">GET /api/v1/id/{docId}</pre>
-        </td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>
-          Click on the **Settings** icon ![]({{file page='howto-nuxeo-api-playground' name='playground_settings_icon.png'}}) to change the `properties` header so that you only retrieve the `picture` schema.
-        </td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>
-          Get the document using the document's `path` (also in the XML/JSON export).<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">GET /api/v1/path/{docPath}</pre>
-        </td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>
-          In the **Command Endpoints**, get the document using the `Fetch > Document` operation and the `path` or `id` as a parameter.<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">POST /api/automation/Repository.GetDocument</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+1.  Log into the [API Playground](http://nuxeo.github.io/api-playground/) using your Nuxeo Server URL, `http://NUXEO_SERVER/nuxeo` and your credentials or simply click the API Playground button in the **Nuxeo Dev Tools** extension.
+
+**FETCH THE DOCUMENT**
+
+2.  In the **Resources Endpoints**, get the document using the document's `id` which can be found in the XML/JSON export obtained earlier.
+
+    ```bash
+    GET /api/v1/id/{docId}
+    ```
+
+3.  Click on the **Settings** icon ![]({{file page='howto-nuxeo-api-playground' name='playground_settings_icon.png'}}) to change the `properties` header so that you only retrieve the `picture` schema.
+
+4.  Get the document using the document's `path` (also in the XML/JSON export).
+
+    ```bash
+    GET /api/v1/path/{docPath}
+    ```
+
+5.  In the **Command Endpoints**, get the document using the `Fetch > Document` operation and the `path` or `id` as a parameter.
+
+    ```bash
+    POST /api/automation/Repository.GetDocument
+    ```
 
 {{#> callout type='info' heading='What\'s the Best Way to Retrieve a Document?'}}
 
@@ -373,57 +327,34 @@ Refer to the [CORS documentation]({{page page='cross-origin-resource-sharing-cor
 
 ##### Practice - CORS Configuration
 
-**In this exercise you will...**
+1.  In **Nuxeo Studio** under **Customization**, select **Advanced Settings** > **XML Extensions**
 
-*   Set up a CORS configuration that will only allow specific domains to execute requests.
+2.  Create an XML extension, `RestApiTutorial`, which:
+      - only allows requests from https://foobar.com and its subdomains
+      - supports the following methods: `GET, PUT, POST, DELETE, HEAD, OPTIONS`
+      - only allows requests on the following pattern: `/nuxeo/`
+    *If you already provided a CORS configuration when you installed the Nuxeo Dev Tools extension, you can either replace it or skip this part.*
 
+3.  In your Nuxeo instance, deploy the Nuxeo Studio configuration.
+    **ADMIN** > **Update Center** > **Update**
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          In **Nuxeo Studio** under **Customization**, select **Advanced Settings** > **XML Extensions**
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>
-          Create an XML extension, `RestApiTutorial`, which:<br /><br />
-          - only allows requests from https://foobar.com and its subdomains<br />
-          - supports the following methods: `GET, PUT, POST, DELETE, HEAD, OPTIONS`<br />
-          - only allows requests on the following pattern: `/nuxeo/`<br /><br />
-          *If you already provided a CORS configuration when you installed the Nuxeo Dev Tools extension, you can either replace it or skip this part.*<br />
-        </td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>
-          In your Nuxeo instance, deploy the Nuxeo Studio configuration.<br />
-          **ADMIN** > **Update Center** > **Update**
-        </td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>
-          Restart the instance.<br />
-          **ADMIN** > **System Information** > **Restart Server**
-        </td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>
-          Open a terminal and launch the following commands to test your configuration, *replacing `NUXEO_SERVER` with your Nuxeo Server instance URL.*<br /><br />
-          This command should be **denied** by the CORS configuration.<br />
-          <pre style="min-width: 700px; max-width: 700px">curl --verbose -H "Origin: http://www.nuxeo.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload</pre>
-          This command should be **accepted** by the CORS configuration.
-          <pre style="min-width: 700px; max-width: 700px">curl --verbose -H "Origin: https://foobar.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+4.  Restart the instance.
+    **ADMIN** > **System Information** > **Restart Server**
+
+5.  Open a terminal and launch the following commands to test your configuration, *replacing `NUXEO_SERVER` with your Nuxeo Server instance URL.*
+
+{{#> panel type='code' heading='This command should be **denied** by the CORS configuration.'}}
+```bash
+curl --verbose -H "Origin: http://www.nuxeo.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload
+```
+{{/panel}}
+
+{{#> panel type='code' heading='This command should be **accepted** by the CORS configuration.'}}
+```bash
+curl --verbose -H "Origin: https://foobar.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload
+```
+{{/panel}}
+
 
 {{#> accordian heading='CORS Configuration - Solution' closed='true'}}
 
@@ -487,9 +418,9 @@ Two authentication methods are supported by the JS client:
 
 Authenticating using Nuxeo JS client:
 
-1.  Instantiate a [`Nuxeo` class](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html).
-2.  Set a `baseURL` property, unless you connect to your localhost.
-3.  Add an `auth` object into it, passing it the authentication method, username and password.
+*   Instantiate a [`Nuxeo` class](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html).
+*   Set a `baseURL` property, unless you connect to your localhost.
+*   Add an `auth` object into it, passing it the authentication method, username and password.
 
     {{#> panel type='code' heading='Sample'}}
 
@@ -508,49 +439,22 @@ Authenticating using Nuxeo JS client:
 
 ##### Practice - Basic Authentication Using Nuxeo JS Client
 
-**In this exercise you will...**
+1.  Download <a href="{{file name='basicAuthentication.js'}}" download>basicAuthentication.js</a> or open in another tab to copy and paste.
 
-*   Authenticate your Nuxeo local instance, using the JS client.
+2.  Create a Nuxeo object in the `nuxeo` variable.
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          Download <a href="{{file name='basicAuthentication.js'}}" download>basicAuthentication.js</a> or open in another tab to copy and paste.
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>Create a Nuxeo object in the `nuxeo` variable</td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          **Referring to the [Nuxeo JS client documentation](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html), modify the code to:**
-        </td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>Authenticate against your Nuxeo local instance</td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>
-          Use the basic authentication method<br />
-          *If you haven't changed it, the default login/password is Administrator/Administrator*
-        </td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>
-          When your code is ready, test it by uncommenting the `assertResult()` method and running the code in a terminal:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node basicAuthentication.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+**Referring to the [Nuxeo JS client documentation](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html), modify the code to:**
+
+3.  Authenticate against your Nuxeo local instance.
+
+4.  Use the basic authentication method. *If you haven't changed it, the default login/password is Administrator/Administrator*.
+
+5.  When your code is ready, test it by uncommenting the `assertResult()` method and running the code in a terminal:
+
+    ```bash
+    node basicAuthentication.js
+    ```
+
 
 {{#> accordian heading='Basic Authentication - Solution' closed='true'}}
 
@@ -659,59 +563,23 @@ For security purposes, you should avoid defining the first client using the `bas
 
 ##### Practice - Token Authentication Using the JS Client
 
-**In this exercise you will...**
+1.  Download <a href="{{file name='tokenAuthentication.js'}}" download>tokenAuthentication.js</a> or open in another tab to copy and paste.
 
-*   Authenticate your Nuxeo local instance, using `token` authentication.
+2.  Store your Nuxeo Server URL in the `baseURL` variable.
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          Download <a href="{{file name='tokenAuthentication.js'}}" download>tokenAuthentication.js</a> or open in another tab to copy and paste.
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>
-          Store your Nuxeo Server URL in the `baseURL` variable.
-        </td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>
-          Update `getClientWithTokenFor` method with your credentials.
-        </td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>
-          Create a Nuxeo client using basic authentication in the `tmpNuxeoClient` variable.
-        </td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>
-          Use `requestAuthenticationToken` method to obtain a token.
-        </td>
-      </tr>
-      <tr>
-        <td>**6**</td>
-        <td>
-          Create a Nuxeo client using token authentication.
-        </td>
-      </tr>
-      <tr>
-        <td>**7**</td>
-        <td>
-          When your code is ready, test it by uncommenting the `assertResult()` method and running the code in a terminal:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node tokenAuthentication.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+3.  Update `getClientWithTokenFor` method with your credentials.
+
+4.  Create a Nuxeo client using basic authentication in the `tmpNuxeoClient` variable.
+
+5.  Use `requestAuthenticationToken` method to obtain a token.
+
+6.  Create a Nuxeo client using token authentication.
+
+7.  When your code is ready, test it by uncommenting the `assertResult()` method and running the code in a terminal:
+
+    ```bash
+    node tokenAuthentication.js
+    ```
 
 {{#> accordian heading='Token Authentication - Solution' closed='true'}}
 
@@ -817,59 +685,23 @@ A [`Document`](https://nuxeo.github.io/nuxeo-js-client/latest/Document.html) can
 
 ##### Practice - Document Creation
 
-**In this exercise you will...**
+1.  Download <a href="{{file name='createDocuments.js'}}" download>createDocuments.js</a> or open in another tab to copy and paste.
 
-*   Create a Workspace, Folder and Document using the JS client
+2.  Store your Nuxeo Server URL in the `baseURL` variable.
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          Download <a href="{{file name='createDocuments.js'}}" download>createDocuments.js</a> or open in another tab to copy and paste.
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>
-          Store your Nuxeo Server URL in the `baseURL` variable.
-        </td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>
-          Define the properties for the Workspace, Folder and Document you will create. (See [REST API Entity Types]({{page page='rest-api-entity-types'}}) for more information)
-        </td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>
-          Using the `nuxeo.repository().create({parentRef}, {document})...` method, create the **My Workspace** in "Workspaces".
-        </td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>
-          Create a Folder in **My Workspace**.
-        </td>
-      </tr>
-      <tr>
-        <td>**6**</td>
-        <td>
-          Create a Document (File, Note, etc) in the Folder.
-        </td>
-      </tr>
-      <tr>
-        <td>**7**</td>
-        <td>
-          When your code is ready, run it with the following command:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node createDocuments.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+3.  Define the properties for the Workspace, Folder and Document you will create. (See [REST API Entity Types]({{page page='rest-api-entity-types'}}) for more information)
+
+4.  Using the `nuxeo.repository().create({parentRef}, {document})...` method, create the **My Workspace** in "Workspaces".
+
+5.  Create a Folder in **My Workspace**.
+
+6.  Create a Document (File, Note, etc) in the Folder.
+
+7.  When your code is ready, run it with the following command:
+
+    ```bash
+    node createDocuments.js
+    ```
 
 {{#> accordian heading='Create Documents - Solution' closed='true'}}
 
@@ -981,53 +813,21 @@ Accepted values for the header are `MAJOR` (creates a version and increments the
 
 ##### Practice - Document Update
 
-**In this exercise you will...**
+1.  Download <a href="{{file name='updateVersionDocument.js'}}" download>updateVersionDocument.js</a> or open in another tab to copy and paste.
 
-*   Use the JS client to update a contract while creating a major version.
+2.  Store your Nuxeo Server URL in the `baseURL` variable.
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          Download <a href="{{file name='updateVersionDocument.js'}}" download>updateVersionDocument.js</a> or open in another tab to copy and paste.
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>
-          Store your Nuxeo Server URL in the `baseURL` variable.
-        </td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>
-          Update the Document you created in the previous exercise (with a new title, for example)
-        </td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>
-          Increment the Major version during the update.
-        </td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>
-          Uncomment the `assertResult(document)` method to test your results.
-        </td>
-      </tr>
-      <tr>
-        <td>**6**</td>
-        <td>
-          When your code is ready, run it with the following command:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node updateVersionDocument.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+3.  Update the Document you created in the previous exercise (with a new title, for example)
+
+4.  Increment the Major version during the update.
+
+5.  Uncomment the `assertResult(document)` method to test your results.
+
+6.  When your code is ready, run it with the following command:
+
+    ```bash
+    node updateVersionDocument.js
+    ```
 
 {{#> accordian heading='Update and Version Documents - Solution' closed='true'}}
 
@@ -1099,9 +899,9 @@ You can upload files with REST API outside the context of a transaction through 
 
 Uploading a File with the JS client:
 
-1.  Create a `Nuxeo.Blob` object containing the file.
-2.  Instantiate a batch.
-3.  Upload the file.
+*   Create a `Nuxeo.Blob` object containing the file.
+*   Instantiate a batch.
+*   Upload the file.
 
 **The file can be attached to the document either during document creation, or by updating it.**
 
@@ -1139,54 +939,21 @@ Check out the [Importing Files with the REST API](https://university.nuxeo.io/nu
 
 ##### Practice - File Upload
 
-**In this exercise you will...**
+1.  Download <a href="{{file name='uploadFile.js'}}" download>uploadFile.js</a> or open in another tab to copy and paste.
 
-*   Access a local file
-*   Use the JS client to upload the file and attach it to a document.
+2.  Store your Nuxeo Server URL in the `baseURL` variable and modify the `filePath` and `whereToCreate` variables.
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          Download <a href="{{file name='uploadFile.js'}}" download>uploadFile.js</a> or open in another tab to copy and paste.
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>
-          Store your Nuxeo Server URL in the `baseURL` variable and modify the `filePath` and `whereToCreate` variables.
-        </td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>
-          Access the local file.
-        </td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>
-          Create a blob from the `filePath` passed as variable.
-        </td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>
-          Upload the file, create a Document and attach the file to it.
-        </td>
-      </tr>
-      <tr>
-        <td>**6**</td>
-        <td>
-          When your code is ready, run it with the following command:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node uploadFile.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+3.  Access the local file.
+
+4.  Create a blob from the `filePath` passed as variable.
+
+5.  Upload the file, create a Document and attach the file to it.
+
+6.  When your code is ready, run it with the following command:
+
+    ```bash
+    node uploadFile.js
+    ```
 
 {{#> accordian heading='Upload a File - Solution' closed='true'}}
 
@@ -1305,45 +1072,19 @@ nuxeo.class().method(..., callOptions)
 
 ##### Practice - Using Headers
 
-**In this exercise you will...**
+1.  Download <a href="{{file name='headers.js'}}" download>headers.js</a> or open in another tab to copy and paste.
 
-Use the JS client to:
+**Referring to the [Nuxeo JS client documentation](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html), modify the code to:**
 
-*   Fetch a document
-*   Place an application-wide header to fetch all document schemas
+2.  Ensure that further calls return all schemas in the response.
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          Download <a href="{{file name='headers.js'}}" download>headers.js</a> or open in another tab to copy and paste.
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          **Referring to the [Nuxeo JS client documentation](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html), modify the code to:**
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>Ensure that further calls return all schemas in the response</td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>Retrieve a document you previously created, using its path or ID</td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>
-          When your code is ready, run it with the following command:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node headers.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+3.  Retrieve a document you previously created, using its path or ID.
+
+4.  When your code is ready, run it with the following command:
+
+    ```bash
+    node headers.js
+    ```
 
 {{#> accordian heading='Using Headers - Solution' closed='true'}}
 
@@ -1446,64 +1187,29 @@ In addition to the `depth` header, you can use:
 
 ##### Practice - Resolvers
 
-**In this exercise you will...**
+1.  In Nuxeo Studio, create two different document types that each extend the File document type: `Company` and `Contract`.
 
-*   Update your content model to be able to use resolvers.
-*   Use the appropriate headers to fetch all your objects in a single call.*
+2.  Under the **Schema** tab in the `Contract` document type, add a custom schema that includes the field `companyId` of type `Document`.
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          In Nuxeo Studio, create two different document types that each extend the File document type: `Company` and `Contract`.
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>
-          Under the **Schema** tab in the `Contract` document type, add a custom schema that includes the field `companyId` of type `Document`.
-        </td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>Under the **Creation Layout** tab in the `Contract` document type, add `companyId` to the form.</td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>Deploy your Studio project on your Nuxeo Platform instance or perform a Hot Reload from the **Dev Tool extension**.</td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>In Nuxeo Platform, create a company, **My Company**.</td>
-      </tr>
-      <tr>
-        <td>**6**</td>
-        <td>Create a contract, **My Contract**, attributing it to **My Company** during creation.</td>
-      </tr>
-      <tr>
-        <td>**7**</td>
-        <td>Download <a href="{{file name='usingResolvers.js'}}" download>usingResolvers.js</a> or open in another tab to copy and paste.</td>
-      </tr>
-      <tr>
-        <td>**8**</td>
-        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL and the `docId` with that of the contract you created.</td>
-      </tr>
-      <tr>
-        <td>**9**</td>
-        <td>Add the appropriate resolvers to return the `Company` object and `Contract` object in the same call.</td>
-      </tr>
-      <tr>
-        <td>**10**</td>
-        <td>
-          When your code is ready, run it with the following command:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node usingResolvers.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+3.  Under the **Creation Layout** tab in the `Contract` document type, add `companyId` to the form.
+
+4.  Deploy your Studio project on your Nuxeo Platform instance or perform a Hot Reload from the **Dev Tool extension**.
+
+5.  In Nuxeo Platform, create a company, **My Company**.
+
+6.  Create a contract, **My Contract**, attributing it to **My Company** during creation.
+
+7.  Download <a href="{{file name='usingResolvers.js'}}" download>usingResolvers.js</a> or open in another tab to copy and paste.
+
+8.  Replace `NUXEO_SERVER` with your Nuxeo Server URL and the `docId` with that of the contract you created.
+
+9.  Add the appropriate resolvers to return the `Company` object and `Contract` object in the same call.
+
+10. When your code is ready, run it with the following command:
+
+    ```bash
+    node usingResolvers.js
+    ```
 
 {{#> accordian heading='Using Resolvers - Solution' closed='true'}}
 
@@ -1583,37 +1289,17 @@ nuxeo.repository().enrichers(
 
 ##### Practice - Enrichers
 
-**In this exercise you will...**
+1.  Download <a href="{{file name='usingEnrichers.js'}}" download>usingEnrichers.js</a> or open in another tab to copy and paste.
 
-*   Use the appropriate enrichers.
+2.  Replace `NUXEO_SERVER` and the document UID.
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          Download <a href="{{file name='usingEnrichers.js'}}" download>usingEnrichers.js</a> or open in another tab to copy and paste.
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>Replace `NUXEO_SERVER` and the document UID.</td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>Use content enrichers to retrieve the document's ACLs and preview URL.</td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>
-          When your code is ready, run it with the following command:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node usingEnrichers.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+3.  Use content enrichers to retrieve the document's ACLs and preview URL.
+
+4.  When your code is ready, run it with the following command:
+
+    ```bash
+    node usingEnrichers.js
+    ```
 
 {{#> accordian heading='Using Resolvers - Solution' closed='true'}}
 
@@ -1710,41 +1396,19 @@ nuxeo.request('/path/default-domain/@acl')
 
 ##### Practice - Adapters
 
-**In this exercise you will...**
+1.  Download <a href="{{file name='usingAdapters.js'}}" download>usingAdapters.js</a> or open in another tab to copy and paste.
 
-*   Use the appropriate adapter to retrieve your contract's audit log. You can use the [Web Adapters for the REST API]({{page page='rest-api-web-adapters'}}) documentation to check which adapter to call.
+2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL.
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          Download <a href="{{file name='usingAdapters.js'}}" download>usingAdapters.js</a> or open in another tab to copy and paste.
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL.</td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>Use an adapter to obtain the audit log of an existing document.</td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>Pass the result to the `assertResult` method to check your work.</td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>
-          When your code is ready, run it with the following command:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node usingAdapters.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+3.  Use an adapter to obtain the audit log of an existing document.
+
+4.  Pass the result to the `assertResult` method to check your work.
+
+5.  When your code is ready, run it with the following command:
+
+    ```bash
+    node usingAdapters.js
+    ```
 
 {{#> accordian heading='Using Adapters - Solution' closed='true'}}
 
@@ -1815,56 +1479,30 @@ where `document` is a Document object and `transitionName` the name of the trans
 
 Using the default document lifecycle:
 
-1.  Follow the `delete` transition to put a document in the `deleted` state.
-2.  Follow the `undelete` transition to restore a document to the `project` state.
+*   Follow the `delete` transition to put a document in the `deleted` state.
+*   Follow the `undelete` transition to restore a document to the `project` state.
 
 Then it is up to you to make sure your queries will not retrieve documents in the `deleted` state!
 
 ##### Practice - Document Deletion
 
-**In this exercise you will...**
-
-Use the JS client to:
-
-*   Put a document in the deleted state
-*   Permanently delete a document
-
 **Trash Management**
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          Download <a href="{{file name='trashManagement.js'}}" download>trashManagement.js</a> or open in another tab to copy and paste.
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL.</td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>Retrieve a document using its ID or path.</td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>Put the document in the "deleted" state.</td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>Pass the trashed document to the `assertResult` method.</td>
-      </tr>
-      <tr>
-        <td>**6**</td>
-        <td>
-          When your code is ready, run it with the following command:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node trashManagement.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+
+1.  Download <a href="{{file name='trashManagement.js'}}" download>trashManagement.js</a> or open in another tab to copy and paste.
+
+2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL.
+
+3.  Retrieve a document using its ID or path.
+
+4.  Put the document in the "deleted" state.
+
+5.  Pass the trashed document to the `assertResult` method.
+
+6.  When your code is ready, run it with the following command:
+
+    ```bash
+    node trashManagement.js
+    ```
 
 {{#> accordian heading='Trash Management - Solution' closed='true'}}
 
@@ -1923,37 +1561,20 @@ function assertResult(document) {
 {{/accordian}}
 
 **Document Deletion**
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          Download <a href="{{file name='documentDeletion.js'}}" download>documentDeletion.js</a> or open in another tab to copy and paste.
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>Replace `NUXEO_SERVER` and the document UID.</td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>Delete the document using its ID or path.</td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>Pass the result to the `assertResult` method.</td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>
-          When your code is ready, run it with the following command:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node documentDeletion.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+
+1.  Download <a href="{{file name='documentDeletion.js'}}" download>documentDeletion.js</a> or open in another tab to copy and paste.
+
+2.  Replace `NUXEO_SERVER` and the document UID.
+
+3.  Delete the document using its ID or path.
+
+4.  Pass the result to the `assertResult` method.
+
+5.  When your code is ready, run it with the following command:
+
+    ```bash
+    node documentDeletion.js
+    ```
 
 {{#> accordian heading='Document Deletion - Solution' closed='true'}}
 
@@ -2002,7 +1623,6 @@ function assertResult(result) {
 {{/accordian}}
 
 
-
 ## Querying and Searching
 
 Using the JS client, the [`Repository`](https://nuxeo.github.io/nuxeo-js-client/latest/Repository.html)'s `query` method can be used to launch NXQL queries or call page providers.
@@ -2037,8 +1657,8 @@ A page provider is the underlying query when creating a content view in Nuxeo St
 
 To call page providers:
 
-1.  Specify the content view ID, as defined in Nuxeo Studio in the `pageProvider` property
-2.  Pass an array containing the parameters in the `queryParams` property in the same order as they are defined in the content view.
+*   Specify the content view ID, as defined in Nuxeo Studio in the `pageProvider` property.
+*   Pass an array containing the parameters in the `queryParams` property in the same order as they are defined in the content view.
 
 ```javascript
 nuxeo.Repository().query({ 'pageProvider': 'pageProviderId', queryParams['parameter1', 'parameter2'...] })...
@@ -2046,46 +1666,22 @@ nuxeo.Repository().query({ 'pageProvider': 'pageProviderId', queryParams['parame
 
 ##### Practice - Querying and Searching
 
-**In this exercise you will...**
-
-Use the JS client to:
-
-*   Call a content view defined in Studio.
-*   Pass it some parameters.
-*   Launch a full-text search.
-
 **Calling Page Providers**
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          Download <a href="{{file name='callPageProvider.js'}}" download>callPageProvider.js</a> or open in another tab to copy and paste.
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL.</td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>Define query options, calling the `DefaultContentListingInNavigation` content view defined in Studio and passing it the UID of an existing parent document as a parameter. The query result should return the document's children as objects.</td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>Pass the result to the `assertResult` method.</td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>
-          When your code is ready, run it with the following command:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node callPageProvider.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+
+1.  Download <a href="{{file name='callPageProvider.js'}}" download>callPageProvider.js</a> or open in another tab to copy and paste.
+
+2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL.
+
+3.  Define query options, calling the `DefaultContentListingInNavigation` content view defined in Studio and passing it the UID of an existing parent document as a parameter. The query result should return the document's children as objects.
+
+4.  Pass the result to the `assertResult` method.
+
+5.  When your code is ready, run it with the following command:
+
+    ```bash
+    node callPageProvider.js
+    ```
+
 
 {{#> accordian heading='Calling Page Providers - Solution' closed='true'}}
 
@@ -2155,41 +1751,23 @@ function assertResult(result) {
 
 
 **Launching NXQL Queries**
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          Download <a href="{{file name='nxqlQuery.js'}}" download>nxqlQuery.js</a> or open in another tab to copy and paste.
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL.</td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>Define an NXQL query that will return all documents created TODAY. Exclude proxies, archived versions and deleted (trashed) documents.</td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>Add query to `queryOpts` and launch the query.</td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>Pass the result to the `assertResult` method.</td>
-      </tr>
-      <tr>
-        <td>**6**</td>
-        <td>
-          When your code is ready, run it with the following command:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node nxqlQuery.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+
+1.  Download <a href="{{file name='nxqlQuery.js'}}" download>nxqlQuery.js</a> or open in another tab to copy and paste.
+
+2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL.
+
+3.  Define an NXQL query that will return all documents created TODAY. Exclude proxies, archived versions and deleted (trashed) documents.
+
+4.  Add query to `queryOpts` and launch the query.
+
+5.  Pass the result to the `assertResult` method.
+
+6.  When your code is ready, run it with the following command:
+
+    ```bash
+    node nxqlQuery.js
+    ```
+
 
 {{#> accordian heading='Launching NXQL Queries - Solution' closed='true'}}
 
@@ -2349,92 +1927,43 @@ Note that automation scripts are prefixed by `javascript.` So if your automation
 
 ##### Practice - Executing Business Logic
 
-**In this exercise you will...**
+1.  Download <a href="{{file name='addToCollection.js'}}" download>addToCollection.js</a> or open in another tab to copy the code.
 
-*   Create an automation script in Nuxeo Studio.
-*   Use the JS client to call the automation script on a contract.
+2.  In Nuxeo Studio, create a new automation script, `addToCollection` where you can paste the code.
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td>**1**</td>
-        <td>
-          Download <a href="{{file name='addToCollection.js'}}" download>addToCollection.js</a> or open in another tab to copy the code.
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>
-          In Nuxeo Studio, create a new automation script, `addToCollection` where you can paste the code.
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">*COMPLETE THE AUTOMATION SCRIPT:*</td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>Check if the `collectionName` context variable is set, otherwise set it.</td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>Retrieve the user's workspace and set as the `userWorkspace` variable.</td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>If the collection variable is null, create a collection with the context variable's `collectionName` value and place it in the `collection` variable. The collection should be created in the user workspace.</td>
-      </tr>
-      <tr>
-        <td>**6**</td>
-        <td>Add the document to the collection.</td>
-      </tr>
-      <tr>
-        <td>**7**</td>
-        <td>Save the `addToCollection` automation script.</td>
-      </tr>
-      <tr>
-        <td>**8**</td>
-        <td>Deploy your Studio project on your Nuxeo Platform instance or perform a Hot Reload from the **Dev Tool extension**.</td>
-      </tr>
-      <tr>
-        <td colspan="2">*COMPLETE THE NODE.JS SCRIPT:*</td>
-      </tr>
-      <tr>
-        <td>**9**</td>
-        <td>
-          Download <a href="{{file name='businessLogic.js'}}" download>businessLogic.js</a> or open in another tab to copy the code.
-        </td>
-      </tr>
-      <tr>
-        <td>**10**</td>
-        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL.</td>
-      </tr>
-      <tr>
-        <td>**11**</td>
-        <td>Retrieve an existing document using its ID or path.</td>
-      </tr>
-      <tr>
-        <td>**12**</td>
-        <td>Call the `addToCollection` automation script and pass the document as its input.</td>
-      </tr>
-      <tr>
-        <td>**13**</td>
-        <td>Add a `collectionName` as a context variable.</td>
-      </tr>
-      <tr>
-        <td>**14**</td>
-        <td>Pass the result to the `assertResult` method.</td>
-      </tr>
-      <tr>
-        <td>**15**</td>
-        <td>
-          When your code is ready, run it with the following command:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node businessLogic.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+*COMPLETE THE AUTOMATION SCRIPT:*
+
+3.  Check if the `collectionName` context variable is set, otherwise set it.
+
+4.  Retrieve the user's workspace and set as the `userWorkspace` variable.
+
+5.  If the collection variable is null, create a collection with the context variable's `collectionName` value and place it in the `collection` variable. The collection should be created in the user workspace.
+
+6.  Add the document to the collection.
+
+7.  Save the `addToCollection` automation script.
+
+8.  Deploy your Studio project on your Nuxeo Platform instance or perform a Hot Reload from the **Dev Tool extension**.
+
+*COMPLETE THE NODE.JS SCRIPT:*
+
+9.  Download <a href="{{file name='businessLogic.js'}}" download>businessLogic.js</a> or open in another tab to copy the code.
+
+10. Replace `NUXEO_SERVER` with your Nuxeo Server URL.
+
+11. Retrieve an existing document using its ID or path.
+
+12. Call the `addToCollection` automation script and pass the document as its input.
+
+13. Add a `collectionName` as a context variable.
+
+14. Pass the result to the `assertResult` method.
+
+15. When your code is ready, run it with the following command:
+
+    ```bash
+    node businessLogic.js
+    ```
 
 {{#> accordian heading='addToCollection Automation Script - Solution' closed='true'}}
 
@@ -2621,135 +2150,79 @@ nuxeo.workflows().start('workflowId', workflowOptions)...
 
 ### How to Complete a Task
 
-1.  When a workflow is started, you are given a [`Workflow`](https://nuxeo.github.io/nuxeo-js-client/latest/Workflow.html) class instance in the response.
-2.  Using this object, retrieve the tasks it contains. You end up with an array containing [`Task`](https://nuxeo.github.io/nuxeo-js-client/latest/Task.html) class instances.
-3.  Iterate over the tasks.
-4.  You can fill in the task form using the Task's variable method or during the complete method.
-5.  Completing a task is done using the `complete(action, taskOptions)` method.
-    *   The `action` variable defines the button ID the user clicks on.
-    *   The task options can be used to fill the task form if you didn't do it through the variable method.
+When a workflow is started, you are given a [`Workflow`](https://nuxeo.github.io/nuxeo-js-client/latest/Workflow.html) class instance in the response. Using this object, retrieve the tasks it contains.
+
+You end up with an array containing [`Task`](https://nuxeo.github.io/nuxeo-js-client/latest/Task.html) class instances. Iterate over the tasks.
+
+You can fill in the task form using the Task's variable method or during the complete method.
+
+Completing a task is done using the `complete(action, taskOptions)` method.
+  *   The `action` variable defines the button ID the user clicks on.
+  *   The task options can be used to fill the task form if you didn't do it through the variable method.
 
 ##### Practice - Workflows
 
-**In this exercise you will...**
+*CREATE AN AUTOMATION CHAIN*
 
-Use the JS client to:
+1.  In Nuxeo Studio, [create a simple automation chain]({{page page='automation-chains'}}), `ValidateDocumentChain`, that modifies the lifecycle of a document to "approved" and adds a comment.
 
-*   Launch a workflow
-*   Complete a workflow task
-
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td colspan="2">*CREATE AN AUTOMATION CHAIN*</td>
-      </tr>
-      <tr>
-        <td>**1**</td>
-        <td>
-          In Nuxeo Studio, [create a simple automation chain]({{page page='automation-chains'}}), `ValidateDocumentChain`, that modifies the lifecycle of a document to "approved" and adds a comment.<br /><br />({{page page='rest-api'}})
-          <pre style="min-width: 700px; max-width: 700px">- Context.FetchDocument
-- Document.FollowLifecycleTransition:
+    ```yaml
+    - Context.FetchDocument
+    - Document.FollowLifecycleTransition:
     value: approve
-- Document.SetProperty:
+    - Document.SetProperty:
     xpath: dc:description
     save: 'true'
     value: WorkflowVariables["validationComment"]
-- Audit.LogEvent:
+    - Audit.LogEvent:
     event: Document validated
     category: RESTAPIWorkflowExercise
-    comment: "Validation comment: \n@{WorkflowVariables[\"validationComment\"]}"</pre>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">*CREATE A SIMPLE WORKFLOW*</td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>Create a [workflow]({{page page='simple-workflow-example'}}), `ValidateDocument`.</td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>Under the **Variables** tab, add the String field `validationComment`.</td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>Under the **Activation** tab, allow for Read & Edit permissions and the document type of your choice.</td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>
-          Under the **Graph** tab, add an **Accept/Reject** user task node, and click on the **Edit** icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) to edit the node properties.
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2" align="center">
-          <img src="{{file name='workflow-graph.png'}}" alt="Workflow Graph" width="500">
-        </td>
-      </tr>
-      <tr>
-        <td>**6**</td>
-        <td>Under the **General** tab, add the `Context["workflowInitiator"]` assignees expression.</td>
-      </tr>
-      <tr>
-        <td>**7**</td>
-        <td>Under the **Variables** tab, add the `validationComment` variable.</td>
-      </tr>
-      <tr>
-        <td>**8**</td>
-        <td>Under the **Form** tab, add the **Validation Comment** widget from the `var_ValidateDocument` schema.</td>
-      </tr>
-      <tr>
-        <td>**9**</td>
-        <td>Under the **Transitions** tab, add the `ValidateDocumentChain` to the `validate` transition, then **Save**.</td>
-      </tr>
-      <tr>
-        <td>**10**</td>
-        <td>Add your transitions to the graph, then **Save** your workflow.</td>
-      </tr>
-      <tr>
-        <td colspan="2">*LAUNCH THE WORKFLOW USING JS CLIENT*</td>
-      </tr>
-      <tr>
-        <td>**11**</td>
-        <td>
-          Download <a href="{{file name='workflows.js'}}" download>workflows.js</a> or open in another tab to copy and paste.
-        </td>
-      </tr>
-      <tr>
-        <td>**12**</td>
-        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL.</td>
-      </tr>
-      <tr>
-        <td>**13**</td>
-        <td>Create an object containing the ID(s) of the document(s) to attach.</td>
-      </tr>
-      <tr>
-        <td>**14**</td>
-        <td>Start the workflow, passing in the object, then call `getWfTasks` method.</td>
-      </tr>
-      <tr>
-        <td>**15**</td>
-        <td>Retrieve the workflow tasks and call the `completeWfTasks` method.</td>
-      </tr>
-      <tr>
-        <td>**16**</td>
-        <td>Iterate through the tasks, presuming that the user adds a `validationComment` and clicks the validate button.</td>
-      </tr>
-      <tr>
-        <td>**17**</td>
-        <td>Call the `asserResult` method.</td>
-      </tr>
-      <tr>
-        <td>**18**</td>
-        <td>
-          When your code is ready, run it with the following command:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node workflows.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    comment: "Validation comment: \n@{WorkflowVariables[\"validationComment\"]}"
+    ```
+
+*CREATE A SIMPLE WORKFLOW*
+
+2.  Create a [workflow]({{page page='simple-workflow-example'}}), `ValidateDocument`.
+
+3.  Under the **Variables** tab, add the String field `validationComment`.
+
+4.  Under the **Activation** tab, allow for Read & Edit permissions and the document type of your choice.
+
+5.  Under the **Graph** tab, add an **Accept/Reject** user task node, and click on the **Edit** icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) to edit the node properties.
+
+{{file name='workflow-graph.png'}}
+
+6.  Under the **General** tab, add the `Context["workflowInitiator"]` assignees expression.
+
+7.  Under the **Variables** tab, add the `validationComment` variable.
+
+8.  Under the **Form** tab, add the **Validation Comment** widget from the `var_ValidateDocument` schema.
+
+9.  Under the **Transitions** tab, add the `ValidateDocumentChain` to the `validate` transition, then **Save**.
+
+10. Add your transitions to the graph, then **Save** your workflow.
+
+*LAUNCH THE WORKFLOW USING JS CLIENT*
+
+11. Download <a href="{{file name='workflows.js'}}" download>workflows.js</a> or open in another tab to copy and paste.
+
+12. Replace `NUXEO_SERVER` with your Nuxeo Server URL.
+
+13. Create an object containing the ID(s) of the document(s) to attach.
+
+14. Start the workflow, passing in the object, then call `getWfTasks` method.
+
+15. Retrieve the workflow tasks and call the `completeWfTasks` method.
+
+16. Iterate through the tasks, presuming that the user adds a `validationComment` and clicks the validate button.
+
+17. Call the `asserResult` method.
+
+18. When your code is ready, run it with the following command:
+
+    ```bash
+    node workflows.js
+    ```
 
 {{#> accordian heading='Launching Workflows - Solution' closed='true'}}
 
@@ -2880,112 +2353,57 @@ Now it's your turn!
 ##### Practice - Contribute a Content Enrichers
 \*This exercise requires some familiarity with Java
 
-**In this exercise you will...**
+*CREATE THE CONTENT ENRICHER*
 
-*   Create a content enricher to obtain the contract's latest version.
+1.  Download <a href="{{file name='LastVersionEnricher.java'}}" download>LastVersionEnricher.java</a> or open in another tab to copy and add to your project.
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <td colspan="2">*CREATE THE CONTENT ENRICHER*</td>
-      </tr>
-      <tr>
-        <td>**1**</td>
-        <td>
-          Download <a href="{{file name='LastVersionEnricher.java'}}" download>LastVersionEnricher.java</a> or open in another tab to copy and add to your project.
-        </td>
-      </tr>
-      <tr>
-        <td>**2**</td>
-        <td>In the Java class, retrieve the `CoreSession` from the `DocumentModel` object.</td>
-      </tr>
-      <tr>
-        <td>**3**</td>
-        <td>Retrieve the last document version from the `CoreSession`.</td>
-      </tr>
-      <tr>
-        <td>**4**</td>
-        <td>Use the `JsonGenerator` object to write a field with the enricher name.</td>
-      </tr>
-      <tr>
-        <td>**5**</td>
-        <td>Use the `JsonGenerator` object to write an object with the last document version</td>
-      </tr>
-      <tr>
-        <td colspan="2">*DECLARE THE CONTENT ENRICHER*</td>
-      </tr>
-      <tr>
-        <td>**6**</td>
-        <td>
-          Declare the content enricher through Nuxeo Studio, or by adding an XML file in your Java project's `src/main/resources/OSGI-INF` folder. <a href="{{file name='sample.xml'}}" download>Here is a sample.</a>
-        </td>
-      </tr>
-      <tr>
-        <td>**7**</td>
-        <td>
-          If you declare it in your Java project, make sure to reference it in the project's `manifest.mf` file in the `src/main/resources/META-INF` folder, in the `Nuxeo-Component` list:<br /><br />
-          **Manifest.mf Extract**
-          <pre>... Nuxeo-Component:OSGI-INF/org.nuxeo.sample.enrichers.parentDocEnricher.xml,OSGI-INF/org.nuxeo.sample.another-contribution.xml, ...</pre>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">*CALL THE CONTENT ENRICHER*</td>
-      </tr>
-      <tr>
-        <td>**8**</td>
-        <td>[Package and deploy your application](https://university.nuxeo.io/nuxeo/university/#!/course/nuxeo-platform-developer-basics/package-deploy-application).</td>
-      </tr>
-      <tr>
-        <td>**9**</td>
-        <td>Under the **Transitions** tab, add the `ValidateDocumentChain` to the `validate` transition, then **Save**.</td>
-      </tr>
-      <tr>
-        <td>**10**</td>
-        <td>Add your transitions to the graph, then **Save** your workflow.</td>
-      </tr>
-      <tr>
-        <td colspan="2">*LAUNCH THE WORKFLOW USING JS CLIENT*</td>
-      </tr>
-        <td>**11**</td>
-        <td>
-          Download <a href="{{file name='workflows.js'}}" download>workflows.js</a> or open in another tab to copy and paste.
-        </td>
-      </tr>
-      <tr>
-        <td>**12**</td>
-        <td>Replace `NUXEO_SERVER` with your Nuxeo Server URL.</td>
-      </tr>
-      <tr>
-        <td>**13**</td>
-        <td>Create an object containing the ID(s) of the document(s) to attach.</td>
-      </tr>
-      <tr>
-        <td>**14**</td>
-        <td>Start the workflow, passing in the object, then call `getWfTasks` method.</td>
-      </tr>
-      <tr>
-        <td>**15**</td>
-        <td>Retrieve the workflow tasks and call the `completeWfTasks` method.</td>
-      </tr>
-      <tr>
-        <td>**16**</td>
-        <td>Iterate through the tasks, presuming that the user adds a `validationComment` and clicks the validate button.</td>
-      </tr>
-      <tr>
-        <td>**17**</td>
-        <td>Call the `asserResult` method.</td>
-      </tr>
-      <tr>
-        <td>**18**</td>
-        <td>
-          When your code is ready, run it with the following command:<br /><br />
-          <pre style="min-width: 700px; max-width: 700px">node workflows.js</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+2.  In the Java class, retrieve the `CoreSession` from the `DocumentModel` object.
+
+3.  Retrieve the last document version from the `CoreSession`.
+
+4.  Use the `JsonGenerator` object to write a field with the enricher name.
+
+5.  Use the `JsonGenerator` object to write an object with the last document version.
+
+*DECLARE THE CONTENT ENRICHER*
+
+6.  Declare the content enricher through Nuxeo Studio, or by adding an XML file in your Java project's `src/main/resources/OSGI-INF` folder. <a href="{{file name='sample.xml'}}" download>Here is a sample.</a>
+
+7.  If you declare it in your Java project, make sure to reference it in the project's `manifest.mf` file in the `src/main/resources/META-INF` folder, in the `Nuxeo-Component` list:
+
+{{#> panel type='code' heading='Manifest.mf Extract'}}
+Nuxeo-Component:OSGI-INF/org.nuxeo.sample.enrichers.parentDocEnricher.xml,OSGI-INF/org.nuxeo.sample.another-contribution.xml, ...
+{{/panel}}
+
+*CALL THE CONTENT ENRICHER*
+
+8.  [Package and deploy your application](https://university.nuxeo.io/nuxeo/university/#!/course/nuxeo-platform-developer-basics/package-deploy-application).
+
+9.  Under the **Transitions** tab, add the `ValidateDocumentChain` to the `validate` transition, then **Save**.
+
+10. Add your transitions to the graph, then **Save** your workflow.
+
+*LAUNCH THE WORKFLOW USING JS CLIENT*
+
+11. Download <a href="{{file name='workflows.js'}}" download>workflows.js</a> or open in another tab to copy and paste.
+
+12. Replace `NUXEO_SERVER` with your Nuxeo Server URL.
+
+13. Create an object containing the ID(s) of the document(s) to attach.
+
+14. Start the workflow, passing in the object, then call `getWfTasks` method.
+
+15. Retrieve the workflow tasks and call the `completeWfTasks` method.
+
+16. Iterate through the tasks, presuming that the user adds a `validationComment` and clicks the validate button.
+
+17. Call the `asserResult` method.
+
+18. When your code is ready, run it with the following command:
+
+    ```bash
+    node workflows.js
+    ```
 
 {{#> accordian heading='Solution' closed='true'}}
 
@@ -3025,13 +2443,8 @@ public class LastVersionEnricher extends AbstractJsonEnricher<DocumentModel> {
 
 Now you can declare yours!
 
-**In this exercise you will...**
-
-*   Declare your content enricher.
-
-**What you need to do**
-
 1.  Declare the content enricher in your Java project.
+
 2.  Reference the component in the bundle's manifest file.
 
 ### Call the Content Enricher
