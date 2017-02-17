@@ -64,6 +64,41 @@ history:
 
 &nbsp;
 
+## Hotfix 01
+
+### DBS cache configuration
+
+This hotfix brings a new default template to configure a DBS repository. It exposes new parameters to configure the cache, which are listed below with their default value:
+```
+nuxeo.dbs.cache.enabled=true
+nuxeo.dbs.cache.maxSize=1000
+nuxeo.dbs.cache.concurrencyLevel=10
+nuxeo.dbs.cache.ttl=10
+```
+
+### Orphan version cleanup
+
+[NXP-14187](https://jira.nuxeo.com/browse/NXP-14187) addresses the cleanup of orphan versions, left after a recursive delete (deletion of a folder). However this cleanup is disabled by default. To enable it, you have to add the following contribution:
+
+```
+  <extension target="org.nuxeo.ecm.core.scheduler.SchedulerService" point="schedule">
+    <schedule id="orphanVersionsCleanup">
+      <!-- cleanup every day at 1:30 AM -->
+      <cronExpression>0 30 1 * * ?</cronExpression>
+      <event>orphanVersionsCleanup</event>
+    </schedule>
+  </extension>
+```
+
+### Automation compatibility
+
+Some operations have been renamed since LTS 2015 and cannot be used any more with the Java Automation client. Use the following contribution to enable the aliases and fix the bug:
+```
+<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+  <property name="nuxeo.automation.export.aliases">true</property>
+</extension>
+```
+
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
