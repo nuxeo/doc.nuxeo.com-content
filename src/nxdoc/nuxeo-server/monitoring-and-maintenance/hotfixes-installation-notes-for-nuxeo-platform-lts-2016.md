@@ -62,6 +62,13 @@ history:
 ---
 {{{multiexcerpt 'intro_hotfix' page='ADMINDOC710:Hotfixes Installation Notes for Nuxeo Platform LTS 2015'}}}
 
+{{#> callout type='warning' }}
+While installing hotfixes, you will see the following message, but you can ignore it and continue.  
+```
+Use of the <copy /> command on JAR files is not recommended, prefer using <update /> command to ensure a safe rollback. (nuxeo-launcher-8.10-HF01-jar-with-dependencies.jar)
+```
+{{/callout}}
+
 ## Instance Registration
 Hotfixes released for LTS 2016 can only be used on valid, registered Nuxeo instances.
 
