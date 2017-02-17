@@ -62,6 +62,7 @@ history:
 ---
 {{{multiexcerpt 'intro_hotfix' page='ADMINDOC710:Hotfixes Installation Notes for Nuxeo Platform LTS 2015'}}}
 
+## Instance Registration
 Hotfixes released for LTS 2016 can only be used on valid, registered Nuxeo instances.
 
 **Why?** </br>
