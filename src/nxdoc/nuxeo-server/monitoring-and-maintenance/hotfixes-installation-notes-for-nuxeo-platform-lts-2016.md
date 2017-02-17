@@ -62,11 +62,30 @@ history:
 ---
 {{{multiexcerpt 'intro_hotfix' page='ADMINDOC710:Hotfixes Installation Notes for Nuxeo Platform LTS 2015'}}}
 
-&nbsp;
+Hotfixes released for LTS 2016 can only be used on valid, registered Nuxeo instances.
+
+**Why?** </br>
+If you are using an *unregistered LTS 2016 Nuxeo instance with hotfixes installed*, you may encounter the following behavior:
+- A warning will be displayed in the logs during startup,
+- Over a certain level of use the server will be stopped automatically. When this happens, a message is displayed in the logs to inform you as well.
+
+**How Can I Avoid This?** </br>
+Make sure to [register your Nuxeo instance]({{page version='810' space='nxdoc' page='registering-your-nuxeo-instance'}}): this can be done both for online and offline instances.
+
+**Could it Break My CI Chain? Do I Need to Register My Test Instances?** </br>
+The level of use needed  to stop an *unregistered instance with hotfixes* has been tuned to prevent any problems with CI chain tests. It would be possible to run the full test suite of Nuxeo server (both unit tests AND integration tests) several times before anything would happen.
+
+Nevertheless, it is recommended to register your test instances, especially if you wish to test features that require heavy usage (e.g. load testing or mass import).
+
+**How Often Do I Need to Register My Instance?** </br>
+Registration tokens are valid until your current contract's expiration date. When renewing your Nuxeo Online Services subscription, you should register your instances again.
+
+**I Have More Questions, Who Can I Ask For Help?** </br>
+If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
 ## Hotfix 01
 
-### DBS cache configuration
+### DBS Cache Configuration
 
 This hotfix brings a new default template to configure a DBS repository. It exposes new parameters to configure the cache, which are listed below with their default value:
 ```
@@ -76,7 +95,7 @@ nuxeo.dbs.cache.concurrencyLevel=10
 nuxeo.dbs.cache.ttl=10
 ```
 
-### Orphan version cleanup
+### Orphan Version Cleanup
 
 [NXP-14187](https://jira.nuxeo.com/browse/NXP-14187) addresses the cleanup of orphan versions, left after a recursive delete (deletion of a folder). However this cleanup is disabled by default. To enable it, you have to add the following contribution:
 
@@ -90,9 +109,9 @@ nuxeo.dbs.cache.ttl=10
   </extension>
 ```
 
-### Automation compatibility
+### Automation Compatibility
 
-Some operations have been renamed since LTS 2015 and cannot be used any more with the Java Automation client. Use the following contribution to enable the aliases and fix the bug:
+Some operations have been renamed since LTS 2015 and cannot be used any more with the Java Automation Client. Use the following contribution to enable the aliases and fix the bug:
 ```
 <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
   <property name="nuxeo.automation.export.aliases">true</property>
