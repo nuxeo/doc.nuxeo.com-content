@@ -109,9 +109,9 @@ Nuxeo provides a Redis integration via the `nuxeo-core-redis` bundle.
 
 The idea is that, at least for now, Redis is not a hard requirement for running the Nuxeo Platform; We simply use Redis as a backend to provide alternate implementation of some services inside the platform. However, we do provide these implementations because we think they can be useful.
 
-{{#> callout type='warning' }}
+{{#> callout type='info' }}
 
-Nuxeo uses Redis to store transient data, after a normal cluster shutdown, the content of Redis can be flushed (erased). Note however that Nuxeo can not work with a Redis configured as [LRU cache](http://redis.io/topics/lru-cache), there should be no eviction under memory pressure, hopefully this is the default policy of Reds.
+Nuxeo can use Redis to store both data to be persisted (jobs list for instance) and transient data (cache data for instance). After a normal cluster shutdown, you can flush (erase) the transient data in Redis. Note however that Nuxeo can not work with a Redis configured as [LRU cache](http://redis.io/topics/lru-cache), there should be no eviction under memory pressure.
 
 {{/callout}}
 
