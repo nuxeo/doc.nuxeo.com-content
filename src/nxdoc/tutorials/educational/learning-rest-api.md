@@ -5,7 +5,6 @@ review:
     date: '2017-01-16'
     status: ok
 labels:
-    - content-review-lts2016
     - multiexcerpt-include
 toc: true
 confluence:
@@ -272,10 +271,9 @@ Information about Nuxeo REST API can be found in various places. Here are some o
 
 3.  Create a Workspace named "Rest API Tutorial".
 
-4.  Create a Document within the Workspace.
-    *For the purposes of this tutorial, we've created a Picture document named "My Picture". These document types are available with the Nuxeo DAM addon.*
+4.  Create a Picture document within the Workspace.
 
-5.  Export the Picture using the [**XML export** option in Nuxeo Platform]({{page version='' space='userdoc' page='exporting-documents#xml-export-of-a-single-document'}}) or by clicking the ![]({{file name='export_json.png'}}) link in the **Nuxeo Dev Tools** extension.
+5.  Export the Document using the [**XML export** option in Nuxeo Platform]({{page version='' space='userdoc' page='exporting-documents#xml-export-of-a-single-document'}}) or by clicking the ![]({{file name='export_json.png'}}) link in the **Nuxeo Dev Tools** extension.
 
 #### Retrieve the Document using the REST API
 
@@ -333,7 +331,7 @@ Refer to the [CORS documentation]({{page version='' space='nxdoc' page='cross-or
       - only allows requests from https://foobar.com and its subdomains
       - supports the following methods: `GET, PUT, POST, DELETE, HEAD, OPTIONS`
       - only allows requests on the following pattern: `/nuxeo/`
-    *If you already provided a CORS configuration when you installed the Nuxeo Dev Tools extension, you can either replace it or skip this part.*
+    *If you already provided a CORS configuration when you installed the Nuxeo Dev Tools extension, you can either replace it or skip this Practice exercise.*
 
 3.  In your Nuxeo instance, deploy the Nuxeo Studio configuration.
     **ADMIN** > **Update Center** > **Update**
