@@ -127,7 +127,7 @@ Before following this tutorial, ensure that you have the following:
       <tr>
         <td>**Node.js**</td>
         <td>
-          In this tutorial we will be using Nuxeo JS Client in **node.js**. Click [here](https://doc.nuxeo.com/nxdoc/setting-up-your-javascript-environment/#setting-up-the-javascript-environment) for complete instructions on how to install both tools.
+          In this tutorial we will be using Nuxeo JS Client in **node.js**. Click [here]({{page version='' space='nxdoc' page='setting-up-your-javascript-environment#setting-up-the-javascript-environment'}}) for complete instructions on how to install both tools.
         </td>
       </tr>
       <tr>
@@ -166,7 +166,7 @@ Before following this tutorial, ensure that you have the following:
       <tr>
         <td>**Nuxeo Dev Tools browser extension**</td>
         <td>
-          Available for [Chrome](https://chrome.google.com/webstore/detail/nuxeo-dev-tools/kncphbjdicjganncpalklkllihdidcmh?hl=en) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/nuxeo-dev-tools/), this handy little extension provides a number of [useful shortcuts](https://doc.nuxeo.com/nxdoc/nuxeo-dev-tools-extension/#features). Be sure to set up a [CORS configuration](https://doc.nuxeo.com/nxdoc/cross-origin-resource-sharing-cors/) to fully benefit from its features.
+          Available for [Chrome](https://chrome.google.com/webstore/detail/nuxeo-dev-tools/kncphbjdicjganncpalklkllihdidcmh?hl=en) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/nuxeo-dev-tools/), this handy little extension provides a number of [useful shortcuts]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension#features'}}). Be sure to set up a [CORS configuration]({{page version='' space='nxdoc' page='cross-origin-resource-sharing-cors'}}) to fully benefit from its features.
         </td>
       </tr>
     </tbody>
@@ -196,7 +196,7 @@ You should be familiar with the following:
       <tr>
         <td>**JavaScript**</td>
         <td>
-          JavaScript programming skills are required, as we will be using the [Nuxeo JavaScript client](https://doc.nuxeo.com/nxdoc/javascript-client/) to practice.
+          JavaScript programming skills are required, as we will be using the [Nuxeo JavaScript client]({{page version='' space='nxdoc' page='javascript-client'}}) to practice.
         </td>
       </tr>
     </tbody>
@@ -235,7 +235,7 @@ Information about Nuxeo REST API can be found in various places. Here are some o
       <tr>
         <td>**REST API Documentation**</td>
         <td>
-          Available at [REST API]({{page page='rest-api'}}) in our documentation center. It provides detailed technical documentation on the concepts, features and clients for Nuxeo REST API.
+          Available at [REST API]({{page version='' space='nxdoc' page='rest-api'}}) in our documentation center. It provides detailed technical documentation on the concepts, features and clients for Nuxeo REST API.
         </td>
       </tr>
       <tr>
@@ -275,7 +275,7 @@ Information about Nuxeo REST API can be found in various places. Here are some o
 4.  Create a Document within the Workspace.
     *For the purposes of this tutorial, we've created a Picture document named "My Picture". These document types are available with the Nuxeo DAM addon.*
 
-5.  Export the Picture using the [**XML export** option in Nuxeo Platform]({{page space='userdoc' page='exporting-documents#xml-export-of-a-single-document'}}) or by clicking the ![]({{file name='export_json.png'}}) link in the **Nuxeo Dev Tools** extension.
+5.  Export the Picture using the [**XML export** option in Nuxeo Platform]({{page version='' space='userdoc' page='exporting-documents#xml-export-of-a-single-document'}}) or by clicking the ![]({{file name='export_json.png'}}) link in the **Nuxeo Dev Tools** extension.
 
 #### Retrieve the Document using the REST API
 
@@ -323,7 +323,7 @@ A CORS configuration can be made from Studio by adding an XML extension.
 
 Notice that **only GET, POST, HEAD, OPTIONS methods are allowed by default**. You need to explicitly set the supported methods in your configuration to allow PUT and DELETE calls.
 
-Refer to the [CORS documentation]({{page page='cross-origin-resource-sharing-cors'}}) for all applicable configuration options.
+Refer to the [CORS documentation]({{page version='' space='nxdoc' page='cross-origin-resource-sharing-cors'}}) for all applicable configuration options.
 
 ##### Practice - CORS Configuration
 
@@ -368,17 +368,9 @@ curl --verbose -H "Origin: https://foobar.com" -H "Access-Control-Request-Method
 
 {{/accordian}}
 
-## Client Overview
+## JavaScript Client
 
-There are several clients available to wrap your calls to Nuxeo REST API. Their goal is to handle the low-level plumbing and let you focus on high-level functionalities, all the while integrated in your favorite programming language / environment.
-
-Here is a list of the existing clients.
-
-{{{multiexcerpt 'rest-api-clients' page='Client SDKs'}}}
-
-### JavaScript Client
-
-During this tutorial we will focus on using the JavaScript (JS) client. Nuxeo JS client is versatile enough to let you work in various contexts:
+There are [several clients available]({{page version='' space='nxdoc' page='client-sdks'}}) to wrap your calls to Nuxeo REST API. During this tutorial we will focus on using the JavaScript (JS) client. Nuxeo JS client is versatile enough to let you work in various contexts:
 
 *   In **Node.js**
 *   In the browser by adding the library directly or through Bower
@@ -667,7 +659,7 @@ function checkCredentials() {
 
 **Learn More**
 
-[Authentication and User Management]({{page page='authentication-and-user-management'}}) documentation
+[Authentication and User Management]({{page version='' space='nxdoc' page='authentication-and-user-management'}}) documentation
 
 ## Manipulating Documents
 
@@ -679,7 +671,7 @@ nuxeo.repository().create({parentRef}, {document})...
 ```
 The `parentRef` is the ID or path under which your document should be created.
 
-A [`Document`](https://nuxeo.github.io/nuxeo-js-client/latest/Document.html) can't be instantiated directly, so you need to create the object manually. Refer to the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation to see what you need to send.
+A [`Document`](https://nuxeo.github.io/nuxeo-js-client/latest/Document.html) can't be instantiated directly, so you need to create the object manually. Refer to the [REST API Entity Types]({{page version='' space='nxdoc' page='rest-api-entity-types'}}) documentation to see what you need to send.
 
 {{{multiexcerpt 'restapi-doc-entity-post' page='REST API Entity Types'}}}
 
@@ -689,7 +681,7 @@ A [`Document`](https://nuxeo.github.io/nuxeo-js-client/latest/Document.html) can
 
 2.  Store your Nuxeo Server URL in the `baseURL` variable.
 
-3.  Define the properties for the Workspace, Folder and Document you will create. (See [REST API Entity Types]({{page page='rest-api-entity-types'}}) for more information)
+3.  Define the properties for the Workspace, Folder and Document you will create. (See [REST API Entity Types]({{page version='' space='nxdoc' page='rest-api-entity-types'}}) for more information)
 
 4.  Using the `nuxeo.repository().create({parentRef}, {document})...` method, create the **My Workspace** in "Workspaces".
 
@@ -1045,7 +1037,7 @@ nuxeo.repository().fetch(docPath)
 
 #### Headers
 
-[Special HTTP Headers]({{page page='special-http-headers'}}) can be set to fine-tune your request. Here are a couple of examples for fetching a document:
+[Special HTTP Headers]({{page version='' space='nxdoc' page='special-http-headers'}}) can be set to fine-tune your request. Here are a couple of examples for fetching a document:
 
     `properties:schema1, schema2`: Retrieves only specific schemas
     `properties:*`: Retrieves all schemas
@@ -1177,7 +1169,7 @@ In addition to the `depth` header, you can use:
 
 **Notes about the JS client methods:**
 
-*   More information about the entity types can be found in the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation page.
+*   More information about the entity types can be found in the [REST API Entity Types]({{page version='' space='nxdoc' page='rest-api-entity-types'}}) documentation page.
 
 *   The entity type you fill in is that of the first object you are retrieving.
 
@@ -1269,11 +1261,11 @@ function assertResult(document) {
 
 **Learn More**
 
-[JSON Marshalling]({{page page='json-marshalling'}}) documentation
+[JSON Marshalling]({{page version='' space='nxdoc' page='json-marshalling'}}) documentation
 
 #### Enrichers
 
-Adding enrichers when fetching a document is done by setting the `enrichers.document` header, `document` being the entity type that will be enriched. If you were calling a user, you would use the `enrichers.user` header instead, and so on. As for resolvers, what matters here is the entity type of the first object you have been calling. Entity types are listed in the [REST API Entity Types]({{page page='rest-api-entity-types'}}) documentation.
+Adding enrichers when fetching a document is done by setting the `enrichers.document` header, `document` being the entity type that will be enriched. If you were calling a user, you would use the `enrichers.user` header instead, and so on. As for resolvers, what matters here is the entity type of the first object you have been calling. Entity types are listed in the [REST API Entity Types]({{page version='' space='nxdoc' page='rest-api-entity-types'}}) documentation.
 
 Enrichers are provided in the response of the `contextParameters` object.
 
@@ -1459,7 +1451,7 @@ function assertResult(result) {
 
 **Learn More**
 
-[Web Adapters for the REST API]({{page page='rest-api-web-adapters'}}) documentation.
+[Web Adapters for the REST API]({{page version='' space='nxdoc' page='rest-api-web-adapters'}}) documentation.
 
 ### Delete and Trash Management
 
@@ -1649,7 +1641,7 @@ SELECT * FROM Document
 
 {{/panel}}
 
-See the [NXQL]({{page page='nxql'}}) documentation for other possibilities.
+See the [NXQL]({{page version='' space='nxdoc' page='nxql'}}) documentation for other possibilities.
 
 ### Call Page Providers
 
@@ -1874,11 +1866,11 @@ By default, NXQL queries use the database, but you can change this to use the El
 
 **How Can I Take Advantage of all the Elasticsearch Features?**
 
-Nuxeo provides a [passthrough API for Elasticsearch]({{page page='elasticsearch-passthrough'}}) that lets you benefit from the Elasticsearch API while handling security. When using it, queries are written using the Elasticsearch API, but they are actually sent to Nuxeo Platform that reworks them. We won't cover this aspect during this tutorial but you can head to the [Elasticsearch documentation](https://www.elastic.co/guide) for more information.
+Nuxeo provides a [passthrough API for Elasticsearch]({{page version='' space='nxdoc' page='elasticsearch-passthrough'}}) that lets you benefit from the Elasticsearch API while handling security. When using it, queries are written using the Elasticsearch API, but they are actually sent to Nuxeo Platform that reworks them. We won't cover this aspect during this tutorial but you can head to the [Elasticsearch documentation](https://www.elastic.co/guide) for more information.
 
 ## Executing Business Logic through Automation
 
-Automation [operations]({{page page='contributing-an-operation'}}), [chains]({{page page='how-to-create-an-automation-chain'}}) and [scripts]({{page page='automation-scripting'}}) can all be called with the JS client.
+Automation [operations]({{page version='' space='nxdoc' page='contributing-an-operation'}}), [chains]({{page page='how-to-create-an-automation-chain'}}) and [scripts]({{page page='automation-scripting'}}) can all be called with the JS client.
 
 **When You Should Use Automation**
 
@@ -2164,7 +2156,7 @@ Completing a task is done using the `complete(action, taskOptions)` method.
 
 *CREATE AN AUTOMATION CHAIN*
 
-1.  In Nuxeo Studio, [create a simple automation chain]({{page page='automation-chains'}}), `ValidateDocumentChain`, that modifies the lifecycle of a document to "approved" and adds a comment.
+1.  In Nuxeo Studio, [create a simple automation chain]({{page version='' space='nxdoc' page='automation-chain'}}), `ValidateDocumentChain`, that modifies the lifecycle of a document to "approved" and adds a comment.
 
     ```yaml
     - Context.FetchDocument
@@ -2182,7 +2174,7 @@ Completing a task is done using the `complete(action, taskOptions)` method.
 
 *CREATE A SIMPLE WORKFLOW*
 
-2.  Create a [workflow]({{page page='simple-workflow-example'}}), `ValidateDocument`.
+2.  Create a [workflow]({{page version='' space='nxdoc' page='simple-workflow-example'}}), `ValidateDocument`.
 
 3.  Under the **Variables** tab, add the String field `validationComment`.
 
@@ -2190,7 +2182,7 @@ Completing a task is done using the `complete(action, taskOptions)` method.
 
 5.  Under the **Graph** tab, add an **Accept/Reject** user task node, and click on the **Edit** icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) to edit the node properties.
 
-{{file name='workflow-graph.png'}}
+![]({{file name='workflow-graph.png'}} ?w=550,border=true)
 
 6.  Under the **General** tab, add the `Context["workflowInitiator"]` assignees expression.
 
