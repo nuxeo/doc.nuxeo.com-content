@@ -199,9 +199,11 @@ To enable clustering, you must have at least two nodes with:
 *   A [Redis server]({{page page='redis-configuration'}})
 *   A load-balancer with sticky sessions
 
+You can head to the [Nuxeo cluster architecture introduction]({{page page='nuxeo-cluster-architecture-introduction'}}) for more information on these components.
+
 The shared filesystem is usually an NFS mount. You **must not** share the whole Nuxeo installation tree (see below).
 
-The load balancer **must** use sticky sessions if the clustering delay is not 0\. Having a non-0 clustering delay is recommended for performance reasons. See below for more.
+The load balancer **must** use sticky sessions if the clustering delay is not 0. Having a non-0 clustering delay is recommended for performance reasons. See below for more.
 
 ## Shared Filesystem Configuration
 
@@ -396,6 +398,9 @@ To test that the load balancer forwards the HTTP requests of a given session to 
 <div class="column medium-6">
 {{#> panel heading='Related Documentation'}}
 
+- [Nuxeo Cluster Architecture Introduction]({{page page='nuxeo-cluster-architecture-introduction'}})
+- [Standard high availability nuxeo cluster architecture examples]({{page page='standard-high-availability-nuxeo-cluster-architecture'}})
+- [Scale your Nuxeo cluster]({{page page='nuxeo-cluster-scalability-options'}})
 - [VCS]({{page page='vcs'}})
 - [Redis Configuration]({{page page='redis-configuration'}})
 - [Setting up a HA Configuration Using the Nuxeo Platform and PostgreSQL]({{page page='setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql'}})
