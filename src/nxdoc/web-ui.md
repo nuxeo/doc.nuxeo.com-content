@@ -128,6 +128,7 @@ Supported browsers for Nuxeo Web UI and Nuxeo Web UI Elements are:
 It should also be possible to build applications that support IE11, Safari, Safari Mobile with Nuxeo Web UI Elements.
 {{! /multiexcerpt}}
 
+{{! multiexcerpt name='webui-functional-overview'}}
 ## Functional Overview
 
 Nuxeo Web UI is a responsive application with three main layout regions:
@@ -216,6 +217,8 @@ At the top of the main view toolbars are displayed according to the content bein
 ![]({{file name='results_toolbar.png'}} ?w=77,border=true)
 
 A create button ![]({{file name='create_button.png'}} ?w=25) is also permanently displayed in the bottom right corner of the main view the to let you create or import documents anywhere in the application.
+
+{{! /multiexcerpt}}
 
 ## Technical Overview
 

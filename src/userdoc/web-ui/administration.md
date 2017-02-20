@@ -10,8 +10,8 @@ description:
 ---
 This Administration menu presents three different submenus:
 - [Analytics](#analytics)
-- Users & Groups
-- Vocabularies
+- [Users & Groups](#users-groups)
+- [Vocabularies](#vocabularies)
 
 
 ## Analytics
@@ -288,3 +288,23 @@ By default, the labels of default vocabularies entries are the IDs of labels in 
 ### Vocabulary Entries Parameters
 
 {{{multiexcerpt 'vocabulary-entries-parameter' page='managing-vocabularies'}}}
+
+### Adding a Vocabulary Entry
+
+To add an entry to a vocabulary,click on the **Add Entry** button of the vocabulary, fill in the entry creation form and click on the **Save** button.
+
+SCREENSHOT
+
+The new entry is displayed in the list of the vocabulary entries. It is immediately available in the corresponding drop down list in the user interface.
+
+### Editing a Vocabulary Entry
+
+Editing a vocabulary entry can be changing its label, making it obsolete or changing its order. When you make an entry obsolete, it means that it will not be displayed in the available choices when you edit a document.
+
+### Deleting a Vocabulary Entry
+
+{{#> callout type='warning' }}
+Deleting a vocabulary entry is a permanent action.
+{{/callout}}
+
+To delete vocabulary entry, click on the **Delete** button ![]({{file name='delete_2.png' space='userdoc' page='icons-index'}}) of the entry to erase and confirm.The entry is permanently erased. The list of the vocabulary entries is displayed.

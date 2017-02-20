@@ -8,4 +8,4 @@ toc: true
 description: Web UI User Documentation
 ---
 
-{{{multiexcerpt 'webui-functional-overview'}}}
+{{{multiexcerpt 'webui-functional-overview' space='nxdoc' page='Web UI'}}}
