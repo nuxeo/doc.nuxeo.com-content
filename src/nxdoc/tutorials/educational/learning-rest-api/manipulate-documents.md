@@ -27,7 +27,7 @@ A [`Document`](https://nuxeo.github.io/nuxeo-js-client/latest/Document.html) can
 
 ### Practice - Document Creation
 
-1.  Download <a href="{{file name='createDocuments.js'}}" download>createDocuments.js</a> or open in another tab to copy and paste.
+1.  Download [createDocuments.js]({{file name='createDocuments.js'}}) or open in another tab to copy and paste.
 
 2.  Store your Nuxeo Server URL in the `baseURL` variable.
 
@@ -155,7 +155,7 @@ Accepted values for the header are `MAJOR` (creates a version and increments the
 
 ### Practice - Document Update
 
-1.  Download <a href="{{file name='updateVersionDocument.js'}}" download>updateVersionDocument.js</a> or open in another tab to copy and paste.
+1.  Download [updateVersionDocument.js]({{file name='updateVersionDocument.js'}}) or open in another tab to copy and paste.
 
 2.  Store your Nuxeo Server URL in the `baseURL` variable.
 
@@ -281,7 +281,7 @@ Check out the [Importing Files with the REST API](https://university.nuxeo.io/nu
 
 **Practice - File Upload**
 
-1.  Download <a href="{{file name='uploadFile.js'}}" download>uploadFile.js</a> or open in another tab to copy and paste.
+1.  Download [uploadFile.js]({{file name='uploadFile.js'}}) or open in another tab to copy and paste.
 
 2.  Store your Nuxeo Server URL in the `baseURL` variable and modify the `filePath` and `whereToCreate` variables.
 
@@ -415,7 +415,7 @@ nuxeo.class().method(..., callOptions)
 
 #### Practice - Using Headers
 
-1.  Download <a href="{{file name='headers.js'}}" download>headers.js</a> or open in another tab to copy and paste.
+1.  Download [headers.js]({{file name='headers.js'}}) or open in another tab to copy and paste.
 
 2.  Referring to the [Nuxeo JS client documentation](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html), modify the code to:
 
@@ -548,7 +548,7 @@ Notes about the JS client methods:
 
 **Fetch the documents**
 
-1.  Download <a href="{{file name='usingResolvers.js'}}" download>usingResolvers.js</a> or open in another tab to copy and paste.
+1.  Download [usingResolvers.js]({{file name='usingResolvers.js'}}) or open in another tab to copy and paste.
 
 2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL and the `docId` with that of the contract you created.
 
@@ -638,7 +638,7 @@ nuxeo.repository().enrichers(
 
 #### Practice - Enrichers
 
-1.  Download <a href="{{file name='usingEnrichers.js'}}" download>usingEnrichers.js</a> or open in another tab to copy and paste.
+1.  Download [usingEnrichers.js]({{file name='usingEnrichers.js'}}) or open in another tab to copy and paste.
 
 2.  Replace `NUXEO_SERVER` and the document UID.
 
@@ -743,7 +743,7 @@ nuxeo.request('/path/default-domain/@acl')
 
 #### Practice - Adapters
 
-1.  Download <a href="{{file name='usingAdapters.js'}}" download>usingAdapters.js</a> or open in another tab to copy and paste.
+1.  Download [usingAdapters.js]({{file name='usingAdapters.js'}}) or open in another tab to copy and paste.
 
 2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL.
 
@@ -837,7 +837,7 @@ Then it is up to you to make sure your queries will not retrieve documents in th
 
 **Trash Management**
 
-1.  Download <a href="{{file name='trashManagement.js'}}" download>trashManagement.js</a> or open in another tab to copy and paste.
+1.  Download [trashManagement.js]({{file name='trashManagement.js'}}) or open in another tab to copy and paste.
 
 2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL.
 
@@ -911,7 +911,7 @@ function assertResult(document) {
 
 **Document Deletion**
 
-1.  Download <a href="{{file name='documentDeletion.js'}}" download>documentDeletion.js</a> or open in another tab to copy and paste.
+1.  Download [documentDeletion.js]({{file name='documentDeletion.js'}}) or open in another tab to copy and paste.
 
 2.  Replace `NUXEO_SERVER` and the document UID.
 

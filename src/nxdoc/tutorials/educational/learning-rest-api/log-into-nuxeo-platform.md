@@ -41,7 +41,7 @@ Authenticating using Nuxeo JS client:
 
 ### Practice - Basic Authentication Using Nuxeo JS Client
 
-1.  Download <a href="{{file name='basicAuthentication.js'}}" download>basicAuthentication.js</a> or open in another tab to copy and paste.
+1.  Download [basicAuthentication.js]({{file name='basicAuthentication.js'}}) or open in another tab to copy and paste.
 
 2.  Create a Nuxeo object in the `nuxeo` variable.
 
@@ -154,7 +154,7 @@ For security purposes, you should avoid defining the first client using the `bas
 
 ### Practice - Token Authentication Using the JS Client
 
-1.  Download <a href="{{file name='tokenAuthentication.js'}}" download>tokenAuthentication.js</a> or open in another tab to copy and paste.
+1.  Download [tokenAuthentication.js]({{file name='tokenAuthentication.js'}}) or open in another tab to copy and paste.
 
 2.  Store your Nuxeo Server URL in the `baseURL` variable.
 

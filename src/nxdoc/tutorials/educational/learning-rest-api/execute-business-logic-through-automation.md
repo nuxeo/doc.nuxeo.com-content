@@ -64,7 +64,7 @@ Note that automation scripts are prefixed by `javascript.` So if your automation
 
 **Automation Script Definition**
 
-1.  Download <a href="{{file name='addToCollection.js'}}" download>addToCollection.js</a> or open in another tab to copy the code.
+1.  Download [addToCollection.js]({{file name='addToCollection.js'}}) or open in another tab to copy the code.
 
 2.  In Nuxeo Studio, create a new automation script called `addToCollection`  and paste the code from the file addToCollection.js.
 
@@ -147,7 +147,7 @@ function getCollectionInUserWorkspace(input, collectionName) {
 
 **Node.js Script Definition**
 
-1.  Download <a href="{{file name='businessLogic.js'}}" download>businessLogic.js</a> or open in another tab to copy the code.
+1.  Download [businessLogic.js]({{file name='businessLogic.js'}}) or open in another tab to copy the code.
 
 2. Replace `NUXEO_SERVER` with your Nuxeo Server URL.
 

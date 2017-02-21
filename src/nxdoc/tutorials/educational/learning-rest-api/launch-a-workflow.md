@@ -116,7 +116,7 @@ comment: "Validation comment: \n@{WorkflowVariables[\"validationComment\"]}"
 
 **Launch the workflow using the Nuxeo JavaScript Client**
 
-1. Download <a href="{{file name='workflows.js'}}" download>workflows.js</a> or open in another tab to copy and paste.
+1. Download [workflows.js]({{file name='workflows.js'}}) or open in another tab to copy and paste.
 
 2. Replace `NUXEO_SERVER` with your Nuxeo Server URL.
 

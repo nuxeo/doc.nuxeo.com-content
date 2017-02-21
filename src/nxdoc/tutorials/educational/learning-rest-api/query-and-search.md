@@ -56,7 +56,7 @@ nuxeo.Repository().query({ 'pageProvider': 'pageProviderId', queryParams['parame
 
 **Calling Page Providers**
 
-1.  Download <a href="{{file name='callPageProvider.js'}}" download>callPageProvider.js</a> or open in another tab to copy and paste.
+1.  Download [callPageProvider.js]({{file name='callPageProvider.js'}}) or open in another tab to copy and paste.
 
 2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL.
 
@@ -140,7 +140,7 @@ function assertResult(result) {
 
 **Launching NXQL Queries**
 
-1.  Download <a href="{{file name='nxqlQuery.js'}}" download>nxqlQuery.js</a> or open in another tab to copy and paste.
+1.  Download [nxqlQuery.js]({{file name='nxqlQuery.js'}}) or open in another tab to copy and paste.
 
 2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL.
 
