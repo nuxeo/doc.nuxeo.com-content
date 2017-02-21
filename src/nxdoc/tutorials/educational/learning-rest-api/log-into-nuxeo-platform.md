@@ -6,7 +6,7 @@ review:
     status: ok
 toc: true
 tree_item_index: 500
-previous_link: /nxdoc/javascript-client-example
+previous_link: /nxdoc/define-a-cors-configuration
 next_link: /nxdoc/manipulate-documents
 
 ---

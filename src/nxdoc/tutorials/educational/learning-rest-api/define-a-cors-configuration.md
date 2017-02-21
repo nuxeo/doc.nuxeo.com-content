@@ -7,7 +7,7 @@ review:
 toc: true
 tree_item_index: 300
 previous_link: /nxdoc/rest-api-principles
-next_link: /nxdoc/javascript-client-example
+next_link: /nxdoc/log-into-nuxeo-platform
 
 ---
 
