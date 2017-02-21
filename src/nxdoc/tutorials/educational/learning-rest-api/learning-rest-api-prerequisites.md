@@ -18,7 +18,7 @@ next_link: /nxdoc/rest-api-principles
 
 ## Technical Prerequisites
 
-Before following this tutorial, ensure that you have the following:
+### Mandatory Prerequisites
 
 <div class="table-scroll">
   <table class="hover">
@@ -38,13 +38,14 @@ Before following this tutorial, ensure that you have the following:
       <tr>
         <td>**Node.js**</td>
         <td>
-          In this tutorial we will be using Nuxeo JS Client in **node.js**. Click [here]({{page version='' space='nxdoc' page='setting-up-your-javascript-environment#setting-up-the-javascript-environment'}}) for complete instructions on how to install both tools.
+          In this tutorial we will be using Nuxeo JS Client in **node.js**. Check the page [Setting up Your JavaScript Environment]({{page version='' space='nxdoc' page='setting-up-your-javascript-environment#setting-up-the-javascript-environment'}}) for complete instructions on how to install both tools.
         </td>
       </tr>
       <tr>
-        <td>**Nuxeo JS Client**</td>
+        <td>**Nuxeo JavaScript Client**</td>
         <td>
-          We will be using Nuxeo JS Client to wrap our REST API calls. See above for instructions on how to install.
+          We will be using Nuxeo JavaScript Client to wrap our REST API calls. Nuxeo JS client is versatile enough to let you work in various contexts: in **Node.js**, in the browser by adding the library directly or through Bower, or in AngularJS applications.
+          See above for instructions on how to install.
         </td>
       </tr>
       <tr>
@@ -53,25 +54,25 @@ Before following this tutorial, ensure that you have the following:
           Available natively for Mac OS and Linux users, Windows users can [install it](https://curl.haxx.se/download.html#Win64). It may be useful to check your CORS configuration.
         </td>
       </tr>
+      <tr>
+        <td>**Nuxeo DAM**</td>
+        <td>
+          From Nuxeo Marketplace, install the [Nuxeo DAM addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam). This will provide you with three extra multimedia Document Types to use and test throughout the tutorial: Picture, Audio and Video.
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
+
+### Optional Prerequisites
+
 <div class="table-scroll">
   <table class="hover">
     <tbody>
       <tr>
-        <td colspan="2">*&ast;&ast;OPTIONAL&ast;&ast;*</td>
-      </tr>
-      <tr>
-        <td>**Nuxeo DAM**</td>
-        <td>
-          From Nuxeo Marketplace, install the Nuxeo DAM addon. This will provide you with three extra multimedia Document Types to use and test throughout the tutorial.
-        </td>
-      </tr>
-      <tr>
         <td>**Nuxeo Showcase Content addon**</td>
         <td>
-          From Nuxeo Marketplace, install the Nuxeo Showcase Content addon. This will provide you with a stock of various documents to manipulate during the tutorial.
+          From Nuxeo Marketplace, install the [Nuxeo Showcase Content addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-showcase-content). This will provide you with a stock of various documents to manipulate during the tutorial.
         </td>
       </tr>
       <tr>
@@ -87,7 +88,7 @@ Before following this tutorial, ensure that you have the following:
 
 ## Required Knowledge
 
-You should be familiar with the following:
+### Mandatory Knowledge
 
 <div class="table-scroll">
   <table class="hover">
@@ -113,12 +114,12 @@ You should be familiar with the following:
     </tbody>
   </table>
 </div>
+
+### Optional Knowledge
+
 <div class="table-scroll">
   <table class="hover">
     <tbody>
-      <tr>
-        <td colspan="2">*&ast;&ast;OPTIONAL&ast;&ast;*</td>
-      </tr>
       <tr>
         <td>**Java**</td>
         <td>
