@@ -4,8 +4,6 @@ review:
     comment: 'Separate pages'
     date: '2017-02-20'
     status: ok
-labels:
-    - multiexcerpt-include
 toc: true
 tree_item_index: 900
 previous_link: /nxdoc/execute-business-logic-through-automation
@@ -23,7 +21,7 @@ A workflow can be started:
 
 ## How to Start a Workflow
 
-With the JS client, you can use the `nuxeo.workflows().start('workflowId')` method. The workflow ID to pass is the one defined in Nuxeo Studio. Doing so will start a workflow without attaching a document.
+With the Nuxeo JavaScript client, you can use the `nuxeo.workflows().start('workflowId')` method. The workflow ID to pass is the one defined in Nuxeo Studio. Doing so will start a workflow without attaching a document.
 
 ## How to Attach Documents
 
@@ -41,24 +39,24 @@ document.startWorkflow('workflowId');
 
 ### Using the Workflow Class
 
-Before starting the workflow, you need to create an object containing the IDs of the documents to attach.
+1. Before starting the workflow, you need to create an object containing the IDs of the documents to attach.
 
-{{#> panel type='code' heading='Workflow Options Object'}}
+    {{#> panel type='code' heading='Workflow Options Object'}}
 
-```javascript
-var workflowOptions = {
-      "attachedDocumentIds":
-        ["docId1", "docId2", ...]
-  };
-```
+    ```javascript
+    var workflowOptions = {
+          "attachedDocumentIds":
+            ["docId1", "docId2", ...]
+      };
+    ```
 
-{{/panel}}
+    {{/panel}}
 
-Then pass the object when starting the workflow.
+2. Then pass the object when starting the workflow.
 
-```javascript
-nuxeo.workflows().start('workflowId', workflowOptions)...
-```
+    ```javascript
+    nuxeo.workflows().start('workflowId', workflowOptions)...
+    ```
 
 ## How to Complete a Task
 
@@ -72,37 +70,37 @@ Completing a task is done using the `complete(action, taskOptions)` method.
   *   The `action` variable defines the button ID the user clicks on.
   *   The task options can be used to fill the task form if you didn't do it through the variable method.
 
-##### Practice - Workflows
+## Practice - Workflows
 
-*CREATE AN AUTOMATION CHAIN*
+**Create an Automation chain**
 
-1.  In Nuxeo Studio, [create a simple automation chain]({{page version='' space='nxdoc' page='automation-chain'}}), `ValidateDocumentChain`, that modifies the lifecycle of a document to "approved" and adds a comment.
+In Nuxeo Studio, [create a simple automation chain]({{page version='' space='nxdoc' page='automation-chain'}}), `ValidateDocumentChain`, that modifies the lifecycle of a document to "approved" and adds a comment.
 
-    ```yaml
-    - Context.FetchDocument
-    - Document.FollowLifecycleTransition:
-    value: approve
-    - Document.SetProperty:
-    xpath: dc:description
-    save: 'true'
-    value: WorkflowVariables["validationComment"]
-    - Audit.LogEvent:
-    event: Document validated
-    category: RESTAPIWorkflowExercise
-    comment: "Validation comment: \n@{WorkflowVariables[\"validationComment\"]}"
-    ```
+```yaml
+- Context.FetchDocument
+- Document.FollowLifecycleTransition:
+value: approve
+- Document.SetProperty:
+xpath: dc:description
+save: 'true'
+value: WorkflowVariables["validationComment"]
+- Audit.LogEvent:
+event: Document validated
+category: RESTAPIWorkflowExercise
+comment: "Validation comment: \n@{WorkflowVariables[\"validationComment\"]}"
+```
 
-*CREATE A SIMPLE WORKFLOW*
+**Create a simple workflow**
 
-2.  Create a [workflow]({{page version='' space='nxdoc' page='simple-workflow-example'}}), `ValidateDocument`.
+1.  Create a [workflow]({{page version='' space='nxdoc' page='simple-workflow-example'}}), `ValidateDocument`.
 
-3.  Under the **Variables** tab, add the String field `validationComment`.
+2.  Under the **Variables** tab, add the String field `validationComment`.
 
 4.  Under the **Activation** tab, allow for Read & Edit permissions and the document type of your choice.
 
 5.  Under the **Graph** tab, add an **Accept/Reject** user task node, and click on the **Edit** icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) to edit the node properties.
 
-![]({{file name='workflow-graph.png'}} ?w=550,border=true)
+    ![]({{file name='workflow-graph.png'}} ?w=550,border=true)
 
 6.  Under the **General** tab, add the `Context["workflowInitiator"]` assignees expression.
 
@@ -114,26 +112,28 @@ Completing a task is done using the `complete(action, taskOptions)` method.
 
 10. Add your transitions to the graph, then **Save** your workflow.
 
-*LAUNCH THE WORKFLOW USING JS CLIENT*
+11. Deploy your Studio project on your Nuxeo Platform instance or perform a Hot Reload from the **Dev Tool extension**.
 
-11. Download <a href="{{file name='workflows.js'}}" download>workflows.js</a> or open in another tab to copy and paste.
+**Launch the workflow using the Nuxeo JavaScript Client**
 
-12. Replace `NUXEO_SERVER` with your Nuxeo Server URL.
+1. Download <a href="{{file name='workflows.js'}}" download>workflows.js</a> or open in another tab to copy and paste.
 
-13. Create an object containing the ID(s) of the document(s) to attach.
+2. Replace `NUXEO_SERVER` with your Nuxeo Server URL.
 
-14. Start the workflow, passing in the object, then call `getWfTasks` method.
+3. Create an object containing the ID(s) of the document(s) to attach.
 
-15. Retrieve the workflow tasks and call the `completeWfTasks` method.
+4. Start the workflow, passing in the object, then call `getWfTasks` method.
 
-16. Iterate through the tasks, presuming that the user adds a `validationComment` and clicks the validate button.
+5. Retrieve the workflow tasks and call the `completeWfTasks` method.
 
-17. Call the `asserResult` method.
+6. Iterate through the tasks, presuming that the user adds a `validationComment` and clicks the validate button.
 
-18. When your code is ready, run it with the following command:
+7. Call the `asserResult` method.
+
+8. When your code is ready, run it with the following command:
 
     ```bash
-    node workflows.js
+    $ node workflows.js
     ```
 
 {{#> accordian heading='Launching Workflows - Solution' closed='true'}}

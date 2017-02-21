@@ -12,20 +12,20 @@ previous_link: /nxdoc/log-into-nuxeo-platform
 next_link: /nxdoc/query-and-search
 
 ---
-
-## Create
+## Creating a Document
 
 You can create a document using the JS client create method.
+
 ```javascript
 nuxeo.repository().create({parentRef}, {document})...
 ```
 The `parentRef` is the ID or path under which your document should be created.
 
-A [`Document`](https://nuxeo.github.io/nuxeo-js-client/latest/Document.html) can't be instantiated directly, so you need to create the object manually. Refer to the [REST API Entity Types]({{page version='' space='nxdoc' page='rest-api-entity-types'}}) documentation to see what you need to send.
+A [`Document`](https://nuxeo.github.io/nuxeo-js-client/latest/Document.html) cannot be instantiated directly, so you need to create the object manually. Refer to the [REST API Entity Types]({{page version='' space='nxdoc' page='rest-api-entity-types'}}) documentation to see what you need to send.
 
 {{{multiexcerpt 'restapi-doc-entity-post' page='REST API Entity Types'}}}
 
-##### Practice - Document Creation
+### Practice - Document Creation
 
 1.  Download <a href="{{file name='createDocuments.js'}}" download>createDocuments.js</a> or open in another tab to copy and paste.
 
@@ -37,12 +37,12 @@ A [`Document`](https://nuxeo.github.io/nuxeo-js-client/latest/Document.html) can
 
 5.  Create a Folder in **My Workspace**.
 
-6.  Create a Document (File, Note, etc) in the Folder.
+6.  Create a Document (File, Note, etc.) in the Folder.
 
 7.  When your code is ready, run it with the following command:
 
     ```bash
-    node createDocuments.js
+    $ node createDocuments.js
     ```
 
 {{#> accordian heading='Create Documents - Solution' closed='true'}}
@@ -125,7 +125,7 @@ repository
 
 {{/accordian}}
 
-## Update
+## Updating a Document
 
 Updating a document is done using the JS client `nuxeo.repository().update(document)...` method.
 
@@ -147,13 +147,13 @@ var documentToUpdate = {
 };
 ```
 
-## Create a Version
+### Creating a Version
 
 The `X-Versioning-Option` header can be used when you need to increment the minor or major version of the document. It **returns the versioned document**. Creating a version also means that you will be able to revert to that version later if needed. By default, no version is created when updating a document and the 'live' (snapshot) document is returned.
 
 Accepted values for the header are `MAJOR` (creates a version and increments the major version number), `MINOR` (creates a version and increments the minor version number) or `NONE` (no version is created, if another update is performed later you won't be able to revert the document to the specific state you left it in during the first update). There is no functional difference between a minor and major version.
 
-##### Practice - Document Update
+### Practice - Document Update
 
 1.  Download <a href="{{file name='updateVersionDocument.js'}}" download>updateVersionDocument.js</a> or open in another tab to copy and paste.
 
@@ -168,7 +168,7 @@ Accepted values for the header are `MAJOR` (creates a version and increments the
 6.  When your code is ready, run it with the following command:
 
     ```bash
-    node updateVersionDocument.js
+    $ node updateVersionDocument.js
     ```
 
 {{#> accordian heading='Update and Version Documents - Solution' closed='true'}}
@@ -235,17 +235,17 @@ If you launch the same call in the solution twice in a row, the first call will 
 
 {{/callout}}
 
-## Upload a File
+## Uploading a File
 
-You can upload files with REST API outside the context of a transaction through the batch upload endpoint. This means that you can upload files as big as you want without risking a timeout.
+You can upload files with REST API outside the context of a transaction through the [batch upload endpoint]({{page version='' space='nxdoc' page='batch-upload-endpoint'}}). This means that you can upload files as big as you want without risking a timeout.
 
 Uploading a File with the JS client:
 
-*   Create a `Nuxeo.Blob` object containing the file.
-*   Instantiate a batch.
-*   Upload the file.
+1. Creates a `Nuxeo.Blob` object containing the file.
+2. Instantiates a batch.
+3. Uploads the file.
 
-**The file can be attached to the document either during document creation, or by updating it.**
+Note: The file can be attached to the document either during document creation, or by updating it.
 
 {{#> panel type='code' heading='File Upload Sample'}}
 
@@ -279,7 +279,7 @@ fs.stat(filePath, (err, stats) => {
 
 Check out the [Importing Files with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/importing-files-rest-api) video at [Nuxeo University](https://university.nuxeo.com/) for more information.
 
-##### Practice - File Upload
+**Practice - File Upload**
 
 1.  Download <a href="{{file name='uploadFile.js'}}" download>uploadFile.js</a> or open in another tab to copy and paste.
 
@@ -294,7 +294,7 @@ Check out the [Importing Files with the REST API](https://university.nuxeo.io/nu
 6.  When your code is ready, run it with the following command:
 
     ```bash
-    node uploadFile.js
+    $ node uploadFile.js
     ```
 
 {{#> accordian heading='Upload a File - Solution' closed='true'}}
@@ -370,7 +370,7 @@ fs.stat(filePath, (err, stats) => {
 
 {{/accordian}}
 
-## Fetch
+## Fetching Documents
 
 You can fetch documents with Nuxeo JS Client using the [`Repository`](https://nuxeo.github.io/nuxeo-js-client/latest/Repository.html) class and the document path or ID.
 
@@ -389,12 +389,13 @@ nuxeo.repository().fetch(docPath)
 
 [Special HTTP Headers]({{page version='' space='nxdoc' page='special-http-headers'}}) can be set to fine-tune your request. Here are a couple of examples for fetching a document:
 
-    `properties:schema1, schema2`: Retrieves only specific schemas
-    `properties:*`: Retrieves all schemas
+- `properties:schema1, schema2`: Retrieves only specific schemas
+- `properties:*`: Retrieves all schemas
 
 With JS client, you can set headers in the `Nuxeo` instance to ensure they are sent with each call, or in one specific request:
 
 {{#> panel type='code' heading='Adding an Application-Wide Header'}}
+
 ```javascript
 nuxeo.header(someHeader, someValue);
 ```
@@ -412,20 +413,20 @@ nuxeo.class().method(..., callOptions)
 
 {{/panel}}
 
-##### Practice - Using Headers
+#### Practice - Using Headers
 
 1.  Download <a href="{{file name='headers.js'}}" download>headers.js</a> or open in another tab to copy and paste.
 
-**Referring to the [Nuxeo JS client documentation](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html), modify the code to:**
+2.  Referring to the [Nuxeo JS client documentation](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html), modify the code to:
 
-2.  Ensure that further calls return all schemas in the response.
+    1.  Ensure that further calls return all schemas in the response.
 
-3.  Retrieve a document you previously created, using its path or ID.
+    2.  Retrieve a document you previously created, using its path or ID.
 
 4.  When your code is ready, run it with the following command:
 
     ```bash
-    node headers.js
+    $ node headers.js
     ```
 
 {{#> accordian heading='Using Headers - Solution' closed='true'}}
@@ -517,7 +518,7 @@ In addition to the `depth` header, you can use:
     )...
     ```
 
-**Notes about the JS client methods:**
+Notes about the JS client methods:
 
 *   More information about the entity types can be found in the [REST API Entity Types]({{page version='' space='nxdoc' page='rest-api-entity-types'}}) documentation page.
 
@@ -527,9 +528,11 @@ In addition to the `depth` header, you can use:
 
 *   When calling a user, use the `user` entity in the `fetchProperty` method, no matter what kind of entity types further referenced objects may have.
 
-##### Practice - Resolvers
+#### Practice - Resolvers
 
-1.  In Nuxeo Studio, create two different document types that each extend the File document type: `Company` and `Contract`.
+**Create custom document types**
+
+1.  Create two different document types that each extend the File document type: `Company` and `Contract`.
 
 2.  Under the **Schema** tab in the `Contract` document type, add a custom schema that includes the field `companyId` of type `Document`.
 
@@ -537,20 +540,24 @@ In addition to the `depth` header, you can use:
 
 4.  Deploy your Studio project on your Nuxeo Platform instance or perform a Hot Reload from the **Dev Tool extension**.
 
-5.  In Nuxeo Platform, create a company, **My Company**.
+**Create some documents in your Nuxeo Platform instance**
 
-6.  Create a contract, **My Contract**, attributing it to **My Company** during creation.
+1.  In Nuxeo Platform, create a company, **My Company**.
 
-7.  Download <a href="{{file name='usingResolvers.js'}}" download>usingResolvers.js</a> or open in another tab to copy and paste.
+2.  Create a contract, **My Contract**, attributing it to **My Company** during creation.
 
-8.  Replace `NUXEO_SERVER` with your Nuxeo Server URL and the `docId` with that of the contract you created.
+**Fetch the documents**
 
-9.  Add the appropriate resolvers to return the `Company` object and `Contract` object in the same call.
+1.  Download <a href="{{file name='usingResolvers.js'}}" download>usingResolvers.js</a> or open in another tab to copy and paste.
 
-10. When your code is ready, run it with the following command:
+2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL and the `docId` with that of the contract you created.
+
+3.  Add the appropriate resolvers to return the `Company` object and `Contract` object in the same call.
+
+4. When your code is ready, run it with the following command:
 
     ```bash
-    node usingResolvers.js
+    $ node usingResolvers.js
     ```
 
 {{#> accordian heading='Using Resolvers - Solution' closed='true'}}
@@ -629,7 +636,7 @@ nuxeo.repository().enrichers(
 )...
 ```
 
-##### Practice - Enrichers
+#### Practice - Enrichers
 
 1.  Download <a href="{{file name='usingEnrichers.js'}}" download>usingEnrichers.js</a> or open in another tab to copy and paste.
 
@@ -640,7 +647,7 @@ nuxeo.repository().enrichers(
 4.  When your code is ready, run it with the following command:
 
     ```bash
-    node usingEnrichers.js
+    $ node usingEnrichers.js
     ```
 
 {{#> accordian heading='Using Resolvers - Solution' closed='true'}}
@@ -696,8 +703,6 @@ function assertResult(document) {
 
 {{/accordian}}
 
-
-
 ### Adapters
 
 Adapters allow you to modify the response before retrieving it. They were created before enrichers, and now you can use enrichers instead of most adapters.
@@ -708,11 +713,11 @@ There are some use cases where adapters come in handy:
 
 *   Retrieving a folderish document's children instead of the document itself
 
-{{{multiexcerpt 'restapi-adapters-children' page='REST API Web Adapters'}}}
+    {{{multiexcerpt 'restapi-adapters-children' page='REST API Web Adapters'}}}
 
 *   Executing business logic and retrieve its output instead
 
-{{{multiexcerpt 'restapi-adapters-op' page='REST API Web Adapters'}}}
+    {{{multiexcerpt 'restapi-adapters-op' page='REST API Web Adapters'}}}
 
 #### Piping
 
@@ -736,7 +741,7 @@ nuxeo.request('/path/default-domain/@acl')
   });
 ```
 
-##### Practice - Adapters
+#### Practice - Adapters
 
 1.  Download <a href="{{file name='usingAdapters.js'}}" download>usingAdapters.js</a> or open in another tab to copy and paste.
 
@@ -749,7 +754,7 @@ nuxeo.request('/path/default-domain/@acl')
 5.  When your code is ready, run it with the following command:
 
     ```bash
-    node usingAdapters.js
+    $ node usingAdapters.js
     ```
 
 {{#> accordian heading='Using Adapters - Solution' closed='true'}}
@@ -803,17 +808,19 @@ function assertResult(result) {
 
 [Web Adapters for the REST API]({{page version='' space='nxdoc' page='rest-api-web-adapters'}}) documentation.
 
-## Delete and Trash Management
+## Deleting and Trash Management
 
 You can permanently delete a document with a simple `DELETE` call.
 
 In the JS client, you can use the `delete` method contained in the [Repository](https://nuxeo.github.io/nuxeo-js-client/latest/Repository.html) object:
+
 ```javascript
 nuxeo.repository().delete(documentRef)...
 ```
 where `documentRef` is either a document ID or a document path.
 
 If you want to handle a trash mechanism, you should change the document state:
+
 ```javascript
 document.followTransition(transitionName)...
 ```
@@ -824,9 +831,9 @@ Using the default document lifecycle:
 *   Follow the `delete` transition to put a document in the `deleted` state.
 *   Follow the `undelete` transition to restore a document to the `project` state.
 
-Then it is up to you to make sure your queries will not retrieve documents in the `deleted` state!
+Then it is up to you to make sure your queries will not retrieve documents in the `deleted` state.
 
-##### Practice - Document Deletion
+### Practice - Document Deletion
 
 **Trash Management**
 
@@ -843,7 +850,7 @@ Then it is up to you to make sure your queries will not retrieve documents in th
 6.  When your code is ready, run it with the following command:
 
     ```bash
-    node trashManagement.js
+    $ node trashManagement.js
     ```
 
 {{#> accordian heading='Trash Management - Solution' closed='true'}}
@@ -915,7 +922,7 @@ function assertResult(document) {
 5.  When your code is ready, run it with the following command:
 
     ```bash
-    node documentDeletion.js
+    $ node documentDeletion.js
     ```
 
 {{#> accordian heading='Document Deletion - Solution' closed='true'}}

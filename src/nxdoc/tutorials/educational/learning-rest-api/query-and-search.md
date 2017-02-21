@@ -15,7 +15,7 @@ next_link: /nxdoc/execute-business-logic-through-automation
 
 Using the JS client, the [`Repository`](https://nuxeo.github.io/nuxeo-js-client/latest/Repository.html)'s `query` method can be used to launch NXQL queries or call page providers.
 
-## Launch NXQL Queries
+## Launching NXQL Queries
 
 Specify the NXQL query to be launched in the query property:
 
@@ -39,7 +39,7 @@ SELECT * FROM Document
 
 See the [NXQL]({{page version='' space='nxdoc' page='nxql'}}) documentation for other possibilities.
 
-## Call Page Providers
+## Calling Page Providers
 
 A page provider is the underlying query when creating a content view in Nuxeo Studio.
 
@@ -52,7 +52,7 @@ To call page providers:
 nuxeo.Repository().query({ 'pageProvider': 'pageProviderId', queryParams['parameter1', 'parameter2'...] })...
 ```
 
-##### Practice - Querying and Searching
+### Practice - Querying and Searching
 
 **Calling Page Providers**
 
@@ -60,14 +60,14 @@ nuxeo.Repository().query({ 'pageProvider': 'pageProviderId', queryParams['parame
 
 2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL.
 
-3.  Define query options, calling the `DefaultContentListingInNavigation` content view defined in Studio and passing it the UID of an existing parent document as a parameter. The query result should return the document's children as objects.
+3.  Define query options, calling the `DefaultContentListingInNavigation` content view defined in Nuxeo Studio and passing it the UID of an existing parent document as a parameter. The query result should return the document's children as objects.
 
 4.  Pass the result to the `assertResult` method.
 
 5.  When your code is ready, run it with the following command:
 
     ```bash
-    node callPageProvider.js
+    $ node callPageProvider.js
     ```
 
 
@@ -153,7 +153,7 @@ function assertResult(result) {
 6.  When your code is ready, run it with the following command:
 
     ```bash
-    node nxqlQuery.js
+    $ node nxqlQuery.js
     ```
 
 
@@ -263,4 +263,3 @@ By default, NXQL queries use the database, but you can change this to use the El
 **How Can I Take Advantage of all the Elasticsearch Features?**
 
 Nuxeo provides a [passthrough API for Elasticsearch]({{page version='' space='nxdoc' page='elasticsearch-passthrough'}}) that lets you benefit from the Elasticsearch API while handling security. When using it, queries are written using the Elasticsearch API, but they are actually sent to Nuxeo Platform that reworks them. We won't cover this aspect during this tutorial but you can head to the [Elasticsearch documentation](https://www.elastic.co/guide) for more information.
-

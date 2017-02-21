@@ -1,11 +1,9 @@
 ---
-title: Execute Business Logic Through Automation
+title: Execute Business Logic through Automation
 review:
     comment: 'Separate pages'
     date: '2017-02-20'
     status: ok
-labels:
-    - multiexcerpt-include
 toc: true
 tree_item_index: 800
 previous_link: /nxdoc/query-and-search
@@ -13,7 +11,9 @@ next_link: /nxdoc/launch-a-workflow
 
 ---
 
-Automation [operations]({{page version='' space='nxdoc' page='contributing-an-operation'}}), [chains]({{page page='how-to-create-an-automation-chain'}}) and [scripts]({{page page='automation-scripting'}}) can all be called with the JS client.
+Automation [operations]({{page version='' space='nxdoc' page='contributing-an-operation'}}), [chains]({{page page='how-to-create-an-automation-chain'}}) and [scripts]({{page page='automation-scripting'}}) can all be called with the Nuxeo JavaScript client.
+
+## About Automation
 
 **When You Should Use Automation**
 
@@ -25,7 +25,7 @@ Every call to the REST API is a single transaction:
 
 *   By using automation chains or scripts, you can execute several unitary operations in a single call.
 *   Automation chains and scripts are executed as a single transaction: Either the whole chain or script is executed and the transaction is committed, or it is rolled back entirely.
-*   Therefore, you should use them **whenever you need to execute logic that would require several calls as a single transaction.**
+*   Therefore, you should use them whenever you need to execute logic that would require several calls as a single transaction.
 
 **How to Make Chains or Scripts Available through the REST API**
 
@@ -60,13 +60,13 @@ nuxeo.operation('MyChainOrScriptId')
 
 Note that automation scripts are prefixed by `javascript.` So if your automation script is called `myScript` in Nuxeo Studio, you should call `javascript.myScript`.  
 
-##### Practice - Executing Business Logic
+### Practice - Executing Business Logic
+
+**Automation Script Definition**
 
 1.  Download <a href="{{file name='addToCollection.js'}}" download>addToCollection.js</a> or open in another tab to copy the code.
 
-2.  In Nuxeo Studio, create a new automation script, `addToCollection` where you can paste the code.
-
-*COMPLETE THE AUTOMATION SCRIPT:*
+2.  In Nuxeo Studio, create a new automation script called `addToCollection`  and paste the code from the file addToCollection.js.
 
 3.  Check if the `collectionName` context variable is set, otherwise set it.
 
@@ -79,26 +79,6 @@ Note that automation scripts are prefixed by `javascript.` So if your automation
 7.  Save the `addToCollection` automation script.
 
 8.  Deploy your Studio project on your Nuxeo Platform instance or perform a Hot Reload from the **Dev Tool extension**.
-
-*COMPLETE THE NODE.JS SCRIPT:*
-
-9.  Download <a href="{{file name='businessLogic.js'}}" download>businessLogic.js</a> or open in another tab to copy the code.
-
-10. Replace `NUXEO_SERVER` with your Nuxeo Server URL.
-
-11. Retrieve an existing document using its ID or path.
-
-12. Call the `addToCollection` automation script and pass the document as its input.
-
-13. Add a `collectionName` as a context variable.
-
-14. Pass the result to the `assertResult` method.
-
-15. When your code is ready, run it with the following command:
-
-    ```bash
-    node businessLogic.js
-    ```
 
 {{#> accordian heading='addToCollection Automation Script - Solution' closed='true'}}
 
@@ -164,6 +144,26 @@ function getCollectionInUserWorkspace(input, collectionName) {
 ```
 
 {{/accordian}}
+
+**Node.js Script Definition**
+
+1.  Download <a href="{{file name='businessLogic.js'}}" download>businessLogic.js</a> or open in another tab to copy the code.
+
+2. Replace `NUXEO_SERVER` with your Nuxeo Server URL.
+
+3. Retrieve an existing document using its ID or path.
+
+4. Call the `addToCollection` automation script and pass the document as its input.
+
+5. Add a `collectionName` as a context variable.
+
+6. Pass the result to the `assertResult` method.
+
+7. When your code is ready, run it with the following command:
+
+    ```bash
+    $ node businessLogic.js
+    ```
 
 {{#> accordian heading='Executing Business Logic - Solution' closed='true'}}
 
@@ -233,4 +233,3 @@ function assertResult(result) {
 Sometimes you might need to create automation operations or chains that shouldn't be accessible to everybody. Nuxeo Studio allows you to apply restrictions to them.
 
 In the **Customization** menu, choose **Advanced Settings** > **Web Services Filtering** and create a new filter. You can then choose to restrict or disable operations and chains.
-

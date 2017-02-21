@@ -4,8 +4,6 @@ review:
     comment: 'Separate pages'
     date: '2017-02-20'
     status: ok
-labels:
-    - multiexcerpt-include
 toc: true
 tree_item_index: 500
 previous_link: /nxdoc/javascript-client-example
@@ -13,7 +11,7 @@ next_link: /nxdoc/manipulate-documents
 
 ---
 
-Two authentication methods are supported by the JS client:
+Starting from here, you will use the Nuxeo JavaScript Client. Two authentication methods are supported by the JS client:
 
 *   `basic` authentication: login and password are sent with a base64 encoding.
 *   `token` authentication: a `basic` authentication is performed to obtain a token, then further calls make use of the token.
@@ -41,22 +39,19 @@ Authenticating using Nuxeo JS client:
 
     {{/panel}}
 
-##### Practice - Basic Authentication Using Nuxeo JS Client
+### Practice - Basic Authentication Using Nuxeo JS Client
 
 1.  Download <a href="{{file name='basicAuthentication.js'}}" download>basicAuthentication.js</a> or open in another tab to copy and paste.
 
 2.  Create a Nuxeo object in the `nuxeo` variable.
 
-**Referring to the [Nuxeo JS client documentation](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html), modify the code to:**
-
-3.  Authenticate against your Nuxeo local instance.
-
-4.  Use the basic authentication method. *If you haven't changed it, the default login/password is Administrator/Administrator*.
+3.  Referring to the [Nuxeo JS client documentation](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html), modify the code to authenticate against your Nuxeo local instance using the basic authentication method.
+If you haven't changed it, the default login/password is Administrator/Administrator.
 
 5.  When your code is ready, test it by uncommenting the `assertResult()` method and running the code in a terminal:
 
     ```bash
-    node basicAuthentication.js
+    $ node basicAuthentication.js
     ```
 
 
@@ -121,51 +116,43 @@ function checkCredentials() {
 
 Token authentication using the JS client is much safer.
 
-A call is performed using `basic` authentication. If successful, Nuxeo Platform creates a token (access key) which is used in further calls to authenticate instead of sending credentials.
+1. Instantiate a Nuxeo client, using `basic` authentication.
+    ```javascript
+    var tmpNuxeoClient = new Nuxeo({
+     baseUrl: 'http://NUXEO_SERVER/nuxeo',
+     auth: {
+       method: 'basic',
+       username: 'Administrator',
+       password: 'Administrator'
+     }
+    });
+    ```
+    If successful, the Nuxeo Platform creates a token (access key) which is used in further calls to authenticate instead of sending credentials.
 
-If you need to prevent a user from logging in using this token, it can be destroyed any time from Nuxeo Platform's interface. **Once destroyed, it cannot be used again**.
+2. Obtain a token.
+    Each parameter is a `string` used to identify the token in Nuxeo Platform's interface.
+    ```javascript
+    tmpNuxeoClient.requestAuthenticationToken(applicationName, uniqueDeviceId, deviceDescription, permission)
+      .then(...)
+      .catch(...)
+    ```
 
-{{#> panel type='code' heading='Instantiate a Nuxeo client, using `basic` authentication'}}
+3. Instantiate another Nuxeo client, this time using `token` authentication.
+    ```javascript
+    var nuxeo = new Nuxeo({
+     baseUrl: 'http://NUXEO_SERVER/nuxeo',
+     auth: {
+       method: 'token',
+       token: tokenVariable
+     }
+    });
+    ```
 
-```javascript
-var tmpNuxeoClient = new Nuxeo({
- baseUrl: 'http://NUXEO_SERVER/nuxeo',
- auth: {
-   method: 'basic',
-   username: 'Administrator',
-   password: 'Administrator'
- }
-});
-```
-{{/panel}}
-
-{{#> panel type='code' heading='Obtain a token'}}
-
-Each parameter is a `string` used to identify the token in Nuxeo Platform's interface.
-```javascript
-tmpNuxeoClient.requestAuthenticationToken(applicationName, uniqueDeviceId, deviceDescription, permission)
-  .then(...)
-  .catch(...)
-```
-{{/panel}}
-
-{{#> panel type='code' heading='Instantiate another Nuxeo client, this time using `token` authentication'}}
-```javascript
-var nuxeo = new Nuxeo({
- baseUrl: 'http://NUXEO_SERVER/nuxeo',
- auth: {
-   method: 'token',
-   token: tokenVariable
- }
-});
-```
-{{/panel}}
-
-To revoke a token from Nuxeo Platform's interface, go to **HOME** > **Nuxeo Drive**. All available tokens should be listed under **Authentication Tokens**.
+If you need to prevent a user from logging in using this token, it can be destroyed any time from Nuxeo Platform's interface. Go to **HOME** > **Nuxeo Drive**. All available tokens should be listed under **Authentication Tokens**. Once destroyed, it cannot be used again.
 
 For security purposes, you should avoid defining the first client using the `basic` authentication in the global scope, and place it in a function call instead. You will be able to see a sample in the exercise below.
 
-##### Practice - Token Authentication Using the JS Client
+### Practice - Token Authentication Using the JS Client
 
 1.  Download <a href="{{file name='tokenAuthentication.js'}}" download>tokenAuthentication.js</a> or open in another tab to copy and paste.
 
@@ -182,7 +169,7 @@ For security purposes, you should avoid defining the first client using the `bas
 7.  When your code is ready, test it by uncommenting the `assertResult()` method and running the code in a terminal:
 
     ```bash
-    node tokenAuthentication.js
+    $ node tokenAuthentication.js
     ```
 
 {{#> accordian heading='Token Authentication - Solution' closed='true'}}

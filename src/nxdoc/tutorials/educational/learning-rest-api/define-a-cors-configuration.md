@@ -4,8 +4,6 @@ review:
     comment: 'Separate pages'
     date: '2017-02-20'
     status: ok
-labels:
-    - multiexcerpt-include
 toc: true
 tree_item_index: 300
 previous_link: /nxdoc/rest-api-principles
@@ -26,7 +24,7 @@ Notice that **only GET, POST, HEAD, OPTIONS methods are allowed by default**. Yo
 
 Refer to the [CORS documentation]({{page version='' space='nxdoc' page='cross-origin-resource-sharing-cors'}}) for all applicable configuration options.
 
-##### Practice - CORS Configuration
+### Practice - CORS Configuration
 
 1.  In **Nuxeo Studio** under **Customization**, select **Advanced Settings** > **XML Extensions**
 
@@ -47,13 +45,13 @@ Refer to the [CORS documentation]({{page version='' space='nxdoc' page='cross-or
 
 {{#> panel type='code' heading='This command should be **denied** by the CORS configuration.'}}
 ```bash
-curl --verbose -H "Origin: http://www.nuxeo.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload
+$ curl --verbose -H "Origin: http://www.nuxeo.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload
 ```
 {{/panel}}
 
 {{#> panel type='code' heading='This command should be **accepted** by the CORS configuration.'}}
 ```bash
-curl --verbose -H "Origin: https://foobar.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload
+$ curl --verbose -H "Origin: https://foobar.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload
 ```
 {{/panel}}
 

@@ -4,18 +4,12 @@ review:
     comment: 'Separate pages'
     date: '2017-02-20'
     status: ok
-labels:
-    - multiexcerpt-include
 toc: true
 tree_item_index: 100
 previous_link: /nxdoc/learning-rest-api
 next_link: /nxdoc/rest-api-principles
 
 ---
-
-{{! multiexcerpt name='REST_API_tuto'}}
-
-
 ## Technical Prerequisites
 
 ### Mandatory Prerequisites
