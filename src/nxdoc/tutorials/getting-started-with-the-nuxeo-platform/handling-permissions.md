@@ -1,8 +1,8 @@
 ---
 title: Handling Permissions
 review:
-    comment: ''
-    date: '2016-12-20'
+    comment: 'Allow download policy for Administrators'
+    date: '2017-02-21'
     status: ok
 toc: true
 labels:
@@ -245,7 +245,7 @@ Verify the permissions that have been set on the document.
 
 **Goal**
 
-A file download security policy has been defined in the addon Getting started with the Nuxeo Platform. It only allows users that are members of the `managers` group to download files. We will check it by trying to download a contract:
+A file download security policy has been defined in the addon Getting started with the Nuxeo Platform. It only allows *Administrators* and users that are members of the `managers` group to download files. We will check it by trying to download a contract:
 
 1.  Using Alicia's account. Alicia has Read and Write permissions on the contract but is not a manager.
 2.  Using Sarah's account. Sarah has Read and Write permissions and is a manager.
