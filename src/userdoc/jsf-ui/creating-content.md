@@ -267,6 +267,7 @@ history:
         version: '1'
 
 ---
+{{! multiexcerpt name='intro-creating-content'}}
 {{! excerpt}}
 
 By default, documents can be created in workspaces, templates and folders only. There are several ways to create documents in the Nuxeo Platform, either from the UI using forms, using [drag and drop import](#drag-and-drop) from your desktop, or [creating them directly from MS Office or OpenOffice]({{page version='' space='nxdoc' page='nuxeo-drive'}}#creating-documents). This section presents the different means that are available to you, either by default or using addons.
@@ -274,6 +275,7 @@ By default, documents can be created in workspaces, templates and folders only. 
 {{! /excerpt}}
 
 You need to have "edit" or "manage everything" permissions to create documents.
+{{! /multiexcerpt}}
 
 ## Creating Content Using Forms
 

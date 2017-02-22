@@ -25,6 +25,11 @@ The&nbsp;side menu displays all the domain structure from the root. It enables y
 {{{multiexcerpt 'intro-dashboard' page='browsing-content'}}}
 
 To access your dashboard, click on icon on the top left hand corner of your platform.
+<<<<<<< c2e9404b8327ad5fd99ba2179b4547dc800bba9c
+=======
+
+SCREENSHOT
+>>>>>>> Web UI user doc update
 
 ### Browsing Lists of Documents
 
@@ -192,7 +197,11 @@ The XML export of a document enables users to get a folder for the exported docu
 
 To **get the XML export of a document**, from the document, click on the icon ![]({{file name='export-web-ui.png' space='userdoc' page='icons-index'}} ?w=16) and select **ZIP Export** ![]({{file name='zip_export.png' page='icons-index'}}).
 
+<<<<<<< c2e9404b8327ad5fd99ba2179b4547dc800bba9c
 ![]({{file name='available-exports-web-ui.png'}} ?w=350,border=true)
+=======
+SCREENSHOT
+>>>>>>> Web UI user doc update
 
 {{#> callout type='tip' }}
 If you're only interested in the XML file of the document, click on ![]({{file name='file.gif' page='icons-index'}}) **XML Export**. The XML file should open in a new tab or window (depending on your browser's preferences).
@@ -200,6 +209,11 @@ If you're only interested in the XML file of the document, click on ![]({{file n
 
 When you unzip it, you get a folder named from the document, that contains a document.xml file and .blob for each attachment of the document.
 
+<<<<<<< c2e9404b8327ad5fd99ba2179b4547dc800bba9c
+=======
+SCREENSHOT
+
+>>>>>>> Web UI user doc update
 #### XML Export of a Folder
 
 It is possible to export a whole workspace, section or folder in a zipped XML folder. This specific export enables users to import the folder back, with the same access rights definition.
@@ -212,6 +226,11 @@ If you're only interested in the XML definition of the folder, click on ![]({{fi
 
 When you unzip it, you get a folder named from the document, that contains a document.xml file and .blob for each attachment of the document.
 
+<<<<<<< c2e9404b8327ad5fd99ba2179b4547dc800bba9c
+=======
+SCREENSHOT
+
+>>>>>>> Web UI user doc update
 ## Deleting Content
 Only users with "Edit" or "Manage everything" permissions can delete documents from a space.
 
@@ -242,10 +261,17 @@ Let's say that your current document version is 0.1:&nbsp;
     {{/callout}}
 
 **To create a new version of your document**:
+<<<<<<< c2e9404b8327ad5fd99ba2179b4547dc800bba9c
 - Go on the View tab of the desired document
 - In the top right section of metadata, click on **Create Version**
 - Select the version that you want and click on **Create Version** to confirm.
   ![]({{file name='versions-web-ui.png'}} ?w=350,border=true)
+=======
+- Go to the document that you
+
+### Drag and Drop Versioning Policy
+CREATE EXCERPT FROM JSF UI
+>>>>>>> Web UI user doc update
 
 
 ### Drag and Drop Versioning Policy

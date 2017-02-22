@@ -580,7 +580,8 @@ When you navigate from page to page, your selection is not lost and you can bulk
 
 ## {{> anchor 'versioning-overview'}}Versioning Overview
 
-{{! multiexcerpt name='versioning'}}{{! multiexcerpt name='versioning-intro'}}
+{{! multiexcerpt name='versioning'}}
+{{! multiexcerpt name='versioning-intro'}}
 
 When you edit a document, you can decide to save your modifications as a new version of the document. This enables you and other users to easily revert to a specific version of the document if needed, without having to edit the document. Versions are accessible from the **History** tab of the document.
 

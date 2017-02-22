@@ -138,6 +138,8 @@ See the page [Workflows]({{page page='workflows'}}) for more details.
 
 ## {{> anchor 'alerts'}}Alerts
 
+{{! multiexcerpt name='alert-functional'}}
+
 Alerts are emails automatically sent to users when an event occurs in a space to enable you to follow the activity of a document or a space.
 
 When you follow a document or a space activity, you get an email when the events below happen:
@@ -154,6 +156,8 @@ When you follow a document or a space activity, you get an email when the events
     The publish event is available in sections only. The other events are available in workspaces only.
 
     {{/callout}}
+
+{{! /multiexcerpt}}
 
 ### Following Documents
 

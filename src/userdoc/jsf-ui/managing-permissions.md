@@ -296,6 +296,7 @@ history:
 
 ---
 {{! multiexcerpt name='permissions'}}
+{{! multiexcerpt name='permissions-without-purge'}}
 
 A permission is a rule to grant access to a user or set of users to a Nuxeo document. User has a view in the dashboard where he can see the documents on which a permission is set. Managing permissions means granting or denying access permissions in a document or folder.
 
@@ -391,7 +392,7 @@ Some permissions are granted automatically, for example when you create a workfl
 
 To add a permission, at the root of a workspace, a folder or a document, click on the **Permission** tab  **New Permission** and fill in the popup form.
 
-![]({{file name='add_permission_popup.png'}} ?w=650,h=368,border=true)
+![]({{file name='add_permission_popup.png'}} ?w=350,border=true)
 
 The new permission is displayed in the **Permissions defined locally** part of the screen.
 
@@ -419,6 +420,7 @@ To edit a permission click on ![]({{file name='editor_area.gif' space='studio' p
 To delete a permission click on ![]({{file name='delete_2.png' page='icons-index'}}) next to the permission you want to delete, click **Ok** on the confirmation popup.
 
 ![]({{file name='delete_permission_popup.png'}} ?w=350,border=true)
+{{! /multiexcerpt}}
 
 ## Auditing and Purging Permissions
 
