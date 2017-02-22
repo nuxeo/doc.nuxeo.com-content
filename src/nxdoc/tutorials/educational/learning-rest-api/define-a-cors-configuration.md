@@ -1,7 +1,8 @@
 ---
 title: Define a CORS Configuration
+description: Learn how to set up a CORS configuration to be able to manipulate and query content or apply workflows using the REST API and the Nuxeo JS client.
 review:
-    comment: 'Separate pages'
+    comment: ''
     date: '2017-02-20'
     status: ok
 toc: true

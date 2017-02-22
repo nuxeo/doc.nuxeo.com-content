@@ -1,5 +1,6 @@
 ---
 title: REST API Principles
+description: First step of the Learn the REST API tutorial, this HOWTO makes you practice some basic content management operations through the REST API.
 review:
     comment: 'Separate pages'
     date: '2017-02-20'

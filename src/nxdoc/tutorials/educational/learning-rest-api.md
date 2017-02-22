@@ -1,5 +1,6 @@
 ---
 title: Learning REST API
+description: Through exercises this tutorial teaches you how to use Nuxeo REST API using Nuxeo JavaScript Client.
 review:
     comment: ''
     date: '2017-02-20'

@@ -1,5 +1,6 @@
 ---
 title: Launch a Workflow
+description: Learn how to run workflows using the REST API and the Nuxeo JavaScript Client.
 review:
     comment: 'Separate pages'
     date: '2017-02-20'

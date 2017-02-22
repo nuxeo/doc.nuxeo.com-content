@@ -1,5 +1,6 @@
 ---
 title: Manipulate Documents
+description: Learn how to create, edit, upload and fetch documents using the REST API and the Nuxeo JavaScript Client.
 review:
     comment: 'Separate pages'
     date: '2017-02-20'

@@ -1,5 +1,6 @@
 ---
 title: Query and Search
+description: Learn how to search content through NXQL queries or calls to page providers using the Nuxeo JavaScript Client and the REST API.
 review:
     comment: 'Separate pages'
     date: '2017-02-20'

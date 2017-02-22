@@ -1,5 +1,6 @@
 ---
 title: Log into Nuxeo Platform
+description: Discover the basic and token authentication methods supported by the Nuxeo JavaScript Client.
 review:
     comment: 'Separate pages'
     date: '2017-02-20'

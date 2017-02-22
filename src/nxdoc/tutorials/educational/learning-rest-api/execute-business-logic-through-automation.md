@@ -1,5 +1,6 @@
 ---
 title: Execute Business Logic through Automation
+description: Learn how to execute business logic using Automation, the REST API and the Nuxeo JavaScript Client.
 review:
     comment: 'Separate pages'
     date: '2017-02-20'

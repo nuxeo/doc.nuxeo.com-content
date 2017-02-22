@@ -1,5 +1,6 @@
 ---
 title: Bonus - Contribute Your Own Enricher
+description: In this bonus exercise learn how to extend the REST API by contributing a custom content enricher.
 review:
     comment: 'Separate pages'
     date: '2017-02-20'

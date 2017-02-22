@@ -1,5 +1,6 @@
 ---
 title: Learning REST API - Prerequisites
+description: All the technical and knowledge prerequisites to follow the exercises of the Learning the REST API tutorial.
 review:
     comment: 'Separate pages'
     date: '2017-02-20'
