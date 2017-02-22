@@ -1,11 +1,11 @@
 ---
 title: Bootstrap Your Case Management Project
 review:
-    comment: ''
-    date: '2015-12-01'
+    comment: 'Will need to be reviewed again when Web UI 1.0 is mainstream'
+    date: '2016-02-01'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - bootstrap
     - excerpt
 toc: true
@@ -97,8 +97,7 @@ history:
 ---
 {{! excerpt}}
 
-The Nuxeo Platform is a perfect choice for implementing a case management project. The platform provides all the necessary elements: strong information typing, rich form management, structure and document templating tools, event bus for plugging custom rules, powerful workflow engine, content lists and queues mechanisms. Nuxeo Studio allows semi-technical people to inject business requirements in the application while powerful API and great Java framework provide practically no limit in integrating with external applications or adding custom features.
-
+The Nuxeo Platform is a perfect choice for implementing a case management project. The platform provides all the necessary elements: strong information typing, rich form management, structure and document templating tools, event bus for plugging custom rules, powerful workflow engine, cases lists mechanisms. Nuxeo Studio allows semi-technical people to inject business requirements in the application while powerful API and great Java framework provide practically no limit in integrating with external applications or adding custom features.
 {{! /excerpt}}
 
 Let's go through the important steps when implementing a case management project.
@@ -118,9 +117,9 @@ Let's go through the important steps when implementing a case management project
 1.  Define a base lifecycle for your case and implement it using the [lifecycle editor in Studio]({{page space='studio' page='life-cycle'}}).
     ![]({{file name='case-lifecycle.png'}} ?w=600,border=true)
 2.  List the roles of your case management project, make the analysis of who should work when on your case and on which data. Each main phase of your case processing may be the object of a dedicated workflow model design. Or a simple task. You must define how you want to orchestrate all of the phases:
-    *   Either by a global workflow that may be call subworkflows
+    *   Either by a global workflow that may call sub-workflows
         ![]({{file name='Sub-Workflow orchestration.png'}} ?w=400,border=true)
-    *   or, in a more adaptive style, launching small workflows depending on some pre-defined event-based conditions (click on a given button, change of state of the case, &hellip;). You may also want to integrate Nuxeo with an external rules engine that would provide even more induction capabilities.
+    *   or, in a more adaptive style, launching small workflows depending on some pre-defined event-based conditions (click on a given button, change of state of the case, change of the value of a metadata). You may also want to integrate Nuxeo with an external rules engine that would provide even more induction capabilities.
 
 ## Refining Your Users Views
 

@@ -2,11 +2,10 @@
 title: Quick Overview
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-02-22'
     status: ok
 labels:
-    - content-review-lts2016
-    - video
+    - lts2016-ok
     - architecture
     - overview
 toc: true
@@ -110,140 +109,129 @@ history:
         version: '1'
 
 ---
-## 5 min tour of the Nuxeo Platform
 
-{{> wistia_video id='2pe4188x7r'}}
+## What is Nuxeo Platform
+Nuxeo Platform is a set of server and client side software artifacts and tools that allow you to build, operate and maintain advanced content management applications: core business applications with strong DAM or Case Management flavors, verticalised document management systems, hyperscale archival repositories and more. Among all the reasons why you would like to use Nuxeo Platform for your project, the most obvious are:
+- A proven track of **reached performances** goals
+- A **state of the art technical design** and software engineering tooling
+- **Advanced content repository, workflow and content transformation** features
+- An **open development model** with great documentation and great visibility on product evolutions that enables you to quickly reach a high level of expertise
 
-## Running the Nuxeo Platform
 
-The Nuxeo Platform runs on top of the Java Virtual Machine.
+Main components of the Nuxeo Platform are:
 
-There are several deployment options.
+- The **Nuxeo Server**, that runs on top of the Java Virtual Machine, with different deployment options. The Nuxeo Server exposes a modular set of features via a REST API. The Nuxeo Package system allows to easily define what bundles are deployed on the Nuxeo Server. Nuxeo Server is often called Nuxeo Platform as a shortcut, and because it is clearly the most important asset of the Nuxeo Platform, embedding a fully featured repository, a content transformation grid and a workflow engine. The Nuxeo Server is [benchmarked](https://benchmark.nuxeo.com) continuously to guarantee performance expectations
 
-### Bare Java Deployment
+- **Nuxeo Web UI**: a flexible and pluggable content browser that allows users to perform usual content management operations in a highly productive style: browse, search, upload, preview, download, resolve tasks etc... WEB UI's strength is its capability of be heavily customised for taking into account your application's data model and custom business process.
 
-The Nuxeo Platform can be deployed directly on the JVM (i.e. without an application server).
+- **Nuxeo Addons**: as we said above, you can install additional bundles on top of the bare Nuxeo server to enrich its features and capabilities set. Nuxeo Addons compatible with a given version of the Nuxeo Server are distributed through the Nuxeo Marketplace.
 
-The main use case for this deployment model is for testing, i.e. to deploy the Nuxeo Platform inside a JUnit test. But this solution can also be used to embed Nuxeo inside an existing Java application. In this case, the Nuxeo Runtime deployment may include JDBC DataSources, JTA transaction manager and a JCA Connector. The Nuxeo Runtime can also deploy an HTTP server if needed.
+- **Client SDKs** and **Nuxeo Elements**: Java, JavaScript, C#, Python, PHP, iOS, DART : several clients are available for quickly start integrating with Nuxeo Server without having to know the details of our REST API. We even  provide a rich set of web components, the "Nuxeo Elements" that brings out-of-the-box features that you can include in your application just by using the good HTML tag.
 
-### Application Server Deployment
+- **Nuxeo Drive**: a desktop application that maps a Nuxeo repository's content to a Desktop's file system, with synchronization logics and offline access and edit capabilities, in the spirit of Enterprise File Sharing Systems like Dropbox or Box.
 
-The Nuxeo Platform can be packaged to run with Apache Tomcat. In that deployment scenario, Apache Tomcat provides:
+- **Nuxeo Mobile**: Native Android and iOS applications developed with React Native and available on respective stores. A React Native framework to build custom mobile applications is being developed and will be released later in the year 2017.
 
-*   The deployment system (i.e. Tomcat triggers the Nuxeo deployment)
-*   The HTTP service and the servlet container
-*   The JDBC DataSources
+- **Build, QA and Performance analysis tooling** All the tooling we use for building, maintaining and testing our software artifacts is free and open source. It is available for your own project, as a great catalyzer of your engineering practices.
 
-The Nuxeo Platform will add a JTA Transaction Manager and a JCA Connector to Tomcat.
+- **Nuxeo Studio** and **Nuxeo cli**: Nuxeo Studio is an online application with which you can easily implement project's customisation requirements: content modeling, business logic and user interface design. Nuxeo Studio is much more than a rapid application development tool: it guarantees you that your customisation will be maintained automatically throughout the future releases of Nuxeo Platform components. Nuxeo Cli is a command line tool for helping developers bootstrap their custom modules.
 
-For more details about the Nuxeo deployment system, please refer to [pages on deployment options]({{page page='deployment-options'}}).
+- Additional Client Integrations: Some additional client integrations are available: Adobe CC plugin, Salesforce application, AutoCad Plugin, Slack integration and more.
 
-![]({{file name='deployment-options.png'}} ?w=650,border=true)
+- **PaaS** and **Docker Deployment** Tooling
+  Nuxeo has strong expertise in deploying Nuxeo Platform instances on docker containers, PaaS style, which you typically want to do if you are building a verticalised application on top of Nuxeo and have multi-tenancy considerations
+
+## Turnkey Application and Headless Repository
+You may be interested in using Nuxeo Platform for you project for different use cases:
+- If you need a headless scalable document repository with rich apis and data structures
+- If you need a turnkey application for managing assets (description, validation, publishing) with still ability to strongly customize it
+- If you want to build a custom UI upon the repository and want to benefit from our rich library of UI elements to accelerate the development of your project.
+
+## Technical Overview
+
+### Languages and configuration / customisation principles
+All server part of Nuxeo is written in Java, including plugins, with a bundles and components mechanism for packaging developments. The Web UI (the customizable client web application) is written in JavaScript (using Polymer framework). Default application can be configured using Nuxeo Studio, an online development environment.  It is also possible to write Java plugins.
+
+### Deployment
+
+Nuxeo Server comes bundled with a tomcat server. It requires for production to set up several other components: Elasticsearch, Redis, a relational database or NoSQL store. Deployment options support HA, Failover and can be on premise, or in the cloud, on bare machines, Virtual Machines or Docker containers. For more details about the Nuxeo deployment system, please refer to [pages on deployment options]({{page page='deployment-options'}}).
+Nuxeo bundles can even be started on a JVM directly(i.e without an application sever). This is the deployment mode in all unit tests.
 
 ## About Nuxeo Platform Data
 
 Data managed by the Nuxeo Platform includes:
 
-*   Documents:
-    *   Metadata
-    *   Binary Streams
-*   Users, Groups
-*   References data
-*   Indexes
+- Documents:
+    - Metadata
+    - Binary Streams
+- Users, Groups
+- References data
+- Indexes
 
 ### Document Repository
 
-The Nuxeo Document repository only focuses on managing Document persistence.
+The Nuxeo Document repository  focuses on managing Document persistence.
 
 It covers:
 
-*   Hierarchy definition
-*   Security descriptors
-*   Metadata
-*   Binaries
-*   Indexes
+- Hierarchy definition
+- Security descriptors
+- Metadata
+- Binaries
+- Indexes
 
 The default configuration for Nuxeo Repository is to use a SQL Database and a Filesystem storage, as well as an Elasticsearch index (that can be removed from the architecture if necessary):
 
-*   Structured data are stored in a SQL Database:
-    *   Hierarchy
-    *   Security
-    *   Metadata
-*   Binaries streams are stored in a _"Filesystem like"_&nbsp;storage called "BinaryStore".
+* To manage hierarchy, security and metadata the Nuxeo repository provides a generic Java interface with two implementations: [VCS]({{page page='VCS'}}) that integrates with SQL databases, or [DBS]({{page page='DBS'}}) that integrates with NoSQL databases. You can easily configure the backend of your choice, among MongoDB, PostgreSQL, Oracle, MySQL Server, MS SQL Server and Marklogic. Implementing a new relational or document backend, if needed, is straightforward.
 
-The SQL Database can be:
 
-*   PostgreSQL
-*   Oracle
-*   MS SQL Server
-*   MySQL
-
-For more details about Nuxeo Repository architecture, please see the&nbsp;[VCS Pages]({{page space='nxdoc58' page='vcs-architecture'}}).
-
-![]({{file name='VCS-mapping.png'}} ?w=650,border=true)
-
-When the Nuxeo Repository access the database:
-
-1.  It first goes through a cache.
-2.  It uses a JDBC connection in the context of a Transaction.
-3.  It can use a XA 2 phases commit transaction model.
-
-The BinaryStore can be:
-
-*   A simple Filesystem
-*   A shared Filesystem (ex: NFS share or a NAS)
-*   A S3 bucket (with or without encryption)
+- Binaries streams are stored in a _"Object Store like"_ storage called "BlobProvider". Many implementations are provided out of the box (File System, S3, Azure Blob Storage, JCloud, Google Drive, Dropbox and more) and it is straightforward to add a new implementation.
 
 For more details about Nuxeo Repository and BlobStore, please see the page [File Storage]({{page page='file-storage'}}).
 
+The following schema shows main persisted and indexed data on a typical Nuxeo setup.
+![]({{file name='global-architecture.jpeg'}} ?w=600, border=true)
+
 ### Indexes
 
-By default the Nuxeo Repository does handle keyword and full text indexing via the database.
+The standard setup of Nuxeo Platform includes using an Elasticsearch index used in most of the queries made in the application. Yet the repository can be deployed and used without those additional Elasticsearch indexes. VCS implementation even natively includes full-text search.
 
-However, external indexers can be plugged and in the 5.9.x Fast Track releases will come with an integration with Elasticsearch.
 
 ### Non Document Data
 
-For data that is more _record oriented_ than _document oriented_, Nuxeo uses an abstraction called Directory system that allows to address Data in SQL, LDAP (or WebService).
-
+Nuxeo uses an abstraction called Directory system that allows to address Data in SQL, LDAP (or WebService).
 The Directories are typically used for storing:
 
-*   Users
-*   Groups
-*   Lists of controlled values
+- Users
+- Groups
+- Lists of controlled values
 
 By default, everything is bound to the same SQL database as the repository, but you can choose:
 
-*   To bind some directories to LDAP
-*   To bind some directories to an external database (use of XA mode is then required)
+- To bind some directories to LDAP
+- To bind some directories to an external database (use of XA mode is then required)
 
 ![]({{file name='DirectoryAbstraction.png'}} ?w=650,border=true)
 
-## Integrating Nuxeo&nbsp;
+## Integrating Nuxeo
 
-### Calling Nuxeo Services&nbsp;
+### Calling Nuxeo Services
 
-Nuxeo services&nbsp;are exposed via an HTTP API called [Nuxeo Content Automation.]({{page page='content-automation-concepts'}})
-
-Nuxeo resources (Documents, Users ...) are exposed via a [REST API]({{page page='rest-api'}}).
+Nuxeo resources (Documents, Users, Tasks ...) are exposed via a [REST API]({{page page='rest-api'}}).
+Nuxeo services are exposed via an HTTP API called [Nuxeo Automation]({{page page='content-automation-concepts'}}).
 
 So, if your external application needs to call the Nuxeo Server you can use plain HTTP/JSon API to do the calls, or you can use one of the[ client libraries]({{page page='client-sdks'}}) we provide.
 
 ![]({{file name='EndPoints.png'}} ?w=650,border=true)
 
-### Calling External Services from the Nuxeo&nbsp; Platform
+### Calling External Services from the Nuxeo Sever
 
 You can extend the Nuxeo Platform to deploy your own Java Services.
+A standard approach is to wrap your calls to external applications inside a [Nuxeo Automation Operation]({{page page='contributing-an-operation'}}) (or, event better, inside a Nuxeo Service wrapped in an an Automation operation). Once you have this operation, you can use it Nuxeo Studio for deep integration in your business pocesses:
 
-A classical approach is to wrap your calls to external applications inside a [Nuxeo Automation Operation]({{page page='contributing-an-operation'}}).
-
-Once you have this operation,&nbsp;you can use Nuxeo Studio to integrate for example SAP inside your Nuxeo application:
-
-*   Use your external service operations inside a Workflow.
-*   Bind your external service operation on new buttons in the UI.
-*   Associate your external service operation with events.
-
-An interesting integration point is that you can hook operations or custom code on Nuxeo event bus.
+- Use it inside a Workflow.
+- Bind the call to the external service  on new buttons in the UI.
+- Associate your external service operation with events happening inside the repository.
 
 ![]({{file name='EventBus.png'}} ?w=500,border=true)
 
@@ -251,4 +239,6 @@ An interesting integration point is that you can hook operations or custom code 
 
 In addition of the native HTTP API, the Nuxeo Platform also provides solutions to [import data inside the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}}).
 
-&nbsp;
+
+## Customising the Web UI
+The Web UI is written upon Web Components standard and paradigms using Polymer Framework.

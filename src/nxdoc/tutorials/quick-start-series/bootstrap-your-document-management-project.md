@@ -2,10 +2,10 @@
 title: Bootstrap Your Document Management Project
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2016-02-01'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - bootstrap
 toc: true
 confluence:
@@ -171,8 +171,7 @@ history:
 ---
 {{! excerpt}}
 
-Due to the business flavor of most of the projects made with Nuxeo Platform it is not possible to draw a general approach that would be the good one in 100% cases. We try to give a few hints here, do not hesitate to leave comments on the page, so as to make it lively and so that we improve this page with the time.
-
+Due to the business flavor of most of the projects made with Nuxeo Platform it is not possible to draw a general approach that would be the good one in 100% cases. We try to give a few hints here.
 {{! /excerpt}}
 
 ## Get an Instance of Nuxeo Platform
@@ -198,21 +197,20 @@ Once you have your Nuxeo Platform instance running, spend one hour customizing t
 
 ## Hierarchy of the Repository
 
-Organize the hierarchy of the repository so that it seems like a good base for some use cases. Folderish documents such as workspaces and folders can hold metadata like any other document. You should start thinking about your folders typology and if there is a hierarchy pattern, it should be [adressed with structure templates.]({{page space='studio' page='structure-templates'}}) By default you have domains that contain workspaces, wections, etc... this behavior can be completely redefined.
+Organize the hierarchy of the repository so that it seems like a good base for some use cases. Folderish documents such as workspaces and folders can hold metadata like any other document. You should start thinking about your folders typology and if there is a hierarchy frequent pattern, it can be [adressed with structure templates.]({{page space='studio' page='structure-templates'}}) By default you have domains that contain workspaces, sections, etc... this behavior can be completely redefined and is for most of the deployments. For exemple Nuxeo repository can be used with just a hierarchy of "Folder" document types, from the root of the repository.
 
-You don't need to be extensive here, just the initial folders and how the hierarchy will be evolving in the normal use of the product.
+At this stage, you don't need to be extensive, just the initial folders and how the hierarchy will be evolving in the normal use of the product.
 
 {{#> callout type='info' heading='Related Documentation'}}
 
 *   [Document Types]({{page space='userdoc' page='document-types'}})
-*   [Using Workspace Templates]({{page space='userdoc' page='using-workspace-templates'}})
 *   [Browsing Content]({{page space='userdoc' page='browsing-content'}})
 
 {{/callout}}
 
 ## User Management
 
-The Nuxeo Platform can be plugged to a wide range of directories and authentication systems natively (LDAP, AD, CAS) or through connectors (Shibboleth, Kerberos, etc.). You can then define what groups you'll be needing in your application and from which source.
+The Nuxeo Platform can be plugged to a wide range of directories and authentication systems natively (SAML, LDAP, AD, CAS) or through connectors (Shibboleth, Kerberos, etc.). You can then define what groups you'll be needing in your application and from which source.
 
 {{#> callout type='info' heading='Related Documentation'}}
 
@@ -234,7 +232,7 @@ Think of how you want to set up the security on your documents. The most standar
 
 ## Document Capture
 
-Standard ways are based on forms and drag'n drop, but you may also have some third-party feeding, for instance by a digitalization platform, or from an ERP. You need to clearly identify what will be the most frequent way for your use cases and pay specific attention to it. We provide tools like [watch folder importers]({{page page='nuxeo-bulk-document-importer'}}), [REST APIs]({{page page='rest-api'}}), standard APIs ([CMIS]({{page page='cmis'}})). If it comes from a third-party system, one of the questions will be "which metadata" are given right at the creation time.
+Standard ways are based on forms and drag'n drop, but you may also have some third-party feeding, for instance by a digitization platform, or from an ERP. You need to clearly identify what will be the most frequent way for your use cases and pay specific attention to it. We provide tools like [watch folder importers]({{page page='nuxeo-bulk-document-importer'}}), [REST APIs]({{page page='rest-api'}}), standard APIs ([CMIS]({{page page='cmis'}})). If it comes from a third-party system, one of the questions will be "which metadata" are given right at the creation time.
 
 {{#> callout type='info' heading='Related Documentation'}}
 
@@ -250,13 +248,13 @@ The Nuxeo Platform and Nuxeo Studio provide great facilities for defining your d
 
 For that reason, we strongly advise you to keep only the strict minimum when starting your project. You have to be tough on stepping back and refusing all that looks like not vital. That's the best way to guarantee you'll go live quick, and quickly get the precious feedback from your users. And you won't frighten them with an over engineered system.
 
-For document types, do a different document type if you have different sets of metadata to handle, and different lifecycle states.
+Implement different document types if you have different sets of metadata to handle, and different lifecycle states.
 
 For metadata, we can split them among the following categories:
 
 *   **Search metadata**: The metadata that enable to search for the document in the repository. Focus on the taxonomies linked to the global business of your company/department and gather them in a common schema that you will use in the future when implementing other document management processes on your application. Don't focus too much on the specificities of the first process you choose to implement. You should not have more than two/three of those kind of metadata, usually edited via drop-down lists components.
 *   **Lifecycle management metadata**: Those metadata help you control the lifecycle of your document: when it was created, validated, by who, the nature of the document. This may have a direct impact on how the DMS (via rules and workflow engine) should process it, the review dates, etc.
-*   **Informational metadata**: This can be for instance all the authoring related metadata (who is the "real author" of the document, what are the constraints in the diffusion, &hellip;). As human nature is not metadata-filling friendly you need to be smart and try to leverage at best the context during the whole lifecycle of your document so as to fill metadata automatically. For instance you can use attributes of users who work on it, attributes of parent folders where the document was elaborated, etc.
+*   **Informational metadata**: This can be for instance all the authoring related metadata (who is the "real author" of the document, what are the constraints in the diffusion). As human nature is not metadata-filling friendly you need to be smart and try to leverage at best the context during the whole lifecycle of your document so as to fill metadata automatically. For instance you can use attributes of users who work on it, attributes of parent folders where the document was elaborated, etc.
 
 Note that it is possible to extract some of the metadata automatically from a file using the [binary-metadata]({{page page='binary-metadata'}}) module.
 
