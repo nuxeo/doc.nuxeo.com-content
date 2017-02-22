@@ -5,7 +5,13 @@ review:
     date: '2017-02-20'
     status: ok
 labels:
-    - multiexcerpt-include
+    - howto
+details:
+        howto:
+            excerpt: This tutorial teaches you how to use Nuxeo REST API using Nuxeo JavaScript Client. Through exercises you will learn how to leverage the REST API to manage business content.
+            level: Intermediate
+            tool: JS client, code
+            topics: 'JS client, REST API, automation, workflow'
 toc: true
 confluence:
     ajs-parent-page-id: '19235679'
@@ -98,8 +104,6 @@ history:
 next_link: /nxdoc/learning-rest-api-prerequisites
 
 ---
-
-
 This tutorial teaches you how to use Nuxeo REST API using Nuxeo JavaScript Client. The tutorial is organized as follows:
 
 1.  [Prerequisites]({{page page='learning-rest-api-prerequisites'}})<br/>
@@ -111,20 +115,20 @@ This tutorial teaches you how to use Nuxeo REST API using Nuxeo JavaScript Clien
 3.  [Define a CORS Configuration]({{page page='define-a-cors-configuration'}})<br/>
     Modify and test your CORS configuration.
 
-5.  [Log into Nuxeo Platform]({{page page='log-into-nuxeo-platform'}})<br/>
+4.  [Log into Nuxeo Platform]({{page page='log-into-nuxeo-platform'}})<br/>
     Authenticate Nuxeo using the REST API.
 
-6.  [Manipulate Documents]({{page page='manipulate-documents'}})<br/>
+5.  [Manipulate Documents]({{page page='manipulate-documents'}})<br/>
     Create, Read, Edit and Delete Nuxeo documents.
 
-7.  [Query and Search]({{page page='query-and-search'}})<br/>
+6.  [Query and Search]({{page page='query-and-search'}})<br/>
     Perform searches and queries on your Nuxeo repository.
 
-8.  [Execute Business Logic Through Automation]({{page page='execute-business-logic-through-automation'}})<br/>
+7.  [Execute Business Logic Through Automation]({{page page='execute-business-logic-through-automation'}})<br/>
     Create and launch an automation script.
 
-9.  [Launch a Workflow]({{page page='launch-a-workflow'}})<br/>
+8.  [Launch a Workflow]({{page page='launch-a-workflow'}})<br/>
     Create and launch a workflow.
 
-10. [Bonus - Contribute Your Own Enricher]({{page page='bonus-contribute-your-own-enricher'}})<br/>
+9. [Bonus - Contribute Your Own Enricher]({{page page='bonus-contribute-your-own-enricher'}})<br/>
     Create and call your own enricher.
