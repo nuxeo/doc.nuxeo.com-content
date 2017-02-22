@@ -2,10 +2,10 @@
 title: Quick Overview
 review:
     comment: ''
-    date: '2017-01-26'
+    date: '2017-02-22'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - architecture
     - overview
 toc: true
@@ -109,37 +109,37 @@ history:
         version: '1'
 
 ---
-  ## What is Nuxeo Platform
-  Nuxeo Platform is a set of server and client side software artifacts and tools that allow you to build, operate and maintain advanced content management applications: core business applications with strong DAM or Case Management flavors, verticalised document management systems, hyperscale archival repositories and more. Among all the reasons why you would like to use Nuxeo Platform for your project, the most obvious are:
-  - A proven track of **reached performances** goals
-  - A **state of the art technical design** and software engineering tooling
-  - **Advanced content repository, workflow and content transformation** features
-  - An **open development model** with great documentation and great visibility on product evolutions that enables you to quickly reach a high level of expertise
 
-  Main components of the Nuxeo Platform are:
-
-  - The **Nuxeo Server**, that runs on top of the Java Virtual Machine, with different deployment options. The Nuxeo Server exposes a modular set of features via a REST API. The Nuxeo Package system allows to easily define what bundles are deployed on the Nuxeo Server. Nuxeo Server is often called Nuxeo Platform as a shortcut, and because it is clearly the most important asset of the Nuxeo Platform, embedding a fully featured repository, a content transformation grid and a workflow engine. The Nuxeo Server is [benchmarked](https://benchmark.nuxeo.com) continuously to guarantee performance expectations
-
-  - **Nuxeo Web UI**: a flexible and pluggable content browser that allows users to perform usual content management operations in a highly productive style: browse, search, upload, preview, download, resolve tasks etc... WEB UI's strength is its capability of be heavily customised for taking into account your application's data model and custom business process.
-
-  - **Nuxeo Addons**: as we said above, you can install additional bundles on top of the bare Nuxeo server to enrich its features and capabilities set. Nuxeo Addons compatible with a given version of the Nuxeo Server are distributed through the Nuxeo Marketplace.
-
-  - **Client SDKs** and **Nuxeo Elements**: Java, JavaScript, C#, Python, PHP, iOS, DART : several clients are available for quickly start integrating with Nuxeo Server without having to know the details of our REST API. We even  provide a rich set of web components, the "Nuxeo Elements" that brings out-of-the-box features that you can include in your application just by using the good HTML tag.
-
-  - **Nuxeo Drive**: a desktop application that maps a Nuxeo repository's content to a Desktop's file system, with synchronization logics and offline access and edit capabilities, in the spirit of Enterprise File Sharing Systems like Dropbox or Box.
-
-  - **Nuxeo Mobile**: Native Android and iOS applications developed with React Native and available on respective stores. A React Native framework to build custom mobile applications is being developed and will be released later in the year 2017.
+## What is Nuxeo Platform
+Nuxeo Platform is a set of server and client side software artifacts and tools that allow you to build, operate and maintain advanced content management applications: core business applications with strong DAM or Case Management flavors, verticalised document management systems, hyperscale archival repositories and more. Among all the reasons why you would like to use Nuxeo Platform for your project, the most obvious are:
+- A proven track of **reached performances** goals
+- A **state of the art technical design** and software engineering tooling
+- **Advanced content repository, workflow and content transformation** features
+- An **open development model** with great documentation and great visibility on product evolutions that enables you to quickly reach a high level of expertise
 
 
-  - **Build, QA and Performance analysis tooling** All the tooling we use for building, maintaining and testing our software artifacts is free and open source. It is available for your own project, as a great catalyzer of your engineering practices.
+Main components of the Nuxeo Platform are:
 
-  - **Nuxeo Studio** and **Nuxeo cli**: Nuxeo Studio is an online application with which you can easily implement project's customisation requirements: content modeling, business logic and user interface design. Nuxeo Studio is much more than a rapid application development tool: it guarantees you that your customisation will be maintained automatically throughout the future releases of Nuxeo Platform components. Nuxeo Cli is a command line tool for helping developers bootstrap their custom modules.
+- The **Nuxeo Server**, that runs on top of the Java Virtual Machine, with different deployment options. The Nuxeo Server exposes a modular set of features via a REST API. The Nuxeo Package system allows to easily define what bundles are deployed on the Nuxeo Server. Nuxeo Server is often called Nuxeo Platform as a shortcut, and because it is clearly the most important asset of the Nuxeo Platform, embedding a fully featured repository, a content transformation grid and a workflow engine. The Nuxeo Server is [benchmarked](https://benchmark.nuxeo.com) continuously to guarantee performance expectations
 
-  - Additional Client Integrations: Some additional client integrations are available: Adobe CC plugin, Salesforce application, AutoCad Plugin, Slack integration and more.
+- **Nuxeo Web UI**: a flexible and pluggable content browser that allows users to perform usual content management operations in a highly productive style: browse, search, upload, preview, download, resolve tasks etc... WEB UI's strength is its capability of be heavily customised for taking into account your application's data model and custom business process.
 
-  - **PaaS** and **Docker Deployment** Tooling
+- **Nuxeo Addons**: as we said above, you can install additional bundles on top of the bare Nuxeo server to enrich its features and capabilities set. Nuxeo Addons compatible with a given version of the Nuxeo Server are distributed through the Nuxeo Marketplace.
+
+- **Client SDKs** and **Nuxeo Elements**: Java, JavaScript, C#, Python, PHP, iOS, DART : several clients are available for quickly start integrating with Nuxeo Server without having to know the details of our REST API. We even  provide a rich set of web components, the "Nuxeo Elements" that brings out-of-the-box features that you can include in your application just by using the good HTML tag.
+
+- **Nuxeo Drive**: a desktop application that maps a Nuxeo repository's content to a Desktop's file system, with synchronization logics and offline access and edit capabilities, in the spirit of Enterprise File Sharing Systems like Dropbox or Box.
+
+- **Nuxeo Mobile**: Native Android and iOS applications developed with React Native and available on respective stores. A React Native framework to build custom mobile applications is being developed and will be released later in the year 2017.
+
+- **Build, QA and Performance analysis tooling** All the tooling we use for building, maintaining and testing our software artifacts is free and open source. It is available for your own project, as a great catalyzer of your engineering practices.
+
+- **Nuxeo Studio** and **Nuxeo cli**: Nuxeo Studio is an online application with which you can easily implement project's customisation requirements: content modeling, business logic and user interface design. Nuxeo Studio is much more than a rapid application development tool: it guarantees you that your customisation will be maintained automatically throughout the future releases of Nuxeo Platform components. Nuxeo Cli is a command line tool for helping developers bootstrap their custom modules.
+
+- Additional Client Integrations: Some additional client integrations are available: Adobe CC plugin, Salesforce application, AutoCad Plugin, Slack integration and more.
+
+- **PaaS** and **Docker Deployment** Tooling
   Nuxeo has strong expertise in deploying Nuxeo Platform instances on docker containers, PaaS style, which you typically want to do if you are building a verticalised application on top of Nuxeo and have multi-tenancy considerations
-
 
 ## Turnkey Application and Headless Repository
 You may be interested in using Nuxeo Platform for you project for different use cases:
@@ -152,7 +152,6 @@ You may be interested in using Nuxeo Platform for you project for different use 
 ### Languages and configuration / customisation principles
 All server part of Nuxeo is written in Java, including plugins, with a bundles and components mechanism for packaging developments. The Web UI (the customizable client web application) is written in JavaScript (using Polymer framework). Default application can be configured using Nuxeo Studio, an online development environment.  It is also possible to write Java plugins.
 
-
 ### Deployment
 
 Nuxeo Server comes bundled with a tomcat server. It requires for production to set up several other components: Elasticsearch, Redis, a relational database or NoSQL store. Deployment options support HA, Failover and can be on premise, or in the cloud, on bare machines, Virtual Machines or Docker containers. For more details about the Nuxeo deployment system, please refer to [pages on deployment options]({{page page='deployment-options'}}).
@@ -162,12 +161,12 @@ Nuxeo bundles can even be started on a JVM directly(i.e without an application s
 
 Data managed by the Nuxeo Platform includes:
 
-*   Documents:
-    *   Metadata
-    *   Binary Streams
-*   Users, Groups
-*   References data
-*   Indexes
+- Documents:
+    - Metadata
+    - Binary Streams
+- Users, Groups
+- References data
+- Indexes
 
 ### Document Repository
 
@@ -175,23 +174,23 @@ The Nuxeo Document repository  focuses on managing Document persistence.
 
 It covers:
 
-*   Hierarchy definition
-*   Security descriptors
-*   Metadata
-*   Binaries
-*   Indexes
+- Hierarchy definition
+- Security descriptors
+- Metadata
+- Binaries
+- Indexes
 
 The default configuration for Nuxeo Repository is to use a SQL Database and a Filesystem storage, as well as an Elasticsearch index (that can be removed from the architecture if necessary):
 
 * To manage hierarchy, security and metadata the Nuxeo repository provides a generic Java interface with two implementations: [VCS]({{page page='VCS'}}) that integrates with SQL databases, or [DBS]({{page page='DBS'}}) that integrates with NoSQL databases. You can easily configure the backend of your choice, among MongoDB, PostgreSQL, Oracle, MySQL Server, MS SQL Server and Marklogic. Implementing a new relational or document backend, if needed, is straightforward.
 
 
-*   Binaries streams are stored in a _"Object Store like"_ storage called "BlobProvider". Many implementations are provided out of the box (File System, S3, Azure Blob Storage, JCloud, Google Drive, Dropbox and more) and it is straightforward to add a new implementation.
+- Binaries streams are stored in a _"Object Store like"_ storage called "BlobProvider". Many implementations are provided out of the box (File System, S3, Azure Blob Storage, JCloud, Google Drive, Dropbox and more) and it is straightforward to add a new implementation.
 
 For more details about Nuxeo Repository and BlobStore, please see the page [File Storage]({{page page='file-storage'}}).
 
 The following schema shows main persisted and indexed data on a typical Nuxeo setup.
-![]({{file name='Global-Architecture.jpg'}} ?border=true)
+![]({{file name='global-architecture.jpeg'}} ?w=600, border=true)
 
 ### Indexes
 
@@ -203,14 +202,14 @@ The standard setup of Nuxeo Platform includes using an Elasticsearch index used 
 Nuxeo uses an abstraction called Directory system that allows to address Data in SQL, LDAP (or WebService).
 The Directories are typically used for storing:
 
-*   Users
-*   Groups
-*   Lists of controlled values
+- Users
+- Groups
+- Lists of controlled values
 
 By default, everything is bound to the same SQL database as the repository, but you can choose:
 
-*   To bind some directories to LDAP
-*   To bind some directories to an external database (use of XA mode is then required)
+- To bind some directories to LDAP
+- To bind some directories to an external database (use of XA mode is then required)
 
 ![]({{file name='DirectoryAbstraction.png'}} ?w=650,border=true)
 
@@ -230,12 +229,11 @@ So, if your external application needs to call the Nuxeo Server you can use plai
 You can extend the Nuxeo Platform to deploy your own Java Services.
 A standard approach is to wrap your calls to external applications inside a [Nuxeo Automation Operation]({{page page='contributing-an-operation'}}) (or, event better, inside a Nuxeo Service wrapped in an an Automation operation). Once you have this operation, you can use it Nuxeo Studio for deep integration in your business pocesses:
 
-*   Use it inside a Workflow.
-*   Bind the call to the external service  on new buttons in the UI.
-*   Associate your external service operation with events happening inside the repository.
+- Use it inside a Workflow.
+- Bind the call to the external service  on new buttons in the UI.
+- Associate your external service operation with events happening inside the repository.
 
 ![]({{file name='EventBus.png'}} ?w=500,border=true)
-
 
 ### Data Integration
 
