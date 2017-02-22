@@ -66,19 +66,12 @@ Note that automation scripts are prefixed by `javascript.` So if your automation
 **Automation Script Definition**
 
 1.  Download [addToCollection.js]({{file name='addToCollection.js'}}) or open in another tab to copy the code.
-
 2.  In Nuxeo Studio, create a new automation script called `addToCollection`  and paste the code from the file addToCollection.js.
-
 3.  Check if the `collectionName` context variable is set, otherwise set it.
-
 4.  Retrieve the user's workspace and set as the `userWorkspace` variable.
-
 5.  If the collection variable is null, create a collection with the context variable's `collectionName` value and place it in the `collection` variable. The collection should be created in the user workspace.
-
 6.  Add the document to the collection.
-
 7.  Save the `addToCollection` automation script.
-
 8.  Deploy your Studio project on your Nuxeo Platform instance or perform a Hot Reload from the **Dev Tool extension**.
 
 {{#> accordian heading='addToCollection Automation Script - Solution' closed='true'}}
@@ -149,17 +142,11 @@ function getCollectionInUserWorkspace(input, collectionName) {
 **Node.js Script Definition**
 
 1.  Download [businessLogic.js]({{file name='businessLogic.js'}}) or open in another tab to copy the code.
-
 2. Replace `NUXEO_SERVER` with your Nuxeo Server URL.
-
 3. Retrieve an existing document using its ID or path.
-
 4. Call the `addToCollection` automation script and pass the document as its input.
-
 5. Add a `collectionName` as a context variable.
-
 6. Pass the result to the `assertResult` method.
-
 7. When your code is ready, run it with the following command:
 
     ```bash

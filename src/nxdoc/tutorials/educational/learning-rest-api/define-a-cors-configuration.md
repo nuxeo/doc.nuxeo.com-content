@@ -27,34 +27,27 @@ Refer to the [CORS documentation]({{page version='' space='nxdoc' page='cross-or
 
 ### Practice - CORS Configuration
 
-1.  In **Nuxeo Studio** under **Customization**, select **Advanced Settings** > **XML Extensions**
-
+1.  In **Nuxeo Studio** under **Customization**, select **Advanced Settings** > **XML Extensions**.
 2.  Create an XML extension, `RestApiTutorial`, which:
       - only allows requests from https://foobar.com and its subdomains
       - supports the following methods: `GET, PUT, POST, DELETE, HEAD, OPTIONS`
       - only allows requests on the following pattern: `/nuxeo/`
 
-*If you already provided a CORS configuration when you installed the Nuxeo Dev Tools extension, you can either replace it or skip this Practice exercise.*
+    If you already provided a CORS configuration when you installed the Nuxeo Dev Tools extension, you can either replace it or skip this Practice exercise.
+3.  In your Nuxeo instance, deploy the Nuxeo Studio configuration: **ADMIN** > **Update Center** > **Update**.
+4.  Restart the instance: **ADMIN** > **System Information** > **Restart Server**.
+5.  Open a terminal and launch the following commands to test your configuration, replacing `NUXEO_SERVER` with your Nuxeo Server instance URL.
+    {{#> panel type='code' heading='This command should be **denied** by the CORS configuration.'}}
+    ```bash
+    $ curl --verbose -H "Origin: http://www.nuxeo.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload
+    ```
+    {{/panel}}
 
-3.  In your Nuxeo instance, deploy the Nuxeo Studio configuration.
-    **ADMIN** > **Update Center** > **Update**
-
-4.  Restart the instance.
-    **ADMIN** > **System Information** > **Restart Server**
-
-5.  Open a terminal and launch the following commands to test your configuration, *replacing `NUXEO_SERVER` with your Nuxeo Server instance URL.*
-
-{{#> panel type='code' heading='This command should be **denied** by the CORS configuration.'}}
-```bash
-$ curl --verbose -H "Origin: http://www.nuxeo.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload
-```
-{{/panel}}
-
-{{#> panel type='code' heading='This command should be **accepted** by the CORS configuration.'}}
-```bash
-$ curl --verbose -H "Origin: https://foobar.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload
-```
-{{/panel}}
+    {{#> panel type='code' heading='This command should be **accepted** by the CORS configuration.'}}
+    ```bash
+    $ curl --verbose -H "Origin: https://foobar.com" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS http://NUXEO_SERVER/nuxeo/site/foobar/upload
+    ```
+    {{/panel}}
 
 
 {{#> accordian heading='CORS Configuration - Solution' closed='true'}}

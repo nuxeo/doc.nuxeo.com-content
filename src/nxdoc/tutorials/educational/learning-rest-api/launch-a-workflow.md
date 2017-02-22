@@ -41,7 +41,6 @@ document.startWorkflow('workflowId');
 ### Using the Workflow Class
 
 1. Before starting the workflow, you need to create an object containing the IDs of the documents to attach.
-
     {{#> panel type='code' heading='Workflow Options Object'}}
 
     ```javascript
@@ -52,9 +51,7 @@ document.startWorkflow('workflowId');
     ```
 
     {{/panel}}
-
 2. Then pass the object when starting the workflow.
-
     ```javascript
     nuxeo.workflows().start('workflowId', workflowOptions)...
     ```
@@ -94,45 +91,27 @@ comment: "Validation comment: \n@{WorkflowVariables[\"validationComment\"]}"
 **Create a simple workflow**
 
 1.  Create a [workflow]({{page version='' space='nxdoc' page='simple-workflow-example'}}), `ValidateDocument`.
-
 2.  Under the **Variables** tab, add the String field `validationComment`.
-
 4.  Under the **Activation** tab, allow for Read & Edit permissions and the document type of your choice.
-
 5.  Under the **Graph** tab, add an **Accept/Reject** user task node, and click on the **Edit** icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) to edit the node properties.
-
     ![]({{file name='workflow-graph.png'}} ?w=550,border=true)
-
 6.  Under the **General** tab, add the `Context["workflowInitiator"]` assignees expression.
-
 7.  Under the **Variables** tab, add the `validationComment` variable.
-
 8.  Under the **Form** tab, add the **Validation Comment** widget from the `var_ValidateDocument` schema.
-
 9.  Under the **Transitions** tab, add the `ValidateDocumentChain` to the `validate` transition, then **Save**.
-
 10. Add your transitions to the graph, then **Save** your workflow.
-
 11. Deploy your Studio project on your Nuxeo Platform instance or perform a Hot Reload from the **Dev Tool extension**.
 
 **Launch the workflow using the Nuxeo JavaScript Client**
 
 1. Download [workflows.js]({{file name='workflows.js'}}) or open in another tab to copy and paste.
-
 2. Replace `NUXEO_SERVER` with your Nuxeo Server URL.
-
 3. Create an object containing the ID(s) of the document(s) to attach.
-
 4. Start the workflow, passing in the object, then call `getWfTasks` method.
-
 5. Retrieve the workflow tasks and call the `completeWfTasks` method.
-
 6. Iterate through the tasks, presuming that the user adds a `validationComment` and clicks the validate button.
-
 7. Call the `asserResult` method.
-
 8. When your code is ready, run it with the following command:
-
     ```bash
     $ node workflows.js
     ```

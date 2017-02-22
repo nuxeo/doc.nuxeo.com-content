@@ -29,19 +29,12 @@ A [`Document`](https://nuxeo.github.io/nuxeo-js-client/latest/Document.html) can
 ### Practice - Document Creation
 
 1.  Download [createDocuments.js]({{file name='createDocuments.js'}}) or open in another tab to copy and paste.
-
 2.  Store your Nuxeo Server URL in the `baseURL` variable.
-
 3.  Define the properties for the Workspace, Folder and Document you will create. (See [REST API Entity Types]({{page version='' space='nxdoc' page='rest-api-entity-types'}}) for more information)
-
 4.  Using the `nuxeo.repository().create({parentRef}, {document})...` method, create the **My Workspace** in "Workspaces".
-
 5.  Create a Folder in **My Workspace**.
-
 6.  Create a Document (File, Note, etc.) in the Folder.
-
 7.  When your code is ready, run it with the following command:
-
     ```bash
     $ node createDocuments.js
     ```
@@ -157,17 +150,11 @@ Accepted values for the header are `MAJOR` (creates a version and increments the
 ### Practice - Document Update
 
 1.  Download [updateVersionDocument.js]({{file name='updateVersionDocument.js'}}) or open in another tab to copy and paste.
-
 2.  Store your Nuxeo Server URL in the `baseURL` variable.
-
 3.  Update the Document you created in the previous exercise (with a new title, for example)
-
 4.  Increment the Major version during the update.
-
 5.  Uncomment the `assertResult(document)` method to test your results.
-
 6.  When your code is ready, run it with the following command:
-
     ```bash
     $ node updateVersionDocument.js
     ```
@@ -283,17 +270,11 @@ Check out the [Importing Files with the REST API](https://university.nuxeo.io/nu
 **Practice - File Upload**
 
 1.  Download [uploadFile.js]({{file name='uploadFile.js'}}) or open in another tab to copy and paste.
-
 2.  Store your Nuxeo Server URL in the `baseURL` variable and modify the `filePath` and `whereToCreate` variables.
-
 3.  Access the local file.
-
 4.  Create a blob from the `filePath` passed as variable.
-
 5.  Upload the file, create a Document and attach the file to it.
-
 6.  When your code is ready, run it with the following command:
-
     ```bash
     $ node uploadFile.js
     ```
@@ -417,15 +398,10 @@ nuxeo.class().method(..., callOptions)
 #### Practice - Using Headers
 
 1.  Download [headers.js]({{file name='headers.js'}}) or open in another tab to copy and paste.
-
 2.  Referring to the [Nuxeo JS client documentation](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html), modify the code to:
-
     1.  Ensure that further calls return all schemas in the response.
-
     2.  Retrieve a document you previously created, using its path or ID.
-
 4.  When your code is ready, run it with the following command:
-
     ```bash
     $ node headers.js
     ```
@@ -506,9 +482,7 @@ In addition to the `depth` header, you can use:
     ```bash
     "fetch.document":"{schema}:{property}, {schema}:{property}"
     ```
-
 *   `fetch.document:properties`, to retrieve all objects at the same time.
-
 *   The corresponding JS client methods:
     ```javascript
     nuxeo.repository().fetchProperty('entity-type', '{schema}:{property}')...
@@ -522,11 +496,8 @@ In addition to the `depth` header, you can use:
 Notes about the JS client methods:
 
 *   More information about the entity types can be found in the [REST API Entity Types]({{page version='' space='nxdoc' page='rest-api-entity-types'}}) documentation page.
-
 *   The entity type you fill in is that of the first object you are retrieving.
-
 *   When calling a document, use the `document` entity in the `fetchProperty` method, no matter what kind of entity types further referenced objects may have.
-
 *   When calling a user, use the `user` entity in the `fetchProperty` method, no matter what kind of entity types further referenced objects may have.
 
 #### Practice - Resolvers
@@ -534,29 +505,21 @@ Notes about the JS client methods:
 **Create custom document types**
 
 1.  Create two different document types that each extend the File document type: `Company` and `Contract`.
-
 2.  Under the **Schema** tab in the `Contract` document type, add a custom schema that includes the field `companyId` of type `Document`.
-
 3.  Under the **Creation Layout** tab in the `Contract` document type, add `companyId` to the form.
-
 4.  Deploy your Studio project on your Nuxeo Platform instance or perform a Hot Reload from the **Dev Tool extension**.
 
 **Create some documents in your Nuxeo Platform instance**
 
 1.  In Nuxeo Platform, create a company, **My Company**.
-
 2.  Create a contract, **My Contract**, attributing it to **My Company** during creation.
 
 **Fetch the documents**
 
 1.  Download [usingResolvers.js]({{file name='usingResolvers.js'}}) or open in another tab to copy and paste.
-
 2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL and the `docId` with that of the contract you created.
-
 3.  Add the appropriate resolvers to return the `Company` object and `Contract` object in the same call.
-
 4. When your code is ready, run it with the following command:
-
     ```bash
     $ node usingResolvers.js
     ```
@@ -640,13 +603,9 @@ nuxeo.repository().enrichers(
 #### Practice - Enrichers
 
 1.  Download [usingEnrichers.js]({{file name='usingEnrichers.js'}}) or open in another tab to copy and paste.
-
 2.  Replace `NUXEO_SERVER` and the document UID.
-
 3.  Use content enrichers to retrieve the document's ACLs and preview URL.
-
 4.  When your code is ready, run it with the following command:
-
     ```bash
     $ node usingEnrichers.js
     ```
@@ -713,11 +672,8 @@ Calling an adapter is done by using an `@{adaptername}` in your call URL.
 There are some use cases where adapters come in handy:
 
 *   Retrieving a folderish document's children instead of the document itself
-
     {{{multiexcerpt 'restapi-adapters-children' page='REST API Web Adapters'}}}
-
 *   Executing business logic and retrieve its output instead
-
     {{{multiexcerpt 'restapi-adapters-op' page='REST API Web Adapters'}}}
 
 #### Piping
@@ -745,15 +701,10 @@ nuxeo.request('/path/default-domain/@acl')
 #### Practice - Adapters
 
 1.  Download [usingAdapters.js]({{file name='usingAdapters.js'}}) or open in another tab to copy and paste.
-
 2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL.
-
 3.  Use an adapter to obtain the audit log of an existing document.
-
 4.  Pass the result to the `assertResult` method to check your work.
-
 5.  When your code is ready, run it with the following command:
-
     ```bash
     $ node usingAdapters.js
     ```
@@ -839,17 +790,11 @@ Then it is up to you to make sure your queries will not retrieve documents in th
 **Trash Management**
 
 1.  Download [trashManagement.js]({{file name='trashManagement.js'}}) or open in another tab to copy and paste.
-
 2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL.
-
 3.  Retrieve a document using its ID or path.
-
 4.  Put the document in the "deleted" state.
-
 5.  Pass the trashed document to the `assertResult` method.
-
 6.  When your code is ready, run it with the following command:
-
     ```bash
     $ node trashManagement.js
     ```
@@ -913,15 +858,10 @@ function assertResult(document) {
 **Document Deletion**
 
 1.  Download [documentDeletion.js]({{file name='documentDeletion.js'}}) or open in another tab to copy and paste.
-
 2.  Replace `NUXEO_SERVER` and the document UID.
-
 3.  Delete the document using its ID or path.
-
 4.  Pass the result to the `assertResult` method.
-
 5.  When your code is ready, run it with the following command:
-
     ```bash
     $ node documentDeletion.js
     ```

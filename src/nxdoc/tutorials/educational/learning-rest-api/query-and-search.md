@@ -58,15 +58,10 @@ nuxeo.Repository().query({ 'pageProvider': 'pageProviderId', queryParams['parame
 **Calling Page Providers**
 
 1.  Download [callPageProvider.js]({{file name='callPageProvider.js'}}) or open in another tab to copy and paste.
-
 2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL.
-
 3.  Define query options, calling the `DefaultContentListingInNavigation` content view defined in Nuxeo Studio and passing it the UID of an existing parent document as a parameter. The query result should return the document's children as objects.
-
 4.  Pass the result to the `assertResult` method.
-
 5.  When your code is ready, run it with the following command:
-
     ```bash
     $ node callPageProvider.js
     ```
@@ -142,21 +137,14 @@ function assertResult(result) {
 **Launching NXQL Queries**
 
 1.  Download [nxqlQuery.js]({{file name='nxqlQuery.js'}}) or open in another tab to copy and paste.
-
 2.  Replace `NUXEO_SERVER` with your Nuxeo Server URL.
-
 3.  Define an NXQL query that will return all documents created TODAY. Exclude proxies, archived versions and deleted (trashed) documents.
-
 4.  Add query to `queryOpts` and launch the query.
-
 5.  Pass the result to the `assertResult` method.
-
 6.  When your code is ready, run it with the following command:
-
     ```bash
     $ node nxqlQuery.js
     ```
-
 
 {{#> accordian heading='Launching NXQL Queries - Solution' closed='true'}}
 

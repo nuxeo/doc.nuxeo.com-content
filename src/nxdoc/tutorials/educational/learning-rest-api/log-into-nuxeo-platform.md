@@ -43,14 +43,10 @@ Authenticating using Nuxeo JS client:
 ### Practice - Basic Authentication Using Nuxeo JS Client
 
 1.  Download [basicAuthentication.js]({{file name='basicAuthentication.js'}}) or open in another tab to copy and paste.
-
 2.  Create a Nuxeo object in the `nuxeo` variable.
-
 3.  Referring to the [Nuxeo JS client documentation](https://nuxeo.github.io/nuxeo-js-client/latest/Nuxeo.html), modify the code to authenticate against your Nuxeo local instance using the basic authentication method.
 If you haven't changed it, the default login/password is Administrator/Administrator.
-
 5.  When your code is ready, test it by uncommenting the `assertResult()` method and running the code in a terminal:
-
     ```bash
     $ node basicAuthentication.js
     ```
@@ -129,7 +125,6 @@ Token authentication using the JS client is much safer.
     });
     ```
     If successful, the Nuxeo Platform creates a token (access key) which is used in further calls to authenticate instead of sending credentials.
-
 2. Obtain a token.
     Each parameter is a `string` used to identify the token in Nuxeo Platform's interface.
     ```javascript
@@ -137,7 +132,6 @@ Token authentication using the JS client is much safer.
       .then(...)
       .catch(...)
     ```
-
 3. Instantiate another Nuxeo client, this time using `token` authentication.
     ```javascript
     var nuxeo = new Nuxeo({
@@ -156,19 +150,12 @@ For security purposes, you should avoid defining the first client using the `bas
 ### Practice - Token Authentication Using the JS Client
 
 1.  Download [tokenAuthentication.js]({{file name='tokenAuthentication.js'}}) or open in another tab to copy and paste.
-
 2.  Store your Nuxeo Server URL in the `baseURL` variable.
-
 3.  Update `getClientWithTokenFor` method with your credentials.
-
 4.  Create a Nuxeo client using basic authentication in the `tmpNuxeoClient` variable.
-
 5.  Use `requestAuthenticationToken` method to obtain a token.
-
 6.  Create a Nuxeo client using token authentication.
-
 7.  When your code is ready, test it by uncommenting the `assertResult()` method and running the code in a terminal:
-
     ```bash
     $ node tokenAuthentication.js
     ```
