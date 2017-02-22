@@ -277,7 +277,7 @@ A few useful information to understand the data exposed on the document:
 
 {{! multiexcerpt name='restapi-doc-entity-post'}}
 
-When doing a POST request to create a document, you only need to specify a few elements : entity-type, document type and name. The properties object can be used to send more metadata. Here is a sample below:
+When doing a POST request to create a document, you only need to specify a few elements: entity-type, document type and name. The properties object can be used to send more metadata. Here is a sample below:
 
 {{#> panel type='code' heading='POST Request Body'}}
 

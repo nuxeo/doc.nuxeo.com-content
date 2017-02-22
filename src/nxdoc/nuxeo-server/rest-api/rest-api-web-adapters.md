@@ -410,13 +410,17 @@ Here is an example :
 
 ### Getting the Children of a Given Document - `@children`
 
-{{! multiexcerpt name='restapi-adapters-children'}}{{#> panel type='code' heading='Example'}}
+{{! multiexcerpt name='restapi-adapters-children'}}
+
+{{#> panel type='code' heading='Example'}}
 
 ```
 GET http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheDoc}/@children?currentPageIndex=0&pagesize=20&maxResults=100
 ```
 
-{{/panel}}{{! /multiexcerpt}}{{#> panel type='code' heading='Response'}}
+{{/panel}}{{! /multiexcerpt}}
+
+{{#> panel type='code' heading='Response'}}
 
 ```javascript
 {
