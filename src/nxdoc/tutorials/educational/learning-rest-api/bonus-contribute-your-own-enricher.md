@@ -15,11 +15,11 @@ We've covered the basics of Nuxeo REST API. But there are some functionalities w
 
 For now we will extend the REST API by contributing a custom content enricher. In order to contribute a content enricher, you need to:
 
-*   Creating the content enricher
-*   Declaring the content enricher
-*   Calling the content enricher
+*   Create the content enricher
+*   Declare the content enricher
+*   Call the content enricher
 
-## Create the Content Enricher
+## Creating the Content Enricher
 
 A content enricher is a Java class that:
 
@@ -35,62 +35,17 @@ Here is a commented sample below:
 
 Now it's your turn!
 
-##### Practice - Contribute a Content Enrichers
-\*This exercise requires some familiarity with Java
+### Practice - Contribute a Content Enrichers
 
-*CREATE THE CONTENT ENRICHER*
+This exercise requires some familiarity with Java.
 
-1.  Download <a href="{{file name='LastVersionEnricher.java'}}" download>LastVersionEnricher.java</a> or open in another tab to copy and add to your project.
+**Create the content enricher**
 
+1.  Download [LastVersionEnricher.java]({{file name='LastVersionEnricher.java'}}) or open in another tab to copy and add to your project.
 2.  In the Java class, retrieve the `CoreSession` from the `DocumentModel` object.
-
 3.  Retrieve the last document version from the `CoreSession`.
-
 4.  Use the `JsonGenerator` object to write a field with the enricher name.
-
 5.  Use the `JsonGenerator` object to write an object with the last document version.
-
-*DECLARE THE CONTENT ENRICHER*
-
-6.  Declare the content enricher through Nuxeo Studio, or by adding an XML file in your Java project's `src/main/resources/OSGI-INF` folder. <a href="{{file name='sample.xml'}}" download>Here is a sample.</a>
-
-7.  If you declare it in your Java project, make sure to reference it in the project's `manifest.mf` file in the `src/main/resources/META-INF` folder, in the `Nuxeo-Component` list:
-
-{{#> panel type='code' heading='Manifest.mf Extract'}}
-```
-Nuxeo-Component:OSGI-INF/org.nuxeo.sample.enrichers.parentDocEnricher.xml,OSGI-INF/org.nuxeo.sample.another-contribution.xml, ...
-```
-{{/panel}}
-
-*CALL THE CONTENT ENRICHER*
-
-8.  [Package and deploy your application](https://university.nuxeo.io/nuxeo/university/#!/course/nuxeo-platform-developer-basics/package-deploy-application).
-
-9.  Under the **Transitions** tab, add the `ValidateDocumentChain` to the `validate` transition, then **Save**.
-
-10. Add your transitions to the graph, then **Save** your workflow.
-
-*LAUNCH THE WORKFLOW USING JS CLIENT*
-
-11. Download <a href="{{file name='workflows.js'}}" download>workflows.js</a> or open in another tab to copy and paste.
-
-12. Replace `NUXEO_SERVER` with your Nuxeo Server URL.
-
-13. Create an object containing the ID(s) of the document(s) to attach.
-
-14. Start the workflow, passing in the object, then call `getWfTasks` method.
-
-15. Retrieve the workflow tasks and call the `completeWfTasks` method.
-
-16. Iterate through the tasks, presuming that the user adds a `validationComment` and clicks the validate button.
-
-17. Call the `asserResult` method.
-
-18. When your code is ready, run it with the following command:
-
-    ```bash
-    node workflows.js
-    ```
 
 {{#> accordian heading='Solution' closed='true'}}
 
@@ -127,15 +82,22 @@ public class LastVersionEnricher extends AbstractJsonEnricher<DocumentModel> {
 
 {{/accordian}}
 
+**Declare the content enricher**
+
+1.  Declare the content enricher through Nuxeo Studio, or by adding an XML file in your Java project's `src/main/resources/OSGI-INF` folder. [Here is a sample]({{file name='sample.xml'}}).
+2.  If you declare it in your Java project, make sure to reference it in the project's `manifest.mf` file in the `src/main/resources/META-INF` folder, in the `Nuxeo-Component` list:
+
+    {{#> panel type='code' heading='Manifest.mf Extract'}}
+    ```
+    Nuxeo-Component:OSGI-INF/org.nuxeo.sample.enrichers.parentDocEnricher.xml,OSGI-INF/org.nuxeo.sample.another-contribution.xml, ...
+    ```
+    {{/panel}}
 
 Now you can declare yours!
 
 1.  Declare the content enricher in your Java project.
-
 2.  Reference the component in the bundle's manifest file.
 
-## Call the Content Enricher
+**Call the content enricher**
 
 Now that the enricher is created, you need to [package and deploy your application](https://university.nuxeo.io/nuxeo/university/#!/course/nuxeo-platform-developer-basics/package-deploy-application), then you can [call it](#enrichers)! Your enricher name is the one you put inside the `NAME` variable.
-
-{{! /multiexcerpt}}
