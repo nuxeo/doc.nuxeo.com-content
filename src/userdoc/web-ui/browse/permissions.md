@@ -4,12 +4,10 @@ review:
     comment: ''
     date: '2017-01-04'
     status: ok
-description:
 toc: true
 labels:
     - permissions
 tree_item_index: 100
-description:
 ---
 {{{multiexcerpt 'permissions-without-purge' page='managing-permissions'}}}
 
